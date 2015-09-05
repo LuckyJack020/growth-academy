@@ -255,8 +255,7 @@ label Choice1a:
     BE "..."
     show BE-1a
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
-    "I nod, and we continue on to the front doors of the school."
-    jump AEScene
+    jump Choice1End
 
 label Choice1b:
     MC "Do you need help?"
@@ -279,6 +278,9 @@ label Choice1b:
     show BE-1a
     BE "Well that was nice of you to help her, Kei-chan!"
     $ BE_Affection += 1
+    jump Choice1End
+    
+label Choice1End:
     "I nod, and we continue on to the front doors of the school."
     jump AEScene
 
