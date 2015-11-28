@@ -4,7 +4,13 @@
 ## I'll be leaving comments as I learn so that I can refer back to them,
 ## and anyone that looks as this script afterwards will be able to tell what's going on. -- SaburoX
 ##
+## Additional notes:
 ##
+## If any new features or custom codes (outside of the native Ren'Py library)
+## are used, I'll also be leaving comments explaining as clearly as I can
+## what those code-blocks are doing. -- LuckyJack020
+##
+
 #You can place the script of your game in this file.
 
 # Declare images below this line, using the image statement.
@@ -12,6 +18,7 @@
 # Images go in the Graphics folder, and so their file names are prefaced by 'Graphics/'.
 
 # Backgrounds
+image white = Solid((255, 255, 255, 255))
 image Lake Road = "Graphics/Lake Road.png"
 image School Front = "Graphics/School Front.png"
 image School Inner = "Graphics/School Inner.png"
@@ -21,6 +28,9 @@ image Hallway = "Graphics/Hallway.png"
 image Classrroom Day = "Graphics/Classroom.png"
 image Dorm Exterior = "Graphics/DormExterior.jpg"
 image Dorm Interior = "Graphics/DormInterior.jpg"
+image Campus Center = "Graphics/CampusCenter.jpg"
+image Auditorium = "Graphics/Auditorium.jpg"
+image School Exterior = "Graphics/SchoolExterior.jpg"
 
 # Charactr Portraits
 image BE-1a = "Graphics/BE-1a.png" #BE Girl Neutral Portrait
@@ -31,6 +41,7 @@ image BE-1c = "Graphics/BE-1c.png" #BE Girl Surprised Portrait
 image BE-SC-1 = "Graphics/BE-SC-1.png" #BE Girl Scene 1
 image BE-SC-2 = "Graphics/BE-SC-2.png" #BE Girl Scene 2
 image GTS-1a = "Graphics/GTS-1a.png" #GTS Girl Neutral Portrait
+image GTS-2a = "Graphics/GTS-2a.png" #GTS Girl Formal Neutral Portrait
 image AE-1a = "Graphics/AE-1a.png" #AE Girl Neutral Portrait
 image FMG-1a = "Graphics/FMG-1a.png" #FMG Girl Neutral Portrait
 image BBW-1a = "Graphics/BBW-1a.png" #BBW Girl Neutral Portrait
@@ -59,6 +70,60 @@ init python:
     style.menu_choice_button.background = Frame("choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
     style.menu_choice_button.hover_background = Frame("choice_bg_hover.jpg",28,9)
     style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
+    
+    import math
+
+    class Shaker(object):       #This is Python code to implement a feature to shake the screen around at random, not just in one direction like with the punch commands
+    
+        anchors = {
+            'top' : 0.0,
+            'center' : 0.5,
+            'bottom' : 1.0,
+            'left' : 0.0,
+            'right' : 1.0,
+            }
+    
+        def __init__(self, start, child, dist):
+            if start is None:
+                start = child.get_placement()
+            #
+            self.start = [ self.anchors.get(i, i) for i in start ]  # central position
+            self.dist = dist    # maximum distance, in pixels, from the starting point
+            self.child = child
+            
+        def __call__(self, t, sizes):
+            # Float to integer... turns floating point numbers to
+            # integers.                
+            def fti(x, r):
+                if x is None:
+                    x = 0
+                if isinstance(x, float):
+                    return int(x * r)
+                else:
+                    return x
+
+            xpos, ypos, xanchor, yanchor = [ fti(a, b) for a, b in zip(self.start, sizes) ]
+
+            xpos = xpos - xanchor
+            ypos = ypos - yanchor
+            
+            nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+            ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
+
+            return (int(nx), int(ny), 0, 0)
+        
+    def _Shake(start, time, child=None, dist=100.0, **properties):
+
+        move = Shaker(start, child, dist=dist)
+        
+        return renpy.display.layout.Motion(move,
+                        time,
+                        child,
+                        add_sizes=True,
+                        **properties)
+
+    Shake = renpy.curry(_Shake)
+#End of Python custom init-coding
 
 # The game starts here.
 
@@ -92,7 +157,7 @@ label start:
     # I'll stick new characters above so that anyone that wants to just copy those lines and replace the actual dialogue can do so without worry.
     show black
     centered "The following represents a work in progress."
-    centered "Art assets are placeholders or otherwise unfinished and in general content has yet to be finalized."
+    centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
     centered "For more information, visit\n http://growthacademy.socialparody.com"
     centered "Enjoy."
     
@@ -102,7 +167,7 @@ label start:
 
     MCT "Ahh... It's really hot today."
     "I came to a stop on a wooden bridge overlooking a lake."
-    "My name is Hotsure Keisuke. My spring vacation coming to an end,\n and I'm starting at a new school tommorrow."
+    "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tommorrow."
     MCT "To be honest, I'm a little nervous."
     "It's supposed to be a boarding school, which is why I've got my luggage with me."
     "But..."
@@ -118,23 +183,23 @@ label start:
     "It turned out to be a fairly cute girl, with brown hair."
     MC "Sorry, but can you tell me where I am? I'm a little lost."
     UNKNOWN "..."
-    "She stared at me intently for a long time. Had I surprised her or something?"
+    "She stared at me intently for a long time. Did I surprise her or something?"
     MC "See, I'm trying to find Seichou Academy."
     UNKNOWN "Seichou..."
     "Because of that, the girl seemed to realize something."
     
     show BE-1c
     
-    UNKNOWN "Kei{i}-chan{/i}? Hey, you're Kei{i}-chan{/i}, right?!"
+    BE "Kei{i}-chan{/i}? Hey, you're Kei{i}-chan{/i}, right?!"
     MC "Wait, How do you know my name?"
     BE "What are you talking about? It's me! Honoka!"
     MC "Eh?!"
-    "Come to think of it... I guess she is a little familiar."
+    "Come to think of it...I guess she is a little familiar."
     "I didn't recognize her at first because it's been so long, but this girl is Inoue Honoka."
     "We used to live in the same town a long time ago, and played together all the time."
     "But then her father got transferred, and she moved away..."
     BE "I can't believe you really don't remember me!"
-    MC "Ahahaha... Sorry! It's been, what, seven years already?"
+    MC "Ahahaha...Sorry! It's been seven years already!"
     show BE-1a
     BE "That's true, it has been that long already, hasn't it..."
     BE "...I guess I have to forgive you then. You've grown up so much, so it's unreasonable to expect you to remember me if I've changed just as much."
@@ -150,7 +215,7 @@ label start:
     with dissolve
     
     BE "Kei{i}-chan{/i}?  You kind of spaced out there for a second."
-    MC "Er... I was just thinking, have I really changed that much?"
+    MC "Er...I was just thinking, have I really changed that much?"
     
     show BE-1a
     
@@ -164,21 +229,21 @@ label start:
     
     show BE-1a
     
-    BE "I'm actually on the lookout for new students coming to Seichou the long way around. I didn't imagine I'd run into you, Kei{i}-chan{/i}!"
+    BE "I thought that it was a nice day, so I should go for a little walk. I didn't imagine I'd run into you, Kei{i}-chan{/i}!"
     
     show BE-1c
     
-    BE "Ah, wait! You said you were looking for Seichou Academy, right?"
+    BE "Ah! You said you were looking for Seichou Academy, right?"
     BE "Could it be that you're attending there?"
     
     show BE-1b
     
-    extend "That's going to be my school starting tomorrow!"
+    extend " That's going to be my school starting tomorrow!"
     
     show BE-1a
     
     "...Now that I think about it, it looks like she's wearing a school uniform. I guess this means I might even be in the same class as Honoka."
-    BE "Come on, Kei{i}-chan{/i}.\nI'll show you the way there."
+    BE "Come on, Kei{i}-chan{/i}!\nI'll show you the way there."
     "So with that, I picked up my luggage and followed Honoka."
     
     show BE-SC-2
@@ -187,7 +252,7 @@ label start:
     BE "So, how have you been?\nHow about Tomo{i}-chan{/i}, her too!"
     "Tomo{i}-chan{/i} is Hotsure Tomoko, my younger sister."
     MC "She's doing fine. So am I."
-    MC "Actually, she and I will be attending this school together, but she's still packing, so she's not arriving today."
+    MC "Actually, she and I will be attending this school together, but her year hasn't ended yet so she's not arriving today."
     MC "But anyway, I was really surprised, Honoka."
     BE "Yeah, I was a little nervous too, moving to a new boarding school and all."
     BE "But if you're going to be here, I'm sure it'll be great!"
@@ -197,7 +262,7 @@ label start:
     
     scene School Front
     with fade
-    "Before I realized it we had arrived at a huge school building. This was Seichou Academy."
+    "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year.\nIt was really awe-inspiring at the time."
     "But even then, I had no idea just how much my life was going to change."
     jump GTSScene
@@ -210,14 +275,14 @@ label GTSScene:
     
     scene School Planter
     with dissolve
-    "What looked at first to be normal-sized buildings turned out to be a trick of perspective."
+    "What looked to be normal-sized buildings turned out to be a trick of perspective."
     "As Honoka and I walked and walked, the school seemed to grow before my eyes."
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized in Seichou Academy."
     UNKNOWN "Aaack!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
     "We approached the planter just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
     
-    show GTS-1a at right
+    show GTS-1b at right
     with dissolve
     UNKNOWN "Oooh, darn it darn it darn it..."
     
@@ -244,7 +309,7 @@ label Choice1a:
     GTS "Oh, I'm sorry, I forgot entirely! My name's Yamazaki Naomi."
     "She bowed, and we returned the gesture."
     show BE-1a at left
-    BE "I'm Inoue Honoka, nice to meet you. This is Kei- {i}Ahem{/i}-Hotsure Keisuke."
+    BE "I'm Inoue Honoka, nice to meet you. This is Kei-{i}Ahem{/i}-Hotsure Keisuke."
     MC "Nice to meet you."
     GTS "Well, I've done as much as I can today, it seems. I'll leave the rest to the groundskeepers."
     GTS "I'll see you all at orientation tomorrow."
@@ -255,13 +320,14 @@ label Choice1a:
     BE "..."
     show BE-1a
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
-    jump Choice1End
+    "I nod, and we continue on to the front doors of the school."
+    jump AEScene
 
 label Choice1b:
     MC "Do you need help?"
     UNKNOWN "Oh, thank you, that'd be lovely. Here, let me give you the can..."
     $ GTS_Affection += 1
-    "I leaned way over the planter and watered the middle row of plants, having to stretch as far as I could reach but managing to get all of them."
+    "I leaned way over the planter and watered the middle row of plants having to stretch as far as I could reach but managing to get all of them."
     GTS "Thank you so much! Oh, I'm sorry, I didn't even introduce myself properly. My name's Yamazaki Naomi."
     "She bowed, and we returned the gesture."
     show BE-1a at left
@@ -278,9 +344,6 @@ label Choice1b:
     show BE-1a
     BE "Well that was nice of you to help her, Kei-chan!"
     $ BE_Affection += 1
-    jump Choice1End
-    
-label Choice1End:
     "I nod, and we continue on to the front doors of the school."
     jump AEScene
 
@@ -300,7 +363,7 @@ label AEScene:
     with vpunch
     UNKNOWN "Mizutani! Quit goofing off and get over here!"
     FMG "I'm comin', I'm comin'! Geeze!"
-    "Around the corner came a tanned girl somehow managing to carry a woooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
+    "Around the corner came a tanned girl soomhow managing to carry a woooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
     
     show FMG-1a at Position (xpos=0.25, xanchor=0.5)
     with dissolve
@@ -311,7 +374,7 @@ label AEScene:
     hide AE-1a
     hide FMG-1a
     show BE-1c at center
-    BE "Oh boy... I feel awkward just standing here..."
+    BE "Oh boy...I feel awkward just standing here..."
     
     hide BE-1c
     show AE-1a at Position(xpos=0.75, xanchor=0.5)
@@ -330,7 +393,7 @@ label AEScene:
 
 label Choice2a:
     
-    MC "She was just trying to help... {w}No need to be mean."
+    MC "She was just trying to help...{w}No need to be mean."
     $ BE_Affection += 1
     $ FMG_Affection += 1
     $ AE_Affection -= 1
@@ -353,7 +416,7 @@ label Choice2a:
     AE "I do. You're on the roster. I was just being polite."
     MC "Oh, well, okay then. Yeah, I guess?"
     AE "Get up there and make sure Aida and Nikumaru have the first-day decorations put up properly."
-    AE "{i}Sigh{/i} {w}Even though I'll probably have to fix it myself."
+    AE "{i}Sigh{/i} Even though I'll probably have to fix it myself."
     MC "Er, okay, sure."
     hide AE-1a with dissolve
     show BE-1a at left
@@ -378,15 +441,15 @@ label Choice2b:
     
 label Choice2c:
     
-    "I didn't want to get involved in the fight.{w} Especially after seeing Mizutani lift one of those big wooden benches under each arm."
+    "I didn't want to get involved in the fight.{w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
     UNKNOWN "One at a time lets us get each one in its place and ready for the next without-"
-    FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto...{w} with a butt that size, you'll never fish 'em back out."
+    FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto...{w}with a butt that size, you'll never fish 'em back out."
     hide FMG-1a with dissolve
-    "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to me in a huff."
+    "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to myself in a huff."
     "My eyes snap to hers, momentarily mesmerized by just how sizable her rear was underneath the school-issue uniform."
     $ AE_Affection += 1
-    AE "Hmph. Thank you for not butting in on that...{w} spectacle.{w}\nI'm Matsumoto Shiori, and you are?"
+    AE "Hmph. Thank you for not butting in on that...{w}spectacle.{w}\nI'm Matsumoto Shiori, and you are?"
     "We introduced ourselves, and Matsumoto informed us that we were in the same class as her, class 3-B."
     "She asked us to go to our room and help two other students she'd sent earlier in the day to prepare the room, expressing some doubt as to their competence."
     hide AE-1a with dissolve
@@ -407,28 +470,23 @@ label BBWScene:
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
     show BBW-1a at left with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
-    "She was sitting with her feet on one of the desks, but stood up and grinned when she saw us enter."
+    "She was sitting with her feet on one of the desks, but stood up and grined when she saw us enter."
     UNKNOWN "Oh? What have we here? I guess that Shiori told you to come up here too?"
     UNKNOWN "I have everything under control here."
-    show BE-1a at right with dissolve
     BE "Who are you?"
     BBW "I'm Alice Nikumaru.{w} Charmed, I'm sure."
     "After introducing herself, Alice sat back down in her makeshift throne. Before I could open my mouth to speak, she looked past us."
     BBW "Will you hurry up already?!"
     BBW "I want to go get something to eat and I can't do that if you're slacking off!"
-    "I followed Alice's gaze. I hadn't noticed at all, but there was a mousy girl in the room as well."
-    hide BE-1a with dissolve
+    "I followed Alice's gaze. I hadn't noticed at all but there was a mousy girl in the room as well."
     hide BBW-1a with dissolve
     show PRG-1a at right with dissolve
     "Her hair was tied up in a pair of tails, and she was carrying a globe."
     UNKNOWN "{size=-6}Sorry!{/size}"
-    show BE-1c at left
     BE "Oh wow! Sorry about that, but I totally didn't see you there!"
-    show BE-1a at left
     BE "I'm Inoue Honoka! Pleased to meet ya!"
     MC "Hotsure Keisuke."
     PRG "Aida...Aida Kodama."
-    hide BE-1a
     show BBW-1a at left
     BBW "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
 
@@ -440,8 +498,7 @@ label BBWScene:
             jump Choice3b
             
 label Choice3a:
-    
-    MC "Well, if you've got this under control, I guess I'll be going then...?"
+    MC "Well, if you've got this under control, I guess I'll be going then.?"
     $ BBW_Affection += 1
     $ PRG_Affection -= 1
     $ BE_Affection -= 1
@@ -456,15 +513,14 @@ label Choice3a:
     jump RMScene           
             
 label Choice3b:
-    
-    MC "Shouldn't you be doing something too?{w}"
+    MC "Shouldn't you be doing something too?"
     $ BBW_Affection -= 1
     $ PRG_Affection += 1
     show BBW-1a at left
     BBW "I'm doing something!"
     BBW "I'm su{w}per{w}vi{w}sing!"
     hide BBW-1a with dissolve
-    PRG "It's okay...{w} I don't need any help."
+    PRG "It's okay...{w}I don't need any help."
     MC "It's fine. We're all supposed to be working together, right?"
     PRG "T-thank you! Thank you very much!"
     jump RMScene            
@@ -474,31 +530,25 @@ label RMScene:
     with fade
      
     show BE-1a with dissolve
-    BE "All right, well, it looks like everything's ready for tomorrow...{w} (No thanks to queenie over there.) {w} Time to get back to the dorms, I guess!"
+    BE "Alright, well, it looks like everything's ready for tomorrow...{w}(No thanks to queenie over there.){w} Time to get back to the dorms, I guess!"
     MC "They wouldn't happen to be co-ed, would they?"
-    if BE_Affection < 0:
-        show BE-1a
-        BE "Uh, no, no they're not..."
-        "Honoka cleared her throat and excused herself to the women's dorms."
-        hide BE-1a with dissolve
-    elif BE_Affection >= 0:
-        show BE-1b
-        BE "Oh, Kei-chan! You're such a kidder!{w} Of course not!"
-        "Honoka's laugh caused her impressive bust to shake violently, which was a small consolation prize as we parted ways."
-        hide BE-1b with dissolve
+    show BE-1b
+    BE "Oh, Kei-chan! You're such a kidder!{w} Of course not!"
+    "Honoka's laugh caused her impressive bust to shake violently, which was a small consolation prize as we parted ways."
+    hide BE-1b with dissolve
     
     scene School Inner
     with fade
     
     "I headed over to the boy's dormitories, seeing they were just as enlarged as the rest of the school.{w} I felt like a child, trying the doorknob that I couldn't even get my entire hand around."
-    "{i}*Kunk-Kunk*{/i}"
+    "*Kunk-Kunk*"
     MC "Locked? I'm sure I had the right--"
     UNKNOWN "Who is it?!"
     MC "Aaah!"
     UNKNOWN "Who is it? Identify yourself!"
     
     menu:
-        "Uh... Pizza delivery?":
+        "Uh...Pizza delivery?":
             jump Choice4a
             
         "Keisuke Hotsure. I...think this is my room?":
@@ -508,21 +558,21 @@ label RMScene:
             jump Choice4c
             
 label Choice4a:
-    MC "Uh...{w} Pizza delivery?"
+    MC "Uh...{w}Pizza delivery?"
     UNKNOWN "I didn't order any pizza!{w} Scram!"
-    MC "Hahaha... It was just a joke, this is my dorm room.{w} I guess you're my roommate?"
+    MC "Hahaha...It was just a joke, this is my dorm room.{w} I guess you're my roommate?"
     "The door opened a crack and a single narrowed eye looked out at me."
     UNKNOWN "This is your dorm?{w} Are you sure?"
     MC "Preeeetty sure...{w} Says right here on my paperwork, see?"
     "I pulled out my transfer documents from the top pocket of my luggage, but he snatched them away before I could even show them."
     "The door shut briefly, then opened again, the boy inside still glaring at me through one narrowed eye."
-    UNKNOWN "Keisuke Hotsure...{w} Let's see some ID."
-    MC "Hahaha... {w}no way, really?"
+    UNKNOWN "Keisuke Hotsure...{w}Let's see some ID."
+    MC "Haha, no way, really?"
     UNKNOWN "Really."
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM-1a with dissolve
-    RM "Alright, you check out...{w} My name's Daichi Utagashi."
+    RM "Alright, you check out...{w}My name's Daichi Utagashi."
     $ RM_Affection -= 1
     scene Dorm Interior
     with fade
@@ -530,15 +580,15 @@ label Choice4a:
     jump RMClose
     
 label Choice4b:
-    MC "Keisuke Hotsure. I...{w} think this is my room?"
+    MC "Keisuke Hotsure. I...{w}think this is my room?"
     "I could hear movement behind the door, like someone searching for something.{w} After a bit, the door opened a crack, a single narrowed eye looking me up and down."
-    UNKNOWN "Hotsure, huh?{w} Let's see some ID."
-    MC "Hahaha... {w}no way, really?"
+    UNKNOWN "Hotsure, huh?{w} Let's see some ID"
+    MC "Haha, no way, really?"
     UNKNOWN "Really."
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM-1a with dissolve
-    MC "Alright, you check out...{w} My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
+    MC "Alright, you check out...{w}My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
     scene Dorm Interior
     with fade
     show RM-1a
@@ -547,7 +597,7 @@ label Choice4b:
 label Choice4c:
     MC "Don't worry, I'm from the government!"
     "I thought my fake-authoritative voice would have been worth a laugh, but instead there was silence.{w} I knocked again, tried the knob, called out a few times, but there was no answer."
-    "I put my ear against the door and could hear movement, so I moved over to one of the windows and took a peek in...{w} only to see the mystery occupant hurling his bags out the opposite window?!"
+    "I put my ear against the door and could hear movement, so I moved over to one of the windows and took a peek in,{w} only to see the mystery occupant hurling his bags out the opposite window!"
     scene Dorm Exterior
     with fade
     "I left my luggage by the door and ran around the dorm, coming around the other side just in time to see him struggling out the window."
@@ -555,11 +605,11 @@ label Choice4c:
     UNKNOWN "Aaah! D-Damn you!"
     RM "Daichi Utagashi isn't going without a fight!"
     "Daichi tried to go back inside, but he had already squirmed too far out to get back through the window."
-    RM "Rrrgh!{w} Hrff!{w} Nnngh...{w} Dammit, I'm s-stuck!"
+    RM "Rrrgh!{w} Hrff!{w} Nnngh...{w}Dammit, I'm s-stuck!"
     MC "Will you calm down for a second and tell me what's wrong???"
     RM "Don't play coy with me!{w} You're one of them!"
     MC "\"Them\" who?"
-    RM "The government! You're here to monitor me, drag me off to some secret prison!{w} Put electrodes in my brain! Read my Doujins!"
+    RM "The government! You're here to monitor me, drag me off to some secret prison!{w} Put electrodes in my brain!"
     MC "It was just a joke!{w} I'm Keisuke Hotsura, I just got here, this is supposed to be my dorm!"
     "Daichi twisted around to look at me, his eyes narrowed."
     show RM-1c
@@ -586,13 +636,13 @@ label RMClose:
     RM "Hmph. Just as I thought."
     MCT "???"
     show RM-1d
-    RM "Haven't you ever seen those people on the news?{w} The giants over teen feet tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
+    RM "Haven't you ever seen those people on the news?{w} The giants over ten feet tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
     "Thinking back on it, I had seen some reports, starting when I was a little kid."
-    "It wasn't often, but every now and then there'd be some picture or other of giant-sized men and women, always Japanese."
-    RM "If you look into the histories and records of all these people, one thing is common to all of them--{w} they {i}ALL{/i} went to school at Seichou Academy!"
+    "It wasn't often, but every now and then there'd be some picture or other of a giant-sized man or woman, always Japanese."
+    RM "If you look into the histories and records of all these people, one thing is common to all of them--{w}they {i}ALL{/i} went to school at Seichou Academy!"
     MC "So, what are you saying?"
     show RM-1c
-    RM "I'm saying the government brings certain students here and--{w} and does {i}something{/i} to them!"
+    RM "I'm saying the government brings certain students here and--{w}and does {i}something{/i} to them!"
     show RM-1b
     RM "This kind of growth isn't natural,{w} it's statistically impossible for all of these one-in-a-million conditions to keep happening {i}just{/i} to Japanese school-age teens!"
     "I sat down on my bed, lost in thought.{w} Daichi certainly seemed to have a few screws loose, but then again,{w} why {i}had{/i} my sister and I been sent to this school with so few details?"
@@ -601,13 +651,309 @@ label RMClose:
     scene black
     with dissolve
     MCT "What have my sister and I gotten ourselves into...?"
-    
-    show black
+    jump Day2
+
+label Day2:
+    scene White
+    with dissolve
+    play sound "Audio/ClockAlarm.ogg"
+    "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
+    scene Dorm Interior
+    with dissolve
+    "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
+    MCT "Hard to believe just yesterday I was in my hometown, and now I'm off on this little island..."
+
+    "I got up and got into my uniform, doing my best to comb my shaggy hair into something approaching proper.  In the corner of my eye I saw Daichi watching me."
+
+    if RM_Affection >= 0:
+        show RM-1a
+        RM "Today's the welcoming ceremony. I'm going to go get the lay of the campus."
+        MC "You're going to skip the opening ceremony?"
+        show RM-1b
+        RM "Of course not.{w} I need to get the official story so I know where to start investigating."
+        hide RM-1b with dissolve
+        "I shook my head, but waved goodbye nonetheless as Daichi left.  At least he seemed in good spirits."
+        $ RM_Flag_01 = True
+        jump CeremonyStart
+
+    if RM_Affection < 0:
+        show RM-1c
+        "As soon as he realized I'd noticed him, he spun on his heel and headed out the door."
+        hide RM-1c with dissolve
+        "I looked after him, puzzled, but after yesterday's oddness I figured this was the sort of behavior I could look forward to all year."
+        $ RM_Flag_01 = False
+        jump CeremonyStart
+
+label CeremonyStart:
+    scene Campus Center
+    with fade
+    "As I followed the signs to freshman welcoming, I couldn't help but notice how flat the campus seemed.  Despite the large buildings, most of them were divided into a handful of floors at most." 
+    "Also, there didn't seem to be any stairs anywhere. Any dips or slopes in the elevation were all traveled with ramps."
+    scene Auditorium
+    with dissolve
+    "When I finally reached the auditorium, I found I was still early enough to have my choice of seats."
+    MCT "Where should I sit...?"
+
+    menu:
+        "I should sit in the front where the Principal can see me.":
+            jump Choice5a
+            
+        "I should sit somewhere in the middle.":
+            jump Choice5b
+        
+        "I should sit in the back, where no one will notice me.":
+            jump Choice5c
+
+
+label Choice5a:
+    "I decided to sit in the front row, where the principal could see me. If I ever needed to speak with him, recognizing my face might make him better disposed toward me."
+    MCT "This is a good seat...  Got spaces on either side of me."
+    "{color=#FF69B4}*FLUMPH!*{/color}"
+    MCT "!!{w}"
+    MCT "I... Is that..."
+    show AE-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
+    MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w}I can't say anything about with everyone else around..."
+    MCT "I'll just quietly scoot away from her-"
+    "{color=#FF69B4}*PLOMF!*{/color}"
+    MCT "Oh no!"
+    show BBW-1a at Position(xpos=0.25, xanchor=0.5) with dissolve
+    MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
+    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 2.0, dist=20)
+        
+    menu:
+        "So, Shiori-san...":
+            jump Choice6a
+
+        "Hi there, Nikumaru-san...":
+            jump Choice6b
+
+label Choice5b:
+    "I decided to sit in the middle of the auditorium, where I could still hear the speeches without being so front-and-center."
+    MCT "Let's see, somewhere around here should be--"
+    BE "Pssst!  Kei-chan!"
+    show BE-1a at Position(xpos=0.25, xanchor=0.5) with dissolve
+    MC "Honoka?"
+    BE "Kei chan, over here!  I've got a seat saved for you!"
+    "I made my way down the row of chairs to the seat Honoka was patting next to her."
+    "I noticed when I passed by Honoka, she had to lean back slightly to keep her bosoms from dragging across me, and the thought made me blush."
+    "When I sat down and the the breath I'd been holding out, I realized I was sitting next to the girl we'd met gardening the evening before."
+    show GTS-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show BE-1b
+    BE "Isn't this great, Kei-chan?  It's just like grade school again!"
+    GTS "You two... Went to school together?"
+    show BE-1a
+    BE "Oh, hey there Naomi-san! Yeah, when we were kids we went to the same school. Different middle schools, though."
+
+    menu:
+        "Find your dorm okay, Honoka?":
+            jump Choice6c
+
+        "What was your grade school like, Naomi?":
+            jump Choice6d
+
+label Choice5c:
+    "I decided to sit in the back, where I wouldn't have to worry about anyone seeing me."
+    show FMG-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
+    "The back rows were sparsely filled, so much so that I saw Mizutani-san could afford to hang her toned arms of the backs of the chairs on either side of her."
+    "The rest of the row was nearly empty, save for a small girl in the corner who I recognized from the night before as Aida-san."
+    show PRG-1a at Position(xpos=0.25, xanchor=0.5) with dissolve
+    "I also noticed she was looking at me, but as soon as our eyes met she turned away...{w}before slowly turning back to watch me from the corner of her eye."
+
+    menu:
+        "Needed the room to stretch out, Mizutani?":
+            jump Choice6e
+
+        "Seems kinda lonely back here, Aida...":
+            jump Choice6f
+
+
+label Choice6a:
+    hide AE-1a
+    hide BBW-1a
+    MC "So, Shiori-san..."
+    show AE-1a
+    AE "Shhh! {w}They're about to start."
+    MC "I know, but I was just, ah, wondering--"
+    AE "You noticed too? It's weird, isn't it? Normally you have the whole faculty on-stage for these things, but it's just the principal and a few others..."
+    "You nod dumbly, realizing only now that behind the principal on sage there were only a handful of faculty members."
+    "It definitely seemed sparse, despite the size of the stage, but you weren't about to attribute it to anything nefarious like Daichi would."
+    "You open your mouth to try and ask about the ass-squishing she's giving you, but the principal clearing his throat into the microphone snapped Shiori's attention to the stage."
+    MCT "No use talking now, I suppose...  But it's nice she thought I was clever enough to notice."
+    $ AE_Affection += 1
+    jump CeremonyEnd
+
+label Choice6b:
+    hide AE-1a
+    hide BBW-1a
+    MC "Hi there, Nikumaru-san..."
+    show BBW-1a
+    BBW "Alice, please, no need to be so formal. *giggle* {w}But I'll accept 'Princess' if you insist..."
+    MC "Ah, so, uh, Alice..."
+    BBW "Hm?"
+    MC "Well, your seat- ah, I mean, the seat, it's a little..."
+    BBW "Ahahaha~! Yes, the seats are a little small...{w}but you don't mind, I'm sure?"
+    "The wink she gave me made me wonder how much of her pressing into me was accidental and how much was intentional."
+    BBW  "Oop, they're starting. Eyes forward."
+    $ BBW_Affection += 1
+    jump CeremonyEnd
+
+label Choice6c:
+    hide BE-1a
+    hide GTS-1a
+    MC "Find your dorm okay, Honoka?"
+    show BE-1b
+    BE "Yep!  It's amazing how big it is...{w}makes my bedroom at home look like a closet!"
+    MC "Yeah, and for freshmen, even!"
+    show BE-1c
+    BE "But you know what's weird? I haven't seen a single upperclassman yet. Like, not anywhere. They're all starting today, right?  Aren't they?"
+    MC "I don't know, really.  Maybe this is some kind of half-day for upperclassmen, they start later than us?"
+    show BE-1a
+    BE "That could be! I've never heard of a school doing that on the first day, though..."
+    MC "I'm sure they'll explain it to us in homeroom. Hopefully we can get seats next to each other!"
+    show BE-1b
+    BE "Yeah! That'd be great, Kei-chan! Just like old times!"
+    MC "Shhh, not so loud, they're starting! But yeah, just like old times..."
+    $ BE_Affection += 1
+    jump CeremonyEnd
+
+label Choice6d:
+    hide BE-1a
+    hide GTS-1a
+    MC "What was your grade school like, Naomi?"
+    show GTS-1a
+    GTS "Mine?"
+    MC "Sure, you heard about ours..."
+    show BE-1a
+    BE "Yeah, what was yours like, Naomi-san?"
+    show GTS-1a
+    GTS "Well, ah, it was...{w}pleasant, I suppose."
+    MC "\"Pleasant\"?"
+    GTS "That is, ah...{w}it was rather...{w}Mm...{w}My old schools were always very well organized and regimented."
+    MC "...Not very fun, then?"
+    GTS "They had a wonderful garden in the back."
+    MC "Well, hopefully this school will be fun for you."
+    hide GTS-1a
+    show BE-1b at Position(xpos=0.25, xanchor=0.5)
+    BE "Yeah! We'll do all we can to make sure you have at least one fun school!"
+    show GTS-1a at Position(xpos=0.75, xanchor=0.5)
+    GTS "...Thank you, both of you. Now, we musn't be speaking once the principal starts..."
+    $ GTS_Affection += 1
+    jump CeremonyEnd
+
+label Choice6e:
+    hide PRG-1a
+    hide FMG-1a
+    MC "Needed the room to streth out, Mizutani?"
+    show FMG-1a
+    FMG "Oh hey, it's, uh, Hotsure, right?"
+    MC "Yep! So, ah, not interested in the speech?"
+    FMG "Eh, whatever, I don't mind. Just like the back because I hate being squeezed between people. Gets a litle claustraphobic."
+    MC "Yeah, and like, on the trains..."
+    FMG "Oh I know, those are even worse! Especially for a tall girl..."
+    MC "I hope no one's ever given you trouble..."
+    FMG "Heh heh...{w}one guy tried to cop a feel, once."
+    MC "What happened?"
+    "Mizutani's smile tightened into a predatory, self-satisfied grin."
+    FMG "Busted his finger. Wasn't even trying to."
+    MCT "Ooooo-kay, I'm suddenly very interested in what the principal has to say..."
+    $ FMG_Affection += 1
+    jump CeremonyEnd
+
+label Choice6f:
+    hide PRG-1a
+    hide FMG-1a
+    MC "Seems kinda lonely back here, Aida..."
+    show PRG-1a
+    PRG "Oh!  Uh, ah, well, there's three of us now, right?"
+    MC "Heh, I suppose."
+    PRG "W-well, you can sit next to me...{w}if you like."
+    MCT "Boy, she's acting strange...{w}like she wants to get close but is spooked of it..."
+    MC "Nervous about starting at a new school?"
+    PRG "A little. Could use a friend..."
+    MC "Well, can't everyone?"
+    PRG "Yeah...{w}Could- could you be my friend?"
+    "She smiled at me, and I felt her lean over in her seat, lightly touching my side with her shoulder."
+    MC "Heh, sure...{w}if you need one."
+    PRG "I do..."
+    "We sat there, listening to the Principal's speech. I noticed Aida-san leaning a little closer into me as it went on."
+    $ PRG_Affection += 1
+    jump CeremonyEnd
+
+label CeremonyEnd:
+    hide PRG-1a
+    hide BBW-1a
+    hide GTS-1a
+    hide FMG-1a
+    hide AE-1a
+    hide BE-1a
+    "The ceremony continued, all dreadfully familliar and rote, but at the end there was something different. The principal settled the papeers behind the podium and hesitated for a too-long moment."
+    "\"The future is forever uncertain,\" he said.{w} \"But no matter what the future holds, years hence or any day now, one thing is important  above all else.\""
+    "\"{i}Nosce te Ipsum{/i} {w}To thine own self be true. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need.\""
+    MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
+    "Finally, the ceremony ended, and we all began to file out."
+    show AE-1a
+    "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way was impossible to not draw the eye."
+    MC "Shiori-san?  What's going on?"
+    AE "I didn't see Utagachi in the assembly. He'd better not have skipped out on the first day or there will be hell to pay.  Hey, isn't he your roommate?"
+
+    menu:
+        "I haven't seen him...":
+            jump Choice7a
+        "He said he wouldn't miss the ceremony..." if RM_Flag_01: #This menu item will only appear if this variable is True
+            jump Choice7b
+        "He left the dorm pretty early..." if not RM_Flag_01: #Likewise, this item only appears if the variable is False
+            jump Choice7c
+
+
+label Choice7a:
+    hide AE-1a
+    MC "I haven't seen him...{w}but he was acting kind of strangely this morning. No telling where he went off to."
+    show AE-1a
+    AE "Hmph. He'd better have a good excuse!"
+    hide AE-1a with dissolve
+    "I left to go to my homeroom class, worrying no excuse would be good enough for Shiori..."
+    $ RM_Affection += 1
+    $ RM_Flag_02 = 0
+    jump HomeroomApproach
+
+label Choice7b:
+    hide AE-1a
+    MC "Well, he said he was going to make sure not to miss the ceremony..."
+    AE "He did? Then why didn't I see him come in?"
+    MC "He said he was going to walk around campus a bit this morning, get a feel for the place. Maybe he came in some different door?"
+    "Shori looked back into the mostly-empty auditorium, eyes scanning the walls."
+    AE "You know, I didn't consider that he could have come from a non-proscribed entrance, actually. I'll have to quiz him on the announcement's content later."
+    hide AE-1a with dissolve
+    "She nodded and left her post, satisfied with the answer, and we both walked to homeroom."
+    $ AE_Affection += 1
+    $ RM_Affection += 1
+    $ RM_Flag_02 = 1
+    jump HomeroomApproach
+
+label Choice7c:
+    hide AE-1a
+    MC "He left the dorms pretty early, don't know where he was off to..."
+    show AE-1a
+    AE "Hmph.  Well, he certainly wasn't here. Bah, I don't have time to waste on the likes of him.  Thank you for telling me, though, so I didn't stand there until the bell rang."
+    hide AE-1a with dissolve
+    "With a derisive grunt, Shiori left her post by the doors and we walked to homeroom together."
+    $ AE_Affection += 1
+    $ RM_Affection -= 1
+    $ RM_Flag_02 = 2
+    jump HomeroomApproach
+
+label HomeroomApproach:
+    scene School Exterior
+    with fade
+    "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
     jump End
+    
     
     #http://growthacademy.socialparody.com
     
 label End:
+    show black
+    with dissolve
     centered "You have reached the end of this demo of Growth Academy."
     centered "If you'd like to keep up to date with the game's development or contribute and make it a reality, please visit us at: \n http://growthacademy.socialparody.com/main"
     centered "During each scene, an \"affection\" score for each of the girls were recorded based on your choices."
