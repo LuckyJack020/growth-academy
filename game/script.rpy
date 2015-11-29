@@ -282,7 +282,7 @@ label GTSScene:
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
     "We approached the planter just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
     
-    show GTS-1b at right
+    show GTS-1a at Position(xpos=0.75, xanchor=0.5)
     with dissolve
     UNKNOWN "Oooh, darn it darn it darn it..."
     
@@ -480,13 +480,16 @@ label BBWScene:
     BBW "I want to go get something to eat and I can't do that if you're slacking off!"
     "I followed Alice's gaze. I hadn't noticed at all but there was a mousy girl in the room as well."
     hide BBW-1a with dissolve
-    show PRG-1a at right with dissolve
+    show PRG-1a at Position(xpos=0.85, xanchor=0.5) with dissolve
     "Her hair was tied up in a pair of tails, and she was carrying a globe."
     UNKNOWN "{size=-6}Sorry!{/size}"
+    show BE-1c at left
     BE "Oh wow! Sorry about that, but I totally didn't see you there!"
+    show BE-1a at left
     BE "I'm Inoue Honoka! Pleased to meet ya!"
     MC "Hotsure Keisuke."
     PRG "Aida...Aida Kodama."
+    hide BE-1a
     show BBW-1a at left
     BBW "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
 
@@ -654,7 +657,7 @@ label RMClose:
     jump Day2
 
 label Day2:
-    scene White
+    scene white
     with dissolve
     play sound "Audio/ClockAlarm.ogg"
     "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
