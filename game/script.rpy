@@ -282,7 +282,7 @@ label GTSScene:
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
     "We approached the planter just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
     
-    show GTS-1a at Position(xpos=0.75, xanchor=0.5)
+    show GTS-2a at Position(xpos=0.75, xanchor=0.5)
     with dissolve
     UNKNOWN "Oooh, darn it darn it darn it..."
     
@@ -315,7 +315,7 @@ label Choice1a:
     GTS "I'll see you all at orientation tomorrow."
     show BE-1b at left
     BE "Goodbye! See you around!"
-    hide GTS-1a
+    hide GTS-2a
     with dissolve
     BE "..."
     show BE-1a
