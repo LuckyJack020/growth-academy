@@ -50,6 +50,7 @@ image GTS-1e = "Graphics/GTS-1e.png" #GTS Girl Sad Portrait
 image GTS-2a = "Graphics/GTS-2a.png" #GTS Girl Formal Neutral Portrait
 
 image AE-1a = "Graphics/AE-1a.png" #AE Girl Neutral Portrait
+image AE-1a flip = im.Flip("Graphics/AE-1a.png", horizontal=True)
 image AE-1b = "Graphics/AE-1b.png" #AE Girl Happy Portrait
 image AE-1d = "Graphics/AE-1d.png" #AE Girl Angry Portrait
 image AE-1e = "Graphics/AE-1e.png" #AE Girl Sad Portrait
@@ -477,7 +478,9 @@ label Choice2c:
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
     UNKNOWN "One at a time lets us get each one in its place and ready for the next without-"
     show FMG-1e
-    FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto...{w}with a butt that size, you'll never fish 'em back out."
+    FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto..."
+    show FMG-1b
+    extend "with a butt that size, you'll never fish 'em back out."
     hide FMG-1e with dissolve
     "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to myself in a huff."
     "My eyes snap to hers, momentarily mesmerized by just how sizable her rear was underneath the school-issue uniform."
@@ -752,16 +755,16 @@ label Choice5a:
     "I decided to sit in the front row, where the principal could see me. If I ever needed to speak with him, recognizing my face might make him better disposed toward me."
     MCT "This is a good seat...  Got spaces on either side of me."
     "{color=#FF69B4}*FLUMPH!*{/color}"
-    MCT "!!{w}"
+    MCT "!!"
     MCT "I... Is that..."
-    show AE-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show AE-1a flip at Position(xpos=0.75, xanchor=0.5) with dissolve
     MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w}I can't say anything about with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
     show BBW-1a at Position(xpos=0.25, xanchor=0.5) with dissolve
     MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
-    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 2.0, dist=20)
+    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 0.75, dist=20)
         
     menu:
         "So, Shiori-san...":
@@ -1035,9 +1038,7 @@ label SeatAssignments:
     hide RM-1a
     HR "..."
     MC "..."
-    show HR-1a
     "Without a word, Tashi-Sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
-    hide HR-1a
     show AE-1d with vpunch
     AE "Kyaa~! What is that?!"
     hide AE-1d
@@ -1051,23 +1052,16 @@ label SeatAssignments:
     "..."
     "..."
     
-    show HR-1a
     HR "All right, go ahead, get it out now. But don't run away or you'll be marked tardy."
     "The non-chalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-Sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
-    hide HR-1a with dissolve
-    show HR-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
     show BE-1c at Position (xpos=0.25, xanchor=0.5) with dissolve
     HR "Some of your growths are already obvious..."
-    hide HR-1a
     hide BE-1c
-    show HR-1a at Position (xpos=0.25, xanchor=0.5) with dissolve
     show PRG-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
     HR "Others...{w}Not so much."
-    hide HR-1a
     hide PRG-1a
-    show HR-1a with dissolve
     HR "But make no mistake, unless you've got a sibling here at Seichou Acadeamy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
