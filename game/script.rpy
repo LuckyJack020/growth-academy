@@ -32,6 +32,7 @@ image Campus Center = "Graphics/CampusCenter.jpg"
 image Auditorium = "Graphics/Auditorium.jpg"
 image School Exterior = "Graphics/SchoolExterior.jpg"
 image F1 Hallway = "Graphics/SchoolHallway1.png"
+image splash = "Graphics/SplashScreen.png"
 
 # Charactr Portraits
 image BE-1a = "Graphics/BE-1a.png" #BE Girl Neutral Portrait
@@ -91,6 +92,22 @@ define GTS = Character('Naomi', color="#66FF33")
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
+
+
+# Initialize imagemap for first school map. 
+screen first_imagemap:
+    imagemap:
+        ground "Graphics/FirstMapGround.png"
+        hover "Graphics/FirstMapHover.png"
+        
+        if not GTS_Flag_01:
+            hotspot (242, 214, 150, 150) clicked Return("garden")
+        if not AE_Flag_01:
+            hotspot (428, 214, 150, 150) clicked Return("front")
+        if not BBW_Flag_01:
+            hotspot (242, 396, 150, 150) clicked Return("class")
+        hotspot (428, 396, 150, 150) clicked Return("dorm")
+
 
 init python:
     style.menu_choice_button.background = Frame("choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
@@ -153,6 +170,18 @@ init python:
 
 # The game starts here.
 
+label splashscreen:
+    scene black
+    with Pause(1)
+    
+    show splash with dissolve
+    with Pause(2)
+    
+    scene black with dissolve
+    with Pause(1)
+    
+    return
+
 label start:
     $ BE_Affection = 0
     $ GTS_Affection = 0
@@ -161,6 +190,11 @@ label start:
     $ BBW_Affection = 0
     $ PRG_Affection = 0
     $ RM_Affection = 0
+    
+    #Initialize visit variables to have not yet been enabled.
+    $ GTS_Flag_01 = False
+    $ AE_Flag_01 = False
+    $ BBW_Flag_01 = False
     
     # Stops the title music with a fadeout of half a second.
     stop music fadeout 0.5
@@ -291,10 +325,29 @@ label start:
     "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year.\nIt was really awe-inspiring at the time."
     "But even then, I had no idea just how much my life was going to change."
-    jump GTSScene
+    jump Navigate
+    
+label Navigate:
+    
+    scene black
+    window hide None
+    call screen first_imagemap
+    window show None
+    
+    $ result = _return
+
+    if result == "garden":
+        jump GTSScene
+    elif result == "front":
+        jump AEScene
+    elif result == "class":
+        jump BBWScene
+    elif result == "dorm":
+        jump RMScene
     
 label GTSScene:
     
+    $ GTS_Flag_01 = True
     scene black
     with dissolve
     "As we entered the school grounds, I couldn't help but notice how big everything was."
@@ -347,7 +400,7 @@ label Choice1a:
     show BE-1a
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
     "I nod, and we continue on to the front doors of the school."
-    jump AEScene
+    jump Navigate
 
 label Choice1b:
     MC "Do you need help?"
@@ -372,10 +425,11 @@ label Choice1b:
     BE "Well that was nice of you to help her, Kei-chan!"
     $ BE_Affection += 1
     "I nod, and we continue on to the front doors of the school."
-    jump AEScene
+    jump Navigate
 
 label AEScene:
     
+    $ AE_Flag_01 = True
     scene black
     with dissolve
     UNKNOWN "Mizutani!"
@@ -452,7 +506,7 @@ label Choice2a:
     show BE-1c at Position (xpos=0.25, xanchor=0.5)
     "Without another word, Matsumoto turned and began barking more orders and directions to the other students arranging the decorations."
     "Honoka and I looked at each other and headed for class 3-B."
-    jump BBWScene
+    jump Navigate
     
 label Choice2b:
     
@@ -470,7 +524,7 @@ label Choice2b:
     show AE-1e
     AE "I did not need your help, but she's right. Get up to 3-B and help with the decorations and cleaning."
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
-    jump BBWScene
+    jump Navigate
     
 label Choice2c:
     
@@ -492,9 +546,11 @@ label Choice2c:
     hide AE-1b with dissolve
     show BE-1a at center with dissolve
     BE "You think she's ever happy with anyone? Doesn't seem the type..."
-    jump BBWScene
+    jump Navigate
 
 label BBWScene:
+    
+    $ BBW_Flag_01 = True
     scene black
     with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
@@ -554,7 +610,7 @@ label Choice3a:
     show PRG-1e
     PRG "...I don't want to be a bother."
     BBW "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
-    jump RMScene           
+    jump Navigate           
             
 label Choice3b:
     MC "Shouldn't you be doing something too?"
@@ -569,7 +625,7 @@ label Choice3b:
     MC "It's fine. We're all supposed to be working together, right?"
     show PRG-1b
     PRG "T-thank you! Thank you very much!"
-    jump RMScene            
+    jump Navigate            
      
 label RMScene:
     scene Hallway
@@ -940,7 +996,7 @@ label CeremonyEnd:
     hide FMG-1a
     hide AE-1a
     hide BE-1a
-    "The ceremony continued, all dreadfully familliar and rote, but at the end there was something different. The principal settled the papeers behind the podium and hesitated for a too-long moment."
+    "The ceremony continued, all dreadfully familliar and rote, but at the end there was something different. The principal settled the papers behind the podium and hesitated for a too-long moment."
     "\"The future is forever uncertain,\" he said.{w} \"But no matter what the future holds, years hence or any day now, one thing is important  above all else.\""
     "\"{i}Nosce te Ipsum{/i} {w}To thine own self be true. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need.\""
     MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
