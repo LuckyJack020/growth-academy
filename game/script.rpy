@@ -444,7 +444,7 @@ label AEScene:
     with vpunch
     UNKNOWN "Mizutani! Quit goofing off and get over here!"
     FMG "I'm comin', I'm comin'! Geeze!"
-    "Around the corner came a tanned girl soomhow managing to carry a woooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
+    "Around the corner came a tanned girl somehow managing to carry a wooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
     
     show FMG-1a at Position (xpos=0.25, xanchor=0.5)
     with dissolve
@@ -563,7 +563,7 @@ label BBWScene:
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
     show BBW-1a at Position (xpos=0.25, xanchor=0.5) with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
-    "She was sitting with her feet on one of the desks, but stood up and grined when she saw us enter."
+    "She was sitting with her feet on one of the desks, but stood up and grinned when she saw us enter."
     UNKNOWN "Oh? What have we here? I guess that Shiori told you to come up here too?"
     UNKNOWN "I have everything under control here."
     BE "Who are you?"
