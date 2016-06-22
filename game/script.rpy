@@ -32,6 +32,7 @@ image Campus Center = "Graphics/CampusCenter.jpg"
 image Auditorium = "Graphics/Auditorium.jpg"
 image School Exterior = "Graphics/SchoolExterior.jpg"
 image F1 Hallway = "Graphics/SchoolHallway1.png"
+image splash = "Graphics/SplashScreen.png"
 
 # Charactr Portraits
 image BE-1a = "Graphics/BE-1a.png" #BE Girl Neutral Portrait
@@ -50,6 +51,7 @@ image GTS-1e = "Graphics/GTS-1e.png" #GTS Girl Sad Portrait
 image GTS-2a = "Graphics/GTS-2a.png" #GTS Girl Formal Neutral Portrait
 
 image AE-1a = "Graphics/AE-1a.png" #AE Girl Neutral Portrait
+image AE-1a flip = im.Flip("Graphics/AE-1a.png", horizontal=True)
 image AE-1b = "Graphics/AE-1b.png" #AE Girl Happy Portrait
 image AE-1d = "Graphics/AE-1d.png" #AE Girl Angry Portrait
 image AE-1e = "Graphics/AE-1e.png" #AE Girl Sad Portrait
@@ -90,6 +92,22 @@ define GTS = Character('Naomi', color="#66FF33")
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
+
+
+# Initialize imagemap for first school map. 
+screen first_imagemap:
+    imagemap:
+        ground "Graphics/FirstMapGround.png"
+        hover "Graphics/FirstMapHover.png"
+        
+        if not GTS_Flag_01:
+            hotspot (242, 214, 150, 150) clicked Return("garden")
+        if not AE_Flag_01:
+            hotspot (428, 214, 150, 150) clicked Return("front")
+        if not BBW_Flag_01:
+            hotspot (242, 396, 150, 150) clicked Return("class")
+        hotspot (428, 396, 150, 150) clicked Return("dorm")
+
 
 init python:
     style.menu_choice_button.background = Frame("choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
@@ -152,6 +170,18 @@ init python:
 
 # The game starts here.
 
+label splashscreen:
+    scene black
+    with Pause(1)
+    
+    show splash with dissolve
+    with Pause(2)
+    
+    scene black with dissolve
+    with Pause(1)
+    
+    return
+
 label start:
     $ BE_Affection = 0
     $ GTS_Affection = 0
@@ -160,6 +190,11 @@ label start:
     $ BBW_Affection = 0
     $ PRG_Affection = 0
     $ RM_Affection = 0
+    
+    #Initialize visit variables to have not yet been enabled.
+    $ GTS_Flag_01 = False
+    $ AE_Flag_01 = False
+    $ BBW_Flag_01 = False
     
     # Stops the title music with a fadeout of half a second.
     stop music fadeout 0.5
@@ -290,10 +325,29 @@ label start:
     "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year.\nIt was really awe-inspiring at the time."
     "But even then, I had no idea just how much my life was going to change."
-    jump GTSScene
+    jump Navigate
+    
+label Navigate:
+    
+    scene black
+    window hide None
+    call screen first_imagemap
+    window show None
+    
+    $ result = _return
+
+    if result == "garden":
+        jump GTSScene
+    elif result == "front":
+        jump AEScene
+    elif result == "class":
+        jump BBWScene
+    elif result == "dorm":
+        jump RMScene
     
 label GTSScene:
     
+    $ GTS_Flag_01 = True
     scene black
     with dissolve
     "As we entered the school grounds, I couldn't help but notice how big everything was."
@@ -346,7 +400,7 @@ label Choice1a:
     show BE-1a
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
     "I nod, and we continue on to the front doors of the school."
-    jump AEScene
+    jump Navigate
 
 label Choice1b:
     MC "Do you need help?"
@@ -371,10 +425,11 @@ label Choice1b:
     BE "Well that was nice of you to help her, Kei-chan!"
     $ BE_Affection += 1
     "I nod, and we continue on to the front doors of the school."
-    jump AEScene
+    jump Navigate
 
 label AEScene:
     
+    $ AE_Flag_01 = True
     scene black
     with dissolve
     UNKNOWN "Mizutani!"
@@ -389,7 +444,7 @@ label AEScene:
     with vpunch
     UNKNOWN "Mizutani! Quit goofing off and get over here!"
     FMG "I'm comin', I'm comin'! Geeze!"
-    "Around the corner came a tanned girl soomhow managing to carry a woooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
+    "Around the corner came a tanned girl somehow managing to carry a wooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
     
     show FMG-1a at Position (xpos=0.25, xanchor=0.5)
     with dissolve
@@ -451,7 +506,7 @@ label Choice2a:
     show BE-1c at Position (xpos=0.25, xanchor=0.5)
     "Without another word, Matsumoto turned and began barking more orders and directions to the other students arranging the decorations."
     "Honoka and I looked at each other and headed for class 3-B."
-    jump BBWScene
+    jump Navigate
     
 label Choice2b:
     
@@ -469,7 +524,7 @@ label Choice2b:
     show AE-1e
     AE "I did not need your help, but she's right. Get up to 3-B and help with the decorations and cleaning."
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
-    jump BBWScene
+    jump Navigate
     
 label Choice2c:
     
@@ -477,7 +532,9 @@ label Choice2c:
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
     UNKNOWN "One at a time lets us get each one in its place and ready for the next without-"
     show FMG-1e
-    FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto...{w}with a butt that size, you'll never fish 'em back out."
+    FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto..."
+    show FMG-1b
+    extend "with a butt that size, you'll never fish 'em back out."
     hide FMG-1e with dissolve
     "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to myself in a huff."
     "My eyes snap to hers, momentarily mesmerized by just how sizable her rear was underneath the school-issue uniform."
@@ -489,9 +546,11 @@ label Choice2c:
     hide AE-1b with dissolve
     show BE-1a at center with dissolve
     BE "You think she's ever happy with anyone? Doesn't seem the type..."
-    jump BBWScene
+    jump Navigate
 
 label BBWScene:
+    
+    $ BBW_Flag_01 = True
     scene black
     with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
@@ -504,7 +563,7 @@ label BBWScene:
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
     show BBW-1a at Position (xpos=0.25, xanchor=0.5) with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
-    "She was sitting with her feet on one of the desks, but stood up and grined when she saw us enter."
+    "She was sitting with her feet on one of the desks, but stood up and grinned when she saw us enter."
     UNKNOWN "Oh? What have we here? I guess that Shiori told you to come up here too?"
     UNKNOWN "I have everything under control here."
     BE "Who are you?"
@@ -551,7 +610,7 @@ label Choice3a:
     show PRG-1e
     PRG "...I don't want to be a bother."
     BBW "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
-    jump RMScene           
+    jump Navigate           
             
 label Choice3b:
     MC "Shouldn't you be doing something too?"
@@ -566,7 +625,7 @@ label Choice3b:
     MC "It's fine. We're all supposed to be working together, right?"
     show PRG-1b
     PRG "T-thank you! Thank you very much!"
-    jump RMScene            
+    jump Navigate            
      
 label RMScene:
     scene Hallway
@@ -752,16 +811,16 @@ label Choice5a:
     "I decided to sit in the front row, where the principal could see me. If I ever needed to speak with him, recognizing my face might make him better disposed toward me."
     MCT "This is a good seat...  Got spaces on either side of me."
     "{color=#FF69B4}*FLUMPH!*{/color}"
-    MCT "!!{w}"
+    MCT "!!"
     MCT "I... Is that..."
-    show AE-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show AE-1a flip at Position(xpos=0.75, xanchor=0.5) with dissolve
     MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w}I can't say anything about with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
     show BBW-1a at Position(xpos=0.25, xanchor=0.5) with dissolve
     MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
-    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 2.0, dist=20)
+    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 0.75, dist=20)
         
     menu:
         "So, Shiori-san...":
@@ -937,7 +996,7 @@ label CeremonyEnd:
     hide FMG-1a
     hide AE-1a
     hide BE-1a
-    "The ceremony continued, all dreadfully familliar and rote, but at the end there was something different. The principal settled the papeers behind the podium and hesitated for a too-long moment."
+    "The ceremony continued, all dreadfully familliar and rote, but at the end there was something different. The principal settled the papers behind the podium and hesitated for a too-long moment."
     "\"The future is forever uncertain,\" he said.{w} \"But no matter what the future holds, years hence or any day now, one thing is important  above all else.\""
     "\"{i}Nosce te Ipsum{/i} {w}To thine own self be true. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need.\""
     MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
@@ -1035,9 +1094,7 @@ label SeatAssignments:
     hide RM-1a
     HR "..."
     MC "..."
-    show HR-1a
     "Without a word, Tashi-Sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
-    hide HR-1a
     show AE-1d with vpunch
     AE "Kyaa~! What is that?!"
     hide AE-1d
@@ -1051,23 +1108,16 @@ label SeatAssignments:
     "..."
     "..."
     
-    show HR-1a
     HR "All right, go ahead, get it out now. But don't run away or you'll be marked tardy."
     "The non-chalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-Sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
-    hide HR-1a with dissolve
-    show HR-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
     show BE-1c at Position (xpos=0.25, xanchor=0.5) with dissolve
     HR "Some of your growths are already obvious..."
-    hide HR-1a
     hide BE-1c
-    show HR-1a at Position (xpos=0.25, xanchor=0.5) with dissolve
     show PRG-1a at Position(xpos=0.75, xanchor=0.5) with dissolve
     HR "Others...{w}Not so much."
-    hide HR-1a
     hide PRG-1a
-    show HR-1a with dissolve
     HR "But make no mistake, unless you've got a sibling here at Seichou Acadeamy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
