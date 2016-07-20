@@ -690,7 +690,7 @@ label Choice4b:
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM-1a with dissolve
-    MC "Alright, you check out...{w}My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
+    RM "Alright, you check out...{w}My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
     scene Dorm Interior
     with fade
     show RM-1a
