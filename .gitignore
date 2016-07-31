@@ -59,3 +59,8 @@ renpy/vc_version.py
 /renios
 /steam_appid.txt
 game/saves/*.save
+*.save
+game/saves/persistent
+game/saves/auto-1-LT1.save
+*.save
+game/saves/persistent
