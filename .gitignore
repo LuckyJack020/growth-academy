@@ -58,3 +58,4 @@ renpy/vc_version.py
 /pygame_sdl2
 /renios
 /steam_appid.txt
+game/saves/*.save
