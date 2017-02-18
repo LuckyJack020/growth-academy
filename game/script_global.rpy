@@ -27,11 +27,15 @@ define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define LE = Character('Yuki', color="#FF91DC")
 define UNKNOWN = Character('???', color="#FFFFFF")
+define Student1 = Character('Student 1', color="#FF3300")
+define Student2 = Character('Student 2', color="#FF3300")
+define Student3 = Character('Student 3', color="#FF3300")
 
 init python:
-    pass #Global events go here eventually
+    eventlibrary['global006'] = {"name": "global006", "girls": [], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "6"]], "priority": 20}
+    eventlibrary['global007'] = {"name": "global007", "girls": [], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"]], "priority": 10}
     
-label day000:
+label global000:
     stop music fadeout 0.5
     
     # Without a defined character code before the dialogue, it's unattributed speech. Good for narration.
@@ -51,6 +55,12 @@ label day000:
     centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
     centered "For more information, visit\n https://www.expansiongames.net"
     centered "Enjoy."
+    
+    menu:
+        "Skip intro":
+            jump daymenu
+        "Continue":
+            "Playing intro."
     
     # Move to Lake Road screen with a fade in transition.
     scene Lake Road
@@ -157,26 +167,26 @@ label day000:
     "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year.\nIt was really awe-inspiring at the time."
     "But even then, I had no idea just how much my life was going to change."
-    jump day000_menu
+    jump global000_menu
     
-label day000_menu:
+label global000_menu:
     
     scene black
     "Where should I go?"
     
     menu:
-        "Walk in the garden" if not getFlag("day000_GTS"):
-            jump day000_GTS
-        "Investigate the front of the school" if not getFlag("day000_AE"):
-            jump day000_AE
-        "Check out your classroom" if not getFlag("day000_BBW"):
-            jump day000_BBW
+        "Walk in the garden" if not getFlag("global000_GTS"):
+            jump global000_GTS
+        "Investigate the front of the school" if not getFlag("global000_AE"):
+            jump global000_AE
+        "Check out your classroom" if not getFlag("global000_BBW"):
+            jump global000_BBW
         "Head back to your room and relax":
-            jump day000_RM
+            jump global000_RM
     
-label day000_GTS:
+label global000_GTS:
     
-    $ setFlag("day000_GTS")
+    $ setFlag("global000_GTS")
     scene black
     with dissolve
     "As we entered the school grounds, I couldn't help but notice how big everything was."
@@ -205,12 +215,12 @@ label day000_GTS:
     
     menu:
         "That's too bad.":
-            jump day000_GTS_c1
+            jump global000_GTS_c1
             
         "Do you need help?":
-            jump day000_GTS_c2
+            jump global000_GTS_c2
             
-label day000_GTS_c1:
+label global000_GTS_c1:
     
     MC "That's too bad, hope you can figure something out."
     UNKNOWN "Yeah...If only I was a little taller, I could reach to the middle..."
@@ -229,9 +239,9 @@ label day000_GTS_c1:
     show BE neutral
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
     "I nod, and we continue on to the front doors of the school."
-    jump day000_menu
+    jump global000_menu
 
-label day000_GTS_c2:
+label global000_GTS_c2:
     MC "Do you need help?"
     show GTS happy
     UNKNOWN "Oh, thank you, that'd be lovely. Here, let me give you the can..."
@@ -254,11 +264,11 @@ label day000_GTS_c2:
     BE "Well that was nice of you to help her, Kei-chan!"
     $ setAffection("BE", 1)
     "I nod, and we continue on to the front doors of the school."
-    jump day000_menu
+    jump global000_menu
 
-label day000_AE:
+label global000_AE:
     
-    $ setFlag("day000_AE")
+    $ setFlag("global000_AE")
     scene black
     with dissolve
     UNKNOWN "Mizutani!"
@@ -293,15 +303,15 @@ label day000_AE:
     menu:
         
         "She was just trying to help...":
-            jump day000_AE_c1
+            jump global000_AE_c1
             
         "You should listen to your boss, you know.":
-            jump day000_AE_c2
+            jump global000_AE_c2
             
         "(Do nothing)":
-            jump day000_AE_c3
+            jump global000_AE_c3
 
-label day000_AE_c1:
+label global000_AE_c1:
     
     MC "She was just trying to help...{w}No need to be mean."
     $ setAffection("BE", 1)
@@ -336,9 +346,9 @@ label day000_AE_c1:
     show BE surprised at Position (xpos=0.25, xanchor=0.5)
     "Without another word, Matsumoto turned and began barking more orders and directions to the other students arranging the decorations."
     "Honoka and I looked at each other and headed for class 3-B."
-    jump day000_menu
+    jump global000_menu
     
-label day000_AE_c2:
+label global000_AE_c2:
     
     MC "You should listen to your boss, you know."
     MC "If she's got a plan, going off on your own doesn't really help."
@@ -354,9 +364,9 @@ label day000_AE_c2:
     show AE sad
     AE "I did not need your help, but she's right. Get up to 3-B and help with the decorations and cleaning."
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
-    jump day000_menu
+    jump global000_menu
     
-label day000_AE_c3:
+label global000_AE_c3:
     
     "I didn't want to get involved in the fight.{w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
@@ -376,11 +386,11 @@ label day000_AE_c3:
     hide AE with dissolve
     show BE neutral at center with dissolve
     BE "You think she's ever happy with anyone? Doesn't seem the type..."
-    jump day000_menu
+    jump global000_menu
 
-label day000_BBW:
+label global000_BBW:
     
-    $ setFlag("day000_BBW")
+    $ setFlag("global000_BBW")
     scene black
     with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
@@ -421,12 +431,12 @@ label day000_BBW:
 
     menu:
         "Well, if you've got this under control...":
-            jump day000_BBW_c1
+            jump global000_BBW_c1
             
         "Shouldn't you be doing something too?":
-            jump day000_BBW_c2
+            jump global000_BBW_c2
             
-label day000_BBW_c1:
+label global000_BBW_c1:
     MC "Well, if you've got this under control, I guess I'll be going then.?"
     $ setAffection("BBW", 1)
     $ setAffection("PRG", -1)
@@ -440,9 +450,9 @@ label day000_BBW_c1:
     show PRG sad
     PRG "...I don't want to be a bother."
     BBW "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
-    jump day000_menu
+    jump global000_menu
             
-label day000_BBW_c2:
+label global000_BBW_c2:
     MC "Shouldn't you be doing something too?"
     $ setAffection("BBW", -1)
     $ setAffection("PRG", 1)
@@ -455,9 +465,9 @@ label day000_BBW_c2:
     MC "It's fine. We're all supposed to be working together, right?"
     show PRG happy
     PRG "T-thank you! Thank you very much!"
-    jump day000_menu
+    jump global000_menu
      
-label day000_RM:
+label global000_RM:
     scene Hallway
     with fade
      
@@ -481,15 +491,15 @@ label day000_RM:
     
     menu:
         "Uh...Pizza delivery?":
-            jump day000_RM_c1
+            jump global000_RM_c1
             
         "Keisuke Hotsure. I...think this is my room?":
-            jump day000_RM_c2
+            jump global000_RM_c2
             
         "Don't worry, I'm from the government!":
-            jump day000_RM_c3
+            jump global000_RM_c3
             
-label day000_RM_c1:
+label global000_RM_c1:
     MC "Uh...{w}Pizza delivery?"
     UNKNOWN "I didn't order any pizza!{w} Scram!"
     MC "Hahaha...It was just a joke, this is my dorm room.{w} I guess you're my roommate?"
@@ -509,9 +519,9 @@ label day000_RM_c1:
     scene Dorm Interior
     with fade
     show RM neutral
-    jump day000_RM_after
+    jump global000_RM_after
     
-label day000_RM_c2:
+label global000_RM_c2:
     MC "Keisuke Hotsure. I...{w}think this is my room?"
     "I could hear movement behind the door, like someone searching for something.{w} After a bit, the door opened a crack, a single narrowed eye looking me up and down."
     UNKNOWN "Hotsure, huh?{w} Let's see some ID"
@@ -524,9 +534,9 @@ label day000_RM_c2:
     scene Dorm Interior
     with fade
     show RM neutral
-    jump day000_RM_after
+    jump global000_RM_after
     
-label day000_RM_c3:
+label global000_RM_c3:
     MC "Don't worry, I'm from the government!"
     "I thought my fake-authoritative voice would have been worth a laugh, but instead there was silence.{w} I knocked again, tried the knob, called out a few times, but there was no answer."
     "I put my ear against the door and could hear movement, so I moved over to one of the windows and took a peek in,{w} only to see the mystery occupant hurling his bags out the opposite window!"
@@ -553,9 +563,9 @@ label day000_RM_c3:
     show RM embarassed
     RM "Don't get any funny ideas, 'Keisuke Hotsure'. I've got my eye on you..."
     $ setAffection("RM", -3)
-    jump day000_RM_after
+    jump global000_RM_after
 
-label day000_RM_after:
+label global000_RM_after:
     "When I finally got inside, it was obvious Daichi had claimed his half of the room.{w} Half the furniture had been crammed into one corner of the room, with blankets and sheets erected into a kind of tent over his desk and dresser."
     show RM neutral
     MC "Er, so, do you want to--"
@@ -603,17 +613,17 @@ label day000_RM_after:
         RM "Of course not.{w} I need to get the official story so I know where to start investigating."
         hide RM with dissolve
         "I shook my head, but waved goodbye nonetheless as Daichi left.  At least he seemed in good spirits."
-        $ setFlag("day000_RM_friendly")
-        jump day000_part2
+        $ setFlag("global000_RM_friendly")
+        jump global000_part2
 
     if getAffection("RM") < 0:
         show RM sad
         "As soon as he realized I'd noticed him, he spun on his heel and headed out the door."
         hide RM with dissolve
         "I looked after him, puzzled, but after yesterday's oddness I figured this was the sort of behavior I could look forward to all year."
-        jump day000_part2
+        jump global000_part2
 
-label day000_part2:
+label global000_part2:
     scene Campus Center
     with fade
     "As I followed the signs to freshman welcoming, I couldn't help but notice how flat the campus seemed.  Despite the large buildings, most of them were divided into a handful of floors at most." 
@@ -625,16 +635,16 @@ label day000_part2:
 
     menu:
         "I should sit in the front where the Principal can see me.":
-            jump day000_sit_c1
+            jump global000_sit_c1
             
         "I should sit somewhere in the middle.":
-            jump day000_sit_c2
+            jump global000_sit_c2
         
         "I should sit in the back, where no one will notice me.":
-            jump day000_sit_c3
+            jump global000_sit_c3
 
 
-label day000_sit_c1:
+label global000_sit_c1:
     "I decided to sit in the front row, where the principal could see me. If I ever needed to speak with him, recognizing my face might make him better disposed toward me."
     MCT "This is a good seat...  Got spaces on either side of me."
     "{color=#FF69B4}*FLUMPH!*{/color}"
@@ -651,12 +661,12 @@ label day000_sit_c1:
         
     menu:
         "So, Shiori-san...":
-            jump day000_sit_c1_1
+            jump global000_sit_c1_1
 
         "Hi there, Nikumaru-san...":
-            jump day000_sit_c1_2
+            jump global000_sit_c1_2
 
-label day000_sit_c2:
+label global000_sit_c2:
     "I decided to sit in the middle of the auditorium, where I could still hear the speeches without being so front-and-center."
     MCT "Let's see, somewhere around here should be--"
     BE "Pssst!  Kei-chan!"
@@ -675,12 +685,12 @@ label day000_sit_c2:
 
     menu:
         "Find your dorm okay, Honoka?":
-            jump day000_sit_c2_1
+            jump global000_sit_c2_1
 
         "What was your grade school like, Naomi?":
-            jump day000_sit_c2_2
+            jump global000_sit_c2_2
 
-label day000_sit_c3:
+label global000_sit_c3:
     "I decided to sit in the back, where I wouldn't have to worry about anyone seeing me."
     show FMG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     "The back rows were sparsely filled, so much so that I saw Mizutani-san could afford to hang her toned arms of the backs of the chairs on either side of her."
@@ -690,13 +700,13 @@ label day000_sit_c3:
 
     menu:
         "Needed the room to stretch out, Mizutani?":
-            jump day000_sit_c3_1
+            jump global000_sit_c3_1
 
         "Seems kinda lonely back here, Aida...":
-            jump day000_sit_c3_2
+            jump global000_sit_c3_2
 
 
-label day000_sit_c1_1:
+label global000_sit_c1_1:
     hide AE
     hide BBW
     MC "So, Shiori-san..."
@@ -709,9 +719,9 @@ label day000_sit_c1_1:
     "You open your mouth to try and ask about the ass-squishing she's giving you, but the principal clearing his throat into the microphone snapped Shiori's attention to the stage."
     MCT "No use talking now, I suppose...  But it's nice she thought I was clever enough to notice."
     $ setAffection("AE", 1)
-    jump day000_sit_after
+    jump global000_sit_after
 
-label day000_sit_c1_2:
+label global000_sit_c1_2:
     hide AE
     hide BBW
     MC "Hi there, Nikumaru-san..."
@@ -726,9 +736,9 @@ label day000_sit_c1_2:
     show BBW neutral
     BBW  "Oop, they're starting. Eyes forward."
     $ setAffection("BBW", 1)
-    jump day000_sit_after
+    jump global000_sit_after
 
-label day000_sit_c2_1:
+label global000_sit_c2_1:
     hide BE
     hide GTS
     MC "Find your dorm okay, Honoka?"
@@ -745,9 +755,9 @@ label day000_sit_c2_1:
     BE "Yeah! That'd be great, Kei-chan! Just like old times!"
     MC "Shhh, not so loud, they're starting! But yeah, just like old times..."
     $ setAffection("BE", 1)
-    jump day000_sit_after
+    jump global000_sit_after
 
-label day000_sit_c2_2:
+label global000_sit_c2_2:
     hide BE
     hide GTS
     MC "What was your grade school like, Naomi?"
@@ -770,9 +780,9 @@ label day000_sit_c2_2:
     show GTS happy at Position(xpos=0.75, xanchor=0.5)
     GTS "...Thank you, both of you. Now, we musn't be speaking once the principal starts..."
     $ setAffection("GTS", 1)
-    jump day000_sit_after
+    jump global000_sit_after
 
-label day000_sit_c3_1:
+label global000_sit_c3_1:
     hide PRG
     hide FMG
     MC "Needed the room to streth out, Mizutani?"
@@ -792,9 +802,9 @@ label day000_sit_c3_1:
     FMG "Busted his finger. Wasn't even trying to."
     MCT "Ooooo-kay, I'm suddenly very interested in what the principal has to say..."
     $ setAffection("GTS", 1)
-    jump day000_sit_after
+    jump global000_sit_after
 
-label day000_sit_c3_2:
+label global000_sit_c3_2:
     hide PRG
     hide FMG
     MC "Seems kinda lonely back here, Aida..."
@@ -814,9 +824,9 @@ label day000_sit_c3_2:
     PRG "I do..."
     "We sat there, listening to the Principal's speech. I noticed Aida-san leaning a little closer into me as it went on."
     $ setAffection("PRG", 1)
-    jump day000_sit_after
+    jump global000_sit_after
 
-label day000_sit_after:
+label global000_sit_after:
     hide PRG
     hide BBW
     hide GTS
@@ -835,22 +845,22 @@ label day000_sit_after:
 
     menu:
         "I haven't seen him...":
-            jump day000_aftersit_c1
-        "He said he wouldn't miss the ceremony..." if getFlag("day000_RM_friendly"): #This menu item will only appear if this variable is True
-            jump day000_aftersit_c2
-        "He left the dorm pretty early..." if not getFlag("day000_RM_friendly"): #Likewise, this item only appears if the variable is False
-            jump day000_aftersit_c3
+            jump global000_aftersit_c1
+        "He said he wouldn't miss the ceremony..." if getFlag("global000_RM_friendly"): #This menu item will only appear if this variable is True
+            jump global000_aftersit_c2
+        "He left the dorm pretty early..." if not getFlag("global000_RM_friendly"): #Likewise, this item only appears if the variable is False
+            jump global000_aftersit_c3
 
 
-label day000_aftersit_c1:
+label global000_aftersit_c1:
     MC "I haven't seen him...{w}but he was acting kind of strangely this morning. No telling where he went off to."
     AE "Hmph. He'd better have a good excuse!"
     hide AE 1d with dissolve
     "I left to go to my homeroom class, worrying no excuse would be good enough for Shiori..."
     $ setAffection("RM", 1)
-    jump day000_homeroom
+    jump global000_homeroom
 
-label day000_aftersit_c2:
+label global000_aftersit_c2:
     MC "Well, he said he was going to make sure not to miss the ceremony..."
     AE "He did? Then why didn't I see him come in?"
     MC "He said he was going to walk around campus a bit this morning, get a feel for the place. Maybe he came in some different door?"
@@ -861,18 +871,18 @@ label day000_aftersit_c2:
     "She nodded and left her post, satisfied with the answer, and we both walked to homeroom."
     $ setAffection("AE", 1)
     $ setAffection("RM", 1)
-    jump day000_homeroom
+    jump global000_homeroom
 
-label day000_aftersit_c3:
+label global000_aftersit_c3:
     MC "He left the dorms pretty early, don't know where he was off to..."
     AE "Hmph.  Well, he certainly wasn't here. Bah, I don't have time to waste on the likes of him.  Thank you for telling me, though, so I didn't stand there until the bell rang."
     hide AE with dissolve
     "With a derisive grunt, Shiori left her post by the doors and we walked to homeroom together."
     $ setAffection("AE", 1)
     $ setAffection("RM", -1)
-    jump day000_homeroom
+    jump global000_homeroom
 
-label day000_homeroom:
+label global000_homeroom:
     scene School Exterior
     with fade
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
@@ -968,8 +978,23 @@ label day000_homeroom:
     "What was I supposed to do now, knowing what I do about the bodies of the student body?"
     # This is where we will show a top-down perspective map of the campus, most likely, in order to begin branching off to whatever the player chooses from the options presented.
     jump daymenu
+
+label global006:
+    #temp (duh)
+    "It's the big test!"
+    show HR neutral
+    HR "You've got hair problems."
+    "Oh no!"
+    jump daymenu
     
-    
+label global007:
+    #temp (duh)
+    "I met roommate outside of the hall."
+    show RM neutral
+    RM "Wow, you don't have a girlfriend yet?"
+    "Rude!"
+    jump daymenu
+
 label End:
     show black
     with dissolve

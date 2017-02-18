@@ -30,6 +30,9 @@ init -1 python hide:
     config.name = "GrowthAcademy"
     config.version = "0.41"
 
+    # Enables logging
+    config.log = "debug_log.txt"
+
     #########################################
     # Themes
 
@@ -350,4 +353,3 @@ init python:
 
     build.documentation('*.html')
     build.documentation('*.txt')
-    

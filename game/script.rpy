@@ -84,6 +84,73 @@
                
             def hasKeysLeft(self):
                 return len(self.dict) != 0
+    #Condition enums/stuff
+    class ConditionEnum:
+        EVENT, FLAG, GAMETIME, AFFECTION, SKILL = range(5)
+    
+    class ConditionEqualityEnum:
+        EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN = range(4)
+        
+    def checkCriteria(clist):
+        criteriavalid = True
+        for c in clist:
+            if c[0] == ConditionEnum.EVENT:
+                if c[1] not in clearedevents:
+                    criteriavalid = False
+                    break
+                else:
+                    continue
+            elif c[0] == ConditionEnum.FLAG:
+                if c[1] not in flags:
+                    criteriavalid = False
+                    break
+                else:
+                    continue
+            elif c[0] == ConditionEnum.GAMETIME:
+                if c[1] == ConditionEqualityEnum.LESSTHAN:
+                    if gametime >= int(c[2]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[1] == ConditionEqualityEnum.GREATERTHAN:
+                    if gametime <= int(c[2]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[1] == ConditionEqualityEnum.EQUALS:
+                    if gametime != int(c[2]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                else:
+                    renpy.log("Invalid criteria equality enum ID: %s" % str(c[1]))
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.AFFECTION:
+                if c[2] == ConditionEqualityEnum.LESSTHAN:
+                    if getAffection(c[1]) >= int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[2] == ConditionEqualityEnum.GREATERTHAN:
+                    if getAffection(c[1]) <= int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                else:
+                    renpy.log("Invalid criteria equality enum ID: %s" % str(c[2]))
+                    criteriavalid = False
+                    break
+            else:
+                renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
+                criteriavalid = False
+                break
+        return criteriavalid    
                 
     #Other misc functions
     def setAffection(girl, val):
@@ -136,7 +203,7 @@
                 weightlist[scsort[i][0]] = 1
             i += 1
         picker = WeightedChoicePicker(weightlist)
-        prefgirl = picker.pick()
+        return picker.pick()
 
 label start:
     python:
@@ -155,7 +222,7 @@ label start:
         prefgirl = ""
         freeday = True
         prefscene = True
-    jump day000
+    jump global000
 
 label splashscreen:
     scene black
@@ -210,7 +277,7 @@ label daymenu:
         freeday = True
         #determine preferred girl
         prefmax = 0
-        pickPreferredGirl()
+        prefgirl = pickPreferredGirl()
         
         #while we've figured out the preferred girl, update the weight limit, which is floor(average of all non-preferred girls) + 5
         tmpscenemax = 0
@@ -228,36 +295,7 @@ label daymenu:
         for k, v in eventlibrary.iteritems():
             if k in clearedevents:
                 continue
-            criteriavalid = True
-            #This will probably get cleaned up heavily when we go live, by spinning it into an actual class (and cleaning up all the goofy substring finds)
-            #But while we're still prototyping, I'm going to be lazy
-            for c in v["conditions"]:
-                cond = c.split(' ')
-                if cond[0] == "clearevent":
-                    if cond[1] not in clearedevents:
-                        criteriavalid = False
-                        break
-                    else:
-                        continue
-                if cond[0] == "gametime":
-                    if cond[1] == "<":
-                        if gametime >= int(cond[2]):
-                            criteriavalid = False
-                            break
-                        else:
-                            continue
-                    if cond[1] == ">":
-                        if gametime <= int(cond[2]):
-                            criteriavalid = False
-                            break
-                        else:
-                            continue
-                    if cond[1] == "==":
-                        if gametime != int(cond[2]):
-                            criteriavalid = False
-                            break
-                        else:
-                            continue
+            criteriavalid = checkCriteria(v["conditions"])
             if not criteriavalid:
                 continue
             if "priority" in eventlibrary[k].keys():
