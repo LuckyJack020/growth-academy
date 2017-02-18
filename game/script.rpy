@@ -127,10 +127,6 @@
                         continue
                 else:
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[1]))
-                elif c[2] == ConditionEqualityEnum.GREATERTHAN:
-                    if getAffection(c[1]) <= int(c[3]):
-                        criteriavalid = False
-                        break
                     criteriavalid = False
                     break
             elif c[0] == ConditionEnum.AFFECTION:
@@ -140,6 +136,10 @@
                         break
                     else:
                         continue
+                elif c[2] == ConditionEqualityEnum.GREATERTHAN:
+                    if getAffection(c[1]) <= int(c[3]):
+                        criteriavalid = False
+                        break
                     else:
                         continue
                 else:
