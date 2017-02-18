@@ -21,6 +21,7 @@ init python:
     eventlibrary['AE100'] = {"name": "AE100", "girls": ["AE", "FMG"], "conditions": [], "priority": 0}
     
 label AE001:
+    scene Library with fade
     "After a long day, I figured that some time in the library would do well for me. I could use somewhere quiet to wind down."
     MCT "Geez, I expected quiet, but this room is practically abandoned!"
     "Even though a few hours had passed, what Tashi-sensei said was still ringing in my head. I wasn’t completely sure how to process what had been going on, but I was worried to say the least."
@@ -75,7 +76,7 @@ label AE001:
 label AE001_c1:
     MC "So...Shiori-san. How are you handling this?"
     AE "..."
-    extend "I suppose...I just need to further my understanding of the situation. That’s all. It’s unlikely that my situation is anything to worry about, anyway."
+    extend " I suppose...I just need to further my understanding of the situation. That’s all. It’s unlikely that my situation is anything to worry about, anyway."
     MCT "That...didn’t really answer my question."
     jump AE001_after
     
@@ -114,12 +115,12 @@ label AE001_after:
     jump daymenu
 
 label AE002:
-    #Scene library
+    scene Library with fade
     MCT "Maybe Shiori-san is here again today."
     "As my mind recalled yesterday's events, I began to wander about the Library. The sheer size of the place was a stark reminder of just how large the school was...and how unlikely it would be to find Shiori in it so quickly."
     MC "Let’s see...ah!"
     "It was only now I noticed the door with the sign 'Student Organizations' directly on top of the door frame on the opposite side of the room."
-    #Scene office
+    scene Office with fade
     "As I moved across the library to the door, I began to notice that, like yesterday, not many people were here. Reading just isn’t as popular a pastime as it used to be. I saw her through the large window in the wall separating the Library from the room, where she was working on a stack of papers."
     MC "Um, hello, Shiori-san?"
     "Shiori looked up from the paperwork and did something that kind of took me off guard."
@@ -198,7 +199,7 @@ label AE002_c2:
     jump daymenu
     
 label AE003:
-    #scene cherry blossom
+    scene Campus Center with fade
     MCT "C’mon, just a bit farther!"
     "I had spent a good amount of time after class making paper airplanes and throwing them around in the central courtyard, attempting to beat my earlier record by a few precious inches."
     MCT "Almost...there!"
@@ -235,7 +236,7 @@ label AE003:
     AE "Hm."
     hide AE with dissolve
     "I strode off in the opposite direction; breathing a sigh of relief knowing that my paper airplanes didn’t win me a thrashing."
-    #scene hallway
+    scene Hallway with fade
     MCT "Ok, so if Tashi-sensei wants us to do section three by tomorrow, then I can probably finish in about two or so at home, meaning that I can...eh?"
     Student1 "I’m telling you, it’s absolute crap!!"
     "As I walked down the dorm hallways, I came across a group of guys getting in a heated discussion. I would normally just ignore it, but my curiosity got the better of me. I pretended to play around with the nearby vending machine as I listened to what they were talking about."
@@ -272,11 +273,12 @@ label AE003:
     jump daymenu
     
 label AE004:
-    #Dorm
+    scene Dorm Interior with fade
     "I slipped my shoes on as my mind began to mull over the incident in the hall the other day, it was strange, but honestly I just felt a bit ticked off about the whole thing. Was it because they were bad mouthing someone I knew, was it because it was just blatant disrespect towards someone who seems like they work hard, or was it because I didn’t say anything? Either way, I was off put enough by the whole thing that I now had a big problem on my hands."
     MCT "I can’t believe I forgot to get a new notebook!"
     "The notebook that I had been mulling around with yesterday lay in the bin next to my bed. It was old and used up in the first place, but it didn’t help that I used it as a factory for miniature planes."
     MC "Ok, so if I rush, I can get to the store in time to get a new one, get back, and start writing my homework down."
+    scene Dorm Exterior with fade
     "I opened the door quickly, and began to head out. If it weren’t for my reflexes, I would have ran head first into Shiori-san, hand prepped to knock on the door. I jumped a bit, and took a step back."
     show AE neutral with dissolve
     MC "Uwa! S-sorry, Shiori-san! I was just heading out, I didn’t mean to startle you."
@@ -434,7 +436,7 @@ label AE004_afterchoice:
     jump daymenu
 
 label AE005:
-#Scene is in hall
+    scene Hallway with fade
     "I let out a sigh, I wasn’t quite sure what I was doing. I don’t know why, but I still felt a bit of anxiety after the fact. The raw emotion in the area was overwhelming, there was so much tension from everywhere at once."
     MCT "My hair…? My hair. I mean, it’s so..."
     "I looked down at my knuckles. Since puberty, I’ve had a bit of hair on them. I remember how all the other kids would jeer me for, being hairy here isn’t exactly that common, especially as a teen."
@@ -527,7 +529,7 @@ label AE005_after:
     jump daymenu
 
 label AE006:
-#Scene hall
+    scene Hallway with fade
     "The soles of my shoes made a loud, squeaky, and wet patter as I walked down the hall, drenched with the torrential downpour from outside."
     MC "Ugh, why does it always have to rain on days that look sunny in the morning? I’m soaked!"
     "In an attempt to shield myself from the heavy rain, I used the notebook in my right hand. Not exactly my brightest idea."
@@ -582,7 +584,7 @@ label AE006:
     MC "Really? Awesome, thanks."
     AE "Just don’t make too much of a ruckus."
     "Shiori-san and I walked into the library and over to the door of the office. She pulled out a key from her pack and unlocked the door, flicking on the lights as she entered the room."
-    #Scene switch office
+    scene Office with fade
     AE "One moment. I’ll get the papers with some of the work I need done out first."
     "I leaned up against the wall as Shiori-san began to look through the filing cabinets for papers, I looked at her desk and noticed the obscene stacks of paper piled up."
     MCT "Is she really going though all of that?! It could take months!"
@@ -623,14 +625,14 @@ label AE006:
         AE "...Very well. If anything, I’ll be doing a service to the school by helping you prepare for the outside world."
         MC "Thank you, Shiori-san! I promise, you won’t regret this."
         AE "I certainly hope not."
-    #@Scene switch to hall@
+    scene Hallway with fade
     hide AE
     $setFlag("AE006_helpinginoffice")
     "As I left the library, I gazed out the window. The rain had passed into to a soft drizzle on the horizon as the sun’s golden rays began to peek through the clouds. As I walked outside into to fresh air, the smell of petrichor hit my nose as I began to ponder how I would spend the rest of the day."
     jump daymenu
 
 label AE007:
-#scene hall
+    scene Hallway with fade
     "I briskly strode towards the Library, backpack slung across my shoulder as I prepped for a day to do some extra work. Today was the day I promised Shiori-san I would help her with her paperwork, at least, the day she would introduce me to it. As I turned the corner to the Library entrance hallway, the punctual girl came into view, waiting outside the door."
     show AE neutral with dissolve
     MC "Hey, Shiori-san!"
@@ -645,7 +647,7 @@ label AE007:
     AE "There is more to my job than filling out forms, Hotsure-san. You, however, will be working on filing the forms."
     MC "Sounds easy enough!"
     AE "Well then, let’s head in."
-    #scene switch office
+    scene Office with fade
     "We walked into the library and headed to the student council office. Shiori-san unlocked it with a key and flipped the switch on; filling the room with the soft whir of the fluorescent lights. Shiori-san sat down at the table and began to pull assorted items from her bag, stamp, pens, pencils, and a menagerie of different folders."
     MCT "I have to make a good impression. I don’t want her to think I’m just some lazy bum who can’t hold my own!"
     MC "So, I’m ready to get started! Got anything for me to start off with?"
@@ -725,12 +727,13 @@ label AE007_after:
     AE "Your problem is pacing. I plan on rectifying that. I will have plenty of files tomorrow to work on as well, I hope you will be there."
     MC "Shiori-san...thank you. I will."
     AE "Hm."
-#@scene switch hall@
+    scene Hallway with fade
     hide AE
     "I walked out of the library, my hope restored with plans for the next time. Until then, I gotta figure out the rest of the day."
     jump daymenu
 
 label AE100:
+    scene Gym with fade
     show FMG neutral
     MC "Twelve..."
     FMG "COME ON HOTSURE, GO AT IT LIKE YOU HAVE A PAIR!"

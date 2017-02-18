@@ -19,6 +19,7 @@ init python:
     eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, "7"]], "priority": 0}
     
 label BE001:
+    scene Classroom Day with fade
     "After the bell rang, there was the familiar sound of chairs getting scraped along the ground as everyone prepared to leave."
     "The only difference was the volume. Compared to what I was used to at my old school, it was a lot quieter."
     "The loudest came from the direction of the blonde with the crazy hair, no doubt due to all the extra pressure she was putting on her seat."
@@ -29,8 +30,10 @@ label BE001:
     extend " First, what was going to grow on me?"
     extend " Second, where was I? It was hard getting used to a new school so quickly."
     "I decided to walk around a bit, to get the lay of the land. Maybe if I lucked out I could find it..."
+    scene Hallway with fade
     "The school seemed relatively normal, apart from the size and the people within. It didn't take me long to get the gist of where everything was. Hopefully I'd remember it all when tomorrow came around."
     "But, eventually, I found what I was looking for. Without even checking my surroundings to see if I was being watched, I turned the knob and walked up the steps into the warm sunny sky above."
+    scene Roof with fade
     MC "Fantastic. It was a long shot, but I figured they'd forget to lock the roof entrance while they were busy setting up the welcoming assembly."
     MC "Wow, from up here the school really looks huge. I guess it has to be big if they only put a few students in each classroom."
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
@@ -133,6 +136,7 @@ label BE001_after:
     jump daymenu
     
 label BE002:
+    scene Hallway with fade
     show BE neutral
     BE "Oof! Sorry about that, slippery ground!"
     MC "Ah, heh, it's no problem, Honoka. Hard to stop when you get moving, huh?"
@@ -182,6 +186,7 @@ label BE002:
     jump daymenu
     
 label BE003:
+    scene Student Center with fade
     "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was.I had already drank a whole bottle of water to cool off, but it wasn't enough. Thankfully, there were vending machines scattered around, and I had a few coins burning a hole in my pocket."
     MC "Alright, let's see. What do I want? Soda, juice, eh, water's healthier... but, soda's tastier."
     "After sliding in my change and selecting my drink, I bent over to retrieve my precious bounty. The sharp hiss of carbonation escaped the can as I opened it up and took a refreshing swig."
@@ -272,7 +277,7 @@ label BE003_c3:
     jump daymenu
     
 label BE004:
-    #Scene athletic field
+    scene Track with fade
     "I decided to head over to the soccer field. Before I even got on the grass, I heard the sound of a coach whistle blowing, directing students in their training. I picked up the pace a little bit so I could see what was going on. Among the small crowd was a familiar face. I waved over to Honoka, who enthusiastically waved back to me. She seemed happy to see me. I looked around for a place to sit. There's bleachers nearby, but I decided to just sit down on the grass for a while, making sure I stayed out of the way."
     MC "This is cool. Good to see there's still a sense of normalcy in this place, doesn't look like the soccer field is anything special or different."
     "The coach didn't look that special either. Not that he was ugly or anything, but there wasn't anything on the cap-wearing man that I recognized as being overly-large. It made sense, I guess. While there must have been enough students in the country to require a facility like this, it didn't mean that there'd be an equivalent number of faculty members who shared odd growths as well. The academy probably had to take what they could get."
@@ -309,11 +314,12 @@ label BE004:
     MC "Yeah, probably. Good luck!"
     "Honoka gave a quick wave and trotted over to the lineup, while I went and sat back down outside of the actual field."
     hide BE with dissolve
-    extend "I sat there for a while and continued watching Honoka and the other students kick the ball around, run drills, and do some exercises. Seemed like good fun, and I was tempted to see if I could just join in."
+    extend " I sat there for a while and continued watching Honoka and the other students kick the ball around, run drills, and do some exercises. Seemed like good fun, and I was tempted to see if I could just join in."
     "But, as I looked at the sweat running down my shirt, I remembered that it was way too hot today. Maybe next time."
     jump daymenu
     
 label BE005:
+    scene Hallway with fade
     show BE neutral
     BE "Oh, Kei-chan!"
     "Honoka bounced over towards me, clutching a few pieces of papers in one hand. She stopped, but a little too late, and her breasts collided into my side. She just brushed it off and stepped back, shoving the papers inside her sizable chest for safekeeping."
@@ -397,6 +403,7 @@ label BE005_after:
     jump daymenu
     
 label BE006:
+    scene Classrom with fade
     "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool…"
     "As I entered homeroom, it was obvious that everyone was talking about their discoveries already. It was just much louder than it typically was. Tones ranged from excitement and pride to confusion and sadness. Well, that's what the school was for, I suppose. To give everyone here a place to discuss their bodies in a safe environment. Still, it made me wonder if my trait was common or an oddity. I guess there was plenty of time to find out."
     show BE neutral with dissolve
@@ -408,7 +415,7 @@ label BE006:
     BE "Right. Oh! So, tell me, tell me, what did you end up getting? Fingernails? Ears? Feet?"
     MC "Hair."
     BE "..."
-    extend "Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
+    extend " Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
     MC "I guess so? I've never really noticed it before if that's the case. I mean, I suppose I might have gotten haircuts a bit more often but it wasn't really something I paid much attention to."
     BE "That's fair. Me on the other hand, I've known what I was going to be growing for a while now."
     "To emphasize her point, Honoka slumped forward and let her sizable bust sit on the desk for extra comfort. It was hard not to stare, but then again she was practically begging me to look."

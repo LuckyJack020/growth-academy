@@ -10,6 +10,8 @@ image BBW angry = DynamicImage("Graphics/BBW-[globalsize]-angry.png")
 image BBW aroused = DynamicImage("Graphics/BBW-[globalsize]-aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW-[globalsize]-haughty.png")
 
+image cg BBW001 = "Graphics/BBW-SC-1.png"
+
 init python:
     eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "conditions": [], "priority": 0}
     eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "conditions": [], "priority": 0}
@@ -21,6 +23,7 @@ init python:
     eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "conditions": [], "priority": 0}
     
 label BBW001:
+    scene Cafeteria with fade
     MC "Well! That was... a first day. I didn’t expect the school to be exactly like my old one, but on a list of unexpected surprises I didn’t think..."
     MC "OK, I guess I couldn’t have expected it for it to be a surprise."
     extend " But still, if the teacher had ripped off his face to reveal an alien underneath I wouldn’t have been more surprised. At least food is familiar enough. A nice snack after class is normal, right?"
@@ -117,8 +120,7 @@ label BBW001_c2_2:
     jump daymenu
     
 label BBW002:
-    #Cafeteria
-
+    scene Cafeteria with fade
     MC "This place seems kind of quiet for a high school cafeteria. Everyone’s so subdued, it’s like someone died. Guess I’m not the only one who was thrown for a loop by yesterday’s news."
     MC "We’re all probably wondering the same thing: what’s going to happen to me? How... big am I going to get? Am I going to end up like one of those people who can’t live in normal society?"
     MC "Ugh, this is too heavy for first thing in the morning. Let’s just get something to eat and take the day as it goes."
@@ -180,8 +182,9 @@ label BBW002_c2_1:
     BBW "I have never encountered a problem I could not deal with. Whatever sort of... mutation I am about to experience, I will handle it with grace and composure. You will not see me sobbing or wailing my misfortune."
     MC "Hmm-mmm. You have any idea what it might be? Or if they even know?"
     BBW "I haven’t the slightest."
-    #Close up of Alice’s thick middle.
+    show cg BBW001
     MC "Yeah, it’s a puzzle. Anyway..."
+    hide cg
     jump BBW002_c2_2
 
 label BBW002_c2_2:
@@ -216,11 +219,11 @@ label BBW002_c3_2:
     jump daymenu
     
 label BBW003:
-    #Hall
+    scene Hallway with fade
     MC "I think the library is this way? Maybe? Wait, that bulletin board doesn’t look familiar... Ah! I was supposed to turn left back there."
     UNKNOWN "Amazing!"
     MC "Oh? I know that voice."
-    #Cooking Classroom
+    scene Cooking Classroom with fade
     show BBW happy at Position (xpos=0.25, xanchor=0.5) with dissolve
     show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     BBW "Simply superb. Where did you study?"
@@ -332,7 +335,7 @@ label BBW003_c1_3:
     jump daymenu
     
 label BBW004:
-    #Class room
+    scene Classroom Day with fade
     MCT "After class clean-up. That’s normal. Mind-numbingly boring, but right now I’ll take dull over surprising. ... ?"
     MC "Um, are you planning to help out?"
     show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
@@ -395,7 +398,7 @@ label BBW005:
 #Keisuke (internal): That’s some nice rationalization there.
 #END SCENE
 
-#Cafeteria
+    scene Cafeteria with fade
     MC "Hair? What kind of mutation is hair growth? This almost seems like a joke. ... Hmm, no open tables. Oh! There’s a spot."
     show BBW sad at Position (xpos=0.25, xanchor=0.5) with dissolve
     show PRG sad at Position (xpos=0.75, xanchor=0.5) with dissolve
@@ -420,8 +423,8 @@ label BBW005:
     BBW "They say, and you might have trouble believing this just as I did, that I am inclined to grow... stout."
     MC "Stout?"
     BBW "..."
-    extend "Obese."
-    extend "Fat."
+    extend " Obese."
+    extend " Fat."
     MC "Oh. Yeah, that’s, um, hard to swallow. But maybe it won’t be too bad. They can’t tell how 'stout' you’ll end up being, right?"
     show BBW angry
     BBW "No, they can not predict that. But any excessive weight is unbecoming, which brings me to my quandary. Do I restrict my diet even further than the modest regiment I already have, or do I allow the growth to happen and fix things later?"
@@ -528,7 +531,7 @@ label BBW005A:
     jump daymenu
     
 label BBW006:
-    #Hallway
+    scene Hallway with fade
     MCT "Classes are done, so what now? Don’t want to go back to my room, I’ve got enough weirdness going on without someone trying to find more lurking around every corner. Maybe I can see if any of the clubs are recruiting yet."
     "..."
     MCT "Sounds like the music club is rehearsing. Not my thing... Oh!"
@@ -611,7 +614,7 @@ label BBW006_c3:
     jump daymenu
 
 label BBW007:
-    #Cafeteria
+    scene Cafeteria with fade
     MCT "First time I haven’t had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school. Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people. And I’m off by myself, which is par for the course."
     "No sooner had I thought that than someone sat down across from me."
     show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
@@ -620,7 +623,7 @@ label BBW007:
     show PRG sad at Position (xpos=0.75, xanchor=0.5) with dissolve
     MC "If you say so. Hi, Aida. How did you get so much mail already? It’s still the first week of the year."
     PRG "Oh, it’s not mine. I was carrying it for Nikumaru-sama. We just came from the mail room."
-    extend "... There was nothing for me."
+    extend " ... There was nothing for me."
     MCT "She seems a bit sad. Is there something about mail that bothers her? Better change the conversation."
     BBW "Interested in what I got?"
     MC "Uh..."
@@ -652,7 +655,7 @@ label BBW007:
     MC "No, no. I don’t need a new laptop. I mean, I could use one, but I don’t have that kind of money."
     BBW "Well you should have said so."
     show PRG neutral
-    extend "... Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
+    extend " ... Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
     MC "There’s already a store on campus, you know."
     BBW "I know, I’ve seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
     PRG "What do you need me to do, Nikumaru-sama?"
