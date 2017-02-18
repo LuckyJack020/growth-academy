@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -21,6 +21,8 @@
 
 # Other text-related things.
 
+from __future__ import print_function
+
 import renpy.text
 
 from renpy.text.textsupport import TAG
@@ -30,6 +32,7 @@ import renpy.text.textsupport as textsupport
 # A list of text tags, mapping from the text tag prefix to if it
 # requires a closing tag.
 text_tags = dict(
+    alpha=True,
     image=False,
     p=False,
     w=False,
@@ -77,7 +80,7 @@ def check_text_tags(s):
 
     tag_stack = [ ]
 
-    for type, text in tokens: #@ReservedAssignment
+    for type, text in tokens:  # @ReservedAssignment
         if type != TAG:
             continue
 
@@ -137,13 +140,57 @@ class ParameterizedText(object):
         self.style = style
         self.properties = properties
 
-    def parameterize(self, name, parameters):
+    _duplicatable = True
 
-        if len(parameters) != 1:
-            raise Exception("'%s' takes a single string parameter." %
-                            ' '.join(name))
+    def _duplicate(self, args):
 
-        param = parameters[0]
+        if len(args.args) != 1:
+            raise Exception("'%s' takes a single string parameter." % ' '.join(args.name))
+
+        param = args.args[0]
         string = renpy.python.py_eval(param)
 
         return renpy.text.text.Text(string, style=self.style, **self.properties)
+
+
+def textwrap(s, width=78, asian=False):
+    """
+    Wraps the unicode string `s`, and returns a list of strings.
+
+    `width`
+        The number of half-width characters that fit on a line.
+    `asian`
+        True if we should make ambiguous width characters full-width, as is
+        done in Asian encodings.
+    """
+
+    import unicodedata
+
+    glyphs = [ ]
+
+    for c in unicode(s):
+
+        eaw = unicodedata.east_asian_width(c)
+
+        if (eaw == "F") or (eaw =="W"):
+            gwidth = 20
+        elif (eaw == "A"):
+            if asian:
+                gwidth = 20
+            else:
+                gwidth = 10
+        else:
+            gwidth = 10
+
+        g = textsupport.Glyph()
+        g.character = ord(c)
+        g.ascent = 10
+        g.line_spacing = 10
+        g.width = gwidth
+        g.advance = gwidth
+
+        glyphs.append(g)
+
+    textsupport.annotate_unicode(glyphs, False, 2)
+    renpy.text.texwrap.linebreak_tex(glyphs, width * 10, width * 10, False)
+    return textsupport.linebreak_list(glyphs)

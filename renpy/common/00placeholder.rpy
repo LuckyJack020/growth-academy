@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -143,6 +143,7 @@ init -1500 python:
                 rv = Fixed(
                     Solid("#aaa"),
                     Text(" ".join(self.name), style="_default", color="#333333", text_align=0.5, xalign=0.5, ypos=5),
+                    alt="",
                 )
 
                 self.child = rv
@@ -182,16 +183,19 @@ init -1500 python:
                 Transform(image, crop=crop, size=size, xzoom=xzoom),
                 Text(text, pos=textpos, xanchor=0.5, yanchor=0.5, style="_default", color="#aaa", text_align=0.5),
                 xysize=size,
+                alt="",
             )
 
             self.child = rv
             return rv
 
-        def parameterize(self, name, parameters):
+        _duplicatable = True
+
+        def _duplicate(self, args):
+            args = args or self._args
 
             rv = Placeholder(self.base, self.full, self.flip)
-            rv.name = list(name) + list(parameters)
-
+            rv.name = list(args.name) + list(args.args)
             return rv
 
         def visit(self):

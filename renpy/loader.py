@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -19,6 +19,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+from __future__ import print_function
 import renpy
 import os.path
 from pickle import loads
@@ -27,13 +28,14 @@ import sys
 import types
 import threading
 import zlib
+import re
 
 # Ensure the utf-8 codec is loaded, to prevent recursion when we use it
 # to look up filenames.
 u"".encode("utf-8")
 
 
-################################################################# Physical Paths
+# Physical Paths
 
 def get_path(fn):
     """
@@ -54,14 +56,14 @@ def get_path(fn):
 
     return fn
 
-################################################################## Asset Loading
+# Asset Loading
 
 try:
     import android.apk
 
     expansion = os.environ.get("ANDROID_EXPANSION", None)
     if expansion is not None:
-        print "Using expansion file", expansion
+        print("Using expansion file", expansion)
 
         apks = [
             android.apk.APK(apk=expansion, prefix='assets/x-game/'),
@@ -71,7 +73,7 @@ try:
         game_apks = [ apks[0] ]
 
     else:
-        print "Not using expansion file."
+        print("Not using expansion file.")
 
         apks = [
             android.apk.APK(prefix='assets/x-game/'),
@@ -94,6 +96,7 @@ old_config_archives = None
 
 # A map from lower-case filename to regular-case filename.
 lower_map = { }
+
 
 def index_archives():
     """
@@ -163,10 +166,11 @@ def index_archives():
         except:
             raise
 
-    for dir, fn in listdirfiles(): #@ReservedAssignment
+    for dir, fn in listdirfiles():  # @ReservedAssignment
         lower_map[fn.lower()] = fn
 
-def walkdir(dir): #@ReservedAssignment
+
+def walkdir(dir):  # @ReservedAssignment
     rv = [ ]
 
     if not os.path.exists(dir) and not renpy.config.developer:
@@ -191,6 +195,7 @@ game_files = [ ]
 # A list of files that are in the common directory.
 common_files = [ ]
 
+
 def cleardirfiles():
     """
     Clears the lists above when the game has changed.
@@ -201,6 +206,7 @@ def cleardirfiles():
 
     game_files = [ ]
     common_files = [ ]
+
 
 def scandirfiles():
     """
@@ -224,13 +230,12 @@ def scandirfiles():
 
         seen.add(fn)
 
-
     for apk in apks:
 
         if apk not in game_apks:
-            files = common_files
+            files = common_files  # @UnusedVariable
         else:
-            files = game_files
+            files = game_files  # @UnusedVariable
 
         for f in apk.list():
 
@@ -243,13 +248,15 @@ def scandirfiles():
     for i in renpy.config.searchpath:
 
         if (renpy.config.commondir) and (i == renpy.config.commondir):
-            files = common_files
+            files = common_files  # @UnusedVariable
         else:
-            files = game_files
+            files = game_files  # @UnusedVariable
 
         i = os.path.join(renpy.config.basedir, i)
         for j in walkdir(i):
             add(i, j)
+
+    files = game_files
 
     for _prefix, index in archives:
         for j in index.iterkeys():
@@ -273,18 +280,23 @@ def listdirfiles(common=True):
 
 class SubFile(object):
 
-    def __init__(self, f, base, length, start):
-        self.f = f
+    def __init__(self, fn, base, length, start):
+        self.fn = fn
+
+        self.f = None
+
         self.base = base
         self.offset = 0
         self.length = length
         self.start = start
 
         if not self.start:
-            self.name = self.f.name
+            self.name = fn
         else:
             self.name = None
 
+    def open(self):
+        self.f = open(self.fn, "rb")
         self.f.seek(self.base)
 
     def __enter__(self):
@@ -295,6 +307,9 @@ class SubFile(object):
         return False
 
     def read(self, length=None):
+
+        if self.f is None:
+            self.open()
 
         maxlength = self.length - self.offset
 
@@ -316,6 +331,9 @@ class SubFile(object):
         return (rv1 + rv2)
 
     def readline(self, length=None):
+
+        if self.f is None:
+            self.open()
 
         maxlength = self.length - self.offset
         if length is not None:
@@ -367,7 +385,7 @@ class SubFile(object):
     def __iter__(self):
         return self
 
-    def next(self): #@ReservedAssignment
+    def next(self):  # @ReservedAssignment
         rv = self.readline()
 
         if not rv:
@@ -378,8 +396,10 @@ class SubFile(object):
     def flush(self):
         return
 
-
     def seek(self, offset, whence=0):
+
+        if self.f is None:
+            self.open()
 
         if whence == 0:
             offset = offset
@@ -403,7 +423,9 @@ class SubFile(object):
         return self.offset
 
     def close(self):
-        self.f.close()
+        if self.f is not None:
+            self.f.close()
+            self.f = None
 
     def write(self, s):
         raise Exception("Write not supported by SubFile")
@@ -419,6 +441,7 @@ if "RENPY_FORCE_SUBFILE" in os.environ:
         f.seek(0, 0)
 
         return SubFile(f, 0, length, '')
+
 
 def load_core(name):
     """
@@ -454,7 +477,7 @@ def load_core(name):
         if not name in index:
             continue
 
-        f = file(transfn(prefix + ".rpa"), "rb")
+        afn = transfn(prefix + ".rpa")
 
         data = [ ]
 
@@ -468,10 +491,12 @@ def load_core(name):
             else:
                 offset, dlen, start = t
 
-            rv = SubFile(f, offset, dlen, start)
+            rv = SubFile(afn, offset, dlen, start)
 
         # Compatibility path.
         else:
+            f = file(afn, "rb")
+
             for offset, dlen in index[name]:
                 f.seek(offset)
                 data.append(f.read(dlen))
@@ -483,6 +508,7 @@ def load_core(name):
 
     return None
 
+
 def get_prefixes():
     """
     Returns a list of prefixes to search for files.
@@ -492,17 +518,22 @@ def get_prefixes():
 
     language = renpy.game.preferences.language
 
-    if language is not None:
-        rv.append(renpy.config.tl_directory + "/" + language + "/")
+    for prefix in renpy.config.search_prefixes:
 
-    rv.append("")
+        if language is not None:
+            rv.append(renpy.config.tl_directory + "/" + language + "/" + prefix)
+
+        rv.append(prefix)
 
     return rv
+
 
 def load(name):
 
     if renpy.config.reject_backslash and "\\" in name:
         raise Exception("Backslash in filename, use '/' instead: %r" % name)
+
+    name = re.sub(r'/+', '/', name).lstrip('/')
 
     for p in get_prefixes():
         rv = load_core(p + name)
@@ -513,6 +544,7 @@ def load(name):
 
 
 loadable_cache = { }
+
 
 def loadable_core(name):
     """
@@ -544,7 +576,10 @@ def loadable_core(name):
     loadable_cache[name] = False
     return False
 
+
 def loadable(name):
+
+    name = name.lstrip('/')
 
     for p in get_prefixes():
         if loadable_core(p + name):
@@ -559,10 +594,12 @@ def transfn(name):
     searched directories.
     """
 
-    name = lower_map.get(name.lower(), name)
+    name = name.lstrip('/')
 
     if renpy.config.reject_backslash and "\\" in name:
         raise Exception("Backslash in filename, use '/' instead: %r" % name)
+
+    name = lower_map.get(name.lower(), name)
 
     if isinstance(name, str):
         name = name.decode("utf-8")
@@ -579,6 +616,7 @@ def transfn(name):
 
 
 hash_cache = dict()
+
 
 def get_hash(name):
     """
@@ -611,7 +649,7 @@ def get_hash(name):
     return rv
 
 
-################################################################# Module Loading
+# Module Loading
 
 class RenpyImporter(object):
     """
@@ -620,9 +658,12 @@ class RenpyImporter(object):
     """
 
     def __init__(self, prefix=""):
-        self.prefix = ""
+        self.prefix = prefix
 
-    def translate(self, fullname, prefix=""):
+    def translate(self, fullname, prefix=None):
+
+        if prefix is None:
+            prefix = self.prefix
 
         try:
             fn = (prefix + fullname.replace(".", "/")).decode("utf8")
@@ -665,20 +706,26 @@ class RenpyImporter(object):
         source = source.encode("raw_unicode_escape")
 
         source = source.replace("\r", "")
-        code = compile(source, filename, 'exec')
+
+        code = compile(source, filename, 'exec', renpy.python.old_compile_flags, 1)
         exec code in mod.__dict__
+
         return mod
 
     def get_data(self, filename):
         return load(filename).read()
 
+
 def init_importer():
-    sys.meta_path.append(RenpyImporter())
+    sys.meta_path.insert(0, RenpyImporter("python-packages/"))
+    sys.meta_path.insert(0, RenpyImporter())
+
 
 def quit_importer():
-    sys.meta_path.pop()
+    sys.meta_path.pop(0)
+    sys.meta_path.pop(0)
 
-#################################################################### Auto-Reload
+# Auto-Reload
 
 # This is set to True if autoreload hads detected an autoreload is needed.
 needs_autoreload = False
@@ -698,6 +745,7 @@ auto_lock = threading.Condition()
 # Used to indicate that this file is blacklisted.
 auto_blacklisted = renpy.object.Sentinel("auto_blacklisted")
 
+
 def auto_mtime(fn):
     """
     Gets the mtime of fn, or None if the file does not exist.
@@ -708,7 +756,8 @@ def auto_mtime(fn):
     except:
         return None
 
-def add_auto(fn):
+
+def add_auto(fn, force=False):
     """
     Adds fn as a file we watch for changes. If it's mtime changes or the file
     starts/stops existing, we trigger a reload.
@@ -717,7 +766,7 @@ def add_auto(fn):
     if not renpy.autoreload:
         return
 
-    if fn in auto_mtimes:
+    if (fn in auto_mtimes) and (not force):
         return
 
     for e in renpy.config.autoreload_blacklist:
@@ -730,6 +779,7 @@ def add_auto(fn):
 
     with auto_lock:
         auto_mtimes[fn] = mtime
+
 
 def auto_thread_function():
     """
@@ -755,7 +805,11 @@ def auto_thread_function():
                 continue
 
             if auto_mtime(fn) != mtime:
-                needs_autoreload = True
+
+                with auto_lock:
+                    if auto_mtime(fn) != auto_mtimes[fn]:
+                        needs_autoreload = True
+
 
 def auto_init():
     """
@@ -776,6 +830,7 @@ def auto_init():
     auto_thread = threading.Thread(target=auto_thread_function)
     auto_thread.daemon = True
     auto_thread.start()
+
 
 def auto_quit():
     """

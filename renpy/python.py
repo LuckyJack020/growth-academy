@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -23,8 +23,13 @@
 # contained within the script file. It also handles rolling back the
 # game state to some time in the past.
 
+from __future__ import print_function
+
 # Import the python ast module, not ours.
 ast = __import__("ast", { })
+
+# Import the future module itself.
+import __future__
 
 import marshal
 import random
@@ -32,6 +37,7 @@ import weakref
 import re
 import sets
 import sys
+import time
 
 import renpy.audio
 
@@ -41,11 +47,14 @@ import renpy.audio
 # Deleted is a singleton object that's used to represent an object that has
 # been deleted from the store.
 
+
 class StoreDeleted(object):
+
     def __reduce__(self):
         return "deleted"
 
 deleted = StoreDeleted()
+
 
 class StoreModule(object):
     """
@@ -68,8 +77,11 @@ class StoreModule(object):
         del self.__dict__[key]
 
 # Used to unpickle a store module.
+
+
 def get_store_module(name):
     return sys.modules[name]
+
 
 class StoreDict(dict):
     """
@@ -145,10 +157,16 @@ store_modules = { }
 # run.
 initialized_store_dicts = set()
 
+
 def create_store(name):
     """
     Creates the store with `name`.
     """
+
+    parent, _, var = name.rpartition('.')
+
+    if parent:
+        create_store(parent)
 
     name = str(name)
 
@@ -178,9 +196,9 @@ def create_store(name):
     else:
         store_modules[name] = sys.modules[name] = StoreModule(d)
 
-    # If we're a module in the store, add us to the store.
-    if name.startswith("store."):
-        store_dicts["store"][name[6:]] = sys.modules[name]
+    if parent:
+        store_dicts[parent][var] = sys.modules[name]
+
 
 class StoreBackup():
     """
@@ -199,28 +217,31 @@ class StoreBackup():
         # The contents of ever_been_changed for each store.
         self.ever_been_changed = { }
 
-
         for k, v in store_dicts.iteritems():
             self.store[k] = dict(v)
             self.old[k] = dict(v.old)
             self.ever_been_changed[k] = set(v.ever_been_changed)
 
+    def restore_one(self, name):
+        sd = store_dicts[name]
+
+        sd.clear()
+        sd.update(self.store[name])
+
+        sd.old.clear()
+        sd.old.update(self.old[name])
+
+        sd.ever_been_changed.clear()
+        sd.ever_been_changed.update(self.ever_been_changed[name])
+
     def restore(self):
 
-        for k, sd in store_dicts.iteritems():
-
-            sd.clear()
-            sd.update(self.store[k])
-
-            sd.old.clear()
-            sd.old.update(self.old[k])
-
-            sd.ever_been_changed.clear()
-            sd.ever_been_changed.update(self.ever_been_changed[k])
-
+        for k in store_dicts:
+            self.restore_one(k)
 
 
 clean_store_backup = None
+
 
 def make_clean_stores():
     """
@@ -236,6 +257,7 @@ def make_clean_stores():
 
     clean_store_backup = StoreBackup()
 
+
 def clean_stores():
     """
     Revert the store to the clean copy.
@@ -243,8 +265,29 @@ def clean_stores():
 
     clean_store_backup.restore()
 
-##### Code that computes reachable objects, which is used to filter
-##### the rollback list before rollback or serialization.
+
+def clean_store(name):
+    """
+    Reverts the named store to its clean copy.
+    """
+
+    if not name.startswith("store."):
+        name = "store." + name
+
+    clean_store_backup.restore_one(name)
+
+
+def reset_store_changes(name):
+
+    if not name.startswith("store."):
+        name = "store." + name
+
+    sd = store_dicts[name]
+    sd.begin()
+
+# Code that computes reachable objects, which is used to filter
+# the rollback list before rollback or serialization.
+
 
 class NoRollback(object):
     """
@@ -279,7 +322,7 @@ def reached(obj, reachable, wait):
     if idobj in reachable:
         return
 
-    if isinstance(obj, NoRollback):
+    if isinstance(obj, (NoRollback, file)):
         reachable[idobj] = 0
         return
 
@@ -316,6 +359,7 @@ def reached(obj, reachable, wait):
 
     # parents.pop()
 
+
 def reached_vars(store, reachable, wait):
     """
     Marks everything reachable from the variables in the store
@@ -337,68 +381,68 @@ def reached_vars(store, reachable, wait):
                 reached(v, reachable, wait)
 
 
-##### Code that replaces literals will calls to magic constructors.
+# Code that replaces literals will calls to magic constructors.
 
 class WrapNode(ast.NodeTransformer):
 
     def visit_SetComp(self, n):
         return ast.Call(
-            func = ast.Name(
+            func=ast.Name(
                 id="__renpy__set__",
                 ctx=ast.Load()
                 ),
-            args = [ self.generic_visit(n) ],
-            keywords = [ ],
-            starargs = None,
-            kwargs = None)
+            args=[ self.generic_visit(n) ],
+            keywords=[ ],
+            starargs=None,
+            kwargs=None)
 
     def visit_ListComp(self, n):
         return ast.Call(
-            func = ast.Name(
+            func=ast.Name(
                 id="__renpy__list__",
                 ctx=ast.Load()
                 ),
-            args = [ self.generic_visit(n) ],
-            keywords = [ ],
-            starargs = None,
-            kwargs = None)
+            args=[ self.generic_visit(n) ],
+            keywords=[ ],
+            starargs=None,
+            kwargs=None)
 
     def visit_List(self, n):
         if not isinstance(n.ctx, ast.Load):
             return self.generic_visit(n)
 
         return ast.Call(
-            func = ast.Name(
+            func=ast.Name(
                 id="__renpy__list__",
                 ctx=ast.Load()
                 ),
-            args = [ self.generic_visit(n) ],
-            keywords = [ ],
-            starargs = None,
-            kwargs = None)
+            args=[ self.generic_visit(n) ],
+            keywords=[ ],
+            starargs=None,
+            kwargs=None)
 
     def visit_DictComp(self, n):
         return ast.Call(
-            func = ast.Name(
+            func=ast.Name(
                 id="__renpy__dict__",
                 ctx=ast.Load()
                 ),
-            args = [ self.generic_visit(n) ],
-            keywords = [ ],
-            starargs = None,
-            kwargs = None)
+            args=[ self.generic_visit(n) ],
+            keywords=[ ],
+            starargs=None,
+            kwargs=None)
 
     def visit_Dict(self, n):
 
         return ast.Call(
-            func = ast.Name(
+            func=ast.Name(
                 id="__renpy__dict__",
                 ctx=ast.Load()
                 ),
-            args = [ self.generic_visit(n) ],
-            keywords = [ ],
-            starargs = None,
-            kwargs = None)
+            args=[ self.generic_visit(n) ],
+            keywords=[ ],
+            starargs=None,
+            kwargs=None)
 
 wrap_node = WrapNode()
 
@@ -418,6 +462,7 @@ def set_filename(filename, offset, tree):
 
 
 unicode_re = re.compile(ur'[\u0080-\uffff]')
+
 
 def unicode_sub(m):
     """
@@ -444,11 +489,25 @@ def unicode_sub(m):
 
 string_re = re.compile(r'([uU]?[rR]?)("""|"|\'\'\'|\')((\\.|.)*?)\2')
 
+
 def escape_unicode(s):
     if unicode_re.search(s):
         s = string_re.sub(unicode_sub, s)
 
     return s
+
+
+# Flags used by py_compile.
+old_compile_flags = ( __future__.nested_scopes.compiler_flag
+                      | __future__.with_statement.compiler_flag
+                      )
+
+new_compile_flags = (  old_compile_flags
+                       | __future__.absolute_import.compiler_flag
+                       | __future__.print_function.compiler_flag
+                       | __future__.unicode_literals.compiler_flag
+                       )
+
 
 def py_compile(source, mode, filename='<none>', lineno=1, ast_node=False):
     """
@@ -490,7 +549,12 @@ def py_compile(source, mode, filename='<none>', lineno=1, ast_node=False):
     try:
         line_offset = lineno - 1
 
-        tree = ast.parse(source, filename, mode)
+        try:
+            flags = new_compile_flags
+            tree = compile(source, filename, mode, ast.PyCF_ONLY_AST | flags, 1)
+        except:
+            flags = old_compile_flags
+            tree = compile(source, filename, mode, ast.PyCF_ONLY_AST | flags, 1)
 
         tree = wrap_node.visit(tree)
 
@@ -502,7 +566,7 @@ def py_compile(source, mode, filename='<none>', lineno=1, ast_node=False):
         if ast_node:
             return tree.body
 
-        return compile(tree, filename, mode)
+        return compile(tree, filename, mode, flags, 1)
 
     except SyntaxError, e:
 
@@ -523,13 +587,13 @@ def py_compile_eval_bytecode(source, **kwargs):
     return marshal.dumps(code)
 
 
-
-##### Classes that are exported in place of the normal list, dict, and
-##### object.
+# Classes that are exported in place of the normal list, dict, and
+# object.
 
 # This is set to True whenever a mutation occurs. The save code uses
 # this to check to see if a background-save is valid.
 mutate_flag = True
+
 
 def mutator(method):
 
@@ -537,15 +601,89 @@ def mutator(method):
 
         global mutate_flag
 
-        mutated = renpy.game.log.mutated #@UndefinedVariable
+        mutated = renpy.game.log.mutated  # @UndefinedVariable
 
         if id(self) not in mutated:
-            mutated[id(self)] = ( weakref.ref(self), self.get_rollback())
+            mutated[id(self)] = ( weakref.ref(self), self._clean())
             mutate_flag = True
 
         return method(self, *args, **kwargs)
 
     return do_mutation
+
+
+class CompressedList(object):
+    """
+    Compresses the changes in a queue-like list. What this does is to try
+    to find a central sub-list for which has objects in both lists. It
+    stores the location of that in the new list, and then elements before
+    and after in the sub-list.
+
+    This only really works if the objects in the list are unique, but the
+    results are efficient even if this doesn't work.
+    """
+
+    def __init__(self, old, new):
+
+        # Pick out a pivot element near the center of the list.
+        new_center = (len(new) - 1) // 2
+        new_pivot = new[new_center]
+
+        # Find an element in the old list corresponding to the pivot.
+        old_half = (len(old) - 1) // 2
+
+        for i in range(0, old_half + 1):
+
+            if old[old_half - i] is new_pivot:
+                old_center = old_half - i
+                break
+
+            if old[old_half + i] is new_pivot:
+                old_center = old_half + i
+                break
+        else:
+            # If we couldn't, give up.
+            self.pre = old
+            self.start = 0
+            self.end = 0
+            self.post = [ ]
+
+            return
+
+        # Figure out the position of the overlap in the center of the two lists.
+        new_start = new_center
+        new_end = new_center + 1
+
+        old_start = old_center
+        old_end = old_center + 1
+
+        len_new = len(new)
+        len_old = len(old)
+
+        while new_start and old_start and (new[new_start - 1] is old[old_start - 1]):
+            new_start -= 1
+            old_start -= 1
+
+        while (new_end < len_new) and (old_end < len_old) and (new[new_end] is old[old_end]):
+            new_end += 1
+            old_end += 1
+
+        # Now that we have this, we can put together the object.
+        self.pre = old[0:old_start]
+        self.start = new_start
+        self.end = new_end
+        self.post = old[old_end:]
+
+    def decompress(self, new):
+        return self.pre + new[self.start:self.end] + self.post
+
+    def __repr__(self):
+        return "<CompressedList {} [{}:{}] {}>".format(
+            self.pre,
+            self.start,
+            self.end,
+            self.post)
+
 
 class RevertableList(list):
 
@@ -570,9 +708,9 @@ class RevertableList(list):
     reverse = mutator(list.reverse)
     sort = mutator(list.sort)
 
-    def wrapper(method): # E0213 @NoSelf
+    def wrapper(method):  # E0213 @NoSelf
         def newmethod(*args, **kwargs):
-            return RevertableList(method(*args, **kwargs)) # E1102
+            return RevertableList(method(*args, **kwargs))  # E1102
 
         return newmethod
 
@@ -583,17 +721,51 @@ class RevertableList(list):
 
     del wrapper
 
-    def get_rollback(self):
+    def _clean(self):
+        """
+        Gets a clean copy of this object before any mutation occurs.
+        """
+
         return self[:]
 
-    def rollback(self, old):
-        self[:] = old
+    def _compress(self, clean):
+        """
+        Takes a clean copy of this object, compresses it, and returns compressed
+        information that can be passed to rollback.
+        """
+
+        if not self or not clean:
+            return clean
+
+        if renpy.config.list_compression_length is None:
+            return clean
+
+        if len(self) < renpy.config.list_compression_length or len(clean) < renpy.config.list_compression_length:
+            return clean
+
+        return CompressedList(clean, self)
+
+    def _rollback(self, compressed):
+        """
+        Rolls this object back, using the information created by _compress.
+
+        Since compressed can come from a save file, this method also has to
+        recognize and deal with old data.
+        """
+
+        if isinstance(compressed, CompressedList):
+            self[:] = compressed.decompress(self)
+        else:
+            self[:] = compressed
+
 
 def revertable_range(*args):
     return RevertableList(range(*args))
 
+
 def revertable_sorted(*args, **kwargs):
     return RevertableList(sorted(*args, **kwargs))
+
 
 class RevertableDict(dict):
 
@@ -612,9 +784,9 @@ class RevertableDict(dict):
     popitem = mutator(dict.popitem)
     setdefault = mutator(dict.setdefault)
 
-    def list_wrapper(method): # E0213 @NoSelf
+    def list_wrapper(method):  # E0213 @NoSelf
         def newmethod(*args, **kwargs):
-            return RevertableList(method(*args, **kwargs)) # E1102
+            return RevertableList(method(*args, **kwargs))  # E1102
 
         return newmethod
 
@@ -629,14 +801,18 @@ class RevertableDict(dict):
         rv.update(self)
         return rv
 
-    def get_rollback(self):
+    def _clean(self):
         return self.items()
 
-    def rollback(self, old):
+    def _compress(self, clean):
+        return clean
+
+    def _rollback(self, compressed):
         self.clear()
 
-        for k, v in old:
+        for k, v in compressed:
             self[k] = v
+
 
 class RevertableSet(sets.Set):
 
@@ -663,9 +839,9 @@ class RevertableSet(sets.Set):
     union_update = mutator(sets.Set.union_update)
     update = mutator(sets.Set.update)
 
-    def wrapper(method): # E0213 @NoSelf
+    def wrapper(method):  # E0213 @NoSelf
         def newmethod(*args, **kwargs):
-            rv = method(*args, **kwargs) # E1102
+            rv = method(*args, **kwargs)  # E1102
             if isinstance(rv, sets.Set):
                 return RevertableSet(rv)
             else:
@@ -687,12 +863,15 @@ class RevertableSet(sets.Set):
 
     del wrapper
 
-    def get_rollback(self):
+    def _clean(self):
         return list(self)
 
-    def rollback(self, old):
+    def _compress(self, clean):
+        return clean
+
+    def _rollback(self, compressed):
         sets.Set.clear(self)
-        sets.Set.update(self, old)
+        sets.Set.update(self, compressed)
 
 
 class RevertableObject(object):
@@ -715,15 +894,18 @@ class RevertableObject(object):
     __setattr__ = mutator(__setattr__)
     __delattr__ = mutator(__delattr__)
 
-    def get_rollback(self):
+    def _clean(self):
         return self.__dict__.copy()
 
-    def rollback(self, old):
+    def _compress(self, clean):
+        return clean
+
+    def _rollback(self, compressed):
         self.__dict__.clear()
-        self.__dict__.update(old)
+        self.__dict__.update(compressed)
 
 
-##### An object that handles deterministic randomness, or something.
+# An object that handles deterministic randomness, or something.
 
 class DetRandom(random.Random):
 
@@ -763,7 +945,7 @@ class DetRandom(random.Random):
 
         self.stack = [ ]
 
-    def Random(self,seed=None):
+    def Random(self, seed=None):
         """
         Returns a new RNG object separate from the main one.
         """
@@ -774,8 +956,12 @@ class DetRandom(random.Random):
 
 rng = DetRandom()
 
-##### This is the code that actually handles the logging and managing
-##### of the rollbacks.
+# This is the code that actually handles the logging and managing
+# of the rollbacks.
+
+generation = time.time()
+serial = 0
+
 
 class Rollback(renpy.object.Object):
     """
@@ -806,7 +992,9 @@ class Rollback(renpy.object.Object):
     execution of this element.
     """
 
-    __version__ = 3
+    __version__ = 4
+
+    identifier = None
 
     def __init__(self):
 
@@ -814,7 +1002,6 @@ class Rollback(renpy.object.Object):
 
         self.context = renpy.game.context().rollback_copy()
         self.objects = [ ]
-        self.checkpoint = False
         self.purged = False
         self.random = [ ]
         self.forward = None
@@ -824,6 +1011,19 @@ class Rollback(renpy.object.Object):
 
         # If true, we retain the data in this rollback when a load occurs.
         self.retain_after_load = False
+
+        # True if this is a checkpoint we can roll back to.
+        self.checkpoint = False
+
+        # True if this is a hard checkpoint, where the rollback counter
+        # decreases.
+        self.hard_checkpoint = False
+
+        # A unique identifier for this rollback object.
+
+        global serial
+        self.identifier = (generation, serial)
+        serial += 1
 
     def after_upgrade(self, version):
 
@@ -841,6 +1041,8 @@ class Rollback(renpy.object.Object):
         if version < 3:
             self.retain_after_load = False
 
+        if version < 4:
+            self.hard_checkpoint = self.checkpoint
 
     def purge_unreachable(self, reachable, wait):
         """
@@ -882,14 +1084,13 @@ class Rollback(renpy.object.Object):
                 reached(rb, reachable, wait)
             else:
                 if renpy.config.debug:
-                    print "Removing unreachable:", o
+                    print(("Removing unreachable:", o))
 
                     pass
 
         self.objects = new_objects
 
         return True
-
 
     def rollback(self):
         """
@@ -899,7 +1100,7 @@ class Rollback(renpy.object.Object):
 
         for obj, roll in reversed(self.objects):
             if roll is not None:
-                obj.rollback(roll)
+                obj._rollback(roll)
 
         for name, changes in self.stores.iteritems():
             store = store_dicts.get(name, None)
@@ -928,7 +1129,6 @@ class Rollback(renpy.object.Object):
         renpy.game.contexts.append(self.context)
 
 
-
 class RollbackLog(renpy.object.Object):
     """
     This class manages the list of Rollback objects.
@@ -947,10 +1147,10 @@ class RollbackLog(renpy.object.Object):
     (weakref to object, information needed to rollback that object)
     """
 
-    __version__ = 4
+    __version__ = 5
 
-
-    nosave = [ 'old_store', 'mutated' ]
+    nosave = [ 'old_store', 'mutated', 'identifier_cache' ]
+    identifier_cache = None
 
     def __init__(self):
 
@@ -989,11 +1189,26 @@ class RollbackLog(renpy.object.Object):
         if version < 4:
             self.retain_after_load_flag = False
 
+        if version < 5:
+
+            # We changed what the rollback limit represents, so recompute it
+            # here.
+            if self.rollback_limit:
+                nrbl = 0
+
+                for rb in self.log[-self.rollback_limit:]:
+                    if rb.hard_checkpoint:
+                        nrbl += 1
+
+                self.rollback_limit = nrbl
+
     def begin(self):
         """
         Called before a node begins executing, to indicate that the
         state needs to be saved for rollbacking.
         """
+
+        self.identifier_cache = None
 
         context = renpy.game.context()
 
@@ -1066,13 +1281,14 @@ class RollbackLog(renpy.object.Object):
                     if v is None:
                         continue
 
-                    (ref, roll) = v
+                    (ref, clean) = v
 
                     obj = ref()
                     if obj is None:
                         continue
 
-                    self.current.objects.append((obj, roll))
+                    compressed = obj._compress(clean)
+                    self.current.objects.append((obj, compressed))
 
                 break
 
@@ -1080,8 +1296,6 @@ class RollbackLog(renpy.object.Object):
                 # This can occur when self.mutated is changed as we're
                 # iterating over it.
                 pass
-
-
 
     def get_roots(self):
         """
@@ -1145,7 +1359,7 @@ class RollbackLog(renpy.object.Object):
 
         return None
 
-    def checkpoint(self, data=None, keep_rollback=False):
+    def checkpoint(self, data=None, keep_rollback=False, hard=True):
         """
         Called to indicate that this is a checkpoint, which means
         that the user may want to rollback to just before this
@@ -1153,7 +1367,7 @@ class RollbackLog(renpy.object.Object):
         """
 
         if self.checkpointing_suspended:
-            return
+            hard = False
 
         self.retain_after_load_flag = False
 
@@ -1163,10 +1377,12 @@ class RollbackLog(renpy.object.Object):
         if not renpy.game.context().rollback:
             return
 
-        if self.rollback_limit < renpy.config.hard_rollback_limit:
-            self.rollback_limit += 1
-
         self.current.checkpoint = True
+
+        if hard and (not self.current.hard_checkpoint):
+            if self.rollback_limit < renpy.config.hard_rollback_limit:
+                self.rollback_limit += 1
+            self.current.hard_checkpoint = hard
 
         if self.in_fixed_rollback() and self.forward:
             # use data from the forward stack
@@ -1231,7 +1447,7 @@ class RollbackLog(renpy.object.Object):
 
         return self.rollback_limit > 0
 
-    def rollback(self, checkpoints, force=False, label=None, greedy=True, on_load=False):
+    def rollback(self, checkpoints, force=False, label=None, greedy=True, on_load=False, abnormal=True):
         """
         This rolls the system back to the first valid rollback point
         after having rolled back past the specified number of checkpoints.
@@ -1255,15 +1471,19 @@ class RollbackLog(renpy.object.Object):
         `on_load`
             Should be true if this rollback is being called in response to a
             load. Used to implement .retain_after_load()
+
+        `abnormal`
+            If true, treats this as an abnormal event, suppresisng rollback
+            and so on.
         """
 
         # If we have exceeded the rollback limit, and don't have force,
         # give up.
-        if checkpoints and not self.rollback_limit > 0 and not force:
+        if checkpoints and (self.rollback_limit <= 0) and (not force):
             return
 
         self.suspend_checkpointing(False)
-            # will always rollback to before suspension
+        # will always rollback to before suspension
 
         self.purge_unreachable(self.get_roots())
 
@@ -1274,9 +1494,11 @@ class RollbackLog(renpy.object.Object):
             rb = self.log.pop()
             revlog.append(rb)
 
-            if rb.checkpoint:
-                checkpoints -= 1
+            if rb.hard_checkpoint:
                 self.rollback_limit -= 1
+
+            if rb.hard_checkpoint or (on_load and rb.checkpoint):
+                checkpoints -= 1
 
             if checkpoints <= 0:
                 if renpy.game.script.has_label(rb.context.current):
@@ -1288,7 +1510,7 @@ class RollbackLog(renpy.object.Object):
 
             # Otherwise, just give up.
 
-            print "Can't find a place to rollback to. Not rolling back."
+            print("Can't find a place to rollback to. Not rolling back.")
 
             revlog.reverse()
             self.log = self.log + revlog
@@ -1303,9 +1525,6 @@ class RollbackLog(renpy.object.Object):
                 break
 
             if not renpy.game.script.has_label(rb.context.current):
-                break
-
-            if self.rollback_limit <= 0:
                 break
 
             revlog.append(self.log.pop())
@@ -1340,7 +1559,7 @@ class RollbackLog(renpy.object.Object):
             self.log.append(retained)
 
         # Disable the next transition, as it's pointless. (Only when not used with a label.)
-        renpy.game.interface.suppress_transition = True
+        renpy.game.interface.suppress_transition = abnormal
 
         # If necessary, reset the RNG.
         if force:
@@ -1348,13 +1567,10 @@ class RollbackLog(renpy.object.Object):
             self.forward = [ ]
 
         # Flag that we're in the transition immediately after a rollback.
-        renpy.game.after_rollback = True
+        renpy.game.after_rollback = abnormal
 
         # Stop the sounds.
         renpy.audio.audio.rollback()
-
-        # Apply defaults.
-        renpy.exports.execute_default_statement()
 
         renpy.game.contexts.extend(other_contexts)
 
@@ -1363,7 +1579,6 @@ class RollbackLog(renpy.object.Object):
             raise renpy.game.RestartTopContext(label)
         else:
             raise renpy.game.RestartContext(label)
-
 
     def freeze(self, wait=None):
         """
@@ -1402,12 +1617,13 @@ class RollbackLog(renpy.object.Object):
         """
 
         # Fix up old screens.
-        renpy.display.screen.before_restart() # @UndefinedVariable
+        renpy.display.screen.before_restart()  # @UndefinedVariable
 
         # Set us up as the game log.
         renpy.game.log = self
 
         clean_stores()
+        renpy.translation.init_translation()
 
         for name, value in roots.iteritems():
 
@@ -1429,21 +1645,52 @@ class RollbackLog(renpy.object.Object):
                 store[name] = value
 
         # Now, rollback to an acceptable point.
-        self.rollback(0, force=True, label=label, greedy=False, on_load=True)
+
+        greedy = renpy.session.pop("_greedy_rollback", False)
+        self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
 
         # Because of the rollback, we never make it this far.
 
+    def build_identifier_cache(self):
 
-def py_exec_bytecode(bytecode, hide=False, globals=None, locals=None, store="store"): #@ReservedAssignment
+        if self.identifier_cache is not None:
+            return
+
+        rollback_limit = self.rollback_limit
+        checkpoints = 1
+
+        self.identifier_cache = { }
+
+        for i in reversed(self.log):
+
+            if i.identifier is not None:
+                if renpy.game.script.has_label(i.context.current):
+                    self.identifier_cache[i.identifier] = checkpoints
+
+            if i.hard_checkpoint:
+                checkpoints += 1
+
+            if i.checkpoint:
+                rollback_limit -= 1
+
+            if not rollback_limit:
+                break
+
+    def get_identifier_checkpoints(self, identifier):
+        self.build_identifier_cache()
+        return self.identifier_cache.get(identifier, None)
+
+
+def py_exec_bytecode(bytecode, hide=False, globals=None, locals=None, store="store"):  # @ReservedAssignment
 
     if hide:
-        locals = { } #@ReservedAssignment
+        locals = { }  # @ReservedAssignment
 
     if globals is None:
-        globals = store_dicts[store] #@ReservedAssignment
+        globals = store_dicts[store]  # @ReservedAssignment
 
     if locals is None:
-        locals = globals #@ReservedAssignment
+        locals = globals  # @ReservedAssignment
 
     exec bytecode in globals, locals
 
@@ -1454,32 +1701,28 @@ def py_exec(source, hide=False, store=None):
         store = store_dicts["store"]
 
     if hide:
-        locals = { } #@ReservedAssignment
+        locals = { }  # @ReservedAssignment
     else:
-        locals = store #@ReservedAssignment
+        locals = store  # @ReservedAssignment
 
     exec py_compile(source, 'exec') in store, locals
 
 
-def py_eval_bytecode(bytecode, globals=None, locals=None): #@ReservedAssignment
+def py_eval_bytecode(bytecode, globals=None, locals=None):  # @ReservedAssignment
 
     if globals is None:
-        globals = store_dicts["store"] #@ReservedAssignment
+        globals = store_dicts["store"]  # @ReservedAssignment
 
     if locals is None:
-        locals = globals #@ReservedAssignment
+        locals = globals  # @ReservedAssignment
 
     return eval(bytecode, globals, locals)
 
-def py_eval(source, globals=None, locals=None): #@ReservedAssignment
 
-    if globals is None:
-        globals = store_dicts["store"] #@ReservedAssignment
-
-    if locals is None:
-        locals = globals #@ReservedAssignment
-
-    return eval(py_compile(source, 'eval'), globals, locals)
+def py_eval(code, globals=None, locals=None):  # @ReservedAssignment
+    if isinstance(code, basestring):
+        code = py_compile(code, 'eval')
+    return py_eval_bytecode(code, globals, locals)
 
 
 def raise_at_location(e, loc):
@@ -1505,13 +1748,13 @@ def raise_at_location(e, loc):
 class StoreProxy(object):
 
     def __getattr__(self, k):
-        return getattr(renpy.store, k) #@UndefinedVariable
+        return getattr(renpy.store, k)  # @UndefinedVariable
 
     def __setattr__(self, k, v):
-        setattr(renpy.store, k, v) #@UndefinedVariable
+        setattr(renpy.store, k, v)  # @UndefinedVariable
 
     def __delattr__(self, k):
-        delattr(renpy.store, k) #@UndefinedVariable
+        delattr(renpy.store, k)  # @UndefinedVariable
 
 
 # Code for pickling bound methods.
@@ -1524,6 +1767,7 @@ def method_pickle(method):
         obj = method.im_class
 
     return method_unpickle, (obj, name)
+
 
 def method_unpickle(obj, name):
     return getattr(obj, name)

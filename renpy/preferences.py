@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -19,13 +19,47 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE
 
-import renpy
+import renpy.audio
+
+pad_bindings = {
+    "pad_leftshoulder_press" : [ "rollback", ],
+    "pad_lefttrigger_pos" : [ "rollback", ],
+    "pad_back_press" : [ "rollback", ],
+
+    "pad_guide_press" : [ "game_menu", ],
+    "pad_start_press" : [ "game_menu", ],
+
+    "pad_y_press" : [ "hide_windows", ],
+
+    "pad_rightshoulder_press" : [ "rollforward", ],
+
+    "pad_righttrigger_press" : [ "dismiss", "button_select" ],
+    "pad_a_press" : [ "dismiss", "button_select" ],
+    "pad_b_press" : [ "button_alternate" ],
+
+    "pad_dleft_press" : [ "focus_left", "bar_left" ],
+    "pad_leftx_neg" : [ "focus_left", "bar_left" ],
+    "pad_rightx_neg" : [ "focus_left", "bar_left" ],
+
+    "pad_dpright_press" : [ "focus_right", "bar_right" ],
+    "pad_leftx_pos" : [ "focus_right", "bar_right" ],
+    "pad_rightx_pos" : [ "focus_right", "bar_right" ],
+
+    "pad_dpup_press" : [ "focus_up", "bar_up" ],
+    "pad_lefty_neg" : [ "focus_up", "bar_up" ],
+    "pad_righty_neg" : [ "focus_up", "bar_up" ],
+
+    "pad_dpdown_press" : [ "focus_down", "bar_down" ],
+    "pad_lefty_pos" : [ "focus_down", "bar_down" ],
+    "pad_righty_pos" : [ "focus_down", "bar_down" ],
+}
+
 
 class Preferences(renpy.object.Object):
     """
     Stores preferences that will one day be persisted.
     """
-    __version__ = 14
+    __version__ = 18
 
     def after_upgrade(self, version):
         if version < 1:
@@ -53,6 +87,13 @@ class Preferences(renpy.object.Object):
             self.self_voicing = False
         if version < 14:
             self.emphasize_audio = False
+        if version < 15:
+            self.pad_enabled = True
+        if version < 17:
+            self.init_rollback_side()
+        if version < 18:
+            self.virtual_size = None
+            self.video_image_fallback = False
 
     def __init__(self):
         self.fullscreen = False
@@ -75,6 +116,9 @@ class Preferences(renpy.object.Object):
         # 0 - No transitions.
         self.transitions = 2
 
+        # Should video sprites always default to provided displayables if possible?
+        self.video_image_fallback = False
+
         self.skip_after_choices = False
 
         # Mixer channel info.
@@ -87,15 +131,13 @@ class Preferences(renpy.object.Object):
         self.mute = { }
 
         # Joystick mappings.
-        self.joymap = dict(
-            joy_left="Axis 0.0 Negative",
-            joy_right="Axis 0.0 Positive",
-            joy_up="Axis 0.1 Negative",
-            joy_down="Axis 0.1 Positive",
-            joy_dismiss="Button 0.0")
+        self.joymap = dict()
 
         # The size of the window, or None if we don't know it yet.
         self.physical_size = None
+
+        # The virtual size at the time self.physical_size was set.
+        self.virtual_size = None
 
         # The graphics renderer we use.
         self.renderer = "auto"
@@ -111,6 +153,15 @@ class Preferences(renpy.object.Object):
 
         # Should we emphasize audio?
         self.emphasize_audio = False
+
+        # Is the gamepad enabled?
+        self.pad_enabled = True
+
+        self.init_rollback_side()
+
+    def init_rollback_side(self):
+        self.mobile_rollback_side = "disable"
+        self.desktop_rollback_side = "disable"
 
     def set_volume(self, mixer, volume):
         if volume != 0:
@@ -148,7 +199,7 @@ class Preferences(renpy.object.Object):
         return renpy.audio.music.get_all_mixers()
 
     def __eq__(self, other):
-        return True
+        return vars(self) == vars(other)
 
 renpy.game.Preferences = Preferences
 renpy.game.preferences = Preferences()

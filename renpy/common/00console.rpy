@@ -53,6 +53,7 @@ init -1500:
 
     style _console_input_text is _console_text:
         color "#fafafa"
+        adjust_spacing False
 
     style _console_history is _default:
         background "#00000000"
@@ -129,7 +130,7 @@ init -1500 python in _console:
         def clear(self):
             self[:] = [ ]
 
-    class HistoryEntry(object):
+    class ConsoleHistoryEntry(object):
         """
         Represents an entry in the history list.
         """
@@ -138,6 +139,8 @@ init -1500 python in _console:
             self.command = command
             self.result = result
             self.is_error = is_error
+
+    HistoryEntry = ConsoleHistoryEntry
 
     class ScriptErrorHandler(object):
         """
@@ -171,12 +174,11 @@ init -1500 python in _console:
             self.reset()
 
         def start(self):
-            he = HistoryEntry(None)
+            he = ConsoleHistoryEntry(None)
 
             message = ""
 
             if self.first_time:
-                message += __("%(version)s console, originally by Shiz, C, and delta.\n") % {"version": renpy.version()}
                 message += __("Press <esc> to exit console. Type help for help.\n")
                 self.first_time = False
 
@@ -284,7 +286,7 @@ init -1500 python in _console:
             line_count = len(lines)
             code = "\n".join(lines)
 
-            he = HistoryEntry(code)
+            he = ConsoleHistoryEntry(code)
             self.history.append(he)
 
             try:
@@ -346,6 +348,9 @@ init -1500 python in _console:
                 raise
 
             except:
+                import traceback
+                traceback.print_exc()
+
                 he.result = self.format_exception()
                 he.is_error = True
 
@@ -374,7 +379,8 @@ init -1500 python in _console:
 
         renpy.call_in_new_context("_console")
 
-init 1500 python in _console:
+# Has to run after 00library.
+init 1701 python in _console:
 
     if config.developer or config.console:
         console = DebugConsole()

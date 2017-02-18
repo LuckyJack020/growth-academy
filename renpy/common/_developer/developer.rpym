@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -24,141 +24,126 @@
 
 # List styles.
 
-style list is default
-style list_box is vbox
-style list_row is default
-style list_row_box is hbox
-style list_spacer is default
-style list_text is default
-
-style list_row:
-    xfill True
-    ymargin 0
-    background "#eee"
-    hover_background "#fff"
-    selected_background "#cce"
-
-init python:
-    style.list_row[1].background = "#ddd"
-    style.list_row[1].hover_background = "#fff"
-    style.list_row[1].selected_background = "#cce"
-
-style list_text:
-    color "#000"
-    size 14
-
-style list_spacer:
-    xminimum 15
-
 screen _developer:
 
     zorder 1001
     modal True
 
     frame:
-        style_group "_developer"
+        style_group ""
 
-        align (.025, .05)
-
-        has vbox
+        has side "t c b":
+            spacing gui._scale(10)
 
         label _(u"Developer Menu")
 
-        textbutton _("Reload Game (Shift+R)"):
-            action ui.callsinnewcontext("_save_reload_game")
-        textbutton _("Console (Shift+O)"):
-            action [ Hide("_developer"), _console.enter ]
-        textbutton _("Variable Viewer"):
-            action ui.callsinnewcontext("_debugger_screen")
-        textbutton _("Theme Test"):
-            action ui.callsinnewcontext("_theme_test")
-        textbutton _("Image Location Picker"):
-            action ui.callsinnewcontext("_image_location_picker")
-        textbutton _("Filename List"):
-            action ui.callsinnewcontext("_filename_list")
+        fixed:
+            vbox:
 
-        if not renpy.get_screen("_image_load_log"):
-            textbutton _("Show Image Load Log"):
-                action Show("_image_load_log")
-        else:
-            textbutton _("Hide Image Load Log"):
-                action Hide("_image_load_log")
+                textbutton _("Reload Game (Shift+R)"):
+                    action ui.callsinnewcontext("_save_reload_game")
+                textbutton _("Console (Shift+O)"):
+                    action [ Hide("_developer"), _console.enter ]
+                textbutton _("Variable Viewer"):
+                    action ui.callsinnewcontext("_debugger_screen")
+                textbutton _("Theme Test"):
+                    action ui.callsinnewcontext("_theme_test")
+                textbutton _("Image Location Picker"):
+                    action ui.callsinnewcontext("_image_location_picker")
+                textbutton _("Filename List"):
+                    action ui.callsinnewcontext("_filename_list")
 
-        null height 15
+                if not renpy.get_screen("_image_load_log"):
+                    textbutton _("Show Image Load Log"):
+                        action Show("_image_load_log")
+                else:
+                    textbutton _("Hide Image Load Log"):
+                        action Hide("_image_load_log")
 
-        textbutton _(u"Return"):
-            action Hide("_developer")
-            size_group "developer"
+        hbox:
+            spacing gui._scale(25)
 
-style _developer_default is _default
-style _developer_frame is _frame
-style _developer_vbox is _vbox
+            textbutton _(u"Return"):
+                action Hide("_developer")
+                size_group "developer"
 
-style _developer_button is _button:
-    size_group "developer"
 
-style _developer_button_text is _button_text
-style _developer_label is _label
-style _developer_label_text is _label_text
+screen _variable_viewer(entries):
+
+    zorder 1010
+    modal True
+
+    frame:
+        style_group ""
+        right_padding 0
+
+        has side "t c b":
+            spacing gui._scale(10)
+
+        label _("Variable Viewer")
+
+        viewport:
+            scrollbars "both"
+            child_size (4000, 0)
+            yfill True
+            xfill True
+            mousewheel True
+
+            vbox:
+
+                if not entries:
+                    text _("Nothing to inspect.")
+
+                for vn, value in entries:
+                    text "[vn] = [value!q]"
+
+        hbox:
+            spacing gui._scale(25)
+
+            textbutton _(u"Return"):
+                action Return(True)
 
 
 label _debugger_screen:
 
+    call _enter_game_menu
+
     python hide:
-
-        ui.window(style=style.gm_root)
-        ui.null()
-
-        ui.frame(ymargin=10, xmargin=10, style=style.menu_frame)
-        ui.side(['t', 'c', 'r', 'b'])
-
-        layout.label(_("Variable Viewer"), None)
-
-        entries = [ ]
-
-        ebc = store.__dict__.ever_been_changed
-        ebc = list(ebc)
-        ebc.sort()
-
-        ebc.remove("nvl_list")
 
         import repr
         aRepr = repr.Repr()
-        aRepr.maxstring = 40
+        aRepr.maxstring = 120
 
-        for var in ebc:
-            if not hasattr(store, var):
-                continue
+        entries = [ ]
 
-            if var.startswith("__00"):
-                continue
+        for sn, d in renpy.python.store_dicts.items():
+            for vn in d.ever_been_changed:
 
-            if var.startswith("_") and not var.startswith("__"):
-                continue
+                if vn.startswith("__00"):
+                    continue
 
-            val = aRepr.repr(getattr(store, var))
-            s = (var + " = " + val)
-            s = s.replace("{", "{{")
-            s = s.replace("[", "[[")
-            entries.append((0, s))
+                if vn.startswith("_") and not vn.startswith("__"):
+                    continue
 
-        if entries:
-            vp = ui.viewport(mousewheel=True)
-            layout.list(entries)
-            ui.bar(adjustment=vp.yadjustment, style='vscrollbar')
-        else:
-            layout.prompt(_("No variables have changed since the game started."), None)
-            ui.null()
+                if vn not in d:
+                    value = "deleted"
+                else:
+                    value = aRepr.repr(d[vn])
 
-        layout.button(_(u"Return to the developer menu"), None, clicked=ui.returns(True))
+                if vn == "nvl_list":
+                    continue
 
-        ui.close()
+                name = (sn + "." + vn)[6:]
 
-        ui.interact()
+                entries.append((name, value))
+
+        renpy.call_screen("_variable_viewer", entries=entries)
 
     return
 
 label _theme_test:
+
+    call _enter_game_menu
 
     python hide:
 
@@ -263,9 +248,11 @@ init 1050 python:
                 return False
 
             if not renpy.count_displayables_in_layer(layer):
-                return Placeholder("bg").parameterize((), what)
+                p = Placeholder("bg")
             else:
-                return Placeholder().parameterize((), what)
+                p = Placeholder()
+
+            return p._duplicate(p._args.copy(args=what))
 
         def __missing_hide_callback(name, layer):
             if layer != 'master':
@@ -430,8 +417,40 @@ init python:
                 import pygame.scrap
                 pygame.scrap.put(pygame.scrap.SCRAP_TEXT, text)
 
+screen _image_location_picker(image_files):
+
+    frame:
+        style_group ""
+
+        has side "t c b":
+            spacing gui._scale(10)
+
+        label _(u"Image Location Picker")
+
+        viewport:
+            xfill True
+            yfill True
+            scrollbars "both"
+            mousewheel True
+
+            has vbox
+
+            for fn in image_files:
+
+                textbutton "[fn!q]":
+                    action Return(fn)
+                    style_suffix "small_button"
+
+        hbox:
+            spacing gui._scale(25)
+
+            textbutton _(u"Return"):
+                action Return(False)
+
 
 label _image_location_picker:
+
+    call _enter_game_menu
 
     scene black
 
@@ -451,31 +470,7 @@ label _image_location_picker:
 
         while True:
 
-            ui.frame()
-            ui.vbox()
-
-            layout.label(_(u"Image Location Picker"), None)
-
-            ui.textbutton(_(u"Done"), clicked=ui.returns(False), size_group="files")
-
-            ui.side(['c', 'b', 'r'], spacing=5)
-            vp = ui.viewport(xadjustment=xadjustment, yadjustment=yadjustment, mousewheel=True)
-
-            ui.vbox()
-
-            for fn in image_files:
-                ui.button(clicked=ui.returns(fn), size_group="files", xminimum=1.0)
-                ui.text(fn.replace("{", "{{").replace("[", "[["), style="button_text", xalign=0.0)
-
-            ui.close()
-
-            ui.bar(adjustment=xadjustment, style='scrollbar')
-            ui.bar(adjustment=yadjustment, style='vscrollbar')
-            ui.close()
-
-            ui.close()
-
-            rv = ui.interact()
+            rv = renpy.call_screen("_image_location_picker", image_files=image_files)
 
             if rv is False:
                 renpy.jump("_image_location_picker_done")
@@ -525,21 +520,42 @@ init python:
 
         for when, filename, preload in ill:
             if preload:
-                color="#ffffff"
+                color="#ccffcc"
+                prefix=__("✔ ")
             else:
                 color="#ffcccc"
+                prefix=__("✘ ")
 
-            vbox.add(Text(filename.replace("{", "{{").replace("[", "[["), size=12, color=color, style="_default"))
+            vbox.add(Text(prefix + filename.replace("{", "{{").replace("[", "[["), size=14, color=color, style="_default"))
 
-        rv = Window(vbox, style="_frame", background="#0004", xpadding=5, ypadding=5, xminimum=200)
-        return rv, .25
+        if at < 10.0:
+            vbox.add(Text(
+            _("\n{color=#cfc}✔ predicted image (good){/color}\n{color=#fcc}✘ unpredicted image (bad){/color}\n{color=#fff}Drag to move.{/color}"),
+            size=14, style="_default"))
+
+        return vbox, .25
 
 screen _image_load_log:
+
     zorder 1000
 
-    add DynamicDisplayable(_image_load_log_function)
+    drag:
+        draggable True
+        focus_mask None
+        xpos 0
+        ypos 0
+
+        frame:
+            style "empty"
+            background "#0004"
+            xpadding 5
+            ypadding 5
+            xminimum 200
+
+            add DynamicDisplayable(_image_load_log_function)
 
 
 
 init python:
-    config.underlay.append(im.Tile("_transparent_tile.png"))
+    if config.transparent_tile:
+        config.underlay.append(im.Tile("_transparent_tile.png"))

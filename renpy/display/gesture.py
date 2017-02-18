@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -24,6 +24,7 @@ import math
 import renpy.display
 
 DIRECTIONS = [ "n", "ne", "e", "se", "s", "sw", "w", "nw" ]
+
 
 def dispatch_gesture(gesture):
     """
@@ -131,7 +132,6 @@ class GestureRecognizer(object):
 
             if ev.button == 1:
                 return self.finish()
-
 
 
 recognizer = GestureRecognizer()

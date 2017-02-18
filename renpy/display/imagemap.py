@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -27,10 +27,10 @@ import renpy.display
 from renpy.display.render import render
 
 import hashlib
-import os
 
 # A list of cache images we've already written.
 cached = set()
+
 
 class ImageMapCrop(renpy.display.core.Displayable):
     """
@@ -70,6 +70,7 @@ class ImageCacheCrop(renpy.display.core.Displayable):
 
     def render(self, width, height, st, at):
         return self.cache.render(self.index, width, height, st, at)
+
 
 class ImageMapCache(renpy.object.Object):
 
@@ -213,7 +214,6 @@ class ImageMapCache(renpy.object.Object):
 
         if renpy.loader.loadable(filename):
             self.cache = renpy.display.im.Image(filename)
-
 
     def render(self, index, width, height, st, at):
         if self.cache is None:

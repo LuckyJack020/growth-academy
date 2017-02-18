@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -38,11 +38,13 @@ touch = False
 # The pygame.display.Info object, which we want to survive a reload.
 info = None
 
+
 def get_info():
     global info
 
     if info is None:
         import pygame_sdl2 as pygame
+        pygame.display.init()
         info = pygame.display.Info()
 
     return info

@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -25,16 +25,18 @@
 
 # This will be deleted by the end of this file.
 import renpy.display
+
+import collections
 import os
 
 # Can we add more config variables?
 locked = False
 
 # Contains help for config variables.
-help = [ ] #@ReservedAssignment
+help = [ ]  # @ReservedAssignment
 
 # The title of the game window.
-window_title = "A Ren'Py Game"
+window_title = None
 
 # An image file containing the window icon image.
 window_icon = None
@@ -130,7 +132,7 @@ force_archives = False
 mouse = None
 
 # The default sound playback sample rate.
-sound_sample_rate = 44100
+sound_sample_rate = 48000
 
 # The amount of time music is faded out between tracks.
 fade_music = 0.0
@@ -149,7 +151,7 @@ transient_layers = [ 'transient' ]
 # overlays.
 overlay_layers = [ 'overlay' ]
 
-# A list of layers that should be cleared whe we enter a
+# A list of layers that should be cleared when we enter a
 # new context.
 context_clear_layers = [ 'screens' ]
 
@@ -232,17 +234,20 @@ frames = 0
 
 # NOT USED: A text editor that is launched at the location of the current
 # statement.
-editor = None # os.environ.get('RENPY_EDITOR', None)
+editor = None  # os.environ.get('RENPY_EDITOR', None)
 
 # NOT USED: Text editor, with arguments to reload or clobber the file - used,
 # for example, to display traceback.txt.
-editor_transient = None # os.environ.get('RENPY_EDITOR_TRANSIENT', editor)
+editor_transient = None  # os.environ.get('RENPY_EDITOR_TRANSIENT', editor)
 
 # NOT USED: The separator used between files in the text editor.
-editor_file_separator = None # os.environ.get('RENPY_EDITOR_FILE_SEPARATOR', '" "')
+editor_file_separator = None  # os.environ.get('RENPY_EDITOR_FILE_SEPARATOR', '" "')
 
 # Enable developer mode?
-developer = False
+developer = False  # Changed to True or False in the init code.
+
+# The original value of config.developer.
+original_developer = False
 
 # A logfile that logging messages are sent to.
 log = None
@@ -378,7 +383,7 @@ gamedir = None
 basedir = None
 renpy_base = None
 commondir = None
-logdir = None # Where log and error files go.
+logdir = None  # Where log and error files go.
 
 # Should we enable OpenGL mode?
 gl_enable = True
@@ -563,6 +568,9 @@ log_to_stdout = False
 # new-style custom text tags.
 custom_text_tags = { }
 
+# A function that given the text from a TEXT token, returns a replacement text.
+replace_text = None
+
 # A function that is called when a label is missing.
 missing_label_callback = None
 
@@ -578,8 +586,168 @@ minimum_presplash_time = 0.0
 # Should Ren'Py use nearest-neighbor filtering by default.
 nearest_neighbor = False
 
+# Should Ren'Py use the drawable resolution at all? (For RTT, Text, etc?)
+use_drawable_resolution = bool(int(os.environ.get("RENPY_USE_DRAWABLE_RESOLUTION", "1")))
+
+# Should text layout occur at drawable resolution?
+drawable_resolution_text = bool(int(os.environ.get("RENPY_DRAWABLE_RESOLUTION_TEXT", "1")))
+
+# Should we fill the virtual-resolution text box?
+draw_virtual_text_box = bool(int(os.environ.get("RENPY_DRAW_VIRTUAL_TEXT_BOX", "0")))
+
+# Bindings of gamepad buttons.
+pad_bindings = { }
+
+# A list of pygame events that should be enabled in addition to the standard
+# events.
+pygame_events = [ ]
+
+# A function that is used to map a gamepad event into a list of Ren'Py
+# events.
+map_pad_event = None
+
+# This is called when a replay finishes.
+after_replay_callback = None
+
+# Should Ren'Py wrap shown transforms in an ImageReference?
+wrap_shown_transforms = True
+
+# A list of prefixes Ren'Py will search for assets.
+search_prefixes = [ "", "images/" ]
+
+# Should Ren'Py clear the database of code lines?
+clear_lines = True
+
+# Special namespaces for define and default.
+special_namespaces = { }
+
+# Should Ren'Py log lines?
+line_log = False
+
+# Should Ren'Py process dynamic images?
+dynamic_images = True
+
+# Should Ren'Py save when the mobile app may terminate?
+save_on_mobile_background = True
+
+# Should Ren'Py quit on mobile background?
+quit_on_mobile_background = False
+
+# Should Ren'Py pass the raw joystick (not controller) events.?
+pass_joystick_events = False
+
+# A list of screens that should be shown when the overlay is enabled.
+overlay_screens = [ ]
+
+# A map from tag to the default layer that tag should be displayed on.
+tag_layer = { }
+
+# The default layer for tags not in in tag_layer.
+default_tag_layer = 'master'
+
+# A map from tag to the default transform that's used for that tag.
+tag_transform = { }
+
+# A map from the tag to the default zorder that's used for that tag.
+tag_zorder = { }
+
+# The width of lines logged with renpy.log.
+log_width = 78
+
+# The size of the rollback side, as a fraction of the screen.
+rollback_side_size = .2
+
+# If dpi_scale is less than this, make it 1.0.
+de_minimus_dpi_scale = 1.0
+
+# Not used.
+windows_dpi_scale_head = 1.0
+
+# Should rollback_side be enabled?
+enable_rollback_side = True
+
+# The default contents of the replay scope.
+replay_scope = { "_game_menu_screen" : "preferences" }
+
+# The mixer to use for auto-defined movie channels.
+movie_mixer = "music"
+
+# Auto audio channels. A map from base name to:
+# * mixer
+# * file prefix
+# * file suffix
+auto_channels = { "audio" : ( "sfx", "", ""  ) }
+
+# The channel used by renpy.play.
+play_channel = "audio"
+
+# An image attribute that is added when the character is speaking, and
+# removed when the character is not.
+speaking_attribute = None
+
+# How many elements need to be in a list before we compress it for rollback.
+list_compression_length = 25
+
+# How many elements of history are kept. None to disable history.
+history_length = None
+
+# History callbacks that annotate additional information onto the History
+# object.
+history_callbacks = [ ]
+
+# Should we use the new order for translate blocks?
+new_translate_order = True
+
+# Should we defer style execution until translate block time?
+defer_styles = False
+
+# A list of stores that should be cleaned on translate.
+translate_clean_stores = [ ]
+
+# A list of additional script files that should be translated.
+translate_files = [ ]
+
+# A list of files for which ##<space> comment sequences should also be
+# translated.
+translate_comments = [ ]
+
+# Should we pass the full argument list to the say screen?
+old_say_args = False
+
+# The text-to-speech voice.
+tts_voice = None
+
+# The maximum size of xfit, yfit, first_fit, etc.
+max_fit_size = 8192
+
+# Should the window max size be enforced?
+enforce_window_max_size = True
+
+# The max priority to translate to.
+translate_launcher = False
+
+# A map from language to a list of callbacks that are used to help set it
+# up.
+language_callbacks = collections.defaultdict(list)
+
+# A function that is called to init system styles.
+init_system_styles = None
+
+# Callbacks that are called just before rebuilding styles.
+build_styles_callbacks = [ ]
+
+# Should movie displayables be given their own channels?
+auto_movie_channel = True
+
+# Should we ignore duplicate labels?
+ignore_duplicate_labels = False
+
+# A list of callbacks when creating a line log entry.
+line_log_callbacks = [ ]
+
 del renpy
 del os
+
 
 def init():
     pass

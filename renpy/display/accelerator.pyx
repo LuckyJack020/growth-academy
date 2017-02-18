@@ -1,5 +1,5 @@
 #cython: profile=False
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -68,11 +68,15 @@ def transform_render(self, widtho, heighto, st, at):
     cdef double yo, y1, y2, y3, py
     cdef float zoom, xzoom, yzoom
     cdef double cw, ch, nw, nh
-    cdef Render rv, cr
+    cdef Render rv, cr, tcr
     cdef double angle
     cdef double alpha
     cdef double width = widtho
     cdef double height = heighto
+    cdef double cwidth
+    cdef double cheight
+    cdef int xtile, ytile
+    cdef int i, j
 
     # Should we perform clipping?
     clipping = False
@@ -103,6 +107,34 @@ def transform_render(self, widtho, heighto, st, at):
 
     cr = render(child, widtho, heighto, st - self.child_st_base, at)
 
+    cwidth = cr.width
+    cheight = cr.height
+
+    # Tile the child to make it bigger.
+
+    xtile = state.xtile
+    ytile = state.ytile
+
+    xpan = state.xpan
+    ypan = state.ypan
+
+    if xpan is not None:
+        xtile = 2
+
+    if ypan is not None:
+        ytile = 2
+
+    if (xtile != 1) or (ytile != 1):
+        tcr = renpy.display.render.Render(cwidth * xtile, cheight * ytile)
+
+        for i in range(xtile):
+            for j in range(ytile):
+                tcr.blit(cr, (i * cwidth, j * cheight))
+
+        cr = tcr
+
+
+    # The width and height of the child.
     width = cr.width
     height = cr.height
 
@@ -213,6 +245,17 @@ def transform_render(self, widtho, heighto, st, at):
         if yzoom < 0:
             yo += height
 
+    # Pan.
+
+    if xpan is not None:
+        xpan = (xpan % 360) + 180
+        xo += xzoom * cwidth * -(xpan / 360.0) + widtho / 2.0
+
+    if ypan is not None:
+        ypan = (ypan % 360) + 180
+        yo += yzoom * cheight * -(ypan / 360.0) + heighto / 2.0
+
+
     # Rotation.
     rotate = state.rotate
     if rotate is not None:
@@ -290,7 +333,16 @@ def transform_render(self, widtho, heighto, st, at):
                 rxdx / inv_det)
 
     rv.nearest = state.nearest
-    rv.alpha = state.alpha
+
+    alpha = state.alpha
+
+    if alpha < 0.0:
+        alpha = 0.0
+    elif alpha > 1.0:
+        alpha = 1.0
+
+    rv.alpha = alpha
+
     rv.over = 1.0 - state.additive
     rv.clipping = clipping
 

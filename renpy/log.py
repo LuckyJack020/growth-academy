@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -21,6 +21,7 @@
 
 # This module handles the logging of messages to a file.
 
+from __future__ import print_function
 import os.path
 import codecs
 import traceback
@@ -33,6 +34,7 @@ import sys
 
 # The file events are logged to.
 log_file = None
+
 
 class LogFile(object):
     """
@@ -68,10 +70,13 @@ class LogFile(object):
         if renpy.ios:
             self.file = sys.stdout
 
-    def open(self): #@ReservedAssignment
+    def open(self):  # @ReservedAssignment
 
         if self.file:
             return True
+
+        if renpy.macapp:
+            return False
 
         if self.developer and not renpy.config.developer:
             return False
@@ -86,7 +91,7 @@ class LogFile(object):
             altfn = os.path.join(tempfile.gettempdir(), "renpy-" + self.name + ".txt")
 
             if renpy.android:
-                print "Logging to", fn
+                print("Logging to", fn)
 
             if self.append:
                 mode = "a"
@@ -94,8 +99,6 @@ class LogFile(object):
                 mode = "w"
 
             if renpy.config.log_to_stdout:
-
-                import sys
                 self.file = sys.stdout
 
             else:
@@ -154,7 +157,8 @@ class LogFile(object):
 # A map from the log name to a log object.
 log_cache = { }
 
-def open(name, append=False, developer=False, flush=False): #@ReservedAssignment
+
+def open(name, append=False, developer=False, flush=False):  # @ReservedAssignment
     rv = log_cache.get(name, None)
 
     if rv is None:

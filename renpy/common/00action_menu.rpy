@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -25,7 +25,10 @@ init -1500 python:
     ##########################################################################
     # Menu-related actions.
 
-    config.show_menu_enable = { "save" : "(not main_menu) and (not _in_replay)" }
+    config.show_menu_enable = {
+        "save" : "(not main_menu) and (not _in_replay)",
+        "load" : "(not _in_replay)",
+        }
 
     @renpy.pure
     class ShowMenu(Action, DictEquality):
@@ -100,11 +103,21 @@ init -1500 python:
                 renpy.call_in_new_context("_game_menu", *self.args, _game_menu_screen=screen, **self.kwargs)
 
         def get_selected(self):
-            return renpy.get_screen(self.screen)
+            screen = self.screen or store._game_menu_screen
+
+            if screen is None:
+                return False
+
+            return renpy.get_screen(screen)
 
         def get_sensitive(self):
-            if self.screen in config.show_menu_enable:
-                return eval(config.show_menu_enable[self.screen])
+            screen = self.screen or store._game_menu_screen
+
+            if screen is None:
+                return False
+
+            if screen in config.show_menu_enable:
+                return eval(config.show_menu_enable[screen])
             else:
                 return True
 
@@ -160,6 +173,8 @@ init -1500 python:
         def get_sensitive(self):
             return not renpy.context()._main_menu
 
+    _confirm_quit = True
+
     @renpy.pure
     class Quit(Action, DictEquality):
         """
@@ -169,15 +184,21 @@ init -1500 python:
 
          `confirm`
               If true, prompts the user if he wants to quit, rather
-              than quitting directly.
+              than quitting directly. If None, asks if and only if
+              the user is not at the main menu.
          """
 
-        def __init__(self, confirm=True):
+        def __init__(self, confirm=None):
             self.confirm = confirm
 
         def __call__(self):
 
-            if self.confirm:
+            confirm = self.confirm
+
+            if confirm is None:
+                confirm = (not main_menu) and _confirm_quit
+
+            if confirm:
                 if config.autosave_on_quit:
                     renpy.force_autosave()
 
@@ -267,16 +288,24 @@ init -1500 python:
     @renpy.pure
     class Help(Action, DictEquality):
         """
-         :doc: other_action
+        :doc: other_action
 
-         Displays help.
+        Displays help.
 
-         `help`
-              If this is a string giving a label in the program, then
-              that label is called in a new context when the button is
-              chosen. Otherwise, it should be a string giving a file
-              that is opened in a web browser. If None, the value of
-              config.help is used in the same way.
+        If a screen named ``help`` is defined, that screen is displayed
+        using :func:`ShowMenu` and `help` is ignored.
+
+        `help`
+            A string that is used to find help. This is used in the
+            following way:
+
+            * If a label with this name exists, the label is called in
+              a new context.
+            * Otherwise, this is interpreted as giving the name of a file
+              that should be opened in a web browser.
+
+            If `help` is None, :var:`config.help` is used as the default
+            value.
          """
 
         def __init__(self, help=None):
@@ -284,4 +313,3 @@ init -1500 python:
 
         def __call__(self):
             _help(self.help)
-

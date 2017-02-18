@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -29,6 +29,7 @@ from renpy.display.behavior import map_event, run, run_unhovered
 
 import pygame_sdl2 as pygame
 
+
 def default_drag_group():
     """
     Gets the default drag group. If it doesn't exist yet, creates it.
@@ -44,8 +45,10 @@ def default_drag_group():
 
     return rv
 
+
 def default_drag_joined(drag):
     return [ (drag, 0, 0) ]
+
 
 class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
     """
@@ -241,8 +244,12 @@ class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
         self.at = 0
 
         # The (animation timebase) time at which we should reach
-        # the target coordinates.
+        # the target coordinates for the currently executing snap animation.
         self.target_at = 0
+
+        # The duration of a new snap animation to execute starting at
+        # the next render() call
+        self.target_at_delay = 0
 
         # The displayable we were last dropping on.
         self.last_drop = None
@@ -257,6 +264,7 @@ class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
             self.target_x = replaces.target_x
             self.target_y = replaces.target_y
             self.target_at = replaces.target_at
+            self.target_at_delay = replaces.target_at_delay
             self.grab_x = replaces.grab_x
             self.grab_y = replaces.grab_y
             self.last_x = replaces.last_x
@@ -267,7 +275,6 @@ class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
 
         if d is not None:
             self.add(d)
-
 
     def snap(self, x, y, delay=0):
         """
@@ -289,7 +296,7 @@ class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
         self.target_y = y
 
         if self.x is not None:
-            self.target_at = self.at + delay
+            self.target_at_delay = delay
         else:
             self.target_at = self.at
             self.x = x
@@ -416,10 +423,17 @@ class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
             self.target_at = at
 
         # Determine if we need to do the snap animation.
-        if at >= (self.target_at - self.at):
+        if self.target_at_delay:
+            # Snap starts now
+            self.target_at = at + self.target_at_delay
+            self.target_at_delay = 0
+            redraw(self, 0)
+        elif at >= self.target_at:
+            # Snap complete
             self.x = self.target_x
             self.y = self.target_y
         else:
+            # Snap in progress
             done = (at - self.at) / (self.target_at - self.at)
             self.x = absolute(self.x + done * (self.target_x - self.x))
             self.y = absolute(self.y + done * (self.target_y - self.y))
@@ -622,7 +636,6 @@ class Drag(renpy.display.core.Displayable, renpy.python.RevertableObject):
         if handled:
             raise renpy.display.core.IgnoreEvent()
 
-
     def get_placement(self):
 
         if self.x is not None:
@@ -673,7 +686,6 @@ class DragGroup(renpy.display.layout.MultiBox):
         for i in children:
             self.add(i)
 
-
     def add(self, child):
         """
         :doc: drag_drop method
@@ -694,13 +706,11 @@ class DragGroup(renpy.display.layout.MultiBox):
         Removes `child` from this DragGroup.
         """
 
-
         if not isinstance(child, Drag):
             raise Exception("Only drags can be removed from a drag group.")
 
         child.x = None
         super(DragGroup, self).remove(child)
-
 
     def event(self, ev, x, y, st):
 
@@ -741,7 +751,6 @@ class DragGroup(renpy.display.layout.MultiBox):
 
         self.children = self._list_type(children)
         self.offsets = self._list_type(offsets)
-
 
     def get_best_drop(self, joined):
         """

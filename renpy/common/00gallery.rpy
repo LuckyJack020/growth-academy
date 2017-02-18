@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -170,6 +170,10 @@ init -1500 python:
 
             The default idle border used by make_button.
 
+        .. attribute:: unlocked_advance
+
+            If true, the gallery will only advance through unlocked images.
+
         .. attribute:: navigation
 
             If true, the gallery will display navigation and slideshow
@@ -182,10 +186,6 @@ init -1500 python:
         .. attribute:: span_buttons
 
             If true, the gallery will advance between buttons.
-
-        .. attribute:: locked
-
-            If true, the gallery will advance through locked images.
 
         .. attribute:: slideshow_delay
 
@@ -213,9 +213,11 @@ init -1500 python:
 
             self.unlockable = None
 
+            self.unlocked_advance = False
+
             self.navigation = False
+
             self.span_buttons = False
-            self.locked = True
 
             self.slideshow_delay = 5
 
@@ -463,7 +465,7 @@ init -1500 python:
                 # At this point, result is either 'next', "next_unlocked", "previous", or "previous_unlocked"
                 # Go through the common advance code.
 
-                if self.locked and result.endswith("_unlocked"):
+                if self.unlocked_advance:
                     images = unlocked_images
                 else:
                     images = all_images
@@ -578,8 +580,8 @@ init -1500:
             style_group "gallery"
             align (.98, .98)
 
-            textbutton _("prev") action gallery.Previous()
-            textbutton _("next") action gallery.Next()
+            textbutton _("prev") action gallery.Previous(unlocked=gallery.unlocked_advance)
+            textbutton _("next") action gallery.Next(unlocked=gallery.unlocked_advance)
             textbutton _("slideshow") action gallery.ToggleSlideshow()
             textbutton _("return") action gallery.Return()
 

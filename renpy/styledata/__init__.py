@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -19,20 +19,21 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 def import_style_functions():
-    import renpy.styledata.stylesets # @UnresolvedImport
+    import renpy.styledata.stylesets  # @UnresolvedImport
 
-    import renpy.styledata.style_functions # @UnresolvedImport
-    import renpy.styledata.style_activate_functions # @UnresolvedImport
-    import renpy.styledata.style_hover_functions # @UnresolvedImport
-    import renpy.styledata.style_idle_functions # @UnresolvedImport
-    import renpy.styledata.style_insensitive_functions # @UnresolvedImport
+    import renpy.styledata.style_functions  # @UnresolvedImport
+    import renpy.styledata.style_activate_functions  # @UnresolvedImport
+    import renpy.styledata.style_hover_functions  # @UnresolvedImport
+    import renpy.styledata.style_idle_functions  # @UnresolvedImport
+    import renpy.styledata.style_insensitive_functions  # @UnresolvedImport
 
-    import renpy.styledata.style_selected_functions # @UnresolvedImport
-    import renpy.styledata.style_selected_activate_functions # @UnresolvedImport
-    import renpy.styledata.style_selected_hover_functions # @UnresolvedImport
-    import renpy.styledata.style_selected_idle_functions # @UnresolvedImport
-    import renpy.styledata.style_selected_insensitive_functions # @UnresolvedImport
+    import renpy.styledata.style_selected_functions  # @UnresolvedImport
+    import renpy.styledata.style_selected_activate_functions  # @UnresolvedImport
+    import renpy.styledata.style_selected_hover_functions  # @UnresolvedImport
+    import renpy.styledata.style_selected_idle_functions  # @UnresolvedImport
+    import renpy.styledata.style_selected_insensitive_functions  # @UnresolvedImport
 
-    import renpy.styledata.styleclass # @UnresolvedImport
-    renpy.style.Style = renpy.styledata.styleclass.Style # @UndefinedVariable
+    import renpy.styledata.styleclass  # @UnresolvedImport
+    renpy.style.Style = renpy.styledata.styleclass.Style  # @UndefinedVariable

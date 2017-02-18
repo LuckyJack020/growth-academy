@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -227,7 +227,35 @@ init -1500 python:
             return True
 
 
+    @renpy.pure
+    class PauseAudio(Action, DictEquality):
+        """
+        :doc: audio_action
+
+        Sets the pause flag for `channel`.
+
+        If `value` is True, the channel is paused. If False, the channel is
+        unpaused. If "toggle", the pause flag will be toggled.
+        """
 
 
+        def __init__(self, channel, value=True):
+            self.channel = channel
+            self.value = value
 
+        def __call__(self):
+            if self.value == "toggle":
+                renpy.music.set_pause(not renpy.music.get_pause(self.channel), channel=self.channel)
+            else:
+                renpy.music.set_pause(self.value, channel=self.channel)
+
+            renpy.restart_interaction()
+
+        def get_selected(self):
+            rv = renpy.music.get_pause(channel=self.channel)
+
+            if not self.value:
+                rv = not rv
+
+            return rv
 

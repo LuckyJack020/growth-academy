@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -27,6 +27,7 @@ import renpy
 import sets
 
 warp_spec = None
+
 
 def warp():
     """
@@ -60,7 +61,7 @@ def warp():
     seenset = sets.Set(workset)
 
     # This is called to indicate that next can be executed following node.
-    def add(node, next): #@ReservedAssignment
+    def add(node, next):  # @ReservedAssignment
         if next not in seenset:
             seenset.add(next)
             workset.add(next)

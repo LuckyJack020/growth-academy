@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -201,7 +201,7 @@ init -1500 python:
         """
          :doc: value
 
-         A value that allows the user to adjust the value of a field
+         A bar value that allows the user to adjust the value of a field
          on an object.
 
          `object`
@@ -286,6 +286,9 @@ init -1500 python:
         """
          :doc: value
 
+         A bar value that allows the user to adjust the value of a variable
+         in the default store.
+
          `variable`
              A string giving the name of the variable to adjust.
          `range`
@@ -307,6 +310,98 @@ init -1500 python:
         """
 
         return FieldValue(store, variable, range, max_is_zero=max_is_zero, style=style, offset=offset, step=step)
+
+    @renpy.pure
+    class ScreenVariableValue(BarValue, FieldEquality):
+        """
+        :doc: value
+
+        A bar value that adjusts the value of a variable in a screen.
+
+        `object`
+            The object.
+        `field`
+            The field, a string.
+        `range`
+            The range to adjust over.
+        `max_is_zero`
+            If True, then when the field is zero, the value of the
+            bar will be range, and all other values will be shifted
+            down by 1. This works both ways - when the bar is set to
+            the maximum, the field is set to 0.
+
+            This is used internally, for some preferences.
+        `style`
+            The styles of the bar created.
+        `offset`
+            An offset to add to the value.
+        `step`
+            The amount to change the bar by. If None, defaults to 1/10th of
+            the bar.
+         """
+
+        offset = 0
+
+        identity_fields = [  ]
+        equality_fields = [ 'variable', 'max_is_zero', 'style', 'offset', 'step']
+
+        def __init__(self, variable, range, max_is_zero=False, style="bar", offset=0, step=None):
+            self.variable = variable
+            self.range = range
+            self.max_is_zero = max_is_zero
+            self.style = style
+            self.offset = offset
+
+            if step is None:
+                if isinstance(range, float):
+                    step = range / 10.0
+                else:
+                    step = max(range / 10, 1)
+
+            self.step = step
+
+        def changed(self, value):
+
+            cs = renpy.current_screen()
+
+            if self.max_is_zero:
+                if value == self.range:
+                    value = 0
+                else:
+                    value = value + 1
+
+            value += self.offset
+
+            cs.scope[self.variable] = value
+            renpy.restart_interaction()
+
+        def get_adjustment(self):
+
+            cs = renpy.current_screen()
+
+            if (cs is None) or (self.variable not in cs.scope):
+                raise Exception("{} is not defined in the {} screen.".format(self.variable, cs.screen_name))
+
+            value = cs.scope[self.variable]
+
+            value -= self.offset
+
+            if self.max_is_zero:
+                if value == 0:
+                    value = self.range
+                else:
+                    value = value - 1
+
+            return ui.adjustment(
+                range=self.range,
+                value=value,
+                changed=self.changed,
+                step=self.step)
+
+        def get_style(self):
+            return self.style, "v" + self.style
+
+
 
     @renpy.pure
     class MixerValue(BarValue, DictEquality):
@@ -341,9 +436,9 @@ init -1500 python:
         """
          :doc: value
 
-         The value of an adjustment that horizontally scrolls the the viewport with the
-         given id, on the current screen. The viewport must be defined
-         before a bar with this value is.
+         The value of an adjustment that horizontally scrolls the viewport with the
+         given id, on the current screen. The viewport must be defined before a bar
+         with this value is.
          """
 
         equality_fields = [ 'viewport' ]
@@ -365,9 +460,9 @@ init -1500 python:
         """
          :doc: value
 
-         The value of an adjustment that vertically scrolls the the viewport with the
-         given id, on the current screen. The viewport must be defined
-         before a bar with this value is.
+         The value of an adjustment that vertically scrolls the viewport with the
+         given id, on the current screen. The viewport must be defined before a bar
+         with this value is.
          """
 
         equality_fields = [ 'viewport' ]
@@ -385,3 +480,41 @@ init -1500 python:
 
         def get_style(self):
             return "scrollbar", "vscrollbar"
+
+
+    @renpy.pure
+    class AudioPositionValue(BarValue, DictEquality):
+        """
+        :doc: value
+
+        A value that shows the playback position of the audio file playing
+        in `channel`.
+
+        `update_interval`
+            How often the value updates, in seconds.
+        """
+
+        def __init__(self, channel='music', update_interval=0.1):
+            self.channel = channel
+            self.update_interval = update_interval
+
+            self.adjustment = None
+
+        def get_pos_duration(self):
+            pos = renpy.music.get_pos(self.channel) or 0.0
+            duration = renpy.music.get_duration(self.channel) or 1.0
+
+            return pos, duration
+
+        def get_adjustment(self):
+            pos, duration = self.get_pos_duration()
+            self.adjustment = ui.adjustment(value=pos, range=duration, adjustable=False)
+            return self.adjustment
+
+        def periodic(self, st):
+
+            pos, duration = self.get_pos_duration()
+            self.adjustment.set_range(duration)
+            self.adjustment.change(pos)
+
+            return self.update_interval

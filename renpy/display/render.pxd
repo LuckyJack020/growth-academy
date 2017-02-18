@@ -26,6 +26,7 @@ cdef class Matrix2D:
     cdef public double ydy
 
     cpdef tuple transform(Matrix2D self, double x, double y)
+    cpdef bint is_unit_aligned(Matrix2D self)
 
 cdef class Render:
 
@@ -68,6 +69,7 @@ cdef class Render:
 
     cpdef int blit(Render self, source, tuple pos, object focus=*, object main=*, object index=*)
     cpdef int subpixel_blit(Render self, source, tuple pos, object focus=*, object main=*, object index=*)
+    cpdef int absolute_blit(Render self, source, tuple pos, object focus=*, object main=*, object index=*)
 
 
 cpdef render(object d, object widtho, object heighto, double st, double at)

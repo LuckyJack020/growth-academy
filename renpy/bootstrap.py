@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -19,6 +19,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+from __future__ import print_function
 import os.path
 import sys
 import subprocess
@@ -29,6 +30,8 @@ import renpy.error
 FSENCODING = sys.getfilesystemencoding() or "utf-8"
 
 # Extra things used for distribution.
+
+
 def extra_imports():
     import datetime; datetime
     import encodings.ascii; encodings.ascii
@@ -45,13 +48,10 @@ def extra_imports():
     import encodings.latin_1; encodings.latin_1
     import encodings.hex_codec; encodings.hex_codec
     import encodings.base64_codec; encodings.base64_codec
+    import encodings.idna; encodings.idna
     import math; math
     import glob; glob
     import pickle; pickle
-    import pysdlsound; pysdlsound #@UnresolvedImport
-    import pysdlsound.sound; pysdlsound.sound #@UnresolvedImport
-    import pysdlsound.winmixer; pysdlsound.winmixer #@UnresolvedImport
-    import pysdlsound.linmixer; pysdlsound.linmixer #@UnresolvedImport
     import difflib; difflib
     import shutil; shutil
     import tarfile; tarfile
@@ -73,6 +73,7 @@ def extra_imports():
     import _renpysteam; _renpysteam
     import compileall; compileall
 
+
 class NullFile(io.IOBase):
     """
     This file raises an error on input, and IOError on read.
@@ -83,6 +84,7 @@ class NullFile(io.IOBase):
 
     def read(self, length=None):
         raise IOError("Not implemented.")
+
 
 def null_files():
     try:
@@ -100,10 +102,12 @@ null_files()
 trace_file = None
 trace_local = None
 
+
 def trace_function(frame, event, arg):
     fn = os.path.basename(frame.f_code.co_filename)
-    print >>trace_file, fn, frame.f_lineno, frame.f_code.co_name, event
+    print(fn, frame.f_lineno, frame.f_code.co_name, event, file=trace_file)
     return trace_local
+
 
 def enable_trace(level):
     global trace_file
@@ -118,24 +122,26 @@ def enable_trace(level):
 
     sys.settrace(trace_function)
 
+
 def mac_start(fn):
     os.system("open " + fn)
 
 # This code fixes a bug in subprocess.Popen.__del__
+
+
 def popen_del(self, *args, **kwargs):
     return
 
+
 def bootstrap(renpy_base):
 
-    global renpy # W0602
+    global renpy  # W0602
 
-    import renpy.log #@UnusedImport
-
-    os.environ["RENPY_BASE"] = os.path.abspath(renpy_base)
+    import renpy.log  # @UnusedImport
 
     # Remove a legacy environment setting.
-    if os.environ.get("SDL_VIDEODRIVER", "") == "windib":
-        del os.environ["SDL_VIDEODRIVER"]
+    if os.environ.get(b"SDL_VIDEODRIVER", "") == "windib":
+        del os.environ[b"SDL_VIDEODRIVER"]
 
     renpy_base = unicode(renpy_base, FSENCODING, "replace")
 
@@ -182,7 +188,6 @@ def bootstrap(renpy_base):
         sys.stderr.write("Base directory %r does not exist. Giving up.\n" % (basedir,))
         sys.exit(1)
 
-
     gamedirs = [ name ]
     game_name = name
 
@@ -208,14 +213,13 @@ def bootstrap(renpy_base):
 
     sys.path.insert(0, basedir)
 
-    # If we're not given a command, show the presplash.
-    if args.command == "run" and not renpy.mobile:
-        import renpy.display.presplash #@Reimport
-        renpy.display.presplash.start(basedir, gamedir)
-
-    # If we're on a mac, install our own os.start.
     if renpy.macintosh:
+        # If we're on a mac, install our own os.start.
         os.startfile = mac_start
+
+        # Are we starting from inside a mac app resources directory?
+        if basedir.endswith("Contents/Resources/autorun"):
+            renpy.macapp = True
 
     # Check that we have installed pygame properly. This also deals with
     # weird cases on Windows and Linux where we can't import modules. (On
@@ -226,33 +230,38 @@ def bootstrap(renpy_base):
         import pygame_sdl2
         pygame_sdl2.import_as_pygame()
     except:
-        print >>sys.stderr, """\
+        print("""\
 Could not import pygame_sdl2. Please ensure that this program has been built
 and unpacked properly. Also, make sure that the directories containing
 this program do not contain : or ; in their names.
 
 You may be using a system install of python. Please run {0}.sh,
 {0}.exe, or {0}.app instead.
-""".format(name)
+""".format(name), file=sys.stderr)
 
         raise
+
+    # If we're not given a command, show the presplash.
+    if args.command == "run" and not renpy.mobile:
+        import renpy.display.presplash  # @Reimport
+        renpy.display.presplash.start(basedir, gamedir)
 
     # Ditto for the Ren'Py module.
     try:
         import _renpy; _renpy
     except:
-        print >>sys.stderr, """\
+        print("""\
 Could not import _renpy. Please ensure that this program has been built
 and unpacked properly.
 
 You may be using a system install of python. Please run {0}.sh,
 {0}.exe, or {0}.app instead.
-""".format(name)
+""".format(name), file=sys.stderr)
         raise
 
     # Load up all of Ren'Py, in the right order.
 
-    import renpy #@Reimport
+    import renpy  # @Reimport
     renpy.import_all()
 
     renpy.loader.init_importer()
@@ -276,7 +285,7 @@ You may be using a system install of python. Please run {0}.sh,
                     renpy.config.logdir = basedir
 
                 if not os.path.exists(renpy.config.logdir):
-                    os.makedirs(renpy.config.logdir, 0777)
+                    os.makedirs(renpy.config.logdir, 0o777)
 
                 renpy.main.main()
 
@@ -304,7 +313,7 @@ You may be using a system install of python. Please run {0}.sh,
             except renpy.game.ParseErrorException:
                 pass
 
-            except Exception, e:
+            except Exception as e:
                 renpy.error.report_exception(e)
                 pass
 
