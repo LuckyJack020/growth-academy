@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -21,6 +21,7 @@
 
 # This file contains code for formatting tracebacks.
 
+from __future__ import print_function
 import traceback
 import sys
 import cStringIO
@@ -97,11 +98,15 @@ def traceback_list(tb):
 
     for filename, line_number, name, line in l:
         if line is None:
-            line = linecache.getline(filename, line_number)
+            try:
+                line = linecache.getline(filename, line_number)
+            except:
+                line = ''
 
         rv.append((filename, line_number, name, line))
 
     return rv
+
 
 def filter_traceback_list(tl):
     """
@@ -126,8 +131,9 @@ def open_error_file(fn, mode):
     """
 
     try:
-        f = file(os.path.join(renpy.config.logdir, fn), mode)
-        return f, fn
+        new_fn = os.path.join(renpy.config.logdir, fn)
+        f = file(new_fn, mode)
+        return f, new_fn
     except:
         pass
 
@@ -139,8 +145,9 @@ def open_error_file(fn, mode):
 
     import tempfile
 
-    fn = os.path.join(tempfile.gettempdir(), "renpy-" + fn)
-    return file(fn, mode), fn
+    new_fn = os.path.join(tempfile.gettempdir(), "renpy-" + fn)
+    return file(new_fn, mode), new_fn
+
 
 def report_exception(e, editor=True):
     """
@@ -154,9 +161,9 @@ def report_exception(e, editor=True):
 
     import codecs
 
-    type, _value, tb = sys.exc_info() #@ReservedAssignment
+    type, _value, tb = sys.exc_info()  # @ReservedAssignment
 
-    print(repr(e))
+    print((repr(e)))
 
     def safe_utf8(e):
         try:
@@ -187,15 +194,15 @@ def report_exception(e, editor=True):
     full_tl = traceback_list(tb)
     simple_tl = filter_traceback_list(full_tl)
 
-    print >>simple, renpy.game.exception_info
+    print(renpy.game.exception_info, file=simple)
     write_utf8_traceback_list(simple, simple_tl)
-    print >>simple, type.__name__ + ":",
-    print >>simple, safe_utf8(e)
+    print(type.__name__ + ":", end=' ', file=simple)
+    print(safe_utf8(e), file=simple)
 
-    print >>full, "Full traceback:"
+    print("Full traceback:", file=full)
     write_utf8_traceback_list(full, full_tl)
-    print >>full, type.__name__ + ":",
-    print >>full, safe_utf8(e)
+    print(type.__name__ + ":", end=' ', file=full)
+    print(safe_utf8(e), file=full)
 
     # Write to stdout/stderr.
     sys.stdout.write("\n")
@@ -203,14 +210,13 @@ def report_exception(e, editor=True):
     sys.stdout.write("\n")
     sys.stdout.write(simple.getvalue())
 
-    print >>full
+    print(file=full)
     try:
-        print >>full, platform.platform()
-        print >>full, renpy.version
-        print >>full, renpy.config.name + " " + renpy.config.version
+        print(platform.platform(), file=full)
+        print(renpy.version, file=full)
+        print(renpy.config.name + " " + renpy.config.version, file=full)
     except:
         pass
-
 
     simple = simple.getvalue()
     full = full.getvalue()
@@ -222,20 +228,20 @@ def report_exception(e, editor=True):
 
         f.write(codecs.BOM_UTF8)
 
-        print >>f, "I'm sorry, but an uncaught exception occurred."
-        print >>f
+        print("I'm sorry, but an uncaught exception occurred.", file=f)
+        print(file=f)
 
         f.write(simple)
 
-        print >>f
-        print >>f, "-- Full Traceback ------------------------------------------------------------"
-        print >>f
+        print(file=f)
+        print("-- Full Traceback ------------------------------------------------------------", file=f)
+        print(file=f)
 
         f.write(full)
         f.close()
 
         try:
-            if editor and renpy.game.args.command == "run": #@UndefinedVariable
+            if editor and renpy.game.args.command == "run":  # @UndefinedVariable
                 renpy.exports.launch_editor([ traceback_fn ], 1, transient=1)
         except:
             pass
@@ -244,10 +250,8 @@ def report_exception(e, editor=True):
         pass
 
     try:
-        renpy.display.log.exception() #@UndefinedVariable
+        renpy.display.log.exception()  # @UndefinedVariable
     except:
         pass
 
     return simple.decode("utf-8", "replace"), full.decode("utf-8", "replace"), traceback_fn
-
-

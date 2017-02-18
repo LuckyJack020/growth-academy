@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -35,6 +35,7 @@ overlay = [ ]
 
 # True if we're in ios mode, where we don't allow keys.
 ios = False
+
 
 def null_emulator(ev, x, y):
     """
@@ -82,6 +83,7 @@ def touch_emulator(ev, x, y):
 
 TV_KEYS = [ pygame.K_LEFT, pygame.K_RIGHT, pygame.K_UP, pygame.K_DOWN, pygame.K_RETURN, pygame.K_ESCAPE, pygame.K_PAGEUP ]
 
+
 def tv_emulator(ev, x, y):
     """
     This emulates a tv-based device, like the OUYA.
@@ -104,6 +106,7 @@ def tv_emulator(ev, x, y):
 
 keyboard = None
 null = None
+
 
 def dynamic_keyboard(st, at):
     global keyboard

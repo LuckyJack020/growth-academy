@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -20,7 +20,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 init -1500 python in achievement:
-    from store import persistent, renpy, config
+    from store import persistent, renpy, config, Action
 
     # A list of backends that have been registered.
     backends = [ ]
@@ -65,7 +65,6 @@ init -1500 python in achievement:
 
             return False
 
-
     class PersistentBackend(Backend):
         """
         A backend that stores achievements in persistent._achievements.
@@ -95,9 +94,21 @@ init -1500 python in achievement:
             persistent._achievement_progress[name] = max(complete, old)
 
     def merge(old, new, current):
+        if old is None:
+            old = set()
+
+        if new is None:
+            new = set()
+
         return old | new
 
     def merge_progress(old, new, current):
+
+        if old is None:
+            old = { }
+        if new is None:
+            new = { }
+
         rv = _dict()
         rv.update(old)
 
@@ -114,6 +125,7 @@ init -1500 python in achievement:
 
     backends.append(PersistentBackend())
 
+    steam_maximum_framerate = 15
 
     class SteamBackend(Backend):
         """
@@ -127,6 +139,7 @@ init -1500 python in achievement:
             self.stats = { }
 
             steam.retrieve_stats()
+            renpy.maximum_framerate(steam_maximum_framerate)
 
         def register(self, name, steam=None, steam_stat=None, stat_max=None, stat_modulo=1, **kwargs):
             if steam is not None:
@@ -137,6 +150,7 @@ init -1500 python in achievement:
         def grant(self, name):
             name = self.names.get(name, name)
 
+            renpy.maximum_framerate(steam_maximum_framerate)
             steam.grant_achievement(name)
             steam.store_stats()
 
@@ -173,6 +187,8 @@ init -1500 python in achievement:
             if (current is not None) and (current >= completed):
                 return
 
+            renpy.maximum_framerate(steam_maximum_framerate)
+
             if completed >= stat_max:
                 steam.grant_achievement(name)
             else:
@@ -185,6 +201,7 @@ init -1500 python in achievement:
             name = self.names.get(name, name)
 
             return steam.get_achievement(name)
+
 
     try:
         import _renpysteam as steam
@@ -300,7 +317,7 @@ init -1500 python in achievement:
         """
         :doc: achievement
 
-        Returns true if the plater has been grnted the achievement with
+        Returns true if the player has been granted the achievement with
         `name`.
         """
 
@@ -309,3 +326,34 @@ init -1500 python in achievement:
                 return True
 
         return False
+
+    def sync():
+        """
+        :doc: achievement
+
+        Synchronizes registered achievements between local storage and
+        other backends. (For example, Steam.)
+        """
+
+        for a in persistent._achievements:
+            for i in backends:
+                if not i.has(a):
+                    i.grant(a)
+
+    class Sync(Action):
+        """
+        :doc: achievement
+
+        An action that calls achievement.sync(). This is only sensitive if
+        achievements are out of sync.
+        """
+
+        def __call__(self):
+            sync()
+
+        def get_sensitive(self):
+            for a in persistent._achievements:
+                for i in backends:
+                    if not i.has(a):
+                        return True
+            return False

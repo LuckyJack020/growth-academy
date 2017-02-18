@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -100,6 +100,9 @@ init -1900 python:
         if version <= (6, 17, 0):
             config.keymap['toggle_music'] = [ 'm' ]
 
+        if version <= (6, 17, 4):
+            config.default_sound_loop = False
+
         if version <= (6, 18, 0):
             config.predict_screen_statements = False
             config.transition_screens = False
@@ -107,6 +110,32 @@ init -1900 python:
         if version <= (6, 99, 1):
             config.images_directory = None
             config.preserve_zorder = False
+
+        if version <= (6, 99, 5):
+            config.wrap_shown_transforms = False
+            config.search_prefixes = [ "" ]
+
+        if version <= (6, 99, 6):
+            config.dynamic_images = False
+
+        if version <= (6, 99, 8):
+            if config.developer == "auto":
+                config.developer = False
+
+            config.play_channel = "sound"
+
+        if version <= (6, 99, 8):
+            config.help_screen = None
+            config.confirm_screen = False
+
+        if version <= (6, 99, 10):
+            config.new_translate_order = False
+            config.old_say_args = True
+            config.window_auto_hide.remove("call screen")
+            config.quit_action = ui.gamemenus("_quit_prompt")
+            config.enforce_window_max_size = False
+            config.splashscreen_suppress_overlay = False
+
 
     # The version of Ren'Py this script is intended for, or
     # None if it's intended for the current version.
@@ -165,6 +194,10 @@ init 1900 python hide::
     if compat(6, 9, 0):
         style.motion.clear()
 
+    if compat(6, 10, 2):
+        if 'screens' not in config.layers:
+            config.layers.append('screens')
+
     if "Fullscreen" in config.translations:
         fs = _("Fullscreen")
         config.translations.setdefault("Fullscreen 4:3", fs + " 4:3")
@@ -181,3 +214,5 @@ init 1900 python hide::
         config.has_quicksave = False
         config.quit_action = ui.gamemenus("_confirm_quit")
         config.default_afm_enable = None
+
+

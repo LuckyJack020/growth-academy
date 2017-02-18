@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -35,6 +35,7 @@ from renpy.loadsave import clear_slot, safe_rename
 import shutil
 
 disk_lock = threading.RLock()
+
 
 class FileLocation(object):
     """
@@ -75,14 +76,12 @@ class FileLocation(object):
         # The data loaded from the persistent file.
         self.persistent_data = None
 
-
     def filename(self, slotname):
         """
         Given a slot name, returns a filename.
         """
 
-        return os.path.join(self.directory, slotname + renpy.savegame_suffix)
-
+        return os.path.join(self.directory, renpy.exports.fsencode(slotname + renpy.savegame_suffix))
 
     def scan(self):
         """
@@ -121,14 +120,16 @@ class FileLocation(object):
                 if slotname not in new_mtimes:
                     clear_slot(slotname)
 
-            if os.path.exists(self.persistent):
-                mtime = os.path.getmtime(self.persistent)
+            for pfn in [ self.persistent + ".new", self.persistent ]:
+                if os.path.exists(pfn):
+                    mtime = os.path.getmtime(pfn)
 
-                if mtime != self.persistent_mtime:
-                    data = renpy.persistent.load(self.persistent)
-                    self.persistent_mtime = mtime
-                    self.persistent_data = data
-
+                    if mtime != self.persistent_mtime:
+                        data = renpy.persistent.load(pfn)
+                        if data is not None:
+                            self.persistent_mtime = mtime
+                            self.persistent_data = data
+                            break
 
     def save(self, slotname, record):
         """
@@ -150,7 +151,6 @@ class FileLocation(object):
 
         return list(self.mtimes)
 
-
     def mtime(self, slotname):
         """
         For a slot, returns the time the object was saved in that
@@ -160,7 +160,6 @@ class FileLocation(object):
         """
 
         return self.mtimes.get(slotname, None)
-
 
     def json(self, slotname):
         """
@@ -196,7 +195,6 @@ class FileLocation(object):
 
             finally:
                 zf.close()
-
 
     def screenshot(self, slotname):
         """
@@ -263,7 +261,6 @@ class FileLocation(object):
 
             self.scan()
 
-
     def rename(self, old, new):
         """
         If old exists, renames it to new.
@@ -324,11 +321,13 @@ class FileLocation(object):
                 return
 
             fn = self.persistent
+            fn_tmp = fn + ".tmp"
             fn_new = fn + ".new"
 
-            with open(fn_new, "wb") as f:
+            with open(fn_tmp, "wb") as f:
                 f.write(data)
 
+            safe_rename(fn_tmp, fn_new)
             safe_rename(fn_new, fn)
 
     def unlink_persistent(self):
@@ -346,6 +345,7 @@ class FileLocation(object):
             return False
 
         return self.directory == other.directory
+
 
 class MultiLocation(object):
     """
@@ -425,7 +425,6 @@ class MultiLocation(object):
 
         return l.json(slotname)
 
-
     def screenshot(self, slotname):
         l = self.newest(slotname)
 
@@ -491,6 +490,7 @@ quit_scan_thread = False
 # The condition we wait on.
 scan_thread_condition = threading.Condition()
 
+
 def run_scan_thread():
     global quit_scan_thread
 
@@ -506,6 +506,7 @@ def run_scan_thread():
         with scan_thread_condition:
             scan_thread_condition.wait(5.0)
 
+
 def quit():  # @ReservedAssignment
     global quit_scan_thread
 
@@ -514,6 +515,7 @@ def quit():  # @ReservedAssignment
         scan_thread_condition.notifyAll()
 
     scan_thread.join()
+
 
 def init():
     global scan_thread
@@ -524,7 +526,7 @@ def init():
     location.add(FileLocation(renpy.config.savedir))
 
     # 2. Game-local savedir.
-    if not renpy.mobile:
+    if (not renpy.mobile) and (not renpy.macapp):
         path = os.path.join(renpy.config.gamedir, "saves")
         location.add(FileLocation(path))
 
@@ -535,4 +537,3 @@ def init():
 
     scan_thread = threading.Thread(target=run_scan_thread)
     scan_thread.start()
-

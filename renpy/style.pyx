@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -156,24 +156,19 @@ cpdef get_tuple_name(s):
 
 def get_text_style(style, default):
     """
-    If `style` + "_text", exists, returns it. Otherwise, returns the `default`
-    style.
-
+    If style exists, returns `style` + "_text". Otherwise, returns `default`.
     For indexed styles, the above is applied first, and then indexing is applied.
     """
 
-    style = get_tuple_name(style)
-
     if style is None:
-        return None
+        style = default
+
+    style = get_tuple_name(style)
 
     start = style[0]
     rest = style[1:]
 
-    rv = styles.get((start + "_text",), None)
-
-    if rv is None:
-        rv = get_full_style(get_tuple_name(default))
+    rv = get_full_style((start + "_text",))
 
     for i in rest:
         rv = rv[i]
@@ -278,7 +273,7 @@ cdef class StyleCore:
         """
 
         self.prefix = "insensitive_"
-        self.offset = INSENSITIVE_PREFIX
+        self.prefix_offset = INSENSITIVE_PREFIX
 
         self.properties = [ ]
 
@@ -427,17 +422,20 @@ cdef class StyleCore:
         self.prefix = prefix
 
         if prefix == "insensitive_":
-            self.offset = INSENSITIVE_PREFIX
+            self.prefix_offset = INSENSITIVE_PREFIX
         elif prefix == "idle_":
-            self.offset = IDLE_PREFIX
+            self.prefix_offset = IDLE_PREFIX
         elif prefix == "hover_":
-            self.offset = HOVER_PREFIX
+            self.prefix_offset = HOVER_PREFIX
         elif prefix == "selected_insensitive_":
-            self.offset = SELECTED_INSENSITIVE_PREFIX
+            self.prefix_offset = SELECTED_INSENSITIVE_PREFIX
         elif prefix == "selected_idle_":
-            self.offset = SELECTED_IDLE_PREFIX
+            self.prefix_offset = SELECTED_IDLE_PREFIX
         elif prefix == "selected_hover_":
-            self.offset = SELECTED_HOVER_PREFIX
+            self.prefix_offset = SELECTED_HOVER_PREFIX
+
+    def get_offset(self):
+        return self.prefix_offset
 
     def get_placement(self):
         """
@@ -469,7 +467,7 @@ cdef class StyleCore:
         # A limit to the number of styles we'll consider.
         cdef int limit
 
-        index += self.offset
+        index += self.prefix_offset
 
         if not self.built:
             build_style(self)
@@ -507,7 +505,7 @@ cdef class StyleCore:
 
 
     cpdef _get_unoffset(self, int index):
-        return self._get(index - self.offset)
+        return self._get(index - self.prefix_offset)
 
 
     def _predict_window(self, pd):
@@ -524,7 +522,6 @@ cdef class StyleCore:
                 if v is not None:
                     pd(v)
 
-
     def _predict_bar(self, pd):
         """
         Predicts properties for a window.
@@ -539,6 +536,19 @@ cdef class StyleCore:
                 if v is not None:
                     pd(v)
 
+    def _predict_frame(self, pd):
+        """
+        Predicts properties for a Frame.
+
+        `pd`
+            The function that should be called to predict a displayable.
+        """
+
+        for i in [ INSENSITIVE_PREFIX, IDLE_PREFIX, HOVER_PREFIX, SELECTED_INSENSITIVE_PREFIX, SELECTED_IDLE_PREFIX, SELECTED_HOVER_PREFIX ]:
+            for j in [ CHILD_INDEX ]:
+                v = self._get_unoffset(i + j)
+                if v is not None:
+                    pd(v)
 
     def inspect(StyleCore self):
         """
@@ -741,17 +751,13 @@ def reset():
 
     styles.clear()
 
-#     import gc
-#
-#     for i in gc.get_objects():
-#         if isinstance(i, Style):
-#             unbuild_style(i)
-
 
 def build_styles():
     """
     Builds or rebuilds all styles.
     """
+    for i in renpy.config.build_styles_callbacks:
+        i()
 
     for s in styles.values():
         unbuild_style(s)
@@ -767,6 +773,11 @@ def rebuild(prepare_screens=True):
     build_styles()
 
     renpy.display.screen.prepared = False
+
+    if not renpy.game.context().init_phase:
+        renpy.display.screen.prepare_screens()
+
+    renpy.exports.restart_interaction()
 
 def copy_properties(p):
     """
@@ -794,11 +805,23 @@ def restore(o):
 
     cdef StyleCore s
 
+    keys = list(styles.keys())
+
+    for i in keys:
+        if i not in o:
+            del styles[i]
+
+
     for k, v in o.iteritems():
-        s = get_full_style(k)
+
+        s = get_or_create_style(k[0])
+
+        for i in k[1:]:
+            s = s[i]
 
         parent, properties = v
 
+        s.clear()
         s.set_parent(parent)
         s.properties = copy_properties(properties)
 

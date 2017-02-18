@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -43,7 +43,7 @@ from renpy.display.predict import displayable as predict_displayable
 
 from renpy.python import py_eval_bytecode
 from renpy.pyanalysis import Analysis, NOT_CONST, GLOBAL_CONST, ccache
-import md5
+import hashlib
 
 # This file contains the abstract syntax tree for a screen language
 # screen.
@@ -60,6 +60,7 @@ filename = '<screen language>'
 
 # A log that's used for profiling information.
 profile_log = renpy.log.open("profile_screen", developer=True, append=False, flush=False)
+
 
 def compile_expr(node):
     """
@@ -96,7 +97,7 @@ class SLContext(renpy.ui.Addable):
         self.keywords = { }
 
         # The style prefix that is given to children of this displayable.
-        self.style_prefix = ""
+        self.style_prefix = None
 
         # A cache associated with this context. The cache maps from
         # statement serial to information associated with the statement.
@@ -143,16 +144,9 @@ class SLContext(renpy.ui.Addable):
         # The use statement containing the transcluded block.
         self.transclude = None
 
-
-    def get_style_group(self):
-        style_prefix = self.style_prefix
-
-        if style_prefix:
-            return style_prefix[:-1]
-        else:
-            return None
-
-    style_group = property(get_style_group)
+        # True if it's unlikely this node will run. This is used in prediction
+        # to speed things up.
+        self.unlikely = False
 
     def add(self, d, key):
         self.children.append(d)
@@ -209,7 +203,6 @@ class SLNode(object):
         """
 
         raise Exception("copy not implemented by " + type(self).__name__)
-
 
     def report_traceback(self, name, last):
         if last:
@@ -295,6 +288,7 @@ class SLNode(object):
 # A sentinel used to indicate a keyword argument was not given.
 NotGiven = renpy.object.Sentinel("NotGiven")
 
+
 class SLBlock(SLNode):
     """
     Represents a screen language block that can contain keyword arguments
@@ -347,7 +341,7 @@ class SLBlock(SLNode):
                 keyword_values[k] = py_eval_bytecode(compile_expr(node))
             else:
                 keyword_keys.append(ast.Str(s=k))
-                keyword_exprs.append(node) # Will be compiled as part of ast.Dict below.
+                keyword_exprs.append(node)  # Will be compiled as part of ast.Dict below.
 
             self.constant = min(self.constant, const)
 
@@ -374,7 +368,6 @@ class SLBlock(SLNode):
             if i.last_keyword:
                 self.last_keyword = True
                 break
-
 
     def execute(self, context):
 
@@ -404,12 +397,13 @@ class SLBlock(SLNode):
         for i in self.keyword_children:
             i.keywords(context)
 
-        style_group = context.keywords.pop("style_group", NotGiven)
-        if style_group is not NotGiven:
-            if style_group is not None:
-                context.style_prefix = style_group + "_"
-            else:
-                context.style_prefix = ""
+        style_prefix = context.keywords.pop("style_prefix", NotGiven)
+
+        if style_prefix is NotGiven:
+            style_prefix = context.keywords.pop("style_group", NotGiven)
+
+        if style_prefix is not NotGiven:
+            context.style_prefix = style_prefix
 
     def copy_on_change(self, cache):
         for i in self.children:
@@ -428,6 +422,7 @@ class SLBlock(SLNode):
 
 
 list_or_tuple = (list, tuple)
+
 
 class SLCache(object):
     """
@@ -478,9 +473,13 @@ class SLCache(object):
         # The SLUse that was transcluded by this SLCache statement.
         self.transclude = None
 
+        # The style prefix used when this statement was first created.
+        self.style_prefix = None
+
 # A magic value that, if returned by a displayable function, is not added to
 # the parent.
 NO_DISPLAYABLE = renpy.display.layout.Null()
+
 
 class SLDisplayable(SLBlock):
     """
@@ -489,6 +488,9 @@ class SLDisplayable(SLBlock):
     """
 
     hotspot = False
+
+    # A list of variables that are locally constant.
+    local_constant = [ ]
 
     def __init__(self, loc, displayable, scope=False, child_or_fixed=False, style=None, text_style=None, pass_context=False, imagemap=False, replaces=False, default_keywords={}, hotspot=False):
         """
@@ -577,6 +579,11 @@ class SLDisplayable(SLBlock):
         if self.imagemap:
             analysis.pop_control()
 
+        # If we use a scope, store the local constants that need to be
+        # kept and placed into the scope.
+        if self.scope:
+            self.local_constant = list(analysis.local_constant)
+
     def prepare(self, analysis):
 
         SLBlock.prepare(self, analysis)
@@ -599,7 +606,7 @@ class SLDisplayable(SLBlock):
                 has_values = True
             else:
                 values.append(use_expression)
-                exprs.append(node) # Will be compiled as part of the tuple.
+                exprs.append(node)  # Will be compiled as part of the tuple.
                 has_exprs = True
 
             self.constant = min(self.constant, const)
@@ -649,15 +656,22 @@ class SLDisplayable(SLBlock):
         if debug:
             self.debug_line()
 
-        if cache.constant:
+        if cache.constant and (cache.style_prefix == context.style_prefix):
 
-            for i in cache.constant_uses_scope:
+            for i, local_scope in cache.constant_uses_scope:
+
+                if local_scope:
+                    scope = dict(context.scope)
+                    scope.update(local_scope)
+                else:
+                    scope = context.scope
+
                 if copy_on_change:
-                    if i._scope(context.scope, False):
+                    if i._scope(scope, False):
                         cache.constant = None
                         break
                 else:
-                    i._scope(context.scope, True)
+                    i._scope(scope, True)
 
             else:
 
@@ -716,9 +730,22 @@ class SLDisplayable(SLBlock):
             widget_id = keywords.pop("id", None)
             transform = keywords.pop("at", None)
 
+            arguments = keywords.pop("arguments", None)
+            properties = keywords.pop("properties", None)
+            style_suffix = keywords.pop("style_suffix", None) or self.style
+
+            if arguments:
+                positional += arguments
+
+            if properties:
+                keywords.update(properties)
+
             # If we don't know the style, figure it out.
-            if ("style" not in keywords) and self.style:
-                keywords["style"] = ctx.style_prefix + self.style
+            if ("style" not in keywords) and style_suffix:
+                if ctx.style_prefix is None:
+                    keywords["style"] = style_suffix
+                else:
+                    keywords["style"] = ctx.style_prefix + "_" + style_suffix
 
             if widget_id and (widget_id in screen.widget_properties):
                 keywords.update(screen.widget_properties[widget_id])
@@ -734,7 +761,7 @@ class SLDisplayable(SLBlock):
             if debug:
                 self.report_arguments(cache, positional, keywords, transform)
 
-            can_reuse = (old_d is not None) and (positional == cache.positional) and (keywords == cache.keywords)
+            can_reuse = (old_d is not None) and (positional == cache.positional) and (keywords == cache.keywords) and (context.style_prefix == cache.style_prefix)
 
             # A hotspot can only be reused if the imagemap it belongs to has
             # not changed.
@@ -754,10 +781,10 @@ class SLDisplayable(SLBlock):
                 # the one that gets the scope, and gets children added to it.)
                 main = old_main
 
-                if widget_id:
+                if widget_id and not ctx.unlikely:
                     screen.widgets[widget_id] = main
 
-                if self.scope and main.uses_scope:
+                if self.scope and main._uses_scope:
                     if copy_on_change:
                         if main._scope(ctx.scope, False):
                             reused = False
@@ -790,14 +817,14 @@ class SLDisplayable(SLBlock):
 
                 main._location = self.location
 
-                if widget_id:
+                if widget_id and not ctx.unlikely:
                     screen.widgets[widget_id] = main
                 # End child creation code.
 
                 imagemap = self.imagemap
 
-                cache.copy_on_change = False # We no longer need to copy on change.
-                cache.children = None # Re-add the children.
+                cache.copy_on_change = False  # We no longer need to copy on change.
+                cache.children = None  # Re-add the children.
 
             if debug:
                 if reused:
@@ -901,6 +928,7 @@ class SLDisplayable(SLBlock):
 
         cache.displayable = d
         cache.children = ctx.children
+        cache.style_prefix = context.style_prefix
 
         if (transform is not None) and (d is not NO_DISPLAYABLE):
             if reused and (transform == cache.raw_transform):
@@ -941,8 +969,15 @@ class SLDisplayable(SLBlock):
             if self.constant:
                 cache.constant = d
 
-                if self.scope and main.uses_scope:
-                    ctx.uses_scope.append(main)
+                if self.scope and main._uses_scope:
+
+                    local_scope = { }
+
+                    for i in self.local_constant:
+                        if i in ctx.scope:
+                            local_scope[i] = ctx.scope[i]
+
+                    ctx.uses_scope.append((main, local_scope))
 
                 cache.constant_uses_scope = ctx.uses_scope
 
@@ -1151,6 +1186,7 @@ class SLIf(SLNode):
 
                 ctx = SLContext(context)
                 ctx.children = [ ]
+                ctx.unlikely = True
 
                 for i in block.children:
                     try:
@@ -1160,7 +1196,6 @@ class SLIf(SLNode):
 
                 for i in ctx.children:
                     predict_displayable(i)
-
 
     def keywords(self, context):
 
@@ -1183,6 +1218,7 @@ class SLIf(SLNode):
                 return True
 
         return False
+
 
 class SLShowIf(SLNode):
     """
@@ -1233,7 +1269,10 @@ class SLShowIf(SLNode):
 
     def execute(self, context):
 
-        first_true = True
+        # This is true when the block should be executed - when no outer
+        # showif is False, and when no prior block in this showif has
+        # executed.
+        first_true = context.showif is not False
 
         for cond, block in self.prepared_entries:
 
@@ -1303,7 +1342,6 @@ class SLFor(SLBlock):
 
         analysis.pop_control()
 
-
     def prepare(self, analysis):
         node = ccache.ast_eval(self.expression)
 
@@ -1364,6 +1402,9 @@ class SLFor(SLBlock):
                     if not context.predicting:
                         raise
 
+            if context.unlikely:
+                break
+
         context.cache[self.serial] = newcaches
 
         if ctx.fail:
@@ -1417,6 +1458,7 @@ class SLPass(SLNode):
         rv = self.instantiate(transclude)
 
         return rv
+
 
 class SLDefault(SLNode):
 
@@ -1602,7 +1644,6 @@ class SLUse(SLNode):
             if cache is None:
                 context.cache[self.serial] = cache = { }
 
-
         # Evaluate the arguments.
         try:
             if self.args:
@@ -1672,7 +1713,6 @@ class SLTransclude(SLNode):
     def __init__(self, loc):
         SLNode.__init__(self, loc)
 
-
     def copy(self, transclude):
         rv = self.instantiate(transclude)
         rv.constant = transclude
@@ -1698,7 +1738,12 @@ class SLTransclude(SLNode):
         ctx.showif = context.showif
         ctx.uses_scope = context.uses_scope
 
-        context.transclude.execute(ctx)
+        try:
+            renpy.ui.stack.append(ctx)
+            context.transclude.keywords(ctx)
+            context.transclude.execute(ctx)
+        finally:
+            renpy.ui.stack.pop()
 
         if ctx.fail:
             context.fail = True
@@ -1723,7 +1768,6 @@ class SLScreen(SLBlock):
 
     version = 0
 
-
     # This screen's AST when the transcluded block is entirely
     # constant (or there is no transcluded block at all). This may be
     # the actual AST, or a copy.
@@ -1736,6 +1780,7 @@ class SLScreen(SLBlock):
     # The analysis
     analysis = None
 
+    layer = "'screens'"
 
     def __init__(self, loc):
 
@@ -1754,10 +1799,10 @@ class SLScreen(SLBlock):
         self.tag = None
 
         # The variant of screen we're defining.
-        self.variant = "None" # expr.
+        self.variant = "None"  # expr.
 
         # Should we predict this screen?
-        self.predict = "None" # expr.
+        self.predict = "None"  # expr.
 
         # The parameters this screen takes.
         self.parameters = None
@@ -1768,8 +1813,6 @@ class SLScreen(SLBlock):
 
         # True if this screen has been prepared.
         self.prepared = False
-
-
 
     def copy(self, transclude):
         rv = self.instantiate(transclude)
@@ -1803,6 +1846,7 @@ class SLScreen(SLBlock):
             predict=renpy.python.py_eval(self.predict),
             parameters=self.parameters,
             location=self.location,
+            layer=renpy.python.py_eval(self.layer),
             )
 
     def analyze(self, analysis):
@@ -1830,7 +1874,6 @@ class SLScreen(SLBlock):
         else:
             self.not_const_ast = self.const_ast
             targets = [ self.const_ast ]
-
 
         for ast in targets:
             analysis = ast.analysis = Analysis(None)
@@ -1883,6 +1926,10 @@ class SLScreen(SLBlock):
             not_constants.sort()
             profile_log.write('    not_const: %s', " ".join(not_constants))
 
+    def execute(self, context):
+        self.keywords(context)
+        SLBlock.execute(self, context)
+
     def report_traceback(self, name, last):
         if last:
             return None
@@ -1931,6 +1978,7 @@ class SLScreen(SLBlock):
         for i in context.children:
             renpy.ui.implicit_add(i)
 
+
 class ScreenCache(object):
 
     def __init__(self):
@@ -1945,14 +1993,15 @@ scache = ScreenCache()
 
 CACHE_FILENAME = "cache/screens.rpyb"
 
+
 def load_cache():
-    if renpy.game.args.compile: # @UndefinedVariable
+    if renpy.game.args.compile:  # @UndefinedVariable
         return
 
     try:
         f = renpy.loader.load(CACHE_FILENAME)
 
-        digest = f.read(md5.digest_size)
+        digest = f.read(hashlib.md5().digest_size)
         if digest != renpy.game.script.digest.digest():
             return
 
@@ -1967,8 +2016,12 @@ def load_cache():
     except:
         pass
 
+
 def save_cache():
     if not scache.updated:
+        return
+
+    if renpy.macapp:
         return
 
     try:
@@ -1979,5 +2032,3 @@ def save_cache():
             f.write(data)
     except:
         pass
-
-

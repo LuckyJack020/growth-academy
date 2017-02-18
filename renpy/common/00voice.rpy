@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -50,6 +50,7 @@ init -1500 python:
     _voice.tlid = None
     _voice.auto_file = None
     _voice.info = None
+    _voice.last_playing = 0.0
 
     # If true, the voice system ignores the interaction.
     _voice.ignore_interaction = False
@@ -60,6 +61,11 @@ init -1500 python:
     # This is formatted with {id} to produce a filename. If the filename
     # exists, it's played as a voice file.
     config.auto_voice = None
+
+    # The last sound played on the voice channel. (This is used to replay
+    # it.)
+    _last_voice_play = None
+
 
     # Call this to specify the voice file that will be played for
     # the user. This peice only gathers the information so
@@ -92,6 +98,7 @@ init -1500 python:
 
         fn = config.voice_filename_format.format(filename=filename)
         _voice.play = fn
+        _voice.tag = tag
 
 
     # Call this to specify that the currently playing voice file
@@ -177,6 +184,32 @@ init -1500 python:
             return DictValue(persistent._character_volume, voice_tag, 1.0)
         else:
             return SetDict(persistent._character_volume, voice_tag, volume)
+
+    @renpy.pure
+    class PlayCharacterVoice(Action):
+        """
+        :doc: voice_action
+
+        This plays `sample` on the voice channel, as if said by a
+        character with `voice_tag`.
+
+        `sample`
+            The full path to a sound file. No voice-related handling
+            of this file is done.
+        """
+
+        def __init__(self, voice_tag, sample):
+            self.voice_tag = voice_tag
+            self.sample = sample
+
+        def __call__(self):
+            if self.voice_tag in persistent._voice_mute:
+                return
+
+            volume = persistent._character_volume.get(self.voice_tag, 1.0)
+            renpy.music.get_channel("voice").set_volume(volume)
+
+            renpy.sound.play(self.sample, channel="voice")
 
     @renpy.pure
     class ToggleVoiceMute(Action, DictEquality):
@@ -292,6 +325,11 @@ init -1500 python:
         else:
             return vi
 
+    def _voice_history_callback(h):
+        h.voice = _get_voice_info()
+
+    config.history_callbacks.append(_voice_history_callback)
+
 
 init -1500 python hide:
 
@@ -329,7 +367,6 @@ init -1500 python hide:
         _voice.tlid = vi.tlid
 
         volume = persistent._character_volume.get(_voice.tag, 1.0)
-        renpy.music.get_channel("voice").set_volume(volume)
 
         if (not volume) or (_voice.tag in persistent._voice_mute):
             renpy.sound.stop(channel="voice")
@@ -337,33 +374,44 @@ init -1500 python hide:
 
         elif _voice.play:
             if not config.skipping:
+                renpy.music.get_channel("voice").set_volume(volume)
                 renpy.sound.play(_voice.play, channel="voice")
 
             store._last_voice_play = _voice.play
 
         elif not _voice.sustain:
             renpy.sound.stop(channel="voice")
-            store._last_voice_play = None
+
+            if not getattr(renpy.context(), "_menu", False):
+                store._last_voice_play = None
 
         _voice.play = None
         _voice.sustain = False
+        _voice.tag = None
 
         if _preferences.voice_sustain:
             _voice.sustain = True
 
     config.start_interact_callbacks.append(voice_interact)
     config.say_sustain_callbacks.append(voice_sustain)
+    config.afm_voice_delay = .5
 
     def voice_afm_callback():
+
+        if renpy.sound.is_playing(channel="voice"):
+            _voice.last_playing = renpy.time.time()
+
         if _preferences.wait_voice:
-            return not renpy.sound.is_playing(channel="voice")
+            return renpy.time.time() > (_voice.last_playing + config.afm_voice_delay)
         else:
             return True
 
     config.afm_callback = voice_afm_callback
 
     def voice_tag_callback(voice_tag):
-        _voice.tag = voice_tag
+
+        if _voice.tag is None:
+            _voice.tag = voice_tag
 
     config.voice_tag_callback = voice_tag_callback
 
@@ -416,8 +464,8 @@ python early hide:
         except:
             return
 
-        if not renpy.loadable(fn):
-            renpy.error('voice file %r is not loadable' % fn)
+        if not renpy.music.playable(fn, 'voice'):
+            renpy.error('voice file %r is not playable' % fn)
 
     renpy.statements.register('voice',
                               parse=parse_voice,

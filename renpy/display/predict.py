@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -38,6 +38,7 @@ predicting = False
 # like to predict.
 screens = [ ]
 
+
 def displayable(d):
     """
     Called to predict that the displayable `d` will be shown.
@@ -49,6 +50,7 @@ def displayable(d):
     if d not in predicted:
         predicted.add(d)
         d.visit_all(lambda i : i.predict_one())
+
 
 def screen(_screen_name, *args, **kwargs):
     """
@@ -88,7 +90,6 @@ def prediction_coroutine(root_widget):
     # Start the prediction thread (to clean out the cache).
     renpy.display.im.cache.start_prediction()
 
-
     # Set up the image prediction method.
     global image
     image = renpy.display.im.cache.preload_image
@@ -98,16 +99,6 @@ def prediction_coroutine(root_widget):
     # Predict displayables given to renpy.start_predict.
     for d in renpy.store._predict_set:
         displayable(d)
-
-        predicting = False
-        yield True
-        predicting = True
-
-    # Predict screens given with renpy.start_predict_screen.
-    for name, value in renpy.store._predict_screen.items():
-        args, kwargs = value
-
-        renpy.display.screen.predict_screen(name, *args, **kwargs)
 
         predicting = False
         yield True
@@ -145,10 +136,19 @@ def prediction_coroutine(root_widget):
     while not (yield True):
         continue
 
+    # Predict screens given with renpy.start_predict_screen.
+    for name, value in renpy.store._predict_screen.items():
+        args, kwargs = value
+
+        renpy.display.screen.predict_screen(name, *args, **kwargs)
+
+        predicting = False
+        yield True
+        predicting = True
+
     # Predict things (especially screens) that are reachable through
     # an action.
     predicting = True
-
 
     try:
         root_widget.visit_all(lambda i : i.predict_one_action())
@@ -157,17 +157,20 @@ def prediction_coroutine(root_widget):
 
     predicting = False
 
-    predicted_screens = set()
+    predicted_screens = [ ]
 
     # Predict the screens themselves.
-    for name, args, kwargs in screens:
+    for t in screens:
+
         while not (yield True):
             continue
 
-        if name in predicted_screens:
+        if t in predicted_screens:
             continue
 
-        predicted_screens.add(name)
+        predicted_screens.append(t)
+
+        name, args, kwargs = t
 
         predicting = True
 
@@ -181,4 +184,3 @@ def prediction_coroutine(root_widget):
         predicting = False
 
     yield False
-

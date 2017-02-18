@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -23,6 +23,9 @@
 # distributions.
 
 init -1500 python in build:
+
+    from store import config
+
 
     def make_file_lists(s):
         """
@@ -218,11 +221,18 @@ init -1500 python in build:
         "**/*.so.*",
         "**/*.so",
         "**/*.dylib",
-        "**.app/Contents/MacOS/*",
+
         "lib/**/python",
         "lib/**/pythonw",
         "lib/**/zsync",
         "lib/**/zsyncmake",
+
+        "**.app/Contents/MacOS/*",
+
+        "**.app/Contents/MacOS/lib/**/python",
+        "**.app/Contents/MacOS/lib/**/pythonw",
+        "**.app/Contents/MacOS/lib/**/zsync",
+        "**.app/Contents/MacOS/lib/**/zsyncmake",
         ]
 
     def executable(pattern):
@@ -255,10 +265,18 @@ init -1500 python in build:
 
             zip
                 A zip file.
-            app-zip
-                A zip file containing a macintosh application.
             tar.bz2
                 A tar.bz2 file.
+            directory
+                A directory containing the files.
+            dmg
+                A Macintosh DMG containing the files.
+            app-zip
+                A zip file containing a macintosh application.
+            app-directory
+                A directory containing the mac app.
+            app-dmg
+                A macintosh drive image containing a dmg. (Mac only.)
 
             The empty string will not build any package formats (this
             makes dlc possible).
@@ -286,7 +304,7 @@ init -1500 python in build:
         formats = format.split()
 
         for i in formats:
-            if i not in [ "zip", "app-zip", "tar.bz2", "directory" ]:
+            if i not in [ "zip", "app-zip", "tar.bz2", "directory", "dmg", "app-directory", "app-dmg" ]:
                 raise Exception("Format {} not known.".format(i))
 
         if description is None:
@@ -304,14 +322,18 @@ init -1500 python in build:
 
         packages.append(d)
 
-    package("all", "zip", "windows mac linux renpy all", "All Desktop Platforms")
+    package("pc", "zip", "windows linux renpy all", "PC: Windows and Linux")
     package("linux", "tar.bz2", "linux renpy all", "Linux x86/x86_64")
-    package("mac", "app-zip", "mac renpy all", "Macintosh x86")
+    package("mac", "app-zip app-dmg", "mac renpy all", "Macintosh x86_64")
     package("win", "zip", "windows renpy all", "Windows x86")
+    package("steam", "zip", "windows linux mac renpy all", "Windows, Mac, Linux for Steam")
     package("android", "directory", "android renpy all", hidden=True, update=False, dlc=True)
     package("ios", "directory", "ios renpy all", hidden=True, update=False, dlc=True)
 
     # Data that we expect the user to set.
+
+    # A base name that's used to create the other names.
+    name = None
 
     # The name of directories in the archives.
     directory_name = ""
@@ -347,11 +369,40 @@ init -1500 python in build:
     # both discrete and integrated GPUs?
     allow_integrated_gpu = True
 
+    # The itch.io project name.
+    itch_project = None
+
+    # Should we include the old Ren'Py themes?
+    include_old_themes = True
+
+    # The identity used for codesigning and dmg building.
+    mac_identity = None
+
+    # The command used for mac codesigning.
+    mac_codesign_command = [ "/usr/bin/codesign", "-s", "{identity}", "-f", "--deep", "--no-strict", "{app}" ]
+
+    # The command used to build a dmg.
+    mac_create_dmg_command = [ "/usr/bin/hdiutil", "create", "-format", "UDBZ", "-volname", "{volname}", "-sourcedir", "{sourcedir}", "-ov", "{dmg}" ]
+
+    # The command used to sign a dmg.
+    mac_codesign_dmg_command = [ "/usr/bin/codesign", "-s", "{identity}", "-f", "{dmg}" ]
+
+
     # This function is called by the json_dump command to dump the build data
     # into the json file.
     def dump():
 
         rv = { }
+
+        if not include_old_themes:
+            exclude_old_themes = [
+                ( "renpy/common/_compat/**", None),
+                ( "renpy/common/_roundrect/**", None),
+                ( "renpy/common/_outline/**", None),
+                ( "renpy/common/_theme**", None),
+            ]
+        else:
+            exclude_old_themes = [ ]
 
         rv["directory_name"] = directory_name
         rv["executable_name"] = executable_name
@@ -361,7 +412,7 @@ init -1500 python in build:
         rv["archives"] = archives
         rv["documentation_patterns"] = documentation_patterns
         rv["base_patterns"] = early_base_patterns + base_patterns + late_base_patterns
-        rv["renpy_patterns"] = renpy_patterns
+        rv["renpy_patterns"] = exclude_old_themes + renpy_patterns
         rv["xbit_patterns"] = xbit_patterns
         rv["version"] = version or directory_name
         rv["display_name"] = display_name or executable_name
@@ -371,7 +422,6 @@ init -1500 python in build:
         rv["allow_integrated_gpu"] = allow_integrated_gpu
 
         rv["renpy"] = renpy
-
 
         rv["destination"] = destination.format(
             directory_name=directory_name,
@@ -386,4 +436,31 @@ init -1500 python in build:
         if google_play_salt:
             rv["google_play_salt"] = google_play_salt
 
+        if itch_project:
+            rv["itch_project"] = itch_project
+
+        if mac_identity:
+            rv["mac_identity"] = mac_identity
+            rv["mac_codesign_command"] = mac_codesign_command
+            rv["mac_create_dmg_command"] = mac_create_dmg_command
+            rv["mac_codesign_dmg_command"] = mac_codesign_dmg_command
+
         return rv
+
+init 1500 python in build:
+
+    if version is None:
+        version = config.version
+
+    if name is not None:
+
+        if not directory_name:
+
+            directory_name = name
+
+            if config.version:
+                directory_name += "-" + version
+
+        if not executable_name:
+
+            executable_name = name

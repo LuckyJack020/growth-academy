@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -61,6 +61,7 @@ _widget_properties = { }
 # The text rectangle, or None to use the automatic code.
 _text_rect = None
 
+
 class _Config(object):
 
     def __getstate__(self):
@@ -69,7 +70,7 @@ class _Config(object):
     def __setstate__(self, data):
         return
 
-    def register(self, name, default, cat=None, help=None): #@ReservedAssignment
+    def register(self, name, default, cat=None, help=None):  # @ReservedAssignment
         setattr(self, name, default)
         _config.help.append((cat, name, help))
 
@@ -88,7 +89,7 @@ class _Config(object):
             raise Exception('config.%s is not a known configuration variable.' % (name))
 
         if name == "script_version":
-            renpy.store._set_script_version(value) # E1101 @UndefinedVariable
+            renpy.store._set_script_version(value)  # E1101 @UndefinedVariable
 
         cvars[name] = value
 
@@ -104,7 +105,7 @@ style = None
 config = _Config()
 library = config
 
-eval = renpy.python.py_eval #@ReservedAssignment
+eval = renpy.python.py_eval  # @ReservedAssignment
 
 # Displayables.
 Bar = renpy.display.behavior.Bar
@@ -112,9 +113,12 @@ Button = renpy.display.behavior.Button
 Input = renpy.display.behavior.Input
 
 ImageReference = renpy.display.image.ImageReference
+DynamicImage = renpy.display.image.DynamicImage
+
 Image = renpy.display.im.image
 
 Frame = renpy.display.imagelike.Frame
+Borders = renpy.display.imagelike.Borders
 Solid = renpy.display.imagelike.Solid
 FileCurrentScreenshot = renpy.display.imagelike.FileCurrentScreenshot
 
@@ -125,7 +129,7 @@ Flatten = renpy.display.layout.Flatten
 
 Null = renpy.display.layout.Null
 Window = renpy.display.layout.Window
-Viewport = renpy.display.layout.Viewport
+Viewport = renpy.display.viewport.Viewport
 DynamicDisplayable = renpy.display.layout.DynamicDisplayable
 ConditionSwitch = renpy.display.layout.ConditionSwitch
 ShowingSwitch = renpy.display.layout.ShowingSwitch
@@ -165,6 +169,7 @@ Dissolve = renpy.curry.curry(renpy.display.transition.Dissolve)
 ImageDissolve = renpy.curry.curry(renpy.display.transition.ImageDissolve)
 AlphaDissolve = renpy.curry.curry(renpy.display.transition.AlphaDissolve)
 CropMove = renpy.curry.curry(renpy.display.transition.CropMove)
+PushMove = renpy.curry.curry(renpy.display.transition.PushMove)
 Pixellate = renpy.curry.curry(renpy.display.transition.Pixellate)
 
 
@@ -192,7 +197,7 @@ BarValue = renpy.ui.BarValue
 # NOTE: When exporting something from here, decide if we need to add it to
 # renpy.pyanalysis.pure_functions.
 
-Style = renpy.style.Style # @UndefinedVariable
+Style = renpy.style.Style  # @UndefinedVariable
 
 absolute = renpy.display.core.absolute
 
@@ -251,7 +256,7 @@ A layout that lays out its members from top to bottom.
 Grid = _layout_class(renpy.display.layout.Grid, """
 :doc: disp_grid
 
-Lays out displayables in a a grid. The first two positional arguments
+Lays out displayables in a grid. The first two positional arguments
 are the number of columns and rows in the grid. This must be followed
 by `columns * rows` positional arguments giving the displayables that
 fill the grid.
@@ -274,6 +279,7 @@ def AlphaBlend(control, old, new, alpha=False):
 
     return renpy.display.transition.AlphaDissolve(control, 0.0, old_widget=old, new_widget=new, alpha=alpha)
 
+
 def At(d, *args):
     """
     :doc: disp_at
@@ -294,16 +300,21 @@ def At(d, *args):
     rv = renpy.easy.displayable(d)
 
     for i in args:
-        rv = i(rv)
+
+        if isinstance(i, renpy.display.motion.Transform):
+            rv = i(child=rv)
+        else:
+            rv = i(rv)
 
     return rv
 
 
-# The color function. (Moved, since text needs it, too.)
-color = renpy.easy.color
+# The color class/function.
+Color = renpy.color.Color
+color = renpy.color.Color
 
 # Conveniently get rid of all the packages we had imported before.
-import renpy.exports as renpy #@Reimport
+import renpy.exports as renpy  # @Reimport
 
 # The default menu functions.
 menu = renpy.display_menu
@@ -357,12 +368,15 @@ adv = ADVCharacter(None,
 # predict_say and who are defined in 00library.rpy, but we add default
 # versions here in case there is a problem with initialization. (And
 # for pickling purposes.)
+
+
 def predict_say(who, what):
     who = Character(who, kind=adv)
     try:
         who.predict(what)
     except:
         pass
+
 
 def say(who, what, interact=True):
     who = Character(who, kind=adv)
@@ -382,6 +396,9 @@ _predict_set = set()
 # keyword arguments can be
 _predict_screen = dict()
 
+# Should the default screens be shown?
+_overlay_screens = None
+
 # If we're in a replay, the label of the start of the replay.
 _in_replay = None
 
@@ -396,6 +413,7 @@ main_menu = False
 import sys
 import os
 
+
 def public_api():
     ui
     im
@@ -406,4 +424,3 @@ def public_api():
     sys
 
 del public_api
-

@@ -1,4 +1,4 @@
-# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -23,6 +23,7 @@
 
 import pygame_sdl2 as pygame
 import renpy.display
+
 
 class Focus(object):
 
@@ -69,7 +70,18 @@ grab = None
 # The default focus for the current screen.
 default_focus = None
 
+# The type of input that caused the focus to change last. One of
+# "keyboard" (for keyboard-like focus devices) or "mouse" (for mouse-like)
+# focus devices.)
+focus_type = "mouse"
+
+# The same, but for the most recent input that might potentially cause
+# the focus to change.
+pending_focus_type = "mouse"
+
 # Sets the currently focused widget.
+
+
 def set_focused(widget, arg, screen):
     global argument
     argument = arg
@@ -82,10 +94,14 @@ def set_focused(widget, arg, screen):
     renpy.display.tts.displayable(widget)
 
 # Gets the currently focused widget.
+
+
 def get_focused():
     return renpy.game.context().scene_lists.focused
 
 # Get the mouse cursor for the focused widget.
+
+
 def get_mouse():
     focused = get_focused()
     if focused is None:
@@ -93,11 +109,13 @@ def get_mouse():
     else:
         return focused.style.mouse
 
+
 def set_grab(widget):
     global grab
     grab = widget
 
     renpy.exports.cancel_gesture()
+
 
 def get_grab():
     return grab
@@ -106,6 +124,8 @@ def get_grab():
 focus_list = [ ]
 
 # This takes in a focus list from the rendering system.
+
+
 def take_focuses():
     global focus_list
     focus_list = [ ]
@@ -121,6 +141,7 @@ def take_focuses():
 
     if (default_focus is not None) and (get_focused() is None):
         change_focus(default_focus, True)
+
 
 def focus_coordinates():
     """
@@ -143,12 +164,12 @@ def focus_coordinates():
 # A map from id(displayable) to the displayable that replaces it.
 replaced_by = { }
 
+
 def before_interact(roots):
     """
     Called before each interaction to choose the focused and grabbed
     displayables.
     """
-
 
     global new_grab
     global grab
@@ -166,13 +187,25 @@ def before_interact(roots):
 
     namecount = { }
 
-    for f, n, screen in fwn:
+    fwn2 = [ ]
+
+    for fwn_tuple in fwn:
+
+        f, n, screen = fwn_tuple
+
         serial = namecount.get(n, 0)
         namecount[n] = serial + 1
+
+        if f is None:
+            continue
 
         f.full_focus_name = n, serial
 
         replaced_by[id(f)] = f
+
+        fwn2.append(fwn_tuple)
+
+    fwn = fwn2
 
     # We assume id(None) is not in replaced_by.
     replaced_by.pop(None, None)
@@ -230,6 +263,8 @@ def before_interact(roots):
 
 # This changes the focus to be the widget contained inside the new
 # focus object.
+
+
 def change_focus(newfocus, default=False):
     rv = None
 
@@ -246,6 +281,9 @@ def change_focus(newfocus, default=False):
     # Nothing to do.
     if current is widget and (newfocus is None or newfocus.arg == argument):
         return rv
+
+    global focus_type
+    focus_type = pending_focus_type
 
     if current is not None:
         try:
@@ -270,7 +308,17 @@ def change_focus(newfocus, default=False):
 
     return rv
 
+
+def clear_focus():
+    """
+    Clears the focus when the window loses mouse focus.
+    """
+
+    change_focus(None)
+
 # This handles mouse events, to see if they change the focus.
+
+
 def mouse_handler(ev, x, y, default=False):
     """
     Handle mouse events, to see if they change the focus.
@@ -279,9 +327,13 @@ def mouse_handler(ev, x, y, default=False):
         If ev is not None, this function checks to see if it is a mouse event.
     """
 
+    global pending_focus_type
+
     if ev is not None:
         if ev.type not in (pygame.MOUSEMOTION, pygame.MOUSEBUTTONUP, pygame.MOUSEBUTTONDOWN):
             return
+        else:
+            pending_focus_type = "mouse"
 
     new_focus = renpy.display.render.focus_at_point(x, y)
 
@@ -302,7 +354,7 @@ def focus_extreme(xmul, ymul, wmul, hmul):
 
     for f in focus_list:
 
-        if not f.x:
+        if f.x is None:
             continue
 
         score = (f.x * xmul +
@@ -385,6 +437,9 @@ def focus_nearest(from_x0, from_y0, from_x1, from_y1,
                   condition,
                   xmul, ymul, wmul, hmul):
 
+    global pending_focus_type
+    pending_focus_type = "keyboard"
+
     if not focus_list:
         return
 
@@ -459,6 +514,9 @@ def focus_nearest(from_x0, from_y0, from_x1, from_y1,
 
 
 def focus_ordered(delta):
+
+    global pending_focus_type
+    pending_focus_type = "keyboard"
 
     placeless = None
 

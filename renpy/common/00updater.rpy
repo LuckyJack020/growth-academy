@@ -1,4 +1,4 @@
-﻿# Copyright 2004-2015 Tom Rothamel <pytom@bishoujo.us>
+﻿# Copyright 2004-2016 Tom Rothamel <pytom@bishoujo.us>
 #
 # Permission is hereby granted, free of charge, to any person
 # obtaining a copy of this software and associated documentation files
@@ -123,7 +123,8 @@ init -1500 python in updater:
     def zsync_path(command):
         """
         Returns the full platform-specific path to command, which is one
-        of zsync or zsyncmake.
+        of zsync or zsyncmake. If the file doesn't exists, returns the
+        command so the system-wide copy is used.
         """
 
         if renpy.windows:
@@ -131,8 +132,14 @@ init -1500 python in updater:
         else:
             suffix = ""
 
-        return os.path.join(os.path.dirname(sys.executable), command + suffix)
+        executable = renpy.fsdecode(sys.executable)
 
+        rv = os.path.join(os.path.dirname(executable), command + suffix)
+
+        if os.path.exists(rv):
+            return rv
+
+        return command + suffix
 
     class UpdateError(Exception):
         """
@@ -216,6 +223,10 @@ init -1500 python in updater:
             """
 
             threading.Thread.__init__(self)
+
+            import os
+            if "RENPY_FORCE_UPDATE" in os.environ:
+                force = True
 
             # The main state.
             self.state = Updater.CHECKING
@@ -1123,7 +1134,7 @@ init -1500 python in updater:
                 self.unlink(i)
 
                 if os.path.exists(i):
-                    self.log.write("could not delete file %s" % path.encode("utf-8"))
+                    self.log.write("could not delete file %s" % i.encode("utf-8"))
                     with open(DEFERRED_UPDATE_FILE, "wb") as f:
                         f.write("D " + i.encode("utf-8") + "\n")
 
@@ -1349,13 +1360,13 @@ init -1500 python in updater:
 
             state = u.state
 
-            print "State:", state
+            print("State:", state)
 
             if u.progress:
-                print "Progress: {:.1f}%".format(u.progress * 100.0)
+                print("Progress: {:.1%}".format(u.progress))
 
             if u.message:
-                print "Message:", u.message
+                print("Message:", u.message)
 
             if state == u.ERROR:
                 break
@@ -1382,56 +1393,52 @@ init -1500:
         frame:
             style_group ""
 
-            xalign .5
-            ypos 100
-            xpadding 20
-            ypadding 20
-
-            xmaximum 400
-            xfill True
-
-            has vbox
+            has side "t c b":
+                spacing gui._scale(10)
 
             label _("Updater")
 
-            null height 10
+            fixed:
 
-            if u.state == u.ERROR:
-                text _("An error has occured:")
-            elif u.state == u.CHECKING:
-                text _("Checking for updates.")
-            elif u.state == u.UPDATE_NOT_AVAILABLE:
-                text _("This program is up to date.")
-            elif u.state == u.UPDATE_AVAILABLE:
-                text _("[u.version] is available. Do you want to install it?")
-            elif u.state == u.PREPARING:
-                text _("Preparing to download the updates.")
-            elif u.state == u.DOWNLOADING:
-                text _("Downloading the updates.")
-            elif u.state == u.UNPACKING:
-                text _("Unpacking the updates.")
-            elif u.state == u.FINISHING:
-                text _("Finishing up.")
-            elif u.state == u.DONE:
-                text _("The updates have been installed. The program will restart.")
-            elif u.state == u.DONE_NO_RESTART:
-                text _("The updates have been installed.")
-            elif u.state == u.CANCELLED:
-                text _("The updates were cancelled.")
+                vbox:
 
-            if u.message is not None:
-                null height 10
-                text "[u.message!q]"
+                    if u.state == u.ERROR:
+                        text _("An error has occured:")
+                    elif u.state == u.CHECKING:
+                        text _("Checking for updates.")
+                    elif u.state == u.UPDATE_NOT_AVAILABLE:
+                        text _("This program is up to date.")
+                    elif u.state == u.UPDATE_AVAILABLE:
+                        text _("[u.version] is available. Do you want to install it?")
+                    elif u.state == u.PREPARING:
+                        text _("Preparing to download the updates.")
+                    elif u.state == u.DOWNLOADING:
+                        text _("Downloading the updates.")
+                    elif u.state == u.UNPACKING:
+                        text _("Unpacking the updates.")
+                    elif u.state == u.FINISHING:
+                        text _("Finishing up.")
+                    elif u.state == u.DONE:
+                        text _("The updates have been installed. The program will restart.")
+                    elif u.state == u.DONE_NO_RESTART:
+                        text _("The updates have been installed.")
+                    elif u.state == u.CANCELLED:
+                        text _("The updates were cancelled.")
 
-            if u.progress is not None:
-                null height 10
-                bar value u.progress range 1.0 style "_bar"
+                    if u.message is not None:
+                        null height gui._scale(10)
+                        text "[u.message!q]"
 
-            if u.can_proceed or u.can_cancel:
-                null height 10
+                    if u.progress is not None:
+                        null height gui._scale(10)
+                        bar value u.progress range 1.0 style "_bar"
 
-            if u.can_proceed:
-                textbutton _("Proceed") action u.proceed xfill True
+            hbox:
 
-            if u.can_cancel:
-                textbutton _("Cancel") action u.cancel xfill True
+                spacing gui._scale(25)
+
+                if u.can_proceed:
+                    textbutton _("Proceed") action u.proceed
+
+                if u.can_cancel:
+                    textbutton _("Cancel") action u.cancel
