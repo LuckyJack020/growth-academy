@@ -158,6 +158,12 @@
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
+        
+    def setScenecount(girl, val):
+        if not girl in girllist:
+            renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
+            return
+        scenecounter[girl] += val
     
     def getAffection(girl):
         if not girl in girllist and not girl == "RM":
