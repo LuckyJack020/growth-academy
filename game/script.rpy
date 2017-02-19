@@ -187,10 +187,25 @@
         return flag in flags
         
     def getSize():
-        if gametime > 10:
-            return 2
+        #if gametime > 10:
+        #    return 2
+        #else:
+        return 1
+        
+    def setSkill(s, val):
+        if s not in skills.keys():
+            renpy.log("Unknown skill ID: %d" % s)
+            return -1
         else:
-            return 1
+            skills[s] += val
+            return skills[s]
+            
+    def getSkill(s):
+        if s not in skills.keys():
+            renpy.log("Unknown skill ID: %d" % s)
+            return -1
+        else:
+            return skills[s]
             
     def pickPreferredGirl():
         sc = scenecounter.copy()
@@ -215,6 +230,7 @@ label start:
     python:
         #Global Variables
         affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'BBW': 0, 'PRG': 0, 'RM': 0}
+        skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         scenecounter = {'BE': 5, 'GTS': 5, 'AE': 5, 'FMG': 5, 'BBW': 5, 'PRG': 5}
         globalsize = 1
         flags = []
@@ -247,6 +263,9 @@ screen daymenu:
         xalign 0
         yalign 0
         text ("Debug info:")
+        text ("Prefgirl: %s" % prefgirl)
+        text ("Preferred scenes exist? %s" % prefscene)
+        text ("Scene limit: %d" % scenecountmax)
         text ("Girl/Aff/Scenes")
         text ("BE %(aff)d %(scene)d" % {"aff": affection["BE"], "scene": scenecounter["BE"]})
         text ("GTS %(aff)d %(scene)d" % {"aff": affection["GTS"], "scene": scenecounter["GTS"]})
@@ -254,9 +273,9 @@ screen daymenu:
         text ("FMG %(aff)d %(scene)d" % {"aff": affection["FMG"], "scene": scenecounter["FMG"]})
         text ("BBW %(aff)d %(scene)d" % {"aff": affection["BBW"], "scene": scenecounter["BBW"]})
         text ("PRG %(aff)d %(scene)d" % {"aff": affection["PRG"], "scene": scenecounter["PRG"]})
-        text ("Prefgirl: %s" % prefgirl)
-        text ("Scene limit: %d" % scenecountmax)
-        text ("Preferred scenes exist? %s" % prefscene)
+        text ("Athletics: %d" % skills["Athletics"])
+        text ("Art: %d" % skills["Art"])
+        text ("Academics: %d" % skills["Academics"])
     
     vbox:
         xalign 0.5
@@ -267,10 +286,10 @@ screen daymenu:
         textbutton eventtext[1] action If(eventtext[1] != "", [SetVariable("activeevent", eventchoices[1]), Jump("startevent")])
         textbutton eventtext[2] action If(eventtext[2] != "", [SetVariable("activeevent", eventchoices[2]), Jump("startevent")])
     
-    #fixed:
-        #textbutton "Train A" xalign 0.3 yalign 0.7 action If(freeday, Jump("train"))
-        #textbutton "Train B" xalign 0.5 yalign 0.7 action If(freeday, Jump("train"))
-        #textbutton "Train C" xalign 0.7 yalign 0.7 action If(freeday, Jump("train"))
+    fixed:
+        textbutton "Train Athletics" xalign 0.1 yalign 0.7 action If(freeday, [SetVariable("activeevent", "Athletics"), Jump("train")])
+        textbutton "Train Art" xalign 0.5 yalign 0.7 action If(freeday, [SetVariable("activeevent", "Art"), Jump("train")])
+        textbutton "Train Academics" xalign 0.9 yalign 0.7 action If(freeday, [SetVariable("activeevent", "Academics"), Jump("train")])
 
 label daymenu:
     $globalsize = getSize()
@@ -366,3 +385,58 @@ label startevent:
         clearedevents.append(activeevent)
         
     $renpy.jump(activeevent)
+    
+label train:
+    if activeevent == "Athletics":
+        jump trainathletics
+    elif activeevent == "Art":
+        jump trainart
+    elif activeevent == "Academics":
+        jump trainacademics
+    else:
+        "Error: Unknown skill selected. ID selected was [activeevent]. Please report to your local coder."
+        jump daymenu
+
+label trainathletics:
+    scene Track with fade
+    $tmp = renpy.random.randint(1, 2)
+    if tmp == 1:
+        "I ran around for a while."
+    elif tmp == 2:
+        "I lifted weights for a while."
+    if getSkill("Athletics") < 5:
+        "I'm pretty out of shape, so it was exhausting, but it was a good workout."
+    else:
+        "It wasn't too tough, but it was a good workout."
+    $tmp = setSkill("Athletics", 1)
+    "(Your athletics skill has increased to [tmp])"
+    jump daymenu
+    
+label trainart:
+    scene Library with fade
+    $tmp = renpy.random.randint(1, 2)
+    if tmp == 1:
+        "I spent some time doodling."
+    elif tmp == 2:
+        "I spent some time playing guitar."
+    if getSkill("Art") < 5:
+        "It didn't really turn out great, but I think I'm learning from my mistakes. It was pretty good practice."
+    else:
+        "It turned out alright. It was pretty good practice."
+    $tmp = setSkill("Art", 1)
+    "(Your art skill has increased to [tmp])"
+    jump daymenu
+
+label trainacademics:
+    scene Library with fade
+    $tmp = renpy.random.randint(1, 2)
+    if tmp == 1:
+        "I studied the next chapter in my math book."
+    elif tmp == 2:
+        "I studied the next chapter in my history book."
+    if getSkill("Academics") < 5:
+        "I'm having trouble remembering everything, but I did learn a few things. I hope I get a good score on the next test."
+    else:
+        "I feel like I'm starting to master this material. I hope I get a good score on the next test."
+    $tmp = setSkill("Academics", 1)
+    "(Your academics skill has increased to [tmp])"

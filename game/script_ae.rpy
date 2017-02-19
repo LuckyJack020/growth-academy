@@ -18,7 +18,7 @@ init python:
     eventlibrary['AE005'] = {"name": "AE005", "girls": ["AE"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "AE", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
     eventlibrary['AE006'] = {"name": "AE006", "girls": ["AE"], "conditions": [], "priority": 0}
     eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"]], "priority": 0}
-    eventlibrary['AE100'] = {"name": "AE100", "girls": ["AE", "FMG"], "conditions": [], "priority": 0}
+    eventlibrary['AE100'] = {"name": "AE100", "girls": ["AE", "FMG"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, "7"]], "priority": 0}
     
 label AE001:
     scene Library with fade

@@ -639,7 +639,7 @@ label BBW007:
     BBW "I know the sons and daughters of many business owners and CEOs. We always turn up at the same hotels in Monaco or ski lodges in Switzerland. You don’t think the owner of a factory that makes dresses or suits has to buy off the rack, do you?"
     MC "I guess not. So if I needed to buy a new laptop could you get me one at a discount?"
     show BBW neutral
-    BBW "I suppose I could. Hitomi and I – that’s Hitomi Ogawa, daughter of the president of Ogawa Electronics – aren’t on the closest of terms, but she could get me one for... 90,000 yen. Plus 10% commission for myself would be 99,000."
+    BBW "I suppose I could. Hitomi and I – that’s Hitomi Ogawa, daughter of the president of Ogawa Electronics – aren’t on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
     MC "An Ogawa laptop for under a hundred thousand yen? That’s pretty steep for some old model being unloaded-"
     BBW "That’s for an Ogawa D2300. 22” monitor, if I remember correctly."
     MC "... For 99,000?! Are you serious?"

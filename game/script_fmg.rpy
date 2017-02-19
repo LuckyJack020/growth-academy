@@ -244,7 +244,12 @@ label FMG004:
     FMG "Alright ready..."
     FMG "GO!"
     hide FMG with dissolve
-    #if Athletics < 5
+    if getSkill("Athletics") < 5:
+        jump FMG004_testfail
+    else:
+        jump FMG004_testpass
+
+label FMG004_testfail:
     $setAffection("FMG", -1)
     "Ok, akira’s got the lead, but if I can keep a good pace I can do this!"
     "I can do this!"
@@ -269,7 +274,8 @@ label FMG004:
     "\n{i}Dear Kei, WORK ON YOUR GET IN FRICKING SHAPE!\n~Akira{/i}"
     "...Yeah I get the feeling Akira is not going to let me live this down..."
     jump daymenu
-    #if Athletics >= 5
+
+label FMG004_testpass:
     $setAffection("FMG", 1)
     "Despite Akira already in the lead, I managed to keep a good pace."
     "I started to feel a bit winded half way but I pushed myself to go farther."
