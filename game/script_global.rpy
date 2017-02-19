@@ -12,6 +12,13 @@ image Campus Center = "Graphics/CampusCenter.jpg"
 image Auditorium = "Graphics/Auditorium.jpg"
 image School Exterior = "Graphics/SchoolExterior.jpg"
 image F1 Hallway = "Graphics/SchoolHallway1.png"
+image Library = "Graphics/Library.png"
+image Office = "Graphics/Office.png"
+image Cafeteria = "Graphics/Cafeteria.png"
+image Cooking Classroom = "Graphics/NYI.png"
+image Gym = "Graphics/NYI.png"
+image Track = "Graphics/Track.png"
+image Roof = "Graphics/Roof.png"
 image splash = "Graphics/SplashScreen.png"
 
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait

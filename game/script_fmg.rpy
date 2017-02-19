@@ -15,6 +15,7 @@ init python:
     eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
     
 label FMG001:
+    scene Gym with fade
     "After Thinking it over, I decided to check out the Athletics Area so when I have P.E. I would know where it is."
     "Compared to the rest of the academy, the building itself was not only taller, But almost as wide as the rest of the school."
     "From how tall the windows were made the the building looked least two or three stories tall."
@@ -75,6 +76,7 @@ label FMG001:
     jump daymenu
     
 label FMG002:
+    scene Gym with fade
     "With class over I decided to take a shortcut through the Athletics Area."
     "I’d expected to see Akira coming out of the building, what I didn’t expect to see was her looking very tired."
     "I figured she must need some cheering up so went to go talk to her."
@@ -110,6 +112,7 @@ label FMG002:
     jump daymenu
     
 label FMG003:
+    scene Hallway with fade
     "After finally finished with my morning class, I went to get a quick snack from the vending machines before had to repeat the process with my next class."
     "At least for the most part it was business as usual..."
     FMG "HEY KEISUKE!!!"
@@ -193,6 +196,7 @@ label FMG003_c3:
     jump daymenu
     
 label FMG004:
+    scene Hallway with fade
     "Another day, another class over...and for once I have nothing to do..."
     "...That is until a paper ball (that Akira throw before running out of class) hit me on the head."
     MC "Ow."
@@ -200,6 +204,7 @@ label FMG004:
     "\n{i}The time has come! Meet me at the school’s track in 5\n~Akira{/i}"
     "I guessing she must be excited, as she didn't even put a period at the end of her note."
     "Well I promised her i’d join her so might as well see what she’s up to."
+    scene Track with fade
     "By the time I got there, I'd expected too see Akira be the here already, all the while doing stretches."
     "As I got closer she stopped doing her stretches and walked up to me."
     show FMG happy with dissolve
@@ -230,7 +235,7 @@ label FMG004:
     MC "Ever thought of using a liquid that has flavor, like milk or Berry tea?"
     "She just looked at me with no expression, but I swear I could hear her screaming internally."
     FMG "..."
-    extend "Oh well there's always next time."
+    extend " Oh well there's always next time."
     show FMG happy
     FMG "Now that the hard part is over, now we get to the actual exercise! Don't worry, I'm not asking for you to run a mile, just a quarter of one!"
     FMG "Today we're going to just make one lap around this track."
@@ -239,7 +244,12 @@ label FMG004:
     FMG "Alright ready..."
     FMG "GO!"
     hide FMG with dissolve
-    #if Athletics < 5
+    if getSkill("Athletics") < 5:
+        jump FMG004_testfail
+    else:
+        jump FMG004_testpass
+
+label FMG004_testfail:
     $setAffection("FMG", -1)
     "Ok, akira’s got the lead, but if I can keep a good pace I can do this!"
     "I can do this!"
@@ -264,7 +274,8 @@ label FMG004:
     "\n{i}Dear Kei, WORK ON YOUR GET IN FRICKING SHAPE!\n~Akira{/i}"
     "...Yeah I get the feeling Akira is not going to let me live this down..."
     jump daymenu
-    #if Athletics >= 5
+
+label FMG004_testpass:
     $setAffection("FMG", 1)
     "Despite Akira already in the lead, I managed to keep a good pace."
     "I started to feel a bit winded half way but I pushed myself to go farther."
@@ -300,6 +311,7 @@ label FMG004:
     jump daymenu
 
 label FMG005:
+    scene Hallway with fade
     show FMG sad
     FMG "...Hey..."
     "She looked slightly annoyed and she had her left hand on her right upper arm...but I could tell there was some moisture still under her eyes."

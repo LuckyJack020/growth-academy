@@ -15,8 +15,10 @@ init python:
     eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
     
 label GTS001:
+    scene black with fade
     "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn’t sure how to properly process what we were told."
     "What Daichi had told me earlier was starting to resonate more and I began to wonder if perhaps others knew about the purpose of this school before they were enrolled into it."
+    scene School Planter with fade
     "I hadn’t realized how long I was lost in my own thoughts until I finally noticed my surroundings; I was at the school’s garden."
     "It was nice here, the breeze along with the sounds of leaves and grass moved by the flow of wind had a sort of calming factor to them."
     "I stood there for a few moments longer until a figure walked beside me, catching me by surprise."
@@ -82,6 +84,7 @@ label GTS001_after:
     jump daymenu
 
 label GTS002:
+    scene School Planter with fade
     "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated to degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn’t find myself staring up at the sky, it was simply something I couldn’t resist as I step into the school’s garden once more."
     "The breeze had become cooler but still flowed with a sense of gentleness to it. Making some pink colored flowers dance before me. In the distance, I heard a faint voice and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
     MC "Yo Naomi!"
@@ -144,6 +147,7 @@ label GTS002_after:
     jump daymenu
 
 label GTS003:
+    scene Cafeteria with fade
     "The morning found itself to be quite the chaotic time as many students rushed down the corridors to make it to the Cafeteria to beat the morning rush. This didn’t really pressure me to speed up my stride however."
     "When I finally arrived to the cafeteria I saw that it was surprisingly calmer than what was transpiring throughout the hallways. I got in line behind a few other students who were getting their breakfast, which allowed me time to properly examine what was on the menu."
     "I will admit I was rather surprised by what I saw. Instead of finding precooked items like eggs or fish, I saw the cook personally making each item that was requested by the students. By the time it was my turn in the line I was slightly uncertain of what I wanted."
@@ -217,12 +221,13 @@ label GTS003_after:
     jump daymenu
     
 label GTS004:
+    scene Library with fade
     "The sun shone highly in the sky as the middle of the day came by. It’s rays seeping through the many windows that surrounded the vast two floor room. I’ll be honest, I was a little surprised to see so many people using the library found on campus."
     "To its credit, both floors seemed absolutely packed with shelves upon shelves of books. Which in turn would make one aisle look like the splitting of the red sea but with books as opposed to water. This didn’t mean that every part of the library was stuck in the past as there was a series of smaller rooms that have lines of computers for more convenient research and study."
     "Something else that was rather clear was just the amount of space found between each shelf as it seemed capable of easily fitting six people across the width of the aisle. The reason for this was easy to put together, but it did leave me with the thought of just how large some of the students might become if this was the norm for the school."
     "As I walked among the shelves in search of the right book needed for my Contemporary Society course, I spotted a familiar face at a nearby table."
     show GTS neutral with dissolve
-    extend "Naomi was seated with her focus entirely on her book as she seemed somewhat perplexed by what she was reading. Unable to resist, I strolled over to Naomi and suddenly spoke up."
+    extend " Naomi was seated with her focus entirely on her book as she seemed somewhat perplexed by what she was reading. Unable to resist, I strolled over to Naomi and suddenly spoke up."
     MC "Hey there!"
     "This caused Naomi to jump and cup her chest as she was yanked out of her studying. She looked up at me and sighed slightly in relief, though her expression showed she hadn’t taken joke too well."
     GTS "Please don’t do that."
@@ -261,6 +266,7 @@ label GTS004:
     jump daymenu
 
 label GTS005:
+    scene Hallway with fade
     "I wandered about the campus for quite some time after visiting the nurse. The news of my particular condition leaving me with a feeling of uncertainty. As I walked, my hand would occasionally touch the tip of my bangs as I wondered just how quickly they might change."
     "As I stepped pass the double doors, my eyes shut from the blast of sunlight that I was exposed to. After a few seconds my eyes would readjust and I’d see Naomi’s form kneeling in front of a patch of flowers. Calmly walking over, my footsteps on the path alerting her to my presence as she looked back at me and gave a soft wave."
     show GTS neutral with dissolve
