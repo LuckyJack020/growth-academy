@@ -440,3 +440,4 @@ label trainacademics:
         "I feel like I'm starting to master this material. I hope I get a good score on the next test."
     $tmp = setSkill("Academics", 1)
     "(Your academics skill has increased to [tmp])"
+    jump daymenu
