@@ -9,6 +9,7 @@ image PRG aroused = DynamicImage("Graphics/PRG-[globalsize]-aroused.png")
 
 init python:
     eventlibrary['PRG001'] = {"name": "PRG001", "girls": ["PRG"], "conditions": [], "priority": 0}
+    eventlibrary['PRG005'] = {"name": "PRG005", "girls": ["PRG"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     
 label PRG001:
     MC "Geez, so many first day things to let sink in. First the growing, then my roommate's chatter, and school work to put a nice little cherry on top of things."
@@ -73,4 +74,8 @@ label PRG001_after:
     "It was as if my words meant the world to her, as the mop fell out of her hands as her smile grew wider. All I did was suggest something!"
     PRG "I think...I’ll do that. I’ll make the best treats...on school grounds, and then maybe people will..."
     "She finally seemed happy with that final statement, like it was her one and only hope. With that, she picked up the cleaning supplies and walked off..."
+    jump daymenu
+    
+label PRG005:
+    MC "This scene hasn't been finished, but needs to exist, so here's a placeholder."
     jump daymenu

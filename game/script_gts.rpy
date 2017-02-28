@@ -13,7 +13,7 @@ init python:
     eventlibrary['GTS002'] = {"name": "GTS002", "girls": ["GTS"], "conditions": [[ConditionEnum.EVENT, "GTS001"]], "priority": 0}
     eventlibrary['GTS003'] = {"name": "GTS003", "girls": ["GTS"], "conditions": [[ConditionEnum.EVENT, "GTS002"]], "priority": 0}
     eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "conditions": [[ConditionEnum.EVENT, "GTS003"]], "priority": 0}
-    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
+    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     
 label GTS001:
     scene black with fade

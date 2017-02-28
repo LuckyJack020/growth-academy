@@ -14,13 +14,13 @@ image cg BBW001 = "Graphics/BBW-SC-1.png"
 
 init python:
     eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "conditions": [], "priority": 0}
-    eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "conditions": [], "priority": 0}
-    eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "conditions": [], "priority": 0}
+    eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": 0}
+    eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW002"]], "priority": 0}
     eventlibrary['BBW004'] = {"name": "BBW004", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": 0}
-    eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
+    eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     eventlibrary['BBW005A'] = {"name": "BBW005A", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]], "priority": 0}
-    eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "conditions": [], "priority": 0}
-    eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": 0}
+    eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "conditions": [[ConditionEnum.EVENT, "BBW004"]], "priority": 0}
+    eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": 0}
     
 label BBW001:
     scene Cafeteria with fade

@@ -15,8 +15,8 @@ init python:
     eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "conditions": [], "priority": 0}
     eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "conditions": [], "priority": 0}
     eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "conditions": [], "priority": 0}
-    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "BE", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
-    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, "7"]], "priority": 0}
+    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     
 label BE001:
     scene Classroom Day with fade
