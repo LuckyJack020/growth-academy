@@ -13,7 +13,7 @@ init python:
     eventlibrary['GTS002'] = {"name": "GTS002", "girls": ["GTS"], "conditions": [[ConditionEnum.EVENT, "GTS001"]], "priority": 0}
     eventlibrary['GTS003'] = {"name": "GTS003", "girls": ["GTS"], "conditions": [[ConditionEnum.EVENT, "GTS002"]], "priority": 0}
     eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "conditions": [[ConditionEnum.EVENT, "GTS003"]], "priority": 0}
-    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, "2"]], "priority": 15}
+    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     
 label GTS001:
     scene black with fade
@@ -331,4 +331,65 @@ label GTS005_after:
     "I gave her a teasing smirk as she gave back a playful pout but did smile."
     GTS "I don’t rant about flowers... not that much anyway."
     "We both had a small chuckle as we spent a bit more time just talking in the garden."
+    jump daymenu
+
+label GTS006:
+    scene School Front with fade
+    "There was a quite calming mood to the start of the school day as I wandered near the entrance. Something caught my eye though as I saw what appeared to be a small gathering of students near the front gate. Curious, I wandered over, hearing some excited voices and sounds of affection. The reason for this became clear rather quickly, as it seemed a stray Shiba Inu Puppy had wandered onto the campus."
+    Student1 "It's so adorable!"
+    Student2 "D'aww! Look at his little paws!"
+    "The crowd grew every couple of seconds as more people wanted to see what the commotion was all about. As I kept watching, I saw a familiar figure kneel next to the excited puppy and begin petting it. Naomi held a warm smile on her face as her hand massaged the puppy's ears and even rolled him over to rub his belly. This caused the entire crowd to gush over the cuteness and I couldn't resist a smirk."
+    "A little time passed before the dog's owner finally showed up and thanked everyone for finding their dog before taking it back home. As the crowd dispersed I saw Naomi walk by and notice me. Giving me her trademark smile she gave me a small wave of her hand."
+    show GTS neutral with dissolve
+    GTS "Hello Keisuke, did you see the adorable Shiba Inu that had wandered onto campus?"
+    MC "Yeah, I did, well I saw the crowd first and had to see what was up."
+    GTS "It was such a cute puppy, and very well behaved. Didn't you think so?"
+    menu:
+        "Kind of, but I'm mostly into cats myself.":
+            jump GTS006_c1
+        "Yeah, he was extremely cute!":
+            jump GTS006_c2
+
+label GTS006_c1:
+    MC "Kind of, but I'm mostly into cats myself."
+    GTS "I see, well cats are rather adorable too. Though I always enjoyed the companionship of a dog."
+    MC "Yeah, I hear a lot of people are a big fan of how loyal dogs can be. Personally, I enjoy the peace and quiet a cat offers. Plus, they’re so cute!"
+    "Naomi gave a little giggle and covered her mouth at that last bit but nodded her head."
+    GTS "Sorry, I didn’t mean to laugh, it’s just rather cute seeing that."
+    "My cheeks felt a little warm as I rubbed the back of my head."
+    MC "What can I say, little cute fluffy things just get to me."
+    jump GTS006_after
+
+label GTS006_c2:
+    MC "Yeah, he was extremely cute!"
+    GTS "Indeed, he was, did you get a chance to play with him?"
+    MC "Not really, too big of a crowd and I don’t think it’d be wise to make a scene by barging through everyone to pet him."
+    "This made Naomi giggle softly and nod."
+    GTS "That’s very true, but I don’t think many people would hold it against you with such an adorable puppy on the other side."
+    MC "Yeah... man I wish I had a dog like that."
+    GTS "Oh? Never owned a pet before?"
+    MC "Nah, our place was always a bit too small for something like a dog, at least the ones my parents like. Plus, we were all mostly too busy to begin with, so it probably was for the best."
+    jump GTS006_after
+
+label GTS006_after:
+    MC "So what about you? Have you ever had a pet?"
+    GTS "Yes actually, we have a Hokkaido."
+    MC "Whoa seriously!? Aren’t those extremely rare?"
+    GTS "I’ve never heard that, but I suppose they could be. I always thought they were rather common since SoftBank uses one as a mascot."
+    MC "I don’t know, I’ve always heard they’re really rare, even in Japan. Your family must be loaded!"
+    "There was the faintest hint of a blush on Naomi’s face as she broke eye contact and looked to the side for a second before returning her attention."
+    GTS "My father always said he picked that breed because the Hokkaido has the three characteristic he looks for in people, bravery, loyalty, and intelligence. I can say he was right about that description, because she’s probably been one of the most loyal dogs I’ve met."
+    MC "She? So it’s a girl."
+    GTS "Oh yes! Sorry, yes she’s a girl. Her name is Kimiko and she has wonderfully white fur. She’s been with the family for about 5 years now."
+    MC "I see, that’s pretty cool. I bet you can’t wait to see them again."
+    GTS "Yes, I do miss her a bit more than I thought, but I plan on heading home this weekend so I’ll be seeing her soon enough."
+    MC "That’s good to hear. Hmm, maybe I should see if I should go home this weekend too."
+    GTS "Small breaks from school can do the mind a lot of good."
+    MC "Yeah, especially with what we will be dealing with here over time. Yeah, maybe I’ll pay home a visit sometime soon."
+    "I got a small understanding nod from Naomi and a small yet warm smile."
+    GTS "If you’ll pardon me Keisuke. I believe we’re already close to being late for class. It might be best to start heading to our home room."
+    "I quickly looked at my watch and then chuckled."
+    MC "Oh yeah... heh, I kind of lost track of time. Yeah let’s get going. Maybe if I’m lucky I’ll get a chance to see that puppy again someday."
+    GTS "Maybe."
+    "She replied with a small giggle as we began walking to class together."
     jump daymenu

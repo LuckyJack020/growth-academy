@@ -39,8 +39,9 @@ define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 
 init python:
-    eventlibrary['global006'] = {"name": "global006", "girls": [], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "6"]], "priority": 20}
-    eventlibrary['global007'] = {"name": "global007", "girls": [], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, "7"]], "priority": 10}
+    eventlibrary['global006'] = {"name": "global006", "girls": [], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    presetdays["4-7-F"] = ["global006"]
+    presetdays["4-7-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
 label global000:
     stop music fadeout 0.5
@@ -65,7 +66,53 @@ label global000:
     
     menu:
         "Skip intro":
-            jump daymenu
+            menu:
+                "Set favored girl seeding":
+                    menu:
+                        "BE Neutral":
+                            pass
+                        "BE Likes":
+                            $ setScenecount("BE", 2)
+                        "BE Dislikes":
+                            $ setScenecount("BE", -2)
+                    menu:
+                        "AE Neutral":
+                            pass
+                        "AE Likes":
+                            $ setScenecount("AE", 2)
+                        "AE Dislikes":
+                            $ setScenecount("AE", -2)
+                    menu:
+                        "GTS Neutral":
+                            pass
+                        "GTS Likes":
+                            $ setScenecount("GTS", 2)
+                        "GTS Dislikes":
+                            $ setScenecount("GTS", -2)
+                    menu:
+                        "FMG Neutral":
+                            pass
+                        "FMG Likes":
+                            $ setScenecount("FMG", 2)
+                        "FMG Dislikes":
+                            $ setScenecount("FMG", -2)
+                    menu:
+                        "BBW Neutral":
+                            pass
+                        "BBW Likes":
+                            $ setScenecount("BBW", 2)
+                        "BBW Dislikes":
+                            $ setScenecount("BBW", -2)
+                    menu:
+                        "PRG Neutral":
+                            pass
+                        "PRG Likes":
+                            $ setScenecount("PRG", 2)
+                        "PRG Dislikes":
+                            $ setScenecount("PRG", -2)
+                    jump daymenu
+                "Everyone neutral":
+                    jump daymenu
         "Continue":
             "Playing intro."
     
@@ -1012,14 +1059,6 @@ label global006:
     show HR neutral
     HR "You've got hair problems."
     "Oh no!"
-    jump daymenu
-    
-label global007:
-    #temp (duh)
-    "I met roommate outside of the hall."
-    show RM neutral
-    RM "Wow, you don't have a girlfriend yet?"
-    "Rude!"
     jump daymenu
 
 label End:
