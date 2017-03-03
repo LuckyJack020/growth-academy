@@ -12,11 +12,11 @@ image cg BE002 = "Graphics/BE-SC-2.png"
 
 init python:
     eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "conditions": [], "priority": 0}
-    eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "conditions": [], "priority": 0}
-    eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "conditions": [], "priority": 0}
-    eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "conditions": [], "priority": 0}
+    eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE001"]], "priority": 0}
+    eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE002"]], "priority": 0}
+    eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE003"]], "priority": 0}
     eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     
 label BE001:
     scene Classroom Day with fade
@@ -186,7 +186,7 @@ label BE002:
     jump daymenu
     
 label BE003:
-    scene Student Center with fade
+    scene Campus Center with fade
     "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was.I had already drank a whole bottle of water to cool off, but it wasn't enough. Thankfully, there were vending machines scattered around, and I had a few coins burning a hole in my pocket."
     MC "Alright, let's see. What do I want? Soda, juice, eh, water's healthier... but, soda's tastier."
     "After sliding in my change and selecting my drink, I bent over to retrieve my precious bounty. The sharp hiss of carbonation escaped the can as I opened it up and took a refreshing swig."

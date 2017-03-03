@@ -305,7 +305,6 @@ screen daymenu:
             text ("Athletics: %d" % skills["Athletics"])
             text ("Art: %d" % skills["Art"])
             text ("Academics: %d" % skills["Academics"])
-            text (getTimeCode())
     
     vbox:
         xalign 0.5

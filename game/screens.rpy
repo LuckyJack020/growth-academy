@@ -231,7 +231,7 @@ screen navigation():
         textbutton _("Save Game") action ShowMenu("save")
         textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Main Menu") action MainMenu()
-        textbutton _("Website")  action OpenURL("http://growthacademy.socialparody.com")
+        textbutton _("Website")  action OpenURL("http://expansiongames.net")
         textbutton _("Help") action Help()
         textbutton _("Quit") action Quit()
 

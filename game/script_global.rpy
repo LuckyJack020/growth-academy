@@ -66,7 +66,53 @@ label global000:
     
     menu:
         "Skip intro":
-            jump daymenu
+            menu:
+                "Set favored girl seeding":
+                    menu:
+                        "BE Neutral":
+                            pass
+                        "BE Likes":
+                            $ setScenecount("BE", 2)
+                        "BE Dislikes":
+                            $ setScenecount("BE", -2)
+                    menu:
+                        "AE Neutral":
+                            pass
+                        "AE Likes":
+                            $ setScenecount("AE", 2)
+                        "AE Dislikes":
+                            $ setScenecount("AE", -2)
+                    menu:
+                        "GTS Neutral":
+                            pass
+                        "GTS Likes":
+                            $ setScenecount("GTS", 2)
+                        "GTS Dislikes":
+                            $ setScenecount("GTS", -2)
+                    menu:
+                        "FMG Neutral":
+                            pass
+                        "FMG Likes":
+                            $ setScenecount("FMG", 2)
+                        "FMG Dislikes":
+                            $ setScenecount("FMG", -2)
+                    menu:
+                        "BBW Neutral":
+                            pass
+                        "BBW Likes":
+                            $ setScenecount("BBW", 2)
+                        "BBW Dislikes":
+                            $ setScenecount("BBW", -2)
+                    menu:
+                        "PRG Neutral":
+                            pass
+                        "PRG Likes":
+                            $ setScenecount("PRG", 2)
+                        "PRG Dislikes":
+                            $ setScenecount("PRG", -2)
+                    jump daymenu
+                "Everyone neutral":
+                    jump daymenu
         "Continue":
             "Playing intro."
     
@@ -1013,14 +1059,6 @@ label global006:
     show HR neutral
     HR "You've got hair problems."
     "Oh no!"
-    jump daymenu
-    
-label global007:
-    #temp (duh)
-    "I met roommate outside of the hall."
-    show RM neutral
-    RM "Wow, you don't have a girlfriend yet?"
-    "Rude!"
     jump daymenu
 
 label End:
