@@ -30,7 +30,7 @@ label BBW001:
     extend " But still, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised. At least food is familiar enough. A nice snack after class is normal, right?"
     UNKNOWN "I'm sorry, you must not know who you're talking to."
     MC "I wonder who that is."
-    "Alice, accompanied by a man in a chef's outfit, is arguing with an older (but not ancient) woman in an apron and hairnet."
+    "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef’s outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
     show BBW angry with dissolve
     BBW "The name is Alice Nikumaru."
     extend " I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
@@ -47,9 +47,8 @@ label BBW001:
     show BBW angry
     BBW "I am NOT some 'fat kid'. I am not even obese."
     show BBW neutral
-    BBW "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care."
-    extend " I have certain expectations that you – as qualified for this job as you may be – can not meet."
-    extend " Now, I've already gone to the trouble of ordering the equipment you probably don't have – wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends – but he will need, say, 20%% of your workspace emptied out and handed over to him."
+    BBW "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that you – as qualified for this job as you may be – can not meet."
+    BBW "Now, I've already gone to the trouble of ordering the equipment you probably don't have – wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends – but he will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
     show BBW happy
     BBW "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
@@ -122,22 +121,22 @@ label BBW001_c2_2:
     
 label BBW002:
     scene Cafeteria with fade
-    MC "This place seems kind of quiet for a high school cafeteria. Everyone's so subdued, it's like someone died. Guess I'm not the only one who was thrown for a loop by yesterday's news."
-    MC "We're all probably wondering the same thing: what's going to happen to me? How... big am I going to get? Am I going to end up like one of those people who can't live in normal society?"
-    MC "Ugh, this is too heavy for first thing in the morning. Let's just get something to eat and take the day as it goes."
-    MC "..."
-    MC "Now to find a table. Oh! There's Alice, eating by herself. I don't think she'd mind if I joined her."
-    "Alice is sitting at a table, a few plates and bowls of food in front of her. She looks unimpressed by the spread."
+    MCT "This place seems kind of quiet for a high school cafeteria. Everyone's so subdued, it's like someone died. Guess I'm not the only one who was thrown for a loop by yesterday's news."
+    MCT "We're all probably wondering the same thing: what's going to happen to me? How... big am I going to get? Am I going to end up like one of those people who can't live in normal society?"
+    MCT "Ugh, this is too heavy for first thing in the morning. Let's just get something to eat and take the day as it goes."
+    MCT "..."
+    MCT "Now to find a table. Oh! There's Alice, eating by herself. I don't think she'd mind if I joined her."
+    "I found Alice sitting at a table, a few plates and bowls of food in front of her. She looked unimpressed by the spread."
     show BBW neutral with dissolve
     MC "Mind if I join you?"
     BBW "Be my guest. Perhaps you could help me with something."
     MC "Uh, sure! What's on your mind?"
-    "Alice holds up a fork with a piece of fish on it."
+    "Alice held up a fork with a piece of fish on it."
     BBW "This fish. There's something familiar about it."
     MC "It's mackerel. Fish is a common part of Japanese breakfasts."
     show BBW haughty
     BBW "I know that. I've lived here for most of my life. And 'common' may be the best word for what I am eating. I would never have known what this uninspired morsel was if you hadn't told me."
-    "She eats the forkful of fish."
+    "She ate the forkful of fish, her face displaying bland disgust."
     BBW "So tell me this: why, when there are literally hundreds of ways of turning even as pedestrian a choice as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber because they are just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
     MC "I don't know. Grilled mackerel's pretty good."
     BBW "I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze, something. But I guess that's too much to ask. Just slap it on a grill, turn it after a minute, job's done, right?"
@@ -156,18 +155,21 @@ label BBW002_prechoice:
             jump BBW002_c2_1
 
 label BBW002_c1_1:
+    $setFlag("BBW002_c1_1")
     MC "What do you normally have, if not mackerel?"
     BBW "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries in cream, and a croissant. Maybe a poached egg. I'm very particular about my breakfast; a heavy meal to start the day can leave me feeling lethargic for hours."
-    "She picks up a mug and drinks from it."
+    "She picked up her mug and drank from it, showing the same mild disgust."
     show BBW angry
-    BBW "And this is not coffee. I'll have to call Mother later, have her send my French press here. I suppose it was foolish of me to think this place would have proper coffee, but I was told this was an exclusive institution. So far the only thing 'exclusive' is the most uninspired menu I have ever encountered. Is this what you eat every day?"
+    BBW "And this is not coffee. I'll have to call Mother later, have her send my French press here."
+    BBW "I suppose it was foolish of me to think this place would have proper coffee, but I was told this was an exclusive institution. So far the only thing 'exclusive' is the most uninspired menu I have ever encountered. Is this what you eat every day?"
     jump BBW002_prechoice
 
 label BBW002_c1_2:
     MC "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once."
     show BBW neutral
     BBW "All the more reason to let me have Francois on hand. It's unnecessary to force every student here to subsist on this food, and to have someone like me – someone accustomed to a certain standard – suffer this it becomes downright cruel."
-    MC "It's not that bad. I've had better, but I've definitely had worse. (Besides, you managed to clear your plates.)"
+    MC "It's not that bad. I've had better, but I've definitely had worse."
+    MCT "Besides, you managed to clear your plates."
     show BBW haughty
     BBW "You must not have had much better than this, but trust me when I say that offering this to my refined palate is like substituting Mascagni with... think of the name of some vulgar pop diva."
     MCT "I don't know who Mascagni is."
@@ -210,7 +212,8 @@ label BBW002_c3_2:
     MC "I'm sure you can get by without a butler or whatever. I get that you're used to having... help. I'm going to guess that you've gone to private academies, right? Elite places that take care of fewer students."
     show BBW haughty
     BBW "I have attended only the best schools in America and Japan. Yes, this place is... different from them. There are a lot more people, for one."
-    MC "But you're not the only one adjusting. I mean, we've all been thrown into it without warning, and none of us know what the future holds. Maybe you should reach out to some of the other students. Someone in our class might help you deal with this upheaval. Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
+    MC "But you're not the only one adjusting. I mean, we've all been thrown into it without warning, and none of us know what the future holds."
+    MC "Maybe you should reach out to some of the other students. Someone in our class might help you deal with this upheaval. Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
     show BBW neutral
     BBW "You do have a point. The uncertainty we are all experiencing is a common ground I can exploit."
     MCT "Exploit?"
@@ -280,7 +283,7 @@ label BBW003_c2_1:
     BBW "Of course, I could use more help. It's a full-time job being me, and I'm always looking for people I can count on to help me. Would you be interested in a job?"
     MC "I'll... get back to you on that. I need to be somewhere else right now."
     BBW "Very well, but don't complain if I find someone else to fill the position."
-    MCT "You know, I wouldn't mind spending time with her, but not as her butler..."
+    MCT "It’d be nice to make some new friends here, but I’m not looking to be anyone’s butler..."
     jump daymenu
 
 label BBW003_c2_2:
@@ -337,7 +340,9 @@ label BBW003_c1_3:
     
 label BBW004:
     scene Classroom Day with fade
-    MCT "After class clean-up. That's normal. Mind-numbingly boring, but right now I'll take dull over surprising. ... ?"
+    MCT "After class clean-up. That's normal. Mind-numbingly boring, but right now I'll take dull over surprising."
+    MCT "..."
+    MCT "?"
     MC "Um, are you planning to help out?"
     show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     BBW "I have Aida taking care of my share of the work."
@@ -377,7 +382,9 @@ label BBW004_c3:
     show BBW angry
     BBW "You're threatening to report me? At what point did any of this become your concern, anyway?"
     MC "When I saw someone not doing their share. This is a collective assignment, we all have to carry our weight. You don't get to sit back and take it easy just because you managed to rope someone else in."
-    BBW "Are you a figure of authority in this class? No? Then you do not get to tell me that I do not get to do something. As for alerting someone with actual power, go ahead. Play the sniffling toddler, tattle on me. My conscience is clear."
+    BBW "Are you a figure of authority in this class? No? Then you do not get to tell me that I do not get to do something."
+    show BBW haughty
+    BBW "As for alerting someone with actual power, go ahead. Play the sniffling toddler, tattle on me. My conscience is clear."
     MC "Guess that's what I'll be doing..."
     jump daymenu
 
@@ -431,7 +438,8 @@ label BBW005:
     BBW "No, they can not predict that. But any excessive weight is unbecoming, which brings me to my quandary. Do I restrict my diet even further than the modest regiment I already have, or do I allow the growth to happen and fix things later?"
     MC "You think you can lose the weight after you're done growing? Isn't this supposed to be permanent?"
     show BBW neutral
-    BBW "Failure only comes when you give up. Liposuction and similar weight loss treatments have helped others, so why not me? But I am interested in your thoughts. Which sounds like a better approach, tackling the growth now or dealing with it at a later date?"
+    BBW "Failure only comes when you give up. Liposuction and similar weight loss treatments have helped others, so why not me?"
+    BBW "But I am interested in your thoughts. Which sounds like a better approach, tackling the growth now or dealing with it at a later date?"
     menu:
         "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier.":
             jump BBW005_c1
@@ -444,7 +452,7 @@ label BBW005:
 
 
 label BBW005_c1:
-    $setflag("BBW005_ondiet")
+    $setFlag("BBW005_ondiet")
     MC "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier."
     BBW "That does seem the best tactic. If I don't give my body the means to get fat..."
     MC "Just don't starve yourself or anything."
@@ -469,10 +477,13 @@ label BBW005_c2:
     jump daymenu
 
 label BBW005_c3:
-    $setflag("BBW005_workout")
+    $setFlag("BBW005_workout")
     MC "What if you worked out? Burn those calories before they turn into fat."
-    BBW "Now that is sensible. I admit, the thought of denying myself proper meals is distressing, more so after discovering Kodoma-san's talents. I mean, who else at this school is prepared to give her ability the recognition it deserves? And if I can support her while taking care of myself at the same time, so much the better."
+    BBW "Now that is sensible. I admit, the thought of denying myself proper meals is distressing, more so after discovering Kodoma-san's talents."
+    show BBW haughty
+    BBW "I mean, who else at this school is prepared to give her ability the recognition it deserves? And if I can support her while taking care of myself at the same time, so much the better."
     MC "Have your cake and eat it too, you mean?"
+    show BBW neutral
     BBW "Quite. You do have a good mind, Hotsure-san, but perhaps humor is outside your reach."
     MCT "I wasn't trying to make a joke."
     jump daymenu
@@ -662,16 +673,22 @@ label BBW006:
     show BBW neutral with dissolve
     MC "Niku- Alice. Thinking of joining the music club?"
     show BBW haughty
-    BBW "Offering my services to the ensemble is one reason I'm here, though I'm disheartened to find out freshmen are not considered for seated positions. Waiting a year just to take my rightful place on the stage... I'm more sorry for the club, having to endure without my contribution."
+    BBW "Offering my services to the ensemble is one reason I'm here, though I'm disheartened to find out freshmen are not considered for seated positions. Waiting a year just to take my rightful place on the stage..."
+    BBW "I'm more sorry for the club, having to endure without my contribution."
     MC "How thoughtful. So what instrument do you play?"
     BBW "I have my own natural instrument: my voice."
     MC "You're a singer?"
     BBW "A soprano. And a gifted one, I should say. I've been coached since I was five."
     MC "I didn't know the music club did operas."
     show BBW neutral
-    "According to the club adviser, they do not. Put more accurately, they never have. But the higher arts are not more difficult by nature. With sufficient commitment and practice I'm sure they could put on a fair performance. And with me as the star... But I'd also hoped to find a talent or two I could nurture during my time here."
+    "According to the club adviser, they do not. Put more accurately, they never have."
+    show BBW haughty
+    BBW "But the higher arts are not more difficult by nature. With sufficient commitment and practice I'm sure they could put on a fair performance. And with me as the star..."
+    show BBW neutral
+    BBW "I'd also hoped to find a talent or two I could nurture during my time here."
     MC "Nurture?"
-    BBW "The Nikumarus have a long history of patronage of the arts, one I hope to continue. I would like to get a start on it by finding a budding talent to encourage. Pushing them to refine their art and attain what greatness they were born for. Privilege, after all, comes with the responsibility of helping others."
+    BBW "The Nikumarus have a long history of patronage of the arts, one I hope to continue. I would like to get a start on it by finding a budding talent to encourage. Pushing them to refine their art and attain what greatness they were born for."
+    BBW "Privilege, after all, comes with the responsibility of helping others."
     MCT "You sound both selfless and selfish as you say that."
     BBW "On that note, do you play any instruments, Hotsure-san?"
     MC "Me? Uh..."
@@ -739,13 +756,16 @@ label BBW006_c3:
 
 label BBW007:
     scene Cafeteria with fade
-    MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school. Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people. And I'm off by myself, which is par for the course."
+    MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school. Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people."
+    MCT "And I'm off by myself, which is par for the course."
     "No sooner had I thought that than someone sat down across from me."
     show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     MC "Oh, Alice. Didn't know you'd be having lunch here."
     BBW "Why wouldn't I? It is a pleasant day outside, but it seems improper to eat in some random place. Or maybe it is simply proper to eat where the food is served. Structure is an oft-overlooked virtue, in life and in business."
+    MC "If you say so."
+    "It took me a second to realize Alice wasn't alone. Right behind her was Aida, holding a few packages."
     show PRG sad at Position (xpos=0.75, xanchor=0.5) with dissolve
-    MC "If you say so. Hi, Aida. How did you get so much mail already? It's still the first week of the year."
+    MC "Hi, Aida. How did you get so much mail already? It's still the first week of the year."
     PRG "Oh, it's not mine. I was carrying it for Nikumaru-sama. We just came from the mail room."
     extend " ... There was nothing for me."
     MCT "She seems a bit sad. Is there something about mail that bothers her? Better change the conversation."
@@ -753,7 +773,8 @@ label BBW007:
     MC "Uh..."
     BBW "A lot of it is the usual care package stuff. Hand lotion, chewable candies, perfume, a new phone -"
     MCT "That left 'usual' territory pretty quickly."
-    BBW "But I also ordered myself some things. White knee-high stockings seem to be 'in' among the other students, and I was not aware how cold winters in this part of the country can get, so I needed a new coat. And Aida confided in me that she only has one pair of shoes and barely any clothing besides her school uniforms. So I ordered some stuff for her."
+    BBW "But I also ordered myself some things. White knee-high stockings seem to be 'in' among the other students, and I was not aware how cold winters in this part of the country can get, so I needed a new coat."
+    BBW "And Aida confided in me that she only has one pair of shoes and barely any clothing besides her school uniforms. So I ordered some stuff for her."
     MC "That was considerate."
     BBW "Well, she doesn't have a credit card or bank account of her own, so ordering things online are beyond her means. But it was the least I could do to facilitate her shopping."
     MC "Facilitate... You mean she still paid for the stuff herself?"
@@ -783,7 +804,8 @@ label BBW007:
     MC "There's already a store on campus, you know."
     BBW "I know, I've seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
     PRG "What do you need me to do, Nikumaru-sama?"
-    BBW "Our first step will be to get the word out. We'll need some sort of ad campaign, make the people aware of my service. Then we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service; convenient for the customer. But the guys' dorm... Keisuke! How would you like a job?"
+    BBW "Our first step will be to get the word out. We'll need some sort of ad campaign, make the people aware of my service. Then we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service; convenient for the customer."
+    BBW "But the guys' dorm... Keisuke! How would you like a job?"
     MC "Me? Doing what?"
     BBW "Haven't you been listening? I'll need runners, people to deliver packages as they come in. I can offer you 1,000 yen an hour."
     MC "I... will think about it."
