@@ -39,9 +39,9 @@ define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 
 init python:
-    eventlibrary['global006'] = {"name": "global006", "girls": [], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    presetdays["4-7-F"] = ["global006"]
-    presetdays["4-7-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
+    eventlibrary['global005'] = {"name": "global005", "girls": [], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    presetdays["4-6-F"] = ["global005"]
+    presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
 label global000:
     stop music fadeout 0.5
@@ -65,7 +65,7 @@ label global000:
     centered "Enjoy."
     
     menu:
-        "Skip intro":
+        "(DEBUG) Skip intro":
             menu:
                 "Set favored girl seeding":
                     menu:
@@ -117,9 +117,7 @@ label global000:
             "Playing intro."
     
     # Move to Lake Road screen with a fade in transition.
-    scene Lake Road
-    with fade
-
+    scene Lake Road with fade
     MCT "Ahh... It's really hot today."
     "I came to a stop on a wooden bridge overlooking a lake."
     "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tommorrow."
@@ -131,10 +129,7 @@ label global000:
     MCT "I guess I'd better ask for directions."
     MC "Good afternoon!"
     "At the sound of my voice, she turned around and faced me."
-    
-    show BE neutral
-    with dissolve
-    
+    show BE neutral with dissolve
     "It turned out to be a fairly cute girl, with brown hair."
     MC "Sorry, but can you tell me where I am? I'm a little lost."
     UNKNOWN "..."
@@ -142,9 +137,7 @@ label global000:
     MC "See, I'm trying to find Seichou Academy."
     UNKNOWN "Seichou..."
     "Because of that, the girl seemed to realize something."
-    
     show BE surprised
-    
     BE "Kei{i}-chan{/i}? Hey, you're Kei{i}-chan{/i}, right?!"
     MC "Wait, How do you know my name?"
     BE "What are you talking about? It's me! Honoka!"
@@ -159,106 +152,60 @@ label global000:
     BE "That's true, it has been that long already, hasn't it..."
     BE "...I guess I have to forgive you then. You've grown up so much, so it's unreasonable to expect you to remember me if I've changed just as much."
     MCT "Exactly! There are limits to a guy's memory, you know? Besides..."
-
     play sound "Audio/Boing.ogg"
-    show cg BE001
-    with vpunch
-    
+    show cg BE001 with vpunch
     MCT "I'm pretty sure I would have remembered those!"
-    
     hide cg with dissolve
-    show BE neutral
-    with dissolve
-    
+    show BE neutral with dissolve
     BE "Kei{i}-chan{/i}?  You kind of spaced out there for a second."
     MC "Er...I was just thinking, have I really changed that much?"
-    
     show BE neutral
-    
     BE "Well, your hair is the same, but I remember when I used to be taller than you."
-    
     show BE happy
-    
     extend " What about me, I've changed, right?"
     MC "...Maybe a little."
     MC "So, what are you doing out here?"
-    
     show BE neutral
-    
     BE "I thought that it was a nice day, so I should go for a little walk. I didn't imagine I'd run into you, Kei{i}-chan{/i}!"
-    
     show BE surprised
-    
     BE "Ah! You said you were looking for Seichou Academy, right?"
     BE "Could it be that you're attending there?"
-    
     show BE happy
-    
     extend " That's going to be my school starting tomorrow!"
-    
     show BE neutral
-    
     "...Now that I think about it, it looks like she's wearing a school uniform. I guess this means I might even be in the same class as Honoka."
     BE "Come on, Kei{i}-chan{/i}!\nI'll show you the way there."
     "So with that, I picked up my luggage and followed Honoka."
-    
-    show cg BE002
-    with dissolve
-    
+    show cg BE002 with dissolve
     BE "So, how have you been?\nHow about Tomo{i}-chan{/i}, her too!"
     "Tomo{i}-chan{/i} is Hotsure Tomoko, my younger sister."
     MC "She's doing fine. So am I."
-    MC "Actually, she and I will be attending this school together, but her year hasn't ended yet so she's not arriving today."
+    MC "Actually, she and I will be attending this school together, but she wasn't finished packing yet so she's not arriving today."
     MC "But anyway, I was really surprised, Honoka."
     BE "Yeah, I was a little nervous too, moving to a new boarding school and all."
     BE "But if you're going to be here, I'm sure it'll be great!"
     BE "I guess we'll both be in your care, Kei{i}-chan{/i}, so do your best!"
     MC "Right."
     BE "Ah! We're here!"
-    
-    scene School Front
-    with fade
+    scene School Front with fade
     "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year.\nIt was really awe-inspiring at the time."
     "But even then, I had no idea just how much my life was going to change."
-    jump global000_menu
-    
-label global000_menu:
-    
-    scene black
-    "Where should I go?"
-    
-    menu:
-        "Walk in the garden" if not getFlag("global000_GTS"):
-            jump global000_GTS
-        "Investigate the front of the school" if not getFlag("global000_AE"):
-            jump global000_AE
-        "Check out your classroom" if not getFlag("global000_BBW"):
-            jump global000_BBW
-        "Head back to your room and relax":
-            jump global000_RM
-    
+    jump global000_GTS
+
 label global000_GTS:
-    
-    $ setFlag("global000_GTS")
-    scene black
-    with dissolve
+    scene black with dissolve
     "As we entered the school grounds, I couldn't help but notice how big everything was."
-    
-    scene School Planter
-    with dissolve
+    scene School Planter with dissolve
     "What looked to be normal-sized buildings turned out to be a trick of perspective."
     "As Honoka and I walked and walked, the school seemed to grow before my eyes."
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized in Seichou Academy."
     UNKNOWN "Aaack!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
-    "We approached the planter just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
-    
-    show GTS sad at Position(xpos=0.75, xanchor=0.5)
-    with dissolve
+    "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
+    show GTS sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     UNKNOWN "Oooh, darn it darn it darn it..."
-    
-    show BE surprised at Position (xpos=0.25, xanchor=0.5)
+    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     BE "Are you okay?"
     UNKNOWN "Eeep!"
     "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a long skirt and long-sleeved shirt."
@@ -266,16 +213,13 @@ label global000_GTS:
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."
     "Aside from the divot where she fell, the center row of vegetables did indeed look less well-watered than the ones closest to the edge."
-    
     menu:
         "That's too bad.":
             jump global000_GTS_c1
-            
         "Do you need help?":
             jump global000_GTS_c2
             
 label global000_GTS_c1:
-    
     MC "That's too bad, hope you can figure something out."
     UNKNOWN "Yeah...If only I was a little taller, I could reach to the middle..."
     GTS "Oh, I'm sorry, I forgot entirely! My name's Yamazaki Naomi."
@@ -287,13 +231,12 @@ label global000_GTS_c1:
     GTS "I'll see you all at orientation tomorrow."
     show BE happy at Position (xpos=0.25, xanchor=0.5)
     BE "Goodbye! See you around!"
-    hide GTS
-    with dissolve
+    hide GTS with dissolve
     BE "..."
     show BE neutral
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
     "I nod, and we continue on to the front doors of the school."
-    jump global000_menu
+    jump global000_AE
 
 label global000_GTS_c2:
     MC "Do you need help?"
@@ -301,7 +244,7 @@ label global000_GTS_c2:
     UNKNOWN "Oh, thank you, that'd be lovely. Here, let me give you the can..."
     $ setAffection("GTS", 1)
     $ setScenecount("GTS", 1)
-    "I leaned way over the planter and watered the middle row of plants having to stretch as far as I could reach but managing to get all of them."
+    "I leaned way over the planter and watered the middle row of plants, having to stretch as far as I could reach but managing to get all of them."
     GTS "Thank you so much! Oh, I'm sorry, I didn't even introduce myself properly. My name's Yamazaki Naomi."
     "She bowed, and we returned the gesture."
     show BE neutral at Position (xpos=0.25, xanchor=0.5)
@@ -312,64 +255,47 @@ label global000_GTS_c2:
     GTS "Perhaps I'll see you around school?"
     MC "Yeah, sure."
     BE "Yeah! See you later!"
-    hide GTS
-    with dissolve
+    hide GTS with dissolve
     BE "..."
     show BE neutral
     BE "Well that was nice of you to help her, Kei-chan!"
     $ setAffection("BE", 1)
     $ setScenecount("BE", 1)
     "I nod, and we continue on to the front doors of the school."
-    jump global000_menu
+    jump global000_AE
 
 label global000_AE:
-    
-    $ setFlag("global000_AE")
-    scene black
-    with dissolve
+    scene black with dissolve
     UNKNOWN "Mizutani!"
     "The yell made both of us jump in place, so sudden and forceful was it so soon after stepping inside."
     "When we caught our bearings{w} (And Honoka's bust stopped jiggling){w} \nwe saw the owner of the voice."
-    
-    scene Gate Front
-    with dissolve
+    scene Gate Front with dissolve
     "Stern and impatient-looking, the woman surveyed the front area of the school like a forewoman on a construction site, barking orders and taking notes on a clipboard."
-    
-    show AE angry at Position(xpos=0.75, xanchor=0.5)
-    with vpunch
+    show AE angry at Position(xpos=0.75, xanchor=0.5) with vpunch
     UNKNOWN "Mizutani! Quit goofing off and get over here!"
     FMG "I'm comin', I'm comin'! Geeze!"
     "Around the corner came a tanned girl somehow managing to carry a wooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
-    
-    show FMG neutral at Position (xpos=0.25, xanchor=0.5)
-    with dissolve
+    show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     UNKNOWN "What took you so long?"
     FMG "I was getting two benches at once!  I thought you'd like me getting twice what ya asked!"
     UNKNOWN "Not if it takes you three times as long!"
-    
     hide AE
     hide FMG
     show BE surprised at center
     BE "Oh boy...I feel awkward just standing here..."
-    
     hide BE
     show AE angry at Position(xpos=0.75, xanchor=0.5)
     show FMG neutral at Position (xpos=0.25, xanchor=0.5)
-    
     menu:
-        
         "She was just trying to help...":
             jump global000_AE_c1
-            
         "You should listen to your boss, you know.":
             jump global000_AE_c2
-            
         "(Do nothing)":
             jump global000_AE_c3
 
 label global000_AE_c1:
-    
-    MC "She was just trying to help...{w}No need to be mean."
+    MC "She was just trying to help...{w} No need to be mean."
     $ setAffection("BE", 1)
     $ setScenecount("BE", 1)
     $ setAffection("FMG", 1)
@@ -405,10 +331,9 @@ label global000_AE_c1:
     show BE surprised at Position (xpos=0.25, xanchor=0.5)
     "Without another word, Matsumoto turned and began barking more orders and directions to the other students arranging the decorations."
     "Honoka and I looked at each other and headed for class 3-B."
-    jump global000_menu
+    jump global000_BBW
     
 label global000_AE_c2:
-    
     MC "You should listen to your boss, you know."
     MC "If she's got a plan, going off on your own doesn't really help."
     $ setAffection("FMG", -1)
@@ -424,10 +349,9 @@ label global000_AE_c2:
     show AE sad
     AE "I did not need your help, but she's right. Get up to 3-B and help with the decorations and cleaning."
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
-    jump global000_menu
+    jump global000_BBW
     
 label global000_AE_c3:
-    
     "I didn't want to get involved in the fight.{w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
     UNKNOWN "One at a time lets us get each one in its place and ready for the next without-"
@@ -447,17 +371,13 @@ label global000_AE_c3:
     hide AE with dissolve
     show BE neutral at center with dissolve
     BE "You think she's ever happy with anyone? Doesn't seem the type..."
-    jump global000_menu
+    jump global000_BBW
 
 label global000_BBW:
-    
-    $ setFlag("global000_BBW")
-    scene black
-    with dissolve
+    scene black with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
     
-    scene Classroom Day
-    with dissolve
+    scene Classroom Day with dissolve
     "So this was Classroom 3-B. I would be spending a lot of time here for the next year."
     "The first thing I noticed was that, much like the rest of the shool, the classroom seemed very big. It was much larger than any that I had been in before."
     "Whether or not this meant that there would be more students, or if this was just something that made high school different, I had no idea."
@@ -489,11 +409,9 @@ label global000_BBW:
     hide BE
     show BBW neutral at Position (xpos=0.25, xanchor=0.5)
     BBW "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
-
     menu:
         "Well, if you've got this under control...":
             jump global000_BBW_c1
-            
         "Shouldn't you be doing something too?":
             jump global000_BBW_c2
             
@@ -514,7 +432,7 @@ label global000_BBW_c1:
     show PRG sad
     PRG "...I don't want to be a bother."
     BBW "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
-    jump global000_menu
+    jump global000_RM
             
 label global000_BBW_c2:
     MC "Shouldn't you be doing something too?"
@@ -531,12 +449,10 @@ label global000_BBW_c2:
     MC "It's fine. We're all supposed to be working together, right?"
     show PRG happy
     PRG "T-thank you! Thank you very much!"
-    jump global000_menu
+    jump global000_RM
      
 label global000_RM:
-    scene Hallway
-    with fade
-     
+    scene Hallway with fade
     show BE neutral with dissolve
     BE "Alright, well, it looks like everything's ready for tomorrow...{w}(No thanks to queenie over there.){w} Time to get back to the dorms, I guess!"
     MC "They wouldn't happen to be co-ed, would they?"
@@ -544,9 +460,7 @@ label global000_RM:
     BE "Oh, Kei-chan! You're such a kidder!{w} Of course not!"
     "Honoka's laugh caused her impressive bust to shake violently, which was a small consolation prize as we parted ways."
     hide BE with dissolve
-    
-    scene School Inner
-    with fade
+    scene School Inner with fade
     
     "I headed over to the boy's dormitories, seeing they were just as enlarged as the rest of the school.{w} I felt like a child, trying the doorknob that I couldn't even get my entire hand around."
     "*Kunk-Kunk*"
@@ -554,14 +468,11 @@ label global000_RM:
     UNKNOWN "Who is it?!"
     MC "Aaah!"
     UNKNOWN "Who is it? Identify yourself!"
-    
     menu:
         "Uh...Pizza delivery?":
             jump global000_RM_c1
-            
         "Keisuke Hotsure. I...think this is my room?":
             jump global000_RM_c2
-            
         "Don't worry, I'm from the government!":
             jump global000_RM_c3
             
@@ -582,8 +493,7 @@ label global000_RM_c1:
     show RM neutral with dissolve
     RM "Alright, you check out...{w}My name's Daichi Utagashi."
     $ setAffection("RM", -1)
-    scene Dorm Interior
-    with fade
+    scene Dorm Interior with fade
     show RM neutral
     jump global000_RM_after
     
@@ -597,8 +507,7 @@ label global000_RM_c2:
     "More squinting, and then finally he opened the door all the way."
     show RM neutral with dissolve
     RM "Alright, you check out...{w}My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
-    scene Dorm Interior
-    with fade
+    scene Dorm Interior with fade
     show RM neutral
     jump global000_RM_after
     
@@ -606,8 +515,7 @@ label global000_RM_c3:
     MC "Don't worry, I'm from the government!"
     "I thought my fake-authoritative voice would have been worth a laugh, but instead there was silence.{w} I knocked again, tried the knob, called out a few times, but there was no answer."
     "I put my ear against the door and could hear movement, so I moved over to one of the windows and took a peek in,{w} only to see the mystery occupant hurling his bags out the opposite window!"
-    scene Dorm Exterior
-    with fade
+    scene Dorm Exterior with fade
     "I left my luggage by the door and ran around the dorm, coming around the other side just in time to see him struggling out the window."
     show RM angry with vpunch
     UNKNOWN "Aaah! D-Damn you!"
@@ -623,8 +531,7 @@ label global000_RM_c3:
     show RM sad
     RM "...If you really were one of them, I suppose you would have grabbed the evidence while I was helpless.{w} Help me back in and I'll open the door."
     MCT "Am I really going to have to live with this guy?"
-    scene Dorm Interior
-    with fade
+    scene Dorm Interior with fade
     "After helping Daichi back through the open window and handing his bags to him {w}(He wouldn't let me carry them out of his sight){w} then checking my admission papers and ID, he finally unlocked the door and let me in."
     show RM embarassed
     RM "Don't get any funny ideas, 'Keisuke Hotsure'. I've got my eye on you..."
@@ -633,7 +540,7 @@ label global000_RM_c3:
 
 label global000_RM_after:
     "When I finally got inside, it was obvious Daichi had claimed his half of the room.{w} Half the furniture had been crammed into one corner of the room, with blankets and sheets erected into a kind of tent over his desk and dresser."
-    show RM neutral
+    show RM neutral with dissolve
     MC "Er, so, do you want to--"
     RM "Do you know why you're here?"
     MC "Er, what?"
@@ -656,21 +563,15 @@ label global000_RM_after:
     "I sat down on my bed, lost in thought.{w} Daichi certainly seemed to have a few screws loose, but then again,{w} why {i}had{/i} my sister and I been sent to this school with so few details?"
     "I had just accepted it as some new schooling program, like the papers had said, but now?"
     "I never paid much attention to the news, but if every one of those reports and articles over the years could be traced back to Seichou Academy,{w} that was definitely something to wonder about."
-    scene black
-    with dissolve
+    scene black with dissolve
     MCT "What have my sister and I gotten ourselves into...?"
-    
-    scene white
-    with dissolve
+    scene white with dissolve
     play sound "Audio/ClockAlarm.ogg"
     "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
-    scene Dorm Interior
-    with dissolve
+    scene Dorm Interior with dissolve
     "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
     MCT "Hard to believe just yesterday I was in my hometown, and now I'm off on this little island..."
-
     "I got up and got into my uniform, doing my best to comb my shaggy hair into something approaching proper.  In the corner of my eye I saw Daichi watching me."
-
     if getAffection("RM") >= 0:
         show RM neutral
         RM "Today's the welcoming ceremony. I'm going to go get the lay of the campus."
@@ -681,7 +582,6 @@ label global000_RM_after:
         "I shook my head, but waved goodbye nonetheless as Daichi left.  At least he seemed in good spirits."
         $ setFlag("global000_RM_friendly")
         jump global000_part2
-
     if getAffection("RM") < 0:
         show RM sad
         "As soon as he realized I'd noticed him, he spun on his heel and headed out the door."
@@ -690,25 +590,20 @@ label global000_RM_after:
         jump global000_part2
 
 label global000_part2:
-    scene Campus Center
-    with fade
+    scene Campus Center with fade
     "As I followed the signs to freshman welcoming, I couldn't help but notice how flat the campus seemed.  Despite the large buildings, most of them were divided into a handful of floors at most." 
     "Also, there didn't seem to be any stairs anywhere. Any dips or slopes in the elevation were all traveled with ramps."
     scene Auditorium
     with dissolve
     "When I finally reached the auditorium, I found I was still early enough to have my choice of seats."
     MCT "Where should I sit...?"
-
     menu:
         "I should sit in the front where the Principal can see me.":
             jump global000_sit_c1
-            
         "I should sit somewhere in the middle.":
             jump global000_sit_c2
-        
         "I should sit in the back, where no one will notice me.":
             jump global000_sit_c3
-
 
 label global000_sit_c1:
     "I decided to sit in the front row, where the principal could see me. If I ever needed to speak with him, recognizing my face might make him better disposed toward me."
@@ -724,11 +619,9 @@ label global000_sit_c1:
     show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
     MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 0.75, dist=20)
-        
     menu:
         "So, Shiori-san...":
             jump global000_sit_c1_1
-
         "Hi there, Nikumaru-san...":
             jump global000_sit_c1_2
 
@@ -748,11 +641,9 @@ label global000_sit_c2:
     GTS "You two... Went to school together?"
     show BE neutral
     BE "Oh, hey there Naomi-san! Yeah, when we were kids we went to the same school. Different middle schools, though."
-
     menu:
         "Find your dorm okay, Honoka?":
             jump global000_sit_c2_1
-
         "What was your grade school like, Naomi?":
             jump global000_sit_c2_2
 
@@ -763,11 +654,9 @@ label global000_sit_c3:
     "The rest of the row was nearly empty, save for a small girl in the corner who I recognized from the night before as Aida-san."
     show PRG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     "I also noticed she was looking at me, but as soon as our eyes met she turned away...{w}before slowly turning back to watch me from the corner of her eye."
-
     menu:
         "Needed the room to stretch out, Mizutani?":
             jump global000_sit_c3_1
-
         "Seems kinda lonely back here, Aida...":
             jump global000_sit_c3_2
 
@@ -914,7 +803,6 @@ label global000_sit_after:
     "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way was impossible to not draw the eye."
     MC "Shiori-san?  What's going on?"
     AE "I didn't see Utagachi in the assembly. He'd better not have skipped out on the first day or there will be hell to pay.  Hey, isn't he your roommate?"
-
     menu:
         "I haven't seen him...":
             jump global000_aftersit_c1
@@ -957,12 +845,10 @@ label global000_aftersit_c3:
     jump global000_homeroom
 
 label global000_homeroom:
-    scene School Exterior
-    with fade
+    scene School Exterior with fade
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
     
-    scene F1 Hallway
-    with fade
+    scene F1 Hallway with fade
     "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule.{w} I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
     show BE surprised
     BE "Just how many students are there here, that they need such big hallways?"
@@ -982,7 +868,6 @@ label global000_homeroom:
     show AE neutral
     AE "Some kind of anti-cheating measure...?"
     hide AE
-
     "Eventually we all took our seats, looking around at the sparse classroom. All the usual educational aids seemed to be on shelves or set into the wall, making the room seem even more like an empty box than it already was."
     "If not for the teacher's lectern at the front of the class, you'd be forgiven for thinking we were in a pen instead of a classroom."
     "Finally the bell rang, and at the last possible second one could enter and not be late, our homeroom teacher slid open the door and entered."
@@ -1010,10 +895,8 @@ label global000_homeroom:
     show BBW angry with vpunch
     BBW "Keep that thing away from me!"
     hide BBW with dissolve
-    
     "..."
     "..."
-    
     HR "All right, go ahead, get it out now. But don't run away or you'll be marked tardy."
     "The non-chalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-Sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."
@@ -1030,15 +913,13 @@ label global000_homeroom:
     "Tashi-Sensei scanned the room, taking in the fear and confusion, then shrugged."
     HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Akayama-San?"
 
-    scene black
-    with dissolve
+    scene black with dissolve
     "There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
     MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
     MCT "What is going on at this school?!"
     UNKNOWN "Keisuke? {w} Hotsura Keisuke?"
     
-    scene F1 Hallway
-    with dissolve
+    scene F1 Hallway with dissolve
     MC "Ah! Yes What?"
     UNKNOWN "Eep!"
     "I was startled by a sweet-looking girl who had stopped at my desk as everyone else was leaving class."
@@ -1053,7 +934,7 @@ label global000_homeroom:
     # This is where we will show a top-down perspective map of the campus, most likely, in order to begin branching off to whatever the player chooses from the options presented.
     jump daymenu
 
-label global006:
+label global005:
     scene Dorm Interior with fade
     "When I woke up this morning, Daichi was nowhere to be found."
     "I thought it was unusual for him, usually the mornings were filled with the clicking of mice and keyboards as he did his 'research'.  Still, it was a welcome break to not have him eyeing me as I brushed my teeth or whatever."
