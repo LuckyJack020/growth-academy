@@ -1054,11 +1054,161 @@ label global000_homeroom:
     jump daymenu
 
 label global006:
-    #temp (duh)
-    "It's the big test!"
-    show HR neutral
-    HR "You've got hair problems."
-    "Oh no!"
+    scene Dorm Interior with fade
+    "When I woke up this morning, Daichi was nowhere to be found."
+    "I thought it was unusual for him, usually the mornings were filled with the clicking of mice and keyboards as he did his 'research'.  Still, it was a welcome break to not have him eyeing me as I brushed my teeth or whatever."
+
+    scene Hallway with fade
+    "As I made my way inside the classroom building, I ran into a few of my classmates."
+    
+    if prefgirl == "BE":
+        show BE neutral with dissolve
+        BE "Hey there, Kei-chan!  How are things going for you?"
+        MC "Oh, pretty good. You?"
+        BE "Still getting used to how big this campus is! I've been spending some time walking around each night and I still haven't seen it all!"
+        MC "Wow, I haven't been around much either..."
+        BE "Maybe we can go exploring together sometime!"
+
+    if prefgirl == "WG":
+        show BBW neutral with dissolve
+        BBW "Hotsure-san."
+        MC "Oh, hello Nikumaru-san."
+        BBW "Please, I've told you before, call me Alice. Formalities are for business, I find them so tiresome in normal conversation."
+        MC "Er, okay, Alice... but you called me Hotsure-san."
+        BBW "Because you were expecting it, of course. In any case, I'm looking forward to today's lessons. You?"
+        MC "I suppose..."
+
+    if prefgirl == "GTS":
+        "I noticed Naomi-san walking next to me as we made our way to class.  Like, noticeably close."
+        show GTS neutral with dissolve
+        GTS "..."
+        MC "Hey there, Naomi-san."
+        GTS "Oh, h-hello."
+        MC "..."
+        GTS "..."
+        MC "Nice day we're having, yeah?"
+        GTS "...Yes."
+        MCT "Boy, she's not much for conversation today... but she seems happy."
+
+    if prefgirl == "FMG":
+        show FMG neutral with dissolve
+        FMG "Hotsure-san! How ya doin'?"
+        "I cringed as Akira slapped me on the back in what she probably thought was a friendly manner."
+        MC "Hrrrk!"
+        FMG "Haha, catch you by surprise, did I?  Well, hopefully that'll wake you up a bit!"
+        MC "It's nice to see you too, Mizutani-san..."
+        FMG "Guess what I found out yesterday?  They've got an outdoor weight area behind the gym!  Can't wait to try it out!"
+        MC "Does that make a difference?"
+        FMG "Sure!  Morning and evening workouts can go harder than normal because you're being naturally cooled by the cold air!"
+        MCT "I boggled to think what a 'harder' workout was for Akira, seeing how hard she already pushed herself..."
+
+    if prefgirl == "PRG":
+        show PRG neutral with dissolve
+        PRG "H-hi Kei-sama!"
+        MC "Oh, hi Kodama-san."
+        PRG "I... I'd like it if you'd call me Aida..."
+        MC "Yeah?"
+        PRG "Yeah.  Like... a lot."
+        MC "Okay, Aida. How are you today?"
+        PRG "I'm fine. How are you? Did you sleep good? Get enough breakfast? I've got a snack if you're hungry..."
+
+    if prefgirl == "AE":
+        show AE neutral with dissolve
+        AE "Hotsure-san."
+        MC "Oh, hello Matsumoto-san."
+        AE "Good to see you on time. I may have need of your assistance later."
+        MC "Oh?"
+        AE "It's measuring day for our class. I might need help corralling the student bodies through the process in an efficient manner."
+        MC "Er, all right, sure."
+        AE "I wasn't asking."
+
+    scene Classroom Day with fade
+    MC "When we got to Room 3-B, we found a message written out on the blackboard, announcing that we were all supposed to head to the gymnasium."
+    show AE neutral at Position (xpos=0.8, xanchor=0.5) with dissolve
+    AE "All right, everyone, it's measuring day for our class, so let's get an orderly line going."
+    FMG "Oooh, neat! I've been wanting to get my guns professionally measured for a while!"
+    BBW "..."
+    AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
+    show PRG neutral at Position (xpos=0.5, xanchor=0.5, ypos=0.515, yanchor=0.5) with dissolve:
+        xzoom 1
+    show BBW neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
+    BBW "Excuse me, but Aida is otherwise engaged."
+    show PRG neutral:
+        xzoom -1
+    AE "Not now she isn't, unless there's some other class president I'm unaware of."
+    show PRG neutral:
+        xzoom 1
+    BBW "I'm sure you can find someone else. Aida is developing a set of very specialized skills."
+    show PRG neutral:
+        xzoom -1
+    AE "I'm sure she is. AFTER classes. During school hours she'll submit to school authority."
+    show PRG neutral:
+        xzoom 1
+    show BBW angry
+    show AE angry
+    BBW "..."
+    AE "..."
+    show PRG neutral:
+        xzoom -1
+    pause 1
+    show PRG neutral:
+        xzoom 1
+    BBW "..."
+    AE "..."
+    show PRG sad:
+        xzoom -1
+    pause .5
+    show PRG sad:
+        xzoom 1
+    pause .5
+    show PRG sad:
+        xzoom -1
+    pause .5
+    show PRG sad:
+        xzoom 1
+    pause .5
+    show PRG sad:
+        xzoom -1
+    pause .5
+    show PRG sad:
+        xzoom 1
+    pause 1
+    show BBW neutral
+    BBW "...Hmph!"
+    MCT "...Those two aren't used to accepting 'no' for an answer, that's for sure..."
+
+    scene Auditorium with fade
+    "The auditorium Had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
+    "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
+    AE "Class 3-B, over here! Line up along this partition, and- no, not alphabetically, by seat number. What do you mean you don't know what your seat number is??  Haven't you been paying attention at all?"
+    "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
+    "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
+    "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
+    LE "Hello, Hotsure-san, please have a seat."
+    "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp. They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
+    "What was more, she had decided to cover them in bright red lipstick. It was nearly impossible not to stare as she looked down at a clipboard full of papers."
+    LE "So, your growth factor has been confirmed to be... Heh, you like them?"
+    MCT "Oh crap, she caught me staring!"
+    MC "No, I, uh, I mean, they're-"
+    "Her lips actually managed to pull out into a smile, making nearly the entire bottom half of her face hidden behind them."
+    LE "It's all right, I know they can be surprising. Whenever I go off-campus I have to wear a surgical mask or I can hardly do anything for all the gawking and questions."
+    "I just nodded and looked away, wondering what I would have to do to live a normal life."
+    LE "Anyways, your growth factor.  According to these results, you have hyper-productive hair follicles. Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
+    MC "My hair? It's always grown like a weed, that's nothing new."
+    LE "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
+    MC "And... And my sister? Does she have the same thing?  Does she have anything at all?"
+    LE "I'm sorry, but since she's not a minor anymore I'm not allowed to share her medical information with anyone she hasn't specified..."
+    "I mulled over this for a few seconds while she wrote on her clipboard."
+    MC "So, that's it? Is it going to be all of my hair, er, everywhere?"
+    LE "Body and head hair grow at different cycles and intensities, so it's hard to say. But we'll be sure to check up on all of your growth throughout the year, so please try and keep a record of each time you cut any of your hair."
+    MC "...Do I have to?"
+    LE "No, but we're only here to help.  If you're comfortable only knowing what you know now about your condition, we won't force you. But you still have to come in for measurements and such."
+    MC "So, can I go?"
+    LE "Right after we take some blood, yes. Just sit still and roll up your sleeve..."
+
+    scene Auditorium with fade
+    "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
+    "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
     jump daymenu
 
 label End:
