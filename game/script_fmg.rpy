@@ -327,7 +327,6 @@ label FMG005:
 
 label FMG005_c1:
     $setAffection("FMG", -1)
-    MC "Are you okay?"
     FMG "No, I just had a stupid needle jammed into my arm to find out my growth factor, which by the way was a waste of time."
     MC "Okay...Well what was it?"
     "I did my best to try and act dumb for her sake but instead she took it the wrong way."
@@ -341,7 +340,7 @@ label FMG005_c1:
 
 label FMG005_c2:
     $setAffection("FMG", 1)
-    MC "Man, Shots suck am I right."
+    MC "Man, shots suck, am I right?"
     "I felt that it was best to try to lighten her up, and it seems I was rewarded."
     show FMG neutral
     FMG "Heh, yeah they do, i'm guessing you heard all of that?"

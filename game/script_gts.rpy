@@ -289,7 +289,6 @@ label GTS005:
             jump GTS005_c2
 
 label GTS005_c1:
-    MC "Hey, you have a passion for it, I can’t fault you for that."
     GTS "Thank you, I just don’t wish to come off as annoying or disinterested in talking about you."
     MC "Heh, you worry too much about that. It’s fine to talk about what you like, that’s what friends do."
     GTS "I... I see. Thank you again."
@@ -300,8 +299,7 @@ label GTS005_c1:
     GTS "Yes, very much so I would say. That’s a nice way to see it."
     jump GTS005_after
     
-label GTS005_c2: 
-    MC "I’m doing okay, thinking about the results from the test."
+label GTS005_c2:
     GTS "Yes... I would think quite a few students are thinking about that. I assume that’s why the campus is a bit quieter than normal."
     MC "Yeah, I think a lot of people are trying to come to terms with what’s going to happen to them. I’m not really sure how I feel about my condition though, it’s rather strange if I say so."
     GTS "Strange in what way?"
@@ -351,7 +349,6 @@ label GTS006:
             jump GTS006_c2
 
 label GTS006_c1:
-    MC "Kind of, but I'm mostly into cats myself."
     GTS "I see, well cats are rather adorable too. Though I always enjoyed the companionship of a dog."
     MC "Yeah, I hear a lot of people are a big fan of how loyal dogs can be. Personally, I enjoy the peace and quiet a cat offers. Plus, they’re so cute!"
     "Naomi gave a little giggle and covered her mouth at that last bit but nodded her head."
@@ -361,7 +358,6 @@ label GTS006_c1:
     jump GTS006_after
 
 label GTS006_c2:
-    MC "Yeah, he was extremely cute!"
     GTS "Indeed, he was, did you get a chance to play with him?"
     MC "Not really, too big of a crowd and I don’t think it’d be wise to make a scene by barging through everyone to pet him."
     "This made Naomi giggle softly and nod."

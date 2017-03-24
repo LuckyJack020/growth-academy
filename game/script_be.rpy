@@ -589,7 +589,6 @@ label BE007:
 
 label BE007_c1:
     #is there actually a point where this is given out? maybe this should be associated with WG005 instead of an affection check or something
-    MC "I actually know the answer to that."
     show BE surprised
     BE "Oh?"
     MC "Yeah, I've talked to Alice a couple of times. I don't want to give out too much if she hasn't said anything herself, but, it's more the second option. She's not going to end up with a big gut. I mean, well, that'll be part of it naturally, but it's not the focus."
@@ -605,7 +604,6 @@ label BE007_c1:
     jump BE007_after
 
 label BE007_c2:
-    MC "I'm not really sure. I don't think it would be good to go right up and ask her about it, but, I would think it's probably something to do with fat cells in the body. So, maybe it's going to be like she is now, just scaled up."
     show BE neutral
     BE "I guess that makes sense. Do fat cells get bigger or do they just multiply? Wait, I guess if it's a cell it can't really be a different size, can it?"
     MC "That's... a question for someone smarter than me. All I know is, it's got to be something with her body. She's definitely got a good appetite, but it doesn't seem like she's eating anything too bad. It's not like her tray is loaded up with pizza and snack cakes."
@@ -614,7 +612,6 @@ label BE007_c2:
 
 label BE007_c3:
     $setAffection("BE", -1)
-    MC "Maybe it's just hidden under all that weight."
     show BE sad
     BE "Uh, what do you mean?"
     MC "Maybe her being fat isn't actually related to her growth, it's just coincidental that she eats so much."
