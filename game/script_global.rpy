@@ -63,59 +63,59 @@ label global000:
     centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
     centered "For more information, visit\n https://www.expansiongames.net"
     centered "Enjoy."
-    
-    menu:
-        "(DEBUG) Skip intro":
-            menu:
-                "Set favored girl seeding":
-                    menu:
-                        "BE Neutral":
-                            pass
-                        "BE Likes":
-                            $ setScenecount("BE", 2)
-                        "BE Dislikes":
-                            $ setScenecount("BE", -2)
-                    menu:
-                        "AE Neutral":
-                            pass
-                        "AE Likes":
-                            $ setScenecount("AE", 2)
-                        "AE Dislikes":
-                            $ setScenecount("AE", -2)
-                    menu:
-                        "GTS Neutral":
-                            pass
-                        "GTS Likes":
-                            $ setScenecount("GTS", 2)
-                        "GTS Dislikes":
-                            $ setScenecount("GTS", -2)
-                    menu:
-                        "FMG Neutral":
-                            pass
-                        "FMG Likes":
-                            $ setScenecount("FMG", 2)
-                        "FMG Dislikes":
-                            $ setScenecount("FMG", -2)
-                    menu:
-                        "BBW Neutral":
-                            pass
-                        "BBW Likes":
-                            $ setScenecount("BBW", 2)
-                        "BBW Dislikes":
-                            $ setScenecount("BBW", -2)
-                    menu:
-                        "PRG Neutral":
-                            pass
-                        "PRG Likes":
-                            $ setScenecount("PRG", 2)
-                        "PRG Dislikes":
-                            $ setScenecount("PRG", -2)
-                    jump daymenu
-                "Everyone neutral":
-                    jump daymenu
-        "Continue":
-            "Playing intro."
-    
+    if debugenabled:
+        menu:
+            "(DEBUG) Skip intro":
+                menu:
+                    "Set favored girl seeding":
+                        menu:
+                            "BE Neutral":
+                                pass
+                            "BE Likes":
+                                $ setScenecount("BE", 2)
+                            "BE Dislikes":
+                                $ setScenecount("BE", -2)
+                        menu:
+                            "AE Neutral":
+                                pass
+                            "AE Likes":
+                                $ setScenecount("AE", 2)
+                            "AE Dislikes":
+                                $ setScenecount("AE", -2)
+                        menu:
+                            "GTS Neutral":
+                                pass
+                            "GTS Likes":
+                                $ setScenecount("GTS", 2)
+                            "GTS Dislikes":
+                                $ setScenecount("GTS", -2)
+                        menu:
+                            "FMG Neutral":
+                                pass
+                            "FMG Likes":
+                                $ setScenecount("FMG", 2)
+                            "FMG Dislikes":
+                                $ setScenecount("FMG", -2)
+                        menu:
+                            "BBW Neutral":
+                                pass
+                            "BBW Likes":
+                                $ setScenecount("BBW", 2)
+                            "BBW Dislikes":
+                                $ setScenecount("BBW", -2)
+                        menu:
+                            "PRG Neutral":
+                                pass
+                            "PRG Likes":
+                                $ setScenecount("PRG", 2)
+                            "PRG Dislikes":
+                                $ setScenecount("PRG", -2)
+                        jump daymenu
+                    "Everyone neutral":
+                        jump daymenu
+            "Continue":
+                "Playing intro."
+        
     # Move to Lake Road screen with a fade in transition.
     scene Lake Road with fade
     MCT "Ahh... It's really hot today."
