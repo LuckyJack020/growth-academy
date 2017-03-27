@@ -13,15 +13,15 @@ image BBW haughty = DynamicImage("Graphics/BBW-[globalsize]-haughty.png")
 image cg BBW001 = "Graphics/BBW-SC-1.png"
 
 init python:
-    eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "conditions": [], "priority": 0}
-    eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": 0}
-    eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW002"]], "priority": 0}
-    eventlibrary['BBW004'] = {"name": "BBW004", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": 0}
-    eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['BBW005A'] = {"name": "BBW005A", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]], "priority": 0}
-    eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]], "priority": 0}
-    eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "conditions": [[ConditionEnum.EVENT, "BBW004"]], "priority": 0}
-    eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": 0}
+    eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "location": "cafeteria", "conditions": [], "priority": 0}
+    eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": 0}
+    eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "location": "cookingclassroom", "conditions": [[ConditionEnum.EVENT, "BBW002"]], "priority": 0}
+    eventlibrary['BBW004'] = {"name": "BBW004", "girls": ["BBW", "PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": 0}
+    eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['BBW005A'] = {"name": "BBW005A", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]], "priority": 0}
+    eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "location": "gym", "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]], "priority": 0}
+    eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BBW004"]], "priority": 0}
+    eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": 0}
     
 label BBW001:
     scene Cafeteria with fade
@@ -489,6 +489,7 @@ label BBW005_c3:
     jump daymenu
 
 label BBW005A:
+    scene Cafeteria with fade
     $setAffection("BBW", -2)
     MCT "Why do I always have trouble finding an open seat? I wonder how much harder this will be once some of the people start growing..."
     MC "Mind if I sit here?"

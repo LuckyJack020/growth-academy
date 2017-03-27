@@ -10,6 +10,7 @@
     presetdays = {}
     datelibrary = {"testday": datetime.date(2000, 4, 7)}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
+    locationlist = ['cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track']
     debugmenu = False
     debugenabled = True
     
@@ -309,23 +310,28 @@ screen daymenu:
     
     vbox:
         xalign 0.5
-        yalign 0.4
+        yalign 0.3
         
         text(getTimeString())
         for c in eventchoices:
             hbox:
                 if len(eventlibrary[c]["girls"]) == 0:
-                    add "Graphics/no-icon.png" zoom .3
+                    add "Graphics/no-icon.png" zoom .5
                 else:
                     for g in eventlibrary[c]["girls"]:
-                        add "Graphics/%s-icon.png" % g zoom .3
-            textbutton eventlibrary[c]["name"] action [SetVariable("activeevent", c), Jump("startevent")]
+                        add "Graphics/%s-icon.png" % g zoom .5
+            hbox:
+                if eventlibrary[c]["location"] in locationlist:
+                    add "Graphics/%s-icon.png" % eventlibrary[c]["location"] zoom .5
+                else:
+                    add "Graphics/missingloc-icon.png" zoom .5
+                textbutton eventlibrary[c]["name"] action [SetVariable("activeevent", c), Jump("startevent")]
         
     if freeday:
         fixed:
-            textbutton "Train Athletics" xalign 0.1 yalign 0.7 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-            textbutton "Train Art" xalign 0.5 yalign 0.7 action [SetVariable("activeevent", "Art"), Jump("train")]
-            textbutton "Train Academics" xalign 0.9 yalign 0.7 action [SetVariable("activeevent", "Academics"), Jump("train")]
+            textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+            textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
+            textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
             
     fixed:
         if debugenabled:
