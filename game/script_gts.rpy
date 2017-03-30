@@ -17,6 +17,7 @@ init python:
     eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.EVENT, "GTS004"]], "priority": 0}
     
 label GTS001:
+    #Intro doesn't make sense if it doesn't happen on the first day
     scene black with fade
     "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn’t sure how to properly process what we were told."
     "What Daichi had told me earlier was starting to resonate more and I began to wonder if perhaps others knew about the purpose of this school before they were enrolled into it."

@@ -337,7 +337,7 @@ label global000_AE_c2:
     MC "You should listen to your boss, you know."
     MC "If she's got a plan, going off on your own doesn't really help."
     $ setAffection("FMG", -1)
-    $ setScencount("FMG", -1)
+    $ setScenecount("FMG", -1)
     show FMG angry
     FMG "My WHAT? Matsumoto's not the boss of anyone, despite what she'll tell you."
     show AE neutral
@@ -352,7 +352,7 @@ label global000_AE_c2:
     jump global000_BBW
     
 label global000_AE_c3:
-    "I didn't want to get involved in the fight.{w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
+    "I didn't want to get involved in the fight. {w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
     UNKNOWN "One at a time lets us get each one in its place and ready for the next without-"
     show FMG sad
@@ -360,7 +360,7 @@ label global000_AE_c3:
     show FMG happy
     extend "with a butt that size, you'll never fish 'em back out."
     hide FMG with dissolve
-    "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to myself in a huff."
+    "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to me in a huff."
     "My eyes snap to hers, momentarily mesmerized by just how sizable her rear was underneath the school-issue uniform."
     $ setAffection("AE", 1)
     $ setScenecount("AE", 1)
@@ -405,7 +405,7 @@ label global000_BBW:
     BE "I'm Inoue Honoka! Pleased to meet ya!"
     MC "Hotsure Keisuke."
     show PRG neutral
-    PRG "Aida...Aida Kodama."
+    PRG "Aida...Kodama Aida."
     hide BE
     show BBW neutral at Position (xpos=0.25, xanchor=0.5)
     BBW "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
@@ -471,7 +471,7 @@ label global000_RM:
     menu:
         "Uh...Pizza delivery?":
             jump global000_RM_c1
-        "Keisuke Hotsure. I...think this is my room?":
+        "Hotsure Keisuke. I...think this is my room?":
             jump global000_RM_c2
         "Don't worry, I'm from the government!":
             jump global000_RM_c3
@@ -485,7 +485,7 @@ label global000_RM_c1:
     MC "Preeeetty sure...{w} Says right here on my paperwork, see?"
     "I pulled out my transfer documents from the top pocket of my luggage, but he snatched them away before I could even show them."
     "The door shut briefly, then opened again, the boy inside still glaring at me through one narrowed eye."
-    UNKNOWN "Keisuke Hotsure...{w}Let's see some ID."
+    UNKNOWN "Hotsure Keisuke...{w}Let's see some ID."
     MC "Haha, no way, really?"
     UNKNOWN "Really."
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
@@ -498,9 +498,9 @@ label global000_RM_c1:
     jump global000_RM_after
     
 label global000_RM_c2:
-    MC "Keisuke Hotsure. I...{w}think this is my room?"
+    MC "Hotsure Keisuke. I...{w}think this is my room?"
     "I could hear movement behind the door, like someone searching for something.{w} After a bit, the door opened a crack, a single narrowed eye looking me up and down."
-    UNKNOWN "Hotsure, huh?{w} Let's see some ID"
+    UNKNOWN "Hotsure, huh?{w} Let's see some ID."
     MC "Haha, no way, really?"
     UNKNOWN "Really."
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
@@ -526,7 +526,7 @@ label global000_RM_c3:
     RM "Don't play coy with me!{w} You're one of them!"
     MC "\"Them\" who?"
     RM "The government! You're here to monitor me, drag me off to some secret prison!{w} Put electrodes in my brain!"
-    MC "It was just a joke!{w} I'm Keisuke Hotsura, I just got here, this is supposed to be my dorm!"
+    MC "It was just a joke!{w} I'm Hotsure Keisuke, I just got here, this is supposed to be my dorm!"
     "Daichi twisted around to look at me, his eyes narrowed."
     show RM sad
     RM "...If you really were one of them, I suppose you would have grabbed the evidence while I was helpless.{w} Help me back in and I'll open the door."
@@ -534,7 +534,7 @@ label global000_RM_c3:
     scene Dorm Interior with fade
     "After helping Daichi back through the open window and handing his bags to him {w}(He wouldn't let me carry them out of his sight){w} then checking my admission papers and ID, he finally unlocked the door and let me in."
     show RM embarassed
-    RM "Don't get any funny ideas, 'Keisuke Hotsure'. I've got my eye on you..."
+    RM "Don't get any funny ideas, 'Hotsure Keisuke'. I've got my eye on you..."
     $ setAffection("RM", -3)
     jump global000_RM_after
 
@@ -612,7 +612,7 @@ label global000_sit_c1:
     MCT "!!"
     MCT "I... Is that..."
     show AE neutral flip at Position(xpos=0.75, xanchor=0.5) with dissolve
-    MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w}I can't say anything about with everyone else around..."
+    MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w}I can't say anything about it with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
@@ -634,7 +634,7 @@ label global000_sit_c2:
     BE "Kei chan, over here!  I've got a seat saved for you!"
     "I made my way down the row of chairs to the seat Honoka was patting next to her."
     "I noticed when I passed by Honoka, she had to lean back slightly to keep her bosoms from dragging across me, and the thought made me blush."
-    "When I sat down and the the breath I'd been holding out, I realized I was sitting next to the girl we'd met gardening the evening before."
+    "When I sat down and let the breath I'd been holding out, I realized I was sitting next to the girl we'd met gardening the evening before."
     show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     show BE happy
     BE "Isn't this great, Kei-chan?  It's just like grade school again!"
@@ -650,7 +650,7 @@ label global000_sit_c2:
 label global000_sit_c3:
     "I decided to sit in the back, where I wouldn't have to worry about anyone seeing me."
     show FMG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
-    "The back rows were sparsely filled, so much so that I saw Mizutani-san could afford to hang her toned arms of the backs of the chairs on either side of her."
+    "The back rows were sparsely filled, so much so that I saw Mizutani-san could afford to hang her toned arms off of the backs of the chairs on either side of her."
     "The rest of the row was nearly empty, save for a small girl in the corner who I recognized from the night before as Aida-san."
     show PRG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     "I also noticed she was looking at me, but as soon as our eyes met she turned away...{w}before slowly turning back to watch me from the corner of her eye."
@@ -669,7 +669,7 @@ label global000_sit_c1_1:
     AE "Shhh! {w}They're about to start."
     MC "I know, but I was just, ah, wondering--"
     AE "You noticed too? It's weird, isn't it? Normally you have the whole faculty on-stage for these things, but it's just the principal and a few others..."
-    "You nod dumbly, realizing only now that behind the principal on sage there were only a handful of faculty members."
+    "You nod dumbly, realizing only now that behind the principal on stage there were only a handful of faculty members."
     "It definitely seemed sparse, despite the size of the stage, but you weren't about to attribute it to anything nefarious like Daichi would."
     "You open your mouth to try and ask about the ass-squishing she's giving you, but the principal clearing his throat into the microphone snapped Shiori's attention to the stage."
     MCT "No use talking now, I suppose...  But it's nice she thought I was clever enough to notice."
@@ -744,7 +744,7 @@ label global000_sit_c2_2:
 label global000_sit_c3_1:
     hide PRG
     hide FMG
-    MC "Needed the room to streth out, Mizutani?"
+    MC "Needed the room to stretch out, Mizutani?"
     show FMG neutral
     FMG "Oh hey, it's, uh, Hotsure, right?"
     MC "Yep! So, ah, not interested in the speech?"
@@ -917,7 +917,7 @@ label global000_homeroom:
     "There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
     MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
     MCT "What is going on at this school?!"
-    UNKNOWN "Keisuke? {w} Hotsura Keisuke?"
+    UNKNOWN "Keisuke? {w} Hotsure Keisuke?"
     
     scene F1 Hallway with dissolve
     MC "Ah! Yes What?"
