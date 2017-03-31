@@ -10,7 +10,7 @@
     presetdays = {}
     datelibrary = {"testday": datetime.date(2000, 4, 7)}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    locationlist = ['cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track']
+    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track']
     debugmenu = False
     debugenabled = True
     

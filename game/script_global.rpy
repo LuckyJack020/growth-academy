@@ -16,7 +16,7 @@ image Library = "Graphics/Library.png"
 image Office = "Graphics/Office.png"
 image Cafeteria = "Graphics/Cafeteria.png"
 image Cooking Classroom = "Graphics/NYI.png"
-image Gym = "Graphics/NYI.png"
+image Gym = "Graphics/Auditorium.png"
 image Track = "Graphics/Track.png"
 image Roof = "Graphics/Roof.png"
 image splash = "Graphics/SplashScreen.png"
@@ -39,7 +39,7 @@ define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 
 init python:
-    eventlibrary['global005'] = {"name": "global005", "girls": [], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     presetdays["4-6-F"] = ["global005"]
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
@@ -796,7 +796,7 @@ label global000_sit_after:
     hide BE
     "The ceremony continued, all dreadfully familliar and rote, but at the end there was something different. The principal settled the papers behind the podium and hesitated for a too-long moment."
     "\"The future is forever uncertain,\" he said.{w} \"But no matter what the future holds, years hence or any day now, one thing is important  above all else.\""
-    "\"{i}Nosce te Ipsum{/i} {w}To thine own self be true. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need.\""
+    "\"{i}Nosce te Ipsum{/i}. {w}To thine own self be true. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need.\""
     MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
     "Finally, the ceremony ended, and we all began to file out."
     show AE sad
@@ -814,18 +814,19 @@ label global000_sit_after:
 
 label global000_aftersit_c1:
     MC "I haven't seen him...{w}but he was acting kind of strangely this morning. No telling where he went off to."
+    show AE neutral
     AE "Hmph. He'd better have a good excuse!"
-    hide AE 1d with dissolve
+    hide AE with dissolve
     "I left to go to my homeroom class, worrying no excuse would be good enough for Shiori..."
     $ setAffection("RM", 1)
     jump global000_homeroom
 
 label global000_aftersit_c2:
     MC "Well, he said he was going to make sure not to miss the ceremony..."
+    show AE neutral
     AE "He did? Then why didn't I see him come in?"
     MC "He said he was going to walk around campus a bit this morning, get a feel for the place. Maybe he came in some different door?"
     "Shori looked back into the mostly-empty auditorium, eyes scanning the walls."
-    show AE neutral
     AE "You know, I didn't consider that he could have come from a non-proscribed entrance, actually. I'll have to quiz him on the announcement's content later."
     hide AE with dissolve
     "She nodded and left her post, satisfied with the answer, and we both walked to homeroom."
@@ -836,6 +837,7 @@ label global000_aftersit_c2:
 
 label global000_aftersit_c3:
     MC "He left the dorms pretty early, don't know where he was off to..."
+    show AE neutral
     AE "Hmph.  Well, he certainly wasn't here. Bah, I don't have time to waste on the likes of him.  Thank you for telling me, though, so I didn't stand there until the bell rang."
     hide AE with dissolve
     "With a derisive grunt, Shiori left her post by the doors and we walked to homeroom together."

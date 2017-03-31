@@ -13,7 +13,7 @@ init python:
     eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": 0}
     eventlibrary['FMG004'] = {"name": "FMG004", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": 0}
     eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"]], "priority": 0}
+    eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": 0}
     
 label FMG001:

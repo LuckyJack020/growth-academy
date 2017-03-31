@@ -15,8 +15,8 @@ init python:
     eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE001"]], "priority": 0}
     eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE002"]], "priority": 0}
     eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.EVENT, "BE003"]], "priority": 0}
-    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
     eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     
 label BE001:
@@ -366,7 +366,7 @@ label BE004:
     "But, as I looked at the sweat running down my shirt, I remembered that it was way too hot today. Maybe next time."
     jump daymenu
     
-label BE005:
+label BE005_old:
     #This scene needs to be rewritten or something, it doesn't make sense as an 005
     scene Hallway with fade
     show BE happy with dissolve
@@ -411,7 +411,7 @@ label BE005:
         "How do they feel? Your boobs, I mean.":
             jump BE005_c2
             
-label BE005_c1:
+label BE005_c1_old:
     show BE surprised
     BE "Gee, honestly, I'm not really sure. It's not like they just shot out like bazookas one day, you know?"
     BE "It had to have been a couple of years ago, at least. I guess I grew a good amount to start off with. After they started growing, I was easily a c-cup in most brands by the end of that year. But then they just kept growing, and growing. I never really thought it was anything to be concerned about though."
@@ -431,7 +431,7 @@ label BE005_c1:
     MC "Tease."
     jump BE005_after
 
-label BE005_c2:
+label BE005_c2_old:
     "Why does the mouth say things the brain wants to say, yet knows is dumb to state at the same time? Luckily, Honoka's reaction was as upbeat as ever."
     show BE happy
     BE "Oh... the urge to taunt you and go 'Why not find out for yourself, big boy?' is palpable."
@@ -454,7 +454,7 @@ label BE005_c2:
     MC "And the comfort goes to awkwardness in three seconds flat..."
     jump BE005_after
 
-label BE005_after:
+label BE005_after_old:
     MC "Well, I guess I should get going, need to find out what I'm getting after all."
     show BE neutral
     BE "The way you say it makes it sound like you're in line to get a superpower or something. Unless you get ultra-muscles, I don't think you'll be fighting any crime soon."
@@ -463,7 +463,7 @@ label BE005_after:
     BE "Bye Kei-chan, was nice running into you!"
     jump daymenu
     
-label BE006:
+label BE005:
     scene Classroom Day with fade
     "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool…"
     "As I entered homeroom, it was obvious that everyone was talking about their discoveries already. It was just much louder than it typically was. Tones ranged from excitement and pride to confusion and sadness. Well, that's what the school was for, I suppose. To give everyone here a place to discuss their bodies in a safe environment. Still, it made me wonder if my trait was common or an oddity. I guess there was plenty of time to find out."
@@ -498,11 +498,11 @@ label BE006:
     BE "I aim to please. So, tell me, any plans for how you're going to deal with your hair? Going to go ahead and grow it out for a while, to try something new?"
     menu:
         "Eh, I don't really care, it's just hair.":
-            jump BE006_c1
+            jump BE005_c1
         "Maybe. You think it'd look good?":
-            jump BE006_c2
+            jump BE005_c2
 
-label BE006_c1:
+label BE005_c1:
     $setAffection("BE", -1)
     show BE sad
     BE "Well, yeah, sure. But it's still part of you. Not going to embrace it, even a little?"
@@ -513,7 +513,7 @@ label BE006_c1:
     BE "Oh, okay. Understood."
     jump daymenu
     
-label BE006_c2:
+label BE005_c2:
     BE "Well, it couldn't hurt to try something out, right? Plus you've got the benefit of it growing super fast, so you could try out a new hairstyle, say it sucks, then chop it all off."
     MC "That's a good point."
     BE "The downside is you'll never be able to go into the military. They'd spend thousands trying to keep your hair nice and trim and fail miserably."

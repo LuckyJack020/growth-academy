@@ -14,7 +14,7 @@ init python:
     eventlibrary['GTS003'] = {"name": "GTS003", "girls": ["GTS"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "GTS002"]], "priority": 0}
     eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "location": "library", "conditions": [[ConditionEnum.EVENT, "GTS003"]], "priority": 0}
     eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.EVENT, "GTS004"]], "priority": 0}
+    eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.EVENT, "GTS004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     
 label GTS001:
     #Intro doesn't make sense if it doesn't happen on the first day
