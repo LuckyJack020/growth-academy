@@ -618,7 +618,7 @@ label global000_sit_c1:
     MCT "Oh no!"
     show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
-    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" with Shake((0, 0, 0, 0), 0.75, dist=20)
+    MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" #with Shake((0, 0, 0, 0), 0.75, dist=20)
     menu:
         "So, Shiori-san...":
             jump global000_sit_c1_1

@@ -339,6 +339,7 @@ screen daymenu:
 
 label daymenu:
     $globalsize = getSize()
+    $renpy.choice_for_skipping()
     #Roll random events
     python:
         if gametime_eve:

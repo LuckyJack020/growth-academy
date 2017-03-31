@@ -293,6 +293,7 @@ label AE004:
     AE "I see. Well, when you do see him, tell him I would like a word with him. Thank you, that is all."
     "Shiori-san had begun to walk away, but my interest had been piqued. At this point I just had to know."
     MC "Hey, Shiori-san?"
+    show AE neutral
     AE "Hm?"
     MC "What exactly...did Daichi-san do?"
     if getAffection("AE") <= 1:
