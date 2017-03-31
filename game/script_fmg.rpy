@@ -8,13 +8,13 @@ image FMG angry = DynamicImage("Graphics/FMG-[globalsize]-angry.png")
 image FMG aroused = DynamicImage("Graphics/FMG-[globalsize]-aroused.png")
 
 init python:
-    eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "conditions": [], "priority": 0}
-    eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": 0}
-    eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": 0}
-    eventlibrary['FMG004'] = {"name": "FMG004", "girls": ["FMG"], "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": 0}
-    eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    #eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "conditions": [[ConditionEnum.EVENT, "FMG004"]], "priority": 0}
-    #eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": 0}
+    eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": 0}
+    eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": 0}
+    eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": 0}
+    eventlibrary['FMG004'] = {"name": "FMG004", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": 0}
+    eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"]], "priority": 0}
+    eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": 0}
     
 label FMG001:
     scene Track with fade #track might not be the right background?
@@ -200,6 +200,7 @@ label FMG003_c3:
     jump daymenu
     
 label FMG004:
+    #Should probably acknowledge if it was refused in scene 003
     scene Hallway with fade
     "Another day, another class over...and for once I have nothing to do..."
     "...That is until a paper ball (that Akira throw before running out of class) hit me on the head."

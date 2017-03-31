@@ -11,13 +11,13 @@ image cg BE001 = "Graphics/BE-SC-1.png"
 image cg BE002 = "Graphics/BE-SC-2.png"
 
 init python:
-    eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "conditions": [], "priority": 0}
-    eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE001"]], "priority": 0}
-    eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE002"]], "priority": 0}
-    eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE003"]], "priority": 0}
-    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "location": "roof", "conditions": [], "priority": 0}
+    eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE001"]], "priority": 0}
+    eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE002"]], "priority": 0}
+    eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.EVENT, "BE003"]], "priority": 0}
+    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     
 label BE001:
     scene Classroom Day with fade

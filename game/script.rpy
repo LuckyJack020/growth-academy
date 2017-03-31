@@ -10,7 +10,9 @@
     presetdays = {}
     datelibrary = {"testday": datetime.date(2000, 4, 7)}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
+    locationlist = ['cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track']
     debugmenu = False
+    debugenabled = True
     
     import math
 
@@ -308,30 +310,32 @@ screen daymenu:
     
     vbox:
         xalign 0.5
-        yalign 0.5
+        yalign 0.3
         
         text(getTimeString())
-        if len(eventchoices) >= 1:
-            textbutton eventtext[0] action [SetVariable("activeevent", eventchoices[0]), Jump("startevent")]
-        if len(eventchoices) >= 2:
-            textbutton eventtext[1] action [SetVariable("activeevent", eventchoices[1]), Jump("startevent")]
-        if len(eventchoices) >= 3:
-            textbutton eventtext[2] action [SetVariable("activeevent", eventchoices[2]), Jump("startevent")]
-        if len(eventchoices) >= 4:
-            textbutton eventtext[3] action [SetVariable("activeevent", eventchoices[3]), Jump("startevent")]
-        if len(eventchoices) >= 5:
-            textbutton eventtext[4] action [SetVariable("activeevent", eventchoices[4]), Jump("startevent")]
-        if len(eventchoices) >= 6:
-            textbutton eventtext[5] action [SetVariable("activeevent", eventchoices[5]), Jump("startevent")]
-    
+        for c in eventchoices:
+            hbox:
+                if len(eventlibrary[c]["girls"]) == 0:
+                    add "Graphics/no-icon.png" zoom .5
+                else:
+                    for g in eventlibrary[c]["girls"]:
+                        add "Graphics/%s-icon.png" % g zoom .5
+            hbox:
+                if eventlibrary[c]["location"] in locationlist:
+                    add "Graphics/%s-icon.png" % eventlibrary[c]["location"] zoom .5
+                else:
+                    add "Graphics/missingloc-icon.png" zoom .5
+                textbutton eventlibrary[c]["name"] action [SetVariable("activeevent", c), Jump("startevent")]
+        
     if freeday:
         fixed:
-            textbutton "Train Athletics" xalign 0.1 yalign 0.7 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-            textbutton "Train Art" xalign 0.5 yalign 0.7 action [SetVariable("activeevent", "Art"), Jump("train")]
-            textbutton "Train Academics" xalign 0.9 yalign 0.7 action [SetVariable("activeevent", "Academics"), Jump("train")]
+            textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+            textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
+            textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
             
     fixed:
-        textbutton "Toggle Debug" xalign 0.9 yalign 0.9 action SetVariable("debugmenu", not debugmenu)
+        if debugenabled:
+            textbutton "Toggle Debug" xalign 0.9 yalign 0.9 action SetVariable("debugmenu", not debugmenu)
 
 label daymenu:
     $globalsize = getSize()
@@ -344,7 +348,6 @@ label daymenu:
             gametime_eve = True
         
         eventchoices = []
-        eventtext = []
         eventcount = 3
         prefpool = []
         allpool = []
@@ -408,13 +411,6 @@ label daymenu:
                 eventchoices += renpy.random.sample(allpool, 2)
             else:
                 eventchoices += allpool
-        
-        #Events are picked, fill them out
-        for i in range(6):
-            if i >= len(eventchoices):
-                eventtext.append("")
-                continue
-            eventtext.append(eventlibrary[eventchoices[i]]["name"] + ' ' + ' '.join(eventlibrary[eventchoices[i]]["girls"]))
         
     scene black
     window hide None
