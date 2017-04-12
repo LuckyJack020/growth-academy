@@ -11,8 +11,11 @@
     datelibrary = {"testday": datetime.date(2000, 4, 7)}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track']
-    debugmenu = False
+    debuginfo = False
     debugenabled = True
+    debugscene = ""
+    debugsceneinput = ""
+    
     
     import math
 
@@ -93,7 +96,7 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, FLAG, GAMETIME, AFFECTION, SKILL, PRESET = range(6)
+        EVENT, FLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET = range(8)
     
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN = range(4)
@@ -136,6 +139,18 @@
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[1]))
                     criteriavalid = False
                     break
+            elif c[0] == ConditionEnum.ISDAYTIME:
+                if gametime_eve:
+                  criteriavalid = False
+                  break
+                else:
+                    continue
+            elif c[0] == ConditionEnum.ISNIGHTTIME:
+                if not gametime_eve:
+                    criteriavalid = False
+                    break
+                else:
+                    continue
             elif c[0] == ConditionEnum.AFFECTION:
                 if c[2] == ConditionEqualityEnum.LESSTHAN:
                     if getAffection(c[1]) >= int(c[3]):
@@ -221,7 +236,7 @@
             return skills[s]
     
     def getTimeString():
-        s = gametime.strftime("%a %B %d, %Y")
+        s = gametime.strftime("%a %B %d, 20XX")
         if gametime_eve:
             s += " (Evening)"
         else:
@@ -266,7 +281,7 @@ label start:
         scenecountmax = 10
         eventchoices = []
         activeevent = ""
-        gametime = datetime.date(2000, 4, 2)
+        gametime = datetime.date(2005, 4, 4)
         gametime_eve = False
         eventpool = []
         preferredpool = []
@@ -289,7 +304,12 @@ label splashscreen:
     return
     
 screen daymenu:
-    if debugmenu:
+    if gametime_eve:
+        add "Graphics/ui/menubg-evening.png"
+    else:
+        add "Graphics/ui/menubg-day.png"
+    
+    if debuginfo:
         vbox:
             xalign 0
             yalign 0
@@ -308,34 +328,178 @@ screen daymenu:
             text ("Art: %d" % skills["Art"])
             text ("Academics: %d" % skills["Academics"])
     
-    vbox:
-        xalign 0.5
-        yalign 0.3
+    text(getTimeString()):
+        xalign 0.1
+        yalign 0.1
         
-        text(getTimeString())
-        for c in eventchoices:
-            hbox:
-                if len(eventlibrary[c]["girls"]) == 0:
-                    add "Graphics/no-icon.png" zoom .5
-                else:
-                    for g in eventlibrary[c]["girls"]:
-                        add "Graphics/%s-icon.png" % g zoom .5
-            hbox:
-                if eventlibrary[c]["location"] in locationlist:
-                    add "Graphics/%s-icon.png" % eventlibrary[c]["location"] zoom .5
-                else:
-                    add "Graphics/missingloc-icon.png" zoom .5
-                textbutton eventlibrary[c]["name"] action [SetVariable("activeevent", c), Jump("startevent")]
-        
+    #event choices (3-choice day)
+    if len(eventchoices) <= 3:
+        vbox:
+            xalign 0.5
+            ypos 120
+            spacing 60
+            for c in eventchoices:
+                fixed:
+                    xmaximum 600
+                    ymaximum 60
+                    if eventlibrary[c]["location"] in locationlist:
+                        imagebutton idle "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
+                    else:
+                        add "Graphics/ui/bgicon-missing.png"
+                    hbox:
+                        spacing -120
+                        order_reverse True
+                        if len(eventlibrary[c]["girls"]) == 0:
+                            add "Graphics/ui/charicon-missing.png"
+                        else:
+                            for g in eventlibrary[c]["girls"]:
+                                add "Graphics/ui/charicon-%s.png" % g
+                
+    #event choices (6-choice day)
+    if len(eventchoices) > 3:
+        grid 2 3:
+            xalign 0.5
+            ypos 120
+            spacing 60
+            for c in eventchoices:
+                button:
+                    xmaximum 250
+                    ymaximum 60
+                    action [SetVariable("activeevent", c), Jump("startevent")]
+                    if eventlibrary[c]["location"] in locationlist:
+                        add "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] crop(0, 0, 250, 60)
+                    else:
+                        add "Graphics/ui/bgicon-missing.png"
+                    hbox:
+                        spacing -120
+                        order_reverse True
+                        if len(eventlibrary[c]["girls"]) == 0:
+                            add "Graphics/ui/charicon-missing.png"
+                        else:
+                            for g in eventlibrary[c]["girls"]:
+                                add "Graphics/ui/charicon-%s.png" % g
+    
+    #studying activities (non-special day)
     if freeday:
-        fixed:
-            textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-            textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
-            textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
+        textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+        textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
+        textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
             
-    fixed:
-        if debugenabled:
-            textbutton "Toggle Debug" xalign 0.9 yalign 0.9 action SetVariable("debugmenu", not debugmenu)
+    #debug menu toggle (if debug is enabled)
+    if debugenabled:
+        textbutton "Toggle Debug" xalign 0.9 yalign 0.9 action SetVariable("debuginfo", not debuginfo)
+        textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
+        
+screen debugmenu:
+    $debugscene = ""
+    $debugsceneinput = ""
+    grid 3 9:
+        xalign 0.5
+        yalign 0.5
+        
+        text "Show Scene:"
+        input value VariableInputValue("debugsceneinput")
+        textbutton "Go!" action Jump("debugscene")
+        
+        text "Girl"
+        text "Affection"
+        text "Scenes"
+
+        text "BE"
+        hbox:
+            textbutton "-" action Function(setAffection, "BE", -1)
+            text str(affection["BE"])
+            textbutton "+" action Function(setAffection, "BE", 1)
+            
+        hbox:
+            textbutton "-" action Function(setScenecount, "BE", -1)
+            text str(scenecounter["BE"])
+            textbutton "+" action Function(setScenecount, "BE", 1)
+            
+        text "GTS"
+        hbox:
+            textbutton "-" action Function(setAffection, "GTS", -1)
+            text str(affection["GTS"])
+            textbutton "+" action Function(setAffection, "GTS", 1)
+            
+        hbox:
+            textbutton "-" action Function(setScenecount, "GTS", -1)
+            text str(scenecounter["GTS"])
+            textbutton "+" action Function(setScenecount, "GTS", 1)
+            
+        text "AE"
+        hbox:
+            textbutton "-" action Function(setAffection, "AE", -1)
+            text str(affection["AE"])
+            textbutton "+" action Function(setAffection, "AE", 1)
+            
+        hbox:
+            textbutton "-" action Function(setScenecount, "AE", -1)
+            text str(scenecounter["AE"])
+            textbutton "+" action Function(setScenecount, "AE", 1)
+            
+        text "FMG"
+        hbox:
+            textbutton "-" action Function(setAffection, "FMG", -1)
+            text str(affection["FMG"])
+            textbutton "+" action Function(setAffection, "FMG", 1)
+            
+        hbox:
+            textbutton "-" action Function(setScenecount, "FMG", -1)
+            text str(scenecounter["FMG"])
+            textbutton "+" action Function(setScenecount, "FMG", 1)
+
+        text "BBW"
+        hbox:
+            textbutton "-" action Function(setAffection, "BBW", -1)
+            text str(affection["BBW"])
+            textbutton "+" action Function(setAffection, "BBW", 1)
+            
+        hbox:
+            textbutton "-" action Function(setScenecount, "BBW", -1)
+            text str(scenecounter["BBW"])
+            textbutton "+" action Function(setScenecount, "BBW", 1)
+            
+        text "PRG"
+        hbox:
+            textbutton "-" action Function(setAffection, "PRG", -1)
+            text str(affection["PRG"])
+            textbutton "+" action Function(setAffection, "PRG", 1)
+            
+        hbox:
+            textbutton "-" action Function(setScenecount, "PRG", -1)
+            text str(scenecounter["PRG"])
+            textbutton "+" action Function(setScenecount, "PRG", 1)
+        
+        #hbox:
+        #    text "Athletics:"
+        #    textbutton "-" action Function(setSkill, "Athletics", -1)
+        #    text str(skills["Athletics"])
+        #    textbutton "+" action Function(setSkill, "Athletics", 1)
+            
+        #hbox:
+        #    text "Art:"
+        #    textbutton "-" action Function(setSkill, "Art", -1)
+        #    text str(skills["Art"])
+        #    textbutton "+" action Function(setSkill, "Art", 1)
+            
+        #hbox:
+        #    text "Academics:"
+        #    textbutton "-" action Function(setSkill, "Academics", -1)
+        #    text str(skills["Academics"])
+        #    textbutton "+" action Function(setSkill, "Academics", 1)
+        
+        textbutton "Return to game" action Jump("daymenu_noadvance")
+        text ""
+        text ""
+        
+        
+label debugscene:
+    if debugsceneinput in eventlibrary:
+        $activeevent = debugsceneinput
+        jump startevent
+    "I couldn't call that scene. Check the spelling and case (it's case sensitive, for example 'BE001')"
+    jump debugmenu
 
 label daymenu:
     $globalsize = getSize()
@@ -416,6 +580,18 @@ label daymenu:
     scene black
     window hide None
     call screen daymenu
+    window show None
+    
+label daymenu_noadvance:
+    scene black
+    window hide None
+    call screen daymenu
+    window show None
+    
+label debugmenu:
+    scene black
+    window hide None
+    call screen debugmenu
     window show None
 
 label startevent:

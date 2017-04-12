@@ -17,8 +17,10 @@ init python:
     eventlibrary['AE004'] = {"name": "AE004", "girls": ["AE"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "AE003"]], "priority": 0}
     eventlibrary['AE005'] = {"name": "AE005", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     eventlibrary['AE006'] = {"name": "AE006", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"]], "priority": 0}
-    eventlibrary['AE008'] = {"name": "AE008", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE007"]], "priority": 0}
+    eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
+    eventlibrary['AE008'] = {"name": "AE008", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE007"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
+    eventlibrary['AE009'] = {"name": "AE009", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE008"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
+    eventlibrary['AE009'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
     eventlibrary['AE100'] = {"name": "AE100", "girls": ["AE", "FMG"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     
 label AE001:
@@ -840,6 +842,294 @@ label AE008:
     AE "Stand...Bow."
     "Shiori san bent over, bowing to the invisible teacher...when she looked back. Her back was arched, and it was impossible not to see her twin mounds, covered by her blue skirt, sticking straight out to see. She looked back, put her hands on her butt and squeezed as the color drained from her face."
     "I dared not look any more, for fear of being seen, and quickly left the library prepared to face a the rest of the day, admittedly, with a new level of concern for my classmate."
+    jump daymenu
+    
+label AE009:
+    scene Hallway with fade
+    "The sound of rubber squeaking against the laminated floors echoed as I ran down the hall. I briskly rounded the hallway corner, just barely missing another student."
+    MCT "Damnit, Diachi! You just had to play that homemade documentary, didn't you?! Shiori-san is going to tear me to shreds!"
+    "I hadn't been keeping an eye on the time. I went back to my dorm to grab a bite to eat before I went to the office, but as soon as I got in Daichi decided it was a good idea to sit me down to show me a video he made about the how the School profits are being diverted to some shady Biotech company that I'd never heard of."
+
+    scene Office with fade
+    "I slowed down as I neared the library door, composing myself before entering. I made my way through and entered the office, where Shiori-san was writing a report of some kind."
+    show AE neutral with dissolve
+    AE "There you are, Hotsure-san. I wanted to-"
+    MC "I'm really sorry I'm late."
+    "Shiori-san winced for a moment, and then replied after a few seconds."
+    AE "...It's fine Hotsure-san, just try to be more punctual in the future."
+    MC "I hurried to head over here as soon as I-"
+    MCT "GAK! DON'T SAY HURRY!"
+    show AE angry
+    AE "...You didn't run to get here, did you?"
+    MCT "Eeeeeehhhhh."
+    MC "Kind of?"
+    AE "You-w-nghh. Nevermind. I had something I wanted to ask you about first."
+    MC "Already? You don't want me to start working to catch up?"
+    show AE neutral
+    AE "It can wait. I need you to answer this."
+    MCT "Woah...Shiori-san is being really serious with this. It must be important."
+    MC "Oh. Okay, sure."
+    AE "When we do the morning introductions, is my...growth a problem?"
+    MC "Um...what do you mean by problem?"
+    AE "Is it distracting to you? Unsightly? If you find the situation unsettling I will take precautions to stop it."
+    menu:
+        "Absolutely not.":
+            jump AE009_c1
+        "Yes, but it's fine":
+            jump AE009_c2
+            
+label AE009_c1:
+    MC "Not at all. I mean, I usually close my eyes whenever I bow, so it's no big deal."
+    AE "Hm... I suppose that if we all bowed at the same time it wouldn't be too much of a problem."
+    MC "Exactly. You can rest assured that I'm not..."
+    extend " You know, gawking."
+    AE "Good. I didn't want to have to file a request for seat transfer. However, since it seems as though it won't be affecting you no action will need to be taken."
+    jump AE009_after
+
+label AE009_c2:
+    MC "Well, I guess in a way it is kind of distracting, yeah. But, I wouldn't say it's that big of a deal."
+    if getAffection("AE") >= 4:
+        $setAffection("AE", 1)
+        show AE sad
+        AE "Getting distracted isn't a big deal? Hotsure-san your academic standing is one of my top priorities, if for any reason you feel distracted I would not hesitate-"
+        MC "Shiori-san, it's fine! Really. I should be apologizing for not paying attention."
+        AE "Hotsure-san, you don't need to say things like that. It's my duty as class president to make sure that you are given an efficient learning environment."
+        MC "But it's mine as an individual to adapt to situations. You don't need to take any precautions for my stumblings, besides, I can learn responsibility by reminding myself to keep focused."
+        "Shiori-san seemed conflicted for a moment, in not slightly agitated. She let out a sigh and nodded."
+        show AE neutral
+        AE "Right. Well, that's that then."
+    else:
+        $setAffection("AE", -1)
+        AE "How so?"
+        MC "Huh? Oh, well, I notice it a lot, but it's not like, that big of a deal. I mean, it's normal to stare a bit."
+        "Shiori-san looked at me with concerned eyes, her brow furrowed in a mix of confusion and what felt like a hint of contempt."
+        show AE angry
+        AE "Well, if you would please, cease that behavior. If you get distracted it makes the class look bad. Furthermore, I would appreciate that you didn't...gaze at me in the manner that you're implying."
+        MC "O-oh! No, no, no, I didn't mean it in that way. I meant more like, it's abnormal to see someone with a body like yours and...I..."
+        MCT "Rest in peace Hotsure, you blithering idiot."
+        AE "..."
+        AE "Just...just make sure that you correct yourself, good?"
+        MC "Yeah."
+        show AE neutral
+        AE "Well, I suppose I won't be needing this then."
+    jump AE009_after
+
+label AE009_after:
+    "Shiori-san took the piece of paper she had until recently been filling out and folded it twice before carefully placing it in the waste bin."
+    AE "So, shall we get to work?"
+    MC "Yeah."
+    "Like before, Shiori-san wrote away while I took the files she filled and put them in the correct cabinets."
+    "I was just about to get done with my first stack when I head Shiori-san speak up from behind me."
+    AE "So...Is there anything on your mind?"
+    MCT "Any...huh?"
+    "I was taken aback for a moment, before realizing what had happened. Shiori-san wanted to start a conversation."
+    MC "Sh-Shiori-san?"
+    AE "Well, you said that having a conversation helped you work efficiently, yes? Then let's begin."
+    "I couldn't help but smile a bit, I hadn't expected this, so I scrambled for a conversation topic really quick."
+    MC "So, the academy itself, what do you think?"
+    AE "Can you be specific?"
+    MC "Well, how does it compare to your old school?"
+    AE "Seichou is far better. So far I've only had to deal with minor infractions every now and then."
+    MC "Barring the whole, you know, thing with those guys a while ago?"
+    AE "Including. It was supposedly nothing but childish comments, I'm used to dealing with that."
+    MCT "I guess she's right, getting flak for being the class president should be kind of expected...but wait."
+    MC "Used to it? So, you've been in a position like this before?"
+    AE "Of course. If I hadn't, and hadn't been good at it, I wouldn't have been chosen to be the class president by the school board."
+    MC "Oh yeah. I heard that it was an abnormal election, for the most part. No one wanted to step up aside from you."
+    AE "Indeed. Actually, if we can go back to the topic of infractions, I would like to know why you were late."
+    MCT "Oh boy, here we go."
+    MC "Daichi. Enough said?"
+    AE "No."
+    MC "Oh. Well, uh, Daichi-san kinda forced me down and had me watch a video he made about a conspiracy he thought up."
+    show AE sad
+    AE "...I truly do not envy you."
+    MC "Right?"
+    show AE neutral
+    AE "What he needs is strict discipline, and I swear I will bring it right to him once I have justification."
+    MCT "Yikes. This is getting kind of intense. I think I should dial it back a bit."
+    MC "S-so yeah, uh, you like this school better than your last? That's good. And, you know, I think the reason why the students here have less rules broken and stuff is because everyone is here under...you know, the same circumstances."
+    AE "I don't believe that for a second."
+    MC "..."
+    "The silence hung there in the room, coming out of left field, along with the drastic change in tone from Shiori-san. The way she said that...just didn't feel right."
+    "I opened my mouth to say something, when Shiori-san spoke up."
+    AE "Well now, Hotsure-san, it seems like you're nearly finished with the stack."
+    MC "O-oh, yeah! Just a few more left after this."
+    "Shiori-san layed down a few more pages which I picked up readily, preparing to place them in the final slots."
+    MC "Two aaaand, done."
+    show AE happy
+    AE "I must say, Hotsure-san, you're getting very good at this."
+    MC "Actually, yeah, I'm really feeling like i'm getting my stride here."
+    show AE neutral
+    AE "Glad to hear, because I have these."
+    "Shiori-san plopped down a second pile on the desk in front of me, around twice the size as the last."
+    MC "Shiori-san...what are these?"
+    AE "These are the second batch that I also had done before you came."
+    MC "U-um, Shiori-san? How am I supposed to file all of these?"
+    AE "Consider it your punishment for your tardiness."
+    MCT "EEEEHHHHHH?!"
+    MC "A-are you sure? I mean, it could take all day! You wanna go home too, right?"
+    AE "I can wait."
+    
+    show black with fade
+    "After facing a hellscape of papers, I finally got to leave...once Shiori-san had enough pity for me to let me go."
+    jump daymenu
+    
+label AE010:
+    scene Hallway with fade
+    "I walked down the hallway, getting ready to meet Shiori-san at the office. I heard that shipping and processing had been getting a lot of orders recently, so I figured that today would be a busy one."
+    MCT "Hmm? Wait...Shiroi-san?"
+    "Shiori-san stood by the entrance to the library, holding a stack of yellow sheets in both arms. The spectacled girl had her back against the hallway wall, looking at me from the side."
+    MC "Hey, Shiori-san! Have you been waiting out here for me?"
+    show AE neutral with dissolve
+    AE "Good day, Hotsure-san, I had to get these papers from inventory, so I figured we would meet here around the same time."
+    MC "Need me to get those?"
+    "Shiori-san stepped back a bit when I put my hands out."
+    show AE sad
+    AE "N-no, it's fine."
+    MC "Okay, then. Here, let me get the door."
+    "I held the door for a bit before Shiori-san looked at me with determined eyes."
+    show AE neutral
+    AE "You go first."
+    MC "Um...Alright then."
+    
+    scene Library with fade
+    "We walked through the library, Shiori-san following closely behind me, until we reached the office door."
+    MC "Want me to take those, so you can unlock it?"
+    show AE with dissolve
+    AE "Here. The key is on the stack. Take it."
+    MC "Okay...? Thanks."
+    MCT "That's a bit convenient, isn't it?"
+    "Taking the key in hand, I inserted it and turned the knob. The lights were flicked on and I went to my station."
+    
+    scene Office with fade
+    MC "So, Shiori-san, what's with the stack of papers?"
+    show AE neutral with dissolve
+    AE "These forms are going to processing after they're filled out, don't worry about them."
+    MC "Ok."
+    MCT "Doesn't really tell me anything, but whatever."
+    AE "Right, well, turn around and get to work."
+    MC "..."
+    AE "..."
+    MC " Um...are you gonna start filling some out so I can...you know?"
+    AE "There's still some stacks you've yet to file from last time. I can start approving these forms here while you work."
+    MC "Oh, ok. I'll just get those then."
+    "I moved to go pick up a stack next to Shiori-san, when she sidestepped away. I took it as just a courtesy, but it got strange once she turned to ensure that she was facing me."
+    MCT "Okaaaay. That's weird. It's almost like..."
+    "I would move and Shiori-san would reciprocate by maneuvering opposite to me. She tried to make her moves subtle, I could tell, but once I started to catch on, it was impossible not to notice."
+    MCT "Is she...avoiding me?"
+    "Just as a way to test my suspicion, I made an extra effort to walk over to the far cabinet towards Shiori-san rather than just reaching over. Much to my suspicion, Shiori-san backed away slightly."
+    MCT "Ok, something is definitely wrong."
+    MC "Shiori-san, is everything alright?"
+    AE "Yes, Hotsure-san. Keep working."
+    MC "It's just that you seem a bit different this morning."
+    MCT "Shiori-san stiffened up a bit, turning further a bit. She brought her thumbnail up to her mouth."
+    show AE sad
+    AE "Oh...really? How so?"
+    MCT "Why is she so apprehensive? Well, more than usual at least."
+    MC "I dunno, it's just that you aren't the same as the last time we talked, is all."
+    show AE neutral
+    AE "Yes, well...I suppose that we're the same in that regard."
+    "Shiori-san pointed at my head in the same way one would when trying to tell someone there was something on my face."
+    MCT "Huh? What is she...?"
+    "I looked off the the side to catch a glimpse when I saw it."
+    "Completely going unnoticed by me until now, my hair was definitely longer. Feeling around the back of my neck, I noticed that it went past my nape at this point, and flowed to bottom of my neck."
+    MC "Wait...how did this? When did it get this long?"
+    AE "You never noticed?"
+    MC "No, I..."
+    "I sat in confusion for a moment, trying to get a full grasp of just how my hair had grown this long without my knowledge, when I noticed Shiori-san quietly sit down and face her back to the wall. That's when it hit me."
+    MC "Shiori-san...are you also?"
+    AE "...Also what?"
+    MC "Well, if my hair has grown like this for the relatively short time I've been here, then...have you also?"
+    "Shiori-san shrunk back a bit, eyes intently glaring at me."
+    show AE angry
+    MCT "I'll take that as a yes."
+    AE "Well..."
+    MC "And that's why you've been hiding your back."
+    MCT "Now that i'm saying it out loud, I'm starting to realize how dumb I was for not noticing it earlier."
+    if getAffection("AE") >= 4:
+        "Shiori-san winced a bit when she realized that her gambit had been called, then sighed when she finally resigned to the inevitable."
+        show AE sad
+        AE "...Yes. Yes it is."
+        "Shiori-san let out as sigh. Of relief or frustration, I couldn't really tell."
+        show AE neutral
+        AE "Well, if I keep trying to hide myself then it seems neither of us will be able to get our work done."
+        AE "So I want you to...get it out of your system now." 
+    else:
+        "Shiori-san looked at me fiercely, an angry scowl spread across her face in return for what she took as grave disrespect."
+        show AE angry
+        AE "N-now hold on! I would recommend you keep your comments to yourself."
+        MC "Shiori-san?"
+        AE "My personal affairs are my own, and if I choose to...evade your gaze, I have every right to."
+        MC "Sorry, I didn't mean anything by it."
+        show AE neutral
+        AE "Look. Just get it out of your system now so we can continue our day."
+    "Shiori-san took her back away from the wall and finally did it."
+    MC "Out of my system? Shiori-san, I'm not going to insult y-"
+    "Shiori-san finally turned around."
+    #Zoom-in or CG or something?
+    MC "W-HOA MY GOD!"
+    "I took the full force of the sight at once. Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
+    "Both cheeks were blown up to the size of full balloons and stuck out a foot from her back, creating noticeable creases along the top of their curvature. Shiori's shelf-like hips stuck out from her sides to match her astounding ass, taking her poor skirt to it's limits in order to cover her shame."
+    "Her legs, though, didn't receive any such mercy. Her thunder thighs were in full view, as the girl could do nothing but show off her fat, chubby legs in embarrassment, her knee being the only respite until reaching her calves, which had curiously seemed to had swelled a bit too."
+    MC "Shiori-san! Y-you, you're huge!"
+    "Shiori-san turned around, blushing furiously as she brought a hand to the side of her face to avoid eye contact."
+    show AE sad
+    AE "..."
+    MC "I mean...oh my god!"
+    if getAffection("AE") >= 4:
+        AE "I get it, Hotsure-san."
+    else:
+        show AE angry
+        AE "I get it."
+    "Her response served as a reminder of the situation was in, as well as the inappropriate nature of my words."
+    MC "Oh! No, I mean, well...sorry."
+    show AE sad
+    AE "..."
+    show AE neutral
+    AE "It's fine, Hotsure-san. I realize that it's...off putting, but now that that's over, we can continue work uninterrupted."
+    MC "Y-yeah."
+    "I got to work on the stack of last time's papers. An awkward silence permeated the room as we both tried to get over what had just happened. I kept trying to focus on my job, but my mind kept racing back to the image of Shiori-sans rear."
+    MCT "Damn it, how was that supposed put my mind at ease again?!"
+    MCT "I gotta at least try to start off a conversation, if I don't I'll be standing here all day."
+    MC "Did..."
+    AE "Hmm?"
+    MC "Did that happen over night?"
+    AE "...I don't believe so. It's just that I need a larger uniform and I've yet to get one, is all."
+    MC "I would have figured that you would ordered early."
+    AE "I did. As it so happens there was a backlog."
+    "Shiori-san took another stack of yellow papers and placed them on her desk."
+    AE "This is the backlog."
+    MC "So, that's what those were."
+    AE "Yes, and the sooner it's done the sooner I can get out of this embarrassing situation."
+    MC "So, what, then students just have to wait until their clothes get too big?"
+    AE "Well, yes, however the School has a partnership with a local tailor. If you pay a premium then you can get your clothes fixed at any time."
+    MC "Oh, really? I didn't know that."
+    AE "Most students don't, to be honest. That's why the student council is thinking of ways to get the message out."
+    MC "Why don't you do that? Get your clothes fitted?"
+    AE "..."
+    "Shiori-san sat in silence for a moment, but spoke up again after a brief period."
+    AE "I would have to fill out more forms then. My clothes aren't as high a priority as my work."
+    MC "They seemed pretty high priority..."
+    MCT "I shouldn't get into it."
+    AE "What?"
+    MC "Nothing."
+    AE "Hm."
+    "We kept working for a bit, until Shiori-san put her pencil down and stacked the papers."
+    AE "There. Forms filled."
+    MC "Oh, cool. Should I keep working?"
+    AE "No, actually, I think that should be it for today. I need to get these back to processing."
+    MC "Ok. I'll head out too then."
+    "I closed the file cabinet, and prepared to head out, backpack in tow, when Shiori-san stopped me in the middle of the room."
+    AE "Wait, Hotsure-san, before you go..."
+    MC "Hm? What's up?"
+    AE "I think it goes without saying, but...could you not bring up earlier to anyone? I showed you...why I was worried in order to ease your mind, nothing else."
+    MC "Oh, don't worry about it. It's okay, I mean, as long as you don't go around talking about my rat's-nest hair."
+    AE "I won't."
+    MC "Cool."
+    scene Library with fade
+    "As we walked out, I couldn't help but catch a glimpse of Shiori-san's butt. It wobbled as she shuffled along, swishing side to side as the bottom of her skirt fabric swayed with her movements."
+    MCT "H-hey, c'mon man, don't."
+    "My eyes snapped back up to attention, thankfully keeping me from running into the library door frame. I walked out, and headed into the hall to continue my day."
     jump daymenu
 
 label AE100:

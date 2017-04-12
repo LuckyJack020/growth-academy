@@ -27,13 +27,14 @@ label BBW001:
     scene Cafeteria with fade
     MC "Well! That was... a first day. I didn't expect the school to be exactly like my old one, but on a list of unexpected surprises I didn't think..."
     MC "OK, I guess I couldn't have expected it for it to be a surprise."
-    extend " But still, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised. At least food is familiar enough. A nice snack after class is normal, right?"
+    extend " But still, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised."
+    MC "At least food is familiar enough. A nice snack after class is normal, right?"
     UNKNOWN "I'm sorry, you must not know who you're talking to."
     MC "I wonder who that is."
     "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef’s outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
     show BBW angry with dissolve
     BBW "The name is Alice Nikumaru."
-    extend " I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
+    BBW "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
     extend " A missive to let you all know that I am here and that special accommodations to satisfy me would be instituted."
     Lunch "If you have an allergy or other dietary need, I would have been told."
     BBW "You there. Tell... Madame Hairnet here who I am."
@@ -42,13 +43,14 @@ label BBW001:
     BBW "I am THE student, as far as you are concerned. You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     MCT "You didn't hear the part about me being in your class, did you?"
     BBW "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
-    extend " Francois here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
+    BBW "Francois here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
     Lunch "We make enough food for even the fat kids. Don't worry, you'll get your share."
     show BBW angry
     BBW "I am NOT some 'fat kid'. I am not even obese."
     show BBW neutral
     BBW "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that you – as qualified for this job as you may be – can not meet."
-    BBW "Now, I've already gone to the trouble of ordering the equipment you probably don't have – wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends – but he will need, say, 20%% of your workspace emptied out and handed over to him."
+    BBW "Now, I've already gone to the trouble of ordering the equipment you probably don't have – wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends..."
+    BBW "But he will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
     show BBW happy
     BBW "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
@@ -60,7 +62,7 @@ label BBW001:
     extend " Yourself."
     show BBW haughty
     BBW "Do you really expect me to subject my dainty hands and creamy skin to the raw ingredients that come with making a three-star meal?"
-    extend " Do you have any idea how much this manicure costs? What would handling an ox tongue or a raw Cornish game hen do to it?"
+    BBW "Do you have any idea how much this manicure costs? What would handling an ox tongue or a raw Cornish game hen do to it?"
     Lunch "If you don't get out of my kitchen in the next five seconds, you'll be dunking that expensive manicure in cold, greasy dishwater as I have you scrubbing every pot and pan we have."
     show BBW angry
     BBW "You... You wouldn't."
@@ -137,7 +139,8 @@ label BBW002:
     show BBW haughty
     BBW "I know that. I've lived here for most of my life. And 'common' may be the best word for what I am eating. I would never have known what this uninspired morsel was if you hadn't told me."
     "She ate the forkful of fish, her face displaying bland disgust."
-    BBW "So tell me this: why, when there are literally hundreds of ways of turning even as pedestrian a choice as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber because they are just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
+    BBW "So tell me this: why, when there are literally hundreds of ways of turning even as pedestrian a choice as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber?"
+    BBW "Is it because they are just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
     MC "I don't know. Grilled mackerel's pretty good."
     BBW "I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze, something. But I guess that's too much to ask. Just slap it on a grill, turn it after a minute, job's done, right?"
     show BBW neutral
@@ -193,7 +196,9 @@ label BBW002_c2_1:
 label BBW002_c2_2:
     MC "Other than the food, what do you think of this place?"
     show BBW neutral
-    BBW "I haven't formed an opinion yet, but my expectations are dropping rapidly. First the unwelcome surprise of this school's true purpose, then the matter of the food. And, of course, being denied the privilege of my servants. The term has begun with me being hobbled, almost as if they want me to flounder."
+    BBW "I haven't formed an opinion yet, but my expectations are dropping rapidly. First the unwelcome surprise of this school's true purpose, then the matter of the food. And, of course, being denied the privilege of my servants."
+    show BBW angry
+    BBW "The term has begun with me being hobbled, almost as if they want me to flounder."
     menu:
         "Do you really need someone to carry your books? Is even that beneath you?":
             jump BBW002_c3_1
@@ -682,7 +687,7 @@ label BBW006:
     BBW "A soprano. And a gifted one, I should say. I've been coached since I was five."
     MC "I didn't know the music club did operas."
     show BBW neutral
-    "According to the club adviser, they do not. Put more accurately, they never have."
+    BBW "According to the club adviser, they do not. Put more accurately, they never have."
     show BBW haughty
     BBW "But the higher arts are not more difficult by nature. With sufficient commitment and practice I'm sure they could put on a fair performance. And with me as the star..."
     show BBW neutral

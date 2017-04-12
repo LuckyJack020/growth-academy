@@ -8,10 +8,11 @@ image PRG angry = DynamicImage("Graphics/PRG-[globalsize]-angry.png")
 image PRG aroused = DynamicImage("Graphics/PRG-[globalsize]-aroused.png")
 
 init python:
-    eventlibrary['PRG001'] = {"name": "PRG001", "girls": ["PRG"], "location": "classroom", "conditions": [], "priority": 0}
+    eventlibrary['PRG001'] = {"name": "PRG001", "girls": ["PRG"], "location": "hallway", "conditions": [], "priority": 0}
     eventlibrary['PRG005'] = {"name": "PRG005", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     
 label PRG001:
+    scene Hallway with fade
     MC "Geez, so many first day things to let sink in. First the growing, then my roommate's chatter, and school work to put a nice little cherry on top of things."
     "As I continued to walk down the hall, I saw a student further down the hallway with a mop in her hands and a bucket by her feet as she was...mopping the floor?"
     extend " I stopped as I looked over my shoulder to see the janitor’s closet slightly ajar. Something just didn’t seem to add up right."

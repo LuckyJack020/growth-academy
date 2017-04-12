@@ -15,6 +15,7 @@ init python:
     eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "location": "library", "conditions": [[ConditionEnum.EVENT, "GTS003"]], "priority": 0}
     eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.EVENT, "GTS004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['GTS007'] = {"name": "GTS007", "girls": ["GTS"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "GTS006"]], "priority": 0}
     
 label GTS001:
     #Intro doesn't make sense if it doesn't happen on the first day
@@ -390,4 +391,57 @@ label GTS006_after:
     MC "Oh yeah... heh, I kind of lost track of time. Yeah let’s get going. Maybe if I’m lucky I’ll get a chance to see that puppy again someday."
     GTS "Maybe."
     "She replied with a small giggle as we began walking to class together."
+    jump daymenu
+
+label GTS007:
+    scene Campus Center with fade
+    "Petals danced in the breeze, carried aloft by the wind. They flowed peacefully down the pathway where I saw a figure sitting underneath the shade of a tree. Naomi’s hair moved much like the flower petals had, as I notice a paper in her hand."
+    MC "Hey there Naomi, how are things?"
+    "I called out towards her as she looked over from what looked like a letter and gave me a gentle wave of her hand."
+    show GTS neutral with dissolve
+    Naomi "Hello Keisuke, I was merely reading a letter my mother sent me. How are you?"
+    MC "I've been pretty good for the most part. Also I’m surprised people still write those."
+    "A faint smile crossed her face as she folded up the letter and placed it back into the envelope."
+    show GTS happy
+    GTS "Yes, they seem to not be in style much anymore; however, my mother greatly enjoys writing so it's become sort of a thing she does for those living far from home."
+    MC "That's pretty cool, I bet the post office loves having actual mail to give out that aren’t just bills or packages people ordered online. That’s a neat little post card too, where is it a picture of?"
+    "She looked down at the postcard in her hand that had come with the letter and lifted it towards me, showing a picture Kyoto."
+    MC "Oh hey, it's Kyoto. I thought I recognized that tower there. Is that where you’re from?"
+    show GTS neutral
+    GTS "Yes, I am."
+    MC "Interesting. I've never been to Kyoto but it always looked like a pretty neat place. I’ve heard that it's one of the best places to go for food too."
+    "There was the faintest smirk out of Naomi as her smile grew a little, giving a nod of acknowledgement as I sat down beside her."
+    show GTS happy
+    GTS "Yes, Kyoto is very well known for its cuisine. Specifically, our tofu and Kaiseki cuisine. My friends and I would often make a weekly activity to visit a new restaurant every weekend. It was rather fun and gave me a deep appreciation for my hometown. It lets you explore more than you might normally would, and sometimes you find little tucked away gems."
+    MC "Wow, that’s sounds like it’d be cool to do. Though it also sounds like it would be pretty heavy on the wallet after a while, wouldn’t it?"
+    show GTS neutral
+    GTS "Some places were more expensive than others yes, but you’ll be surprised by some of the places you find. Every now and then, we’d stumble across a place that not only had great dishes, but were also offered at a reasonable price. Heh, we’ve really expanded our list of places we can socialize. We had a bad habit of constantly claiming new spots as our favorite, only to then again change it a couple weeks later."
+    MC "Heh, that doesn’t sound like quite the bad habit to have, though now I’m trying to see if I ever did anything like that. I mean, I think I did a normal amount of exploring but it was never too extensive. Granted it might simply be because how crowded it often gets where I’m from."
+    GTS "Where are you from if you don’t mind my asking?"
+    MC "Oh, I’m from Tokyo. The big city and Gojira’s favorite playground."
+    "I joked which received a small giggle from Naomi."
+    MC "But yeah, I lived in Tokyo. Just a little bit off of Shibuya."
+    GTS "Oh wow, that must have been something. Being so close to the center of all the action, you must have seen and experienced some rather interesting things."
+    MC "Yeah quite a bit, especially during the holidays when all the tourists take over the streets. You basically turn an already crowded intersection into a literal impenetrable wall of humans. I feel bad for the people driving because well… you’re not going anywhere for quite a long while."
+    GTS "I do hope you were careful during those times. I’ve heard stories of how overwhelming Shibuya can get during the holidays, as well as some of the more nastier incidents that can take place due to all people there."
+    MC "Yeah, I was okay, I knew well enough to not get too absorbed into the larger crowds and kept away from people who could have looked like trouble. Plus it’s always good to have a couple of friends with you, makes some of the trouble makers think twice before starting anything."
+    MC "That’s just Shibuya during the big times of the year though, how about Kyoto? Is it as crowded as Tokyo?"
+    GTS "Well it would depend on the time of year I suppose. It’s very much like any big city I would imagine, but I do know that around Christmas time restaurants tend to start charging more for meals, sometimes even doubling the prices of their dishes."
+    MC "Because of all the high amounts of people I assume?"
+    GTS "I believe so, though if I recall correctly a lot of people see Christmas as a big date night event, at least in Kyoto. I recall many of my friends going out on dates to places like La Part Dieu, which is this wonderful French restaurant, or they go to Daimaru to visit the stores and see the decorations."
+    MC "Heh, I bet they saved up all year long for that night then if it’s as expensive as you say it is. I can’t say I’ve ever found myself in a scenario like that though. Which is probably for the best because I don’t know any fancy places to eat. But how about you? Did you ever do anything with someone special?"
+    "Naomi’s cheeks turned quite the adorable shade of red as her composure broke and she looked down at her letter."
+    show GTS surprised
+    GTS "M-me!? Oh no, I never have... I was always too focused on other things like helping around the house or preparing for other social events. I’ve never really had time for things like that."
+    MC "Oh? So, are you telling me you’ve never been on a date then?"
+    "I could see her face brightening up more as she tried avoiding eye contact. It was rather sweet seeing this side of her."
+    show GTS neutral
+    GTS "I’ll admit... that I have not. My schedule was and to an extent, still is, rather filled up with my responsibilities. It would have been nice to have seen what it was like, but it simply wasn’t the right time I suppose."
+    "She looked back towards me as she managed to regain herself. I gave her a small nod as I didn’t want to push too hard."
+    MC "Yeah, I guess it would be pretty tough if you’re always busy. But at the same time I wouldn’t worry too much about it. It’s like adults always tell us, “You’re young, there’s still plenty of time to fool around.” Going back to hanging out with friends, have you managed to make any new friends here?"
+    GTS "No not really, it’s been a chaotic time for many people trying to get settled in so I try not to impose on them. I’m sure in the next couple of weeks though more people will open up and and everything will fall back into a normal flow. Maybe then it’ll be a bit easier to introduce myself to more people."
+    MC "Well, if it’s okay for me to throw out there, you could hang out with me and some of my friends at some point. Can’t promise you’ll hit it out of the park in the first couple of minutes but it’s worth a shot, right?"
+    GTS "Hm... Would it be okay if I took a little time to figure out my schedule before giving you an answer Keisuke?"
+    MC "Heh, yeah, it’s okay Naomi. We’re still young after all, so take your time."
+    "I gave her a small chuckle which she gave a smile along with a nod as I then leaned back a little, enjoying the calm of the garden as well as the gentle breeze. While we remained silent for quite some time after that. Not that I’m complaining, since it was probably the most peaceful I felt in quite some time."
     jump daymenu
