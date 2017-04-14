@@ -11,6 +11,7 @@ image BBW aroused = DynamicImage("Graphics/BBW-[globalsize]-aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW-[globalsize]-haughty.png")
 
 image cg BBW001 = "Graphics/BBW-SC-1.png"
+image cg BBW002 = "Graphics/BBW-SC-2.png"
 
 init python:
     eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "location": "cafeteria", "conditions": [], "priority": 0}

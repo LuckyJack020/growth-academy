@@ -580,7 +580,7 @@ label BE007:
     MC "What do you mean?"
     BE "Like, you're going to get longer hair, I'm going to get bigger boobs. Is Alice just going to get a bigger stomach, or is it an all-over deal?"
     menu:
-        "I actually know the answer to that." if getAffection("WG") > 3:
+        "I actually know the answer to that." if getAffection("BBW") > 3:
             jump BE007_c1
         "I'm not really sure.":
             jump BE007_c2

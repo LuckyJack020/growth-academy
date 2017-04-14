@@ -382,12 +382,14 @@ label global000_BBW:
     "The first thing I noticed was that, much like the rest of the shool, the classroom seemed very big. It was much larger than any that I had been in before."
     "Whether or not this meant that there would be more students, or if this was just something that made high school different, I had no idea."
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
-    show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show cg BBW002 with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
     "She was sitting with her feet on one of the desks, but stood up and grinned when she saw us enter."
     UNKNOWN "Oh? What have we here? I guess that Shiori told you to come up here too?"
     UNKNOWN "I have everything under control here."
     BE "Who are you?"
+    hide cg with dissolve
+    show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     BBW "I'm Alice Nikumaru.{w} Charmed, I'm sure."
     "After introducing herself, Alice sat back down in her makeshift throne. Before I could open my mouth to speak, she looked past us."
     show BBW angry
