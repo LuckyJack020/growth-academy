@@ -78,12 +78,19 @@ screen choice(items):
             for caption, action, chosen in items:
 
                 if action:
+                    if "(disabled)" in caption:
+                        $caption = caption.replace("(disabled)", "")
+                        button:
+                            action None
+                            style "menu_choice_button_disabled"
 
-                    button:
-                        action action
-                        style "menu_choice_button"
+                            text caption style "menu_choice"
+                    else:
+                        button:
+                            action action
+                            style "menu_choice_button"
 
-                        text caption style "menu_choice"
+                            text caption style "menu_choice"
 
                 else:
                     text caption style "menu_caption"
@@ -97,6 +104,10 @@ init -2:
         clear
 
     style menu_choice_button is button:
+        xminimum int(config.screen_width * 0.75)
+        xmaximum int(config.screen_width * 0.75)
+
+    style menu_choice_button_disabled is button:
         xminimum int(config.screen_width * 0.75)
         xmaximum int(config.screen_width * 0.75)
 

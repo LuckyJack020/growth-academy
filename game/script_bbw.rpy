@@ -23,6 +23,8 @@ init python:
     eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "location": "gym", "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]], "priority": 0}
     eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BBW004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
     eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": 0}
+    eventlibrary['BBW008'] = {"name": "BBW008", "girls": ["BBW", "PRG"], "location": "musicclassroom", "conditions": [[ConditionEnum.EVENT, "BBW007"]], "priority": 0}
+    #eventlibrary['BBW008A'] = {"name": "BBW008A", "girls": ["BBW", "PRG"], "location": "musicclassroom", "conditions": [[ConditionEnum.FLAG, "BBW008_extrascene"]], "priority": 0}
     
 label BBW001:
     scene Cafeteria with fade
@@ -32,7 +34,7 @@ label BBW001:
     MC "At least food is familiar enough. A nice snack after class is normal, right?"
     UNKNOWN "I'm sorry, you must not know who you're talking to."
     MC "I wonder who that is."
-    "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef’s outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
+    "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
     show BBW angry with dissolve
     BBW "The name is Alice Nikumaru."
     BBW "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
@@ -78,7 +80,7 @@ label BBW001:
         "That was kind of harsh. She could at least have tried to work something out with you.":
             jump BBW001_c1_2
         "I've heard of spoiled little girls, but your own private chef? That's a whole new level.":
-            BBW "Is it ‘spoiled' to have the best that money can buy? I am Alice Nikumaru."
+            BBW "Is it 'spoiled' to have the best that money can buy? I am Alice Nikumaru."
             jump BBW001_c1_after
 
 label BBW001_c1_1:
@@ -106,7 +108,7 @@ label BBW001_c1_after:
 
 label BBW001_c2_1:
     show BBW happy
-    BBW "Not just ‘some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
+    BBW "Not just 'some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
     MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install Francois as head chef?"
     show BBW neutral with dissolve
     BBW "Francois is not a garden-variety chef you can put in charge of just any mess of underlings. His talent is best utilized when he can focus on a single diner's menu."
@@ -289,7 +291,7 @@ label BBW003_c2_1:
     BBW "Of course, I could use more help. It's a full-time job being me, and I'm always looking for people I can count on to help me. Would you be interested in a job?"
     MC "I'll... get back to you on that. I need to be somewhere else right now."
     BBW "Very well, but don't complain if I find someone else to fill the position."
-    MCT "It’d be nice to make some new friends here, but I’m not looking to be anyone’s butler..."
+    MCT "It'd be nice to make some new friends here, but I'm not looking to be anyone's butler..."
     jump daymenu
 
 label BBW003_c2_2:
@@ -449,12 +451,10 @@ label BBW005:
     menu:
         "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier.":
             jump BBW005_c1
-            #(Opens side-thread resulting in negative affection)
         "Modern medicine is pretty extraordinary. If you ended up getting really fat there's probably some surgery you can get.":
             jump BBW005_c2
         "What if you worked out? Burn those calories before they turn into fat.":
             jump BBW005_c3
-            #(Opens side-thread resulting in positive affection)
 
 
 label BBW005_c1:
@@ -817,4 +817,138 @@ label BBW007:
     BBW "Haven't you been listening? I'll need runners, people to deliver packages as they come in. I can offer you 1,000 yen an hour."
     MC "I... will think about it."
     MCT "She's actually serious about this. I wouldn't have guessed she was this sort of vigorous go-getter. I guess business runs in her blood."
+    jump daymenu
+    
+label BBW008:
+    scene Hallway with fade
+    "After another day of classes I found myself not in my dorm and not in my classroom. I wasn't heading anywhere special, I was just wandering around."
+    "After some time I found myself at the music room."
+    scene Music Classroom with fade
+    MCT "Maybe I can listen in on them practicing."
+    "But the club wasn't meeting right now. Instead there were two people, Aida and another student. It's not like I wanted to spy on them, but I was curious and they were talking loud enough to overhear them."
+    Student "-alented or not, I have no patience for someone trying to undermine my authority."
+    show PRG sad with dissolve
+    PRG "Y-yes, ma'am. But I don't think she means to be-"
+    Student "You seem to be the closest thing she has to a friend, so maybe she'll listen to you. Tell her she can either be happy in the chorus or she can look for another club to join."
+    PRG "Y-yes, ma'am."
+    "The other girl (is she the music club president?) turned away, the conversation over. Head bowed, Aida made for the door. I stepped back, but not fast enough to not get caught."
+    show PRG surprised
+    PRG "Oh! H-Hotsure-san."
+    MC "Hey, Aida."
+    MCT "Should I ask what that was about? Aida looks pretty bummed."
+    MC "Is something wrong? It looked like you were being given the third degree."
+    show PRG neutral
+    PRG "N-no. I wasn't in trouble. It's Nikumaru-san. She doesn't like being in the chorus, but Mizawa-san won't make her lead vocalist."
+    MC "Is that the club president? Is Alice butting heads with her or something?"
+    PRG "Yes. They keep getting into arguments, and now Mizawa-san is threatening to kick Nikumaru-san out if she doesn't behave."
+    MC "I haven't known her too long, but Alice doesn't seem like much of a team player. Guess I'm not surprised she's already getting into trouble like this."
+    show PRG sad
+    PRG "I-I'm supposed to t-tell her to mind herself, b-but I don't think Nikumaru will listen to me. She's kind of head strong."
+    MCT "And you're kind of a pushover."
+    MCT "Oh, that's mean. But it's not wrong."
+    menu:
+        "Well, good luck with that.":
+            $setAffection("PRG", -2)
+            show PRG surprised
+            PRG "..."
+            MCT "I could go for a soda now."
+            jump daymenu
+        "Maybe I could help.":
+            jump BBW008_prechoice
+
+label BBW008_prechoice:
+    $setAffection("PRG", 1)
+    MC "I wouldn't say Alice listens to me so much as she hears what I say. I can pass the word along for you."
+    show PRG happy
+    PRG "C-could you?"
+    show PRG sad
+    PRG "I-I don't want to trouble you, but it would be so sad if she got kicked out of the club. She's a stranger here, you know. She doesn't fit in."
+    MC "We're all strangers, but I get what you mean. She kind of fits that whole 'pushy American' stereotype, doesn't she?"
+    show PRG angry
+    PRG "Oh, no! Nikumaru-san is just very determined."
+    MCT "Determined. Sure."
+    MC "Do you know where Alice is now?"
+    show PRG neutral
+    PRG "She should be in the cafeteria. I made some snacks for her to sample while she works on setting up her business."
+    MC "Might as well deliver the news now, then."
+
+    scene Cafeteria with fade
+    "We found Alice sitting at her usual table, one hand typing on a laptop and the other picking up tea room pastries from a tray next to her."
+    show BBW happy at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    BBW "Hotsure-san, good afternoon. Thank you for bringing Aida back. I've been waiting for her for...five and a half minutes now."
+    MC "Actually she brought me here. There's something I need... Something you should know."
+    show BBW neutral
+    BBW "Oh?"
+    MC "Yeah, um... How's the music club? You're still doing that, right?"
+    BBW "Despite my feelings on how it is being managed, yes, I am still a member."
+    MC "Right, right. So I was told- That is, Aida was told..."
+    show BBW angry
+    BBW "..."
+    "I stammered a few words, and Alice became irritated quickly."
+    MC "We were told to tell you to, you know... Maybe ease up on the prima donna thing."
+    BBW "Excuse me?"
+    MC "It's not that you're... You can be a little... "
+    MC "You're going to get kicked out if you don't stop fighting with the president."
+    BBW "Oh, really? Aida, is this true?"
+    show PRG sad
+    PRG "Y-yes, Nikumaru-san."
+    BBW "You go back and tell her..."
+    MCT "She didn't understand anything I just said, did she?"
+    show PRG neutral
+    menu:
+        "Say nothing. Let Alice do what she wants.":
+            jump BBW008_c1
+        "Suggest Alice not make things worse.":
+            jump BBW008_c2
+        "Tell Alice she's in the wrong.":
+            jump BBW008_c3
+
+label BBW008_c1:
+    $setflag("BBW008_extrascene")
+    MCT "Well, if she wants to pick a fight, let her. Whatever happens is on her head."
+    show BBW haughty
+    BBW "Thank you for bringing this to my attention, Hotsure-san. My esteem for Mizawa-san was already low, but to use an intermediary like this is pathetic."
+    MC "No problem."
+    "I decided to excuse myself then. Didn't want to get caught up in this drama."
+    jump daymenu
+
+label BBW008_c2:
+    $setAffection("BBW", 1)
+    MCT "Oh man, this is going to get out of hand quickly if I don't do something."
+    MC "Maybe you shouldn't push back right away."
+    show BBW neutral
+    BBW "What do you mean? Should I let this stand-?"
+    MC "Some people just don't get the message right away, do they? Clearly the club president - this Mizawa girl - hasn't recognized your talent yet."
+    show BBW haughty
+    BBW "No, she hasn't-"
+    MC "So getting her face again won't do any good. This seems like one of those times where the person needs to realize their failure on their own."
+    BBW "And what do I do in the meanwhile? Resign myself to the chorus until Mizawa-san decides to admit she was wrong?"
+    MC "I don't think there's much you can do at the moment."
+    BBW "Are you not familiar with the phrase 'The squeaky wheel gets the grease'? If I'm supposed to wait for that tone-deaf girl to realize my talent, I will be stuck in the chorus all year."
+    MC "And have you ever heard the phrase 'The upturned nail gets hammered down'? If you keep fighting her you won't even be on the chorus."
+    show BBW angry
+    BBW "..."
+    BBW "Hmm..."
+    show BBW neutral
+    BBW "Is it just me, or are Japanese people excessively non-confrontational?"
+    BBW "Very well. Aida, forget my last order. I'll toe the line, for now."
+    BBW "But not forever, Hotsure-san. I don't intend to let my genius go ignored indefinitely."
+    MC "Wait, why are you making it sound like it's my job to get you out of the chorus?"
+    jump daymenu
+
+label BBW008_c3:
+    $setAffection("BBW", -1)
+    MC "Can't you just admit that you're in the wrong here?"
+    show BBW angry
+    BBW "I beg your pardon?"
+    MC "You're not the leader of the music club, are you?"
+    BBW "I'm the best singer-"
+    MC "That's a no, then. Well, the actual leader has made a decision, and it doesn't matter if you like it or not."
+    MC "Maybe you are the best singer, but there's more to an ensemble, a group of people, than any one person getting what they want."
+    MC "You're going to have a hard time getting along here if you don't understand that. We're all dealing with some pretty major stuff right now, not just you."
+    BBW "How dare you..."
+    "She didn't have to say anything, I knew what she was thinking. All the better, as I wasn't looking for a fight or anything."
+    MC "Just something to think about."
+    "And I turned and walked away. Maybe a bit quicker than I intended, but I didn't want to stay and get chewed out or anything."
     jump daymenu

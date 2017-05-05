@@ -235,6 +235,8 @@ label BE003:
     menu:
         "You uh, want some of my drink?" if getAffection("BE") > 3:
             jump BE003_c1
+        "You uh, want some of my drink? (disabled)(Affection too low!)" if getAffection("BE") <= 3:
+            pass
         "Maybe grab something to drink then before you get going":
             jump BE003_c2
         "Are you telling me those melons of yours don't produce milk?":
@@ -582,6 +584,8 @@ label BE007:
     menu:
         "I actually know the answer to that." if getAffection("BBW") > 3:
             jump BE007_c1
+        "I actually know the answer to that. (disabled)(Alice affection too low!)" if getAffection("BBW") <= 3:
+            pass
         "I'm not really sure.":
             jump BE007_c2
         "Maybe it's just hidden under all that weight.":

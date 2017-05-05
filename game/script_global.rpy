@@ -16,6 +16,7 @@ image Library = "Graphics/library.png"
 image Office = "Graphics/office.png"
 image Cafeteria = "Graphics/cafeteria.png"
 image Cooking Classroom = "Graphics/NYI.png"
+image Music Classroom = "Graphics/NYI.png"
 image Gym = "Graphics/auditorium.png"
 image Track = "Graphics/track.png"
 image Roof = "Graphics/roof.png"
@@ -34,6 +35,7 @@ define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define LE = Character('Yuki', color="#FF91DC")
 define UNKNOWN = Character('???', color="#FFFFFF")
+define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")

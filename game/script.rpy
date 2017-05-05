@@ -4,13 +4,15 @@
     style.menu_choice_button.hover_background = Frame("choice_bg_hover.jpg",28,9)
     style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
     
+    style.menu_choice_button_disabled.background = Frame("choice_bg_disabled.jpg",28,9)
+    
     import datetime
     
     eventlibrary = {}
     presetdays = {}
     datelibrary = {"testday": datetime.date(2000, 4, 7)}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track']
+    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
     debuginfo = False
     debugenabled = True
     debugscene = ""
