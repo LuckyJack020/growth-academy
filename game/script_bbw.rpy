@@ -13,7 +13,13 @@ image BBW haughty = DynamicImage("Graphics/BBW-[globalsize]-haughty.png")
 image cg BBW001 = "Graphics/BBW-SC-1.png"
 image cg BBW002 = "Graphics/BBW-SC-2.png"
 
-init python:
+init 2 python:
+    datelibrary['BBW_size_6'] = datetime.date(2005, 12, 10)
+    datelibrary['BBW_size_5'] = datetime.date(2005, 12, 10)
+    datelibrary['BBW_size_4'] = datetime.date(2005, 12, 10)
+    datelibrary['BBW_size_3'] = datetime.date(2005, 12, 10)
+    datelibrary['BBW_size_2'] = datetime.date(2005, 12, 10)
+    
     eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "location": "cafeteria", "conditions": [], "priority": 0}
     eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": 0}
     eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "location": "cookingclassroom", "conditions": [[ConditionEnum.EVENT, "BBW002"]], "priority": 0}

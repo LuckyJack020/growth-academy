@@ -40,10 +40,11 @@ define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 
-init python:
+init 1 python:
     eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     presetdays["4-6-F"] = ["global005"]
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
+    datelibrary['testday'] = datetime.date(2005, 4, 7)
     
 label global000:
     stop music fadeout 0.5

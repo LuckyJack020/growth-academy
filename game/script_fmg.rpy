@@ -7,7 +7,13 @@ image FMG surprised = DynamicImage("Graphics/FMG-[globalsize]-surprised.png")
 image FMG angry = DynamicImage("Graphics/FMG-[globalsize]-angry.png")
 image FMG aroused = DynamicImage("Graphics/FMG-[globalsize]-aroused.png")
 
-init python:
+init 2 python:
+    datelibrary['FMG_size_6'] = datetime.date(2005, 12, 10)
+    datelibrary['FMG_size_5'] = datetime.date(2005, 12, 10)
+    datelibrary['FMG_size_4'] = datetime.date(2005, 12, 10)
+    datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
+    datelibrary['FMG_size_2'] = datetime.date(2005, 12, 10)
+    
     eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": 0}
     eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": 0}
     eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": 0}

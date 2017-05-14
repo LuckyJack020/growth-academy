@@ -10,7 +10,13 @@ image BE aroused = DynamicImage("Graphics/BE-[globalsize]-aroused.png")
 image cg BE001 = "Graphics/BE-SC-1.png"
 image cg BE002 = "Graphics/BE-SC-2.png"
 
-init python:
+init 2 python:
+    datelibrary['BE_size_6'] = datetime.date(2005, 12, 10)
+    datelibrary['BE_size_5'] = datetime.date(2005, 12, 10)
+    datelibrary['BE_size_4'] = datetime.date(2005, 12, 10)
+    datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
+    datelibrary['BE_size_2'] = datetime.date(2005, 12, 10)
+    
     eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "location": "roof", "conditions": [], "priority": 0}
     eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE001"]], "priority": 0}
     eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE002"]], "priority": 0}
@@ -235,7 +241,7 @@ label BE003:
     menu:
         "You uh, want some of my drink?" if getAffection("BE") > 3:
             jump BE003_c1
-        "You uh, want some of my drink? (disabled)(Affection too low!)" if getAffection("BE") <= 3:
+        "You uh, want some of my drink? (disabled)" if getAffection("BE") <= 3:
             pass
         "Maybe grab something to drink then before you get going":
             jump BE003_c2
@@ -584,7 +590,7 @@ label BE007:
     menu:
         "I actually know the answer to that." if getAffection("BBW") > 3:
             jump BE007_c1
-        "I actually know the answer to that. (disabled)(Alice affection too low!)" if getAffection("BBW") <= 3:
+        "I actually know the answer to that. (disabled)" if getAffection("BBW") <= 3:
             pass
         "I'm not really sure.":
             jump BE007_c2

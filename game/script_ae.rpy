@@ -3,25 +3,45 @@ define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 
-image AE neutral = DynamicImage("Graphics/AE-[globalsize]-neutral.png")
-image AE happy = DynamicImage("Graphics/AE-[globalsize]-happy.png")
-image AE sad = DynamicImage("Graphics/AE-[globalsize]-sad.png")
-image AE surprised = DynamicImage("Graphics/AE-[globalsize]-surprised.png")
-image AE angry = DynamicImage("Graphics/AE-[globalsize]-angry.png")
-image AE aroused = DynamicImage("Graphics/AE-[globalsize]-aroused.png")
+image AE neutral = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-neutral.png",
+    "True", "Graphics/AE-1-neutral.png")
+image AE happy = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-happy.png",
+    "True", "Graphics/AE-1-happy.png")
+image AE sad = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-sad.png",
+    "True", "Graphics/AE-1-sad.png")
+image AE surprised = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-surprised.png",
+    "True", "Graphics/AE-1-surprised.png")
+image AE angry = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-angry.png",
+    "True", "Graphics/AE-1-angry.png")
+image AE aroused = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-aroused.png",
+    "True", "Graphics/AE-1-aroused.png")
 
-init python:
-    eventlibrary['AE001'] = {"name": "AE001", "girls": ["AE"], "location": "library", "conditions": [], "priority": 0}
-    eventlibrary['AE002'] = {"name": "AE002", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE001"]], "priority": 0}
-    eventlibrary['AE003'] = {"name": "AE003", "girls": ["AE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "AE002"]], "priority": 0}
-    eventlibrary['AE004'] = {"name": "AE004", "girls": ["AE"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "AE003"]], "priority": 0}
-    eventlibrary['AE005'] = {"name": "AE005", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['AE006'] = {"name": "AE006", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
-    eventlibrary['AE008'] = {"name": "AE008", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE007"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
-    eventlibrary['AE009'] = {"name": "AE009", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE008"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
-    eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
-    eventlibrary['AE100'] = {"name": "AE100", "girls": ["AE", "FMG"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+init 2 python:
+    datelibrary['AE010_deadline'] = datetime.date(2005, 4, 13)
+    datelibrary['AE_size_6'] = datetime.date(2005, 12, 10)
+    datelibrary['AE_size_5'] = datetime.date(2005, 12, 10)
+    datelibrary['AE_size_4'] = datetime.date(2005, 12, 10)
+    datelibrary['AE_size_3'] = datetime.date(2005, 12, 10)
+    datelibrary['AE_size_2'] = datetime.date(2005, 4, 10)
+    
+    eventlibrary['AE001'] = {"name": "AE001", "girls": ["AE"], "location": "library", "conditions": [], "priority": False}
+    eventlibrary['AE002'] = {"name": "AE002", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE001"]], "priority": False}
+    eventlibrary['AE003'] = {"name": "AE003", "girls": ["AE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "AE002"]], "priority": False}
+    eventlibrary['AE004'] = {"name": "AE004", "girls": ["AE"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "AE003"]], "priority": False}
+    eventlibrary['AE005'] = {"name": "AE005", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": False}
+    eventlibrary['AE006'] = {"name": "AE006", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE008'] = {"name": "AE008", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE007"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE009'] = {"name": "AE009", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE008"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["AE010_deadline"]], [ConditionEnum.ISNIGHTTIME]], "priority": True}
+    #eventlibrary['AE011'] = {"name": "AE011", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.OR, [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHANEQUALS, datelibrary["AE010_deadline"]], [ConditionEnum.EVENT, "AE010"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE100'] = {"name": "AE100", "girls": ["AE", "FMG"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
 label AE001:
     scene Library with fade
@@ -995,7 +1015,7 @@ label AE010:
     scene Library with fade
     "We walked through the library, Shiori-san following closely behind me, until we reached the office door."
     MC "Want me to take those, so you can unlock it?"
-    show AE with dissolve
+    show AE neutral with dissolve
     AE "Here. The key is on the stack. Take it."
     MC "Okay...? Thanks."
     MCT "That's a bit convenient, isn't it?"

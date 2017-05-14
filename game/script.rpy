@@ -10,14 +10,15 @@
     
     eventlibrary = {}
     presetdays = {}
-    datelibrary = {"testday": datetime.date(2000, 4, 7)}
+    datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
+    girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
     locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
     debuginfo = False
     debugenabled = True
     debugscene = ""
     debugsceneinput = ""
-    
+    debugpriorities = ""
     
     import math
 
@@ -98,10 +99,10 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, FLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET = range(8)
+        EVENT, FLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR = range(9)
     
     class ConditionEqualityEnum:
-        EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN = range(4)
+        EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
         
     def checkCriteria(clist):
         criteriavalid = True
@@ -127,6 +128,18 @@
                         continue
                 elif c[1] == ConditionEqualityEnum.GREATERTHAN:
                     if gametime <= c[2]:
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[1] == ConditionEqualityEnum.LESSTHANEQUALS:
+                    if gametime > c[2]:
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[1] == ConditionEqualityEnum.GREATERTHANEQUALS:
+                    if gametime < c[2]:
                         criteriavalid = False
                         break
                     else:
@@ -176,6 +189,12 @@
                 else:
                     criteriavalid = False
                     break
+            elif c[0] == ConditionEnum.OR:
+                if checkCriteria(c[1]) or checkCriteria(c[2]):
+                    continue
+                else:
+                    criteriavalid = False
+                    break
             else:
                 renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
                 criteriavalid = False
@@ -217,10 +236,15 @@
         return flag in flags
         
     def getSize():
-        #if gametime > 10:
-        #    return 2
-        #else:
-        return 1
+        for g in girllist:
+            for i in range(6, 1, -1):
+                if i == 1:
+                    girlsizes[g] = i
+                    break
+                s = g + '_size_' + str(i)
+                if gametime > datelibrary[s]:
+                    girlsizes[g] = i
+                    break
         
     def setSkill(s, val):
         if s not in skills.keys():
@@ -318,6 +342,7 @@ screen daymenu:
             text ("Debug info:")
             text ("Prefgirl: %s" % prefgirl)
             text ("Preferred scenes exist? %s" % prefscene)
+            text ("Girls w/ Priority: %s" % debugpriorities)
             text ("Scene limit: %d" % scenecountmax)
             text ("Girl/Aff/Scenes")
             text ("BE %(aff)d %(scene)d" % {"aff": affection["BE"], "scene": scenecounter["BE"]})
@@ -504,7 +529,7 @@ label debugscene:
     jump debugmenu
 
 label daymenu:
-    $globalsize = getSize()
+    $getSize()
     $renpy.choice_for_skipping()
     #Roll random events
     python:
@@ -518,7 +543,7 @@ label daymenu:
         eventcount = 3
         prefpool = []
         allpool = []
-        priority = 0
+        priorities = []
         prefscene = False
         #It's a preset day, don't worry about pools, just use whatever the preset says
         if getTimeCode() in presetdays.keys():
@@ -544,21 +569,23 @@ label daymenu:
             for k, v in eventlibrary.iteritems():
                 if k in clearedevents:
                     continue
+                isPriority = False
                 criteriavalid = checkCriteria(v["conditions"])
                 if not criteriavalid:
                     continue
-                if "priority" in eventlibrary[k].keys():
-                    p = eventlibrary[k]["priority"]
-                else:
-                    p = 0
-                if p > priority: #If event has a higher priority, reset all pools and stop carring about prefgirl
-                    freeday = False
-                    prefscene = False
-                    prefpool = []
-                    allpool = []
-                    priority = p
-                if p == priority:
-                    if prefgirl in v["girls"] and priority == 0:
+                if "priority" in v.keys() and v["priority"]:
+                    isPriority = True
+                    for priogirl in v["girls"]: #If event is priority, add all girls to the priority list (if they aren't already)
+                        if priogirl in priorities:
+                            continue
+                        priorities.append(priogirl)
+                        for e in allpool: #If a newly discovered priority girl is found, remove all old, non-priority events from pool
+                            if priogirl in eventlibrary[e]["girls"]:
+                                allpool.remove(e)
+                        if priogirl == prefgirl: #If a newly discovered priority girl is the preferred girl, remove all those events
+                            prefpool = []
+                if isPriority or not any(x in v["girls"] for x in priorities): #If the event is a priority or doesn't have any girls who already have priority events, add it to the list(s)
+                    if prefgirl in v["girls"]:
                         prefscene = True
                         prefpool.append(k)
                     allpool.append(k)
@@ -578,7 +605,8 @@ label daymenu:
                 eventchoices += renpy.random.sample(allpool, 2)
             else:
                 eventchoices += allpool
-        
+        debugpriorities = "".join(priorities)
+
     scene black
     window hide None
     call screen daymenu

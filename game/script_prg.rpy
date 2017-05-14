@@ -7,7 +7,13 @@ image PRG surprised = DynamicImage("Graphics/PRG-[globalsize]-surprised.png")
 image PRG angry = DynamicImage("Graphics/PRG-[globalsize]-angry.png")
 image PRG aroused = DynamicImage("Graphics/PRG-[globalsize]-aroused.png")
 
-init python:
+init 2 python:
+    datelibrary['PRG_size_6'] = datetime.date(2005, 12, 10)
+    datelibrary['PRG_size_5'] = datetime.date(2005, 12, 10)
+    datelibrary['PRG_size_4'] = datetime.date(2005, 12, 10)
+    datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
+    datelibrary['PRG_size_2'] = datetime.date(2005, 12, 10)
+    
     eventlibrary['PRG001'] = {"name": "PRG001", "girls": ["PRG"], "location": "hallway", "conditions": [], "priority": 0}
     eventlibrary['PRG005'] = {"name": "PRG005", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     

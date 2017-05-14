@@ -7,7 +7,13 @@ image GTS surprised = DynamicImage("Graphics/GTS-[globalsize]-surprised.png")
 image GTS angry = DynamicImage("Graphics/GTS-[globalsize]-angry.png")
 image GTS aroused = DynamicImage("Graphics/GTS-[globalsize]-aroused.png")
 
-init python:
+init 2 python:
+    datelibrary['GTS_size_6'] = datetime.date(2005, 12, 10)
+    datelibrary['GTS_size_5'] = datetime.date(2005, 12, 10)
+    datelibrary['GTS_size_4'] = datetime.date(2005, 12, 10)
+    datelibrary['GTS_size_3'] = datetime.date(2005, 12, 10)
+    datelibrary['GTS_size_2'] = datetime.date(2005, 12, 10)
+    
     #mostly linear for now
     eventlibrary['GTS001'] = {"name": "GTS001", "girls": ["GTS"], "location": "schoolplanter", "conditions": [], "priority": 0}
     eventlibrary['GTS002'] = {"name": "GTS002", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.EVENT, "GTS001"]], "priority": 0}
