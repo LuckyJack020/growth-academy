@@ -105,15 +105,19 @@
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
         
     def checkCriteria(clist):
+        renpy.log("i'm checking criteria")
         criteriavalid = True
         for c in clist:
+            renpy.log(str(c))
             if c[0] == ConditionEnum.EVENT:
+                renpy.log("event: " + str(c[1]))
                 if c[1] not in clearedevents:
                     criteriavalid = False
                     break
                 else:
                     continue
             elif c[0] == ConditionEnum.FLAG:
+                renpy.log("flag: " + str(c[1]))
                 if c[1] not in flags:
                     criteriavalid = False
                     break
@@ -161,6 +165,7 @@
                 else:
                     continue
             elif c[0] == ConditionEnum.ISNIGHTTIME:
+                renpy.log("isnight")
                 if not gametime_eve:
                     criteriavalid = False
                     break
@@ -190,7 +195,8 @@
                     criteriavalid = False
                     break
             elif c[0] == ConditionEnum.OR:
-                if checkCriteria(c[1]) or checkCriteria(c[2]):
+                renpy.log("or: " + str(c[1]) + str(c[2]))
+                if checkCriteria([c[1]]) or checkCriteria([c[2]]):
                     continue
                 else:
                     criteriavalid = False
@@ -237,6 +243,15 @@
             
     def getFlag(flag):
         return flag in flags
+    
+    def setVar(id, val):
+        vars[id] = val
+    
+    def getVar(id):
+        if id in vars.keys():
+            return vars[id]
+        else:
+            return None
         
     def getSize():
         for g in girllist:
@@ -307,6 +322,7 @@ label start:
         scenecounter = {'BE': 5, 'GTS': 5, 'AE': 5, 'FMG': 5, 'BBW': 5, 'PRG': 5}
         globalsize = 1
         flags = []
+        vars = {}
         scenecountmax = 10
         eventchoices = []
         activeevent = ""

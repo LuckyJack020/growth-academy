@@ -1,4 +1,5 @@
 define FMG = Character('Akira', color="#FF9900")
+define Rin = Character('Rin', color="#CC33FF")
 
 image FMG neutral = DynamicImage("Graphics/FMG-[globalsize]-neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG-[globalsize]-happy.png")
@@ -14,13 +15,14 @@ init 2 python:
     datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_2'] = datetime.date(2005, 12, 10)
     
-    eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": 0}
-    eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": 0}
-    eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": 0}
-    eventlibrary['FMG004'] = {"name": "FMG004", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": 0}
-    eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": 0}
+    eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": False}
+    eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": False}
+    eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": False}
+    eventlibrary['FMG004'] = {"name": "FMG004", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": False}
+    eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": False}
+    eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": False}
+    eventlibrary['FMG009'] = {"name": "FMG009", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": False}
     
 label FMG001:
     scene Track with fade #track might not be the right background?
@@ -305,7 +307,7 @@ label FMG004_testpass:
     MC "Ice cream? But isn't that like the worst thing you could have during a workout?"
     show FMG neutral
     FMG "True, but i'd probably burned half the calories of this ice cream pop in this run, and that's not including the rest of my workout today."
-    "I don't think that's how it works…"
+    "I don't think that's how it works..."
     FMG "Besides, I'll take eating a ice cream pop and workout the entire day then drink a fricking protein shake and workout just for only an hour any day of the week."
     MC "At least you got your priorities straight."
     show FMG happy
@@ -323,6 +325,11 @@ label FMG004_testpass:
 
 label FMG005:
     scene Hallway with fade
+    "As much as I didn’t like the shot, I am glad this is all over. Well I have nothing better to-"
+    FMG "*sniff*"
+    "That’s odd, it sounds like there’s someone crying near the corner."
+    FMG "*sob*...Why did I have to get a shot...*sob*"
+    "As I walked closer to the corner, I saw the one person I did not expect to be crying ...Akira Mizutani."
     show FMG sad
     FMG "...Hey..."
     "She looked slightly annoyed and she had her left hand on her right upper arm...but I could tell there was some moisture still under her eyes."
@@ -339,9 +346,9 @@ label FMG005_c1:
     "I did my best to try and act dumb for her sake but instead she took it the wrong way."
     show FMG angry
     FMG "MY MUSCLES!"
-    "I was taken back from her outburst,  to which she grudgingly looked away."
+    "I was taken back from her outburst, to which she grudgingly looked away."
     show FMG sad
-    FMG "Look, i'm not in the best of moods so just leave me alone for now, ok?"
+    FMG "Look, I'm not in the best of moods so just leave me alone for now, ok?"
     "She preceded to walk away from me, I figured it was best to leave her alone."
     jump daymenu
 
@@ -352,7 +359,7 @@ label FMG005_c2:
     show FMG neutral
     FMG "Heh, yeah they do, i'm guessing you heard all of that?"
     MC "Um..."
-    FMG "It's fine, just don't go spreading what's going to happen to me, I want to tell it on my own terms."
+    FMG "It's fine, just don't go spreading what just happened, I kinda have an image to uphold."
     MC "Fair enough then."
     MC "...so will you be alright?"
     FMG "Well it's not the growth that's affected me the most...it's the needles."
@@ -370,7 +377,7 @@ label FMG005_c2:
     FMG "Don't worry about it, I mean it's not something I care for, but I usually feel better when talking about it...well when I calm down at least..."
     FMG "Otherwise I'd just get mad for no good reason."
     FMG "Alright, if it's all the same to you I'd rather be alone right now."
-    FMG "But for what it's worth, thanks for the talk...I REALLY needed it."
+    FMG "But for what it's worth, thanks for the talk...I REALLY needed it. Oh and in case you were wondering, my factor is my muscles, kinda obvious in retrospect. See Ya."
     hide FMG
     "With that she left, leaving me alone next to the door to the nurse's office."
     jump daymenu
@@ -432,7 +439,7 @@ label FMG006:
             
 label FMG006_c1:
     $setAffection("FMG", 1)
-    MCN "Geez, I don't want her to feel bad just because I helped her, there's gotta be something I could... That's it!"
+    MCT "Geez, I don't want her to feel bad just because I helped her, there's gotta be something I could... That's it!"
     MC "You know what? Wait right there for a minute, okay?"
     show FMG neutral
     FMG "Huh, what are you doing?"
@@ -469,8 +476,8 @@ label FMG006_c2:
     show FMG angry
     FMG "THIS I SWEAR!!!"
     hide FMG with dissolve
-    MCN "...Aaannnd she is out of here..."
-    MCN "Well it's out of my hands now, might as well go back to the dorms."
+    MCT "...Aaannnd she is out of here..."
+    MCT "Well it's out of my hands now, might as well go back to the dorms."
     jump daymenu
 
 label FMG006_c3:
@@ -542,4 +549,48 @@ label FMG007_c3:
     FMG "Ugh, why do I even try..."
     hide FMG dissolve
     "She left before I could explain...though to be fair I don't think I could have salvaged that."
+    jump daymenu
+    
+label FMG009:
+    "The day went by as normal, the sun was setting, people were talking and hanging out, and I find myself craving a Rocco-Choco Bar from the vending machines. To my surprise, Akira was waiting near the vending machine; for the most part she seemed a little annoyed, but calm."
+    show FMG neutral with dissolve
+    FMG "Hey Kei, what's up?"
+    MC "Nothing much, just getting something from the vending machine. What's up with you?"
+    show FMG sad
+    FMG "*Sigh* I'm waiting for someone because I need to talk to her. Speak of the devil..."
+    "Just like she said, there really was someone walking towards us. A redhead with a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, it gave her this aura of disobedience and defiance."
+    "There were two big things that really made her stand out. One: her eyes were as blue, if not bluer than Alice’s, which could mean she's a foreign exchange student. And two..."
+    "...Her nipples were easily seen bulging through the fabric of her shirt."
+    UNKNOWN "Yo Akira, I'm here so what did you... wait, are you trying to hook me up with this guy?!"
+    show FMG neutral
+    FMG "What?! No! God Rin, this is something different."
+    UNKNOWN "Well sorry then but, who and why is he here?"
+    FMG "Well since you asked, this is Keisuke. He was just saying hi before you got here."
+    UNKNOWN "Oh, this is that Keisuke kid you've been spending your time exercising with? Well then, allow me to introduce myself."
+    Rin "The name’s Rin Blackbourne, pronounced Black-burn; weird last name in these parts, I know, but I was born and raised in Manchester, England after me mum moved from Japan."
+    MC "Nice to meet you. So, how do you know Akira?"
+    FMG "She’s my roommate,"
+    show FMG angry
+    extend " who by the way has STILL yet to get her dirty clothes off the bathroom floor!"
+    Rin "*sigh*, really Mizutani, that's why I'm here? Would it kill you not to bring it up every day?"
+    FMG "Let's not forget that you leave half-empty bags of potato chips all over the floor; I wouldn't care if our room didn't smell like sour cream and onions! I swear, you sure are a slob!"
+    Rin "In my defense, that Butts-in-moto brat has been watching me like a ex girlfriend, plus I’m the president of the art club! I gotta be there or else it will come crashing down like the Berlin Wall!"
+    FMG "Ugh! Why do you feel the need to push the blame on others?! Admit it, You're just lazy Rin!"
+    Rin "Akira, just because you're my roommate and stronger than me, doesn’t mean I ain't gonna knock ya bloody teeth in if ya don’t knock it off!"
+    "It looked like the both of them were going to fight it right here..."
+    MC "Um, hey gu-"
+    FMG "Ugh! I'm not dealing with this now!"
+    "Akira lashed out before walking away, all the while angry."
+    hide FMG
+    extend "Rin for her part, just looked back at me defeated."
+    Rin "*sigh* sorry you had to be part of that, she can be a little hot-headed."
+    "She apologized, before walking to the vending machine to buy chips, it's only when she grabbed the first chip she said more."
+    Rin "Heh, she is right about one thing, I really am lazy."
+    "She emphasized this by eating the chip. I honestly didn't really know how to take this, so maybe an apology was in order."
+    MC "Well, sorry if I made you uncomfortable in any way."
+    Rin "Oh no, far's I can tell, you did nothing wrong. Akira's just having some issues of her own."
+    Rin "In any case, if you really want to get along better with her, try to take her boisterous attitude with a grain of salt."
+    MC "What do you mean by that?"
+    Rin "My gut is telling me that she's hiding something, but I ain't gotta clue as to what."
+    Rin "As for me, I suppose I'll still help her when you're not around. Later Kei."
     jump daymenu

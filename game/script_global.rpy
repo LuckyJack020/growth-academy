@@ -20,6 +20,7 @@ image Music Classroom = "Graphics/NYI.png"
 image Gym = "Graphics/auditorium.png"
 image Track = "Graphics/track.png"
 image Roof = "Graphics/roof.png"
+image Nurse Office = "Graphics/office.png"
 image splash = "Graphics/splashscreen.png"
 
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
@@ -34,6 +35,7 @@ define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define LE = Character('Yuki', color="#FF91DC")
+define Nurse = Character('Nurse', color="#FF91DC")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
@@ -1072,27 +1074,27 @@ label global005:
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
-    LE "Hello, Hotsure-san, please have a seat."
+    Nurse "Hello, Hotsure-san, please have a seat."
     "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp. They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
     "What was more, she had decided to cover them in bright red lipstick. It was nearly impossible not to stare as she looked down at a clipboard full of papers."
-    LE "So, your growth factor has been confirmed to be... Heh, you like them?"
+    Nurse "So, your growth factor has been confirmed to be... Heh, you like them?"
     MCT "Oh crap, she caught me staring!"
     MC "No, I, uh, I mean, they're-"
     "Her lips actually managed to pull out into a smile, making nearly the entire bottom half of her face hidden behind them."
-    LE "It's all right, I know they can be surprising. Whenever I go off-campus I have to wear a surgical mask or I can hardly do anything for all the gawking and questions."
+    Nurse "It's all right, I know they can be surprising. Whenever I go off-campus I have to wear a surgical mask or I can hardly do anything for all the gawking and questions."
     "I just nodded and looked away, wondering what I would have to do to live a normal life."
-    LE "Anyways, your growth factor.  According to these results, you have hyper-productive hair follicles. Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
+    Nurse "Anyways, your growth factor.  According to these results, you have hyper-productive hair follicles. Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
     MC "My hair? It's always grown like a weed, that's nothing new."
-    LE "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
+    Nurse "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
     MC "And... And my sister? Does she have the same thing?  Does she have anything at all?"
-    LE "I'm sorry, but since she's not a minor anymore I'm not allowed to share her medical information with anyone she hasn't specified..."
+    Nurse "I'm sorry, but since she's not a minor anymore I'm not allowed to share her medical information with anyone she hasn't specified..."
     "I mulled over this for a few seconds while she wrote on her clipboard."
     MC "So, that's it? Is it going to be all of my hair, er, everywhere?"
-    LE "Body and head hair grow at different cycles and intensities, so it's hard to say. But we'll be sure to check up on all of your growth throughout the year, so please try and keep a record of each time you cut any of your hair."
+    Nurse "Body and head hair grow at different cycles and intensities, so it's hard to say. But we'll be sure to check up on all of your growth throughout the year, so please try and keep a record of each time you cut any of your hair."
     MC "...Do I have to?"
-    LE "No, but we're only here to help.  If you're comfortable only knowing what you know now about your condition, we won't force you. But you still have to come in for measurements and such."
+    Nurse "No, but we're only here to help.  If you're comfortable only knowing what you know now about your condition, we won't force you. But you still have to come in for measurements and such."
     MC "So, can I go?"
-    LE "Right after we take some blood, yes. Just sit still and roll up your sleeve..."
+    Nurse "Right after we take some blood, yes. Just sit still and roll up your sleeve..."
 
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
