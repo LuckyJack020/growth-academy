@@ -46,6 +46,8 @@ init 2 python:
     eventlibrary['AE014'] = {"name": "AE014", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE013"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE015'] = {"name": "AE015", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE014"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE016'] = {"name": "AE016", "girls": ["AE"], "location": "library", "conditions": [[ConditionEnum.EVENT, "AE015"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE017'] = {"name": "AE017", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
+    eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
     eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
@@ -1796,6 +1798,7 @@ label AE014:
     "I looked around to admire the sheer magnitude of the junk in the room. It's surprisingly fun to have a room you're so used to change like that."
     MC "I guess. What's with all of the tables and cabinets and stuff?"
     AE "Despite my protests, administration is temporarily utilizing the office for storage."
+    play sound "Audio/Thud.ogg"
     "*THUNK*" #TODO: replace with SFX?
     MC "ACH-Couldn't they find anywhere else?! I can barely move in here."
     AE "Be thankful you're not in my position at least. I can't move without getting, ngh, stuck every few steps."
@@ -2274,6 +2277,380 @@ label AE016_after:
     MC "Yeah, later."
     "Shiori-san walked out of the room, her rear bouncing with a light wobble with every step. Strangely enough, I hadn't noticed her ass the entire time we were together, when before I at least took sort glances. I adjusted myself in the chair, before closing my eyes and exhaling a deep breath; an indication of my planning for the rest of the day."
     jump daymenu
+
+label AE017:
+    scene Cafeteria with fade
+    "After lessons had ended, I walked out of the room. I was going to walk out with Shiori-san, like with yesterday, but a student came up addressing her as \"ma'am\" so I assumed she had further business. I got up and walked over to the cafeteria to get in line and grab some food."
+    MCT "I hope everything is alright. I should grab us a table just in case, that way she'll know I was waiting for her."
+    "Looking at the selections, it seemed as though the school had a wide variety of different foods and drinks available, definitely more than I'd seen before."
+    MC "Uaaah, look at all this stuff."
+    MCT "Hmm...I think I'll just go with the Rice and Chicken."
+    "I grabbed a bowl and began to fill it up in the self serve area; taking a few small strawberries as a little desert. After grabbing some chopsticks, I went to look for a place to sit."
+    MCT "Hmm...let's see...where can I sit where Shiori-san and I-"
+    "Almost to answer my own question, I caught a glimpse of the spectacled girl looking at me over a small partition."
+    MCT "Oh! Oh, she's here already."
+    "I went to walk over to where Shiori-san sat, and when I turned the corner I saw her talking to a short girl with large pouty lips."
+    show AE neutral with dissolve
+    AE "-and after that, I want you to tell her to get her forms in on time if she cares so much. Good? Alright, good."
+    "The girl walked in the other direction as I continued to walk over to where Shiori-san sat, her hands massaging the sides of her temples."
+    MC "Hey, you came!"
+    "Shiori-san looked up from her hands, quietly putting them back down to her sides."
+    AE "Well, I said I would, didn't I?"
+    MC "Yeah, I just didn't see you in line."
+    AE "I got here fairly early."
+    MCT "How did she get here so fast though?!"
+    MC "Ah, should have figured."
+    "I sat down at the bench and immediately began to sink in the plush cushions."
+    MC "Huh, the cushions on these benches are really soft."
+    MC "In fact, these benches are pretty wide too."
+    AE "Well, I'd suppose they'd have to be."
+    MC "Oh, yeah, because...yeah."
+    "Shiori-san looked at me softly while I mulled around. Patting the sides of the bench, I decided to ask about what happened."
+    MC "So what was that about? With the girl?"
+    AE "The art club head has been late with her forms again, I simply told Yuki-san to deliver a message."
+    MC "A-ah, ok."
+    "I twiddled my fingers a bit before reaching over and grabbing my chopsticks."
+    MC "Welp, let's eat!"
+    AE "Hm."
+    "Shiori-san took hers as well and we began to dig in. Her tray seemed fairly tame; rice, noodles, carrots, and a single piece of strange desert, already half eaten."
+    MC "What's that?"
+    AE "It's a dough pastry with Hakuto jelly. It's strange, I tried it a while back and I can't get enough of it."
+    MC "Well, can I try a bite?"
+    "Shiori-san looked at me for a moment, before taking the plate the pastry was on and passing it over to me."
+    AE "Go ahead."
+    MC "Thanks."
+    "I bit into it, and was greeted with a tangy and sweet gush of peach flavored jelly."
+    MC "Mmmn~  That's great!"
+    show AE happy
+    AE "It seems like we have common tastes then. Good."
+    MC "Yeah, I love peach suff."
+    "As I took a few more bites of the pastry, I figured it would be a good idea to share some of my food with her."
+    MC "Oh!"
+    "I picked up a strawberry, nearly dropping it for a moment."
+    MC "I got some strawberries. Want some?"
+    show AE neutral
+    AE "Oh, well I-"
+    MC "Here."
+    "I reached over the table and put it in front of her expectantly waiting. She stared at the small red thing as she slowly began to turn the same shade."
+    show AE sad
+    AE "U-um... I'm not sure it's appropriate to..."
+    MC "Eh?"
+    "I looked over at a pair of girls snickering adjacent, when I finally realized what I was doing."
+    MC "Oh! Oh, yeah, sorry. Don't wanna give people the wrong...yeah."
+    "I placed it on her tray gently, sitting back down as I stared at her. It was interesting watching her. The soft and subtle movements of her boy when she changes emotions is cute."
+    MC "Sooo..."
+    show AE neutral
+    AE "Hm?"
+    MC "Isn't it kind of strange for there to be a full cafeteria here?"
+    AE "What do you mean?"
+    MC "I mean, it's a bit of an abnormality at this level of schooling."
+    AE "Well, I suppose the board figured that it would be better to provide lunches for the students, rather than leaving it to them to bring their own."
+    MC "Yeah, it kinda feels like middle school again."
+    AE "Do you feel like that's a bad thing?"
+    MC "Hmmm..."
+    MC "Well, no, to be honest. I'm glad we have a cafeteria."
+    extend " Why? Do you?"
+    AE "To be honest, there are some things I feel the school needs to change for the sake of maturity."
+    MC "Ehhh, I dunno. Seeking maturity for the sake of just 'being mature' can often get in the way of stuff getting done."
+    AE "True. And I suppose it is necessary for students with more...voracious tendencies."
+    MC "Hm? Oh, do you mean the, uh, students who're gaining weight or...?"
+    AE "Strictly speaking, yes. They tend to consume far more than it's believed they can bring, so it's for the best that the school provides for them."
+    "My mind flashed to Nikumaru-san, as I began to doubt the part about 'far more than they can bring'."
+    AE "Besides, if we're going to bring up 'non-conventional' methods, have you noticed something about the shoe lockers?"
+    MC "Shoe lockers...?"
+    MCT "Shoe lockers...I haven't really used them...wait."
+    MC "Oh! We don't have any."
+    AE "Precisely. I'm not the only one who noticed either, I found Yamazaki-san walking around in her socks first day looking for a place to put her shoes."
+    MC "I mean...I didn't think it was as big of a deal."
+    AE "Because you haven't had to clean the floors when they're covered in mud yet; a problem which you almost contributed to a while back."
+    MC "Oh yeah...man, that must be a whole lot of extra work."
+    AE "Undoubtedly."
+    AE "I tell you, it may work fine for now, but when the rainy days really start, that's when administration will regret not installing them."
+    MC "Hmn..."
+    extend " Y-know i-"
+    "As I began to speak, I moved my hand over my tray, accidentally putting my hand on some of the peach-filling from the pastry."
+    MC "Ohp..."
+    AE "Oh, I-"
+    MC "It's alright, I can get a napkin..."
+    "I reached over to the dispenser on the end of the table, but I ended up putting my hand in an empty slot."
+    MC "Napkin...eh...there are no napkins."
+    MCT "Shiori-san would kill me if I just wiped it off on my school uniform, let alone the bench."
+    MC "A-Ah well. I can get it later."
+    AE "..."
+    MC "So, like I was saying, I actually used to forget my shoes at the door of my house all the time."
+    "Shiori-san seemed only tangentially focused on me, her eyes changing focus from my own to the mess on my hand."
+    AE "..."
+    MC "My mom got so mad at me, she made me deep wash the carpet whenever I...Um..."
+    AE "..."
+    MC "Hey S-"
+    "Without warning, Shiori-san grabbed a handkerchief from her shirt and grabbed my hand. She began to rub the spot with the jelly clean, looking intently at my hands as she did. I couldn't really do anything aside from look on in confusion; same with the group of friends next to us who watched on."
+    "She finished wiping my hand, gently moving it about with her own soft and delicate hands before she was satisfied."
+    AE "There. Clean."
+    MC "..."
+    AE "I apologize for the intrusion. Please, go on."
+    MC "U-uh...yeah."
+    MCT "What the hell was that?!"
+    MC "Uhh...W-well I, aha...um...is everything alright?"
+    AE "It's fine."
+    MC "...Okay."
+    MCT "I shouldn't question it. If I do I'll probably get an aneurysm."
+    MC "But, uh...mom! Yeah, yeah, she would often have me deep wash the carpet until I learned to put my shoes in the cubby. Needless to say, I washed the carpet until I left."
+    AE "As a soccer player?"
+    MC "E-he-yup."
+    AE "Your poor mother."
+    MC "Oy, oy! It sucked, I spent a solid forty minutes a day just cleaning the floors!"
+    AE "And that, Hotsure-san..."
+    "Shiori-san grabbed the strawberry from her tray and put it to her mouth."
+    show AE happy
+    AE "Is good parenting."
+    "She popped it in, satisfied smirk on her face as she began to chuckle in amusement. I rolled my eyes and scoffed at the ridiculous girl in front of me."
+    AE "Mmhn. I suppose we need to get heading back, the cafeteria is emptying."
+    "We stood up as Shiori-san dabbed her mouth with her handkerchief; the jelly from my hand on the other side."
+    "I looked back at the bench where Shiori-san sat. She told me she was there a while, but from the looks of it she'd been waiting for me the entire time. There was a massive indent where she sat, creating a crater that could fit about two people."
+    AE "Hotsure-san, are you coming?"
+    MC "Y-yeah! I'll be right there."
+    jump daymenu
+    
+label AE018:
+    scene Hallway with fade
+    "I sat at the windowsill waiting. My feet dangling just lightly off of the floor as I kicked them back and forth. Looking down at them, I was given a slight tunnel vision from my own black locks dangling down a few inches from my face. I looked up to the ceiling, inhaling and letting out a low gust of air from my lips. As I looked back foreward, I saw a familiar face slowly heading up the stairs."
+    MC "Oy, Shiori-san."
+    show AE neutral with dissolve
+    AE "Oh, good, Hotsure-san y-"
+    "Shiori-san's face swiftly changed to one of concern."
+    show AE sad
+    AE "H-hey, off the window sill. Off it now."
+    MC "Hm?"
+    MCT "Oh! Oh...really?"
+    MC "Um...okay?"
+    "I hopped down in time to catch Shiori-san walking over swiftly to look out the window."
+    AE "Be careful. That's a long drop from here."
+    MC "Long drop? Shiori-san the window's-"
+    show AE neutral
+    "Before I could continue, Shiori-san looked at me with an expressionless face as she lightly pushed the window, causing it to swing open at the side. She raised a single eyebrow."
+    MC "...latched."
+    AE "And you just so happened to find the one window that isn't."
+    "Shiori-san let out a light sigh, and put her hands on her hips."
+    AE "Such a helpless young man. I'm glad I've been supervising you."
+    MC "O-oy, oy!"
+    AE "Hm?"
+    MCT "..."
+    MC "Th-thank you, Shiori-san."
+    "Shiori-san stood up a little taller, a light blush crossing her face as she looked away and brushed her hair to the side."
+    AE "Y-you don't need to thank me, Hotsure-san...looking out for your well being is what's expected of me."
+    MCT "Eheh, she get's so cute when she's bashful."
+    MC "So, Shiori-san, why did you want me to wait for you up here?"
+    AE "Mm, well, I was making my rounds for monitoring the halls when I decided that we could maybe spend a little time somewhere else."
+    MC "Ok, cool. Where at?"
+    AE "Follow me."
+    "I did as Shiori-san said and followed behind as we climbed the stairs. Though it was subconsciously, I followed a bit closer than was necessary. I looked up the whole time at Shiori-san's tush as we climbed, eyes fixated on the side to side movements of her skirt with every wobble and bounce of her derriere."
+    "We climbed for a bit more until we reached our destination."
+    MC "Oh, you wanted to go to the roof?"
+    AE "Mhm. It's nice up here. Not a lot of people, nice, cool air, and a great view."
+    MC "Alright, cool."
+    scene Roof with fade
+    "Shiori-san opened the doors, and a nice gust of air swept into the doorway. It was fairly strong, and almost instantly as the wind picked up, Shiori-san's skirt was lifted a few inches as well; giving me a brief view of her behind, squeezed tightly by dark-blue panties, before she pulled her skirt back down. Shiori-san cleared her throat."
+    show AE sad with dissolve
+    AE "Ah, I apologize."
+    MC "Oh, no, it's okay."
+    MCT "Nose, I swear, if you bleed on me now..."
+    "As we walked out onto the gravelly roofing, the sun brightly gleamed in my eyes as I heard the birds around us chirp while they fluttered away to a nearby ledge."
+    MC "Oh, wow, it's really nice out today."
+    show AE neutral
+    AE "I agree. It's a bit warm, but the wind is soothing."
+    "We looked around for a place to sit, before coming across a lone metal bench."
+    MC "Ah, there we go."
+    AE "..."
+    MCT "Hm?"
+    MC "What's up?"
+    AE "I-it's nothing."
+    "Shiori-san sat down on the double wide bench, with me sitting beside her. We sat in contemplation for a moment, taking in the surroundings."
+    MC "Haaaahn~"
+    AE "..."
+    extend "Hotsure-san, do you hear that?"
+    play sound "Audio/Bird.ogg"
+    MC "Hm?"
+    AE "That bird."
+    play sound "Audio/Bird.ogg"
+    MC "Oh, yeah, it sounds nice."
+    AE "Mhm...it's a Siberian Rubythroat. They're native to the area."
+    MC "Hm? Really?"
+    AE "Yes. Many birds in northern Japan find their way over here."
+    MC "Huh, that's nice...how did you know that?"
+    AE "Ah, well, I heard it a while ago and looked up the native bird species. I referenced the bird with the image and found an article about them."
+    MC "Ahh."
+    AE "Mhm..."
+    "We sat there in silence for a bit longer. We looked out towards the distant horizon, a few grassy mountains rising over the landscape, slowly fading to blue as it gave way to the far ocean, and the ocean to the sky."
+    MC "I wonder...I wonder how far the horizon really is."
+    AE "..."
+    AE "I've never thought to ask that..."
+    MCT "How far the horizon is..."
+    MC "Hey, Shiori-san, I have a question for you?"
+    AE "Hm?"
+    MC "How often do you dream?"
+    AE "...That's a strange question to ask."
+    MC "Ehe, I figured, but I wanted to know...do you ever have any recurring dreams?"
+    AE "..."
+    "Shiori-san's face crinkled up a bit as she thought, hands tapping her thighs as she put the tongue on the inside of her cheek and looked away."
+    AE "I...suppose. Why?"
+    MC "I've been having this weird dream lately...and i've been wondering what it means."
+    AE "What it means...?"
+    MC "W-what?"
+    AE "Well...why does it need to ‘mean' anything?"
+    MC "I mean...I dunno. I guess it's just that our dreams are like a look into our minds is all."
+    AE "W-...a look into...?"
+    "Shiori-san looked at me with a look of confusion."
+    AE "I don't mean to be...off putting...but how can you prove that?"
+    MC "Well...I don't know. There are some things that you just can't prove, right?"
+    AE "A-um...with enough proper research I-I assume we can know everything there is to know...however, yes, some things can't really be proven."
+    MC "Exactly. It's a matter of faith in the idea."
+    AE "Tch-it has nothing to do with faith, it's about an unproven field of psychoanalysis."
+    MC "..."
+    MCT "I struggled to bring back the entire memory of my dream, but only one piece of it sprang forth."
+    MC "I...I remember standing on a concrete island. There was a blue sky...and blue waves."
+    AE "..."
+    MC "I was standing in front of a concrete pillar with a red number on it...four, I think...I dunno."
+    AE "Oh...well...is that all?"
+    MC "Yeah, I think so."
+    AE "How very...insightful."
+    "I looked over at Shiori-san expectantly."
+    MC "Well?"
+    AE "Hm?"
+    MC "What do you think it means."
+    AE "Oh, come on now."
+    MC "I think it's about my desire for strength and support in an unknown situation."
+    AE "I think it's about someone who needs more sleep and less caffeine."
+    MCT "Hmm, she's not really getting it."
+    MC "Alright...tell me yours."
+    AE "Come now, Hotsure-san, don't be foolish."
+    MC "Hey, I told you mine."
+    AE "Without my consent or desire."
+    "I put on a cute face and spoke in a slow tone."
+    MC "Come on, Shiori-san, pleeease~?"
+    AE "Begging...really?"
+    "Shiori-san let out a sigh of defeat. She put her hand on her chin and rested it against her knee."
+    AE "Well...in my dreams, I often see myself climbing a set of white stairs in an old...industrial stairway. I get to the top, and I find myself atop of what I assume to be a tall building. There isn't any light...only fog. The only thing I can see is a blinking red light in the distance."
+    MC "..."
+    AE "Is that what you wanted to hear?"
+    MC "You want to know what I think?"
+    AE "You're going to tell me anyway, go ahead."
+
+(If intellect points < 2))
+
+K: I think...it represents your fear of heights
+
+S: Hmm...do you know what I see?
+
+K: What?
+
+S: I see a young man, struggling in vain to find answers from a futile source.
+
+*Oookay, welp, I walked right into that one.*
+
+K: I mean...am I a little close?
+
+S:...Hotsure-san, where are we right now?
+
+K: Um...Seichou?
+
+S: No, no, currently.
+
+K: The roof?
+
+S: Why?
+
+K: You wanted us to me-
+
+*Oh.*
+
+S: And the roof is...?
+
+K: Okay, okay, I get it, yeesh.
+
+S: You're the sigmund freud of dream analysis, Hotsure-san.
+~~~~~~~~~~~~~~~~~
+(If intellect points > 2 but <4)
+
+K: I think...you subconsciously believe that you're lonely.
+
+S:...
+
+K: You stand alone. At the top, but alone. It's signifying a deeper fear of alienation.
+
+S: Oh, w-, enough of this nonsense, Hotsure-san.
+
+K: Huh?
+
+S: I'll have you know that I don't feel lonely. I've plenty of company, includi-
+
+K: Student council doesn't count.
+
+S:...
+
+S: Including you.
+
+K:...
+
+#We stood there, the sounds of the wind carrying with it the chirping of the birds.#
+
+K: W-...thank you, Shiori-san.
+~~~~~~~~~~~~~
+(If intellect points >=4)
+
+K: I think that...you're worried about your future.
+
+S:...What?
+
+K: Your vision of the horizon, of the top, is completely clouded by fog. You let your fears of isolation completely stop you from being able to visualize a good future for yourself.
+
+S:...I...I feel we should stop.
+
+K: O-oh, I'm sorry I didn't mean to-
+
+S: No, no, I...that was just a little off putting, is all.
+
+*I must have hit too hard with that.*
+~~~~~~~~~~~~~~~
+S: Well...now we at least know each other's dreams, whatever good that does.
+ 
+*Eh, I can see I'm not gonna get through to her with the idea.*
+
+K: Mmm, well, it's nice to know what you think about.
+
+S: Presumptively. 
+
+#Shiori-san let out a grunt as she began to pick her body up. I sprung to my feet and offered a hand to help, but she waved her hand down signifying that she wished to do it on her own.#
+
+S: M-hrgn...ahn...got it.
+
+K: All good?
+
+S: Yes, I...
+
+#Shiori-san felt the back of her skirt, before shakily feeling under it.#
+
+S: Oh lord.
+
+#While I couldn't see it all, I'm guessing by the red lines across her thighs that her butt had a bench shaped pattern etched into the skin.#
+
+S: Ugh, this is going to tingle for minutes on end.
+
+K: A-ah.
+
+S: Hmm...well, it's been fun, Hotsure-san, however I must get going.
+
+K: O-oh, yeah, okay.
+
+#Shiori-san turned around and walked towards the door, before turning around to talk to me.#
+
+S: If...if you ever want to come up here with me again...just flag me down.
+
+K: Ok..can do.
+
+#Shiori-san opened the door to the stairs and walked down, slowly disappearing from view.#
+
+#I looked up at the blue sky above, and thought about all I learned from Shiori-san's dream. I closed my eyes, and thought about how to spend the rest of the day.#
+
     
 label AE101:
     scene Gym with fade

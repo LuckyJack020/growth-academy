@@ -2,3 +2,199 @@
 
 ﻿--- Sun May 14 17:51:31 2017
 
+﻿--- Tue May 30 17:55:30 2017
+
+The following represents a work in progress.
+
+Art assets are placeholders or otherwise unfinished and all general content
+has yet to be finalized.
+
+For more information, visit  https://www.expansiongames.net
+
+Enjoy.
+
+Choice: (DEBUG) Skip intro
+Choice: Continue
+
+User chose: (DEBUG) Skip intro
+
+Choice: Set favored girl seeding
+Choice: Everyone neutral
+
+User chose: Everyone neutral
+
+i'm checking criteria
+[0, u'BBW007']
+event: BBW007
+i'm checking criteria
+[0, u'BBW006']
+event: BBW006
+i'm checking criteria
+[0, u'BBW004']
+event: BBW004
+i'm checking criteria
+[7]
+i'm checking criteria
+[0, u'BBW003']
+event: BBW003
+i'm checking criteria
+[0, u'BBW002']
+event: BBW002
+i'm checking criteria
+[0, u'BBW001']
+event: BBW001
+i'm checking criteria
+i'm checking criteria
+[0, u'BE003']
+event: BE003
+i'm checking criteria
+[7]
+i'm checking criteria
+[7]
+i'm checking criteria
+i'm checking criteria
+[0, u'BE001']
+event: BE001
+i'm checking criteria
+[0, u'BE002']
+event: BE002
+i'm checking criteria
+[7]
+i'm checking criteria
+i'm checking criteria
+[0, u'FMG001']
+event: FMG001
+i'm checking criteria
+[0, u'FMG002']
+event: FMG002
+i'm checking criteria
+[0, u'FMG003']
+event: FMG003
+i'm checking criteria
+[7]
+i'm checking criteria
+[0, u'FMG004']
+event: FMG004
+i'm checking criteria
+[0, u'FMG006']
+event: FMG006
+i'm checking criteria
+[1, u'AE006_helpinginoffice']
+flag: AE006_helpinginoffice
+i'm checking criteria
+[0, u'AE009']
+event: AE009
+i'm checking criteria
+[0, u'AE011']
+event: AE011
+i'm checking criteria
+[0, u'AE012']
+event: AE012
+i'm checking criteria
+[0, u'AE013']
+event: AE013
+i'm checking criteria
+[0, u'AE014']
+event: AE014
+i'm checking criteria
+[0, u'AE015']
+event: AE015
+i'm checking criteria
+[0, u'FMG006']
+event: FMG006
+i'm checking criteria
+[0, u'GTS003']
+event: GTS003
+i'm checking criteria
+[0, u'BE004']
+event: BE004
+i'm checking criteria
+[0, u'GTS006']
+event: GTS006
+i'm checking criteria
+[0, u'GTS004']
+event: GTS004
+i'm checking criteria
+[1, u'BBW005_workout']
+flag: BBW005_workout
+i'm checking criteria
+[1, u'BBW005_ondiet']
+flag: BBW005_ondiet
+i'm checking criteria
+[7]
+i'm checking criteria
+[0, u'GTS001']
+event: GTS001
+i'm checking criteria
+[0, u'GTS002']
+event: GTS002
+i'm checking criteria
+i'm checking criteria
+[1, u'AE006_helpinginoffice']
+flag: AE006_helpinginoffice
+i'm checking criteria
+[0, u'AE004']
+event: AE004
+i'm checking criteria
+[7]
+i'm checking criteria
+[0, u'AE003']
+event: AE003
+i'm checking criteria
+[0, u'AE002']
+event: AE002
+i'm checking criteria
+[0, u'AE001']
+event: AE001
+i'm checking criteria
+i'm checking criteria
+i'm checking criteria
+[0, u'AE007']
+event: AE007
+i'm checking criteria
+[2, 2, datetime.date(2005, 4, 7)]
+i'm checking criteria
+[0, u'AE008']
+event: AE008
+i'm checking criteria
+[2, 2, datetime.date(2005, 4, 7)]
+After a long day, I figured that some time in the library would do well for
+me. I could use somewhere quiet to wind down.
+
+Keisuke
+(Geez, I expected quiet, but this room is practically abandoned!)
+
+Even though a few hours had passed, what Tashi-sensei said was still ringing
+in my head. I wasn't completely sure how to process what had been going on,
+but I was worried to say the least.
+
+Keisuke
+(I need to sit down...the table over there looks good.)
+
+I grabbed a chair, sat down at the table and, resting my head on my hands, I
+let out a long sigh.
+
+Keisuke
+Well, I never got anywhere by just moping... right?
+
+Shiori
+*Ahem*
+
+Keisuke
+Eh?
+
+I looked over to the table adjacent, where I saw Shiori-san flipping through
+the pages of a large book.
+
+Keisuke
+A-ah! Shiori-san, how are y-
+
+Shiori
+Hotsure-san, adjust your volume in the library, please.
+
+Keisuke
+(Oh...right.)
+
+Keisuke
+Sorry, Shiori-san.
+
