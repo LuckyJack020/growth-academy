@@ -2589,7 +2589,7 @@ label AE018:
         "We stood there, the sounds of the wind carrying with it the chirping of the birds."
         MC "W-...thank you, Shiori-san."
         
-    elif getSkill("Academics" >= 4:
+    elif getSkill("Academics") >= 4:
         MC "I think...that you're worried about your future."
         AE "...What?"
         MC "Your vision of the horizon, of the top, is completely clouded by fog."
