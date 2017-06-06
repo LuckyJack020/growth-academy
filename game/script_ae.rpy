@@ -47,7 +47,7 @@ init 2 python:
     eventlibrary['AE015'] = {"name": "AE015", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE014"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE016'] = {"name": "AE016", "girls": ["AE"], "location": "library", "conditions": [[ConditionEnum.EVENT, "AE015"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE017'] = {"name": "AE017", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
-    eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
+    eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE017"], [ConditionEnum.ISDAYTIME]], "priority": False}
     eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
@@ -2413,7 +2413,7 @@ label AE017:
     
 label AE018:
     scene Hallway with fade
-    "I sat at the windowsill waiting. My feet dangling just lightly off of the floor as I kicked them back and forth. Looking down at them, I was given a slight tunnel vision from my own black locks dangling down a few inches from my face. I looked up to the ceiling, inhaling and letting out a low gust of air from my lips. As I looked back foreward, I saw a familiar face slowly heading up the stairs."
+    "I sat at the windowsill waiting. My feet dangling just lightly off of the floor as I kicked them back and forth. Looking down at them, I was given a slight tunnel vision from my own black locks dangling down a few inches from my face. I looked up to the ceiling, inhaling and letting out a low gust of air from my lips. As I looked back forward, I saw a familiar face slowly heading up the stairs."
     MC "Oy, Shiori-san."
     show AE neutral with dissolve
     AE "Oh, good, Hotsure-san y-"
@@ -2463,18 +2463,22 @@ label AE018:
     AE "..."
     MCT "Hm?"
     MC "What's up?"
+    show AE aroused
     AE "I-it's nothing."
     "Shiori-san sat down on the double wide bench, with me sitting beside her. We sat in contemplation for a moment, taking in the surroundings."
     MC "Haaaahn~"
     AE "..."
+    show AE surprised
     extend "Hotsure-san, do you hear that?"
     play sound "Audio/Bird.ogg"
     MC "Hm?"
     AE "That bird."
     play sound "Audio/Bird.ogg"
     MC "Oh, yeah, it sounds nice."
+    show AE happy
     AE "Mhm...it's a Siberian Rubythroat. They're native to the area."
     MC "Hm? Really?"
+    show AE neutral
     AE "Yes. Many birds in northern Japan find their way over here."
     MC "Huh, that's nice...how did you know that?"
     AE "Ah, well, I heard it a while ago and looked up the native bird species. I referenced the bird with the image and found an article about them."
@@ -2483,27 +2487,35 @@ label AE018:
     "We sat there in silence for a bit longer. We looked out towards the distant horizon, a few grassy mountains rising over the landscape, slowly fading to blue as it gave way to the far ocean, and the ocean to the sky."
     MC "I wonder...I wonder how far the horizon really is."
     AE "..."
+    show AE sad
     AE "I've never thought to ask that..."
     MCT "How far the horizon is..."
     MC "Hey, Shiori-san, I have a question for you?"
+    show AE neutral
     AE "Hm?"
     MC "How often do you dream?"
     AE "...That's a strange question to ask."
     MC "Ehe, I figured, but I wanted to know...do you ever have any recurring dreams?"
     AE "..."
+    show AE sad
     "Shiori-san's face crinkled up a bit as she thought, hands tapping her thighs as she put the tongue on the inside of her cheek and looked away."
     AE "I...suppose. Why?"
     MC "I've been having this weird dream lately...and i've been wondering what it means."
     AE "What it means...?"
     MC "W-what?"
+    show AE neutral
     AE "Well...why does it need to ‘mean' anything?"
     MC "I mean...I dunno. I guess it's just that our dreams are like a look into our minds is all."
+    show AE sad
     AE "W-...a look into...?"
     "Shiori-san looked at me with a look of confusion."
+    show AE neutral
     AE "I don't mean to be...off putting...but how can you prove that?"
     MC "Well...I don't know. There are some things that you just can't prove, right?"
+    show AE sad
     AE "A-um...with enough proper research I-I assume we can know everything there is to know...however, yes, some things can't really be proven."
     MC "Exactly. It's a matter of faith in the idea."
+    show AE neutral
     AE "Tch-it has nothing to do with faith, it's about an unproven field of psychoanalysis."
     MC "..."
     MCT "I struggled to bring back the entire memory of my dream, but only one piece of it sprang forth."
@@ -2519,139 +2531,107 @@ label AE018:
     MC "What do you think it means."
     AE "Oh, come on now."
     MC "I think it's about my desire for strength and support in an unknown situation."
+    show AE angry
     AE "I think it's about someone who needs more sleep and less caffeine."
     MCT "Hmm, she's not really getting it."
     MC "Alright...tell me yours."
+    show AE neutral
     AE "Come now, Hotsure-san, don't be foolish."
     MC "Hey, I told you mine."
     AE "Without my consent or desire."
     "I put on a cute face and spoke in a slow tone."
     MC "Come on, Shiori-san, pleeease~?"
+    show AE sad
     AE "Begging...really?"
     "Shiori-san let out a sigh of defeat. She put her hand on her chin and rested it against her knee."
+    show AE neutral
     AE "Well...in my dreams, I often see myself climbing a set of white stairs in an old...industrial stairway. I get to the top, and I find myself atop of what I assume to be a tall building. There isn't any light...only fog. The only thing I can see is a blinking red light in the distance."
     MC "..."
     AE "Is that what you wanted to hear?"
     MC "You want to know what I think?"
     AE "You're going to tell me anyway, go ahead."
 
-(If intellect points < 2))
+    if getSkill("Academics") < 2:
+        MC "I think...it represents your fear of heights."
+        AE "Hmm...do you know what I see?"
+        MC "What?"
+        show AE angry
+        AE "I see a young man, struggling in vain to find answers from a futile source."
+        MCT "Oookay, welp, I walked right into that one."
+        MC "I mean...am I a little close?"
+        show AE neutral
+        AE "...Hotsure-san, where are we right now?"
+        MC "Um...Seichou?"
+        AE "No, no, currently."
+        MC "The roof?"
+        AE "Why?"
+        MC "You wanted us to me--"
+        MCT "Oh."
+        AE "And the roof is...?"
+        MC "Okay, okay, I get it, yeesh."
+        AE "You're the Sigmund Freud of dream analysis, Hotsure-san."
+        
+    elif getSkill("Academics") > 2 and getskill("Academics") < 4:
+        MC "I think...you subconsciously believe that you're lonely."
+        show AE sad
+        AE "..."
+        MC "You stand alone. At the top, but alone. It's signifying a deeper fear of alienation."
+        show AE angry
+        AE "Oh, w-, enough of this nonsense, Hotsure-san."
+        MC "Huh?"
+        AE "I'll have you know that I don't feel lonely. I've plenty of company, includi--"
+        MC "Student council doesn't count."
+        AE "..."
+        show AE aroused
+        AE "Including you."
+        MC "..."
+        play sound "Audio/Bird.ogg"
+        "We stood there, the sounds of the wind carrying with it the chirping of the birds."
+        MC "W-...thank you, Shiori-san."
+        
+    elif getSkill("Academics" >= 4:
+        MC "I think...that you're worried about your future."
+        AE "...What?"
+        MC "Your vision of the horizon, of the top, is completely clouded by fog."
+        show AE sad
+        MC "You let your fears of isolation completely stop you from being able to visualize a good future for yourself."
+        AE "...I...I feel we should stop."
+        MC "No, no, I...that was just a little off putting, is all."
+        MCT "I must have hit too hard with that."
+        
+    show AE neutral
+    AE "Well...now we at least know each other's dreams, whatever good that does."
+    MCT "Eh, I can see I'm not gonna get through to her with the idea."
+    MC "Mmm, well, it's nice to know what you think about."
+    AE "Presumptively."
+    show AE angry
+    "Shiori-san let out a grunt as she began to pick her body up. I sprung to my feet and offered a hand to help, but she waved her hand down signifying that she wished to do it on her own."
+    AE "M-hrgn...ahn...got it."
+    MC "All good?"
+    show AE neutral
+    AE "Yes, I..."
+    "Shiori-san felt the back of her skirt, before shakily feeling under it."
+    show AE aroused
+    AE "Oh lord."
+    "While I couldn't see it all, I'm guessing by the red lines across her thighs that her butt had a bench-shaped pattern etched into the skin."
+    show AE sad
+    AE "Ugh, this is going to tingle for minutes on end."
+    MC "A-ah."
+    show AE neutral
+    AE "Hmm...well, it's been fun, Hotsure-san, however I must get going."
+    MC "O-oh, yeah, okay."
+    "Shiori-san turned around and walked towards the door, before turning around to talk to me."
+    show AE aroused
+    AE "If...if you ever want to come up here with me again...just flag me down."
+    MC "Ok...can do."
+    hide AE with dissolve
+    "Shiori-san opened the door to the stairs and walked down, slowly disappearing from view."
+    "I looked up at the blue sky above, and thought about all I learned from Shiori-san's dream. I closed my eyes, and thought about how to spend the rest of the day."
+    jump daymenu
 
-K: I think...it represents your fear of heights
+#label AE020:
+#    scene Office with fade
 
-S: Hmm...do you know what I see?
-
-K: What?
-
-S: I see a young man, struggling in vain to find answers from a futile source.
-
-*Oookay, welp, I walked right into that one.*
-
-K: I mean...am I a little close?
-
-S:...Hotsure-san, where are we right now?
-
-K: Um...Seichou?
-
-S: No, no, currently.
-
-K: The roof?
-
-S: Why?
-
-K: You wanted us to me-
-
-*Oh.*
-
-S: And the roof is...?
-
-K: Okay, okay, I get it, yeesh.
-
-S: You're the sigmund freud of dream analysis, Hotsure-san.
-~~~~~~~~~~~~~~~~~
-(If intellect points > 2 but <4)
-
-K: I think...you subconsciously believe that you're lonely.
-
-S:...
-
-K: You stand alone. At the top, but alone. It's signifying a deeper fear of alienation.
-
-S: Oh, w-, enough of this nonsense, Hotsure-san.
-
-K: Huh?
-
-S: I'll have you know that I don't feel lonely. I've plenty of company, includi-
-
-K: Student council doesn't count.
-
-S:...
-
-S: Including you.
-
-K:...
-
-#We stood there, the sounds of the wind carrying with it the chirping of the birds.#
-
-K: W-...thank you, Shiori-san.
-~~~~~~~~~~~~~
-(If intellect points >=4)
-
-K: I think that...you're worried about your future.
-
-S:...What?
-
-K: Your vision of the horizon, of the top, is completely clouded by fog. You let your fears of isolation completely stop you from being able to visualize a good future for yourself.
-
-S:...I...I feel we should stop.
-
-K: O-oh, I'm sorry I didn't mean to-
-
-S: No, no, I...that was just a little off putting, is all.
-
-*I must have hit too hard with that.*
-~~~~~~~~~~~~~~~
-S: Well...now we at least know each other's dreams, whatever good that does.
- 
-*Eh, I can see I'm not gonna get through to her with the idea.*
-
-K: Mmm, well, it's nice to know what you think about.
-
-S: Presumptively. 
-
-#Shiori-san let out a grunt as she began to pick her body up. I sprung to my feet and offered a hand to help, but she waved her hand down signifying that she wished to do it on her own.#
-
-S: M-hrgn...ahn...got it.
-
-K: All good?
-
-S: Yes, I...
-
-#Shiori-san felt the back of her skirt, before shakily feeling under it.#
-
-S: Oh lord.
-
-#While I couldn't see it all, I'm guessing by the red lines across her thighs that her butt had a bench shaped pattern etched into the skin.#
-
-S: Ugh, this is going to tingle for minutes on end.
-
-K: A-ah.
-
-S: Hmm...well, it's been fun, Hotsure-san, however I must get going.
-
-K: O-oh, yeah, okay.
-
-#Shiori-san turned around and walked towards the door, before turning around to talk to me.#
-
-S: If...if you ever want to come up here with me again...just flag me down.
-
-K: Ok..can do.
-
-#Shiori-san opened the door to the stairs and walked down, slowly disappearing from view.#
-
-#I looked up at the blue sky above, and thought about all I learned from Shiori-san's dream. I closed my eyes, and thought about how to spend the rest of the day.#
-
-    
 label AE101:
     scene Gym with fade
     show FMG neutral
