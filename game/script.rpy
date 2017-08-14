@@ -13,7 +13,7 @@
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
-    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
+    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
     debuginfo = False
     debugenabled = True
     debugscene = ""
@@ -252,8 +252,14 @@
             return vars[id]
         else:
             return None
-        
-    def getSize():
+    
+    def getSize(g):
+        if g in girllist:
+            return girlsizes[g]
+        else:
+            return -1
+    
+    def updateSizes():
         for g in girllist:
             for i in range(6, 1, -1):
                 if i == 1:
@@ -548,7 +554,7 @@ label debugscene:
     jump debugmenu
 
 label daymenu:
-    $getSize()
+    $updateSizes()
     $renpy.choice_for_skipping()
     #Roll random events
     python:

@@ -2201,7 +2201,7 @@ label AE016_after:
     "Another crease."
     show AE angry
     AE "No."
-    MCT "I'm 70% sure that's Mizutani-san's handwriting."
+    MCT "I'm 70%% sure that's Mizutani-san's handwriting."
     show AE neutral
     AE "'Satoru-sensei is-' nggh."
     "And another."

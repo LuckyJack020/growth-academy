@@ -11,7 +11,6 @@ image BBW aroused = DynamicImage("Graphics/BBW-[globalsize]-aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW-[globalsize]-haughty.png")
 
 image cg BBW001 = "Graphics/BBW-SC-1.png"
-image cg BBW002 = "Graphics/BBW-SC-2.png"
 
 init 2 python:
     datelibrary['BBW_size_6'] = datetime.date(2005, 12, 10)
@@ -20,17 +19,18 @@ init 2 python:
     datelibrary['BBW_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['BBW_size_2'] = datetime.date(2005, 12, 10)
     
-    eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "location": "cafeteria", "conditions": [], "priority": 0}
-    eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": 0}
-    eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "location": "cookingclassroom", "conditions": [[ConditionEnum.EVENT, "BBW002"]], "priority": 0}
-    eventlibrary['BBW004'] = {"name": "BBW004", "girls": ["BBW", "PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": 0}
-    eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['BBW005A'] = {"name": "BBW005A", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]], "priority": 0}
-    eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "location": "gym", "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]], "priority": 0}
-    eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BBW004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": 0}
-    eventlibrary['BBW008'] = {"name": "BBW008", "girls": ["BBW", "PRG"], "location": "musicclassroom", "conditions": [[ConditionEnum.EVENT, "BBW007"]], "priority": 0}
-    #eventlibrary['BBW008A'] = {"name": "BBW008A", "girls": ["BBW", "PRG"], "location": "musicclassroom", "conditions": [[ConditionEnum.FLAG, "BBW008_extrascene"]], "priority": 0}
+    eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "location": "cafeteria", "conditions": [], "priority": False}
+    eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": False}
+    eventlibrary['BBW003'] = {"name": "BBW003", "girls": ["BBW", "PRG"], "location": "cookingclassroom", "conditions": [[ConditionEnum.EVENT, "BBW002"]], "priority": False}
+    eventlibrary['BBW004'] = {"name": "BBW004", "girls": ["BBW", "PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": False}
+    eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.PRESET]], "priority": False}
+    eventlibrary['BBW005A'] = {"name": "BBW005A", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]], "priority": False}
+    eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "location": "gym", "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]], "priority": False}
+    eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BBW004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": False}
+    eventlibrary['BBW008'] = {"name": "BBW008", "girls": ["BBW", "PRG"], "location": "musicclassroom", "conditions": [[ConditionEnum.EVENT, "BBW007"]], "priority": False}
+    eventlibrary['BBW008A'] = {"name": "BBW008A", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW008_extrascene"], [ConditionEnum.ISDAYTIME]], "priority": False}
+    eventlibrary['BBW009'] = {"name": "BBW009", "girls": ["BBW", "PRG", "FMG"], "location": "pool", "conditions": [[ConditionEnum.EVENT, "BBW008"]], "priority": False}
     
 label BBW001:
     scene Cafeteria with fade
@@ -197,9 +197,11 @@ label BBW002_c2_1:
     BBW "I have never encountered a problem I could not deal with. Whatever sort of... mutation I am about to experience, I will handle it with grace and composure. You will not see me sobbing or wailing my misfortune."
     MC "Hmm-mmm. You have any idea what it might be? Or if they even know?"
     BBW "I haven't the slightest."
-    show cg BBW001
+    show BBW neutral:
+        zoom 2.0
     MC "Yeah, it's a puzzle. Anyway..."
-    hide cg
+    show BBW neutral:
+        zoom 1.0
     jump BBW002_c2_2
 
 label BBW002_c2_2:
@@ -614,7 +616,7 @@ label BBW005B:
     BBW "Very well. Keisuke, you go first."
     MC "Why me- No, never mind. I'll go."
     "As I was looking at the weights in increments of ten pounds, trying to guess what my limit was, another person came over and joined us."
-    show PRG neutral at Position (xpos=0.9, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.9, xanchor=0.5)
     show FMG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     FMG "Hey sorry to bother but how much longer are you...Oh hey guys. What brings you here?"
     MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
@@ -957,4 +959,213 @@ label BBW008_c3:
     "She didn't have to say anything, I knew what she was thinking. All the better, as I wasn't looking for a fight or anything."
     MC "Just something to think about."
     "And I turned and walked away. Maybe a bit quicker than I intended, but I didn't want to stay and get chewed out or anything."
+    jump daymenu
+
+label BBW008A:
+    scene Cafeteria with fade
+    show BBW angry
+    BBW "That impudent egotist!"
+    "I was sitting in the cafeteria, not so much enjoying my lunch as eating it without gagging-"
+    BBW "How could such a woman be put in a position of authority? Bribery? Blackmail? Nepotism?"
+    "-when Alice came up to my table and started complaining to me about someone."
+    "There was no way to know how long she had already been ranting before reaching me..."
+    BBW "A leader who thinks their job is to simply dictate to others does not understand leadership. A captain who does not know her destination might as well run the boat aground."
+    MC "Problem with authority? Is this about the music club thing?"
+    BBW "What does it say about a club leader who is more concerned with maintaining a cordial environment where mediocrity can rule than challenging everyone to deliver their best?"
+    MC "That... this is more about having some fun than anything else?"
+    show BBW neutral
+    BBW "And how is it 'fun' to rehearse the same pieces of music without striving for improvement?"
+    show BBW angry
+    BBW "This Mizawa-san is only wasting everyone's time if she refuses to demand anything of her members."
+    MC "It's only the start of the year. I'm sure there must be some period of adjustment for a musical group to come together."
+    MC "Maybe if you tell her - politely - that you think she can ask a little more of everyone she'll agree. Maybe she already wants more of them, but she doesn't want to be overbearing."
+    show BBW haughty
+    BBW "I have already addressed my concerns with Mizawa-san. Just now, when she suspended me from the club."
+    MC "What?! She kicked you out?"
+    show BBW neutral
+    BBW "Not permanently, but I am on forced sabbatical until I have 'adjusted to the upheaval in my life,' as she put it."
+    show BBW haughty
+    BBW "She thinks I am, what were her words, 'behaving out of turn' because I am in an unfamiliar environment, with the news of my condition hanging over me."
+    show BBW angry
+    BBW "Projection. That's what it is. Mizawa-san is uncomfortable being here, and so she is pretending I am the one with the problem."
+    show BBW neutral
+    BBW "Perhaps that is easier to believe than acknowledging I am in the right."
+    MC "So... This isn't about the other students in the club? This is just about you still butting heads with her?"
+    show BBW haughty
+    BBW "This is only about the club, and how I know what is best for it."
+    show BBW angry
+    BBW "Mizawa-san may try to pull rank, but shoving me aside does not win her the argument. I am still of half a mind to press the issue."
+    menu:
+        "I don't see what good that would do. If she's as headstrong as you say, arguing will only make her dig her heels in.":
+            jump BBW008A_c1 #(Neutral outcome)
+        "If you feel this strongly, go for it. You're the one talking about squeaky wheels, right?":
+            jump BBW008A_c2 #(Moderate loss of affection with Alice)
+        "Arguing with Mizawa-san obviously isn't doing any good. Maybe try a different tack.":
+            jump BBW008A_c3 #(-10 points of affection with Alice)
+
+label BBW008A_c1: 
+    show BBW angry
+    BBW "Mmmf!"
+    BBW "..."
+    show BBW neutral
+    BBW "She probably would, wouldn't she?"
+    BBW "I suppose this is a situation that calls for patience rather than the firm hand of guidance."
+    BBW "Very well. I shall endure my sabbatical with my natural grace, and when I return to the music club even Mizawa-san will not be able to deny what a difference my presence makes."
+    hide BBW with dissolve
+    "And she trotted off. I don't think she was any less angry, but at least things hadn't gotten worse."
+    jump daymenu
+
+label BBW008A_c2: 
+    show BBW neutral
+    BBW "You are not wrong. There may still be time to find Mizawa-san before lunch ends, and we can settle this matter before the club meeting this afternoon."
+    hide BBW with dissolve
+    "And she walked off."
+    scene black with fade
+    "Ten minutes later, she came back."
+    scene Cafeteria with fade
+    show BBW angry
+    $setAffection("BBW", -2)
+    BBW "There is no word for 'foolishness' in your language that is strong enough for that girl."
+    MC "She didn't listen to you-"
+    BBW "She says that I am a hair's breadth from being cut entirely, and she makes it sound as if she is being reasonable by giving me a 'second chance.'"
+    BBW "That my talent, which I have clearly demonstrated by this point, could be dismissed so flippantly..."
+    BBW "Argh!"
+    BBW "I almost want to leave of my own accord. Being hobbled by this enabler of mediocrity may not be worth it."
+    MC "I-"
+    hide BBW with dissolve
+    "But she was already storming away, as if she wanted to get away from the entire school."
+    jump daymenu
+
+label BBW008A_c3:
+    MC "Instead of taking up this fight yourself, why don't you get some others on your side?"
+    MC "Talk to the other members of the music club, see if they'll back you up. Then you can all go up to the club prez and try to reason with her."
+    show BBW happy
+    BBW "That is not a bad idea, Hotsure-san. Strength in numbers."
+    show BBW haughty
+    BBW "Or if I can convince enough members to see it my way, I could simply try to oust Mizawa-san as president."
+    MCT "OK, that is not what I'm suggesting."
+    show BBW neutral
+    BBW "There's still time before lunch ends. I need to speak with some of the other members."
+    hide BBW
+    "And she walked off, holding her chin up as if she had already won a victory."
+    scene Hallway with fade
+    "As I left the cafeteria and started to make my way back to class, I ran into Alice coming in the opposite direction."
+    show BBW angry
+    $setAffection("BBW", -10)
+    BBW "Hotsure-san! How could you possibly suggest such a terrible idea?"
+    MC "Me? What did-"
+    MCT "Oh, this must be about the music club thing."
+    BBW "I've been kicked out of the music club! Mizawa-san claims I was attempting to mutiny-"
+    MCT "Well, you did suggest-"
+    BBW "And now I have been expelled entirely."
+    "By her expression I had no doubt who she blamed for this, and while there were a number of ways I could have responded, I ultimately decided on staying silent and not making things worse."
+    "Alice continued glowering at me, perhaps waiting for me to answer, but after a while she huffed and muttered"
+    BBW "What is wrong with this place?"
+    "And then she walked away."
+    "Which was awkward, because we were headed in the same direction, so I had to hang back a couple feet and try to look anywhere besides directly at her."
+    scene Classroom with fade
+    "And when we got to class and took our seats she adamantly refused to look in my direction."
+    show BBW angry with dissolve
+    BBW "Harumph!"
+    hide BBW with dissolve
+    "At least I knew where I stood at the moment."
+    jump daymenu
+    
+label BBW009:
+    scene Hallway with fade
+    "It was only the second week of the year and I was already getting cabin fever being stuck at the school 24/7."
+    "There's a town not far from the gates, but I didn't get a chance to check it out last weekend. Haven't even checked out much of the school, for that matter."
+    "That's probably why I found myself at the locker rooms after class. Going back to my dorm room didn't appeal to me. Just two weeks in and I was getting tired of that place."
+    "And I still didn't belong to a club, so I had no specific place to be..."
+    "I was thinking of maybe changing into my gym clothes and doing a little cardio when I was surprised to see Nikumaru-san of all people coming out of the women's locker room."
+    show BBW happy at Position (xpos=0.25, xanchor=0.5) with dissolve
+    MC "Oh, Ni- Alice! How's it going?"
+    show PRG sad at Position (xpos=0.75, xanchor=0.5) with dissolve
+    PRG "..."
+    MC "A-and you, Kodoma-san! What were you two up to?"
+    BBW "I was doing a light workout."
+    MC "I thought you weren't going to try to lose weight just yet."
+    show BBW neutral
+    BBW "I'm not, but exercise has other benefits besides weight loss."
+    show BBW haughty
+    BBW "A strong mind in a strong body, as they say."
+    BBW "So I was making use of the school's swimming pool. 20 laps, back and forth. A fair workout to get my heartrate up."
+    MC "20 laps!? That's... That's actually impressive."
+    BBW "I understand how it can seem like that to most people, but I have a natural affinity for the water. I've been an accomplished swimmer since I was a young girl."
+    MC "Maybe you should have joined the swim team instead of the music club."
+    BBW "I did consider it, actually, but the school would allow me to join only one club. I find the limitation frustrating but bearable."
+    show BBW angry
+    BBW "And who knows. If the matter between me and the music club president is not resolved satisfactorily I may take my talents to more appreciative grounds."
+    MC "How fast can you swim? Have you ever timed yourself?"
+    show BBW neutral
+    BBW "Quite fast, actually. I should have had Kodoma-san timing me, upon reflection. An accurate chart of my ability would help measure my fitness levels."
+    show BBW haughty
+    BBW "I don't have a specific number, but I feel confident that I am the best swimmer in our entire class. Probably in the top percentile of the school."
+    MC "Even better than Mizutani-san? She's pretty athletic, you know."
+    BBW "There's more to it than just physical strength. Stamina, hydrodynamics, breathing control."
+    MC "!"
+    "Alice didn't see her, but standing behind her was-"
+    BBW "Sheer muscle may be good for lugging heavy weights around, but swimming is a much more graceful art than deadlifting something."
+    show FMG angry behind BBW at Position(xpos=0.15, xanchor=0.5) with dissolve
+    "-was Akira. And judging by her expression she had heard enough of the conversation to get the gist of it."
+    BBW "It's the difference between composing poetry and punching a sack of meat. Elegance versus brute force."
+    "I was just about to interrupt Alice - even though she already seemed to be wrapping up - when Akira beat me to it."
+    FMG "Hello Alice Whats-your-last-name! Interesting theory you have there!"
+    "Alice blanched at the sound of Akira's voice, but she recovered swiftly."
+    hide PRG with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5)
+    show FMG angry at Position(xpos=0.25, xanchor=0.5)
+    BBW "It's not so much a theory as good common sense."
+    BBW "One isn't pushing against the water but rather propelling oneself through it. It's a complete different act, an interplay of body and water rather than a conflict between muscle and weight."
+    FMG "Oh yeah! Well how about we test your little 'act of pushing water by being something something BS' by seeing who's the fastest swimmer! Or are you too full of yourself to do it!?"
+    "Alice let out a single 'Ha' while brushing one of her curls over her shoulder."
+    show BBW haughty
+    BBW "I would never make a claim I could never back up. If you wish to see the truth of my words in action, then certainly. Let us race."
+    FMG "God I hope not all Americans are this snobbish; let's do this!"
+    "Alice turned to me, her self-satisfied look still there."
+    show BBW happy
+    BBW "Any objections to Hotsure-san acting as judge? I'm sure he'll be impartial."
+    show FMG neutral
+    FMG "Depends. Hey Keisuke, you think this isn't a forgone conclusion?"
+    MC "Well..."
+    menu:
+        "You do seem the safer choice, Mizutani-san.":
+            $setAffection("FMG", 1)
+            FMG "Heh, well whatever happens, happens I guess!"
+            show BBW neutral
+            BBW "Indeed..."
+        "Alice seems pretty confident. I think this will be an upset.":
+            $setAffection("BBW", 2)
+            show BBW haughty
+            BBW "Not an upset. As Mizutani-san said, it's a foregone conclusion."
+            show FMG angry
+            FMG "Whatever, 'princess'!"
+        "I really don't know.":
+            show BBW neutral
+            BBW "Well, you shall know soon enough."
+    scene Pool with fade
+    "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
+    show FMG angry at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5) with dissolve
+    BBW "Three full laps should be adequate, I think. Any objections?"
+    FMG "Just don't forget your pool cap thingy! Don't want to get your expensive mullet to get ruined by chlorine!"
+    "They took their positions, I counted down from three, and they were off."
+    hide FMG with dissolve
+    hide BBW with dissolve
+    "It was neck and neck for most of the first lap, but when the two reached the far end and pushed off the wall to return Alice began to pull ahead."
+    "By the time she completed her first lap Alice was a full length ahead of Akira, and that lead grew for the rest of the race."
+    "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
+    show FMG sad at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5) with dissolve
+    FMG "...Son of a bitch... Good job I guess... I'm going to bed, later."
+    hide FMG with dissolve
+    show BBW happy at Position(xpos=0.5, xanchor=0.5)
+    BBW "At least she's magnanimous in defeat."
+    MC "Nice job. That was quite the blowout."
+    show BBW haughty
+    BBW "Was there ever a doubt? But as much as I enjoyed this contest, I have to get going."
+    show BBW neutral
+    BBW "Aida, what's next on my agenda?"
+    hide BBW with dissolve
+    "She was already walking away as Aida answered. Something about 'contacting her distributor.'"
     jump daymenu

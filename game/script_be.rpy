@@ -473,7 +473,7 @@ label BE005_after_old:
     
 label BE005:
     scene Classroom Day with fade
-    "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool…"
+    "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool..."
     "As I entered homeroom, it was obvious that everyone was talking about their discoveries already. It was just much louder than it typically was. Tones ranged from excitement and pride to confusion and sadness. Well, that's what the school was for, I suppose. To give everyone here a place to discuss their bodies in a safe environment. Still, it made me wonder if my trait was common or an oddity. I guess there was plenty of time to find out."
     show BE happy with dissolve
     BE "Oi, Kei-chan."
