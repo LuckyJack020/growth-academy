@@ -23,6 +23,7 @@ image Roof = "Graphics/roof.png"
 image Nurse Office = "Graphics/office.png"
 image Pool = "Graphics/schoolpool_day.png"
 image splash = "Graphics/splashscreen.png"
+image Festival = "Graphics/NYI.png"
 
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
 image RM angry = "Graphics/RM-1-angry.png" #Roommate Angry Portrait
@@ -921,7 +922,7 @@ label global000_homeroom:
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
     "Tashi-Sensei scanned the room, taking in the fear and confusion, then shrugged."
-    HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Akayama-San?"
+    HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
     scene black with dissolve
     "There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
@@ -1069,7 +1070,7 @@ label global005:
     MCT "...Those two aren't used to accepting 'no' for an answer, that's for sure..."
 
     scene Auditorium with fade
-    "The auditorium Had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
+    "The auditorium had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
     "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
     AE "Class 3-B, over here! Line up along this partition, and- no, not alphabetically, by seat number. What do you mean you don't know what your seat number is??  Haven't you been paying attention at all?"
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."

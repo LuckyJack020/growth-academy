@@ -39,17 +39,18 @@ init 2 python:
     eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE008'] = {"name": "AE008", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE007"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE009'] = {"name": "AE009", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE008"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["AE010_deadline"]], [ConditionEnum.ISNIGHTTIME]], "priority": True}
-    eventlibrary['AE011'] = {"name": "AE011", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.OR, [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHANEQUALS, datelibrary["AE010_deadline"]], [ConditionEnum.EVENT, "AE010"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE012'] = {"name": "AE012", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE011"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE013'] = {"name": "AE013", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE012"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE014'] = {"name": "AE014", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE013"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE015'] = {"name": "AE015", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE014"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE016'] = {"name": "AE016", "girls": ["AE"], "location": "library", "conditions": [[ConditionEnum.EVENT, "AE015"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE017'] = {"name": "AE017", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
-    eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE017"], [ConditionEnum.ISDAYTIME]], "priority": False}
-    eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
-    eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    #eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["AE010_deadline"]], [ConditionEnum.ISNIGHTTIME]], "priority": True}
+    eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE011'] = {"name": "AE011", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.OR, [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHANEQUALS, datelibrary["AE010_deadline"]], [ConditionEnum.EVENT, "AE010"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE012'] = {"name": "AE012", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE011"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE013'] = {"name": "AE013", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE012"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE014'] = {"name": "AE014", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE013"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE015'] = {"name": "AE015", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE014"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE016'] = {"name": "AE016", "girls": ["AE"], "location": "library", "conditions": [[ConditionEnum.EVENT, "AE015"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    #eventlibrary['AE017'] = {"name": "AE017", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
+    #eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE017"], [ConditionEnum.ISDAYTIME]], "priority": False}
+    #eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    #eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
 label AE001:
     scene Library with fade
@@ -73,9 +74,8 @@ label AE001:
     "Shiori looked back down to her book, eyes fixated on the page in front of her. She adjusted her slowly slipping glasses and turned to the next page."
     MCT "Ok, I guess I'll just...sit here."
     "The silence in the room was palpable."
-    "It's weird, when you think you're alone, but then learn another person is there your body just tenses up a bit."
-    extend " Though that may very well be Shiori's presence. She was someone who just emanated a strict and commanding aura..."
-    extend " but still I felt as though I should at least try to socialize."
+    "It's weird, when you think you're alone, but then learn another person is there your body just tenses up a bit. Though that may very well be Shiori's presence."
+    "She was someone who just emanated a strict and commanding aura... but still I felt as though I should at least try to socialize."
     MCT "Should I just move over to her table? Would that be intrusive?"
     "I moved over and sat a seat away from where she was, better to be near and speak softly than far and shout I supposed."
     MC "So... hey."
@@ -91,7 +91,7 @@ label AE001:
     extend " how long has this been happening,"
     extend " what preventative measures are there,"
     extend " what school records exist."
-    extend " There are so many questions I have, and I plan to make sure they are all answered."
+    AE "There are so many questions I have, and I plan to make sure they are all answered."
     "Shiori looked back down at her book, steadily writing down notes with her other hand."
     "We sat in silence for a few moments, Shiori-san dutifully writing down line after line of notes while I stared up towards the ceiling."
     MCT "I think...there is still a question I have on my mind..."
@@ -147,12 +147,14 @@ label AE001_after:
 
 label AE002:
     scene Library with fade
-    MCT "Maybe Shiori-san is here again today."
-    "As my mind recalled yesterday's events, I began to wander about the Library. The sheer size of the place was a stark reminder of just how large the school was...and how unlikely it would be to find Shiori in it so quickly."
+    MCT "Maybe Shiori-san is here today."
+    "As my mind recalled yesterday's events, I began to wander about the library. The sheer size of the place was a stark reminder of just how large the school was...and how unlikely it would be to find Shiori-san in it so quickly."
     MC "Let's see...ah!"
-    "It was only now I noticed the door with the sign 'Student Organizations' directly on top of the door frame on the opposite side of the room."
+    MCT "Ohp, well, nevermind."
+    "It was only now that I noticed the door with the sign 'Student Organizations' directly on top of the door frame on the opposite side of the room."
     scene Office with fade
-    "As I moved across the library to the door, I began to notice that, like yesterday, not many people were here. Reading just isn't as popular a pastime as it used to be. I saw her through the large window in the wall separating the Library from the room, where she was working on a stack of papers."
+    "As I moved across the library to the door, I began to notice that, like yesterday, not many people were here. Reading just isn't as popular a pastime as it used to be."
+    "I saw her through the large window in the wall separating the Library from the room, where she was working on a stack of papers."
     MC "Um, hello, Shiori-san?"
     "Shiori looked up from the paperwork and did something that kind of took me off guard."
     show AE neutral with dissolve
@@ -164,7 +166,7 @@ label AE002:
     MC "Sure."
     "The inside of the room was larger than it first looked. There were filing cabinets that lined the walls, and a long table in the middle with different chairs for the representatives and student body to discuss the agenda of the day."
     MC "Yesterday in the library, you forgot this."
-    "I take the book from my bag and put it on the table next to Shiori-san."
+    "I took the book from my bag and put it on the table next to Shiori-san. She looked at it for a moment, and inhaled before looking to me."
     MC "I was wondering if you were wanting it back?"
     AE "Ah! Yes...I had no more need or it."
     MC "Huh?"
@@ -732,7 +734,7 @@ label AE007_after:
     AE "Keisuke-san, there are two things you're underestimating; my ability to sort documents, and the value of a minute or two."
     MC "...Ok, I guess."
     "We got to work, and Shiori-san began filling out forms at neck cracking speeds. Every other minute was the sound of scribbling, stamping, and then sliding a paper to me. I nearly choked for a second, before taking the files in hand and bringing them to the cabinet."
-    "The names went on and off the desk like lightning, and it honestly felt like for every paper I would take off the desk and file, two more would take it's place. A document-hydra. By the time the stream stopped, I was nearly panting from the quick, bustling motion of it all."
+    "The names went on and off the desk like lightning, and it honestly felt like for every paper I would take off the desk and file, two more would take it's place. A document hydra. By the time the stream stopped, I was nearly panting from the quick, bustling motion of it all."
     "The scribbling and stamping had stopped now, and as I grabbed the last few files, I looked back on the pile of files and I realized..."
     MC "They're...gone?"
     AE "Yes, Hotsure-san. I filled them all out."
@@ -784,9 +786,11 @@ label AE008:
     MC "Got it..."
     MCT "Wait."
     MC "Shiori-san, did you have these pre-prepared for me to work on?"
+    show AE happy
     AE "Ah, observant of you, Hotsure-san. Yes. I came in early this morning and filled out some forms in anticipation for your training."
     MCT "Early this morning? How did she get all of these done before class?"
     MC "Oh, uh, thanks Shiori-san, but...how early did you wake up?"
+    show AE neutral
     AE "Around five thirty."
     MCT "Five thirty?! Is she insane?!"
     MC "Wow...um, that's...dedication?"
@@ -837,11 +841,14 @@ label AE008:
     AE "And stuff? Such as?"
     MCT "Eh? Why the intensity all of a sudden?"
     MC "Well, I dunno. I mean, we'll all be growing, so the class seating has to be shifted around a bit just in case, right?"
+    show AE sad
     AE "...Yes...I'm well aware."
     MC "I don't think I'll be needing to shift around that much, but I mean, you sit right in front of me."
+    show AE neutral
     AE "Ye-"
     MCT "...huh?"
     "Shiori-san stopped for a moment, moving her hand a bit closer to her mouth before hesitating. It was faint, but she was lightly blushing."
+    show AE sad
     AE "Behind me..."
     MC "Shiori-san? Did you forget?"
     AE "N-no. I merely thought of some things that I...hadn't previously taken into account."
@@ -849,6 +856,7 @@ label AE008:
     AE "I can trust you to..."
     MC "Huh?"
     MCT "Tooo...?"
+    show AE neutral
     AE "Never mind. It's of no importance at the moment."
     MCT "Shiori-san doesn't seem like one to leave a thought unfinished...is everything ok?"
     MC "Hey, Shio-"
@@ -864,7 +872,8 @@ label AE008:
     MC "Oh, ok. See you later, Shiori-san!"
     AE "Indeed."
     scene Hallway with fade
-    "I walked out of the office door and into the library, ready to finally get some fresh air and sunlight...well, until something hit me. I was at the door of the library when I was hit with a wave of curiosity. Call it a compulsion, a random stroke of unease, whatever, but for some reason I had a suspicion about Shiori-san after I left. I realize that most would consider it crazy, even a bit creepy, but I felt the need to take a quick look back at Shiori-san before I left. Walking up to the office window, I peeked in."
+    "I walked out of the office door and into the library, ready to finally get some fresh air and sunlight...well, until something hit me. I was at the door of the library when I was hit with a wave of curiosity."
+    "Call it a compulsion, a random stroke of unease, whatever, but for some reason I had a suspicion about Shiori-san after I left. I realize that most would consider it crazy, even a bit creepy, but I felt the need to take a quick look back at Shiori-san before I left. Walking up to the office window, I peeked in."
     MCT "Shiori-san? What is she...?"
     "Shiori-san wasn't working. She was standing up. Her hands reached down to the sides of her hips as she looked back at her rear. She was staring at the far wall when I heard her speak."
     AE "Stand...Bow."
@@ -1005,6 +1014,7 @@ label AE009_after:
 label AE010:
     scene Hallway with fade
     "I walked down the hallway, getting ready to meet Shiori-san at the office. I heard that shipping and processing had been getting a lot of orders recently, so I figured that today would be a busy one."
+    "I assumed, however, that was the reason for Shiori-san’s absence from class, something I would have never expected."
     MCT "Hmm? Wait...Shiroi-san?"
     "Shiori-san stood by the entrance to the library, holding a stack of yellow sheets in both arms. The spectacled girl had her back against the hallway wall, looking at me from the side."
     MC "Hey, Shiori-san! Have you been waiting out here for me?"
@@ -1012,11 +1022,9 @@ label AE010:
     AE "Good day, Hotsure-san, I had to get these papers from inventory, so I figured we would meet here around the same time."
     MC "Need me to get those?"
     "Shiori-san stepped back a bit when I put my hands out."
-    show AE sad
     AE "N-no, it's fine."
     MC "Okay, then. Here, let me get the door."
     "I held the door for a bit before Shiori-san looked at me with determined eyes."
-    show AE neutral
     AE "You go first."
     MC "Um...Alright then."
     
@@ -1055,13 +1063,13 @@ label AE010:
     AE "Oh...really? How so?"
     MCT "Why is she so apprehensive? Well, more than usual at least."
     MC "I dunno, it's just that you aren't the same as the last time we talked, is all."
-    show AE neutral
     AE "Yes, well...I suppose that we're the same in that regard."
-    "Shiori-san pointed at my head in the same way one would when trying to tell someone there was something on my face."
+    "Shiori-san pointed at my head in the same way one would when trying to tell someone there was something on their face."
     MCT "Huh? What is she...?"
     "I looked off the the side to catch a glimpse when I saw it."
     "Completely going unnoticed by me until now, my hair was definitely longer. Feeling around the back of my neck, I noticed that it went past my nape at this point, and flowed to bottom of my neck."
     MC "Wait...how did this? When did it get this long?"
+    show AE neutral
     AE "You never noticed?"
     MC "No, I..."
     "I sat in confusion for a moment, trying to get a full grasp of just how my hair had grown this long without my knowledge, when I noticed Shiori-san quietly sit down and face her back to the wall. That's when it hit me."
@@ -1069,17 +1077,16 @@ label AE010:
     AE "...Also what?"
     MC "Well, if my hair has grown like this for the relatively short time I've been here, then...have you also?"
     "Shiori-san shrunk back a bit, eyes intently glaring at me."
-    show AE angry
     MCT "I'll take that as a yes."
+    show AE sad
     AE "Well..."
     MC "And that's why you've been hiding your back."
     MCT "Now that i'm saying it out loud, I'm starting to realize how dumb I was for not noticing it earlier."
     if getAffection("AE") >= 4:
-        "Shiori-san winced a bit when she realized that her gambit had been called, then sighed when she finally resigned to the inevitable."
+        "Shiori-san winced a bit when she realized that her gambit had been called, then, finally resigned to the inevitable"
         show AE sad
         AE "...Yes. Yes it is."
         "Shiori-san let out as sigh. Of relief or frustration, I couldn't really tell."
-        show AE neutral
         AE "Well, if I keep trying to hide myself then it seems neither of us will be able to get our work done."
         AE "So I want you to...get it out of your system now." 
     else:
@@ -1089,7 +1096,6 @@ label AE010:
         MC "Shiori-san?"
         AE "My personal affairs are my own, and if I choose to...evade your gaze, I have every right to."
         MC "Sorry, I didn't mean anything by it."
-        show AE neutral
         AE "Look. Just get it out of your system now so we can continue our day."
     "Shiori-san took her back away from the wall and finally did it."
     MC "Out of my system? Shiori-san, I'm not going to insult y-"
@@ -1113,29 +1119,35 @@ label AE010:
     MC "Oh! No, I mean, well...sorry."
     show AE sad
     AE "..."
-    show AE neutral
     AE "It's fine, Hotsure-san. I realize that it's...off putting, but now that that's over, we can continue work uninterrupted."
     MC "Y-yeah."
     "I got to work on the stack of last time's papers. An awkward silence permeated the room as we both tried to get over what had just happened. I kept trying to focus on my job, but my mind kept racing back to the image of Shiori-sans rear."
     MCT "Damn it, how was that supposed put my mind at ease again?!"
     MCT "I gotta at least try to start off a conversation, if I don't I'll be standing here all day."
     MC "Did..."
+    show AE neutral
     AE "Hmm?"
     MC "Did that happen over night?"
+    show AE sad
     AE "...I don't believe so. It's just that I need a larger uniform and I've yet to get one, is all."
     MC "I would have figured that you would ordered early."
     AE "I did. As it so happens there was a backlog."
     "Shiori-san took another stack of yellow papers and placed them on her desk."
+    show AE neutral
     AE "This is the backlog."
     MC "So, that's what those were."
+    show AE angry
     AE "Yes, and the sooner it's done the sooner I can get out of this embarrassing situation."
     MC "So, what, then students just have to wait until their clothes get too big?"
+    show AE neutral
     AE "Well, yes, however the School has a partnership with a local tailor. If you pay a premium then you can get your clothes fixed at any time."
     MC "Oh, really? I didn't know that."
     AE "Most students don't, to be honest. That's why the student council is thinking of ways to get the message out."
     MC "Why don't you do that? Get your clothes fitted?"
+    show AE sad
     AE "..."
     "Shiori-san sat in silence for a moment, but spoke up again after a brief period."
+    show AE neutral
     AE "I would have to fill out more forms then. My clothes aren't as high a priority as my work."
     MC "They seemed pretty high priority..."
     MCT "I shouldn't get into it."
@@ -1150,8 +1162,10 @@ label AE010:
     "I closed the file cabinet, and prepared to head out, backpack in tow, when Shiori-san stopped me in the middle of the room."
     AE "Wait, Hotsure-san, before you go..."
     MC "Hm? What's up?"
+    show AE sad
     AE "I think it goes without saying, but...could you not bring up earlier to anyone? I showed you...why I was worried in order to ease your mind, nothing else."
     MC "Oh, don't worry about it. It's okay, I mean, as long as you don't go around talking about my rat's-nest hair."
+    show AE neutral
     AE "I won't."
     MC "Cool."
     scene Library with fade

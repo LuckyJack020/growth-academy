@@ -17,7 +17,7 @@ init 2 python:
     datelibrary['BBW_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['BBW_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['BBW_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['BBW_size_2'] = datetime.date(2005, 12, 10)
+    datelibrary['BBW_size_2'] = datetime.date(2005, 4, 10)
     
     eventlibrary['BBW001'] = {"name": "BBW001", "girls": ["BBW"], "location": "cafeteria", "conditions": [], "priority": False}
     eventlibrary['BBW002'] = {"name": "BBW002", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW001"]], "priority": False}
@@ -25,12 +25,13 @@ init 2 python:
     eventlibrary['BBW004'] = {"name": "BBW004", "girls": ["BBW", "PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "BBW003"]], "priority": False}
     eventlibrary['BBW005'] = {"name": "BBW005", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.PRESET]], "priority": False}
     eventlibrary['BBW005A'] = {"name": "BBW005A", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]], "priority": False}
-    eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "location": "gym", "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]], "priority": False}
+    eventlibrary['BBW005B'] = {"name": "BBW005B", "girls": ["BBW", "PRG", "FMG"], "location": "gym", "conditions": [[ConditionEnum.FLAG, "BBW005_workout"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['BBW006'] = {"name": "BBW006", "girls": ["BBW"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "BBW004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     eventlibrary['BBW007'] = {"name": "BBW007", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW006"]], "priority": False}
     eventlibrary['BBW008'] = {"name": "BBW008", "girls": ["BBW", "PRG"], "location": "musicclassroom", "conditions": [[ConditionEnum.EVENT, "BBW007"]], "priority": False}
     eventlibrary['BBW008A'] = {"name": "BBW008A", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW008_extrascene"], [ConditionEnum.ISDAYTIME]], "priority": False}
     eventlibrary['BBW009'] = {"name": "BBW009", "girls": ["BBW", "PRG", "FMG"], "location": "pool", "conditions": [[ConditionEnum.EVENT, "BBW008"]], "priority": False}
+    eventlibrary['BBW010'] = {"name": "BBW010", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BBW009"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     
 label BBW001:
     scene Cafeteria with fade
@@ -363,7 +364,7 @@ label BBW004:
     show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     BBW "I have Aida taking care of my share of the work."
     MC "Aida? Where is she- Why are you down there?"
-    show PRG neutral at Position (xpos=0.75, xanchor=0.5, ypos=0.25, yanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5, ypos=0.9, yanchor=0.5) with dissolve
     PRG "Oh! H-hello Hotsure-san. I'm just doing what Nikumaru-san said."
     MC "Did she say to scrub the floor? I'm pretty sure we just need to sweep it."
     PRG "I- I know. I just wanted to do a good job."
@@ -616,7 +617,7 @@ label BBW005B:
     BBW "Very well. Keisuke, you go first."
     MC "Why me- No, never mind. I'll go."
     "As I was looking at the weights in increments of ten pounds, trying to guess what my limit was, another person came over and joined us."
-    show PRG neutral at Position (xpos=0.9, xanchor=0.5)
+    show PRG neutral at Position (xpos=0.9, xanchor=0.5) with dissolve
     show FMG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     FMG "Hey sorry to bother but how much longer are you...Oh hey guys. What brings you here?"
     MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
@@ -1121,7 +1122,7 @@ label BBW009:
     "Alice let out a single 'Ha' while brushing one of her curls over her shoulder."
     show BBW haughty
     BBW "I would never make a claim I could never back up. If you wish to see the truth of my words in action, then certainly. Let us race."
-    FMG "God I hope not all Americans are this snobbish; let's do this!"
+    FMG "God, I hope not all Americans are this snobbish. Let's do this!"
     "Alice turned to me, her self-satisfied look still there."
     show BBW happy
     BBW "Any objections to Hotsure-san acting as judge? I'm sure he'll be impartial."
@@ -1168,4 +1169,213 @@ label BBW009:
     BBW "Aida, what's next on my agenda?"
     hide BBW with dissolve
     "She was already walking away as Aida answered. Something about 'contacting her distributor.'"
+    jump daymenu
+    
+label BBW010:
+    scene Cafeteria with fade
+    "It was quiet this morning. Reminded me of the first day, after we all learned why we were here."
+    "Looking around at the faces in the cafeteria when I arrived, I got the same vibe as before. The embarrassment everyone was probably feeling because of their second puberty issue."
+    show BBW happy with dissolve
+    "Standing out in the mildly dark gloom of the other students, one face was unexpectedly shining."
+    MC "Good morning, Alice."
+    BBW "It is a good morning, isn't it?"
+    "I took another quick scan of the room, at the subdued expressions and lack of light-hearted chatting you would normally find"
+    MC "It's subjective, I guess."
+    MC "Is there a particular reason you're happy? Did Aida make some really nice treats or something?"
+    BBW "Business, my dear Hotsure-san. Business is doing well, and it's set to do even better soon."
+    MC "Oh, your, what would you call it... Your..."
+    show BBW neutral
+    BBW "My requisitions agency."
+    MC "Yeah... That. Are people coming to you for stuff?"
+    show BBW happy
+    BBW "Word is beginning to spread of my services, with strong customer satisfaction driving an increase of my market share."
+    show BBW haughty
+    BBW "And I have set my flag on a particular shore with tremendous growth potential based on both necessity and a consistent need for replacements."
+    MC "What... Cell phones?"
+    show BBW happy
+    BBW "Clothing, my dear boy."
+    show BBW haughty
+    BBW "It may have escaped your notice, being a guy and all - one not particularly concerned with your own appearance, at that - but the changes we are experiencing are already making obsolete the clothing and other accessories we arrived with."
+    show BBW happy
+    BBW "The school does supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
+    BBW "And such aid only extends to the clothing we need as students. Personal expression and comfort is left to the individual to provide, a tiresome chore when the only stores are outside the school, all the way in town."
+    show BBW angry
+    BBW "And are we supposed to make that trip while wearing ill-fitting, potentially scandalous clothing?"
+    MC "Hey..."
+    show BBW happy
+    BBW "Now there's a better choice. I, through my personal contacts with the biggest and best names in clothing retail, can offer you-"
+    MC "Hey!"
+    show BBW surprised
+    BBW "!"
+    MC "I don't need a sales pitch. I know what you're doing. I got a computer from you, remember?"
+    show BBW neutral
+    BBW "Yes, yes. Got carried away there for a second."
+    show BBW happy
+    BBW "But the fact that you're familiar with this is perfect, because I have a proposition for you."
+    BBW "I have more potential customers than I have time and energy to corral myself. I need subordinates out there spreading the word and taking orders."
+    BBW "How'd you like the job?"
+    MC "What, like a salesman?"
+    show BBW neutral
+    BBW "Not 'like' a salesman. Actually be one."
+    show BBW happy
+    BBW "It's child's play. All you have to do is distribute these catalogues I've made-"
+    "She handed me a box of tri-folded papers - more like brochures than catalogues - that she must have made on her computer."
+    "While they lacked the polish an experienced graphic designer would bring, they did get right to the point, emphasizing the low prices and breadth of available sizes for every body type."
+    BBW "-and talk up what a bargain this is. Be sure to emphasize the more prestigious name brands, and that other designer labels will be available in the future."
+    show BBW neutral
+    BBW "Still have a few more deals to finalize. This school is so remote, bulk shipping out here is a logistical nightmare."
+    show BBW happy
+    BBW "But we already have most of our selection here at the school, ready to distribute to any interested buyer."
+    BBW "And if anyone wants to see our products in real life, you can tell them that I'm already wearing my first new set of clothing."
+    BBW "The school told me it would take as much as a week to get me a larger set of uniforms, but I - going directly to the company that has the contract with this school - was able to get this comfortable and properly fitting outfit before my old set became restrictive."
+    "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now wider torso and rounder belly."
+    show BBW happy:
+        zoom 2.0
+    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, I wasn't expecting to see such changes so quickly."
+    "But apparently she had, because unless she had told me I wouldn't have noticed that this was a larger outfit. It fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
+    show BBW haughty:
+        zoom 1.0
+    BBW "No muffin top, no pinching in the sleeves."
+    "I was still looking over her plump middle, my eyes lingering on the soft curves of her belly, when she snapped me out of my reverie."
+    show BBW happy
+    BBW "Sound good?"
+    menu:
+        "I could use a little spending money.":
+            pass
+        "(Might as well agree. I don't think she'd take 'No' for an answer.)":
+            pass
+        "You can count on me!":
+            pass
+    BBW "Excellent!"
+    BBW "We can discuss your salary and bonuses later. Right now I want you take advantage of the period before classes."
+    BBW "Get out there and distribute those catalogues. I want to see that box at least half-empty before the bell for first period rings."
+    "Caught up in her energy and enthusiasm, I sped away to start hawking her services."
+    "I tried to think of who would need new clothes. Like Alice, I hadn't noticed any real growth in anybody yet."
+    "But maybe necessity wasn't the best avenue to take yet. Maybe there was someone who just wanted something nice and flattering for after school."
+    menu:
+        "Shiori. She tends to dress conservatively, but doesn't every woman want to look nice?": # (-1 affection point with Alice)
+            jump BBW010_c1
+        "Aida. Alice had mentioned she doesn't have an extensive wardrobe.": #(No change in affection points with Alice)
+            jump BBW010_c2
+        "Honoka. Even if she hasn't grown, her needs already stretch most clothing shops.": #(+1 affection point with Alice)
+            jump BBW010_c3
+
+label BBW010_c1:
+    $setSceneCount("AE", 1)
+    $setAffection("BBW", -1)
+    scene Hallway with fade
+    show AE neutral with dissolve
+    "I found Shiori prowling the halls, eyes jumping around from student to student, as if she was looking for violations of the school dress code or something."
+    "For a second I thought this would be a good lean-in to my sales pitch, but when I saw her expression I scratched that idea."
+    "Something a little more subtle would be needed."
+    MC "Hey, Matsumoto-san. You sleep well?"
+    AE "Hotsure-san. Well, I'd say about four hours at this point, however that's neither here nor there. Anything you need?"
+    MCT "I could respond with 'Actually, it's about what you need.' Except she looks more serious than usual."
+    MC "Just making conversation. We are classmates, after all. We should be friendly with one another."
+    AE "Ah, I see. Yes, well, while I'm all for interaction, I'm preoccupied at the moment. Begging your pardon."
+    "She started to turn away, but I at least had to give her a 'catalogue' to say I did my job."
+    "Gracelessly, I almost shoved one of them at her arm."
+    MC " Here. Something to check out at your leisure, when you have some free time."
+    AE "Hm? What is...The Nikumaru Outlet Direct? Keisuke...is this what I think it is?"
+    "Something in her tone tells me to tread carefully. But I, not exactly a cat burglar, can't do much except flail around."
+    MC "Well, it's... I'm not sure what you think it is. What do you..."
+    "She's glaring at me, and I see that playing coy wouldn't work even if I could do so properly."
+    MC "Alice... Nikumaru-san has created a direct-market business. She orders stuff from manufacturers and can sell them at a discount. Clothes, school supplies, stuff like that."
+    show AE angry
+    AE "Hotsure-san...you can't just...ngh...where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
+    MC "She should be in the cafeteria..."
+    "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
+    hide AE with dissolve
+    "Shiori was already brushing past me, making a direct line for the cafeteria."
+    "I looked down at the box of 'catalogues' I was holding, wondering if I should keep handing them out or consider myself fired."
+    jump daymenu
+
+label BBW010_c2:
+    $setSeceneCount("PRG", 1)
+    scene Cooking Classroom with fade
+    "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
+    "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
+    show PRG neutral with dissolve
+    MC "Good morning, Kodoma-san. Making breakfast?"
+    PRG "Oh!  Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
+    MC "Oh no, it's not that. I was just walking by and thought I'd say hi."
+    MC "Is that a new uniform? It looks a bit baggier than your old one."
+    PRG "Um, d-do you not like it?"
+    "For a split-second I thought about suggesting she buy something in her own size, but her doe-eyed expression made her look like she was on the brink of tears and I shot that idea down."
+    MC "No, it's... it's cute."
+    MC "But when you're cooking you don't really want anything that can get stained or burnt, right?"
+    "I took out one of the 'catalogues' and held it out."
+    MC "If you're interested in something a bit more form-fitting - for safety purposes - there's..."
+    show AE sad
+    "I trailed off, because her expression had turned ashamed, lip bit and eyes downcast."
+    MC "What?"
+    PRG "I, I'm sorry Hotsure-sama, but... W-well, I already got these from Nikumaru-sama. I was her first customer."
+    "I suppressed a groan as I realized that of course Aida would already be in on Alice's plans. It was her need for more clothing that had first put the idea of doing this in Alice's head."
+    MC "Right, right. Forgot. Well, sorry to bother you."
+    show PRG neutral
+    PRG "No, no! I'm sorry for, um, wasting your time...  I'll, uh, still take one of the pamphlets, if you like..."
+    "Hesitantly, I handed her one. I think not doing so would have made her more embarrassed."
+    MC "If you'd like to place an order... Well, you know where to find me."
+    if getAffection("PRG") >= 3:
+        PRG "Yes, th-thank you, Keisuke-san... I-I'll see you later."
+    else:
+        PRG "Yes, th-thank you, Keisuke-san..."
+    "As I walked away I wondered who was more embarrassed, me or her. She was doing a better job of putting a happy face on it, at least."
+    "My first stab at a sale and I whiffed it. But I still had time before class started, so the morning wasn't a complete waste. Yet."
+    jump daymenu
+
+label BBW010_c3:
+    $setSceneCount("BE", 1)
+    $setAffection("BBW", 1)
+    scene Hallway with fade
+    "I was trying to think of where I could find Honoka when I was tackled from behind, collapsing to the ground."
+    "A heavy, squishy weight on my back told me my search was over."
+    show BE happy with dissolve
+    BE "Hey, Kei-chan. You're looking a bit more spaced out than usual. You hit your head on something? I mean, besides me, of course."
+    "Climbing to my feet, the sales pitch I had been rehearsing in my mind was pushed aside as I tried to think of something sarcastic and/or witty to say in response."
+    MC "You ask me that after you run into me? Project much?"
+    "But even as I said it I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
+    BE "Hehe, yeah, clearly it looks like you took a hit to the noggin, considering you can't lift your neck above chest level."
+    MC "I was just... Um..."
+    "And then, as if struck by inspiration, I realized this was actually perfect."
+    MC "I was just noticing that your shirt looks a bit tight. That can't be comfortable, can it?"
+    show BE neutral
+    BE "Oh yeah! Definitely tighter. Been noticing it get tighter every day recently. Was pretty fun at first, definitely proof that I'm growing where they said I would. But, heh, yeah, it's not exactly comfortable. You have no idea how much bras pinch when they aren't made to fit you right."
+    MC "Bras... Yeah. Those things."
+    "Black lace bras with the cups almost transparent, frilly edges rising from her cleavage like dolphins jumping out of the sea. White cotton cups pulled taut by two great mounds of flesh, the straps digging into her shoulders..."
+    BE "..."
+    MC "Ah!"
+    "I snapped my head downward to escape eye contact with her. Only then did I remember the box I was holding in my hands. I took out one of the 'catalogues.'"
+    MC "If you're looking for new clothing, there's a new service that just opened up. Really affordable clothes, some custom-made, direct from the manufacturer."
+    "Quizzical, she looked the 'catalogue' over."
+    BE "Huh. Wow, there's a lot of stuff in here. Pretty neat, actually. Most of the time once you get past a certain size, you can only get bras in boring colors or things without patterns. It really takes the fun out of it. But, they're saying here they can do more custom patterns? Prices seem okay too, all things considered. How'd you get your hands on this?"
+    MC "Ali- Nikumaru-san hired me. She knows people in high places at all these companies, so she has an 'in,' so to speak."
+    MC "She's also selling school supplies and other stuff, but I guess she's focusing on clothing right now because... Well."
+    "I gestured at her chest, wrapped up in a too-tight shirt and bra."
+    show BE happy
+    BE "Because it's like starting up an ice cream stand in the middle of a heat wave. She'll make a killing here if she can get everything authorized! You better be getting a cut of all of this if you're going to be helping her out. Don't let her take advantage of you."
+    show BE surprised
+    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah,  I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
+    "Man, my imagination was getting a workout today."
+    "I shook my head to clear my mind."
+    MC "I am being compensated (though the specifics haven't been hammered out yet). I believe she even mentioned something about a commission."
+    MC "So can I put you down for a sale? I can run your order back to her before class starts, but I'm not sure how long it will be until everything arrives. She did say she already has a lot of stuff here..."
+    show BE happy
+    BE "Oh absolutely! Here, let me take a look again real quick. ... Yeah, I think I can spring for three bras and, maybe two shirts. No I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size. Well, as long as I'm capable of getting my arms around them that is!"
+    MC "Even if you have trouble measuring yourself, we can find clothing big enough..."
+    "My voice trailed off as I was hit with the mental image of Honoka carrying a pair of breasts bigger than she was, carting them around in a wheelbarrow..."
+    "...and running me over with them."
+    "Like I said, my imagination was running on all cylinders today. Salesman-mode had delayed the image conjured by her blithe comments about her growth, but the idea that she would grow so big she couldn't wrap her arms around herself... That was impossible to ignore."
+    "I cleared my throat, blushing as I saw her smile mischievously at me, and sputtered."
+    MC "I'll get back to you on how soon we can deliver these. Do you just want the plain model for the bras?"
+    show BE surprised
+    BE "Oh god no. I want one with the heart design, one with the joystick design, and, hm, I dunno, probably one with just some nice color. What do you think would be best; blue, pink, or black?"
+    MC "Black! Black!"
+    MC "I think... black might be best. Bold, but not garish."
+    show BE neutral
+    BE "Sounds good to me. We'll go with the black then. And I circled the shirt I wanted too. Thanks Kei-chan. This is pretty cool, I appreciate it."
+    MC "Well, I am being paid. But you're welcome, all the same."
+    "She winked playfully and then spun around, jogging away."
+    "Even from the back I could see the extra bounce... in her step. I admired it for a moment, and then turned back to the matter at hand."
+    "Landing a sale five minutes into my job was great, but I suspected Alice wouldn't ignore a still-full box of 'catalogues' because of it."
     jump daymenu
