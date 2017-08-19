@@ -570,7 +570,7 @@ label GTS008_after:
     "I waved at her as she bowed in return before I left the room. I had actually only just learned of the festival a couple hours earlier, but this seemed like a good way to all of us to just relax and have fun. Now if only I could find Honoka..."
     jump daymenu
 
-label GTS009
+label GTS009:
     scene Festival with fade
     "Music and cheers set the mood as the building within the block reflected the lights of various lanterns. Dusk was beginning to set in, and as it did, a wave of multiple-colored lights replaced the sunlight."
     "Booths covered both sides of each walk way as vendors attempted to tantalize visitors and tourists with various knick knacks and home style recipes. They didn't get to me though as I had my sights set on a more personal venture. As I made my way further into the festival I could point out the two familiar voices."

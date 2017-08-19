@@ -4,7 +4,7 @@ image PRG neutral = DynamicImage("Graphics/PRG-[globalsize]-neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG-[globalsize]-happy.png")
 image PRG sad = DynamicImage("Graphics/PRG-[globalsize]-sad.png")
 image PRG surprised = DynamicImage("Graphics/PRG-[globalsize]-surprised.png")
-image PRG surprised_flip = im.Flip(PRG surprised, horizontal=True)
+image PRG surprised_flip = im.Flip("Graphics/PRG-1-surprised.png", horizontal=True)
 image PRG angry = DynamicImage("Graphics/PRG-[globalsize]-angry.png")
 image PRG aroused = DynamicImage("Graphics/PRG-[globalsize]-aroused.png")
 
@@ -482,7 +482,7 @@ label PRG004_2:
     $ setAffection("PRG", 1)
     jump daymenu
     
-label PRG005
+label PRG005:
     scene Auditorium with fade
     "I spied Aida milling about in a corner of the auditorium, frowning at a piece of paper in her hands. It must have been her results, as the paper was the same odd size and shape as mine had been."
     MC "Hi Aida, how are-"
