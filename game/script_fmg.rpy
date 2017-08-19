@@ -22,7 +22,8 @@ init 2 python:
     eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": False}
     eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": False}
-    eventlibrary['FMG009'] = {"name": "FMG009", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": False}
+    eventlibrary['FMG008'] = {"name": "FMG008", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG007"]], "priority": False}
+    eventlibrary['FMG009'] = {"name": "FMG009", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG008"]], "priority": False}
     
 label FMG001:
     scene Track with fade #track might not be the right background?
@@ -550,8 +551,48 @@ label FMG007_c3:
     hide FMG dissolve
     "She left before I could explain...though to be fair I don't think I could have salvaged that."
     jump daymenu
-    
+
+label FMG008:
+    scene Dorm Exterior with fade
+    "I wasn't really going anywhere today, just felt like going for a walk and taking in the sights."
+    "Days' a bit hotter, students are hanging out, Mizutani-san is trying to get something under a vending machine, wind's a bit- ...wait, what?!"
+    "My mind wasn't playing tricks; Akira Mizutani was on her knees trying to get something from under the machine."
+    show FMG angry
+    FMG "Oh come on, you stupid pencil!"
+    "She groaned in frustration before getting up, once she did she saw me watching her."
+    show FMG sad
+    FMG "*Sigh* Hey."
+    MC "Um... What's wrong?"
+    FMG "Ugh. My only pencil fell behind the vending machine and my arm's too big to fit. I'd move the stupid maching if I wasn't afraid I might break something!"
+    "She went to grab a fallen stick from one of the trees, and went back down to the vending machine to try to poke the pencil out. Alas, the stick only pushed the pencil further back."
+    show FMG angry
+    FMG "A-Are you for real!? Ugh!"
+    MC "Sorry to hear that, do you want to borrow a pencil?"
+    "She calmed down before answering."
+    show FMG neutral
+    FMG "Nah. I'd feel like I owed you a new one, and I barely got enough cash for myself."
+    MC "Well, is there anything else I could do?"
+    FMG "Actually... Hey, you got smaller hands than I do, think you could grab it for me?"
+    MC "Oh, sure, I'll try."
+    MCT "Wait, what did she say about my hands? Nevermind..."
+    "It was hard to reach, but I got it."
+    show FMG happy
+    FMG "Alright, thanks dude!"
+    FMG "..."
+    show FMG sad
+    FMG "Huh... You know something... That's one thing I'm not looking forward to..."
+    MC "Excuse me?"
+    FMG "My muscles. Well, the whole growth thing in general. With how things are going, I'm gonna grow so big, it's going to be hard to fit in small places."
+    show FMG neutral
+    FMG "Don't get me wrong, I'm looking forward to see how big I might get, I just hope I'm not sacrificing my mobility in the process."
+    FMG "It's worrying, but like I said before; whatever happens, I accept it with open arms."
+    show FMG happy
+    FMG "Anywho, it's been fun but I gotta jet! Thanks again!"
+    "Huh. now I'm beginning to wonder if I got lucky or not with my growth..."
+    jump daymenu
+
 label FMG009:
+    scene Dorm Exterior with fade
     "The day went by as normal, the sun was setting, people were talking and hanging out, and I find myself craving a Rocco-Choco Bar from the vending machines. To my surprise, Akira was waiting near the vending machine; for the most part she seemed a little annoyed, but calm."
     show FMG neutral with dissolve
     FMG "Hey Kei, what's up?"

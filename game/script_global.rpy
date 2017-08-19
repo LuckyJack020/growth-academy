@@ -37,6 +37,7 @@ define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define LE = Character('Yuki', color="#FF91DC")
+define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define Student = Character('Student', color="#FF3300")
