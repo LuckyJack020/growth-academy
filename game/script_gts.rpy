@@ -2,13 +2,27 @@ define GTS = Character('Yamazaki-san', color="#66FF33")
 define Vendor = Character('Vendor', color="#FFFFFF")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 
-image GTS neutral = DynamicImage("Graphics/GTS-[globalsize]-neutral.png")
-image GTS happy = DynamicImage("Graphics/GTS-[globalsize]-happy.png")
-image GTS sad = DynamicImage("Graphics/GTS-[globalsize]-sad.png")
-image GTS surprised = DynamicImage("Graphics/GTS-[globalsize]-surprised.png")
-image GTS angry = DynamicImage("Graphics/GTS-[globalsize]-angry.png")
-image GTS aroused = DynamicImage("Graphics/GTS-[globalsize]-aroused.png")
-image GTS neutral = DynamicImage("Graphics/GTS-[globalsize]-embarassed.png")
+image GTS neutral = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-neutral.png",
+    "True", "Graphics/GTS-1-neutral.png")
+image GTS happy = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-happy.png",
+    "True", "Graphics/GTS-1-happy.png")
+image GTS sad = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-sad.png",
+    "True", "Graphics/GTS-1-sad.png")
+image GTS surprised = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-surprised.png",
+    "True", "Graphics/GTS-1-surprised.png")
+image GTS angry = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-angry.png",
+    "True", "Graphics/GTS-1-angry.png")
+image GTS aroused = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-aroused.png",
+    "True", "Graphics/GTS-1-aroused.png")
+image GTS embarassed = ConditionSwitch(
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-embarassed.png",
+    "True", "Graphics/GTS-1-embarassed.png")
 
 init 2 python:
     datelibrary['GTS_size_6'] = datetime.date(2005, 12, 10)

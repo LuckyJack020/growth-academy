@@ -2,13 +2,27 @@ define BBW = Character('Alice', color="#CC33FF")
 define Lunch = Character('Lunchlady', color="#CC33FF")
 define Francois = Character('Francois', color="#CC33FF")
 
-image BBW neutral = DynamicImage("Graphics/BBW-[globalsize]-neutral.png")
-image BBW happy = DynamicImage("Graphics/BBW-[globalsize]-happy.png")
-image BBW sad = DynamicImage("Graphics/BBW-[globalsize]-sad.png")
-image BBW surprised = DynamicImage("Graphics/BBW-[globalsize]-surprised.png")
-image BBW angry = DynamicImage("Graphics/BBW-[globalsize]-angry.png")
-image BBW aroused = DynamicImage("Graphics/BBW-[globalsize]-aroused.png")
-image BBW haughty = DynamicImage("Graphics/BBW-[globalsize]-haughty.png")
+image BBW neutral = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-neutral.png",
+    "True", "Graphics/BBW-1-neutral.png")
+image BBW happy = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-happy.png",
+    "True", "Graphics/BBW-1-happy.png")
+image BBW sad = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-sad.png",
+    "True", "Graphics/BBW-1-sad.png")
+image BBW surprised = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-surprised.png",
+    "True", "Graphics/BBW-1-surprised.png")
+image BBW angry = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-angry.png",
+    "True", "Graphics/BBW-1-angry.png")
+image BBW aroused = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-aroused.png",
+    "True", "Graphics/BBW-1-aroused.png")
+image BBW haughty = ConditionSwitch(
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-haughty.png",
+    "True", "Graphics/BBW-1-haughty.png")
 
 image cg BBW001 = "Graphics/BBW-SC-1.png"
 

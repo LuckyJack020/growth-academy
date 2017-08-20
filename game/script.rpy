@@ -659,6 +659,7 @@ label startevent:
 
         clearedevents.append(activeevent)
         
+    $renpy.block_rollback()
     $renpy.jump(activeevent)
     
 label train:
