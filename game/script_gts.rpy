@@ -1,4 +1,4 @@
-define GTS = Character('Yamazaki-san', color="#66FF33")
+define GTS = Character('Naomi', color="#66FF33")
 define Vendor = Character('Vendor', color="#FFFFFF")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 
@@ -147,7 +147,7 @@ label GTS002_c1:
     jump GTS002_after
     
 label GTS002_c2:
-    $setflag("GTS008_flowers")
+    $setFlag("GTS008_flowers")
     "Her eyes brightened ever so slightly at that question as her smile grew a little larger."
     show GTS happy
     GTS "Indeed, it was rather nice of him. Well as for the flowers themselves. These ones are Burūberu (Bluebells), a lovely plant with quite the bold color. They're known to symbolize gratefulness."
@@ -218,7 +218,7 @@ label GTS003:
             jump GTS003_c2
 
 label GTS003_c1:
-    $setflag("GTS008_flowers")
+    $setFlag("GTS008_flowers")
     "For the briefest of moments I could see Yamazaki-san's cheeks flash a slight crimson in what I assumed was embarrassment as her hand went to touch the accessory. She looked away for a second but returned her eyes back to mine and retrieved that small smile she had before."
     show GTS embarassed
     GTS "Oh, why thank you so much. It's just a little something I decided to add to the rest of my attire for today. I have a bit of a collection of them, various species and things of that nature."
@@ -337,7 +337,7 @@ label GTS005:
             jump GTS005_c2
 
 label GTS005_c1:
-    $setflag("GTS008_flowers")
+    $setFlag("GTS008_flowers")
     MC "Hey, you have a passion for it, I can't fault you for that."
     show GTS neutral
     GTS "Thank you, I just don't wish to come off as annoying or disinterested in talking about you."

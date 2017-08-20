@@ -340,8 +340,8 @@ label PRG004:
     PRG "You... y-you think I'm a-"
     "{b}{i}SLAM!{/i}{/b}"
     $ renpy.with_statement(vpunch, always=True)
-    show PRG surprised at Position (xpos=0.25, xanchor=0.5)
     show FMG angry at Position (xpos=0.75, xanchor=0.5) with fade
+    show PRG surprised at Position (xpos=0.25, xanchor=0.5)
     "We were interrupted by Akira flying through the front doors of the athletics center at dangerous speeds, sprinting full tilt down the side of the building. We watched with wonder as she made it to the end of the long building in seconds."
     hide FMG angry
     show PRG neutral at center
