@@ -926,24 +926,23 @@ label global000_homeroom:
     HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
     scene black with dissolve
-    "There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
-    MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
-    MCT "What is going on at this school?!"
-    UNKNOWN "Keisuke? {w} Hotsure Keisuke?"
+    #"There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
+    #MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
+    #MCT "What is going on at this school?!"
+    #UNKNOWN "Keisuke? {w} Hotsure Keisuke?"
     
-    scene F1 Hallway with dissolve
-    MC "Ah! Yes What?"
-    UNKNOWN "Eep!"
-    "I was startled by a sweet-looking girl who had stopped at my desk as everyone else was leaving class."
-    MC "Uh, hi, er, sorry, I'm Keisuke."
-    LE "Charmed! I'm Kuchibiru Yuki!"
-    LE "So, wow, what a trip, right? Can you believe it?{w} I wonder what's going to start growing on me?{w} What if it already has? What if it's something internal? Could you wind up with, like, kidneys the size of medicine balls or something? what about..."
-    "She went on and on, speaking a million kilometers an hour, and I could barely keep up with her questions.{w} By the time she stopped for breath, we'd reached the front doors of the building."
-    LE "Anyways, I'm gonna just hang out in the courtyard for a little bit. I love to people-watch, and find out all about everyone!"
+    #scene F1 Hallway with dissolve
+    #MC "Ah! Yes What?"
+    #UNKNOWN "Eep!"
+    #"I was startled by a sweet-looking girl who had stopped at my desk as everyone else was leaving class."
+    #MC "Uh, hi, er, sorry, I'm Keisuke."
+    #LE "Charmed! I'm Kuchibiru Yuki!"
+    #LE "So, wow, what a trip, right? Can you believe it?{w} I wonder what's going to start growing on me?{w} What if it already has? What if it's something internal? Could you wind up with, like, kidneys the size of medicine balls or something? what about..."
+    #"She went on and on, speaking a million kilometers an hour, and I could barely keep up with her questions.{w} By the time she stopped for breath, we'd reached the front doors of the building."
+    #LE "Anyways, I'm gonna just hang out in the courtyard for a little bit. I love to people-watch, and find out all about everyone!"
     
     "So I found myself at Seichou Academy, orientation behind me and a long, strange journey ahead."
     "What was I supposed to do now, knowing what I do about the bodies of the student body?"
-    # This is where we will show a top-down perspective map of the campus, most likely, in order to begin branching off to whatever the player chooses from the options presented.
     jump daymenu
 
 label global005:
