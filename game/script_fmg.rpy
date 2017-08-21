@@ -13,7 +13,7 @@ init 2 python:
     datelibrary['FMG_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['FMG_size_2'] = datetime.date(2005, 12, 10)
+    datelibrary['FMG_size_2'] = datetime.date(2005, 4, 10)
     
     eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": False}
     eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": False}
@@ -30,16 +30,16 @@ label FMG001:
     "After thinking it over, I decided to check out the Athletics Area, so when I have P.E. I would know where it is."
     "Compared to the rest of the academy, the building itself was not only taller, but almost as wide as the rest of the school."
     "From how tall the windows were made the the building looked least two or three stories tall."
-    "As I wondered if the inside really was big as it looked on the outside, I found myself walking in to satisfy my curiosity."
+    "Wondering if the inside really was big as it looked on the outside, I found myself walking in to satisfy my curiosity."
     scene Gym with fade
     "The inside was was not what I thought it would look like, what I imagined to be a normal three story building turned out to be just one room that was three stories high."
     "The exercise equipment was unique, to say the least; while some did look normal, most of them came in extreme shapes and sizes."
-    "One thing I also noticed was that the building was so empty that there was an lone echo coming from the far end of the building and once again curiosity drove me to follow where the source of the echo was coming from."
+    "One thing I also noticed was that the building was so empty that there was a lone echo coming from the far end of the building and once again curiosity drove me to follow where the source of the echo was coming from."
     "As I got closer to the source, I began to hear someone counting."
     UNKNOWN "...87...88..."
     "From where I was I could tell it was female, but I couldn't make out who it was just yet."
     UNKNOWN "...92...93..."
-    "After a minute of looking, I found that the source of noise was coming from a bench pressing Akira."
+    "After a minute of looking, I found that the source of noise was coming from a bench-pressing Akira."
     "From what I could guess, she was too focused on her workout to notice me walking towards her, or that she assumed it was just someone who was working out as well."
     show FMG angry with dissolve
     FMG "98...99...100!"
@@ -79,7 +79,7 @@ label FMG001:
     hide FMG with dissolve
     "She said while running past me to the door."
     MC "Wait, huh?"
-    "Was all I could say in flustered state. Akira then turned around jogging in one spot for a brief moment."
+    "Was all I could say in flustered state. Akira then turned around, jogging in one spot for a brief moment."
     show FMG sad with dissolve
     FMG "Sorry! I have to go now, if you want to talk you can find me here whenever theres no classes or at the local gym, later!"
     hide FMG with dissolve

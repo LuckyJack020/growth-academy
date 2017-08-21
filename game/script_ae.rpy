@@ -74,7 +74,7 @@ label AE001:
     "Shiori looked back down to her book, eyes fixated on the page in front of her. She adjusted her slowly slipping glasses and turned to the next page."
     MCT "Ok, I guess I'll just...sit here."
     "The silence in the room was palpable."
-    "It's weird, when you think you're alone, but then learn another person is there your body just tenses up a bit. Though that may very well be Shiori's presence."
+    "It's weird when you think you're alone, but then learn another person is there, and your body just tenses up a bit. Though it may very well have just been Shiori's presence."
     "She was someone who just emanated a strict and commanding aura... but still I felt as though I should at least try to socialize."
     MCT "Should I just move over to her table? Would that be intrusive?"
     "I moved over and sat a seat away from where she was, better to be near and speak softly than far and shout I supposed."
@@ -484,7 +484,7 @@ label AE005:
     "Shiori-san held her head high, but her face and body betrayed her. Her eyes seemed more apprehensive than before. Her face showed a certain embarrassment I'd never seen on her before; her cheeks were puffy, and her face was a slight tinge of crimson. Though her posture was fairly uniform, all the posture the human body can muster couldn't hide her trembling."
     MC "Shiori-san, is everything alright? How did it go?"
     AE "Yes. I...should be alright. I was taken slightly aback by my results..."
-    MC "She gave a deep breath, and though her face still showed a tinge of pink, she appeared to instantly regain her composure."
+    "She gave a deep breath, and though her face still showed a tinge of pink, she appeared to instantly regain her composure."
     show AE neutral
     AE "It's nothing that I hadn't expected, of course. I had a theory on what my situation was, it was just that...having it said to me was a bit more jarring than I would have liked."
     MC "A theory on your type of growth?"
@@ -571,7 +571,7 @@ label AE006:
     MCT "I can't believe that it's sogged already. Only a few days with this thing and I've only used it once for...oh god no."
     "As I opened up the notebook, a mix of shock and utter despair began to sink in, as I realized my Calculus homework was reduced to what could only be described as a Jackson Pollock wet dream."
     MC "Are you kidding me?! I spent hours trying to figure this out!"
-    MCT "Damint! This is bad. This needs to be done by tomorrow! This is the only notebook I have...uh, had, and the store is on the other side of campus. If I run over I-"
+    MCT "Dammit! This is bad. This needs to be done by tomorrow! This is the only notebook I have...uh, had, and the store is on the other side of campus. If I run over I-"
     show AE neutral with dissolve
     AE "Hotsure-san?"
     MC "AGuaH!"
@@ -733,9 +733,11 @@ label AE007_after:
     MC "Then...will I really be helping at all? If all i'm doing is filing the files, then it would still take months to finish all of that, let alone by sundown! All i'd really be doing is shaving a minute or two off of your workload."
     AE "Keisuke-san, there are two things you're underestimating; my ability to sort documents, and the value of a minute or two."
     MC "...Ok, I guess."
+    scene black with fade
     "We got to work, and Shiori-san began filling out forms at neck cracking speeds. Every other minute was the sound of scribbling, stamping, and then sliding a paper to me. I nearly choked for a second, before taking the files in hand and bringing them to the cabinet."
     "The names went on and off the desk like lightning, and it honestly felt like for every paper I would take off the desk and file, two more would take it's place. A document hydra. By the time the stream stopped, I was nearly panting from the quick, bustling motion of it all."
     "The scribbling and stamping had stopped now, and as I grabbed the last few files, I looked back on the pile of files and I realized..."
+    scene Office with fade
     MC "They're...gone?"
     AE "Yes, Hotsure-san. I filled them all out."
     MC "B-wha-I-"
@@ -818,7 +820,7 @@ label AE008:
     "Shiori-san stopped for a moment, and began gently nibbling on the end of her thumb nail."
     AE "That depends...it seems as though the monotony is affecting your output, but do you think that you can keep working if we do?"
     MCT "Anything that can stop myself from falling asleep would be a godsend."
-    MC "Definately."
+    MC "Definitely."
     AE "Very well then. Talk to me if you wish."
     MC "Cool."
     "I continued back on my regular filing patterns, feeling slightly renewed with the new prospect of interactivity."

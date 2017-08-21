@@ -105,7 +105,7 @@ label PRG001_c:
     "Aida finally looked up at me, and though I could still see the worry plastered across her face, there was at least a hint of hope in her eyes."
     PRG "Thank you, Keisuke!"
     MC "Glad I could help!"
-    hide PRG with fade
+    hide PRG with dissolve
     "And with that she was on her way again, though I thought about the conversation for a few minutes afterwards. What {i}was{/i} going to change about me?"
     $ setAffection("PRG", 2)
     jump daymenu
@@ -118,7 +118,7 @@ label PRG003:
     MC "Wow, something smells good..."
     "I followed the scent to the end of the hallway, a small room in the corner opposite the stairs beckoning me with its open door. I peeked inside, and who should I find at the home ec. stations but mousy, unassuming Aida."
     scene Classroom Day with fade
-    show PRG happy with fade
+    show PRG happy with dissolve
     MC "Hi there, Kodama-san!"
     "I had tried to sound friendly, but she jumped like I'd shouted her name at the top of my lungs."
     show PRG surprised
@@ -128,7 +128,7 @@ label PRG003:
     menu:
         "No, no one's coming that I know of.":
             jump PRG003_1
-        "So you fance yourself a chef?":
+        "So you fancy yourself a chef?":
             jump PRG003_2
         "Actually, I was looking for you.":
             jump PRG003_3
@@ -155,7 +155,7 @@ label PRG003_1:
             jump PRG003_1_b
             
 label PRG003_2:
-    MC "So, you fance yourself a chef, Kodama-san?"
+    MC "So, you fancy yourself a chef, Kodama-san?"
     show PRG sad #replace with aroused
     "I smiled at her reassuringly, but Aida nevertheless blushed hotly."
     PRG "Oh, I don't know a-about that... I just know, um, how to cook."
@@ -331,7 +331,7 @@ label PRG004:
     scene Track with fade
     "Aida had finished making Alice's lunch early, so she and I decided to go for a walk around campus. The weather was nice, the sea breeze was cool... it almost felt like a date. I took a deep breath as we passed in front of the athletics building, and smiled."
     MC "This is nice, isn't it?"
-    show PRG neutral with fade
+    show PRG neutral with dissolve
     PRG "Hm? What is?"
     MC "This, just, us, the sky, the sun, the breeze... It's nice to just be out with a friend on peaceful days like this."
     PRG "..."
@@ -340,7 +340,7 @@ label PRG004:
     PRG "You... y-you think I'm a-"
     "{b}{i}SLAM!{/i}{/b}"
     $ renpy.with_statement(vpunch, always=True)
-    show FMG angry at Position (xpos=0.75, xanchor=0.5) with fade
+    show FMG angry at Position (xpos=0.75, xanchor=0.5) with dissolve
     show PRG surprised at Position (xpos=0.25, xanchor=0.5)
     "We were interrupted by Akira flying through the front doors of the athletics center at dangerous speeds, sprinting full tilt down the side of the building. We watched with wonder as she made it to the end of the long building in seconds."
     hide FMG angry
@@ -432,10 +432,9 @@ label PRG004_1:
     GTS "Yamazaki."
     FMG "Yamazaki! Thank you, Yamazaki-san!"
     hide FMG happy
-    hide GTS neutral
-    with fade
+    hide GTS neutral with dissolve
     "Akira ran off to find what she needed, yelling for me to follow. I turned to Aida with an apologetic look."
-    show PRG neutral with fade
+    show PRG neutral with dissolve
     MC "So much for \"peaceful days like this\", I suppose. Sorry you got wrapped up in all this excitement."
     PRG "N-no, don't worry about it. It's... I'm okay."
     MC "Okay, thanks!"
@@ -465,7 +464,7 @@ label PRG004_2:
     FMG "I... all right."
     show FMG angry
     FMG "Sit tight little guy, I'll be right back!"
-    hide FMG angry with fade
+    hide FMG angry with dissolve
     "Akira was off like a shot, her muscular legs propelling her towards the classrooms with surprising speed."
     show PRG neutral at center
     PRG "..."
@@ -518,7 +517,7 @@ label PRG005:
     MC "It's okay, Aida, really. I promise I won't tell anyone."
     show PRG sad
     PRG "Th-thanks, Hotsure-san, but, ah... I- I should probably get back to the dorms..."
-    hide PRG with fade
+    hide PRG with dissolve
     "Aida gave a quick, deep bow, and scurried off, leaving me wondering what was so terrible on that sheet she couldn't tell me..."
     jump daymenu
     
@@ -528,13 +527,13 @@ label PRG008:
     MCT "And maybe get a free sample, heh..."
     
     scene Classroom Day with fade
-    show PRG neutral at Position (xpos=0.25, xanchor=0.5) with fade
+    show PRG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     PRG "Oohh..."
-    hide PRG neutral with fade
-    show PRG neutral at Position (xpos=0.75, xanchor=0.5) with fade
+    hide PRG neutral with dissolve
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     PRG "Not here either..."
-    hide PRG neutral with fade
-    show PRG neutral at center with fade
+    hide PRG neutral with dissolve
+    show PRG neutral at center with dissolve
     PRG "Isn't there one anywhere?"
     "Instead of the usual soft, quiet, unobtrusive girl in the corner, Aida was shuffling from one side of the classroom to the other, every cupboard not already locked up opened as she searched for something."
     MC "Uh... Ko-Kodama-san?"
@@ -581,7 +580,7 @@ label PRG008_1:
     MC "Promise I won't peek!"
     
     scene Classroom Day with fade
-    show PRG sad with fade
+    show PRG sad with dissolve
     MC "I got it!"
     show PRG happy
     PRG "You did! Oh, thank you!"
@@ -594,7 +593,7 @@ label PRG008_1:
     PRG "Well, Alice's not going to be happy it's late, but at least it's right... I hope she's not mad at me."
     MC "I'm sure she'll understand."
     PRG "Right... well, thank you again, Hotsure-san."
-    hide PRG with fade
+    hide PRG with dissolve
     "Aida finished plating Alice's meal and left, leaving me alone in the room. It had been a bit hectic, but it was still nice to have spent time with her."
     jump daymenu
     
@@ -660,7 +659,7 @@ label PRG008_3_a:
 label PRG010:
     scene Classroom Day with fade
     "I wandered into the cooking clubhouse, knowing it was about the time that Aida started cooking for Alice, but before she got too involved in the meal to socialize."
-    show PRG happy with fade
+    show PRG happy with dissolve
     "Aida looked at the sound of someone approaching, her expression momentarily brightening before her usual worried look crossed back over her features."
     PRG "Oh! U-um, hi Keisuke. What brings you here?"
     MC "Nothing much, was just around and thought I'd come visit for a bit, maybe help you with your cooking, if you'd like."

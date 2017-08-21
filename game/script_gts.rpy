@@ -91,7 +91,7 @@ label GTS001_c3:
     GTS "Oh? You have a younger sister, Hotsure-san?"
     MC "Yeah, she's going to school here too."
     extend " I'm just thinking about what Sensei said, about how sometimes siblings are transferred to this school simply because of the results of the other."
-    extend " I'm sure I can cope with whatever might happen to me, but I'm worried about her. I just don't want her to go through something that might hurt her."
+    MC "I'm sure I can cope with whatever might happen to me, but I'm worried about her. I just don't want her to go through something that might hurt her."
     GTS "It's only natural to worry as the older sibling Hotsure-san, but you mustn't let it concern you too much. There's no way to know for certain at the moment, so it's best to just be hopeful and keep your chin up."
     MC "Yeah I guess that's true. Sorry for sounding like a mother hen here."
     GTS "It's not worry Hotsure-san, like I mentioned it's just natural to feel that way. I know I'm very much the same with my own sister."
@@ -108,9 +108,8 @@ label GTS001_after:
     MC "O-Oh! Sorry... I was just thinking again haha... so are you going to be doing anything else later today?"
     show GTS neutral
     "She placed a finger on her lip as she thought about her plans for the evening before finally replying."
-    GTS "Well I had planned to return to my dorm room so I can tell my family about how my first day went. I just wanted to see the garden a little bit before I did so."
-    GTS "However, I do plan to explore the garden later this evening. There's a surprisingly large variety of flowers here."
-    extend " At least more than I would expect so I want to make a mental list of what's here and maybe ask the groundskeeper about where they obtained the seeds for them."
+    GTS "Well I had planned to return to my dorm room so I could tell my family about how my first day went. I just wanted to see the garden a little bit before I did so."
+    GTS "However, I do plan to explore the garden later this evening. There's a surprisingly large variety of flowers here - at least more than I would expect - so I want to make a mental list of what's here and maybe ask the groundskeeper about where they obtained the seeds for them."
     MC "Oh I see; I won't hold you up then. I should probably do the same myself really. I'm sure my family would love to hear about how my day went as well. I'll see you around Yamazaki-san."
     GTS "Farewell Hotsure-san, I hope the rest of your day goes well. Do try to visit the garden every so often, you'll be surprised how much good can come from resting in a garden for a few moments."
     MC "Heh, I might take you up on that advice. Later Yamazaki-san."
@@ -119,11 +118,11 @@ label GTS001_after:
 
 label GTS002:
     scene School Planter with fade
-    "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated to degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I step into the school's garden once more."
-    "The breeze had become cooler but still flowed with a sense of gentleness to it. Making some pink colored flowers dance before me. In the distance, I heard a faint voice and as I turned to look I spied Yamazaki-san giving a gracious bow to who I assumed was the gardener."
+    "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated in degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
+    "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me. In the distance, I heard a faint voice, and as I turned to look I spied Yamazaki-san giving a gracious bow to who I assumed was the gardener."
     MC "Yo Yamazaki-san!"
     show GTS embarassed with dissolve
-    "I called out, lifting one arm up to give a slight wave. This seemed to surprise her as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
+    "I called out, lifting one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
     GTS "Hello again Hotsure-san, I'm sorry you startled me a little there."
     MC "Heh, sorry. I just wanted to make sure you heard me. I see you talked to the gardener."
     "She blushed very faintly and gave a gentle nod."
@@ -316,7 +315,7 @@ label GTS004:
 label GTS005:
     scene Hallway with fade
     "I wandered about the campus for quite some time after visiting the nurse. The news of my particular condition leaving me with a feeling of uncertainty. As I walked, my hand would occasionally touch the tip of my bangs as I wondered just how quickly they might change."
-    "As I stepped pass the double doors, my eyes shut from the blast of sunlight that I was exposed to. After a few seconds my eyes would readjust and I'd see Yamazaki-san's form kneeling in front of a patch of flowers. Calmly walking over, my footsteps on the path alerting her to my presence as she looked back at me and gave a soft wave."
+    "As I stepped past the double doors, my eyes shut from the blast of sunlight that I was exposed to. After a few seconds my eyes would readjust and I'd see Yamazaki-san's form kneeling in front of a patch of flowers. Calmly walking over, my footsteps on the path alerted her to my presence as she looked back at me and gave a soft wave."
     show GTS neutral with dissolve
     GTS "Hello there Hotsure-san."
     MC "Hey Yamazaki-san. How are you doing?"
@@ -325,9 +324,10 @@ label GTS005:
     "I looked past her to see the pink plants in the flower patch behind her."
     MC "'Botans', huh? I thought they were roses, honestly."
     "She gave me a soft smile, but shook her head slightly."
-    GTS "It's a common mistake, they do have a somewhat common appearance so I can see how you'd make that assumption. One way to tell the difference is that botans have a lot more petals, and because of that are a bit puffier-looking. I like to think of them as wedding gowns personally, the petals being the ends of the gown that swirl towards the middle which is the bride."
+    GTS "It is a common mistake, they do have a somewhat common appearance so I can see how you'd make that assumption. One way to tell the difference is that botans have a lot more petals, and because of that are a bit puffier-looking."
+    GTS "I like to think of them as wedding gowns personally, the petals being the ends of the gown that swirl towards the middle which is the bride."
     MC "That's quite the romantic way to look at it."
-    "This made her cheeks reddened a bit as she tried to move past that statement."
+    "Her cheeks reddened a bit as she tried to move past that statement."
     show GTS embarassed
     GTS "Apologies, I didn't ask how you were doing. I can never seem to stop talking about flowers with you it seems."
     menu:
@@ -369,7 +369,7 @@ label GTS005_c2:
     show GTS neutral
     GTS "Oh my, yes, I can see how that'd be an issue. Not to mention caring and maintaining it."
     MC "Yeah... that's a lot of hair products I'm going to have to learn about. But hey, at least I can cosplay any character I want now since I'll always have the right amount of hair for it."
-    "I said with a grin, trying to be positive which in turn made her giggle and nod her head in agreement."
+    "I said with a grin, trying to be positive which in turn made her giggle and nod in agreement."
     GTS "Yes, that is one plus. Not to mention you'll be able to change your style to whatever suits you, letting you accessorize more ways than others would be able to."
     "I showed her my smile which made her smile back as she seemed to enjoy my positive outlook at the news of my condition."
     jump GTS005_after
@@ -783,7 +783,7 @@ label GTS009_after:
     jump daymenu
     
 label GTS010:
-    scene Classroom with fade
+    scene Classroom Day with fade
     "A defeated sigh vacated my body as my hands had been swatting at my bangs all morning. I could already tell this growth was going to be annoying as I had only just recently had my hair trimmed and already it was back to when I had first gotten it cut."
     MC "This is really going to burn a hole in my wallet if I want to keep myself from looking like a mountain man by the end of the month..."
     "As I slumped back in my chair, I heard the door to the classroom open and looked over to see Naomi seemingly rushing to get to her seat."

@@ -23,7 +23,7 @@ image Roof = "Graphics/roof.png"
 image Nurse Office = "Graphics/office.png"
 image Pool = "Graphics/schoolpool_day.png"
 image splash = "Graphics/splashscreen.png"
-image Festival = "Graphics/NYI.png"
+image Festival = "Graphics/festival.png"
 
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
 image RM angry = "Graphics/RM-1-angry.png" #Roommate Angry Portrait
@@ -388,7 +388,7 @@ label global000_BBW:
     scene Classroom Day with dissolve
     "So this was Classroom 3-B. I would be spending a lot of time here for the next year."
     "The first thing I noticed was that, much like the rest of the shool, the classroom seemed very big. It was much larger than any that I had been in before."
-    "Whether or not this meant that there would be more students, or if this was just something that made high school different, I had no idea."
+    "Whether or not this meant that there would be more students, or if this was just something that made this school different, I had no idea."
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
     show cg BBW001 with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
@@ -884,7 +884,7 @@ label global000_homeroom:
     "If not for the teacher's lectern at the front of the class, you'd be forgiven for thinking we were in a pen instead of a classroom."
     "Finally the bell rang, and at the last possible second one could enter and not be late, our homeroom teacher slid open the door and entered."
     MCT "'Dour' is the first word that comes to mind... Guy looks like he's been middle-aged his entire life."
-    "The man was tall, and thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
+    "The man was tall, thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
     "{i}Tashi{/i}"
     "Tashi-Sensei dropped the chalk back on the tray, turned to us, and stepped forward, leaning against the lectern."
     HR "..."
@@ -919,7 +919,7 @@ label global000_homeroom:
     show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     HR "Others...{w}Not so much."
     hide PRG
-    HR "But make no mistake, unless you've got a sibling here at Seichou Acadeamy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
+    HR "But make no mistake, unless you've got a sibling here at Seichou Academy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
     "Tashi-Sensei scanned the room, taking in the fear and confusion, then shrugged."
@@ -1018,8 +1018,10 @@ label global005:
     MC "When we got to Room 3-B, we found a message written out on the blackboard, announcing that we were all supposed to head to the gymnasium."
     show AE neutral at Position (xpos=0.8, xanchor=0.5) with dissolve
     AE "All right, everyone, it's measuring day for our class, so let's get an orderly line going."
+    show FMG happy at Position (xpos=0.25, xanchor=0.5) with dissolve
     FMG "Oooh, neat! I've been wanting to get my guns professionally measured for a while!"
     BBW "..."
+    hide FMG with dissolve
     AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
     show PRG neutral at Position (xpos=0.5, xanchor=0.5, ypos=0.515, yanchor=0.5) with dissolve:
         xzoom 1
