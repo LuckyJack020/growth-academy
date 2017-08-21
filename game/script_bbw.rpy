@@ -53,7 +53,7 @@ label BBW001:
     MC "OK, I guess I couldn't have expected it for it to be a surprise."
     extend " But still, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised."
     MC "At least food is familiar enough. A nice snack after class is normal, right?"
-    UNKNOWN "I'm sorry, you must not know who you're talking to."
+    UNKNOWN "I'm sorry, you must not realize who you're talking to."
     MC "I wonder who that is."
     "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
     show BBW angry with dissolve
@@ -656,7 +656,7 @@ label BBW005B:
     "Akira puts the shake away before whispering to me."
     show FMG happy
     FMG "{i}Between you and me, I just wanted to see Alice's reaction to drinking this sludge.{/i}"
-    FMG "Alright, tips. The first thing you want to do is, like I said, know your limits and pace yourself. Take short breaks when you need it. Keep consistent and follow a routine. And the most importantly, be patient, don't expect results overnight. As long as you keep it up and actively enjoy it, you won't have any problems."
+    FMG "All right, tips. The first thing you want to do is, like I said, know your limits and pace yourself. Take short breaks when you need it. Keep consistent and follow a routine. And the most importantly, be patient, don't expect results overnight. As long as you keep it up and actively enjoy it, you won't have any problems."
     show BBW happy
     BBW "Sounds good. Let's get to it."
     show BBW neutral

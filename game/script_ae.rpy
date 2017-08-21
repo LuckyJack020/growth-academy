@@ -211,7 +211,7 @@ label AE002_c1:
     AE "I assure you, Hotsure-san, I am more than capable of handling myself."
     MC "I believe you, Shiori-san."
     AE "Good. Well then, is that all you need?"
-    MC "Yeah, I think that I should be alright."
+    MC "Yeah, I think that I should be all right."
     AE "Then I will see you in class. Remember, our homework is Chapter 1 section 3. I expect good results."
     MC "Yeah...see you then."
     scene Library with fade
@@ -220,10 +220,10 @@ label AE002_c1:
     jump daymenu
 
 label AE002_c2:
-    MC "No, I should be alright."
-    MCT "It really doesn't matter I guess, she seems alright now."
-    AE "Alright then, have a good day."
-    MC "Alright, see you later, I guess."
+    MC "No, I should be all right."
+    MCT "It really doesn't matter I guess, she seems all right now."
+    AE "All right then, have a good day."
+    MC "All right, see you later, I guess."
     AE "Oh yes, and Hotsure-san?"
     MC "Yeah?"
     AE "Tuck in your shirt, it doesn't comply with the current dress code."
@@ -253,7 +253,7 @@ label AE003:
     "After a short while, I picked up my tiny, oblong aircraft and put them in my bag, ready to head back to my room. The sense of confusion and surprise left in favor for a general feeling of what I can only describe as uneasy acceptance."
     "Shiori's words resonated with me for a small while the more I thought about it, what will happen will happen, all I can really do is accept it. Although it did seem...strange. I never expected Shiori of all people to prescribe things to fate, but as she said, who am I to say what her 'usual' is. Hell, I'm not sure if this school even has anything 'usual'."
     show AE neutral with dissolve
-    AE "Everything alright, Hotsure-san?"
+    AE "Everything all right, Hotsure-san?"
     MC "GAH!"
     "In my shock, I nearly dropped my bag with the planes in tow."
     MC "Oh! Hey, Shiori-san. You scared me. Uh, yeah, I'm all good."
@@ -386,7 +386,7 @@ label AE004_aftertest:
     MCT "Is there anything I want to bring up to Shiori-san?"
     menu:
         "Nothing I can think of.":
-            MC "I should be alright, thank you."
+            MC "I should be all right, thank you."
             AE "Very well. Have a good day."
             jump daymenu
         "Bring up yesterday's events.":
@@ -482,8 +482,8 @@ label AE005:
     AE "N-ng! Hah...*ahem* hello, Hotsure-san."
     MCT "H-her face!"
     "Shiori-san held her head high, but her face and body betrayed her. Her eyes seemed more apprehensive than before. Her face showed a certain embarrassment I'd never seen on her before; her cheeks were puffy, and her face was a slight tinge of crimson. Though her posture was fairly uniform, all the posture the human body can muster couldn't hide her trembling."
-    MC "Shiori-san, is everything alright? How did it go?"
-    AE "Yes. I...should be alright. I was taken slightly aback by my results..."
+    MC "Shiori-san, is everything all right? How did it go?"
+    AE "Yes. I...should be all right. I was taken slightly aback by my results..."
     "She gave a deep breath, and though her face still showed a tinge of pink, she appeared to instantly regain her composure."
     show AE neutral
     AE "It's nothing that I hadn't expected, of course. I had a theory on what my situation was, it was just that...having it said to me was a bit more jarring than I would have liked."
@@ -525,7 +525,7 @@ label AE005_c2:
     AE "..."
     if getAffection("AE") >= 3:
         show AE sad
-        AE "It's alright Hotsure-san, I realize that this is a stressful time for us all...yes, you're correct. The growth I came to this school for is my...rear."
+        AE "It's all right Hotsure-san, I realize that this is a stressful time for us all...yes, you're correct. The growth I came to this school for is my...rear."
         "I looked down at Shiori-sans hips. They were already flared out as it was. I've seen butts like hers from American media and stuff like that, but seeing it on a Japanese girl was still so surreal to me."
         MC "I'm sorry. I didn't mean to be so thoughtless."
         show AE neutral
@@ -834,7 +834,7 @@ label AE008:
     MC "Didn't you want to talk?"
     AE "Oh? You wanted me to talk with you?"
     MC "I mean, having a conversation together is what I was hoping for, yeah."
-    AE "Hmm...alright. I suppose it wouldn't affect my work one way or another. You asked me about classes, yes?"
+    AE "Hmm...all right. I suppose it wouldn't affect my work one way or another. You asked me about classes, yes?"
     MC "Yeah, how are they?"
     AE "Perfectly fine. The subject matters are interesting, but there are some things that are a bit...unnerving about the room."
     MC "Like what?"
@@ -869,7 +869,7 @@ label AE008:
     "The stack of papers I had been filing had been thinned down without me noticing. It seems as though her 'training' paid off."
     MC "Ah! H-hey! Yeah, I did it! And I think...Yep, all placed correctly!"
     AE "I've finished as well, so I suppose we can call it a day."
-    MC "Alright. Ready to head out?"
+    MC "All right. Ready to head out?"
     AE "Mm, you go on ahead. I'm going to double check your work and make note of a few things in the office."
     MC "Oh, ok. See you later, Shiori-san!"
     AE "Indeed."
@@ -1028,7 +1028,7 @@ label AE010:
     MC "Okay, then. Here, let me get the door."
     "I held the door for a bit before Shiori-san looked at me with determined eyes."
     AE "You go first."
-    MC "Um...Alright then."
+    MC "Um... All right then."
     
     scene Library with fade
     "We walked through the library, Shiori-san following closely behind me, until we reached the office door."
@@ -1057,7 +1057,7 @@ label AE010:
     MCT "Is she...avoiding me?"
     "Just as a way to test my suspicion, I made an extra effort to walk over to the far cabinet towards Shiori-san rather than just reaching over. Much to my suspicion, Shiori-san backed away slightly."
     MCT "Ok, something is definitely wrong."
-    MC "Shiori-san, is everything alright?"
+    MC "Shiori-san, is everything all right?"
     AE "Yes, Hotsure-san. Keep working."
     MC "It's just that you seem a bit different this morning."
     MCT "Shiori-san stiffened up a bit, turning further a bit. She brought her thumbnail up to her mouth."
@@ -1243,7 +1243,7 @@ label AE011_010followup:
 label AE011_no010:
     "My mind was blanking. For some reason, my eyes kept getting drawn to Shiori-san, but I couldn't tell why."
     AE "Well...let's continue. You go first."
-    MC "It's alright. You can."
+    MC "It's all right. You can."
     show AE angry
     AE "..."
     "Shiori-san let out a sigh."
@@ -1386,7 +1386,7 @@ label AE012:
     MC "Wanna head in?"
     AE "Mhm, you first."
     scene Office with fade
-    MC "Alright. Ready for another day."
+    MC "All right. Ready for another day."
     MCT "Yup, another day, another stack of papers."
     show AE neutral with dissolve
     AE "..."
@@ -1549,7 +1549,7 @@ label AE012_after:
     MC "Well, I guess, yeah. But I figure it's nice spending time here. It's helping me grow as a person."
     AE "Yes...I know you said that, it's just...I suppose your responsibility is something I didn't expect."
     "Shiori-san took her notecard and flipped it to the back, bringing forth the next one in the row."
-    AE "Alright then. When you refer to me, you use -san, yet instead of calling me Matsumoto-san, you use first name basis. Why is that?"
+    AE "All right then. When you refer to me, you use -san, yet instead of calling me Matsumoto-san, you use first name basis. Why is that?"
     MC "Eh?"
     MCT "Actually, to be honest I hadn't thought of that."
     MC "Well, um, I guess it's because I consider you to be close enough to me to use first names, but since you're...y'know, the president and all that, it's polite to use -san."
@@ -1581,7 +1581,7 @@ label AE012_after:
         MCT "Did I just get coworker-zoned?!"
     MC "So...is that it?"
     AE "I suppose so, yes. Thank you."
-    MC "Alright, well, in any case, I'll see you tomorrow!"
+    MC "All right, well, in any case, I'll see you tomorrow!"
     "I began to grab my bags and walk out the door when I heard Shiori-san speak up."
     AE "If...if you are becoming bored with our meetings-"
     MC "O-oh, no, it's okay! I'm perfectly fine just working files."
@@ -1687,25 +1687,25 @@ label AE013:
     AE "Oh dear god."
     MC "Ahk-ahw, dammit, ugh..."
     show AE sad
-    AE "Hotsure-san, I am so sorry! A-are you alright?!"
+    AE "Hotsure-san, I am so sorry! A-are you all right?!"
     "Shiori-san walked her way down the stepladder to get to me, it wasn't that big of a fall, but it was more of landing directly on my back that knocked the wind out of me."
     AE "Nggh, why did I do that-why did I think that was a good idea."
-    MC "It's okay, Shiori-san, I'm alright! I was the one who offered to hold your-"
+    MC "It's okay, Shiori-san, I'm all right! I was the one who offered to hold your-"
     AE "But I shouldn't have accepted."
     MC "N-no. It's okay."
     MCT "The view was fine till I hit the floor."
     AE " Here, let me help you up."
     "Shiori-san worriedly reached her hand out to me, grasping my own as I hopped to my feet.#"
     AE "Are you sure you aren't hurt? I can refer you to the nurse."
-    MC "I'm telling you, I'm fine! It's alright."
-    AE "A-alright. If you say so. Ach, here, you have...dirt all over..."
+    MC "I'm telling you, I'm fine! It's all right."
+    AE "A-all right. If you say so. Ach, here, you have...dirt all over..."
     "Shiori-san swiftly began to brush the back of my back before, unknowingly I'm sure, began to pat the rear of my pants."
     MC "U-um, hey!"
     show AE neutral
     AE "O-oh! Right, sorry, just let me..."
     MCT "Pat, pat, pat."
     AE "There."
-    MC "Alright...well, that was embarrassing."
+    MC "All right...well, that was embarrassing."
     "I scratched the back of my head, chuckling to myself as Shiori-san continued her concerned gaze."
     MC "Welp, now that that's over, let's get back to work."
     AE "Oh no, you are staying on the ground and carrying the papers."
@@ -1750,7 +1750,7 @@ label AE013:
     MC "O-oh."
     "I darted a look over to Shiori-san, who was looking on incredulously."
     MC "Ok ma'am, thank you, I will."
-    Nurse "Alright, have a good day. Oh, and tell your girlfriend that she's very loving."
+    Nurse "All right, have a good day. Oh, and tell your girlfriend that she's very loving."
     show AE surprised
     AE "Wha-"
     MC "Gnk-"
@@ -1863,7 +1863,7 @@ label AE014:
     MCT "OK, OK, NOW IT HURTS. I WANNA GET OFF THIS WILD RIDE."
     MC "NNNNNGGHGH."
     "With what little room I had, I slid my hips out from the side, finally escaping the awkward and intense butt-squish heaven and hell."
-    MC "Ok! Alright... I, uh, g-got it."
+    MC "Ok! All right... I, uh, g-got it."
     "Shiori-san's face was in a deep shock, before slowly turning to a solemn sadness."
     show AE sad
     AE "I'm sorry."
@@ -1875,7 +1875,7 @@ label AE014:
     MC "Don't worry too much about it..."
     "I turned around and continued to work, attempting to alleviate the tension in the room without success."
     MC "Um... I hope I didn't make that super awkward or anything."
-    AE "No, no, it's quite alright. I apologize for..."
+    AE "No, no, it's quite all right. I apologize for..."
     AE "Pressing my bottom against your handbook."
     MC "It's oka-"
     MCT "Huh?"
@@ -1965,7 +1965,7 @@ label AE015_watch:
     if getVar("AE015_watch") <= 11:
         MCT "She's stopped kicking now. It's w-oh, no, there she goes again."
         "I watched on, bag of popcorn now empty, as a twinge of sympathy began to set in."
-        MCT "Alright, now I'm getting bored, plus I'm starting to feel bad."
+        MCT "All right, now I'm getting bored, plus I'm starting to feel bad."
         jump AE015_menu
 
 label AE015_aftermenu:
@@ -1989,7 +1989,7 @@ label AE015_aftermenu:
     "With a quick tug, I pulled Shiori-san free from the cabinets. Once free, the two of us both collapsed to the floor, the force from dislodging her pushing us back."
     show AE sad with dissolve
     AE "Nhg..."
-    MC " Ayah...y-you alright?"
+    MC " Ayah...y-you all right?"
     "I looked at Shiori-san, her raven hair spread out on the ground, and gave a slight chuckle. Shiori-san opened her eyes, and looked at my face before sitting up and rubbing the side of her head."
     AE "Y-yes. Thank you."
     MC "No problem."
@@ -2033,7 +2033,7 @@ label AE015_aftermenu:
     AE "We'll pick up work within a few days. Until then, I'll be seeing you in class. Have a good day."
     "She walked past me and began to head towards the library door."
     MC "Hey, Shiori-san, wait."
-    AE "Hm? Is everything alright?"
+    AE "Hm? Is everything all right?"
     MC "W-well, yeah, but..."
     "I scratched the back of my head, causing Shiori-san to let out a sigh in exasperation."
     AE "Have you been shampooing correctly?"
@@ -2083,7 +2083,7 @@ label AE015_afterchoice:
     AE "...Still, though. It would be nice to do something outside of office work with you...it could allow me to see how you behave in a...non-formal setting."
     MCT "Uh...yeah, whatever floats your boat."
     AE "Very well then, Hotsure-san, we will spend time together. Free time."
-    MC "Alright! It's a date."
+    MC "All right! It's a date."
     show AE surprised
     AE "...W-what?"
     MC "Oh! Uh, a hang out date. I-it's an expression."
@@ -2133,7 +2133,7 @@ label AE016:
     hide AE
     "Shiori san walked away and headed over to a small box near the door of the office; one which had until now escaped my notice. With papers in her hand, she walked over to the table and sat across from me."
     show AE neutral with dissolve
-    AE "Alright. That should do it."
+    AE "All right. That should do it."
     MC "W-Huh? Shiori-san what-"
     MCT "Oh. Oh I get it."
     MCT "She wasn't shy about going outside with me, she just wanted to get some work done in the library."
@@ -2199,8 +2199,8 @@ label AE016_after:
     AE "...You want to help?"
     MC "Well, sure. Unless it's against the rules..."
     MCT "Nice wording."
-    AE "Hmm...It's not. Alright, have a look."
-    MCT "Alright! That's a step in the right direction."
+    AE "Hmm...It's not. All right, have a look."
+    MCT "All right! That's a step in the right direction."
     "Shiori-san got up and walked over to my side of the table, papers under her arms. She sat down beside me, splaying the papers out in a row. She picked one up and read it aloud."
     AE "'Install sound devices in the girls restroom.'"
     AE "Hm. I like this one. Water expenditures here are abysmal as is, so installing sound devices should help."
@@ -2236,7 +2236,7 @@ label AE016_after:
     AE "I'm an advocate for whatever rights the school allows its students."
     MCT "Thaaats more what I expected."
     AE " The simple answer is just to take the serious requests into mind and discard the ones that aren't."
-    MC "Huh...alright."
+    MC "Huh... all right."
     AE "Mhm. Come on. Let's look through these."
     "Within a few minutes, we went through all twenty two requests. In the end, we only came up with seven legitimate concerns. But my mind wasn't on that for the moment, because the air in the room had changed."
     MC "And my sister, my sister, she would always flush the toilet all the time too, and you're saying it's because...pffft-ehehehe."
@@ -2251,7 +2251,7 @@ label AE016_after:
     MC "Yep...so, uh...what about you? Do you ever flush the toilet constantly?"
     show AE angry
     AE "H-hey now! That's not a question to ask the class president!"
-    MC "Ahhh alright, alright...but do you?"
+    MC "Ahhh all right, all right...but do you?"
     show AE neutral
     "Shiori-san sat for a moment with a light blush on her face."
     AE "Well, yes, but that doesn't give you the right to ask that!"
@@ -2297,7 +2297,7 @@ label AE016_after:
 label AE017:
     scene Cafeteria with fade
     "After lessons had ended, I walked out of the room. I was going to walk out with Shiori-san, like with yesterday, but a student came up addressing her as \"ma'am\" so I assumed she had further business. I got up and walked over to the cafeteria to get in line and grab some food."
-    MCT "I hope everything is alright. I should grab us a table just in case, that way she'll know I was waiting for her."
+    MCT "I hope everything is all right. I should grab us a table just in case, that way she'll know I was waiting for her."
     "Looking at the selections, it seemed as though the school had a wide variety of different foods and drinks available, definitely more than I'd seen before."
     MC "Uaaah, look at all this stuff."
     MCT "Hmm...I think I'll just go with the Rice and Chicken."
@@ -2307,7 +2307,7 @@ label AE017:
     MCT "Oh! Oh, she's here already."
     "I went to walk over to where Shiori-san sat, and when I turned the corner I saw her talking to a short girl with large pouty lips."
     show AE neutral with dissolve
-    AE "-and after that, I want you to tell her to get her forms in on time if she cares so much. Good? Alright, good."
+    AE "-and after that, I want you to tell her to get her forms in on time if she cares so much. Good? All right, good."
     "The girl walked in the other direction as I continued to walk over to where Shiori-san sat, her hands massaging the sides of her temples."
     MC "Hey, you came!"
     "Shiori-san looked up from her hands, quietly putting them back down to her sides."
@@ -2387,7 +2387,7 @@ label AE017:
     "As I began to speak, I moved my hand over my tray, accidentally putting my hand on some of the peach-filling from the pastry."
     MC "Ohp..."
     AE "Oh, I-"
-    MC "It's alright, I can get a napkin..."
+    MC "It's all right, I can get a napkin..."
     "I reached over to the dispenser on the end of the table, but I ended up putting my hand in an empty slot."
     MC "Napkin...eh...there are no napkins."
     MCT "Shiori-san would kill me if I just wiped it off on my school uniform, let alone the bench."
@@ -2406,7 +2406,7 @@ label AE017:
     AE "I apologize for the intrusion. Please, go on."
     MC "U-uh...yeah."
     MCT "What the hell was that?!"
-    MC "Uhh...W-well I, aha...um...is everything alright?"
+    MC "Uhh...W-well I, aha...um...is everything all right?"
     AE "It's fine."
     MC "...Okay."
     MCT "I shouldn't question it. If I do I'll probably get an aneurysm."
@@ -2463,7 +2463,7 @@ label AE018:
     "We climbed for a bit more until we reached our destination."
     MC "Oh, you wanted to go to the roof?"
     AE "Mhm. It's nice up here. Not a lot of people, nice, cool air, and a great view."
-    MC "Alright, cool."
+    MC "All right, cool."
     scene Roof with fade
     "Shiori-san opened the doors, and a nice gust of air swept into the doorway. It was fairly strong, and almost instantly as the wind picked up, Shiori-san's skirt was lifted a few inches as well; giving me a brief view of her behind, squeezed tightly by dark-blue panties, before she pulled her skirt back down. Shiori-san cleared her throat."
     show AE sad with dissolve
@@ -2550,7 +2550,7 @@ label AE018:
     show AE angry
     AE "I think it's about someone who needs more sleep and less caffeine."
     MCT "Hmm, she's not really getting it."
-    MC "Alright...tell me yours."
+    MC "All right...tell me yours."
     show AE neutral
     AE "Come now, Hotsure-san, don't be foolish."
     MC "Hey, I told you mine."
@@ -2681,7 +2681,7 @@ label AE101:
     MC "W-what about me?!"
     AE "I was talking about you."
     MCT "It hurts just a little."
-    FMG "Haha, alright alright."
+    FMG "Haha, all right all right."
     "Akira-san placed the bench down with me in tow, still shaking from the experience."
     AE "Back where it belongs."
     FMG "You just said put it down though."

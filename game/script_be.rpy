@@ -44,7 +44,7 @@ label BE001:
     MC "Fantastic. It was a long shot, but I figured they'd forget to lock the roof entrance while they were busy setting up the welcoming assembly."
     MC "Wow, from up here the school really looks huge. I guess it has to be big if they only put a few students in each classroom."
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
-    MC "I just wonder why they didn't tell the reason for coming here until we were already inside? This doesn't seem like a prison or anything, is it?"
+    MC "I just wonder why they didn't tell us the reason for coming here until we were already inside? This doesn't seem like a prison or anything, does it?"
     MC "No, the view is too good up here to be a prison. I'd say it's better than what my old school had. Just looks really nice."
     show BE happy with dissolve
     BE "It does. And it's about to look a whole lot better!"
@@ -149,11 +149,11 @@ label BE001_after:
     BE "You know, this academy's definitely a weird place, and we're gonna go through some strange stuff by the sound of it. But, I'm really glad you're here, Kei-chan. Makes things a bit easier."
     MC "Please, Honoka, when have you ever backed down from a challenge, anyway?"
     show BE happy
-    BE "Never! And that's why they call Hard-To-Beat Honoka!"
+    BE "Never! And that's why they call me Hard-To-Beat Honoka!"
     MC "I can guarantee nobody has ever called you that."
     BE "Well I'm sure they call me something. I'll get a nickname by the end of the year, I guarantee it. One that suits me! Just you wait Kei-chan."
     "Honoka chuckled before she turned her attention back to the view from the roof."
-    "Even through the chainlink fence, it's clear she's captivated by the sight of the big buildings before her."
+    "Even through the chainlink fence, it was clear she'd been captivated by the sight of the big buildings before her."
     extend " Her face was bright; she was no doubt thinking of all the new possibilities this academy would bring. I had to admit, I was a bit excited to see what was going to happen as well."
     "But at the moment, my focus was on Honoka. More specifically, the way her chest pushed against the chainlink fence, making it look like she was wearing chainmail armor over her school uniform."
     jump daymenu
@@ -220,7 +220,7 @@ label BE002:
 label BE003:
     scene Campus Center with fade
     "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was.I had already drank a whole bottle of water to cool off, but it wasn't enough. Thankfully, there were vending machines scattered around, and I had a few coins burning a hole in my pocket."
-    MC "Alright, let's see. What do I want? Soda, juice, eh, water's healthier... but, soda's tastier."
+    MC "All right, let's see. What do I want? Soda, juice, eh, water's healthier... but, soda's tastier."
     "After sliding in my change and selecting my drink, I bent over to retrieve my precious bounty. The sharp hiss of carbonation escaped the can as I opened it up and took a refreshing swig."
     MC "Mmm, much better."
     "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka. After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
@@ -571,7 +571,7 @@ label BE007:
     MC "See any open seats?"
     BE "Yeah, right there."
     "Honoka pointed out two seat opposite of each other."
-    MC "Cool. Alright, let's grab our food and hope they're still there when we get back."
+    MC "Cool. All right, let's grab our food and hope they're still there when we get back."
     "It wasn't like the seats were packed to the brim like a baseball stadium, but my head was still remembering moments from my last school where all the good seats would be taken in the first three minutes of the lunch bell ringing."
     "Honoka and I walked to the lunch line and grabbed our food, and got back to our seats after a few minutes, leaving us plenty of time to chat."
     MC "So."

@@ -150,18 +150,18 @@ label GTS002_c2:
     "Her eyes brightened ever so slightly at that question as her smile grew a little larger."
     show GTS happy
     GTS "Indeed, it was rather nice of him. Well as for the flowers themselves. These ones are Burūberu (Bluebells), a lovely plant with quite the bold color. They're known to symbolize gratefulness."
-    "She handed the bag to me, allowing me to see the blue bell like shape they had on the cover of the bag."
+    "She handed the bag to me, allowing me to see the blue bell-like shape they had on the cover."
     GTS "Now this breed here is the Tsutsuji (Azalea) which you might have seen here at the garden."
-    "She pointed over to the pink flowers I had seen when I first entered the garden. The second look allowing me to notice the purplish patterns within the petals of the flower."
+    "She pointed over to the pink flowers I had seen when I first entered the garden, the second look allowing me to notice the purplish patterns within the petals of the flower."
     GTS "They're popular here in Japan with a flower festival which showcases them in Motoyama taking place each year on March 25th. They're known to symbolize patience and modesty."
-    "She handed me this bag as well as I was soon finding myself carrying her flowers for her."
+    "She handed me this bag as well, as I was soon finding myself carrying her flowers for her."
     GTS "Now these last ones may seem rather plain due to their simple color, but you'll be surprised the amount of color variety you'll find with Anemones. Though the white ones are the ones you'll usually find here in Japan. Their name is Greek, meaning 'Daughter of the Wind' and they represent sincerity."
-    "As she handed me the last bag which displayed white 5 petal flowers I could see her smiling warmly as she finished explaining."
-    MC "Heh, I can tell you really have a thing for flowers huh?"
+    "As she handed me the last bag, which displayed white, five-petaled flowers I could see her smiling warmly as she finished explaining."
+    MC "Heh, I can tell you really have a thing for flowers, huh?"
     "Her smiled quickly vanished and instead a light blush formed across her cheeks."
     show GTS embarassed
     GTS "O-oh yes, indeed I do. Sorry for getting rather carried away there. I didn't mean to just ramble on like that. I surely hope you don't mind."
-    MC "Not at all, it's nice to learn a little bit about you really. I also admit it was interesting to learn a bit about these flowers as well. I wasn't aware they have hidden symbolic meanings."
+    MC "Not at all, it's nice to learn a little bit about you, really. I also admit it was interesting to learn a bit about these flowers as well, I wasn't aware they have hidden symbolic meanings."
     "She continued to smile, but became more reserved, as if to not allow herself to accidentally get too excited again."
     show GTS neutral
     GTS "They do yes, but I wouldn't want to take up more of your time chattering about my interests."
@@ -169,7 +169,7 @@ label GTS002_c2:
     
 label GTS002_after:
     GTS "How did the rest of your afternoon go, if you don't mind my asking?"
-    MC "Taking what we learned about ourselves earlier aside, the rest of my afternoon was actually pretty good. I spoke with my family and told them I'm fine.  I then took some time to learn a bit more of the school and found out there's a sports club. I might give them a look and see if I can join in the future."
+    MC "Taking what we learned about ourselves earlier aside, the rest of my afternoon was actually pretty good. I spoke with my family and told them I'm fine. I then took some time to learn a bit more about the school, and found out there are several sports clubs. I might give them a look and see if I can join in the future."
     "She nodded her head as I spoke to her, taking in everything I was saying attentively. It felt rather nice honestly, knowing that she was truly listening to me as she kept eye contact with me during the entirety of my small ramble."
     GTS "What sport are you interested in Hotsure-san?"
     MC "Oh, I'm rather interested in Soccer. I might give it a shot later this year if my condition doesn't hinder it in some way."
@@ -177,16 +177,16 @@ label GTS002_after:
     GTS "Hopefully you'll be able to do so Hotsure-san. Soccer has always seemed like a rather enjoyable sport, a lot of endurance needed so it's good exercise. I wish you luck Hotsure-san."
     "She gave me another soft warm smile that made me smile in return as I scratched the back of my head."
     MC "Heh, Thanks. Well it's getting rather late and I don't want to keep you from any plans you possibly have with your flowers, so I think I'll be heading off now. Before I go though, do you need any help with those?"
-    "I ask, point to the small bags of seeds she had with her. This caused her to give the slightest of giggles as she shook her head lightly."
+    "I asked, pointing to the small bags of seeds she had with her. This caused her to give the slightest of giggles as she shook her head lightly."
     GTS "No, I'm okay thank you. It was nice speaking with you again though Hotsure-san. Hopefully we'll talk again soon."
-    MC "Yeah, hopefully. I'll catch you later Yamazaki-san."
-    GTS "Have a pleasant evening Hotsure-san."
+    MC "Yeah, hopefully. I'll catch you later, Yamazaki-san."
+    GTS "Have a pleasant evening, Hotsure-san."
     "She replied before once again giving me a light bow, yet this time it was her who left first. I couldn't help but smile at the small conversation we had, slightly curious about where I might bump into her again."
     jump daymenu
 
 label GTS003:
     scene Cafeteria with fade
-    "The morning found itself to be quite the chaotic time as many students rushed down the corridors to make it to the Cafeteria to beat the morning rush. This didn't really pressure me to speed up my stride however."
+    "The morning found itself to be quite the chaotic time, as many students rushed down the corridors to make it to the cafeteria to beat the morning rush. This didn't really pressure me to speed up my stride, however."
     "When I finally arrived to the cafeteria I saw that it was surprisingly calmer than what was transpiring throughout the hallways. I got in line behind a few other students who were getting their breakfast, which allowed me time to properly examine what was on the menu."
     "I will admit I was rather surprised by what I saw. Instead of finding precooked items like eggs or fish, I saw the cook personally making each item that was requested by the students. By the time it was my turn in the line I was slightly uncertain of what I wanted."
     "Not wishing to hold up the line though, I quickly ordered what I felt would be a decent quick breakfast, getting some steamed rice, a rolled omelette, and a small bowl of miso soup. I thanked the cook before searching for a place to sit."
@@ -195,21 +195,22 @@ label GTS003:
     MC "Hey there, Yamazaki-san. Nice to see someone I know here."
     "I must have startled her again as she flinched slightly and looked up at me."
     GTS "Good morning Hotsure-san. I hope you had a pleasant morning so far."
-    "She answered back, her hands gently repositioning her utensils and her napkin in an extremely orderly fashion before wiping off her hands with a moist towelette. She then looked at me as if to give me a hint as I had almost forgotten."
+    "She answered back, her hands gently repositioning her utensils and her napkin in an extremely orderly fashion before wiping her hands off with a moist towelette. She then looked at me, as if to give me a hint as I had almost forgotten."
     GTS "Itadakimasu."
     MC "Itadakimasu." #I wonder if there's a good way to convey both of them saying it at the same time?
     "We both stated thankfully, before I finally answered her."
     MC "Yeah it's been a pretty good morning so far, I managed to wake early so it gave just the right amount of time to fully wake up, which is a pretty good start of the day in my opinion. Thankfully since I woke up so early it allowed me to shower without being disturbed by anyone."
-    "I stated with a slight chuckle as she gave a small smile in response before picking up her chopsticks. Her hand softly slid her hair back as she picked up some cooked vegetables to eat. This let me notice that her other bang was currently held back by a flower shaped hairclip."
+    "I stated with a slight chuckle as she gave a small smile in response before picking up her chopsticks. Her hand softly slid her hair back as she picked up some cooked vegetables to eat, letting me see that her other bang was currently held back by a flower-shaped hairclip."
     "I had no idea what type of flower it was, only knowing that it had 5 white petals in a sort of star configuration."
     MC "How was the start of your day if you don't mind me asking?"
     "Yamazaki-san perked up lightly as I asked my question, taking her napkin to delicately wipe her lips and properly placing it back in place."
     GTS "Myself? Well, I woke up rather early as well and took the time to properly make my bed. I then showered and prepared myself for the rest of the day. Things like properly combing my hair, getting everything organized, and planning out my schedule for the day."
-    GTS "I think it's good to take the time in the morning to plan the day, allows you to optimize the time you spend as well as get your brain working early on in the day."
+    GTS "I think it's good to take the time in the morning to plan the day, it allows you to optimize the time you spend as well as get your brain working early on in the day."
     "She grew a little quiet as if worried she overstepped her bounds by stating her opinion."
     MC "I can see that yeah. Gets the juices flowing and your mind ready for more work, so I think it's a good analogy."
     "She gave me another small smile as she learned that I agreed with her before she went back to have another piece of her meal."
-    "This time I noticed how she used her chopsticks to take an almost perfect rectangular piece out of some of her grilled fish, she then carefully took some steamed rice and pieced it atop it before eating both. Her movements seemed so precise and slightly rigid that it was slightly captivating as I never seen someone eat so strictly."
+    "This time I noticed how she used her chopsticks to take an almost perfect rectangular piece out of some of her grilled fish, and then carefully took some steamed rice and pieced it atop it before eating both."
+    GTS "Her movements seemed so precise and slightly rigid that it was slightly captivating as I never seen someone eat so strictly."
     menu:
         "That's a cute hairclip, though I'm not sure what type of flower that is. What kind of flower is it?":
             jump GTS003_c1
@@ -231,7 +232,7 @@ label GTS003_c1:
     MC "Really? Which one?"
     GTS "Jasmine tea."
     MC "Oh... I guess I should have put that together."
-    "I scratched the back of my head, feeling a little silly now but she didn't seem to mind my mental trip, simply answering me as if it were any other question."
+    "I scratched the back of my head, feeling a little silly now, but she didn't seem to mind my mental trip, simply answering me as if it were any other question."
     GTS "They're known to symbolize friendliness and gracefulness."
     MC "Seems like it suits you rather well then."
     "This caused her blush to return once more as her eye contact finally broke to look at her food."
@@ -625,7 +626,7 @@ label GTS009:
     MC "I think I'll go for some mandarin."
     show BE neutral
     BE "Booooooring. Come on, try something exciting or mix them up."
-    GTS "It's quite alright if you just want mandarin Hotsure-san. I'm sure Inoue-san is merely teasing."
+    GTS "It's quite all right if you just want mandarin Hotsure-san. I'm sure Inoue-san is merely teasing."
     GTS "As for myself, I think I'll have strawberry."
     "She placed the order and then compensated the vendor as she gently handed the shaved ice to each of us."
     show BE happy
@@ -775,7 +776,7 @@ label GTS009_c3:
     jump GTS009_after
 
 label GTS009_after:
-    MC "Alright then. Let's go find a good home for this little guy and enjoy the rest of the night."
+    MC "All right then. Let's go find a good home for this little guy and enjoy the rest of the night."
     BE "Yeah! Let's party!"
     show GTS neutral
     GTS "Heh, indeed."
