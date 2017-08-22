@@ -940,7 +940,7 @@ label BBW008_prechoice:
             jump BBW008_c3
 
 label BBW008_c1:
-    $setflag("BBW008_extrascene")
+    $setFlag("BBW008_extrascene")
     MCT "Well, if she wants to pick a fight, let her. Whatever happens is on her head."
     show BBW haughty
     BBW "Thank you for bringing this to my attention, Hotsure-san. My esteem for Mizawa-san was already low, but to use an intermediary like this is pathetic."
