@@ -893,6 +893,7 @@ label BBW008:
 
 label BBW008_prechoice:
     $setAffection("PRG", 1)
+    MC "Maybe I could help."
     MC "I wouldn't say Alice listens to me so much as she hears what I say. I can pass the word along for you."
     show PRG happy
     PRG "C-could you?"
@@ -1140,8 +1141,10 @@ label BBW009:
     FMG "Hello Alice Whats-your-last-name! Interesting theory you have there!"
     "Alice blanched at the sound of Akira's voice, but she recovered swiftly."
     hide PRG with dissolve
-    show BBW happy at Position(xpos=0.75, xanchor=0.5)
+    show BBW surprised at Position(xpos=0.75, xanchor=0.5)
     show FMG angry at Position(xpos=0.25, xanchor=0.5)
+    BBW "!"
+    show BBW happy
     BBW "It's not so much a theory as good common sense."
     BBW "One isn't pushing against the water but rather propelling oneself through it. It's a complete different act, an interplay of body and water rather than a conflict between muscle and weight."
     FMG "Oh yeah! Well how about we test your little 'act of pushing water by being something something BS' by seeing who's the fastest swimmer! Or are you too full of yourself to do it!?"
@@ -1205,7 +1208,7 @@ label BBW010:
     "Standing out in the mildly dark gloom of the other students, one face was unexpectedly shining."
     MC "Good morning, Alice."
     BBW "It is a good morning, isn't it?"
-    "I took another quick scan of the room, at the subdued expressions and lack of light-hearted chatting you would normally find"
+    "I took another quick scan of the room, at the subdued expressions and lack of light-hearted chatting you would normally find."
     MC "It's subjective, I guess."
     MC "Is there a particular reason you're happy? Did Aida make some really nice treats or something?"
     BBW "Business, my dear Hotsure-san. Business is doing well, and it's set to do even better soon."
@@ -1233,7 +1236,7 @@ label BBW010:
     MC "Hey!"
     show BBW surprised
     BBW "!"
-    MC "I don't need a sales pitch. I know what you're doing. I got a computer from you, remember?"
+    MC "I don't need a sales pitch. I know what you're doing. You offered to get a computer for me, remember?"
     show BBW neutral
     BBW "Yes, yes. Got carried away there for a second."
     show BBW happy
@@ -1257,7 +1260,7 @@ label BBW010:
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now wider torso and rounder belly."
     show BBW happy:
         zoom 2.0
-    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, I wasn't expecting to see such changes so quickly."
+    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly."
     "But apparently she had, because unless she had told me I wouldn't have noticed that this was a larger outfit. It fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
     show BBW haughty:
         zoom 1.0
@@ -1287,7 +1290,7 @@ label BBW010:
             jump BBW010_c3
 
 label BBW010_c1:
-    $setSceneCount("AE", 1)
+    $setScenecount("AE", 1)
     $setAffection("BBW", -1)
     scene Hallway with fade
     show AE neutral with dissolve
@@ -1317,7 +1320,7 @@ label BBW010_c1:
     jump daymenu
 
 label BBW010_c2:
-    $setSeceneCount("PRG", 1)
+    $setSecenecount("PRG", 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
@@ -1332,7 +1335,7 @@ label BBW010_c2:
     MC "But when you're cooking you don't really want anything that can get stained or burnt, right?"
     "I took out one of the 'catalogues' and held it out."
     MC "If you're interested in something a bit more form-fitting - for safety purposes - there's..."
-    show AE sad
+    show PRG sad
     "I trailed off, because her expression had turned ashamed, lip bit and eyes downcast."
     MC "What?"
     PRG "I, I'm sorry Hotsure-sama, but... W-well, I already got these from Nikumaru-sama. I was her first customer."
@@ -1351,7 +1354,7 @@ label BBW010_c2:
     jump daymenu
 
 label BBW010_c3:
-    $setSceneCount("BE", 1)
+    $setScenecount("BE", 1)
     $setAffection("BBW", 1)
     scene Hallway with fade
     "I was trying to think of where I could find Honoka when I was tackled from behind, collapsing to the ground."
