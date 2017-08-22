@@ -469,7 +469,7 @@ label GTS007:
     MC "Hey there Yamazaki-san, how are things?"
     "I called out towards her as she looked over from what looked like a letter and gave me a gentle wave of her hand."
     show GTS neutral with dissolve
-    Yamazaki-san "Hello Hotsure-san, I was merely reading a letter my mother sent me. How are you?"
+    GTS "Hello Hotsure-san, I was merely reading a letter my mother sent me. How are you?"
     MC "I've been pretty good for the most part. Also I'm surprised people still write those."
     "A faint smile crossed her face as she folded up the letter and placed it back into the envelope."
     GTS "Yes, they seem to not be in style much anymore; however, my mother greatly enjoys writing so it's become sort of a thing she does for those living far from home."

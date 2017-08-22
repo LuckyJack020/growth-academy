@@ -101,19 +101,22 @@ label BBW001:
         "That was kind of harsh. She could at least have tried to work something out with you.":
             jump BBW001_c1_2
         "I've heard of spoiled little girls, but your own private chef? That's a whole new level.":
+            MC "I've heard of spoiled little girls, but your own private chef? That's a whole new level."
             BBW "Is it 'spoiled' to have the best that money can buy? I am Alice Nikumaru."
             jump BBW001_c1_after
 
 label BBW001_c1_1:
+    MC "Yeah. Typical hard-ass school employee, being cruel for the sake of it."
     show BBW haughty
-    BBW "Maybe this is how they do it at lesser institutions, by in my experience schools exist for the betterment of the students."
+    BBW "Maybe this is how they do it at lesser institutions, but in my experience schools exist for the betterment of the students."
     extend " If this is a taste of how this place operates, perhaps transferring is the sensible thing. There must be other schools that can handle my needs."
     MC "I guess if you can have a private chef, you can also have a private tutor."
     jump daymenu
 
 label BBW001_c1_2:
+    MC "That was kind of harsh. She could at least have tried to work something out with you."
     BBW "Absolutely. Life is filled with give and take, and she wouldn't even come to the negotiating table. How is it that so many people can not understand the basics of business deals?"
-    MC "Fancy yourself something of a business woman, eh?"
+    MC "Fancy yourself something of a business-woman, eh?"
     show BBW happy
     BBW "I know a lot about how the world works. It's an inherited trait."
     jump BBW001_c1_after
@@ -128,6 +131,7 @@ label BBW001_c1_after:
             jump BBW001_c2_2
 
 label BBW001_c2_1:
+    MC "Daitaro... Isn't he some sort of businessman?"
     show BBW happy
     BBW "Not just 'some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
     MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install Francois as head chef?"
@@ -139,6 +143,7 @@ label BBW001_c2_1:
     jump daymenu
     
 label BBW001_c2_2:
+    MC "Oh, yeah! He's the guy who plays in that traveling jug band, isn't he?"
     show BBW angry
     BBW "* scoff * Is there not a single ounce of class or breeding in this place?"
     hide BBW
@@ -176,6 +181,8 @@ label BBW002_prechoice:
     menu:
         "What do you normally have, if not mackerel?" if not getFlag("BBW002_c1_1"):
             jump BBW002_c1_1
+        "What do you normally have, if not mackerel? (disabled)" if getFlag("BBW002_c1_1"):
+            pass
         "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once.":
             jump BBW002_c1_2
         "(Change the subject) So, how about that news about why we're here? How are you taking that?":
@@ -232,6 +239,7 @@ label BBW002_c2_2:
             jump BBW002_c3_2
 
 label BBW002_c3_1:
+    $setAffection("BBW", -1)
     MC "Do you really need someone to carry your books? Is even that beneath you?"
     show BBW haughty
     BBW "Your jealousy is so transparent. Go ahead and mock my situation, as children always make light of what they don't understand. If you had even the basic conception of culture and breeding you would understand how this all degrades me."
@@ -350,7 +358,8 @@ label BBW003_c3:
     $setAffection("BBW", 1)
     MC "Hey, you're right. These are pretty good."
     show BBW haughty
-    BBW "Did you think I was being hyperbolic? I don't hand out praise unless it's earned, and even then I'm careful with my words. I have found in Kodoma-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
+    BBW "Did you think I was being hyperbolic? I don't hand out praise unless it's earned, and even then I'm careful with my words."
+    BBW "I have found in Kodoma-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
     MC "That's pretty generous of you."
     BBW "I know, but it's the least I can do. It's one of the burdens of the wealthy seldom talked about: the need to foster talent wherever it is found. With my help Kodoma-san will become an excellent chef, someone capable of pleasing even my tastes."
     MCT "And now I'm wondering just how altruistic you are. Still, Aida seems happy with herself, so who am I to butt in?"
@@ -549,7 +558,9 @@ label BBW005A:
     BBW "Is there something here I should be happy about? I have a palate more refined than people twice my age. My appreciation of the arts – culinary or otherwise – exceeds that of professional critics. And now I must cut out my tongue, surviving on simple fruits and steamed vegetables and whatever other staples a Neanderthal wandering the plains of famine would call a meal."
     MCT "That's a bit melodramatic. Better think of some positive way to look at this."
     MC "At least it will help in the long run! That'll be good, right?"
+    show BBW neutral
     BBW "I am already beginning to question that. I can endure an existence marked by suffering and lacking. I am strong enough to bear up in the face of abject want, unlike many others."
+    show BBW angry
     BBW "But is that a life worth living? Is the path of self-denial, of self-inflicted misery, beneficial to anyone? How can one grow as a person if they have committed their life to depriving themselves of opportunity and experience? Every bowl of plain rice, every plate of salad, is another act of self-flagellation. Shall my days be marked by anguish, my life's story a tale of torment? Who would live such a life by choice? Who would be inspired by that?"
     MC "But... you just started the diet. This is your first meal."
     BBW "Is my suffering any less brutal for being so brief? Shall I remain silent until I have carried my burden for a certain number of days? No! Pain is pain. It is not to be dismissed for failing to meet some arbitrary metric. You were the one to suggest this trial of deprivation, and now you mock me for not embracing my torture?"
@@ -558,15 +569,16 @@ label BBW005A:
     show BBW neutral
     BBW "Thank you, Aida, but now I want you to go prepare me a real breakfast. Crepes Florentine and smoked salmon to start, along with some coffee and fresh-squeezed orange juice."
     PRG "Y-Yes, ma'am. ... I'll just leave the toast and grapefruit."
+    show BBW angry
     BBW "Or does this not meet your approval, Hotsure-san?"
     MC "Whoa! I'm not judging you. I'm just..."
-    show BBW angry
     BBW "You're just... what?"
     MC "I'm just saying a diet might not be easy, but in the end you might be glad you did it."
     BBW "Is my mood a concern of yours? Is it your business to tell me how I deal with my factor? I assume you have your own condition to deal with, no?"
     MC "Yeah. My hair grows really fast."
     BBW "... That is your condition? That is why you're here?"
     MC "Yep. That's it."
+    show BBW neutral
     BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself. Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
     MC "Uh huh... Consider me properly scolded."
     MCT "I was just trying to help."
