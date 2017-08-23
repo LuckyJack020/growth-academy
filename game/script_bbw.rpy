@@ -1320,7 +1320,7 @@ label BBW010_c1:
     jump daymenu
 
 label BBW010_c2:
-    $setSecenecount("PRG", 1)
+    $setScenecount("PRG", 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."

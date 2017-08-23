@@ -1,4 +1,5 @@
 define PRG = Character('Kodama', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
+define fade = Fade(0.5, 0.0, 0.5)
 
 image PRG neutral = DynamicImage("Graphics/PRG-[globalsize]-neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG-[globalsize]-happy.png")
@@ -258,7 +259,7 @@ label PRG003_2_b:
     $ setAffection("PRG", 2)
     jump daymenu
 
-label PRG_003_2_c:
+label PRG003_2_c:
     MC "Nothing special? ...Well, I suppose everyone needs a hobby."
     PRG "R-right, a hobby, just, just some things I picked up from home... no need to make a fuss over it..."
     MC "Still, it does smell nice."
@@ -274,8 +275,10 @@ label PRG003_3_a:
     MC "I would love that!"
     #show PRG aroused
     PRG "Oh, okay, w-well, this odd-looking spoon, that's called a pasta fork, actually. A-and this, this is a ravioli stamp. Alice says she enjoys Italian food, but uhm, a lot of \"Italian\" food, like modern pizza, was actually invented in America... Maybe, uhm, inspired by original Italian dishes like Focaccia, but..."
-    $ renpy.Fade(0.5, 1.5, 0.5)
+    scene black with fade
+    scene Classroom Day
     show PRG happy at Position(xpos=0.75, xanchor=0.5)
+    with fade
     PRG "...And now that it's drained in the, uh, in the strainer, I just need to put some of the alfredo sauce- named after an Italian restaurant owner in Rome- over it and it's ready for Alice."
     MC "Wow, you sure do know a lot, Kodama-san."
     show PRG sad at center #replace with aroused
