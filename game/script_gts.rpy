@@ -1,7 +1,7 @@
 define GTS = Character('Naomi', color="#66FF33")
 define Vendor = Character('Vendor', color="#FFFFFF")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
-define Ryoko = Character('Little Girl', color="#FF91DC")
+define Ryoko = Character('Ryoko', color="#FF91DC")
 
 image GTS neutral = ConditionSwitch(
     "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-neutral.png",
@@ -25,7 +25,7 @@ image GTS embarassed = ConditionSwitch(
     "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-embarassed.png",
     "True", "Graphics/GTS-1-embarassed.png")
 
-image GTS Dorm = "Graphics/dorminterior.png"
+image Dorm GTS = "Graphics/dorminterior.png"
 
 init 2 python:
     datelibrary['GTS_size_6'] = datetime.date(2005, 12, 10)
@@ -874,9 +874,9 @@ label GTS011:
     GTS "I hope it wasn’t difficult finding my room."
     MC "No, it wasn’t a problem at all."
     "She opened the door for me and gave a slight bow, the action causing the small of her back to show which in turn caused her hands to immediately try pulling her top to better cover herself."
-    scene GTS Dorm with fade
+    scene Dorm GTS with fade
     "As I entered her dorm room, I saw another girl already inside. She sat kneeling at table, a cup of tea in her hand as she smiled and waved."
-    Unknown "Howdy! You must be Hotsure-san."
+    UNKNOWN "Howdy! You must be Hotsure-san."
     MC "Uh… yeah, I am. Hello."
     show GTS happy with dissolve
     GTS "Hotsure-san, this is Ryoko Tanaka. Tanaka-san, this is Keisuke Hotsure. Tanaka-san is my next-door neighbor who I met a couple days ago, so I invited her over for some tea as well. I hope that isn’t a problem."
