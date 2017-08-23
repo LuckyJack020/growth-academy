@@ -1091,7 +1091,7 @@ label BBW008A_c3:
     BBW "What is wrong with this place?"
     "And then she walked away."
     "Which was awkward, because we were headed in the same direction, so I had to hang back a couple feet and try to look anywhere besides directly at her."
-    scene Classroom with fade
+    scene Classroom Day with fade
     "And when we got to class and took our seats she adamantly refused to look in my direction."
     show BBW angry with dissolve
     BBW "Harumph!"
@@ -1320,7 +1320,7 @@ label BBW010_c1:
     jump daymenu
 
 label BBW010_c2:
-    $setSecenecount("PRG", 1)
+    $setScenecount("PRG", 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
@@ -1399,7 +1399,7 @@ label BBW010_c3:
     MC "I'll get back to you on how soon we can deliver these. Do you just want the plain model for the bras?"
     show BE surprised
     BE "Oh god no. I want one with the heart design, one with the joystick design, and, hm, I dunno, probably one with just some nice color. What do you think would be best; blue, pink, or black?"
-    MC "Black! Black!"
+    MCT "Black! Black!"
     MC "I think... black might be best. Bold, but not garish."
     show BE neutral
     BE "Sounds good to me. We'll go with the black then. And I circled the shirt I wanted too. Thanks Kei-chan. This is pretty cool, I appreciate it."

@@ -1,6 +1,7 @@
 define GTS = Character('Naomi', color="#66FF33")
 define Vendor = Character('Vendor', color="#FFFFFF")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
+define Ryoko = Character('Little Girl', color="#FF91DC")
 
 image GTS neutral = ConditionSwitch(
     "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-neutral.png",
@@ -24,6 +25,8 @@ image GTS embarassed = ConditionSwitch(
     "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-embarassed.png",
     "True", "Graphics/GTS-1-embarassed.png")
 
+image GTS Dorm = "Graphics/dorminterior.png"
+
 init 2 python:
     datelibrary['GTS_size_6'] = datetime.date(2005, 12, 10)
     datelibrary['GTS_size_5'] = datetime.date(2005, 12, 10)
@@ -42,6 +45,7 @@ init 2 python:
     eventlibrary['GTS008'] = {"name": "GTS008", "girls": ["GTS"], "location": "roof", "conditions": [[ConditionEnum.EVENT, "GTS007"]], "priority": 0}
     eventlibrary['GTS009'] = {"name": "GTS009", "girls": ["GTS", "BE"], "location": "festival", "conditions": [[ConditionEnum.EVENT, "GTS008"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
     eventlibrary['GTS010'] = {"name": "GTS010", "girls": ["GTS"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "GTS009"], [ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS011'] = {"name": "GTS011", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "GTS010"]], "priority": 0}
     
 label GTS001:
     #Intro doesn't make sense if it doesn't happen on the first day
@@ -206,7 +210,6 @@ label GTS003:
     "Yamazaki-san perked up lightly as I asked my question, taking her napkin to delicately wipe her lips and properly placing it back in place."
     GTS "Myself? Well, I woke up rather early as well and took the time to properly make my bed. I then showered and prepared myself for the rest of the day. Things like properly combing my hair, getting everything organized, and planning out my schedule for the day."
     GTS "I think it's good to take the time in the morning to plan the day, it allows you to optimize the time you spend as well as get your brain working early on in the day."
-    MC "I can see that yeah. Gets the juices flowing and your mind ready for more work, so I think it's a good analogy."
     "She gave me another small smile as she learned that I agreed with her before she went back to have another piece of her meal."
     "This time I noticed how she used her chopsticks to take an almost perfect rectangular piece out of some of her grilled fish, and then carefully took some steamed rice and pieced it atop it before eating both."
     GTS "Her movements seemed so precise and slightly rigid that it was slightly captivating as I never seen someone eat so strictly."
@@ -859,4 +862,76 @@ label GTS010_after:
     MC "Oh I'm sure I will. After all with your plant knowledge I'd expect you to be a tea expert."
     GTS "I wouldn't say so, but thank you for the vote of confidence."
     "We shared a smile before the door to the classroom opened once more and the teacher walked in, resulting in me hurriedly rushing to my desk as we began the day."
+    jump daymenu
+
+label GTS011:
+    scene Dorm Exterior with fade
+    "Time had passed relatively quickly since Naomi invited me over for tea a couple days earlier. There hadn't been much time to talk or hang out besides the occasional casual greeting as well, so it felt nice to have a chance to catch up a bit."
+    "Journeying around the dorm, I heard whispers hang around behind me. The occasional giggle accompanied them as some girls watched me. I could imagine it now, some small time rumors about me visiting a girl at her dorm. The same happened when I saw my sister at the start of the year, But I had learned to merely ignore it."
+    "Upon reaching her door, I gave it a couple knocks before faintly hearing some noise through it. When she opened the door I found myself looking at the crook of her lip instead of in her eyes."
+    show GTS neutral with dissolve
+    GTS "Hello Hotsure-san. I’m glad to see you, please come in."
+    GTS "I hope it wasn’t difficult finding my room."
+    MC "No, it wasn’t a problem at all."
+    "She opened the door for me and gave a slight bow, the action causing the small of her back to show which in turn caused her hands to immediately try pulling her top to better cover herself."
+    scene GTS Dorm with fade
+    "As I entered her dorm room, I saw another girl already inside. She sat kneeling at table, a cup of tea in her hand as she smiled and waved."
+    Unknown "Howdy! You must be Hotsure-san."
+    MC "Uh… yeah, I am. Hello."
+    show GTS happy with dissolve
+    GTS "Hotsure-san, this is Ryoko Tanaka. Tanaka-san, this is Keisuke Hotsure. Tanaka-san is my next-door neighbor who I met a couple days ago, so I invited her over for some tea as well. I hope that isn’t a problem."
+    MC "No, it’s all right. It’s nice to meet you Tanaka-san."
+    #show Ryoko neutral with dissolve
+    Ryoko "Likewise, come on, have a seat."
+    show GTS neutral
+    GTS "Yes Hotsure-san, please make yourself comfortable."
+    "I nodded my head and removed my shoes before taking my place at the table where Naomi poured me a cup of tea. The action clearly being something she was trying to get used to again as her new height made her uncertain on if she should bend her knees, or simply lean forward more."
+    MC "Thank you."
+    "Naomi gave a small nod in response as she gently set the teapot down and sat at the table, her hands subconsciously fixing her top to better hide her slightly exposed stomach before they rested in front of it to act as a cover. Meanwhile, Ryoko scooted a little bit closer to me."
+    Ryoko "So how long have you known Yamazaki-san?"
+    MC "Well, since the first day. I saw her at the garden before orientation but only really got introduced to her at the orientation."
+    Ryoko "I see, sadly I’ve been super busy since the start of the school year, so I only just recently ran into Yamazaki-san myself."
+    GTS "I thought it would be nice to start introducing myself to my neighbors."
+    Ryoko "She offered me these super tasty crackers and tea too. Actually, Yamazaki-san would it be all right to ask if you have any more? They’d go wonderfully with this tea."
+    GTS "Ah yes, how rude of me. Please, excuse me."
+    "She quickly stood up, her knees lightly bumping the table which she deeply apologized for before she hurried to get some snacks for the us to enjoy as I asked Ryoko."
+    hide GTS with dissolve
+    MC "What have you been so busy with?"
+    Ryoko "Oh mostly filming."
+    MC "Filming? Oh, thanks Yamazaki-san."
+    show GTS neutral with dissolve
+    "Naomi had already returned with a small tray of crackers and offered one to me and Ryoko who also took one."
+    Ryoko "Thanks Yamazaki-san. Yeah, me and a couple of old high school friends are working on a small movie together."
+    MC "Oh wow, that’s pretty cool."
+    GTS "That does sound like it would be fun."
+    #show Ryoko happy
+    Ryoko "Oh, it’s totally a lot of fun! Sure, they’re just silly no budget videos but it’s still a blast. You two should join us sometime, we’re always open to auditions."
+    show GTS embarassed
+    GTS "Me!? Oh no, I couldn’t possibly do something like that. I wouldn’t be capable of remembering a single line or ignoring the camera. I’d gladly watch them though."
+    MC "Heh, I actually wouldn’t mind giving it a go some time. Also with enough experience in front of the camera I’m sure you’ll get the hang of it Yamazaki-san."
+    #show Ryoko camera
+    Ryoko "Yeah Yamazaki-san, you’ll be a natural! You’d bring a sense of elegance last seen in the classic era of films. The tall slender beauty the men are drawn to who gives an aura of maturity and confidence. Just like um… Jessica Rabbit! That's the name."
+    "I could see the faintest hint of blush appear on Naomi’s cheeks as she sipped some tea."
+    GTS "I-I don't know… I wouldn't want to be distracting or take away from the story being told."
+    GTS "I’m sure Nikumaru-san would be a much better actress than me."
+    #show Ryoko happy
+    Ryoko "I have no idea who that is, but seriously though, we’d love to have you guys come by if you ever want to hang out."
+    #show Ryoko neutral
+    Ryoko "I’m sure you’d quickly win them over with those elegant looks."
+    MC "I have to agree with her on that."
+    GTS "Thank you…"
+    Ryoko "So that’s one thing I do on my spare time, what about you two?"
+    MC "Well I kind of hop around a lot so I couldn’t really name one thing in particular."
+    show GTS neutral
+    GTS "I merely tend to my garden as well as a couple of the plants here. Besides that, most of my time goes to my studies."
+    Ryoko "I see I see, well then, I proposal another get together some time soon."
+    #show Ryoko happy? excited?
+    Ryoko "Oh! A movie day! I’ll even order a pizza for us to enjoy."
+    MC "A movie day?"
+    Ryoko "Totally! What better way to hang out and relax with friends than a good movie and some tasty hot food?"
+    MC "Well I can’t disagree with that. Sure, that sounds like a fun time to me. What do you think Yamazaki-san?"
+    GTS "I’d have to look at my schedule. But I promise I’ll let you know as soon as I get everything figured out."
+    Ryoko "Excellent! Well I’ll be going on my way. Thanks so much for the tea and crackers Yamazaki-san, they were great. And it was nice meeting you Hotsure-san, catch you two later."
+    #hide Ryoko
+    "She gave us a wink and a bow of respect before heading towards the door and seeing herself out before Naomi had a chance to. We sat there for a second or two, but soon enough I gave a small chuckle and took a sip of tea."
     jump daymenu
