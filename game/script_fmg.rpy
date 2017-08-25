@@ -640,11 +640,11 @@ label FMG009:
 label FMG010:
     scene Classroom Day with fade
     "The class started normal with roll call, that is until Mizutani’s name was called out was when I realized she wasn't here."
-    "Weird, I don't think I've ever seen her miss class. Sleeping in sure, but never missing." #TODO: Was quoted in *, different style maybe?
+    MCT "Weird, I don't think I've ever seen her miss class. Sleeping in sure, but never missing."
     scene Classroom Day with fade
     "Class ended with no sign of Akira. I turned to ask Matsumoto if she's seen Akira today."
     MC "Hey Matsumoto, sorry to bother you but have seen Akira today?"
-    show AE neutral
+    show AE neutral with dissolve
     AE "Hm? You’re looking for her too?"
     MC "So you noticed she was gone as well? It’s not like her to miss class."
     AE "Indeed. Despite her more lenient mannerisms, she at least has the decency to be in class on time."
@@ -654,87 +654,107 @@ label FMG010:
     MC "By the way...you do realize these are only 2 five pound weights right?"
     show AE sad #TODO: Possible change when the final art is implemented.
     AE "Y-yes, well, ngh...I’m not one to carry weights around often. Look, just tell Mizutani-san that her weights will be in the student council room."
-    "It would probably be easier if I just took them to give to Akira later...but it’s too funny watching Shiori struggle with the weights." #Also * quote
+    "It would probably be easier if I just took them to give to Akira later...but it’s too funny watching Shiori struggle with the weights." 
     MC "Alright, I’ll let her know. Thanks for the help, I’ll see you later."
-    hide AE sad
     scene Hallway with fade
+    hide AE sad
     "I left Shiori alone with the weights and exited out of the room. With no help from that I figured it was probably best just to leave it be for now..."
-    #TODO: Documenmt said *High points*
-    "...At least that was the plan before I was called out from behind. I turned around to find Mizutani’s roommate running towards me; Blackbourne think her name was."
-    Rin "Sorry, but if I remember correctly, you're Mizutani's workout partner, right?"
-    MC "Yes that's me, did you need something Bla-"
-    Rin "Let me just stop you real quick, just call me Rin; I never did fully understood the weird ways you referred people, ironic because I am half Japanese."
-    MC "Understandable, so what did you need Rin?"
-    Rin "I’ll be blunt. Akira had a growth spurt and asked me to bring her new clothes she ordered from the tailor. Her old outfit got ripped pretty bad, so she was forced to stay in our room."
-    Rin "However, little miss Buttsumoto, in her infinite wisdom, ratted me out only because my skirt is a quarter of an inch shorter than it has to be... Damn, I wish she'd get that stick out of her fat arse."
-    Rin "But anyways, I gotta be there in five or I get double. I figured since you both have been hanging out together, you could bring it to her. Do this, and I’ll owe ya a favor you can cash in later."
-    "This was interesting, it does explain why she was absent today. Without any clothes that would fit her muscular body, she wouldn’t be able to go out in public. Seeing how this is a drawback to her growth, she could use any help she could get."
-    MC "Alright I'll do it for Akira."
-    Rin "Great. So, because Akira's got nothing but her birthday suit on, you'll have to throw a pebble or something at our window to get her attention. It's on the second floor, look for the slightly opened window covered with a black poster. "
-    MC "How do you know the window will be open?"
-    Rin "I sleep near the window- love the fresh air, but hate the sunlight."
-    Rin "Once you get her attention, have her tie our laundry basket with spare sheets, and she'll do the rest. Her clothes are in the Tailor. Now then, I gotta leave, later dude."
-    Rin "Oh, and please try not to be a perv, even if she's got a rockin bod."
-    MC "Wait wh-"
-    "But alas, she left before I could finish asking what she meant by that."
-    "...Ugh, why is it when someone says something interesting, they leave it off without an explanation…" #Again, * quote
-    "I went to the student tailor store to begin my mission of impotence. The clothes were on a counter by the time I got there, I could tell it was hers because of the size... and the fact it had a note saying ‘Akira Mizutani’."
-    scene Dorm Exterior with fade
-    "I got the clothes and made my way to the dorms. I followed Rin’s instructions and found the exact window she said to find. I threw a pebble at the window to get Akira's attention and sure enough it worked. Akira stuck her head out, but it looked like she was rapped in a blanket."
-    FMG "Keisuke!? First off, why are you throwing rocks at my window? Second of all do you know where Rin is? She was supposed to be here by now with my clothes! Lastly, is that my outfit!?"
-    MC "That's why I'm here, Rin had detention and asked me to give you your new outfit."
-    FMG "Well, how are you going to do that?! I wouldn't let you up here even if I wanted to!"
-    MC "Just get some sheets and tie them to your laundry basket, bring it down through the window and I'll put the clothes in."
-    FMG "Alright, but you better not do anything unexpecting!"
-    "After a few minutes she lowered the basket, allowing me to put the clothes in. Once she pulled it back it back up, I had to wait awhile for her to come outside. It was only then I truly saw how big she was... "
-    show FMG happy
-    FMG "Oh god, it feels nice to be outside!"
-    "Her arms were thicker than the last time I saw her, her chest was more toned, her abs were starting to be more noticeable though the shirt, her legs were more muscular, and lastly she was a bit taller I think, though it could just be my mind playing tricks with how big she is."
-    show FMG neutral
-    FMG "Again thanks man! I was really in a pickle there… why are you looking at me like that, as if I don't already know."
-    MC "Sorry, you're just… really buff."
-    "I apologized, though she took it as a complement."
-    FMG "Thanks, I kinda knew I was getting big for a while, but it didn't really hit me till my outfit ripped to shreds."
-    MC "I have to ask, do you think-"
-    FMG "-That exercising is accelerating my growth factor? Yes. Did the nurse warned me about that? Of course she did. Am I gonna stop? Hell no."
-    FMG "Look, I know that it's probably not the best life choice I could make with my condition, but I've come too far to give up now. It's part of who I am, and there's nothing that can change that."
-    "Huh, even when against her own growth, Mizutani-san is pushing to her goals. Be that as it may I have to know..."
-    MC "Why do you want to become strong so bad?"
-    show FMG sad
-    FMG "...Everyone has a life goal, mine is just that simple I guess."
-    "I can't help shake the feeling that she's only giving me a quarter of the truth, if not a half truth. It makes wonder if Rin was right about Akira hiding something. Still, I don’t want to force it out of her, if she want’s to tell me then let it be of her own volition."
-    show FMG angry
-    FMG "I gotta know dude, why did you help me? Were you trying to get a quick peek or something?"
-    "...huh, I was so caught up in getting these clothes, I never even thought about anything like that." #Again, * quote
-    MC "To be honest no. The thought never occurred to me. I just wanted to help you."
-    show FMG neutral
-    FMG "Wow...I'm shocked. If I was a guy in your place, I totally would have tried something. I'm glad to know you care Kei."
-    "She heartily proclaimed. Before giving me in a big but not tight hug."
-    show FMG happy
-    FMG "Have a big hug for your troubles!"
-    "I’d expected something like a death hug from a bear but instead the hug felt nice. I wouldn't mind staying like this for-"
-    Rin "So are you guys gonna shag here or what?"
-    "AHH!!"
-    show FMG angry
-    "Both Akira and I yelled out in surprise, breaking the hug in the process."
-    FMG "What?! Rin?! I thought you had detention!"
-    "Akira yelled out in frustration, though this had little to no effect on Rin."
-    Rin "Yeah, turns out the tailor mixed up my skirt with a shorter kid, so the teacher let me go. Honestly I wouldn't have noticed if I didn't run into Kei earlier. Anyways, now that I see you out in the open, man you look big Akira."
-    FMG "You're one to talk torpedo nips!"
-    "Akira yelled out in anger, though I can't tell if it was from the scare, or from breaking of the hug. Wait what did she say about Rin’s nipples? Could it be..."
-    MC "Does that mean Rins...?"
-    Rin "Yeah, my growth thingy is my nipples; I don't mind though, I plan to use them to my advantage. Any ways, sorry I was earwigging on your conversation, and breaking your hug. If you need me, I'll be in our dorm room venting my frustrations by drawing. Later."
-    Rin "Oh and I didn't forget about that favor!"
-    "..."
-    MC "Um...what did she mean by using them to-"
-    show FMG neutral
-    FMG "Man I don't know, that girl is something else."
-    MC "You know, even if she's a bit weird, she's a good friend."
-    FMG "I guess. Listen, I've had a long day, I'm going up to my room and yell at Rin to get the name brand soda from now on and not the crappy off brand. Goodnight man."
-    MC "See you. Oh! I almost forgot, you left some weights at the student council."
-    show FMG happy
-    FMG "Thanks. See you."
-    hide FMG happy
-    FMG "Rin! Get You better get Cane Cola from now on or I swear to god..."
-    "You know, now that I've given it more thought, the more I hang out with Akira, the more I want to know what she is hiding. I guess the only thing I can do now is wait. But there's still something that's bugging me..."
-    jump daymenu
+    if getAffection("FMG") >= 3:
+        "...At least that was the plan before I was called out from behind. I turned around to find Mizutani’s roommate running towards me; Blackbourne think her name was."
+        Rin "Sorry, but if I remember correctly, you're Mizutani's workout partner, right?"
+        MC "Yes that's me, did you need something Bla-"
+        Rin "Let me just stop you real quick, just call me Rin; I never did fully understood the weird ways you referred people, ironic because I am half Japanese."
+        MC "Understandable, so what did you need Rin?"
+        Rin "I’ll be blunt. Akira had a growth spurt and asked me to bring her new clothes she ordered from the tailor. Her old outfit got ripped pretty bad, so she was forced to stay in our room."
+        Rin "However, little miss Buttsumoto, in her infinite wisdom, ratted me out only because my skirt is a quarter of an inch shorter than it has to be... Damn, I wish she'd get that stick out of her fat arse."
+        Rin "But anyways, I gotta be there in five or I get double. I figured since you both have been hanging out together, you could bring it to her. Do this, and I’ll owe ya a favor you can cash in later."
+        "This was interesting, it does explain why she was absent today. Without any clothes that would fit her muscular body, she wouldn’t be able to go out in public. Seeing how this is a drawback to her growth, she could use any help she could get."
+        MC "Alright I'll do it for Akira."
+        Rin "Great. So, because Akira's got nothing but her birthday suit on, you'll have to throw a pebble or something at our window to get her attention. It's on the second floor, look for the slightly opened window covered with a black poster. "
+        MC "How do you know the window will be open?"
+        Rin "I sleep near the window- love the fresh air, but hate the sunlight."
+        Rin "Once you get her attention, have her tie our laundry basket with spare sheets, and she'll do the rest. Her clothes are in the Tailor. Now then, I gotta leave, later dude."
+        Rin "Oh, and please try not to be a perv, even if she's got a rockin bod."
+        MC "Wait wh-"
+        "But alas, she left before I could finish asking what she meant by that."
+        MCT "...Ugh, why is it when someone says something interesting, they leave it off without an explanation…"
+        "I went to the student tailor store to begin my mission of impotence. The clothes were on a counter by the time I got there, I could tell it was hers because of the size... and the fact it had a note saying ‘Akira Mizutani’."
+        scene Dorm Exterior with fade
+        "I got the clothes and made my way to the dorms. I followed Rin’s instructions and found the exact window she said to find. I threw a pebble at the window to get Akira's attention and sure enough it worked. Akira stuck her head out, but it looked like she was rapped in a blanket."
+        FMG "Keisuke!? First off, why are you throwing rocks at my window? Second of all do you know where Rin is? She was supposed to be here by now with my clothes! Lastly, is that my outfit!?"
+        MC "That's why I'm here, Rin had detention and asked me to give you your new outfit."
+        FMG "Well, how are you going to do that?! I wouldn't let you up here even if I wanted to!"
+        MC "Just get some sheets and tie them to your laundry basket, bring it down through the window and I'll put the clothes in."
+        FMG "Alright, but you better not do anything unexpecting!"
+        "After a few minutes she lowered the basket, allowing me to put the clothes in. Once she pulled it back it back up, I had to wait awhile for her to come outside. It was only then I truly saw how big she was... "
+        show FMG happy
+        FMG "Oh god, it feels nice to be outside!"
+        "Her arms were thicker than the last time I saw her, her chest was more toned, her abs were starting to be more noticeable though the shirt, her legs were more muscular, and lastly she was a bit taller I think, though it could just be my mind playing tricks with how big she is."
+        show FMG neutral
+        FMG "Again thanks man! I was really in a pickle there… why are you looking at me like that, as if I don't already know."
+        MC "Sorry, you're just… really buff."
+        "I apologized, though she took it as a complement."
+        FMG "Thanks, I kinda knew I was getting big for a while, but it didn't really hit me till my outfit ripped to shreds."
+        MC "I have to ask, do you think-"
+        FMG "-That exercising is accelerating my growth factor? Yes. Did the nurse warned me about that? Of course she did. Am I gonna stop? Hell no."
+        FMG "Look, I know that it's probably not the best life choice I could make with my condition, but I've come too far to give up now. It's part of who I am, and there's nothing that can change that."
+        "Huh, even when against her own growth, Mizutani-san is pushing to her goals. Be that as it may I have to know..."
+        MC "Why do you want to become strong so bad?"
+        show FMG sad
+        FMG "...Everyone has a life goal, mine is just that simple I guess."
+        "I can't help shake the feeling that she's only giving me a quarter of the truth, if not a half truth. It makes wonder if Rin was right about Akira hiding something. Still, I don’t want to force it out of her, if she want’s to tell me then let it be of her own volition."
+        show FMG angry
+        FMG "I gotta know dude, why did you help me? Were you trying to get a quick peek or something?"
+        MCT "...huh, I was so caught up in getting these clothes, I never even thought about anything like that."
+        MC "To be honest no. The thought never occurred to me. I just wanted to help you."
+        show FMG neutral
+        FMG "Wow...I'm shocked. If I was a guy in your place, I totally would have tried something. I'm glad to know you care Kei."
+        "She heartily proclaimed. Before giving me in a big but not tight hug."
+        show FMG happy
+        FMG "Have a big hug for your troubles!"
+        "I’d expected something like a death hug from a bear but instead the hug felt nice. I wouldn't mind staying like this for-"
+        Rin "So are you guys gonna shag here or what?"
+        "AHH!!"
+        show FMG angry
+        "Both Akira and I yelled out in surprise, breaking the hug in the process."
+        FMG "What?! Rin?! I thought you had detention!"
+        "Akira yelled out in frustration, though this had little to no effect on Rin."
+        Rin "Yeah, turns out the tailor mixed up my skirt with a shorter kid, so the teacher let me go. Honestly I wouldn't have noticed if I didn't run into Kei earlier. Anyways, now that I see you out in the open, man you look big Akira."
+        FMG "You're one to talk torpedo nips!"
+        "Akira yelled out in anger, though I can't tell if it was from the scare, or from breaking of the hug. Wait what did she say about Rin’s nipples? Could it be..."
+        MC "Does that mean Rins...?"
+        Rin "Yeah, my growth thingy is my nipples; I don't mind though, I plan to use them to my advantage. Any ways, sorry I was earwigging on your conversation, and breaking your hug. If you need me, I'll be in our dorm room venting my frustrations by drawing. Later."
+        Rin "Oh and I didn't forget about that favor!"
+        "..."
+        MC "Um...what did she mean by using them to-"
+        show FMG neutral
+        FMG "Man I don't know, that girl is something else."
+        MC "You know, even if she's a bit weird, she's a good friend."
+        FMG "I guess. Listen, I've had a long day, I'm going up to my room and yell at Rin to get the name brand soda from now on and not the crappy off brand. Goodnight man."
+        MC "See you. Oh! I almost forgot, you left some weights at the student council."
+        show FMG happy
+        FMG "Thanks. See you."
+        hide FMG happy with dissolve
+        FMG "Rin! Get You better get Cane Cola from now on or I swear to god..."
+        "You know, now that I've given it more thought, the more I hang out with Akira, the more I want to know what she is hiding. I guess the only thing I can do now is wait. But there's still something that's bugging me..."
+        "...What the hell is “earwigging”?"
+        jump daymenu
+    else:
+        "...doesn't make me feel any less worried though."
+        scene F1 Hallway with fade
+        "The day went by as normal, it was getting late so I decided to get a quick snick." #TODO: snick? maybe snack?
+        "As I made it down the stairway, I saw Akira...but she was bigger than I remembered..."
+        show FMG sad with dissolve
+        FMG "*sigh* Hey Keisuke."
+        "Her arms were thicker than the last time I saw her, her chest was more toned, her abs were starting to be more noticeable though the shirt, her legs were more muscular, and lastly she was a bit taller I think, though it could just be my mind playing tricks with how big she is."
+        FMG "Yes I know I'm big but can you please not stare at me, I've had a long day!"
+        MC "Um, are you alright?"
+        show FMG angry 
+        FMG "I've been stuck in my room for the past two fricking days! I had to live off of Rin’s junk food and soda! It wasn't even the name brand, it was some cheap knock off of Cane Cola called Kool Kola!"
+        MC "Wait, why were you stuck in your room?"
+        FMG "Because I had a growth spurt the last night! I couldn't fit into my clothes without ripping them. Rin was supposed to get my school outfit but got detention, leaving all alone in my room till she got back and hour ago!"
+        MC "Sorry, I would have helped if I'd known."
+        FMG "That's nice of you to say but I think I've had enough “help” for one day...goodnight."
+        hide FMG angry with dissolve
+        "She left before I could say anything. Given her situation, I’ll tell her about the weights later..."
+        jump daymenu
