@@ -307,7 +307,7 @@ label global000_AE_c1:
     $ setAffection("BE", 1)
     $ setScenecount("BE", 1)
     $ setAffection("FMG", 1)
-    $ setScenecount("BE", 1)
+    $ setScenecount("FMG", 1)
     $ setAffection("AE", -1)
     $ setScenecount("AE", -1)
     UNKNOWN "Ex{i}cuse{/i} me?"
