@@ -24,6 +24,7 @@ image Nurse Office = "Graphics/office.png"
 image Pool = "Graphics/schoolpool_day.png"
 image splash = "Graphics/splashscreen.png"
 image Festival = "Graphics/festival.png"
+image Bathroom = "Graphics/bathroom.png"
 
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
 image RM angry = "Graphics/RM-1-angry.png" #Roommate Angry Portrait
@@ -69,6 +70,7 @@ label global000:
     show black
     centered "The following represents a work in progress."
     centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
+    centered "This is a work of fiction. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental."
     centered "For more information, visit\n https://www.expansiongames.net"
     centered "Enjoy."
     if debugenabled:

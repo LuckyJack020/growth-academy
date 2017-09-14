@@ -51,6 +51,7 @@ init 2 python:
     eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE017"], [ConditionEnum.ISDAYTIME]], "priority": False}
     eventlibrary['AE019'] = {"name": "AE019", "girls": ["AE"], "location": "schoolplanter", "conditions": [[ConditionEnum.EVENT, "AE018"], [ConditionEnum.ISDAYTIME]], "priority": False}
     eventlibrary['AE020'] = {"name": "AE020", "girls": ["AE"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "AE019"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE021'] = {"name": "AE021", "girls": ["AE"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "AE020"], [ConditionEnum.ISDAYTIME]], "priority": False}
     
     #classroom
 
@@ -3024,10 +3025,228 @@ label AE020_confession:
     MCT "Whatever may come."
     jump daymenu
 
+label AE021:
+    scene Classroom Day with fade
+    "When I walked into class today, Shiori-san was the first in the room. Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
+    show AE neutral at Position(xpos=0.25, xanchor=0.5) with dissolve #not sure if aroused, surprised or sad/shy
+    MC "U-um...Shiori-cha-"
+    "As I was about to speak, Nikumaru-san walked into the room with Kodoma-chan in tow."
+    show PRG neutral at Position(xpos=0.90, xanchor=0.5) with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5) with dissolve
+    BBW "Ohoho, now what’s going on here?~"
+    MC "E-eh? Oh, Nikumaru-san, good morning."
+    if getAffection("BBW") <= 0: #TODO: using <= for NOW
+        BBW "My my, Hotsure-san, mind telling what’s going on here with our dear president?"
+        MC "E-eh?"
+        BBW "From the sounds of it, that was a ‘-chan’ forming in your mouth. You and miss assiduous are getting a bit close I see."
+        show AE aroused
+        AE "Our business is between ourselves."
+        BBW "Of course it is. Don't let me interrupt."
+        "Nikumaru-san gave a little wink before walking to her chair. Before sitting down, she motioned to me to come over to where she was."
+        hide AE aroused
+        hide PRG neutral
+        MC "U-um...yeah?"
+        show BBW neutral
+        BBW "Bit of advice...you’ll catch pneumonia if you stay to close to the ice queen. I’d recommend keeping your distance a bit for fear of frostbite."
+        MC "...I’ll keep that in mind."
+        if getAffection("PRG") > 0:
+            show PRG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+            PRG "H-hi, Hotsure-san."
+            MC "Hey, Kodoma-chan." #TODO: Kodoma-chan? In her route MC usually uses -san
+            "Kodoma-chan gave a little smile. It felt nice to know the whole school wasn’t against me."
+            hide PRG
+            hide BBW
 
+    else: #else if Alice affection is higher
+        show BBW neutral with fade
+        BBW "G-good morning, Hotsure-san."
+        "Kodama-chan shrunk back a bit and gave a tiny smile. I reciprocated with a nod and a smile as well."
+        MC "Good morning, Kodoma-chan." #TODO: Kodoma-chan? In her route MC usually uses -san
+        BBW "I see you’re a bit busy. I don’t want to interrupt."
+        MC "Ah, no, it’s fine."
+        show BBW happy
+        BBW "Hmm...well now...the student council president, eh?"
+        show AE neutral
+        AE "Is there something you need, Nikumaru-san?"
+        BBW "Oh, no, no, no not at all, dear...mhm~"
+        "Nikumaru-san walked over to her seat, but not before leaning in and whispering to me."
+        BBW "Good luck, dear. Don’t catch a cold, now~."
+        MC "E-eh? Oh. Thanks, Nikumaru-san."
+        hide AE
+        hide BBW
+        hide PRG
 
+    #TODO: Show Tashi?
+    "Tashi-sensei walked in the room, and after standing and bowing; as well as opening the door for Honoka, we began our lessons...however there was a problem. I couldn’t help it, but I felt like I was being watched."
+    "My attention was drawn to the picture of the second president of Japan on the wall when I noticed something...bright beaming glasses staring at me on the reflective glass. I looked down to my desk."
+    MCT "What the..."
+    "I looked up once more, and once more, on top of the president's eyes, the bright gleam of Shiori’s glasses dove daggers into my own. She looked down, but only for a moment before looking back up through a side glance; her eyes piercing their way into my mind. I straightened up, and attempted to ignore her."
+    TS "-of 1973. Ok. That should be all for today. Your homework is chapter five page eight."
+    "Tashi-sensei nodded, and walked over to stand by the door."
+    AE "Stand."
+    "The class stood up. Honoka taking a little bit longer than the rest."
+    AE "...Bow."
+    MCT "The picture!"
+    "While I would usually take in a nice view, I instead stared intently at the picture as I bowed. Sure enough, Shiori-san’s eyes gazed right at mine all while we bowed."
+    MCT "That was a close one."
+    TS "Aright, all done? Good. See you all tomorrow."
+    "Everyone began to pick up their bags and Shiori placed her notebook under her arm. She began to leave, but I caught up with her just in time."
+    show AE neutral with dissolve
+    MC "U-um, Shiori-san?"
+    AE "Hm? Yes?"
+    MC "E-earlier...in class, I noticed you staring really intently at the picture on the wall."
+    AE "The one of the second president? Indeed. It’s very strange isn’t it."
+    MC "Oh? How so?"
+    AE "..."
+    AE "I’m wondering what the significance of it is. I can’t see why he in parti-"
+    MC "Why were you watching me?"
+    AE "..."
+    show AE aroused #flustered
+    AE "Hotsure-san, it’s very impolite to interrupt someone mid sentence."
+    if getSkill("Academics") < 4:
+        MC "A-ah. Yes. Sorry, Shiori-san."
+        show AE neutral
+        AE "No worries. As long as you keep that in mind."
+        MC "S-so, um..."
+        AE "Yes?"
+        MC "I can’t...um..."
+        AE "Hmm...well, I suppose I should get going. I’ll see you around."
+        MC "Huh? Oh. S-sure."
 
+    else: #TODO: Else if >= 4?
+        MC "And it’s very impolite to stare."
+        show AE aroused #flustered
+        AE "...W-well...I suppose so."
+        MC "You usually aren’t one to care that much about what’s polite or not either. What’s the deal? Is something wrong?"
+        AE "A-I…"
+        MC "...Have you thought about my request?"
+        AE "...I have to go."
+        MC "Huh? W-wait."
 
+    "Shiori-san walked away briskly, her now further distended rear bumping into a desk knocking it out of line. She turned, and straightened it before turning around and leaving."
+    MC "Huh…"
+    MCT "What was that about?!"
+    "I stood up from my desk and popped my back. I grabbed my bag when I noticed something...a single boy had stayed behind. He was staring at me from behind his book. As soon as I turned to face him he kneeled his head down to avoid me."
+    MC "W...?"
+    "I stared at him for a minute, but he didn’t pop his head back up. I gave up and just left."
+    scene Campus Center with fade
+    "My day continued along much of the same way. Every time I went to drink water, talk to students, or get something from a machine I would see someone out of the corner of my eye. Just staring at me and writing."
+    scene Hallway with fade
+    MC "Raw wheat, raw rice waw- no wait. Rwa- no. Raw wheat, raw rice...raw…"
+    "I turned around and noticed, just around the corner, as Kuchibiru-chan stared at me. She jumped for a moment before darting behind the wall."
+    MC "...egg."
+    MCT "H-oooookay. Now i’m starting to get fed up with this."
+    "I walked over to the wall to see the girl with the rosy pink lips scribble on a notepad, squatting behind the wall. I watched on as she kept writing, only catching a few words here and there. She pulled out some chapstick and began applying it before continuing to write."
+    "*Scribble scribble scribble*"
+    MC "Kuchibiru-chan?"
+    LE "Eep!"
+    MC "What are you doing? Why are you hiding?"
+    LE "U-ummm..."
+    "The thick lipped girl stood up straight and saluted."
+    LE "S-student council business ma-sir!"
+    MC "Ok...what i-"
+    LE "Goodbye!"
+    MC "Wait, no you di-"
+    "Kuchibiru-chan turned around and began to shuffle away before I could catch up and ask what was going on."
+    MC "No, wait you..."
+    RM "Psssst. Pssssst."
+    MC "Eh?"
+    RM "Psssst."
+    MC "What...?"
+    "I turned to see Daichi hiding behind a plant."
+    MCT "Ah. I see."
+    "I pursed my lips and turned back around slowly, pretending I didn’t see him."
+    show RM neutral with dissolve
+    RM  "O-oy, oy! I said “pssst” which makes you socially obligated to acknowledge me!"
+    MC "What do you wan-"
+    RM "They’re after you."
+    MC "A-after me- ow, hey, hey!"
+    "Daichi grabbed me by the hair and walked quickly across the corner, causing me to stomp awkwardly in his direction."
+    RM "Here, into the mens bathroom. They won’t follow us here."
+    scene Bathroom with fade
+    show RM neutral with dissolve
+    MC "Ach-g-get your hands off ma-!"
+    RM "Sh! Sh-sh-sh-sh...aight we’re clear."
+    MC "What the hell was that about?!"
+    "Daichi shook his hand feverishly, a few strands of my hair falling to the ground as he did."
+    MC "Oy, wait, wait, wait-is that my ha-"
+    RM "No time."
+    RM "Listen. You’re being watched by student council. I don’t know why, I don’t know the situation, all I know is that if you lead them back to OUR room I’m screwed."
+    MC "...I think student council knows where our rooms are."
+    show RM sad
+    RM "Damnit, then they’re already as step ahead of us."
+    MCT "Can I go now?"
+    MC "O-okay, you need to slow down."
+    show RM angry
+    RM "No time. Listen. There are three student council members nearby, all women, but there's a male member who can just walk in here no problem and listen in. You’re being followed. We both want to know why. Help me by letting me help you."
+    MC "Wha-no!"
+    show RM sad
+    RM "Pleeeease...don’t you wanna know?"
+    "My mind flashed back to earlier, when Shiori-san was staring at me though the picture frame. Her intense eyes burning into my mind. I let out a sigh of exasperation."
+    MC "Okay, okay, fine."
+    show RM neutral
+    RM "We’re gonna need codenames."
+    MC "Umm, no. That is NOT happening."
+    RM "From now on, only refer to me as “Thunder Viper”."
+    MC "I’m not calling you thunder viper."
+    RM "No, it’s fine."
+    MC "No, it is definitely not fine. I’m not calling you thunder viper."
+    RM "Well then fine, I guess you don’t care about finding what the class president is up to."
+    MC "..."
+    RM "..."
+    MC "..."
+    RM "Okay, please call me thunder viper though."
+    MC "No."
+    show RM sad
+    RM "...Fine."
+    MCT "Well, that’s that then. I’m heading back to my room."
+    "I let out a small sigh and began to walk out before feeling a tight grip grab me by the wrist."
+    show RM angry
+    RM "O-ho, no, no, no. If we exit there then they will definitely keep tailing you."
+    MC "W-wait, then how am I-"
+    "I turned to face Daichi when I heard the sound of metal creaking. It took me a second to register the sight of Daichi holding a metal grate to a ventilation shaft open."
+    show RM neutral
+    RM "Get in."
+    MCT "..."
+    MC "NO. WAY."
+    RM "H-hey, hey-sh-sh-sh. Okay, listen-"
+    MC "I’m NOT crawling around in a vent."
+    RM "Listen. Okay? These vents connect to the whole facility. I can get you right outside the door to our dorm room and from there I can open the passcode."
+    MC "Why do you know th-"
+    MCT "!!!"
+    MC "Wait, is that how you found a way to creep around the building undetected?!"
+    RM "Exactly. I’m in the vents, yes."
+    MC "When did y-"
+    RM "Remember when I was missing from orientation?"
+    MC "...Oh my god."
+    RM "Vents dude. They never check ‘em."
+    MC "W-well either way I’m not-"
+    RM "If you want my help you have to."
+    MC "..."
+    "Possibly for emphasis, Daichi began wiggling the grate up and down to make it squeak. Looking at me expectantly."
+    MC "Okay. Fine."
+    RM "Yusss. Okay. Follow me."
+    scene black with fade
+    "I followed Daichi quietly through the vents of Seichou. With the exception of the occasional light source from the adjacent room and some quiet murmurs of people going about their day unaware, there was nothing but blackness as we twisted and turned throughout the massive system. We continued on, until we came across a light directly in front."
+    RM "We’re here."
+    MC "Oh..oh thank god."
+    "The grate opened, and from it slunk Daichi and I. He stood up composed wiping off his shirt as I lay on the ground gasping for fresh air."
+    scene School Inner with fade #Used the same background as the time he first met Daichi
+    MC "Pah...ahc...ngh..."
+    show RM neutral
+    RM "Tch, c’mon get up."
+    MC "Ok...ok...phew."
+    RM "Oy. You got something in your hair."
+    MC "Eh?"
+    "I ran my fingers through my hair and started to scratch."
+    MC "Better?"
+    RM "...Yeah. Oh, wait, actually, no. No, that did absolutely nothing."
+    MC "Oh. Lemme-"
+    RM "Dude just-"
+    MC "Ok, yeah, inside, right."
+    "We entered into the room as Daichi ran over to his bed to grab a book bag to which he began to stuff with various trinkets. I looked at my reflection in the bathroom mirror; my hair turned gray from the dust and cobwebs."
+    "I took a shower and spent the rest of my time drawing up plans with Daichi."
+    jump daymenu
 
 
 
