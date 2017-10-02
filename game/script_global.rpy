@@ -51,6 +51,7 @@ init 1 python:
     presetdays["4-6-F"] = ["global005"]
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     datelibrary['testday'] = datetime.date(2005, 4, 7)
+    datelibrary['day_1'] = datetime.date(2005, 4, 4)
     
 label global000:
     stop music fadeout 0.5

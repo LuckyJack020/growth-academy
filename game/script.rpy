@@ -19,6 +19,7 @@
     debugscene = ""
     debugsceneinput = ""
     debugpriorities = ""
+    gametime = datetime.date(2005, 4, 4)
     
     import math
 
@@ -99,25 +100,27 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, FLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR = range(9)
+        EVENT, NOEVENT, FLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR = range(10)
     
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
         
     def checkCriteria(clist):
-        renpy.log("i'm checking criteria")
         criteriavalid = True
         for c in clist:
-            renpy.log(str(c))
             if c[0] == ConditionEnum.EVENT:
-                renpy.log("event: " + str(c[1]))
                 if c[1] not in clearedevents:
                     criteriavalid = False
                     break
                 else:
                     continue
+            elif c[0] == ConditionEnum.NOEVENT:
+                if c[1] in clearedevents:
+                    criteriavalid = False
+                    break
+                else:
+                    continue
             elif c[0] == ConditionEnum.FLAG:
-                renpy.log("flag: " + str(c[1]))
                 if c[1] not in flags:
                     criteriavalid = False
                     break
@@ -165,7 +168,6 @@
                 else:
                     continue
             elif c[0] == ConditionEnum.ISNIGHTTIME:
-                renpy.log("isnight")
                 if not gametime_eve:
                     criteriavalid = False
                     break
@@ -195,7 +197,6 @@
                     criteriavalid = False
                     break
             elif c[0] == ConditionEnum.OR:
-                renpy.log("or: " + str(c[1]) + str(c[2]))
                 if checkCriteria([c[1]]) or checkCriteria([c[2]]):
                     continue
                 else:
