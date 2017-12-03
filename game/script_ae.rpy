@@ -59,6 +59,7 @@ init 2 python:
     eventlibrary['AE023'] = {"name": "AE023", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "AE022"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE024'] = {"name": "AE024", "girls": ["AE"], "location": "roof", "conditions": [[ConditionEnum.EVENT, "AE023"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE025'] = {"name": "AE025", "girls": ["AE"], "location": "schoolplanter", "conditions": [[ConditionEnum.EVENT, "AE024"], [ConditionEnum.ISNIGHTTIME]], "priority": False} #TODO: Not sure if schoolplanter
+    eventlibrary['AE026'] = {"name": "AE026", "girls": ["AE"], "location": "dorminterior", "conditions": [[ConditionEnum.EVENT, "AE025"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
 
     
     #classroom
@@ -126,7 +127,7 @@ label AE001_c1:
     jump AE001_after
     
 label AE001_c3:
-    $ setAffection("AE", -1)
+    $setAffection("AE", -1)
     MC "The reason you're in here...you're worried about this whole thing, right?"
     show AE angry
     "Shiori-san stopped writing for a moment and looked up towards me again, with an annoyed look on her face."
@@ -4270,19 +4271,284 @@ label AE025:
     "Shiori-san and I were now official."
     jump daymenu
 
+label AE026:
+    scene black
+    play sound "Audio/ClockAlarm.ogg"
+    scene Dorm Interior with fade
+    "I awoke to the sound of my alarm clock buzzing it’s shrill beeps as my eyes fluttered slowly open."
+    MC "Mngh... urh… shut up, you damn thing."
+    play sound "Audio/Thud.ogg"
+    stop sound
+    "I closed my eyes for what felt like a few seconds more, when…"
+    show RM angry
+    RM "Dude, dude, wake up."
+    MC "Huh-wa?"
+    show RM neutral
+    RM "Get up, we got class."   
+    MC "Mm... what time is it?"
+    show RM angry
+    RM "Like, six thirty. C’mon."
+    MC "Aagn, damnit. Do you think I have time for-"
+    RM "I get to class via air duct and I’m still gonna cut it close; you don’t have time for nothin'."
+    MCT "Ech, hair's gonna get all matted. Whatever, I’ll deal with it later."
+    "I rubbed my eyes with my thumb and middle finger before sluggishly pulling myself off of bed and pulling on my uniform, laid out as I usually have it at the end of the bed."
+    "I pulled the pants on first and then the button up came next. A warm smile came to my face as I recounted my wonderful sleep."
+    MC "I had this… amazing dream last night."
+    show RM neutral
+    RM "Huh? What about?"
+    MC "I had a dream that Shiori and I...we were just under the tree and she, she said she wanted to be with me. It was nice."
+    "Daichi eyed me for a moment, before himself putting on a bright smile and scoffing."
+    RM "Uhh, earth to Keisuke. That wasn’t a dream."
+    MC "Eh?"
+    #show RM happy
+    RM "Aha, dude, you were so excited I had to postpone my presentation on what I found in the principal's office to listen to you gush."
+    "My heart began to flutter, as the reality of yesterday's events became distinguished from my dreams. This is likely because my dreams were, at this point, naught compared to the happiness and joy I felt than I had before returning to my dorm."
+    MC "O-oh yeah."
+    MCT "Then yeah, it’s a real thing now. Shiori-san’s my girlfriend."
+    show RM neutral
+    RM "Mhm. Now c’mon."
+    "Daichi opened up the door and motioned me out, which I begrudgingly took him up on."
+    #show RM happy
+    RM "Ahh, the vent over the teacher's lounge is always so nice in the morning. Fresh smell of coffee."
+    MC "Do you ever fear getting caught? Y’know, like, at all?"
+    show RM neutral
+    RM "Nope. Because I’ll never get caught."
+    MC "Ah..."
+    MCT "That is an absolutely psychopathic level of confidence."
+    "Diachi crawled into the vent systems, carefully shutting the grate behind him. As for myself, I walked briskly to class, a renewed sense of self flowing through my body, as though a great weight had been lifted from my shoulders."
+    scene Classroom Day with fade
+    "It appeared as though I was one of the last ones to class, as everyone was already in their seats and talking. Of course, the first one on my mind in the room was Shiori-san, who looked up towards me and nodded before bashfully looking back down at her desk. I walked over to her desk, a faint flutter in my heart as I went to talk."
+    MC "Um... g-good morning, Shiori-san."
+    "She looked up back at me, a light blush covering her face as she rubbed her arm with her other hand."
+    show AE aroused #flustered
+    AE "Good morning, Hotsure-san."
+    show FMG angry at Position(xpos=0.75, xanchor=0.5) with dissolve
+    FMG "O-oy! You chewed me out for almost being late, why does he get a pass?!"
+    show AE neutral
+    AE "O-oh! Yes. Hotsure-san, you were almost late. It’s b-best you not make a habit of this."
+    MC "Ah. Sorry, won’t happen again."
+    AE "I sincerely hope so…"
+    show FMG happy
+    FMG "Haaa, you got in trouble."
+    show AE angry
+    AE "Hush!"
+    FMG "Heeeh~"
+    "As I went to sit down at my desk, I heard a faint murmur as I passed Shiori-san."
+    hide FMG happy
+    show AE aroused #flustered
+    AE "S-sorry."
+    MC "Hm?"
+    show AE neutral
+    BBW "...Hm?"
+    "I responded in a light whispery voice as well."
+    MC "It’s all right. Don’t worry about it."
+    "Shiori-san nodded as I sat down in my seat. As soon as I sat, however, Tashi sensei walked into class, suit jacket slung over his right shoulder with a mug of coffee in his left hand."
+    #show TS
+    AE "Stand."
+    MCT "Ohp, hey, here we go."
+    AE "Bow."
+    "The class bowed and then sat back down to continue the lessons for the day."
+    hide AE neutral
+    #hide TS
+    scene black with fade
+    scene Classroom Day with fade
+    TS "-Okay. Any questions? I’m leaving either way. See you tomorrow."
+    "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
+    show PRG sad at Position(xpos=0.75, xanchor=0.5) with dissolve
+    PRG "N-N-Nikumaru-san, are you sure you don’t need me? I don't mind, really-"
+    show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+    BBW "Yes, yes, Kodoma-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
+    PRG "O-okay."
+    hide PRG sad with dissolve
+    "The tiny Kodoma-chan, usually seen with Nikumaru-san, left the room alone, and somewhat morose."
+    MC "U-um, hey, Nikumaru-san? Why did you make Kodoma-chan leave?"
+    show BBW happy
+    BBW "Ohoho, don’t worry about that now. I simply wanted a bit of space is all. Oh! Matsumoto-san is looking this way now, dear. Don’t let the poor girl get the wrong idea now."
+    MC "O-oh?"
+    MCT "How did she... know I was waiting for Shiori-san?"
+    MC "Well... thank you, Nikumaru-san."
+    BBW "Mhm~."
+    hide BBW happy with dissolve
+    "I turned around to see Shiori-san waiting patiently, her bag slung over her shoulder, with her generous frame almost the width of the window she was standing in front of."
+    show AE neutral
+    MC "Hey."
+    AE "Hotsure-san."
+    MC "So, wanna go hang out? Somewhere?"
+    AE "Ah, yes. How about the courtyard?"
+    MC "Sounds good."
+    "I looked her in the eyes, and she looked back with a deep, yet calm and serene gaze. The two of us walked into the hallway together, us standing side to side as we walked."
+    "Or, at least as side to side as her massive rear would allow."
+    scene School Inner with fade
+    show AE sad
+    AE "Hotsure-san, I’d like to start off by apologizing for this morning."
+    MC "Hm?"
+    MCT "This morning…? Oh!"
+    MC "You don’t need to worry about that."
+    AE "I’m sorry. I would have corrected your behavior sooner, however I’m still a bit thrown off by my new... position in your life."
+    MCT "Ah. So that’s what she was sorry about…"
+    MC " Ehe... sorry, I’ll be more on time. A-actually, I had to smack my alarm clock because it was so loud, and I kind of… fell back asleep."
+    show AE angry
+    AE "T-that’s school property!"
+    MC "Eh? W-wait, I can explain."
+    show AE happy
+    AE "Eheh, don’t worry about it. Those things are nearly indestructible, anyways."
+    MC "Ah... y-yeah."
+    MCT "I know, because I tried to destroy the damn thing!"
+    show AE neutral
+    AE "Still though. There must be a certain tragedy to being an alarm clock."
+    MC "Hm? What makes you say that?"
+    AE "Well, we create them to do what we ask, and then hate them for doing what we ask."
+    MC "Huh... that’s, uh... hm."
+    MCT "I guess that’s one way to see it... Hmm. This girl."
+    "I looked over towards Shiori-san and walked a little bit closer to her, causing her hip to gently brush against my leg."
+    scene School Planter with fade
+    "We reached our destination a few minutes later. The courtyard was mostly empty, save for two friends playing frisbee a far enough distance away."
+    MC "All right. We’re here."
+    show AE neutral
+    AE "Mhm…"
+    MC "..."
+    AE "..."
+    MC "So... ehe…"
+    show AE happy
+    AE "B-boyfriend and girlfriend."
+    MC "Boyfriend and girlfriend, yep!"
+    AE "Ehe..."
+    MC "Hoo...*khm*"
+    AE "..."
+    MC "..."
+    show AE neutral
+    AE "...What now?"
+    "I sat in silence for a moment, before looking down at the ground."
+    MCT "I...I dunno?!"
+    MC "So...um…"
+    AE "Is this normal for couples, Hotsure-san?"
+    MC "...Yep. About par for the course."
+    AE "Hm..."
+    MC "Hey, uh, by the way, you don’t need to call me Hotsure-san anymore."
+    AE "Hm?"
+    MC "W-well... We’re dating now. So, I’m fine with “Keisuke-kun” or whatever."
+    show AE aroused #flustered
+    AE "Oh! Oh, I know, I know, it’s just... i-it’s what I’m used to. It’s just crazy to think that just a few days ago it was all so... hm..."
+    MC "I know. It’s crazy for me too."
+    MC "Shiori-chan."
+    AE "E-eh?"
+    "Shiori-chan looked confused for a moment, batting her eyes before adjusting her glasses a bit."
+    AE "C-chan?"
+    MC "Mhm. Er, well, you’re my girlfriend now so I figured... it’d be appropriate."
+    AE "Oh! Um... yes. Yes, I am."
+    show AE happy
+    AE "I’m... Shiori-chan."
+    AE "'chan'... hm... I haven’t been okay with being called that in… God knows how long."
+    MC "Aha... really?"
+    AE "Mhm. I’d suppose not since middle school."
+    MC "Not even your parents?"
+    show AE neutral
+    AE "No."
+    "Shiori once more answered bluntly and quickly when the topic of her parents were brought up, just like last time."
+    MCT "Hmm... sore topic, I’m guessing. I won’t go after it right now."
+    MC "A-ah."
+    AE "..."
+    MC "Do, uh, do you have anything you want to do?"
+    AE "Hmm... well, I can’t think of anything."
+    MC "Well, then, do you want to maybe... just sit here for a while?"
+    show AE happy
+    AE "...Absolutely."
+    "I sat down, and Shiori-san did the same, the air causing her colossal skirt to flutter lightly as the warm flesh of her bulging behind spread out slightly across the grass."
+    "I rested my head in my arms and laid back, looking up at the sky as the birds chirped around us."
+    AE "Mhm... ehehe…"
+    MC "Hm?"
+    MCT "Shiori-chan... is she laughing?"
+    MC "You all right?"
+    AE "This... this feeling."
+    AE "This lightness."
+    AE "It feels so... unlike anything, Hotsure-san."
+    MC "I know. It does, doesn't it? Let it... let it stay with you for a moment."
+    AE "Hmm…"
+    "Shiori-san scooted in closer to me, and began to fidget around for a bit."
+    "We sat there contently looking up at the sky, sharing some small topics here and there."
+    scene black with fade
+    scene School Planter with fade
+    "Before we knew it, our entire break had passed. Shiori-san rested her hands politely on her lap the entire time, and I just laid back and gave short glances between her face and the daytime sky."
+    show AE happy
+    AE "Haaahh, this really is nice."
+    MC "Yeah…"
+    "I nestled my head further into my own hands and let out a sigh as I closed my eyes. I turned my head and opened them once more, only to notice a figure of the corner of my eye. I sat up a bit to see clearer, but the figure disappeared into the door."
+    MC "Hey, Shiori-chan?"
+    show AE neutral
+    AE "Hm?"
+    MC "...Did you feel like we're being watched?"
+    "Shiori-san looked around for a short moment, before returning her gaze to me."
+    AE "I highly doubt it. "
+    show AE angry
+    AE "Besides, if someone HAD been spying, I’d need to teach them a lesson about personal privacy."
+    MC "Heh. Straight to that, eh?"
+    #play sound "Audio/Clocktower.ogg"
+    "*Clocktower SFX*"
+    show AE neutral
+    AE "Ah. That’s the bell for class."
+    MC "Oh? Oh! Yep."
+    MC "Haaah."
+    "I sat up and lifted myself off the ground. Shiori-chan began to push herself off the ground with a heavy strain."
+    show AE aroused #flustered
+    AE "H-grh...mhn."
+    MC "Here."
+    AE "N-no, I should be able... to…"
+    MC "Shiori-chan."
+    AE "Hm?"
+    MC "I... I’m your boyfriend. Allow me."
+    "I held my hand out for her. She looked at it, and then looked up at me; a bright glimmer quickly gleaming across her glasses."
+    AE "Oh.. well... in that case."
+    if getSkill("Athletics") >= 3:
+        $setAffection("AE", 2)
+        MC "Alight, hrg…"
+        "I grabbed her arm and pulled upwards. Shiori-chan let out a little yelp as she quickly was lifted from her sitting position. She got her balance on her feet, giant ass wobbling like mad in response to my pull."
+        show AE aroused #flustered
+        AE "Ahn! Mmn... hoo, ah... Hotsure-san, you’re... much stronger than you seem. I’ll need to take note of that. Aha…"
+        MC "Heh... thanks."
+    else:
+        MC "HHRGN…"
+        "I pulled as hard as I could but Shiori-chan refused to budge. Her big fat ass weighed her down to the ground like a flesh-anchor."
+        show AE aroused #flustered
+        AE "A-ah. Don’t strain yourself too much."
+        show AE neutral
+        AE "..."
+        show AE aroused #flustered
+        AE "Here, let me... hmpf!"
+        "Shiori-chan, without any help from me, grabbed onto the nearby tree and hoisted herself up. She put her arms out for balance, and I supported her back to keep her stable so she didn’t fall."
+        show AE neutral
+        AE "Hoo, ah… *khm*, I should be fine…"
+        MC "Ah… y-yeah, cool, cool."
+        MCT "First day as a couple and I’m already embarrassing myself in front of her."
 
-
-
-
-
-
-
-
-
-
-
-
-
+    "I cracked my back and stood straight as thoughts of what all to do went through my head."
+    MC "So, uh, got any plans for tonight?"
+    show AE neutral
+    AE "Oh, um... well, I have a meeting at six, and the rest of the time from three will be mostly hall monitoring."
+    MC "Ah, it’s okay then, you don’t need to worry about it."
+    show AE aroused #flustered
+    AE "...B-but, I don’t have anything to do after that, and tomorrow is free too. If you want to do something, that is."
+    "Shiori-chan put her hands behind her back and began to move lightly from side to side. Without her knowing, this caused her thick thighs to wobble that much more noticeably."
+    MC "D-uh... sure! Yeah, we can definitely do something tomorrow."
+    show AE neutral
+    AE "Like what?"
+    MC "Oh, um, I dunno? Maybe just, like, take a walk around campus together?"
+    AE "Around campus?"
+    "Shiori-chan seemed a bit hesitant at the idea. But after a small bit of silence she piped up."
+    show AE happy
+    AE "I’d... I’d like that."
+    MC "Cool. Tomorrow then?"
+    show AE neutral
+    AE "Of course."
+    MC "All right! See you in class."
+    "I went to turn around before Shiori-chan grabbed the sleeve of my shirt delicately."
+    AE "H-hotsure-san?"
+    MC "Hm?"
+    show AE aroused #flustered
+    AE "Will... will you, um…"
+    AE "W-walk me to class?"
+    "I smiled at her softly, and waited for her to walk by my side."
+    MC "Absolutely."
+    jump daymenu
 
 label AE101:
     scene Gym with fade
