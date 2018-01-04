@@ -773,8 +773,8 @@ label global000_sit_c3_1:
     show FMG happy
     FMG "Busted his finger. Wasn't even trying to."
     MCT "Ooooo-kay, I'm suddenly very interested in what the principal has to say..."
-    $ setAffection("GTS", 1)
-    $ setScenecount("GTS", 1)
+    $ setAffection("FMG", 1)
+    $ setScenecount("FMG", 1)
     jump global000_sit_after
 
 label global000_sit_c3_2:

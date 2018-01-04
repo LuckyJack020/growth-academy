@@ -273,7 +273,7 @@
         
     def setSkill(s, val):
         if s not in skills.keys():
-            renpy.log("Unknown skill ID: %d" % s)
+            renpy.log("Unknown skill ID: %s" % s)
             return -1
         else:
             skills[s] += val
@@ -281,7 +281,7 @@
             
     def getSkill(s):
         if s not in skills.keys():
-            renpy.log("Unknown skill ID: %d" % s)
+            renpy.log("Unknown skill ID: %s" % s)
             return -1
         else:
             return skills[s]
@@ -380,6 +380,9 @@ screen daymenu:
             text ("Athletics: %d" % skills["Athletics"])
             text ("Art: %d" % skills["Art"])
             text ("Academics: %d" % skills["Academics"])
+            text ("Scenes:")
+            for e in eventchoices:
+                text ("%s" % e)
     
     text(getTimeString()):
         xalign 0.1
@@ -595,27 +598,34 @@ label daymenu:
             for k, v in eventlibrary.iteritems():
                 if k in clearedevents:
                     continue
-                isPriority = False
                 criteriavalid = checkCriteria(v["conditions"])
                 if not criteriavalid:
                     continue
                 if "priority" in v.keys() and v["priority"]:
-                    isPriority = True
                     for priogirl in v["girls"]: #If event is priority, add all girls to the priority list (if they aren't already)
                         if priogirl in priorities:
                             continue
                         priorities.append(priogirl)
-                        for e in allpool: #If a newly discovered priority girl is found, remove all old, non-priority events from pool
-                            if priogirl in eventlibrary[e]["girls"]:
-                                allpool.remove(e)
-                        if priogirl == prefgirl: #If a newly discovered priority girl is the preferred girl, remove all those events
-                            prefpool = []
-                if isPriority or not any(x in v["girls"] for x in priorities): #If the event is a priority or doesn't have any girls who already have priority events, add it to the list(s)
-                    if prefgirl in v["girls"]:
-                        prefscene = True
-                        prefpool.append(k)
-                    allpool.append(k)
+                if prefgirl in v["girls"]:
+                    prefscene = True
+                    prefpool.append(k)
+                allpool.append(k)
 
+            #Scan for priorities and purge non-priorities
+            if len(priorities) != 0:
+                for e in allpool[:]: #use a copy of the list, python gets cranky if you modify a list you're iterating over
+                    event = eventlibrary[e]
+                    for g in event["girls"]:
+                        if g in priorities:
+                            if not "priority" in event.keys() or not event["priority"]:
+                                allpool.remove(e)
+                
+                if prefgirl in priorities:
+                    for e in prefpool[:]: #use a copy of the list, python gets cranky if you modify a list you're iterating over
+                        event = eventlibrary[e]
+                        if not "priority" in event.keys() or not event["priority"]:
+                            prefpool.remove(e)
+            
             #Select from preferred pool
             if len(prefpool) != 0:
                 tmp = renpy.random.choice(prefpool)
@@ -632,7 +642,6 @@ label daymenu:
             else:
                 eventchoices += allpool
         debugpriorities = "".join(priorities)
-
     scene black
     window hide None
     call screen daymenu

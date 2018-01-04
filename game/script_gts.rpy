@@ -36,18 +36,18 @@ init 2 python:
     datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
     datelibrary['GTS011_date'] = datetime.date(2005, 4, 21)
     
-    eventlibrary['GTS001'] = {"name": "GTS001", "girls": ["GTS"], "location": "schoolplanter",  "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, datelibrary["day_1"]]], "priority": 1}
-    eventlibrary['GTS002'] = {"name": "GTS002", "girls": ["GTS"], "location": "schoolplanter",  "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['GTS003'] = {"name": "GTS003", "girls": ["GTS"], "location": "cafeteria",      "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "location": "library",        "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "location": "schoolplanter",  "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront",    "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS007'] = {"name": "GTS007", "girls": ["GTS"], "location": "campuscenter",   "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.NOEVENT, "GTS009"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS008'] = {"name": "GTS008", "girls": ["GTS"], "location": "roof",           "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS001'] = {"name": "GTS001", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, datelibrary["day_1"]]], "priority": 1}
+    eventlibrary['GTS002'] = {"name": "GTS002", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['GTS003'] = {"name": "GTS003", "girls": ["GTS"], "location": "cafeteria", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "location": "library", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS007'] = {"name": "GTS007", "girls": ["GTS"], "location": "campuscenter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.NOEVENT, "GTS009"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS008'] = {"name": "GTS008", "girls": ["GTS"], "location": "roof", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
     eventlibrary['GTS009'] = {"name": "GTS009", "girls": ["GTS", "BE"], "location": "festival", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS008"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS009_date"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS010'] = {"name": "GTS010", "girls": ["GTS"], "location": "classroom",      "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS_size_2"]]], "priority": 1}
-    eventlibrary['GTS011'] = {"name": "GTS011", "girls": ["GTS"], "location": "dormexterior",   "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS011_date"]], [ConditionEnum.FLAG, "GTS011_unlock"]], "priority": 0}
-    eventlibrary['GTS012'] = {"name": "GTS012", "girls": ["GTS"], "location": "dormexterior",   "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS011"]], "priority": 0}
+    eventlibrary['GTS010'] = {"name": "GTS010", "girls": ["GTS"], "location": "classroom", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS_size_2"]]], "priority": 1}
+    eventlibrary['GTS011'] = {"name": "GTS011", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS011_date"]], [ConditionEnum.FLAG, "GTS011_unlock"]], "priority": 0}
+    eventlibrary['GTS012'] = {"name": "GTS012", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS011"]], "priority": 0}
     
 label GTS001:
     scene black with fade
@@ -154,7 +154,7 @@ label GTS002_c1:
     
 label GTS002_c2:
     $setAffection("GTS", 2)
-    $setSkill("Arts", 1)
+    $setSkill("Art", 1)
     $setFlag("GTS008_flowers")
     "Her eyes brightened ever so slightly at that question as her smile grew a little larger."
     show GTS happy
@@ -228,7 +228,7 @@ label GTS003:
 
 label GTS003_c1:
     $setAffection("GTS", 2)
-    $setSkill("Arts", 1)
+    $setSkill("Art", 1)
     $setFlag("GTS008_flowers")
     "For the briefest of moments I could see Naomi's cheeks flash a slight crimson in what I assumed was embarrassment as her hand went to touch the accessory. She looked away for a second but returned her eyes back to mine and retrieved that small smile she had before."
     show GTS embarassed
@@ -584,7 +584,7 @@ label GTS008:
 
 label GTS008_c1:
     $setAffection("GTS", 2)
-    $setSkill("Arts", 1)
+    $setSkill("Art", 1)
     MC "What about one of the flowers we talked about earlier in the week?"
     GTS "Hm... that isn't a bad idea, Hotsure-san. If I were to go by the species I've told you about, then I have a good starting point to work with."
     MC "Yeah, sometimes it's best to break things into smaller groups so you can better analyze them."
@@ -1019,7 +1019,7 @@ label GTS012:
 
 label GTS012_c1:
     $setAffection("GTS", 2)
-    $setSkill("Arts", 1)
+    $setSkill("Art", 1)
     MC "Tell me a bit more about you learning how to do this, with the tea?"
     GTS "Oh, I wouldn't want to bore you with it."
     MC "Heh, it's fine, Yamazaki-san. I'm the one who asked."
