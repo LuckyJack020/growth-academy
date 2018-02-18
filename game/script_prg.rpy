@@ -118,7 +118,7 @@ label PRG003:
     MC "...sniff, sniff..."
     MC "Wow, something smells good..."
     "I followed the scent to the end of the hallway, a small room in the corner opposite the stairs beckoning me with its open door. I peeked inside, and who should I find at the home ec. stations but mousy, unassuming Aida."
-    scene Classroom Day with fade
+    scene Classroom with fade
     show PRG happy with dissolve
     MC "Hi there, Kodama-san!"
     "I had tried to sound friendly, but she jumped like I'd shouted her name at the top of my lungs."
@@ -276,9 +276,9 @@ label PRG003_3_a:
     #show PRG aroused
     PRG "Oh, okay, w-well, this odd-looking spoon, that's called a pasta fork, actually. A-and this, this is a ravioli stamp. Alice says she enjoys Italian food, but uhm, a lot of \"Italian\" food, like modern pizza, was actually invented in America... Maybe, uhm, inspired by original Italian dishes like Focaccia, but..."
     scene black with fade
-    scene Classroom Day
+    scene Classroom with fade
     show PRG happy at Position(xpos=0.75, xanchor=0.5)
-    with fade
+    with dissolve
     PRG "...And now that it's drained in the, uh, in the strainer, I just need to put some of the alfredo sauce- named after an Italian restaurant owner in Rome- over it and it's ready for Alice."
     MC "Wow, you sure do know a lot, Kodama-san."
     show PRG sad at center #replace with aroused
@@ -449,9 +449,9 @@ label PRG004_1:
     
 label PRG004_2:
     MC "I think Kodama-san's right- we shouldn't touch it."
-    show PRG Happy
+    show PRG happy
     $ renpy.pause(1.5, hard=True)
-    show FMG Angry
+    show FMG angry
     FMG "What?!"
     show PRG sad #replace with aroused
     MC "Well, I mean-"
@@ -529,7 +529,7 @@ label PRG008:
     "The day had gone by quickly, classwork barely slowing me down. With little else to do before dinner, I went to find Aida, probably in the cooking classroom again."
     MCT "And maybe get a free sample, heh..."
     
-    scene Classroom Day with fade
+    scene Classroom with fade
     show PRG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     PRG "Oohh..."
     hide PRG neutral with dissolve
@@ -582,7 +582,7 @@ label PRG008_1:
     TS "H-hey! That's the teacher's edition!"
     MC "Promise I won't peek!"
     
-    scene Classroom Day with fade
+    scene Classroom with fade
     show PRG sad with dissolve
     MC "I got it!"
     show PRG happy
@@ -660,7 +660,7 @@ label PRG008_3_a:
     jump daymenu
     
 label PRG010:
-    scene Classroom Day with fade
+    scene Classroom with fade
     "I wandered into the cooking clubhouse, knowing it was about the time that Aida started cooking for Alice, but before she got too involved in the meal to socialize."
     show PRG happy with dissolve
     "Aida looked at the sound of someone approaching, her expression momentarily brightening before her usual worried look crossed back over her features."

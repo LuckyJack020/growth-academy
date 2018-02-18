@@ -5,7 +5,9 @@ image School Inner = "Graphics/schoolinner.png"
 image Gate Front = "Graphics/gatefront.png"
 image School Planter = "Graphics/schoolplanter.png"
 image Hallway = "Graphics/hallway.png"
-image Classroom Day = "Graphics/classroom.png"
+image Classroom = ConditionSwitch(
+    "gametime_eve", "Graphics/classroom_eve.png",
+    "True", "Graphics/classroom_day.png")
 image Dorm Exterior = "Graphics/dormexterior.png"
 image Dorm Interior = "Graphics/dorminterior.png"
 image Campus Center = "Graphics/campuscenter.png"
@@ -21,10 +23,13 @@ image Gym = "Graphics/auditorium.png"
 image Track = "Graphics/track.png"
 image Roof = "Graphics/roof.png"
 image Nurse Office = "Graphics/office.png"
-image Pool = "Graphics/schoolpool_day.png"
-image splash = "Graphics/splashscreen.png"
+image Pool = ConditionSwitch(
+    "gametime_eve", "Graphics/schoolpool_eve.png",
+    "True", "Graphics/schoolpool_day.png")
 image Festival = "Graphics/festival.png"
 image Bathroom = "Graphics/bathroom.png"
+
+image splash = "Graphics/splashscreen.png"
 
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
 image RM angry = "Graphics/RM-1-angry.png" #Roommate Angry Portrait
@@ -45,6 +50,7 @@ define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
+define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
 init 1 python:
     eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
@@ -388,7 +394,7 @@ label global000_BBW:
     scene black with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
     
-    scene Classroom Day with dissolve
+    scene Classroom with dissolve
     "So this was Classroom 3-B. I would be spending a lot of time here for the next year."
     "The first thing I noticed was that, much like the rest of the shool, the classroom seemed very big. It was much larger than any that I had been in before."
     "Whether or not this meant that there would be more students, or if this was just something that made this school different, I had no idea."
@@ -871,8 +877,7 @@ label global000_homeroom:
     show FMG neutral
     FMG "Beats me...{w}I feel like I should be putting up a volleyball net or something."
     
-    scene Classroom Day
-    with fade
+    scene Classroom with fade
     MC "Whoa!"
     show BBW neutral
     BBW "...Is this for real?{w} How come there are so few seats?"
@@ -1017,7 +1022,7 @@ label global005:
         MC "Er, all right, sure."
         AE "I wasn't asking."
 
-    scene Classroom Day with fade
+    scene Classroom with fade
     MC "When we got to Room 3-B, we found a message written out on the blackboard, announcing that we were all supposed to head to the gymnasium."
     show AE neutral at Position (xpos=0.8, xanchor=0.5) with dissolve
     AE "All right, everyone, it's measuring day for our class, so let's get an orderly line going."

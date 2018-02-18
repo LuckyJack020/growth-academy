@@ -3037,7 +3037,7 @@ label AE020_confession:
     jump daymenu
 
 label AE021:
-    scene Classroom Day with fade
+    scene Classroom with fade
     "When I walked into class today, Shiori-san was the first in the room. Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
     show AE neutral at Position(xpos=0.25, xanchor=0.5) with dissolve #not sure if aroused, surprised or sad/shy
     MC "U-um...Shiori-cha-"
@@ -3312,7 +3312,7 @@ label AE022:
     "As soon as I felt nice and smug, I turned around and face planted right into the door to my own homeroom." #homeroom?
     MC "Ach...I deserved that...You know what, no, no I didn’t. Screw you, universe."
     "I walked into the room to see Shiori-san, who straightened up and looked straight ahead to the board."
-    scene Classroom Day with fade
+    scene Classroom with fade
     MCT "Ah...just like yesterday then?"
     BE "Pfft, ehehe..."
     MC "Hm?"
@@ -3555,7 +3555,7 @@ label AE022:
 
 
 label AE023:
-    scene Classroom Day with fade
+    scene Classroom with fade
     TS "-and essentially, you end up with an absolute mess."
     "Class had been going by fairly normally. My eyes had begun to flutter as fatigue began to set in. I looked up towards Shiori-san, who was sitting with her usual composed demeanor."
     #TODO: Show character sprites or not?
@@ -4316,7 +4316,7 @@ label AE026:
     MC "Ah..."
     MCT "That is an absolutely psychopathic level of confidence."
     "Diachi crawled into the vent systems, carefully shutting the grate behind him. As for myself, I walked briskly to class, a renewed sense of self flowing through my body, as though a great weight had been lifted from my shoulders."
-    scene Classroom Day with fade
+    scene Classroom with fade
     "It appeared as though I was one of the last ones to class, as everyone was already in their seats and talking. Of course, the first one on my mind in the room was Shiori-san, who looked up towards me and nodded before bashfully looking back down at her desk. I walked over to her desk, a faint flutter in my heart as I went to talk."
     MC "Um... g-good morning, Shiori-san."
     "She looked up back at me, a light blush covering her face as she rubbed her arm with her other hand."
@@ -4351,7 +4351,7 @@ label AE026:
     hide AE neutral
     #hide TS
     scene black with fade
-    scene Classroom Day with fade
+    scene Classroom with fade
     TS "-Okay. Any questions? I’m leaving either way. See you tomorrow."
     "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
     show PRG sad at Position(xpos=0.75, xanchor=0.5) with dissolve

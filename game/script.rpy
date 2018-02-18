@@ -100,7 +100,7 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR = range(10)
+        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR = range(11)
     
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
@@ -126,6 +126,12 @@
                     break
                 else:
                     continue
+            elif c[0] == ConditionEnum.NOFLAG:
+                if c[1] not in flags:
+                    continue
+                else:
+                    criteriavalid = False
+                    break
             elif c[0] == ConditionEnum.GAMETIME:
                 if c[1] == ConditionEqualityEnum.LESSTHAN:
                     if gametime >= c[2]:
@@ -354,7 +360,10 @@ label splashscreen:
     with Pause(1)
     
     return
-    
+
+screen choicetimer:
+    timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+
 screen daymenu:
     if gametime_eve:
         add "Graphics/ui/menubg-evening.png"

@@ -386,7 +386,7 @@ label FMG005_c2:
     
 label FMG006:
     #evening only?
-    scene Classroom Day with fade
+    scene Classroom with fade
     "Another day of classes ended, and for once I actually felt like working out today. I walked to Akira’s desk just as she got up, once she saw me walking towards her she put a paper ball behind her back... like I hadn't noticed."
     show FMG neutral with dissolve
     FMG "Um, hey Kei, I was about to head your way, got anything planned for the next hour?"
@@ -638,10 +638,10 @@ label FMG009:
     jump daymenu
     
 label FMG010:
-    scene Classroom Day with fade
+    scene Classroom with fade
     "The class started normal with roll call, that is until Mizutani’s name was called out was when I realized she wasn't here."
     MCT "Weird, I don't think I've ever seen her miss class. Sleeping in sure, but never missing."
-    scene Classroom Day with fade
+    scene Classroom with fade
     "Class ended with no sign of Akira. I turned to ask Matsumoto if she's seen Akira today."
     MC "Hey Matsumoto, sorry to bother you but have seen Akira today?"
     show AE neutral with dissolve

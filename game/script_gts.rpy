@@ -840,7 +840,7 @@ label GTS009_after:
     jump daymenu
     
 label GTS010:
-    scene Classroom Day with fade
+    scene Classroom with fade
     "A defeated sigh vacated my body as my hands had been slicking back my bangs all morning. I could already tell this growth was going to be annoying as I had only just recently had my hair trimmed and already it was back to before I had first gotten it cut."
     MC "This is really going to burn a hole in my wallet if I want to keep myself from looking like a mountain man by the end of the month..."
     "As I slumped back in my chair, I heard the door to the classroom open and looked over to see Naomi uncharacteristically rushing to get to her seat."
