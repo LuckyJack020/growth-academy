@@ -13,7 +13,7 @@
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
-    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'festival', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
+    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
     debuginfo = False
     debugenabled = False
     debugscene = ""

@@ -24,6 +24,8 @@ init 2 python:
     eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
     eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['BE008'] = {"name": "BE008", "girls": ["BE"], "location": "dorminterior", "conditions": [[ConditionEnum.EVENT, "BE007"]], "priority": 0}
+    eventlibrary['BE009'] = {"name": "BE009", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.EVENT, "BE008"]], "priority": 0}
     
 label BE001:
     scene Classroom with fade
@@ -544,6 +546,7 @@ label BE005_c2:
     BE "That'd be nice."
     "Honoka chuckled, and then went silent as our teacher walked in. The other students all began to hush after a while, ready for class to begin. We'd all been in classes for several days already, but now that we all knew what was going to change about our bodies, it really sank in that this would be a new learning experience for us all."
     jump daymenu
+
     
 label BE007:
     scene Classroom with fade
@@ -653,4 +656,242 @@ label BE007_after:
     MC "So, if I were to point out that they had some of those chocolate cream-filled cakes in the vending machine over there, and went to get two, you'd like one?"
     BE "Are you kidding? Two might not be enough, I'll make the trip myself!"
     "I chuckled as Honoka ran over to the vending machine to grab her delicious snack cakes, making a mental note to myself not to get between her and a box of them if she ever got hungry."
+    jump daymenu
+    
+label BE008:
+    scene Dorm Interior with fade
+    "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water. Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
+    "KNOCK ! KNOCK !"
+    "I had barely gotten started when the door knocked. Tashi was out, so I figured he'd simply forgotten his key."
+    MC "Hey, what's up?"
+    show BE happy with dissolve
+    BE "Oh hi Kei-chan! Good, you're hanging out here, can I come in?"
+    MC "Oh!"
+    "Seeing Honoka outside of my door was definitely something I didn't expect. But it was far from unwanted. Besides, it was nice to see her head-on without having her run into me like she often did." 
+    MC "Yeah, sure, come on in. There's not a rule about having girls in my room is there?"
+    show BE neutral
+    "I don't think so. I can't see why. Unless you were planning something naughty, in which case I am {i}not{/i} prepared at all."
+    MC "Naughty? Um. No, wait. No, I can't have been planning anything naughty, you were the one who showed up here in the first place!"
+    show BE happy
+    BE "Oh. Right. I did do that, didn't I?"
+    "Honoka giggled as she walked into my room and slumped down on a nearby seat with a smile. I couldn't help but notice how the forceful way she planted herself down onto the chair made her boobs bounce for quite a while."
+    show BE neutral
+    BE "So, how's it going?"
+    MC "Oh, not bad I guess. Was just hot outside so I was just catching up on some manga."
+    show BE surprised
+    BE "Ooh, fun, anything good?"
+    MC "Without even waiting, she looked at what I'd been reading."
+    show BE happy
+    BE "Oh neat I haven't seen this one yet. The main character in this is so cool, isn't he?"
+    MC "Oh you read this one too?"
+    BE "I only recently got into it, but the action's nice. It just stinks the chapters are always so short. But it's got some good characters in it too, doesn't it?"
+    MC "Heh, yeah, it does. I just finished this one actually, keep reading, it gets really good in a second."
+    "Honoka nodded and scanned along the pages. I waited for the moment I had been surprised by, and saw her hit that point where her eyes opened up wide."
+    show BE surprised
+    "Whoa! Holy cow, I did {i}not{/i} expect that. I thought Tomoko died like, gosh, chapter 20? How did she survive that attack she took?"
+    MC "I have no clue, but I'm guessing it has to do with how she was so powerful, strong enough to take down that robot in one punch. Maybe she became a cyborg or something."
+    show BE neutral
+    BE "Maybe. Though, I'd hope if they turned her into a cyborg they did more than just make her more powerful."
+    MC "What do you mean?"
+    show BE happy
+    BE "You know. Like, it's no fun to just {i}be{/i} a cyborg if you don't look like one too. You need a cybernetic eye or some wacky hair color, some crazy speech patterns or a constant whirring sound. Make people know you're half-machine, half-badass, all-woman."
+    MC "Hmm."
+    menu:
+        "So what you're saying is, you're not a cyborg.":
+            jump BE008_c1
+        "Then I guess I need to check you for mechanical parts…":
+            jump BE008_c2
+        "Error. Does not compute.":
+            jump BE008_c3
+            
+label BE008_c1:
+    MC "So what you're saying is, you're not a cyborg."
+    show BE sad
+    BE "Aw, I'm not?"
+    MC "Nope. After all, you don't have any of that fun stuff you mentioned a moment ago. Your hair's plain and brown, you don't smoke or whir when you move. You're all human."
+    BE "Ah shoot. You know, I was realllly hoping that offhandedly mentioning my desires for cyborg-ness would suddenly turn me into one for no reason."
+    MC "Them's the breaks, Honoka. You're not turning into a cyborg unless you get your hand cut off or something horrible like that."
+    show BE angry
+    BE "Curses. Then my plot for world domination will be totally useless."
+    MC "Pff. Please. What would you do if you took over the world?"
+    BE "I'd make snack cakes free for everyone on the planet! And outlaw diet foods."
+    MC "That sounds more like something Alice would do if she took over the world. Which, I might add, is the more likely possibility between the two of you."
+    show BE neutral
+    BE "Hm, you may be right. It's hard to beat wealth like that, even if I'd be all oiled up and ready to go."
+    MC "You… You really have a way with double entendres, you know that?"
+    show BE surprised
+    BE "Huh? What'd I say? I didn't mean to that time…"
+    MC "Oh. Well. Never mind then. I must have been mistaken."
+    show BE happy
+    BE "Heh, or your mind was naughtier than you initially thought, eh?"
+    "Don't blame me, Honoka. You're the one who's like a computer virus for my head whenever you come around."
+    MC "No, that's not it at all. Let's just, let's get back to reading manga."
+    $setAffection("BE", +1)
+    jump BE008_after
+            
+label BE008_c2:
+    MC "Then I guess I need to check you for mechanical parts…"
+    show BE surprised
+    BE "Oh? And how are you supposed to do that, exactly? Going to wave a magnet around me?"
+    MC "No, I have a much more efficient method."
+    "Honoka actually looked confused and taken aback, which was rare for her. Meaning that I'd be a fool to not take this opportunity."
+    MC "Boink."
+    "As quickly as I could, I reached out and poked her forehead."
+    MC "Hm, nothing there. Boink."
+    "This time I prodded her shoulder."
+    MC "Boink."
+    "That time her hand, which retracted after I poked it."
+    show BE happy
+    BE "Heh, Kei-chan what are you doing?"
+    MC "I have to be thorough now, I need to make sure there's not any robotic parts looking under there. Tachi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
+    "Laughing like a mad scientist, I kept poking Honoka in whatever places I could reach. Eventually I managed to reach her waist, which made her squirm and giggle as she recoiled from the contact."
+    MC "Aha, it appears I've found a weakness here. I must examine further!"
+    "Spurred on by her reaction, I couldn't help but keep poking her belly wherever I could reach, though by this point it was essentially tickling rather than just poking. It didn't take long to get Honoka stuck in a cycle of laughter."
+    BE "Ahaha, K-Kei-chan, hahaha, stop! Ah! Hahaha, oh, not there, ah! Hehehe, you can't, ah! I'm t-too ticklish there, ha! K-Kei-chan!"
+    "It was too late to stop now, I was a man on a mission. What that mission was, exactly, I couldn't say, but hearing her laugh like a little kid brought me back to when we used to hang out pretty much every day. "
+    "Before I could be brought back too far to the memories of us as kids, I was thoroughly distracted by something that was definitely not there when we were kids."
+    "Obviously, since we've spent a fair amount of time together at school already, I'd seen Honoka's breasts bouncing a lot. It hadn't yet gotten to the point where I was used to it and it had lost its appeal, but normal movement had nothing on what was going on in front of me now."
+    "My breath hitched in my throat as I saw her bosom heaving up and down with her giggles, the high-pitched squeals coming from her making me feel a bit light-headed as I watched her mounds bounce up and down, a feast of jiggling that I had directly caused thanks to my ceaseless tickling."
+    "It only ceased now because I was staring at them so hard I gave Honoka a chance to catch her breath, and slowly settle her mammaries back down."
+    "Unfortunately for me, before I could try and defend myself, she went on the offensive, knocking me over and grabbing one of my feet."
+    MC "Oh god, Honoka, no!"
+    BE "Ahahaha, so this is still your weak spot then?! Perfect! Suffer Kei-chan, suffer the wrath of Honoka Inoue!"
+    "I was a goner. How on earth did she remember that I had ticklish feet? She must have a special section in her head for saving embarrassing memories."
+    "The girl was relentless, using both hands to torture me. As much as I wanted to kick at her to knock her away, I couldn't, afraid of what exactly I might hit. The suffering only ended when my laughter stopped completely because I was simply unable to take a breath."
+    BE "Whew… heh. Well… that was a thing."
+    MC "Guh. Honoka, you, geez."
+    show BE surprised
+    BE "Wow, you seem even more ticklish than you used to be, Kei-chan. That's something. But, I have to say you were a gentleman about when you did it to me."
+    MC "Eh?"
+    "Honoka helped me up to my feet and we both sat back down, catching our breath."
+    MC "What do you mean?"
+    show BE neutral
+    BE "I mean, I've got some big, obvious, sensitive targets. I was sure you'd go for them once you got started."
+    MC "Heh, well. They're actually the reason I stopped."
+    show BE surprised
+    BE "Is that so? Got cold feet? If so, then I helped you warm them up."
+    MC "Haha, no, no, not that, just. Distracted, memories, jiggling. Things."
+    show BE neutral
+    BE "Mm-hm. I see. I think I see anyway. Well that certainly helped my boredom, which was the reason I came in the first place, but I don't gotta go just yet! Here."
+    "Honoka tossed me one of my manga."
+    show BE happy
+    BE "Let's chill and read for a while. I think you wore me out too much to walk right away."
+    MC "Heh, like you're one to talk..."
+    $setAffection("BE", +2)
+    jump BE008_after
+            
+label BE008_c3:
+    MC "Does not compute."
+    show BE neutral
+    BE "Oh come on. Who would you rather see in real life: Marumarucha, the awesome green-haired cyborg with visible jetpacks, or Kusanagi, the lame detective who's only a cyborg when she peels off her skin?"
+    MC "Uh. I'm not sure if I'd want to see either of those in real life. That sounds dangerous either way."
+    show BE sad
+    BE "Boooo. You can be a bore, sometimes, Kei-chan. Here, read this and come up with some better ideas then if you're so creative!"
+    "Honoka tossed a manga at my head that splayed open to a page that was very flattering for the woman it portrayed, but not at all appropriate to be seen in mixed company."
+    show BE surprised
+    BE "Oh wow, Kei-chan. I didn't know you liked that kind of manga."
+    MC "Oh it's clearly just the fanservice pinup to sell some extra copies…"
+    show BE happy
+    BE "Heh, I'm kidding. But, hey, you don't mind if I hang for a while, right? I'm kind of bored."
+    MC "No, not at all."
+    jump BE008_after
+
+label BE008_after:
+    "Honoka and I spent the rest of the afternoon together, just hanging out and catching up on manga. It was nice, something I hadn't really had a chance to do with a friend in a long time. Tachi was not exactly the type of guy who would just sit and read unless it was a bunch of conspiracy theories. Honoka was much, much more fun."
+    jump daymenu
+    
+label BE009:
+    scene Track with fade
+    "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
+    "The bleachers weren't filled up that much, but I supposed it was so early in the year that there wasn't much interest in the game yet. Most of them were all rookies, most likely, or at least shaking off the dust."
+    "It had been years since I got to see Honoka kick a ball around. She was still just as quick on her feet as I remembered, maybe even more, years of playing since we were separated as kids evident in her skills."
+    "She worked the backfield a lot, keeping the ball away from her goalie and sending it back towards the opposing team's half of the field. Both teams were rusty, but Honoka kept the field covered long enough to keep the score at 2-2."
+    MC "Boy, she's really holding her own out there. Maybe I should give her a cheer."
+    menu:
+        "Ho-no-ka! Ho-no-ka! Kick-ing, scor-ing, rah rah rah!":
+            jump BE009_c1
+        "Dribbling balls, jiggling chest, Ho-no-ka is the best!":
+            jump BE009_c2
+        "Say nothing.":
+            jump BE009_c3
+
+label BE009_c1:
+    MC "Ho-no-ka! Ho-no-ka! Kick-ing, scor-ing, rah rah rah!"
+    "Several players looked over to the sideline to see who was cheering, Honoka chief among them. She looked down at the ground, but even from this distance you could see an impish grin on her face."
+    "It wasn't long after I made a fool of myself that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal. She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
+    "After the game was won, Honoka jogged off the field, coming up to where I was sitting on the sidelines. Her gym clothes were ringed with sweat, the bottom curves of her breasts forming a crooked sweat-stain smile across her front."
+    show BE happy with dissolve
+    BE "Hey Kei-chan! Nice to see you out here!"
+    MC "Well I had to at least come see your first match, right?"
+    BE "Yeah, that's really nice. I liked your little chant, too."
+    $setAffection("BE", +1)
+    MC "Sorry it wasn't that good. Next time I'll work on it beforehand."
+    show BE neutral
+    BE "You better! No slacker cheerleaders in {i}my{/i} section."
+    show BE happy
+    BE "Just kidding! It was sweet of you to cheer me on."
+    MC "I'm glad to hear it. So you're saying you made that last goal because of my encouragement?"
+    BE "Hehe, well I wouldn't go {i}that{/i} far. But it definitely helped."
+    MC "Awesome. So you're liking the soccer club, then?"
+    show BE neutral
+    BE "Yeah. It's pretty fun. The coach is nice and the other players are neat to hang out with. Still, almost feels like…"
+    show BE sad
+    BE "I dunno."
+    show BE neutral
+    BE "Almost like \"I've done soccer already. Should I try something new?\"."
+    MC "Huh. Well, it's still early in the year. I guess you could change if you wanted."
+    show BE happy
+    BE "Yeah, that's the spirit! Thanks Kei-chan!"
+    hide BE with dissolve
+    "After saying goodbye to Honoka, I stretched my legs out a bit, still sitting on the bleachers. It was so nice seeing her have fun and getting excited about something. A huge dose of normalcy in this weird skill was definitely needed. "
+    "I sat there for a few more moments before getting on my way, smiling as I walked back to my room."
+    jump daymenu
+
+label BE009_c2:
+    MC "Dribbling balls, jiggling chest, Ho-no-ka is the best!"
+    "I wasn't a poet by any means, but it was the best I could come up with on short notice. I couldn't even tell if Honoka was able to hear me, I assumed there was a lot of chatter between the soccer players that would drown out whatever I said."
+    "Then again, maybe she was able to hear me. It wasn't long after I made a fool of myself that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal."
+    "She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
+    "The whole crowd cheered after that, including me. She definitely heard that. Honoka ended up scoring the goal with only a few more minutes on the timer. It wasn't enough for the other team to score again. Meaning that for all intents and purposes, Honoka had just won the game."
+    MC "Heck yeah! Go Honoka!"
+    "After the timer for the game went off, both teams celebrated for a while, hoots and hollers all around. It wasn't until a lot of people had left that Honoka came over to the stands."
+    show BE happy with dissolve
+    BE "Hey there Kei-chan!"
+    MC "Hey, Honoka."
+    show BE neutral
+    BE "Heh, thanks for the cheer back there, goofball."
+    $setAffection("BE", +1)
+    MC "Oh! You're welcome. Glad you liked it. I didn't have much time to come up with something."
+    show BE happy
+    BE "Really? I couldn't tell. Though maybe the fact you immediately went to \"booooobs\" was a clue."
+    MC "Come on, when we played it was either just \"get the ball in the goal\" or \"hit each other with the ball\". I don't know enough about the sport to make insightful comments!"
+    show BE neutral
+    BE "Yeah I guess that's fair. Though that does remind me of something."
+    MC "What's that?"
+    "Honoka took that opportunity to kick the soccer ball right at my head, knocking me back a bit."
+    MC "Oof!"
+    show BE happy
+    BE "Hahaha, who's up for a classic game of soccer tag? You're it!"
+    hide BE with dissolve
+    "Honoka immediately took off running, but only retreated to the soccer field, before beckoning me over."
+    MC "Oh you asked for it!"
+    "It may have been a while, but I still got on my feet and began chasing after Honoka, dribbling the ball between my feet. Soccer tag was a simple game, as we were young when we made it up. Hit the other person with the ball, and that was about it."
+    "Even after playing a full game, it was nice to know that Honoka still had the energy to screw around with me."
+    "I wasn't at all surprised when I ended up being the one that needed to sit down and take a break first, but just for a while. It had been a while since we were able to have this much fun with each other."
+    "Plus, all the running around felt good. It was always nice to get some air back into the lungs."
+    $tmp = setSkill("Athletics", 1)
+    "(Your athletics skill has increased to [tmp])"
+    jump daymenu
+
+label BE009_c3:
+    "I didn't want to interrupt the game with a silly chant, especially when the stakes were so low, so I just stayed quiet and watched Honoka play."
+    "She really was good. It wasn't long after I arrived that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal. She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
+    "After the game was won, Honoka jogged off the field, coming up to where I was sitting on the sidelines. Her gym clothes were ringed with sweat, the bottom curves of her breasts forming a crooked sweat-stain smile across her front."
+    show BE neutral with dissolve
+    BE "Oh hey Kei-chan, I didn't know  you were watching! How long have you been here?"
+    MC "Long enough to see you're pretty good still."
+    show BE happy
+    BE "Heh, thanks. Let me know next time so I can show off for you."
+    hide BE with dissolve
+    "She gave me a wink and shook her shoulders a bit before leaving to follow the rest of the soccer club. Wondering what kind of \"showing off\" she meant, but satisfied that I'd hung around long enough, I got going myself."
     jump daymenu
