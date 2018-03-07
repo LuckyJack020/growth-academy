@@ -25,7 +25,8 @@ init 2 python:
     eventlibrary['FMG008'] = {"name": "FMG008", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG007"]], "priority": False}
     eventlibrary['FMG009'] = {"name": "FMG009", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG008"]], "priority": False}
     eventlibrary['FMG010'] = {"name": "FMG010", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG009"]], "priority": False}
-    
+    eventlibrary['FMG011'] = {"name": "FMG011", "girls": ["FMG", "BBW"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG010"]], "priority": False}
+
 label FMG001:
     scene Track with fade #track might not be the right background?
     "After thinking it over, I decided to check out the Athletics Area, so when I have P.E. I would know where it is."
@@ -758,3 +759,156 @@ label FMG010:
         hide FMG angry with dissolve
         "She left before I could say anything. Given her situation, I’ll tell her about the weights later..."
         jump daymenu
+
+label FMG011:
+    scene School Planter with fade
+    "It was a cloudy day that day, but I figured it would be nice to just walk around the school despite that."
+    "…At least, until it started raining."
+    "Luckily, I found a room of some kind that was attached to the school , and entered without questioning its purpose. As I entered, I realized it was a recreation room of some kind, like something from an 80’s arcade or something."
+    scene Recreation with fade #TODO: Scene image not implemented
+    MC "How old is this place, anyway?"
+    "A few fellow students had the same idea I had, taking shelter from the downpour, but I realized there was someone who had already been in here before the rain started."
+    "To my surprise, Akira was playing on one of the machines..."
+    if isEventCleared("BBW009"):
+        "… And she looked focused. I walked up to get a better view of the game."
+        show FMG neutral at Position (xpos=0.75, xanchor=0.5), Transform(xzoom=-1) with dissolve
+        FMG "Hey. Can't talk now. Killing."
+        "She was in the middle of a boss fight with a strange mutated creature. Given the size of its health bar, I thought it might be the final boss."
+        show FMG angry
+        FMG "Come on you stupid bat-cat-zombie-thing. Just die already."
+        "Despite being annoyed, she was able to keep focused. About 5 minutes later she killed the boss, keeping a cool head the entire time."
+        show FMG happy at Transform(xzoom=1)
+        FMG "Woo!"
+        "...For the most part, at least."
+        MC "Wow, you're good."
+        show FMG neutral
+        FMG "Yeah, practice makes perfect and all, I've been playing this thing whenever I get spare time since losing that swim bet."
+        MCT "...Ah, balls. I forgot about that."
+        MC "Er... you okay?"
+        FMG "Don't worry, I ain't mad at you, if that's what you're wondering. I just want to give that smug jerk a taste of her own medicine."
+        show FMG angry at Transform(xzoom=-1)
+        FMG "Heh. She thinks all I do is work out, well she's not the only one with a hidden talent."
+        MC "Well, you never know. She could be good at this kinda stuff."
+        FMG "Any overweight, smug overachiever can play and be good, but it takes skill and practice to be great at something."
+        "Oh great, history was repeating itself. This time, the one behind her was-"
+        show BBW neutral at Position (xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+        FMG "You don't just sit around to be great at something, you gotta go out there and do it yourself."
+        "Alice, and she looked angry. I’d say I was surprised this was happening again...but I wasn't."
+        FMG "But no, people want to do it the easy way, by sitting down, getting fat, and having everything given to them. Not all of us were born with a silver spoon in our mouths."
+        MC "Ak-"
+        FMG "And by the way, I know you're behind me, Alice, I can hear you breathing."
+        MCT "At least your hearing's better than Alice's, I guess…" 
+        show BBW angry
+        BBW "Well at least you have some skills of perception."
+        show BBW haughty
+        BBW "I’m just curious how it is someone who 'sits around all day' trounced you so thoroughly at the pool."
+        show FMG angry at Transform(xzoom=1)
+        FMG "What the heck does 'trounced' mean?"
+        BBW "Beaten. Clobbered."
+        FMG "T-Then why didn’t you- you know what, I want a rematch- and I pick this time."
+        BBW "Certainly, assuming you have any interests besides athletics?"
+        FMG "...Do you not see that I’m standing next to a arcade game?"
+        BBW "Oh! I didn’t know you were actually playing."
+        BBW "I thought you were just waving a toy gun around, going ‘Pew pew!’"
+        MCT "Oh no, Alice... now you've done it."
+        FMG "… You… grab the gun and put your cash in so we can start."
+        "Akira was visibly shaking with rage while Alice got into position. All I could do was watch this happen while Akira grabbed the second player gun."
+        show FMG angry at Transform(xzoom=-1)
+        show BBW haughty at Position (xpos=0.55, xanchor=0.5)
+        FMG "I’m going to take a wild guess and say you want to be player one. Doesn’t matter in the long run, though."
+        BBW "{i}Au contraire{/i}, you can be whichever you want. I wouldn’t want you handicapped." 
+        show FMG neutral
+        FMG "Quit speaking… whatever language that is and let's do this."
+        show BBW neutral
+        "Thus began a duel for honor, pride, and some other third thing. About ten minutes into it Akira was already ahead of Alice by ten thousand points, mostly because Alice was shooting normal civilians before realizing she lost points for doing that."
+        "Both were too focused on the game to say anything to the other, but I could tell that Akira was feeling smug about behaid, while Alice was both confused and annoyed." #TODO: Behaid, typo?
+        "An hour later, and a lot of both their coins, they managed to get to the final boss, and once it was dead, the scoreboard tallied up the results, with Alice’s score first."
+        show BBW neutral at Position (xpos=0.40, xanchor=0.5)
+        "Player One Score: 21521"
+        show FMG neutral
+        FMG "Huh. Not bad..."
+        BBW "Why of course I would do great, only someone like me can reach a score lik-"
+        "Player Two Score: 74681 !NEW RECORD!"
+        show BBW angry
+        BBW "-What!?"
+        show FMG happy at Transform(xzoom=1)
+        FMG "… For a beginner, that is!"
+        "Alice looked at her gun for a moment before putting it back, her face stony."
+        show BBW neutral
+        BBW "It should be expected that I would not master this the first time."
+        BBW "So congratulations. You have defeated a newcomer."
+        show FMG sad
+        FMG "… I’m just trying to show how I felt at the swim dare and you can’t even let me have that…"
+        BBW "..."
+        BBW "That wasn’t your first time swimming, though, was it?"
+        FMG "No, and that’s why it hurt when you acted all high and mighty, especially when you didn’t realize I was behind you."
+        BBW "..."
+        "Alice didn’t reply for a moment, and I thought she was about to say something vicious or snide. Instead she exhaled slowly, pinching the bridge of her nose."
+        BBW "I was unaware it would hurt you. I apologize if you were offended."
+        MCT "That’s not really an apology..."
+        FMG "Whatever, just promise me one thing…"
+        "As if a burning passion was ignited, Akira stared down Alice with fire in her eyes…"
+        FMG "Don’t you ever insult me and my father’s work of arcade games ever again!"
+        "Akira looked down on Alice before going to normal. To this day I’ll never forget the look of shock Alice had on her face."
+        show FMG happy
+        FMG "I hope we have a understanding. Let’s play again sometime."
+        hide FMG happy with dissolve
+        "That was all Akira said before leaving me, Alice, and the machine in the room…"
+        MC "Alice, are you okay?"
+        "She took a second to clear her throat before responding."
+        BBW "S-strange girl…"
+        BBW "She’s upset about losing at swimming, but she’s more concerned about her gaming skills?"
+        MC "To be fair, you did say something about waving the gun around, going ‘Pew pew’. She takes her hobby seriously, I guess."
+        BBW "Apparently…"
+        MC "Well, thanks for kinda apologizing. I’m heading back to my room. See you at class."
+        show BBW happy
+        BBW "Indeed. Good day, Hotsure-san."
+    else:
+        "...Though she looked rather casual, like she was really just playing it for fun, not trying to beat it or anything. I walked up to get a better look of the game."
+        show FMG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+        FMG "Yo, what's up?"
+        MC "It's raining, so I came in here. Shouldn't you be focusing on the game?"
+        show FMG happy
+        FMG "Nah, I don't care if I lose or not. Besides, it's going to enter a cutscene in a sec."
+        FMG "Can you believe this school has a recreation room, let alone three arcade games!"
+        MC "Yeah, so what's that you're playing?"
+        FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of ‘Fallen City’. I'm just about to fight the final boss once this cutscene finishes."
+        show FMG happy at Transform(xzoom=-1.0)
+        "Just then, a bat-cat-zombie-thing showed up. Akira took about 3 minutes to beat it, and once she did a leaderboard showed up, displaying her score."
+        show FMG neutral
+        FMG "Man, that was fun. Third place too, not bad."
+        MC "Yeah, thinking of going for first place?"
+        FMG "Nah, unless I've got a VERY good reason, I'm not that competitive. Speaking of competitiveness, look who just came in..."
+        "By the doorway was a slightly soaked Alice, looking annoyed."
+        FMG "Hey Alice! How's it going?"
+        show BBW angry at Position(xpos=0.25, xanchor=0.5) with dissolve
+        BBW "Irritatingly. The weather report said nothing of showers, and… Look at me."
+        FMG "Oh yeah, Kei said something about rain but I wasn’t paying attention. At least you found shelter before it really got bad."
+        show BBW neutral
+        BBW "(Sigh) Any damage to my hair or clothing is bad enough, but I won’t bemoan a fair sprinkling."
+        "Akira turned to Alice and  pointed her thumb at the arcade game behind her."
+        FMG "Well, wanna take your anger out on these zombies?"
+        "Alice’s expression remained like she was smelling something slightly unpleasant, but she walked up to Akira and took the proffered gun."
+        BBW "Let me guess, I point and shoot anything that moves?"
+        FMG "Well, yeah, if you wanna lose points by killing innocent people. It’s to keep the game balanced. Focus on the things that  look like they shouldn’t be alive. Oh and watch your ammo, you’re a sitting duck if you can’t shoot."
+        "She didn’t explain how to reload, so once Alice had emptied her clip she continued firing to no avail, with increasing irritation." #had suggestion
+        "Eventually the zombies got to her, the screen turning red with blood splotches until the words ‘Game Over’ came up."
+        show FMG sad 
+        FMG "..Um, you shoot off the screen...to reload. I’m sorry."
+        BBW "I see now."
+        "She put in another 100 yen coin. Her game didn’t improve by much, but she did manage to avoid getting mobbed again. Come the boss, though…"
+        BBW "And this is what people do for fun?"
+        FMG "Eh, it’s not for everyone, I know. I’ve been playing arcade games most of my life. But yeah, if this isn’t doing anything for you, you can stop playing."
+        BBW "Not so fast. I’m not going to let some cheap toy beat me." #had suggestion
+        FMG "Um actually, they cost a lot of cash to produce, you gotta program, animate the people, it's basically like a movie…"
+        "This cycle went on for about an hour, Alice making incrementally more progress with each bit of cash, but eventually I realised the rain stopped."
+        MC "Hey, the rain stopped, I should head back to my room."
+        FMG "Yeah, Hey…  Alice, the rain stopped, are you going to stop?"
+        show BBW angry
+        BBW "Not just yet. One more go at that cyber-brain and I should have it beat."
+        show FMG sad at Transform(xzoom=-1.0)
+        FMG "{i}(Yeah I don’t think she realizes that’s the third boss and there’s three more to go…){/i}"
+        FMG "Well, see you at class tomorrow, don’t play for too long."
+        BBW "I'll be fine."
+        "We left Alice there, playing that game for who knows how long. As for Akira and I, we exchanged goodbyes and went our separate ways."
+    jump daymenu
