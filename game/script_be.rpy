@@ -1,11 +1,23 @@
 define BE = Character('Honoka', color="#FCCF20")
 
-image BE neutral = DynamicImage("Graphics/BE-[globalsize]-neutral.png")
-image BE happy = DynamicImage("Graphics/BE-[globalsize]-happy.png")
-image BE sad = DynamicImage("Graphics/BE-[globalsize]-sad.png")
-image BE surprised = DynamicImage("Graphics/BE-[globalsize]-surprised.png")
-image BE angry = DynamicImage("Graphics/BE-[globalsize]-angry.png")
-image BE aroused = DynamicImage("Graphics/BE-[globalsize]-aroused.png")
+image BE neutral = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-neutral.png",
+    "True", "Graphics/BE-1-neutral.png")
+image BE happy = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-happy.png", 
+    "True", "Graphics/BE-1-happy.png")
+image BE sad = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-sad.png",
+    "True", "Graphics/BE-1-sad.png")
+image BE surprised = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-surprised.png",
+    "True", "Graphics/BE-1-surprised.png")
+image BE angry = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-angry.png",
+    "True", "Graphics/BE-1-angry.png")
+image BE aroused = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-aroused.png",
+    "True", "Graphics/BE-1-aroused.png")
 
 image cg BE001 = "Graphics/BE-SC-1.png"
 image cg BE002 = "Graphics/BE-SC-2.png"
@@ -15,7 +27,7 @@ init 2 python:
     datelibrary['BE_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_2'] = datetime.date(2005, 12, 10)
+    datelibrary['BE_size_2'] = datetime.date(2005, 4, 20)
     
     eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "location": "roof", "conditions": [], "priority": 0}
     eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "BE001"]], "priority": 0}
@@ -24,7 +36,7 @@ init 2 python:
     eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
     eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
-    
+
 label BE001:
     scene Classroom with fade
     "After the bell rang, there was the familiar sound of chairs getting scraped along the ground as everyone prepared to leave."

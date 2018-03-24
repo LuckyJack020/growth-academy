@@ -6,7 +6,6 @@ define CMM = Character('Male Concil Member', color="#ffa18a") #Lighter Orange
 define Ama = Character('Amatsu-san', color="#ffa18a")
 
 image AE neutral = ConditionSwitch(
-
     "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-neutral.png",
     "True", "Graphics/AE-1-neutral.png")
 image AE happy = ConditionSwitch(

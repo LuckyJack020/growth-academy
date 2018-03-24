@@ -1,13 +1,29 @@
 define PRG = Character('Kodama', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
 define fade = Fade(0.5, 0.0, 0.5)
 
-image PRG neutral = DynamicImage("Graphics/PRG-[globalsize]-neutral.png")
-image PRG happy = DynamicImage("Graphics/PRG-[globalsize]-happy.png")
-image PRG sad = DynamicImage("Graphics/PRG-[globalsize]-sad.png")
-image PRG surprised = DynamicImage("Graphics/PRG-[globalsize]-surprised.png")
+image PRG neutral = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-neutral.png",
+    "True", "Graphics/PRG-1-neutral.png")
+image PRG happy = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-happy.png", 
+    "True", "Graphics/PRG-1-happy.png")
+image PRG sad = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-sad.png",
+    "True", "Graphics/PRG-1-sad.png")
+image PRG surprised = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-surprised.png",
+    "True", "Graphics/PRG-1-surprised.png")
+image PRG surprised_flip = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", im.Flip("Graphics/PRG-2-surprised.png", horizontal=True),
+    "True", im.Flip("Graphics/PRG-1-surprised.png", horizontal=True))
+image PRG angry = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-angry.png",
+    "True", "Graphics/PRG-1-angry.png")
+image PRG aroused = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-aroused.png",
+    "True", "Graphics/PRG-1-aroused.png")
+
 image PRG surprised_flip = im.Flip("Graphics/PRG-1-surprised.png", horizontal=True)
-image PRG angry = DynamicImage("Graphics/PRG-[globalsize]-angry.png")
-image PRG aroused = DynamicImage("Graphics/PRG-[globalsize]-aroused.png")
 
 init 2 python:
     datelibrary['PRG_size_6'] = datetime.date(2005, 12, 10)
