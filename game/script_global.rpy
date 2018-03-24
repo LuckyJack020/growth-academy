@@ -36,6 +36,7 @@ image Pool = ConditionSwitch(
     "True", "Graphics/schoolpool_day.png")
 image Festival = "Graphics/festival.png"
 image Bathroom = "Graphics/bathroom.png"
+image Recreation = "Graphics/NYI.png"
 
 image splash = "Graphics/splashscreen.png"
 
