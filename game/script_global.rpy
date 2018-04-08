@@ -10,18 +10,26 @@ image Classroom = ConditionSwitch(
     "True", "Graphics/classroom_day.png")
 image Dorm Exterior = "Graphics/dormexterior.png"
 image Dorm Interior = "Graphics/dorminterior.png"
-image Campus Center = "Graphics/campuscenter.png"
+image Campus Center = ConditionSwitch(
+    "gametime_eve", "Graphics/campuscenter_eve.png",
+    "True", "Graphics/campuscenter_day.png")
 image Auditorium = "Graphics/auditorium.png"
 image School Exterior = "Graphics/schoolexterior.png"
 image F1 Hallway = "Graphics/schoolhallway1.png"
 image Library = "Graphics/library.png"
-image Office = "Graphics/office.png"
+image Office = ConditionSwitch(
+    "gametime_eve", "Graphics/office_eve.png",
+    "True", "Graphics/office_day.png")
 image Cafeteria = "Graphics/cafeteria.png"
 image Cooking Classroom = "Graphics/NYI.png"
 image Music Classroom = "Graphics/NYI.png"
 image Gym = "Graphics/auditorium.png"
-image Track = "Graphics/track.png"
-image Roof = "Graphics/roof.png"
+image Track = ConditionSwitch(
+    "gametime_eve", "Graphics/track_eve.png",
+    "True", "Graphics/track_day.png")
+image Roof = ConditionSwitch(
+    "gametime_eve", "Graphics/roof_eve.png",
+    "True", "Graphics/roof_day.png")
 image Nurse Office = "Graphics/office.png"
 image Pool = ConditionSwitch(
     "gametime_eve", "Graphics/schoolpool_eve.png",

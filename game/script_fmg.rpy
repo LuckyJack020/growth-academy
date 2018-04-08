@@ -1,12 +1,25 @@
 define FMG = Character('Akira', color="#FF9900")
 define Rin = Character('Rin', color="#CC33FF")
 
-image FMG neutral = DynamicImage("Graphics/FMG-[globalsize]-neutral.png")
-image FMG happy = DynamicImage("Graphics/FMG-[globalsize]-happy.png")
-image FMG sad = DynamicImage("Graphics/FMG-[globalsize]-sad.png")
-image FMG surprised = DynamicImage("Graphics/FMG-[globalsize]-surprised.png")
-image FMG angry = DynamicImage("Graphics/FMG-[globalsize]-angry.png")
-image FMG aroused = DynamicImage("Graphics/FMG-[globalsize]-aroused.png")
+image FMG neutral = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-neutral.png",
+    "True", "Graphics/FMG-1-neutral.png")
+image FMG happy = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-happy.png", 
+    "True", "Graphics/FMG-1-happy.png")
+image FMG sad = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-sad.png",
+    "True", "Graphics/FMG-1-sad.png")
+image FMG surprised = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-surprised.png",
+    "True", "Graphics/FMG-1-surprised.png")
+image FMG angry = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-angry.png",
+    "True", "Graphics/FMG-1-angry.png")
+image FMG aroused = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-aroused.png",
+    "True", "Graphics/FMG-1-aroused.png")
+
 
 init 2 python:
     datelibrary['FMG_size_6'] = datetime.date(2005, 12, 10)

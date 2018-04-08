@@ -100,11 +100,30 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR = range(11)
+        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE = range(12)
+    
+    #EVENT: arg1 = (string) event code, true if event has been seen
+    #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
+    #FLAG: arg1 = (string) flag name, true if flag has been raised
+    #NOFLAG: arg1 = (string) flag name, true if flag has NOT been raised
+    #GAMETIME: arg1 = ConditionEqualityEnum, arg2 = (date, from datelibrary) date in question, true if the comparison is true (between gametime and arg2)
+    #ISDAYTIME: no args, returns true if gametime_eve is false
+    #ISNIGHTTIME: no args, returns true if gametime_eve is true
+    #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
+    #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
+    #PRESET: no args, always returns false (ie event is only used in preset dates)
+    #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
+    #ISDAYFREE: arg1 = DeltaTimeEnum, arg2 = (int) number of days OR (date) date OR (DayOfWeekEnum) day of week, arg3 = (boolean) evening, returns true if the specified time (with time of day from arg3) is not a preset/meeting day
+    
+    class DeltaTimeEnum:
+        NUMDAYS, DATE, DAYOFWEEK = range(3)
     
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
-        
+    
+    class DayOfWeekEnum:
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY = range(7)
+    
     def checkCriteria(clist):
         criteriavalid = True
         for c in clist:
@@ -197,15 +216,29 @@
                     criteriavalid = False
                     break
             elif c[0] == ConditionEnum.PRESET:
-                if gametime in presetdays.keys():
-                    continue
-                else:
-                    criteriavalid = False
-                    break
+                criteriavalid = False
+                break
             elif c[0] == ConditionEnum.OR:
                 if checkCriteria([c[1]]) or checkCriteria([c[2]]):
                     continue
                 else:
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.ISDAYFREE:
+                if c[1] == DeltaTimeEnum.NUMDAYS:
+                    t = gametime + datetime.timedelta(days=c[2])
+                elif c[1] == DeltaTimeEnum.DATE:
+                    t = c[2]
+                elif c[1] == DeltaTimeEnum.DAYOFWEEK:
+                    tmp = c[2] - gametime.weekday()
+                    if tmp < 0: #if the day of the week we're considering has already passed, we need to do it next week
+                        tmp += 7
+                    t = gametime + datetime.timedelta(days=tmp)
+                else:
+                    renpy.log("Invalid DeltaTimeEnum: %s" % str(c[1]))
+                    criteriavalid = False
+                    break
+                if getTimeCode(t, c[3]) in presetdays.keys() or getTimeCode(t, c[3]) in meetingdays.keys():
                     criteriavalid = False
                     break
             else:
@@ -259,6 +292,15 @@
             return vars[id]
         else:
             return None
+        
+    def addMeeting(event, deltatime, val, eve):
+        if deltatime == DeltaTimeEnum.NUMDAYS:
+            t = gametime + datetime.timedelta(days=val)
+        elif deltatime == DeltaTimeEnum.DATE:
+            t = val
+        elif deltatime == DeltaTimeEnum.DAYOFWEEK:
+            t = gametime + datetime.timedelta(days=((val + 7) - gametime.weekday()))
+        meetingdays[getTimeCode(t, eve)] = [event]
     
     def getSize(g):
         if g in girllist:
@@ -300,9 +342,13 @@
             s += " (Morning)"
         return s
         
-    def getTimeCode():
-        s = str(gametime.month) + "-" + str(gametime.day)
-        if gametime_eve:
+    def getTimeCode(date=None, eve=None):
+        if date == None:
+            date = gametime
+        if eve == None:
+            eve = gametime_eve
+        s = str(date.month) + "-" + str(date.day)
+        if eve:
             s += "-T"
         else:
             s += "-F"
@@ -341,6 +387,7 @@ label start:
         activeevent = ""
         gametime = datetime.date(2005, 4, 4)
         gametime_eve = False
+        meetingdays = {}
         eventpool = []
         preferredpool = []
         clearedevents = []
@@ -578,7 +625,6 @@ label daymenu:
             gametime_eve = True
         
         eventchoices = []
-        eventcount = 3
         prefpool = []
         allpool = []
         priorities = []
@@ -586,7 +632,10 @@ label daymenu:
         #It's a preset day, don't worry about pools, just use whatever the preset says
         if getTimeCode() in presetdays.keys():
             eventchoices = presetdays[getTimeCode()]
-            eventcount = min([5, len(allpool)])
+            freeday = False
+        #It's a meeting day, don't worry about pools, just use whatever the meeting says
+        elif getTimeCode() in meetingdays.keys():
+            eventchoices = meetingdays[getTimeCode()]
             freeday = False
         #It's not a preset day, randomly select 3 events
         else:

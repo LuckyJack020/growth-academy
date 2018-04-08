@@ -36,18 +36,19 @@ init 2 python:
     datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
     datelibrary['GTS011_date'] = datetime.date(2005, 4, 21)
     
-    eventlibrary['GTS001'] = {"name": "GTS001", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, datelibrary["day_1"]]], "priority": 1}
-    eventlibrary['GTS002'] = {"name": "GTS002", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
-    eventlibrary['GTS003'] = {"name": "GTS003", "girls": ["GTS"], "location": "cafeteria", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS004'] = {"name": "GTS004", "girls": ["GTS"], "location": "library", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS005'] = {"name": "GTS005", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['GTS006'] = {"name": "GTS006", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS007'] = {"name": "GTS007", "girls": ["GTS"], "location": "campuscenter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.NOEVENT, "GTS009"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS008'] = {"name": "GTS008", "girls": ["GTS"], "location": "roof", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS009'] = {"name": "GTS009", "girls": ["GTS", "BE"], "location": "festival", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS008"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS009_date"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
-    eventlibrary['GTS010'] = {"name": "GTS010", "girls": ["GTS"], "location": "classroom", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS_size_2"]]], "priority": 1}
-    eventlibrary['GTS011'] = {"name": "GTS011", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS011_date"]], [ConditionEnum.FLAG, "GTS011_unlock"]], "priority": 0}
-    eventlibrary['GTS012'] = {"name": "GTS012", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS011"]], "priority": 0}
+    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.EQUALS, datelibrary["day_1"]]], "priority": 1}
+    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "location": "cafeteria", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "location": "library", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "location": "schoolplanter", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "location": "schoolfront", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "location": "campuscenter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "location": "roof", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "location": "festival", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS008"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS009_date"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
+    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "location": "classroom", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS_size_2"]]], "priority": 1}
+    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS011_date"]], [ConditionEnum.FLAG, "GTS011_unlock"]], "priority": 0}
+    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "location": "dormexterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "GTS011"]], "priority": 0}
+    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "location": "classroom", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["GTS_size_2"]]], "priority": 0}
     
 label GTS001:
     scene black with fade
@@ -1065,4 +1066,84 @@ label GTS012_after:
     MC "Yeah... this subject's been kind of giving me a hard time. Thanks though, I really appreciate it."
     MC "Anytime, Hotsure-san. We are study partners, after all, and it'd show poorly on me if I let you down already."
     "She giggled very softly which resulted in a chuckle from me as we relaxed for a little longer before needing to go our separate ways."
+    jump daymenu
+
+label GTS014:
+    scene Classroom with fade
+    "I stared blankly at space in front of me as a cascade of thoughts swam around within my mind. I must have been rather noticeable as a faint noise brought me back."
+    show GTS neutral with dissolve
+    GTS "Hotsure-san? Are you okay?"
+    MC "Huh? Oh, yeah sorry. Kind of spaced out there for a moment."
+    GTS "[Neutral] Oh, better not let Tashi-sensei hear that."
+    "I looked over as the blackboard was being erased and it seemed like some of the others were filing out of the classroom. "
+    MC "Heh, I don’t think he’ll mind. Come on, let's take a small walk. "
+    show GTS embarassed
+    GTS "Okay."
+    "I gathered my things while it seemed Naomi already had all her things. We roamed down the crowded hallways but even though I was leading this expedition I had no goal in mind. Eventually we stepped out into the field where it appeared a few people were gathering to start a game of soccer. Among them was Honoka who gave a quick wave which I returned before deciding this was as good a place as any for a rest as Naomi and I took a seat on the bleachers."
+    scene Track with fade
+    show GTS neutral
+    "We observed the game for a few moments, before a random question entered my mind."
+    MC "Hey Yamazaki-san. Have you ever thought about what you were going to do after you were done with school?"
+    GTS "Hm? Do you mean like a profession?"
+    MC "Yeah, have you ever given any thought about what job you might want to strive for."
+    GTS "I don’t believe I have really. Did you have something planned already?"
+    MC "I’ve been thinking about Architecture as something I could do when I get out of school."
+    GTS "That’d be a nice profession to get into. I’m interested in seeing what you could come up with. "
+    MC "Thanks for the vote of confidence, so you really haven’t thought about what job you’d get after school’s done?"
+    GTS "Truthfully no, I’ve mostly focused only on my studies as well as my hobbies. I suppose it just didn’t cross my mind often enough."
+    menu:
+        "So are you just going to keep doing your studies and see what happens when you reach the end?": #-1 Affection
+            jump GTS014_c1
+        "Well I heard a lot of women tend to get part time jobs, so you could try something like that.": #+0 Affection 
+            jump GTS014_c2
+        "How about something involving flowers? I’m sure people would enjoy another flower shop of some kind.": #+1 Affection
+            jump GTS014_c3
+
+label GTS014_c1:
+    MC "So are you just going to keep doing your studies and see what happens when you reach the end?"
+    show GTS embarassed
+    GTS "I-I suppose…"
+    MC "Sorry, I’m not trying to put you on the spot or anything."
+    $setAffection("GTS", -1)
+    GTS "No it’s fine Hotsure-san, you gave me something to really think about. So thank you."
+    MC "Don’t worry Yamazaki-san, sometimes it takes a while for us to figure what we want to do."
+    show GTS neutral
+    GTS "This is true, but perhaps I should have put more thought into this than I had up until now."
+    MC "I’m sure you’ll get it all sorted out in no time Yamazaki-san."
+    jump GTS014_after
+    
+label GTS014_c2:
+    MC "Well I heard a lot of women tend to get part time jobs, so you could try something like that."
+    GTS "That’s true, I’m sure there’s a lot of tasks I’d be capable of taking."
+    MC "Plus if it’s part time it’ll give you more time to do your hobbies."
+    GTS "Indeed, it seems like it could be a good place to start."
+    show GTS happy
+    GTS "Heh, maybe I could be your secretary some time Hotsure-san."
+    "I felt my cheeks warm up a bit as I chuckled and rubbed the back of my head."
+    MC "Well I wouldn’t need to interview you, I already know how good you are with organizing and managing things."
+    GTS "Thank you for the compliment and it’s nice to know I have a good chance then."
+    jump GTS014_after
+
+label GTS014_c3:
+    MC "How about something involving flowers? I’m sure people would enjoy another flower shop of some kind."
+    GTS "That’s an option I’d say. But would another flower shop really do well?"
+    MC "I can’t say honestly. I mean I don’t go to the flower shop very often."
+    MC "Maybe something else then. Maybe a gardener so you can help decorate a few places and really add a splash of color."
+    show GTS happy
+    GTS "That doesn’t sound too bad to me. "
+    MC "Yeah, and with your decorative skills I’m sure you’ll be in high demand. Japan’s full of flowers, your wallet’s full of money. Sounds like a great deal to me."
+    GTS "Heehee, ara ara. Such a high bar I have set to me."
+    MC "Well if anyone can rise to the challenge, I’d say it’s you."
+    $setAffection("GTS", 1)
+    GTS "Thank you for the vote of confidence Hotsure-san. I’ll give it some serious thought."
+    jump GTS014_after
+
+label GTS014_after:
+    "A cheer from the field attracted our attention as it seemed Honoka managed to score a goal. She ran along cheering before suddenly lifting her shirt and placing it over her head and sliding on the grass. I couldn’t help but chuckle as Naomi covered her mouth as Honoka flashed her sports bra to the rest of the team."
+    MC "Haha, well that’s Honoka for you. Still, no need to think about it too hard. We have a lot of time still. So let’s just enjoy it for now right?"
+    show GTS neutral
+    GTS "Indeed, plan for the future but live for today."
+    MC "Or as some would say, stop and smell the roses."
+    GTS "Heh, yes very much so."
+    "We gave Honoka a light cheer as we enjoyed the rest of her game as I eased my mind and let my thoughts float away with the breeze. Simply enjoying the moment with Naomi."
     jump daymenu
