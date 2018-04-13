@@ -23,6 +23,8 @@ image cg BE001 = "Graphics/BE-SC-1.png"
 image cg BE002 = "Graphics/BE-SC-2.png"
 
 init 2 python:
+    datelibrary['BE001_deadline'] = datetime.date(2005, 4, 13)
+    datelibrary['BE007_deadline'] = datetime.date(2005, 4, 13)
     datelibrary['BE_size_6'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_4'] = datetime.date(2005, 12, 10)
@@ -38,6 +40,8 @@ init 2 python:
     eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], ConditionEqualityEnum.LESSTHANEQUALS, datelibrary["BE007_deadline"]], "priority": 0}
     eventlibrary['BE008'] = {"name": "BE008", "girls": ["BE"], "location": "dorminterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.OR, [ConditionEnum.EVENT, "BE007"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BE007_deadline"]]]], "priority": 0}
     eventlibrary['BE009'] = {"name": "BE009", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.EVENT, "BE008"]], "priority": 0}
+    eventlibrary['BE010'] = {"name": "BE010", "girls": ["BE"], "location": "dorminterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BE_size_2"]]], "priority": 0}
+    eventlibrary['BE011'] = {"name": "BE011", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "BE010"]], "priority": 0}
 
 label BE001:
     scene Classroom with fade
@@ -906,4 +910,273 @@ label BE009_c3:
     BE "Heh, thanks. Let me know next time so I can show off for you."
     hide BE with dissolve
     "She gave me a wink and shook her shoulders a bit before leaving to follow the rest of the soccer club. Wondering what kind of \"showing off\" she meant, but satisfied that I'd hung around long enough, I got going myself."
+    jump daymenu
+
+label BE010:
+    scene Dorm Interior with fade
+    "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
+    "KNOCK ! KNOCK !"
+    "The door to the room knocked and I went to open it, still focused on the game. Pausing during boss battles always threw off my rhythm."
+    MC "Hello?"
+    "I opened the door, still looking at my system the entire time. I was forced to listen to the sound of my character taking a critical hit as two large, white-clad breasts dropped into my field of view and pressed down on the screen."
+    "I knew who it was without even looking up. I was grateful for the view, less grateful that I had to pause my game, but even more grateful that Honoka's boobs weren't so big and heavy that they broke my handheld."
+    show BE neutral with dissolve
+    MC "Hi Honoka."
+    show BE surprised
+    BE "Oh, you recognize me?"
+    "I looked up at her in confusion. She sounded oddly serious. Stepping away, I took a better look at her face, somewhat worried that she'd cut her hair or something had happened to her face. Just something that would make me have trouble recognizing her. Nothing seemed out of the ordinary, though."
+    MC "Of course I recognize you. Is something the matter? Why do you think I wouldn't recognize you?"
+    show BE neutral
+    BE "Because I'm bigger?"
+    MC "Bigger?"
+    "I held my hand to the top of my head, and then moved it flat towards Honoka. Seemed to be the same height difference as before…"
+    show BE happy
+    BE "Kei-chan, you dork. I mean, 'bigger'."
+    "Her gaze made it obvious what she was referring to, but clearly Honoka wasn't sure that I got the hint. To ensure I knew exactly what she was talking about, she reached down and grabbed her chest, lifting up a breast in each hand, as if she were presenting them to me."
+    MC "Oh! Duh, right. That makes sense."
+    "It did, but it was strange that she was so surprised about it."
+    MC "Did you, like, not believe that your breasts were going to get bigger? You were all about it when you received your confirmation."
+    BE "Well yeah, obviously. It's not like I just jumped up a bunch this morning. They've been growing for a while now. Bit by bit. I've been measuring. It's usually somewhere between a quarter and a half inch every day."
+    MC "Wait, really?"
+    "I looked at her chest again. It looked bigger than before, maybe? It was kind of hard to tell. All the past weeks being constantly surrounded by bigger-than-average everything made it a bit difficult to judge growth, oddly enough."
+    MC "Huh. Yeah, I guess so."
+    show BE sad
+    BE "You don't believe me?"
+    MC "No no, I believe you. It's just hard for me to see. I've seen you so often, you know? It just kind of snuck up on me, I guess."
+    show BE neutral
+    BE "Hm."
+    show BE angry
+    BE "Well that's no good."
+    MC "Huh?"
+    BE "I came all this way here to show you how proud I am that I grew a whole foot since the start of the year and you didn't even realize it!"
+    MC "Oh, um, sorry, I didn't meant to upset you."
+    show BE neutral
+    BE "You want to apologize to me?"
+    MC "Yeah?"
+    BE "Alright then."
+    "Honoka stepped forward and gained a devious smirk on her face."
+    show BE happy
+    BE "Touch 'em."
+    MC "What?"
+    BE "I want you to touch them, so you have proof that they've grown significantly since you first saw them again."
+    MC "You… you wha… Uh…"
+    "My brain struggled to comprehend what Honoka had just offered. Her tone of voice wasn't like she was trying to be flirtatious or intentionally sexy. It was more like a judo instructor demanding you try and grab their arm so they could perform a flip and toss you onto your back."
+    "It just felt like a trap. But, my hand still twitched a bit, trying to fight the impulse in my head. There was nothing that sounded bad about getting a handful of Honoka's chest, it might be worth any potential repercussions…"
+    menu:
+        "No thanks.":
+            jump BE010_c1
+        "Well, if you insist.":
+            jump BE010_c2
+        "Say nothing.":
+            jump BE010_c3
+
+label BE010_c1:
+    MC "No thanks."
+    show BE sad
+    BE "Aw, really. Why not?"
+    MC "I just… don't think it's appropriate, Honoka. We're friends."
+    show BE neutral
+    BE "Right, and I'm asking you to touch my breasts. As friends. That's it."
+    MC "It just feels weird to me."
+    BE "Kei-chan, I've been in female locker rooms before, and a hot spring once too. I've seen at least four girls either offer their breasts or beg to fondle another girl's breasts. It's not as bad as they make it seem in certain anime."
+    show BE happy
+    BE "But if girls can do it to other girls I don't see why I can't do it with my best friend, right? I have to at least make the offer."
+    MC "Oh. Well, when you put it that way I guess it makes more sense."
+    show BE neutral
+    BE "But, you said you're not comfortable with it, right?"
+    MC "I don't think so. Something about it just rubs me the wrong way."
+    show BE happy
+    BE "Hm, I can't decide if I should reply 'And here I was hoping you'd rub me the right way' or 'Why don't you let {i}me{/i} rub {i}you{/i} the right way then'."
+    MC "Ah, heh… for now how about just 'Can I come in and play some video games?' instead?"
+    show BE neutral
+    BE "Hmmmm."
+    show BE happy
+    BE "Yeah that sounds good. But you missed a golden opportunity Kei-chan. Heaven forbid, what if that's it and my growth stops there? You'll have missed your chance, the magic will be gone."
+    MC "Well, er, if the offer was still on the table, couldn't I take it up at some point in the future?"
+    show BE neutral
+    BE "Sure, but then, they won't be, you know, freshly-grown. They'll be like, overripe. This would have been grabbing a melon right at its peak of freshness, when the rind is just right and the insides are the juiciest."
+    MC "I'm not really sure if you should be describing your breasts as juicy."
+    show BE happy
+    BE "Well, I considered comparing them to coconuts, and then I could have said they were milky inside, but then you would have made a crack about them being brown and hairy, right?"
+    MC "I will not admit to something that didn't even happen, nor will it ever happen."
+    show BE sad
+    BE "I suppose that's a smart move."
+    MC "Thank you."
+    show BE happy
+    BE "Which makes that the smartest thing you've said since I came in to visit."
+    MC "Hey! Take that back or I won't invite you in for a choco-cola."
+    BE "Ooh what, you've got some?! Gimme gimme gimme."
+    "Honoka's hands greedily reached out for a nonexistent soda. If anyone performed the same gesture at her it would have been very obvious what they were trying to grab, but Honoka's was more about soda cans, not cellulite cans. I invited her in to share a drink and relax anyway."
+    "As tempting as it would have been to grab some of Honoka's chest, it didn't feel quite right. We're friends. Friends shouldn't do that. At least, that's what I thought."
+    jump daymenu
+
+label BE010_c2:
+    MC "Well, if you insist."
+    "At Honoka's pleading, I reached out towards her chest. It was only when my hands were an inch or so away that I realized I had no idea what I was doing. Was I supposed to just push my palms in? Or should I try and support them from the bottom?"
+    MC "You know, this will be my first time doing this."
+    show BE happy
+    BE "Well, then I'm honored to be your first."
+    MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
+    hide BE with dissolve
+    "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once. It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
+    "Honoka still had a smile on her face, so I kept examining them. I felt like a doctor, medically probing her, but really all I was doing was trying to take in the feel. Soft, yes. Squishy as well. I swore they made sounds like stress balls being squeezed as I applied a bit of pressure to them."
+    "But, also, they were… dense. It seemed like an odd term to describe breasts, but it was accurate. For as big as they were, they still felt heavier than I expected them to. I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up. They took a slight bit more effort to move than I thought they would, and when I finally pulled my hands away, I got to see them bounce for a few seconds before stopping."
+    MC "Wow."
+    show BE happy with dissolve
+    BE "Heh, heh. Get yourself a good handful? How did they feel? Were they as soft as you imagined? Were they warm? Tell me!"
+    MC "Whoa, um, well. They're… big?"
+    BE "And?"
+    MC "Soft?"
+    show BE neutral
+    BE "Yes, yes, and?"
+    MC "I, I, I don't… they're awesome?"
+    show BE happy
+    BE "Thaaat's the ticket. Boobs are awesome, aren't they?"
+    MC "Well. Not by default, no."
+    BE "Ah, you're saying they have to be at my size to be any good at all?"
+    MC "Not necessarily. Yours definitely… transcend most sizes though. And probably eclipse a lot of them in softness too. They've bumped into me before but, it really feels different in the hand compared to the back of the head."
+    show BE sad
+    BE "That's good to know. It kind of stinks I don't get to experience them in that way."
+    show BE happy
+    BE "Though, since they're attached to me, I guess I get a whole unique experience that nobody else would get. So, that's pretty cool, too."
+    MC "Right. I'm sure there are lots of girls who would like to be in your position."
+    show BE neutral
+    BE "Haha, probably. But, only a few girls in the world are going to get big whompers like this, and they're not done growing yet."
+    MC "Well. Here's hoping."
+    "Something still bugged me. Honoka seemed completely fine, still, but, I had to probe a bit deeper."
+    MC "Hey, Honoka?"
+    BE "Yeah?"
+    MC "In all seriousness, why did you ask me to grab your breasts?"
+    show BE happy
+    BE "Oh, is that what happened?"
+    MC "Yeah, it is."
+    BE "Ah, ah. Think back, Kei-chan. I just asked you to {i}touch{/i} them. You could have easily just poked them, and that would have sufficed. Or even just gave them a quick little grope. But, nope. You took hold, and you didn't let go for eighteen seconds. I counted."
+    show BE neutral
+    BE "You know what that means?"
+    MC "N-No?"
+    show BE happy
+    BE "Hehehe…"
+    "Honoka suddenly loomed forward, her breasts inches away from my face. My knees buckled. I felt like I was suddenly talking to Shiori, not my childhood friend."
+    BE "It means I know what kind of guy you are."
+    MC "I… um."
+    BE "A guy who takes charge and opportunity when he can."
+    hide BE with dissolve
+    "Honoka pulled back and smirked at me, her smile looking like it could slide off of her face. She grabbed the handle of my door with one hand, and then turned to wink at me."
+    show BE happy with dissolve
+    BE "And I like that kind of guy."
+    hide BE with dissolve
+    "With that, Honoka shut the door behind her, leaving me to wonder what just happened."
+    $setAffection("BE", +1)
+    jump daymenu
+
+label BE010_c3:
+    MC "…"
+    "I just couldn't say anything. My mouth felt like it dried up. Something about this was wrong. I wasn't sure what her game was, but I felt like the smart thing to do was just shut up."
+    show BE neutral
+    BE "Hello, Kei-chan?"
+    "The only sound that managed to come out of my mouth was a weak, guttural stutter."
+    show BE sad
+    "Okay, Kei-chan. I get the message."
+    "Honoka pulled back her balloons and wordlessly left my room, leaving me utterly confused. She only came in to show off her breasts? It just didn't make sense. Maybe she wasn't feeling well. Hopefully she went off to her room to relax for a bit, it seemed like she needed it."
+    $setAffection("BE", -1)
+    jump daymenu
+    
+label BE011:
+    scene Track with fade
+    "It was another gorgeous day here at Seichou Academy. Though the weather as of late was beginning to edge towards the cooler side of temperatures, the sun was still bright enough, and warm enough, that many people were still hanging around outside in summer clothing."
+    "I'd heard that Honoka's soccer club was having another game today, so I thought it'd be nice to pay her another visit. I'd brought along a sweatshirt in case it did begin to get too cold, but if I figured out some cheers again, I'd have some reasons to move around and get the blood flowing."
+    MC "Huh, wonder where Honoka is."
+    "I hadn't been to enough games of soccer to recognize most of the players, but there was a certain brunette friend that wasn't visible in the masses."
+    MC "Huh. I wonder if she's sick or something? Maybe I should go check on her. Maybe there's a place around here that sells chanko, a bowl of that always helps when I'm sick."
+    "I soon found out that Honoka wasn't sick, because two large spheres pressed against my shoulders from above me."
+    show BE happy with dissolve
+    BE "Hehe, no I'm not sick. But for future reference, if I do get sick, I much prefer chocolate to feel better."
+    MC "I'm fairly certain that has no basis in fact."
+    BE "Hey, I don't control what my body does. In more than one way."
+    "Honoka stuck her tongue out in a joking matter, before sliding off the bleacher above me to join me on my row."
+    MC "Well, if you're not sick, mind explaining why you're not on the soccer field? You did great the last time I saw you play."
+    show BE sad
+    BE "Ah, yeah. Sorry, I guess I forgot to tell you. I decided to quit the soccer club."
+    MC "Huh? Why?"
+    show BE neutral
+    BE "Honestly it was just getting a bit boring. No, boring isn't the right word. It was still exciting going up against another team. But, I guess I felt like I wanted something more."
+    MC "So you're not going to join another club?"
+    show BE happy
+    BE "Oh no no! I'm definitely going to join another club. I've already got a few that I'm thinking of joining. Soccer was fun, but, how do I put this? Oh!"
+    show BE neutral
+    BE "It was just something I'd already done before, you know? You and I used to play all the time and I never really stopped liking it. I just felt it was time to move onto something else. We're in this huge school after all, with dozens of clubs. Something out there's just bound to be right for me."
+    MC "So, you just quit because of your past experience with it then?"
+    show BE happy
+    BE "Yep, that's it!"
+    menu:
+        "Are you sure it wasn't because it was getting harder to see the soccer ball?":
+            jump BE011_c1
+        "It's okay, that club was dumb anyway.":
+            jump BE011_c2
+        "Oh, makes sense. Hope you find a new club soon.":
+            jump BE011_c3
+
+label BE011_c1:
+    MC "Are you sure it wasn't because it was getting harder to see the soccer ball?"
+    show BE neutral
+    BE "Eh?"
+    MC "I mean, you just went through a sizable growth spurt. Soccer can't be the easiest thing in the world when you look down and just can't see the soccer ball. Your, uh, endowments were probably getting in the way, weren't they?"
+    show BE happy
+    BE "Pff. Kei-chan, always thinking about boobs. I now they're magnificent. But, no, that wasn't the reason. I just needed a change. That's all."
+    MC "Ah okay. Fair enough. Yeah, I uh, sorry I didn't mean to imply anything. Trust me, I had a whole list of non-boob-related chants all ready for you to cheer you on. They're all going to go to waste now! Whatever club you do next I'll have to come up with new ones."
+    MC "Unless you end up in like, the chess club or something."
+    BE "Are you kidding? You better come up with cheers for that, or it'd be boring otherwise!"
+    MC "You know chess matches are supposed to be quiet, right?"
+    show BE angry
+    BE "Kei-chan if, heaven forbid, I join a chess club, I demand that you call me the Castling Castellan!"
+    MC "I… I don't even know what that is."
+    show BE happy
+    BE "Then come up with something better, because that was obviously terrible."
+    MC "You have my word I'll make something cheery that doesn't get confusing. Now, we should probably watch the game now, huh?"
+    BE "Sounds good to me."
+    jump daymenu
+
+label BE011_c2:
+    MC "It's okay, that club was dumb anyway."
+    $setAffection("BE", -1)
+    show BE neutral
+    BE "Excuse me?"
+    MC "I mean, it, um, why do you look angry?"
+    show BE angry
+    BE "Because, Kei-chan. I was literally just in that club. Are you saying I'm dumb because I was in it?"
+    MC "What?! No, no, not at all. I was just trying to make you feel better."
+    BE "I didn't leave the club on bad terms, Kei-chan. I liked a lot of the people I played with. It's not like I just walked out and never thought I'd see them again. I came here to watch them play."
+    MC "I, I'm sorry. I didn't think that through."
+    show BE sad
+    BE "It was hard to leave it, you know? I knew it was the right thing to do, what I wanted to do. But that didn't make it any easier, regardless of how short my time there was."
+    MC "You're, you're absolutely right, Honoka. I'm sorry, I, I just shouldn't have said anything."
+    show BE neutral
+    BE "Yeah well, it's, it's fine."
+    "It was easy to see that it wasn't fine."
+    MC "I'm sorry. Here, I don't want to sour your mood anymore."
+    "I stood up to leave the game."
+    MC "I'm really sorry for what I said, Honoka. Here, enjoy the game, I hope you have fun, sincerely."
+    hide BE with dissolve
+    BE "I tried not to look back at the bleachers as I left the soccer field. Honoka was never the type to hold grudges, so I didn't think this would come back to bite me later. But I still felt like an idiot saying what I said…"
+    jump daymenu
+    
+label BE011_c3:
+    MC "Oh, makes sense. Hope you find a new club soon."
+    show BE happy
+    BE "Thanks! I hope so too. Any recommendations?"
+    MC "Hm. I haven't really looked around all that much myself in terms of clubs. If there's any sort of video game club that would be fun."
+    show BE neutral
+    BE "Yeah. it would. But, I think I really want to stick to something athletic. It's good for exercise, you know? Plus it's always nice to get outside."
+    MC "That's a good point, but the weather seems like it's going to get cool soon. You may want to look at something that would keep you inside for the semester."
+    BE "I guess that would cut out things like baseball, right?"
+    MC "Yeah, baseball would definitely be a no-go. What about, um, basketball? I know we have one of those here."
+    show BE happy
+    BE "Basketball. Yeah, that might be a good idea. Hm, maybe I'll look into that then."
+    show BE surprised
+    BE "Ooh, Koneko-chan just scored a goal already! Woo, go Koneko!"
+    MC "Oh wow, what? Dang that was quick. I guess I should be paying attention, huh?"
+    show BE happy
+    BE "Hehe, yeah, come on. Let's keep watching, this should be fun!"
+    MC "Yeah looks like a good game, go Koneko!"
+    $setAffection("BE", +1)
     jump daymenu
