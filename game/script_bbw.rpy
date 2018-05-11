@@ -287,7 +287,7 @@ label BBW003:
     MC "I was walking by and overheard you two. What's supposed to be so awesome?"
     show BBW happy
     show PRG neutral
-    BBW "This souffle Kodoma-san has prepared. I've seen enough of Japan's attempts to mimic French cuisine to know to lower my expectations, but this is surprising."
+    BBW "This souffle Kodama-san has prepared. I've seen enough of Japan's attempts to mimic French cuisine to know to lower my expectations, but this is surprising."
     menu:
         "Oh, is it really that good?":
             jump BBW003_c1_1
@@ -302,12 +302,12 @@ label BBW003_c1_1:
     show BBW neutral
     BBW "It's all relative. I wouldn't tell her to open up a bakery, but for a high school student working with the ingredients and facilities on hand, these are almost revelatory. I can see my judgment was sound as ever to invite her into service."
     MC "Invite who?"
-    BBW "Kodoma-san, of course. It almost seems destined that my roommate would turn out to be perfectly suited to act as my right-hand woman during my time at this school."
+    BBW "Kodama-san, of course. It almost seems destined that my roommate would turn out to be perfectly suited to act as my right-hand woman during my time at this school."
     MC "I think I missed something."
-    BBW "What do you mean? It was your own idea that I should seek help among our classmates. And Kodoma-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
+    BBW "What do you mean? It was your own idea that I should seek help among our classmates. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
     MC "I wasn't really suggesting you find a maid..."
     show BBW happy
-    BBW "Nonsense, Kodoma-san is more than qualified to act as my chef, secretary, personal trainer, accountant, media relations manager, bodyguard, chauffeur and interpreter. And she's eager to start right away. Aren't you, Kodoma-san?"
+    BBW "Nonsense, Kodama-san is more than qualified to act as my chef, secretary, personal trainer, accountant, media relations manager, bodyguard, chauffeur and interpreter. And she's eager to start right away. Aren't you, Kodama-san?"
     PRG "Y-yes, ma'am."
     menu:
         "Is she? I guess that's fortunate for you.":
@@ -336,10 +336,10 @@ label BBW003_c2_1:
 label BBW003_c2_2:
     MC "So are you paying her, or... ?"
     show BBW haughty
-    BBW "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodoma-san compensation for her services. And let us leave it at that."
+    BBW "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodama-san compensation for her services. And let us leave it at that."
     MC "Didn't mean to offend."
     show BBW neutral
-    BBW "I'm sure you didn't, but do be careful in the future. Now, Kodoma-san and I have more to discuss, so is there something you need or...?"
+    BBW "I'm sure you didn't, but do be careful in the future. Now, Kodama-san and I have more to discuss, so is there something you need or...?"
     MC "Don't mind me. I have somewhere else to be right now."
     jump daymenu
 
@@ -348,7 +348,7 @@ label BBW003_c2_3:
     MC "Aida, do you really just want to be her maid?"
     PRG "O-Oh no, it's not like that. Alice- M-Madame Nikumaru is very nice, and I enjoy helping others. I'm just happy to have found a f-friend!"
     MC "Okay... I guess that's one way of looking at it."
-    BBW "Kodoma-san is happy with her position, as you can see."
+    BBW "Kodama-san is happy with her position, as you can see."
     MC "Yeah. Sure. Happy. Well, I need to get going..."
     jump daymenu
 
@@ -367,9 +367,9 @@ label BBW003_c3:
     show BBW haughty
     $setAffection("BBW", 1)
     BBW "Did you think I was being hyperbolic? I don't hand out praise unless it's earned, and even then I'm careful with my words."
-    BBW "I have found in Kodoma-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
+    BBW "I have found in Kodama-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
     MC "That's pretty generous of you."
-    BBW "I know, but it's the least I can do. It's one of the burdens of the wealthy seldom talked about: the need to foster talent wherever it is found. With my help Kodoma-san will become an excellent chef, someone capable of pleasing even my tastes."
+    BBW "I know, but it's the least I can do. It's one of the burdens of the wealthy seldom talked about: the need to foster talent wherever it is found. With my help Kodama-san will become an excellent chef, someone capable of pleasing even my tastes."
     MCT "And now I'm wondering just how altruistic you are. Still, Aida seems happy with herself, so who am I to butt in?"
     jump daymenu
 
@@ -377,11 +377,11 @@ label BBW003_c1_3:
     $setAffection("PRG", 1)
     PRG "Ohnoit'snothingspecial. I-I-I just like to make treats and share them with people."
     MCT "Cripes, is she that unfamiliar with compliments?"
-    BBW "Kodoma-san had mentioned that she was thinking of making treats for our classmates, though I think directing her energy to one person, such as myself, is better than any scattershot approach."
+    BBW "Kodama-san had mentioned that she was thinking of making treats for our classmates, though I think directing her energy to one person, such as myself, is better than any scattershot approach."
     MCT "Better for who?"
-    BBW "I'm afraid we can't stop and chat. Kodoma-san has more training to do if I'm to bring her on as my assistant."
+    BBW "I'm afraid we can't stop and chat. Kodama-san has more training to do if I'm to bring her on as my assistant."
     MC "Your assistant?"
-    BBW "Naturally I'll need to find someone to help me now that my personal retinue has been barred from the school. And Kodoma-san practically begged me for the position."
+    BBW "Naturally I'll need to find someone to help me now that my personal retinue has been barred from the school. And Kodama-san practically begged me for the position."
     MCT "Why do I believe things played out a little differently outside your head?"
     jump daymenu
     
@@ -439,7 +439,7 @@ label BBW005:
 #INT: Cafeteria
 #Keisuke (internal): Things seem a little livelier today. Not as much moping. And at least one person is very happy.
 #BBW_Happy: Tres bien! Aida, dear, this is divine.
-#Keisuke: Enjoying Kodoma-san's food again, I see.
+#Keisuke: Enjoying Kodama-san's food again, I see.
 #BBW_Happy: If you could taste this for yourself you would understand this is less about enjoying and more about experiencing.
 #Keisuke: Are you offering to share some with me?
 #BBW_Neutral: I... No. We are not on such familiar terms.
@@ -448,7 +448,7 @@ label BBW005:
 #Keisuke: No. I'm just saying that if I ate all that I'd be feeling sleepy by second period.
 #BBW_Haughty: Breakfast is the most important meal. All your energy and drive for the day comes from it, so it's better to pack in as many nutrients as possible.
 #Keisuke: That's one way of looking at it, I guess.
-#BBW_Haughty: Plus, the more dishes I sample the better I can guide Kodoma-san in her job. For instance, this omelet could do with a bit less onions, and maybe more ham.
+#BBW_Haughty: Plus, the more dishes I sample the better I can guide Kodama-san in her job. For instance, this omelet could do with a bit less onions, and maybe more ham.
 #PRG_Neutral: Y-Yes, Nikumara-sama.
 #Keisuke (internal): That's some nice rationalization there.
 #END SCENE
@@ -470,7 +470,7 @@ label BBW005:
     BBW "(You might have thought of that before you asked.) To answer your question, yes, I am thinking about the test results. I am questioning what can be done to curtail my... expansion."
     MC "If anything can be done."
     show BBW haughty
-    BBW "There is always a way, even if it might be extreme. But the lengths you are willing to go to achieve something demonstrate how much you deserve it. Right, Kodoma-san?"
+    BBW "There is always a way, even if it might be extreme. But the lengths you are willing to go to achieve something demonstrate how much you deserve it. Right, Kodama-san?"
     show PRG neutral
     PRG "Ah! Y-yes, Nikumaru-sama!"
     MC "So what is your 'factor?'"
@@ -501,7 +501,7 @@ label BBW005_c1:
     MC "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier."
     BBW "That does seem the best tactic. If I don't give my body the means to get fat..."
     MC "Just don't starve yourself or anything."
-    BBW "Of course not. I know exactly what my body needs. Kodoma-san!"
+    BBW "Of course not. I know exactly what my body needs. Kodama-san!"
     PRG "Yes, Nikumarua-sama!"
     BBW "Going forward I want my meals to have a maximum of 650 calories. Adjust my menu accordingly, but be sure to include an appetizer, entree, side dish and dessert."
     MC "So now she's your dietician?"
@@ -524,7 +524,7 @@ label BBW005_c2:
 label BBW005_c3:
     $setFlag("BBW005_workout")
     MC "What if you worked out? Burn those calories before they turn into fat."
-    BBW "Now that is sensible. I admit, the thought of denying myself proper meals is distressing, more so after discovering Kodoma-san's talents."
+    BBW "Now that is sensible. I admit, the thought of denying myself proper meals is distressing, more so after discovering Kodama-san's talents."
     show BBW haughty
     BBW "I mean, who else at this school is prepared to give her ability the recognition it deserves? And if I can support her while taking care of myself at the same time, so much the better."
     MC "Have your cake and eat it too, you mean?"
@@ -544,7 +544,7 @@ label BBW005A:
     MC "Thanks. Say, did you two get the Lit reading done? I kind of spaced out last night."
     PRG "I did it. How far along did you get?"
     MC "About... two pages in."
-    BBW "Kodoma-san."
+    BBW "Kodama-san."
     PRG "Yes, Nikumaru-san?"
     BBW "Can you get the other half of the grapefruit? The first half was not adequate alone."
     PRG "Certainly, ma'am. And would you like some more toast?"
@@ -602,7 +602,7 @@ label BBW005B:
     BBW "Our journey towards health and well-being for myself. In order to stave off the effects of my growth factor I will be taking up an exercise routine. An intense calorie-burning regimen to keep myself fit and sleek."
     MC "Where do I come in?"
     BBW "It was your idea, after all. And I can't tackle such a daunting task myself. I remember reading that new habits undertaken with others have a better success rate, and let's be frank, some exercise wouldn't do you much harm."
-    MC "I'd be insulted, but... Yeah. What about Kodoma-san, though? I thought you said she would be your personal fitness trainer."
+    MC "I'd be insulted, but... Yeah. What about Kodama-san, though? I thought you said she would be your personal fitness trainer."
     BBW "And she is, but she can't be both working out and coaching me. Plus, she wouldn't do as a spotter. Too frail."
     MC "I think she should be insulted, but..."
     show PRG sad
@@ -616,11 +616,11 @@ label BBW005B:
     show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     BBW "OK! Where do we start?"
     MC "Um..."
-    BBW "I was asking Kodoma-san. She's the official expert here."
+    BBW "I was asking Kodama-san. She's the official expert here."
     PRG "Uh... Maybe if we did some stretches?"
     show BBW happy
     BBW "Excellent. We'll ease into the workout."
-    "We went to a set of mats set up in a corner, away from the weights and machines, and Kodoma-san led us in some light stretches and calisthenics that took me back to grade school. I can't say it did anything to burn calories, but it did loosen me up."
+    "We went to a set of mats set up in a corner, away from the weights and machines, and Kodama-san led us in some light stretches and calisthenics that took me back to grade school. I can't say it did anything to burn calories, but it did loosen me up."
     "Eventually she stopped (or she ran out of exercises)."
     PRG "Now how about we... do push-ups?"
     show BBW neutral
@@ -631,7 +631,7 @@ label BBW005B:
     BBW "Aaaaannnn... Two!"
     show PRG happy
     PRG "Come on, Nikumaru-san! Push it! Unleash the beast! Own your power!"
-    "Kodoma-san tried encouraging Alice with some slogans I'm sure she got off fitness clothing commercials, and ever so slowly she managed to do a full set."
+    "Kodama-san tried encouraging Alice with some slogans I'm sure she got off fitness clothing commercials, and ever so slowly she managed to do a full set."
     BBW "Ggggggggnnnnnnnn... Ten!"
     PRG "You did it, ma'am! Well done!"
     show BBW happy at Position (xpos=0.25, xanchor=0.5) with dissolve
@@ -643,7 +643,7 @@ label BBW005B:
     "She came back five minutes later, no longer sweating and looking like she had straightened up her hair in the bathroom."
     show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     BBW "What shall we do next?"
-    "Kodoma-san looked around, a little bit lost among the machines she clearly had no experience with."
+    "Kodama-san looked around, a little bit lost among the machines she clearly had no experience with."
     PRG "Maybe we can start here? And then work our way around?"
     "She was looking at a pulldown bar, the kind where you stay standing and pull the bar in front of your chest."
     BBW "Very well. Keisuke, you go first."
@@ -1121,7 +1121,7 @@ label BBW009:
     MC "Oh, Ni- Alice! How's it going?"
     show PRG sad at Position (xpos=0.75, xanchor=0.5) with dissolve
     PRG "..."
-    MC "A-and you, Kodoma-san! What were you two up to?"
+    MC "A-and you, Kodama-san! What were you two up to?"
     BBW "I was doing a light workout."
     MC "I thought you weren't going to try to lose weight just yet."
     show BBW neutral
@@ -1138,7 +1138,7 @@ label BBW009:
         BBW "And who knows. If the matter between me and the music club president is not resolved satisfactorily I may take my talents to more appreciative grounds."
     MC "How fast can you swim? Have you ever timed yourself?"
     show BBW neutral
-    BBW "Quite fast, actually. I should have had Kodoma-san timing me, upon reflection. An accurate chart of my ability would help measure my fitness levels."
+    BBW "Quite fast, actually. I should have had Kodama-san timing me, upon reflection. An accurate chart of my ability would help measure my fitness levels."
     PRG "I'm sorry, Alice. I'll remember next time, I promise!"
     show BBW haughty
     BBW "I don't have a specific number, but I feel confident that I am the best swimmer in our class. Probably in the top percentile of the school."
@@ -1348,7 +1348,7 @@ label BBW010_c2:
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
     show PRG neutral with dissolve
-    MC "Good morning, Kodoma-san. Making breakfast?"
+    MC "Good morning, Kodama-san. Making breakfast?"
     PRG "Oh!  Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
     MC "Oh no, it's not that. I was just walking by and thought I'd say hi."
     MC "Is that a new uniform? It looks a bit baggier than your old one."
@@ -1460,10 +1460,10 @@ label BBW011:
     "Standing right behind her was Alice."
     show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     BBW "Don't mind her. She's too excited for her own good."
-    BBW "Watch where you're going, Kodoma-san."
+    BBW "Watch where you're going, Kodama-san."
     PRG "Y-yes, ma'am."
     MC "What's going on that has you in such a rush?"
-    BBW "Kodoma-san wants to join the film club meeting today. Apparently they're screening one of her favorite movies."
+    BBW "Kodama-san wants to join the film club meeting today. Apparently they're screening one of her favorite movies."
     show PRG happy
     PRG "It's called Waiting for the Wrong Bus. It's a romantic-comedy from a couple years ago."
     MC "Yeah, I've heard of that. Typical chick flick, right?"
@@ -1612,7 +1612,7 @@ label BBW012:
     BBW "Good. We're all here."
     MC "All three of us?"
     show BBW neutral
-    BBW "Both of us. Kodoma-san is still operating in her capacity as my personal assistant, so for now this is still a two-person operation."
+    BBW "Both of us. Kodama-san is still operating in her capacity as my personal assistant, so for now this is still a two-person operation."
     show BBW happy
     BBW "There's me in the CEO/CFO/President chair, and you pounding the pavement to get orders and make deliveries."
     BBW "It's exactly the type of humble beginnings that all great corporate empires are born from."
@@ -2244,7 +2244,7 @@ label BBW016_c1_1:
     "I unpaused the game - good thing I was between fights - when I heard another beep from my phone."
     MCT "That was fast."
     MCT "Or direct, I should say. Fitting."
-    BBWCell "<I am currently idle as well. Kodoma-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect. Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time.>"
+    BBWCell "<I am currently idle as well. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect. Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time.>"
     "I wasn't sure how to feel that she hoping I could keep her entertained, but this did imply she wasn't contacting me with a new delivery assignment."
     "Right?"
     jump BBW016_c1_after
@@ -2253,7 +2253,7 @@ label BBW016_c1_2:
     Cell "<Was there something specific you wanted to talk to me about?>"
     "Her response was immediate."
     BBWCell "<No, no. This is just friendly small talk.>"
-    BBWCell "<I find myself idle as I wait for Kodoma-san to finish working on a new recipe.>"
+    BBWCell "<I find myself idle as I wait for Kodama-san to finish working on a new recipe.>"
     jump BBW016_c1_after
 
 label BBW016_c1_after:
@@ -2355,7 +2355,7 @@ label BBW016_c3_3:
     BBWCell "<But you were right: I cannot judge unless I have experienced it for myself.>"
     Cell "<I'll look into finding some business management simulators.>"
     BBWCell "<Money is no object. I can reimburse you.>"
-    BBWCell "<It looks like Kodoma-san is ready to serve the dish, so I will take my leave.>"
+    BBWCell "<It looks like Kodama-san is ready to serve the dish, so I will take my leave.>"
     "I sent a final message - Enjoy - and put my phone down."
     "I was free to return to Titans of Eververse, but the thought of getting Alice into gaming, even if it was the 'Zoo Manager' variety I'm not interested in."
     "So I went to my usual PC gaming storepage and started looking through the business management titles."
@@ -2529,7 +2529,7 @@ label BBW020:
     BBW "That's good. Feed the mind as well as the body."
     show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     "As Aida arrived, pushing a cart with a covered tray on top, Alice took the seat opposite me. She let Aida set her place for her, eager to see what she would be having."
-    BBW "Stir-fried vegetables and beef, with mushroom soup. It looks delicious, Kodoma-san."
+    BBW "Stir-fried vegetables and beef, with mushroom soup. It looks delicious, Kodama-san."
     PRG "Th-Thank you."
     BBW "We should see about going into town this weekend, pick up some seasonal fruits. Summer will be here soon, and I do so enjoy watermelon and strawberries."
     "She was surprisingly happy, considering the last time we had talked had been about that list."

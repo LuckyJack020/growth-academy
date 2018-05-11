@@ -3040,7 +3040,7 @@ label AE021:
     "When I walked into class today, Shiori-san was the first in the room. Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
     show AE neutral at Position(xpos=0.25, xanchor=0.5) with dissolve #not sure if aroused, surprised or sad/shy
     MC "U-um...Shiori-cha-"
-    "As I was about to speak, Nikumaru-san walked into the room with Kodoma-chan in tow."
+    "As I was about to speak, Nikumaru-san walked into the room with Kodama-chan in tow."
     show PRG neutral at Position(xpos=0.90, xanchor=0.5) with dissolve
     show BBW happy at Position(xpos=0.75, xanchor=0.5) with dissolve
     BBW "Ohoho, now what’s going on here?~"
@@ -3062,8 +3062,8 @@ label AE021:
         if getAffection("PRG") > 0:
             show PRG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
             PRG "H-hi, Hotsure-san."
-            MC "Hey, Kodoma-chan." #TODO: Kodoma-chan? In her route MC usually uses -san
-            "Kodoma-chan gave a little smile. It felt nice to know the whole school wasn’t against me."
+            MC "Hey, Kodama-chan." #TODO: Kodama-chan? In her route MC usually uses -san
+            "Kodama-chan gave a little smile. It felt nice to know the whole school wasn’t against me."
             hide PRG
             hide BBW
 
@@ -3071,7 +3071,7 @@ label AE021:
         show BBW neutral with fade
         BBW "G-good morning, Hotsure-san."
         "Kodama-chan shrunk back a bit and gave a tiny smile. I reciprocated with a nod and a smile as well."
-        MC "Good morning, Kodoma-chan." #TODO: Kodoma-chan? In her route MC usually uses -san
+        MC "Good morning, Kodama-chan." #TODO: Kodama-chan? In her route MC usually uses -san
         BBW "I see you’re a bit busy. I don’t want to interrupt."
         MC "Ah, no, it’s fine."
         show BBW happy
@@ -4356,11 +4356,11 @@ label AE026:
     show PRG sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     PRG "N-N-Nikumaru-san, are you sure you don’t need me? I don't mind, really-"
     show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
-    BBW "Yes, yes, Kodoma-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
+    BBW "Yes, yes, Kodama-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
     PRG "O-okay."
     hide PRG sad with dissolve
-    "The tiny Kodoma-chan, usually seen with Nikumaru-san, left the room alone, and somewhat morose."
-    MC "U-um, hey, Nikumaru-san? Why did you make Kodoma-chan leave?"
+    "The tiny Kodama-chan, usually seen with Nikumaru-san, left the room alone, and somewhat morose."
+    MC "U-um, hey, Nikumaru-san? Why did you make Kodama-chan leave?"
     show BBW happy
     BBW "Ohoho, don’t worry about that now. I simply wanted a bit of space is all. Oh! Matsumoto-san is looking this way now, dear. Don’t let the poor girl get the wrong idea now."
     MC "O-oh?"
