@@ -60,6 +60,7 @@ define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
 init 1 python:
     eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
@@ -67,6 +68,27 @@ init 1 python:
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     datelibrary['testday'] = datetime.date(2005, 4, 7)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
+    
+    #Japanese holidays:
+    #January 1: New Year’s Day
+    #2nd Monday of January: Coming of Age Day (9th for year 2)
+    #February 11: National Foundation Day
+    #March 21: Spring Equinox Day
+    #Spring Vacation: March 25 - April 5
+    #April 29: Showa Day
+    #May 3: Constitution Day
+    #May 4: Greenery Day
+    #May 5: Children’s Day
+    #3rd Monday of July: Marine Day (18th)
+    #Summer Vacation: July 20 - August 31
+    #August 13-August 15: Obon
+    #3rd Monday of September: Respect for the Aged Day (19th)
+    #September 23: Autumn Equinox Day
+    #2nd Monday of October: Health and Sports Day (Sports Festival) (10th)
+    #November 3: Culture Day (Beginning/End of Culture Festival)
+    #November 23: Labor Thanksgiving Day
+    #December 23: Emperor’s Birthday
+    #Winter Vacation: December 26 - January 6 (Christmas is usually off too)
     
 label global000:
     stop music fadeout 0.5

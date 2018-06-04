@@ -50,9 +50,11 @@ init 2 python:
     eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "location": "hallway", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "BBW010"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "location": "hallway", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
+    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "location": "gym", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "BBW013"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"], "location": "dormexterior", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.EVENT, "BBW012"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     eventlibrary['BBW016'] = {"name": "BBW016", "girls": ["BBW"], "location": "dormexterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "BBW012"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
+    eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]]], "priority": False}
     eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"], "location": "cafeteria", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BBW_size_2"]], [ConditionEnum.FLAG, "BBW017_testpass"], [ConditionEnum.NOFLAG, "BBW008A_fail"]], "priority": False}
     
 label BBW001:
@@ -426,7 +428,7 @@ label BBW004_c2:
 label BBW004_c3:
     MC "Do I have to tell on you? Because that seems like a really childish thing for all of us."
     show BBW angry
-    $setAffection("BBW", -2)
+    $setAffection("BBW", -1)
     BBW "You're threatening to report me? At what point did any of this become your concern, anyway?"
     MC "When I saw someone not doing their share. This is a collective assignment, we all have to carry our weight. You don't get to sit back and take it easy just because you managed to rope someone else in."
     BBW "Are you a figure of authority in this class? No? Then you do not get to tell me that I do not get to do something."
@@ -498,6 +500,7 @@ label BBW005:
 
 label BBW005_c1:
     $setFlag("BBW005_ondiet")
+    $setAffection("BBW", -1)
     MC "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier."
     BBW "That does seem the best tactic. If I don't give my body the means to get fat..."
     MC "Just don't starve yourself or anything."
@@ -523,6 +526,7 @@ label BBW005_c2:
 
 label BBW005_c3:
     $setFlag("BBW005_workout")
+    $setAffection("BBW", 1)
     MC "What if you worked out? Burn those calories before they turn into fat."
     BBW "Now that is sensible. I admit, the thought of denying myself proper meals is distressing, more so after discovering Kodama-san's talents."
     show BBW haughty
@@ -585,7 +589,6 @@ label BBW005A:
     BBW "... That is your condition? That is why you're here?"
     MC "Yep. That's it."
     show BBW neutral
-    $setAffection("BBW", -2)    
     BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself. Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
     MC "Uh huh... Consider me properly scolded."
     MCT "I was just trying to help."
@@ -707,7 +710,6 @@ label BBW005B:
     BBW "Not everyone is gifted with physical prowess, and for her to carry on as if anyone should be able to do what she can... That's arrogant."
     MC "I'm not sure that was her problem, but I agree she could have been a bit more patient... How about I talk to her later, once she's cooled off? She probably could help you with this better than I or Aida could."
     show BBW happy
-    $setAffection("BBW", 1)
     BBW "That's thoughtful, but you don't need to put yourself out. This was a worthwhile experiment, but I've reached the conclusion that I'm not cut out to be a gym rat. I don't think this stress of trying to constantly outdo myself would be good for my temperament, if Mizutani-san is any indication. Still, thank you for your assistance."
     MC "You're welcome. (I guess.)"
     BBW "Now, Aida, let's go back to the dorms. I feel a hot bath and massage is the best way to unwind after a workout like this."
@@ -1880,6 +1882,148 @@ label BBW013_c2:
     BBW "I could go for some cake."
     jump daymenu
 
+label BBW014:
+    scene Gym with fade
+    "Gym today was a free day, everyone finding something quasi-athletic to do. Afterwards I ended up being one of those called on to clean up the equipment lying around."
+    "I wasn’t alone, per se, but with a handful of us spread across the entire gym it was dead quiet."
+    "After a while I noticed I was drifting over to where Alice was gathering up some croquet mallets."
+    MC "Hey, Alice."
+    show BBW neutral with dissolve
+    BBW "Hotsure-san."
+    BBW "Can you give me a hand with the mats? Somebody must have been practicing wrestling, or maybe judo."
+    MC "I think it was sumo."
+    "I inhaled sharply. The idea of sumos made me think of Alice’s plump frame destined to grow fatter, and it probably brought the same image to her mind."
+    "As we folded up the mats and carried them to the equipment room I scrambled to think of a way to change the subject."
+    MC "I don’t think I’ve asked this, but you’re from America, right?"
+    BBW "My mother is. I’ve lived both there and here in Japan, going to school in both countries."
+    MC "What part? Of America, I mean."
+    BBW "The east coast. My mom’s side of the family has been involved in banking and investing for generations."
+    MC "Oh… Are there beaches? Where you lived, I mean."
+    "She chortled quietly, her lip turning up in a tiny grin."
+    BBW "There are a lot of beaches up and down the east coast. And the west coast. And Hawaii is full of them."
+    BBW "But they’re not all sun and warm water. Up in New England… You’re not doing much surfing or sunning."
+    "We finished stacking the maps up, but continued chatting as we cleaned up."
+    BBW "Did you grow up near the water?"
+    MC "No. I just… When I think of America I think of beaches."
+    MC "Either that or burgers and fries."
+    MC "!"
+    "I almost bit my tongue clamping my mouth shut."
+    "First the reference to sumo, then greasy American fast food."
+    "Did Alice think I was trying to bring up her weight?"
+    "She didn’t say anything, and I looked around desperately for something else to talk about."
+    MC "Why are there hockey sticks here?"
+    BBW "For the winter, I assume."
+    MC "No, out here. Who was trying to play hockey?"
+    MC "And dumbbells! This isn’t the weight room."
+    BBW "I believe I saw Mizutani-san working with those. They may be her personal effects."
+    MC "That makes sense. Think we should put them off to the side?"
+    "I carried the weights to the bleachers, where I found a large round thing on the floor."
+    MC "I don’t even know what that is."
+    BBW "It’s used in curling. It’s the thing you push across the ice."
+    MC "Didn’t even know we had stuff like that here. What it’s called?"
+    BBW "A curling… rock?"
+    MC "Rock?"
+    BBW "Errrr…"
+    show BBW angry
+    BBW "Nobody curls in America! That’s a Canadian thing."
+    "She silently huffed as she kicked the curling ‘rock’ across the floor and to the equipment room. I found a couple skis propped up against the wall and followed her."
+    MC "Somebody was messing with the skis as well. Did I sleep through the summer and fall?"
+    show BBW neutral
+    BBW "Put them over there with the cap gun."
+    MC "Why is there a rifle here?!"
+    BBW "It’s fake, Hotsure-san. I assume it’s used for biathlon practice."
+    MC "Biath-wha now?"
+    BBW "Cross-country skiing and rifle shooting. It’s an Olympic sport."
+    MC "Seriously?"
+    #pause 1
+    MC "You’re not joking."
+    MC "Who thought to put those two things together?"
+    BBW "I don’t know. I do know it’s as ridiculous as it sounds."
+    BBW "I saw it at the Winter Games a few years ago. Completely nonsensical."
+    MC "You’ve been to the Olympics?"
+    BBW "As a spectator."
+    MC "Wow, that’s pretty cool."
+    "She shrugged."
+    BBW "Far too many crowds, security checkpoints every twenty feet, and if you wanted to see two different competitions in one day you had to hope they were in the same arena."
+    BBW "Too much of a headache to be worth the trouble, if I’m being honest."
+    MC "But to travel to another country, meet people from other nations..."
+    BBW "Traveling to other countries can actually be tedious. Everywhere you go it’s the same franchises, the same highly polished tourist spots where the poverty or unrest is kept at bay to present a picture perfect image of the country."
+    BBW "You don’t really get a taste for the culture that way."
+    BBW "As for meeting other people… Only if you speak the same language."
+    MC "Oh… hadn’t thought of it that way."
+    "I didn’t have much to say to that, so as Alice and I picked up some kendo sticks I let things get quiet."
+    "But things felt even more awkward being next to someone in complete silence."
+    "I’ve never thought small talk was something essential, but as I saw the time needed to finish this stretching out before me I realized I needed to fill it somehow."
+    MC "So… have you traveled a lot?"
+    "She looked down at a pair of luchador masks she had picked up before answering."
+    BBW "I’ve ‘been’ to several countries in Europe and Asia, in that I’ve flown to them while Father conducted business."
+    BBW "And we’ve vacationed in places like Geneva and Tuscany and Monte Carlo. Though we spent almost all our time at exclusive hotels and resorts."
+    show BBW sad
+    BBW "Tiny little islands within the larger nations, almost isolated from the culture less than a mile away."
+    MC "Huh?"
+    show BBW neutral
+    BBW "The places that cater to the rich tend to have the same trappings, the same luxuries. Sometimes there’s an effort to bring a taste of the local cuisine, music and whatnot in, but the separation can become palpable."
+    BBW "I’ve always found more amusement and insight in those times when we left the carefully constructed pockets of luxury."
+    MC "You like rubbing elbows with the commonfolk, eh?"
+    BBW "Nnnnnn- Sort of."
+    BBW "Don’t get me wrong, I don’t want to sleep on a straw mat or wash myself in an outdoor shower."
+    BBW "But if I’m going to spend several hours flying just to have the same spa services, the same massages, the same Swiss chocolates and mineral water, why even travel?"
+    BBW "When I leave home I want to leave my comfort zone. I want to experience something new."
+    MC "So when you were in Geneva did you ever go hiking up the alps?"
+    BBW "Oh, no! I’m much too sensitive for so much physical strain."
+    show BBW happy
+    BBW "But I did ride the car up to the top of one of the mountains. A splendid view."
+    BBW "And the brisk wind made the hot tub extra luxurious that evening."
+    MC "So you want to leave your comfort zone, but you don’t want to be uncomfortable while you do it?"
+    show BBW neutral
+    BBW "Mmmm…"
+    show BBW happy
+    BBW "Yes!"
+    MC "And you don’t find that odd?"
+    show BBW neutral
+    BBW "Why should I?"
+    "I had no answer to that, so I distracted myself with gathering up a set of bowling pins."
+    "After enough time had passed I shifted the conversation."
+    MC "Have you been in touch with any friends from your old school?"
+    BBW "Not lately."
+    BBW "There were several people from my old academy I was friendly with, but we’ve all gone to different places for our higher education."
+    MC "Oh."
+    MC "I was just thinking…"
+    BBW "…"
+    MC "It’s been a couple weeks since we all got here. It’s starting to feel like I’m used to this place."
+    MC "At first I didn’t try to get in touch with my friends from back home, because none of them probably know about this place or the whole ‘factor’ thing. But now that I’ve come to grips with it I can’t think of a reason not to tell them."
+    "Too late I realized what I had just done: opened the door to bringing up Alice’s factor. Again."
+    BBW "Your factor concerns your hair, yes?"
+    BBW "It doesn’t seem to be that significant a dilemma."
+    MC "I didn’t mean-"
+    "She looked at me sideways, not grinning but not frowning. Almost like she was trying to do both at once."
+    BBW "You’re pretty easy to read, Hotsure-san."
+    MC "Uh…"
+    BBW "You’re thinking of my weight, and you’re worried about mentioning it."
+    BBW "After incident with your roommate the other day I can understand your trepidation."
+    MC "Sorry."
+    BBW "You don’t have to apologize for making me aware of my condition."
+    BBW "Though if you want to apologize for thinking that I am so frail as to need to be shielded from reality, I will accept it."
+    MC "What?"
+    BBW "(Sigh.)"
+    BBW "I don’t need to be reassured or comforted. My condition is not a death sentence."
+    BBW "Having everyone here walk on eggshells around one another would be antithetical to this institution’s reason for being, would it not?"
+    BBW "We’re supposed to address our inevitable growth and learn to live with it, aren’t we? A direct confrontation is the only way to do so."
+    BBW "I’ve already done that, thinking of dieting or exercise and deciding not to make myself miserable."
+    BBW "And if I can turn that page, what makes you think you need to shoulder my burden?"
+    MC "I wasn’t… I mean, not everyone is as fine with this as you."
+    MC "I can think of a couple girls in our class having more trouble coming to terms with all this."
+    BBW "And I hope they can find peace with it. I sincerely do."
+    BBW "But I have other things in my future more important than the number on my scale."
+    show BBW happy
+    BBW "For instance, it looks like we’re almost done with this."
+    BBW "I need to take care of my studies, and then it’s back to work getting our little business venture going."
+    BBW "Pick up the pace, Hotsure-san! We’re almost out of here."
+    "We stuffed the last pieces of equipment in the closet, closed it, and went our separate ways."
+    "An uneventful conclusion to an uneventful day."
+    "Getting a chance to have a real conversation with Alice was pretty eventful. Even if it had been out of desperation to kill time."
+    jump daymenu
+
 label BBW015:
     scene Hallway with fade
     show BBW happy
@@ -2325,7 +2469,7 @@ label BBW016_c3_2:
     jump BBW016_c3
 
 label BBW016_c3_3:
-    $setFlag("BBW016_unlock")
+    $setFlag("BBW016_testpass")
     Cell "<Like simulator games.>"
     "Another pause of a couple seconds followed."
     BBWCell "<Explain. Please.>"
@@ -2406,7 +2550,7 @@ label BBW017:
     menu:
         "Yes.": #-2 aff
             jump BBW017_c1
-        "No.": #
+        "No.":
             jump BBW017_c2
         "Square the circle.": #-1 aff
             jump BBW017_c3
@@ -2514,6 +2658,270 @@ label BBW017_c3:
     BBW "And however I may feel about Madame President, I don't think she's the sort to take pity on a wishy-washy... toad."
     BBW "Figure out what you want and grow the requisite spine to go after it. Playing the middle isn't going to get you anywhere."
     "And our conversation ended there."
+    jump daymenu
+
+label BBW018:
+    scene Cafeteria with fade
+    "So Alice wanted to try a tycoon game, and since I was the one to suggest them to her it fell on me to hold her hand."
+    "Not that I minded. I really had no experience with those games, but playing with someone else or just watching them could be fun in its own way."
+    "And when I stopped to think about it, I was having trouble thinking of times I had seen Alice hanging out with anyone besides me. Or Kodoma-san, of course."
+    "I knew she was in the music club, but from what I’d heard she wasn’t exactly endearing herself to anyone there."
+    "Was I her only friend at the school? Nah, it couldn’t be."
+    "Either way, as brusque as she could be, I didn’t mind the thought of getting closer to her."
+    show BBW happy at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    BBW "Ah, Keisuke. Over here."
+    "I found Alice and Aida sitting at her usual table, but instead of tea and cakes there was a full computer set-up. Monitor, tower, keyboard, mouse."
+    "And jeez, this wasn’t cheap. I wasn’t up on the latest gaming hardware, but it looked like a Hayashi ZX-5000. Fresh out of the box, even."
+    MC "Is this new?"
+    BBW "Indeed. It arrived just this morning."
+    BBW "I don’t know anything about video game hardware, but the reviews for this model were uniformly good."
+    MC "You bought an entirely new computer just to play games?"
+    show BBW neutral
+    BBW "Well, yes. If I am to give this endeavor the best opportunity I need to have the finest equipment possible, wouldn’t you agree?"
+    MCT "Not really. Graphics and sound aren’t as important as gameplay, and we aren’t going to be looking at the latest AAA titles or anything."
+    MC "Did you find any games you were interested in? I know the names of some of the more popular titles, though I’m not as familiar with them."
+    BBW "I had just finished our reading for Literature a few minutes ago, so I haven’t had much chance to find anything yet."
+    BBW "You have taken care of your homework, yes? I wouldn’t want to impose on your time with something as frivolous as this."
+    if getSkill("Academics") >= 4:
+        MC "Huh? Oh, yeah. I’ve taken care of everything."
+        show BBW happy
+        BBW "Excellent."
+        jump BBW018_c1_after
+    else:
+        MCT "Gah! The reading."
+        MCT "I haven’t even started it yet."
+        menu:
+            "Sure, I’m all caught up.":
+                $setFlag("BBW018_c1_lie")
+                MC "Yeah, I’m on top of everything."
+                "A blatant lie, but Alice didn’t even blink."
+                show BBW happy
+                BBW "Excellent."
+                jump BBW018_c1_after
+            "Actually…": #-1 affection
+                jump BBW018_c1_2
+
+label BBW018_c1_2:
+    MC "No, I still have some stuff to take care of."
+    BBW "Hmm."
+    BBW "Well, business before pleasure. By which I mean your studies come before games."
+    BBW "I will wait here while you go take care of your obligations first. There is still much I can do to familiarize myself with this machine."
+    MC "OK…"
+    $setAffection("BBW", -1)
+    "She wasn’t angry as she said that, but she was clearly disappointed."
+    "She sounded almost like Shiori in that moment, though I guess with Alice it was less about adhering to the rules and more about striving for excellence or whatever."
+    scene black with fade
+    "I went back to my dorm and hit the books, doublechecking my math homework and trying not to take any shortcuts with the reading."
+    "It took almost two hours, but I finished it all and headed back to the cafeteria on the off-chance that Alice was still waiting for me."
+    scene Cafeteria with fade
+    show BBW neutral at Position (xpos=0.25, xanchor=0.5)
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5)
+    "I expected her to have started a game already, figuring it out on her own, but nope. She was having tea, not even looking at her computer."
+    show BBW happy
+    BBW "Finished your work?"
+    MC "Yep. All caught up now."
+    BBW "Good. I would advise keeping on top going forward."
+    jump BBW018_c1_after
+
+label BBW018_c1_after:
+    BBW "Have a seat."
+    "I sat down next to her and she opened an online game store."
+    show BBW neutral
+    BBW "Now, what game would you recommend? I am a novice, but I am hoping for something engaging nonetheless."
+    MC "Well, the most popular titles are…"
+    $setVar("BBW018_gamesplayed", 0)
+    menu:
+        "Rollercoaster Tycoon":
+            jump BBW018_c2_1
+        "Railroad Tycoon":
+            jump BBW018_c2_2
+        "Professional Wrestler Tycoon":
+            jump BBW018_c2_3
+
+label BBW018_c2_menu:
+    menu:
+        "Rollercoaster Tycoon" if not getFlag("BBW018_rollercoaster"):
+            jump BBW018_c2_1
+        "Rollercoaster Tycoon (disabled)" if getFlag("BBW018_rollercoaster"):
+            pass
+        "Railroad Tycoon" if not getFlag("BBW018_railroad"):
+            jump BBW018_c2_2
+        "Railroad Tycoon (disabled)" if getFlag("BBW018_railroad"):
+            pass
+        "Professional Wrestler Tycoon" if not getFlag("BBW018_wrestler"):
+            jump BBW018_c2_3
+        "Professional Wrestler Tycoon (disabled)" if getFlag("BBW018_wrestler"):
+            pass
+        "Imperialis" if getVar("BBW018_gamesplayed") >= 2:
+            jump BBW018_c2_4
+
+label BBW018_c2_1:
+    MC "It’s kind of the standard for these types of games. You’re put in charge of an amusement park and you need to make money by putting in rides and concessions, adjusting the ticket prices, stuff like that."
+    BBW "Sounds straightforward enough, and running a business - even a simulacrum of one - is perfect for me."
+    if not getFlag("BBW018_railroad"):
+        "Even though there was an older version of the game discounted 75%% off, Alice went with the latest one."
+        BBW "I want to experience the best possible version of the game."
+        "Never mind that ‘latest’ didn’t necessarily mean ‘best.’ But all right, Alice is new to gaming and I didn’t feel up to opening that can of worms."
+        "I was more bothered by the fact that even the latest version was two years old, and she was using a ZX-5000 to play it. So much processing power called up in service of so little."
+        "The game started with a tutorial; how to place or destroy attractions, change ticket prices, read the interface."
+        "It took almost 15 minutes, and I could see Alice losing interest. But finally it was done and she got to start her own game."
+        "She played in silence for a while, getting the hang of the basics and, as far as I could tell, doing OK."
+        "She was making money, expanding her operations and improving the existing ones."
+    else:
+        "So she bought the game, again going with the latest version, and sat through another tutorial."
+        "Once she got into the game proper she seemed to do OK."
+    "Her rollercoaster designs were kind of basic, but serviceable. And I think she was overcharging on the pictures you had taken on the rides."
+    "Eventually, though, she started to look annoyed."
+    "The monthly status report that gauge her park’s finances, growth and expenses was on the screen, and something on it was irritating her."
+    "She went through the drop-down menus and other screens, searching for something."
+    show BBW angry
+    BBW "Grrrr…"
+    MC "What’s up?"
+    BBW "Look at that."
+    "She pointed to the screen, the tip of her finger on ‘Taxes.’ It was a deduction taken out of her monthly earning based on how much her park was making."
+    MC "What about it?"
+    BBW "There’s no way to contest this."
+    BBW "It’s completely unbelievable."
+    MC "No… Businesses pay taxes."
+    BBW "Not a flat rate like that."
+    BBW "If this was real I would be able to make a deal with the local municipality for tax credits in exchange for the revenue my park would bring to the local economy."
+    BBW "Hiring local labor to build and expand the park, the extra business people would bring to the surrounding restaurants and shops."
+    BBW "I’m constructing a keystone of the local economy, and yet the city or state won’t incentivize my work? It’s absurd."
+    MC "These games aren’t supposed to be 100%% realistic."
+    MC "I can see how ‘Lobby the mayor’ side-mission would be kind of distracting."
+    BBW "Whatever. I was losing interest in this game anyway."
+    show BBW neutral
+    BBW "It’s too casual in how it depicts things like pricing and expanding the grounds."
+    BBW "You can’t even set wages for your workers, or even handle advertising!"
+    BBW "What other games are there?"
+    $setFlag("BBW018_rollercoaster")
+    $setVar("BBW018_gamesplayed", getVar("BBW018_gamesplayed") + 1)
+    jump BBW018_c2_menu
+
+label BBW018_c2_2:
+    MC "Railroad Tycoon is a pretty well-known title. I’ve never played it, but it must have its fans."
+    BBW "‘Build your own railroad empire across Europe as you construct routes, upgrade your trains and handle both commercial and passenger business.’"
+    BBW "So it’s like operating a business, but more concerned with the ground-level operations instead of dealing with shareholders or building a brand."
+    show BBW happy
+    BBW "I can see how this would be fun."
+    if not getFlag("BBW018_rollercoaster"):    
+        "Even though there was an older version of the game discounted 75%% off, Alice went with the latest one."
+        show BBW neutral
+        BBW "I want to experience the best possible version of the game."
+        "Never mind that ‘latest’ didn’t necessarily mean ‘best.’ But all right, Alice is new to gaming and I didn’t feel up to opening that can of worms."
+        "I was more bothered by the fact that even the latest version was two years old, and she was using a ZX-5000 to play it. So much processing power called up in service of so little."
+        "The game started with a tutorial; how to place or destroy train tracks, change ticket prices, read the interface."
+        "It took almost 15 minutes, and I could see Alice losing interest. But finally it was done and she got to start her own game."
+        "She played in silence for a while, getting the hang of the basics and, as far as I could tell, doing OK."
+        "She was making money, expanding her operations and improving the existing ones."
+    else:
+        "So she bought the game, again going with the latest version, and sat through another tutorial."
+        "Once she got into the game proper she seemed to do OK."
+    "She was more interested in commercial fare than catering to passengers, probably because that brought in more money."
+    show BBW neutral
+    "After a while, a bored expression crept onto her face."
+    MC "Having fun?"
+    BBW "No, I cannot say that I am."
+    BBW "This isn’t exactly the most realistic depiction of the railroad enterprise, is it?"
+    MC "No, of course not. It’s just a game."
+    BBW "I understand that, but to have each country charge the same tax rate? To have the same cost of building and maintaining the tracks no matter where in Europe I go?"
+    BBW "And how is it I cannot undercut my competitors when I clearly have the most advanced trains and access to the most routes?"
+    MC "Uh, anti-monopoly policies?"
+    BBW "I should then be able to lobby the various governments and secure special exemptions."
+    BBW "For that matter, why aren’t government contracts an option? There’s so much revenue unaccounted for!"
+    show BBW angry
+    BBW "Argh!"
+    "She closed her eyes. Inhaled, exhaled."
+    show BBW neutral
+    BBW "No, I don’t think this game is for me."
+    BBW "What else is there?"
+    $setFlag("BBW018_railroad")
+    $setVar("BBW018_gamesplayed", getVar("BBW018_gamesplayed") + 1)
+    jump BBW018_c2_menu
+
+label BBW018_c2_3:
+    MC "This one is a little off-beat, but it falls under the ‘business simulator’ banner."
+    BBW "Professional Wrestler Tycoon?"
+    BBW "I know even less of pro-wrestling than I do video games. Why would I play this?"
+    MC "Just give a try. Who knows, maybe you’ll get into it."
+    "Alice shrugged and bought the game. That it was full-price didn’t seem to bother her (though I made a note to myself to point out she could get a refund if she didn’t care for the game)."
+    "The game downloaded and the instant she opened it the cafeteria was filled with a primal roar."
+    Computer "<RWAAAARRRR!>"
+    show BBW angry
+    BBW "Ah!"
+    Computer "<DO YOU HAVE WHAT IT TAKES TO BUILD THE GREATEST WRESTLING FRANCHISE THE WORLD HAS EVER KNOWN?!>"
+    "I lunged forward and hit the mute button on Alice’s keyboard, then looked around the cafeteria."
+    "The place was mostly empty, but everyone around had heard the full volume outburst. More than a couple heads turned in our direction, their expressions irritated at best."
+    "Nobody was as upset as Alice, though."
+    BBW "Oh! What was that assault? Is this game trying to punish you for playing it?"
+    MC "It was surprisingly aggressive."
+    "I turned the volume down to a reasonable amount, which for this game turned out to be 5 out of 100."
+    MC "Still, might as well see how the game plays."
+    "I could tell it was futile. From the moment she started the tutorial, directed by a wrestler called ‘White Jaguar,’ she was put off by everything."
+    BBW "…"
+    "That the game had almost nothing to do with actual wrestling and was instead built around managing a wrestling federation."
+    "You started with a small roster of performers divided into heavyweights, cruiserweights and tag teams, and you made choices about which ones to push, which ones feed to other stars, and which to give championship belts to."
+    "The objective was to build up stars that would bring in audiences, but not have them win all the time lest the fans get bored. Having a stable of villains the audience cared about was integral too."
+    "So it was more like a resource management game with the twist that you needed both good and bad elements, faces and heels."
+    "It wasn’t the worst idea for a game, but the mechanics meant nothing to Alice."
+    "The surface aesthetics were not doing it for her, and whatever enjoyment she would find in building a business was buried under her disinterest in the spandex-clad beefcakes going through exaggerated poses whenever you selected one."
+    show BBW neutral
+    BBW "I’m done with this. Surely there must be less off-putting displays than this."
+    $setFlag("BBW018_wrestler")
+    $setVar("BBW018_gamesplayed", getVar("BBW018_gamesplayed") + 1)
+    jump BBW018_c2_menu
+
+label BBW018_c2_4:
+    MC "Maybe the regular business simulators aren’t for you. They kind of are straightforward."
+    MC "How about something like Imperialis? A 4X game might be more your thing."
+    BBW "4X?"
+    MC "Explore, expand, exploit and exterminate."
+    MC "The goal is to build an empire and either conquer the world or achieve some sort of technological achievement before anyone else."
+    BBW "An empire? Like ancient Rome or China?"
+    MC "Yeah. There actually are games that use ancient civilizations-"
+    show BBW happy
+    BBW "And I’d be empress?"
+    play sound "Audio/Cheer.ogg"
+    "As I said ‘Yes’ I could see her eyes taking on a dreamy expression, like she was losing herself to some beautiful vision."
+    BBW "Let’s play that one!"
+    show BBW neutral
+    "She bought and downloaded the second-to-latest version of Imperialis, ignoring the space-based game that had come out last year, a giddy smile on her face."
+    "It didn’t even fade when she had to sit through yet another tutorial, the longest one by far."
+    "I probably should have told her how much micromanaging there was in these sorts of games, but she wasn’t bothered at all. She drank it all in."
+    "When she started the game proper she selected the Roman-esque option, and was midly put out that she couldn’t change her avatar to a female. A fair criticism."
+    "Other than that, she was clearly having a ball."
+    "She didn’t master it right away - there was just too much going on to get a feel for everything all at once - but even when she started to get outclassed by the other empires, and when she engaged in an ill-fated war against one of her neighbors, she was still beaming."
+    "It took almost six hours for her to get through her first game. For a while she had the lead, until another continent was discovered and three other empires joined the picture."
+    "She ended up in second place after managing to conquer a neighbor, but the game ranked her performance right at the bottom of the charts. ‘Andrew Johnson.’"
+    "I’d have to look him later to see just how dismal that was."
+    "But Alice was unfazed, even if she knew who he was."
+    show BBW happy
+    BBW "I admit, Keisuke, I may have been wrong. That was a wonderful game."
+    BBW "Obviously there is much room for improvement, so much to learn and master, but I am undaunted."
+    BBW "If you have any tips, though, I’m open to them."
+    MC "Actually, I don’t really play these games."
+    if getSkill("Academics") >= 4:
+        MC "But I think I noticed a couple things you could have done better. You didn’t have to restrict your defenses in each city like you did, for one."
+        $setAffection("BBW", 1)
+        BBW "Yes, I saw that. And maybe if I had stuck to one path with the technological developments…"
+    else:
+        MC "But it definitely was interesting. I think you’re getting the knack for it."
+    BBW "Would you be interested in meeting again over the weekend? I’m practically aching to start another game, but it’s getting to late as it is."
+    MC "Oh, wow, it’s already 8."
+    $setAffection("BBW", 1)
+    MC "No, yeah. Let’s do this again."
+    MC "Do you need help taking your computer back to your room?"
+    BBW "Oh, don’t worry. Kodoma-san will handle that."
+    "I was hesitant to leave it for Aida until I saw she had a wheeled cart waiting by the side."
+    scene black with fade
+    if getFlag("BBW018_c1_lie"):
+        "I hurried back to my dorm to take care of my homework."
+        "I wasn’t too concerned about Alice realizing I had lied to her, but making a habit of it wasn’t going to lead to anything good."
+        "It looked like I had a long night ahead of me."
+    else:
+        "So I said my goodbyes and headed back to my dorm."
+        MCT "Maybe I could look up some Let’s Plays for Imperialis, learn a few tips for Alice."
     jump daymenu
     
 label BBW020:
