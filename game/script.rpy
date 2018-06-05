@@ -15,7 +15,7 @@
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
     locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'track', 'musicclassroom']
     debuginfo = False
-    debugenabled = True
+    debugenabled = False
     debugscene = ""
     debugsceneinput = ""
     debugpriorities = ""
@@ -259,6 +259,20 @@
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
         return affection[girl]
+
+    #Checks which of the girls has the second highest affection. Doesn't account for ties.
+    def getSecondHighest(ignoreGirl):
+        highestAffection = 0
+        secondGirl = ""
+        for girl in girllist:
+            if girl == ignoreGirl:
+                continue
+
+            affection = getAffection(girl)
+            if affection > highestAffection:
+                highestAffection = affection
+                secondGirl = girl
+        return secondGirl
         
     def isEventCleared(event):
         return event in clearedevents

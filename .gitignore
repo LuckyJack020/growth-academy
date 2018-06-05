@@ -64,3 +64,5 @@ game/saves/persistent
 game/saves/auto-1-LT1.save
 *.save
 game/saves/persistent
+*.sublime-workspace
+*.sublime-project

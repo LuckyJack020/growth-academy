@@ -2,8 +2,11 @@ define AE = Character('Shiori', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
+define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
+define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
 define CMM = Character('Male Concil Member', color="#ffa18a") #Lighter Orange
-define Ama = Character('Amatsu-san', color="#ffa18a")
+define Ama = Character('Amatsu-san', color="#ffc3b5")
+define All = Character('Everyone', color="#ffffff")
 
 image AE neutral = ConditionSwitch(
     "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-neutral.png",
@@ -59,6 +62,7 @@ init 2 python:
     eventlibrary['AE024'] = {"name": "AE024", "girls": ["AE"], "location": "roof", "conditions": [[ConditionEnum.EVENT, "AE023"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     eventlibrary['AE025'] = {"name": "AE025", "girls": ["AE"], "location": "schoolplanter", "conditions": [[ConditionEnum.EVENT, "AE024"], [ConditionEnum.ISNIGHTTIME]], "priority": False} #TODO: Not sure if schoolplanter
     eventlibrary['AE026'] = {"name": "AE026", "girls": ["AE"], "location": "dorminterior", "conditions": [[ConditionEnum.EVENT, "AE025"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
+    eventlibrary['AE027'] = {"name": "AE027", "girls": ["AE"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "AE026"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
 
     
     #classroom
@@ -4548,6 +4552,352 @@ label AE026:
     "I smiled at her softly, and waited for her to walk by my side."
     MC "Absolutely."
     jump daymenu
+
+label AE027:
+    scene Hallway with fade
+    MC "Mgn... {i}Haaahn~{/i}"
+    "This morning was eventful to say the least. At five in the morning my clock sounded off and scared me senseless, clearly taking exception to its poor treatment the other day. Without thinking, I shot out of bed and hurriedly put on my clothes before running out the door."
+    "It wasn’t until I saw no one else out that I realized my mistake."
+    "I decided to walk the campus till class was open, but as people began to pop up here and there I noticed some strange things."
+    MCT "What’s everybody whispering about?"
+    "At first it felt like my mind playing tricks on me due to sleep deprivation, but after a few times I started to get suspicious."
+    MCT "Did something happen? Is it about me? Is my shirt on backwards, or...?"
+    "After a quick inspection of myself I found..."
+    MCT "Oh... Oh no, it’s-it’s actually inside out."
+    MCT "Crap."
+    "Accompanied by the giggles of some girls with chipmunk-esque cheeks, I ducked behind some lockers and oriented my shirt, watching carefully that no one was looking."
+    MCT "Okay, got it. I hope I didn-"
+    FemStudent1 "Was that the president's boyfriend?"
+    MCT "...Huh?"
+    FemStudent2 "I think so."
+    FemStudent1 "I can’t believe it. Like, I would have never guessed."
+    MCT "What are they...?"
+    "I exited my hiding spot in the corner and walked out in the open towards the girls."
+    FemStudent1 "Y’know, she once had me clean all the windows because I put gum on the-"
+    MC "U-um, hey, ladies. What’s going o-?"
+    "Deliberately, the girls turned away and began to look about anxiously without talking."
+    MC "-n with…?"
+    FemStudent1 "Oh, hey there! I love your hair."
+    MC "Oh, uh, thanks?"
+    FemStudent2 "Mhm! Y’know, I think Matsumoto-san is such a cute-"
+    "The first girl jabbed the other girl hard with her elbow, which elicited a tiny peep."
+    FemStudent1 "Welp, we should get heading to class!"
+    MC "Wait, I actually wanted to ask-"
+    "Before I could continue, the girls ran off and left me in a state of utter confusion."
+    MCT "Ooookay? That was... no, you know what, that was more than weird. What the hell?"
+    "I took another look around, yet nothing. No answers or even any more people in sight."
+    MCT "Hmn... something weird is going on...eh, I should just get to class. Hopefully I can get away from this weirdness."
+    scene black with fade
+    scene Classroom with fade
+    MC "Oooor not."
+    "When I entered the classroom, my fellow classmates were already there despite it being so early. They were talking amongst each other until the very moment I walked in the room; heralded by ‘Shh, here he comes!’"
+    show GTS happy at Position(xpos=0.05, xanchor=0.5)
+    show FMG surprised at Position(xpos=0.20, xanchor=0.5)
+    show BE surprised at Position(xpos=0.35, xanchor=0.5)
+    show PRG happy at Position(xpos=0.95, xanchor=0.5)
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5)
+    MC "..."
+    All "..."
+    GTS "Good morning, Hotsure-sa-"
+    FMG "Is it true?! Are you and Shio-"
+    BE "Kei-chan for real?! The president?!"
+    MC "Wait, hold on-"
+    BBW "Perhaps you can be a humanizing influence on our dear president."
+    PRG "I’m... really ha-"
+    FMG "No way in hell that’d happen!"
+    MC "Um, girls?"
+    show GTS sad 
+    GTS "Oh dear. I apologize for all the noise, Hotsure-sa-"
+    BE "I can’t even remember the last time you dated anybody!"
+    MC "OY!"
+    All "..."
+    MC "What is going on here?!"
+    "The girls all looked to the side aside from Yamazaki-chan, who tilted her head and spoke plainly."
+    show GTS neutral
+    GTS "Well, it appears that there is a... rumor going around."
+    show FMG happy
+    FMG "Did the two of you bang yet?!"
+    MC "Eh?! What even-"
+    "As I talked, Shiori-chan walked into the room with a look of surprise and confusion on her face."
+    show AE angry at Position(xpos=0.55, xanchor=0.5) with dissolve
+    AE "What is going-?!"
+    show AE neutral
+    show BE neutral
+    show PRG neutral
+    AE "...Oh. You’re all here early…"
+    "She took something that was sticking out of her bag and stuffed it further in before adjusting her glasses."
+    MC "G-Good morning."
+    show GTS happy
+    GTS "Good morning, Matsumoto-san."
+    AE "Good morning Hotsure-san, Yamazaki-san."
+    BE "Ah, see, Hotsure-SAN. Nothing after all."
+    show BBW angry
+    BBW "You don't know yet!"
+    MCT "What is even happening?!"
+    "I beckoned to Shiori-chan and she begrudgingly learned foreword, her wide hips accidentally pushing away her own desk."
+    MC "So, something really weird is going on today and I have no idea what’s happening. Do you know anything?"
+    AE "You don’t need to whisper. Just act normally, and go about your business. This foolishness will end on its own. For now try not to... try not to let anyone know."
+    MCT "Hm? Try not to let anyone know…?"
+    MC "Okay, yeah, but-"
+    "Before I could finish, Shiori-chan leaned back forward to her own desk."
+    show BE neutral
+    BE "Kei-chan, what was that about?"
+    MC "N-nothing. Just, y’know, forgot my homework."
+    AE "You did?"
+    MC "Wait, no, I-"
+    show AE angry
+    AE "Hotsure-san, I’m disappointed. Today's assignment was very interesting."
+    MCT "Save me from this hell."
+    MC "O-oh, no, wait. It’s right here! Ha ha. Guess I was worried about nothing."
+    show AE neutral
+    AE "Oh... I see."
+    show BBW neutral
+    BBW "Wait, then what were you two-"
+    MC "{i}HAAAAAHN~{/i} Man I woke up early! I spent my whole night working on homework, I barely got any sleep."
+    show AE happy
+    AE "Mmm, I appreciate the hard work, but you need rest, Hotsure-san. I don’t want you to fall behind."
+    MC "Ah, Thank you, Shiori-chan."
+    show BE surprised
+    show FMG surprised
+    BE "-chan?!" #Honoka and Akira say it, merge it somehow?
+    MC "E-erm…"
+    show AE neutral
+    AE "..."
+    FMG "Yooo! What?!"
+    PRG "S-so then the rumor is true?"
+    MC "Wait- What do you mean?"
+    show BBW neutral
+    BBW "I brought us all here because I heard you’d woken up early. I had some acquaintances of mine wake up the class because I wanted to have you confirm with-"
+    show BE angry
+    BE "That’s not what happened at all! I just woke up early."
+    show FMG neutral
+    FMG "Yeah, I was up early lifting."
+    show GTS neutral
+    GTS "I as well was tending to the garden."
+    BE "In fact, it was one of the other girls who woke YOU up to tell you."
+    BBW "..."
+    PRG "Y-you woke me up early, Nikumaru-san."
+    show BBW happy
+    BBW "As I said, I woke our class up early to meet you here."
+    MCT "Uhuh…"
+    MC "How did you know I’d get here before Shiori-chan?!"
+    FMG "She always gets here at the same time... every day... since school started."
+    show AE sad
+    AE "Well... I like to have a punctual schedule."
+    MC "A-anyways, go on, Kodama-chan." #chan?
+    PRG "W-we um, h-h-heard that you were really close to Shiori-san the other day."
+    MC "So then someone was spying?"
+    show AE angry
+    AE "Is that so?"
+    "Shiori-chan stood from her seat and looked around the room."
+    AE "Who was it, hm?"
+    "Almost instantaneously, all eyes in the class were on Nikumaru-san, filing her nails in her seat."
+    show BBW angry
+    BBW "Wh-ah-tch- I did not!"
+    MC "Erm... I kind of doubt Nikumaru-san was sneaking around. She isn’t exactly..."
+    BBW "Isn’t exactly what?"
+    MC "N-nothing! Sor-"
+    BBW "PAH!"
+    AE "..."
+    show BBW neutral
+    BBW "Well... I was simply shocked, was all. It’d be absolutely horrid of me to ignore the well-being of my fellow students, right?"
+    AE "A-I will have you know that invasion of privacy is a very serious-!"
+    MC "Um, Shiori-chan."
+    AE "-offense and I-"
+    show AE neutral
+    AE "...Hm?"
+    MC "It’s okay. I got this."
+    MC "Uh, yeah, it’s true. Shiori-chan and I are going steady."
+    AE "..."
+    FMG "Huh, didn’t know you liked ‘em like that-"
+    show BE angry
+    BE "Mizutani-chan, that’s rude!"
+    show AE aroused #flustered
+    AE "N-now hold on, everyone sit down and-"
+    TS "Hey, what’s going on in here?"
+    show AE neutral
+    AE "Stand."
+    TS "Oookay, yep."
+    AE "Bow."
+    TS "Alright, you all done? What’s the issue?"
+    AE "Well... it would appear word is out that Hotsure-san and I are dating, sir."
+    TS "Wha..."
+    TS "O-oh... well, listen, if you all can get this middle school garbage out of the way we can begin."
+    AE "Yes, sir, I apologize."
+    TS "All right then. So, today’s lesson-"
+    scene black with fade
+    scene Classroom with fade
+    "Class went by fairly regularly. I felt a bit strange; as though all eyes of the class were on me."
+    TS "And that’s what he meant by “Cut his head off with a daikon.”"
+    TS "Any questions? No? Good."
+    "After standing and bowing, I was going to talk to Shiori-chan until I was beckoned over by someone..."
+    $secondHighest = getSecondHighest("AE")
+    if secondHighest == "BE": 
+        jump AE027_BE
+    elif secondHighest == "BBW": 
+        jump AE027_BBW
+    elif secondHighest == "FMG": 
+        jump AE027_FMG
+    elif secondHighest == "PRG": 
+        jump AE027_PRG
+    elif secondHighest == "GTS": 
+        jump AE027_GTS
+    else:
+        jump AE027_BE #If for some reason noone is the second highest, it'll default to Honoka.
+
+label AE027_BE:
+    show BE neutral
+    BE "Hey, Kei-chan, got a sec?"
+    MC "Oh, hey, Honoka! What’s up?"
+    BE "Mm, not much. Hangin out."
+    BE "..."
+    MC "..."
+    BE "Um..."
+    MC "Yeah?"
+    BE "I’m super happy for you!"
+    MC "Oh! Thanks, Honoka."
+    show BE neutral
+    BE "It’s just... why her, again?"
+    MC "Um... why-?"
+    show BE surprised
+    BE "D-don’t get me wrong, I mean, she’s cute! I just... wow, I didn’t expect that."
+    MC "Oh. Is that... do you have a problem with-?"
+    BE "No, no, not at all. She’s just, like... REALLY serious and stuff."
+    MC "Well, yeah. But she’s an amazing person. You really should try to get to know her. I think you’d make great friends."
+    show BE sad 
+    BE "Mmm, I dunno. She got me in trouble just for talking too loud. I don’t talk loud though!"
+    MC "Well, I think the two of you will get along eventually."
+    show BE neutral
+    BE "Hmm, I’ll try! Any friend of Kei-chan's is a friend of mine!"
+    hide BE neutral with fade
+    jump AE027_after
+
+
+label AE027_BBW:
+    show BBW neutral
+    MC "Hey Nikumaru-sa-"
+    show BBW happy
+    BBW "I knew it! I knew it all along!~"
+    BBW "I’ll have to admit, I was thrown for a bit of a loop by the ‘Hotsure-san’ title, however I just knew the two of you were an item!"
+    MC "Y-yeah, about that. Why did you spy on us the other day?"
+    BBW "While I realize it was a bit crass of me… this is a major opportunity!"
+    MC "Opportunity-?"
+    BBW "To think, you have the entire student council in your pocket, which by extension means I do as well! Do put in a good word for me, will you, dear?"
+    MC "W-wait, I’m not going to-"
+    show BBW neutral
+    BBW "Mhmhmhm~ Don’t worry, it’s just a little joke. I was simply curious about a friend's life is all. You understand that."
+    MC "Oh. Well, yeah, I guess so."
+    BBW "Wonderful. I may have my… reservations about your taste in women, but I’m quite glad for you."
+    MC "Thank you, Nikumaru-san."
+    BBW "Mhm~ Oh, and by the way, remember my advice, will you?"
+    hide BBW neutral with fade
+    jump AE027_after    
+
+label AE027_FMG:
+    show FMG neutral
+    FMG "Oy, Oy, c’mere. I got some stuff I wanted to talk about." #uhhhh
+    FMG "Hotsure-san."
+    MC "Hey Mizutani-san, how are you-"
+    FMG "‘Mere."
+    MC "Eh?"
+    MC "Oh, okay…"
+    "I walked over to a straight faced Mizutani-san, her muscular arms propping her up against her desk…"
+    MC "Gak-!?"
+    "And was greeted with a swift and thunderous pat on the back, popping it in what felt like nine different places..."
+    show FMG happy
+    FMG "Hah! So you got yourself a girl, eh?!"
+    MC "Pah... ahn... yeah, uh... Shori-san is, um… {i}khm{/i} she’s great."
+    show FMG neutral
+    FMG "I’m telling you, I would have NEVER expected you to go for her. Not in a million billion years."
+    MC "Huh? What makes you say that?"
+    FMG "Well, don’t mean to be THAT girl, but... have you SEEN her ass? Like, do your bangs blind you that much?"
+    MC "Y-Yeah, I know she has a big… {i}khm{/i}..."
+    show FMG surprised
+    FMG "...Oh no way. Do you... do you think that’s hot?!"
+    MC "U-um…"
+    show FMG neutral
+    FMG "Are you for real right now? Wow! I mean... that’s so weird! I mean… really?!"
+    MC "Hey I hope you don’t mind but... that’s a little rude."
+    show FMG sad
+    FMG "Ohp, sorry, didn’t mean it like that. No offense to you. Shiori though... hmph."
+    MC "Do you have a problem with her?"
+    FMG "Eh... I dunno. We don’t see eye to eye a lot of the time."
+    show FMG happy
+    FMG "Still though, you’re my friend. There’s no way in hell I’d let past grudges affect that."
+    MC "Well... thank you, Mizutani-san. That means a lot."
+    show FMG neutral
+    FMG "It’s just... I’d think you’d want a girl that’s a bit less flabby, is all. It just goes against my expectations."
+    FMG "Ehh, anyways, I’ve talked long enough. Good luck with the gal pal!"
+    hide FMG neutral with fade
+    jump AE027_after
+
+label AE027_PRG:
+    show PRG neutral
+    PRG "U-um, Hotsure-san? Can we talk, please?" #Changed to we
+    MC "Ah, hello, Kodama-chan."
+    PRG "So, um, Shiori-san is really cute."
+    MC "Eheh, glad you think so."
+    PRG "Um..."
+    PRG "So, I was wondering... how o-open is Matsumoto-san?"
+    MC "Um... I’m sorry?"
+    show PRG sad
+    PRG "N-nothing!"
+    PRG "She’s just… r-really lucky to have someone like you, is all."
+    MC "Ehe, thanks, Kodama-chan. If anything, I’m the lucky one."
+    show PRG neutral
+    PRG "You’re really brave, too. I-It’s hard for me to look her in the eyes…"
+    MC "You think she’s scary?"
+    show PRG sad
+    PRG "Eep! I’m sorry!"
+    MC "Oh, no! I wasn’t offended!"
+    show PRG neutral
+    PRG "Um... not really scary. Just v-very assertive."
+    MC "Heh, that I can see."
+    show PRG happy
+    PRG "W-well, I hope you are happy with Shiori-san. I hope the two of you make really cute babies together. I’ll look over them for you whenever."
+    MC "Eh? W-wait, I think that may be a bit too far, right?!"
+    hide PRG happy with fade
+    jump AE027_after
+
+label AE027_GTS:
+    show GTS neutral
+    GTS " I apologize for the intrusion, Hotsure-san, but I would like to speak with you."
+    MC "It’s nice to see you, Yamazaki-san."
+    show GTS happy
+    GTS "It is nice to see you as well."
+    show GTS neutral
+    GTS "Congratulations, Hotsure-san. While surprising, this is rather lovely news."
+    MC "Oh! Well, thank you, Yamazaki-san."
+    GTS "..."
+    MC "Um, Yamazaki-san?"
+    GTS "Hm?"
+    MC "Did you, uh... have anything you wanted to say?"
+    GTS "Not that I could think of, no. Simply that I hope the best for you."
+    "Yamazaki-san closed her eyes and bowed, smiling gently."
+    show GTS happy
+    GTS "My friend and my classmate are both happy, and that’s all I could ever hope for."
+    MC "Yamazaki-san... thank you. That really means a lot."
+    show GTS neutral
+    GTS "Hm~"
+    GTS "The two of you are welcome in the garden any time, of course. I’m thinking of planting some yellow roses. I hope you both enjoy them."
+    MC "Oh, okay, cool!"
+    hide GTS neutral with fade
+    jump AE027_after
+
+label AE027_after:
+    "After she walked away, I went out to go speak with Shiori-chan, who was waiting for me right outside the door."
+    jump daymenu
+
+
+
+
+
+
+
+
+
+
+
 
 label AE101:
     scene Gym with fade

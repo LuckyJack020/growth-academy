@@ -373,7 +373,7 @@ label FMG005_c2:
     MC "Man, shots suck, am I right?"
     "I felt that it was best to try to lighten her up, and it seems I was rewarded."
     show FMG neutral
-    FMG "Heh, yeah they do, i'm guessing you heard all of that?"
+    FMG "Heh, yeah they do, I'm guessing you heard all of that?"
     MC "Um..."
     FMG "It's fine, just don't go spreading what just happened, I kinda have an image to uphold."
     MC "Fair enough then."
