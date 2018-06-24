@@ -68,7 +68,8 @@ label PRG001_a:
     PRG "I, it's fine, really. Don't concern yourself over it, please."
     MC "Well... Okay, if you're sure..."
     "Aida nodded stiffly and turned away, cradling her tea even closer to herself as she stared at the floor. Being private was one thing, but she looked like a snail trying to tuck itself inside its shell..."
-    
+    jump daymenu
+   
 label PRG001_b:
     MC "You should talk about stuff if it bothers you, Aida..."
     PRG "I...It's fine, really."
@@ -84,6 +85,7 @@ label PRG001_b:
     hide PRG with dissolve
     "Aida quickly turned and walked away at a brisk pace, tucking her head down towards her chest."
     MCT "Sometimes I just don't understand women..."
+    jump daymenu
     
 label PRG001_c:
     MC "You can tell me, I promise I won't tell anyone."
