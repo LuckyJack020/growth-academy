@@ -1220,7 +1220,7 @@ label BBW009:
 label BBW010:
     scene Cafeteria with fade
     "It was a quiet morning. Reminded me of the first day, after we all learned why we were here."
-    "Looking around at the faces in the cafeteria when I arrived, I got the same vibe as before. The embarrassment everyone was probably feeling because of their second puberty issue."
+    "Looking around at the faces in the cafeteria when I arrived, I got the same vibe as before. The embarrassment everyone was probably feeling because of their 'second puberty' issue."
     show BBW happy with dissolve
     "Standing out in the mildly dark gloom of the other students, one face was unexpectedly shining."
     MC "Good morning, Alice."
@@ -1387,18 +1387,21 @@ label BBW010_c3:
     BE "Hey, Kei-chan. You're looking a bit more spaced out than usual. You hit your head on something? I mean, besides me, of course."
     "Climbing to my feet, the sales pitch I had been rehearsing in my mind was pushed aside as I tried to think of something sarcastic and/or witty to say in response."
     MC "You ask me that after you run into me? Project much?"
-    "But even as I said it I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
-    BE "Hehe, yeah, clearly it looks like you took a hit to the noggin, considering you can't lift your neck above chest level."
+    MC "At least help me clean these up."
+    BE "What're these?"
+    "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
+    BE "Hey, Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
     "And then, as if struck by inspiration, I realized this was actually perfect."
     MC "I was just noticing that your shirt looks a bit tight. That can't be comfortable, can it?"
     show BE neutral
-    BE "Oh yeah! Definitely tighter. Been noticing it get tighter every day recently. Was pretty fun at first, definitely proof that I'm growing where they said I would. But, heh, yeah, it's not exactly comfortable. You have no idea how much bras pinch when they aren't made to fit you right."
+    BE "Oh yeah! Definitely tighter. Been noticing it get tighter every day recently. Was pretty fun at first, definitely proof that I'm growing where they said I would."
+    BE "But, heh, yeah, it's not exactly comfortable. You have no idea how much bras pinch when they aren't made to fit you right."
     MC "Bras... Yeah. Those things."
     "Black lace bras with the cups almost transparent, frilly edges rising from her cleavage like dolphins jumping out of the sea. White cotton cups pulled taut by two great mounds of flesh, the straps digging into her shoulders..."
     BE "..."
     MC "Ah!"
-    "I snapped my head downward to escape eye contact with her. Only then did I remember the box I was holding in my hands. I took out one of the 'catalogues.'"
+    "I snapped my head downward to escape eye contact with her. Only then did I remember the box I was again holding in my hands. I took out one of the 'catalogues.'"
     MC "If you're looking for new clothing, there's a new service that just opened up. Really affordable clothes, some custom-made, direct from the manufacturer."
     "Quizzical, she looked the 'catalogue' over."
     BE "Huh. Wow, there's a lot of stuff in here. Pretty neat, actually. Most of the time once you get past a certain size, you can only get bras in boring colors or things without patterns. It really takes the fun out of it. But, they're saying here they can do more custom patterns? Prices seem okay too, all things considered. How'd you get your hands on this?"
@@ -1496,7 +1499,7 @@ label BBW011_prechoice:
     PRG "!"
     "Aida's face lit up, clearly happy to have another person accompanying her."
     scene black with fade
-    "We three went to the film club meeting. The club had about a dozen people, which left plenty of seats for guests."
+    "The three of us went to the film club meeting. The club had about a dozen people, and the screening room was much bigger than our classroom, which left plenty of seats for guests."
     "100 minutes later we were back out in the hallway."
     scene Hallway with fade
     show PRG happy at Position(xpos=0.75, xanchor=0.5)
@@ -1786,7 +1789,7 @@ label BBW013_c1:
     show RM neutral
     RM "That might actually be-"
     BBW "I DON'T HAVE TIME FOR YOUR GAMES, BOY!"
-    BBW "I am stuck here on an isolated rock, shoved away with a bunch of other... people with a condition like mine, dealing with the news that my own body is going to blimp out of its own accord."
+    BBW "I am stuck here on an isolated rock, shoved away with a bunch of other... people with conditions like mine, dealing with the news that my own body is going to blimp out of its own accord."
     BBW "And you want to get in my face about some secret cabal making me fat?"
     RM "To be honest, I don't know who exactly is doing this."
     BBW "SHUT! IT!"
@@ -1822,8 +1825,8 @@ label BBW013_c1:
     MC "No, but... What was I supposed to do?"
     "Alice held up a dismissive hand and turned away."
     BBW "Teach him to have more class. He's in the same boat we all are, isn't he?"
-    MC "Yeeeeahhh... He is."
-    BBW "Then he should have some empathy, if not basic social grace."
+    MC "Actually, he's here because his sister has a growth factor."
+    BBW "Either way, he should have some empathy, if not basic social graces."
     "She walked off in a huff, and I wasn't too eager to chase her and explain my uninvolvement."
     "Better to take the hit and let her be angry with me for a while."
     jump daymenu
@@ -1873,7 +1876,7 @@ label BBW013_c2:
     "She answered pretty quickly, in that way that makes it hard to believe someone. But I didn't say anything."
     BBW "I accepted what was happening once I learned the news, and I know I can address my weight gain once it fully happens."
     BBW "In the meantime, I am still Alice Nikumaru. I am not defined by my size or my appetite."
-    BBW "Character is revealed in how they deal with tribulation, not what form those trials take."
+    BBW "Character is revealed in how one deals with tribulation, not what form those trials take."
     MC "You sound like you're dealing with it pretty OK."
     "I was about to walk away, but then I decided..."
     MC "Hey, Alice. I was about to get a snack at the cafeteria. You hungry?"
@@ -2000,7 +2003,7 @@ label BBW014:
     BBW "You’re pretty easy to read, Hotsure-san."
     MC "Uh…"
     BBW "You’re thinking of my weight, and you’re worried about mentioning it."
-    BBW "After incident with your roommate the other day I can understand your trepidation."
+    BBW "After the incident with your roommate the other day I can understand your trepidation."
     MC "Sorry."
     BBW "You don’t have to apologize for making me aware of my condition."
     BBW "Though if you want to apologize for thinking that I am so frail as to need to be shielded from reality, I will accept it."
@@ -2021,7 +2024,7 @@ label BBW014:
     BBW "Pick up the pace, Hotsure-san! We’re almost out of here."
     "We stuffed the last pieces of equipment in the closet, closed it, and went our separate ways."
     "An uneventful conclusion to an uneventful day."
-    "Getting a chance to have a real conversation with Alice was pretty eventful. Even if it had been out of desperation to kill time."
+    "Getting a chance to have a real, non-business-related conversation with Alice was pretty eventful. Even if it had been out of desperation to kill time."
     jump daymenu
 
 label BBW015:
