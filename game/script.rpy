@@ -465,21 +465,27 @@ screen daymenu:
             ypos 120
             spacing 60
             for c in eventchoices:
-                fixed:
-                    xmaximum 600
-                    ymaximum 60
-                    if eventlibrary[c]["location"] in locationlist:
-                        imagebutton idle "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
-                    else:
-                        add "Graphics/ui/bgicon-missing.png"
-                    hbox:
-                        spacing -120
-                        order_reverse True
-                        if len(eventlibrary[c]["girls"]) == 0:
-                            add "Graphics/ui/charicon-missing.png"
+                vbox:
+                    text eventlibrary[c]["name"]
+                    fixed:
+                        xmaximum 600
+                        ymaximum 30
+                        #ymaximum 60
+                        if eventlibrary[c]["location"] in locationlist:
+                            imagebutton idle "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
                         else:
-                            for g in eventlibrary[c]["girls"]:
-                                add "Graphics/ui/charicon-%s.png" % g
+                            add "Graphics/ui/bgicon-missing.png"
+                        hbox:
+                            hbox:
+                                spacing -120
+                                order_reverse True
+                                if len(eventlibrary[c]["girls"]) == 0:
+                                    add "Graphics/ui/charicon-missing.png"
+                                else:
+                                    for g in eventlibrary[c]["girls"]:
+                                        add "Graphics/ui/charicon-%s.png" % g
+                            #text eventlibrary[c]["name"] color Color("#00ff00")
+
                 
     #event choices (6-choice day)
     if len(eventchoices) > 3:
