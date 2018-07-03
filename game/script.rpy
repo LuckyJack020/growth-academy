@@ -466,15 +466,13 @@ screen daymenu:
             spacing 60
             for c in eventchoices:
                 vbox:
-                    text eventlibrary[c]["name"]
                     fixed:
                         xmaximum 600
-                        ymaximum 30
-                        #ymaximum 60
+                        ymaximum 60
                         if eventlibrary[c]["location"] in locationlist:
                             imagebutton idle "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
                         else:
-                            add "Graphics/ui/bgicon-missing.png"
+                            imagebutton idle "Graphics/ui/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
                         hbox:
                             hbox:
                                 spacing -120
@@ -484,7 +482,12 @@ screen daymenu:
                                 else:
                                     for g in eventlibrary[c]["girls"]:
                                         add "Graphics/ui/charicon-%s.png" % g
-                            #text eventlibrary[c]["name"] color Color("#00ff00")
+                            fixed:
+                                frame:
+                                    xalign 0.5
+                                    yalign 0.5
+                                    background Solid(Color((0, 0, 0, 100)))
+                                    text eventlibrary[c]["name"]
 
                 
     #event choices (6-choice day)
@@ -494,14 +497,13 @@ screen daymenu:
             ypos 120
             spacing 60
             for c in eventchoices:
-                button:
+                fixed:
                     xmaximum 250
                     ymaximum 60
-                    action [SetVariable("activeevent", c), Jump("startevent")]
                     if eventlibrary[c]["location"] in locationlist:
-                        add "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] crop(0, 0, 250, 60)
+                        imagebutton idle im.Crop("Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
                     else:
-                        add "Graphics/ui/bgicon-missing.png"
+                        imagebutton idle im.Crop("Graphics/ui/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
                     hbox:
                         spacing -120
                         order_reverse True
@@ -510,6 +512,13 @@ screen daymenu:
                         else:
                             for g in eventlibrary[c]["girls"]:
                                 add "Graphics/ui/charicon-%s.png" % g
+                        #FIXME this looks awful and breaks tables, needs harder adjustments
+                        #fixed:
+                        #    frame:
+                        #        xalign 0.5
+                        #        yalign 0.5
+                        #        background Solid(Color((0, 0, 0, 100)))
+                        #        text eventlibrary[c]["name"]
     
     #studying activities (non-special day)
     if freeday:

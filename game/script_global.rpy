@@ -30,7 +30,9 @@ image Track = ConditionSwitch(
 image Roof = ConditionSwitch(
     "gametime_eve", "Graphics/roof_eve.png",
     "True", "Graphics/roof_day.png")
-image Nurse Office = "Graphics/office.png"
+image Nurse Office = ConditionSwitch(
+    "gametime_eve", "Graphics/office_eve.png",
+    "True", "Graphics/office_day.png")
 image Pool = ConditionSwitch(
     "gametime_eve", "Graphics/schoolpool_eve.png",
     "True", "Graphics/schoolpool_day.png")

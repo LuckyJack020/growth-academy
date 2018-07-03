@@ -49,8 +49,8 @@ image BBW swimhaughty = ConditionSwitch(
 
 image cg BBW001 = "Graphics/BBW-SC-1.png"
 
-image Dorm BBW = "Graphics/dorminterior.png"
-image Dorm BBW Flip = im.Flip("Graphics/dorminterior.png", horizontal=True)
+image Dorm BBW = "Graphics/BBWDorm.png"
+image Dorm BBW Flip = im.Flip("Graphics/BBWDorm.png", horizontal=True)
 
 init 2 python:
     datelibrary['BBW_size_6'] = datetime.date(2005, 12, 10)

@@ -1074,7 +1074,7 @@ label GTS014:
     show GTS neutral with dissolve
     GTS "Hotsure-san? Are you okay?"
     MC "Huh? Oh, yeah sorry. Kind of spaced out there for a moment."
-    GTS "[Neutral] Oh, better not let Tashi-sensei hear that."
+    GTS "Oh, better not let Tashi-sensei hear that."
     "I looked over as the blackboard was being erased and it seemed like some of the others were filing out of the classroom. "
     MC "Heh, I don’t think he’ll mind. Come on, let's take a small walk. "
     show GTS embarassed
