@@ -4,6 +4,9 @@ define fade = Fade(0.5, 0.0, 0.5)
 image PRG neutral = ConditionSwitch(
     "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-neutral.png",
     "True", "Graphics/PRG-1-neutral.png")
+image PRG neutral_flip = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", im.Flip("Graphics/PRG-2-neutral.png", horizontal=True),
+    "True", im.Flip("Graphics/PRG-1-neutral.png", horizontal=True))
 image PRG happy = ConditionSwitch(
     "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-happy.png", 
     "True", "Graphics/PRG-1-happy.png")
@@ -22,6 +25,9 @@ image PRG angry = ConditionSwitch(
 image PRG aroused = ConditionSwitch(
     "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-aroused.png",
     "True", "Graphics/PRG-1-aroused.png")
+image PRG unique = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-aroused.png",
+    "True", "Graphics/PRG-1-aroused.png") #TODO: replace when new sprites get implemented
 
 image PRG surprised_flip = im.Flip("Graphics/PRG-1-surprised.png", horizontal=True)
 
@@ -30,15 +36,19 @@ init 2 python:
     datelibrary['PRG_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_2'] = datetime.date(2005, 12, 10)
+    datelibrary['PRG_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['PRG001'] = {"name": "PRG001", "girls": ["PRG"], "location": "dormexterior", "conditions": [], "priority": 0}
-    eventlibrary['PRG003'] = {"name": "PRG003", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "PRG001"]], "priority": False}
-    eventlibrary['PRG004'] = {"name": "PRG004", "girls": ["PRG", "FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "PRG003"]], "priority": False}
-    eventlibrary['PRG005'] = {"name": "PRG005", "girls": ["PRG"], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['PRG008'] = {"name": "PRG008", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "PRG004"]], "priority": False}
-    eventlibrary['PRG010'] = {"name": "PRG008", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "PRG008"]], "priority": False}
-    
+    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "location": "dormexterior", "conditions": [], "priority": 0}
+    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "PRG001"]], "priority": 0}
+    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "PRG002"]], "priority": False}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "PRG003"]], "priority": False}
+    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "location": "auditorium", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "location": "auditorium", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": 0}
+    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}   
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "location": "classroom", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["PRG_size_2"]]], "priority": False}
+
 label PRG001:
     scene School Exterior with fade
     "On my way to the vending machines for a drink, I spied Aida-san from my class, frowning down at a can of tea."
@@ -129,6 +139,82 @@ label PRG001_c:
     $ setAffection("PRG", 2)
     jump daymenu
     
+
+label PRG002:
+    scene Cafeteria with fade
+    "I felt hungrier than usual today, so I stopped by the cafeteria for an extra snack.  I had just finished my red bean bun when I spied Aida coming in the door near where I was sitting."
+    show PRG neutral at Position(xpos=0.65, xanchor=0.5) with dissolve
+    MC "Hi there, Kodama-san!"
+    PRG "Oh!  Ah, h-hello Hotsure-san."
+    MC "How are you today?"
+    PRG "Oh, I'm fine. Just getting Alice-san's between-meal snack."
+    MC "I thought you were cooking for her?"
+    PRG "Meals, yes, but for snacks she usually prefers something sweet and pre-made. I'm supposed to get a bunch of sweets so she can figure out what she likes..."
+    "I used a tissue to wipe up any residual crumbs and threw my trash in the can."
+    MC "Well, I'll wait in line with you, how about?  Help it go quicker."
+    show PRG happy
+    PRG "Oh, really? W-well sure, that'd be wonderful!"
+    show PRG neutral with fade
+    "We spent a few minutes in line, making small talk and getting to know each other better."
+    "When we finally got up to the counter, Aida ordered several bean paste buns and a few jelly rolls. Her large bag of pastries in hand, we set out into the cafeteria seating, looking for Alice."
+    BBW "Here, Kodoma-san."
+    PRG "Ah! C-coming!"
+    show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+    "I followed Aida over to the table Alice was sitting at, a small picnic cloth spread over the table and actual silverware set in front of her. Aida quickle set to work opening each of the packaged sweets and setting them out on the picnic cloth in front of Alice."
+    BBW "It looks like you did your job satisfactorily. Is this a full selection of the snacks available or did you prioritize some over others?"
+    PRG "O-oh, well, um, this was as many as I could a-afford..."
+    BBW "Hmm. Keep a record of which ones I am sampling right now. We can repeat this process at a future time, to ensure I am making the most educated decision."
+    BBW "Now, which flavor is this?"
+    PRG "Uhm, that's the red bean bun."
+    MC "I just had one of those, they're good."
+    "Alice arched a brow at my comment, but didn't say anything as she cut a generous slice from the middle and popped it in her mouth. I still couldn't believe she was using fancy silverware to eat a bun."
+    "After she swallowed she took a sip of water, swishing it around in her mouth."
+    BBW "Initial thoughts: strong immediate taste. The texture of the paste was a bit like glue. It stuck to my tongue a bit, but was not troublesome. The pastry was not fluffy in the slightest. Almost mashed down. The aftertaste diminishes quickly."
+    BBW "Final verdict: Fair, but not exemplary in any way."
+    "I looked over and saw Aida studiously taking notes on a notepad."
+    PRG "O-okay, well, the next one here is melon bread…"
+    "Again with cutting a piece, tasting, then cleansing her palate."
+    BBW "Sweet taste that almost overpowers the fruitiness, perhaps due to whatever preservatives or flavor enhancers are included in this. The bread has the same problem as the red bean sample, thin but dense. Perhaps unavoidable in a mass-produced and distributed product like this. The aftertaste is strong enough to be noted, but not unpleasant."
+    BBW "Final verdict: Above average quality."
+    "Again Aida took notes, and I just sort of stood there observing as Alice worked her way through the pastries, until I couldn't take the curiosity any longer."
+    MC "So... what is this, exactly?"
+    BBW "I am familiarizing myself with the different types of snacks available. Like a wine tasting, but appropriate for the school."
+    menu:
+        "Ask about the food":
+            MC "You’re not actually going to eat them all?"
+            BBW "What, all of this at once?"
+            "She indicated the spread of snacks in front of her, which was as much food as a normal meal."
+            MC "I see your point. But why go through several at once? Why not buy one, try it, and then buy another later on?"
+            BBW "Too time-intensive, plus I do not care to consume an entire snack that is subpar or ill-suited for my sense of taste."
+            MC "So what do you do with the rest of it?"
+            BBW "Rest of what?"
+            MC "Well, you've got most of each bun left, do you give the rest to Aida or something?"
+            show BBW happy
+            BBW "Why Hotsure-san, what a wonderful idea! That way I won't have to reimburse Aida for the full price."
+            MC "..."
+            PRG "..."
+            BBW "Good thinking, Hotsure-san. Whether it's component manufacturing or one's lunch, excess inventory just wastes money."
+            MC "...Glad to help...?"
+            $setAffection("BBW", 1)
+        "Ask about Aida":
+            MC "No, I mean, with Aida. Taking notes and everything."
+            show PRG sad
+            PRG "Um..."
+            MC "I can understand favors, but is... I mean, is she working for you or something? Are you paying her?"
+            BBW "Yes, she is being compensated for her time and effort. Why do you ask?"
+            MC "Just don't want to see anyone being taken advantage of..."
+            MCT "Especially someone as timid as Aida seems to be..."
+            BBW "Business is not about taking advantage. Not always, at least. This is a fair and equitable exchange, my money for her labor."
+            PRG "P-please, it's okay, I don't mind..."
+            MC "..."
+            BBW "..."
+            BBW "Anyways, on to the next one..."
+            show PRG neutral
+            MC "I, uh, I should get on my homework.  I'll see you around, okay Kodama-san?  Alice-san, nice to see you too."
+            "Alice simply nodded, her mouth full of food at the moment, and Aida gave me a small but terse smile."
+            $setAffection("PRG", 1)
+    jump daymenu
+
 label PRG003:
     scene F1 Hallway with fade
     "None of the clubs I was interested in were meeting after class today, so I just wandered the halls after class, watching the other students as they filed out of the building."
@@ -541,7 +627,160 @@ label PRG005:
     hide PRG with dissolve
     "Aida gave a quick, deep bow, and scurried off, leaving me wondering what was so terrible on that sheet she couldn't tell me..."
     jump daymenu
-    
+
+label PRG006:
+    $setVar("PRG006_walking", 0)
+    scene School Front with fade
+    "With a light homework schedule for the day, I decided to walk around campus a bit, get more familiarized with the layout. I was up near the front gates of the school when I saw Aida come out of one of the administration buildings, arms piled high with boxes."
+    "Seeing her slow, plodding steps under the wobbling stack of boxes, I headed over to help."
+    show PRG neutral with dissolve
+    MC "Hi Kodama-san, how are you?"
+    PRG "Who...?  Oh! H-hello, Hotsure-san."
+    MC "Hello. Those boxes seem pretty heavy, would you like me to take some?"
+    PRG "Oh, n-no thanks, I've... I've got it."
+    MC "Are you sure?  I don't mind."
+    PRG "I-I'm okay. Don't, um, trouble yourself over it."
+    jump PRG006_menu
+
+label PRG006_menu:
+    menu:
+        "Let me help, I insist.":
+            jump PRG006_a
+        "You're sure I can't help?":
+            $setVar("PRG006_walking", getVar("PRG006_walking") + 1)
+            jump PRG006_b
+
+label PRG006_a:
+    MC "Let me help, I insist."
+    show PRG unique
+    PRG "No really, I-I-I-"
+    MC "Come on, Kodama-san. I can see your legs shaking when you walk."
+    PRG "W-well..."
+    "I reached up and grabbed the top half of the pile from her.  She didn't say anything to stop me, and the embarrassed smile let me know he wasn't against it."
+    scene Campus Center with fade
+    show PRG neutral
+    MC "So what is all this stuff for?"
+    PRG "These are supplies for Alice-san's new business."
+    MC "Business?"
+    PRG "It's, um, basically a mail-order catalogue. Alice can get things custom-made for students as they, uh, grow."
+    MC "...Doesn't the school already do that?"
+    show PRG unique
+    PRG "I- I think so? But, well, Alice-san, she..."
+    show PRG neutral
+    PRG "Well, I suppose I shouldn't second-guess her..."
+    jump PRG006_end
+
+label PRG006_end:
+    scene Dorm Exterior with fade
+    show PRG neutral
+    "We finally arrived at the women's dorms, Aida slightly red in the face from the exertion.  I knocked on the door for her, and Alice answered after not to long of wait."
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    BBW "Hm?"
+    show BBW happy
+    BBW "Oh! Wonderful, they've arrived!"
+    "Alice started taking the boxes from Aida, the two of them setting boxes on a large kitchen table in the middle of the room. Having not been invited, I waited patiently outside the open door."
+    "After they had gotten all the boxes, Alice started in on opening them, using a boxcutter to slit the tape with fluid, well-practiced motions."
+    "Aida wandered over to the door as Alice began casting packing paper and bubble wrap to the floor, looking behind her at the growing mess she'd undoubtedly have to clean up. She looked up at me, leaning against the half-closed door."
+    hide BBW happy with dissolve
+    PRG "...Good-bye, Hotsure san.  And..."
+    PRG "..."
+    PRG "...thanks."
+    "She gave me a small smile and closed the door, Alice's eager and authoritative voice already rambling out orders."
+    if getVar("PRG006_walking") == 0:
+            $setAffection("PRG", 1)
+    elif getVar("PRG006_walking") == 3:
+            $setAffection("PRG", 2)
+    jump daymenu
+
+label PRG006_b:
+    if getVar("PRG006_walking") <= 3:
+        MC "You're sure I can't help?"
+        PRG "I-it's fine, don't worry about it."
+        MC "Well, let's just keep walking together?"
+        PRG "S-sure."
+        "We slowly made our way through campus, one cautious step at a time. I tried to keep a conversation up with her, but the focus and exertion it took her to keep the boxes aloft and balanced took up all her attention."
+        "Finally, she set the pile of boxes down to rest her hands."
+        jump PRG006_menu
+    else:
+        MC "Are you sure?"
+        show PRG angry
+        PRG "Yes, Hotsure-san!"
+        show PRG neutral
+        PRG "..."
+        show PRG sad
+        PRG "We're almost there, anyhow..."
+        "A little shocked at her outburst, I walked the rest of the way with her in silence."
+        MCT "Why is she being so stubborn...?"
+        jump PRG006_end
+
+label PRG007:
+    scene Cafeteria with fade
+    "After our morning classes, I headed over to the cafeteria for lunch. However, the queue was surprisingly long. It seemed I joined in at the peak hour."
+    "I took a moment to glance around, looking for potential tables to sit at. A good portion of them were already taken. But then I spotted Aida, sitting alone at one of the big tables, hunched over her food."
+    MCT "Huh, she’s not with Alice? I’ll drop by once I’ve got my lunch."
+    "Once I had the plastic tray with my lunch, I walked over to the spot where Aida had been sitting before."
+    "However, a large group of students now occupied the table alongside her, the only seat available right between her and the group. I made my way to her side of the table."
+    show PRG neutral with dissolve
+    MC "Hey Kodama-san!"
+    show PRG surprised
+    PRG "Ah! H-hi, Hotsure-san."
+    MC "Mind if I sit next to you? You seem like you could use the company."
+    show PRG sad
+    PRG "O-oh, really? Hrm..."
+    PRG "She looked back down at her boxed lunch for a moment,"
+    show PRG neutral
+    extend " then nodded gently."
+    "I took that as my cue to sit down in the chair next to her, between the group and Aida. We both dug into our food, but after a minute or so, my curiosity got the better of me."
+    MC "So, uh… no Alice today?"
+    PRG "Well... She’s taking care of something personally, but she wants me on call in case she needs me."
+    MC "On call, huh..."
+    MCT "That does sound like something she would say."
+    PRG "Y-yes."
+    MC "Well… let’s make the best of it then, hm?"
+    "Before she could get a word out, the environment got a lot louder."
+    hide PRG with dissolve
+    "I looked around the room, already sensing a shift in atmosphere from where I was. Up ahead were two students who seemed like they were having an argument, though the already loud environment prevented me from hearing what about."
+    "It turned out to be more than a regular disagreement, however. Things became physical, and each push in the already-busy cafeteria made the air more and more tense, and I was starting to get worried."
+    MCT "I should do something before anyone gets hurt over there..."
+    "Fortunately, a nearby teacher made her way through the crowd and dispersed the fighting students, and it dialed down relatively quickly."
+    MC "I let out a sigh and turned back to the table, only to notice Aida had been holding onto my shoulder with both hands, her tiny fingers wrapped around the cuff of my shirt."
+    show PRG unique with dissolve
+    MCT "Huh?"
+    "The conflict took only about a minute, but I neither recalled nor noticed Aida touching me. Once she realized that {i}I{/i} noticed, she quickly let go and returned to eating position at the table, intensely focused on her lunch."
+    menu:
+        "Are you alright?":
+            $setAffection("PRG", 1)
+            show PRG sad
+            PRG "Y-yes, I’m fine."
+            MC "You sure? I mean… I think it’s normal to be concerned when a conflict occurs. Everyone responds differently. I was about to try to stop them, but thankfully there was no need for that."
+            "Aida turned and looked at my face, before diverting her eyes again. But she nodded and gave a slight smile."
+            show PRG neutral
+            PRG "Yeah… Thank you, Hotsure-san."
+            MC "No problem."
+            MC "Anyway, glad that’s over. Let’s enjoy that free time, shall we?"
+            show PRG happy
+            PRG "Sure!"
+            "Her voice had a sudden cheer to it. She dug her chopsticks into her lunch with more energy than before."
+        "Were you scared?":
+            $setAffection("PRG", -1)
+            show PRG sad
+            PRG "Ye-... I mean… sorry."
+            MC "Hm? There’s no need to be. I got a bit scared too. It could’ve easily gotten ugly, but fortunately the teacher got between them before that happened."
+            "Aida sat there in silence, not even eating her food. I felt I should probably switch topics..."
+            MC "Anyway, glad that’s over. Let’s enjoy that free time, shall we?"
+            "Aida gave a slight nod... I took that as a sign to continue eating. That’s what we’re here for."
+        "Good thing the teacher intervened...":
+            show PRG sad
+            PRG "Y-yes, I don’t like to think about what would’ve happened if…"
+            MC "But it didn’t, fortunately. Even if they would have fought, the students around them would’ve probably stopped them before either of them got seriously injured. That’s what I like to think, anyway."
+            show PRG happy
+            PRG "Yeah, you’re probably right."
+            MC "Anyway, glad that’s over. Let’s enjoy that free time, shall we?"
+            show PRG neutral
+            PRG "All r-right. Sounds good to me."
+    "The remainder of the lunch went smooth. We both enjoyed our lunch, talked about things that happened in class, general small talk. Once we were done, we walked back to our homeroom for the next class."
+    jump daymenu
+
 label PRG008:
     scene School Inner with fade
     "The day had gone by quickly, classwork barely slowing me down. With little else to do before dinner, I went to find Aida, probably in the cooking classroom again."
@@ -677,6 +916,186 @@ label PRG008_3_a:
     $ setAffection("PRG", 1)
     jump daymenu
     
+label PRG009:
+    scene School Exterior with fade
+    "After finishing my homework for the day, I decided to take a walk around, get some fresh air.  As I passed by the vending machines, I saw Aida sitting at one of the picnic tables, looking at something in her hands."
+    show PRG neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
+    PRG "..."
+    "I approached Aida from the side, not trying to be sneaky, just that's how my path wound up intersecting her. As I got close, I recognized the paper she was staring at by the distinct shape and size."
+    MC "Looking at your results, huh?"
+    show PRG surprised_flip
+    PRG "Eep!"
+    show PRG neutral_flip
+    PRG "O-oh, Hotsure-San! I, uh, y-you... Um..."
+    "Aida whipped the paper behind her in the least convincing attempt at hiding something I think I'd ever seen."
+    MC "..."
+    PRG "..."
+    MC "...Soo, checking out your results again?"
+    show PRG sad at Position (xpos=0.2, xanchor=0.5) with dissolve
+    pause 1.5
+    hide PRG sad with dissolve
+    show PRG neutral with dissolve 
+    PRG "...Yes."
+    MC "...Is something the matter? I mean, I understand if you don't want to tell me, but it seems like it's causing you distress."
+    "Aida clutched the paper to her chest, and I could tell from the bits that were sticking out that it had been completely crumpled up and smoothed out numerous times."
+    MC "It's okay! Really! I just... I hate to see someone as nice as you upset, I couldn't not at least ask..."
+    show PRG happy 
+    PRG "Hotsure-san..."
+    show PRG neutral
+    PRG "..."
+    MC "Is it okay if I sit?"
+    PRG "Oh, ah... s-sure, I guess."
+    "Aida scooted over for me, even though there was plenty of room on the bench.  I sat down and looked out towards the sunset-lit clouds."
+    MC "You know, I was so worried when I first found out what mine was.  The hair, that is."
+    PRG "..."
+    MC "I was worried I was going to be growing it everywhere- on my arms, on my chest, my back..."
+    PRG "..."
+    MC "Even on my butt!  Can you imagine, having hair growing out of your butt long enough to style?!"
+    show PRG aroused
+    PRG "{i}*Snrghk!*{/i}"
+    "Aida tried to hold it back, but the absurdity of the image was too much for her and she laughed."
+    MC "Ah, there we go, that broke the ice."
+    show PRG neutral
+    PRG "Hotsure-san..."
+    MC "Well hey, it got you to stop thinking about whatever you were worried about for a second, didn't it?"
+    show PRG happy
+    PRG "..."
+    show PRG neutral
+    PRG "..."
+    MCT "Hm, this doesn't seem to be working... Maybe I should just go..."
+    "I waited for a little while longer, then decided to leave. But right as I put my hands on my knees to push myself up off the bench..."
+    PRG "What... What do you really think about it?"
+    MC "Excuse me?"
+    "Aida unfolded her results and looked at it again, then looked over to me."
+    PRG "Y-your change. How do... how do you feel? How do you make it through the day?"
+    menu:
+        "Well, I'm worried.":
+            MC "Well, I'm worried, of course."
+            PRG "You... You are?"
+            MC "Absolutely. We're dealing with such major uncharted territory.  I mean, sure, it's \"only\" hair, but how fast is it going to grow?  Is it going to suck all the color out of me early, leaving my with white old man hair before I'm 30?"
+            MC "Where's all the hair coming from, is it going to, I don't know, leech the hard stuff out of my skull to fuel it?"
+            PRG "..."
+            MC "I don't think anyone here is completely carefree about being here."
+            PRG "Mizutani-san seems pretty okay with hers. She tells just about everyone she meets, it seems."
+            MC "Hahaha, well, Mizutani-san might be a special case... She seems excited about everything."
+            PRG "Heh..."
+            MC "But, so, are you worried about yours? Do you need... I don't know, someone to confide in? Rant to?  If I can help, I'd like to."
+            PRG "That's..."
+            show PRG happy
+            PRG "That's very nice of you, Hotsure-san..."
+            show PRG neutral
+            PRG "But I... don't want to talk about it."
+            show PRG sad
+            PRG "I think... I should go now.  I'm sorry for bothering you."
+            MC "Are you sure?  It's not a bother, really."
+            show PRG neutral_flip at Position (xpos=0.5, xanchor=0.5) with dissolve
+            PRG "..."
+            show PRG sad
+            PRG "No, I-I should get going..."
+        "Actually, I'm kind of excited.":
+            MC "Actually, I'm kind of excited for it."
+            show PRG surprised
+            PRG "R-Really?  Why?   How?"
+            MC "Well, really, how interesting is one's hair, normally? I mean, there can be fun styles, but how interesting is hair by itself?"
+            show PRG neutral
+            PRG "Not... really, I guess?"
+            MC "Exactly. But now, what's my hair going to be like?  Are the strands going to be super thick? Are they going to split into smaller hairs as they grow out? Scientists are going to be testing and examining my hair in a laboratory, how neat is that?"
+            PRG "But... but what about... what if something goes wrong?"
+            MC "So what if it does? It's hair, it'll grow back. And apparently quickly, at that."
+            PRG "No, I mean, like, like... I, what if it hurts, or if it goes out of control, or makes you look weird?"
+            "I snorted, looking over to Aida and smiling when she met my eyes for a moment, before she quickly glanced back down."
+            MC "Well, I mean, I guess I'll deal with it.  It's not like I'm not in the best place in the world to deal with it, right?"
+            PRG "I suppose..."
+            MC "Come on, we're in probably the most accepting place for these kind of special attributes. Whatever happens to any of us here... well, it will be an adventure, right?  Sure, it'll have its ups and downs, but nothing terrible's going to happen to us, not here of all places."
+            PRG "..."
+            show PRG unique
+            PRG "W-would... I mean, u-um... is it okay, uh, t-to..."
+            "I could hear the paper crinkling in her hands as she fidgeted, staring at her knees."
+            PRG "W-would you help me, if it's not any t-trouble?  I'm n-n-not much good at adventures..."
+            MC "Sure, absolutely. What do you need?"
+            show PRG surprised
+            PRG "Oh! N-nothing right now, I- I wouldn't put you on the sp-p-pspot like that."
+            MC "Well, you just let me know, okay? I hate to see someone as nice as you upset if I can help it."
+            show PRG neutral
+            PRG "..."
+            show PRG happy at Transform(xzoom=-1) #TODO: flip
+            PRG "...!"
+            show PRG neutral
+            PRG "*Ahem*, y-yes, I will, i-if, if it's not a bother."
+            PRG "...Thank you, Hotsure san. I, I think, um, I'll be going now..."
+            MC "Sure, no problem!"
+            "Both of us got off the bench and said our goodbyes, but something occurred to me before she turned away."
+            if isEventCleared("PRG005"):
+                MC "...Still don't wanna tell me what yours is?"
+                show PRG neutral_flip
+                PRG "I..."
+                show PRG neutral
+                show PRG neutral_flip
+                show PRG neutral
+                show PRG neutral_flip
+                PRG "..."
+                PRG "I'm s-sorry, no."
+                MC "*sigh*"
+                MC "All right, well... I suppose sooner or later the answer's gonna be obvious one way or another."
+                PRG "I... I'm s-sorry, really..."
+                hide PRG neutral with dissolve
+                pause 0.3
+                show PRG neutral with dissolve
+                PRG "..."
+                show PRG sad
+                hide PRG sad with dissolve
+                MC "..."
+            else:
+                MC "So... mind if I ask what yours is?  I've told you mine.."
+                PRG "...!"
+                PRG "I... I..."
+                show PRG sad
+                PRG "..."
+                MC "Hey, hey, it's okay. I just, a burden shared is a burden halved, you know?"
+                PRG "...I'm... I'm sorry, Hotsure-san. I'm not..."
+                show PRG sad at Transform(xzoom=-1) #TODO: flip
+                MC "Oh, well, um... Okay, Kodama-san. See you in class..."
+                hide PRG sad
+                MCT "I wonder what she's got that's got her so upset...?"
+        "I try not to think about it.":
+            MC "Honestly?  I try not to think about it."
+            show PRG surprised
+            PRG "R-really?"
+            MC "Yeah.  Just kinda file it away and leave it there."
+            PRG "But how... h-how do you do it?"
+            MC "...Do what?"
+            PRG "Just- just ignore it! Ignore whatever's changing with you??"
+            show PRG angry
+            PRG "Th-they said it was permanent! That we'll, we'll, we're never going to get back to the way we were!"
+            MC "That's {i}exactly{/i} why it's easy to ignore."
+            show PRG neutral
+            PRG "...?"
+            MC "Let me ask you this: If I told you it was going to rain tomorrow, what would you do?"
+            PRG "Eh?  B-but I didn't hear anything about-"
+            MC "Hypothetically. Hypothetically, you know 100\%\ that it was going to rain tomorrow.  What would you do?"
+            PRG "W-well, I don't know.  Uh, I, well I'd get my umbrella.. Maybe a raincoat if it was bad... I think I have some galoshes if it was really raining..."
+            MC "But what would you do tonight?"
+            PRG "Tonight?"
+            MC "Yeah. It's raining tomorrow, what do you do different tonight?"
+            PRG "I- I don't know, do I have laundry out, is my house in a flood zone...?"
+            MC "No, nothing like that. Your home is fine, but it's raining tomorrow. What do you do?"
+            show PRG unique
+            PRG "I- I don't know. Nothing, I guess?  I mean, it's not raining yet, right?"
+            MC "No, it's not. You don't bother doing anything about it because it hasn't happened yet."
+            "Aida nodded a few times, brow furrowed, until she closed her eyes and her features fell."
+            show PRG neutral
+            PRG "Oh... I see."
+            MC "Exactly. You can't do anything about the rain before it happens, you can't stop it when it does happen, but you can take care of yourself and protect yourself from the worst of it."
+            MC "If everything the nurses, Tashi-Sensei, and the older students have said is true, whatever's going to happen is {i}going{/i} to happen. So why worry about it now?  I might as well worry if the sun is going to come up."
+            MC "When whatever changes we have start actually changing us, I'll see what I need to do. Do I just need the umbrella?  Do I need a coat, too?  Is it so bad I need galoshes?"
+            MC "Whatever the case, I'll deal with it when it happens. Worrying now is like going outside in coat, galoshes, and umbrella every day just in case it rains really badly. So, like I said, I just don't think about it. Does no one any good."
+            PRG "..."
+            "Aida just kind of looked at the ground for a few moments, nodding slowly, then nodding a little faster before looking at me."
+            PRG "I... well... you've given me a lot to think about, Hotsure-san. I-I'm sorry, but I need to go now..."
+            hide PRG neutral with dissolve
+            "She picked up her things and left, leaving me to watch and wonder if she was even capable of not caring about something, or if she was stuck feeling like all the world's a stage and there are always critics in the audience, even down to her innermost feelings..."
+    jump daymenu
+
 label PRG010:
     scene Classroom with fade
     "I wandered into the cooking clubhouse, knowing it was about the time that Aida started cooking for Alice, but before she got too involved in the meal to socialize."

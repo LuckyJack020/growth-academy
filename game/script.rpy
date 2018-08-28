@@ -260,7 +260,7 @@
             return 0
         return affection[girl]
 
-    #Checks which of the girls has the second highest affection. Doesn't account for ties.
+    ##Checks which of the girls has the second highest affection. Doesn't account for ties.
     def getSecondHighest(ignoreGirl):
         highestAffection = 0
         secondGirl = ""

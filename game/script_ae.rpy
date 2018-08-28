@@ -35,34 +35,34 @@ init 2 python:
     datelibrary['AE_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['AE_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['AE001'] = {"name": "AE001", "girls": ["AE"], "location": "library", "conditions": [], "priority": False}
-    eventlibrary['AE002'] = {"name": "AE002", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE001"]], "priority": False}
-    eventlibrary['AE003'] = {"name": "AE003", "girls": ["AE"], "location": "campuscenter", "conditions": [[ConditionEnum.EVENT, "AE002"]], "priority": False}
-    eventlibrary['AE004'] = {"name": "AE004", "girls": ["AE"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "AE003"]], "priority": False}
-    eventlibrary['AE005'] = {"name": "AE005", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": False} #After checkup
-    eventlibrary['AE006'] = {"name": "AE006", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
-    eventlibrary['AE007'] = {"name": "AE007", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE008'] = {"name": "AE008", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE007"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE009'] = {"name": "AE009", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE008"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "location": "library",                                                "conditions": [], "priority": False}
+    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "location": "office",                                          "conditions": [[ConditionEnum.EVENT, "AE001"]], "priority": False}
+    eventlibrary['AE003'] = {"name": "Like Paper Planes in the Wind", "girls": ["AE"], "location": "campuscenter",                  "conditions": [[ConditionEnum.EVENT, "AE002"]], "priority": False}
+    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "location": "dormexterior",               "conditions": [[ConditionEnum.EVENT, "AE003"]], "priority": False}
+    eventlibrary['AE005'] = {"name": "AE005", "girls": ["AE"], "location": "hallway",                                               "conditions": [[ConditionEnum.PRESET]], "priority": False} #After checkup
+    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "location": "office",                           "conditions": [[ConditionEnum.EVENT, "AE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "location": "office",                         "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "location": "office",                 "conditions": [[ConditionEnum.EVENT, "AE007"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "location": "office",                                         "conditions": [[ConditionEnum.EVENT, "AE008"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
     #eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["AE010_deadline"]], [ConditionEnum.ISNIGHTTIME]], "priority": True}
-    eventlibrary['AE010'] = {"name": "AE010", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE011'] = {"name": "AE011", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.OR, [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHANEQUALS, datelibrary["AE010_deadline"]], [ConditionEnum.EVENT, "AE010"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE012'] = {"name": "AE012", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE011"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE013'] = {"name": "AE013", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE012"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE014'] = {"name": "AE014", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE013"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE015'] = {"name": "AE015", "girls": ["AE"], "location": "office", "conditions": [[ConditionEnum.EVENT, "AE014"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE016'] = {"name": "AE016", "girls": ["AE"], "location": "library", "conditions": [[ConditionEnum.EVENT, "AE015"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE017'] = {"name": "AE017", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
-    eventlibrary['AE018'] = {"name": "AE018", "girls": ["AE"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "AE017"], [ConditionEnum.ISDAYTIME]], "priority": False}
-    eventlibrary['AE019'] = {"name": "AE019", "girls": ["AE"], "location": "schoolplanter", "conditions": [[ConditionEnum.EVENT, "AE018"], [ConditionEnum.ISDAYTIME]], "priority": False}
-    eventlibrary['AE020'] = {"name": "AE020", "girls": ["AE"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "AE019"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE021'] = {"name": "AE021", "girls": ["AE"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "AE020"], [ConditionEnum.ISDAYTIME]], "priority": False}
-    eventlibrary['AE022'] = {"name": "AE022", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "AE021"], [ConditionEnum.ISDAYTIME]], "priority": False}
-    eventlibrary['AE023'] = {"name": "AE023", "girls": ["AE"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "AE022"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE024'] = {"name": "AE024", "girls": ["AE"], "location": "roof", "conditions": [[ConditionEnum.EVENT, "AE023"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
-    eventlibrary['AE025'] = {"name": "AE025", "girls": ["AE"], "location": "schoolplanter", "conditions": [[ConditionEnum.EVENT, "AE024"], [ConditionEnum.ISNIGHTTIME]], "priority": False} #TODO: Not sure if schoolplanter
-    eventlibrary['AE026'] = {"name": "AE026", "girls": ["AE"], "location": "dorminterior", "conditions": [[ConditionEnum.EVENT, "AE025"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
-    eventlibrary['AE027'] = {"name": "AE027", "girls": ["AE"], "location": "classroom", "conditions": [[ConditionEnum.EVENT, "AE026"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
+    eventlibrary['AE010'] = {"name": "Like Twin Balloons", "girls": ["AE"], "location": "office",                                   "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "location": "office",                                 "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.OR, [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHANEQUALS, datelibrary["AE010_deadline"]], [ConditionEnum.EVENT, "AE010"]], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "location": "office",                                 "conditions": [[ConditionEnum.EVENT, "AE011"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "location": "office",                                  "conditions": [[ConditionEnum.EVENT, "AE012"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "location": "office",                                      "conditions": [[ConditionEnum.EVENT, "AE013"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "location": "office",                                    "conditions": [[ConditionEnum.EVENT, "AE014"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE016'] = {"name": "A Simple 1000 Requests", "girls": ["AE"], "location": "library",                              "conditions": [[ConditionEnum.EVENT, "AE015"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE017'] = {"name": "A Delectible Discussion", "girls": ["AE"], "location": "cafeteria",                           "conditions": [[ConditionEnum.EVENT, "AE016"]], "priority": False}
+    eventlibrary['AE018'] = {"name": "A Window to the Mind", "girls": ["AE"], "location": "cafeteria",                              "conditions": [[ConditionEnum.EVENT, "AE017"], [ConditionEnum.ISDAYTIME]], "priority": False}
+    eventlibrary['AE019'] = {"name": "Picknicks and Postulation", "girls": ["AE"], "location": "schoolplanter",                     "conditions": [[ConditionEnum.EVENT, "AE018"], [ConditionEnum.ISDAYTIME]], "priority": False}
+    eventlibrary['AE020'] = {"name": "In the Hands of my Confessor", "girls": ["AE"], "location": "classroom",                      "conditions": [[ConditionEnum.EVENT, "AE019"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE021'] = {"name": "Paranoia and Aprehension", "girls": ["AE"], "location": "classroom",                          "conditions": [[ConditionEnum.EVENT, "AE020"], [ConditionEnum.ISDAYTIME]], "priority": False}
+    eventlibrary['AE022'] = {"name": "Plots and Revelations", "girls": ["AE"], "location": "hallway",                               "conditions": [[ConditionEnum.EVENT, "AE021"], [ConditionEnum.ISDAYTIME]], "priority": False}
+    eventlibrary['AE023'] = {"name": "Red Handed and Flustered", "girls": ["AE"], "location": "hallway",                            "conditions": [[ConditionEnum.EVENT, "AE022"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE024'] = {"name": "Movements That Tantilize, Eyes That Tempt", "girls": ["AE"], "location": "roof",              "conditions": [[ConditionEnum.EVENT, "AE023"], [ConditionEnum.ISNIGHTTIME]], "priority": False}
+    eventlibrary['AE025'] = {"name": "Officialized, Notorized, and Documented Love", "girls": ["AE"], "location": "schoolplanter",  "conditions": [[ConditionEnum.EVENT, "AE024"], [ConditionEnum.ISNIGHTTIME]], "priority": False} #TODO: Not sure if schoolplanter
+    eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior",                        "conditions": [[ConditionEnum.EVENT, "AE025"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
+    eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom",                             "conditions": [[ConditionEnum.EVENT, "AE026"], [ConditionEnum.ISDAYTIME]], "priority": False} #TODO: Not sure if dorminterior
 
     
     #classroom
@@ -624,7 +624,7 @@ label AE006:
     AE "It's fine, Hotsure-san. Now, if you will, I have paperwork to do."
     MC "Ok. I'm gonna run down to the store."
     AE "Wait, run?"
-    MC "Yeah, I mean, I don't wanna get more wet than i'm about to, right?"
+    MC "Yeah, I mean, I don't wanna get more wet than I'm about to, right?"
     show AE angry
     AE "Absolutely not."
     MC "Right, so I'll put this over my head and go get another one, put it under my shirt and-"
@@ -905,7 +905,7 @@ label AE008:
 label AE009:
     scene Hallway with fade
     "The sound of rubber squeaking against the laminated floors echoed as I ran down the hall. I briskly rounded the hallway corner, just barely missing another student."
-    MCT "Damnit, Diachi! You just had to play that homemade documentary, didn't you?! Shiori-san is going to tear me to shreds!"
+    MCT "Damnit, Daichi! You just had to play that homemade documentary, didn't you?! Shiori-san is going to tear me to shreds!"
     "I hadn't been keeping an eye on the time. I went back to my dorm to grab a bite to eat before I went to the office, but as soon as I got in Daichi decided it was a good idea to sit me down to show me a video he made about the how the School profits are being diverted to some shady Biotech company that I'd never heard of."
 
     scene Office with fade
@@ -4318,7 +4318,7 @@ label AE026:
     RM "Nope. Because I’ll never get caught."
     MC "Ah..."
     MCT "That is an absolutely psychopathic level of confidence."
-    "Diachi crawled into the vent systems, carefully shutting the grate behind him. As for myself, I walked briskly to class, a renewed sense of self flowing through my body, as though a great weight had been lifted from my shoulders."
+    "Daichi crawled into the vent systems, carefully shutting the grate behind him. As for myself, I walked briskly to class, a renewed sense of self flowing through my body, as though a great weight had been lifted from my shoulders."
     scene Classroom with fade
     "It appeared as though I was one of the last ones to class, as everyone was already in their seats and talking. Of course, the first one on my mind in the room was Shiori-san, who looked up towards me and nodded before bashfully looking back down at her desk. I walked over to her desk, a faint flutter in my heart as I went to talk."
     MC "Um... g-good morning, Shiori-san."
