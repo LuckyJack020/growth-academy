@@ -24,6 +24,7 @@ image GTS aroused = ConditionSwitch(
 image GTS embarassed = ConditionSwitch(
     "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-embarassed.png",
     "True", "Graphics/GTS-1-embarassed.png")
+image GTS unique = "Graphics/GTS-2-unique.png" ##Currently has no unique in stage 1
 
 image Dorm GTS = "Graphics/dorminterior.png"
 

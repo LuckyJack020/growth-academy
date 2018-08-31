@@ -774,10 +774,10 @@ label global000_sit_c2_2:
     hide BE
     hide GTS
     MC "What was your grade school like, Naomi?"
-    show GTS neutral
+    show GTS neutral at Position(xpos=0.75, xanchor=0.5)
     GTS "Mine?"
     MC "Sure, you heard about ours..."
-    show BE neutral
+    show BE neutral at Position(xpos=0.25, xanchor=0.5)
     BE "Yeah, what was yours like, Naomi-san?"
     show GTS neutral
     GTS "Well, ah, it was...{w}pleasant, I suppose."
@@ -787,10 +787,10 @@ label global000_sit_c2_2:
     show GTS happy
     GTS "They had a wonderful garden in the back."
     MC "Well, hopefully this school will be fun for you."
-    hide GTS
-    show BE happy at Position(xpos=0.25, xanchor=0.5)
+    #hide GTS
+    show BE happy
     BE "Yeah! We'll do all we can to make sure you have at least one fun school!"
-    show GTS happy at Position(xpos=0.75, xanchor=0.5)
+    show GTS happy
     GTS "...Thank you, both of you. Now, we musn't be speaking once the principal starts..."
     $ setAffection("GTS", 1)
     $ setScenecount("GTS", 1)

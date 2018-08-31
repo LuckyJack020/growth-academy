@@ -19,6 +19,9 @@ image FMG angry = ConditionSwitch(
 image FMG aroused = ConditionSwitch(
     "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-aroused.png",
     "True", "Graphics/FMG-1-aroused.png")
+image FMG flex = ConditionSwitch(
+    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG-2-flex.png",
+    "True", "Graphics/FMG-1-flex.png")
 
 
 init 2 python:
