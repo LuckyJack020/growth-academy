@@ -1900,7 +1900,7 @@ label BBW013_c2:
     show RM neutral
     RM "Huh? Keisuke?"
     MC "Shiori is looking for you. She said something about a sample the nurse needs to get from you?"
-    show RM embarassed
+    show RM embarrassed
     RM "Crap! Where was she?"
     MC "Back that way."
     hide RM with dissolve

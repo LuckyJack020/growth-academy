@@ -48,7 +48,7 @@ image splash = "Graphics/splashscreen.png"
 image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
 image RM angry = "Graphics/RM-1-angry.png" #Roommate Angry Portrait
 image RM sad = "Graphics/RM-1-sad.png" #Roommate Stern/Glum Portrait
-image RM embarassed = "Graphics/RM-1-embarassed.png" #Roommate Flustered/Embarrassed Portrait
+image RM embarrassed = "Graphics/RM-1-embarrassed.png" #Roommate Flustered/Embarrassed Portrait
 
 image HR neutral = "Graphics/HR-1-neutral.png" #Homeroom Teacher Neutral Portrait
 
@@ -588,7 +588,7 @@ label global000_RM_c3:
     MCT "Am I really going to have to live with this guy?"
     scene Dorm Interior with fade
     "After helping Daichi back through the open window and handing his bags to him {w}(He wouldn't let me carry them out of his sight){w} then checking my admission papers and ID, he finally unlocked the door and let me in."
-    show RM embarassed
+    show RM embarrassed
     RM "Don't get any funny ideas, 'Hotsure Keisuke'. I've got my eye on you..."
     $ setAffection("RM", -3)
     jump global000_RM_after
@@ -605,7 +605,7 @@ label global000_RM_after:
     MC "Yeah..."
     RM "Hmph. Just as I thought."
     MCT "???"
-    show RM embarassed
+    show RM embarrassed
     RM "Haven't you ever seen those people on the news?{w} The giants over ten feet tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
     "Thinking back on it, I had seen some reports, starting when I was a little kid."
     "It wasn't often, but every now and then there'd be some picture or other of a giant-sized man or woman, always Japanese."

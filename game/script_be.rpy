@@ -1122,7 +1122,7 @@ label BE011_c1:
     BE "Eh?"
     MC "I mean, you just went through a sizable growth spurt. Soccer can't be the easiest thing in the world when you look down and just can't see the soccer ball. Your, uh, endowments were probably getting in the way, weren't they?"
     show BE happy
-    BE "Pff. Kei-chan, always thinking about boobs. I now they're magnificent. But, no, that wasn't the reason. I just needed a change. That's all."
+    BE "Pff. Kei-chan, always thinking about boobs. I know they're magnificent. But, no, that wasn't the reason. I just needed a change. That's all."
     MC "Ah okay. Fair enough. Yeah, I uh, sorry I didn't mean to imply anything. Trust me, I had a whole list of non-boob-related chants all ready for you to cheer you on. They're all going to go to waste now! Whatever club you do next I'll have to come up with new ones."
     MC "Unless you end up in like, the chess club or something."
     BE "Are you kidding? You better come up with cheers for that, or it'd be boring otherwise!"
