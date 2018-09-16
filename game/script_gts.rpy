@@ -1605,9 +1605,9 @@ label GTS019:
         "(Draw the Symbol for human)": # +0 Affection
             jump GTS019_c1_1
         "(Draw the Symbol for Sakura)": # +2 Affection
-            jump GTS019_c1_1
+            jump GTS019_c1_2
         "(Draw the Symbol for Happiness)": # +1 Affection
-            jump GTS019_c1_1
+            jump GTS019_c1_3
     
 label GTS019_c1_1:
     "My mind drew a blank as I simply let my hand move with the first thought that came to mind. And as such my work was done almost as soon as it started."
