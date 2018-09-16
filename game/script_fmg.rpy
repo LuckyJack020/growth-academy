@@ -31,17 +31,17 @@ init 2 python:
     datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['FMG001'] = {"name": "FMG001", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": False}
-    eventlibrary['FMG002'] = {"name": "FMG002", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": False}
-    eventlibrary['FMG003'] = {"name": "FMG003", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": False}
-    eventlibrary['FMG004'] = {"name": "FMG004", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": False}
-    eventlibrary['FMG005'] = {"name": "FMG005", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": False}
-    eventlibrary['FMG006'] = {"name": "FMG006", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
-    eventlibrary['FMG007'] = {"name": "FMG007", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": False}
-    eventlibrary['FMG008'] = {"name": "FMG008", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG007"]], "priority": False}
-    eventlibrary['FMG009'] = {"name": "FMG009", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG008"]], "priority": False}
-    eventlibrary['FMG010'] = {"name": "FMG010", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG009"]], "priority": False}
-    eventlibrary['FMG011'] = {"name": "FMG011", "girls": ["FMG", "BBW"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG010"]], "priority": False}
+    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"], "location": "gym", "conditions": [], "priority": False}
+    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"], "location": "gym", "conditions": [[ConditionEnum.EVENT, "FMG001"]], "priority": False}
+    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "FMG002"]], "priority": False}
+    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG003"]], "priority": False}
+    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"], "location": "hallway", "conditions": [[ConditionEnum.PRESET]], "priority": False}
+    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"], "location": "track", "conditions": [[ConditionEnum.EVENT, "FMG004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
+    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG006"]], "priority": False}
+    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG007"]], "priority": False}
+    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "location": "cafeteria", "conditions": [[ConditionEnum.EVENT, "FMG008"]], "priority": False}
+    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG009"]], "priority": False}
+    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "location": "dormexterior", "conditions": [[ConditionEnum.EVENT, "FMG010"]], "priority": False}
 
 label FMG001:
     scene Track with fade #track might not be the right background?
