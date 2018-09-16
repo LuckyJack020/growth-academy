@@ -26,10 +26,12 @@ image PRG aroused = ConditionSwitch(
     "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-aroused.png",
     "True", "Graphics/PRG-1-aroused.png")
 image PRG unique = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-aroused.png",
-    "True", "Graphics/PRG-1-aroused.png") #TODO: replace when new sprites get implemented
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-unique.png",
+    "True", "Graphics/PRG-1-unique.png")
 
-image PRG surprised_flip = im.Flip("Graphics/PRG-1-surprised.png", horizontal=True)
+image PRG surprised_flip = ConditionSwitch(
+    "gametime > datelibrary['PRG_size_2']", im.Flip("Graphics/PRG-2-surprised.png", horizontal=True),
+    "True", im.Flip("Graphics/PRG-1-surprised.png", horizontal=True))
 
 init 2 python:
     datelibrary['PRG_size_6'] = datetime.date(2005, 12, 10)

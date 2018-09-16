@@ -3937,7 +3937,7 @@ label BBW024_c1_1:
     BBW "I have a dental appointment coming up this weekend. Those are never pleasant, so I’m edge."
     BBW "That I would have this trouble now, when I need serenity…"
     MC "There have to be other places where you can find solitude."
-    jump BBW_c1_2
+    jump BBW024_c1_2
 
 label BBW024_c1_2:
     menu:

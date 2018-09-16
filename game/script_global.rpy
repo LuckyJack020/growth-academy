@@ -73,6 +73,7 @@ init 1 python:
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     datelibrary['testday'] = datetime.date(2005, 4, 7)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
+    datelibrary['day_0'] = datetime.date(2005, 4, 3)
     
     #Japanese holidays:
     #January 1: New Year’s Day
@@ -546,7 +547,7 @@ label global000_RM_c1:
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM neutral with dissolve
-    RM "Alright, you check out...{w}My name's Daichi Utagashi."
+    RM "Alright, you check out...{w}My name's Daichi Kuuchibiru."
     $ setAffection("RM", -1)
     scene Dorm Interior with fade
     show RM neutral
@@ -561,7 +562,7 @@ label global000_RM_c2:
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM neutral with dissolve
-    RM "Alright, you check out...{w}My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
+    RM "Alright, you check out...{w}My name's Daichi Kuuchibiru.{w} Come in, I don't like leaving the door open."
     scene Dorm Interior with fade
     show RM neutral
     jump global000_RM_after
@@ -574,7 +575,7 @@ label global000_RM_c3:
     "I left my luggage by the door and ran around the dorm, coming around the other side just in time to see him struggling out the window."
     show RM angry with vpunch
     UNKNOWN "Aaah! D-Damn you!"
-    RM "Daichi Utagashi isn't going without a fight!"
+    RM "Daichi Kuuchibiru isn't going without a fight!"
     "Daichi tried to go back inside, but he had already squirmed too far out to get back through the window."
     RM "Rrrgh!{w} Hrff!{w} Nnngh...{w}Dammit, I'm s-stuck!"
     MC "Will you calm down for a second and tell me what's wrong???"
@@ -1157,7 +1158,7 @@ label End:
     centered "During each scene, an \"affection\" score for each of the girls were recorded based on your choices."
     centered "In the full game, they will be very important in where the story will lead; including some exclusive plot events and the chance for the girl to fall in love with you."
     centered "For now, they're just plain numbers; here's how you did!"
-    centered "Inoue Honoka: [BE_Affection] \n Yamazaki Naomi: [GTS_Affection] \n Mizutani Akira: [FMG_Affection] \n Matsumoto Shiori: [AE_Affection] \n Alice Nikumaru: [BBW_Affection] \n Kodama Aida: [PRG_Affection] \n Daichi Utagashi: [RM_Affection]"
+    centered "Inoue Honoka: [BE_Affection] \n Yamazaki Naomi: [GTS_Affection] \n Mizutani Akira: [FMG_Affection] \n Matsumoto Shiori: [AE_Affection] \n Alice Nikumaru: [BBW_Affection] \n Kodama Aida: [PRG_Affection] \n Daichi Kuuchibiru: [RM_Affection]"
     
     centered "Thanks for playing!"
 
