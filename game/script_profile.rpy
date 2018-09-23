@@ -7,6 +7,8 @@ init python:
             "DOB": "1/1/2000",
             "height": [("day_0", 100)],
             "weight": [("day_0", 100)],
+            "factor": "Hair growth",
+            "factorlimit": "",
             "desc": [
                 ([], "It's Kei-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -20,6 +22,8 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("BE_size_2", 200), ("day_0", 100)],
             "BWH": [("BE_size_2", [9999, 50, 50]), ("day_0", [999, 50, 50])],
+            "factor": "Breast growth",
+            "factorlimit": "BE_size_3",
             "desc": [
                 ([], "It's Honkers."),
                 ([("test", False)], "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
@@ -34,6 +38,8 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("AE_size_2", 200), ("day_0", 100)],
             "BWH": [("AE_size_2", [50, 50, 9999]), ("day_0", [50, 50, 999])],
+            "factor": "Butt growth",
+            "factorlimit": "AE_size_3",
             "desc": [
                 ([], "It's Shiori-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -47,6 +53,8 @@ init python:
             "height": [("GTS_size_2", 9999), ("day_0", 1000)],
             "weight": [("GTS_size_2", 200), ("day_0", 100)],
             "BWH": [("day_0", [999, 50, 50])],
+            "factor": "Height growth",
+            "factorlimit": "GTS_size_3",
             "desc": [
                 ([], "It's Naomi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -60,6 +68,8 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("FMG_size_2", 200), ("day_0", 100)],
             "BWH": [("day_0", [50, 50, 999])],
+            "factor": "Muscle growth",
+            "factorlimit": "FMG_size_3",
             "desc": [
                 ([], "It's Akira-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -73,6 +83,8 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("BBW_size_2", 1500), ("day_0", 100)],
             "BWH": [("BBW_size_2", [50, 9999, 50]), ("day_0", [50, 999, 50])],
+            "factor": "Fat growth",
+            "factorlimit": "BBW_size_3",
             "desc": [
                 ([], "It's Alice-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -86,6 +98,8 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("PRG_size_2", 200), ("day_0", 100)],
             "BWH": [("PRG_size_2", [50, 9999, 50]), ("day_0", [50, 999, 50])],
+            "factor": "Fertility growth",
+            "factorlimit": "PRG_size_3",
             "desc": [
                 ([], "It's Aida-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -98,6 +112,8 @@ init python:
             "DOB": "1/1/2000",
             "height": [("day_0", 100)],
             "weight": [("day_0", 100)],
+            "factor": "None",
+            "factorlimit": "",
             "desc": [
                 ([], "It's Daichi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -110,6 +126,8 @@ init python:
             "DOB": "1/1/2000",
             "height": [("day_0", 100)],
             "weight": [("day_0", 100)],
+            "factor": "Character loss",
+            "factorlimit": "day_0",
             "desc": [
                 ([], "It's Nobody-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -125,6 +143,11 @@ init python:
             for t in profiles[key][stat]:
                 if gametime > datelibrary[t[0]]:
                     return str(t[1][0]) + " / " + str(t[1][1]) + " / " + str(t[1][2])
+        elif stat == "factor":
+            if getFlag(key + "_factor") or (profiles[key]["factorlimit"] != "" and gametime > datelibrary[profiles[key]["factorlimit"]]):
+                return profiles[key]["factor"]
+            else:
+                return "???"
         else:
             for t in profiles[key][stat]:
                 if gametime > datelibrary[t[0]]:
@@ -140,7 +163,7 @@ init python:
                     useDesc = False
                     break
             if useDesc:
-                d += desc[1]
+                d += desc[1] + " "
         return d
 
 label profileselect:
@@ -184,8 +207,10 @@ screen profileview:
             text "Name:" + profiles[activeprofile]["name"]
             text "DOB: " + profiles[activeprofile]["DOB"]
             hbox:
+                spacing 16
                 text "Height:" + fetchProfileStat(activeprofile, "height") + " cm"
                 text "Weight:" + fetchProfileStat(activeprofile, "weight") + " kg"
+            text "Factor: " + fetchProfileStat(activeprofile, "factor")
             if not profiles[activeprofile]["sex"]:
                 text "BWH: " + fetchProfileStat(activeprofile, "BWH")
         text fetchDescription(activeprofile)
