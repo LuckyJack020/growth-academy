@@ -7,7 +7,9 @@ init python:
             "DOB": "1/1/2000",
             "height": [("day_0", 100)],
             "weight": [("day_0", 100)],
-            "desc": "It's Kei-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Kei-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "BE":
         {
@@ -18,7 +20,10 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("BE_size_2", 200), ("day_0", 100)],
             "BWH": [("BE_size_2", [9999, 50, 50]), ("day_0", [999, 50, 50])],
-            "desc": "It's Honkers. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Honkers."),
+                ([("test", False)], "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a replacement line.")]
         },
         "AE":
         {
@@ -29,7 +34,9 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("AE_size_2", 200), ("day_0", 100)],
             "BWH": [("AE_size_2", [50, 50, 9999]), ("day_0", [50, 50, 999])],
-            "desc": "It's Shiori. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Shiori-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "GTS":
         {
@@ -40,7 +47,9 @@ init python:
             "height": [("GTS_size_2", 9999), ("day_0", 1000)],
             "weight": [("GTS_size_2", 200), ("day_0", 100)],
             "BWH": [("day_0", [999, 50, 50])],
-            "desc": "It's Naomi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Naomi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "FMG":
         {
@@ -51,7 +60,9 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("FMG_size_2", 200), ("day_0", 100)],
             "BWH": [("day_0", [50, 50, 999])],
-            "desc": "It's Akira. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Akira-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "BBW":
         {
@@ -62,7 +73,9 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("BBW_size_2", 1500), ("day_0", 100)],
             "BWH": [("BBW_size_2", [50, 9999, 50]), ("day_0", [50, 999, 50])],
-            "desc": "It's Alice. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Alice-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "PRG":
         {
@@ -73,7 +86,9 @@ init python:
             "height": [("day_0", 100)],
             "weight": [("PRG_size_2", 200), ("day_0", 100)],
             "BWH": [("PRG_size_2", [50, 9999, 50]), ("day_0", [50, 999, 50])],
-            "desc": "It's Aida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Aida-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "RM":
         {
@@ -83,7 +98,9 @@ init python:
             "DOB": "1/1/2000",
             "height": [("day_0", 100)],
             "weight": [("day_0", 100)],
-            "desc": "It's Daichi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Daichi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         },
         "DUMMY":
         {
@@ -93,7 +110,9 @@ init python:
             "DOB": "1/1/2000",
             "height": [("day_0", 100)],
             "weight": [("day_0", 100)],
-            "desc": "It's a character who exists only to test the fact that two columns exist. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."
+            "desc": [
+                ([], "It's Nobody-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([("test", True)], "Hello this is a second line.")]
         }
     }
     profilepages = {"main": ["MC", "DUMMY", "BE", None, "AE", None, "GTS", None, "FMG", None, "BBW", None, "PRG", None],
@@ -111,6 +130,18 @@ init python:
                 if gametime > datelibrary[t[0]]:
                     return str(t[1])
         return ""
+
+    def fetchDescription(key):
+        d = ""
+        for desc in profiles[key]["desc"]:
+            useDesc = True
+            for flag in desc[0]:
+                if getFlag(flag[0]) != flag[1]:
+                    useDesc = False
+                    break
+            if useDesc:
+                d += desc[1]
+        return d
 
 label profileselect:
     scene black
@@ -157,6 +188,6 @@ screen profileview:
                 text "Weight:" + fetchProfileStat(activeprofile, "weight") + " kg"
             if not profiles[activeprofile]["sex"]:
                 text "BWH: " + fetchProfileStat(activeprofile, "BWH")
-        text profiles[activeprofile]["desc"]
+        text fetchDescription(activeprofile)
     
     textbutton "Back" action Jump("profileselect") yalign .95

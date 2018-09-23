@@ -16,8 +16,7 @@
     locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track', 'musicclassroom']
     debuginfo = False
     debugenabled = False
-    debugscene = ""
-    debugsceneinput = ""
+    debuginput = ""
     debugpriorities = ""
     gametime = datetime.date(2005, 4, 4)
     
@@ -306,6 +305,12 @@
             return vars[id]
         else:
             return None
+    
+    def debugListFlags():
+        l = ""
+        for f in flags:
+            l += f + ","
+        return l
         
     def addMeeting(event, deltatime, val, eve):
         if deltatime == DeltaTimeEnum.NUMDAYS:
@@ -534,15 +539,22 @@ screen daymenu:
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
         
 screen debugmenu:
-    $debugscene = ""
-    $debugsceneinput = ""
-    grid 3 9:
+    $debuginput = ""
+    grid 3 11:
         xalign 0.5
         yalign 0.5
         
+        text "Input:"
+        input value VariableInputValue("debuginput")
+        text ""
+        
         text "Show Scene:"
-        input value VariableInputValue("debugsceneinput")
         textbutton "Go!" action Jump("debugscene")
+        text ""
+        
+        textbutton "List Flags" action Jump("debugflaglist")
+        textbutton "Set Flag" action Jump("setflag")
+        textbutton "Unset Flag" action Jump("unsetflag")
         
         text "Girl"
         text "Affection"
@@ -635,13 +647,25 @@ screen debugmenu:
         textbutton "Return to game" action Jump("daymenu_noadvance")
         text ""
         text ""
-        
+
+screen debugflaglist:
+    vbox:
+        text debugListFlags()
+        textbutton "Return" action Jump("debugmenu")
         
 label debugscene:
-    if debugsceneinput in eventlibrary:
-        $activeevent = debugsceneinput
+    if debuginput in eventlibrary:
+        $activeevent = debuginput
         jump startevent
     "I couldn't call that scene. Check the spelling and case (it's case sensitive, for example 'BE001')"
+    jump debugmenu
+
+label setflag:
+    $setFlag(debuginput, True)
+    jump debugmenu
+
+label unsetflag:
+    $setFlag(debuginput, False)
     jump debugmenu
 
 label daymenu:
@@ -746,6 +770,12 @@ label debugmenu:
     scene black
     window hide None
     call screen debugmenu
+    window show None
+
+label debugflaglist:
+    scene black
+    window hide None
+    call screen debugflaglist
     window show None
 
 label startevent:
