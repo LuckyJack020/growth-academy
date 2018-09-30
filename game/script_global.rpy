@@ -841,6 +841,7 @@ label global000_sit_c3_2:
     "We sat there, listening to the Principal's speech. I noticed Aida-san leaning a little closer into me as it went on."
     $ setAffection("PRG", 1)
     $ setScenecount("PRG", 1)
+    $ setFlag("global1000_aidasit")
     jump global000_sit_after
 
 label global000_sit_after:
