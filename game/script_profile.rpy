@@ -1,4 +1,17 @@
 init python:
+    #LIST OF DATES SHOULD BE IN REVERSE ORDER (LAST EVENT IS FIRST IN LIST)
+    #name: (string) Name of character
+    #affection: (string or None) Affection index of character, if tracked. If not, then "None"
+    #DOB: (string) Birthday of character
+    #height: (list of tuple<string, int>) Height of character. String in tuple corresponds to date code, integer corresponds to height in cm.
+    #weight: (list of tuple<string, int>) Weight of character. String in tuple corresponds to date code, integer corresponds to weight in kg.
+    #factor: (string) Description of factor. Hidden until flag "<key>_factor" is raised, or date code of Factorlimit has been passed.
+    #factorlimit: (string) Datecode, after which Factor (above) is revealed. If empty (""), then this functionality is ignored.
+    #pimgdates: (list of string or None) List of datecodes for size changes to make updating profile images work. If none, then profile image does not update.
+    #desc: (list of tuple<list of tuple<string, boolean>, string>)
+    #Outer list is a list of description lines, each description line being a list of conditions and a line added to the description if all the conditions pass.
+    #Condition list is a list of tuples, the first string in the tuple being a flag, and the second being a boolean value for whether the flag should exist or not if the condition passes.
+    
     profiles = {"MC":
         {
             "name": "Keisuke Hotsure",
@@ -9,6 +22,7 @@ init python:
             "weight": [("day_0", 100)],
             "factor": "Hair growth",
             "factorlimit": "",
+            "pimgdates": None,
             "desc": [
                 ([], "It's Kei-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -24,6 +38,7 @@ init python:
             "BWH": [("BE_size_2", [9999, 50, 50]), ("day_0", [999, 50, 50])],
             "factor": "Breast growth",
             "factorlimit": "BE_size_3",
+            "pimgdates": ["BE_size_2", "day_0"],
             "desc": [
                 ([], "It's Honkers."),
                 ([("test", False)], "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
@@ -40,8 +55,9 @@ init python:
             "BWH": [("AE_size_2", [50, 50, 9999]), ("day_0", [50, 50, 999])],
             "factor": "Butt growth",
             "factorlimit": "AE_size_3",
+            "pimgdates": ["AE_size_2", "day_0"],
             "desc": [
-                ([], "It's Shiori-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([], "Graduated Summa Cum Laude from the Tokyo Provincial Highschool with exemplary status, despite not receiving prior private education on record. President of the Student Council, Disciplinary Committee and Class President from enrollment to graduation; non-electorate. Came highly recommended for compulsory election into the Seichou Student Council based on effectiveness of position. Prior to enrollment into Seichou, received a scholarship to study law with beyond sufficient placement examination; on hold until graduation."),
                 ([("test", True)], "Hello this is a second line.")]
         },
         "GTS":
@@ -55,6 +71,7 @@ init python:
             "BWH": [("day_0", [999, 50, 50])],
             "factor": "Height growth",
             "factorlimit": "GTS_size_3",
+            "pimgdates": ["GTS_size_2", "day_0"],
             "desc": [
                 ([], "It's Naomi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -70,6 +87,7 @@ init python:
             "BWH": [("day_0", [50, 50, 999])],
             "factor": "Muscle growth",
             "factorlimit": "FMG_size_3",
+            "pimgdates": ["FMG_size_2", "day_0"],
             "desc": [
                 ([], "It's Akira-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -85,6 +103,7 @@ init python:
             "BWH": [("BBW_size_2", [50, 9999, 50]), ("day_0", [50, 999, 50])],
             "factor": "Fat growth",
             "factorlimit": "BBW_size_3",
+            "pimgdates": ["BBW_size_3", "BBW_size_2", "day_0"],
             "desc": [
                 ([], "It's Alice-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -100,6 +119,7 @@ init python:
             "BWH": [("PRG_size_2", [50, 9999, 50]), ("day_0", [50, 999, 50])],
             "factor": "Fertility growth",
             "factorlimit": "PRG_size_3",
+            "pimgdates": ["PRG_size_2", "day_0"],
             "desc": [
                 ([], "It's Aida-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a second line.")]
@@ -114,31 +134,18 @@ init python:
             "weight": [("day_0", 100)],
             "factor": "None",
             "factorlimit": "",
+            "pimgdates": None,
             "desc": [
-                ([], "It's Daichi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
-                ([("test", True)], "Hello this is a second line.")]
-        },
-        "DUMMY":
-        {
-            "name": "Character #8",
-            "affection": None,
-            "sex": True,
-            "DOB": "1/1/2000",
-            "height": [("day_0", 100)],
-            "weight": [("day_0", 100)],
-            "factor": "Character loss",
-            "factorlimit": "day_0",
-            "desc": [
-                ([], "It's Nobody-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([], "It's Daichi."),
                 ([("test", True)], "Hello this is a second line.")]
         }
     }
-    profilepages = {"main": ["MC", "DUMMY", "BE", None, "AE", None, "GTS", None, "FMG", None, "BBW", None, "PRG", None],
+    profilepages = {"main": ["MC", None, "BE", None, "AE", None, "GTS", None, "FMG", None, "BBW", None, "PRG", None],
         "minor": ["RM", None, None, None, None, None, None, None, None, None, None, None, None, None]}
     activeprofile = ""
     activepage = "main"
         
-    def fetchProfileStat(key, stat):
+    def getProfileStat(key, stat):
         if stat == "BWH":
             for t in profiles[key][stat]:
                 if gametime > datelibrary[t[0]]:
@@ -154,7 +161,7 @@ init python:
                     return str(t[1])
         return ""
 
-    def fetchDescription(key):
+    def getDescription(key):
         d = ""
         for desc in profiles[key]["desc"]:
             useDesc = True
@@ -165,6 +172,16 @@ init python:
             if useDesc:
                 d += desc[1] + " "
         return d
+    
+    def getProfileString(key):
+        if profiles[key]["pimgdates"] == None:
+            return "Graphics/ui/profiles/" + key + "-pimg.png"
+        else:
+            i = len(profiles[key]["pimgdates"])
+            for d in profiles[key]["pimgdates"]:
+                if gametime > datelibrary[d]:
+                    return "Graphics/ui/profiles/" + key + "-pimg-" + str(i) + ".png"
+                i -= 1
 
 label profileselect:
     scene black
@@ -203,16 +220,16 @@ label profileview:
 screen profileview:
     hbox:
         vbox:
-            image im.Crop("Graphics/ui/profiles/" + activeprofile + "-pimg.png", (50, 0, 300, 400))
+            image im.Crop(getProfileString(activeprofile), (50, 0, 300, 400))
             text "Name:" + profiles[activeprofile]["name"]
             text "DOB: " + profiles[activeprofile]["DOB"]
             hbox:
                 spacing 16
-                text "Height:" + fetchProfileStat(activeprofile, "height") + " cm"
-                text "Weight:" + fetchProfileStat(activeprofile, "weight") + " kg"
-            text "Factor: " + fetchProfileStat(activeprofile, "factor")
+                text "Height:" + getProfileStat(activeprofile, "height") + " cm"
+                text "Weight:" + getProfileStat(activeprofile, "weight") + " kg"
+            text "Factor: " + getProfileStat(activeprofile, "factor")
             if not profiles[activeprofile]["sex"]:
-                text "BWH: " + fetchProfileStat(activeprofile, "BWH")
-        text fetchDescription(activeprofile)
+                text "BWH: " + getProfileStat(activeprofile, "BWH")
+        text getDescription(activeprofile)
     
     textbutton "Back" action Jump("profileselect") yalign .95

@@ -309,7 +309,13 @@
     def debugListFlags():
         l = ""
         for f in flags:
-            l += f + ","
+            l += f + ", "
+        return l
+    
+    def debugListScenes():
+        l = ""
+        for s in allpool:
+            l += s + ", "
         return l
         
     def addMeeting(event, deltatime, val, eve):
@@ -540,7 +546,7 @@ screen daymenu:
         
 screen debugmenu:
     $debuginput = ""
-    grid 3 11:
+    grid 3 12:
         xalign 0.5
         yalign 0.5
         
@@ -550,7 +556,7 @@ screen debugmenu:
         
         text "Show Scene:"
         textbutton "Go!" action Jump("debugscene")
-        text ""
+        textbutton "List All Scenes" action Jump("debugscenelist")
         
         textbutton "List Flags" action Jump("debugflaglist")
         textbutton "Set Flag" action Jump("setflag")
@@ -625,6 +631,13 @@ screen debugmenu:
             textbutton "-" action Function(setScenecount, "PRG", -1)
             text str(scenecounter["PRG"])
             textbutton "+" action Function(setScenecount, "PRG", 1)
+            
+        text "RM"
+        hbox:
+            textbutton "-" action Function(setAffection, "RM", -1)
+            text str(affection["RM"])
+            textbutton "+" action Function(setAffection, "RM", 1)
+        text ""
         
         #hbox:
         #    text "Athletics:"
@@ -651,6 +664,11 @@ screen debugmenu:
 screen debugflaglist:
     vbox:
         text debugListFlags()
+        textbutton "Return" action Jump("debugmenu")
+
+screen debugscenelist:
+    vbox:
+        text debugListScenes()
         textbutton "Return" action Jump("debugmenu")
         
 label debugscene:
@@ -776,6 +794,12 @@ label debugflaglist:
     scene black
     window hide None
     call screen debugflaglist
+    window show None
+
+label debugscenelist:
+    scene black
+    window hide None
+    call screen debugscenelist
     window show None
 
 label startevent:

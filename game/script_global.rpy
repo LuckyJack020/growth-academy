@@ -45,18 +45,23 @@ image Cafe = "Graphics/NYI.png"
 
 image splash = "Graphics/splashscreen.png"
 
-image RM neutral = "Graphics/RM-1-neutral.png" #Roommate Neutral Portrait
-image RM angry = "Graphics/RM-1-angry.png" #Roommate Angry Portrait
-image RM sad = "Graphics/RM-1-sad.png" #Roommate Stern/Glum Portrait
-image RM embarrassed = "Graphics/RM-1-embarrassed.png" #Roommate Flustered/Embarrassed Portrait
+image RM neutral = "Graphics/RM-neutral.png"
+image RM angry = "Graphics/RM-angry.png"
+image RM happy = "Graphics/RM-happy.png"
+image RM sad = "Graphics/RM-sad.png"
+image RM smug = "Graphics/RM-smug.png"
 
-image HR neutral = "Graphics/HR-1-neutral.png" #Homeroom Teacher Neutral Portrait
+image Yuki neutral = "Graphics/yuki-1-neutral.png"
+image Yuki happy = "Graphics/yuki-1-happy.png"
+image Yuki sad = "Graphics/yuki-1-sad.png"
+
+image HR neutral = "Graphics/HR-neutral.png" #Homeroom Teacher Neutral Portrait
 
 define MC = Character('Keisuke', color="#0066CC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')')
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-Sensei', color="#C0C0C0")
-define LE = Character('Yuki', color="#FF91DC")
+define Yuki = Character('Yuki', color="#FF91DC")
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
 define UNKNOWN = Character('???', color="#FFFFFF")
@@ -68,12 +73,14 @@ define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix=
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
 init 1 python:
-    eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    presetdays["4-6-F"] = ["global005"]
-    presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     datelibrary['testday'] = datetime.date(2005, 4, 7)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
     datelibrary['day_0'] = datetime.date(2005, 4, 3)
+    eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": [], "location": "dorminterior", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
+    eventlibrary['RM002'] = {"name": "RM002", "girls": [], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "RM001"]], "priority": 0}
+    presetdays["4-6-F"] = ["global005"]
+    presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
     #Japanese holidays:
     #January 1: New Year’s Day
@@ -589,8 +596,9 @@ label global000_RM_c3:
     MCT "Am I really going to have to live with this guy?"
     scene Dorm Interior with fade
     "After helping Daichi back through the open window and handing his bags to him {w}(He wouldn't let me carry them out of his sight){w} then checking my admission papers and ID, he finally unlocked the door and let me in."
-    show RM embarrassed
+    show RM angry
     RM "Don't get any funny ideas, 'Hotsure Keisuke'. I've got my eye on you..."
+    $setFlag("RM_govagent")
     $ setAffection("RM", -3)
     jump global000_RM_after
 
@@ -606,13 +614,12 @@ label global000_RM_after:
     MC "Yeah..."
     RM "Hmph. Just as I thought."
     MCT "???"
-    show RM embarrassed
+    show RM sad
     RM "Haven't you ever seen those people on the news?{w} The giants over ten feet tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
     "Thinking back on it, I had seen some reports, starting when I was a little kid."
     "It wasn't often, but every now and then there'd be some picture or other of a giant-sized man or woman, always Japanese."
     RM "If you look into the histories and records of all these people, one thing is common to all of them--{w}they {i}ALL{/i} went to school at Seichou Academy!"
     MC "So, what are you saying?"
-    show RM sad
     RM "I'm saying the government brings certain students here and--{w}and does {i}something{/i} to them!"
     show RM angry
     RM "This kind of growth isn't natural,{w} it's statistically impossible for all of these one-in-a-million conditions to keep happening {i}just{/i} to Japanese school-age teens!"
@@ -1149,6 +1156,355 @@ label global005:
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
     "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
+    jump daymenu
+
+label RM001:
+    scene Dorm Interior with fade
+    MCT "Another day of classes over..."
+    "When I arrived back at my room, Daichi was already there, poking some device on his desk very intently with a soldering iron."
+    "I couldn’t really tell what it was, beyond some kind of circuit board."
+    show RM neutral with dissolve
+    RM "..."
+    MCT "To be honest, I still haven’t had a good chance to talk with him yet. Mostly because I don’t really see much of him outside of class."
+    MCT "I guess now is as good of a time as any to try and get to know him."
+    MC "Hey, Daichi."
+    RM "Yes?"
+    menu:
+        "What are you working on?":
+            MC "What are you working on, exactly?"
+            if getAffection("RM") < -2:
+                jump RM001_fail
+            else:
+                jump RM001_c1_1
+        "What do you like to do for fun?":
+            jump RM001_after
+        "Where do you go after class?":
+            MC "So I can’t help but notice you usually come home kind of late. Are you in a club, or something?"
+            if getAffection("RM") < -2:
+                jump RM001_fail
+            else:
+                jump RM001_c1_2
+
+label RM001_c1_1:
+    $setFlag("RM001_c1_1")
+    "He answered me without turning around, opting instead to continue tinkering with the device."
+    RM "A miniature video camera. I want to keep tabs on someone."
+    MC "What, like a teacher? Is that a good idea?"
+    "That last question got his attention. He put the soldering iron down and turned to me, eyes narrowed."
+    RM "It’s something I need to know. Whether it’s a good idea or not is irrelevant."
+    show RM angry
+    RM "Unless you know someone in the class below us who’d be willing to spy for me, this is my best option."
+    MC "Can’t say that I do."
+    MCT "I’m *not* getting my sister involved with this guy."
+    show RM neutral
+    RM "Then I’m using the camera."
+    "I didn’t really have a good response to that. He took the opening to continue his work."
+    MCT "Maybe I should try a lighter topic?"
+    jump RM001_after
+
+label RM001_c1_2:
+    "He answered me without turning around, opting instead to continue tinkering with the device."
+    RM "I’m busy investigating."
+    MC "The school, you mean?"
+    RM "Of course."
+    "An awkward silence descended upon the room."
+    MCT "Maybe I should try a lighter topic?"
+    jump RM001_after
+
+label RM001_fail:
+    "He put down the soldering iron and glared over his shoulder at me."
+    show RM angry
+    RM "None of your business."
+    if getFlag("RM_govagent"):
+        MC "Are you still upset over the ‘I’m a government agent’ thing?"
+        show RM neutral
+        RM "Yes."
+        MC "Look, I’m sorry. I didn’t realize it was such a... sensitive subject."
+    else:
+        MC "Did I do something to offend you?"
+        show RM neutral
+        RM "You don't appreciate the situation we're in, for one."
+        MC "I'm... sorry?"
+    show RM smug
+    RM "Apology accepted - I’ll forgive your ignorance. If you’re willing to take this seriously, I can enlighten you on a few things. Interested?"
+    MCT "Is it too late to change roommates?"
+    MC "Maybe another time."
+    show RM neutral
+    RM "Suit yourself."
+    "An awkward silence descended as he went back to working on... whatever it is."
+    MCT "Maybe I should try a lighter topic?"
+    jump RM001_after
+
+label RM001_after:
+    MC "Hey, what do you like to do for fun? Got any hobbies?"
+    RM "Not really. Haven’t had time lately. Been too busy trying to figure out what’s going on here."
+    MC "Well, what about before you came to the school? Or was it just more conspiracies?"
+    "That comment caused him to finally stop working and turn around to face me."
+    show RM angry
+    RM "Please. I’m not some kind of conspiracy nut. It’s just that this school is too weird."
+    RM "The fact that more people aren’t suspicious of this place is mind-boggling to me."
+    MC "Fine, fine, whatever. What did you do before you came here?"
+    show RM neutral
+    RM "...I read manga, I guess?"
+    MC "That’s a start! What did you read?"
+    RM "I liked Two Pieces. Is that still going?"
+    MC "...It ended like three years ago."
+    show RM sad
+    RM "Oh."
+    MC "You read anything else?"
+    show RM neutral
+    RM "Not really, unless you count studying."
+    MC "..."
+    RM "..."
+    MC "Games? Movies? Music?"
+    RM "No."
+    MC "..."
+    show RM sad
+    RM "..."
+    MC "Well, what about your project there? Do you like tinkering with stuff?"
+    show RM neutral
+    RM "It’s alright, I guess."
+    MC "What about when you graduate? You going to go into electrical engineering or something?"
+    RM "Maybe? I haven’t decided yet."
+    RM "I’ve thought about becoming a teacher, too."
+    MC "Why a teacher? You like learning?"
+    RM "I want kids to get more critical thinking skills, so they won’t just mindlessly obey authority."
+    MC "Oh."
+    RM "..."
+    MC "..."
+    MCT "This is going great."
+    menu:
+        "Can you show me what you’re working on?":
+            jump RM001_c2_1
+        "Well, time to study!":
+            jump RM001_c2_2
+
+label RM001_c2_1:
+    if getFlag("RM001_c1_1"):
+        MC "Well, hey, why don’t you show me what you’re doing with your camera?"
+    else:
+        MC "Well, hey, why don’t you show me your... whatever it is."
+        "He sighed and held up a lens, which was hiding behind some other components."
+        RM "Camera. It’s a camera."
+        MC "Yeah, that."
+    "He paused for a moment."
+    if getAffection("RM") > -3:
+        $setAffection("RM", 1)
+        show RM happy
+        "Eventually his expression relaxed a little."
+        RM "Sure, why not? Pull up a chair."
+        scene black with fade
+        "We spent most of the evening working on his camera. He got a lot more talkative once he started talking about something he was more comfortable with."
+        "He taught me quite a bit about how all the components work."
+        MCT "I don’t know if it’s ever going to be useful, but it was pretty informative."
+        $setSkill("Academics", 1)
+        jump daymenu
+    else:
+        show RM angry
+        "He turned back to his project in a huff."
+        RM "I’m busy. I’ve wasted enough time answering your questions."
+        MC "Fine."
+        jump RM001_c2_2
+
+label RM001_c2_2:
+    MC "Well, I need to study. Have fun with your project."
+    show RM neutral
+    RM "Mmm."
+    "We didn’t say anything to each other for the rest of the night."
+    "The quiet room helped me focus, though."
+    $setSkill("Academics", 1)
+    jump daymenu
+
+label RM002:
+    scene Hallway with fade
+    if gametime_eve:
+        "I followed the crowd out of the classroom as everyone shuffled toward their various clubs or back to their rooms."
+    else:
+        "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
+    "Out of the corner of my eye, inside another classroom, I noticed..."
+    show RM neutral at Position (xpos=0.95, xanchor=0.5) with dissolve
+    pause 2
+    show RM angry
+    "He glared at me and made a beckoning motion."
+    "Resigned, I walked over to him and hissed..."
+    hide RM with dissolve
+    show RM neutral at Position (xpos=0.5, xanchor=0.5) with dissolve
+    MC "What?"
+    RM "I need your help with something."
+    if gametime_eve:
+        MC "Daichi, I’ve got homework to do. Can it wait?"
+    else:
+        MC "Daichi, I'm hungry. Can it wait until after lunch?"
+    RM "No. This is important. It'll be simple, though."
+    RM "All I need you to do is keep watch. If anyone wants to come in here, let me know - just make noise or something, and stall them for a few seconds."
+    jump RM002_choice
+
+label RM002_choice:
+    menu:
+        "Sure.":
+            jump RM002_c1_1
+        "What are you doing, exactly?" if not getFlag("RM002_c1_2"):
+            jump RM002_c1_2
+        "What are you doing, exactly? (disabled)" if getFlag("RM002_c1_2"):
+            pass
+        "This is a stupid idea.":
+            jump RM002_c1_3
+
+label RM002_c1_1:
+    $setFlag("RM002_c1_1")
+    MC "You’re right, that does sound simple. Alright, go ahead."
+    show RM happy
+    $setAffection("RM", 1)
+    RM "Thanks. I’ll be quick."
+    jump RM002_c1_after
+    
+label RM002_c1_2:
+    $setFlag("RM002_c1_2")
+    MC "What exactly are you doing in there?"
+    "After scanning the hallway to make sure nobody was paying attention, he discreetly showed me a familiar circuit board from his bag."
+    RM "I’m placing the camera I made earlier. It shouldn’t take long."
+    MCT "I figured it would be something like that."
+    jump RM002_choice
+
+label RM002_c1_3:
+    MC "This is a stupid idea and you're going to get caught."
+    show RM smug
+    RM "Your resistance to progress has been noted. I won't get caught as long as you do your job."
+    hide RM with dissolve
+    "Before I could protest, he headed into the classroom."
+    MC "Seriously..."
+    jump RM002_c1_after
+
+label RM002_c1_after:
+    scene black with fade
+    pause 2
+    scene Hallway with fade
+    "A few minutes of inconspicuous door blocking later, and the inevitable happened."
+    show Yuki neutral with dissolve
+    UNKNOWN "Hey there! Can I get through?"
+    MCT "Oh, great."
+    menu:
+        "Let her in" if not getFlag("RM002_c1_1"):
+            jump RM002_c2_1
+        "Let her in (disabled)" if getFlag("RM002_c1_1"):
+            pass
+        "Signal Daichi":
+            jump RM002_c2_2
+        "Make up a story":
+            jump RM002_c2_3
+
+label RM002_c2_1:
+    "I never agreed to play lookout for him. To be honest, I wasn’t even really sure why I was still there..."
+    MC "Sure, go ahead."
+    show Yuki happy
+    UNKNOWN "Thanks!"
+    RM "Wait! Wait wait wait!"
+    show Yuki happy at Position (xpos=0.25, xanchor=0.5)
+    show RM angry at Position (xpos=0.75, xanchor=0.5) with dissolve
+    pause .5
+    show RM happy
+    $setAffection("RM", -1)
+    "He gave me a brief glare before turning to the girl."
+    RM "Yuki-chan! How's your day been?"
+    show Yuki neutral
+    Yuki "Daichi-kun?!"
+    jump RM002_c2_after
+
+label RM002_c2_2:
+    "I leaned back against the door."
+    MC "Why? What’s wrong?"
+    UNKNOWN "Oh, no big deal. I just left some books behind by accident."
+    MC "Your books? Where are they? I can go find them for you, if you want."
+    "While saying all this, I knocked on the door repeatedly. Judging by her lack of response, I don’t think she noticed."
+    UNKNOWN "Oh, no worries. I can get them myself."
+    MC "What books, if you don’t mind me asking?"
+    UNKNOWN "...Math? Why does it matter?"
+    "Before I could think of another way to stall her, Daichi came out of the room."
+    hide Yuki with dissolve
+    show Yuki neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show RM neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    RM "Yuki-chan! What a pleasant surprise."
+    Yuki "Daichi-kun? What are you doing here?"
+    jump RM002_c2_after
+
+label RM002_c2_3:
+    MC "I wouldn’t go in there. They’re... de-roaching."
+    UNKNOWN "Roaches? In just the one classroom?"
+    MC "..."
+    extend "Yes."
+    show Yuki sad
+    UNKNOWN "...Hmm."
+    "Suddenly, the door opened."
+    show Yuki sad at Position (xpos=0.25, xanchor=0.5)
+    show RM neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    RM "Yuki-chan?"
+    Yuki "Daichi-kun? Are you... de-roaching?"
+    "Daichi gave me a confused glance before turning back to this Yuki girl."
+    RM "Yeah. Why, do you need something?"
+    jump RM002_c2_after
+
+label RM002_c2_after:
+    MC "Wait, you two know each other?"
+    RM "Oh. Right. Keisuke, this is my sister Yuki. Yuki-chan, this is my roommate Hotsure Keisuke."
+    show Yuki happy
+    Yuki "Nice to meet you! Daichi-kun's talked about you a lot."
+    MC "Good things, I hope."
+    RM "Haha... yeah."
+    if getFlag("RM_govagent"):
+        Yuki "Actually, he said you were a no good lying-"
+        show RM happy
+        RM "Nothing but good things to say about my pal Kei-kun."
+        MCT "..."
+    show RM neutral
+    RM "Anyway, I found what I was looking for."
+    if getFlag("RM002_c1_2"):
+        MCT "‘What I was looking for?’ He said he was placing a camera... What’s with the act?"
+        MCT "But he’ll probably get upset if I don’t play along."
+    MC "Oh, good. Alright, I’ll see you back at the dorm, then."
+    RM "Yeah, sure. Talk to you later, man."
+    hide RM with dissolve
+    hide Yuki with dissolve
+    "I began to walk down the hallway, but after a couple of seconds Yuki ran up to me."
+    show Yuki neutral with dissolve
+    Yuki "Hey... Hotsure-senpai."
+    MC "Huh? What’s wrong?"
+    Yuki "Do you think that there’s something weird happening at this school?"
+    MC "What do you mean?"
+    Yuki "Like... Do you think the staff are doing something strange to us?"
+    MCT "Oh, no. Has Daichi filled her head with his nonsense?"
+    MCT "Should I play along?"
+    menu:
+        "There’s a conspiracy":
+            jump RM002_c3_1
+        "No conspiracy":
+            jump RM002_c3_2
+
+label RM002_c3_1:
+    $setFlag("RM_Yuki_conspiracy")
+    MC "I think so, yeah."
+    show Yuki sad
+    Yuki "I see."
+    "She sighed, pulled out a notepad from her skirt pocket, and began writing something down."
+    Yuki "OK, thanks."
+    hide Yuki with dissolve
+    "She slowly walked back to Daichi."
+    MC "...Wait, what?"
+    MCT "What was that reaction about?"
+    jump daymenu
+
+label RM002_c3_2:
+    MC "No. I don’t know who told you that, but it’s ridiculous."
+    show Yuki happy
+    Yuki "All right."
+    Yuki "For a minute there I was worried you were like my brother."
+    show Yuki neutral
+    Yuki "Um... Please don’t think too badly of him when he says stuff like that. I think he’s just stressed out about what’s going on."
+    MC "I think we all are, at least a little bit. I’m not holding it against him."
+    Yuki "Thanks. Don’t be afraid to say no if he’s making you do something weird. He might be mad for a little bit, but trust me - he gets over it fast."
+    show Yuki happy
+    Yuki "I’ll see you around, ok?"
+    hide Yuki with dissolve
+    "She walked back to Daichi, with a slight spring in her step."
     jump daymenu
 
 label End:
