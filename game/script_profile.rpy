@@ -40,7 +40,7 @@ init python:
             "factorlimit": "BE_size_3",
             "pimgdates": ["BE_size_2", "day_0"],
             "desc": [
-                ([], "It's Honkers."),
+                ([], "Graduated from Otenba High School after moving to the school district at the end of her Elementary School career. Member of multiple clubs, but never one for very long. No notable scholastic achievements. Excels in athletic activities, with her most prominent hobby being soccer. Currently has no inclination towards an occupation after leaving Seichou Academy."),
                 ([("test", False)], "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
                 ([("test", True)], "Hello this is a replacement line.")]
         },
@@ -73,7 +73,7 @@ init python:
             "factorlimit": "GTS_size_3",
             "pimgdates": ["GTS_size_2", "day_0"],
             "desc": [
-                ([], "It's Naomi-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([], "Graduated from Kyoto Cultural Private School with high marks. Was often praised for never missing an assignment or even a day of class, while also never receiving disciplinary action. Partook in International and Cultural Studies Courses while enrolled with a promising future in business. Prior to enrollment into Seichou, was believed to have been seeking admission into Senzai University of Arts and Science like her parents before her."),
                 ([("test", True)], "Hello this is a second line.")]
         },
         "FMG":
@@ -105,7 +105,7 @@ init python:
             "factorlimit": "BBW_size_3",
             "pimgdates": ["BBW_size_3", "BBW_size_2", "day_0"],
             "desc": [
-                ([], "It's Alice-kun. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae lacinia sapien, at eleifend mauris. Fusce molestie egestas dui a faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec lacinia rutrum condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ex lacus, pellentesque vitae mattis sed, sollicitudin eu leo. Sed sed mauris aliquam, sollicitudin eros sit amet, tempor felis. Nunc erat nunc, pellentesque vitae fringilla id, commodo quis orci. Praesent vitae augue vitae ex vehicula congue. Vestibulum vel venenatis enim, vitae vestibulum erat."),
+                ([], "Graduated from Golden Chrysanthemum Academy in Tokyo with high marks. Previous time spent at Langdon Hills Academy in America. No disciplinary record. Member of Future Business Leaders club. Spent two years as class treasurer. Was on shortlist for admission to Tokyo University, as well as other high-ranking institutions outside Japan, prior to enrollment at Seichou."),
                 ([("test", True)], "Hello this is a second line.")]
         },
         "PRG":

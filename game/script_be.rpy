@@ -31,17 +31,17 @@ init 2 python:
     datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_2'] = datetime.date(2005, 4, 20)
     
-    eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "location": "roof", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHAN, datelibrary["BE001_deadline"]]], "priority": 0}
-    eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "BE001"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]]], "priority": 0}
-    eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "location": "campuscenter", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.OR, [ConditionEnum.EVENT, "BE002"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]]], "priority": 0}
-    eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.EVENT, "BE003"], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
-    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "classroom", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
+    eventlibrary['BE001'] = {"name": "BE001", "girls": ["BE"], "location": "roof", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "BE001_deadline",              "conditions": []}
+    eventlibrary['BE002'] = {"name": "BE002", "girls": ["BE"], "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",             "conditions": []}
+    eventlibrary['BE003'] = {"name": "BE003", "girls": ["BE"], "location": "campuscenter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
+    eventlibrary['BE004'] = {"name": "BE004", "girls": ["BE"], "location": "track", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
+    eventlibrary['BE005'] = {"name": "BE005", "girls": ["BE"], "location": "classroom", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": [[ConditionEnum.PRESET]]}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "conditions": [[ConditionEnum.ISDAYTIME], [ConditionEnum.EVENT, "BE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.GAMETIME, ConditionEqualityEnum.LESSTHANEQUALS, datelibrary["BE007_deadline"]]], "priority": 0}
-    eventlibrary['BE008'] = {"name": "BE008", "girls": ["BE"], "location": "dorminterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.OR, [ConditionEnum.EVENT, "BE007"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BE007_deadline"]]]], "priority": 0}
-    eventlibrary['BE009'] = {"name": "BE009", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.EVENT, "BE008"]], "priority": 0}
-    eventlibrary['BE010'] = {"name": "BE010", "girls": ["BE"], "location": "dorminterior", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BE_size_2"]]], "priority": 0}
-    eventlibrary['BE011'] = {"name": "BE011", "girls": ["BE"], "location": "track", "conditions": [[ConditionEnum.ISNIGHTTIME], [ConditionEnum.EVENT, "BE010"]], "priority": 0}
+    eventlibrary['BE007'] = {"name": "BE007", "girls": ["BE"], "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "BE007_deadline",         "conditions": []}
+    eventlibrary['BE008'] = {"name": "BE008", "girls": ["BE"], "location": "dorminterior", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": [[ConditionEnum.OR, [ConditionEnum.EVENT, "BE007"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["BE007_deadline"]]]]}
+    eventlibrary['BE009'] = {"name": "BE009", "girls": ["BE"], "location": "track", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": []}
+    eventlibrary['BE010'] = {"name": "BE010", "girls": ["BE"], "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE011'] = {"name": "BE011", "girls": ["BE"], "location": "track", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",        "conditions": []}
 
 label BE001:
     scene Classroom with fade

@@ -76,9 +76,10 @@ init 1 python:
     datelibrary['testday'] = datetime.date(2005, 4, 7)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
     datelibrary['day_0'] = datetime.date(2005, 4, 3)
-    eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "conditions": [[ConditionEnum.PRESET]], "priority": 0}
-    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": [], "location": "dorminterior", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]], [ConditionEnum.ISNIGHTTIME]], "priority": 0}
-    eventlibrary['RM002'] = {"name": "RM002", "girls": [], "location": "hallway", "conditions": [[ConditionEnum.EVENT, "RM001"]], "priority": 0}
+    datelibrary['day_end'] = datetime.date(2006, 4, 3)
+    eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": [], "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
+    eventlibrary['RM002'] = {"name": "RM002", "girls": [], "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                                 "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     presetdays["4-6-F"] = ["global005"]
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     

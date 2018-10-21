@@ -15,7 +15,7 @@
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
     locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track', 'musicclassroom']
     debuginfo = False
-    debugenabled = False
+    debugenabled = True
     debuginput = ""
     debugpriorities = ""
     gametime = datetime.date(2005, 4, 4)
@@ -99,15 +99,13 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, ISDAYTIME, ISNIGHTTIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE = range(12)
+        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE = range(10)
     
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
     #FLAG: arg1 = (string) flag name, true if flag has been raised
     #NOFLAG: arg1 = (string) flag name, true if flag has NOT been raised
     #GAMETIME: arg1 = ConditionEqualityEnum, arg2 = (date, from datelibrary) date in question, true if the comparison is true (between gametime and arg2)
-    #ISDAYTIME: no args, returns true if gametime_eve is false
-    #ISNIGHTTIME: no args, returns true if gametime_eve is true
     #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
     #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
     #PRESET: no args, always returns false (ie event is only used in preset dates)
@@ -122,6 +120,12 @@
     
     class DayOfWeekEnum:
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY = range(7)
+    
+    class WeekendEnum:
+        WEEKDAY, WEEKEND, ANY = range(3)
+    
+    class TimeEnum:
+        DAY, NIGHT, AFTERSCHOOL, ANY = range(4)
     
     def checkCriteria(clist):
         criteriavalid = True
@@ -185,18 +189,6 @@
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[1]))
                     criteriavalid = False
                     break
-            elif c[0] == ConditionEnum.ISDAYTIME:
-                if gametime_eve:
-                  criteriavalid = False
-                  break
-                else:
-                    continue
-            elif c[0] == ConditionEnum.ISNIGHTTIME:
-                if not gametime_eve:
-                    criteriavalid = False
-                    break
-                else:
-                    continue
             elif c[0] == ConditionEnum.AFFECTION:
                 if c[2] == ConditionEqualityEnum.LESSTHAN:
                     if getAffection(c[1]) >= int(c[3]):
@@ -245,7 +237,17 @@
                 criteriavalid = False
                 break
         return criteriavalid    
-                
+    
+    def isEventTimeOk(time, day):
+        #Weekday = Mon-Sat, Weekend = Sun, Any = Do not check
+        d = (day == WeekendEnum.ANY or (day == WeekendEnum.WEEKEND and gametime.weekday() == 6) or (day == WeekendEnum.WEEKDAY and gametime.weekday() != 6))
+        #Day = Day time period, Night = Night time period, Afterschool = Night time period OR Sunday, Any = Do not check
+        t = (time == TimeEnum.ANY or (time == TimeEnum.DAY and not gametime_eve) or ((time == TimeEnum.NIGHT or time == TimeEnum.AFTERSCHOOL) and gametime_eve) or (time == TimeEnum.AFTERSCHOOL and gametime.weekday() == 6))
+        return d and t
+        
+    def isEventDateOk(start, end):
+        return gametime > datelibrary[start] and gametime < datelibrary[end]
+    
     #Other misc functions
     def setAffection(girl, val):
         if not girl in girllist and not girl == "RM":
@@ -361,7 +363,7 @@
     
     def getTimeString():
         s = gametime.strftime("%a %B %d, 20XX")
-        if gametime_eve:
+        if gametime_eve == TimeEnum.NIGHT:
             s += " (Evening)"
         else:
             s += " (Morning)"
@@ -373,7 +375,7 @@
         if eve == None:
             eve = gametime_eve
         s = str(date.month) + "-" + str(date.day)
-        if eve:
+        if eve == TimeEnum.NIGHT:
             s += "-T"
         else:
             s += "-F"
@@ -411,7 +413,7 @@ label start:
         eventchoices = []
         activeevent = ""
         gametime = datetime.date(2005, 4, 4)
-        gametime_eve = False
+        gametime_eve = TimeEnum.DAY
         meetingdays = {}
         eventpool = []
         preferredpool = []
@@ -437,7 +439,7 @@ screen choicetimer:
     timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
 
 screen daymenu:
-    if gametime_eve:
+    if gametime_eve == TimeEnum.NIGHT:
         add "Graphics/ui/menubg-evening.png"
     else:
         add "Graphics/ui/menubg-day.png"
@@ -691,11 +693,11 @@ label daymenu:
     $renpy.choice_for_skipping()
     #Roll random events
     python:
-        if gametime_eve:
-            gametime_eve = False
+        if gametime_eve == TimeEnum.NIGHT:
+            gametime_eve = TimeEnum.DAY
             gametime += datetime.timedelta(days=1)
         else:
-            gametime_eve = True
+            gametime_eve = TimeEnum.NIGHT
         
         eventchoices = []
         prefpool = []
@@ -729,7 +731,7 @@ label daymenu:
             for k, v in eventlibrary.iteritems():
                 if k in clearedevents:
                     continue
-                criteriavalid = checkCriteria(v["conditions"])
+                criteriavalid = checkCriteria(v["conditions"]) and isEventTimeOk(v["time"][0], v["time"][1]) and isEventDateOk(v["startdate"], v["enddate"])
                 if not criteriavalid:
                     continue
                 if "priority" in v.keys() and v["priority"]:
