@@ -691,6 +691,7 @@ label unsetflag:
 label daymenu:
     $updateSizes()
     $renpy.choice_for_skipping()
+    play music daymenu
     #Roll random events
     python:
         if gametime_eve == TimeEnum.NIGHT:
@@ -813,11 +814,12 @@ label startevent:
                     scenecounter[g] = scenecountmax
 
         clearedevents.append(activeevent)
-        
+    stop music
     $renpy.block_rollback()
     $renpy.jump(activeevent)
     
 label train:
+    stop music
     if activeevent == "Athletics":
         jump trainathletics
     elif activeevent == "Art":

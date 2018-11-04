@@ -81,6 +81,7 @@ label AE001:
     AE "*Ahem*"
     MC "Eh?"
     "I looked over to the table adjacent, where I saw Shiori-san flipping through the pages of a large book."
+    play music AE
     show AE angry with dissolve
     MC "A-ah! Shiori-san, how are y-"
     AE "Hotsure-san, adjust your volume in the library, please."
@@ -152,6 +153,7 @@ label AE001_after:
     "I could do little but stammer as Shiori quickly stood up, her rear tilting the chair back on its hind legs before she turned and walked away."
     "The clack of the front legs against the floor as the chair dropped level made Shiori flinch, but she had regained her composure in an instant and kept on walking."
     hide AE with dissolve
+    stop music
     MC "Shiori-san...hm?"
     "I looked over to where Shiori was sitting, and found that she had forgotten to take her book with her."
     MC "Ah! Her book!"

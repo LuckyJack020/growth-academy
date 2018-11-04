@@ -72,6 +72,12 @@ define Student3 = Character('Student 3', color="#FF3300")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
+define audio.daymenu = "Audio/BGM/daymenu.ogg"
+define audio.AE = "Audio/BGM/AE.ogg"
+define audio.RM = "Audio/BGM/RM.mp3"
+define audio.Busy = "Audio/BGM/scene_busy.mp3"
+define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
+
 init 1 python:
     datelibrary['testday'] = datetime.date(2005, 4, 7)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
@@ -105,7 +111,7 @@ init 1 python:
     #Winter Vacation: December 26 - January 6 (Christmas is usually off too)
     
 label global000:
-    stop music fadeout 0.5
+    stop music
     
     # Without a defined character code before the dialogue, it's unattributed speech. Good for narration.
     #EX - "This is the narrator, introducing our characters."
@@ -1168,6 +1174,7 @@ label RM001:
     RM "..."
     MCT "To be honest, I still haven’t had a good chance to talk with him yet. Mostly because I don’t really see much of him outside of class."
     MCT "I guess now is as good of a time as any to try and get to know him."
+    play music RM
     MC "Hey, Daichi."
     RM "Yes?"
     menu:
@@ -1324,6 +1331,7 @@ label RM002:
         "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
     "Out of the corner of my eye, inside another classroom, I noticed..."
     show RM neutral at Position (xpos=0.95, xanchor=0.5) with dissolve
+    play music RM
     pause 2
     show RM angry
     "He glared at me and made a beckoning motion."
@@ -1377,11 +1385,13 @@ label RM002_c1_3:
     jump RM002_c1_after
 
 label RM002_c1_after:
+    stop music
     scene black with fade
     pause 2
     scene Hallway with fade
     "A few minutes of inconspicuous door blocking later, and the inevitable happened."
     show Yuki neutral with dissolve
+    play music Busy
     UNKNOWN "Hey there! Can I get through?"
     MCT "Oh, great."
     menu:
@@ -1465,6 +1475,7 @@ label RM002_c2_after:
     RM "Yeah, sure. Talk to you later, man."
     hide RM with dissolve
     hide Yuki with dissolve
+    stop music
     "I began to walk down the hallway, but after a couple of seconds Yuki ran up to me."
     show Yuki neutral with dissolve
     Yuki "Hey... Hotsure-senpai."

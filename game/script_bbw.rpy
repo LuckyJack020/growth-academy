@@ -29,9 +29,9 @@ image BBW aroused = ConditionSwitch(
     "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-aroused.png",
     "True", "Graphics/BBW-1-aroused.png")
 image BBW haughty = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW-3-haughty.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-haughty.png",
-    "True", "Graphics/BBW-1-haughty.png")
+    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW-3-unique.png",
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-unique.png",
+    "True", "Graphics/BBW-1-unique.png")
 
 image BBW swimneutral = ConditionSwitch(
     "gametime > datelibrary['BBW_size_3']", "Graphics/BBW-3-neutral.png",
@@ -58,9 +58,9 @@ image BBW swimaroused = ConditionSwitch(
     "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-aroused.png",
     "True", "Graphics/BBW-1-aroused.png")
 image BBW swimhaughty = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW-3-haughty.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-haughty.png",
-    "True", "Graphics/BBW-1-haughty.png")
+    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW-3-unique.png",
+    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW-2-unique.png",
+    "True", "Graphics/BBW-1-unique.png")
 
 image cg BBW001 = "Graphics/BBW-SC-1.png"
 
@@ -1542,7 +1542,7 @@ label BBW011:
     scene School Exterior with fade
     "Another fifteen minutes of walking, and I started to think maybe I should have gone to the gym and gotten a real workout in."
     scene Dorm Exterior with fade
-    "I had finally decided to go back to my dorm and take care of my homework when I was saved from my boredom as I almost ran into Aida."
+    "I had finally decided to go back to my dorm and take care of my homework when I was saved from my boredom almost running into Aida."
     show PRG sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     MC "Whoops. Pardon me."
     "O-oh! I'm sorry."
@@ -1589,7 +1589,7 @@ label BBW011_prechoice:
     show PRG happy at Position(xpos=0.75, xanchor=0.5)
     show BBW neutral at Position(xpos=0.25, xanchor=0.5)
     PRG "What did you think? Wasn't it beautiful?"
-    "Aida had her hands clasped in front of her heart, her cheeks so rosy and her eyes closed. She looked like she might swoon at a moment's notice."
+    "Aida had her hands clasped in front of her heart, her cheeks rosy and her eyes closed. She looked like she might swoon at a moment's notice."
     BBW "..."
     "Alice, meanwhile, looked like she was listening to elevator music playing at one-half speed."
     menu:
@@ -1761,7 +1761,7 @@ label BBW012_c1_2:
     MC "And with everything on our plates right now anyway, with school work and dealing with our conditions, do you really want more drama in your life by starting something with the class president?"
     MC "Or maybe the teachers and administrators?"
     "She didn't respond immediately, but I simply waited. She looked irritated enough already and I knew better than to poke her."
-    "After a moment she exhaled and said"
+    "After a moment she exhaled."
     show BBW neutral
     BBW "This is how I'm dealing with it."
     MC "I'm... sorry?"
@@ -1973,7 +1973,7 @@ label BBW014:
     scene Gym with fade
     "Gym today was a free day, everyone finding something quasi-athletic to do. Afterwards I ended up being one of those called on to clean up the equipment lying around."
     "I wasn’t alone, per se, but with a handful of us spread across the entire gym it was dead quiet."
-    "After a while I noticed I was drifting over to where Alice was gathering up some croquet mallets."
+    "After a while I noticed I was drifting over to where Alice was bending down to gather up some croquet mallets."
     MC "Hey, Alice."
     show BBW neutral with dissolve
     BBW "Hotsure-san."
@@ -1989,7 +1989,7 @@ label BBW014:
     "She chortled quietly, her lip turning up in a tiny grin."
     BBW "There are a lot of beaches up and down the east coast. And the west coast. And Hawaii is full of them."
     BBW "But they’re not all sun and warm water. Up in New England… You’re not doing much surfing or sunning."
-    "We finished stacking the maps up, but continued chatting as we cleaned up."
+    "We finished stacking the mats up, but continued chatting as we cleaned up."
     BBW "Did you grow up near the water?"
     MC "No. I just… When I think of America I think of beaches."
     MC "Either that or burgers and fries."
@@ -2142,8 +2142,9 @@ label BBW015:
     BBW "She's in room 306 of the women's dorm. You'll find it on the sales slip. If you hurry you can probably find her there now."
     show BBW angry
     BBW "But exercise caution."
-    BBW "Mastumoto-san is already keeping one eye on me, and I suspect her myopic adherence to the rules blinds her to such things as the spirit of the law."
+    BBW "Mastumoto-san is already keeping one eye on me, and I suspect her myopic adherence to the concept of rules blinds her to the actual letter of the law."
     BBW "Which I am fully in line with, as you know."
+    BBW "It's a 'forest for the trees' situation. She has her own idea of what the spirit of the law is, and she’s unflappable in following that."
     show BBW neutral
     BBW "The most efficient solution is to avoid contact with her. I have no quarrel with her personally, after all."
     MCT "It would only be antagonistic to point out the simplest solution is to drop this whole venture."
