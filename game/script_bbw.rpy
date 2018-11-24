@@ -2578,7 +2578,7 @@ label BBW016_c3_3:
     Cell "<The bigger titles revolve around more exciting things like amusement parks or zoos.>"
     BBWCell "<How do they work?>"
     "Cue victory fanfare."
-    play sound "Audio/Victory.ogg"
+    play sound Victory
     pause 3
     Cell "<You're put in charge of a business that's starting out or is struggling, and your job is to make it profitable.>"
     Cell "<You create rides or buy animals, set ticket prices, add concession stands or whatever.>"
@@ -2975,7 +2975,7 @@ label BBW018_c2_4:
     MC "Yeah. There actually are games that use ancient civilizations-"
     show BBW happy
     BBW "And I’d be empress?"
-    play sound "Audio/Cheer.ogg"
+    play sound Cheer
     "As I said ‘Yes’ I could see her eyes taking on a dreamy expression, like she was losing herself to some beautiful vision."
     BBW "Let’s play that one!"
     show BBW neutral

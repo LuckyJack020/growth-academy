@@ -691,7 +691,7 @@ label unsetflag:
 label daymenu:
     $updateSizes()
     $renpy.choice_for_skipping()
-    play music daymenu
+    play music Daymenu
     #Roll random events
     python:
         if gametime_eve == TimeEnum.NIGHT:
@@ -776,7 +776,6 @@ label daymenu:
             else:
                 eventchoices += allpool
         debugpriorities = "".join(priorities)
-    scene black
     window hide None
     call screen daymenu
     window show None
@@ -815,6 +814,9 @@ label startevent:
 
         clearedevents.append(activeevent)
     stop music
+    play sound SceneStart
+    scene black with dissolve
+    pause .5
     $renpy.block_rollback()
     $renpy.jump(activeevent)
     

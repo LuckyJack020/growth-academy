@@ -1,7 +1,4 @@
 define AE = Character('Shiori', color="#FF3300")
-define Student1 = Character('Student 1', color="#FF3300")
-define Student2 = Character('Student 2', color="#FF3300")
-define Student3 = Character('Student 3', color="#FF3300")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
 define CMM = Character('Male Concil Member', color="#ffa18a") #Lighter Orange
@@ -73,9 +70,7 @@ init 2 python:
 label AE001:
     scene Library with fade
     "After a long day, I figured that some time in the library would do well for me. I could use somewhere quiet to wind down."
-    MCT "Geez, I expected quiet, but this room is practically abandoned!"
     "Even though a few hours had passed, what Tashi-sensei said was still ringing in my head. I wasn't completely sure how to process what had been going on, but I was worried to say the least."
-    MCT "I need to sit down...the table over there looks good."
     "I grabbed a chair, sat down at the table and, resting my head on my hands, I let out a long sigh."
     MC "Well, I never got anywhere by just moping... right?"
     AE "*Ahem*"
@@ -108,9 +103,12 @@ label AE001:
     AE "The nature of the Academy."
     extend " What is going on,"
     extend " how long has this been happening,"
-    extend " what preventative measures are there,"
+    extend " what preventative measures there are,"
     extend " what school records exist."
     AE "There are so many questions I have, and I plan to make sure they are all answered."
+    MC "I see...that book has all that?"
+    AE "Clearly not, why would a single book have all of the answers? I’m merely researching the questions that are the most relevant to me at this moment."
+    MC "Ah, ok."
     "Shiori looked back down at her book, steadily writing down notes with her other hand."
     "We sat in silence for a few moments, Shiori-san dutifully writing down line after line of notes while I stared up towards the ceiling."
     MCT "I think...there is still a question I have on my mind..."
@@ -166,161 +164,294 @@ label AE001_after:
     jump daymenu
 
 label AE002:
+    scene Hallway with fade
+    play music Sunset
+    "I walked around the hallways after class looking for Shiori-san, so far having no luck."
+    "In class, she wouldn’t acknowledge me when I whispered to her, and every time I tried to get close to her, she just got pulled aside by another student."
+    Student "-merging the committees into student council. I don’t get it either man."
+    MC "Yo! Excuse me?"
+    Student "Huh? Oh, um, what’s up?"
+    MC "Are you a member of the student council?"
+    "He looked at me with a bit of suspicion before looking down at his jacket and holding his hands up."
+    Student "Uh… I mean, I- Yeah?"
+    MC "Have you seen the president?"
+    Student "Just got out from the first meeting, actually. She’s in there."
+    "He pointed over candidly at the library door as the last few student council members slipped out."
+    MC "Library. Perfect, thanks man."
+    Student "Mm."
+    "Walking over and opening the large ornate door, I held the book close under my arm."
+
     scene Library with fade
-    MCT "Maybe Shiori-san is here today."
-    "As my mind recalled yesterday's events, I began to wander about the library. The sheer size of the place was a stark reminder of just how large the school was...and how unlikely it would be to find Shiori-san in it so quickly."
-    MC "Let's see...ah!"
-    MCT "Ohp, well, nevermind."
-    "It was only now that I noticed the door with the sign 'Student Organizations' directly on top of the door frame on the opposite side of the room."
-    scene Office with fade
-    "As I moved across the library to the door, I began to notice that, like yesterday, not many people were here. Reading just isn't as popular a pastime as it used to be."
-    "I saw her through the large window in the wall separating the Library from the room, where she was working on a stack of papers."
-    MC "Um, hello, Shiori-san?"
-    "Shiori looked up from the paperwork and did something that kind of took me off guard."
+    "As the wooden door closed behind me, it’s loud knock echoed throughout the empty room. The sheer size of the room, as well as the contrasting silence once the echo faded, was a stark reminder of just how large the school was."
+    MCT "If I know Shiori-san like I think I do, she’d get mad and tell me to keep quiet if I make too much noise."
+    MC "Yo! Anyone in here?!"
+    MC "..."
+    MCT "No response. She really isn’t here."
+    MC "Well damn. I guess-"
+    MC "Oh!"
+    "It was only now that I noticed the door with the sign “Student Organizations” directly on top of the door frame on the opposite side of the room."
+    MC "Yeah, that’d explain it."
+    "I saw her through the large window in the wall separating the Library from the room, sitting alone, working on a stack of papers. I walked up to the window and lightly tapped, unsure if I should go in."
+    MC "Hey, Shiori-san."
+    "Shiori looked up from the paperwork with a bit of confusion. She placed her forms down and walked over to the window."
+    MC "Am I interrupting anything?"
     show AE neutral with dissolve
-    AE "Ah, Hotsure-san. Welcome to the Student Organization's room, is there something you need?"
-    MCT "Huh? She seems like she's gotten a bit better since yesterday...a lot better, actually."
-    MC "Oh, yeah, am I interrupting anything?"
-    AE "Not at the moment, no. Come in if you wish, it would be best for you to not have to raise your voice."
+    AE "Not at the moment, no. Come in, it would be best for you to not have to raise your voice."
     MCT "In the...empty library?"
     MC "Sure."
+
+    scene Office with fade
+    show AE neutral with dissolve
     "The inside of the room was larger than it first looked. There were filing cabinets that lined the walls, and a long table in the middle with different chairs for the representatives and student body to discuss the agenda of the day."
-    MC "Yesterday in the library, you forgot this."
+    AE "There. Now, what do you need?"
+    MC "Oh, uh, yeah. Yesterday in the library, you forgot this."
     "I took the book from my bag and put it on the table next to Shiori-san. She looked at it for a moment, and inhaled before looking to me."
     MC "I was wondering if you were wanting it back?"
-    AE "Ah! Yes...I had no more need for it."
+    AE "Thank you, however I have no more need or it."
     MC "Huh?"
-    AE "Well, I had read all the parts that pertained to what I was looking for, so I figured that there was no point in bringing it back to my dorm."
-    MC "Oh, ok...I just kind of figured that you would put it back..."
-    AE "A generous assumption...and what would that achieve? Had I put it back or not, it would have inevitably ended up in it's original spot when the library closed, yes? It is a common courtesy, however it's not officially required."
-    MC "True...and I checked it out anyway, so no harm no foul!"
-    AE "Indeed. In any case, thank you for being considerate. It's that mindset that helps a school run. Well, that and capable leadership."
-    "Shiori's attitude had definitely gotten better, from what I could tell, but the way she was acting the other day kept nagging at me."
+    AE "I had read all the parts that pertained to what I was looking for, so I figured that there was no point in bringing it back to my dorm."
+    MC "Oh, ok… I just kind of figured that you would put it back…"
+    AE "Had I put it back or not, it would have inevitably ended up in it’s original spot when the library closed, yes? It is a common courtesy, however it’s not officially required."
+    play music AE
+    if getSkill("Academics") < 1:
+        MC "True...and I checked it out anyway, so no harm no foul!"
+        jump AE002_c1_after
+    else:
+        menu:
+            "She's lying, call her out.":
+                jump AE002_c1_1
+            "She's telling the truth.":
+                MC "True...and I checked it out anyway, so no harm no foul!"
+                jump AE002_c1_after
+
+label AE002_c1_1:
+    $setFlag("AE002_c1_1")
+    MC "… Can I level with you on something?"
+    AE "Go ahead."
+    MC "I don’t think you’re being completely honest for me."
+    show AE angry
+    AE "That’s a bit presumptuous of you to…"
+    show AE neutral
+    AE "..."
+    show AE sad
+    AE "My apologies. You’re right."
+    $setAffection("AE", 2)
+    show AE neutral
+    AE "Haah… well, I saw some upsetting things in there in relation to my own growth. I was admittedly a bit shocked and in my heightened worry I left the book behind."
+    MC "Oh, you-.... Wow, I didn’t expect you to just come out and tell me all of that."
+    AE "You implored honesty, and I gave it to you."
+    MC "Well, thank you. That actually means a lot."
+    show AE happy
+    AE "And it means a lot for you to keep me honest. Thank you."
+    jump AE002_c1_after
+
+label AE002_c1_after:
+    show AE neutral
+    AE "In any case, thank you for being considerate. It’s that mindset that helps a school run. Well, that and capable leadership."
+    "Shiori’s attitude had definitely gotten better, from what I could tell, but the way she was acting the other day kept nagging at me."
     AE "Is there anything else you need?"
-    MC "Uh..."
+    MC "Uh…"
     menu:
         "Are you ok?":
-            jump AE002_c1
-        "I'm fine.":
-            jump AE002_c2
+            jump AE002_c2_1
+        "I'm fine":
+            jump AE002_c2_2
 
-label AE002_c1:
-    MC "Yeah...yesterday you seemed really out of it. Are you ok?"
+label AE002_c2_1:
+    if getFlag("AE002_c1_1"):
+        MC "Well, you said that you were upset by what you saw… are you doing better?"
+    else:
+        MC "Yeah...yesterday you seemed really out of it. Are you ok?"
     AE "Of course I am."
     MC "Yeah, I-"
     MCT "Wait, what?"
     MC "Really?"
-    AE "I wouldn't answer that I am if I wasn't. I already had at least somewhat of an inkling of what the school was for, even before the announcement."
-    MCT "She did!?"
+    AE "I wouldn’t answer that I am if I wasn’t. I already had at least somewhat of an inkling of what the school was for, even before the announcement."
+    MCT "She did?"
     MC "I kind of thought that-"
-    AE "Well, let's look at your claim. You said I was 'out of it', what do you mean by that?"
-    MC "Well...you were more silent than usual. It seemed like you were really distraught."
-    AE "Than usual? We've only known each other for a small amount of time."
-    MC "Ah..well...true. But I still felt kind of unsure as to why you seemed to act differently than the first time we met."
-    AE "Simple. First, I had questions that went unanswered, and as such immersed myself in my studies. I found the answers, and as such I feel alleviated."
-    MCT "Well, she did kind of keep to her book..."
-    AE "Second, I was indeed shocked by the initial reveal, however I don't have reason to believe that it should be too much to bear. After all, if this school is indeed for people with unique...growing situations, then I should be able to adapt in well, yes?"
-    MC "True...but it doesn't bother you at all?"
-    AE "Hotsure-san, fate is inescapable. If I will grow, as per what Tashi-sensei says, then it will happen inevitably. Why worry about that which will happen no matter what?"
-    MCT "Wait, what? Something...irks me about that statement."
-    MC "I guess...you have a point."
-    AE "As class representative, my responsibility is to the school. I don't have the luxury of worrying about these sorts of things when there are more pressing matters at hand."
-    MC "...You're right. I was being silly."
+    if not getFlag("AE002_c1_1"):
+        AE "Well, let’s look at your claim. You said I was “out of it”, what do you mean by that?"
+        MC "Well...you were more silent than usual. It seemed like you were really distraught."
+        AE "Than usual? We’ve only known each other for a small amount of time."
+        MC "Ah..well...true. But I still felt kind of unsure as to why you seemed to act differently than the first time we met."
+        AE "Simple. First, I had questions that went unanswered, and as such immersed myself in my studies. I found the answers, and as such I feel alleviated."
+        MCT "Well, she did kind of keep to her book…"
+        AE "Second, I was indeed shocked by the initial reveal, however I don’t have reason to believe that it should be too much to bear. After all, if this school is indeed for people with unique...growing situations, then I should be able to adapt in well, yes?"
+        MC "True...but it doesn’t bother you at all?"
+        AE "Hotsure-san, fate is inescapable. If I will grow, as per what Tashi-sensei says, then it will happen inevitably. Why worry about that which will happen no matter what?"
+        MCT "Wait, what? Something...irks me about that statement."
+        MC "I guess...you have a point."
+    AE "As class representative, my responsibility is to the school. I don’t have the luxury of worrying about these sorts of things when there are more pressing matters at hand."
+    MC "...You’re right. I was being silly."
     AE "Certainly not. You had a legitimate concern for a fellow student, and you acted accordingly."
-    MC "Well...as long as you're doing ok."
+    MC "Well...as long as you’re doing ok."
     AE "I assure you, Hotsure-san, I am more than capable of handling myself."
     MC "I believe you, Shiori-san."
     AE "Good. Well then, is that all you need?"
-    MC "Yeah, I think that I should be all right."
+    MC "Yeah, I think that I should be alright."
     AE "Then I will see you in class. Remember, our homework is Chapter 1 section 3. I expect good results."
     MC "Yeah...see you then."
+    stop music
+    
     scene Library with fade
     "As Shiori got back to her work, I walked out of the door and back through the library. While her talk was meant to calm me down, it only ended up raising more questions."
-    MCT "How can she be so gung-ho about this?! After the news we all got the other day...I just don't know. I need to go find something else to do to keep my thoughts off of it."
     jump daymenu
 
-label AE002_c2:
-    MC "No, I should be all right."
-    MCT "It really doesn't matter I guess, she seems all right now."
-    AE "All right then, have a good day."
-    MC "All right, see you later, I guess."
+label AE002_c2_2:
+    MC "No, I should be alright."
+    MCT "It really doesn’t matter I guess, she seems alright now."
+    AE "Alright then, have a good day."
+    MC "Alright, see you later, I guess."
     AE "Oh yes, and Hotsure-san?"
     MC "Yeah?"
-    AE "Tuck in your shirt, it doesn't comply with the current dress code."
+    AE "Tuck in your shirt, it doesn’t comply with the current dress code."
     MC "Uh...yeah...I will."
     "Shiori turned back to her paperwork, and I turned out of the door to leave the library, content that I had been able to get the book situation sorted. But that still left the question of what else I could do today."
     jump daymenu
     
 label AE003:
     scene Campus Center with fade
+    play music Schoolday
     MCT "C'mon, just a bit farther!"
     "I had spent a good amount of time after class making paper airplanes and throwing them around in the central courtyard, attempting to beat my earlier record by a few precious inches."
     MCT "Almost...there!"
     "The plane soared through the air and made a smooth crisp landing at about four or so feet in front of me."
-    MC "Yes! My farthest yet!"
     MCT "I seriously need to work on my plane making...or at least do something productive instead."
     MC "Hmm?"
-    "I heard a bit of squabbling as I got up from the bench I was sitting on and decided to take a tiny peak...just for studying purposes of course."
+    "I heard a bit of squabbling as I got up from the bench I was sitting on and decided to take a tiny peek...just for studying purposes of course."
     Student1 "Come on! It's just a wrapper!"
     show AE angry with dissolve
     AE "I don't care if it's a scrap of paper, it says clearly in your student handbook that there is to be no littering on campus. Period. Do I need to talk to administration about this?"
-    Student1 "D-don't be unreasonable!"
+    Student1 "D-Don't be unreasonable!"
     AE "There is a garbage can right over there. Pick it up and throw it away."
     hide AE with dissolve
     MCT "Wow...I don't want to be on the end of THAT scolding...wait."
     "I looked behind me to see the legions of failed craft lying on the ground, and I could swear I broke out in a cold sweat."
     MC "Hoooo boy...I need to pick these up quick, lest Shiori-san comes this way."
     "After a short while, I picked up my tiny, oblong aircraft and put them in my bag, ready to head back to my room. The sense of confusion and surprise left in favor for a general feeling of what I can only describe as uneasy acceptance."
-    "Shiori's words resonated with me for a small while the more I thought about it, what will happen will happen, all I can really do is accept it. Although it did seem...strange. I never expected Shiori of all people to prescribe things to fate, but as she said, who am I to say what her 'usual' is. Hell, I'm not sure if this school even has anything 'usual'."
+    "Shiori's words resonated with me for a small while the more I thought about it, what will happen will happen, all I can really do is accept it."
+    MCT "Can she really rebound from the news that quickly? I figured she'd be-"
     show AE neutral with dissolve
     AE "Everything all right, Hotsure-san?"
     MC "GAH!"
     "In my shock, I nearly dropped my bag with the planes in tow."
     MC "Oh! Hey, Shiori-san. You scared me. Uh, yeah, I'm all good."
     AE "Yes, well, I apologize for frightening you. You seemed distressed about something."
-    MC "Oh, no, i'm fine. Thanks though."
+    MC "Oh, no, I'm fine. Thanks though."
     "There was an air of apprehension as Shiori-san looked on at me in an inquisitive manner; almost judging my every move."
     show AE angry
     AE "Yes, well, if there IS anything you need, don't hesitate to ask."
-    MC "Yeah, then...what was our homework again?"
+    MC "Yeah, then... what was our homework again?"
     show AE neutral
     AE "Chapter one, section three, page 16. Read it and answer the questions on the following page."
     MC "Ok, thanks, Shiori-san!"
     AE "Hm."
     hide AE with dissolve
     "I strode off in the opposite direction; breathing a sigh of relief knowing that my paper airplanes didn't win me a thrashing."
+    stop music
     scene Hallway with fade
     MCT "Ok, so if Tashi-sensei wants us to do section three by tomorrow, then I can probably finish in about two or so at home, meaning that I can...eh?"
-    Student1 "I'm telling you, it's absolute crap!!"
-    "As I walked down the dorm hallways, I came across a group of guys getting in a heated discussion. I would normally just ignore it, but my curiosity got the better of me. I pretended to play around with the nearby vending machine as I listened to what they were talking about."
-    Student1 "I'm telling you guys, I have no idea why she thinks she can just walk around and start nagging people."
-    MCT "It's...that guy from earlier."
-    Student2 "She's the student rep, nothing we can do about it."
-    Student1 "And that's what sucks!"
-    Student3 "What did you even do?"
-    Student1 "Nothing! I just threw my wrapper on the ground and she started prattling off about school code BS and made me pick it up. She can't just talk down to me like that!"
-    Student2 "She has nothing better to do with her life, you should just as well let it go."
-    Student3 "Right, but it's about the principle of the thing."
-    Student1 "Exactly! I can't just let her get away with it."
-    MCT "Wow, you're a reeeal stable guy aren't you, getting all pissy over something dumb like that."
-    "At this point, I stopped pressing buttons and just stood there listening."
-    Student2 "Well what do you want to do then?"
-    Student1 "Next time I see her I'll just tell her straight up to piss off!"
-    MCT "This guy...he really needs to calm the hell down."
-    Student1 "I swear, she needs a real man in her life to make her chill out, though I can't imagine who would want THAT."
-    MC "H-hey."
-    Student1 "Eh?"
-    "Without thought, I spoke up. I know, I've only know Shiori for a little bit, but she's at least seems a bit more respectable than this jackoff...when I realized what just happened."
-    MCT "WHAT AM I DOING?! BAIL! BAIL!"
-    MC "A-any of you guys got a yen?"
-    Student1 "Uh...no."
-    MC "Oh, that's ok. Sorry."
-    MCT "I absolutely CANNOT just start running my mouth off to some random guy, i've only been here a few days!"
-    "Feeling slightly disgusted with myself, I walked to my dorm. I couldn't wait for tomorrow to come. I opened my door and plopped down on the bed."
-    MCT "Shiori-san...is she really as harsh as that guy was making her out to be?...No, no she was justified in what she did, he just can't handle getting called out."
+    "As I reached the corner, I found an unexpected sight. The student from earlier, and his two friends talking somewhat loudly about something."
+    "As I got closer, I was able to listen in on just what it was."
+    play music Tension
+    Student3 "In front of Haruno-chan?"
+    Student1 "She wasn’t even a few feet away when she did it."
+    Student2 "Shit, man, that’s embarrassing."
+    Student1 "You’re telling me! It was just a wrapper, she didn’t need to be so uptight about it."
+    Student2 "What a bitch."
+    Student1 "Right?"
+    Student3 "Gonna do anything about it?"
+    Student1 "What am I supposed to do?"
+    Student2 "Tell her off, let her know that she can’t look down on you like that."
+    Student1 "To hell with that! Have you seen her? She’s small, but goddamn if she isn’t scary."
+    MCT "Damn, I mean… he’s not wrong, but chill."
+    Student3 "She needs someone to tell her not to be so anal."
+    Student1 "She *needs* to get laid."
+    Student2 "Ain’t that the truth."
+    MC "If you guys are gonna-"
+    Student1 "Huh?"
+    menu:
+        "Stand up for Shiori.":
+            jump AE003_c1_1
+        "Bail.":
+            jump AE003_c1_2
+
+label AE003_c1_1:
+    $setFlag("AE003_c1_1")
+    MC "If you guys are gonna talk shit about a girl, at least leave their sex life out of it, I mean c’mon."
+    Student1 "Eh? The hell’s your problem?"
+    MC "It ain’t cool, is all. I mean, I get it, you’re pissed, but you don’t gotta bring up banging her. Just cause she can’t get any doesn’t mean you get to be salty cause you aren’t getting any either."
+    if getSkill("Athletics") > getSkill("Academics") and getSkill("Athletics") > getSkill("Art"):
+        "The biggest of the three seemed to take exception to this, as he walked up to me with his chest puffed up."
+        Student3 "What was that, punk?"
+        MC "Try it and get laid out."
+        Student3 "..."
+        "I’m not exactly the strongest, but apparently neither is he, as he felt intimidated enough to back down quickly."
+    elif getSkill("Academics") > getSkill("Art"):
+        "One of his friends decided to get up and hold the line for him."
+        Student2 "Now hold on, what does how much we get laid have to do with anything?!"
+        MC "If it doesn’t, then why’d he bring it up in the first place?"
+        Student2 "A…"
+        "Unable to come up with a rebuttal, he shrunk back."
+    else:
+        Student1 "He called me out in front of my girl, man. That’s going too far."
+        MC "Look, I get where you’re coming from, I really do, but are you really a guy who’d litter right in front of your girlfriend? Wouldn’t you think she’d like it more if you had more class?"
+        Student1 "Gch…"
+        "Apparently, I hit a sore spot, as he visibly seemed uncomfortable looking at just how well I maintained my uniform even under stress. Simply put, I outclassed him."
+    Student1 "Yeah, well… maybe you’re just jealous at the thought of anyone else porkin her?"
+    MC "...What?"
+    Student2 "Yeah, what’s the matter, you gotta thing for her gross ass or something?"
+    MC "I’d kick yours if I didn’t care about keeping my shoes shining."
+    Student3 "Man, to hell with this guy."
+    Student2 "Yeah, I don’t got time for this."
+    "As the first students friends left, he suddenly found himself with less confidence."
+    Student1 "…"
+    MC "... You just gonna stare at me? Are you gonna swing? What’s happening here?"
+    Student1 "… I’ll remember this."
+    "He finally followed suit after his friends, leaving me victorious, but no less pissed."
+    MC "Tch."
+    stop music
+    jump AE003_c1_after
+
+label AE003_c1_2:
+    MCT "Shit, what am I doing? This is not the hill I wanna die on socially."
+    stop music
+    MC "Hang out in the halls, can you tell me where the bathrooms are?"
+    Student1 "Uhh… like, straight down the hall to the left."
+    MC "Thanks man."
+    Student1 "No worries."
+    jump AE003_c1_after
+
+label AE003_c1_after:
+    "Hands in my pockets, I walked down the hall, considering everything they were saying."
+    MCT "Needs to get laid? What kind of douche just openly says that in public? I mean… probably wouldn’t hurt-"
+    MCT "Goddamnit, focus! That’s a messed up thing to say about a girl, even if she told you off in front of your lady."
+    if not getFlag("AE003_c1_1"):
+        Student1 "Yo! I said left!"
+    "Continuing right, I exhaled through my nose, just frustrating myself more thinking about it until I got to my room."
+    
+    scene Dorm Exterior with fade
+    play sound Knock
+    "*KNOCK* *KNOCK*"
+    play music Sunset
+    MC "Daichi! C’mon man, open the door."
+    RM "Who is it?"
+    MC "It’s the colonel, I got some recipes to share. Open up."
+    RM "You’re not the colonel! He would never share his recipes openly!"
+    MC "What the fu- Just open the door!"
+    MCT "The door opened up, this time more readily than the first few times I entered."
+    show RM happy with dissolve
+    RM "Relax! Relax! Just a joke. C’mon in."
+    
+    scene black with fade
+    pause .5
+    scene Dorm Interior with fade
+    "I sat at my desk, head resting on my hand as I looked out the window."
+    MCT "Shiori-san... is she really as harsh as that guy was making her out to be? ...No, no she was justified in what she did, he just can't handle getting called out."
+    "Sitting up to stretch, I shook off some of the frustration and grabbed my pencil."
     MCT "Well, no point in just dwelling on it, might as well get started on my homework."
     "I pulled out all my materials, pencil, book, empty notebook, eraser..."
-    MCT "...Wait...what the?"
+    MCT "...Wait... what the?"
     "I looked in my notebook and found nothing. Only a few measly papers sticking out...airplanes are expensive."
     MCT "Damnit! Now I have to go and get a new one. Guess I'm headed out then."
     jump daymenu
@@ -1030,7 +1161,7 @@ label AE009_after:
     MC "A-are you sure? I mean, it could take all day! You wanna go home too, right?"
     AE "I can wait."
     
-    show black with fade
+    scene black with fade
     "After facing a hellscape of papers, I finally got to leave...once Shiori-san had enough pity for me to let me go."
     jump daymenu
     
@@ -1836,7 +1967,7 @@ label AE014:
     "I looked around to admire the sheer magnitude of the junk in the room. It's surprisingly fun to have a room you're so used to change like that."
     MC "I guess. What's with all of the tables and cabinets and stuff?"
     AE "Despite my protests, administration is temporarily utilizing the office for storage."
-    play sound "Audio/Thud.ogg"
+    play sound Thud
     "*THUNK*" #TODO: replace with SFX?
     MC "ACH-Couldn't they find anywhere else?! I can barely move in here."
     AE "Be thankful you're not in my position at least. I can't move without getting, ngh, stuck every few steps."
@@ -2510,7 +2641,7 @@ label AE018:
     AE "..."
     show AE surprised
     extend "Hotsure-san, do you hear that?"
-    play sound "Audio/Bird.ogg"
+    play sound Bird
     MC "Hm?"
     AE "That bird."
     play sound "Audio/Bird.ogg"
@@ -2625,7 +2756,7 @@ label AE018:
         show AE aroused
         AE "Including you."
         MC "..."
-        play sound "Audio/Bird.ogg"
+        play sound Bird
         "We stood there, the sounds of the wind carrying with it the chirping of the birds."
         MC "W-...thank you, Shiori-san."
         
@@ -3155,13 +3286,13 @@ label AE021:
     "I walked over to the wall to see the girl with the rosy pink lips scribble on a notepad, squatting behind the wall. I watched on as she kept writing, only catching a few words here and there. She pulled out some chapstick and began applying it before continuing to write."
     "*Scribble scribble scribble*"
     MC "Kuchibiru-chan?"
-    LE "Eep!"
+    Yuki "Eep!"
     MC "What are you doing? Why are you hiding?"
-    LE "U-ummm..."
+    Yuki "U-ummm..."
     "The thick lipped girl stood up straight and saluted."
-    LE "S-student council business ma-sir!"
+    Yuki "S-student council business ma-sir!"
     MC "Ok...what i-"
-    LE "Goodbye!"
+    Yuki "Goodbye!"
     MC "Wait, no you di-"
     "Kuchibiru-chan turned around and began to shuffle away before I could catch up and ask what was going on."
     MC "No, wait you..."
@@ -3279,39 +3410,39 @@ label AE022:
     "I turned a corner, and sure enough..."
     "*Tap Tap*"
     "I did a quick spin around a waiting Kuuchibiru-chan."
-    LE "Eek!"
+    Yuki "Eek!"
     MC "Paaardon me~"
     "As I began to walk away, Kuchibiru-chan decided to follow in suit silently."
     MC "Something you need?"
-    LE "Gh!"
+    Yuki "Gh!"
     "The girl tensed up a bit and opened her mouth before speaking up."
-    LE "U-um, it’s rude to nearly run into people without at least bowing in apology!"
+    Yuki "U-um, it’s rude to nearly run into people without at least bowing in apology!"
     MC "Mh, you’re right. Sorry. I’m just really nervous for the swim meet after class."
-    LE "S-swim meet!?"
+    Yuki "S-swim meet!?"
     MC "Yep."
     "The girl put a finger up to her large, pouty lips in thought before pulling out a notepad and writing."
-    LE "I...I didn’t know, you were a swimmer Hotsu-"
+    Yuki "I...I didn’t know, you were a swimmer Hotsu-"
     MC "Mhm. See you around."
-    LE "E-eh? But-"
+    Yuki "E-eh? But-"
     "I began whistling to myself as I walked towards my class."
-    LE "A-ah! Hey! That’s disrespectful!"
+    Yuki "A-ah! Hey! That’s disrespectful!"
     "Kuchibiru-chan caught up with me and began to walk alongside me."
-    LE "Heeey, what gives! You’re acting all weird this morning."
+    Yuki "Heeey, what gives! You’re acting all weird this morning."
     MC "You know how I usually act?"
-    LE "Ah! Um...well...D-oh, just tell me what you want with the president!"
+    Yuki "Ah! Um...well...D-oh, just tell me what you want with the president!"
     MCT "Huh?"
-    LE "Eep!"
+    Yuki "Eep!"
     MC "...What?"
-    LE "M-me and my big fat mouth..."
+    Yuki "M-me and my big fat mouth..."
     MC "What are you-?"
-    LE "L-listen! Forget what I said, okay! Erase, erase, eraaase~"
+    Yuki "L-listen! Forget what I said, okay! Erase, erase, eraaase~"
     MC "...D-umm..."
-    LE "A-anyway, why are you acting so weird? What’s with the glasses? What’s up with you?"
+    Yuki "A-anyway, why are you acting so weird? What’s with the glasses? What’s up with you?"
     "While caught off guard for a moment, I smirked to myself before turning to her and setting the record straight."
     MC "Don’t worry too much, just know that in this moment, I’m damn near untouchable."
-    LE "Eh...w-wha-"
+    Yuki "Eh...w-wha-"
     MC "Class is about to begin. Isn’t yours the other way?"
-    LE "Ah! I-I can’t be late, Matsumoto-san would kill me!"
+    Yuki "Ah! I-I can’t be late, Matsumoto-san would kill me!"
     "Kuchibiru-chan quickly strode in the opposite direction before turning the corner once more."
     MC "...Tch. Nice try, kid."
     "As soon as I felt nice and smug, I turned around and face planted right into the door to my own homeroom." #homeroom?
@@ -3538,7 +3669,7 @@ label AE022:
     AE "Now, if you’ll excuse me."
     "Shiori-san turned quickly and walked away with confidence..."
     hide AE with dissolve
-    play sound "Audio/Boing.ogg"
+    play sound Boing
     "Causing her massive rump to wobble as she walked. Though she tried to keep her composure, she put her arms tightly to the side and put her hands on the sides of her donk in an admittedly sad attempt to stop the wiggling."
     MC "...Pheeww…"
     RM "Is she gone yet?"
@@ -4278,7 +4409,7 @@ label AE025:
 
 label AE026:
     scene black
-    play sound "Audio/ClockAlarm.ogg"
+    play sound AlarmClock
     scene Dorm Interior with fade
     "I awoke to the sound of my alarm clock buzzing it’s shrill beeps as my eyes fluttered slowly open."
     MC "Mngh... urh… shut up, you damn thing."
@@ -4487,8 +4618,7 @@ label AE026:
     show AE angry
     AE "Besides, if someone HAD been spying, I’d need to teach them a lesson about personal privacy."
     MC "Heh. Straight to that, eh?"
-    #play sound "Audio/Clocktower.ogg"
-    "*Clocktower SFX*"
+    play sound ClockTower
     show AE neutral
     AE "Ah. That’s the bell for class."
     MC "Oh? Oh! Yep."

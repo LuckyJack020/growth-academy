@@ -1,4 +1,5 @@
 image white = Solid((255, 255, 255, 255))
+image black = Solid((0, 0, 0, 255))
 image Lake Road = "Graphics/lakeroad.png"
 image School Front = "Graphics/schoolfront.png"
 image School Inner = "Graphics/schoolinner.png"
@@ -44,6 +45,9 @@ image Arcade = "Graphics/NYI.png"
 image Cafe = "Graphics/NYI.png"
 
 image splash = "Graphics/splashscreen.png"
+image daymenubg = ConditionSwitch(
+    "gametime_eve", "Graphics/ui/menubg-evening.png",
+    "True", "Graphics/ui/menubg-day.png")
 
 image RM neutral = "Graphics/RM-neutral.png"
 image RM angry = "Graphics/RM-angry.png"
@@ -72,11 +76,26 @@ define Student3 = Character('Student 3', color="#FF3300")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
-define audio.daymenu = "Audio/BGM/daymenu.ogg"
+define audio.Daymenu = "Audio/BGM/daymenu.ogg"
 define audio.AE = "Audio/BGM/AE.ogg"
 define audio.RM = "Audio/BGM/RM.mp3"
+define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
+define audio.Festival = "Audio/BGM/scene_tbi.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
+define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
+define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
+define audio.Tension = "Audio/BGM/scene_tbi.ogg"
+
+define audio.SceneStart = "Audio/SFX/sfx_scenestart.wav"
+define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
+define audio.Bird = "Audio/SFX/sfx_tbi.ogg"
+define audio.Cheer = "Audio/SFX/sfx_tbi.ogg"
+define audio.ClockTower = "Audio/SFX/sfx_tbi.ogg"
+define audio.Boing = "Audio/SFX/sfx_boing.ogg"
+define audio.Knock = "Audio/SFX/sfx_tbi.ogg"
+define audio.Thud = "Audio/SFX/sfx_tbi.ogg"
+define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 
 init 1 python:
     datelibrary['testday'] = datetime.date(2005, 4, 7)
@@ -220,7 +239,7 @@ label global000:
     BE "That's true, it has been that long already, hasn't it..."
     BE "...I guess I have to forgive you then. You've grown up so much, so it's unreasonable to expect you to remember me if I've changed just as much."
     MCT "Exactly! There are limits to a guy's memory, you know? Besides..."
-    play sound "Audio/Boing.ogg"
+    play sound Boing
     show cg BE001 with vpunch
     MCT "I'm pretty sure I would have remembered those!"
     hide cg with dissolve
@@ -636,7 +655,7 @@ label global000_RM_after:
     scene black with dissolve
     MCT "What have my sister and I gotten ourselves into...?"
     scene white with dissolve
-    play sound "Audio/ClockAlarm.ogg"
+    play sound AlarmClock
     "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
     scene Dorm Interior with dissolve
     "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
