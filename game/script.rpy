@@ -886,6 +886,10 @@ label debugloadtest:
             scene black
             show AE neutral
             pause .1
+            show AE neutral-annoyed
+            pause .1
+            show AE neutral-eyebrow
+            pause .1
             show AE happy
             pause .1
             show AE sad
@@ -973,6 +977,10 @@ label debugloadtest:
             scene black
             $gametime = datetime.date(2005, 4, 15)
             show AE neutral
+            pause .1
+            show AE neutral-annoyed
+            pause .1
+            show AE neutral-eyebrow
             pause .1
             show AE happy
             pause .1

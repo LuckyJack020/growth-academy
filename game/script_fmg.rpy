@@ -44,7 +44,7 @@ init 2 python:
     eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.EVENT, "FMG008"]]}
     eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": True, "startdate": "FMG_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.EVENT, "FMG009"]]}
     eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "FMG010"]]}
-    #eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                              "conditions": []}
+    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                              "conditions": []}
     eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                   "conditions": []}
     eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"], "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                   "conditions": [[ConditionEnum.EVENT, "FMG015"]]}
     #eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": []}
@@ -878,7 +878,7 @@ label FMG010_testfail:
     show FMG angry 
     FMG "I've been stuck in my room for the past two fricking days! I had to live off of Rin's junk food and soda! It wasn't even the name brand, it was some cheap knock-off of Cane Cola called Kool Kola!"
     MC "Wait, why were you stuck in your room?"
-    FMG "Because I had a growth spurt! I couldn't fit into my clothes without ripping them. Rin was supposed to get my replacement unofirm from the tailor's but got detention, leaving me all alone in my room till she got back an hour ago!"
+    FMG "Because I had a growth spurt! I couldn't fit into my clothes without ripping them. Rin was supposed to get my replacement uniform from the tailor's but got detention, leaving me all alone in my room till she got back an hour ago!"
     show FMG sad
     FMG "I mean, I'm glad I got bigger muscles, but the day has been so awful that I couldn't really enjoy them."
     MC "Sorry, I would have helped if I'd known."
@@ -1435,7 +1435,9 @@ label FMG018:
     MC "Um yeah, we're going to cook."
     show FMG sad
     FMG "But Kei-Kun, I cannot cook! Every time I do it catches on fire!"
-    #*(insert some thoughts here)*
+    MCT "Well... Honestly I am not that surprised by this discovery..."
+    if isEventCleared("FMG004"):
+        MCT "Especially when she couldn't even make a simple protein shake."
     MC "Well, we don't know what exactly is happening. For now let's get with the rest of the class before they noticed we're not there."
     show FMG neutral
     FMG "Okay... but I'm warning you, it will not come out edible."
@@ -1475,18 +1477,24 @@ label FMG018_c1_1:
     MC "Sure. Whatever works. Though I figured you would want to cook by the exact recipe-"
     MC "You remembered the exact recipe."
     AE "Of course."
+    show FMG happy
     FMG "Wow, that's awesome of you!"
     AE "What say you to a plate of 'Himmel und Erde', hm?"
+    show FMG neutral
     FMG "Eh? H-Hey, was that French? Are we gonna make French food, because I can't even cook cereal right."
     AE "No, that was German. It means “Heaven and Ea-”"
+    show AE surprised
     AE "Did you just say you can't make cereal?"
     FMG "Yeah, my mom never taught me how to cook it."
+    show AE neutral
     AE "Make."
     FMG "Cook, right."
+    show AE neutral-eyebrow
     AE "..."
-    AE "T-The recipe, um... the recipie we'll make calls for black pudding, mashed potatoes, applesauce, and cooked onions. Fairly straight forward, no unnecessary bells and whistles. "
+    show AE neutral
+    AE "T-The recipe, um... the recipe we'll make calls for black pudding, mashed potatoes, applesauce, and cooked onions. Fairly straight forward, no unnecessary bells and whistles."
     MC "Wait, what's black pudding?"
-    FMG "You can cook onions? I thought they were just a hamburger topping. "
+    FMG "You can cook onions? I thought they were just a hamburger topping."
     AE "Yes. Yes you can."
     AE "Black pudding is a type of pudding made from oatmeal-"
     MC "Okay."
@@ -1521,28 +1529,34 @@ label FMG018_c1_1:
     AE "Alright, I believe that should be all. Now all we need is to wait for our grades after a quick test of quality."
     FMG "Woo!"
     MC "Eheheh..."
+    show FMG happy
     FMG "A+ baby, let's go!"
+    show FMG neutral
     "After a moment, Mrs. Takamura came over to test our individual plates, starting with Shiori-san."
     Takamura ".... Mm... very nice! What did you say this was?"
     AE "Himmel Und Erde, ma'am."
     Takamura "Splendid! I'm quite the fan of Italian food."
     AE "... Indeed."
     Takamura " Keisuke, good work as well. A bit heavy on the cinnamon, but that's okay."
-    MCT "*Yes!*"
+    MCT "Yes!"
     Takamura "And... *ghk*... Mizutani-san..."
     Akira "Nehehe~ It'll be fine!"
     Takamura "Y-You're right, it can't be as bad as the red bean paste and mayo protein shake from earlier in the semester..."
     Takamura "..."
     Takamura " ... Passable!"
     $setAffection("FMG", 2)
+    show FMG happy
     FMG "YES! YEAH! WOO!"
     Takamura "Hmm, a bit heavy on the cinnamon- *urch*... especially in the mashed potatoes... but passable!"
     "Shiori let out a sigh, whether out of disappointment or relief, I wasn't sure."
     FMG "Finally! I cooked something that didn't taste like ash!"
+    show FMG neutral
     FMG "Shiori, thank you for helping us, I ain't exactly the best cook!"
     FMG "I mean, ask me to help hook up a cpu board to a switching power supply for an arcade cabinet any time, but for the life of me I can't cook."
     AE "No worries, Mizutani-san. Please, if you need help on group projects in the future, don't hesitate to-"
+    show AE sad
     AE "I've made a terrible mistake, haven't I?"
+    show FMG happy
     FMG "The worst!"
     AE "Nuugh..."
     jump daymenu
@@ -1565,12 +1579,16 @@ label FMG018_c1_2:
     MC "Not... really. We were more looking for help in the actual cooking because..."
     FMG "I can't cook. Just plain can't. I can't even cook cereal right I'm that bad."
     GTS "I... see."
+    show GTS sad
     GTS "As for me, I am sorry to say but I am not very good either."
     MC "...Oh."
     $setAffection("FMG", -2)
+    show FMG angry
     FMG "So much your 'feeling', dude. Now what, genius?"
     MC "Ummm... Do you guys think we can make ramen?"
+    show GTS neutral
     GTS "Well, I suppose it would not hurt to try."
+    show FMG neutral
     FMG "Yeah, I'll try, hopefully I don't burn it."
     scene black with fade
     "We took our positions after that, Naomi took care of the noodles, Akira was in charge of the broth, and I was handling the extra bits..."
@@ -1579,7 +1597,9 @@ label FMG018_c1_2:
     show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
     show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     FMG "... Well, this turned out better than I thought."
+    show GTS sad
     GTS "Again, I am sorry at my lack of experience cooking."
+    show FMG angry
     FMG "... Don't worry about this, I don't blame *you*."
     MCT "I get the feeling Akira is upset with me... though I guess I did made a decision based on a feeling."
     jump daymenu
@@ -1609,25 +1629,33 @@ label FMG018_c1_3:
     "After she got what we needed, we put together a pie in the span of a few hours..."
     "...But the end result was left to be desired."
     scene Cooking Classroom with fade
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
-    show BE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG sad at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show BE sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     FMG "... Uh, I don't think it's supposed to look so... undercooked."
     MC "Maybe you're right, Honoka what recipe were you following anyways?"
+    show BE happy
     BE "..."
     MC "... You were following a recipe... right?"
+    show BE neutral
     BE "Sure. I mean. Technically it's a recipe. I found it online and looked good. It's just the instructions weren't in Japanese."
+    show FMG surprised
     FMG "T-Then what language was it?!"
+    show BE happy
     BE "I think French? It looked the yummiest!"
     MC "... Honoka, you failed your French class!"
+    show BE neutral
     BE "Look. It had all the measurements for the ingredients easy to read. Maybe we just didn't add them in the right order."
     $setAffection("FMG", 1)
+    show FMG neutral
     FMG "You know what, at least we actually made something. It could have come out worse than this."
     MC "You have a point Akira. Honoka, thank you for planning things out."
     FMG "Yeah, you've been a big help."
     BE "Hey well thanks for letting me help. Okay, so who else wants a slice?"
     FMG "... Uh... I guess?"
     "Akira grabbed a slice, she took a bite and..."
+    show FMG sad
     FMG "... I don't know how, but it takes like 2 day old apple sliced pancakes..."
+    show BE sad
     BE "Where are you getting that from? I think it's like cold mac and cheese, and it's only been out of the oven for a little bit..."
     MC "It tastes more like ramen noodles boiled in orange soda."
     jump daymenu

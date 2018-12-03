@@ -8,6 +8,12 @@ define All = Character('Everyone', color="#ffffff")
 image AE neutral = ConditionSwitch(
     "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
     "True", "Graphics/AE/1/neutral.png")
+image AE neutral-annoyed = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
+    "True", "Graphics/AE/1/neutral-annoyed.png")
+image AE neutral-eyebrow = ConditionSwitch(
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
+    "True", "Graphics/AE/1/neutral-eyebrow.png")
 image AE happy = ConditionSwitch(
     "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
     "True", "Graphics/AE/1/happy.png")
