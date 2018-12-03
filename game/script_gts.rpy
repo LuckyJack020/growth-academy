@@ -6,36 +6,36 @@ define Minori = Character('Minori', color="#FF91DC")
 define Fumika = Character('Fumika', color="#FF91DC")
 
 image GTS neutral = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-neutral.png",
-    "True", "Graphics/GTS-1-neutral.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/neutral.png",
+    "True", "Graphics/GTS/1/neutral.png")
 image GTS happy = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-happy.png",
-    "True", "Graphics/GTS-1-happy.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/happy.png",
+    "True", "Graphics/GTS/1/happy.png")
 image GTS sad = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-sad.png",
-    "True", "Graphics/GTS-1-sad.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/sad.png",
+    "True", "Graphics/GTS/1/sad.png")
 image GTS surprised = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-surprised.png",
-    "True", "Graphics/GTS-1-surprised.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/surprised.png",
+    "True", "Graphics/GTS/1/surprised.png")
 image GTS angry = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-angry.png",
-    "True", "Graphics/GTS-1-angry.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/angry.png",
+    "True", "Graphics/GTS/1/angry.png")
 image GTS aroused = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-aroused.png",
-    "True", "Graphics/GTS-1-aroused.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/aroused.png",
+    "True", "Graphics/GTS/1/aroused.png")
 image GTS embarrassed = ConditionSwitch(
-    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS-2-embarrassed.png",
-    "True", "Graphics/GTS-1-embarrassed.png")
+    "gametime > datelibrary['GTS_size_2']", "Graphics/GTS/2/embarrassed.png",
+    "True", "Graphics/GTS/1/embarrassed.png")
 image GTS unique = "Graphics/GTS-2-unique.png" ##Currently has no unique in stage 1
 
-image Ryoko neutral = "Graphics/ryoko-neutral.png"
-image Ryoko happy = "Graphics/ryoko-happy.png"
-image Ryoko camera = "Graphics/ryoko-camera.png"
+image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
+image Ryoko happy = "Graphics/minor/ryoko-happy.png"
+image Ryoko camera = "Graphics/minor/ryoko-camera.png"
 
-image Minori neutral = "Graphics/minori-neutral.png"
-image Minori happy = "Graphics/minori-happy.png"
+image Minori neutral = "Graphics/minor/minori-neutral.png"
+image Minori happy = "Graphics/minor/minori-happy.png"
 
-image Dorm GTS = "Graphics/dorminterior.png"
+image Dorm GTS = "Graphics/ui/bg/dorminterior.png"
 
 init 2 python:
     datelibrary['GTS_size_6'] = datetime.date(2005, 12, 10)

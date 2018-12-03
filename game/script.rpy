@@ -1,10 +1,10 @@
 ﻿init python:
     config.use_cpickle = False
-    style.menu_choice_button.background = Frame("choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
-    style.menu_choice_button.hover_background = Frame("choice_bg_hover.jpg",28,9)
+    style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
+    style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
     style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
     
-    style.menu_choice_button_disabled.background = Frame("choice_bg_disabled.jpg",28,9)
+    style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
     
     import datetime
     
@@ -306,7 +306,7 @@
         if id in vars.keys():
             return vars[id]
         else:
-            return None
+            return 0
     
     def debugListFlags():
         l = ""
@@ -440,9 +440,9 @@ screen choicetimer:
 
 screen daymenu:
     if gametime_eve == TimeEnum.NIGHT:
-        add "Graphics/ui/menubg-evening.png"
+        add "Graphics/ui/bg/menubg-evening.png"
     else:
-        add "Graphics/ui/menubg-day.png"
+        add "Graphics/ui/bg/menubg-day.png"
     
     if debuginfo:
         vbox:
@@ -483,18 +483,18 @@ screen daymenu:
                         xmaximum 600
                         ymaximum 60
                         if eventlibrary[c]["location"] in locationlist:
-                            imagebutton idle "Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
+                            imagebutton idle "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
                         else:
-                            imagebutton idle "Graphics/ui/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
+                            imagebutton idle "Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
                         hbox:
                             hbox:
                                 spacing -120
                                 order_reverse True
                                 if len(eventlibrary[c]["girls"]) == 0:
-                                    add "Graphics/ui/charicon-missing.png"
+                                    add "Graphics/ui/icons/charicon-missing.png"
                                 else:
                                     for g in eventlibrary[c]["girls"]:
-                                        add "Graphics/ui/charicon-%s.png" % g
+                                        add "Graphics/ui/icons/charicon-%s.png" % g
                             fixed:
                                 frame:
                                     xalign 0.5
@@ -514,17 +514,17 @@ screen daymenu:
                     xmaximum 250
                     ymaximum 60
                     if eventlibrary[c]["location"] in locationlist:
-                        imagebutton idle im.Crop("Graphics/ui/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
                     else:
-                        imagebutton idle im.Crop("Graphics/ui/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
                     hbox:
                         spacing -120
                         order_reverse True
                         if len(eventlibrary[c]["girls"]) == 0:
-                            add "Graphics/ui/charicon-missing.png"
+                            add "Graphics/ui/icons/charicon-missing.png"
                         else:
                             for g in eventlibrary[c]["girls"]:
-                                add "Graphics/ui/charicon-%s.png" % g
+                                add "Graphics/ui/icons/charicon-%s.png" % g
                         #FIXME this looks awful and breaks tables, needs harder adjustments
                         #fixed:
                         #    frame:
@@ -661,7 +661,7 @@ screen debugmenu:
         
         textbutton "Return to game" action Jump("daymenu_noadvance")
         text ""
-        text ""
+        textbutton "Load Test" action Jump("debugloadtest")
 
 screen debugflaglist:
     vbox:
@@ -876,3 +876,407 @@ label trainacademics:
     $tmp = setSkill("Academics", 1)
     "(Your academics skill has increased to [tmp])"
     jump daymenu
+
+label debugloadtest:
+    menu:
+        "Graphics":
+            $tmptime = gametime_eve
+            $tmpdate = gametime
+            $gametime_eve = False
+            scene black
+            show AE neutral
+            pause .1
+            show AE happy
+            pause .1
+            show AE sad
+            pause .1
+            show AE surprised
+            pause .1
+            show AE angry
+            pause .1
+            show AE aroused
+            pause .1
+            
+            show BBW neutral
+            pause .1
+            show BBW happy
+            pause .1
+            show BBW sad
+            pause .1
+            show BBW surprised
+            pause .1
+            show BBW angry
+            pause .1
+            show BBW aroused
+            pause .1
+            show BBW haughty
+            pause .1
+            
+            show BE neutral
+            pause .1
+            show BE happy
+            pause .1
+            show BE sad
+            pause .1
+            show BE surprised
+            pause .1
+            show BE angry
+            pause .1
+            show BE aroused
+            pause .1
+            
+            show FMG neutral
+            pause .1
+            show FMG happy
+            pause .1
+            show FMG sad
+            pause .1
+            show FMG surprised
+            pause .1
+            show FMG angry
+            pause .1
+            show FMG aroused
+            pause .1
+            show FMG flex
+            pause .1
+            
+            show GTS neutral
+            pause .1
+            show GTS happy
+            pause .1
+            show GTS sad
+            pause .1
+            show GTS surprised
+            pause .1
+            show GTS angry
+            pause .1
+            show GTS aroused
+            pause .1
+            show GTS embarrassed
+            pause .1
+            
+            show PRG neutral
+            pause .1
+            show PRG happy
+            pause .1
+            show PRG sad
+            pause .1
+            show PRG surprised
+            pause .1
+            show PRG angry
+            pause .1
+            show PRG aroused
+            pause .1
+            show PRG unique
+            pause .1
+
+            scene black
+            $gametime = datetime.date(2005, 4, 15)
+            show AE neutral
+            pause .1
+            show AE happy
+            pause .1
+            show AE sad
+            pause .1
+            show AE surprised
+            pause .1
+            show AE angry
+            pause .1
+            show AE aroused
+            pause .1
+
+            show BBW neutral
+            pause .1
+            show BBW happy
+            pause .1
+            show BBW sad
+            pause .1
+            show BBW surprised
+            pause .1
+            show BBW angry
+            pause .1
+            show BBW aroused
+            pause .1
+            show BBW haughty
+            pause .1
+            
+            show BE neutral
+            pause .1
+            show BE happy
+            pause .1
+            show BE sad
+            pause .1
+            show BE surprised
+            pause .1
+            show BE angry
+            pause .1
+            show BE aroused
+            pause .1
+            
+            show FMG neutral
+            pause .1
+            show FMG happy
+            pause .1
+            show FMG sad
+            pause .1
+            show FMG surprised
+            pause .1
+            show FMG angry
+            pause .1
+            show FMG aroused
+            pause .1
+            show FMG flex
+            pause .1
+            
+            show GTS neutral
+            pause .1
+            show GTS happy
+            pause .1
+            show GTS sad
+            pause .1
+            show GTS surprised
+            pause .1
+            show GTS angry
+            pause .1
+            show GTS aroused
+            pause .1
+            show GTS embarrassed
+            pause .1
+            
+            show PRG neutral
+            pause .1
+            show PRG happy
+            pause .1
+            show PRG sad
+            pause .1
+            show PRG surprised
+            pause .1
+            show PRG angry
+            pause .1
+            show PRG aroused
+            pause .1
+            show PRG unique
+            pause .1
+            
+            show RM neutral
+            pause .1
+            show RM angry
+            pause .1
+            show RM happy
+            pause .1
+            show RM sad
+            pause .1
+            show RM smug
+            pause .1
+             
+            show Yuki neutral
+            pause .1
+            show Yuki happy
+            pause .1
+            show Yuki sad
+            pause .1
+            show HR neutral
+            pause .1
+            
+            show Ryoko neutral
+            pause .1
+            show Ryoko happy
+            pause .1
+            show Ryoko camera
+            pause .1
+            show Minori neutral
+            pause .1
+            show Minori happy
+            pause .1
+            
+            show Rin neutral
+            pause .1
+
+            scene Lake Road
+            pause .1
+            scene School Front
+            pause .1
+            scene School Inner
+            pause .1
+            scene Gate Front
+            pause .1
+            scene School Planter
+            pause .1
+            scene Hallway
+            pause .1
+            scene Classroom
+            pause .1
+            scene Dorm Exterior
+            pause .1
+            scene Dorm Interior
+            pause .1
+            scene Campus Center
+            pause .1
+            scene Auditorium
+            pause .1
+            scene School Exterior
+            pause .1
+            scene F1 Hallway
+            pause .1
+            scene Library
+            pause .1
+            scene Office
+            pause .1
+            scene Cafeteria
+            pause .1
+            scene Cooking Classroom
+            pause .1
+            scene Music Classroom
+            pause .1
+            scene Gym
+            pause .1
+            scene Track
+            pause .1
+            scene Roof
+            pause .1
+            scene Nurse Office
+            pause .1
+            scene Pool
+            pause .1
+            scene Festival
+            pause .1
+            scene Bathroom
+            pause .1
+            scene Recreation
+            pause .1
+            scene Town
+            pause .1
+            scene Arcade
+            pause .1
+            scene Cafe
+            pause .1
+            scene Dorm BBW
+            pause .1
+            scene Dorm BBW Flip
+            pause .1
+            scene Dorm GTS
+            pause .1
+            
+ 
+            $gametime_eve = True
+            
+            scene Lake Road
+            pause .1
+            scene School Front
+            pause .1
+            scene School Inner
+            pause .1
+            scene Gate Front
+            pause .1
+            scene School Planter
+            pause .1
+            scene Hallway
+            pause .1
+            scene Classroom
+            pause .1
+            scene Dorm Exterior
+            pause .1
+            scene Dorm Interior
+            pause .1
+            scene Campus Center
+            pause .1
+            scene Auditorium
+            pause .1
+            scene School Exterior
+            pause .1
+            scene F1 Hallway
+            pause .1
+            scene Library
+            pause .1
+            scene Office
+            pause .1
+            scene Cafeteria
+            pause .1
+            scene Cooking Classroom
+            pause .1
+            scene Music Classroom
+            pause .1
+            scene Gym
+            pause .1
+            scene Track
+            pause .1
+            scene Roof
+            pause .1
+            scene Nurse Office
+            pause .1
+            scene Pool
+            pause .1
+            scene Festival
+            pause .1
+            scene Bathroom
+            pause .1
+            scene Recreation
+            pause .1
+            scene Town
+            pause .1
+            scene Arcade
+            pause .1
+            scene Cafe
+            pause .1
+            scene Dorm BBW
+            pause .1
+            scene Dorm BBW Flip
+            pause .1
+            scene Dorm GTS
+            pause .1
+            
+            show cg BE001
+            pause .1
+            show cg BE002
+            pause .1
+            show cg BBW001
+            pause .1
+            $gametime_eve = tmptime
+            $gametime = tmpdate
+        "Sounds":
+            play music Daymenu
+            pause .1
+            play music AE
+            pause .1
+            play music BBW
+            pause .1
+            play music RM
+            pause .1
+            play music Bittersweet
+            pause .1
+            play music Busy
+            pause .1
+            play music Festival
+            pause .1
+            play music Rain
+            pause .1
+            play music Peaceful
+            pause .1
+            play music Schoolday
+            pause .1
+            play music Sunset
+            pause .1
+            play music Tension
+            pause .1
+            
+            play sound SceneStart
+            pause .1
+            play sound AlarmClock
+            pause .1
+            play sound Bird
+            pause .1
+            play sound Cheer
+            pause .1
+            play sound ClockTower
+            pause .1
+            play sound Boing
+            pause .1
+            play sound Knock
+            pause .1
+            play sound Thud
+            pause .1
+            play sound Victory
+            pause .1
+        "Nevermind":
+            pass
+    jump debugmenu

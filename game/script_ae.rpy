@@ -6,23 +6,23 @@ define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
 
 image AE neutral = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-neutral.png",
-    "True", "Graphics/AE-1-neutral.png")
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
+    "True", "Graphics/AE/1/neutral.png")
 image AE happy = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-happy.png", 
-    "True", "Graphics/AE-1-happy.png")
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
+    "True", "Graphics/AE/1/happy.png")
 image AE sad = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-sad.png",
-    "True", "Graphics/AE-1-sad.png")
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
+    "True", "Graphics/AE/1/sad.png")
 image AE surprised = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-surprised.png",
-    "True", "Graphics/AE-1-surprised.png")
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
+    "True", "Graphics/AE/1/surprised.png")
 image AE angry = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-angry.png",
-    "True", "Graphics/AE-1-angry.png")
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
+    "True", "Graphics/AE/1/angry.png")
 image AE aroused = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE-2-aroused.png",
-    "True", "Graphics/AE-1-aroused.png")
+    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
+    "True", "Graphics/AE/1/aroused.png")
 
 init 2 python:
     datelibrary['AE010_deadline'] = datetime.date(2005, 4, 13)
@@ -3409,7 +3409,7 @@ label AE022:
     Ama "E-eh?!"
     "I turned a corner, and sure enough..."
     "*Tap Tap*"
-    "I did a quick spin around a waiting Kuuchibiru-chan."
+    "I did a quick spin around a waiting Utagashi-chan."
     Yuki "Eek!"
     MC "Paaardon me~"
     "As I began to walk away, Kuchibiru-chan decided to follow in suit silently."

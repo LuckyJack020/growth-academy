@@ -1,65 +1,65 @@
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
-image Lake Road = "Graphics/lakeroad.png"
-image School Front = "Graphics/schoolfront.png"
-image School Inner = "Graphics/schoolinner.png"
-image Gate Front = "Graphics/gatefront.png"
-image School Planter = "Graphics/schoolplanter.png"
-image Hallway = "Graphics/hallway.png"
+image Lake Road = "Graphics/ui/bg/lakeroad.png"
+image School Front = "Graphics/ui/bg/schoolfront.png"
+image School Inner = "Graphics/ui/bg/schoolinner.png"
+image Gate Front = "Graphics/ui/bg/gatefront.png"
+image School Planter = "Graphics/ui/bg/schoolplanter.png"
+image Hallway = "Graphics/ui/bg/hallway.png"
 image Classroom = ConditionSwitch(
-    "gametime_eve", "Graphics/classroom_eve.png",
-    "True", "Graphics/classroom_day.png")
-image Dorm Exterior = "Graphics/dormexterior.png"
-image Dorm Interior = "Graphics/dorminterior.png"
+    "gametime_eve", "Graphics/ui/bg/classroom_eve.png",
+    "True", "Graphics/ui/bg/classroom_day.png")
+image Dorm Exterior = "Graphics/ui/bg/dormexterior.png"
+image Dorm Interior = "Graphics/ui/bg/dorminterior.png"
 image Campus Center = ConditionSwitch(
-    "gametime_eve", "Graphics/campuscenter_eve.png",
-    "True", "Graphics/campuscenter_day.png")
-image Auditorium = "Graphics/auditorium.png"
-image School Exterior = "Graphics/schoolexterior.png"
-image F1 Hallway = "Graphics/schoolhallway1.png"
-image Library = "Graphics/library.png"
+    "gametime_eve", "Graphics/ui/bg/campuscenter_eve.png",
+    "True", "Graphics/ui/bg/campuscenter_day.png")
+image Auditorium = "Graphics/ui/bg/auditorium.png"
+image School Exterior = "Graphics/ui/bg/schoolexterior.png"
+image F1 Hallway = "Graphics/ui/bg/schoolhallway1.png"
+image Library = "Graphics/ui/bg/library.png"
 image Office = ConditionSwitch(
-    "gametime_eve", "Graphics/office_eve.png",
-    "True", "Graphics/office_day.png")
-image Cafeteria = "Graphics/cafeteria.png"
-image Cooking Classroom = "Graphics/NYI.png"
-image Music Classroom = "Graphics/NYI.png"
-image Gym = "Graphics/auditorium.png"
+    "gametime_eve", "Graphics/ui/bg/office_eve.png",
+    "True", "Graphics/ui/bg/office_day.png")
+image Cafeteria = "Graphics/ui/bg/cafeteria.png"
+image Cooking Classroom = "Graphics/ui/bg/NYI.png"
+image Music Classroom = "Graphics/ui/bg/NYI.png"
+image Gym = "Graphics/ui/bg/auditorium.png"
 image Track = ConditionSwitch(
-    "gametime_eve", "Graphics/track_eve.png",
-    "True", "Graphics/track_day.png")
+    "gametime_eve", "Graphics/ui/bg/track_eve.png",
+    "True", "Graphics/ui/bg/track_day.png")
 image Roof = ConditionSwitch(
-    "gametime_eve", "Graphics/roof_eve.png",
-    "True", "Graphics/roof_day.png")
+    "gametime_eve", "Graphics/ui/bg/roof_eve.png",
+    "True", "Graphics/ui/bg/roof_day.png")
 image Nurse Office = ConditionSwitch(
-    "gametime_eve", "Graphics/office_eve.png",
-    "True", "Graphics/office_day.png")
+    "gametime_eve", "Graphics/ui/bg/office_eve.png",
+    "True", "Graphics/ui/bg/office_day.png")
 image Pool = ConditionSwitch(
-    "gametime_eve", "Graphics/schoolpool_eve.png",
-    "True", "Graphics/schoolpool_day.png")
-image Festival = "Graphics/festival.png"
-image Bathroom = "Graphics/bathroom.png"
-image Recreation = "Graphics/NYI.png"
-image Town = "Graphics/NYI.png"
-image Arcade = "Graphics/NYI.png"
-image Cafe = "Graphics/NYI.png"
+    "gametime_eve", "Graphics/ui/bg/schoolpool_eve.png",
+    "True", "Graphics/ui/bg/schoolpool_day.png")
+image Festival = "Graphics/ui/bg/festival.png"
+image Bathroom = "Graphics/ui/bg/bathroom.png"
+image Recreation = "Graphics/ui/bg/NYI.png"
+image Town = "Graphics/ui/bg/NYI.png"
+image Arcade = "Graphics/ui/bg/NYI.png"
+image Cafe = "Graphics/ui/bg/NYI.png"
 
-image splash = "Graphics/splashscreen.png"
+image splash = "Graphics/ui/bg/splashscreen.png"
 image daymenubg = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/menubg-evening.png",
-    "True", "Graphics/ui/menubg-day.png")
+    "gametime_eve", "Graphics/ui/bg/menubg-evening.png",
+    "True", "Graphics/ui/bg/menubg-day.png")
 
-image RM neutral = "Graphics/RM-neutral.png"
-image RM angry = "Graphics/RM-angry.png"
-image RM happy = "Graphics/RM-happy.png"
-image RM sad = "Graphics/RM-sad.png"
-image RM smug = "Graphics/RM-smug.png"
+image RM neutral = "Graphics/minor/RM-neutral.png"
+image RM angry = "Graphics/minor/RM-angry.png"
+image RM happy = "Graphics/minor/RM-happy.png"
+image RM sad = "Graphics/minor/RM-sad.png"
+image RM smug = "Graphics/minor/RM-smug.png"
 
-image Yuki neutral = "Graphics/yuki-1-neutral.png"
-image Yuki happy = "Graphics/yuki-1-happy.png"
-image Yuki sad = "Graphics/yuki-1-sad.png"
+image Yuki neutral = "Graphics/minor/yuki-1-neutral.png"
+image Yuki happy = "Graphics/minor/yuki-1-happy.png"
+image Yuki sad = "Graphics/minor/yuki-1-sad.png"
 
-image HR neutral = "Graphics/HR-neutral.png" #Homeroom Teacher Neutral Portrait
+image HR neutral = "Graphics/minor/HR-neutral.png" #Homeroom Teacher Neutral Portrait
 
 define MC = Character('Keisuke', color="#0066CC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')')
@@ -76,12 +76,14 @@ define Student3 = Character('Student 3', color="#FF3300")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
-define audio.Daymenu = "Audio/BGM/daymenu.ogg"
-define audio.AE = "Audio/BGM/AE.ogg"
-define audio.RM = "Audio/BGM/RM.mp3"
+define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
+define audio.AE = "Audio/BGM/scene_AE.ogg"
+define audio.BBW = "Audio/BGM/scene_BBW.mp3"
+define audio.RM = "Audio/BGM/scene_RM.ogg"
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
 define audio.Festival = "Audio/BGM/scene_tbi.ogg"
+define audio.Rain = "Audio/BGM/scene_rain.mp3"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
@@ -580,7 +582,7 @@ label global000_RM_c1:
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM neutral with dissolve
-    RM "Alright, you check out...{w}My name's Daichi Kuuchibiru."
+    RM "Alright, you check out...{w}My name's Daichi Utagashi."
     $ setAffection("RM", -1)
     scene Dorm Interior with fade
     show RM neutral
@@ -595,7 +597,7 @@ label global000_RM_c2:
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
     show RM neutral with dissolve
-    RM "Alright, you check out...{w}My name's Daichi Kuuchibiru.{w} Come in, I don't like leaving the door open."
+    RM "Alright, you check out...{w}My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
     scene Dorm Interior with fade
     show RM neutral
     jump global000_RM_after
@@ -608,7 +610,7 @@ label global000_RM_c3:
     "I left my luggage by the door and ran around the dorm, coming around the other side just in time to see him struggling out the window."
     show RM angry with vpunch
     UNKNOWN "Aaah! D-Damn you!"
-    RM "Daichi Kuuchibiru isn't going without a fight!"
+    RM "Daichi Utagashi isn't going without a fight!"
     "Daichi tried to go back inside, but he had already squirmed too far out to get back through the window."
     RM "Rrrgh!{w} Hrff!{w} Nnngh...{w}Dammit, I'm s-stuck!"
     MC "Will you calm down for a second and tell me what's wrong???"
@@ -700,8 +702,8 @@ label global000_sit_c1:
     "{color=#FF69B4}*FLUMPH!*{/color}"
     MCT "!!"
     MCT "I... Is that..."
-    show AE neutral flip at Position(xpos=0.75, xanchor=0.5) with dissolve
-    MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w}I can't say anything about it with everyone else around..."
+    show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w} I can't say anything about it with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
@@ -1102,49 +1104,36 @@ label global005:
     BBW "..."
     hide FMG with dissolve
     AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
-    show PRG neutral at Position (xpos=0.5, xanchor=0.5, ypos=0.515, yanchor=0.5) with dissolve:
-        xzoom 1
+    show PRG neutral at Position (xpos=0.5, xanchor=0.5, ypos=0.515, yanchor=0.5) with dissolve
     show BBW neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
     BBW "Excuse me, but Aida is otherwise engaged."
-    show PRG neutral:
-        xzoom -1
+    show PRG neutral at Transform(xzoom=-1)
     AE "Not now she isn't, unless there's some other class president I'm unaware of."
-    show PRG neutral:
-        xzoom 1
+    show PRG neutral at Transform(xzoom=1)
     BBW "I'm sure you can find someone else. Aida is developing a set of very specialized skills."
-    show PRG neutral:
-        xzoom -1
+    show PRG neutral at Transform(xzoom=-1)
     AE "I'm sure she is. AFTER classes. During school hours she'll submit to school authority."
-    show PRG neutral:
-        xzoom 1
+    show PRG neutral at Transform(xzoom=1)
     show BBW angry
     show AE angry
     BBW "..."
     AE "..."
-    show PRG neutral:
-        xzoom -1
+    show PRG neutral at Transform(xzoom=-1)
     pause 1
-    show PRG neutral:
-        xzoom 1
+    show PRG neutral at Transform(xzoom=1)
     BBW "..."
     AE "..."
-    show PRG sad:
-        xzoom -1
+    show PRG sad at Transform(xzoom=-1)
     pause .5
-    show PRG sad:
-        xzoom 1
+    show PRG sad at Transform(xzoom=1)
     pause .5
-    show PRG sad:
-        xzoom -1
+    show PRG sad at Transform(xzoom=-1)
     pause .5
-    show PRG sad:
-        xzoom 1
+    show PRG sad at Transform(xzoom=1)
     pause .5
-    show PRG sad:
-        xzoom -1
+    show PRG sad at Transform(xzoom=-1)
     pause .5
-    show PRG sad:
-        xzoom 1
+    show PRG sad at Transform(xzoom=1)
     pause 1
     show BBW neutral
     BBW "...Hmph!"
@@ -1546,7 +1535,7 @@ label End:
     centered "During each scene, an \"affection\" score for each of the girls were recorded based on your choices."
     centered "In the full game, they will be very important in where the story will lead; including some exclusive plot events and the chance for the girl to fall in love with you."
     centered "For now, they're just plain numbers; here's how you did!"
-    centered "Inoue Honoka: [BE_Affection] \n Yamazaki Naomi: [GTS_Affection] \n Mizutani Akira: [FMG_Affection] \n Matsumoto Shiori: [AE_Affection] \n Alice Nikumaru: [BBW_Affection] \n Kodama Aida: [PRG_Affection] \n Daichi Kuuchibiru: [RM_Affection]"
+    centered "Inoue Honoka: [BE_Affection] \n Yamazaki Naomi: [GTS_Affection] \n Mizutani Akira: [FMG_Affection] \n Matsumoto Shiori: [AE_Affection] \n Alice Nikumaru: [BBW_Affection] \n Kodama Aida: [PRG_Affection] \n Daichi Utagashi: [RM_Affection]"
     
     centered "Thanks for playing!"
 

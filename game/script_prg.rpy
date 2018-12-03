@@ -2,36 +2,26 @@ define PRG = Character('Kodama', color="#FF3399", what_prefix='{size=-6}', what_
 define fade = Fade(0.5, 0.0, 0.5)
 
 image PRG neutral = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-neutral.png",
-    "True", "Graphics/PRG-1-neutral.png")
-image PRG neutral_flip = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", im.Flip("Graphics/PRG-2-neutral.png", horizontal=True),
-    "True", im.Flip("Graphics/PRG-1-neutral.png", horizontal=True))
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/neutral.png",
+    "True", "Graphics/PRG/1/neutral.png")
 image PRG happy = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-happy.png", 
-    "True", "Graphics/PRG-1-happy.png")
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/happy.png", 
+    "True", "Graphics/PRG/1/happy.png")
 image PRG sad = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-sad.png",
-    "True", "Graphics/PRG-1-sad.png")
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/sad.png",
+    "True", "Graphics/PRG/1/sad.png")
 image PRG surprised = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-surprised.png",
-    "True", "Graphics/PRG-1-surprised.png")
-image PRG surprised_flip = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", im.Flip("Graphics/PRG-2-surprised.png", horizontal=True),
-    "True", im.Flip("Graphics/PRG-1-surprised.png", horizontal=True))
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/surprised.png",
+    "True", "Graphics/PRG/1/surprised.png")
 image PRG angry = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-angry.png",
-    "True", "Graphics/PRG-1-angry.png")
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/angry.png",
+    "True", "Graphics/PRG/1/angry.png")
 image PRG aroused = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-aroused.png",
-    "True", "Graphics/PRG-1-aroused.png")
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/aroused.png",
+    "True", "Graphics/PRG/1/aroused.png")
 image PRG unique = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG-2-unique.png",
-    "True", "Graphics/PRG-1-unique.png")
-
-image PRG surprised_flip = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", im.Flip("Graphics/PRG-2-surprised.png", horizontal=True),
-    "True", im.Flip("Graphics/PRG-1-surprised.png", horizontal=True))
+    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
+    "True", "Graphics/PRG/1/unique.png")
 
 init 2 python:
     datelibrary['PRG_size_6'] = datetime.date(2005, 12, 10)
@@ -282,9 +272,9 @@ label PRG003_2:
 label PRG003_3:
     MC "Actually, I was looking for you, Kodama-san."
     show PRG surprised
-    show PRG surprised_flip
-    show PRG surprised
-    show PRG surprised_flip
+    show PRG surprised at Transform(xzoom=-1)
+    show PRG surprised at Transform(xzoom=1)
+    show PRG surprised at Transform(xzoom=-1)
     "I don't think Aida could have looked more surprised if I'd told her aliens had just landed."
     show PRG aroused #changed from sad
     PRG "M-me? Why? Did I d-do something wrong?"
@@ -928,15 +918,15 @@ label PRG009:
     PRG "..."
     "I approached Aida from the side, not trying to be sneaky, just that's how my path wound up intersecting her. As I got close, I recognized the paper she was staring at by the distinct shape and size."
     MC "Looking at your results, huh?"
-    show PRG surprised_flip
+    show PRG surprised at Transform(xzoom=-1)
     PRG "Eep!"
-    show PRG neutral_flip
+    show PRG neutral at Transform(xzoom=-1)
     PRG "O-oh, Hotsure-San! I, uh, y-you... Um..."
     "Aida whipped the paper behind her in the least convincing attempt at hiding something I think I'd ever seen."
     MC "..."
     PRG "..."
     MC "...Soo, checking out your results again?"
-    show PRG sad at Position (xpos=0.2, xanchor=0.5) with dissolve
+    show PRG sad at Position (xpos=0.2, xanchor=0.5), Transform(xzoom=1) with dissolve
     pause 1.5
     hide PRG sad with dissolve
     show PRG neutral with dissolve 

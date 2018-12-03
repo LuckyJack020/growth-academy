@@ -1,26 +1,26 @@
 define BE = Character('Honoka', color="#FCCF20")
 
 image BE neutral = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-neutral.png",
-    "True", "Graphics/BE-1-neutral.png")
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/neutral.png",
+    "True", "Graphics/BE/1/neutral.png")
 image BE happy = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-happy.png", 
-    "True", "Graphics/BE-1-happy.png")
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/happy.png", 
+    "True", "Graphics/BE/1/happy.png")
 image BE sad = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-sad.png",
-    "True", "Graphics/BE-1-sad.png")
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/sad.png",
+    "True", "Graphics/BE/1/sad.png")
 image BE surprised = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-surprised.png",
-    "True", "Graphics/BE-1-surprised.png")
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/surprised.png",
+    "True", "Graphics/BE/1/surprised.png")
 image BE angry = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-angry.png",
-    "True", "Graphics/BE-1-angry.png")
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/angry.png",
+    "True", "Graphics/BE/1/angry.png")
 image BE aroused = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE-2-aroused.png",
-    "True", "Graphics/BE-1-aroused.png")
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/aroused.png",
+    "True", "Graphics/BE/1/aroused.png")
 
-image cg BE001 = "Graphics/BE-SC-1.png"
-image cg BE002 = "Graphics/BE-SC-2.png"
+image cg BE001 = "Graphics/ui/gallery/BE-001.png"
+image cg BE002 = "Graphics/ui/gallery/BE-002.png"
 
 init 2 python:
     datelibrary['BE001_deadline'] = datetime.date(2005, 4, 13)
