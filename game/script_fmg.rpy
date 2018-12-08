@@ -47,7 +47,7 @@ init 2 python:
     eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                              "conditions": []}
     eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                   "conditions": []}
     eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"], "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                   "conditions": [[ConditionEnum.EVENT, "FMG015"]]}
-    #eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": []}
+    eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": []}
 
 label FMG001:
     scene Track with fade #track might not be the right background?

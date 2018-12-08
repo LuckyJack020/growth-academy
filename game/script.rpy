@@ -13,7 +13,7 @@
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
-    locationlist = ['auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track', 'musicclassroom']
+    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track']
     debuginfo = False
     debugenabled = True
     debuginput = ""
@@ -122,7 +122,7 @@
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY = range(7)
     
     class WeekendEnum:
-        WEEKDAY, WEEKEND, ANY = range(3)
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, WEEKDAY, WEEKEND, ANY = range(10)
     
     class TimeEnum:
         DAY, NIGHT, AFTERSCHOOL, ANY = range(4)
@@ -241,8 +241,12 @@
     def isEventTimeOk(time, day):
         #Weekday = Mon-Sat, Weekend = Sun, Any = Do not check
         d = (day == WeekendEnum.ANY or (day == WeekendEnum.WEEKEND and gametime.weekday() == 6) or (day == WeekendEnum.WEEKDAY and gametime.weekday() != 6))
-        #Day = Day time period, Night = Night time period, Afterschool = Night time period OR Sunday, Any = Do not check
-        t = (time == TimeEnum.ANY or (time == TimeEnum.DAY and not gametime_eve) or ((time == TimeEnum.NIGHT or time == TimeEnum.AFTERSCHOOL) and gametime_eve) or (time == TimeEnum.AFTERSCHOOL and gametime.weekday() == 6))
+        d = d or (gametime.weekday() == day)
+        renpy.log(str(gametime.weekday()) + " vs " + str(day))
+        #Day = Day time period, Night = Night time period, Afterschool = Night time period OR Sunday, Any = Do not check, Day of week = that day specifically
+        t = (time == TimeEnum.ANY or (time == TimeEnum.DAY and not gametime_eve))
+        t = t or ((time == TimeEnum.NIGHT or time == TimeEnum.AFTERSCHOOL) and gametime_eve)
+        t = t or (time == TimeEnum.AFTERSCHOOL and gametime.weekday() == 6)
         return d and t
         
     def isEventDateOk(start, end):
@@ -764,7 +768,7 @@ label daymenu:
             if len(prefpool) != 0:
                 tmp = renpy.random.choice(prefpool)
                 eventchoices.append(tmp)
-                allpool.remove(tmp)
+                #allpool.remove(tmp)
             elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
                 tmp = renpy.random.choice(allpool)
                 eventchoices.append(tmp)
@@ -879,10 +883,8 @@ label trainacademics:
 
 label debugloadtest:
     menu:
-        "Graphics":
-            $tmptime = gametime_eve
+        "Characters":
             $tmpdate = gametime
-            $gametime_eve = False
             scene black
             show AE neutral
             pause .1
@@ -1099,7 +1101,12 @@ label debugloadtest:
             
             show Rin neutral
             pause .1
-
+            $gametime = tmpdate
+            
+        "Backgrounds":
+            $tmptime = gametime_eve
+            $tmpdate = gametime
+            $gametime_eve = False
             scene Lake Road
             pause .1
             scene School Front
@@ -1164,7 +1171,10 @@ label debugloadtest:
             pause .1
             scene Dorm GTS
             pause .1
-            
+            scene Dorm BE
+            pause .1
+            scene Sushi Restaurant
+            pause .1
  
             $gametime_eve = True
             
@@ -1232,21 +1242,29 @@ label debugloadtest:
             pause .1
             scene Dorm GTS
             pause .1
-            
+            scene Dorm BE
+            pause .1
+            scene Sushi Restaurant
+            pause .1
+            $gametime_eve = tmptime
+            $gametime = tmpdate
+        "CGs":    
             show cg BE001
             pause .1
             show cg BE002
             pause .1
             show cg BBW001
             pause .1
-            $gametime_eve = tmptime
-            $gametime = tmpdate
         "Sounds":
             play music Daymenu
             pause .1
             play music AE
             pause .1
+            play music BE
+            pause .1
             play music BBW
+            pause .1
+            play music PRG
             pause .1
             play music RM
             pause .1

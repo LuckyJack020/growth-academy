@@ -40,9 +40,9 @@ image Pool = ConditionSwitch(
 image Festival = "Graphics/ui/bg/festival.png"
 image Bathroom = "Graphics/ui/bg/bathroom.png"
 image Recreation = "Graphics/ui/bg/NYI.png"
-image Town = "Graphics/ui/bg/NYI.png"
-image Arcade = "Graphics/ui/bg/NYI.png"
-image Cafe = "Graphics/ui/bg/NYI.png"
+image Town = "Graphics/ui/bg/town.png"
+image Arcade = "Graphics/ui/bg/arcade.png"
+image Cafe = "Graphics/ui/bg/cafe.png"
 
 image splash = "Graphics/ui/bg/splashscreen.png"
 image daymenubg = ConditionSwitch(
@@ -78,8 +78,10 @@ define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what
 
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
+define audio.BE = "Audio/BGM/scene_BE.mp3"
 define audio.BBW = "Audio/BGM/scene_BBW.mp3"
 define audio.RM = "Audio/BGM/scene_RM.ogg"
+define audio.PRG = "Audio/BGM/scene_tbi.ogg"
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
 define audio.Festival = "Audio/BGM/scene_tbi.ogg"
@@ -98,6 +100,7 @@ define audio.Boing = "Audio/SFX/sfx_boing.ogg"
 define audio.Knock = "Audio/SFX/sfx_tbi.ogg"
 define audio.Thud = "Audio/SFX/sfx_tbi.ogg"
 define audio.Victory = "Audio/SFX/sfx_victory.ogg"
+define audio.Whistle = "Audio/SFX/sfx_tbi.ogg"
 
 init 1 python:
     datelibrary['testday'] = datetime.date(2005, 4, 7)
@@ -106,7 +109,7 @@ init 1 python:
     datelibrary['day_end'] = datetime.date(2006, 4, 3)
     eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.PRESET]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": [], "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
-    eventlibrary['RM002'] = {"name": "RM002", "girls": [], "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                                 "conditions": [[ConditionEnum.EVENT, "RM001"]]}
+    eventlibrary['RM002'] = {"name": "Yuki", "girls": [], "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                                  "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     presetdays["4-6-F"] = ["global005"]
     presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
@@ -207,6 +210,7 @@ label global000:
         
     # Move to Lake Road screen with a fade in transition.
     scene Lake Road with fade
+    play music BE
     MCT "Ahh... It's really hot today."
     "I came to a stop on a wooden bridge overlooking a lake."
     "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tommorrow."
@@ -277,6 +281,7 @@ label global000:
     MC "Right."
     BE "Ah! We're here!"
     scene School Front with fade
+    stop music
     "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year.\nIt was really awe-inspiring at the time."
     "But even then, I had no idea just how much my life was going to change."
@@ -284,6 +289,7 @@ label global000:
 
 label global000_GTS:
     scene black with dissolve
+    play music GTS
     "As we entered the school grounds, I couldn't help but notice how big everything was."
     scene School Planter with dissolve
     "What looked to be normal-sized buildings turned out to be a trick of perspective."
@@ -359,6 +365,7 @@ label global000_AE:
     "The yell made both of us jump in place, so sudden and forceful was it so soon after stepping inside."
     "When we caught our bearings{w} (And Honoka's bust stopped jiggling){w} \nwe saw the owner of the voice."
     scene Gate Front with dissolve
+    play music FMG
     "Stern and impatient-looking, the woman surveyed the front area of the school like a forewoman on a construction site, barking orders and taking notes on a clipboard."
     show AE angry at Position(xpos=0.75, xanchor=0.5) with vpunch
     UNKNOWN "Mizutani! Quit goofing off and get over here!"
@@ -467,6 +474,7 @@ label global000_BBW:
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
     
     scene Classroom with dissolve
+    play music BBW
     "So this was Classroom 3-B. I would be spending a lot of time here for the next year."
     "The first thing I noticed was that, much like the rest of the shool, the classroom seemed very big. It was much larger than any that I had been in before."
     "Whether or not this meant that there would be more students, or if this was just something that made this school different, I had no idea."
@@ -544,6 +552,7 @@ label global000_BBW_c2:
      
 label global000_RM:
     scene Hallway with fade
+    stop music
     show BE neutral with dissolve
     BE "Alright, well, it looks like everything's ready for tomorrow...{w}(No thanks to queenie over there.){w} Time to get back to the dorms, I guess!"
     MC "They wouldn't happen to be co-ed, would they?"
@@ -556,6 +565,7 @@ label global000_RM:
     "I headed over to the boy's dormitories, seeing they were just as enlarged as the rest of the school.{w} I felt like a child, trying the doorknob that I couldn't even get my entire hand around."
     "*Kunk-Kunk*"
     MC "Locked? I'm sure I had the right--"
+    play music RM
     UNKNOWN "Who is it?!"
     MC "Aaah!"
     UNKNOWN "Who is it? Identify yourself!"
@@ -655,11 +665,13 @@ label global000_RM_after:
     "I had just accepted it as some new schooling program, like the papers had said, but now?"
     "I never paid much attention to the news, but if every one of those reports and articles over the years could be traced back to Seichou Academy,{w} that was definitely something to wonder about."
     scene black with dissolve
+    stop music
     MCT "What have my sister and I gotten ourselves into...?"
     scene white with dissolve
     play sound AlarmClock
     "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
     scene Dorm Interior with dissolve
+    play music Peaceful
     "I was startled awake by a shrill electronic alarm clock. I looked around confused for a moment, before remembering where I was."
     MCT "Hard to believe just yesterday I was in my hometown, and now I'm off on this little island..."
     "I got up and got into my uniform, doing my best to comb my shaggy hair into something approaching proper.  In the corner of my eye I saw Daichi watching me."
@@ -891,7 +903,9 @@ label global000_sit_after:
     "\"{i}Nosce te Ipsum{/i}. {w}To thine own self be true. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need.\""
     MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
     "Finally, the ceremony ended, and we all began to file out."
+    stop music
     show AE sad
+    play music AE
     "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way was impossible to not draw the eye."
     MC "Shiori-san?  What's going on?"
     AE "I didn't see Utagachi in the assembly. He'd better not have skipped out on the first day or there will be hell to pay.  Hey, isn't he your roommate?"
@@ -940,6 +954,7 @@ label global000_aftersit_c3:
 
 label global000_homeroom:
     scene School Exterior with fade
+    play music Schoolday
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
     
     scene F1 Hallway with fade
@@ -1007,6 +1022,7 @@ label global000_homeroom:
     HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
     scene black with dissolve
+    stop music
     #"There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
     #MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
     #MCT "What is going on at this school?!"
@@ -1032,6 +1048,7 @@ label global005:
     "I thought it was unusual for him, usually the mornings were filled with the clicking of mice and keyboards as he did his 'research'.  Still, it was a welcome break to not have him eyeing me as I brushed my teeth or whatever."
 
     scene Hallway with fade
+    play music Busy
     "As I made my way inside the classroom building, I ran into a few of my classmates."
     
     if prefgirl == "BE":
@@ -1140,6 +1157,7 @@ label global005:
     MCT "...Those two aren't used to accepting 'no' for an answer, that's for sure..."
 
     scene Auditorium with fade
+    play music Rain
     "The auditorium had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
     "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
     AE "Class 3-B, over here! Line up along this partition, and- no, not alphabetically, by seat number. What do you mean you don't know what your seat number is??  Haven't you been paying attention at all?"
@@ -1247,7 +1265,7 @@ label RM001_fail:
     MC "Maybe another time."
     show RM neutral
     RM "Suit yourself."
-    "An awkward silence descended as he went back to working on... whatever it is."
+    "An awkward silence descended as he went back to working on... whatever it was."
     MCT "Maybe I should try a lighter topic?"
     jump RM001_after
 
@@ -1273,10 +1291,13 @@ label RM001_after:
     MC "..."
     RM "..."
     MC "Games? Movies? Music?"
-    RM "No."
-    MC "..."
+    RM "I used to play Suncraft, a few years back. Haven’t played in a while, though."
+    MC "Oh. I’ve never heard of it."
+    RM "It’s a strategy game. I always thought it was pretty fun."
+    MC "I see."
     show RM sad
     RM "..."
+    MC "..."
     MC "Well, what about your project there? Do you like tinkering with stuff?"
     show RM neutral
     RM "It’s alright, I guess."
@@ -1317,7 +1338,7 @@ label RM001_c2_1:
         jump daymenu
     else:
         show RM angry
-        "He turned back to his project in a huff."
+        "...But then turned back around in a huff."
         RM "I’m busy. I’ve wasted enough time answering your questions."
         MC "Fine."
         jump RM001_c2_2

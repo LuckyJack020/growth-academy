@@ -1512,7 +1512,7 @@ label GTS018:
     "We both flinched at the sound of a new voice, quickly looking over as another student hurried over to us."
     UNKNOWN "Hey there! Sorry for startling you but you're just perfect!"
     "She claimed again as she looked at Naomi with sparkles in her eyes."
-    show GTS embarrased
+    show GTS embarrassed
     GTS "I-I'm sorry, but I don't know what you mean."
     UNKNOWN "I mean that you're perfect! Like literally, you're just what we're looking for."
     "Naomi was at a loss for words.I couldn't blame her, given she had nothing to work off of as the girl seemed heavily invested in her."
