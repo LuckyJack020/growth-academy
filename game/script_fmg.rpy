@@ -893,7 +893,7 @@ label FMG011:
     "It was a cloudy day that day, but I figured it would be nice to just walk around the school despite that."
     "...At least, until it started raining."
     "Luckily, I found a room of some kind that was attached to the school , and entered without questioning its purpose. As I entered, I realized it was a recreation room of some kind, like something from an 80's arcade or something."
-    scene Recreation with fade #TODO: Scene image not implemented
+    scene Recreation with fade
     play music Busy
     MC "How old is this place, anyway?"
     "A few fellow students had the same idea I had, taking shelter from the downpour, but I realized there was someone who had already been in here before the rain started."

@@ -22,8 +22,10 @@ image Office = ConditionSwitch(
     "gametime_eve", "Graphics/ui/bg/office_eve.png",
     "True", "Graphics/ui/bg/office_day.png")
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
-image Cooking Classroom = "Graphics/ui/bg/NYI.png"
-image Music Classroom = "Graphics/ui/bg/NYI.png"
+image Cooking Classroom = "Graphics/ui/bg/cooking.png"
+image Music Classroom = ConditionSwitch(
+    "gametime_eve", "Graphics/ui/bg/music_eve.png",
+    "True", "Graphics/ui/bg/music_day.png")
 image Gym = "Graphics/ui/bg/auditorium.png"
 image Track = ConditionSwitch(
     "gametime_eve", "Graphics/ui/bg/track_eve.png",
@@ -58,6 +60,7 @@ image RM smug = "Graphics/minor/RM-smug.png"
 image Yuki neutral = "Graphics/minor/yuki-1-neutral.png"
 image Yuki happy = "Graphics/minor/yuki-1-happy.png"
 image Yuki sad = "Graphics/minor/yuki-1-sad.png"
+image Yuki gossip = "Graphics/minor/yuki-1-neutral.png"
 
 image HR neutral = "Graphics/minor/HR-neutral.png" #Homeroom Teacher Neutral Portrait
 
@@ -86,8 +89,10 @@ define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
 define audio.Festival = "Audio/BGM/scene_tbi.ogg"
 define audio.Rain = "Audio/BGM/scene_rain.mp3"
+define audio.Romance = "Audio/BGM/scene_tbi.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
+define audio.Steamy = "Audio/BGM/scene_tbi.ogg"
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg"
 
@@ -95,12 +100,12 @@ define audio.SceneStart = "Audio/SFX/sfx_scenestart.wav"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
 define audio.Bird = "Audio/SFX/sfx_tbi.ogg"
 define audio.Cheer = "Audio/SFX/sfx_tbi.ogg"
-define audio.ClockTower = "Audio/SFX/sfx_tbi.ogg"
+define audio.ClockTower = "Audio/SFX/sfx_clocktower.mp3"
 define audio.Boing = "Audio/SFX/sfx_boing.ogg"
-define audio.Knock = "Audio/SFX/sfx_tbi.ogg"
-define audio.Thud = "Audio/SFX/sfx_tbi.ogg"
+define audio.Knock = "Audio/SFX/sfx_knock.ogg"
+define audio.Thud = "Audio/SFX/sfx_thud.wav"
 define audio.Victory = "Audio/SFX/sfx_victory.ogg"
-define audio.Whistle = "Audio/SFX/sfx_tbi.ogg"
+define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 
 init 1 python:
     datelibrary['testday'] = datetime.date(2005, 4, 7)

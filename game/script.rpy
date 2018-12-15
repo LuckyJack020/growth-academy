@@ -13,7 +13,7 @@
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
-    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track']
+    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track']
     debuginfo = False
     debugenabled = True
     debuginput = ""
@@ -892,15 +892,35 @@ label debugloadtest:
             pause .1
             show AE neutral-eyebrow
             pause .1
+            show AE neutral-noglasses
+            pause .1
+            show AE neutral-smug
+            pause .1
             show AE happy
             pause .1
             show AE sad
+            pause .1
+            show AE sad-2
             pause .1
             show AE surprised
             pause .1
             show AE angry
             pause .1
+            show AE angry-2
+            pause .1
+            show AE angry-3
+            pause .1
             show AE aroused
+            pause .1
+            show AE aroused-2
+            pause .1
+            show AE aroused-3
+            pause .1
+            show AE aroused-4
+            pause .1
+            show AE glasses
+            pause .1
+            show AE glasses-2
             pause .1
             
             show BBW neutral
@@ -984,15 +1004,35 @@ label debugloadtest:
             pause .1
             show AE neutral-eyebrow
             pause .1
+            show AE neutral-noglasses
+            pause .1
+            show AE neutral-smug
+            pause .1
             show AE happy
             pause .1
             show AE sad
+            pause .1
+            show AE sad-2
             pause .1
             show AE surprised
             pause .1
             show AE angry
             pause .1
+            show AE angry-2
+            pause .1
+            show AE angry-3
+            pause .1
             show AE aroused
+            pause .1
+            show AE aroused-2
+            pause .1
+            show AE aroused-3
+            pause .1
+            show AE aroused-4
+            pause .1
+            show AE glasses
+            pause .1
+            show AE glasses-2
             pause .1
 
             show BBW neutral
