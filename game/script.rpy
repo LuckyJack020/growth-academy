@@ -1304,6 +1304,8 @@ label debugloadtest:
             pause .1
             play music BBW
             pause .1
+            play music GTS
+            pause .1
             play music PRG
             pause .1
             play music RM

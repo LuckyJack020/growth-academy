@@ -4125,7 +4125,7 @@ label AE022:
 
 label AE023:
     scene Classroom with fade
-    show HR neutral with dissovle
+    show HR neutral with dissolve
     HR "-and essentially, you end up with an absolute mess called the Treaty of Versailles."
     "Class had been going by fairly normally. My eyes had begun to flutter as fatigue began to set in. I looked up towards Shiori-san, who was sitting with her usual composed demeanor."
     GTS "U-um."
