@@ -288,10 +288,12 @@ label FMG004:
     FMG "All right, ready..."
     FMG "GO!"
     hide FMG with dissolve
-    if getSkill("Athletics") < 5:
-        jump FMG004_testfail
-    else:
+    if getSkill("Athletics") >= 5:
         jump FMG004_testpass
+    elif getSkill("Athletics") >= 2:
+        jump FMG004_testsemipass
+    else:
+        jump FMG004_testfail
 
 label FMG004_testfail:
     $setAffection("FMG", -1)
@@ -319,8 +321,34 @@ label FMG004_testfail:
     "...Yeah I get the feeling Akira is not going to let me live this down..."
     jump daymenu
 
-label FMG004_testpass:
+label FMG004_testsemipass:
+    FMG "GO!"
+    hide FMG with dissolve
+    MCT "Alright, there's no way I’ll be able to beat her at the rate she’s going. If I can just keep a good pace I’ll be able to make at least the lap...Assuming I don’t die from exhaustion…"
+    FMG "Come on you can do it!"
+    "She yelled out ahead, already close to finishing. By the time I finished, The world was getting blurry…"
+    show FMG happy with dissolve
     $setAffection("FMG", 1)
+    FMG "WOO! Great job there dude, you sure got..."
+    show FMG surprised
+    FMG " potential? Dude are you okay!?"
+    "That was the last thing I heard before passing out."
+    scene black with fade
+    "One hour later."
+    scene Dorm Interior with fade
+    "By the time I woke up I was in my room. Confused, I turned to find Daichi who was looking through old newspaper articles."
+    show RM neutral with dissolve
+    RM "Oh hey, you’re up. That Mizutani girl came here carrying you on her back. She said to give this note to you."
+    "He handed me the note, to which I began to read."
+    "{i}Dear Kai, you did good today, sorry I couldn't do much else to help. Word of advice though you might want to get in better shape. ~Akira{/i}"
+    MCT "Well, at least she was kind enough to help me to my room."
+    RM "By the way…"
+    extend " did you eat my last chocolate bar?!"
+    MCT "...Oh crap."
+    jump daymenu
+
+label FMG004_testpass:
+    $setAffection("FMG", 2)
     "Despite Akira already in the lead, I managed to keep a good pace."
     "I started to feel a bit winded half way but I pushed myself to go farther."
     "It was about to the end when I was starting to get too tired, luckily I've managed to run the whole lap before stopping completely."

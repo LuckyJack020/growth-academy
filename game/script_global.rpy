@@ -103,7 +103,7 @@ define audio.Bird = "Audio/SFX/sfx_tbi.ogg"
 define audio.Cheer = "Audio/SFX/sfx_tbi.ogg"
 define audio.ClockTower = "Audio/SFX/sfx_clocktower.mp3"
 define audio.Boing = "Audio/SFX/sfx_boing.ogg"
-define audio.Knock = "Audio/SFX/sfx_knock.ogg"
+define audio.Knock = "Audio/SFX/sfx_knock.mp3"
 define audio.Thud = "Audio/SFX/sfx_thud.wav"
 define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
@@ -778,9 +778,9 @@ label global000_sit_c1_1:
     AE "Shhh! {w}They're about to start."
     MC "I know, but I was just, ah, wondering--"
     AE "You noticed too? It's weird, isn't it? Normally you have the whole faculty on-stage for these things, but it's just the principal and a few others..."
-    "You nod dumbly, realizing only now that behind the principal on stage there were only a handful of faculty members."
-    "It definitely seemed sparse, despite the size of the stage, but you weren't about to attribute it to anything nefarious like Daichi would."
-    "You open your mouth to try and ask about the ass-squishing she's giving you, but the principal clearing his throat into the microphone snapped Shiori's attention to the stage."
+    "I nodded dumbly, realizing only then that behind the principal on stage there were only a handful of faculty members."
+    "It definitely seemed sparse, despite the size of the stage, but I wasn't about to attribute it to anything nefarious like Daichi would."
+    "I opened my mouth to try and ask about the ass-squishing she's giving me, but the principal clearing his throat into the microphone snapped Shiori's attention to the stage."
     MCT "No use talking now, I suppose...  But it's nice she thought I was clever enough to notice."
     $ setAffection("AE", 1)
     $ setScenecount("AE", 1)
@@ -914,7 +914,7 @@ label global000_sit_after:
     play music AE
     "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way was impossible to not draw the eye."
     MC "Shiori-san?  What's going on?"
-    AE "I didn't see Utagachi in the assembly. He'd better not have skipped out on the first day or there will be hell to pay.  Hey, isn't he your roommate?"
+    AE "I didn't see Utagashi in the assembly. He'd better not have skipped out on the first day or there will be hell to pay.  Hey, isn't he your roommate?"
     menu:
         "I haven't seen him...":
             jump global000_aftersit_c1
@@ -989,6 +989,7 @@ label global000_homeroom:
     "The man was tall, thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
     "{i}Tashi{/i}"
     "Tashi-Sensei dropped the chalk back on the tray, turned to us, and stepped forward, leaning against the lectern."
+    stop music
     HR "..."
     show GTS neutral
     GTS "..."
@@ -1011,6 +1012,7 @@ label global000_homeroom:
     hide BBW with dissolve
     "..."
     "..."
+    play music Busy
     HR "All right, go ahead, get it out now. But don't run away or you'll be marked tardy."
     "The non-chalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-Sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."

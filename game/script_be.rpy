@@ -41,7 +41,7 @@ init 2 python:
     datelibrary['BE_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_2'] = datetime.date(2005, 4, 20)
+    datelibrary['BE_size_2'] = datetime.date(2005, 4, 10)
     
     eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE001_deadline",                               "conditions": []}
     eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",                                   "conditions": []}

@@ -542,11 +542,10 @@ screen daymenu:
         textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
         textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
         textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
-        
-    textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
     
     #debug menu toggle (if debug is enabled)
     if debugenabled:
+        textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
         textbutton "Toggle Debug" xalign 0.9 yalign 0.9 action SetVariable("debuginfo", not debuginfo)
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
         
@@ -768,7 +767,7 @@ label daymenu:
             if len(prefpool) != 0:
                 tmp = renpy.random.choice(prefpool)
                 eventchoices.append(tmp)
-                #allpool.remove(tmp)
+                allpool.remove(tmp)
             elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
                 tmp = renpy.random.choice(allpool)
                 eventchoices.append(tmp)

@@ -42,7 +42,7 @@ init 2 python:
     datelibrary['GTS_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['GTS_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['GTS_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['GTS_size_2'] = datetime.date(2005, 4, 14)
+    datelibrary['GTS_size_2'] = datetime.date(2005, 4, 10)
     datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
     datelibrary['GTS011_date'] = datetime.date(2005, 4, 21)
     

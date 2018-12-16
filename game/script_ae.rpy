@@ -89,7 +89,7 @@ init 2 python:
     eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                                "conditions": [[ConditionEnum.EVENT, "AE017"]]}
     eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                       "conditions": [[ConditionEnum.EVENT, "AE018"]]}
     eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "AE019"]]}
-    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.EVENT, "AE020"]]}
+    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.EVENT, "AE020"]]}
     eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                                 "conditions": [[ConditionEnum.EVENT, "AE021"]]}
     eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.EVENT, "AE022"]]}
     eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": [[ConditionEnum.EVENT, "AE023"]]}
@@ -268,7 +268,7 @@ label AE002_c1_1:
     MC "... Can I level with you on something?"
     show AE neutral
     AE "Go ahead."
-    MC "I don't think you're being completely honest for me."
+    MC "I don't think you're being completely honest with me."
     show AE angry
     AE "That's a bit presumptuous of you to..."
     show AE neutral-annoyed
@@ -276,7 +276,7 @@ label AE002_c1_1:
     show AE sad
     AE "My apologies. You're right."
     $setAffection("AE", 2)
-    show AE aroused-c
+    show AE aroused-3
     AE "Haah... well, I saw some upsetting things in there in relation to my own growth. I was admittedly a bit shocked and in my heightened worry I left the book behind."
     MC "Oh, you-.... Wow, I didn't expect you to just come out and tell me all of that."
     show AE neutral-annoyed
@@ -899,7 +899,7 @@ label AE006:
         MC "Oh... I mean, I just wanted to help."
         AE "I'll take my chances with one of the other members should the need come. Good day."
         MCT "Ouch...well. I guess that's that."
-        jump daymenu
+        jump AE006_routeend #TO BE REMOVED LATER
     elif getAffection("AE") > 2:
         show AE neutral
         AE "Perhaps...it would be better if I had someone with me. From what I gather, you seem competent and responsible."
@@ -946,6 +946,14 @@ label AE006:
     scene Hallway with fade
     stop music
     "As I left the library, I gazed out the window. The rain had passed into to a soft drizzle on the horizon as the sun's golden rays began to peek through the clouds. As I walked outside into to fresh air, the smell of petrichor hit my nose as I began to ponder how I would spend the rest of the day."
+    if not getFlag("AE006_helpinginoffice"): #TO BE REMOVED LATER
+        jump AE006_routeend
+    jump daymenu
+
+label AE006_routeend:
+    scene black with fade
+    "Refusing to work with Shiori will initiate an alternate route that is currently in development."
+    "However, because it's incomplete, Shiori's route will end here. Stay tuned for the alternate route!"
     jump daymenu
 
 label AE007:
@@ -1340,12 +1348,14 @@ label AE009_after:
     MC "Yeah, uh, you like this school better than your last? That's good."
     MC "And, you know, I think the reason why the students here have less rules broken and stuff is because everyone is here under...you know, the same circumstances."
     show AE angry-2
+    stop music
     AE "I don't believe that for a second."
     MC "..."
     "The silence hung there in the room, coming out of left field, along with the drastic change in tone from Shiori-san. The way she said that...just didn't feel right."
     "I opened my mouth to say something, when Shiori-san spoke up."
     show AE neutral
     AE "Well now, Hotsure-san, it seems like you're nearly finished with the stack."
+    play music Peaceful
     MC "O-Oh, yeah! Just a few more left after this."
     "Shiori-san layed down a few more pages which I picked up readily, preparing to place them in the final slots."
     MC "Two aaaand, done."
@@ -1538,7 +1548,7 @@ label AE010:
     show AE aroused-2
     AE "I think it goes without saying, but...could you not bring up earlier to anyone? I showed you...why I was worried in order to ease your mind, nothing else."
     MC "Oh, don't worry about it. It's okay, I mean, as long as you don't go around talking about my rat's-nest hair."
-    show AE smug
+    show AE neutral-smug
     AE "I won't."
     MC "Cool."
     scene Library with fade
@@ -1783,7 +1793,7 @@ label AE012:
     show AE neutral with dissolve
     AE "..."
     "However, today had a different air about it than the day before. There was a bit of anticipation, to be honest, because I could just feel as though I was going to learn something exciting."
-    MC "So, today's the day. You promised you would answer any questions I have."
+    MC "So, how's about it? You promised you would answer any questions I have."
     AE "I certainly will."
     AE "Later. Until then, let's get to work."
     MC "Eh?"
@@ -1865,7 +1875,7 @@ label AE012_goals:
     AE "I want to be a lawyer."
     MCT "Knew it."
     MC "Figures, yeah."
-    show AE annoyed-neutral
+    show AE neutral-annoyed
     AE "Hmph."
     show AE neutral
     MC "I'm guessing prosecution? I mean, you could do defense if you want, but-"
@@ -3000,7 +3010,7 @@ label AE018:
     AE "Mhm. It's nice up here. Not a lot of people, nice, cool air, and a great view."
     MC "All right, cool."
     scene Roof with fade
-    "Shiori-san opened the doors, and a nice gust of air swept into the doorway. It was fairly strong, and almost instantly as the wind picked up, Shiori-san's skirt was lifted a few inches as well; giving me a brief view of her behind, squeezed tightly by dark-blue panties, before she pulled her skirt back down. Shiori-san cleared her throat."
+    "Shiori-san opened the doors, and a nice gust of air swept into the doorway. It was fairly strong, and almost instantly as the wind picked up, Shiori-san's skirt was lifted a few inches as well; giving me a brief view of her behind, squeezed tightly by white panties, before she pulled her skirt back down. Shiori-san cleared her throat."
     show AE aroused-2 with dissolve
     AE "Ah, I apologize."
     MC "Oh, no, it's okay."
@@ -3025,7 +3035,7 @@ label AE018:
     play sound Bird
     MC "Hm?"
     AE "That bird."
-    play sound "Audio/Bird.ogg"
+    play sound Bird
     MC "Oh, yeah, it sounds nice."
     show AE happy
     AE "Mhm...it's a Siberian Rubythroat. They're native to the area."
@@ -3578,24 +3588,24 @@ label AE020_c1_2:
     show AE sad-2
     AE "G-give me..."
     show AE neutral
-    AE "Give me three days time. Within three days time, I will give you a definite answer."
-    MC "Three days? F-for what?"
+    AE "Give me a few days time. By then I will give you a definite answer."
+    MC "A few days? F-for what?"
     AE "..."
     AE "I want to learn."
     MC "Learn...what?"
     show AE neutral-annoyed
     AE "I-if you're serious about what you said, then accept my terms."
     MC "Shiori-san..."
-    MC "Okay. Three days. Three months. Whatever time you need. I'm sure you will find what you are looking for."
+    MC "Okay. A few days. A few months. Whatever time you need. I'm sure you will find what you are looking for."
     show AE neutral
-    AE "Three days time will be enough. Until then..."
+    AE "A few days' time will be enough. Until then..."
     AE "This is our final day here. No matter what, this is the last day of our working relationship. And simultaneously, time to leave the office for now."
     MC "Well... where can I see you again? Outside of class?"
     AE "We won't meet here...but under the Sakura after class. That's where I will tell you."
     "Shiori-san placed the last three of her files in the proper folders, and began to leave the office."
     AE "Good day, Hotsure-san."
     "I took out my final file, and placed in in the cabinet."
-    MC "Then here's to the next three days."
+    MC "Then here's to the next few days..."
     MCT "Whatever may come."
     jump daymenu
 
@@ -3616,7 +3626,7 @@ label AE021:
         show AE neutral-annoyed
         AE "Our business is between ourselves."
         BBW "Of course it is. Don't let me interrupt."
-        "Nikumaru-san gave a little wink before walking to her chair. Before sitting down, she motioned to me to come over to where she was."
+        "Alice gave a little wink before walking to her chair. Before sitting down, she motioned to me to come over to where she was."
         hide AE with dissolve
         hide PRG with dissolve
         MC "U-um...yeah?"
@@ -4027,7 +4037,7 @@ label AE022:
     show AE neutral-annoyed
     AE "I was not ‘stalking' you. I was merely studying Hotsure-san."
     RM "Studying?! Keisuke, this chick is bad news-"
-    show AE smug
+    show AE neutral-smug
     AE "So then you're Daichi Utagashi? I believe it's our first time meeting face to face."
     show RM neutral
     RM "Uh..."
@@ -4132,7 +4142,7 @@ label AE023:
     HR "Yeah? What is it, Yamazaki-san?"
     GTS "I apologize greatly for interrupting the lesson, however... you have some red bean paste on your cheek."
     HR "Hm?"
-    "Tashi-san looked off to the side of his face, noticing the spot instantly. With one quick, nearly sickening swoop of his cow like tongue he licked the spot clean in an instant, causing Nikumaru-chan to almost audibly gag."
+    "Tashi-san looked off to the side of his face, noticing the spot instantly. With one quick, nearly sickening swoop of his cow like tongue he licked the spot clean in an instant, causing Alice to almost audibly gag."
     HR "Eh...should be good for today. Matsumoto-san, do-"
     hide HR with dissolve
     show AE neutral-annoyed with dissolve
@@ -4191,7 +4201,7 @@ label AE023:
     show AE sad-2
     AE "As friends or...? "
     MCT "Oh geez, here we go."
-    show AE aroused-4
+    show AE aroused-3
     AE "I-I apologize for my intrusiveness."
     MC "N-not at all."
     MCT "I NEVER would have taken Shiori-san for a jealous type, though I may have been misreading the situation."
@@ -4317,7 +4327,7 @@ label AE023_c1_after:
     "However, her bootyus maximus was, as always, the greatest sight to behold, the bottom of each cheek protruding through the bottom of her soon to be ruined skirt, the very bottom of her panties eliciting lewd thoughts from me. I lightly bit my bottom lip as every failed attempt to scrape the gum from the floor caused her backside to wobble gently."
     show AE angry at Position(xpos=0.5, xanchor=0.5, ypos=0.52, yanchor=0.5), Transform(zoom=1.0)
     AE "Ugh, this damnable-"
-    show AE annoyed
+    show AE neutral-annoyed
     AE "Hotsure-san, can you-"
     show AE neutral
     AE "..."
@@ -4402,7 +4412,7 @@ label AE024:
     AE "Since I’ve been growing though, my thighs have been rubbing together... down there."
     show AE aroused
     AE "S-sometimes, I even go jogging because the vibrations... mmmnff~"
-    "Shiori-san made a small waddle to turn around in place, hoisted the sides of her skirt up, and bent over. Her asscheeks were on full display in front of me, a pair of massive and supple pale spheres of flesh shielded only by a pair of dark blue panties."
+    "Shiori-san made a small waddle to turn around in place, hoisted the sides of her skirt up, and bent over. Her asscheeks were on full display in front of me, a pair of massive and supple pale spheres of flesh shielded only by a pair of white panties."
     AE "I know why you’ve been spending time with me. This moment right here. So please... give me a good squeeze and I’ll be yours forever~"
     "Shiori-san’s mouth changed from biting her lip to her signature smirk, her lewd eyes obscured behind the glare from her glasses."
     show AE glasses
