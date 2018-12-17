@@ -523,7 +523,6 @@ label AE004:
     scene Dorm Exterior with fade
     "I opened the door quickly, and began to head out. If it weren't for my reflexes, I would have ran head first into Shiori-san, hand prepped to knock on the door. I jumped a bit, and took a step back."
     show AE surprised with dissolve
-    play music Busy
     MC "Uwa! S-sorry, Shiori-san! I was just heading out, I didn't mean to startle you."
     "She appeared a bit surprised for a moment, but quickly regained her original posture as she cleared her throat. She slowly put her hand on a large file she was carrying in her other arm."
     show AE neutral-eyebrow
@@ -1381,6 +1380,7 @@ label AE009_after:
     
 label AE010:
     scene Hallway with fade
+    play music Peaceful
     "I walked down the hallway, getting ready to meet Shiori-san at the office. I heard that shipping and processing had been getting a lot of orders recently, so I figured that today would be a busy one."
     "I assumed, however, that was the reason for Shiori-san's absence from class, something I would have never expected."
     MCT "Hmm? Wait...Shiori-san?"
@@ -1417,7 +1417,7 @@ label AE010:
     AE "Right, well, turn around and get to work."
     MC "..."
     AE "..."
-    MC " Um...are you gonna start filling some out so I can...you know?"
+    MC "Um...are you gonna start filling some out so I can...you know?"
     AE "There's still some stacks you've yet to file from last time. I can start approving these forms here while you work."
     MC "Oh, ok. I'll just get those then."
     show AE aroused-2
@@ -1476,7 +1476,8 @@ label AE010:
     "Shiori-san took her back away from the wall and finally did it."
     MC "Out of my system? Shiori-san, I'm not going to insult y-"
     "Shiori-san finally turned around."
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=0, yanchor=0.5), Transform(zoom=3.0)
+    stop music
+    show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=0, yanchor=0.5), Transform(zoom=2.5)
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once. Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
@@ -1486,6 +1487,7 @@ label AE010:
     show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=0.52, yanchor=0.5), Transform(zoom=1.0)
     "Shiori-san turned around, blushing furiously as she brought a hand to the side of her face to avoid eye contact."
     show AE sad
+    play music AE
     AE "..."
     MC "I mean...oh my god!"
     if getAffection("AE") >= 4:
@@ -4201,7 +4203,7 @@ label AE023:
     show AE sad-2
     AE "As friends or...? "
     MCT "Oh geez, here we go."
-    show AE aroused-3
+    show AE aroused-2
     AE "I-I apologize for my intrusiveness."
     MC "N-not at all."
     MCT "I NEVER would have taken Shiori-san for a jealous type, though I may have been misreading the situation."
