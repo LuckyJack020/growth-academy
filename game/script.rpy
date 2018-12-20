@@ -99,7 +99,7 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE = range(10)
+        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE, ROUTECLEAR = range(11)
     
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -111,7 +111,8 @@
     #PRESET: no args, always returns false (ie event is only used in preset dates)
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     #ISDAYFREE: arg1 = DeltaTimeEnum, arg2 = (int) number of days OR (date) date OR (DayOfWeekEnum) day of week, arg3 = (boolean) evening, returns true if the specified time (with time of day from arg3) is not a preset/meeting day
-    
+    #ROUTECLEAR: arg1 = (string, in girls list), returns true if there are no events in the eventlibrary that haven't been cleared but are still available to select
+
     class DeltaTimeEnum:
         NUMDAYS, DATE, DAYOFWEEK = range(3)
     
@@ -127,7 +128,7 @@
     class TimeEnum:
         DAY, NIGHT, AFTERSCHOOL, ANY = range(4)
     
-    def checkCriteria(clist):
+    def checkCriteria(clist, checkRouteClear=True):
         criteriavalid = True
         for c in clist:
             if c[0] == ConditionEnum.EVENT:
@@ -232,6 +233,19 @@
                 if getTimeCode(t, c[3]) in presetdays.keys() or getTimeCode(t, c[3]) in meetingdays.keys():
                     criteriavalid = False
                     break
+            elif c[0] == ConditionEnum.ROUTECLEAR:
+                if checkRouteClear:
+                    for k, v in eventlibrary.iteritems():
+                        if k in clearedevents:
+                            continue
+                        if len(v["girls"]) == 0 or c[1] != v["girls"][0]:
+                            continue
+                        if checkCriteria(v["conditions"], False):
+                            continue
+                        criteriavalid = False
+                        break
+                    if not criteriavalid:
+                        break
             else:
                 renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
                 criteriavalid = False
@@ -439,8 +453,9 @@ label splashscreen:
     
     return
 
+#Remember to hide choicetimer for each choice made before the timer finishes.
 screen choicetimer:
-    timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('choicetimer'), Jump(timer_jump)])
 
 screen daymenu:
     if gametime_eve == TimeEnum.NIGHT:
@@ -694,6 +709,7 @@ label unsetflag:
 label daymenu:
     $updateSizes()
     $renpy.choice_for_skipping()
+    scene black
     play music Daymenu
     #Roll random events
     python:

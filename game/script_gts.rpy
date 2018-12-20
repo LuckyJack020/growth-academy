@@ -65,7 +65,8 @@ init 2 python:
     eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"],                            "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"],                     "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"],        "location": "roof",             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    
+    eventlibrary['GTSend'] = {"name": "Naomi end", "girls": ["GTS"],                            "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "GTS"]]}
+
 label GTS001:
     scene black with fade
     "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn't sure how to properly process what we were told."
@@ -1792,3 +1793,8 @@ label GTS020_c1_2:
     "I raised a cookie up to her, her cheeks still a shade of crimson as she nodded and took it. We continued our conversation, shifting to more causal topics but the mood was much happier. Naomi smiling a little more than usual as I noticed her shift her body a little so it was slightly closer to mine."
     "We talked so long that we had lost track of time, but that was okay too. Since every moment felt better than the last."
     jump daymenu
+
+label GTSend:
+    "This marks the current end of Naomi's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance

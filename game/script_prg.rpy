@@ -32,22 +32,23 @@ init 2 python:
     datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "location": "schoolexterior", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                     "conditions": []}
-    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.EVENT, "PRG001"]]}
-    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                     "conditions": [[ConditionEnum.EVENT, "PRG002"]]}
-    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "location": "track", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.EVENT, "PRG003"]]}
-    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                              "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "location": "campuscenter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",          "conditions": []}
-    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",               "conditions": []}
-    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "location": "campuscenter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG011'] = {"name": "Placeholder 011 Title", "girls": ["PRG"], "location": "classroom", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",              "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
-    eventlibrary['PRG012'] = {"name": "Placeholder 012 Title", "girls": ["PRG", "BE"], "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
-    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"], "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",               "conditions": [[ConditionEnum.EVENT, "PRG012"]]}
-    eventlibrary['PRG014'] = {"name": "PRG014", "girls": ["PRG"], "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",                             "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
+    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"],               "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
+    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"],         "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "PRG001"]]}
+    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"],            "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "PRG002"]]}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"],         "location": "track",            "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.EVENT, "PRG003"]]}
+    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"],                "location": "auditorium",       "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"],               "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
+    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"],        "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"],         "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"],                "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
+    eventlibrary['PRG011'] = {"name": "Placeholder 011 Title", "girls": ["PRG"],        "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
+    eventlibrary['PRG012'] = {"name": "Placeholder 012 Title", "girls": ["PRG", "BE"],  "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
+    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],           "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG012"]]}
+    eventlibrary['PRG014'] = {"name": "PRG014", "girls": ["PRG"],                       "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
     #eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "location": "dormBBW", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
-    eventlibrary['PRG019'] = {"name": "PRG019", "girls": ["PRG"], "location": "campuscenter", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",                        "conditions": []}
+    eventlibrary['PRG019'] = {"name": "PRG019", "girls": ["PRG"],                       "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['PRGend'] = {"name": "Aida end", "girls": ["PRG"],                     "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "PRG"]]}
 
 label PRG001:
     scene School Exterior with fade
@@ -279,9 +280,9 @@ label PRG003_2:
 label PRG003_3:
     MC "Actually, I was looking for you, Kodama-san."
     show PRG surprised
-    show PRG surprised at Transform(xzoom=-1)
+    show PRG surprised at center, Transform(xzoom=-1)
     show PRG surprised at Transform(xzoom=1)
-    show PRG surprised at Transform(xzoom=-1)
+    show PRG surprised at center, Transform(xzoom=-1)
     "I don't think Aida could have looked more surprised if I'd told her aliens had just landed."
     show PRG aroused
     PRG "M-me? Why? Did I d-do something wrong?"
@@ -940,15 +941,15 @@ label PRG009:
     PRG "..."
     "I approached Aida from the side, not trying to be sneaky, just that's how my path wound up intersecting her. As I got close, I recognized the paper she was staring at by the distinct shape and size."
     MC "Looking at your results, huh?"
-    show PRG surprised at Transform(xzoom=-1)
+    show PRG surprised
     PRG "Eep!"
-    show PRG neutral at Transform(xzoom=-1)
+    show PRG neutral at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1)
     PRG "O-oh, Hotsure-San! I, uh, y-you... Um..."
     "Aida whipped the paper behind her in the least convincing attempt at hiding something I think I'd ever seen."
     MC "..."
     PRG "..."
     MC "...Soo, checking out your results again?"
-    show PRG sad at Position (xpos=0.2, xanchor=0.5), Transform(xzoom=1)
+    show PRG sad
     pause 1.5
     show PRG neutral at center, Transform(xzoom=-1) with dissolve
     PRG "...Yes."
@@ -1004,7 +1005,7 @@ label PRG009:
             show PRG sad
             PRG "I think... I should go now.  I'm sorry for bothering you."
             MC "Are you sure?  It's not a bother, really."
-            show PRG neutral at Position (xpos=0.5, xanchor=0.5), Transform(xzoom=-1) with dissolve
+            show PRG neutral at center, Transform(xzoom=-1) with dissolve
             PRG "..."
             show PRG sad
             PRG "No, I-I should get going..."
@@ -1034,7 +1035,7 @@ label PRG009:
             MC "Well, you just let me know, okay? I hate to see someone as nice as you upset if I can help it."
             show PRG neutral
             PRG "..."
-            show PRG happy at Transform(xzoom=-1)
+            show PRG happy at center, Transform(xzoom=-1)
             PRG "...!"
             show PRG neutral
             PRG "*Ahem*, y-yes, I will, i-if, if it's not a bother."
@@ -1043,12 +1044,12 @@ label PRG009:
             "Both of us got off the bench and said our goodbyes, but something occurred to me before she turned away."
             if isEventCleared("PRG005"):
                 MC "...Still don't wanna tell me what yours is?"
-                show PRG neutral at Transform(xzoom=-1)
+                show PRG neutral at center, Transform(xzoom=-1)
                 PRG "I..."
                 show PRG neutral at Transform(xzoom=1)
-                show PRG neutral at Transform(xzoom=-1)
+                show PRG neutral at center, Transform(xzoom=-1)
                 show PRG neutral at Transform(xzoom=1)
-                show PRG neutral at Transform(xzoom=-1)
+                show PRG neutral at center, Transform(xzoom=-1)
                 PRG "..."
                 PRG "I'm s-sorry, no."
                 MC "*sigh*"
@@ -1069,7 +1070,7 @@ label PRG009:
                 PRG "..."
                 MC "Hey, hey, it's okay. I just, a burden shared is a burden halved, you know?"
                 PRG "...I'm... I'm sorry, Hotsure-san. I'm not..."
-                show PRG sad at Transform(xzoom=-1)
+                show PRG sad at center, Transform(xzoom=-1)
                 MC "Oh, well, um... Okay, Kodama-san. See you in class..."
                 hide PRG sad
                 MCT "I wonder what she's got that's got her so upset...?"
@@ -1954,3 +1955,8 @@ label PRG019_c1_after:
     "Aida gave a me a small, sweet wave, and set out across the courtyard.  The way the wind was blowing pressed her skirt against her hips, accentuating them even further. A thought crossed my mind as I headed back to the boys dorms."
     MCT "She's definitely gained a little weight, probably from the cooking club. But thankfully, it looks good on her."
     jump daymenu
+
+label PRGend:
+    "This marks the current end of Aida's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance

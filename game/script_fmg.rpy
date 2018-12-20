@@ -33,21 +33,22 @@ init 2 python:
     datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": []}
-    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                                  "conditions": [[ConditionEnum.EVENT, "FMG001"]]}
-    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"], "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                       "conditions": [[ConditionEnum.EVENT, "FMG002"]]}
-    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "location": "track", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                     "conditions": [[ConditionEnum.EVENT, "FMG003"]]}
-    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"], "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                  "conditions": [[ConditionEnum.EVENT, "FMG004"]]}
-    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"], "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                       "conditions": [[ConditionEnum.EVENT, "FMG006"]]}
-    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"], "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG007"]]}
-    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.EVENT, "FMG008"]]}
-    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": True, "startdate": "FMG_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.EVENT, "FMG009"]]}
-    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "FMG010"]]}
-    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                              "conditions": []}
-    eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                   "conditions": []}
-    eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"], "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                   "conditions": [[ConditionEnum.EVENT, "FMG015"]]}
-    eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": []}
+    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"],           "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": []}
+    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"],                   "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "FMG001"]]}
+    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"],          "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG002"]]}
+    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"],        "location": "track", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG003"]]}
+    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"],       "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"],     "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG004"]]}
+    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"],            "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.EVENT, "FMG006"]]}
+    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"],          "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                     "conditions": [[ConditionEnum.EVENT, "FMG007"]]}
+    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"],             "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "FMG008"]]}
+    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"],        "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": True, "startdate": "FMG_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "FMG009"]]}
+    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"],      "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                "conditions": [[ConditionEnum.EVENT, "FMG010"]]}
+    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"],              "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                         "conditions": []}
+    eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"],             "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"],             "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "FMG015"]]}
+    eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"],                  "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['FMGend'] = {"name": "Akira end", "girls": ["FMG"],                    "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": [[ConditionEnum.ROUTECLEAR, "FMG"]]}
 
 label FMG001:
     scene Track with fade #track might not be the right background?
@@ -704,7 +705,7 @@ label FMG009:
     MC "Nothing much, just getting something from the vending machine. What's up with you?"
     show FMG sad
     FMG "*Sigh* I'm waiting for someone because I need to talk to her. Speak of the devil..."
-    show FMG sad at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG sad at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     "Just like she said, there really was someone walking towards us. A girl with dark red hair, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
     "There were two big things that immediately made her stand out. One, her eyes were as blue if not bluer than Alice's, which would mean she was a foreign student. And two..."
@@ -861,7 +862,7 @@ label FMG010_testpass:
     Rin "So are you guys gonna shag here or what?"
     $setVar("RinFavor", getVar("RinFavor") + 1)
     MC "AHH!!"
-    show FMG surprised at Position(xpos=0.2, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG surprised at Position(xpos=0.2, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     "Both Akira and I yelled out in surprise, breaking the hug in the process."
     FMG "What?! Rin?! I thought you had a meeting with Shiori!"
     "Akira yelled out in both frustration and confusion, though this had little to no effect on Rin as she answered Akira's question."
@@ -874,7 +875,7 @@ label FMG010_testpass:
     Rin "Oh, and I didn't forget about that favor!"
     hide Rin with dissolve
     "..."
-    show FMG neutral at Position(xpos=0.5, xanchor=0.5), Transform(xzoom=1) with dissolve
+    show FMG neutral at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=1) with dissolve
     MC "Um...what did she mean by using them to-"
     FMG "Man I don't even know, and I don't think I {i}want{/i} to know. That girl is something else."
     MC "You know, she seems like a good friend, even if she's a bit weird."
@@ -928,7 +929,7 @@ label FMG011:
     "To my surprise, Akira was playing on one of the machines..."
     if isEventCleared("BBW009"):
         "... And she looked focused. I walked up to get a better view of the game."
-        show FMG neutral at Position (xpos=0.75, xanchor=0.5), Transform(xzoom=-1) with dissolve
+        show FMG neutral at Position (xpos=0.75, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
         FMG "Hey. Can't talk now. Killing."
         "She was in the middle of a boss fight with a strange mutated creature. Given the size of its health bar, I thought it might be the final boss."
         show FMG angry
@@ -943,12 +944,12 @@ label FMG011:
         MCT "...Ah, balls. I forgot about that."
         MC "Er... you okay?"
         FMG "Don't worry, I ain't mad at you, if that's what you're wondering. I just want to give that smug jerk a taste of her own medicine."
-        show FMG angry at Transform(xzoom=-1)
+        show FMG angry at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1)
         FMG "Heh. She thinks all I do is work out, well she's not the only one with a hidden talent."
         MC "Well, you never know. She could be good at this kinda stuff."
         FMG "Any overweight, smug overachiever can play and be good, but it takes skill and practice to be great at something."
         "Oh great, history was repeating itself. This time, the one behind her was-"
-        show BBW neutral at Position (xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+        show BBW neutral at Position (xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
         FMG "You don't just sit around to be great at something, you gotta go out there and do it yourself."
         "Alice, and she looked angry. I'd say I was surprised this was happening again...but I wasn't."
         FMG "But no, people want to do it the easy way, by sitting down, getting fat, and having everything given to them. Not all of us were born with a silver spoon in our mouths."
@@ -970,8 +971,8 @@ label FMG011:
         MCT "Oh no, Alice... now you've done it."
         FMG "... You... grab the gun and put your cash in so we can start."
         "Akira was visibly shaking with rage while Alice got into position. All I could do was watch this happen while Akira grabbed the second player gun."
-        show FMG angry at Transform(xzoom=-1)
-        show BBW haughty at Position (xpos=0.55, xanchor=0.5)
+        show FMG angry at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1)
+        show BBW haughty at Position (xpos=0.55, xanchor=0.5) with dissolve
         FMG "I'm going to take a wild guess and say you want to be player one. Doesn't matter in the long run, though."
         BBW "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped." 
         show FMG neutral
@@ -980,7 +981,7 @@ label FMG011:
         "Thus began a duel for honor, pride, and some other third thing. About ten minutes into it Akira was already ahead of Alice by ten thousand points, mostly because Alice was shooting normal civilians before realizing she lost points for doing that."
         "Both were too focused on the game to say anything to the other, but I could tell that Akira was feeling smug about behaid, while Alice was both confused and annoyed." #TODO: Behaid, typo?
         "An hour later, and a lot of both their coins, they managed to get to the final boss, and once it was dead, the scoreboard tallied up the results, with Alice's score first."
-        show BBW neutral at Position (xpos=0.40, xanchor=0.5)
+        show BBW neutral at Position (xpos=0.40, xanchor=0.5) with dissolve
         "Player One Score: 21521"
         show FMG neutral
         FMG "Huh. Not bad..."
@@ -1030,7 +1031,7 @@ label FMG011:
         FMG "Can you believe this school has a recreation room, let alone three arcade games!"
         MC "Yeah, so what's that you're playing?"
         FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of ‘Fallen City'. I'm just about to fight the final boss once this cutscene finishes."
-        show FMG happy at Transform(xzoom=-1.0)
+        show FMG happy at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1.0)
         "Just then, a bat-cat-zombie-thing showed up. Akira took about 3 minutes to beat it, and once she did a leaderboard showed up, displaying her score."
         show FMG neutral
         FMG "Man, that was fun. Third place too, not bad."
@@ -1063,7 +1064,7 @@ label FMG011:
         FMG "Yeah, Hey...  Alice, the rain stopped, are you going to stop?"
         show BBW angry
         BBW "Not just yet. One more go at that cyber-brain and I should have it beat."
-        show FMG sad at Transform(xzoom=-1.0)
+        show FMG sad at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1.0)
         FMG "{i}(Yeah I don't think she realizes that's the third boss and there's three more to go...){/i}"
         FMG "Well, see you at class tomorrow, don't play for too long."
         BBW "I'll be fine."
@@ -1224,7 +1225,7 @@ label FMG014_c1_1:
     MC "He told me he'd be here, but where is he?"
     FMG "Oh he's behind you."
     MCT "What."
-    show RM neutral at Position (xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show RM neutral at Position (xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show FMG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
     RM "Hello."
     MC "AHHH!"
@@ -1359,7 +1360,7 @@ label FMG016:
     FMG "Well, I don't know about you, but I'll try anything once."
     "About two minutes later, our waitress came by, but I couldn't shake the feeling I knew her."
     show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     Rin "Hi, welcome mast- oh, crap."
     show FMG surprised
     FMG "Wait a minute, RIN?!"
@@ -1379,7 +1380,7 @@ label FMG016:
     play music Sunset
     "Once we finished and it was time, we went out to the front of the store with no sign of Rin. I heard a ‘hey' from the alleyway, and followed it to find Rin down there waiting for us. Both Akira and I walked down the alleyway to meet up with Rin."
     show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     Rin "God, out of all the people in the world to come to this one maid cafe, it had to be my roommate and her boyfriend!"
     "Rin vented out her frustrations, though in our defense this island wasn't exactly Tokyo."
     if getAffection("FMG") > 10:
@@ -1497,7 +1498,7 @@ label FMG018_c1_1:
     MC "Well, let's ask Matsumoto, maybe she can help."
     FMG "If you say so, I have my doubts though."
     "Ignoring Akira's doubts, I followed suit and walked towards Shiori, for her part she was by herself, while looking deep in thought."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     MC "Hey Matsumoto, what's on your mind? Akira and I are teaming up, do you need a partner?"
     AE "Hmm..."
@@ -1538,7 +1539,7 @@ label FMG018_c1_1:
     "After a discussion with a confused teacher, I later found that the fat, blood, and other rendered parts of the animals could be found in the school kitchen."
     "At the very least, at least I know the food here's fresh."
     scene Cooking Classroom with fade
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     MC "Yo! I'm back with the blood."
     AE "Ah, splendid. We've been working on the mashed potatoes."
@@ -1598,7 +1599,7 @@ label FMG018_c1_2:
     MC "Look, let's just ask her okay?"
     FMG "Fine, not like we have a lot of options. "
     "With that discussion out of the way, we headed towards Naomi."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     MC "Hey Yamazaki-san, how's it going?"
     GTS "Oh, hello there Hotsure-san and Mizutani-san. I'm doing well, though I'm currently in need of partners."
@@ -1622,7 +1623,7 @@ label FMG018_c1_2:
     "We took our positions after that, Naomi took care of the noodles, Akira was in charge of the broth, and I was handling the extra bits..."
     "...and somehow we messed up. The noodles were undercooked, the extras were lacking because others had the same raman idea, and the broth was low and tasted burnt somehow."
     scene Cooking Classroom with fade
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     FMG "... Well, this turned out better than I thought."
     show GTS sad
@@ -1639,7 +1640,7 @@ label FMG018_c1_3:
     MC "Still, it can't hurt to ask her."
     FMG "I guess, she doesn't really look like a chef to me though."
     "We walked towards Honoka, who was staring at a block of cheese."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show BE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     MC "Hey Honoka, Akira and I need a third partner, are you open?"
     BE "Oh yeah! I could join up with ya, Kei-chan."
@@ -1657,7 +1658,7 @@ label FMG018_c1_3:
     "After she got what we needed, we put together a pie in the span of a few hours..."
     "...But the end result was left to be desired."
     scene Cooking Classroom with fade
-    show FMG sad at Position(xpos=0.25, xanchor=0.5), Transform(xzoom=-1) with dissolve
+    show FMG sad at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
     show BE sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     FMG "... Uh, I don't think it's supposed to look so... undercooked."
     MC "Maybe you're right, Honoka what recipe were you following anyways?"
@@ -1687,3 +1688,8 @@ label FMG018_c1_3:
     BE "Where are you getting that from? I think it's like cold mac and cheese, and it's only been out of the oven for a little bit..."
     MC "It tastes more like ramen noodles boiled in orange soda."
     jump daymenu
+
+label FMGend:
+    "This marks the current end of Akira's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance
