@@ -42,12 +42,12 @@ init 2 python:
     eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"],        "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
     eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"],         "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
     eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"],                "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG011'] = {"name": "Placeholder 011 Title", "girls": ["PRG"],        "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
-    eventlibrary['PRG012'] = {"name": "Placeholder 012 Title", "girls": ["PRG", "BE"],  "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
+    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"],                     "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
+    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
     eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],           "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG012"]]}
-    eventlibrary['PRG014'] = {"name": "PRG014", "girls": ["PRG"],                       "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
+    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"],              "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
     #eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "location": "dormBBW", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
-    eventlibrary['PRG019'] = {"name": "PRG019", "girls": ["PRG"],                       "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"],              "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
     eventlibrary['PRGend'] = {"name": "Aida end", "girls": ["PRG"],                     "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "PRG"]]}
 
 label PRG001:
@@ -1562,7 +1562,9 @@ label PRG014:
     "The two of us had the privilege of carrying our lunch. Instead of waiting in line, we sat down right away, next to each other."
     show PRG neutral with dissolve
     "I rubbed my hands before carefully untying the knot and opening the lunch box that she had prepared for me. I wasn't sure what kind of expectations I had, but they were surpassed by a long shot."
-    #NAR: *lunchbox description of delicious food*
+    "As usual with bento, the box is divided up into sections, each with its own food type. Rice, fruits, meat and vegetables. It was all there. The vibrant colors were a sight to behold."
+    if getAffection("PRG") > 8:
+        extend " Not to mention the sauce in the shape of an heart."
     MC "Wooow. If... if this tastes as good as it looks, I totally have to marry you."
     show PRG surprised
     PRG "W-w-w-wha?!"
@@ -1918,7 +1920,7 @@ label PRG019_c1_after:
     MC "I'm sorry, I didn't mean to bring up a touchy subject."
     show PRG neutral
     if getAffection("PRG") > 9:
-        PRG "It's alright, Keisuke.  It would be hard to explain anyway, especially to a man."
+        PRG "It's alright, Keisuke.  It wouldnd be hard to explain anyway, especially to a man."
         MC "Hey! Just because I'm a guy doesn't mean I don't understand things."
         PRG "I'm not saying you aren't smart. This is just... different." 
         "I decided not to press the issue any further.  If she wanted to tell me, she'd tell me when she was ready, and it wasn't my place to push her."
@@ -1928,7 +1930,7 @@ label PRG019_c1_after:
     MC "Thanks so much, Aida!" 
     show PRG happy
     PRG "You're welcome. I'm glad I could help you.  You were starting to look a little shaggy."  
-    "I looked in the hand mirror Aida had brought alone and threw my head this way and that, examining every angle."
+    "I looked in the hand mirror Aida had brought along and threw my head this way and that, examining every angle."
     MC "It looks really good.  Maybe you should look for a career as a personal stylist."
     show PRG aroused
     PRG "I...I could never do that."
