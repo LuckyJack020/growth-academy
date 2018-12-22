@@ -1333,7 +1333,7 @@ label FMG016:
         "I'm so bored I fear the onset of rigor mortis.":
             MC "...too bored.. for big words..."
     show FMG happy
-	FMG "*Giggle*"
+    FMG "*Giggle*"
     MCT "...Smooth move, genius... well, at least Akira got a giggle out of my suffering."
     FMG "Well then, how about you take that offer of mine, and let's head into town?"
     MC "Yes! ...I mean. sure."
@@ -1422,7 +1422,7 @@ label FMG016:
     Rin "I'll do it."
     show FMG surprised
     FMG "..."
-	FMG "WHAT?!"
+    FMG "WHAT?!"
     Rin "If that's what it takes to buy your loyalty, then so be it...  master."
     FMG "...Nope. Nope I'm not dealing with this! Nope! I'm nopeing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
     hide FMG with dissolve
@@ -1439,7 +1439,7 @@ label FMG016:
     "Once she was finished with that, Rin went back into the cafe."
     MC "Well, at least I'm not bored anymore... "
     MC "..."
-	MC "....."
+    MC "....."
     MC "...Aaannnd I'm bored again. What am I going to do now?"
     jump daymenu
     
