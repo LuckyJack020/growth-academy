@@ -13,7 +13,7 @@
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
-    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'track']
+    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track']
     debuginfo = False
     debugenabled = True
     debuginput = ""
@@ -678,7 +678,7 @@ screen debugmenu:
         #    textbutton "+" action Function(setSkill, "Academics", 1)
         
         textbutton "Return to game" action Jump("daymenu_noadvance")
-        text ""
+        textbutton "Change Time" action Jump("timemachine")
         textbutton "Load Test" action Jump("debugloadtest")
 
 screen debugflaglist:
@@ -783,7 +783,7 @@ label daymenu:
             if len(prefpool) != 0:
                 tmp = renpy.random.choice(prefpool)
                 eventchoices.append(tmp)
-                allpool.remove(tmp)
+                prefpool.remove(tmp)
             elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
                 tmp = renpy.random.choice(allpool)
                 eventchoices.append(tmp)
@@ -896,6 +896,18 @@ label trainacademics:
     "(Your academics skill has increased to [tmp])"
     jump daymenu
 
+label timemachine:
+    menu:
+        "Set to size 1":
+            $gametime = datetime.date(2005, 4, 5)
+            "Time now 4/5"
+        "Set to size 2":
+            $gametime = datetime.date(2005, 4, 15)
+            "Time now 4/15"
+        "Return":
+            "Time unchanged"
+    jump debugmenu
+            
 label debugloadtest:
     menu:
         "Characters":

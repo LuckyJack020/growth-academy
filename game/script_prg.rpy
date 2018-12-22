@@ -25,6 +25,8 @@ image PRG unique = ConditionSwitch(
     "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
     "True", "Graphics/PRG/1/unique.png")
 
+image Dorm PRG = "Graphics/ui/bg/NYI.png"
+
 init 2 python:
     datelibrary['PRG_size_6'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_5'] = datetime.date(2005, 12, 10)

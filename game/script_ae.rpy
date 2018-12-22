@@ -1477,14 +1477,14 @@ label AE010:
     MC "Out of my system? Shiori-san, I'm not going to insult y-"
     "Shiori-san finally turned around."
     stop music
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=0, yanchor=0.5), Transform(zoom=2.5)
+    show AE neutral at center, Transform(zoom=2.5)
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once. Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
     "Both cheeks were blown up to the size of full balloons and stuck out a foot from her back, creating noticeable creases along the top of their curvature. Shiori's shelf-like hips stuck out from her sides to match her astounding ass, taking her poor skirt to it's limits in order to cover her shame."
     "Her legs, though, didn't receive any such mercy. Her thunder thighs were in full view, as the girl could do nothing but show off her fat, chubby legs in embarrassment, her knee being the only respite until reaching her calves, which had seemed to have swelled a bit too."
     MC "Shiori-san! You're huge!"
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=0.52, yanchor=0.5), Transform(zoom=1.0)
+    show AE neutral at center, Transform(zoom=1.0)
     "Shiori-san turned around, blushing furiously as she brought a hand to the side of her face to avoid eye contact."
     show AE sad
     play music AE
@@ -4323,11 +4323,11 @@ label AE023_c1_after:
     "I hadn't noticed before, but from here it was all but too obvious that you can see her ass from the front. Her hips bulged out far enough to create a wall of flesh and stretch the fabric atop two massive legs."
     MC "..."
     "I walked silently behind Shiori-san to get a better view. Though my head was turned, my eyes were focused right on her. Her growth was becoming more obvious, as her skirt was beginning to ride up even further."
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=0, yanchor=0.5), Transform(zoom=3.0)
+    show AE neutral at center, Transform(zoom=3.0)
     play sound Boing
     "Her already thick thighs were plumping up quite nicely, pairing themselves with some wide, supple hips as well."
     "However, her bootyus maximus was, as always, the greatest sight to behold, the bottom of each cheek protruding through the bottom of her soon to be ruined skirt, the very bottom of her panties eliciting lewd thoughts from me. I lightly bit my bottom lip as every failed attempt to scrape the gum from the floor caused her backside to wobble gently."
-    show AE angry at Position(xpos=0.5, xanchor=0.5, ypos=0.52, yanchor=0.5), Transform(zoom=1.0)
+    show AE angry at center, Transform(zoom=1.0)
     AE "Ugh, this damnable-"
     show AE neutral-annoyed
     AE "Hotsure-san, can you-"

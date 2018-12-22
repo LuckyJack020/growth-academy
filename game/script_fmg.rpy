@@ -1,6 +1,8 @@
 define FMG = Character('Akira', color="#FF9900")
 define Rin = Character('Rin', color="#CC33FF")
 define Takamura = Character('Takamura-Sensei', color="#FF9900")
+define Cashier = Character('Cashier', color="#FF9900")
+define Chie = Character('Chie', color="#FF9900")
 
 image FMG neutral = ConditionSwitch(
     "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/neutral.png",
@@ -33,22 +35,23 @@ init 2 python:
     datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"],           "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": []}
-    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"],                   "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "FMG001"]]}
-    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"],          "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG002"]]}
-    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"],        "location": "track", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG003"]]}
-    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"],       "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"],     "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG004"]]}
-    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"],            "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.EVENT, "FMG006"]]}
-    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"],          "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                     "conditions": [[ConditionEnum.EVENT, "FMG007"]]}
-    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"],             "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "FMG008"]]}
-    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"],        "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": True, "startdate": "FMG_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "FMG009"]]}
-    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"],      "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                "conditions": [[ConditionEnum.EVENT, "FMG010"]]}
-    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"],              "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                         "conditions": []}
-    eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"],             "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"],             "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "FMG015"]]}
-    eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"],                  "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",        "conditions": []}
-    eventlibrary['FMGend'] = {"name": "Akira end", "girls": ["FMG"],                    "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": [[ConditionEnum.ROUTECLEAR, "FMG"]]}
+    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"],                                   "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": []}
+    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"],                                           "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "FMG001"]]}
+    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"],                                  "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG002"]]}
+    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"],                                "location": "track", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG003"]]}
+    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"],                               "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"],                             "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                      "conditions": [[ConditionEnum.EVENT, "FMG004"]]}
+    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"],                                    "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.EVENT, "FMG006"]]}
+    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"],                                  "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                     "conditions": [[ConditionEnum.EVENT, "FMG007"]]}
+    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"],                                     "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "FMG008"]]}
+    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"],                                "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": True, "startdate": "FMG_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "FMG009"]]}
+    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"],                              "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                "conditions": [[ConditionEnum.EVENT, "FMG010"]]}
+    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"],                                      "location": "gym", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                         "conditions": []}
+    eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"],                                     "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"],                                     "location": "schoolplanter", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "FMG009"]]}
+    eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"],                                          "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['FMGBBW001'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "BBW"],       "location": "town", "time": (TimeEnum.DAY, WeekendEnum.WEEKEND), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['FMGend'] = {"name": "Akira end", "girls": ["FMG"],                                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "FMG_size_2", "enddate": "day_end",                     "conditions": [[ConditionEnum.ROUTECLEAR, "FMG"]]}
 
 label FMG001:
     scene Track with fade #track might not be the right background?
@@ -325,9 +328,9 @@ label FMG004_testfail:
 label FMG004_testsemipass:
     FMG "GO!"
     hide FMG with dissolve
-    MCT "Alright, there's no way I’ll be able to beat her at the rate she’s going. If I can just keep a good pace I’ll be able to make at least the lap...Assuming I don’t die from exhaustion…"
+    MCT "Alright, there's no way I’ll be able to beat her at the rate she’s going. If I can just keep a good pace I’ll be able to make at least the lap...Assuming I don’t die from exhaustion..."
     FMG "Come on you can do it!"
-    "She yelled out ahead, already close to finishing. By the time I finished, The world was getting blurry…"
+    "She yelled out ahead, already close to finishing. By the time I finished, The world was getting blurry..."
     show FMG happy with dissolve
     $setAffection("FMG", 1)
     FMG "WOO! Great job there dude, you sure got..."
@@ -343,7 +346,7 @@ label FMG004_testsemipass:
     "He handed me the note, to which I began to read."
     "{i}Dear Kai, you did good today, sorry I couldn't do much else to help. Word of advice though you might want to get in better shape. ~Akira{/i}"
     MCT "Well, at least she was kind enough to help me to my room."
-    RM "By the way…"
+    RM "By the way..."
     extend " did you eat my last chocolate bar?!"
     MCT "...Oh crap."
     jump daymenu
@@ -1317,24 +1320,25 @@ label FMG016:
     play music Sunset
     "It was such a beautiful day; the sun is shining, the birds were  flying, the wind was blowing..."
     "...And I was so bored!"
-    "Seriously, normally I'd have something to do, but for the life of me I can't think of anything to do besides laying down on the grass, stare at the blue sky, and sulk in my boredom!"
+    "Seriously, normally I'd have something to do, but for the life of me I can't think of anything to do besides lay down on the grass, stare at the blue sky, and sulk in my boredom!"
     "My vision of the sunlight was then blocked by Akira standing over me."
     show FMG neutral with dissolve
     FMG "Hey Kei-kun, how's it going?"
     MCT "Finally! Something not boring! Thank you my savior! Wait, she's expecting a response. Quick you fool! Say something!"
     menu:
         "I'm bored.":
-            pass
+            MC "...Bored..."
         "I'm SUPER bored.":
-            pass
+            MC "...Super...Bored..."
         "I'm so bored I fear the onset of rigor mortis.":
-            pass
-    MC "...Bored..."
-    MCT "...Smooth move genius...well at least Akira got a giggle out of my suffering."
+            MC "...too bored.. for big words..."
+    show FMG happy
+	FMG "*Giggle*"
+    MCT "...Smooth move, genius... well, at least Akira got a giggle out of my suffering."
     FMG "Well then, how about you take that offer of mine, and let's head into town?"
     MC "Yes! ...I mean. sure."
     "..."
-    MCT "Okay well, I'm just going to ignore that and follow Akira to town."
+    MCT "Okay well, I'm just going to ignore my small outburst and follow Akira to town."
     FMG "Man, you're nuts, dude. Well, come on, let's see what the town has to offer."
     scene Town with fade
     "While walking down a street, we came across what appeared to be a shopping district dedicated to technology and electronics. Despite the fact we could pick literally any electronic store, retro shop, or even the otaku store to check out..."
@@ -1351,7 +1355,7 @@ label FMG016:
     FMG "All right!"
     scene Cafe with fade
     play music Schoolday
-    "We entered the cafe, its decorations a series of pink and white themes. So basically very...elegant... Yeah let's go with that."
+    "As we entered the cafe, we were greeted with a flurry of pink and white decorum. The room itself felt inviting, if not a bit too... pastel, for my tastes. Still, effeminate style or not, it gave of a naturally comfortable aura enough to beckon us to stay."
     show FMG neutral with dissolve
     FMG "Huh, this place is cute."
     MCT "I find it more cloying than cute."
@@ -1397,7 +1401,7 @@ label FMG016:
         FMG "Geez, Rin. You think I can't talk to a guy without it meaning something? "
         show FMG neutral
         FMG "Getting back on track, you look different without your bulging nips!"
-    Rin "Yeah well, My growth is still concealable so I don't have to worry too much for now."
+    Rin "Yeah well, My growth is still concealable so I don't have to worry too much for now. Besides, all the padding over them to smooth out the bulge makes me look bustier, which usually means more tips."
     MC "I never would have thought you would work here."
     Rin "I think I got the job because I'm half-British, guys love the British maid type. Plus I guess they wanted some variety."
     show FMG surprised
@@ -1417,13 +1421,14 @@ label FMG016:
     MCT "I can't tell if she's serious or not, maybe I should-"
     Rin "I'll do it."
     show FMG surprised
-    FMG "...WHAT?!"
-    Rin "If that is what it takes to buy your loyalty, then so be it...  master."
-    FMG "...Nope. Nope I'm not dealing with this! Nope! I'm going back to the dorms and I'm going to bed... nope... nope..."
+    FMG "..."
+	FMG "WHAT?!"
+    Rin "If that's what it takes to buy your loyalty, then so be it...  master."
+    FMG "...Nope. Nope I'm not dealing with this! Nope! I'm nopeing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
     hide FMG with dissolve
     "Akira just left, repeating ‘nope' to herself till she was out of earshot. I turned to Rin to say something, but to my confusion and surprise, she was grinning like she'd won something."
     show Rin neutral at Position(xpos=0.5, xanchor=0.5)
-    Rin "And that my dear Keisuke, is how you win a battle against your roommate."
+    Rin "And that, my dear Keisuke, is how you win a battle against your roommate."
     MC "...Huh?"
     Rin "That whole romantic BS was just to fluster Akira; an act, if you will. Dad always did say I had the makings of a great method actor."
     MC "Then, why are you working here?"
@@ -1433,7 +1438,8 @@ label FMG016:
     hide Rin
     "Once she was finished with that, Rin went back into the cafe."
     MC "Well, at least I'm not bored anymore... "
-    "..."
+    MC "..."
+	MC "....."
     MC "...Aaannnd I'm bored again. What am I going to do now?"
     jump daymenu
     
@@ -1687,6 +1693,280 @@ label FMG018_c1_3:
     show BE sad
     BE "Where are you getting that from? I think it's like cold mac and cheese, and it's only been out of the oven for a little bit..."
     MC "It tastes more like ramen noodles boiled in orange soda."
+    jump daymenu
+
+label FMGBBW001:
+    scene black with fade
+    "..."
+    RM "Hey, wake up!"
+    MC "Wah?" 
+    scene Library with fade
+    show RM angry with dissolve
+    play music RM
+    MC "...Oh right... library archives. Why am I here again?"
+    RM "For the fifth time, I need you to keep watch while I’m going over these documents, and you can’t when you keep falling asleep!"
+    MC "What did you expect, you made me get up at three in the morning; I only got like six hours of sleep, what time is it anyways?"
+    RM "Around six in the morning."
+    MC "Oh I’m sorry, six hours and 36 minutes, in between the times you keep waking me up."
+    show RM neutral
+    RM "Sarcasm is the lowest form of wit."
+    MC "Oh, thank you for that piece of information, I’ll be sure to put it in the file cabinet I keep under my bed next to those papers of yours."
+    RM "Look, is it too much to- Ah!"
+    "Daichi stopped himself as he grabbed an old but intact file."
+    MC "Alright I’ll bite, what is it?"
+    show RM happy
+    RM "Something that maybe lead to a breakthrough. Give me a minute to read it."
+    show RM neutral
+    RM "Alright, so most of these articles are dead ends, but this particular article is about the first record of growth. Apparently it was a female around her teens. Name: Chie Kazomazumi."
+    RM "She was about as average as average can be. However around her sixteen birthday her breasts started to enlarge to an extreme size around in the 1970’s."
+    MCT "Huh, he might actually have found something worth a damn, assuming it’s legit."
+    show RM smug
+    RM "This is a great lead. I need to follow up on it."
+    MC "Hey, congrats man..."
+    MC "...So can I go back to bed now?"
+    show RM neutral
+    RM "Fine, fine, I guess we earned a rest."
+    "With that, we started to walk out, Daichi wanted to make sure we could see anyone come in, so we left the door a crack open."
+    MCT "Wait... is the library open at this time? if not how did he... ah screw it, I’m too tired for this."
+    "However, due to the door already slightly opened, we saw though the crack that there was someone facing away from the door and looking at the stairwell. Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
+    show RM angry
+    RM "Keep it down, who is that?!"
+    MC "How should I know!?"
+    RM "Well go check, I made you watch, else what am I paying you for?!"
+    MC "I’m not being paid jack!"
+    show RM smug
+    RM "Not with that attitude you aren’t. Now go check!"
+    MC "Ugh, fine."
+    "Reluctantly, I sneaked towards the door, to my surprise..."
+    scene Hallway with fade
+    show FMG neutral with dissolve
+    MC "It’s Akira Mitzutani, she’s in the hallway near the stairway."
+    hide FMG with dissolve
+    show RM angry with dissolve
+    RM "Why is she here?! It’s around 6, and I’ve never seen her awake earlier than five minutes before class starts at the most."
+    MC "How should I know, I wouldn’t be here if- wait... I think I see someone coming down the stairs."
+    RM "Oh god, move over!"
+    hide RM with dissolve
+    "Daichi moved to the side to get a look for himself. To both of our surprise the person who was coming down the stairs..."
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    RM "Alice Nikumaru? She’s without the assistance of miss Kodama. That alone raises more red flags."
+    MC "Be quiet, I think they're about to talk..."
+    BBW "Alright Mizutani, what was so important that you had me wake up so early?"
+    FMG "Hey Alice, the reason I wanted to talk to you..."
+    show FMG sad
+    FMG "I wanna get to know you better!"
+    show BBW surprised
+    BBW "Um...sorry?"
+    FMG "I know we don’t really see eye to eye, but I generally want to get along with you."
+    show BBW neutral
+    BBW "Well, I appreciate the desire. However, I fail to see much common ground between us."
+    FMG "That’s the thing, you don’t know. I really wanna give this a chance."
+    show BBW sad
+    BBW "...I’m still not seeing-"
+    show FMG neutral
+    FMG "Tell you what, do you know Kazomazumi Bakery on Genki street?"
+    show BBW neutral
+    BBW "I do. Why?"
+    FMG "If you’re willing to get to know each other, I’ll treat you to some cupcakes there."
+    show BBW happy
+    BBW "This does sound like it could be beneficial. I accept your invitation."
+    show FMG happy
+    FMG "Great! How does twelve sound?"
+    show BBW haughty
+    BBW "Well, they're rather small, I'd want a half-dozen at least, so that would-"
+    show FMG surprised
+    FMG "Wha? No I mean Twelve AM."
+    show BBW surprised
+    BBW "O-Oh um... *ahem*."
+    show BBW neutral
+    BBW "T-That is customarily during my study time, but I can fit you into my schedule. Until then, I bid you adieu."
+    show FMG happy
+    FMG "Sweet, see you then."
+    hide FMG with dissolve
+    hide BBW with dissolve
+    "Once both of them were done, they went their own ways."
+    MC "Huh, that‘s something."
+    show RM neutral with dissolve
+    RM "I’m sure you noticed something wrong with that conversation right?"
+    MC "... Kazomazumi Bakery."
+    show RM angry
+    RM "EXACTLY! Why would those two meet up at that specific bakery, that shares the same name in the article of the first record growth I found on the same day!?"
+    MC "... I-it might be a coincidence that they share the same name?"
+    show RM neutral
+    RM "... Well, how many Kazomazumi’s do you know?"
+    MC "..."
+    MC "Alright fine! It sounds kinda weird."
+    show RM angry
+    RM "See! There’s something going on, I think we should go to this meeting spot and witness what might be a breakthrough!"
+    "Normally, I would have thought about this... but it was a too big of a coincidence to pass up."
+    MC "Alright, let’s go."
+    show RM neutral
+    RM "Alright, but first take this."
+    "He handed me a baseball hat before putting one on himself."
+    RM "We don’t want those two to catch us spying on them."
+    MC "W-Why do you even have these in the first place?"
+    RM "You can never be too careful. Now then..."
+    show RM smug
+    RM "Operation 'stakeout at the bakeout' starts now!"
+    scene Town with fade
+    play music Sunset
+    "A few hours later, we arrived at the town with five minutes till the meeting. We peeked around to see the bakery in question."
+    MC "Is that the place?"
+    show RM neutral with dissolve
+    RM "This is the only bakery on Genki street, and the next closest bakery is nine blocks away on Enoshima Ave."
+    MC "Hey, why are we hiding behind a pole?"
+    "...I forgot to mention we were peeking around a telephone pole."
+    RM "Do you see an open alley with a good view of the front?"
+    MC "...Fair point."
+    RM "All right, we got five minutes before the meeting time, let’s head in!"
+    scene Cafe with fade
+    show RM neutral with dissolve
+    "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme. It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; The only person I could see was the counter girl."
+    "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup. She wore a caramel-brown and cream-white patterned baker outfit, with an name tag that said “Haruko” pinned to the front."
+    Cashier "Hi, welcome to Kazomazumi Bakery! What can I get you two?"
+    MC "Yeah hi, this is our first time here, what do you recommend?"
+    Cashier "Well, today we have a special on pies, or the cupcakes."
+    MC "We’ll have the cherry pie please."
+    Cashier "Sure, give me a second. So I’m guessing you two are students? The outfit gives it away."
+    Cashier "Yeah my mom had a growth thing as well, but I’m not sure if the school was built when she was a teen. Best I know is that it was there when I went there, ten years ago."
+    MCT "Huh, didn’t know the school was that old."
+    Cashier "Anyways, here you guys go."
+    "We paid the cashier in advance before we leave, we tooked the pie, thanked her, and planned our next move."
+    MC "So where should we sit?"
+    RM "Hmm, we cannot risk them walking past us, that will give away our position."
+    RM "We’ll sit at the edge of the counter on the stools.The lights are dim enough so at a distance they can’t tell us apart from any other students, plus it’s in the middle of the building."
+    "Once we finished talking about it, we took our seats on the middle stools and waited for the girls to come. I tucked my hair into my collar so as to not give myself away, though I left my bangs out to hide my face."
+    MC "Hey, maybe you can ask the owners about this place?"
+    show RM angry
+    RM "Are you nuts!? I'm not going to show my hand right away! I’ll keep coming as a regular, and calmly ask one or two questions, at the most, by the third visit."
+    MC "Well, I’m just saying it wouldn’t hu-"
+    #*Door chime*
+    RM "Zip it."
+    hide RM with dissolve
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    "Both Akira and Alice entered the building. They were a few feet away from us but enough to not recognize us."
+    Cashier "Oh hi, is it just you two?"
+    FMG "Yes ma’am, just me and my friend."
+    Cashier "Well, what would you two students like?"
+    FMG "Let’s see, we’ll have a box of cupcakes, please."
+    BBW "I'll have coffee. Cream and sugar."
+    FMG "Yeah, me too."
+    BBW "Oh? You take your coffee sweet as well?"
+    FMG "Sure, so long as it’s not that water downed sludge the school cafeteria serves that is."
+    show BBW happy
+    BBW "I couldn't have said it better. Is it too much to ask for a nice cup of coffee to start the day off? With the budget the school has, you would think they could put some aside for an espresso machine."
+    FMG "Wouldn’t be surprised, their chefs aren’t exactly winning any awards for niceness."
+    BBW "That is the truth. It's nice to meet someone who gets it, Mizutani-san."
+    FMG "Yeah, but you can just call me Akira, no need for formalities."
+    show BBW neutral
+    BBW "Very well, now shall we take a seat?"
+    "They got their food and sat at the table behind us. Once there, Daichi did a zipping motion around his lips and slumped farther into the table; I followed suit and we listened in while pretending to read the menus."
+    BBW "All right Akira, how are we doing this?"
+    FMG "I ask a question, and you ask a question."
+    BBW "Seems almost like a game. Very well. You brought me here, you may begin."
+    FMG "First, what’s your last name?"
+    BBW "Nikumaru. For my question: how long have you not remembered my last name?"
+    FMG "Um... since the beginning of school. I’m sorry it’s just for the life of me I couldn’t remember your last name."
+    BBW "It's fine. I prefer going by my first name anyway."
+    FMG "Right, my next question is, have you ever gone to America?"
+    BBW "Yes. My mother is from there and I did most of my schooling there."
+    FMG "That’s cool!"
+    BBW "Indeed. Where do you see yourself in five years?"
+    FMG "I dunno."
+    show BBW surprised
+    BBW "..."
+    BBW "T-that’s it? You don’t know?"
+    FMG " Well, how can any of us expect how the future will turn out? I like, think about the future as much as the next girl, but you gotta put in some room for the unknown."
+    show BBW neutral
+    BBW "I can understand that rationale, but leaving so much to chance..."
+    "Alice shook her head, flummoxed."
+    FMG "Now for this next question, I want you to be honest."
+    FMG "Is it true that Americans deep fry soda and junk food?"
+    BBW "Wha-? Where did you hear that?"
+    FMG "The Internet."
+    show BBW sad
+    BBW "...Just to be clear, I do not partake of that kind of food. But yes, some places deep fry soda, Tronkos, chocolate bars..."
+    FMG "Huh. No offense, but Americans seem kinda weird."
+    show BBW neutral
+    BBW "It is a large country and there are many... eccentrics on the fringes."
+    "I heard Akira sipping her coffee as she processed the idea of deep-fried candy."
+    FMG "Man, the coffee is a hell a lot better here than the school."
+    BBW "Mmm, yes. Not my preferred choice, but it's one of the more palatable substitute brands I've had since coming here."
+    BBW "Now, why did you pick cupcakes?"
+    "Akira put downed the cupcake she was eating and looked down at it before answering."
+    FMG "Whenever I was really down, my mom would always bake cupcakes. She would always do it all by hand, and it made it that much more tasty."
+    FMG "Even now, I always go eat a cupcake when I’m sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweet."
+    BBW "I had you pegged as the brash tomboy who didn't have a care."
+    BBW "What do you have to be sad about, if it is not too personal?"
+    FMG "Sorry, I couldn’t tell you, besides it’s my turn."
+    FMG "Why did you agree to come join me?"
+    show BBW sad
+    BBW "I came to see..."
+    show BBW happy
+    extend " If you were a fellow connoisseur of cupcakes."
+    "It seemed like she wanted to say something else at first, but Akira didn’t seem to notice."
+    FMG "Heh, yeah I am."
+    FMG "Oh, it’s almost 12:30, we should probably get going."
+    show BBW neutral
+    BBW "You go on ahead. I'll handle the check."
+    show FMG surprised
+    FMG "What? But I-"
+    show BBW happy
+    BBW "Please, this is nothing to me. Consider it a show of my enjoyment of this get-together."
+    show FMG happy
+    FMG "All right, I hope we can do this again. Later."
+    BBW "As do I. Pleasant travels, Mizutani-san."
+    hide FMG with dissolve
+    show BBW sad
+    BBW "*Sigh* You had a potential sale there Nikumaru, until that personal matter cropped up."
+    show BBW neutral
+    BBW "No way to foresee that, though. Next time, keep the mood light."
+    "After talking to herself, she paid the bill and left."
+    hide BBW with dissolve
+    show RM angry with dissolve
+    RM "Wait... that’s it? We been here for 20 minutes listening to girl talk, and they didn’t say a single thing about the article, let alone this stupid bakery!?"
+    MC "Huh, maybe it really was just a coincidence."
+    show RM sad
+    RM "B-but the timing was too perfect! How could-"
+    UNKNOWN "Excuse me, but are you students at that academy?"
+    MC "Um yes ma’am, we-"
+    MCT "HOLY MILK JUGS!"
+    "She looked like she was in her 30s, but her aura felt like she was much older. Chestnut hair formed in a bun, dark brown eyes, very voluptuous with a bit of a belly, and her boobs... if I had to guess a bra size, I’d say a big triple M at LEAST!"
+    "She was dressed about the same as the cashier, but her name tag read Chie."
+    Cashier "Mom! Quit bugging the customers!"
+    Chie "Oh hush dear, I just wanted to see how fellow growers were handling things."
+    MCT "Fellow growers? Does that mean..."
+    MC "You must be miss Chie Kazomazumi."
+    Chie "Why yes I am, an can I say you two look so cute, especially you mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
+    show RM neutral at Position(xpos=0.0, xanchor=0.5) with dissolve
+    "While I was talking to her, Daichi was trying to stealthily leave out the front door... too bad everyone could see him. I felt like it was better just to ask and get it over with."
+    MC "Look, my roommate is too shy to ask, but are you really the first person to have a growth factor?"
+    show RM angry at center, Transform(xzoom=-1) with dissolve
+    "Upon hearing me speak, he spun around as if to try and stop me, unfortunately for him he was cut off by Chie."
+    Chie "Well, I am the first person to actually be recognized as having tested positive for a growth factor..."
+    Chie "...But I’m sure there were others that had growth factors long before I came around. Sorry, but I can't really tell you how it started."
+    show RM sad
+    Chie "The school wasn't even finished when I got here, the only place that was totally furnished was some of the giant dorms."
+    "... If I had to describe Daichi’s reaction... it would be pure despair."
+    Chie "But hey, it’s not like everyone knows about that! Thanks for asking."
+    MC "Well, thanks for the pie, we’ll be sure to come back."
+    Chie "Thanks for coming! You’ll always be welcome here!"
+    "She gave me a wink before going to the back, her daughter looking like a mix between embarrassed and annoyed for the most part."
+    Cashier "Thanks for coming, and I’m sorry about my mom... please come again!"
+    scene Town with fade
+    show RM neutral with dissolve
+    "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he’s trying to take things in stride."
+    RM "Well, I am disappointed this wasn’t the big break I’ve been searching for, but it gives me an idea of how far this may actually go. Not to mention that last comment she made, about the giant dorms..."
+    show RM happy
+    RM "Plus, I got some pretty great pie out of it."
+    MC "Yeah, I’ll see you later."
+    MCT "Well, this was an interesting day..."
+    "..."
+    MC "Wait... was that lady hitting on me?"
+    "..." 
+    MC "Nah..."
     jump daymenu
 
 label FMGend:
