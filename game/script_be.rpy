@@ -53,16 +53,16 @@ init 2 python:
     eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
     eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track",                                          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
     eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track",                          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track",                          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": [[ConditionEnum.EVENT, "BE010"]]}
     eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade",                             "time": (TimeEnum.DAY, WeekendEnum.SUNDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "BE011"]]}
     eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade",                         "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.PRESET]]}
     eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway",                               "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BE011"]]}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "BE010"]]}
     eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym",                                 "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "BE014"]]}
     eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade",                                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": [[ConditionEnum.EVENT, "BE015"]]}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE",                               "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria",                           "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway",                                     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE",                               "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BE010"]]}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria",                           "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BE010"]]}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway",                                     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BE010"]]} #affection check maybe?
     eventlibrary['BEend'] = {"name": "Honoka end", "girls": ["BE"], "location": "library",                                      "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.ROUTECLEAR, "BE"]]}
 
 label BE001:
@@ -99,6 +99,7 @@ label BE001:
     BE "Nope, no clue until teach explained it. It's so weird, don't you think something like this would be more public knowledge?"
     MC "I'd say so. But, if it's only a small group of people affected by this weird growth hormone thing, maybe it's better to not cause a panic of people assuming they've got it."
     extend " 'Oh gosh, I shot up two inches over the summer, I'm going to end up ten feet tall!'"
+    show BE happy
     BE "Yeah I guess that makes sense. Still, it's a lot to take in. I have to say though, part of me is kind of excited. They didn't make it sound like it was a bad thing, just a bit of an inconvenience. Maybe I'll get something cool."
     BE "What do you think my growth factor is?"
     menu:
@@ -122,9 +123,11 @@ label BE001_c1:
     "..."
     extend " What did I just say?"
     show BE surprised
-    BE "Kei-chan! To think you'd be so forward... I know I said I was in your care, but I didn't think you'd take in that way..."
+    BE "Kei-chan! To think you'd be so forward..."
+    show BE surprised at center, Transform(xzoom=-1)
+    BE "I know I said I was in your care, but I didn't think you'd take in that way..."
     MC "Wait, wait, that was a big misunderstanding, I didn't mean to imply anything that-"
-    show BE happy
+    show BE happy at center, Transform(xzoom=1)
     BE "Bahahaha, oh, wow, Kei-chan, heh, it's too easy to mess with you sometimes, you know that?"
     MC "Yeah, you've certainly taught me that lesson many times in the past. Ow..."
     "I winced as she gave me a playful punch in the arm. One that went a little too deep to be completely painless."
@@ -138,16 +141,22 @@ label BE001_c2:
     show BE neutral
     BE "Like everyone at my old school seemed to do on a daily basis. Hard to blame them really, I made these cans faster than a soda factory."
     MC "Oh, heh. Well, that could have just been some lucky puberty at work, you know?"
+    show BE happy
     BE "Sure. Still, if it was my boobs, I wouldn't mind it."
     MC "You wouldn't? But you just said everyone at your old school mentioned them all the time."
+    show BE angry
     BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too."
     extend " Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used to big boobs, anyway."
-    show BE happy
+    show BE happy at Position(xpos=0.65, xanchor=0.5, ypos=0.0, yanchor=0.25), Transform(zoom=5.0)
+    pause 0.5
+    show BE happy at center, Transform(zoom=1.0)
     BE "Exactly! Hehe, you know, Kei-chan, most boys wouldn't be so brazen about talking about a girl's chest, especially to her face."
     MC "W-Well, you're the one who brought them up in the first place!"
+    show BE neutral
     BE "Did I now? Oh, I guess I did. Yep."
     MC "Not the least bit apologetic about it, are you?"
+    show BE happy
     BE "Hey, they're my boobs, and I shall address them as I please!"
     MC "I... well, fair enough I guess."
     BE "Heh, you're still easy to mess with, I see."
@@ -163,20 +172,28 @@ label BE001_c3:
     BE "That'd be nice. Heh, though I doubt Alice would need the help, Little Miss Fancy down there."
     extend " Then again, she's practically bursting out of her uniform already, so she's probably too lazy to get new clothing or something."
     MC "Maybe. Hm, I guess you could get a big long tongue, too. That wouldn't require new clothes."
+    show BE sad
     BE "Yeah but then it'd be hard to talk with you. That'd stink."
     MC "Yeah, it didn't look that appealing, did it?"
+    show BE neutral
     BE "Nope. You know what did look appealing though?"
     MC "What?"
+    show BE happy
     BE "Come on, I know you saw it."
     MC "Saw what?"
+    show BE neutral
     BE "It was staring you right in the eyes!"
     MC "Honoka I really don't--"
     show BE happy
     BE "Pff, I'm talking about my breasts, Kei-chan. Don't think I didn't catch you sneaking a peek when we met up outside the academy."
     MC "Oh, well, listen, if I'd known you were Honoka, I wouldn't have-"
-    show BE neutral
+    show BE unique
     BE "Mm-hmmmmmm. Don't be embarrassed, Kei-chan, it's fine. You're a young man with healthy ambition. Though, I do think I deserve a little payment for you staring hard enough to melt my shirt."
     MC "What do you me-ouch..."
+    show BE happy:
+        linear 0.1 xpos 0.8
+        linear 0.1 xpos 0.5
+    BE "There!"
     "I quickly moved my hand to rub a sore spot on my upper arm where Honoka had given me a gentle punch. Hopefully her growth factor isn't her hands, or those punches are going to get a lot harder..."
     jump BE001_after
 
@@ -202,13 +219,18 @@ label BE001_after:
     
 label BE002:
     scene Campus Center with fade
-    show BE sad
     play music Rain
+    show BE neutral:
+        xpos 1.0 xanchor 0.5 yalign 1.0
+        linear 0.5 xpos 0.5
+    pause 0.5
+    show BE sad
     BE "Oof! Sorry about that, slippery ground!"
     MC "Ah, heh, it's no problem, Honoka. Hard to stop when you get moving, huh?"
     show BE neutral
     BE "Yep, not to mention I slept great last night so I've got tons of energy. I'm so excited, new school, new opportunities."
     MC "Sounds almost like you should have had a tough time getting to sleep then. I had trouble myself, my roommate is... weird. Plus, I'm a bit nervous about this whole thing."
+    show BE happy
     BE "Oh I was jittering all over the place last night. But I still got like, four hours of sleep which is a lot for me!"
     MC "Really? That seems unhealthy."
     show BE happy
@@ -225,8 +247,13 @@ label BE002:
     MC "Soccer, huh? Yeah, that's definitely a good fit for you."
     BE "I know, right? Wait until they see how hard I can kick!"
     MC "I'd be wary of being the goalie, that's for sure. Or the ball, for that matter."
-    BE "Yeah, should be fun! It was a tough call between that and basketball actually, but I think I picked the right one. Though, I dunno, maybe something more physical, I didn't see if there was a wrestling club, hm."
+    BE "Yeah, should be fun!"
+    show BE neutral at center, Transform(xzoom=-1)
+    BE "It was a tough call between that and basketball actually, but I think I picked the right one."
+    show BE sad at center, Transform(xzoom=1)
+    BE "Though, I dunno, maybe something more physical, I didn't see if there was a wrestling club, hm."
     MC "Well, maybe just stick to one club for now, yeah? Not like you can join them all, anyway, so don't worry about one club you missed out on, because there's no way you'd be able to do them all regardless."
+    show BE happy
     BE "Oh yeah? You think it'd make me too tired?"
     MC "No, I mean I'm sure that's literally impossible. There's no way they'd have the clubs all worked out in a way where it would be possible for you to attend every event, along with leaving time for schoolwork."
     show BE sad
@@ -250,11 +277,14 @@ label BE002:
     BE "Pfff, that was lame, Kei-chan."
     MC "Hey, I'm trying. I like seeing you laugh."
     "Don't say 'Because it makes my boobs bounce?'. Don't say 'Because it makes my boobs bounce?'. Don't say 'Because it makes my boobs bounce?'."
+    show BE unique
     BE "Because it makes my boobs bounce?"
     "Damnit."
     MC "No, it's just, I dunno, making one another laugh, seems like something only friends do for each other?"
+    show BE happy
     BE "Heh, I guess so. I can see your logic there, Kei-chan. But then you really need to work on your sense of humor."
     MC "Hey, you make me laugh all the time, so my sense of humor is fine. You need to get one instead."
+    show BE neutral
     BE "I'll get one when you get fitted for your size 38 feet."
     MC "Hehehe, dangit, Honoka. See, got me laughing that easily."
     BE "I know. That's because I'm awesome."
@@ -264,21 +294,27 @@ label BE002:
 label BE003:
     scene Campus Center with fade
     play music Sunset
-    "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was.I had already drank a whole bottle of water to cool off, but it wasn't enough. Thankfully, there were vending machines scattered around, and I had a few coins burning a hole in my pocket."
+    "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was."
+    "I had already drank a whole bottle of water to cool off, but it wasn't enough. Thankfully, there were vending machines scattered around, and I had a few coins burning a hole in my pocket."
     MC "All right, let's see. What do I want? Soda, juice, eh, water's healthier... but, soda's tastier."
     "After sliding in my change and selecting my drink, I bent over to retrieve my precious bounty. The sharp hiss of carbonation escaped the can as I opened it up and took a refreshing swig."
     MC "Mmm, much better."
-    "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka. After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
+    "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka."
+    "After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
     MC "Woops, uh, hey Honoka. Sorry about that. Wasn't watching where I was going."
     show BE happy with dissolve
     BE "Hehe, hey Kei-chan. Don't worry about it, was an accident, right?"
     MC "Right."
     "I noticed that Honoka wasn't wearing the normal school uniform, having traded out the classic skirt and shirt combo for a pair of spats and a more tightly-fitted t-shirt."
     MC "What's with the get-up?"
-    show BE neutral
+    show BE neutral:
+        ypos 1.0 yanchor 1.0
+        linear 0.1 ypos 1.05
+        linear 0.1 ypos 1.0
     BE "Oh, I had soccer practice in a bit, this is the official uniform. Bit snug, though."
     "Honoka tugged down on her shirt and stuffed it into her shorts. Clearly that was the way it was supposed to be, but when she stood straight up, the front of the shirt kept coming out of the spats, exposing a tiny sliver of her waist."
     MC "Why didn't you just get the next size up?"
+    show BE angry
     BE "I dunno. Figured I'd try it out first, no sense causing a fuss about the size if I end up not liking soccer, after all."
     MC "I guess that makes sense. Damn, but it's going to suck having soccer practice today when it's this hot out. Hopefully it doesn't last too long."
     show BE sad
@@ -297,20 +333,25 @@ label BE003_c1:
     show BE neutral
     BE "Ooh, what did you get?"
     MC "Ah, like, a lemon-lime soda. It's pretty good. Want a sip?"
-    show BE neutral
+    show BE happy
     BE "Heh, sure."
     "I handed the can over to Honoka and saw her sniff it a bit."
     BE "Mm, smells good."
-    "Honoka tilted her head back and took a swig. Then another, and another. With each swallow of soda that went down her gullet, she tilted her head further back. Gradually, this showed off more and more of her stomach as her shirt was lifted out of her gym shorts, showing off her thin waist and tiny belly button."
+    "Honoka tilted her head back and took a swig. Then another, and another. With each swallow of soda that went down her gullet, she tilted her head further back."
+    "Gradually, this showed off more and more of her stomach as her shirt was lifted out of her gym shorts, showing off her thin waist and tiny belly button."
     "It also made me wonder how much of her lower vision was blocked off by her chest, because as she arched her back, her breasts were raised up higher, sticking out like buoyant balloons from her torso."
     "By the time she finished off my drink, they were practically pointed straight up, only to come swinging back down to their normal height when she swallowed the last drop and stood straight up again."
     show BE happy
     BE "Ah, that really hit the spot! Thanks Kei-chan!"
     MC "Yeah, no problem."
     "My tongue felt like a desert. I rifled in my pockets to see if I had enough change for another drink."
+    show BE neutral
     BE "Hm..."
     MC "What's up?"
-    "Wordlessly, Honoka took the now-empty can and placed it against her chest, right between her breasts. She held it there for a moment, obviously in contemplation, but it wasn't clear what she was thinking about. After a while it ended up being a moot point as she just tossed the can in the nearby recycling bin."
+    "Wordlessly, Honoka took the now-empty can and placed it against her chest, right between her breasts. She held it there for a moment, obviously in contemplation, but it wasn't clear what she was thinking about."
+    show BE unique
+    BE "..."
+    "After a while it ended up being a moot point as she just tossed the can in the nearby recycling bin."
     show BE neutral
     BE "Never mind, probably not big enough anyway. Would hurt, I bet."
     MC "Huh?"
@@ -335,9 +376,14 @@ label BE003_c2:
     BE "Of course, I'm not a numbskull, Kei-chan!"
     MC "Never said you were. Just, it's an easy thing to forget when you're focused on something and I know you, Honoka. When you get focused on something, occasionally you can get a bit of tunnel vision."
     "Honoka tilted her head from side to side several times like a metronome."
-    show BE neutral
+    show BE sad
+    pause 0.5
+    show BE happy at center, Transform(xzoom=-1)
+    show BE angry at center, Transform(xzoom=1)
+    show BE neutral at center, Transform(xzoom=-1)
     BE "Yeah you've kind of got a point there. Well if you wanted to, you could probably come watch me. I doubt they'd mind.Then you can remind me to drink if I forget."
     MC "Maybe I'll do that, I don't think I have anything else going on."
+    show BE neutral at center, Transform(xzoom=1)
     BE "Heh, sounds good. Well, if you come I'll see you over at the soccer field. If not, well, see you whenever. Have a good day, Kei-chan."
     MC "You too."
     "Honoka raced off to the soccer field as I took another drink, and decided whether to go follow her or chill somewhere else for the rest of the afternoon. It was really hot, after all."
@@ -350,17 +396,20 @@ label BE003_c3:
     show BE angry
     BE "Kei-chan, you should have called them udders if you were gonna make a cow joke."
     MC "Darn, you're right. Haha."
+    show BE neutral
     BE "Though..."
     MC "Though, what? Are you really, I mean, I didn't mean to insult you if you were. Not that I'd think it was a bad thing or something like that, I just, if you weren't cool with it, I, uhhh."
     show BE sad
     BE "No no, it's not that. Just, now you've got me wondering if that's possible."
-    BE "I mean, I'm not an expert on female mammaries or anything but, there's obviously parts of the breast meant to make milk, so what would happen if they swelled up and started getting bigger? Would that mean the woman would start making a ton of milk, or would it just increase the size of the breasts around them, but keep the level of lactation about the same?"
+    BE "I mean, I'm not an expert on female mammaries or anything but, there's obviously parts of the breast meant to make milk, so what would happen if they swelled up and started getting bigger?"
+    show BE neutral
+    BE "Would that mean the woman would start making a ton of milk, or would it just increase the size of the breasts around them, but keep the level of lactation about the same?"
     MC "I uh, I don't really know how to answer that. I think it'd be weird for a tiny part of the body to be affected like that, though. If it was, I'd say, probably a bit of both?"
     BE "Huh. Interesting to think about."
     "Honoka and I both stood there for a moment, saying nothing to each other. Our eyes weren't really focused on one another either. It took a good minute or two before I finally broke the silence."
+    play music BE
     MC "Have we both been thinking about milky breasts now?"
     show BE happy
-    play music BE
     BE "Probably! But I'm a girl, it's okay for me to think about it. You're just a pervert."
     MC "That's not fair, you put the idea in my head."
     BE "I just planted the seed. You're the one who watered it and let it grow. Could have plucked it out at any time."

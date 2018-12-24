@@ -784,6 +784,7 @@ label daymenu:
                 tmp = renpy.random.choice(prefpool)
                 eventchoices.append(tmp)
                 prefpool.remove(tmp)
+                allpool.remove(tmp)
             elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
                 tmp = renpy.random.choice(allpool)
                 eventchoices.append(tmp)

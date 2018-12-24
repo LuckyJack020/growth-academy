@@ -59,12 +59,14 @@ init 2 python:
     eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"],                         "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS011_date", "enddate": "day_end",           "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"],                                 "location": "dormexterior",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"],                "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS015'] = {"name": "", "girls": ["GTS"],                                     "location": "dormexterior",     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"],                 "location": "dormexterior",     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"],                 "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"],                        "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"],                            "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"],                     "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"],        "location": "roof",             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"],                    "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"],                 "location": "campuscenter",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTSend'] = {"name": "Naomi end", "girls": ["GTS"],                            "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "GTS"]]}
 
 label GTS001:
@@ -1644,7 +1646,7 @@ label GTS019_c1_1:
     "My mind drew a blank as I simply let my hand move with the first thought that came to mind. And as such my work was done almost as soon as it started."
     GTS "Let's see what you did."
     if getSkill("Art") < 2:
-        show GTS embarrased
+        show GTS embarrassed
         GTS "O-oh, a very... interesting style Hotsure-san..."
         MC "Thanks, been a while since I did this."
     else:
@@ -1792,6 +1794,148 @@ label GTS020_c1_2:
     MC "Trust me, you caught me by surprise, too. And here I thought these cookies would be the only surprise tonight. Speaking of which, I can't finish all these cookies by myself. Come on, try out some of your handiwork."
     "I raised a cookie up to her, her cheeks still a shade of crimson as she nodded and took it. We continued our conversation, shifting to more causal topics but the mood was much happier. Naomi smiling a little more than usual as I noticed her shift her body a little so it was slightly closer to mine."
     "We talked so long that we had lost track of time, but that was okay too. Since every moment felt better than the last."
+    jump daymenu
+
+label GTS021:
+    scene School Planter with fade
+    show GTS neutral with dissolve
+    "I wandered into the garden as I had received a message from Minori about Naomi wishing to see me. As my footsteps bent the blades of grass underneath, I spotted Naomi at her usual spot. A mat underneath her as another sat beside her. She sat with her hands rested peacefully on her lap as her eyes laid shut."
+    MC "Hey Yamazaki-san, you wanted to see me?"
+    "She remained silent, raising a finger to her lips for silence before motioning to take a place next her."
+    "I took the hint and got on my knees as well, hands resting on my lap as we sat."
+    "And sat."
+    "And sat..."
+    MC "Uh... what are we doing?"
+    "My questioned seemed to amuse her as she broke concentration to giggle softly."
+    show GTS happy
+    GTS "We're meditating."
+    MC "Oh! Sorry. Well I feel stupid."
+    GTS "It's perfectly fine Hotsure-san. I asked you here to see if you wanted to meditate with me for a little bit."
+    MC "Sure thing, so just shut my eyes and breathe in. Easy enough."
+    "I took deep breaths as even though her breathing was soft and steady, her enlarged size still made it audible to me."
+    "We sat there for a few moments as I felt a leaf fall on top of my head."
+    MC "How long have you been practicing meditation?"
+    show GTS neutral
+    GTS "Since I was five years old."
+    MC "Another tradition your parents wanted you to follow?"
+    GTS "Yes. I hope it isn't an issue."
+    MC "Oh no not at all, I just noticed that they seem to a very particular lifestyle, at least for you."
+    GTS "My father has always been one for carrying on tradition."
+    MC "Any particular reason why?"
+    GTS "My father would most likely say it’s good for an individual’s growth to have a strong foundation as they mature. A set of guidelines to ensure a certain path."
+    MC "Huh, that’s rather insightful."
+    MC "I can see why you also follow these traditions."
+    menu:
+        "It shows a lot of resolve to be able to do so.": # +5 Affection
+            jump GTS021_c1_1
+        "Have you ever wanted to do something else though?": # +1 Affection
+            jump GTS021_c1_2
+
+
+label GTS021_c1_1:
+    MC "It shows a lot of resolve to be able to do so."
+    MC "It’s… what’s really impressive about you."
+    "Naomi’s body turned rigid for a moment, a subtle action enhanced by her larger frame."
+    $setAffection("GTS", 5)
+    show GTS embarrassed
+    GTS "U-uh, thank you." 
+    GTS "It’s truthfully not that difficult. It’s merely repetition and sticking to a routine."
+    MC "Well you’ve always been pretty good at organizing things so I suppose that would make it a lot easier for you."
+    "A blush was beginning to spread across her cheeks as her line of sight shifted away from me."
+    GTS "Compared to Matsumoto-san and Tomoe-san I’m really not that organized."
+    MC "I dunno, everything you’ve shown me tells me otherwise. How well you organize your room, plan out these get togethers, and even the lessons you make for when you teach me new traditions."
+    GTS "Ara ara, you flatter me. Thank you, but I swear it was merely coincidence."
+    "Her face had turned into a crimson mask as she rose a hand to her cheek, an attempt to hide the smile that was forming on her lips. A chuckle being impossible to contain escaping me as I watched her."
+    MC "Well, it’s quite the happy accident then. Keep it up."
+    "She gave me a small nod as I smiled in return but then chuckled once more."
+    MC "I’m sorry, I’m horrible at meditating it seems."
+    show GTS happy
+    GTS "Heh, that’s okay. I think this conversation was well worth it."
+    MC "Yeah, I think so too."
+    jump GTS021_c1_after
+
+label GTS021_c1_2:
+    MC "Have you ever wanted to do something else though?"
+    GTS "How so?"
+    MC "In the sense that I’m sure there was one lesson you took as a child that you weren’t fond of."
+    GTS "Certainly, but I think most children are like that at first. It’s hard to see the benefits of something when you’re young."
+    MC "True, but I’m sure there has to be something you try to avoid doing."
+    GTS "Truthfully no. I’ve never found anything I was taught to be a burden in some way."
+    MC "Have you ever considered a hobby that wasn’t in that traditional spectrum?"
+    GTS "I… hmmm…"
+    GTS "I suppose not. Though I wouldn’t really know where to begin."
+    MC "Well I’m not saying you have to. Just that there’s no harm in exploring things outside your comfort zone."
+    MC "Who knows, maybe you’ll discover that you’re into pop music and try making some yourself."
+    GTS "Oh I could never do something like that."
+    MC "Don’t knock it til you try it. Heh, maybe you’ll even be the next top idol."
+    show GTS happy
+    $setAffection("GTS", 1)
+    GTS "Now you’re just teasing me."
+    MC "I’d buy a ticket."
+    GTS "Heh, stop."
+    jump GTS021_c1_after
+
+label GTS021_c1_after:
+    show GTS happy
+    GTS "Thank you for joining me Hotsure-san. This was a very pleasant talk."
+    MC "It really was, so thank you for asking me to come by. Even if we didn’t succeed in our attempt."
+    show GTS neutral
+    GTS "I suppose we’ll have to try again then."
+    MC "Sounds great to me. Okay, I’ll try to focus this time."
+    "I settled back into position on my mat as we shared a last look before closing our eyes together. Taking a deep breath, we let the world’s ambiance take hold of us as we began our meditation."
+    jump daymenu
+
+label GTS025:
+    scene Campus Center with fade
+    "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn’t shown up."
+    show GTS neutral with dissolve
+    "Naomi seemed more patient than me as she sat under the tree, drinking tea from a container as she poured more into her cup."
+    MC "I wonder what’s keeping Tanaka-san. She was supposed to be here thirty minutes ago."
+    GTS "It could possibly be some sudden school work she realized she needed to do. I’m sure she’ll be here soon, though. By the way, would you like some tea, Hotsure-san? I brought some extra cups in case you and Tanaka-san wanted some."
+    MC "Sure, I’ll have some. Thank you, Yamazaki-san."
+    "As I sat down and took the cup, a small jingle came from my pocket. Retrieving my phone, I read the newest text message I had received while sipping tea. It appeared Ryoko had indeed become bogged down with some last-minute assignments she had been putting off."
+    "She apologized a few times and asked me to inform Naomi as well."
+    MC "Well, I guess we’re not going to show up in one of Tanaka-san’s projects today."
+    GTS "Oh? Was that her?"
+    MC "Yeah. It seems you were right. She has to do some other work that she’d been delaying. You know, it’s gotta be tough trying to find time to film things while also doing the normal course work."
+    GTS "I would imagine so. What should we do though?"
+    MC "Hmm, I'm not sure. Hey, why don't we just take a walk around the campus?"
+    GTS "A walk? Yes, that sounds lovely, actually."
+    "She collected her items while I stood up, and upon her rising up from her spot, the height difference becoming apparent quickly as I found myself face to bust."
+    "I averted my gaze as to not embarrass her, then looked up at her."
+    MC "Ready to go?"
+    "From there, we took a miniature tour of the campus. We stayed outside for as long as we could, partially to take in the scenery and partially to allow Naomi total comfort, as once we entered the school that'd change."
+    "Upon entering the school Naomi immediately began to adjust herself to avoid possibly bumping into obstacles that I wouldn't have even considered. From there it was short trips to the cafeteria, library, music club, and even the movie room to say hello to Ryoko."
+    "The voyage came to its conclusion on the school roof. Bathed in the light of a setting sun, I breathed in deeply, taking in the aroma of the flowers Naomi had planted earlier."
+    MC "This is nice, I don't really take many chances to go out late in the afternoon."
+    GTS "I would recommend it. The way the breeze journeys along, the colors the sun paints across the land, and the calm the setting provides. It's truly a lovely hour."
+    MC "Poetic."
+    show GTS embarrassed
+    GTS "I, my apologies Hotsure-san."
+    MC "Don't worry, I like it. And I would say I agree with you, it's nice just being out here and seeing the world through this filter."
+    "I moved closer to the fence and sat down, giving myself the best view that I could before Naomi sat next to me."
+    "There weren't any more words at that point. Just us and the tender solace we had found."
+    "My senses felt heightened, everything sounding clearer: The wind blowing through the leaves, the faint chatter of some students, even the soft breathing of the body next to me."
+    "I made note of the air washing over me, making my bangs fly briefly. I felt the rough texture of the floor beneath my hands and fingers. And then to my surprise, felt the pressure of another body lean against mine."
+    "I didn't move; in fact, I became more rigid. I knew what this warmth was, yet its softness was foreign. My eyes wanted to turn my head to make confirmation, but my brain already knew the answer."
+    "I didn't move, I didn't speak. I feared that either would ruin this moment, as Naomi leaned against me to share it. Instead, I chose to get the most of this moment that I could, a smile spreading across my face as I shut my eyes."
+    "I don't know how long we stayed like that, some smart guy once made mention of how your brain changes its perception of time, but at the moment his name and his theorem were irrelevant. Any minute, any second that I could have I would accept."
+    "But this moment would have to depart, yet I was not prepared for the method in which it chose to leave."
+    GTS "Hotsure-san…"
+    MC "Yeah Yamazaki-san?"
+    GTS "I…"
+    GTS "I uh…" 
+    GTS "Would it be okay… to kiss you?"
+    "My heart suddenly felt like it was connected to a car whose pedal had been floored as my heart rate soared. I felt my face heat up as I gulped slightly and finally turned to face her."
+    "Her face was as scarlet coated as my own, her eyes avoiding contact with mine. They would, however, quickly glance at me as she waited for my answer."
+    #(Will write a no response later)
+    MC "Uh… y-yes, it um… would be okay…"
+    "I felt like an idiot for being unable to just say what I wanted to say. I saw her close her eyes as she leaned into me. Her hand was clenched and slightly shaky, and she flinched once I actually moved."
+    "Reaching up, I placed my hand on her cheek as our lips met. She was soft and warm, tender and timid as she tried not to press against me but also feared pulling away."
+    "I felt her tense up, then relax, only to tense once more as she seemed scared to ruin the kiss. My thumb gently caressed her cheek and soon her tension eased away. We allowed ourselves to enjoy this rather than let fear mess it up."
+    "We stayed like this for merely a few seconds before I finally moved back. Her eyes opened, and while she was still deeply red, I saw the warmest smile form as her eyes looked directly into my own."
+    "Her joy coaxed out my own as I smiled in response to hers. We didn't talk again, instead we looked back out into the sunset as she leaned back into me once more. This time however, I felt her gentle hand rest upon mine."
+    "Softly, I shifted my hand and took what of hers I could within its grasp. Squeezing her hand tenderly, we enjoyed the view until the sun vanished behind the horizon."
     jump daymenu
 
 label GTSend:
