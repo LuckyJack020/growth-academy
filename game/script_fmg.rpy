@@ -708,8 +708,8 @@ label FMG009:
     MC "Nothing much, just getting something from the vending machine. What's up with you?"
     show FMG sad
     FMG "*Sigh* I'm waiting for someone because I need to talk to her. Speak of the devil..."
-    show FMG sad at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show Rin neutral at Position(xpos=0.75) with dissolve
     "Just like she said, there really was someone walking towards us. A girl with dark red hair, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
     "There were two big things that immediately made her stand out. One, her eyes were as blue if not bluer than Alice's, which would mean she was a foreign student. And two..."
     "...Her nipples were easily seen bulging out of the fabric of her shirt."
@@ -737,7 +737,7 @@ label FMG009:
     hide FMG
     play music Rain
     extend " Rin, for her part, just looked back at me defeated."
-    show Rin neutral at Position(xpos=0.5, xanchor=0.5)
+    show Rin neutral at Position(xpos=0.5)
     Rin "*sigh* Sorry you had to be part of that, she can be a little hot-headed."
     "She apologized, before walking to the vending machine to buy chips, it's only when she grabbed the first chip she said more."
     Rin "Heh, she is right about one thing, I really am lazy."
@@ -861,11 +861,11 @@ label FMG010_testpass:
     FMG "I'm glad to know you care like that, Kei!"
     FMG "Have a big hug for your troubles!"
     "She swept me up in a big hug, and I held my breath. I'd expected a tight, bone-creaking hug from a bear but instead the hug felt nice, gentle even. I wouldn't have minded staying like that for-"
-    show Rin neutral at Position(xpos=0.8, xanchor=0.5)
+    show Rin neutral at Position(xpos=0.8)
     Rin "So are you guys gonna shag here or what?"
     $setVar("RinFavor", getVar("RinFavor") + 1)
     MC "AHH!!"
-    show FMG surprised at Position(xpos=0.2, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+    show FMG surprised at Position(xpos=0.2, yalign=1.0), Transform(xzoom=-1) with dissolve
     "Both Akira and I yelled out in surprise, breaking the hug in the process."
     FMG "What?! Rin?! I thought you had a meeting with Shiori!"
     "Akira yelled out in both frustration and confusion, though this had little to no effect on Rin as she answered Akira's question."
@@ -878,7 +878,7 @@ label FMG010_testpass:
     Rin "Oh, and I didn't forget about that favor!"
     hide Rin with dissolve
     "..."
-    show FMG neutral at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=1) with dissolve
+    show FMG neutral at Position(xpos=0.5, yalign=1.0), Transform(xzoom=1) with dissolve
     MC "Um...what did she mean by using them to-"
     FMG "Man I don't even know, and I don't think I {i}want{/i} to know. That girl is something else."
     MC "You know, she seems like a good friend, even if she's a bit weird."
@@ -932,7 +932,7 @@ label FMG011:
     "To my surprise, Akira was playing on one of the machines..."
     if isEventCleared("BBW009"):
         "... And she looked focused. I walked up to get a better view of the game."
-        show FMG neutral at Position (xpos=0.75, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+        show FMG neutral at Position (xpos=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
         FMG "Hey. Can't talk now. Killing."
         "She was in the middle of a boss fight with a strange mutated creature. Given the size of its health bar, I thought it might be the final boss."
         show FMG angry
@@ -947,12 +947,12 @@ label FMG011:
         MCT "...Ah, balls. I forgot about that."
         MC "Er... you okay?"
         FMG "Don't worry, I ain't mad at you, if that's what you're wondering. I just want to give that smug jerk a taste of her own medicine."
-        show FMG angry at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1)
+        show FMG angry at Position(yalign=1.0), Transform(xzoom=-1)
         FMG "Heh. She thinks all I do is work out, well she's not the only one with a hidden talent."
         MC "Well, you never know. She could be good at this kinda stuff."
         FMG "Any overweight, smug overachiever can play and be good, but it takes skill and practice to be great at something."
         "Oh great, history was repeating itself. This time, the one behind her was-"
-        show BBW neutral at Position (xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+        show BBW neutral at Position (xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
         FMG "You don't just sit around to be great at something, you gotta go out there and do it yourself."
         "Alice, and she looked angry. I'd say I was surprised this was happening again...but I wasn't."
         FMG "But no, people want to do it the easy way, by sitting down, getting fat, and having everything given to them. Not all of us were born with a silver spoon in our mouths."
@@ -974,8 +974,8 @@ label FMG011:
         MCT "Oh no, Alice... now you've done it."
         FMG "... You... grab the gun and put your cash in so we can start."
         "Akira was visibly shaking with rage while Alice got into position. All I could do was watch this happen while Akira grabbed the second player gun."
-        show FMG angry at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1)
-        show BBW haughty at Position (xpos=0.55, xanchor=0.5) with dissolve
+        show FMG angry at Position(yalign=1.0), Transform(xzoom=-1)
+        show BBW haughty at Position (xpos=0.55) with dissolve
         FMG "I'm going to take a wild guess and say you want to be player one. Doesn't matter in the long run, though."
         BBW "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped." 
         show FMG neutral
@@ -984,7 +984,7 @@ label FMG011:
         "Thus began a duel for honor, pride, and some other third thing. About ten minutes into it Akira was already ahead of Alice by ten thousand points, mostly because Alice was shooting normal civilians before realizing she lost points for doing that."
         "Both were too focused on the game to say anything to the other, but I could tell that Akira was feeling smug about behaid, while Alice was both confused and annoyed." #TODO: Behaid, typo?
         "An hour later, and a lot of both their coins, they managed to get to the final boss, and once it was dead, the scoreboard tallied up the results, with Alice's score first."
-        show BBW neutral at Position (xpos=0.40, xanchor=0.5) with dissolve
+        show BBW neutral at Position (xpos=0.40) with dissolve
         "Player One Score: 21521"
         show FMG neutral
         FMG "Huh. Not bad..."
@@ -1026,7 +1026,7 @@ label FMG011:
         BBW "Indeed. Good day, Hotsure-san."
     else:
         "...Though she looked rather casual, like she was really just playing it for fun, not trying to beat it or anything. I walked up to get a better look of the game."
-        show FMG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+        show FMG neutral at Position (xpos=0.75) with dissolve
         FMG "Yo, what's up?"
         MC "It's raining, so I came in here. Shouldn't you be focusing on the game?"
         show FMG happy
@@ -1034,7 +1034,7 @@ label FMG011:
         FMG "Can you believe this school has a recreation room, let alone three arcade games!"
         MC "Yeah, so what's that you're playing?"
         FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of ‘Fallen City'. I'm just about to fight the final boss once this cutscene finishes."
-        show FMG happy at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1.0)
+        show FMG happy at Position(yalign=1.0), Transform(xzoom=-1.0)
         "Just then, a bat-cat-zombie-thing showed up. Akira took about 3 minutes to beat it, and once she did a leaderboard showed up, displaying her score."
         show FMG neutral
         FMG "Man, that was fun. Third place too, not bad."
@@ -1042,7 +1042,7 @@ label FMG011:
         FMG "Nah, unless I've got a VERY good reason, I'm not that competitive. Speaking of competitiveness, look who just came in..."
         "By the doorway was a slightly soaked Alice, looking annoyed."
         FMG "Hey Alice! How's it going?"
-        show BBW angry at Position(xpos=0.25, xanchor=0.5) with dissolve
+        show BBW angry at Position(xpos=0.25) with dissolve
         BBW "Irritatingly. The weather report said nothing of showers, and... Look at me."
         FMG "Oh yeah, Kei said something about rain but I wasn't paying attention. At least you found shelter before it really got bad."
         show BBW neutral
@@ -1067,7 +1067,7 @@ label FMG011:
         FMG "Yeah, Hey...  Alice, the rain stopped, are you going to stop?"
         show BBW angry
         BBW "Not just yet. One more go at that cyber-brain and I should have it beat."
-        show FMG sad at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1.0)
+        show FMG sad at Position(yalign=1.0), Transform(xzoom=-1.0)
         FMG "{i}(Yeah I don't think she realizes that's the third boss and there's three more to go...){/i}"
         FMG "Well, see you at class tomorrow, don't play for too long."
         BBW "I'll be fine."
@@ -1228,8 +1228,8 @@ label FMG014_c1_1:
     MC "He told me he'd be here, but where is he?"
     FMG "Oh he's behind you."
     MCT "What."
-    show RM neutral at Position (xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show FMG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show RM neutral at Position (xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position (xpos=0.75) with dissolve
     RM "Hello."
     MC "AHHH!"
     MC "Dude! How?!"
@@ -1257,7 +1257,7 @@ label FMG014_c1_1:
     RM "So long!"
     hide RM with dissolve
     "Upon saying that, he throw something on the ground... it was a rock. When I looked up, Daichi was gone..."
-    show FMG happy at Position(xpos=0.5, xanchor=0.5)
+    show FMG happy at Position(xpos=0.5)
     FMG "Well, glad to get that done. Thanks for your help, Kei. See ya!"
     hide FMG with dissolve
     MC ".  .  ."
@@ -1363,8 +1363,8 @@ label FMG016:
     MC "You know, never thought we'd be in a cafe like this."
     FMG "Well, I don't know about you, but I'll try anything once."
     "About two minutes later, our waitress came by, but I couldn't shake the feeling I knew her."
-    show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+    show Rin neutral at Position(xpos=0.75) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     Rin "Hi, welcome mast- oh, crap."
     show FMG surprised
     FMG "Wait a minute, RIN?!"
@@ -1376,15 +1376,15 @@ label FMG016:
     hide Rin with dissolve
     MC "...Well this is happening, I guess."
     "I didn't get a single response. Akira was silent the entire time, staring at the spot Rin was. Though to be fair, it must have been quite the shock, seeing your roommate acting the exact opposite way you'd always seen her... while dressed as a maid."
-    show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show Rin neutral at Position(xpos=0.75) with dissolve
     Rin "Here you go, and I'll see you in 10. Till then masters, I bid you adieu!"
     hide Rin with dissolve
     "We did nothing but consume our orders in silence while we waited for Rin's break to happen."
     scene Town with fade
     play music Sunset
     "Once we finished and it was time, we went out to the front of the store with no sign of Rin. I heard a ‘hey' from the alleyway, and followed it to find Rin down there waiting for us. Both Akira and I walked down the alleyway to meet up with Rin."
-    show Rin neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
+    show Rin neutral at Position(xpos=0.75) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     Rin "God, out of all the people in the world to come to this one maid cafe, it had to be my roommate and her boyfriend!"
     "Rin vented out her frustrations, though in our defense this island wasn't exactly Tokyo."
     if getAffection("FMG") > 10:
@@ -1427,7 +1427,7 @@ label FMG016:
     FMG "...Nope. Nope I'm not dealing with this! Nope! I'm nopeing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
     hide FMG with dissolve
     "Akira just left, repeating ‘nope' to herself till she was out of earshot. I turned to Rin to say something, but to my confusion and surprise, she was grinning like she'd won something."
-    show Rin neutral at Position(xpos=0.5, xanchor=0.5)
+    show Rin neutral at Position(xpos=0.5)
     Rin "And that, my dear Keisuke, is how you win a battle against your roommate."
     MC "...Huh?"
     Rin "That whole romantic BS was just to fluster Akira; an act, if you will. Dad always did say I had the makings of a great method actor."
@@ -1504,8 +1504,8 @@ label FMG018_c1_1:
     MC "Well, let's ask Matsumoto, maybe she can help."
     FMG "If you say so, I have my doubts though."
     "Ignoring Akira's doubts, I followed suit and walked towards Shiori, for her part she was by herself, while looking deep in thought."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show AE neutral at Position(xpos=0.75) with dissolve
     MC "Hey Matsumoto, what's on your mind? Akira and I are teaming up, do you need a partner?"
     AE "Hmm..."
     AE "I can't say most of these recipes are to my tastes. Perhaps something I can recall from memory, then?"
@@ -1545,8 +1545,8 @@ label FMG018_c1_1:
     "After a discussion with a confused teacher, I later found that the fat, blood, and other rendered parts of the animals could be found in the school kitchen."
     "At the very least, at least I know the food here's fresh."
     scene Cooking Classroom with fade
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show AE neutral at Position(xpos=0.75) with dissolve
     MC "Yo! I'm back with the blood."
     AE "Ah, splendid. We've been working on the mashed potatoes."
     FMG "Yeah! Check *this* out."
@@ -1605,8 +1605,8 @@ label FMG018_c1_2:
     MC "Look, let's just ask her okay?"
     FMG "Fine, not like we have a lot of options. "
     "With that discussion out of the way, we headed towards Naomi."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xpos=0.75) with dissolve
     MC "Hey Yamazaki-san, how's it going?"
     GTS "Oh, hello there Hotsure-san and Mizutani-san. I'm doing well, though I'm currently in need of partners."
     MC "Well we need a third person, you can join us if you want."
@@ -1629,8 +1629,8 @@ label FMG018_c1_2:
     "We took our positions after that, Naomi took care of the noodles, Akira was in charge of the broth, and I was handling the extra bits..."
     "...and somehow we messed up. The noodles were undercooked, the extras were lacking because others had the same raman idea, and the broth was low and tasted burnt somehow."
     scene Cooking Classroom with fade
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xpos=0.75) with dissolve
     FMG "... Well, this turned out better than I thought."
     show GTS sad
     GTS "Again, I am sorry at my lack of experience cooking."
@@ -1646,8 +1646,8 @@ label FMG018_c1_3:
     MC "Still, it can't hurt to ask her."
     FMG "I guess, she doesn't really look like a chef to me though."
     "We walked towards Honoka, who was staring at a block of cheese."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show BE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BE neutral at Position(xpos=0.75) with dissolve
     MC "Hey Honoka, Akira and I need a third partner, are you open?"
     BE "Oh yeah! I could join up with ya, Kei-chan."
     FMG "Sweet, but do you have any cooking experience?"
@@ -1664,8 +1664,8 @@ label FMG018_c1_3:
     "After she got what we needed, we put together a pie in the span of a few hours..."
     "...But the end result was left to be desired."
     scene Cooking Classroom with fade
-    show FMG sad at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show BE sad at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BE sad at Position(xpos=0.75) with dissolve
     FMG "... Uh, I don't think it's supposed to look so... undercooked."
     MC "Maybe you're right, Honoka what recipe were you following anyways?"
     show BE happy
@@ -1748,8 +1748,8 @@ label FMGBBW001:
     RM "Oh god, move over!"
     hide RM with dissolve
     "Daichi moved to the side to get a look for himself. To both of our surprise the person who was coming down the stairs..."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BBW neutral at Position(xpos=0.75) with dissolve
     RM "Alice Nikumaru? She’s without the assistance of miss Kodama. That alone raises more red flags."
     MC "Be quiet, I think they're about to talk..."
     BBW "Alright Mizutani, what was so important that you had me wake up so early?"
@@ -1844,8 +1844,8 @@ label FMGBBW001:
     #*Door chime*
     RM "Zip it."
     hide RM with dissolve
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, ypos=1.0, yanchor=1.0), Transform(xzoom=-1) with dissolve
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BBW neutral at Position(xpos=0.75) with dissolve
     "Both Akira and Alice entered the building. They were a few feet away from us but enough to not recognize us."
     Cashier "Oh hi, is it just you two?"
     FMG "Yes ma’am, just me and my friend."
@@ -1940,7 +1940,7 @@ label FMGBBW001:
     MCT "Fellow growers? Does that mean..."
     MC "You must be miss Chie Kazomazumi."
     Chie "Why yes I am, an can I say you two look so cute, especially you mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
-    show RM neutral at Position(xpos=0.0, xanchor=0.5) with dissolve
+    show RM neutral at Position(xpos=0.0) with dissolve
     "While I was talking to her, Daichi was trying to stealthily leave out the front door... too bad everyone could see him. I felt like it was better just to ask and get it over with."
     MC "Look, my roommate is too shy to ask, but are you really the first person to have a growth factor?"
     show RM angry at center, Transform(xzoom=-1) with dissolve

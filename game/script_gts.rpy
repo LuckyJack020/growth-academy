@@ -665,8 +665,8 @@ label GTS009:
     play music Festival
     "Music and cheers set the mood as the buildings lining the block reflected the lights of various lanterns. Dusk was beginning to set in, and as it did, a wave of multiple-colored lights replaced the sunlight."
     "Booths covered both sides of each walk way as vendors attempted to tantalize visitors  with various knick knacks and home-style delicacies. They didn't get to me, though, as I had my sights set on a more personal venture. As I made my way further into the festival, I could pick out the two familiar voices."
-    show GTS neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
-    show BE neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show GTS neutral at Position (xpos=0.25) with dissolve
+    show BE neutral at Position (xpos=0.75) with dissolve
     GTS "...Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
     BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
     GTS "Well, if you're certain. Though I'd gladly help you get dressed if you're concerned about your bust getting in the way..."
@@ -964,10 +964,10 @@ label GTS011:
     scene Dorm GTS with fade
     play music Busy
     "As I entered her dorm room, I saw another girl already inside. She sat kneeling at table, a cup of tea in her hand as she smiled and waved."
-    #show Ryoko neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    #show Ryoko neutral at Position (xpos=0.25) with dissolve
     UNKNOWN "Howdy! You must be Hotsure-san."
     MC "Uh... yeah, I am. Hello."
-    show GTS happy at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show GTS happy at Position (xpos=0.75) with dissolve
     GTS "Hotsure-san, this is Ryoko Tanaka. Tanaka-san, this is Keisuke Hotsure. Tanaka-san is my next-door neighbor who I met a couple days ago, so I invited her over for some tea as well. I hope that isn't a problem."
     MC "No, it's all right. It's nice to meet you Tanaka-san."
     Ryoko "Likewise, come on, have a seat."
@@ -1189,14 +1189,14 @@ label GTS014_after:
 
 label GTS015:
     scene Dorm GTS with fade
-    show Ryoko happy at Position (xpos=0.20, xanchor=0.5) with dissolve
+    show Ryoko happy at Position (xpos=0.20) with dissolve
     play music Busy
     Ryoko "And cut! Good job everyone!"
     "These were the first words Naomi and I heard as we waited outside of Ryoko's dorm room before we were allowed in. The bedroom had been transformed into a makeshift set as curtains had been put up to eliminate any natural sunlight while other lights were set up to enhance ambient lighting."
     "Two girls I assumed were actresses were casually chatting to themselves while a couple of students worked to start putting away the camera, lighting, and various other bits of equipment."
     MC "Um... hey there Tanaka-san."
     Ryoko "Hm? Ah! Hotsure-san! Yamazaki-san! I'm so glad you could make it. Please take a seat, we're wrapping up for today."
-    show GTS neutral at Position (xpos=0.80, xanchor=0.5) with dissolve
+    show GTS neutral at Position (xpos=0.80) with dissolve
     GTS "Apologies if we're interrupting anything."
     show Ryoko neutral
     Ryoko "Nah, like I said we're done for today. They're just getting everything put away. So how you two been?"

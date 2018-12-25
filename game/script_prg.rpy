@@ -147,7 +147,7 @@ label PRG002:
     scene Cafeteria with fade
     play music Schoolday
     "I felt hungrier than usual today, so I stopped by the cafeteria for an extra snack.  I had just finished my red bean bun when I spied Aida coming in the door near where I was sitting."
-    show PRG neutral at Position(xpos=0.65, xanchor=0.5) with dissolve
+    show PRG neutral at Position(xpos=0.65) with dissolve
     MC "Hi there, Kodama-san!"
     PRG "Oh!  Ah, h-hello Hotsure-san."
     MC "How are you today?"
@@ -163,7 +163,7 @@ label PRG002:
     "When we finally got up to the counter, Aida ordered several bean paste buns and a few jelly rolls. Her large bag of pastries in hand, we set out into the cafeteria seating, looking for Alice."
     BBW "Here, Kodama-san."
     PRG "Ah! C-coming!"
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show BBW neutral at Position(xpos=0.25) with dissolve
     "I followed Aida over to the table Alice was sitting at, a small picnic cloth spread over the table and actual silverware set in front of her. Aida quickle set to work opening each of the packaged sweets and setting them out on the picnic cloth in front of Alice."
     BBW "It looks like you did your job satisfactorily. Is this a full selection of the snacks available or did you prioritize some over others?"
     PRG "O-oh, well, um, this was as many as I could a-afford..."
@@ -233,7 +233,7 @@ label PRG003:
     "I had tried to sound friendly, but she jumped like I'd shouted her name at the top of my lungs."
     show PRG surprised
     PRG "Ah! I'm sorry!"
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5)
+    show PRG neutral at Position(xpos=0.75)
     PRG "I-is there a club meeting? Am-Am I in the way?"
     menu:
         "No, no one's coming that I know of.":
@@ -385,7 +385,7 @@ label PRG003_3_a:
     PRG "Oh, okay, w-well, this odd-looking spoon, that's called a pasta fork, actually. A-and this, this is a ravioli stamp. Alice says she enjoys Italian food, but uhm, a lot of 'Italian' food, like modern pizza, was actually invented in America... Maybe, uhm, inspired by original Italian dishes like Focaccia, but..."
     scene black with fade
     scene Classroom with fade
-    show PRG happy at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show PRG happy at Position(xpos=0.75) with dissolve
     PRG "...And now that it's drained in the, uh, in the strainer, I just need to put some of the alfredo sauce- named after an Italian restaurant owner in Rome- over it and it's ready for Alice."
     MC "Wow, you sure do know a lot, Kodama-san."
     show PRG aroused at center with dissolve
@@ -451,8 +451,8 @@ label PRG004:
     stop music fadeout 0.0
     "{b}{i}SLAM!{/i}{/b}"
     $ renpy.with_statement(vpunch, always=True)
-    show FMG angry at Position (xpos=0.75, xanchor=0.5) with dissolve
-    show PRG surprised at Position (xpos=0.25, xanchor=0.5)
+    show FMG angry at Position (xpos=0.75) with dissolve
+    show PRG surprised at Position (xpos=0.25)
     "We were interrupted by Akira flying through the front doors of the athletics center at dangerous speeds, sprinting full tilt down the side of the building. We watched with wonder as she made it to the end of the long building in seconds."
     hide FMG angry with dissolve
     show PRG neutral at center with dissolve
@@ -463,11 +463,11 @@ label PRG004:
     
     scene School Planter with fade
     "To our surprise she was only a handful of paces past the corner, kneeling in the grass and looking at something."
-    show FMG sad at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show FMG sad at Position (xpos=0.75) with dissolve
     FMG "Oh no, oh no, c'mon little guy..."
     play music Bittersweet
     "When we got close to Akira, we saw what she was so concerned about. Lying motionless in the grass in an unnatural, awkward heap was a small bird, no bigger than Akira's hands cupped together."
-    show PRG sad at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show PRG sad at Position (xpos=0.25) with dissolve
     FMG "I was just inside on the butterfly machine, kinda spacing out, when WHAM! This little guy slams into the window and drops like a rock!"
     PRG "Oh no!"
     MC "That's terrible..."
@@ -525,8 +525,8 @@ label PRG004_1:
     FMG "Sheesh, why does no one want to help?"
     MC "Well, uh... you might be coming on a little too strong."
     FMG "Harumph. Oh hey, you there, lady with the long hair!"
-    show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
-    show GTS neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position (xpos=0.25) with dissolve
+    show GTS neutral at Position (xpos=0.75) with dissolve
     GTS "Hm?"
     FMG "Hey, you're in our class, right? Do you know anything about birds?"
     show GTS sad
@@ -684,7 +684,7 @@ label PRG006_end:
     scene Dorm Exterior with fade
     show PRG neutral
     "We finally arrived at the women's dorms, Aida slightly red in the face from the exertion.  I knocked on the door for her, and Alice answered after not to long of wait."
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show BBW neutral at Position(xpos=0.75) with dissolve
     BBW "Hm?"
     show BBW happy
     BBW "Oh! Wonderful, they've arrived!"
@@ -804,10 +804,10 @@ label PRG008:
     
     scene Classroom with fade
     play music Schoolday
-    show PRG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.25) with dissolve
     PRG "Oohh..."
     hide PRG neutral with dissolve
-    show PRG neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.75) with dissolve
     PRG "Not here either..."
     hide PRG neutral with dissolve
     show PRG neutral at center with dissolve
@@ -939,13 +939,13 @@ label PRG009:
     scene School Exterior with fade
     play music Sunset
     "After finishing my homework for the day, I decided to take a walk around, get some fresh air.  As I passed by the vending machines, I saw Aida sitting at one of the picnic tables, looking at something in her hands."
-    show PRG neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.2) with dissolve
     PRG "..."
     "I approached Aida from the side, not trying to be sneaky, just that's how my path wound up intersecting her. As I got close, I recognized the paper she was staring at by the distinct shape and size."
     MC "Looking at your results, huh?"
     show PRG surprised
     PRG "Eep!"
-    show PRG neutral at Position(ypos=1.0, yanchor=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(yalign=1.0), Transform(xzoom=-1)
     PRG "O-oh, Hotsure-San! I, uh, y-you... Um..."
     "Aida whipped the paper behind her in the least convincing attempt at hiding something I think I'd ever seen."
     MC "..."
