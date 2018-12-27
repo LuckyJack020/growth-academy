@@ -384,7 +384,7 @@ label BE003_c2:
     show BE happy at center, Transform(xzoom=-1)
     show BE angry at center, Transform(xzoom=1)
     show BE neutral at center, Transform(xzoom=-1)
-    BE "Yeah you've kind of got a point there. Well if you wanted to, you could probably come watch me. I doubt they'd mind.Then you can remind me to drink if I forget."
+    BE "Yeah you've kind of got a point there. Well if you wanted to, you could probably come watch me. I doubt they'd mind. Then you can remind me to drink if I forget."
     MC "Maybe I'll do that, I don't think I have anything else going on."
     show BE neutral at center, Transform(xzoom=1)
     BE "Heh, sounds good. Well, if you come I'll see you over at the soccer field. If not, well, see you whenever. Have a good day, Kei-chan."

@@ -161,8 +161,11 @@ label FMG003:
     FMG "HEY KEISUKE!!!"
     play music FMG
     "...That is until I saw Akira sprinting down the hall."
+    show FMG neutral at Transform(xzoom=-1):
+        linear 0 xpos -0.5
+        ease 0.5 xpos 0.2
     "I braced for impact, but Akira came to a screeching halt just before colliding into me."
-    show FMG neutral with dissolve
+    show FMG neutral at Transform(xzoom=1)
     FMG "Yo, how're you?"
     "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 kph."
     MC "Um...fine?"
@@ -195,13 +198,15 @@ label FMG003_c1:
     show FMG sad
     FMG "...Wait is it top fitness?"
     show FMG happy
-    FMG "Ah screw it, just be ready okey?"
+    FMG "Ah screw it, just be ready okay?"
     MC "All right, when do get started?"
     show FMG neutral
     FMG "When the time comes, you'll know..."
     MC "Um... no I don't, t-that's why I-"
     FMG "Oh Crap the bell's gonna to ring in 30 seconds! LATER!"
-    hide FMG with dissolve
+    show FMG neutral at Transform(xzoom=-1)
+    show FMG neutral:
+        ease 0.75 xpos 0.9
     "She yelled out before sprinting down the hall... leaving me bewildered."
     MC "...Asked...Wait, 30 seconds!?"
     jump daymenu
@@ -212,14 +217,16 @@ label FMG003_c2:
     FMG "Yes! We ca-"
     MC "BUT!"
     "I spoke up, catching her off guard."
-    MC "I will only do it at my own pace, I don't want to feel like i'm dying after the first session."
+    MC "I will only do it at my own pace, I don't want to feel like I'm dying after the first session."
     show FMG sad
     FMG "...Oh well...yeah that makes sense."
     show FMG neutral
     FMG "I'll admit I'm a little disappointed, but I'm more glad you're willing to give it a shot."
     MC "Well I am willing as long as-"
     FMG "Oh Crap the bell's gonna to ring in 10 seconds! LATER!"
-    hide FMG with dissolve
+    show FMG neutral at Transform(xzoom=-1)
+    show FMG neutral:
+        ease 0.75 xpos 0.9
     "She yelled out before sprinting down the hall... leaving me bewildered."
     MC "...You don't go overboard...Wait, 10 seconds!?"
     jump daymenu
@@ -235,8 +242,10 @@ label FMG003_c3:
     FMG "No it's fine, I'm not made of glass. If you change your mind you know where to find me..."
     MC "...So see you later?"
     FMG "Yeah Later."
-    hide FMG with dissolve
-    "I honestly felt kinda bad for her but i got too much on my plate to worry about exercise."
+    show FMG neutral at Transform(xzoom=-1)
+    show FMG neutral:
+        ease 0.75 xpos 0.9
+    "I honestly felt kinda bad for her but I got too much on my plate to worry about exercise."
     "..Like the fact I'm going to be late for class if I don't move!"
     jump daymenu
     
@@ -369,7 +378,7 @@ label FMG004_testpass:
     FMG "Here, A congratulation prize, didn't know what flavor you liked so I got you vanilla."
     MC "Ice cream? But isn't that like the worst thing you could have during a workout?"
     show FMG neutral
-    FMG "True, but i'd probably burned half the calories of this ice cream pop in this run, and that's not including the rest of my workout today."
+    FMG "True, but I'd probably burned half the calories of this ice cream pop in this run, and that's not including the rest of my workout today."
     "I don't think that's how it works..."
     FMG "Besides, I'll take eating a ice cream pop and workout the entire day then drink a fricking protein shake and workout just for only an hour any day of the week."
     MC "At least you got your priorities straight."
@@ -865,7 +874,7 @@ label FMG010_testpass:
     Rin "So are you guys gonna shag here or what?"
     $setVar("RinFavor", getVar("RinFavor") + 1)
     MC "AHH!!"
-    show FMG surprised at Position(xpos=0.2, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show FMG surprised at Position(xpos=0.2, yalign=1.0), Transform(xzoom=-1)
     "Both Akira and I yelled out in surprise, breaking the hug in the process."
     FMG "What?! Rin?! I thought you had a meeting with Shiori!"
     "Akira yelled out in both frustration and confusion, though this had little to no effect on Rin as she answered Akira's question."
@@ -1036,7 +1045,7 @@ label FMG011:
         FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of ‘Fallen City'. I'm just about to fight the final boss once this cutscene finishes."
         show FMG happy at Position(yalign=1.0), Transform(xzoom=-1.0)
         "Just then, a bat-cat-zombie-thing showed up. Akira took about 3 minutes to beat it, and once she did a leaderboard showed up, displaying her score."
-        show FMG neutral
+        show FMG neutral at Transform(xzoom=1)
         FMG "Man, that was fun. Third place too, not bad."
         MC "Yeah, thinking of going for first place?"
         FMG "Nah, unless I've got a VERY good reason, I'm not that competitive. Speaking of competitiveness, look who just came in..."
@@ -1748,7 +1757,7 @@ label FMGBBW001:
     RM "Oh god, move over!"
     hide RM with dissolve
     "Daichi moved to the side to get a look for himself. To both of our surprise the person who was coming down the stairs..."
-    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1) with dissolve
     show BBW neutral at Position(xpos=0.75) with dissolve
     RM "Alice Nikumaru? She’s without the assistance of miss Kodama. That alone raises more red flags."
     MC "Be quiet, I think they're about to talk..."
@@ -1844,7 +1853,7 @@ label FMGBBW001:
     #*Door chime*
     RM "Zip it."
     hide RM with dissolve
-    show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1) with dissolve
     show BBW neutral at Position(xpos=0.75) with dissolve
     "Both Akira and Alice entered the building. They were a few feet away from us but enough to not recognize us."
     Cashier "Oh hi, is it just you two?"
@@ -1878,7 +1887,7 @@ label FMGBBW001:
     show BBW surprised
     BBW "..."
     BBW "T-that’s it? You don’t know?"
-    FMG " Well, how can any of us expect how the future will turn out? I like, think about the future as much as the next girl, but you gotta put in some room for the unknown."
+    FMG "Well, how can any of us expect how the future will turn out? I like, think about the future as much as the next girl, but you gotta put in some room for the unknown."
     show BBW neutral
     BBW "I can understand that rationale, but leaving so much to chance..."
     "Alice shook her head, flummoxed."
@@ -1925,7 +1934,7 @@ label FMGBBW001:
     BBW "No way to foresee that, though. Next time, keep the mood light."
     "After talking to herself, she paid the bill and left."
     hide BBW with dissolve
-    show RM angry with dissolve
+    show RM angry at center with dissolve
     RM "Wait... that’s it? We been here for 20 minutes listening to girl talk, and they didn’t say a single thing about the article, let alone this stupid bakery!?"
     MC "Huh, maybe it really was just a coincidence."
     show RM sad
@@ -1940,10 +1949,12 @@ label FMGBBW001:
     MCT "Fellow growers? Does that mean..."
     MC "You must be miss Chie Kazomazumi."
     Chie "Why yes I am, an can I say you two look so cute, especially you mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
-    show RM neutral at Position(xpos=0.0) with dissolve
+    show RM neutral:
+        ease 2 xpos 0.01
     "While I was talking to her, Daichi was trying to stealthily leave out the front door... too bad everyone could see him. I felt like it was better just to ask and get it over with."
     MC "Look, my roommate is too shy to ask, but are you really the first person to have a growth factor?"
-    show RM angry at center, Transform(xzoom=-1) with dissolve
+    show RM angry at Transform(xzoom=-1):
+        ease 0.5 xpos 0.3
     "Upon hearing me speak, he spun around as if to try and stop me, unfortunately for him he was cut off by Chie."
     Chie "Well, I am the first person to actually be recognized as having tested positive for a growth factor..."
     Chie "...But I’m sure there were others that had growth factors long before I came around. Sorry, but I can't really tell you how it started."
@@ -1962,6 +1973,7 @@ label FMGBBW001:
     show RM happy
     RM "Plus, I got some pretty great pie out of it."
     MC "Yeah, I’ll see you later."
+    hide RM happy with dissolve
     MCT "Well, this was an interesting day..."
     "..."
     MC "Wait... was that lady hitting on me?"
