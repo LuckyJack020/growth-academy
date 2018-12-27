@@ -1131,7 +1131,7 @@ label global005:
     BBW "..."
     hide FMG with dissolve
     AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
-    show PRG neutral at Position (xpos=0.5, xanchor=0.5, ypos=0.515, yanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.5, xanchor=0.5) with dissolve
     show BBW neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
     BBW "Excuse me, but Aida is otherwise engaged."
     show PRG neutral at Transform(xzoom=-1)

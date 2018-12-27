@@ -45,7 +45,7 @@ init 2 python:
     eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"],         "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
     eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"],                "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
     eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"],                     "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
-    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
+    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
     eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],           "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG012"]]}
     eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"],              "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
     #eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "location": "dormBBW", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
@@ -452,10 +452,11 @@ label PRG004:
     "{b}{i}SLAM!{/i}{/b}"
     $ renpy.with_statement(vpunch, always=True)
     show FMG angry at Position (xpos=0.75) with dissolve
-    show PRG surprised at Position (xpos=0.25)
+    show PRG surprised:
+        linear 0.25 xpos 0.25
     "We were interrupted by Akira flying through the front doors of the athletics center at dangerous speeds, sprinting full tilt down the side of the building. We watched with wonder as she made it to the end of the long building in seconds."
     hide FMG angry with dissolve
-    show PRG neutral at center with dissolve
+    show PRG neutral at Transform(xzoom=-1) with dissolve
     PRG "...Was that... That was Mizutani-san, right? From our class?"
     MC "Yeah, and she... That didn't look like an exercize run..."
     PRG "We should go see what's wrong."
@@ -939,13 +940,13 @@ label PRG009:
     scene School Exterior with fade
     play music Sunset
     "After finishing my homework for the day, I decided to take a walk around, get some fresh air.  As I passed by the vending machines, I saw Aida sitting at one of the picnic tables, looking at something in her hands."
-    show PRG neutral at Position (xpos=0.2) with dissolve
+    show PRG neutral at Position (xpos=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     PRG "..."
     "I approached Aida from the side, not trying to be sneaky, just that's how my path wound up intersecting her. As I got close, I recognized the paper she was staring at by the distinct shape and size."
     MC "Looking at your results, huh?"
     show PRG surprised
     PRG "Eep!"
-    show PRG neutral at Position(yalign=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(yalign=1.0), Transform(xzoom=1)
     PRG "O-oh, Hotsure-San! I, uh, y-you... Um..."
     "Aida whipped the paper behind her in the least convincing attempt at hiding something I think I'd ever seen."
     MC "..."
@@ -953,7 +954,8 @@ label PRG009:
     MC "...Soo, checking out your results again?"
     show PRG sad
     pause 1.5
-    show PRG neutral at center, Transform(xzoom=-1) with dissolve
+    show PRG neutral with dissolve:
+        linear 0.5 xpos 0.4
     PRG "...Yes."
     MC "...Is something the matter? I mean, I understand if you don't want to tell me, but it seems like it's causing you distress."
     "Aida clutched the paper to her chest, and I could tell from the bits that were sticking out that it had been completely crumpled up and smoothed out numerous times."
@@ -1007,7 +1009,7 @@ label PRG009:
             show PRG sad
             PRG "I think... I should go now.  I'm sorry for bothering you."
             MC "Are you sure?  It's not a bother, really."
-            show PRG neutral at center, Transform(xzoom=-1) with dissolve
+            show PRG neutral at center with dissolve
             PRG "..."
             show PRG sad
             PRG "No, I-I should get going..."
@@ -1037,7 +1039,7 @@ label PRG009:
             MC "Well, you just let me know, okay? I hate to see someone as nice as you upset if I can help it."
             show PRG neutral
             PRG "..."
-            show PRG happy at center, Transform(xzoom=-1)
+            show PRG happy
             PRG "...!"
             show PRG neutral
             PRG "*Ahem*, y-yes, I will, i-if, if it's not a bother."
@@ -1046,24 +1048,21 @@ label PRG009:
             "Both of us got off the bench and said our goodbyes, but something occurred to me before she turned away."
             if isEventCleared("PRG005"):
                 MC "...Still don't wanna tell me what yours is?"
-                show PRG neutral at center, Transform(xzoom=-1)
+                show PRG neutral
                 PRG "I..."
-                show PRG neutral at Transform(xzoom=1)
-                show PRG neutral at center, Transform(xzoom=-1)
-                show PRG neutral at Transform(xzoom=1)
-                show PRG neutral at center, Transform(xzoom=-1)
+                show PRG neutral at Transform(xzoom=-1)
+                pause .75
+                show PRG sad at Transform(xzoom=1)
+                pause .75
+                show PRG sad at Transform(xzoom=-1)
+                pause .75
+                show PRG sad at Transform(xzoom=1)
                 PRG "..."
                 PRG "I'm s-sorry, no."
                 MC "*sigh*"
                 MC "All right, well... I suppose sooner or later the answer's gonna be obvious one way or another."
                 PRG "I... I'm s-sorry, really..."
-                hide PRG neutral with dissolve
-                pause 0.3
-                show PRG neutral with dissolve
                 PRG "..."
-                show PRG sad
-                hide PRG sad with dissolve
-                MC "..."
             else:
                 MC "So... mind if I ask what yours is?  I've told you mine.."
                 PRG "...!"
@@ -1072,7 +1071,7 @@ label PRG009:
                 PRG "..."
                 MC "Hey, hey, it's okay. I just, a burden shared is a burden halved, you know?"
                 PRG "...I'm... I'm sorry, Hotsure-san. I'm not..."
-                show PRG sad at center, Transform(xzoom=-1)
+                show PRG sad at Transform(xzoom=-1)
                 MC "Oh, well, um... Okay, Kodama-san. See you in class..."
                 hide PRG sad
                 MCT "I wonder what she's got that's got her so upset...?"
@@ -1354,7 +1353,7 @@ label PRG012:
     MC "Yo. Not much, deciding what to do today. What about you?"
     BE "Doing pretty good. So..."
     "She took a moment to grab a vacant chair to sit on. However she sat on it in reverse, practically putting her bust on display."
-    if isEventCleared("BE001"):
+    if isEventCleared("BE001") or isEventCleared("BE010"):
         "They seemed relatively bigger than before, so that hunch she had a while back turned out to be right."
         "Though that would've been what most people would have guessed."
     else:
@@ -1452,7 +1451,7 @@ label PRG013:
     "As I got closer, I realized the smell wasn't the usual sweet. Rather savory instead."
     "I peeked inside the cooking clubroom."
     scene Classroom with fade
-    show PRG sad with dissolve
+    show PRG sad at Position(xpos=0.65) with dissolve
     "For a change, Aida wasn't the only one inside. On the other side of the room, a trio of girls seemed to be working together."
     "Judging from the high amounts of steam present, the aroma was caused by the dishes they were making."
     "Aida, however, was still making some kind of batter in her own little corner."
@@ -1658,7 +1657,7 @@ label PRG014_c1_after:
     if getFlag("PRG014_c1_2"):
         UNKNOWN "Just passing by to say hi, didn't want to interrupt you two on your moment here."
         show PRG unique
-        PRG "A-ah, Sakura-sama*! It's... n-not what you t-think!"
+        PRG "A-ah, Sakura-sama! It's... n-not what you t-think!"
         Sakura "Hey no worries. Must be nice to have someone close to you in a place like this, with all these changes."
         show PRG aroused
         PRG "Hehe..."
@@ -1682,7 +1681,7 @@ label PRG014_c1_after:
     MC "You were right on that one."
     show PRG neutral
     PRG "Hm?"
-    MC "She really is nice."
+    MC "She does seem nice."
     jump daymenu
 
 label PRG015:
@@ -1922,7 +1921,7 @@ label PRG019_c1_after:
     MC "I'm sorry, I didn't mean to bring up a touchy subject."
     show PRG neutral
     if getAffection("PRG") > 9:
-        PRG "It's alright, Keisuke.  It wouldnd be hard to explain anyway, especially to a man."
+        PRG "It's alright, Keisuke. It wouldn't be hard to explain anyway, especially to a man."
         MC "Hey! Just because I'm a guy doesn't mean I don't understand things."
         PRG "I'm not saying you aren't smart. This is just... different." 
         "I decided not to press the issue any further.  If she wanted to tell me, she'd tell me when she was ready, and it wasn't my place to push her."

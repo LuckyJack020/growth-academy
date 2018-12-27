@@ -25,6 +25,9 @@ image BE aroused = ConditionSwitch(
 image BE unique = ConditionSwitch(
     "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/unique.png",
     "True", "Graphics/BE/1/unique.png")
+image BE zoomin = ConditionSwitch(
+    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/hq-happy.png",
+    "True", "Graphics/BE/1/hq-happy.png")
 
 image cg BE001 = "Graphics/ui/gallery/BE-001.png"
 image cg BE002 = "Graphics/ui/gallery/BE-002.png"
@@ -1066,7 +1069,7 @@ label BE010:
     MC "Yeah?"
     BE "Alright then."
     "Honoka stepped forward and gained a devious smirk on her face."
-    show BE happy at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=3.0)
+    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
     play music BE
     BE "Touch 'em."
     MC "What?"
@@ -1126,7 +1129,7 @@ label BE010_c2:
     MC "Well, if you insist."
     "At Honoka's pleading, I reached out towards her chest. It was only when my hands were an inch or so away that I realized I had no idea what I was doing. Was I supposed to just push my palms in? Or should I try and support them from the bottom?"
     MC "You know, this will be my first time doing this."
-    show BE happy at Position(xpos=0.65, ypos=0.0, yanchor=0.3), Transform(zoom=5.0)
+    show BE zoomin at Position(xpos=0.65, ypos=0.15, yanchor=0.3), Transform(zoom=1)
     BE "Well, then I'm honored to be your first."
     MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
     "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once. It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
@@ -1170,10 +1173,10 @@ label BE010_c2:
     show BE happy
     BE "Hehehe..."
     "Honoka suddenly loomed forward, her breasts inches away from my face. My knees buckled. I felt like I was suddenly talking to Shiori, not my childhood friend."
-    show BE happy at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=3.0)
+    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
     BE "It means I know what kind of guy you are."
     MC "I... um."
-    show BE happy at Position(xpos=0.65, ypos=0.0, yanchor=0.3), Transform(zoom=5.0)
+    show BE zoomin at Position(xpos=0.65, ypos=0.15, yanchor=0.3), Transform(zoom=1)
     BE "A guy who takes charge and opportunity when he can."
     "Honoka pulled back and smirked at me, her smile looking like it could slide off of her face. She grabbed the handle of my door with one hand, and then turned to wink at me."
     show BE happy at center, Transform(zoom=1.0)
