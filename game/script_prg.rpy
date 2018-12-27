@@ -45,10 +45,10 @@ init 2 python:
     eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"],         "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
     eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"],                "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
     eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"],                     "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
-    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG011"]]}
+    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end","conditions": [[ConditionEnum.EVENT, "PRG011"]]}
     eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],           "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG012"]]}
     eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"],              "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
-    #eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "location": "dormBBW", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",                        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
+    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"],                    "location": "dormBBW",          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
     eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"],              "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
     eventlibrary['PRGend'] = {"name": "Aida end", "girls": ["PRG"],                     "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "PRG"]]}
 
@@ -1342,10 +1342,10 @@ label PRG012:
     "The rest of the day went by relatively quickly."
     "Fairly straightforward classes, some homework that would have to be finished next week."
     "Nothing out of the ordinary."
-    "The class representative led the usual outro, followed by the class dispersing and going about their own business."
+    "Matsumoto led the usual outro, followed by the class dispersing and going about their own business."
     "I glanced over to see Aida being kidnapped by Alice again."
-    extend " Figuratively, of course."
-    "She waved at me before disappearing beyond the door frame."
+    extend " -Figuratively, of course.-"
+    extend " and she waved at me before disappearing beyond the door frame."
     "I started packing my books in my bag, however by the time I was done, I noticed someone standing right next to my desk."
     show BE happy with dissolve
     play music BE
@@ -1415,12 +1415,12 @@ label PRG012:
         MC "True, but an archetype like that isn't even anything specific; not to mention, it's highly subjective."
         MC "Especially the first word of that abbreviation."
         show BE angry
-        BE "Boo...but I guess you're probably right."
+        BE "Boo... but I guess you're probably right."
     "Honoka glances over at the clock, quickly getting up from her seated position. With plenty of after-bounce to admire."
     show BE neutral
     BE "Oh, how time flies! I better get going. A club I wanna join is having tryouts in a few minutes."
     BE "Catch ya later Kei-chan, was nice talking to you!"
-    MC "Likewise Honoka, was nice to chat up a bit."
+    MC "Likewise Honoka, was nice to chat a bit."
     "I waved her goodbye as she nearly sprinted out of the classroom."
     hide BE with dissolve
     BE "Ah, hello Kodama-san!"
@@ -1433,9 +1433,9 @@ label PRG012:
     "Moments later, Aida peeked her head inside the classroom. I chuckled and smiled."
     MC "Hey Kodama-san. What's up?"
     PRG "Uhm...nothing much. I was...wondering if you would like to spectate another match with me?"
-    MC "Oh? The Dragons are playing again? Their matches are pretty tightly scheduled then."
+    MC "Oh? The Dragons are playing again? Their matches are pretty tightly scheduled this season..."
     PRG "Y-yes. This week they definitely are."
-    MC "Well, sure thing. In the cooking club again, I presume?"
+    MC "Well, sure thing. In the cooking room again, I presume?"
     PRG "Yes, I'll be making some sweets for Alice. She gave me a recipe to follow."
     MC "Sounds good! Let's see if I can't help you out with that, then."
     show PRG happy
@@ -1451,14 +1451,14 @@ label PRG013:
     "As I got closer, I realized the smell wasn't the usual sweet. Rather savory instead."
     "I peeked inside the cooking clubroom."
     scene Classroom with fade
-    show PRG sad at Position(xpos=0.65) with dissolve
+    show PRG sad at Transform(xzoom=-1), Position(xpos=0.65) with dissolve
     "For a change, Aida wasn't the only one inside. On the other side of the room, a trio of girls seemed to be working together."
     "Judging from the high amounts of steam present, the aroma was caused by the dishes they were making."
     "Aida, however, was still making some kind of batter in her own little corner."
     "She didn't seem to be stirring with as much excitement as she usually did."
     "I waited a moment before finally stepping into the clubroom. The sound of my shoe hitting the tiled floor made enough sound for Aida to turn around."
     "She smiled instantly at the sight of me approaching."
-    show PRG happy
+    show PRG happy at Position(xzoom=1)
     "She released the spoon to wave, keeping quiet as the girls beside her chatted about. I moved closer before greeting her."
     MC "Good afternoon, Kodama-san."
     PRG "Hello Hotsure-san! What brought you here?"
@@ -1496,15 +1496,15 @@ label PRG013:
                 MC "Oh! Yeah, of course. I kind of forgot about that, sorry Kodama-san."
             else:
                 MC "Yeah...well, I mean...I wouldn't want to overstep my boundary by suddenly declaring us as friends."
-                PRG "A-ah...Yes, of course..."
+                PRG "A-ah... Yes, of course..."
             UNKNOWN "Well... maybe you can help us convince her to join the competition."
     MC "Like a cooking competition?"
     UNKNOWN "Exactly that. Though we're trying to keep it friendly in nature. I figured it'd be fun to do with the club!"
     MC "It does sound fun."
     "I look over at Aida who wasn't thrilled at all, judging by her expression."
-    PRG "I don't know...I-I'm sorry..."
+    PRG "I don't know... I-I'm sorry..."
     MC "Why not? You're great at cooking! This is a great way to put it to the test."
-    PRG "I could...but I'm not that competitive...I just like to cook for my friends and family."
+    PRG "I could... but I'm not that competitive... I just like to cook for my friends and family."
     UNKNOWN "Oh well. Was worth a try with you on our side. Was nice talking to you...?"
     MC "Hotsure."
     UNKNOWN "--Hotsure-san. I'm Michiko, by the way."
@@ -1516,16 +1516,17 @@ label PRG013:
     PRG "O-oh?"
     MC "This competition won't be like... say, baseball. A lot is on stake for each of the teams there."
     MC "This sounds to be way more laid back than that. I've witnessed one back in high school, it's totally different from that."
+    MC "It's not about beating the other team, it's just about creating the best taste you can. Everybody wins, in a way, because at the end of it there's a bunch of delicious food other people get to enjoy."
     show PRG neutral
     MC "It'll also be a great opportunity to learn from the others! Tips and tricks, new recipes and maybe even some friends."
-    MC "Plus, I'll be here to cheer you on."
+    MC "On top of it all, I'll be here to cheer you on."
     show PRG aroused
     PRG "Y-you'd do that for me?"
     MC "Of course, I'd love to."
-    PRG "Hehe...That does sound quite nice..."
+    PRG "Hehe... That does sound quite nice..."
     MC "Cool. I'll bring some banners and a giant finger to cheer you on!"
     show PRG surprised
-    PRG "W-whaa!? N-no...that's way too much!"
+    PRG "W-whaa!? N-no... that's way too much!"
     MC "Hahah, you know I'm only joking right?"
     show PRG unique
     PRG "Oh..."
@@ -1538,6 +1539,7 @@ label PRG013:
     jump daymenu
     
 label PRG014:
+    play music Schoolday
     scene Classroom with fade
     "After the usual History classes, lunch break arrived. I particularly felt like hanging out with Aida again, possibly getting to know her better. I glanced around the classroom to find Aida nearly hopping to my desk with her hands behind her back. In all of her bouncing glory."
     MCT "Jeez, someone's excited."
@@ -1555,7 +1557,7 @@ label PRG014:
     PRG "Hehe... I'm glad..."
     MC "Well, let's get to the cafeteria and try it out. Unless you have any plans, of course."
     "She shook her head. We grabbed our stuff and headed for the cafeteria."
-    
+    play music Peaceful
     scene Hallway with fade
     "Aida held onto my shirt from behind me, as we maneuvered amidst the crowd of students with the same destination. I wanted to ask about her practice for the cooking competition, but that will have to wait until we get there."
 
@@ -1597,11 +1599,11 @@ label PRG014:
     PRG "Right. I'll do that."
     "Hearing her having issues with focusing on the competition made me feel extra guilty. I glanced down at the overstuffed lunchbox. I basically forced her to enter it. And now she threw herself in the deep end, with no lunch to enjoy. I should..."
     menu:
-        "Slide the lunchbox to her": #(+1)
+        "Slide the lunchbox to her":
             jump PRG014_c1_1
-        "Feed a piece to her" if getAffection("PRG") > 8: #(+2?)
+        "Feed a piece to her" if getAffection("PRG") > 8:
             jump PRG014_c1_2
-        "Feed a piece to her (disabled)" if getAffection("PRG") <= 8: #(+2?)
+        "Feed a piece to her (disabled)" if getAffection("PRG") <= 8:
             pass
         "Take her word for it and finish it":
             "I continued eating lunch. I already asked her earlier and she refused. I wouldn't want to pressure her again."
@@ -1687,16 +1689,18 @@ label PRG014_c1_after:
 label PRG015:
     scene Dorm BBW with fade
     show PRG sad with dissolve
+    play music Sunset
     PRG "I'm sorry to lend your time like this..."
     MC "Don't worry about it! Getting you up to speed is also a way for me to refine my studies, making sure I didn't forget bits."
     show PRG neutral
     "I looked over behind her, the orange sky was slowly transitioning into a dark night. Truthfully I had hoped to spend my evening differently, the day ended up pretty tiring. But when Aida asked me for her help, with those eyes... My heart faltered."
-    "Nevertheless, it was intriguing to see how Alice and Aida arranged their dorm room. The divide was eerily similar to mine and Daichi's."# *fancy Alice room description*
+    "Nevertheless, it was intriguing to see how Alice and Aida arranged their dorm room. The divide was eerily similar to mine and Daichi's. Rather than Daichi’s cluttered half, Alice’s looked more like a fancy five-star hotel. The bed, chairs, table, just about everything appeared incredibly luxury. How much did she bring from her home…"
+    "And Aida’s side was quite simple, but looked cleaner than any of ours did. Like it was straight out of a magazine cover."
     PRG "S-so... Where did you want to begin?"
     MC "Hrm... let's do a quick refresher of what you already know."
     scene black with fade
-    "We spent the next half hour making sure she was caught up, as most of the theory that she has problems with will presumably be in the test tomorrow. After that we took a quick break, where Aida seemingly went all out on studying snacks. *snack descriptions* I pointed it out, but as expected, she said it wasn't any trouble at all. We continued on studying and snacking away."
-    #MC: *Fluff about history, random exposition*
+    "We spent the next half hour making sure she was caught up, as most of the theory that she has problems with will presumably be in the test tomorrow."
+    "After that we took a quick break, where Aida seemingly went all out on studying snacks. I pointed it out, but as expected, she said it wasn't any trouble at all. We continued on studying and snacking away."
     "As I continued... I started to notice Aida's gaze being on me, rather than the book in front of her. I tried to not let it hinder me, but time only made her staring stand out more."
     scene Dorm BBW with fade
     MC "What's wrong? You having trouble focusing?"
@@ -1721,11 +1725,11 @@ label PRG015:
         MCT "Huh... how sweet of her."
         MC "T-thank you, Kodama-san."
         MCT "Crap, I can feel my cheeks warm up. Quick."
-        MC "Anyway! Where were we? Ah right..."#, *subject*."
-        #MC: *more fluff, lore info, then question*
+        MC "Anyway! Where were we? Ah right... Nobunaga."
+        MC "What uhm-... Which two clans are the presumed ancestors of the Oda clan?"
         if getAffection("PRG") <= 8:
             show PRG sad
-            PRG "Uhm..." #*answers hesitantly*"
+            PRG "The Fujiwara and… uhm… Taira clan?"
             MC "Yup! That's totally right. See? You'll do just fine!"
             show PRG happy
             PRG "Hehe..."
@@ -1734,15 +1738,20 @@ label PRG015:
         else:
             MC "Hm? Kodama-san?"
             "I looked up from the book. She was staring at a corner of the table, seemingly in a trance while sucking on her right thumb."
+            stop music
             MCT "...Wait."
-            MCT "Which thumb did she use to clean my face? Was it... no... She wiped my left cheek, so she'd use her right hand if-... Oh no."
+            MCT "Which thumb did she use to clean my face? Was it... no... She wiped my left cheek, so she'd use her right hand if-..."
+            extend " Oh no."
             "I was unsure of what to do. Aida's eyes had a dreamy look, and her cheeks blushed like when she wiped my cheek. Her jaw moved slightly as she swirled it around her mouth before swallowing it. She closed her eyes before licking her lips."
             "When she opened her eyes, and noticed me staring at her for... however long, they jumped wide open."
             show PRG surprised
             PRG "A-... I..."
             show PRG unique
             PRG "..."
+            show PRG unique:
+                ease 1 yanchor 0.9
             "Aida lowered her posture, seemingly trying to hide under the low table. Which was probably impossible with her figure. Her gaze was fixed downwards. She remained in complete silence."
+            play music Sunset
             MC "Let's... uh... *ahem* let's continue... There's only a bit more to learn. After that I think you'll be fine."
             PRG "O-okay."
             "And so we continued. Both me and Aida had trouble focusing on the task at hand. I tried to ignore it but it kept nagging my mind."
@@ -1750,6 +1759,7 @@ label PRG015:
             jump PRG015_after
 
 label PRG015_after:
+    play music Schoolday
     scene black with fade
     pause 1
     scene Hallway with fade
@@ -1764,11 +1774,11 @@ label PRG015_after:
     scene Dorm Interior with fade
     "I shoved the door behind me hard enough for it to close. I let out a deep sigh. My mind's totally maxed out. Lots of theory to digest and helping out Aida on top of that?"
     if getAffection("PRG") <= 8:
-        "I threw myself on my bed"
-        #*stuff, Keisuke falls asleep, doesn't talk with Daichi*
+        "I threw myself on my bed, mentally exhausted from all the studying. Daichi was still reading a book on his bed, but I had little energy left to strike up a conversation."
+        scene black with fade
+        "I closed my eyes, letting out a deep sigh. It didn’t take long before my subconscious slipped into a deep slumber."
         jump daymenu
     else:
-        scene black with fade
         "I noticed Daichi still was reading a book on his bed. We greeted each other, and I decided to inquire for a second opinion. I explained what had happened during our study session."
         scene Dorm Interior with fade
         show RM neutral with dissolve
@@ -1777,12 +1787,12 @@ label PRG015_after:
         MC "Yeah... I just... It just doesn't make any sense coming from her."
         RM "You never know, Keisuke. Or she was really hungry."
         RM "Who were you studying with again?"
-        MC "Huh?! Aida Kodama. Small, meek girl. Twin tails? She has-... nevermind. You wouldn't recognize her. Maybe if you'd show up to class once."
+        MC "Huh?! Aida Kodama. Small, meek girl. Twin tails? She has-... nevermind. You wouldn't recognize her. Maybe if you'd show up to class more than once a week."
         RM "Doesn't mean I don't know a thing or two about the students. I know exactly of whom you speak. Her growth factor however... I haven't been able to determine exactly what it is. Maybe..."
         if isEventCleared("PRG012"):
             MC "Why is everyone so interested in knowing her growth factor? You don't even know her!"
             extend " ...right?"
-            MR "I can only speak for myself, but I need to explore every mysterious avenue to truly find out what's going on with this academy and the people here."
+            RM "I can only speak for myself, but I need to explore every mysterious avenue to truly find out what's going on here."
         else:
             MC "Please don't do anything illegal."
             show RM smug
@@ -1792,7 +1802,7 @@ label PRG015_after:
         RM "Fit her nature? Maybe. Maybe you're right. Or... it's purely for her own gain."
         show RM sad
         RM "...Okay no... That is actually worse. Forget I said that."
-        "Great. That definitely didn't help."
+        MCT "Great. That definitely didn't help."
         MC "Well... Nevermind. Thanks anyway. I'm just gonna head to bed. Hopefully get some sleep in before the test tomorrow."
         show RM neutral
         RM "Alright, I'll dim the lights then. Good night."
