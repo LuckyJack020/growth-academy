@@ -240,7 +240,7 @@
                             continue
                         if len(v["girls"]) == 0 or c[1] != v["girls"][0]:
                             continue
-                        if checkCriteria(v["conditions"], False):
+                        if not checkCriteria(v["conditions"], False):
                             continue
                         criteriavalid = False
                         break
@@ -256,7 +256,6 @@
         #Weekday = Mon-Sat, Weekend = Sun, Any = Do not check
         d = (day == WeekendEnum.ANY or (day == WeekendEnum.WEEKEND and gametime.weekday() == 6) or (day == WeekendEnum.WEEKDAY and gametime.weekday() != 6))
         d = d or (gametime.weekday() == day)
-        renpy.log(str(gametime.weekday()) + " vs " + str(day))
         #Day = Day time period, Night = Night time period, Afterschool = Night time period OR Sunday, Any = Do not check, Day of week = that day specifically
         t = (time == TimeEnum.ANY or (time == TimeEnum.DAY and not gametime_eve))
         t = t or ((time == TimeEnum.NIGHT or time == TimeEnum.AFTERSCHOOL) and gametime_eve)
@@ -296,11 +295,11 @@
     def isEventCleared(event):
         return event in clearedevents
         
-    def setScenecount(girl, val):
+    def setEventCount(girl, val):
         if not girl in girllist:
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
-        scenecounter[girl] += val
+        eventcounter[girl] += val
         
     def setFlag(flag, state=True):
         if state:
@@ -332,9 +331,15 @@
             l += f + ", "
         return l
     
-    def debugListScenes():
+    def debugListEvents():
         l = ""
         for s in allpool:
+            l += s + ", "
+        return l
+        
+    def debugListClearedEvents():
+        l = ""
+        for s in clearedevents:
             l += s + ", "
         return l
         
@@ -400,7 +405,7 @@
         return s
             
     def pickPreferredGirl():
-        sc = scenecounter.copy()
+        sc = eventcounter.copy()
         scsort = sorted(sc.iteritems(), key=lambda x: x[1], reverse=True)
         # Finally, we pick out the heaviest items by picking off the heaviest side of the array.
         topweight = scsort[0][1]
@@ -423,11 +428,11 @@ label start:
         #Global Variables
         affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'BBW': 0, 'PRG': 0, 'RM': 0}
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
-        scenecounter = {'BE': 5, 'GTS': 5, 'AE': 5, 'FMG': 5, 'BBW': 5, 'PRG': 5}
+        eventcounter = {'BE': 5, 'GTS': 5, 'AE': 5, 'FMG': 5, 'BBW': 5, 'PRG': 5}
         globalsize = 1
         flags = []
         vars = {}
-        scenecountmax = 10
+        eventcountmax = 10
         eventchoices = []
         activeevent = ""
         gametime = datetime.date(2005, 4, 4)
@@ -438,7 +443,7 @@ label start:
         clearedevents = []
         prefgirl = ""
         freeday = True
-        prefscene = True
+        prefevent = True
     jump global000
 
 label splashscreen:
@@ -469,20 +474,20 @@ screen daymenu:
             yalign 0
             text ("Debug info:")
             text ("Prefgirl: %s" % prefgirl)
-            text ("Preferred scenes exist? %s" % prefscene)
+            text ("Preferred events exist? %s" % prefevent)
             text ("Girls w/ Priority: %s" % debugpriorities)
-            text ("Scene limit: %d" % scenecountmax)
-            text ("Girl/Aff/Scenes")
-            text ("BE %(aff)d %(scene)d" % {"aff": affection["BE"], "scene": scenecounter["BE"]})
-            text ("GTS %(aff)d %(scene)d" % {"aff": affection["GTS"], "scene": scenecounter["GTS"]})
-            text ("AE %(aff)d %(scene)d" % {"aff": affection["AE"], "scene": scenecounter["AE"]})
-            text ("FMG %(aff)d %(scene)d" % {"aff": affection["FMG"], "scene": scenecounter["FMG"]})
-            text ("BBW %(aff)d %(scene)d" % {"aff": affection["BBW"], "scene": scenecounter["BBW"]})
-            text ("PRG %(aff)d %(scene)d" % {"aff": affection["PRG"], "scene": scenecounter["PRG"]})
+            text ("Event limit: %d" % eventcountmax)
+            text ("Girl/Aff/Events")
+            text ("BE %(aff)d %(event)d" % {"aff": affection["BE"], "event": eventcounter["BE"]})
+            text ("GTS %(aff)d %(event)d" % {"aff": affection["GTS"], "event": eventcounter["GTS"]})
+            text ("AE %(aff)d %(event)d" % {"aff": affection["AE"], "event": eventcounter["AE"]})
+            text ("FMG %(aff)d %(event)d" % {"aff": affection["FMG"], "event": eventcounter["FMG"]})
+            text ("BBW %(aff)d %(event)d" % {"aff": affection["BBW"], "event": eventcounter["BBW"]})
+            text ("PRG %(aff)d %(event)d" % {"aff": affection["PRG"], "event": eventcounter["PRG"]})
             text ("Athletics: %d" % skills["Athletics"])
             text ("Art: %d" % skills["Art"])
             text ("Academics: %d" % skills["Academics"])
-            text ("Scenes:")
+            text ("Events:")
             for e in eventchoices:
                 text ("%s" % e)
     
@@ -566,7 +571,7 @@ screen daymenu:
         
 screen debugmenu:
     $debuginput = ""
-    grid 3 12:
+    grid 3 13:
         xalign 0.5
         yalign 0.5
         
@@ -574,9 +579,13 @@ screen debugmenu:
         input value VariableInputValue("debuginput")
         text ""
         
-        text "Show Scene:"
-        textbutton "Go!" action Jump("debugscene")
-        textbutton "List All Scenes" action Jump("debugscenelist")
+        text "Show Event:"
+        textbutton "Go!" action Jump("debugevent")
+        text ""
+        
+        textbutton "List Available Events" action Jump("debugeventlist")
+        textbutton "List Cleared Events" action Jump("debugclearedeventlist")
+        text ""
         
         textbutton "List Flags" action Jump("debugflaglist")
         textbutton "Set Flag" action Jump("setflag")
@@ -584,7 +593,7 @@ screen debugmenu:
         
         text "Girl"
         text "Affection"
-        text "Scenes"
+        text "Events"
 
         text "BE"
         hbox:
@@ -593,9 +602,9 @@ screen debugmenu:
             textbutton "+" action Function(setAffection, "BE", 1)
             
         hbox:
-            textbutton "-" action Function(setScenecount, "BE", -1)
-            text str(scenecounter["BE"])
-            textbutton "+" action Function(setScenecount, "BE", 1)
+            textbutton "-" action Function(setEventCount, "BE", -1)
+            text str(eventcounter["BE"])
+            textbutton "+" action Function(setEventCount, "BE", 1)
             
         text "GTS"
         hbox:
@@ -604,9 +613,9 @@ screen debugmenu:
             textbutton "+" action Function(setAffection, "GTS", 1)
             
         hbox:
-            textbutton "-" action Function(setScenecount, "GTS", -1)
-            text str(scenecounter["GTS"])
-            textbutton "+" action Function(setScenecount, "GTS", 1)
+            textbutton "-" action Function(setEventCount, "GTS", -1)
+            text str(eventcounter["GTS"])
+            textbutton "+" action Function(setEventCount, "GTS", 1)
             
         text "AE"
         hbox:
@@ -615,9 +624,9 @@ screen debugmenu:
             textbutton "+" action Function(setAffection, "AE", 1)
             
         hbox:
-            textbutton "-" action Function(setScenecount, "AE", -1)
-            text str(scenecounter["AE"])
-            textbutton "+" action Function(setScenecount, "AE", 1)
+            textbutton "-" action Function(setEventCount, "AE", -1)
+            text str(eventcounter["AE"])
+            textbutton "+" action Function(setEventCount, "AE", 1)
             
         text "FMG"
         hbox:
@@ -626,9 +635,9 @@ screen debugmenu:
             textbutton "+" action Function(setAffection, "FMG", 1)
             
         hbox:
-            textbutton "-" action Function(setScenecount, "FMG", -1)
-            text str(scenecounter["FMG"])
-            textbutton "+" action Function(setScenecount, "FMG", 1)
+            textbutton "-" action Function(setEventCount, "FMG", -1)
+            text str(eventcounter["FMG"])
+            textbutton "+" action Function(setEventCount, "FMG", 1)
 
         text "BBW"
         hbox:
@@ -637,9 +646,9 @@ screen debugmenu:
             textbutton "+" action Function(setAffection, "BBW", 1)
             
         hbox:
-            textbutton "-" action Function(setScenecount, "BBW", -1)
-            text str(scenecounter["BBW"])
-            textbutton "+" action Function(setScenecount, "BBW", 1)
+            textbutton "-" action Function(setEventCount, "BBW", -1)
+            text str(eventcounter["BBW"])
+            textbutton "+" action Function(setEventCount, "BBW", 1)
             
         text "PRG"
         hbox:
@@ -648,9 +657,9 @@ screen debugmenu:
             textbutton "+" action Function(setAffection, "PRG", 1)
             
         hbox:
-            textbutton "-" action Function(setScenecount, "PRG", -1)
-            text str(scenecounter["PRG"])
-            textbutton "+" action Function(setScenecount, "PRG", 1)
+            textbutton "-" action Function(setEventCount, "PRG", -1)
+            text str(eventcounter["PRG"])
+            textbutton "+" action Function(setEventCount, "PRG", 1)
             
         text "RM"
         hbox:
@@ -686,16 +695,21 @@ screen debugflaglist:
         text debugListFlags()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugscenelist:
+screen debugeventlist:
     vbox:
-        text debugListScenes()
+        text debugListEvents()
         textbutton "Return" action Jump("debugmenu")
         
-label debugscene:
+screen debugclearedeventlist:
+    vbox:
+        text debugListClearedEvents()
+        textbutton "Return" action Jump("debugmenu")
+        
+label debugevent:
     if debuginput in eventlibrary:
         $activeevent = debuginput
         jump startevent
-    "I couldn't call that scene. Check the spelling and case (it's case sensitive, for example 'BE001')"
+    "I couldn't call that event. Check the spelling and case (it's case sensitive, for example 'BE001')"
     jump debugmenu
 
 label setflag:
@@ -723,7 +737,7 @@ label daymenu:
         prefpool = []
         allpool = []
         priorities = []
-        prefscene = False
+        prefevent = False
         #It's a preset day, don't worry about pools, just use whatever the preset says
         if getTimeCode() in presetdays.keys():
             eventchoices = presetdays[getTimeCode()]
@@ -740,12 +754,12 @@ label daymenu:
             prefgirl = pickPreferredGirl()
             
             #While we've figured out the preferred girl, update the weight limit, which is floor(average of all non-preferred girls) + 5
-            tmpscenemax = 0
+            tmpeventmax = 0
             for g in girllist:
                 if g == prefgirl:
                     continue
-                tmpscenemax += scenecounter[g]
-            scenecountmax = math.floor(tmpscenemax / 5) + 5
+                tmpeventmax += eventcounter[g]
+            eventcountmax = math.floor(tmpeventmax / 5) + 5
             
             #Fill allpool (and prefpool, if applicable)
             for k, v in eventlibrary.iteritems():
@@ -760,7 +774,7 @@ label daymenu:
                             continue
                         priorities.append(priogirl)
                 if prefgirl in v["girls"]:
-                    prefscene = True
+                    prefevent = True
                     prefpool.append(k)
                 allpool.append(k)
 
@@ -818,23 +832,29 @@ label debugflaglist:
     call screen debugflaglist
     window show None
 
-label debugscenelist:
+label debugeventlist:
     scene black
     window hide None
-    call screen debugscenelist
+    call screen debugeventlist
+    window show None
+    
+label debugclearedeventlist:
+    scene black
+    window hide None
+    call screen debugclearedeventlist
     window show None
 
 label startevent:
     python:
         if activeevent[0:10] != "specialday":
             for g in eventlibrary[activeevent]["girls"]:
-                scenecounter[g] += 1
-                if scenecounter[g] >= scenecountmax:
-                    scenecounter[g] = scenecountmax
+                eventcounter[g] += 1
+                if eventcounter[g] >= eventcountmax:
+                    eventcounter[g] = eventcountmax
 
         clearedevents.append(activeevent)
     stop music
-    play sound SceneStart
+    play sound EventStart
     scene black with dissolve
     pause .5
     $renpy.block_rollback()
@@ -1355,7 +1375,7 @@ label debugloadtest:
             play music Tension
             pause .1
             
-            play sound SceneStart
+            play sound EventStart
             pause .1
             play sound AlarmClock
             pause .1

@@ -1500,7 +1500,7 @@ label FMG018:
             jump FMG018_c1_3
 
 label FMG018_c1_1:
-    $setScenecount("AE", 1)
+    $setEventCount("AE", 1)
     MC "Well, let's ask Matsumoto, maybe she can help."
     FMG "If you say so, I have my doubts though."
     "Ignoring Akira's doubts, I followed suit and walked towards Shiori, for her part she was by herself, while looking deep in thought."
@@ -1597,7 +1597,7 @@ label FMG018_c1_1:
     jump daymenu
 
 label FMG018_c1_2:
-    $setScenecount("GTS", 1)
+    $setEventCount("GTS", 1)
     MC "Let's ask Naomi, she might be a good cook."
     FMG "How would you know that?"
     MC "I don't know, a feeling I guess."
@@ -1640,7 +1640,7 @@ label FMG018_c1_2:
     jump daymenu
 
 label FMG018_c1_3:
-    $setScenecount("BE", 1)
+    $setEventCount("BE", 1)
     MC "Hm, I wonder if Honoka cooks?"
     FMG "How would I know? For all I know she could eat and drink nothing but milk products."
     MC "Still, it can't hurt to ask her."

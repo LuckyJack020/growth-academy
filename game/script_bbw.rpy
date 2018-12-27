@@ -1456,7 +1456,7 @@ label BBW010_accept:
             jump BBW010_c3
 
 label BBW010_c1:
-    $setScenecount("AE", 1)
+    $setEventCount("AE", 1)
     $setFlag("BBW010_shiori")
     scene Hallway with fade
     show AE angry with dissolve
@@ -1490,7 +1490,7 @@ label BBW010_c1:
     jump daymenu
 
 label BBW010_c2:
-    $setScenecount("PRG", 1)
+    $setEventCount("PRG", 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral with dissolve
@@ -1528,7 +1528,7 @@ label BBW010_c2:
     jump daymenu
 
 label BBW010_c3:
-    $setScenecount("BE", 1)
+    $setEventCount("BE", 1)
     scene Hallway with fade
     "I was trying to think of where I could find Honoka when I was tackled from behind, collapsing to the ground."
     play sound Thud
@@ -2323,10 +2323,10 @@ label BBW015_c2_1:
     AE "And you couldn't wait until class?"
     MC "I suppose I could have, but I wanted to do it before I forgot."
     MC "I'm sure you can appreciate the importance of promptness."
-    show AE neutral at center, Transform(xzoom=-1)
+    show AE neutral at Transform(xzoom=-1)
     AE "I do..."
     "Her eyes narrowed. I could feel beads of sweat start to appear at the top of my forehead."
-    show AE neutral at center, Transform(xzoom=1)
+    show AE neutral at Transform(xzoom=1)
     AE "Very well. Go return the book."
     AE "But don't dawdle. Access to the women's dorm is a privilege, not a right."
     MC "Yes, ma'am."
@@ -2385,9 +2385,9 @@ label BBW015_c3_1:
     "I forced myself to swallow. My throat ached as I struggled to get the wet mass of paper down."
     MC "Gasp!"
     MC "It was... nothing. It was private."
-    show AE angry at center, Transform(xzoom=-1)
+    show AE angry at Transform(xzoom=-1)
     AE "..."
-    show AE angry at center, Transform(xzoom=1)
+    show AE angry at Transform(xzoom=1)
     MC "There was no mistaking her mood, but the exact thoughts running through her head were harder to figure."
     AE "You are in the women's dorm, with a 'private' note you clearly do not want others to see. Any chance you had of clearing your name of suspicion went down your gullet with the paper."
     AE "But since the note is gone, you no longer have any reason to be here, correct?"
@@ -2532,9 +2532,9 @@ label BBW015_test_semipass:
     "Shiori-san crossed her arms expectantly, showing deep frustration."
     show AE angry
     AE "Look, I'm willing to trust that you're doing as you say."
-    show AE angry at center, Transform(xzoom=-1)
+    show AE angry at Transform(xzoom=-1)
     AE "Do *not* make that trust ill-founded."
-    show AE neutral at center, Transform(xzoom=1)
+    show AE neutral at Transform(xzoom=1)
     AE "Go ahead and take the item to the rightful owner. And then please leave."
     AE "The residents here need to prepare for the day, and I don't want your presence to be distracting."
     MC "Got it."
