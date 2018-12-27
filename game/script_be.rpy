@@ -151,7 +151,7 @@ label BE001_c2:
     BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too."
     extend " Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used to big boobs, anyway."
-    show BE happy at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=5.0)
+    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
     pause 0.5
     show BE happy at center, Transform(zoom=1.0)
     BE "Exactly! Hehe, you know, Kei-chan, most boys wouldn't be so brazen about talking about a girl's chest, especially to her face."
