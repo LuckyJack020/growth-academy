@@ -153,7 +153,7 @@ label GTS002:
     scene School Planter with fade
     "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated in degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
     "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me. In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
-    show GTS neutral at Position(xpos=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     play music Sunset
     MC "Yo Yamazaki-san!"
     "I called out, lifting one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
@@ -232,7 +232,7 @@ label GTS003:
     "I will admit I was rather surprised by what I saw. There were tray after tray of warm food prepared for us. A lot of which just looked heavenly to the eyes and must have tasted wonderful."
     "Not wishing to hold up the line though, I quickly grabbed what I felt would be a decent quick breakfast, getting some steamed rice, a rolled omelette, and a small bowl of miso soup. I thanked the cooks before searching for a place to sit."
     "There was a good amount of unfamiliar faces among those sitting at various tables, but one face was rather familiar. Sitting down with a slight smile, I spoke to my neighbor."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     MC "Hey there, Yamazaki-san. Nice to see someone I know here."
     GTS "Good morning Hotsure-san. I hope you're having a pleasant day so far."
     "Her hands gently repositioning her utensils and her napkin in an extremely orderly fashion before wiping her hands off with a moist towelette. She then looked at me, as if to give me a hint until I realized what I'd forgotten."
@@ -339,6 +339,7 @@ label GTS004_c1:
 
 label GTS004_c2:
     "I peeked over her shoulder to see what she was reading, letting her see me."
+    show GTS neutral with dissolve
     GTS "Hello there Hotsure-san."
     MC "Hi. Sorry, I was just curious about what you were reading."
     GTS "That's okay, though please ask next time."
@@ -387,7 +388,7 @@ label GTS005:
     scene School Planter with fade
     play music Peaceful
     "As I stepped past the double doors and into the garden, my eyes shut from the blast of sunlight that I was exposed to. After a few seconds my eyes readjusted and I saw Naomi's form kneeling in front of a patch of flowers. Calmly walking over, my footsteps on the path nevertheless alerted her to my presence, and she looked back at me and gave a soft wave."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     GTS "Hello there, Hotsure-san."
     MC "Hey Yamazaki-san. How are you doing?"
     "She stood up and dusted off her legs before turning her full attention to me."
@@ -476,7 +477,7 @@ label GTS006:
     "The crowd grew every couple of seconds as more people wanted to see what the commotion was all about. As I kept watching, I saw a familiar figure kneel next to the excited puppy and begin petting it."
     "Naomi held a warm smile on her face as her hand massaged the puppy's ears and even rolled him over to rub his belly. This caused the entire crowd to gush over the cuteness and I couldn't resist a smirk."
     "A little time passed before the dog's owner finally showed up and thanked everyone for finding their dog before taking it back home. As the crowd dispersed I saw Naomi walk by and notice me. Giving me her trademark smile she gave me a small wave of her hand."
-    show GTS happy with dissolve
+    show GTS happy at center with dissolve
     GTS "Hello Hotsure-san, did you see the adorable Shiba Inu that had wandered onto campus?"
     MC "Yeah, I did! Well, I saw the crowd first and had to see what was up."
     GTS "It was such a cute puppy, and very well behaved. Didn't you think so?"
@@ -543,7 +544,7 @@ label GTS007:
     "Petals danced in the breeze, carried aloft by the wind. They flowed peacefully down the pathway, where I saw a familiar figure sitting underneath the shade of a tree. Naomi's hair moved much like the flower petals had, as I noticed a paper in her hand."
     MC "Hey there Yamazaki-san, how are things?"
     "She looked up from what appeared to be a letter when I called out to her, and gave me a gentle wave of her hand."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     GTS "Hello Hotsure-san, I was merely reading a letter my mother sent me. How are you?"
     MC "I've been pretty good for the most part. Also, a letter? Hand-written? I'm surprised people still make those."
     "A faint smile crossed her face as she folded up the letter and placed it back into the envelope."
@@ -598,7 +599,7 @@ label GTS008:
     "I didn't call out her name, but I did walk around to see if she might be around the stairway entrance. Surprisingly it wasn't Honoka I found, but Naomi."
     "She had laid out a blanket and was currently sipping on some tea as what looked like a miniature garden sat in front of her, taking up a small portion of rooftop."
     MC "What do we have here? A secret garden?"
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     GTS "Hm? Oh, hello Hotsure-san. Heh, no the gardener is well aware of this little plot."
     GTS "As a matter of fact, he helped set it up for me."
     MC "Wow, that's rather nice of him. What convinced him to do that?"
@@ -671,8 +672,8 @@ label GTS009:
     play music Festival
     "Music and cheers set the mood as the buildings lining the block reflected the lights of various lanterns. Dusk was beginning to set in, and as it did, a wave of multiple-colored lights replaced the sunlight."
     "Booths covered both sides of each walk way as vendors attempted to tantalize visitors  with various knick knacks and home-style delicacies. They didn't get to me, though, as I had my sights set on a more personal venture. As I made my way further into the festival, I could pick out the two familiar voices."
-    show GTS neutral at Position (xpos=0.25) with dissolve
-    show BE neutral at Position (xpos=0.75) with dissolve
+    show GTS neutral at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     GTS "...Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
     BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
     GTS "Well, if you're certain. Though I'd gladly help you get dressed if you're concerned about your bust getting in the way..."
@@ -975,7 +976,7 @@ label GTS011:
     "Journeying around the dorm, I heard whispers hang around behind me. The occasional giggle accompanied them as some girls watched me."
     "I could imagine it now, some small time rumors about me visiting a girl at her dorm. The same happened when I saw my sister at the start of the year, but I had learned to merely ignore it."
     "Upon reaching her door, I gave it a couple knocks before faintly hearing some noise through it. When she opened the door, I found myself looking at the crook of her lip instead of her eyes."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     GTS "Hello Hotsure-san. I'm glad to see you, please come in."
     GTS "I hope it wasn't difficult finding my room."
     MC "No, it wasn't a problem at all."
@@ -983,10 +984,10 @@ label GTS011:
     scene Dorm GTS with fade
     play music Busy
     "As I entered her dorm room, I saw another girl already inside. She sat kneeling at table, a cup of tea in her hand as she smiled and waved."
-    show Ryoko neutral at Position (xpos=0.25) with dissolve
+    show Ryoko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     UNKNOWN "Howdy! You must be Hotsure-san."
     MC "Uh... yeah, I am. Hello."
-    show GTS happy at Position (xpos=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     GTS "Hotsure-san, this is Ryoko Tanaka. Tanaka-san, this is Keisuke Hotsure. Tanaka-san is my next-door neighbor who I met a couple days ago, so I invited her over for some tea as well. I hope that isn't a problem."
     MC "No, it's all right. It's nice to meet you Tanaka-san."
     Ryoko "Likewise, come on, have a seat."
@@ -1006,7 +1007,7 @@ label GTS011:
     MC "What have you been so busy with?"
     Ryoko "Oh, mostly filming."
     MC "Filming? Oh, thanks Yamazaki-san."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     "Naomi had already returned with a small tray of crackers and offered one to me and Ryoko, who also took one."
     Ryoko "Thanks Yamazaki-san. Yeah, me and a couple of students in the flim club are working on a small movie together."
     MC "Oh wow, that's pretty cool."
@@ -1047,7 +1048,7 @@ label GTS011:
 
 label GTS012:
     scene School Planter with fade
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     play music Sunset
     "A small sigh left my body as I rested back against a tree. I was in the garden, Naomi having invited me for some tea after class had ended."
     "She had set up a blanket on the grass and was preparing the drinks. It was an interesting sight as she sat on her knees, an assortment of items in front of her as she began the long process of making the tea."
@@ -1127,7 +1128,7 @@ label GTS014:
     scene Classroom with fade
     play music Schoolday
     "I stared blankly at space in front of me as a cascade of thoughts swam around within my mind. It must have been rather noticeable, as I felt a pressure on my shoulder from a hand resting upon it."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     GTS "Hotsure-san? Are you okay?"
     MC "Huh? Oh, yeah sorry. Kind of spaced out there for a moment."
     GTS "Oh, better not let Tashi-sensei hear that."
@@ -1137,7 +1138,7 @@ label GTS014:
     GTS "Okay."
     "Naomi stood up from her desk and waited as I gathered my things before we left together."
     scene Track with fade
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     "Eventually we stepped out into the soccer field, where it appeared a few people were gathering to start a game."
     "Among them was Honoka, whose quick wave I returned before deciding this was as good a place as any for a rest, Naomi and I taking a seat on the bleachers."
     "We observed the game for a few moments, before a random question entered my mind."
@@ -1208,14 +1209,14 @@ label GTS014_after:
 
 label GTS015:
     scene Dorm GTS with fade
-    show Ryoko happy at Position (xpos=0.20) with dissolve
+    show Ryoko happy at Position(xpos=0.20, xanchor=0.5, yalign=1.0) with dissolve
     play music Busy
     Ryoko "And cut! Good job everyone!"
     "These were the first words Naomi and I heard as we waited outside of Ryoko's dorm room before we were allowed in. The bedroom had been transformed into a makeshift set, as curtains had been put up to eliminate any natural sunlight while other lights were set up to enhance ambient lighting."
     "Two girls I assumed were actresses were casually chatting to themselves while a couple of students worked to start putting away the camera, lighting, and various other bits of equipment."
     MC "Um... hey there Tanaka-san."
     Ryoko "Hm? Ah! Hotsure-san! Yamazaki-san! I'm so glad you could make it. Please take a seat, we're wrapping up for today."
-    show GTS neutral at Position (xpos=0.80) with dissolve
+    show GTS neutral at Position(xpos=0.80, xanchor=0.5, yalign=1.0) with dissolve
     GTS "Apologies if we're interrupting anything."
     show Ryoko neutral
     Ryoko "Nah, like I said we're done for today. They're just getting everything put away. So how you two been?"
@@ -1223,7 +1224,7 @@ label GTS015:
     GTS "I've been well, thank you for asking."
     Ryoko "That's great, love to hear it."
     "Just then another student walked over and handed Ryoko a tablet."
-    show Minori neutral
+    show Minori neutral at center with dissolve
     UNKNOWN "Sorry to intrude. Here you go, Tanaka-san."
     UNKNOWN "This is the new shooting schedule I managed to set up for you. We had to shift some things around as I couldn't secure proper locales yet."
     show Ryoko happy
@@ -1349,7 +1350,7 @@ label GTS015_c2_after:
     
 label GTS016:
     scene School Planter with fade
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     play music Busy
     "There was a gentle chirping up above as I looked up to see some birds. Their chirping accompanied the soothing humming that was coming from Naomi. A smile had been occupying my face throughout the course of our time together but the quickly vanished as a little yellow mass floated by my face."
     "Startled, I flinched lightly as the bee resumed its business, inspecting the flowers we were planting. Naomi must have noticed my movement."
@@ -1428,7 +1429,7 @@ label GTS017:
     scene School Planter with fade
     play music Busy
     "My brow lowered in annoyance as the wind kept blowing my hair across my face, my hands trying to keep my hair from doing so. I could see Naomi in our usual meeting place, attending to something. "
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     "Making my way over, I spotted a small collection of balls that appeared to be made of mud as I looked at Naomi."
     MC "What's with all the mud? Planning a mud ball fight?"
     GTS "Heh, no. This is merely something I used to do as a kid whenever I had to wait for something."
@@ -1537,7 +1538,7 @@ label GTS018:
     "I continued down the path for a little bit longer, ignoring the fact that my hair was dancing with the motion of the wind. The breeze soon carried something else with it however as I could hear a faint giggle."
     "Further down the path I could spot Naomi waiting for me, a smile on her face as the wind made her hair flow majestically behind her. She looked upwards as the breeze made the tree branches above her sway, causing rays of sunlight to sweep through and illuminate her up."
     "The way the light showed her along with the motion of her hair made me think back to what Ryoko had once said. Naomi truly appearing like a beauty one would have seen in a old school film. Her hand slid through her hair as she closed her eyes and enjoyed the cool air before finally spotting me when she opened them."
-    show GTS happy with dissolve
+    show GTS happy at center with dissolve
     GTS "Good afternoon Hotsure-san, I hope your day is going well."
     MC "Hey Yamazaki-san, yeah it's going pretty well. Kept you waiting huh?"
     GTS "Not at all, please take a seat. "
@@ -1636,7 +1637,7 @@ label GTS019:
     "A gentle humming floated through the air as I stared up towards the clouds. There was a faint swishing noise a foot or two away from me as I laid in the shadow cast by Naomi. A mixture of the sun's warmth along with the soothing melody causing my eyelids to begin growing heavy as I hadn't a thought in the world."
     "Eventually a soft chuckle made me realize that I had fallen asleep at some point as my eyes opened and I looked towards Naomi who was smiling down at me."
     play music Schoolday
-    show GTS happy with dissolve
+    show GTS happy at center with dissolve
     GTS "Very sorry Hotsure-san, I didn't mean to wake you."
     MC "That's okay. I uh... wasn't aware that I had fallen asleep."
     GTS "Well it is a very lovely day, so I can understand the appeal of just taking a nap."
@@ -1750,7 +1751,7 @@ label GTS020:
     play music GTS
     "A light melody slid through my lips as I whistled to myself waiting on the roof of the campus. Naomi seemed rather nervous when she had asked me to come by after class so I was more than curious to see what was up."
     "This thought was interrupted though as my bangs drooped over my face again. Sighing in annoyance, I combed them back once more with my hand and cursed myself for not remembering to gel my hair back this morning. I then heard the door open and saw Naomi walk through with a modest-sized bag."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     GTS "Apologies Hotsure-san, I hope I didn't keep you waiting."
     MC "Nah, I only got here a couple of minutes ago. What was it you wanted to show me?"
     show GTS embarrassed
@@ -1835,7 +1836,7 @@ label GTS020_c1_2:
 
 label GTS021:
     scene School Planter with fade
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     "I wandered into the garden as I had received a message from Minori about Naomi wishing to see me. As my footsteps bent the blades of grass underneath, I spotted Naomi at her usual spot. A mat underneath her as another sat beside her. She sat with her hands rested peacefully on her lap as her eyes laid shut."
     MC "Hey Yamazaki-san, you wanted to see me?"
     "She remained silent, raising a finger to her lips for silence before motioning to take a place next her."
@@ -1925,7 +1926,7 @@ label GTS021_c1_after:
 label GTS025:
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn’t shown up."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     "Naomi seemed more patient than me as she sat under the tree, drinking tea from a container as she poured more into her cup."
     MC "I wonder what’s keeping Tanaka-san. She was supposed to be here thirty minutes ago."
     GTS "It could possibly be some sudden school work she realized she needed to do. I’m sure she’ll be here soon, though. By the way, would you like some tea, Hotsure-san? I brought some extra cups in case you and Tanaka-san wanted some."

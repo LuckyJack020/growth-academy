@@ -118,7 +118,7 @@ label BBW001:
     UNKNOWN "I'm sorry, you must not realize who you're talking to."
     MC "I wonder who that is."
     "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
-    show BBW angry with dissolve
+    show BBW angry at center with dissolve
     BBW "The name is Alice Nikumaru."
     BBW "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
     extend " A missive to let you all know that I am here and that special accommodations to satisfy me would be instituted."
@@ -126,7 +126,7 @@ label BBW001:
     show BBW angry at Position(xpos=0.4) with dissolve
     BBW "You there. Tell... Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
-    show BBW haughty at center
+    show BBW haughty at center with dissolve
     BBW "I am THE student, as far as you are concerned. You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     MCT "You didn't hear the part about me being in your class, did you?"
     BBW "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
@@ -225,7 +225,7 @@ label BBW002:
     MCT "..."
     MCT "Now to find a table. Oh! There's Alice, eating by herself. I don't think she'd mind if I joined her."
     "I found Alice sitting at a table, a few plates and bowls of food in front of her. She looked unimpressed by the spread."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     MC "Mind if I join you?"
     BBW "Be my guest. Perhaps you could help me with something."
     MC "Uh, sure! What's on your mind?"
@@ -336,9 +336,9 @@ label BBW003:
     MC "Oh? I know that voice."
     scene Cooking Classroom with fade
     play music Busy
-    show BBW happy at Position (xpos=0.25) with dissolve
+    show BBW happy at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Simply superb. Where did you study?"
-    show PRG neutral at Position (xpos=0.75) behind BBW with dissolve
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     PRG "I didn't. I just sort of... taught myself."
     BBW "So modest. These are fantastic."
     show PRG happy
@@ -459,14 +459,14 @@ label BBW003_c1_3:
 label BBW004:
     scene Classroom with fade
     play music Schoolday
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     MCT "After class clean-up. That's normal. Mind-numbingly boring, but right now I'll take dull over surprising."
     MCT "..."
     MCT "?"
     MC "Um, are you planning to help out?"
     BBW "I have Aida taking care of my share of the work."
     MC "Aida? Where is she- Why are you down there?"
-    show PRG neutral at Position(xpos=0.75, ypos=1.0, yanchor=0.3) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, ypos=1.0, yanchor=0.3) behind BBW with dissolve
     PRG "Oh! H-hello Hotsure-san. I'm just doing what Nikumaru-san said."
     MC "Did she say to scrub the floor? I'm pretty sure we just need to sweep it."
     show PRG neutral:
@@ -514,8 +514,8 @@ label BBW005:
     play music Sunset
     MC "Hair? What kind of mutation is hair growth? This almost seems like a joke."
     MC "Hmm, no open tables. Oh! There's a spot."
-    show BBW sad with dissolve
-    show PRG sad at Position (xpos=0.8) with dissolve
+    show BBW sad at center with dissolve
+    show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     BBW "..."
     PRG "I-Is something wrong, Nikumaru-sama? Did I use too much coriander, or..."
     show BBW neutral
@@ -529,7 +529,7 @@ label BBW005:
     MC "If anything can be done."
     show BBW haughty
     BBW "There is always a way, even if it might be extreme. But the lengths you are willing to go to achieve something demonstrate how much you deserve it. Right, Kodama-san?"
-    show PRG neutral at Position (xpos=0.8)
+    show PRG neutral at Position (xpos=0.8, xanchor=0.5, yalign=1.0)
     PRG "Ah! Y-yes, Nikumaru-sama!"
     MC "So what is your 'factor?'"
     hide PRG with dissolve
@@ -562,7 +562,7 @@ label BBW005_c1:
     BBW "That does seem the best tactic. If I don't give my body the means to get fat..."
     MC "Just don't starve yourself or anything."
     BBW "Of course not. I know exactly what my body needs. Kodama-san!"
-    show PRG neutral at Position (xpos=0.8)
+    show PRG neutral at Position (xpos=0.8, xanchor=0.5, yalign=1.0)
     PRG "Yes, Nikumarua-sama!"
     BBW "Going forward I want my meals to have a maximum of 650 calories. Adjust my menu accordingly, but be sure to include an appetizer, entree, side dish and dessert."
     hide PRG with dissolve
@@ -603,8 +603,8 @@ label BBW005A:
     play music Peaceful
     MCT "Why do I always have trouble finding an open seat? I wonder how much harder this will be once some of the people start growing..."
     MC "Mind if I sit here?"
-    show BBW sad at Position (xpos=0.25) with dissolve
-    show PRG neutral at Position (xpos=0.75) with dissolve
+    show BBW sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Oh! G-Good morning, Hotsure-san."
     BBW "... By all means."
     MC "Thanks. Say, did you two get the Lit reading done? I kind of spaced out last night."
@@ -642,8 +642,8 @@ label BBW005A:
     MC "But... you just started the diet. This is your first meal."
     BBW "Is my suffering any less brutal for being so brief? Shall I remain silent until I have carried my burden for a certain number of days? No! Pain is pain. It is not to be dismissed for failing to meet some arbitrary metric."
     BBW "You were the one to suggest this trial of deprivation, and now you mock me for not embracing my torture?"
-    show BBW angry at Position (xpos=0.25) with dissolve
-    show PRG neutral at Position (xpos=0.75) with dissolve
+    show BBW angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Miss Nikumaru? I brought you your food."
     show BBW neutral
     BBW "Thank you, Aida, but now I want you to go prepare me a real breakfast. Crepes Florentine and smoked salmon to start, along with some coffee and fresh-squeezed orange juice."
@@ -670,8 +670,8 @@ label BBW005B:
     play music Busy
     "The last bell of the day rang and everyone got ready to get up and go. I had nothing in particular I wanted to do this afternoon, but like most everyone else I wanted to get out as quickly as I could."
     "I made it halfway to the door before I was stopped by a hand on my shoulder. Turning around, I saw Alice standing there with Aida hovering behind."
-    show BBW happy with dissolve
-    show PRG neutral at Position (xpos=0.4) behind BBW with dissolve
+    show BBW happy at center with dissolve
+    show PRG neutral at Position (xpos=0.4, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     BBW "It's time we begin our journey."
     MC "Journey?"
     BBW "Our journey towards health and well-being for myself. In order to stave off the effects of my growth factor I will be taking up an exercise routine. An intense calorie-burning regimen to keep myself fit and sleek."
@@ -688,8 +688,8 @@ label BBW005B:
     BBW "That's the spirit. Go change, and we'll meet you at the weight room."
     
     scene Gym with fade
-    show BBW neutral at Position (xpos=0.25) with dissolve
-    show PRG neutral at Position (xpos=0.75) with dissolve
+    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "OK! Where do we start?"
     MC "Um..."
     BBW "I was asking Kodama-san. She's the official expert here."
@@ -728,14 +728,14 @@ label BBW005B:
     pause 1
     BBW "Ggggggggnnnnnnnn... Ten!"
     PRG "You did it, ma'am! Well done!"
-    show BBW happy at Position (xpos=0.25) with dissolve
+    show BBW happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Thank you, thank you. If you'll excuse me, I need to take a quick water break. Hydration is important, after all."
     hide BBW with dissolve
     show PRG neutral
     PRG "OK. We'll wait for you."
     "I wasn't going to say anything; after all, it's not like I'm effortlessly knocking out the push-ups one-handed or anything. And Alice was sweating by the end, so she was putting in some effort."
     "She came back five minutes later, no longer sweating and looking like she had straightened up her hair in the bathroom."
-    show BBW neutral at Position (xpos=0.25) with dissolve
+    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     BBW "What shall we do next?"
     "Kodama-san looked around, a little bit lost among the machines she clearly had no experience with."
     PRG "Maybe we can start here? And then work our way around?"
@@ -744,7 +744,7 @@ label BBW005B:
     MC "Why me- No, never mind. I'll go."
     hide PRG with dissolve
     "As I was looking at the weights in increments of ten pounds, trying to guess what my limit was, another person came over and joined us."
-    show FMG neutral at Position(xpos=0.75) with dissolve
+    show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Hey sorry to bother but how much longer are you...Oh hey guys. What brings you here?"
     MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
     show BBW angry
@@ -816,7 +816,7 @@ label BBW006:
     MCT "Classes are done, so what now? Don't want to go back to my room, I've got enough weirdness going on without someone trying to find more lurking around every corner. Maybe I can see if any of the clubs are recruiting yet."
     "..."
     MCT "Sounds like the music club is rehearsing. Not my thing... Oh!"
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     MC "Niku- Alice. Thinking of joining the music club?"
     show BBW haughty
     BBW "Offering my services to the ensemble is one reason I'm here, though I'm disheartened to find out freshmen are not considered for seated positions. Waiting a year just to take my rightful place on the stage..."
@@ -909,12 +909,12 @@ label BBW007:
     MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school. Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people."
     MCT "And I'm off by myself, which is par for the course."
     "No sooner had I thought that than someone sat down across from me."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     MC "Oh, Alice. Didn't know you'd be having lunch here."
     BBW "Why wouldn't I? It is a pleasant day outside, but it seems improper to eat in some random place. Or maybe it is simply proper to eat where the food is served. Structure is an oft-overlooked virtue, in life and in business."
     MC "If you say so."
     "It took me a second to realize Alice wasn't alone. Right behind her was Aida, holding a few packages."
-    show PRG neutral at Position (xpos=0.75) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     MC "Hi, Aida. How did you get so much mail already? It's still the first week of the year."
     PRG "Oh, it's not mine. I was carrying it for Nikumaru-sama. We just came from the mail room."
     show PRG sad
@@ -952,14 +952,20 @@ label BBW007:
     MC "No, no. I don't need a new laptop. I mean, I could use one, but I don't have that kind of money."
     BBW "Well you should have said so."
     extend " ... Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
-    show PRG neutral at Position (xpos=0.75) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     MC "There's already a store on campus, you know."
     BBW "I know, I've seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
     PRG "What do you need me to do, Nikumaru-sama?"
     BBW "Our first step will be to get the word out. We'll need some sort of ad campaign, make the people aware of my service. Then we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service; convenient for the customer."
     BBW "But the guys' dorm... Keisuke! How would you like a job?"
-    MC "Me? Doing what?"
-    BBW "Haven't you been listening? I'll need runners, people to deliver packages as they come in. I can offer you 1,000 yen an hour."
+    if getSkill("Academics") < 3:
+        MC "Me? Doing what?"
+        BBW "Haven't you been listening? I'll need runners, people to deliver packages as they come in. I can offer you 1,000 yen an hour."
+    else:
+        MC "Let me guess: you need a deliveryman."
+        show BBW happy
+        BBW "Got it in one. I'm offering 1,000 yen an hour."
+        show BBW neutral
     MC "I... will think about it."
     MCT "She's actually serious about this. I wouldn't have guessed she was this sort of vigorous go-getter. I guess business runs in her blood."
     "The conversation died as Alice started giving instructions to Aida."
@@ -977,7 +983,7 @@ label BBW008:
     "But the club wasn't meeting right now. There were just two people, Aida and another student. It's not like I wanted to spy on them, but I was curious and they were talking loud enough to overhear them."
     play music Bittersweet
     Student "-alented or not, I have no patience for someone trying to undermine my authority."
-    show PRG sad at Position(xpos=0.8, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     PRG "Y-yes, ma'am. But I don't think she means to be-"
     Student "You seem to be the closest thing she has to a friend, so maybe she'll listen to you. Tell her she can either be happy in the chorus or she can look for another club to join."
     PRG "Y-yes, ma'am."
@@ -1026,14 +1032,14 @@ label BBW008_prechoice:
         PRG "She should be in the cafeteria. I made some snacks for her to sample while she works on setting up her business."
     else:
         PRG "She should be in the cafeteria. I made some snacks for her to sample."
-    MC "Might as well deliver the news now, then."
+        MC "Might as well deliver the news now, then."
     stop music
 
     scene Cafeteria with fade
     play music Sunset
-    "We found Alice sitting at her usual table, one hand typing on a laptop and the other picking up tea room pastries from a tray next to her."
-    show BBW happy with dissolve
-    BBW "Hotsure-san, good afternoon. Thank you for bringing Aida back. I've been waiting for her for...five and a half minutes now."
+    "We found Alice sitting at her usual table, one hand typing on a laptop and the other picking up high tea pastries from a tray next to her."
+    show BBW happy at center with dissolve
+    BBW "Hotsure-san, good afternoon. Thank you for bringing Aida back. I've been waiting for her for... five and a half minutes now."
     MC "Actually she brought me here. There's something I need... Something you should know."
     show BBW neutral
     BBW "Oh?"
@@ -1048,7 +1054,7 @@ label BBW008_prechoice:
     MC "It's not that you're... You can be a little... "
     MC "You're going to get kicked out if you don't stop fighting with the president."
     BBW "Oh, really? Aida, is this true?"
-    show PRG sad at Position(xpos=0.8) with dissolve
+    show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Y-yes, Nikumaru-san."
     BBW "I should find her at once and tell her..."
     hide PRG with dissolve
@@ -1112,7 +1118,7 @@ label BBW008_c3:
 
 label BBW008A:
     scene Cafeteria with fade
-    show BBW angry
+    show BBW angry at center with hpunch
     play sound Crash
     BBW "That impudent egotist!"
     play music Tension
@@ -1246,9 +1252,9 @@ label BBW009:
     "That's probably why I found myself at the locker rooms after class. Going back to my dorm room didn't appeal to me; just two weeks in and I was getting tired of that place."
     "And I still didn't belong to a club, so I had no specific place to be..."
     "I was thinking of maybe changing into my gym clothes and doing a little cardio when I was surprised to see Nikumaru-san, of all people, coming out of the women's locker room."
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     MC "Oh, Ni- Alice! How's it going?"
-    show PRG sad at Position(xpos=0.8) behind BBW with dissolve
+    show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     PRG "..."
     MC "A-and you, Kodama-san! What were you two up to?"
     BBW "I was doing a light workout."
@@ -1263,13 +1269,13 @@ label BBW009:
     BBW "I understand how it can seem like that to most people, but I have a natural affinity for the water. I've been an accomplished swimmer since I was a young girl."
     if isEventCleared("BBW008"):
         MC "Maybe you should have joined the swim team instead of the music club."
-        BBW "I did consider it, actually, but the school would allow me to join only one club. I find the limitation frustrating but bearable."
+        BBW "I did consider it, actually, but the school would allow me to join only one club at a time. I find the limitation frustrating but bearable."
         show BBW angry
         BBW "And who knows. If the matter between me and the music club president is not resolved satisfactorily I may take my talents to more appreciative grounds."
     MC "How fast can you swim? Have you ever timed yourself?"
     show BBW neutral
     BBW "Quite fast, actually. I should have had Kodama-san timing me, upon reflection. An accurate chart of my ability would help measure my fitness levels."
-    show PRG neutral at Position(xpos=0.8) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     PRG "I'm sorry, Alice. I'll remember next time, I promise!"
     hide PRG with dissolve
     show BBW haughty
@@ -1280,14 +1286,14 @@ label BBW009:
     MC "!"
     "Alice didn't see her, but standing behind her was-"
     BBW "Sheer muscle may be good for lugging heavy weights around, but swimming is a much more graceful art than being a simple packmule."
-    show FMG angry behind BBW at Position(xpos=0.6) with dissolve
+    show FMG angry behind BBW at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     play music Tension
     "-was Akira. And judging by her expression she didn't like what she was hearing."
     BBW "It's the difference between composing poetry and punching a sack of meat. Elegance versus brute force."
     "I was just about to interrupt Alice - even though she already seemed to be wrapping up - when Akira beat me to it."
     FMG "Hello Alice What's-your-last-name! Interesting theory you have there!"
     show BBW haughty at Position(xpos=0.6) with dissolve
-    show FMG angry at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show FMG angry at Position(xpos=0.25), Transform(xzoom=-1) with dissolve
     "Alice blanched at the sound of Akira's voice, but she recovered swiftly."
     show BBW happy
     BBW "It's not so much a theory as good common sense."
@@ -1301,7 +1307,7 @@ label BBW009:
     "Alice turned to me, her self-satisfied look still there."
     show BBW happy
     BBW "Any objections to Hotsure-san acting as judge? I'm sure he'll be impartial."
-    show PRG neutral at Position(xpos=0.55) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.45, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     PRG "I... I could, maybe..."
     show FMG neutral
     FMG "Yeah, sure. But Keisuke, don't you think this is a forgone conclusion?"
@@ -1324,8 +1330,8 @@ label BBW009:
             BBW "Well, you shall know soon enough."
     scene Pool with fade
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
-    show FMG angry at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show BBW happy at Position(xpos=0.75) with dissolve
+    show FMG angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Three full laps should be adequate, I think. Any objections?"
     FMG "Just don't forget your pool cap thingy! Don't want to get your expensive mullet to get ruined by chlorine!"
     "They took their positions, I counted down from three, and they were off."
@@ -1335,12 +1341,12 @@ label BBW009:
     "It was neck and neck for most of the first lap, but when the two reached the far end and pushed off the wall to return Alice began to pull ahead."
     "By the time she completed her first lap Alice was a full length ahead of Akira, and that lead grew for the rest of the race."
     "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
-    show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show BBW happy at Position(xpos=0.75) with dissolvee
+    show FMG sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     play music Busy
     FMG "...Son of a bitch... Good job I guess... I'm going to bed. Later."
     hide FMG with dissolve
-    show BBW happy at Position(xpos=0.5)
+    show BBW happy at center with dissolve
     BBW "At least she's magnanimous in defeat."
     MC "Nice job. That was quite the blowout."
     show BBW haughty
@@ -1357,7 +1363,7 @@ label BBW010:
     "It was a quiet morning. Reminded me of the first day, after we all learned why we were here."
     "Looking around at the faces in the cafeteria when I arrived, I got the same vibe as before. The embarrassment everyone was probably feeling because of their 'second puberty' issue."
     "Standing out in the mildly dark gloom of the other students, one face was unexpectedly shining."
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     MC "Good morning, Alice."
     BBW "It {i}is{/i} a good morning, isn't it?"
     "I took another quick scan of the room, at the subdued expressions and lack of light-hearted chatting you would normally find."
@@ -1377,14 +1383,14 @@ label BBW010:
     BBW "Clothing, my dear boy."
     show BBW haughty
     BBW "It may have escaped your notice, being a guy and all - one apparently not particularly concerned with your own appearance, at that - but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
-    show BBW happy at Position(xpos=0.3) with dissolve
+    show BBW happy at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
     BBW "The school {i}does{/i} supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
-    show BBW happy at Position(xpos=0.7) with dissolve
+    show BBW happy at Position(xpos=0.7), Transform(xzoom=1) with dissolve
     BBW "And such aid only extends to the clothing we need as students. Personal expression and comfort is left to the individual to provide, a tiresome chore when the only stores are outside the school, all the way in town."
-    show BBW angry at Position(xpos=0.3) with dissolve
+    show BBW angry at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
     BBW "And are we supposed to make that trip while wearing ill-fitting, potentially scandalous clothing?"
     MC "Hey..."
-    show BBW happy at center with dissolve
+    show BBW happy at center, Transform(xzoom=1) with dissolve
     BBW "Now there's a better choice. I, through my personal contacts with the biggest and best names in clothing retail, can offer you-"
     MC "Hey!"
     show BBW surprised
@@ -1459,7 +1465,7 @@ label BBW010_c1:
     $setEventCount("AE", 1)
     $setFlag("BBW010_shiori")
     scene Hallway with fade
-    show AE angry with dissolve
+    show AE angry at center with dissolve
     "I found Shiori prowling the halls, eyes jumping around from student to student, as if she was looking for violations of the school dress code or something."
     "For a second I thought this would be a good lean-in to my sales pitch, but when I saw her expression I scratched that idea."
     "Something a little more subtle would be needed."
@@ -1493,7 +1499,7 @@ label BBW010_c2:
     $setEventCount("PRG", 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
-    show PRG neutral with dissolve
+    show PRG neutral at center with dissolve
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
     MC "Good morning, Kodama-san. Making breakfast?"
     show PRG happy
@@ -1533,14 +1539,14 @@ label BBW010_c3:
     "I was trying to think of where I could find Honoka when I was tackled from behind, collapsing to the ground."
     play sound Thud
     "A heavy, squishy weight on my back told me my search was over."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Hey, Kei-chan. You're looking a bit more spaced out than usual. You hit your head on something? I mean, besides me, of course."
     "Climbing to my feet, the sales pitch I had been rehearsing in my mind was pushed aside as I tried to think of something sarcastic and/or witty to say in response."
     MC "You ask me that after you run into me? Project much?"
     MC "At least help me clean these up."
     BE "What're these?"
     "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
-    show BE happy at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=5.0)
+    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
     BE "Hey, Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
     show BE neutral at center, Transform(zoom=1.0)
@@ -1632,12 +1638,12 @@ label BBW011:
     scene Dorm Exterior with fade
     "Another fifteen minutes of walking, and I started to think maybe I should have gone to the gym and gotten a real workout in."
     "I had finally decided to go back to my dorm and take care of my homework when I was saved from my boredom by almost running into Aida."
-    show PRG surprised at Position(xpos=0.25) with dissolve
+    show PRG surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     MC "Whoops. Pardon me."
     show PRG neutral
     PRG "O-oh! I'm sorry."
     "Coming right behind her, albeit not running headlong, was Alice."
-    show BBW neutral at Position(xpos=0.75) with dissolve
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Don't mind her. She's too excited for her own good."
     BBW "Watch where you're going, Kodama-san."
     PRG "Y-yes, ma'am."
@@ -1785,7 +1791,7 @@ label BBW012:
     "The whammy of the news of our condition didn't mean we got to stop learning. Tashi-sensei ran the class like a herd of pack mules, just instead of piling loads of goods onto our backs we were packing our brains full of facts and figures."
     "I had several chapters of reading to get through later that day, but first I needed to decompress before my grey matter started to overheat."
     "But as I gathered up my things and made to leave, I felt a hand on my shoulder."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     BBW "Keisuke, do you have a moment?"
     MC "Uh... Yes?"
     show BBW happy
@@ -1793,10 +1799,10 @@ label BBW012:
     BBW "I'm calling all employees in, so come along."
     scene Cafeteria with fade
     "I followed Alice to the cafeteria, where Aida had already laid out tea and crumpets at Alice's usual table."
-    show BBW happy with fade
+    show BBW happy at center with dissolve
     BBW "Good. We're all here."
     MC "All three of us?"
-    show PRG neutral at Position(xpos=0.8) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     show BBW neutral
     BBW "Both of us. Kodama-san is still operating in her capacity as my personal assistant, so for now this is still a two-person operation."
     show BBW happy
@@ -1935,11 +1941,11 @@ label BBW013:
     scene Hallway with fade
     "My name had come up on the class clean-up schedule again, so when I got out for the day the hallways were mostly empty. Everyone else was back at their dorm or enjoying the pleasant afternoon."
     "It made it easy to recognize the two figures over by the stairs, even if one wasn't the only blonde woman on campus and the other wasn't..."
-    show BBW angry at Position(xpos=0.75) with dissolve
+    show BBW angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     MCT "Oh no..."
     "If the other wasn't my roommate."
     play music RM
-    show RM angry at Position(xpos=0.25) with dissolve
+    show RM angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     "I couldn't hear what they were talking about, but I could see Alice standing rigid, her expression stony cold as Daichi held up one of those measuring device clamp things."
     "What were they called? Shiori would probably know..."
     "Anyway, I started walking slower, not wanting to eavesdrop on the two but also fearing I had some idea of what they were talking about."
@@ -2080,7 +2086,7 @@ label BBW014:
     "Gym today was a free day, everyone finding something quasi-athletic to do. Afterwards I ended up being one of those called on to clean up the equipment lying around."
     "I wasn't alone, per se, but with a handful of us spread across the entire gym it was dead quiet."
     "After a while I noticed I was drifting over to where Alice was bending down to gather up some croquet mallets."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     MC "Hey, Alice."
     BBW "Hotsure-san."
     BBW "Can you give me a hand with the mats? Somebody must have been practicing wrestling, or maybe judo."
@@ -2247,7 +2253,7 @@ label BBW014:
 
 label BBW015:
     scene Hallway with fade
-    show BBW happy
+    show BBW happy at center with dissolve
     play music BBW
     BBW "Keisuke! A mission!"
     "I was headed to... breakfast..."
@@ -2465,7 +2471,7 @@ label BBW015_c3_3:
     "I mostly tuned out Shiori's mini-tirade, already fearing what Alice was going to say."
     "At least Shiori could direct her anger elsewhere. Alice..."
     scene Hallway with fade
-    show BBW angry
+    show BBW angry at center with dissolve
     play music BBW
     BBW "Hotsure-san! Explain yourself!"
     MC "I got caught."
@@ -2491,7 +2497,7 @@ label BBW015_c1_2:
     "I took the stairs two at a time, doublechecking the room number."
     "When I got to the third floor I peeked through the door. The coast looked clear."
     "It wasn't."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     play music AE
     AE "Hotsure-san? What are you doing here?"
     "Her eyes flicked down to the mailing envelope. I had to think of something, quick."
@@ -2515,7 +2521,7 @@ label BBW015_test_pass:
     "I nodded and walked past her, only mildly guilty about lying like that."
     "Later, Alice complimented me about the job."
     scene Classroom with fade
-    show BBW happy
+    show BBW happy at center with dissolve
     play music BBW
     BBW "A satisfying first mission. And you even managed to give Matsumoto-san the slip."
     BBW "Well done. Just be sure to stay on your toes next time as well."
@@ -2543,7 +2549,7 @@ label BBW015_test_semipass:
     "I nodded and walked past her, not really feeling guilty about lying like that."
     "Later, Alice complimented me about the job."
     scene Classroom with fade
-    show BBW happy
+    show BBW happy at center with dissolve
     play music BBW
     BBW "A satisfying first mission. And you even managed to give Matsumoto-san the slip."
     BBW "Well done. Just be sure to stay on your toes next time as well."
@@ -2580,7 +2586,7 @@ label BBW015_test_fail:
     "And I hadn't missed Fukushi. I made the delivery and got out of the building."
     "Alice was amused at my cover story, but she was more taken with my commitment to getting the job done."
     scene Classroom with fade
-    show BBW happy
+    show BBW happy at center with dissolve
     play music BBW
     $setAffection("BBW", 1)
     BBW "It's not the most airtight story you could have come up with, but you did good, Keisuke."
@@ -2599,7 +2605,7 @@ label BBW015_c1_3:
     "Thus when I got stuck nobody was around to see me, or hear me."
     "Almost an hour passed, me half in and half out of the vent, before someone came in to pee. Another twenty minutes were gone before I pulled out."
     "I got banged up and scraped. My clothes took most of the damage, but I still had plenty of scratches to get treated."
-    show AE angry with dissolve
+    show AE angry at center with dissolve
     $setAffection("AE", -1)
     "And of course the student council president had heard of my little escapade. In trying to avoid running into her I had ended up alone in the nurse's office as she chewed me out."
     "As she chewed me out and I 'Uh-huh'ed every now and then I thought to myself 'I have to learn how Daichi does this.'"
@@ -2607,7 +2613,7 @@ label BBW015_c1_3:
     stop music
     "Surprisingly, things got a little better when Alice showed up."
     play music BBW
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     BBW "Were you hurt too bad?"
     MC "I'll live."
     BBW "Good."
@@ -2654,10 +2660,10 @@ label BBW016_c1_1:
     MCT "Or direct, I should say. Fitting."
     BBWCell "<I am currently idle as well. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect. Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time.>"
     if getFlag("BBW_working"):
-        "I wasn't sure how to feel that she hoping I could keep her entertained, but this did imply she wasn't contacting me with a new delivery assignment."
+        "I wasn't sure how to feel that she was hoping I could keep her entertained, but this did imply she wasn't contacting me with a new delivery assignment."
+        "Right?"
     else:
-        "I wasn't sure how to feel that she hoping I could keep her entertained."
-    "Right?"
+        "I wasn't sure how to feel that she was hoping I could keep her entertained."
     jump BBW016_c1_after
 
 label BBW016_c1_2:
@@ -2794,12 +2800,12 @@ label BBW017:
     "A bowl of ice cream called out to me, but it did mean I had to stay in the cafeteria as I ate it."
     play music Tension
     "No sooner had I gotten comfortable than Alice huffed her way into the dining area."
-    show BBW angry with dissolve
+    show BBW angry at center with dissolve
     "Her anger was almost palpable. Not in her expression so much as this aura emanating off her."
     "Not a hornet's nest I would want to smack, but the cafeteria was mostly empty and so she noticed me almost instantly."
     BBW "Hotsure-san! What do you know of this?"
     "She thrust a piece of paper at me. It was a list of some sort. I took it and read it over."
-    MC "It looks like all the girls in our class."
+    MC "It looks like all the girls in our year."
     BBW "Ranked by preference."
     BBW "Some boy or boys have judged all the women in our class and ranked them according to order of attractiveness."
     MC "Is that what this is?"
@@ -2811,8 +2817,8 @@ label BBW017:
     show BBW neutral
     BBW "I have no reason to fear being judged for my beauty, but I have not decided if placing me so low is malicious or ignorant."
     MC "Wait, how are you at 13? There's less than 10 girls in our class."
+    BBW "By 'class' I mean 'year'."
     show BBW angry
-    BBW "They included women from other classes."
     BBW "But that is not the worst part. Look at the top of the list."
     MC "Matsumoto... Shiori's number one?"
     BBW "Madame President herself is at the top of the rankings. I want you to explain that to me."
@@ -2945,8 +2951,8 @@ label BBW018:
     "I knew she was in the music club, but from what I'd heard she wasn't exactly endearing herself to anyone there."
     "Was I her only friend at the school? Nah, it couldn't be."
     "Either way, as brusque as she could be, I didn't mind the thought of getting closer to her."
-    show BBW happy with dissolve
-    show PRG neutral at Position (xpos=0.45) behind BBW with dissolve
+    show BBW happy at center with dissolve
+    show PRG neutral at Position (xpos=0.45, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     BBW "Ah, Keisuke. Over here."
     "I found Alice and Aida sitting at her usual table, but instead of tea and cakes there was a full computer set-up. Monitor, tower, keyboard, mouse."
     "And jeez, this wasn't cheap. I wasn't up on the latest gaming hardware, but it looked like a Hayashi ZX-5000. Fresh out of the box, even."
@@ -3188,8 +3194,8 @@ label BBW018_c2_4:
         BBW "Yes, I saw that. And maybe if I had stuck to one path with the technological developments..."
     else:
         MC "But it definitely was interesting. I think you're getting the knack for it."
-    BBW "Would you be interested in meeting again over the weekend? I'm practically aching to start another game, but it's getting to late as it is."
-    MC "Oh, wow, it's already 8."
+    BBW "Would you be interested in meeting again over the weekend? I'm practically aching to start another game, but it's getting too late as it is."
+    MC "Oh, wow, it's already eight o'clock."
     $setAffection("BBW", 1)
     MC "No, yeah. Let's do this again."
     MC "Do you need help taking your computer back to your room?"
@@ -3209,11 +3215,11 @@ label BBW019:
     scene Dorm Interior with fade
     "It was afternoon and I was bored. I was so bored I can't think of any way more exciting than that to put it."
     "I didn't have any immediate homework to work on, just essays and projects due later in the term."
-    "And none of my usual hobbies could even hold my attention long enough to not grab it. As soon as I thought of something to do I thought 'Nah' and forgot it."
-    "But it was too nice a day outside to stay cooped up in my room. I could almost hear my parents getting on my case that if I so bored I should go out and find some entertainment of my own."
+    "And none of my usual hobbies could even hold my attention long enough to not grab it. As soon as I thought of something to do I'd think 'Nah' and forget it."
+    "But it was too nice a day outside to stay cooped up in my room. I could almost hear my parents getting on my case, that if I was so bored I should go out and find some entertainment of my own."
     
-    scene Town with fade #FIXME maybe more specific when we get multiple town images?
-    "I was kind of tired of the school grounds, so I walked to the nearby town. Still nothing caught my eye. It became more a question of what was the least unexciting thing?"
+    scene Town with fade
+    "I was kind of tired of the school grounds, so I walked to the nearby town. Still nothing caught my eye. It became more a question of, what was the least unexciting thing?"
     menu:
         "The arcade":
             jump BBW019_arcade
@@ -3226,11 +3232,11 @@ label BBW019_arcade:
     scene Arcade with fade
     play music Busy
     "The arcade was probably the best shot at ending my boredom. With all those bright lights and electronic chimes I at least couldn't zone out."
-    "I got some change and walked around the floor once, seeing if maybe something caught my eye. When that failed I went for one of the racing games."
+    "I got some change and walked around the floor once, seeing if maybe something caught my eye. When that failed, I went for one of the racing games."
     "Oddly, driving around in circles turned out to not be the key to shaking off my lethargy. I won a couple races, the changing scenery of each track more interesting than the races themselves, but after the difficulty stepped up I quickly lost."
     "I left to look for another game, and a pattern had been established. I would start a game, play a little, lose because my heart wasn't in it and move on."
     "After a few rounds of this I started thinking of going somewhere else, but then I ran into a familiar face."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     BBW "Oh, Keisuke. Good afternoon."
     MC "Afternoon. I didn't take you for a gamer, Alice."
     BBW "I'm not, really. I came to town to run some errands, and Kodoma-san noticed a plush doll in one of those crane games."
@@ -3273,7 +3279,7 @@ label BBW019_arcade:
         "She closed her eyes and breathed in and out slowly."
         BBW "If there is something you want, be it mastering a skill or acquiring an object or achieving something, you must work for it. You have to make it happen."
         BBW "You can't sit back and just wait for it to drop in your lap."
-        BBW "For instance, do you get any exercise outside of gym? Staying motionless in front of these flashing screens isn't good for you health in the long run."
+        BBW "For instance, do you get any exercise outside of gym? Staying motionless in front of these flashing screens isn't good for your health in the long run."
         MC "I... Get in workouts now and then."
         "She closed her eyes again and shook her head."
         BBW "You don't sound too confident, Keisuke."
@@ -3294,7 +3300,8 @@ label BBW019_arcade:
             "Hit the gym.":
                 scene Gym with fade
                 "I went back to my dorm and changed into some workout clothes. Faded shorts, an old shirt."
-                "The gym wasn't too crowded, so I had pick of the machines. Just like the arcade nothing really appealed to me, but going around the weight machines and jogging for half an hour on the treadmill was a better use of my time, I will admit."
+                "The gym wasn't too crowded, so I had my pick of the machines. Just like the arcade nothing really appealed to me, but going around the weight machines and jogging for half an hour on the treadmill was a better use of my time, I will admit."
+                "I saw Akira at one of the other machines, pulling a monstrous amount of weight with her legs. But that area was seeing heavy use and crowds, so I didn't want to bother her."
                 $setSkill("Athletics", 1)
                 "When I left I felt mildly better. Not as listless, at any rate."
                 jump daymenu
@@ -3305,7 +3312,7 @@ label BBW019_cafe:
     "I bought a coffee and a muffin and took a seat by the window, watching the townsfolk walking by."
     "I wondered how much they knew about the school. Surely they had to know about why it existed, but did they keep abreast of the school's operations, or did they avoid even thinking about it?"
     "I wasn't there long before in came Alice and Aida. The latter meekly waved when she saw me, but Alice was bolder, walking up to my table."
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     BBW "Keisuke. Are you meeting someone here? A date, perhaps?"
     MC "Wha-? N-no! No, I'm just having a coffee."
     BBW "Relax. I'm just saying 'Hi.'"
@@ -3377,10 +3384,10 @@ label BBW019_theater:
     "I had enough money in my wallet that I could buy a movie ticket, and I could think of worse ways to while away a couple hours."
     "After I had decided to catch a flick, but before I had decided what to see, I heard someone call my name."
     UNKNOWN "Keisuke!"
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     MC "Alice. Good afternoon."
     BBW "Good afternoon."
-    show PRG neutral at Position (xpos=0.75) behind BBW with dissolve
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     MC "And Aida."
     PRG "H-Hello."
     hide PRG with dissolve
@@ -3405,7 +3412,7 @@ label BBW019_theater:
         pause 2
         scene Town with fade
         "The movie wasn't bad. A bit dry in the second half, and the battle scenes seemed almost perfunctory, but overall it was a solid flick."
-        MCT "Need to remember to tell Alice about it later."
+        MCT "Need to remember to tell Alice about this one later."
         jump daymenu
     else:
         MC "I was thinking of seeing Iron Fan 5. The last couple ones weren't that great, but the original director is back so maybe this one is good?"
@@ -3443,7 +3450,7 @@ label BBW019_theater:
                 scene Town with fade
                 $setSkill("Art", 1)
                 "It was actually pretty good."
-                "A bit dry and, let's be honest, boring in the middle, but it felt pretty epic with its battles and the set designs and costumes."
+                "The subject matter was a bit dry - too much talk about what might happen if the characters do this or don’t do that - but I found the camerawork interesting. The director has an eye for balancing epic sweep with personal experience."
                 "Yeah. A good movie."
                 jump daymenu
 
@@ -3455,13 +3462,13 @@ label BBW020:
     "When I found a good place to stop I looked up to find most of the cafeteria empty. Just a few stragglers or members of sports teams coming off practice."
     UNKNOWN "Hotsure-san."
     "I was initially annoyed to have the quiet of the place broken, but when I realized who it was I relaxed a little."
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     BBW "Enjoying your dinner? Or it looks like you've already finished."
     MC "Yeah. I was just reading."
     BBW "That's good. Feed the mind as well as the body."
     "As Aida arrived, pushing a cart with a covered tray on top, Alice took the seat opposite me. She let Aida set her place for her, eager to see what she would be having."
     BBW "Stir-fried vegetables and beef, with mushroom soup. It looks delicious, Kodama-san."
-    show PRG happy at Position(xpos=0.8) with dissolve
+    show PRG happy at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Th-Thank you."
     BBW "We should see about going into town this weekend, pick up some seasonal fruits. Summer will be here soon, and I do so enjoy watermelon and strawberries."
     "She was surprisingly happy, considering the recent issue with that list."
@@ -3604,7 +3611,7 @@ label BBW021:
     "I came out of the men's locker room to find the pool rather empty."
     "I'd complain it was a waste to let such fancy facilities go unused, but it's not like I was coming here regularly. Who was I to talk?"
     "Among the students in or around the water two caught my eye."
-    show BBW swimneutral with dissolve
+    show BBW swimneutral at center with dissolve
     "Alice was climbing out of the pool, Aida ready to hand her a towel."
     MC "Hey, Alice."
     BBW "Keisuke."
@@ -3634,7 +3641,7 @@ label BBW021_beforechoice:
     MC "Hey, you know the conversation we were having before?"
     BBW "?"
     BBW "Was this about the hours you could work making deliveries?"
-    MC "No. It was about the list you found, and you had asked me how I feel about 'bigger' women?"
+    MC "No. It was about the list you found, and you had asked me how I felt about 'bigger' women?"
     MCT "Why did I say 'bigger' like it was a euphemism?"
     BBW "Oh, yes. That."
     MC "I just wanted to be clear. I do think bigger women are attractive, and not just in an 'I'll sleep with whoever' way."
@@ -3706,7 +3713,7 @@ label BBW021_beforechoice:
                 BBW "No, I understand."
                 BBW "This is a trying time in our lives, there are bigger things on our minds."
                 MC "I'm not saying 'No' outright. Just... maybe later?"
-                show BBW swimneutral at Position(xpos=0.8, yalign=1.0), Transform(xzoom=-1) with dissolve
+                show BBW swimneutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 BBW "Hmm. Yes, perhaps."
                 BBW "I have to go. The music club is meeting soon."
                 BBW "I'll see you in class tomorrow."
@@ -3732,7 +3739,7 @@ label BBW021_beforechoice:
                 show BBW swimneutral
                 BBW "Forget I said anything, Hotsure-san."
                 MC "No, it's-"
-                show BBW swimneutral at Position(xpos=0.8, yalign=1.0), Transform(xzoom=-1) with dissolve
+                show BBW swimneutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 BBW "I need to go. The music club is meeting soon and I have to get dressed."
                 hide BBW with dissolve
                 "She didn't storm off angrily, but it was obvious to anyone watching that she was hurrying to get out of there."
@@ -3763,11 +3770,11 @@ label BBW021_fail2:
     MC "No. It's the truth."
     MC "I've seen larger women I found attractive. Never dated one, but that was because of circumstances."
     BBW "It's all right, Keisuke. You don't have to try so hard."
-    show BBW swimneutral at Position(xpos=0.65, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BBW swimneutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
     MC "I just want you to know... That guy doesn't speak for all men."
     BBW "I know."
     BBW "I just think that it is on each man to speak for himself."
-    show BBW swimneutral at Position(xpos=0.8, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BBW swimneutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
     BBW "To say something more than just 'He doesn't speak for me.'"
     BBW "Now I have to run. The music club is meeting soon."
     BBW "So if there is anything else you would like to say to me about this, we can talk later."
@@ -3790,10 +3797,10 @@ label BBW022:
             $setAffection("BBW", 1)
             "I wrote back saying I still had homework and studying to take care of, but I could swing by and lend a hand."
         "Ehhhh, I don't want to deal with Alice right now.":
-            jump BBW022_c1_3 #-1 affection if <=8
+            jump BBW022_c1_3
     scene Dorm PRG with fade
     "Aida answered the door."
-    show PRG neutral with dissolve
+    show PRG neutral at center with dissolve
     PRG "H-Hello... Thank you for coming. Nikumaru-san needs help-"
     if getAffection("BBW") >= 8:
         BBW "Is that Keisuke?"
@@ -3807,7 +3814,7 @@ label BBW022:
     "But then I saw Alice's half of the room."
     scene Dorm BBW with fade
     MC "None of this came from the school, did it?"
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     BBW "No. It's just a few odds and ends I brought from home."
     BBW "I like to be comfortable."
     MCT "This isn't comfort, this is a five-star hotel."
@@ -3870,7 +3877,7 @@ label BBW022:
         scene Dorm BBW Flip with fade
         "I couldn't tell you if the room looked better when it was done. It was fancier than anything I was used to, but I guess for Alice this was a step down from whatever mansion she had grown up in."
         "I was thinking of a way to politely excuse myself as Alice set out pictures and knick-knacks on her bookshelf, when suddenly I was blindsided by Aida."
-        show PRG neutral with dissolve
+        show PRG neutral at center with dissolve
         PRG "W-would you like a snack?"
         "She was holding up a plate of cheese and cracker concoctions, with... some sort of thinly sliced meat on top."
         MC "Uh, thank you."
@@ -3886,7 +3893,7 @@ label BBW022:
         "And Alice looked genuinely happier than I could recall her being... ever."
         "(Though I had only known her for a few weeks...)"
         MC "Who's that?"
-        show BBW happy with dissolve
+        show BBW happy at center with dissolve
         "She looked at the picture I was looking at, and her expression turned kind of dreamy."
         BBW "Oh. Forgot I still had that one."
         BBW "He's an old flame. Someone I knew back in Tokyo."
@@ -3938,9 +3945,9 @@ label BBW022_c1_3:
 
 label BBW023:
     scene Classroom with fade
-    show BBW neutral with dissolve
-    show PRG neutral at Position(xpos=0.6) behind BBW with dissolve
-    "After classes Alice called Aida and I together for a business meeting."
+    show BBW neutral at center with dissolve
+    show PRG neutral at Position(xpos=0.6, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    "After classes, Alice called Aida and I together for a business meeting."
     "She played it all straight-laced, going through a list of topics like an actual agenda."
     hide PRG with dissolve
     "The fact that there were only two employees, myself and her, didn't lead her to treat this any less properly."
@@ -3990,7 +3997,7 @@ label BBW023:
     BBW "So I'm going to make plans for a sale on bath salts, perfume and assorted beauty products soon as well."
     show BBW neutral
     BBW "Kodama-san. Is there a dance or some form of soiree planned for next month?"
-    show PRG neutral at Position(xpos=0.6) with dissolve
+    show PRG neutral at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Um... I don't know. I'll check."
     BBW "Thank you."
     hide PRG with dissolve
@@ -4099,7 +4106,7 @@ label BBW023_c2_1:
     "With the meeting adjourned I went back to my dorm to take care of my homework."
     "But I was distracted with Alice's rather heavyhanded hinting."
     "Whether she was the 'right girl' or not I couldn't say, but I could see that I was at a fork in the road, and I had to make a decision one way or the other soon."
-    "Maybe asking her out would turn out to be a good thing. We have more in common than I know."
+    "Maybe asking her out would turn out to be a good thing. We might have more in common than I know."
     "Or if I'm this undecided I should just back off, and let her know. She didn't deserve to be left hanging, did she?"
     "Either way, this would have to wait to be settled for another day."
     jump daymenu
@@ -4131,10 +4138,10 @@ label BBW024:
     "My turn to clean the classroom had come up again, so I ended up walking through empty halls alone."
     "I thought about going back to my dorm, but I wasn't really 'feeling' it."
     "Maybe if I took the long way around I would find something more interesting than those now familiar four walls."
-    show BBW angry with dissolve
+    show BBW angry at center with dissolve
     MC "Oh, Alice. Good afternoon."
     MC "Something bothering you?"
-    BBW "No. Just a minor perterbance."
+    BBW "No. Just a minor perturbance."
     MCT "You look a little upset for something you say is minor."
     MC "So what's up?"
     BBW "The library board is having a meeting, so the place is closed for the afternoon."
@@ -4160,7 +4167,7 @@ label BBW024_c1_1:
     if getAffection("BBW") < 5:
         $setAffection("BBW", 1)
     BBW "It's not 'special.' Not in a positive sense."
-    BBW "I have a dental appointment coming up this weekend. Those are never pleasant, so I'm edge."
+    BBW "I have a dental appointment coming up this weekend. Those are never pleasant, so I'm on edge."
     BBW "That I would have this trouble now, when I need serenity..."
     MC "There have to be other places where you can find solitude."
     jump BBW024_c1_2
@@ -4193,12 +4200,12 @@ label BBW024_c2_1:
     "Not that I knew how long she would take..."
     "I occupied myself by looking at the flowers. This place really was quiet."
     "At one point I saw Naomi walk by."
-    show GTS neutral with dissolve
+    show GTS neutral at center with dissolve
     "I waved, but when she saw Alice she seemed to stiffen."
     "She nodded slightly, then continued on."
     hide GTS with dissolve
     "After ten minutes Alice opened her eyes and took her headphones off."
-    show BBW happy with dissolve
+    show BBW happy at center with dissolve
     MC "Feel better?"
     BBW "Calmer, yes."
     $setAffection("BBW", 1)
@@ -4221,7 +4228,7 @@ label BBW024_c2_2:
     MC "We're not not allowed, I don't think."
     scene Roof with fade
     "I led her to the roof, Alice grumbling about the stairs after the second story."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     BBW "Such an inconvenient place."
     MC "Sure to be secluded, right?"
     BBW "You're not wrong."
@@ -4229,17 +4236,18 @@ label BBW024_c2_2:
     hide BBW with dissolve
     "It would have felt odd to just leave her there on the roof, so I hung back and let her get on with it."
     "Unfortunately the place turned out to not be as empty as I was expecting."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Hey, Keisuke, what's up?"
     MC "Alice is here to meditate. This seemed the most quiet place."
+    show BE neutral
     BE "Ooooh?"
     BE "Wouldn't have taken her for the spiritual sort."
     MC "I think she just likes to clear her head."
-    show BE happy at Position(xpos=0.8, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show BE happy at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
     "As I was talking Honoka walked up to Alice."
     "Not right in her face. She hung back a bit. But it was close enough to disturb Alice."
-    show BE happy at Position(xpos=0.65, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show BBW angry at Position (xpos=0.8, yalign=1.0) behind BE with dissolve
+    show BE happy at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
+    show BBW angry at Position (xpos=0.8, xanchor=0.5, yalign=1.0) behind BE with dissolve
     BBW "..."
     "She opened one eye, frowning."
     if getAffection("BBW") >= 8:
@@ -4295,7 +4303,7 @@ label BBW025:
     "I could have rushed to meet her before the meeting started, get in and out of the music room, but..."
     "Anyway, I found her at her usual table."
     "I wouldn't say this outloud, but it was hard to miss her."
-    show BBW neutral at Position(xpos=0.8) with dissolve
+    show BBW neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     "I had noticed it in class this morning. While her clothes still fit her perfectly, she was unmistakably heavier."
     "I assume she had been gaining steadily, but today was the point when I took a good look at her and realized that she was bigger."
     "It didn't seem to bother her. She had been most pleasant all day, and right now she looked to be enjoying her dinner."
@@ -4312,7 +4320,7 @@ label BBW025:
     BBW "Aida made a bit too much flatbread. Help yourself."
     MC "Thank you."
     MCT "It does look like there's more food than usual. Is her appetite growing with her body?"
-    "I meant to sneak a peek at Alice's belly, round enough that it fill most of her lap when she sat down."
+    "I meant to sneak a quick peek at Alice's belly, round enough that it filled most of her lap when she sat down."
     show BBW neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "I must have been staring, because when I looked up I found her watching me."
     show BBW neutral
@@ -4429,7 +4437,7 @@ label BBW025_c1_2:
 label BBW025A:
     scene Cafeteria with fade
     "I was having trouble paying attention to the week's company meeting."
-    show BBW neutral with dissolve
+    show BBW neutral at center with dissolve
     BBW "Moving on to new business, the recent tariff battle between America and China has me concerned blah blah blah..."
     "After building up the courage to ask Alice out it was hard not to treat her 'Ask me later' response as a loss."
     "A straight up 'No' would have been like ripping the band-aid off, the pain strong but gone quickly."

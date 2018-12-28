@@ -90,7 +90,7 @@ label BE001:
     MC "Wonder how many teachers there are, then? And if they all have weird things like Mr. Akaname down there. Probably. It'd help the students adjust if they knew what it was like too."
     MC "I just wonder why they didn't tell us the reason for coming here until we were already inside? This doesn't seem like a prison or anything, does it?"
     MC "No, the view is too good up here to be a prison. I'd say it's better than what my old school had. Just looks really nice."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "It does. And it's about to look a whole lot better!"
     play music BE
     "My introspection was suddenly interrupted by my elbow getting pressed into something warm and soft."
@@ -305,7 +305,7 @@ label BE003:
     "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka."
     "After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
     MC "Woops, uh, hey Honoka. Sorry about that. Wasn't watching where I was going."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Hehe, hey Kei-chan. Don't worry about it, was an accident, right?"
     MC "Right."
     "I noticed that Honoka wasn't wearing the normal school uniform, having traded out the classic skirt and shirt combo for a pair of spats and a more tightly-fitted t-shirt."
@@ -439,7 +439,7 @@ label BE004:
     MC "Phew, it's really hot today..."
     "I wondered if there was anything nearby to drink. Fortunately, it looked like they provided a water cooler. Good, at this heat the students were likely to pass out if they didn't get any hydration. Still, I couldn't just go over there and take some when I'd just been sitting on my butt for twenty minutes. Thankfully the coach called for a break after a while, and I walked over to get some water with the others."
     MC "Hey Honoka!"
-    show BE surprised with dissolve
+    show BE surprised at center with dissolve
     BE "Woo, hey, Kei-chan. Glad you came by!"
     MC "Well, you know I've always had a thing for soccer."
     show BE neutral
@@ -479,7 +479,7 @@ label BE004:
 label BE005_old:
     #This scene needs to be rewritten or something, it doesn't make sense as an 005
     scene Hallway with fade
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Oh, Kei-chan!"
     "Honoka bounced over towards me, clutching a few pieces of papers in one hand. She stopped, but a little too late, and her breasts collided into my side. She just brushed it off and stepped back, shoving the papers inside her sizable chest for safekeeping."
     MC "Oh, Honoka. Hey. What's up?"
@@ -578,7 +578,7 @@ label BE005:
     play music Rain
     "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool..."
     "As I entered homeroom, it was obvious that everyone was talking about their discoveries already. It was just much louder than it typically was. Tones ranged from excitement and pride to confusion and sadness. Well, that's what the school was for, I suppose. To give everyone here a place to discuss their bodies in a safe environment. Still, it made me wonder if my trait was common or an oddity. I guess there was plenty of time to find out."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Oi, Kei-chan."
     MC "Hey, Honoka. What's going on?"
     "Honoka smiled, and took a seat next to me. She groaned with a yawn and stretched out her back, closing her eyes and looking extra cute as she popped something in her back."
@@ -656,7 +656,7 @@ label BE007:
     "I had to give credit where credit was due. Despite having such a long tongue, Tashi-sensei seemed to be pretty good at talking without it getting in the way. It was fairly easy to understand him, and he was more than willing to repeat himself if somebody misheard."
     "That was really the only thing unusual about class. The lessons weren't that different from what I was used to back at my old school. There was just that ever-prevalent undercurrent that everyone was at this school for a very specific reason."
     "But, oddly enough, it seemed like it was already starting to fade away, bit by bit. I suspected it wouldn't be long before I wouldn't even think about it. Though, logically once my growth really kicked in, I'd be stewing on that for quite a while."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Hey there Kei-chan."
     "Meanwhile, there was someone who wouldn't be having that problem. Mainly because her growth was obvious, especially to her, but also because I didn't see Honoka as the type of person who ever had real 'problems'."
     MC "Hi Honoka."
@@ -675,7 +675,7 @@ label BE007:
     "I stood up from my desk and followed Honoka down to the cafeteria, spending the walk deciding on what I would get that day. Yesterday I had seen they had some pretty good-looking soba noodles, so that might be a good choice."
     scene Cafeteria with fade
     "Once we got to the cafeteria, we both stopped right inside the entranceway, peering at the tables to look for a good spot."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     MC "See any open seats?"
     BE "Yeah, right there."
     "Honoka pointed out two seat opposite of each other."
@@ -784,7 +784,7 @@ label BE008:
     "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water. Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
     "I had barely gotten started when the door knocked. Daichi was out, so I figured he'd simply forgotten his key."
     MC "Hey, what's up?"
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Oh hi Kei-chan! Good, you're hanging out here, can I come in?"
     MC "Oh!"
     "Seeing Honoka outside of my door was definitely something I didn't expect. But it was far from unwanted. Besides, it was nice to see her head-on without having her run into me like she often did." 
@@ -947,7 +947,7 @@ label BE009_c1:
     "Several players looked over to the sideline to see who was cheering, Honoka chief among them. She looked down at the ground, but even from this distance you could see an impish grin on her face."
     "It wasn't long after I made a fool of myself that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal. She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
     "After the game was won, Honoka jogged off the field, coming up to where I was sitting on the sidelines. Her gym clothes were ringed with sweat, the bottom curves of her breasts forming a crooked sweat-stain smile across her front."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     play music BE
     BE "Hey Kei-chan! Nice to see you out here!"
     MC "Well I had to at least come see your first match, right?"
@@ -983,7 +983,7 @@ label BE009_c2:
     "The whole crowd cheered after that, including me. She definitely heard that. Honoka ended up scoring the goal with only a few more minutes on the timer. It wasn't enough for the other team to score again. Meaning that for all intents and purposes, Honoka had just won the game."
     MC "Heck yeah! Go Honoka!"
     "After the timer for the game went off, both teams celebrated for a while, hoots and hollers all around. It wasn't until a lot of people had left that Honoka came over to the stands."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     play music BE
     BE "Hey there Kei-chan!"
     MC "Hey, Honoka."
@@ -1015,7 +1015,7 @@ label BE009_c3:
     "I didn't want to interrupt the game with a silly chant, especially when the stakes were so low, so I just stayed quiet and watched Honoka play."
     "She really was good. It wasn't long after I arrived that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal. She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
     "After the game was won, Honoka jogged off the field, coming up to where I was sitting on the sidelines. Her gym clothes were ringed with sweat, the bottom curves of her breasts forming a crooked sweat-stain smile across her front."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     play music BE
     BE "Oh hey Kei-chan, I didn't know you were watching! How long have you been here?"
     MC "Long enough to see you're pretty good still."
@@ -1033,7 +1033,7 @@ label BE010:
     MC "Hello?"
     "I opened the door, still looking at my system the entire time. I was forced to listen to the sound of my character taking a critical hit as two large, white-clad breasts dropped into my field of view and pressed down on the screen."
     "I knew who it was without even looking up. I was grateful for the view, less grateful that I had to pause my game, but even more grateful that Honoka's boobs weren't so big and heavy that they broke my handheld."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     play music Schoolday
     MC "Hi Honoka."
     show BE surprised
@@ -1208,7 +1208,7 @@ label BE011:
     "I hadn't been to enough games of soccer to recognize most of the players, but there was a certain brunette friend that wasn't visible in the masses."
     MC "Huh. I wonder if she's sick or something? Maybe I should go check on her. Maybe there's a place around here that sells chanko, a bowl of that always helps when I'm sick."
     "I soon found out that Honoka wasn't sick, because two large spheres pressed against my shoulders from above me."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Hehe, no I'm not sick. But for future reference, if I do get sick, I much prefer chocolate to feel better."
     MC "I'm fairly certain that has no basis in fact."
     BE "Hey, I don't control what my body does. In more than one way."
@@ -1309,7 +1309,7 @@ label BE012:
     "It wasn't anything of vital importance I wanted to discuss with her, so it easily could wait until the next time we ran into each other."
     play sound Boing
     "Then Honoka, as she often did, literally bumped into me."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Kei-chan! Woo, hey! What's going on?"
     "Honoka was always a happy-go-lucky sort but she seemed extra cheerful today. That was a good sign. Maybe she'd be willing to hear me out, then."
     MC "Hi Honoka. Oh, not much, really. I was looking for you, actually."
@@ -1339,13 +1339,13 @@ label BE012:
     hide BE with dissolve
     "Honoka immediately began running."
     MC "Honoka!"
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Yeah?"
     MC "It's that way."
     "I pointed in the opposite direction."
     BE "Oh. Heh. Okay, fixed!"
     scene Town with fade
-    show BE neutral
+    show BE neutral at center with dissolve
     "Now that she was headed in the right direction, I followed Honoka to the bus stop, where we were just in time to hop aboard. With a little more hop in Honoka's case. After a few stops, we ended up in a small shopping district in the city."
     MC "Now, if I remember the directions right, we just go this way, and take a right, and we should be there soon."
     show BE happy
@@ -1353,7 +1353,7 @@ label BE012:
     scene Arcade with fade
     "Honoka and I shared a lovely, albeit quick walk over to the arcade. Even before we stepped inside we could tell what it was, thanks to the many noises of buzzers and bells going off from pachinko machines."
     "But, Honoka and I preferred games of skill. Or at least games that were more fun than sitting at a machine, watching balls drop. So we searched out one of our old favorites."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Oh, hey, check it out. I think I see a Mecha Killer Xtreme DX cabinet that's free. You want to play one match for old time's sake?"
     MC "Sure. But only if I get to be Delta Debonair."
     show BE happy
@@ -1377,7 +1377,7 @@ label BE012:
     scene black with fade
     pause 1
     scene Arcade with fade
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     play music Tension
     "As soon as the game began, I was doomed. Before I could even move my character, Honoka had leapt across the stage, performed a 14-hit combo on me, and removed a third of my health bar in one go. From her side of the cabinet, I could hear the announcer cheering her on for her devastating attacks, while he berated me on my side."
     MC "Geez, Honoka. How many, gah, times have you played this?!"
@@ -1420,7 +1420,7 @@ label BE013:
     play music Busy
     "After the devastating loss I suffered at Honoka's skilled hands, I needed something simpler. Preferably something where she wouldn't destroy me. Which likely meant a game that wasn't even competitive."
     MC "Hey, do you want to try out that Citizen Wicked lightgun game? It's two player co-op."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Sure, that looks good. Wanna see who can get the better score?"
     MC "N-No, let's just see if we can get to the end of the game without blowing a few thousand in yen on it, huh? These things are coin thieves."
     BE "Eh, what else are we going to spend it on? School supplies and food? Nah, video games, Kei-chan. Video games."
@@ -1442,7 +1442,7 @@ label BE013:
     "Death, token."
     "...Death, token."
     "Until eventually we realized that we had spent way too much money on one game and would be done with the trip before it even began if we kept playing the game."
-    show BE angry with dissolve
+    show BE angry at center with dissolve
     BE "Grr, this stupid boss is totally crap. You wanna stop?"
     MC "Yeah, I can't get two shots on him before he hits me."
     "We both holstered our pistols and left the game as the countdown timer ticked down to zero."
@@ -1494,7 +1494,7 @@ label BE014:
     scene Hallway with fade
     "The day started off rather frustratingly. Mainly due to my own indecision about whether to have miso soup or oatmeal for breakfast that morning. In the end, I waffled so much over the decision that I had to settle for toast instead."
     "There was a welcoming bounce in my step soon after, as a familiar set of wobbling breasts collided into my back, while Honoka's arms wrapped around my sides."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Morning, Kei-chan!"
     MC "Good morning, Honoka."
     BE "How's your morning going?"
@@ -1602,7 +1602,7 @@ label BE014_c1_after:
 label BE015:
     scene Hallway with fade
     play music Schoolday
-    show BE sad with dissolve
+    show BE sad at center with dissolve
     BE "Kei-chan, can you help me with some studying?"
     "Honoka looked at me with pleading eyes. It was like staring at a squirrel begging you to throw some granola at it so it could scurry away. I hadn't expected her to run into me after class today. By this point, I really should be prepared."
     MC "Studying? I guess I could help. What subject, specifically?"
@@ -1622,7 +1622,7 @@ label BE015:
     scene black with fade
     "When I made my way back to my dorm room, Honoka was waiting outside."
     scene Dorm Interior with fade
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "Good, you're here. Let's get going!"
     "She looked at me quizzically for a moment as she noticed the bag in my hand."
     show BE neutral
@@ -1724,7 +1724,7 @@ label BE016:
     Coach "Inoue, Charanko, hit the bleachers. Kosuke, Iwata, you're up."
     "The girl I sat next to carefully stood up, and stepped down to the ground. Her sneakers looked like they were twice my size. Honoka was able to come sit next to me, and the large-foot girl didn't say a word to either of us."
     MC "Is she always like that?"
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Who, Sakie? Yeah she tends to be on the quiet side of things. You didn't say anything to upset her did you?"
     MC "I was pretty sure I didn't. I just asked about her wristband."
     show BE happy
@@ -1789,7 +1789,7 @@ label BE016:
 label BE017:
     scene Arcade with fade
     play music Schoolday
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     BE "You see, I told you that I could get a perfect score."
     MC "Yeah, you've definitely picked up some skills from basketball club, that's for sure."
     "Honoka had told me the previous day that she'd gotten much better at shooting free throws after several meetings at her club. I believed her, but she insisted on proving it. Hence, the two of us arranged to get to the arcade, where they had a basketball challenge. As many free throws as she could make in sixty seconds."
@@ -1953,13 +1953,13 @@ label BE017_c2_3:
 
 label BE018:
     scene Dorm BE with fade
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     "I was hanging out in Honoka's room, playing video games with her as had become a fairly frequent occurrence. She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
     MC "I thought you said your roomie was going to be out until evening?"
     BE "That's what she said... Maybe it's someone else?"
     "Honoka stood up to open the door, and I peered over to check out who it was. Surprisingly, there stood Aida, fiddling with her fingers, but otherwise waiting patiently."
-    show BE happy at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show PRG neutral at Position(xpos=0.75) with dissolve
+    show BE happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     play music PRG
     BE "Oh hey! Aida-chan, what's going on?"
     PRG "Hello Inoue-san. I'm not interrupting you, am I? I was hoping to ask you something."
@@ -2175,7 +2175,7 @@ label BE018_c1_after:
     hide BE with dissolve
     hide PRG with dissolve
     "Honoka got up to walk Aida over to the door, and then came back to sit down next to me after she'd left."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Hahhh. That was nice. Glad to help her out."
     MC "I never knew you were so well-informed about bras."
     show BE angry
@@ -2220,7 +2220,7 @@ label BE019:
     scene Cafeteria with fade
     play music Schoolday
     "Lunch was simple today. I just grabbed a sandwich and chips, along with some water. I didn't expect anything unusual to happen, even when Honoka sat across from me without introducing herself."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "You remember when we had our skip day?"
     menu:
         "No":
@@ -2356,7 +2356,7 @@ label BE019_c1_after:
 label BE020:
     scene Campus Center with fade
     "Classes were over for the day, thankfully. Today's lessons hadn't been hard, necessarily. But they'd been mentally draining. The dining hall for dinner wouldn't open up for another hour or two, so I pondered over what I could do in the interim."
-    show BE happy with dissolve
+    show BE happy at center with dissolve
     play music BE
     BE "Hi, Kei-chan!"
     "Honoka appeared as she often did, out of nowhere. The major clue that it was her being the two soft lumps pressed into my back when she leapt into me. She quickly jumped back and smiled."
@@ -2471,7 +2471,7 @@ label BE020_c1_after:
     play music Rain
     "I went to the bus stop to meet Honoka after checking my homework load, and making sure it wouldn't be too much for that night after we got back. She was already waiting when I arrived."
     MC "Hey, Honoka. Have you been waiting long?"
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Nope. Just got here a minute ago. Just waiting on you and the bus."
     MC "Good. Did you happen to find out what kind of restaurant it is?"
     show BE happy
@@ -2492,7 +2492,7 @@ label BE020_c1_after:
     "Honoka pointed towards our destination and led the way."
     scene Sushi Restaurant with fade
     "The restaurant looked small, but looked very nice when we stepped inside. Once we got in, we saw only six tables, along with a small area where people could sit at stools."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Hi. Table for two please."
     "Honoka had already gone up to the head waitress while I was looking around. The waitress led us to a small table in the corner of the restaurant, where we sat opposite each other. "
     Waitress "Here are your menus. Could I get you started with anything to drink?"

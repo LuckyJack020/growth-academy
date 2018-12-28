@@ -798,7 +798,8 @@ label daymenu:
                 tmp = renpy.random.choice(prefpool)
                 eventchoices.append(tmp)
                 prefpool.remove(tmp)
-                allpool.remove(tmp)
+                if tmp in allpool:
+                    allpool.remove(tmp)
             elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
                 tmp = renpy.random.choice(allpool)
                 eventchoices.append(tmp)
@@ -998,6 +999,8 @@ label debugloadtest:
             pause .1
             show BE aroused
             pause .1
+            show BE zoomin
+            pause .1
             
             show FMG neutral
             pause .1
@@ -1109,6 +1112,8 @@ label debugloadtest:
             show BE angry
             pause .1
             show BE aroused
+            pause .1
+            show BE zoomin
             pause .1
             
             show FMG neutral
@@ -1261,6 +1266,8 @@ label debugloadtest:
             pause .1
             scene Dorm BE
             pause .1
+            scene Dorm PRG
+            pause .1
             scene Sushi Restaurant
             pause .1
  
@@ -1331,6 +1338,8 @@ label debugloadtest:
             scene Dorm GTS
             pause .1
             scene Dorm BE
+            pause .1
+            scene Dorm PRG
             pause .1
             scene Sushi Restaurant
             pause .1

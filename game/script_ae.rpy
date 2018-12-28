@@ -113,7 +113,7 @@ label AE001:
     MC "Eh?"
     "I looked over to the table adjacent, where I saw Shiori-san flipping through the pages of a large book."
     play music AE
-    show AE angry with dissolve
+    show AE angry at center with dissolve
     MC "A-ah! Shiori-san, how are y-"
     AE "Hotsure-san, adjust your volume in the library, please."
     MCT "Oh...right."
@@ -130,7 +130,7 @@ label AE001:
     "I moved over and sat a seat away from where she was, better to be near and speak softly than far and shout I supposed."
     MC "So... hey."
     "Shiori looked up from her book, glancing at me with an apathetic gaze."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "...Hello, Hotsure-san."
     MC "How, uh, w-what are you doing?"
     MCT "Uaaah, she's absolutely chilling me to the bone!"
@@ -231,13 +231,13 @@ label AE002:
     MC "Hey, Shiori-san."
     "Shiori looked up from the paperwork with a bit of confusion. She placed her forms down and walked over to the window."
     MC "Am I interrupting anything?"
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "Not at the moment, no. Come in, it would be best for you to not have to raise your voice."
     MCT "In the...empty library?"
     MC "Sure."
 
     scene Office with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     "The inside of the room was larger than it first looked. There were filing cabinets that lined the walls, and a long table in the middle with different chairs for the representatives and student body to discuss the agenda of the day."
     AE "There. Now, what do you need?"
     MC "Oh, uh, yeah. Yesterday in the library, you forgot this."
@@ -374,7 +374,7 @@ label AE003:
     MC "Hmm?"
     "I heard a bit of squabbling as I got up from the bench I was sitting on and decided to take a tiny peek...just for studying purposes of course."
     Student1 "Come on! It's just a wrapper!"
-    show AE angry with dissolve
+    show AE angry at center with dissolve
     AE "I don't care if it's a scrap of paper, it says clearly in your student handbook that there is to be no littering on campus. Period. Do I need to talk to administration about this?"
     Student1 "D-Don't be unreasonable!"
     AE "There is a garbage can right over there. Pick it up and throw it away."
@@ -385,7 +385,7 @@ label AE003:
     "After a short while, I picked up my tiny, oblong aircraft and put them in my bag, ready to head back to my room. The sense of confusion and surprise left in favor for a general feeling of what I can only describe as uneasy acceptance."
     "Shiori's words resonated with me for a small while the more I thought about it, what will happen will happen, all I can really do is accept it."
     MCT "Can she really rebound from the news that quickly? I figured she'd be-"
-    show AE neutral-eyebrow with dissolve
+    show AE neutral-eyebrow at center with dissolve
     AE "Everything all right, Hotsure-san?"
     MC "GAH!"
     "In my shock, I nearly dropped my bag with the planes in tow."
@@ -496,7 +496,7 @@ label AE003_c1_after:
     RM "You're not the colonel! He would never share his recipes openly!"
     MC "What the fu- Just open the door!"
     MCT "The door opened up, this time more readily than the first few times I entered."
-    show RM happy with dissolve
+    show RM happy at center with dissolve
     RM "Relax! Relax! Just a joke. C'mon in."
     
     scene black with fade
@@ -522,7 +522,7 @@ label AE004:
     MC "Ok, so if I rush, I can get to the store in time to get a new one, get back, and start writing my homework down."
     scene Dorm Exterior with fade
     "I opened the door quickly, and began to head out. If it weren't for my reflexes, I would have ran head first into Shiori-san, hand prepped to knock on the door. I jumped a bit, and took a step back."
-    show AE surprised with dissolve
+    show AE surprised at center with dissolve
     MC "Uwa! S-sorry, Shiori-san! I was just heading out, I didn't mean to startle you."
     "She appeared a bit surprised for a moment, but quickly regained her original posture as she cleared her throat. She slowly put her hand on a large file she was carrying in her other arm."
     show AE neutral-eyebrow
@@ -699,7 +699,7 @@ label AE005:
     "*Click*"
     MCT "Hm?"
     "I stopped for a moment, caught off guard by the sound of the door in front of me slowly creaking open. I stood there, silently watching as a girl walked out."
-    show AE sad with dissolve
+    show AE sad at center with dissolve
     play music AE
     "It was Shiori-san, finally done with her results."
     MC "Shiori-san?"
@@ -808,7 +808,7 @@ label AE006:
     "As I opened up the notebook, a mix of shock and utter despair began to sink in, as I realized my Calculus homework was reduced to what could only be described as a Jackson Pollock wet dream."
     MC "Are you kidding me?! I spent hours trying to figure this out!"
     MCT "Dammit! This is bad. This needs to be done by tomorrow! This is the only notebook I have...uh, had, and the store is on the other side of campus. If I run over I-"
-    show AE neutral-eyebrow with dissolve
+    show AE neutral-eyebrow at center with dissolve
     AE "Hotsure-san?"
     MC "AGuaH!"
     MCT "Sh-Shiori-san?"
@@ -868,7 +868,7 @@ label AE006:
     AE "Just don't make too much of a ruckus."
     "Shiori-san and I walked into the library and over to the door of the office. She pulled out a key from her pack and unlocked the door, flicking on the lights as she entered the room."
     scene Office with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "One moment. I'll get the papers with some of the work I need done out first."
     hide AE with dissolve
     "I leaned up against the wall as Shiori-san began to look through the filing cabinets for papers, I looked at her desk and noticed the obscene stacks of paper piled up."
@@ -877,7 +877,7 @@ label AE006:
     "She lifted one leg up, unknowingly accentuating her slightly chubby thighs. My thinking went blank for a moment, before immediately snapping back."
     MCT "Sh-shit! If she saw me staring at her like some kind of perv, she would hate me forever. I gotta keep my cool."
     "Shiori-san turned around as I exhaled a deep breath, holding papers in her hands."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "I apologize. One of my subordinates has been rearranging my files. Here."
     MC "Thanks, Shiori-san."
     AE "Now, if you need me, I will be here."
@@ -960,7 +960,7 @@ label AE007:
     play music Schoolday
     "I briskly strode towards the Library, backpack slung across my shoulder as I prepped for a day to do some extra work. Today was the day I promised Shiori-san I would help her with her paperwork, at least, the day she would introduce me to it."
     "As I turned the corner to the Library entrance hallway, the punctual girl came into view, waiting outside the door."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MC "Hey, Shiori-san!"
     AE "Hotsure-san, good afternoon."
     MC "So, ready to get to work?"
@@ -978,7 +978,7 @@ label AE007:
     show AE neutral
     AE "Well then, let's head in."
     scene Office with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     "We walked into the library and headed to the student council office. Shiori-san unlocked it with a key and flipped the switch on; filling the room with the soft whir of the fluorescent lights. Shiori-san sat down at the table and began to pull assorted items from her bag, stamp, pens, pencils, and a menagerie of different folders."
     MCT "I have to make a good impression. I don't want her to think I'm just some lazy bum who can't hold my own!"
     MC "So, I'm ready to get started! Got anything for me to start off with?"
@@ -1039,7 +1039,7 @@ label AE007_after:
     "The names went on and off the desk like lightning, and it honestly felt like for every paper I would take off the desk and file, two more would take it's place. A document hydra."
     "By the time the stream stopped, I was nearly panting from the quick, bustling motion of it all. The scribbling and stamping had stopped now, and as I grabbed the last few files, I looked back on the pile of files and I realized..."
     scene Office with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MC "They're...gone?"
     AE "Yes, Hotsure-san. I filled them all out."
     MC "B-wha-I-"
@@ -1078,14 +1078,14 @@ label AE007_after:
 
 label AE008:
     scene Office with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     play music Sunset
     "Today was the second day I went to the office with Shiori-san. I kind of felt like I was missing out on a bright, sunny day, but at least I could redeem myself for the other days failure."
     AE "Remember, steady breathing. No matter how quickly you receive files, double check to make sure that everything is in order."
     MC "Got it."
     hide AE with dissolve
     "Today started off much the same as yesterday, but as promised, she was intent on teaching me 'proper filing methods'. It started off with me looking on uninterested, but over time, surprisingly, I actually got invested."
-    show AE neutral-eyebrow with dissolve
+    show AE neutral-eyebrow at center with dissolve
     AE "And here, unless it's the only available cabinet, avoid the ones at the very top and bottom. If you take the middle rows to be the most often used, you won't need to spend extra time and effort bending over or standing on your toes."
     MC "Yeah, I can see how that would help. It looks like you've already moved the paper from the other day."
     show AE neutral
@@ -1122,7 +1122,7 @@ label AE008:
     "*K-chk*"
     "It started off as just background noise, but as time went on it felt more like a rhythm, reminding me to keep pace. It worked pretty well...for a bit. Shortly after the student's bane began to set in, the dreaded foe of all academics...boredom."
     MCT "Seriously, how does she just do this day in and day out?! It's killing me."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "You're stalling. What's wrong?"
     MCT "Ah, I guess she noticed. Well, maybe a bit of conversation will help."
     MC "Hey, Shiori-san, not to seem like I don't like being here, don't get me wrong, it's just...is this it?"
@@ -1223,7 +1223,7 @@ label AE009:
     
     scene Office with fade
     play music Peaceful
-    show AE sad with dissolve
+    show AE sad at center with dissolve
     AE "There you are, Hotsure-san. I wanted to-"
     show AE surprised
     MC "Hi! Really sorry I'm late."
@@ -1306,7 +1306,7 @@ label AE009_after:
     hide AE with dissolve
     "Like before, Shiori-san wrote away while I took the files she filled and put them in the correct cabinets."
     "I was just about to get done with my first stack when I head Shiori-san speak up from behind me."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "So...Is there anything on your mind?"
     MCT "Any...huh?"
     "I was taken aback for a moment, before realizing what had happened. Shiori-san wanted to start a conversation."
@@ -1386,7 +1386,7 @@ label AE010:
     MCT "Hmm? Wait...Shiori-san?"
     "Shiori-san stood by the entrance to the library, holding a stack of yellow sheets in both arms. The spectacled girl had her back against the hallway wall, looking at me from the side."
     MC "Hey, Shiori-san! Have you been waiting out here for me?"
-    show AE neutral at Position(xpos=.99) with dissolve
+    show AE neutral at Position(xpos=.99, xanchor=0.5, yalign=1.0) with dissolve
     AE "Good day, Hotsure-san, I had to get these papers from inventory, so I figured we would meet here around the same time."
     MC "Need me to get those?"
     show AE aroused-2
@@ -1401,7 +1401,7 @@ label AE010:
     scene Library with fade
     "We walked through the library, Shiori-san following closely behind me, until we reached the office door."
     MC "Want me to take those, so you can unlock it?"
-    show AE neutral at Position(xpos=.99) with dissolve
+    show AE neutral at Position(xpos=.99, xanchor=0.5, yalign=1.0) with dissolve
     AE "Here. The key is on the stack. Take it."
     MC "Okay...? Thanks."
     MCT "That's a bit convenient, isn't it?"
@@ -1410,7 +1410,7 @@ label AE010:
     scene Office with fade
     "The lights were flicked on and I went to my station."
     MC "So, Shiori-san, what's with the stack of papers?"
-    show AE neutral at Position(xpos=.99) with dissolve
+    show AE neutral at Position(xpos=.99, xanchor=0.5, yalign=1.0) with dissolve
     AE "These forms are going to processing after they're filled out, don't worry about them."
     MC "Ok."
     MCT "Doesn't really tell me anything, but whatever."
@@ -1538,7 +1538,7 @@ label AE010:
     AE "Hm."
     hide AE with dissolve
     "We kept working for a bit, until Shiori-san put her pencil down and stacked the papers."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "There. Forms filled."
     MC "Oh, cool. Should I keep working?"
     AE "No, actually, I think that should be it for today. I need to get these back to processing."
@@ -1563,7 +1563,7 @@ label AE011:
     scene Hallway with fade
     play music Peaceful
     MC "Oy! Shiori-san. How's it going?"
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "Perfectly fine, Hotsure-san. Just getting some papers for the printer."
     MC "O-oh, yeah! Cool."
     MCT "Cool? Really?"
@@ -1581,7 +1581,7 @@ label AE011_010followup:
     MC "O-oh, yeah. Sounds good."
     scene Library with fade
     "Shiori-san opened the doors of the Library, holding it for me to enter. As we walked, Shiori-san muttered something under her breath. It was low enough for me to not hear, but I know something was said."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MC "U-um...Shiori-san?"
     AE "Hm?"
     MC "What was that, just now?"
@@ -1655,13 +1655,13 @@ label AE011_aftertest:
     scene Office with fade
     "We entered the room together. The all too familiar whirr of electric lights sounded as fluorescence filled the room."
     MC "Welp. Let's get to work."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "Let's."
     hide AE with dissolve
     "The workday carried out today like previous days. Shiori-san and I gave sparing comments here and there as we worked with little actually happening. That's when it hit me."
     "I was bored."
     "It took me a bit of meandering about my work before I realized what today was lacking; human interaction. Sure, Shiori-san and I were talking here and there, but what the words felt empty. I wanted something with substance."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MC "Hey, Shiori-san, what've you been up to?"
     "Shiori-san slowed from her lightning speed writing in order to acknowledge my question."
     AE "Up to? Do you think I've been planning something?"
@@ -1782,7 +1782,7 @@ label AE012:
     play music Rain
     "I strode through the halls, excited and ready to begin my day with Shiori-san, questions running through my head as I wondered what all I would get to learn."
     MC "Good day, Shiori-san!"
-    show AE neutral-annoyed with dissolve
+    show AE neutral-annoyed at center with dissolve
     AE "Hotsure-san? What's with that look? Your goofy smile is somewhat troubling."
     MC "Hah, it's nice to see you waiting for me; as usual."
     show AE neutral
@@ -1792,7 +1792,7 @@ label AE012:
     scene Office with fade
     MC "All right. Ready for another day."
     MCT "Yup, another day, another stack of papers."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "..."
     "However, today had a different air about it than the day before. There was a bit of anticipation, to be honest, because I could just feel as though I was going to learn something exciting."
     MC "So, how's about it? You promised you would answer any questions I have."
@@ -1805,7 +1805,7 @@ label AE012:
     MCT "So, sports, music-ah, food club form, that goes in the left cabinet."
     MCT "Ok, got it. Just need to remember what all I want to ask, and then I'll know her better."
     "We worked, as usual, for minutes on end, throwing the occasional topic to one another. By the time we finished, we were already deep into a conversation once more."
-    show AE happy with dissolve
+    show AE happy at center with dissolve
     MC "-and the sight of it is just...ngh..."
     AE "Really?"
     MC "H-hooo yeah. That's exactly why I hate peanut butter."
@@ -2032,7 +2032,7 @@ label AE013:
     AE "N-Not quite."
     MC "Eh?"
     "As I looked up to the source of the voice, I saw Shiori-san, standing on her toes while reaching up to apply a poster to an empty wall."
-    show AE neutral-annoyed with dissolve
+    show AE neutral-annoyed at center with dissolve
     MC "S-shiori-san? What's going on up there?"
     AE "Well as you can see, I, nghf...am setting up posters for the refitting, as was discussed earlier."
     show AE neutral
@@ -2045,7 +2045,7 @@ label AE013:
     MC "Alight, sure."
     hide AE with dissolve
     "Taking the stacks in my hands, I lifted them up as Shiori-san plastered the posters across the walls. This continued for a few minutes, with small talk breaking up the monotony every once in awhile."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MC "Well, hey, you were right. Being the president of the student government, really does have a lot to do, eh? Files and posters."
     show AE neutral-annoyed
     AE "Hmpf, well, I'm sure you'll get to appreciate it full hand when you get into a management job at some point."
@@ -2189,7 +2189,7 @@ label AE013:
     AE "No excuses!"
     "Shiori-san grabbed my hand, and I felt each tiny tremble ripple throughout her shaky arms."
     scene Nurse Office with fade
-    show AE sad-2 with dissolve
+    show AE sad-2 at center with dissolve
     "I sat on the small, cushioned bench, paper crinkling beneath my pants as I shifted position. Shiori-san had spent a good five minutes washing and sanitizing her hands as we waited; eventually sitting down next to me and holding my hand, despite my protests that I was fine."
     "After a brief intermission, the nurse walked back in, a woman with long painted fingernails which clacked with every errant movement on her clipboard."
     Nurse "Okay, Hotsure-san, I did a double check on your medical history and the likelihood you have a concussion is minor."
@@ -2277,7 +2277,7 @@ label AE014:
     MC "Oh, I don't really see you, um..."
     AE "No? Okay, over by the window, near the far end of the wall."
     MC "Ah! There you are! Finally."
-    show AE aroused-2 with dissolve
+    show AE aroused-2 at center with dissolve
     "I was greeted with the usually upright and taut Shiori-san now appearing cramped and mousy between a cavalry of black metal drawers."
     MC "Hey, Shiori-san."
     AE "Hotsure-san, good evening. I'd get up to bow, but as you can see, I'm not exactly in a suitable position."
@@ -2286,7 +2286,7 @@ label AE014:
     show AE neutral-annoyed
     AE "Despite my protests, administration is temporarily utilizing the office for storage."
     play sound Thud
-    "*THUNK*" #TODO: replace with SFX?
+    "*THUNK*"
     MC "Ach-Couldn't they find anywhere else?! I can barely move in here."
     AE "Be thankful you're not in my position at least. I can't move without getting, ngh, stuck every few steps."
     "Shiori-san went to walk forward, but found that doing so sandwiched her vast hips between two cabinets. She let out a sigh of exasperation before beginning to scoot her way out."
@@ -2386,7 +2386,7 @@ label AE014:
     MCT "Oh brother."
     hide AE with dissolve
     "Shiori-san quickly strode out of the office, muttering to herself along the way. I let out a sigh of relief. The scene replaying in my mind as-"
-    show AE angry with dissolve
+    show AE angry at center with dissolve
     AE "Who scratched the library door?!"
     MCT "..."
     jump daymenu
@@ -2475,7 +2475,7 @@ label AE015_aftermenu:
     "I positioned my own legs in a way that would allow for greater force."
     MC "Three!"
     "With a quick tug, I pulled Shiori-san free from the cabinets. Once free, the two of us both collapsed to the floor, the force from dislodging her pushing us back."
-    show AE aroused-3 with dissolve
+    show AE aroused-3 at center with dissolve
     play music Schoolday
     AE "Nhg..."
     MC "Ayah...y-you all right?"
@@ -2615,7 +2615,7 @@ label AE015_afterchoice:
 
 label AE016:
     scene Hallway with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     play music Rain
     "Today was the day I said I would meet Shiori-san outside of the office. I was somewhat excited for a bit, this was the first day we would actually be able to spend time one on one without working."
     "I got up and followed Shiori-san once class ended. Where, as promised, she lead me to where we would spend time today."
@@ -2625,7 +2625,7 @@ label AE016:
     MC "...Eh?"
     MCT "This is..."
     scene Library with fade
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MCT "The library? Really?"
     MC "U-um...the library?"
     AE "Yes. It's a good place to spend time, no?"
@@ -2647,7 +2647,7 @@ label AE016:
     MC "Huh? Okay, but what are-"
     hide AE
     "Shiori san walked away and headed over to a small box near the door of the office; one which had until now escaped my notice. With papers in her hand, she walked over to the table and sat across from me."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "All right. That should do it."
     MC "W-Huh? Shiori-san what-"
     MCT "Oh. Oh I get it."
@@ -2766,7 +2766,7 @@ label AE016_after:
     AE "Mhm. Come on. Let's look through these."
     hide AE with dissolve
     "Within a few minutes, we went through all twenty two requests. In the end, we only came up with seven legitimate concerns. But my mind wasn't on that for the moment, because the air in the room had changed."
-    show AE happy with dissolve
+    show AE happy at center with dissolve
     MC "And my sister, my sister, she would always flush the toilet all the time too, and you're saying it's because...pffft-ehehehe."
     "My chuckle was seemingly contagious, as even Shiori-san gave a little smile of amusement."
     AE "Precisely. And that must have drone your father up a wall for water bills."
@@ -2831,7 +2831,7 @@ label AE017:
     "Almost to answer my own question, I caught a glimpse of the spectacled girl looking at me over a small partition."
     MCT "Oh! Oh, she's here already."
     "I went to walk over to where Shiori-san sat, and when I turned the corner I saw her talking to a short girl with large pouty lips."
-    show AE neutral-annoyed with dissolve
+    show AE neutral-annoyed at center with dissolve
     AE "-and after that, I want you to tell her to get her forms in on time if she cares so much. Good? All right, good."
     show AE angry
     "The girl walked in the other direction as I continued to walk over to where Shiori-san sat, her hands massaging the sides of her temples."
@@ -2974,7 +2974,7 @@ label AE018:
     play music Sunset
     "I sat at the windowsill waiting. My feet dangling just slightly off of the floor as I kicked them back and forth. Looking down at them, I was given a slight tunnel vision from my own black locks dangling down a few inches from my face. I looked up to the ceiling, inhaling and letting out a low gust of air from my lips. As I looked back forward, I saw a familiar face slowly heading up the stairs."
     MC "Oy, Shiori-san."
-    show AE happy with dissolve
+    show AE happy at center with dissolve
     AE "Oh, good, Hotsure-san y-"
     "Shiori-san's face swiftly changed to one of concern."
     show AE angry
@@ -3013,7 +3013,7 @@ label AE018:
     MC "All right, cool."
     scene Roof with fade
     "Shiori-san opened the doors, and a nice gust of air swept into the doorway. It was fairly strong, and almost instantly as the wind picked up, Shiori-san's skirt was lifted a few inches as well; giving me a brief view of her behind, squeezed tightly by white panties, before she pulled her skirt back down. Shiori-san cleared her throat."
-    show AE aroused-2 with dissolve
+    show AE aroused-2 at center with dissolve
     AE "Ah, I apologize."
     MC "Oh, no, it's okay."
     MCT "Nose, I swear, if you bleed on me now..."
@@ -3208,7 +3208,7 @@ label AE019:
     "As I walked towards the library, basket under my arm, I was greeted by Shiori-san waiting patiently for me by the door. Standing straight, her glasses reflected the sun as she looked out the window towards the campus."
     MC "Shiori-san, hey!"
     "She turned to me and nodded with respect."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "Good day, Hotsure-san."
     MC "So, ready to hang out again?"
     AE "Yes. Where is it you wish to talk today?"
@@ -3226,7 +3226,7 @@ label AE019:
     AE "...Very well."
     scene Campus Center with fade
     "We walked further until we opened the door to the school, a gust of wind breaking the stagnant air of the school's interior. We continued further, with few other people anywhere around at the time, walking along the pathway until we reached the old tree at the center of the campus."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     AE "Is this the place?"
     MC "Yeah, nice and shaded. This seems like a good spot."
     show AE glasses-2
@@ -3392,7 +3392,7 @@ label AE020:
     scene Office with fade
     play music Sunset
     "As I walked into the office, I was greeted with Shiori-san, kneeling over in order to place some files in a cabinet, butt positioned directly in my line of sight. I looked to the side a moment, before moving over to her. She looked over towards me and gave a small smile."
-    show AE happy with dissolve
+    show AE happy at center with dissolve
     AE "Nice to see you, Hotsure-san."
     MC "Oy, Shiori-san!"
     MCT "That's weird...isn't she usually in the desk?"
@@ -3535,7 +3535,7 @@ label AE020_c1_1:
     hide AE with dissolve
     "I walked out of the office for the final time. My chest was somewhat heavy, but I feel like I made the decision that was in my heart."
     if getAffection("AE") >= 8:
-        show AE sad-2 with dissolve
+        show AE sad-2 at center with dissolve
         AE "Um, w-wait, Hotsure-san."
         "Shiori-san came bounding from behind me, and put a hand on my shoulder."
         MC "...Yeah?"
@@ -3614,11 +3614,11 @@ label AE020_c1_2:
 label AE021:
     scene Classroom with fade
     "When I walked into class today, Shiori-san was the first in the room. Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
-    show AE neutral at Position(xpos=0.25) with dissolve #not sure if aroused, surprised or sad/shy
+    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve #not sure if aroused, surprised or sad/shy
     MC "U-um...Shiori-cha-"
     "As I was about to speak, Alice walked into the room with Aida in tow."
-    show PRG neutral at Position(xpos=0.90) with dissolve
-    show BBW happy at Position(xpos=0.75) with dissolve
+    show PRG neutral at Position(xpos=0.90, xanchor=0.5, yalign=1.0) with dissolve
+    show BBW happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Ohoho, now what's going on here?~"
     MC "E-eh? Oh, Nikumaru-san, good morning."
     if getAffection("BBW") < 0:
@@ -3636,14 +3636,14 @@ label AE021:
         BBW "Bit of advice...you'll catch pneumonia if you stay to close to the ice queen. I'd recommend keeping your distance a bit for fear of frostbite."
         MC "...I'll keep that in mind."
         if getAffection("PRG") > 0:
-            show PRG neutral at Position(xpos=0.25) with dissolve
+            show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
             PRG "H-hi, Hotsure-san."
             MC "Hey, Kodama-san."
             "Aida gave a little smile. It felt nice to know the whole school wasn't against me."
             hide PRG with dissolve
             hide BBW with dissolve
     else:
-        show BBW neutral with dissolve
+        show BBW neutral
         BBW "G-good morning, Hotsure-san."
         "Aida shrunk back a bit and gave a tiny smile. I reciprocated with a nod and a smile as well."
         MC "Good morning, Kodama-san."
@@ -3660,6 +3660,7 @@ label AE021:
         hide AE with dissolve
         hide BBW with dissolve
         hide PRG with dissolve
+    show HR neutral at center with dissolve
     "Tashi-sensei walked in the room, and after standing and bowing; as well as opening the door for Honoka, we began our lessons...however there was a problem. I couldn't help it, but I felt like I was being watched."
     "My attention was drawn to the picture of the second president of Japan on the wall when I noticed something...bright beaming glasses staring at me on the reflective glass. I looked down to my desk."
     MCT "What the..."
@@ -3668,7 +3669,8 @@ label AE021:
     hide AE
     HR "-of 1973. Ok. That should be all for today. Your homework is chapter five page eight."
     "Tashi-sensei nodded, and walked over to stand by the door."
-    show AE neutral with dissolve
+    hide HR with dissolve
+    show AE neutral at center with dissolve
     AE "Stand."
     "The class stood up. Honoka taking a little bit longer than the rest."
     AE "...Bow."
@@ -3676,9 +3678,11 @@ label AE021:
     "While I would usually take in a nice view, I instead stared intently at the picture as I bowed. Sure enough, Shiori-san's eyes gazed right at mine all while we bowed."
     MCT "That was a close one."
     hide AE with dissolve
-    TS "Aright, all done? Good. See you all tomorrow."
+    show HR neutral at center with dissolve
+    HR "Aright, all done? Good. See you all tomorrow."
+    hide HR with dissolve
     "Everyone began to pick up their bags and Shiori placed her notebook under her arm. She began to leave, but I caught up with her just in time."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MC "U-um, Shiori-san?"
     AE "Hm? Yes?"
     MC "E-earlier...in class, I noticed you staring really intently at the picture on the wall."
@@ -3728,7 +3732,7 @@ label AE021:
     "I walked over to the wall to see the girl with the rosy pink lips scribble on a notepad, squatting behind the wall. I watched on as she kept writing, only catching a few words here and there. She pulled out some chapstick and began applying it before continuing to write."
     "*Scribble scribble scribble*"
     MC "Yuki-chan?"
-    show Yuki neutral with dissolve
+    show Yuki neutral at center with dissolve
     Yuki "Eep!"
     MC "What are you doing? Why are you hiding?"
     show Yuki sad
@@ -3749,7 +3753,7 @@ label AE021:
     "I turned to see Daichi hiding behind a plant."
     MCT "Ah. I see."
     "I pursed my lips and turned back around slowly, pretending I didn't see him."
-    show RM neutral with dissolve
+    show RM neutral at center with dissolve
     RM  "O-oy, oy! I said 'pssst' which makes you socially obligated to acknowledge me!"
     MC "What do you wan-"
     RM "They're after you."
@@ -3757,7 +3761,7 @@ label AE021:
     "Daichi grabbed me by the hair and walked quickly across the corner, causing me to stomp awkwardly in his direction."
     RM "Here, into the mens bathroom. They won't follow us here."
     scene Bathroom with fade
-    show RM neutral with dissolve
+    show RM neutral at center with dissolve
     MC "Ach-g-get your hands off ma-!"
     RM "Sh! Sh-sh-sh-sh...aight we're clear."
     MC "What the hell was that about?! Why is your sister following me?! What did you do?!"
@@ -3841,7 +3845,7 @@ label AE022:
     "I turned a corner, and sure enough..."
     "*Tap Tap*"
     "I did a quick spin around a waiting Yuki-chan."
-    show Yuki sad with dissolve
+    show Yuki sad at center with dissolve
     Yuki "Eek!"
     MC "Paaardon me~"
     "As I began to walk away, Yuki-chan decided to follow in suit silently."
@@ -3887,24 +3891,24 @@ label AE022:
     MC "Ach...I deserved that..."
     MC "No. No I didn't."
     scene Classroom with fade
-    show AE aroused-2 with dissolve
+    show AE aroused-2 at center with dissolve
     "I walked into the room to see Shiori-san, who straightened up and looked straight ahead to the board."
     MCT "Ah...just like yesterday then?"
     hide AE with dissolve
     BE "Pfft, ehehe..."
     MC "Hm?"
     "I turned to see Honoka, giggling into her hand."
-    show BE happy at Position(xpos=0.75) with dissolve
+    show BE happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     MC "Good morning, Honoka!"
     show BE neutral
     BE "Hey, Hotsure-san...sooo, what's with the shades?"
     MC "Huh, oh, these? They-"
-    show AE neutral-annoyed at Position(xpos=0.25) with dissolve
+    show AE neutral-annoyed at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     AE "Are against dress code, as well as disallowed in class."
-    show FMG happy at Position(xpos=0.5) with dissolve
+    show FMG happy at center with dissolve
     FMG "Ooooo."
     MC "Ah...yeah. Right."
-    show AE sad with dissolve
+    show AE sad
     AE "...Sorry, Hotsure-san."
     FMG "OOOOOOO!"
     show AE neutral-annoyed
@@ -3915,7 +3919,7 @@ label AE022:
     hide BE with dissolve
     hide FMG with dissolve
     hide AE with dissolve
-    show HR neutral with dissolve
+    show HR neutral at center with dissolve
     HR "All right, all right, sit down."
     AE "Stand."
     HR "Or, yeah, that."
@@ -3930,7 +3934,7 @@ label AE022:
     scene black with fade
     "Last night."
     scene Dorm Interior with fade
-    show RM neutral with dissolve
+    show RM neutral at center with dissolve
     RM "-and knock with tokyo ondo."
     MC "Eh? Really? Why that song?"
     RM "It works. Trust me."
@@ -3990,7 +3994,7 @@ label AE022:
     "{i}Keisuke, President following. Writing in notebook. Contents unknown.{/i}"
     "I looked around a bit more before doing as instructed and folding the paper up and putting it in my pocket. I put my glasses on so that nothing would go wrong while I scanned the area for Daichi to reveal himself."
     "I scanned around and, with one hand, knocked the tune of the tokyo ondo on a metal grate. After waiting a few minutes, out came Daichi from the grate on the opposite side of the corner my back was leaning against."
-    show RM angry with dissolve
+    show RM angry at center with dissolve
     RM "Virtually untouchable? Really? Dude, c'mon."
     MC "I was trying to show my bravery in the face of-"
     "Daichi peered around the side of the corner and looked at me the same way I look at him whenever he tells me about the schools various conspiracies."
@@ -4031,7 +4035,7 @@ label AE022:
     MC "..."
     AE "..."
     AE "Ngh."
-    show AE aroused-3 at Position(xpos=0.75) with dissolve
+    show AE aroused-3 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     AE "Hmph."
     show RM angry
     RM "She was stalking us?!"
@@ -4120,7 +4124,7 @@ label AE022:
     MC "...Pheeww..."
     RM "Is she gone yet?"
     MC "H-Ach!"
-    show RM neutral with dissolve
+    show RM neutral at center with dissolve
     RM "Wooo, man. And I thought I had trust problems."
     MC "Where were you?!"
     show RM angry
@@ -4137,7 +4141,7 @@ label AE022:
 
 label AE023:
     scene Classroom with fade
-    show HR neutral with dissolve
+    show HR neutral at center with dissolve
     HR "-and essentially, you end up with an absolute mess called the Treaty of Versailles."
     "Class had been going by fairly normally. My eyes had begun to flutter as fatigue began to set in. I looked up towards Shiori-san, who was sitting with her usual composed demeanor."
     GTS "U-um."
@@ -4147,19 +4151,19 @@ label AE023:
     "Tashi-san looked off to the side of his face, noticing the spot instantly. With one quick, nearly sickening swoop of his cow like tongue he licked the spot clean in an instant, causing Alice to almost audibly gag."
     HR "Eh...should be good for today. Matsumoto-san, do-"
     hide HR with dissolve
-    show AE neutral-annoyed with dissolve
+    show AE neutral-annoyed at center with dissolve
     AE "Stand."
     HR "Okay, well, there we go then."
     "The class stood up with the sound of metal scraping against tile."
     AE "Bow."
     hide AE with dissolve
-    show HR neutral with dissolve
+    show HR neutral at center with dissolve
     "The class bowed down in respect as Tashi-sensei merely nodded and put his hands in his pockets. As I bent, however, my eyes were fixed elsewhere."
     MCT "I see someone will be getting a new skirt soon."
     HR "Alright, see you all tomorrow."
     hide HR with dissolve
     "As we grabbed our bags to leave, I listened around for what everybody was saying. Aside from the usual banter, not much had seemed to shift that much since the day before."
-    show BE neutral with dissolve
+    show BE neutral at center with dissolve
     BE "Yo, Kei-kun!"
     MC "Oy, what's up, Honoka?"
     show BE happy
@@ -4171,7 +4175,7 @@ label AE023:
     BE "Hey, hey! Yamazaki-chan, put these on for a sec!"
     hide BE with dissolve
     "As I turned around to leave, I came face to face with Shiori-san, waiting expectantly."
-    show AE aroused-2 with dissolve
+    show AE aroused-2 at center with dissolve
     AE "U-um...hello, Hotsure-san."
     MC "Hey, Shiori-san, what's up?"
     AE "Would you care to walk with me? To the dorms, at least?"
@@ -4179,7 +4183,7 @@ label AE023:
     MC "Oh! Well, uh...yeah, sure! Come on, I'll walk you to your room."
     scene Hallway with fade
     "As we walked, we had gotten into a conversation about our best attributes to each other. It started off, ironically enough, after Shiori-san got quiet once she realized her massive behind was bumping into me after walking so close."
-    show AE happy with dissolve
+    show AE happy at center with dissolve
     AE "-and furthermore, you have a very nice sense of humor."
     MC "So then...what is this, by the way?"
     show AE neutral
@@ -4383,7 +4387,7 @@ label AE024:
     MCT "This is bad. If th-"
     "{i}Creeeak{/i}"
     "I watched wide eyed as the metal door creaked open. I hopped up from the bench, and patted down the front of my pants. As Shiori-san emerged from the staircase, she stepped forward and slowly closed the door behind her."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     MCT "There she is."
     MC "U-um...hey."
     AE "...Hi."
@@ -4471,11 +4475,11 @@ label AE024_c1_1:
         MC "Shiori-san...Shiori-san, wait!"
         AE "..."
         "She stopped on the first step of the stairwell, not looking back."
-        show AE neutral with dissolve
+        show AE neutral at center with dissolve
         AE "...Yes, Hotsure-san?"
     else:
         MC "But...Shiori-san."
-        show AE neutral with dissolve
+        show AE neutral at center with dissolve
         AE "Mm, Matsumoto-san, please."
     MC "I...I don’t understand. What happened…"
     show AE sad-2
@@ -4628,7 +4632,7 @@ label AE025:
     scene Dorm Interior with fade
     play music Rain
     MC "Pheeww...okay...it's all going to turn out alright."
-    show RM neutral with dissolve
+    show RM neutral at center with dissolve
     RM "Are you ready to go?"
     MC "Yeah... yeah, I'm ready."
     MCT "Today's the day."
@@ -4704,7 +4708,7 @@ label AE025:
     show Campus Center with fade
     "I opened the door to the courtyard, wind whipping about me as I looked towards the trees pink petals, falling gently to the earth."
     MCT "Okay...there she is."
-    show AE neutral with dissolve
+    show AE neutral at center with dissolve
     play music AE
     "Shiori-san was waiting there, bag under her arm, looking around for me. The moment she met my eye, she straightened up while putting her fist up to her mouth to clear her throat."
     AE "H-Hotsure-san."
@@ -4954,7 +4958,7 @@ label AE026:
     "She looked up back at me, a light blush covering her face as she rubbed her arm with her other hand."
     show AE aroused #flustered
     AE "Good morning, Hotsure-san."
-    show FMG angry at Position(xpos=0.75) with dissolve
+    show FMG angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     FMG "O-oy! You chewed me out for almost being late, why does he get a pass?!"
     show AE neutral
     AE "O-oh! Yes. Hotsure-san, you were almost late. It's b-best you not make a habit of this."
@@ -4986,7 +4990,7 @@ label AE026:
     scene Classroom with fade
     TS "-Okay. Any questions? I'm leaving either way. See you tomorrow."
     "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
-    show PRG sad at Position(xpos=0.75) with dissolve
+    show PRG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "N-N-Nikumaru-san, are you sure you don't need me? I don't mind, really-"
     show BBW neutral at Position(xpos=0.25) with dissolve
     BBW "Yes, yes, Kodama-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
@@ -5247,7 +5251,7 @@ label AE027:
     FMG "Did the two of you bang yet?!"
     MC "Eh?! What even-"
     "As I talked, Shiori-chan walked into the room with a look of surprise and confusion on her face."
-    show AE angry at Position(xpos=0.55) with dissolve
+    show AE angry at Position(xpos=0.55, xanchor=0.5, yalign=1.0) with dissolve
     AE "What is going-?!"
     show AE neutral
     show BE neutral
@@ -5542,7 +5546,7 @@ label AE101:
     "Despite my protests, Akira-san picked me up by the shirt with one hand and plopped me down on a bench."
     FMG "Y'know Hotsure-chi, if you wanna build up muscle right, you gotta start off a bit slow, hell, someday you may be able to do more than a seven year old!"
     "Akira-sans boisterous laugh echoed through the gym, as I turned a shade of crimson. I covered my face with a hand and looked to the side to hide my shame when I came across someone who I would have never expected to see here. Akira-san, however, appeared to notice first."
-    show FMG neutral at Position (xpos=0.25) with dissolve
+    show FMG neutral at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     FMG "OOOOOI, Matsumoto-chi, what's up!"
     show AE neutral at Position (xpos=0.75) with dissolve
     "Shiori-san looked over towards our direction and, in acknowledgement to Akira-san's waving, nodded before going back to her clipboard."
@@ -5614,8 +5618,8 @@ label AE102:
     AE "It is indeed the last time, Mizutani-san, because you WILL be wearing your uniform properly. If you would have listened to me the first time, this wouldn't have been an issue."
     FMG "If you listened the first time, you know I'm not going to button it, not for you or anyone! What is the big deal, it's not like I'm wearing something that shows anything I'm not supposed too!"
     MCT "Ohhh boy, this looks like trouble. If I don't intervene soon these two are going to be going at it for hours."
-    show FMG angry at Position (xpos=0.25) with dissolve
-    show AE angry at Position (xpos=0.75) with dissolve
+    show FMG angry at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE angry at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     AE "It's not about what you're wearing, it's about what you're NOT wearing. The student handbook page 45-"
     MC "H-hey girls, what's going on?"
     FMG "Little miss honor role here is bugging me about how my shirt isn't buttoned. Oh and by the way, I've been using that handbook to keep the table in my dorm room balanced!"
