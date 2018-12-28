@@ -468,7 +468,7 @@ label FMG005_c2:
     show FMG happy
     FMG "Ha, should have guessed. I'm amazed you can see as of now."
     MC "H-Hey, it's not {i}that{/i} long!"
-    FMG "Nah, you're right, I'll get longer!"
+    FMG "Nah, you're right, it'll get longer!"
     "Akira burst into laughter, already forgetting the despair that entrapped her only minutes ago. Once she finished she looked back at me."
     show FMG neutral
     FMG "All right, if it's all the same to you I'd rather be alone right now."
@@ -1060,8 +1060,8 @@ label FMG011:
         FMG "Well, wanna take your anger out on these zombies?"
         "Alice's expression remained like she was smelling something slightly unpleasant, but she walked up to Akira and took the proffered gun."
         BBW "Let me guess, I point and shoot anything that moves?"
-        FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that  look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot."
-        "She didn't explain how to reload, so once Alice had emptied her clip she continued firing to no avail, with increasing irritation." #had suggestion
+        FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
+        "She didn’t have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
         "Eventually the zombies got to her, the screen turning red with blood splotches until the words ‘Game Over' came up."
         show FMG sad 
         FMG "..Um, you shoot off the screen...to reload. I'm sorry."
@@ -1457,46 +1457,44 @@ label FMG018:
     play music Schoolday
     "Morning class... Some would argue that no one would be awake enough to learn anything so early, but luckily this time, the teacher planned something different for that day."
     show HR neutral with dissolve
-    HR "All right class, today is the planed cooking session in the cooking class. For those who don't remember, to better prepare yourselves for your self-sufficient futures, you will have the next three hours to test your cooking skills."
-    HR "What you make will not lower your grade, but if you do an excellent job you will receive extra credit. Now get your stuff together and Kobayashi-san and I will explain more there."
+    HR "All right class, today is the planned cooking class. For those who don't remember, to better prepare yourselves for your self-sufficient futures, you will have the next three hours to test your cooking skills."
+    HR "The food you choose to make will not lower your grade, but how well you make it. Now get your books and bags together because you’re not coming back and Kobayashi-san and I will explain more there."
     hide HR with dissolve
     "Once he was done explaining, we all prepared to leave..."
     "..."
     "Except Akira... who was sleeping on her desk... again."
     MC "Akira wake up, we gotta go."
     FMG "Ugh... Get your hands off my pizza Reginald... I'm the pizza queen..."
-    MCT "Geez What kind of dreams does she have? Wait I'm getting distracted."
+    MCT "Geez What kind of dreams does she have? Wait, I'm getting distracted."
     MC "Akira, wake up!"
     show FMG neutral with dissolve
-    FMG "Wha... Oh, good morning, Kei-Kun. I had this dream where I was the king of Italy and there was..."
+    FMG "Wha... Oh, good morning, Kei-Kun. I had this dream where I was the queen of Italy and there was..."
     show FMG sad
-    FMG "...Uh, where's the rest of the class? Don't tell me it's Sunday and I groggily walked to class again."
-    MC "No, the class is going to the cooking classroom to do test our cooking skills."
+    FMG "...Uh, where's the rest of the class? Don't tell me it's Sunday and I walked to class without checking again."
+    MC "No, the class is going to the cooking classroom to do test our culinary skills."
     show FMG neutral
-    FMG "Oh that's cool..."
+    FMG "Oh, that's cool..."
     show FMG surprised
-    FMG "Wait what?!"
+    FMG "Wait, what?!"
     MC "Um yeah, we're going to cook."
     show FMG sad
-    FMG "But Kei-Kun, I cannot cook! Every time I do it catches on fire!"
+    FMG "But Kei-Kun, I can't cook! Every time I do it catches on fire!"
     MCT "Well... Honestly I am not that surprised by this discovery..."
     if isEventCleared("FMG004"):
         MCT "Especially when she couldn't even make a simple protein shake."
-    MC "Well, we don't know what exactly is happening. For now let's get with the rest of the class before they noticed we're not there."
+    MC "Well, we don't know what exactly is happening. For now let's get with the rest of the class, before they notice we're not there."
     show FMG neutral
     FMG "Okay... but I'm warning you, it will not come out edible."
     scene Cooking Classroom with fade
     "We managed to catch up with the rest of the class before anyone (especially Shiori) figured out we were behind."
-    "Once we were at the cooking class, we waited till the teachers began explaining."
-    show HR neutral with dissolve
-    HR "So, here's what we have planned, you will group up in groups of three to create any dish you can find, be it from the cookbooks or online."
-    hide HR with dissolve
-    "As the teachers were explaining, Akira pulled me to aside."
+    "Once we were at the cooking class, we waited till the cooking teacher began explaining."
+    Takamura "So, here’s what we have planned, you will team up in groups of three to create any dish you can find a recipe for, be it from the cookbooks here or online."
+    "As the teachers were explaining, Akira pulled me aside."
     show FMG neutral with dissolve
-    FMG "Okay Kei-Kun, there is no way I'm going to be able to make anything without help, so can you please help me."
-    MC "Oh. Sure I'll be happy to."
+    FMG "Okay Kei-Kun, there is no way I'm going to be able to make anything without help, so can you please help me?"
+    MC "Oh. Sure, I'll be happy to."
     FMG "Thanks, but what are we going to do about a third person?"
-    "That was the question, most, if not all students were starting to partner up. The thought of Adia being a suitable partner popped up, however she was taken almost right away by Alice, so that was out of the question."
+    "That was the question most, if not all, students were asking as they started to partner up. The thought of Adia being a suitable partner popped up, however she was taken almost right away by Alice, so that was out of the question."
     MC "Looks like the only ones who don't have a partner are Shiori, Naomi, Honoka, and that guy who always eats seaweed in the back of class."
     FMG "Well we gotta pick a third person, so who should it be?"
     
@@ -1511,22 +1509,23 @@ label FMG018:
 label FMG018_c1_1:
     $setEventCount("AE", 1)
     MC "Well, let's ask Matsumoto, maybe she can help."
-    FMG "If you say so, I have my doubts though."
-    "Ignoring Akira's doubts, I followed suit and walked towards Shiori, for her part she was by herself, while looking deep in thought."
+    FMG "If you say so... I have my doubts, though."
+    "Ignoring Akira's doubts, I followed suit and walked towards Shiori. For her part, she was still by herself, looking deep in thought."
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show AE neutral at Position(xpos=0.75) with dissolve
-    MC "Hey Matsumoto, what's on your mind? Akira and I are teaming up, do you need a partner?"
+    MC "Hey Matsumoto-san, what's on your mind? Akira and I are teaming up, do you need a partner?"
     AE "Hmm..."
     AE "I can't say most of these recipes are to my tastes. Perhaps something I can recall from memory, then?"
     MC "Sure. Whatever works. Though I figured you would want to cook by the exact recipe-"
-    MC "You remembered the exact recipe."
+    show AE neutral-smug
+    MC "You remember the exact recipe."
     AE "Of course."
     show FMG happy
     FMG "Wow, that's awesome of you!"
     AE "What say you to a plate of 'Himmel und Erde', hm?"
     show FMG neutral
     FMG "Eh? H-Hey, was that French? Are we gonna make French food, because I can't even cook cereal right."
-    AE "No, that was German. It means “Heaven and Ea-”"
+    AE "No, that was German. It means 'Heaven and Ea-'"
     show AE surprised
     AE "Did you just say you can't make cereal?"
     FMG "Yeah, my mom never taught me how to cook it."
@@ -1536,7 +1535,7 @@ label FMG018_c1_1:
     show AE neutral-eyebrow
     AE "..."
     show AE neutral
-    AE "T-The recipe, um... the recipe we'll make calls for black pudding, mashed potatoes, applesauce, and cooked onions. Fairly straight forward, no unnecessary bells and whistles."
+    AE "T-The recipe, um... the recipe we'll make calls for black pudding, mashed potatoes, applesauce, and cooked onions. Fairly straightforward, no unnecessary bells and whistles."
     MC "Wait, what's black pudding?"
     FMG "You can cook onions? I thought they were just a hamburger topping."
     AE "Yes. Yes you can."
@@ -1549,28 +1548,26 @@ label FMG018_c1_1:
     FMG "I'm cool with that, but what's a groat?"
     MC "I don't even know where we'd get pork blood!"
     AE "Well, I *believe* that it should be among the pork products. Check with the teacher, if you will. As for the other ingredients, we have those right here."
-    FMG "Alright, guess I'll go grab the ingredients then, Kei-kun, maybe do whatever Shiori tells you."
+    FMG "All right, guess I'll go grab the ingredients then. Kei-kun, maybe do whatever Shiori tells you."
     scene black with fade
     "After a discussion with a confused teacher, I later found that the fat, blood, and other rendered parts of the animals could be found in the school kitchen."
-    "At the very least, at least I know the food here's fresh."
+    "At the very least, I know the food here's fresh."
     scene Cooking Classroom with fade
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show AE neutral at Position(xpos=0.75) with dissolve
     MC "Yo! I'm back with the blood."
     AE "Ah, splendid. We've been working on the mashed potatoes."
     FMG "Yeah! Check *this* out."
-    "Akira picked up an unpeeled potato and threw it up in the air, punching it with such great force that the chunky remains splattered into a bowl."
-    MC "Ah...are we-"
-    AE "No, I made a separate bowl, that one is for her own amusement."
-    MC "Ah."
-    FMG "Thanks again Shiori! I feel like I'm contributing!"
-    AE "Aha...Well, if you'd like to contribute more the how about coring the apples for the applesauce? There should be a device for it under the kitchenware."
+    "In her excitement to help, Akira picked up an unpeeled potato and placed the potato between her forearm and upper arm and mashes it with a bicep flex, with such great force that the chunky remains splattered into a bowl."
+    if getAffection("FMG") > 12:
+        MCT "Huh... that's... oddly interesting."
+    AE "Aha...Well, if you'd like to contribute more, then how about coring the apples for the applesauce? There should be a device for it under the kitchenware."
     MC "Yeesh, this place has everything."
     AE "I'm honestly surprised. I've yet to find any thing we need that isn't here. I'm glad the increase to the culinary budget is going to good use."
     FMG "Yet somehow we still can't get decent coffee in the cafeteria. Anyways, where are those apples?"
-    AE "Over near the other fruits on the counter. I'll get the cinnamon. "
+    AE "Over near the other fruits on the counter. I'll get the cinnamon for the apples."
     "After some gruesome time cooking, we finally completed the dish Shiori assigned to us. Each turned out well... about as well as we could hope, at least."
-    AE "Alright, I believe that should be all. Now all we need is to wait for our grades after a quick test of quality."
+    AE "All right, I believe that should be all. Now all we need is to wait for our grades after a quick test of quality."
     FMG "Woo!"
     MC "Eheheh..."
     show FMG happy
@@ -1579,29 +1576,29 @@ label FMG018_c1_1:
     "After a moment, Mrs. Takamura came over to test our individual plates, starting with Shiori-san."
     Takamura ".... Mm... very nice! What did you say this was?"
     AE "Himmel Und Erde, ma'am."
-    Takamura "Splendid! I'm quite the fan of Italian food."
+    Takamura "Splendid!"
     AE "... Indeed."
     Takamura " Keisuke, good work as well. A bit heavy on the cinnamon, but that's okay."
     MCT "Yes!"
-    Takamura "And... *ghk*... Mizutani-san..."
+    Takamura "And... Mizutani-san..."
     Akira "Nehehe~ It'll be fine!"
-    Takamura "Y-You're right, it can't be as bad as the red bean paste and mayo protein shake from earlier in the semester..."
+    Takamura "Y-You're right, it can't be that bad..."
     Takamura "..."
     Takamura " ... Passable!"
     $setAffection("FMG", 2)
     show FMG happy
     FMG "YES! YEAH! WOO!"
-    Takamura "Hmm, a bit heavy on the cinnamon- *urch*... especially in the mashed potatoes... but passable!"
+    Takamura "Hmm, a bit heavy on the cinnamon- *urch*... but passable!"
     "Shiori let out a sigh, whether out of disappointment or relief, I wasn't sure."
     FMG "Finally! I cooked something that didn't taste like ash!"
     show FMG neutral
     FMG "Shiori, thank you for helping us, I ain't exactly the best cook!"
     FMG "I mean, ask me to help hook up a cpu board to a switching power supply for an arcade cabinet any time, but for the life of me I can't cook."
-    AE "No worries, Mizutani-san. Please, if you need help on group projects in the future, don't hesitate to-"
+    AE "Think nothing of it, Mizutani-san. Please, if you need help on group projects in the future, don't hesitate to-"
+    show FMG happy
     show AE sad
     AE "I've made a terrible mistake, haven't I?"
-    show FMG happy
-    FMG "The worst!"
+    FMG "Oh, you worry too much, how bad could helping me be?"
     AE "Nuugh..."
     jump daymenu
 
@@ -1609,19 +1606,23 @@ label FMG018_c1_2:
     $setEventCount("GTS", 1)
     MC "Let's ask Naomi, she might be a good cook."
     FMG "How would you know that?"
-    MC "I don't know, a feeling I guess."
-    FMG "I would prefer not to have this be based on a feeling Kei-kun."
-    MC "Look, let's just ask her okay?"
+    if getAffection("GTS") > 4:
+        MC "Well, from what I’ve seen, she’s pretty domestic, and knows how to grow food... "
+        FMG "Domestic doesn’t exactly mean she’s a good cook."
+    else:
+        MC "I don't know, She has a green thumb, so she might be good at cooking, I guess."
+        FMG "I would prefer not to have this be based on some basic knowledge, Kei-kun."
+    MC "Look, let's just ask her, okay?"
     FMG "Fine, not like we have a lot of options. "
     "With that discussion out of the way, we headed towards Naomi."
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show GTS neutral at Position(xpos=0.75) with dissolve
     MC "Hey Yamazaki-san, how's it going?"
-    GTS "Oh, hello there Hotsure-san and Mizutani-san. I'm doing well, though I'm currently in need of partners."
-    MC "Well we need a third person, you can join us if you want."
+    GTS "Oh, hello there Hotsure-san, Mizutani-san. I'm doing well, though I'm currently in need of partners."
+    MC "Well, we need a third person, would you like to join us?"
     GTS "Thank you, I'd be glad to. Is there anything you two have in mind to cook?"
     MC "Not... really. We were more looking for help in the actual cooking because..."
-    FMG "I can't cook. Just plain can't. I can't even cook cereal right I'm that bad."
+    FMG "I can't cook. Just plain can't. I can't even cook cereal right, I'm that bad."
     GTS "I... see."
     show GTS sad
     GTS "As for me, I am sorry to say but I am not very good either."
@@ -1636,13 +1637,13 @@ label FMG018_c1_2:
     FMG "Yeah, I'll try, hopefully I don't burn it."
     scene black with fade
     "We took our positions after that, Naomi took care of the noodles, Akira was in charge of the broth, and I was handling the extra bits..."
-    "...and somehow we messed up. The noodles were undercooked, the extras were lacking because others had the same raman idea, and the broth was low and tasted burnt somehow."
+    "... and somehow we messed up. The noodles were undercooked, the extra toppings like mushrooms and green onions were less than the recommended amount because others had the same ramen idea, and the broth was low and tasted burnt somehow."
     scene Cooking Classroom with fade
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show GTS neutral at Position(xpos=0.75) with dissolve
     FMG "... Well, this turned out better than I thought."
     show GTS sad
-    GTS "Again, I am sorry at my lack of experience cooking."
+    GTS "Again, I am sorry for my lack of experience cooking. I... never had to cook at home."
     show FMG angry
     FMG "... Don't worry about this, I don't blame *you*."
     MCT "I get the feeling Akira is upset with me... though I guess I did made a decision based on a feeling."
@@ -1650,10 +1651,10 @@ label FMG018_c1_2:
 
 label FMG018_c1_3:
     $setEventCount("BE", 1)
-    MC "Hm, I wonder if Honoka cooks?"
+    MC "Hmm, I wonder if Honoka cooks?"
     FMG "How would I know? For all I know she could eat and drink nothing but milk products."
     MC "Still, it can't hurt to ask her."
-    FMG "I guess, she doesn't really look like a chef to me though."
+    FMG "I guess, she doesn't really look like a chef to me, though."
     "We walked towards Honoka, who was staring at a block of cheese."
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show BE neutral at Position(xpos=0.75) with dissolve
@@ -1670,12 +1671,12 @@ label FMG018_c1_3:
     MC "Alright, we should have enough ingredients for apple pie. I'll take care of the crust, Honoka can make the filling, and Akira can get the ingredients in order."
     FMG "Fine by me! Be back in five minutes."
     scene black with fade
-    "After she got what we needed, we put together a pie in the span of a few hours..."
-    "...But the end result was left to be desired."
+    "After she got what we needed, we put together a pie and cooked it for 45 minutes..."
+    "...But the end result left much to be desired."
     scene Cooking Classroom with fade
     show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show BE sad at Position(xpos=0.75) with dissolve
-    FMG "... Uh, I don't think it's supposed to look so... undercooked."
+    FMG "... Uh, I don't think it's supposed to look so... undercooked, I get the feeling we didn’t use the right centigrade."
     MC "Maybe you're right, Honoka what recipe were you following anyways?"
     show BE happy
     BE "..."
@@ -1686,22 +1687,26 @@ label FMG018_c1_3:
     FMG "T-Then what language was it?!"
     show BE happy
     BE "I think French? It looked the yummiest!"
-    MC "... Honoka, you failed your French class!"
+    MC "... French? You can read French?"
+    BE "Yeah, I had it as an elective!"
+    MC "Did you pass?"
     show BE neutral
-    BE "Look. It had all the measurements for the ingredients easy to read. Maybe we just didn't add them in the right order."
+    BE "...Well, no, but..."
+    BE "Look. It had all the measurements for the ingredients, easy to read. Maybe we just didn't add them in the right order."
     $setAffection("FMG", 1)
     show FMG neutral
     FMG "You know what, at least we actually made something. It could have come out worse than this."
-    MC "You have a point Akira. Honoka, thank you for planning things out."
+    MC "You have a point, Akira. Honoka, thank you for planning things out."
     FMG "Yeah, you've been a big help."
-    BE "Hey well thanks for letting me help. Okay, so who else wants a slice?"
+    BE "Hey, well, thanks for letting me help. Okay, so who else wants a slice?"
     FMG "... Uh... I guess?"
     "Akira grabbed a slice, she took a bite and..."
     show FMG sad
-    FMG "... I don't know how, but it takes like 2 day old apple sliced pancakes..."
+    FMG "... I don't know how, but it tastes like two day old apple slice pancakes..."
     show BE sad
-    BE "Where are you getting that from? I think it's like cold mac and cheese, and it's only been out of the oven for a little bit..."
+    BE "Where are you getting that from? I think it's like cold mac and cheese, even though it's only been out of the oven for a little bit..."
     MC "It tastes more like ramen noodles boiled in orange soda."
+    "And yet somehow, we got a C+ for our strange pie… at least Akira was happy about it."
     jump daymenu
 
 label FMGBBW001:
