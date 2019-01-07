@@ -74,41 +74,45 @@ init 2 python:
     datelibrary['BBW_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['BBW_size_2'] = datetime.date(2005, 4, 10)
     
+    #Core
     eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"],                                                      "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": []}
-    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"],                                       "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"],                         "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"],                          "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
+    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"],                                       "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": []}
+    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"],                         "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"],                          "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": []}
+    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"],                                           "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",              "conditions": []}
+    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"],                                     "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",              "conditions": []}
+    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"],                                        "location": "musicclassroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"],                                             "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
+    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"],                        "location": "pool", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                   "conditions": []}
+    eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"],                                              "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": True, "startdate": "BBW_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"],                                                  "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"],                                   "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"],                                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"],                                                 "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",               "conditions": []}
+    eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"],                                    "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"],                                                "location": "dormexterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"],                           "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}    
+    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"],                                                      "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"],                                                "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"],                                                 "location": "pool", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",              "conditions": []}
+    eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"],                                                "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"],                                             "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"],                                               "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"],                                                  "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",           "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
+    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"],                                                       "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
+    eventlibrary['BBW026'] = {"name": "The Trial of Smarts", "girls": ["BBW"],                                                  "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"],                                                         "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"],                                            "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BBWend'] = {"name": "Alice end", "girls": ["BBW"],                                                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",             "conditions": []}
+
+    #Optional
     eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"],                            "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"],   "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": [[ConditionEnum.EVENT, "BBW001"], [ConditionEnum.FLAG, "BBW005_ondiet"]]}
-    eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"],                         "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.EVENT, "BBW001"], [ConditionEnum.FLAG, "BBW005_workout"]]}
-    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"],                                           "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",              "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"],                                     "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",              "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"],                                        "location": "musicclassroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BBW006"]]}
-    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"],                                             "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": [[ConditionEnum.EVENT, "BBW001"], [ConditionEnum.FLAG, "BBW008_extrascene"]]}
-    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"],                        "location": "pool", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                   "conditions": [[ConditionEnum.EVENT, "BBW008"]]}
-    eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"],                                              "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": True, "startdate": "BBW_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.EVENT, "BBW007"]]}
-    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"],                                                  "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"],                                   "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BBW010"]]}
-    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"],                                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"],                                                 "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",               "conditions": [[ConditionEnum.EVENT, "BBW013"]]}
-    eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"],                                    "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "BBW012"], [ConditionEnum.FLAG, "BBW_working"]]}
-    eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"],                                                "location": "dormexterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "BBW012"]]}
-    eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"],                           "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
+    eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"],   "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
+    eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"],                         "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]]}
     eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"],                                               "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
-    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"],                                                      "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"],                                                "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.FLAG, "BBW017_testpass"], [ConditionEnum.NOFLAG, "BBW008A_fail"]]}
-    eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"],                                                 "location": "pool", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",              "conditions": [[ConditionEnum.FLAG, "BBW_working"], [ConditionEnum.EVENT, "BBW020"]]}
-    eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"],                                                "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"],                                             "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.FLAG, "BBW_working"], [ConditionEnum.NOFLAG, "BBW_dating"], [ConditionEnum.EVENT, "BBW021"]]}
-    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"],                                               "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BBW001"]]}
-    eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"],                                                  "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",           "conditions": [[ConditionEnum.FLAG, "BBW_working"], [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6], [ConditionEnum.NOFLAG, "BBW_dating"], [ConditionEnum.EVENT, "BBW023"]]}
-    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"],                                                       "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": [[ConditionEnum.FLAG, "BBW025A_unlock"], [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
-    eventlibrary['BBW026'] = {"name": "The Trial of Smarts", "girls": ["BBW"],                                                  "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BBW025"], [ConditionEnum.NOEVENT, "BBW027"]]}
-    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"],                                                         "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": [[ConditionEnum.FLAG, "BBW_working"]]}
-    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"],                                            "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",         "conditions": [[ConditionEnum.FLAG, "BBW_working"], [ConditionEnum.FLAG, "BBW_dating"]]}
-    eventlibrary['BBWend'] = {"name": "Alice end", "girls": ["BBW"],                                                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_3", "enddate": "day_end",             "conditions": [[ConditionEnum.ROUTECLEAR, "BBW"]]}
 
 label BBW001:
+    $setProgress("BBW", "BBW002")
     scene Cafeteria with fade
     play music Busy
     MC "Well! That was... a first day. I didn't expect the school to be exactly like my old one, but on a list of unexpected surprises I didn't think..."
@@ -217,6 +221,7 @@ label BBW001_c2_2:
     jump daymenu
     
 label BBW002:
+    $setProgress("BBW", "BBW003")
     scene Cafeteria with fade
     play music Schoolday
     MCT "This place seems kind of quiet for a high school cafeteria. Everyone's so subdued, it's like someone died. Guess I'm not the only one who was thrown for a loop by yesterday's news."
@@ -329,6 +334,7 @@ label BBW002_c3_2:
     jump daymenu
     
 label BBW003:
+    $setProgress("BBW", "BBW004")
     scene Hallway with fade
     MC "I think the library is this way? Maybe? Wait, that bulletin board doesn't look familiar..."
     MC "Ah! I was supposed to turn left back there."
@@ -457,6 +463,7 @@ label BBW003_c1_3:
     jump daymenu
     
 label BBW004:
+    $setProgress("BBW", "BBW006")
     scene Classroom with fade
     play music Schoolday
     show BBW neutral at center with dissolve
@@ -811,6 +818,7 @@ label BBW005B:
     jump daymenu
 
 label BBW006:
+    $setProgress("BBW", "BBW007")
     scene Hallway with fade
     play music Peaceful
     MCT "Classes are done, so what now? Don't want to go back to my room, I've got enough weirdness going on without someone trying to find more lurking around every corner. Maybe I can see if any of the clubs are recruiting yet."
@@ -905,6 +913,7 @@ label BBW006_c3:
     jump daymenu
 
 label BBW007:
+    $setProgress("BBW", "BBW008")
     scene Cafeteria with fade
     MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school. Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people."
     MCT "And I'm off by myself, which is par for the course."
@@ -1068,7 +1077,7 @@ label BBW008_prechoice:
             jump BBW008_c3
 
 label BBW008_c1:
-    $setFlag("BBW008_extrascene")
+    $setProgress("BBW", "BBW008A")
     MCT "Well, if she wants to pick a fight, let her. Whatever happens is on her head."
     show BBW haughty
     BBW "Thank you for bringing this to my attention, Hotsure-san. My esteem for Mizawa-san was already low, but to use an intermediary like this is pathetic."
@@ -1077,6 +1086,7 @@ label BBW008_c1:
     jump daymenu
 
 label BBW008_c2:
+    $setProgress("BBW", "BBW009")
     MCT "Oh man, this is going to get out of hand quickly if I don't do something."
     MC "Maybe you shouldn't push back right away."
     show BBW angry
@@ -1101,6 +1111,7 @@ label BBW008_c2:
     jump daymenu
 
 label BBW008_c3:
+    $setProgress("BBW", "BBW009")
     MC "Can't you just admit that you're in the wrong here?"
     show BBW angry
     BBW "I beg your pardon?"
@@ -1117,6 +1128,7 @@ label BBW008_c3:
     jump daymenu
 
 label BBW008A:
+    $setProgress("BBW", "BBW009")
     scene Cafeteria with fade
     show BBW angry at center with hpunch
     play sound Crash
@@ -1179,7 +1191,7 @@ label BBW008A_c1:
     "And she trotted off. I don't think she was any less angry, but at least things hadn't gotten worse."
     jump daymenu
 
-label BBW008A_c2: 
+label BBW008A_c2:
     MC "If you feel this strongly, go for it. You're the one talking about squeaky wheels, right?"
     show BBW neutral
     BBW "You are not wrong. There may still be time to find Mizawa-san before lunch ends, and we can settle this matter before the club meeting this afternoon."
@@ -1245,6 +1257,7 @@ label BBW008A_c3:
     jump daymenu
     
 label BBW009:
+    $setProgress("BBW", "BBW010")
     scene Hallway with fade
     play music Busy
     "It was only the second week of the year and I was already getting cabin fever being stuck at the school 24/7."
@@ -1358,6 +1371,7 @@ label BBW009:
     jump daymenu
     
 label BBW010:
+    $setProgress("BBW", "BBW011")
     scene Cafeteria with fade
     play music BBW
     "It was a quiet morning. Reminded me of the first day, after we all learned why we were here."
@@ -1462,7 +1476,6 @@ label BBW010_accept:
             jump BBW010_c3
 
 label BBW010_c1:
-    $setEventCount("AE", 1)
     $setFlag("BBW010_shiori")
     scene Hallway with fade
     show AE angry at center with dissolve
@@ -1496,7 +1509,6 @@ label BBW010_c1:
     jump daymenu
 
 label BBW010_c2:
-    $setEventCount("PRG", 1)
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral at center with dissolve
@@ -1534,7 +1546,6 @@ label BBW010_c2:
     jump daymenu
 
 label BBW010_c3:
-    $setEventCount("BE", 1)
     scene Hallway with fade
     "I was trying to think of where I could find Honoka when I was tackled from behind, collapsing to the ground."
     play sound Thud
@@ -1625,6 +1636,7 @@ label BBW010_decline:
             jump BBW010_accept
     
 label BBW011:
+    $setProgress("BBW", "BBW012")
     scene Hallway with fade
     play music Schoolday
     "Another day done, and I find myself with no idea of what I want to do."
@@ -1785,6 +1797,7 @@ label BBW011_c3:
     jump daymenu
     
 label BBW012:
+    $setProgress("BBW", "BBW013")
     scene Classroom with fade
     play music Schoolday
     "When the classes ended for the day, I was more than ready to shut my brain off."
@@ -1938,6 +1951,7 @@ label BBW012_c1_3:
     jump daymenu
 
 label BBW013:
+    $setProgress("BBW", "BBW014")
     scene Hallway with fade
     "My name had come up on the class clean-up schedule again, so when I got out for the day the hallways were mostly empty. Everyone else was back at their dorm or enjoying the pleasant afternoon."
     "It made it easy to recognize the two figures over by the stairs, even if one wasn't the only blonde woman on campus and the other wasn't..."
@@ -2081,6 +2095,10 @@ label BBW013_c2:
     jump daymenu
 
 label BBW014:
+    if getFlag("BBW_working"):
+        $setProgress("BBW", "BBW015")
+    else:
+        $setProgress("BBW", "BBW016")
     scene Gym with fade
     play music Peaceful
     "Gym today was a free day, everyone finding something quasi-athletic to do. Afterwards I ended up being one of those called on to clean up the equipment lying around."
@@ -2252,6 +2270,7 @@ label BBW014:
     jump daymenu
 
 label BBW015:
+    $setProgress("BBW", "BBW016")
     scene Hallway with fade
     show BBW happy at center with dissolve
     play music BBW
@@ -2631,6 +2650,7 @@ label BBW015_c1_3:
     jump daymenu
     
 label BBW016:
+    $setProgress("BBW", "BBW017")
     scene Dorm Interior with fade
     play music Sunset
     "Classes were done, my homework was done, and even though I had wandered around the school for over an hour, I hadn't found anything to do."
@@ -2795,6 +2815,7 @@ label BBW016_c1_3:
     jump daymenu
     
 label BBW017:
+    $setProgress("BBW", "BBW018")
     scene Cafeteria with fade
     "I was feeling peckish after class, so I went to the cafeteria looking for something a bit more filling than a candy bar."
     "A bowl of ice cream called out to me, but it did mean I had to stay in the cafeteria as I ate it."
@@ -3212,6 +3233,12 @@ label BBW018_c2_4:
     jump daymenu
 
 label BBW019:
+    if getFlag("BBW017_testpass"):
+        $setProgress("BBW", "BBW020")
+    elif getFlag("BBW_working"):
+        $setProgress("BBW", "BBW021")
+    else:
+        $setProgress("BBW", "BBW022")
     scene Dorm Interior with fade
     "It was afternoon and I was bored. I was so bored I can't think of any way more exciting than that to put it."
     "I didn't have any immediate homework to work on, just essays and projects due later in the term."
@@ -3455,6 +3482,7 @@ label BBW019_theater:
                 jump daymenu
 
 label BBW020:
+    $setProgress("BBW", "BBW021")
     play music BBW
     scene Cafeteria with fade
     "I had gotten to the cafeteria earlier than most of the other students, but after the rush had come and gone I was still there."
@@ -3668,6 +3696,7 @@ label BBW021_beforechoice:
         "She said that last part as if there was deeper meaning to it. And no, she wasn't exactly wrong that there was more I would like to say."
         "But I was glad, all the same, that we had to cut this short, because I didn't think I would have been able to seize the moment right now."
         "Still, I felt energized as I dove into the pool and started doing my laps. Today was turning out to be a good day."
+        $setProgress("BBW", "BBW022")
         jump daymenu
     else:
         BBW "And you did say I was pretty, of course."
@@ -3701,6 +3730,7 @@ label BBW021_beforechoice:
                 hide BBW with dissolve
                 "She waved goodbye and went back to the women's locker room."
                 "I almost went back to change myself, until I remembered why I had come there in the first place."
+                $setProgress("BBW", "BBW026")
                 jump daymenu
             "That's moving a bit fast.":
                 $setFlag("BBW021_c2")
@@ -3722,6 +3752,7 @@ label BBW021_beforechoice:
                 "She went back to the women's locker room."
                 "Not storming off, though. It was a plus that she didn't seem legitimately angry."
                 "I'd have to be careful, but I thought I could keep things at least civil between us, if not friendly."
+                $setProgress("BBW", "BBW022")
                 jump daymenu
             "I... don't think that would work.":
                 $setFlag("BBW021_c3")
@@ -3756,6 +3787,7 @@ label BBW021_fail1:
     "Not that this the end of the world or anything. I just wanted to say that I found women like Alice potentially attractive."
     "It's not as if I'm trying to woo her or anything."
     "Right?"
+    $setProgress("BBW", "BBW022")
     jump daymenu
 
 label BBW021_fail2:
@@ -3782,9 +3814,11 @@ label BBW021_fail2:
     "And she went back to the locker room to change."
     "The way she sounded at the end, I had no doubt she wanted me to say more. And I know what she wanted me to say."
     "Maybe next time I could stop skirting around the issue. You never got anywhere by going halfway."
+    $setProgress("BBW", "BBW022")
     jump daymenu
 
 label BBW022:
+    $setProgress("BBW", "BBW023")
     scene Dorm Interior with fade
     "I was back in my room relaxing after another day of studies when my phone buzzed."
     "It was Alice."
@@ -3944,6 +3978,7 @@ label BBW022_c1_3:
     jump daymenu
 
 label BBW023:
+    $setProgress("BBW", "BBW024")
     scene Classroom with fade
     show BBW neutral at center with dissolve
     show PRG neutral at Position(xpos=0.6, xanchor=0.5, yalign=1.0) behind BBW with dissolve
@@ -4134,6 +4169,7 @@ label BBW023_cx_2:
     jump daymenu
 
 label BBW024:
+    $setProgress("BBW", "BBW025")
     scene Hallway with fade
     "My turn to clean the classroom had come up again, so I ended up walking through empty halls alone."
     "I thought about going back to my dorm, but I wasn't really 'feeling' it."
@@ -4416,6 +4452,7 @@ label BBW025_c1_2:
         "Well, no. She probably saw that as an employer-employee relationship. I guess I should be happy she didn't outright say 'No' based on that."
         "So, OK. I just have to prove myself more serious."
         "Not impossible."
+        $setProgress("BBW", "BBW025A")
         jump daymenu
     else:
         $setflag("BBW_dating")
@@ -4432,10 +4469,12 @@ label BBW025_c1_2:
         hide BBW with dissolve
         "It was hard to fight the urge to skip or whoop, until I reached the hall and suddenly realized I had no idea where I was going to take her."
         "I was so focused on just getting the question out I didn't think about what came next."
+        $setProgress("BBW", "BBWend")
         jump daymenu
 
 label BBW025A:
     scene Cafeteria with fade
+    $setProgress("BBW", "BBWend")
     "I was having trouble paying attention to the week's company meeting."
     show BBW neutral at center with dissolve
     BBW "Moving on to new business, the recent tariff battle between America and China has me concerned blah blah blah..."

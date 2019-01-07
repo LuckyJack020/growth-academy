@@ -46,29 +46,33 @@ init 2 python:
     datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['BE_size_2'] = datetime.date(2005, 4, 10)
     
+    #Core
     eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof",                                    "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE001_deadline",    "conditions": []}
     eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter",                           "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",                 "conditions": []}
     eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter",                    "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
     eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track",                       "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom",                                "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
     eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria",                         "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE007_deadline",      "conditions": []}
     eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
     eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track",                                          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
     eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track",                          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": [[ConditionEnum.EVENT, "BE010"]]}
-    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade",                             "time": (TimeEnum.DAY, WeekendEnum.SUNDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "BE011"]]}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade",                         "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway",                               "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BE011"]]}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "BE010"]]}
-    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym",                                 "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": [[ConditionEnum.EVENT, "BE014"]]}
-    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade",                                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": [[ConditionEnum.EVENT, "BE015"]]}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE",                               "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BE010"]]}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria",                           "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "BE010"]]}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway",                                     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "BE010"]]} #affection check maybe?
-    eventlibrary['BEend'] = {"name": "Honoka end", "girls": ["BE"], "location": "library",                                      "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": [[ConditionEnum.ROUTECLEAR, "BE"]]}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track",                          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
+    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade",                             "time": (TimeEnum.DAY, WeekendEnum.SUNDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",          "conditions": []}
+    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway",                               "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym",                                 "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade",                                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE",                               "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria",                           "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway",                                     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []} #affection check maybe?
+    eventlibrary['BEend'] = {"name": "Honoka end", "girls": ["BE"], "location": "library",                                      "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
 
+    #Optional
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom",                                "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade",                         "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.PRESET]]}
+    
 label BE001:
+    $setProgress("BE", "BE002")
     scene Classroom with fade
     play music Schoolday
     "After the bell rang, there was the familiar sound of chairs getting scraped along the ground as everyone prepared to leave."
@@ -221,6 +225,7 @@ label BE001_after:
     jump daymenu
     
 label BE002:
+    $setProgress("BE", "BE003")
     scene Campus Center with fade
     play music Rain
     show BE neutral:
@@ -295,6 +300,7 @@ label BE002:
     jump daymenu
     
 label BE003:
+    $setProgress("BE", "BE004")
     scene Campus Center with fade
     play music Sunset
     "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was."
@@ -429,6 +435,7 @@ label BE003_c3:
     jump daymenu
     
 label BE004:
+    $setProgress("BE", "BE007")
     scene Track with fade
     play music Busy
     "I decided to head over to the soccer field. Before I even got on the grass, I heard the sound of a coach whistle blowing, directing students in their training. I picked up the pace a little bit so I could see what was going on. Among the small crowd was a familiar face. I waved over to Honoka, who enthusiastically waved back to me. She seemed happy to see me. I looked around for a place to sit. There's bleachers nearby, but I decided to just sit down on the grass for a while, making sure I stayed out of the way."
@@ -649,8 +656,8 @@ label BE005_c2:
     "Honoka chuckled, and then went silent as our teacher walked in. The other students all began to hush after a while, ready for class to begin. We'd all been in classes for several days already, but now that we all knew what was going to change about our bodies, it really sank in that this would be a new learning experience for us all."
     jump daymenu
 
-    
 label BE007:
+    $setProgress("BE", "BE008")
     scene Classroom with fade
     play music Schoolday
     "I had to give credit where credit was due. Despite having such a long tongue, Tashi-sensei seemed to be pretty good at talking without it getting in the way. It was fairly easy to understand him, and he was more than willing to repeat himself if somebody misheard."
@@ -779,6 +786,7 @@ label BE007_after:
     jump daymenu
     
 label BE008:
+    $setProgress("BE", "BE009")
     scene Dorm Interior with fade
     play music Sunset
     "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water. Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
@@ -927,6 +935,7 @@ label BE008_after:
     jump daymenu
     
 label BE009:
+    $setProgress("BE", "BE010")
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
@@ -1026,6 +1035,7 @@ label BE009_c3:
     jump daymenu
 
 label BE010:
+    $setProgress("BE", "BE011")
     scene Dorm Interior with fade
     "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
     "KNOCK ! KNOCK !"
@@ -1200,6 +1210,7 @@ label BE010_c3:
     jump daymenu
     
 label BE011:
+    $setProgress("BE", "BE012")
     scene Track with fade
     play music Busy
     "It was another gorgeous day here at Seichou Academy. Though the weather as of late was beginning to edge towards the cooler side of temperatures, the sun was still bright enough, and warm enough, that many people were still hanging around outside in summer clothing."
@@ -1302,6 +1313,7 @@ label BE011_c3:
     jump daymenu
 
 label BE012:
+    $setProgress("BE", "BE014")
     scene Campus Center with fade
     play music Busy
     "It was sometimes a bit annoying to track down Honoka when I wanted to find her. She was never really the type to have a regular hangout spot. With some of my other friends, I had a vague idea of where I could find them. With Honoka, she could have been in a dozen different places at least. I suppose it came with being such a free spirit."
@@ -1490,6 +1502,7 @@ label BE013:
     jump daymenu
     
 label BE014:
+    $setProgress("BE", "BE015")
     play music Peaceful
     scene Hallway with fade
     "The day started off rather frustratingly. Mainly due to my own indecision about whether to have miso soup or oatmeal for breakfast that morning. In the end, I waffled so much over the decision that I had to settle for toast instead."
@@ -1600,6 +1613,7 @@ label BE014_c1_after:
     jump daymenu
 
 label BE015:
+    $setProgress("BE", "BE016")
     scene Hallway with fade
     play music Schoolday
     show BE sad at center with dissolve
@@ -1699,6 +1713,7 @@ label BE015:
     jump daymenu
 
 label BE016:
+    $setProgress("BE", "BE017")
     scene Gym with fade
     play music Busy
     "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was a practice for the basketball club tonight. Would be good to give her encouragement."
@@ -1787,6 +1802,7 @@ label BE016:
     jump daymenu
 
 label BE017:
+    $setProgress("BE", "BE018")
     scene Arcade with fade
     play music Schoolday
     show BE happy at center with dissolve
@@ -1952,6 +1968,7 @@ label BE017_c2_3:
     jump daymenu
 
 label BE018:
+    $setProgress("BE", "BE019")
     scene Dorm BE with fade
     show BE neutral at center with dissolve
     "I was hanging out in Honoka's room, playing video games with her as had become a fairly frequent occurrence. She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
@@ -2217,6 +2234,7 @@ label BE018_c2_2:
     jump daymenu
 
 label BE019:
+    $setProgress("BE", "BE020")
     scene Cafeteria with fade
     play music Schoolday
     "Lunch was simple today. I just grabbed a sandwich and chips, along with some water. I didn't expect anything unusual to happen, even when Honoka sat across from me without introducing herself."
@@ -2354,6 +2372,7 @@ label BE019_c1_after:
     jump daymenu
     
 label BE020:
+    $setProgress("BE", "BEend")
     scene Campus Center with fade
     "Classes were over for the day, thankfully. Today's lessons hadn't been hard, necessarily. But they'd been mentally draining. The dining hall for dinner wouldn't open up for another hour or two, so I pondered over what I could do in the interim."
     show BE happy at center with dissolve

@@ -47,18 +47,16 @@ init 2 python:
     datelibrary['GTS_size_2'] = datetime.date(2005, 4, 10)
     datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"],                   "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": True, "startdate": "day_1", "enddate": "day_1",                  "conditions": []}
+    #Core
+    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"],                   "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": True, "startdate": "day_0", "enddate": "day_1",                  "conditions": []}
     eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"],                       "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",               "conditions": []}
     eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"],                          "location": "cafeteria",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",              "conditions": []}
     eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"],                          "location": "library",          "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"],                      "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
     eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"],                           "location": "schoolfront",      "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
     eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"],                             "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
     eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"],                        "location": "roof",             "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "GTS_size_2",          "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"],     "location": "festival",         "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS009_date", "enddate": "GTS_size_2",      "conditions": [[ConditionEnum.EVENT, "GTS008"]]}
+    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"],     "location": "festival",         "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS009_date", "enddate": "GTS_size_2",      "conditions": []}
     eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"],               "location": "classroom",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": True, "startdate": "GTS_size_2", "enddate": "day_end",             "conditions": []}
-    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"],                         "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
-    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"],                                 "location": "dormexterior",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"],                "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"],                 "location": "dormexterior",     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"],                 "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
@@ -68,9 +66,15 @@ init 2 python:
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"],        "location": "roof",             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"],                    "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"],                 "location": "campuscenter",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTSend'] = {"name": "Naomi end", "girls": ["GTS"],                            "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "GTS"]]}
-
+    eventlibrary['GTSend'] = {"name": "Naomi end", "girls": ["GTS"],                            "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    
+    #Optional
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"],                      "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"],                         "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
+    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"],                                 "location": "dormexterior",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
+    
 label GTS001:
+    $setProgress("GTS", "GTS002")
     scene black with fade
     "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn't sure how to properly process what we were told."
     "What Daichi had told me earlier was starting to resonate more, and I began to wonder if perhaps others knew about the purpose of this school before they were enrolled."
@@ -150,6 +154,7 @@ label GTS001_after:
     jump daymenu
 
 label GTS002:
+    $setProgress("GTS", "GTS003")
     scene School Planter with fade
     "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated in degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
     "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me. In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
@@ -225,6 +230,7 @@ label GTS002_after:
     jump daymenu
 
 label GTS003:
+    $setProgress("GTS", "GTS004")
     scene Cafeteria with fade
     play music Schoolday
     "The morning found itself to be quite the chaotic time, as many students rushed down the corridors to make it to the cafeteria in time to beat the morning rush."
@@ -309,6 +315,7 @@ label GTS003_after:
     jump daymenu
     
 label GTS004:
+    $setProgress("GTS", "GTS006")
     scene Library with fade
     play music Peaceful
     "The sun shone highly in the sky as the middle of the day came by, its rays seeping through the many windows that surrounded the vast two-story room. I was honestly a little surprised to see so many people using the campus library."
@@ -468,6 +475,7 @@ label GTS005_after:
     jump daymenu
 
 label GTS006:
+    $setProgress("GTS", "GTS007")
     scene School Front with fade
     play music Busy
     "There was quite a calming mood to the start of the school day as I wandered near the entrance. Something caught my eye, though, as I saw what appeared to be a small gathering of students near the front gate."
@@ -539,6 +547,7 @@ label GTS006_after:
     jump daymenu
 
 label GTS007:
+    $setProgress("GTS", "GTS008")
     scene Campus Center with fade
     play music Peaceful
     "Petals danced in the breeze, carried aloft by the wind. They flowed peacefully down the pathway, where I saw a familiar figure sitting underneath the shade of a tree. Naomi's hair moved much like the flower petals had, as I noticed a paper in her hand."
@@ -592,6 +601,7 @@ label GTS007:
     jump daymenu
     
 label GTS008:
+    $setProgress("GTS", "GTS009")
     scene Roof with fade
     play music Sunset
     "My footsteps echoed up the stairwell as I ascended to the peak. Upon opening the door, a wave of warm sunlight bathed over me."
@@ -668,6 +678,7 @@ label GTS008_after:
     jump daymenu
 
 label GTS009:
+    $setProgress("GTS", "GTS010")
     scene Festival with fade
     play music Festival
     "Music and cheers set the mood as the buildings lining the block reflected the lights of various lanterns. Dusk was beginning to set in, and as it did, a wave of multiple-colored lights replaced the sunlight."
@@ -881,6 +892,7 @@ label GTS009_after:
     jump daymenu
     
 label GTS010:
+    $setProgress("GTS", "GTS014")
     scene Classroom with fade
     "A defeated sigh vacated my body as my hands had been slicking back my bangs all morning. I could already tell this growth was going to be annoying as I had only just recently had my hair trimmed and already it was back to before I had first gotten it cut."
     MC "This is really going to burn a hole in my wallet if I want to keep myself from looking like a mountain man by the end of the month..."
@@ -1125,6 +1137,7 @@ label GTS012_after:
     jump daymenu
 
 label GTS014:
+    $setProgress("GTS", "GTS015")
     scene Classroom with fade
     play music Schoolday
     "I stared blankly at space in front of me as a cascade of thoughts swam around within my mind. It must have been rather noticeable, as I felt a pressure on my shoulder from a hand resting upon it."
@@ -1208,6 +1221,7 @@ label GTS014_after:
     jump daymenu
 
 label GTS015:
+    $setProgress("GTS", "GTS016")
     scene Dorm GTS with fade
     show Ryoko happy at Position(xpos=0.20, xanchor=0.5, yalign=1.0) with dissolve
     play music Busy
@@ -1349,6 +1363,7 @@ label GTS015_c2_after:
     jump daymenu
     
 label GTS016:
+    $setProgress("GTS", "GTS017")
     scene School Planter with fade
     show GTS neutral at center with dissolve
     play music Busy
@@ -1426,6 +1441,7 @@ label GTS016_c1_after:
     jump daymenu
 
 label GTS017:
+    $setProgress("GTS", "GTS018")
     scene School Planter with fade
     play music Busy
     "My brow lowered in annoyance as the wind kept blowing my hair across my face, my hands trying to keep my hair from doing so. I could see Naomi in our usual meeting place, attending to something. "
@@ -1531,6 +1547,7 @@ label GTS017_c1_2:
     jump daymenu
 
 label GTS018:
+    $setProgress("GTS", "GTS019")
     scene School Exterior with fade
     play music Sunset
     "There it was again, the breeze that always blew my hair across my face."
@@ -1633,6 +1650,7 @@ label GTS018_c1_2:
     jump daymenu
 
 label GTS019:
+    $setProgress("GTS", "GTS020")
     scene School Planter with fade
     "A gentle humming floated through the air as I stared up towards the clouds. There was a faint swishing noise a foot or two away from me as I laid in the shadow cast by Naomi. A mixture of the sun's warmth along with the soothing melody causing my eyelids to begin growing heavy as I hadn't a thought in the world."
     "Eventually a soft chuckle made me realize that I had fallen asleep at some point as my eyes opened and I looked towards Naomi who was smiling down at me."
@@ -1747,6 +1765,7 @@ label GTS019_c1_after:
     jump daymenu
 
 label GTS020:
+    $setProgress("GTS", "GTS021")
     scene Roof with fade
     play music GTS
     "A light melody slid through my lips as I whistled to myself waiting on the roof of the campus. Naomi seemed rather nervous when she had asked me to come by after class so I was more than curious to see what was up."
@@ -1835,6 +1854,8 @@ label GTS020_c1_2:
     jump daymenu
 
 label GTS021:
+    $setProgress("GTS", "GTS025")
+    #$setProgress("GTS", "GTS022")
     scene School Planter with fade
     show GTS neutral at center with dissolve
     "I wandered into the garden as I had received a message from Minori about Naomi wishing to see me. As my footsteps bent the blades of grass underneath, I spotted Naomi at her usual spot. A mat underneath her as another sat beside her. She sat with her hands rested peacefully on her lap as her eyes laid shut."
@@ -1924,6 +1945,7 @@ label GTS021_c1_after:
     jump daymenu
 
 label GTS025:
+    $setProgress("GTS", "GTSend")
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn’t shown up."
     show GTS neutral at center with dissolve
