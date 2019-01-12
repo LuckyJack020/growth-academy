@@ -47,29 +47,29 @@ init 2 python:
     datelibrary['BE_size_2'] = datetime.date(2005, 4, 10)
     
     #Core
-    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof",                                    "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE001_deadline",    "conditions": []}
-    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter",                           "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",                 "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter",                    "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track",                       "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE001_deadline",    "conditions": []}
+    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",                 "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria",                         "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE007_deadline",      "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track",                                          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track",                          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
-    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade",                             "time": (TimeEnum.DAY, WeekendEnum.SUNDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",          "conditions": []}
-    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway",                               "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior",                            "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym",                                 "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade",                                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE",                               "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria",                           "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway",                                     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []} #affection check maybe?
-    eventlibrary['BEend'] = {"name": "Honoka end", "girls": ["BE"], "location": "library",                                      "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "BE007_deadline",      "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
+    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,       "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
+    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "time": (TimeEnum.DAY, WeekendEnum.SUNDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",          "conditions": []}
+    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                  "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                              "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                          "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []} #affection check maybe?
+    eventlibrary['BE021'] = {"name": "Honoka end", "girls": ["BE"], "location": "library", "type": EventTypeEnum.CORE,                                     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom",                                "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade",                         "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.PRESET]]}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.PRESET,                             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.PRESET,                      "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -2372,7 +2372,7 @@ label BE019_c1_after:
     jump daymenu
     
 label BE020:
-    $setProgress("BE", "BEend")
+    $setProgress("BE", "BE021")
     scene Campus Center with fade
     "Classes were over for the day, thankfully. Today's lessons hadn't been hard, necessarily. But they'd been mentally draining. The dining hall for dinner wouldn't open up for another hour or two, so I pondered over what I could do in the interim."
     show BE happy at center with dissolve
@@ -2738,7 +2738,7 @@ label BE020_c2_2:
     MCT "I'm still counting it."
     jump daymenu
 
-label BEend:
+label BE021:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

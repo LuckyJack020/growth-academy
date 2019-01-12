@@ -36,23 +36,26 @@ init 2 python:
     datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_2'] = datetime.date(2005, 4, 10)
     
-    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"],               "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"],         "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"],            "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"],         "location": "track",            "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"],                "location": "auditorium",       "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"],               "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"],        "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
-    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"],         "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"],                "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"],                     "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
-    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end","conditions": []}
-    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],           "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"],              "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
-    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"],                    "location": "dormBBW",          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"],              "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['PRGend'] = {"name": "Aida end", "girls": ["PRG"],                     "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": []}
+    #Core
+    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
+    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
+    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.CORE,             "location": "track",            "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.CORE,     "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
+    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.CORE,                    "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
+    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                 "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end","conditions": []}
+    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],"type": EventTypeEnum.CORE,                "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "dormBBW",          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
+    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['PRG020'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": []}
+
+    #Optional
+    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.PRESET,                  "location": "auditorium",       "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
 
 label PRG001:
     $setProgress("PRG", "PRG002")
@@ -1830,7 +1833,7 @@ label PRG015_after:
         jump daymenu
 
 label PRG019:
-    $setProgress("PRG", "PRGend")
+    $setProgress("PRG", "PRG020")
     scene Classroom with fade
     play music Schoolday
     "Morning classes went by in no time at all, as usual.  As the day wore on, I found myself glancing across the room at Aida from time to time.  On occasion, I'd catch her looking at me as well, but she'd turn her head away at the last minute, trying to look inconspicuous.  When we were finally dismissed from our classes, Aida popped up from her desk and walked over to mine."
@@ -1986,7 +1989,7 @@ label PRG019_c1_after:
     MCT "She's definitely gained a little weight, probably from the cooking club. But thankfully, it looks good on her."
     jump daymenu
 
-label PRGend:
+label PRG020:
     "This marks the current end of Aida's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

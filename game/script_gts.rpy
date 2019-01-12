@@ -48,30 +48,30 @@ init 2 python:
     datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
     
     #Core
-    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"],                   "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": True, "startdate": "day_0", "enddate": "day_1",                  "conditions": []}
-    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"],                       "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",               "conditions": []}
-    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"],                          "location": "cafeteria",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",              "conditions": []}
-    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"],                          "location": "library",          "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
-    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"],                           "location": "schoolfront",      "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
-    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"],                             "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
-    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"],                        "location": "roof",             "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "GTS_size_2",          "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"],     "location": "festival",         "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS009_date", "enddate": "GTS_size_2",      "conditions": []}
-    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"],               "location": "classroom",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": True, "startdate": "GTS_size_2", "enddate": "day_end",             "conditions": []}
-    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"],                "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"],                 "location": "dormexterior",     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"],                 "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"],                        "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"],                            "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"],                     "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"],        "location": "roof",             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"],                    "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"],                 "location": "campuscenter",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTSend'] = {"name": "Naomi end", "girls": ["GTS"],                            "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": True, "startdate": "day_0", "enddate": "day_1",                  "conditions": []}
+    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "testday",               "conditions": []}
+    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "cafeteria",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",              "conditions": []}
+    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "library",          "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
+    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
+    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "GTS_size_2",            "conditions": []}
+    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "GTS_size_2",          "conditions": []}
+    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS009_date", "enddate": "GTS_size_2",      "conditions": []}
+    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": True, "startdate": "GTS_size_2", "enddate": "day_end",             "conditions": []}
+    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS026'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
     
     #Optional
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"],                      "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"],                         "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
-    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"],                                 "location": "dormexterior",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.PRESET,                   "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
+    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
+    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "dormexterior",     "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     
 label GTS001:
     $setProgress("GTS", "GTS002")
@@ -1945,7 +1945,7 @@ label GTS021_c1_after:
     jump daymenu
 
 label GTS025:
-    $setProgress("GTS", "GTSend")
+    $setProgress("GTS", "GTS026")
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn’t shown up."
     show GTS neutral at center with dissolve
@@ -1998,7 +1998,7 @@ label GTS025:
     "Softly, I shifted my hand and took what of hers I could within its grasp. Squeezing her hand tenderly, we enjoyed the view until the sun vanished behind the horizon."
     jump daymenu
 
-label GTSend:
+label GTS026:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

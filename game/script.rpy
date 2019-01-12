@@ -101,7 +101,7 @@
                 return len(self.dict) != 0
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE, ROUTECLEAR = range(11)
+        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, OR, ISDAYFREE = range(9)
     
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -110,10 +110,15 @@
     #GAMETIME: arg1 = ConditionEqualityEnum, arg2 = (date, from datelibrary) date in question, true if the comparison is true (between gametime and arg2)
     #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
     #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
-    #PRESET: no args, always returns false (ie event is only used in preset dates)
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     #ISDAYFREE: arg1 = DeltaTimeEnum, arg2 = (int) number of days OR (date) date OR (DayOfWeekEnum) day of week, arg3 = (boolean) evening, returns true if the specified time (with time of day from arg3) is not a preset/meeting day
-    #ROUTECLEAR: arg1 = (string, in girls list), returns true if there are no events in the eventlibrary that haven't been cleared but are still available to select
+    
+    class EventTypeEnum:
+        CORE, OPTIONAL, PRESET = range(3)
+
+    #CORE: Event is in someone's core route. Cannot be selected randomly.
+    #OPTIONAL: Event is an optional event. Can be selected randomly.
+    #PRESET: Event is optional, but only available through preset methods. Cannot be selected randomly.
 
     class DeltaTimeEnum:
         NUMDAYS, DATE, DAYOFWEEK = range(3)
@@ -209,9 +214,6 @@
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[2]))
                     criteriavalid = False
                     break
-            elif c[0] == ConditionEnum.PRESET:
-                criteriavalid = False
-                break
             elif c[0] == ConditionEnum.OR:
                 if checkCriteria([c[1]]) or checkCriteria([c[2]]):
                     continue
@@ -235,19 +237,6 @@
                 if getTimeCode(t, c[3]) in presetdays.keys() or getTimeCode(t, c[3]) in meetingdays.keys():
                     criteriavalid = False
                     break
-            elif c[0] == ConditionEnum.ROUTECLEAR:
-                if checkRouteClear:
-                    for k, v in eventlibrary.iteritems():
-                        if k in clearedevents:
-                            continue
-                        if len(v["girls"]) == 0 or c[1] != v["girls"][0]:
-                            continue
-                        if not checkCriteria(v["conditions"], False):
-                            continue
-                        criteriavalid = False
-                        break
-                    if not criteriavalid:
-                        break
             else:
                 renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
                 criteriavalid = False
@@ -279,6 +268,18 @@
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
         return affection[girl]
+
+    #Returns girl with highest affection. In the event of a tie, returns a random girl among those tieing.
+    def getHighestAffection():
+        tmplist = girllist[:]
+        renpy.random.shuffle(tmplist)
+        highestgirl = ""
+        highestscore = -999
+        for g in tmplist:
+            if getAffection(g) > highestscore:
+                highestscore = getAffection(g)
+                highestgirl = g
+        return highestgirl
 
     ##Checks which of the girls has the second highest affection. Doesn't account for ties.
     def getSecondHighest(ignoreGirl):
@@ -410,11 +411,33 @@
     def lockRoute(girl):
         if girl in girllist:
             routelock = girl
+    
+    def isRouteEnabled(girl):
+        return routeenabled[girl] and (routelock == girl or routelock == "")
+    
+    def getOptionalEvent(girl):
+        pool = []
+        for k, v in eventlibrary.iteritems():
+            if v["type"] != EventTypeEnum.OPTIONAL:
+                continue
+            if v["girls"][0] != girl:
+                continue
+            if k in clearedevents:
+                continue
+            criteriavalid = checkCriteria(v["conditions"]) and isEventTimeOk(v["time"][0], v["time"][1]) and isEventDateOk(v["startdate"], v["enddate"])
+            if not criteriavalid:
+                continue
+            pool.append(k)
+        if len(pool) > 0:
+            return renpy.random.choice(pool)
+        else:
+            return None
 
 label start:
     python:
         #Global Variables
         affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'BBW': 0, 'PRG': 0, 'RM': 0}
+        prefgirl = ""
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         flags = []
@@ -460,7 +483,6 @@ screen daymenu:
             xalign 0
             yalign 0
             text ("Debug info:")
-            text ("Prefgirl: %s" % prefgirl)
             text ("Girls w/ Priority: %s" % debugpriorities)
             text ("Girl/Aff")
             text ("BE %(aff)d" % {"aff": affection["BE"]})
@@ -507,7 +529,10 @@ screen daymenu:
                                         add "Graphics/ui/icons/charicon-missing.png"
                                     else:
                                         for g in eventlibrary[c]["girls"]:
-                                            add "Graphics/ui/icons/charicon-%s.png" % g
+                                            if g in girllist:
+                                                add "Graphics/ui/icons/charicon-%s.png" % g
+                                            else:
+                                                add "Graphics/ui/icons/charicon-missing.png"
                                 #fixed:
                                 #    frame:
                                 #        xalign 0.5
@@ -711,6 +736,8 @@ label daymenu:
     play music Daymenu
     #Roll random events
     python:
+        prefgirl = getHighestAffection()
+        
         if gametime_eve == TimeEnum.NIGHT:
             gametime_eve = TimeEnum.DAY
             gametime += datetime.timedelta(days=1)
@@ -718,36 +745,44 @@ label daymenu:
             gametime_eve = TimeEnum.NIGHT
         
         eventchoices = []
-        
-        for g in girllist:
-            #Core scenes
-            gtest = routeprogress[g]
-            s = eventlibrary[gtest]
-            criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
-            if criteriavalid:
-                eventchoices.append(routeprogress[g])
-        
-        #to (re)implement:
-        #preset days
-        
+        freeday = True
+        #It's a preset day, just use whatever the preset says
+        if getTimeCode() in presetdays.keys():
+            eventchoices = presetdays[getTimeCode()]
+            freeday = False
+        #It's a meeting day, just use whatever the meeting says
+        elif getTimeCode() in meetingdays.keys():
+            eventchoices = meetingdays[getTimeCode()]
+            freeday = False
+        #It's not a preset day...
+        else:
+            for g in girllist:
+                if isRouteEnabled(g):
+                    #Selecting a core scene
+                    s = eventlibrary[routeprogress[g]]
+                    criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
+                    if criteriavalid:
+                        eventchoices.append(routeprogress[g])
+                        continue
+                #Selecting/falling back to an optional scene
+                opt = getOptionalEvent(g)
+                if opt != None:
+                    eventchoices.append(opt)
+                
+            #If there's room, 10% chance for minor character event
+            if len(eventchoices) < 6 and renpy.random.randint(1, 10) == 1:
+                opt = getOptionalEvent("minor")
+                if opt != None:
+                    eventchoices.append(opt)
+    
         #to implement:
-        #optional scenes
         #route lock
         #force progress (based on time)
         
 #        prefpool = []
 #        allpool = []
 #        priorities = []
-#        #It's a preset day, don't worry about pools, just use whatever the preset says
-#        if getTimeCode() in presetdays.keys():
-#            eventchoices = presetdays[getTimeCode()]
-#            freeday = False
-#        #It's a meeting day, don't worry about pools, just use whatever the meeting says
-#        elif getTimeCode() in meetingdays.keys():
-#            eventchoices = meetingdays[getTimeCode()]
-#            freeday = False
-#        #It's not a preset day, randomly select 3 events
-#        else:
+#        
 #            freeday = True
 #            #Determine preferred girl
 #            prefmax = 0

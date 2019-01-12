@@ -69,37 +69,37 @@ init 2 python:
     datelibrary['AE_size_2'] = datetime.date(2005, 4, 10)
     
     #Core
-    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"],                                   "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"],                            "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"],              "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
-    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"],       "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
-    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"],             "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"],           "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"],   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"],                           "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"],                            "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"],                   "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"],                   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"],                    "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"],                        "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"],                      "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"],                          "location": "library", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"],                             "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"],                             "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"],                       "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",    "conditions": []}
-    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"],                         "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
-    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"],        "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"],                             "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"],                              "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"],                                 "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"],                                "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AEend'] = {"name": "Shiori end", "girls": ["AE"],                             "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
+    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
+    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
+    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "library", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",    "conditions": []}
+    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
+    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,       "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
+    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",      "conditions": []}
     #eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                         "conditions": [[ConditionEnum.EVENT, "AE025"]]} #TODO: Not sure if dorminterior
     #eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.EVENT, "AE026"]]} #TODO: Not sure if dorminterior
     
     #Optional
-    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"],                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": [[ConditionEnum.PRESET]]} #After checkup
-
+    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.PRESET,                        "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []} #After checkup
+    
     #eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     #eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
@@ -4654,8 +4654,7 @@ label AE024_c1_3:
     jump daymenu
 
 label AE025:
-    #$setProgress("AE", "AE026")
-    $setProgress("AE", "AEend")
+    $setProgress("AE", "AE026")
     scene Dorm Interior with fade
     play music Rain
     MC "Pheeww...okay...it's all going to turn out alright."
@@ -4934,7 +4933,7 @@ label AE025:
     "Shiori-san and I were now official."
     jump daymenu
 
-label AE026:
+label AE026real:
     scene black
     play sound AlarmClock
     scene Dorm Interior with fade
@@ -5736,7 +5735,7 @@ label AE102_c2:
     MC "Goodbye Akira."
     jump daymenu
 
-label AEend:
+label AE026:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
