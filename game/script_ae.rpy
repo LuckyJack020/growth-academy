@@ -93,7 +93,7 @@ init 2 python:
     eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
     eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
     eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
     #eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                         "conditions": [[ConditionEnum.EVENT, "AE025"]]} #TODO: Not sure if dorminterior
     #eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.EVENT, "AE026"]]} #TODO: Not sure if dorminterior
     
@@ -1487,7 +1487,7 @@ label AE010:
     MC "Out of my system? Shiori-san, I'm not going to insult y-"
     "Shiori-san finally turned around."
     stop music
-    show AE neutral at center, Transform(zoom=2.5)
+    show AE neutral at Position(xalign=0.5, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once. Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
@@ -4351,7 +4351,7 @@ label AE023_c1_after:
     "I hadn't noticed before, but from here it was all but too obvious that you can see her ass from the front. Her hips bulged out far enough to create a wall of flesh and stretch the fabric atop two massive legs."
     MC "..."
     "I walked silently behind Shiori-san to get a better view. Though my head was turned, my eyes were focused right on her. Her growth was becoming more obvious, as her skirt was beginning to ride up even further."
-    show AE neutral at center, Transform(zoom=3.0)
+    show AE neutral at Position(xalign=0.5, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
     play sound Boing
     "Her already thick thighs were plumping up quite nicely, pairing themselves with some wide, supple hips as well."
     "However, her bootyus maximus was, as always, the greatest sight to behold, the bottom of each cheek protruding through the bottom of her soon to be ruined skirt, the very bottom of her panties eliciting lewd thoughts from me. I lightly bit my bottom lip as every failed attempt to scrape the gum from the floor caused her backside to wobble gently."

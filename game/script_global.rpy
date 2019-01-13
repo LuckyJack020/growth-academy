@@ -115,7 +115,7 @@ init 1 python:
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
     datelibrary['day_0'] = datetime.date(2005, 4, 3)
     datelibrary['day_end'] = datetime.date(2006, 4, 3)
-    eventlibrary['global005'] = {"name": "global005", "girls": [], "type": EventTypeEnum.PRESET,                        "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
+    eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.PRESET,                        "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
     eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     presetdays["4-6-F"] = ["global005"]
@@ -172,7 +172,6 @@ label global000:
         
     # Move to Lake Road screen with a fade in transition.
     scene Lake Road with fade
-    play music BE
     MCT "Ahh... It's really hot today."
     "I came to a stop on a wooden bridge overlooking a lake."
     "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tommorrow."
@@ -185,6 +184,7 @@ label global000:
     MC "Good afternoon!"
     "At the sound of my voice, she turned around and faced me."
     show BE neutral with dissolve
+    play music BE
     "It turned out to be a fairly cute girl, with brown hair."
     MC "Sorry, but can you tell me where I am? I'm a little lost."
     UNKNOWN "..."
@@ -259,13 +259,13 @@ label global000_GTS:
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized in Seichou Academy."
     UNKNOWN "Aaack!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
-    "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
+    "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her skirt."
     show GTS sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     UNKNOWN "Oooh, darn it darn it darn it..."
     show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     BE "Are you okay?"
     UNKNOWN "Eeep!"
-    "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a long skirt and long-sleeved shirt."
+    "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
     UNKNOWN "Uhm, yeah, sorry, I just, uhm, fell. Just, these planters are so big." 
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."

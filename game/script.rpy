@@ -9,12 +9,9 @@
     import datetime
     
     eventlibrary = {}
-    routelist = {}
-    routeprogress = {}
     presetdays = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
     locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track']
     debuginfo = False
     debugenabled = True
@@ -74,31 +71,7 @@
                         **properties)
 
     Shake = renpy.curry(_Shake)
-    
-    class WeightedChoicePicker(object): #Class for weighted selection (used for favored girl selection)
-            def __init__(self, dict):
-                #"dict" is a dict of {"value": chance, "value": chance...}
-                self.dict = dict
-                self.sum = sum([ val for key, val in dict.iteritems()])
-           
-            def pick(self):
-                rand = renpy.random.uniform(0, self.sum)
-                sum = 0.0
-                ret = None
-                for key, val in self.dict.iteritems():
-                    sum += val
-                    if rand < sum:
-                        ret = key
-                        break
-                if ret == None:
-                    ret = key
-               
-                self.sum -= val
-                del self.dict[key]
-                return ret
-               
-            def hasKeysLeft(self):
-                return len(self.dict) != 0
+
     #Condition enums/stuff
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, OR, ISDAYFREE = range(9)
@@ -449,6 +422,7 @@ label start:
         meetingdays = {}
         clearedevents = []
         freeday = True
+        routeprogress = {}
         for g in girllist:
             routeprogress[g] = g + "001"
         eventtitle = ""
@@ -581,7 +555,7 @@ screen daymenu:
         textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
         textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
     
-    #scene title (on 
+    #scene title
     if eventtitle != "":
         frame:
             xalign 0.5
@@ -759,7 +733,8 @@ label daymenu:
             for g in girllist:
                 if isRouteEnabled(g):
                     #Selecting a core scene
-                    s = eventlibrary[routeprogress[g]]
+                    rid = routeprogress[g]
+                    s = eventlibrary[rid]
                     criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
                     if criteriavalid:
                         eventchoices.append(routeprogress[g])
@@ -778,73 +753,6 @@ label daymenu:
         #to implement:
         #route lock
         #force progress (based on time)
-        
-#        prefpool = []
-#        allpool = []
-#        priorities = []
-#        
-#            freeday = True
-#            #Determine preferred girl
-#            prefmax = 0
-#            prefgirl = pickPreferredGirl()
-            
-#            #While we've figured out the preferred girl, update the weight limit, which is floor(average of all non-preferred girls) + 5
-#            tmpeventmax = 0
-#            for g in girllist:
-#                if g == prefgirl:
-#                    continue
-#                tmpeventmax += eventcounter[g]
-#            eventcountmax = math.floor(tmpeventmax / 5) + 5
-            
-#            #Fill allpool (and prefpool, if applicable)
-#            for k, v in eventlibrary.iteritems():
-#                if k in clearedevents:
-#                    continue
-#                criteriavalid = checkCriteria(v["conditions"]) and isEventTimeOk(v["time"][0], v["time"][1]) and isEventDateOk(v["startdate"], v["enddate"])
-#                if not criteriavalid:
-#                    continue
-#                if "priority" in v.keys() and v["priority"]:
-#                    for priogirl in v["girls"]: #If event is priority, add all girls to the priority list (if they aren't already)
-#                        if priogirl in priorities:
-#                            continue
-#                        priorities.append(priogirl)
-#                if prefgirl in v["girls"]:
-#                    prefpool.append(k)
-#                allpool.append(k)
-
-#            #Scan for priorities and purge non-priorities
-#            if len(priorities) != 0:
-#                for e in allpool[:]: #use a copy of the list, python gets cranky if you modify a list you're iterating over
-#                    event = eventlibrary[e]
-#                    for g in event["girls"]:
-#                        if g in priorities:
-#                            if not "priority" in event.keys() or not event["priority"]:
-#                                allpool.remove(e)
-                
-#                if prefgirl in priorities:
-#                    for e in prefpool[:]: #use a copy of the list, python gets cranky if you modify a list you're iterating over
-#                        event = eventlibrary[e]
-#                        if not "priority" in event.keys() or not event["priority"]:
-#                            prefpool.remove(e)
-            
-#            #Select from preferred pool
-#            if len(prefpool) != 0:
-#                tmp = renpy.random.choice(prefpool)
-#                eventchoices.append(tmp)
-#                prefpool.remove(tmp)
-#                if tmp in allpool:
-#                    allpool.remove(tmp)
-#            elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
-#                tmp = renpy.random.choice(allpool)
-#                eventchoices.append(tmp)
-#                allpool.remove(tmp)
-            
-#            #Pick 2 more "allpool" events
-#            if (len(allpool) >= 2):
-#                eventchoices += renpy.random.sample(allpool, 2)
-#            else:
-#                eventchoices += allpool
-#        debugpriorities = "".join(priorities)
     window hide None
     call screen daymenu
     window show None

@@ -262,6 +262,12 @@ init -1 python hide:
 
     ## Used when the image is changed by a say statement with image attributes.
     config.say_attribute_transition = None
+    
+    def dialog_advance():
+        renpy.play("Audio/SFX/sfx_dialog.wav")
+        return True
+    
+    config.say_allow_dismiss = dialog_advance
 
     #########################################
     ## This is the name of the directory where the game's data is
@@ -284,7 +290,7 @@ init -1 python hide:
 
     ## The default text speed in characters per second. 0 is infinite.
 
-    config.default_text_cps = 0
+    config.default_text_cps = 10
 
     ## The default auto-forward time setting.
 
