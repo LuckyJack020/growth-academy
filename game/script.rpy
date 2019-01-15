@@ -260,7 +260,7 @@
                 opt = getOptionalEvent("minor")
                 if opt != None:
                     eventchoices.append(opt)
-        return eventchoices
+        return eventchoices, freeday
         #to implement:
         #route lock
         #force progress (based on time)
@@ -734,7 +734,7 @@ label daymenu:
     python:
         gametime_eve = TimeEnum.DAY
         gametime += datetime.timedelta(days=1)
-        eventchoices = rollEvents()
+        eventchoices, freeday = rollEvents()
     window hide None
     call screen daymenu
     window show None
@@ -747,7 +747,7 @@ label daymenu_overtime:
     #Roll random events
     python:
         gametime_eve = TimeEnum.NIGHT
-        eventchoices = rollEvents()
+        eventchoices, freeday = rollEvents()
     window hide None
     call screen daymenu
     window show None
