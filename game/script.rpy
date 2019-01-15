@@ -226,7 +226,6 @@
         return gametime >= datelibrary[start] and gametime <= datelibrary[end]
 
     def rollEvents():
-        updateSizes()
         prefgirl = getHighestAffection()
         
         eventchoices = []
@@ -351,23 +350,6 @@
         elif deltatime == DeltaTimeEnum.DAYOFWEEK:
             t = gametime + datetime.timedelta(days=((val + 7) - gametime.weekday()))
         meetingdays[getTimeCode(t, eve)] = [event]
-    
-    def getSize(g):
-        if g in girllist:
-            return girlsizes[g]
-        else:
-            return -1
-    
-    def updateSizes():
-        for g in girllist:
-            for i in range(6, 1, -1):
-                if i == 1:
-                    girlsizes[g] = i
-                    break
-                s = g + '_size_' + str(i)
-                if gametime > datelibrary[s]:
-                    girlsizes[g] = i
-                    break
         
     def setSkill(s, val):
         if s not in skills.keys():
