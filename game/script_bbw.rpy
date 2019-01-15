@@ -71,8 +71,8 @@ init 2 python:
     datelibrary['BBW_size_6'] = datetime.date(2005, 12, 10)
     datelibrary['BBW_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['BBW_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['BBW_size_3'] = datetime.date(2005, 5, 10)
-    datelibrary['BBW_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['BBW_size_3'] = datetime.date(2005, 5, 18)
+    datelibrary['BBW_size_2'] = datetime.date(2005, 4, 18)
     
     #NEED TO FIX SIZE 3 DATE
     #Core

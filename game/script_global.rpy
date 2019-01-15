@@ -111,15 +111,15 @@ define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 
 init 1 python:
-    datelibrary['testday'] = datetime.date(2005, 4, 7)
+    datelibrary['testday'] = datetime.date(2005, 4, 11)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
     datelibrary['day_0'] = datetime.date(2005, 4, 3)
     datelibrary['day_end'] = datetime.date(2006, 4, 3)
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.PRESET,                        "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
     eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "RM001"]]}
-    presetdays["4-6-F"] = ["global005"]
-    presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
+    presetdays["4-11-F"] = ["global005"]
+    presetdays["4-11-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
     #Japanese holidays:
     #January 1: New Year’s Day
@@ -166,7 +166,7 @@ label global000:
     if debugenabled:
         menu:
             "(DEBUG) Skip intro":
-                jump daymenu
+                jump daymenu_overtime
             "Continue":
                 "Playing intro."
         
@@ -967,21 +967,7 @@ label global000_homeroom:
 
     scene black with dissolve
     stop music
-    #"There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
-    #MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
-    #MCT "What is going on at this school?!"
-    #UNKNOWN "Keisuke? {w} Hotsure Keisuke?"
-    
-    #scene F1 Hallway with dissolve
-    #MC "Ah! Yes What?"
-    #UNKNOWN "Eep!"
-    #"I was startled by a sweet-looking girl who had stopped at my desk as everyone else was leaving class."
-    #MC "Uh, hi, er, sorry, I'm Keisuke."
-    #LE "Charmed! I'm Kuchibiru Yuki!"
-    #LE "So, wow, what a trip, right? Can you believe it?{w} I wonder what's going to start growing on me?{w} What if it already has? What if it's something internal? Could you wind up with, like, kidneys the size of medicine balls or something? what about..."
-    #"She went on and on, speaking a million kilometers an hour, and I could barely keep up with her questions.{w} By the time she stopped for breath, we'd reached the front doors of the building."
-    #LE "Anyways, I'm gonna just hang out in the courtyard for a little bit. I love to people-watch, and find out all about everyone!"
-    
+
     "So I found myself at Seichou Academy, orientation behind me and a long, strange journey ahead."
     "What was I supposed to do now, knowing what I do about the bodies of the student body?"
     jump daymenu
@@ -1133,7 +1119,7 @@ label global005:
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
     "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
-    jump daymenu
+    jump daymenu_overtime
 
 label RM001:
     scene Dorm Interior with fade

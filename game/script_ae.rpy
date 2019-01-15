@@ -66,7 +66,7 @@ init 2 python:
     datelibrary['AE_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['AE_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['AE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['AE_size_2'] = datetime.date(2005, 4, 18)
     
     #Core
     eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}

@@ -220,15 +220,51 @@
         #Weekday = Mon-Sat, Weekend = Sun, Any = Do not check
         d = (day == WeekendEnum.ANY or (day == WeekendEnum.WEEKEND and gametime.weekday() == 6) or (day == WeekendEnum.WEEKDAY and gametime.weekday() != 6))
         d = d or (gametime.weekday() == day)
-        #Day = Day time period, Night = Night time period, Afterschool = Night time period OR Sunday, Any = Do not check, Day of week = that day specifically
-        t = (time == TimeEnum.ANY or (time == TimeEnum.DAY and not gametime_eve))
-        t = t or ((time == TimeEnum.NIGHT or time == TimeEnum.AFTERSCHOOL) and gametime_eve)
-        t = t or (time == TimeEnum.AFTERSCHOOL and gametime.weekday() == 6)
-        return d and t
+        return d
         
     def isEventDateOk(start, end):
         return gametime >= datelibrary[start] and gametime <= datelibrary[end]
-    
+
+    def rollEvents():
+        updateSizes()
+        prefgirl = getHighestAffection()
+        
+        eventchoices = []
+        freeday = True
+        #It's a preset day, just use whatever the preset says
+        if getTimeCode() in presetdays.keys():
+            eventchoices = presetdays[getTimeCode()]
+            freeday = False
+        #It's a meeting day, just use whatever the meeting says
+        elif getTimeCode() in meetingdays.keys():
+            eventchoices = meetingdays[getTimeCode()]
+            freeday = False
+        #It's not a preset day...
+        else:
+            for g in girllist:
+                if isRouteEnabled(g):
+                    #Selecting a core scene
+                    rid = routeprogress[g]
+                    s = eventlibrary[rid]
+                    criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
+                    if criteriavalid:
+                        eventchoices.append(routeprogress[g])
+                        continue
+                #Selecting/falling back to an optional scene
+                opt = getOptionalEvent(g)
+                if opt != None:
+                    eventchoices.append(opt)
+                
+            #If there's room, 10% chance for minor character event
+            if len(eventchoices) < 6 and renpy.random.randint(1, 10) == 1:
+                opt = getOptionalEvent("minor")
+                if opt != None:
+                    eventchoices.append(opt)
+        return eventchoices
+        #to implement:
+        #route lock
+        #force progress (based on time)
+
     #Other misc functions
     def setAffection(girl, val):
         if not girl in girllist and not girl == "RM":
@@ -300,12 +336,6 @@
         for f in flags:
             l += f + ", "
         return l
-    
-    def debugListEvents():
-        l = ""
-        for s in allpool:
-            l += s + ", "
-        return l
         
     def debugListClearedEvents():
         l = ""
@@ -358,8 +388,6 @@
         s = gametime.strftime("%a %B %d, 20XX")
         if gametime_eve == TimeEnum.NIGHT:
             s += " (Evening)"
-        else:
-            s += " (Morning)"
         return s
         
     def getTimeCode(date=None, eve=None):
@@ -583,7 +611,7 @@ screen debugmenu:
         textbutton "Go!" action Jump("debugevent")
         text ""
         
-        textbutton "List Available Events" action Jump("debugeventlist")
+        text ""
         textbutton "List Cleared Events" action Jump("debugclearedeventlist")
         text ""
         
@@ -677,11 +705,6 @@ screen debugflaglist:
     vbox:
         text debugListFlags()
         textbutton "Return" action Jump("debugmenu")
-
-screen debugeventlist:
-    vbox:
-        text debugListEvents()
-        textbutton "Return" action Jump("debugmenu")
         
 screen debugclearedeventlist:
     vbox:
@@ -704,59 +727,32 @@ label unsetflag:
     jump debugmenu
 
 label daymenu:
-    $updateSizes()
     $renpy.choice_for_skipping()
     scene black
     play music Daymenu
     #Roll random events
     python:
-        prefgirl = getHighestAffection()
-        
-        if gametime_eve == TimeEnum.NIGHT:
-            gametime_eve = TimeEnum.DAY
-            gametime += datetime.timedelta(days=1)
-        else:
-            gametime_eve = TimeEnum.NIGHT
-        
-        eventchoices = []
-        freeday = True
-        #It's a preset day, just use whatever the preset says
-        if getTimeCode() in presetdays.keys():
-            eventchoices = presetdays[getTimeCode()]
-            freeday = False
-        #It's a meeting day, just use whatever the meeting says
-        elif getTimeCode() in meetingdays.keys():
-            eventchoices = meetingdays[getTimeCode()]
-            freeday = False
-        #It's not a preset day...
-        else:
-            for g in girllist:
-                if isRouteEnabled(g):
-                    #Selecting a core scene
-                    rid = routeprogress[g]
-                    s = eventlibrary[rid]
-                    criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
-                    if criteriavalid:
-                        eventchoices.append(routeprogress[g])
-                        continue
-                #Selecting/falling back to an optional scene
-                opt = getOptionalEvent(g)
-                if opt != None:
-                    eventchoices.append(opt)
-                
-            #If there's room, 10% chance for minor character event
-            if len(eventchoices) < 6 and renpy.random.randint(1, 10) == 1:
-                opt = getOptionalEvent("minor")
-                if opt != None:
-                    eventchoices.append(opt)
-    
-        #to implement:
-        #route lock
-        #force progress (based on time)
+        gametime_eve = TimeEnum.DAY
+        gametime += datetime.timedelta(days=1)
+        eventchoices = rollEvents()
     window hide None
     call screen daymenu
     window show None
-    
+
+#Keep day the same (advancing to evening), and reroll events
+label daymenu_overtime:
+    $renpy.choice_for_skipping()
+    scene black
+    play music Daymenu
+    #Roll random events
+    python:
+        gametime_eve = TimeEnum.NIGHT
+        eventchoices = rollEvents()
+    window hide None
+    call screen daymenu
+    window show None
+
+#Don't change day or events
 label daymenu_noadvance:
     scene black
     window hide None
@@ -775,12 +771,6 @@ label debugflaglist:
     call screen debugflaglist
     window show None
 
-label debugeventlist:
-    scene black
-    window hide None
-    call screen debugeventlist
-    window show None
-    
 label debugclearedeventlist:
     scene black
     window hide None

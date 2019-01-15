@@ -44,7 +44,7 @@ init 2 python:
     datelibrary['GTS_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['GTS_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['GTS_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['GTS_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['GTS_size_2'] = datetime.date(2005, 4, 18)
     datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
     
     #Core
@@ -688,11 +688,11 @@ label GTS009:
     GTS "...Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
     BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
     GTS "Well, if you're certain. Though I'd gladly help you get dressed if you're concerned about your bust getting in the way..."
-    BE "Well I appreciate the help Yamazaki-san, and I know this is the Yukata festival and all, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
+    BE "Well I appreciate the help, Yamazaki-san, and I know this is the Yukata festival and all, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
     BE "Yo! Kei-chan!"
     "She waved as she called out to me. Upon seeing them I cracked a small smile, as at least in Naomi's case, this had been the first time I'd seen them out of uniform. Honoka opted to wear a simple tank top and shorts, as with the warmth of the night it allowed her to enjoy the breeze. Naomi, on the other hand, got into the spirit of the festival and wore a full Yukata with a floral design, and even had an elegant flower hair clip on."
     # (This is mostly as a placeholder since with the art there will be a picture that negates this. But until then this is simply to describe them.)
-    MC "Hey you two! Wow Yamazaki-san, you look great."
+    MC "Hey you two! Wow, Yamazaki-san, you look great."
     GTS "Thank you."
     show BE happy
     BE "Hey! What about me?"
@@ -704,7 +704,7 @@ label GTS009:
     MC "You know what, sure, why not? Granted, I can't wear it now, but maybe for a future event."
     GTS "Exactly, one can never be too prepared. And I promise we'll find you something you'll like."
     BE "Fineeeee, but I'm not trying any of them on. So sadly, that's not a fantasy you'll be seeing today Kei-chan."
-    MC "I-what?"
+    MC "I- what?"
     BE "Heh. I know you were hoping to see me in one today. Sash way down past my boobs, hoping I'd spill a snow cone on them, or a goldfish would flop in my cleavage..."
     show GTS embarrassed
     GTS "Inoue-san..."
@@ -732,7 +732,7 @@ label GTS009:
     MC "Yeah, thank you."
     GTS "It's no problem at all. Please enjoy."
     show BE neutral
-    "Our pace through the sea of people slowed considerably at that point as we enjoyed our treats. Thankfully, this treat was enough to distract Honoka from asking for other things until we eventually came upon a stand that seemed to catch Naomi's eye."
+    "Our pace through the sea of people slowed considerably at that point as we enjoyed our treats. Thankfully, it was enough to distract Honoka from asking for other things until we eventually came upon a stand that seemed to catch Naomi's eye."
     GTS "Oh, Hotsure-san. This seems like a good stand to look at some yukata. Come take a look, please?"
     MC "Hm? Are there any that stand out to you?"
     GTS "Shouldn't I be asking you that though?"
@@ -742,20 +742,13 @@ label GTS009:
     GTS "Very well, I'll see what I can find in that color scheme."
     "She inspected the stand for a few moments, handing me her shaved ice so she could feel the yukatas. Checking every side, every inch as she carefully examined possibly hidden options. All the while Honoka ate more of her shaved ice, wincing at the occasional brain freeze before immediately taking another bite."
     GTS "What do you think of this one, Hotsure-san?"
-    "She lifted up a blue-colored yukata, it's design having a bold feeling towards it as there was light etching of mountains and clouds faintly imprinted on its surface. Not enough to be too distracting, yet still giving the eye a nice scene to take in if observed."
+    "She lifted up a blue-colored yukata, its design having a bold feeling towards it as there was light etching of mountains and clouds faintly imprinted on its surface. Not enough to be too distracting, yet still giving the eye a nice scene to take in if observed."
     MC "Oh wow, that's actually pretty cool."
     show BE happy
     BE "Yeah, looks awesome. I'd say it's a great find. Ow... my head..."
     GTS "I'm very glad you like it Hotsure-san. We'll take this one please."
     show BE neutral
     "She took the yukata to the vendor as she motioned for me to walk over. I handed our two shaved ice cups to Honoka, who snuck a bite from my bowl as I made my way over. Naomi had me stretch my arms outwards from my sides as she expertly placed the yukata on me."
-    "She slid my arms within the sleeves, then made to check the length of the garment by sliding a finger down the center of my spine, which made me shiver slightly. Her hands grabbed onto the cloth and she lifted it so the hemline met just below my ankles, as there was some loose length in the hem."
-    "Bringing the right side of the garment to the left side of my waist, she then moved one hand to the left side of the garment and had it over lap the right as it went to the right side of my waist. The vendor seeing that Naomi clearly knew what she was doing, simply handed her the sash as she whispered."
-    GTS "Pardon me, Hotsure-san."
-    "Before she wrapped the sash around my waist. Once she tied the sash to my waist she smiled lightly and told me."
-    GTS "Please do as I do Hotsure-san, we need to smooth out the wrinkles."
-    "She shows some holes on the underside of the armpits on her yukata and slid her hands into her own, my hands doing the same with my yukata. Together we slid our hands within the folds as the bunched up parts of cloth earlier began to smooth out and actually cover over the sash, making a seamless look to the gown."
-    GTS "Please adjust your collar now Hotsure-san. It should fold just at the center of your collar bone. Simply pull the bottom of the back a tad until you can fit a rolled up fist into the opening behind your neck. Then gently pull at the front from inside the miyatsukuchi to get the desired look. "
     GTS "There you go, nicely done. And that's it Hotsure-san, thank you for allowing me to help you dress. If we had also gotten one for Inoue-san we would have needed to put another sash just underneath her chest, then smooth out the newer wrinkles before adding the obi."
     show BE happy
     BE "Yeah and that would take forever, so no thanks. Still, you look nice Hotsure-san."
@@ -763,13 +756,14 @@ label GTS009:
     MC "Heh... thanks."
     show BE surprised
     BE "OH OH! Look!"
+    hide BE with dissolve
     "She pointed to a new stand and ran off to check it out, Naomi and I quickly following her. We easily found Honoka as she frantically waved for us to hurry up, as there was a small crowd around this stand for some reason."
     "When we arrived, the reason became rather clear, as this stand had a game."
-    Vendor "Welcome! Are you a master fisher? Well then test your skills in my little game against my expertly trained goldfishes!"
+    show BE happy at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    Vendor "Welcome! Are you a master fisher? Well then test your skills in my little game against my expertly trained goldfish!"
     MC "You can train goldfish?"
     Vendor "Of course! It takes years of training and being one with the fish."
     MC "Uh... okay..."
-    Vendor "Don't focus too much on that young man, instead take in the new direction I've gone with goldfish scooping."
     "He brought us over to see the game properly. It wasn't your typical scooping, it seemed. Instead the poi were shaped like small baskets and tied on the corners to a string that was attached to a small fishing rod."
     Vendor "Normally in goldfish scooping you do what?"
     show BE neutral
@@ -788,13 +782,13 @@ label GTS009:
     Vendor "Great! 500 yen."
     MC "What? Aren't these normally about 100?"
     Vendor "If this was goldfish scooping, yes. But this is fishing good sir. 500 yen."
-    "I narrowed my eyebrows but gave him the money, and he handed me the fishing rod, before quickly replacing the poi basket."
+    "I gave him the money, and he handed me the fishing rod, before quickly replacing the poi basket."
     Vendor "Remember, the hardest test in life is having the patience to wait for the right moment."
     "He grinned at me as I let the basket carefully sink into the little pool. From my angle I realized that I couldn't tell how deep it was or where exactly in depth was my basket. Even the fishes could be at any point above the basket. I gave a couple of test reels, slowly expanding my basket though it seemed that each click of the reel sent a vibration down the wire which disturbed the water, signalling the fishes to move."
     "Taking a chance, I quickly reeled in as a fish swam over, but by the time the basket caught up the fish had already moved on."
     Vendor "Too greedy. Waaaait."
     BE "Come on Kei-chan, we're rooting for you!"
-    "I gave a slight nod, as at least I was closer to the surface now. Though that also gave me less options, as not as many of the goldfish swam this close to the top. Each second ticked away without even the slightest hint of a fish drawing near, until finally one showed me mercy and swam just over my basket. Instinctively I yanked up to capture the fish, but this was a mistake, as the sudden force along with the erosion of the water had resulted in my poi collapsing and setting the goldfish free."
+    "I gave a slight nod, as at least I was closer to the surface now. Though that also gave me fewer options, as not as many of the goldfish swam this close to the top. Each second ticked away without even the slightest hint of a fish drawing near, until finally one showed me mercy and swam just over my basket. Instinctively I yanked up to capture the fish, but this was a mistake, as the sudden force along with the erosion of the water had resulted in my poi collapsing and setting the goldfish free."
     Vendor "Ooooh, tooooo bad young man. Better luck next time."
     GTS "You gave it a good shot Hotsure-san."
     show BE sad
@@ -807,13 +801,10 @@ label GTS009:
     "As they hurriedly swam back over my poi which hadn't had time to sink fully, I quickly reeled in as well as yanked, lifting my still sturdy poi out of the water. Honoka and even Naomi gave an audible cheer as the outline of a fish could be seen in the basket."
     show BE happy
     BE "You did it!"
-    "I looked at the vendor confidently though he only smiled as when I looked back at the poi the goldfish suddenly lept out of it."
-    show BE surprised
-    BE "It escaped!"
-    show BE neutral
+    "I looked at the vendor confidently though when I looked back at the poi the goldfish suddenly lept out of it."
     "I couldn't react as I watched the fish descend back towards the pool, though it never made its target, as a small cup appeared beneath it and caught the goldfish."
     UNKNOWN "Here you go, mister."
-    "A little girl as she rose the cup up to me with a smile."
+    "As I looked down, I saw that the one holding the cup was a little girl."
     MC "Uhh... thanks."
     show GTS happy
     GTS "Ara ara, thank you so much."
@@ -826,7 +817,7 @@ label GTS009:
     MC "I believe I've won."
     Vendor "I... huh. I don't know if that's against the rules or not."
     MC "You never mentioned anything about what happens to the fish once it's caught and out of the pool."
-    Vendor "Hm. Very well, consider that a freebee kid. Though I'll be sure to add that to the rules."
+    Vendor "Hm. Very well, consider that a freebie kid. Though I'll be sure to add that to the rules."
     "He took out a notepad and began scribbling in it as I turned to Honoka and Naomi."
     menu:
         "Give the fish to Honoka":
@@ -888,7 +879,7 @@ label GTS009_after:
     BE "Yeah! Let's party!"
     show GTS neutral
     GTS "Heh, indeed."
-    "I led the way as we journeyed on to a eventful night of games, prizes, and food. And besides Honoka having eyes bigger than her stomach, the night was a ton of fun. I'm really glad we got a chance to do this, as well as getting the chance to take a picture of the three of us together."
+    "I led the way as we journeyed on to an eventful night of games, prizes, and food. And besides Honoka having eyes bigger than her stomach, the night was a ton of fun. I'm really glad we got a chance to do this, as well as getting the chance to take a picture of the three of us together."
     jump daymenu
     
 label GTS010:

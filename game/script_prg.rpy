@@ -34,7 +34,7 @@ init 2 python:
     datelibrary['PRG_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['PRG_size_2'] = datetime.date(2005, 4, 18)
     
     #Core
     eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}

@@ -33,7 +33,7 @@ init 2 python:
     datelibrary['FMG_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['FMG_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['FMG_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['FMG_size_2'] = datetime.date(2005, 4, 18)
     
     #Core
     eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",                        "conditions": []}
