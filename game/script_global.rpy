@@ -98,7 +98,7 @@ define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
 
-define audio.EventStart = "Audio/SFX/sfx_eventstart.wav"
+define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
 define audio.Bird = "Audio/SFX/sfx_tbi.ogg" #NEED (current one too long)
 define audio.Cheer = "Audio/SFX/sfx_cheer.mp3"

@@ -4,25 +4,25 @@ define Announcer = Character('Announcer', color="#C0C0C0")
 define fade = Fade(0.5, 0.0, 0.5)
 
 image PRG neutral = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/neutral.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/neutral.png",
     "True", "Graphics/PRG/1/neutral.png")
 image PRG happy = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/happy.png", 
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/happy.png", 
     "True", "Graphics/PRG/1/happy.png")
 image PRG sad = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/sad.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/sad.png",
     "True", "Graphics/PRG/1/sad.png")
 image PRG surprised = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/surprised.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/surprised.png",
     "True", "Graphics/PRG/1/surprised.png")
 image PRG angry = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/angry.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/angry.png",
     "True", "Graphics/PRG/1/angry.png")
 image PRG aroused = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/aroused.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/aroused.png",
     "True", "Graphics/PRG/1/aroused.png")
 image PRG unique = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
     "True", "Graphics/PRG/1/unique.png")
 
 image Dorm PRG = ConditionSwitch(

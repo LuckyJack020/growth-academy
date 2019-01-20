@@ -764,9 +764,11 @@ label startevent:
     play sound EventStart
     scene black with dissolve
     pause .5
-    $eventtitle = ""
-    $renpy.block_rollback()
-    $renpy.jump(activeevent)
+    python:
+        eventtitle = ""
+        clearedevents.append(activeevent)
+        renpy.block_rollback()
+        renpy.jump(activeevent)
     
 label train:
     stop music

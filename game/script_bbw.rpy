@@ -5,61 +5,61 @@ define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suf
 define Waitress = Character('Lunchlady', color="#CC33FF")
 
 image BBW neutral = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/neutral.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/neutral.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/neutral.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/neutral.png",
     "True", "Graphics/BBW/1/neutral.png")
 image BBW happy = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/happy.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/happy.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/happy.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/happy.png",
     "True", "Graphics/BBW/1/happy.png")
 image BBW sad = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/sad.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/sad.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/sad.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/sad.png",
     "True", "Graphics/BBW/1/sad.png")
 image BBW surprised = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/surprised.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/surprised.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/surprised.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/surprised.png",
     "True", "Graphics/BBW/1/surprised.png")
 image BBW angry = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/angry.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/angry.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/angry.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/angry.png",
     "True", "Graphics/BBW/1/angry.png")
 image BBW aroused = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/aroused.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/aroused.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/aroused.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/aroused.png",
     "True", "Graphics/BBW/1/aroused.png")
 image BBW haughty = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/unique.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/unique.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/unique.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/unique.png",
     "True", "Graphics/BBW/1/unique.png")
 
 image BBW swimneutral = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/neutral.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/neutral.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/neutral.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/neutral.png",
     "True", "Graphics/BBW/1/neutral.png")
 image BBW swimhappy = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/happy.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/happy.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/happy.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/happy.png",
     "True", "Graphics/BBW/1/happy.png")
 image BBW swimsad = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/sad.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/sad.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/sad.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/sad.png",
     "True", "Graphics/BBW/1/sad.png")
 image BBW swimsurprised = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/surprised.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/surprised.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/surprised.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/surprised.png",
     "True", "Graphics/BBW/1/surprised.png")
 image BBW swimangry = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/angry.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/angry.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/angry.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/angry.png",
     "True", "Graphics/BBW/1/angry.png")
 image BBW swimaroused = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/aroused.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/aroused.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/aroused.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/aroused.png",
     "True", "Graphics/BBW/1/aroused.png")
 image BBW swimhaughty = ConditionSwitch(
-    "gametime > datelibrary['BBW_size_3']", "Graphics/BBW/3/unique.png",
-    "gametime > datelibrary['BBW_size_2']", "Graphics/BBW/2/unique.png",
+    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/unique.png",
+    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/unique.png",
     "True", "Graphics/BBW/1/unique.png")
 
 image cg BBW001 = "Graphics/ui/gallery/BBW-001.png"

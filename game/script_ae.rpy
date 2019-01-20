@@ -6,58 +6,58 @@ define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
 
 image AE neutral = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
     "True", "Graphics/AE/1/neutral.png")
 image AE neutral-annoyed = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
     "True", "Graphics/AE/1/neutral-annoyed.png")
 image AE neutral-eyebrow = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png", #needed
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png", #needed
     "True", "Graphics/AE/1/neutral-eyebrow.png")
 image AE neutral-noglasses = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-noglasses.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-noglasses.png",
     "True", "Graphics/AE/1/neutral-noglasses.png")
 image AE neutral-smug = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-smug.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-smug.png",
     "True", "Graphics/AE/1/neutral-smug.png")
 image AE happy = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
     "True", "Graphics/AE/1/happy.png")
 image AE sad = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
     "True", "Graphics/AE/1/sad.png")
 image AE sad-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/sad-2.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad-2.png",
     "True", "Graphics/AE/1/sad.png") #missing
 image AE surprised = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
     "True", "Graphics/AE/1/surprised.png")
 image AE angry = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
     "True", "Graphics/AE/1/angry.png")
 image AE angry-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry-2.png", #missing
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-2.png", #missing
     "True", "Graphics/AE/1/angry-2.png")
 image AE angry-3 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry-3.png", #needed
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-3.png", #needed
     "True", "Graphics/AE/1/angry-3.png")
 image AE aroused = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
     "True", "Graphics/AE/1/aroused.png")
 image AE aroused-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused-2.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-2.png",
     "True", "Graphics/AE/1/aroused-2.png")
 image AE aroused-3 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused-3.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-3.png",
     "True", "Graphics/AE/1/aroused-3.png")
 image AE aroused-4 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused-4.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-4.png",
     "True", "Graphics/AE/1/aroused.png") #missing
 image AE glasses = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/unique.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique.png",
     "True", "Graphics/AE/1/unique.png")
 image AE glasses-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/unique-2.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique-2.png",
     "True", "Graphics/AE/1/unique-2.png")
 
 init 2 python:    
@@ -3686,9 +3686,11 @@ label AE021:
     "Tashi-sensei walked in the room, and after standing and bowing; as well as opening the door for Honoka, we began our lessons...however there was a problem. I couldn't help it, but I felt like I was being watched."
     "My attention was drawn to the picture of the second president of Japan on the wall when I noticed something...bright beaming glasses staring at me on the reflective glass. I looked down to my desk."
     MCT "What the..."
+    hide HR neutral
     show AE glasses at Position(xpos=0.575, ypos=0.0, yanchor=0.12), Transform(zoom=8.0)
     "I looked up once more, and once more, on top of the president's eyes, the bright gleam of Shiori's glasses dove daggers into my own. She looked down, but only for a moment before looking back up through a side glance; her eyes piercing their way into my mind. I straightened up, and attempted to ignore her."
     hide AE
+    show HR neutral
     HR "-of 1973. Ok. That should be all for today. Your homework is chapter five page eight."
     "Tashi-sensei nodded, and walked over to stand by the door."
     hide HR with dissolve

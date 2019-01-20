@@ -5,25 +5,25 @@ define Cashier = Character('Cashier', color="#FF9900")
 define Chie = Character('Chie', color="#FF9900")
 
 image FMG neutral = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/neutral.png",
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/neutral.png",
     "True", "Graphics/FMG/1/neutral.png")
 image FMG happy = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/happy.png", 
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/happy.png", 
     "True", "Graphics/FMG/1/happy.png")
 image FMG sad = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/sad.png",
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/sad.png",
     "True", "Graphics/FMG/1/sad.png")
 image FMG surprised = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/surprised.png",
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/surprised.png",
     "True", "Graphics/FMG/1/surprised.png")
 image FMG angry = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/angry.png",
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/angry.png",
     "True", "Graphics/FMG/1/angry.png")
 image FMG aroused = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/aroused.png",
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/aroused.png",
     "True", "Graphics/FMG/1/aroused.png")
 image FMG flex = ConditionSwitch(
-    "gametime > datelibrary['FMG_size_2']", "Graphics/FMG/2/flex.png",
+    "gametime >= datelibrary['FMG_size_2']", "Graphics/FMG/2/flex.png",
     "True", "Graphics/FMG/1/flex.png")
 
 image Rin neutral = "Graphics/minor/rin-neutral.png"

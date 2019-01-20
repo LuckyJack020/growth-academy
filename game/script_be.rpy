@@ -5,28 +5,28 @@ define Coach = Character('Coach', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
 
 image BE neutral = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/neutral.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/neutral.png",
     "True", "Graphics/BE/1/neutral.png")
 image BE happy = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/happy.png", 
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/happy.png", 
     "True", "Graphics/BE/1/happy.png")
 image BE sad = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/sad.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/sad.png",
     "True", "Graphics/BE/1/sad.png")
 image BE surprised = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/surprised.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/surprised.png",
     "True", "Graphics/BE/1/surprised.png")
 image BE angry = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/angry.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/angry.png",
     "True", "Graphics/BE/1/angry.png")
 image BE aroused = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/aroused.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/aroused.png",
     "True", "Graphics/BE/1/aroused.png")
 image BE unique = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/unique.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/unique.png",
     "True", "Graphics/BE/1/unique.png")
 image BE zoomin = ConditionSwitch(
-    "gametime > datelibrary['BE_size_2']", "Graphics/BE/2/hq-happy.png",
+    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/hq-happy.png",
     "True", "Graphics/BE/1/hq-happy.png")
 
 image cg BE001 = "Graphics/ui/gallery/BE-001.png"

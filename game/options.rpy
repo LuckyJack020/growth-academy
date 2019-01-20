@@ -264,7 +264,7 @@ init -1 python hide:
     config.say_attribute_transition = None
     
     def dialog_advance():
-        renpy.play("Audio/SFX/sfx_dialog.wav")
+        renpy.play("Audio/SFX/sfx_dialog.ogg")
         return True
     
     config.say_allow_dismiss = dialog_advance
