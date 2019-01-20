@@ -98,7 +98,7 @@ define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
 
-define audio.EventStart = "Audio/SFX/sfx_eventstart.wav"
+define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"
 define audio.Bird = "Audio/SFX/sfx_tbi.ogg" #NEED (current one too long)
 define audio.Cheer = "Audio/SFX/sfx_cheer.mp3"
@@ -111,15 +111,15 @@ define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 
 init 1 python:
-    datelibrary['testday'] = datetime.date(2005, 4, 7)
+    datelibrary['testday'] = datetime.date(2005, 4, 11)
     datelibrary['day_1'] = datetime.date(2005, 4, 4)
     datelibrary['day_0'] = datetime.date(2005, 4, 3)
     datelibrary['day_end'] = datetime.date(2006, 4, 3)
-    eventlibrary['global005'] = {"name": "global005", "girls": [], "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                            "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": [], "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
-    eventlibrary['RM002'] = {"name": "Yuki", "girls": [], "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",                                  "conditions": [[ConditionEnum.EVENT, "RM001"]]}
-    presetdays["4-6-F"] = ["global005"]
-    presetdays["4-6-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
+    eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.PRESET,                        "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
+    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
+    eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "RM001"]]}
+    presetdays["4-11-F"] = ["global005"]
+    presetdays["4-11-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
     
     #Japanese holidays:
     #January 1: New Year’s Day
@@ -166,59 +166,12 @@ label global000:
     if debugenabled:
         menu:
             "(DEBUG) Skip intro":
-                menu:
-                    "Set favored girl seeding":
-                        menu:
-                            "BE Neutral":
-                                pass
-                            "BE Likes":
-                                $ setEventCount("BE", 2)
-                            "BE Dislikes":
-                                $ setEventCount("BE", -2)
-                        menu:
-                            "AE Neutral":
-                                pass
-                            "AE Likes":
-                                $ setEventCount("AE", 2)
-                            "AE Dislikes":
-                                $ setEventCount("AE", -2)
-                        menu:
-                            "GTS Neutral":
-                                pass
-                            "GTS Likes":
-                                $ setEventCount("GTS", 2)
-                            "GTS Dislikes":
-                                $ setEventCount("GTS", -2)
-                        menu:
-                            "FMG Neutral":
-                                pass
-                            "FMG Likes":
-                                $ setEventCount("FMG", 2)
-                            "FMG Dislikes":
-                                $ setEventCount("FMG", -2)
-                        menu:
-                            "BBW Neutral":
-                                pass
-                            "BBW Likes":
-                                $ setEventCount("BBW", 2)
-                            "BBW Dislikes":
-                                $ setEventCount("BBW", -2)
-                        menu:
-                            "PRG Neutral":
-                                pass
-                            "PRG Likes":
-                                $ setEventCount("PRG", 2)
-                            "PRG Dislikes":
-                                $ setEventCount("PRG", -2)
-                        jump daymenu
-                    "Everyone neutral":
-                        jump daymenu
+                jump daymenu_overtime
             "Continue":
                 "Playing intro."
         
     # Move to Lake Road screen with a fade in transition.
     scene Lake Road with fade
-    play music BE
     MCT "Ahh... It's really hot today."
     "I came to a stop on a wooden bridge overlooking a lake."
     "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tommorrow."
@@ -231,6 +184,7 @@ label global000:
     MC "Good afternoon!"
     "At the sound of my voice, she turned around and faced me."
     show BE neutral with dissolve
+    play music BE
     "It turned out to be a fairly cute girl, with brown hair."
     MC "Sorry, but can you tell me where I am? I'm a little lost."
     UNKNOWN "..."
@@ -305,13 +259,13 @@ label global000_GTS:
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized in Seichou Academy."
     UNKNOWN "Aaack!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
-    "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her long skirt."
+    "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her skirt."
     show GTS sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     UNKNOWN "Oooh, darn it darn it darn it..."
     show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     BE "Are you okay?"
     UNKNOWN "Eeep!"
-    "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a long skirt and long-sleeved shirt."
+    "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
     UNKNOWN "Uhm, yeah, sorry, I just, uhm, fell. Just, these planters are so big." 
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."
@@ -346,7 +300,6 @@ label global000_GTS_c2:
     show GTS happy
     UNKNOWN "Oh, thank you, that'd be lovely. Here, let me give you the can..."
     $ setAffection("GTS", 1)
-    $ setEventCount("GTS", 1)
     "I leaned way over the planter and watered the middle row of plants, having to stretch as far as I could reach but managing to get all of them."
     GTS "Thank you so much! Oh, I'm sorry, I didn't even introduce myself properly. My name's Yamazaki Naomi."
     "She bowed, and we returned the gesture."
@@ -363,7 +316,6 @@ label global000_GTS_c2:
     show BE neutral
     BE "Well that was nice of you to help her, Kei-chan!"
     $ setAffection("BE", 1)
-    $ setEventCount("BE", 1)
     "I nod, and we continue on to the front doors of the school."
     jump global000_AE
 
@@ -401,11 +353,8 @@ label global000_AE:
 label global000_AE_c1:
     MC "She was just trying to help...{w} No need to be mean."
     $ setAffection("BE", 1)
-    $ setEventCount("BE", 1)
     $ setAffection("FMG", 1)
-    $ setEventCount("FMG", 1)
     $ setAffection("AE", -1)
-    $ setEventCount("AE", -1)
     UNKNOWN "Ex{i}cuse{/i} me?"
     FMG "Yeah, Matsumoto, get that stick out of your huge butt."
     "Matsumoto's face tightened and she shot daggers with her eyes."
@@ -441,7 +390,6 @@ label global000_AE_c2:
     MC "You should listen to your boss, you know."
     MC "If she's got a plan, going off on your own doesn't really help."
     $ setAffection("FMG", -1)
-    $ setEventCount("FMG", -1)
     show FMG angry
     FMG "My WHAT? Matsumoto's not the boss of anyone, despite what she'll tell you."
     show AE neutral
@@ -467,7 +415,6 @@ label global000_AE_c3:
     "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to me in a huff."
     "My eyes snap to hers, momentarily mesmerized by just how sizable her rear was underneath the school-issue uniform."
     $ setAffection("AE", 1)
-    $ setEventCount("AE", 1)
     show AE happy
     AE "Hmph. Thank you for not butting in on that...{w}spectacle.{w}\nI'm Matsumoto Shiori, and you are?"
     "We introduced ourselves, and Matsumoto informed us that we were in the same class as her, class 3-B."
@@ -525,11 +472,8 @@ label global000_BBW:
 label global000_BBW_c1:
     MC "Well, if you've got this under control, I guess I'll be going then.?"
     $ setAffection("BBW", 1)
-    $ setEventCount("BBW", 1)
     $ setAffection("PRG", -1)
-    $ setEventCount("PRG", -1)
     $ setAffection("BE", -1)
-    $ setEventCount("BE", -1)
     BBW "Glad to see at least someone can follow orders."
     show BE surprised at center with dissolve
     BE "{i}Kei-chan{/i}!"
@@ -544,9 +488,7 @@ label global000_BBW_c1:
 label global000_BBW_c2:
     MC "Shouldn't you be doing something too?"
     $ setAffection("BBW", -1)
-    $ setEventCount("BBW", -1)
     $ setAffection("PRG", 1)
-    $ setEventCount("PRG", 1)
     show BBW neutral at Position (xpos=0.25, xanchor=0.5)
     BBW "I'm doing something!"
     show BBW happy
@@ -785,7 +727,6 @@ label global000_sit_c1_1:
     "I opened my mouth to try and ask about the ass-squishing she's giving me, but the principal clearing his throat into the microphone snapped Shiori's attention to the stage."
     MCT "No use talking now, I suppose...  But it's nice she thought I was clever enough to notice."
     $ setAffection("AE", 1)
-    $ setEventCount("AE", 1)
     jump global000_sit_after
 
 label global000_sit_c1_2:
@@ -803,7 +744,6 @@ label global000_sit_c1_2:
     show BBW neutral
     BBW  "Oop, they're starting. Eyes forward."
     $ setAffection("BBW", 1)
-    $ setEventCount("BBW", 1)
     jump global000_sit_after
 
 label global000_sit_c2_1:
@@ -823,7 +763,6 @@ label global000_sit_c2_1:
     BE "Yeah! That'd be great, Kei-chan! Just like old times!"
     MC "Shhh, not so loud, they're starting! But yeah, just like old times..."
     $ setAffection("BE", 1)
-    $ setEventCount("BE", 1)
     jump global000_sit_after
 
 label global000_sit_c2_2:
@@ -849,7 +788,6 @@ label global000_sit_c2_2:
     show GTS happy
     GTS "...Thank you, both of you. Now, we musn't be speaking once the principal starts..."
     $ setAffection("GTS", 1)
-    $ setEventCount("GTS", 1)
     jump global000_sit_after
 
 label global000_sit_c3_1:
@@ -872,7 +810,6 @@ label global000_sit_c3_1:
     FMG "Busted his finger. Wasn't even trying to."
     MCT "Ooooo-kay, I'm suddenly very interested in what the principal has to say..."
     $ setAffection("FMG", 1)
-    $ setEventCount("FMG", 1)
     jump global000_sit_after
 
 label global000_sit_c3_2:
@@ -895,7 +832,6 @@ label global000_sit_c3_2:
     PRG "I do..."
     "We sat there, listening to the Principal's speech. I noticed Aida-san leaning a little closer into me as it went on."
     $ setAffection("PRG", 1)
-    $ setEventCount("PRG", 1)
     $ setFlag("global1000_aidasit")
     jump global000_sit_after
 
@@ -945,7 +881,6 @@ label global000_aftersit_c2:
     hide AE with dissolve
     "She nodded and left her post, satisfied with the answer, and we both walked to homeroom."
     $ setAffection("AE", 1)
-    $ setEventCount("AE", 1)
     $ setAffection("RM", 1)
     jump global000_homeroom
 
@@ -956,7 +891,6 @@ label global000_aftersit_c3:
     hide AE with dissolve
     "With a derisive grunt, Shiori left her post by the doors and we walked to homeroom together."
     $ setAffection("AE", 1)
-    $ setEventCount("AE", 1)
     $ setAffection("RM", -1)
     jump global000_homeroom
 
@@ -1033,21 +967,7 @@ label global000_homeroom:
 
     scene black with dissolve
     stop music
-    #"There were other classes that day, some with normal teachers, others changed lik Tashi-Sensei, but I could barely pay attention."
-    #MCT "So is that why Honoka's boobs had gotten so large? {w} Were they going to get bigger? {w} What of everyone else I'd met so far? What about Tomo-chan? What about {i}me{/i}?"
-    #MCT "What is going on at this school?!"
-    #UNKNOWN "Keisuke? {w} Hotsure Keisuke?"
-    
-    #scene F1 Hallway with dissolve
-    #MC "Ah! Yes What?"
-    #UNKNOWN "Eep!"
-    #"I was startled by a sweet-looking girl who had stopped at my desk as everyone else was leaving class."
-    #MC "Uh, hi, er, sorry, I'm Keisuke."
-    #LE "Charmed! I'm Kuchibiru Yuki!"
-    #LE "So, wow, what a trip, right? Can you believe it?{w} I wonder what's going to start growing on me?{w} What if it already has? What if it's something internal? Could you wind up with, like, kidneys the size of medicine balls or something? what about..."
-    #"She went on and on, speaking a million kilometers an hour, and I could barely keep up with her questions.{w} By the time she stopped for breath, we'd reached the front doors of the building."
-    #LE "Anyways, I'm gonna just hang out in the courtyard for a little bit. I love to people-watch, and find out all about everyone!"
-    
+
     "So I found myself at Seichou Academy, orientation behind me and a long, strange journey ahead."
     "What was I supposed to do now, knowing what I do about the bodies of the student body?"
     jump daymenu
@@ -1199,7 +1119,7 @@ label global005:
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
     "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
-    jump daymenu
+    jump daymenu_overtime
 
 label RM001:
     scene Dorm Interior with fade

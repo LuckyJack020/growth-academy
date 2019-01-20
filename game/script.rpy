@@ -12,10 +12,9 @@
     presetdays = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    girlsizes = {'BE': 1, 'GTS': 1, 'AE': 1, 'FMG': 1, 'BBW': 1, 'PRG': 1}
     locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track']
     debuginfo = False
-    debugenabled = True
+    debugenabled = False
     debuginput = ""
     debugpriorities = ""
     gametime = datetime.date(2005, 4, 4)
@@ -72,34 +71,10 @@
                         **properties)
 
     Shake = renpy.curry(_Shake)
-    
-    class WeightedChoicePicker(object): #Class for weighted selection (used for favored girl selection)
-            def __init__(self, dict):
-                #"dict" is a dict of {"value": chance, "value": chance...}
-                self.dict = dict
-                self.sum = sum([ val for key, val in dict.iteritems()])
-           
-            def pick(self):
-                rand = renpy.random.uniform(0, self.sum)
-                sum = 0.0
-                ret = None
-                for key, val in self.dict.iteritems():
-                    sum += val
-                    if rand < sum:
-                        ret = key
-                        break
-                if ret == None:
-                    ret = key
-               
-                self.sum -= val
-                del self.dict[key]
-                return ret
-               
-            def hasKeysLeft(self):
-                return len(self.dict) != 0
+
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, PRESET, OR, ISDAYFREE, ROUTECLEAR = range(11)
+        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, OR, ISDAYFREE = range(9)
     
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -108,10 +83,15 @@
     #GAMETIME: arg1 = ConditionEqualityEnum, arg2 = (date, from datelibrary) date in question, true if the comparison is true (between gametime and arg2)
     #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
     #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
-    #PRESET: no args, always returns false (ie event is only used in preset dates)
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     #ISDAYFREE: arg1 = DeltaTimeEnum, arg2 = (int) number of days OR (date) date OR (DayOfWeekEnum) day of week, arg3 = (boolean) evening, returns true if the specified time (with time of day from arg3) is not a preset/meeting day
-    #ROUTECLEAR: arg1 = (string, in girls list), returns true if there are no events in the eventlibrary that haven't been cleared but are still available to select
+    
+    class EventTypeEnum:
+        CORE, OPTIONAL, PRESET = range(3)
+
+    #CORE: Event is in someone's core route. Cannot be selected randomly.
+    #OPTIONAL: Event is an optional event. Can be selected randomly.
+    #PRESET: Event is optional, but only available through preset methods. Cannot be selected randomly.
 
     class DeltaTimeEnum:
         NUMDAYS, DATE, DAYOFWEEK = range(3)
@@ -207,9 +187,6 @@
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[2]))
                     criteriavalid = False
                     break
-            elif c[0] == ConditionEnum.PRESET:
-                criteriavalid = False
-                break
             elif c[0] == ConditionEnum.OR:
                 if checkCriteria([c[1]]) or checkCriteria([c[2]]):
                     continue
@@ -233,19 +210,6 @@
                 if getTimeCode(t, c[3]) in presetdays.keys() or getTimeCode(t, c[3]) in meetingdays.keys():
                     criteriavalid = False
                     break
-            elif c[0] == ConditionEnum.ROUTECLEAR:
-                if checkRouteClear:
-                    for k, v in eventlibrary.iteritems():
-                        if k in clearedevents:
-                            continue
-                        if len(v["girls"]) == 0 or c[1] != v["girls"][0]:
-                            continue
-                        if not checkCriteria(v["conditions"], False):
-                            continue
-                        criteriavalid = False
-                        break
-                    if not criteriavalid:
-                        break
             else:
                 renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
                 criteriavalid = False
@@ -256,15 +220,50 @@
         #Weekday = Mon-Sat, Weekend = Sun, Any = Do not check
         d = (day == WeekendEnum.ANY or (day == WeekendEnum.WEEKEND and gametime.weekday() == 6) or (day == WeekendEnum.WEEKDAY and gametime.weekday() != 6))
         d = d or (gametime.weekday() == day)
-        #Day = Day time period, Night = Night time period, Afterschool = Night time period OR Sunday, Any = Do not check, Day of week = that day specifically
-        t = (time == TimeEnum.ANY or (time == TimeEnum.DAY and not gametime_eve))
-        t = t or ((time == TimeEnum.NIGHT or time == TimeEnum.AFTERSCHOOL) and gametime_eve)
-        t = t or (time == TimeEnum.AFTERSCHOOL and gametime.weekday() == 6)
-        return d and t
+        return d
         
     def isEventDateOk(start, end):
-        return gametime > datelibrary[start] and gametime < datelibrary[end]
-    
+        return gametime >= datelibrary[start] and gametime <= datelibrary[end]
+
+    def rollEvents():
+        prefgirl = getHighestAffection()
+        
+        eventchoices = []
+        freeday = True
+        #It's a preset day, just use whatever the preset says
+        if getTimeCode() in presetdays.keys():
+            eventchoices = presetdays[getTimeCode()]
+            freeday = False
+        #It's a meeting day, just use whatever the meeting says
+        elif getTimeCode() in meetingdays.keys():
+            eventchoices = meetingdays[getTimeCode()]
+            freeday = False
+        #It's not a preset day...
+        else:
+            for g in girllist:
+                if isRouteEnabled(g):
+                    #Selecting a core scene
+                    rid = routeprogress[g]
+                    s = eventlibrary[rid]
+                    criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
+                    if criteriavalid:
+                        eventchoices.append(routeprogress[g])
+                        continue
+                #Selecting/falling back to an optional scene
+                opt = getOptionalEvent(g)
+                if opt != None:
+                    eventchoices.append(opt)
+                
+            #If there's room, 10% chance for minor character event
+            if len(eventchoices) < 6 and renpy.random.randint(1, 10) == 1:
+                opt = getOptionalEvent("minor")
+                if opt != None:
+                    eventchoices.append(opt)
+        return eventchoices, freeday
+        #to implement:
+        #route lock
+        #force progress (based on time)
+
     #Other misc functions
     def setAffection(girl, val):
         if not girl in girllist and not girl == "RM":
@@ -277,6 +276,18 @@
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
             return 0
         return affection[girl]
+
+    #Returns girl with highest affection. In the event of a tie, returns a random girl among those tieing.
+    def getHighestAffection():
+        tmplist = girllist[:]
+        renpy.random.shuffle(tmplist)
+        highestgirl = ""
+        highestscore = -999
+        for g in tmplist:
+            if getAffection(g) > highestscore:
+                highestscore = getAffection(g)
+                highestgirl = g
+        return highestgirl
 
     ##Checks which of the girls has the second highest affection. Doesn't account for ties.
     def getSecondHighest(ignoreGirl):
@@ -294,12 +305,6 @@
         
     def isEventCleared(event):
         return event in clearedevents
-        
-    def setEventCount(girl, val):
-        if not girl in girllist:
-            renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
-            return
-        eventcounter[girl] += val
         
     def setFlag(flag, state=True):
         if state:
@@ -330,12 +335,6 @@
         for f in flags:
             l += f + ", "
         return l
-    
-    def debugListEvents():
-        l = ""
-        for s in allpool:
-            l += s + ", "
-        return l
         
     def debugListClearedEvents():
         l = ""
@@ -351,23 +350,6 @@
         elif deltatime == DeltaTimeEnum.DAYOFWEEK:
             t = gametime + datetime.timedelta(days=((val + 7) - gametime.weekday()))
         meetingdays[getTimeCode(t, eve)] = [event]
-    
-    def getSize(g):
-        if g in girllist:
-            return girlsizes[g]
-        else:
-            return -1
-    
-    def updateSizes():
-        for g in girllist:
-            for i in range(6, 1, -1):
-                if i == 1:
-                    girlsizes[g] = i
-                    break
-                s = g + '_size_' + str(i)
-                if gametime > datelibrary[s]:
-                    girlsizes[g] = i
-                    break
         
     def setSkill(s, val):
         if s not in skills.keys():
@@ -388,8 +370,6 @@
         s = gametime.strftime("%a %B %d, 20XX")
         if gametime_eve == TimeEnum.NIGHT:
             s += " (Evening)"
-        else:
-            s += " (Morning)"
         return s
         
     def getTimeCode(date=None, eve=None):
@@ -403,47 +383,61 @@
         else:
             s += "-F"
         return s
-            
-    def pickPreferredGirl():
-        sc = eventcounter.copy()
-        scsort = sorted(sc.iteritems(), key=lambda x: x[1], reverse=True)
-        # Finally, we pick out the heaviest items by picking off the heaviest side of the array.
-        topweight = scsort[0][1]
-        weightlist = {}
-        weightlist[scsort[0][0]] = 3
-        i = 1
-        while i < len(scsort) and scsort[i][1] + 2 >= topweight:
-            if scsort[i][1] == topweight:
-                weightlist[scsort[i][0]] = 3
-            elif scsort[i][1] + 1 == topweight:
-                weightlist[scsort[i][0]] = 2
-            else:
-                weightlist[scsort[i][0]] = 1
-            i += 1
-        picker = WeightedChoicePicker(weightlist)
-        return picker.pick()
+        
+    def setProgress(girl, scene):
+        routeprogress[girl] = scene
+    
+    def disableRoute(girl):
+        if girl in routeenabled:
+            routeenabled[girl] = False
+    
+    def lockRoute(girl):
+        if girl in girllist:
+            routelock = girl
+    
+    def isRouteEnabled(girl):
+        return routeenabled[girl] and (routelock == girl or routelock == "")
+    
+    def getOptionalEvent(girl):
+        pool = []
+        for k, v in eventlibrary.iteritems():
+            if v["type"] != EventTypeEnum.OPTIONAL:
+                continue
+            if v["girls"][0] != girl:
+                continue
+            if k in clearedevents:
+                continue
+            criteriavalid = checkCriteria(v["conditions"]) and isEventTimeOk(v["time"][0], v["time"][1]) and isEventDateOk(v["startdate"], v["enddate"])
+            if not criteriavalid:
+                continue
+            pool.append(k)
+        if len(pool) > 0:
+            return renpy.random.choice(pool)
+        else:
+            return None
 
 label start:
     python:
         #Global Variables
         affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'BBW': 0, 'PRG': 0, 'RM': 0}
+        prefgirl = ""
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
-        eventcounter = {'BE': 5, 'GTS': 5, 'AE': 5, 'FMG': 5, 'BBW': 5, 'PRG': 5}
         globalsize = 1
         flags = []
         vars = {}
-        eventcountmax = 10
-        eventchoices = []
+        eventchoices = []       
         activeevent = ""
         gametime = datetime.date(2005, 4, 4)
         gametime_eve = TimeEnum.DAY
         meetingdays = {}
-        eventpool = []
-        preferredpool = []
         clearedevents = []
-        prefgirl = ""
         freeday = True
-        prefevent = True
+        routeprogress = {}
+        for g in girllist:
+            routeprogress[g] = g + "001"
+        eventtitle = ""
+        routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'BBW': True, 'PRG': True}
+        routelock = ""
     jump global000
 
 label splashscreen:
@@ -473,17 +467,14 @@ screen daymenu:
             xalign 0
             yalign 0
             text ("Debug info:")
-            text ("Prefgirl: %s" % prefgirl)
-            text ("Preferred events exist? %s" % prefevent)
             text ("Girls w/ Priority: %s" % debugpriorities)
-            text ("Event limit: %d" % eventcountmax)
-            text ("Girl/Aff/Events")
-            text ("BE %(aff)d %(event)d" % {"aff": affection["BE"], "event": eventcounter["BE"]})
-            text ("GTS %(aff)d %(event)d" % {"aff": affection["GTS"], "event": eventcounter["GTS"]})
-            text ("AE %(aff)d %(event)d" % {"aff": affection["AE"], "event": eventcounter["AE"]})
-            text ("FMG %(aff)d %(event)d" % {"aff": affection["FMG"], "event": eventcounter["FMG"]})
-            text ("BBW %(aff)d %(event)d" % {"aff": affection["BBW"], "event": eventcounter["BBW"]})
-            text ("PRG %(aff)d %(event)d" % {"aff": affection["PRG"], "event": eventcounter["PRG"]})
+            text ("Girl/Aff")
+            text ("BE %(aff)d" % {"aff": affection["BE"]})
+            text ("GTS %(aff)d" % {"aff": affection["GTS"]})
+            text ("AE %(aff)d" % {"aff": affection["AE"]})
+            text ("FMG %(aff)d" % {"aff": affection["FMG"]})
+            text ("BBW %(aff)d" % {"aff": affection["BBW"]})
+            text ("PRG %(aff)d" % {"aff": affection["PRG"]})
             text ("Athletics: %d" % skills["Athletics"])
             text ("Art: %d" % skills["Art"])
             text ("Academics: %d" % skills["Academics"])
@@ -495,73 +486,92 @@ screen daymenu:
         xalign 0.1
         yalign 0.1
         
-    #event choices (3-choice day)
+    #event choices (1 to 3-choice day)
     if len(eventchoices) <= 3:
         vbox:
             xalign 0.5
             ypos 120
             spacing 60
-            for c in eventchoices:
-                vbox:
-                    fixed:
-                        xmaximum 600
-                        ymaximum 60
-                        if eventlibrary[c]["location"] in locationlist:
-                            imagebutton idle "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
-                        else:
-                            imagebutton idle "Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")]
-                        hbox:
+            for i in range(3): #c in eventchoices:
+                if i >= len(eventchoices):
+                    null
+                else:
+                    $c = eventchoices[i]
+                    vbox:
+                        fixed:
+                            xmaximum 600
+                            ymaximum 60
+                            if eventlibrary[c]["location"] in locationlist:
+                                imagebutton idle "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
+                            else:
+                                imagebutton idle "Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
                             hbox:
-                                spacing -120
-                                order_reverse True
-                                if len(eventlibrary[c]["girls"]) == 0:
-                                    add "Graphics/ui/icons/charicon-missing.png"
-                                else:
-                                    for g in eventlibrary[c]["girls"]:
-                                        add "Graphics/ui/icons/charicon-%s.png" % g
-                            fixed:
-                                frame:
-                                    xalign 0.5
-                                    yalign 0.5
-                                    background Solid(Color((0, 0, 0, 100)))
-                                    text eventlibrary[c]["name"] size 16
+                                hbox:
+                                    spacing -120
+                                    order_reverse True
+                                    if len(eventlibrary[c]["girls"]) == 0:
+                                        add "Graphics/ui/icons/charicon-missing.png"
+                                    else:
+                                        for g in eventlibrary[c]["girls"]:
+                                            if g in girllist:
+                                                add "Graphics/ui/icons/charicon-%s.png" % g
+                                            else:
+                                                add "Graphics/ui/icons/charicon-missing.png"
+                                #fixed:
+                                #    frame:
+                                #        xalign 0.5
+                                #        yalign 0.5
+                                #        background Solid(Color((0, 0, 0, 100)))
+                                #        text eventlibrary[c]["name"] size 16
 
                 
-    #event choices (6-choice day)
+    #event choices (4 to 6-choice day)
     if len(eventchoices) > 3:
         grid 2 3:
             xalign 0.5
             ypos 120
             spacing 60
-            for c in eventchoices:
-                fixed:
-                    xmaximum 250
-                    ymaximum 60
-                    if eventlibrary[c]["location"] in locationlist:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
-                    else:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")]
-                    hbox:
-                        spacing -120
-                        order_reverse True
-                        if len(eventlibrary[c]["girls"]) == 0:
-                            add "Graphics/ui/icons/charicon-missing.png"
+            for i in range(6): #c in eventchoices:
+                if i >= len(eventchoices):
+                    null
+                else:
+                    $c = eventchoices[i]
+                    fixed:
+                        xmaximum 250
+                        ymaximum 60
+                        if eventlibrary[c]["location"] in locationlist:
+                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
                         else:
-                            for g in eventlibrary[c]["girls"]:
-                                add "Graphics/ui/icons/charicon-%s.png" % g
-                        #FIXME this looks awful and breaks tables, needs harder adjustments
-                        #fixed:
-                        #    frame:
-                        #        xalign 0.5
-                        #        yalign 0.5
-                        #        background Solid(Color((0, 0, 0, 100)))
-                        #        text eventlibrary[c]["name"]
+                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
+                        hbox:
+                            spacing -120
+                            order_reverse True
+                            if len(eventlibrary[c]["girls"]) == 0:
+                                add "Graphics/ui/icons/charicon-missing.png"
+                            else:
+                                for g in eventlibrary[c]["girls"]:
+                                    add "Graphics/ui/icons/charicon-%s.png" % g
+                            #FIXME this looks awful and breaks tables, needs harder adjustments
+                            #fixed:
+                            #    frame:
+                            #        xalign 0.5
+                            #        yalign 0.5
+                            #        background Solid(Color((0, 0, 0, 100)))
+                            #        text eventlibrary[c]["name"]
     
     #studying activities (non-special day)
     if freeday:
         textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
         textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
         textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
+    
+    #scene title
+    if eventtitle != "":
+        frame:
+            xalign 0.5
+            yalign 0.9
+            background Solid(Color((0, 0, 0, 100)))
+            text(eventtitle)
     
     #debug menu toggle (if debug is enabled)
     if debugenabled:
@@ -583,7 +593,7 @@ screen debugmenu:
         textbutton "Go!" action Jump("debugevent")
         text ""
         
-        textbutton "List Available Events" action Jump("debugeventlist")
+        text ""
         textbutton "List Cleared Events" action Jump("debugclearedeventlist")
         text ""
         
@@ -593,7 +603,7 @@ screen debugmenu:
         
         text "Girl"
         text "Affection"
-        text "Events"
+        text ""
 
         text "BE"
         hbox:
@@ -601,10 +611,7 @@ screen debugmenu:
             text str(affection["BE"])
             textbutton "+" action Function(setAffection, "BE", 1)
             
-        hbox:
-            textbutton "-" action Function(setEventCount, "BE", -1)
-            text str(eventcounter["BE"])
-            textbutton "+" action Function(setEventCount, "BE", 1)
+        text ""
             
         text "GTS"
         hbox:
@@ -612,10 +619,7 @@ screen debugmenu:
             text str(affection["GTS"])
             textbutton "+" action Function(setAffection, "GTS", 1)
             
-        hbox:
-            textbutton "-" action Function(setEventCount, "GTS", -1)
-            text str(eventcounter["GTS"])
-            textbutton "+" action Function(setEventCount, "GTS", 1)
+        text ""
             
         text "AE"
         hbox:
@@ -623,10 +627,7 @@ screen debugmenu:
             text str(affection["AE"])
             textbutton "+" action Function(setAffection, "AE", 1)
             
-        hbox:
-            textbutton "-" action Function(setEventCount, "AE", -1)
-            text str(eventcounter["AE"])
-            textbutton "+" action Function(setEventCount, "AE", 1)
+        text ""
             
         text "FMG"
         hbox:
@@ -634,10 +635,7 @@ screen debugmenu:
             text str(affection["FMG"])
             textbutton "+" action Function(setAffection, "FMG", 1)
             
-        hbox:
-            textbutton "-" action Function(setEventCount, "FMG", -1)
-            text str(eventcounter["FMG"])
-            textbutton "+" action Function(setEventCount, "FMG", 1)
+        text ""
 
         text "BBW"
         hbox:
@@ -645,10 +643,7 @@ screen debugmenu:
             text str(affection["BBW"])
             textbutton "+" action Function(setAffection, "BBW", 1)
             
-        hbox:
-            textbutton "-" action Function(setEventCount, "BBW", -1)
-            text str(eventcounter["BBW"])
-            textbutton "+" action Function(setEventCount, "BBW", 1)
+        text ""
             
         text "PRG"
         hbox:
@@ -656,16 +651,14 @@ screen debugmenu:
             text str(affection["PRG"])
             textbutton "+" action Function(setAffection, "PRG", 1)
             
-        hbox:
-            textbutton "-" action Function(setEventCount, "PRG", -1)
-            text str(eventcounter["PRG"])
-            textbutton "+" action Function(setEventCount, "PRG", 1)
+        text ""
             
         text "RM"
         hbox:
             textbutton "-" action Function(setAffection, "RM", -1)
             text str(affection["RM"])
             textbutton "+" action Function(setAffection, "RM", 1)
+
         text ""
         
         #hbox:
@@ -694,11 +687,6 @@ screen debugflaglist:
     vbox:
         text debugListFlags()
         textbutton "Return" action Jump("debugmenu")
-
-screen debugeventlist:
-    vbox:
-        text debugListEvents()
-        textbutton "Return" action Jump("debugmenu")
         
 screen debugclearedeventlist:
     vbox:
@@ -721,100 +709,32 @@ label unsetflag:
     jump debugmenu
 
 label daymenu:
-    $updateSizes()
     $renpy.choice_for_skipping()
     scene black
     play music Daymenu
     #Roll random events
     python:
-        if gametime_eve == TimeEnum.NIGHT:
-            gametime_eve = TimeEnum.DAY
-            gametime += datetime.timedelta(days=1)
-        else:
-            gametime_eve = TimeEnum.NIGHT
-        
-        eventchoices = []
-        prefpool = []
-        allpool = []
-        priorities = []
-        prefevent = False
-        #It's a preset day, don't worry about pools, just use whatever the preset says
-        if getTimeCode() in presetdays.keys():
-            eventchoices = presetdays[getTimeCode()]
-            freeday = False
-        #It's a meeting day, don't worry about pools, just use whatever the meeting says
-        elif getTimeCode() in meetingdays.keys():
-            eventchoices = meetingdays[getTimeCode()]
-            freeday = False
-        #It's not a preset day, randomly select 3 events
-        else:
-            freeday = True
-            #Determine preferred girl
-            prefmax = 0
-            prefgirl = pickPreferredGirl()
-            
-            #While we've figured out the preferred girl, update the weight limit, which is floor(average of all non-preferred girls) + 5
-            tmpeventmax = 0
-            for g in girllist:
-                if g == prefgirl:
-                    continue
-                tmpeventmax += eventcounter[g]
-            eventcountmax = math.floor(tmpeventmax / 5) + 5
-            
-            #Fill allpool (and prefpool, if applicable)
-            for k, v in eventlibrary.iteritems():
-                if k in clearedevents:
-                    continue
-                criteriavalid = checkCriteria(v["conditions"]) and isEventTimeOk(v["time"][0], v["time"][1]) and isEventDateOk(v["startdate"], v["enddate"])
-                if not criteriavalid:
-                    continue
-                if "priority" in v.keys() and v["priority"]:
-                    for priogirl in v["girls"]: #If event is priority, add all girls to the priority list (if they aren't already)
-                        if priogirl in priorities:
-                            continue
-                        priorities.append(priogirl)
-                if prefgirl in v["girls"]:
-                    prefevent = True
-                    prefpool.append(k)
-                allpool.append(k)
-
-            #Scan for priorities and purge non-priorities
-            if len(priorities) != 0:
-                for e in allpool[:]: #use a copy of the list, python gets cranky if you modify a list you're iterating over
-                    event = eventlibrary[e]
-                    for g in event["girls"]:
-                        if g in priorities:
-                            if not "priority" in event.keys() or not event["priority"]:
-                                allpool.remove(e)
-                
-                if prefgirl in priorities:
-                    for e in prefpool[:]: #use a copy of the list, python gets cranky if you modify a list you're iterating over
-                        event = eventlibrary[e]
-                        if not "priority" in event.keys() or not event["priority"]:
-                            prefpool.remove(e)
-            
-            #Select from preferred pool
-            if len(prefpool) != 0:
-                tmp = renpy.random.choice(prefpool)
-                eventchoices.append(tmp)
-                prefpool.remove(tmp)
-                if tmp in allpool:
-                    allpool.remove(tmp)
-            elif len(allpool) != 0: #...or the allpool, if the preferred pool is empty
-                tmp = renpy.random.choice(allpool)
-                eventchoices.append(tmp)
-                allpool.remove(tmp)
-            
-            #Pick 2 more "allpool" events
-            if (len(allpool) >= 2):
-                eventchoices += renpy.random.sample(allpool, 2)
-            else:
-                eventchoices += allpool
-        debugpriorities = "".join(priorities)
+        gametime_eve = TimeEnum.DAY
+        gametime += datetime.timedelta(days=1)
+        eventchoices, freeday = rollEvents()
     window hide None
     call screen daymenu
     window show None
-    
+
+#Keep day the same (advancing to evening), and reroll events
+label daymenu_overtime:
+    $renpy.choice_for_skipping()
+    scene black
+    play music Daymenu
+    #Roll random events
+    python:
+        gametime_eve = TimeEnum.NIGHT
+        eventchoices, freeday = rollEvents()
+    window hide None
+    call screen daymenu
+    window show None
+
+#Don't change day or events
 label daymenu_noadvance:
     scene black
     window hide None
@@ -833,12 +753,6 @@ label debugflaglist:
     call screen debugflaglist
     window show None
 
-label debugeventlist:
-    scene black
-    window hide None
-    call screen debugeventlist
-    window show None
-    
 label debugclearedeventlist:
     scene black
     window hide None
@@ -846,20 +760,15 @@ label debugclearedeventlist:
     window show None
 
 label startevent:
-    python:
-        if activeevent[0:10] != "specialday":
-            for g in eventlibrary[activeevent]["girls"]:
-                eventcounter[g] += 1
-                if eventcounter[g] >= eventcountmax:
-                    eventcounter[g] = eventcountmax
-
-        clearedevents.append(activeevent)
     stop music
     play sound EventStart
     scene black with dissolve
     pause .5
-    $renpy.block_rollback()
-    $renpy.jump(activeevent)
+    python:
+        eventtitle = ""
+        clearedevents.append(activeevent)
+        renpy.block_rollback()
+        renpy.jump(activeevent)
     
 label train:
     stop music

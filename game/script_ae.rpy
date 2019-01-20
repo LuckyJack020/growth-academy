@@ -6,104 +6,105 @@ define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
 
 image AE neutral = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
     "True", "Graphics/AE/1/neutral.png")
 image AE neutral-annoyed = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
     "True", "Graphics/AE/1/neutral-annoyed.png")
 image AE neutral-eyebrow = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png", #needed
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png", #needed
     "True", "Graphics/AE/1/neutral-eyebrow.png")
 image AE neutral-noglasses = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-noglasses.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-noglasses.png",
     "True", "Graphics/AE/1/neutral-noglasses.png")
 image AE neutral-smug = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/neutral-smug.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-smug.png",
     "True", "Graphics/AE/1/neutral-smug.png")
 image AE happy = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
     "True", "Graphics/AE/1/happy.png")
 image AE sad = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
     "True", "Graphics/AE/1/sad.png")
 image AE sad-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/sad-2.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad-2.png",
     "True", "Graphics/AE/1/sad.png") #missing
 image AE surprised = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
     "True", "Graphics/AE/1/surprised.png")
 image AE angry = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
     "True", "Graphics/AE/1/angry.png")
 image AE angry-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry-2.png", #missing
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-2.png", #missing
     "True", "Graphics/AE/1/angry-2.png")
 image AE angry-3 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/angry-3.png", #needed
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-3.png", #needed
     "True", "Graphics/AE/1/angry-3.png")
 image AE aroused = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
     "True", "Graphics/AE/1/aroused.png")
 image AE aroused-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused-2.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-2.png",
     "True", "Graphics/AE/1/aroused-2.png")
 image AE aroused-3 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused-3.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-3.png",
     "True", "Graphics/AE/1/aroused-3.png")
 image AE aroused-4 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/aroused-4.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-4.png",
     "True", "Graphics/AE/1/aroused.png") #missing
 image AE glasses = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/unique.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique.png",
     "True", "Graphics/AE/1/unique.png")
 image AE glasses-2 = ConditionSwitch(
-    "gametime > datelibrary['AE_size_2']", "Graphics/AE/2/unique-2.png",
+    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique-2.png",
     "True", "Graphics/AE/1/unique-2.png")
 
-init 2 python:
+init 2 python:    
     datelibrary['AE010_deadline'] = datetime.date(2005, 4, 13)
     datelibrary['AE_size_6'] = datetime.date(2005, 12, 10)
     datelibrary['AE_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['AE_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['AE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['AE_size_2'] = datetime.date(2005, 4, 18)
     
-    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"],                                   "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"],                            "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "AE001"]]}
-    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"],              "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": [[ConditionEnum.EVENT, "AE002"]]}
-    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"],       "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": [[ConditionEnum.EVENT, "AE003"]]}
-    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"],                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": [[ConditionEnum.PRESET]]} #After checkup
-    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"],             "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE004"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]]}
-    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"],           "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"]]}
-    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"],   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE007"]]}
-    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"],                           "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE008"]]}
-    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"],                            "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": [[ConditionEnum.FLAG, "AE006_helpinginoffice"], [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["AE_size_2"]]]}
-    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"],                   "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "AE009"], [ConditionEnum.OR, [ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHANEQUALS, datelibrary["AE010_deadline"]], [ConditionEnum.EVENT, "AE010"]]]}
-    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"],                   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE011"]]}
-    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"],                    "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE012"]]}
-    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"],                        "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE013"]]}
-    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"],                      "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "AE014"]]}
-    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"],                          "location": "library", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "AE015"]]}
-    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"],                             "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "AE016"]]}
-    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"],                             "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "AE017"]]}
-    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"],                       "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",    "conditions": [[ConditionEnum.EVENT, "AE018"]]}
-    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"],                         "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "AE019"]]}
-    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"],        "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "AE020"]]}
-    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"],                             "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "AE021"]]}
-    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"],                              "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "AE022"]]}
-    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"],                                 "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "AE023"]]}
-    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"],                                "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": [[ConditionEnum.EVENT, "AE024"]]} #TODO: Not sure if schoolplanter
-    eventlibrary['AEend'] = {"name": "Shiori end", "girls": ["AE"],                             "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.ROUTECLEAR, "AE"]]}
+    #Core
+    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
+    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
+    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
+    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",       "conditions": []}
+    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "library", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",    "conditions": []}
+    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
+    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,       "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
+    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
+    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
     #eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                         "conditions": [[ConditionEnum.EVENT, "AE025"]]} #TODO: Not sure if dorminterior
     #eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.EVENT, "AE026"]]} #TODO: Not sure if dorminterior
-
     
-    #classroom
-
+    #Optional
+    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.PRESET,                        "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []} #After checkup
+    
     #eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     #eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
 label AE001:
+    $setProgress("AE", "AE002")
     scene Library with fade
     "After a long day, I figured that some time in the library would do well for me. I could use somewhere quiet to wind down."
     "Even though a few hours had passed, what Tashi-sensei said was still ringing in my head. I wasn't completely sure how to process what had been going on, but I was worried to say the least."
@@ -200,6 +201,7 @@ label AE001_after:
     jump daymenu
 
 label AE002:
+    $setProgress("AE", "AE003")
     scene Hallway with fade
     play music Sunset
     "I walked around the hallways after class looking for Shiori-san, so far having no luck."
@@ -364,6 +366,7 @@ label AE002_c2_2:
     jump daymenu
     
 label AE003:
+    $setProgress("AE", "AE004")
     scene Campus Center with fade
     play music Schoolday
     MCT "C'mon, just a bit farther!"
@@ -513,6 +516,7 @@ label AE003_c1_after:
     jump daymenu
     
 label AE004:
+    $setProgress("AE", "AE006")
     scene Dorm Interior with fade
     play music Rain
     "I slipped my shoes on as my mind began to mull over the incident in the hall the other day, it was strange, but honestly I just felt a bit ticked off about the whole thing." #Splitted the line up in 2 -Auctus
@@ -947,15 +951,18 @@ label AE006:
     "As I left the library, I gazed out the window. The rain had passed into to a soft drizzle on the horizon as the sun's golden rays began to peek through the clouds. As I walked outside into to fresh air, the smell of petrichor hit my nose as I began to ponder how I would spend the rest of the day."
     if not getFlag("AE006_helpinginoffice"): #TO BE REMOVED LATER
         jump AE006_routeend
+    $setProgress("AE", "AE007")
     jump daymenu
 
 label AE006_routeend:
     scene black with fade
+    $disableRoute("AE")
     "Refusing to work with Shiori will initiate an alternate route that is currently in development."
     "However, because it's incomplete, Shiori's route will end here. Stay tuned for the alternate route!"
     jump daymenu
 
 label AE007:
+    $setProgress("AE", "AE008")
     scene Hallway with fade
     play music Schoolday
     "I briskly strode towards the Library, backpack slung across my shoulder as I prepped for a day to do some extra work. Today was the day I promised Shiori-san I would help her with her paperwork, at least, the day she would introduce me to it."
@@ -1077,6 +1084,7 @@ label AE007_after:
     jump daymenu
 
 label AE008:
+    $setProgress("AE", "AE009")
     scene Office with fade
     show AE neutral at center with dissolve
     play music Sunset
@@ -1215,6 +1223,7 @@ label AE008:
     jump daymenu
     
 label AE009:
+    $setProgress("AE", "AE010")
     scene Hallway with fade
     "The sound of rubber squeaking against the laminated floors echoed as I ran down the hall. I briskly rounded the hallway corner, just barely missing another student."
     MCT "Damnit, Daichi! You just had to play that homemade documentary, didn't you?!"
@@ -1379,6 +1388,7 @@ label AE009_after:
     jump daymenu
     
 label AE010:
+    $setProgress("AE", "AE011")
     scene Hallway with fade
     play music Peaceful
     "I walked down the hallway, getting ready to meet Shiori-san at the office. I heard that shipping and processing had been getting a lot of orders recently, so I figured that today would be a busy one."
@@ -1477,7 +1487,7 @@ label AE010:
     MC "Out of my system? Shiori-san, I'm not going to insult y-"
     "Shiori-san finally turned around."
     stop music
-    show AE neutral at center, Transform(zoom=2.5)
+    show AE neutral at Position(xalign=0.5, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once. Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
@@ -1560,6 +1570,7 @@ label AE010:
     jump daymenu
 
 label AE011:
+    $setProgress("AE", "AE012")
     scene Hallway with fade
     play music Peaceful
     MC "Oy! Shiori-san. How's it going?"
@@ -1778,6 +1789,7 @@ label AE011_afterchoice:
     jump daymenu
     
 label AE012:
+    $setProgress("AE", "AE013")
     scene Hallway with fade
     play music Rain
     "I strode through the halls, excited and ready to begin my day with Shiori-san, questions running through my head as I wondered what all I would get to learn."
@@ -2022,6 +2034,7 @@ label AE012_after:
     jump daymenu
     
 label AE013:
+    $setProgress("AE", "AE014")
     #FIXME character positioning probably needs work?
     scene Hallway with fade
     play music Busy
@@ -2238,6 +2251,7 @@ label AE013:
     jump daymenu
 
 label AE014:
+    $setProgress("AE", "AE015")
     scene Hallway with fade
     play music Sunset
     "I walked over to the library doors to begin another day of work with Shiori. Newly printed posters adorned the halls, as well as the doors themselves."
@@ -2392,6 +2406,7 @@ label AE014:
     jump daymenu
 
 label AE015:
+    $setProgress("AE", "AE016")
     scene Hallway with fade
     "As I walked down the halls, my mind kept flashing back to yesterday's incident. Specifically, my mind travelled more towards the worry that Shiori-san may have realized by now that it wasn't my pocketbook she was rubbing up against."
     MCT "I am NOT looking forward to having to work in such a cramped environment again."
@@ -2614,6 +2629,7 @@ label AE015_afterchoice:
     jump daymenu
 
 label AE016:
+    $setProgress("AE", "AE017")
     scene Hallway with fade
     show AE neutral at center with dissolve
     play music Rain
@@ -2819,6 +2835,7 @@ label AE016_after:
     jump daymenu
 
 label AE017:
+    $setProgress("AE", "AE018")
     scene Cafeteria with fade
     play music Busy
     "After lessons had ended, I walked out of the room. I was going to walk out with Shiori-san, like with yesterday, but a student came up addressing her as \"ma'am\" so I assumed she had further business. I got up and walked over to the cafeteria to get in line and grab some food."
@@ -2970,6 +2987,7 @@ label AE017:
     jump daymenu
     
 label AE018:
+    $setProgress("AE", "AE019")
     scene Hallway with fade
     play music Sunset
     "I sat at the windowsill waiting. My feet dangling just slightly off of the floor as I kicked them back and forth. Looking down at them, I was given a slight tunnel vision from my own black locks dangling down a few inches from my face. I looked up to the ceiling, inhaling and letting out a low gust of air from my lips. As I looked back forward, I saw a familiar face slowly heading up the stairs."
@@ -3203,6 +3221,7 @@ label AE018:
     jump daymenu
 
 label AE019:
+    $setProgress("AE", "AE020")
     scene Hallway with fade
     play music Peaceful
     "As I walked towards the library, basket under my arm, I was greeted by Shiori-san waiting patiently for me by the door. Standing straight, her glasses reflected the sun as she looked out the window towards the campus."
@@ -3280,7 +3299,7 @@ label AE019:
     MCT "Biiiit too strong with that one."
     MC "Oh. Uh, you look good."
     show AE aroused
-    AE "O-oh…"
+    AE "O-oh..."
     "Shiori-san brushed her hair to the side with the back of her wrist."
     show AE happy
     AE "Well, um, thank you for that."
@@ -3299,7 +3318,7 @@ label AE019:
     AE "Oh-no, no, none taken. I was merely thinking to myself."
     MC "About what?"
     if getAffection("AE") >= 6:
-        AE "Well, admittedly…"
+        AE "Well, admittedly..."
         "Shiori-san looked to me, a light smirk forming on the sides of her lips."
         show AE neutral-smug
         AE "How strange you’d look with my condition."
@@ -3327,7 +3346,7 @@ label AE019:
     AE "You’re looking forlornly at the ground."
     MC "Oh. Uh."
     "I took a moment to speak, the words lingering on my lips with a fear of possible wording-error."
-    MC "It’s just…I’ve been feeling a bit of stress recently."
+    MC "It’s just...I’ve been feeling a bit of stress recently."
     AE "Stress? Do tell."
     MC "N-nah. It’s nothing."
     AE "Mm-well, hardly sounds like 'nothing'."
@@ -3335,7 +3354,7 @@ label AE019:
     MCT "Nevermind. I might as well tell her."
     MC "I just feel like I have some nagging worries on my mind. I feel like...I have a bit of anxiety being here."
     AE "And why do you feel that way?"
-    MC "Well, it’s hard. I mean, I had friends and family back home. I miss them. I understand that it’s for the best that I’m here but like…"
+    MC "Well, it’s hard. I mean, I had friends and family back home. I miss them. I understand that it’s for the best that I’m here but like..."
     MC "I sometimes think that maybe my condition isn’t severe enough to warrant being here. I imagine what life would have been like if I wasn’t REQUIRED to be here."
     AE "Mhm."
     MC "And it’s like...you don’t really know how to feel about that."
@@ -3347,7 +3366,7 @@ label AE019:
     MCT "A...road?"
     MC "Um...ok."
     AE "It splits into four paths. You go down one, not knowing precisely the location. You end up at the end and reach your destination, but what of the other paths?"
-    MC "Well… I guess I would try to visit them again someday, to know for sure."
+    MC "Well... I guess I would try to visit them again someday, to know for sure."
     show AE happy
     AE "Ah, the path of certainty. Admittedly I would do the same. But think of the metaphor itself for a moment. What we are talking about is time. We can go forward as far as we want, but we will never be able to truly go back."
     MC "That’s for sure."
@@ -3546,6 +3565,7 @@ label AE020_c1_1:
         "Shiori-san squared her shoulders and bowed."
         show AE happy
         AE "Thank you. For being my friend."
+    $disableRoute("AE")
     jump daymenu
 
 label AE020_c1_2:
@@ -3609,9 +3629,11 @@ label AE020_c1_2:
     "I took out my final file, and placed in in the cabinet."
     MC "Then here's to the next few days..."
     MCT "Whatever may come."
+    $setProgress("AE", "AE021")
     jump daymenu
 
 label AE021:
+    $setProgress("AE", "AE022")
     scene Classroom with fade
     "When I walked into class today, Shiori-san was the first in the room. Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
     show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve #not sure if aroused, surprised or sad/shy
@@ -3664,9 +3686,11 @@ label AE021:
     "Tashi-sensei walked in the room, and after standing and bowing; as well as opening the door for Honoka, we began our lessons...however there was a problem. I couldn't help it, but I felt like I was being watched."
     "My attention was drawn to the picture of the second president of Japan on the wall when I noticed something...bright beaming glasses staring at me on the reflective glass. I looked down to my desk."
     MCT "What the..."
+    hide HR neutral
     show AE glasses at Position(xpos=0.575, ypos=0.0, yanchor=0.12), Transform(zoom=8.0)
     "I looked up once more, and once more, on top of the president's eyes, the bright gleam of Shiori's glasses dove daggers into my own. She looked down, but only for a moment before looking back up through a side glance; her eyes piercing their way into my mind. I straightened up, and attempted to ignore her."
     hide AE
+    show HR neutral
     HR "-of 1973. Ok. That should be all for today. Your homework is chapter five page eight."
     "Tashi-sensei nodded, and walked over to stand by the door."
     hide HR with dissolve
@@ -3832,6 +3856,7 @@ label AE021:
     jump daymenu
 
 label AE022:
+    $setProgress("AE", "AE023")
     scene Dorm Exterior with fade
     "As I exited my room, I took a breath of fresh air as I stretched my back. Daichi walked out next and nodded to me, purpose in his eyes. One of my own still shut mid yawn, I nodded as Daichi opened the grate to the vents and climbed in, heading towards his planned destination."
     MCT "Alright. So far so good, I guess. Now I just head to class."
@@ -4140,6 +4165,7 @@ label AE022:
     jump daymenu
 
 label AE023:
+    $setProgress("AE", "AE024")
     scene Classroom with fade
     show HR neutral at center with dissolve
     HR "-and essentially, you end up with an absolute mess called the Treaty of Versailles."
@@ -4327,7 +4353,7 @@ label AE023_c1_after:
     "I hadn't noticed before, but from here it was all but too obvious that you can see her ass from the front. Her hips bulged out far enough to create a wall of flesh and stretch the fabric atop two massive legs."
     MC "..."
     "I walked silently behind Shiori-san to get a better view. Though my head was turned, my eyes were focused right on her. Her growth was becoming more obvious, as her skirt was beginning to ride up even further."
-    show AE neutral at center, Transform(zoom=3.0)
+    show AE neutral at Position(xalign=0.5, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
     play sound Boing
     "Her already thick thighs were plumping up quite nicely, pairing themselves with some wide, supple hips as well."
     "However, her bootyus maximus was, as always, the greatest sight to behold, the bottom of each cheek protruding through the bottom of her soon to be ruined skirt, the very bottom of her panties eliciting lewd thoughts from me. I lightly bit my bottom lip as every failed attempt to scrape the gum from the floor caused her backside to wobble gently."
@@ -4370,18 +4396,19 @@ label AE023_c1_after:
     jump daymenu
 
 label AE024:
+    $setProgress("AE", "AE025")
     scene black with fade
     "{i}Creeeeak{/i}"
     scene Roof with fade
     play music Sunset
     "The light from the roof was blinding. I brought my arm up and looked down to shield my eyes as I stepped out from the stairwell."
     MC "U-um, Shiori-san? Are you there?"
-    "After feeling my eyes had adjusted enough, I looked up to find…"
+    "After feeling my eyes had adjusted enough, I looked up to find..."
     MC "Shiori-sa-oh."
     MCT "Oh, she’s not here."
     MCT "Hm."
     "I looked around a bit, but she was nowhere to be seen."
-    MCT "I know she said she wanted to meet after class, but I guess I was wrong in assuming...she meant right after…"
+    MCT "I know she said she wanted to meet after class, but I guess I was wrong in assuming...she meant right after..."
     "After standing around a bit more, I walked over to the bench and sat down; awaiting whatever fate was going to befall me. As the minutes passed, I couldn’t help but be reminded of the time Shiori-san and I sat up here together."
     "The more my memories lingered on the moment, the more my stomach began to feel light, as the fear of a possible inevitable rejection set in."
     MCT "This is bad. If th-"
@@ -4393,7 +4420,7 @@ label AE024:
     AE "...Hi."
     MC "So...I wanted to apologize."
     AE "..."
-    MC "Yesterday, I-I was just…"
+    MC "Yesterday, I-I was just..."
     "I rubbed the back of my neck with my free hand, and looked off to the bench where I sat previously."
     MC "I don’t know what came over me. I... I’m sorry."
     AE "Let’s get to the point. Yesterday... I saw you staring at me while I was bending over."
@@ -4402,7 +4429,7 @@ label AE024:
     MC "A-ah... yeah. Look, Shiori-san, I-"
     show AE aroused-2
     AE "I’m not mad... in fact I-I have a proposition for you."
-    MCT "She’s not mad…? I mean, she was acting strangely yesterday, but she’s being really gung ho about this."
+    MCT "She’s not mad...? I mean, she was acting strangely yesterday, but she’s being really gung ho about this."
     "As I looked at Shiori-sans glasses, past the light of the blistering sun glimmering off their metal frames, I saw something beyond... something I hadn’t expected."
     show AE aroused
     play music Steamy
@@ -4435,7 +4462,7 @@ label AE024:
 label AE024_c1_1:
     MCT "I... I can’t help myself. It’s a golden opportunity."
     MCT "Shiori-san is beckoning to me like a cat in heat. It’s impossible for me to resist!"
-    MC "Shiori-chan…"
+    MC "Shiori-chan..."
     "I stood up and stepped forward. My own legs trembling as well, not even attempting to hide my raging erection."
     MC "Well...I wouldn’t want to keep a lady wanting."
     "I reached out my hands and grabbed it."
@@ -4464,7 +4491,7 @@ label AE024_c1_1:
     show AE neutral-smug
     play music Bittersweet
     AE "Ahh, it feels so good to have a question answered, doesn’t it? ‘Why does Keisuke want to date me?’ Another problem solved."
-    MC "...Ah...B-I…"
+    MC "...Ah...B-I..."
     show AE neutral-annoyed
     AE "Sexual conduct in a public area is prohibited. I will let you off with a warning for now, however I will not hesitate to report you to administration should it become a problem in the future"
     MC "Shiori-san."
@@ -4481,38 +4508,38 @@ label AE024_c1_1:
         MC "But...Shiori-san."
         show AE neutral at center with dissolve
         AE "Mm, Matsumoto-san, please."
-    MC "I...I don’t understand. What happened…"
+    MC "I...I don’t understand. What happened..."
     show AE sad-2
     AE "This whole time...it was my body this whole time."
     show AE neutral-annoyed
     AE "I should have known that the only person who would actually have wanted to spend time with me was...just a pervert who only cared about my body."
-    MC "Shiori-san…I’m sorry. I didn’t mean to betray you."
+    MC "Shiori-san...I’m sorry. I didn’t mean to betray you."
     "Shiori-san took one of her fists and slightly protruded a knuckle, which she began to bite with intensity."
     show AE angry
     AE "Your words mean nothing to me anymore, degenerate."
     "At that moment, a sharp pain like a dagger drove itself into my chest. I could barely speak."
-    MC "I…"
-    MC "Listen… I… I messed up. There’s no two ways about it."
+    MC "I..."
+    MC "Listen... I... I messed up. There’s no two ways about it."
     MC "I need you to absolutely *know* that I didn’t mean to hurt you in any way."
-    MC "I just thought… I don’t know-"
+    MC "I just thought... I don’t know-"
     MC "I thought you knew how I felt about you. Not only as a person, but how I felt when I looked at you."
     MC "I thought that we just got to a point where we could trust each other with our feelings."
     "By this point, my face had gotten a bit red and a lump had formed in my throat."
     MC "It’s not about your body, I just thought we were closer than that. I figured I could trust you to be honest."
     AE "..."
     show AE sad-2
-    AE "...I…"
+    AE "...I..."
     "Shiori-san slowly walked over to where I was, my own frustration and remorse visibly starting to show in my body language."
     show AE sad
-    AE "I...I realize that I may have come on too strong...the kick was unwarranted...I just…"
+    AE "I...I realize that I may have come on too strong...the kick was unwarranted...I just..."
     MC "..."
     show AE sad-2
     AE "Please...please don’t betray me...don’t let your feelings for me have been only lust."
     MC "I would never...I would never let that come between us."
     show AE sad-2
-    AE "I don’t know WHY you have the...desires you do. I don’t think I’ll ever be able to understand it...but...I know that at the very least, the feelings you had for me at lunch, underneath the tree, on the roof… they were all very real."
+    AE "I don’t know WHY you have the...desires you do. I don’t think I’ll ever be able to understand it...but...I know that at the very least, the feelings you had for me at lunch, underneath the tree, on the roof... they were all very real."
     AE "I can sense it. Through the perversion...there is purity in your feelings."
-    MC "...I…"
+    MC "...I..."
     "I stood there dumbfounded as Shiori-san talked. Unable to fully follow her."
     show AE neutral
     AE "Please...please meet me underneath the tree. I’m sure...all my questions have been answered."
@@ -4523,7 +4550,7 @@ label AE024_c1_1:
 label AE024_c1_2:
     MCT "This... no. Something's wrong... I think I know what’s going on here."
     MCT "Yesterday, after Shiori-san caught me staring... she was acting way too weird."
-    MCT "If I’m wrong, then I could lose out completely though…"
+    MCT "If I’m wrong, then I could lose out completely though..."
     stop music
     MC "Shiori-san... no."
     show AE aroused-2
@@ -4544,10 +4571,10 @@ label AE024_c1_2:
     AE "That wouldn’t have yielded a definite answer."
     MC "Do you not trust me?"
     show AE aroused-2
-    AE "I... i-it’s not that, it’s just…"
+    AE "I... i-it’s not that, it’s just..."
     "Shiori-san brought her thumb up to her lip in contemplation."
     show AE sad
-    AE "I haven’t found my answer…"
+    AE "I haven’t found my answer..."
     MC "I can wait for as long as you need."
     show AE sad-2
     AE "N-not that... the other question."
@@ -4555,25 +4582,25 @@ label AE024_c1_2:
     show AE neutral
     AE "Hotsure-san, I came here... assuming that you were just a pervert. ...I don’t know WHY you think my body is attractive, but... I won’t judge you for it. But I still don't have the answer I’m looking for..."
     show AE sad
-    AE "Until then, however…"
+    AE "Until then, however..."
     "Shiori-san gave a deep bow."
     $setAffection("AE", 5)
     show AE aroused-2
     AE "Th-thank you, for showing me respect."
     MC "..."
     "I looked down for a moment, and I took a deep breath in. Shiori-san, however, picked up on this and was quick to respond."
-    AE "N-now I realize that you’ve been patiently waiting but…"
+    AE "N-now I realize that you’ve been patiently waiting but..."
     "I looked up to her with same downtrodden look on my face, and Shiori-san realized that wasn’t the issue."
     show AE surprised
-    AE "O-oh... is there…?"
+    AE "O-oh... is there...?"
     MC "Well, I mean... It’s just that I thought you had more respect for me."
     show AE sad-2
-    AE "I… I’m sorry. I just…"
+    AE "I... I’m sorry. I just..."
     MC "H-hey, it’s alright. Look, I know you haven’t been in a relationship before... a-and I know you don’t have a very high opinion of yourself, but you need to trust me when I say I really want to be with you. "
     show AE sad
     AE "..."
     "Shiori-san looked down and brought her thumb once more to her lip. Clearly distressed, she began to nibble as she held her elbow with her other arm."
-    AE "It’s just... I do trust you. You’ve proven to be kind, respectful, loyal... I just don’t know why you…"
+    AE "It’s just... I do trust you. You’ve proven to be kind, respectful, loyal... I just don’t know why you..."
     MC "...Why what?"
     AE "..."
     show AE neutral
@@ -4583,21 +4610,21 @@ label AE024_c1_2:
     MC "W-wait!"
     MCT "..."
     "I drew in a breath of air and exhaled. My previous worries calmed, but now replaced with confusion and a feeling of impatience."
-    MCT "What is she looking for? Is it because of me? What…?"
+    MCT "What is she looking for? Is it because of me? What...?"
     "I leaned up against the stairway wall, my hands resting in my pockets as I began to slump down and think about what all I could do to truly show her the severity of my feelings."
     jump daymenu
 
 label AE024_c1_3:
     MCT "Is this the real life? Is this just fantasy?!"
     MCT "Have I died?!"
-    MCT "I can’t... I…"
-    MC "B-w-ch... I-ah... um…"
+    MCT "I can’t... I..."
+    MC "B-w-ch... I-ah... um..."
     show AE aroused
     AE "S-such cute mouth movements!~ I wonder how that mouth would feel if I rubbed it against my-"
     MCT "!!!"
     MC "Ah! W-w-w-wah, bwha?!"
     show AE aroused-3
-    AE "M-my…"
+    AE "M-my..."
     MC "..."
     "I could do nothing but make a hoarse groaning. My chest tightening up as I exhaled, but failed to inhale."
     show AE neutral
@@ -4611,11 +4638,11 @@ label AE024_c1_3:
     AE "I should have figured this would happen. I went too far. And to have put myself through such degradation..."
     MC "..."
     show AE neutral-annoyed
-    AE "Here, Hotsure-san, let me…"
+    AE "Here, Hotsure-san, let me..."
     "Shiori-san was distracted for a moment by noticing the prominent bulge in my pants."
     show AE aroused-2
     AE "L-let me help you up."
-    MC "Shiori-san, I-I-I…"
+    MC "Shiori-san, I-I-I..."
     show AE neutral-annoyed
     AE "Mm, don’t worry about it, Hotsure-san. I was too forward... I don’t quite know what I expected, but I put too much out at once and my gambit failed."
     MCT "Eh? Gambit? What?"
@@ -4629,6 +4656,7 @@ label AE024_c1_3:
     jump daymenu
 
 label AE025:
+    $setProgress("AE", "AE026")
     scene Dorm Interior with fade
     play music Rain
     MC "Pheeww...okay...it's all going to turn out alright."
@@ -4907,7 +4935,7 @@ label AE025:
     "Shiori-san and I were now official."
     jump daymenu
 
-label AE026:
+label AE026real:
     scene black
     play sound AlarmClock
     scene Dorm Interior with fade
@@ -5709,7 +5737,7 @@ label AE102_c2:
     MC "Goodbye Akira."
     jump daymenu
 
-label AEend:
+label AE026:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

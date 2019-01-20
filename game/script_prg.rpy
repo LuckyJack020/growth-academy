@@ -4,25 +4,25 @@ define Announcer = Character('Announcer', color="#C0C0C0")
 define fade = Fade(0.5, 0.0, 0.5)
 
 image PRG neutral = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/neutral.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/neutral.png",
     "True", "Graphics/PRG/1/neutral.png")
 image PRG happy = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/happy.png", 
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/happy.png", 
     "True", "Graphics/PRG/1/happy.png")
 image PRG sad = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/sad.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/sad.png",
     "True", "Graphics/PRG/1/sad.png")
 image PRG surprised = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/surprised.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/surprised.png",
     "True", "Graphics/PRG/1/surprised.png")
 image PRG angry = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/angry.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/angry.png",
     "True", "Graphics/PRG/1/angry.png")
 image PRG aroused = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/aroused.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/aroused.png",
     "True", "Graphics/PRG/1/aroused.png")
 image PRG unique = ConditionSwitch(
-    "gametime > datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
+    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
     "True", "Graphics/PRG/1/unique.png")
 
 image Dorm PRG = ConditionSwitch(
@@ -34,27 +34,31 @@ init 2 python:
     datelibrary['PRG_size_5'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_4'] = datetime.date(2005, 12, 10)
     datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_2'] = datetime.date(2005, 4, 10)
+    datelibrary['PRG_size_2'] = datetime.date(2005, 4, 18)
     
-    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"],               "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"],         "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": [[ConditionEnum.EVENT, "PRG001"]]}
-    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"],            "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": [[ConditionEnum.EVENT, "PRG002"]]}
-    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"],         "location": "track",            "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.EVENT, "PRG003"]]}
-    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"],                "location": "auditorium",       "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": [[ConditionEnum.PRESET]]}
-    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"],               "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"],        "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
-    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"],         "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"],                "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"],                     "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG010"]]}
-    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"],             "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end","conditions": [[ConditionEnum.EVENT, "PRG011"]]}
-    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],           "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": [[ConditionEnum.EVENT, "PRG012"]]}
-    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"],              "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": [[ConditionEnum.EVENT, "PRG013"]]}
-    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"],                    "location": "dormBBW",          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"],              "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['PRGend'] = {"name": "Aida end", "girls": ["PRG"],                     "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.ROUTECLEAR, "PRG"]]}
+    #Core
+    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
+    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
+    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.CORE,             "location": "track",            "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.CORE,     "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
+    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.CORE,                    "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
+    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                 "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end","conditions": []}
+    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],"type": EventTypeEnum.CORE,                "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
+    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "dormBBW",          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
+    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
+    eventlibrary['PRG020'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": []}
+
+    #Optional
+    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.PRESET,                  "location": "auditorium",       "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
 
 label PRG001:
+    $setProgress("PRG", "PRG002")
     scene School Exterior with fade
     play music Sunset
     "On my way to the vending machines for a drink, I spied Aida-san from my class, frowning down at a can of tea."
@@ -146,6 +150,7 @@ label PRG001_c:
     jump daymenu
     
 label PRG002:
+    $setProgress("PRG", "PRG003")
     scene Cafeteria with fade
     play music Schoolday
     "I felt hungrier than usual today, so I stopped by the cafeteria for an extra snack.  I had just finished my red bean bun when I spied Aida coming in the door near where I was sitting."
@@ -222,6 +227,7 @@ label PRG002:
     jump daymenu
 
 label PRG003:
+    $setProgress("PRG", "PRG004")
     scene F1 Hallway with fade
     play music Busy
     "None of the clubs I was interested in were meeting after class today, so I just wandered the halls after class, watching the other students as they filed out of the building."
@@ -439,6 +445,7 @@ label PRG003_3_c:
     jump daymenu
     
 label PRG004:
+    $setProgress("PRG", "PRG006")
     scene Track with fade
     play music Peaceful
     "Aida had finished making Alice's lunch early, so she and I decided to go for a walk around campus. The weather was nice, the sea breeze was cool... it almost felt like a date. I took a deep breath as we passed in front of the athletics building, and smiled."
@@ -641,6 +648,7 @@ label PRG005:
     jump daymenu
 
 label PRG006:
+    $setProgress("PRG", "PRG007")
     $setVar("PRG006_walking", 0)
     scene School Front with fade
     play music Schoolday
@@ -727,6 +735,7 @@ label PRG006_b:
         jump PRG006_end
 
 label PRG007:
+    $setProgress("PRG", "PRG008")
     scene Cafeteria with fade
     play music Busy
     "After our morning classes, I headed over to the cafeteria for lunch. However, the queue was surprisingly long. It seemed I joined in at the peak hour."
@@ -801,6 +810,7 @@ label PRG007:
     jump daymenu
 
 label PRG008:
+    $setProgress("PRG", "PRG009")
     scene School Inner with fade
     "The day had gone by quickly, classwork barely slowing me down. With little else to do before dinner, I went to find Aida, probably in the cooking classroom again."
     MCT "And maybe get a free sample, heh..."
@@ -939,6 +949,7 @@ label PRG008_3_a:
     jump daymenu
     
 label PRG009:
+    $setProgress("PRG", "PRG010")
     scene School Exterior with fade
     play music Sunset
     "After finishing my homework for the day, I decided to take a walk around, get some fresh air.  As I passed by the vending machines, I saw Aida sitting at one of the picnic tables, looking at something in her hands."
@@ -1117,6 +1128,7 @@ label PRG009:
     jump daymenu
 
 label PRG010:
+    $setProgress("PRG", "PRG011")
     scene Classroom with fade
     play music Peaceful
     "I wandered into the cooking clubhouse, knowing it was about the time that Aida started cooking for Alice, but before she got too involved in the meal to socialize."
@@ -1206,6 +1218,7 @@ label PRG010_c:
     jump daymenu
     
 label PRG011:
+    $setProgress("PRG", "PRG012")
     scene F1 Hallway with fade
     play music Busy
     "My footsteps echoed down the long hallway on campus. The other students were mingling outside, but I felt like simply taking a small stroll."
@@ -1340,6 +1353,7 @@ label PRG011_outro:
     jump daymenu
     
 label PRG012:
+    $setProgress("PRG", "PRG013")
     scene Classroom with fade
     "The rest of the day went by relatively quickly."
     "Fairly straightforward classes, some homework that would have to be finished next week."
@@ -1446,6 +1460,7 @@ label PRG012:
     jump daymenu
     
 label PRG013:
+    $setProgress("PRG", "PRG014")
     scene F1 Hallway with fade
     play music Schoolday
     "I strolled past the classrooms, into the clubroom hallway."
@@ -1541,6 +1556,7 @@ label PRG013:
     jump daymenu
     
 label PRG014:
+    $setProgress("PRG", "PRG015")
     play music Schoolday
     scene Classroom with fade
     "After the usual History classes, lunch break arrived. I particularly felt like hanging out with Aida again, possibly getting to know her better. I glanced around the classroom to find Aida nearly hopping to my desk with her hands behind her back. In all of her bouncing glory."
@@ -1689,6 +1705,7 @@ label PRG014_c1_after:
     jump daymenu
 
 label PRG015:
+    $setProgress("PRG", "PRG019")
     scene Dorm BBW with fade
     show PRG sad with dissolve
     play music Sunset
@@ -1816,6 +1833,7 @@ label PRG015_after:
         jump daymenu
 
 label PRG019:
+    $setProgress("PRG", "PRG020")
     scene Classroom with fade
     play music Schoolday
     "Morning classes went by in no time at all, as usual.  As the day wore on, I found myself glancing across the room at Aida from time to time.  On occasion, I'd catch her looking at me as well, but she'd turn her head away at the last minute, trying to look inconspicuous.  When we were finally dismissed from our classes, Aida popped up from her desk and walked over to mine."
@@ -1971,7 +1989,7 @@ label PRG019_c1_after:
     MCT "She's definitely gained a little weight, probably from the cooking club. But thankfully, it looks good on her."
     jump daymenu
 
-label PRGend:
+label PRG020:
     "This marks the current end of Aida's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
