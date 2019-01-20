@@ -70,7 +70,7 @@ init 2 python:
     
     #Optional
     eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.PRESET,                   "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, 7]}
+    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, 7]]}
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     
 label GTS001:
