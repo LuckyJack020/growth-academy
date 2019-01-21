@@ -4380,7 +4380,7 @@ label AE023_c1_after:
     AE "Hotsure-san, see me on the roof tomorrow. I'll be able to settle this."
     MC "O-okay...wait, what time? I-"
     show AE neutral
-    MC "Directly after class."
+    AE "Directly after class."
     hide AE with dissolve
     "Shiori-san answered extremely quickly, and left even quicker. I couldn't fully register what I was feeling more of at the moment, worry, confusion, or the lingering arousal from the image of Shiori-san's ass stuck up in the air."
     MC "After class, then..."

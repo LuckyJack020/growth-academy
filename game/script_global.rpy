@@ -1284,10 +1284,7 @@ label RM001_c2_2:
 
 label RM002:
     scene Hallway with fade
-    if gametime_eve:
-        "I followed the crowd out of the classroom as everyone shuffled toward their various clubs or back to their rooms."
-    else:
-        "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
+    "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
     "Out of the corner of my eye, inside another classroom, I noticed..."
     show RM neutral at Position (xpos=0.95, xanchor=0.5) with dissolve
     play music RM
@@ -1299,10 +1296,7 @@ label RM002:
     show RM neutral at Position (xpos=0.5, xanchor=0.5) with dissolve
     MC "What?"
     RM "I need your help with something."
-    if gametime_eve:
-        MC "Daichi, I’ve got homework to do. Can it wait?"
-    else:
-        MC "Daichi, I'm hungry. Can it wait until after lunch?"
+    MC "Daichi, I'm hungry. Can it wait until after lunch?"
     RM "No. This is important. It'll be simple, though."
     RM "All I need you to do is keep watch. If anyone wants to come in here, let me know - just make noise or something, and stall them for a few seconds."
     jump RM002_choice

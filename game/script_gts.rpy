@@ -145,7 +145,7 @@ label GTS001_after:
     show GTS neutral
     "She placed a finger on her lip as she thought about her plans for the evening, before finally replying."
     GTS "Well, I had planned to return to my dorm room so I could tell my family about how my first day went."
-    GTS "However, I do plan to explore the garden later this evening. There's a surprisingly large variety of flowers her. At least, more than I had expected, so I want to make a list of what's here and maybe ask the groundskeeper about where they obtained the seeds for them."
+    GTS "However, I do plan to explore the garden later this evening. There's a surprisingly large variety of flowers here. At least, more than I had expected, so I want to make a list of what's here and maybe ask the groundskeeper about where they obtained the seeds for them."
     MC "Oh, I see; I won't hold you up, then. I should probably do the same myself, really, I'm sure my family would love to hear about how my day went as well. I'll see you around, Yamazaki-san."
     GTS "Farewell, Hotsure-san, I hope the rest of your day goes well. Do try to visit the garden every so often, you'll be surprised how much good can come from resting in a garden for a few moments."
     MC "Heh, I might take you up on that advice. Later, Yamazaki-san."
@@ -268,9 +268,9 @@ label GTS003_c1:
     $setAffection("GTS", 2)
     $setSkill("Art", 1)
     $setFlag("GTS008_flowers")
-    show GTS embarrassed at bottom, Transform(xzoom=-1)
+    show GTS embarrassed at center, Transform(xzoom=-1)
     "For the briefest of moments I could see Naomi's cheeks flash a slight crimson in what I assumed was embarrassment as her hand went to touch the accessory. She looked away for a second, but returned her eyes back to mine and retrieved that small smile she had before."
-    show GTS embarrassed at bottom, Transform(xzoom=1)
+    show GTS embarrassed at center, Transform(xzoom=1)
     GTS "Oh, why thank you so much. It's just a little something I decided to add to the rest of my attire for today. I have a bit of a collection of them, various species and things of that nature."
     MC "Well, I think it suits you rather well."
     GTS "Thank you..."
@@ -529,7 +529,7 @@ label GTS006_after:
     MC "Whoa, seriously!? Aren't those extremely rare?"
     GTS "I've never heard that, but I suppose they could be. I always thought they were rather common, since SoftBank uses one as a mascot."
     MC "I don't know, I've always heard they were really rare, even in Japan. Your family must be loaded!"
-    show GTS embarassed at Position(xpos=0.4, xanchor=0.5, yalign=1.0)
+    show GTS embarrassed at Position(xpos=0.4, xanchor=0.5, yalign=1.0)
     "There was the faintest hint of a blush on Naomi's face as she broke eye contact and looked to the side for a second, before returning her attention."
     show GTS embarrassed
     GTS "My father always said he picked that breed because the Hokkaido has the three characteristic he looks for in people: bravery, loyalty, and intelligence. I can say he was right about that description, because she's probably been one of the most loyal dogs I've met."
@@ -589,10 +589,10 @@ label GTS007:
     show GTS embarrassed
     GTS "M-me!? Oh no, I never have... I was always too focused on other things like helping around the house or preparing for other social events. I've never really had time for things like that."
     MC "Oh? So, are you telling me you've never been on a date, then?"
-    show GTS embarassed at bottom, Transform(xzoom=-1)
+    show GTS embarrassed at center, Transform(xzoom=-1)
     "I could see her face brightening up more as she tried avoiding eye contact. It was rather sweet seeing this side of her."
     GTS "I'll admit... that I have not. My schedule was and to an extent, still is, rather filled up with my responsibilities. It would have been nice to have seen what it was like, but it simply wasn't the right time I suppose."
-    show GTS neutral at bottom, Transform(xzoom=1)
+    show GTS neutral at center, Transform(xzoom=1)
     "She looked back towards me as she managed to regain her composure. I gave her a small nod, as I didn't want to push the issue too hard."
     MC "Yeah, I guess it would be pretty tough if you're always busy. But at the same time, I wouldn't worry too much about it."
     MC "Going back to hanging out with friends, have you managed to make any new friends here?"
@@ -967,12 +967,12 @@ label GTS010_after:
     if getAffection("GTS") >= 7:
         $setFlag("GTS011_unlock")
         GTS "Apologies for changing the subject so suddenly, but Hotsure-san... I was hoping to ask you..."
-        show GTS embarassed at bottom, Transform(xzoom=-1)
+        show GTS embarrassed at center, Transform(xzoom=-1)
         GTS "Would you be interested in coming over to my dorm room sometime later? Some things I had forgotten at home will be coming by and I was hoping you wouldn't mind having some tea with me."
         "Like earlier, I saw the barest motion of a blush as her eyes for a split second looked away."
         MC "Totally! That sounds great."
         "For the briefest moment, her lips rose to a slightly larger smile before returning to their normal position."
-        show GTS neutral at bottom, Transform(xzoom=1)
+        show GTS neutral at center, Transform(xzoom=1)
         GTS "I'll be sure to get everything fully prepared, then. I do hope you'll enjoy it."
         MC "Oh, I'm sure I will. After all, with your plant knowledge I'd expect you to be a tea expert."
         GTS "I wouldn't say so, but thank you for the vote of confidence."
@@ -1357,7 +1357,7 @@ label GTS016:
     GTS "Is everything all right, Hotsure-san?"
     MC "Yeah, just got startled by a bee."
     GTS "Oh? You're not allergic, are you?"
-    GTS "No, just don't want to get stung is all."
+    MC "No, just don't want to get stung is all."
     GTS "I see. No need to worry, then. As long as they are allowed to do their duty, they'll be more than happy to leave you be."
     MC "Heh, I guess you're pretty use to seeing bees around you, then?"
     GTS "Indeed, it comes with the territory. Heh, I will admit I did get my fair share of stings when I was younger."
@@ -1843,22 +1843,22 @@ label GTS020_c1_2:
     GTS "I-I'm not sure... I-I w-wasn't sure you'd agree..."
     MC "Heh, honestly I wasn't sure for a bit there, either... but... I realized that I would like that."
     GTS "W-w-well I'd need to properly plan everything then."
-    show GTS embarrassed at bottom, Transform(xzoom=-1)
+    show GTS embarrassed at center, Transform(xzoom=-1)
     GTS "W-we could go visit the park,"
-    show GTS embarrassed at bottom, Transform(xzoom=1)
+    show GTS embarrassed at center, Transform(xzoom=1)
     extend " or go to a restaurant,"
-    show GTS embarrassed at bottom, Transform(xzoom=-1)
+    show GTS embarrassed at center, Transform(xzoom=-1)
     extend " or maybe the movies?"
-    show GTS embarrassed at bottom, Transform(xzoom=1)
+    show GTS embarrassed at center, Transform(xzoom=1)
     extend " Or-"
     pause 0.5
-    show GTS embarrassed at bottom, Transform(xzoom=-1)
+    show GTS embarrassed at center, Transform(xzoom=-1)
     pause 0.5
-    show GTS embarrassed at bottom, Transform(xzoom=1)
+    show GTS embarrassed at center, Transform(xzoom=1)
     pause 0.5
-    show GTS embarrassed at bottom, Transform(xzoom=-1)
+    show GTS embarrassed at center, Transform(xzoom=-1)
     pause 0.5
-    show GTS embarrassed at bottom, Transform(xzoom=1)
+    show GTS embarrassed at center, Transform(xzoom=1)
     MC "Haha, calm down Yamazaki-san. We're in no rush. We'll figure it out. Let's just... enjoy right now."
     show GTS happy
     GTS "Yes... you're right, Hotsure-san. Sorry, I got a little carried away there. I just... well, didn't think this would be how this turned out."

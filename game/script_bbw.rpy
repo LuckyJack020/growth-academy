@@ -2816,7 +2816,7 @@ label BBW016_c1_3:
     jump daymenu
     
 label BBW017:
-    $setProgress("BBW", "BBW018")
+    $setProgress("BBW", "BBW019")
     scene Cafeteria with fade
     "I was feeling peckish after class, so I went to the cafeteria looking for something a bit more filling than a candy bar."
     "A bowl of ice cream called out to me, but it did mean I had to stay in the cafeteria as I ate it."
