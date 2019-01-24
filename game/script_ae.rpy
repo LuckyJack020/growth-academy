@@ -646,7 +646,7 @@ label AE004_c1:
     MC "Eh?"
     AE "You really have no reason to get involved in my personal affairs. I can handle myself. Did you even think about what could have happened?"
     MC "I'm sorry...I was just trying to look out for you."
-    show AE annoyed
+    show AE neutral-annoyed
     AE "Look out for yourself. The less you meddle, the less work I have to do."
     MCT "Ow...that actually hurt a bit."
     jump AE004_afterchoice

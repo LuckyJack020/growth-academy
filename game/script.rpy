@@ -177,8 +177,20 @@
                         break
                     else:
                         continue
+                elif c[2] == ConditionEqualityEnum.LESSTHANEQUALS:
+                    if getAffection(c[1]) > int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
                 elif c[2] == ConditionEqualityEnum.GREATERTHAN:
                     if getAffection(c[1]) <= int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[2] == ConditionEqualityEnum.GREATERTHANEQUALS:
+                    if getAffection(c[1]) < int(c[3]):
                         criteriavalid = False
                         break
                     else:
