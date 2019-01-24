@@ -773,7 +773,7 @@ label FMG009:
 label FMG010:
     $setProgress("FMG", "FMG011")
     scene Classroom with fade
-    play music Classroom
+    play music Schoolday
     "The class started as normal with roll call, until Mizutani's name was called out and I realized she didn't answer."
     MCT "Weird, I don't think I've ever seen her miss class. Sleeping in sure, but never missing."
     scene black with fade
@@ -1438,7 +1438,7 @@ label FMG016:
     MCT "Huh...never picked Rin as the hopeless romantic type."
     Rin "Look, if any of the students, god forbid Shiori, finds out about this, then I'm so boned. Gossip spreads fast. Akira, if you keep quiet about this... I'll clean my half of the room. And Kei..."
     $setVar("RinFavor", getVar("RinFavor") + 1)
-    if getVariable("RinFavor") >= 1:
+    if getVar("RinFavor") >= 1:
         Rin "I know I already owe you a favor Kei, but I'll give you another for your word."
     else:
         Rin "I'll give you a favor for later, deal?"
