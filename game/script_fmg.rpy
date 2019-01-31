@@ -1597,7 +1597,7 @@ label FMG018_c1_1:
     Takamura " Keisuke, good work as well. A bit heavy on the cinnamon, but that's okay."
     MCT "Yes!"
     Takamura "And... Mizutani-san..."
-    Akira "Nehehe~ It'll be fine!"
+    FMG "Nehehe~ It'll be fine!"
     Takamura "Y-You're right, it can't be that bad..."
     Takamura "..."
     Takamura " ... Passable!"

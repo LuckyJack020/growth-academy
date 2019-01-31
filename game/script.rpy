@@ -14,7 +14,7 @@
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track']
     debuginfo = False
-    debugenabled = False
+    debugenabled = True
     debuginput = ""
     debugpriorities = ""
     gametime = datetime.date(2005, 4, 4)
