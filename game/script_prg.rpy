@@ -750,7 +750,7 @@ label PRG007:
     MC "Mind if I sit next to you? You seem like you could use the company."
     show PRG sad
     PRG "O-oh, really? Hrm..."
-    PRG "She looked back down at her boxed lunch for a moment,"
+    "She looked back down at her boxed lunch for a moment,"
     show PRG neutral
     extend " then nodded gently."
     "I took that as my cue to sit down in the chair next to her, between the group and Aida. We both dug into our food, but after a minute or so, my curiosity got the better of me."
