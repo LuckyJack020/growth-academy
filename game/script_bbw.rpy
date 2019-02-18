@@ -4,63 +4,21 @@ define Francois = Character('Francois', color="#CC33FF")
 define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Waitress = Character('Lunchlady', color="#CC33FF")
 
-image BBW neutral = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/neutral.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/neutral.png",
-    "True", "Graphics/BBW/1/neutral.png")
-image BBW happy = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/happy.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/happy.png",
-    "True", "Graphics/BBW/1/happy.png")
-image BBW sad = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/sad.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/sad.png",
-    "True", "Graphics/BBW/1/sad.png")
-image BBW surprised = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/surprised.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/surprised.png",
-    "True", "Graphics/BBW/1/surprised.png")
-image BBW angry = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/angry.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/angry.png",
-    "True", "Graphics/BBW/1/angry.png")
-image BBW aroused = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/aroused.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/aroused.png",
-    "True", "Graphics/BBW/1/aroused.png")
-image BBW haughty = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/unique.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/unique.png",
-    "True", "Graphics/BBW/1/unique.png")
+image BBW neutral = DynamicImage("Graphics/BBW/" + str(globalsize) + "/neutral.png")
+image BBW happy = DynamicImage("Graphics/BBW/" + str(globalsize) + "/happy.png")
+image BBW sad = DynamicImage("Graphics/BBW/" + str(globalsize) + "/sad.png")
+image BBW surprised = DynamicImage("Graphics/BBW/" + str(globalsize) + "/surprised.png")
+image BBW angry = DynamicImage("Graphics/BBW/" + str(globalsize) + "/angry.png")
+image BBW aroused = DynamicImage("Graphics/BBW/" + str(globalsize) + "/aroused.png")
+image BBW haughty = DynamicImage("Graphics/BBW/" + str(globalsize) + "/unique.png")
 
-image BBW swimneutral = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/neutral.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/neutral.png",
-    "True", "Graphics/BBW/1/neutral.png")
-image BBW swimhappy = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/happy.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/happy.png",
-    "True", "Graphics/BBW/1/happy.png")
-image BBW swimsad = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/sad.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/sad.png",
-    "True", "Graphics/BBW/1/sad.png")
-image BBW swimsurprised = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/surprised.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/surprised.png",
-    "True", "Graphics/BBW/1/surprised.png")
-image BBW swimangry = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/angry.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/angry.png",
-    "True", "Graphics/BBW/1/angry.png")
-image BBW swimaroused = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/aroused.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/aroused.png",
-    "True", "Graphics/BBW/1/aroused.png")
-image BBW swimhaughty = ConditionSwitch(
-    "gametime >= datelibrary['BBW_size_3']", "Graphics/BBW/3/unique.png",
-    "gametime >= datelibrary['BBW_size_2']", "Graphics/BBW/2/unique.png",
-    "True", "Graphics/BBW/1/unique.png")
+image BBW swimneutral = DynamicImage("Graphics/BBW/" + str(globalsize) + "/neutral.png")
+image BBW swimhappy = DynamicImage("Graphics/BBW/" + str(globalsize) + "/happy.png")
+image BBW swimsad = DynamicImage("Graphics/BBW/" + str(globalsize) + "/sad.png")
+image BBW swimsurprised = DynamicImage("Graphics/BBW/" + str(globalsize) + "/surprised.png")
+image BBW swimangry = DynamicImage("Graphics/BBW/" + str(globalsize) + "/angry.png")
+image BBW swimaroused = DynamicImage("Graphics/BBW/" + str(globalsize) + "/aroused.png")
+image BBW swimhaughty = DynamicImage("Graphics/BBW/" + str(globalsize) + "/unique.png")
 
 image cg BBW001 = "Graphics/ui/gallery/BBW-001.png"
 
@@ -68,49 +26,42 @@ image Dorm BBW = "Graphics/ui/bg/BBWDorm.png"
 image Dorm BBW Flip = im.Flip("Graphics/ui/bg/BBWDorm.png", horizontal=True)
 
 init 2 python:
-    datelibrary['BBW_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['BBW_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['BBW_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['BBW_size_3'] = datetime.date(2005, 5, 18)
-    datelibrary['BBW_size_2'] = datetime.date(2005, 4, 18)
-    
-    #NEED TO FIX SIZE 3 DATE
     #Core
-    eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": []}
-    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                           "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": []}
-    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                             "location": "cookingclassroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                              "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": []}
-    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                               "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",              "conditions": []}
-    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",              "conditions": []}
-    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                            "location": "musicclassroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
-    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.CORE,                            "location": "pool", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                   "conditions": []}
-    eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                  "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": True, "startdate": "BBW_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                      "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                     "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",               "conditions": []}
-    eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"], "type": EventTypeEnum.CORE,                                        "location": "dormexterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",        "conditions": []}
-    eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                    "location": "dormexterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                               "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}    
-    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                     "location": "pool", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",              "conditions": []}
-    eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                   "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []} #\/ disabled due to affection not being very grindable right now
-    eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                      "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": []} #"conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
-    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                           "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
-    eventlibrary['BBW026real'] = {"name": "The Trial of Smarts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                  "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                             "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BBW026'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",             "conditions": []}
+    eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW002", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                           "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW003", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                             "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "BBW004", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                              "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW006", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                               "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW007", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW008", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                            "location": "musicclassroom",   "priority": PrioEnum.NONE, "next": "BBW009", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW009", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.CORE,                            "location": "pool",             "priority": PrioEnum.NONE, "next": "BBW010", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                  "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW011", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW012", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW013", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW014", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                     "location": "gym",              "priority": PrioEnum.NONE, "next": "BBW015", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"], "type": EventTypeEnum.CORE,                                        "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "BBW016", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                    "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "BBW017", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                               "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW019", "obsflags": [],            "conditions": []}    
+    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW020", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW021", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                     "location": "pool",             "priority": PrioEnum.NONE, "next": "BBW022", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "next": "BBW023", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW024", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                   "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW025", "obsflags": [],            "conditions": []} #\/ disabled due to affection not being very grindable right now
+    eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW026", "obsflags": [],            "conditions": []} #"conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
+    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                           "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW026", "obsflags": [],            "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
+    eventlibrary['BBW026real'] = {"name": "The Trial of Smarts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                  "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW027", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                             "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW028", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW029", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW026'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
 
     #Optional
-    eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.PRESET,                              "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": []}
-    eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,   "location": "cafeteria", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",              "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
-    eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                         "location": "gym", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                    "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]]}
-    eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                               "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BBW_size_2", "enddate": "day_end",           "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
+    eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                              "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                "conditions": []}
+    eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,   "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],              "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
+    eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                         "location": "gym",              "priority": PrioEnum.NONE, "next": "", "obsflags": [],                    "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]]}
+    eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                               "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
 
 label BBW001:
     $setProgress("BBW", "BBW002")

@@ -1,44 +1,29 @@
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
+#TBI: re-add condition switches
 image Lake Road = "Graphics/ui/bg/lakeroad.png"
 image School Front = "Graphics/ui/bg/schoolfront.png"
 image School Inner = "Graphics/ui/bg/schoolinner.png"
 image Gate Front = "Graphics/ui/bg/gatefront.png"
 image School Planter = "Graphics/ui/bg/schoolplanter.png"
 image Hallway = "Graphics/ui/bg/hallway.png"
-image Classroom = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/classroom_eve.png",
-    "True", "Graphics/ui/bg/classroom_day.png")
+image Classroom = "Graphics/ui/bg/classroom_day.png"
 image Dorm Exterior = "Graphics/ui/bg/dormexterior.png"
 image Dorm Interior = "Graphics/ui/bg/dorminterior.png"
-image Campus Center = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/campuscenter_eve.png",
-    "True", "Graphics/ui/bg/campuscenter_day.png")
+image Campus Center = "Graphics/ui/bg/campuscenter_day.png"
 image Auditorium = "Graphics/ui/bg/auditorium.png"
 image School Exterior = "Graphics/ui/bg/schoolexterior.png"
 image F1 Hallway = "Graphics/ui/bg/schoolhallway1.png"
 image Library = "Graphics/ui/bg/library.png"
-image Office = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/office_eve.png",
-    "True", "Graphics/ui/bg/office_day.png")
+image Office = "Graphics/ui/bg/office_day.png"
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
-image Music Classroom = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/music_eve.png",
-    "True", "Graphics/ui/bg/music_day.png")
+image Music Classroom = "Graphics/ui/bg/music_day.png"
 image Gym = "Graphics/ui/bg/auditorium.png"
-image Track = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/track_eve.png",
-    "True", "Graphics/ui/bg/track_day.png")
-image Roof = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/roof_eve.png",
-    "True", "Graphics/ui/bg/roof_day.png")
-image Nurse Office = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/office_eve.png",
-    "True", "Graphics/ui/bg/office_day.png")
-image Pool = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/schoolpool_eve.png",
-    "True", "Graphics/ui/bg/schoolpool_day.png")
+image Track = "Graphics/ui/bg/track_day.png"
+image Roof = "Graphics/ui/bg/roof_day.png"
+image Nurse Office = "Graphics/ui/bg/office_day.png"
+image Pool = "Graphics/ui/bg/schoolpool_day.png"
 image Festival = "Graphics/ui/bg/festival.png"
 image Bathroom = "Graphics/ui/bg/bathroom.png"
 image Recreation = "Graphics/ui/bg/NYI.png"
@@ -47,9 +32,7 @@ image Arcade = "Graphics/ui/bg/arcade.png"
 image Cafe = "Graphics/ui/bg/cafe.png"
 
 image splash = "Graphics/ui/bg/splashscreen.png"
-image daymenubg = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/menubg-evening.png",
-    "True", "Graphics/ui/bg/menubg-day.png")
+image daymenubg = "Graphics/ui/bg/menubg-day.png"
 
 image RM neutral = "Graphics/minor/RM-neutral.png"
 image RM angry = "Graphics/minor/RM-angry.png"
@@ -111,15 +94,9 @@ define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 
 init 1 python:
-    datelibrary['testday'] = datetime.date(2005, 4, 11)
-    datelibrary['day_1'] = datetime.date(2005, 4, 4)
-    datelibrary['day_0'] = datetime.date(2005, 4, 3)
-    datelibrary['day_end'] = datetime.date(2006, 4, 3)
-    eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.PRESET,                        "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
-    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
-    eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "RM001"]]}
-    presetdays["4-11-F"] = ["global005"]
-    presetdays["4-11-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
+    eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONAL,            "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
+    eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     
     #Japanese holidays:
     #January 1: New Year’s Day
@@ -166,7 +143,7 @@ label global000:
     if debugenabled:
         menu:
             "(DEBUG) Skip intro":
-                jump daymenu_overtime
+                jump daymenu
             "Continue":
                 "Playing intro."
         
@@ -1119,7 +1096,7 @@ label global005:
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
     "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
-    jump daymenu_overtime
+    jump daymenu
 
 label RM001:
     scene Dorm Interior with fade

@@ -5,101 +5,61 @@ define CMM = Character('Male Concil Member', color="#ffa18a") #Lighter Orange
 define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
 
-image AE neutral = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
-    "True", "Graphics/AE/1/neutral.png")
-image AE neutral-annoyed = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
-    "True", "Graphics/AE/1/neutral-annoyed.png")
-image AE neutral-eyebrow = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png", #needed
-    "True", "Graphics/AE/1/neutral-eyebrow.png")
-image AE neutral-noglasses = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-noglasses.png",
-    "True", "Graphics/AE/1/neutral-noglasses.png")
-image AE neutral-smug = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-smug.png",
-    "True", "Graphics/AE/1/neutral-smug.png")
-image AE happy = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
-    "True", "Graphics/AE/1/happy.png")
-image AE sad = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
-    "True", "Graphics/AE/1/sad.png")
-image AE sad-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad-2.png",
-    "True", "Graphics/AE/1/sad.png") #missing
-image AE surprised = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
-    "True", "Graphics/AE/1/surprised.png")
-image AE angry = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
-    "True", "Graphics/AE/1/angry.png")
-image AE angry-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-2.png", #missing
-    "True", "Graphics/AE/1/angry-2.png")
-image AE angry-3 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-3.png", #needed
-    "True", "Graphics/AE/1/angry-3.png")
-image AE aroused = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
-    "True", "Graphics/AE/1/aroused.png")
-image AE aroused-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-2.png",
-    "True", "Graphics/AE/1/aroused-2.png")
-image AE aroused-3 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-3.png",
-    "True", "Graphics/AE/1/aroused-3.png")
-image AE aroused-4 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-4.png",
-    "True", "Graphics/AE/1/aroused.png") #missing
-image AE glasses = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique.png",
-    "True", "Graphics/AE/1/unique.png")
-image AE glasses-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique-2.png",
-    "True", "Graphics/AE/1/unique-2.png")
+image AE neutral = DynamicImage("Graphics/AE/" + str(globalsize) + "/neutral.png")
+image AE neutral-annoyed = DynamicImage("Graphics/AE/" + str(globalsize) + "/neutral-annoyed.png")
+image AE neutral-eyebrow = DynamicImage("Graphics/AE/" + str(globalsize) + "/neutral-eyebrow.png")
+image AE neutral-noglasses = DynamicImage("Graphics/AE/" + str(globalsize) + "/neutral-noglasses.png")
+image AE neutral-smug = DynamicImage("Graphics/AE/" + str(globalsize) + "/neutral-smug.png")
+image AE happy = DynamicImage("Graphics/AE/" + str(globalsize) + "/happy.png")
+image AE sad = DynamicImage("Graphics/AE/" + str(globalsize) + "/sad.png")
+image AE sad-2 = DynamicImage("Graphics/AE/" + str(globalsize) + "/sad-2.png")
+image AE surprised = DynamicImage("Graphics/AE/" + str(globalsize) + "/surprised.png")
+image AE angry = DynamicImage("Graphics/AE/" + str(globalsize) + "/angry.png")
+image AE angry-2 = DynamicImage("Graphics/AE/" + str(globalsize) + "/angry-2.png")
+image AE angry-3 = DynamicImage("Graphics/AE/" + str(globalsize) + "/angry-3.png")
+image AE aroused = DynamicImage("Graphics/AE/" + str(globalsize) + "/aroused.png")
+image AE aroused-2 = DynamicImage("Graphics/AE/" + str(globalsize) + "/aroused-2.png")
+image AE aroused-3 = DynamicImage("Graphics/AE/" + str(globalsize) + "/aroused-3.png")
+image AE aroused-4 = DynamicImage("Graphics/AE/" + str(globalsize) + "/aroused-4.png")
+image AE glasses = DynamicImage("Graphics/AE/" + str(globalsize) + "/unique.png")
+image AE glasses-2 = DynamicImage("Graphics/AE/" + str(globalsize) + "/unique-2.png")
 
-init 2 python:    
-    datelibrary['AE010_deadline'] = datetime.date(2005, 4, 13)
-    datelibrary['AE_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_2'] = datetime.date(2005, 4, 18)
+#MISSING: size1: sad-2, aroused-4
+#MISSING: size2: angry-2, angry-3
+
+init 2 python:
     
     #Core
-    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
-    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
-    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "library", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",    "conditions": []}
-    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
-    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,       "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
-    #eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                         "conditions": [[ConditionEnum.EVENT, "AE025"]]} #TODO: Not sure if dorminterior
-    #eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.EVENT, "AE026"]]} #TODO: Not sure if dorminterior
+    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "priority": PrioEnum.NONE,           "next": "AE002", "obsflags": [],                "conditions": []}
+    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "priority": PrioEnum.NONE,            "next": "AE003", "obsflags": [],                "conditions": []}
+    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "priority": PrioEnum.NONE,      "next": "AE004", "obsflags": [],                "conditions": []}
+    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE006", "obsflags": [],                "conditions": []}
+    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "priority": PrioEnum.NONE,            "next": "AE007", "obsflags": [],                "conditions": []}
+    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "priority": PrioEnum.NONE,            "next": "AE008", "obsflags": [],                "conditions": []}
+    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "priority": PrioEnum.NONE,            "next": "AE009", "obsflags": [],                "conditions": []}
+    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "priority": PrioEnum.NONE,            "next": "AE011", "obsflags": [],                "conditions": []}
+    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "priority": PrioEnum.NONE,            "next": "AE012", "obsflags": [],                "conditions": []}
+    eventlibrary['AE012'] = {"name": "Inquiry and Response", "gnirls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "office", "priority": PrioEnum.NONE,            "next": "AE013", "obsflags": [],                "conditions": []}
+    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "priority": PrioEnum.NONE,            "next": "AE014", "obsflags": [],                "conditions": []}
+    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "priority": PrioEnum.NONE,            "next": "AE015", "obsflags": [],                "conditions": []}
+    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "priority": PrioEnum.NONE,            "next": "AE016", "obsflags": [],                "conditions": []}
+    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "library", "priority": PrioEnum.NONE,           "next": "AE017", "obsflags": [],                "conditions": []}
+    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "priority": PrioEnum.NONE,         "next": "AE018", "obsflags": [],                "conditions": []}
+    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "priority": PrioEnum.NONE,         "next": "AE019", "obsflags": [],                "conditions": []}
+    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE020", "obsflags": [],                "conditions": []}
+    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "classroom", "priority": PrioEnum.NONE,         "next": "AE021", "obsflags": [],                "conditions": []}
+    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,       "location": "classroom", "priority": PrioEnum.NONE,         "next": "AE022", "obsflags": [],                "conditions": []}
+    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "hallway", "priority": PrioEnum.NONE,           "next": "AE023", "obsflags": [],                "conditions": []}
+    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "priority": PrioEnum.NONE,           "next": "AE024", "obsflags": [],                "conditions": []}
+    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "priority": PrioEnum.NONE,              "next": "AE025", "obsflags": [],                "conditions": []}
+    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE026", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "priority": PrioEnum.NONE,           "next": "", "obsflags": [],                     "conditions": []}
+    #eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior", "priority": False, "startdate": "day_0", "enddate": "day_end",                         "conditions": [[ConditionEnum.EVENT, "AE025"]]} #TODO: Not sure if dorminterior
+    #eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom", "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.EVENT, "AE026"]]} #TODO: Not sure if dorminterior
     
     #Optional
-    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.PRESET,                        "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []} #After checkup
-    
+    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONAL,                        "location": "hallway", "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],         "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]} #After checkup
+    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.OPTIONAL,                       "location": "office", "priority": PrioEnum.GIRL,          "obsflags": [],                "conditions": []} #fixme: it's an office scene, make sure that's handled
     #eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     #eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
@@ -517,6 +477,7 @@ label AE003_c1_after:
     
 label AE004:
     $setProgress("AE", "AE006")
+    $setTimeFlag("testday")
     scene Dorm Interior with fade
     play music Rain
     "I slipped my shoes on as my mind began to mull over the incident in the hall the other day, it was strange, but honestly I just felt a bit ticked off about the whole thing." #Splitted the line up in 2 -Auctus

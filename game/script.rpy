@@ -6,18 +6,14 @@
     
     style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
     
-    import datetime
-    
     eventlibrary = {}
-    presetdays = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track']
     debuginfo = False
     debugenabled = True
     debuginput = ""
-    debugpriorities = ""
-    gametime = datetime.date(2005, 4, 4)
+    globalsize = 1
     
     import math
 
@@ -74,41 +70,34 @@
 
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, GAMETIME, AFFECTION, SKILL, OR, ISDAYFREE = range(9)
+        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR = range(8)
     
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
     #FLAG: arg1 = (string) flag name, true if flag has been raised
     #NOFLAG: arg1 = (string) flag name, true if flag has NOT been raised
-    #GAMETIME: arg1 = ConditionEqualityEnum, arg2 = (date, from datelibrary) date in question, true if the comparison is true (between gametime and arg2)
     #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
     #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
-    #ISDAYFREE: arg1 = DeltaTimeEnum, arg2 = (int) number of days OR (date) date OR (DayOfWeekEnum) day of week, arg3 = (boolean) evening, returns true if the specified time (with time of day from arg3) is not a preset/meeting day
     
     class EventTypeEnum:
-        CORE, OPTIONAL, PRESET = range(3)
+        CORE, OPTIONAL, ANY = range(3)
 
     #CORE: Event is in someone's core route. Cannot be selected randomly.
     #OPTIONAL: Event is an optional event. Can be selected randomly.
-    #PRESET: Event is optional, but only available through preset methods. Cannot be selected randomly.
+    #ANY: Event is either core or optional. Events can't be set to this, but it's used in certain methods.
+    
+    class PrioEnum:
+        NONE, GIRL, ALL = range(3)
 
-    class DeltaTimeEnum:
-        NUMDAYS, DATE, DAYOFWEEK = range(3)
+    #NONE: Not a priority. Other scenes available.
+    #GIRL: Priority. Other scenes featuring the first girls in the girllist are not available.
+    #ALL: Priority. Other scenes not available, no matter who's in them.
     
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
     
-    class DayOfWeekEnum:
-        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY = range(7)
-    
-    class WeekendEnum:
-        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY, WEEKDAY, WEEKEND, ANY = range(10)
-    
-    class TimeEnum:
-        DAY, NIGHT, AFTERSCHOOL, ANY = range(4)
-    
-    def checkCriteria(clist, checkRouteClear=True):
+    def checkCriteria(clist):
         criteriavalid = True
         for c in clist:
             if c[0] == ConditionEnum.EVENT:
@@ -129,45 +118,16 @@
                     break
                 else:
                     continue
+            elif c[0] == ConditionEnum.TIMEFLAG:
+                if c[1] not in timeflags:
+                    criteriavalid = False
+                    break
+                else:
+                    continue
             elif c[0] == ConditionEnum.NOFLAG:
                 if c[1] not in flags:
                     continue
                 else:
-                    criteriavalid = False
-                    break
-            elif c[0] == ConditionEnum.GAMETIME:
-                if c[1] == ConditionEqualityEnum.LESSTHAN:
-                    if gametime >= c[2]:
-                        criteriavalid = False
-                        break
-                    else:
-                        continue
-                elif c[1] == ConditionEqualityEnum.GREATERTHAN:
-                    if gametime <= c[2]:
-                        criteriavalid = False
-                        break
-                    else:
-                        continue
-                elif c[1] == ConditionEqualityEnum.LESSTHANEQUALS:
-                    if gametime > c[2]:
-                        criteriavalid = False
-                        break
-                    else:
-                        continue
-                elif c[1] == ConditionEqualityEnum.GREATERTHANEQUALS:
-                    if gametime < c[2]:
-                        criteriavalid = False
-                        break
-                    else:
-                        continue
-                elif c[1] == ConditionEqualityEnum.EQUALS:
-                    if gametime != c[2]:
-                        criteriavalid = False
-                        break
-                    else:
-                        continue
-                else:
-                    renpy.log("Invalid criteria equality enum ID: %s" % str(c[1]))
                     criteriavalid = False
                     break
             elif c[0] == ConditionEnum.AFFECTION:
@@ -205,73 +165,91 @@
                 else:
                     criteriavalid = False
                     break
-            elif c[0] == ConditionEnum.ISDAYFREE:
-                if c[1] == DeltaTimeEnum.NUMDAYS:
-                    t = gametime + datetime.timedelta(days=c[2])
-                elif c[1] == DeltaTimeEnum.DATE:
-                    t = c[2]
-                elif c[1] == DeltaTimeEnum.DAYOFWEEK:
-                    tmp = c[2] - gametime.weekday()
-                    if tmp < 0: #if the day of the week we're considering has already passed, we need to do it next week
-                        tmp += 7
-                    t = gametime + datetime.timedelta(days=tmp)
-                else:
-                    renpy.log("Invalid DeltaTimeEnum: %s" % str(c[1]))
-                    criteriavalid = False
-                    break
-                if getTimeCode(t, c[3]) in presetdays.keys() or getTimeCode(t, c[3]) in meetingdays.keys():
-                    criteriavalid = False
-                    break
             else:
                 renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
                 criteriavalid = False
                 break
-        return criteriavalid    
-    
-    def isEventTimeOk(time, day):
-        #Weekday = Mon-Sat, Weekend = Sun, Any = Do not check
-        d = (day == WeekendEnum.ANY or (day == WeekendEnum.WEEKEND and gametime.weekday() == 6) or (day == WeekendEnum.WEEKDAY and gametime.weekday() != 6))
-        d = d or (gametime.weekday() == day)
-        return d
+        return criteriavalid
+            
+    def getEventForGirl(girl, type=EventTypeEnum.ANY):
+        renpy.log("rolling for " + girl)
+        pool = []
+        priority = False #true = girl priority
         
-    def isEventDateOk(start, end):
-        return gametime >= datelibrary[start] and gametime <= datelibrary[end]
+        #Determine scene type
+        if type == EventTypeEnum.ANY: #temporary measure until i figure out how main girls get their optional scenes
+            if girl == "minor":
+                type = EventTypeEnum.OPTIONAL
+            else:
+                type = EventTypeEnum.CORE
+        
+        #if core, get the scene
+        if type == EventTypeEnum.CORE:
+            if isRouteEnabled(girl):
+                #check for stale core scene
+                
+                #Selecting a core scene
+                rid = routeprogress[girl]
+                s = eventlibrary[rid]
+                for f in s["obsflags"]:
+                    if f in timeflags:
+                        setProgress(girl, s["next"])
+                        return getEventForGirl(girl, type)
+                criteriavalid = checkCriteria(s["conditions"])
+                if criteriavalid:
+                    return routeprogress[girl]
+        
+        #need to handle priority events (overriding core event if it exists)
+        #if optional (or failed to get core), get the scene
+        for k, v in eventlibrary.iteritems():
+            if v["type"] != EventTypeEnum.OPTIONAL:
+                continue
+            if v["girls"][0] != girl:
+                continue
+            if k in clearedevents:
+                continue
+            criteriavalid = checkCriteria(v["conditions"])
+            if not criteriavalid:
+                continue
+            pool.append(k)
+        if len(pool) > 0:
+            return renpy.random.choice(pool)
+        else:
+            return None
 
+    def getAllPriorityEvents():
+        pool = []
+        for k, v in eventlibrary.iteritems():
+            if v["priority"] != PrioEnum.ALL:
+                continue
+            if k in clearedevents:
+                continue
+            criteriavalid = checkCriteria(v["conditions"])
+            if not criteriavalid:
+                continue
+            pool.append(k)
+        if len(pool) > 6:
+            return renpy.random.sample(pool, 6)
+        else:
+            return pool
+    
     def rollEvents():
         prefgirl = getHighestAffection()
         
         eventchoices = []
-        freeday = True
-        #It's a preset day, just use whatever the preset says
-        if getTimeCode() in presetdays.keys():
-            eventchoices = presetdays[getTimeCode()]
-            freeday = False
-        #It's a meeting day, just use whatever the meeting says
-        elif getTimeCode() in meetingdays.keys():
-            eventchoices = meetingdays[getTimeCode()]
-            freeday = False
-        #It's not a preset day...
-        else:
+        allPriority = getAllPriorityEvents()
+        if not allPriority:
             for g in girllist:
-                if isRouteEnabled(g):
-                    #Selecting a core scene
-                    rid = routeprogress[g]
-                    s = eventlibrary[rid]
-                    criteriavalid = checkCriteria(s["conditions"]) and isEventTimeOk(s["time"][0], s["time"][1]) and isEventDateOk(s["startdate"], s["enddate"])
-                    if criteriavalid:
-                        eventchoices.append(routeprogress[g])
-                        continue
-                #Selecting/falling back to an optional scene
-                opt = getOptionalEvent(g)
-                if opt != None:
-                    eventchoices.append(opt)
-                
+                eventchoices.append(getEventForGirl(g))
+
             #If there's room, 10% chance for minor character event
             if len(eventchoices) < 6 and renpy.random.randint(1, 10) == 1:
-                opt = getOptionalEvent("minor")
+                opt = getEventForGirl("minor", EventTypeEnum.OPTIONAL)
                 if opt != None:
                     eventchoices.append(opt)
-        return eventchoices, freeday
+            return eventchoices
+        else: #AllPriority event(s) exist, use the returned list
+            return allPriority
         #to implement:
         #route lock
         #force progress (based on time)
@@ -354,15 +332,6 @@
             l += s + ", "
         return l
         
-    def addMeeting(event, deltatime, val, eve):
-        if deltatime == DeltaTimeEnum.NUMDAYS:
-            t = gametime + datetime.timedelta(days=val)
-        elif deltatime == DeltaTimeEnum.DATE:
-            t = val
-        elif deltatime == DeltaTimeEnum.DAYOFWEEK:
-            t = gametime + datetime.timedelta(days=((val + 7) - gametime.weekday()))
-        meetingdays[getTimeCode(t, eve)] = [event]
-        
     def setSkill(s, val):
         if s not in skills.keys():
             renpy.log("Unknown skill ID: %s" % s)
@@ -378,24 +347,6 @@
         else:
             return skills[s]
     
-    def getTimeString():
-        s = gametime.strftime("%a %B %d, 20XX")
-        if gametime_eve == TimeEnum.NIGHT:
-            s += " (Evening)"
-        return s
-        
-    def getTimeCode(date=None, eve=None):
-        if date == None:
-            date = gametime
-        if eve == None:
-            eve = gametime_eve
-        s = str(date.month) + "-" + str(date.day)
-        if eve == TimeEnum.NIGHT:
-            s += "-T"
-        else:
-            s += "-F"
-        return s
-        
     def setProgress(girl, scene):
         routeprogress[girl] = scene
     
@@ -409,24 +360,10 @@
     
     def isRouteEnabled(girl):
         return routeenabled[girl] and (routelock == girl or routelock == "")
-    
-    def getOptionalEvent(girl):
-        pool = []
-        for k, v in eventlibrary.iteritems():
-            if v["type"] != EventTypeEnum.OPTIONAL:
-                continue
-            if v["girls"][0] != girl:
-                continue
-            if k in clearedevents:
-                continue
-            criteriavalid = checkCriteria(v["conditions"]) and isEventTimeOk(v["time"][0], v["time"][1]) and isEventDateOk(v["startdate"], v["enddate"])
-            if not criteriavalid:
-                continue
-            pool.append(k)
-        if len(pool) > 0:
-            return renpy.random.choice(pool)
-        else:
-            return None
+        
+    def setTimeFlag(flag):
+        if flag not in timeflags:
+            timeflags.append(flag)
 
 label start:
     python:
@@ -439,11 +376,8 @@ label start:
         vars = {}
         eventchoices = []       
         activeevent = ""
-        gametime = datetime.date(2005, 4, 4)
-        gametime_eve = TimeEnum.DAY
-        meetingdays = {}
+        timeflags = []
         clearedevents = []
-        freeday = True
         routeprogress = {}
         for g in girllist:
             routeprogress[g] = g + "001"
@@ -469,17 +403,13 @@ screen choicetimer:
     timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('choicetimer'), Jump(timer_jump)])
 
 screen daymenu:
-    if gametime_eve == TimeEnum.NIGHT:
-        add "Graphics/ui/bg/menubg-evening.png"
-    else:
-        add "Graphics/ui/bg/menubg-day.png"
+    add "Graphics/ui/bg/menubg-day.png"
     
     if debuginfo:
         vbox:
             xalign 0
             yalign 0
             text ("Debug info:")
-            text ("Girls w/ Priority: %s" % debugpriorities)
             text ("Girl/Aff")
             text ("BE %(aff)d" % {"aff": affection["BE"]})
             text ("GTS %(aff)d" % {"aff": affection["GTS"]})
@@ -493,10 +423,6 @@ screen daymenu:
             text ("Events:")
             for e in eventchoices:
                 text ("%s" % e)
-    
-    text(getTimeString()):
-        xalign 0.1
-        yalign 0.1
         
     #event choices (1 to 3-choice day)
     if len(eventchoices) <= 3:
@@ -572,7 +498,7 @@ screen daymenu:
                             #        text eventlibrary[c]["name"]
     
     #studying activities (non-special day)
-    if freeday:
+    if True:
         textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
         textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
         textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
@@ -692,8 +618,8 @@ screen debugmenu:
         #    textbutton "+" action Function(setSkill, "Academics", 1)
         
         textbutton "Return to game" action Jump("daymenu_noadvance")
-        textbutton "Change Time" action Jump("timemachine")
         textbutton "Load Test" action Jump("debugloadtest")
+        text ""
 
 screen debugflaglist:
     vbox:
@@ -726,22 +652,7 @@ label daymenu:
     play music Daymenu
     #Roll random events
     python:
-        gametime_eve = TimeEnum.DAY
-        gametime += datetime.timedelta(days=1)
-        eventchoices, freeday = rollEvents()
-    window hide None
-    call screen daymenu
-    window show None
-
-#Keep day the same (advancing to evening), and reroll events
-label daymenu_overtime:
-    $renpy.choice_for_skipping()
-    scene black
-    play music Daymenu
-    #Roll random events
-    python:
-        gametime_eve = TimeEnum.NIGHT
-        eventchoices, freeday = rollEvents()
+        eventchoices = rollEvents()
     window hide None
     call screen daymenu
     window show None
@@ -839,22 +750,11 @@ label trainacademics:
     "(Your academics skill has increased to [tmp])"
     jump daymenu
 
-label timemachine:
-    menu:
-        "Set to size 1":
-            $gametime = datetime.date(2005, 4, 5)
-            "Time now 4/5"
-        "Set to size 2":
-            $gametime = datetime.date(2005, 4, 15)
-            "Time now 4/15"
-        "Return":
-            "Time unchanged"
-    jump debugmenu
-            
 label debugloadtest:
     menu:
         "Characters":
-            $tmpdate = gametime
+            $tmpsize = globalsize
+            $globalsize = 1
             scene black
             show AE neutral
             pause .1
@@ -969,7 +869,7 @@ label debugloadtest:
             pause .1
 
             scene black
-            $gametime = datetime.date(2005, 4, 15)
+            $globalsize = 2
             show AE neutral
             pause .1
             show AE neutral-annoyed
@@ -1115,12 +1015,10 @@ label debugloadtest:
             
             show Rin neutral
             pause .1
-            $gametime = tmpdate
+            $globalsize = tmpsize
             
         "Backgrounds":
-            $tmptime = gametime_eve
-            $tmpdate = gametime
-            $gametime_eve = False
+            #FIXME when adjust when you re-implement time of day
             scene Lake Road
             pause .1
             scene School Front
@@ -1191,8 +1089,6 @@ label debugloadtest:
             pause .1
             scene Sushi Restaurant
             pause .1
- 
-            $gametime_eve = True
             
             scene Lake Road
             pause .1
@@ -1264,8 +1160,6 @@ label debugloadtest:
             pause .1
             scene Sushi Restaurant
             pause .1
-            $gametime_eve = tmptime
-            $gametime = tmpdate
         "CGs":    
             show cg BE001
             pause .1

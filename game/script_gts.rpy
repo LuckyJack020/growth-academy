@@ -5,28 +5,13 @@ define Ryoko = Character('Ryoko', color="#FF91DC")
 define Minori = Character('Minori', color="#FF91DC")
 define Fumika = Character('Fumika', color="#FF91DC")
 
-image GTS neutral = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/neutral.png",
-    "True", "Graphics/GTS/1/neutral.png")
-image GTS happy = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/happy.png",
-    "True", "Graphics/GTS/1/happy.png")
-image GTS sad = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/sad.png",
-    "True", "Graphics/GTS/1/sad.png")
-image GTS surprised = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/surprised.png",
-    "True", "Graphics/GTS/1/surprised.png")
-image GTS angry = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/angry.png",
-    "True", "Graphics/GTS/1/angry.png")
-image GTS aroused = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/aroused.png",
-    "True", "Graphics/GTS/1/aroused.png")
-image GTS embarrassed = ConditionSwitch(
-    "gametime >= datelibrary['GTS_size_2']", "Graphics/GTS/2/embarrassed.png",
-    "True", "Graphics/GTS/1/embarrassed.png")
-image GTS unique = "Graphics/GTS-2-unique.png" ##Currently has no unique in stage 1
+image GTS neutral = DynamicImage("Graphics/GTS/" + str(globalsize) + "/neutral.png")
+image GTS happy = DynamicImage("Graphics/GTS/" + str(globalsize) + "/happy.png")
+image GTS sad = DynamicImage("Graphics/GTS/" + str(globalsize) + "/sad.png")
+image GTS surprised = DynamicImage("Graphics/GTS/" + str(globalsize) + "/surprised.png")
+image GTS angry = DynamicImage("Graphics/GTS/" + str(globalsize) + "/angry.png")
+image GTS aroused = DynamicImage("Graphics/GTS/" + str(globalsize) + "/aroused.png")
+image GTS embarrassed = DynamicImage("Graphics/GTS/" + str(globalsize) + "/embarrassed.png")
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"
@@ -39,39 +24,32 @@ image Minori embarrassed = "Graphics/minor/minori-neutral.png"
 
 image Dorm GTS = "Graphics/ui/bg/dorminterior.png"
 
-init 2 python:
-    datelibrary['GTS_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['GTS_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['GTS_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['GTS_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['GTS_size_2'] = datetime.date(2005, 4, 18)
-    datelibrary['GTS009_date'] = datetime.date(2005, 4, 10)
-    
+init 2 python:    
     #Core
-    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                "conditions": []}
-    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",               "conditions": []}
-    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "cafeteria",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "library",          "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",               "conditions": []}
-    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",               "conditions": []}
-    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",               "conditions": []}
-    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",             "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS009_date", "enddate": "day_end",         "conditions": []}
-    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",             "conditions": []}
-    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
-    eventlibrary['GTS026'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS002", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS003", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "GTS004", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "library",          "priority": PrioEnum.NONE, "next": "GTS006", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "next": "GTS007", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS008", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS009", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "priority": PrioEnum.NONE, "next": "GTS010", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS015", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS016", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS017", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS018", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "GTS019", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS020", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS021", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS025", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "GTS026", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS026'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
     
     #Optional
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.PRESET,                   "location": "schoolplanter",    "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",            "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, 7]]}
-    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "GTS_size_2", "enddate": "day_end",          "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, 7]]}
+    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     
 label GTS001:
     $setProgress("GTS", "GTS002")

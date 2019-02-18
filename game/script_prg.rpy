@@ -3,59 +3,39 @@ define Sakura = Character('Sakura', color="#FF3399")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define fade = Fade(0.5, 0.0, 0.5)
 
-image PRG neutral = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/neutral.png",
-    "True", "Graphics/PRG/1/neutral.png")
-image PRG happy = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/happy.png", 
-    "True", "Graphics/PRG/1/happy.png")
-image PRG sad = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/sad.png",
-    "True", "Graphics/PRG/1/sad.png")
-image PRG surprised = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/surprised.png",
-    "True", "Graphics/PRG/1/surprised.png")
-image PRG angry = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/angry.png",
-    "True", "Graphics/PRG/1/angry.png")
-image PRG aroused = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/aroused.png",
-    "True", "Graphics/PRG/1/aroused.png")
-image PRG unique = ConditionSwitch(
-    "gametime >= datelibrary['PRG_size_2']", "Graphics/PRG/2/unique.png",
-    "True", "Graphics/PRG/1/unique.png")
+image PRG neutral = DynamicImage("Graphics/PRG/" + str(globalsize) + "/neutral.png")
+image PRG happy = DynamicImage("Graphics/PRG/" + str(globalsize) + "/happy.png")
+image PRG sad = DynamicImage("Graphics/PRG/" + str(globalsize) + "/sad.png")
+image PRG surprised = DynamicImage("Graphics/PRG/" + str(globalsize) + "/surprised.png")
+image PRG angry = DynamicImage("Graphics/PRG/" + str(globalsize) + "/angry.png")
+image PRG aroused = DynamicImage("Graphics/PRG/" + str(globalsize) + "/aroused.png")
+image PRG unique = DynamicImage("Graphics/PRG/" + str(globalsize) + "/unique.png")
 
 image Dorm PRG = ConditionSwitch(
     "gametime_eve", "Graphics/ui/bg/PRGdorm_eve.png",
     "True", "Graphics/ui/bg/PRGdorm_day.png")
 
-init 2 python:
-    datelibrary['PRG_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['PRG_size_2'] = datetime.date(2005, 4, 18)
-    
+init 2 python:    
     #Core
-    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.CORE,             "location": "track",            "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.CORE,     "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",           "conditions": []}
-    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": []}
-    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.CORE,                    "location": "cookingclassroom", "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
-    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                 "location": "classroom",        "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end","conditions": []}
-    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],"type": EventTypeEnum.CORE,                "location": "classroom",        "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "cafeteria",        "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",        "conditions": []}
-    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "dormBBW",          "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",    "conditions": []}
-    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "campuscenter",     "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",      "conditions": []}
-    eventlibrary['PRG020'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "library",          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "PRG_size_2", "enddate": "day_end",            "conditions": []}
+    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "PRG002", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG003", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG004", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.CORE,             "location": "track",            "priority": PrioEnum.NONE, "next": "PRG006", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG007", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.CORE,     "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG008", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG009", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG010", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.CORE,                    "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "PRG011", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG012", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG013", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],"type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG014", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG015", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG015'] = {"name": "Nurturing", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "dormBBW",          "priority": PrioEnum.NONE, "next": "PRG019", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG020", "obsflags": [],    "conditions": []}
+    eventlibrary['PRG020'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
 
     #Optional
-    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.PRESET,                  "location": "auditorium",       "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
+    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                  "location": "auditorium",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
 
 label PRG001:
     $setProgress("PRG", "PRG002")

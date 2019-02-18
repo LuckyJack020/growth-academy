@@ -4,30 +4,14 @@ define Koneko = Character('Koneko', color="#C0C0C0")
 define Coach = Character('Coach', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
 
-image BE neutral = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/neutral.png",
-    "True", "Graphics/BE/1/neutral.png")
-image BE happy = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/happy.png", 
-    "True", "Graphics/BE/1/happy.png")
-image BE sad = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/sad.png",
-    "True", "Graphics/BE/1/sad.png")
-image BE surprised = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/surprised.png",
-    "True", "Graphics/BE/1/surprised.png")
-image BE angry = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/angry.png",
-    "True", "Graphics/BE/1/angry.png")
-image BE aroused = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/aroused.png",
-    "True", "Graphics/BE/1/aroused.png")
-image BE unique = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/unique.png",
-    "True", "Graphics/BE/1/unique.png")
-image BE zoomin = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/hq-happy.png",
-    "True", "Graphics/BE/1/hq-happy.png")
+image BE neutral = DynamicImage("Graphics/BE/" + str(globalsize) + "/neutral.png")
+image BE happy = DynamicImage("Graphics/BE/" + str(globalsize) + "/happy.png")
+image BE sad = DynamicImage("Graphics/BE/" + str(globalsize) + "/sad.png")
+image BE surprised = DynamicImage("Graphics/BE/" + str(globalsize) + "/surprised.png")
+image BE angry = DynamicImage("Graphics/BE/" + str(globalsize) + "/angry.png")
+image BE aroused = DynamicImage("Graphics/BE/" + str(globalsize) + "/aroused.png")
+image BE unique = DynamicImage("Graphics/BE/" + str(globalsize) + "/unique.png")
+image BE zoomin = DynamicImage("Graphics/BE/" + str(globalsize) + "/hq-happy.png")
 
 image cg BE001 = "Graphics/ui/gallery/BE-001.png"
 image cg BE002 = "Graphics/ui/gallery/BE-002.png"
@@ -37,37 +21,31 @@ image Dorm BE = ConditionSwitch(
     "True", "Graphics/ui/bg/BEdorm_day.png")
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
-init 2 python:
-    datelibrary['BE_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_2'] = datetime.date(2005, 4, 18)
-    
+init 2 python:    
     #Core
-    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,       "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
-    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
-    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                  "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                              "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                          "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []} #affection check maybe?
-    eventlibrary['BE021'] = {"name": "Honoka end", "girls": ["BE"], "location": "library", "type": EventTypeEnum.CORE,                                     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE016", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE017", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                  "priority": PrioEnum.NONE, "next": "BE018", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE019", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE020", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE021", "obsflags": [],                  "conditions": []} #affection check maybe?
+    eventlibrary['BE021'] = {"name": "Honoka end", "girls": ["BE"], "location": "library", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.PRESET,                             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.PRESET,                      "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.NONE, "obsflags": [],                                   "conditions": []}
+    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONAL,   "priority": PrioEnum.GIRL, "obsflags": [],                                   "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONAL,                    "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": []}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -1420,8 +1398,9 @@ label BE012:
     "We continued playing for a little while, but it started getting late..."
     menu:
         "Stay at the arcade":
-            $addMeeting("BE013", DeltaTimeEnum.NUMDAYS, 0, True)
-            jump daymenu_overtime
+            #fixme
+            #$addMeeting("BE013", DeltaTimeEnum.NUMDAYS, 0, True)
+            jump daymenu
         "Leave":
             "We left the arcade together."
             jump daymenu
