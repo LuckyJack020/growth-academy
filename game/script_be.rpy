@@ -43,7 +43,7 @@ init 2 python:
     eventlibrary['BE021'] = {"name": "Honoka end", "girls": ["BE"], "location": "library", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.NONE, "obsflags": [],                                   "conditions": []}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONAL,   "priority": PrioEnum.GIRL, "obsflags": [],                                   "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONAL,                    "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": []}
     

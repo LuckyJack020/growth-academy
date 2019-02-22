@@ -23,8 +23,7 @@ init 2 python:
     eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                 "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG007", "obsflags": [],            "conditions": []}
     eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG008", "obsflags": [],            "conditions": []}
     eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "FMG009", "obsflags": [],            "conditions": []}
-    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG010", "obsflags": [],            "conditions": []}
-    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                    "location": "dormexterior",     "priority": PrioEnum.GIRL, "next": "FMG011", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG011", "obsflags": [],            "conditions": []}
     eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "type": EventTypeEnum.CORE,                                  "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "FMG012", "obsflags": [],            "conditions": []}
     eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                          "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG014", "obsflags": [],            "conditions": []}
     eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "FMG016", "obsflags": [],            "conditions": []}
@@ -33,7 +32,8 @@ init 2 python:
     eventlibrary['FMG019'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
     
     #Optional
-    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                 "location": "hallway",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
+    eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                               "location": "hallway",          "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"],       "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                    "location": "dormexterior",     "priority": PrioEnum.GIRL, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['FMGBBW001'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,       "location": "town",             "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
     
 label FMG001:

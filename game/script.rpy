@@ -183,7 +183,25 @@
             else:
                 type = EventTypeEnum.CORE
         
-        #if core, get the scene
+        #Populate optional scene pool (to find priority stuff)
+        for k, v in eventlibrary.iteritems():
+            if v["type"] != EventTypeEnum.OPTIONAL:
+                continue
+            if len(v["girls"]) == 0 or v["girls"][0] != girl:
+                continue
+            if k in clearedevents:
+                continue
+            criteriavalid = checkCriteria(v["conditions"])
+            if not criteriavalid:
+                continue
+            if v["priority"] != PrioEnum.GIRL and priority:
+                continue
+            if v["priority"] == PrioEnum.GIRL and not priority:
+                priority = True
+                pool = []
+            pool.append(k)
+        
+        #Find core scene, if available
         if type == EventTypeEnum.CORE:
             if isRouteEnabled(girl):
                 #check for stale core scene
@@ -196,22 +214,11 @@
                         setProgress(girl, s["next"])
                         return getEventForGirl(girl, type)
                 criteriavalid = checkCriteria(s["conditions"])
-                if criteriavalid:
-                    return routeprogress[girl]
+                if s["priority"] == PrioEnum.GIRL or not priority:
+                    if criteriavalid:
+                        return routeprogress[girl]
         
-        #need to handle priority events (overriding core event if it exists)
-        #if optional (or failed to get core), get the scene
-        for k, v in eventlibrary.iteritems():
-            if v["type"] != EventTypeEnum.OPTIONAL:
-                continue
-            if v["girls"][0] != girl:
-                continue
-            if k in clearedevents:
-                continue
-            criteriavalid = checkCriteria(v["conditions"])
-            if not criteriavalid:
-                continue
-            pool.append(k)
+        #If core scene isn't used, try to get an optional scene
         if len(pool) > 0:
             return renpy.random.choice(pool)
         else:

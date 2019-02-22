@@ -33,8 +33,7 @@ init 2 python:
     eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "next": "GTS007", "obsflags": [],         "conditions": []}
     eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS008", "obsflags": [],         "conditions": []}
     eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS009", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "priority": PrioEnum.NONE, "next": "GTS010", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": []}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS015", "obsflags": [],         "conditions": []}
     eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS016", "obsflags": [],         "conditions": []}
     eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS017", "obsflags": [],         "conditions": []}
@@ -47,7 +46,8 @@ init 2 python:
     eventlibrary['GTS026'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
     
     #Optional
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                 "location": "schoolplanter",    "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"],    "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, 7]]}
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     
