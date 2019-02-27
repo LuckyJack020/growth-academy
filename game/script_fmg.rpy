@@ -4,13 +4,13 @@ define Takamura = Character('Takamura-Sensei', color="#FF9900")
 define Cashier = Character('Cashier', color="#FF9900")
 define Chie = Character('Chie', color="#FF9900")
 
-image FMG neutral = DynamicImage("Graphics/FMG/" + str(globalsize) + "/neutral.png")
-image FMG happy = DynamicImage("Graphics/FMG/" + str(globalsize) + "/happy.png")
-image FMG sad = DynamicImage("Graphics/FMG/" + str(globalsize) + "/sad.png")
-image FMG surprised = DynamicImage("Graphics/FMG/" + str(globalsize) + "/surprised.png")
-image FMG angry = DynamicImage("Graphics/FMG/" + str(globalsize) + "/angry.png")
-image FMG aroused = DynamicImage("Graphics/FMG/" + str(globalsize) + "/aroused.png")
-image FMG flex = DynamicImage("Graphics/FMG/" + str(globalsize) + "/flex.png")
+image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
+image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
+image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/sad.png")
+image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/surprised.png")
+image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/angry.png")
+image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/aroused.png")
+image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 
 image Rin neutral = "Graphics/minor/rin-neutral.png"
 

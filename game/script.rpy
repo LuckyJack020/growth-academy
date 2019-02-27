@@ -172,7 +172,6 @@
         return criteriavalid
             
     def getEventForGirl(girl, type=EventTypeEnum.ANY):
-        renpy.log("rolling for " + girl)
         pool = []
         priority = False #true = girl priority
         
@@ -223,12 +222,10 @@
                 criteriavalid = checkCriteria(s["conditions"])
                 if s["priority"] == PrioEnum.GIRL or not priority:
                     if criteriavalid:
-                        renpy.log ("returning core scene")
                         return routeprogress[girl]
         
         #If core scene isn't used, try to get an optional scene
         if len(pool) > 0:
-            renpy.log("returning optional scene")
             return renpy.random.choice(pool)
         else:
             return None
@@ -382,6 +379,7 @@
             timeflags.append(flag)
             
     def setSize(size):
+        global globalsize
         if size > globalsize:
             globalsize = size
 

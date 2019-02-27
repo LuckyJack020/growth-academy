@@ -3,13 +3,13 @@ define Sakura = Character('Sakura', color="#FF3399")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define fade = Fade(0.5, 0.0, 0.5)
 
-image PRG neutral = DynamicImage("Graphics/PRG/" + str(globalsize) + "/neutral.png")
-image PRG happy = DynamicImage("Graphics/PRG/" + str(globalsize) + "/happy.png")
-image PRG sad = DynamicImage("Graphics/PRG/" + str(globalsize) + "/sad.png")
-image PRG surprised = DynamicImage("Graphics/PRG/" + str(globalsize) + "/surprised.png")
-image PRG angry = DynamicImage("Graphics/PRG/" + str(globalsize) + "/angry.png")
-image PRG aroused = DynamicImage("Graphics/PRG/" + str(globalsize) + "/aroused.png")
-image PRG unique = DynamicImage("Graphics/PRG/" + str(globalsize) + "/unique.png")
+image PRG neutral = DynamicImage("Graphics/PRG/[globalsize]/neutral.png")
+image PRG happy = DynamicImage("Graphics/PRG/[globalsize]/happy.png")
+image PRG sad = DynamicImage("Graphics/PRG/[globalsize]/sad.png")
+image PRG surprised = DynamicImage("Graphics/PRG/[globalsize]/surprised.png")
+image PRG angry = DynamicImage("Graphics/PRG/[globalsize]/angry.png")
+image PRG aroused = DynamicImage("Graphics/PRG/[globalsize]/aroused.png")
+image PRG unique = DynamicImage("Graphics/PRG/[globalsize]/unique.png")
 
 image Dorm PRG = ConditionSwitch(
     "gametime_eve", "Graphics/ui/bg/PRGdorm_eve.png",

@@ -5,13 +5,13 @@ define Ryoko = Character('Ryoko', color="#FF91DC")
 define Minori = Character('Minori', color="#FF91DC")
 define Fumika = Character('Fumika', color="#FF91DC")
 
-image GTS neutral = DynamicImage("Graphics/GTS/" + str(globalsize) + "/neutral.png")
-image GTS happy = DynamicImage("Graphics/GTS/" + str(globalsize) + "/happy.png")
-image GTS sad = DynamicImage("Graphics/GTS/" + str(globalsize) + "/sad.png")
-image GTS surprised = DynamicImage("Graphics/GTS/" + str(globalsize) + "/surprised.png")
-image GTS angry = DynamicImage("Graphics/GTS/" + str(globalsize) + "/angry.png")
-image GTS aroused = DynamicImage("Graphics/GTS/" + str(globalsize) + "/aroused.png")
-image GTS embarrassed = DynamicImage("Graphics/GTS/" + str(globalsize) + "/embarrassed.png")
+image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/neutral.png")
+image GTS happy = DynamicImage("Graphics/GTS/[globalsize]/happy.png")
+image GTS sad = DynamicImage("Graphics/GTS/[globalsize]/sad.png")
+image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/surprised.png")
+image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/angry.png")
+image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/aroused.png")
+image GTS embarrassed = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"

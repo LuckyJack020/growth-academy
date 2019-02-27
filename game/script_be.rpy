@@ -4,14 +4,14 @@ define Koneko = Character('Koneko', color="#C0C0C0")
 define Coach = Character('Coach', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
 
-image BE neutral = DynamicImage("Graphics/BE/" + str(globalsize) + "/neutral.png")
-image BE happy = DynamicImage("Graphics/BE/" + str(globalsize) + "/happy.png")
-image BE sad = DynamicImage("Graphics/BE/" + str(globalsize) + "/sad.png")
-image BE surprised = DynamicImage("Graphics/BE/" + str(globalsize) + "/surprised.png")
-image BE angry = DynamicImage("Graphics/BE/" + str(globalsize) + "/angry.png")
-image BE aroused = DynamicImage("Graphics/BE/" + str(globalsize) + "/aroused.png")
-image BE unique = DynamicImage("Graphics/BE/" + str(globalsize) + "/unique.png")
-image BE zoomin = DynamicImage("Graphics/BE/" + str(globalsize) + "/hq-happy.png")
+image BE neutral = DynamicImage("Graphics/BE/[globalsize]/neutral.png")
+image BE happy = DynamicImage("Graphics/BE/[globalsize]/happy.png")
+image BE sad = DynamicImage("Graphics/BE/[globalsize]/sad.png")
+image BE surprised = DynamicImage("Graphics/BE/[globalsize]/surprised.png")
+image BE angry = DynamicImage("Graphics/BE/[globalsize]/angry.png")
+image BE aroused = DynamicImage("Graphics/BE/[globalsize]/aroused.png")
+image BE unique = DynamicImage("Graphics/BE/[globalsize]/unique.png")
+image BE zoomin = DynamicImage("Graphics/BE/[globalsize]/hq-happy.png")
 
 image cg BE001 = "Graphics/ui/gallery/BE-001.png"
 image cg BE002 = "Graphics/ui/gallery/BE-002.png"
