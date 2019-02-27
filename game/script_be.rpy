@@ -25,12 +25,12 @@ init 2 python:
     #Core
     eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
     eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "priority": PrioEnum.NONE, "next": "BE004", "obsflags": ["size2"],           "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "priority": PrioEnum.NONE, "next": "BE007", "obsflags": ["size2"],           "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE008", "obsflags": ["size2"],                  "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE009", "obsflags": ["size2"],                  "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE011", "obsflags": ["size2"],                  "conditions": []}
     eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
     eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
     eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
@@ -44,8 +44,8 @@ init 2 python:
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONAL,                    "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
     eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONAL,   "priority": PrioEnum.GIRL, "obsflags": [],                                   "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONAL,                    "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": []}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -411,6 +411,7 @@ label BE003_c3:
     jump daymenu
     
 label BE004:
+    $setTimeFlag("testday")
     $setProgress("BE", "BE007")
     scene Track with fade
     play music Busy
@@ -557,6 +558,7 @@ label BE005_after_old:
     jump daymenu
     
 label BE005:
+    $setTimeFlag("aftertest")
     scene Classroom with fade
     play music Rain
     "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool..."
@@ -911,6 +913,7 @@ label BE008_after:
     jump daymenu
     
 label BE009:
+    $setTimeFlag("size2")
     $setProgress("BE", "BE010")
     scene Track with fade
     play music Busy
@@ -1011,6 +1014,7 @@ label BE009_c3:
     jump daymenu
 
 label BE010:
+    $setSize(2)
     $setProgress("BE", "BE011")
     scene Dorm Interior with fade
     "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
@@ -1398,8 +1402,7 @@ label BE012:
     "We continued playing for a little while, but it started getting late..."
     menu:
         "Stay at the arcade":
-            #fixme
-            #$addMeeting("BE013", DeltaTimeEnum.NUMDAYS, 0, True)
+            $setFlag("BE013_unlock")
             jump daymenu
         "Leave":
             "We left the arcade together."

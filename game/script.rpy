@@ -185,6 +185,7 @@
         
         #Populate optional scene pool (to find priority stuff)
         for k, v in eventlibrary.iteritems():
+            badFlag = False
             if v["type"] != EventTypeEnum.OPTIONAL:
                 continue
             if len(v["girls"]) == 0 or v["girls"][0] != girl:
@@ -193,6 +194,12 @@
                 continue
             criteriavalid = checkCriteria(v["conditions"])
             if not criteriavalid:
+                continue
+            for f in timeflags:
+                if f in v["obsflags"]:
+                    badFlag = True
+                    break
+            if badFlag:
                 continue
             if v["priority"] != PrioEnum.GIRL and priority:
                 continue
@@ -216,10 +223,12 @@
                 criteriavalid = checkCriteria(s["conditions"])
                 if s["priority"] == PrioEnum.GIRL or not priority:
                     if criteriavalid:
+                        renpy.log ("returning core scene")
                         return routeprogress[girl]
         
         #If core scene isn't used, try to get an optional scene
         if len(pool) > 0:
+            renpy.log("returning optional scene")
             return renpy.random.choice(pool)
         else:
             return None
@@ -371,6 +380,10 @@
     def setTimeFlag(flag):
         if flag not in timeflags:
             timeflags.append(flag)
+            
+    def setSize(size):
+        if size > globalsize:
+            globalsize = size
 
 label start:
     python:

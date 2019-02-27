@@ -17,14 +17,14 @@ image Dorm PRG = ConditionSwitch(
 
 init 2 python:    
     #Core
-    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "PRG002", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG003", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG004", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.CORE,             "location": "track",            "priority": PrioEnum.NONE, "next": "PRG006", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG007", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.CORE,     "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG008", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG009", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG011", "obsflags": [],            "conditions": []}
+    eventlibrary['PRG001'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "PRG002", "obsflags": ["testday"],            "conditions": []}
+    eventlibrary['PRG002'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG003", "obsflags": ["size2"],            "conditions": []}
+    eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG004", "obsflags": ["size2"],            "conditions": []}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.CORE,             "location": "track",            "priority": PrioEnum.NONE, "next": "PRG006", "obsflags": ["size2"],            "conditions": []}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG007", "obsflags": ["size2"],            "conditions": []}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.CORE,     "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG008", "obsflags": ["size2"],            "conditions": []}
+    eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG009", "obsflags": ["size2"],            "conditions": []}
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG011", "obsflags": ["size2"],            "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG012", "obsflags": [],            "conditions": []}
     eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG013", "obsflags": [],            "conditions": []}
     eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],"type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG014", "obsflags": [],            "conditions": []}
@@ -425,6 +425,7 @@ label PRG003_3_c:
     jump daymenu
     
 label PRG004:
+    $setTimeFlag("testday")
     $setProgress("PRG", "PRG006")
     scene Track with fade
     play music Peaceful
@@ -587,6 +588,7 @@ label PRG004_2:
     jump daymenu
     
 label PRG005:
+    $setTimeFlag("aftertest")
     scene Auditorium with fade
     play music Peaceful
     "I spied Aida milling about in a corner of the auditorium, frowning at a piece of paper in her hands. It must have been her results, as the paper was the same odd size and shape as mine had been."
@@ -929,6 +931,7 @@ label PRG008_3_a:
     jump daymenu
     
 label PRG009:
+    $setTimeFlag("size2")
     $setProgress("PRG", "PRG010")
     scene School Exterior with fade
     play music Sunset
@@ -1108,6 +1111,7 @@ label PRG009:
     jump daymenu
 
 label PRG010:
+    $setSize(2)
     $setProgress("PRG", "PRG011")
     scene Classroom with fade
     play music Peaceful
