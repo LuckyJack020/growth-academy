@@ -15,25 +15,28 @@ image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 image Rin neutral = "Graphics/minor/rin-neutral.png"
 
 init 2 python:
+    #go over order again after implementing new scenes
+    #go over order again after implementing new scenes
+    #go over order again after implementing new scenes
     #Core
-    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG002", "obsflags": ["testday"],            "conditions": []}
-    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG003", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "FMG004", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                    "location": "track",            "priority": PrioEnum.NONE, "next": "FMG006", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                 "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG007", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG008", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "FMG009", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG011", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "type": EventTypeEnum.CORE,                                  "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "FMG012", "obsflags": [],            "conditions": []}
-    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                          "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG014", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG002", "obsflags": ["testday"],   "conditions": []}
+    eventlibrary['FMG002'] = {"name": "An Off Day", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "gym",              "priority": PrioEnum.NONE, "next": "FMG003", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG003'] = {"name": "Hallway Opportunity", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "FMG004", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG008", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "FMG009", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG011", "obsflags": [],            "conditions": []}
     eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "FMG016", "obsflags": [],            "conditions": []}
-    eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "FMG018", "obsflags": [],            "conditions": []}
     eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "FMG019", "obsflags": [],            "conditions": []}
     eventlibrary['FMG019'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
     
     #Optional
+    eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",            "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG005'] = {"name": "Dispair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                               "location": "hallway",          "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"],       "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
-    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                    "location": "dormexterior",     "priority": PrioEnum.GIRL, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['FMG006'] = {"name": "Crying over Spilled Milk", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                             "location": "gym",              "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
+    eventlibrary['FMG010'] = {"name": "The bigger they are..", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "dormexterior",     "priority": PrioEnum.GIRL, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,                              "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
+    eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",              "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
+    eventlibrary['FMG016'] = {"name": "Fate at the Cafe", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "FMG018", "obsflags": [],            "conditions": []}
     eventlibrary['FMGBBW001'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,       "location": "town",             "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
     
 label FMG001:
@@ -140,7 +143,8 @@ label FMG002:
     jump daymenu
     
 label FMG003:
-    $setProgress("FMG", "FMG004")
+    $setProgress("FMG", "FMG007")
+    $setTimeFlag("testday")
     scene Hallway with fade
     "Finally finished with my morning class, I went to get a quick snack from the vending machines before I had to repeat the process with my next class."
     "At least for the most part it was business as usual..."
@@ -177,6 +181,7 @@ label FMG003:
 
 label FMG003_c1:
     $setAffection("FMG", 2)
+    $setFlag("FMG_workout")
     MC "Sure, why not? Let's do it!"
     "I honestly have no idea why I came off so excited, maybe some of akira's energy had rubbed off on me."
     show FMG happy
@@ -199,6 +204,7 @@ label FMG003_c1:
 
 label FMG003_c2:
     $setAffection("FMG", 1)
+    $setFlag("FMG_workout")
     MC "...All right, I guess..."
     FMG "Yes! We ca-"
     MC "BUT!"
@@ -236,8 +242,6 @@ label FMG003_c3:
     jump daymenu
     
 label FMG004:
-    $setTimeFlag("testday")
-    $setProgress("FMG", "FMG006")
     #Should probably acknowledge if it was refused in scene 003
     scene Hallway with fade
     play music Schoolday
@@ -468,7 +472,6 @@ label FMG005_c2:
     jump daymenu
     
 label FMG006:
-    $setProgress("FMG", "FMG007")
     scene Classroom with fade
     play music Busy
     "And so another day of classes ended, and for once I actually felt like working out today. I walked over to Akira's desk just as she got up, putting a paper ball behind her back once she saw me walking towards her... like I hadn't noticed."
@@ -702,7 +705,7 @@ label FMG008:
 
 label FMG009:
     $setTimeFlag("size2")
-    $setProgress("FMG", "FMG010")
+    $setProgress("FMG", "FMG014")
     scene Dorm Exterior with fade
     play music Rain
     "The sun was setting, people were talking and hanging out, and I found myself craving a Rocco-Choco Bar from the vending machines. To my surprise, Akira was waiting near the machines; she seemed calm for the most part, if a little annoyed."
@@ -755,7 +758,6 @@ label FMG009:
     
 label FMG010:
     $setSize(2)
-    $setProgress("FMG", "FMG011")
     scene Classroom with fade
     play music Schoolday
     "The class started as normal with roll call, until Mizutani's name was called out and I realized she didn't answer."
@@ -926,7 +928,6 @@ label FMG010_testfail:
     jump daymenu
 
 label FMG011:
-    $setProgress("FMG", "FMG012")
     scene School Planter with fade
     "It was a cloudy day that day, but I figured it would be nice to just walk around the school despite that."
     "...At least, until it started raining."
@@ -1081,7 +1082,6 @@ label FMG011:
     jump daymenu
 
 label FMG012:
-    $setProgress("FMG", "FMG014")
     scene Gym with fade
     show FMG neutral with dissolve
     FMG "Come on, harder!"
@@ -1148,7 +1148,8 @@ label FMG012:
     jump daymenu
 
 label FMG014:
-    $setProgress("FMG", "FMG016")
+    #$setProgress("FMG", "FMG015")
+    $setProgress("FMG", "FMG018")
     scene School Planter with fade
     "You know, sometimes you gotta just walk around campus and see the sights. The gardens looked beautiful that time of year, it's great to enjoy yourself without a care in the-"
     FMG "KEISUKE!!!"
@@ -1324,7 +1325,6 @@ label FMG014_c1_3:
     jump daymenu
 
 label FMG016:
-    $setProgress("FMG", "FMG018")
     scene School Planter with fade
     play music Sunset
     "It was such a beautiful day; the sun is shining, the birds were  flying, the wind was blowing..."

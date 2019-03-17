@@ -27,41 +27,42 @@ image Dorm BBW Flip = im.Flip("Graphics/ui/bg/BBWDorm.png", horizontal=True)
 
 init 2 python:
     #Core
-    eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW002", "obsflags": ["testday"],            "conditions": []}
-    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                           "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW003", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                             "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "BBW004", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                              "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW006", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                               "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW007", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW008", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                            "location": "musicclassroom",   "priority": PrioEnum.NONE, "next": "BBW009", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "cafeteria",        "priority": PrioEnum.GIRL, "next": "BBW009", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.CORE,                            "location": "pool",             "priority": PrioEnum.NONE, "next": "BBW011", "obsflags": ["size2"],            "conditions": []}
-    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW012", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW002", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                           "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW003", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                             "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "BBW004", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                               "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW007", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW008", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                            "location": "musicclassroom",   "priority": PrioEnum.NONE, "next": "BBW009", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "cafeteria",        "priority": PrioEnum.GIRL, "next": "BBW009", "obsflags": [],            "conditions": []}
     eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW013", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW014", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                     "location": "gym",              "priority": PrioEnum.NONE, "next": "BBW015", "obsflags": [],            "conditions": []}
     eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"], "type": EventTypeEnum.CORE,                                        "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "BBW016", "obsflags": [],            "conditions": []}
     eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                    "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "BBW017", "obsflags": [],            "conditions": []}
     eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                               "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW019", "obsflags": [],            "conditions": []}    
-    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW020", "obsflags": [],            "conditions": []}
     eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW021", "obsflags": [],            "conditions": []}
     eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                     "location": "pool",             "priority": PrioEnum.NONE, "next": "BBW022", "obsflags": [],            "conditions": []}
     eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "next": "BBW023", "obsflags": [],            "conditions": []}
     eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW024", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                   "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW025", "obsflags": [],            "conditions": []} #\/ disabled due to affection not being very grindable right now
     eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW026", "obsflags": [],            "conditions": []} #"conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
     eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                           "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW026", "obsflags": [],            "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
     eventlibrary['BBW026real'] = {"name": "The Trial of Smarts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                  "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW027", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                             "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW028", "obsflags": [],            "conditions": []}
+    
     eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW029", "obsflags": [],            "conditions": []}
     eventlibrary['BBW026'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
 
     #Optional
+    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                          "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW006", "obsflags": ["size2"],            "conditions": []}
     eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                            "location": "cafeteria",        "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"],       "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,   "location": "cafeteria",        "priority": PrioEnum.GIRL, "next": "", "obsflags": ["size2"],           "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
     eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                         "location": "gym",              "priority": PrioEnum.GIRL, "next": "", "obsflags": ["size2"],           "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]]}
+    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                        "location": "pool",             "priority": PrioEnum.NONE, "next": "BBW011", "obsflags": ["size2"],            "conditions": []}
     eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                              "location": "cafeteria",        "priority": PrioEnum.GIRL, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW012", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                             "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW014", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "gym",              "priority": PrioEnum.NONE, "next": "BBW015", "obsflags": [],            "conditions": []}
     eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                               "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
+    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                      "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW020", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                               "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW025", "obsflags": [],            "conditions": []} #\/ disabled due to affection not being very grindable right now
+    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW028", "obsflags": [],            "conditions": []}
 
 label BBW001:
     $setProgress("BBW", "BBW002")
@@ -286,7 +287,7 @@ label BBW002_c3_2:
     jump daymenu
     
 label BBW003:
-    $setProgress("BBW", "BBW004")
+    $setProgress("BBW", "BBW006")
     scene Hallway with fade
     MC "I think the library is this way? Maybe? Wait, that bulletin board doesn't look familiar..."
     MC "Ah! I was supposed to turn left back there."
@@ -416,7 +417,6 @@ label BBW003_c1_3:
     
 label BBW004:
     $setTimeFlag("testday")
-    $setProgress("BBW", "BBW006")
     scene Classroom with fade
     play music Schoolday
     show BBW neutral at center with dissolve
@@ -967,7 +967,8 @@ label BBW008:
     MCT "Oh, that's mean. But it's not wrong."
     menu:
         "Well, good luck with that.":
-            $setProgress("BBW", "BBW009")
+            $setTimeFlag("size2")
+            $setProgress("BBW", "BBW012")
             stop music fadeout 0
             "Well, good luck with that."
             show PRG surprised
@@ -1041,7 +1042,7 @@ label BBW008_c1:
     jump daymenu
 
 label BBW008_c2:
-    $setProgress("BBW", "BBW009")
+    $setProgress("BBW", "BBW012")
     MCT "Oh man, this is going to get out of hand quickly if I don't do something."
     MC "Maybe you shouldn't push back right away."
     show BBW angry
@@ -1066,7 +1067,8 @@ label BBW008_c2:
     jump daymenu
 
 label BBW008_c3:
-    $setProgress("BBW", "BBW009")
+    $setTimeFlag("size2")
+    $setProgress("BBW", "BBW012")
     MC "Can't you just admit that you're in the wrong here?"
     show BBW angry
     BBW "I beg your pardon?"
@@ -1083,7 +1085,8 @@ label BBW008_c3:
     jump daymenu
 
 label BBW008A:
-    $setProgress("BBW", "BBW009")
+    $setTimeFlag("size2")
+    $setProgress("BBW", "BBW012")
     scene Cafeteria with fade
     show BBW angry at center with hpunch
     play sound Crash
@@ -1213,7 +1216,6 @@ label BBW008A_c3:
     
 label BBW009:
     $setTimeFlag("size2")
-    $setProgress("BBW", "BBW010")
     scene Hallway with fade
     play music Busy
     "It was only the second week of the year and I was already getting cabin fever being stuck at the school 24/7."
@@ -1328,7 +1330,6 @@ label BBW009:
     
 label BBW010:
     $setSize(2)
-    $setProgress("BBW", "BBW011")
     scene Cafeteria with fade
     play music BBW
     "It was a quiet morning. Reminded me of the first day, after we all learned why we were here."
@@ -1593,7 +1594,6 @@ label BBW010_decline:
             jump BBW010_accept
     
 label BBW011:
-    $setProgress("BBW", "BBW012")
     scene Hallway with fade
     play music Schoolday
     "Another day done, and I find myself with no idea of what I want to do."
@@ -1754,7 +1754,10 @@ label BBW011_c3:
     jump daymenu
     
 label BBW012:
-    $setProgress("BBW", "BBW013")
+    if getFlag("BBW_working"):
+        $setProgress("BBW", "BBW015")
+    else:
+        $setProgress("BBW", "BBW016")
     scene Classroom with fade
     play music Schoolday
     "When the classes ended for the day, I was more than ready to shut my brain off."
@@ -1908,7 +1911,6 @@ label BBW012_c1_3:
     jump daymenu
 
 label BBW013:
-    $setProgress("BBW", "BBW014")
     scene Hallway with fade
     "My name had come up on the class clean-up schedule again, so when I got out for the day the hallways were mostly empty. Everyone else was back at their dorm or enjoying the pleasant afternoon."
     "It made it easy to recognize the two figures over by the stairs, even if one wasn't the only blonde woman on campus and the other wasn't..."
@@ -2772,7 +2774,7 @@ label BBW016_c1_3:
     jump daymenu
     
 label BBW017:
-    $setProgress("BBW", "BBW019")
+    $setProgress("BBW", "BBW020")
     scene Cafeteria with fade
     "I was feeling peckish after class, so I went to the cafeteria looking for something a bit more filling than a candy bar."
     "A bowl of ice cream called out to me, but it did mean I had to stay in the cafeteria as I ate it."
@@ -3935,7 +3937,7 @@ label BBW022_c1_3:
     jump daymenu
 
 label BBW023:
-    $setProgress("BBW", "BBW024")
+    $setProgress("BBW", "BBW025")
     scene Classroom with fade
     show BBW neutral at center with dissolve
     show PRG neutral at Position(xpos=0.6, xanchor=0.5, yalign=1.0) behind BBW with dissolve
@@ -4126,7 +4128,6 @@ label BBW023_cx_2:
     jump daymenu
 
 label BBW024:
-    $setProgress("BBW", "BBW025")
     scene Hallway with fade
     "My turn to clean the classroom had come up again, so I ended up walking through empty halls alone."
     "I thought about going back to my dorm, but I wasn't really 'feeling' it."
@@ -4363,6 +4364,7 @@ label BBW025_c1_1:
     hide BBW with dissolve
     "And I made for the exit, not running and certainly not looking back."
     MC "Probably best if I don't run into her for a couple days. Or weeks."
+    $setProgress("BBW", "BBW026")
     jump daymenu
 
 label BBW025_c1_2:

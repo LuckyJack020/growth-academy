@@ -7,7 +7,7 @@ define All = Character('Everyone', color="#ffffff")
 
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
 image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
+image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png") #missing size2
 image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
 image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
 image AE happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
@@ -30,16 +30,16 @@ image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
 init 2 python:
     
     #Core
-    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "priority": PrioEnum.NONE,           "next": "AE002", "obsflags": ["testday"],                "conditions": []}
-    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "priority": PrioEnum.NONE,            "next": "AE003", "obsflags": ["size2"],                "conditions": []}
-    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "priority": PrioEnum.NONE,      "next": "AE004", "obsflags": ["size2"],                "conditions": []}
-    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE006", "obsflags": ["size2"],                "conditions": []}
-    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "priority": PrioEnum.NONE,            "next": "AE007", "obsflags": ["size2"],                "conditions": []}
-    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "priority": PrioEnum.NONE,            "next": "AE008", "obsflags": ["size2"],                "conditions": []}
-    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "priority": PrioEnum.NONE,            "next": "AE009", "obsflags": ["size2"],                "conditions": []}
-    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "priority": PrioEnum.NONE,            "next": "AE011", "obsflags": ["size2"],                "conditions": []}
+    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "priority": PrioEnum.NONE,           "next": "AE002", "obsflags": ["size2"],         "conditions": []}
+    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "priority": PrioEnum.NONE,            "next": "AE003", "obsflags": ["size2"],         "conditions": []}
+    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "priority": PrioEnum.NONE,      "next": "AE004", "obsflags": [],                "conditions": []}
+    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE006", "obsflags": [],                "conditions": []}
+    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "priority": PrioEnum.NONE,            "next": "AE007", "obsflags": [],                "conditions": []}
+    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "priority": PrioEnum.NONE,            "next": "AE008", "obsflags": [],                "conditions": []}
+    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "priority": PrioEnum.NONE,            "next": "AE009", "obsflags": [],                "conditions": []}
+    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "priority": PrioEnum.NONE,            "next": "AE011", "obsflags": [],                "conditions": []}
     eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "priority": PrioEnum.NONE,            "next": "AE012", "obsflags": [],                "conditions": []}
-    eventlibrary['AE012'] = {"name": "Inquiry and Response", "gnirls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "office", "priority": PrioEnum.NONE,            "next": "AE013", "obsflags": [],                "conditions": []}
+    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "priority": PrioEnum.NONE,            "next": "AE013", "obsflags": [],                "conditions": []}
     eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "priority": PrioEnum.NONE,            "next": "AE014", "obsflags": [],                "conditions": []}
     eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "priority": PrioEnum.NONE,            "next": "AE015", "obsflags": [],                "conditions": []}
     eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "priority": PrioEnum.NONE,            "next": "AE016", "obsflags": [],                "conditions": []}
@@ -1186,7 +1186,7 @@ label AE008:
     
 label AE009:
     $setTimeFlag("size2")
-    $setProgress("AE", "AE010")
+    $setProgress("AE", "AE011")
     scene Hallway with fade
     "The sound of rubber squeaking against the laminated floors echoed as I ran down the hall. I briskly rounded the hallway corner, just barely missing another student."
     MCT "Damnit, Daichi! You just had to play that homemade documentary, didn't you?!"
@@ -1352,7 +1352,6 @@ label AE009_after:
     
 label AE010:
     $setSize(2)
-    $setProgress("AE", "AE011")
     scene Hallway with fade
     play music Peaceful
     "I walked down the hallway, getting ready to meet Shiori-san at the office. I heard that shipping and processing had been getting a lot of orders recently, so I figured that today would be a busy one."

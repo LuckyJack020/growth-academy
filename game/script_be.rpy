@@ -16,21 +16,19 @@ image BE zoomin = DynamicImage("Graphics/BE/[globalsize]/hq-happy.png")
 image cg BE001 = "Graphics/ui/gallery/BE-001.png"
 image cg BE002 = "Graphics/ui/gallery/BE-002.png"
 
-image Dorm BE = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/BEdorm_eve.png",
-    "True", "Graphics/ui/bg/BEdorm_day.png")
+image Dorm BE = "Graphics/ui/bg/BEdorm_day.png"
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
 init 2 python:    
     #Core
     eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
     eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "priority": PrioEnum.NONE, "next": "BE004", "obsflags": ["size2"],           "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "priority": PrioEnum.NONE, "next": "BE007", "obsflags": ["size2"],           "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE008", "obsflags": ["size2"],                  "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE009", "obsflags": ["size2"],                  "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE011", "obsflags": ["size2"],                  "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
     eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
     eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
     eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
@@ -914,7 +912,7 @@ label BE008_after:
     
 label BE009:
     $setTimeFlag("size2")
-    $setProgress("BE", "BE010")
+    $setProgress("BE", "BE011")
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
@@ -1015,7 +1013,6 @@ label BE009_c3:
 
 label BE010:
     $setSize(2)
-    $setProgress("BE", "BE011")
     scene Dorm Interior with fade
     "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
     "KNOCK ! KNOCK !"
