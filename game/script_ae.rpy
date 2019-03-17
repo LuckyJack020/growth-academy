@@ -59,7 +59,7 @@ init 2 python:
     
     #Optional
     eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONAL,                      "location": "hallway", "priority": PrioEnum.GIRL,            "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
-    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.OPTIONAL,                       "location": "office", "priority": PrioEnum.GIRL,             "obsflags": [],                                 "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]} #fixme: it's an office scene, make sure that's handled
+    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.OPTIONAL,                       "location": "office", "priority": PrioEnum.GIRL,             "obsflags": [],                                 "conditions": [[ConditionEnum.TIMEFLAG, "size2"], [ConditionEnum.FLAG, "AE006_helpinginoffice"]]} #fixme: it's an office scene, make sure that's handled
     #eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     #eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     

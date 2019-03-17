@@ -171,16 +171,10 @@
                 break
         return criteriavalid
             
-    def getEventForGirl(girl, type=EventTypeEnum.ANY):
+    def getEventForGirl(girl):
+        #rewrite to return selected core event and list of optional events
         pool = []
         priority = False #true = girl priority
-        
-        #Determine scene type
-        if type == EventTypeEnum.ANY: #temporary measure until i figure out how main girls get their optional scenes
-            if girl == "minor":
-                type = EventTypeEnum.OPTIONAL
-            else:
-                type = EventTypeEnum.CORE
         
         #Populate optional scene pool (to find priority stuff)
         for k, v in eventlibrary.iteritems():
@@ -208,27 +202,27 @@
             pool.append(k)
         
         #Find core scene, if available
-        if type == EventTypeEnum.CORE:
+        if girl in girllist:
             if isRouteEnabled(girl):
                 #check for stale core scene
-                
-                #Selecting a core scene
                 rid = routeprogress[girl]
                 s = eventlibrary[rid]
                 for f in s["obsflags"]:
                     if f in timeflags:
                         setProgress(girl, s["next"])
-                        return getEventForGirl(girl, type)
+                        return getEventForGirl(girl)
+                        
+                #check for validity of next scene (if not stale)
                 criteriavalid = checkCriteria(s["conditions"])
                 if s["priority"] == PrioEnum.GIRL or not priority:
                     if criteriavalid:
-                        return routeprogress[girl]
+                        return routeprogress[girl], pool
+                
+                #if core isn't available for whatever reason, just return the pool
+                return None, pool
         
-        #If core scene isn't used, try to get an optional scene
-        if len(pool) > 0:
-            return renpy.random.choice(pool)
-        else:
-            return None
+        #If not a main girl, just return the pool
+        return None, pool
 
     def getAllPriorityEvents():
         pool = []
@@ -250,22 +244,32 @@
         prefgirl = getHighestAffection()
         
         eventchoices = []
+        opteventpool = []
         allPriority = getAllPriorityEvents()
         if not allPriority:
             for g in girllist:
-                eventchoices.append(getEventForGirl(g))
+                event, opt = getEventForGirl(g) #returns an event and a list of available optional scenes
+                if event != None:
+                    eventchoices.append(event)
+                opteventpool = opteventpool + opt
 
-            #If there's room, 10% chance for minor character event
-            if len(eventchoices) < 6 and renpy.random.randint(1, 10) == 1:
-                opt = getEventForGirl("minor", EventTypeEnum.OPTIONAL)
-                if opt != None:
-                    eventchoices.append(opt)
+            #Pull 2 random optional events
+            #add minor character optional scenes to pool
+            event, opt = getEventForGirl("minor")
+            opteventpool = opteventpool + opt
+
+            if len(opteventpool) == 1:
+                eventchoices.append(opteventpool[0])
+            if len(opteventpool) >= 2:
+                tmp = renpy.random.sample(opteventpool, 2)
+                eventchoices.append(tmp[0])
+                eventchoices.append(tmp[1])
             return eventchoices
         else: #AllPriority event(s) exist, use the returned list
             return allPriority
+            
         #to implement:
         #route lock
-        #force progress (based on time)
 
     #Other misc functions
     def setAffection(girl, val):
@@ -481,13 +485,13 @@ screen daymenu:
                                 #        text eventlibrary[c]["name"] size 16
 
                 
-    #event choices (4 to 6-choice day)
+    #event choices (4 to 8-choice day)
     if len(eventchoices) > 3:
-        grid 2 3:
+        grid 2 4:
             xalign 0.5
-            ypos 120
-            spacing 60
-            for i in range(6): #c in eventchoices:
+            ypos 40
+            spacing 40
+            for i in range(8): #c in eventchoices:
                 if i >= len(eventchoices):
                     null
                 else:
@@ -666,13 +670,13 @@ label unsetflag:
 
 label daymenu:
     $renpy.choice_for_skipping()
-    scene black
+    scene black with fade
     play music Daymenu
     #Roll random events
     python:
         eventchoices = rollEvents()
     window hide None
-    call screen daymenu
+    call screen daymenu with fade
     window show None
 
 #Don't change day or events
