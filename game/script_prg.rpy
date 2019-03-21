@@ -26,14 +26,14 @@ init 2 python:
     eventlibrary['PRG020'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
 
     #Optional
-    eventlibrary['PRG001b'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                  "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "", "obsflags": ["testday"],   "conditions": []}
-    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,             "location": "track",            "priority": PrioEnum.NONE, "next": "", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                    "location": "auditorium",       "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"], "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
-    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                   "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,     "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                    "location": "cookingclassroom", "priority": PrioEnum.GIRL, "next": "", "obsflags": [],            "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                         "location": "classroom",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],            "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                  "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],            "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['PRG001b'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                  "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "", "obsflags": ["testday"],     "conditions": []}
+    eventlibrary['PRG004'] = {"name": "Mother Nature", "girls": ["PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,             "location": "track",            "priority": PrioEnum.NONE, "next": "", "obsflags": [],              "conditions": []}
+    eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                    "location": "auditorium",       "priority": PrioEnum.ALL, "next": "", "obsflags": ["aftertest"],   "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['PRG006'] = {"name": "Double Stacked", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                   "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],              "conditions": []}
+    eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,     "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],              "conditions": []}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                    "location": "cookingclassroom", "priority": PrioEnum.ALL, "next": "", "obsflags": ["aftersize2"],  "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                         "location": "classroom",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],              "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['PRG019'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                  "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],              "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
 
 label PRG001b:
     scene School Exterior with fade
@@ -1106,6 +1106,7 @@ label PRG009:
 
 label PRG010:
     $setSize(2)
+    $setTimeFlag("aftersize2")
     scene Classroom with fade
     play music Peaceful
     "I wandered into the cooking clubhouse, knowing it was about the time that Aida started cooking for Alice, but before she got too involved in the meal to socialize."

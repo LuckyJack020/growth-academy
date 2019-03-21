@@ -200,7 +200,7 @@
                 priority = True
                 pool = []
             pool.append(k)
-        
+            
         #Find core scene, if available
         if girl in girllist:
             if isRouteEnabled(girl):
@@ -217,11 +217,12 @@
                 if s["priority"] == PrioEnum.GIRL or not priority:
                     if criteriavalid:
                         return routeprogress[girl], pool
-                
-                #if core isn't available for whatever reason, just return the pool
-                return None, pool
         
-        #If not a main girl, just return the pool
+        #if we found a priority optional scene, and the core scene isn't priority, always offer that optional scene (and no other optional scenes)
+        if priority:
+            return renpy.random.choice(pool), []
+        
+        #If there's no core scene available (either due to conditions or because it's not a main girl), just return the pool
         return None, pool
 
     def getAllPriorityEvents():
@@ -230,6 +231,13 @@
             if v["priority"] != PrioEnum.ALL:
                 continue
             if k in clearedevents:
+                continue
+            badFlag = False
+            for f in timeflags:
+                if f in v["obsflags"]:
+                    badFlag = True
+                    break
+            if badFlag:
                 continue
             criteriavalid = checkCriteria(v["conditions"])
             if not criteriavalid:

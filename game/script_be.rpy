@@ -41,9 +41,9 @@ init 2 python:
     eventlibrary['BE021'] = {"name": "Honoka end", "girls": ["BE"], "location": "library", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.ALL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONAL,   "priority": PrioEnum.ALL, "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONAL,                    "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONAL,   "priority": PrioEnum.GIRL, "obsflags": [],                                   "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -1013,6 +1013,7 @@ label BE009_c3:
 
 label BE010:
     $setSize(2)
+    $setTimeFlag("aftersize2")
     scene Dorm Interior with fade
     "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
     "KNOCK ! KNOCK !"

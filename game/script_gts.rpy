@@ -46,8 +46,8 @@ init 2 python:
     eventlibrary['GTS026'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
     
     #Optional
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                 "location": "schoolplanter",    "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"],    "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
-    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                 "location": "schoolplanter",    "priority": PrioEnum.ALL, "next": "", "obsflags": ["aftertest"],    "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "priority": PrioEnum.ALL, "next": "", "obsflags": ["aftersize2"],   "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"], [ConditionEnum.AFFECTION, "GTS", ConditionEqualityEnum.GREATERTHAN, 7]]}
     eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
     
@@ -869,6 +869,7 @@ label GTS009_after:
     
 label GTS010:
     $setSize(2)
+    $setTimeFlag("aftersize2")
     scene Classroom with fade
     "A defeated sigh vacated my body. My hands had been slicking back my bangs all morning, and I could already tell this growth was going to be annoying. I had only just recently had my hair trimmed, and already it was as long as before I had first gotten it cut."
     MC "This is really going to burn a hole in my wallet if I want to keep myself from looking like a mountain man by the end of the month..."
