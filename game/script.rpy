@@ -411,7 +411,7 @@ label start:
         routeprogress = {}
         for g in girllist:
             routeprogress[g] = g + "001"
-        eventtitle = ""
+        highlitevent = ""
         routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'BBW': True, 'PRG': True}
         routelock = ""
     jump global000
@@ -470,9 +470,9 @@ screen daymenu:
                             xmaximum 600
                             ymaximum 60
                             if eventlibrary[c]["location"] in locationlist:
-                                imagebutton idle "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
+                                imagebutton idle "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
                             else:
-                                imagebutton idle "Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
+                                imagebutton idle "Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
                             hbox:
                                 hbox:
                                     spacing -120
@@ -508,9 +508,9 @@ screen daymenu:
                         xmaximum 250
                         ymaximum 60
                         if eventlibrary[c]["location"] in locationlist:
-                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
+                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
                         else:
-                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("eventtitle", eventlibrary[c]["name"])] unhovered [SetVariable("eventtitle", "")]
+                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
                         hbox:
                             spacing -120
                             order_reverse True
@@ -534,12 +534,20 @@ screen daymenu:
         textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
     
     #scene title
-    if eventtitle != "":
+    if highlitevent != "":
         frame:
             xalign 0.5
             yalign 0.9
             background Solid(Color((0, 0, 0, 100)))
-            text(eventtitle)
+            text(eventlibrary[highlitevent]["name"])
+        frame:
+            xalign 0.5
+            yalign 0.975
+            background Solid(Color((0, 0, 0, 100)))
+            if(eventlibrary[highlitevent]["type"] == EventTypeEnum.CORE):
+                text("Core Event")
+            else:
+                text("Optional Event")
     
     #debug menu toggle (if debug is enabled)
     if debugenabled:
@@ -718,7 +726,7 @@ label startevent:
     scene black with dissolve
     pause .5
     python:
-        eventtitle = ""
+        highlitevent = ""
         clearedevents.append(activeevent)
         renpy.block_rollback()
         renpy.jump(activeevent)
