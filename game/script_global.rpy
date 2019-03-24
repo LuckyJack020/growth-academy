@@ -30,6 +30,10 @@ image Recreation = "Graphics/ui/bg/NYI.png"
 image Town = "Graphics/ui/bg/town.png"
 image Arcade = "Graphics/ui/bg/arcade.png"
 image Cafe = "Graphics/ui/bg/cafe.png"
+image Woods = "Graphics/ui/bg/NYI.png"
+image Restaurant = "Graphics/ui/bg/restaurant.png"
+image Hill Road = "Graphics/ui/bg/hillroad.png"
+image Theater = "Graphics/ui/bg/NYI.png"
 
 image splash = "Graphics/ui/bg/splashscreen.png"
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
@@ -89,7 +93,9 @@ define audio.ClockTower = "Audio/SFX/sfx_clocktower.mp3"
 define audio.Crash = "Audio/SFX/sfx_thud.wav" #NEED UPDATE
 define audio.Boing = "Audio/SFX/sfx_boing.ogg"
 define audio.Knock = "Audio/SFX/sfx_knock.mp3"
+define audio.Stomach = "Audio/SFX/sfx_tbi.ogg"
 define audio.Thud = "Audio/SFX/sfx_thud.wav"
+define audio.Thunder = "Audio/SFX/sfx_thunder.wav"
 define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 
@@ -98,6 +104,9 @@ init 1 python:
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
     eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     
+    #Causes minor character scenes to be disabled if thime is between the first and second time in a tuple
+    #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
+    minorDisableTimes = [("testday2", "aftertest"), ("size2", "aftersize2")]
     #Japanese holidays:
     #January 1: New Year’s Day
     #2nd Monday of January: Coming of Age Day (9th for year 2)
@@ -950,6 +959,7 @@ label global000_homeroom:
     jump daymenu
 
 label global005:
+    $setTimeFlag("testday2")
     scene Dorm Interior with fade
     "When I woke up this morning, Daichi was nowhere to be found."
     "I thought it was unusual for him, usually the mornings were filled with the clicking of mice and keyboards as he did his 'research'.  Still, it was a welcome break to not have him eyeing me as I brushed my teeth or whatever."

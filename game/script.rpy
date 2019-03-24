@@ -9,7 +9,7 @@
     eventlibrary = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track']
+    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track', 'woods']
     debuginfo = False
     debugenabled = True
     debuginput = ""
@@ -90,9 +90,9 @@
     class PrioEnum:
         NONE, GIRL, ALL = range(3)
 
-    #NONE: Not a priority. Other scenes available.
-    #GIRL: Priority. Other scenes featuring the first girls in the girllist are not available.
-    #ALL: Priority. Other scenes not available, no matter who's in them.
+    #NONE: Not a priority. Other events available.
+    #GIRL: Priority. Other events featuring the first girls in the girllist are not available.
+    #ALL: Priority. Other events not available, no matter who's in them.
     
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
@@ -176,7 +176,7 @@
         pool = []
         priority = False #true = girl priority
         
-        #Populate optional scene pool (to find priority stuff)
+        #Populate optional event pool (to find priority stuff)
         for k, v in eventlibrary.iteritems():
             badFlag = False
             if v["type"] != EventTypeEnum.OPTIONAL:
@@ -201,10 +201,10 @@
                 pool = []
             pool.append(k)
             
-        #Find core scene, if available
+        #Find core event, if available
         if girl in girllist:
             if isRouteEnabled(girl):
-                #check for stale core scene
+                #check for stale core event
                 rid = routeprogress[girl]
                 s = eventlibrary[rid]
                 for f in s["obsflags"]:
@@ -212,17 +212,17 @@
                         setProgress(girl, s["next"])
                         return getEventForGirl(girl)
                         
-                #check for validity of next scene (if not stale)
+                #check for validity of next event (if not stale)
                 criteriavalid = checkCriteria(s["conditions"])
                 if s["priority"] == PrioEnum.GIRL or not priority:
                     if criteriavalid:
                         return routeprogress[girl], pool
         
-        #if we found a priority optional scene, and the core scene isn't priority, always offer that optional scene (and no other optional scenes)
+        #if we found a priority optional event, and the core event isn't priority, always offer that optional event (and no other optional events)
         if priority:
             return renpy.random.choice(pool), []
         
-        #If there's no core scene available (either due to conditions or because it's not a main girl), just return the pool
+        #If there's no core event available (either due to conditions or because it's not a main girl), just return the pool
         return None, pool
 
     def getAllPriorityEvents():
@@ -256,15 +256,16 @@
         allPriority = getAllPriorityEvents()
         if not allPriority:
             for g in girllist:
-                event, opt = getEventForGirl(g) #returns an event and a list of available optional scenes
+                event, opt = getEventForGirl(g) #returns an event and a list of available optional events
                 if event != None:
                     eventchoices.append(event)
                 opteventpool = opteventpool + opt
 
             #Pull 2 random optional events
-            #add minor character optional scenes to pool
-            event, opt = getEventForGirl("minor")
-            opteventpool = opteventpool + opt
+            #add minor character optional events to pool
+            if minorEventsEnabled():
+                event, opt = getEventForGirl("minor")
+                opteventpool = opteventpool + opt
 
             if len(opteventpool) == 1:
                 eventchoices.append(opteventpool[0])
@@ -278,7 +279,12 @@
             
         #to implement:
         #route lock
-
+    
+    def minorEventsEnabled():
+        for t in minorDisableTimes:
+            if t[0] in timeflags and not t[1] in timeflags:
+                return False
+        return True
     #Other misc functions
     def setAffection(girl, val):
         if not girl in girllist and not girl == "RM":
@@ -372,9 +378,12 @@
         else:
             return skills[s]
     
-    def setProgress(girl, scene):
-        routeprogress[girl] = scene
+    def setProgress(girl, event):
+        routeprogress[girl] = event
     
+    def getProgress(girl):
+        return routeprogress[girl]
+
     def disableRoute(girl):
         if girl in routeenabled:
             routeenabled[girl] = False
@@ -1056,7 +1065,7 @@ label debugloadtest:
             $globalsize = tmpsize
             
         "Backgrounds":
-            #FIXME when adjust when you re-implement time of day
+            #FIXME adjust when you re-implement time of day
             scene Lake Road
             pause .1
             scene School Front
@@ -1125,7 +1134,11 @@ label debugloadtest:
             pause .1
             scene Dorm PRG
             pause .1
+            scene Dorm AE
+            pause .1
             scene Sushi Restaurant
+            pause .1
+            scene Woods
             pause .1
             
             scene Lake Road
@@ -1196,7 +1209,11 @@ label debugloadtest:
             pause .1
             scene Dorm PRG
             pause .1
+            scene Dorm AE
+            pause .1
             scene Sushi Restaurant
+            pause .1
+            scene Woods
             pause .1
         "CGs":    
             show cg BE001
