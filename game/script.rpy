@@ -11,7 +11,7 @@
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track', 'woods']
     debuginfo = False
-    debugenabled = True
+    debugenabled = False
     debuginput = ""
     globalsize = 1
     
