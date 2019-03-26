@@ -28,9 +28,7 @@ image Dorm GTS = "Graphics/ui/bg/dorminterior.png"
 init 2 python:    
     #Core
     eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS002", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS003", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "GTS004", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "library",          "priority": PrioEnum.NONE, "next": "GTS006", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS006", "obsflags": [],         "conditions": []}
     eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "next": "GTS007", "obsflags": [],         "conditions": []}
     eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS008", "obsflags": [],         "conditions": []}
     eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS009", "obsflags": [],         "conditions": []}
@@ -38,21 +36,24 @@ init 2 python:
     eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
     eventlibrary['GTS011b'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.NOFLAG, "GTS011_unlock"]]}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS015", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS016", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS017", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS018", "obsflags": [],         "conditions": []}
+    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS018", "obsflags": [],         "conditions": []}
     eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "GTS019", "obsflags": [],         "conditions": []}
     eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS020", "obsflags": [],         "conditions": []}
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS021", "obsflags": [],         "conditions": []}
     eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS025", "obsflags": [],         "conditions": []}
     eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "GTS026", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS026'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['GTS028T'] = {"name": "Art of Film", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.FLAG, "GTS015_movie"]]}
+    eventlibrary['GTS030'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
     
     #Optional
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                 "location": "schoolplanter",    "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftertest"],     "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.CORE,              "location": "classroom",        "priority": PrioEnum.GIRL, "next": "", "obsflags": ["aftersize2"],   "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
-    eventlibrary['GTS028T'] = {"name": "Art of Film", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.FLAG, "GTS015_movie"]]}
+    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
+    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "library",          "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
+    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
+    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,            "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
+    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
+    
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],               "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     
 label GTS001:
     $setProgress("GTS", "GTS002")
@@ -134,7 +135,8 @@ label GTS001_after:
     jump daymenu
 
 label GTS002:
-    $setProgress("GTS", "GTS003")
+    $setTimeFlag("testday")
+    $setProgress("GTS", "GTS006")
     scene School Planter with fade
     "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated in degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
     "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me. In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
@@ -211,7 +213,6 @@ label GTS002_after:
     jump daymenu
 
 label GTS003:
-    $setProgress("GTS", "GTS004")
     scene Cafeteria with fade
     play music Schoolday
     "The morning found itself to be quite the chaotic time, as many students rushed down the corridors to make it to the cafeteria in time to beat the breakfast rush."
@@ -297,8 +298,6 @@ label GTS003_after:
     jump daymenu
     
 label GTS004:
-    $setTimeFlag("testday")
-    $setProgress("GTS", "GTS006")
     scene Library with fade
     play music Peaceful
     "The sun shone highly in the sky as the middle of the day came by, its rays seeping through the many windows that surrounded the vast two-story room. I was honestly a little surprised to see so many people using the campus library."
@@ -1287,7 +1286,7 @@ label GTS014_after:
     jump daymenu
 
 label GTS015:
-    $setProgress("GTS", "GTS016")
+    $setProgress("GTS", "GTS018")
     scene Dorm GTS with fade #this should change eventually
     play music Busy
     Ryoko "...And cut! Good job everyone!"
@@ -1417,7 +1416,6 @@ label GTS015_c2_after:
     jump daymenu
     
 label GTS016:
-    $setProgress("GTS", "GTS017")
     scene School Planter with fade
     show GTS neutral at center with dissolve
     play music Busy
@@ -1498,7 +1496,6 @@ label GTS016_c1_after:
     jump daymenu
 
 label GTS017:
-    $setProgress("GTS", "GTS018")
     scene School Planter with fade
     play music Busy
     "My brow lowered in annoyance as the wind blew my hair across my face yet again, my hands constantly trying to tuck it behind my ears or slick it back to keep my hair from doing so. I could see Naomi in our usual meeting place, attending to something. "
@@ -2033,7 +2030,10 @@ label GTS021_c1_after:
     jump daymenu
 
 label GTS025:
-    $setProgress("GTS", "GTS026")
+    if getFlag("GTS015_movie"):
+        $setProgress("GTS", "GTS028T")
+    else:
+        $setProgress("GTS", "GTS030")
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn't shown up."
     show GTS neutral at center with dissolve
@@ -2091,6 +2091,7 @@ label GTS025:
     jump daymenu
 
 label GTS028T:
+    $setProgress("GTS", "GTS030")
     scene Theater with fade
     play music Peaceful
     "I scanned the various posters that decorated the inside of the theater, wondering what might be good. Naomi leaned down slightly to get a closer look at the posters as well."
@@ -2235,7 +2236,7 @@ label GTS028T_c1_after:
         "The noise resulting in some others in the audience to snicker and laugh which resulted in her embarrassment. Her body remained tense the rest of the film as my chair shook a little from her shaking. She was leaning back, as if providing distance would result in protection. Frowning, I gently placed my hand on her which made her flinch but then look down to see me. I squeezed her hand to let her know I was there. And she squeezed back and held my hand for the rest of the movie, squeezing it whenever she was startled. Granted… maybe that wasn’t the best thing as I learned that with her added height, Naomi was stronger than normal too..."
     jump daymenu
 
-label GTS026:
+label GTS030:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

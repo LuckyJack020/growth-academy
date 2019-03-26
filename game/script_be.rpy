@@ -22,32 +22,34 @@ image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
 init 2 python:    
     #Core
-    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
-    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE016", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE017", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                  "priority": PrioEnum.NONE, "next": "BE018", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE019", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE020", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE021", "obsflags": [],                  "conditions": []} #affection check maybe?
-    eventlibrary['BE021'] = {"name": "Joining the Archery Club", "girls": ["BE"], "location": "woods", "type": EventTypeEnum.CORE,                         "priority": PrioEnum.NONE, "next": "BE022", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE022'] = {"name": "A Sneaky Lunch", "girls": ["BE", "BBW"], "location": "library", "type": EventTypeEnum.CORE,                          "priority": PrioEnum.NONE, "next": "BE023", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE023'] = {"name": "I scream, You Cream", "girls": ["BE"], "location": "town", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                             "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                              "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                 "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE016", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "BE017", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE018", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE019", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE020", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE021", "obsflags": [],                  "conditions": []} #affection check maybe?
+    eventlibrary['BE021'] = {"name": "Joining the Archery Club", "girls": ["BE"], "location": "woods", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE022", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE022'] = {"name": "A Sneaky Lunch", "girls": ["BE", "BBW"], "location": "library", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE023", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE024'] = {"name": "I scream, You Cream", "girls": ["BE"], "location": "town", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE025", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE026", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE026'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONAL,                           "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONAL,   "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONAL,                    "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONALCORE,                            "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONALCORE,    "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONALCORE,                     "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -3978,6 +3980,270 @@ label BE024_c2_3:
     jump daymenu
 
 label BE025:
+    scene Field with fade
+    $setProgress("BE026")
+    play music Schoolday
+    "As much as I wanted to be close to the action for Honoka's archery competition, I had to keep a good distance away from the archers. Not just for safety's sake, but the whistling happened frequently enough that it bothered me to no end."
+    "It was a simple enough contest. No other school was involved. Just a way for the archery club members to see how they did against one another. The targets were placed at a competitive distance. "
+    "Honoka said they'd only practiced at that distance once before. So this would be a challenge for her. Still, I was cheering her on. Quietly. Unlike a regular sport, archery liked to be nice and quiet."
+    Haruhiro "Ready!"
+    "The club members stood at attention, even Honoka. It was nice to see her taking this seriously. She looked nice, with the specialized chest plate over her bust, and the leather glove on her string-pulling hand."
+    "Each member grabbed one of the arrows from their quiver and nocked it in the bowstring."
+    Haruhiro "Aim!"
+    "Again, all members moved in pretty close synchronicity with each other, pulling the arrow back until their hands cupped their jawbone. There was a bit of a difference in the speed of each person, but it was still pretty impressive."
+    Haruhiro "Fire when ready!"
+    "A few fired off their arrows right away, as several arrows thunked into the targets a few second later. Honoka shot her projectile somewhere in the middle. It was hard to see where the arrows hit, when the targets were so far away."
+    "The process repeated a few more times as Haruhiro let the members go through their quivers, letting loose a half-dozen arrows before they put them all down."
+    Haruhiro "Clear field!"
+    "Everyone put their bows down, and the club captain and co-captain went to collect the arrows and see how everyone did."
+    show BE happy with dissolve
+    BE "Phew. This is exciting!"
+    MC "Oh, hey, you're doing great!"
+    "Honoka had zoomed over to me as soon as they could leave their stations."
+    BE "Can't say I'm doing great, yet, we've gotta see my scores first."
+    MC "The anticipation must be killing you."
+    show BE neutral
+    BE "Agh, it's the worst, really. In the Olympics they can tell you right away what your score is. Here I can kind of estimate, so I can like, adjust my shot a bit?"
+    show BE happy
+    BE "But otherwise, it's just trying to be consistent."
+    MC "I can tell. You looked super focused on everything when Haruhiro was giving out the instructions."
+    show BE neutral
+    BE "Eh, you've gotta be smart about it. These are real arrows, after all. And Haruhiro's such a dork about it that upsetting him would be like.. I dunno, it'd be like bullying Aida-chan. Just feels wrong."
+    MC "I see."
+    Haruhiro "Scores up!"
+    "Honoka and I turned around to hear Haruhiro giving out the scores. He went through them all in alphabetical order."
+    Haruhiro "Inoue: 39."
+    show BE sad
+    BE "Hm. 39. So, that's, what, nearly 2/3 of the best score possible?"
+    MC "It's 10 for a bullseye, right? Yeah. Seems so. But most of the others have done about the same. The most I've heard is like, 46."
+    show BE neutral
+    BE "Right. That's pretty good."
+    MC "And you're also new to this. Some of the others have probably been doing this all through high school."
+    show BE happy
+    BE "That's true! So for being a rookie, I'm kicking booty, aren't I?"
+    MC "Yeah, I'd say so. And nothing says you won't get better with practice, either. I haven't seen you this intense in a club before. I think it's a good fit for you."
+    BE "Hehe, thanks Kei-chan. Got any motivation for me if I win?"
+    MC "Motivation? Hm."
+    menu:
+        "If you win, I'll treat you to a chocolate feast.": # BE_Affection + 1
+            jump BE025_c1_1
+        "If you win, I'll give you a kiss.": # BE_Feminine + 1
+            jump BE025_c1_2
+        "If you win, I'll be your slave for a day.": # BE_Tomboy + 1
+            jump BE025_c1_3
+        "If you win, we'll switch clothes the next time we go out.": # BE_Affection + 2
+            jump BE025_c1_4
+
+label BE025_c1_1:
+    MC "If you win, I'll treat you to a chocolate feast."
+    show BE happy
+    $setAffection("BE", 1)
+    BE "Ooh, a chocolate feast, huh? What would that entail?"
+    MC "We'll go to a chocolate shop and whatever you think you can eat in one sitting, I'll pay for it."
+    show BE neutral
+    BE "Iiiinteresting. Even if it's an entire cheesecake?"
+    MC "I'd like to see that, either way."
+    show BE happy
+    BE "Ha! You're on then, Kei-chan! I'll kick butt and get that chocolate, hahahahaha!"
+    "I really, really wanted Honoka to win. Really. But when Honoka jogged down to her quiver, laughing maniacally, I wondered if I was going to be out more cash than I could afford…"
+    jump BE025_c1_after
+
+label BE025_c1_2:
+    $setVar("BEFeminine", getVar("BEFeminine") + 1)
+    MC "If you win, I'll give you a kiss."
+    show BE neutral
+    BE "Oh, just a kiss?"
+    MC "Well, I suppose it could be just a kiss. I also haven't specified where I'd be kissing you…"
+    show BE surprised
+    BE "Huh?"
+    MC "And if you blow them away, there'll be more than kissing. And I might get so excited about doing it that I just take you right there in front of all the other club members."
+    show BE happy
+    BE "F-For a kiss?"
+    MC "Maybe I've got something more planned, and you'll just have to find out."
+    show BE surprised
+    BE "…"
+    show BE happy
+    BE "O-Okay!"
+    "Honoka raced back to her quiver of arrows, while she vibrated on the spot. I hope her anticipation didn't make her too jittery to focus."
+    jump BE025_c1_after
+
+label BE025_c1_3:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "If you win, I'll be your slave for a day."
+    show BE happy
+    BE "Oh ho. Going for the classic cartoon prize, huh?"
+    BE "That's tempting, Kei-chan. Very tempting."
+    MC "Only for a day, though!"
+    show BE neutral
+    BE "Oh, but a day is more than enough to have my way with you in every possible way."
+    MC "...this does not mean you can do anything illegal, you know. Like you can't have me rob a bank for you."
+    show BE happy
+    BE "Pff. Why would I do that? There's so many more entertaining ways to play with my little Kei-chan slave~"
+    show BE neutral
+    BE "You just wait right there, Kei-chan."
+    show BE unique
+    BE "Your master will return soon."
+    "Honoka cackled, holding an outstretched hand to the side of her mouth as she laughed. It may have motivated her, but it also may have been a big mistake."
+    jump BE025_c1_after
+
+
+label BE025_c1_4:
+    MC "If you win, we'll switch clothes the next time we go out."
+    show BE neutral
+    BE "Hm, that's an unusual proposition. What's the benefit for me?"
+    MC "Well, you'll get to tease me the entire time we're out because I'll be wearing your clothes."
+    MC "You could wear my clothes and get away with it. I'll have to wear a skirt and everything."
+    show BE happy
+    BE "Not just the skirt, surely. You'd also need to wear my underwear. "
+    MC "Um. I guess, yeah I would, if we're going that far."
+    BE "Oh trust me, Kei-chan, we'll go that far."
+    show BE neutral
+    BE "Now if we do that, I can't wear a bra, so that's going to be problematic on my back, you know."
+    show BE unique
+    BE "Which means we'd need to stuff my bra for you, so you have to walk around with giant cans all day, and see how it feels."
+    MC "That, um, that wasn't really part of my plan?"
+    show BE happy
+    BE "Too late! Done, signed, and sealed tight. It's a closed deal, Kei-chan."
+    $setAffection("BE", 2)
+    show BE unique
+    BE "Oh ho ho I'm going to make you look so ~pretty~."
+    "Honoka skipped back to her quiver as I stayed there, watching. That… may have been a bad idea."
+    jump BE025_c1_after
+
+label BE025_c1_after:
+    hide BE with dissolve
+    "After giving Honoka her motivation, she readied herself with all the other members. The quivers had been refilled. Haruhiro came out with a small anemometer to measure the wind speed, and gave everyone the appropriate info."
+    Haruhiro "Clear field!"
+    "Honoka looked over at me and puckered her lips, blowing a small kiss as she winked. She quickly got back into focus mode and prepared for the next instruction."
+    Haruhiro "Ready!"
+    "Over the next few minutes, the members fired off another six volleys of arrows at the targets. If it weren't for Haruhiro's whistle and yelling, the sounds of the bowstrings and the arrow thunks would have been kind of enjoyable."
+    Haruhiro "Clear field!"
+    "Eventually, it was signaled for everyone to put their bows down again, and Honoka came back up to me. This time I stood up and followed her towards the field."
+    MC "So, how do you think you did?"
+    show BE happy with dissolve
+    BE "Gah, I really hope I did great. I really want that prize you offered!"
+    MC "Well, seems like it was good motivation for you."
+    show BE neutral
+    BE "Oh it really was. Here come on, let's see how everyone did."
+    "Honoka took my hand and led me towards the other members as they gathered their scores and helped Haruhiro pull the targets back to be stored."
+    show BE happy
+    BE "Nnngh, come on. What's my score, what's my score?"
+    Haruhiro "Inoue: 47. Well done. Total score is 86."
+    MC "Wow. Well done, Honoka! That's what, a B?"
+    show BE neutral
+    BE "Heh. Well, it's out of 120, so that's more of a C, I think."
+    MC "That's still impressive for your first outing!"
+    show BE happy
+    BE "Heh. It is. Buuuut, definitely not enough to win. Belle-mere there got 102. She scored like, five bullseyes."
+    "Honoka sighed as she took off her chest guard, letting out a big breath of relief."
+    MC "Ah, nuts."
+    MC "Well, I'll tell you what. When you win one, that motivational prize will still be there waiting for you."
+    BE "Oh yeah? Good. Hehe. It really got me excited."
+    MC "I'm glad. I just wanna support you."
+    show BE neutral
+    BE "You're so good to me, Kei-chan, I-"
+    Haruhiro "HEY!"
+    "Honoka and I looked and saw what Haruhiro was yelling at. One of the club members had brought a sibling, and they'd gotten hold of a bow, nocking it."
+    Haruhiro "PUT THE BOW DOWN! PEOPLE DOWN RANGE!"
+    "The kid panicked, and let go of the string after turning the bow away from down range."
+    "Right towards Honoka and I."
+    hide BE with dissolve
+    if getSkill("Athletics") <= 0:
+        jump BE025_c2_1
+    elif getSkill("Athletics") <= 5:
+        jump BE025_c2_2
+    else:
+        jump BE025_c2_3
+
+label BE025_c2_1:
+    "Suddenly, I was pushed onto the ground. I winced a bit as my elbow dug into the grass. Honoka's chest pushed into me from below."
+    "She'd thought quickly, and managed to knock us both down to the ground. I looked over at the arrow and saw it land harmlessly a good five meters away."
+    MC "Holy crap…"
+    "Honoka quickly stood up and pat herself down. My heart raced. I felt numb, paralyzed. I didn't even think to get up until Honoka reached down and offered her hand."
+    show BE sad with dissolve
+    BE "Kei-chan, are you okay?"
+    MC "Yeah, I'm fine. You're not hurt, are you?"
+    show BE neutral
+    BE "No no, I'm good. Good thing I still had my arm guard on."
+    MC "I'm so sorry, I just froze up. I don't know what happened, I-"
+    show BE happy
+    BE "Hey, it's okay."
+    "Honoka pulled me suddenly deep into a hug, and stroked the back of my head."
+    show BE neutral
+    BE "You weren't under any obligation to do anything. And besides, it missed where we were standing anyway."
+    MC "I still feel I should have done something."
+    show BE happy
+    BE "Nah. Don't stress. But maybe start working out a bit just in case. Pushing you down was like knocking over a lamp."
+    MC "Heh… yeah you've got a point…"
+    jump BE025_c2_after
+
+label BE025_c2_2:
+    "Seeing the arrow move, I quickly pushed Honoka over onto the ground. I wasn't sure why it was the best course of action, but I figured making ourselves smaller targets was good."
+    "I winced as my knees skidded into the dirt, and looked to the side at Honoka who looked surprised."
+    MC "Honoka are you okay?"
+    "Before she answered, there was a pitiful 'thwick' as the arrow landed in the ground, many meters away from us."
+    show BE neutral with dissolve
+    BE "Oh, I'm a little banged up, but I think I'm okay. Are you hurt?"
+    MC "No, the arrow didn't hit us, thankfully."
+    "Honoka and I stood up, brushing ourselves off with dust, and looking over at Haruhiro who was giving a club member a good verbal thrashing."
+    MC "I see what you meant earlier about strict safety rules."
+    BE "Yeah. That was bad."
+    show BE happy
+    BE "Very manly of you to push me out of the way like that, though."
+    MC "Oh, heh, I was just… acting on instinct."
+    BE "Hehe. Well, it's a good instinct to have."
+    jump BE025_c2_after
+
+label BE025_c2_3:
+    "Thinking quickly, I grabbed Honoka by the waist and spun. A small yelp came from her as I lifted her up and we both fell to the ground. I knew her back would hit the ground, but hoped my hands around her waist would cushion her fall some."
+    "I wanted Honoka safe, and this way if the arrow hit us, I was the bigger target. I landed right on top of her, and did my best to brace us with my body."
+    "I didn't feel anything, and Honoka didn't make a sound, so after a few seconds, I looked over. The arrow hadn't even managed to pierce the dirt, falling flat into the grass."
+    MC "Honoka, you okay?"
+    "Looking down at Honoka, her face was flushed, and I wasn't sure why. One of my hands quickly went to her arm."
+    MC "You didn't get hit by anything, did you?"
+    "I'd literally just seen that the arrow missed us. But… worry doesn't tend to be logical."
+    show BE happy with dissolve
+    BE "N-No, I'm fine. It's just. You're, um."
+    MC "I know. Sorry. I just acted and wanted you safe."
+    BE "No, it's not that. Your hand is just…"
+    "Oh."
+    MC "Ah, sorry!"
+    "I quickly took my other hand off of her breast and placed it flat on the ground. I moved my other hand as well, just for safety."
+    show BE sad
+    BE "I didn't say you had to stop…"
+    MC "Oh! W-Well… this probably would look weird if we stayed on the ground for too long."
+    "I stood up, and took Honoka's hand, easily pulling her back up with me. I helped her dust off her uniform from the dirt on the ground, and just double-checked to make sure she was okay."
+    MC "You sure you're okay?"
+    show BE happy
+    BE "Heh, I'm fine, Kei-chan. Being saved by a rogue arrow, and ending up with Kei-chan on top of me? Yeah that's pretty okay in my book."
+    MC "Heh, you're acting like I planned it…"
+    jump BE025_c2_after
+
+label BE025_c2_after:
+    "Haruhiro, the club captain, came up to us in a huff, shaking his head."
+    Haruhiro "I swear if I see that kid on the field again after this incident, I'm going to… just… do things to them! Gah!"
+    Haruhiro "Are you two okay?!"
+    show BE neutral
+    BE "Yeah, we're okay, Haruhiro. Is everything all right over there?"
+    Haruhiro "Takiya brought his little brother with him today and was showing him the equipment. He got distracted and his brother started playing with it. I'm so sorry, I should have seen that."
+    MC "Well. Thankfully the arrow didn't hit anyone."
+    show BE happy
+    BE "Yep, we're all okay! Nothing to worry about."
+    "Haruhiro shook his head."
+    Haruhiro "Negative. Safety protocols are in place to prevent this from happening. I may need to look at the guidelines again and see what can be done to make sure this doesn't happen."
+    MC "Well. Good luck with that."
+    BE "Yeah. Doesn't sound fun."
+    Haruhiro "Thank you. In the meantime, great work today, Inoue. Go get some rest. Take care, you two. I'll see you next practice."
+    "After Haruhiro left, Honoka and I let out a big sigh."
+    show BE neutral
+    BE "Phew. Well. He's got a point, let's go relax. Wanna come to my room and hang out?"
+    MC "Sure. Sounds like fun."
+    "We left the archery field after Honoka handed in the rest of her equipment. She joked about taking a shower and asking if I wanted to help get her clean."
+    "I said that could be motivation for me the next time I wanted to win a contest."
+    jump daymenu
+
+
+label BE026:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

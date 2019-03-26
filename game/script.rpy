@@ -81,11 +81,11 @@
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     
     class EventTypeEnum:
-        CORE, OPTIONAL, ANY = range(3)
+        CORE, OPTIONAL, OPTIONALCORE = range(3)
 
     #CORE: Event is in someone's core route. Cannot be selected randomly.
     #OPTIONAL: Event is an optional event. Can be selected randomly.
-    #ANY: Event is either core or optional. Events can't be set to this, but it's used in certain methods.
+    #OPTIONALCORE: Event is selected like an optional event, but is displayed like a core event in the UI.
     
     class PrioEnum:
         NONE, GIRL, ALL = range(3)
@@ -179,7 +179,7 @@
         #Populate optional event pool (to find priority stuff)
         for k, v in eventlibrary.iteritems():
             badFlag = False
-            if v["type"] != EventTypeEnum.OPTIONAL:
+            if v["type"] == EventTypeEnum.CORE:
                 continue
             if len(v["girls"]) == 0 or v["girls"][0] != girl:
                 continue
@@ -553,7 +553,7 @@ screen daymenu:
             xalign 0.5
             yalign 0.975
             background Solid(Color((0, 0, 0, 100)))
-            if(eventlibrary[highlitevent]["type"] == EventTypeEnum.CORE):
+            if eventlibrary[highlitevent]["type"] == EventTypeEnum.CORE or eventlibrary[highlitevent]["type"] == EventTypeEnum.OPTIONALCORE:
                 text("Core Event")
             else:
                 text("Optional Event")
