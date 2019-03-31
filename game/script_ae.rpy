@@ -62,6 +62,7 @@ init 2 python:
     eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "type": EventTypeEnum.CORE,               "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE027", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
     eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE028", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
     eventlibrary['AE028'] = {"name": "Bolero", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE029", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE029'] = {"name": "Moon in June", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE030", "obsflags": [],                "conditions": []}
     
     #Optional
     eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                  "location": "hallway", "priority": PrioEnum.GIRL,           "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -5827,7 +5828,8 @@ label AE029:
     MC "Hrgk-!"
     "I turned my head to the right and immediately got assaulted by the stench of sweaty sock, onion, and what I assumed was the olfactory equivalent of parental regret."
     "In strict opposition to the haven of cleanliness to the left, the right side of the room was absolutely atrocious. An empty pizza box lay abandoned and forgotten on the far side of the room, and next to it rested a mini-screen tv, hooked up to an old 90’s-era video game console with black wires tangled in a mess."
-    "The floor was littered with junk listlessly tossed about. An acoustic guitar covered from neck to base with various stickers and Kanji written in marker lay on the bed, along with sheets and blankets piled up in random mounds. The only respite from the mess was the kitchen, which in itself had been kept clean; no doubt by Shiori-chan. Between the trash, the stench and the clothes thrown about, I’d say the disaster was fit more for a pig than a girl."
+    "The floor was littered with junk listlessly tossed about. An acoustic guitar covered from neck to base with various stickers and Kanji written in marker lay on the bed, along with sheets and blankets piled up in random mounds."
+    "The only respite from the mess was the kitchen, which in itself had been kept clean; no doubt by Shiori-chan. Between the trash, the stench and the clothes thrown about, I’d say the disaster was fit more for a pig than a girl."
     MC "Urg..."
     AE "Aha! It’s horrid to you too then. If even a few more people attest to it’s atrocious state, she’ll have no choice but to let me clean it!"
     "I looked on the ground near my feet and saw a ragged and crumpled piece of cloth."
@@ -6006,7 +6008,7 @@ label AE029:
     MC "So... bubble booty babes?"
     AE "Not a word. Ever."
     MC "G-got it!"
-    AE"I swear, the girl's obsessed with my rear. She says that’s going to be our 'show names'; absolutely uncouth."
+    AE "I swear, the girl's obsessed with my rear. She says that’s going to be our 'show names'; absolutely uncouth."
     MC "Well, she has a unique sense of humor, I guess."
     AE "Humor?! Ha! I’ve heard fax machines funnier than her."
     MCT "I’m going to take that literally."
@@ -6029,7 +6031,7 @@ label AE029:
     MC "Yep, see you then."
     AE "Oh, and Hotsure-san?"
     MC "Yeah?"
-    show AE arpoused #flustered
+    show AE aroused #flustered
     AE "Would you like to walk with me to class tomorrow?"
     MC "Yeah, definitely!"
     "Shiori-san gave a weak smile and nodded before entering the library, a loud clack from the door heralding my exit towards my room. As I walked, I thought about the new connection I had made with someone in Shiori-chan's life, and got ready for the next time we met."

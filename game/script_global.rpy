@@ -922,7 +922,9 @@ label global000_homeroom:
     hide RM
     HR "..."
     MC "..."
+    show HR neutral
     "Without a word, Tashi-Sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
+    hide HR
     show AE angry with vpunch
     AE "Kyaa~! What is that?!"
     hide AE
@@ -932,6 +934,7 @@ label global000_homeroom:
     show BBW angry with vpunch
     BBW "Keep that thing away from me!"
     hide BBW with dissolve
+    show HR neutral with dissolve
     "..."
     "..."
     play music Busy
@@ -939,12 +942,14 @@ label global000_homeroom:
     "The non-chalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-Sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
+    hide HR
     show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     HR "Some of your growths are already obvious..."
-    hide BE
     show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     HR "Others...{w}Not so much."
+    hide BE
     hide PRG
+    show HR neutral with dissolve
     HR "But make no mistake, unless you've got a sibling here at Seichou Academy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
