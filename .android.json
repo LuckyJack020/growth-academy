@@ -1,1 +1,0 @@
-{"layout": null, "package": "growthacademy.demo", "include_pil": false, "numeric_version": "601", "expansion": false, "name": "Growth Academy Demo", "update_always": true, "source": false, "icon_name": "Growth Academy", "version": "0.6.1", "update_icons": true, "permissions": ["VIBRATE"], "include_sqlite": false, "store": "none", "orientation": "sensorLandscape"}

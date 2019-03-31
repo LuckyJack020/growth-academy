@@ -5708,7 +5708,7 @@ label AE028_c1_after:
     MC "Hm... smells like rain."
     show AE neutral
     AE "Really? But I checked the forecasts..."
-    MC "Well, they’re not right 100% of the time, it seems."
+    MC "Well, they’re not right 100 percent of the time, it seems."
     show AE aroused #flustered
     AE "I suppose not..."
     show AE neutral
@@ -5755,7 +5755,7 @@ label AE028_c1_after:
     MCT "This is such an absurd topic. I don’t understand what she means."
     AE "Hm... well, in any case, I suppose I’ll simply have to wait..."
     AE "Wait for the death of my personality."
-    play sound Belltower
+    play sound ClockTower
     MC ":..."
     show AE neutral
     AE "Until then... I’m more than happy spending every moment with you."
