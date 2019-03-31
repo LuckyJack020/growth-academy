@@ -2727,7 +2727,7 @@ label BE021:
     scene Woods with fade
     play music Sunset
     show BE happy at center with dissolve
-    $setProgress("BE022")
+    $setProgress("BE", "BE022")
     MC "Honoka, why am I here again?"
     BE "Kei-chan, you still haven't decided on a club yet. You sounded like you'd be into archery. So I thought you could come and try out."
     MC "Sure, no, I get that. What I mean is. Why are we out here in the woods?"
@@ -2915,7 +2915,7 @@ label BE021_after:
 label BE022:
     scene Cafeteria with fade
     play music Peaceful
-    $setProgress("BE023")
+    $setProgress("BE", "BE023")
     "After the last school lunch bell rang for the day, I walked down to the cafeteria, to look for a snack. There were a wide variety of quick eats to grab and I was feeling pretty peckish."
     show BE happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
@@ -3395,7 +3395,7 @@ label BE022_c1_4:
 
 label BE023:
     scene Track with dissolve
-    $setProgress("BE024")
+    $setProgress("BE", "BE024")
     "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
     "Compared to other clubs that Honoka had joined, there didn't seem to be much to archery in terms of different activities they did. Apart from making sure they used the proper technique, and firing at targets, there was no variety."
     "The benefit of actually being in the club was the extra protective gear they could get for their members. Apart from the arm guards and gloves, every student got their own chest guard as well. Which was vitally important for Honoka."
@@ -3690,7 +3690,7 @@ label BE023_c1_after:
 label BE024:
     scene black with fade
     play music Steamy
-    $setProgress("BE025")
+    $setProgress("BE", "BE025")
     show BE angry with dissolve
     #panting
     BE "Mmm, Kei-chan, it's so hot!"
@@ -3981,7 +3981,7 @@ label BE024_c2_3:
 
 label BE025:
     scene Field with fade
-    $setProgress("BE026")
+    $setProgress("BE", "BE026")
     play music Schoolday
     "As much as I wanted to be close to the action for Honoka's archery competition, I had to keep a good distance away from the archers. Not just for safety's sake, but the whistling happened frequently enough that it bothered me to no end."
     "It was a simple enough contest. No other school was involved. Just a way for the archery club members to see how they did against one another. The targets were placed at a competitive distance. "

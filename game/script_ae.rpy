@@ -63,6 +63,7 @@ init 2 python:
     eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE028", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
     eventlibrary['AE028'] = {"name": "Bolero", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE029", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
     eventlibrary['AE029'] = {"name": "Moon in June", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE030", "obsflags": [],                "conditions": []}
+    eventlibrary['AE030'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "", "obsflags": [],                "conditions": []}
     
     #Optional
     eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                  "location": "hallway", "priority": PrioEnum.GIRL,           "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
