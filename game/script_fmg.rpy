@@ -1741,7 +1741,7 @@ label FMGBBW001:
     show RM neutral
     RM "Fine, fine, I guess we earned a rest."
     "With that, we started to walk out, Daichi wanted to make sure we could see anyone come in, so we left the door a crack open."
-    MCT "Wait... is the library open at this time? if not how did he... ah screw it, I’m too tired for this."
+    MCT "Wait... is the library open at this time? If not how did he... ah screw it, I’m too tired for this."
     "However, due to the door already slightly opened, we saw though the crack that there was someone facing away from the door and looking at the stairwell. Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
     show RM angry
     RM "Keep it down, who is that?!"

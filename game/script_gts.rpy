@@ -2113,7 +2113,7 @@ label GTS028T:
     Minori "As ill planned as that was, I’m sure we’ll agree on one of the choices we have to choose from."
     MC "Alright, we do we have then?"
     Ryoko "We have The Last Call, a horror movie about patrons in a bar learning they’re stuck in a bar with ghosts. There’s Koichi, which is a period piece of a man fighting for his stolen love after being dishonored by the murder of his master. And then there’s My Lover, My Sister!? A comedy which is about a guy who learns that the lady he’s been dating is actually his sister in law."
-    show Naomi embarrassed
+    show GTS embarrassed
     GTS "I’m… not sure how I feel about those other two…"
     Ryoko "So those are our choices people, which would you like to see?"
     Minori "Hm, I could go for a fun comedy."
