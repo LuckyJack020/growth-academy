@@ -1255,7 +1255,7 @@ label AE009_c2:
         show AE neutral-annoyed
         AE "Hotsure-san, you don't need to say things like that. It's my duty as class president to make sure that you are given an efficient learning environment."
         MC "But it's mine as an individual to adapt to situations. You don't need to take any precautions for me. Besides, I can learn responsibility by reminding myself to keep focused, right?"
-        "Shiori-san seemed conflicted for a moment, in not slightly agitated. She let out a sigh and nodded."
+        "Shiori-san seemed conflicted for a moment, if not slightly agitated. She let out a sigh and nodded."
         show AE neutral
         AE "Right. Well, that's that then."
     else:

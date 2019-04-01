@@ -969,7 +969,7 @@ label GTS010_after:
     jump daymenu
 
 label GTS011:
-    $setProgress("GTS014")
+    $setProgress("GTS", "GTS014")
     scene Dorm Exterior with fade
     "Journeying around the dorm, I heard whispers hang around behind me. The occasional giggle accompanied them as some girls watched me."
     "I could imagine it now, some small-time rumors about me visiting a girl at her dorm. The same happened when I saw my sister at the start of the year, but I had learned to merely ignore it."
@@ -1045,7 +1045,7 @@ label GTS011:
     jump daymenu
 
 label GTS011b:
-    $setProgress("GTS014")
+    $setProgress("GTS", "GTS014")
     scene School Planter with fade
     play music Busy
     "I stepped into the garden expecting the normal serenity one would find there, but surprisingly it was more active than usual."

@@ -5101,7 +5101,7 @@ label BBW028_afterdate:
             "This wasn't how I had planned it, though. 'Quite nice'?"
             "Maybe I should have gone with stunning, like I had thought of first."
             
-    scene Dorm with fade
+    scene Dorm Exterior with fade
     show BBW neutral
     "We finished the return trip in relative silence."
     "I walked Alice to the girl's dorm, and would have offered to walk her to her room if Shiori wasn't in sight."
