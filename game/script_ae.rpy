@@ -647,7 +647,7 @@ label AE004_afterchoice:
     MC "?!"
     MC "B-uh."
     show AE glasses
-    AE "I'm not going to actively feud with delinquents. Their opinion of me is there's, nothing more. Unless it turns to harassment among students, I have no plans to take up things such as this with administration."
+    AE "I'm not going to actively feud with delinquents. Their opinion of me is theirs, nothing more. Unless it turns to harassment among students, I have no plans to take up things such as this with administration."
     MC "I..."
     MCT "It can't be helped. If Shiori-san thinks that's best..."
     MC "Yes, Shiori-san. I understand."

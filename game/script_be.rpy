@@ -1183,7 +1183,7 @@ label BE010_c2:
 label BE010_c3:
     MC "..."
     "I just couldn't say anything. My mouth felt like it dried up. Something about this was wrong. I wasn't sure what her game was, but I felt like the smart thing to do was just shut up."
-    show BE neutral
+    show BE neutral at center, Transform(zoom=1.0)
     stop music
     BE "Hello, Kei-chan?"
     "The only sound that managed to come out of my mouth was a weak, guttural stutter."
