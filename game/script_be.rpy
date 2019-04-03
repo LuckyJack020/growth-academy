@@ -3,71 +3,53 @@ define Sakie = Character('Sakie', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
 define Coach = Character('Coach', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
+define Haruhiro = Character('Haruhiro', color="#C0C0C0")
 
-image BE neutral = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/neutral.png",
-    "True", "Graphics/BE/1/neutral.png")
-image BE happy = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/happy.png", 
-    "True", "Graphics/BE/1/happy.png")
-image BE sad = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/sad.png",
-    "True", "Graphics/BE/1/sad.png")
-image BE surprised = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/surprised.png",
-    "True", "Graphics/BE/1/surprised.png")
-image BE angry = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/angry.png",
-    "True", "Graphics/BE/1/angry.png")
-image BE aroused = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/aroused.png",
-    "True", "Graphics/BE/1/aroused.png")
-image BE unique = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/unique.png",
-    "True", "Graphics/BE/1/unique.png")
-image BE zoomin = ConditionSwitch(
-    "gametime >= datelibrary['BE_size_2']", "Graphics/BE/2/hq-happy.png",
-    "True", "Graphics/BE/1/hq-happy.png")
+image BE neutral = DynamicImage("Graphics/BE/[globalsize]/neutral.png")
+image BE happy = DynamicImage("Graphics/BE/[globalsize]/happy.png")
+image BE sad = DynamicImage("Graphics/BE/[globalsize]/sad.png")
+image BE surprised = DynamicImage("Graphics/BE/[globalsize]/surprised.png")
+image BE angry = DynamicImage("Graphics/BE/[globalsize]/angry.png")
+image BE aroused = DynamicImage("Graphics/BE/[globalsize]/aroused.png")
+image BE unique = DynamicImage("Graphics/BE/[globalsize]/unique.png")
+image BE zoomin = DynamicImage("Graphics/BE/[globalsize]/hq-happy.png")
 
 image cg BE001 = "Graphics/ui/gallery/BE-001.png"
 image cg BE002 = "Graphics/ui/gallery/BE-002.png"
 
-image Dorm BE = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/BEdorm_eve.png",
-    "True", "Graphics/ui/bg/BEdorm_day.png")
+image Dorm BE = "Graphics/ui/bg/BEdorm_day.png"
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
-init 2 python:
-    datelibrary['BE_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['BE_size_2'] = datetime.date(2005, 4, 18)
-    
+init 2 python:    
     #Core
-    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                   "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                          "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                   "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                      "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                        "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "day_0", "enddate": "day_end",             "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                         "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,       "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                         "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
-    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                            "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
-    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                              "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                           "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                "time": (TimeEnum.NIGHT, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                  "time": (TimeEnum.AFTERSCHOOL, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",     "conditions": []}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                              "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                          "time": (TimeEnum.DAY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                    "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",           "conditions": []} #affection check maybe?
-    eventlibrary['BE021'] = {"name": "Honoka end", "girls": ["BE"], "location": "library", "type": EventTypeEnum.CORE,                                     "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "BE_size_2", "enddate": "day_end",             "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                             "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                              "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                 "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE016", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "BE017", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE018", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE019", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE020", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE021", "obsflags": [],                  "conditions": []} #affection check maybe?
+    eventlibrary['BE021'] = {"name": "Joining the Archery Club", "girls": ["BE"], "location": "woods", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE022", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE022'] = {"name": "A Sneaky Lunch", "girls": ["BE", "BBW"], "location": "library", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE023", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE024'] = {"name": "I scream, You Cream", "girls": ["BE"], "location": "town", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE025", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE026", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE026'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.PRESET,                             "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                 "conditions": []}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.PRESET,                      "time": (TimeEnum.NIGHT, WeekendEnum.SUNDAY), "priority": True, "startdate": "BE_size_2", "enddate": "day_end",         "conditions": []}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONALCORE,                            "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONALCORE,    "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONALCORE,                     "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -433,6 +415,7 @@ label BE003_c3:
     jump daymenu
     
 label BE004:
+    $setTimeFlag("testday")
     $setProgress("BE", "BE007")
     scene Track with fade
     play music Busy
@@ -579,6 +562,7 @@ label BE005_after_old:
     jump daymenu
     
 label BE005:
+    $setTimeFlag("aftertest")
     scene Classroom with fade
     play music Rain
     "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool..."
@@ -933,7 +917,8 @@ label BE008_after:
     jump daymenu
     
 label BE009:
-    $setProgress("BE", "BE010")
+    $setTimeFlag("size2")
+    $setProgress("BE", "BE011")
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
@@ -1033,7 +1018,8 @@ label BE009_c3:
     jump daymenu
 
 label BE010:
-    $setProgress("BE", "BE011")
+    $setSize(2)
+    $setTimeFlag("aftersize2")
     scene Dorm Interior with fade
     "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
     "KNOCK ! KNOCK !"
@@ -1197,7 +1183,7 @@ label BE010_c2:
 label BE010_c3:
     MC "..."
     "I just couldn't say anything. My mouth felt like it dried up. Something about this was wrong. I wasn't sure what her game was, but I felt like the smart thing to do was just shut up."
-    show BE neutral
+    show BE neutral at center, Transform(zoom=1.0)
     stop music
     BE "Hello, Kei-chan?"
     "The only sound that managed to come out of my mouth was a weak, guttural stutter."
@@ -1420,8 +1406,8 @@ label BE012:
     "We continued playing for a little while, but it started getting late..."
     menu:
         "Stay at the arcade":
-            $addMeeting("BE013", DeltaTimeEnum.NUMDAYS, 0, True)
-            jump daymenu_overtime
+            $setFlag("BE013_unlock")
+            jump daymenu
         "Leave":
             "We left the arcade together."
             jump daymenu
@@ -2738,6 +2724,1526 @@ label BE020_c2_2:
     jump daymenu
 
 label BE021:
+    scene Woods with fade
+    play music Sunset
+    show BE happy at center with dissolve
+    $setProgress("BE", "BE022")
+    MC "Honoka, why am I here again?"
+    BE "Kei-chan, you still haven't decided on a club yet. You sounded like you'd be into archery. So I thought you could come and try out."
+    MC "Sure, no, I get that. What I mean is. Why are we out here in the woods?"
+    show BE angry
+    BE "Oh. Well, that's where the club leader said we had to meet to see if we could practice. I'm not sure if this is the right place, though. This seems pretty similar to any other spot of woods."
+    UNKNOWN "Negative! The trees here are in fact, made of the same type of wood that we use for our training arrows. Meaning that if you recruits find yourselves incapable of landing a hit, the wood returns to the earth, as it should!"
+    "Honoka and I turned to find a male student had approached us from behind. His eyes were hidden under a long-brimmed hat, but his glare was pretty obvious despite that. His ears were surprisingly large, big enough to lift up as high as the brim of his hat."
+    show BE neutral
+    BE "Uh, hi. So are we in the right place, then?"
+    play music Tension
+    UNKNOWN "Negative! You were meant to meet me fifty yards to the east. Follow me."
+    "Honoka and I looked at each other in confusion."
+    MC "This guy is kind of intense. Is he the head of the club?"
+    show BE angry
+    BE "I guess so? I thought this was supposed to be a fun club, but-"
+    "Negative! Archery is a very serious and dangerous endeavor. Even training arrows are capable of causing serious injury. This is no laughing matter."
+    BE "This is still a club, right? You're making this sound like some sort of military operation."
+    UNKNOWN "Affirmative. This is the official Seichou Archery Club. SAC."
+    show BE happy
+    BE "I thought the SAC was the Seichou Art Club."
+    UNKNOWN "...yes. Unfortunately they obtained the initialism first. Move on."
+    MC "Honoka, I'm having second thoughts about this."
+    show BE neutral
+    BE "Me too. But I still want to give it a chance. So let's just push through for now."
+    "The two of us followed the club leader for a minute until we came to a better clearing. At the ground were two quivers of arrows, and two bows."
+    MC "So. Going to make sure we are capable of firing a bow before we get into the club?"
+    UNKNOWN "Affirmative."
+    MC "Fair enough. Could we at least know your name first?"
+    Haruhiro "Haruhiro Haganeya. Leader of the Seichou Archery Club. I-"
+    BE "Yeah, yeah, we got it."
+    stop music
+    Haruhiro "Hmph."
+    "Haruhiro adjusted his hat over his eyes and pouted."
+    MC "So, what's the official test, club leader?"
+    Haruhiro "It is honestly pretty simple."
+    "His tone was suddenly much more different than it had been. Honoka notably stepped back in surprise."
+    Haruhiro "Sorry. I just... really like archery. Ahem. But, this is pretty serious so, uh, talking normally might be best."
+    show BE happy
+    BE "No no, it's appreciated! I could get used to the drill leader thing, it's just kind of off-putting right out of the gate."
+    MC "Yeah same. But, um, please, show us what to do."
+    "Haruhiro nodded and pointed to the quivers."
+    play music Sunset
+    Haruhiro "Are you both right-handed?"
+    show BE neutral
+    "Honoka and I both nodded. Haruhiro stepped next to one of the quivers and steadied himself."
+    Haruhiro "The first step is the stance. Make sure you stand like this. You will be facing at a 90 degree angle from your target. Feet should be shoulder-width apart."
+    "He moved to the side and motioned for Honoka and I to take his place. We did so and got into position."
+    Haruhiro "Good, now pick up your bows and hold them in your left hand. Let the string go up, towards your armpit, then stand up again."
+    BE "Do we need different bows if one of us is stronger than the other?"
+    Haruhiro "Typically yes, but this is just a basic rule-following test. At the club proper we have different strengths of bows for you to use."
+    "Honoka and I bent over to get our bows. They were directly under our feet. But, I noticed that Honoka had to tilt her torso to the side to peer under her chest, in order to find hers."
+    MC "What's our target going to be?"
+    Haruhiro "Right now just try and hit a tree. But first, nock the arrow. Pick up an arrow, and lift it up and over your head. I know it looks silly but, it's safety rules. Place it in the bow."
+    "Honoka and I did as asked."
+    show BE happy
+    BE "Does the arrow go on the side of the bow closest to me, or away from me?"
+    Haruhiro "Closer to you. Let it rest on the small protrusion on the grip. Right there."
+    "Haruhiro assisted us with making sure our arrows were in place and nocked. Then guided us until we had our arrows pulled back, and took aim at trees in the distance."
+    Haruhiro "Okay, now this is the crux of the part. Keisuke, you can put your arrow down for now. I'll focus on Honoka first. He got up behind Honoka and watched her pull the arrow back."
+    show BE neutral
+    BE "Uh, how am I doing?"
+    "Haruhiro went over to Honoka and attempted to adjust her stance for her. He placed one hand on her arm and tried to push them closer to her torso. The issue quickly became evident and he backed off."
+    Haruhiro "No, more like... ah, hm, carry on."
+    "Honoka's arms weren't entirely as flat against her torso as they should have been. I couldn't see it from my angle, but, I just assumed."
+    Haruhiro "Put your elbow down more. Try and make your arms just one straight line, parallel to the ground."
+    BE "Like this?"
+    Haruhiro "Almost."
+    "Haruhiro took her hand and adjusted it so Honoka's thumb went under her jawline."
+    if getAffection("BE") > 8:
+        "Seeing how close he got to Honoka was... upsetting to say the least."
+    show BE happy
+    BE "Okay. And I put my finger out to point where I'm aiming, right?"
+    MC "NO."
+    Haruhiro "Very no. Not unless you want to shoot it off. But please, don't do that. The goal of archery is to make sure there's nothing in the way of where you're aiming, except the target."
+    show BE surprised
+    BE "Oh. Gotcha. Lesson learned."
+    Haruhiro "Okay. Nearly there. Now, you've got the fletching between your forefinger and middle finger. Now let all three fingers go at once, and don't move your hand. Keep everything still until the arrow connects."
+    "Honoka took a breath as Haruhiro stood back. She let go, and a second later, a thunk sounded as an arrow landed in a distant tree."
+    show BE happy
+    BE "Hey! I did it!"
+    Haruhiro "Well done. See, it's relatively simple. At the club you'll learn more on how to be more accurate and adjust for wind and distance. Ready to try yourself, Keisuke?"
+    MC "I am."
+    if getSkill("Athletics") > 5:
+        jump BE021_testpass
+    else:
+        jump BE021_testfail
+
+label BE021_testpass:
+    Haruhiro "Okay. Your stance looks good. Draw your bow."
+    "I took a breath and lifted up my bow, pulling back the arrow and locking my hand into place."
+    Haruhiro "Good. Maybe lift up your elbow just a little bit."
+    MC "Okay."
+    Haruhiro "Yeah, this looks good. Just like I told Honoka. Let go of the arrow and string in one fluid motion, but keep your body still. If you shift at the last second it could change your trajectory."
+    MC "Got it."
+    stop music
+    "I waited for Haruhiro to step back before letting go, aiming a little higher than Honoka had. My arrow landed in the middle of a tree trunk with a resounding thunk, embedding into the wood."
+    play music Schoolday
+    Haruhiro "Wonderful."
+    $setAffection("BE", 1)
+    show BE surprised
+    BE "Holy crud! Good job, Kei-chan! That was excellent."
+    MC "Oh, uh, heh. Thanks Honoka... That was just beginner's luck, I'm sure."
+    show BE happy
+    BE "Maybe, but look at how much further yours went! And deeper, too."
+    show BE neutral
+    BE "Should we go get the arrows out?"
+    Haruhiro "Negative! I shall retrieve the ammunition. It is unwise for new recruits to perform this task if they are not educated in that manner."
+    "Honoka and I sighed as the drill sergeant routine returned."
+    MC "Oh. So are we done then?"
+    Haruhiro "Affirmative! Both of you are welcome in the organization if you so wish!"
+    show BE happy
+    BE "I'm definitely in!"
+    Haruhiro "Welcome then, Cadet Honoka!"
+    MC "I'm not sure. I'll give it a think."
+    Haruhiro "If you decide to join our ranks, meet us at the clubroom tomorrow at 1600 hours. You two can have the rest of your afternoon back, now! Dismissed!"
+    jump BE021_after
+
+label BE021_testfail:
+    Haruhiro "Okay, widen your stance more. And make sure your feet are pointed straight ahead."
+    MC "Like that?"
+    Haruhiro "Yes. Okay, now pull your string back as you lift the bow, and point it towards a tree in front of you. Got it?"
+    MC "Yeah. I think so."
+    "I lifted the bow, and pulled the string back until my fingers were pressed against my cheek. Haruhiro took my hand and adjusted my grip."
+    Haruhiro "A little further forward, basically make that bone rest between thumb and forefinger."
+    MC "Damn."
+    Haruhiro "It's your first time. Just a small adjustment. You should be good now."
+    MC "Okay. Let go and don't move, right?"
+    Haruhiro "Whenever you're ready. Try and breathe out when you release, it'll keep your body steady."
+    MC "Let's do this."
+    stop music
+    "I released my breath and let go of the string. The arrow went sailing for a few seconds before it landed at an angle in the dirt, several meters away."
+    MC "Crud..."
+    "I let out a sigh, then dropped the bow to the ground."
+    MC "I guess I'm not in the club then, am I?"
+    play music Schoolday
+    Haruhiro "Negative! Both of you are still welcome to join the organization if you deem yourselves fit!"
+    MC "Huh? But I missed the shot."
+    Haruhiro "Affirmative! However, the point of this examination was to make sure you followed instructions and shot an arrow correctly without goofing off. There'll be plenty of time to fix your aim during actual club proceedings."
+    show BE surprised
+    BE "Oh, that's great then. We can both be in the club, Kei-chan."
+    MC "Oh. Great. I really thought I screwed that up. What did I do wrong?"
+    Haruhiro "There are indeed, many possible reasons, but none that would be due to your form! A breeze could have caught you off guard or you weren't aimed at the right spot. But you aimed properly. That's the point."
+    MC "Well, that's better?"
+    show BE happy
+    BE "See, Kei-chan. I think that's worth it to come here, isn't it?"
+    MC "Yeah. Pretty neat, but I'm not totally sure if I want to join."
+    Haruhiro "Very well! Either way, both of you are welcome to come to tomorrow's meeting if you want. Arrive at 1400 hours on the dot! You can do as you want the rest of the day, I shall remove the traces of our training. Dismissed!"
+    jump BE021_after
+
+label BE021_after:
+    show BE happy
+    BE "Thanks, Haruhiro! I'll see you at the club then!"
+    "Honoka and I started walking back towards campus."
+    show BE neutral
+    BE "So, what do you think. Want to join me in the archery club? It was easier than it looked, wasn't it?"
+    MC "Yeah. It was. It might be neat. I just hope he doesn't go all super-serious on us, again."
+    BE "Aw, I thought it was funny. For a bit at least. "
+    MC "Maybe. I'm just not entirely sure I'm a club person. I like hanging out in my room or just spending time with you."
+    show BE unique
+    BE "Well duh, you can spend time together with us in the club, silly."
+    MC "Of course we can. But it's not quite the same if we're doing work there."
+    show BE happy
+    BE "I'm gonna be in the club either way, Kei-chan. You won't be able to spend that time with me if you're not in the club!"
+    MC "That's a... good point."
+    BE "Well, hehe. Think about it. Would be fun to spend some club time with you where you're not just watching me!"
+    MC "Okay. I'll sleep on it, then."
+    show BE neutral
+    BE "Cool."
+    show BE surprised
+    BE "So, hey... you think Haruhiro like... part-elf or something?"
+    Haruhiro "I HEARD THAT."
+    "Honoka and I turned around. Haruhiro was still back at the training area, we'd walked a significant amount since then."
+    show BE sad
+    BE "Okay. Um. Now I don't want to be at the club, tomorrow."
+    MC "You... may want to bring him something to apologize."
+    show BE neutral
+    BE "I'll make a second trip to the vending machine beforehand."
+    "I put my arm on Honoka's shoulder and smiled."
+    MC "You'll be fine. I'm gonna head back home and take a shower. You good?"
+    show BE happy
+    BE "Yeah, I'll do the same. Okay, see you later then, Kei-chan. Thanks for coming!"
+    "Honoka snuck forward and planted a kiss on my cheek before skipping off, leaving me snickering as I changed direction to get back to my room."
+    jump daymenu
+
+label BE022:
+    scene Cafeteria with fade
+    play music Peaceful
+    $setProgress("BE", "BE023")
+    "After the last school lunch bell rang for the day, I walked down to the cafeteria, to look for a snack. There were a wide variety of quick eats to grab and I was feeling pretty peckish."
+    show BE happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    BE "Oh, hey, Kei-chan. Come over here!"
+    "Near the vending machine section of the cafeteria, Honoka was seated at a table with Alice across from her. The table looked quite cluttered, and caught my attention."
+    MC "Yeah, sure."
+    "I took a seat next to Honoka and looked at Alice's spread."
+    "Hey, Honoka. What's going on?"
+    MC "I'm helping Alice-chan do some sort of experiment."
+    BBW "'Assessment' would be a more accurate way of phrasing it."
+    BBW "I realize that vending machines are a valid alternative to the regular lunch line, but surely not every item in them is worth the space or cost."
+    if isEventCleared("PRG002"):
+        BBW "If I recall, Hotsure-san, you're aware that Kodama-san brings me snacks. I've been taking notes on what I eat."
+    show BBW happy
+    BBW "For a possible future project, I'm asking Inoue-san to test a variety of snacks from the machine, to see which have merit."
+    BE "I'm the sampler!"
+    show BBW neutral
+    BBW "A third opinion would be helpful here. Hotsure-san, would you care to assist as well?"
+    BBW "I do not intend to eat all of these myself. Especially not if they are below par. I can portion them out and you are welcome to whatever you like."
+    MC "I don't know. It's not exactly a healthy meal, is it?"
+    BE "It means we get dinner for free, Kei-chan."
+    MC "I'm in."
+    "Alice's setup was quite in-depth. Just at a glance, I saw twenty or so snacks laid out before Alice. Cakes, candy bars, and chips of various kinds laid before her."
+    show BBW happy
+    BBW "Now, here..."
+    "Alice pulled out two extra pencils, and ripped two pieces of paper off of her notepad, then handed them over."
+    BBW "I simply want your opinion on this. I'll be regarding it in more detail. But I simply want a rank of 1 to 3. 1 for you would not eat this normally. 2 for you would eat it willingly if offered, or free. 3 for you would pay money to eat it. Understood?"
+    BE "Oh yeah, got it. This'll be fun!"
+    MC "Sure, I understand. Just our personal preference?"
+    show BBW neutral
+    BBW "Exactly."
+    show BBW happy
+    BBW "Let's start with this pastry. This one intrigues me; chocolate and raspberry filling in the middle is not a common vending product."
+    BE "Ooh it sure isn't. Gimme."
+    "Alice swiftly took a knife and sliced the pastry into three sections, taking one for herself and handing the other two to me and Honoka."
+    show BBW neutral
+    BBW "Hmm..."
+    "Alice took a bite of her pastry and closed her eyes, holding the rest of the section in her hand as she chewed."
+    "Honoka on the other hand, had already consumed her chunk of pastry."
+    BE "Mm. That's good. I didn't have a lot of filling in mine, though."
+    MC "Me either, but the bit I had was good."
+    "Honoka and I looked at Alice's piece and saw the slightly-red chocolate oozed from the center. Poor distribution of chocolate, clearly."
+    show BBW happy
+    BBW "The filling is surprisingly creamy, and doesn't affect the interior of the pastry to the extent that it becomes gummy. The outside is fairly crisp but I don't believe that's due to any stale state of the pastry..."
+    MC "I think I'd give that a 2..."
+    "I scribbled down my note as Honoka did the same. Alice took another bite to further mull over her decision. Her eyes were still closed."
+    "Out of the corner of my eye I noticed Honoka snicker as she grabbed a candy bar from the far end of the pile. She quickly snuck it into her cleavage, making sure to place it so deep that there was no trace."
+    "She placed her index finger up to her mouth as she looked at me, and winked. I rolled my eyes as Alice finished her bite, and wiped her mouth with a napkin."
+    show BBW neutral
+    BBW "Next, these crisps."
+    "Again, Alice parsed out a bag of chips between the three of us. Honoka scarfed hers down fairly quickly while I took my time. As did Alice."
+    show BE neutral
+    BE "Hm, yeah. These crisps are really... crispy."
+    "As Honoka spoke, she once again reached down the table and grabbed one of Alice's chosen products, stuffing it down her shirt. I had no idea what her plan was."
+    BBW "Hm. A delicate texture but it might be over-encumbered with too much seasoning, which overpowers the potato flavor."
+    "Alice went through the rest of the items on her list, writing down her long notes while Honoka and I went through our numerical scores. Every once in a while, Honoka continued to add another item to the growing collection of food in her cleavage."
+    "I was surprised how much she had inside, and that Alice hadn't noticed yet."
+    BBW "Now we'll move on to...."
+    show BBW sad at Transform(xzoom=-1)
+    BBW "Wait."
+    show BBW angry at Transform(xzoom=1)
+    BBW "Where... are the fruit gums?"
+    show BE happy
+    BE "Hm?"
+    BBW "The fruit gums. A small pack of gummy candies in a selection of flavors. It was next on the list. I had them in the set, and they are not here."
+    show BE surprised
+    BE "Oh no. Are you sure you actually got them?"
+    BBW "I'm positive."
+    show BBW neutral at Transform(xzoom=-1)
+    BBW "Well, we'll move on to the pocky until the fruit gums decide to make themselves present..."
+    show BBW neutral at Transform(xzoom=1)
+    BBW "..."
+    show BBW angry
+    BBW "These are missing as well."
+    "I cast a look at Honoka, who continued to play coy."
+    MC "Well, we've already done a lot. I think we're okay for now, right?"
+    show BBW neutral
+    BBW "Not at all. The entire point of this was to purchase them all at once, to judge the freshness when removed from the machine. This invalidates their future judging if I can't locate them."
+    MC "It's okay, Alice, I'm sure they're here."
+    show BBW angry
+    BBW "They clearly are not."
+    BE "Yeah! Where else could they be, Kei-chan? They just vanished!"
+    menu:
+        "You've been hiding them in your cleavage, Honoka.":
+            jump BE022_c1_1
+        "I don't know, we'll just have to help with this experiment again later?":
+            jump BE022_c1_2
+        "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("WG") > 6:
+            jump BE022_c1_3
+        "(Convince Honoka to come clean) (disabled)" if getAffection("BE") <= 6 or getAffection("WG") <=6:
+            pass
+        "(Say nothing)":
+            jump BE022_c1_4
+
+label BE022_c1_1:
+    MC "You've been hiding them in your cleavage, Honoka."
+    show BE surprised
+    BE "Wh-What? Nooooo I haven't."
+    show BBW angry
+    BBW "Inoue-san, if this is indeed true, release them immediately."
+    show BE neutral
+    BE "I don't know what you're talking about!"
+    show BE angry
+    BE "I'm innocent I tell ya!"
+    show BE unique
+    BE "There's nothing in here at all!"
+    "Honoka squeezed her boobs a little too firmly, and the sound of crumbling cookies followed."
+    show BE neutral
+    BE "Uh... oops."
+    "Alice rubbed the bridge of her nose with her fingers."
+    $setAffection("BBW", 1)
+    BBW "Inoue-san, if you would be so kind as to remove all those items immediately, we can conclude this test. Those cookies first, please."
+    show BE sad
+    BE "Eh-heh...."
+    "Honoka blushed as she pulled treat after treat out of her bosom. The cookies first, which Alice quickly snatched and examined. Despite their location moments ago, she found three cookies in the bag that weren't broken and handed them out. She refused to let Honoka's shenanigans deter her."
+    BBW "I can only hope the quality of these have not been diminished due to your... boobery, Inoue-san."
+    show BE angry
+    BE "Hey, if anything, that would make them taste better! Right, Kei-chan?"
+    MC "It's not like you touched the cookies, Honoka. But, crushed cookies are... less good than un-crushed cookies."
+    show BE surprised
+    BE "Gasp! Oh Kei-chan!"
+    show BE sad
+    BE "To think you'd prefer a cookie held in a warm, soft hand, than in my heaving, full breast!"
+    show BBW neutral
+    BBW "Inoue-san. Please end your nonsense."
+    "Alice pat down her lips with a napkin."
+    BBW "And please remove the rest of the snacks. "
+    show BE surprised
+    BE "That was all of them!"
+    BBW "..."
+    MC "..."
+    show BE neutral
+    BE "..."
+    show BE unique
+    BE "Okay, yeah, here."
+    "Honoka reached back into her cleavage and pulled out a bottle of soda, then placed it on the table."
+    show BBW surprised
+    BBW "That... was not part of my selection, Inoue-san."
+    show BE surprised
+    BE "Oh, right."
+    show BE happy at Transform(xzoom=-1)
+    BE "I had that from earlier."
+    show BE happy at Transform(xzoom=1)
+    BE "Sorry. That's all of it, then."
+    show BBW happy
+    BBW "Well. Then. We can finish this test. If you are free of any further urges to distract us."
+    show BE sad
+    BE "I aaaam..."
+    BBW "Good!"
+    "Alice took a deep breath and resumed portioning out the snacks. Honoka continued eating her snacks for a while, judging them accordingly. It wasn't until we neared the end that Alice asked the question that deserved to be asked."
+    show BBW neutral
+    BBW "May I ask why you thought it necessary to hide some of the snacks?"
+    BE "Um. Honestly, I thought if we got to do this again, it would just be fun. I don't spend that much time with you!"
+    show BBW surprised
+    BBW "You, huh?"
+    show BE happy
+    BE "Mm-hm. I mean, the free snacks are nice, for sure. But, hey, it's something fun to do with one of my classmates. And Kei-chan too. I like that. Don't you?"
+    show BBW neutral
+    BBW "Oh. Well."
+    show BBW happy
+    BBW "I thought I had mentioned there would be more experiments like this. There are more treats in those vending machines, after all."
+    show BE neutral
+    BE "Oh! You mean..."
+    show BBW happy
+    BBW "Yes, Inoue-san, I was planning on calling you forward to do more of this. It would help to have the same palette each time."
+    show BE happy
+    BE "Well gosh, I guess I should have paid better attention, then!"
+    MC "Yeah, you probably should have."
+    BE "Oh, hush, Kei-chan. Chocolate makes it hard to focus."
+    MC "Still. As... entertaining as it is. Maybe don't hide other people's things in your boobs."
+    show BE neutral
+    BE "Gah, it's so tempting, though."
+    show BBW neutral
+    "Alice and I sighed."
+    show BBW happy
+    BBW "I suppose now that we're finished I should look at your scores. I... Inoue-san, did you give everything a 3?"
+    show BE happy
+    BE "Yeah. It was all so good."
+    "Alice suddenly leaned forward and slumped her head into her hands."
+    show BBW sad
+    BBW "There may have been a flaw in my thinking process."
+    MC "Er, you still have mine."
+    show BBW neutral
+    BBW "Yes. Thank you for that, Hotsure-san. It's very much appreciated. I'll put this to good use."
+    show BE happy
+    BE "And my results too, right?"
+    "I saw Alice physically struggle with how to answer her."
+    MC "Yep, yours too, Honoka. Nice work. "
+    MC "But you lose points for hiding stuff in your cleavage."
+    show BE sad
+    BE "Dang it."
+    BBW "Thank you, Hotsure-san."
+    show BE happy
+    BE "Yeah, thanks, Kei-chan, food is always better with more people."
+    BE "Here, Kei-chan and I will help clean up."
+    show BBW happy
+    BBW "Thank you. I'll just peruse your scores a bit more."
+    hide BBW with dissolve
+    hide BE with dissolve
+    "Honoka and I grabbed the bevy of wrappers and brought them over to the bins to toss them out. As we left the cafeteria, Honoka nudged my ribs with her elbow."
+    MC "Ow."
+    show BE sad at center with dissolve
+    BE "Kei-chan, why'd you sell me out like that?"
+    MC "I, I wasn't trying to do that. I just wanted Alice's experiment to work and it wasn't gonna work right if you were hiding stuff."
+    show BE neutral
+    BE "I guess. Hm. You think Alice is mad at me?"
+    MC "She seemed to be fine by the end. I think you just struck a nerve."
+    show BE happy
+    BE "Good. Didn't mean to upset her."
+    MC "I know. Just... gotta think more carefully next time."
+    show BE neutral
+    BE "Right. Right. Anyway. I'm full of snacks so I'm gonna go lay down! I'll talk to you later, Kei-chan."
+    MC "Heh, okay, Honoka. Talk later."
+    jump daymenu
+
+label BE022_c1_2:
+    MC "I don't know, we'll just have to help with this experiment again later?"
+    show BBW angry
+    BBW "No no no. That won't do. If you're judging things, they have to be on equal terms."
+    show BE neutral
+    $setAffection("BE", 1)
+    BE "Does that really work with vending machine goods? I don't think everything in there was packaged on the same day."
+    show BBW surprised
+    BBW "Why... had I not thought of that?"
+    show BE happy
+    BE "I mean, with how many students we have here, it's possible they're restocked pretty regularly."
+    MC "Honoka has a good point. I've seen some sections of the machine that go empty pretty regularly, because they're pretty popular."
+    BE "Right! But some of that seems to sit there for ages. I've seen a vending machine once where, no kidding, twenty of the slots were for diet cola. What's the point! If you're on a diet you're not getting crap from a vending machine."
+    show BBW neutral
+    BBW "You make some fair points. But then, what else could I do in this situation?"
+    MC "The idea is to see what we'd rank each snack, right?"
+    BBW "That's correct."
+    MC "Then, maybe the best thing to do would be, something where we try them from a convenience store, or supermarket. A vending machine doesn't guarantee as much freshness."
+    BBW "But my idea behind this is, what are your thoughts on the product as they're presented in the vending machine."
+    show BE neutral
+    BE "Hm. Well, if your plan is to like, have your own vending machine in the future, then wouldn't you make sure it was stocked full of items everyone liked?"
+    show BBW happy
+    BBW "Of course."
+    show BE happy
+    BE "Then, you wouldn't need to worry about freshness. Ideally, it would be getting stocked so often that the turnaround time is really low."
+    show BBW happy
+    BBW "A large amount of stock would then be beneficial, then. It would be good to maybe limit the machine to the most popular snacks out there, and then work from there to stock multiples of each."
+    BE "Like how there's usually a few for sodas, because those go quickly. But even more for water."
+    show BBW neutral
+    BBW "Precisely. This is a better way of thinking. Hm."
+    show BBW happy
+    BBW "Thank you. This might be helpful. I suppose, even with that said, there's still these to test out, and there's no sense letting them go to waste. Shall we finish?"
+    BE "Yes, please!"
+    MC "I'm game."
+    "As Alice portioned out the snacks that Honoka hadn't stuffed away, I looked to Honoka to see if she was going to come clean. She just snatched the first bit of food placed in front of her. So, the answer was, 'no she wasn't'."
+    "After we'd eaten what we could, Alice collected our scores."
+    BBW "Once again, thank you for this information. It may change how I value your scores, but it's important to have feedback like this either way."
+    MC "Well, we're happy to help. Do call us over again if you need more help."
+    BE "Absolutely. This was fun. I never knew you had such a refined palate, Alice-chan."
+    show BBW neutral
+    BBW "Oh, I don't think it's all that impressive."
+    show BE surprised
+    BE "It totally is! I never heard potato chips described in such a beautiful way before."
+    show BBW aroused
+    BBW "Oh... thank you."
+    show BE happy
+    BE "Hehe, you're welcome. Yes, please let me know if you need me to eat more food. I'll do it."
+    show BBW happy
+    BBW "I'm sure you will."
+    MC "Here, I'll help take care of all this."
+    "I gestured to the wrappers and empty containers."
+    show BBW neutral
+    BBW "Thank you, Hotsure-san. I shall see you in class tomorrow, then?"
+    MC "Yeah. Have a good night."
+    hide BBW with dissolve
+    hide BE with dissolve
+    "I nudged Honoka to have her help me grab the food wrappers and we brought them over to the trash cans."
+    MC "So, what was the deal with hiding her food?"
+    show BE neutral at center with dissolve
+    BE "Honestly I did it for a laugh. But, then I had an idea about the reasoning for her doing this and it felt off all of a sudden."
+    BE "I would have shown her if she got really mad, but, she kind of forgot about it when we brought up a better way to do the test."
+    MC "I guess she did. Still, what are you going to do with that now?"
+    "Honoka fished in her cleavage, and looked up at the ceiling."
+    show BE happy
+    BE "Second dinner, by the feel of it."
+    "I sighed."
+    MC "Well, you enjoy that, Honoka. I'm gonna head back to my room. I'll see you at class tomorrow, okay?"
+    show BE neutral
+    BE "Sounds good, see you later, Kei-chan!"
+    hide BE with dissolve
+    "Honoka dashed off, holding an arm under her chest to make sure her bounty didn't escape, as I left to my room."
+    jump daymenu
+
+label BE022_c1_3:
+    "I turned to Honoka and lowered my voice."
+    MC "Honoka, come on, fess up."
+    "Honoka whispered back to me."
+    show BE neutral
+    BE "What? Come on, this is funny."
+    "I stared at her, and when she didn't get the message, flicked the side of her thigh."
+    show BE sad
+    BE "Ow. Okay..."
+    show BE neutral
+    BE "Ahem. Um, sorry, Alice-chan."
+    "Honoka reached into her breast pocket and slowly pulled the snacks out, placing them on the table in front of Alice."
+    show BBW neutral
+    BBW "Inoue-san, I'm going to assume you had a reason for doing this?"
+    BE "Partly just to see if I could, honestly?"
+    BBW "And the other reason would be?"
+    BE "Well, I guess to eat them later."
+    show BBW sad
+    BBW "But the point of this test is to eat them now."
+    BE "Right, but, I guess I don't understand that?"
+    show BBW angry
+    BBW "How could you say that now when I explained it earlier?"
+    MC "H-Hold on a second. Honoka, what's the problem with this?"
+    BE "Vending machines aren't really thought of as 'fresh' to begin with. If it's stale, that's a problem for sure. But it's not like steak. A candy bar doesn't taste different on a day to day basis."
+    MC "Alice, does that make sense?"
+    show BBW neutral
+    BBW "I suppose it does. But if you had an issue with my setup you could have simply explained it to me, rather than try to scurry food away and assume I would change my idea."
+    MC "That's fair. Honoka, you understand that it was a mistake to do that?"
+    show BE happy
+    BE "I do. I'm sorry, Alice-chan. I didn't think that it would upset you that much but, that was still stupid."
+    BBW "I appreciate and accept your apology, Inoue-san. Is this all of the snacks we had left to test?"
+    BE "It is!"
+    show BBW happy
+    BBW "Well then, I shall clearly need to re-evaluate what I had planned. But if you had more ideas, I'd like to hear them. We can continue this as well."
+    show BE neutral
+    BE "I am still hungry."
+    MC "I am too. Glad to see this didn't get into an argument."
+    $setAffection("BBW", 2)
+    show BBW neutral
+    BBW "You should know me better, Hotsure-san. I'm a rational person."
+    $setAffection("BE", 1)
+    show BE surprised
+    BE "And arguments are stupid anyway. We can just eat our problems away!"
+    MC "Not what I would have said, but I suppose that's a fair point."
+    show BBW happy
+    BBW "I'll admit, I do not tend to go for these kind of snacks. But in good company, they're much more enjoyable."
+    show BE happy
+    BE "Exactly. It's like, if everyone always had to eat together with someone, everybody would be friends with everybody else."
+    BBW "Er, I can't say I necessarily understand that sentiment, but it's a nice one all the same."
+    BE "Oh my gosh, hey, Alice-chan. Have you ever fed someone?"
+    show BBW neutral
+    BBW "I'm feeding you right now, aren't I?"
+    show BE neutral
+    BE "No no, I meant, like, feeding someone hand-to-mouth."
+    BBW "No. Why would I have done that before?"
+    show BE surprised
+    BE "What?! You've gotta try, it's so great. It feels fantastic. Watch."
+    "Honoka grabbed my shoulder and flipped me towards her."
+    show BE happy
+    BE "Open wide, Kei-chan!"
+    MC "Hono-mph!"
+    show BBW surprised
+    "Before I could respond, Honoka grabbed one of her fruit snacks and fed it to me, keeping her finger on my mouth until I swallowed."
+    MC "U-um, thanks."
+    BE "See! It's so fun!"
+    BBW "I... see."
+    show BBW neutral
+    BBW "May I try it as well?"
+    BE "Go for it."
+    show BBW aroused
+    BBW "A-Ahem, Hotsure-san, if you wouldn't mind... "
+    "Honoka's eyebrows raised as she looked at me, and turned my body back towards Alice. I leaned forward and opened my mouth as she fed me the gummy snack."
+    MC "Ah, th-thank you."
+    BBW "You're... quite welcome..."
+    show BE happy
+    BE "Okay Alice-chan, my turn!"
+    show BBW surprised
+    BBW "Hm?!"
+    "Honoka leaned all the way forward out of her seat, and plopped another gummy snack in Alice's mouth, giggling all the while."
+    show BBW happy
+    BBW "Um, th-thank you. That was quite good."
+    BE "Hehe!"
+    "Honoka stayed there. Her butt was higher up than the back of the chair as she stayed leant forward, her mouth open."
+    show BE neutral
+    BE "Ah."
+    show BBW surprised
+    BBW "Oh! Um. Yes. Here."
+    "Alice hesitantly placed a gummy snack in Honoka's mouth, who snatched it like a snapping turtle."
+    show BE happy
+    BE "Mm. Yum."
+    MC "I guess... my turn then. Here, Honoka."
+    show BE aroused
+    BE "Ooh, taking initiative, I like that."
+    "Honoka closed her eyes and opened her mouth, blushing faintly as I popped a snack past her lips."
+    show BE happy
+    BE "Mm, so tasty, Kei-chan."
+    MC "Alice?"
+    show BBW surprised
+    BBW "I-If only to be fair..."
+    "Alice leaned forward and opened her mouth, blushing heavily as I slipped the gummy onto her tongue."
+    show BBW happy
+    BBW "I-It is quite delicious. Thank you."
+    MC "You're welcome."
+    show BBW neutral
+    BBW "I, ah, think I must be going. I have some things to think over."
+    show BE neutral
+    BE "I better get goin' too."
+    MC "Yeah, me three."
+    "I reached for some of the wrappers on the table. Honoka and Alice did as well so we could dispose of them."
+    show BE happy
+    BE "Thanks for inviting me, Alice-chan. This was fun!"
+    MC "Yeah, I had a fun time. Was certainly interesting."
+    show BBW happy
+    BBW "Well, thank you for your cooperation. I will remember to keep you informed on what I have planned. Have a pleasant evening, you two."
+    hide BBW with dissolve
+    "Alice turned to leave as Honoka waved goodbye."
+    BE "I'm off too. Bye Kei-chan!"
+    hide BE with dissolve
+    "And with that, Honoka skipped away, leaving me to walk back to my room alone. As I did, my fingers faintly rubbed against my lips."
+    jump daymenu
+
+label BE022_c1_4:
+    "I clammed up. I didn't want to call Honoka out. But Alice was looking more frustrated by the minute. She even looked under the table and didn't find anything. I hoped Honoka would use that chance to empty her breast pocket, but she just sat there."
+    show BBW angry
+    BBW "Neither of you have any idea where the remaining snacks went?"
+    show BE neutral
+    BE "Nope!"
+    BBW "I am not stupid. It is just the three of us here. There is clearly some foul play at work and I do not appreciate it!"
+    play sound Thud
+    show BBW angry with vpunch
+    "Alice suddenly slammed her hand on the table and stood up, tossing the used wrappers up in the air from the impact of the punch."
+    BBW "Tell me now. What is going on?"
+    "Honoka hurriedly held up her hands."
+    show BE sad
+    BE "O-Okay, sorry, just hang on a moment."
+    "Honoka reached into her cleavage and began pulling out the snacks she had pilfered from Alice's stash. With each item extracted, Alice's face grew more red, until Honoka stopped."
+    "Alice's eyes looked over all the goodies that Honoka had hidden away, and exhaled a breath she had been holding in."
+    show BBW neutral at Transform(xzoom=-1)
+    BBW "Inoue-san, I do not appreciate this."
+    BE "S-Sorry, Alice-chan, I thought it would be funny."
+    show BBW angry
+    BBW "I repeat. Inoue-san, this is in every way; unfunny, unappreciated, and unwanted. Do you have anything to say about this, Hotsure-san?"
+    MC "Well, um. Honoka didn't mean anything by it. It was just meant to be a joke."
+    $setAffection("BBW", -1)
+    show BBW angry at Transform(xzoom=1)
+    BBW "You saw I was getting upset, and that did nothing to change your mind?"
+    MC "I'm, I'm sorry. That was clearly a mistake."
+    if getAffection("BBW") > 4:
+        BBW "Really, Hotsure-san, I thought you were a better judge of character..."
+    else:
+        BBW "Thank you for your unique, valuable input. Clearly you were a boon to this test."
+    BE "H-Hey. Kei-chan didn't mean anything, he meant less than me. Even if he tried to get me to stop, there's no guarantee I would have..."
+    show BBW sad
+    BBW "The fact he did not even try is indictment enough."
+    MC "I, I really am sorry, though."
+    "Alice was still standing up. She grabbed her backpack, and with one sweep, pulled most of the treats into the bag. She left the ones that Honoka had hidden originally."
+    show BBW angry
+    BBW "Never mind. If you wanted them so much, you can just have them."
+    "Alice turned around and began walking out of the cafeteria."
+    MC "Wait, please, let us make it up to you!"
+    hide BBW with dissolve
+    show BE at center with dissolve
+    "Honoka opened her mouth to speak, but nothing came out. Alice left the room in a huff. I slumped back down in my seat and looked over at Honoka."
+    BE "I feel... like a real jerk."
+    "Honoka's elbows rested on the table, her hands resting on one another. She pulled her torso back enough to get... a majority of her breasts under the table, at least, then tilted forward and rested her head on her hands with a sigh."
+    MC "Yeah. So do I. I hope she's okay."
+    "Honoka just made an affirmative sound, her mouth muffled by her uniform's sleeves."
+    MC "Do you think we should go after her?"
+    BE "I wouldn't."
+    "Honoka sat back up and took another deep breath."
+    show BE neutral
+    BE "I don't think I'd have the energy to go after her right now anyway. But it feels like a bad idea."
+    MC "You're probably right."
+    show BE sad
+    BE "I'm sorry, Kei-chan. I didn't mean to get Alice-chan upset at you."
+    if getAffection("BBW") > 4:
+        BE "I really hope I didn't screw up your relationship with her. You two seem close."
+    else:
+        BE "She's always been hard to get friendly with, I hope this doesn't wreck everything."
+    MC "I think everything will be okay once she gets time to cool off. Do you want to come back to my room and play video games or something?"
+    BE "No. I kind of want to just crawl into a hole for a bit. But beds are more comfy. I'll do that instead."
+    "Honoka stood up, sighed for a third time, and put her hand on my shoulder."
+    show BE neutral
+    BE "Sorry again, Kei-chan. I'll see you later. Be well."
+    MC "Okay, Honoka. Feel better."
+    hide BE with dissolve
+    "With nobody else in the cafeteria, there wasn't any reason for me to stay. I grabbed my backpack and left as well."
+    jump daymenu
+
+label BE023:
+    scene Track with dissolve
+    $setProgress("BE", "BE024")
+    "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
+    "Compared to other clubs that Honoka had joined, there didn't seem to be much to archery in terms of different activities they did. Apart from making sure they used the proper technique, and firing at targets, there was no variety."
+    "The benefit of actually being in the club was the extra protective gear they could get for their members. Apart from the arm guards and gloves, every student got their own chest guard as well. Which was vitally important for Honoka."
+    "Apart from the sound of the captain's commands telling the members when to draw, aim, and shoot, there weren't many sounds. Just the swishes of the bowstrings getting released, the thuds of arrows hitting targets, and occasionally the duller thuds of arrows landing in the grass."
+    play sound Whistle
+    Haruhiro "Good work so far. Let's break for ten. Get yourselves some drinks and snacks if you need."
+    "The captain whistled again to let everyone know to stay away from the target area so he could go retrieve the arrows. I waved over to Honoka."
+    MC "Honoka!"
+    show BE happy with dissolve
+    BE "Yo, Kei-chan, hehe. Glad to see you."
+    MC "Same. Doing good out there. How far away are the targets?"
+    show BE neutral
+    BE "About fifteen meters, I think. But that's only for this lesson, to get us ready for a regular distance. Thirty is the normal minimum."
+    MC "Huh, and then if you go to a competition, it's what, fifty?"
+    show BE happy
+    BE "Haha, nope! It's ridiculous, it's like ninety meters away or something crazy like that. So yeah, you've got to be pretty good to hit a target from that far away."
+    MC "That... does sound insane. Holy crud. But you've hit the target every time so far, so I think you can do it."
+    show BE happy
+    BE "I sure hope so."
+    show BE angry
+    BE "Though I hope we get out of these early training distances soon. These are for babies."
+    MC "Gotta learn to crawl before you can walk."
+    show BE sad
+    BE "Yeah, guess so."
+    show BE happy
+    BE "I wanna be like Artemis, just piercing through targets hundreds of meters away, like pyow!"
+    MC "Well if you get that good I'm pretty sure you'd be set for life. So aim for that, and then even if you don't get that amazing, you still will be kilometers ahead of other competitors."
+    BE "That's the plan!"
+    UNKNOWN "Honoka!"
+    "Honoka turned her head towards the other club members, as did I, but we didn't see who addressed her."
+    UNKNOWN "Behind you..."
+    show BE surprised
+    BE "Oh!"
+    "After turning around we saw the voice who called out to her. The voice belonged to a small girl with dark black hair down to her shoulders. More notable were her sneakers, which looked far bigger than any I'd ever seen. One shoe could have fit both of my feet, and maybe both of Honoka's as well."
+    if isEventCleared("BE016"):
+        "Seeing her large feet helped me remember. This girl was in the basketball club back when Honoka was a member."
+        show BE neutral
+        BE "Um, hey, Sakie. What's up?"
+        MC "Oh, Sakie. Right. We met at one of Honoka's basketball practices, remember?"
+        "Sakie looked at me and my outstretched hand, but then simply sidestepped me to get closer to Honoka. It looked like she'd have gotten closer if she could have, but she stopped when Honoka's shoes met hers."
+    else:
+        "I looked over to Honoka to see if there was any expression of remembrance on her face. She sighed and glanced over at my direction, confirming yes, she did."
+        show BE neutral
+        BE "Um, hey, Sakie. What's up? Kei-chan, this is Sakie, she was in the basketball club with me."
+        MC "Oh. I see. Good to meet you."
+    "I extended my hand out towards Sakie, but she rebuffed my attempt to introduce myself. Instead, she just walked up to Honoka and stopped when her large feet met the ends of Honoka's."
+    show BE surprised
+    BE "Sakie, is everything okay?"
+    Sakie "No. You missed basketball practice again. That's the fifth one you've missed."
+    show BE neutral
+    BE "Basketball practice? I..."
+    show BE happy
+    BE "Heh, Sakie, I haven't been in basketball club for over a week now!"
+    Sakie "I know. That's why I came to find you. You can do two clubs but you can't do both if one takes away time from the other's practices."
+    MC "Honoka. You did quit the basketball club, right?"
+    BE "Of course I did!"
+    show BE neutral at Transform(xzoom=-1)
+    BE "I mean... I stopped going..."
+    Sakie "You did not tell any of us that you had actually quit."
+    MC "Not even the coach?"
+    show BE sad
+    BE "No..."
+    menu:
+        "Call Honoka out on leaving without saying anything.": # BE.Feminine +1
+            jump BE023_c1_1
+        "Defend Honoka's choice to leave without saying anything.": # BE.Tomboy +1
+            jump BE023_c1_2
+        "Say Nothing.": #BE.Affection +1
+            jump BE023_c1_3
+
+label BE023_c1_1:
+    $setVar("BEFeminine", getVar("BEFeminine") + 1)
+    MC "Honoka. Why would you do that?"
+    show BE surprised
+    BE "Huh?"
+    MC "You can't just... leave a club like that. Look how upset Sakie is, because she didn't know. She looks worried."
+    Sakie "I was not worried."
+    MC "You weren't?"
+    Sakie "No. She hasn't come back, so I haven't been able to return her hairpin."
+    MC "Hairpin?"
+    show BE neutral
+    BE "Oh, wow, honestly I forgot I let you borrow one."
+    BE "{size=-6}She forgets a lot of stuff.{/size}"
+    BE "Sakie, you can just keep that if you want. I didn't even worry about it."
+    Sakie "...But it's yours."
+    show BE happy
+    BE "It's yours now! It's... a gift."
+    Sakie "Ah. I'll take it, then..."
+    Sakie "..."
+    Sakie "So you aren't coming back to basketball club?"
+    show BE sad
+    BE "No, I'm not. Sorry..."
+    Sakie "Why not?"
+    BE "Do I really have to say it?"
+    MC "I would normally say you're not obligated to, but considering how abruptly you left, I think Sakie deserves a bit of an explanation."
+    "Honoka sighed. Her gaze turned away as she scratched a cheek and muttered to herself."
+    show BE angry at Transform(xzoom=-1)
+    BE "Because it was getting annoying."
+    Sakie "What was?"
+    show BE sad at Transform(xzoom=1)
+    BE "All of the... bouncing."
+    Sakie "Bouncing is part of the game, Honoka."
+    show BE angry
+    BE "Not the ball!"
+    show BE unique
+    BE "These."
+    show BE neutral
+    BE "Soccer was a lot of running, but most of the time it was more fluid and, I don't know, easier to change momentum. Basketball had a lot more stops and quick changes, and it started hurting by the end of the game."
+    show BE angry
+    BE "That is, whenever I was put in the game instead of just on the bench."
+    Sakie "Honoka, we had over fifteen people in the club, regulation games are five on five, we couldn't always all play together."
+    show BE sad
+    BE "I know. I just..."
+    MC "Didn't feel like anyone would notice if you just left?"
+    BE "Oof, yeah. That's pretty much it. Oh boy, that sounds really bad when you put it like that."
+    Sakie "We noticed you were gone. I didn't realize you'd actually left, though."
+    show BE neutral
+    BE "That was my fault. I shouldn't have just bailed on everything. But I didn't have anything to turn back in, so it felt like it could be a clean cut."
+    MC "Can you go to the basketball coach after this is done and apologize?"
+    show BE happy
+    BE "Yeah, I will. This is university after all. We're adults, now. I gotta act like one."
+    show BE neutral
+    BE "It's just not fun when I have to admit that the girls get in the way of what I want to do."
+    Sakie "I get what you mean."
+    show BE surprised
+    BE "You do?"
+    "Sakie lifted up one of her feet, and pointed it towards the sky. The heel rested on the ground as the toes shot upward, and as she lifted the foot it lightly brushed against the underside of Honoka's bosom."
+    Sakie "It's not easy to play with these. But I make do. Simple. Big feet means basketball. So I do it."
+    show BE happy
+    BE "Heh, that's a nice, basic outlook, Sakie. I kind of dig it."
+    Sakie "Good. Are you going to come back to the basketball club?"
+    show BE neutral
+    BE "No, I don't think so. I'm gonna keep with these guys for now. Shooting arrows is pretty badass."
+    Sakie "I see. Sounds dope."
+    show BE happy
+    BE "Yeah, you should give it a try. I tried to get Kei-chan hooked in here..."
+    "Honoka roped her arm around my shoulder and suddenly yanked me in to a hug, pressing my face right against her chest."
+    show BE neutral
+    BE "But he's more wishy-washy than a laundromat and can't commit to a club."
+    MC "Hi pot, I'm kettle."
+    show BE happy
+    BE "Oh, hush."
+    "Honoka released me from her pleasant prison-hold, and cracked her neck to the side."
+    show BE neutral
+    BE "Whether you want to or not, make sure you at least tell the coach if you ever get done with basketball. Don't be like me. Do as I say, not as I do."
+    Sakie "Got it. Thank you for the apology."
+    BE "Eh, sorry I needed to give one in the first place. Take care, score some big hoops, okay?"
+    "Sakie nodded and made her way off of the archery field. I checked my phone for the time, and pointed it out to Honoka. There wasn't much time left for her break."
+    show BE sad
+    BE "Ah nuts, I'm starving, too."
+    "Honoka raced over to the snack table to scarf down some of the offered goods. I sat back down on the nearby grass to watch as the whistle was blown, and the team went back to practicing."
+    jump BE023_c1_after
+
+label BE023_c1_2:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "Well, I mean, how long were you in the club, a week?"
+    show BE sad
+    BE "Something like that? Not very long, at least."
+    "I turned to face Sakie, standing a bit directly in front of Honoka."
+    MC "So yeah, it's fine she did what she did. She wasn't even being utilized in the club. I remember. She told me that she was barely being put on the court."
+    BE "Kei-chan..."
+    MC "And I mean, you come to track her down? That doesn't seem cool to me."
+    Sakie "It's not cool to leave without telling anybody."
+    MC "Maybe she left because she felt embarrassed about something, and it was just easier to-"
+    "Honoka suddenly cut me off by placing her hand on my shoulder and pulling me back a step."
+    BE "Thanks, Kei-chan, but I'm a big girl, I can fend for myself here."
+    "She cleared her throat and stepped forward, looking down for a second before lifting her gaze."
+    show BE neutral
+    BE "Yeah, as much as it stinks, Kei-chan kind of hit the nail on the head. It was embarrassing."
+    show BE sad
+    BE "Basketball was fun, but it was clear I wasn't that good with it. But, there were some more obvious issues that made me wanna leave."
+    Sakie "Is it not more embarrassing to wuss out of something?"
+    show BE surprised
+    BE "What?! Hey, I didn't wuss out!"
+    Sakie "..."
+    MC "..."
+    show BE neutral
+    BE "..."
+    BE "Okay, yeah I wussed out. I shouldn't have, but I did. It was just... simpler, you know? So much easier to just step away and consider it wasn't my problem."
+    Sakie "It is your problem."
+    "Honoka looked like she was about to slump down into her knees. Sakie didn't mince words."
+    show BE sad
+    BE "Gah, I know... I'm sorry, Sakie. It was lame of me to just bail on everybody. I just didn't think that people would notice."
+    Sakie "The coach noticed. So did the rest of us. It's more than normal but it's a small team. Your lack of presence was felt."
+    BE "Ah, geez."
+    show BE neutral
+    BE "Normally I think I'm tough enough to stick through hard times like that. But it's hard to stay in one spot when the school has so many opportunities."
+    show BE happy
+    BE "I just wanted to move on to something else, and not feel like I was wasting time in a club I wasn't enjoying all that well. Do you understand?"
+    Sakie "Hm. I suppose."
+    BE "I do apologize for letting everyone down, though. I'll try and stop by the club later and tell everyone in person. At least the coach."
+    MC "That's cool. Good of you to do so."
+    show BE neutral
+    BE "Eh, if I had done that in the first place, I'd have been better off. Now I'm doing it out of guilt instead of obligation."
+    MC "At least you're going to do it, that's to your benefit."
+    show BE happy
+    BE "I guess you're right."
+    BE "So hey, Sakie, did you want to stick around and watch for a bit? Maybe archery appeals to you too."
+    Sakie "No thanks. I just came to see what was up."
+    show BE neutral
+    BE "Fair enough, fair enough. Well hey, good luck with the club, score some three-pointers for me."
+    Sakie "I would have to. You never did any yourself."
+    show BE surprised
+    BE "Hey! I was... close."
+    MC "Close only counts in horseshoes and hand grenades."
+    "I put my hand on Honoka's shoulder as Sakie turned and left."
+    MC "Sorry about earlier. Was I doing that thing where I spoke for you and you didn't appreciate it?"
+    show BE neutral
+    BE "Kind of. But it got me talking at least, so it was probably to the benefit of the conversation that you did so. I normally react quicker than that."
+    MC "Speaking of, time for the break is almost up, you better get a snack or something so you don't collapse later."
+    show BE surprised
+    BE "Oh shoot, you're right! The granola bars will all be gone! Talk to you in a bit, Kei-chan!"
+    "Honoka jet herself to the snack table to grab something quick before the club resumed, while I sat down and watched it continue."
+    jump BE023_c1_after
+
+label BE023_c1_3:
+    "This confrontation seemed awkward. I didn't want to interrupt, or assume Honoka's intentions. Eventually, she stepped forward and spoke up."
+    show BE sad
+    BE "Yeah, I did just leave, didn't I? At the time I thought it wouldn't matter, but I guess it did."
+    Sakie "One missed meeting would be understandable. You missed more. That's not cool."
+    show BE neutral
+    BE "It's not. But what made you decide to track me down instead of just assuming I had left?"
+    Sakie "To double-check. Don't assume. That's simple stuff."
+    show BE happy
+    BE "Ah... heh, like how I assumed everyone would just be cool with me leaving without saying anything?"
+    Sakie "Exactly."
+    show BE neutral
+    BE "But you're the only one who came to find me. So thank you, Sakie."
+    Sakie "Don't thank me. You left behind a hairpin of yours, too. I wanted to return it."
+    "Sakie handed over a small hairpin to Honoka. She looked at it, confused. It was a simple, nondescript pin. One that probably came out of a gachapon machine, at the most."
+    BE "Oh, um. Thank you. I forgot I lent you this."
+    Sakie "Now we're even."
+    show BE happy
+    BE "I guess so. Will you tell the others that I've quit, then?"
+    Sakie "I think you should do that."
+    show BE neutral
+    BE "...Yeah you're right. What am I saying? That's me passing the back of responsibility again. Stupid."
+    MC "Don't say stupid. Making mistakes doesn't make you stupid."
+    $setAffection("BE", 1)
+    show BE happy
+    BE "Heh... you're right. Never mind, Sakie. I'll go tell the others when I'm done with archery club, okay?"
+    Sakie "Okay."
+    show BE neutral
+    BE "Good. Yeah, a promise is a promise. And right now my promise is to get back to archery, okay?"
+    Sakie "Okay. If you quit this one too, make sure to tell them."
+    "Sakie glared a bit at Honoka before turning around and leaving the field. It also left Honoka with a metaphorical dagger through the heart."
+    MC "She's... pretty direct, isn't she?"
+    show BE happy
+    BE "Yeah, but it means she makes good point. Sorry if that was awkward, Kei-chan. But I didn't really want to tell her my reasons for leaving the club. I know it wasn't cool, but..."
+    MC "Can you tell me the reasons? Was it just because you weren't playing as much?"
+    show BE neutral
+    BE "That's definitely part of it. But also, well, the puppies were getting in the way."
+    MC "Puppies?"
+    show BE unique
+    BE "The sweater-puppies. Even with a good bra, they were bouncing all over and making it hard to focus."
+    MC "Oh. No, I understand. But, archery is doing okay?"
+    show BE happy
+    BE "I'm managing! They have good equipment here, and I haven't thwacked my boob with the bowstring yet, so that's nice."
+    MC "Yeah. You don't want to be like those Amazons that had to cut off a boob in order to use a bow."
+    show BE surprised
+    BE "Oh!"
+    show BE happy
+    BE "Hirohito actually said that's just a bunch of bull! There's no proof that it was ever a thing!"
+    MC "Really? Huh, wow, I thought that was true."
+    BE "Nope. Ladies with luscious lumps can still draw a bow! It's pretty awesome."
+    MC "Well, that's good. Though, speaking of, you better get back there, your break time is coming to a close."
+    show BE surprised
+    BE "Agh shoot I'm so hungry too, better eat quick. Thanks Kei-chan, see you in a bit!"
+    "Honoka went to the snack table to grab some food before they got back to practice. I sat down and waited for it to be over."
+    jump BE023_c1_after
+
+label BE023_c1_after:
+    hide BE with dissolve
+    "After a few more sessions of shooting targets at the short distance, the club members moved them from fifteen meters down to thirty meters, and tried again."
+    "It was clear that there was a difference in difficulty now that the targets were further away. But, Honoka still seemed to be doing great. Several of her shots were bullseyes, judging by her happy reactions. "
+    "Eventually the practice ended, and after helping back up, Honoka came over."
+    show BE happy with dissolve
+    BE "Whew, that was awesome. It's so satisfying hearing that thud when an arrow smacks into the target."
+    MC "I can tell. You're getting better at this."
+    BE "Hehe, thanks."
+    MC "So what did you wanna do now?"
+    show BE neutral
+    BE "Hm. Honestly, I'm pretty tired. But, I promised I'd go to the basketball club and apologize for leaving earlier. So I should do that."
+    MC "Okay. Sounds good. I'm glad Sakie came down then, it's important for you to fix that. Don't do it again, okay?"
+    show BE happy
+    BE "Heh, I won't. Lesson learned. Promise."
+    MC "Good. Okay, well I'm going to head back to my room. Just text me if you want to do something later."
+    BE "Sounds good. See you later, Kei-chan."
+    "Honoka pulled me into a deep hug, grunting a bit, and released me with a smile. After that she walked towards the basketball court to apologize, and I walked home, relishing that nice warmth from her hug."
+    jump daymenu
+
+label BE024:
+    scene black with fade
+    play music Steamy
+    $setProgress("BE", "BE025")
+    show BE angry with dissolve
+    #panting
+    BE "Mmm, Kei-chan, it's so hot!"
+    MC "I know. Just keep going at it. It'll help."
+    #panting
+    show BE aroused
+    BE "I'm trying. It just, there's so much of it!"
+    MC "You can handle it. I've seen you gobble down more than that before."
+    #panting
+    show BE unique
+    BE "But nothing else has ever been this good before."
+    MC "It'll be over soon. Then you can relax."
+    #panting
+    show BE happy
+    BE "I just think it'd be so much better if I took my shirt off..."
+    stop music
+    show BE neutral
+    BE "Here, Kei-chan, hold my ice cream for me."
+    MC "What?! Honoka, no, you can't just strip in the middle of town."
+    scene Town with fade
+    play music Busy
+    show BE sad with dissolve
+    BE "But it's so ho-o-o-ottttt..."
+    "Honoka wasn't kidding. The heat was pretty bad that day. Still, it had been her own idea to brave the heat and get some ice cream. We would have been fine at our rooms, with the air conditioning on."
+    MC "Do you want to go back into the ice cream shop and finish there?"
+    show BE neutral
+    BE "Nah, what's the point of getting a cone if you can't eat it on the go? Besides, I wanna see what else there is around here."
+    MC "Fair enough. I offered."
+    "My own double-scoop was struggling in the heat. Honoka had wanted soft-serve at first, but it was a good thing I changed her mind. The hard stuff was melting enough as it was."
+    MC "Mm, cookie dough."
+    show BE happy
+    BE "Heh, is it good?"
+    MC "Sooo good."
+    menu:
+        "Offer Honoka a bite.":
+            jump BE024_c1_1
+        "Keep it to yourself.":
+            jump BE024_c1_2
+
+label BE024_c1_1:
+    $setFlag("BE024_c1_1")
+    MC "Do you want a bite?"
+    show BE happy
+    BE "Ooh, sure!"
+    "Apparently, Honoka's own quadruple-scoop of chocolate, chocolate strawberry, double-fudge, and chocolate chip wasn't enough chocolatey goodness for her."
+    "I smirked and lifted the cone up to her mouth. Honoka blushed for a second, and then took a small bite."
+    BE "Mm. Ooh yeah, that's good cookie dough in there."
+    MC "Yeah you can tell they actually make the dough and don't just buy frozen dough pellets or something."
+    "I kept the ice cream over her chest for a moment as I turned my gaze elsewhere. We walked by a storefront with some local band posters that caught my attention."
+    show BE surprised
+    BE "Kya!"
+    MC "What? What happened?!"
+    show BE sad
+    BE "C-Cold..."
+    "I pulled my cone back towards me, and saw the telltale splatter of off-white cream on Honoka's exposed cleavage."
+    show BE neutral
+    BE "Hah. I guess it really is too hot out here. Do you have a napkin, Kei-chan?"
+    menu:
+        "Wipe up Honoka's spill yourself.":
+            jump BE024_c2_1
+        "Lick it up.":
+            jump BE024_c2_2
+        "Decline that you have any way to clean it.":
+            jump BE024_c2_3
+
+label BE024_c1_2:
+    "I felt it would have been the polite thing to offer Honoka a bite of my ice cream. But she already had more than I did, she probably didn't want one."
+    "I was mistaken. Despite her having four flavors to my one, Honoka leaned to the side and tried to take a bite of my ice cream."
+    MC "H-Hey, that's mine!"
+    "I pulled my hand away but Honoka insisted. Though she had difficulty coming at the ice cream with her bust getting pressed up against me so firmly."
+    show BE happy
+    BE "But Kei-chan, ice creaaaam!"
+    show BE neutral
+    BE "It would be the proper thing to do."
+    MC "It's less proper to expect something."
+    "Trying to keep my ice cream out of Honoka's greedy clutches, I kept moving the cone around. I stopped when Honoka pulled back unexpectedly, shivering where she stood."
+    show BE surprised
+    BE "Kya!"
+    MC "What? What happened?!"
+    show BE sad
+    BE "C-Cold..."
+    "Honoka invited me to look with a gesture of her hand, and I saw the telltale splatter of off-white cream on Honoka's exposed cleavage."
+    show BE neutral
+    BE "Hah. Well, that's what I get, I suppose. Do you have a napkin, Kei-chan?"
+    menu:
+        "Wipe up Honoka's spill yourself.":
+            jump BE024_c2_1
+        "Lick it up.":
+            jump BE024_c2_2
+        "Decline that you have any way to clean it.":
+            jump BE024_c2_3
+
+label BE024_c2_1:
+    $setVar("BEFeminine", getVar("BEFeminine") + 1)
+    MC "Sure. Hold on a second."
+    if getFlag("BE024_c1_1"):
+        "My own cone had already been wrapped in a napkin in an attempt to stop my fingers from getting sticky. But, my pocket had a few extra. I grabbed one and placed it on Honoka's ample chest to wipe the ice cream away."
+    else:
+        "My own cone had already been wrapped in a napkin in an attempt to stop my fingers from getting sticky. Honoka's playfulness had negated that idea."
+        "But, my pocket had a few extra napkins. I grabbed one and placed it on Honoka's ample chest to wipe the ice cream away."
+    MC "It's really sticky."
+    show BE neutral
+    BE "No kidding. Maybe you need to moisten it first."
+    if not getFlag("BE024_c1_1"):
+        MC "Oh, I'm doing the work am I?"
+    "Thinking back to something my mom always did, I took the napkin and just blotted it on my tongue. With a bit of dampness, I was able to clean up the rest of the dessert from Honoka's bosom."
+    MC "Did I miss any spot?"
+    BE "Hmm."
+    "Honoka looked at her chest for a moment, contemplative. After a few seconds of staring, she looked over at me."
+    MC "What?"
+    show BE sad
+    BE "Dude, you just rubbed your drool on my boobs."
+    MC "What? No I didn't! That... okay maybe but don't put it like that, that's gross."
+    show BE happy
+    BE "Exactly! I deserve to do something to make it equal."
+    if getFlag("BE024_c1_1"):
+        MC "Uh, like what?"
+        show BE neutral
+        BE "Hmm."
+        show BE happy
+        BE "I get to drool on your boobs."
+        MC "Honoka, I don't have boobs."
+        $setAffection("BE", 1)
+        BE "Sure you do, they're just not as awesome as mine are! Come here, Honoka needs to make things equal!"
+        MC "H-hey watch it!"
+    else:
+        MC "How is that? You tried stealing my ice cream to start."
+        show BE neutral
+        BE "So... you want a bite of mine?"
+        MC "Depends. If I do, will we be even?"
+        BE "No, because I didn't get any drool on you then."
+        MC "You should not want that. Ever."
+        show BE unique
+        BE "What if I do something even better than that to make us so unbalanced that there's only one way to make it even?"
+        MC "Huh?"
+    "Honoka leaned towards me, her breasts swinging in my direction like two missiles about to be launched. I backed up into the nearest wall, and felt her chest push me into it."
+    MC "H-Honoka!"
+    show BE neutral
+    BE "What's wrong, Kei-chan?"
+    show BE unique
+    $setAffection("BE", 1)
+    BE "I thought all guys dreamed of a girl pushing them into a wall, saying they wanted to swap bodily fluids?"
+    if getFlag("BE024_c1_1"):
+        MC "Th... This isn't really what I had in mind..."
+    else:
+        MC "I don't... think this is what they mean."
+    show BE surprised
+    BE "No?"
+    show BE unique
+    BE "Well let me change your mind, then."
+    "With nowhere to go, Honoka loomed closer. Her chest squished into mine, creating a vacuum seal that felt like it stuck me to the wall. Honoka's face leaned in near, a devilish smirk on her face."
+    show BE happy
+    BE "Are you ready, Kei-chan?"
+    MC "M-Maybe?"
+    "Honoka leaned closer, and soon, I felt the cold touch..."
+    "Of Honoka's ice cream as she nudged it into my cheek. She giggled like an idiot as she reached into my pocket for another napkin."
+    BE "Hehe, did you think I was gonna kiss ya?"
+    MC "I mean... yeah?"
+    "Honoka licked the napkin and rubbed it against my cheek. I squinted and grumbled as she rubbed it against my face far more than necessary for the small dab of ice cream she left there."
+    MC "Did you get it?"
+    BE "Mm, yeah. I think so. Now we're even."
+    "Like clinking wine glasses at a toast, Honoka took her ice cream cone and pushed it into mine. She left it there for a few seconds, letting the flavors mingle as the sun melted them further."
+    BE "Perfect."
+    MC "Huh? What's perfect? What did you do?"
+    "Honoka didn't answer right away. Instead she sucked on some of the frozen treat for a bit, only turning back towards me after swallowing."
+    show BE neutral
+    BE "Heh, don't you get it? Now I can taste a little bit of Kei-chan in every bite."
+    "If the sun hadn't been melting my ice cream, the heat coming off of my flushed cheeks would have done the job."
+    MC "You make me sound like a breakfast cereal."
+    show BE happy
+    BE "I bet they'd be yummy. But you know what the trick to cereal is, Kei-chan?"
+    MC "What's that?"
+    "I feared the answer."
+    show BE unique
+    BE "You can't have cereal without a nice big splash of milk~"
+    "It was a good thing I still was near the wall to support myself. I never thought of flirting as something that could be 'won' before, but Honoka won this time for sure."
+    jump daymenu
+
+label BE024_c2_2:
+    MC "Sure, I can take care of it. Stay still for a second."
+    "Honoka stopped moving for a second, except for still licking at her ice cream to slow the inevitable melting it went through."
+    "I reached into my pocket, where I had a stash of napkins from the ice cream parlor. I picked one up and held it to Honoka's chest."
+    "But, instead of placing the napkin on the spot where the ice cream fell, I leaned forward, with my tongue extended. I saw Honoka's chest shudder as she tried to pull back."
+    "My tongue was too quick, and I only needed a second to slide my tongue up the spot where my ice cream had fallen."
+    show BE surprised
+    $setAffection("BE", 1)
+    BE "K-Kei-chan!"
+    if not getFlag("BE024_c1_1"):
+        MC "Hush. This is my payment for you getting a bite of my ice cream."
+        $setAffection("BE", 1)
+        BE "..."
+        "Hearing those words come out of my mouth shocked me, but it seemed to stun Honoka enough that I could continue my work."
+    "Doing such a thing in public made me feel like a hole opening up beneath my feet would be preferable to being called out. But it was a rare time I could get one over on Honoka!"
+    "Even once the ice cream was gone, I didn't stop sliding my tongue up her breast. I reached as far as my neck and tongue could reach, until I just barely grazed the nape of Honoka's neck."
+    "With the ice cream thoroughly gone, I pulled back, and licked my lips."
+    MC "There we go. All gone."
+    "I stared at Honoka for a moment. She stared back. I could visibly see the gulp of anxiousness go down her throat."
+    MC "W-Was that too much? So-Sorry, I thought it'd be-"
+    "Honoka looked down at her chest for a moment, still holding her ice cream cone. She moved her cone right over her rack again, and pulled her other hand up to the top scoop."
+    "With a quick flick, she knocked the top scoop right off, landing the thick hunk of ice cream into her cleavage."
+    MC "Wh-What the? Honoka, what are you doing?!"
+    show BE unique
+    BE "Oops. I spilled more. Can you help me out again, Kei-chan?"
+    MC "Bwuh."
+    "The scoop was slowly drifting south. There were already rivulets of chocolate moving down the pale curves of her breasts, ready to stain her blouse at any moment."
+    MC "Muh."
+    BE "Get in there."
+    "Before I could reply, though it's not like I was about to decline, Honoka grabbed the collar of my shirt and yanked me into her cleavage. Her aim was great, with my mouth landing right on the scoop of ice cream."
+    "Honoka held a firm grip on my collar. It was a struggle to not drop my own ice cream as she heaved her chest up insistently into my face. I gulped, and began eating away at the ice cream on her bust."
+    "Despite how enjoyable the situation was at its core, I was desperate to get it finished, on the off chance anyone we knew saw us."
+    "My tongue just dragged over her chest again and again, until there wasn't a droplet of ice cream that remained. She made sure of that. She only let go when she no longer felt the chill of the dessert on her chest."
+    "When I stood back, I couldn't help but notice the obvious bumps in her shirt, despite the heat outside. The ice cream had really been cold..."
+    show BE happy
+    BE "..."
+    MC "..."
+    BE "Well. That was a thing."
+    MC "Yeah."
+    BE "Was it tasty?"
+    MC "..."
+    MC "It was, yes."
+    show BE unique
+    BE "And how did the ice cream taste?"
+    MC "I already said-"
+    BE "Oh I know what you said. I know what I meant."
+    "I had nothing to say back as we walked further down the street. I thought that move would get me one up on Honoka."
+    "Turns out we weren't even playing the same game..."
+    jump daymenu
+
+label BE024_c2_3:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "No, sorry, I don't."
+    if getFlag("BE024_c1_1"):
+        "I wasn't sure what voice in my head told me to say that. I had napkins in my pocket, I could have helped, obviously."
+        "Maybe it was my curiosity at just seeing the bit of cookie dough ice cream run down Honoka's cleavage. She hadn't ever really buttoned it up all the way since we've arrived here."
+        "Though, in this heat, I couldn't blame her this time. It probably helped with ventilation. I bet the ice cream falling on her chest felt nice as well."
+    else:
+        "That oughta teach her. She'd have to deal with sticky boobs as penance for taking my ice cream!"
+    show BE neutral
+    BE "Ah, hm, don't worry about it. I've got an idea."
+    MC "Oh, you brought napkins?"
+    show BE happy
+    BE "Nope. Something better."
+    show BE unique
+    BE "Pillows."
+    MC "Huh?"
+    "Refusing to answer my question with words, Honoka heaved up one of her breasts with her forearm. She lifted it close to her face, and leaned forward until her face nearly touched it."
+    "With a long, slow lick, she cleaned up her breast of the ice cream that had melted onto it. Her expression as she stared at me, giving it one last lick, should have been criminal."
+    "Honoka repeated her action with the other breast after swapping which hand held her ice cream cone. Even after both boobs had been licked, there was still a small amount in the middle."
+    "That should have been the moment that I offered to help. But instead, Honoka beat me to the punch, pushing her head down further and getting one last lick in to make sure her boobs were perfectly pristine."
+    show BE happy
+    BE "There we go. Much better now."
+    "I kept watching her so intently that I nearly tripped. Judging by her reaction, it was exactly what she'd wanted."
+    show BE neutral
+    BE "That wasn't what I expected to happen when it got on me, but it turned out quite well in the end, didn't it?"
+    MC "Honoka, geez... how do you think to do that stuff in public?"
+    BE "How? Hm..."
+    show BE happy
+    BE "I guess because it makes it easier to think about what kind of stuff I won't do in public. And, well..."
+    BE "It makes you happy, doesn't it, Kei-chan?"
+    MC "Um. Yeah I suppose that makes me pretty happy."
+    BE "Hehe, good."
+    show BE neutral
+    BE "Oh gosh I just realized the best idea ever."
+    "Honoka's 'best idea ever' was simple, but effective. She took her ice cream cone and plunged it into her cleavage. With both hands free, she lifted up her boobs and licked at it that way."
+    "I tripped."
+    show BE surprised
+    BE "Oh no, Kei-chan!"
+    "Honoka rushed over to help me, helping me back up. Thankfully there hadn't been any scrapes, just wounded pride."
+    show BE sad
+    BE "Are you okay, Kei-chan?"
+    MC "Y-Yeah, I'm fine. Ice cream survived, too."
+    show BE happy
+    BE "Phew, good. Didn't mean to go that far."
+    MC "Just in case, you should have stood in front of me. I could have used the airbags."
+    show BE neutral
+    BE "..."
+    show BE happy
+    BE "Hahaha!"
+    "Honoka giggled, her chest making the ice cream wobble in her chest. It was a miracle that the heat from her bosom wasn't making it melt faster."
+    BE "Okay, that was a good one. But it wouldn't have worked right now, you'd have fallen right into ice cream, instead."
+    MC "Yeah about that, won't you just get more ice cream on your boobs?"
+    show BE neutral
+    BE "Maaaaaybe. But I can always lick it up again!"
+    show BE unique
+    BE "Unless you'd prefer to do that, Kei-chan?"
+    "I urged Honoka to stop before I tripped again. I didn't think going out to get ice cream would be so memorable, but I wouldn't be forgetting that date for a while..."
+    jump daymenu
+
+label BE025:
+    scene Field with fade
+    $setProgress("BE", "BE026")
+    play music Schoolday
+    "As much as I wanted to be close to the action for Honoka's archery competition, I had to keep a good distance away from the archers. Not just for safety's sake, but the whistling happened frequently enough that it bothered me to no end."
+    "It was a simple enough contest. No other school was involved. Just a way for the archery club members to see how they did against one another. The targets were placed at a competitive distance. "
+    "Honoka said they'd only practiced at that distance once before. So this would be a challenge for her. Still, I was cheering her on. Quietly. Unlike a regular sport, archery liked to be nice and quiet."
+    Haruhiro "Ready!"
+    "The club members stood at attention, even Honoka. It was nice to see her taking this seriously. She looked nice, with the specialized chest plate over her bust, and the leather glove on her string-pulling hand."
+    "Each member grabbed one of the arrows from their quiver and nocked it in the bowstring."
+    Haruhiro "Aim!"
+    "Again, all members moved in pretty close synchronicity with each other, pulling the arrow back until their hands cupped their jawbone. There was a bit of a difference in the speed of each person, but it was still pretty impressive."
+    Haruhiro "Fire when ready!"
+    "A few fired off their arrows right away, as several arrows thunked into the targets a few second later. Honoka shot her projectile somewhere in the middle. It was hard to see where the arrows hit, when the targets were so far away."
+    "The process repeated a few more times as Haruhiro let the members go through their quivers, letting loose a half-dozen arrows before they put them all down."
+    Haruhiro "Clear field!"
+    "Everyone put their bows down, and the club captain and co-captain went to collect the arrows and see how everyone did."
+    show BE happy with dissolve
+    BE "Phew. This is exciting!"
+    MC "Oh, hey, you're doing great!"
+    "Honoka had zoomed over to me as soon as they could leave their stations."
+    BE "Can't say I'm doing great, yet, we've gotta see my scores first."
+    MC "The anticipation must be killing you."
+    show BE neutral
+    BE "Agh, it's the worst, really. In the Olympics they can tell you right away what your score is. Here I can kind of estimate, so I can like, adjust my shot a bit?"
+    show BE happy
+    BE "But otherwise, it's just trying to be consistent."
+    MC "I can tell. You looked super focused on everything when Haruhiro was giving out the instructions."
+    show BE neutral
+    BE "Eh, you've gotta be smart about it. These are real arrows, after all. And Haruhiro's such a dork about it that upsetting him would be like.. I dunno, it'd be like bullying Aida-chan. Just feels wrong."
+    MC "I see."
+    Haruhiro "Scores up!"
+    "Honoka and I turned around to hear Haruhiro giving out the scores. He went through them all in alphabetical order."
+    Haruhiro "Inoue: 39."
+    show BE sad
+    BE "Hm. 39. So, that's, what, nearly 2/3 of the best score possible?"
+    MC "It's 10 for a bullseye, right? Yeah. Seems so. But most of the others have done about the same. The most I've heard is like, 46."
+    show BE neutral
+    BE "Right. That's pretty good."
+    MC "And you're also new to this. Some of the others have probably been doing this all through high school."
+    show BE happy
+    BE "That's true! So for being a rookie, I'm kicking booty, aren't I?"
+    MC "Yeah, I'd say so. And nothing says you won't get better with practice, either. I haven't seen you this intense in a club before. I think it's a good fit for you."
+    BE "Hehe, thanks Kei-chan. Got any motivation for me if I win?"
+    MC "Motivation? Hm."
+    menu:
+        "If you win, I'll treat you to a chocolate feast.": # BE_Affection + 1
+            jump BE025_c1_1
+        "If you win, I'll give you a kiss.": # BE_Feminine + 1
+            jump BE025_c1_2
+        "If you win, I'll be your slave for a day.": # BE_Tomboy + 1
+            jump BE025_c1_3
+        "If you win, we'll switch clothes the next time we go out.": # BE_Affection + 2
+            jump BE025_c1_4
+
+label BE025_c1_1:
+    MC "If you win, I'll treat you to a chocolate feast."
+    show BE happy
+    $setAffection("BE", 1)
+    BE "Ooh, a chocolate feast, huh? What would that entail?"
+    MC "We'll go to a chocolate shop and whatever you think you can eat in one sitting, I'll pay for it."
+    show BE neutral
+    BE "Iiiinteresting. Even if it's an entire cheesecake?"
+    MC "I'd like to see that, either way."
+    show BE happy
+    BE "Ha! You're on then, Kei-chan! I'll kick butt and get that chocolate, hahahahaha!"
+    "I really, really wanted Honoka to win. Really. But when Honoka jogged down to her quiver, laughing maniacally, I wondered if I was going to be out more cash than I could afford…"
+    jump BE025_c1_after
+
+label BE025_c1_2:
+    $setVar("BEFeminine", getVar("BEFeminine") + 1)
+    MC "If you win, I'll give you a kiss."
+    show BE neutral
+    BE "Oh, just a kiss?"
+    MC "Well, I suppose it could be just a kiss. I also haven't specified where I'd be kissing you…"
+    show BE surprised
+    BE "Huh?"
+    MC "And if you blow them away, there'll be more than kissing. And I might get so excited about doing it that I just take you right there in front of all the other club members."
+    show BE happy
+    BE "F-For a kiss?"
+    MC "Maybe I've got something more planned, and you'll just have to find out."
+    show BE surprised
+    BE "…"
+    show BE happy
+    BE "O-Okay!"
+    "Honoka raced back to her quiver of arrows, while she vibrated on the spot. I hope her anticipation didn't make her too jittery to focus."
+    jump BE025_c1_after
+
+label BE025_c1_3:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "If you win, I'll be your slave for a day."
+    show BE happy
+    BE "Oh ho. Going for the classic cartoon prize, huh?"
+    BE "That's tempting, Kei-chan. Very tempting."
+    MC "Only for a day, though!"
+    show BE neutral
+    BE "Oh, but a day is more than enough to have my way with you in every possible way."
+    MC "...this does not mean you can do anything illegal, you know. Like you can't have me rob a bank for you."
+    show BE happy
+    BE "Pff. Why would I do that? There's so many more entertaining ways to play with my little Kei-chan slave~"
+    show BE neutral
+    BE "You just wait right there, Kei-chan."
+    show BE unique
+    BE "Your master will return soon."
+    "Honoka cackled, holding an outstretched hand to the side of her mouth as she laughed. It may have motivated her, but it also may have been a big mistake."
+    jump BE025_c1_after
+
+
+label BE025_c1_4:
+    MC "If you win, we'll switch clothes the next time we go out."
+    show BE neutral
+    BE "Hm, that's an unusual proposition. What's the benefit for me?"
+    MC "Well, you'll get to tease me the entire time we're out because I'll be wearing your clothes."
+    MC "You could wear my clothes and get away with it. I'll have to wear a skirt and everything."
+    show BE happy
+    BE "Not just the skirt, surely. You'd also need to wear my underwear. "
+    MC "Um. I guess, yeah I would, if we're going that far."
+    BE "Oh trust me, Kei-chan, we'll go that far."
+    show BE neutral
+    BE "Now if we do that, I can't wear a bra, so that's going to be problematic on my back, you know."
+    show BE unique
+    BE "Which means we'd need to stuff my bra for you, so you have to walk around with giant cans all day, and see how it feels."
+    MC "That, um, that wasn't really part of my plan?"
+    show BE happy
+    BE "Too late! Done, signed, and sealed tight. It's a closed deal, Kei-chan."
+    $setAffection("BE", 2)
+    show BE unique
+    BE "Oh ho ho I'm going to make you look so ~pretty~."
+    "Honoka skipped back to her quiver as I stayed there, watching. That… may have been a bad idea."
+    jump BE025_c1_after
+
+label BE025_c1_after:
+    hide BE with dissolve
+    "After giving Honoka her motivation, she readied herself with all the other members. The quivers had been refilled. Haruhiro came out with a small anemometer to measure the wind speed, and gave everyone the appropriate info."
+    Haruhiro "Clear field!"
+    "Honoka looked over at me and puckered her lips, blowing a small kiss as she winked. She quickly got back into focus mode and prepared for the next instruction."
+    Haruhiro "Ready!"
+    "Over the next few minutes, the members fired off another six volleys of arrows at the targets. If it weren't for Haruhiro's whistle and yelling, the sounds of the bowstrings and the arrow thunks would have been kind of enjoyable."
+    Haruhiro "Clear field!"
+    "Eventually, it was signaled for everyone to put their bows down again, and Honoka came back up to me. This time I stood up and followed her towards the field."
+    MC "So, how do you think you did?"
+    show BE happy with dissolve
+    BE "Gah, I really hope I did great. I really want that prize you offered!"
+    MC "Well, seems like it was good motivation for you."
+    show BE neutral
+    BE "Oh it really was. Here come on, let's see how everyone did."
+    "Honoka took my hand and led me towards the other members as they gathered their scores and helped Haruhiro pull the targets back to be stored."
+    show BE happy
+    BE "Nnngh, come on. What's my score, what's my score?"
+    Haruhiro "Inoue: 47. Well done. Total score is 86."
+    MC "Wow. Well done, Honoka! That's what, a B?"
+    show BE neutral
+    BE "Heh. Well, it's out of 120, so that's more of a C, I think."
+    MC "That's still impressive for your first outing!"
+    show BE happy
+    BE "Heh. It is. Buuuut, definitely not enough to win. Belle-mere there got 102. She scored like, five bullseyes."
+    "Honoka sighed as she took off her chest guard, letting out a big breath of relief."
+    MC "Ah, nuts."
+    MC "Well, I'll tell you what. When you win one, that motivational prize will still be there waiting for you."
+    BE "Oh yeah? Good. Hehe. It really got me excited."
+    MC "I'm glad. I just wanna support you."
+    show BE neutral
+    BE "You're so good to me, Kei-chan, I-"
+    Haruhiro "HEY!"
+    "Honoka and I looked and saw what Haruhiro was yelling at. One of the club members had brought a sibling, and they'd gotten hold of a bow, nocking it."
+    Haruhiro "PUT THE BOW DOWN! PEOPLE DOWN RANGE!"
+    "The kid panicked, and let go of the string after turning the bow away from down range."
+    "Right towards Honoka and I."
+    hide BE with dissolve
+    if getSkill("Athletics") <= 0:
+        jump BE025_c2_1
+    elif getSkill("Athletics") <= 5:
+        jump BE025_c2_2
+    else:
+        jump BE025_c2_3
+
+label BE025_c2_1:
+    "Suddenly, I was pushed onto the ground. I winced a bit as my elbow dug into the grass. Honoka's chest pushed into me from below."
+    "She'd thought quickly, and managed to knock us both down to the ground. I looked over at the arrow and saw it land harmlessly a good five meters away."
+    MC "Holy crap…"
+    "Honoka quickly stood up and pat herself down. My heart raced. I felt numb, paralyzed. I didn't even think to get up until Honoka reached down and offered her hand."
+    show BE sad with dissolve
+    BE "Kei-chan, are you okay?"
+    MC "Yeah, I'm fine. You're not hurt, are you?"
+    show BE neutral
+    BE "No no, I'm good. Good thing I still had my arm guard on."
+    MC "I'm so sorry, I just froze up. I don't know what happened, I-"
+    show BE happy
+    BE "Hey, it's okay."
+    "Honoka pulled me suddenly deep into a hug, and stroked the back of my head."
+    show BE neutral
+    BE "You weren't under any obligation to do anything. And besides, it missed where we were standing anyway."
+    MC "I still feel I should have done something."
+    show BE happy
+    BE "Nah. Don't stress. But maybe start working out a bit just in case. Pushing you down was like knocking over a lamp."
+    MC "Heh… yeah you've got a point…"
+    jump BE025_c2_after
+
+label BE025_c2_2:
+    "Seeing the arrow move, I quickly pushed Honoka over onto the ground. I wasn't sure why it was the best course of action, but I figured making ourselves smaller targets was good."
+    "I winced as my knees skidded into the dirt, and looked to the side at Honoka who looked surprised."
+    MC "Honoka are you okay?"
+    "Before she answered, there was a pitiful 'thwick' as the arrow landed in the ground, many meters away from us."
+    show BE neutral with dissolve
+    BE "Oh, I'm a little banged up, but I think I'm okay. Are you hurt?"
+    MC "No, the arrow didn't hit us, thankfully."
+    "Honoka and I stood up, brushing ourselves off with dust, and looking over at Haruhiro who was giving a club member a good verbal thrashing."
+    MC "I see what you meant earlier about strict safety rules."
+    BE "Yeah. That was bad."
+    show BE happy
+    BE "Very manly of you to push me out of the way like that, though."
+    MC "Oh, heh, I was just… acting on instinct."
+    BE "Hehe. Well, it's a good instinct to have."
+    jump BE025_c2_after
+
+label BE025_c2_3:
+    "Thinking quickly, I grabbed Honoka by the waist and spun. A small yelp came from her as I lifted her up and we both fell to the ground. I knew her back would hit the ground, but hoped my hands around her waist would cushion her fall some."
+    "I wanted Honoka safe, and this way if the arrow hit us, I was the bigger target. I landed right on top of her, and did my best to brace us with my body."
+    "I didn't feel anything, and Honoka didn't make a sound, so after a few seconds, I looked over. The arrow hadn't even managed to pierce the dirt, falling flat into the grass."
+    MC "Honoka, you okay?"
+    "Looking down at Honoka, her face was flushed, and I wasn't sure why. One of my hands quickly went to her arm."
+    MC "You didn't get hit by anything, did you?"
+    "I'd literally just seen that the arrow missed us. But… worry doesn't tend to be logical."
+    show BE happy with dissolve
+    BE "N-No, I'm fine. It's just. You're, um."
+    MC "I know. Sorry. I just acted and wanted you safe."
+    BE "No, it's not that. Your hand is just…"
+    "Oh."
+    MC "Ah, sorry!"
+    "I quickly took my other hand off of her breast and placed it flat on the ground. I moved my other hand as well, just for safety."
+    show BE sad
+    BE "I didn't say you had to stop…"
+    MC "Oh! W-Well… this probably would look weird if we stayed on the ground for too long."
+    "I stood up, and took Honoka's hand, easily pulling her back up with me. I helped her dust off her uniform from the dirt on the ground, and just double-checked to make sure she was okay."
+    MC "You sure you're okay?"
+    show BE happy
+    BE "Heh, I'm fine, Kei-chan. Being saved by a rogue arrow, and ending up with Kei-chan on top of me? Yeah that's pretty okay in my book."
+    MC "Heh, you're acting like I planned it…"
+    jump BE025_c2_after
+
+label BE025_c2_after:
+    "Haruhiro, the club captain, came up to us in a huff, shaking his head."
+    Haruhiro "I swear if I see that kid on the field again after this incident, I'm going to… just… do things to them! Gah!"
+    Haruhiro "Are you two okay?!"
+    show BE neutral
+    BE "Yeah, we're okay, Haruhiro. Is everything all right over there?"
+    Haruhiro "Takiya brought his little brother with him today and was showing him the equipment. He got distracted and his brother started playing with it. I'm so sorry, I should have seen that."
+    MC "Well. Thankfully the arrow didn't hit anyone."
+    show BE happy
+    BE "Yep, we're all okay! Nothing to worry about."
+    "Haruhiro shook his head."
+    Haruhiro "Negative. Safety protocols are in place to prevent this from happening. I may need to look at the guidelines again and see what can be done to make sure this doesn't happen."
+    MC "Well. Good luck with that."
+    BE "Yeah. Doesn't sound fun."
+    Haruhiro "Thank you. In the meantime, great work today, Inoue. Go get some rest. Take care, you two. I'll see you next practice."
+    "After Haruhiro left, Honoka and I let out a big sigh."
+    show BE neutral
+    BE "Phew. Well. He's got a point, let's go relax. Wanna come to my room and hang out?"
+    MC "Sure. Sounds like fun."
+    "We left the archery field after Honoka handed in the rest of her equipment. She joked about taking a shower and asking if I wanted to help get her clean."
+    "I said that could be motivation for me the next time I wanted to win a contest."
+    jump daymenu
+
+
+label BE026:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

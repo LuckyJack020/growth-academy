@@ -1,55 +1,42 @@
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
+#TBI: re-add condition switches
 image Lake Road = "Graphics/ui/bg/lakeroad.png"
 image School Front = "Graphics/ui/bg/schoolfront.png"
 image School Inner = "Graphics/ui/bg/schoolinner.png"
 image Gate Front = "Graphics/ui/bg/gatefront.png"
 image School Planter = "Graphics/ui/bg/schoolplanter.png"
 image Hallway = "Graphics/ui/bg/hallway.png"
-image Classroom = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/classroom_eve.png",
-    "True", "Graphics/ui/bg/classroom_day.png")
+image Classroom = "Graphics/ui/bg/classroom_day.png"
 image Dorm Exterior = "Graphics/ui/bg/dormexterior.png"
 image Dorm Interior = "Graphics/ui/bg/dorminterior.png"
-image Campus Center = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/campuscenter_eve.png",
-    "True", "Graphics/ui/bg/campuscenter_day.png")
+image Campus Center = "Graphics/ui/bg/campuscenter_day.png"
 image Auditorium = "Graphics/ui/bg/auditorium.png"
 image School Exterior = "Graphics/ui/bg/schoolexterior.png"
 image F1 Hallway = "Graphics/ui/bg/schoolhallway1.png"
 image Library = "Graphics/ui/bg/library.png"
-image Office = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/office_eve.png",
-    "True", "Graphics/ui/bg/office_day.png")
+image Office = "Graphics/ui/bg/office_day.png"
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
-image Music Classroom = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/music_eve.png",
-    "True", "Graphics/ui/bg/music_day.png")
+image Music Classroom = "Graphics/ui/bg/music_day.png"
 image Gym = "Graphics/ui/bg/auditorium.png"
-image Track = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/track_eve.png",
-    "True", "Graphics/ui/bg/track_day.png")
-image Roof = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/roof_eve.png",
-    "True", "Graphics/ui/bg/roof_day.png")
-image Nurse Office = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/office_eve.png",
-    "True", "Graphics/ui/bg/office_day.png")
-image Pool = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/schoolpool_eve.png",
-    "True", "Graphics/ui/bg/schoolpool_day.png")
+image Track = "Graphics/ui/bg/track_day.png"
+image Roof = "Graphics/ui/bg/roof_day.png"
+image Nurse Office = "Graphics/ui/bg/office_day.png"
+image Pool = "Graphics/ui/bg/schoolpool_day.png"
 image Festival = "Graphics/ui/bg/festival.png"
 image Bathroom = "Graphics/ui/bg/bathroom.png"
 image Recreation = "Graphics/ui/bg/NYI.png"
 image Town = "Graphics/ui/bg/town.png"
 image Arcade = "Graphics/ui/bg/arcade.png"
 image Cafe = "Graphics/ui/bg/cafe.png"
+image Woods = "Graphics/ui/bg/NYI.png"
+image Restaurant = "Graphics/ui/bg/restaurant.png"
+image Hill Road = "Graphics/ui/bg/hillroad.png"
+image Theater = "Graphics/ui/bg/NYI.png"
 
 image splash = "Graphics/ui/bg/splashscreen.png"
-image daymenubg = ConditionSwitch(
-    "gametime_eve", "Graphics/ui/bg/menubg-evening.png",
-    "True", "Graphics/ui/bg/menubg-day.png")
+image daymenubg = "Graphics/ui/bg/menubg-day.png"
 
 image RM neutral = "Graphics/minor/RM-neutral.png"
 image RM angry = "Graphics/minor/RM-angry.png"
@@ -106,21 +93,20 @@ define audio.ClockTower = "Audio/SFX/sfx_clocktower.mp3"
 define audio.Crash = "Audio/SFX/sfx_thud.wav" #NEED UPDATE
 define audio.Boing = "Audio/SFX/sfx_boing.ogg"
 define audio.Knock = "Audio/SFX/sfx_knock.mp3"
+define audio.Stomach = "Audio/SFX/sfx_tbi.ogg"
 define audio.Thud = "Audio/SFX/sfx_thud.wav"
+define audio.Thunder = "Audio/SFX/sfx_thunder.wav"
 define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 
 init 1 python:
-    datelibrary['testday'] = datetime.date(2005, 4, 11)
-    datelibrary['day_1'] = datetime.date(2005, 4, 4)
-    datelibrary['day_0'] = datetime.date(2005, 4, 3)
-    datelibrary['day_end'] = datetime.date(2006, 4, 3)
-    eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.PRESET,                        "location": "auditorium", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",            "conditions": []}
-    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",      "conditions": []}
-    eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.WEEKDAY), "priority": False, "startdate": "testday", "enddate": "day_end",         "conditions": [[ConditionEnum.EVENT, "RM001"]]}
-    presetdays["4-11-F"] = ["global005"]
-    presetdays["4-11-T"] = ["BE005", "GTS005", "AE005", "FMG005", "BBW005", "PRG005"]
+    eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONAL,            "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
+    eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     
+    #Causes minor character scenes to be disabled if thime is between the first and second time in a tuple
+    #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
+    minorDisableTimes = [("testday2", "aftertest"), ("size2", "aftersize2")]
     #Japanese holidays:
     #January 1: New Year’s Day
     #2nd Monday of January: Coming of Age Day (9th for year 2)
@@ -166,7 +152,7 @@ label global000:
     if debugenabled:
         menu:
             "(DEBUG) Skip intro":
-                jump daymenu_overtime
+                jump daymenu
             "Continue":
                 "Playing intro."
         
@@ -936,7 +922,9 @@ label global000_homeroom:
     hide RM
     HR "..."
     MC "..."
+    show HR neutral
     "Without a word, Tashi-Sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
+    hide HR
     show AE angry with vpunch
     AE "Kyaa~! What is that?!"
     hide AE
@@ -946,6 +934,7 @@ label global000_homeroom:
     show BBW angry with vpunch
     BBW "Keep that thing away from me!"
     hide BBW with dissolve
+    show HR neutral with dissolve
     "..."
     "..."
     play music Busy
@@ -953,12 +942,14 @@ label global000_homeroom:
     "The non-chalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-Sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
+    hide HR
     show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     HR "Some of your growths are already obvious..."
-    hide BE
     show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     HR "Others...{w}Not so much."
+    hide BE
     hide PRG
+    show HR neutral with dissolve
     HR "But make no mistake, unless you've got a sibling here at Seichou Academy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
@@ -973,6 +964,7 @@ label global000_homeroom:
     jump daymenu
 
 label global005:
+    $setTimeFlag("testday2")
     scene Dorm Interior with fade
     "When I woke up this morning, Daichi was nowhere to be found."
     "I thought it was unusual for him, usually the mornings were filled with the clicking of mice and keyboards as he did his 'research'.  Still, it was a welcome break to not have him eyeing me as I brushed my teeth or whatever."
@@ -1119,7 +1111,7 @@ label global005:
     scene Auditorium with fade
     "I walked out of the nurse's cubicle, rubbing the cotton ball taped to the crook of my elbow.  Next was the height and weight measurements, then an eye test, then several other stations I didn't even know the purpose of."
     "All told, except for a few walled-off areas for privacy, all the tests happened in the same open area. I wondered if I would get to see/hear some of my classmates as I went through..."
-    jump daymenu_overtime
+    jump daymenu
 
 label RM001:
     scene Dorm Interior with fade

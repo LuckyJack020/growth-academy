@@ -4,102 +4,70 @@ define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color m
 define CMM = Character('Male Concil Member', color="#ffa18a") #Lighter Orange
 define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
+define Tako = Character('Tako', color="#ce9b50")
 
-image AE neutral = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png",
-    "True", "Graphics/AE/1/neutral.png")
-image AE neutral-annoyed = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-annoyed.png",
-    "True", "Graphics/AE/1/neutral-annoyed.png")
-image AE neutral-eyebrow = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral.png", #needed
-    "True", "Graphics/AE/1/neutral-eyebrow.png")
-image AE neutral-noglasses = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-noglasses.png",
-    "True", "Graphics/AE/1/neutral-noglasses.png")
-image AE neutral-smug = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/neutral-smug.png",
-    "True", "Graphics/AE/1/neutral-smug.png")
-image AE happy = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/happy.png", 
-    "True", "Graphics/AE/1/happy.png")
-image AE sad = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad.png",
-    "True", "Graphics/AE/1/sad.png")
-image AE sad-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/sad-2.png",
-    "True", "Graphics/AE/1/sad.png") #missing
-image AE surprised = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/surprised.png",
-    "True", "Graphics/AE/1/surprised.png")
-image AE angry = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry.png",
-    "True", "Graphics/AE/1/angry.png")
-image AE angry-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-2.png", #missing
-    "True", "Graphics/AE/1/angry-2.png")
-image AE angry-3 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/angry-3.png", #needed
-    "True", "Graphics/AE/1/angry-3.png")
-image AE aroused = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused.png",
-    "True", "Graphics/AE/1/aroused.png")
-image AE aroused-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-2.png",
-    "True", "Graphics/AE/1/aroused-2.png")
-image AE aroused-3 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-3.png",
-    "True", "Graphics/AE/1/aroused-3.png")
-image AE aroused-4 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/aroused-4.png",
-    "True", "Graphics/AE/1/aroused.png") #missing
-image AE glasses = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique.png",
-    "True", "Graphics/AE/1/unique.png")
-image AE glasses-2 = ConditionSwitch(
-    "gametime >= datelibrary['AE_size_2']", "Graphics/AE/2/unique-2.png",
-    "True", "Graphics/AE/1/unique-2.png")
+image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
+image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
+image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png") #missing size2
+image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
+image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
+image AE happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
+image AE sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
+image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
+image AE surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
+image AE angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
+image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
+image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
+image AE aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
+image AE aroused-2 = DynamicImage("Graphics/AE/[globalsize]/aroused-2.png")
+image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
+image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
+image AE glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
+image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
 
-init 2 python:    
-    datelibrary['AE010_deadline'] = datetime.date(2005, 4, 13)
-    datelibrary['AE_size_6'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_5'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_4'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_3'] = datetime.date(2005, 12, 10)
-    datelibrary['AE_size_2'] = datetime.date(2005, 4, 18)
+image Tako neutral = "Graphics/minor/tako-neutral.png"
+
+#image Dorm AE = "Graphics/ui/bg/AEdorm_day.png"
+image Dorm AE = "Graphics/ui/bg/NYI.png"
+
+#MISSING: size1: sad-2, aroused-4
+#MISSING: size2: angry-2, angry-3
+
+init 2 python:
     
     #Core
-    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
-    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",     "conditions": []}
-    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "testday", "enddate": "day_end",       "conditions": []}
-    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "AE_size_2", "enddate": "day_end",       "conditions": []}
-    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",         "conditions": []}
-    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "library", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",    "conditions": []}
-    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "classroom", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
-    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,       "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "hallway", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []}
-    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",        "conditions": []}
-    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",           "conditions": []}
-    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "time": (TimeEnum.NIGHT, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",  "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE026'] = {"name": "Shiori end", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "library", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",      "conditions": []}
-    #eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "location": "dorminterior", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                         "conditions": [[ConditionEnum.EVENT, "AE025"]]} #TODO: Not sure if dorminterior
-    #eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "location": "classroom", "time": (TimeEnum.DAY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",                          "conditions": [[ConditionEnum.EVENT, "AE026"]]} #TODO: Not sure if dorminterior
+    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library", "priority": PrioEnum.NONE,           "next": "AE002", "obsflags": ["size2"],         "conditions": []}
+    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "office", "priority": PrioEnum.NONE,            "next": "AE003", "obsflags": ["size2"],         "conditions": []}
+    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "campuscenter", "priority": PrioEnum.NONE,      "next": "AE004", "obsflags": [],                "conditions": []}
+    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,      "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE006", "obsflags": [],                "conditions": []}
+    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,            "location": "office", "priority": PrioEnum.NONE,            "next": "AE007", "obsflags": [],                "conditions": []}
+    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,          "location": "office", "priority": PrioEnum.NONE,            "next": "AE008", "obsflags": [],                "conditions": []}
+    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,  "location": "office", "priority": PrioEnum.NONE,            "next": "AE009", "obsflags": [],                "conditions": []}
+    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office", "priority": PrioEnum.NONE,            "next": "AE011", "obsflags": [],                "conditions": []}
+    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "priority": PrioEnum.NONE,            "next": "AE012", "obsflags": [],                "conditions": []}
+    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "office", "priority": PrioEnum.NONE,            "next": "AE013", "obsflags": [],                "conditions": []}
+    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "office", "priority": PrioEnum.NONE,            "next": "AE014", "obsflags": [],                "conditions": []}
+    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office", "priority": PrioEnum.NONE,            "next": "AE015", "obsflags": [],                "conditions": []}
+    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "office", "priority": PrioEnum.NONE,            "next": "AE016", "obsflags": [],                "conditions": []}
+    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "library", "priority": PrioEnum.NONE,           "next": "AE017", "obsflags": [],                "conditions": []}
+    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "priority": PrioEnum.NONE,         "next": "AE018", "obsflags": [],                "conditions": []}
+    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "cafeteria", "priority": PrioEnum.NONE,         "next": "AE019", "obsflags": [],                "conditions": []}
+    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE020", "obsflags": [],                "conditions": []}
+    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "classroom", "priority": PrioEnum.NONE,         "next": "AE021", "obsflags": [],                "conditions": []}
+    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,       "location": "classroom", "priority": PrioEnum.NONE,         "next": "AE022", "obsflags": [],                "conditions": []}
+    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "hallway", "priority": PrioEnum.NONE,           "next": "AE023", "obsflags": [],                "conditions": []}
+    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway", "priority": PrioEnum.NONE,           "next": "AE024", "obsflags": [],                "conditions": []}
+    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "roof", "priority": PrioEnum.NONE,              "next": "AE025", "obsflags": [],                "conditions": []}
+    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE026", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "type": EventTypeEnum.CORE,               "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE027", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE028", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE028'] = {"name": "Bolero", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "schoolplanter", "priority": PrioEnum.NONE,     "next": "AE029", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
+    eventlibrary['AE029'] = {"name": "Moon in June", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "AE030", "obsflags": [],                "conditions": []}
+    eventlibrary['AE030'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "dormexterior", "priority": PrioEnum.NONE,      "next": "", "obsflags": [],                "conditions": []}
     
     #Optional
-    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.PRESET,                        "location": "hallway", "time": (TimeEnum.ANY, WeekendEnum.ANY), "priority": False, "startdate": "day_0", "enddate": "day_end",          "conditions": []} #After checkup
-    
+    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                  "location": "hallway", "priority": PrioEnum.GIRL,           "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                   "location": "office", "priority": PrioEnum.GIRL,            "obsflags": ["aftersize2"],                     "conditions": [[ConditionEnum.TIMEFLAG, "size2"], [ConditionEnum.FLAG, "AE006_helpinginoffice"]]} #fixme: it's an office scene, make sure that's handled
     #eventlibrary['AE101'] = {"name": "AE101", "girls": ["FMG", "AE"], "location": "gym", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     #eventlibrary['AE102'] = {"name": "AE102", "girls": ["AE", "FMG"], "location": "hallway", "conditions": [[ConditionEnum.GAMETIME, ConditionEqualityEnum.GREATERTHAN, datelibrary["testday"]]], "priority": False}
     
@@ -517,6 +485,7 @@ label AE003_c1_after:
     
 label AE004:
     $setProgress("AE", "AE006")
+    $setTimeFlag("testday")
     scene Dorm Interior with fade
     play music Rain
     "I slipped my shoes on as my mind began to mull over the incident in the hall the other day, it was strange, but honestly I just felt a bit ticked off about the whole thing." #Splitted the line up in 2 -Auctus
@@ -678,7 +647,7 @@ label AE004_afterchoice:
     MC "?!"
     MC "B-uh."
     show AE glasses
-    AE "I'm not going to actively feud with delinquents. Their opinion of me is there's, nothing more. Unless it turns to harassment among students, I have no plans to take up things such as this with administration."
+    AE "I'm not going to actively feud with delinquents. Their opinion of me is theirs, nothing more. Unless it turns to harassment among students, I have no plans to take up things such as this with administration."
     MC "I..."
     MCT "It can't be helped. If Shiori-san thinks that's best..."
     MC "Yes, Shiori-san. I understand."
@@ -696,6 +665,7 @@ label AE004_afterchoice:
     jump daymenu
 
 label AE005:
+    $setTimeFlag("aftertest")
     scene Hallway with fade
     "I let out a sigh and rubbed the back of my neck. I don't know why, but I still felt a bit of anxiety after the fact. The raw emotion in the area was overwhelming, there was so much tension from everywhere at once."
     MCT "My hair...? My hair. I mean, it's so..."
@@ -1223,7 +1193,8 @@ label AE008:
     jump daymenu
     
 label AE009:
-    $setProgress("AE", "AE010")
+    $setTimeFlag("size2")
+    $setProgress("AE", "AE011")
     scene Hallway with fade
     "The sound of rubber squeaking against the laminated floors echoed as I ran down the hall. I briskly rounded the hallway corner, just barely missing another student."
     MCT "Damnit, Daichi! You just had to play that homemade documentary, didn't you?!"
@@ -1284,7 +1255,7 @@ label AE009_c2:
         show AE neutral-annoyed
         AE "Hotsure-san, you don't need to say things like that. It's my duty as class president to make sure that you are given an efficient learning environment."
         MC "But it's mine as an individual to adapt to situations. You don't need to take any precautions for me. Besides, I can learn responsibility by reminding myself to keep focused, right?"
-        "Shiori-san seemed conflicted for a moment, in not slightly agitated. She let out a sigh and nodded."
+        "Shiori-san seemed conflicted for a moment, if not slightly agitated. She let out a sigh and nodded."
         show AE neutral
         AE "Right. Well, that's that then."
     else:
@@ -1388,7 +1359,8 @@ label AE009_after:
     jump daymenu
     
 label AE010:
-    $setProgress("AE", "AE011")
+    $setSize(2)
+    $setTimeFlag("aftersize2")
     scene Hallway with fade
     play music Peaceful
     "I walked down the hallway, getting ready to meet Shiori-san at the office. I heard that shipping and processing had been getting a lot of orders recently, so I figured that today would be a busy one."
@@ -4935,7 +4907,8 @@ label AE025:
     "Shiori-san and I were now official."
     jump daymenu
 
-label AE026real:
+label AE026:
+    $setProgress("AE", "AE027")
     scene black
     play sound AlarmClock
     scene Dorm Interior with fade
@@ -5214,6 +5187,7 @@ label AE026real:
     jump daymenu
 
 label AE027:
+    $setProgress("AE", "AE028")
     scene Hallway with fade
     MC "Mgn... {i}Haaahn~{/i}"
     "This morning was eventful to say the least. At five in the morning my clock sounded off and scared me senseless, clearly taking exception to its poor treatment the other day. Without thinking, I shot out of bed and hurriedly put on my clothes before running out the door."
@@ -5548,6 +5522,523 @@ label AE027_after:
     "After she walked away, I went out to go speak with Shiori-chan, who was waiting for me right outside the door."
     jump daymenu
 
+label AE028:
+    scene Classroom with fade
+    play music Peaceful
+    $setProgress("AE", "AE029")
+    "Students piled out of class, ready for their afternoon meal. The day went by fairly regularly, though today Tashi-sensei walked in with a big pink stain on his shirt; snickering ensued, shushes were issued. By the end, we were all ready to head out."
+    MCT "Ah, there she is."
+    MC "Oy, Shiori-chan!"
+    show AE neutral with dissolve
+    AE "Good afternoon, Hotsure-san. Nice weather today."
+    MC "A good day to go to the roof then, eh?"
+    show AE happy
+    AE "My thoughts exactly."
+    "I smiled at her warmly. It was nice to see her so friendly and relaxed... at least as far as relaxed can be for her."
+    scene black with fade
+    "We walked together towards the staircase. As we walked, we discussed many different topics. How our days went, how we’re doing in class, and of course, the different tasks Shiori-chan had to carry out as class president."
+    "I followed her lead up the stairs; taking the admitted glance every once in awhile. Her skirt had recently begun to ride up even further, signifying that she’d been growing a lot recently. I looked to my own hair and began to lightly pet it. Shiori-chan opened the door and we stepped out into the light."
+    scene Roof with fade
+    show AE happy with dissolve
+    MCT "Last time we were up here was... less than reputable. I hope it doesn’t mar the vibe of the area."
+    MC "Same place as before?"
+    "I motioned to the metal bench, and Shiori-chan nodded her head and placed a small pillow from her bag on the iron grate before sitting down."
+    MC "Ah, nice thinking."
+    show AE aroused #flustered
+    AE "Mhm. I wouldn’t want to mark myself again. I couldn’t feel anything...back there for a good while last time."
+    MC "Heh."
+    "I sat down next to her. To my expectations, her behind took up much more space than before. My hand, tactically placed at my side, brushed past her exposed flesh as I sat, causing her to bristle slightly."
+    MC "O-oops. Sorry, Shiori-chan."
+    if getAffection("AE") > 10: #half
+        AE "N-no need to apologize, Hotsure-san. I don’t... I don’t mind that much."
+        "I blushed slightly and rubbed the back of my neck."
+    else:
+        AE "Y-yes, well... ensure it doesn't happen too often."
+        MC "Ah..."
+        show AE neutral
+        AE "If you please, that is. I’d prefer it so that-"
+        MC "R-right, yeah-"
+        show AE aroused #flustered
+        AE "Ah-Mhm... *khm*..."
+    "The clouds overhead cast a large shadow on the roof as it blocked the sun at its zenith, giving respite from the warm rays of the bright sun."
+    MC "Mm, clouds coming in."
+    show AE neutral
+    AE "Oh? The forecast didn’t call for rain, thankfully."
+    MC "As long as we don’t get hit, it’ll be fine. You don’t need to worry anyways."
+    AE "Oh?"
+    MC "I’d guard you from the rain if it starts."
+    show AE aroused #flustered
+    AE "Ah."
+    "Shiori-chan sheepishly smiled and brushed her hair to the side with her hand."
+    show AE happy
+    AE "Mhm~ Well...I’ll hold you to that."
+    MC "Hmm..."
+    AE "J-Just don’t sacrifice your notebook in the process."
+    MC "Ahaha~ It’s turned out well for me so far."
+    AE "Ehehe."
+    MC "Heheh..."
+    "We looked out towards the grassy green hills. I closed my eyes and took a deep breath of the fresh air."
+    MC "Haaaan~"
+    AE "The wind is so soothing."
+    MC "Mhm..."
+    "Opening my eyes, I grinned happily; thankful to the days of peace I’d been blessed with recently."
+    show AE neutral
+    AE "...You know..."
+    show AE aroused #flustered
+    AE "Um..."
+    AE "...3.57 times the square root of your height."
+    MC "Eh?"
+    "Shiori-chan fidgeted a bit in her seat and looked up at me."
+    AE "That’s...that’s how far away the horizon is."
+    MC "..."
+    $setSkill("Academics", 1)
+    MC "Ehe...you remembered."
+    show AE happy
+    AE "Mhm. I-I looked it up recently."
+    MC "What compelled you to do that?"
+    show AE neutral
+    AE "Hm? Oh..."
+    show AE aroused #flustered
+    AE "I just figured it’s what a good g-girlfriend would do."
+    MC "Ah..."
+    MC "It most certainly is."
+    show AE happy
+    AE "Don’t take that as me spoonfeeding you information all the time though. Look things up for yourself every once in a while!"
+    MC "I know, I know!"
+    "We smiled at each other and looked back out to the horizon."
+    MC "3.57 and the square root of my height, eh?"
+    MC "Wow...not that far, I guess."
+    "The wind kicked up a bit around us. The sky was a nice mixture of azure beauty and silvery clouds, yet I hadn’t felt a drop on me."
+    "Still though, being up there had kicked up some memories from a while back."
+    MCT "Should I...should I bring up how I’ve felt...about the last time we were up here?"
+    menu:
+        "Keep it to yourself":
+            MCT "No...no I don’t want to spoil the mood. We can stay like this for a while."
+            MCT "I feel weird about what she did, but..."
+            MCT "I’m fine with just letting it go."
+            "I slumped back further in my bench as I put my hands on my stomach, letting out a sigh of content."
+            jump AE028_c1_after
+        "Say something":
+            jump AE028_c1_2
+
+label AE028_c1_2:
+    MCT "It just...it feels too weird."
+    MCT "I have to at least talk to her about it."
+    MC "Um, Shiori-chan?"
+    show AE neutral
+    AE "Hm?"
+    MC "I wanted to talk. About...last time we were here."
+    show AE aroused #flustered
+    AE "...Oh."
+    AE "Did you...tell anyone?"
+    MC "N-no, no, I haven’t."
+    MC "It’s just..."
+    menu:
+        "That was messed up.": #-1
+            jump AE028_c2_1
+        "Couldn’t there have been a better way?": #+0
+            jump AE028_c2_2
+        "I didn’t expect that.": #+1
+            jump AE028_c2_3
+
+label AE028_c2_1:
+    MC "That was messed up. What you did."
+    AE "..."
+    MC "I mean, you came up here and just...showed me...your behind and tempted me."
+    MC "That’s messed up."
+    $setAffection("AE", -1)
+    AE "I... I’m sorry, Hotsure-san. I just figured..."
+    "Shiori-chan shifted around a bit and moved her thumb in a circular motion on her skirt."
+    AE "I figured it would have given me the answer I wanted."
+    MC "But you outright tempted me though, without even asking me how I felt."
+    MC "If I was anyone else, who knows what would have happened."
+    show AE sad
+    AE "..."
+    AE "I’m sorry. I’d... I’d made a horrible mistake that could have ruined our relationship. It’s just, I didn’t know what kind of relationship we had that I’d ruin."
+    if getFlag("AE024_grabbedass"):
+        MC "Right, but then you went on to both kick me and then turn around to say I broke the rules."
+        MC "I’m sorry, but that just makes you look manipulative. Were you trying to look cool? "
+        show AE sad
+        AE "..."
+        AE "I... I..."
+        show AE aroused #flustered
+        AE "I cannot apologize enough. I’m sorry. If someday I can make it up to you, anything... I’ll do it. I just... I had to know."
+        MC "Shiori-chan..."
+    jump AE028_c2_after
+
+label AE028_c2_2:
+    MC "Couldn’t there have been a better way to gauge my intentions?"
+    AE "I...*ahem*...I perhaps was a bit too forceful."
+    show AE sad
+    AE "T-to be honest, I was unsure and willing to risk a lot by doing so."
+    MC "You could have just asked me. I would have understood."
+    AE "Yes, b-but I just didn’t..."
+    show AE aroused #flustered
+    AE "I was worried about our relationship. It clouded my judgement."
+    MC "Our relationship?"
+    AE "I was... admittedly interested in you, too. As you can guess, I’m not very good at dealing with romantic situations."
+    MC "...Shiori-chan."
+    jump AE028_c2_after
+
+label AE028_c2_3:
+    MC "I have to admit, I really didn’t expect that of you."
+    AE "Hm?"
+    MC "You took some very provocative risks, and you were way more... forward than I’d expected."
+    AE "...Indeed."
+    MC "I kind of... I suppose I expected more from you."
+    show AE neutral
+    AE "What do you mean?"
+    MC "Well, you’re usually extremely well-composed and levelheaded, but what you did seemed kind of foolish."
+    $setAffection("AE", 1)
+    show AE sad
+    AE "...Ah."
+    MC "But don’t worry, I guess it’s just that, well, since I expect the best from you. So it caught me off-guard."
+    show AE neutral
+    AE "...You really expect the best from me?"
+    MC "Shiori-chan..."
+    jump AE028_c2_after
+
+label AE028_c2_after:
+    MC "It was foolish, yeah... but I wanted to say I forgive you. I know you’re new to relationships and, while unexpected, it gave me a glance of how much you care."
+    show AE happy
+    AE "...Thank you, Hotsure-san... that means a lot."
+    jump AE028_c1_after
+
+label AE028_c1_after:
+    "I lightly sniffed at the air as a curious scent piqued my nose."
+    MC "Hm... smells like rain."
+    show AE neutral
+    AE "Really? But I checked the forecasts..."
+    MC "Well, they’re not right 100 percent of the time, it seems."
+    show AE aroused #flustered
+    AE "I suppose not..."
+    show AE neutral
+    AE "Still though."
+    "Shiori-chan took a deep breath and smiled."
+    show AE happy
+    AE "I love the smell of petrichor."
+    MC "Petrichor?"
+    show AE neutral
+    AE "Mhm. It’s the smell from aerosols in the ground during rain. It’s a soothing scent."
+    MC "Oh yeah... I think I’ve heard that word before."
+    MC "Hm... fancy that."
+    "The faint smell permeated the air as I sat upright and turned my head to the side."
+    MC "Welp, we better head inside before it starts to rain."
+    MC "Ready to-"
+    play music Rain
+    show AE sad
+    AE "Hotsure-san, wait."
+    MC "Hm?"
+    "Shiori-chan looked at me in a somber yet somewhat distressed way."
+    AE "There’s something I wanted to tell you..."
+    "The wind picked up slightly, breezing past my ears."
+    MC "Yeah? What’s up?"
+    AE "If I... If I start to change... as a person, I want you to know I won’t be hurt if you leave."
+    MC "...What?"
+    AE "If I... If I lose who I am... feel free to abandon me. I don’t want to take you down with me."
+    AE "If I’m to die in shame, I would want to die alone."
+    "A spike of adrenaline rushed through my mind at the shocking words Shiori-chan just spoke."
+    MC "Die?! What-what-what are you talking about?"
+    AE "Not a literal death, of course, but... a death of who I am."
+    MC "Who you...?"
+    show AE neutral
+    AE "Put quite simply, people like me are always treated like the villain. The one who comes along and ruins the fun of others, who enforces rules at the most inopportune time. The one who needs to be humiliated and ridiculed, to be brought down to earth."
+    show AE aroused #flustered
+    AE "...Hmn..."
+    show AE sad
+    AE "I guess... simply put, I don’t know why I’m the one who is expected to change. To have some sort of ‘moment of enlightenment’ where I suddenly change my entire personality."
+    AE "I don’t want to become docile. I want to stay who I am. I’d rather face the inevitability of my fall as me."
+    MCT "There it is... the talk of fate, once again."
+    MC "..."
+    AE "...Don’t get me wrong, Hotsure-san, I understand the necessity to adapt or die, and I understand the need to adhere to certain social standards, it’s just that I don’t understand why I can’t just be me. My love for efficiency, order, law... I don’t want that to disappear."
+    MC "And I don’t want that either! It’s just... I don’t see why you think..."
+    MC "I dunno."
+    MCT "This is such an absurd topic. I don’t understand what she means."
+    AE "Hm... well, in any case, I suppose I’ll simply have to wait..."
+    AE "Wait for the death of my personality."
+    play sound ClockTower
+    MC ":..."
+    show AE neutral
+    AE "Until then... I’m more than happy spending every moment with you."
+    MC "Shiori-chan... I-"
+    play sound Thunder
+    AE "Hm?"
+    MC "C-come on, let’s get off the roof, before we experience an actual death."
+    AE "M-Mm."
+    "We stood up together and Shiori-chan grabbed her pillow to put back in her bag. We rushed inside in order to get out of the rain, and back to class."
+    play sound Stomach
+    MC "U-um, Shiori-chan?"
+    AE "...Hm?"
+    MC "Next time, let’s bring lunch with us."
+    show AE happy
+    AE "...Eheh..."
+    AE "Sure thing, Hotsure-san."
+    scene Classroom with fade
+    "As we walked back to class, I thought more and more about the ominous words Shiori-chan said."
+    MCT "Death of her personality? I don’t get it. What does she mean? Is it some cliche I’m not in on?"
+    show AE sad with dissolve
+    AE "So... tomorrow I have to head back to my room after class to pick up some things, then I have a meeting. We won’t have that much time to spend together."
+    MC "O-oh."
+    MC "Well... maybe I can... go with you to your room?"
+    show AE neutral
+    AE "Oh?"
+    show AE aroused #flustered
+    AE "A... A boy in my room?"
+    "Shiori-chan looked off to the side a bit, before seemingly remembering something."
+    AE "My room is a disaster. You wouldn’t want to-"
+    MC "N-No, it’s fine. I still want to at least check it out..."
+    show AE neutral
+    AE "Oh."
+    show AE aroused #flustered
+    AE "Well... all right. I’ll make sure there's nothing against it in the rulebook."
+    show AE neutral
+    AE "Until then, let’s head into class."
+    MC "Mm, good suggestion."
+    "We headed back in, and after a seemingly long lesson with rain hitting the window panes, we all left. We walked back to class silently, her words still resonating in my head."
+    jump daymenu
+
+label AE029:
+    $setProgress("AE", "AE030")
+    scene Dorm Exterior with fade
+    play music Peaceful
+    "After class, Shiori-chan and I got up together and made our way to her room. After yesterday's events, I figured it would be nice to see what Shiori-chan’s room was like, get a closer look at how she’s living."
+    show AE neutral with dissolve
+    MC "So, you got the okay?"
+    AE "Mhm. I double checked. You can be in my room to visit anytime before nighttime."
+    MC "So, I gotta say, I’m a bit excited."
+    AE "I’m not entirely sure why, it’s only my room."
+    MC "Well, yeah, but I dunno, I just kinda want to see what you call home."
+    AE "Hm..."
+    AE "It’s in a bit of a state. I hope you don’t mind, but... she’s very particular about her side of the room."
+    MC "...She?"
+    AE "My roommate."
+    MCT "Shiori’s roommate? Oh yeah, she never said anything about her."
+    MC "So... what’s she like?"
+    "We got to her door, and she input her key code. After a high beep and a green light from the pad, a click sounded out as Shiori-chan grabbed the handle."
+    AE "See for yourself."
+    "Shiori-san pushed the door open and we stepped in together."
+    scene Dorm AE with fade
+    "My eyes were immediately drawn to the left side of the room. It was hard for them not to be. The room smelled fresh, with a nice apple-cinnamon scent. The window had white curtains which created a bright glow from the sunlight, gently bouncing off the pristine, spotless carpet onto the mirrors of a white wardrobe."
+    "Along the wall, bookshelves held a good many books and folders, a desk in between with stacks of paper in two neatly kept bins. Next to the window, a white nightstand, and next to the nightstand, a massive white bed, of which the sheets, blankets, and coverings had not a single crease or wrinkle."
+    MC "W-wow, Shiori-chan! Your room looks... really good! It must take a lot of work to get it to look like this."
+    show AE happy with dissolve
+    AE "Thank you for the compliment. I indeed put a lot of work into the room's upkeep."
+    show AE angry
+    AE "...MY side, that is."
+    MC "Eh?"
+    MC "Hrgk-!"
+    "I turned my head to the right and immediately got assaulted by the stench of sweaty sock, onion, and what I assumed was the olfactory equivalent of parental regret."
+    "In strict opposition to the haven of cleanliness to the left, the right side of the room was absolutely atrocious. An empty pizza box lay abandoned and forgotten on the far side of the room, and next to it rested a mini-screen tv, hooked up to an old 90’s-era video game console with black wires tangled in a mess."
+    "The floor was littered with junk listlessly tossed about. An acoustic guitar covered from neck to base with various stickers and Kanji written in marker lay on the bed, along with sheets and blankets piled up in random mounds."
+    "The only respite from the mess was the kitchen, which in itself had been kept clean; no doubt by Shiori-chan. Between the trash, the stench and the clothes thrown about, I’d say the disaster was fit more for a pig than a girl."
+    MC "Urg..."
+    AE "Aha! It’s horrid to you too then. If even a few more people attest to it’s atrocious state, she’ll have no choice but to let me clean it!"
+    "I looked on the ground near my feet and saw a ragged and crumpled piece of cloth."
+    AE "Article three of the dormroom health and safety protocol clearly states that-"
+    MC "U-um, Shiori-chan, what’s-"
+    "I unraveled the cloth and realized bit too late that what I had in my hands was a huge pair of black panties with broken red hearts covering the design."
+    MC "E-ech!"
+    show AE aroused #flustered
+    AE "Oh! Oh-dear God, Hotsure-san-"
+    MC "Okay, yep, where should I-"
+    AE "On the ground, I-I’ll get it later."
+    MC "Maybe I should just place them on her floor."
+    UNKNOWN "Pfft, ehe~"
+    MCT "Hm?"
+    "Shiori-san and I were silent for a moment upon hearing the snicker. While I looked on in confusion, Shiori-sans eyes flamed with anger and contempt."
+    show AE angry
+    AE "Do not step on her side of the room."
+    MC "Eh?"
+    MCT "Is... everything alright?"
+    MC "I mean... there’s a lot of junk everywhere, but..."
+    show AE neutral
+    AE "I-Listen, anywhere on my side is fine. I’m telling you now: if you go on her side, you’ll regret it."
+    MC "..."
+    MCT "I’m gonna do it."
+    show AE angry
+    AE "Ahp! A-mn-ok, I warned you."
+    hide AE with dissolve
+    stop music
+    "I stepped forward and placed the panties on the bed as not to be rude by throwing them, and then, just then..."
+    MC "...Oh look nothing happened."
+    show AE neutral
+    AE "Five, four..."
+    MC "U-um, Shiori-chan, why-"
+    AE "Three, two..."
+    MC "Have I made a mista-"
+    AE "One."
+    "I turned around just in time to catch a spring loaded pad covered in baby powder...to the face."
+    MC "MGHPH!?"
+    play music Busy
+    UNKNOWN "A-HAHAHAHA! Ohhh my god, that was bad~!"
+    "Out from the bathroom door came a girl, clutching at her stomach and cackling loudly like a hyena."
+    show AE angry at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Tako neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    AE "Ngh, Yureno-san!"
+    Tako "Oy, oy, Shio-rear, what, didn’t hear me in the bathroom?"
+    AE "I thought I told you not to call me that!"
+    MC "H-hey! What’s going on?!"
+    Tako "Ehehehe."
+    "I took off the pad from my face, and sputtered as I tried to get the powder out of my mouth."
+    Tako "Sorry about that dude, she warned you though, right?"
+    "As I wiped my eyes, the girl came into plain view. She was a somewhat taller girl, around my height actually, with a toothy grin plastered across a soft and feminine face. Her hair was a light brown color with a golden blonde tips."
+    "Her hair was mostly covered, however, by a grey beanie with a pin on it. Her tattered denim jacket sported more pins with various anime characters and bands, but was left opened to reveal her untucked school shirt."
+    "I could tell she wasn’t exactly the type to take things seriously; from her weird hat to her unkempt jacket, she seemed like one of those carefree types."
+    "From demeanor, to dress, and even their sides of the rooms; the two were polar opposites in every way."
+    "Aside from one glaring similarity."
+    #show Tako zoomin
+    #Boing sound effect
+    #pause 2
+    #reset
+    Tako "Hey, you must be Keisuke-san, right?"
+    MC "Y-yeah."
+    show AE neutral
+    AE "You don’t need to answer that, Hotsure-san."
+    Tako "Daaaww, shy? Isn’t that Kodama-chan's thing?"
+    show AE angry
+    AE "How many times have I told you to clean up your side of the room?!"
+    "Shiori-chan reached for a empty two-liter when she was stopped by the girl."
+    Tako "Woah, woah, ey, don’t touch that! I might use it."
+    AE "Ach-For what?!"
+    Tako "Like...uh..."
+    AE "And the rest of this-this trash, hm?"
+    Tako "I’ll get to it, geesh!"
+    "Shiori-chan, I could tell, was uncomfortable with the girls mere presence. She let out a sigh and rubbed her eyes under her glasses."
+    show AE neutral
+    AE "Don’t you have friends to go spend time with?"
+    #if romance
+    Tako "Mm... well, I did, but I wanted to see your catch!"
+    MC "Um, c-catch?"
+    Tako "Her fling? Lover? Boyfriend, dummy."
+    #else
+    #Tako "When I told ‘em ya finally made a friend, a guy nonetheless, they all thought I was lying my ass off! And trust me, it’s a lot to lie off!"
+    #MC "Eheheh"
+    "Yureno-san put her face right up to my own, hands on her massive hips. As she looked me in the eyes, a pungent wave of wet dog odor hit my nose all at once. I stifled back a cough; I didn’t want to be rude."
+    Tako "Huh, he actually looks normal... what’s his deal, Shiori?"
+    show AE angry
+    AE "His ‘deal’ is that he’s clearly uncomfor-"
+    Tako "Ohp! I got it, it’s the hair, right?"
+    MC "Oh... um... yeah."
+    Tako "Hah! Knew it."
+    "The girl took a seat on the floor, using her ass as a cushion, and pulled out a small game device to start playing."
+    show AE angry
+    AE "Yureno-san, how many times have I told you-"
+    Tako "Stop using my ass as a couch, I know. "
+    MC "She probably doesn’t want you to get your skirt dirty."
+    "The girl looked up at me and squinted, pursing her lips."
+    Tako "Ah, so that’s how it is. You’ve been whipped into submission."
+    MCT "I-I’m not whipped!"
+    Tako "Anyways, names Tako. I like building stuff, I guess."
+    "She followed up with a snap of her fingers into a peace sign."
+    MC "Y’know...I’m honestly shocked. I never expected two people with such different... tastes to be roommates."
+    show AE aroused #flustered
+    AE "The school found it appropriate to room us together. It would mean there would be more efficient... lodging."
+    Tako "It’s cause we both have big fat asses."
+    show AE angry
+    AE "Ach-excuse me?!"
+    "Yureno-san clapped her game device closed and stood up, before pacing behind Shiori-chan."
+    Tako "Hey, Shio-rear, I know I’m gettin' big, but you’re REALLY gettin' XXL on me. I don’t stand a chance."
+    AE "Enough, Yureno-san. "
+    Tako "Don’t take it so personal-like, you make it work, girl!"
+    MC "Pftt... ehehe."
+    show AE neutral
+    AE "Hotsure-san?"
+    MC "You two... it’s just funny to me."
+    Tako "Hm?"
+    MC "Tako-san, it’s nice to meet you."
+    "I stood up straight, and bowed in respect. She looked at me in confusion for a second, before straightening her back and wiping her forehead."
+    #if romance
+    Tako "...Wow, Shiori-chan, you really got yourself a man, huh."
+    "Yureno-san put her hands in her pocket and went to lay on her bed."
+    Tako "Ahh, I knew it was gonna happen some day! The baby bird always flies from the nest, the student always has to leave the teacher at some point! I’m an expert on boys, after all, so it’s only natural-"
+    show AE aroused #flustered
+    AE "T-to call yourself a teacher is absolutely-"
+    Tako "Haaaannn~ What to do now?  Soon my dear Shiori-chan is going to be going to town on her new fling; having picnics, getting married, having babies- Oh! Shiori-chan, you’d be super adorbs pregnant!"
+    show AE angry
+    AE "Enough! Now see here, I-"
+    "Hopping up from the bed, she grabbed her keys from off the floor and walked over towards the door."
+    Tako "Well, I’m headed to town. Shiori-chan, glad my advice worked out for ya."
+    #else
+    #Tako "Jeesh, no need to be such a stiff man."
+    #"She grinned widely at me as she turned around and pushed her butt into me, causing me to stumble back a bit onto the bed."
+    #Tako "Lighten up a little, I won’t bite!"
+    #MC "W-Uh..."
+    #Tako "Soft ain’t it..."
+    #MC "U-Um-"
+    #Tako "I’m talkin about the bed, perv! GYAHAHAHAH~!"
+    #show AE angry
+    #AE "Uch, you’re such a child! If I had-!"
+    #Tako "Man, I’m bored. Boredboredboredboredbored!"
+    #"Yureno-san bent over to pick up her keys, looking back to see if I was staring before chuckling to herself."
+    #Tako "I’mma head out. Peace!"
+    show AE neutral
+    AE "Wait, let me fi-"
+    Tako "Nice to meet you, dude."
+    MC "Oh, um, nice to meet you, too."
+    show AE angry
+    AE "Ach... Hm... just, be home before curfew?"
+    Tako "You got it, babe."
+    AE "Don-"
+    Tako "Oh! By the way, I left some cookies in the cupboard for y’all. Later~"
+    "Yureno-san walked behind Shiori-chan and lightly bumped their two gigantic tushes together, leading to noticeable jiggling from the two of them."
+    AE "Ah! Y-you!"
+    Tako "Bubble Booty Babes~"
+    hide Tako with dissolve
+    stop music
+    "As Yureno-san left the room, Shiori-chan’s face was filled with a blush like none other i’ve seen; whether out of frustration or embarrassment, I couldn’t tell."
+    show AE angry at center with dissolve
+    play music Peaceful
+    AE "That girl..."
+    MC "Heh, she’s fun."
+    show AE aroused
+    AE "Define 'fun'."
+    "I looked over to Shiori-san, who was observing the cupboard on the wall intently."
+    show AE neutral
+    AE "Hmm..."
+    "She opened it up, away from herself, and as soon as she did a small spoon catapult launched a wad of gum straight out."
+    show AE angry
+    AE "Of course."
+    MC "Does she do that a lot?"
+    AE "Act unruly? Yes. Constantly."
+    MC "I meant more of set up traps and things."
+    show AE neutral
+    AE "Yes... loathe as I am to admit, she’s extremely talented."
+    show AE angry
+    AE "Talent, however, does not equate to aptitude. Her studies are atrocious."
+    MC "Hm."
+    MC "So... bubble booty babes?"
+    AE "Not a word. Ever."
+    MC "G-got it!"
+    AE "I swear, the girl's obsessed with my rear. She says that’s going to be our 'show names'; absolutely uncouth."
+    MC "Well, she has a unique sense of humor, I guess."
+    AE "Humor?! Ha! I’ve heard fax machines funnier than her."
+    MCT "I’m going to take that literally."
+    show AE aroused #flustered
+    AE "I... I hope you don’t mind but could you not mention the nickname to anyone? I don’t want..."
+    MC "Bubble Bo-"
+    show AE angry
+    AE "THAT nickname to follow me anywhere."
+    MC "Oh, um, sure."
+    show AE neutral
+    AE "Good. Now..."
+    "Shiori-chan walked over to her side of the room and thumbed through the files on her desk, grabbing a few and placing them in her bag."
+    AE "I hope you don’t mind, but I have a meeting and I can’t have you in here after sundown."
+    MC "Okay, then I guess... tomorrow, then."
+    "We walked to the door, and I opened it for Shiori-chan. After exiting, we walked side by side towards the office."
+    scene Hallway with fade
+    show AE neutral with dissolve
+    MC "All right, we’re here."
+    AE "Okay. I’ll see you tomorrow."
+    MC "Yep, see you then."
+    AE "Oh, and Hotsure-san?"
+    MC "Yeah?"
+    show AE aroused #flustered
+    AE "Would you like to walk with me to class tomorrow?"
+    MC "Yeah, definitely!"
+    "Shiori-san gave a weak smile and nodded before entering the library, a loud clack from the door heralding my exit towards my room. As I walked, I thought about the new connection I had made with someone in Shiori-chan's life, and got ready for the next time we met."
+    jump daymenu
+
+
 
 
 
@@ -5737,7 +6228,7 @@ label AE102_c2:
     MC "Goodbye Akira."
     jump daymenu
 
-label AE026:
+label AE030:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
