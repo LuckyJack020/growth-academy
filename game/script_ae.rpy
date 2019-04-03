@@ -5268,7 +5268,7 @@ label AE027:
     show BBW angry
     BBW "You don't know yet!"
     MCT "What is even happening?!"
-    "I beckoned to Shiori-chan and she begrudgingly learned foreword, her wide hips accidentally pushing away her own desk."
+    "I beckoned to Shiori-chan and she begrudgingly leaned forward, her wide hips accidentally pushing away her own desk."
     MC "So, something really weird is going on today and I have no idea what's happening. Do you know anything?"
     AE "You don't need to whisper. Just act normally, and go about your business. This foolishness will end on its own. For now try not to... try not to let anyone know."
     MCT "Hm? Try not to let anyone know...?"
@@ -5709,7 +5709,7 @@ label AE028_c1_after:
     MC "Hm... smells like rain."
     show AE neutral
     AE "Really? But I checked the forecasts..."
-    MC "Well, they’re not right 100 percent of the time, it seems."
+    MC "Well, they’re not right 100%% of the time, it seems."
     show AE aroused #flustered
     AE "I suppose not..."
     show AE neutral
@@ -5903,7 +5903,7 @@ label AE029:
     Tako "Like...uh..."
     AE "And the rest of this-this trash, hm?"
     Tako "I’ll get to it, geesh!"
-    "Shiori-chan, I could tell, was uncomfortable with the girls mere presence. She let out a sigh and rubbed her eyes under her glasses."
+    "Shiori-chan, I could tell, was uncomfortable with the girl's mere presence. She let out a sigh and rubbed her eyes under her glasses."
     show AE neutral
     AE "Don’t you have friends to go spend time with?"
     #if romance

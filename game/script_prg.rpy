@@ -1081,7 +1081,7 @@ label PRG009:
             PRG "...?"
             MC "Let me ask you this: If I told you it was going to rain tomorrow, what would you do?"
             PRG "Eh?  B-but I didn't hear anything about-"
-            MC "Hypothetically. Hypothetically, you know 100\%\ that it was going to rain tomorrow.  What would you do?"
+            MC "Hypothetically. Hypothetically, you know 100%% that it was going to rain tomorrow.  What would you do?"
             PRG "W-well, I don't know.  Uh, I, well I'd get my umbrella.. Maybe a raincoat if it was bad... I think I have some galoshes if it was really raining..."
             MC "But what would you do tonight?"
             PRG "Tonight?"
