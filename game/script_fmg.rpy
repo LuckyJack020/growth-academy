@@ -355,7 +355,7 @@ label FMG004_testsemipass:
 
 label FMG004_testpass:
     $setAffection("FMG", 2)
-    "Despite Akira already in the lead, I managed to keep a good pace."
+    "Despite Akira being already in the lead, I managed to keep a good pace."
     "I started to feel a bit winded half way but I pushed myself to go farther."
     "It was about to the end when I was starting to get too tired, luckily I've managed to run the whole lap before stopping completely."
     show FMG happy with dissolve
@@ -379,7 +379,7 @@ label FMG004_testpass:
     FMG "Hell yeah I do!"
     "We stayed there for a while till both ice cream's were finished. Akira tossed her popsicle in the trash before turning to me."
     show FMG neutral
-    FMG "Well this has been fun, lets call it a day shall we."
+    FMG "Well this has been fun, let's call it a day, shall we?"
     MC "Sure, but I got a question."
     FMG "Shoot."
     MC "Why vanilla?"
@@ -1091,7 +1091,7 @@ label FMG012:
     "For the past two hours, with Akira's help, I learned some boxing moves thanks to a punching bag. Once we were done, I could feel myself stronger already."
     $setSkill("Athletics", 1)
     show FMG happy
-    FMG "All right Kei-jun, you're definitely improving!"
+    FMG "All right Kei-kun, you're definitely improving!"
     MC "Thanks, I guess I have, I'm- wait, did you just call me Kei-kun?"
     if getAffection("FMG") >= 10:
         show FMG sad
