@@ -57,7 +57,7 @@ init 2 python:
     eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
     eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                              "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
     eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []} 
-    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                   "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
+    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.OPTIONALCORE,                                                           "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10]]}
     eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW_working"]]}
 
     eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,                                "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                   "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -4780,6 +4780,7 @@ label BBW027_c1_2:
     jump daymenu
 
 label BBW028:
+    $setProgress("BBW", "BBW029")
     scene Dorm Interior with fade
     "Whether I was ready or not, my first date with Alice had come."
     "It was easy - terrifyingly easy - to be intimidated by her. She was rich, she was used to the finer things, she was a bit... forceful in personality."
@@ -5121,7 +5122,7 @@ label BBW028_afterdate:
     jump daymenu
 
 label BBW029:
-    $setProgress("BBW", "BBW029")
+    $setProgress("BBW", "BBW030")
     scene Cafeteria with fade
     play music Schoolday
     "I timed my dinner for when I expected Alice would be here, but her usual spot was empty."
