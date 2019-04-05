@@ -1,7 +1,7 @@
 define AE = Character('Shiori', color="#FF3300")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
-define CMM = Character('Male Concil Member', color="#ffa18a") #Lighter Orange
+define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
 define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
 define Tako = Character('Tako', color="#ce9b50")
