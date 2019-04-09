@@ -2743,7 +2743,7 @@ label BE021:
     MC "This guy is kind of intense. Is he the head of the club?"
     show BE angry
     BE "I guess so? I thought this was supposed to be a fun club, but-"
-    "Negative! Archery is a very serious and dangerous endeavor. Even training arrows are capable of causing serious injury. This is no laughing matter."
+    UNKNOWN "Negative! Archery is a very serious and dangerous endeavor. Even training arrows are capable of causing serious injury. This is no laughing matter."
     BE "This is still a club, right? You're making this sound like some sort of military operation."
     UNKNOWN "Affirmative. This is the official Seichou Archery Club. SAC."
     show BE happy
@@ -2786,7 +2786,8 @@ label BE021:
     BE "Does the arrow go on the side of the bow closest to me, or away from me?"
     Haruhiro "Closer to you. Let it rest on the small protrusion on the grip. Right there."
     "Haruhiro assisted us with making sure our arrows were in place and nocked. Then guided us until we had our arrows pulled back, and took aim at trees in the distance."
-    Haruhiro "Okay, now this is the crux of the part. Keisuke, you can put your arrow down for now. I'll focus on Honoka first. He got up behind Honoka and watched her pull the arrow back."
+    Haruhiro "Okay, now this is the crux of the part. Keisuke, you can put your arrow down for now. I'll focus on Honoka first."
+    "He got up behind Honoka and watched her pull the arrow back."
     show BE neutral
     BE "Uh, how am I doing?"
     "Haruhiro went over to Honoka and attempted to adjust her stance for her. He placed one hand on her arm and tried to push them closer to her torso. The issue quickly became evident and he backed off."
@@ -2923,7 +2924,7 @@ label BE022:
     "Near the vending machine section of the cafeteria, Honoka was seated at a table with Alice across from her. The table looked quite cluttered, and caught my attention."
     MC "Yeah, sure."
     "I took a seat next to Honoka and looked at Alice's spread."
-    "Hey, Honoka. What's going on?"
+    MC "Hey, Honoka. What's going on?"
     MC "I'm helping Alice-chan do some sort of experiment."
     BBW "'Assessment' would be a more accurate way of phrasing it."
     BBW "I realize that vending machines are a valid alternative to the regular lunch line, but surely not every item in them is worth the space or cost."
@@ -3632,7 +3633,7 @@ label BE023_c1_3:
     BE "I guess so. Will you tell the others that I've quit, then?"
     Sakie "I think you should do that."
     show BE neutral
-    BE "...Yeah you're right. What am I saying? That's me passing the back of responsibility again. Stupid."
+    BE "...Yeah you're right. What am I saying? That's me passing the buck of responsibility again. Stupid."
     MC "Don't say stupid. Making mistakes doesn't make you stupid."
     $setAffection("BE", 1)
     show BE happy
