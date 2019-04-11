@@ -701,7 +701,7 @@ label daymenu:
     python:
         eventchoices = rollEvents()
     window hide None
-    call screen daymenu #with fade
+    call screen daymenu with fade
     window show None
 
 #Don't change day or events
