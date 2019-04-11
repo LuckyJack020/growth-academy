@@ -32,7 +32,7 @@ init 2 python:
     eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "next": "GTS007", "obsflags": [],         "conditions": []}
     eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS008", "obsflags": [],         "conditions": []}
     eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS009", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "priority": PrioEnum.NONE, "next": "GTS011b", "obsflags": [],        "conditions": []}
+    eventlibrary['GTS009'] = {"name": "A Tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "priority": PrioEnum.NONE, "next": "GTS011b", "obsflags": [],        "conditions": []}
     eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
     eventlibrary['GTS011b'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.NOFLAG, "GTS011_unlock"]]}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS015", "obsflags": [],         "conditions": []}
@@ -1628,7 +1628,7 @@ label GTS018:
     show GTS embarrassed
     GTS "I-I'm sorry, but I don't know what you mean."
     UNKNOWN "I mean that you're perfect! Like literally, you're just what we're looking for."
-    "Naomi was at a loss for words.I couldn't blame her, given she had nothing to work off of as the girl seemed heavily invested in her."
+    "Naomi was at a loss for words. I couldn't blame her, given she had nothing to work off of as the girl seemed heavily invested in her."
     Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui and I'm part of the basketball club! It's a real pleasure to meet you..?"
     GTS "O-oh! Naomi Yamazaki..."
     "She gave a seated bow as the girl giggled and looked at me, making me realize that I needed to introduce myself too."
@@ -1824,7 +1824,7 @@ label GTS019_c1_after:
     GTS "I'm happy you joined me today, Hotsure-san."
     MC "It was no problem, it was nice. Plus, with how perfect it is outside today, it'd be silly for me to stay indoors."
     show GTS neutral
-    GTS "True. Still, it's nice having company on days like theses. So thank you."
+    GTS "True. Still, it's nice having company on days like these. So thank you."
     MC "Thanks for inviting me, is what I should be saying."
     "I leaned back and closed my eyes as I let the warmth of the sun bathe over me, my ears picking up Naomi shifting a little as she must have been getting comfortable as well. Laying back on the grass, I let out a sigh and smiled. This was a great day."
     jump daymenu
@@ -1940,7 +1940,7 @@ label GTS021:
     scene School Planter with fade
     show GTS neutral at center with dissolve
     play music Peaceful
-    "Having received a message from Minori about Naomi wishing to see me, I wandered into the garden with my eyes peeled and ears perked. I . As my footsteps bent the blades of grass underneath, I spotted Naomi at her usual spot, a mat underneath her and another laid beside her. She sat with her hands rested peacefully on her lap as her eyes laid shut."
+    "Having received a message from Minori about Naomi wishing to see me, I wandered into the garden with my eyes peeled and ears perked. As my footsteps bent the blades of grass underneath, I spotted Naomi at her usual spot, a mat underneath her and another laid beside her. She sat with her hands rested peacefully on her lap as her eyes laid shut."
     MC "Hey Yamazaki-san, you wanted to see me?"
     "She remained silent, raising a finger to her lips for silence before motioning to take a place next her."
     "I took the hint and got on my knees next to her, hands resting on my lap as I mimicked her pose."

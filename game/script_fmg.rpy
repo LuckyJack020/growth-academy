@@ -156,7 +156,8 @@ label FMG003:
         linear 0 xpos -0.5
         ease 0.5 xpos 0.2
     "I braced for impact, but Akira came to a screeching halt just before colliding into me."
-    show FMG neutral at Transform(xzoom=1)
+    show FMG neutral at Transform(xzoom=1) 
+    show FMG neutral at Position(xpos=0.2)
     FMG "Yo, how're you?"
     "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 kph."
     MC "Um...fine?"
@@ -200,6 +201,7 @@ label FMG003_c1:
     show FMG neutral:
         ease 0.75 xpos 0.9
     "She yelled out before sprinting down the hall... leaving me bewildered."
+    hide FMG
     MC "...Asked...Wait, 30 seconds!?"
     jump daymenu
 
@@ -221,6 +223,7 @@ label FMG003_c2:
     show FMG neutral:
         ease 0.75 xpos 0.9
     "She yelled out before sprinting down the hall... leaving me bewildered."
+    hide FMG
     MC "...You don't go overboard...Wait, 10 seconds!?"
     jump daymenu
 
@@ -239,6 +242,7 @@ label FMG003_c3:
     show FMG neutral:
         ease 0.75 xpos 0.9
     "I honestly felt kinda bad for her but I got too much on my plate to worry about exercise."
+    hide FMG
     "..Like the fact I'm going to be late for class if I don't move!"
     jump daymenu
     

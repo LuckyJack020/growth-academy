@@ -1600,7 +1600,7 @@ label BBW011:
     play music Schoolday
     "Another day done, and I find myself with no idea of what I want to do."
     "The afternoon's a blank page, but when you can start in a million different ways it's impossible to pick just one."
-    MCT "It's not like I'm hoping to find something to do if I wander around the school long enough, but... Maybe I will?"
+    MCT "It's not like I'm hoping to find something to do if I wander around the school long enough, but... maybe I will?"
     scene Gym with fade
     "Half an hour passed. I walked from the classrooms to the gym to the pool to behind the campus. Nothing."
     scene School Planter with fade

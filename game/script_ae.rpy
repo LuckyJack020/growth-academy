@@ -8,7 +8,7 @@ define Tako = Character('Tako', color="#ce9b50")
 
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
 image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png") #missing size2
+image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
 image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
 image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
 image AE happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")

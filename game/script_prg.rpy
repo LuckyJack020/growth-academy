@@ -11,7 +11,8 @@ image PRG angry = DynamicImage("Graphics/PRG/[globalsize]/angry.png")
 image PRG aroused = DynamicImage("Graphics/PRG/[globalsize]/aroused.png")
 image PRG unique = DynamicImage("Graphics/PRG/[globalsize]/unique.png")
 
-image Dorm PRG = "Graphics/ui/bg/PRGdorm_day.png"
+image Dorm PRG Day = "Graphics/ui/bg/PRGdorm_day.png"
+image Dorm PRG Eve = "Graphics/ui/bg/PRGdorm_eve.png"
 
 init 2 python:    
     #Core
@@ -948,6 +949,7 @@ label PRG009:
     show PRG neutral with dissolve:
         linear 0.5 xpos 0.4
     PRG "...Yes."
+    show PRG neutral at Position(xpos=0.4)
     MC "...Is something the matter? I mean, I understand if you don't want to tell me, but it seems like it's causing you distress."
     "Aida clutched the paper to her chest, and I could tell from the bits that were sticking out that it had been completely crumpled up and smoothed out numerous times."
     MC "It's okay! Really! I just... I hate to see someone as nice as you upset, I couldn't not at least ask..."
@@ -1338,8 +1340,8 @@ label PRG012:
     "Nothing out of the ordinary."
     "Matsumoto led the usual outro, followed by the class dispersing and going about their own business."
     "I glanced over to see Aida being kidnapped by Alice again."
-    extend " -Figuratively, of course.-"
-    extend " and she waved at me before disappearing beyond the door frame."
+    extend " -Figuratively, of course."
+    extend " She waved at me before disappearing beyond the door frame."
     "I started packing my books in my bag, however by the time I was done, I noticed someone standing right next to my desk."
     show BE happy with dissolve
     play music BE
@@ -1366,7 +1368,7 @@ label PRG012:
     BE "My my, Kei-chan! You're quite perceptive, aren't you?"
     MC "O-oh. Uhm...sorry, I just blurted that out."
     show BE neutral
-    BE "Hehe, no worries. Wait... Are you sure it's both? I haven't heard of anyone who has two separate growths."
+    BE "Hehe, no worries. Wait... are you sure it's both? I haven't heard of anyone who has two separate growths."
     MC "Hrm...there could be something that effectively combines the two?"
     BE "..."
     MC "..."
@@ -1544,7 +1546,7 @@ label PRG014:
     MC "Good mor-... er, afternoon, Kodama-san. Having a good day, huh?"
     show PRG neutral
     PRG "A-ah! Well... I... I have made something for y-you!"
-    "With that, she revealed the mystery object behind her, a small box, wrapped in a brightly-colored napkin*. Aida held it out with both of her hands."
+    "With that, she revealed the mystery object behind her, a small box, wrapped in a brightly-colored napkin. Aida held it out with both of her hands."
     "I held it by the knot and carefully lowered it on the table. My curiosity as to what's inside grew by the second. Before I could open my mouth to ask her about it..."
     show PRG unique
     PRG "L-lunch! It's... uhm... It is a lunchbox. I m-made it for you."
@@ -1612,7 +1614,7 @@ label PRG014_c1_1:
     "Aida reluctantly stared at the box, clearly contemplating her options. She took a deep breath before picking up the chopsticks."
     show PRG neutral
     PRG "Okay... if that's what you want."
-    "She initially took a nib out of the *item*, licking her lips. Her face lit up, probably realizing how tasty her own food is. Her second and third bite were way more generous as a smile escaped her lips. One that quickly disappeared once she realized I was watching."
+    "She initially took a nib out of the piece of meat, licking her lips. Her face lit up, probably realizing how tasty her own food is. Her second and third bite were way more generous as a smile escaped her lips. One that quickly disappeared once she realized I was watching."
     show PRG happy
     MC "It's good right?"
     $setAffection("PRG", 1)
@@ -1692,6 +1694,8 @@ label PRG015:
     show PRG neutral
     "I looked over behind her, the orange sky was slowly transitioning into a dark night. Truthfully I had hoped to spend my evening differently, the day ended up pretty tiring. But when Aida asked me for her help, with those eyes... My heart faltered."
     "Nevertheless, it was intriguing to see how Alice and Aida arranged their dorm room. The divide was eerily similar to mine and Daichi's. Rather than Daichi’s cluttered half, Alice’s looked more like a fancy five-star hotel. The bed, chairs, table, just about everything appeared incredibly luxury. How much did she bring from her home…"
+    scene Dorm PRG Day with dissolve
+    show PRG neutral
     "And Aida’s side was quite simple, but looked cleaner than any of ours did. Like it was straight out of a magazine cover."
     PRG "S-so... Where did you want to begin?"
     MC "Hrm... let's do a quick refresher of what you already know."
@@ -1699,7 +1703,7 @@ label PRG015:
     "We spent the next half hour making sure she was caught up, as most of the theory that she has problems with will presumably be in the test tomorrow."
     "After that we took a quick break, where Aida seemingly went all out on studying snacks. I pointed it out, but as expected, she said it wasn't any trouble at all. We continued on studying and snacking away."
     "As I continued... I started to notice Aida's gaze being on me, rather than the book in front of her. I tried to not let it hinder me, but time only made her staring stand out more."
-    scene Dorm BBW with fade
+    scene Dorm PRG Eve with fade
     MC "What's wrong? You having trouble focusing?"
     if getAffection("PRG") <= 2:
         show PRG sad
