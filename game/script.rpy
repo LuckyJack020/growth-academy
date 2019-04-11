@@ -594,62 +594,55 @@ screen debugmenu:
         
         text "Girl"
         text "Affection"
-        text ""
+        text "Core Progress"
 
         text "BE"
         hbox:
             textbutton "-" action Function(setAffection, "BE", -1)
             text str(affection["BE"])
             textbutton "+" action Function(setAffection, "BE", 1)
-            
-        text ""
+        text getProgress("BE")
             
         text "GTS"
         hbox:
             textbutton "-" action Function(setAffection, "GTS", -1)
             text str(affection["GTS"])
             textbutton "+" action Function(setAffection, "GTS", 1)
-            
-        text ""
+        text getProgress("GTS")
             
         text "AE"
         hbox:
             textbutton "-" action Function(setAffection, "AE", -1)
             text str(affection["AE"])
             textbutton "+" action Function(setAffection, "AE", 1)
-            
-        text ""
+        text getProgress("AE")
             
         text "FMG"
         hbox:
             textbutton "-" action Function(setAffection, "FMG", -1)
             text str(affection["FMG"])
             textbutton "+" action Function(setAffection, "FMG", 1)
-            
-        text ""
+        text getProgress("FMG")
 
         text "BBW"
         hbox:
             textbutton "-" action Function(setAffection, "BBW", -1)
             text str(affection["BBW"])
             textbutton "+" action Function(setAffection, "BBW", 1)
-            
-        text ""
+        text getProgress("BBW")
             
         text "PRG"
         hbox:
             textbutton "-" action Function(setAffection, "PRG", -1)
             text str(affection["PRG"])
             textbutton "+" action Function(setAffection, "PRG", 1)
-            
-        text ""
+        text getProgress("PRG")
             
         text "RM"
         hbox:
             textbutton "-" action Function(setAffection, "RM", -1)
             text str(affection["RM"])
             textbutton "+" action Function(setAffection, "RM", 1)
-
         text ""
         
         hbox:
@@ -672,7 +665,7 @@ screen debugmenu:
         
         textbutton "Return to game" action Jump("daymenu_noadvance")
         textbutton "Load Test" action Jump("debugloadtest")
-        text ""
+        text "Size: " + str(globalsize)
 
 screen debugflaglist:
     vbox:
