@@ -10,7 +10,6 @@
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'town', 'track', 'woods']
-    debuginfo = False
     debugenabled = True
     debuginput = ""
     globalsize = 1
@@ -356,6 +355,12 @@
         for f in flags:
             l += f + ", "
         return l
+    
+    def debugListTimeFlags():
+        l = ""
+        for f in timeflags:
+            l += f + ", "
+        return l
         
     def debugListClearedEvents():
         l = ""
@@ -370,7 +375,13 @@
         else:
             skills[s] += val
             return skills[s]
-            
+    
+    def setSkillDebug(s, val):
+        if s not in skills.keys():
+            renpy.log("Unknown skill ID: %s" % s)
+        else:
+            skills[s] += val
+
     def getSkill(s):
         if s not in skills.keys():
             renpy.log("Unknown skill ID: %s" % s)
@@ -398,6 +409,18 @@
     def setTimeFlag(flag):
         if flag not in timeflags:
             timeflags.append(flag)
+    
+    def debugSetTimeFlag(flag, state):
+        if state:
+            if flag in timeflags:
+                return
+            else:
+                timeflags.append(flag)
+        else:
+            if flag in timeflags:
+                timeflags.remove(flag)
+            else:
+                return
             
     def setSize(size):
         global globalsize
@@ -443,25 +466,6 @@ screen choicetimer:
 
 screen daymenu:
     add "Graphics/ui/bg/menubg-day.png"
-    
-    if debuginfo:
-        vbox:
-            xalign 0
-            yalign 0
-            text ("Debug info:")
-            text ("Girl/Aff")
-            text ("BE %(aff)d" % {"aff": affection["BE"]})
-            text ("GTS %(aff)d" % {"aff": affection["GTS"]})
-            text ("AE %(aff)d" % {"aff": affection["AE"]})
-            text ("FMG %(aff)d" % {"aff": affection["FMG"]})
-            text ("BBW %(aff)d" % {"aff": affection["BBW"]})
-            text ("PRG %(aff)d" % {"aff": affection["PRG"]})
-            text ("Athletics: %d" % skills["Athletics"])
-            text ("Art: %d" % skills["Art"])
-            text ("Academics: %d" % skills["Academics"])
-            text ("Events:")
-            for e in eventchoices:
-                text ("%s" % e)
         
     #event choices (1 to 3-choice day)
     if len(eventchoices) <= 3:
@@ -548,7 +552,10 @@ screen daymenu:
             xalign 0.5
             yalign 0.9
             background Solid(Color((0, 0, 0, 100)))
-            text(eventlibrary[highlitevent]["name"])
+            if debugenabled:
+                text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
+            else:
+                text(eventlibrary[highlitevent]["name"])
         frame:
             xalign 0.5
             yalign 0.975
@@ -560,13 +567,12 @@ screen daymenu:
     
     #debug menu toggle (if debug is enabled)
     if debugenabled:
-        textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
-        textbutton "Toggle Debug" xalign 0.9 yalign 0.9 action SetVariable("debuginfo", not debuginfo)
+        #textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
         
 screen debugmenu:
     $debuginput = ""
-    grid 3 13:
+    grid 3 14:
         xalign 0.5
         yalign 0.5
         
@@ -574,17 +580,17 @@ screen debugmenu:
         input value VariableInputValue("debuginput")
         text ""
         
-        text "Show Event:"
-        textbutton "Go!" action Jump("debugevent")
-        text ""
-        
-        text ""
+        textbutton "Start Event" action Jump("debugevent")
         textbutton "List Cleared Events" action Jump("debugclearedeventlist")
         text ""
         
         textbutton "List Flags" action Jump("debugflaglist")
         textbutton "Set Flag" action Jump("setflag")
         textbutton "Unset Flag" action Jump("unsetflag")
+        
+        textbutton "List Timeflags" action Jump("debugtimeflaglist")
+        textbutton "Set Timeflag" action Jump("settimeflag")
+        textbutton "Unset Timeflag" action Jump("unsettimeflag")
         
         text "Girl"
         text "Affection"
@@ -646,23 +652,23 @@ screen debugmenu:
 
         text ""
         
-        #hbox:
-        #    text "Athletics:"
-        #    textbutton "-" action Function(setSkill, "Athletics", -1)
-        #    text str(skills["Athletics"])
-        #    textbutton "+" action Function(setSkill, "Athletics", 1)
-            
-        #hbox:
-        #    text "Art:"
-        #    textbutton "-" action Function(setSkill, "Art", -1)
-        #    text str(skills["Art"])
-        #    textbutton "+" action Function(setSkill, "Art", 1)
-            
-        #hbox:
-        #    text "Academics:"
-        #    textbutton "-" action Function(setSkill, "Academics", -1)
-        #    text str(skills["Academics"])
-        #    textbutton "+" action Function(setSkill, "Academics", 1)
+        hbox:
+            text "Athletics"
+            textbutton "-" action Function(setSkillDebug, "Athletics", -1)
+            text str(skills["Athletics"])
+            textbutton "+" action Function(setSkillDebug, "Athletics", 1)
+
+        hbox:
+            text "Art"
+            textbutton "-" action Function(setSkillDebug, "Art", -1)
+            text str(skills["Art"])
+            textbutton "+" action Function(setSkillDebug, "Art", 1)
+        
+        hbox:
+            text "Academics"
+            textbutton "-" action Function(setSkillDebug, "Academics", -1)
+            text str(skills["Academics"])
+            textbutton "+" action Function(setSkillDebug, "Academics", 1)
         
         textbutton "Return to game" action Jump("daymenu_noadvance")
         textbutton "Load Test" action Jump("debugloadtest")
@@ -672,7 +678,12 @@ screen debugflaglist:
     vbox:
         text debugListFlags()
         textbutton "Return" action Jump("debugmenu")
-        
+
+screen debugtimeflaglist:
+    vbox:
+        text debugListTimeFlags()
+        textbutton "Return" action Jump("debugmenu")
+
 screen debugclearedeventlist:
     vbox:
         text debugListClearedEvents()
@@ -691,6 +702,14 @@ label setflag:
 
 label unsetflag:
     $setFlag(debuginput, False)
+    jump debugmenu
+    
+label settimeflag:
+    $debugSetTimeFlag(debuginput, True)
+    jump debugmenu
+
+label unsettimeflag:
+    $debugSetTimeFlag(debuginput, False)
     jump debugmenu
 
 label daymenu:
@@ -727,6 +746,12 @@ label debugclearedeventlist:
     scene black
     window hide None
     call screen debugclearedeventlist
+    window show None
+
+label debugtimeflaglist:
+    scene black
+    window hide None
+    call screen debugtimeflaglist
     window show None
 
 label startevent:
