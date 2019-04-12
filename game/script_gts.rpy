@@ -1197,7 +1197,7 @@ label GTS012_after:
     MC "I've been having some trouble with some of our assignments. I was hoping you could possibly give me some help tomorrow in the library."
     GTS "Of course Hotsure-san, I'd be delighted to help you in any way I can."
     MC "Yeah... this subject's been kind of giving me a hard time. Thanks though, I really appreciate it."
-    MC "Anytime, Hotsure-san. We are study partners, after all, and it'd show poorly on me if I let you down already."
+    GTS "Anytime, Hotsure-san. We are study partners, after all, and it'd show poorly on me if I let you down already."
     "She giggled very softly, which resulted in a chuckle from me as we relaxed for a little longer before needing to go our separate ways."
     jump daymenu
 

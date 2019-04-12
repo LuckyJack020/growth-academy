@@ -641,7 +641,7 @@ label FMG007_c1:
     show FMG happy
     FMG "Yep, thanks to him I found my love for video games."
     show FMG flex
-    FMG "Even a bodybuildder like me has got to have a hobby, dude!"
+    FMG "Even a bodybuilder like me has got to have a hobby, dude!"
     show FMG happy
     FMG "Hey, if we ever get the chance, let's play some time, okay?"
     MC "Sure, love to."
