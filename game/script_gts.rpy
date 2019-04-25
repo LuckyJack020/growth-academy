@@ -2192,7 +2192,7 @@ label GTS028T_c1_after:
     Ryoko "Movies have a lot of rivals, live theatre being one of them."
     Minori "If I may interject, I would say online video sites are probably the biggest threat."
     Ryoko "Also true!"
-    GTS "I-I’m sorr`y..?"
+    GTS "I-I'm sorry..?"
     MC "Don't worry Yamazaki-san, She's just playing it up. Though I can't say I've gone to many plays or musicals."
     Minori "Unfortunately I haven't as well."
     Ryoko "Yeah, I already spend enough on movies. Live shows are far too costly for me to support both."

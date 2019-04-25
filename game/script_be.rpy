@@ -1956,7 +1956,7 @@ label BE018:
     $setProgress("BE", "BE019")
     scene Dorm BE with fade
     show BE neutral at center with dissolve
-    "I was hanging out in Honoka's room, playing video games with her as had become a fairly frequent occurrence. She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
+    "I was hanging out in Honoka's room, playing video games with her, as had become a fairly frequent occurrence. She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
     MC "I thought you said your roomie was going to be out until evening?"
     BE "That's what she said... Maybe it's someone else?"
     "Honoka stood up to open the door, and I peered over to check out who it was. Surprisingly, there stood Aida, fiddling with her fingers, but otherwise waiting patiently."
@@ -3158,7 +3158,7 @@ label BE022_c1_2:
     show BE happy
     BE "Then, you wouldn't need to worry about freshness. Ideally, it would be getting stocked so often that the turnaround time is really low."
     show BBW happy
-    BBW "A large amount of stock would then be beneficial, then. It would be good to maybe limit the machine to the most popular snacks out there, and then work from there to stock multiples of each."
+    BBW "A large amount of stock would be beneficial, then. It would be good to maybe limit the machine to the most popular snacks out there, and then work from there to stock multiples of each."
     BE "Like how there's usually a few for sodas, because those go quickly. But even more for water."
     show BBW neutral
     BBW "Precisely. This is a better way of thinking. Hm."

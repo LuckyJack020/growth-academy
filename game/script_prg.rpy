@@ -1563,7 +1563,7 @@ label PRG014:
     "The two of us had the privilege of carrying our lunch. Instead of waiting in line, we sat down right away, next to each other."
     show PRG neutral with dissolve
     "I rubbed my hands before carefully untying the knot and opening the lunch box that she had prepared for me. I wasn't sure what kind of expectations I had, but they were surpassed by a long shot."
-    "As usual with bento, the box is divided up into sections, each with its own food type. Rice, fruits, meat and vegetables. It was all there. The vibrant colors were a sight to behold."
+    "As usual with bento, the box was divided up into sections, each with its own food type. Rice, fruits, meat and vegetables. It was all there. The vibrant colors were a sight to behold."
     if getAffection("PRG") > 8:
         extend " Not to mention the sauce in the shape of an heart."
     MC "Wooow. If... if this tastes as good as it looks, I totally have to marry you."

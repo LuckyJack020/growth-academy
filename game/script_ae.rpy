@@ -4199,7 +4199,7 @@ label AE023:
     show AE neutral
     AE "Yes. When we first met, she walked into the school with you."
     MC "Oh...well, yeah."
-    AE "You seem to have very close interactions. I assume you've known eachother for a long time?"
+    AE "You seem to have very close interactions. I assume you've known each other for a long time?"
     "I stopped to think back about the good times Honoka and I shared in our days back in Tokyo. As my memories called deep back to my days of childhood in order to gauge just how long it was I actually HAD known her for."
     MC "Uh...yeah, yeah I guess you could say that."
     show AE sad-2

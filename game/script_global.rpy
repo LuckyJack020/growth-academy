@@ -412,7 +412,7 @@ label global000_AE_c3:
 
 label global000_BBW:
     scene black with dissolve
-    "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular.."
+    "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular..."
     
     scene Classroom with dissolve
     play music BBW
@@ -456,7 +456,7 @@ label global000_BBW:
             jump global000_BBW_c2
             
 label global000_BBW_c1:
-    MC "Well, if you've got this under control, I guess I'll be going then.?"
+    MC "Well, if you've got this under control, I guess I'll be going then."
     $ setAffection("BBW", 1)
     $ setAffection("PRG", -1)
     $ setAffection("BE", -1)

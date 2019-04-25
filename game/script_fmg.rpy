@@ -1175,7 +1175,7 @@ label FMG014:
     ". . ."
     MCT "I have several questions!"
     MC "Okay first off, why my roommate? Second of all what makes you think he can even get the sheet in the first place!?"
-    FMG "Because a few days after the nurse appointment thing, I was getting a bottle water from the vending machines when I saw that he was using his “Special Tactics”,i.e. he was hiding in a tree. I snuck up on him and he just jumped off and ran like hell."
+    FMG "Because a few days after the nurse appointment thing, I was getting a bottle of water from the vending machines when I saw that he was using his 'Special Tactics', i.e. he was hiding in a tree. I snuck up on him and he just jumped off and ran like hell."
     "Honestly, I should have asked more questions to that...but I was getting a headache at the idea of my roommate and Akira in one room."
     MC "If you know of him, why don't you ask him yourself?"
     show FMG sad

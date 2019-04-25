@@ -2686,7 +2686,7 @@ label BBW016_c2_1:
     BBWCell "<Or an orgy of ultraviolence that allows the disturbed to play out their grotesque fantasies.>"
     "Now I was getting a little peeved."
     Cell "<I wouldn't have pegged you as a moral prude, Alice.>"
-    Cell "<Not that I want to start an argument, but there are far more types of videos than just platformers and shoot 'em ups.>"
+    Cell "<Not that I want to start an argument, but there are far more types of games than just platformers and shoot 'em ups.>"
     jump BBW016_c3
     
 label BBW016_c3:
@@ -2755,7 +2755,7 @@ label BBW016_c3_3:
     BBWCell "<Money is no object. I can reimburse you.>"
     BBWCell "<It looks like Kodama-san is ready to serve the dish, so I will take my leave.>"
     "I sent a final message - Enjoy - and put my phone down."
-    "I was free to return to Titans of Eververse, but the thought of getting Alice into gaming, even if it was the 'Zoo Manager' variety I'm not interested in."
+    "I was free to return to Titans of Eververse, but the thought of getting Alice into gaming, even if it was the 'Zoo Manager' variety I'm not interested in, lingered in my mind."
     "So I went to my usual PC gaming storepage and started looking through the business management titles."
     jump daymenu
 
