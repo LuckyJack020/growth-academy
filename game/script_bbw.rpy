@@ -1043,6 +1043,7 @@ label BBW008_c1:
     jump daymenu
 
 label BBW008_c2:
+    $setTimeFlag("size2")
     $setProgress("BBW", "BBW012")
     MCT "Oh man, this is going to get out of hand quickly if I don't do something."
     MC "Maybe you shouldn't push back right away."
