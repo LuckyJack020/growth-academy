@@ -53,7 +53,7 @@ init 2 python:
     eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
     
     eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['GTS010'] = {"name": "A head above the class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],               "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['GTS010'] = {"name": "A Head Above the Class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],               "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     
 label GTS001:
     $setProgress("GTS", "GTS002")
@@ -1049,7 +1049,7 @@ label GTS011b:
     scene School Planter with fade
     play music Busy
     "I stepped into the garden expecting the normal serenity one would find there, but surprisingly it was more active than usual."
-    UNKNOWN "Okay, this is a good spot right. Now if I set up here…"
+    UNKNOWN "Okay, this is a good spot right. Now if I set up here..."
     "The garden was normally a place of solitude for the students, but it was interrupted by a red haired girl carrying around what appeared to be a film camera. "
     "Noticing Naomi sitting under a tree and watching the girl, I decided to investigate what was going on."
     MC "Hey Yamazaki-san, what's going on here?"
@@ -1070,7 +1070,7 @@ label GTS011b:
     Ryoko "I see. So Hotsure-san, you ever been in a movie before?"
     MC "W-what? A movie?"
     Ryoko "Yeah, you ever play a role before?"
-    MC "Um no…"
+    MC "Um no..."
     Ryoko "Aw, that's a shame, you have the looks of a leading man to you. Nice chin, decent build, and the hair over the eyes thing, very mysterious. Women love that, isn't that right Yamazaki-san?"
     show GTS embarrassed
     GTS "Huh? Oh I wouldn't know."
@@ -1103,7 +1103,7 @@ label GTS011b:
     Ryoko "Yeah, but they we do some lighting effects, proper clothes, and you'll make a slightly luminous effect that has a supernatural aura to it. Then bam, spooky ghost."
     GTS "Well you seem to have a good knowledge of how to handle it."
     Ryoko "Yep! Years of experience, give me a camera and I'll give you a film no matter what it is."
-    Ryoko "…"
+    Ryoko "..."
     Ryoko "Well okay, maybe not an animation. I can't draw to save my life and I especially don't know how to 3D model. But doesn't mean I can't find someone who does!"
     MC "Well films are a collaborative effort after all."
     Ryoko "Exactly right! Speaking of which. I should get back to the club to discuss ideas. Thanks so much for inviting me here Yamazaki-san. Got some great ideas for filming locations here."
@@ -1111,7 +1111,7 @@ label GTS011b:
     GTS "You're welcome Tanaka-san. Please feel free to stop by from time to time."
     Ryoko "Oh I will be, after all have to see how this place looks at night. I already got ideas of where to place our ghost. This place is just perfect for a surprise haunted setting. I mean you can see it too right?"
     show GTS embarrassed
-    GTS "I rather not think about it…"
+    GTS "I rather not think about it..."
     MC "Yeah this could work for a good ghost surprise."
     Ryoko "Mhm, well I'll see you two around. Oh and remember, if either of you two are interested in doing some acting just let me know. Later!"
     "She gave us a wink and a bow which Naomi returned in kind before Ryoko took off, barely giving me the chance to say goodbye."
@@ -2109,17 +2109,17 @@ label GTS028T:
     show Ryoko neutral
     Ryoko "Great! I wasn’t sure what you’d all like to watch so I picked a time that I knew would have a couple of movies starting in a relatively soonish time. So we could discuss what we want to see."
     MC "But what if we can’t agree on any of the choices?"
-    Ryoko "Well… then I didn’t plan this out properly heh."
+    Ryoko "Well... then I didn’t plan this out properly heh."
     Minori "As ill planned as that was, I’m sure we’ll agree on one of the choices we have to choose from."
     MC "Alright, we do we have then?"
     Ryoko "We have The Last Call, a horror movie about patrons in a bar learning they’re stuck in a bar with ghosts. There’s Koichi, which is a period piece of a man fighting for his stolen love after being dishonored by the murder of his master. And then there’s My Lover, My Sister!? A comedy which is about a guy who learns that the lady he’s been dating is actually his sister in law."
     show GTS embarrassed
-    GTS "I’m… not sure how I feel about those other two…"
+    GTS "I’m... not sure how I feel about those other two..."
     Ryoko "So those are our choices people, which would you like to see?"
     Minori "Hm, I could go for a fun comedy."
     GTS "I’m rather curious about Koichi."
     Ryoko "And I’ve been meaning to watch The Last Call. Well Hotsure-san, what’s it gonna be?"
-    MC "Great… Um…"
+    MC "Great... Um..."
     menu:
         "I think a comedy is a safe choice since we don’t know how the others will be.": # -1 Affection
             jump GTS028T_c1_1
@@ -2135,7 +2135,7 @@ label GTS028T_c1_1:
     Ryoko "It’s like my teacher always said, 'If you don’t know what to watch, go with the jokes.'"
     $setAffection("GTS", -1)
     show GTS sad
-    GTS "I hope it’s not too vulgar…"
+    GTS "I hope it’s not too vulgar..."
     Minori "Don’t worry Yamazaki-san, I wouldn’t pick something if I thought it’d bother anyone too much."
     jump GTS028T_c1_after
 
@@ -2158,15 +2158,15 @@ label GTS028T_c1_3:
     show Ryoko happy
     Ryoko "It’s sure to be pretty funny I think."
     show GTS sad
-    GTS "…"
+    GTS "..."
     Minori "What’s the matter Yamazaki-san?"
-    GTS "N-nothing…"
+    GTS "N-nothing..."
     Minori "Are you worried it might be too scary?"
-    GTS "…"
+    GTS "..."
     MC "Yamazaki-san, if you don’t want to see it we can pick something else."
     $setAffection("GTS", -2)
-    GTS "N-no… it’s okay. I’ll be okay…"
-    MC "If you say so…"
+    GTS "N-no... it’s okay. I’ll be okay..."
+    MC "If you say so..."
     show Ryoko neutral
     Ryoko "Don’t worry Yamazaki-san, it won’t be too bad. I promise."
     jump GTS028T_c1_after
@@ -2233,7 +2233,7 @@ label GTS028T_c1_after:
         "I was caught by surprise when she did that, looking up at her as she looked back down at me and smiled. My cheeks grew a little warm though, as while we looked at each other the ronin spoke all his loving feelings. Sensing my nervousness, she ended up blushing as well and looked away, though her smile remained as did her hand for the remainder of the film."
     else:
         "The movie began innocently enough, a brief scene to establish all the characters and their reasons for drinking that night. There was minor tension and suspense the entire time though, yet nothing really happened for quite some time. This seem to leave Naomi feeling a little more comfortable as it seemed it might not be too bad. But then just like that, the first major scare happened and Naomi let out a startled yelp."
-        "The noise resulting in some others in the audience to snicker and laugh which resulted in her embarrassment. Her body remained tense the rest of the film as my chair shook a little from her shaking. She was leaning back, as if providing distance would result in protection. Frowning, I gently placed my hand on her which made her flinch but then look down to see me. I squeezed her hand to let her know I was there. And she squeezed back and held my hand for the rest of the movie, squeezing it whenever she was startled. Granted… maybe that wasn’t the best thing as I learned that with her added height, Naomi was stronger than normal too..."
+        "The noise resulting in some others in the audience to snicker and laugh which resulted in her embarrassment. Her body remained tense the rest of the film as my chair shook a little from her shaking. She was leaning back, as if providing distance would result in protection. Frowning, I gently placed my hand on her which made her flinch but then look down to see me. I squeezed her hand to let her know I was there. And she squeezed back and held my hand for the rest of the movie, squeezing it whenever she was startled. Granted... maybe that wasn’t the best thing as I learned that with her added height, Naomi was stronger than normal too..."
     jump daymenu
 
 label GTS030:

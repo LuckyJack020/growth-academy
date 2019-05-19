@@ -1757,10 +1757,7 @@ label BBW011_c3:
     jump daymenu
     
 label BBW012:
-    if getFlag("BBW_working"):
-        $setProgress("BBW", "BBW015")
-    else:
-        $setProgress("BBW", "BBW016")
+    $setProgress("BBW", "BBW015")
     scene Classroom with fade
     play music Schoolday
     "When the classes ended for the day, I was more than ready to shut my brain off."
@@ -5216,6 +5213,7 @@ label BBW029_c1_2:
 
 label BBW029_c1_3:
     MC "I can’t do it for you, but I can help."
+    $setAffection("BBW", 1)
     "She considered it for a second, then nodded."
     show BBW happy
     BBW "That would be appreciated."

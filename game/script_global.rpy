@@ -102,7 +102,7 @@ define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 init 1 python:
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONAL,            "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
-    eventlibrary['RM002'] = {"name": "Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                           "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
+    eventlibrary['RM002'] = {"name": "You and Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
     
     #Causes minor character scenes to be disabled if thime is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -1374,6 +1374,7 @@ label RM002_c2_2:
     "While saying all this, I knocked on the door repeatedly. Judging by her lack of response, I don’t think she noticed."
     UNKNOWN "Oh, no worries. I can get them myself."
     MC "What books, if you don’t mind me asking?"
+    show Yuki sad
     UNKNOWN "...Math? Why does it matter?"
     "Before I could think of another way to stall her, Daichi came out of the room."
     hide Yuki with dissolve
@@ -1414,7 +1415,7 @@ label RM002_c2_after:
     show RM neutral
     RM "Anyway, I found what I was looking for."
     if getFlag("RM002_c1_2"):
-        MCT "‘What I was looking for?’ He said he was placing a camera... What’s with the act?"
+        MCT "'What I was looking for?' He said he was placing a camera... What’s with the act?"
         MCT "But he’ll probably get upset if I don’t play along."
     MC "Oh, good. Alright, I’ll see you back at the dorm, then."
     RM "Yeah, sure. Talk to you later, man."

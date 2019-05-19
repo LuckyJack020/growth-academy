@@ -19,7 +19,7 @@ init 2 python:
     eventlibrary['PRG001'] = {"name": "A Bun Tasting", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,             "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG003", "obsflags": [],            "conditions": []}
     eventlibrary['PRG003'] = {"name": "An Inviting Aroma", "girls": ["PRG"], "type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG008", "obsflags": [],            "conditions": []}
     eventlibrary['PRG008'] = {"name": "Cups and Measurements", "girls": ["PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG009", "obsflags": [],            "conditions": []}
-    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG012", "obsflags": [],            "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
+    eventlibrary['PRG009'] = {"name": "Handling with Change", "girls": ["PRG"], "type": EventTypeEnum.CORE,             "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "PRG012", "obsflags": [],            "conditions": []}
     eventlibrary['PRG012'] = {"name": "Archetypes", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG013", "obsflags": [],            "conditions": []}
     eventlibrary['PRG013'] = {"name": "Competitive Spirit", "girls": ["PRG"],"type": EventTypeEnum.CORE,                "location": "classroom",        "priority": PrioEnum.NONE, "next": "PRG014", "obsflags": [],            "conditions": []}
     eventlibrary['PRG014'] = {"name": "Cozy Lunch Time", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "PRG015", "obsflags": [],            "conditions": []}
@@ -52,7 +52,7 @@ label PRG001b:
     PRG "M-Me?"
     MC "After that first speech in class...you didn't seem to take it very well."
     show PRG aroused
-    PRG "Oh...I hoped no one had noticed. Please, don't concern yourself over it."
+    PRG "Oh... I hoped no one had noticed. Please, don't concern yourself over it."
     menu:
         "Are you sure?":
             jump PRG001_a

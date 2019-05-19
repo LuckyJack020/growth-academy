@@ -3004,9 +3004,9 @@ label BE022:
             jump BE022_c1_1
         "I don't know, we'll just have to help with this experiment again later?":
             jump BE022_c1_2
-        "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("WG") > 6:
+        "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("BBW") > 6:
             jump BE022_c1_3
-        "(Convince Honoka to come clean) (disabled)" if getAffection("BE") <= 6 or getAffection("WG") <=6:
+        "(Convince Honoka to come clean) (disabled)" if getAffection("BE") <= 6 or getAffection("BBW") <=6:
             pass
         "(Say nothing)":
             jump BE022_c1_4
@@ -4046,7 +4046,7 @@ label BE025_c1_1:
     MC "I'd like to see that, either way."
     show BE happy
     BE "Ha! You're on then, Kei-chan! I'll kick butt and get that chocolate, hahahahaha!"
-    "I really, really wanted Honoka to win. Really. But when Honoka jogged down to her quiver, laughing maniacally, I wondered if I was going to be out more cash than I could afford…"
+    "I really, really wanted Honoka to win. Really. But when Honoka jogged down to her quiver, laughing maniacally, I wondered if I was going to be out more cash than I could afford..."
     jump BE025_c1_after
 
 label BE025_c1_2:
@@ -4054,7 +4054,7 @@ label BE025_c1_2:
     MC "If you win, I'll give you a kiss."
     show BE neutral
     BE "Oh, just a kiss?"
-    MC "Well, I suppose it could be just a kiss. I also haven't specified where I'd be kissing you…"
+    MC "Well, I suppose it could be just a kiss. I also haven't specified where I'd be kissing you..."
     show BE surprised
     BE "Huh?"
     MC "And if you blow them away, there'll be more than kissing. And I might get so excited about doing it that I just take you right there in front of all the other club members."
@@ -4062,7 +4062,7 @@ label BE025_c1_2:
     BE "F-For a kiss?"
     MC "Maybe I've got something more planned, and you'll just have to find out."
     show BE surprised
-    BE "…"
+    BE "..."
     show BE happy
     BE "O-Okay!"
     "Honoka raced back to her quiver of arrows, while she vibrated on the spot. I hope her anticipation didn't make her too jittery to focus."
@@ -4108,7 +4108,7 @@ label BE025_c1_4:
     $setAffection("BE", 2)
     show BE unique
     BE "Oh ho ho I'm going to make you look so ~pretty~."
-    "Honoka skipped back to her quiver as I stayed there, watching. That… may have been a bad idea."
+    "Honoka skipped back to her quiver as I stayed there, watching. That... may have been a bad idea."
     jump BE025_c1_after
 
 label BE025_c1_after:
@@ -4159,7 +4159,7 @@ label BE025_c1_after:
 label BE025_c2_1:
     "Suddenly, I was pushed onto the ground. I winced a bit as my elbow dug into the grass. Honoka's chest pushed into me from below."
     "She'd thought quickly, and managed to knock us both down to the ground. I looked over at the arrow and saw it land harmlessly a good five meters away."
-    MC "Holy crap…"
+    MC "Holy crap..."
     "Honoka quickly stood up and pat herself down. My heart raced. I felt numb, paralyzed. I didn't even think to get up until Honoka reached down and offered her hand."
     show BE sad with dissolve
     BE "Kei-chan, are you okay?"
@@ -4175,7 +4175,7 @@ label BE025_c2_1:
     MC "I still feel I should have done something."
     show BE happy
     BE "Nah. Don't stress. But maybe start working out a bit just in case. Pushing you down was like knocking over a lamp."
-    MC "Heh… yeah you've got a point…"
+    MC "Heh... yeah you've got a point..."
     jump BE025_c2_after
 
 label BE025_c2_2:
@@ -4191,7 +4191,7 @@ label BE025_c2_2:
     BE "Yeah. That was bad."
     show BE happy
     BE "Very manly of you to push me out of the way like that, though."
-    MC "Oh, heh, I was just… acting on instinct."
+    MC "Oh, heh, I was just... acting on instinct."
     BE "Hehe. Well, it's a good instinct to have."
     jump BE025_c2_after
 
@@ -4202,27 +4202,27 @@ label BE025_c2_3:
     MC "Honoka, you okay?"
     "Looking down at Honoka, her face was flushed, and I wasn't sure why. One of my hands quickly went to her arm."
     MC "You didn't get hit by anything, did you?"
-    "I'd literally just seen that the arrow missed us. But… worry doesn't tend to be logical."
+    "I'd literally just seen that the arrow missed us. But... worry doesn't tend to be logical."
     show BE happy with dissolve
     BE "N-No, I'm fine. It's just. You're, um."
     MC "I know. Sorry. I just acted and wanted you safe."
-    BE "No, it's not that. Your hand is just…"
+    BE "No, it's not that. Your hand is just..."
     "Oh."
     MC "Ah, sorry!"
     "I quickly took my other hand off of her breast and placed it flat on the ground. I moved my other hand as well, just for safety."
     show BE sad
-    BE "I didn't say you had to stop…"
-    MC "Oh! W-Well… this probably would look weird if we stayed on the ground for too long."
+    BE "I didn't say you had to stop..."
+    MC "Oh! W-Well... this probably would look weird if we stayed on the ground for too long."
     "I stood up, and took Honoka's hand, easily pulling her back up with me. I helped her dust off her uniform from the dirt on the ground, and just double-checked to make sure she was okay."
     MC "You sure you're okay?"
     show BE happy
     BE "Heh, I'm fine, Kei-chan. Being saved by a rogue arrow, and ending up with Kei-chan on top of me? Yeah that's pretty okay in my book."
-    MC "Heh, you're acting like I planned it…"
+    MC "Heh, you're acting like I planned it..."
     jump BE025_c2_after
 
 label BE025_c2_after:
     "Haruhiro, the club captain, came up to us in a huff, shaking his head."
-    Haruhiro "I swear if I see that kid on the field again after this incident, I'm going to… just… do things to them! Gah!"
+    Haruhiro "I swear if I see that kid on the field again after this incident, I'm going to... just... do things to them! Gah!"
     Haruhiro "Are you two okay?!"
     show BE neutral
     BE "Yeah, we're okay, Haruhiro. Is everything all right over there?"
