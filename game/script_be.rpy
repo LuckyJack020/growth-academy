@@ -2,7 +2,6 @@ define BE = Character('Honoka', color="#FCCF20")
 define Sakie = Character('Sakie', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
 define Coach = Character('Coach', color="#C0C0C0")
-define Waitress = Character('Waitress', color="#C0C0C0")
 define Haruhiro = Character('Haruhiro', color="#C0C0C0")
 
 image BE neutral = DynamicImage("Graphics/BE/[globalsize]/neutral.png")

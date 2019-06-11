@@ -35,6 +35,8 @@ image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/hillroad.png"
 image Theater = "Graphics/ui/bg/NYI.png"
 
+image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
+
 image splash = "Graphics/ui/bg/splashscreen.png"
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
 
@@ -58,6 +60,7 @@ define HR = Character('Tashi-Sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
+define Tomoko = Character('Tomoko', color="#FF3300")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
@@ -65,6 +68,7 @@ define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define Waitress = Character('Waitress', color="#C0C0C0")
 
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
