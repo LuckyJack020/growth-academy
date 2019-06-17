@@ -43,7 +43,12 @@ init 2 python:
     eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
     eventlibrary['BE024'] = {"name": "I scream, You Cream", "girls": ["BE"], "location": "town", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE025", "obsflags": [],                  "conditions": []}
     eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE026", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE026'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE026'] = {"name": "Cicada Catching", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE028", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE027'] = {"name": "Archery Competition", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE029", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE028'] = {"name": "Arcade Date", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                           "priority": PrioEnum.NONE, "next": "BE029", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE029'] = {"name": "Geology Assignment", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE030", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE030'] = {"name": "Love Confession", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE031", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE031'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONALCORE,                            "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -4242,8 +4247,1200 @@ label BE025_c2_after:
     "I said that could be motivation for me the next time I wanted to win a contest."
     jump daymenu
 
-
 label BE026:
+    #Setting: Field or Flowery Area
+    scene Field with fade
+    $setProgress("BE", "BE026")
+    show BE happy with dissolve
+    play music Sunset
+    BE "Kei-chan, I've got an idea, and you're not gonna believe what it is."
+    "Honoka had bumped into me, in her usual fashion. It was good to know that despite it happening more often than not, that it still was a pleasant way to say hello."
+    MC "What's up, Honoka?"
+    "Honoka was dressed normally. Except she seemed to have swapped out her normal skirt for a pair of cargo shorts, with baggy pockets down to the knees. "
+    "In her left hand, Honoka held two small nets."
+    MC "Are you a lepidopterist?"
+    show BE sad
+    BE "No? At least I don't think so, both my parents were born in Japan..."
+    show BE happy
+    BE "Look, I've been hearing cicadas a bunch lately! I haven't gone cicada catching in ages. I think maybe, like, twice since I was a kid."
+    show BE neutral
+    BE "Today's as good a day as any to get back into the hobby. Here!"
+    "Honoka tossed me a net."
+    MC "Hm. Bug-catching, huh? I dunno. I guess I didn't have any plans, but it feels a little childish, and-"
+    "Honoka cut me off by thrusting the bottom of her net in her cleavage and chuckling."
+    MC "Yeah never mind, this sounds fun."
+    "The weather wasn't scorching hot, but definitely warm enough that the cicadas would be out. The trick was finding them. After walking around for a while, it was hard to ignore the telltale sounds of them rubbing their wings together."
+    #SFX: Cicada noise
+    MC "So, what's the plan? Wanna try to see who can catch the most?"
+    BE "Hmm...."
+    show BE angry
+    BE "Nah, let's just hang out and see if we can catch a few."
+    MC "That's fine! Sounds like a plan to me."
+    show BE happy
+    BE "I'd totally get more, anyway."
+    MC "..."
+    MC "'Oh, I'd love to debate you, but my argument is so superior I'd just win anyway, so there's no point in bothering.'"
+    BE "Yeah, you got it!"
+    "Honoka and I looked around the nearby trees, trying to find a trace of the bugs. Honoka started snapping her fingers now and then as she walked around."
+    MC "What are you doing that for?"
+    show BE neutral
+    BE "It's supposed to help make them expect you. Like it sounds similar enough to their mating call to trick them."
+    MC "Huh. Well it's better than any idea I have."
+    "I started snapping as well. Eventually, Honoka and I zoned in on a cicada, resting on the bark of a tree. Its wings fluttered back and forth, letting out its high-pitched noise every few seconds."
+    BE "There we go. Oh it's a big one."
+    MC "Sweet. You wanna go for it?"
+    "Honoka nodded and gave a quick lick of her upper lip."
+    BE "I think I can get it, but I'll need to get into the bushes to grab it."
+    menu:
+        "Go for it.": #BE_Tomboy  +1
+            jump BE026_c1_1
+        "What about your clothes?": #BE_Feminine +1
+            jump BE026_c1_2
+
+label BE026_c1_1:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "Go for it. Gotta move quick, though."
+    "Honoka nodded again, and crouched down on her knees. Her breasts squished down into her thighs, as she began crawling towards the bush. She watched the bug intently, stone-still, and I found myself holding my breath."
+    "Then, with a jump, Honoka leaped towards the tree. Her net thwacked into the bark, as Honoka hurtled to the bush. Her breasts impacted into the shrub as she landed near-horizontal in the greens."
+    show BE happy
+    BE "Haha, I got it!"
+    MC "Awesome, let's see!"
+    "Honoka twisted the net to get the bug at the bottom of the mesh, and extracted herself from the bush."
+    BE "Ow. Ow. Haha. That was fun."
+    MC "Let's take a look."
+    "The mesh of the net was sparse enough to get a good view of the cicada inside. It was obviously freaked out, so we couldn't keep it for very long."
+    MC "You forget how big these things get. Even as an adult, they're still huge."
+    BE "Yeah, it's pretty crazy. They don't live really long either, if I remember. It's like, years spent as a larva and then weeks or months as something actually cool."
+    MC "Well. Hope it's having fun at least, if it can even process what fun is."
+    "Honoka tilted the net upside down, and the cicada stopped clinging to the net after a few seconds. It dropped into Honoka's empty hand, and stayed there for a few seconds."
+    BE "This really is the perfect image for something that's ugly and cute."
+    MC "I think he just looked at you. I'm not sure if he's offended at being called ugly or enjoyed being called cute."
+    show BE neutral
+    BE "Pff, it's just a cicada, Kei-chan. It probably can't even hear me."
+    "The cicada proceeded to jump out of Honoka's hand, and flew towards her cleavage. Her eyes widened as the bug landed on her breast and began trying to scurry inside."
+    show BE surprised
+    BE "Oh my god get it out get it out get it out get it out."
+    MC "Yoink!"
+    "I reached into her breasts as fast as I could and yanked the cicada out, trying my best to only grab it enough to pull it, and not to hurt it. As soon as it was pulled out, it flew away from my hand, leaving a traumatized Honoka."
+    BE "Ew, oh god, gah, I'm gonna be scrubbing those for an hour tonight. "
+    MC "The joke is... obvious. But, Honoka, you got hurt."
+    show BE sad
+    BE "Oh, what? I didn't think cicadas bit..."
+    MC "No, no, here."
+    "I took hold of Honoka's hand, and twisted her arm a bit, to show her the cut on the side of her upper arm. It dripped a bit of blood onto the torn sleeve of her shirt."
+    BE "Aw, shoot. Well, a new shirt's no big deal. But, ow, now that you mention it, that stings."
+    menu:
+        "Take Honoka to the nurse's office.":
+            jump BE026_c2_1
+        "Take Honoka back to your room.": #BE_Affection + 1
+            jump BE026_c2_2
+
+label BE026_c2_1:
+    MC "Let's just head to the nurse's office, and get a bandage for it."
+    "Honoka nodded. It sucked to put our bug-hunt to a short stop, but better to make sure Honoka didn't get an infection or anything."
+    
+    scene Nurse Office with fade
+    "We were surprised when the nurse was actually there to help Honoka."
+    Nurse "Hello. How can I help you?"
+    show BE sad with dissolve
+    BE "I got a cut on my arm here..."
+    Nurse "Oh my. How did that happen?"
+    "The nurse took Honoka to sit down as she pulled out the standard array of disinfectant and bandages. Honoka explained how she got it from a bush, trying to catch a cicada."
+    Nurse "Cicada-catching?"
+    Nurse "... A little old for that, aren't you?"
+    show BE angry
+    BE "You're never too old to enjoy fun stuff!"
+    Nurse "Fun stuff, of course. But is hunting for bugs really fun? Now this is going to sting a little."
+    show BE sad
+    BE "Ow. Ow. Ow. OW!"
+    Nurse "Sorry! I said it was going to sting. It's a large cut, dear. You'll need to make sure to stay away from sharp, thorny bushes for a while, until this heals at least."
+    BE "All right..."
+    MC "Well. At least we caught one!"
+    show BE neutral
+    BE "Heh, we did. Am I good to go?"
+    Nurse "Just about, just making sure that bandage is on nice and secure. Yes. Now you're fine. A regular adhesive strip should be fine if that happens to come off. But that should last until it heals."
+    Nurse "If it doesn't seem to be getting better after a few days, just come on back."
+    BE "Okay. Will do. Thank you."
+    "Honoka hopped off of the bed and walked over, taking my hand and leaving the nurse's office."
+    MC "So, what do you want to do now?"
+    BE "Hm. I guess I want to go back to my room and wash my boobs, honestly. It's one thing to hold a cicada, having it crawl on you is not fun."
+    MC "Ah, that's fair."
+    MC "..."
+    MC "Can I help?"
+    "Honoka smirked and leaned forward, planting a kiss on my cheek."
+    show BE happy
+    BE "Maybe another time, Kei-chan, hehe. But thanks for coming to play with me today. "
+    MC "Anytime, Honoka. Take care."
+    "Honoka walked off to her room, and I returned to mine, carrying both of our cicada nets back with me. I suppose we'd have to figure out what to do with them later."
+    jump daymenu
+
+label BE026_c2_2:
+    MC "My room's pretty close. I have some stuff I could use to help clean you up. "
+    show BE happy
+    $setAffection("BE", 1)
+    BE "Okay!"
+
+    scene Dorm Interior with fade
+    "I took Honoka back to my room. In my drawer, I'd kept a few basic first-aid supplies. Presenting a bottle of hydrogen peroxide to Honoka, she visibly winced."
+    show BE sad with dissolve
+    BE "Kei-chan, that stuff sucks."
+    MC "I know, but it'll help."
+    if getSkill("Academics") > 5:
+        MC "I'll put it on a cotton ball and make it easier on you."
+    MC "Go ahead and sit down."
+    show BE happy
+    BE "Hehe, okay. And should I take off my shirt, Doctor Kei-chan?"
+    MC "I mean... if you want. Wait. That's not the way these fantasies are supposed to play out. You're supposed to be the nurse."
+    BE "I can still be the nurse! Nurses get injuries."
+    MC "Yeah, that's fair."
+    if getSkill("Academics") > 5:
+        "I took the moistened cotton ball and brought it up to Honoka's arm."
+        MC "Now, nurse, this might sting a little."
+        "Rubbing the peroxide on Honoka's cut, she took my hand and squeezed it to help diffuse the discomfort. After rubbing a bit of antibacterial cream on it, I slapped two bandages on the cut to cover it up completely."
+        $setAffection("BE", 1)
+        MC "There. You should be all better, nurse."
+    else:
+        "I took Honoka's arm, and tipped the bottle of peroxide over the cut to pour a small amount on the wound."
+        MC "Nurse, this is going to hurt."
+        show BE sad
+        BE "Ow, ow..."
+        "Honoka's hand dug into the mattress she sat on as I dried up her arm and covered the cut with a bandage, making sure to cover it completely."
+        MC "There you go. All better."
+    show BE happy
+    BE "Oh, thank you, Dr. Kei-chan. How could I ever make it up to you? I don't have any money on me..."
+    MC "Well, it's part of the job, obviously. But. Well, you mentioned taking off your shirt earlier?"
+    show BE surprised
+    BE "Oh, doctor. Taking advantage of a wounded woman like that. I think I might faint. Oh no, but then I'd just be in an even more vulnerable state!"
+    show BE unique
+    BE "I suppose I have no choice in the matter..."
+    "Before I could tell Honoka that she didn't have to, Honoka reached down and undid a button on the bottom of her shirt. "
+    "Honoka's face was beet-red as she undid another two buttons from the bottom up. There was no more exposure of her breasts, at this point. It made it all the more tantalizing in a way. "
+    show BE happy
+    BE "I, I have to get a new shirt, anyway. So..."
+    "Honoka took the middle of her shirt, which still had a few buttons attached near the center, hiding the middle of her breasts and the bra beneath. She pulled, and thrust her chest out, causing the last buttons to explode off of her."
+    "Honoka's breasts burst out, covered in a white, lacy bra that gave her melons support. Without the barrier of her shirt, nearly all of her bosom was exposed. I never realized how much her shirt actually held them back. There was easily a few extra inches exposed now."
+    MC "I, I... I..."
+    show BE aroused
+    BE "Heh.... I've always wanted to do that..."
+    "I held my mouth and nose as I stared at Honoka's bra-clad chest. What could be done? There were so many options, and none seemed better than the other. It was like winning the lottery and not knowing what to buy first."
+    MC "Honoka, they're spectacular."
+    show BE happy
+    BE "Oh, go on."
+    MC "I mean, I don't know enough words to describe them. They're so... big, and round, and.."
+    BE "No, Kei-chan, I mean...."
+    show BE aroused
+    BE "Go on."
+    MC "Go... on... I..."
+    "I stepped forward, hands outstretched, towards Honoka's quivering rack. Her face grew more red as I approached. My hands landed on her chest, and I looked up at her. My hands sunk in, and I just kept pushing."
+    "It seemed the most natural thing to do. I just pushed, letting the flesh envelop the tips of my fingers as I pushed down on her breasts. Honoka took my wrists, and shoved them in deeper."
+    "Eventually, I reached a point where my hands wouldn't go in any deeper. I looked at Honoka hesitantly. She grabbed my head and pulled me down. She stopped, just an inch before my face reached her cleavage."
+    MC "H-Honoka?"
+    show BE aroused
+    BE "S-Sorry, Kei-chan. I've got no problems with this. But, I feel all icky cuz of the bug earlier and... it's kind of killing the mood."
+    MCT "God damn bugs."
+    "Honoka cleared her throat, and gulped. "
+    show BE unique
+    BE "I don't want you digging into these babies if they're not pristine. You know?"
+    MC "Urgh... I think I could look past that, Honoka."
+    show BE happy
+    BE "Hehe, I'm sure you could. But... don't worry. It's gonna happen. I just need a better time. Okay?"
+    "I sighed. But she had a point."
+    MC "You're right, you're right. But you did also ruin your shirt just now."
+    "Honoka looked at her de-buttoned shirt and laughed."
+    show BE neutral
+    BE "Ha. Oh, well. I can still wear it well enough. I've got more. But I guess for now I should go back to my room and take a shower."
+    "Honoka put her shirt back on, doing up the few buttons she hadn't intentionally destroyed. She chuckled, and looked at the bra still visible."
+    show BE happy
+    BE "Well, it'll get me back to my room if I move quick. I don't want anyone but my Kei-chan seeing my cans."
+    "She leaned forward and pulled me into a quick smooch on the cheek again."
+    BE "I had fun, Kei-chan. Thanks for hanging out with me."
+    hide BE with dissolve
+    "Honoka left to go back to her room, and I slumped down on my bed. My head hit the pillow, but hit something hard. I reached back and felt around, until I found the button of Honoka's left behind."
+    "I hesitated a moment, and placed the button up to my nose. It still smelled like her."
+    "She was right, it would be worth the wait."
+    jump daymenu
+
+label BE026_c1_2:
+    $setVar("BEFeminine", getVar("BEFeminine") + 1)
+    MC "What about your clothes?"
+    show BE neutral
+    BE "Huh? Oh, hm. That bush does look a bit thorny. There's gotta be a way to deal with this. Hm."
+    "Honoka got down in a crouched position, causing her breasts to squish into her knees as she lowered herself. She slowly urged herself forward, around the outside of the bush. She held her net tightly in her hands as she searched for a different angle. "
+    BE "Okay, I'm going to try from here. You let me know when I should strike, if you see it about to fly off, maybe."
+    MC "Got it."
+    menu:
+        "Let Honoka get closer before swinging":
+            jump BE026_c3_1
+        "Tell Honoka to swing for the bug right away.":
+            jump BE026_c3_2
+
+label BE026_c3_1:
+    MC "A little more, get a little closer."
+    "Honoka slowly got closer to the cicada. After a few seconds, I gave the go-ahead. Her net swung at the bug."
+    "Unfortunately, the angle was off, and her net didn't land with a perfect seal around the cicada. The bug began to run away from the net, and fluttered into the air."
+    show BE surprised
+    BE "Darnit! Get it, Kei-chan!"
+    if getSkill("Athletics") <= 5:
+        "I grabbed my net, and tried to watch for the flight of the cicada. It didn't zoom straight up into the air. After a few seconds, I swung my net, and landed it on the ground."
+        MC "I think I got it!"
+        BE "You did?!"
+        MC "Yeah, come here and see."
+    else:
+        "I didn't feel like there was enough time to grab my net. I just reached out with both hands and clasped them together."
+        "My heart nearly jumped out of my chest when I felt the flutter of the cicada's wings in my grasp."
+        MC "Holy crap, I caught it!"
+        $setAffection("BE", 2)
+        BE "You did? With your bare hands? You didn't hurt it, did you?"
+        MC "No no, it's right here, and it's okay. You've gotta check this out!"
+    "Honoka stood up, and dusted herself off. She rushed off to my position as quick as I could, making sure to keep the cicada contained."
+    show BE neutral
+    BE "Oh my gosh, I can't believe you caught it!"
+    MC "Yeah, here, take a look..."
+    if getSkill("Athletics") <= 5:
+        "I carefully opened up my hands so Honoka could peer inside and see the cicada."
+        show BE happy
+        BE "It looks perfectly fine. Hehe, I can't believe you were quick enough to grab it like that."
+        MC "It wasn't exactly easy, to be fair."
+    else:
+        "I carefully moved the net, so Honoka could see the cicada inside."
+        show BE surprised
+        BE "Wow! Good catch, Kei-chan."
+        MC "Heh, I'm surprised I got it in one swing."
+    jump BE026_c3_after
+
+label BE026_c3_2:
+    "Honoka seemed to be in a good position. I waited just half a second before telling her to swing for the cicada."
+    MC "Go, right now. You're at a good spot."
+    "Honoka swung her net at the tree, and managed to nail it right in the center. The cicada was perfectly trapped in the net."
+    show BE happy
+    BE "Haha, I got it! Perfect. Kei-chan, come here a bit and help me with this."
+    "From her position, crouched down, it looked hard for her to maneuver the net without falling over. I approached Honoka, and helped grip the net while she stood back up."
+    MC "Here, got it."
+    show BE neutral
+    BE "Thanks, Kei-chan. Didn't wanna ruin the moment. Let's put it over here to get a better look at it."
+    "Honoka took the net and brought it into a more open section. She slipped the net around, so we could see the chirping cicada through the mesh."
+    MC "This is so cool. Yeah, I'm glad you wanted to do this, Honoka."
+    show BE happy
+    BE "Me too. You told me the right time to swing, too."
+    MC "That's barely anything compared to you actually catching it."
+    "Honoka and I chuckled, and took another look at the cicada."
+    jump BE026_c3_after
+
+label BE026_c3_after:
+    show BE happy
+    BE "They get so big, don't they? Look at it. I wonder if it's a guy or a girl."
+    MC "I don't plan on getting close enough to it to find out, honestly."
+    show BE neutral
+    BE "It's kind of odd, isn't it?"
+    MC "What's odd?"
+    BE "Well, they don't live for very long, or at least, they don't get seen by the public that often. So you'd think they'd, well, look prettier."
+    MC "I guess not everything in nature has to stylistically be appealing. Like, camouflage, or animals with bright colors to show they're poisonous."
+    BE "Good point, yeah. Not everything can be stellar and beautiful."
+    MC "If everything was. Then, well, we wouldn't have that, what's the word?"
+    BE "Baseline?"
+    MC "Yeah, I think that's it. Like that line about 'you can't appreciate a sunny day without a few rainy days'."
+    BE "Yeah, I do like that."
+    BE "We should probably let the little thing go now, I don't want it to get upset."
+    MC "Right."
+    "Honoka and I let the little cicada go. It wandered around on the grass for a bit, before flying off. We laughed as we saw it landed on a tree right away."
+    MC "Well, that looked like an easy one. Should we try for something harder?"
+    show BE happy
+    BE "Hm. You know. It's a nice enough day, and I don't feel like getting dirty now."
+    BE "Want to just walk around, and take in the sights?"
+    MC "Sure, I'd like that."
+    "I took Honoka's hand and we walked around for a while more, just enjoying the sights of the various bugs and flora. Looking for cicadas was pretty fun. But when you're not looking for anything specific, you see a lot more."
+    jump daymenu
+
+label BE027:
+    $setProgress("BE", "BE028")
+    #Setting: School Grounds
+    scene Campus Center with fade
+    play music Busy
+    "It wasn't typically something I noted, but the birds were particularly loud today. It started with the sounds of their chirping helping to wake me up that morning, and their various tweets followed me throughout the school grounds."
+    "Usually, birds singing would be a sign of something good happening. But I didn't have anything planned, so I chalked it up to a coincidence."
+    "Honoka's chest collided with my back, like two silk balloon missiles. That certainly could be considered something good happening to me, but it was such a regular occurrence by this point that it didn't feel 'exceptional'."
+    show BE happy with dissolve
+    BE "Heyyyy, Kei-chan. Wanna come clothes-shopping with me? I wanted to grab a new outfit since it was getting hotter out. I could use a second opinion!"
+    "Helping Honoka pick out a new outfit? Well, that could definitely be considered a nice turn of events."
+    MC "Sure, I could help you out. I don't think I'd consider myself much of a fashion expert. But I can at least help make sure you pick out something that's not tacky."
+    BE "That's all I need. Let's go now, I found this neat-looking store on the Internet that had a good variety of stuff."
+    "I checked my pockets, making sure I had my wallet and ID on me. Seeing no reason I couldn't leave right then and there, I followed Honoka to the bus stop so we could travel into town."
+    "The short ride there was uneventful. Honoka and I sat next to each other on the next bus we could grab, and made our way to the stop nearest her chosen shop."
+    
+    scene Town with fade
+    MC "'Clothes and Shoes'. That's... is that really the name of the shop?"
+    show BE neutral with dissolve
+    BE "Yep. Nice isn't it? Straightforward and to the point. Would be better if more things were like that. 'Let's go to 'Grocery Store' to get some food for dinner and then we'll head to 'Movie Theater' later.'"
+    "I mulled over Honoka's statement as we walked into the store."
+    C "But then you wouldn't be able to differentiate between good and bad places."
+    BE "Hmm..."
+    show BE happy
+    BE "Well then they should just stop having bad places. Easy fix."
+    "Honoka threw her arms up in victory as if she'd just solved a world crisis."
+    MC "Well, we're here. What were you looking for in particular?"
+    show BE neutral
+    BE "Hm."
+
+    scene Store with fade
+    "Honoka looked back and forth around the store. It seemed to be geared mainly towards women, but had a fair share of men's clothes as well."
+    "Going from one side to the other was like examining a display of paint swatches, as the colors shifted from blacks and blues to reds and pinks. Shoes in the middle, with underwear and socks in the back."
+    show BE neutral with dissolve
+    BE "I guess I'll just look around and see what looks cool, what catches my eye. You know, do the whole 'browsing' thing."
+    BE "Do you want to look around with me? Or check stuff out for yourself? They have some nice looking men's duds here."
+    MC "What, are you saying I need a makeover?"
+    show BE happy
+    BE "Naaah. But I mean, a new shirt never hurts, does it?"
+    menu:
+        "Browse around with Honoka.":
+            jump BE027_c1_1
+        "Look for something for yourself.":
+            jump BE027_c1_2
+
+label BE027_c1_1:
+    MC "I guess not, but, we're here for you, so I'll stick with you for a while."
+    BE "Heh. Sounds fine to me. Let's start over here, I saw a cool tank top on the mannequin when we came in."
+    "I followed Honoka around the store, going from one end to the other. Honoka selected a couple different pieces of clothing as she browsed."
+    show BE sad
+    BE "Hmm. No, definitely not grey. Too dreary. Blue's always good."
+    MC "I always got the impression that girls picked clothes based on what's in style, but you're really focused on the colors, by the looks of it."
+    show BE happy
+    BE "Well, that's what people notice first, I figure. If they get up close to ya, sure. But at a regular distance they'll probably just see the color pattern, so as long as it's pleasing to the eye, I think that works."
+    "Honoka leaned in closer."
+    show BE unique
+    BE "Plus, I've got a feeling that most people spend more time looking at my chest then they do at my clothes. Just a hunch."
+    MC "Whatever would give you that impression?"
+    "It surely had nothing to do with the fact that, standing a normal distance away from me, a slight lean was enough for her bosom to rest on my arm."
+    show BE happy
+    BE "Hehe. Anyway, colors say a lot about a person. I don't know what they say, exactly. But it's probably good."
+    "Honoka took the small selection of clothes she'd found so far and laid them in my arms."
+    BE "You chose to browse around with me, so you become the honorary cart. The duty of every guy who goes shopping with a gal."
+    MC "Joy."
+    "Honoka continued to browse around the shop, pulling off the odd item here or there. After a while I wasn't paying too much attention. It was definitely more than she could buy, so hopefully she'd whittled them down to a few choices."
+    "Before I knew it, we ended up in the dressing rooms. Honoka entered one of the stalls and put out some of the clothes she'd selected, staring intently at them. W with all the focus of a scientist trying to remember a complex formula."
+    jump BE027_c1_after
+
+label BE027_c1_2:
+    MC "Maybe. I'll take a look then. Maybe there's something here I like."
+    BE "Alrighty then. I'll give you a holler when I'm ready to try stuff on."
+    "Giving Honoka a nod, I walked over to the significantly-smaller men's section."
+    hide BE with dissolve
+    #(possibly bump into Minori here, if they've been introduced to Keisuke by this point, otherwise this proceeding scene)
+    "I wasn't entirely sure what to look for as I picked through the various collared and non-collared shirts they had available. Should I look for something Honoka would like? Was her suggestion a hint that she wanted to see me in something particular?"
+    "If that was the case, I had no idea what that was, though. I haven't worn much else around her besides the Seichou uniform. Back when we were kids, she always liked my Starchaser United t-shirt, but I doubt they made shirts for that show anymore."
+    MC "This looks nice. Maybe? I guess if I tried it on for Honoka, she could decide for me."
+    "I pulled the tag closer to my face, and brushed some of my hair out of the way to get a better look."
+    MC "Jeez. That feels pricy for just a shirt. It feels nice enough. But, egh, I don't know."
+    "Shopping usually didn't feel this hard. Then again, typically I would have just strolled in, found the first shirt that looked good, and bought as many similar-styled ones as I could to avoid trying on different ones."
+    "Maybe shopping with Honoka nearby was affecting my judgement. It wasn't just clothes for me, it felt like clothes for Honoka as well. "
+    MC "Bleh, I need a haircut."
+    "My hair had gotten in my eyes again. Though, I supposed that was going to be a more recurring problem as time went on. Clothes, hair... Neither of those were things I felt like dealing with at the moment."
+    show BE happy with dissolve
+    BE "Hey, Kei-chan, I think I'm ready to try some stuff on. Come over to the dressing room when you're ready!"
+    "Honoka gave a good distraction at least. I put the shirt I was holding back in the stack, as neatly-folded as I could muster, and wandered over to the dressing room. "
+    jump BE027_c1_after
+
+label BE027_c1_after:
+    show BE neutral
+    BE "Okay. I think I've narrowed it down to three choices. Which of these do you like the most?"
+    "I looked at Honoka's pile of clothes in the dressing room. She'd kept it fairly neat, at least. So the workers wouldn't have to clean up much if she really only planned on buying a single outfit."
+    BE "So, this is the first one."
+    "Honoka held up two different pieces of clothing. The first was a pair of jean shorts. They looked like they'd go down to her knees or higher, with a little skull print on one of the thighs."
+    "In her other hand, Honoka had a jacket, one that didn't look like it was meant to come down past the chest area either way. It was loosely fit around a black and red t-shirt, the colors splashed on like tiger stripes."
+    show BE happy
+    BE "And I think if I get this one I'll get this sweet little belt I saw in the corner of the shop. "
+    show BE neutral
+    BE "Second outfit is this one."
+    "Honoka only held up one outfit this time and I could barely believe that she considered buying it. It looked more like a fetish get-up than any actual piece of clothing."
+    "Lace leggings, a short camisole that barely seemed capable of going down past her hips, with an extremely low-cut top. The material was all extremely sheer, so it looked practically see-through."
+    show BE happy
+    BE "And this is the third one I liked."
+    "Honoka's last outfit of choice was a light blue sundress. It had thin straps, and was just a one-piece dress that went down to her thighs. It looked like the kind of outfit that would go perfect with a large, floppy hot."
+    show BE neutral
+    BE "So, what do ya think? Which one should I try on?"
+    jump BE027_c2
+    
+label BE027_c2:
+    menu:
+        "The jean shorts and jacket.": #BE_Tomboy +1
+            jump BE027_c2_1
+        "The skimpy lingerie." if not GetFlag("BE027_c2_2"):
+            jump BE027_c2_2
+        "The skimpy lingerie. (disabled)" if GetFlag("BE027_c2_2"):
+            pass
+        "The sundress.": # BE_Feminine +1
+            jump BE027_c2_3
+    
+label BE027_c2_1:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "That first one seemed pretty cool, with the little half-jacket thing. How about that one?"
+    show BE happy
+    BE "You got it, boss-man."
+    hide BE with dissolve
+    "Honoka took the outfit and closed the dressing room door behind her. I waited a minute outside, checking my phone, and just waiting for the go-ahead."
+    show BE happy with dissolve
+    BE "Here's Honoka, ready for action!"
+    "Honoka exited the dressing room stall, looking devilishly good in her chosen getup. The jean shorts stopped just above her knees. The material was intentionally a little ragged-looking, but seemed sturdy."
+    "Up above, the t-shirt she'd chosen clung to her bosom pretty tightly, though she'd chosen enough of a large size that it managed to cover up her belly as well. The half-jacket seemed ill-fitting, but somehow, Honoka made it work."
+    "The way the two halves of the jacket attempted to connect made it seem like two hands of fabric were trying to grope her chest at all times."
+    MC "Wow."
+    BE "Hehe, so what'cha think?"
+    menu:
+        "It looks awesome.":
+            MC "It looks awesome."
+            BE "Damn straight. How awesome?"
+            menu:
+                "Like you could star in a rock and roll band.":
+                    MC "So awesome, you look like you could star in a rock and roll band."
+                    BE "Ooh yeah, that's hot. One of those heavy ones with a lead female singer like Thrashing Pixies or The Widowmakers! I dig it!"
+                "Like you could beat up an entire martial arts club.": #BE_Affection +2
+                    MC "So awesome, you look like you could beat up an entire martial arts club."
+                    show BE surprised
+                    BE "Yessssss!"
+                    show BE happy
+                    $setAffection("BE", 2)
+                    BE "Haha! That's just the look I was going for!"
+                    BE "Just imagine it, all the tough clubs at school cowering in fear as I walk by."
+                    show BE angry
+                    BE "'Oh gosh, we may as well quit. We'll never be as tough as Hardass Honoka!'"
+                    show BE happy
+                    BE "That's perfect, Kei-chan, thanks!"
+                "Like you could pilot a fighter jet.":
+                    MC "So awesome, you look like you could pilot a fighter jet."
+                    BE "Ooh I hadn't considered that. I like it though. Ones with tons of missiles and machine gun turrets. With a badass name like Sky Queen or something. Sweet."
+                "Like you could get into a VIP lounge.":
+                    MC "So awesome, you look like you could get into a VIP lounge."
+                    BE "Mmm, like one of those exclusive club dealies. I'd need a pair of sunglasses to go with that, I think. Gotta say, pretty cool to think about strolling into a place and everyone going 'Whoa, this place must rock. Inoue the Incredible is here.' Excellent."
+        "It looks nice.":
+            MC "It looks nice."
+            show BE neutral
+            BE "Nice, huh? That's pretty good."
+        "It looks cute.":
+            MC "It looks cute."
+            show BE neutral
+            BE "Cute, huh? Not really what I was going for, but it works."
+        "It looks cool.":
+            MC "It looks cool."
+            show BE neutral
+            BE "Cool, huh? Heh, yeah that's pretty much what I wanted to hear."
+    MC "So, you're going to buy that?"
+    show BE happy
+    BE "Yeah, totally. It looks great, you like it. And the price is pretty good too. May as well!"
+    MC "Perfect. I'm glad I could help. Just getting the one thing, though?"
+    show BE neutral
+    BE "Yeah. I mean there's not many opportunities to dress super casually, so no point in buying a lot of clothes, you know?"
+    MC "Nah, that makes sense."
+    BE "Give me a second to change back and we can head to the register. I don't really like wearing new clothes out of a store. It feels weird."
+    MC "No, you've got a point. It's definitely weird."
+    "Honoka retreated back into the dressing room as I waited once more. She came out with her new outfit in hand. As we walked back to the register, she grabbed a small, black belt with a studded buckle to wear with her new shorts."
+    "As we waited in line, I looked over the cheap, small items they had nearby, wondering if I needed anything. I decided against it, thinking nobody ever really needed anything from the 'gotcha' section of the register."
+    "Just as I thought that, Honoka grabbed one of the fancy chocolate bars and added it to her purchase. She was happy, though. So I couldn't judge."
+    Owner "Thank you very much. Please come again. Have a nice day."
+    show BE happy
+    BE "Thank you!"
+    MC "All happy?"
+    BE "The happiest, is the expression on my face not obvious enough?"
+    MC "Hm. It's hard to say. You smile like that a lot."
+    BE "Well, I assure you, I'm smiling a bit more than normal, then. I'm gonna look so awesome in this outfit. Just gotta wash it first, and we're good to go. Ready to head back?"
+    MC "Yep, I'm good."
+    MC "I gotta say, Honoka. This is the first time I've enjoyed shopping with a girl."
+    show BE surprised
+    BE "Oh, you did this often?"
+    MC "I mean... with my mom."
+    show BE neutral
+    BE "Ah. I'll let you in on a secret, Kei-chan. Shopping with parents is never fun."
+    "I nodded as Honoka and I walked back towards the bus stop to head back to campus. She held her bag in one hand, and the other wrapped around my chest, pulling me into a side hug."
+    "We might need to go shopping more often."
+    jump daymenu
+
+label BE027_c2_2:
+    $setFlag("BE027_c2_2")
+    MC "I mean, if I'm honest. I really want you to try on that lingerie number."
+    show BE neutral
+    BE "..."
+    MC "..."
+    show BE happy
+    BE "Hahaha. Oh, oh, I was reallllly hoping you'd say that! "
+    "I just stared, unsure what the gag is."
+    BE "Kei-chan, you can't just 'try on' lingerie. And I'm here looking for an outfit, remember? I can't really wear this out and about."
+    show BE sad
+    BE "Plus, this thing costs like, 28,000 yen. Which is insane for something that, by all rights, is meant to be worn for five seconds and then ripped off in a lustful frenzy."
+    MC "So, you're... just teasing me."
+    show BE happy
+    BE "Yep."
+    MC "... That's cold-blooded."
+    show BE neutral
+    BE "You're just too much fun to tease, Kei-chan. I can't help it. Haha. Okay. But, seriously, the two outfits here, I do genuinely want to get one of them. Which should I try?"
+    jump BE027_c2
+
+label BE027_c2_3:
+    $setVar("BEFeminine", getVar("BEFeminine") + 1)
+    MC "The last one seemed nice. Was that a sundress? I think that would look good."
+    show BE happy
+    BE "Heh, if you insist. I'll give it a shot!"
+    "Honoka closed the door to the dressing room, leaving me to wait a moment as she got gussied up. After a while, Honoka's head peeked out of the door."
+    show BE neutral
+    BE "Kei-chan, can you come in? Check this out, make sure it looks okay?"
+    MC "Huh? Sure."
+    "I walked into the dressing room and closed it behind me."
+    "When I saw Honoka standing there, I wasn't sure why she wanted me to come in, instead of her coming out. The sundress exposed a good amount of cleavage, but nothing that seemed out of her comfort level."
+    "The straps around her shoulders were thin, but the rest of the dress seemed to be a nice, thicker material that hugged her curves well. The dress ended halfway down her calves, with a curved pattern on the fringe."
+    MC "Wow, that looks nice, Honoka."
+    show BE happy
+    BE "You really think so? It's not too much?"
+    menu:
+        "Not at all, it's cute.":
+            jump BE027_c3_1
+        "Not at all, you're beautiful.": # BE_Affection +1
+            jump BE027_c3_2
+
+label BE027_c3_1:
+    MC "Not at all, it's cute."
+    BE "Hehe... you really think it's cute, huh?"
+    MC "It is cute. It's definitely not something I've seen you wear all that often. Maybe that helps. A bit of... what's the word I'm thinking of?"
+    show BE neutral
+    BE "I'm not sure, but I think I know what you mean."
+    "Honoka moved a strand of her brunette hair behind her ear, and looked at the mirror installed in the dressing room."
+    show BE happy
+    BE "It's definitely a bit of a different look for me, but it looks pretty good."
+    MC "I think it does. I really picture you like, wearing a big, floppy sun hat, too."
+    BE "Hehe, that would be pretty adorable."
+    "It was nice to see she agreed with me. She seemed a bit unsure of the outfit, otherwise."
+    MC "The blue is a nice color for you as well. It's still blue, I know you like blue a lot."
+    "Honoka nodded."
+    show BE neutral
+    BE "They had one that was more of a darker blue, but the material didn't feel as nice. It felt more... fuddy-duddy. This felt hipper, for a younger, cuter girl."
+    MC "Well, I'd have to say it's an accurate assessment."
+    show BE happy
+    BE "Hehe, thanks, Kei-chan."
+    jump BE027_c3_after
+
+label BE027_c3_2:
+    MC "Not at all, you're beautiful."
+    "Honoka blushed a bit harder, and I leaned in closer."
+    show BE neutral
+    $setAffection("BE", 1)
+    BE "I asked about the dress, not me..."
+    MC "Can't they be the same? You look beautiful as it is, you look even more beautiful in a pretty dress like that."
+    BE "Heh, you can't mean that."
+    MC "Oh, can't I?"
+    "I double-checked that the door was locked, and stepped behind Honoka, making sure she looked into the mirror."
+    MC "How could I be lying about this figure being beautiful?"
+    if getSkill("Art") > 5:
+        MC "When you look so stunning that the mirror can't even properly show all of your beauty, limited by what's achievable by the science of mirrors? When every part of you, from your cocoa-brown hair, to your soft, gentle lips, seems to have been crafted to perfection?"
+        MC "How could I deny that I'm staring at a dress that somehow took the most magnificent set of breasts I've ever seen, and elevated them to levels that goddesses wish they could muster?"
+        MC "When you're looking this lovely that my heart aches, knowing I have to blink, and that split-second of time with my eyes closed is just one moment missed where I'm not staring at your gorgeous beauty?"
+        MC "Honoka, if you think you don't look beautiful in this dress, then I'm going to pick you up right now and take you to the nearest eye doctor, because everything I'm looking at right now makes me so happy that I forget all the world's problems."
+        $setAffection("BE", 1)
+    else:
+        MC "I don't think there's words to properly describe how pretty you look right now, Honoka. If there are, I just don't know them."
+        MC "But I do know that you look beautiful. If you walked out of here in this outfit girls would be feeling so jealous about you, and it wouldn't just be because of your amazing boobs."
+        MC "Not just any girl could pull off this outfit, you know. They need the right, luscious figure to really fill it out. You're all that and more, Honoka."
+    "Honoka gulped, as I leaned in towards her ear for that last sentence, whispering it as softly as I could."
+    show BE aroused
+    BE "K-K-Kei-chan..."
+    "Whether I realized what I was doing or not, my hands reached up to Honoka's chest, and grabbed her melons with a firm, hard squeeze. The squeaking moan that came out of her mouth was something to die for."
+    MC "If I can get a little more blunt, Honoka... "
+    "I punctuated my words with another squeeze from below, trying to push her breasts up, until I saw her nipples peek out over the tops of the dress."
+    MC "One thing I really like about this dress is how splendid it makes your breasts look."
+    BE "Kei-chan, y-you can't say things like that."
+    MC "No? But it's true. Like two huge mounds of pudding ready to be nibbled on. That deep line of cleavage. For a cute dress, you really picked out something erotic, didn't you?"
+    "Another squeeze was all it took to get Honoka's cans out of the confines of her dress, plopping down back onto the blue of the sundress. Her nipples were perky and erect. I gave her breasts one more grope before moving up to the obvious targets."
+    MC "Maybe that was your plan all along, wasn't it? Get me here, alone, so you could lock the two of us in a room and get me all hot and bothered with this sexy little number."
+    "I just kept squeezing every few words, letting my body grind into her back as I whispered. Honoka's face was as crimson as a chili pepper, letting out little oohs and eeps as I massaged her nipples."
+    BE "Th-That's not true, hahhh. Nngh, you, hahh..."
+    MC "Look what it's done to me, Honoka. Turned me into this horny little beast. If you buy it, and you know you want to, who knows what'll happen the next time you wear it?"
+    "This time I twisted them, just a bit, and Honoka bit down on her lip. Her hands grabbed mine, and I quickly stopped, just to be safe."
+    BE "Th-They won't let me buy it if they see it's dirty."
+    MC "Hm, I guess we better stop short then, shouldn't we?"
+    "Honoka nodded. My hands remained on her chest, as did her own hands on mine. But we remained in that spot for a moment before I pulled back. I cleared my throat and unlocked the door."
+    jump BE027_c3_after
+
+label BE027_c3_after:
+    MC "So... you're going to get that outfit?"
+    show BE happy
+    BE "How can I not? When you liked it so much..."
+    MC "Sounds wonderful. Just that one, then?"
+    show BE neutral
+    BE "Well, who knows how long this one will fit as it is? It's a good fit for now, but I don't want to buy too many things I'll outgrow."
+    MC "That makes sense. Well I'll just wait outside for you, then."
+    BE "I'm going to just change really quick."
+    "I nodded and waited outside for Honoka, looking around. The shop had a lot of things, but unfortunately, no hats to be found. Shame, one would have looked really nice with that dress."
+    "Honoka came back out a few minutes later, back in her original outfit. Her sundress was hung back on the hook to take to the register. She was smiling, and still blushing a bit."
+    MC "Ready to check out?"
+    show BE happy
+    BE "Yep."
+    "Honoka and I approached the register and waited in line until it was her turn to check out."
+    "I looked over the cheap, small items they had nearby, wondering if I needed anything. I decided against it, thinking nobody ever really needed anything from the 'gotcha' section of the register."
+    "Just as I thought that, Honoka grabbed one of the small bottles of perfume they had for sale. She smiled my way as she added it to her purchase."
+    Owner "Thank you very much. Please come again. Have a nice day."
+    BE "Thank you!"
+    MC "All happy?"
+    BE "Very much so. This was a nice trip, Kei-chan. Thank you for coming with me."
+    MC "Well it was definitely a fun shopping trip. You really did look great in that dress, you know."
+    BE "Hehe, you'll see more of it, then. Just need to give it a wash first. I'll need to learn how to deal with something like this, it's gentler than what I normally wear. Ready to head back?"
+    MC "Yep, I'm good."
+    MC "I gotta say, Honoka. This is the first time I've enjoyed shopping with a girl. "
+    show BE surprised
+    BE "Oh, you did this often?"
+    MC "I mean... with my mom. "
+    show BE surprised
+    BE "Ah. I'll let you in on a secret, Kei-chan. Shopping with parents is never fun."
+    "I nodded as Honoka and I walked back towards the bus stop to head back to campus. She held her bag in one hand, and the other grabbed my hand, squeezing it tightly as she smiled my way."
+    "We might need to go shopping more often."
+    jump daymenu
+
+
+label BE028:
+    $setProgress("BE029")
+    scene Arcade with fade
+    play music Schoolday
+    #BGM: Light chatter or some sort of electronic music
+    "Honoka and I were on a date at the arcade. It was late at night, and moderately crowded. It meant there were occasional waits for some of the games we wanted to play, but nothing that was unbearable."
+    "Honoka and I just finished a co-op light gun game, and had decided to stop before we spent all our coins trying to kill one boss."
+    show BE angry with dissolve
+    BE "Guh, that guy was ridiculous! We each died like five times and he was still at half health."
+    MC "And he was only the second boss too. There were still two more worlds after that. We'd be here all night, and broke, if we tried to beat him legitimately. "
+    show BE neutral
+    BE "There must have been some way to stun him when he was charging that attack, but nothing we unloaded on him seemed to make a difference."
+    MC "Well, lesson learned. We'll skip that one next time. You hungry for anything? I'm kind of craving a pretzel or something."
+    show BE happy
+    BE "Hm, no, I'm okay. I'm just hungry for more games."
+    MC "Heh, not a problem. Let's see if there's a big line at the snack bar or anything."
+    "Honoka and I walked towards the snack area. There were a few vending machines and a small stand near the ticket counter that sold quick snacks. Unfortunately for me, it looked closed."
+    MC "Darn."
+    MC "Well, no sense fretting about it. Let's find something else. I know there's stuff here we haven't played yet."
+    "Honoka and I walked around for a while, enjoying the lights and sounds of all the various machines."
+    "Soon, my eyes caught sight of something I hadn't noticed on our previous visits. Maybe it was a new installation, or simply a machine I hadn't paid any mind to."
+    MC "Hey, Honoka. Check this out. One of those old-fashioned love testers."
+    BE "Haha, really? Gosh I didn't think they still existed. I would have thought they were all buried in a landfill somewhere."
+    MC "I don't think that's accurate."
+    MC "But yeah, looks like it's plugged in. Let's see... takes two tokens. 'One for each partner to see how much love you share.'"
+    show BE neutral
+    BE "Gosh, that's cheesy."
+    MC "Extra cheesy. A lactose-intolerant person's nightmare."
+    "Honoka approached one side of the machine and squeezed the handle. But without being paid for, the trigger on the joystick couldn't be pulled. "
+    show BE angry
+    BE "You know, I'm pretty sure I remember reading somewhere that these things don't even work right."
+    MC "Well, I doubt there's actually a way to judge how much two people love each other just by squeezing handles."
+    show BE neutral
+    BE "No no no, not in that way. Like, it didn't even matter how much you squeeze the handles. It just did a random roulette to determine what result you received."
+    MC "Ah, that's kind of lame."
+    show BE happy
+    BE "Haha, well it was easier to do than actually programming, I bet. But that means two people could squeeze it the same way a bunch of times and get different results!"
+    MC "Well, that's just silly then, isn't it?"
+    BE "Heh, yeah."
+    show BE neutral
+    BE "I mean, you'd have to be a real putz to use one of these and think it actually worked."
+    MC "Right."
+    BE "..."
+    MC "..."
+    BE "I mean, I can't get too mad at the concept. It's cute. People decades ago didn't know what games were."
+    MC "Yeah. It's harmless fun. Even if it's too outdated for us to use."
+    BE "..."
+    MC "..."
+    BE "..."
+    MC "You want the right side or the left?"
+    show BE happy
+    BE "I'll take the right. A bit easier to grip it from my angle."
+    "I couldn't help but sigh at our predictability. But, it just seemed unavoidable. It was there, we weren't going to not use it."
+    show BE neutral
+    BE "Let's see, where's the coin slot. Theeere we go!"
+    "Honoka and I took our coins and slid them into the slots. A tiny little heart on each side of the machine lit up, slightly out of sync with one another."
+    "The machine had eight rankings that appeared to go from 'Not compatible at all' to 'You better be married if you aren't already'."
+    MC "We better not end up as 'Isolated Icebergs'."
+    show BE happy
+    BE "Haha. Don't set your sights so low, Kei-chan! I think we're at least going to end up as 'Close Comrades'."
+    "It was a nice mid point on the ranking scale. The top point was 'Wedding Wishers'. Between the low and mid points on the tester were a few more humorous terms."
+    "'Deadly Daters', 'Feeble Friends', and 'Merry Match-Ups' were lower than what Honoka wanted, so I had to hope the machine gave us a good squeeze."
+    MC "Okay, so when this lights up, just squeeze as hard as you can, right?"
+    BE "No!"
+    MC "No?"
+    show BE sad
+    BE "I can't believe we forgot the most important part of this."
+    "Honoka's spare hand reached over and grabbed mine. I chuckled. "
+    MC "Oh, duh. It can't really test our compatibility if we're not holding hands."
+    MC "Okay. Here we go!"
+    "The machine lit up "Squeeze Now" and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
+    show BE happy
+    BE "Come on, Kei-chan, we can do this."
+    if getAffection("BE") < 8:
+        jump BE028_test_1
+    elif getAffection("BE") < 16:
+        jump BE028_test_2
+    else:
+        jump BE028_test_3
+
+label BE028_test_1:
+    "As Honoka and I squeezed the handle as hard as we could, the display on the machine moved up and down. It passed by the first two titles easily, and continued to waver around the remaining ones."
+    "The rhythm was unsteady and strange. Honoka and I looked at each other and squeezed our hands as well, just to make sure it worked as well as legend said it was supposed to."
+    "Eventually the device stopped, and the selection stopped third from the top, glowing a pale yellow-orange LED."
+    show BE sad
+    BE "Aw, Satisfying Soulmates? Darn, we should be way higher than that!"
+    MC "I think it's pretty good, we're really high up. Most of the names given here aren't super flattering anyway, at least we got one of the good ones."
+    show BE angry
+    BE "Hmmmm. You're being too good-hearted about this one, Kei-chan. As far as I'm concerned, we should always be on the top! We must be doing something wrong."
+    MC "Heh, you're the one who brought up that these things are mostly garbage to begin with."
+    show BE neutral
+    BE "That's true... and I guess this proved it! Clearly it's wrong. I was squeezing as hard as I could, and you were too, right?"
+    MC "Of course I was."
+    BE "Hmmmmmmmmmmm..."
+    BE "Did you now?"
+    BE "That's interesting. "
+    MC "How is that interesting?"
+    BE "Well, I guess it just has me thinking, if that's how hard you can squeeze, then I haven't seen some things. Things I'd like to see."
+    MC "..."
+    MC "Honoka, I think it's a little early for me to show you my-"
+    BE "You have not once squeezed my boobs that hard since we've started dating."
+    MC "Wh-what?"
+    show BE happy
+    BE "Oh, to be fair, I've lost track of exactly how many times you've squeezed my boobs. But, yeah, if that's how hard you can normally squeeze, and not some fluke, then I'm disappointed."
+    MC "If I squeezed you that hard, wouldn't that hurt?"
+    BE "Ha! Are you kidding? These puppies are basically my own airbags. They're meant to take some assault."
+    "Honoka pat the top of her left breast to prove her point."
+    BE "Besides, it's not like you're gonna be punching me in the rack. It'll be fine."
+    "Honoka stared at me, expectantly."
+    MC "Um... I get the feeling you want me to do it right here, right now."
+    show BE neutral
+    BE "I wouldn't be opposed to the concept..."
+    "It was an opportunity to squeeze Honoka's chest. I looked around to see if anybody was staring right at us, and didn't notice anyone glaring in our direction."
+    "So, after a deep breath, I reached forward and pressed my palm into the side of Honoka's left breast. I felt the soft flesh fill my palm, as I squeezed as hard as I could."
+    show BE aroused
+    BE "Oof..."
+    "Honoka's face turned red as I squeezed, and began biting down on her lip. I saw her take a deep breath and exhale, which is when I took my hand away."
+    BE "Okay... yeah..."
+    show BE unique
+    BE "You can do that more often. That felt good."
+    MC "It did, not too hard?"
+    show BE happy
+    BE "I think these are so soft that any hardness you can give me would just be smothered."
+    show BE aroused
+    BE "Yes, that was intentional."
+    MC "Honoka, that is... incredibly hot. But now I'm physically unable to walk away from this love tester machine after hearing that."
+    show BE happy
+    BE "Haha, you perv. Nobody's gonna look down there when I've got all this cleavage on display. Come on, I wanna do a racing game next!"
+    "Honoka grabbed my hand and yanked me away to another attraction in the arcade. The date wasn't over yet, but I felt super distracted now."
+    "I had a feeling I'd be losing the next few matches with Honoka."
+    jump daymenu
+
+label BE028_test_2:
+    "The two of us looked at the display as we squeezed the handles on the love tester. A light moved back and forth between the top and bottom choices."
+    "Honoka's hand was still in mine, and squeezed my hand tighter as we waited for it to make its decision. My other hand felt sweaty as it tugged on the joystick, trying to pull in the trigger as hard as it could go."
+    "It eventually stopped, and to my surprise it landed only one away from the top title. "
+    MC "Wow. Linked Lovebirds. That's really good."
+    show BE happy
+    BE "Huh, yeah it is. I think I'm happy with that. We got sooo close to the top though."
+    MC "Hm. Well if this thing does work, we're doing pretty good considering how it's not been that long since we started dating."
+    BE "True. But on the other hand, I had the benefit of the childhood friend bonus."
+    MC "Childhood friend bonus?"
+    show BE neutral
+    BE "Of course. Childhood friends are more likely to end up the wife like, 80%% of the time. Love-College, Space Romance Epoch, Honey-kouhai is All Grown Up, Samurai Society, Hyper-Dimension Ranger Eri-chan..."
+    show BE happy
+    BE "If you start out with a childhood friend, they're gonna end up the wife."
+    MC "Even if they've been separated for a long time, like you and I were?"
+    BE "Oh! Especially in that case. Then it goes up to 98.2%%."
+    MC "I think I may want to see your data on this and draw my own conclusions."
+    show BE neutral
+    BE "I have another thesis on this that you might like to see."
+    MC "Oh, what's that?"
+    "Honoka smirked, and took my hands in hers. She pulled them into her chest, letting my palms rest right on the front of her chest as she closed in on me."
+    "As my hands sank into the warm flesh of her bosom, she pressed her lips against mine. Her hands let go of me, but I kept my fingers right were they were. I don't think I could have moved them even if I wanted to."
+    "Honoka broke the kiss and gave another little smooch as she moved her chest up my hands, until they forced themselves to rest on my palms. She giggled and reached around to grab my hips, pulling me into a hug as tight as she could."
+    show BE aroused
+    BE "How's that for a convincing argument?"
+    MC "Wha... argument? Huh? We were arguing? Why is it so hot in here?"
+    show BE happy
+    BE "Hehe. Uh-oh, did I fry your brain, Kei-chan? These things are more dangerous than I thought! Let's get you out and get your brain back to normal."
+    "Honoka stepped back, letting go of me so I could come back to my senses. I stared at her chest for a moment, and cleared my throat."
+    MC "Um... yeah, I believe you then. I have no retort."
+    show BE unique
+    BE "I don't think you totally believe me, still. You're just saying that."
+    show BE happy
+    BE "Come on, I'll go kick your butt in Whip-Whap, that'll prove I'm right."
+    "Honoka yanked me away to another machine and began pushing tokens into the slot. I don't think it mattered that I already believed her, she was going to steamroll me anyway. "
+    "I was very distracted."
+    jump daymenu
+
+label BE028_test_3:
+    "Honoka and I watched the love tester as it responded to our synchronized squeezing. The lights on the machine went wild as a display moved up and down between the best and worst options. We were obviously hoping for the best."
+    MC "Come on, come on."
+    show BE happy
+    BE "We got this, Kei-chan!"
+    "Honoka's fingernails dug slightly into my hand as she squeezed mine. I grit my teeth, and tugged as hard as I could until the display stopped moving."
+    "Lights went off in several spots and a weary sound played, so distorted and fragmented that we couldn't make out what it originally was. But the light had stopped right at the top, signifying us as Wedding Wishers."
+    show BE surprised
+    BE "Holy crap, Kei-chan. Weeee did iiiit!"
+    "Honoka jumped in the air, cheering for joy. She landed back down with a thud, and then a jiggle. It was hard not to notice."
+    MC "Well, what else could it be?"
+    "I tried to act as confident as my body and voice would allow."
+    MC "I mean, I'm pretty sure this is proof that the whole thing isn't a scam. It wouldn't do this for just anyone, would it?"
+    show BE happy
+    BE "Hehehe, no sir-ee, only for Kei-chan and me."
+    "Honoka clenched her fists and pushed them together above her bust. "
+    BE "So what do you think? Is there a place near here that does wedding ceremonies? I bet Naomi-chan could make us a really nice bouquet set for cheap.... Alice-chan's probably got a lead on who would make good wedding cake."
+    MC "Uh."
+    BE "Haha, relax, Kei-chan. I'm kidding. I mean, I'm definitely not saying 'no' to the idea! But geez, that would be rushing into things, wouldn't it?"
+    MC "Yeah, I was about to say. There's quite a few things you're supposed to do before you get married."
+    show BE neutral
+    BE "Oh, is there now?"
+    show BE unique
+    BE "What would they be?"
+    MC "I'm... struggling to come up with an answer to that right away. But, you know, like... meeting each other's parents."
+    show BE happy
+    BE "Kei-chan, we literally have spent the night at each others' houses before."
+    MC "Oh, right."
+    MC "Well, we also need to go on some dates."
+    show BE neutral
+    BE "Which we have."
+    MC "Uh. There's gotta be more that I can't think of."
+    show BE happy
+    BE "Hehehe. I can think of a few things we haven't done yet."
+    MC "Oh, please tell me, I'm desperate for a way out of this conversation."
+    "Honoka smiled and looked around. She took my hand and led me to the side of the love tester. I wasn't sure what she was doing. But soon she had my back against the wall."
+    "Suddenly her foot pressed into the wall next to me, trapping me between her leg and the love tester. I looked up at her, confused, until she shakily reached out towards me."
+    "Honoka grabbed the hem of my pants, and yanked it down. It didn't get far, only a few inches, but enough to make my boxers visible. "
+    "I was not as distressed by this as I should have been, especially not when Honoka got down on her knees, and suddenly her chest was up against my groin."
+    "Honoka's face was beet-red and a bit moist as she lifted up her cans, and I suddenly felt even more softness push into my crotch. Honoka let them linger there for a moment before she stood up, and turned around."
+    show BE neutral
+    BE "Uh, uh, well, um, there... that's one thing we haven't done yet..."
+    MC "I'm... not sure what that was."
+    "I pulled my pants back up."
+    BE "W-Well, I didn't want to go all the way with it... right now, at least. Then we would be one step closer to getting married, and you were clearly nervous about that!"
+    show BE surprised
+    BE "It had nothing to do with the fact that the idea of me touching you down there with these in public made me freeze up like a popsicle!"
+    "I couldn't help but chuckle."
+    MC "Well, we're not quite there yet. This machine's decades old, it's not quite up to what romantic standards have evolved to."
+    "I stepped forward and placed my hand on Honoka's chest, and then pushed down and through the cleavage she had on display, until I was nearly up to my elbow. "
+    MC "I'm pretty sure, for example, that this would be unheard of in 1920."
+    "Honoka looked so red that I swore steam would come out of her ears. I retracted my arm quickly, and then stepped to the side for a hug."
+    MC "I think it's clear we're attracted to each other. But we don't need to rush into anything. I'm happy with just being near you, Honoka."
+    MC "Occasional kisses of course, those are always nice."
+    MC "And if I can feel these luscious boobs you're so proud of, I just consider that a nice bonus."
+    "I leaned forward and gave her a kiss, giggling as I did so."
+    show BE happy
+    BE "Hehe... you make some good points, Kei-chan. I think I just wanted to be adventurous, but, woof... just a bit much for me right now, haha."
+    MC "It's all good, Honoka."
+    MC "Hey, how about we go play a fighting game? You want to be adventurous, play a character you're less sure you can destroy me at."
+    BE "Mm, nah, I think I'll whoop your butt anyway! "
+    "Honoka and I approached the fighting game section of the arcade. I snickered as she perked up again. We might not be ready to be extra physical yet, but... "
+    "I didn't think that stopped us from being 'Wedding Wishers'."
+    jump daymenu
+
+label BE029:
+    $setProgress("BE", "BE030")
+    scene Classroom with fade
+    play music Peaceful
+    #Setting: School. Science Room
+    show BE sad with dissolve
+    BE "So, explain this to me one more time, because, I'm just not getting it."
+    "I couldn't help but sigh. Explaining something once was necessary. A second explanation could be useful for clarification. A third time would be seen as worrisome."
+    "I was on the fifth explanation. At that point, it could also be my fault. Maybe I had to approach this in a different way."
+    MC "Okay, look at it this way. Imagine all of these minerals are a variety of bad guys in a video game. You know ahead of time that each one is weak to a specific combination of weapons. But they aren't named. So you need to figure out what they are."
+    MC "All these tests we can do are like testing out the weapons on the minions of them we've captured ahead of time. So we can try one thing after another and make sure we know exactly what we have in our sights."
+    "Honoka and I had a small tray in front of us. Twenty different minerals rested on it in five columns of four, numbered, with no other indicators of what they actually were."
+    MC "So, we'll start with 1, for example. Now the first thing you look at it is color. But this is the... weakest option, I guess you'd say. Some minerals can be multiple colors. Quartz is like a mimic, it could be practically any color."
+    MC "So then, you can look at the luster. Think of it as you're wanting to know if you need metal-piercing rounds for your weapon. It's either going to be metallic, or non-metallic. Or, basically, shiny or not-shiny."
+    show BE neutral
+    BE "Okay, got it. So this is not shiny, so it's non-metallic. And it also feels really weak. If that makes sense?"
+    MC "It does! That could do with its hardness. See how your fingernail scratches the surface, that means it's very soft. So we could tell the weapons engineers in our fictional video game to save some of the budget for the harder enemies. Er, minerals."
+    "I continued to assist Honoka as we went down the list of different tests we could do, to narrow down what minerals we had here."
+    show BE happy
+    BE "I... think I'm actually getting it. Guh, somehow when you describe it, it actually sounds a lot simpler than I thought it was."
+    MC "Well, hey. Geology can be tricky too. Like this here. "
+    MC "This is kind of a gimme. Fools gold, or pyrite. It's not like they're going to give us real gold to work with. There's a lot of obvious clues. The cube shape, the shine, the color, obviously. But, watch this."
+    "Unable to hide my smirk, I took the gold chunk and rubbed it across the material given to us."
+    MC "Black streak."
+    BE "But... it's gold."
+    MC "Yep. I don't know how to explain that one. But it helps prove it's pyrite. You don't need to do every test for all the minerals, but most of them will help you narrow it down."
+    show BE neutral
+    BE "That's cool. Okay. I think I've got a handle on this now. Thanks, Kei-chan."
+    MC "I'll let you take it from here, then."
+    "Honoka had asked me for help with this assignment, and I had been happy to do so. Though the only reason I'd known so much was from struggling with it myself early on..."
+    show BE happy
+    BE "And this one's shaped like, a diamond prism or something... so that would be this then. Yeah, that makes sense. Okay, I'm getting the hang of this."
+    MC "Yeah, see? I knew you could do it yourself."
+    "Honoka nodded and wrote down her answer, then moved onto the next one. I was working on an assignment myself. For the most part things stayed quiet, except for Honoka's occasional chattering."
+    BE "Hehe."
+    MC "What's up?"
+    show BE neutral
+    BE "Well, I'm having trouble figuring out this one. Can you take a look?"
+    "I nodded and stepped over."
+    MC "Which number is it?"
+    show BE unique
+    BE "Number 12."
+    MC "Okay, so..."
+    "I looked at the tray, but couldn't see a mineral in the twelfth spot. The number was missing as well."
+    MC "I'm confused. Where is it?"
+    "Honoka chuckled, bringing my gaze to her."
+    "In the middle of her breasts was the missing mineral, the tiny chunk looking like it would be lost forever if it sank into the depths of her bosom. The paper with the number on it rested just below the mineral."
+    show BE aroused
+    BE "This cleavage is just so ridiculous, I can't figure out how it's so massive and full. Can you help me?"
+    MC "Oh, Honoka..."
+    MC "If you're trying to force me into a higher ranking on the Mohs Scale, it's definitely working."
+    show BE happy
+    BE "Hahaha! Good one, Kei-chan."
+    "I reached forward, and gently plucked the piece out of her breasts, wagging it at her."
+    MC "But science is no time for flirting!"
+    show BE sad
+    BE "Aw. That was clever, too."
+    MC "Yes, it was. I'm rather proud of that. But I'll be prouder when you ace this assignment."
+    show BE angry
+    BE "Grrrr."
+    show BE neutral
+    BE "Just tryin' to have a little fun, is all."
+    MC "Heh, I get that. But it's important to focus on the work. You don't want to lose your luster after all. "
+    BE "Yeah, three puns is too many. Back to work."
+    "I got back to my own assignment as well, until Honoka called me back over."
+    show BE sad
+    BE "Um, Kei-chan, I actually do need help with this last one."
+    MC "Number 20?"
+    show BE neutral
+    BE "Yeah. It seems like it could be one of a bunch of things. Maybe a chunk of iron? It's shiny, it's like, medium hard, looks like it has some cleavage but it's not obvious where..."
+    MC "Ah, hm. Let me take a look."
+    if getSkill("Academics") > 9:
+        MC "Ahhh, wait a second. I think I know what's going on here. Hm, where's the... ah, see, you forgot to grab something from the toolset."
+        show BE surprised
+        BE "I did? I got the coin, and the little tablet to do the streaks, and the nail."
+        MC "Yep. One sec, I'll grab it."
+        "I walked over to where the geology kits had been stored, and grabbed something off of the table. When I got back to Honoka, I kept it hidden in my hand."
+        MC "Behold."
+        "I dropped the item right above the specimen and watched as it clung to the mineral. Honoka's eyes widened in confusion."
+        BE "You have gravity powers?"
+        MC "Haha, no. Magnetism powers!"
+        "I took the mineral and the magnet and separated them, then brought them together again. As the two items touched, there was a distinct click of the two getting magnetized."
+        MC "It's easy to forget this one because not a lot of minerals are automatically magnetized. This is magnetite."
+        show BE happy
+        $setAffection("BE", 1)
+        BE "Oh, darn. That's tricky then! Haha, you fixed it for me, though. You're so smart, Kei-chan."
+        MC "Nah. It's just a lot of studying. This kind of stuff would trip me up a lot too without hitting the books. But now that you're caught up it'll be a piece of cake."
+        BE "Heh, hopefully. Okay, let me just finish this up here and I'll be done, I think."
+    else:
+        MC "Hm. I don't really know what this one would be. You did all the tests for it, that you can find?"
+        BE "Yeah."
+        MC "So, hm."
+        "Honoka had written down a few examples on her paper of what it could be. But they were all so similar in their attributes that it was hard to get it down to one specific mineral."
+        MC "Well. I suppose you may just have to guess here. But you have your notes here, and proof that you did the tests. "
+        MC "I'd say to just pick one of these three. With the work you showed you should still get partial credit. And everything else seems right, so you still will get enough to ace this paper for sure."
+        BE "Hm, I guess that's the best option then. Okay, Kei-chan. Let me add a few things here, and I'll be done."
+    "Honoka finished up her assignment and packed up the geology samples. I packed up my things as well, and helped her get everything back where it was supposed to go."
+    show BE happy
+    BE "Thank you for the help, Kei-chan. I really struggled there. But, yeah, it's a lot easier now."
+    MC "It's amazing how changing the context of something makes it easier to understand, huh?"
+    BE "It does. But now I just want to play some video games. The last one I was playing, I think I screwed up the order of my research, and now the aliens are way ahead of me in what technology they can create."
+    MC "Yeah, I can't help you there."
+    show BE neutral
+    BE "Well, maybe if I think about it in geology terms, I can figure it out..."
+    MC "I think you might just be better off with restarting your save and save-scumming."
+    show BE sad
+    BE "Aw, phooey."
+    jump daymenu
+
+label BE030:
+    $setProgress("BE", "BE031")
+    scene School Planter with fade
+    play music Sunset
+    "As usual, there was only a certain amount of time I could handle Daichi before I felt the need to escape my room. Maybe 'escape' was a strong word."
+    "It certainly wasn't one I would ever use around him, or else he might think I was so invested about his theories on Seichou Academy that I wanted to flee."
+    "That certainly wasn't the case, not when it had been made clear multiple times that it'd been helpful for me and others. Not to mention I had people I considered friends here."
+    "The weather as I stepped outside was warmer than I expected. Not so hot as to make me miserable, but enough to make staying still for too long seem like a bad idea. Still, I thought it would be nice to spend some time walking around the campus for a while. "
+    "I decided to make my first stop by the garden area, figuring that the sunlight would make the blooming plants look particularly pretty. I just about felt the sun starting to bake my skin a little. It was relieved by a breeze that rolled against me and brushed my hair back."
+    "I didn't consider myself a botanist by any means, but the flowers did look splendid. Naomi was doing a good job, it seemed. I'd have to compliment her the next time I ran into her. It would have to wait though, because not long after I reached the garden, someone ran into me instead. "
+    "By now I was able to recognize who it was simply by the way her breasts pushed into my back. Like a pillow fight was about to break out right behind me, and I was the first casualty. At least it would have been a nice way to go."
+    MC "Hey, Honoka."
+    show BE happy with dissolve
+    BE "Helloooo Kei-chan! What are you up to?"
+    MC "Honestly, not much. Was just kind of killing time, strolling around. Did you want to do something? I'm free."
+    BE "Sounds good, I was hoping you'd say something like that. Wanted to hang out, and you're my go-to hanging-out person."
+    MC "I'm flattered you think so highly of me."
+    "Honoka giggled, and took my hand. I eagerly squeezed her fingers in return."
+    show BE neutral
+    BE "Do you want to just, walk around for a while or something?"
+    MC "Sure, I didn't really have any plans. I was just looking at the flowers. You don't have any zany ideas for how to spend the day?"
+    BE "I don't always have some zany plot. You make me sound like some thrill-seeking anime heroine."
+    MC "...Are you not?"
+    show BE happy
+    BE "Haha. No. I don't have the purple eyes or the blue hair or a wicked scar."
+    MC "No, I guess not. You do have the boobs though. You can't be the main character of an anime without big boobs."
+    show BE neutral
+    BE "Hmm. But would an anime character with breasts as big as mine be able to do any fighting? No sense being the heroine if you can't kick butt."
+    MC "I'm sure you could. I can only withstand your boob-airbag attacks because I've built up resistance to them. If you smash into someone not used to it, you'll knock them right over."
+    show BE unique
+    BE "Breast ballistics. I like it."
+    MC "Haha, of course you would."
+    "We kept strolling by the gorgeous agriculture of Seichou. It really was pretty. Far nicer than they needed to make it, considering the cost it took to deal with all the growing students."
+    MC "So, how's everything going with you, grades all right and everything?"
+    show BE neutral
+    BE "Yeah, that's not a problem. Least, I hope it's not. Would hate to take a test soon and totally flake on it. "
+    show BE sad
+    BE "You know that feeling you get sometimes where it seems something's really easy, but when it comes time to act   ually do it, all of a sudden the difficulty shoots up?"
+    MC "Yeah, more than you know."
+    show BE neutral
+    BE "Good, so it's not just me. When you help me study it does help. But even still, there's some tests where I'm all ready, and then I sit down to take it..."
+    show BE sad
+    BE "My brain just goes splat, thud, poof. Like a magic trick."
+    MC "Well hey, I'm always free to study with you. I'm not the smartest brick in the wall myself but I'll always help."
+    show BE happy
+    BE "Aw, you're so sweet, Kei-chan. May have to take you up on that! We'll have to skip an arcade trip or two though, I'm sure."
+    MC "Well, we can always relax after a good study session with something fun in our rooms instead. Makes things simpler."
+    BE "Yeah, but, arcades are just so much more fun. Especially when I've got you with me."
+    "Honoka rubbed her fingers along mine as we strolled along. No destination in mind, just meandering for the sake of staying in motion. The temperature was just perfect for such a casual stroll."
+    "Something about Honoka's hand felt extra soft today. The way her fingers squeezed my hand was comforting. With the gentlest bit of heat coming down on us, her lazy touch was soothing."
+    "She even smelled super nice. I never knew if she wore perfume or not, but she'd done something today. Maybe it was just a new shampoo or soap, but the aroma was intoxicating."
+    "We soon found ourselves strolling closer to the outer gates of the academy, where the sounds of other students grew further away until we couldn't even hear them."
+    show BE neutral
+    BE "Ah, this school really is pretty. We lucked out coming here, didn't we, Kei-chan?"
+    MC "Did we? I mean, the location's nice. But, the reason for us being here feels like it takes away from that a bit."
+    show BE sad
+    BE "Sure, I guess."
+    show BE happy
+    BE "But if we hadn't come here, we wouldn't have learned what was going on with us in a safe environment."
+    BE "We wouldn't have met a bunch of new friends."
+    show BE sad
+    BE "I wouldn't have been able to meet you again..."
+    MC "Oh, you, you would have been fine without me."
+    show BE happy
+    BE "Don't kid yourself, Kei-chan. Without you I wouldn't have had nearly as much fun here."
+    BE "Stuff's just better when you're around."
+    MC "You've... wow, you've really got a way with words sometimes, you know that?"
+    show BE neutral
+    BE "I do."
+    "The two of us found ourselves at a familiar little spring, standing at a bridge that crossed the flowing water. We both stared into it, resting on the arch of the bridge."
+    "It was quiet. Which by itself wasn't a bad thing. It really helped me appreciate the stillness of the lake. I rested my arms against the wood and leaned forward, watching the serene scene."
+    "Eventually a dragonfly stopped by and broke the surface of the water, sending a faint ripple across the water until the waves ceased."
+    MC "It's funny. I don't think the two of us have been back here since the first day of school."
+    show BE surprised
+    BE "We haven't?"
+    MC "Nope. It's usually been the arcade, or one of our dorms, or at a club or something."
+    show BE neutral
+    BE "Yeah, I guess you're right."
+    MC "Though, it doesn't matter where we are. I'm always happier around you."
+    show BE happy
+    BE "Oh is that so?"
+    MC "Yes, but not for that reason. You're just so easy to talk to, Honoka."
+    MC "We met back up after years and it was just like we'd never left each other. That's not the kind of relationship you have with anyone."
+    MC "Thinking about all the stuff we do together, and then thinking about doing it myself, it's just not as fun."
+    BE "I know. I'm pretty great."
+    if getVar("BEFeminine") > getVar("BETomboy"):
+        jump BE030_femenine
+    elif getVar("BETomboy") > getVar("BEFeminine"):
+        jump BE030_tomboy
+    else:
+        jump BE030_neutral
+        
+label BE030_feminine:
+    BE "Gorgeous, too."
+    MC "Yeah..."
+    "I turned towards Honoka. Her hands were trapped under her bosom, pinning them to the railing. I gently slid my hands under her chest to hold her hands."
+    MC "You know, you're more gorgeous than you think you are."
+    show BE surprised
+    BE "Eh?"
+    MC "It's not easy being as upbeat as you are all the time. That's a very rare, and enviable quality. It's rare to meet someone who can light up a room just by walking into it."
+    show BE happy
+    BE "Ah, heh, well..."
+    MC "Even rarer to find someone that radiant who's also stunningly beautiful."
+    show BE surprised
+    BE "I mean, s-stunning..."
+    "I brought her hands up closer, bringing them between our chests."
+    MC "That really is something special that you don't want to let go."
+    MC "Do you remember when we played that cheesy love tester machine in the arcade?"
+    MC "It doesn't matter what it said. None of the options it displayed matched what I really felt."
+    MC "I think it was that moment I knew what I felt was real, Honoka. By all rights our hands squeezing those levers should have made the machine explode."
+    BE "..."
+    MC "You've gone through a lot since coming here, Honoka. A lot of clubs, a lot of bras, a lot of chocolates. Nothing you've done, or ever will do, is going to make me feel differently about you."
+    MC "Honoka, I don't want to go a day without being able to feel your touch. I want to stay with you and watch you blossom further, into the beautiful young woman you are."
+    MC "I want both of us to be the happiest we can be, and I think the easiest way to do that is for us to be together."
+    MC "I love you, Honoka."
+    "There was an emotion on Honoka's face I had never seen before. Her cheeks were hot red, and her eyes were glimmering with all the moisture refusing to leak down her cheeks."
+    "She tried to speak, but her throat gave her issues, letting out nothing more than loud exhalations."
+    "Once I pressed my lips against hers, she was better able to express herself, by making a delighted, warm, satisfied moan as she returned the kiss."
+    "Our arms wrapped around one another as I leaned back against the arch of the bridge. Honoka stood on her tiptoes and pressed her lips more firmly into mine."
+    "The peace of the brook, the warmth of her body against mine, the utter elation of my heart pounding like a hummingbird's wings. It felt beyond comparison."
+    "Breaking the kiss was the hardest thing I'd had to do. Watching her lower herself back to standing on her soles, it felt like we'd both entered a new chapter of our lives together."
+    "Honoka brought up a hand and carefully wiped away the joyful tears from the corners of her eyes, before holding my hands again."
+    show BE neutral
+    BE "W-Wow. I, I love you too."
+    show BE happy
+    BE "You've really got a way with words sometimes, you know that?"
+    "I smiled, saying two words before leaning into to kiss her again."
+    MC "I do."
+    jump daymenu
+
+label BE030_tomboy:
+    show BE happy
+    BE "Awesome, too."
+    MC "Yeah."
+    "I turned towards Honoka. She leaned against the bridge's side, with her arms crossed underneath her chest. I walked behind her, and slid my hands around her wait, then rested my head on her shoulder."
+    MC "You know, you're more awesome than you think you are."
+    show BE surprised
+    BE "Huh?"
+    MC "I've yet to see something keep you down for long. You're always trying new things. And if it doesn't work out you just pick yourself on and move to the next. It's hard to do that, to keep pushing yourself forward."
+    show BE happy
+    BE "Aw, shucks, Kei-chan."
+    MC "And to have all that, and still be drop-dead hot... that's a hell of a feat."
+    show BE surprised
+    BE "Hot? Y-Yeah, I guess, heh..."
+    "I grasped her hands from underneath her chest, not caring about my thumbs pushing into the underside of her breasts."
+    MC "It's a great package. It makes me want to make sure I never lose you."
+    MC "Do you remember when we played that goofy love tester machine in the arcade?"
+    MC "I remembered looking at it, and thinking 'none of these seem right... it needs to go higher'."
+    MC "We shouldn't have even needed to touch the sensors for the machine to go off, Honoka. I think just being next to it should have fried the device."
+    BE "..."
+    MC "Despite everything you've gone through since coming here, you're still that amazing girl I was best friends with all those years ago. The goofy, sporty gal with enough spunk to last a dozen lifetimes. That's never going to change, I'll always admire that."
+    MC "Honoka, I don't want there to be a day where you and I aren't together. Your energy is addictive, and I just can't get enough."
+    MC "I know we've been dating, but I need you to know that this is serious for me. Boyfriend and girlfriend, and in the future, something more. "
+    MC "I love you, Honoka."
+    "From my position, I couldn't see Honoka's reaction. I was dying to know, so my arms flipped her around until we were face to face."
+    "Her hand went up to her throat, as she struggled to find the words. Her mouth opened a few times, but nothing came out."
+    "I kissed her, pressing my lips deeply into hers, and pushing myself into her bosom as far as I could go. I felt the tension in her body melt away as she kissed me back."
+    "She wrapped her arms around me, and I squeezed harder into her. With a bit of effort, Honoka's butt was raised onto the bridge railing, and we continued kissing."
+    "Everything seemed to go numb except for the kiss, and the sensation of my body against Honoka's. The sounds of nature faded away until all I heard was her breath and her heartbeat. It felt like my pulse matched hers."
+    "I felt out of breath by the time I stopped the kiss. We both stood there, taking deep breaths, panting with emotion and lust."
+    "Honoka coughed a few times, breaking the hard knot in her throat that formed when she tried to reply to me earlier."
+    show BE neutral
+    BE "Damn... I love you too."
+    show BE happy
+    BE "You've really got a way with words sometimes, you know that?"
+    "I smiled, saying two words before leaning into to kiss her again."
+    MC "I do."
+    jump daymenu
+
+label BE030_neutral:
+    MC "Yeah."
+    "I turned towards Honoka. I placed my hand on her shoulder, and took a deep breath, trying to come up with the right words to say."
+    MC "You're not just great, you know."
+    show BE surprised
+    BE "I'm not?"
+    MC "You're great, yes. You're also pretty, fun, adventurous, clever, hard-working, kind and helpful. It should be illegal to have so many good qualities all at once, you're leeching them from the rest of us."
+    show BE happy
+    BE "Hehe, thanks, Kei-chan."
+    MC "Seriously, to think you're dating me is nuts. How did I score such a babe?"
+    show BE surprised
+    BE "Ooh, a babe?"
+    "I let go of her shoulder, and she slowly turned to face me. She must have sensed that I had more to say."
+    MC "I feel so lucky to have you, Honoka. Beyond reason."
+    MC "Do you remember when we played that silly love tester machine in the arcade?"
+    MC "It felt fun at first, but when we held our hands and squeezed those levels, something didn't feel right. But for a good reason."
+    MC "Thinking we needed a machine to decide how much we love each other was foolish. I think it's obvious I'm head over heels for you, and I think you're the same for me."
+    BE "..."
+    MC "I get the feeling that you've been having some trouble figuring things out, Honoka. But, that's okay. The fact you still get up every day, and push through with a smile and a joke is proof that you're doing great."
+    MC "I want to be there for you as much as possible. To help you, or just be there when you need it, like you've been there for me so many times."
+    MC "I want to take the next step forward. And I think it's been a long time coming. You deserved to hear this ages ago."
+    MC "I love you, Honoka."
+    "Honoka's mouth dropped open, and her her fingers gently brushed against her lips for a moment."
+    "She nodded rapidly in reciprocation, sniffling already as emotions welled up within her. Good ones, I assumed, judging by her reaction."
+    "The second her mouth wasn't covered, I moved in for a kiss, grasping her hand in both of mine and pulling her in tight for a deep, loving smooch."
+    "Her free hand grabbed my waist and pulled me in close. My chest bumped into one of her breasts, and it cascaded into my torso as I leaned in further."
+    "This felt right. Like a puzzle with one piece missing, this was something that had to be done for both of us. She tasted sweet, her hands were soft, and her body was warm. I felt deeper in love already."
+    "The kiss broke mutually as we split apart, with me still holding her hand. I let go with one, and gently rubbed her cheek."
+    "Honoka leaned into my touch, smiling warmly and looking back up at me. Nothing could have made this better."
+    show BE neutral
+    BE "Gosh. I love you too."
+    show BE happy
+    BE "You've really got a way with words sometimes, you know that?"
+    "I smiled, saying two words before leaning into to kiss her again."
+    MC "I do."
+    jump daymenu
+
+label BE031:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

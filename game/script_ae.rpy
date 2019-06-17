@@ -6,7 +6,6 @@ define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
 define Ama = Character('Amatsu-san', color="#ffc3b5")
 define All = Character('Everyone', color="#ffffff")
 define Tako = Character('Tako', color="#ce9b50")
-define Owner = Character('Store Owner', color="#C0C0C0")
 
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
 image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
@@ -31,7 +30,6 @@ image Tako neutral = "Graphics/minor/tako-neutral.png"
 
 #image Dorm AE = "Graphics/ui/bg/AEdorm_day.png"
 image Dorm AE = "Graphics/ui/bg/NYI.png"
-image Store = "Graphics/ui/bg/NYI.png"
 
 #MISSING: size1: sad-2, aroused-4
 #MISSING: size2: angry-2, angry-3
@@ -7261,9 +7259,9 @@ label AE035:
     "We stayed like that for a while, and only broke once the belltower beckoned us back to class. As I stood up, however, I'd found that Shiori-chan hadn't let go. Propping herself up, she grabbed the box and put it under her arm, and we walked hand in hand back to the classroom."
     jump daymenu
 
-scene AE036:
-    $setProgress("AE", "AE037")
+label AE036:
     scene Hallway with fade
+    $setProgress("AE", "AE037")
     #SCENE IN AFTERNOON
     "As the day came and went, I had found time to talk with Shiori-chan when I could, and as usual, she was whisked away into a meeting after class. Thankfully, according to her, her schedule had been clearing up and soon we'd be able to spend more time together."
     "That didn't mean, however, I could wait patiently. I bent down behind a potted plant, waiting at the library door. Peeking every few seconds a the door, I'd been-"
@@ -8485,7 +8483,7 @@ label AE102_c2:
     MC "Goodbye Akira."
     jump daymenu
 
-label AE030:
+label AE041:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

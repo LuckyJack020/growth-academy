@@ -34,6 +34,8 @@ image Woods = "Graphics/ui/bg/NYI.png"
 image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/hillroad.png"
 image Theater = "Graphics/ui/bg/NYI.png"
+image Field = "Graphics/ui/bg/NYI.png"
+image Store = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -69,6 +71,7 @@ define Student3 = Character('Student 3', color="#FF3300")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Waitress = Character('Waitress', color="#C0C0C0")
+define Owner = Character('Store Owner', color="#C0C0C0")
 
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
