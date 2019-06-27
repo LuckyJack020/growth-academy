@@ -32,7 +32,7 @@ init 2 python:
     eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "next": "GTS007", "obsflags": [],         "conditions": []}
     eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS008", "obsflags": [],         "conditions": []}
     eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS009", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A Tale of Fish and Yukatas", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,    "location": "festival",         "priority": PrioEnum.NONE, "next": "GTS011b", "obsflags": [],        "conditions": []}
+    eventlibrary['GTS009'] = {"name": "A Tree Between Mountains", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,      "location": "town",             "priority": PrioEnum.NONE, "next": "GTS011b", "obsflags": [],        "conditions": []}
     eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
     eventlibrary['GTS011b'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.NOFLAG, "GTS011_unlock"]]}
     eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS015", "obsflags": [],         "conditions": []}
@@ -650,10 +650,10 @@ label GTS008_after:
     MC "Yeah, from time to time I do. Honoka and I tend to use it as a meeting spot, and because of that I sometimes just wander up here for a breather. So, I guess you could say it's my version of the campus garden."
     GTS "Ah I see. It is a nice spot, I must say. Plenty of space, sunlight, and fresh air."
     MC "Yeah, I would agree with that."
-    MC "Honoka and I are going to a festival in a couple of days. Would you like to join us?"
-    GTS "Oh? I wasn't aware one was happening so soon."
-    MC "Yeah, it's been so hectic here lately I'm not sure many of the students were aware either. Still I think it'd be good for us if we got to know the neighborhood, since we're going to be here a while."
-    MC "Plus it could be fun. So what do you say?"
+    MC "By the way Yamazaki-san, Honoka and I are going to head into town in a couple of days. Would you like to join us?"
+    GTS "Oh? That sounds lovely. I haven't had a chance to visit myself."
+    MC "Yeah, I think it'd be good for us if we got to know the neighborhood, since we're going to be here a while."
+    MC "Plus it could be fun; just a day of exploring. So what do you say?"
     GTS "I agree, it would be nice to learn more about the area as well as meet the people."
     show GTS happy
     GTS "I say yes, I'd be delighted to join you two - if you don't mind my intrusion?"
@@ -669,207 +669,188 @@ label GTS009:
         $setProgress("GTS", "GTS011")
     else:
         $setProgress("GTS", "GTS011b")
-    scene Festival with fade
-    play music Festival
-    "Music and cheers set the mood as the buildings lining the block reflected the lights of various lanterns. Dusk was beginning to set in, and as it did, a wave of multiple-colored lights replaced the sunlight."
-    "Booths covered both sides of each walk way as vendors attempted to tantalize visitors  with various knick knacks and home-style delicacies. They didn't get to me, though, as I had my sights set on a more personal venture. As I made my way further into the festival, I could pick out the two familiar voices."
-    show GTS neutral at Position (xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show BE neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    GTS "...Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
-    BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
-    GTS "Well, if you're certain. Though I'd gladly help you get dressed if you're concerned about your bust getting in the way..."
-    BE "Well I appreciate the help, Yamazaki-san, and I know this is the Yukata festival and all, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
+    scene Town with fade
+    play music Sunset
+    #Afternoon, gentle music, scene becomes locked after scene 10.
+    "My stride was rather laxed as I wandered the various blocks of the town. It was rather quaint and not crowded. Well that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
+    "I didn't get to stay on that train of thought for long however as I faintly heard a gentle voice speaking."
+    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    GTS "... Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
+    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    BE "Heh, nah, I’m good. They just really aren’t my thing. Plus, with these girls, it’s more of a hassle than you’d think."
+    GTS "Well, if you’re certain. Though I’d gladly help you get dressed, if you’re concerned about your bust getting in the way..."
+    BE "Well, I appreciate the help, Yamazaki-san, but it’s okay. I’m good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
+    "I was immediately spotted as I rounded the corner and saw the girls in a more casual attire than I was use to."
     BE "Yo! Kei-chan!"
-    "She waved as she called out to me. Upon seeing them I cracked a small smile, as at least in Naomi's case, this had been the first time I'd seen them out of uniform. Honoka opted to wear a simple tank top and shorts, as with the warmth of the night it allowed her to enjoy the breeze. Naomi, on the other hand, got into the spirit of the festival and wore a full Yukata with a floral design, and even had an elegant flower hair clip on."
-    # (This is mostly as a placeholder since with the art there will be a picture that negates this. But until then this is simply to describe them.)
-    MC "Hey you two! Wow, Yamazaki-san, you look great."
-    GTS "Thank you."
+    "She waved as she called out to me. Though my eyes immediately widened as Honoka ran over, her bountiful busty bounding towards me before she came to my side and tossed an arm around my shoulders."
     show BE happy
+    BE "How's it going?"
+    MC "Hey you two! Wow, Yamazaki-san, you look great."
+    "Upon seeing them, I cracked a small smile, as at least in Naomi’s case, this had been the first time I'd seen them out of uniform."
+    show GTS happy
+    GTS "Thank you."
     BE "Hey! What about me?"
     MC "Heh, you look great too, Honoka."
-    BE "Thanks! Well, now that you're finally here, let's go explore!"
-    GTS "Were you not going to wear a yukata, Hotsure-san?"
-    MC "Oh! Um... probably not. I don't own one and I don't think I look good in them."
-    GTS "Well, if you would like and if you don't mind, I could help you look for one that you might like."
-    MC "You know what, sure, why not? Granted, I can't wear it now, but maybe for a future event."
-    GTS "Exactly, one can never be too prepared. And I promise we'll find you something you'll like."
-    BE "Fineeeee, but I'm not trying any of them on. So sadly, that's not a fantasy you'll be seeing today Kei-chan."
-    MC "I- what?"
-    BE "Heh. I know you were hoping to see me in one today. Sash way down past my boobs, hoping I'd spill a snow cone on them, or a goldfish would flop in my cleavage..."
-    show GTS embarrassed
-    GTS "Inoue-san..."
-    MC "I uh... heh, how about we go looking for them, shall we?"
-    show BE neutral
-    show GTS neutral
-    "We walked through the crowd, Honoka going wide eyed whenever any tasty sweet was shown to her from a vendor. She'd look back at me like a begging puppy, asking for money, which seemed to always win me over. Well... at least the first 5 times."
-    MC "Honoka, I can't keep buying you things... I'm going to run out of money."
+    BE "Thanks! Well, now that you’re finally here, let's go explore!"
+    "We embarked on our adventure to learn more about the town, but didn't get too far as Honoka's went wide eyed whenever any tasty sweet was shown to her from a vendor. She’d look back at me like a begging puppy, asking for money, which seemed to always win me over. Well… at least the first 5 times."
+    MC "Honoka, I can’t keep buying you things… I’m going to run out of money."
     show BE sad
-    BE "But Kei-chan! It's shaved ice! What festival experience would be complete without some?"
-    GTS "It's okay Hotsure-san, I can pay for this one. To be honest, I was hoping to get some myself. Which flavor would you like, Inoue-san?"
+    BE "But Kei-chan! It’s shaved ice! What afternoon with friends be complete without some?"
+    show GTS neutral
+    GTS "It’s okay Hotsure-san, I can pay for this one. To be honest, I was hoping to get some myself. Which flavor would you like, Inoue-san?"
     show BE happy
-    BE "Really? Thanks! Umm... hmmm... let's go with some watermelon and blue raspberry!"
+    BE "Really? Thanks! Umm… hmmm… let’s go with some watermelon and blue raspberry!"
     GTS "Very well. Hotsure-san, would you like some?"
-    MC "Sure, if you're okay with the expense."
-    GTS "Oh, it's truly no bother, Hotsure-san. Which favor would you prefer?"
-    MC "I think I'll go for some mandarin."
+    MC "Sure, if you’re okay with the expense."
+    GTS "Oh, it’s truly no bother, Hotsure-san. Which favor would you prefer?"
+    MC "I think I’ll go for some mandarin."
     show BE angry
     BE "Booooooring. Come on, try something exciting, or mix them up."
-    GTS "It's quite all right if you just want mandarin, Hotsure-san. I'm sure Inoue-san is merely teasing."
-    GTS "As for myself, I think I'll have strawberry."
+    GTS "It’s quite alright if you just want mandarin, Hotsure-san. I’m sure Inoue-san is merely teasing."
+    GTS "As for myself, I think I’ll have strawberry."
     "She placed the order and then compensated the vendor before she gently handed the shaved ice to each of us."
     show BE happy
     BE "Thanks, Yamazaki-san!"
     MC "Yeah, thank you."
-    GTS "It's no problem at all. Please enjoy."
-    show BE neutral
-    "Our pace through the sea of people slowed considerably at that point as we enjoyed our treats. Thankfully, it was enough to distract Honoka from asking for other things until we eventually came upon a stand that seemed to catch Naomi's eye."
-    GTS "Oh, Hotsure-san. This seems like a good stand to look at some yukata. Come take a look, please?"
-    MC "Hm? Are there any that stand out to you?"
-    GTS "Shouldn't I be asking you that though?"
-    MC "Yeah, but I'm really not good at this stuff. Which do you think would suit me best?"
-    GTS "I'd need to think it over a bit. Is there a particular color you were looking for?"
-    MC "I suppose blue."
-    GTS "Very well, I'll see what I can find in that color scheme."
-    "She inspected the stand for a few moments, handing me her shaved ice so she could feel the yukatas. Checking every side, every inch as she carefully examined possibly hidden options. All the while Honoka ate more of her shaved ice, wincing at the occasional brain freeze before immediately taking another bite."
-    GTS "What do you think of this one, Hotsure-san?"
-    "She lifted up a blue-colored yukata, its design having a bold feeling towards it as there was light etching of mountains and clouds faintly imprinted on its surface. Not enough to be too distracting, yet still giving the eye a nice scene to take in if observed."
-    MC "Oh wow, that's actually pretty cool."
-    show BE happy
-    BE "Yeah, looks awesome. I'd say it's a great find. Ow... my head..."
-    GTS "I'm very glad you like it Hotsure-san. We'll take this one please."
-    show BE neutral
-    "She took the yukata to the vendor as she motioned for me to walk over. I handed our two shaved ice cups to Honoka, who snuck a bite from my bowl as I made my way over. Naomi had me stretch my arms outwards from my sides as she expertly placed the yukata on me."
-    GTS "There you go, nicely done. And that's it Hotsure-san, thank you for allowing me to help you dress. If we had also gotten one for Inoue-san we would have needed to put another sash just underneath her chest, then smooth out the newer wrinkles before adding the obi."
-    show BE happy
-    BE "Yeah and that would take forever, so no thanks. Still, you look nice Hotsure-san."
-    GTS "Indeed, you look very handsome, Hotsure-san."
-    MC "Heh... thanks."
-    show BE surprised
-    BE "OH OH! Look!"
-    hide BE with dissolve
-    "She pointed to a new stand and ran off to check it out, Naomi and I quickly following her. We easily found Honoka as she frantically waved for us to hurry up, as there was a small crowd around this stand for some reason."
-    "When we arrived, the reason became rather clear, as this stand had a game."
-    show BE happy at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    Vendor "Welcome! Are you a master fisher? Well then test your skills in my little game against my expertly trained goldfish!"
-    MC "You can train goldfish?"
-    Vendor "Of course! It takes years of training and being one with the fish."
-    MC "Uh... okay..."
-    "He brought us over to see the game properly. It wasn't your typical scooping, it seemed. Instead the poi were shaped like small baskets and tied on the corners to a string that was attached to a small fishing rod."
-    Vendor "Normally in goldfish scooping you do what?"
-    show BE neutral
-    BE "Scoop... goldfish?"
-    Vendor "Correct! But that's not how the true art of fishing is. Fishing is about planning, patience, and execution. So my game reflects the true aspects of fishing! The rules are simple, you place the poi into the water and when a goldfish swims over it you quickly reel up the poi and try to catch it!"
-    Vendor "Be warned though, you're not allowed to chase the fish with the poi, that counts as an immediate disqualification. But you also can't take your time, for the longer that poi is in the water, the weaker it'll become until it won't be capable of holding the fish or water!"
-    MC "Doesn't that defeat the whole point of being patient?"
-    Vendor "It's a balance! Why not give it a try?"
-    "As he smiled at me, I noticed the current player reeling up his poi and having seemingly caught one of the goldfish, until... It merely jumped out of the basket right as the rim broke the surface."
-    MC "I... don't know..."
-    show BE happy
-    BE "Come on, Kei-chan! I'm sure you can totally do it! I bet you're a great master fisher. If you can't do it, I bet I could."
-    GTS "Yes Hotsure-san, it does seem like some rather harmless fun."
-    Vendor "Well your lady friends seem to agree, buddy. How about it?"
-    MC "I... guess?"
-    Vendor "Great! 500 yen."
-    MC "What? Aren't these normally about 100?"
-    Vendor "If this was goldfish scooping, yes. But this is fishing good sir. 500 yen."
-    "I gave him the money, and he handed me the fishing rod, before quickly replacing the poi basket."
-    Vendor "Remember, the hardest test in life is having the patience to wait for the right moment."
-    "He grinned at me as I let the basket carefully sink into the little pool. From my angle I realized that I couldn't tell how deep it was or where exactly in depth was my basket. Even the fishes could be at any point above the basket. I gave a couple of test reels, slowly expanding my basket though it seemed that each click of the reel sent a vibration down the wire which disturbed the water, signalling the fishes to move."
-    "Taking a chance, I quickly reeled in as a fish swam over, but by the time the basket caught up the fish had already moved on."
-    Vendor "Too greedy. Waaaait."
-    BE "Come on Kei-chan, we're rooting for you!"
-    "I gave a slight nod, as at least I was closer to the surface now. Though that also gave me fewer options, as not as many of the goldfish swam this close to the top. Each second ticked away without even the slightest hint of a fish drawing near, until finally one showed me mercy and swam just over my basket. Instinctively I yanked up to capture the fish, but this was a mistake, as the sudden force along with the erosion of the water had resulted in my poi collapsing and setting the goldfish free."
-    Vendor "Ooooh, tooooo bad young man. Better luck next time."
-    GTS "You gave it a good shot Hotsure-san."
-    show BE sad
-    BE "Awww..."
-    MC "One more try."
-    show BE neutral
-    Vendor "Oh? Heh, very well young man. Just don't over extend yourself."
-    MC "Don't worry, I got it."
-    "I replied as I gave him the 500 yen and got a replacement basket. This time though I didn't carefully let my poi sink. No, instead I casually tossed it to one of the edges of the pool. This startled the goldfish who scurried in random directions. Though as they did this my poi was steadily sinking, all the while the first startled fishes startled those in front of them which repeated again until it was a slight chain reaction which forced some goldfishes to quickly swim back towards the original disturbance."
-    "As they hurriedly swam back over my poi which hadn't had time to sink fully, I quickly reeled in as well as yanked, lifting my still sturdy poi out of the water. Honoka and even Naomi gave an audible cheer as the outline of a fish could be seen in the basket."
-    show BE happy
-    BE "You did it!"
-    "I looked at the vendor confidently though when I looked back at the poi the goldfish suddenly lept out of it."
-    "I couldn't react as I watched the fish descend back towards the pool, though it never made its target, as a small cup appeared beneath it and caught the goldfish."
-    UNKNOWN "Here you go, mister."
-    "As I looked down, I saw that the one holding the cup was a little girl."
-    MC "Uhh... thanks."
-    show GTS happy
-    GTS "Ara ara, thank you so much."
-    show BE happy
-    BE "Nice save, kid!"
-    LittleGirl "You're welcome!"
-    "She giggled as I took the cup and patted her head, Honoka immediately hugging the child. Thankfully she let go before the kid suffocated. I displayed the fish to the vendor, my hand over the rim of the cup to prevent a repeat."
-    show BE neutral
-    show GTS neutral
-    MC "I believe I've won."
-    Vendor "I... huh. I don't know if that's against the rules or not."
-    MC "You never mentioned anything about what happens to the fish once it's caught and out of the pool."
-    Vendor "Hm. Very well, consider that a freebie kid. Though I'll be sure to add that to the rules."
-    "He took out a notepad and began scribbling in it as I turned to Honoka and Naomi."
-    menu:
-        "Give the fish to Honoka":
-            jump GTS009_c1
-        "Give the fish to Naomi":
-            jump GTS009_c2
-        "Keep the fish for yourself":
-            jump GTS009_c3
-
-label GTS009_c1:
-    $setAffection("BE", 3)
-    MC "Here you go, Honoka."
-    "I handed the cup over to Honoka, and her mouth opened wide in surprise."
-    show BE surprised
-    BE "Wahhh!? Why are you handing it to me?"
-    MC "You seemed like you really wanted one. After all, you were the one who noticed the game."
-    BE "Y-yeah... but that's just because I thought it looked cool. I wasn't trying to make you get one for me."
-    MC "Well, I did regardless."
-    BE "G-geez, thanks Kei-chan."
-    "She carefully took the cup and blushed."
-    show GTS happy
-    GTS "That was very sweet of you, Hotsure-san."
-    MC "Heh, well she looked like she wanted one, so I couldn't just let her not have it."
-    jump GTS009_after
-
-label GTS009_c2:
-    $setAffection("GTS", 3)
-    MC "Here you go."
-    "I presented the fish to Naomi, who showed a genuine look of surprise."
+    GTS "You're very welcome. Please enjoy, oh and try not to eat too fast. Don't want to brain freeze after all."
+    "Our pace through town slowed considerably at that point as we enjoyed our treats. Thankfully, it was enough to distract Honoka from asking for other things until we eventually came upon a store that seemed to catch Naomi’s eye."
+    GTS "Hm?"
+    MC "Huh? Something up Yamazaki-san?"
     show GTS embarrassed
-    GTS "W-what? Are you certain Hotsure-san? After all the effort you went to capture it?"
-    MC "Yeah, think of it as a thank-you for paying for the shaved ice and helping with the yukata."
-    GTS "But what about Inoue-san?"
+    GTS "Oh. Nothing. Just thinking."
+    show BE neutral
+    BE "See something in that store you like? If you ask I'm sure Kei-chan will buy it for you."
+    MC "H-hey, I'm not a bank."
+    GTS "N-no, it's fine. I didn't mean to delay our trip."
     show BE happy
-    BE "Heehee, he already bought me a ton of stuff so it's all good to me. Heck, that was the highlight of the night in my mind."
-    show GTS happy
-    GTS "I-I see. Thank you, Hotsure-san. I'll make sure to take good care of it."
-    MC "I'm sure you will."
-    jump GTS009_after
-
-label GTS009_c3:
-    $setAffection("BE", 1)
-    $setAffection("GTS", 1)
-    MC "Well... that was something."
-    GTS "You did wonderfully, Hotsure-san. A great display that'd make any fisherman proud."
-    show BE happy
-    BE "Yeah! That was awesome. Heh, if it was me I probably would have just tried chasing the fishes with the poi."
-    GTS "But didn't the vendor say that was against the rules?"
-    BE "Huh? Oh, yeah. Well, I guess I would have been disqualified then."
-    "Naomi couldn't help but let out the smallest giggle as Honoka chuckled to herself and smiled."
-    MC "Now I just need to figure out where to put this little guy when I get back to my dorm. As well as find him the right bowl."
-    BE "Oh, that'll be easy, I'm sure plenty of people here are selling bowls if you don't want to buy from this vendor."
-    MC "I'm pretty sure he'd overcharge me."
-    BE "Probably. I know I would."
-    jump GTS009_after
-
-label GTS009_after:
-    MC "All right then, let's go find a good home for this little guy and enjoy the rest of the night."
-    BE "Yeah! Let's party!"
+    BE "It's no problem. I mean that's why we're walking through town for anyway right?"
+    "She smiled and tried finishing the last bit of her shaved ice quickly. Her smile quickly melting as her brain froze over and she did a little dance as she rubbed her head."
+    show BE sad
+    BE "Ahhhh! Brain freeeeeeze!"
+    MC "Yamazaki-San warned you…"
+    MC "But yeah Honoka is right, exploring was the whole point for the trip so let's check it out."
+    GTS "If it's truly alright…"
+    
+    scene Store with fade
+    "Entering the store I had to admit I was surprised that it seemed to mostly be just an assortment of knickknacks."
+    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    MC "Was there… anything particular that caught your eye Yamazaki-san?"
+    GTS "No, I just wanted to look around. My mother has a tendency to give me some random items like these whenever she goes away on a trip."
+    show BE neutral
+    BE "Ooooooh, I get it. You're homesick."
+    GTS "Possibly."
+    MC "Well, take as long as you need."
     show GTS neutral
-    GTS "Heh, indeed."
-    "I led the way as we journeyed on to an eventful night of games, prizes, and food. And besides Honoka having eyes bigger than her stomach, the night was a ton of fun. I'm really glad we got a chance to do this, as well as getting the chance to take a picture of the three of us together."
+    GTS "Thank you Hotsure-san."
+    hide GTS with dissolve
+    hide BE with dissolve
+    "We explored the store out our own leisure, Naomi seeming distracted with some postcards while Honoka was examining small trinkets."
+    "As for myself, I was mostly just examining some accessories when one really caught my interest. It was a headband that had a fake flower on one side of it. But its color was what made it so alluring. It was a baby blue flower with a golden ring in the middle. My first thought was Naomi possibly liking it."
+    "However I then looked a bit further down and noticed an assortment of pins. I recalled Honoka having a thing for these when we were younger. She was always so loud with the giggling of all the pins on her bag. Getting a small chuckle from the memory, I pulled out my wallet and sighed."
+    MC "Damn it Honoka… did you really need to bug me for all those treats?"
+    "I only had enough money left to get one of the items as I looked back down the aisles as the girls were still examining things."
+    menu:
+        "Buy a pin for Honoka": #+5 Affection Honoka
+            jump GTS009_c1_1
+        "Buy the headband for Naomi": #+5 Affection Naomi
+            jump GTS009_c1_2
+        "Save your money": #+0 Affection.
+            jump GTS009_c1_3
+
+label GTS009_c1_1:
+    "Making up my mind, I took a pin with a silly nerdy design on it and took it to the cashier. The girls seemed to notice me pay for the item as they came over."
+    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    BE "Hm? Whatcha get Kei-chan?"
+    MC "Well I was looking around and I found one of these."
+    "I showed her the pin, making her smirk as she examined the pin."
+    show BE happy
+    BE "You sly dog! Damn, I would have totally gone for that if I had seen it first. Nice design on it too."
+    MC "Well, that's why I bought it for you. I remember you used to collect these."
+    show BE surprised
+    BE "W-what?"
+    MC "Didn't you use to collect these? I was pretty sure you did. I can keep it if you don't want it."
+    show BE angry
+    BE "No I want it!"
+    show BE surprised
+    BE "I just didn't think you'd remember something like that…"
+    $setAffection("BE", 5)
+    show BE happy
+    BE "Thanks Kei-chan."
+    GTS "That was rather sweet of you Hotsure-san."
+    MC "I just thought it'd make her happy."
+    BE "Well you were right. Come on, let's keep exploring."
+    scene black with fade
+    "She grabbed my hand as she took the lead on our expedition. Naomi following behind as she held a smile on her face as she watched Honoka's renewed excitement as she dragged me around town until the sun began to set."
+    jump daymenu
+
+label GTS009_c1_2:
+    "Making up my mind, I took the headband with the flower and took it to the cashier. The girls seemed to notice me pay for the item as they came over."
+    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    GTS "Did you find something Hotsure-san?"
+    show BE happy
+    BE "Pfft! Hahahaha! Kei-chan! Already preparing to accessorize when your hair grows out?"
+    MC "W-what!? N-no! This isn't for me."
+    BE "Oooh? Is it for Tomo?"
+    MC "No. But now that you mention it, I should probably get her something at some point too."
+    MC "Either way. I got this for you Yamazaki-san."
+    "Naomi placed a hand over her mouth as she let out a faint gasp upon seeing the headband."
+    show GTS embarrassed
+    GTS "Oh my."
+    MC "I don't know why but I just thought of you when I saw it. I'm not really sure what type of flower that is, but I thought it was pretty. So… here you go."
+    show GTS happy
+    $setAffection("GTS", 5)
+    GTS "Ara ara. Thank you very much Hotsure-san. Remind me later and I'll be more than happy to tell you what flower this is."
+    "Naomi carefully put the headband on as I felt a nudge on my side as Honoka smirked and whisper."
+    BE "Nicely done! Keep it up stud."
+    "Nar: I felt a blush come over me as Naomi smiled at me after putting on the headband."
+    GTS "Thank you again Hotsure-san. Shall we continue looking around town?"
+    scene black with fade
+    "There was a spring to her step as she left the store and we followed, Honoka spending the rest of the day whispering into my ears. It was either pick up lines or just general advances I could make. Still, I didn't mind the constant advice as we enjoyed the rest of our journey until the sun began to set to signal the end of our day."
+    jump daymenu
+
+label GTS009_c1_3:
+    "I looked at both items once more and then back to my wallet again. Sighing in defeat, I put my wallet away and left the items where they were. I may need the money later, so it was probably for the best."
+    "I moved over to Naomi and observed the various landscapes on display."
+    MC "Like postcards?"
+    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    GTS "Yes. These are usually the things my mother sends me when she travels. These and occasionally a small trinket."
+    MC "I take it she travels a lot then."
+    GTS "On occasion. Normally with my father."
+    MC "id you travel a lot?"
+    GTS "A decent amount yes. More so when I was younger."
+    MC "You're lucky. I've always wanted to travel, see some landmarks and try out new foods. Must have been fun."
+    show GTS happy
+    GTS "Indeed it was. My sister and I did enjoy seeing other areas of Japan. We never left the country though unlike my parents."
+    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
+    BE "Oh? Secret second honeymoons?"
+    "Naomi and I both jumped as Honoka suddenly peeked around the corner of the aisle at us."
+    show GTS embarrassed
+    GTS "I… uh wouldn't know if that was the case."
+    show BE happy
+    BE "I'd love to travel too. Be cool seeing a lot of new places and experiencing other cultures."
+    show GTS happy
+    GTS "Hopefully you two get a chance to travel some time."
+    show BE happy
+    BE "As if I'd be so lucky. I'd need someone else to chip in to even get that chance. How about it Kei-chan? Want to circle the global together?"
+    MC "I don't think I could so voluntarily put myself in endless debt like that with how much you like to spend."
+    show BE angry
+    BE "Oh hush! Traveling is all about enjoying life to the max. Money expenses be damned!"
+    MC "Hence why I'm so hesitant to travel even off the island with you."
+    show BE sad
+    BE "So cruel…"
+    show BE neutral
+    BE "Oh well. Hopefully Yamazaki-san is right and we get that chance."
+    GTS "I'm positive you will."
+    show BE happy
+    BE "Anyway, let's not spend the whole day in here. Come on! We got more of the town to explore!"
+    scene black with fade
+    "She bounced out of the shop as Naomi giggled and followed, leaving me shaking my head as I followed the two."
+    "I later felt grateful that I hadn't spend my money as in another store Honoka's bust knocked over a display and I offered to buy an item that had broke. Naomi had offered to help to, but I didn't want her spending more than she already had that day."
+    "Still, we shared a laugh over it by the end of the day. Honoka being annoyed with my suggestion of wearing a, CAUTION: WIDE TURNS, sign on her shirt. Either way it had been a good day and we even discussed possibly doing it again sometime."
+    "I know I'd be more than willing to spend another day like that. Though next time I'll make sure I have a lot more money on me…"
     jump daymenu
     
 label GTS010:

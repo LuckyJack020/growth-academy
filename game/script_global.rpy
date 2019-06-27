@@ -55,6 +55,8 @@ image Yuki gossip = "Graphics/minor/yuki-1-neutral.png"
 
 image HR neutral = "Graphics/minor/HR-neutral.png" #Homeroom Teacher Neutral Portrait
 
+image Tomoko neutral = "Graphics/minor/tomoko-neutral.png"
+
 define MC = Character('Keisuke', color="#0066CC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')')
 define RM = Character('Daichi', color="#BDB8A5")
@@ -72,6 +74,9 @@ define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix=
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Waitress = Character('Waitress', color="#C0C0C0")
 define Owner = Character('Store Owner', color="#C0C0C0")
+define Announcer = Character('Announcer', color="#C0C0C0")
+define Cashier = Character('Cashier', color="#C0C0C0")
+define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
@@ -114,26 +119,6 @@ init 1 python:
     #Causes minor character scenes to be disabled if thime is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
     minorDisableTimes = [("testday2", "aftertest"), ("size2", "aftersize2")]
-    #Japanese holidays:
-    #January 1: New Year’s Day
-    #2nd Monday of January: Coming of Age Day (9th for year 2)
-    #February 11: National Foundation Day
-    #March 21: Spring Equinox Day
-    #Spring Vacation: March 25 - April 5
-    #April 29: Showa Day
-    #May 3: Constitution Day
-    #May 4: Greenery Day
-    #May 5: Children’s Day
-    #3rd Monday of July: Marine Day (18th)
-    #Summer Vacation: July 20 - August 31
-    #August 13-August 15: Obon
-    #3rd Monday of September: Respect for the Aged Day (19th)
-    #September 23: Autumn Equinox Day
-    #2nd Monday of October: Health and Sports Day (Sports Festival) (10th)
-    #November 3: Culture Day (Beginning/End of Culture Festival)
-    #November 23: Labor Thanksgiving Day
-    #December 23: Emperor’s Birthday
-    #Winter Vacation: December 26 - January 6 (Christmas is usually off too)
     
 label global000:
     stop music
