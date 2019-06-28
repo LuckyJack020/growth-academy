@@ -333,7 +333,7 @@ label FMG004_testfail:
 label FMG004_testsemipass:
     FMG "GO!"
     hide FMG with dissolve
-    MCT "Alright, there's no way I’ll be able to beat her at the rate she’s going. If I can just keep a good pace I’ll be able to make at least the lap...Assuming I don’t die from exhaustion..."
+    MCT "Alright, there's no way I'll be able to beat her at the rate she's going. If I can just keep a good pace I'll be able to make at least the lap...Assuming I don't die from exhaustion..."
     FMG "Come on you can do it!"
     "She yelled out ahead, already close to finishing. By the time I finished, The world was getting blurry..."
     show FMG happy with dissolve
@@ -347,7 +347,7 @@ label FMG004_testsemipass:
     scene Dorm Interior with fade
     "By the time I woke up I was in my room. Confused, I turned to find Daichi who was looking through old newspaper articles."
     show RM neutral with dissolve
-    RM "Oh hey, you’re up. That Mizutani girl came here carrying you on her back. She said to give this note to you."
+    RM "Oh hey, you're up. That Mizutani girl came here carrying you on her back. She said to give this note to you."
     "He handed me the note, to which I began to read."
     "{i}Dear Kai, you did good today, sorry I couldn't do much else to help. Word of advice though you might want to get in better shape. ~Akira{/i}"
     MCT "Well, at least she was kind enough to help me to my room."
@@ -1064,7 +1064,7 @@ label FMG011:
         "Alice's expression remained like she was smelling something slightly unpleasant, but she walked up to Akira and took the proffered gun."
         BBW "Let me guess, I point and shoot anything that moves?"
         FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
-        "She didn’t have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
+        "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
         "Eventually the zombies got to her, the screen turning red with blood splotches until the words ‘Game Over' came up."
         show FMG sad 
         FMG "..Um, you shoot off the screen...to reload. I'm sorry."
@@ -1161,35 +1161,35 @@ label FMG013:
     "Walking over to where she was sitting, I waved and greeted her."
     MC "Yo, Akira!"
     show FMG neutral with dissolve
-    FMG "Ahaaay! Yo! Look who’s all ready for a nice workout!"
-    MC "Yeah, I’m probably gonna do some reps too. I will say, I’m a bit more excited to watch a pro do her thing."
-    FMG "Aww, c’mon, I wouldn’t say {i}pro{/i}."
+    FMG "Ahaaay! Yo! Look who's all ready for a nice workout!"
+    MC "Yeah, I'm probably gonna do some reps too. I will say, I'm a bit more excited to watch a pro do her thing."
+    FMG "Aww, c'mon, I wouldn't say {i}pro{/i}."
     MC "I mean, you-"
     FMG "Now, ready to get a closer look at perfection?"
     MCT "Eheheh... yep, I should have expected that."
-    FMG "C’mon, c’mon, c’mon, let’s start!"
-    MC "Alright, well, you get ready and I’ll-"
-    FMG "Nah, nah, nah, you’re gonna spot me!"
+    FMG "C'mon, c'mon, c'mon, let's start!"
+    MC "Alright, well, you get ready and I'll-"
+    FMG "Nah, nah, nah, you're gonna spot me!"
     MC "I... huh?"
     FMG "Yep!"
     "Akira laid down on the bench and brought the bar, loaded with weights bigger than my head, to her chest."
     FMG "Here, try it out."
-    MCT "There is... no way in hell I’m going to be able to lift that."
-    "Succumbing to Akira’s innocent gaze, I put both of my hands on the bar."
+    MCT "There is... no way in hell I'm going to be able to lift that."
+    "Succumbing to Akira's innocent gaze, I put both of my hands on the bar."
     FMG "Nyaah~"
     "With little to no effort, Akira pushed on the bar, making it look as though I lifted her weights for her."
-    FMG "See? You’re a lifesaver, my dude!"
+    FMG "See? You're a lifesaver, my dude!"
     MC "Eheh, I mean... thanks?"
     FMG "Yep!"
-    FMG "Now, let’s do this!"
+    FMG "Now, let's do this!"
     FMG "Woo!"
-    FMG "C’mon, Kei, do it with me; Woo!"
+    FMG "C'mon, Kei, do it with me; Woo!"
     MC "W-Woo."
     FMG "Wooo! Lets get it!"
     "Akira clapped her hands and laid prone on the cushioned bench."
     FMG "Aight, well, get some weights and start then."
     stop music
-    "Without warning, Akira’s normally bright and cheery face suddenly became *far* less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
+    "Without warning, Akira's normally bright and cheery face suddenly became *far* less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
     MC "Woah, you alright there?"
     FMG "..."
     MC "..."
@@ -1200,13 +1200,13 @@ label FMG013:
     MC "..."
     FMG "*Khm*..."
     MC "..."
-    MCT "It feels like I’m in a cage with a lion, like at any second I’m gonna get torn apart if I make even one wrong move."
+    MCT "It feels like I'm in a cage with a lion, like at any second I'm gonna get torn apart if I make even one wrong move."
     FMG "..."
     "She lifted those massive blocks of iron for what felt like a good forty minutes, never once responding to my comments or meeting my gaze."
     "Afterwards, she sat up and began lifting the dumbells one at a time. Once more, same treatment."
     FMG "..."
     MC "... Is everything alright-?"
-    "Akira didn’t say anything. She did, however, lower the bar a bit too quick into her chest. Her face went determined and scowly for a moment before she snapped herself out of it and continued."
+    "Akira didn't say anything. She did, however, lower the bar a bit too quick into her chest. Her face went determined and scowly for a moment before she snapped herself out of it and continued."
     FMG "Mm."
     MC "Ah... got it."
     "After a few more reps with the dumbbells, she reached into her bag and rustled around."
@@ -1217,7 +1217,7 @@ label FMG013:
     "Angrily, she forced the straw in and began to sip."
     FMG "... *Sssspp*"
     MC "..."
-    MC "Y’know, despite the fact that I just watched you lift twice my bodyweight, it’s kinda cute watching you drink juice out of a box like a kid."
+    MC "Y'know, despite the fact that I just watched you lift twice my bodyweight, it's kinda cute watching you drink juice out of a box like a kid."
     $setAffection("FMG", 4)
     FMG "...Heh..."
     "With only the most subtle of smirks, she went back to drinking from her juice box."
@@ -1226,13 +1226,13 @@ label FMG013:
     MC "Hoh, shit-!"
     "Nearly making my heart burst, Akira returned to her usual goofy self with a room quaking shout. Pumping her fist, she gave a big, toothy grin."
     FMG "I am feelin' nice!"
-    FMG "So, how’d I do? Was it cool?"
+    FMG "So, how'd I do? Was it cool?"
     MC "U-Uh..."
     FMG "Speechless, eh? Yep, these puppies tend to do that, hehe!"
     MC "Uh, yeah, you looked... kinda pissed, though."
     "What I imagined what was going to happen whs either she was going to laugh it off or get actually angry at me... but what happened was she looked surprised and then sad."
     FMG "Pissed? O-oh shit, sorry dude.  I guess when I get too focused on my workout I can come off as a jerk. I never noticed cuz nobody wants to work out with me..."
-    MC "Hey don’t worry about it okay?"
+    MC "Hey don't worry about it okay?"
     FMG "Umm, you sure? I don't want you to get used to that type of attitude. I'm surprised you actually showed up, most people I invite to work out with me don't."
     MC "Hey, we all have our bad days. This is probably just one of those days for you. I know you're not like that, okay? Besides, those people probably don't have to motivation to work out in the first place."
     FMG "Yeah okay; I guess I can't focus JUST on the weights when I have someone with me. The only things a girl needs in life to make her happy is someone to spot her, a goal to work towards, and a whole ton of protein!"
@@ -1243,19 +1243,19 @@ label FMG013:
     FMG "PFFF GYAHAHAHAAA~"
     FMG "Oh damn, nice one, dude. You got me on that."
     MC "Eheheh."
-    "I couldn’t help but chuckle with Akira. It wasn’t even my dumb joke that got me, it was the fact that my dumb joke got her."
+    "I couldn't help but chuckle with Akira. It wasn't even my dumb joke that got me, it was the fact that my dumb joke got her."
     FMG "Man, I oughta hang out with you more."
-    FMG "So... how’s about we do just that!"
+    FMG "So... how's about we do just that!"
     MC "Eh?"
-    FMG "Same time tomorrow, you’ll spot for me, let’s do it!"
+    FMG "Same time tomorrow, you'll spot for me, let's do it!"
     MC "I- uh,"
     FMG "Yeees, yes, say it, *yeees*."
     MC "Y-Yes."
     FMG "Woo!"
     "Jumping up in joy, I could feel the impact of her landing all the way up to my knees."
-    FMG "You won’t regret it, dude. Same time tomorrow!"
+    FMG "You won't regret it, dude. Same time tomorrow!"
     MC "Same time tomorrow."
-    "As Akira grabbed her bag and walked out the door, I couldn’t help but think about everything that just transpired... and I couldn’t stop myself from smiling at the prospect of being a part of it again. I picked up some weights myself, and began training for next time."
+    "As Akira grabbed her bag and walked out the door, I couldn't help but think about everything that just transpired... and I couldn't stop myself from smiling at the prospect of being a part of it again. I picked up some weights myself, and began training for next time."
     $setSkill("Athletics", 3)
     jump daymenu
 
@@ -1571,7 +1571,7 @@ label FMG018:
     "Morning class... Some would argue that no one would be awake enough to learn anything so early, but luckily this time, the teacher planned something different for that day."
     show HR neutral with dissolve
     HR "All right class, today is the planned cooking class. For those who don't remember, to better prepare yourselves for your self-sufficient futures, you will have the next three hours to test your cooking skills."
-    HR "The food you choose to make will not lower your grade, but how well you make it. Now get your books and bags together because you’re not coming back and Kobayashi-san and I will explain more there."
+    HR "The food you choose to make will not lower your grade, but how well you make it. Now get your books and bags together because you're not coming back and Kobayashi-san and I will explain more there."
     hide HR with dissolve
     "Once he was done explaining, we all prepared to leave..."
     "..."
@@ -1601,7 +1601,7 @@ label FMG018:
     scene Cooking Classroom with fade
     "We managed to catch up with the rest of the class before anyone (especially Shiori) figured out we were behind."
     "Once we were at the cooking class, we waited till the cooking teacher began explaining."
-    Takamura "So, here’s what we have planned, you will team up in groups of three to create any dish you can find a recipe for, be it from the cookbooks here or online."
+    Takamura "So, here's what we have planned, you will team up in groups of three to create any dish you can find a recipe for, be it from the cookbooks here or online."
     "As the teachers were explaining, Akira pulled me aside."
     show FMG neutral with dissolve
     FMG "Okay Kei-Kun, there is no way I'm going to be able to make anything without help, so can you please help me?"
@@ -1718,8 +1718,8 @@ label FMG018_c1_2:
     MC "Let's ask Naomi, she might be a good cook."
     FMG "How would you know that?"
     if getAffection("GTS") > 4:
-        MC "Well, from what I’ve seen, she’s pretty domestic, and knows how to grow food... "
-        FMG "Domestic doesn’t exactly mean she’s a good cook."
+        MC "Well, from what I've seen, she's pretty domestic, and knows how to grow food... "
+        FMG "Domestic doesn't exactly mean she's a good cook."
     else:
         MC "I don't know, She has a green thumb, so she might be good at cooking, I guess."
         FMG "I would prefer not to have this be based on some basic knowledge, Kei-kun."
@@ -1786,7 +1786,7 @@ label FMG018_c1_3:
     scene Cooking Classroom with fade
     show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show BE sad at Position(xpos=0.75) with dissolve
-    FMG "... Uh, I don't think it's supposed to look so... undercooked, I get the feeling we didn’t use the right centigrade."
+    FMG "... Uh, I don't think it's supposed to look so... undercooked, I get the feeling we didn't use the right centigrade."
     MC "Maybe you're right, Honoka what recipe were you following anyways?"
     show BE happy
     BE "..."
@@ -1828,22 +1828,22 @@ label FMGBBW001:
     show RM angry with dissolve
     play music RM
     MC "...Oh right... library archives. Why am I here again?"
-    RM "For the fifth time, I need you to keep watch while I’m going over these documents, and you can’t when you keep falling asleep!"
+    RM "For the fifth time, I need you to keep watch while I'm going over these documents, and you can't when you keep falling asleep!"
     MC "What did you expect, you made me get up at three in the morning; I only got like six hours of sleep, what time is it anyways?"
     RM "Around six in the morning."
-    MC "Oh I’m sorry, six hours and 36 minutes, in between the times you keep waking me up."
+    MC "Oh I'm sorry, six hours and 36 minutes, in between the times you keep waking me up."
     show RM neutral
     RM "Sarcasm is the lowest form of wit."
-    MC "Oh, thank you for that piece of information, I’ll be sure to put it in the file cabinet I keep under my bed next to those papers of yours."
+    MC "Oh, thank you for that piece of information, I'll be sure to put it in the file cabinet I keep under my bed next to those papers of yours."
     RM "Look, is it too much to- Ah!"
     "Daichi stopped himself as he grabbed an old but intact file."
-    MC "Alright I’ll bite, what is it?"
+    MC "Alright I'll bite, what is it?"
     show RM happy
     RM "Something that maybe lead to a breakthrough. Give me a minute to read it."
     show RM neutral
     RM "Alright, so most of these articles are dead ends, but this particular article is about the first record of growth. Apparently it was a female around her teens. Name: Chie Kazomazumi."
-    RM "She was about as average as average can be. However around her sixteen birthday her breasts started to enlarge to an extreme size around in the 1970’s."
-    MCT "Huh, he might actually have found something worth a damn, assuming it’s legit."
+    RM "She was about as average as average can be. However around her sixteen birthday her breasts started to enlarge to an extreme size around in the 1970's."
+    MCT "Huh, he might actually have found something worth a damn, assuming it's legit."
     show RM smug
     RM "This is a great lead. I need to follow up on it."
     MC "Hey, congrats man..."
@@ -1851,30 +1851,30 @@ label FMGBBW001:
     show RM neutral
     RM "Fine, fine, I guess we earned a rest."
     "With that, we started to walk out, Daichi wanted to make sure we could see anyone come in, so we left the door a crack open."
-    MCT "Wait... is the library open at this time? If not how did he... ah screw it, I’m too tired for this."
+    MCT "Wait... is the library open at this time? If not how did he... ah screw it, I'm too tired for this."
     "However, due to the door already slightly opened, we saw though the crack that there was someone facing away from the door and looking at the stairwell. Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
     show RM angry
     RM "Keep it down, who is that?!"
     MC "How should I know!?"
     RM "Well go check, I made you watch, else what am I paying you for?!"
-    MC "I’m not being paid jack!"
+    MC "I'm not being paid jack!"
     show RM smug
-    RM "Not with that attitude you aren’t. Now go check!"
+    RM "Not with that attitude you aren't. Now go check!"
     MC "Ugh, fine."
     "Reluctantly, I sneaked towards the door, to my surprise..."
     scene Hallway with fade
     show FMG neutral with dissolve
-    MC "It’s Akira Mitzutani, she’s in the hallway near the stairway."
+    MC "It's Akira Mitzutani, she's in the hallway near the stairway."
     hide FMG with dissolve
     show RM angry with dissolve
-    RM "Why is she here?! It’s around 6, and I’ve never seen her awake earlier than five minutes before class starts at the most."
-    MC "How should I know, I wouldn’t be here if- wait... I think I see someone coming down the stairs."
+    RM "Why is she here?! It's around 6, and I've never seen her awake earlier than five minutes before class starts at the most."
+    MC "How should I know, I wouldn't be here if- wait... I think I see someone coming down the stairs."
     RM "Oh god, move over!"
     hide RM with dissolve
     "Daichi moved to the side to get a look for himself. To both of our surprise the person who was coming down the stairs..."
     show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1) with dissolve
     show BBW neutral at Position(xpos=0.75) with dissolve
-    RM "Alice Nikumaru? She’s without the assistance of miss Kodama. That alone raises more red flags."
+    RM "Alice Nikumaru? She's without the assistance of miss Kodama. That alone raises more red flags."
     MC "Be quiet, I think they're about to talk..."
     BBW "Alright Mizutani, what was so important that you had me wake up so early?"
     FMG "Hey Alice, the reason I wanted to talk to you..."
@@ -1882,17 +1882,17 @@ label FMGBBW001:
     FMG "I wanna get to know you better!"
     show BBW surprised
     BBW "Um...sorry?"
-    FMG "I know we don’t really see eye to eye, but I generally want to get along with you."
+    FMG "I know we don't really see eye to eye, but I generally want to get along with you."
     show BBW neutral
     BBW "Well, I appreciate the desire. However, I fail to see much common ground between us."
-    FMG "That’s the thing, you don’t know. I really wanna give this a chance."
+    FMG "That's the thing, you don't know. I really wanna give this a chance."
     show BBW sad
-    BBW "...I’m still not seeing-"
+    BBW "...I'm still not seeing-"
     show FMG neutral
     FMG "Tell you what, do you know Kazomazumi Bakery on Genki street?"
     show BBW neutral
     BBW "I do. Why?"
-    FMG "If you’re willing to get to know each other, I’ll treat you to some cupcakes there."
+    FMG "If you're willing to get to know each other, I'll treat you to some cupcakes there."
     show BBW happy
     BBW "This does sound like it could be beneficial. I accept your invitation."
     show FMG happy
@@ -1912,23 +1912,23 @@ label FMGBBW001:
     "Once both of them were done, they went their own ways."
     MC "Huh, that‘s something."
     show RM neutral with dissolve
-    RM "I’m sure you noticed something wrong with that conversation right?"
+    RM "I'm sure you noticed something wrong with that conversation right?"
     MC "... Kazomazumi Bakery."
     show RM angry
     RM "EXACTLY! Why would those two meet up at that specific bakery, that shares the same name in the article of the first record growth I found on the same day!?"
     MC "... I-it might be a coincidence that they share the same name?"
     show RM neutral
-    RM "... Well, how many Kazomazumi’s do you know?"
+    RM "... Well, how many Kazomazumi's do you know?"
     MC "..."
     MC "Alright fine! It sounds kinda weird."
     show RM angry
-    RM "See! There’s something going on, I think we should go to this meeting spot and witness what might be a breakthrough!"
+    RM "See! There's something going on, I think we should go to this meeting spot and witness what might be a breakthrough!"
     "Normally, I would have thought about this... but it was a too big of a coincidence to pass up."
-    MC "Alright, let’s go."
+    MC "Alright, let's go."
     show RM neutral
     RM "Alright, but first take this."
     "He handed me a baseball hat before putting one on himself."
-    RM "We don’t want those two to catch us spying on them."
+    RM "We don't want those two to catch us spying on them."
     MC "W-Why do you even have these in the first place?"
     RM "You can never be too careful. Now then..."
     show RM smug
@@ -1943,7 +1943,7 @@ label FMGBBW001:
     "...I forgot to mention we were peeking around a telephone pole."
     RM "Do you see an open alley with a good view of the front?"
     MC "...Fair point."
-    RM "All right, we got five minutes before the meeting time, let’s head in!"
+    RM "All right, we got five minutes before the meeting time, let's head in!"
     scene Cafe with fade
     show RM neutral with dissolve
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme. It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; The only person I could see was the counter girl."
@@ -1951,20 +1951,20 @@ label FMGBBW001:
     Cashier "Hi, welcome to Kazomazumi Bakery! What can I get you two?"
     MC "Yeah hi, this is our first time here, what do you recommend?"
     Cashier "Well, today we have a special on pies, or the cupcakes."
-    MC "We’ll have the cherry pie please."
-    Cashier "Sure, give me a second. So I’m guessing you two are students? The outfit gives it away."
-    Cashier "Yeah my mom had a growth thing as well, but I’m not sure if the school was built when she was a teen. Best I know is that it was there when I went there, ten years ago."
-    MCT "Huh, didn’t know the school was that old."
+    MC "We'll have the cherry pie please."
+    Cashier "Sure, give me a second. So I'm guessing you two are students? The outfit gives it away."
+    Cashier "Yeah my mom had a growth thing as well, but I'm not sure if the school was built when she was a teen. Best I know is that it was there when I went there, ten years ago."
+    MCT "Huh, didn't know the school was that old."
     Cashier "Anyways, here you guys go."
     "We paid the cashier in advance before we leave, we tooked the pie, thanked her, and planned our next move."
     MC "So where should we sit?"
     RM "Hmm, we cannot risk them walking past us, that will give away our position."
-    RM "We’ll sit at the edge of the counter on the stools.The lights are dim enough so at a distance they can’t tell us apart from any other students, plus it’s in the middle of the building."
+    RM "We'll sit at the edge of the counter on the stools.The lights are dim enough so at a distance they can't tell us apart from any other students, plus it's in the middle of the building."
     "Once we finished talking about it, we took our seats on the middle stools and waited for the girls to come. I tucked my hair into my collar so as to not give myself away, though I left my bangs out to hide my face."
     MC "Hey, maybe you can ask the owners about this place?"
     show RM angry
-    RM "Are you nuts!? I'm not going to show my hand right away! I’ll keep coming as a regular, and calmly ask one or two questions, at the most, by the third visit."
-    MC "Well, I’m just saying it wouldn’t hu-"
+    RM "Are you nuts!? I'm not going to show my hand right away! I'll keep coming as a regular, and calmly ask one or two questions, at the most, by the third visit."
+    MC "Well, I'm just saying it wouldn't hu-"
     #*Door chime*
     RM "Zip it."
     hide RM with dissolve
@@ -1972,16 +1972,16 @@ label FMGBBW001:
     show BBW neutral at Position(xpos=0.75) with dissolve
     "Both Akira and Alice entered the building. They were a few feet away from us but enough to not recognize us."
     Cashier "Oh hi, is it just you two?"
-    FMG "Yes ma’am, just me and my friend."
+    FMG "Yes ma'am, just me and my friend."
     Cashier "Well, what would you two students like?"
-    FMG "Let’s see, we’ll have a box of cupcakes, please."
+    FMG "Let's see, we'll have a box of cupcakes, please."
     BBW "I'll have coffee. Cream and sugar."
     FMG "Yeah, me too."
     BBW "Oh? You take your coffee sweet as well?"
-    FMG "Sure, so long as it’s not that water downed sludge the school cafeteria serves that is."
+    FMG "Sure, so long as it's not that water downed sludge the school cafeteria serves that is."
     show BBW happy
     BBW "I couldn't have said it better. Is it too much to ask for a nice cup of coffee to start the day off? With the budget the school has, you would think they could put some aside for an espresso machine."
-    FMG "Wouldn’t be surprised, their chefs aren’t exactly winning any awards for niceness."
+    FMG "Wouldn't be surprised, their chefs aren't exactly winning any awards for niceness."
     BBW "That is the truth. It's nice to meet someone who gets it, Mizutani-san."
     FMG "Yeah, but you can just call me Akira, no need for formalities."
     show BBW neutral
@@ -1990,18 +1990,18 @@ label FMGBBW001:
     BBW "All right Akira, how are we doing this?"
     FMG "I ask a question, and you ask a question."
     BBW "Seems almost like a game. Very well. You brought me here, you may begin."
-    FMG "First, what’s your last name?"
+    FMG "First, what's your last name?"
     BBW "Nikumaru. For my question: how long have you not remembered my last name?"
-    FMG "Um... since the beginning of school. I’m sorry it’s just for the life of me I couldn’t remember your last name."
+    FMG "Um... since the beginning of school. I'm sorry it's just for the life of me I couldn't remember your last name."
     BBW "It's fine. I prefer going by my first name anyway."
     FMG "Right, my next question is, have you ever gone to America?"
     BBW "Yes. My mother is from there and I did most of my schooling there."
-    FMG "That’s cool!"
+    FMG "That's cool!"
     BBW "Indeed. Where do you see yourself in five years?"
     FMG "I dunno."
     show BBW surprised
     BBW "..."
-    BBW "T-that’s it? You don’t know?"
+    BBW "T-that's it? You don't know?"
     FMG "Well, how can any of us expect how the future will turn out? I like, think about the future as much as the next girl, but you gotta put in some room for the unknown."
     show BBW neutral
     BBW "I can understand that rationale, but leaving so much to chance..."
@@ -2021,18 +2021,18 @@ label FMGBBW001:
     BBW "Now, why did you pick cupcakes?"
     "Akira put downed the cupcake she was eating and looked down at it before answering."
     FMG "Whenever I was really down, my mom would always bake cupcakes. She would always do it all by hand, and it made it that much more tasty."
-    FMG "Even now, I always go eat a cupcake when I’m sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweet."
+    FMG "Even now, I always go eat a cupcake when I'm sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweet."
     BBW "I had you pegged as the brash tomboy who didn't have a care."
     BBW "What do you have to be sad about, if it is not too personal?"
-    FMG "Sorry, I couldn’t tell you, besides it’s my turn."
+    FMG "Sorry, I couldn't tell you, besides it's my turn."
     FMG "Why did you agree to come join me?"
     show BBW sad
     BBW "I came to see..."
     show BBW happy
     extend " If you were a fellow connoisseur of cupcakes."
-    "It seemed like she wanted to say something else at first, but Akira didn’t seem to notice."
+    "It seemed like she wanted to say something else at first, but Akira didn't seem to notice."
     FMG "Heh, yeah I am."
-    FMG "Oh, it’s almost 12:30, we should probably get going."
+    FMG "Oh, it's almost 12:30, we should probably get going."
     show BBW neutral
     BBW "You go on ahead. I'll handle the check."
     show FMG surprised
@@ -2050,14 +2050,14 @@ label FMGBBW001:
     "After talking to herself, she paid the bill and left."
     hide BBW with dissolve
     show RM angry at center with dissolve
-    RM "Wait... that’s it? We been here for 20 minutes listening to girl talk, and they didn’t say a single thing about the article, let alone this stupid bakery!?"
+    RM "Wait... that's it? We been here for 20 minutes listening to girl talk, and they didn't say a single thing about the article, let alone this stupid bakery!?"
     MC "Huh, maybe it really was just a coincidence."
     show RM sad
     RM "B-but the timing was too perfect! How could-"
     UNKNOWN "Excuse me, but are you students at that academy?"
-    MC "Um yes ma’am, we-"
+    MC "Um yes ma'am, we-"
     MCT "HOLY MILK JUGS!"
-    "She looked like she was in her 30s, but her aura felt like she was much older. Chestnut hair formed in a bun, dark brown eyes, very voluptuous with a bit of a belly, and her boobs... if I had to guess a bra size, I’d say a big triple M at LEAST!"
+    "She looked like she was in her 30s, but her aura felt like she was much older. Chestnut hair formed in a bun, dark brown eyes, very voluptuous with a bit of a belly, and her boobs... if I had to guess a bra size, I'd say a big triple M at LEAST!"
     "She was dressed about the same as the cashier, but her name tag read Chie."
     Cashier "Mom! Quit bugging the customers!"
     Chie "Oh hush dear, I just wanted to see how fellow growers were handling things."
@@ -2072,22 +2072,22 @@ label FMGBBW001:
         ease 0.5 xpos 0.3
     "Upon hearing me speak, he spun around as if to try and stop me, unfortunately for him he was cut off by Chie."
     Chie "Well, I am the first person to actually be recognized as having tested positive for a growth factor..."
-    Chie "...But I’m sure there were others that had growth factors long before I came around. Sorry, but I can't really tell you how it started."
+    Chie "...But I'm sure there were others that had growth factors long before I came around. Sorry, but I can't really tell you how it started."
     show RM sad
     Chie "The school wasn't even finished when I got here, the only place that was totally furnished was some of the giant dorms."
-    "... If I had to describe Daichi’s reaction... it would be pure despair."
-    Chie "But hey, it’s not like everyone knows about that! Thanks for asking."
-    MC "Well, thanks for the pie, we’ll be sure to come back."
-    Chie "Thanks for coming! You’ll always be welcome here!"
+    "... If I had to describe Daichi's reaction... it would be pure despair."
+    Chie "But hey, it's not like everyone knows about that! Thanks for asking."
+    MC "Well, thanks for the pie, we'll be sure to come back."
+    Chie "Thanks for coming! You'll always be welcome here!"
     "She gave me a wink before going to the back, her daughter looking like a mix between embarrassed and annoyed for the most part."
-    Cashier "Thanks for coming, and I’m sorry about my mom... please come again!"
+    Cashier "Thanks for coming, and I'm sorry about my mom... please come again!"
     scene Town with fade
     show RM neutral with dissolve
-    "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he’s trying to take things in stride."
-    RM "Well, I am disappointed this wasn’t the big break I’ve been searching for, but it gives me an idea of how far this may actually go. Not to mention that last comment she made, about the giant dorms..."
+    "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he's trying to take things in stride."
+    RM "Well, I am disappointed this wasn't the big break I've been searching for, but it gives me an idea of how far this may actually go. Not to mention that last comment she made, about the giant dorms..."
     show RM happy
     RM "Plus, I got some pretty great pie out of it."
-    MC "Yeah, I’ll see you later."
+    MC "Yeah, I'll see you later."
     hide RM happy with dissolve
     MCT "Well, this was an interesting day..."
     "..."

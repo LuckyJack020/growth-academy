@@ -677,43 +677,43 @@ label GTS009:
     show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     GTS "... Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
     show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-    BE "Heh, nah, I’m good. They just really aren’t my thing. Plus, with these girls, it’s more of a hassle than you’d think."
-    GTS "Well, if you’re certain. Though I’d gladly help you get dressed, if you’re concerned about your bust getting in the way..."
-    BE "Well, I appreciate the help, Yamazaki-san, but it’s okay. I’m good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
+    BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
+    GTS "Well, if you're certain. Though I'd gladly help you get dressed, if you're concerned about your bust getting in the way..."
+    BE "Well, I appreciate the help, Yamazaki-san, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
     "I was immediately spotted as I rounded the corner and saw the girls in a more casual attire than I was use to."
     BE "Yo! Kei-chan!"
     "She waved as she called out to me. Though my eyes immediately widened as Honoka ran over, her bountiful busty bounding towards me before she came to my side and tossed an arm around my shoulders."
     show BE happy
     BE "How's it going?"
     MC "Hey you two! Wow, Yamazaki-san, you look great."
-    "Upon seeing them, I cracked a small smile, as at least in Naomi’s case, this had been the first time I'd seen them out of uniform."
+    "Upon seeing them, I cracked a small smile, as at least in Naomi's case, this had been the first time I'd seen them out of uniform."
     show GTS happy
     GTS "Thank you."
     BE "Hey! What about me?"
     MC "Heh, you look great too, Honoka."
-    BE "Thanks! Well, now that you’re finally here, let's go explore!"
-    "We embarked on our adventure to learn more about the town, but didn't get too far as Honoka's went wide eyed whenever any tasty sweet was shown to her from a vendor. She’d look back at me like a begging puppy, asking for money, which seemed to always win me over. Well… at least the first 5 times."
-    MC "Honoka, I can’t keep buying you things… I’m going to run out of money."
+    BE "Thanks! Well, now that you're finally here, let's go explore!"
+    "We embarked on our adventure to learn more about the town, but didn't get too far as Honoka's went wide eyed whenever any tasty sweet was shown to her from a vendor. She'd look back at me like a begging puppy, asking for money, which seemed to always win me over. Well... at least the first 5 times."
+    MC "Honoka, I can't keep buying you things... I'm going to run out of money."
     show BE sad
-    BE "But Kei-chan! It’s shaved ice! What afternoon with friends be complete without some?"
+    BE "But Kei-chan! It's shaved ice! What afternoon with friends be complete without some?"
     show GTS neutral
-    GTS "It’s okay Hotsure-san, I can pay for this one. To be honest, I was hoping to get some myself. Which flavor would you like, Inoue-san?"
+    GTS "It's okay Hotsure-san, I can pay for this one. To be honest, I was hoping to get some myself. Which flavor would you like, Inoue-san?"
     show BE happy
-    BE "Really? Thanks! Umm… hmmm… let’s go with some watermelon and blue raspberry!"
+    BE "Really? Thanks! Umm... hmmm... let's go with some watermelon and blue raspberry!"
     GTS "Very well. Hotsure-san, would you like some?"
-    MC "Sure, if you’re okay with the expense."
-    GTS "Oh, it’s truly no bother, Hotsure-san. Which favor would you prefer?"
-    MC "I think I’ll go for some mandarin."
+    MC "Sure, if you're okay with the expense."
+    GTS "Oh, it's truly no bother, Hotsure-san. Which favor would you prefer?"
+    MC "I think I'll go for some mandarin."
     show BE angry
     BE "Booooooring. Come on, try something exciting, or mix them up."
-    GTS "It’s quite alright if you just want mandarin, Hotsure-san. I’m sure Inoue-san is merely teasing."
-    GTS "As for myself, I think I’ll have strawberry."
+    GTS "It's quite alright if you just want mandarin, Hotsure-san. I'm sure Inoue-san is merely teasing."
+    GTS "As for myself, I think I'll have strawberry."
     "She placed the order and then compensated the vendor before she gently handed the shaved ice to each of us."
     show BE happy
     BE "Thanks, Yamazaki-san!"
     MC "Yeah, thank you."
     GTS "You're very welcome. Please enjoy, oh and try not to eat too fast. Don't want to brain freeze after all."
-    "Our pace through town slowed considerably at that point as we enjoyed our treats. Thankfully, it was enough to distract Honoka from asking for other things until we eventually came upon a store that seemed to catch Naomi’s eye."
+    "Our pace through town slowed considerably at that point as we enjoyed our treats. Thankfully, it was enough to distract Honoka from asking for other things until we eventually came upon a store that seemed to catch Naomi's eye."
     GTS "Hm?"
     MC "Huh? Something up Yamazaki-san?"
     show GTS embarrassed
@@ -727,15 +727,15 @@ label GTS009:
     "She smiled and tried finishing the last bit of her shaved ice quickly. Her smile quickly melting as her brain froze over and she did a little dance as she rubbed her head."
     show BE sad
     BE "Ahhhh! Brain freeeeeeze!"
-    MC "Yamazaki-San warned you…"
+    MC "Yamazaki-San warned you..."
     MC "But yeah Honoka is right, exploring was the whole point for the trip so let's check it out."
-    GTS "If it's truly alright…"
+    GTS "If it's truly alright..."
     
     scene Store with fade
     "Entering the store I had to admit I was surprised that it seemed to mostly be just an assortment of knickknacks."
     show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-    MC "Was there… anything particular that caught your eye Yamazaki-san?"
+    MC "Was there... anything particular that caught your eye Yamazaki-san?"
     GTS "No, I just wanted to look around. My mother has a tendency to give me some random items like these whenever she goes away on a trip."
     show BE neutral
     BE "Ooooooh, I get it. You're homesick."
@@ -748,7 +748,7 @@ label GTS009:
     "We explored the store out our own leisure, Naomi seeming distracted with some postcards while Honoka was examining small trinkets."
     "As for myself, I was mostly just examining some accessories when one really caught my interest. It was a headband that had a fake flower on one side of it. But its color was what made it so alluring. It was a baby blue flower with a golden ring in the middle. My first thought was Naomi possibly liking it."
     "However I then looked a bit further down and noticed an assortment of pins. I recalled Honoka having a thing for these when we were younger. She was always so loud with the giggling of all the pins on her bag. Getting a small chuckle from the memory, I pulled out my wallet and sighed."
-    MC "Damn it Honoka… did you really need to bug me for all those treats?"
+    MC "Damn it Honoka... did you really need to bug me for all those treats?"
     "I only had enough money left to get one of the items as I looked back down the aisles as the girls were still examining things."
     menu:
         "Buy a pin for Honoka": #+5 Affection Honoka
@@ -774,7 +774,7 @@ label GTS009_c1_1:
     show BE angry
     BE "No I want it!"
     show BE surprised
-    BE "I just didn't think you'd remember something like that…"
+    BE "I just didn't think you'd remember something like that..."
     $setAffection("BE", 5)
     show BE happy
     BE "Thanks Kei-chan."
@@ -799,7 +799,7 @@ label GTS009_c1_2:
     "Naomi placed a hand over her mouth as she let out a faint gasp upon seeing the headband."
     show GTS embarrassed
     GTS "Oh my."
-    MC "I don't know why but I just thought of you when I saw it. I'm not really sure what type of flower that is, but I thought it was pretty. So… here you go."
+    MC "I don't know why but I just thought of you when I saw it. I'm not really sure what type of flower that is, but I thought it was pretty. So... here you go."
     show GTS happy
     $setAffection("GTS", 5)
     GTS "Ara ara. Thank you very much Hotsure-san. Remind me later and I'll be more than happy to tell you what flower this is."
@@ -828,7 +828,7 @@ label GTS009_c1_3:
     BE "Oh? Secret second honeymoons?"
     "Naomi and I both jumped as Honoka suddenly peeked around the corner of the aisle at us."
     show GTS embarrassed
-    GTS "I… uh wouldn't know if that was the case."
+    GTS "I... uh wouldn't know if that was the case."
     show BE happy
     BE "I'd love to travel too. Be cool seeing a lot of new places and experiencing other cultures."
     show GTS happy
@@ -840,7 +840,7 @@ label GTS009_c1_3:
     BE "Oh hush! Traveling is all about enjoying life to the max. Money expenses be damned!"
     MC "Hence why I'm so hesitant to travel even off the island with you."
     show BE sad
-    BE "So cruel…"
+    BE "So cruel..."
     show BE neutral
     BE "Oh well. Hopefully Yamazaki-san is right and we get that chance."
     GTS "I'm positive you will."
@@ -850,7 +850,7 @@ label GTS009_c1_3:
     "She bounced out of the shop as Naomi giggled and followed, leaving me shaking my head as I followed the two."
     "I later felt grateful that I hadn't spend my money as in another store Honoka's bust knocked over a display and I offered to buy an item that had broke. Naomi had offered to help to, but I didn't want her spending more than she already had that day."
     "Still, we shared a laugh over it by the end of the day. Honoka being annoyed with my suggestion of wearing a, CAUTION: WIDE TURNS, sign on her shirt. Either way it had been a good day and we even discussed possibly doing it again sometime."
-    "I know I'd be more than willing to spend another day like that. Though next time I'll make sure I have a lot more money on me…"
+    "I know I'd be more than willing to spend another day like that. Though next time I'll make sure I have a lot more money on me..."
     jump daymenu
     
 label GTS010:
@@ -2060,7 +2060,7 @@ label GTS025:
     #(Will write a no response later)
     MC "Uh... y-yes, it um... would be okay..."
     "I felt like an idiot for being unable to just say what I wanted to say. I saw her close her eyes as she leaned into me. My eyes noticing her hands clenching and slightly shaking, and she flinched once I actually moved."
-    "There was a moment of pause however, as Naomi’s nose bumped my forehead, causing me to smirk as in our anxiety we failed to make the necessary height adjustment."
+    "There was a moment of pause however, as Naomi's nose bumped my forehead, causing me to smirk as in our anxiety we failed to make the necessary height adjustment."
     GTS "S-sorry..."
     MC "It's okay."
     "Reaching up, I placed my hand on her cheek as I guided her until our lips met. She was soft and warm, tender and timid as she tried not to press against me, but also feared pulling away."
@@ -2080,54 +2080,54 @@ label GTS028T:
     GTS "I like the artwork used in some of these posters."
     MC "Yeah, I like it when the poster is more than just a character standing in the center with the title on them. "
     show GTS surprised
-    GTS "Oh, this one reminds me of those ancient paintings you’d see in a museum."
+    GTS "Oh, this one reminds me of those ancient paintings you'd see in a museum."
     show Ryoko happy at Position(xpos=0.4, xanchor=0.5, yanchor=1.0) with dissolve
-    Ryoko "That’s Koichi: A battle of love and honor. It’s a period piece. Also hey you two!"
+    Ryoko "That's Koichi: A battle of love and honor. It's a period piece. Also hey you two!"
     show Minori neutral at center with dissolve
-    Minori "Good afternoon. I hope we didn’t keep you two waiting long."
+    Minori "Good afternoon. I hope we didn't keep you two waiting long."
     "Naomi gave a small bow in greetings as Ryoko and Minori waved."
     MC "Not at all, we got here only a couple of minutes ago."
     show Ryoko neutral
-    Ryoko "Great! I wasn’t sure what you’d all like to watch so I picked a time that I knew would have a couple of movies starting in a relatively soonish time. So we could discuss what we want to see."
-    MC "But what if we can’t agree on any of the choices?"
-    Ryoko "Well... then I didn’t plan this out properly heh."
-    Minori "As ill planned as that was, I’m sure we’ll agree on one of the choices we have to choose from."
+    Ryoko "Great! I wasn't sure what you'd all like to watch so I picked a time that I knew would have a couple of movies starting in a relatively soonish time. So we could discuss what we want to see."
+    MC "But what if we can't agree on any of the choices?"
+    Ryoko "Well... then I didn't plan this out properly heh."
+    Minori "As ill planned as that was, I'm sure we'll agree on one of the choices we have to choose from."
     MC "Alright, we do we have then?"
-    Ryoko "We have The Last Call, a horror movie about patrons in a bar learning they’re stuck in a bar with ghosts. There’s Koichi, which is a period piece of a man fighting for his stolen love after being dishonored by the murder of his master. And then there’s My Lover, My Sister!? A comedy which is about a guy who learns that the lady he’s been dating is actually his sister in law."
+    Ryoko "We have The Last Call, a horror movie about patrons in a bar learning they're stuck in a bar with ghosts. There's Koichi, which is a period piece of a man fighting for his stolen love after being dishonored by the murder of his master. And then there's My Lover, My Sister!? A comedy which is about a guy who learns that the lady he's been dating is actually his sister in law."
     show GTS embarrassed
-    GTS "I’m... not sure how I feel about those other two..."
+    GTS "I'm... not sure how I feel about those other two..."
     Ryoko "So those are our choices people, which would you like to see?"
     Minori "Hm, I could go for a fun comedy."
-    GTS "I’m rather curious about Koichi."
-    Ryoko "And I’ve been meaning to watch The Last Call. Well Hotsure-san, what’s it gonna be?"
+    GTS "I'm rather curious about Koichi."
+    Ryoko "And I've been meaning to watch The Last Call. Well Hotsure-san, what's it gonna be?"
     MC "Great... Um..."
     menu:
-        "I think a comedy is a safe choice since we don’t know how the others will be.": # -1 Affection
+        "I think a comedy is a safe choice since we don't know how the others will be.": # -1 Affection
             jump GTS028T_c1_1
-        "Koichi sounds like it can be pretty cool. I haven’t watched many ronin movies.": # +1 Affection
+        "Koichi sounds like it can be pretty cool. I haven't watched many ronin movies.": # +1 Affection
             jump GTS028T_c1_2
-        "I’m not gonna lie, I’m interested to see how drunk people deal with a ghost.": # -2 Affection
+        "I'm not gonna lie, I'm interested to see how drunk people deal with a ghost.": # -2 Affection
             jump GTS028T_c1_3
 
 label GTS028T_c1_1:
     $setFlag("GTS028T_c1_1")
-    MC "I think a comedy is a safe choice since we don’t know how the others will be."
+    MC "I think a comedy is a safe choice since we don't know how the others will be."
     show Ryoko happy
-    Ryoko "It’s like my teacher always said, 'If you don’t know what to watch, go with the jokes.'"
+    Ryoko "It's like my teacher always said, 'If you don't know what to watch, go with the jokes.'"
     $setAffection("GTS", -1)
     show GTS sad
-    GTS "I hope it’s not too vulgar..."
-    Minori "Don’t worry Yamazaki-san, I wouldn’t pick something if I thought it’d bother anyone too much."
+    GTS "I hope it's not too vulgar..."
+    Minori "Don't worry Yamazaki-san, I wouldn't pick something if I thought it'd bother anyone too much."
     jump GTS028T_c1_after
 
 label GTS028T_c1_2:
     $setFlag("GTS028T_c1_2")
-    MC "Koichi sounds like it can be pretty cool. I haven’t watched many ronin movies."
-    Ryoko "It’s pretty great, I’m sure you’ll enjoy it."
-    GTS "You’ve already seen it Tanaka-san?"
+    MC "Koichi sounds like it can be pretty cool. I haven't watched many ronin movies."
+    Ryoko "It's pretty great, I'm sure you'll enjoy it."
+    GTS "You've already seen it Tanaka-san?"
     show Ryoko happy
-    Ryoko "Of course! But don’t worry I won’t spoil anything."
-    Minori "It’s not uncommon for Tanaka-san to see a movie multiple times at the theater."
+    Ryoko "Of course! But don't worry I won't spoil anything."
+    Minori "It's not uncommon for Tanaka-san to see a movie multiple times at the theater."
     Ryoko "Nope! Sometimes the second viewing is when you really get the whole story."
     GTS "Is that so?"
     Ryoko "Totally! Give it a shot some time. You may find you like a movie even more when you give it another watch."
@@ -2135,27 +2135,27 @@ label GTS028T_c1_2:
 
 label GTS028T_c1_3:
     $setFlag("GTS028T_c1_3")
-    MC "I’m not gonna lie, I’m interested to see how drunk people deal with a ghost."
+    MC "I'm not gonna lie, I'm interested to see how drunk people deal with a ghost."
     show Ryoko happy
-    Ryoko "It’s sure to be pretty funny I think."
+    Ryoko "It's sure to be pretty funny I think."
     show GTS sad
     GTS "..."
-    Minori "What’s the matter Yamazaki-san?"
+    Minori "What's the matter Yamazaki-san?"
     GTS "N-nothing..."
     Minori "Are you worried it might be too scary?"
     GTS "..."
-    MC "Yamazaki-san, if you don’t want to see it we can pick something else."
+    MC "Yamazaki-san, if you don't want to see it we can pick something else."
     $setAffection("GTS", -2)
-    GTS "N-no... it’s okay. I’ll be okay..."
+    GTS "N-no... it's okay. I'll be okay..."
     MC "If you say so..."
     show Ryoko neutral
-    Ryoko "Don’t worry Yamazaki-san, it won’t be too bad. I promise."
+    Ryoko "Don't worry Yamazaki-san, it won't be too bad. I promise."
     jump GTS028T_c1_after
 
 label GTS028T_c1_after:
     show Ryoko neutral
     Ryoko "Come on, let's go get the tickets."
-    "Ryoko lead us to the box office where she ordered the appropriate tickets but we still had a little time to kill. We moved over to a small seating area where Naomi took a seat, which I couldn’t help notice bought her at equal height to the rest of us."
+    "Ryoko lead us to the box office where she ordered the appropriate tickets but we still had a little time to kill. We moved over to a small seating area where Naomi took a seat, which I couldn't help notice bought her at equal height to the rest of us."
     MC "Did you go to the movies often when you were younger?"
     show GTS neutral
     GTS "No, not really. We saw maybe two or three films a year."
@@ -2185,7 +2185,7 @@ label GTS028T_c1_after:
     MC "Huh? Why?"
     GTS "That was incredibly rude of me. I wasn't attempting to demote the merits of films over plays. I hope I didn't offend you Tanaka-san and Tomoe-san. Apologies."
     show Ryoko happy
-    Ryoko "Haha, no offense taken. It’s just your opinion Yamazaki-san. No harm in sharing it."
+    Ryoko "Haha, no offense taken. It's just your opinion Yamazaki-san. No harm in sharing it."
     show Minori happy
     Minori "Indeed, and I would agree with your point. Stage actors truly go through the gauntlet for every single one of their performances. That's no small task."
     Ryoko "Yeah, don't sweat it Yamazaki-san. Oh! We forgot the snacks! Don't wait up for us, go get some seats!"
@@ -2204,17 +2204,17 @@ label GTS028T_c1_after:
     show GTS neutral
     GTS "Yes they're perfectly fine Hotsure-san. Thank you."
     "We sat there for a few moments as I began to wonder where Ryoko and Minori were until I finally spotted them entering theater. I waved to catch their attention but their response caught me off guard."
-    "Ryoko merely winked at me while Minori’s smile widened. The two taking their snacks and wandering to a different section of the room. Leaving me and Naomi alone."
+    "Ryoko merely winked at me while Minori's smile widened. The two taking their snacks and wandering to a different section of the room. Leaving me and Naomi alone."
     scene black with fade
     if getFlag("GTS028T_c1_1"):
         "The movie started out rather surprisingly as a sex scene was the first scene to greet us. I felt Naomi tense up as it might have been a little much for her. Still, once the scene pass and the movie continued she ended up relaxing and laughing quite a few times. I felt her hand move a couple of times as it seemed she was trying to muffle her laughing to not be rude. However one time when her hand settled back down, it laid on top of mine."
-        "Blushing lightly, I wasn’t sure if I should mention it as her hand completely covered mine. Once I noticed her softly squeeze it, I finally looked up towards her and saw her smiling which in turn made my lips smile. She laughed more openly as the film progressed and so did I, as I moved my hand so it could hold hers."
+        "Blushing lightly, I wasn't sure if I should mention it as her hand completely covered mine. Once I noticed her softly squeeze it, I finally looked up towards her and saw her smiling which in turn made my lips smile. She laughed more openly as the film progressed and so did I, as I moved my hand so it could hold hers."
     elif getFlag("GTS028T_c1_2"):
-        "The movie opened on a long lingering shot of a quiet field of flowers. Their colors muted as the sky itself was gray. The drama that would soon play out captivated us, as I could see Naomi lean closer to as got lost in the film. She’d gasp when the action picked up, awe at set pieces, and when the ronin found his love she’d clutch my hand softly."
+        "The movie opened on a long lingering shot of a quiet field of flowers. Their colors muted as the sky itself was gray. The drama that would soon play out captivated us, as I could see Naomi lean closer to as got lost in the film. She'd gasp when the action picked up, awe at set pieces, and when the ronin found his love she'd clutch my hand softly."
         "I was caught by surprise when she did that, looking up at her as she looked back down at me and smiled. My cheeks grew a little warm though, as while we looked at each other the ronin spoke all his loving feelings. Sensing my nervousness, she ended up blushing as well and looked away, though her smile remained as did her hand for the remainder of the film."
     else:
         "The movie began innocently enough, a brief scene to establish all the characters and their reasons for drinking that night. There was minor tension and suspense the entire time though, yet nothing really happened for quite some time. This seem to leave Naomi feeling a little more comfortable as it seemed it might not be too bad. But then just like that, the first major scare happened and Naomi let out a startled yelp."
-        "The noise resulting in some others in the audience to snicker and laugh which resulted in her embarrassment. Her body remained tense the rest of the film as my chair shook a little from her shaking. She was leaning back, as if providing distance would result in protection. Frowning, I gently placed my hand on her which made her flinch but then look down to see me. I squeezed her hand to let her know I was there. And she squeezed back and held my hand for the rest of the movie, squeezing it whenever she was startled. Granted... maybe that wasn’t the best thing as I learned that with her added height, Naomi was stronger than normal too..."
+        "The noise resulting in some others in the audience to snicker and laugh which resulted in her embarrassment. Her body remained tense the rest of the film as my chair shook a little from her shaking. She was leaning back, as if providing distance would result in protection. Frowning, I gently placed my hand on her which made her flinch but then look down to see me. I squeezed her hand to let her know I was there. And she squeezed back and held my hand for the rest of the movie, squeezing it whenever she was startled. Granted... maybe that wasn't the best thing as I learned that with her added height, Naomi was stronger than normal too..."
     jump daymenu
 
 label GTS030:
