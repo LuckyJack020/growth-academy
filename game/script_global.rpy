@@ -216,7 +216,7 @@ label global000:
     BE "I-I thought, but I...Oh my god, it's been years!"
     MCT "There's that boyish grin I remember."
     "Inoue Honoka. My old childhood friend. The two of us were thick as thieves back in the day. When we weren't terrorizing Shibuya, we were spending our days chilling out in the countryside."
-    "Until one day, she was just gone. Moved over to an all girls school in a different part of the country. We never saw each other again." 
+    "Until one day, she was just gone. Moved over to an all girls' school in a different part of the country. We never saw each other again." 
     show BE neutral
     BE "You dork! Why didn't you say anything the first time...."
     MC "What would be the chances?!."
@@ -258,7 +258,7 @@ label global000:
     BE "Oh! Is Tomo-chan here too?"
     
     "Tomo{i}-chan{/i}. Hotsure Tomoko. My little sister."
-    MC"Yeah, she's good, she's good. Finally got her to come out of her room."
+    MC "Yeah, she's good, she's good. Finally got her to come out of her room."
     BE "Really? What, did you finally manage to afford that crowbar?"
     MC "Nah, doughnut on a stick. Works every time."
     BE "Ehehe~"
@@ -507,7 +507,7 @@ label global000_AE_c3:
     $ setAffection("AE", 1)
     show AE neutral
     AE "Thank you for waiting. Was there something you needed?"
-    MC "Oh, y-yeah…no worries. I just got here,and we were looking around is all."
+    MC "Oh, y-yeah…no worries. I just got here, and we were looking around is all."
     AE "I see."
     "Frigid was the closest word I could use to describe this girl. Her admittedly comedic backside completely betrayed her cold, piercing eyes."
     AE "I am Shiori Matsumoto. I will be your sitting Student Council President during your stay here."
@@ -593,7 +593,7 @@ label global000_BBW_c2:
     show BBW happy
     BBW "I'm su{w}per{w}vi{w}sing!"
     show BE unique at center with dissolve
-    BE "Superivsing? There's only two of you..."
+    BE "Supervising? There's only two of you..."
     show BBW haughty
     BBW "I did the work of figuring out an optimal floor plan for furniture and composition of decorations. That was my half I did earlier. Now Kodama-san is doing her half."
     PRG "It's okay...{w}I don't need any help."
@@ -893,7 +893,7 @@ label global000_sit_c2_2:
     show BE happy
     BE "Yeah! We'll do all we can to make sure you have at least one fun school!"
     show GTS happy
-    GTS "...Thank you, both of you. Now, we musn't be speaking once the principal starts..."
+    GTS "...Thank you, both of you. Now, we mustn't be speaking once the principal starts..."
     $ setAffection("GTS", 1)
     jump global000_sit_after
 
@@ -904,7 +904,7 @@ label global000_sit_c3_1:
     show FMG neutral
     FMG "Oh hey, it's, uh, Hotsure, right?"
     MC "Yep! So, ah, not interested in the speech?"
-    FMG "Eh, whatever, I don't mind. Just like the back because I hate being squeezed between people. Gets a litle claustrophobic."
+    FMG "Eh, whatever, I don't mind. Just like the back because I hate being squeezed between people. Gets a little claustrophobic."
     MC "Yeah, and like, on the trains..."
     show FMG happy
     FMG "Oh I know, those are even worse! Especially for a tall girl..."
@@ -984,7 +984,7 @@ label global000_aftersit_c2:
     show AE neutral
     AE "I've accounted for every student that came through this door. He wasn't one of them?"
     MC "He said he was going to walk around campus a bit this morning, get a feel for the place. Maybe he came in some different door?"
-    "Shori looked back into the mostly-empty auditorium, eyes scanning the walls."
+    "Shiori looked back into the mostly-empty auditorium, eyes scanning the walls."
     AE "Unlikely... But possible. Please, keep an eye on your roommate. I'll have to have a word with him when I can..."
     hide AE with dissolve
     "She nodded and left her post, satisfied with the answer, and we both walked to homeroom."
