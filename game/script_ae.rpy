@@ -6556,7 +6556,7 @@ label AE032:
     show AE neutral
     AE "It's dangerous to assume that someone will do their share at all, let alone do it correctly. It's downright foolish to assume someone would WANT to do their share."
     MC "You don't really seem to have faith in your classmates..."
-    show AE unique
+    show AE glasses
     "She pushed up her glasses, and spoke plainly as the light bounced from one side of her frames to the other."
     AE "I don't mean it to come off that way at all. I have complete faith in my classmates. I just want to be realistic. If I don't check and make sure everything is held up to the proper standards, then who will?"
     MC "By proper standards do you mean... well, your standards?"

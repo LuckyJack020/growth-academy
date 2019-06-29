@@ -277,7 +277,7 @@ label global000_cbreak_1:
     $setSkill("Athletics", 3)
     show BE surprised
     BE "Whoa, really?  Kei{i}-chan{/i} the beach bum?"
-    show BE Happy
+    show BE happy
     BE "I'd never figured you the type. Are you a hunk now? Can I squeeze your bicep?"
     MC "Oh, hush."
     jump global000_cbreak_after
@@ -353,7 +353,7 @@ label global000_GTS:
     BE "Are you okay?"
     UNKNOWN "Eeep!"
     "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
-    UNKNOWN "Yes, sorry. I just fell. Thep lanters are just rather large." 
+    UNKNOWN "Yes, sorry. I just fell. The planters are just rather large." 
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."
     "Aside from the divot where she fell, the center row of vegetables did indeed look less well-watered than the ones closest to the edge."
@@ -412,9 +412,9 @@ label global000_AE:
     UNKNOWN "YOU..."
     
     "With only a single word, Honoka and I stopped in place as a deep paralyzing chill ran down my spine.."
-    "When we caught our bearings{w} (And Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn’t see her face, my jaw nearly dropped when I got a look at her behind.."
+    "When we caught our bearings{w} (And Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind.."
     scene Gate Front with dissolve
-    UNKNOWN "Mizutani-san, what do you think you’re doing?"
+    UNKNOWN "Mizutani-san, what do you think you're doing?"
     play music FMG
     show AE angry at Position(xpos=0.75, xanchor=0.5) with vpunch
     FMG "Check it out!"
@@ -460,10 +460,10 @@ label global000_AE_c1:
     AE "I can only assume you two are Honoka Inoue and Keisuke Hotsure?"
     MC "Huh? How did you-"
     AE "Your appearance fits your files.."
-    MC "Oh, well, um...yeah, we’re in room 3-B?"
+    MC "Oh, well, um...yeah, we're in room 3-B?"
     AE "Then listen well. Go to room 3-B and make sure Kodama and Nikumaru have the first-day decorations put up properly."
     show AE angry
-    AE "Nikumaru fancies herself a negotiator. I don’t have faith in her abilities to work well with others."
+    AE "Nikumaru fancies herself a negotiator. I don't have faith in her abilities to work well with others."
     MC "Er, okay, sure."
     hide AE with dissolve
     show BE surprised
@@ -478,7 +478,7 @@ label global000_AE_c2:
     show FMG angry
     FMG "My WHAT? Matsumoto's not the boss of anyone, despite what she'll tell you."
     show AE neutral
-    AE "I’ve told no-one anything of the sort, you offered to lift and I obliged-"
+    AE "I've told no-one anything of the sort, you offered to lift and I obliged-"
     FMG "Yeah, yeah, yeah. Listen, you two in 3-B? Might as well get up there and help."
     FMG "Whatever the princess and her pet're doing can't be as bad as having lard-butt boss you around..."
     hide FMG with dissolve
@@ -510,13 +510,13 @@ label global000_AE_c3:
     MC "Oh, y-yeah…no worries. I just got here,and we were looking around is all."
     AE "I see."
     "Frigid was the closest word I could use to describe this girl. Her admittedly comedic backside completely betrayed her cold, piercing eyes."
-    AE "I am Shiori Matsumoto. I’m will be your sitting Student Council President during your stay here."
-    MC "Nice to meet you. I’m Keisuke Hotsure, class 3-B."
+    AE "I am Shiori Matsumoto. I will be your sitting Student Council President during your stay here."
+    MC "Nice to meet you. I'm Keisuke Hotsure, class 3-B."
     AE "Is that so?"
     MC "M-Mhm…"
     AE "Then I suppose that means I will also be your class representative. Would you like a tour of our facilities?"
-    MC "Ah, n-no thanks, ma’am. My friend here is helping out."
-    AE "Then perhaps you could check on the students I sent to prepare the room while you’re there? I sent one, however I doubt her... resolve, so to speak."
+    MC "Ah, n-no thanks, ma'am. My friend here is helping out."
+    AE "Then perhaps you could check on the students I sent to prepare the room while you're there? I sent one, however I doubt her... resolve, so to speak."
     MC "Understood."
     hide AE with dissolve
     show BE neutral at center with dissolve
@@ -827,7 +827,7 @@ label global000_sit_c1_1:
     MC "I know, but I was just, ah, wondering--"
     AE "Quiet.."
     MC "M-Mhn…"
-    "A compulsion. I wasn’t even purposefully following her orders, it was more like a compulsion. Either way, my head snapped to attention as I noticed the principal and a handful of faculty on stage."
+    "A compulsion. I wasn't even purposefully following her orders, it was more like a compulsion. Either way, my head snapped to attention as I noticed the principal and a handful of faculty on stage."
     "It definitely seemed sparse, despite the size of the stage, but I wasn't about to attribute it to anything nefarious like Daichi would."
     AE "...Though I do appreciate you coming up to pay attention to the administrators. It's an important first step."
     "I opened my mouth to try and ask about the ass-squishing she was giving me, but the principal clearing his throat into the microphone called attention to the room."
@@ -913,7 +913,7 @@ label global000_sit_c3_1:
     FMG "Heh heh...{w}one guy tried to cop a feel, once."
     MC "What happened?"
     "Mizutani's smile tightened into a predatory, self-satisfied grin."
-    show FMG unique
+    show FMG flex
     FMG "Busted his finger. Wasn't even trying to."
     MCT "Ooooo-kay, I'm suddenly very interested in what the principal has to say..."
     $ setAffection("FMG", 1)
@@ -973,7 +973,7 @@ label global000_sit_after:
 label global000_aftersit_c1:
     MC "I haven't seen him...{w}but he was acting kind of strangely this morning. No telling where he went off to."
     show AE neutral
-    AE "Well... I'm certain have no reason not to trust you, so that’s that."
+    AE "Well... I'm certain have no reason not to trust you, so that's that."
     hide AE with dissolve
     "I left to go to my homeroom class, worrying no excuse would be good enough for Shiori..."
     $ setAffection("RM", 1)
@@ -982,10 +982,10 @@ label global000_aftersit_c1:
 label global000_aftersit_c2:
     MC "Well, he said he was going to make sure not to miss the ceremony..."
     show AE neutral
-    AE "I’ve accounted for every student that came through this door. He wasn’t one of them?"
+    AE "I've accounted for every student that came through this door. He wasn't one of them?"
     MC "He said he was going to walk around campus a bit this morning, get a feel for the place. Maybe he came in some different door?"
     "Shori looked back into the mostly-empty auditorium, eyes scanning the walls."
-    AE "Unlikely... But possible. Please, keep an eye on your roommate. I’ll have to have a word with him when I can..."
+    AE "Unlikely... But possible. Please, keep an eye on your roommate. I'll have to have a word with him when I can..."
     hide AE with dissolve
     "She nodded and left her post, satisfied with the answer, and we both walked to homeroom."
     $ setAffection("AE", 1)

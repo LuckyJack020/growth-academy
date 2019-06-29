@@ -1571,7 +1571,7 @@ label FMG018:
     "Morning class... Some would argue that no one would be awake enough to learn anything so early, but luckily this time, the teacher planned something different for that day."
     show HR neutral with dissolve
     HR "All right class, today is the planned cooking class. For those who don't remember, to better prepare yourselves for your self-sufficient futures, you will have the next three hours to test your cooking skills."
-    HR "The food you choose to make will not lower your grade, but how well you make it. Now get your books and bags together because you're not coming back and Kobayashi-san and I will explain more there."
+    HR "The food you choose to make will not lower your grade, but how well you make it. Now get your books and bags together because you're not coming back and Takamura-san and I will explain more there."
     hide HR with dissolve
     "Once he was done explaining, we all prepared to leave..."
     "..."
@@ -1626,7 +1626,7 @@ label FMG018_c1_1:
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show AE neutral at Position(xpos=0.75) with dissolve
     MC "Hey Matsumoto-san, what's on your mind? Akira and I are teaming up, do you need a partner?"
-    AE "Hmm..."
+    AE "Hmm... It appears that I do, very well."
     AE "I can't say most of these recipes are to my tastes. Perhaps something I can recall from memory, then?"
     MC "Sure. Whatever works. Though I figured you would want to cook by the exact recipe-"
     show AE neutral-smug
