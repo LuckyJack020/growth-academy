@@ -4250,7 +4250,7 @@ label BE025_c2_after:
 label BE026:
     #Setting: Field or Flowery Area
     scene Field with fade
-    $setProgress("BE", "BE026")
+    $setProgress("BE", "BE027")
     show BE happy with dissolve
     play music Sunset
     BE "Kei-chan, I've got an idea, and you're not gonna believe what it is."
@@ -4891,7 +4891,7 @@ label BE027_c3_after:
 
 
 label BE028:
-    $setProgress("BE029")
+    $setProgress("BE", "BE029")
     scene Arcade with fade
     play music Schoolday
     #BGM: Light chatter or some sort of electronic music
