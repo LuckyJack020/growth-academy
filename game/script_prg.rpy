@@ -2430,7 +2430,7 @@ label PRG019_c1_1:
     "Alice nodded thoughtfully before turning her attention to Aida, who was now wrapping her nearly finished dumplings in a wonton wrapper.  As she wrapped, Sakura took each dumpling and added it to a large steamer."
     BBW "Ah, shrimp dumplings.  If those two can prepare them correctly, it'll be an easy win."
     MC "How do you mean?"
-    show BBW unique
+    show BBW haughty
     BBW "You see, since dumplings are so popular, everyone knows what to expect when they eat one.  If Kodama-san and Sakura-san can make theirs taste more unique than than anything the judges have had before, it could easily give them the victory."
     "I looked on as Aida wrapped her last dumpling and set it in the steamer.  Sakura shut the lid and set the timer nearby.  Both of them sighed happily as they give each other a high five."
     "After a short while, the timer dinged and the steamer lid was opened.  A savory smell of freshly cooked shrimp with a hint of garlic wafted over the crowd, with the occasional “ooh” and “ahh” being murmured here and there."
@@ -2808,10 +2808,12 @@ label PRG020_c2_1:
     MC "Yeah?"
     PRG "I-I'm glad that... I'm glad that I got to know you."
     MC "And I'm glad that I've gotten to know you too."
+    stop music fadeout 1.0
     PRG "I... "
     "Slowly, Aida began to lean herself closer to me.  I found myself leaning in closer, as if being pulled in by her.  Our faces met in the middle, staying only a scant few inches from one another."
     "Now we were both just sitting there, incredibly close to each other, staring into each other's eyes.  It felt like we were standing by an extremely calm, tranquil lake.  No movement at all: Just stillness and complete lucidity."
     "Then, the stillness was shattered.  I closed the distance and kissed her.  Right on the lips."
+    play music Sunset fadein 1.0
     "Aida's arms instantly wrapped around me, and mine around her.  We embraced tightly as we kissed, Aida leaning even more into me, her huge chest sandwiched between myself and her."
     "I jumped a bit as I felt her tongue brush tentatively against my lips.  Taking the hint, I opened my mouth ever so slightly, inviting her in."
     "Our tongues touched and did a sort of dance together, twisting and turning this way and that, kind of like a tongue's interpretation of a flamenco.  She began to work her hands through my hair, giving it gentle, little tugs as she went."

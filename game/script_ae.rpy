@@ -6258,7 +6258,7 @@ label AE030:
     show AE neutral
     AE "It's no business of mine... that is, I have full faith in the efficiency of the school to get students their clothes when necessary."
     MC "Do you not have the money to buy new ones?"
-    show AE flustered
+    show AE aroused #flustered
     AE "...No. Not at the moment."
     menu:
         "I can buy you some": #-1
@@ -6324,7 +6324,7 @@ label AE030_c1_after:
     AE "Are you sure? I'm sure you have friends who might want to talk to you. I don't want to be a burden."
     MC "You aren't a burden. I just like sitting and talking with you."
     "She smiled at that, and blushed a bit as she held her arm with her left hand."
-    show AE flustered
+    show AE aroused #flustered
     AE "T-thank you, Hotsure-san... that means a lot."
     scene black with fade
     "We went back into the room and discussed our lives as students came in once more for class. Afterwards, I walked her back to her room, though I walked behind her to keep some of her backside out of sight... and to catch a glimpse at her engorged back-end."
