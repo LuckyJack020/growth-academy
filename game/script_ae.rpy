@@ -232,7 +232,7 @@ label AE002:
     show AE glasses
     AE "I had read all the parts that pertained to what I was looking for, so I figured that there was no point in bringing it back to my dorm."
     MC "Oh, ok... I just kind of figured that you would put it back..."
-    AE "Had I put it back or not, it would have inevitably ended up in it's original spot when the library closed, yes? It is a common courtesy, however it's not officially required."
+    AE "Had I put it back or not, it would have inevitably ended up in its original spot when the library closed, yes? It is a common courtesy, however it's not officially required."
     play music AE
     if getSkill("Academics") < 1:
         MC "True...and I checked it out anyway, so no harm no foul!"
@@ -302,7 +302,7 @@ label AE002_c2_1:
         MC "Well...you were more silent than usual. It seemed like you were really distraught."
         show AE neutral-eyebrow
         AE "Than usual? We've only known each other for a small amount of time."
-        MC "Ah..well...true. But I still felt kind of unsure as to why you seemed to act differently than the first time we met."
+        MC "Ah...well...true. But I still felt kind of unsure as to why you seemed to act differently than the first time we met."
         AE "Simple. First, I had questions that went unanswered, and as such immersed myself in my studies. I found the answers, and as such I feel alleviated."
         MCT "Well, she did kind of keep to her book..."
         show AE glasses-2
@@ -437,7 +437,7 @@ label AE003_c1_1:
         MC "Look, I get where you're coming from, I really do, but are you really a guy who'd litter right in front of your girlfriend? Wouldn't you think she'd like it more if you had more class?"
         Student1 "Gch..."
         "Apparently, I hit a sore spot, as he visibly seemed uncomfortable looking at just how well I maintained my uniform even under stress. Simply put, I outclassed him."
-    Student1 "Yeah, well... maybe you're just jealous at the thought of anyone else porkin her?"
+    Student1 "Yeah, well... maybe you're just jealous at the thought of anyone else porkin' her?"
     MC "...What?"
     Student2 "Yeah, what's the matter, you gotta thing for her gross ass or something?"
     MC "I'd kick yours if I didn't care about keeping my shoes shining."
@@ -790,7 +790,7 @@ label AE006:
     MC "Ugh, why does it always have to rain on days that look sunny in the morning? I'm soaked!"
     "In an attempt to shield myself from the heavy rain, I used the notebook in my right hand. Not exactly my brightest idea."
     MC "Man, the whole thing looks trashed, I just bought this!"
-    MCT "I can't believe that it's sogged already. Only a few days with this thing and I've only used it once...oh god no."
+    MCT "I can't believe that it's soaked already. Only a few days with this thing and I've only used it once...oh god no."
     "As I opened up the notebook, a mix of shock and utter despair began to sink in, as I realized my Calculus homework was reduced to what could only be described as a Jackson Pollock wet dream."
     MC "Are you kidding me?! I spent hours trying to figure this out!"
     MCT "Dammit! This is bad. This needs to be done by tomorrow! This is the only notebook I have...uh, had, and the store is on the other side of campus. If I run over I-"
@@ -858,7 +858,7 @@ label AE006:
     AE "One moment. I'll get the papers with some of the work I need done out first."
     hide AE with dissolve
     "I leaned up against the wall as Shiori-san began to look through the filing cabinets for papers, I looked at her desk and noticed the obscene stacks of paper piled up."
-    MCT "Is she really going though all of that?! It could take months!"
+    MCT "Is she really going through all of that?! It could take months!"
     "My eyes wandered over to where Shiori-san was, and I thought admirably on her hard working nature...and then my eyes began to wander a bit lower. As she hopped on her toes to grab some files on the top of the cabinet, I watched as her big bum began to jiggle ever so slightly."
     "She lifted one leg up, unknowingly accentuating her slightly chubby thighs. My thinking went blank for a moment, before immediately snapping back."
     MCT "Sh-shit! If she saw me staring at her like some kind of perv, she would hate me forever. I gotta keep my cool."
@@ -880,7 +880,7 @@ label AE006:
     AE "What?"
     "Shiori-san seemed to be taken aback from my statement for a moment."
     if getAffection("AE") < -3:
-        AE "I apologize, however I think you misunderstood my gesture by giving you paper. I didn't want you to run around outside because the school would be liable. I have no intention of spending any more time with you than I need to."
+        AE "I apologize, however I think you misunderstood my gesture by giving these papers to you. I didn't want you to run around outside because the school would be liable. I have no intention of spending any more time with you than I need to."
         MC "Oh... I mean, I just wanted to help."
         AE "I'll take my chances with one of the other members should the need come. Good day."
         MCT "Ouch...well. I guess that's that."
@@ -1025,7 +1025,7 @@ label AE007_after:
     MC "...Ok, I guess."
     scene black with fade
     "We got to work, and Shiori-san began filling out forms at neck cracking speeds. Every other minute was the sound of scribbling, stamping, and then sliding a paper to me. I nearly choked for a second, before taking the files in hand and bringing them to the cabinet."
-    "The names went on and off the desk like lightning, and it honestly felt like for every paper I would take off the desk and file, two more would take it's place. A document hydra."
+    "The names went on and off the desk like lightning, and it honestly felt like for every paper I would take off the desk and file, two more would take its place. A document hydra."
     "By the time the stream stopped, I was nearly panting from the quick, bustling motion of it all. The scribbling and stamping had stopped now, and as I grabbed the last few files, I looked back on the pile of files and I realized..."
     scene Office with fade
     show AE neutral at center with dissolve
@@ -1348,11 +1348,11 @@ label AE009_after:
     AE "Well now, Hotsure-san, it seems like you're nearly finished with the stack."
     play music Peaceful
     MC "O-Oh, yeah! Just a few more left after this."
-    "Shiori-san layed down a few more pages which I picked up readily, preparing to place them in the final slots."
+    "Shiori-san laid down a few more pages which I picked up readily, preparing to place them in the final slots."
     MC "Two aaaand, done."
     show AE happy
     AE "I must say, Hotsure-san, you're getting very good at this."
-    MC "Actually, yeah, I'm really feeling like i'm getting my stride here."
+    MC "Actually, yeah, I'm really feeling like I'm getting my stride here."
     show AE neutral-smug
     AE "Glad to hear, because I have these."
     "Shiori-san plopped down a second pile on the desk in front of me, around twice the size as the last."
@@ -1434,7 +1434,7 @@ label AE010:
     AE "Yes, well...I suppose that we're the same in that regard."
     "Shiori-san pointed at my head in the same way one would when trying to tell someone there was something on their face."
     MCT "Huh? What is she...?"
-    "I looked off the the side to catch a glimpse when I saw it."
+    "I looked off the side to catch a glimpse when I saw it."
     "Completely going unnoticed by me until now, my hair was definitely longer. Feeling around the back of my neck, I noticed that it went past my nape at this point, and flowed to bottom of my neck."
     MC "Wait...how did this? When did it get this long?"
     show AE angry
@@ -1475,7 +1475,7 @@ label AE010:
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once. Shiori-san's skirt did little to hide her gigantic behind, tears appearing along the seams showed small glimpses of pale and taut skin as the fabric squeezed her rear, only leaving a scarce inch between the bottom of her butt and the fabrics end."
-    "Both cheeks were blown up to the size of full balloons and stuck out a foot from her back, creating noticeable creases along the top of their curvature. Shiori's shelf-like hips stuck out from her sides to match her astounding ass, taking her poor skirt to it's limits in order to cover her shame."
+    "Both cheeks were blown up to the size of full balloons and stuck out a foot from her back, creating noticeable creases along the top of their curvature. Shiori's shelf-like hips stuck out from her sides to match her astounding ass, taking her poor skirt to its limits in order to cover her shame."
     "Her legs, though, didn't receive any such mercy. Her thunder thighs were in full view, as the girl could do nothing but show off her fat, chubby legs in embarrassment, her knee being the only respite until reaching her calves, which had seemed to have swelled a bit too."
     MC "Shiori-san! You're huge!"
     show AE neutral at center, Transform(zoom=1.0)
@@ -1502,7 +1502,7 @@ label AE010:
     MC "Did..."
     show AE neutral
     AE "Hmm?"
-    MC "Did that happen over night?"
+    MC "Did that happen overnight?"
     show AE sad
     AE "...I don't believe so. It's just that I need a larger uniform and I've yet to get one, is all."
     MC "I would have figured that you would ordered early."
@@ -1643,7 +1643,7 @@ label AE011_no010:
     show AE neutral-annoyed
     AE "Khm...I apologize. Throat soreness."
     MC "A-ah..."
-    MCT "And with that my eyes are front and centre..."
+    MCT "And with that my eyes are front and center..."
     jump AE011_aftertest
 
 label AE011_aftertest:
@@ -1767,7 +1767,7 @@ label AE011_afterchoice:
     AE "If you don't mind, close up after you've finished filing."
     MC "Oh, okay, sure."
     AE "That should be all, then. Have a good day."
-    "Shiori-san walked away from the desk, nearly knocking over a pile of printer paper with her huge rump before firmly walking out the door. I felt bad for it, but I couldn't help but oggle at her new round bubble butt the entire time."
+    "Shiori-san walked away from the desk, nearly knocking over a pile of printer paper with her huge rump before firmly walking out the door. I felt bad for it, but I couldn't help but ogle at her new round bubble butt the entire time."
     MCT "If this is how it's gonna be the rest of the year with her, I'm gonna be in for a mind-numbing time."
     "I finished up filing, and left through the library in order to prep for the rest of the day."
     jump daymenu
@@ -1944,7 +1944,7 @@ label AE012_after:
     MCT "So that's why she took so long to prepare!"
     AE "Now, shall we?"
     MC "Uh..."
-    "I was caught off guard. I wasn't sure hows to respond outside of some small stammers of protest."
+    "I was caught off guard. I wasn't sure how to respond outside of some small stammers of protest."
     AE "First. Why do you want to spend time with me? Hasn't this been getting boring to you?"
     "Sitting in the chair, there was little I could do aside from just shrug and purse my lips."
     MC "Because I like hanging out with you, I guess. You're cool."
@@ -2041,7 +2041,7 @@ label AE013:
     AE "Mhm, now, if you please, could you grab those stacks over there and move the ladder when I get down."
     MC "Alight, sure."
     hide AE with dissolve
-    "Taking the stacks in my hands, I lifted them up as Shiori-san plastered the posters across the walls. This continued for a few minutes, with small talk breaking up the monotony every once in awhile."
+    "Taking the stacks in my hands, I lifted them up as Shiori-san plastered the posters across the walls. This continued for a few minutes, with small talk breaking up the monotony every once in a while."
     show AE neutral at center with dissolve
     MC "Well, hey, you were right. Being the president of the student government, really does have a lot to do, eh? Files and posters."
     show AE neutral-annoyed
@@ -2097,7 +2097,7 @@ label AE013:
         MC "So long as you're not building a harsh fantasy in its stead."
         AE "... Fair."
     "We continued to work after that somewhat strange discussion, until we ran into a particularly high area."
-    MC "Woah...look's like we'll need more than a stepladder for this. Or, y'know, I could get on and we could swap positions."
+    MC "Woah...looks like we'll need more than a stepladder for this. Or, y'know, I could get on and we could swap positions."
     show AE neutral-annoyed
     AE "Hmm...no. Putting you on top of this ladder would put you at risk."
     MC "Eh? Well, putting you on top would put you at risk, AND make it so you can't reach."
@@ -2371,7 +2371,7 @@ label AE014:
     MCT "On second thought. It'd probably be best if I told her it wasn't."
     show AE sad-2
     AE "Sincerely. Accept my apology to both you and to your symbol of the school!"
-    MCT "She gave me an equivalent to a standing lapdance without desire or warning and the first thing she thinks about is apologizing to the school?!"
+    MCT "She gave me an equivalent to a standing lap dance without desire or warning and the first thing she thinks about is apologizing to the school?!"
     MC "Hey, hey! I said it was okay."
     AE "V-very well then."
     "We continued to work a bit longer, but not a word was said between us. We worked in silence for another 30 or so minutes before Shiori-san spoke up."
@@ -2426,7 +2426,7 @@ label AE015_menu:
 
 label AE015_watch:
     if getVar("AE015_watch") == 3:
-        "I couldn't help but stare on at Shiori-san as she began to try and wiggle out, eyes fixed on her round rear as her hips shaked more frequently."
+        "I couldn't help but stare on at Shiori-san as she began to try and wiggle out, eyes fixed on her round rear as her hips shook more frequently."
         AE "Hoooah...W-wait...Nggggnn~!"
         "I pulled up a chair and sat down, with pursed lips and hands resting lightly on my abdomen as I watched on."
         AE "Ach-H-hold on...nhg."
@@ -2439,7 +2439,7 @@ label AE015_watch:
     if getVar("AE015_watch") == 9:
         "I continuously watched as sweat began to form along the seat of Shiori-san's skirt."
         AE "*Pant*...*Pant*...Hng...hnnnnn~."
-        "I opened up my backpack and pulled out a bag of shrimp flavoured popcorn chips. I slowly began to much on the treat as sadistically and smugly as I possibly could."
+        "I opened up my backpack and pulled out a bag of shrimp flavored popcorn chips. I slowly began to much on the treat as sadistically and smugly as I possibly could."
         AE "H-huh? Hello? Is that shrimp? What's happening?!"
         MC "...*Munch*"
         MCT "Y'know, I should probably help her...or just wait for some students to walk by for end of the day cleaning."
@@ -2596,7 +2596,7 @@ label AE015_afterchoice:
     MC "All right! It's a date."
     show AE surprised
     AE "...W-what?"
-    MC "Oh! Uh, a hang out date. I-It's an expression."
+    MC "Oh! Uh, a hangout date. I-It's an expression."
     show AE aroused-3
     AE "Ah, yes. Expressions! And...hm. S-See you then."
     MC "See you."
@@ -2629,7 +2629,7 @@ label AE016:
     MCT "The library? Really?"
     MC "U-um...the library?"
     AE "Yes. It's a good place to spend time, no?"
-    "Shiori-san looked at me expectantly, confusion cleary plastered on my face."
+    "Shiori-san looked at me expectantly, confusion clearly plastered on my face."
     MC "W-well, I mean...weren't we gonna go out and talk or...?"
     AE "Oh. Well, I assumed that you would've wanted to go somewhere like the library. It's quiet, no-one is around, and we can talk uninterrupted. Is there somewhere else?"
     MCT "..."
@@ -2678,7 +2678,7 @@ label AE016_c1:
     MC "D-um...I went over to...uh..."
     AE "Please. Don't mind me, continue."
     MCT "I'd be more than happy to. AS SOON AS YOU PUT DOWN THE PAPERS!"
-    MCT "Okay, this isn't working. Well, I guess she is, but that's the problem. She's a workaholic.Maybe if I...hmm."
+    MCT "Okay, this isn't working. Well, I guess she is, but that's the problem. She's a workaholic. Maybe if I...hmm."
     jump AE016_after
 
 label AE016_c2:
@@ -2749,7 +2749,7 @@ label AE016_after:
     MC "Well, is there any way to...I guess cull the requests so there are only serious ones?"
     show AE neutral
     AE "That's what we're doing right now."
-    "For a moment, I forgot I wasn't a member of the student government; what with all the work i'd been doing. It hadn't dawned on me that I wasn't approving anything, just looking over it."
+    "For a moment, I forgot I wasn't a member of the student government; what with all the work I'd been doing. It hadn't dawned on me that I wasn't approving anything, just looking over it."
     MC "Well, no, I mean like to even be able to submit one."
     AE "Ah, I see. No, there shouldn't be."
     "I recoiled a bit. That was one of the more unexpected things I've heard from Shiori-san in a while."
@@ -2759,7 +2759,7 @@ label AE016_after:
     MC "I didn't take you as such an advocate for free speech."
     show AE neutral-annoyed
     AE "I'm an advocate for whatever rights the school allows its students."
-    MCT "Thaaats more what I expected."
+    MCT "Thaaat's more what I expected."
     show AE neutral
     AE "The simple answer is just to take the serious requests into mind and discard the ones that aren't."
     MC "Huh... all right."
@@ -2809,7 +2809,7 @@ label AE016_after:
     show AE neutral
     AE "...Hm?"
     MC "Mw-Well, like...maybe we could get lunch together."
-    "Shiori-san stood there for a moment. Looking off to the side with pursed lips. There was an audible inhale as she bean to speak."
+    "Shiori-san stood there for a moment. Looking off to the side with pursed lips. There was an audible inhale as she began to speak."
     AE "Um...yes. Yes, I'd like that."
     "My only response was a goofy grin and a small scoff."
     MC "Okay, cool. Later?"
@@ -2827,7 +2827,7 @@ label AE017:
     "Looking at the selections, it seemed as though the school had a wide variety of different foods and drinks available, definitely more than I'd seen before."
     MC "Uaaah, look at all this stuff."
     MCT "Hmm...I think I'll just go with the Rice and Chicken."
-    "I grabbed a bowl and began to fill it up in the self serve area; taking a few small strawberries as a little desert. After grabbing some chopsticks, I went to look for a place to sit."
+    "I grabbed a bowl and began to fill it up in the self-serve area; taking a few small strawberries as a little desert. After grabbing some chopsticks, I went to look for a place to sit."
     MCT "Hmm...let's see...where can I sit where Shiori-san and I-"
     "Almost to answer my own question, I caught a glimpse of the spectacled girl looking at me over a small partition."
     MCT "Oh! Oh, she's here already."
@@ -2868,7 +2868,7 @@ label AE017:
     "I bit into it, and was greeted with a tangy and sweet gush of peach flavored jelly."
     MC "Mmmn~  That's great!"
     AE "It seems like we have common tastes then. Good."
-    MC "Yeah, I love peach suff."
+    MC "Yeah, I love peach stuff."
     "As I took a few more bites of the pastry, I figured it would be a good idea to share some of my food with her."
     MC "Oh!"
     "I picked up a strawberry, nearly dropping it for a moment."
@@ -3000,8 +3000,8 @@ label AE018:
     MC "Th-thank you, Shiori-san."
     "Shiori-san stood up a little taller, a light blush crossing her face as she looked away and brushed her hair to the side."
     show AE aroused-2
-    AE "Y-you don't need to thank me, Hotsure-san...looking out for your well being is what's expected of me."
-    MCT "Eheh, she get's so cute when she's bashful."
+    AE "Y-you don't need to thank me, Hotsure-san...looking out for your wellbeing is what's expected of me."
+    MCT "Eheh, she gets so cute when she's bashful."
     MC "So, Shiori-san, why did you want me to wait for you up here?"
     show AE neutral
     AE "Mm, well, I was making my rounds for monitoring the halls when I decided that we could maybe spend a little time somewhere else."
@@ -3067,7 +3067,7 @@ label AE018:
     "Shiori-san's face crinkled up a bit as she thought, hands tapping her thighs as she put the tongue on the inside of her cheek and looked away."
     show AE aroused-2
     AE "I...suppose. Why?"
-    MC "I've been having this weird dream lately...and i've been wondering what it means."
+    MC "I've been having this weird dream lately...and I've been wondering what it means."
     show AE neutral
     AE "What it means...?"
     MC "W-what?"
@@ -3287,7 +3287,7 @@ label AE019:
     "Shiori-san brushed her hair to the side with the back of her wrist."
     show AE happy
     AE "Well, um, thank you for that."
-    "We sat for a bit longer, eating and staring out into the campus; the occasional meeting of the eye here and there. I looked at Shiori-san every once in awhile, when she looked away. Her skirt was starting to ride up again, which meant that she was growing even larger. Fabric was pulled tightly over her hips, making it so she sat in a somewhat compact pose as she looked out at the view."
+    "We sat for a bit longer, eating and staring out into the campus; the occasional meeting of the eye here and there. I looked at Shiori-san every once in a while, when she looked away. Her skirt was starting to ride up again, which meant that she was growing even larger. Fabric was pulled tightly over her hips, making it so she sat in a somewhat compact pose as she looked out at the view."
     MC "I really don't envy you, y'know."
     show AE neutral
     AE "Hm? What?"
@@ -3463,7 +3463,7 @@ label AE020:
     AE "Why consider the unlikely? I acknowledge the fact I have an unattractive body, as well as an unlikeable personality, therefore it's unreasonable to assume I would try and find a partner."
     MC "Ahh, now c'mon."
     show AE neutral
-    AE "Well, it's not like i'm missing out on anything, dating is frivolous endeavor."
+    AE "Well, it's not like I'm missing out on anything, dating is frivolous endeavor."
     MC "Well, I say don't knock it till you've tried it!"
     "Shiori-san made a somewhat sly face towards me."
     show AE neutral-smug
@@ -3559,7 +3559,7 @@ label AE020_c1_2:
     MC "P-Please be my girlfriend!"
     show AE aroused-4
     AE "...I..."
-    "Shiroi-san looked on my display with distress and confusion. She brought her hand up to her mouth."
+    "Shiori-san looked on my display with distress and confusion. She brought her hand up to her mouth."
     show AE sad
     AE "Hotsure-san..."
     MCT "She...She's going to say no, isn't she."
@@ -3594,7 +3594,7 @@ label AE020_c1_2:
     show AE sad-2
     AE "G-give me..."
     show AE neutral
-    AE "Give me a few days time. By then I will give you a definite answer."
+    AE "Give me a few days' time. By then I will give you a definite answer."
     MC "A few days? F-for what?"
     AE "..."
     AE "I want to learn."
@@ -3704,7 +3704,7 @@ label AE021:
     MC "Why were you watching me?"
     AE "..."
     show AE neutral-annoyed
-    AE "Hotsure-san, it's very impolite to interrupt someone mid sentence."
+    AE "Hotsure-san, it's very impolite to interrupt someone mid-sentence."
     if getSkill("Academics") < 4:
         MC "A-ah. Yes. Sorry, Shiori-san."
         show AE neutral
@@ -3737,7 +3737,7 @@ label AE021:
     MC "Raw wheat, raw rice waw- no wait. Rwa- no. Raw wheat, raw rice...raw..."
     "I turned around and noticed, just around the corner, as Yuki-chan stared at me. She jumped for a moment before darting behind the wall."
     MC "...egg."
-    MCT "H-oooookay. Now i'm starting to get fed up with this."
+    MCT "H-oooookay. Now I'm starting to get fed up with this."
     "I walked over to the wall to see the girl with the rosy pink lips scribble on a notepad, squatting behind the wall. I watched on as she kept writing, only catching a few words here and there. She pulled out some chapstick and began applying it before continuing to write."
     "*Scribble scribble scribble*"
     MC "Yuki-chan?"
@@ -3768,7 +3768,7 @@ label AE021:
     RM "They're after you."
     MC "A-after me- ow, hey, hey!"
     "Daichi grabbed me by the hair and walked quickly across the corner, causing me to stomp awkwardly in his direction."
-    RM "Here, into the mens bathroom. They won't follow us here."
+    RM "Here, into the men's bathroom. They won't follow us here."
     scene Bathroom with fade
     show RM neutral at center with dissolve
     MC "Ach-g-get your hands off ma-!"
@@ -3945,7 +3945,7 @@ label AE022:
     "Last night."
     scene Dorm Interior with fade
     show RM neutral at center with dissolve
-    RM "-and knock with tokyo ondo."
+    RM "-and knock with Tokyo Ondo."
     MC "Eh? Really? Why that song?"
     RM "It works. Trust me."
     MC "A-...okay, whatever."
@@ -3995,7 +3995,7 @@ label AE022:
     scene black with fade
     pause 1
     scene Hallway with fade
-    "It had been awhile since class ended, and I waited by the window sill of death for a good amount of time."
+    "It had been a while since class ended, and I waited by the window sill of death for a good amount of time."
     MC "...What's taking him so lo-"
     "It was then that I saw it. Stuffed in the shape of a poorly crafted origami crane was a piece of paper on the windowsill."
     MC "Oh."
@@ -4003,7 +4003,7 @@ label AE022:
     "I looked around a moment before grabbing the paper from the windowsill and read it."
     "{i}Keisuke, President following. Writing in notebook. Contents unknown.{/i}"
     "I looked around a bit more before doing as instructed and folding the paper up and putting it in my pocket. I put my glasses on so that nothing would go wrong while I scanned the area for Daichi to reveal himself."
-    "I scanned around and, with one hand, knocked the tune of the tokyo ondo on a metal grate. After waiting a few minutes, out came Daichi from the grate on the opposite side of the corner my back was leaning against."
+    "I scanned around and, with one hand, knocked the tune of the Tokyo Ondo on a metal grate. After waiting a few minutes, out came Daichi from the grate on the opposite side of the corner my back was leaning against."
     show RM angry at center with dissolve
     RM "Virtually untouchable? Really? Dude, c'mon."
     MC "I was trying to show my bravery in the face of-"
@@ -4090,7 +4090,7 @@ label AE022:
         "Shiori-san put one foot behind the other as she rubbed her arm. One of the few examples of poor posture she's ever displayed."
         AE "Why...why someone like you wanted to be with...with me."
         MC "O-oh!"
-        "I was admittedly a bit relieved. Shiori-san was just nervous about me asking her out due to her self esteem."
+        "I was admittedly a bit relieved. Shiori-san was just nervous about me asking her out due to her self-esteem."
         MC "Shiori-san, you have nothing to worry about! I'm being honest with my feelings."
         show AE neutral
         AE "..."
@@ -4102,7 +4102,7 @@ label AE022:
     show AE surprised
     MC "Daichi, Shiori-san wa-"
     hide RM with dissolve
-    "I turned around in time to witness a mop dressed in a school uniform flop over onto the ground. I stared at the thing for a while, marvelling in the insane speed that must have been required to set that up."
+    "I turned around in time to witness a mop dressed in a school uniform flop over onto the ground. I stared at the thing for a while, marveling in the insane speed that must have been required to set that up."
     MC "How...when did he?"
     AE "Dch-I was looking at him the entire time and I have no idea when it happened."
     "I looked around the general area for a little while before snapping to my senses."
@@ -4199,7 +4199,7 @@ label AE023:
     MC "So then...what is this, by the way?"
     show AE neutral
     AE "Hm?"
-    MC "I mean..I'm, y'know, walking you to your room, you're giving me compliments...what's going on here? Did you, y'know, come to a conclusion about me?"
+    MC "I mean...I'm, y'know, walking you to your room, you're giving me compliments...what's going on here? Did you, y'know, come to a conclusion about me?"
     AE "..."
     "Shiori-san stalled for a moment, before simply adjusting her glasses, a pink hue overtaking her face."
     show AE aroused-2
@@ -4260,7 +4260,7 @@ label AE023_c1_2:
     "I felt Shiori-san began to tense up a bit, meaning that admitting that was probably not the best idea I've ever had."
     MC "...What's wrong?"
     show AE neutral
-    AE "N-nothing, Hotsure-san. Everythings fine."
+    AE "N-nothing, Hotsure-san. Everything's fine."
     MC "...Is it because of Honoka?"
     AE "W-I don't believe I have any reason to worry. I mean, that's in the past after all."
     "A coy smile sprung up on my face as Shiori-san spoke my own defense for me."
@@ -4319,7 +4319,7 @@ label AE023_c1_after:
     "I looked down where Shiori-san was looking, and sure enough, a small pink disk with indentions lay plopped down right where I had walked."
     MC "Ick. Did it get on my shoe?"
     "I pulled up my foot for Shiori-san to see."
-    AE "N-no. However if you HAD stepped in it it would have streaked across the floor."
+    AE "N-no. However if you HAD stepped in it, it would have streaked across the floor."
     MC "Oh. Well you should probably just leave it. It will probably be cleaned up by some of the students later."
     AE "Hotsure-san, never expect someone to do their job right. If I don't get it now, it will be on my mind all day."
     MCT "I think you may need to make major life adjustments if a piece of gum on the floor is at the forefront of your mind."
@@ -4374,7 +4374,7 @@ label AE023_c1_after:
     MCT "Still though, if she says she has an answer so quickly after catching me staring at her...I might be in trouble."
     "I felt my heart begin to sink deeper as those words went through my head; 'I might be in trouble'. I started to walk back to my dorm as anxiety began to kick in."
     MCT "I mean, it was a shitty thing to do, yeah, but can you blame me? It's just been a while since..."
-    "It had definitely been awhile since the last time I jacked off. Having a roommate, let alone who could be anywhere and everywhere, kind of put a strain on that."
+    "It had definitely been a while since the last time I jacked off. Having a roommate, let alone who could be anywhere and everywhere, kind of put a strain on that."
     MC "Ahh man...what have I gotten myself into?"
     scene Dorm Interior with fade
     "As I got to my door, I began thinking of possible excuses, however I had no doubts she'd see right through me. I was just ready to get some rest. I entered the room, and collapsed on the bed, laying in silence as I contemplated my possible next moves."
@@ -4729,7 +4729,7 @@ label AE025:
     show AE aroused-2
     "We stood there awkwardly, Shiori-san looking on expectantly for an opportunity for the conversation to begin."
     MCT "I'm guessing she wants me to start it off."
-    "I opened my mouth to talk, but without any prior planning nothing could come up except for thoughtless, typical, smalltalk."
+    "I opened my mouth to talk, but without any prior planning nothing could come up except for thoughtless, typical, small talk."
     MC "It's really nice out."
     show AE neutral
     AE "Truly."
@@ -4907,7 +4907,7 @@ label AE025:
     AE "...A-actually, um..."
     MC "Hm?"
     show AE aroused-2
-    AE "The dorms are only a little bit aways from each other..."
+    AE "The dorms are only a little bit a ways from each other..."
     MC "Wanna walk together?"
     show AE aroused
     AE "...Mhm."
@@ -5453,7 +5453,7 @@ label AE027_FMG:
     "And was greeted with a swift and thunderous pat on the back, popping it in what felt like nine different places..."
     show FMG happy
     FMG "Hah! So you got yourself a girl, eh?!"
-    MC "Pah... ahn... yeah, uh... Shori-san is, um... {i}khm{/i} she's great."
+    MC "Pah... ahn... yeah, uh... Shiori-san is, um... {i}khm{/i} she's great."
     show FMG neutral
     FMG "I'm telling you, I would have NEVER expected you to go for her. Not in a million billion years."
     MC "Huh? What makes you say that?"
@@ -5550,7 +5550,7 @@ label AE028:
     "I smiled at her warmly. It was nice to see her so friendly and relaxed... at least as far as relaxed can be for her."
     scene black with fade
     "We walked together towards the staircase. As we walked, we discussed many different topics. How our days went, how we're doing in class, and of course, the different tasks Shiori-chan had to carry out as class president."
-    "I followed her lead up the stairs; taking the admitted glance every once in awhile. Her skirt had recently begun to ride up even further, signifying that she'd been growing a lot recently. I looked to my own hair and began to lightly pet it. Shiori-chan opened the door and we stepped out into the light."
+    "I followed her lead up the stairs; taking the admitted glance every once in a while. Her skirt had recently begun to ride up even further, signifying that she'd been growing a lot recently. I looked to my own hair and began to lightly pet it. Shiori-chan opened the door and we stepped out into the light."
     scene Roof with fade
     show AE happy with dissolve
     MCT "Last time we were up here was... less than reputable. I hope it doesn't mar the vibe of the area."
@@ -5788,7 +5788,7 @@ label AE028_c1_after:
     AE "Sure thing, Hotsure-san."
     scene Classroom with fade
     "As we walked back to class, I thought more and more about the ominous words Shiori-chan said."
-    MCT "Death of her personality? I don't get it. What does she mean? Is it some cliche I'm not in on?"
+    MCT "Death of her personality? I don't get it. What does she mean? Is it some cliché I'm not in on?"
     show AE sad with dissolve
     AE "So... tomorrow I have to head back to my room after class to pick up some things, then I have a meeting. We won't have that much time to spend together."
     MC "O-oh."
@@ -5817,7 +5817,7 @@ label AE029:
     "After class, Shiori-chan and I got up together and made our way to her room. After yesterday's events, I figured it would be nice to see what Shiori-chan's room was like, get a closer look at how she's living."
     show AE neutral with dissolve
     MC "So, you got the okay?"
-    AE "Mhm. I double checked. You can be in my room to visit anytime before nighttime."
+    AE "Mhm. I double checked. You can be in my room to visit any time before nighttime."
     MC "So, I gotta say, I'm a bit excited."
     AE "I'm not entirely sure why, it's only my room."
     MC "Well, yeah, but I dunno, I just kinda want to see what you call home."
@@ -5841,13 +5841,13 @@ label AE029:
     MC "Eh?"
     MC "Hrgk-!"
     "I turned my head to the right and immediately got assaulted by the stench of sweaty sock, onion, and what I assumed was the olfactory equivalent of parental regret."
-    "In strict opposition to the haven of cleanliness to the left, the right side of the room was absolutely atrocious. An empty pizza box lay abandoned and forgotten on the far side of the room, and next to it rested a mini-screen tv, hooked up to an old 90's-era video game console with black wires tangled in a mess."
+    "In strict opposition to the haven of cleanliness to the left, the right side of the room was absolutely atrocious. An empty pizza box lay abandoned and forgotten on the far side of the room, and next to it rested a mini-screen TV, hooked up to an old 90's-era video game console with black wires tangled in a mess."
     "The floor was littered with junk listlessly tossed about. An acoustic guitar covered from neck to base with various stickers and Kanji written in marker lay on the bed, along with sheets and blankets piled up in random mounds."
     "The only respite from the mess was the kitchen, which in itself had been kept clean; no doubt by Shiori-chan. Between the trash, the stench and the clothes thrown about, I'd say the disaster was fit more for a pig than a girl."
     MC "Urg..."
-    AE "Aha! It's horrid to you too then. If even a few more people attest to it's atrocious state, she'll have no choice but to let me clean it!"
+    AE "Aha! It's horrid to you too then. If even a few more people attest to its atrocious state, she'll have no choice but to let me clean it!"
     "I looked on the ground near my feet and saw a ragged and crumpled piece of cloth."
-    AE "Article three of the dormroom health and safety protocol clearly states that-"
+    AE "Article three of the Dorm Room Health and Safety Protocol clearly states that-"
     MC "U-um, Shiori-chan, what's-"
     "I unraveled the cloth and realized bit too late that what I had in my hands was a huge pair of black panties with broken red hearts covering the design."
     MC "E-ech!"
@@ -5910,12 +5910,12 @@ label AE029:
     Tako "Daaaww, shy? Isn't that Kodama-chan's thing?"
     show AE angry
     AE "How many times have I told you to clean up your side of the room?!"
-    "Shiori-chan reached for a empty two-liter when she was stopped by the girl."
+    "Shiori-chan reached for an empty two-liter when she was stopped by the girl."
     Tako "Woah, woah, ey, don't touch that! I might use it."
     AE "Ach-For what?!"
     Tako "Like...uh..."
     AE "And the rest of this-this trash, hm?"
-    Tako "I'll get to it, geesh!"
+    Tako "I'll get to it, geez!"
     "Shiori-chan, I could tell, was uncomfortable with the girl's mere presence. She let out a sigh and rubbed her eyes under her glasses."
     show AE neutral
     AE "Don't you have friends to go spend time with?"
@@ -5972,7 +5972,7 @@ label AE029:
     "Hopping up from the bed, she grabbed her keys from off the floor and walked over towards the door."
     Tako "Well, I'm headed to town. Shiori-chan, glad my advice worked out for ya."
     #else
-    #Tako "Jeesh, no need to be such a stiff man."
+    #Tako "Jeez, no need to be such a stiff man."
     #"She grinned widely at me as she turned around and pushed her butt into me, causing me to stumble back a bit onto the bed."
     #Tako "Lighten up a little, I won't bite!"
     #MC "W-Uh..."
@@ -5998,7 +5998,7 @@ label AE029:
     Tako "Bubble Booty Babes~"
     hide Tako with dissolve
     stop music
-    "As Yureno-san left the room, Shiori-chan's face was filled with a blush like none other i've seen; whether out of frustration or embarrassment, I couldn't tell."
+    "As Yureno-san left the room, Shiori-chan's face was filled with a blush like none other I've seen; whether out of frustration or embarrassment, I couldn't tell."
     show AE angry at center with dissolve
     play music Peaceful
     AE "That girl..."
@@ -6221,7 +6221,7 @@ label AE030:
     "Not knowing what to say, or what even could be said, I simply nodded."
     MC "Okay."
     "I exited the room, but not entirely, because just as Shiori-chan had earlier, I clung to the doorframe and watched in silence."
-    HR "Listen, Matsumoto-chan, the school is somewhat lax with a bit of skin showing every once in awhile, but I can tell you're not. I know you can't really do anything about the skirt situation so..."
+    HR "Listen, Matsumoto-chan, the school is somewhat lax with a bit of skin showing every once in a while, but I can tell you're not. I know you can't really do anything about the skirt situation so..."
     HR "If or when the time comes that you can't wear it to class, feel free to just skip out."
     AE "I couldn't do that, sir. As class president I'm expected to be here."
     HR "I get that, and trust me, I value my sleep, so I'm not big on the idea of catching you up all the time. But I realize that you were really uncomfortable today. I can't have that."
@@ -6333,7 +6333,7 @@ label AE030_c1_after:
 label AE031:
     $setProgress("AE", "AE032")
     scene Hallway with fade
-    "Once class ended, I spent some time with Shiori-chan. We talked for awhile, and generally had a good time. However, after an hour or two, we parted ways and, with little to do, I decided to explore a bit."
+    "Once class ended, I spent some time with Shiori-chan. We talked for a while, and generally had a good time. However, after an hour or two, we parted ways and, with little to do, I decided to explore a bit."
     "I stood up straight and popped my back. My exploration had led me do a fairly empty part of the school, and in front of the music room."
     MCT "If a seasoned soccer player loses his breath just walking around the first floor, how the hell is anyone else supposed to-?!"
     #WALTZ OP 64 NO 2
@@ -6582,7 +6582,7 @@ label AE032:
     MC "..."
     MCT "She seems dead set on her philosophy. I doubt there's much else I can say."
     "Shiori-chan sat up, grunting as she lifted her body up with the side of the bench. I sat up with speed and put my hand out to help her. She shook her head and dismissively waved her hand to signify she could handle it."
-    "As she stood up straight, her ass stuck straight out, and from a side view appeared as a big bubble wiggling gently with her motions. She signalled for me to follow her."
+    "As she stood up straight, her ass stuck straight out, and from a side view appeared as a big bubble wiggling gently with her motions. She signaled for me to follow her."
     show AE neutral
     AE "Come, come."
     "I obliged, and followed her closely behind as we walked through the courtyard slowly."
@@ -6939,13 +6939,13 @@ label AE033_c1_after:
     AE "..."
     "Shiori-chan brushed her hair back behind her shoulder."
     #show AE embarrassed
-    AE "Even it it's on strange topics like today... I thoroughly enjoy spending time with you."
+    AE "Even if it's on strange topics like today... I thoroughly enjoy spending time with you."
     MC "...Eheh... same."
     AE "..."
     AE "Would you like to spend some more time with me in the halls today? I'm sure by doing so we can... *khm* perhaps talk about some softer subjects."
     MCT "Haah, there we go."
     MC "Of course! "
-    "I waited as Shiori-chan put her things in her room. Once she did, we walked the halls together. I've still yet to figure out what it means when her bell-like hips sway when we walk together, but I can tell that it must be good, since she only does it when we delight in each others company."
+    "I waited as Shiori-chan put her things in her room. Once she did, we walked the halls together. I've still yet to figure out what it means when her bell-like hips sway when we walk together, but I can tell that it must be good, since she only does it when we delight in each other's company."
     jump daymenu
 
 label AE034:
@@ -6980,9 +6980,9 @@ label AE034:
     hide AE with dissolve
     show Ryoko neutral with dissolve
     if isEventCleared("GTS011") or isEventCleared("GTS011b"):
-        "Ryoko-san rounded the corner, running at mach speed with a determined look in her eyes."
+        "Ryoko-san rounded the corner, running at Mach speed with a determined look in her eyes."
     else:
-        "A girl rounded the corner, running at mach speed with a determined look in her eyes."
+        "A girl rounded the corner, running at Mach speed with a determined look in her eyes."
     Ryoko "I'm gonna be late-I'm gonna be late-I'm-"
     hide Ryoko with dissolve
     show AE neutral-annoyed with dissolve
@@ -7263,7 +7263,7 @@ label AE035:
         AE "Chopsticks, right."
         AE "No matter, I can go and get some from the cafeteria. Just a moment."
         hide AE with dissolve
-        "As she sat up, her sizeable derriere wiggled gently. She walked of with a small skip, her skirt swishing from side to side as her bulbous behind began to slow its movements. I watched tantalized all the while, a tinge of pink overtaking my cheeks as I focused on hers."
+        "As she sat up, her sizeable derriere wiggled gently. She walked off with a small skip, her skirt swishing from side to side as her bulbous behind began to slow its movements. I watched tantalized all the while, a tinge of pink overtaking my cheeks as I focused on hers."
         MC "Haahn..."
         MCT "Pfft, did Daichi poison the food. That was clever of her..."
         "I waited in the shade for a short moment before-"
@@ -7309,7 +7309,7 @@ label AE035:
     show AE neutral
     AE "Oh, s-sure."
     show AE happy
-    AE "Mmhm, it compliments the taste well."
+    AE "Mmhm, it complements the taste well."
     MC "Yep!"
     show AE neutral
     AE "And what's that there, in the center?"
@@ -7382,7 +7382,7 @@ label AE035:
     MC "Ehehe, that tickles a bit."
     AE "Mhmhm..."
     "Her face was pink as the salmon she'd eaten just moments before, with her free hand she brushed her hair to the side and looked to me with eyes that promised to hold this sensation close to her for as long as she could remember."
-    "We stayed like that for a while, and only broke once the belltower beckoned us back to class. As I stood up, however, I'd found that Shiori-chan hadn't let go. Propping herself up, she grabbed the box and put it under her arm, and we walked hand in hand back to the classroom."
+    "We stayed like that for a while, and only broke once the bell tower beckoned us back to class. As I stood up, however, I'd found that Shiori-chan hadn't let go. Propping herself up, she grabbed the box and put it under her arm, and we walked hand in hand back to the classroom."
     jump daymenu
 
 label AE036:
@@ -7391,7 +7391,7 @@ label AE036:
     #SCENE IN AFTERNOON
     play music Busy
     "As the day came and went, I had found time to talk with Shiori-chan when I could, and as usual, she was whisked away into a meeting after class. Thankfully, according to her, her schedule had been clearing up and soon we'd be able to spend more time together."
-    "That didn't mean, however, I could wait patiently. I bent down behind a potted plant, waiting at the library door. Peeking every few seconds a the door, I'd been-"
+    "That didn't mean, however, I could wait patiently. I bent down behind a potted plant, waiting at the library door. Peeking every few seconds at the door, I'd been-"
     Student "Um, what are you doing?"
     MC "..."
     Student "..."
@@ -7459,7 +7459,7 @@ label AE036:
     AE "What exactly do you have in mind?"
     MC "Well...I mean, we haven't really been off campus before."
     stop music
-    "As I spoke, her look of concern faded slowly into her usual deadpan judgemental look, her hands going back down to her sides as she let out an exasperated sigh."
+    "As I spoke, her look of concern faded slowly into her usual deadpan judgmental look, her hands going back down to her sides as she let out an exasperated sigh."
     play music Bittersweet
     AE "...Come now, Hotsure-san."
     MC "Ahah, I'm serious."
@@ -7526,7 +7526,7 @@ label AE036:
     AE "I... I suppose I'll go first so we don't argue about who should start."
     MCT "Heh... barely any time since we became official and she knows me too well."
     AE "I was a bit too heartless by denying you so quickly and fervently. I didn't take how you felt into consideration."
-    AE "I'm just... you can see why i'd be a bit uncomfortable out in public, yes?"
+    AE "I'm just... you can see why I'd be a bit uncomfortable out in public, yes?"
     MC "Well, yeah, of course! And that's why I wanted to apologize. I as well didn't think about if it made you uncomfortable, and that's messed up."
     AE "Oh, come now, Hotsure-san, you don't need to do that for me."
     MC "You're willing to do it for me, why can't I for you?"
@@ -7735,7 +7735,7 @@ label AE037_c1_after:
     MC "It's called a cupola. It's a western design."
     show AE happy
     AE "I see, interesting."
-    "I gave a self proud smirk at Shiori-chan."
+    "I gave a self-proud smirk at Shiori-chan."
     MC "Hmph, I'm glad I know something you don't~."
     show AE neutral-annoyed
     AE "Ach- Alright, then sir acumen, why is it green?"
@@ -7753,7 +7753,7 @@ label AE037_c1_after:
     show AE happy
     AE "Hmm~."
     "We sat in silence and listened as the people walked by. Eventually, however, Shiori-chan noticed something out of the side of her eye..."
-    "A child passing by had began to stare at her thighs, which had taken up a fair amount of space on the already spacious bench. Their mother scolded them, but looked back at Shiori-chan, causing her to cross her legs."
+    "A child passing by had begun to stare at her thighs, which had taken up a fair amount of space on the already spacious bench. Their mother scolded them, but looked back at Shiori-chan, causing her to cross her legs."
     show AE sad
     AE "..."
     MC "Are you actually uncomfortable right now?"
@@ -7994,7 +7994,7 @@ label AE038:
     "She pulled out a pair of menus, as well as a small piece of paper on a leather pad. I looked over the menu as she did, and noticed an array of different western style foods."
     Waitress "Can I get you anything to drink?"
     show AE neutral
-    AE "I'd like tea, please. Puer, if you have it."
+    AE "I'd like tea, please. Pu'er, if you have it."
     Waitress "I'm sorry, we don't ma'am."
     AE "Green would do well then."
     Waitress "Okay, and you sir?"
@@ -8035,7 +8035,7 @@ label AE038:
     show AE surprised
     AE "You don't need to-"
     MC "No, no, I want to. You're my girlfriend, it's normal."
-    "Admittedly, I would have been more than happy to go dutch with the bill, but I wanted to leave a good impression."
+    "Admittedly, I would have been more than happy to go Dutch with the bill, but I wanted to leave a good impression."
     AE "Are you sure? I mean, I-"
     MC "D-don't worry about paying me back, it's fine! Now tell me, anything you like?"
     "Shiori-chan's looked at me silently for a moment, hand over her chest as she stared. However, not to waste time, she looked over the menu."
@@ -8130,7 +8130,7 @@ label AE039:
     show AE neutral with dissolve
     "As Shiori-chan and I walked through town, the murmur of bustling crowds and the gentle rumble of vehicles permeated the air, giving me a distinct feeling of nostalgia for home."
     #%If the area hasn't been seen before%
-    "We explored the town like usual, however today we found ourselves in a new area; one with tall apartment complexes, brand name stores, and plenty of motorbikes and cars going too and fro."
+    "We explored the town like usual, however today we found ourselves in a new area; one with tall apartment complexes, brand name stores, and plenty of motorbikes and cars going to and fro."
     #%If the area has been seen before%
     ##Today, I decided to take Shiori-chan to a new part of town for her; the commercial area. I was worried at first, but she actually seemed to not mind all the people.#
     "Despite the crowds, Shiori-chan seemed calm and composed, staying as close as her behind would allow to me while taking in the sights and sounds around her."
@@ -8151,7 +8151,7 @@ label AE039:
     MC "Hm? Yo, Shiori-chan, everything okay?"
     show AE surprised
     AE "That store...across the street."
-    "Craning my neck to see further, I noticed a store with a purple and yellow awning, the characters for 'Amatsu Game Store' on the window pane. Shiori-chan turned around after adressing it to me."
+    "Craning my neck to see further, I noticed a store with a purple and yellow awning, the characters for 'Amatsu Game Store' on the window pane. Shiori-chan turned around after addressing it to me."
     MC "Amatsu? Never heard of it."
     show AE happy
     AE "Aha, that's...it's an old store from my childhood."
@@ -8162,21 +8162,21 @@ label AE039:
     AE "Board games. It was hard finding other players, but when I did, it was a lot of fun. The one by my house closed down, so I never really found anywhere else to play."
     MC "Board games? Like chess?"
     AE "Well, I actually don't know much about chess...but there is *one* game in particular."
-    "Shiori-chan turned back to the store, and let out a remanescent sigh."
+    "Shiori-chan turned back to the store, and let out a reminiscent sigh."
     show AE happy
     AE "Haah, it's just been so many years."
     MC "...Shiori-chan."
     show AE neutral
     AE "Hm?"
     MC "Do you want to go in?"
-    "Although at first I thought she may have been guilt-tripping me into wanting to check it out, her surprised reaction showd she hadn't expected me to say that."
+    "Although at first I thought she may have been guilt-tripping me into wanting to check it out, her surprised reaction showed she hadn't expected me to say that."
     show AE surprised
     AE "... M-may we?"
     MC "Eheh, sure."
     "Taking her hand, we waited at the stop light to cross before getting to the front of the store. I held it open and motioned for her to go in first."
     scene Store with fade
     "As we entered the building, a strange smell of cheap cinnamon-apple air freshener and dust permeated the air. Behind glass displays, miniature soldiers and creatures were painted a variety of vibrant colors with precise detail."
-    "Along the walls, wooden shelves contained a plethora of shrink wrapped books and boardgames, some in Japanese, but a majority having logos in what appeared to be English. While I was taking in the sights, Shiori-chan looked around, the nostalgia creeping in."
+    "Along the walls, wooden shelves contained a plethora of shrink wrapped books and board games, some in Japanese, but a majority having logos in what appeared to be English. While I was taking in the sights, Shiori-chan looked around, the nostalgia creeping in."
     show AE happy with dissolve
     AE "Wow...It's just like the one back home."
     MC "Are there a lot of these stores?"
@@ -8270,7 +8270,7 @@ label AE039:
     show AE happy
     AE "Yes, which is why we use this."
     MCT "Aaaand out comes the protractor."
-    AE "You roll nine twenty sided die to determine how much of the protractors radius is covered by the spell, which as well accounts for the direction, and for the reach of it's effect, you can use the tape measurer to-"
+    AE "You roll nine twenty sided die to determine how much of the protractors radius is covered by the spell, which as well accounts for the direction, and for the reach of its effect, you can use the tape measurer to-"
     MCT "CHANGE THE SUBJECT NOW."
     MC "I gotta say, I like the little details on the building ruins."
     AE "This, Hotsure-san, is cover. You're squad can hide behind it in order to evade fire, but you have to be completely obscured."
@@ -8434,7 +8434,7 @@ label AE040:
     #SCENE STORE FRONT/STREET
     scene Town with fade
     show AE sad with dissolve
-    "I traveled through the mountains high and the valleys green, through the streets paved with cobble and stone. Indeed, there have been many men who have done so for the sake of booty, yay. But nary a man to so so for the promise of panties. This is my creed."
+    "I traveled through the mountains high and the valleys green, through the streets paved with cobble and stone. Indeed, there have been many men who have done so for the sake of booty, yay. But nary a man to do so for the promise of panties. This is my creed."
     MC "Ok. Hah... hah... here we are."
     AE "N-no... pah.. r-running in... ugh..."
     "We stopped to catch our breath, the amount of time it likely would have taken us just to walk spent resting my arm on Shiori-chan's hip as she panted away. We composed ourselves, and after a verbal thrashing to me, Shiori-chan calmed down."
@@ -8516,10 +8516,10 @@ label AE040:
     AE "You have to {i}roll{/i} in order to see how many you move. You need up to t5 to move fifteen inches and grab the point."
     AE "There you go. Sixteen."
     MC "..."
-    MC "Aaanad boom."
+    MC "Aaand boom."
     "I emphatically placed a point marker on point C for my team."
     MC "With that, I now have fifteen points to your te-"
-    AE "Casting 'Deep Terrain Strike.' Sending marines into point B, and rolling to see distance from the intended dropsite."
+    AE "Casting 'Deep Terrain Strike.' Sending marines into point B, and rolling to see distance from the intended drop site."
     AE "Rolled one."
     MC "Eh?"
     "Shiori-chan, whether intended or not, bumped me out of the way with her rump and used a tape measure to find one inch from the center of my base."
@@ -8532,7 +8532,7 @@ label AE040:
     MC "Eheheh...ehhh..."
     MC "Is... is it my turn yet?"
     AE "No."
-    MCT "Damnnit! Well... that's fine. After her turn, i'll use my commander unit to... um..."
+    MCT "Damnnit! Well... that's fine. After her turn, I'll use my commander unit to... um..."
     MC "Juuust to make sure you know, what is my commander's ability again?"
     AE "Commander Dogma can hide any and all units on your side."
     MCT "YEAH! I'll use that to... um... hide my soldiers! I think if I do that, I can move them anywhere I want on the-"
@@ -8623,12 +8623,12 @@ label AE101:
     MC "Twelve..."
     FMG "COME ON HOTSURE, GO AT IT LIKE YOU HAVE A PAIR!"
     "Akira-san jeered me on as I lay on the mat...I never even asked her to come over, she just saw what I was doing and started shouting."
-    MCT "NNggggh, if I do any more I might end up vomitting. Just. ONE. MORE!!!"
+    MCT "NNggggh, if I do any more I might end up vomiting. Just. ONE. MORE!!!"
     MC "AGH!"
     "As I reached thirteen, I felt my body give way as I collapsed onto the mat with a loud thud. Akira-san stood over me smiling."
     FMG "So...how do ya feel?"
-    MC "Like i'm gonna die."
-    FMG "I'm impressed, dude. I've never seen a near fatality from thirteen situps before."
+    MC "Like I'm gonna die."
+    FMG "I'm impressed, dude. I've never seen a near fatality from thirteen sit ups before."
     "Despite my protests, Akira-san picked me up by the shirt with one hand and plopped me down on a bench."
     FMG "Y'know Hotsure-chi, if you wanna build up muscle right, you gotta start off a bit slow, hell, someday you may be able to do more than a seven year old!"
     "Akira-sans boisterous laugh echoed through the gym, as I turned a shade of crimson. I covered my face with a hand and looked to the side to hide my shame when I came across someone who I would have never expected to see here. Akira-san, however, appeared to notice first."
@@ -8638,7 +8638,7 @@ label AE101:
     "Shiori-san looked over towards our direction and, in acknowledgement to Akira-san's waving, nodded before going back to her clipboard."
     FMG "Awwww, what's with that crap?! Come on over dude!"
     AE "I'm fine, thank you."
-    FMG "Aww, come on now, i'm chillin with Hotsure-chi; don't you wanna come over? I can save you a seat on the bench...though you'll probably need two! BAHA!"
+    FMG "Aww, come on now, I'm chillin with Hotsure-chi; don't you wanna come over? I can save you a seat on the bench...though you'll probably need two! BAHA!"
     MCT "Ow. I mean, I get it was with good intentions, but that was harsh."
     "Shiori-san closed her eyes and gave a deep inhale, before going back to her examination of...whatever that machine is."
     AE "And have you sweating all over me? No. That won't be happening."
@@ -8700,7 +8700,7 @@ label AE101:
 label AE102:
     scene Hallway with fade
     "And so, we have reached the end of school for the day. I was going to just head back to my dorm room, however I saw Shiori whispered something to Akira before both of them left the room. I was just going to leave it alone, but unfortunately there still outside the classroom for all to hear."
-    FMG "For that last time, I an't buttoning my shirt no matter what the stupid dress code says!"
+    FMG "For that last time, I ain't buttoning my shirt no matter what the stupid dress code says!"
     AE "It is indeed the last time, Mizutani-san, because you WILL be wearing your uniform properly. If you would have listened to me the first time, this wouldn't have been an issue."
     FMG "If you listened the first time, you know I'm not going to button it, not for you or anyone! What is the big deal, it's not like I'm wearing something that shows anything I'm not supposed too!"
     MCT "Ohhh boy, this looks like trouble. If I don't intervene soon these two are going to be going at it for hours."
@@ -8722,7 +8722,7 @@ label AE102_c1:
     MC "Hey, Akira-san, it doesn't seem like that big of a deal. I mean, rules are rules, right?"
     show FMG sad
     FMG "Rules!? Rules!? I thought the whole point of this school was to be comfortable with our bodies, but instead you guys are ganging up on me! *shiff* I would have thought you'd understand Kei!  And Shiori, you're a heartless bitch!"
-    "Without so much as a wold, Akira ran off down the hallway with fresh tears falling behind."
+    "Without so much as a word, Akira ran off down the hallway with fresh tears falling behind."
     hide FMG
     show AE sad
     AE "N-now Mizutani-san, hold on!"
