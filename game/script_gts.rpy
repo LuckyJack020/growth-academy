@@ -426,7 +426,7 @@ label GTS005_c2:
     show GTS sad
     GTS "I... hope you do not plan on actually doing that."
     MC "Heh... Not a fan of horror movies then, huh? Well don't worry, I'm mostly teasing, I wouldn't actually do that."
-    extend " Well okay, maybe on halloween."
+    extend " Well okay, maybe on Halloween."
     GTS "..."
     MC "Basically though, my hair is going to grow a lot and rather quickly too. So, I had better learn how to cut my own hair, or else I'll be spending a ton of money just so people can see me."
     show GTS neutral
@@ -672,7 +672,7 @@ label GTS009:
     scene Town with fade
     play music Sunset
     #Afternoon, gentle music, scene becomes locked after scene 10.
-    "My stride was rather laxed as I wandered the various blocks of the town. It was rather quaint and not crowded. Well that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
+    "My stride was rather lax as I wandered the various blocks of the town. It was rather quaint and not crowded. Well that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
     "I didn't get to stay on that train of thought for long however as I faintly heard a gentle voice speaking."
     show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     GTS "... Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
@@ -680,7 +680,7 @@ label GTS009:
     BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
     GTS "Well, if you're certain. Though I'd gladly help you get dressed, if you're concerned about your bust getting in the way..."
     BE "Well, I appreciate the help, Yamazaki-san, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
-    "I was immediately spotted as I rounded the corner and saw the girls in a more casual attire than I was use to."
+    "I was immediately spotted as I rounded the corner and saw the girls in a more casual attire than I was used to."
     BE "Yo! Kei-chan!"
     "She waved as she called out to me. Though my eyes immediately widened as Honoka ran over, her bountiful busty bounding towards me before she came to my side and tossed an arm around my shoulders."
     show BE happy
@@ -808,7 +808,7 @@ label GTS009_c1_2:
     "Nar: I felt a blush come over me as Naomi smiled at me after putting on the headband."
     GTS "Thank you again Hotsure-san. Shall we continue looking around town?"
     scene black with fade
-    "There was a spring to her step as she left the store and we followed, Honoka spending the rest of the day whispering into my ears. It was either pick up lines or just general advances I could make. Still, I didn't mind the constant advice as we enjoyed the rest of our journey until the sun began to set to signal the end of our day."
+    "There was a spring to her step as she left the store and we followed, Honoka spending the rest of the day whispering into my ears. It was either pickup lines or just general advances I could make. Still, I didn't mind the constant advice as we enjoyed the rest of our journey until the sun began to set to signal the end of our day."
     jump daymenu
 
 label GTS009_c1_3:
@@ -819,7 +819,7 @@ label GTS009_c1_3:
     GTS "Yes. These are usually the things my mother sends me when she travels. These and occasionally a small trinket."
     MC "I take it she travels a lot then."
     GTS "On occasion. Normally with my father."
-    MC "id you travel a lot?"
+    MC "Did you travel a lot?"
     GTS "A decent amount yes. More so when I was younger."
     MC "You're lucky. I've always wanted to travel, see some landmarks and try out new foods. Must have been fun."
     show GTS happy
@@ -848,7 +848,7 @@ label GTS009_c1_3:
     BE "Anyway, let's not spend the whole day in here. Come on! We got more of the town to explore!"
     scene black with fade
     "She bounced out of the shop as Naomi giggled and followed, leaving me shaking my head as I followed the two."
-    "I later felt grateful that I hadn't spend my money as in another store Honoka's bust knocked over a display and I offered to buy an item that had broke. Naomi had offered to help to, but I didn't want her spending more than she already had that day."
+    "I later felt grateful that I hadn't spent my money as in another store Honoka's bust knocked over a display and I offered to buy an item that had broke. Naomi had offered to help to, but I didn't want her spending more than she already had that day."
     "Still, we shared a laugh over it by the end of the day. Honoka being annoyed with my suggestion of wearing a, CAUTION: WIDE TURNS, sign on her shirt. Either way it had been a good day and we even discussed possibly doing it again sometime."
     "I know I'd be more than willing to spend another day like that. Though next time I'll make sure I have a lot more money on me..."
     jump daymenu
@@ -988,7 +988,7 @@ label GTS011:
     MC "Filming? Oh, thanks Yamazaki-san."
     show GTS neutral at center with dissolve
     "Naomi had already returned with a small tray of crackers and offered one to me and Ryoko, who also took one."
-    Ryoko "Thanks Yamazaki-san. Yeah, me and a couple of students in the flim club are working on a small movie together."
+    Ryoko "Thanks Yamazaki-san. Yeah, me and a couple of students in the film club are working on a small movie together."
     MC "Oh wow, that's pretty cool."
     GTS "That does sound like it would be fun."
     show Ryoko happy
@@ -1100,7 +1100,7 @@ label GTS011b:
     MC "Heh, me in a movie. I'd be a terrible main character, I'm better off being an extra. I'm a natural at just blending in to the background."
     show GTS neutral
     GTS "I think you'd do quite well."
-    MC "Well thank you for the vote of confidence. Maybe I'll take her up on her offer. Who knows, maybe I'll win an award for best hair and make up."
+    MC "Well thank you for the vote of confidence. Maybe I'll take her up on her offer. Who knows, maybe I'll win an award for best hair and makeup."
     "Naomi placed a hand over her mouth as I heard the faintest giggle at my joke. The corner of her smile peeking out from behind her hand which in turn got a smile from me."
     jump daymenu
 
