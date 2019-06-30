@@ -4572,7 +4572,7 @@ label BE027:
     show BE neutral with dissolve
     BE "Yep. Nice isn't it? Straightforward and to the point. Would be better if more things were like that. 'Let's go to 'Grocery Store' to get some food for dinner and then we'll head to 'Movie Theater' later.'"
     "I mulled over Honoka's statement as we walked into the store."
-    C "But then you wouldn't be able to differentiate between good and bad places."
+    MC "But then you wouldn't be able to differentiate between good and bad places."
     BE "Hmm..."
     show BE happy
     BE "Well then they should just stop having bad places. Easy fix."
@@ -4663,9 +4663,9 @@ label BE027_c2:
     menu:
         "The jean shorts and jacket.": #BE_Tomboy +1
             jump BE027_c2_1
-        "The skimpy lingerie." if not GetFlag("BE027_c2_2"):
+        "The skimpy lingerie." if not getFlag("BE027_c2_2"):
             jump BE027_c2_2
-        "The skimpy lingerie. (disabled)" if GetFlag("BE027_c2_2"):
+        "The skimpy lingerie. (disabled)" if getFlag("BE027_c2_2"):
             pass
         "The sundress.": # BE_Feminine +1
             jump BE027_c2_3
@@ -4960,7 +4960,7 @@ label BE028:
     "Honoka's spare hand reached over and grabbed mine. I chuckled. "
     MC "Oh, duh. It can't really test our compatibility if we're not holding hands."
     MC "Okay. Here we go!"
-    "The machine lit up "Squeeze Now" and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
+    "The machine lit up 'Squeeze Now' and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
     show BE happy
     BE "Come on, Kei-chan, we can do this."
     if getAffection("BE") < 8:
@@ -5320,7 +5320,7 @@ label BE030:
     MC "Thinking about all the stuff we do together, and then thinking about doing it myself, it's just not as fun."
     BE "I know. I'm pretty great."
     if getVar("BEFeminine") > getVar("BETomboy"):
-        jump BE030_femenine
+        jump BE030_feminine
     elif getVar("BETomboy") > getVar("BEFeminine"):
         jump BE030_tomboy
     else:

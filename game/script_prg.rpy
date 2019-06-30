@@ -2038,7 +2038,7 @@ label PRG016_c1_after:
     jump daymenu
     
 label PRG017:
-    $setProgress("PRG", "PRG018")
+    $setProgress("PRG", "PRG019")
     scene School Planter with fade
     play music Sunset
     "After classes had ended for the day, I was left with not only a cramped wrist from the usual excessive note taking, but also a pounding tension headache that felt as though someone was hammering a nail deep into my forehead."
@@ -2205,8 +2205,7 @@ label PRG017_c1_2:
     "I nodded to her in confirmation before we turned and crossed the garden, heading for the cooking clubroom and talking all the way."
     jump daymenu
 
-label PRG018:
-    $setProgress("PRG", "PRG019")
+label PRG018
     scene Classroom with fade
     play music Schoolday
     "Morning classes went by in no time at all, as usual. As the day wore on, I found myself glancing across the room at Aida from time to time. On occasion, I'd catch her looking at me as well, but she'd turn her head away at the last minute, trying to look inconspicuous. When we were finally dismissed from our classes, Aida popped up from her desk and walked over to mine."
