@@ -7891,7 +7891,7 @@ label AE037_c2_after:
     jump daymenu
 
 label AE038:
-    $setProgress("AE", "AE038")
+    $setProgress("AE", "AE039")
     #Scene Afternoon 
     scene Hill Road with fade
     play music Schoolday
