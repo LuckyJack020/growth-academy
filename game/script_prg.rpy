@@ -3277,6 +3277,7 @@ label PRG022_c1_2:
     jump PRG022_c1_after
 
 label PRG022_c1_3:
+    $setFlag("PRG022_c1_3")
     "I pulled out my wallet and slid my credit card to the cashier."
     MC "Put it all on this, please."
     show PRG surprised
