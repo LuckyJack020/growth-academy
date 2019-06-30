@@ -1693,7 +1693,7 @@ label PRG014_c1_after:
     jump daymenu
 
 label PRG015:
-    $setProgress("PRG", "PRG020")
+    $setProgress("PRG", "PRG016")
     scene Dorm BBW with fade
     show PRG sad with dissolve
     play music Sunset
@@ -2036,6 +2036,7 @@ label PRG016_c1_after:
     scene black with fade
     "It was a long walk to the boy's dorms alone in the dark..."
     jump daymenu
+    
 label PRG017:
     $setProgress("PRG", "PRG018")
     scene School Planter with fade
@@ -2205,6 +2206,7 @@ label PRG017_c1_2:
     jump daymenu
 
 label PRG018:
+    $setProgress("PRG", "PRG019")
     scene Classroom with fade
     play music Schoolday
     "Morning classes went by in no time at all, as usual. As the day wore on, I found myself glancing across the room at Aida from time to time. On occasion, I'd catch her looking at me as well, but she'd turn her head away at the last minute, trying to look inconspicuous. When we were finally dismissed from our classes, Aida popped up from her desk and walked over to mine."
@@ -2361,6 +2363,7 @@ label PRG018_c1_after:
     jump daymenu
 
 label PRG019:
+     $setProgress("PRG", "PRG020")
     scene black with fade
     pause 2
     play sound AlarmClock
