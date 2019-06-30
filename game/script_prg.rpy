@@ -3329,7 +3329,7 @@ label PRG022_c1_after:
     PRG "Yeah, you're right.  When would you to do our taste test?"
     MC "Whenever you'd like.  I have a fairly open schedule."
     PRG "A-Alright, I'll let you know."
-    if getFlag("PRG022_c1_3") and getAffection("PRG") > 8):
+    if getFlag("PRG022_c1_3") and getAffection("PRG") > 8:
         "Aida looked down at the floor for a moment, before letting her gaze meet my eyes again."
         show PRG aroused
         PRG "So... how do people usually end a date?"
