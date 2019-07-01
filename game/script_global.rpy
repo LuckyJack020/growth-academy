@@ -169,8 +169,8 @@ label global000:
     MCT "Ahh... It's really hot today. And why haven't I seen anyone else on this path?"
     "I came to a stop on a wooden bridge overlooking a lake, taking the bottle of water from my gift bag and taking a sip."
     "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tomorrow. Never thought I'd have to be transferred out of my old one so quick without knowing why. Never been this far north before, either."
-    MCT "Why are my hands so sweaty? Am I that nervous, or is it just the heat getting to me?."
-    "In the back of my head, I knew for a fact it was my nerves. I'm gonna be living away from home and on my own. My luggage couldn't feel more heavy if it tired. I talked a big game to my parents about how I was fine...."
+    MCT "Why are my hands so sweaty? Am I that nervous, or is it just the heat getting to me?"
+    "In the back of my head, I knew for a fact it was my nerves. I'm gonna be living away from home and on my own. My luggage couldn't feel more heavy if it tried. I talked a big game to my parents about how I was fine...."
     "But..."
     MCT "Where even am I?! I I've been walking for half an hour, shouldn't I have gotten there already?!!"
     "I walked through the forested path for a few more minutes, trying to catch my bearings as I searched desperately for any indication of another person."
@@ -220,7 +220,7 @@ label global000:
     "Until one day, she was just gone. Moved over to an all girls' school in a different part of the country. We never saw each other again." 
     show BE neutral
     BE "You dork! Why didn't you say anything the first time...."
-    MC "What would be the chances?!."
+    MC "What would be the chances?!"
     MCT "I mean, you look so different! You look..."
     play sound Boing
     show cg BE001 with vpunch
@@ -268,7 +268,7 @@ label global000:
     menu:
         "Swimming at the beach.":
             jump global000_cbreak_1
-        "At the library":
+        "At the library.":
             jump global000_cbreak_2
         "Touring the local museums.":
             jump global000_cbreak_3

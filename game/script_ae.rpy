@@ -2827,7 +2827,7 @@ label AE017:
     "Looking at the selections, it seemed as though the school had a wide variety of different foods and drinks available, definitely more than I'd seen before."
     MC "Uaaah, look at all this stuff."
     MCT "Hmm...I think I'll just go with the Rice and Chicken."
-    "I grabbed a bowl and began to fill it up in the self-serve area; taking a few small strawberries as a little desert. After grabbing some chopsticks, I went to look for a place to sit."
+    "I grabbed a bowl and began to fill it up in the self-serve area; taking a few small strawberries as a little dessert. After grabbing some chopsticks, I went to look for a place to sit."
     MCT "Hmm...let's see...where can I sit where Shiori-san and I-"
     "Almost to answer my own question, I caught a glimpse of the spectacled girl looking at me over a small partition."
     MCT "Oh! Oh, she's here already."
@@ -6386,8 +6386,8 @@ label AE031:
     MC "When?"
     show AE aroused #flustered
     AE "The day that, well, our relationship was made public."
-    AE "Seeing the situation was hectic, I suppose I simply decided to put it off. However after some thought... I decided against showing you all together."
-    MC "Why all together?"
+    AE "Seeing the situation was hectic, I suppose I simply decided to put it off. However after some thought... I decided against showing you altogether."
+    MC "Why altogether?"
     AE "Well..."
     show AE sad
     AE "Out of the belief you wouldn't care."
@@ -6869,7 +6869,7 @@ label AE033_c1_after:
     MC "...Hmn..."
     MCT "I mean... she has a point. Every time she's shown a fairly strong emotion it's always been to sway things in her direction. She never seems to 'lose it'..."
     show AE neutral
-    AE "I mean no disrespect, of course, however you on the other hand seem to be fairly easy to read based on how you act."
+    AE "I mean no disrespect, of course. You, on the other hand, seem to be fairly easy to read based on how you act."
     MC "How I... act?"
     AE "Indeed. For example, your neck. You rub it when bashful, yes?"
     MC "Wuh-I..."
@@ -7285,7 +7285,7 @@ label AE035:
         AE "..."
         AE "As expected of Hotsure Keisuke. How much of your plan worked out to the letter?"
         MC "I'm not quite sure what you mean?"
-        show AE neutral-surprised
+        show AE surprised
         AE "You expected to leave me here with the food, and yet you have spare chopsticks?"
         AE "You figured I'd be guilt tripped into eating with you?"
         AE "Dear lord, if it were anyone else, I'd be frustrated to be manipulated so easily, but frankly I'm impressed!"
@@ -7320,7 +7320,7 @@ label AE035:
     AE "Oph, hm-mm, can't eat that. Lactose intolerant."
     MC "Really?"
     #show AE embarrassed
-    AE "Unfortunately so... embarrassingly so, actually. Diary of any kind makes me... *khm* well, nevermind. I simply don't eat dairy."
+    AE "Unfortunately so... Embarrassingly so, actually. Diary of any kind makes me... *khm* Well, nevermind. I simply don't eat dairy."
     MCT "I never knew that...and here I thought she might be a big ice-cream fan."
     MC "Well, I can eat those then."
     MC "That's a shame they go really well with-"
@@ -7404,7 +7404,7 @@ label AE036:
     show Yuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     Yuki "Okay. I'll inform Ryoko-chan about the-"
     #show Yuki surprised
-    Yuki ":...Um. Ma'am?"
+    Yuki "...Um. Ma'am?"
     show AE neutral-annoyed
     AE "Hm?"
     show AE surprised
@@ -7415,7 +7415,7 @@ label AE036:
         "Shiori-chan was pulled swiftly and effortlessly, and soon the two of us were going towards my planned destination."
     else:
         "I barely made it a few inches before I felt a short tug from Shiori-chan's arm which stopped me dead in my place."
-        MC "Oof! H-Hotsure-san, what was that?"
+        AE "Oof! H-Hotsure-san, what was that?"
         MC "Pah... ah... s-sorry, I was just... trying to be cute."
         MCT "She's so heavy!"
         AE "W-well, you don't need to pull on me. What's-"
@@ -7942,7 +7942,7 @@ label AE038:
     AE "Well, I've been busy, and..."
     AE "...Yesterday morning."
     MC "What?! Aren't you hungry?"
-    show AE annoyed
+    show AE neutral-annoyed
     AE "I'm perfectly fine, Hotsure-san. I'm not-"
     #*STOMACH GRUMBLE SFX*
     MC "..."
@@ -8125,7 +8125,7 @@ label AE038:
 label AE039:
     #SCENE AFTERNOON
     $setProgress("AE", "AE040")
-    scene City with fade
+    scene Town with fade
     play music Schoolday
     show AE neutral with dissolve
     "As Shiori-chan and I walked through town, the murmur of bustling crowds and the gentle rumble of vehicles permeated the air, giving me a distinct feeling of nostalgia for home."
@@ -8273,7 +8273,7 @@ label AE039:
     AE "You roll nine twenty sided die to determine how much of the protractors radius is covered by the spell, which as well accounts for the direction, and for the reach of its effect, you can use the tape measurer to-"
     MCT "CHANGE THE SUBJECT NOW."
     MC "I gotta say, I like the little details on the building ruins."
-    AE "This, Hotsure-san, is cover. You're squad can hide behind it in order to evade fire, but you have to be completely obscured."
+    AE "This, Hotsure-san, is cover. Your squad can hide behind it in order to evade fire, but you have to be completely obscured."
     show AE neutral
     AE "Now, back to attack spells."
     MCT "NO"
@@ -8326,6 +8326,7 @@ label AE039:
 label AE040:
     #SCENE AFTERNOON
     #SCENE OUTSIDE GIRLS DORM
+    $setProgress("AE041")
     scene Dorm Exterior with fade
     play music Schoolday
     "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomoko, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
@@ -8347,7 +8348,7 @@ label AE040:
     "I waved goodbye to my sister and her gabby friend and was going to wait outside Shiori-chan's room when-"
     show Tako neutral with dissolve #happy
     Tako "Keisuke! What's good?"
-    "I ran into Yureno-san, looking a hip as ever in every sense of the word."
+    "I ran into Yureno-san, looking as hip as ever in every sense of the word."
     MC "Afternoon, Yur-"
     Tako "Soooo, a lil bird told me you and Shiori-chan walked into an Amatsu game store. That true?"
     MCT "She... didn't even try to pretend to care about how I was."
@@ -8373,7 +8374,8 @@ label AE040:
     Tako "Here, she'll tell ya."
     #show Tako happy
     Tako "OOOOOOI! Shiorear-saaan!~"
-    show Tako happy at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    #show Tako happy at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tako neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     show AE neutral-annoyed at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     "I turned around with the speed of a cheetah, Shiori-chan quick to take note of the urgency in my eyes appeared surprised, but then quelled it with annoyance."
     AE "I don't know why you think you can just give me an asinine name such as-"
@@ -8489,7 +8491,7 @@ label AE040:
     scene Store with fade
     show AE neutral with dissolve
     play music Tension
-    MCT "Okay, my soldiers are in position around the middle of the field...and my psychic has his mouth basically wrapped around the nozzle of one of Shiori-chan's soldiers flame throwers. He can probably pop off one last spell..."
+    MCT "Okay, my soldiers are in position around the middle of the field...and my psychic has his mouth basically wrapped around the nozzle of one of Shiori-chan's soldier's flame throwers. He can probably pop off one last spell..."
     "I looked over my cards, knowing the next one would be my last."
     "In order to use Lightning War, you must have a squad next to a tank. That squad will be able to travel at the same distance as the tank, but only if you roll above a 10 on a d20."
     MCT "d20?"
