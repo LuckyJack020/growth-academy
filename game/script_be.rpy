@@ -4492,7 +4492,7 @@ label BE026_c3_1:
         $setAffection("BE", 2)
         BE "You did? With your bare hands? You didn't hurt it, did you?"
         MC "No no, it's right here, and it's okay. You've gotta check this out!"
-    "Honoka stood up, and dusted herself off. She rushed off to my position as quick as I could, making sure to keep the cicada contained."
+    "Honoka stood up, and dusted herself off. She rushed off to my position as quick as she could, making sure to keep the cicada contained."
     show BE neutral
     BE "Oh my gosh, I can't believe you caught it!"
     MC "Yeah, here, take a look..."

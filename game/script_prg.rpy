@@ -1143,7 +1143,7 @@ label PRG010:
     show PRG aroused
     PRG "..."
     "I used the awkward silence to confirm what I'd felt. It was subtle, given how loosely she was wearing her clothes, but under the apron it was clear that Aida's bust had gotten larger. Not as big as Honoka, of course, but definitely bigger than that first meeting."
-    "My eye wandered down from her chest, and I saw her hips were bigger, too, wider, more thick-looking. Definitely more padding that could be explained by a 'freshman 15'."
+    "My eye wandered down from her chest, and I saw her hips were bigger, too, wider, more thick-looking. Definitely more padding than could be explained by a 'freshman 15'."
     MC "So..."
     PRG "..."
     MC "I guess this is your growth?"
