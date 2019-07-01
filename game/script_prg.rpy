@@ -2205,7 +2205,7 @@ label PRG017_c1_2:
     "I nodded to her in confirmation before we turned and crossed the garden, heading for the cooking clubroom and talking all the way."
     jump daymenu
 
-label PRG018
+label PRG018:
     scene Classroom with fade
     play music Schoolday
     "Morning classes went by in no time at all, as usual. As the day wore on, I found myself glancing across the room at Aida from time to time. On occasion, I'd catch her looking at me as well, but she'd turn her head away at the last minute, trying to look inconspicuous. When we were finally dismissed from our classes, Aida popped up from her desk and walked over to mine."
@@ -2362,7 +2362,7 @@ label PRG018_c1_after:
     jump daymenu
 
 label PRG019:
-     $setProgress("PRG", "PRG020")
+    $setProgress("PRG", "PRG020")
     scene black with fade
     pause 2
     play sound AlarmClock
