@@ -1220,7 +1220,7 @@ label BBW008A_c3:
     jump daymenu
     
 label BBW009:
-    scene Hallway with fade
+    scene He
     play music Busy
     "It was only the second week of the year and I was already getting cabin fever being stuck at the school 24/7."
     "There was a town not far from the gates, but I hadn't gotten a chance to check it out yet. Hadn't even checked out much of the school, for that matter."
@@ -3785,7 +3785,7 @@ label BBW022:
             "I wrote back saying I still had homework and studying to take care of, but I could swing by and lend a hand."
         "Ehhhh, I don't want to deal with Alice right now.":
             jump BBW022_c1_3
-    scene Dorm PRG with fade
+    scene Dorm PRG Day with fade
     "Aida answered the door."
     show PRG neutral at center with dissolve
     PRG "H-Hello... Thank you for coming. Nikumaru-san needs help-"
@@ -3818,8 +3818,8 @@ label BBW022:
     MC "Hey, it's your space. But I don't know much about interior decorating."
     show BBW happy
     BBW "Don't worry yourself about that. I've already planned out how I want to rejuvenate the space."
-    show BBW neutral at Position(xpos=0.2)
-    show PRG neutral at Position(xpos=0.15) behind BBW
+    show BBW neutral at Position(xpos=0.3) with dissolve
+    show PRG neutral at Position(xpos=0.2) behind BBW with dissolve
     BBW "I need your help moving the furniture around. Kodoma-san and I aren't strong enough to move the bed."
     MC "Oh. Well, all right."
     MC "Let me limber up here..."
