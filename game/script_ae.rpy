@@ -8326,7 +8326,7 @@ label AE039:
 label AE040:
     #SCENE AFTERNOON
     #SCENE OUTSIDE GIRLS DORM
-    $setProgress("AE041")
+    $setProgress("AE", "AE041")
     scene Dorm Exterior with fade
     play music Schoolday
     "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomoko, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."

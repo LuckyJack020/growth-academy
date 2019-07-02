@@ -1900,7 +1900,7 @@ label FMGBBW001:
     show BBW haughty
     BBW "Well, they're rather small, I'd want a half-dozen at least, so that would-"
     show FMG surprised
-    FMG "Wha? No I mean Twelve AM."
+    FMG "Wha? No, I mean twelve o'clock."
     show BBW surprised
     BBW "O-Oh um... *ahem*."
     show BBW neutral
