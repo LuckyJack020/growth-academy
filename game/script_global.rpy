@@ -455,7 +455,7 @@ label global000_AE_c1:
     hide FMG with dissolve
     show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     BE "You're class rep already? But I thought classes didn't start until tomorrow."
-    AE "I was granted the position along with my internment here. The school expects much of my abilities, and I expect to live up to those expectations.."
+    AE "I was granted the position along with my internment here. The school expects much of my abilities, and I expect to live up to those expectations..."
     BE "(Keisuke, this girl is kinda scary...)"
     show AE neutral
     AE "I can only assume you two are Honoka Inoue and Keisuke Hotsure?"

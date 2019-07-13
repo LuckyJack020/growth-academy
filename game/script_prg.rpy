@@ -3306,8 +3306,8 @@ label PRG022_c1_3:
         PRG "R-really?"
         MC "Yep. Plus, I couldn't just let you pay for that whole bill yourself. I'm going to be eating a good portion of it, so I should help pay."
         show PRG surprised
-        PRG "But, helping to pay and covering the entire bill are two totally different thing, Hotsure-san!"
-        MC "Well, like my dad always would say: ‘It's proper date etiquette.'"
+        PRG "But, helping to pay and covering the entire bill are two totally different things, Hotsure-san!"
+        MC "Well, like my dad always would say: 'It's proper date etiquette.'"
         "Next to me, Aida's face turned bright red."
     else:
         MC "My dad always told me that paying a bill was the polite thing to do. I guess it's just habit now."

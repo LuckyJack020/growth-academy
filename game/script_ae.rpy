@@ -7513,7 +7513,7 @@ label AE036:
     #CREEAK
     play music Sunset
     MCT "Ah, there she is."
-    "Shiori-chan came up from the stairway, her back hair blowing softly with the wind as she walked over to me."
+    "Shiori-chan came up from the stairway, her black hair blowing softly with the wind as she walked over to me."
     show AE neutral with dissolve
     AE "Good evening, Hotsure-san."
     MC "Hi."
