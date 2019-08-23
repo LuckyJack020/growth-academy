@@ -9,10 +9,11 @@
     eventlibrary = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'supermarket', 'town', 'track', 'woods']
+    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'clocktower', 'cookingclassroom', 'dormAE', 'dormBBW', 'dormBE', 'dormPRG', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'supermarket', 'town', 'track', 'woods']
     debugenabled = True
     debuginput = ""
     globalsize = 1
+    prgsize = 1
     
     import math
 
@@ -78,6 +79,8 @@
     #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
     #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
+    #ROUTELOCK: arg1 = (string) character code, true if you're on that route (or, if empty string, true if not on any route)
+    #NOROUTELOCK: arg1 = (string) character code, true if you're NOT on that route (or, if empty string, true if on any route)
     
     class EventTypeEnum:
         CORE, OPTIONAL, OPTIONALCORE = range(3)
@@ -160,6 +163,18 @@
                     break
             elif c[0] == ConditionEnum.OR:
                 if checkCriteria([c[1]]) or checkCriteria([c[2]]):
+                    continue
+                else:
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.ROUTELOCK:
+                if routelock == c[1]:
+                    continue
+                else:
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.NOROUTELOCK:
+                if routelock != c[1]:
                     continue
                 else:
                     criteriavalid = False
@@ -424,8 +439,17 @@
             
     def setSize(size):
         global globalsize
+        global prgsize
         if size > globalsize:
             globalsize = size
+            if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
+                prgsize = size
+    
+    #Edge case handler for Aida's intiial pregnancy
+    def setPregnant():
+        global prgsize
+        if 3 > prgsize:
+            prgsize = 3
 
 label start:
     python:
@@ -847,7 +871,7 @@ label debugloadtest:
             pause .1
             show AE aroused
             pause .1
-            show AE aroused-2
+            show AE embarrassed
             pause .1
             show AE aroused-3
             pause .1
@@ -961,7 +985,7 @@ label debugloadtest:
             pause .1
             show AE aroused
             pause .1
-            show AE aroused-2
+            show AE embarrassed
             pause .1
             show AE aroused-3
             pause .1

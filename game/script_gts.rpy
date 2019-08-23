@@ -1,5 +1,4 @@
 define GTS = Character('Naomi', color="#66FF33")
-define Vendor = Character('Vendor', color="#FFFFFF")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Minori = Character('Minori', color="#FF91DC")

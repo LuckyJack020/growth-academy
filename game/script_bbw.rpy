@@ -44,11 +44,11 @@ init 2 python:
     eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                         "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW025", "obsflags": ["BBWnowork"], "conditions": []} #\/ disabled due to affection not being very grindable right now
     eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                              "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW026", "obsflags": [],            "conditions": []} #"conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
     eventlibrary['BBW026'] = {"name": "The Trial of Smarts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                              "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW027", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW029", "obsflags": [],            "conditions": [[ConditionEnum.FLAG, "BBW_dating"]]}
-    eventlibrary['BBW029'] = {"name": "Who Are the Ad Wizards...", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW030", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW030'] = {"name": "Art Appreciation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW032", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW032'] = {"name": "Smells Like Team Spirit", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW033", "obsflags": ["BBWnowork"], "conditions": [[ConditionEnum.NOFLAG, "BBW008A_fail"]]}
-    eventlibrary['BBW033'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
+    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW030", "obsflags": [],            "conditions": [[ConditionEnum.FLAG, "BBW_dating"]]}
+    eventlibrary['BBW030'] = {"name": "Who Are the Ad Wizards...", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW031", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW031'] = {"name": "Art Appreciation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW033", "obsflags": [],            "conditions": []}
+    eventlibrary['BBW033'] = {"name": "Smells Like Team Spirit", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW034", "obsflags": ["BBWnowork"], "conditions": [[ConditionEnum.NOFLAG, "BBW008A_fail"]]}
+    #eventlibrary['BBW033'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
 
     #Optional
     eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                  "location": "classroom",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
@@ -61,7 +61,7 @@ init 2 python:
     eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []} 
     eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.OPTIONALCORE,                                                           "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10], [ConditionEnum.FLAG, "BBW025A_unlock"]]}
     eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW_working"]]}
-    eventlibrary['BBW031'] = {"name": "Wardrobe Dysfunction", "girls": ["BBW", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "classroom",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.OR, [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHAN, 10], [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHAN, 10]]]}
+    eventlibrary['BBW032'] = {"name": "Wardrobe Dysfunction", "girls": ["BBW", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "classroom",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.OR, [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHAN, 10], [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHAN, 10]]]}
 
     eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,                                "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                   "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,       "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
@@ -4781,7 +4781,7 @@ label BBW027_c1_2:
     jump daymenu
 
 label BBW028:
-    $setProgress("BBW", "BBW029")
+    $setProgress("BBW", "BBW030")
     scene Dorm Interior with fade
     "Whether I was ready or not, my first date with Alice had come."
     "It was easy - terrifyingly easy - to be intimidated by her. She was rich, she was used to the finer things, she was a bit... forceful in personality."
@@ -5123,8 +5123,8 @@ label BBW028_afterdate:
     "Eventually I told myself I could figure it out later. For now I needed sleep."
     jump daymenu
 
-label BBW029:
-    $setProgress("BBW", "BBW030")
+label BBW030:
+    $setProgress("BBW", "BBW031")
     scene Cafeteria with fade
     play music Schoolday
     "I timed my dinner for when I expected Alice would be here, but her usual spot was empty."
@@ -5178,15 +5178,15 @@ label BBW029:
     BBW "Just post them at all the regular announcement boards and in the halls."
     menu:
         "I guess I can do it.":
-            jump BBW029_c1_1
+            jump BBW030_c1_1
         "I have my own work to do.":
-            jump BBW029_c1_2
+            jump BBW030_c1_2
         "I can't do it for you, but I can help." if getAffection("BBW") >= 14: #(If affection score is > / = 14; +1 affection)
-            jump BBW029_c1_3
+            jump BBW030_c1_3
         "I can't do it for you, but I can help. (disabled)" if getAffection("BBW") < 14:
             pass
 
-label BBW029_c1_1:
+label BBW030_c1_1:
     MC "I guess I can do it. It won't take long, will it?"
     BBW "Not if you work fast."
     BBW "Thanks. Here you go."
@@ -5198,7 +5198,7 @@ label BBW029_c1_1:
     "It didn't stop me from doing the job, but I made myself a promise that next time I wouldn't roll over right away."
     jump daymenu
 
-label BBW029_c1_2:
+label BBW030_c1_2:
     MC "Sorry, but I have my own work to do."
     MC "Not club stuff, but homework, essays, you know."
     BBW "I understand."
@@ -5215,7 +5215,7 @@ label BBW029_c1_2:
     "She didn't sound angry, at any rate. That was good."
     jump daymenu
 
-label BBW029_c1_3:
+label BBW030_c1_3:
     MC "I can't do it for you, but I can help."
     $setAffection("BBW", 1)
     "She considered it for a second, then nodded."
@@ -5227,12 +5227,12 @@ label BBW029_c1_3:
     "It wasn't what I would call 'romantic,' but in its own simple way it was nicer than some dates I'd had."
     jump daymenu
 
-label BBW030:
+label BBW031:
     #Time: Afternoon
     if getFlag("BBW008A_fail"):
         $setProgress("BBW", "BBW033")
     else:
-        $setProgress("BBW", "BBW032")
+        $setProgress("BBW", "BBW033")
     scene Classroom with fade
     play music Sunset
     "Alice and I were on clean-up duty after class."
@@ -5307,27 +5307,27 @@ label BBW030:
     "I wanted to say something. To break the silence, and to prevent Alice from thinking I only saw her as 'a fat woman.'"
     "But wouldn't she see through me if I tried to change the conversation?"
     "A bolder act would probably be safer."
-    jump BBW030_c1
+    jump BBW031_c1
 
-label BBW030_c1:
+label BBW031_c1:
     menu:
-        "Ask how big she thinks she'll get." if not getFlag("BBW030_c1_1"):
-            jump BBW030_c1_1
-        "Ask how big she thinks she'll get. (disabled)" if getFlag("BBW030_c1_1"):
-            jump BBW030_c1_1
-        "Ask if she's working out to help deal with her body." if not getFlag("BBW030_c1_2"):
-            jump BBW030_c1_2
-        "Ask if she's working out to help deal with her body. (disabled)" if getFlag("BBW030_c1_2"):
-            jump BBW030_c1_2
-        "Comment about Renaissance art and female nudes." if not getFlag("BBW030_c1_3"):
-            jump BBW030_c1_3
-        "Comment about Renaissance art and female nudes. (disabled)" if getFlag("BBW030_c1_3"):
-            jump BBW030_c1_3
-        "I'm sure your growth will level off soon." if getFlag("BBW030_c1_1") or getFlag("BBW030_c1_2") or getFlag("BBW030_c1_3"):
-            jump BBW030_c1_after
+        "Ask how big she thinks she'll get." if not getFlag("BBW031_c1_1"):
+            jump BBW031_c1_1
+        "Ask how big she thinks she'll get. (disabled)" if getFlag("BBW031_c1_1"):
+            jump BBW031_c1_1
+        "Ask if she's working out to help deal with her body." if not getFlag("BBW031_c1_2"):
+            jump BBW031_c1_2
+        "Ask if she's working out to help deal with her body. (disabled)" if getFlag("BBW031_c1_2"):
+            jump BBW031_c1_2
+        "Comment about Renaissance art and female nudes." if not getFlag("BBW031_c1_3"):
+            jump BBW031_c1_3
+        "Comment about Renaissance art and female nudes. (disabled)" if getFlag("BBW031_c1_3"):
+            jump BBW031_c1_3
+        "I'm sure your growth will level off soon." if getFlag("BBW031_c1_1") or getFlag("BBW031_c1_2") or getFlag("BBW031_c1_3"):
+            jump BBW031_c1_after
 
-label BBW030_c1_1:
-    $setFlag("BBW030_c1_1")
+label BBW031_c1_1:
+    $setFlag("BBW031_c1_1")
     MC "Do you have any idea how big you'll get?"
     MC "I imagine it would be easier to deal with if you knew what to expect."
     show BBW neutral
@@ -5339,10 +5339,10 @@ label BBW030_c1_1:
     show BBW sad
     BBW "Though naturally I am holding out hope I end up on the lower end of the scale."
     MC "I understand."
-    jump BBW030_c1
+    jump BBW031_c1
 
-label BBW030_c1_2:
-    $setFlag("BBW030_c1_2")
+label BBW031_c1_2:
+    $setFlag("BBW031_c1_2")
     if getFlag("BBW028_muscle"):
         MC "You mentioned you had a workout routine to help build muscle, right?"
     else:
@@ -5369,10 +5369,10 @@ label BBW030_c1_2:
     MC "You're keeping control of your body."
     show BBW haughty
     BBW "Of course. I can handle any problem with dedication and willpower."
-    jump BBW030_c1
+    jump BBW031_c1
 
-label BBW030_c1_3:
-    $setFlag("BBW030_c1_3")
+label BBW031_c1_3:
+    $setFlag("BBW031_c1_3")
     MC "I was reading something online recently. Did you know that back around the Renaissance the women featured in paintings were thicker than you see in media today?"
     show BBW haughty
     "She looked at me with a mildly smug expression, and I realized at once I wasn't telling her anything new."
@@ -5403,9 +5403,9 @@ label BBW030_c1_3:
         BBW "Thus the 'well-fed' look became a sign of wealth and privilege, and works of art from the time reflected that."
         MC "Oh. I didn't realize that."
         MCT "I guess I should make sure I know what I'm talking about before I try to show off a bit of knowledge."
-    jump BBW030_c1
+    jump BBW031_c1
 
-label BBW030_c1_after:
+label BBW031_c1_after:
     MC "I'm sure your weight will level off soon."
     MC "None of the other students here have gotten too fat to live a fulfilling life, from what I've seen."
     show BBW neutral
@@ -5429,7 +5429,7 @@ label BBW030_c1_after:
         "I didn't have anything to contribute to that, but I liked listening to her talk about something she enjoyed."
     jump daymenu
 
-label BBW031:
+label BBW032:
     #Time: Morning
     scene Classroom with fade
     "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
@@ -5442,11 +5442,11 @@ label BBW031:
     show FMG angry at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     FMG "At least give me a reason. Would it kill you to not act like a selfish-"
     if getAffection("BBW") >= getAffection("FMG"):
-        jump BBW031_BBW
+        jump BBW032_BBW
     else:
-        jump BBW031_FMG
+        jump BBW032_FMG
 
-label BBW031_BBW:
+label BBW032_BBW:
     "Akira was cut off when Alice noticed my arrival and turned to me."
     BBW "Keisuke, can you talk some sense into this woman? I am quickly running out of patience."
     MC "What's the issue?"
@@ -5456,11 +5456,11 @@ label BBW031_BBW:
     BBW "Must I? Must I justify the decisions I make concerning my own property?"
     menu:
         "You can at least give her a reason. Saying 'No' just because comes across as rather petty.":
-            jump BBW031_BBW_1 #(+1 Alice)(+1 Akira)
+            jump BBW032_BBW_1 #(+1 Alice)(+1 Akira)
         "If she said 'No,' Akira, you should just accept it. She doesn't have to give a reason.":
-            jump BBW031_BBW_2 #(-1 Akira)
+            jump BBW032_BBW_2 #(-1 Akira)
 
-label BBW031_BBW_1:
+label BBW032_BBW_1:
     stop music
     FMG "Yeah Alice, it's common courtesy."
     play music Peaceful
@@ -5490,7 +5490,7 @@ label BBW031_BBW_1:
     jump daymenu
 
 
-label BBW031_BBW_2:
+label BBW032_BBW_2:
     "Akira didn't get any angrier, but having her glare at me instead of Alice was chilling."
     FMG "Of course you'd take her side."
     $setAffection("FMG", -1)
@@ -5508,7 +5508,7 @@ label BBW031_BBW_2:
     MCT "Maybe I shouldn't have taken Alice's side so readily."
     jump daymenu
 
-label BBW031_FMG:
+label BBW032_FMG:
     "She cut herself off when she saw me."
     FMG "Keisuke, help me out here."
     FMG "I just asked Queen Belly-"
@@ -5519,11 +5519,11 @@ label BBW031_FMG:
     BBW "As if I'm going to help you out after insulting me like that."
     menu:
         "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.": #(+1 Alice)
-            jump BBW031_FMG_1
+            jump BBW032_FMG_1
         "Saying 'I don't wanna' sounds childish.": #(-1 Alice)
-            jump BBW031_FMG_2
+            jump BBW032_FMG_2
 
-label BBW031_FMG_1:
+label BBW032_FMG_1:
     if getAffection("BBW") < 6:
         MC "Alice-"
         BBW "Nikumaru-san. Let's observe propriety while we're in class."
@@ -5538,9 +5538,9 @@ label BBW031_FMG_1:
     BBW "Very well."
     BBW "If you must know, I do not believe the dress would flatter Mizutani-san."
     BBW "It was designed for me personally, for my proportions."
-    jump BBW031_FMG_after
+    jump BBW032_FMG_after
 
-label BBW031_FMG_2:
+label BBW032_FMG_2:
     MC "Saying 'I don't wanna' sounds childish."
     MC "You could at least say why you don't want to."
     $setAffection("BBW", -1)
@@ -5552,9 +5552,9 @@ label BBW031_FMG_2:
     BBW "My body may have a little extra here and there-"
     FMG "A lot of extra everywhere, you mean."
     BBW "-which is why I've had my clothes specially made to suit me."
-    jump BBW031_FMG_after
+    jump BBW032_FMG_after
 
-label BBW031_FMG_after:
+label BBW032_FMG_after:
     show FMG neutral
     FMG "Yeah, so it should be big enough to fit me."
     show BBW angry
@@ -5634,7 +5634,7 @@ label BBW031_FMG_after:
     "The mood improved as we ate and talked about nothing in particular, the drama with Alice forgotten."
     jump daymenu
 
-label BBW032:
+label BBW033:
     $setProgress("BBW", "BBW033")
     #Time: Afternoon
     scene Cafeteria with fade
@@ -5663,11 +5663,11 @@ label BBW032:
     BBW "Got it in one."
     menu:
         "Sure, I can do it.":
-            jump BBW032_c1_1
+            jump BBW033_c1_1
         "I think it would be better if you did it yourself.":
-            jump BBW032_c1_2
+            jump BBW033_c1_2
 
-label BBW032_c1_1:
+label BBW033_c1_1:
     MC "No problem. You've got enough on your plate as it is."
     show BBW haughty
     BBW "Excellent. I knew you were reliable."
@@ -5690,7 +5690,7 @@ label BBW032_c1_1:
     "The more I thought about it, the more certain I was I had made the wrong choice."
     jump daymenu
 
-label BBW032_c1_2:
+label BBW033_c1_2:
     MC "You've already gotten in trouble for going against her before, haven't you?"
     MC "Do you really want to anger her again by blowing her off?"
     show BBW angry
@@ -5741,7 +5741,7 @@ label BBW032_c1_2:
     "Still, she was more thoughtful than a basic diva would be."
     jump daymenu
 
-label BBW033:
+label BBW034:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

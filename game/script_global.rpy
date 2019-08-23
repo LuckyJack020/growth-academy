@@ -36,6 +36,10 @@ image Hill Road = "Graphics/ui/bg/hillroad.png"
 image Theater = "Graphics/ui/bg/NYI.png"
 image Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
+image Game Store = "Graphics/ui/bg/gamestore.png"
+image Park = "Graphics/ui/bg/NYI.png"
+image Clock Tower = "Graphics/ui/bg/NYI.png"
+image Diner = "Graphics/ui/bg/burgerresstaurant.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -65,6 +69,7 @@ define Yuki = Character('Yuki', color="#FF91DC")
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
 define Tomoko = Character('Tomoko', color="#FF3300")
+define Mom = Character('Mom', color="#FF3300")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
@@ -77,8 +82,9 @@ define Owner = Character('Store Owner', color="#C0C0C0")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Teacher = Character('Teacher', color="#C0C0C0")
-define Principal = Character('Teacher', color="#C0C0C0")
+define Principal = Character('Principal', color="#C0C0C0")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define Vendor = Character('Vendor', color="#FFFFFF")
 
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
