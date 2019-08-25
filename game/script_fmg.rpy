@@ -1,8 +1,9 @@
 define FMG = Character('Akira', color="#FF9900")
-define Rin = Character('Rin', color="#CC33FF")
+define Chibuki = Character('Chibuki', color="#CC33FF")
 define Takamura = Character('Takamura-Sensei', color="#FF9900")
 define Cashier = Character('Cashier', color="#FF9900")
 define Chie = Character('Chie', color="#FF9900")
+define Fujimoto = Character('Fujimoto', color="#FF9900")
 
 image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
@@ -12,7 +13,7 @@ image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/angry.png")
 image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/aroused.png")
 image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 
-image Rin neutral = "Graphics/minor/rin-neutral.png"
+image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
 init 2 python:
     #go over order again after implementing new scenes
@@ -25,9 +26,13 @@ init 2 python:
     eventlibrary['FMG007'] = {"name": "Lunch and Hobbies", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG008", "obsflags": [],            "conditions": []}
     eventlibrary['FMG008'] = {"name": "The Pencil OF DOOM!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "FMG009", "obsflags": [],            "conditions": []}
     eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "FMG014", "obsflags": [],            "conditions": []}
-    eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "FMG018", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "FMG015", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG015'] = {"name": "", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                         "location": "town",             "priority": PrioEnum.NONE, "next": "FMG017", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG017'] = {"name": "Beware... The Curse", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "FMG018", "obsflags": [],            "conditions": []}
     eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "FMG019", "obsflags": [],            "conditions": []}
-    eventlibrary['FMG019'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
+    eventlibrary['FMG019'] = {"name": "You Shine Like the Sun", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                   "location": "roof",             "priority": PrioEnum.NONE, "next": "FMG021", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG021'] = {"name": "EMUS!", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                                    "location": "library",          "priority": PrioEnum.NONE, "next": "FMG022", "obsflags": [],            "conditions": []}
+    eventlibrary['FMG022'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
     
     #Optional
     eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",            "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
@@ -719,45 +724,45 @@ label FMG009:
     show FMG sad
     FMG "*Sigh* I'm waiting for someone because I need to talk to her. Speak of the devil..."
     show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show Rin neutral at Position(xpos=0.75) with dissolve
+    show Chibuki neutral at Position(xpos=0.75) with dissolve
     "Just like she said, there really was someone walking towards us. A girl with dark red hair, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
     "There were two big things that immediately made her stand out. One, her eyes were as blue if not bluer than Alice's, which would mean she was a foreign student. And two..."
     "...Her nipples were easily seen bulging out of the fabric of her shirt."
     UNKNOWN "Yo Akira, I'm here, so what did you... wait, are you trying to hook me up with this guy?!"
     show FMG surprised
-    FMG "What?! No! God Rin, he's here for something else."
+    FMG "What?! No! God Chibuki, he's here for something else."
     UNKNOWN "Well sorry, but then who and why is he here?"
     show FMG neutral
     FMG "Well since you asked, this is Keisuke. He was just saying hi before you got here."
     UNKNOWN "Oh, this is that Keisuke kid you've been spending your time exercising with? Well then, allow me to introduce myself."
-    Rin "The name's Rin Blackbourne; weird last name in these parts, I know, but I was born and raised in Manchester, England after me mum moved from Japan."
+    Chibuki "The name's Chibuki Blackburne; weird last name in these parts, I know, but I was born and raised in Manchester, England after me mum moved from Japan."
     MC "Nice to meet you. So, how do you know Akira?"
     play music Tension
     show FMG angry
     FMG "She's my roommate, who by the way STILL has yet to get her dirty clothes off the bathroom floor!"
-    Rin "*sigh*, really Mizutani, that's why I'm here? Would it kill you not to bring it up every day?"
+    Chibuki "*sigh* Really Mizutani, that's why I'm here? Would it kill you not to bring it up every day?"
     FMG "Let's not forget that you leave half-empty bags of potato chips all over the floor. I wouldn't care if our room didn't smell like sour cream and onions! I swear, you are such a slob!"
-    Rin "In my defense, that Butts-in-moto brat has been watching me like an ex-girlfriend after I accidentally broke a school rule, plus I'm the president of the art club! I gotta be there or else it will come crashing down!"
-    FMG "Ugh! Why do you feel the need to push the blame on others?! Admit it, You're just lazy Rin!"
-    Rin "Akira, just because you're my roommate and stronger than me, doesn't mean I won't knock ya bloody teeth in if ya don't knock it off!"
+    Chibuki "In my defense, that Butts-in-moto brat has been watching me like an ex-girlfriend after I accidentally broke a school rule, plus I'm the president of the art club! I gotta be there or else it will come crashing down!"
+    FMG "Ugh! Why do you feel the need to push the blame on others?! Admit it, You're just lazy Chibuki!"
+    Chibuki "Akira, just because you're my roommate and stronger than me, doesn't mean I won't knock ya bloody teeth in if ya don't knock it off!"
     "It looked like the both of them were going to fight it out right there..."
     MC "Um, hey can-"
     FMG "Ugh! I'm not dealing with this now!"
     "Akira lashed out before walking away, all the while angry."
     hide FMG
     play music Rain
-    extend " Rin, for her part, just looked back at me defeated."
-    show Rin neutral at Position(xpos=0.5)
-    Rin "*sigh* Sorry you had to be part of that, she can be a little hot-headed."
+    extend " Chibuki, for her part, just looked back at me defeated."
+    show Chibuki neutral at Position(xpos=0.5)
+    Chibuki "*sigh* Sorry you had to be part of that, she can be a little hot-headed."
     "She apologized, before walking to the vending machine to buy chips, it's only when she grabbed the first chip she said more."
-    Rin "Heh, she is right about one thing, I really am lazy."
+    Chibuki "Heh, she is right about one thing, I really am lazy."
     "I honestly didn't really know how to take that, so maybe an apology was in order."
     MC "Well, sorry if I made you uncomfortable in any way."
-    Rin "Oh no, far's I can tell, you did nothing wrong. Akira's just having some issues of her own."
-    Rin "In any case, if you really want to get along better with her, try to take her boisterous attitude with a grain of salt."
+    Chibuki "Oh no, far's I can tell, you did nothing wrong. Akira's just having some issues of her own."
+    Chibuki "In any case, if you really want to get along better with her, try to take her boisterous attitude with a grain of salt."
     MC "What do you mean by that?"
-    Rin "My gut is telling me that she's hiding something, but I ain't gotta clue as to what."
-    Rin "As for me, I suppose I'll still help her when you're not around. Later Kei."
+    Chibuki "My gut is telling me that she's hiding something, but I ain't gotta clue as to what."
+    Chibuki "As for me, I suppose I'll still help her when you're not around. Later Kei."
     jump daymenu
     
 label FMG010:
@@ -791,21 +796,21 @@ label FMG010:
         
 label FMG010_testpass:
     "...At least, that was the plan before I was called out to from behind. I turned around to find Mizutani's roommate running towards me; Blackbourne-san, Akira said her name was."
-    show Rin neutral with dissolve
-    Rin "Sorry, but you're Mizutani's workout partner, right?"
+    show Chibuki neutral with dissolve
+    Chibuki "Sorry, but you're Mizutani's workout partner, right?"
     MC "Yes that's me, did you need something Bla-"
-    Rin "Let me just stop you real quick, just call me Rin; I never did fully cotton to the weird ways my mum referred to people, all last name first."
-    MC "Understandable, so what did you need Rin?"
-    Rin "I'll be blunt. Akira had a growth spurt and asked me to get her new clothes she ordered from the tailor. Her old outfit got ripped pretty bad, so she was forced to stay in our room."
-    Rin "However, little miss Buttsumoto, in her infinite wisdom, wants me to go over the decorations for the upcoming school festival because of my duty as art club president... For the third time. Damn, I wish she'd get that stick out of her fat arse."
-    Rin "But anyways, I gotta be at the council room in five or I get the third degree. I figured since you both have been hanging out together, you could bring it to her. Do this, and I'll owe ya a favor you can cash in later."
+    Chibuki "Let me just stop you real quick, just call me Chibuki; I never did fully cotton to the weird ways my mum referred to people, all last name first."
+    MC "Understandable, so what did you need Chibuki?"
+    Chibuki "I'll be blunt. Akira had a growth spurt and asked me to get her new clothes she ordered from the tailor. Her old outfit got ripped pretty bad, so she was forced to stay in our room."
+    Chibuki "However, little miss Buttsumoto, in her infinite wisdom, wants me to go over the decorations for the upcoming school festival because of my duty as art club president... For the third time. Damn, I wish she'd get that stick out of her fat arse."
+    Chibuki "But anyways, I gotta be at the council room in five or I get the third degree. I figured since you both have been hanging out together, you could bring it to her. Do this, and I'll owe ya a favor you can cash in later."
     "This was interesting. It would explain why she was absent today. Without any clothes that fit her muscular body, she wouldn't be able to go out in public. She could probably use any help she could get."
     MC "All right, I'll help Akira out."
-    Rin "Great. So, because Akira's got nothing but her birthday suit on, you'll have to throw a pebble or something at our window to get her attention. It's on the second floor, look for the slightly opened window covered with a black poster. "
+    Chibuki "Great. So, because Akira's got nothing but her birthday suit on, you'll have to throw a pebble or something at our window to get her attention. It's on the second floor, look for the slightly opened window covered with a black poster. "
     MC "How do you know the window will be open?"
-    Rin "I sleep near the window- love the fresh air, but hate the sunlight."
-    Rin "Once you get her attention, have her tie our laundry basket with spare sheets, and she'll do the rest. Her clothes are at the tailor's. Now I gotta leave, later dude!"
-    Rin "Oh, and don't be a perv, even if she's got a rockin bod!"
+    Chibuki "I sleep near the window- love the fresh air, but hate the sunlight."
+    Chibuki "Once you get her attention, have her tie our laundry basket with spare sheets, and she'll do the rest. Her clothes are at the tailor's. Now I gotta leave, later dude!"
+    Chibuki "Oh, and don't be a perv, even if she's got a rockin bod!"
     MC "Wait wh-"
     "But alas, she left before I could finish asking what she meant by that."
     MCT "...Ugh, why is it when someone says something interesting, they leave it off without an explanation..."
@@ -813,9 +818,9 @@ label FMG010_testpass:
     stop music
     scene Dorm Exterior with fade
     play music FMG
-    "I got the clothes and made my way to the dorms, picking up a few small pebbles I noticed along the way. I followed Rin's instructions and found the exact window she'd described. I threw a pebble at the window to get Akira's attention and sure enough Akira stuck her head out, looking like she was wrapped in some kind of blanket toga."
-    FMG "Keisuke!? Why are you throwing rocks at my window? Where's Rin? She was supposed to be here by now with- hey, my clothes! Is that my uniform!?"
-    MC "That's why I'm here, Rin had a meeting with Shiori and asked me to give you your new outfit."
+    "I got the clothes and made my way to the dorms, picking up a few small pebbles I noticed along the way. I followed Chibuki's instructions and found the exact window she'd described. I threw a pebble at the window to get Akira's attention and sure enough Akira stuck her head out, looking like she was wrapped in some kind of blanket toga."
+    FMG "Keisuke!? Why are you throwing rocks at my window? Where's Chibuki? She was supposed to be here by now with- hey, my clothes! Is that my uniform!?"
+    MC "That's why I'm here, Chibuki had a meeting with Shiori and asked me to give you your new outfit."
     FMG "Well, how are you going to do that?! I wouldn't let you up here even if I wanted to!"
     MC "Just get some sheets and tie them to your laundry basket, lower it down out the window, and I'll put the clothes in."
     FMG "All right, but you better not try anything!"
@@ -825,7 +830,7 @@ label FMG010_testpass:
     MC "Mizutani-san, are you dressed?"
     FMG "Almost, you came just in time, I was going nuts!"
     MC "Oh? Tell me about it."
-    FMG "For the past two days, I've been stuck in my room. I forgot to get food, so all we had was Rin's junk food and soda. Worst part of it was that the soda was some cheap knock-off of Cane Cola called Kool Kola."
+    FMG "For the past two days, I've been stuck in my room. I forgot to get food, so all we had was Chibuki's junk food and soda. Worst part of it was that the soda was some cheap knock-off of Cane Cola called Kool Kola."
     FMG "Okay, I'm ready."
     "She opened the door and walked out. It was only then I truly saw how big she'd gotten, to have burst through her previous uniform..."
     show FMG happy
@@ -856,13 +861,13 @@ label FMG010_testpass:
     FMG "..."
     show FMG flex
     FMG "Everyone has a life goal, mine's just that simple, I guess!"
-    "I couldn't help shake the feeling that she was only giving me half of the truth, if not a quarter-truth truth. It made me wonder if Rin was right about Akira hiding something. Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
+    "I couldn't help shake the feeling that she was only giving me half of the truth, if not a quarter-truth truth. It made me wonder if Chibuki was right about Akira hiding something. Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
     show FMG neutral
     FMG "By the way, I gotta know, dude..."
     show FMG angry
     FMG "Why did you come all this way to my dorm, anyways? Were you trying to get a quick peek or something?"
     MCT "...huh, I was so caught up in getting these clothes, I had never even thought about anything like that."
-    MC "Er, to be honest, no. The thought never occurred to me. Rin said you needed help, and that was enough for me."
+    MC "Er, to be honest, no. The thought never occurred to me. Chibuki said you needed help, and that was enough for me."
     show FMG neutral
     FMG "Wow...I'm shocked. If I was a guy in your place, I totally would have tried something."
     show FMG flex
@@ -873,33 +878,33 @@ label FMG010_testpass:
     FMG "I'm glad to know you care like that, Kei!"
     FMG "Have a big hug for your troubles!"
     "She swept me up in a big hug, and I held my breath. I'd expected a tight, bone-creaking hug from a bear but instead the hug felt nice, gentle even. I wouldn't have minded staying like that for-"
-    show Rin neutral at Position(xpos=0.8)
-    Rin "So are you guys gonna shag here or what?"
+    show Chibuki neutral at Position(xpos=0.8)
+    Chibuki "So are you guys gonna shag here or what?"
     $setVar("RinFavor", getVar("RinFavor") + 1)
     MC "AHH!!"
     show FMG surprised at Position(xpos=0.2, yalign=1.0), Transform(xzoom=-1)
     "Both Akira and I yelled out in surprise, breaking the hug in the process."
-    FMG "What?! Rin?! I thought you had a meeting with Shiori!"
-    "Akira yelled out in both frustration and confusion, though this had little to no effect on Rin as she answered Akira's question."
-    Rin "Yeah, turns out one of the schedulers double-booked my meeting with another, so Buttsumoto let me off the hook. Anyways, now that I see you out in the open, {i}man{/i} you look big, Akira."
+    FMG "What?! Chibuki?! I thought you had a meeting with Shiori!"
+    "Akira yelled out in both frustration and confusion, though this had little to no effect on Chibuki as she answered Akira's question."
+    Chibuki "Yeah, turns out one of the schedulers double-booked my meeting with another, so Buttsumoto let me off the hook. Anyways, now that I see you out in the open, {i}man{/i} you look big, Akira."
     show FMG neutral
     FMG "Oh, I'm big? You're not so small yourself, torpedo-nips."
-    "I couldn't tell if Akira was annoyed because of the scare, or from having to break the hug. Wait, what had she said about Rin's 'nips'...?"
-    MC "Does that mean Rin's...?"
-    Rin "Yeah, my growth thingy is my nipples; I don't mind though, I plan to use 'em to my advantage! Anyways, sorry I was earwigging on your conversation; If you need me, I'll be in our room venting my frustrations into a sketchbook. Later."
-    Rin "Oh, and I didn't forget about that favor!"
-    hide Rin with dissolve
+    "I couldn't tell if Akira was annoyed because of the scare, or from having to break the hug. Wait, what had she said about Chibuki's 'nips'...?"
+    MC "Does that mean Chibuki's...?"
+    Chibuki "Yeah, my growth thingy is my nipples; I don't mind though, I plan to use 'em to my advantage! Anyways, sorry I was earwigging on your conversation; If you need me, I'll be in our room venting my frustrations into a sketchbook. Later."
+    Chibuki "Oh, and I didn't forget about that favor!"
+    hide Chibuki with dissolve
     "..."
     show FMG neutral at Position(xpos=0.5, yalign=1.0), Transform(xzoom=1) with dissolve
     MC "Um...what did she mean by using them to-"
     FMG "Man I don't even know, and I don't think I {i}want{/i} to know. That girl is something else."
     MC "You know, she seems like a good friend, even if she's a bit weird."
     FMG "I guess. Listen, these past two days have been irritating..."
-    FMG "I'm going to go up to my room and yell at Rin to get the brand name soda from now on and not leave me stuck with crappy off-brand. See you on the flip side, man."
+    FMG "I'm going to go up to my room and yell at Chibuki to get the brand name soda from now on and not leave me stuck with crappy off-brand. See you on the flip side, man."
     MC "See you."
     hide FMG with dissolve
-    FMG "Rin! You better get Cane Cola from now on or I swear..."
-    Rin "Who cares about soda, you ruined my Nyte Lyte poster!"
+    FMG "Chibuki! You better get Cane Cola from now on or I swear..."
+    Chibuki "Who cares about soda, you ruined my Nyte Lyte poster!"
     FMG "What did you expect!? I had to get to the window somehow!"
     MCT "...It's probably best if I leave those two alone..."
     "Once I gave it more thought, I realized the more I hung out with Akira, the more I became aware she was hiding something. I guessed the only thing I could do at the time was wait, but there was something else still bugging me..."
@@ -920,9 +925,9 @@ label FMG010_testfail:
     FMG "Yes, I know I'm big but can you please not stare at me? I've had a long day!"
     MC "Um, are you all right?"
     show FMG angry 
-    FMG "I've been stuck in my room for the past two fricking days! I had to live off of Rin's junk food and soda! It wasn't even the name brand, it was some cheap knock-off of Cane Cola called Kool Kola!"
+    FMG "I've been stuck in my room for the past two fricking days! I had to live off of Chibuki's junk food and soda! It wasn't even the name brand, it was some cheap knock-off of Cane Cola called Kool Kola!"
     MC "Wait, why were you stuck in your room?"
-    FMG "Because I had a growth spurt! I couldn't fit into my clothes without ripping them. Rin was supposed to get my replacement uniform from the tailor's but got detention, leaving me all alone in my room till she got back an hour ago!"
+    FMG "Because I had a growth spurt! I couldn't fit into my clothes without ripping them. Chibuki was supposed to get my replacement uniform from the tailor's but got detention, leaving me all alone in my room till she got back an hour ago!"
     show FMG sad
     FMG "I mean, I'm glad I got bigger muscles, but the day has been so awful that I couldn't really enjoy them."
     MC "Sorry, I would have helped if I'd known."
@@ -1154,7 +1159,7 @@ label FMG012:
     
 label FMG013:
     #Scene Afternoon
-    $setProgress("FMG014")
+    $setProgress("FMG", "FMG014")
     scene Gym with fade
     play music Schoolday
     "After a long day, I headed back to my dorm and grabbed my gym clothes. Since Akira invited me to watch how she works out, I figured I might end up getting some exercise in myself."
@@ -1260,9 +1265,9 @@ label FMG013:
     jump daymenu
 
 label FMG014:
-    #$setProgress("FMG", "FMG015")
-    $setProgress("FMG", "FMG018")
+    $setProgress("FMG", "FMG015")
     scene School Planter with fade
+    play music Schoolday
     "You know, sometimes you gotta just walk around campus and see the sights. The gardens looked beautiful that time of year, it's great to enjoy yourself without a care in the-"
     FMG "KEISUKE!!!"
     MCT "Oh god she's running straight at me again!"
@@ -1436,6 +1441,106 @@ label FMG014_c1_3:
     MC "... God I hope she doesn't take this personally..."
     jump daymenu
 
+label FMG015:
+    $setProgress("FMG", "FMG016")
+    scene Town with fade
+    play music Sunset
+    "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."
+    "The streets were full of bustling people given the time and day, everyone was either working or buying things from the many open stores. Seeing so many going shopping made me feel like buying something too."
+    "As I was taking in the sites as well as wondering what store I should go to, a thought came to me."
+    "Akira had been going out of her way to help me work on my muscles; while I did believe that just working out was payment enough for her, I felt like I should at least give her something."
+    "While lost in thought, I came across a store called ‘ Pop Culture’, the front of the building was made of bricks and concrete, with anime figures and cardboard cutouts in the window frames. I figured this was as good a spot as any, so I went inside."
+    "The store seemed to, as the name implied, caters to pop culture of this generation, the inside also had brick walls as well as posters of various media. The stores goods for sale consisted of toys, games, and of course, clothing. Now because of my only knowledge of what I went to the hoodie section to find a few that popped out to me."
+    "On the right was a gray hoodie, the hoodie was a weightlifting stick figure sweating profusely, with the words ‘No Pain no Muscle Gain.’ on the bottom. Considering her lifestyle, Akira might love this one."
+    "In the middle was a crimson hoodie and this one was a detective looking man holding a gun, and the words ‘Sun’s out Guns out!’ were displayed in a word bubble. I think I recognize the guy from that one arcade game Akira likes, Cyber Rage."
+    "Last but not least was … a mint green hoodie that has a picture of a cute anime cat girl with white stripes on the left chest area... on the back was the words ‘ Nya’dorable’ above four anime cat-girls."
+    "…"
+    MCT "I’m tempted to get it just as a joke."
+    menu:
+        "No Pain no Muscle Gain.": #+1
+            $setFlag("FMG015_c1_1")
+            MCT "Well, she does work out a lot, I’ll get her this one, I’m sure she’ll like it."
+        "Sun's out Guns out!": #+2
+            $setFlag("FMG015_c1_2")
+            MCT "Well, she sure does love arcade games, I think she’ll like this one a lot."
+        "Nya’dorable.": #+5
+            $setFlag("FMG015_c1_3")
+            MCT "... Yeah I don’t know if she’ll like this… but it might be funny to give this to her."
+    "With the sweat shirt in hand, I paid for it, and set my sights on finding Akira."
+    "I figured that given I was already in town, I would start my search for her at the local gym."
+    "The gym itself was about what you expected,  white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a “Rowing Machine”, pulling the rope thing in a similar manner of rowing a boat."
+    "It did not take long for her to see me, she smiled and gave me a wave to come over."
+    show FMG happy with dissolve
+    FMG "Sup Kei-kun! What brings you to this side of the island?"
+    MC "Well, I wanted to thank you for going out of your way to help me workout. So I got you something?"
+    show FMG neutral
+    FMG "Hmm? You got me something? What is it?"
+    "I handed her the bag with the hoodie in it. She pulled it out to get a good look at it..."
+    if getFlag("FMG015_c1_1"):
+        "… Only to look a mix between confused and disappointed."
+        show FMG sad
+        FMG "…Oh...umm."
+        MC "Something wrong?"
+        FMG "Well, don't get me wrong, I appreciate the hoodie and I am probably going to wear it...but don't you think it's kinda generic and unoriginal?"
+        MCT "... In hindsight, Akira was never one to cater to the cliche of being a muscular tomboy..."
+        MC "Oh...I'm sorry, it's just that I when I saw it I thought of you."
+        show FMG surprised
+        FMG "...You...thought of…"
+        "It appeared that my words had swayed her in someway. Her slight disdain turned into surprised and then joy."
+        $setAffection("FMG", 1)
+        show FMG happy
+        FMG "You know what, I really appreciate it that you got me this."
+    elif getFlag("FMG015_c1_2"):
+        "… and upon seeing it, looked happy."
+        show FMG happy
+        $setAffection("FMG", 2)
+        "Aww sweet! It's Matthew Ryberg from Cyber Rage:CB saying his famous catchphrase!"
+        MC "Oh, you like it?"
+        FMG "Yeah I do! Thanks dude!"
+    else:
+        "… And her reaction was not confusion like I had predicted, but pure joy and excitement… and that was an understatement."
+        show FMG surprised
+        FMG "Is that..."
+        show FMG happy
+        FMG "*GASP* OH MY GOD! I LOVE NYA’DORABLE!"
+        "She was squealing like a child."
+        MCT "...Huh?"
+        MC "Wait, really?"
+        FMG "Yeah! I was in grade School when the manga came out and I’ve been a huge fan of Nya’dorable ever since! I've even plan to watch the anime when it comes out this summer!"
+        FMG "I mean, sure I’ll have to cut the sleeves and a bit of the gut area, but I absolutely love it! How did you know?!"
+        MC "I… had a hunch."
+        show FMG neutral
+        FMG "Guess you got lucky then. After all, love it!"
+        "She pauses for a moment."
+        FMG "Though..."
+        show FMG happy
+        FMG "...I’m glad you didn’t get something that has a bodybuilder on it or something."
+        MCT "!!!"
+        MC "Yeah...right..."
+    show FMG happy
+    FMG "Hey look, as much as we workout, why don’t we just hang out?"
+    MC "Sure,we already in town, let’s go exploring."
+    FMG "Alright! Just wait right here while I make the appropriate trimmings on this in the locker room, I’ll be right back."
+    "It didn’t take her long to trim the hoodie, roughly ten minutes or so. By the time she came out, she was wearing the hoodie with pride."
+    FMG "Okay! I'm dressed to not impress and hyped!"
+    MC "So what's the game plan?"
+    FMG "Funny you should say. We're going to the one place I go when I'm bored and don't feel like exercising."
+    FMG "The arcade!"
+
+    scene Arcade with fade
+    "After about a 15 minute walk, we made it to Akira’s favorite arcade, Grand Blaze Arcade."
+    "Inside was filled with the sounds of a hundred arcade games being played mixed with the sounds of enjoyment from People of various ages playing. Beyond that there wasn’t much in the way of decoration beyond the arcade cabinets."
+    "There was a man behind the front counter. Late 20’s black hair covered with a baseball hat, glasses, beard and wearing a gray long sleeve shirt."
+    show FMG happy with dissolve
+    FMG "Yo Fujimoto!"
+    Fujimoto "Hey Mizutani, not everyday you come here before six pm, let alone bring someone with you. What's the occasion?"
+    FMG "Wanted to hang out with this guy for getting me this hoodie!"
+    Fujimoto "Nice, have fun you two."
+    FMG "We will."
+    FMG "Alright, I got a bunch of coins in cases like this. Let's do this!"
+    "For the next hour and a half, I played various arcade games with Akira. Spending time with her, either exercising or just hanging out, has been enjoyable and exhilarating."
+    jump daymenu
+
 label FMG016:
     scene School Planter with fade
     play music Sunset
@@ -1484,86 +1589,187 @@ label FMG016:
     MC "You know, never thought we'd be in a café like this."
     FMG "Well, I don't know about you, but I'll try anything once."
     "About two minutes later, our waitress came by, but I couldn't shake the feeling I knew her."
-    show Rin neutral at Position(xpos=0.75) with dissolve
+    show Chibuki neutral at Position(xpos=0.75) with dissolve
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    Rin "Hi, welcome mast- oh, crap."
+    Chibuki "Hi, welcome mast- oh, crap."
     show FMG surprised
-    FMG "Wait a minute, RIN?!"
+    FMG "Wait a minute, CHIBUKI?!"
     MC "Wait is that rea-"
-    Rin "*ahem* Why masters, I would love to have a conversation once my break starts, until then what would you like?"
+    Chibuki "*ahem* Why masters, I would love to have a conversation once my break starts, until then what would you like?"
     MC "Um... the Sunshine Sundae with extra nuts."
     FMG "...Milk tea."
-    Rin "Fantastic choices! I'll have them right away!"
-    hide Rin with dissolve
+    Chibuki "Fantastic choices! I'll have them right away!"
+    hide Chibuki with dissolve
     MC "...Well this is happening, I guess."
-    "I didn't get a single response. Akira was silent the entire time, staring at the spot Rin was. Though to be fair, it must have been quite the shock, seeing your roommate acting the exact opposite way you'd always seen her... while dressed as a maid."
-    show Rin neutral at Position(xpos=0.75) with dissolve
-    Rin "Here you go, and I'll see you in 10. Till then masters, I bid you adieu!"
-    hide Rin with dissolve
-    "We did nothing but consume our orders in silence while we waited for Rin's break to happen."
+    "I didn't get a single response. Akira was silent the entire time, staring at the spot Chibuki was. Though to be fair, it must have been quite the shock, seeing your roommate acting the exact opposite way you'd always seen her... while dressed as a maid."
+    show Chibuki neutral at Position(xpos=0.75) with dissolve
+    Chibuki "Here you go, and I'll see you in 10. Till then masters, I bid you adieu!"
+    hide Chibuki with dissolve
+    "We did nothing but consume our orders in silence while we waited for Chibuki's break to happen."
     scene Town with fade
     play music Sunset
-    "Once we finished and it was time, we went out to the front of the store with no sign of Rin. I heard a ‘hey' from the alleyway, and followed it to find Rin down there waiting for us. Both Akira and I walked down the alleyway to meet up with Rin."
-    show Rin neutral at Position(xpos=0.75) with dissolve
+    "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki. I heard a ‘hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
+    show Chibuki neutral at Position(xpos=0.75) with dissolve
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    Rin "God, out of all the people in the world to come to this one maid café, it had to be my roommate and her boyfriend!"
-    "Rin vented out her frustrations, though in our defense this island wasn't exactly Tokyo."
+    Chibuki "God, out of all the people in the world to come to this one maid café, it had to be my roommate and her boyfriend!"
+    "Chibuki vented out her frustrations, though in our defense this island wasn't exactly Tokyo."
     if getAffection("FMG") > 10:
         show FMG aroused
         FMG "B-boyfriend?"
         show FMG surprised
         FMG "I-I mean um..."
         show FMG neutral
-        FMG "Uh hey Rin, I almost didn't recognize you without your bulging nips."
+        FMG "Uh hey Chibuki, I almost didn't recognize you without your bulging nips."
     elif getAffection("FMG") > 5:
-        FMG "Ha, boyfriend; He's just a friend Rin. But back to you, I didn't recognize you without your bulging nips!"
+        FMG "Ha, boyfriend; He's just a friend Chibuki. But back to you, I didn't recognize you without your bulging nips!"
     else:
         show FMG angry
-        FMG "Geez, Rin. You think I can't talk to a guy without it meaning something? "
+        FMG "Geez, Chibuki. You think I can't talk to a guy without it meaning something? "
         show FMG neutral
         FMG "Getting back on track, you look different without your bulging nips!"
-    Rin "Yeah well, My growth is still concealable so I don't have to worry too much for now. Besides, all the padding over them to smooth out the bulge makes me look bustier, which usually means more tips."
+    Chibuki "Yeah well, My growth is still concealable so I don't have to worry too much for now. Besides, all the padding over them to smooth out the bulge makes me look bustier, which usually means more tips."
     MC "I never would have thought you would work here."
-    Rin "I think I got the job because I'm half-British, guys love the British maid type. Plus I guess they wanted some variety."
+    Chibuki "I think I got the job because I'm half-British, guys love the British maid type. Plus I guess they wanted some variety."
     show FMG surprised
     FMG "But why are you even working here in the first place?!"
-    Rin "I want money, the job pays well."
+    Chibuki "I want money, the job pays well."
     show FMG neutral
-    FMG "Rin, I know you too well. If that was the case, than why didn't you get a job at a mini market or something less... degrading."
-    Rin "... Fine! I really like acting like a maid, ok! It's one of my biggest fantasies ever! The maid falling in love with her master, willingly mind you... I find it romantic, THERE, HAPPY?!"
-    MCT "Huh...never picked Rin as the hopeless romantic type."
-    Rin "Look, if any of the students, god forbid Shiori, finds out about this, then I'm so boned. Gossip spreads fast. Akira, if you keep quiet about this... I'll clean my half of the room. And Kei..."
+    FMG "Chibuki, I know you too well. If that was the case, than why didn't you get a job at a mini market or something less... degrading."
+    Chibuki "... Fine! I really like acting like a maid, ok! It's one of my biggest fantasies ever! The maid falling in love with her master, willingly mind you... I find it romantic, THERE, HAPPY?!"
+    MCT "Huh...never picked Chibuki as the hopeless romantic type."
+    Chibuki "Look, if any of the students, god forbid Shiori, finds out about this, then I'm so boned. Gossip spreads fast. Akira, if you keep quiet about this... I'll clean my half of the room. And Kei..."
     $setVar("RinFavor", getVar("RinFavor") + 1)
     if getVar("RinFavor") >= 1:
-        Rin "I know I already owe you a favor Kei, but I'll give you another for your word."
+        Chibuki "I know I already owe you a favor Kei, but I'll give you another for your word."
     else:
-        Rin "I'll give you a favor for later, deal?"
-    FMG "On one condition Rin. You gotta clean the room, while dressed as a maid!"
+        Chibuki "I'll give you a favor for later, deal?"
+    FMG "On one condition Chibuki. You gotta clean the room, while dressed as a maid!"
     MCT "I can't tell if she's serious or not, maybe I should-"
-    Rin "I'll do it."
+    Chibuki "I'll do it."
     show FMG surprised
     FMG "..."
     FMG "WHAT?!"
-    Rin "If that's what it takes to buy your loyalty, then so be it...  master."
+    Chibuki "If that's what it takes to buy your loyalty, then so be it...  master."
     FMG "...Nope. Nope I'm not dealing with this! Nope! I'm nope'ing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
     hide FMG with dissolve
-    "Akira just left, repeating ‘nope' to herself till she was out of earshot. I turned to Rin to say something, but to my confusion and surprise, she was grinning like she'd won something."
-    show Rin neutral at Position(xpos=0.5)
-    Rin "And that, my dear Keisuke, is how you win a battle against your roommate."
+    "Akira just left, repeating ‘nope' to herself till she was out of earshot. I turned to Chibuki to say something, but to my confusion and surprise, she was grinning like she'd won something."
+    show Chibuki neutral at Position(xpos=0.5)
+    Chibuki "And that, my dear Keisuke, is how you win a battle against your roommate."
     MC "...Huh?"
-    Rin "That whole romantic BS was just to fluster Akira; an act, if you will. Dad always did say I had the makings of a great method actor."
+    Chibuki "That whole romantic BS was just to fluster Akira; an act, if you will. Dad always did say I had the makings of a great method actor."
     MC "Then, why are you working here?"
-    Rin "For the money of course. I thought we established that. Now then, my break is almost over. Oh and don't worry, the favor's still there so long as ya keep this on the down low."
+    Chibuki "For the money of course. I thought we established that. Now then, my break is almost over. Oh and don't worry, the favor's still there so long as ya keep this on the down low."
     "Before anything was said, She... did that weird peace symbol pose and winked..."
-    Rin "Come again, master! <3"
-    hide Rin
-    "Once she was finished with that, Rin went back into the café."
+    Chibuki "Come again, master! <3"
+    hide Chibuki with dissolve
+    "Once she was finished with that, Chibuki went back into the café."
     MC "Well, at least I'm not bored anymore... "
     MC "..."
     MC "....."
     MC "...Aaannnd I'm bored again. What am I going to do now?"
     jump daymenu
     
+label FMG017:
+    $setProgress("FMG", "FMG018")
+    scene Campus Center with fade
+    play music Busy
+    show FMG neutral with dissolve
+    MC "So, how’s life been?"
+    FMG "Eh, nothing much has changed really, my mom send some cookies from home, so that was nice of her."
+    MC "Oh, your mom bakes?"
+    FMG "Oh yeah, she likes to bake, something about it being relaxing for her."
+    MC "How long did it take to get your care package?"
+    FMG "Well, about a day or so because it takes a plane to get from here to Okinawa."
+    MC "Oh, you’re from Okinawa, explains your accent."
+    show FMG happy
+    FMG "Yep, born and raised. Might not hold the same excitement Tokyo has, but it’s home and I love it. I’m a fourth-generation Mizutani that’s lived there."
+    MC "Huh that’s cool. Hey, speaking of moms, mines been sending mail. Not packages or anything but just normal mail."
+    show FMG neutral
+    FMG "What does she not use email?"
+    MC "She does, the thing is that she doesn’t want to clutter my inbox."
+    show FMG sad #confused
+    FMG "… So she thinks it’s better to clutter your dorm room with real mail?"
+    MC "I didn’t say it made sense."
+    show FMG neutral
+    FMG "Ignoring that, what kind of massage has she been sending?"
+    MC "Well, it’s mostly just “how are you doing?” and such. in the latest one, she was asking about how why my sis-"
+    show FMG surprised
+    FMG "O-Oh no!"
+    "Alas, I was not able to complete my sentence about how my sister has not been replying to mother’s mail thanks to Akira. My confusion as to why Akira interrupted me was answered to what was in front of us."
+    "A raggedy old stuffed bear on the ground; there wasn’t anything odd about it, but it was kinda an eyesore. I went up to it to gra-"
+    stop music
+    FMG "Woah Woah Woah, do NOT touch that bear!"
+    MC "What?"
+    show FMG sad
+    play music Tension
+    FMG "Don’t you know that picking up abandoned scruffy dolls on the ground will bring you bad luck!?"
+    MCT "I legit have never heard that before."
+    show FMG neutral
+    FMG "Trust me, I’ve seen it happen to another kid when I was in kindergarten."
+    MC "… Okay, you have to explain this one."
+    "Akira had taken a breath in before explaining what kind of oddity she had as a child… one of several now that I look back on it."
+    FMG "Well, what happened was this girl, she found an old-looking stuffed rabbit on top of the slide. She wanted to ride the slide, so she grabbed it and tossed it; the moment she slid down, she went faster then she should and crashed into the sand ass up. Ever since then, word got around town and thus, a curse was born."
+    "Her story explained why I never heard of it since it was only local. Though in all likelihood, that girl crashing seems to be more out of bad luck than a curse from a stuffed rabbit. Despite this, it did not call much of my confusion on the subject matter."
+    MC "Okay, well, even so, it shouldn’t matter because we’re nowhere near Okinawa."
+    show FMG sad
+    FMG "Be that as it may, I don’t think it’s a great idea to mess with that bear. Look, just don’t pick it up okay?"
+    menu:
+        "Pick it up.": #-1
+            jump FMG017_c1_1
+        "Don’t pick it up.": #+1
+            jump FMG017_c1_2
+
+label FMG017_c1_1:
+    MCT "Yeah, that thing looks as harmful as a… thing that’s less harmful than a teddy bear… whatever, I’m picking it up."
+    MC "See, no harm do-"
+    MCT "QUACK!"
+    MC "Wha- GAH!"
+    stop music
+    show FMG surprised
+    "Somehow out of nowhere a duck came in and started to attack me. It got so bad I dropped the bear."
+    MC "AHHH! DUCK! GET IT OFF OF ME!"
+    MC "HELP!"
+    MC "AKIRA!"
+    "For five minutes the stupid duck kept attacking me, all the while Akira was just watching me being assaulted by a duck. It didn’t stop until I laid down and pretended to be dead."
+    "By the time the duck left, I was beaten and my clothes were a mess. Akira on the other hand just looked at me in disappointment."
+    show FMG sad
+    $setAffection("FMG", -1)
+    FMG "Yep, I was right. Can’t say I warned you. Maybe if I leave you there you’ll learn to believe in curses."
+    hide FMG with dissolve
+    MCT "Yep, she left me on the ground…"
+    MC "I hate ducks now."
+    jump daymenu
+
+label FMG017_c1_2:
+    stop music
+    MC "Alright, I won’t pick it up."
+    "As much as I wanted to, I wasn’t going to lose sleep if I didn’t pick it up."
+    show FMG happy
+    $setAffection("FMG", 1)
+    FMG "Phew, thanks Kei-Kun. No telling what would have happened if you picked up that plushie."
+    "With my decision made, I left the bear on the ground where it sat, however just when we thought it was over, we heard someone and…"
+    hide FMG with dissolve
+    show BE sad with dissolve
+    BE "Aww poor thing, why would anyone abandon you..."
+    show BE happy
+    BE "Don’t worry, I’ll give you a new home little gu-"
+    "Inoue-san was about to bend over to pick up the doll, we didn’t have a chance to say anything before she grabbed it and-"
+    "{i}POP! POP! POP!{/i}"
+    "Every single one of her shirt buttons popped off, leaving absolutely nothing left but her bra for the world to see."
+    show BE neutral
+    BE "A-ah…"
+    show BE sad
+    BE "I…I..."
+    show BE angry
+    BE "Awww not again… I just got this top!"
+    hide BE with dissolve
+    "All Honoka could do was run towards the dorm rooms. She was so focused on her lack of ability to button her shirt that she left the bear in its place."
+    play music Schoolday
+    show FMG surprised with dissolve
+    FMG "Yep, I was right, that thing is cursed…"
+    MCT "WOW. Am I glad I didn’t touch it."
+    jump daymenu
+
 label FMG018:
     $setProgress("FMG", "FMG019")
     scene Classroom with fade
@@ -1817,6 +2023,214 @@ label FMG018_c1_3:
     BE "Where are you getting that from? I think it's like cold mac and cheese, even though it's only been out of the oven for a little bit..."
     MC "It tastes more like ramen noodles boiled in orange soda."
     "And yet somehow, we got a C+ for our strange pie... at least Akira was happy about it."
+    jump daymenu
+
+label FMG019:
+    $setProgress("FMG", "FMG021")
+    scene Dorm Exterior with fade
+    play music Rain
+    "After a long day of classes, I realized that during that day I couldn’t find any sign of Akira. My first thought was that she was locked in her room again, so I went to check it out."
+    play sound Knock
+    pause 1
+    MC "Hello?"
+    "The response was what I could only describe as swearing in another language. Judging from the language, I could at least tell Chibuki was home. A minute later, the door opened with a tired-looking Chibuki wearing a shirt that looked three sizes too large standing in front of me."
+    show Chibuki neutral with dissolve
+    Chibuki "Oh… hey Keisuke."
+    MC "Umm, hey. Did I wake you up?"
+    Chibuki "Yeah… I was napping… something up?"
+    MC "Is Akira here? I thought she was stuck in the room."
+    "Chibuki gave me a look of a mix between confusion and irritation before sighing. She took a moment to leaned her head out of the door to look around the room."
+    Chibuki "Yo! Akira! You stuck?"
+    "No response. She turned her attention back at me."
+    Chibuki "Yep, nah, pretty sure she's not stuck. If she’s not here she’s probably at her thinking spot."
+    MC "Thinking spot?"
+    Chibuki "Yeah, it’s the rooftop on the athletics building, normally you’ll find her there if she’s not working out."
+    MC "Got it. Thanks for letting me know."
+    Chibuki "No problem… later, I guess."
+    "As Chibuki closed the door, I turned around and set off towards the Athletics Building… which in hindsight I should have checked anyways."
+    
+    scene Gym with fade
+    "I made my way to the back and looked around to find a door that would lead to the rooftop. After finding an easy entrance, I entered without issue, regardless of signs nearby letting me know that I was entering a restricted area, and climbed up to the roof."
+
+    scene Roof with fade
+    "As I opened the doorway, A warm wind pushed my hair aside as I sputtered to keep the strands out of my mouth. It only took me a second to find my target."
+    "Laying on the ground with a popsicle stick sticking out of her mouth. Akira turned her head to see who was walking towards her. She held up an errant peace sign, her large biceps bulging slightly as she did."
+    show FMG neutral with dissolve
+    FMG "Yo, Kei-Kun."
+    MC "Hey, I was wondering where you been, and here I find you catching some rays."
+    FMG "Heh. Yeah, been here since after class."
+    MC "So, what are you doing up here?"
+    FMG "Thinking."
+    MC "Oh yeah? What are you thinking about?"
+    FMG "Stuff."
+    MC "…What kind of stuff?"
+    FMG "Meh, life stuff, I guess. Right now I just want to get school life behind me."
+    MC "Why is that?"
+    FMG "I guess I’m just a little tired mentality. What with not only classes but how there’s gonna be like, a lot of big and tall students,"
+    FMG "Myself included, hopefully."
+    MC "Heh, for what it’s worth I think you’re pretty big, or at least have a big personality."
+    MC "Speaking of, classes been good?"
+    FMG "Well, as good as they could be. To be honest I never liked school, besides P.E. that is."
+    FMG "I get why it’s important, it’s to help build up the path to our future and what we are going to be..."
+    FMG "...But for the life of me, I can’t think about what I want to do after I graduate."
+    MC "You mean job-wise? Have you thought about going to a university afterward?"
+    FMG "I mean, yeah, but that’s not the problem."
+    FMG "The problem is... well, can I be completely honest with you?"
+    MC "Sure, go right ahead."
+    FMG "As much as I enjoy becoming strong and muscular… it limits what I can and can’t do."
+    MC "What you don’t want to become a bodybuilder or an athlete?"
+    FMG "Maybe, but…"
+    "Akira had sat up, cracking her back in the process. The series of pops and cracks were lauder then one would think. Once done she rested her head on her hand, looking out in the setting sun."
+    FMG "I dunno, I guess I just want more options in my life. That's not the only thing I’ve been thinking about, though."
+    FMG "I’ve been wondering if destiny actually exists."
+    MC "Huh, any reason?"
+    FMG "I mean, look at me, I’ve always wanted to become strong, but what were the chances that my growth factor is becoming stronger."
+    "Honestly, quite slim looking back on it."
+    FMG "If destiny has been leading me on a path… then it’s sure has been a crappy path."
+    MC "Huh?"
+    FMG "I- I mean that I should decide on what I should do. Not some mystical force."
+    MC "Well, I don't know about stuff like destiny, what I do know is that only you can choose to follow the path life has given you, or you can make your own."
+    FMG "True that. Thanks, Kei-Kun."
+    "Akira smiled, she turned her head back into the direction of the sunset, in all its glory."
+    FMG "I love this spot, it has such a great view of the sunset."
+    FMG "But I think it’s better with friends."
+    $setAffection("FMG", 1)
+    "I only smiled as I sat down next to Akira, we spend the next 20 minutes in silence as the sunset on that beautiful day."
+    jump daymenu
+
+label FMG021:
+    $setProgress("FMG", "FMG022")
+    play music Busy
+    scene Library with fade
+    "Well, I should probably get to that report before it’s due. What I didn't expect at the library was a bored Akira and An angry Shiori...at the same table."
+    show FMG sad at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    FMG "Ugh...Matsumoto-san...I’m SO bored…"
+    AE "If I'm not mistaken, it was YOU who decided on this topic, and I already spent valuable time researching this for your sake."
+    show AE angry
+    AE "So pay attention!"
+    FMG "Awww ... what are we doing again I forgot…"
+    AE "You-gch-you asked me to be here so you-!"
+    show AE embarrassed
+    AE "Ghn...you know what? Never mind. We’ll go over the first portion AGAIN."
+    show FMG neutral
+    FMG "Alright, I’ll start so it’s fair. The great emu war…"
+    show FMG sad #flustered
+    FMG "Wait...this actually happened? I thought it was a movie."
+    show AE neutral
+    AE "I...I’ll admit, I had to double-check the legitimacy of this event as well."
+    FMG "According to this book, it happened in the ’30s in the down under, so they had bombs and Light Machine Guns...so how hard is it to kill a bunch of stupid emus?! And why does the library even have this book, to begin with?!"
+    AE "It was less about their equipment, and more about the failure of their tactics when faced with the natural defenses of the birds. Meanwhile, the book was donated by an Australian philanthropist around the time the library was built."
+    AE "As for why THIS particular topic...let’s just say, serendipity. It’s quite a coincidence that you have the exact book for this extremely specific event…"
+    AE "...When did you decide on the topic, again?"
+    FMG "...I thought it was based on that movie starring Jack Belinski where he fights zombie emus at a gas station..."
+    show AE embarrassed
+    AE "I don’t...I don’t know who that is. Is-is he…? Is that a real thing?"
+    FMG "B-blame my roommate! She watches cult classic movies when she’s not painting or something!"
+    show AE neutral
+    AE "Hm...I sincerely hope she isn’t disturbing your studies."
+    "Jeez...this might be the most non-hostile conversation these two have ever had… Well, I got nothing better to do, so I might as well join in on this."
+    MC "Hey guys, what are you working on?"
+    show FMG neutral
+    FMG "Oh hey… yeah about that...Shiori will answer that."
+    AE "Well, I’ve noticed that out of all of the class, Mizutani-san was holding back the most about her topic for next week's World History report. I’d offered to help, and she obliged with...whatever topic this is."
+    FMG "… Wait this is for world history? When did that happen?"
+    show AE embarrassed
+    AE "Clearly, It’s not going well."
+    MC "Oh, well I’m not really doing anything, I can help if you want."
+    show FMG happy
+    FMG "Aww sweet, thanks, man! Now read this book, fair warning someone-who was totally not me out of boredom-drew weiners on page 13. "
+    MC "Umm...Thanks?"
+    show AE angry
+    AE "WHAT?!"
+    FMG "You can’t check if my handwriting matches the drawings, so you can’t prove it!"
+    AE "The only proof I need in this instance your own confession of guilt!"
+    MCT "This is less than good. If this continues, Matsumoto-san might figure out I was the one who drew dicks on page 20."
+    MC "U-um, hey, so you need help, eh? I actually read that book a while ago on...Daichi’s behalf."
+    AE "-and furthermore-!"
+    show AE neutral
+    AE "Wait, Utagashi-san? For...what reason?"
+    MC "Because the school is being controlled by Emus, apparently… though in hindsight he might have just wanted to distract me."
+    AE "..."
+    show FMG neutral
+    FMG "Huh, guess that explains who drew dicks in page 20 and 25 before, Daichi must have done that."
+    MCT "25 TO?! Wait, no, that one wasn’t me!"
+    MC "A-anyways, what do you want to know about-"
+    show AE sad
+    AE "That book was a relic from the beginning of the library."
+    MC "ABOUT THE EMU WARS?"
+    FMG "… Wait, Shiori when is this due exactly?"
+    show AE angry
+    AE "TOMORROW."
+    MCT "Shit, tomorrow?! I’m only halfway done."
+    show FMG sad #flustered
+    FMG "...Then why did you say next week!?"
+    show AE happy
+    AE "I indeed did say next week!"
+    show AE angry
+    AE "LAST WEEK!"
+    show FMG angry
+    FMG "THAT’S JUST CONFUSING!"
+    "The two bickered a bit about scheduling and the confounding nature of time for a good while before I spoke up to break the madness."
+    MC "Hey, girls, um, you know that every minute you’re not working is a minute Akira will lose, right?"
+    show AE neutral
+    AE "...Haan, you’re right Hotsure-san. Mizutani-san, if we lament the time lost we will lose more to lament."
+    show FMG neutral
+    FMG "I don’t know how a lamp has to do with my report, but maybe we should just shut up and get back to the report."
+    show AE embarrassed
+    AE "L-lamp? I...That’s fine too."
+
+    scene black with fade
+    stop music
+    "The next day..."
+
+    scene Classroom with fade
+    play music Schoolday
+    show FMG happy with dissolve
+    FMG "...And then! As the Americans ran across the great desert in their 1969 Brimstone muscle cars, they shot down the great emu mech robot thing piloted by sergeant general lieutenant Emmet Mel and he died in the explosion! Killing all the emus in the process! And so, the city of New Zealand, Australia was renamed to Melbourne! And then everyone ate emu burgers!"
+    FMG "And that’s how the great emu war happened!"
+    hide FMG with dissolve
+    show AE neutral with dissolve
+    AE "..."
+    MC "..."
+    MCT "........."
+    AE "Hotsure-san?"
+    MC "Y-yeah?"
+    AE "Not only did yesterday did not happen, but the whole report never happened as well."
+    MC "A-ah."
+    hide AE with dissolve
+    show HR neutral with dissolve
+    HR "Alright, thank you, Mizutani-san for your...enlightening report."
+    
+    scene Classroom with fade
+    show FMG happy at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    FMG "Guys guess what! I got an A+ on my report!"
+    AE "What report? I never-wait, what?!"
+    FMG "Oh don’t worry Shiori, I told Tashi all about how you and Kei helped me-"
+    MCT "Please for the love of god keep my name out of that trainwreck."
+    FMG "I even took this picture to remember it by and gave him a copy!"
+    MCT "Still though, I can’t believe what just happened."
+    
+    scene Classroom with fade
+    show HR neutral with dissolve
+    HR "Hotsure-san, did you actually help Mizutani-san?"
+    MC "You know what, there was not only nothing I could do, but I felt like impeding the trainwreck would have just made me a casualty."
+    HR "Well, regardless, I’d think she’d have SOME knowledge on her own topic."
+    HR "The emu war was in 1932 by Major G.P.W. Meredith, not 'Emmet Mel'."
+    MCT "...Huh?"
+    HR "I figured Matsumoto-chan gave up at some point, but I’d think you’d know better to just find facts on the internet."
+    MC "We, uh, used the book in the library."
+    MCT "'Used' being in massive quotations."
+    HR "Oh, yeah. The old one? Christ, I don’t think anyone picked that up since I was a student."
+    MC "..."
+    MC "You drew dicks on page 25, didn’t you?"
+    HR "..."
+    MC "..."
+    HR "...So, I think that with all the work she’s put in, Mizutani-san earned an A, wouldn’t you agree?"
+    MC "O-OY, OY! What was that?!"
+    HR "Okay, look, my old librarian forgave, Matsumoto-chan, however will NOT; and quite frankly I haven’t had my coffee this morning. Dealing with her will give me an aneurysm, so I’m willing to give Mizutani-san any grade she wants."
+    "And that’s how Shiori-san and Mizutani-san got the same grade in our world history report."
     jump daymenu
 
 label FMGBBW001:
@@ -2096,7 +2510,7 @@ label FMGBBW001:
     MC "Nah..."
     jump daymenu
 
-label FMG019:
+label FMG022:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

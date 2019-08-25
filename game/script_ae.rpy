@@ -6061,8 +6061,8 @@ label AE029:
 
 label AE030:
     $setProgress("AE", "AE031")
-    #$setSize(3)
-    $setTimeFlag("aftersize3")
+    $setSize(3)
+    $setTimeFlag("size3")
     scene Classroom with fade
     play music Rain
     "Sitting silently in my seat as the clock ticked by. That would sum up the past few minutes. Shiori-chan hadn't come in yet, and that was strange, because it was well past the usual time she came in."

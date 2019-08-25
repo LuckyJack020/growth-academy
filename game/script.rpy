@@ -9,7 +9,7 @@
     eventlibrary = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'clocktower', 'cookingclassroom', 'dormAE', 'dormBBW', 'dormBE', 'dormPRG', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'supermarket', 'town', 'track', 'woods']
+    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'clocktower', 'cookingclassroom', 'dormAE', 'dormBBW', 'dormBE', 'dormPRG', 'dormexterior', 'dorminterior', 'festival', 'field', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'supermarket', 'town', 'track', 'woods']
     debugenabled = True
     debuginput = ""
     globalsize = 1
@@ -245,6 +245,9 @@
             if v["priority"] != PrioEnum.ALL:
                 continue
             if k in clearedevents:
+                continue
+            #Only care about all-priority core events if it's the current one
+            if v["type"] == EventTypeEnum.CORE and routeprogress[v["girls"][0]] != k:
                 continue
             badFlag = False
             for f in timeflags:

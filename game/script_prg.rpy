@@ -51,7 +51,7 @@ init 2 python:
     eventlibrary['PRG026b'] = {"name": "", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                               "location": "classroom",       "priority": PrioEnum.ALL, "next": "", "obsflags": [],              "conditions": [[ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.NOROUTELOCK, "PRG"], [ConditionEnum.NOROUTELOCK, ""]]}
     
     eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,               "location": "auditorium",      "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}    
-    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,               "location": "cookingclassroom", "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,               "location": "cookingclassroom", "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],            "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
 
 label PRG001b:
     scene School Exterior with fade
@@ -4598,6 +4598,7 @@ label PRG026b_FMG:
 
 label PRG027:
     $setSize(3)
+    $setTimeFlag("size3")
     $setProgress("PRG", "PRG028")
     #[SCENE CAMPUSCENTER_DAY]
     scene Campus Center with fade
