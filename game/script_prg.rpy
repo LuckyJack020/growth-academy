@@ -3599,7 +3599,7 @@ label PRG024_c1_2:
 
 label PRG024_c1_after:
     hide PRG with dissolve
-    "As crazy as it was, Aida exactly how she was all the way to the infirmary, not even stopping to take a rest. By the time we got there, she looked exhausted in every sense of the word, but also pleased with herself."
+    "As crazy as it was, Aida stayed exactly where she was all the way to the infirmary. By the time we got there, she looked exhausted in every sense of the word, but also pleased with herself."
 
     scene Nurse Office with fade
     "Soon I was seated on the paper-covered examination table. Instead of catching her breath in the chairs across from me, Aida stood next to the table as if to console me."
@@ -3671,7 +3671,7 @@ label PRG024_c1_after:
     PRG "Is your roommate around? Maybe he'd let us in."
     "I shrugged and pounded my fist on the door firmly."
     MC "Diachi? You home?"
-    show RM neutral at Position(xpos=0.45, xanchor=0.5, yanchor=1.0) with dissolve
+    show RM neutral at Position(xpos=0.55, xanchor=0.5, yanchor=1.0) behind PRG with dissolve
     UNKNOWN "Not yet."
     "I turned my head in surprise to see Diachi standing directly behind Aida. Noticing my gaze, she turned and nearly jumped out of her skin."
     show PRG surprised
@@ -3690,7 +3690,7 @@ label PRG024_c1_after:
     MC "And then, the nurse had us fill out a bit of paperwork before we-"
     hide RM with dissolve
     "I had turned to Aida for her input, but when I turned back to Diachi, he was gone. Neither I nor Aida had heard the door open."
-    show PRG surprise at Position(xpos=0.5, xanchor=0.5, yanchor=1.0) with dissolve
+    show PRG surprised at Position(xpos=0.5, xanchor=0.5, yanchor=1.0) with dissolve
     PRG "W-Where did he go?"
     MC "He does that from time to time. At first, I didn't know what to make of it, but now I think the man just has a penchant for dramatic entrances and exits."
     "Aida nodded before standing and walking around my room, taking it all in as she went."
@@ -3981,6 +3981,7 @@ label PRG025_c2_2:
     MC "I hope the same."
     hide PRG with dissolve
     "I watched as she blew me a kiss and happily pranced out of my room, leaving me lying on my bed with a million thoughts passing through my head. Even with everything that had just happened, I was surprisingly calm, and in a way, excited for what could happen."
+    jump daymenu
 
 label PRG025_c2_3:
     $setFlag("PRG_father")
@@ -4133,7 +4134,7 @@ label PRG026_father:
     stop music
     PRG "There... there isn't an easy way to ask this, but in this situation, a lot of fathers would probably..."
     extend " leave."
-    PRG "Will still be there for me?"
+    PRG "Will you still be there for me?"
     "I felt a drop in my chest. I knew what she was going to ask even before she asked the question, but the notion still hit me like a ton of bricks. I knew the honorable thing to do was to stand by her and be a man. But, I'd be swapping that out for a good majority of my time and freedom."
     MC "I..."
     menu:
