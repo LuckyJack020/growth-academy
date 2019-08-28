@@ -4300,6 +4300,7 @@ label PRG026_c1_1:
     jump daymenu
 
 label PRG026_c1_2:
+    $setFlag("PRG026_c1_2")
     play music Bittersweet
     MC "I..."
     MC "I- I can't, Kodama-san... I just can't."
