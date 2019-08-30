@@ -39,7 +39,7 @@ image Store = "Graphics/ui/bg/NYI.png"
 image Game Store = "Graphics/ui/bg/gamestore.png"
 image Park = "Graphics/ui/bg/NYI.png"
 image Clock Tower = "Graphics/ui/bg/NYI.png"
-image Diner = "Graphics/ui/bg/burgerresstaurant.png"
+image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
