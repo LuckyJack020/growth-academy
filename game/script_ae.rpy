@@ -11044,7 +11044,7 @@ label AE050_after1:
     "With one hand resting and sinking into her thigh, and another lightly toying with her labia, I then went for the kill, and lightly teased her clit with the tip of my tongue; moving it in circles."
     AE "OOOOH~!"
     "At the sudden surge of pleasure, she brought her legs together; trapping my head between her fluffy, warm legs. Arching her back, she grabbed my hair and drove it further in."
-    "Her knees quiverin as my tongue works its magic on her, the long locks of hair in front of my face tickling her most sensitive regions."
+    "Her knees quivering as my tongue works its magic on her, the long locks of hair in front of my face tickling her most sensitive regions."
     AE "Ah, A-ah~! MMmm~!"
     MC "Mmm, mmm~"
     "As I lap greedily away, Shiori-chan, no longer mindful of where she is, or even who she was for that matter, grabbed a handful of my hair, driving me deeper into her, and her deeper into lust."
@@ -11097,7 +11097,7 @@ label AE050_passive2:
     
 label AE050_after2:
     "She looked on in anticipation as I slowly, methodically, unbuttoned my pants and pulled down my zipper; my boxers only slightly hiding my raging erection. My heart beat heavily in my chest as I did. Though it had been this whole time, I could feel it now more than ever."
-    "Shiori-chan jumped back a bit and gasped, her eyes widening as my cock sprung out of the whole in my boxers."
+    "Shiori-chan jumped back a bit and gasped, her eyes widening as my cock sprung out of the hole in my boxers."
     AE "H-Haaah~"
     AE "K-Keisuke-kun's p-p-penis... it's-"
     if getFlag("AE003_c1_1"):
