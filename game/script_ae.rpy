@@ -11209,7 +11209,7 @@ label AE050_after3:
     AE "Ng-Ahh!~"
     MC "Pah, ah... nonsense. They're wonderful."
     AE "Mmm~"
-    "As Shiori-chan lay naked on the bed, I hop off and pick the condom off the ground. My cock fully erect and exposed, I pulled it out of the package and began to roll it over the head."
+    "As Shiori-chan lay naked on the bed, I hopped off and picked the condom off the ground. My cock fully erect and exposed, I pulled it out of the package and began to roll it over the head."
     "As confident as I tried to sound, I only ended up stuttering as I thought over the prospect of finally losing my virginity."
     MC "R-Ready?"
     AE "Y-Yeah..."
