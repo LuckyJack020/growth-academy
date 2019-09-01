@@ -4713,8 +4713,10 @@ label PRG027_c1_after:
         PRG "I-I can't, Hotsure-san. I... I've already missed too much class."
         MC "Ah. Alright, best to go then."
         hide PRG with dissolve
-        "I followed behind AIda, hoping that my gut feeling was right about Tashi-sensei not being upset with us."
+        "I followed behind Aida, hoping that my gut feeling was right about Tashi-sensei not being upset with us."
         "I was right about Shiori being upset with us. I was wrong about Tashi-sensei not being upset with us."
+        
+        scene Dorm Exterior with fade
         "After class that day, Aida and I made our walk back to the dorms together in silence."
         show PRG unique
         MC "Hey, sorry I got you into trouble."
@@ -4872,7 +4874,7 @@ label PRG028_c1_1:
     PRG "It's not just losing the sauce that brought this on. It's kind of been everything lately. My classes, taking so much time off, me getting pregnant. Just everything!"
     $setAffection("PRG", -4)
     "Aida burst into tears, throwing her head into her hands and sobbing heavily. I stood there stunned. For Aida to want to give up her favorite hobby, she must've been truly upset."
-    "Sliding a chair over, I sat down next to Aida threw my arm over her, rubbing her shoulders lightly."
+    "Sliding a chair over, I sat down next to Aida and threw my arm over her, rubbing her shoulders lightly."
     PRG "I-I-I don't know what to do! I don't want to let Sakura-san down! But, I don't know if I'll be able to cook like I used to again!"
     MC "Why wouldn't you be able to?"
     PRG "I-I took so much time off. Before I got pregnant, I was practicing my cooking every day. But ever since then, I haven't cooked anything. I..."

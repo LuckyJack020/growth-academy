@@ -5822,7 +5822,7 @@ label BBW032_FMG_after:
     jump daymenu
 
 label BBW033:
-    $setProgress("BBW", "BBW033")
+    $setProgress("BBW", "BBW034")
     #Time: Afternoon
     scene Cafeteria with fade
     "After class I went to the cafeteria to get a drink while doing the reading parts of my homework."
@@ -5929,6 +5929,7 @@ label BBW033_c1_2:
     jump daymenu
 
 label BBW034:
+    $setProgress("BBW", "BBW035")
     #Time: Afternoon
     scene Classroom with fade
     "After class ended for the day I swung over to Alice's desk."
@@ -6416,6 +6417,7 @@ label BBW034_c1_after:
     jump daymenu
 
 label BBW035:
+    $setProgress("BBW", "BBW036")
     #Time: Afternoon
     scene Classroom with fade
     "It had arrived, the day of the concert."
