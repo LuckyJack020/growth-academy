@@ -1202,7 +1202,7 @@ label GTS014:
     "We observed the game for a few moments, before a random question entered my mind."
     MC "Hey Yamazaki-san. Have you ever thought about what you were going to do after you were done with school?"
     GTS "Hm? Do you mean like a profession?"
-    MC "Yeah, have you ever given any thought about what job you might want to strive for."
+    MC "Yeah, have you ever given any thought about what job you might want to strive for?"
     GTS "I don't believe I have really. Did you have something planned already?"
     MC "I've been thinking about Architecture as something I could do when I get out of school."
     GTS "That'd be a nice profession to get into. I would be interested in seeing what you could come up with. "
