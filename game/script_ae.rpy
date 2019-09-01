@@ -10897,7 +10897,8 @@ label AE050:
     AE "I truly care about you."
     MC "..."
     AE "..."
-    "We stared in eachothers eyes. As I looked on at her pink, panting visage, I could feel my heart skip a beat. I didn't know what to say, nor what I could have said. All I knew in that moment, was that now was the time. I leaned in, and she followed suit..."
+    "We stared in each other's eyes. As I looked on at her pink, panting visage, I could feel my heart skip a beat. I didn't know what to say, nor what I could have said. All I knew in that moment, was that now was the time."
+    "I leaned in, and she followed suit..."
     play music Steamy
     MC "Mmm..."
     show AE embarrassed
