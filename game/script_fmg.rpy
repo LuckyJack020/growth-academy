@@ -1542,6 +1542,7 @@ label FMG015:
     jump daymenu
 
 label FMG016:
+    $setProgress("FMG", "FMG017")
     scene School Planter with fade
     play music Sunset
     "It was such a beautiful day; the sun is shining, the birds were  flying, the wind was blowing..."
