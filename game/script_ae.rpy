@@ -11148,7 +11148,7 @@ label AE050_passive3:
     AE "I-I hope you don't mind, I just think t-this might be more comfortable... are you ok with this?"
     MCT "S-She wants to sit on my face? Huh..."
     MC "W-Well  it's, unexpected  but, just as long as it makes you comfortable."
-    "She saw my warm smile and felt my warm words put her at ease as she wiggled her gargantuan hips and was about to seat on my face"
+    "She saw my warm smile and felt my warm words put her at ease as she wiggled her gargantuan hips and was about to sit on my face."
     AE "D-Dont worry, I'll try to be gentle."
     "She slowly lowered herself down, her soft warm flesh engulfing my face with her two massive cheeks smushing it in-between. She lowered a bit more and more until her whole weight of her ass was comfortablely on my face, my warmth of my face seeming to make her shiver a bit."
     AE "A-ahn.. you feel... really nice down there..."
@@ -11165,7 +11165,7 @@ label AE050_passive3:
     MC "H-Haaahn~"
     "This flipped the switch in me as I grunted and my muscles contracted. My balls seized up and tensed as a flood of my seed sprayed her mouth. Her eyes widened as her cheeks puffed up with my load. She pulled her head away from my cock, and covered her lips with her hand."
     AE "Mmph!"
-    "She then lifted up her massively plump rear carefully and slowly, so that I was able to pull ,myself out from underneath her, a bit stunned but afterwards I got a good look at her face and chuckled a bit."
+    "She then lifted up her massively plump rear carefully and slowly, so that I was able to pull myself out from underneath her. I was a bit stunned, but afterwards I got a good look at her face and chuckled a bit."
     jump AE050_after3
 
 label AE050_after3:
