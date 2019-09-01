@@ -681,7 +681,7 @@ label GTS009:
     BE "Well, I appreciate the help, Yamazaki-san, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
     "I was immediately spotted as I rounded the corner and saw the girls in a more casual attire than I was used to."
     BE "Yo! Kei-chan!"
-    "She waved as she called out to me. Though my eyes immediately widened as Honoka ran over, her bountiful busty bounding towards me before she came to my side and tossed an arm around my shoulders."
+    "She waved as she called out to me. Though my eyes immediately widened as Honoka ran over, her bountiful bust bounding towards me before she came to my side and tossed an arm around my shoulders."
     show BE happy
     BE "How's it going?"
     MC "Hey you two! Wow, Yamazaki-san, you look great."
@@ -804,7 +804,7 @@ label GTS009_c1_2:
     GTS "Ara ara. Thank you very much Hotsure-san. Remind me later and I'll be more than happy to tell you what flower this is."
     "Naomi carefully put the headband on as I felt a nudge on my side as Honoka smirked and whisper."
     BE "Nicely done! Keep it up stud."
-    "Nar: I felt a blush come over me as Naomi smiled at me after putting on the headband."
+    "I felt a blush come over me as Naomi smiled at me after putting on the headband."
     GTS "Thank you again Hotsure-san. Shall we continue looking around town?"
     scene black with fade
     "There was a spring to her step as she left the store and we followed, Honoka spending the rest of the day whispering into my ears. It was either pickup lines or just general advances I could make. Still, I didn't mind the constant advice as we enjoyed the rest of our journey until the sun began to set to signal the end of our day."
