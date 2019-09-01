@@ -10102,7 +10102,7 @@ label AE047:
     AE "I only ask because I know that your particular case makes your hair grow more rapidly over time."
     MC "But what if it stops altogether if I shave it!?"
     show AE happy
-    AE "Well, then, I'd have one adorable melon, wouldn't I."
+    AE "Well then, I'd have one adorable melon, wouldn't I?"
     MC "O-Oy!"
     AE "Mhmhm~"
     MC "I don't wanna take any chances. My hair is sensitive as is."
@@ -10367,7 +10367,7 @@ label AE048:
     "I silently climbed up the wooden stairwell, each step causing a minor creak which I did my best to minimize. As I ascended I heard the two bickering about something."
     UNKNOWN "-room isn't private enough."
     UNKNOWN "Fine, but why don't-...-makes absolutely no sense."
-    "#The closer I got, the more clear they became, until I finally poked my head into the main chamber."
+    "The closer I got, the more clear they became, until I finally poked my head into the main chamber."
     #show Tako angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show Tako neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show AE sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
@@ -10409,7 +10409,7 @@ label AE048:
     show AE angry
     AE "K-Keisuke-kun! Don't listen to her! She's j-just being facetious. Isn't that right? Tell him I'm right!"
     "Yureno-chan broke her stony facade and began to giggle to herself, ending with a sneer as she rested a hand on her oversized hip."
-    Tako "Tch, wastin a good distraction."
+    Tako "Tch, wastin' a good distraction."
     AE "That was NOT a good distraction!"
     AE "I'll have you know I have no distasteful...eccentricities whatsoever!"
     Tako "Come on, don't be such a prude. There's gotta be something that gets you goin'!"
@@ -10489,7 +10489,7 @@ label AE048:
     Yuki "Wuh- 'Ou jewk!"
     MC "And my hubris sinks even further. Why are you looking for my girlfriend?"
     RM "Because she disappeared! I tried looking everywhere but she vanished!"
-    MC "Rewording: why are you *actively* looking for my girlfriend.."
+    MC "Rewording: Why are you {b}actively{/b} looking for my girlfriend..."
     RM "Because she's the class president. Someone like that doesn't just go off the radar."
     Yuki "Yeah! Speakin uv which, wha happuh? Yuweno-than wawked owt uweuw."
     MC "Ahh..."
@@ -10531,7 +10531,7 @@ label AE048:
     MC "Yeah, sure, I'll tell you."
     RM "Are you fu-!"
     RM "Wait, you will?"
-    MC "Yeah, you doin anything right now?"
+    MC "Yeah, you doin' anything right now?"
     Yuki "Wait, wait, wuh bowt me!? I wunnuh know too!"
     RM "Ehh, Yuki-chan, I think this is something Keisuke wants to talk about privately. You're not exactly a private girl."
     Yuki "Ah-!... Eh...faiw point."
@@ -10667,7 +10667,7 @@ label AE049:
     Tako "If you knew what was comin', you'd be worshiping me right now for hooking you up."
     MCT "What is she talking about?"
     MC "Hooking me up?"
-    Tako "Yeaaah, a lil' bit of heaven. It's why I'm stayin' at a friends tomorrow."
+    Tako "Yeaaah, a lil' bit of heaven. It's why I'm stayin' at a friend's tomorrow."
     MC "You are?"
     Tako "Yep! I mean, it ain't as comfortable as my room, but hey, if it's for Shiori-chan, I'm cool with it."
     "She shrugged and leaned back in the bench, resting her hands behind her head. A bit later, the waitress walked over with our cups, and placed them in front of us."
@@ -10862,7 +10862,7 @@ label AE050:
     MC "Oh, yeah, yeah."
     "I entered briskly as Shiori-chan slowly closed the door."
 
-    scene AE Dorm with fade
+    scene Dorm AE with fade
     "As I entered, I noticed that the room was not immediately dark, but that the lighting had been dimmed down. Yureno-san's side of the room had been made completely spotless... and she was nowhere to be found."
     MC "Hey, what's going on? Is everything-?"
     show AE sad with dissolve
