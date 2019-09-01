@@ -1140,7 +1140,7 @@ label GTS012_c1:
     GTS "Well, if you insist."
     GTS "My parents thought it'd be wise for me to learn how to properly prepare and serve tea."
     show GTS happy
-    GTS "After all, The whole process is not about drinking tea, but about aesthetics, preparing a bowl of tea from one's heart."
+    GTS "After all, the whole process is not about drinking tea, but about aesthetics; preparing a bowl of tea from one's heart."
     MC "That's rather poetic, and a lot more thought-out than I was expecting."
     GTS "Well, that's because as the host, you always want to be mindful of your guests, so each movement, gesture, and even the placement of the utensils are carefully thought out before beginning."
     "With her mentioning of that, I noticed that she had indeed placed all the utensils in such a way that I'd be given a perfect view of each step she had taken to make the tea."
