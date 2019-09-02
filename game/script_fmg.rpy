@@ -2197,7 +2197,7 @@ label FMG021:
     MCT "........."
     AE "Hotsure-san?"
     MC "Y-yeah?"
-    AE "Not only did yesterday did not happen, but the whole report never happened as well."
+    AE "Not only did yesterday not happen, but the whole report never happened as well."
     MC "A-ah."
     hide AE with dissolve
     show HR neutral with dissolve
