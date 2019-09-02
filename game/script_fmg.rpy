@@ -2155,7 +2155,7 @@ label FMG021:
     AE "..."
     show FMG neutral
     FMG "Huh, guess that explains who drew dicks in page 20 and 25 before, Daichi must have done that."
-    MCT "25 TO?! Wait, no, that one wasn’t me!"
+    MCT "25 TOO?! Wait, no, that one wasn’t me!"
     MC "A-anyways, what do you want to know about-"
     show AE sad
     AE "That book was a relic from the beginning of the library."
