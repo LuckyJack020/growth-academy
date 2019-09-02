@@ -4329,7 +4329,7 @@ label PRG026_c1_2:
     jump daymenu
 
 label PRG026_nofather:
-    $setProgress("PRGend_nofather")
+    $setFlag("PRGend_nofather")
     scene Dorm Interior with fade
     play music Rain
     "I brushed a stray piece of hair off of my uniform and took a breath. I was going to go to Aida's room and I planned to walk her to class."
