@@ -2202,7 +2202,7 @@ label PRG017_c1_2:
     show PRG neutral
     $setAffection("PRG", 2)
     PRG "T-Thank you, H-Hotsure-san. Although I'm not sure I'd call myself that..."
-    MC "Well, I'm here to tell you that you are definitely something special. No one is really 100% in love with their own appearance. Sometimes, it just takes an outsider's point of view to see your own finer points."
+    MC "Well, I'm here to tell you that you are definitely something special. No one is really 100\% in love with their own appearance. Sometimes, it just takes an outsider's point of view to see your own finer points."
     show PRG aroused
     "Aida became even redder still, wringing her hands nervously as she looked up at me and flashed her brilliant smile once more."
     PRG "T-Thank you so much, Hotsure-san. I'm glad I have your point of view. I-I was thinking about going to practice for the second round tournament. W-Would you like to come help?"
