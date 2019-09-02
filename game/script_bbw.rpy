@@ -6471,7 +6471,7 @@ label BBW035:
     MC "And remember, if you can make your talent undeniable you're bound to get moved up to head singer."
     "It didn't seem to do the trick exactly, but she did nod."
     BBW "Bigger picture, yes."
-    BBBW "I have to go now. We're expected at the auditorium half an hour before curtain rises."
+    BBW "I have to go now. We're expected at the auditorium half an hour before curtain rises."
     MC "I'll be there."
     MC "Goo-  Break-  Sing well."
     "She smiled and then left."
