@@ -1927,7 +1927,7 @@ label PRG016_c1_3:
 label PRG016_c1_after:
     hide PRG with dissolve
     "I watched the two competing teams, carefully observing their technique. The minutes flew by quickly until it was Aida and Sakura's turn."
-    "Suddenly a loud bell rang from the Announcer's stand."
+    "Suddenly a loud bell rang from the announcer's stand."
     Announcer "TIME!"
     "Both teams gingerly grabbed their completed dishes and brought them to the judges table to await their results."
     Announcer "NEXT ROUND!"
@@ -2381,7 +2381,7 @@ label PRG019:
     MC "You're going to find yourself flying out of my window one of these days."
     "I let loose a yawn as I shut off the alarm and gazed sleepily at the clock face."
     MCT "Damn. 9:45 already?"
-    "Being that it was a weekend, I didn't have much on my plate today, besides putting in a bit of study time for the latest exam that Tashi-sensei had dumped onto the classes lap."
+    "Being that it was a weekend, I didn't have much on my plate today besides putting in a bit of study time for the latest exam that Tashi-sensei had dumped onto the class's lap."
     menu:
         "Study hard": #PRG +2
             jump PRG019_c1_1
@@ -3049,7 +3049,7 @@ label PRG021:
     PRG "And finished! You can open your eyes now."
     scene Cooking Classroom with fade
     show PRG neutral with dissolve
-    "I opened my eyes and looked down. On the plate was 6 small cookies, each one a different color."
+    "I opened my eyes and looked down. On the plate was six small cookies, each one a different color."
     if getSkill("Art") > 8:
         MC "These are french macarons, right?"
         show PRG surprised
@@ -3113,7 +3113,7 @@ label PRG022:
     scene Classroom with fade
     show HR neutral with dissolve
     play music Rain
-    HR "-and that's why you never mix Bleach and Vinegar."
+    HR "-and that's why you never mix bleach and vinegar."
     hide HR with dissolve
     "I leaned back in my chair and sighed. Classes had been getting more and more boring lately. Tashi-Sensei was a knowledgeable man, no question about that. However, watching paint dry on a house was more interesting than listening to his lectures. Just then, the reassuring *DING* of the bell sounded throughout the school, signaling the end of classes for the day."
     "As everyone began gathering their books, I couldn't help but smile to myself. It was Friday, meaning that I had two days of freedom. I could sense a nap and some video games in my future."
@@ -3197,7 +3197,7 @@ label PRG022:
     PRG "I think so. I'm going to go get the oils. Could you go find the ramen noodles? Get a few bags if they have them."
     MC "On it!"
     hide PRG with dissolve
-    "Ducking down the noodle aisle, I spotted the ramen right away. I loaded myself with 4 big bags and hobbled back down the aisle, turning right towards where Aida had gone."
+    "Ducking down the noodle aisle, I spotted the ramen right away. I loaded myself with four big bags and hobbled back down the aisle, turning right towards where Aida had gone."
     PRG "I see you found the ramen."
     "I peeked around my stack of noodles to see Aida standing in front of me, pushing the cart up so I could unload."
     show PRG neutral with dissolve
@@ -3431,7 +3431,7 @@ label PRG023:
     MC "Woah, it's alright. Just take a deep breath. I just wasn't quite expecting such a quick turnaround time. I don't have any plans today, so yeah, let's get going now!"
     show PRG neutral
     PRG "O-Okay!"
-    "Aida leaned over and reached into her backpack, withdrawing a thick notebook from it's depths."
+    "Aida leaned over and reached into her backpack, withdrawing a thick notebook from its depths."
     PRG "We can use this to pool all of our ideas together."
     show PRG surprised
     PRG "Oh! I just remembered I have a book that my grandparents got for me about the Dragons in my dorm!"
@@ -3516,10 +3516,10 @@ label PRG024:
     show RM smug
     RM "And waste the precious early morning hours of the day? Pah, I'll have none of that, thank you!"
     hide RM with dissolve
-    "I shut my eyes to yawn, and by the time I opened them again, Diachi was gone, the nearby curtain flapping in the breeze from the open window he had no doubt jumped from."
+    "I shut my eyes to yawn, and by the time I opened them again, Daichi was gone, the nearby curtain flapping in the breeze from the open window he had no doubt jumped from."
     "Once I had shuffled to the window and reached groggily for the latch, I heard the tiniest rustling sound coming from the bushes across the path, next to the girl's dorm."
     "As I looked on, Aida slid silently out from behind them, and glanced around to make sure she was alone. Held tightly against her chest was a wrinkled and creased piece of paper, which despite its condition looked important. She began to hurry down the nearby path towards the classrooms."
-    MCT "... what the?"
+    MCT "...What the?"
     "I could have called out to her, but by the way she was acting, I didn't want her to think I had been spying on her. The way I saw it, I only had one option."
     "Without hesitation, I put my hands on the windowsill and hoisted myself onto the ledge."
     MCT "Shit! Shit! Shit! Okay, relax. Daichi does this all the time."
@@ -3627,7 +3627,7 @@ label PRG024_c1_after:
     "The nurse looked at me, her eyes wide and her mouth slack jawed."
     MCT "It does sound a little far fetched out loud."
     Nurse "A... uh... Are you telling me the truth? Seriously?"
-    PRG "Um... I was there Ma'am. It's true."
+    PRG "Um... I was there, ma'am. It's true."
     Nurse "I... wow. I've been here for over 10 years and this is my first case of injury by window."
     "She jotted down something into her notes quickly, before looking to Aida."
     Nurse "And you were with him when the injury occurred?"
@@ -4694,7 +4694,7 @@ label PRG027_c1_after:
     PRG "Hotsure-san?"
     MC "Oi?"
     PRG "Y-You realize you took this conversation from note taking to driving in traffic, right?"
-    MC "Eh, tis the miracle of random tangents, They can take you anywhere, anytime."
+    MC "Eh, 'tis the miracle of random tangents, They can take you anywhere, anytime."
 
     scene Hallway with fade
     "Aida chuckled at me as we neared the library. We opened the door quietly and deposited the books in the library's returned books bin and hurried toward our class, which we were now almost 20 minutes late for."
@@ -4811,7 +4811,7 @@ label PRG028:
 
     scene Cooking Classroom with fade
     #[SCENE CHANGE - CLASSROOM_DAY]
-    "Everything looked just as it had the last time Aida and I had been here. The countertops were clean and freshly polished, and every utensil was put neatly in it's spot."
+    "Everything looked just as it had the last time Aida and I had been here. The countertops were clean and freshly polished, and every utensil was put neatly in its spot."
     show PRG neutral with dissolve
     MC "So, what's on the menu today, chef?"
     PRG "I-I feel like making something a bit more simple today, as a warm up. Maybe lamb chops and a small salad?"
@@ -4912,7 +4912,7 @@ label PRG028_c1_2:
     MC "Yes, chef!"
     PRG "Okay, garlic first!"
     "I passed her the small cup of garlic, which she added to the pan with a tantalizing sizzle."
-    PRG "Next. give me rosemary and lemon juice."
+    PRG "Next, give me rosemary and lemon juice."
     "Those were added, as well."
     PRG "Chicken stock!"
     "I handed her the cup of stock, which she poured in slowly. She turned the dial on the stove to high and began to stir, deglazing the pan as she went, until juicy bits of lamb floated in the sauce."

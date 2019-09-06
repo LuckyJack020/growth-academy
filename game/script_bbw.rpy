@@ -1225,7 +1225,7 @@ label BBW008A_c3:
     jump daymenu
     
 label BBW009:
-    scene He
+    scene Hallway with fade
     play music Busy
     "It was only the second week of the year and I was already getting cabin fever being stuck at the school 24/7."
     "There was a town not far from the gates, but I hadn't gotten a chance to check it out yet. Hadn't even checked out much of the school, for that matter."
@@ -3165,7 +3165,7 @@ label BBW018_c2_4:
     "She didn't master it right away - there was just too much going on to get a feel for everything all at once - but even when she started to get outclassed by the other empires, and when she engaged in an ill-fated war against one of her neighbors, she was still beaming."
     "It took almost six hours for her to get through her first game. For a while she had the lead, until another continent was discovered and three other empires joined the picture."
     "She ended up in second place after managing to conquer a neighbor, but the game ranked her performance right at the bottom of the charts. 'Andrew Johnson.'"
-    "I'd have to look him later to see just how dismal that was."
+    "I'd have to look him up later to see just how dismal that was."
     "But Alice was unfazed, even if she knew who he was."
     show BBW happy
     BBW "I admit, Keisuke, I may have been wrong. That was a wonderful game."
@@ -3393,7 +3393,7 @@ label BBW019_theater:
         BBW "Let me know how it is. I might go see it later."
         hide BBW with dissolve
         "She and Aida walked off, and I went to buy a ticket."
-        scene Black with fade
+        scene black with fade
         pause 2
         scene Town with fade
         "The movie wasn't bad. A bit dry in the second half, and the battle scenes seemed almost perfunctory, but overall it was a solid flick."
@@ -4497,7 +4497,7 @@ label BBW026:
         "I had already put a lot of thought into what we would do come Saturday night. I had the movie and restaurant picked out, and I had even tried to set a reservation."
         "Turned out they didn't take reservations, but I was able to get the movie tickets in advance."
         "But Saturday wasn't here yet. I'd still be sitting in classes with her, working with (or for, technically) her. There'd be chances to embarrass myself, to turn her off even unintentionally."
-    "I wasn't stressed out so terrible I couldn't sleep, but I couldn't keep such thoughts out of my mind as I sat through class."
+    "I wasn't stressed out terrible enough that I couldn't sleep, but I still couldn't keep such thoughts out of my mind as I sat through class."
     MCT "At least I don't have anything else to worry about right now."
     show HR neutral with dissolve
     HR "And yes, that will be on the test."

@@ -86,7 +86,7 @@ label BE001:
     "My introspection was suddenly interrupted by my elbow getting pressed into something warm and soft."
     MC "What the...Honoka? How'd you get up here?"
     BE "Heh, the same way as you, Kei-chan. Steps. I've been behind you for a while now, did you really not notice?"
-    "Not until you bumped into me with that chest of yours..."
+    MCT "Not until you bumped into me with that chest of yours..."
     MC "I guess not. My head's kind of all over the place after learning why we're here. How about you? You said you didn't know what this academy was for, right?"
     show BE neutral
     BE "Nope, no clue until teach explained it. It's so weird, don't you think something like this would be more public knowledge?"
@@ -197,7 +197,7 @@ label BE001_after:
     BE "I mean, you, me, and the roof! The original power trio. How many times do you think we snuck up to the roof when we were younger? 100? 200?"
     MC "It was probably a few dozen times if that."
     show BE sad
-    BE "Eh you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."    
+    BE "Eh, you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."    
     BE "You know, this academy's definitely a weird place, and we're gonna go through some strange stuff by the sound of it. But, I'm really glad you're here, Kei-chan. Makes things a bit easier."
     MC "Please, Honoka, when have you ever backed down from a challenge, anyway?"
     show BE happy
@@ -804,7 +804,7 @@ label BE008:
     MC "Heh, yeah, it does. I just finished this one actually, keep reading, it gets really good in a second."
     "Honoka nodded and scanned along the pages. I waited for the moment I had been surprised by, and saw her hit that point where her eyes opened up wide."
     show BE surprised
-    "Whoa! Holy cow, I did {i}not{/i} expect that. I thought Tomoko died like, gosh, chapter 20? How did she survive that attack she took?"
+    BE "Whoa! Holy cow, I did {i}not{/i} expect that. I thought Tomoko died like, gosh, chapter 20? How did she survive that attack she took?"
     MC "I have no clue, but I'm guessing it has to do with how she was so powerful, strong enough to take down that robot in one punch. Maybe she became a cyborg or something."
     show BE neutral
     BE "Maybe. Though, I'd hope if they turned her into a cyborg they did more than just make her more powerful."
@@ -969,7 +969,7 @@ label BE009_c1:
     show BE happy
     BE "Yeah, that's the spirit! Thanks Kei-chan!"
     hide BE with dissolve
-    "After saying goodbye to Honoka, I stretched my legs out a bit, still sitting on the bleachers. It was so nice seeing her have fun and getting excited about something. A huge dose of normalcy in this weird skill was definitely needed. "
+    "After saying goodbye to Honoka, I stretched my legs out a bit; still sitting on the bleachers. It was so nice seeing her have fun and getting excited about something. A huge dose of normalcy in this weird school was definitely needed. "
     "I sat there for a few more moments before getting on my way, smiling as I walked back to my room."
     jump daymenu
 
@@ -2754,7 +2754,7 @@ label BE021:
     UNKNOWN "Affirmative. This is the official Seichou Archery Club. SAC."
     show BE happy
     BE "I thought the SAC was the Seichou Art Club."
-    UNKNOWN "...yes. Unfortunately they obtained the initialism first. Move on."
+    UNKNOWN "...Yes. Unfortunately, they obtained the initials first. Move on."
     MC "Honoka, I'm having second thoughts about this."
     show BE neutral
     BE "Me too. But I still want to give it a chance. So let's just push through for now."
@@ -3872,7 +3872,7 @@ label BE024_c2_1:
     MC "What's that?"
     "I feared the answer."
     show BE unique
-    BE "You can't have cereal without a nice big splash of milk~"
+    BE "You can't have cereal without a nice, big splash of milk~"
     "It was a good thing I still was near the wall to support myself. I never thought of flirting as something that could be 'won' before, but Honoka won this time for sure."
     jump daymenu
 
@@ -4618,7 +4618,7 @@ label BE027_c1_1:
     BE "You chose to browse around with me, so you become the honorary cart. The duty of every guy who goes shopping with a gal."
     MC "Joy."
     "Honoka continued to browse around the shop, pulling off the odd item here or there. After a while I wasn't paying too much attention. It was definitely more than she could buy, so hopefully she'd whittled them down to a few choices."
-    "Before I knew it, we ended up in the dressing rooms. Honoka entered one of the stalls and put out some of the clothes she'd selected, staring intently at them. W with all the focus of a scientist trying to remember a complex formula."
+    "Before I knew it, we ended up in the dressing rooms. Honoka entered one of the stalls and put out some of the clothes she'd selected, staring intently at them. With all the focus of a scientist trying to remember a complex formula."
     jump BE027_c1_after
 
 label BE027_c1_2:

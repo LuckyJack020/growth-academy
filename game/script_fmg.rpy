@@ -139,7 +139,7 @@ label FMG002:
     MC "Well that sucks, what are you going to do now?"
     FMG "I'm going to bed, I need to let my muscles heal. So if it's all the same, I'll be leaving."
     MC "Ok then, bye."
-    FMG "...yeah, later."
+    FMG "...Yeah, later."
     hide FMG with dissolve
     "I was about to make my leave, when I heard Akira call out my name."
     show FMG neutral with dissolve
@@ -164,7 +164,7 @@ label FMG003:
     show FMG neutral at Transform(xzoom=1) 
     show FMG neutral at Position(xpos=0.2)
     FMG "Yo, how're you?"
-    "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 kph."
+    "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 mph."
     MC "Um...fine?"
     show FMG sad
     FMG "Great, hey look about the other day..."
@@ -376,7 +376,7 @@ label FMG004_testpass:
     hide FMG
     "She run to where the vending machines were. When she came back, in each of her hands was ice cream, one cherry blossom and one vanilla."
     show FMG happy
-    FMG "Here, A congratulation prize, didn't know what flavor you liked so I got you vanilla."
+    FMG "Here, a congratulations prize. Didn't know what flavor you liked, so I got you vanilla."
     MC "Ice cream? But isn't that like the worst thing you could have during a workout?"
     show FMG neutral
     FMG "True, but I'd probably burned half the calories of this ice cream pop in this run, and that's not including the rest of my workout today."
@@ -441,7 +441,7 @@ label FMG005_c2:
     show FMG sad
     FMG "Well, it's not the growth that's affected me the most... It's the needles."
     MC "Um, if I may, why do you hate needles so much?"
-    FMG "Well, I guess it's because when I was 3, I was playing in the backyard when a rabid raccoon bit me on my leg... hard."
+    FMG "Well, I guess it's because when I was three, I was playing in the backyard when a rabid raccoon bit me on my leg... hard."
     "She pulled down her right sock, revealing a scar in the shape of a bite on her calf."
     FMG "If you were wondering why I wear my socks so high, that's why."
     MC "Oh god, looks like it was painful."
@@ -611,7 +611,7 @@ label FMG007:
     FMG "Hm? Oh, sure, I'm almost done but take a seat."
     MC "Hey, do you want to work out after class?"
     show FMG sad
-    FMG "Yeah, sorry, but I'm not feeling it today. I got a knot the size of a baseball in my Quadriceps and it's a pain to walk, let alone work out. All I want to do is eat my lunch."
+    FMG "Yeah, sorry, but I'm not feeling it today. I got a knot the size of a baseball in my quadriceps and it's a pain to walk, let alone work out. All I want to do is eat my lunch."
     MC "Oh, sorry."
     show FMG neutral
     FMG "Don't worry about it."
@@ -861,7 +861,7 @@ label FMG010_testpass:
     FMG "..."
     show FMG flex
     FMG "Everyone has a life goal, mine's just that simple, I guess!"
-    "I couldn't help shake the feeling that she was only giving me half of the truth, if not a quarter-truth truth. It made me wonder if Chibuki was right about Akira hiding something. Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
+    "I couldn't shake the feeling that she was only giving me half of the truth, if not a quarter of it. It made me wonder if Chibuki was right about Akira hiding something. Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
     show FMG neutral
     FMG "By the way, I gotta know, dude..."
     show FMG angry
@@ -941,7 +941,7 @@ label FMG011:
     scene School Planter with fade
     "It was a cloudy day that day, but I figured it would be nice to just walk around the school despite that."
     "...At least, until it started raining."
-    "Luckily, I found a room of some kind that was attached to the school , and entered without questioning its purpose. As I entered, I realized it was a recreation room of some kind, like something from an 80's arcade or something."
+    "Luckily, I found a room of some kind that was attached to the school, and entered without questioning its purpose. As I entered, I realized it was a recreation room of some kind, like something from an 80's arcade or something."
     scene Recreation with fade
     play music Busy
     MC "How old is this place, anyway?"
@@ -1494,7 +1494,7 @@ label FMG015:
         "… and upon seeing it, looked happy."
         show FMG happy
         $setAffection("FMG", 2)
-        "Aww sweet! It's Matthew Ryberg from Cyber Rage:CB saying his famous catchphrase!"
+        FMG "Aww sweet! It's Matthew Ryberg from Cyber Rage:CB saying his famous catchphrase!"
         MC "Oh, you like it?"
         FMG "Yeah I do! Thanks dude!"
     else:
@@ -1660,7 +1660,7 @@ label FMG016:
     Chibuki "That whole romantic BS was just to fluster Akira; an act, if you will. Dad always did say I had the makings of a great method actor."
     MC "Then, why are you working here?"
     Chibuki "For the money of course. I thought we established that. Now then, my break is almost over. Oh and don't worry, the favor's still there so long as ya keep this on the down low."
-    "Before anything was said, She... did that weird peace symbol pose and winked..."
+    "Before anything was said, she...did that weird peace symbol pose and winked..."
     Chibuki "Come again, master! <3"
     hide Chibuki with dissolve
     "Once she was finished with that, Chibuki went back into the café."
@@ -1684,7 +1684,7 @@ label FMG017:
     MC "Oh, you’re from Okinawa, explains your accent."
     show FMG happy
     FMG "Yep, born and raised. Might not hold the same excitement Tokyo has, but it’s home and I love it. I’m a fourth-generation Mizutani that’s lived there."
-    MC "Huh that’s cool. Hey, speaking of moms, mines been sending mail. Not packages or anything but just normal mail."
+    MC "Huh, that’s cool. Hey, speaking of moms, mine's been sending mail. Not packages or anything, but just normal mail."
     show FMG neutral
     FMG "What does she not use email?"
     MC "She does, the thing is that she doesn’t want to clutter my inbox."
@@ -1692,8 +1692,8 @@ label FMG017:
     FMG "… So she thinks it’s better to clutter your dorm room with real mail?"
     MC "I didn’t say it made sense."
     show FMG neutral
-    FMG "Ignoring that, what kind of massage has she been sending?"
-    MC "Well, it’s mostly just “how are you doing?” and such. in the latest one, she was asking about how why my sis-"
+    FMG "Ignoring that, what kind of messages has she been sending?"
+    MC "Well, it’s mostly just “How are you doing?” and such. In the latest one, she was asking about why my sis-"
     show FMG surprised
     FMG "O-Oh no!"
     "Alas, I was not able to complete my sentence about how my sister has not been replying to mother’s mail thanks to Akira. My confusion as to why Akira interrupted me was answered to what was in front of us."
@@ -2067,7 +2067,7 @@ label FMG019:
     MC "…What kind of stuff?"
     FMG "Meh, life stuff, I guess. Right now I just want to get school life behind me."
     MC "Why is that?"
-    FMG "I guess I’m just a little tired mentality. What with not only classes but how there’s gonna be like, a lot of big and tall students,"
+    FMG "I guess I’m just a little tired, mentally. What with not only classes but how there’s gonna be like, a lot of big and tall students."
     FMG "Myself included, hopefully."
     MC "Heh, for what it’s worth I think you’re pretty big, or at least have a big personality."
     MC "Speaking of, classes been good?"
@@ -2103,14 +2103,14 @@ label FMG021:
     $setProgress("FMG", "FMG022")
     play music Busy
     scene Library with fade
-    "Well, I should probably get to that report before it’s due. What I didn't expect at the library was a bored Akira and An angry Shiori...at the same table."
+    "Well, I should probably get to that report before it’s due. What I didn't expect at the library was a bored Akira and an angry Shiori...at the same table."
     show FMG sad at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     FMG "Ugh...Matsumoto-san...I’m SO bored…"
     AE "If I'm not mistaken, it was YOU who decided on this topic, and I already spent valuable time researching this for your sake."
     show AE angry
     AE "So pay attention!"
-    FMG "Awww ... what are we doing again I forgot…"
+    FMG "Awww ... what are we doing again? I forgot…"
     AE "You-gch-you asked me to be here so you-!"
     show AE embarrassed
     AE "Ghn...you know what? Never mind. We’ll go over the first portion AGAIN."
@@ -2120,7 +2120,7 @@ label FMG021:
     FMG "Wait...this actually happened? I thought it was a movie."
     show AE neutral
     AE "I...I’ll admit, I had to double-check the legitimacy of this event as well."
-    FMG "According to this book, it happened in the ’30s in the down under, so they had bombs and Light Machine Guns...so how hard is it to kill a bunch of stupid emus?! And why does the library even have this book, to begin with?!"
+    FMG "According to this book, it happened in the ’30s in the down-under, so they had bombs and light machine guns...so how hard is it to kill a bunch of stupid emus?! And why does the library even have this book, to begin with?!"
     AE "It was less about their equipment, and more about the failure of their tactics when faced with the natural defenses of the birds. Meanwhile, the book was donated by an Australian philanthropist around the time the library was built."
     AE "As for why THIS particular topic...let’s just say, serendipity. It’s quite a coincidence that you have the exact book for this extremely specific event…"
     AE "...When did you decide on the topic, again?"
@@ -2151,7 +2151,7 @@ label FMG021:
     AE "-and furthermore-!"
     show AE neutral
     AE "Wait, Utagashi-san? For...what reason?"
-    MC "Because the school is being controlled by Emus, apparently… though in hindsight he might have just wanted to distract me."
+    MC "Because the school is being controlled by emus, apparently... though in hindsight he might have just wanted to distract me."
     AE "..."
     show FMG neutral
     FMG "Huh, guess that explains who drew dicks in page 20 and 25 before, Daichi must have done that."
@@ -2177,7 +2177,7 @@ label FMG021:
     show AE neutral
     AE "...Haan, you’re right Hotsure-san. Mizutani-san, if we lament the time lost we will lose more to lament."
     show FMG neutral
-    FMG "I don’t know how a lamp has to do with my report, but maybe we should just shut up and get back to the report."
+    FMG "I don’t know what a lamp has to do with my report, but maybe we should just shut up and get back to the report."
     show AE embarrassed
     AE "L-lamp? I...That’s fine too."
 
@@ -2230,7 +2230,7 @@ label FMG021:
     MC "..."
     HR "...So, I think that with all the work she’s put in, Mizutani-san earned an A, wouldn’t you agree?"
     MC "O-OY, OY! What was that?!"
-    HR "Okay, look, my old librarian forgave, Matsumoto-chan, however will NOT; and quite frankly I haven’t had my coffee this morning. Dealing with her will give me an aneurysm, so I’m willing to give Mizutani-san any grade she wants."
+    HR "Okay, look, my old librarian forgave me; Matsumoto-chan, however will NOT, and quite frankly I haven’t had my coffee this morning. Dealing with her will give me an aneurysm, so I’m willing to give Mizutani-san any grade she wants."
     "And that’s how Shiori-san and Mizutani-san got the same grade in our world history report."
     jump daymenu
 
