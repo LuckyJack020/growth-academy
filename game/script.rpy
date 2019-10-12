@@ -9,7 +9,34 @@
     eventlibrary = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
-    locationlist = ['arcade', 'auditorium', 'cafeteria', 'campuscenter', 'classroom', 'cookingclassroom', 'dormBBW', 'dormBE', 'dormexterior', 'dorminterior', 'festival', 'gym', 'hallway', 'library', 'musicclassroom', 'office', 'pool', 'roof', 'schoolfront', 'schoolplanter', 'schoolexterior', 'supermarket', 'town', 'track', 'woods']
+    locationlist = {
+        #name of place: (map used, x/y pixel position)
+        'arcade': ("town", (350,40)),
+        'auditorium': ("school", (430,440)),
+        'cafeteria': ("school", (525,440)),
+        'campuscenter': ("school", (480,340)),
+        'classroom': ("school", (565,275)),
+        'cookingclassroom': ("school", (565,325)),
+        'dormBBW': ("school", (630,250)),
+        'dormBE': ("school", (630,275)),
+        'dormexterior': ("school", (630,350)),
+        'dorminterior': ("school", (630,375)),
+        'festival': ("town", (350,40)),
+        'gym': ("school", (550,225)),
+        'hallway': ("school", (565,300)),
+        'library': ("school", (460,440)),
+        'musicclassroom': ("school", (565,300)),
+        'office': ("school", (480,450)),
+        'pool': ("school", (350,225)),
+        'roof': ("school", (565,275)),
+        'schoolfront': ("school", (210,145)),
+        'schoolplanter': ("school", (460,260)),
+        'schoolexterior': ("school", (430,130)),
+        'supermarket': ("town", (250, 45)),
+        'town': ("town", (250, 45)),
+        'track': ("school", (480,180)),
+        'woods': ("school", (250,0))
+    }
     debugenabled = True
     debuginput = ""
     globalsize = 1
@@ -465,86 +492,57 @@ screen choicetimer:
     timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('choicetimer'), Jump(timer_jump)])
 
 screen daymenu:
-    add "Graphics/ui/bg/menubg-day.png"
-        
-    #event choices (1 to 3-choice day)
-    if len(eventchoices) <= 3:
-        vbox:
-            xalign 0.5
-            ypos 120
-            spacing 60
-            for i in range(3): #c in eventchoices:
-                if i >= len(eventchoices):
-                    null
-                else:
-                    $c = eventchoices[i]
-                    vbox:
-                        fixed:
-                            xmaximum 600
-                            ymaximum 60
-                            if eventlibrary[c]["location"] in locationlist:
-                                imagebutton idle "Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
-                            else:
-                                imagebutton idle "Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"] action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
-                            hbox:
-                                hbox:
-                                    spacing -120
-                                    order_reverse True
-                                    if len(eventlibrary[c]["girls"]) == 0:
-                                        add "Graphics/ui/icons/charicon-missing.png"
-                                    else:
-                                        for g in eventlibrary[c]["girls"]:
-                                            if g in girllist:
-                                                add "Graphics/ui/icons/charicon-%s.png" % g
-                                            else:
-                                                add "Graphics/ui/icons/charicon-missing.png"
-                                #fixed:
-                                #    frame:
-                                #        xalign 0.5
-                                #        yalign 0.5
-                                #        background Solid(Color((0, 0, 0, 100)))
-                                #        text eventlibrary[c]["name"] size 16
-
-                
-    #event choices (4 to 8-choice day)
-    if len(eventchoices) > 3:
-        grid 2 4:
-            xalign 0.5
-            ypos 40
-            spacing 40
-            for i in range(8): #c in eventchoices:
-                if i >= len(eventchoices):
-                    null
-                else:
-                    $c = eventchoices[i]
-                    fixed:
-                        xmaximum 250
-                        ymaximum 60
-                        if eventlibrary[c]["location"] in locationlist:
-                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
+    add "Graphics/ui/map/map_school.png"
+    
+    #event choice sidebar
+    grid 1 8:
+        #xalign 0.1
+        xpos 10
+        ypos 20
+        spacing 20
+        for i in range(8): #c in eventchoices:
+            if i >= len(eventchoices):
+                null
+            else:
+                $c = eventchoices[i]
+                fixed:
+                    xmaximum 250
+                    ymaximum 40
+                    if eventlibrary[c]["location"] in locationlist:
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
+                    else:
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
+                    hbox:
+                        spacing -120
+                        order_reverse True
+                        if len(eventlibrary[c]["girls"]) == 0:
+                            add im.Crop("Graphics/ui/icons/charicon-missing.png", (0, 0, 184, 40))
                         else:
-                            imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 60)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
-                        hbox:
-                            spacing -120
-                            order_reverse True
-                            if len(eventlibrary[c]["girls"]) == 0:
-                                add "Graphics/ui/icons/charicon-missing.png"
-                            else:
-                                for g in eventlibrary[c]["girls"]:
-                                    add "Graphics/ui/icons/charicon-%s.png" % g
-                            #FIXME this looks awful and breaks tables, needs harder adjustments
-                            #fixed:
-                            #    frame:
-                            #        xalign 0.5
-                            #        yalign 0.5
-                            #        background Solid(Color((0, 0, 0, 100)))
-                            #        text eventlibrary[c]["name"]
+                            for g in eventlibrary[c]["girls"]:
+                                add im.Crop("Graphics/ui/icons/charicon-%s.png" % g, (0, 0, 184, 40))
+                        #FIXME this looks awful and breaks tables, needs harder adjustments
+                        #fixed:
+                        #    frame:
+                        #        xalign 0.5
+                        #        yalign 0.5
+                        #        background Solid(Color((0, 0, 0, 100)))
+                        #        text eventlibrary[c]["name"]
+    #map icons
+    for i in range(8): #c in eventchoices:
+        if i >= len(eventchoices):
+            null
+        else:
+            $c = eventchoices[i]
+            if eventlibrary[c]["location"] in locationlist:
+                fixed:
+                    xpos locationlist[eventlibrary[c]["location"]][1][0]
+                    ypos locationlist[eventlibrary[c]["location"]][1][1]
+                    imagebutton idle im.FactorScale("Graphics/ui/icons/%s-icon.png" % eventlibrary[c]["girls"][0], .25) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c)] unhovered [SetVariable("highlitevent", "")]
     
     #studying activities (non-special day)
-    if True:
-        textbutton "Train Athletics" xalign 0.1 yalign 0.8 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-        textbutton "Train Art" xalign 0.5 yalign 0.8 action [SetVariable("activeevent", "Art"), Jump("train")]
-        textbutton "Train Academics" xalign 0.9 yalign 0.8 action [SetVariable("activeevent", "Academics"), Jump("train")]
+    imagebutton idle "Graphics/ui/map/athletics.png" xalign 0.05 yalign 0.9 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+    imagebutton idle "Graphics/ui/map/art.png" xalign 0.15 yalign 0.9 action [SetVariable("activeevent", "Art"), Jump("train")]
+    imagebutton idle "Graphics/ui/map/academics.png" xalign 0.25 yalign 0.9 action [SetVariable("activeevent", "Academics"), Jump("train")]
     
     #scene title
     if highlitevent != "":
