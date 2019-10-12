@@ -36,6 +36,10 @@ image Hill Road = "Graphics/ui/bg/hillroad.png"
 image Theater = "Graphics/ui/bg/NYI.png"
 image Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
+image Game Store = "Graphics/ui/bg/gamestore.png"
+image Park = "Graphics/ui/bg/NYI.png"
+image Clock Tower = "Graphics/ui/bg/NYI.png"
+image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -65,6 +69,7 @@ define Yuki = Character('Yuki', color="#FF91DC")
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
 define Tomoko = Character('Tomoko', color="#FF3300")
+define Mom = Character('Mom', color="#FF3300")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
@@ -77,8 +82,9 @@ define Owner = Character('Store Owner', color="#C0C0C0")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Teacher = Character('Teacher', color="#C0C0C0")
-define Principal = Character('Teacher', color="#C0C0C0")
+define Principal = Character('Principal', color="#C0C0C0")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define Vendor = Character('Vendor', color="#FFFFFF")
 
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
@@ -447,7 +453,7 @@ label global000_AE_c1:
     MCT "I'm going to die. I've only been here a day and I'm going to die."
     UNKNOWN "And just who are y-?"
     FMG "Yeah, Matsumoto, get that stick out of your huge butt."
-    "At that, the girls attention turned back from me to the girl behind her."
+    "At that, the girl's attention turned back from me to the girl behind her."
     "It was hard not to notice the very prominent backside on her otherwise stiff and lithe frame."
     AE "...."
     show AE neutral
@@ -460,7 +466,7 @@ label global000_AE_c1:
     show AE neutral
     AE "I can only assume you two are Honoka Inoue and Keisuke Hotsure?"
     MC "Huh? How did you-"
-    AE "Your appearance fits your files.."
+    AE "Your appearance matches your files.."
     MC "Oh, well, um...yeah, we're in room 3-B?"
     AE "Then listen well. Go to room 3-B and make sure Kodama and Nikumaru have the first-day decorations put up properly."
     show AE angry
@@ -1207,7 +1213,7 @@ label global005:
     play music Rain
     "The auditorium had been set up with what amounted to a field clinic, privacy dividers erected in a series of squares, with various testing and measuring devices set on folding tables."
     "I noticed that unlike at my previous schools, it seemed there were no student volunteers; every station seemed to be manned by a medical professional of some sort."
-    AE "Class 3-B, over here! Line up along this partition, and- no, not alphabetically, by seat number. What do you mean you don't know what your seat number is??  Haven't you been paying attention at all?"
+    AE "Class 3-B, over here! Line up along this partition, and no, not alphabetically, by seat number. What do you mean you don't know what your seat number is?  Haven't you been paying attention at all?"
     "The lines were small, but given how thoroughly they were measuring everyone- I supposed being here meant there was a much wider set of variables that could be changing- each person took as long as several might at my older schools."
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."

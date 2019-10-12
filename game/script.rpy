@@ -16,12 +16,16 @@
         'cafeteria': ("school", (525,440)),
         'campuscenter': ("school", (480,340)),
         'classroom': ("school", (565,275)),
+		'clocktower': ("school", (0, 0)),
         'cookingclassroom': ("school", (565,325)),
+		'dormAE': ("school", (630,250)),
         'dormBBW': ("school", (630,250)),
         'dormBE': ("school", (630,275)),
+		'dormPRG': ("school", (630,250)),
         'dormexterior': ("school", (630,350)),
         'dorminterior': ("school", (630,375)),
         'festival': ("town", (350,40)),
+		'field': ("school", (0,0)),
         'gym': ("school", (550,225)),
         'hallway': ("school", (565,300)),
         'library': ("school", (460,440)),
@@ -40,6 +44,7 @@
     debugenabled = True
     debuginput = ""
     globalsize = 1
+    prgsize = 1
     
     import math
 
@@ -96,7 +101,7 @@
 
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR = range(8)
+        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK = range(10)
     
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -105,6 +110,8 @@
     #AFFECTION: arg1 = (string, in girls list) girl, arg2 = ConditionEqualityEnum, arg3 = (int) affection score, true if the comparison is true (between girl specified in arg1's affection score and arg3)
     #SKILL: arg1 = (string, in skills list) skill, arg2 = ConditionEqualityEnum, arg3 = (int) skill score, true if the comparison is true (between skill specified in arg1 and arg3)
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
+    #ROUTELOCK: arg1 = (string) character code, true if you're on that route (or, if empty string, true if not on any route)
+    #NOROUTELOCK: arg1 = (string) character code, true if you're NOT on that route (or, if empty string, true if on any route)
     
     class EventTypeEnum:
         CORE, OPTIONAL, OPTIONALCORE = range(3)
@@ -191,6 +198,18 @@
                 else:
                     criteriavalid = False
                     break
+            elif c[0] == ConditionEnum.ROUTELOCK:
+                if routelock == c[1]:
+                    continue
+                else:
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.NOROUTELOCK:
+                if routelock != c[1]:
+                    continue
+                else:
+                    criteriavalid = False
+                    break
             else:
                 renpy.log("Invalid criteria enum ID: %s" % str(c[0]))
                 criteriavalid = False
@@ -257,6 +276,9 @@
             if v["priority"] != PrioEnum.ALL:
                 continue
             if k in clearedevents:
+                continue
+            #Only care about all-priority core events if it's the current one
+            if v["type"] == EventTypeEnum.CORE and routeprogress[v["girls"][0]] != k:
                 continue
             badFlag = False
             for f in timeflags:
@@ -451,8 +473,17 @@
             
     def setSize(size):
         global globalsize
+        global prgsize
         if size > globalsize:
             globalsize = size
+            if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
+                prgsize = size
+    
+    #Edge case handler for Aida's intiial pregnancy
+    def setPregnant():
+        global prgsize
+        if 3 > prgsize:
+            prgsize = 3
 
 label start:
     python:
@@ -845,7 +876,7 @@ label debugloadtest:
             pause .1
             show AE aroused
             pause .1
-            show AE aroused-2
+            show AE embarrassed
             pause .1
             show AE aroused-3
             pause .1
@@ -959,7 +990,7 @@ label debugloadtest:
             pause .1
             show AE aroused
             pause .1
-            show AE aroused-2
+            show AE embarrassed
             pause .1
             show AE aroused-3
             pause .1

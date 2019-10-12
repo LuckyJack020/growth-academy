@@ -42,13 +42,15 @@ init 2 python:
     eventlibrary['BE022'] = {"name": "A Sneaky Lunch", "girls": ["BE", "BBW"], "location": "library", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE023", "obsflags": [],                  "conditions": []}
     eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
     eventlibrary['BE024'] = {"name": "I scream, You Cream", "girls": ["BE"], "location": "town", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE025", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE026", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE026'] = {"name": "Cicada Catching", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE028", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE027'] = {"name": "Archery Competition", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE029", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE028'] = {"name": "Arcade Date", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                           "priority": PrioEnum.NONE, "next": "BE029", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE029'] = {"name": "Geology Assignment", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE030", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE030'] = {"name": "Love Confession", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE031", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE031'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "location": "field", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE026", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE026'] = {"name": "Cicada Catching", "girls": ["BE"], "location": "field", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE027", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE027'] = {"name": "Clothes Shopping", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE028", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE028'] = {"name": "Arcade Date", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                          "priority": PrioEnum.NONE, "next": "BE029", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE029'] = {"name": "Geology Assignment", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE030", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE030'] = {"name": "Love Confession", "girls": ["BE"], "location": "schoolplanter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE031", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE031'] = {"name": "Very Special Day", "girls": ["BE"], "location": "dormBE", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "BE032", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE032'] = {"name": "The Day After", "girls": ["BE", "AE"], "location": "classroom", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE033", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE033'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONALCORE,                            "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -84,7 +86,7 @@ label BE001:
     "My introspection was suddenly interrupted by my elbow getting pressed into something warm and soft."
     MC "What the...Honoka? How'd you get up here?"
     BE "Heh, the same way as you, Kei-chan. Steps. I've been behind you for a while now, did you really not notice?"
-    "Not until you bumped into me with that chest of yours..."
+    MCT "Not until you bumped into me with that chest of yours..."
     MC "I guess not. My head's kind of all over the place after learning why we're here. How about you? You said you didn't know what this academy was for, right?"
     show BE neutral
     BE "Nope, no clue until teach explained it. It's so weird, don't you think something like this would be more public knowledge?"
@@ -195,7 +197,7 @@ label BE001_after:
     BE "I mean, you, me, and the roof! The original power trio. How many times do you think we snuck up to the roof when we were younger? 100? 200?"
     MC "It was probably a few dozen times if that."
     show BE sad
-    BE "Eh you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."    
+    BE "Eh, you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."    
     BE "You know, this academy's definitely a weird place, and we're gonna go through some strange stuff by the sound of it. But, I'm really glad you're here, Kei-chan. Makes things a bit easier."
     MC "Please, Honoka, when have you ever backed down from a challenge, anyway?"
     show BE happy
@@ -802,7 +804,7 @@ label BE008:
     MC "Heh, yeah, it does. I just finished this one actually, keep reading, it gets really good in a second."
     "Honoka nodded and scanned along the pages. I waited for the moment I had been surprised by, and saw her hit that point where her eyes opened up wide."
     show BE surprised
-    "Whoa! Holy cow, I did {i}not{/i} expect that. I thought Tomoko died like, gosh, chapter 20? How did she survive that attack she took?"
+    BE "Whoa! Holy cow, I did {i}not{/i} expect that. I thought Tomoko died like, gosh, chapter 20? How did she survive that attack she took?"
     MC "I have no clue, but I'm guessing it has to do with how she was so powerful, strong enough to take down that robot in one punch. Maybe she became a cyborg or something."
     show BE neutral
     BE "Maybe. Though, I'd hope if they turned her into a cyborg they did more than just make her more powerful."
@@ -967,7 +969,7 @@ label BE009_c1:
     show BE happy
     BE "Yeah, that's the spirit! Thanks Kei-chan!"
     hide BE with dissolve
-    "After saying goodbye to Honoka, I stretched my legs out a bit, still sitting on the bleachers. It was so nice seeing her have fun and getting excited about something. A huge dose of normalcy in this weird skill was definitely needed. "
+    "After saying goodbye to Honoka, I stretched my legs out a bit; still sitting on the bleachers. It was so nice seeing her have fun and getting excited about something. A huge dose of normalcy in this weird school was definitely needed. "
     "I sat there for a few more moments before getting on my way, smiling as I walked back to my room."
     jump daymenu
 
@@ -2752,7 +2754,7 @@ label BE021:
     UNKNOWN "Affirmative. This is the official Seichou Archery Club. SAC."
     show BE happy
     BE "I thought the SAC was the Seichou Art Club."
-    UNKNOWN "...yes. Unfortunately they obtained the initialism first. Move on."
+    UNKNOWN "...Yes. Unfortunately, they obtained the initials first. Move on."
     MC "Honoka, I'm having second thoughts about this."
     show BE neutral
     BE "Me too. But I still want to give it a chance. So let's just push through for now."
@@ -3870,7 +3872,7 @@ label BE024_c2_1:
     MC "What's that?"
     "I feared the answer."
     show BE unique
-    BE "You can't have cereal without a nice big splash of milk~"
+    BE "You can't have cereal without a nice, big splash of milk~"
     "It was a good thing I still was near the wall to support myself. I never thought of flirting as something that could be 'won' before, but Honoka won this time for sure."
     jump daymenu
 
@@ -4616,7 +4618,7 @@ label BE027_c1_1:
     BE "You chose to browse around with me, so you become the honorary cart. The duty of every guy who goes shopping with a gal."
     MC "Joy."
     "Honoka continued to browse around the shop, pulling off the odd item here or there. After a while I wasn't paying too much attention. It was definitely more than she could buy, so hopefully she'd whittled them down to a few choices."
-    "Before I knew it, we ended up in the dressing rooms. Honoka entered one of the stalls and put out some of the clothes she'd selected, staring intently at them. W with all the focus of a scientist trying to remember a complex formula."
+    "Before I knew it, we ended up in the dressing rooms. Honoka entered one of the stalls and put out some of the clothes she'd selected, staring intently at them. With all the focus of a scientist trying to remember a complex formula."
     jump BE027_c1_after
 
 label BE027_c1_2:
@@ -4888,7 +4890,6 @@ label BE027_c3_after:
     "I nodded as Honoka and I walked back towards the bus stop to head back to campus. She held her bag in one hand, and the other grabbed my hand, squeezing it tightly as she smiled my way."
     "We might need to go shopping more often."
     jump daymenu
-
 
 label BE028:
     $setProgress("BE", "BE029")
@@ -5236,6 +5237,7 @@ label BE029:
 
 label BE030:
     $setProgress("BE", "BE031")
+    $lockRoute("BE")
     scene School Planter with fade
     play music Sunset
     "As usual, there was only a certain amount of time I could handle Daichi before I felt the need to escape my room. Maybe 'escape' was a strong word."
@@ -5441,6 +5443,287 @@ label BE030_neutral:
     jump daymenu
 
 label BE031:
+    $setProgress("BE", "BE032")
+    scene Dorm Exterior with fade
+    play music Sunset
+    "I'm not quite sure what Honoka had planned for us tonight. She had told me it would be a surprise, but didn't even indicate if she wanted to go out, or stay in. I was fine with both choices, but knowing Honoka, she probably just forgot to tell me if it was one or the other."
+    "Either way, whichever she wanted to do, I couldn't deny her. If she wanted to go to the arcade, to dinner, or watch anime inside. It was nearly impossible to say no to that face of hers."
+    "She had told me to meet her at her dorm room, so that's where I went. It was fairly late in the day, so there wasn't much foot traffic to be had in the dormitories. In general it was fairly quiet, with just the low buzz of fluorescent lights making most of the noise."
+    "It hadn't crossed into nighttime yet, so I didn't get any odd looks from the few girls I passed by as I made my way to Honoka's room. Room 08 on this floor. As I approached the door I noticed a small sticky note to the left of the room number, with '80' scribbled on it."
+    play sound Knock
+    MC "Honoka?"
+    "I stood there for a moment and waited for an answer."
+    MC "Honoka?"
+    BE "Sorry! Just a sec. Dang socks all over the place. Coming!"
+    #[SFX- Door_Open]
+    show BE neutral with dissolve
+    "A few seconds later, Honoka opened the door. We greeted each other, but as I looked at Honoka, something was different. I couldn't quite put my finger on it."
+    MC "So, what's the plan for tonight?"
+    show BE surprised
+    BE "Plan?"
+    "Honoka blinked, looking slightly confused. I still struggled to figure out what was different about her. Her hair was the same. Her boobs might have been bigger, but that was hard to catch at first glance. What was it?"
+    MC "Yeah, you said you wanted to hang out tonight. To meet you here?"
+    show BE neutral
+    BE "Right. We're not going anywhere though."
+    MC "Oh! You just want to chill and watch a movie?"
+    stop music
+    "Honoka peered her head outside her door and looked down the hallway, twice on both sides, before grabbing my hand and yanking me inside."
+    #[Effect- Screen Shake (1 time, low intensity)]
+    
+    scene Dorm BE with hpunch
+    show BE surprised
+    #[Transition- wipe][(S)Or other  fast  transition, I'm not sure what options we have?]
+    play music Steamy
+    "Being unprepared for such an act, I was caught off-balance. My feet tripped over each other, and I began fumbling towards Honoka's chest. She luckily reached out to grab me, preventing me from falling onto the floor, and ensuring I fell right onto her bust instead."
+    "That, while nice as it always was, gave me the final clue to figuring out what was different about Honoka."
+    "She was wearing a black bra."
+    "I hadn't kept tabs on what color bra she wore on a day-to-day basis. Typically whatever bra she had was hidden by her shirt, and it wasn't easy to tell the color. But the black she wore now stood out against the white of her uniform top."
+    show BE aroused
+    BE "Heh, don't get started, yet, Kei-chan. Let me lock the door first."
+    "Honoka helped me up, and giggled to herself as she made her way to the door. She locked it and gave it a firm tug for good measure."
+    show BE happy
+    BE "Okay!"
+    MC "What's up, Honoka? My brain is thinking things."
+    BE "Heh, that's what brains doooo, Kei-chan."
+    MC "I know, but, you brought me to your room, after school hours, and you locked the door. Plus you're wearing a, um..."
+    show BE neutral
+    BE "Wearing my school uniform? I know, I couldn't think of anything else to wear."
+    MC "No, I mean, the bra, I can see it."
+    show BE aroused
+    BE "Yeah, sure, you can!"
+    "Honoka smiled and grabbed the top button on her shirt."
+    MC "Wait, wait, I said 'I can' see your bra. Not 'can I' see your bra."
+    "Honoka looked visibly confused."
+    show BE sad
+    BE "But, you're going to anyway, right? Don't you want to? It's going to be hard if I keep my shirt on."
+    "Finally, I sat down in a chair, and Honoka approached, blushing. The gears in my head turned, creaking and cranking, but finally started putting the pieces together."
+    MC "You… want to do... that?"
+    BE "Do you not?"
+    "Honoka's hands still lingered on the buttons of her uniform's top. The button undid itself without her seeming to notice, exposing another solid inch or more of that succulent, enticing cleavage."
+    BE "I didn't think we were moving too fast. But if you want to slow down, it's okay too."
+    menu:
+        "No, I'm excited. I was just caught off-guard.": #+1
+            jump BE031_c1_1
+        "Of course I want to. I'm just flustered you had to be so forward about it. That's my job.": #+2
+            jump BE031_c1_2
+        "Maybe we should take it slower. Why don't we just make out, and see where it goes from there?":
+            jump BE031_c1_3
+
+label BE031_c1_1:
+    MC "No, I'm excited. I was just caught off-guard. If you'd told me ahead of time, I'd have been more prepared. I feel like I should have brought chocolate or something."
+    show BE happy
+    BE "I mean. I wouldn't have been opposed to chocolate."
+    $setAffection("BE", 1)
+    "Honoka snickered and licked her lips a bit."
+    BE "But, I guess I wanted this to be a surprise. A treat, kind of. So telling you ahead of time would ruin it."
+    MC "That's fair, I guess. But, I, ah, wow. The idea of, of, of…"
+    show BE unique
+    BE "Getting a boobjob from your girlfriend?"
+    "Honoka smiled and lifted up her boobs as another button was undone on her uniform. It was like a countdown to a rocket launch, and the explosion left in its wake would be one to remember."
+    MC "Yeah."
+    BE "You can't tell me you haven't thought about it before. Fantasized. Not with how many times you've run into them."
+    "Another button came undone, less than half remained. I could now see the edges of her bra peeking past the confines of her shirt. It was haunting, and slightly terrifying as well."
+    "I also didn't have the heart to tell her that most of my chest collisions had been her fault."
+    jump BE031_c1_after
+
+label BE031_c1_2:
+    MC "Of course I want to. I'm just flustered you had to be so forward about it. That's my job. I feel I should have been the one to initiate this."
+    show BE happy
+    BE "Hey, we're a couple, that means we need to be equal about things, right?"
+    MC "That makes sense."
+    "At her behest, Honoka grabbed the center of her shirt and undid another button on her top, releasing more breastflesh unto the world. Every inch that revealed itself just made it more obvious how blasphemous it was that Honoka had to cover up her boobs so much."
+    MC "So, what can I do to make this more equal?"
+    "Honoka paused for a moment, and tapped her chin with her finger. With a grin, she then reached down, and gently placed her hand on my trousers. With a deft flick of her wrist, my belt came undone, and slid out to fall upon the floor."
+    MC "Y-Yeah that's a good start."
+    "My hands reached up, to caress Honoka's boobs. If we were being equal, she'd just undone part of my pants. It was only fair I undid the next button. It felt like unlocking one of the padlocks to a bank vault."
+    show BE aroused
+    $setAffection("BE", 2)
+    BE "Heh, are you sure you haven't done this before?"
+    MC "Buttons I can do."
+    "Honoka's hands went to the top of my pants and undid the button on top."
+    BE "As can I."
+    MC "It's your bra I'm going to have trouble with."
+    "Honoka smiled as she placed a finger down her cleavage, stopping at the clasp on her bra."
+    show BE unique
+    BE "Well, I'll handle that."
+    jump BE031_c1_after
+
+label BE031_c1_3:
+    MC "Maybe we should take it slower. Why don't we just make out, and see where it goes from there?"
+    show BE happy
+    BE "Sure, I'm okay with that. But, you don't get to move from your seat."
+    MC "Yeah. I'm okay with that, too."
+    "There was only a brief second before Honoka was sitting on my lap, the weight of her body pressing down on me. Thankfully I was seated in a comfortable position, or I would have lost control far too quickly."
+    "Honoka's lips pressed against mine, and as always, I savored that touch of her mouth against mine. Those soft, sweet kissers always knew just when to be tender, or when to get more forceful. She hadn't slipped any tongue yet, so I waited a bit before going that far."
+    "Sometimes, when Honoka had hit the vending machine, her lips still tasted like chocolate. This time there was a faint bit of mint, instead. I blushed, hoping my breath wasn't bad, but she didn't show any sign of it being distasteful."
+    "Eventually, I let my tongue slide between her lips, and at the same time, she grasped my hands and pulled them up to her bosom. No matter how many times I felt those mounds of dough between my hands, the sensation never got boring. I prayed that it never would."
+    "As we made out, Honoka undid two more buttons on her top. I kept my grip on the sides, and sometimes the bottoms of her boobs, feeling them overflow my hands. There was just so much to them, that I couldn't imagine how they'd feel when they were bared."
+    show BE aroused
+    BE "So."
+    "Honoka stared knowingly at me. She'd been sitting on me the whole time. She knew how hard I was."
+    show BE unique
+    BE "You ready?"
+    MC "Yes, definitely."
+    jump BE031_c1_after
+
+label BE031_c1_after:
+    "As if she wanted to better present herself, Honoka moved until she stood three feet away from where I sat, hands clasped at her shirt. Another button undid itself, and the pillows of flesh that tried to escape looked like someone had overfilled cake tins."
+    "My mouth went dry thinking about what hid behind the fifth button, and the bra beneath. I begged my mind not to overthink it. I didn't want expectations, whether they be exceeded or not. I just wanted to see them."
+    "Honoka let out the cutest groan as the last button was undone, and her shirt soon hit the floor afterwards. I was pretty sure I made a whimpering sound, like a puppy that saw a treat held just out of its reach."
+    #[Transition- crossfade]
+    #[Scene- Special_Honoka_Boobjob_01]
+    #unique?
+    BE "Well. This is it. Or, rather. These are them."
+    "Honoka undid the clasp of her bra as quickly as she could. Rather than letting it fall, she carefully placed it aside, before standing up straight to let me get the best view of her breasts. My hand went up to my mouth in shock. I knew they were big. I'd felt them."
+    "But seeing them naked, it was better than I could have dreamed. They were perfect, rounded teardrop shapes. Huge spheres that hung on her torso and somehow still remained perky despite their massive size."
+    "I couldn't see a single sign of imperfection on the skin. Just immaculate, soft flesh that had been expertly taken care of. I wouldn't've doubted that she'd applied lotion or oil on them ahead of time to make them look even better. But, maybe they just looked that grand constantly."
+    "While I'd seen parts of her boobs before, this was the first time I saw her nipples, and they were great to look at as well. Firm and erect, pointing at me and begging me to take hold of them. Honoka moved closer, the slightest motions making her rack wobble up and down."
+    "With her bosom up closer to my face, I could even see the soft bumps of her areolae, and how my exhalation against her skin made more goosebumps appear. Honoka's body shivered as I looked up at her, past what seemed like a mile of cleavage just to see her smiling visage."
+    "There was a thwump, and suddenly my lap overflowed with Honoka's breasts. Her hands worked magic underneath them, as her fingers found what they needed to, in order to get my pants fully undone. A quick lift of my backside and soon I was completely bottomless."
+    "Honoka was totally topless. It was a scenario I'd dreamed of, but wasn't sure would ever happen in reality. But here it was. My penis throbbed less than a centimeter away from the entrance to her smothering melons."
+    "Honoka and I looked at each other, our eyes glimmering, breath haggard, hands shaky. Hers rested as well as they could at the sides of each boob, unsteady and unsure. But willing, at the very least."
+    "I placed my hands upon hers, and smiled as our fingers clasped. With a deep breath, Honoka pushed herself forward, intent on covering as much of my erection as she could with her breasts. She didn't need to do much to have it completely engulfed in seconds."
+    "The feeling was immaculate. Better than I could have imagined, and she hadn't even begun to stroke it yet. Just the way that her breasts covered every bit of my shaft sent shivers down my spine. When she began moving her breasts, I felt myself twitch immediately."
+    "I bit down gently on my knuckles to stifle the sensation as best as I could, letting go of Honoka's hands now that she had taken control. Watching her work, I could have sworn she'd practiced this somehow."
+    "Each hand knew just what to do, moving a breast in a circular motion. Clockwise for a while, then the opposite way, letting my penis rub around the sensitive insides of her bosom. The sounds coming out of my mouth were embarrassing, but Honoka paid them no mind."
+    "The look on her face was a mix of determination and lust. Her tongue slightly stuck out from between her lips as her body moved back and forth with the motions of her boobs. It was two tidal waves of titflesh, and Honoka was trying not to get swept up in the tsunami."
+    "But it was clear that, for as amazing as it felt for me, Honoka was enjoying herself as well. The redness on her cheeks and the cute panting said it all."
+    "Her hands soon switched, and moved from being on the sides of her rack to being on top. She pressed down on her own breasts, flattening them a bit until the tip of my erection poked out for a brief second. She let her breasts return to a rounded shape, and then pressed again."
+    "Honoka's hands then moved to the bottoms of her boobs as fast as they could and lifted them up, so high that I couldn't see her face at the apex. Then as they swung back down on my lap, she pressed on them. She repeated this motion over and over, making me shudder every time."
+    "It was incredible. I wanted to do something. Anything to repay her for this right now. But my arms were useless noodles. All the blood in my head was gone, rushed down south for more important matters."
+    "When this began, I thought I could last for ages. I just wanted to let myself rest in Honoka's boobs eternally. But I underestimated how sensual it felt. I could sense the inevitable coming, and had to at least summon some strength to let her know."
+    "I don't know how long it was when I finally had to pat on her boobs as fast as I could to let her know what was going on. But those minutes had been, without a doubt, marvelous. I gulped as I heard Honoka's pants reach a fever pitch, and she kept building up speed as she returned her hands to the sides."
+    "With her vigor renewed, I stood no chance. As soon as the first sound of a grunt left my throat, Honoka squeezed her boobs as tightly together as she could, and I came all over the inside of her cleavage. With how much there was, it was like trying to coat a barn with a few teaspoons of paint."
+    "The ceiling of Honoka's room was blue. I hadn't noticed it before. But with my head hung back on the chair, it was all I could see for a while. My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
+    MC "H-Honoka…"
+    "I finally found my voice, as weak and groggy as it was. With a gulp, and the arms of the chair, I straightened my posture to look at Honoka. God, she was gorgeous."
+    #[Transition- Crossfade]
+    #[Scene- Girls'/Honoka's Dorm room]
+    stop music
+    "Even sporty, peppy Honoka seemed somewhat exhausted after the workout she'd given herself, and I couldn't blame her."
+    show BE aroused with dissolve
+    BE "It, heh, it was good, right?"
+    "The thought that Honoka could be unsure about such a thing was a travesty to me."
+    MC "Honoka, it was perfect. I don't even know how to describe how good that felt."
+    show BE happy
+    BE "Really?"
+    MC "Of course."
+    "Honoka smiled, and gave what might have been one of the most pleasant, cheerful laughs I'd ever heard from her."
+    BE "I'm glad, Kei-chan. I'm so glad."
+    "Honoka looked down at her boobs, with her eyes closed."
+    show BE angry
+    BE "It's not that I hate my boobs or anything. But, knowing that you love them so much, it really makes it easier to handle."
+    MC "Hey."
+    "Honoka looked up, just in time for my lips to meet hers. She kissed me back for a few seconds before I broke it, and put my hands on her shoulders."
+    MC "Remember this, Honoka. I don't love your boobs. I love you."
+    show BE happy
+    BE "Oh, g-gee, Kei-chan… I love you too."
+    jump daymenu
+
+label BE032:
+    $setSize(3)
+    $setTimeFlag("size3")
+    $setProgress("BE", "BE033")
+    scene Classroom with fade
+    "I didn't get to sleep right away the previous night. How could I? Even an hour after Honoka's boobjob, I felt flushed and excited. We didn't know what to do with ourselves."
+    "Honoka took some time to clean up, as did I. Then we spent a bit more time together, watching television. It wasn't awkward, per se, but we kept looking back at each other the whole time."
+    "Maybe we just wanted to go for another round, but I hadn't been sure that my heart could take it."
+    MC "Wonder where she is."
+    "Honoka wasn't in class yet, but it started shortly. I brushed a strand of hair out of my eyes and pushed it behind my ears. I really needed a trim."
+    show BE happy with dissolve
+    play music BE
+    BE "Goood morning, everybody!"
+    "Honoka bounced her way into class, giving a giddy smile to everyone as she passed by. She stopped over by me and crouched down, just enough so that her breasts flopped onto my desk."
+    BE "And especially good morning, Kei-chan!"
+    "She brought an index finger forward and booped me on the nose, making me blush. Honoka snickered and pushed her elbows into her bosom, using her palms to support her cheeks."
+    BE "I had a lot of fun last night."
+    MC "Yeah, me too."
+    BE "Hehehe, I'm so glad."
+    "Honoka's finger left my finger, and moved up to my hair, moving another strand of it behind my ear. She giggled, and ran her palm along my cheek."
+    BE "Your hair's so shaggy. I like it."
+    show BE happy at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    AE "Inoue-san, class is about to begin. It would be prudent for you to return to your seat."
+    "Shiori had stood up and trotted over to the opposite side of my desk. She pressed her glasses further up her nose and crossed her arms together."
+    show BE neutral
+    BE "Aw, don't be such a spoilsport, Shiori-chan. I'm just talking to Kei-chan."
+    MC "Yeah, there's no problem. Class hasn't started yet."
+    "Shiori tapped the side of her temple and rubbed it in a small circle with her eyes closed."
+    AE "Indeed, but what I mean is that the two of you are... oddly close today."
+    AE "In addition, Inoue-san is acting odd. Her giddiness is through the roof, her pupils are dilated, and her sense of personal space is even smaller than normal."
+    show AE neutral-annoyed
+    AE "What’s going on?"
+    show BE angry
+    BE "Jeez, can't a girl just be happy without being called cuckoo?"
+    MC "Yeah, it's fine, Shiori-san. Honoka and I just had fun last night and I think we're still riding the high."
+    "I swore I saw Shiori's glasses glimmer as her jaw slowly slackened."
+    show AE angry
+    AE "{i}What{/i} did you just say?"
+    "Honoka and I stiffened as a cold chill overcame us."
+    AE "I’m sorry, but I think I misheard you-"
+    MC "Whoa, whoa, no no no. Not at all!"
+    AE "Oh, so I didn’t?"
+    MC "N-Not like that! It’s just an expression!"
+    show BE happy
+    BE "Yeah, it's just an expression, Shiori-chan. Take a chill pill."
+    AE "That was {i}terrible{/i} wording on your behalf. Unless, of course, it was a Freudian slip."
+    MC "Again, it's an expression. Are you all right, Shiori-san? You're acting a bit more wound up than usual."
+    show AE neutral
+    AE "I'm just fine, thank you, but if the two of you are doing something against the rules, {i}I{/i} need to know what’s going on."
+    BE "Well you don't have to worry about us, class rep. Kei-chan and I are fine. We're making sure we stay safe."
+    MC "Right."
+    AE "Well that's good to hear. But…"
+    AE "Staying safe?"
+    AE "..."
+    "Shiori stopped herself, and stood up straight again. She looked between me and Honoka, and made a small, noncommittal sound."
+    AE "Hm."
+    AE "I see. Well… I’ll trust you."
+    AE "But."
+    show AE angry
+    AE "Regardless, the two of you should act responsibly."
+    AE "If not, I’ll have your hide."
+    hide AE with dissolve
+    "With that, Shiori turned around and walked away, her rump shaking to and fro as she did."  
+    show BE neutral at center with dissolve
+    BE "Ahh, I see. She might make good on that threat. Clearly she's been taking everyone's butts and simply adding them to her own."
+    "I couldn't help but snicker at that."
+    MC "As long as she doesn't go for your chest, I don't mind losing my own."
+    show BE happy
+    BE "Please, I've got more than she can handle. Especially now."
+    MC "What do you mean, especially?"
+    BE "Oh, can't you tell, Kei-chan? Why do you think I'm extra happy today?"
+    "Honoka leaned in, letting her boobs glide over my hands and cover them completely."
+    show BE aroused
+    BE "I really thought you'd be able to figure it out, considering how… up close and personal you got with them last night."
+    "Flustered, I tried to pull my hands back. Honoka simply pushed down more insistently, until my palms were flat on the desk."
+    show BE unique
+    BE "My boobs got bigger. You know that bra I wore last night? I was already close to outsizing it. When I went to put it on today, I couldn't close the clasps."
+    "I gulped."
+    BE "But I didn't have any time to get a new one, you see. So, fun fact, Kei-chan, I'm going braless today. I'll have to get a new one later. But for now, oof, my yummy, full breasts are just hanging free~"
+    MC "Ahaha… well, that really is some fun news."
+    "With a bit of effort, I flipped my hands over from underneath her breasts. Soon my palms were directly touching the large curves of Honoka's chest, and I pushed upwards."
+    MC "I suppose I could always act as your bra for the time being, if they really start to ache on your back."
+    show BE happy
+    BE "Fufufu. Don't tempt me, Kei-chan, or I'll make sure I never wear a bra ever again."
+    MC "Now I'm confused as to how that's meant to be a threat in any way."
+    "Honoka just laughed again, and gave me a smug grin."
+    BE "Because, Kei-chan."
+    show BE unique
+    BE "How in the world would you ever focus with these beauties you love constantly pressing into you? You'd never get any other work done."
+    MC "Maybe I don't want to get work done. Maybe I just want you."
+    show BE happy
+    BE "Well, then, maybe we'll need to have a repeat of last night soon."
+    MC "I wouldn't be opposed to that…"
+    "A chill suddenly ran down my back. I couldn't figure out where it came from. But as I looked to the other side of the classroom, I saw Shiori's cold, steely stare focus in our direction."
+    MC "Ah, b-but, maybe now would be a good time to sit down so Tashi-sensei doesn't call you out for not being in your seat."
+    show BE neutral
+    BE "Good idea, Kei-chan. Need a bit to calm down, anyway."
+    "I could tell what she  meant by the large indentations in her white shirt. Her nipples were poking out obscenely into the fabric, aimed at the opposite wall."
+    "Honoka lifted up her chest and winked, before she moved back over to her desk. She may have been right, having such breasts in my hand would be a major distraction."
+    "But like hell was I going to be able to think about anything else for a while, regardless!"
+    jump daymenu
+
+label BE033:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
