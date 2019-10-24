@@ -795,7 +795,7 @@ label FMG010:
         jump FMG010_testfail
         
 label FMG010_testpass:
-    "...At least, that was the plan before I was called out to from behind. I turned around to find Mizutani's roommate running towards me; Blackbourne-san, Akira said her name was."
+    "...At least, that was the plan before I was called out to from behind. I turned around to find Mizutani's roommate running towards me; Blackburne-san, Akira said her name was."
     show Chibuki neutral with dissolve
     Chibuki "Sorry, but you're Mizutani's workout partner, right?"
     MC "Yes that's me, did you need something Bla-"
