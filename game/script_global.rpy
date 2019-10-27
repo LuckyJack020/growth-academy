@@ -120,6 +120,7 @@ define audio.Thunder = "Audio/SFX/sfx_thunder.wav"
 define audio.Victory = "Audio/SFX/sfx_victory.ogg"
 define audio.Whistle = "Audio/SFX/sfx_whistle.mp3"
 define audio.Bell = "Audio/SFX/sfx_bell.mp3"
+define audio.ReleaseArrow = "Audio/SFX/sfw_releasearrow.wav"
 
 init 1 python:
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONAL,            "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}

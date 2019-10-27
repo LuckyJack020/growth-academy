@@ -3,6 +3,7 @@ define Sakie = Character('Sakie', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
 define Coach = Character('Coach', color="#C0C0C0")
 define Haruhiro = Character('Haruhiro', color="#C0C0C0")
+define Kanami = Character('Kanami', color="#C0C0C0")
 
 image BE neutral = DynamicImage("Graphics/BE/[globalsize]/neutral.png")
 image BE happy = DynamicImage("Graphics/BE/[globalsize]/happy.png")
@@ -50,7 +51,10 @@ init 2 python:
     eventlibrary['BE030'] = {"name": "Love Confession", "girls": ["BE"], "location": "schoolplanter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE031", "obsflags": [],                  "conditions": []}
     eventlibrary['BE031'] = {"name": "Very Special Day", "girls": ["BE"], "location": "dormBE", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "BE032", "obsflags": [],                  "conditions": []}
     eventlibrary['BE032'] = {"name": "The Day After", "girls": ["BE", "AE"], "location": "classroom", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE033", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE033'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE033'] = {"name": "The Great Debate", "girls": ["BE", "AE"], "location": "schoolplanter", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE034", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "location": "field", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE035", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE035'] = {"name": "New Club Intro", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE036", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE036'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONALCORE,                            "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -5723,7 +5727,689 @@ label BE032:
     "But like hell was I going to be able to think about anything else for a while, regardless!"
     jump daymenu
 
+
 label BE033:
+    $setProgress("BE", "BE034")
+    scene School Planter with fade
+    "Honoka and I were enjoying the cooler weather outside. The sky was clear, and the air was crisp, making it comfy to walk around the campus."
+    show BE happy at Position(xpos=0.7, xanchor=0.5, yanchor=1.0) with dissolve
+    BE "...and so that's why I don't mix every single flavor in soda machines anymore."
+    MC "Well, if you went to a normal one, maybe it'd be fine. But, why would you have tried it at one of those that have over a hundred options?"
+    BE "For the same reason that people climb Mt. Fuji, duh!"
+    MC "Because it's hazardous to their health?"
+    show BE neutral
+    BE "Exactly."
+    MC "I don't agree with you. But I still love you."
+    show BE happy
+    BE "Hehe, I love you too. Oh hey, what's Shiori-chan up to?"
+    "Honoka skipped over to Shiori, who had seated herself on the grass, the girth of her backside being on ready display as she crossed her legs. Honoka sat down next to her."
+    BE "Yo, Shiori-chan, what's up?"
+    show AE neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    "Shiori took a moment to answer. On the ground in front of her was a flattened slab of cardboard and some spray paint. She leaned in very close with an extremely fine paintbrush and dabbed a section of the item too small for me to notice."
+    show AE neutral at Transform(xzoom=-1)
+    AE "Ah, good day, you two. I’m painting."
+    "There was indeed a small set of acrylic paints nearby, and she had the leaves of a newspaper tucked around her lap as a makeshift smock."
+    show AE happy
+    AE "A gift from a friend, you see."
+    show BE angry
+    "Shiori took another moment to dab more paint on her object, holding it up by the base she'd brought and examining it closely for imperfections."
+    show AE neutral
+    AE "Mm. The primer is an aerosol, and I figured it would be pertinent to use it in the open air."
+    MC "Yeah, that's a good idea."
+    "Honoka tilted her head at the item Shiori was painting when a look of recognition came to her face."
+    show BE surprised
+    BE "Oh my gosh, is that Captain Buzzface?!"
+    "Shiori's paintbrush hovered inches away from the figurine."
+    show AE surprised
+    AE "I… I beg your pardon?"
+    AE "Captain… Buzzface?"
+    show BE happy
+    BE "Yeah, from the Warblade game!"
+    show AE angry
+    AE "I… believe you’re mistaken. This character is Lord Judicator Septorum the IV."
+    show BE neutral
+    BE "Yeah yeah that's it. He's got the wicked chainsaw teeth, right?"
+    show AE neutral
+    AE "W-Well, no, they aren’t chainsaw teeth, they’re power dentures. They allow him to consume the volatile ingredients in-"
+    AE "W-Wait, never mind. How do you know of him?"
+    show BE happy
+    BE "From the Warblade game, duh. He's my favorite multiplayer character. I never knew they made a figure out of him! Would have thought they'd go for Lieutenant Metal-Butt first."
+    "Shiori rubbed her forehead."
+    show AE angry
+    AE "...Amaryllis of Stirn?"
+    show BE happy
+    BE "Yeah!!"
+    "Shiori muttered tersely under her breath."
+    AE "Maybe if he wasn’t nerfed to high hell..."
+    MC "Eh?"
+    show AE neutral
+    AE "But that’s not the point, you play Warblade too?"
+    show BE happy
+    BE "Yeah! I had it on my dads desktop back home!"
+    show AE surprised
+    AE "Oh? You played it on your father's desk? That… I doubt that’d be enough room."
+    show BE neutral
+    BE "Ehehe, no, his computer."
+    show AE neutral
+    AE "Com...puter?"
+    BE "Uhh, yeah? It’s a device you type in and has a screen."
+    show AE angry
+    AE "I know that! But… Warblade on a computer?"
+    show BE angry
+    BE "Well, duh. Warblade: Dynasty Killers, Warblade: Children of the Scourge, Warblade: Battle Rebellion… Is there some other kind of game?"
+    show AE neutral
+    AE "I..."
+    "Shiori-san looked at first to me and then to Honoka."
+    show AE angry
+    AE "Is this some kind of injoke? I don’t-?"
+    show BE angry
+    BE "It’s not a joke! It’s a fun game!"
+    AE "I {i}highly{/i} doubt that a computer game is able to capture the complexities of the tabletop game."
+    show BE happy
+    BE "Well my video game is a lot more fun than whatever you do with those tiny little things!"
+    show AE angry
+    AE "They’re miniatures."
+    "Honoka and Shiori stared at each other from their respective seats. The air felt electrified…"
+    menu:
+        "Side with Honoka":
+            jump BE033_honokaside
+        "Side with Shiori":
+            jump BE033_shioriside
+        "They're both just games for kids. Relax!" if getSkill("Academics") > 7:
+            jump BE033_academics
+        "They're both just games for kids. Relax! (disabled)" if getSkill("Academics") <= 7:
+            pass
+        "Both versions bring different parts of the same world to life, focus on the commonalities." if getSkill("Art") > 7:
+            jump BE033_art
+        "Both versions bring different parts of the same world to life, focus on the commonalities. (disabled)" if getSkill("Art") <= 7:
+            pass
+        "Say nothing":
+            jump BE033_silence
+
+
+label BE033_honokaside:
+    $setAffection("BE", 1)
+    $setAffection("AE", -1)
+    MC "Well, Honoka does have a bit of a point."
+    "The two looked at me, awaiting further details."
+    MC "I mean, tabletop games are a real hassle to get into. They can be fun, sure. But they require a lot of reading to know what you can do, memorizing all sorts of units and everything."
+    show BE happy
+    BE "Right! When you play a video game, it's just, boom. Hit start, and you're golden."
+    MC "Right. And not for nothing, but a video game version makes it a lot cheaper to get into it as well. For the tabletop version you have to buy all sorts of minis, and painting supplies, which can add up."
+    MC "I mean, how much of that stuff did you have on hand before you got into the game?"
+    "Shiori seemed taken aback."
+    show AE angry
+    AE "I-I don’t think that’s… entirely {i}comparable{/i}, I-..."
+    AE "... Hmph. Fine. I suppose you have a point."
+    MC "Playing a video game version also has the benefit of, you know… you can play it by yourself. Anytime. In a few seconds."
+    AE "However, the interactivity of not only painting your miniature, but setting up the field and collecting the necessary dice-"
+    MC "It's a lot more grueling then handing someone a controller if they wanna play and saying 'A Button jumps'."
+    show AE neutral
+    AE "Haah… very well. I’ll… accept that you have a differing opinion."
+    MC "That’s it?"
+    show AE angry
+    AE "You’re lucky to be getting even that."
+    show AE neutral-annoyed
+    "Shiori-san dabbed the end of her paintbrush on a piece of paper towel, before lightly dusting her miniature with it."
+    MC "Er, you're right. We'll leave you be. Sorry, Shiori-san. Um, see you around later."
+    "Shiori didn't say anything back, and just went to painting as Honoka and I left her. Honoka looked at me sheepishly."
+    show BE happy
+    BE "Sorry to drag you into that. But feels good to be sided with. But, uh, better watch out for Shiori-chan now, you think?"
+    MC "She's never seemed the type to hold a serious grudge… Why?"
+    show BE sad
+    BE "Eh, just the way she was brandishing that paint brush. I don't wanna take off my bra one day and find there was paint smeared inside."
+    MC "That does not sound like it would be pleasant."
+    "Honoka nodded as we walked towards the dining hall, leaving Shiori to her figures."
+    jump daymenu
+
+label BE033_shioriside:
+    $setAffection("AE", 1)
+    $setAffection("BE", -1)
+    MC "I understand what Shiori's talking about."
+    show AE neutral
+    AE "Mind elaborating?"
+    MC "Well. It's like any adaptation, right? There's rarely ever an adaptation of a medium that perfectly encapsulates the original. Anime will have filler arcs, movies will cut characters, games will weed out scenes for the gamer experience…"
+    show BE neutral
+    BE "Oh. Maybe, yeah. But, I mean, there's way more video games, and it's just one board game."
+    AE "Technically there have been several editions and re-releases, and each edition is improved by a series of new units and rule updates. They are constantly working on it."
+    show BE sad
+    BE "Ah..."
+    "Honoka stood up, and paced for a few seconds, clearly trying to think of a rebuttal."
+    show BE happy
+    BE "Well games do have downloadable stuff too!"
+    MC "Honoka, you did complain about how it was obvious they cut out stuff from the main game just to sell you later."
+    show BE sad
+    BE "Gah, curse you Kei-chan and your adequate memory."
+    "Honoka clenched her fist towards me, muttering at the ground."
+    BE "Yeah, but-!"
+    MC "Season pass."
+    show BE sad:
+        easeout 0.4 ypos 1.15 xpos 0.7
+        easein 0.07 ypos 1.14
+        easein 0.07 ypos 1.15
+        easein 0.07 ypos 1.14
+        easein 0.07 ypos 1.15
+    "Honoka slumped down onto the ground. Her knees made contact with the earth as her calves splayed out. She hung her head in an over-dramatic defeat."
+    BE "I can't believe it."
+    BE "My own boyfriend disagrees with me when I'm debating with another girl!"
+    AE "Inoue-san, just because Hotsure-san came to the correct conclusion, that does not mean his affection for you has been lessened."
+    show BE surprised
+    BE "How can I believe that! Were my boobs just a replacement for your huge butt?!"
+    show AE angry at Transform(xzoom=1)
+    show BE unique
+    BE "I squeeze them together like this and it looks like a butt crack, is that your kink, Kei-chan?!"
+    MC "N-no, not at all. I don't think that's anybody's kink. Honoka-"
+    show AE neutral
+    show BE angry
+    BE "Nay."
+    show BE sad:
+        ease 1 ypos 1.01
+    "Honoka stood up and stuck her hand out towards me, her other hand pressed against her forehead."
+    "She was clearly being overdramatic. But she did seem wounded by me choosing Shiori over her."
+    show BE sad
+    BE "Clearly, you've won this fight, Shiori-chan. I shall relinquish Kei-chan to you! Have fun playing your silly tabletop games together."
+    "Shiori had gone back to painting midway through Honoka's soliloquy."
+    show AE neutral at Transform(xzoom=-1)
+    AE "Indeed."
+    show BE sad at Transform(xzoom=1):
+        linear 0 xpos 0.7
+        ease 1.5 xpos 0.85
+    "Honoka took several steps away from Shiori, and then turned back."
+    show BE happy
+    BE "Um, we're still doing dinner, right?"
+    MC "Yeah."
+    show AE neutral at Transform(xzoom=1)
+    BE "Okay, cool. Oh, and… hurt feelings, and… stuff. See you later."
+    show BE happy:
+        ease 3 xpos 1.5
+    "Shiori did a few more brush strokes on her figure, not looking back up towards me."
+    "Hotsure-san. If by some small chance, I do catch you leering at my backside in the future. There will be consequences, understood?"
+    "I sighed."
+    MC "Yes..."
+    jump daymenu
+
+label BE033_academics:
+    $setAffection("BE", -1)
+    $setAffection("AE", -1)
+    MC "I mean. Really girls. They're just games, they're meant for kids, relax."
+    "Honoka and Shiori both looked at me, then at each other."
+    show BE neutral
+    BE "What does that mean?"
+    show AE neutral
+    AE "Now Inoue-san and I are in agreement. Pray tell what exactly about either of this series is for kids, Hotsure-san."
+    show BE sad
+    BE "I mean, most of the games are rated for older teens at least."
+    show AE angry
+    AE "And the tabletop versions don't have any strict age limits given, but even I would admit that the ruleset would be too complicated for a younger child."
+    MC "I, uh, I don't mean literally for kids. I just meant, they're games, they're supposed to be fun."
+    AE "Being fun doesn't exclude the possibility that something has mature themes."
+    show BE neutral
+    BE "Oh for real. I mean, Dynasty Killers had… I mean, it's right there in the name, Kei-chan. They killed an entire dynasty."
+    AE "Would you let your child play something as graphic as Warblade? Violence in media is the responsibility of parents to help guide their children through! If you just leave your children to their own devices-!"
+    BE "It’d be like having a kid play those weird H-games!"
+    show AE neutral
+    AE "You’d be talking about the erosion of family values at its core-!"
+    MC "I, I did not think you two would take my answer so seriously."
+    show BE sad
+    BE "Hmph, perhaps you should have thought more!"
+    AE "Agreed."
+    show BE neutral
+    BE "Shiori-chan, would you like to talk more about the games, perhaps away from this nerd?"
+    MC "Ne- Who are we talking about?!"
+    AE "I wouldn't mind, but I am still in the middle of painting. Though this spot now reeks of casual."
+    MC "I'll go, I'll go. I can see I screwed up here. Sorry, I thought I was being smart, I was just being stupid."
+    "I backed away from the two to let them cool down and discuss the game further. There was no need for me to get in deeper water with either girl."
+    jump daymenu
+
+label BE033_art:
+    $setAffection("BE", 1)
+    $setAffection("AE", 1)
+    MC "Well, if I remember, the first Warblade game did come out in the early 90s, so it wasn't too long after the first edition was released."
+    MC "So they probably did design it, knowing it would get adapted to another medium at some point. I would say, both have their merits."
+    MC "There's no reason to exclude either. They bring different benefits and reasons to play. Like, the video game is good for quick play, by yourself. Tabletop would be for friends and a longer session."
+    show BE happy
+    BE "I mean, I guess that's a good point. But which one's better then?"
+    MC "I don't think either needs to be better. Think of it as just the video games being more pragmatic, using what they can to give a good experience."
+    MC "It's probably better for people who aren't too imaginative, the games let you get a better read on how the technology and mechanics work, and then look at the characters in action."
+    BE "Hm. Yeah that's true! Then you could… better understand it if you play the tabletop setting later?"
+    show AE neutral
+    AE "I would also submit in return that the tabletop version allows you to get a better understanding of the minutiae for the characters."
+    show AE happy
+    AE "There are so many different facets of the units that you can delve into."
+    AE "I suppose one good example would be giving different units buffs based on how you paint them. Like painting Orcs purple giving them a stealth bonus."
+    BE "Wait for real? Why?"
+    AE "Have you ever {i}seen{/i} a purple Orc?"
+    show BE neutral
+    BE "… Ha! Haha! For real?! That’s a thing?!"
+    "Shiori chuckled softly, and pushed up her glasses."
+    AE "Eheheh, so you're truly not familiar with Warblade putting details of lore into the game manuals?"
+    "Honoka shook her head."
+    BE "Nope!"
+    show BE happy
+    BE "But there's a ton of detail and story in the games still. They do get a bit crazy with the cutscenes in Reign of Temptation, though. But it lets you find out where Tellion got his prosthetic torso."
+    show AE surprised
+    AE "It does?!"
+    BE "Yeah! I would be happy to show you. But you can probably find a video of it online, and find someone play through it without talking over the story and stuff."
+    show AE neutral
+    AE "I see. I might have to search for some videos. I wouldn't want to neglect possible story threads, they could be useful for my campaigns."
+    BE "Wicked. Yeah, if you're not watching the actual gameplay, I think most games would give you like, six or eight hours of material?"
+    AE "Fascinating. Well, I suppose I have a new outlook to view. Thank you for enlightening me, Hotsure-san."
+    MC "Oh, well. I mean, Honoka knew more about it than me. I just like video games, I guess."
+    AE "That much is clear. Still. As for me, I should return to my painting, if you do not mind. These can, as you rightly pointed out, be quite expensive."
+    MC "Sure. Hey when you're done, we'd like to see them. Right, Honoka?"
+    BE "Totally. Send us some pics at least!"
+    show AE happy
+    AE "I shall endeavor to do so. Have a pleasant evening."
+    jump daymenu
+
+label BE033_silence:
+    MC "..."
+    show BE neutral
+    BE "Yeah, well, miniature golf is just the worse version of regular golf."
+    show AE neutral
+    AE "How dare you? Especially when miniature golf relies on all sorts of angle calculations and acceleration mechanics!"
+    show BE happy
+    BE "Oh my gosh, haha. You're trying to make golf boring too. Yawn."
+    show AE angry
+    AE "Just because I know facts about things does not make me boring. Quite the opposite, if all you have in return for video games is 'ooh buttons, shiny'."
+    show BE angry
+    BE "There's way more to it than that! The game versions have so much more money pumped into them, they're higher quality!"
+    AE "Tabletop games are a passion project worked on by small teams instead of nameless peons forced into crunch time!"
+    BE "You probably only like them so much because you spend 90%% of your time sitting on your big butt and have alll the time in the world to set up an eight-hour game."
+    AE "Oh! Then clearly your hatred from my superior version clearly stems from the fact that you can't even see the table."
+    show BE surprised
+    BE "Agh!"
+    AE "Humph."
+    show BE surprised at Transform(xzoom=-1):
+        easeout 2 xpos 1.5
+    "Honoka stood up with a pout and glared back at Shiori. She marched in the opposite direction quicker than I've ever seen her walk."
+    "Shiori was silent, huffing, and flustered. When I caught back up with Honoka, she was the same, and didn't talk to me for a while. Shiori had gotten her really worked up."
+    "Then again, Honoka hadn't exactly helped matters."
+    jump daymenu
+
+label BE034:
+    $setProgress("BE", "BE035")
+    scene Field with fade
+    pause 1
+    play sound ReleaseArrow
+    pause 1.5
+    play sound Thud
+    "With nothing important to do during the afternoon, I'd gone to one of Honoka's archery club meetings to watch her perform."
+    "I suppose it was wrong to say it was unimportant. Considering what we'd done, and how we felt for one another, coming to support someone you cared about seemed to be pretty vital."
+    "Unfortunately, my cheers couldn't do much for Honoka today. She seemed to be off her rhythm, as another arrow didn't manage to make it to the target, making it one of several failures she'd had so far."
+    "There was only one arrow actually in Honoka's practice target, and I wasn't even sure it was hers."
+    show BE angry with dissolve
+    BE "Urgh. Come on…"
+    MC "You got this Honoka. Next one's gonna be a bullseye, I know it!"
+    "Honoka took a deep breath. Her eyes closed for a second, before she pulled up the next arrow and nocked it, ready to fire. The members at this point could fire at will until 'quiver empty', so she let go when she was ready."
+    "The arrow limped through the air and weakly stuck into the edge of the target. If it had been any further off, it would have been in the grass instead."
+    BE "Oww…"
+    "Honoka put her bow down after Haruhiro called the whistle. She came over and sat down next to me, instead of going to retrieve her arrows."
+    MC "The wind must be pretty rough today, huh?"
+    show BE sad
+    BE "you don't have to fib to me, Kei-chan. I suck."
+    MC "..."
+    MC "It was rough today, yeah."
+    "Honoka reached behind her shoulder and unstrapped her breast guard. With the garment on the ground, she rubbed at the side of her boob, wincing as she did."
+    BE "This is the biggest size they have. But even if they had one that fit, I just can't spread my arms out far enough to avoid smacking a boob without losing out on power."
+    show BE angry
+    BE "But a full-power shot means I have to be close which means, bowstring against the titty and ow, it really smarts…"
+    MC "Hm. Maybe there's another kind of bow you could use? Do they make them horizontal?"
+    show BE happy
+    BE "Ha. Ha, no."
+    show BE neutral
+    BE "..."
+    show BE sad
+    BE "I kind of asked that already. They said crossbows didn't count."
+    MC "Well, glad it's not just my idea."
+    show BE neutral
+    BE "I'm pretty sure the only reason Haruhiro hasn't kicked me off the club yet is because he feels bad. But this is getting dangerous."
+    MC "So, what does that mean for you?"
+    "Honoka pulled up her legs, until her breasts pushed into her knees and squished around the joints. She pressed her face into the pillow her chest formed."
+    show BE sad
+    BE "Means I gotta stop doing archery."
+    MC "I want to support you, but, I think you're right. Last thing I need is for you to get hurt."
+    show BE happy
+    BE "Heh, yeah. Nobody likes a bruised melon."
+    MC "It's more than that, you goof. It's clear you're not having fun. That's just not good for your mental health. You need to do something you enjoy, even if you're not good at it."
+    MC "I think it's clear you don't enjoy this anymore. Right?"
+    show BE neutral
+    BE "Right. Right."
+    show BE sad
+    BE "Ugh, Kei-chan, I don't want to deal with looking for another club again. But I can't just sit on my butt and do nothing. It's not as soft as Shiori's, it would hurt after a while."
+    MC "Hehe..."
+    MC "Um, well, I'd been looking at some recently myself. Maybe we can pick one out for you together? I'd written down a few. There might be one here you would like. "
+    show BE happy
+    BE "Oh? That's so thoughtful, Kei-chan. Sure, let's take a look at what you've got."
+    "I pulled out my phone, and scrolled through my notes to find the last list I'd worked on for possible clubs."
+    MC "Here. There should be something here."
+    "Honoka and I looked through my ideas."
+    show BE neutral
+    BE "Hm. I'm pretty sure the kendo club would be out of the running for me."
+    show BE unique
+    BE "These puppies pretty much prevent me from holding a sword straight up with both hands."
+    MC "Right. Well, what about a music club? Not a violin, maybe. But, could do something like a flute?"
+    show BE neutral
+    BE "Maybe. But I've never been one for musical ability. You remember that time we went to karaoke?"
+    MC "..."
+    MC "Moving on then."
+    MC "Hm. Softball would be interesting. Do you think you could still swing a bat?"
+    BE "Hmmmm."
+    BE "I think I could."
+    "Honoka pushed her arms to one side and pantomimed the act of swinging a bat to test the waters."
+    show BE happy
+    BE "Feels pretty good. Catching shouldn't be impeded. Actually, my breasts might help out there if a ball lands in them."
+    MC "Well, didn't think of that. But yeah that could be a benefit."
+    BE "Hahaha, and I think if you get beaned with a ball while at bat, you get a free base, right? So at least there, getting hit would be a positive. Still would hurt, though."
+    "We kept scrolling for a bit until we came across another option that piqued Honoka's interest."
+    show BE neutral
+    BE "Cooking club?"
+    MC "It's one of the bigger groups on campus, from what I was told. Part of it is training and informational but most of the time they let you experiment and learn on your own."
+    BE "Huh. But, a kitchen's full of knives and fire."
+    MC "You would just need to turn to the side to chop. It's real life, not a game show, you can take a few minutes to slice a carrot if you need to. As for fires, same thing, just stay away from heating elements."
+    "Honoka nodded."
+    show BE happy
+    BE "Do you think I could learn how to make chocolate?"
+    MC "Probably not. That's just, like, a process that happens in factories."
+    BE "I could make things {i}with{/i} chocolate, though."
+    MC "You absolutely could."
+    BE "Haha, okay. Remember that one, then."
+    "Honoka and I looked for a few more before my list ran dry. A few just weren't feasible with Honoka's size, and others weren't things she was interested in."
+    MC "So, here's the way I see it. You like these two the most. Softball, or cooking. I suppose if you wanted you could do both?"
+    show BE neutral
+    BE "Hm, maybe. But then that would really cut down on my time to spend with you. One's fine for me. They both sound so fun, though. Not sure how to pick."
+    MC "Well, softball would be more your speed as far as athletics go, and keep you healthy. Cooking is just a nice life skill to have."
+    show BE happy
+    BE "Yeah. Hmmm."
+    show BE sad
+    BE "I guess there's only one option, Kei-chan."
+    MC "What's that?"
+    show BE happy
+    BE "Choose for me!"
+    menu:
+        "Cooking Club":
+            jump BE034_cooking
+        "Softball Club":
+            jump BE034_softball
+
+label BE034_cooking:
+    $setFlag("HONOKA_COOKING")
+    $setVar("BETomboy", getVar("BETomboy") + 2)
+    MC "I think you should join the cooking club."
+    BE "Oh? Heh, how come?"
+    MC "I think it would be nice to do something different. Take a break from physical activity for a while and do something that's more chill."
+    show BE neutral
+    BE "That's a good point… Plus, you never know. Maybe I'm really good at it. I could go on Steel Cook and show everyone who's the boss with my double-scoop meringue."
+    MC "Setting your hopes high already, I see."
+    show BE happy
+    BE "Yeah, why not! You don't aim to get a C- in a class. You try and get an SSS rank, so even if you screw up you can still get an A."
+    MC "If that works for you, I'll be pleased as can be. Just, try and start easy okay. Don't try and make an omurice before you learn to… make regular rice."
+    show BE surprised
+    BE "Oh my gosh wait, I didn't even think about this until now. Would they provide the food and stuff for me?"
+    MC "I assume so."
+    show BE happy
+    BE "Oh, hell yes. Then I'm so in. I can screw up, at no cost, and still eat leftovers or anything that turns out good?"
+    show BE neutral
+    BE "Chef Inoue at your service, then."
+    MC "Wonderful. I think this will be a good fit for you."
+    show BE happy
+    BE "Me too!"
+    BE "Hey, wait a minute…"
+    MC "What?"
+    show BE neutral
+    BE "This isn't some trick to get me into doing a naked apron routine for you, is it?"
+    MC "No no, not at all."
+    show BE unique
+    BE "Hehe, Kei-chan, I'm not upset by the idea."
+    BE "I'd just need a huge apron for it to work properly, is all."
+    MC "That you would. But maybe a small apron would make it even better."
+    show BE happy
+    BE "Better, but not as pitifully practical! If it doesn't actually cover my boobs then what's the point?! The point is I'm still cookin', just with my butt out."
+    show BE sad
+    BE "And I am not cooking bacon without a top on."
+    show BE angry
+    BE "Never again…"
+    MC "I don't think I want to know any more details about that…"
+    MC "But for now, I think you should go tell Haruhiro you're quitting the club so he can fill a spot if he needs to."
+    show BE neutral
+    BE "You're right. Be back in a bit."
+    jump BE034_end
+
+label BE034_softball:
+    $setFlag("HONOKA_SOFTBALL")
+    $setVar("BEFeminine", getVar("BEFeminine") + 2)
+    MC "I think you should join the softball club."
+    show BE neutral
+    BE "Heh, somehow I knew you were going to pick that."
+    MC "Oh. Is that bad?"
+    show BE happy
+    BE "No, not at all! It sounds like fun. I get to swing a huge bat around and run around. It should be good. Keeps the blood moving and the legs active."
+    MC "Exactly. I don't think you could handle staying inside for most of the day. I've seen you outside in blazing heat and freezing cold."
+    MC "I'm not entirely certain that you're free of animal DNA considering how much you like being outdoors."
+    BE "Haha. Yeah, I've got two huge cow chromosomes, Kei-chan."
+    show BE neutral
+    BE "I think about the only thing I couldn't be is a catcher, just because the pad they make you wear might be too hard to make in my size."
+    MC "Sure, but you just need a mitt, a helmet, shoes, and like, a uniform. And they've easily got the ability to sew the right-sized uniform for you."
+    show BE happy
+    BE "That's right! Oh? Wait a sec, Kei-chan…"
+    MC "Huh?"
+    show BE aroused
+    BE "Do you have like, some softball-based fetish I didn't know about?"
+    MC "Th-That's a thing?"
+    show BE unique
+    BE "Oh sure, a girl, every inch of flesh covered up in a nice uniform, that gets it dirty as can be. Her skin stays pristine, with that 'hot and dirty' look some guys are into."
+    MC "I, ah, this is new to me. So no, that's not why I suggested the softball club."
+    show BE neutral
+    BE "Hmm..."
+    show BE happy
+    BE "Okay, I'll believe you, Kei-chan."
+    BE "But if I come into your room one day wearing nothing but a baseball hat, and you get turned on, I'll know you're lying."
+    MC "I'm not even sure if that's the same fetish at that point. That's just you naked."
+    MC "Um, either way, you should go tell Haruhiro you're leaving. Not nice to leave club presidents in the lurch, remember?"
+    show BE neutral
+    BE "Right right. Okay, be right back, Kei-chan."
+    jump BE034_end
+
+label BE034_end:
+    show BE neutral at Transform(xzoom=-1):
+        ease 1.5 xpos 0.9
+    "Honoka walked away for a bit to tell Haruhiro the bad news. I wasn't close enough to hear the conversation, but he looked like he understood."
+    show BE neutral at Transform(xzoom=1):
+        ease 1.5 xpos 0.5
+    "She sighed as she walked back towards me, and slung an arm around my neck."
+    show BE neutral
+    BE "Well. The deed is done. I am once again club-less."
+    MC "Not for long, though. We'll go get you signed up, ASAP. Heck I can go with you right now if you want."
+    "Honoka smiled and pulled me in closer, until the entire right side of my face was buried in her chest."
+    show BE happy
+    BE "Hehe, I like the way you think, Kei-chan."
+    "Honoka and I walked towards campus to get her signed up for her next club. Hopefully she'd have more success with this one."
+    jump daymenu
+
+
+label BE035:
+    if getFlag("HONOKA_COOKING"):
+        jump BE035A
+    elif getFlag("HONOKA_SOFTBALL"):
+        jump BE036
+
+label BE035A:
+    scene Cooking Classroom with fade
+    #general chatter sfx
+    "When Honoka and I first visited the cooking club to get her signed up, there had only been a few people in the cooking space. Now that we were at an actual meeting, it was a lot more crowded."
+    "There was a large row of ovens and stoves lined up, with a wide amount of space for food preparation. On the wall were various types of knives for different cooking purposes, and all sorts of cooking utensils stacked up nearby."
+    Kanami "Hello everyone. Thank you all for coming today. I hope your week has been well. We have some new people today who will be joining us in the world of cooking. Please be kind to them and offer your guidance if they need it."
+    "The cooking club was large enough that there were several 'heads' of the club, but it was the spokesperson who spoke to us currently."
+    "Kanami Tozakura was a soft-spoken woman with very long black hair. Her posture looked perfect. She looked like she'd been designed to wear an apron, like she did currently."
+    Kanami "As always, before you begin today, please make sure to wash your hands thoroughly, and to do so whenever you switch between ingredients to be safe. Those of you with long hair should tie it back, as I have."
+    Kanami "For those of you in the beginner level, we have a few recipes available for you to try out today. I'd recommend the fried rice, personally. If you're more advanced, the same goes for you but my recommendation would be the okoyamonaki. "
+    Kanami "Be safe. Be clean. Be delicious. Let me or the others know if you need aide."
+    MC "Well, Honoka, what should we try?"
+    show BE happy
+    BE "..."
+    MC "Honaka?"
+    BE "Oh! Right. Let's see. The fried rice sounds good, then."
+    MC "You seem distracted, everything okay?"
+    BE "Hehe, yeah. It's just, did you notice, Kei-chan?"
+    MC "Notice what?"
+    show BE neutral
+    BE "Kanami-chan. She's got the same growth factor as me."
+    MC "Oh!"
+    "It wasn't that I'd missed that Kanami had a large chest. Looking again, her breasts were very full, and clearly lifted up her apron quite a lot. She was only a bit smaller than Honoka."
+    MC "I, I guess I didn't notice."
+    show BE unique
+    BE "I know I've got a bit of a leg up on her but, hey, if she can do all this cooking stuff, so can I!"
+    MC "Very good point. Let's get started then, shall we? Got your apron on. Let's take a look at these instructions."
+    show BE neutral
+    BE "First step is to cook the rice and then cool it down."
+    MC "Huh, okay. Well that's easy enough."
+    "Honoka went to retrieve a rice cooker while I grabbed some rice and brought it back over to our station. As the rice cooked, we took a further look at the instructions."
+    MC "That'll take a bit of time. So until then we've got a lot of vegetables to chop up and the shrimp need to be shelled and cooked."
+    BE "Cool. How about you handle the shrimpies and I'll do the vegetables?"
+    MC "Sounds like a plan."
+    "Honoka and I placed our cutting boards down and got to work. She pulled over a few carrots and peppers and lined them up, while I started to shell the shrimp."
+    MC "Why is it 'shelling' the shrimp? Aren't I really 'de-shelling' them?"
+    BE "Ha. Yeah I don't know. One of those dumb quirks of language I guess."
+    "As Honoka and I worked, Kanami came up and observed for a moment."
+    Kanami "Very nice, Hotsure-kun. Please don't forget to check the intestinal tract on the back there. If you take a small knife, you can gently slice into the end and lift it up to pull it out."
+    MC "Oh, right. Thanks. That wouldn't exactly taste good, would it?"
+    Kanami "Ufufu, no, no it wouldn't. How are you doing, Inoue-chan?"
+    BE "Ha. I think I'm doing okay. How does it look?"
+    Kanami "Your cuts are okay. But your hands aren't quite in the right position. May I?"
+    show BE happy
+    BE "Sure."
+    "Kanami reached over to Honoka's hands and pulled her fingers in. I stopped my own work to watch, to learn better myself."
+    Kanami "Imagine your fingers like a cat's paw, you want to keep them curled in so you don't cut them accidentally. As long as you don't lift your blade above the knuckle, you should be okay."
+    show BE neutral
+    BE "Ah, okay. Like this?"
+    "Honoka adjusted herself as Kanami moved her hands away. The older girl nodded."
+    Kanami "Yes, yes. Perfect, Inoue-chan. Now for the peppers, that's a little trickier. Do you mind if I show you?"
+    "As Honoka learned how to properly cut up peppers, our rice finished cooking. With Kanami's written instructions I dumped it out onto a baking sheet, spread it thin, and put it in a freezer to cool. By the time I finished, Honoka was done slicing."
+    Kanami "You two seem to be doing well. Enjoy. Let me know if you need anything."
+    Kanami "Oh my. Koumori-chan, please be careful with how much of that you add…"
+    "Kanami left Honoka and I together to continue our cooking while she tended to another student."
+    BE "Phew, this is hard work. But, hey, cutting stuff is kind of fun."
+    MC "Good to hear. So, we need to cook the shrimp a bit first, and then some eggs to mix into the rice, while the rice itself cools down."
+    show BE happy
+    BE "I've got the skillet on. Should be warm enough now."
+    "We dropped the shrimp into the skillet and began the process of cooking them. The rest of the recipe was pretty simple. Soon everything else was prepared and all we had to do was actually bring in the rice."
+    show BE neutral
+    BE "I'll grab it."
+    "As Honoka walked to the freezer to grab the rice, I put some oil in the skillet to get things ready. She came over with the tray perched on top of her bust with her hands on the sides for support."
+    show BE happy
+    BE "Hehe, one delivery of cooled rice ready for dispersal, Kei-chan."
+    MC "Perfect. Toss it in?"
+    "Honoka smiled, and used a spatula to scrape the rice into the skillet. We took turns adding the rest of the ingredients into the pan, tossing in the veggies, shrimp, and egg."
+    show BE neutral
+    BE "Are we forgetting anything?"
+    MC "Hmm..."
+    if getSkill("Art") > 6:
+        jump BE035A_sauce
+    else:
+        jump BE035A_nosauce
+
+label BE035A_sauce:
+    $setAffection("BE", 1)
+    MC "Oh, yes. We almost forgot to put in the soy sauce."
+    show BE surprised
+    BE "Oops!"
+    show BE neutral
+    BE "Well let's get it in there, then."
+    "I grabbed the bottle and opened it, upending it over the skillet."
+    MC "It said three tablespoons so one…"
+    MC "Two..."
+    MC "And three."
+    BE "Perfect. Let that mix in a bit. Do you think we can do that flippy-tossy thing they do in restaurants?"
+    MC "Ah. No. I don't think we can. I don't wanna make a mess. Maybe we can try it some other time with just like, an egg or something."
+    show BE happy
+    BE "Bah. Fine. Just use the spatula then."
+    "I made sure everything was incorporated properly, until the fried rice was a nice color. After a minute passed, I spooned some out onto a plate for us to share."
+    BE "Ohhhh."
+    show BE aroused
+    BE "This looks so {i}good{/i}."
+    "Honoka grabbed a spoon, and took a huge bite."
+    show BE surprised
+    BE "Mmf!"
+    MC "Good?"
+    BE "HOT."
+    "Honoka opened up her mouth and fanned into it a few times to cool down the hot food in her mouth. Eventually she swallowed. Taking a cue from her, I blew on my spoon before taking my bite."
+    MC "Mmf. Wow. Yeah, that is good. It was pretty simple to make as well."
+    Kanami "Oho. Everything come out well for you two?"
+    "Honoka gave a thumbs-up to Kanami, her mouth already full with another bite."
+    Kanami "I take it that's a yes. Wonderful. So glad you could learn something new today. Next lesson we'll be doing something sweet."
+    show BE happy
+    BE "Happy: Schweet? Mmf, dat schounds goohd."
+    MC "Honoka. Swallow."
+    show BE neutral
+    BE "{i}gulp{/i}"
+    Kanami "Ufu, it's always a delight to see people enjoying the food they create. Please make sure to clean up well. A clean kitchen is a good kitchen."
+    MC "Yes, we will."
+    BE "After eating."
+    MC "Which won't be long if you keep scarfing it down like that! Gimme more."
+    "After Honoka and I finished eating, we moved everything over to one of the big sinks to clean up. That was the less-fun part, but necessary. Didn't want to make a bad first impression."
+    MC "So what did you think of the club?"
+    BE "It's great. Kanami's nice and it seems like everyone here is having fun. Which is good. And getting to eat extra food is always a plus."
+    MC "Good. Sounds like we found a good fit for you."
+    show BE happy
+    BE "Well you suggested it. So thanks, Kei-chan. Soon I'll be able to cook a big feast for you to celebrate."
+    show BE unique
+    BE "And if you're a good boy, you'll get to eat off someplace special."
+    MC "..."
+    MC "How am I not used to you making those kinds of comments yet?"
+    show BE happy
+    BE "I'm just too good, Kei-chan. I'm just too good."
+    jump daymenu
+
+label BE035A_nosauce:
+    MC "No, I don't think so. Looks like we've got everything here."
+    BE "Perfect. Let that mix in a bit. Do you think we can do that flippy-tossy thing they do in restaurants?"
+    MC "Ah. No. I don't think we can. I don't wanna make a mess. Maybe we can try it some other time with just like, an egg or something."
+    show BE happy
+    BE "Bah. Fine. Just use the spatula then."
+    "I made sure everything was incorporated properly, until the fried rice was a nice color. After a minute passed, I spooned some out onto a plate for us to share."
+    MC "Ladies first."
+    "It was a bit of an unnecessary comment. Honoka already had a spoonful ready."
+    show BE neutral
+    BE "Ooh, ah, it's hot. Mm. Hm."
+    MC "Mm. It's pretty good."
+    BE "Yeah…"
+    MC "What's up?"
+    BE "I'm not sure. It tastes different from what I'm used to."
+    Kanami "Mm, hello you two. How did your dish come out?"
+    MC "Fine, thanks."
+    BE "Yeah, it's okay. I think something's off, though."
+    Kanami "Oh? Do you mind if I try?"
+    "Honoka nodded, so Kanami took a spoon for herself and sampled it. She closed her eyes and tilted her head as she chewed on the rice."
+    Kanami "Hm. The rice is cooked well. Nothing seems overdone. But, oh, I see. It's missing soy sauce."
+    MC "Ah, nuts. We forgot something."
+    Kanami "Don't fret too much, Hotsure-kun. It was your first time. Excitement can make you a bit klutzy, ufu, but it's not a problem."
+    Kanami "If you like you could still mix in some soy sauce with it, but I would only use a tablespoon as there's going to be less heat in the rice at this point, and it won't be able to incorporate as much."
+    BE "Okay. Thanks for the tip."
+    "Honoka did as suggested and put a bit of soy sauce in the rice. Now we could see the color we were used to with fried rice, though it still wasn't 100%% correct. It was better than before, though."
+    MC "Hm. Mm-hm. Yeah that does taste better."
+    BE "Nuts. Oh well. Lesson learned. This was still fun."
+    Kanami "I'm glad to hear. Don't let a simple mistake beat you down. We have had students start fires who learned to make scrumptious food. "
+    Kanami "Next time we'll be making some sweet food. So make sure to follow the recipe to the letter to be safe. Baking's less fixable if you forget an ingredient, but it's also easier to come out like you expect!"
+    show BE happy
+    BE "Sounds good! We'll be here for sure. Thanks Kanami."
+    Kanami "Anytime, Inoue-san."
+    "Kanami left, so Honoka and I finished up and cleaned up our station. As we stood by one of the sinks and scrubbed our dishes I turned to Honoka, elbow-deep in the sink."
+    MC "So what did you think of the club?"
+    BE "It's very nice. Kanami's great and it seems like everyone here is learning cool stuff. It's cool. And getting to eat extra food is always a plus."
+    MC "Awesome. Sounds like we found a fitting club for you."
+    show BE happy
+    BE "Well you brought it to my attention. So thanks, Kei-chan. Soon, I'll be able to cook a big feast for you to celebrate."
+    MC "I look forward to it. But you'll have to beat me to the punch, cuz I plan on doing the same to you."
+    BE "Oof, Kei-chan you know how to tease a girl."
+    MC "Tease? Nah. Just a promise. I'll make you full and satisfied."
+    show BE surprised
+    BE "..."
+    MC "… Not remotely how I meant it."
+    jump daymenu
+
+
+
+label BE036:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
