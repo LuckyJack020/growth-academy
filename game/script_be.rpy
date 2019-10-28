@@ -5501,7 +5501,7 @@ label BE031:
     show BE sad
     BE "But, you're going to anyway, right? Don't you want to? It's going to be hard if I keep my shirt on."
     "Finally, I sat down in a chair, and Honoka approached, blushing. The gears in my head turned, creaking and cranking, but finally started putting the pieces together."
-    MC "You… want to do... that?"
+    MC "You... want to do... that?"
     BE "Do you not?"
     "Honoka's hands still lingered on the buttons of her uniform's top. The button undid itself without her seeming to notice, exposing another solid inch or more of that succulent, enticing cleavage."
     BE "I didn't think we were moving too fast. But if you want to slow down, it's okay too."
@@ -5520,7 +5520,7 @@ label BE031_c1_1:
     $setAffection("BE", 1)
     "Honoka snickered and licked her lips a bit."
     BE "But, I guess I wanted this to be a surprise. A treat, kind of. So telling you ahead of time would ruin it."
-    MC "That's fair, I guess. But, I, ah, wow. The idea of, of, of…"
+    MC "That's fair, I guess. But, I, ah, wow. The idea of, of, of..."
     show BE unique
     BE "Getting a boobjob from your girlfriend?"
     "Honoka smiled and lifted up her boobs as another button was undone on her uniform. It was like a countdown to a rocket launch, and the explosion left in its wake would be one to remember."
@@ -5599,7 +5599,7 @@ label BE031_c1_after:
     "I don't know how long it was when I finally had to pat on her boobs as fast as I could to let her know what was going on. But those minutes had been, without a doubt, marvelous. I gulped as I heard Honoka's pants reach a fever pitch, and she kept building up speed as she returned her hands to the sides."
     "With her vigor renewed, I stood no chance. As soon as the first sound of a grunt left my throat, Honoka squeezed her boobs as tightly together as she could, and I came all over the inside of her cleavage. With how much there was, it was like trying to coat a barn with a few teaspoons of paint."
     "The ceiling of Honoka's room was blue. I hadn't noticed it before. But with my head hung back on the chair, it was all I could see for a while. My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
-    MC "H-Honoka…"
+    MC "H-Honoka..."
     "I finally found my voice, as weak and groggy as it was. With a gulp, and the arms of the chair, I straightened my posture to look at Honoka. God, she was gorgeous."
     #[Transition- Crossfade]
     #[Scene- Girls'/Honoka's Dorm room]
@@ -5621,7 +5621,7 @@ label BE031_c1_after:
     "Honoka looked up, just in time for my lips to meet hers. She kissed me back for a few seconds before I broke it, and put my hands on her shoulders."
     MC "Remember this, Honoka. I don't love your boobs. I love you."
     show BE happy
-    BE "Oh, g-gee, Kei-chan… I love you too."
+    BE "Oh, g-gee, Kei-chan... I love you too."
     jump daymenu
 
 label BE032:
@@ -5676,12 +5676,12 @@ label BE032:
     AE "I'm just fine, thank you, but if the two of you are doing something against the rules, {i}I{/i} need to know what’s going on."
     BE "Well you don't have to worry about us, class rep. Kei-chan and I are fine. We're making sure we stay safe."
     MC "Right."
-    AE "Well that's good to hear. But…"
+    AE "Well that's good to hear. But..."
     AE "Staying safe?"
     AE "..."
     "Shiori stopped herself, and stood up straight again. She looked between me and Honoka, and made a small, noncommittal sound."
     AE "Hm."
-    AE "I see. Well… I’ll trust you."
+    AE "I see. Well... I’ll trust you."
     AE "But."
     show AE angry
     AE "Regardless, the two of you should act responsibly."
@@ -5698,13 +5698,13 @@ label BE032:
     BE "Oh, can't you tell, Kei-chan? Why do you think I'm extra happy today?"
     "Honoka leaned in, letting her boobs glide over my hands and cover them completely."
     show BE aroused
-    BE "I really thought you'd be able to figure it out, considering how… up close and personal you got with them last night."
+    BE "I really thought you'd be able to figure it out, considering how... up close and personal you got with them last night."
     "Flustered, I tried to pull my hands back. Honoka simply pushed down more insistently, until my palms were flat on the desk."
     show BE unique
     BE "My boobs got bigger. You know that bra I wore last night? I was already close to outsizing it. When I went to put it on today, I couldn't close the clasps."
     "I gulped."
     BE "But I didn't have any time to get a new one, you see. So, fun fact, Kei-chan, I'm going braless today. I'll have to get a new one later. But for now, oof, my yummy, full breasts are just hanging free~"
-    MC "Ahaha… well, that really is some fun news."
+    MC "Ahaha... well, that really is some fun news."
     "With a bit of effort, I flipped my hands over from underneath her breasts. Soon my palms were directly touching the large curves of Honoka's chest, and I pushed upwards."
     MC "I suppose I could always act as your bra for the time being, if they really start to ache on your back."
     show BE happy
@@ -5717,7 +5717,7 @@ label BE032:
     MC "Maybe I don't want to get work done. Maybe I just want you."
     show BE happy
     BE "Well, then, maybe we'll need to have a repeat of last night soon."
-    MC "I wouldn't be opposed to that…"
+    MC "I wouldn't be opposed to that..."
     "A chill suddenly ran down my back. I couldn't figure out where it came from. But as I looked to the other side of the classroom, I saw Shiori's cold, steely stare focus in our direction."
     MC "Ah, b-but, maybe now would be a good time to sit down so Tashi-sensei doesn't call you out for not being in your seat."
     show BE neutral
@@ -5731,6 +5731,7 @@ label BE032:
 label BE033:
     $setProgress("BE", "BE034")
     scene School Planter with fade
+    play music Schoolday
     "Honoka and I were enjoying the cooler weather outside. The sky was clear, and the air was crisp, making it comfy to walk around the campus."
     show BE happy at Position(xpos=0.7, xanchor=0.5, yanchor=1.0) with dissolve
     BE "...and so that's why I don't mix every single flavor in soda machines anymore."
@@ -5761,12 +5762,12 @@ label BE033:
     BE "Oh my gosh, is that Captain Buzzface?!"
     "Shiori's paintbrush hovered inches away from the figurine."
     show AE surprised
-    AE "I… I beg your pardon?"
-    AE "Captain… Buzzface?"
+    AE "I... I beg your pardon?"
+    AE "Captain... Buzzface?"
     show BE happy
     BE "Yeah, from the Warblade game!"
     show AE angry
-    AE "I… believe you’re mistaken. This character is Lord Judicator Septorum the IV."
+    AE "I... believe you’re mistaken. This character is Lord Judicator Septorum the IV."
     show BE neutral
     BE "Yeah yeah that's it. He's got the wicked chainsaw teeth, right?"
     show AE neutral
@@ -5787,16 +5788,16 @@ label BE033:
     show BE happy
     BE "Yeah! I had it on my dads desktop back home!"
     show AE surprised
-    AE "Oh? You played it on your father's desk? That… I doubt that’d be enough room."
+    AE "Oh? You played it on your father's desk? That... I doubt that’d be enough room."
     show BE neutral
     BE "Ehehe, no, his computer."
     show AE neutral
     AE "Com...puter?"
     BE "Uhh, yeah? It’s a device you type in and has a screen."
     show AE angry
-    AE "I know that! But… Warblade on a computer?"
+    AE "I know that! But... Warblade on a computer?"
     show BE angry
-    BE "Well, duh. Warblade: Dynasty Killers, Warblade: Children of the Scourge, Warblade: Battle Rebellion… Is there some other kind of game?"
+    BE "Well, duh. Warblade: Dynasty Killers, Warblade: Children of the Scourge, Warblade: Battle Rebellion... Is there some other kind of game?"
     show AE neutral
     AE "I..."
     "Shiori-san looked at first to me and then to Honoka."
@@ -5809,7 +5810,7 @@ label BE033:
     BE "Well my video game is a lot more fun than whatever you do with those tiny little things!"
     show AE angry
     AE "They’re miniatures."
-    "Honoka and Shiori stared at each other from their respective seats. The air felt electrified…"
+    "Honoka and Shiori stared at each other from their respective seats. The air felt electrified..."
     menu:
         "Side with Honoka":
             jump BE033_honokaside
@@ -5839,13 +5840,13 @@ label BE033_honokaside:
     MC "I mean, how much of that stuff did you have on hand before you got into the game?"
     "Shiori seemed taken aback."
     show AE angry
-    AE "I-I don’t think that’s… entirely {i}comparable{/i}, I-..."
+    AE "I-I don’t think that’s... entirely {i}comparable{/i}, I-..."
     AE "... Hmph. Fine. I suppose you have a point."
-    MC "Playing a video game version also has the benefit of, you know… you can play it by yourself. Anytime. In a few seconds."
+    MC "Playing a video game version also has the benefit of, you know... you can play it by yourself. Anytime. In a few seconds."
     AE "However, the interactivity of not only painting your miniature, but setting up the field and collecting the necessary dice-"
     MC "It's a lot more grueling then handing someone a controller if they wanna play and saying 'A Button jumps'."
     show AE neutral
-    AE "Haah… very well. I’ll… accept that you have a differing opinion."
+    AE "Haah... very well. I’ll... accept that you have a differing opinion."
     MC "That’s it?"
     show AE angry
     AE "You’re lucky to be getting even that."
@@ -5855,7 +5856,7 @@ label BE033_honokaside:
     "Shiori didn't say anything back, and just went to painting as Honoka and I left her. Honoka looked at me sheepishly."
     show BE happy
     BE "Sorry to drag you into that. But feels good to be sided with. But, uh, better watch out for Shiori-chan now, you think?"
-    MC "She's never seemed the type to hold a serious grudge… Why?"
+    MC "She's never seemed the type to hold a serious grudge... Why?"
     show BE sad
     BE "Eh, just the way she was brandishing that paint brush. I don't wanna take off my bra one day and find there was paint smeared inside."
     MC "That does not sound like it would be pleasant."
@@ -5868,7 +5869,7 @@ label BE033_shioriside:
     MC "I understand what Shiori's talking about."
     show AE neutral
     AE "Mind elaborating?"
-    MC "Well. It's like any adaptation, right? There's rarely ever an adaptation of a medium that perfectly encapsulates the original. Anime will have filler arcs, movies will cut characters, games will weed out scenes for the gamer experience…"
+    MC "Well. It's like any adaptation, right? There's rarely ever an adaptation of a medium that perfectly encapsulates the original. Anime will have filler arcs, movies will cut characters, games will weed out scenes for the gamer experience..."
     show BE neutral
     BE "Oh. Maybe, yeah. But, I mean, there's way more video games, and it's just one board game."
     AE "Technically there have been several editions and re-releases, and each edition is improved by a series of new units and rule updates. They are constantly working on it."
@@ -5919,7 +5920,7 @@ label BE033_shioriside:
     BE "Um, we're still doing dinner, right?"
     MC "Yeah."
     show AE neutral at Transform(xzoom=1)
-    BE "Okay, cool. Oh, and… hurt feelings, and… stuff. See you later."
+    BE "Okay, cool. Oh, and... hurt feelings, and... stuff. See you later."
     show BE happy:
         ease 3 xpos 1.5
     "Shiori did a few more brush strokes on her figure, not looking back up towards me."
@@ -5932,8 +5933,10 @@ label BE033_academics:
     $setAffection("BE", -1)
     $setAffection("AE", -1)
     MC "I mean. Really girls. They're just games, they're meant for kids, relax."
+    stop music
     "Honoka and Shiori both looked at me, then at each other."
     show BE neutral
+    play music Tension
     BE "What does that mean?"
     show AE neutral
     AE "Now Inoue-san and I are in agreement. Pray tell what exactly about either of this series is for kids, Hotsure-san."
@@ -5944,7 +5947,7 @@ label BE033_academics:
     MC "I, uh, I don't mean literally for kids. I just meant, they're games, they're supposed to be fun."
     AE "Being fun doesn't exclude the possibility that something has mature themes."
     show BE neutral
-    BE "Oh for real. I mean, Dynasty Killers had… I mean, it's right there in the name, Kei-chan. They killed an entire dynasty."
+    BE "Oh for real. I mean, Dynasty Killers had... I mean, it's right there in the name, Kei-chan. They killed an entire dynasty."
     AE "Would you let your child play something as graphic as Warblade? Violence in media is the responsibility of parents to help guide their children through! If you just leave your children to their own devices-!"
     BE "It’d be like having a kid play those weird H-games!"
     show AE neutral
@@ -5971,7 +5974,7 @@ label BE033_art:
     BE "I mean, I guess that's a good point. But which one's better then?"
     MC "I don't think either needs to be better. Think of it as just the video games being more pragmatic, using what they can to give a good experience."
     MC "It's probably better for people who aren't too imaginative, the games let you get a better read on how the technology and mechanics work, and then look at the characters in action."
-    BE "Hm. Yeah that's true! Then you could… better understand it if you play the tabletop setting later?"
+    BE "Hm. Yeah that's true! Then you could... better understand it if you play the tabletop setting later?"
     show AE neutral
     AE "I would also submit in return that the tabletop version allows you to get a better understanding of the minutiae for the characters."
     show AE happy
@@ -5980,7 +5983,7 @@ label BE033_art:
     BE "Wait for real? Why?"
     AE "Have you ever {i}seen{/i} a purple Orc?"
     show BE neutral
-    BE "… Ha! Haha! For real?! That’s a thing?!"
+    BE "... Ha! Haha! For real?! That’s a thing?!"
     "Shiori chuckled softly, and pushed up her glasses."
     AE "Eheheh, so you're truly not familiar with Warblade putting details of lore into the game manuals?"
     "Honoka shook her head."
@@ -6035,15 +6038,16 @@ label BE034:
     pause 1.5
     play sound Thud
     "With nothing important to do during the afternoon, I'd gone to one of Honoka's archery club meetings to watch her perform."
+    play music Sunset
     "I suppose it was wrong to say it was unimportant. Considering what we'd done, and how we felt for one another, coming to support someone you cared about seemed to be pretty vital."
     "Unfortunately, my cheers couldn't do much for Honoka today. She seemed to be off her rhythm, as another arrow didn't manage to make it to the target, making it one of several failures she'd had so far."
     "There was only one arrow actually in Honoka's practice target, and I wasn't even sure it was hers."
     show BE angry with dissolve
-    BE "Urgh. Come on…"
+    BE "Urgh. Come on..."
     MC "You got this Honoka. Next one's gonna be a bullseye, I know it!"
     "Honoka took a deep breath. Her eyes closed for a second, before she pulled up the next arrow and nocked it, ready to fire. The members at this point could fire at will until 'quiver empty', so she let go when she was ready."
     "The arrow limped through the air and weakly stuck into the edge of the target. If it had been any further off, it would have been in the grass instead."
-    BE "Oww…"
+    BE "Oww..."
     "Honoka put her bow down after Haruhiro called the whistle. She came over and sat down next to me, instead of going to retrieve her arrows."
     MC "The wind must be pretty rough today, huh?"
     show BE sad
@@ -6053,7 +6057,7 @@ label BE034:
     "Honoka reached behind her shoulder and unstrapped her breast guard. With the garment on the ground, she rubbed at the side of her boob, wincing as she did."
     BE "This is the biggest size they have. But even if they had one that fit, I just can't spread my arms out far enough to avoid smacking a boob without losing out on power."
     show BE angry
-    BE "But a full-power shot means I have to be close which means, bowstring against the titty and ow, it really smarts…"
+    BE "But a full-power shot means I have to be close which means, bowstring against the titty and ow, it really smarts..."
     MC "Hm. Maybe there's another kind of bow you could use? Do they make them horizontal?"
     show BE happy
     BE "Ha. Ha, no."
@@ -6139,11 +6143,11 @@ label BE034_cooking:
     BE "Oh? Heh, how come?"
     MC "I think it would be nice to do something different. Take a break from physical activity for a while and do something that's more chill."
     show BE neutral
-    BE "That's a good point… Plus, you never know. Maybe I'm really good at it. I could go on Steel Cook and show everyone who's the boss with my double-scoop meringue."
+    BE "That's a good point... Plus, you never know. Maybe I'm really good at it. I could go on Steel Cook and show everyone who's the boss with my double-scoop meringue."
     MC "Setting your hopes high already, I see."
     show BE happy
     BE "Yeah, why not! You don't aim to get a C- in a class. You try and get an SSS rank, so even if you screw up you can still get an A."
-    MC "If that works for you, I'll be pleased as can be. Just, try and start easy okay. Don't try and make an omurice before you learn to… make regular rice."
+    MC "If that works for you, I'll be pleased as can be. Just, try and start easy okay. Don't try and make an omurice before you learn to... make regular rice."
     show BE surprised
     BE "Oh my gosh wait, I didn't even think about this until now. Would they provide the food and stuff for me?"
     MC "I assume so."
@@ -6154,7 +6158,7 @@ label BE034_cooking:
     MC "Wonderful. I think this will be a good fit for you."
     show BE happy
     BE "Me too!"
-    BE "Hey, wait a minute…"
+    BE "Hey, wait a minute..."
     MC "What?"
     show BE neutral
     BE "This isn't some trick to get me into doing a naked apron routine for you, is it?"
@@ -6168,8 +6172,8 @@ label BE034_cooking:
     show BE sad
     BE "And I am not cooking bacon without a top on."
     show BE angry
-    BE "Never again…"
-    MC "I don't think I want to know any more details about that…"
+    BE "Never again..."
+    MC "I don't think I want to know any more details about that..."
     MC "But for now, I think you should go tell Haruhiro you're quitting the club so he can fill a spot if he needs to."
     show BE neutral
     BE "You're right. Be back in a bit."
@@ -6191,7 +6195,7 @@ label BE034_softball:
     BE "I think about the only thing I couldn't be is a catcher, just because the pad they make you wear might be too hard to make in my size."
     MC "Sure, but you just need a mitt, a helmet, shoes, and like, a uniform. And they've easily got the ability to sew the right-sized uniform for you."
     show BE happy
-    BE "That's right! Oh? Wait a sec, Kei-chan…"
+    BE "That's right! Oh? Wait a sec, Kei-chan..."
     MC "Huh?"
     show BE aroused
     BE "Do you have like, some softball-based fetish I didn't know about?"
@@ -6236,6 +6240,7 @@ label BE035:
 label BE035A:
     scene Cooking Classroom with fade
     #general chatter sfx
+    play music Busy
     "When Honoka and I first visited the cooking club to get her signed up, there had only been a few people in the cooking space. Now that we were at an actual meeting, it was a lot more crowded."
     "There was a large row of ovens and stoves lined up, with a wide amount of space for food preparation. On the wall were various types of knives for different cooking purposes, and all sorts of cooking utensils stacked up nearby."
     Kanami "Hello everyone. Thank you all for coming today. I hope your week has been well. We have some new people today who will be joining us in the world of cooking. Please be kind to them and offer your guidance if they need it."
@@ -6286,7 +6291,7 @@ label BE035A:
     Kanami "Yes, yes. Perfect, Inoue-chan. Now for the peppers, that's a little trickier. Do you mind if I show you?"
     "As Honoka learned how to properly cut up peppers, our rice finished cooking. With Kanami's written instructions I dumped it out onto a baking sheet, spread it thin, and put it in a freezer to cool. By the time I finished, Honoka was done slicing."
     Kanami "You two seem to be doing well. Enjoy. Let me know if you need anything."
-    Kanami "Oh my. Koumori-chan, please be careful with how much of that you add…"
+    Kanami "Oh my. Koumori-chan, please be careful with how much of that you add..."
     "Kanami left Honoka and I together to continue our cooking while she tended to another student."
     BE "Phew, this is hard work. But, hey, cutting stuff is kind of fun."
     MC "Good to hear. So, we need to cook the shrimp a bit first, and then some eggs to mix into the rice, while the rice itself cools down."
@@ -6316,7 +6321,7 @@ label BE035A_sauce:
     show BE neutral
     BE "Well let's get it in there, then."
     "I grabbed the bottle and opened it, upending it over the skillet."
-    MC "It said three tablespoons so one…"
+    MC "It said three tablespoons so one..."
     MC "Two..."
     MC "And three."
     BE "Perfect. Let that mix in a bit. Do you think we can do that flippy-tossy thing they do in restaurants?"
@@ -6372,7 +6377,7 @@ label BE035A_nosauce:
     show BE neutral
     BE "Ooh, ah, it's hot. Mm. Hm."
     MC "Mm. It's pretty good."
-    BE "Yeah…"
+    BE "Yeah..."
     MC "What's up?"
     BE "I'm not sure. It tastes different from what I'm used to."
     Kanami "Mm, hello you two. How did your dish come out?"
@@ -6404,7 +6409,7 @@ label BE035A_nosauce:
     MC "Tease? Nah. Just a promise. I'll make you full and satisfied."
     show BE surprised
     BE "..."
-    MC "… Not remotely how I meant it."
+    MC "... Not remotely how I meant it."
     jump daymenu
 
 
