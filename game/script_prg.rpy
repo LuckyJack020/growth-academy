@@ -1,4 +1,4 @@
-define PRG = Character('Kodama', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
+define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
 define Sakura = Character('Sakura', color="#FF3399")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define PRGCell = Character('Kodama', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
@@ -2267,9 +2267,9 @@ label PRG018:
     "I gave Aida a reassuring smile, one of those that hopefully said 'I trust you,' and not 'please, dear god, don't screw up my hair.'"
     "I sat down at the bench, and I felt something drape over my shoulders. I took a look down to see that Aida had laid a towel down over them."
     MC "Thank you."
-    PRG "You're welcome. It's how I was taught, after all."  
+    PRG "You're welcome. It's how I was taught, after all."
     MC "Have you been doing this long, then?" 
-    PRG "Not for a while. My mom taught me how to cut hair when I was little."  
+    PRG "Not for a while. My mom taught me how to cut hair when I was little."
     MC "My mom used to cut my hair all the time when I was little. She always used to tell me 'It may not be the most glamourous haircut, but it's free.'" 
     show PRG happy
     "Aida laughed out loud at that."
@@ -2348,12 +2348,12 @@ label PRG018_c1_after:
     "Aida cleaned off her scissors and picked up her towel. I stood up and shook my head, sending little hairs flying in the breeze. I turned to Aida."
     MC "Thanks so much, Aida!" 
     show PRG happy
-    PRG "You're welcome. I'm glad I could help you. You were starting to look a little shaggy."  
+    PRG "You're welcome. I'm glad I could help you. You were starting to look a little shaggy."
     "I looked in the hand mirror Aida had brought along and threw my head this way and that, examining every angle."
     MC "It looks really good. Maybe you should look for a career as a personal stylist."
     show PRG aroused
     PRG "I...I could never do that."
-    MC "Of course you could! I couldn't pay someone to give me a cut like this. You have some serious talent."  
+    MC "Of course you could! I couldn't pay someone to give me a cut like this. You have some serious talent."
     PRG "You're sweet, Keisuke. Maybe I'll have to think about it a bit."
     "Just then, the radio crackled to life as the announcer's voice rang out loud and clear."
     Announcer "THE DRAGONS WIN IT! THEY'RE ON THEIR WAY TO THE WORLD SERIES!!"
@@ -5167,7 +5167,7 @@ label PRG030:
     PRG "I-I suppose it could?"
     MC "It's almost unbelievable though. Like, how something as straightforward as baseball could lead to so much more. I mean, a date, marriage, and eventually, a child, all from one baseball game. Seems like something out of a story."
     show PRG neutral
-    PRG "E-Even they were amazed by it. They always called it the 'One in a million date.'  But, I..."
+    PRG "E-Even they were amazed by it. They always called it the 'One in a million date.' But, I..."
     MC "Huh? But what?"
     show PRG unique
     PRG "I feel... I feel like they set this really high standard for a relationship. Like... They feel as though everyone needs to have a sort of crazy story associated with their meeting, instead of just meeting someone normally and falling in love."
@@ -5958,7 +5958,7 @@ label PRG034:
             jump PRG034_c1_1
         "Force her to go apologize.": #(PRG.AFFECTION +3)
             jump PRG034_c1_2
-        "Hug her.": #(PRG.AFFECTION -4)  
+        "Hug her.": #(PRG.AFFECTION -4)
             jump PRg034_c1_3
 
 label PRG034_c1_1:
@@ -6353,7 +6353,7 @@ label PRG035_c1_after:
     PRG "But... I kind of like looking at your eyes, even while you sleep."
     MC "You do?"
     PRG "Yep. Your eyes just look really deep, like they could go on for miles past what's seen on their exterior. Like tunnels to your soul, in a sense."
-    MC "'Eyes are the windows to the soul.'  I think that's how that phrase goes."
+    MC "'Eyes are the windows to the soul.' I think that's how that phrase goes."
     
     scene black with fade
     "Aida and I deep chatted our way to the dorms, where we said our goodbyes. Once we got back to our dorms, our conversation continued as we texted until eventually, Aida stopped responding."
@@ -6488,7 +6488,7 @@ label PRG036_c1_after:
     MC "That sounds like every kid's dream childhood."
     PRG "It was. And, I-I think like most kids do, I took it for granted. I just figured that things would always stay how they were. And then..."
     extend " my dad got sick."
-    MC "Oh... what sort of sickness?"
+    MC "Oh... What sort of sickness?"
     PRG "My mom would never tell me. At first, he seemed fine. H-He'd come home from some sort of appointment a lot of days. But, he'd always go to the bathroom immediately and v-vomit."
     PRG "My mom told me that he just had influenza, and... I believed her. But... I knew something else was wrong, because my mom would do everything around the house, while he laid in bed. She'd take care of literally everything."
     PRG "She would sit in the living room for hours at night, flipping through old photo albums. She'd look at them every night after my dad had gone to bed, and she'd be in tears nearly the entire time."
@@ -6497,10 +6497,10 @@ label PRG036_c1_after:
     extend " bald."
     MC "Bald?!"
     PRG "Mhm... I s-screamed when I saw him. He was... pale all over and he had lost at least 30 pounds.  W-What was the worst thought, was how tired he looked. H-He looked like he hadn't slept in days."
-    PRG "He smiled at me when he saw me, and asked 'how's my favorite girl doing?'  He opened his arms for a hug, and I..."
+    PRG "He smiled at me when he saw me, and asked 'how's my favorite girl doing?' He opened his arms for a hug, and I..."
     show PRG sad
     PRG "I-I ran away from him and hid in my room! I-I was convinced he wasn't my dad. My mom came in to see me after, and I could hear my dad crying from the other room."
-    PRG "She told me... she told me that I was going to go live with my grandma and grandpa. B-But I started to cry. I told her I didn't want to go. I told her..."
+    PRG "She told me... She told me that I was going to go live with my grandma and grandpa. B-But I started to cry. I told her I didn't want to go. I told her..."
     "Aida stopped, her voice breaking as she let her head drop. Tears were streaming down her cheeks like flowing rivers. I took her sheet and gently dabbed at her face."
     PRG "I-I told her that I wanted to wait for daddy to get home! She told me that the man in the living room was my dad, but I still didn't believe her. I couldn't believe her."
     PRG "Then, she went out of the room and came back with one of her suitcases, and started putting my clothes into it. She said that she'd bring my other stuff over later."

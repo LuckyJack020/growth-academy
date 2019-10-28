@@ -1,6 +1,6 @@
 define BBW = Character('Alice', color="#CC33FF")
 define Lunch = Character('Lunchlady', color="#CC33FF")
-define Francois = Character('Francois', color="#CC33FF")
+define Francois = Character('François', color="#CC33FF")
 define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Waitress = Character('Lunchlady', color="#CC33FF")
 
@@ -96,14 +96,14 @@ label BBW001:
     BBW "I am THE student, as far as you are concerned. You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     MCT "You didn't hear the part about me being in your class, did you?"
     BBW "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
-    BBW "Francois here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
+    BBW "François here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
     Lunch "We make enough food for even the fat kids. Don't worry, you'll get your share."
     show BBW angry
     BBW "I am NOT some 'fat kid'. I am not even obese."
     show BBW neutral at Position(xpos=0.6) with dissolve
-    BBW "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that you – as qualified for this job as you may be – cannot meet."
+    BBW "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that you - as qualified for this job as you may be - cannot meet."
     show BBW neutral at Position(xpos=0.25) with dissolve
-    BBW "Now, I've already gone to the trouble of ordering the equipment you probably don't have – wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends..."
+    BBW "Now, I've already gone to the trouble of ordering the equipment you probably don't have - wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends..."
     show BBW neutral at Position(xpos=0.4) with dissolve
     BBW "But he will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
@@ -112,7 +112,7 @@ label BBW001:
     MCT "Oh, is that all? Your own private chef and special deliveries every day? Just how loaded is this girl?"
     Lunch "Students don't get to bring private chefs with them, princess. Non-faculty don't get access to our kitchen or any other facilities on campus. Either you can take what we offer you, or you can make your own meals in the Home Ec classes."
     show BBW angry
-    BBW "What? Francois cannot perform at his best in a classroom kitchen. He needs a full assemblage of utensils and appliances-"
+    BBW "What? François cannot perform at his best in a classroom kitchen. He needs a full assemblage of utensils and appliances-"
     Lunch "I said you can make your meals."
     extend " Yourself."
     show BBW haughty
@@ -167,7 +167,7 @@ label BBW001_c2_1:
     MC "Daitaro... Isn't he some sort of businessman?"
     show BBW happy
     BBW "Not just 'some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
-    MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install Francois as head chef?"
+    MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install François as head chef?"
     show BBW neutral with dissolve
     BBW "Such a simple thought. Just because you {i}can{/i} buy something, my dear boy, does not mean you should. Not all investments are worth the trouble."
     hide BBW
@@ -235,7 +235,7 @@ label BBW002_c1_1:
 label BBW002_c1_2:
     MC "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once."
     show BBW neutral
-    BBW "All the more reason to let me have Francois on hand. It's unnecessary to force every student here to subsist on this food, and to have someone like me – someone accustomed to a certain standard – suffer this becomes downright cruel."
+    BBW "All the more reason to let me have François on hand. It's unnecessary to force every student here to subsist on this food, and to have someone like me - someone accustomed to a certain standard - suffer this becomes downright cruel."
     MC "It's not that bad. I've had better, but I've definitely had worse."
     MCT "Besides, you managed to clear your plates."
     show BBW haughty
@@ -354,7 +354,7 @@ label BBW003_c1_1:
 label BBW003_c2_1:
     MC "Is she? I guess that's fortunate for you."
     show BBW haughty
-    BBW "It is. I would have survived just fine had I been left to my own devices, but people like me – those of us who are always looking at the big picture and have so many things to worry about – we benefit from having dedicated subordinates. Having someone to cook for me frees up time and energy I can devote to other things."
+    BBW "It is. I would have survived just fine had I been left to my own devices, but people like me - those of us who are always looking at the big picture and have so many things to worry about - we benefit from having dedicated subordinates. Having someone to cook for me frees up time and energy I can devote to other things."
     MC "Like what?"
     BBW "Anything. My studies, my hobbies, being the glamorous trendsetter that I am."
     MC "I guess if she's OK helping you, there's nothing wrong with that."
@@ -601,7 +601,7 @@ label BBW005A:
     BBW "If I am to maintain authority over my own body and not be controlled by the whims of fate, then yes, I am doing 'the diet thing.' Every day, at every meal, I will be watching my intake, limiting the calories, sugars, and fats I take in. I will limit it all to what I need and no more."
     MC "You don't seem too happy about it."
     show BBW angry
-    BBW "Is there something here I should be happy about? I have a palate more refined than people twice my age. My appreciation of the arts – culinary or otherwise – exceeds that of professional critics."
+    BBW "Is there something here I should be happy about? I have a palate more refined than people twice my age. My appreciation of the arts - culinary or otherwise - exceeds that of professional critics."
     BBW "And now I must cut out my tongue, surviving on simple fruits and steamed vegetables and whatever other staples a Neanderthal wandering the plains of famine would call a meal."
     MCT "That's a bit melodramatic. Better think of some positive way to look at this."
     MC "At least it will help in the long run! That'll be good, right?"
@@ -908,7 +908,7 @@ label BBW007:
     BBW "I know the sons and daughters of many business owners and CEOs. We always turn up at the same hotels in Monaco or ski lodges in Switzerland. You don't think the owner of a factory that makes dresses or suits has to buy off the rack, do you?"
     MC "I guess not. So if I needed to buy a new laptop could you get me one at a discount?"
     show BBW neutral
-    BBW "I suppose I could. Hitomi and I – that's Hitomi Ogawa, daughter of the president of Ogawa Electronics – aren't on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
+    BBW "I suppose I could. Hitomi and I - that's Hitomi Ogawa, daughter of the president of Ogawa Electronics - aren't on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
     MC "An Ogawa laptop for under a hundred thousand yen? That's pretty steep for some old model being unloaded-"
     BBW "That's for an Ogawa D2300. 22” monitor, if I remember correctly."
     MC "... For 99,000?! Are you serious?"

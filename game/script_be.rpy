@@ -118,7 +118,7 @@ label BE001_c1:
     extend " If anything, she looked pleased as punch, considering she lifted up her boobs like she was about to serve them on a silver tray."
     MC "Well if that is the case, hopefully I grow something big that you'll enjoy, too."
     "..."
-    extend " What did I just say?"
+    extend "What did I just say?"
     show BE surprised
     BE "Kei-chan! To think you'd be so forward..."
     show BE surprised at center, Transform(xzoom=-1)
@@ -300,7 +300,7 @@ label BE003:
     MC "Mmm, much better."
     "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka."
     "After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
-    MC "Woops, uh, hey Honoka. Sorry about that. Wasn't watching where I was going."
+    MC "Whoops, uh, hey Honoka. Sorry about that. Wasn't watching where I was going."
     show BE happy at center with dissolve
     BE "Hehe, hey Kei-chan. Don't worry about it, was an accident, right?"
     MC "Right."
@@ -358,13 +358,13 @@ label BE003_c1:
     BE "Nothing, hehe. Thanks for the drink, Kei-chan, but I better get going. Next time I'll owe you a drink, okay? I'll make sure to take a sip from it first so we're even. Tricking a young girl into getting a secondhand kiss, you playboy."
     "Honoka winked and made her way over to the soccer field, leaving me there, speechless for a moment."
     hide BE with dissolve
-    MC "Wait, what? That wasn't why I gave you the drink, I was just, oh, darnit.... I'm still thirsty."
+    MC "Wait, what? That wasn't why I gave you the drink, I was just, oh, darnit... I'm still thirsty."
     jump daymenu
 
 label BE003_c2:
     show BE neutral
     play music BE
-    BE "Yeah that's probably a good idea. Hm...."
+    BE "Yeah that's probably a good idea. Hm..."
     "Honoka walked over to the vending machine as I took another sip of my soda. She hummed to herself for a while as she looked over the various options, eventually deciding on something and paying for it. As she opened a bottle of water, I racked my brain for a point of conversation."
     MC "So... soccer, huh?"
     BE "Yep, should be pretty fun. Lots of running and kicking things."
@@ -589,7 +589,7 @@ label BE005:
     show BE surprised
     play music Schoolday
     BE "..."
-    extend " Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
+    extend "Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
     MC "I guess so? I've never really noticed it before if that's the case. I mean, I suppose I might have gotten haircuts a bit more often but it wasn't really something I paid much attention to."
     show BE neutral
     BE "That's fair. Me on the other hand, I've known what I was going to be growing for a while now."
@@ -1753,7 +1753,7 @@ label BE016:
     "Honoka thought for a minute, rubbing her chin before she smirked back at me."
     show BE aroused
     BE "Wait a minute. Wasn't 5 the game that had that scene where all the girls had to strip to their underwear?"
-    MC "....maybe."
+    MC "...maybe."
     BE "Uh-huh. I'm sure you had a save point right before that scene and loaded it up every night."
     MC "I. You. Um. Hey, basketball, right? How's that going?"
     "Honoka was kind enough to ignore my pathetic attempt to change the subject."
@@ -1788,7 +1788,7 @@ label BE016:
     play sound Whistle
     Coach "Alright, everyone. Line up, let's get some suicides going! Move your butts!"
     show BE happy
-    BE "Woops, gotta move. Catch you later, Kei-chan!"
+    BE "Whoops, gotta move. Catch you later, Kei-chan!"
     MC "Wait?! What the hell are suicides?!"
     BE "Oh they're much worse but I'll be fine."
     hide BE with dissolve
@@ -2110,7 +2110,7 @@ label BE018_c1_after:
     show PRG happy
     PRG "What's next?"
     show BE neutral
-    BE "Second part is the.... "
+    BE "Second part is the..."
     show BE unique
     BE "I think it's called the band size. And for that, we want to measure right underneath your bust. So it's going to be a smaller number about 99%% of the time, unless you're really flat and really fat at the same time."
     show BE neutral
@@ -2192,7 +2192,7 @@ label BE018_c1_after:
     MC "I never knew you were so well-informed about bras."
     show BE angry
     BE "Hey, are you saying you haven't picked up an article or something about long hair since you got your diagnosis?"
-    MC "Uh...."
+    MC "Uh..."
     show BE happy
     BE "Haha. Kei-chan, you can be a real dork sometimes. Ooh!"
     "Honoka grabbed my measuring tape and smirked, before tossing it over my head."
@@ -2221,11 +2221,11 @@ label BE018_c2_2:
     MC "I'd prefer if it was your scent on it."
     $setAffection("BE", 1)
     show BE surprised
-    BE "You, wha, uh, you....."
+    BE "You, wha, uh, you..."
     "Honoka had already unpaused the game, and her befuddlement at my confession was enough for me to take the lead in our last match of the night."
     scene black with fade
     "After that I decided to pack up and head back to my room as well. It was getting late. I said my goodbyes, and went to get under my sheets and doze off."
-    "Though now I was wondering what my sheets would have smelled like if Honoka had been rubbing against them.... Stupid brain."
+    "Though now I was wondering what my sheets would have smelled like if Honoka had been rubbing against them... Stupid brain."
     jump daymenu
 
 label BE019:
@@ -2340,7 +2340,7 @@ label BE019_c1_after:
     BE "That means you were the first boy I spent the night with."
     MC "Wh-What? I mean. Yeah, that's true. But, not like, in that way!"
     show BE aroused
-    BE "It doesn't matter, Kei-chan. It was you. That means.... That means..."
+    BE "It doesn't matter, Kei-chan. It was you. That means... That means..."
     "Honoka shuddered and put her clenched fist up to her mouth as she turned her head away."
     "It was at this point I began to suspect that this was a bit of an act she was putting on."
     "She turned her head back to face me, and took both my hands in hers."
@@ -2984,7 +2984,7 @@ label BE022:
     BBW "Hm. A delicate texture but it might be over-encumbered with too much seasoning, which overpowers the potato flavor."
     "Alice went through the rest of the items on her list, writing down her long notes while Honoka and I went through our numerical scores. Every once in a while, Honoka continued to add another item to the growing collection of food in her cleavage."
     "I was surprised how much she had inside, and that Alice hadn't noticed yet."
-    BBW "Now we'll move on to...."
+    BBW "Now we'll move on to..."
     show BBW sad at Transform(xzoom=-1)
     BBW "Wait."
     show BBW angry at Transform(xzoom=1)
@@ -3040,7 +3040,7 @@ label BE022_c1_1:
     $setAffection("BBW", 1)
     BBW "Inoue-san, if you would be so kind as to remove all those items immediately, we can conclude this test. Those cookies first, please."
     show BE sad
-    BE "Eh-heh...."
+    BE "Eh-heh..."
     "Honoka blushed as she pulled treat after treat out of her bosom. The cookies first, which Alice quickly snatched and examined. Despite their location moments ago, she found three cookies in the bag that weren't broken and handed them out. She refused to let Honoka's shenanigans deter her."
     BBW "I can only hope the quality of these have not been diminished due to your... boobery, Inoue-san."
     show BE angry
@@ -4278,7 +4278,7 @@ label BE026:
     "The weather wasn't scorching hot, but definitely warm enough that the cicadas would be out. The trick was finding them. After walking around for a while, it was hard to ignore the telltale sounds of them rubbing their wings together."
     #SFX: Cicada noise
     MC "So, what's the plan? Wanna try to see who can catch the most?"
-    BE "Hmm...."
+    BE "Hmm..."
     show BE angry
     BE "Nah, let's just hang out and see if we can catch a few."
     MC "That's fine! Sounds like a plan to me."
@@ -4427,13 +4427,13 @@ label BE026_c2_2:
     "Honoka's breasts burst out, covered in a white, lacy bra that gave her melons support. Without the barrier of her shirt, nearly all of her bosom was exposed. I never realized how much her shirt actually held them back. There was easily a few extra inches exposed now."
     MC "I, I... I..."
     show BE aroused
-    BE "Heh.... I've always wanted to do that..."
+    BE "Heh... I've always wanted to do that..."
     "I held my mouth and nose as I stared at Honoka's bra-clad chest. What could be done? There were so many options, and none seemed better than the other. It was like winning the lottery and not knowing what to buy first."
     MC "Honoka, they're spectacular."
     show BE happy
     BE "Oh, go on."
     MC "I mean, I don't know enough words to describe them. They're so... big, and round, and.."
-    BE "No, Kei-chan, I mean...."
+    BE "No, Kei-chan, I mean..."
     show BE aroused
     BE "Go on."
     MC "Go... on... I..."
@@ -4587,7 +4587,7 @@ label BE027:
     show BE neutral
     BE "Hm."
 
-    scene Store with fade
+    scene Clothes Store with fade
     "Honoka looked back and forth around the store. It seemed to be geared mainly towards women, but had a fair share of men's clothes as well."
     "Going from one side to the other was like examining a display of paint swatches, as the colors shifted from blacks and blues to reds and pinks. Shoes in the middle, with underwear and socks in the back."
     show BE neutral with dissolve
@@ -5081,7 +5081,7 @@ label BE028_test_3:
     show BE happy
     BE "Hehehe, no sir-ee, only for Kei-chan and me."
     "Honoka clenched her fists and pushed them together above her bust. "
-    BE "So what do you think? Is there a place near here that does wedding ceremonies? I bet Naomi-chan could make us a really nice bouquet set for cheap.... Alice-chan's probably got a lead on who would make good wedding cake."
+    BE "So what do you think? Is there a place near here that does wedding ceremonies? I bet Naomi-chan could make us a really nice bouquet set for cheap... Alice-chan's probably got a lead on who would make good wedding cake."
     MC "Uh."
     BE "Haha, relax, Kei-chan. I'm kidding. I mean, I'm definitely not saying 'no' to the idea! But geez, that would be rushing into things, wouldn't it?"
     MC "Yeah, I was about to say. There's quite a few things you're supposed to do before you get married."

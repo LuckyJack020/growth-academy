@@ -28,6 +28,7 @@
         'field': ("town", (400,120)),
         'gym': ("school", (550,225)),
         'hallway': ("school", (565,320)),
+        'hillroad': ("town", (400,120)),
         'library': ("school", (440,420)),
         'musicclassroom': ("school", (565,375)),
         'office': ("school", (480,420)),
