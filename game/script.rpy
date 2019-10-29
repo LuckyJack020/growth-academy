@@ -499,10 +499,13 @@
             end = locationlist[eventlibrary[highlitevent]["location"]][1]
             
             #blit icon image on end
-            img = im.FactorScale("Graphics/ui/icons/%s-icon.png" % eventlibrary[highlitevent]["girls"][0], .25)
-            child_render = renpy.render(img, 25, 25, st, at)
-            iconend = (end[0] - 12, end[1] - 12)
-            render.blit(child_render, iconend)
+            #if len(eventlibrary[highlitevent]["girls"]) == 0:
+            #    img = im.FactorScale("Graphics/ui/icons/minor-icon.png", .25)
+            #else:
+            #    img = im.FactorScale("Graphics/ui/icons/%s-icon.png" % eventlibrary[highlitevent]["girls"][0], .25)
+            #child_render = renpy.render(img, 25, 25, st, at)
+            #iconend = (end[0] - 12, end[1] - 12)
+            #render.blit(child_render, iconend)
             
             #draw line
             canvas = render.canvas()
