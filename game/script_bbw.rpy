@@ -6502,7 +6502,7 @@ label BBW035:
     "After the concert I met up with Alice outside the auditorium."
     MC "You were great."
     show BBW happy with dissolve
-    BW "Thank you. I am satisfied with my performance."
+    BBW "Thank you. I am satisfied with my performance."
     MC "I assume this doesn't compare to at your old school. Probably more people attended those shows, huh?"
     "Alice smiled ruefully."
     show BBW neutral

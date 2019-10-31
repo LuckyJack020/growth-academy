@@ -46,7 +46,7 @@ init 2 python:
     eventlibrary['PRG034'] = {"name": "Back in the Saddle", "girls": ["PRG"], "type": EventTypeEnum.CORE,              "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "PRG035", "obsflags": [],          "conditions": []}
     eventlibrary['PRG035'] = {"name": "Dinner for Three", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,         "location": "dormexterior",    "priority": PrioEnum.NONE, "next": "PRG036", "obsflags": [],           "conditions": []}
     eventlibrary['PRG036'] = {"name": "Fallibility", "girls": ["PRG", "BBW"], "type": EventTypeEnum.CORE,              "location": "dorminterior",    "priority": PrioEnum.NONE, "next": "PRG037", "obsflags": [],           "conditions": []}
-    #eventlibrary['PRG029'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "library",         "priority": PrioEnum.NONE, "next": "", "obsflags": [],                 "conditions": []}
+    eventlibrary['PRG037'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "library",         "priority": PrioEnum.NONE, "next": "", "obsflags": [],                 "conditions": []}
     eventlibrary['PRGend_nofather'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,               "location": "library",         "priority": PrioEnum.NONE, "next": "", "obsflags": [],                 "conditions": []}
 
     #Optional
@@ -5176,7 +5176,7 @@ label PRG030:
     PRG "I..."
     PRG "I feel like it can happen anywhere, anytime. T-There doesn't have to be this crazy meeting story or even any story at all, for that matter. Love can be found anywhere."
     MC "That's an awesome point of view. If you are always looking for that special situation, or that perfect story, you may neglect what's sitting directly in front of you."
-    show PRG neutrla
+    show PRG neutral
     PRG "Y-Yeah... We'd better get back to our paper, Keisuke."
     MC "Oh! Yeah, yeah we should."
     "Aida grabbed one of her books and flipped toward the middle section, while I pulled my phone out and began surveying the Dragon's online team history. Looking down at my phone made my hair flop down into my eyes, which now covered my face easily."
@@ -5465,7 +5465,7 @@ label PRG031_c1_after:
     jump daymenu
 
 label PRG032:
-    $setProgress("PRG033")
+    $setProgress("PRG", "PRG033")
     scene School Planter with fade
     MCT "Relaxation. Man's greatest blessing."
     "After class that day, I had meandered over to the garden and decided to just sit outside. It was a gorgeous day, and with everything coming my way lately, I figured my body could use the rest. I let my eyes fall shut as I inhaled the scent of freshly cut grass and the light saltiness of the far off sea breeze."
@@ -6451,7 +6451,7 @@ label PRG036_c1_after:
     show PRG sad
     PRG "N-No! I-It was worse! I started... I started thinking about... a lot of things, and my head wouldn't stop connecting them together."
     MC "I'm not really sure what you mean. Could you describe it a bit more?"
-    show PRG uniue
+    show PRG unique
     PRG "Like... I'll think of something bad that happened to me when I was younger, and connect it to something that's happening to me now. And then, I-I get scared."
     MC "Scared? Scared of what?"
     show PRG angry

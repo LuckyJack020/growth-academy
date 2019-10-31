@@ -12489,7 +12489,7 @@ label AE054:
         "While my face was definitely stoic and sympathetic, I couldn't help but laugh internally at the mental image. Turns out, though, Shiori saw right through me."
         show AE angry
         AE "My family couldn't afford glasses and it was dark. It didn't help that I... that I looked back."
-        show AE sads
+        show AE sad
         AE "I must have blacked out for a second, because before I knew it, the man had knelt down next to me... he was concerned about me... he cared. He asked me why I did what I did and... he told me that no child should have to go hungry."
         AE "He gave me the money in his wallet and... told me where to find him if I wanted to have a chat. I cried the rest of the night when I got home."
         AE "For the first time in my life, I felt sick of myself. Sick of my existence. I knew I was meant for something better."
@@ -12584,6 +12584,7 @@ label AE054:
 
 label AE055:
     #SCENE AFTERNOON
+    $setProgress("AE", "AE056")
     scene Hill Road with fade
     show AE happy with dissolve
     "The cold, autumnal wind echoed through the hills as we descended down into the glen. Holding Shiori by the hand, we crossed a narrow stream together as we made our way around the bend. She stopped for a moment and looked around with a gentle smile."
@@ -13675,7 +13676,7 @@ label AE059:
     jump daymenu
 
 label AE060:
-    $setProgress("AE", "AE060")
+    $setProgress("AE", "AE061")
     #AFTERNOON
     scene Library with fade
     play music Sunset
