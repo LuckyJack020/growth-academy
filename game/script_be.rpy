@@ -6238,6 +6238,7 @@ label BE035:
         jump BE036
 
 label BE035A:
+    $setProgress("BE036")
     scene Cooking Classroom with fade
     #general chatter sfx
     play music Busy

@@ -11236,7 +11236,7 @@ label AE050_after3:
     MC "Say... I think that shirt looks a bit restrictive."
     AE "Y-Yeah?"
     MC "Mhm..."
-    AE "Here. Let me help."
+    MC "Here. Let me help."
     "Slowly, I reached over and began to undo the buttons of her shirt. First at the bottom, then the second, then the third up. Slowly but surely, her shirt, jacket, everything came off; until she was left in only her bra."
     MC "Hmm~."
     "I pulled her in closer, and embraced her with a hug and a kiss. My hands rubbing her back, I leaned in and whispered in her ear as I reached her bra."
@@ -13020,7 +13020,7 @@ label AE056_c1_after:
     "I nodded wordlessly and stroked my long, brown locks in embarrassment. Shiori grabbed my hand and led me out of the room past Tako as she pursed her lips, held open the door for Shiori, and closed the door behind herself."
 
     scene Dorm Exterior with fade
-    play music sunset
+    play music Sunset
     MC "Well... damn."
     show AE sad with dissolve
     AE "I am... {i}SO{/i} sorry for that."
