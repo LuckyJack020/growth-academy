@@ -167,7 +167,7 @@ label FMG003:
     "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 mph."
     MC "Um... Fine?"
     show FMG sad
-    FMG "Great, hey look about the other day..."
+    FMG "Great. Hey, look, about the other day..."
     MC "Oh you don't have to apologize, you were just having a bad day is all."
     show FMG neutral
     FMG "Yeah I know, but I feel like I should make it up to you. I thought about it and, well, do you want to join me in my work out sessions?"
@@ -201,7 +201,7 @@ label FMG003_c1:
     show FMG neutral
     FMG "When the time comes, you'll know..."
     MC "Um... No, I don't, t-that's why I-"
-    FMG "Oh Crap the bell's gonna to ring in 30 seconds! LATER!"
+    FMG "Oh crap! The bell's gonna ring in 30 seconds! LATER!"
     show FMG neutral at Transform(xzoom=-1)
     show FMG neutral:
         ease 0.75 xpos 0.9
@@ -2265,9 +2265,9 @@ label FMGBBW001:
     MC "...So can I go back to bed now?"
     show RM neutral
     RM "Fine, fine, I guess we earned a rest."
-    "With that, we started to walk out, Daichi wanted to make sure we could see anyone come in, so we left the door a crack open."
+    "With that, we started to walk out. Daichi wanted to make sure we could see anyone come in, so we left the door a crack open."
     MCT "Wait... is the library open at this time? If not how did he... ah screw it, I'm too tired for this."
-    "However, due to the door already slightly opened, we saw though the crack that there was someone facing away from the door and looking at the stairwell. Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
+    "We saw through the crack that there was someone facing away from the door and looking at the stairwell. Before I could check who it was, Daichi grabbed me, forcing me to crouch down with him."
     show RM angry
     RM "Keep it down, who is that?!"
     MC "How should I know!?"
@@ -2276,7 +2276,7 @@ label FMGBBW001:
     show RM smug
     RM "Not with that attitude you aren't. Now go check!"
     MC "Ugh, fine."
-    "Reluctantly, I sneaked towards the door, to my surprise..."
+    "Reluctantly, I sneaked towards the door, and to my surprise..."
     scene Hallway with fade
     show FMG neutral with dissolve
     MC "It's Akira Mizutani, she's in the hallway near the stairway."
@@ -2304,7 +2304,7 @@ label FMGBBW001:
     show BBW sad
     BBW "...I'm still not seeing-"
     show FMG neutral
-    FMG "Tell you what, do you know Kazomazumi Bakery on Genki street?"
+    FMG "Tell you what, do you know Kazomazumi Bakery on Genki Street?"
     show BBW neutral
     BBW "I do. Why?"
     FMG "If you're willing to get to know each other, I'll treat you to some cupcakes there."
@@ -2330,12 +2330,12 @@ label FMGBBW001:
     RM "I'm sure you noticed something wrong with that conversation right?"
     MC "...Kazomazumi Bakery."
     show RM angry
-    RM "EXACTLY! Why would those two meet up at that specific bakery, that shares the same name in the article of the first record growth I found on the same day!?"
+    RM "EXACTLY! Why would those two meet up at that specific bakery, that shares the same name as the article of the first record growth I found on the same day!?"
     MC "...I-it might be a coincidence that they share the same name?"
     show RM neutral
-    RM "...Well, how many Kazomazumi's do you know?"
+    RM "...Well, how many Kazomazumis do you know?"
     MC "..."
-    MC "Alright fine! It sounds kinda weird."
+    MC "Alright, fine! It does sound kinda weird."
     show RM angry
     RM "See! There's something going on, I think we should go to this meeting spot and witness what might be a breakthrough!"
     "Normally, I would have thought about this... but it was a too big of a coincidence to pass up."
@@ -2347,28 +2347,28 @@ label FMGBBW001:
     MC "W-Why do you even have these in the first place?"
     RM "You can never be too careful. Now then..."
     show RM smug
-    RM "Operation 'stakeout at the bakeout' starts now!"
+    RM "Operation 'Stakeout at the Bakeout' starts now!"
     scene Town with fade
     play music Sunset
     "A few hours later, we arrived at the town with five minutes till the meeting. We peeked around to see the bakery in question."
     MC "Is that the place?"
     show RM neutral with dissolve
-    RM "This is the only bakery on Genki street, and the next closest bakery is nine blocks away on Enoshima Ave."
+    RM "This is the only bakery on Genki Street, and the next closest bakery is nine blocks away on Enoshima Ave."
     MC "Hey, why are we hiding behind a pole?"
     "...I forgot to mention we were peeking around a telephone pole."
     RM "Do you see an open alley with a good view of the front?"
     MC "...Fair point."
-    RM "All right, we got five minutes before the meeting time, let's head in!"
+    RM "Alright, we got five minutes before the meeting time, let's head in!"
     scene Cafe with fade
     show RM neutral with dissolve
-    "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme. It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; The only person I could see was the counter girl."
-    "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup. She wore a caramel-brown and cream-white patterned baker outfit, with an name tag that said “Haruko” pinned to the front."
+    "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme. It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
+    "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup. She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said 'Haruko' pinned to the front."
     Cashier "Hi, welcome to Kazomazumi Bakery! What can I get you two?"
-    MC "Yeah hi, this is our first time here, what do you recommend?"
+    MC "Yeah, hi! This is our first time here, what do you recommend?"
     Cashier "Well, today we have a special on pies, or the cupcakes."
     MC "We'll have the cherry pie please."
     Cashier "Sure, give me a second. So I'm guessing you two are students? The outfit gives it away."
-    Cashier "Yeah my mom had a growth thing as well, but I'm not sure if the school was built when she was a teen. Best I know is that it was there when I went there, ten years ago."
+    Cashier "Yeah, my mom had a growth thing as well, but I'm not sure if the school was built when she was a teen. Best I know is that it was there when I went there, ten years ago."
     MCT "Huh, didn't know the school was that old."
     Cashier "Anyways, here you guys go."
     "We paid the cashier in advance before we leave, we took the pie, thanked her, and planned our next move."
@@ -2431,12 +2431,12 @@ label FMGBBW001:
     show BBW neutral
     BBW "It is a large country and there are many... eccentrics on the fringes."
     "I heard Akira sipping her coffee as she processed the idea of deep-fried candy."
-    FMG "Man, the coffee is a hell a lot better here than the school."
+    FMG "Man, the coffee is a hell of a lot better here than the stuff at school."
     BBW "Mmm, yes. Not my preferred choice, but it's one of the more palatable substitute brands I've had since coming here."
     BBW "Now, why did you pick cupcakes?"
-    "Akira put downed the cupcake she was eating and looked down at it before answering."
+    "Akira put down the cupcake she was eating and looked down at it before answering."
     FMG "Whenever I was really down, my mom would always bake cupcakes. She would always do it all by hand, and it made it that much more tasty."
-    FMG "Even now, I always go eat a cupcake when I'm sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweet."
+    FMG "Even now, I always go eat a cupcake when I'm sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweeter."
     BBW "I had you pegged as the brash tomboy who didn't have a care."
     BBW "What do you have to be sad about, if it is not too personal?"
     FMG "Sorry, I couldn't tell you, besides it's my turn."
@@ -2465,7 +2465,7 @@ label FMGBBW001:
     "After talking to herself, she paid the bill and left."
     hide BBW with dissolve
     show RM angry at center with dissolve
-    RM "Wait... That's it? We been here for 20 minutes listening to girl talk, and they didn't say a single thing about the article, let alone this stupid bakery!?"
+    RM "Wait... That's it? We've been here for 20 minutes listening to girl talk, and they didn't say a single thing about the article, let alone this stupid bakery!?"
     MC "Huh, maybe it really was just a coincidence."
     show RM sad
     RM "B-but the timing was too perfect! How could-"
@@ -2478,7 +2478,7 @@ label FMGBBW001:
     Chie "Oh hush dear, I just wanted to see how fellow growers were handling things."
     MCT "Fellow growers? Does that mean..."
     MC "You must be miss Chie Kazomazumi."
-    Chie "Why yes I am, an can I say you two look so cute, especially you mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
+    Chie "Why yes I am, and can I say you two look so cute, especially you mister shaggy hair. I saw all that hair stuffed down your shirt. Is that your factor? You don't need to be ashamed of it."
     show RM neutral:
         ease 2 xpos 0.01
     "While I was talking to her, Daichi was trying to stealthily leave out the front door... Too bad everyone could see him. I felt like it was better just to ask and get it over with."

@@ -4800,7 +4800,7 @@ label PRG028:
     MC "I'd commend you for the delicious, yet simple rice, but also suggest that you try making something more complex."
     PRG "I-I'm glad you think so highly of my skills in the kitchen! A-And who said that the rice would be simple?"
     "I let loose a wry chuckle. I was on my way to the cooking classroom with Aida. She hadn't been in the kitchen since she'd gotten pregnant, and she had decided to make today her official return to the kitchen. I, being the kind and caring friend that I was, agreed to tag along and taste whatever she fancied cooking."
-    "Tucked under Aida's arm was her trusty recipe book, which had seen better days. It's pages were torn in every which way, yet somehow, she had no trouble deciphering it's contents."
+    "Tucked under Aida's arm was her trusty recipe book, which had seen better days. Its pages were torn in every which way, yet somehow, she had no trouble deciphering its contents."
     MC "So, how many recipes do you have in that notebook anyway?"
     PRG "Probably around 40, give or take a few. The majority of them haven't been put into use yet, so I just save them for whenever inspiration strikes."
     MC "Is it just recipes? It looks like there's way more than 40 pages used up."
@@ -5138,9 +5138,9 @@ label PRG030:
     scene Dorm PRG Day with fade
     show PRG neutral with dissolve
     play music Rain
-    MC "Now, I know the Dragon's became an official team in 1946, but the city they originally started in was Himeji, right?"
+    MC "Now, I know the Dragons became an official team in 1946, but the city they originally started in was Himeji, right?"
     PRG "Close. You got the year right, but they actually got their start in Aioi, about 15 miles west of Himeji. They did end up moving their home stadium to Himeji in 1974, though."
-    MC "And why was that? Why would they move if they had already established themselves."
+    MC "And why was that? Why would they move if they had already established themselves?"
     PRG "Mainly for general game attendance. Aioi only has a population of just over 30,000 people, whereas Himeji has a population of over 500,000. Moving to a bigger city meant that more people would show up to their games, instead of just watching it on TV."
     MC "Alright, that's a good point to note."
     "I scribbled down the new information. It was crazy how much Aida actually knew about baseball. Despite having her books on hand, she had only consulted them once or twice. The rest was all taken from memory, and as she'd explain something, I'd write it down. We already had close to eleven pages, and Aida was still going strong."
@@ -5179,7 +5179,7 @@ label PRG030:
     show PRG neutral
     PRG "Y-Yeah... We'd better get back to our paper, Keisuke."
     MC "Oh! Yeah, yeah we should."
-    "Aida grabbed one of her books and flipped toward the middle section, while I pulled my phone out and began surveying the Dragon's online team history. Looking down at my phone made my hair flop down into my eyes, which now covered my face easily."
+    "Aida grabbed one of her books and flipped toward the middle section, while I pulled my phone out and began surveying the Dragons online team history. Looking down at my phone made my hair flop down into my eyes, which now covered my face easily."
     "I sighed loudly, but as I reached up to adjust my mane of hair, I glanced to my right, and through my shield of hair, I saw Aida looking straight at me, her mouth slightly open, and her eyes wide. The minute I pulled my hair up, Aida spun back around and put her nose back into the book she was reading."
     "For the next half hour or so, neither of us said a word. Instead, the scratching of pencils was all that was heard between the two of us. After what seemed like ages, Aida set her pencil down and stood up, pushing her hands into her lower back to stretch. As she leaned back, her shirt popped free from her skirt's waistband, showing off the bottom edge of her belly."
     MC "Aida? Y-Your shirt?"
@@ -5191,7 +5191,7 @@ label PRG030:
     PRG "I-I... I guess I'm still getting used to it. Some mornings, I'll wake up and forget that I'm pregnant, then I look at the mirror, and... my heart always skips a beat."
     MC "In a good way? Or... like the not so good way?"
     PRG "It's... more of a surprised way. Like... It's as if the day prior felt like a dream, and when I wake up, I won't be pregnant anymore."
-    PRG "But then,I notice my belly, and I remember that I'm going to be a mom, and it makes me feel all warm and fuzzy inside."
+    PRG "But then, I notice my belly, and I remember that I'm going to be a mom, and it makes me feel all warm and fuzzy inside."
     MC "It's good to feel excited for it. I'm sure you'll make an incredible mom."
     show PRG aroused
     PRG "R-Really? Like... how would I be a good mom?"
@@ -5845,7 +5845,7 @@ label PRG033:
     PRG "Alright. Bye, Keisuke. And thanks again!"
 
     scene black with fade
-    "I waved to her as I walked out the door, and over to the boy's dorm, grabbing my bag as I left. I couldn't place it, but something had seemed... off about Aida today. She sure seemed like she appreciated the free food, but I still felt a tinge of unease. Maybe she'd just been feeling a little off today. I mean, given her hormones, who could know what feelings she had dwelling inside of her?"
+    "I waved to her as I walked out the door, and over to the boys dorm, grabbing my bag as I left. I couldn't place it, but something had seemed... off about Aida today. She sure seemed like she appreciated the free food, but I still felt a tinge of unease. Maybe she'd just been feeling a little off today. I mean, given her hormones, who could know what feelings she had dwelling inside of her?"
     jump daymenu
 
 label PRG034:
@@ -5959,7 +5959,7 @@ label PRG034:
         "Force her to go apologize.": #(PRG.AFFECTION +3)
             jump PRG034_c1_2
         "Hug her.": #(PRG.AFFECTION -4)
-            jump PRg034_c1_3
+            jump PRG034_c1_3
 
 label PRG034_c1_1:
     MC "Sakura-san even told me that she loves being your partner for contests. And the last thing she wants is for that to change."

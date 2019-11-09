@@ -749,6 +749,7 @@ screen debugclearedeventlist:
         textbutton "Return" action Jump("debugmenu")
         
 label debugevent:
+    $renpy.block_rollback()
     if debuginput in eventlibrary:
         $activeevent = debuginput
         jump startevent
@@ -826,6 +827,7 @@ label startevent:
     
 label train:
     stop music
+    $renpy.block_rollback()
     if activeevent == "Athletics":
         jump trainathletics
     elif activeevent == "Art":

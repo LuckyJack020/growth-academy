@@ -4245,7 +4245,7 @@ label AE023:
     BE "Thanks for the specs, these things are cool!"
     "I noticed that Daichi had completely forgotten to ask for his glasses back, so naturally I assumed he just gave them to me."
     "By the time I realized I was mistaken, I had already given them to Honoka."
-    "After weighing my options, I figured I'd rather face secret agent man's wrath then disappoint her by asking for them back."
+    "After weighing my options, I figured I'd rather face secret agent man's wrath than disappoint her by asking for them back."
     MC "Hey, no problem. Have fun."
     BE "Hey, hey! Yamazaki-chan, put these on for a sec!"
     hide BE with dissolve
@@ -4727,7 +4727,7 @@ label AE025:
         "I have to admit, yesterday filled me with fear. I'd never felt more pathetic in my life. But what Shiori-san said at the end filled me with hope."
         MC "Daichi...yesterday, I really messed up man."
         show RM angry
-        MC "Oh? Wait, what?! How?"
+        RM "Oh? Wait, what?! How?"
         MC "U-um, on the roof...I don't wanna talk about it. All I know is that convincing her is gonna be rough."
         RM "Rough? What? How did I not know what happened on the roof?! I have precautions to-"
         show RM neutral
@@ -11399,7 +11399,7 @@ label AE051:
     scene black with fade
     AE "Mmn."
     #*Creak SFX*
-    "The next morning, the deep creak of the mattress roused me from my sleep, my eyes opened slowly to the white ceiling above, and the calling of birds outside the window echoed through my head as a cool breeze rolled in from the newly opened window.."
+    "The next morning, the deep creak of the mattress roused me from my sleep, my eyes opened slowly to the white ceiling above, and the calling of birds outside the window echoed through my head as a cool breeze rolled in from the newly opened window..."
     
     scene Dorm AE with fade
     play music Sunset
@@ -11484,7 +11484,7 @@ label AE051_c1_3:
     jump AE051_c1_after
 
 label AE051_c1_after:
-    MC "So, you really put a lot of work into all of this. I can tell this was planned to a t."
+    MC "So, you really put a lot of work into all of this. I can tell this was planned to a T."
     show AE nude-neutral
     AE "Yeah. I mean, I had a lot of help. Yureno-san was meant to act as a watchdog as I bought the condoms and-"
     MC "Why not have her get them?"
@@ -11629,7 +11629,7 @@ label AE052:
     Tomoko "Ehh! I come out of my room! Just, like, for classes and junk."
     MC "Why are you out here now?"
     show Tomoko neutral
-    Tomoko "I'm waiting out here for Yuuki-chan."
+    Tomoko "I'm waiting out here for Yuki-chan."
     MC "Yeah? Good-!"
     Tomoko "Yeah."
     MC "Good, good, ah, man, that's good."
@@ -11652,7 +11652,7 @@ label AE052:
     MC "Uhuh. Hey, how's chemistry going?"
     show Tomoko sad
     Tomoko "...It's going fine."
-    MC "Tomo, you know my girlfriend has access to every students record, right?"
+    MC "Tomo, you know my girlfriend has access to every student's record, right?"
     MCT "I had no idea if that was true, and I knew for a fact that if she did there's no way she'd show me, but what was important was that my bluff worked on my gullible little sister."
     Tomoko "Mweeeeh~"
     MC "Tomooo, c'mon!"
@@ -11692,7 +11692,7 @@ label AE052:
     show AE smile
     AE "Do you want to go to the roof?"
     MC "Oh, uh, sure."
-    Tomoko "W-Wait, hold up. Where's Y-Yuuki-chan?"
+    Tomoko "W-Wait, hold up. Where's Y-Yuki-chan?"
     show AE neutral
     AE "She's still organizing in the room. Feel free to enter, simply be careful around the documents."
     Tomoko "Got it, m-m-ma'am."
@@ -11781,12 +11781,12 @@ label AE052:
     AE "Mhm. My grandparents owned a home a distance out from the city and into the mountains, but they ran a small restaurant. Up until... What was it... age six I believe, I was living in the upstairs room at the building."
     MC "Huh... Hokkaido... I don't really hear it in your voice. You don't really have much of an accent."
     show AE sad
-    AE "My father had one, but not my mother and... well... She was the one who would talk to me more often."
+    AE "My father had one, but not my mother and... well... she was the one who would talk to me more often."
     MC "I see."
     AE "After a while, the housing market crisis took a toll on my grandparents, and we had to move out of the shop and into Kabukicho. My uncle set us up in a building, but..."
     MC "I'm guessing there was a catch?"
     AE "...It was originally a den in a back alley that was supposed to catch fire in an insurance fraud scam. There was only one room left standing. Little better than a hovel, really, but it was home."
-    AE "Shortly after moving to Tokyo, my mother took up a job, broke her neck, and... Well, I suppose you know the rest from there."
+    AE "Shortly after moving to Tokyo, my mother took up a job, broke her neck, and... well, I suppose you know the rest from there."
     AE "Living in Kabukicho... was one of the darkest times of my life. But it was also where I developed the most into who I am today."
     "Getting up, she walked over to the railing and began to pace as close to it as her hips would allow."
     show AE smile
@@ -12333,11 +12333,11 @@ label AE054:
     RM "Ha-Haah~"
     MC "Son of- Ngggh..."
     show RM neutral
-    RM "Mmph, so I hear you're spending a bit on girls clothes, eh?"
+    RM "Mmph, so I hear you're spending a bit on girl's clothes, eh?"
     MC "...Where did you hear that?"
     show RM happy
     RM "My special informant-"
-    MC "I told Tomo who told Yuuki who told you."
+    MC "I told Tomo who told Yuki who told you."
     show RM neutral
     RM "My special informant let me know that you and Shiori were out at the clothing store together, and Alice went too!"
     RM "Don't have more than one waifu, dude. That's messed up."
@@ -12372,7 +12372,7 @@ label AE054:
     MC "Oh? For me?"
     "Shiori seemed a bit nervous, but she nodded and came closer."
     AE "Yeah, come with me."
-    "Taking me by the hand, we walked to the girls dorms as everyone was getting out of their dorms for the morning."
+    "Taking me by the hand, we walked to the girl's dorms as everyone was getting out of their dorms for the morning."
 
     scene Dorm AE with fade
     "Entering into her room, I noticed a missing Yureno-san; a fact that instantly brought another time to my mind."
@@ -12425,12 +12425,12 @@ label AE054:
     MC "Like I said, nothing to worry about. It was just a gift, you don't need to pay me back by getting a part time job."
     AE "I-I suppose you're right."
     MC "Do you really think you could balance a job too?"
-    AE ".. I mean, I could try."
+    AE "...I mean, I could try."
     show AE neutral
     AE "I've worked part time jobs before."
     MC "That so? What, tutoring? Internships?"
     AE "Sometimes tutoring. But otherwise, no."
-    AE "Nothing too impressive, I started off with handing out pocket tissues on a street corner, cleaning around my teachers house, minor things. I made pocket change, but it was enough to get myself an occasional book or snack."
+    AE "Nothing too impressive, I started off with handing out pocket tissues on a street corner, cleaning around my teacher's house, minor things. I made pocket change, but it was enough to get myself an occasional book or snack."
     show AE sad
     AE "Of course, when I could keep it, that is."
     MC "Keep it?"
@@ -12576,7 +12576,7 @@ label AE054:
     show AE embarrassed
     AE "Meep!"
     MC "Is now good, then?"
-    AE "N-Nows good too."
+    AE "N-Now's good too."
     "I smiled, and with a kiss, Shiori placed the dress on the bed and we headed out together through the halls."
     "I was so glad to have made her happy, so glad to see her smile."
     "I had the feeling that this was the beginning of something new in our relationship."
@@ -12620,7 +12620,7 @@ label AE055:
     
     scene Woods with fade
     #CICADA SFX
-    "As the afternoon Cicadas made their soothing, yet eerie chirps throughout the forest, I brought Shiori to the forests entrance by the hand. As we stepped into the trees, I let out a sigh of contentment."
+    "As the afternoon cicadas made their soothing, yet eerie chirps throughout the forest, I brought Shiori to the forest's entrance by the hand. As we stepped into the trees, I let out a sigh of contentment."
     MC "Good place as any for a picnic, yeah?"
     show AE surprised with dissolve
     AE "It's breathtaking."
@@ -12633,7 +12633,7 @@ label AE055:
     MC "Eh, I wouldn't worry about it. I don't see any signs."
     show AE neutral
     AE "I suppose..."
-    "Taking her by the hand and further inwards to the forest, I found a  nice spacy intersection of trees and placed down the spare seat I brought from my dorm."
+    "Taking her by the hand and further inwards to the forest, I found a nice spacious intersection of trees and placed down the spare seat I brought from my dorm."
     MC "Did you bring a book?"
     show AE smile
     AE "Mhm! Wouldn't be much of a reading picnic if I didn't."
@@ -12768,7 +12768,7 @@ label AE055:
     MC "Oh, yeah, one sec."
     show AE surprised
     AE "Hm? Mmph-!"
-    "As Shiori turns around, I plant her with a deep kiss; pulling her in with my arm. As we embraced, I gently caressed her back as she closed her eyes as the leaves slowly fell around us."
+    "As Shiori turns around, I plant her with a deep kiss, pulling her in with my arm. As we embraced, I gently caressed her back as she closed her eyes as the leaves slowly fell around us."
     show AE smile
     AE "Mmmn~"
     MC "Mm-Maah~"
@@ -12858,7 +12858,7 @@ label AE056:
     HR "...Sit down."
     MC "M-Mm."
     "As I sat down at the edge of the desk in front of him, Tashi-sensei only shrugged and held his mug with both hands as he gazed into it."
-    HR "...See, we teachers, we talk after classes. We let eachother know what we hear from other classrooms. Rumors, news, how students are doing, the grapevine."
+    HR "...See, we teachers, we talk after classes. We let each other know what we hear from other classrooms. Rumors, news, how students are doing, the grapevine."
     MC "Okay."
     HR "And from what I hear, words getting around that Shiori's being pretty relaxed nowadays. "
     MC "Actually, sir... how is {i}she{/i} doing in classes?"
@@ -12891,7 +12891,7 @@ label AE056:
     "With that, Tashi-sensei pushed up off the desk and started making his way over to collect his bag on the far side of the desk."
     show HR annoyed
     HR "I hate seeing potential go to waste. Seen it far too much over these years; but it's the good ones that make the job worth it."
-    MC "I'll do my best Sir, thank you for telling me."
+    MC "I'll do my best sir, thank you for telling me."
     show HR neutral
     HR "Any questions?"
     MC "Um..."
@@ -12951,7 +12951,7 @@ label AE056_c1_3:
 label AE056_c1_after:
     "With that, I bowed and made my way out of the classroom towards the library."
     
-    scene Government Room with fade
+    scene Student Government with fade
     "Pushing open the door to the student government meeting room, I could see Shiori facing the far wall. She seemed to be focused on organizing and filing away a stack of papers that had been left out earlier."
     MC "Knock knock~"
     "The noise was enough to disrupt whatever train of thought was currently racing through Shiori's mind as she seemed to refocus and look back toward the doorway. Placing her pen down with a smile, she shuffled her papers a bit and bashfully moved a stray hair out of her face."
@@ -13004,7 +13004,7 @@ label AE056_c1_after:
     Tako "H-WOAH MY GOD-!"
     show AE surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
     AE "Eek!"
-    "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling of me hurriedly.#"
+    "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling of me hurriedly."
     MC "Woah, shit!"
     "Tako turned her head and covered her face with her hand."
     show Tako surprised at Position(xpos=0.5, xanchor=0.5, yanchor=1.0)
@@ -13068,7 +13068,7 @@ label AE057:
     #SCENE AFTERNOON
     scene Music Classroom with fade
     #PLAY SONG: Kinderszenen
-    "Entering the music lab, the soft, gentle tones from the piano graced my ears as I slowly shut the door. I descended the stairs, and was greeted with Shiori's bench bending behind; her skirt slightly lifted up to show a bit of exposed undergarment."
+    "Entering the music lab, the soft, gentle tones from the piano graced my ears as I slowly shut the door. I descended the stairs, and was greeted with Shiori's bench-bending behind; her skirt slightly lifted up to show a bit of exposed undergarment."
     "I walked slowly as to try to sneak up on her, adjusting my weight to the front of my feet as I slowly crept up behind her."
     show AE happy with dissolve
     AE "I've been waiting, Keisuke~"
@@ -13224,7 +13224,7 @@ label AE057:
     MC "Wanna switch positions?"
     show AE neutral
     #stop music?
-    AE "I'm...not quite sure that's a good idea."
+    AE "I'm... not quite sure that's a good idea."
     MC "Whaaat? It should be fine~"
     show AE angry
     AE "Well, that's not exactly what I'm concerned about."
@@ -13456,8 +13456,8 @@ label AE058_c2_1:
     MC "Yeah, I can see that. The more you learn, the better a person you can be, right?"
     show AE smile
     AE "Right! I mean, Docta Pietas was used in a different context, but the same can be said for any field of study."
-    AE "What better way to learn right and wrong then culminating the skill sets for mindfulness though study."
-    MC "Yeah, though to be honest, there {i}is{/i} such a thing as over doing it."
+    AE "What better way to learn right and wrong thaen culminating the skill sets for mindfulness through study?"
+    MC "Yeah, though to be honest, there {i}is{/i} such a thing as overdoing it."
     show AE neutral
     AE "Hm? What do you mean?"
     MC "Weeell, I've just been thinking..."
@@ -13486,7 +13486,7 @@ label AE058_c2_after:
     show AE happy
     AE "Well, you know, philosophy and history are two of the most popular fields for pre-law. I think it's natural for me to-"
     MC "Well, nah, yeah, I get that, but there's lots of other stuff too."
-    MC "Most people have subjects they're good at, and some stuff they're just bad at. No shame it in, it's just how things are."
+    MC "Most people have subjects they're good at, and some stuff they're just bad at. No shame in it, it's just how things are."
     MC "But you, I mean, math, history, science, you really are a jack of all trades with all sorts of random topics."
     MC "Why is that?"
     show AE neutral
@@ -13495,7 +13495,7 @@ label AE058_c2_after:
     show AE happy
     AE "Well, aren't you Mr. inquisitive."
     show AE neutral
-    AE "Well... I simply did everything I could to make sure my teachers efforts never went to waste."
+    AE "Well... I simply did everything I could to make sure my teacher's efforts never went to waste."
     show AE happy
     AE "And I like learning! It's fun."
     show AE smile
@@ -13589,10 +13589,10 @@ label AE059:
     AE "O-oh."
     "Shiori-san wiped her hair off to the side and looked at me through the sides of her eyes, a bright smile shining across her face."
     show AE happy
-    AE "Thank you, Keisuke-kun. I'll.. .take that to heart."
+    AE "Thank you, Keisuke-kun. I'll... take that to heart."
     MC "Ehe..."
     "I scooted closer to Shiori-chan, placing my hand on hers."
-    MC "All right, then... how do I look"
+    MC "All right, then... How do I look?"
     show AE neutral
     AE "Hm?"
     MC "What do you say? Am I handsome?"
@@ -13932,7 +13932,7 @@ label AE060:
     MC "Yep, yep."
     "We made our way past Yureno-san, who's massive hips proved to be a bit of trouble to get past at first; eventually leading us to the outside as we shut the door."
     
-    show Dorm Exterior with fade
+    scene Dorm Exterior with fade
     play music Sunset
     show AE angry with dissolve
     AE "{i}Why{/i} did I forget to lock the door? Uch..."

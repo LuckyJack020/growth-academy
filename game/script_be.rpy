@@ -800,7 +800,7 @@ label BE008:
     MC "Oh, not bad I guess. Was just hot outside so I was just catching up on some manga."
     show BE surprised
     BE "Ooh, fun, anything good?"
-    MC "Without even waiting, she looked at what I'd been reading."
+    "Without even waiting, she looked at what I'd been reading."
     show BE happy
     BE "Oh neat I haven't seen this one yet. The main character in this is so cool, isn't he?"
     MC "Oh you read this one too?"
@@ -863,7 +863,7 @@ label BE008_c2:
     "That time her hand, which retracted after I poked it."
     show BE happy
     BE "Heh, Kei-chan what are you doing?"
-    MC "I have to be thorough now, I need to make sure there's not any robotic parts looking under there. Tachi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
+    MC "I have to be thorough now, I need to make sure there's not any robotic parts looking under there. Daichi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
     "Laughing like a mad scientist, I kept poking Honoka in whatever places I could reach. Eventually I managed to reach her waist, which made her squirm and giggle as she recoiled from the contact."
     MC "Aha, it appears I've found a weakness here. I must examine further!"
     "Spurred on by her reaction, I couldn't help but keep poking her belly wherever I could reach, though by this point it was essentially tickling rather than just poking. It didn't take long to get Honoka stuck in a cycle of laughter."
@@ -932,7 +932,7 @@ label BE009:
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
-    "The bleachers weren't filled up that much, but I supposed it was so early in the year that there wasn't much interest in the game yet. Most of them were all rookies, most likely, or at least shaking off the dust."
+    "The bleachers weren't filled up that much, but I supposed it was so early in the year that there wasn't much interest in the game yet. Most of them were rookies, most likely, or at least shaking off the dust."
     "It had been years since I got to see Honoka kick a ball around. She was still just as quick on her feet as I remembered, maybe even more, years of playing since we were separated as kids evident in her skills."
     "She worked the backfield a lot, keeping the ball away from her goalie and sending it back towards the opposing team's half of the field. Both teams were rusty, but Honoka kept the field covered long enough to keep the score at 2-2."
     MC "Boy, she's really holding her own out there. Maybe I should give her a cheer."
@@ -1032,7 +1032,7 @@ label BE010:
     $setTimeFlag("aftersize2")
     scene Dorm Interior with fade
     "Once again, I found myself hanging out in my room after doing my homework for the day. I had been in desperate need of some video game time, so I wasn't doing much except resting on my bed, playing a handheld system."
-    "KNOCK ! KNOCK !"
+    "KNOCK! KNOCK!"
     "The door to the room knocked and I went to open it, still focused on the game. Pausing during boss battles always threw off my rhythm."
     MC "Hello?"
     "I opened the door, still looking at my system the entire time. I was forced to listen to the sound of my character taking a critical hit as two large, white-clad breasts dropped into my field of view and pressed down on the screen."
@@ -1332,7 +1332,7 @@ label BE012:
     MC "Uh-huh, I'm sure."
     show BE neutral
     BE "Anyway, now that you can buzz me any time, what did you want to talk about?"
-    "As she put her phone away, I tried not to stare too long at how envious I felt of a simple cell phone that didn't even have the ability to realize it was nestled in a breast pocket."
+    "As she put her phone away, I tried not to stare too long at that lucky cell phone that didn't even have the ability to realize it was nestled in a breast pocket."
     MC "Right! I've been a bit cooped up lately. I wanted to head out to the city. There's an arcade there. You wanna go with?"
     show BE surprised
     BE "Arcade?! Heck yeah I wanna go with you. When were you thinking of going?"
@@ -1456,9 +1456,9 @@ label BE013:
     MC "So, let's see, what next? Air hockey?"
     show BE happy
     BE "Sure! Bet I'll beat your score at least three times over."
-    MC "At this point I didn't doubt she would. But she tilted her head as we approached the table."
+    "At this point I didn't doubt she would. But she tilted her head as we approached the table."
     BE "Oh snap, Koneko! Hey, wassup!"
-    MC "Honoka dashed over to a darker-skinned girl and threw herself into a strong hug that squeezed the blonde tight and made it look like her spine was about to snap."
+    "Honoka dashed over to a darker-skinned girl and threw herself into a strong hug that squeezed the blonde tight and made it look like her spine was about to snap."
     Koneko "Oof, like, what are you doing here, Honoka?"
     BE "I'm hanging out with Kei-chan. Kei-chan, this is Koneko, she's in the soccer club."
     MC "Oh, oh, cool!"
@@ -1477,7 +1477,7 @@ label BE013:
     BE "Mm... Kei-chan, you know anyone who would hook up with Koneko?"
     "My mind attempted to flip through a list of all the guys I knew. Unfortunately the only name that came up was Daichi."
     MC "No. Not at all. Sorry."
-    Koneko "Lame. Well, whatev, I'll see what I can find. Have fun you too. Wait..."
+    Koneko "Lame. Well, whatev, I'll see what I can find. Have fun you two. Wait..."
     BE "Huh, what's up?"
     Koneko "Is this like, the guy you were talking about?"
     show BE angry
@@ -1530,7 +1530,7 @@ label BE014:
     MC "Heh, yeah, you're right. It is crumbly. Kinda dry too."
     show BE unique
     BE "Oh, then here."
-    "Honoka then proceeded to reach right into her cleavage and come out with a small can of fruit juice. She proceeded to pop the top open and take a swig before handing it over."
+    "Honoka then proceeded to reach into her cleavage and come out with a small can of fruit juice, then after popping the top open and taking a swig she handed it over."
     "I grabbed it gingerly between two fingers and stared at it."
     show BE angry
     BE "It's a drink, Kei-chan. Not some alien snake."
@@ -2047,9 +2047,9 @@ label BE018:
     PRG "Well, um, yes. But to be frank, even my last set of bras weren't all that comfortable to begin with. I just wanted some advice."
     BE "Alright. I think I can help. Let me think."
     show BE happy
-    BE "Hey, Kei-chan. Do you happen to have any sort of measuring tape on you?"
-    MC "Yeah one sec."
-    "I looked in my drawers and found a strand of measuring tape that looked like it would work for Honoka's needs, something I had grabbed to start checking how long my hair grew."
+    BE "Hey, Kei-chan. There's a measuring tape in my desk, can you grab it?"
+    MC "Yeah, one sec."
+    "I looked in her drawers and found a strand of measuring tape that looked like it would work for Honoka's needs."
     MC "This good?"
     show BE neutral
     BE "Yes, yes, that's perfect."
