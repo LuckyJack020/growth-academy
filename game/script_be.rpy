@@ -22,44 +22,44 @@ image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
 init 2 python:    
     #Core
-    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "location": "roof", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
-    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE003", "obsflags": ["testday"],         "conditions": []}
-    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE004", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                           "priority": PrioEnum.NONE, "next": "BE007", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE001'] = {"name": "Rooftop Reunion", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "roof",             "priority": PrioEnum.NONE, "sp": 0,     "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE002'] = {"name": "Campus Collision", "girls": ["BE"], "type": EventTypeEnum.CORE,                                   "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 0,     "next": "BE003", "obsflags": ["testday"],         "conditions": []}
+    eventlibrary['BE003'] = {"name": "Cool Drinks with Honoka", "girls": ["BE"], "type": EventTypeEnum.CORE,                            "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 0,     "next": "BE004", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE004'] = {"name": "Chatting at Soccer Practice", "girls": ["BE"], "type": EventTypeEnum.CORE,                        "location": "track",            "priority": PrioEnum.NONE, "sp": 0,     "next": "BE007", "obsflags": [],                  "conditions": []}
     #eventlibrary['BE006'] = {"name": "BE006", "girls": ["BE"], "location": "classroom", "conditions": [], "priority": 0}
-    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                             "priority": PrioEnum.NONE, "next": "BE008", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE009", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                              "priority": PrioEnum.NONE, "next": "BE011", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE012", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                 "priority": PrioEnum.NONE, "next": "BE014", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE015", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE016", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "location": "gym", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "BE017", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE018", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "location": "dormBE", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE019", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "location": "cafeteria", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE020", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "location": "hallway", "type": EventTypeEnum.CORE,                                         "priority": PrioEnum.NONE, "next": "BE021", "obsflags": [],                  "conditions": []} #affection check maybe?
-    eventlibrary['BE021'] = {"name": "Joining the Archery Club", "girls": ["BE"], "location": "woods", "type": EventTypeEnum.CORE,                              "priority": PrioEnum.NONE, "next": "BE022", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE022'] = {"name": "A Sneaky Lunch", "girls": ["BE", "BBW"], "location": "library", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE023", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "location": "track", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE024", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE024'] = {"name": "I scream, You Cream", "girls": ["BE"], "location": "town", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE025", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "location": "field", "type": EventTypeEnum.CORE,                                   "priority": PrioEnum.NONE, "next": "BE026", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE026'] = {"name": "Cicada Catching", "girls": ["BE"], "location": "field", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE027", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE027'] = {"name": "Clothes Shopping", "girls": ["BE"], "location": "campuscenter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE028", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE028'] = {"name": "Arcade Date", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.CORE,                                          "priority": PrioEnum.NONE, "next": "BE029", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE029'] = {"name": "Geology Assignment", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                "priority": PrioEnum.NONE, "next": "BE030", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE030'] = {"name": "Love Confession", "girls": ["BE"], "location": "schoolplanter", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE031", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE031'] = {"name": "Very Special Day", "girls": ["BE"], "location": "dormBE", "type": EventTypeEnum.CORE,                                     "priority": PrioEnum.NONE, "next": "BE032", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE032'] = {"name": "The Day After", "girls": ["BE", "AE"], "location": "classroom", "type": EventTypeEnum.CORE,                               "priority": PrioEnum.NONE, "next": "BE033", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE033'] = {"name": "The Great Debate", "girls": ["BE", "AE"], "location": "schoolplanter", "type": EventTypeEnum.CORE,                        "priority": PrioEnum.NONE, "next": "BE034", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "location": "field", "type": EventTypeEnum.CORE,                                       "priority": PrioEnum.NONE, "next": "BE035", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE035'] = {"name": "New Club Intro", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                    "priority": PrioEnum.NONE, "next": "BE036", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE036'] = {"name": "Honoka end", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.CORE,                                        "priority": PrioEnum.NONE, "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE007'] = {"name": "Lunchtime with Honoka", "girls": ["BE"], "type": EventTypeEnum.CORE,                              "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 1,     "next": "BE008", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE008'] = {"name": "Manga Breaktime", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 1,     "next": "BE009", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE009'] = {"name": "Goal(s)!", "girls": ["BE"], "type": EventTypeEnum.CORE,                                           "location": "track",            "priority": PrioEnum.NONE, "sp": 1,     "next": "BE011", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE011'] = {"name": "Quitting the Soccer Club", "girls": ["BE"], "type": EventTypeEnum.CORE,                           "location": "track",            "priority": PrioEnum.NONE, "sp": 2,     "next": "BE012", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE012'] = {"name": "Action at the Arcade", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "arcade",           "priority": PrioEnum.NONE, "sp": 2,     "next": "BE014", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE014'] = {"name": "Bouncing All Over", "girls": ["BE"], "type": EventTypeEnum.CORE,                                  "location": "hallway",          "priority": PrioEnum.NONE, "sp": 2,     "next": "BE015", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE015'] = {"name": "Chocolate Study", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 3,     "next": "BE016", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE016'] = {"name": "Basketball Practice", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "gym",              "priority": PrioEnum.NONE, "sp": 3,     "next": "BE017", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE017'] = {"name": "Shooting Hoops", "girls": ["BE"], "type": EventTypeEnum.CORE,                                     "location": "arcade",           "priority": PrioEnum.NONE, "sp": 3,     "next": "BE018", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE018'] = {"name": "Bra Fitting", "girls": ["BE", "PRG"], "type": EventTypeEnum.CORE,                                 "location": "dormBE",           "priority": PrioEnum.NONE, "sp": 3,     "next": "BE019", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE019'] = {"name": "The Fabled Skip Day", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 3,     "next": "BE020", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE020'] = {"name": "First Date?", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "hallway",          "priority": PrioEnum.NONE, "sp": 4,     "next": "BE021", "obsflags": [],                  "conditions": []} #affection check maybe?
+    eventlibrary['BE021'] = {"name": "Joining the Archery Club", "girls": ["BE"], "type": EventTypeEnum.CORE,                           "location": "woods",            "priority": PrioEnum.NONE, "sp": 4,     "next": "BE022", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE022'] = {"name": "A Sneaky Lunch", "girls": ["BE", "BBW"], "type": EventTypeEnum.CORE,                              "location": "library",          "priority": PrioEnum.NONE, "sp": 4,     "next": "BE023", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE023'] = {"name": "Showdown in Archery", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "track",            "priority": PrioEnum.NONE, "sp": 4,     "next": "BE024", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE024'] = {"name": "I scream, You Cream", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "town",             "priority": PrioEnum.NONE, "sp": 4,     "next": "BE025", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE025'] = {"name": "Archery Competition", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "field",            "priority": PrioEnum.NONE, "sp": 5,     "next": "BE026", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE026'] = {"name": "Cicada Catching", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "field",            "priority": PrioEnum.NONE, "sp": 5,     "next": "BE027", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE027'] = {"name": "Clothes Shopping", "girls": ["BE"], "type": EventTypeEnum.CORE,                                   "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 5,     "next": "BE028", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE028'] = {"name": "Arcade Date", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "arcade",           "priority": PrioEnum.NONE, "sp": 5,     "next": "BE029", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE029'] = {"name": "Geology Assignment", "girls": ["BE"], "type": EventTypeEnum.CORE,                                 "location": "classroom",        "priority": PrioEnum.NONE, "sp": 5,     "next": "BE030", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE030'] = {"name": "Love Confession", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 6,     "next": "BE031", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE031'] = {"name": "Very Special Day", "girls": ["BE"], "type": EventTypeEnum.CORE,                                   "location": "dormBE",           "priority": PrioEnum.NONE, "sp": 6,     "next": "BE032", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE032'] = {"name": "The Day After", "girls": ["BE", "AE"], "type": EventTypeEnum.CORE,                                "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "BE033", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE033'] = {"name": "The Great Debate", "girls": ["BE", "AE"], "type": EventTypeEnum.CORE,                             "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 6,     "next": "BE034", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "field",            "priority": PrioEnum.NONE, "sp": 6,     "next": "BE035", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE035'] = {"name": "New Club Intro", "girls": ["BE"], "type": EventTypeEnum.CORE,                                     "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE036'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
-    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "location": "classroom", "type": EventTypeEnum.OPTIONALCORE,                            "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "location": "dorminterior", "type": EventTypeEnum.OPTIONALCORE,    "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "location": "arcade", "type": EventTypeEnum.OPTIONALCORE,                     "priority": PrioEnum.ALL,  "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
+    eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,        "location": "dorminterior",     "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                   "location": "arcade",           "priority": PrioEnum.ALL,               "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
     
 label BE001:
     $setProgress("BE", "BE002")
@@ -1624,7 +1624,7 @@ label BE015:
     BE "Actually, I was hoping we could do it now, if you're free? I have a club meeting later."
     MC "Hm. Sure, yeah, don't see why not."
     show BE happy
-    BE "Great, can we just do it at your room."
+    BE "Great, can we just do it at your room?"
     MC "Okay. Tell you what. I'll meet you there, I'll be over in a few minutes. I just want to pick something up first."
     BE "Gotcha. I'll meet you there, then. Don't be late!"
     "Honoka ran off to the dormitories as I looked at the time. I had to make a quick stop first. I had a feeling there was an easy way to help Honoka with her studying."
@@ -1712,7 +1712,7 @@ label BE016:
     scene Gym with fade
     play music Busy
     "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was a practice for the basketball club tonight. Would be good to give her encouragement."
-    "The basketball court was fairly standard, from what I remembered of my old school. Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
+    "The basketball court was fairly typical, from what I remembered of my old school. Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
     "They also were more heavily-reinforced, which explained why they were permanent fixtures. Better seating for a constantly-growing school, I figured."
     "Not everyone in the club was out on the court when I arrived. It looked like there were a dozen or so players, so with five players to a team they had enough for a full game and more. I decided to sit down next to one of the other players who was sitting."
     MC "Hi. I'm Keisuke."
@@ -1753,7 +1753,7 @@ label BE016:
     "Honoka thought for a minute, rubbing her chin before she smirked back at me."
     show BE aroused
     BE "Wait a minute. Wasn't 5 the game that had that scene where all the girls had to strip to their underwear?"
-    MC "...maybe."
+    MC "...Maybe."
     BE "Uh-huh. I'm sure you had a save point right before that scene and loaded it up every night."
     MC "I. You. Um. Hey, basketball, right? How's that going?"
     "Honoka was kind enough to ignore my pathetic attempt to change the subject."
@@ -1776,7 +1776,7 @@ label BE016:
     MC "Three tops."
     show BE neutral
     BE "Okay we'll say four and compromise. But yeah you totally need to join a club. How about this one? They've already been talking about getting Yamazaki-chan here."
-    MC "Huh. yeah, she'd be a good fit. But, I'm not sure how aggressive she could be. Seems like you need to have some force behind your actions."
+    MC "Huh. Yeah, she'd be a good fit. But, I'm not sure how aggressive she could be. Seems like you need to have some force behind your actions."
     BE "Not always. You can be passive."
     play sound Whistle
     Coach "Get the lead out! I need to see hussle! Toss that ball like you're trying to take someone's head off!"
@@ -2164,7 +2164,7 @@ label BE018_c1_after:
     BE "Glad to help! And hey, having Kei-chan here wasn't too bad, was it?"
     show PRG happy
     PRG "N-No. Thank you both then."
-    MC "Do you want to stick around, Kodoma-san? We only have two controllers but we could swap out if you want to play."
+    MC "Do you want to stick around, Kodama-san? We only have two controllers but we could swap out if you want to play."
     if getAffection("PRG") > 8:
         show PRG surprised
         PRG "Oh, um... sure! I suppose I could, if it's alright with Inoue-san. It is her room."
@@ -5786,7 +5786,7 @@ label BE033:
     show AE neutral
     AE "But that’s not the point, you play Warblade too?"
     show BE happy
-    BE "Yeah! I had it on my dads desktop back home!"
+    BE "Yeah! I had it on my dad's desktop back home!"
     show AE surprised
     AE "Oh? You played it on your father's desk? That... I doubt that’d be enough room."
     show BE neutral
@@ -5992,7 +5992,7 @@ label BE033_art:
     BE "But there's a ton of detail and story in the games still. They do get a bit crazy with the cutscenes in Reign of Temptation, though. But it lets you find out where Tellion got his prosthetic torso."
     show AE surprised
     AE "It does?!"
-    BE "Yeah! I would be happy to show you. But you can probably find a video of it online, and find someone play through it without talking over the story and stuff."
+    BE "Yeah! I would be happy to show you. But you can probably find a video of it online, and find someone playing through it without talking over the story and stuff."
     show AE neutral
     AE "I see. I might have to search for some videos. I wouldn't want to neglect possible story threads, they could be useful for my campaigns."
     BE "Wicked. Yeah, if you're not watching the actual gameplay, I think most games would give you like, six or eight hours of material?"
@@ -6051,7 +6051,7 @@ label BE034:
     "Honoka put her bow down after Haruhiro called the whistle. She came over and sat down next to me, instead of going to retrieve her arrows."
     MC "The wind must be pretty rough today, huh?"
     show BE sad
-    BE "you don't have to fib to me, Kei-chan. I suck."
+    BE "You don't have to fib to me, Kei-chan. I suck."
     MC "..."
     MC "It was rough today, yeah."
     "Honoka reached behind her shoulder and unstrapped her breast guard. With the garment on the ground, she rubbed at the side of her boob, wincing as she did."
@@ -6238,7 +6238,7 @@ label BE035:
         jump BE036
 
 label BE035A:
-    $setProgress("BE036")
+    $setProgress("BE", "BE036")
     scene Cooking Classroom with fade
     #general chatter sfx
     play music Busy
@@ -6253,7 +6253,7 @@ label BE035A:
     MC "Well, Honoka, what should we try?"
     show BE happy
     BE "..."
-    MC "Honaka?"
+    MC "Honoka?"
     BE "Oh! Right. Let's see. The fried rice sounds good, then."
     MC "You seem distracted, everything okay?"
     BE "Hehe, yeah. It's just, did you notice, Kei-chan?"
