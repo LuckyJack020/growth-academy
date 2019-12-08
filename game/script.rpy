@@ -453,9 +453,9 @@
     
     def showNotification(img):
         global activenotifications
-        loc = 0.95 - (0.05 * activenotifications)
-        activenotifications += 1
-        renpy.show_screen("notification", img, loc) #FIXME this won't work because you can't have the same screen multiple times, is there a graceful fix or do i need to do the hack?
+        if activenotifications <= 2:
+            activenotifications += 1
+            renpy.show_screen("notification" + str(activenotifications), img)
     
     def setProgress(girl, event):
         routeprogress[girl] = event
@@ -672,13 +672,29 @@ screen daymenu:
         #textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
         
-screen notification(img, loc):
+screen notification1(img):
     frame:
-        xalign loc
+        xalign .9
         background None
         add img
         at notif_transform
-    timer 5.0 action [Hide("notification"), SetVariable("activenotifications", activenotifications - 1)]
+    timer 5.0 action [Hide("notification1"), SetVariable("activenotifications", activenotifications - 1)]
+    
+screen notification2(img):
+    frame:
+        xalign .8
+        background None
+        add img
+        at notif_transform
+    timer 5.0 action [Hide("notification2"), SetVariable("activenotifications", activenotifications - 1)]
+    
+screen notification3(img):
+    frame:
+        xalign .7
+        background None
+        add img
+        at notif_transform
+    timer 5.0 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]    
 
 transform notif_transform:
     yalign -0.2

@@ -58,13 +58,13 @@ label FMG001:
     "The exercise equipment was unique, to say the least; while some did look normal, most of them came in extreme shapes and sizes."
     "One thing I also noticed was that the building was so empty that there was a lone echo coming from the far end of the building and once again curiosity drove me to follow where the source of the echo was coming from."
     "As I got closer to the source, I began to hear someone counting."
-    UNKNOWN "...87...88..."
+    UNKNOWN "...87... 88..."
     "It sounded like a woman, but I couldn't make out who it was just yet."
-    UNKNOWN "...92...93..."
+    UNKNOWN "...92... 93..."
     "After a minute of looking, I found that the source of noise was coming from a bench-pressing Akira."
     "From what I could guess, she was too focused on her workout to notice me walking towards her, or that she assumed it was just someone who was working out as well."
     show FMG angry with dissolve
-    FMG "98...99...100!"
+    FMG "98... 99... 100!"
     "Akira then proceeded to put the weights back on the bar and moved off the bench press; it was only when she looked up she saw me watching her."
     show FMG neutral
     FMG "Well hey there..."
@@ -314,7 +314,7 @@ label FMG004_testfail:
     MCT "Ok, Akira's got the lead, but if I can keep a good pace I can do this!"
     MCT "I can do this!"
     MCT "...I can do this..."
-    MCT "...I...can...do...this..."
+    MCT "...I... can... do... this..."
     "I realized Akira had already finished, and she was walking towards me... and I wasn't even near halfway done."
     show FMG sad with dissolve
     FMG "Um... Are you okay?"
@@ -1236,7 +1236,7 @@ label FMG013:
     FMG "Speechless, eh? Yep, these puppies tend to do that, hehe!"
     MC "Uh, yeah, you looked... kinda pissed, though."
     "What I imagined what was going to happen was either she was going to laugh it off or get actually angry at me... but what happened was she looked surprised and then sad."
-    FMG "Pissed? O-oh shit, sorry dude.  I guess when I get too focused on my workout I can come off as a jerk. I never noticed cuz nobody wants to work out with me..."
+    FMG "Pissed? O-oh shit, sorry dude. I guess when I get too focused on my workout I can come off as a jerk. I never noticed cuz nobody wants to work out with me..."
     MC "Hey don't worry about it okay?"
     FMG "Umm, you sure? I don't want you to get used to that type of attitude. I'm surprised you actually showed up, most people I invite to work out with me don't."
     MC "Hey, we all have our bad days. This is probably just one of those days for you. I know you're not like that, okay? Besides, those people probably don't have to motivation to work out in the first place."
@@ -1468,7 +1468,7 @@ label FMG015:
             MCT "...Yeah, I don't know if she'll like this... but it might be funny to give this to her."
     "With the sweat shirt in hand, I paid for it, and set my sights on finding Akira."
     "I figured that given I was already in town, I would start my search for her at the local gym."
-    "The gym itself was about what you expected,  white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a “Rowing Machine”, pulling the rope thing in a similar manner of rowing a boat."
+    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a “Rowing Machine”, pulling the rope thing in a similar manner of rowing a boat."
     "It did not take long for her to see me, she smiled and gave me a wave to come over."
     show FMG happy with dissolve
     FMG "Sup Kei-kun! What brings you to this side of the island?"
@@ -1650,7 +1650,7 @@ label FMG016:
     show FMG surprised
     FMG "..."
     FMG "WHAT?!"
-    Chibuki "If that's what it takes to buy your loyalty, then so be it...  master."
+    Chibuki "If that's what it takes to buy your loyalty, then so be it... master."
     FMG "...Nope. Nope, I'm not dealing with this! Nope! I'm nope'ing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
     hide FMG with dissolve
     "Akira just left, repeating ‘nope' to herself till she was out of earshot. I turned to Chibuki to say something, but to my confusion and surprise, she was grinning like she'd won something."

@@ -74,7 +74,7 @@ label PRG001b:
     PRG "Ah! Oh, sorry, do you need me to move?"
     MC "No, I just wanted to see how you were doing."
     PRG "M-Me?"
-    MC "After that first speech in class...you didn't seem to take it very well."
+    MC "After that first speech in class... you didn't seem to take it very well."
     show PRG aroused
     PRG "Oh... I hoped no one had noticed. Please, don't concern yourself over it."
     menu:
@@ -112,7 +112,7 @@ label PRG001_b:
     
 label PRG001_c:
     MC "You can tell me, I promise I won't tell anyone."
-    PRG "You...you promise?"
+    PRG "You... you promise?"
     MC "Absolutely."
     PRG "Well..."
     show PRG neutral
@@ -124,7 +124,7 @@ label PRG001_c:
     PRG "...That's what I'm afraid of."
     MC "I guess we're in the same boat, then."
     show PRG surprised
-    PRG "Oh, no! I didn't mean you! Just...I'm so sorry! Please don't be mad I said that!"
+    PRG "Oh, no! I didn't mean you! Just... I'm so sorry! Please don't be mad I said that!"
     PRG "I'm sure whatever it is that's different about you won't be bad at all..."
     MC "Well, it could even be good, you know? Think about it this way. Is there anything about yourself you'd want to change?"
     show PRG neutral
@@ -5068,7 +5068,7 @@ label PRG029:
     PRG "You guys were right, this is fun! "
     hide PRG with dissolve
     hide BE with dissolve
-    "The three of us made our way around the arcade, playing different games as we went.  Honoka generally came out on top, but whenever we played a fighting game, Aida completely destroyed us."
+    "The three of us made our way around the arcade, playing different games as we went. Honoka generally came out on top, but whenever we played a fighting game, Aida completely destroyed us."
 
     scene Town with fade
     show PRG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
@@ -5162,7 +5162,7 @@ label PRG030:
     PRG "... No. But my mom offered to go on a date with him anyway. She said she thought his enthusiasm was cute."
     MC "Wow. So, was your mom as into baseball as your dad was?"
     show PRG unique
-    PRG "Not quite, but she did like to watch. In fact, when she was pregnant with me, they went to at least five games.  She always used to tell me that I got my dad's baseball blood, and I guess that's where it came from."
+    PRG "Not quite, but she did like to watch. In fact, when she was pregnant with me, they went to at least five games. She always used to tell me that I got my dad's baseball blood, and I guess that's where it came from."
     MC "They always say that playing music for your unborn child will make them smarter, or something like that. Maybe going to a baseball game while pregnant would have the same effects?"
     PRG "I-I suppose it could?"
     MC "It's almost unbelievable though. Like, how something as straightforward as baseball could lead to so much more. I mean, a date, marriage, and eventually, a child, all from one baseball game. Seems like something out of a story."
@@ -5203,7 +5203,7 @@ label PRG030:
     PRG "I-It's kind of funny..."
     MC "What is?"
     show PRG neutral
-    PRG "M-My whole situation. When I was a little girl, I always dreamed about my wedding,  a-and what kind of food would be served there, what music I'd have, all of that. But, I never pictured myself... being a mom. A-And now, here I am. It's... just funny how certain things can come out of nowhere."
+    PRG "M-My whole situation. When I was a little girl, I always dreamed about my wedding, a-and what kind of food would be served there, what music I'd have, all of that. But, I never pictured myself... being a mom. A-And now, here I am. It's... just funny how certain things can come out of nowhere."
     MC "Kind of like that old phrase, yeah? Expect the unexpected? I mean, I never planned on coming to an academy like this, or having ever growing hair, but here I am too."
     PRG "Did... you have dreams when you were younger, Keisuke?"
     MC "Yeah. Nothing extravagant, of course. I always wanted to lead a simple life, you know? Just, work my job, come home, relax, and enjoy myself. I never saw myself really needing more than that. Of course, as I got older, I found those dreams changing."
@@ -5442,7 +5442,7 @@ label PRG031_c1_after:
     MC "You're one of the kindest souls I've ever met. You have a heart of gold, and you're incredibly wholesome. I've never heard you talk badly about someone, or even complain in general."
     show PRG unique
     PRG "Ah... I... You..."
-    PRG "Do you really want to date a pregnant girl, Keisuke? L-Look at me. When I give birth, I'm going to have to focus nearly all of my attention on caring for my child.  Is that really what you want?"
+    PRG "Do you really want to date a pregnant girl, Keisuke? L-Look at me. When I give birth, I'm going to have to focus nearly all of my attention on caring for my child. Is that really what you want?"
     MC "I have no reluctance at all. Being a mother should come first for you, no matter what else comes along. And besides, you look amazing. I mean, you were already really cute before, but now... I think you look fantastic."
     show PRG aroused
     PRG "I-I... I-I look that good?"
@@ -6182,7 +6182,7 @@ label PRG035:
     PRG "N-Not always! It's just that being at the academy all the time can get a little..."
     MC "Old? Monotonous? Boring?"
     show PRG neutral
-    PRG "All of those, yes.  Do you ever find the academy boring?"
+    PRG "All of those, yes. Do you ever find the academy boring?"
     menu:
         "Sometimes, yeah.": #(PRG.AFFECTION +3)
             jump PRG035_c1_1
@@ -6492,11 +6492,11 @@ label PRG036_c1_after:
     PRG "My mom would never tell me. At first, he seemed fine. H-He'd come home from some sort of appointment a lot of days. But, he'd always go to the bathroom immediately and v-vomit."
     PRG "My mom told me that he just had influenza, and... I believed her. But... I knew something else was wrong, because my mom would do everything around the house, while he laid in bed. She'd take care of literally everything."
     PRG "She would sit in the living room for hours at night, flipping through old photo albums. She'd look at them every night after my dad had gone to bed, and she'd be in tears nearly the entire time."
-    PRG "So, I started to help with housework. I wanted to take some of the load off of her.  Just washing the d-dishes, c-cooking for my mom and my dad, laundry, s-stuff like that."
+    PRG "So, I started to help with housework. I wanted to take some of the load off of her. Just washing the d-dishes, c-cooking for my mom and my dad, laundry, s-stuff like that."
     PRG "B-But... She'd never let me see my dad. She'd always say he wasn't feeling well. And then my dad came home from his appointment one night, and I finally saw him. He was..."
     extend " bald."
     MC "Bald?!"
-    PRG "Mhm... I s-screamed when I saw him. He was... pale all over and he had lost at least 30 pounds.  W-What was the worst thought, was how tired he looked. H-He looked like he hadn't slept in days."
+    PRG "Mhm... I s-screamed when I saw him. He was... pale all over and he had lost at least 30 pounds. W-What was the worst thought, was how tired he looked. H-He looked like he hadn't slept in days."
     PRG "He smiled at me when he saw me, and asked 'how's my favorite girl doing?' He opened his arms for a hug, and I..."
     show PRG sad
     PRG "I-I ran away from him and hid in my room! I-I was convinced he wasn't my dad. My mom came in to see me after, and I could hear my dad crying from the other room."

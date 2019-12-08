@@ -346,7 +346,7 @@ label BBW003_c1_1:
     menu:
         "Is she? I guess that's fortunate for you.":
             jump BBW003_c2_1
-        "So are you paying her, or... ?":
+        "So are you paying her, or...?":
             jump BBW003_c2_2
         "Aida, do you really just want to be her maid?":
             jump BBW003_c2_3
@@ -369,7 +369,7 @@ label BBW003_c2_1:
     jump daymenu
 
 label BBW003_c2_2:
-    MC "So are you paying her, or... ?"
+    MC "So are you paying her, or...?"
     show BBW haughty
     BBW "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodama-san compensation for her services. And let us leave it at that."
     MC "Didn't mean to offend."
@@ -576,7 +576,7 @@ label BBW005A:
     show BBW sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Oh! G-Good morning, Hotsure-san."
-    BBW "... By all means."
+    BBW "...By all means."
     MC "Thanks. Say, did you two get the Lit reading done? I kind of spaced out last night."
     show PRG happy
     PRG "I did it. How far along did you get?"
@@ -585,7 +585,7 @@ label BBW005A:
     PRG "Yes, Nikumaru-san?"
     BBW "Can you get the other half of the grapefruit? The first half was not adequate alone."
     PRG "Certainly, ma'am. And would you like some more toast?"
-    BBW "... Two slices."
+    BBW "...Two slices."
     PRG "With jam or butter?"
     BBW "No. Plain."
     PRG "All right. I'll be right back."
@@ -596,7 +596,7 @@ label BBW005A:
     MC "Light breakfast today?"
     MCT "Mouth, you're not helping."
     BBW "Light breakfast today, and every day. Light lunch every day. Light dinner every day."
-    MC "Oh? ... Oh! Yeah. Your factor. I guess you're doing the diet thing, huh?"
+    MC "Oh? ...Oh! Yeah. Your factor. I guess you're doing the diet thing, huh?"
     play music Tension
     BBW "If I am to maintain authority over my own body and not be controlled by the whims of fate, then yes, I am doing 'the diet thing.' Every day, at every meal, I will be watching my intake, limiting the calories, sugars, and fats I take in. I will limit it all to what I need and no more."
     MC "You don't seem too happy about it."
@@ -618,7 +618,7 @@ label BBW005A:
     show BBW neutral
     BBW "Thank you, Aida, but now I want you to go prepare me a real breakfast. Crepes Florentine and smoked salmon to start, along with some coffee and fresh-squeezed orange juice."
     show PRG happy
-    PRG "Y-Yes, ma'am. ... I'll just leave the toast and grapefruit."
+    PRG "Y-Yes, ma'am... I'll just leave the toast and grapefruit."
     hide PRG with dissolve
     show BBW angry at center with dissolve
     BBW "Or does this not meet your approval, Hotsure-san?"
@@ -627,7 +627,7 @@ label BBW005A:
     MC "I'm just saying a diet might not be easy, but in the end you might be glad you did it."
     BBW "Is my mood a concern of yours? Is it your business to tell me how I deal with my factor? I assume you have your own condition to deal with, no?"
     MC "Yeah. My hair grows really fast."
-    BBW "... That is your condition? That is why you're here?"
+    BBW "...That is your condition? That is why you're here?"
     MC "Yep. That's it."
     show BBW neutral
     BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself. Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
@@ -715,7 +715,7 @@ label BBW005B:
     hide PRG with dissolve
     "As I was looking at the weights in increments of ten pounds, trying to guess what my limit was, another person came over and joined us."
     show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    FMG "Hey sorry to bother but how much longer are you...Oh hey guys. What brings you here?"
+    FMG "Hey sorry to bother but how much longer are you... Oh hey guys. What brings you here?"
     MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
     show BBW angry
     BBW "I don't need to lose weight. I just need to keep myself from getting fat. There is a world of difference there."
@@ -890,7 +890,7 @@ label BBW007:
     MC "Hi, Aida. How did you get so much mail already? It's still the first week of the year."
     PRG "Oh, it's not mine. I was carrying it for Nikumaru-sama. We just came from the mail room."
     show PRG sad
-    extend " ... There was nothing for me."
+    extend " ...There was nothing for me."
     MCT "She seems a bit sad. Is there something about mail that bothers her? Better change the conversation."
     BBW "Interested in what I got?"
     MC "Uh..."
@@ -911,7 +911,7 @@ label BBW007:
     BBW "I suppose I could. Hitomi and I - that's Hitomi Ogawa, daughter of the president of Ogawa Electronics - aren't on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
     MC "An Ogawa laptop for under a hundred thousand yen? That's pretty steep for some old model being unloaded-"
     BBW "That's for an Ogawa D2300. 22” monitor, if I remember correctly."
-    MC "... For 99,000?! Are you serious?"
+    MC "...For 99,000?! Are you serious?"
     BBW "Completely."
     MCT "Unbelievable. That's a 170,000-yen machine, and she says she can get one for under 100K?"
     BBW "Don't be surprised. I'd be buying direct from the company, so there's no middle-man mark-up. Except for my commission, of course."
@@ -923,7 +923,7 @@ label BBW007:
     BBW "Shall I order one? You don't have to pay me now, you can take care of that when it gets here."
     MC "No, no. I don't need a new laptop. I mean, I could use one, but I don't have that kind of money."
     BBW "Well you should have said so."
-    extend " ... Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
+    extend " ...Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     MC "There's already a store on campus, you know."
     BBW "I know, I've seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
@@ -1025,7 +1025,7 @@ label BBW008_prechoice:
     "I stammered a few words, and Alice became irritated quickly."
     MC "We were told to tell you to, you know... Maybe ease up on the prima donna thing."
     BBW "Excuse me?"
-    MC "It's not that you're... You can be a little... "
+    MC "It's not that you're... You can be a little..."
     MC "You're going to get kicked out if you don't stop fighting with the president."
     BBW "Oh, really? Aida, is this true?"
     show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
@@ -1460,14 +1460,14 @@ label BBW010_c1:
     "Gracelessly, I almost shoved one of them at her arm."
     MC " Here. Something to check out at your leisure, when you have some free time."
     show AE surprised
-    AE "Hm? What is...The Nikumaru Outlet Direct? Keisuke...is this what I think it is?"
+    AE "Hm? What is... The Nikumaru Outlet Direct? Keisuke... is this what I think it is?"
     "Something in her tone told me to tread carefully. But I, not exactly a cat burglar, couldn't do much except flail around."
     MC "Well, it's... I'm not sure what you think it is. What do you..."
     show AE angry
     "She's glaring at me, and I see that playing coy wouldn't work even if I could do so properly."
     MC "Alice... Nikumaru-san has created a direct-market business. She orders stuff from manufacturers and can sell them at a discount. Clothes, school supplies, stuff like that."
     show AE angry
-    AE "Hotsure-san...you can't just...ngh...where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
+    AE "Hotsure-san... You can't just... ngh... Where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
     MC "She should be in the cafeteria..."
     "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
     hide AE with dissolve
@@ -1483,7 +1483,7 @@ label BBW010_c2:
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
     MC "Good morning, Kodama-san. Making breakfast?"
     show PRG happy
-    PRG "Oh!  Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
+    PRG "Oh! Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
     MC "Oh no, it's not that. I was just walking by and thought I'd say hi."
     MC "Is that a new uniform? It looks a bit baggier than your old one."
     show PRG sad
@@ -1500,7 +1500,7 @@ label BBW010_c2:
     "I suppressed a groan as I realized that of course Aida would already be in on Alice's plans. It was her need for more clothing that had first put the idea of doing this in Alice's head."
     MC "Right, right. Forgot. Well, sorry to bother you."
     show PRG neutral
-    PRG "No, no! I'm sorry for, um, wasting your time...  I'll, uh, still take one of the pamphlets, if you like..."
+    PRG "No, no! I'm sorry for, um, wasting your time... I'll, uh, still take one of the pamphlets, if you like..."
     "Hesitantly, I handed her one. I think not doing so would have made her more embarrassed."
     MC "If you'd like to place an order... Well, you know where to find me."
     if getAffection("PRG") >= 3:
@@ -1549,13 +1549,13 @@ label BBW010_c3:
     show BE happy
     BE "Because it's like starting up an ice cream stand in the middle of a heat wave. She'll make a killing here if she can get everything authorized! You better be getting a cut of all of this if you're going to be helping her out. Don't let her take advantage of you."
     show BE surprised
-    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah,  I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
+    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah, I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
     "Man, my imagination was getting a workout today."
     "I shook my head to clear my mind."
     MC "I am being compensated (though the specifics haven't been hammered out yet). I believe she even mentioned something about a commission."
     MC "So can I put you down for a sale? I can run your order back to her before class starts, but I'm not sure how long it will be until everything arrives. She did say she already has a lot of stuff here..."
     show BE happy
-    BE "Oh absolutely! Here, let me take a look again real quick. ... Yeah, I think I can spring for three bras and, maybe two shirts. No I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size. Well, as long as I'm capable of getting my arms around them that is!"
+    BE "Oh absolutely! Here, let me take a look again real quick... Yeah, I think I can spring for three bras and, maybe two shirts. No I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size. Well, as long as I'm capable of getting my arms around them that is!"
     MC "Even if you have trouble measuring yourself, we can find clothing big enough..."
     "My voice trailed off as I was hit with the mental image of Honoka carrying a pair of breasts bigger than she was, carting them around in a wheelbarrow..."
     "...and running me over with them."
@@ -2056,7 +2056,7 @@ label BBW013_c2:
     MC "You sound like you're dealing with it pretty OK."
     "I was about to walk away, but then I decided..."
     MC "Hey, Alice. I was about to get a snack at the cafeteria. You hungry?"
-    BBW "... Hmm..."
+    BBW "...Hmm..."
     show BBW happy
     BBW "I could go for some cake."
     jump daymenu
@@ -2494,7 +2494,7 @@ label BBW015_test_pass:
     MC "They must have put 'Men's dorm' on the address, not 'Women's.'"
     AE "A mailing mix-up?"
     "Shiori-san looked back at the envelope, but then back at me; her eyes showing confusion and possible disappointment. Closing her eyes and exhaling deeply, she looked back to me."
-    AE "I understand. I'll have to rectify that from happening again. I...won't keep you."
+    AE "I understand. I'll have to rectify that from happening again. I... won't keep you."
     show AE happy
     AE "But be sure to be quick. You need to make sure to get breakfast before class."
     hide AE with dissolve
@@ -3553,10 +3553,10 @@ label BBW020_c1:
     show BBW neutral
     BBW "You do not need to paint any pictures."
     show BBW happy
-    BBW "I could simply invoke the stereotype that men are never discerning about where they... Ahem ..."
+    BBW "I could simply invoke the stereotype that men are never discerning about where they... Ahem..."
     MC "Hang the bird feeder in the garden?"
     show BBW neutral
-    BBW "... What?"
+    BBW "...What?"
     MC "I don't know. I couldn't think of a euphemism that didn't sound dirty."
     show BBW happy
     BBW "I think they're supposed to. Just not too dirty."
@@ -3647,7 +3647,7 @@ label BBW021_beforechoice:
         show BBW swimhappy
         BBW "I'm glad you got the chance to clear that up, Keisuke."
         BBW "I know you're not trying to soothe my wounded pride..."
-        BBW "... but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
+        BBW "...but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
         BBW "The music club is meeting soon and I have to change."
         BBW "We can resume this conversation later. If there is anything more you want to say."
         hide BBW with dissolve
@@ -4255,7 +4255,7 @@ label BBW024_c2_2:
     show BBW neutral
     BBW "To calm my mind. To find my center."
     show BE angry
-    BE "... Sounds boring."
+    BE "...Sounds boring."
     BE "I could never sit still for so long."
     BBW "Actually, you could do just five minutes a day and derive some benefit from it."
     show BE neutral
@@ -4973,7 +4973,7 @@ label BBW028_rest:
     BBW "Perhaps."
     MC "Not that many people would be upset that an Italian restaurant has..."
     "I struggled to think of something from French cuisine."
-    MC "... French bread."
+    MC "...French bread."
     BBW "No. Though under any other circumstances I would have very high expectations for their alfredo sauce."
     BBW "As simple as it is, it's a favorite of mine."
     BBW "There was one time, a few years ago, when we were in Tuscany..."

@@ -88,7 +88,7 @@ label BE001:
     BE "It does. And it's about to look a whole lot better!"
     play music BE
     "My introspection was suddenly interrupted by my elbow getting pressed into something warm and soft."
-    MC "What the...Honoka? How'd you get up here?"
+    MC "What the... Honoka? How'd you get up here?"
     BE "Heh, the same way as you, Kei-chan. Steps. I've been behind you for a while now, did you really not notice?"
     MCT "Not until you bumped into me with that chest of yours..."
     MC "I guess not. My head's kind of all over the place after learning why we're here. How about you? You said you didn't know what this academy was for, right?"
@@ -132,7 +132,7 @@ label BE001_c1:
 
 label BE001_c2:
     BE "That's true. Still, I think I've got a pretty good idea what mine could be. It starts with 'B' and rhymes with 'goods'."
-    MC "...boods?"
+    MC "...Boods?"
     show BE sad
     BE "What? Shoot, no, I messed that up. I was talking about my boobs."
     show BE neutral
@@ -255,7 +255,7 @@ label BE002:
     BE "Oh yeah? You think it'd make me too tired?"
     MC "No, I mean I'm sure that's literally impossible. There's no way they'd have the clubs all worked out in a way where it would be possible for you to attend every event, along with leaving time for schoolwork."
     show BE sad
-    BE "... Well when you put it that way it sounds pretty silly, doesn't it? You sure are clever, Kei-chan."
+    BE "...Well when you put it that way it sounds pretty silly, doesn't it? You sure are clever, Kei-chan."
     "I think that qualified more as 'common sense' as opposed to 'cleverness', but, I'll take it."
     show BE neutral
     BE "What about you, Kei-chan, were you thinking of joining a club?"
@@ -2024,7 +2024,7 @@ label BE018:
     MC "Oh. And... you thought that was okay for me to hear?"
     show BE aroused
     BE "Pff, Kei-chan, does a week go by when my boobs don't become a point of conversation?"
-    MC "I mean... "
+    MC "I mean..."
     "I rattled my brain trying to decide if it really was that common before deciding, yes, that seemed likely. Honoka turned to Aida and spoke in a hushed, but audible tone."
     show BE angry
     BE "I think he actually might be getting blasé about it."
@@ -2134,7 +2134,7 @@ label BE018_c1_after:
     BE "Cup size is found by subtracting the band size from the bust size!"
     "Honoka raised her hand in such a studious, professor-ly manner that I'm surprised glasses didn't manifest on her face."
     show BE neutral
-    BE "So, for this example rack, the difference is thirty centimeters.  A new cup size is given every two and a half centimeters, give or take. So that's, let's see..."
+    BE "So, for this example rack, the difference is thirty centimeters. A new cup size is given every two and a half centimeters, give or take. So that's, let's see..."
     if getSkill("Academics") > 5:
         MC "That'd be 12."
         $setAffection("BE", 1)
@@ -2276,7 +2276,7 @@ label BE019_c1_after:
     MC "..."
     show BE happy
     BE "Anyway! It was just so nice getting a chance to hang out with you. I think I had been feeling really down that week about the fact we were moving. I didn't want to go."
-    MC "Hey, I mean...  I didn't want you to go either. I was losing my best friend."
+    MC "Hey, I mean... I didn't want you to go either. I was losing my best friend."
     show BE sad
     BE "It sucked. Hardcore."
     show BE happy
@@ -4353,7 +4353,7 @@ label BE026_c2_1:
     Nurse "Oh my. How did that happen?"
     "The nurse took Honoka to sit down as she pulled out the standard array of disinfectant and bandages. Honoka explained how she got it from a bush, trying to catch a cicada."
     Nurse "Cicada-catching?"
-    Nurse "... A little old for that, aren't you?"
+    Nurse "...A little old for that, aren't you?"
     show BE angry
     BE "You're never too old to enjoy fun stuff!"
     Nurse "Fun stuff, of course. But is hunting for bugs really fun? Now this is going to sting a little."
