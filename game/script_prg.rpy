@@ -63,7 +63,7 @@ init 2 python:
 
 label PRG001b:
     scene School Exterior with fade
-    play music Sunset
+    play music Hallway
     "On my way to the vending machines for a drink, I spied Aida-san from my class, frowning down at a can of tea."
     show PRG sad with dissolve
     "Her worried look made me think back to that first morning with Tashi-Sensei, and how she'd reacted to his tongue."
@@ -954,7 +954,7 @@ label PRG009:
     $setTimeFlag("size2")
     $setProgress("PRG", "PRG012")
     scene School Exterior with fade
-    play music Sunset
+    play music Hallway
     "After finishing my homework for the day, I decided to take a walk around, get some fresh air. As I passed by the vending machines, I saw Aida sitting at one of the picnic tables, looking at something in her hands."
     show PRG neutral at Position (xpos=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     PRG "..."
@@ -1712,7 +1712,7 @@ label PRG015:
     $setProgress("PRG", "PRG016")
     scene Dorm BBW with fade
     show PRG sad with dissolve
-    play music Sunset
+    play music Hallway
     PRG "I'm sorry to lend your time like this..."
     MC "Don't worry about it! Getting you up to speed is also a way for me to refine my studies, making sure I didn't forget bits."
     show PRG neutral
@@ -1776,7 +1776,7 @@ label PRG015:
             show PRG unique:
                 ease 1 yanchor 0.9
             "Aida lowered her posture, seemingly trying to hide under the low table. Which was probably impossible with her figure. Her gaze was fixed downwards. She remained in complete silence."
-            play music Sunset
+            play music Hallway
             MC "Let's... uh... *ahem* let's continue... There's only a bit more to learn. After that I think you'll be fine."
             PRG "O-okay."
             "And so we continued. Both me and Aida had trouble focusing on the task at hand. I tried to ignore it but it kept nagging my mind."
@@ -2012,7 +2012,7 @@ label PRG016_c1_after:
     "Aida flicked the lights off and led the way out the door, closing it softly behind us. By now, night had fallen, giving the school's hallways a dark and almost haunting feel as the pale moonlight crept in through the windows."
     MC "So... I'll see you tomorrow then?"
     show PRG unique
-    play music Sunset
+    play music Hallway
     PRG "H-Hotsure-san? Could I ask a favor of you?"
     MC "Sure, whatever you need."
     PRG "C-Could you w-walk me back to my dorm?"
@@ -2056,7 +2056,7 @@ label PRG016_c1_after:
 label PRG017:
     $setProgress("PRG", "PRG019")
     scene School Planter with fade
-    play music Sunset
+    play music Hallway
     "After classes had ended for the day, I was left with not only a cramped wrist from the usual excessive note taking, but also a pounding tension headache that felt as though someone was hammering a nail deep into my forehead."
     "Rather than going back to my dorm and allowing it get any worse, I decided to go au naturel and take in a little fresh air. Seeing as how the roof would no doubt be packed with students at this time of day, I found my way to the gardens."
     "The garden was quiet and peaceful, as always. Beams of warm, afternoon sun shone down and warmed the courtyard, as I wandered around for a moment, looking for a place to rest my head."
@@ -2490,7 +2490,7 @@ label PRG019_c1_1:
     PRG "O-Okay! Thank you, Sakura-san."
     
     scene Hallway with fade
-    play music Sunset
+    play music Hallway
     "Aida led the way through the crowd, with me in tow, until we were finally out in the hallway."
     MC "Well, I'm glad I'm not claustrophobic. That room was a bit cramped."
     show PRG neutral with dissolve
@@ -2748,7 +2748,7 @@ label PRG020_c1_after:
     
     scene Roof with fade
     #SCENE CHANGE- ROOF_EVE
-    play music Sunset
+    play music Hallway
     "Eventually, my stroll took me up to the roof. Since it was a Friday night, and most students had better things to do than wander aimlessly, the roof was deserted."
     "I went to the chain-link fence that surrounded the roof and gazed out over the campus, now bathed in the warmth of the setting sun. Taking a seat on a nearby metal bench, I pulled out the handheld system that I carried with me specifically for times like this."
     "After only a few minutes, I heard the metal door to the roof open with a loud, groaning creak, and slam shut again momentarily."
@@ -2831,7 +2831,7 @@ label PRG020_c2_1:
     "Slowly, Aida began to lean herself closer to me. I found myself leaning in closer, as if being pulled in by her. Our faces met in the middle, staying only a scant few inches from one another."
     "Now we were both just sitting there, incredibly close to each other, staring into each other's eyes. It felt like we were standing by an extremely calm, tranquil lake. No movement at all: Just stillness and complete lucidity."
     "Then, the stillness was shattered. I closed the distance and kissed her. Right on the lips."
-    play music Sunset fadein 1.0
+    play music Hallway fadein 1.0
     "Aida's arms instantly wrapped around me, and mine around her. We embraced tightly as we kissed, Aida leaning even more into me, her huge chest sandwiched between myself and her."
     "I jumped a bit as I felt her tongue brush tentatively against my lips. Taking the hint, I opened my mouth ever so slightly, inviting her in."
     "Our tongues touched and did a sort of dance together, twisting and turning this way and that, kind of like a tongue's interpretation of a flamenco. She began to work her hands through my hair, giving it gentle, little tugs as she went."
@@ -3158,7 +3158,7 @@ label PRG022:
     "We passed through the school's gates and turned left, heading south, towards the supermarket."
 
     scene Town with fade
-    play music Sunset
+    play music Hallway
     show PRG neutral with dissolve
     PRG "I wrote down a few recipes here along with the items I'll need to make them. Pick three of them, and we'll get the items we need to make those."
     "She passed me the wrinkled piece of paper so I could read it."
@@ -3655,7 +3655,7 @@ label PRG024_c1_after:
     "I bowed to her as best I could with only one foot and hobbled my way out the door, with Aida holding it open for me."
 
     scene Campus Center with fade
-    play music Sunset
+    play music Hallway
     #[SCENE CHANGE CAMPUSCENTER_DAY]
     MC "Thanks by the way, Kodama-san."
     show PRG neutral with dissolve
@@ -4793,7 +4793,7 @@ label PRG027_c1_after:
 label PRG028:
     $setProgress("PRG", "PRG029")
     scene Campus Center with fade
-    play music Sunset
+    play music Hallway
     #[SCENE- CAMPUS CENTER-DAY]
     show PRG neutral with dissolve
     PRG "What would you think if I made fried rice today?"
@@ -5250,7 +5250,7 @@ label PRG030_c1_2:
 label PRG031:
     $setProgress("PRG", "PRG032")
     scene Dorm Interior with fade
-    play music Sunset
+    play music Hallway
     "With a huff, I flew into my dorm and threw my backpack on the floor, diving straight for my bed. It had been a crazy, long day, and I wanted nothing more than to just sleep until the next morning. My classes had been long and boring, and on top of the monotony, an assignment had come from every class, meaning I had a night full of studying and penciling in answers ahead of me."
     "Bashing my fist into my pillow in frustration, I rose from my bed and sat at my desk, rifling through the crowded mess of books and paper. Organization was never a strong point of mine, and it came back to burn me during times like this."
     #(knocking SFX)
@@ -5477,7 +5477,7 @@ label PRG032:
     show PRG surprised with hpunch
     MC "W-Wha?!!"
     "I bolted up, heart slamming inside my chest."
-    play music Sunset
+    play music Hallway
     PRG "I-I'm so sorry! W-Were you sleeping? I-I'll let you sleep!"
     MC "It's alright! You just startled me, is all!"
     show PRG unique
@@ -5932,7 +5932,7 @@ label PRG034:
     "I quietly pushed the door open, and leaned in. The room was silent and completely barren, the chairs set up for the next choir practice. I was about to cut my losses and go back to the kitchen, when I heard a tiny metal scraping sound."
     "I scanned the room carefully. None of the chairs had moved, and the piano still sat as it had, but I wasn't stupid. I knew I had heard something. My eyes finally fell on the far wall, where multiple racks of music stands were all lined up. I crossed the room and slid a few racks out of the way."
     show PRG sad with dissolve
-    play music Sunset
+    play music Hallway
     "Aida sat on the floor, looking up at me, her eyes stained a light pink. Tear spots dotted the front of her uniform and trailed down onto her belly."
     MC "Aida..."
     PRG "..."
@@ -6327,7 +6327,7 @@ label PRG035_c1_after:
     PRG "You too!"
 
     scene Town with fade
-    play music Sunset
+    play music Hallway
     show PRG neutral with dissolve
     "The town had quieted down by the time we left the restaurant. Besides us and the scarce jogger or two, the streets were barren."
     PRG "Was there anything else you wanted to do, Keisuke?"

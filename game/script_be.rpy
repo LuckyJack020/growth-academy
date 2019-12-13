@@ -292,7 +292,7 @@ label BE002:
 label BE003:
     $setProgress("BE", "BE004")
     scene Campus Center with fade
-    play music Sunset
+    play music Hallway
     "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was."
     "I had already drank a whole bottle of water to cool off, but it wasn't enough. Thankfully, there were vending machines scattered around, and I had a few coins burning a hole in my pocket."
     MC "All right, let's see. What do I want? Soda, juice, eh, water's healthier... but, soda's tastier."
@@ -780,7 +780,7 @@ label BE007_after:
 label BE008:
     $setProgress("BE", "BE009")
     scene Dorm Interior with fade
-    play music Sunset
+    play music Hallway
     "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water. Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
     "I had barely gotten started when the door knocked. Daichi was out, so I figured he'd simply forgotten his key."
     MC "Hey, what's up?"
@@ -2735,7 +2735,7 @@ label BE020_c2_2:
 
 label BE021:
     scene Woods with fade
-    play music Sunset
+    play music Hallway
     show BE happy at center with dissolve
     $setProgress("BE", "BE022")
     MC "Honoka, why am I here again?"
@@ -2779,7 +2779,7 @@ label BE021:
     BE "No no, it's appreciated! I could get used to the drill leader thing, it's just kind of off-putting right out of the gate."
     MC "Yeah same. But, um, please, show us what to do."
     "Haruhiro nodded and pointed to the quivers."
-    play music Sunset
+    play music Hallway
     Haruhiro "Are you both right-handed?"
     show BE neutral
     "Honoka and I both nodded. Haruhiro stepped next to one of the quivers and steadied himself."
@@ -4258,7 +4258,7 @@ label BE026:
     scene Field with fade
     $setProgress("BE", "BE027")
     show BE happy with dissolve
-    play music Sunset
+    play music Hallway
     BE "Kei-chan, I've got an idea, and you're not gonna believe what it is."
     "Honoka had bumped into me, in her usual fashion. It was good to know that despite it happening more often than not, that it still was a pleasant way to say hello."
     MC "What's up, Honoka?"
@@ -5243,7 +5243,7 @@ label BE030:
     $setProgress("BE", "BE031")
     $lockRoute("BE")
     scene School Planter with fade
-    play music Sunset
+    play music Hallway
     "As usual, there was only a certain amount of time I could handle Daichi before I felt the need to escape my room. Maybe 'escape' was a strong word."
     "It certainly wasn't one I would ever use around him, or else he might think I was so invested about his theories on Seichou Academy that I wanted to flee."
     "That certainly wasn't the case, not when it had been made clear multiple times that it'd been helpful for me and others. Not to mention I had people I considered friends here."
@@ -5449,7 +5449,7 @@ label BE030_neutral:
 label BE031:
     $setProgress("BE", "BE032")
     scene Dorm Exterior with fade
-    play music Sunset
+    play music Hallway
     "I'm not quite sure what Honoka had planned for us tonight. She had told me it would be a surprise, but didn't even indicate if she wanted to go out, or stay in. I was fine with both choices, but knowing Honoka, she probably just forgot to tell me if it was one or the other."
     "Either way, whichever she wanted to do, I couldn't deny her. If she wanted to go to the arcade, to dinner, or watch anime inside. It was nearly impossible to say no to that face of hers."
     "She had told me to meet her at her dorm room, so that's where I went. It was fairly late in the day, so there wasn't much foot traffic to be had in the dormitories. In general it was fairly quiet, with just the low buzz of fluorescent lights making most of the noise."
@@ -6038,7 +6038,7 @@ label BE034:
     pause 1.5
     play sound Thud
     "With nothing important to do during the afternoon, I'd gone to one of Honoka's archery club meetings to watch her perform."
-    play music Sunset
+    play music Hallway
     "I suppose it was wrong to say it was unimportant. Considering what we'd done, and how we felt for one another, coming to support someone you cared about seemed to be pretty vital."
     "Unfortunately, my cheers couldn't do much for Honoka today. She seemed to be off her rhythm, as another arrow didn't manage to make it to the target, making it one of several failures she'd had so far."
     "There was only one arrow actually in Honoka's practice target, and I wasn't even sure it was hers."
@@ -6412,8 +6412,6 @@ label BE035A_nosauce:
     BE "..."
     MC "... Not remotely how I meant it."
     jump daymenu
-
-
 
 label BE036:
     "This marks the current end of Honoka's route."

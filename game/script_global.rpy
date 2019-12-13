@@ -99,7 +99,7 @@ define audio.BBW = "Audio/BGM/scene_BBW.mp3"
 define audio.FMG = "Audio/BGM/scene_FMG.mp3"
 define audio.GTS = "Audio/BGM/scene_GTS.mp3"
 define audio.RM = "Audio/BGM/scene_RM.ogg"
-define audio.PRG = "Audio/BGM/scene_tbi.ogg" #NEED
+define audio.PRG = "Audio/BGM/scene_PRG.ogg"
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
 define audio.Festival = "Audio/BGM/scene_festival.mp3"
@@ -108,7 +108,7 @@ define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
-define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
+define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
 
 define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"

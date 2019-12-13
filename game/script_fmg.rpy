@@ -602,7 +602,7 @@ label FMG006_c3:
 label FMG007:
     $setProgress("FMG", "FMG008")
     scene Cafeteria with fade
-    play music Sunset
+    play music Hallway
     "Lunch hour. The cafeteria was bustling with the sounds of conversations, student voices blending together, making it hard to differentiate one from another."
     "I walked past table after table of students eating, talking, even one student was asleep, but nothing out of the norm."
     "At the far end, near the windows, sat an all-too-familiar bodybuilder. Akira was resting her head in her hand, taking slow but big bites from what was left of her stir-fried beef and rice. She was staring into space, though she didn't look tired; it was more of a listless catatonia."
@@ -916,7 +916,7 @@ label FMG010_testfail:
     scene black with fade
     pause 1
     scene Hallway with fade
-    play music Sunset
+    play music Hallway
     "The day went by as normal, and around sunset I decided to get a quick snack from the common area."
     "As I made my way down the ramp nearest to the vending machines, I saw Akira... but she was bigger than I remembered."
     show FMG sad with dissolve
@@ -1444,7 +1444,7 @@ label FMG014_c1_3:
 label FMG015:
     $setProgress("FMG", "FMG016")
     scene Town with fade
-    play music Sunset
+    play music Hallway
     "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."
     "The streets were full of bustling people given the time and day, everyone was either working or buying things from the many open stores. Seeing so many going shopping made me feel like buying something too."
     "As I was taking in the sites as well as wondering what store I should go to, a thought came to me."
@@ -1544,7 +1544,7 @@ label FMG015:
 label FMG016:
     $setProgress("FMG", "FMG017")
     scene School Planter with fade
-    play music Sunset
+    play music Hallway
     "It was such a beautiful day; the sun is shining, the birds were flying, the wind was blowing..."
     "...and I was so bored!"
     "Seriously, normally I'd have something to do, but for the life of me I can't think of anything to do besides lay down on the grass, stare at the blue sky, and sulk in my boredom!"
@@ -1608,7 +1608,7 @@ label FMG016:
     hide Chibuki with dissolve
     "We did nothing but consume our orders in silence while we waited for Chibuki's break to happen."
     scene Town with fade
-    play music Sunset
+    play music Hallway
     "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki. I heard a ‘hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
     show Chibuki neutral at Position(xpos=0.75) with dissolve
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
@@ -2349,7 +2349,7 @@ label FMGBBW001:
     show RM smug
     RM "Operation 'Stakeout at the Bakeout' starts now!"
     scene Town with fade
-    play music Sunset
+    play music Hallway
     "A few hours later, we arrived at the town with five minutes till the meeting. We peeked around to see the bakery in question."
     MC "Is that the place?"
     show RM neutral with dissolve
