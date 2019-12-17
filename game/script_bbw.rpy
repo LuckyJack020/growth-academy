@@ -12,6 +12,10 @@ image BBW angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 image BBW aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
 
+image BBW sick = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
+image BBW sick-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
+image BBW sick-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
+
 image BBW swimneutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
 image BBW swimhappy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW swimsad = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
@@ -51,7 +55,8 @@ init 2 python:
     eventlibrary['BBW034'] = {"name": "Styling and Profiling", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                            "location": "town",             "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW035", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
     eventlibrary['BBW035'] = {"name": "It's Showtime", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW036", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
     eventlibrary['BBW037'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW038", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
-    #eventlibrary['BBW036'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 6,     "next": "", "obsflags": [],                  "conditions": []}
+    eventlibrary['BBW038'] = {"name": "Sick Day", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                                  "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW039", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW039'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 6,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                  "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
@@ -6564,12 +6569,12 @@ label BBW036:
     BBW "Keisuke. Perfect timing. I need an update from you on your delivery rounds."
     BBW "You have not reported any problems recently, so I trust everything is proceeding smoothly, yes?"
     MC "Buh?"
-    MC "Oh, yeah! The deliveries are going great. I’ve got a system more or less worked out."
+    MC "Oh, yeah! The deliveries are going great. I've got a system more or less worked out."
     BBW "Excellent."
     show BBW neutral:
         xzoom -1.0
         linear 1.0 xpos 0.75
-    MC "That wasn’t what I wanted to talk about, though."
+    MC "That wasn't what I wanted to talk about, though."
     show BBW neutral:
         xzoom 1.0
         linear 1.0 xpos 0.5
@@ -6578,34 +6583,34 @@ label BBW036:
     BBW "Thank you."
     MC "And I was wondering if things between you and the music club president had improved at all."
     show BBW neutral
-    BBW "…"
+    BBW "..."
     "Alice chewed on that for a second."
     BBW "She did compliment my contribution to the concert yesterday."
-    BBW "She said I ‘showed genuine talent.’ When we were alone in the club room, with no one else around."
-    MC "Oh…"
+    BBW "She said I 'showed genuine talent.' When we were alone in the club room, with no one else around."
+    MC "Oh..."
     MC "Well, a positive comment-"
     BBW "Blandly positive."
     MC "-like that is better than nothing. Things might be thawing between you two."
     BBW "Perhaps."
     MC "One other thing."
-    MC "Are you free Saturday? I’d like to go out again."
+    MC "Are you free Saturday? I'd like to go out again."
     show BBW happy
     BBW "I would too. Saturday sounds good."
-    MC "I was thinking dinner and a movie. It’s nothing spectacular, I know…"
+    MC "I was thinking dinner and a movie. It's nothing spectacular, I know..."
     BBW "Do not overthink it, Keisuke. This would only be a second date."
     BBW "And our options for entertainment on this island are limited."
-    MC "Right, but I’d still like to come up with something more than the five or six things we’ve all already done."
-    MC "But anyway… How does Saturday at 5 sound?"
-    BBW "That’ll work. I’ll meet you in the dorm lobby."
+    MC "Right, but I'd still like to come up with something more than the five or six things we've all already done."
+    MC "But anyway... How does Saturday at 5 sound?"
+    BBW "That'll work. I'll meet you in the dorm lobby."
     show BBW happy:
         xzoom -1.0
         linear 1.0 xpos 0.75
     "She turned to leave, but one other issue to discuss had been on my mind."
     "How do we handle the issue of me working for Alice while dating her?"
-    "It was kind of a heavy matter to bring up, because I could only think of two options: we don’t go out anymore, or I quit working for her."
+    "It was kind of a heavy matter to bring up, because I could only think of two options: we don't go out anymore, or I quit working for her."
     "Which would put a crimp in my finances. Not the best situation when I was trying to woo someone with expensive tastes like Alice."
     "Was this a Catch 22? Either I can date Alice but not have the money to, or I can not date her but have a nice amount of disposable income."
-    "Either way, it was very much the sort of thing that needed to be addressed…"
+    "Either way, it was very much the sort of thing that needed to be addressed..."
     "Just maybe not right after securing a second date. Something heavy like this could wait for later, right?"
     menu:
         "Let it rest for now.":
@@ -6615,7 +6620,7 @@ label BBW036:
 
 label BBW036_c1_1:
     hide BBW with dissolve
-    MCT "There’s no rush. I can deal with it later."
+    MCT "There's no rush. I can deal with it later."
     scene black with fade
     "I left the classroom and went about the rest of the afternoon like always."
     "Got a snack, did my homework, played some games."
@@ -6623,23 +6628,23 @@ label BBW036_c1_1:
     "Pleasure before business, I guess."
     jump daymenu
 
-lable BBW036_c1_2:
+label BBW036_c1_2:
     MC "Actually, there is one other thing. Sorry."
     show BBW neutral:
         xzoom 1.0
         linear 1.0 xpos 0.5
     MC "If we are going to keep going out, I think we should address the employer/employee matter."
     BBW "Aaah, yes."
-    MC "You’re professionally minded, so you should understand things would be weird between us if I’m both subservient to you but also an equal."
+    MC "You're professionally minded, so you should understand things would be weird between us if I'm both subservient to you but also an equal."
     "Alice smiled wryly."
     show BBW haughty
     BBW "So you want a promotion. Angling for a full partnership in the company, are we?"
     MC "No, I-"
-    "And I stopped, because I realized she wasn’t put off by the idea."
-    "It wasn’t what I was going for, but it was definitely the best outcome. I hadn’t even considered it before."
-    MCT "And the way she’s smiling, does she like my ambition?"
+    "And I stopped, because I realized she wasn't put off by the idea."
+    "It wasn't what I was going for, but it was definitely the best outcome. I hadn't even considered it before."
+    MCT "And the way she's smiling, does she like my ambition?"
     MCT "No reason not to go for it."
-    MC "If not a full partnership, then maybe a title befitting my status as the chief… distribution... manager."
+    MC "If not a full partnership, then maybe a title befitting my status as the chief... distribution... manager."
     "Alice chuckled."
     BBW "That is not on the same level as President and Chief Executive Officer, but it would put us closer to equal footing."
     BBW "Yes, I think that would work."
@@ -6650,12 +6655,12 @@ lable BBW036_c1_2:
     
     scene black with fade
     "I think she was still referring to my grab for a promotion. Did she admire my ambition? That seemed to fit her personality."
-    "And it would answer the question of what she respected more: subservience or a strong will. I’d have to remember that for the future."
+    "And it would answer the question of what she respected more: subservience or a strong will. I'd have to remember that for the future."
     "For the time being, I had another ordinary day ahead of me."
     "I left the classroom and went about the rest of the afternoon like always."
     "Got a snack, did my homework, played some games."
     "And I looked through the showtimes for the only theater on the island. I needed to find a safe but not boring or insipid choice for our date."
-    "If nothing else, I knew Alice wasn’t a woman you could court by half-assing things."
+    "If nothing else, I knew Alice wasn't a woman you could court by half-assing things."
     jump daymenu
 
 label BBW037:
@@ -6663,28 +6668,28 @@ label BBW037:
     scene Classroom with fade
     play music Schoolday
     "I got to class early today."
-    "I wasn’t fully awake yet- hell, I was about to fall asleep sitting at my desk - but out of nowhere an electronic jingle shook me awake."
+    "I wasn't fully awake yet- hell, I was about to fall asleep sitting at my desk - but out of nowhere an electronic jingle shook me awake."
     #[SFX: Simple electronic melody]
     "It took me a second to realize that even with just five notes I knew that tune."
     "And it took me another second to realize what it was."
-    MC "Was that the ‘Everything is two’ theme?"
+    MC "Was that the 'Everything is two' theme?"
     show BE happy at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     BE "Yeah! Someone mentioned it in a comment thread I was looking at yesterday and I ended up watching a bunch of remixes of it yesterday."
     BE "I changed my ringtone to it."
-    MC "I remember that. There was that one video with the frog jumping onto a window sill, and it doesn’t quite make it."
-    MC "It’s hanging onto the edge, trying to climb up, and the music gets really dramatic."
+    MC "I remember that. There was that one video with the frog jumping onto a window sill, and it doesn't quite make it."
+    MC "It's hanging onto the edge, trying to climb up, and the music gets really dramatic."
     show BE neutral
-    BE "Which one’s that? I haven’t seen it."
+    BE "Which one's that? I haven't seen it."
     MC "Let me see if I can find it."
     show BBW neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Everything is two? What does that mean?"
     show BE happy
     BE "It was the stupid thing from a few years ago."
-    BE "Somebody took a snippet of a song from… What was it from, Keisuke?"
-    MC "Oh… It was this old ghost kung fu movie."
+    BE "Somebody took a snippet of a song from... What was it from, Keisuke?"
+    MC "Oh... It was this old ghost kung fu movie."
     MC "There was a scene in the middle, just out of nowhere, where the hero and the girl are stuck in a temple while it rains, and this romantic song plays in its entirety."
-    MC "Someone in America posted the scene online because there’s a sign in the temple that apparently is really filthy, the way it’s written in English."
-    BE "Something about grabbing the Buddha’s nipples."
+    MC "Someone in America posted the scene online because there's a sign in the temple that apparently is really filthy, the way it's written in English."
+    BE "Something about grabbing the Buddha's nipples."
     MC "Oh god, is that what it was?"
     BE "But someone else did a cover of the song, and they made the cheesiest, most over-the-top video of romantic cliches to go with it."
     MC "And then other people made their own videos, or they took movie clips. Completely inappropriate stuff, like someone mourning a dead person or a slow pan over a cemetary."
@@ -6699,19 +6704,19 @@ label BBW037:
     "The love song plays like normal as we watch a frog prepare to jump from a fence post onto a window sill."
     "The video is in slow motion, and as the frog jumps the song immediately shifts to the most dramatic movie score-style rendition."
     BE "Oh!"
-    "But the frog doesn’t quite make it. Its front legs reach the sill, but its back legs kick in the air, then try to climb up the wall so it can get in."
+    "But the frog doesn't quite make it. Its front legs reach the sill, but its back legs kick in the air, then try to climb up the wall so it can get in."
     "And eventually it does."
     BE "Ha ha ha! It did it!"
     "Honoka found the thing hilarious, but Alice look confused. Then quickly angry."
     show BE happy at Position(xpos=0.3, yalign=1.0), Transform(zoom=1.0)
     show BBW angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
-    BBW "That’s it?"
-    BBW "What’s so amusing about that?"
-    BE "By itself, nothing. But the song is so over-the-top to begin with and the frog looked so determined…"
-    "Noticing Alice’s irritation, Honoka trailed off."
-    MC "It’s just a meme. Something goofy to laugh about."
+    BBW "That's it?"
+    BBW "What's so amusing about that?"
+    BE "By itself, nothing. But the song is so over-the-top to begin with and the frog looked so determined..."
+    "Noticing Alice's irritation, Honoka trailed off."
+    MC "It's just a meme. Something goofy to laugh about."
     BBW "Empty frivolity."
-    BBW "To think that standards of entertainment can sink so low that thousands of people will share an image of a cat with a goofy expression or… or a frog trying to jump into a window."
+    BBW "To think that standards of entertainment can sink so low that thousands of people will share an image of a cat with a goofy expression or... or a frog trying to jump into a window."
     BBW "Why is he even trying to get into the window? Why is he on the fence post to begin with!?"
     show BE surprised:
         linear 0.5 xpos 0.1
@@ -6719,11 +6724,11 @@ label BBW037:
     BE "Calm down."
     show BE neutral:
         linear 1 xpos 0.3
-    BE "It’s just a meme."
-    BBW "It’s a stupid-!"
+    BE "It's just a meme."
+    BBW "It's a stupid-!"
     show AE neutral at Position(xpos=0.9, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     AE "Is there a problem here?"
-    MC "No… No. We just got a little overly exuberant."
+    MC "No... No. We just got a little overly exuberant."
     AE "I suggest you save your energy for class."
     AE "Now take your seats."
     hide AE with dissolve
@@ -6737,14 +6742,148 @@ label BBW037:
     "And I erupted in laughter."
     "Turning in her seat, Alice glared at us."
     show BBW angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
-    BBW "Grrrrr…"
+    BBW "Grrrrr..."
     hide BE with dissolve
     hide BBW with dissolve
     "I tried to stifle my laughter, but Honoka, taking her own seat, kept chuckling right up until the teacher arrived."
-    "It was hard to concentrate on the lesson now that I had that stupid song playing in my head, but at least I wasn’t about to fall asleep."
+    "It was hard to concentrate on the lesson now that I had that stupid song playing in my head, but at least I wasn't about to fall asleep."
     jump daymenu
 
-label BBW037:
+label BBW038:
+    $setProgress("BBW", "BBW039")
+    scene Dorm Interior with fade
+    #day
+    "The morning of my second date with Alice I woke up feeling oddly at ease."
+    "I remember feeling a lot more nervous before my first date with Alice. She can be an intimidating presence."
+    "While standing in the shower I reflected that this was like going on a roller coaster: the first time it's all new and unexpected, but the second time you feel at ease."
+
+    scene Classroom with fade
+    play music Schoolday
+    "Obviously a woman can be a lot more unpredictable than a roller coaster, but the core idea still held."
+    "I wasn't completely at ease, though. In the several minutes leading up to the start of the school day I grew anxious waiting for Alice to appear."
+    "There was no reason for it, just nerves."
+    "But as the last minute began counting down, Alice hadn't shown up."
+    "I don't think she had ever been late before. Something had to be up."
+    MC "Hey, Aida."
+    show PRG neutral with dissolve
+    MC "Where's Alice?"
+    show PRG sad
+    PRG "Nikumaru-san is not feeling well. She won't be in class today."
+    MC "Oh, man. Is it bad?"
+    PRG "She wouldn't let me near her. She said she didn't want to risk passing whatever she had to me in my condition."
+    PRG "But she took her own temperature. It's 101.2. And she was complaining of aches and chills."
+    MC "Bummer. Hopefully it's just a 24-hour thing."
+    MC "Either way, our date's off, I guess."
+    MC "I'll go see her during lunch. See how she's doing."
+    show PRG happy
+    PRG "She would like that."
+
+    scene Hallway with fade
+    #Time: Afternoon
+    "Lunchtime arrived, and I made my way to Alice's dorm."
+
+    scene Dorm BBW with fade
+    play music Rain
+    "I hoped I wasn't disturbing her sleep, but I knocked lightly all the same."
+    show BBW sick with dissolve
+    BBW "Keisuke."
+    "Her voice was a croak, and she looked pale and tired."
+    MC "Sorry for bothering you. Aida told me you were sick, and I wanted to see how you were doing."
+    BBW "She told you true."
+    BBW "I believe it's only a 24-hour virus, and I will be better tomorrow."
+    MC "But we'll have to postpone our date, of course."
+    BBW "I'm sorry, but there are things even outside my control."
+    MC "Don't worry about it. Rest up, get better."
+    MC "Have you taken anything? There's this special kind of tea my mom always gave me when I was sick, and it always helped."
+    BBW "I've taken ibuprofen and cold medicine."
+    BBW "I think rest and liquids are all I need."
+    MC "Maybe."
+    MC "I'll let you go back to sleep."
+
+    scene black with fade
+    "I grabbed a quick lunch, then went back to class."
+
+    scene Hallway with fade
+    "Even while paying attention to the lessons, I was thinking over that tea I had mentioned."
+    "I could probably find it in town. It's not a rare brand or anything."
+    "Only problem was the weather didn't look too promising."
+    "But once the idea was in my head I was pretty much decided."
+    "Class got out, I went to my dorm to grab my umbrella, and I left to hit the town."
+
+    scene Pharmacy with fade
+    "Because of the ominous clouds I double-timed it down the hill, jogged to the pharmacy, and frantically scanned boxes in the cold and flu section."
+    "The packaging for the tea had been changed since I was a kid. I went past it twice before I spotted it."
+    "I paid for the tea, shoved it in my backpack, and started speed-walking back to the hill."
+
+    scene black with fade
+    play sound Thunder
+    "The bottom of the hill was in sight when the sky just opened up and began dumping water by the gallon."
+    "I had my umbrella, for all the help it was. With the heaviness of the rain and wind blowing this way and that I got pretty drenched."
+    "Nothing to be done about it, I pressed on, scaling the hill and reaching the school grounds."
+
+    scene Dorm BBW with fade
+    "I was a sopping mess by the time I got inside the women's dorm. But I had the tea."
+    "I knocked lightly again. Alice might be sleeping, but there was a good chance Aida would be in."
+    "Sure enough."
+    show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    PRG "Hotsure-san."
+    MC "Hey, Aida. Is Alice awake?"
+    show BBW sick at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    BBW "Keisuke. You're drenched."
+    MC "Alice. Here."
+    "I retrieved the tea. My backpack hadn't be spared the rain's assault, but the insides were blessedly dry."
+    MC "I mentioned this tea my mother always gave me. I found some at the pharmacy."
+    BBW "Were you out in the rain? It's pouring outside."
+    menu:
+        "Yeah, I tried to hurry to beat the rain, but...": #(-1 affection)
+            jump BBW038_c1_1
+        "If the tea helps you, it was worth it.": #(+1 affection)
+            jump BBW038_c1_2
+
+label BBW038_c1_1:
+    MC "I hope you appreciate what I went through."
+    show BBW sick-angry
+    BBW "Ugghh..."
+    BBW "I appreciate you went out of your way to help me-"
+    BBW "Even though I told you this will probably pass with some rest."
+    $setAffection("BBW", -1)
+    BBW "-but don't try to guilt me because you got caught out in the rain."
+    BBW "You chose to run that risk. You're not a victim of circumstance."
+    MC "No, I mean..."
+    MC "Never mind."
+    MC "Enjoy the tea."
+
+    scene Dorm Interior with fade
+    "I went back to my room feeling more than a little peeved."
+    "I was still soaked from head to toe, and I didn't even have anything to show for it."
+    "Shouldn't have even bothered."
+    jump daymenu
+
+label BBW038_c1_2:
+    "It was hard to tell with her mask, but it looked like Alice was smiling."
+    show BBW sick-happy
+    $setAffection("BBW", 1)
+    BBW "I appreciate the trouble you went through, but you really didn't."
+    BBW "I said before, I just needed some rest."
+    show BBW sick
+    BBW "I hope you don't get sick now, though."
+    MC "I'm sure I'll be fine."
+    MC "Just need to get out of these wet clothes. Maybe take a hot shower."
+    show BBW sick-happy
+    BBW "Well, here."
+    "She opened the tea box and handed me one of the bags."
+    BBW "Just in case."
+    MC "Thanks. I'll have it tonight and go to bed early."
+    MC "Hope you feel better tomorrow."
+    BBW "And I hope you still feel well."
+
+    scene Dorm Interior with fade
+    "I did as I said I would, changing clothes and showering."
+    "Then I made myself the tea while doing my homework."
+    "Not the night I had hoped for, but it seemed the best possible outcome given the curveball thrown at me."
+    jump daymenu
+
+label BBW039:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

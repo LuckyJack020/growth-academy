@@ -1,6 +1,7 @@
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
-#TBI: re-add condition switches
+
+#TBI: re-add condition switches (for time)
 image Lake Road = "Graphics/ui/bg/lakeroad.png"
 image School Front = "Graphics/ui/bg/schoolfront.png"
 image School Inner = "Graphics/ui/bg/schoolinner.png"
@@ -41,6 +42,7 @@ image Park = "Graphics/ui/bg/NYI.png"
 image Clock Tower = "Graphics/ui/bg/NYI.png"
 image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 image Clothes Store = "Graphics/ui/bg/NYI.png"
+image Pharmacy = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -68,6 +70,7 @@ image Tomoko sad = "Graphics/minor/tomoko-neutral.png"
 
 define MC = Character('Keisuke', color="#0066CC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')')
+define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
