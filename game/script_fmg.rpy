@@ -32,7 +32,8 @@ init 2 python:
     eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "cookingclassroom",         "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG019", "obsflags": [],               "conditions": []}
     eventlibrary['FMG019'] = {"name": "You Shine Like the Sun", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                   "location": "roof",                     "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG021", "obsflags": [],               "conditions": []}
     eventlibrary['FMG021'] = {"name": "EMUS!", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "library",                  "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG022", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG022'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",                  "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['FMG022'] = {"name": "Rock Opera", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "track",                    "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG023", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG023'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",                  "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
     
     #Optional
     eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
@@ -814,7 +815,7 @@ label FMG010_testpass:
     MC "Wait wh-"
     "But alas, she left before I could finish asking what she meant by that."
     MCT "...Ugh, why is it when someone says something interesting, they leave it off without an explanation..."
-    "I went to the student tailor to begin my mission of importance. The clothes were on a counter by the time I got there, I could tell it was hers because of the bright red undershirt packed in... and the fact it had a note saying ‘Akira Mizutani'."
+    "I went to the student tailor to begin my mission of importance. The clothes were on a counter by the time I got there, I could tell it was hers because of the bright red undershirt packed in... and the fact it had a note saying 'Akira Mizutani'."
     stop music
     scene Dorm Exterior with fade
     play music FMG
@@ -987,7 +988,7 @@ label FMG011:
         BBW "Certainly, assuming you have any interests besides athletics?"
         FMG "...Do you not see that I'm standing next to an arcade game?"
         BBW "Oh! I didn't know you were actually playing."
-        BBW "I thought you were just waving a toy gun around, going ‘Pew pew!'"
+        BBW "I thought you were just waving a toy gun around, going 'Pew pew!'"
         MCT "Oh no, Alice... now you've done it."
         FMG "...You... grab the gun and put your cash in so we can start."
         "Akira was visibly shaking with rage while Alice got into position. All I could do was watch this happen while Akira grabbed the second player gun."
@@ -1036,7 +1037,7 @@ label FMG011:
         "She took a second to clear her throat before responding."
         BBW "S-strange girl..."
         BBW "She's upset about losing at swimming, but she's more concerned about her gaming skills?"
-        MC "To be fair, you did say something about waving the gun around, going ‘Pew pew'. She takes her hobby seriously, I guess."
+        MC "To be fair, you did say something about waving the gun around, going 'Pew pew'. She takes her hobby seriously, I guess."
         BBW "Apparently..."
         MC "Well, thanks for kinda apologizing. I'm heading back to my room. See you at class."
         show BBW happy
@@ -1050,7 +1051,7 @@ label FMG011:
         FMG "Nah, I don't care if I lose or not. Besides, it's going to enter a cutscene in a sec."
         FMG "Can you believe this school has a recreation room, let alone three arcade games!"
         MC "Yeah, so what's that you're playing?"
-        FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of ‘Fallen City'. I'm just about to fight the final boss once this cutscene finishes."
+        FMG "Dead Awakening: Fubar, it's just a first person rail shooter about killing zombies in a made up place called Fallon City, I think it's a play on words of 'Fallen City'. I'm just about to fight the final boss once this cutscene finishes."
         show FMG happy at Position(yalign=1.0), Transform(xzoom=-1.0)
         "Just then, a bat-cat-zombie-thing showed up. Akira took about 3 minutes to beat it, and once she did a leaderboard showed up, displaying her score."
         show FMG neutral at Transform(xzoom=1)
@@ -1070,7 +1071,7 @@ label FMG011:
         BBW "Let me guess, I point and shoot anything that moves?"
         FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
         "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
-        "Eventually the zombies got to her, the screen turning red with blood splotches until the words ‘Game Over' came up."
+        "Eventually the zombies got to her, the screen turning red with blood splotches until the words 'Game Over' came up."
         show FMG sad 
         FMG "..Um, you shoot off the screen... to reload. I'm sorry."
         BBW "I see now."
@@ -1449,11 +1450,11 @@ label FMG015:
     "The streets were full of bustling people given the time and day, everyone was either working or buying things from the many open stores. Seeing so many going shopping made me feel like buying something too."
     "As I was taking in the sites as well as wondering what store I should go to, a thought came to me."
     "Akira had been going out of her way to help me work on my muscles; while I did believe that just working out was payment enough for her, I felt like I should at least give her something."
-    "While lost in thought, I came across a store called ‘ Pop Culture', the front of the building was made of bricks and concrete, with anime figures and cardboard cutouts in the window frames. I figured this was as good a spot as any, so I went inside."
+    "While lost in thought, I came across a store called ' Pop Culture', the front of the building was made of bricks and concrete, with anime figures and cardboard cutouts in the window frames. I figured this was as good a spot as any, so I went inside."
     "The store seemed to, as the name implied, caters to pop culture of this generation, the inside also had brick walls as well as posters of various media. The stores goods for sale consisted of toys, games, and of course, clothing. Now because of my only knowledge of what I went to the hoodie section to find a few that popped out to me."
-    "On the right was a gray hoodie, the hoodie was a weightlifting stick figure sweating profusely, with the words ‘No Pain no Muscle Gain.' on the bottom. Considering her lifestyle, Akira might love this one."
-    "In the middle was a crimson hoodie and this one was a detective looking man holding a gun, and the words ‘Sun's out Guns out!' were displayed in a word bubble. I think I recognize the guy from that one arcade game Akira likes, Cyber Rage."
-    "Last but not least was... a mint green hoodie that has a picture of a cute anime cat girl with white stripes on the left chest area... on the back was the words ‘Nya'dorable' above four anime cat-girls."
+    "On the right was a gray hoodie, the hoodie was a weightlifting stick figure sweating profusely, with the words 'No Pain no Muscle Gain.' on the bottom. Considering her lifestyle, Akira might love this one."
+    "In the middle was a crimson hoodie and this one was a detective looking man holding a gun, and the words 'Sun's out Guns out!' were displayed in a word bubble. I think I recognize the guy from that one arcade game Akira likes, Cyber Rage."
+    "Last but not least was... a mint green hoodie that has a picture of a cute anime cat girl with white stripes on the left chest area... on the back was the words 'Nya'dorable' above four anime cat-girls."
     "..."
     MCT "I'm tempted to get it just as a joke."
     menu:
@@ -1468,7 +1469,7 @@ label FMG015:
             MCT "...Yeah, I don't know if she'll like this... but it might be funny to give this to her."
     "With the sweat shirt in hand, I paid for it, and set my sights on finding Akira."
     "I figured that given I was already in town, I would start my search for her at the local gym."
-    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a “Rowing Machine”, pulling the rope thing in a similar manner of rowing a boat."
+    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a "Rowing Machine", pulling the rope thing in a similar manner of rowing a boat."
     "It did not take long for her to see me, she smiled and gave me a wave to come over."
     show FMG happy with dissolve
     FMG "Sup Kei-kun! What brings you to this side of the island?"
@@ -1586,7 +1587,7 @@ label FMG016:
     show FMG neutral with dissolve
     FMG "Huh, this place is cute."
     MCT "I find it more cloying than cute."
-    "Once we were done ‘admiring' the scenery, we took our seats and waited for the waitress."
+    "Once we were done 'admiring' the scenery, we took our seats and waited for the waitress."
     MC "You know, never thought we'd be in a café like this."
     FMG "Well, I don't know about you, but I'll try anything once."
     "About two minutes later, our waitress came by, but I couldn't shake the feeling I knew her."
@@ -1609,7 +1610,7 @@ label FMG016:
     "We did nothing but consume our orders in silence while we waited for Chibuki's break to happen."
     scene Town with fade
     play music Hallway
-    "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki. I heard a ‘hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
+    "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki. I heard a 'hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
     show Chibuki neutral at Position(xpos=0.75) with dissolve
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     Chibuki "God, out of all the people in the world to come to this one maid café, it had to be my roommate and her boyfriend!"
@@ -1653,7 +1654,7 @@ label FMG016:
     Chibuki "If that's what it takes to buy your loyalty, then so be it... master."
     FMG "...Nope. Nope, I'm not dealing with this! Nope! I'm nope'ing back to the dorms and then I'm going to nope myself to bed... nope... nope..."
     hide FMG with dissolve
-    "Akira just left, repeating ‘nope' to herself till she was out of earshot. I turned to Chibuki to say something, but to my confusion and surprise, she was grinning like she'd won something."
+    "Akira just left, repeating 'nope' to herself till she was out of earshot. I turned to Chibuki to say something, but to my confusion and surprise, she was grinning like she'd won something."
     show Chibuki neutral at Position(xpos=0.5)
     Chibuki "And that, my dear Keisuke, is how you win a battle against your roommate."
     MC "...Huh?"
@@ -1693,7 +1694,7 @@ label FMG017:
     MC "I didn't say it made sense."
     show FMG neutral
     FMG "Ignoring that, what kind of messages has she been sending?"
-    MC "Well, it's mostly just “How are you doing?” and such. In the latest one, she was asking about why my sis-"
+    MC "Well, it's mostly just 'How are you doing?' and such. In the latest one, she was asking about why my sis-"
     show FMG surprised
     FMG "O-Oh no!"
     "Alas, I was not able to complete my sentence about how my sister has not been replying to mother's mail thanks to Akira. My confusion as to why Akira interrupted me was answered to what was in front of us."
@@ -2325,7 +2326,7 @@ label FMGBBW001:
     hide FMG with dissolve
     hide BBW with dissolve
     "Once both of them were done, they went their own ways."
-    MC "Huh, that‘s something."
+    MC "Huh, that's something."
     show RM neutral with dissolve
     RM "I'm sure you noticed something wrong with that conversation right?"
     MC "...Kazomazumi Bakery."
@@ -2512,6 +2513,337 @@ label FMGBBW001:
     jump daymenu
 
 label FMG022:
+    $setProgress("FMG", "FMG023")
+    scene Track with fade
+    play music Busy
+    "At last the pounding of my feet and the whistle of the wind ground to a halt."
+    if getSkill("Athletics") > 3:
+        "I had kept a solid pace running around the track with Akira, and even when I started to flag in the fifth lap I felt like it was... not as far back as the last time."
+        "I couldn't actually see a difference, but I could just {i}feel{/i} the centimeters of progress I'd made."
+        $setSkill("Athletics", 1)
+        "It counts."
+        show FMG happy with dissolve
+        FMG "Whew, good run! You were really pushing it, Kei-kun!"
+        "I nodded as I grabbed my water bottle, appreciating the transition from the hard track to the springy grass."
+        MC "Thanks, you too. But I guess I don't need to tell you that."
+        show FMG neutral 
+        "She smirked and grabbed hers, too, and we clinked our bottles together."
+        MC "Down the hatch!"
+        "Our bottles were about half empty by the time we finished the first draft. But for my part, my shirt and the tips of my bangs received about as much of that cool water as my mouth."
+        MC "Ahhhhh..."
+        FMG "Ahhhhh..."
+    else:
+        "Akira had passed me once, maybe twice in the course of our run. To be honest, I lost count after it felt like my lungs caught fire."
+        "I trudged on, legs bending at a new angle with every step I took, Akira's blurry image some twenty meters ahead at the finish line. Her hands were on her hips, until she raised them to cup them around her mouth."
+        show FMG angry with dissolve
+        FMG "Let's go, let's go! You want the finish line, Kei, work for it!"
+        "And so I did. In my own way."
+        "If there's a word for stumbling and flopping your limbs forward like a brain damaged octopus, I don't know it. But that's roughly how I reached the finish line."
+        $setSkill("Athletics", 1)
+        FMG "God, Kei, you're supposed to get better with practice! What'd you do, eat a whole thing of pasta right before our run?"
+        MC "You..."
+        extend " not supposed to do that?"
+        show FMG surprised 
+        FMG "Oh."
+        extend " My."
+        extend " God."
+        "I picked up my water bottle and took a long draft."
+        MC "Ah, chill, I'm just joking. If I'd actually done that it would've come back up around lap two."
+        show FMG neutral 
+        FMG "Gross. But you're probably right."
+        MC "Still, yeah, I gotta work on my endurance. I'll just think about someday beating {i}you{/i} in a race."
+        show FMG happy
+        FMG "Heh, better get working, Kei-kun, 'cause I'm not slowing down!"
+        MC "I'm counting on it."
+    MC "So hey..."
+    show FMG neutral 
+    FMG "Yeah?"
+    MC "I was thinking of going rock climbing tomorrow around the time of our normal workout. I thought it'd be fun to try, and it's arm day tomorrow anyway. Think you'd be down for that?"
+    FMG "Hmm..."
+    FMG "Sure, I guess. But are they gonna set up the equipment just for us?"
+    MC "Oh, see, I had something else in mind."
+    MC "We'll go out into the woods and climb one of the rocks or cliffs out there."
+    MC "It'll be a nice change of scenery, and we can get to know the island a little bit. How 'bout it?"
+    show FMG happy 
+    FMG "Ooh!..."
+    FMG "Yeah, sounds fun!"
+    FMG "In fact, I'm gonna bring a stopwatch and we're gonna make it interesting! I wanna see if I stomp you as hard climbing as I do running."
+    MC "Funny, I was just thinking the same thing."
+    show FMG aroused
+    FMG "Oh, you're on."
+    MC "Forward, back, and side to side might be your domain, Akira, but up is {i}my{/i} kingdom. Get ready."
+    FMG "Lotta talk, Kei-kun. Let's see what that does for you tomorrow."
+    "My shit-eating grin almost felt good as I nodded and said,"
+    MC "Meet you by the lake."
+    show FMG neutral 
+    FMG "See you there."
+    hide FMG with dissolve
+    "We walked off the track and parted ways, Akira to her dorm and I towards town."
+    
+    scene Town with fade
+    MCT "I am absolutely, one hundred percent gonna get smoked tomorrow."
+    "But I didn't really regret putting on a show."
+    "It always makes me smile when she gets all hyped up for a competition. And win or lose, it was going to be nice trying something new with her."
+    MCT "Now, gonna need a couple helmets, gloves, some bug spray..."
+    stop music
+    
+    scene black with fade
+    pause 1.5
+    
+    scene Lake Road with fade
+    play music Sunset
+    "I got there ahead of her, so I had a minute to look out at the lake's shimmering reflection of the sky."
+    "Little spots on the water were rustled by the passing breeze, which carried the warm, grassy scent of the surrounding forest."
+    extend " I breathed it in deep as I stretched my arms and leaned on the creaky wooden railing."
+    "Then came the coarse little squeaks of Akira walking down the steps; she had her shake bottle in her hand, pumping it in a tight oval as she moved."
+    show FMG neutral with dissolve
+    MC "Hey!"
+    FMG "Hey, what's up?"
+    MC "Just stretching before we head out. I picked up some gear for us, too."
+    "With that I handed her her helmet and gloves and slipped on my own. Once her gloves were on, I passed the bug spray."
+    FMG "Oh, good idea. Thanks!"
+    MC "I thought it'd help. We wouldn't wanna incur the wrath of some vengeful bee."
+    show FMG sad
+    FMG "Oh God no, that would freaking suuuuuuck."
+    "She rubbed her triceps at the very idea, as if to console them."
+    show FMG neutral 
+    FMG "Not gonna lie though, it feels a little goofy walking into the woods wearing a bike helmet."
+    MC "No different than if we were going to the gym. Besides, it's for safety in case one of us falls."
+    "She shook the can vigorously and held it over her shins."
+    FMG "I guess, but it's been so dry lately that-"
+    show FMG surprised with vpunch
+    FMG "{i}Ah frick it's cold!{/i}"
+    "We both jumped a little as she jerked her hand away, cringing."
+    MC "Woah, you okay?"
+    show FMG neutral 
+    FMG "Yeah, it just surprised me. I'll do the rest, one sec."
+    "She finished generously coating the hoary spray up her legs and across her arms, then tossed the can back to me; it was dented and just slightly bent."
+    "That done, I watched her stretch and listened to the elongated groans of the floorboards under her."
+    extend " After a second, I remembered that I still needed to finish stretching."
+    FMG "Hmmmm~..."
+    "She sat up with her arms, like beams, still reaching to her toes, and then just sat back, her chest to the sky and waving slowly with her deep breaths."
+    FMG "I gotta say, that breeze is refreshing."
+    MC "I thought the same thing."
+    MC "..."
+    extend " Well, shall we?"
+    show FMG happy
+    "She slapped the ground."
+    FMG "Let's do it to it!"
+    
+    scene Woods with fade
+    "We passed a brief walk on the hiking trails with some small talk draped over our casual survey of the woods. A sea of rustling green stretched out in every direction, its horizon broken up by a thousand towers of brown and tawny."
+    show FMG neutral with dissolve
+    FMG "Man, I don't know if I've even been out here since I moved in. It's so pretty!"
+    MC "Isn't it? Maybe I should come out here more often."
+    FMG "Speaking of which, are we far from the spot?"
+    MC "Oh, uh..."
+    extend " I didn't actually pick out a spot beforehand. I just thought it would be a nice idea."
+    show FMG angry
+    FMG "Do you mean we gotta {i}find{/i} a rock to climb on?"
+    if getSkill("Academics") > 2:
+        MC "We're near a mountain. If we follow the terrain up, we'll find one. It won't take long."
+        FMG "Egh... if you say so. I've got other stuff I wanted to do today."
+        MC "I know, I know. Just trust me."
+    else:
+        MC "...Yeah."
+        FMG "Oh, for the love of..."
+        MC "There's probably a bunch out here, we're bound to find something eventually."
+        FMG "Eventually? Dude, you know I have a whole routine for the day."
+        MC "I'm sorry, but look, there's some hills right there. We can't be far off."
+    show FMG neutral 
+    "She rolled her eyes... couldn't tell if it was at me or herself... and we started down the trail again. This time, we mostly just looked around."
+    "The pebbles and roots under my shoes spurred me forward, past the regularly-placed benches, gradually up the land as the pale blue sky sunk lower all around us. Lower and lower..."
+    "I turned my head at the drumming of a woodpecker off in the distance, hoping to spot its creator."
+    extend " And I saw it."
+    "A towering, wrinkled, gray old face peacefully asleep by a creek. It was crested with disheveled green and a few thick roots poked out from the veins of soil near the top."
+    "I tapped Akira on the shoulder."
+    MC "Check it out."
+    show FMG neutral at Transform(xzoom=-1)
+    FMG "Huh! That oughta do, let's try it."
+    "She began jogging through the undergrowth with me in pursuit, stirring up a commotion of rustling and snapping."
+    MC "And hey, after we're done, we've got something to drink."
+    show FMG neutral at Transform(xzoom=1)
+    FMG "Naw, I'm good with my shake, thanks. Fish {i}poop{/i} in there."
+    if getSkill("Academics") > 2:
+        FMG "Thought you'd know that there, Dr. Science."
+        MC "Oh, hush."
+    "Akira pulled her stopwatch from her pocket and looped the lanyard around her neck."
+    FMG "To the top and back down, or just to the top?"
+    MC "Just to the top's good."
+    show FMG happy 
+    FMG "Then watch and be amazed!"
+    MC "Shouldn't we do a test run first?"
+    show FMG happy at Transform(xzoom=-1)
+    show FMG happy:
+        ease 0.75 xpos 0.9
+    "I asked the empty space in front of me as Akira clicked the start button on her stopwatch and began ascending."
+    "It was a marvel; she crawled from crag to crag, nearly as natural as a spider, barely needing half a second to secure her footing before grabbing the next hold."
+    "And it seemed like yesterday I'd delivered her a brand new uniform, yet the jabbing piston action of her numerous defined muscles was almost as clear under her jacket as out of it. The few times she climbed straight up, her shoulder blades seemed ready to punch right through."
+    "At last she came within reach of the ledge and slid herself up it. She clicked the stopwatch; her grin looking at it was wide, heartwarming, and withering all at once."
+    show FMG unique at center with dissolve 
+    FMG "43 seconds!"
+    show FMG neutral 
+    FMG "Still think you got this?"
+    "I nodded up at her."
+    MC "Respectable."
+    MC "But now it's my turn. Time me."
+    "I saw her nod back down with a smirk and press the button, just as I took a breath and grabbed a rock."
+    hide FMG with dissolve 
+    if getSkill("Athletics") > 5:
+        "My fingers pierced the loose soil veneer and dug into the cold, solid rock just past, and the dirt came with me, on my fingers and knees and the tips of my shoes, as I pulled myself higher and higher up the cliff."
+        "I chanced to look up, and saw Akira's smile replaced with a dubious frown."
+    else:
+        "And that's when I learned that 'well begun is half done' is an abhorrent, malicious lie."
+        "Every meter I climbed was pain, tendon-wringing, lung-searing pain, sprinkled with dirt and drizzled with shortness of breath, all set in a bowl of tragic irony."
+        "I think I was two meters off the ground and my arms were already beginning to shake; I think; I dared not look down."
+        "But in my throes, I happened to look up and saw Akira... frowning down at me."
+        "Somehow, it was not... quite the expression I'd expected."
+    show FMG sad
+    show FMG sad at Transform(xzoom=-1)
+    pause 0.5
+    show FMG sad at Transform(xzoom=1)
+    pause 0.5
+    show FMG sad at Transform(xzoom=-1)
+    pause 0.5
+    show FMG sad at Transform(xzoom=1)
+    FMG "Kei? I dunno about this..."
+    MC "Ngh... huh?"
+    FMG "This looks really high from this angle..."
+    FMG "Let's just call off the race thing. Take it slow and be careful, okay?"
+    menu:
+        "Okay, if you say so.":
+            jump FMG022_c1_1
+        "I am the mountain king!":
+            jump FMG022_c1_2
+
+label FMG022_c1_1:
+    show FMG neutral 
+    FMG "Yeah... uh, thanks, I guess..."
+    MC "Hmph... yep."
+    if getSkill("Athletics") > 5:
+        $setAffection("FMG", 1)
+        "I was definitely starting to feel it in my back and my chest, pulling myself upwards as I was, but I still had no real trouble to that point. Nevertheless, I gave every hold an obligatory wiggle before climbing it."
+        "I guess, taking it slower made me better appreciate the breeze passing by as I got higher up, wicking away my budding sweat."
+        "Finally I dug my palms into the thicker, rocky soil of the ledge. Akira stepped back as I worked up my palms, then my forearms, then one leg and the other."
+        "I stood atop the peak a while, breathing not easy but free."
+        MC "Whew..."
+        extend " quite a view."
+        FMG "It is, huh?"
+        MC "You, uh, wanna do another rep?"
+        FMG "...Let's climb back down. I think it's almost time for my run."
+        MC "Oh yeah! Guess we took a hot minute getting here..."
+        extend " sure, let's go back."
+        hide FMG with dissolve
+        "Gravity was for once a kindly mistress as we retraced our steps back down the slope; she hit the ground first and got a couple jumping jacks in before I touched down, too."
+    else:
+        "Luckily, I had the 'take it slow' part downpat."
+        "The slope mellowed out closer to the top, which meant my arms had a slightly easier time dragging my useless legs and chest up across the rocks."
+        "As new scrapes and bruises formed on my body by the second, I craned my neck up to see how far I had yet to go."
+        show FMG happy with dissolve
+        "Akira looked down at me, put on her most reassuring smile and gave me a stiff thumbs up."
+        show FMG sad
+        "At last I came within reach of the ledge and my soul reached out to the immortal earth for strength as I flopped my way up to solid ground."
+        "My prayers were answered, and I rolled safely onto my back. The fires in my everything began to die down."
+        "Then, I looked up and gave Akira a shaky thumbs up."
+        show FMG neutral
+        FMG "You sure did it, Kei-kun."
+        FMG "...Probably about time we go back, though. Don't suppose you wanna go again?"
+        MC "Not... today. Limbs... jelly."
+        FMG "Okay, well... I'm gonna go back down, it looks like there's a slope around back that you can walk down. Meetcha at the bottom."
+        MC "Ngkay."
+        "I heard the earthy rustling of her climbing down while I rolled myself gradually to standing position."
+        "The rustling stopped by the time I got up; I prodded myself to get down the slope in a hurry, and one long, wobbly shuffle later, I met with her."
+    MC "Thanks for waiting up."
+    show FMG neutral 
+    FMG "'Course. I need somebody to show me outta the sticks."
+    MC "Right this way, madame."
+    hide FMG with dissolve 
+    "And so I did, after she gave my arm a good whack."
+    "But there was something else I wanted to tell her, that took me the rest of our time on the trail to say."
+    
+    scene Lake Road with fade
+    show FMG neutral with dissolve 
+    MC "So, like, why the concern all of a sudden back there?"
+    FMG "Like I said, {i}push{/i} your limit, don't shoot past it. Because passing your limit in the gym might mean spraining your shoulder, but back there it might mean breaking your leg."
+    MC "Eesh... I guess you're not wrong. I just didn't think of that."
+    show FMG happy 
+    FMG "Good thing you got me watching your back, then!"
+    MCT "But you went first... and you damn near sprinted up there..."
+    show FMG neutral 
+    FMG "And, you know..."
+    extend " it wasn't a bad workout."
+    "I smiled."
+    MC "Glad you liked it."
+    hide FMG with dissolve 
+    "I liked it, too."
+    jump daymenu
+
+label FMG022_c1_2:
+    "And I started hauling ass like never ass had been hauled before or, to my knowledge, since."
+    show FMG surprised 
+    FMG "Hey! That's the opposite of slow!"
+    if getSkill("Athletics") > 5:
+        "I began yanking myself up hard on every hold, even using one or two to leap up from. Higher and higher I climbed, ascending to the seat of my rocky throne."
+        show FMG angry
+        "At last I sprung over the ledge and bounced to a standing position."
+        MC "WOO! What'd I tell ya? "
+        extend " Alright, how'd I do?"
+        "She looked down at the stopwatch, unmoved."
+        FMG "58 seconds."
+        FMG "Oh look, I win. Shocker."
+        MC "Disappointed?"
+        $setAffection("FMG", -1)
+        FMG "Kei, I was serious. What if you missed a spot? This thing's like 15 meters high!"
+        MC "I {i}did{/i} watch where I was going, you know, I was just trying to go fast, too."
+        FMG "Well, fine. What do I know?"
+        MC "You know how to give it your all. And so do I."
+        pause 1.5
+        show FMG neutral
+        "She shook her head."
+        FMG "That was so cheesy it hurt."
+        FMG "Anyway, it's getting close to time for my run. I vote we head back."
+        MC "Sure, yeah. And, uh, thanks for doing this with me."
+        FMG "Uh huh. No problem."
+        hide FMG with dissolve
+        "And we hoofed it back down the cliff and retraced our steps to the trail."
+        scene Lake
+        "A little bit of small talk later, and we were back on school grounds."
+        "I tried to dust over the incoming silence, but when it finally came all I could do was wonder."
+        "What was she so afraid of?"
+        jump daymenu
+    else:
+        show FMG surprised with vpunch
+        "Yep, nobody's gone nowhere faster than me."
+        "The instant I summoned the energy to throw my arm up, my foot slipped and I frantically started trying to hug the rock face."
+        extend " It... kind of... worked, as I avoided a freefall and instead slid straight down, the jutting rocks lifting my shirt and grinding like a dull cheese grater against my virgin underbelly."
+        hide FMG with dissolve 
+        "The lukewarm impact when I hit the ground shot up my ass and into my skull. I collapsed onto my back, hearing nothing but my own spent groan."
+        "For a moment or two I laid there."
+        extend " At last I rolled onto my arms and pushed myself up to a stand, and turned around to mount the rock once more. I may not be a rock climber, but I'm not a quitter either."
+        "I reached my hand up,"
+        extend " just before I felt the warm tightness of Akira's hand grabbing mine from behind and effortlessly yanking me away."
+        "There was nothing more in me; I just laid back while she dragged me at a brisk pace across the forest floor. Loose twigs and the occasional ant bored into the waistband of my shorts."
+        "She got to the paved trail and stopped."
+        show FMG sad with dissolve
+        FMG "Can you stand?"
+        MC "Yeah."
+        "And so I did."
+        FMG "Wow... I..."
+        FMG "I'm not even mad... I have no words..."
+        MC "Yeah... I pushed myself a bit too hard."
+        $setAffection("FMG", -2)
+        FMG "That was like a kitten watching its parents being taken away... oh, man, I wasn't ready for this..."
+        MC "Y'know what, maybe we should just get outta here and never speak of this again."
+        FMG "We should do that, yeah." 
+        hide FMG with dissolve
+        scene Lake
+        "And so we did."
+        "We made it back just in time to get ready for Akira's run, but we agreed it was better I sit that day out."
+        "I was carrying a thing or two I'd learned that day about boundaries."
+        "And I still needed to find the last ant in my shorts."
+        jump daymenu
+
+label FMG023:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
