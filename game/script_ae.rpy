@@ -10759,6 +10759,7 @@ label AE049:
     Tako "C'mon. I know what you want, dude."
     MC "What I... want?"
     "Yureno-san was gone. Whoever I was talking with was a far cry from the carefree and laid back girl who I walked in with."
+    stop music
     Tako "Don't play dumb. Shiori-chan says she knows people, but I know people in a way she could never understand."
     Tako "I know you're actually a huge liar."
     MC "Liar?"
@@ -10793,6 +10794,7 @@ label AE049:
     Tako "I'm with you all the way, my dude. I can't think of anyone better for Shiori."
     Tako "Take good care of her, aight?"
     "Taking another drink of her coffee, she looked over to the Kazoku-mart across the street and..."
+    play music Busy
     Tako "MM!"
     "Suddenly, and excitedly, she put down her cup and stood up from the table."
     Tako "Yo! Let's bounce. It was really good and all, but I think we should head back."
