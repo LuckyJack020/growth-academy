@@ -4080,7 +4080,6 @@ label PRG026:
 label PRG026_father:
     $setProgress("PRG", "PRG027")
     scene Dorm Interior with fade
-    play music Rain
     "I smoothed my shirt with my hand and smiled. It had been a few days since Aida and I had... made love, and weirdly, I hadn't seen her since."
     "She hadn't been in class for two days. According to Alice, she hadn't been feeling well as of late and was resting in their dorm. Although, even with Alice's assurance that she would be alright, I still was worried."
     "I ran a brush through my hair in a failed attempt to look less shaggy than I was. After our special moment together, I wanted to make sure that I at least looked presentable."
@@ -4116,8 +4115,8 @@ label PRG026_father:
 
     scene Dorm PRG Day with fade
     "I opened my eyes slowly and lifted my head."
-    show PRG sad with dissolve
-    play music PRG
+    show PRG unique with dissolve
+    play music PRGDramatic
     MC "Ah... ?! Y-You... Uhh..."
     "My eyes nearly blew out of their sockets. Aida stood before me, her face more red than I'd ever seen it, which was an achievement in and of itself. Her usual school issued uniform was stretched nearly to its breaking point, doing its best to cover her."
     "My heart nearly stopped when my gaze went lower and stopped at her newly grown stomach, which jutted out from her as if she'd put a beach ball up her shirt. Going down her shirt, the buttons held as tightly as they could, barely restraining her new girth."
@@ -4127,7 +4126,6 @@ label PRG026_father:
     "I scanned over the sheet with lightning speed, until my eyes fell flat on one word."
     MC "Hyperfertile."
     PRG "The day after you and I made love, I-I woke up with this... belly. I wasn't sure what to do, and I was really scared... So I went to the infirmary right away that morning."
-    show PRG unique
     PRG "The nurse told me to keep an eye on it, and come back in two days if anything changed."
     "I stared at her dumbfounded, in awe at her new form."
     PRG "Then, I woke up this morning... and my belly had grown even more. So, like the nurse instructed, I went back to the infirmary."
@@ -4177,6 +4175,7 @@ label PRG026_c1_1:
     show PRG neutral
     PRG "I'm going to hold you to that, you know."
     MC "I know."
+    play music PRG
     PRG "..."
     PRG "We'd better be getting to class, Hotsure-san."
     MC "We should. Are you ready for your grand entrance? Everyone is going to be floored when they see you."
@@ -4325,6 +4324,7 @@ label PRG026_c1_2:
     PRG "B-B-But... but why?"
     MC "I'm not ready to be a father, Kodama-san. No matter how you slice it, I'm not mature enough, and I sure as hell don't think I can handle the responsibility."
     MC "I-I'm sorry."
+    stop music fadeout 2.0
     "Aida didn't say anything as she continued sobbing. She sat on her bed gently and buried her head into her pillow, muffling her sniffles."
     MC "I..."
     $setAffection("PRG", -20)
@@ -4348,7 +4348,6 @@ label PRG026_nofather:
     $setProgress("PRG", "PRGend_nofather")
     #$lockRoute("PRG") #when route is complete
     scene Dorm Interior with fade
-    play music Rain
     "I brushed a stray piece of hair off of my uniform and took a breath. I was going to go to Aida's room and I planned to walk her to class."
     "She'd been sick the last few days, so I hadn't seen her recently, but from the occasional text here and there, I gathered that she was feeling at least passable."
     "It was strange. Even though I felt comfortable with Aida, having spent so much time with her, after our latest encounter, I wasn't quite sure how to feel."
@@ -4404,7 +4403,7 @@ label PRG026_nofather:
     
     scene Dorm PRG Day
     show PRG sad with vpunch
-    play music Bittersweet
+    play music PRGDramatic
     "My eyes opened in a flash and my head shot up. There stood Aida no more than four feet in front of me. Immediately, my eyes shot to her stomach, which in only two days, had already swollen a considerable amount. Her breasts perched on top of her impressive belly like two boulders."
     MC "W-Whoa..."
     "I couldn't think of anything else to say. I think my head had blown a circuit."
@@ -4417,6 +4416,7 @@ label PRG026_nofather:
     show PRG unique
     PRG "Mhmm... I'm hyperfertile. As the nurses put it, I can get pregnant very easily. And that leads into what I wanted to tell you, Hotsure-san."
     MC "W-What's that?"
+    play music PRG
     PRG "I'm... I'm a mom now, Hotsure-san. And I really wanted you to be the father to my baby, but since you aren't..."
     PRG "W-We can't become anything more than friends."
     MC "Oh."
@@ -4435,7 +4435,8 @@ label PRG026_nofather:
     "Aida walked over to the bed and hugged me, her belly and breasts pressing against my torso. As I pulled away from the hug, she leaned over and kissed me gently on the cheek."
     PRG "I'll see you in class, Hotsure-san."
     MC "Count on it."
-    
+    stop music
+
     scene Dorm Exterior with fade
     "I let myself out of her dorm and began walking to my first class. Even though it didn't start for awhile, the room would be deserted so I could think."
     "I had a lot of thinking to do."
