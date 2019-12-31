@@ -6726,7 +6726,7 @@ label PRG037:
     MC "Are they usually chocolate covered?"
     BBW "Not traditionally, but I assume they are trying a home-style recipe out of that. But, they've made a grave error with that, as well."
     MC "How do you mean? They've only added chocolate to it. How can anyone screw that up?"
-    show BBW unique
+    show BBW haughty
     BBW "Exactly. It seems simple. However, that simplicity is what just ruined their dessert. You see, adding a liquid to a pastry isn't that complex, but the timing is."
     BBW "If they had placed it into a cup, and served the liquid chocolate alongside their cannoli, that would've been much better. But, now that the chocolate is going to be sitting on that cannoli for almost half an hour..."
     MC "The pastry will get soggy, right?"
@@ -6880,7 +6880,7 @@ label PRG037:
         jump daymenu
         
     scene Dorm Interior with fade
-    play music Sunset
+    play music Hallway
     $setFlag("PRG037_pass")
     "After I had gorged myself on cheap cafeteria ramen and doused my mouth with water afterwards to clear my system of god knows how much extra sodium, I went back to my dorm, ready to slip away into a college style food coma."
     "My bed had never looked more heavenly as I flopped face first into it."
