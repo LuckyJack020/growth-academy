@@ -2591,7 +2591,7 @@ label FMG022:
     pause 1.5
     
     scene Lake Road with fade
-    play music Sunset
+    play music Hallway
     "I got there ahead of her, so I had a minute to look out at the lake's shimmering reflection of the sky."
     "Little spots on the water were rustled by the passing breeze, which carried the warm, grassy scent of the surrounding forest."
     extend " I breathed it in deep as I stretched my arms and leaned on the creaky wooden railing."
