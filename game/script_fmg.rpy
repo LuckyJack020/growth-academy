@@ -2680,7 +2680,7 @@ label FMG022:
     "It was a marvel; she crawled from crag to crag, nearly as natural as a spider, barely needing half a second to secure her footing before grabbing the next hold."
     "And it seemed like yesterday I'd delivered her a brand new uniform, yet the jabbing piston action of her numerous defined muscles was almost as clear under her jacket as out of it. The few times she climbed straight up, her shoulder blades seemed ready to punch right through."
     "At last she came within reach of the ledge and slid herself up it. She clicked the stopwatch; her grin looking at it was wide, heartwarming, and withering all at once."
-    show FMG unique at center with dissolve 
+    show FMG flex at center with dissolve 
     FMG "43 seconds!"
     show FMG neutral 
     FMG "Still think you got this?"
@@ -2698,7 +2698,7 @@ label FMG022:
         "I think I was two meters off the ground and my arms were already beginning to shake; I think; I dared not look down."
         "But in my throes, I happened to look up and saw Akira... frowning down at me."
         "Somehow, it was not... quite the expression I'd expected."
-    show FMG sad
+    show FMG sad with dissolve
     show FMG sad at Transform(xzoom=-1)
     pause 0.5
     show FMG sad at Transform(xzoom=1)

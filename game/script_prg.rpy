@@ -6793,7 +6793,7 @@ label PRG037:
     hide PRG with dissolve
     "The judges nodded to each other, and Aida took the appetizer back to their table. Sakura took the large plate of sashimi in hand and approached the judge's table, setting it down gently in the center. She handed chopsticks to each of them before taking a measured step back."
     "One by one, each judge plucked a piece of fish from the plate. Sakura had used a combination of salmon, tuna, and yellowtail to form her flower patterns, so each arrangement was a blend of fish pieces."
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     "Once they had finished, Sakura deftly swept the plate from the table and carried it back. Aida came forward once more with her mochi on a tiny plate. One of the judges smiled as the plate was set down, before quickly stifling her excitement."
     MCT "Heh. Impartial, my ass."
     "The judges each sliced into a different piece of mochi, each of them testing the consistency. More nodding to each other."
@@ -6816,12 +6816,12 @@ label PRG037:
     "The judges whispered amongst themselves once more before calling over the announcer."
     Announcer "Yes... alright, if you say so."
     "The announcer hurried to the center of the room and turned to address the gathered crowd."
-    show PRG unique at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG unique at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     Announcer "Ladies and gentlemen, under most circumstances, the judges would deliberate for a short while to determine a winner. However, I've been informed that they've already made their decision."
     Announcer "The winner of our four way competition is..."
     Announcer "Kodama-san and Sakura-san!"
     show BBW happy
-    show PRG happy
+    show PRG happy at Transform(xzoom=-1)
     MC "YES!!"
     "The crowd erupted with cheers and gave them a standing ovation. Sakura and Aida high fived before embracing each other, tears of joy streaming down their faces. Then, in a flash, Aida had ran across the room and plowed straight into me, knocking me back into my chair in a fit of pure excitement and glee."
     MC "URGH! C-Congratulations Aida!"
