@@ -47,6 +47,7 @@
     debugmappoint = False
     globalsize = 1
     prgsize = 1
+    activenotifications = 0
     
     import math
 
@@ -341,6 +342,11 @@
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
+        if val >= 0:
+            img = "Graphics/ui/notification/" + girl + "-up.png"
+        else:
+            img = "Graphics/ui/notification/" + girl + "-down.png"
+        showNotification(img)
         
     def getAffection(girl):
         if not girl in girllist and not girl == "RM":
@@ -425,6 +431,11 @@
             return -1
         else:
             skills[s] += val
+            if val >= 0:
+                img = "Graphics/ui/notification/" + s + "-up.png"
+            else:
+                img = "Graphics/ui/notification/" + s + "-down.png"
+            showNotification(img)
             return skills[s]
     
     def setSkillDebug(s, val):
@@ -439,6 +450,12 @@
             return -1
         else:
             return skills[s]
+    
+    def showNotification(img):
+        global activenotifications
+        if activenotifications <= 2:
+            activenotifications += 1
+            renpy.show_screen("notification" + str(activenotifications), img)
     
     def setProgress(girl, event):
         routeprogress[girl] = event
@@ -481,11 +498,23 @@
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
     
-    #Edge case handler for Aida's intiial pregnancy
+    #Edge case handler for Aida's initial pregnancy
     def setPregnant():
         global prgsize
         if 3 > prgsize:
             prgsize = 3
+    
+    def updateSP(event):
+        global spmax
+        global spspent
+        if not "spmax" in globals():
+            spmax = 0
+            spspent = 0
+        if not "sp" in eventlibrary[event]:
+            return
+        if eventlibrary[event]["sp"] <= spmax:
+            return
+        spmax = eventlibrary[event]["sp"]
 
     class MapLine(renpy.Displayable):
         def __init__(self, **kwargs):
@@ -534,6 +563,8 @@ label start:
         hightlitmenuchoice = -1
         routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'BBW': True, 'PRG': True}
         routelock = ""
+        spmax = 0
+        spspent = 0
         
         debugmapname = ""
     jump global000
@@ -599,25 +630,30 @@ screen daymenu:
                 imagebutton idle im.FactorScale("Graphics/ui/icons/BE-icon.png", .25) action [SetVariable("debugmapname", loc)]
     
     add MapLine()
-    
-    #studying activities (non-special day)
-    imagebutton idle "Graphics/ui/map/athletics.png" xalign 0.05 yalign 0.9 action [SetVariable("activeevent", "Athletics"), Jump("train")]
-    imagebutton idle "Graphics/ui/map/art.png" xalign 0.15 yalign 0.9 action [SetVariable("activeevent", "Art"), Jump("train")]
-    imagebutton idle "Graphics/ui/map/academics.png" xalign 0.25 yalign 0.9 action [SetVariable("activeevent", "Academics"), Jump("train")]
+
+    #studying activities (costs skill point)
+    if "spmax" in globals():
+        text "Skill Points: " + str(spmax - spspent) xalign 0.05 yalign 0.845 color Color((0, 0, 0))
+        if spmax > spspent:
+            imagebutton idle "Graphics/ui/map/athletics.png" xalign 0.05 yalign 0.95 action [SetVariable("activeevent", "Athletics"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/art.png" xalign 0.15 yalign 0.95 action [SetVariable("activeevent", "Art"), Jump("train")]
+            imagebutton idle "Graphics/ui/map/academics.png" xalign 0.25 yalign 0.95 action [SetVariable("activeevent", "Academics"), Jump("train")]
     
     #scene title
     if highlitevent != "":
         frame:
-            xalign 0.5
+            xalign 0.9
             yalign 0.9
+            xanchor 1.0
             background Solid(Color((0, 0, 0, 100)))
             if debugenabled:
                 text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
             else:
                 text(eventlibrary[highlitevent]["name"])
         frame:
-            xalign 0.5
+            xalign 0.9
             yalign 0.975
+            xanchor 1.0
             background Solid(Color((0, 0, 0, 100)))
             if eventlibrary[highlitevent]["type"] == EventTypeEnum.CORE or eventlibrary[highlitevent]["type"] == EventTypeEnum.OPTIONALCORE:
                 text("Core Event")
@@ -632,10 +668,40 @@ screen daymenu:
             text(debugmapname)
 
     #debug menu toggle (if debug is enabled)
-    if debugenabled:
+    if debugenabled and highlitevent == "":
         #textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
         
+screen notification1(img):
+    frame:
+        xalign .9
+        background None
+        add img
+        at notif_transform
+    timer 5.0 action [Hide("notification1"), SetVariable("activenotifications", activenotifications - 1)]
+    
+screen notification2(img):
+    frame:
+        xalign .8
+        background None
+        add img
+        at notif_transform
+    timer 5.0 action [Hide("notification2"), SetVariable("activenotifications", activenotifications - 1)]
+    
+screen notification3(img):
+    frame:
+        xalign .7
+        background None
+        add img
+        at notif_transform
+    timer 5.0 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]    
+
+transform notif_transform:
+    yalign -0.2
+    linear 1.0 yalign 0.009
+    pause 3
+    linear 1.0 yalign -0.2
+    
 screen debugmenu:
     $debuginput = ""
     grid 3 14:
@@ -822,12 +888,14 @@ label startevent:
     python:
         highlitevent = ""
         clearedevents.append(activeevent)
+        updateSP(activeevent)
         renpy.block_rollback()
         renpy.jump(activeevent)
-    
+
 label train:
     stop music
     $renpy.block_rollback()
+    $spspent += 1
     if activeevent == "Athletics":
         jump trainathletics
     elif activeevent == "Art":
@@ -835,6 +903,7 @@ label train:
     elif activeevent == "Academics":
         jump trainacademics
     else:
+        $spspent -= 1
         "Error: Unknown skill selected. ID selected was [activeevent]. Please report to your local coder."
         jump daymenu
 

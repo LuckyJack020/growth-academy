@@ -12,6 +12,10 @@ image BBW angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 image BBW aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
 
+image BBW sick = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
+image BBW sick-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
+image BBW sick-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
+
 image BBW swimneutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
 image BBW swimhappy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW swimsad = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
@@ -27,51 +31,54 @@ image Dorm BBW Flip = im.Flip("Graphics/ui/bg/BBWDorm.png", horizontal=True)
 
 init 2 python:
     #Core
-    eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                  "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW002", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                   "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW003", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                     "location": "cookingclassroom", "priority": PrioEnum.NONE, "next": "BBW006", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                       "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW007", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW008", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "musicclassroom",   "priority": PrioEnum.NONE, "next": "BBW012", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                         "location": "cafeteria",        "priority": PrioEnum.GIRL, "next": "BBW012", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                               "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW015", "obsflags": ["BBWnowork"], "conditions": []}
-    eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"], "type": EventTypeEnum.CORE,                                                "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "BBW016", "obsflags": ["BBWnowork"], "conditions": []}
-    eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                            "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "BBW017", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW020", "obsflags": [],            "conditions": []}    
-    eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                            "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW021", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                             "location": "pool",             "priority": PrioEnum.NONE, "next": "BBW022", "obsflags": ["BBWnowork"], "conditions": []}
-    eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                            "location": "dorminterior",     "priority": PrioEnum.NONE, "next": "BBW023", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                         "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW025", "obsflags": ["BBWnowork"], "conditions": []} #\/ disabled due to affection not being very grindable right now
-    eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                              "location": "hallway",          "priority": PrioEnum.NONE, "next": "BBW026", "obsflags": [],            "conditions": []} #"conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
-    eventlibrary['BBW026'] = {"name": "The Trial of Smarts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                              "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW027", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW030", "obsflags": [],            "conditions": [[ConditionEnum.FLAG, "BBW_dating"]]}
-    eventlibrary['BBW030'] = {"name": "Who Are the Ad Wizards...", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "next": "BBW031", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW031'] = {"name": "Art Appreciation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW033", "obsflags": [],            "conditions": []}
-    eventlibrary['BBW033'] = {"name": "Smells Like Team Spirit", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "classroom",        "priority": PrioEnum.NONE, "next": "BBW034", "obsflags": ["BBWnowork"], "conditions": [[ConditionEnum.NOFLAG, "BBW008A_fail"]]}
-    eventlibrary['BBW034'] = {"name": "Styling and Profiling", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                            "location": "town",             "priority": PrioEnum.NONE, "next": "BBW035", "obsflags": ["BBWnowork"], "conditions": [[ConditionEnum.NOFLAG, "BBW008A_fail"]]}
-    eventlibrary['BBW035'] = {"name": "It's Showtime", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "auditorium",       "priority": PrioEnum.NONE, "next": "BBW036", "obsflags": ["BBWnowork"], "conditions": [[ConditionEnum.NOFLAG, "BBW008A_fail"]]}
-    eventlibrary['BBW036'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],                  "conditions": []}
+    eventlibrary['BBW001'] = {"name": "Human Resources", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                  "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 0,     "next": "BBW002", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW002'] = {"name": "Concerning a Missing Right Arm", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                   "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 0,     "next": "BBW003", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW003'] = {"name": "Necessity is the Mother of Employment", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                     "location": "cookingclassroom", "priority": PrioEnum.NONE, "sp": 0,     "next": "BBW006", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW006'] = {"name": "A Proud Patron of the Arts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                       "location": "hallway",          "priority": PrioEnum.NONE, "sp": 1,     "next": "BBW007", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW007'] = {"name": "Her Other Fluent Language", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 1,     "next": "BBW008", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW008'] = {"name": "How to Train Your Diva", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                    "location": "musicclassroom",   "priority": PrioEnum.NONE, "sp": 1,     "next": "BBW012", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW008A'] = {"name": "The Fat Lady Won't Sing", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                         "location": "cafeteria",        "priority": PrioEnum.GIRL, "sp": 1,     "next": "BBW012", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW012'] = {"name": "Business Business Business Numbers", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                               "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 1,     "next": "BBW015", "obsflags": ["BBWnowork"],                    "conditions": []}
+    eventlibrary['BBW015'] = {"name": "This is the Stealth Section", "girls": ["BBW", "AE"], "type": EventTypeEnum.CORE,                                                "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 2,     "next": "BBW016", "obsflags": ["BBWnowork"],                    "conditions": []}
+    eventlibrary['BBW016'] = {"name": "Game Time Interrupted", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                            "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 2,     "next": "BBW017", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW017'] = {"name": "What's She Got That I Haven't Got More Of?", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                       "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 2,     "next": "BBW020", "obsflags": [],                               "conditions": []}    
+    eventlibrary['BBW020'] = {"name": "I Like Big...?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                            "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 3,     "next": "BBW021", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW021'] = {"name": "The Lady in the Pool", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                             "location": "pool",             "priority": PrioEnum.NONE, "sp": 3,     "next": "BBW022", "obsflags": ["BBWnowork"],                    "conditions": []}
+    eventlibrary['BBW022'] = {"name": "Helpful Muscle", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                            "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 3,     "next": "BBW023", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW023'] = {"name": "It Can Be Found Anywhere", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                         "location": "classroom",        "priority": PrioEnum.NONE, "sp": 3,     "next": "BBW025", "obsflags": ["BBWnowork"],                    "conditions": []} #\/ disabled due to affection not being very grindable right now
+    eventlibrary['BBW025'] = {"name": "Interoffice Romance", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                              "location": "hallway",          "priority": PrioEnum.NONE, "sp": 4,     "next": "BBW026", "obsflags": [],                               "conditions": []} #"conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 6]]}
+    eventlibrary['BBW026'] = {"name": "The Trial of Smarts", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                              "location": "classroom",        "priority": PrioEnum.NONE, "sp": 4,     "next": "BBW027", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW028'] = {"name": "No 'Big Day' Puns, Please", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "classroom",        "priority": PrioEnum.NONE, "sp": 4,     "next": "BBW030", "obsflags": [],                               "conditions": [[ConditionEnum.FLAG, "BBW_dating"]]}
+    eventlibrary['BBW030'] = {"name": "Who Are the Ad Wizards...", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                        "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW031", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW031'] = {"name": "Art Appreciation", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW033", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW033'] = {"name": "Smells Like Team Spirit", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "classroom",        "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW034", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
+    eventlibrary['BBW034'] = {"name": "Styling and Profiling", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                            "location": "town",             "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW035", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
+    eventlibrary['BBW035'] = {"name": "It's Showtime", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW036", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
+    eventlibrary['BBW036'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW038", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
+    eventlibrary['BBW038'] = {"name": "Sick Day", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                                  "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW039", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW039'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 6,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
-    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                  "location": "classroom",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
-    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
-    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
-    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                     "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
-    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                         "location": "gym",              "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
-    eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
-    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                              "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []}
-    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "hallway",          "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": []} 
-    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.OPTIONALCORE,                                                           "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10], [ConditionEnum.FLAG, "BBW025A_unlock"]]}
-    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW_working"]]}
-    eventlibrary['BBW029A'] = {"name": "Do the Right Thing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.ROUTELOCK, "PRG"]]}
-    eventlibrary['BBW029B'] = {"name": "Things Happen", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                               "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "PRG026b"]]}
-    eventlibrary['BBW029C'] = {"name": "You Did a Bad, Bad Thing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                    "location": "cafeteria",        "priority": PrioEnum.ALL, "obsflags": [],                               "conditions": [[ConditionEnum.FLAG, "PRG026_c1_2"]]}
-    eventlibrary['BBW032'] = {"name": "Wardrobe Dysfunction", "girls": ["BBW", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "classroom",        "priority": PrioEnum.NONE, "obsflags": [],                              "conditions": [[ConditionEnum.OR, [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHAN, 10], [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHAN, 10]]]}
-
-    eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,                                "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                   "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,       "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
-    eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "gym",              "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]]}
-    eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONALCORE,                                                  "location": "cafeteria",        "priority": PrioEnum.GIRL, "obsflags": [],                              "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                  "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['BBW009'] = {"name": "Between a Soft and a Hard Place", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "pool",             "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['BBW011'] = {"name": "True Romance", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['BBW013'] = {"name": "The Elephant In The Room", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                     "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['BBW014'] = {"name": "Silence Can Be Heavy", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                         "location": "gym",              "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['BBW018'] = {"name": "All the Tycoons", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "cafeteria",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW016_testpass"]]}
+    eventlibrary['BBW019'] = {"name": "Time Management", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                              "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['BBW024'] = {"name": "Mental Defragmentation", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []} 
+    eventlibrary['BBW025A'] = {"name": "Second Chance", "girls": ["BBW"], "type": EventTypeEnum.OPTIONALCORE,                                                           "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHANEQUALS, 10], [ConditionEnum.FLAG, "BBW025A_unlock"]]}
+    eventlibrary['BBW027'] = {"name": "Have it All?", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                                 "location": "cafeteria",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW_working"]]}
+    eventlibrary['BBW029A'] = {"name": "Do the Right Thing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.ROUTELOCK, "PRG"]]}
+    eventlibrary['BBW029B'] = {"name": "Things Happen", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                               "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "PRG026b"]]}
+    eventlibrary['BBW029C'] = {"name": "You Did a Bad, Bad Thing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONAL,                                                    "location": "cafeteria",        "priority": PrioEnum.ALL,               "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "PRG026_c1_2"]]}
+    eventlibrary['BBW032'] = {"name": "Wardrobe Dysfunction", "girls": ["BBW", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.OR, [ConditionEnum.AFFECTION, "BBW", ConditionEqualityEnum.GREATERTHAN, 10], [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHAN, 10]]]}
+    eventlibrary['BBW037'] = {"name": "Deal With It", "girls": ["BBW", "BE"], "type": EventTypeEnum.OPTIONAL,                                                           "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.TIMEFLAG, "size3"]]}
+    
+    eventlibrary['BBW005'] = {"name": "What to Expect When You're Growing", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,                                "location": "cafeteria",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                   "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['BBW005A'] = {"name": "You Ate, You Drank, and You Were Merry, For Today You Diet", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONALCORE,       "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW005_ondiet"]]}
+    eventlibrary['BBW005B'] = {"name": "Pump You Up, Not Plump You Up", "girls": ["BBW", "PRG", "FMG"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "gym",              "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "BBW005_workout"]]}
+    eventlibrary['BBW010'] = {"name": "ABC: Always Be Clothing", "girls": ["BBW"], "type": EventTypeEnum.OPTIONALCORE,                                                  "location": "cafeteria",        "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": [],                              "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
 
 label BBW001:
     $setProgress("BBW", "BBW002")
@@ -177,7 +184,7 @@ label BBW001_c2_1:
 label BBW001_c2_2:
     MC "Oh, yeah! He's the guy who plays in that traveling jug band, isn't he?"
     show BBW angry
-    BBW "* scoff * Is there not a single ounce of class or breeding in this place?"
+    BBW "*scoff* Is there not a single ounce of class or breeding in this place?"
     hide BBW
     MC "I'd settle for an ounce of humor."
     jump daymenu
@@ -346,7 +353,7 @@ label BBW003_c1_1:
     menu:
         "Is she? I guess that's fortunate for you.":
             jump BBW003_c2_1
-        "So are you paying her, or... ?":
+        "So are you paying her, or...?":
             jump BBW003_c2_2
         "Aida, do you really just want to be her maid?":
             jump BBW003_c2_3
@@ -369,7 +376,7 @@ label BBW003_c2_1:
     jump daymenu
 
 label BBW003_c2_2:
-    MC "So are you paying her, or... ?"
+    MC "So are you paying her, or...?"
     show BBW haughty
     BBW "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodama-san compensation for her services. And let us leave it at that."
     MC "Didn't mean to offend."
@@ -481,7 +488,7 @@ label BBW004_c3:
 label BBW005:
     $setTimeFlag("aftertest")
     scene Cafeteria with fade
-    play music Sunset
+    play music Hallway
     MC "Hair? What kind of mutation is hair growth? This almost seems like a joke."
     MC "Hmm, no open tables. Oh! There's a spot."
     show BBW sad at center with dissolve
@@ -576,7 +583,7 @@ label BBW005A:
     show BBW sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Oh! G-Good morning, Hotsure-san."
-    BBW "... By all means."
+    BBW "...By all means."
     MC "Thanks. Say, did you two get the Lit reading done? I kind of spaced out last night."
     show PRG happy
     PRG "I did it. How far along did you get?"
@@ -585,7 +592,7 @@ label BBW005A:
     PRG "Yes, Nikumaru-san?"
     BBW "Can you get the other half of the grapefruit? The first half was not adequate alone."
     PRG "Certainly, ma'am. And would you like some more toast?"
-    BBW "... Two slices."
+    BBW "...Two slices."
     PRG "With jam or butter?"
     BBW "No. Plain."
     PRG "All right. I'll be right back."
@@ -596,7 +603,7 @@ label BBW005A:
     MC "Light breakfast today?"
     MCT "Mouth, you're not helping."
     BBW "Light breakfast today, and every day. Light lunch every day. Light dinner every day."
-    MC "Oh? ... Oh! Yeah. Your factor. I guess you're doing the diet thing, huh?"
+    MC "Oh? ...Oh! Yeah. Your factor. I guess you're doing the diet thing, huh?"
     play music Tension
     BBW "If I am to maintain authority over my own body and not be controlled by the whims of fate, then yes, I am doing 'the diet thing.' Every day, at every meal, I will be watching my intake, limiting the calories, sugars, and fats I take in. I will limit it all to what I need and no more."
     MC "You don't seem too happy about it."
@@ -618,7 +625,7 @@ label BBW005A:
     show BBW neutral
     BBW "Thank you, Aida, but now I want you to go prepare me a real breakfast. Crepes Florentine and smoked salmon to start, along with some coffee and fresh-squeezed orange juice."
     show PRG happy
-    PRG "Y-Yes, ma'am. ... I'll just leave the toast and grapefruit."
+    PRG "Y-Yes, ma'am... I'll just leave the toast and grapefruit."
     hide PRG with dissolve
     show BBW angry at center with dissolve
     BBW "Or does this not meet your approval, Hotsure-san?"
@@ -627,7 +634,7 @@ label BBW005A:
     MC "I'm just saying a diet might not be easy, but in the end you might be glad you did it."
     BBW "Is my mood a concern of yours? Is it your business to tell me how I deal with my factor? I assume you have your own condition to deal with, no?"
     MC "Yeah. My hair grows really fast."
-    BBW "... That is your condition? That is why you're here?"
+    BBW "...That is your condition? That is why you're here?"
     MC "Yep. That's it."
     show BBW neutral
     BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself. Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
@@ -715,7 +722,7 @@ label BBW005B:
     hide PRG with dissolve
     "As I was looking at the weights in increments of ten pounds, trying to guess what my limit was, another person came over and joined us."
     show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    FMG "Hey sorry to bother but how much longer are you...Oh hey guys. What brings you here?"
+    FMG "Hey sorry to bother but how much longer are you... Oh hey guys. What brings you here?"
     MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
     show BBW angry
     BBW "I don't need to lose weight. I just need to keep myself from getting fat. There is a world of difference there."
@@ -890,7 +897,7 @@ label BBW007:
     MC "Hi, Aida. How did you get so much mail already? It's still the first week of the year."
     PRG "Oh, it's not mine. I was carrying it for Nikumaru-sama. We just came from the mail room."
     show PRG sad
-    extend " ... There was nothing for me."
+    extend " ...There was nothing for me."
     MCT "She seems a bit sad. Is there something about mail that bothers her? Better change the conversation."
     BBW "Interested in what I got?"
     MC "Uh..."
@@ -911,7 +918,7 @@ label BBW007:
     BBW "I suppose I could. Hitomi and I - that's Hitomi Ogawa, daughter of the president of Ogawa Electronics - aren't on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
     MC "An Ogawa laptop for under a hundred thousand yen? That's pretty steep for some old model being unloaded-"
     BBW "That's for an Ogawa D2300. 22” monitor, if I remember correctly."
-    MC "... For 99,000?! Are you serious?"
+    MC "...For 99,000?! Are you serious?"
     BBW "Completely."
     MCT "Unbelievable. That's a 170,000-yen machine, and she says she can get one for under 100K?"
     BBW "Don't be surprised. I'd be buying direct from the company, so there's no middle-man mark-up. Except for my commission, of course."
@@ -923,7 +930,7 @@ label BBW007:
     BBW "Shall I order one? You don't have to pay me now, you can take care of that when it gets here."
     MC "No, no. I don't need a new laptop. I mean, I could use one, but I don't have that kind of money."
     BBW "Well you should have said so."
-    extend " ... Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
+    extend " ...Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
     MC "There's already a store on campus, you know."
     BBW "I know, I've seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
@@ -1010,7 +1017,7 @@ label BBW008_prechoice:
     stop music
 
     scene Cafeteria with fade
-    play music Sunset
+    play music Hallway
     "We found Alice sitting at her usual table, one hand typing on a laptop and the other picking up high tea pastries from a tray next to her."
     show BBW happy at center with dissolve
     BBW "Hotsure-san, good afternoon. Thank you for bringing Aida back. I've been waiting for her for... five and a half minutes now."
@@ -1025,7 +1032,7 @@ label BBW008_prechoice:
     "I stammered a few words, and Alice became irritated quickly."
     MC "We were told to tell you to, you know... Maybe ease up on the prima donna thing."
     BBW "Excuse me?"
-    MC "It's not that you're... You can be a little... "
+    MC "It's not that you're... You can be a little..."
     MC "You're going to get kicked out if you don't stop fighting with the president."
     BBW "Oh, really? Aida, is this true?"
     show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
@@ -1146,7 +1153,7 @@ label BBW008A:
             jump BBW008A_c3
 
 label BBW008A_c1:
-    play music Sunset
+    play music Hallway
     MC "I don't see what good that would do. If she's as headstrong as you say, arguing will only make her dig her heels in."
     show BBW angry
     BBW "Mmmf!"
@@ -1173,7 +1180,7 @@ label BBW008A_c2:
     play sound Crash
     $setAffection("BBW", -2)
     BBW "There is no word for 'foolishness' in your language that is strong enough for that girl."
-    play music Sunset
+    play music Hallway
     MC "She didn't listen to you-"
     BBW "She says that I am a hair's breadth from being cut entirely, and she makes it sound as if she is being reasonable by giving me a 'second chance.'"
     BBW "That my talent, which I have clearly demonstrated by this point, could be dismissed so flippantly..."
@@ -1185,7 +1192,7 @@ label BBW008A_c2:
     jump daymenu
 
 label BBW008A_c3:
-    $setFlag("BBW008A_fail")
+    $setTimeFlag("BBWclubfail")
     stop music
     MC "Arguing with Mizawa-san obviously isn't doing any good. Maybe try a different tack."
     MC "Instead of taking up this fight yourself, why don't you get some others on your side?"
@@ -1460,14 +1467,14 @@ label BBW010_c1:
     "Gracelessly, I almost shoved one of them at her arm."
     MC " Here. Something to check out at your leisure, when you have some free time."
     show AE surprised
-    AE "Hm? What is...The Nikumaru Outlet Direct? Keisuke...is this what I think it is?"
+    AE "Hm? What is... The Nikumaru Outlet Direct? Keisuke... is this what I think it is?"
     "Something in her tone told me to tread carefully. But I, not exactly a cat burglar, couldn't do much except flail around."
     MC "Well, it's... I'm not sure what you think it is. What do you..."
     show AE angry
     "She's glaring at me, and I see that playing coy wouldn't work even if I could do so properly."
     MC "Alice... Nikumaru-san has created a direct-market business. She orders stuff from manufacturers and can sell them at a discount. Clothes, school supplies, stuff like that."
     show AE angry
-    AE "Hotsure-san...you can't just...ngh...where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
+    AE "Hotsure-san... You can't just... ngh... Where is Nikumaru-san? I swear if she thinks she can just undermine the administration with this-this tripe!"
     MC "She should be in the cafeteria..."
     "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
     hide AE with dissolve
@@ -1483,7 +1490,7 @@ label BBW010_c2:
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
     MC "Good morning, Kodama-san. Making breakfast?"
     show PRG happy
-    PRG "Oh!  Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
+    PRG "Oh! Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
     MC "Oh no, it's not that. I was just walking by and thought I'd say hi."
     MC "Is that a new uniform? It looks a bit baggier than your old one."
     show PRG sad
@@ -1500,7 +1507,7 @@ label BBW010_c2:
     "I suppressed a groan as I realized that of course Aida would already be in on Alice's plans. It was her need for more clothing that had first put the idea of doing this in Alice's head."
     MC "Right, right. Forgot. Well, sorry to bother you."
     show PRG neutral
-    PRG "No, no! I'm sorry for, um, wasting your time...  I'll, uh, still take one of the pamphlets, if you like..."
+    PRG "No, no! I'm sorry for, um, wasting your time... I'll, uh, still take one of the pamphlets, if you like..."
     "Hesitantly, I handed her one. I think not doing so would have made her more embarrassed."
     MC "If you'd like to place an order... Well, you know where to find me."
     if getAffection("PRG") >= 3:
@@ -1549,13 +1556,13 @@ label BBW010_c3:
     show BE happy
     BE "Because it's like starting up an ice cream stand in the middle of a heat wave. She'll make a killing here if she can get everything authorized! You better be getting a cut of all of this if you're going to be helping her out. Don't let her take advantage of you."
     show BE surprised
-    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah,  I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
+    BE "Unless you're into that kind of thing. A big girl like Alice? Yeah, I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
     "Man, my imagination was getting a workout today."
     "I shook my head to clear my mind."
     MC "I am being compensated (though the specifics haven't been hammered out yet). I believe she even mentioned something about a commission."
     MC "So can I put you down for a sale? I can run your order back to her before class starts, but I'm not sure how long it will be until everything arrives. She did say she already has a lot of stuff here..."
     show BE happy
-    BE "Oh absolutely! Here, let me take a look again real quick. ... Yeah, I think I can spring for three bras and, maybe two shirts. No I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size. Well, as long as I'm capable of getting my arms around them that is!"
+    BE "Oh absolutely! Here, let me take a look again real quick... Yeah, I think I can spring for three bras and, maybe two shirts. No I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size. Well, as long as I'm capable of getting my arms around them that is!"
     MC "Even if you have trouble measuring yourself, we can find clothing big enough..."
     "My voice trailed off as I was hit with the mental image of Honoka carrying a pair of breasts bigger than she was, carting them around in a wheelbarrow..."
     "...and running me over with them."
@@ -1761,7 +1768,7 @@ label BBW011_c3:
     BBW "Fun talk, though. We should do this again."
     BBW "Hopefully with a better movie."
     show PRG sad
-    PRG "But *I* liked it."
+    PRG "But {i}I{/i} liked it."
     jump daymenu
     
 label BBW012:
@@ -2056,7 +2063,7 @@ label BBW013_c2:
     MC "You sound like you're dealing with it pretty OK."
     "I was about to walk away, but then I decided..."
     MC "Hey, Alice. I was about to get a snack at the cafeteria. You hungry?"
-    BBW "... Hmm..."
+    BBW "...Hmm..."
     show BBW happy
     BBW "I could go for some cake."
     jump daymenu
@@ -2494,7 +2501,7 @@ label BBW015_test_pass:
     MC "They must have put 'Men's dorm' on the address, not 'Women's.'"
     AE "A mailing mix-up?"
     "Shiori-san looked back at the envelope, but then back at me; her eyes showing confusion and possible disappointment. Closing her eyes and exhaling deeply, she looked back to me."
-    AE "I understand. I'll have to rectify that from happening again. I...won't keep you."
+    AE "I understand. I'll have to rectify that from happening again. I... won't keep you."
     show AE happy
     AE "But be sure to be quick. You need to make sure to get breakfast before class."
     hide AE with dissolve
@@ -2521,7 +2528,7 @@ label BBW015_test_semipass:
     show AE angry
     AE "Look, I'm willing to trust that you're doing as you say."
     show AE angry at Transform(xzoom=-1)
-    AE "Do *not* make that trust ill-founded."
+    AE "Do {i}not{/i} make that trust ill-founded."
     show AE neutral at Transform(xzoom=1)
     AE "Go ahead and take the item to the rightful owner. And then please leave."
     AE "The residents here need to prepare for the day, and I don't want your presence to be distracting."
@@ -2615,7 +2622,7 @@ label BBW015_c1_3:
 label BBW016:
     $setProgress("BBW", "BBW017")
     scene Dorm Interior with fade
-    play music Sunset
+    play music Hallway
     "Classes were done, my homework was done, and even though I had wandered around the school for over an hour, I hadn't found anything to do."
     "No one to talk to, nobody that needed help with anything. I was left to myself."
     "So I came back to the dorm. Daichi was out - fortunately - so I had a nice quiet room to relax in."
@@ -3363,7 +3370,7 @@ label BBW019_cafe:
                 
 label BBW019_theater:
     scene Theater with fade
-    play music Sunset
+    play music Hallway
     "I found myself walking by the town's movie theater, looking over the posters."
     "There were a couple blockbuster-type movies showing, but also a historical drama, a romantic comedy and an indie melodrama."
     "I had enough money in my wallet that I could buy a movie ticket, and I could think of worse ways to while away a couple hours."
@@ -3553,10 +3560,10 @@ label BBW020_c1:
     show BBW neutral
     BBW "You do not need to paint any pictures."
     show BBW happy
-    BBW "I could simply invoke the stereotype that men are never discerning about where they... Ahem ..."
+    BBW "I could simply invoke the stereotype that men are never discerning about where they... Ahem..."
     MC "Hang the bird feeder in the garden?"
     show BBW neutral
-    BBW "... What?"
+    BBW "...What?"
     MC "I don't know. I couldn't think of a euphemism that didn't sound dirty."
     show BBW happy
     BBW "I think they're supposed to. Just not too dirty."
@@ -3647,7 +3654,7 @@ label BBW021_beforechoice:
         show BBW swimhappy
         BBW "I'm glad you got the chance to clear that up, Keisuke."
         BBW "I know you're not trying to soothe my wounded pride..."
-        BBW "... but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
+        BBW "...but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
         BBW "The music club is meeting soon and I have to change."
         BBW "We can resume this conversation later. If there is anything more you want to say."
         hide BBW with dissolve
@@ -4255,7 +4262,7 @@ label BBW024_c2_2:
     show BBW neutral
     BBW "To calm my mind. To find my center."
     show BE angry
-    BE "... Sounds boring."
+    BE "...Sounds boring."
     BE "I could never sit still for so long."
     BBW "Actually, you could do just five minutes a day and derive some benefit from it."
     show BE neutral
@@ -4973,7 +4980,7 @@ label BBW028_rest:
     BBW "Perhaps."
     MC "Not that many people would be upset that an Italian restaurant has..."
     "I struggled to think of something from French cuisine."
-    MC "... French bread."
+    MC "...French bread."
     BBW "No. Though under any other circumstances I would have very high expectations for their alfredo sauce."
     BBW "As simple as it is, it's a favorite of mine."
     BBW "There was one time, a few years ago, when we were in Tuscany..."
@@ -5416,12 +5423,9 @@ label BBW030_c1_3:
 
 label BBW031:
     #Time: Afternoon
-    if getFlag("BBW008A_fail"):
-        $setProgress("BBW", "BBW036")
-    else:
-        $setProgress("BBW", "BBW033")
+    $setProgress("BBW", "BBW033")
     scene Classroom with fade
-    play music Sunset
+    play music Hallway
     "Alice and I were on clean-up duty after class."
     "We were both focused on our work, not trying to make conversation or anything. But as we did so, my attention kept drifting over to Alice."
     if getAffection("BBW") < 10:
@@ -6417,7 +6421,7 @@ label BBW034_c1_after:
     jump daymenu
 
 label BBW035:
-    $setProgress("BBW", "BBW036")
+    $setProgress("BBW", "BBW037")
     #Time: Afternoon
     scene Classroom with fade
     "It had arrived, the day of the concert."
@@ -6552,8 +6556,334 @@ label BBW035:
     "As much as I should have felt bad about rushing her like that, it had been too nice for me to regret it."
     "Her body was as soft as I imagined. Even her lips..."
     jump daymenu
-
+    
 label BBW036:
+    $setProgress("BBW038")
+    #Time: Afternoon
+    scene Classroom with fade
+    "Approaching Alice after class had become the easiest thing in the world, but not quite for the reasons I wanted."
+    "Case in point, when I wanted to quickly reiterate my compliments on her performance at the concert, and also ask how things between her and the club president have been shaping out..."
+    MC "Alice, got a minute?"
+    show BBW happy with dissolve
+    "...she immediately seized control of the conversation."
+    BBW "Keisuke. Perfect timing. I need an update from you on your delivery rounds."
+    BBW "You have not reported any problems recently, so I trust everything is proceeding smoothly, yes?"
+    MC "Buh?"
+    MC "Oh, yeah! The deliveries are going great. I've got a system more or less worked out."
+    BBW "Excellent."
+    show BBW neutral:
+        xzoom -1.0
+        linear 1.0 xpos 0.75
+    MC "That wasn't what I wanted to talk about, though."
+    show BBW neutral:
+        xzoom 1.0
+        linear 1.0 xpos 0.5
+    MC "I wanted to say again I thought you were very good during the concert the other night."
+    show BBW happy
+    BBW "Thank you."
+    MC "And I was wondering if things between you and the music club president had improved at all."
+    show BBW neutral
+    BBW "..."
+    "Alice chewed on that for a second."
+    BBW "She did compliment my contribution to the concert yesterday."
+    BBW "She said I 'showed genuine talent.' When we were alone in the club room, with no one else around."
+    MC "Oh..."
+    MC "Well, a positive comment-"
+    BBW "Blandly positive."
+    MC "-like that is better than nothing. Things might be thawing between you two."
+    BBW "Perhaps."
+    MC "One other thing."
+    MC "Are you free Saturday? I'd like to go out again."
+    show BBW happy
+    BBW "I would too. Saturday sounds good."
+    MC "I was thinking dinner and a movie. It's nothing spectacular, I know..."
+    BBW "Do not overthink it, Keisuke. This would only be a second date."
+    BBW "And our options for entertainment on this island are limited."
+    MC "Right, but I'd still like to come up with something more than the five or six things we've all already done."
+    MC "But anyway... How does Saturday at 5 sound?"
+    BBW "That'll work. I'll meet you in the dorm lobby."
+    show BBW happy:
+        xzoom -1.0
+        linear 1.0 xpos 0.75
+    "She turned to leave, but one other issue to discuss had been on my mind."
+    "How do we handle the issue of me working for Alice while dating her?"
+    "It was kind of a heavy matter to bring up, because I could only think of two options: we don't go out anymore, or I quit working for her."
+    "Which would put a crimp in my finances. Not the best situation when I was trying to woo someone with expensive tastes like Alice."
+    "Was this a Catch 22? Either I can date Alice but not have the money to, or I can not date her but have a nice amount of disposable income."
+    "Either way, it was very much the sort of thing that needed to be addressed..."
+    "Just maybe not right after securing a second date. Something heavy like this could wait for later, right?"
+    menu:
+        "Let it rest for now.":
+            jump BBW036_c1_1
+        "Better bring it up now.":
+            jump BBW036_c1_2
+
+label BBW036_c1_1:
+    hide BBW with dissolve
+    MCT "There's no rush. I can deal with it later."
+    scene black with fade
+    "I left the classroom and went about the rest of the afternoon like always."
+    "Got a snack, did my homework, played some games."
+    "And I looked through the showtimes for the only theater on the island. I needed to find a safe but not boring or insipid choice for our date."
+    "Pleasure before business, I guess."
+    jump daymenu
+
+label BBW036_c1_2:
+    MC "Actually, there is one other thing. Sorry."
+    show BBW neutral:
+        xzoom 1.0
+        linear 1.0 xpos 0.5
+    MC "If we are going to keep going out, I think we should address the employer/employee matter."
+    BBW "Aaah, yes."
+    MC "You're professionally minded, so you should understand things would be weird between us if I'm both subservient to you but also an equal."
+    "Alice smiled wryly."
+    show BBW haughty
+    BBW "So you want a promotion. Angling for a full partnership in the company, are we?"
+    MC "No, I-"
+    "And I stopped, because I realized she wasn't put off by the idea."
+    "It wasn't what I was going for, but it was definitely the best outcome. I hadn't even considered it before."
+    MCT "And the way she's smiling, does she like my ambition?"
+    MCT "No reason not to go for it."
+    MC "If not a full partnership, then maybe a title befitting my status as the chief... distribution... manager."
+    "Alice chuckled."
+    BBW "That is not on the same level as President and Chief Executive Officer, but it would put us closer to equal footing."
+    BBW "Yes, I think that would work."
+    show BBW happy
+    BBW "And as long as we maintain a professional bearing when it comes to the company, I do not foresee any problems."
+    $setAffection("BBW", 1)
+    BBW "Good job keeping the big picture in view, Keisuke. I knew my ability to read people was strong."
+    
+    scene black with fade
+    "I think she was still referring to my grab for a promotion. Did she admire my ambition? That seemed to fit her personality."
+    "And it would answer the question of what she respected more: subservience or a strong will. I'd have to remember that for the future."
+    "For the time being, I had another ordinary day ahead of me."
+    "I left the classroom and went about the rest of the afternoon like always."
+    "Got a snack, did my homework, played some games."
+    "And I looked through the showtimes for the only theater on the island. I needed to find a safe but not boring or insipid choice for our date."
+    "If nothing else, I knew Alice wasn't a woman you could court by half-assing things."
+    jump daymenu
+
+label BBW037:
+    #Time: Morning
+    scene Classroom with fade
+    play music Schoolday
+    "I got to class early today."
+    "I wasn't fully awake yet- hell, I was about to fall asleep sitting at my desk - but out of nowhere an electronic jingle shook me awake."
+    #[SFX: Simple electronic melody]
+    "It took me a second to realize that even with just five notes I knew that tune."
+    "And it took me another second to realize what it was."
+    MC "Was that the 'Everything is two' theme?"
+    show BE happy at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    BE "Yeah! Someone mentioned it in a comment thread I was looking at yesterday and I ended up watching a bunch of remixes of it yesterday."
+    BE "I changed my ringtone to it."
+    MC "I remember that. There was that one video with the frog jumping onto a window sill, and it doesn't quite make it."
+    MC "It's hanging onto the edge, trying to climb up, and the music gets really dramatic."
+    show BE neutral
+    BE "Which one's that? I haven't seen it."
+    MC "Let me see if I can find it."
+    show BBW neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    BBW "Everything is two? What does that mean?"
+    show BE happy
+    BE "It was the stupid thing from a few years ago."
+    BE "Somebody took a snippet of a song from... What was it from, Keisuke?"
+    MC "Oh... It was this old ghost kung fu movie."
+    MC "There was a scene in the middle, just out of nowhere, where the hero and the girl are stuck in a temple while it rains, and this romantic song plays in its entirety."
+    MC "Someone in America posted the scene online because there's a sign in the temple that apparently is really filthy, the way it's written in English."
+    BE "Something about grabbing the Buddha's nipples."
+    MC "Oh god, is that what it was?"
+    BE "But someone else did a cover of the song, and they made the cheesiest, most over-the-top video of romantic cliches to go with it."
+    MC "And then other people made their own videos, or they took movie clips. Completely inappropriate stuff, like someone mourning a dead person or a slow pan over a cemetary."
+    BE "All with the sappy song playing over it."
+    BE "Then people started covering the song, but in completely different musical styles. Thrash metal, ukelele hip-hop, stuff like that."
+    MC "Not long after people started taking the most extreme covers and pairing them with the weirdest videos they could find."
+    MC "Found it! The frog video."
+    show BE happy at Position(xpos=0.25, ypos=0.5, yanchor=0.3), Transform(zoom=2.0)
+    show BBW neutral at Position(xpos=0.75, ypos=0.5, yanchor=0.3), Transform(zoom=2.0)
+    #[BE_Happy and BE_Neutral zoom in, head and upper torso]
+    "I showed Alice and Honoka the video I had been talking about."
+    "The love song plays like normal as we watch a frog prepare to jump from a fence post onto a window sill."
+    "The video is in slow motion, and as the frog jumps the song immediately shifts to the most dramatic movie score-style rendition."
+    BE "Oh!"
+    "But the frog doesn't quite make it. Its front legs reach the sill, but its back legs kick in the air, then try to climb up the wall so it can get in."
+    "And eventually it does."
+    BE "Ha ha ha! It did it!"
+    "Honoka found the thing hilarious, but Alice look confused. Then quickly angry."
+    show BE happy at Position(xpos=0.3, yalign=1.0), Transform(zoom=1.0)
+    show BBW angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
+    BBW "That's it?"
+    BBW "What's so amusing about that?"
+    BE "By itself, nothing. But the song is so over-the-top to begin with and the frog looked so determined..."
+    "Noticing Alice's irritation, Honoka trailed off."
+    MC "It's just a meme. Something goofy to laugh about."
+    BBW "Empty frivolity."
+    BBW "To think that standards of entertainment can sink so low that thousands of people will share an image of a cat with a goofy expression or... or a frog trying to jump into a window."
+    BBW "Why is he even trying to get into the window? Why is he on the fence post to begin with!?"
+    show BE surprised:
+        linear 0.5 xpos 0.1
+    BE "Whoa!"
+    BE "Calm down."
+    show BE neutral:
+        linear 1 xpos 0.3
+    BE "It's just a meme."
+    BBW "It's a stupid-!"
+    show AE neutral at Position(xpos=0.9, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    AE "Is there a problem here?"
+    MC "No... No. We just got a little overly exuberant."
+    AE "I suggest you save your energy for class."
+    AE "Now take your seats."
+    hide AE with dissolve
+    "The mood was still tense after that interruption. Before turning to leave Alice muttered something at half-volume."
+    BBW "Stupid video about a stupid frog."
+    hide BBW with dissolve
+    "Honoka, meanwhile, looked at me and, in a voice like a drunk robot, said"
+    show BE happy
+    BE "No, Goro, truck can not go to roof."
+    MC "Ha ha ha ha ha!"
+    "And I erupted in laughter."
+    "Turning in her seat, Alice glared at us."
+    show BBW angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
+    BBW "Grrrrr..."
+    hide BE with dissolve
+    hide BBW with dissolve
+    "I tried to stifle my laughter, but Honoka, taking her own seat, kept chuckling right up until the teacher arrived."
+    "It was hard to concentrate on the lesson now that I had that stupid song playing in my head, but at least I wasn't about to fall asleep."
+    jump daymenu
+
+label BBW038:
+    $setProgress("BBW", "BBW039")
+    scene Dorm Interior with fade
+    #day
+    "The morning of my second date with Alice I woke up feeling oddly at ease."
+    "I remember feeling a lot more nervous before my first date with Alice. She can be an intimidating presence."
+    "While standing in the shower I reflected that this was like going on a roller coaster: the first time it's all new and unexpected, but the second time you feel at ease."
+
+    scene Classroom with fade
+    play music Schoolday
+    "Obviously a woman can be a lot more unpredictable than a roller coaster, but the core idea still held."
+    "I wasn't completely at ease, though. In the several minutes leading up to the start of the school day I grew anxious waiting for Alice to appear."
+    "There was no reason for it, just nerves."
+    "But as the last minute began counting down, Alice hadn't shown up."
+    "I don't think she had ever been late before. Something had to be up."
+    MC "Hey, Aida."
+    show PRG neutral with dissolve
+    MC "Where's Alice?"
+    show PRG sad
+    PRG "Nikumaru-san is not feeling well. She won't be in class today."
+    MC "Oh, man. Is it bad?"
+    PRG "She wouldn't let me near her. She said she didn't want to risk passing whatever she had to me in my condition."
+    PRG "But she took her own temperature. It's 101.2. And she was complaining of aches and chills."
+    MC "Bummer. Hopefully it's just a 24-hour thing."
+    MC "Either way, our date's off, I guess."
+    MC "I'll go see her during lunch. See how she's doing."
+    show PRG happy
+    PRG "She would like that."
+
+    scene Hallway with fade
+    #Time: Afternoon
+    "Lunchtime arrived, and I made my way to Alice's dorm."
+
+    scene Dorm BBW with fade
+    play music Rain
+    "I hoped I wasn't disturbing her sleep, but I knocked lightly all the same."
+    show BBW sick with dissolve
+    BBW "Keisuke."
+    "Her voice was a croak, and she looked pale and tired."
+    MC "Sorry for bothering you. Aida told me you were sick, and I wanted to see how you were doing."
+    BBW "She told you true."
+    BBW "I believe it's only a 24-hour virus, and I will be better tomorrow."
+    MC "But we'll have to postpone our date, of course."
+    BBW "I'm sorry, but there are things even outside my control."
+    MC "Don't worry about it. Rest up, get better."
+    MC "Have you taken anything? There's this special kind of tea my mom always gave me when I was sick, and it always helped."
+    BBW "I've taken ibuprofen and cold medicine."
+    BBW "I think rest and liquids are all I need."
+    MC "Maybe."
+    MC "I'll let you go back to sleep."
+
+    scene black with fade
+    "I grabbed a quick lunch, then went back to class."
+
+    scene Hallway with fade
+    "Even while paying attention to the lessons, I was thinking over that tea I had mentioned."
+    "I could probably find it in town. It's not a rare brand or anything."
+    "Only problem was the weather didn't look too promising."
+    "But once the idea was in my head I was pretty much decided."
+    "Class got out, I went to my dorm to grab my umbrella, and I left to hit the town."
+
+    scene Pharmacy with fade
+    "Because of the ominous clouds I double-timed it down the hill, jogged to the pharmacy, and frantically scanned boxes in the cold and flu section."
+    "The packaging for the tea had been changed since I was a kid. I went past it twice before I spotted it."
+    "I paid for the tea, shoved it in my backpack, and started speed-walking back to the hill."
+
+    scene black with fade
+    play sound Thunder
+    "The bottom of the hill was in sight when the sky just opened up and began dumping water by the gallon."
+    "I had my umbrella, for all the help it was. With the heaviness of the rain and wind blowing this way and that I got pretty drenched."
+    "Nothing to be done about it, I pressed on, scaling the hill and reaching the school grounds."
+
+    scene Dorm BBW with fade
+    "I was a sopping mess by the time I got inside the women's dorm. But I had the tea."
+    "I knocked lightly again. Alice might be sleeping, but there was a good chance Aida would be in."
+    "Sure enough."
+    show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    PRG "Hotsure-san."
+    MC "Hey, Aida. Is Alice awake?"
+    show BBW sick at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    BBW "Keisuke. You're drenched."
+    MC "Alice. Here."
+    "I retrieved the tea. My backpack hadn't be spared the rain's assault, but the insides were blessedly dry."
+    MC "I mentioned this tea my mother always gave me. I found some at the pharmacy."
+    BBW "Were you out in the rain? It's pouring outside."
+    menu:
+        "Yeah, I tried to hurry to beat the rain, but...": #(-1 affection)
+            jump BBW038_c1_1
+        "If the tea helps you, it was worth it.": #(+1 affection)
+            jump BBW038_c1_2
+
+label BBW038_c1_1:
+    MC "I hope you appreciate what I went through."
+    show BBW sick-angry
+    BBW "Ugghh..."
+    BBW "I appreciate you went out of your way to help me-"
+    BBW "Even though I told you this will probably pass with some rest."
+    $setAffection("BBW", -1)
+    BBW "-but don't try to guilt me because you got caught out in the rain."
+    BBW "You chose to run that risk. You're not a victim of circumstance."
+    MC "No, I mean..."
+    MC "Never mind."
+    MC "Enjoy the tea."
+
+    scene Dorm Interior with fade
+    "I went back to my room feeling more than a little peeved."
+    "I was still soaked from head to toe, and I didn't even have anything to show for it."
+    "Shouldn't have even bothered."
+    jump daymenu
+
+label BBW038_c1_2:
+    "It was hard to tell with her mask, but it looked like Alice was smiling."
+    show BBW sick-happy
+    $setAffection("BBW", 1)
+    BBW "I appreciate the trouble you went through, but you really didn't."
+    BBW "I said before, I just needed some rest."
+    show BBW sick
+    BBW "I hope you don't get sick now, though."
+    MC "I'm sure I'll be fine."
+    MC "Just need to get out of these wet clothes. Maybe take a hot shower."
+    show BBW sick-happy
+    BBW "Well, here."
+    "She opened the tea box and handed me one of the bags."
+    BBW "Just in case."
+    MC "Thanks. I'll have it tonight and go to bed early."
+    MC "Hope you feel better tomorrow."
+    BBW "And I hope you still feel well."
+
+    scene Dorm Interior with fade
+    "I did as I said I would, changing clothes and showering."
+    "Then I made myself the tea while doing my homework."
+    "Not the night I had hoped for, but it seemed the best possible outcome given the curveball thrown at me."
+    jump daymenu
+
+label BBW039:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

@@ -26,33 +26,33 @@ image Dorm GTS = "Graphics/ui/bg/dorminterior.png"
 
 init 2 python:    
     #Core
-    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS002", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS006", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "next": "GTS007", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS008", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS009", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS009'] = {"name": "A Tree Between Mountains", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,      "location": "town",             "priority": PrioEnum.NONE, "next": "GTS011b", "obsflags": [],        "conditions": []}
-    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
-    eventlibrary['GTS011b'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS014", "obsflags": [],         "conditions": [[ConditionEnum.NOFLAG, "GTS011_unlock"]]}
-    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "next": "GTS015", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "next": "GTS018", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "priority": PrioEnum.NONE, "next": "GTS019", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS020", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "next": "GTS021", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "GTS025", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "next": "GTS026", "obsflags": [],         "conditions": []}
-    eventlibrary['GTS028T'] = {"name": "Art of Film", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "schoolplanter",    "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": [[ConditionEnum.FLAG, "GTS015_movie"]]}
-    eventlibrary['GTS030'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE, "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['GTS001'] = {"name": "Girl in the Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                  "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 0,          "next": "GTS002", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS002'] = {"name": "Planting Seeds", "girls": ["GTS"], "type": EventTypeEnum.CORE,                      "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 0,          "next": "GTS006", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS006'] = {"name": "Puppy Love", "girls": ["GTS"], "type": EventTypeEnum.CORE,                          "location": "schoolfront",      "priority": PrioEnum.NONE, "sp": 1,          "next": "GTS007", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS007'] = {"name": "Homesick", "girls": ["GTS"], "type": EventTypeEnum.CORE,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 1,          "next": "GTS008", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS008'] = {"name": "Secret Garden", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "sp": 1,          "next": "GTS009", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS009'] = {"name": "A Tree Between Mountains", "girls": ["GTS", "BE"], "type": EventTypeEnum.CORE,      "location": "town",             "priority": PrioEnum.NONE, "sp": 1,          "next": "GTS011b", "obsflags": [],      "conditions": []}
+    eventlibrary['GTS011'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS014", "obsflags": [],       "conditions": [[ConditionEnum.FLAG, "GTS011_unlock"]]}
+    eventlibrary['GTS011b'] = {"name": "The Director", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS014", "obsflags": [],       "conditions": [[ConditionEnum.NOFLAG, "GTS011_unlock"]]}
+    eventlibrary['GTS014'] = {"name": "A Con or Pro Fession?", "girls": ["GTS"], "type": EventTypeEnum.CORE,               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 2,          "next": "GTS015", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS015'] = {"name": "Decisions, Decisions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 3,          "next": "GTS018", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS018'] = {"name": "Slam Dunk", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "priority": PrioEnum.NONE, "sp": 3,          "next": "GTS019", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 3,          "next": "GTS020", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS021", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS025", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS030", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS028T'] = {"name": "Art of Film", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS030", "obsflags": [],       "conditions": [[ConditionEnum.FLAG, "GTS015_movie"]]}
+    eventlibrary['GTS030'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
     
     #Optional
-    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "cafeteria",        "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
-    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "library",          "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
-    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
-    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,            "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
-    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "obsflags": [],                           "conditions": []}
+    eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "cafeteria",        "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": []}
+    eventlibrary['GTS004'] = {"name": "Study Buddy", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "library",          "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": []}
+    eventlibrary['GTS012'] = {"name": "Tea?", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": [[ConditionEnum.EVENT, "GTS011"]]}
+    eventlibrary['GTS016'] = {"name": "To Bee or not to Bee", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,            "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": []}
+    eventlibrary['GTS017'] = {"name": "Getting Dirty", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                   "location": "schoolplanter",    "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": []}
     
-    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "obsflags": ["aftertest"],                "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-    eventlibrary['GTS010'] = {"name": "A Head Above the Class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "obsflags": ["aftersize2"],               "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['GTS005'] = {"name": "A Growing Issue", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,             "location": "schoolplanter",    "priority": PrioEnum.GIRL, "sp": 1,          "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
+    eventlibrary['GTS010'] = {"name": "A Head Above the Class", "girls": ["GTS"], "type": EventTypeEnum.OPTIONALCORE,      "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 2,          "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     
 label GTS001:
     $setProgress("GTS", "GTS002")
@@ -140,7 +140,7 @@ label GTS002:
     "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated in degrees of red that ranged from rose color to pink and even orange and yellow. And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
     "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me. In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
     show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
-    play music Sunset
+    play music Hallway
     MC "Yo Yamazaki-san!"
     "I lifted one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
     show GTS embarrassed at Position(xpos=0.5), Transform(xzoom=1) with dissolve
@@ -198,12 +198,12 @@ label GTS002_after:
     MC "I then took some time to learn a bit more about the school, and found out there are several sports clubs. I might give them a look and see if I can join in the future."
     "She nodded her head as I spoke to her, taking in everything I was saying attentively. It felt rather nice honestly, knowing that she was truly listening to me as she kept eye contact with me during the entirety of my small ramble."
     GTS "What sport are you interested in, Hotsure-san?"
-    MC "Oh, I'm rather interested in Soccer. I might give it a shot later this year, if my condition doesn't hinder it in some way."
+    MC "Oh, I'm rather interested in soccer. I might give it a shot later this year, if my condition doesn't hinder it in some way."
     "I chuckled lightly, kind of realizing that we couldn't plan our futures for the moment."
     "Without any knowledge about what might happen to us, everything was up in the air. I pushed that thought to the back of my mind though."
     GTS "Hopefully you'll be able to do so, Hotsure-san. Soccer has always seemed like a rather enjoyable sport, a lot of endurance needed so it's good exercise."
     "She gave me another soft, warm smile that made me smile in return as I scratched the back of my head."
-    MC "Heh, Thanks. Well, it's getting rather late, and I don't want to keep you from any plans you possibly have with your flowers, so I think I'll be heading off now. Before I go, though, do you need any help with those?"
+    MC "Heh, thanks. Well, it's getting rather late, and I don't want to keep you from any plans you possibly have with your flowers, so I think I'll be heading off now. Before I go, though, do you need any help with those?"
     "I pointed to the small bags of seeds she had with her. This caused her to give the slightest of giggles as she shook her head lightly."
     GTS "No, I'm okay, thank you. It was nice speaking with you though, Hotsure-san. Hopefully we'll talk again soon."
     MC "Yeah, hopefully. I'll catch you later, Yamazaki-san."
@@ -229,7 +229,7 @@ label GTS003:
     MC "Yeah it's been a pretty good morning so far, I managed to wake early so it gave me just the right amount of time to fully wake up, which is a pretty good start of the day in my opinion."
     MC "Thankfully since I woke up so early it allowed me to shower without feeling rushed."
     "She gave a small smile in response before picking up her chopsticks. Her hand softly slid her hair back as she picked up some cooked vegetables to eat."
-    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had 5 white petals in a sort of star configuration."
+    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had five white petals in a sort of star configuration."
     MC "How was the start of your day, if you don't mind me asking?"
     "Naomi perked up slightly as I asked my question, taking her napkin to delicately wipe her lips and properly placing it back in place before answering."
     show GTS neutral
@@ -381,7 +381,7 @@ label GTS005:
     GTS "Hello there, Hotsure-san."
     MC "Hey Yamazaki-san. How are you doing?"
     "She stood up and dusted off her legs before turning her full attention to me."
-    GTS "I'm doing well. I came here to do some reflecting and thinking. I feel rather inattentive though, I somehow had missed this small patch of Botan flowers here."
+    GTS "I'm doing well. I came here to do some reflecting and thinking. I feel rather inattentive though, I somehow had missed this small patch of botan flowers here."
     "I looked past her to see the pink plants in the flower patch behind her."
     MC "'Botans', huh? I thought they were roses, honestly."
     "She gave me a soft smile, but shook her head slightly."
@@ -406,7 +406,7 @@ label GTS005_c1:
     MC "Heh, you worry too much about that. It's fine to talk about what you like, that's what friends do."
     show GTS embarrassed
     GTS "I... I see. Thank you again."
-    MC "What else can you tell me about Botans?"
+    MC "What else can you tell me about botans?"
     show GTS neutral
     GTS "Well, I know that their name in other countries is peony and that they symbolize having bravery and courage. Besides looking rather lovely they are commonly used in some herbal medicines, which makes them a somewhat commonly-cultivated flower."
     MC "That's pretty cool actually, both cute and helpful."
@@ -493,7 +493,7 @@ label GTS006_c2:
     $setAffection("GTS", 1)
     MC "Yeah, he was extremely cute!"
     show GTS happy
-    GTS "Indeed, he was, did you get a chance to play with him?"
+    GTS "Indeed, he was. Did you get a chance to play with him?"
     MC "Not really, too big of a crowd and I don't think it'd be wise to make a scene by barging through everyone to pet him."
     "This made Naomi giggle softly and nod."
     GTS "That's very true, but I don't think many people would hold it against you with such an adorable puppy on the other side."
@@ -588,7 +588,7 @@ label GTS007:
 label GTS008:
     $setProgress("GTS", "GTS009")
     scene Roof with fade
-    play music Sunset
+    play music Hallway
     "My footsteps echoed up the stairwell as I ascended to the peak. Upon opening the door, a wave of warm sunlight washed over me."
     "As my eyes adjusted and I stepped out onto the school roof, I scanned the area to see if Honoka might be around. There were a small number of students hanging out and chatting but no sign of Honoka."
     "I didn't call out her name, but I did walk around to see if she might be around the stairway entrance. Surprisingly, it wasn't Honoka I found, but Naomi."
@@ -659,7 +659,7 @@ label GTS008_after:
     MC "Heh, nah, we'd love to have your company. Great, though! I'll let you know when we're meeting up and where. Now if you'll excuse me, I have to find Honoka and let her know too."
     MC "Talk to you later."
     GTS "Goodbye Hotsure-san, have a pleasant day."
-    "I waved at her as she bowed before I left the roof. I had actually only just learned of the festival a couple hours earlier, but this seemed like a good way for all of us to just relax and have fun. Now if only I could find Honoka..."
+    "I waved at her as she bowed before I left the roof. This seemed like a good way for all of us to just relax and have fun. Now if only I could find Honoka..."
     jump daymenu
 
 label GTS009:
@@ -669,7 +669,7 @@ label GTS009:
     else:
         $setProgress("GTS", "GTS011b")
     scene Town with fade
-    play music Sunset
+    play music Hallway
     #Afternoon, gentle music, scene becomes locked after scene 10.
     "My stride was rather lax as I wandered the various blocks of the town. It was rather quaint and not crowded. Well that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
     "I didn't get to stay on that train of thought for long however as I faintly heard a gentle voice speaking."
@@ -1106,7 +1106,7 @@ label GTS011b:
 label GTS012:
     scene School Planter with fade
     show GTS neutral at center with dissolve
-    play music Sunset
+    play music Hallway
     "A small sigh left my body as I rested back against a tree. I was in the garden, Naomi having invited me for some tea after class had ended."
     "She had set up a blanket on the grass and was preparing the drinks. It was an interesting sight as she sat on her knees, an assortment of items in front of her as she began the long process of making the tea."
     MC "I've never seen someone do this in person before. That's pretty impressive."
@@ -1583,7 +1583,7 @@ label GTS017_c1_2:
 label GTS018:
     $setProgress("GTS", "GTS019")
     scene School Exterior with fade
-    play music Sunset
+    play music Hallway
     #SFX wind
     "There it was again, the breeze that always blew my hair across my face."
     MC "One of these days I'm going to just gel my hair back..."
@@ -1609,7 +1609,7 @@ label GTS018:
     GTS "I-I'm sorry, but I don't know what you mean."
     UNKNOWN "I mean that you're perfect! Like literally, you're just what we're looking for."
     "Naomi was at a loss for words. I couldn't blame her, given she had nothing to work off of as the girl seemed heavily invested in her."
-    Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui and I'm part of the basketball club! It's a real pleasure to meet you..?"
+    Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui and I'm part of the basketball club! It's a real pleasure to meet you...?"
     GTS "O-oh! Naomi Yamazaki..."
     "She gave a seated bow as the girl giggled and looked at me, making me realize that I needed to introduce myself too."
     MC "Keisuke Hotsure."
@@ -1667,7 +1667,7 @@ label GTS018_c1_2:
     Fumika "Yeah, that's perfectly fine. If you want, you can stop by some time and meet the other girls, too. We're usually at the gym after class on Thursdays, so if you're ever curious just come visit and I'll be happy to introduce you."
     GTS "Thank you Usui-san. I'll be sure to come by and meet everyone."
     Fumika "Great! Can't wait to see you there. Well, I'll see you two later, then."
-    play music Sunset
+    play music Hallway
     "She gave us a small wave as she took off back to the campus. I waited until I was sure she was out of earshot before I spoke."
     MC "Well, that was something."
     GTS "Indeed."
@@ -2172,7 +2172,7 @@ label GTS028T_c1_after:
     Ryoko "Movies have a lot of rivals, live theatre being one of them."
     Minori "If I may interject, I would say online video sites are probably the biggest threat."
     Ryoko "Also true!"
-    GTS "I-I'm sorry..?"
+    GTS "I-I'm sorry...?"
     MC "Don't worry Yamazaki-san, She's just playing it up. Though I can't say I've gone to many plays or musicals."
     Minori "Unfortunately I haven't as well."
     Ryoko "Yeah, I already spend enough on movies. Live shows are far too costly for me to support both."

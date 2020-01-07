@@ -1,6 +1,7 @@
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
-#TBI: re-add condition switches
+
+#TBI: re-add condition switches (for time)
 image Lake Road = "Graphics/ui/bg/lakeroad.png"
 image School Front = "Graphics/ui/bg/schoolfront.png"
 image School Inner = "Graphics/ui/bg/schoolinner.png"
@@ -41,6 +42,7 @@ image Park = "Graphics/ui/bg/NYI.png"
 image Clock Tower = "Graphics/ui/bg/NYI.png"
 image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 image Clothes Store = "Graphics/ui/bg/NYI.png"
+image Pharmacy = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -68,6 +70,7 @@ image Tomoko sad = "Graphics/minor/tomoko-neutral.png"
 
 define MC = Character('Keisuke', color="#0066CC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')')
+define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define RM = Character('Daichi', color="#BDB8A5")
 define HR = Character('Tashi-sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
@@ -99,7 +102,8 @@ define audio.BBW = "Audio/BGM/scene_BBW.mp3"
 define audio.FMG = "Audio/BGM/scene_FMG.mp3"
 define audio.GTS = "Audio/BGM/scene_GTS.mp3"
 define audio.RM = "Audio/BGM/scene_RM.ogg"
-define audio.PRG = "Audio/BGM/scene_tbi.ogg" #NEED
+define audio.PRG = "Audio/BGM/scene_PRG.ogg"
+define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg"
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
 define audio.Festival = "Audio/BGM/scene_festival.mp3"
@@ -108,7 +112,7 @@ define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
-define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
+define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
 
 define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
@@ -193,7 +197,7 @@ label global000:
     "The girl looked up from the river in surprise as I bounded up to her, panting and out of breath."
     show BE neutral with dissolve
     play music BE
-    MC "Hey! Hi, uh... hoo boy, eheh. Sorry, let me catch my breath."
+    MC "Hey! Hi, uh... Hoo boy, eheh. Sorry, let me catch my breath."
     "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing. Her face looked soft and effeminate, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
     MC "Sorry about that, ma'am, um... Hey, do you know where the school is? I think I got lost a while back, eheh..."
     UNKNOWN "..."
@@ -208,7 +212,7 @@ label global000:
     MC "Awesome."
     UNKNOWN "So! Lead the way."
     MC "Uh..."
-    UNKNOWN "Oh! Tch- Duh, sorry. Follow me.."
+    UNKNOWN "Oh! Tch- Duh, sorry. Follow me..."
     "I followed by the girl's side for a while without saying much. As the minutes passed, I couldn't help but start to feel a bit talkative."
     MC "So, uh... You got here today too?"
     UNKNOWN "Yesterday."
@@ -219,8 +223,8 @@ label global000:
     MC "Ah. Cool. That's a good name."
     MCT "..."
     MCT "Oh my god. There's no way."
-    MC "...So, did that all-girls school treat you good?"
-    BE "...Excuse me? How did you know I went to an all-girls school?"
+    MC "...So, did that all-girls' school treat you good?"
+    BE "...Excuse me? How did you know I went to an all-girls' school?"
     "I bit my bottom lip and put my hands into my pockets, shrugging off her question."
     MC "Because you never forget the girl who kicks your ass in a Beetle Fighting Tournament-"
     BE "OH. MY.-"
@@ -230,7 +234,7 @@ label global000:
     BE "I-I thought, but I... Oh my god, it's been years!"
     MCT "There's that boyish grin I remember."
     "Inoue Honoka. My old childhood friend. The two of us were thick as thieves back in the day. When we weren't terrorizing Shibuya, we were spending our days chilling out in the countryside."
-    "Until one day, she was just gone. Moved over to an all girls' school in a different part of the country. We never saw each other again." 
+    "Until one day, she was just gone. Moved over to an all-girls' school in a different part of the country. We never saw each other again." 
     show BE neutral
     BE "You dork! Why didn't you say anything the first time..."
     MC "What would be the chances?!"
@@ -240,11 +244,11 @@ label global000:
     MCT "H-Holy crap!!!"
     hide cg with dissolve
     show BE neutral with dissolve
-    BE "Nehehe! You can't say you just now noticed *these*."
+    BE "Nehehe! You can't say you just now noticed {i}these{/i}."
     MC "The hell were they feeding you girls out there?! "
     BE "Pfff, you butthead!"
     MC "Tsssh"
-    BE "I *told* you they'd get bigger eventually! But you never listened!"
+    BE "I {i}told{/i} you they'd get bigger eventually! But you never listened!"
     MC "How could I have known? We were both kids!"
     show BE happy
     BE "A woman's intuition is never wrong."
@@ -425,8 +429,8 @@ label global000_AE:
     scene black with dissolve
     UNKNOWN "YOU..."
     
-    "With only a single word, Honoka and I stopped in place as a deep paralyzing chill ran down my spine.."
-    "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind.."
+    "With only a single word, Honoka and I stopped in place as a deep paralyzing chill ran down my spine..."
+    "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind..."
     scene Gate Front with dissolve
     UNKNOWN "Mizutani-san, what do you think you're doing?"
     play music FMG
@@ -473,7 +477,7 @@ label global000_AE_c1:
     show AE neutral
     AE "I can only assume you two are Honoka Inoue and Keisuke Hotsure?"
     MC "Huh? How did you-"
-    AE "Your appearance matches your files.."
+    AE "Your appearance matches your files..."
     MC "Oh, well, um... Yeah, we're in room 3-B?"
     AE "Then listen well. Go to room 3-B and make sure Kodama and Nikumaru have the first-day decorations put up properly."
     show AE angry
@@ -839,7 +843,7 @@ label global000_sit_c1_1:
     "Wordlessly, she glared at me through the side of her eye before looking back to the stage and nodding."
     AE "The ceremony is about to begin, sir."
     MC "I know, but I was just, ah, wondering-"
-    AE "Quiet.."
+    AE "Quiet..."
     MC "M-Mhn…"
     "A compulsion. I wasn't even purposefully following her orders, it was more like a compulsion. Either way, my head snapped to attention as I noticed the principal and a handful of faculty on stage."
     "It definitely seemed sparse, despite the size of the stage, but I wasn't about to attribute it to anything nefarious like Daichi would."
@@ -941,7 +945,7 @@ label global000_sit_c3_2:
     PRG "Oh! Uh, ah, well, there's three of us now, right?"
     MC "Heh, I suppose."
     show PRG neutral
-    PRG "W-well, you can sit next to me...{w} If you like."
+    PRG "W-well, you can sit next to me...{w} if you like."
     MCT "Boy, she's acting strange...{w} like she wants to get close but is spooked of it..."
     MC "Nervous about starting at a new school?"
     PRG "A little. Could use a friend..."
@@ -1236,7 +1240,7 @@ label global005:
     Nurse "Anyways, your growth factor. According to these results, you have hyper-productive hair follicles. Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
     MC "My hair? It's always grown like a weed, that's nothing new."
     Nurse "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
-    MC "And... And my sister? Does she have the same thing? Does she have anything at all?"
+    MC "And... and my sister? Does she have the same thing? Does she have anything at all?"
     Nurse "I'm sorry, but since she's not a minor anymore I'm not allowed to share her medical information with anyone she hasn't specified..."
     "I mulled over this for a few seconds while she wrote on her clipboard."
     MC "So, that's it? Is it going to be all of my hair, er, everywhere?"
@@ -1289,7 +1293,7 @@ label RM001_c1_1:
     show RM angry
     RM "Unless you know someone in the class below us who'd be willing to spy for me, this is my best option."
     MC "Can't say that I do."
-    MCT "I'm *not* getting my sister involved with this guy."
+    MCT "I'm {i}not{/i} getting my sister involved with this guy."
     show RM neutral
     RM "Then I'm using the camera."
     "I didn't really have a good response to that. He took the opening to continue his work."
@@ -1325,7 +1329,7 @@ label RM001_fail:
     MC "Maybe another time."
     show RM neutral
     RM "Suit yourself."
-    "An awkward silence descended as he went back to working on... whatever it was."
+    "An awkward silence descended as he went back to working on... Whatever it was."
     MCT "Maybe I should try a lighter topic?"
     jump RM001_after
 
@@ -1380,7 +1384,7 @@ label RM001_c2_1:
     if getFlag("RM001_c1_1"):
         MC "Well, hey, why don't you show me what you're doing with your camera?"
     else:
-        MC "Well, hey, why don't you show me your... whatever it is."
+        MC "Well, hey, why don't you show me your... Whatever it is."
         "He sighed and held up a lens, which was hiding behind some other components."
         RM "Camera. It's a camera."
         MC "Yeah, that."
@@ -1601,17 +1605,3 @@ label RM002_c3_2:
     hide Yuki with dissolve
     "She walked back to Daichi, with a slight spring in her step."
     jump daymenu
-
-label End:
-    show black
-    with dissolve
-    centered "You have reached the end of this demo of Growth Academy."
-    centered "If you'd like to keep up to date with the game's development or contribute and make it a reality, please visit us at: \n https://www.expansiongames.net"
-    centered "During each scene, an \"affection\" score for each of the girls were recorded based on your choices."
-    centered "In the full game, they will be very important in where the story will lead; including some exclusive plot events and the chance for the girl to fall in love with you."
-    centered "For now, they're just plain numbers; here's how you did!"
-    centered "Inoue Honoka: [BE_Affection] \n Yamazaki Naomi: [GTS_Affection] \n Mizutani Akira: [FMG_Affection] \n Matsumoto Shiori: [AE_Affection] \n Alice Nikumaru: [BBW_Affection] \n Kodama Aida: [PRG_Affection] \n Daichi Utagashi: [RM_Affection]"
-    
-    centered "Thanks for playing!"
-
-    return   # Complete Game and Return to Main Menu; End Game conditions can be taken into account for potential rewards (such as exclusive images or the ability to view full-credits for having completed the game).
