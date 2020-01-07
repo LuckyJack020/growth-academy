@@ -249,7 +249,7 @@ label FMG003_c3:
         ease 0.75 xpos 0.9
     "I honestly felt kinda bad for her but I got too much on my plate to worry about exercise."
     hide FMG
-    "..Like the fact I'm going to be late for class if I don't move!"
+    "...Like the fact I'm going to be late for class if I don't move!"
     jump daymenu
     
 label FMG004:
@@ -1073,7 +1073,7 @@ label FMG011:
         "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
         "Eventually the zombies got to her, the screen turning red with blood splotches until the words 'Game Over' came up."
         show FMG sad 
-        FMG "..Um, you shoot off the screen... to reload. I'm sorry."
+        FMG "...Um, you shoot off the screen... to reload. I'm sorry."
         BBW "I see now."
         "She put in another 100 yen coin. Her game didn't improve by much, but she did manage to avoid getting mobbed again. Come the boss, though..."
         BBW "And this is what people do for fun?"
@@ -1195,7 +1195,7 @@ label FMG013:
     "Akira clapped her hands and laid prone on the cushioned bench."
     FMG "Aight, well, get some weights and start then."
     stop music
-    "Without warning, Akira's normally bright and cheery face suddenly became *far* less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
+    "Without warning, Akira's normally bright and cheery face suddenly became {i}far{/i} less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
     MC "Woah, you alright there?"
     FMG "..."
     MC "..."
@@ -1255,7 +1255,7 @@ label FMG013:
     MC "Eh?"
     FMG "Same time tomorrow, you'll spot for me, let's do it!"
     MC "I- uh,"
-    FMG "Yeees, yes, say it, *yeees*."
+    FMG "Yeees, yes, say it, {i}yeees{/i}."
     MC "Y-Yes."
     FMG "Woo!"
     "Jumping up in joy, I could feel the impact of her landing all the way up to my knees."
@@ -1864,10 +1864,10 @@ label FMG018_c1_1:
     AE "A bit of salt-"
     FMG "Okay."
     AE "Pork fat, pork blood, and mixed in with some oat groats."
-    MC "W-Wait, did you say *blood*?!"
+    MC "W-Wait, did you say {i}blood{/i}?!"
     FMG "I'm cool with that, but what's a groat?"
     MC "I don't even know where we'd get pork blood!"
-    AE "Well, I *believe* that it should be among the pork products. Check with the teacher, if you will. As for the other ingredients, we have those right here."
+    AE "Well, I {i}believe{/i} that it should be among the pork products. Check with the teacher, if you will. As for the other ingredients, we have those right here."
     FMG "All right, guess I'll go grab the ingredients then. Kei-kun, maybe do whatever Shiori tells you."
     scene black with fade
     "After a discussion with a confused teacher, I later found that the fat, blood, and other rendered parts of the animals could be found in the school kitchen."
@@ -1877,7 +1877,7 @@ label FMG018_c1_1:
     show AE neutral at Position(xpos=0.75) with dissolve
     MC "Yo! I'm back with the blood."
     AE "Ah, splendid. We've been working on the mashed potatoes."
-    FMG "Yeah! Check *this* out."
+    FMG "Yeah! Check {i}this{/i} out."
     "In her excitement to help, Akira picked up an unpeeled potato and placed the potato between her forearm and upper arm and mashes it with a bicep flex, with such great force that the chunky remains splattered into a bowl."
     if getAffection("FMG") > 12:
         MCT "Huh... That's... oddly interesting."
@@ -1964,7 +1964,7 @@ label FMG018_c1_2:
     show GTS sad
     GTS "Again, I am sorry for my lack of experience cooking. I... never had to cook at home."
     show FMG angry
-    FMG "...Don't worry about this, I don't blame *you*."
+    FMG "...Don't worry about this, I don't blame {i}you{/i}."
     MCT "I get the feeling Akira is upset with me... though I guess I did made a decision based on a feeling."
     jump daymenu
 
@@ -2258,7 +2258,7 @@ label FMGBBW001:
     RM "Something that may lead to a breakthrough. Give me a minute to read it."
     show RM neutral
     RM "Alright, so most of these articles are dead ends, but this particular article is about the first record of growth. Apparently it was a female around her teens. Name: Chie Kazomazumi."
-    RM "She was about as average as average can be. However around her sixteenth birthday her breasts started to enlarge to an extreme size around in the 1970s."
+    RM "She was about as average as average can be. However, around her sixteenth birthday in the 1970s, her breasts started to enlarge to an extreme size."
     MCT "Huh, he might actually have found something worth a damn, assuming it's legit."
     show RM smug
     RM "This is a great lead. I need to follow up on it."

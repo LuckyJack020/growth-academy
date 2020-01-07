@@ -1088,7 +1088,7 @@ label PRG009:
                 PRG "I... I'm s-sorry, really..."
                 PRG "..."
             else:
-                MC "So... mind if I ask what yours is? I've told you mine.."
+                MC "So... mind if I ask what yours is? I've told you mine..."
                 PRG "...!"
                 PRG "I... I..."
                 show PRG sad
@@ -1115,7 +1115,7 @@ label PRG009:
             MC "Let me ask you this: If I told you it was going to rain tomorrow, what would you do?"
             PRG "Eh? B-but I didn't hear anything about-"
             MC "Hypothetically. Hypothetically, you know 100%% that it was going to rain tomorrow. What would you do?"
-            PRG "W-well, I don't know. Uh, I, well I'd get my umbrella.. Maybe a raincoat if it was bad... I think I have some galoshes if it was really raining..."
+            PRG "W-well, I don't know. Uh, I, well I'd get my umbrella... Maybe a raincoat if it was bad... I think I have some galoshes if it was really raining..."
             MC "But what would you do tonight?"
             PRG "Tonight?"
             MC "Yeah. It's raining tomorrow, what do you do different tonight?"
@@ -1535,7 +1535,7 @@ label PRG013:
     PRG "I could... but I'm not that competitive... I just like to cook for my friends and family."
     UNKNOWN "Oh well. Was worth a try with you on our side. Was nice talking to you...?"
     MC "Hotsure."
-    UNKNOWN "--Hotsure-san. I'm Michiko, by the way."
+    UNKNOWN "-Hotsure-san. I'm Michiko, by the way."
     MC "Ah! Likewise, Michiko-san."
     "Michiko rejoined the two, who seemed to be nearly finished with their dish."
     show PRG unique
@@ -1800,7 +1800,7 @@ label PRG015_after:
     MC "No problem. You'll do just fine tomorrow!"
     show PRG happy
     PRG "I hope so!"
-    MC "Don't be afraid to ask me for help! But.. maybe do it a bit earlier than the day before. Anyway, have a good night and see ya tomorrow, Kodama-san."
+    MC "Don't be afraid to ask me for help! But... maybe do it a bit earlier than the day before. Anyway, have a good night and see ya tomorrow, Kodama-san."
     PRG "B-bye!"
     "We waved at each other before she closed the door, and I made my way back to my room."
     scene Dorm Interior with fade
@@ -6940,7 +6940,7 @@ label PRG038:
     PRG "Good Morning, Keisuke!"
     MC "Morning!"
     
-    scene Dorm PRG with fade
+    scene Dorm PRG Day with fade
     #day
     "Aida stepped aside to allow me to enter. I slid the overweight bag from my shoulders and set it gingerly on the carpet."
     show PRG neutral with dissolve
@@ -7018,7 +7018,7 @@ label PRG038:
     show PRG neutral
     PRG "O-Okay!"
     
-    scene Dorm PRG with fade
+    scene Dorm PRG Eve with fade
     #evening
     "For the rest of the day, Aida and I worked our way through my entire pile of games. Every so often, I'd take over to get her past a particularly difficult section, but for the most part, she was able to handle herself. By the time we finished the last game, the sun was beginning to set."
     show PRG happy with dissolve
@@ -7134,7 +7134,7 @@ label PRG038_testpass:
     "She shuddered once more, but stayed put. Though they were quiet, I could've sworn I heard a tiny moaning coming from her, and the more I rubbed, the more she moaned."
     "We stayed like that for what seemed like only a handful of minutes, but soon we heard the music of the end credits, and I slowly turned onto my side, letting Aida rest next to me. Eventually, I soon heard her breathing slow as she drifted off to sleep. Still with my arms around her, I let myself drift off as well."
 
-    scene Dorm PRG with fade
+    scene Dorm PRG Day with fade
     #day
     "I awoke the next morning still in a sleepy haze. I quickly realized that things were not as they were when I fell asleep. Aida was turned away from me, the two of us in the spooning position."
     "Rather than wake her, I chose to lay next to her and just enjoy the moment. After nearly 30 minutes had passed, she shifted under my arm and turned towards me, slowly opening her eyes."

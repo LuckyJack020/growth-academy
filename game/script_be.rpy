@@ -180,7 +180,7 @@ label BE001_c3:
     MC "Saw what?"
     show BE neutral
     BE "It was staring you right in the eyes!"
-    MC "Honoka I really don't--"
+    MC "Honoka I really don't-"
     show BE happy
     BE "Pff, I'm talking about my breasts, Kei-chan. Don't think I didn't catch you sneaking a peek when we met up outside the academy."
     MC "Oh, well, listen, if I'd known you were Honoka, I wouldn't have-"
@@ -4019,7 +4019,7 @@ label BE025:
     BE "But otherwise, it's just trying to be consistent."
     MC "I can tell. You looked super focused on everything when Haruhiro was giving out the instructions."
     show BE neutral
-    BE "Eh, you've gotta be smart about it. These are real arrows, after all. And Haruhiro's such a dork about it that upsetting him would be like.. I dunno, it'd be like bullying Aida-chan. Just feels wrong."
+    BE "Eh, you've gotta be smart about it. These are real arrows, after all. And Haruhiro's such a dork about it that upsetting him would be like... I dunno, it'd be like bullying Aida-chan. Just feels wrong."
     MC "I see."
     Haruhiro "Scores up!"
     "Honoka and I turned around to hear Haruhiro giving out the scores. He went through them all in alphabetical order."
@@ -4432,7 +4432,7 @@ label BE026_c2_2:
     MC "Honoka, they're spectacular."
     show BE happy
     BE "Oh, go on."
-    MC "I mean, I don't know enough words to describe them. They're so... big, and round, and.."
+    MC "I mean, I don't know enough words to describe them. They're so... big, and round, and..."
     BE "No, Kei-chan, I mean..."
     show BE aroused
     BE "Go on."

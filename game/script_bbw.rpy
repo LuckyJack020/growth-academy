@@ -184,7 +184,7 @@ label BBW001_c2_1:
 label BBW001_c2_2:
     MC "Oh, yeah! He's the guy who plays in that traveling jug band, isn't he?"
     show BBW angry
-    BBW "* scoff * Is there not a single ounce of class or breeding in this place?"
+    BBW "*scoff* Is there not a single ounce of class or breeding in this place?"
     hide BBW
     MC "I'd settle for an ounce of humor."
     jump daymenu
@@ -1768,7 +1768,7 @@ label BBW011_c3:
     BBW "Fun talk, though. We should do this again."
     BBW "Hopefully with a better movie."
     show PRG sad
-    PRG "But *I* liked it."
+    PRG "But {i}I{/i} liked it."
     jump daymenu
     
 label BBW012:
@@ -2528,7 +2528,7 @@ label BBW015_test_semipass:
     show AE angry
     AE "Look, I'm willing to trust that you're doing as you say."
     show AE angry at Transform(xzoom=-1)
-    AE "Do *not* make that trust ill-founded."
+    AE "Do {i}not{/i} make that trust ill-founded."
     show AE neutral at Transform(xzoom=1)
     AE "Go ahead and take the item to the rightful owner. And then please leave."
     AE "The residents here need to prepare for the day, and I don't want your presence to be distracting."

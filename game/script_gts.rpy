@@ -198,12 +198,12 @@ label GTS002_after:
     MC "I then took some time to learn a bit more about the school, and found out there are several sports clubs. I might give them a look and see if I can join in the future."
     "She nodded her head as I spoke to her, taking in everything I was saying attentively. It felt rather nice honestly, knowing that she was truly listening to me as she kept eye contact with me during the entirety of my small ramble."
     GTS "What sport are you interested in, Hotsure-san?"
-    MC "Oh, I'm rather interested in Soccer. I might give it a shot later this year, if my condition doesn't hinder it in some way."
+    MC "Oh, I'm rather interested in soccer. I might give it a shot later this year, if my condition doesn't hinder it in some way."
     "I chuckled lightly, kind of realizing that we couldn't plan our futures for the moment."
     "Without any knowledge about what might happen to us, everything was up in the air. I pushed that thought to the back of my mind though."
     GTS "Hopefully you'll be able to do so, Hotsure-san. Soccer has always seemed like a rather enjoyable sport, a lot of endurance needed so it's good exercise."
     "She gave me another soft, warm smile that made me smile in return as I scratched the back of my head."
-    MC "Heh, Thanks. Well, it's getting rather late, and I don't want to keep you from any plans you possibly have with your flowers, so I think I'll be heading off now. Before I go, though, do you need any help with those?"
+    MC "Heh, thanks. Well, it's getting rather late, and I don't want to keep you from any plans you possibly have with your flowers, so I think I'll be heading off now. Before I go, though, do you need any help with those?"
     "I pointed to the small bags of seeds she had with her. This caused her to give the slightest of giggles as she shook her head lightly."
     GTS "No, I'm okay, thank you. It was nice speaking with you though, Hotsure-san. Hopefully we'll talk again soon."
     MC "Yeah, hopefully. I'll catch you later, Yamazaki-san."
@@ -229,7 +229,7 @@ label GTS003:
     MC "Yeah it's been a pretty good morning so far, I managed to wake early so it gave me just the right amount of time to fully wake up, which is a pretty good start of the day in my opinion."
     MC "Thankfully since I woke up so early it allowed me to shower without feeling rushed."
     "She gave a small smile in response before picking up her chopsticks. Her hand softly slid her hair back as she picked up some cooked vegetables to eat."
-    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had 5 white petals in a sort of star configuration."
+    "This let me notice that her other bang was currently held back by a flower shaped hair clip. I had no idea what type of flower it was, only knowing that it had five white petals in a sort of star configuration."
     MC "How was the start of your day, if you don't mind me asking?"
     "Naomi perked up slightly as I asked my question, taking her napkin to delicately wipe her lips and properly placing it back in place before answering."
     show GTS neutral
@@ -381,7 +381,7 @@ label GTS005:
     GTS "Hello there, Hotsure-san."
     MC "Hey Yamazaki-san. How are you doing?"
     "She stood up and dusted off her legs before turning her full attention to me."
-    GTS "I'm doing well. I came here to do some reflecting and thinking. I feel rather inattentive though, I somehow had missed this small patch of Botan flowers here."
+    GTS "I'm doing well. I came here to do some reflecting and thinking. I feel rather inattentive though, I somehow had missed this small patch of botan flowers here."
     "I looked past her to see the pink plants in the flower patch behind her."
     MC "'Botans', huh? I thought they were roses, honestly."
     "She gave me a soft smile, but shook her head slightly."
@@ -406,7 +406,7 @@ label GTS005_c1:
     MC "Heh, you worry too much about that. It's fine to talk about what you like, that's what friends do."
     show GTS embarrassed
     GTS "I... I see. Thank you again."
-    MC "What else can you tell me about Botans?"
+    MC "What else can you tell me about botans?"
     show GTS neutral
     GTS "Well, I know that their name in other countries is peony and that they symbolize having bravery and courage. Besides looking rather lovely they are commonly used in some herbal medicines, which makes them a somewhat commonly-cultivated flower."
     MC "That's pretty cool actually, both cute and helpful."
@@ -493,7 +493,7 @@ label GTS006_c2:
     $setAffection("GTS", 1)
     MC "Yeah, he was extremely cute!"
     show GTS happy
-    GTS "Indeed, he was, did you get a chance to play with him?"
+    GTS "Indeed, he was. Did you get a chance to play with him?"
     MC "Not really, too big of a crowd and I don't think it'd be wise to make a scene by barging through everyone to pet him."
     "This made Naomi giggle softly and nod."
     GTS "That's very true, but I don't think many people would hold it against you with such an adorable puppy on the other side."
@@ -659,7 +659,7 @@ label GTS008_after:
     MC "Heh, nah, we'd love to have your company. Great, though! I'll let you know when we're meeting up and where. Now if you'll excuse me, I have to find Honoka and let her know too."
     MC "Talk to you later."
     GTS "Goodbye Hotsure-san, have a pleasant day."
-    "I waved at her as she bowed before I left the roof. I had actually only just learned of the festival a couple hours earlier, but this seemed like a good way for all of us to just relax and have fun. Now if only I could find Honoka..."
+    "I waved at her as she bowed before I left the roof. This seemed like a good way for all of us to just relax and have fun. Now if only I could find Honoka..."
     jump daymenu
 
 label GTS009:
@@ -1609,7 +1609,7 @@ label GTS018:
     GTS "I-I'm sorry, but I don't know what you mean."
     UNKNOWN "I mean that you're perfect! Like literally, you're just what we're looking for."
     "Naomi was at a loss for words. I couldn't blame her, given she had nothing to work off of as the girl seemed heavily invested in her."
-    Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui and I'm part of the basketball club! It's a real pleasure to meet you..?"
+    Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui and I'm part of the basketball club! It's a real pleasure to meet you...?"
     GTS "O-oh! Naomi Yamazaki..."
     "She gave a seated bow as the girl giggled and looked at me, making me realize that I needed to introduce myself too."
     MC "Keisuke Hotsure."
@@ -2172,7 +2172,7 @@ label GTS028T_c1_after:
     Ryoko "Movies have a lot of rivals, live theatre being one of them."
     Minori "If I may interject, I would say online video sites are probably the biggest threat."
     Ryoko "Also true!"
-    GTS "I-I'm sorry..?"
+    GTS "I-I'm sorry...?"
     MC "Don't worry Yamazaki-san, She's just playing it up. Though I can't say I've gone to many plays or musicals."
     Minori "Unfortunately I haven't as well."
     Ryoko "Yeah, I already spend enough on movies. Live shows are far too costly for me to support both."
