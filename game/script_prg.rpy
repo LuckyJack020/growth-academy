@@ -3842,7 +3842,7 @@ label PRG025_c1_3:
     extend " then that's fine too."
     "What she said made sense theoretically, but a slight pause and her voice breaking ever so slightly was all I needed to know that she was really trying to hold herself together."
     MC "I... I guess that's okay?"
-    MCT "There's supposed to be a handful of days in a woman's cycle where she is the most fertile, right? What're the odds that she'd be at her most fertile point on today of all days?"
+    MCT "There's supposed to be a handful of days in a woman's cycle where she is the most fertile, right? What're the odds that she'd be at her most fertile point today of all days?"
     MC "All right, let's not waste any more time."
     jump PRG025_c2_1
 
@@ -6254,7 +6254,7 @@ label PRG035_c1_after:
     MC "I'll just do water, please."
     Waitress "Of course. I'll have those out in just a moment."
     "The waitress hurried behind the counter in a flash. For not having any customers, she really kept up a decent hustle. In no more than thirty seconds, she had both my water and Aida's tea on the table."
-    Waitress "I'll give you guys a minute to look. Just flag my down whenever you're ready."
+    Waitress "I'll give you guys a minute to look. Just flag me down whenever you're ready."
     show PRG neutral
     PRG "A-Actually, I'm ready to order if you are, Keisuke."
     MC "You go ahead, I'll find something while you order."
@@ -6704,6 +6704,7 @@ label PRG037:
     Announcer "Now, let's get down to business, shall we?"
     "The crowd hooted and hollered in response. All four teams took their places and took a last minute tally of their supplies."
     stop music
+    hide PRG with dissolve
     Announcer "ALL TEAMS BOW!"
     "Each participant bowed deeply to the center of the tables."
     play music Tension
@@ -7142,7 +7143,7 @@ label PRG038_testpass:
     MC "Morning, sleepyhead."
     PRG "Good morning."
     "I slid out of her bed and gathered my things, cramming it all into my backpack."
-    MC "I'd better change quick. It'd be just my luck that Matsumoto-an would catch me in the girls dorm without a uniform on."
+    MC "I'd better change quick. It'd be just my luck that Matsumoto-san would catch me in the girls dorm without a uniform on."
     PRG "Or shirtless, for that matter."
     MC "That too."
     "I changed back into my school uniform and slung my backpack over my shoulder."
