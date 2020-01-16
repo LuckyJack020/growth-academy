@@ -11396,6 +11396,7 @@ label AE050_after3:
 
 label AE051:
     $setProgress("AE", "AE052")
+    $setSize(4)
     #SCENE MORNING
     scene black with fade
     AE "Mmn."

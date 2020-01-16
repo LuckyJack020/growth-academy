@@ -5791,7 +5791,7 @@ label BBW032_FMG_after:
     MC "Gah!"
     MC "What?"
     show BBW angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show FMG sad Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show FMG sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     BBW "My custom-made Vantelli dress. Ruined!"
     FMG "I said I was sorry."
     MC "I take it the dress didn't fit?"
@@ -6558,7 +6558,7 @@ label BBW035:
     jump daymenu
     
 label BBW036:
-    $setProgress("BBW038")
+    $setProgress("BBW", "BBW038")
     #Time: Afternoon
     scene Classroom with fade
     "Approaching Alice after class had become the easiest thing in the world, but not quite for the reasons I wanted."
