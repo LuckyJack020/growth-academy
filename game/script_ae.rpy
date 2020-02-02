@@ -1,151 +1,3 @@
-define AE = Character('Shiori', color="#FF3300")
-define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
-define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
-define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
-define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
-define Ama = Character('Amatsu-san', color="#ffc3b5")
-define All = Character('Everyone', color="#ffffff")
-define Tako = Character('Tako', color="#ce9b50")
-
-image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
-image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
-image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
-image AE happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE frown = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
-image AE embarrassed = DynamicImage("Graphics/AE/[globalsize]/embarrassed.png")
-image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
-image AE glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
-image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
-
-image AE nude-neutral = DynamicImage("Graphics/AE/[globalsize]n/neutral.png")
-image AE nude-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE nude-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
-image AE nude-neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE nude-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
-image AE nude-happy = DynamicImage("Graphics/AE/[globalsize]n/happy.png")
-image AE nude-smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE nude-sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE nude-sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE nude-surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE nude-angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE nude-angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE nude-angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE nude-aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
-image AE nude-embarrassed = DynamicImage("Graphics/AE/[globalsize]n/embarrassed.png")
-image AE nude-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE nude-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
-image AE nude-glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
-image AE nude-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
-
-image AE dress-neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
-image AE dress-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE dress-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
-image AE dress-neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE dress-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
-image AE dress-happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE dress-smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE dress-sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE dress-sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE dress-surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE dress-angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE dress-angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE dress-angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE dress-aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
-image AE dress-embarrassed = DynamicImage("Graphics/AE/[globalsize]/aroused-2.png")
-image AE dress-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE dress-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
-image AE dress-glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
-image AE dress-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
-
-image Tako neutral = "Graphics/minor/tako-neutral.png"
-image Tako surprised = "Graphics/minor/tako-neutral.png"
-
-#image Dorm AE = "Graphics/ui/bg/AEdorm_day.png"
-image Dorm AE = "Graphics/ui/bg/NYI.png"
-image Student Government = "Graphics/ui/bg/NYI.png"
-
-#MISSING: size1: sad-2, aroused-4
-#MISSING: size2: angry-2, angry-3
-
-init 2 python:
-    
-    #Core
-    eventlibrary['AE001'] = {"name": "Hush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                       "location": "library",          "priority": PrioEnum.NONE, "sp": 0,     "next": "AE002", "obsflags": ["size2"],         "conditions": []}
-    eventlibrary['AE002'] = {"name": "A Hard Read", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "office",           "priority": PrioEnum.NONE, "sp": 0,     "next": "AE003", "obsflags": ["size2"],         "conditions": []}
-    eventlibrary['AE003'] = {"name": "The Lord High Executioner", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 0,     "next": "AE004", "obsflags": [],                "conditions": []}
-    eventlibrary['AE004'] = {"name": "A Statistically Probable Meeting", "girls": ["AE"], "type": EventTypeEnum.CORE,           "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 0,     "next": "AE006", "obsflags": [],                "conditions": []}
-    eventlibrary['AE006'] = {"name": "Opportunity and Networking", "girls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "office",           "priority": PrioEnum.NONE, "sp": 1,     "next": "AE007", "obsflags": [],                "conditions": []}
-    eventlibrary['AE007'] = {"name": "The Value of a Minute or Two", "girls": ["AE"], "type": EventTypeEnum.CORE,               "location": "office",           "priority": PrioEnum.NONE, "sp": 1,     "next": "AE008", "obsflags": [],                "conditions": []}
-    eventlibrary['AE008'] = {"name": "Striking Up a One Sided Conversation", "girls": ["AE"], "type": EventTypeEnum.CORE,       "location": "office",           "priority": PrioEnum.NONE, "sp": 1,     "next": "AE009", "obsflags": [],                "conditions": []}
-    eventlibrary['AE009'] = {"name": "On Your Mind", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "office",           "priority": PrioEnum.NONE, "sp": 1,     "next": "AE011",    "obsflags": [],                "conditions": []}
-    eventlibrary['AE011'] = {"name": "Raising the Question", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office",           "priority": PrioEnum.NONE, "sp": 2,     "next": "AE012",    "obsflags": [],                "conditions": []}
-    eventlibrary['AE012'] = {"name": "Inquiry and Response", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "office",           "priority": PrioEnum.NONE, "sp": 2,     "next": "AE013", "obsflags": [],                "conditions": []}
-    eventlibrary['AE013'] = {"name": "Stickers on Caskets", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "office",           "priority": PrioEnum.NONE, "sp": 2,     "next": "AE014", "obsflags": [],                "conditions": []}
-    eventlibrary['AE014'] = {"name": "The Daily Grind", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "office",           "priority": PrioEnum.NONE, "sp": 2,     "next": "AE015", "obsflags": [],                "conditions": []}
-    eventlibrary['AE015'] = {"name": "Hostage Situation", "girls": ["AE"], "type": EventTypeEnum.CORE,                          "location": "office",           "priority": PrioEnum.NONE, "sp": 3,     "next": "AE016", "obsflags": [],                "conditions": []}
-    eventlibrary['AE016'] = {"name": "A Little List", "girls": ["AE"], "type": EventTypeEnum.CORE,                              "location": "library",          "priority": PrioEnum.NONE, "sp": 3,     "next": "AE017", "obsflags": [],                "conditions": []}
-    eventlibrary['AE017'] = {"name": "Chopsticks", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 3,     "next": "AE018", "obsflags": [],                "conditions": []}
-    eventlibrary['AE018'] = {"name": "Miseri Mei", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 3,     "next": "AE019", "obsflags": [],                "conditions": []}
-    eventlibrary['AE019'] = {"name": "Rondo Alla Turca", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 3,     "next": "AE020", "obsflags": [],                "conditions": []}
-    eventlibrary['AE020'] = {"name": "Pascha Nostrum", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "classroom",        "priority": PrioEnum.NONE, "sp": 4,     "next": "AE021", "obsflags": [],                "conditions": []}
-    eventlibrary['AE021'] = {"name": "Prelude for Choir", "girls": ["AE", "BBW", "PRG"], "type": EventTypeEnum.CORE,            "location": "classroom",        "priority": PrioEnum.NONE, "sp": 4,     "next": "AE022", "obsflags": [],                "conditions": []}
-    eventlibrary['AE022'] = {"name": "Casta Diva", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "hallway",          "priority": PrioEnum.NONE, "sp": 4,     "next": "AE023", "obsflags": [],                "conditions": []}
-    eventlibrary['AE023'] = {"name": "Sarabande", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "hallway",          "priority": PrioEnum.NONE, "sp": 4,     "next": "AE024", "obsflags": [],                "conditions": []}
-    eventlibrary['AE024'] = {"name": "Carmen", "girls": ["AE"], "type": EventTypeEnum.CORE,                                     "location": "roof",             "priority": PrioEnum.NONE, "sp": 4,     "next": "AE025", "obsflags": [],                "conditions": []}
-    eventlibrary['AE025'] = {"name": "Seasons", "girls": ["AE"], "type": EventTypeEnum.CORE,                                    "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 5,     "next": "AE026", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE026'] = {"name": "The Most Wondrous Dream", "girls": ["AE"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 5,     "next": "AE027", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE027'] = {"name": "Through Thicc or Thin", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "classroom",        "priority": PrioEnum.NONE, "sp": 5,     "next": "AE028", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE028'] = {"name": "Bolero", "girls": ["AE"], "type": EventTypeEnum.CORE,                                     "location": "roof",             "priority": PrioEnum.NONE, "sp": 5,     "next": "AE029", "obsflags": [],                "conditions": []} #TODO: Not sure if schoolplanter
-    eventlibrary['AE029'] = {"name": "Moon in June", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 5,     "next": "AE030", "obsflags": [],                "conditions": []}
-    eventlibrary['AE030'] = {"name": "Exposure", "girls": ["AE", "BE"], "type": EventTypeEnum.CORE,                             "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "AE031", "obsflags": [],                "conditions": []}
-    eventlibrary['AE031'] = {"name": "The Keys to her Heart", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "musicclassroom",   "priority": PrioEnum.NONE, "sp": 6,     "next": "AE032", "obsflags": [],                "conditions": []}
-    eventlibrary['AE032'] = {"name": "Standardized High Standards", "girls": ["AE"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 6,     "next": "AE033", "obsflags": [],                "conditions": []}
-    eventlibrary['AE033'] = {"name": "Your Secret Told on You", "girls": ["AE"], "type": EventTypeEnum.CORE,                    "location": "hallway",          "priority": PrioEnum.NONE, "sp": 6,     "next": "AE034", "obsflags": [],                "conditions": []}
-    eventlibrary['AE034'] = {"name": "O Mio Babbino Caro", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 6,     "next": "AE035", "obsflags": [],                "conditions": []}
-    eventlibrary['AE035'] = {"name": "The Black Box", "girls": ["AE"], "type": EventTypeEnum.CORE,                              "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 7,     "next": "AE036", "obsflags": [],                "conditions": []}
-    eventlibrary['AE036'] = {"name": "Out There", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "schoolfront",      "priority": PrioEnum.NONE, "sp": 7,     "next": "AE037", "obsflags": [],                "conditions": []}
-    eventlibrary['AE037'] = {"name": "A Walk Through Town", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "town",             "priority": PrioEnum.NONE, "sp": 7,     "next": "AE038", "obsflags": [],                "conditions": []}
-    eventlibrary['AE038'] = {"name": "A Simple Meal", "girls": ["AE"], "type": EventTypeEnum.CORE,                              "location": "town",             "priority": PrioEnum.NONE, "sp": 7,     "next": "AE039", "obsflags": [],                "conditions": []}
-    eventlibrary['AE039'] = {"name": "Dawn of Warblade", "girls": ["AE"], "type": EventTypeEnum.CORE,                           "location": "town",             "priority": PrioEnum.NONE, "sp": 7,     "next": "AE040", "obsflags": [],                "conditions": []}
-    eventlibrary['AE040'] = {"name": "A Game of Oversized Thrones", "girls": ["AE"], "type": EventTypeEnum.CORE,                "location": "town",             "priority": PrioEnum.NONE, "sp": 8,     "next": "AE041", "obsflags": [],                "conditions": []}
-    eventlibrary['AE041'] = {"name": "Ambush", "girls": ["AE"], "type": EventTypeEnum.CORE,                                     "location": "town",             "priority": PrioEnum.NONE, "sp": 8,     "next": "AE042", "obsflags": [],                "conditions": []}
-    eventlibrary['AE042'] = {"name": "Chaos Reigns", "girls": ["AE"], "type": EventTypeEnum.CORE,                               "location": "town",             "priority": PrioEnum.NONE, "sp": 8,     "next": "AE043", "obsflags": [],                "conditions": []}
-    eventlibrary['AE043'] = {"name": "Rainy Skies, Hot Coffee", "girls": ["AE"], "type": EventTypeEnum.CORE,                    "location": "town",             "priority": PrioEnum.NONE, "sp": 8,     "next": "AE044", "obsflags": [],                "conditions": []}
-    eventlibrary['AE044'] = {"name": "From Which The Angel Falls", "girls": ["AE"], "type": EventTypeEnum.CORE,                 "location": "town",             "priority": PrioEnum.NONE, "sp": 8,     "next": "AE045", "obsflags": [],                "conditions": []}
-    eventlibrary['AE045'] = {"name": "Let My Prayers Arise", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "clocktower",       "priority": PrioEnum.GIRL, "sp": 9,     "next": "AE046", "obsflags": [],                "conditions": []}
-    eventlibrary['AE046'] = {"name": "Perfection in Normality", "girls": ["AE"], "type": EventTypeEnum.CORE,                    "location": "dormAE",           "priority": PrioEnum.NONE, "sp": 9,     "next": "AE047", "obsflags": [],                "conditions": []}
-    eventlibrary['AE047'] = {"name": "So Many", "girls": ["AE"], "type": EventTypeEnum.CORE,                                    "location": "dormAE",           "priority": PrioEnum.NONE, "sp": 9,     "next": "AE048", "obsflags": [],                "conditions": []}
-    eventlibrary['AE048'] = {"name": "Taking it Seriously", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 9,     "next": "AE049", "obsflags": [],                "conditions": []}
-    eventlibrary['AE049'] = {"name": "The Wise Thief", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 9,     "next": "AE050", "obsflags": [],                "conditions": []}
-    eventlibrary['AE050'] = {"name": "Nights in White Satin", "girls": ["AE"], "type": EventTypeEnum.CORE,                      "location": "dormAE",           "priority": PrioEnum.ALL, "sp": 10,     "next": "AE051", "obsflags": [],                "conditions": []}
-    eventlibrary['AE051'] = {"name": "Never Reaching the End", "girls": ["AE"], "type": EventTypeEnum.CORE,                     "location": "dormAE",           "priority": PrioEnum.ALL, "sp": 10,     "next": "AE052", "obsflags": [],                "conditions": []}
-    eventlibrary['AE052'] = {"name": "Tristesse", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "library",          "priority": PrioEnum.NONE, "sp": 10,    "next": "AE053", "obsflags": [],                "conditions": []}
-    eventlibrary['AE053'] = {"name": "Dressed to Impress", "girls": ["AE", "BBW"], "type": EventTypeEnum.CORE,                  "location": "town",             "priority": PrioEnum.NONE, "sp": 10,    "next": "AE054", "obsflags": [],                "conditions": []}
-    eventlibrary['AE054'] = {"name": "Molto Allegro", "girls": ["AE"], "type": EventTypeEnum.CORE,                              "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 10,    "next": "AE055", "obsflags": [],                "conditions": []}
-    eventlibrary['AE055'] = {"name": "Ruhe Sanft", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "hillroad",         "priority": PrioEnum.NONE, "sp": 11,    "next": "AE056", "obsflags": [],                "conditions": []}
-    eventlibrary['AE056'] = {"name": "Hymn of the Cherubim", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "classroom",        "priority": PrioEnum.NONE, "sp": 11,    "next": "AE057", "obsflags": [],                "conditions": []}
-    eventlibrary['AE057'] = {"name": "Norwegian Dance", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "musicclassroom",   "priority": PrioEnum.NONE, "sp": 11,    "next": "AE058", "obsflags": [],                "conditions": []}
-    eventlibrary['AE058'] = {"name": "Waltz of the Flowers", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "library",          "priority": PrioEnum.NONE, "sp": 11,    "next": "AE059", "obsflags": [],                "conditions": []}
-    eventlibrary['AE059'] = {"name": "Eye to Eye, Face to Face, Heart to Heart", "girls": ["AE"], "type": EventTypeEnum.CORE,   "location": "hallway",          "priority": PrioEnum.NONE, "sp": 11,    "next": "AE060", "obsflags": [],                "conditions": []}
-    eventlibrary['AE060'] = {"name": "Csárdás", "girls": ["AE"], "type": EventTypeEnum.CORE,                                    "location": "library",          "priority": PrioEnum.NONE, "sp": 12,    "next": "AE061", "obsflags": [],                "conditions": []}
-    eventlibrary['AE061'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 12,    "next": "", "obsflags": [],                     "conditions": []}
-    
-    #Optional
-    eventlibrary['AE005'] = {"name": "Confirmation", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                       "location": "hallway",          "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
-     #fixme: it's an office scene, make sure that's handled in split
-    eventlibrary['AE010'] = {"name": "Blue Danube", "girls": ["AE"], "type": EventTypeEnum.OPTIONALCORE,                        "location": "office",           "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],                     "conditions": [[ConditionEnum.TIMEFLAG, "size2"], [ConditionEnum.FLAG, "AE006_helpinginoffice"]]}
-    
 label AE001:
     $setProgress("AE", "AE002")
     scene Library with fade
@@ -8409,7 +8261,7 @@ label AE040:
     hide Yuki with dissolve
     hide Tomoko with dissolve
     "I waved goodbye to my sister and her gabby friend and was going to wait outside Shiori-chan's room when-"
-    show Tako neutral with dissolve #happy
+    show Tako happy with dissolve
     Tako "Keisuke! What's good?"
     "I ran into Yureno-san, looking as hip as ever in every sense of the word."
     MC "Afternoon, Yur-"
@@ -8417,27 +8269,27 @@ label AE040:
     MCT "She... didn't even try to pretend to care about how I was."
     MCT "For that matter, why does she care where we went?"
     MC "Y-yeah, Shiori-chan showed me a game, but it looked really difficult. I actually came to tell her-"
-    #show Tako neutral
+    show Tako neutral
     Tako "Aww you don't wanna play? That's too bad."
-    #show Tako happy
+    show Tako happy
     Tako "Ah well. Your loss."
     MC "My... loss?"
     "She pouted her lips, putting one finger to the side of her mouth."
-    #show Tako sad
+    show Tako sad
     Tako "Nooo, I shouldn't. Shiori-chan would be pissed if I-"
     stop music
-    #show Tako happy
+    show Tako happy
     Tako "If you win, she'll give you her panties."
     MC "!?!"
     play music Busy
     MC "D-don't say such an unbelievable thing like that! Aren't you being too obvious with your lies?!"
     #show Tako smug
     Tako "Whaaat, it's true. I even-"
-    #show Tako neutral
+    show Tako neutral
     Tako "Here, she'll tell ya."
-    #show Tako happy
+    show Tako happy
     Tako "OOOOOOI! Shiorear-saaan!~"
-    #show Tako happy at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tako happy at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     show Tako neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     show AE neutral-annoyed at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     "I turned around with the speed of a cheetah, Shiori-chan quick to take note of the urgency in my eyes appeared surprised, but then quelled it with annoyance."
@@ -8452,7 +8304,7 @@ label AE040:
     show AE sad
     AE "Yes. I did."
     MC "EEEHHH?!"
-    #show Tako happy
+    show Tako happy
     Tako "HAH! As expected, no way she'd lie!"
     show AE angry
     AE "Quiet! It's your fault I'm IN this embarrassing situation."
@@ -8467,9 +8319,9 @@ label AE040:
     "Just then, I grabbed her hand, and sprinted towards the courtyard."
     AE "W-woah!"
     hide AE with dissolve
-    #show Tako happy
+    show Tako happy
     Tako "Woo! Give it to her, Keisuke! Make 'er squeal! Kyahahaha!"
-    #show Tako neutral
+    show Tako neutral
     Tako "...In the meantime, I gotta go make a call..."
 
     scene Campus Center with fade
@@ -9077,8 +8929,7 @@ label AE042:
     MC "...Eh?"
     "To compound to my confusion, Yureno-chan bounded out of the room and between the two of us, grappling me in a bear hug."
     show AE sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show Tako neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    #show Tako happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Tako happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Tako "YOU WON?!"
     Tako "AHAHAHAH! NO WAY!"
     show AE neutral-annoyed
@@ -9103,11 +8954,11 @@ label AE042:
     AE "The key words were 'IF I were a betting woman.'."
     show AE happy
     AE "I'm not. There was neither a spoken or written agreement that I would give you anything."
-    #show Tako neutral
+    show Tako neutral
     Tako "...Eh?"
     show AE angry
     AE "And just to let you know... soliciting a student representative for their undergarments is a serious violation of school policy."
-    #show Tako sad
+    show Tako sad
     Tako "H-hey, hey, take it easy! I... I was just gonna... um... sell 'em! Turn a buck! It wasn't anything sexual-"
     AE "You were going to SELL my panties?"
     Tako "A-ah..."
@@ -10421,8 +10272,7 @@ label AE048:
     UNKNOWN "-room isn't private enough."
     UNKNOWN "Fine, but why don't-...-makes absolutely no sense."
     "The closer I got, the more clear they became, until I finally poked my head into the main chamber."
-    #show Tako angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show Tako neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tako angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show AE sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     Tako "Look, are you gonna get 'em or not?"
     AE "I... I am. I can't risk-"

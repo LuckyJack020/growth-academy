@@ -633,7 +633,7 @@ screen daymenu:
 
     #studying activities (costs skill point)
     if "spmax" in globals():
-        text "Skill Points: " + str(spmax - spspent) xalign 0.05 yalign 0.845 color Color((0, 0, 0))
+        text "Free Periods: " + str(spmax - spspent) xalign 0.05 yalign 0.845 color Color((0, 0, 0))
         if spmax > spspent:
             imagebutton idle "Graphics/ui/map/athletics.png" xalign 0.05 yalign 0.95 action [SetVariable("activeevent", "Athletics"), Jump("train")]
             imagebutton idle "Graphics/ui/map/art.png" xalign 0.15 yalign 0.95 action [SetVariable("activeevent", "Art"), Jump("train")]
