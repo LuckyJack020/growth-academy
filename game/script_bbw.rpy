@@ -2135,7 +2135,7 @@ label BBW014:
     BBW "You don't have to apologize for making me aware of my condition."
     BBW "Though if you want to apologize for thinking that I am so frail as to need to be shielded from reality, I will accept it."
     MC "What?"
-    BBW "(Sigh.)"
+    BBW "{i}Sigh{/i}"
     BBW "I don't need to be reassured or comforted. My condition is not a death sentence."
     BBW "Having everyone here walk on eggshells around one another would be antithetical to this institution's reason for being, would it not?"
     BBW "We're supposed to address our inevitable growth and learn to live with it, aren't we? A direct confrontation is the only way to do so."
@@ -2439,7 +2439,7 @@ label BBW015_test_pass:
 label BBW015_test_semipass:
     MC "There was a mailing mix-up. Somebody's order got sent to my room."
     MC "They must have put 'Men's dorm' on the address, not 'Women's.'"
-    AE "That makes no sense. There's not a single female student with the name “Keisuke Hotsure”."
+    AE "That makes no sense. There's not a single female student with the name 'Keisuke Hotsure'."
     MC "Y-yeah, well..."
     "Busted."
     "Shiori-san crossed her arms expectantly, showing deep frustration."
@@ -3179,7 +3179,7 @@ label BBW019_arcade:
     else:
         MC "More like I just found myself here. Looking for something to do."
         BBW "'Looking' for something to do."
-        BBW "*sigh*"
+        BBW "{i}Sigh{/i}"
         BBW "You make it sound as if your only goal is to kill time, to speed through the prime of your life distracted and complacent."
         MC "What do you mean?"
         BBW "Your passive tone, my dear boy. You say you are looking for something to do, rather than going out and doing it."
@@ -3275,7 +3275,7 @@ label BBW019_cafe:
                 "I could start studying regularly tomorrow."
                 jump daymenu
             "Go back to the dorms and study.":
-                MC "*sigh*"
+                MC "{i}Sigh{/i}"
                 MC "She's right, of course. I didn't need her to point it out, but sometimes reinforcement of what you know helps make it clearer."
                 MC "Or at least harder to ignore."
                 "I finished my coffee and trudged back to the school, back to my dorm."
@@ -3437,7 +3437,7 @@ label BBW020_c1:
     show BBW angry
     BBW "!"
     show BBW neutral
-    BBW "(Sigh)"
+    BBW "{i}Sigh{/i}"
     BBW "I have already accepted my condition, and I'm prepared to deal with it if it becomes a genuine issue."
     BBW "Whatever fears may have been planted by my diagnosis will not be acknowledged. We don't deal with what might be wrong, but what can go wrong or is going wrong."
     BBW "I am not worried about my weight."
@@ -3522,16 +3522,16 @@ label BBW021:
     "I came out of the men's locker room to find the pool rather empty."
     "I'd complain it was a waste to let such fancy facilities go unused, but it's not like I was coming here regularly. Who was I to talk?"
     "Among the students in or around the water two caught my eye."
-    show BBW swimneutral at center with dissolve
+    show BBW swim-neutral at center with dissolve
     "Alice was climbing out of the pool, Aida ready to hand her a towel."
     MC "Hey, Alice."
     BBW "Keisuke."
     "She began drying herself off, and I knew I should just go and get started myself."
     "But at the same time our conversation about 'is big beautiful' had been on my mind since the other day."
     "I had been sneaking glances at Alice now and then, really taking in her figure."
-    show BBW swimneutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
+    show BBW swim-neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "And I'd come to the decision that there wasn't anything wrong with some extra curves."
-    show BBW swimneutral at center, Transform(zoom=1.0)
+    show BBW swim-neutral at center, Transform(zoom=1.0)
     "Especially now, with the bathing suit clinging to her body, her hair wet (yet still keeping its spirals somehow). Stuff like that could make most any woman appealing."
     if getFlag("BBW020_c1"):
         jump BBW021_flagpass
@@ -3560,16 +3560,16 @@ label BBW021_beforechoice:
     MC "It's not like I have a type. Maybe more like a spectrum."
     $setAffection("BBW", 1)
     "She nodded agreeably."
-    show BBW swimhappy
+    show BBW swim-happy
     BBW "Most people do, I think. Though with such a focus on superficial trappings in our society many may not recognize it."
     if getAffection("BBW") <= 7:
         MC "True. But hey, that's one of the things we're supposed to get out of this school, right? Not being so focused on the superficial."
-        show BBW swimneutral
+        show BBW swim-neutral
         BBW "That's not quite what I was thinking. You are correct, but I was going for the fact that there's nothing wrong with having a type."
         BBW "So long as you do not develop myopia, blind to the other options around you."
         MC "Oh, right."
         MC "But like I said, bigger women are attractive. Not automatically more than skinny women, but not less so, definitely."
-        show BBW swimhappy
+        show BBW swim-happy
         BBW "I'm glad you got the chance to clear that up, Keisuke."
         BBW "I know you're not trying to soothe my wounded pride..."
         BBW "...but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
@@ -3585,7 +3585,7 @@ label BBW021_beforechoice:
         BBW "And you did say I was pretty, of course."
         MC "W-Well, yes."
         "She looked at me like a cat with a bowl of cream just set down in front of it. I wasn't sure I knew what she was thinking until she spoke."
-        show BBW swimaroused
+        show BBW swim-aroused
         BBW "Keisuke..."
         MC "Yes?"
         BBW "What I am about to suggest violates every ethical rule about the relationship between an employer and her employee..."
@@ -3598,7 +3598,7 @@ label BBW021_beforechoice:
             "I'd love to.":
                 $setFlag("BBW_dating")
                 MC "Sure. I'd love to, as long as it wouldn't make things weird over on the 'business' end."
-                show BBW swimhappy
+                show BBW swim-happy
                 BBW "I don't think it has to. I am mature enough to separate my private life from my business ventures, and I trust that you can learn to do the same."
                 MC "Um, OK."
                 MCT "I was being a little tongue-in-cheek there..."
@@ -3607,7 +3607,7 @@ label BBW021_beforechoice:
                 BBW "I know that our options are limited here at the school, but I am interested in seeing how you express your romantic side."
                 MC "Leave it to me, then."
                 "She smiled warmly, and despite how fast everything was going I felt more elated by the thought of success than worried about failure."
-                show BBW swimneutral
+                show BBW swim-neutral
                 BBW "I'm sorry, but I have to run. The music club is meeting soon."
                 BBW "A demain."
                 hide BBW with dissolve
@@ -3618,15 +3618,15 @@ label BBW021_beforechoice:
             "That's moving a bit fast.":
                 $setFlag("BBW021_c2")
                 MC "Sorry, but I think that's a bit fast."
-                show BBW swimsad
+                show BBW swim-sad
                 $setAffection("BBW", -1)
                 BBW "Oh."
                 MC "It's not that-"
-                show BBW swimneutral
+                show BBW swim-neutral
                 BBW "No, I understand."
                 BBW "This is a trying time in our lives, there are bigger things on our minds."
                 MC "I'm not saying 'No' outright. Just... maybe later?"
-                show BBW swimneutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+                show BBW swim-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 BBW "Hmm. Yes, perhaps."
                 BBW "I have to go. The music club is meeting soon."
                 BBW "I'll see you in class tomorrow."
@@ -3641,19 +3641,19 @@ label BBW021_beforechoice:
                 $setFlag("BBW021_c3")
                 MC "I... don't think that would work out."
                 MC "It's a bit fast. I mean, we're in unfamiliar territory with this school and everything else, and like you said I'm working for you-"
-                show BBW swimangry with hpunch
+                show BBW swim-angry with hpunch
                 $setAffection("BBW", -5)
                 BBW "I understand!"
                 BBW "..."
                 pause 1
-                show BBW swimsad
+                show BBW swim-sad
                 BBW "I do tend to be direct, don't I?"
                 MC "That's not always a bad thing, but sometimes it can be overbearing."
                 BBW "Yes, I know."
-                show BBW swimneutral
+                show BBW swim-neutral
                 BBW "Forget I said anything, Hotsure-san."
                 MC "No, it's-"
-                show BBW swimneutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+                show BBW swim-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 BBW "I need to go. The music club is meeting soon and I have to get dressed."
                 hide BBW with dissolve
                 "She didn't storm off angrily, but it was obvious to anyone watching that she was hurrying to get out of there."
@@ -3663,7 +3663,7 @@ label BBW021_beforechoice:
 
 label BBW021_fail1:
     MC "Well, I'm going to get some laps in. I'll see you two later."
-    show BBW swimneutral
+    show BBW swim-neutral
     BBW "Work hard, Keisuke, but don't overdo it."
     hide BBW with dissolve
     "I tried to banish the impression of squandering the opportunity by assuring myself I would be on the lookout for a more appropriate time and place."
@@ -3679,17 +3679,17 @@ label BBW021_fail2:
     MCT "Just say she looks nice even at her size, don't make it sound perverted, and then move on."
     MC "I just wanted to say, after that whole 'list' thing and the guy saying he doesn't like plump women..."
     MC "Not all guys are turned off by a few extra pounds. Some even prefer it."
-    show BBW swimneutral
+    show BBW swim-neutral
     BBW "Indeed."
     BBW "I know you wouldn't just be saying that to soothe my wounded pride."
     MC "No. It's the truth."
     MC "I've seen larger women I found attractive. Never dated one, but that was because of circumstances."
     BBW "It's all right, Keisuke. You don't have to try so hard."
-    show BBW swimneutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
+    show BBW swim-neutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
     MC "I just want you to know... That guy doesn't speak for all men."
     BBW "I know."
     BBW "I just think that it is on each man to speak for himself."
-    show BBW swimneutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+    show BBW swim-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
     BBW "To say something more than just 'He doesn't speak for me.'"
     BBW "Now I have to run. The music club is meeting soon."
     BBW "So if there is anything else you would like to say to me about this, we can talk later."
@@ -4216,6 +4216,7 @@ label BBW024_c2_3:
 
 label BBW025:
     $setProgress("BBW", "BBW026")
+    $setSize(3)
     scene Cafeteria with fade
     "The music club was meeting today, which meant Alice wouldn't have her dinner until later."
     "I had to pass along a payment for a delivery to her. That was the reason I gave myself for waiting to get my own dinner."
@@ -4278,7 +4279,7 @@ label BBW025_c1_1:
     BBW "..."
     MCT "Uh-oh..."
     show BBW neutral
-    BBW "(sigh)"
+    BBW "{i}Sigh{/i}"
     BBW "Thank you, Hotsure-san. I consider you a friend, too."
     "Her tone was remarkably even, her face stone-like, but there was hellfire in her eyes."
     "Maybe spending so much time with her lately has put me in tune with her emotions..."
@@ -4293,6 +4294,7 @@ label BBW025_c1_1:
     jump daymenu
 
 label BBW025_c1_2:
+    $lockRoute("BBW")
     MCT "Deep breath. Here we go."
     MC "Alice. Would you like to go out some time?"
     if getAffection("BBW") < 9:
@@ -5165,7 +5167,7 @@ label BBW029B:
     BBW "Philanthropy is an ideal quality in the elite."
     "She pulled the plate of pinwheels back to herself and took a large bite of one."
     "She sighed."
-    BBW "{i}Sigh.{/i}"
+    BBW "{i}Sigh{/i}"
     BBW "I can not chastise Kodoma-san for being inconsiderate, but I do not have to be happy with how this turn has affected me."
     MC "You'll get by."
     "She finished the pinwheel."
@@ -6802,6 +6804,510 @@ label BBW038_c1_2:
     jump daymenu
 
 label BBW039:
+    $setSize(4)
+    $setProgress("BBW", "BBW040")
+    #Time: Morning
+    scene Classroom with fade
+    "Alice's illness had been a 24-hour thing, like she had predicted. I saw her in the cafeteria eating a hearty breakfast and looking as robust as ever."
+    "If the place hadn't been so crowded I would have joined her. Would have been a good time to arrange a new day for our date."
+    MCT "But she's usually good about showing up early for class. I can ask her then."
+    MCT "Speak of the..."
+    "The thought died unfinished. Not because referring to Alice as a devil was wrong, but because-"
+
+    show BBW neutral with dissolve
+    "Yeah."
+    "It seemed her growth had hit a new milestone. Or at least I noticed her expanded size now."
+    "I guess I had grown used to the women around me getting constantly bigger. Now I was being blindsided by what seemed like sudden surges in size when I looked closer at something I had taken for granted before."
+    BBW "..."
+    MCT "Oop! She's noticed me noticing her."
+    MCT "Better say something before she assumes I'm staring and gets angry."
+    MC "Morning."
+    BBW "{i}Sigh{/i}"
+    show BBW happy
+    BBW "Good morning."
+    MC "You're looking lovely today."
+    "I had hoped that would be a safely neutral comment, but as Alice sat down she sighed again."
+    show BBW neutral
+    BBW "{i}Sigh{/i}"
+    BBW "I'm getting fatter. Still."
+    BBW "I don't know if it's noticeable to everyone else, but it certainly is to me."
+    BBW "It can not escape my notice that I have had to upgrade my wardrobe yet again."
+    BBW "And I saw that you had noticed."
+    MCT "Not worth lying."
+    MC "I had."
+    MC "You do look lovely, though. Sexy, even."
+    "I couldn't help myself from blushing as I added that last part under my breath, just loud enough for her to hear."
+    "But it was true. I wasn't just trying to make her feel better."
+    BBW "Hmmph."
+    "Her facial expression waffled between pleased and dismissive. She settled on pleased."
+    show BBW happy
+    BBW "I look good no matter what."
+    MC "You'll get no argument from me."
+    MC "We did have a date lined up, remember?"
+    MC "I'm glad you're feeling better, by the way."
+    BBW "Thank you."
+    MC "So did you want to reschedule our date?"
+    MC "It doesn't have to be tonight, I know that's short notice."
+    BBW "Tonight will be fine."
+    MC "You sure? You just got over the flu, and you had mentioned your wardrobe-"
+    show BBW angry
+    BBW "Keisuke!"
+    show BBW neutral
+    BBW "{i}Sigh{/i}"
+    show BBW happy
+    BBW "Sometimes a woman wants to be treated well. Made to feel special."
+    BBW "A night out will take my mind off... other things."
+    "I could see she had her mind made up, and it was at this point that Tashi-sensei walked in, so there was both no time and no reason to argue."
+    MC "All right, then."
+    "I'll meet you at the school's entrance tonight at, say, 5?"
+    BBW "I'll be there."
+
+    scene black with fade
+    play sound ClockTower
+    pause 4
+    
+    #Time: Afternoon
+    scene School Front with fade
+    "I arrived at the school gate a few minutes before 5."
+    "Being early is better than being on time, and it gave me a chance to calm my nerves before Alice showed up."
+    show BBW casual-happy with dissolve
+    BBW "Hello, Keisuke."
+    BBW "Shall we be off?"
+    MC "If you're ready, let's."
+    "We started walking down the hill to town."
+    "It was still rather light, the days were getting longer, so I kept stealing glances at Alice."
+    "Out of her school uniform and in a more casual - but still fashionable and presumably costly - outfit her recent growth looked even more prominent."
+    "I was especially drawn to how her belly swelled out in front of her, reaching further than her breasts and coming down over the top of her legs."
+    "She was soft all over, but her middle looked especially inviting. I wanted to lay me head down on it, like an oversized pillow."
+    show BBW casual-neutral
+    BBW "..."
+    MCT "Crap, she saw me staring again."
+    MCT "Gotta say something..."
+    MC "Your clothes..."
+    BBW "...?"
+    MC "You look... lovely tonight."
+    BBW "You said that this morning."
+    MC "Did I?"
+    MC "Well... I mean. Your outfit looks nice. On you."
+    MC "I thought you had said you had outgrown your wardrobe, but... You had something to wear."
+    MC "That's good."
+    BBW "I have been hyper-aware of my growth recently, so I have been making sure to have clothes to fit me as I continue to grow."
+    MC "You're lucky in that regard, being able to ignore the cost of new clothing."
+    BBW "It's one issue out of several related to my size."
+    "Her tone sounded sort of maudlin."
+    "What she had said this morning about wanting to forget about everything going on came back to me."
+    MCT "Better change the subject."
+    MC "I'm enjoying the book we're reading in literature."
+    BBW "Are you?"
+    MC "Yeah. I relate to the main character a lot, despite the different time period setting."
+    BBW "Have you read anything by the author before? They're pretty well-regarded in Japan, as I understand it."
+    MC "No... Historical fiction isn't my usual cup of tea."
+    
+    scene black with fade
+    "We made small talk the rest of the way to a restaurant in town."
+    "I think I managed to take Alice's mind off her size and related matters."
+
+    scene Restaurant with fade
+    "At the restaurant we had to wait a couple minutes before being seated."
+    "And then once we were we waited so long just to get some water that we were ready to order our meals by then."
+    "Alice was particularly irked."
+    show BBW casual-angry with dissolve
+    BBW "(Such subpar service.)"
+    MC "(Can't blame our waitress. Don't you see that party over there?)"
+    "I indicated a group of almost a dozen people, adults and a couple children, gathered around two large tables pushed together in the far corner."
+    "The adults were mostly or perhaps all from the school. Not all of them had visible factors, but one man looked like a professional bodybuilder, another was covered in dense hair not just on his head but his face and arms."
+    "And there were a couple women who were significantly fatter than a typical middle-aged person who had stopped exercising regularly."
+    "And there might have also been an overweight man, but I couldn't see the entire table."
+    MC "(And there's just the one waitress working tonight.)"
+    show BBW casual-neutral
+    BBW "Who are those people? I don't recognize them as teachers or administrators."
+    MC "Maybe they're alumni."
+    MC "Not enough people for a class reunion, but maybe they're a group of friends getting back together."
+    MCT "I wonder if the academy actually does do class reunions..."
+    BBW "Maybe."
+    "She continued staring for a while before turning back around."
+    "I was worried I could guess what had caught her attention."
+    BBW "Those women..."
+    "She went silent, then shook her head."
+    BBW "There's no excuse for dressing so shabbily."
+    MC "Lack of money?"
+    "But even as I said that I realized that wasn't really what was bothering her."
+    "The women were both fatter than Alice was right now. A sign that further growth was possible."
+    MCT "Do I say something? Or should I take her mind off this?"
+    menu:
+        "Try to placate Alice's self-consciousness.":
+            jump BBW039_c1_1
+        "Get her mind off her body image problems.":
+            jump BBW039_c1_2
+
+label BBW039_c1_1:
+    MC "There's no guarantee you're going to get that fat, you know."
+    show BBW casual-angry
+    BBW "Excuse me?"
+    MC "You're not exactly hiding your thoughts right now."
+    MC "Those women over there? The overweight ones?"
+    MC "You see them and you're thinking 'Am I going to end up that fat?'"
+    show BBW casual-neutral
+    BBW "I don't think both of them are fat."
+    BBW "One looks like she is very busty, and the rest of her has gotten soft in middle age."
+    "I turned back to the group and saw the one Alice was talking about. She might have been right."
+    MC "Okay, but still."
+    MC "Am I wrong? Are you not preoccupied with how big you'll get?"
+    show BBW casual-angry
+    BBW "I came with you tonight because I wanted to take my mind off such things."
+    BBW "Had that not been obvious?"
+    MCT "Yikes. Maybe I should back off."
+    menu:
+        "Change the subject.":
+            jump BBW039_c2_1
+        "Press on.":
+            jump BBW039_c2_2
+
+label BBW039_c2_1:
+    MC "Never mind."
+    $setAffection("BBW", -1)
+    BBW "No, don't 'never mind.'"
+    BBW "I asked you a question. Was it not obvious why I am upset right now?"
+    MC "It is, I just..."
+    MC "I didn't know you were that upset."
+    MC "You're usually more confident. I didn't realize this had gotten to you so bad."
+    MC "I wasn't trying to antagonize you."
+    "I stopped myself from rambling further, and a heavy silence came over the table."
+    "It took another few, excruciating minutes before our food arrived, and the silence was replaced by the clinks of silverware and the sound of chewing."
+    
+    scene black with fade
+    "When we were done there was no talk of dessert or anything else. We just left and headed back to the school."
+
+    #Time: Evening
+    scene School Front with fade
+    "At the entrance Alice gave a curt goodbye."
+    show BBW casual-neutral with dissolve
+    BBW "Good night."
+    hide BBW with dissolve
+    "And I was left alone."
+    MCT "Which is probably for the best."
+    MCT "Can't put my foot in my mouth if I don't open it."
+    jump daymenu
+
+label BBW039_c2_2:
+    $setFlag("BBW039_c2_2")
+    MC "I had guessed as much."
+    MC "But it looks like the world isn't going to let you ignore it."
+    MC "And I don't expect you're in the habit of ignoring unpleasant truths."
+    MC "Or have I misread you?"
+    BBW "..."
+    "She glared at me for a second, but I didn't look away. I held her gaze."
+    "Finally she exhaled, visibly deflating."
+    show BBW casual-neutral
+    BBW "You're not wrong."
+    BBW "Running from problems is not in my nature."
+    BBW "But when an issue is outside of my power to control, it..."
+    BBW "I get caught up in a clash of different emotions."
+    MC "That's understandable. No one could blame you for being upset about this."
+    MC "You were probably hoping your factor wouldn't be this strong, huh?"
+    BBW "Yes."
+    BBW "When I was first told what my factor was I tried to do research into my condition, see if there was any way to predict its severity."
+    BBW "No such luck."
+    MC "This is all new territory for the medical and scientific communities, isn't it?"
+    MC "You kind of have to let it run its course. There's nothing else to do."
+    BBW "There's not much comfort there."
+    MC "Sorry, but I wasn't trying to be comforting. I'm just stating the facts."
+    "That actually made Alice laugh."
+    show BBW casual-happy
+    BBW "Heh."
+    BBW "I have to give you that."
+    MC "But if you want to be comforted, you should know it's not any kind of failing that you're getting fatter."
+    MC "It was a roll of the dice, and all you can be judged for is how you deal with it."
+    MC "And so far you've been handling it admirably, I would say."
+    "At that point our food came, and we let the conversation die."
+    "But Alice did seem more relaxed, if not in the brightest of moods."
+    
+    scene black with fade
+    "After the meal we walked around the town for a while, making light-hearted conversation."
+    "Alice continued to brighten up as the evening went on, and by the time we headed back to the school she was genuinely happy."
+
+    #Time: Evening
+    scene School Front with fade
+    show BBW casual-happy with dissolve
+    $setAffection("BBW", 1)
+    BBW "It wasn't the best date I've been on, Keisuke, but I think it was what I needed."
+    BBW "Thank you."
+    "And she leaned in and kissed me."
+    "Part of me wanted to return it passionately, but worried about how precarious her good mood was I simply put an arm around her back as we kissed."
+    MC "Have a good night."
+    BBW "You too. I'll see you tomorrow."
+    jump daymenu
+
+label BBW039_c1_2:
+    MC "Do you ever listen to Day Shift? They have a new album coming out."
+    show BBW casual-angry
+    BBW "..."
+    show BBW casual-neutral
+    BBW "No. I've never heard of them."
+    MC "Oh. They're this rock duo. I have a couple of their albums. They're pretty good."
+    "I rambled a bit more until, mercifully, our food arrived."
+    "We ate in uncomfortable silence, punctuated by a couple attempts on my part to start some small talk."
+
+    scene black with fade
+    "After our meal we silently agreed to head back to the school, the date aborted."
+    "I took some solace in the feeling that Alice wasn't angry with me personally, but all the same the night had been a failure."
+    jump daymenu
+
+label BBW040:
+    #Time: Morning
+    scene Dorm Interior with fade
+    $setProgress("BBW", "BBW041")
+    "In the middle of getting dressed for the day my phone buzzed with a text. It was from Alice."
+    BBWCell "I need your help with something. Can you come to my dorm room?"
+    "A week ago I would have assumed this was something work related, but after our second date I let myself hope this would turn out to be something..."
+    "... more intimate, perhaps?"
+    "I checked myself in the mirror to make sure I was more than 'classroom presentable,' then left for the girl's dorm."
+
+    scene black with fade
+    MC "Alice?"
+    play sound Knock
+    BBW "Keisuke? Come in and shut the door, please."
+
+    scene Dorm BBW with fade
+    "Aida was out, so it was just me and Alice, who had her back to me as she sat on her bed."
+    MC "What's up?"     
+    "When she turned around I got the picture."
+    show BBW sad at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=0.5) with dissolve
+    play music BBW
+    BBW "Thank you for coming. I am having trouble getting dressed."
+    "She was trying to button her shirt, and had fallen short by three buttons."
+    BBW "I have a better fitting wardrobe on order, but I had not expected to need it this soon."
+    BBW "I believe I can make it through the day if I am cautious and do not move too much, but first I need help getting those buttons around the... widest part of my belly done."
+    MC "And it looks like Aida is out... Don't you have a new assistant?"
+    BBW "She is on another errand right now, and I have already had to delay my normal routine."
+    MC "Couldn't you have asked another woman here?"
+    BBW "I suppose, but the thought of letting another woman - or anyone, for that matter - see me in this situation..."
+    show BBW happy
+    BBW "But I trust you to be circumspect."
+    BBW "Just as I trust you not to abuse this opportunity."
+    MC "Not sure what you mean by 'opportunity.'"
+    BBW "You get to put your hands on me. And we've only gone out twice."
+    if getSkill("Academics") > 10:
+        MC "Yes, but this isn't undressing you. This is the exact opposite."
+        MC "A real opportunity would be to help you take the shirt off later."
+        $setAffection("BBW", 1)
+        BBW "Don't get cheeky."
+    else:
+        "She was smiling, but I was about to break out in a cold sweat."
+        "I knew enough about her temper not to step out of line."
+    MC "All right, I promise to behave."
+    hide BBW with dissolve
+    #[CG from the perspective of kneeling in front of Alice, her belly filling most of the screen and her breasts at the top. Her shirt is mostly buttoned, with the bottom three undone, the flaps parted to reveal her creamy skin and belly button.]
+    "I knelt down in front of her and took the two flaps of her shirt. My thumbs pressed lightly against her belly, and I heard her inhale sharply."
+    MC "Are you okay?"
+    BBW "I'm fine. It is just... sensitive."
+    MC "It?"
+    BBW "My belly."
+    BBW "I would not have thought it could develop into an erogenous zone, but it seems there are secondary attributes to these physical changes."
+    if getAffection("AE") > 12:
+        MC "You sound kind of like Shiori."
+    else:
+        MC "You sound like Matsumoto-san."
+    BBW "Hmm?"
+    MC "So formal just now. Almost analytical."
+    BBW "I am simply stating how things are."
+    MC "In a detached sort of way."
+    "She did not respond immediately. I expected her to tell me to get one with it, but instead when she spoke she said"
+    BBW "Staying detached helps deal with this."
+    "I nodded, then realized she couldn't see me."
+    MCT "Better get on with it."
+    "I took the shirt flaps and pulled them together. Because there was no extra room I had to run my thumbs along Alice's belly, eliciting another moan."
+    "She tried to suppress this one, or at least keep it quiet, but it was no use."
+    "And, none too surprisingly, her arousal affected me. That and the fact that I was kneeling in front of her with her big, soft, bulging belly inches from my face."
+    "I almost wondered if this was a test, but that seemed particularly harsh, almost downright cruel. For all her faults Alice didn't seem the type to tease people."
+    "But as my hands ached to stroke that plush middle, I knew there was still a way to fail this."
+    MCT "But why should I be so timid? If she thinks I'm going too far what is the worst she will do?"
+    menu:
+        "Stroke her belly.":
+            jump BBW040_c1_1
+        "Play it safe.":
+            jump BBW040_c1_2
+
+label BBW040_c1_1:
+    MCT "The third date is when you're supposed to go all the way, yes?"
+    MCT "It's not out of line to treat light petting as a stone on the path to actual sex, is it?"
+    if getFlag("BBW039_c2_2"):
+        MCT "And on our last date she kissed me. Does that not open any doors for me?"
+    "It took a bit to psyche myself up for what I was thinking."
+    "But once the idea was in my head I think it was inevitable. The potential risk of angering Alice didn't compare to the anticipated rewards."
+    "I thought about starting slow, but decided if I was going to go I had to go all out."
+    "I pressed one hand against her belly and rubbed it in a wide circle. Not rough, but as sensual as I could manage with my heart racing."
+    "Alice's reaction was instant."
+    BBW "Oh!"
+    BBW "What are you doing?!"
+    MCT "Oh, poopie. I didn't expect her to be that angry."
+    "First reaction? Abort mission!"
+    "Maybe I could play it off as a joke, or an accident."
+    menu:
+        "Say it was a joke.":
+            jump BBW040_c2_1
+        "My hand slipped.":
+            jump BBW040_c2_2
+        "Don't back down.":
+            jump BBW040_c2_3
+
+label BBW040_c2_1:
+    MC "Just playing around!"
+    "I pulled my hand away immediately, then grabbed the shirt and resumed closing it."
+    stop music
+    "Alice wasn't having it, though."
+    play music Tension
+    BBW "What do you mean 'playing around'?!"
+    MC "I-! I just thought it would be funny."
+    show dummy with hpunch
+    BBW "Get your hands off me!"
+    #[Return to normal background.]
+    show BBW angry at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    $setAffection("BBW", -1)
+    BBW "Get out."
+    MC "I'm sorr-"
+    BBW "No! I don't want to hear it! Out!"
+    MC "I..."
+    "Her glare shut me up."
+    "Trying to not look cowed - I wouldn't meet her gaze, but I also didn't want to be staring at the floor - I left."
+    
+    scene black with fade
+    "I avoided Alice for the rest of the day, giving her a wide berth in the cafeteria and not giving her a reason to notice me in the class."
+    "I rehearsed, to myself, different ways to placate her, to explain myself. I ultimately decided to not be the one to bring it up. If she was still sore tomorrow, I'd deal with it then."
+    "But even if she didn't, I was going to be walking on eggshells for a while. Whatever had been building up between Alice and me, it was in a tenuous place now."
+    jump daymenu
+
+label BBW040_c2_2:
+    MC "Sorry! My hand slipped!"
+    "I pulled my hand back at once, chastened by the whipcrack of her tone, but I didn't panic."
+    "My first thought was to say it was a joke, but she was not in a joking mood. So instead I... went with an even more outlandish lie. My hope being that the bigger the lie, the less likely I would be called out on it."
+    BBW "Hmmm..."
+    BBW "Very well... Try to be more careful as you finish the job."
+    "Her voice was even-tempered, in a chilling way, but I still let myself give a sigh of relief. Too quiet to be heard, of course."
+    "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
+    "She was going to have to be careful the rest of the day."
+    #[Revert to Int. Alice's room]
+    show BBW neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    BBW "This is adequate, which is the best I can hope for in this situation."
+    BBW "Thank you, Keisuke."
+    MC "Glad to help. And sorry about my hand slipping."
+    BBW "Mmmm... Yes."
+    BBW "Accidents happen. Setbacks pop up. The key is to push through them and finish what you start."
+    BBW "Nothing is more frustrating than half-measures..."
+    
+    scene Hallway with fade
+    "I was halfway to the cafeteria to grab a quick breakfast when I was suddenly hit with a realization that made me stop."
+    MCT "Alice... hadn't actually seemed upset by my hand 'slipping.' Thinking about it, it sounded like she had enjoyed it. Was she..."
+    MCT "Frustrating half measures? Was she suggesting I shouldn't have stopped rubbing?"
+    "I spent the rest of the morning unable to get that idea out of my mind, thinking I had squandered an opportunity."
+    "I suppose if anyone was going to appreciate being bold and assertive, it would be Alice."
+    "Now I was frustrated, because when was there going to be an opening, something appearing organically, to try that again?"
+    MCT "Next time... Next time I don't chicken out."
+    jump daymenu
+
+label BBW040_c2_3:
+    "On second thought... no. I came this far, I'm seeing it through."
+    MC "I'm rubbing your belly. It's so soft and inviting."
+    "Alice didn't have an answer to that. Not right away."
+    "So I continued rubbing, my hand moving around in a large, slow circle."
+    MC "And I think you like it, too."
+    $setAffection("BBW", 1)
+    BBW "Oooooh!"
+    "She was enjoying it, that was clear as day. And I certainly was, of course."
+    "Alice's belly was as soft as I had imagined, but not in a doughy sort of way. There was a firmness to it, not unlike a mattress."
+    "I wondered if there was a part of her growth factor that maintained her fat's consistency, avoiding the sagging or oozing qualities I'd seen in other fat people."
+    "I thought about mentioning this hypothesis that she was primed to receive only the most pleasing of adipose, but I knew how she would react and I didn't want to spoil the moment."
+    MC "This really does feel so nice."
+    BBW "Mmmmm... I know..."
+    BBW "But I need you to stop, Keisuke. I've got to get ready for class."
+    BBW "And I expect Aida will be back soon."
+    MC "Oh. Right."
+    "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
+    MC "You're going to have to be careful for the rest of the day."
+    #hide CG
+    show BBW neutral with dissolve
+    BBW "I should be upset that you would take advantage of me when I needed help like that, but you less crossed the line than stuck your foot over it."
+    show BBW happy
+    BBW "And it would be an obvious lie if I said I had not enjoyed it."
+    show BBW neutral
+    BBW "But do not make a habit of letting your hands off the leash like that."
+    BBW "Spontaneity can become harassment very quickly."
+    MC "Oh! I wasn't trying to force myself on you!"
+    show BBW happy
+    BBW "I know. And I respect that you took the initiative."
+    show BBW neutral
+    BBW "Though..."
+    MC "What?"
+    "Alice placed her hands on the sides of her belly and jiggled it ever-so-slightly."
+    BBW "Nothing."
+    MC "It's all right to find this enjoyable."
+    "She didn't say anything, just looked down to the side."
+    "This wasn't the first time she had gone silent when the issue of her growing had come up, but I didn't want to let it spoil the moment this time."
+    MC "I mean it. I'm not saying you're wrong to be upset about how things are turning out..."
+    MC "...but trying to find the positive doesn't mean 'what's good despite everything else.' Sometimes something isn't good or bad, it's both."
+    MC "You can't separate looking bigger and finding it pleasing to be bigger. They're both related to your factor, and true acceptance-"
+    BBW "I get it."
+    "She wasn't curt, but her tone did sound decisive."
+    BBW "Yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.' My father told me something similar shortly after I got here, that I should take this all as it is en total."
+    BBW "But I..."
+    show BBW sad
+    BBW "There is a part of me that does not want to give in to anything positive about this."
+    MC "You're afraid accepting any part of it will make you accept all of it?"
+    show BBW neutral
+    BBW "Not simply accept it as it is, but accept that it is as it must be."
+    MC "Even though you're planning to deal with the excess weight once this is all over, right?"
+    show BBW sad
+    BBW "Assuming I can, yes."
+    play sound DoorOpen
+    "It wasn't the worst time to be interrupted like this, but Aida showing up just then brought the conversation to a halt."
+    show BBW sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    if getAffection("PRG") < 10:
+        show PRG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+        PRG "Ah! Hotsure-san! W-what are you doing here?"
+        MC "Alice needed help with... opening a jar."
+        MC "I was just leaving."
+        MC "See you two in class."
+        show BBW neutral
+        BBW "Thank you for your help, Keisuke."
+    else:
+        show PRG aroused at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+        PRG "Kei-chan. What are you doing here?"
+        MC "Alice needed help with... opening a jar."
+        MC "I was just leaving."
+        MC "See you two in class."
+        show BBW neutral
+        BBW "Thank you for your help, Keisuke."
+        PRG "Are you sure you can't stay? We can walk to class together."
+        MC "I've got to get my backpack. See you later."
+        
+    scene black with fade
+    "I left the girls' dorm and went back to my room to grab my stuff, frustrated more with myself than anything at how the discussion with Alice had ended unresolved."
+    "I don't know what the right thing to say to her would have been, but it felt like she was about to open up more than she had already."
+    "And this isn't the sort of thing I could just bring up casually later on, but it was out there, so we were going to talk about it again sooner or later."
+    MCT "Maybe it's not even something I can lead her through. Maybe I should let her handle it herself."
+    jump daymenu
+
+label BBW040_c1_2:
+    MCT "Better play it safe."
+    "Being as careful as possible not to rub Alice's belly, holding my fingers away from her middle except for those holding the shirt flaps, I tugged the two sides together and buttoned it up."
+    "She was going to have to be careful for the rest of the day, but the job was done."
+    #hide CG
+    show BBW neutral with dissolve
+    BBW "This leaves me little room to breathe, but it will do."
+    show BBW happy
+    BBW "Thank you, Keisuke. And thank you for not being too handsy."
+    BBW "The teasing was unexpected, but not unenjoyable."
+    MC "Oh, it was an accident."
+    BBW "So you said..."
+    BBW "You should probably finish getting ready for class. I will see you later."
+    MC "I was- ... Yeah. See you later."
+
+    scene black with fade
+    "I really hadn't been trying to get her worked up, but her thinking I had wasn't what bothered me."
+    "It was the implication that if I had dived in she would have liked it more. Why did I hold back!?"
+    jump daymenu
+
+label BBW041:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

@@ -5511,9 +5511,7 @@ label BE031_c1_after:
     "As if she wanted to better present herself, Honoka moved until she stood three feet away from where I sat, hands clasped at her shirt. Another button undid itself, and the pillows of flesh that tried to escape looked like someone had overfilled cake tins."
     "My mouth went dry thinking about what hid behind the fifth button, and the bra beneath. I begged my mind not to overthink it. I didn't want expectations, whether they be exceeded or not. I just wanted to see them."
     "Honoka let out the cutest groan as the last button was undone, and her shirt soon hit the floor afterwards. I was pretty sure I made a whimpering sound, like a puppy that saw a treat held just out of its reach."
-    #[Transition- crossfade]
-    #[Scene- Special_Honoka_Boobjob_01]
-    #unique?
+    show cg BE031 with dissolve
     BE "Well. This is it. Or, rather. These are them."
     "Honoka undid the clasp of her bra as quickly as she could. Rather than letting it fall, she carefully placed it aside, before standing up straight to let me get the best view of her breasts. My hand went up to my mouth in shock. I knew they were big. I'd felt them."
     "But seeing them naked, it was better than I could have dreamed. They were perfect, rounded teardrop shapes. Huge spheres that hung on her torso and somehow still remained perky despite their massive size."
@@ -5538,8 +5536,7 @@ label BE031_c1_after:
     "The ceiling of Honoka's room was blue. I hadn't noticed it before. But with my head hung back on the chair, it was all I could see for a while. My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
     MC "H-Honoka..."
     "I finally found my voice, as weak and groggy as it was. With a gulp, and the arms of the chair, I straightened my posture to look at Honoka. God, she was gorgeous."
-    #[Transition- Crossfade]
-    #[Scene- Girls'/Honoka's Dorm room]
+    hide cg
     stop music
     "Even sporty, peppy Honoka seemed somewhat exhausted after the workout she'd given herself, and I couldn't blame her."
     show BE aroused with dissolve

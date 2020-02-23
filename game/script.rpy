@@ -466,6 +466,10 @@
     def disableRoute(girl):
         if girl in routeenabled:
             routeenabled[girl] = False
+            
+    def enableRoute(girl):
+        if girl in routeenabled:
+            routeenabled[girl] = True
     
     def lockRoute(girl):
         if girl in girllist:

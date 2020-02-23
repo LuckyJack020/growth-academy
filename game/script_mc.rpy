@@ -98,7 +98,7 @@ label global000:
     MC "What would be the chances?!"
     MCT "I mean, you look so different! You look..."
     play sound Boing
-    show cg BE001 with vpunch
+    show cg BE000 with vpunch
     MCT "H-Holy crap!!!"
     hide cg with dissolve
     show BE neutral with dissolve
@@ -188,6 +188,7 @@ label global000_cbreak_3:
     
 label global000_cbreak_after:
     MC "Anyways..."
+    show cg BE000b with dissolve
     MC "Yeah, I'm doing all right."
     BE "Sweet. I came here yesterday, so I already know the lay of the land, y'know."
     MC "Ah, good, so we're not lost."
@@ -409,7 +410,7 @@ label global000_BBW:
     "The first thing I noticed was that, much like the rest of the school, the classroom seemed very big. It was much larger than any that I had been in before."
     "Whether or not this meant that there would be more students, or if this was just something that made this school different, I had no idea."
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
-    show cg BBW001 with dissolve
+    show cg BBW000 with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
     "She was sitting with her feet on one of the desks, but stood up and grinned when she saw us enter."
     UNKNOWN "Oh? What have we here? I guess that Shiori told you to come up here too?"
