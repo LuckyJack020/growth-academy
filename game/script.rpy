@@ -443,6 +443,15 @@
             renpy.log("Unknown skill ID: %s" % s)
         else:
             skills[s] += val
+    
+    def setSizeDebug(mod):
+        global globalsize, prgsize
+        globalsize += mod
+        if globalsize < 1:
+            globalsize = 1
+        if globalsize > 6:
+            globalsize = 6
+        prgsize = globalsize
 
     def getSkill(s):
         if s not in skills.keys():
@@ -708,7 +717,7 @@ transform notif_transform:
     
 screen debugmenu:
     $debuginput = ""
-    grid 3 14:
+    grid 3 15:
         xalign 0.5
         yalign 0.5
         
@@ -801,7 +810,11 @@ screen debugmenu:
         
         textbutton "Return to game" action Jump("daymenu_noadvance")
         textbutton "Load Test" action Jump("debugloadtest")
+        text ""
+        
         text "Size: " + str(globalsize)
+        textbutton "+" action Function(setSizeDebug, 1)
+        textbutton "-" action Function(setSizeDebug, -1)
 
 screen debugflaglist:
     vbox:

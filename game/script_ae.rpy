@@ -6537,7 +6537,7 @@ label AE032:
         "You aren't.": #0
             MC "That's... true, unfortunately. You're not a very comfortable person."
             jump AE032_c1_after
-        "You are to me. (disabled)" if getSkill("Arts") < 3:
+        "You are to me. (disabled)" if getSkill("Art") < 3:
             pass
         "You are to me." if getSkill("Art") >= 3: #+2
             jump AE032_c1_3

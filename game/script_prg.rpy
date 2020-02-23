@@ -7448,6 +7448,8 @@ label PRG040:
     play music Peaceful
     "I trotted jauntily down the hallway, swinging my keys from my lanyard as I went. For whatever reason, I always swung them around and would try to catch them at the top of their swing, despite me missing and taking them in the face quite frequently."
     "It was Friday, so I knew that Aida would be in at practice for her next competition today. Surely it wouldn't be too distracting if I stopped in, pilfered some treats or a snack of some sort, and then bailed. Right?"
+    
+    scene Cooking Classroom with fade
     "I walked into the cooking classroom and scanned the room. Aida's table was empty, save for a small cluster of dishes littering one end. Across the way, I spotted Sakura loading a frying pan into one of the many dishwashers."
     MC "What's shaking, Sakura-san?"
     Sakura "Oh, hey, Hotsure-san! Not much, just cleaning up from today."
@@ -8278,7 +8280,7 @@ label PRG044_c1_1:
     PRG "But, I guess it isn't much of a surprise anymore, so... let's go pick out something for you."
     "I stopped Aida before she grabbed the door handle."
     MC "Aida, I'm sorry. I didn't realize you were trying to surprise me, let alone with something so nice."
-    show PRG doubt
+    show PRG sad-2
     PRG "Why would I ever surprise you with something not nice?"
     MC "I... that came out wrong."
     PRG "I-If you don't trust me, you can just say it..."
@@ -8300,6 +8302,7 @@ label PRG044_c1_2:
 
     scene Clothes Store with fade
     "Aida grabbed my hand and tugged me through the door. The entire store was filled with clothing of all different styles and sizes. Clearly, this store tried to cater to anyone with a growth factor."
+    show PRG neutral with dissolve
     MC "Was there something specific you wanted to check out?"
     PRG "Not in particular. But, I did want to look for you!"
     MC "Aida. I'm right here. Why would you be looking for me?"
@@ -8380,7 +8383,10 @@ label PRG044_c1_2:
     "The two of us left with bags in hand, heading back out to the half deserted sidewalk."
     PRG "Do you like your new clothes, Keisuke?"
     MC "I do, but you got me too much, Aida. I don't really think I need all of this."
-    PRG "Well... I didn't need all of that food that you bought me way back when. A-And I didn't need Hyousuke Domen's baseball card, but you got that for me too. So, how is this any different?"
+    if getFlag("PRG039_c1_2"):
+        PRG "Well... I didn't need all of that food that you bought me way back when. A-And I didn't need Hyousuke Domen's baseball card, but you got that for me too. So, how is this any different?"
+    else:
+        PRG "Well... I didn't need all of that food you bought me way back when. So, how is this any different?"
     MC "I..."
     "I knew deep down that it was the exact same concept, but still, I didn't feel right about it, especially knowing Aida's financial situation in the past. Something about it just didn't sit right with me."
     PRG "See? No difference, right?"
@@ -8647,7 +8653,7 @@ label PRG045:
     show BBW neutral with dissolve
     BBW "Good, you are here."
     
-    scene PRG Dorm Day with fade #day
+    scene Dorm PRG Day with fade #day
     show BBW neutral with dissolve
     "Alice hurried me through the door. Across the room, the bathroom door was slightly ajar, and the sounds of sobbing echoed into the room."
     BBW "Kodama-san? Hotsure-san is here. I will be back with you in a moment."
