@@ -133,7 +133,7 @@ image splash = "Graphics/ui/bg/splashscreen.png"
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
 
 image cg BBW000 = "Graphics/ui/gallery/BBW-000.png"
-image cg BBW002 = "Graphics/ui/gallery/BBW-001.png"
+image cg BBW009 = "Graphics/ui/gallery/BBW-009.png"
 
 image cg BE000 = "Graphics/ui/gallery/BE-000.png"
 image cg BE000b = "Graphics/ui/gallery/BE-000b.png"

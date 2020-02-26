@@ -1243,9 +1243,11 @@ label BBW009:
     stop music
     hide FMG with dissolve
     hide BBW with dissolve
+    show cg BBW009 with dissolve
     "It was neck and neck for most of the first lap, but when the two reached the far end and pushed off the wall to return Alice began to pull ahead."
     "By the time she completed her first lap Alice was a full length ahead of Akira, and that lead grew for the rest of the race."
     "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
+    hide cg with dissolve
     show FMG sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     show BBW happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     play music Busy
