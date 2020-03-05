@@ -28,7 +28,7 @@ init -1 python hide:
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "GrowthAcademy"
-    config.version = "2020.3.1"
+    config.version = "2020.3.4"
 
     # Enables logging
     config.log = "debug_log.txt"
@@ -307,7 +307,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "GrowthAcademyDemo-2020.3.1"
+    build.directory_name = "GrowthAcademyDemo-2020.3.4"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,

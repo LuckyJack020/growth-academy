@@ -1236,7 +1236,7 @@ label PRG011_b:
     MC "Well...they might be at a disadvantage, but I hope the Dragons pull through."
     "Aida suddenly stopped stirring the batter she had been working on and turned to look over at me."
     show PRG unique
-    PRG "Y-y-you like t-the D-dragons too!?"
+    PRG "Y-y-you like t-the D-Dragons too!?"
     MC "U-uh yeah..."
     "She moved over towards me, the batter swaying about in the bowl as she smiled."
     show PRG happy
@@ -2189,7 +2189,7 @@ label PRG018:
     "We both left the classroom and hurried down to the cafeteria together."
     scene Hallway with fade
     show PRG neutral with dissolve
-    PRG "If it's not too much trouble, would you mind if I brought my radio when I cut your hair? The dragons are playing again tonight and if they win, they'll be in the Japan Series!"
+    PRG "If it's not too much trouble, would you mind if I brought my radio when I cut your hair? The Dragons are playing again tonight and if they win, they'll be in the Japan Series!"
     MC "Of course not! Bring it, and I'll cheer them on with you!" 
     show PRG happy
     "Aida's face lit up when I said that."
@@ -3184,7 +3184,7 @@ label PRG022_c1_1:
     PRG "No! No, no. I invited you along, I'll pay."
     MC "I'm going to be eating quite a bit of this, I should at least help."
     Cashier "That'll be 13061 yen, please."
-    "Aida pulled out her wallet, which had the dragon's logo on it, and slid her credit card onto the counter."
+    "Aida pulled out her wallet, which had the Dragons' logo on it, and slid her credit card onto the counter."
     MC "Put half on that card, and half on this one, please."
     "I slid my own card next to Aida's."
     show PRG unique
@@ -3362,7 +3362,7 @@ label PRG023:
     else:
         MC "Uhm... Alright. That could work."
         show PRG sad
-        PRG "I-I know you aren't the biggest fan of the dragons, but since I've been following them for years, I think I know their history really well, so maybe I can help guide us through the research."
+        PRG "I-I know you aren't the biggest fan of the Dragons, but since I've been following them for years, I think I know their history really well, so maybe I can help guide us through the research."
         MC "Sure. All the same though, we should fact check our work to make sure we're on the mark with everything."
         PRG "Y-Yes... Good idea."
         MC "N-Not saying that your information isn't accurate!"
@@ -6402,7 +6402,7 @@ label PRG036_c1_after:
     PRG "I-I... I don't know if I'd call it that, but... yes."
     MC "If it makes you feel better, we can talk about it. I know that usually helps me when something is getting me down."
     PRG "All right, I guess. B-But, I usually don't talk about my past that often."
-    "I blinked. Come to think of it, what did I actually know about Aida from before she came to the academy? Well, her dad and mom met at a baseball game, her whole family loves the dragons, and... was that all?"
+    "I blinked. Come to think of it, what did I actually know about Aida from before she came to the academy? Well, her dad and mom met at a baseball game, her whole family loves the Dragons, and... was that all?"
     MC "Well, I... what's there to know?"
     if getAffection("PRG") > 14:
         "Aida released her arms and looked at me sadly."
@@ -7135,7 +7135,7 @@ label PRG039:
     show HR neutral with dissolve
     HR "Now, the important thing to remember is that gagaku dates back to the imperial courts of the Heian period. Make a note of that."
     "I pressed my pencil to the page and rolled my eyes. Tashi-sensei had an unfortunate habit of trying to cram information up until the bell rang, which left little time to actually write down information."
-    HR "All right. That's all I've got for you guys today. Before you all try to bash down the door, I'm assigning a short essay on traditional japanese music, due in two weeks. I expect at least ten pages of solid writing, and I'd like you to convey your opinions on traditional music and how you feel it lead to the music of today."
+    HR "All right. That's all I've got for you guys today. Before you all try to bash down the door, I'm assigning a short essay on traditional Japanese music, due in two weeks. I expect at least ten pages of solid writing, and I'd like you to convey your opinions on traditional music and how you feel it lead to the music of today."
     hide HR with dissolve
     "I quickly penciled the assignment into my practically untouched planner. Usually, I tried to just remember when my assignments were due, but an essay usually was worth more towards my grade, and I couldn't risk letting it slip my mind."
     "We had a few minutes until the bell rang, so I threw my planner into my bag and craned backwards, stretching my back and hearing at least four individual pops. Apparently, I had the spine of a sixty year old man."
@@ -7167,7 +7167,7 @@ label PRG039:
     "I wondered exactly how old the school was, and how many students had been here in its early years. Couldn't have been more than fifty. Maybe Daichi could dig up a yearbook or something from back then."
     "I looked off toward the dorms. The usual flow of students had died down for the day, and now, only a few stragglers roamed across the campus, and certainly, no Aida."
     "I went back to picking at the bench. By now, I'd made a sort of weird looking S shape in the paint. I remembered my friends and I drawing them on our notebooks as kids and acting like we were gang members."
-    "Three lines on top, three on bottom, two diagonal lines to join them, and the pointed ends closed off on the sides. It was simple, yet I had no idea where the trend even started. Probably an american trend of sorts."
+    "Three lines on top, three on bottom, two diagonal lines to join them, and the pointed ends closed off on the sides. It was simple, yet I had no idea where the trend even started. Probably an American trend of sorts."
     "I knocked the paint chips off from my nail and stood, turning towards the dorms. Just as I was about to go off searching for her, a distinctly Aida shaped form came trotting across the grass, her face red and her forehead glistening."
     show PRG sad with dissolve
     PRG "I-I'm s-sorry, Keisuke!"
@@ -7370,7 +7370,7 @@ label PRG039_c1_2:
     "I was flipping through a binder of foil cards and wishing I had more yen to my name when heard an excited gasp from up front. I looked toward the noise and saw Aida walking towards me, a single laminated card held in her hands."
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     MC "What kind of card is that?" 
-    PRG "It's a japanese baseball card. I used to have a tiny collection of these growing up. I had all of the Dragons player's cards in a binder organized by name. My dad helped me find them all, but we could never find one specific player."
+    PRG "It's a Japanese baseball card. I used to have a tiny collection of these growing up. I had all of the Dragons player's cards in a binder organized by name. My dad helped me find them all, but we could never find one specific player."
     if getFlag("PRG011_b"):
         MC "Aw, really? I used to have a fairly sizeable collection myself. Maybe I had that player's card."
     else:
@@ -9530,7 +9530,7 @@ label PRG048:
     "I checked my phone and noticed a tiny missed call icon sitting at the top of my notifications bar. The notification read 'AIDA' in big bold letters, with a voicemail icon next to it."
     "Curious, I checked the time that the call was placed at."
     MCT "3:30 in the morning?! What the?"
-    "I practically smashed my finger onto the voicemail icon and lifted the phone to my ear, my heart racing in my chest.."
+    "I practically smashed my finger onto the voicemail icon and lifted the phone to my ear, my heart racing in my chest..."
     PRGCell "..."
     PRGCell "..."
     "I couldn't hear anything. She must've pocket dialed me by mistake. But, before I could delete the message, I heard something. It sounded like a mix of rustling and a sort of squeaking, followed by a soft exhale and a mutter of something unintelligible."
