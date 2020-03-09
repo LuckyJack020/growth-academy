@@ -850,7 +850,7 @@ label global000_sit_after:
 label global000_aftersit_c1:
     MC "I haven't seen him...{w} but he was acting kind of strangely this morning. No telling where he went off to."
     show AE neutral
-    AE "Well... I'm certain have no reason not to trust you, so that's that."
+    AE "Well... I certainly have no reason not to trust you, so that's that."
     hide AE with dissolve
     "I left to go to my homeroom class, worrying no excuse would be good enough for Shiori..."
     $ setAffection("RM", 1)

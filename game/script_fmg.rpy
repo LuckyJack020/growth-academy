@@ -1421,7 +1421,7 @@ label FMG015:
             MCT "...Yeah, I don't know if she'll like this... but it might be funny to give this to her."
     "With the sweat shirt in hand, I paid for it, and set my sights on finding Akira."
     "I figured that given I was already in town, I would start my search for her at the local gym."
-    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a "Rowing Machine", pulling the rope thing in a similar manner of rowing a boat."
+    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a 'Rowing Machine', pulling the rope thing in a similar manner of rowing a boat."
     "It did not take long for her to see me, she smiled and gave me a wave to come over."
     show FMG happy with dissolve
     FMG "Sup Kei-kun! What brings you to this side of the island?"

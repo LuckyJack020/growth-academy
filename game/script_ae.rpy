@@ -9535,7 +9535,7 @@ label AE045:
     AE "My mother tried to stay at home for a while, but necessity changed that and she became a convenience store worker."
     MC "She was?"
     show AE neutral
-    AE "Mhm. She lacked a proper higher level education, but she made due with what she had."
+    AE "Mhm. She lacked a proper higher level education, but she made do with what she had."
     show AE sad
     AE "It was around that time, however, that father was fired from the police force."
     MC "Fired?"
@@ -10698,7 +10698,7 @@ label AE049:
     "She walked towards me, but leaned in and whispered softly."
     Tako "Oi, Keisuke. Good luck!"
     hide Tako with dissolve
-    "Yuren-san skipped off towards the valley home, leaving Shiori-chan fuming. We stood there for a while, speechless until I finally spoke up."
+    "Yureno-san skipped off towards the valley home, leaving Shiori-chan fuming. We stood there for a while, speechless until I finally spoke up."
     MC "Shiori-chan, what was that about?! What's going on?"
     show AE embarrassed at center with dissolve
     AE "I... I can't tell you right now."

@@ -8008,7 +8008,7 @@ label PRG042:
     PRG "Y-You sound so dangerous when you say it like that."
     MC "Oh yeah, I used to do all of the heavy stuff! Robbing banks, stealing cars, taking candy from babies, the list goes on. I was a bad dude."
     PRG "Oh, I'm sure."
-    "Aida went and stood directly in front of me, her breasts and belly meer inches from me."
+    "Aida went and stood directly in front of me, her breasts and belly mere inches from me."
     show PRG aroused
     PRG "Y-You know? You're kind of cute... for a bad boy~"
     MC "Cute? Ma'am, please. Us bad boys generally prefer the term 'handsome.'"
@@ -9366,7 +9366,7 @@ label PRG047:
     scene Dorm Interior with fade
     play music Hallway
     "After a restless night, I turned over in bed and silenced my phone alarm. I'd had one of those nights where you don't really remember falling asleep, but you feel like you've been up for a really long time."
-    "I sighed, threw my blankets into a heap a heap and went for my morning shower."
+    "I sighed, threw my blankets into a heap and went for my morning shower."
     "I'd been up late studying, on top of not sleeping well, so I felt like a zombie. Thankfully, my shower always seemed to wake me up, so I felt pretty okay once I left the bathroom."
     show RM neutral with dissolve
     RM "Hey, man."
