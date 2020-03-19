@@ -1561,7 +1561,7 @@ label BE015:
     BE "Actually, I was hoping we could do it now, if you're free? I have a club meeting later."
     MC "Hm. Sure, yeah, don't see why not."
     show BE happy
-    BE "Great, can we just do it at your room?"
+    BE "Great! Can we just do it at your room?"
     MC "Okay. Tell you what. I'll meet you there, I'll be over in a few minutes. I just want to pick something up first."
     BE "Gotcha. I'll meet you there, then. Don't be late!"
     "Honoka ran off to the dormitories as I looked at the time. I had to make a quick stop first. I had a feeling there was an easy way to help Honoka with her studying."

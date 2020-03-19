@@ -6343,7 +6343,7 @@ label BBW034_c1_after:
     jump daymenu
 
 label BBW035:
-    $setProgress("BBW", "BBW037")
+    $setProgress("BBW", "BBW036")
     #Time: Afternoon
     scene Classroom with fade
     "It had arrived, the day of the concert."
