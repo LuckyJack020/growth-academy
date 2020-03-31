@@ -26,7 +26,7 @@ label GTS001:
             jump GTS001_c2
         "I'm concerned about what that might mean for my younger sister, honestly.":
             jump GTS001_c3
-            
+
 label GTS001_c1:
     MC "What do you think about it?"
     GTS "It's a little concerning I will admit; however, I think some of those feelings come from the sudden nature in which we were told."
@@ -110,7 +110,7 @@ label GTS002_c1:
     "She shook her head softly."
     GTS "No, not much else really. Basically, just made sure everything was completely unpacked and organized. Then I came here, and well, you know where that part leads."
     jump GTS002_after
-    
+
 label GTS002_c2:
     $setAffection("GTS", 2)
     $setSkill("Art", 1)
@@ -135,7 +135,7 @@ label GTS002_c2:
     show GTS neutral
     GTS "They do yes, but I wouldn't want to take up more of your time chattering about my interests."
     jump GTS002_after
-    
+
 label GTS002_after:
     GTS "How did the rest of your afternoon go, if you don't mind my asking?"
     MC "Taking what we learned about ourselves earlier aside, the rest of my afternoon was actually pretty good. I spoke with my family and told them I'm fine."
@@ -239,7 +239,7 @@ label GTS003_after:
     MC "Why thank you ma'am, and I wish you luck with science."
     "She gave a small bow and walked off as I gathered all my things."
     jump daymenu
-    
+
 label GTS004:
     scene Library with fade
     play music Peaceful
@@ -358,7 +358,7 @@ label GTS005_c1:
     show GTS happy
     GTS "Yes, very much so I would say. That's a nice way to see it."
     jump GTS005_after
-    
+
 label GTS005_c2:
     MC "I'm doing okay, thinking about the results from the test."
     GTS "Yes... I would think quite a few students are thinking about that. I assume that's why the campus is a bit quieter than normal."
@@ -528,7 +528,7 @@ label GTS007:
     MC "Heh, yeah, it's okay Yamazaki-san. We're still young after all, so take your time."
     "I gave her a small chuckle, and she returned a smile and a nod. I leaned back a little, enjoying the calm of the garden as well as the gentle breeze, the two of us remaining silent for quite some time after that. Not that I'm complaining, since it was probably the most peaceful I'd felt in quite some time."
     jump daymenu
-    
+
 label GTS008:
     $setProgress("GTS", "GTS009")
     scene Roof with fade
@@ -645,7 +645,7 @@ label GTS009:
     BE "Really? Thanks! Umm... hmmm... let's go with some watermelon and blue raspberry!"
     GTS "Very well. Hotsure-san, would you like some?"
     MC "Sure, if you're okay with the expense."
-    GTS "Oh, it's truly no bother, Hotsure-san. Which favor would you prefer?"
+    GTS "Oh, it's truly no bother, Hotsure-san. Which flavor would you prefer?"
     MC "I think I'll go for some mandarin."
     show BE angry
     BE "Booooooring. Come on, try something exciting, or mix them up."
@@ -673,7 +673,7 @@ label GTS009:
     MC "Yamazaki-San warned you..."
     MC "But yeah Honoka is right, exploring was the whole point for the trip so let's check it out."
     GTS "If it's truly alright..."
-    
+
     scene Store with fade
     "Entering the store I had to admit I was surprised that it seemed to mostly be just an assortment of knickknacks."
     show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
@@ -795,7 +795,7 @@ label GTS009_c1_3:
     "Still, we shared a laugh over it by the end of the day. Honoka being annoyed with my suggestion of wearing a, CAUTION: WIDE TURNS, sign on her shirt. Either way it had been a good day and we even discussed possibly doing it again sometime."
     "I know I'd be more than willing to spend another day like that. Though next time I'll make sure I have a lot more money on me..."
     jump daymenu
-    
+
 label GTS010:
     $setSize(2)
     $setTimeFlag("aftersize2")
@@ -1148,14 +1148,14 @@ label GTS014:
     GTS "Hm? Do you mean like a profession?"
     MC "Yeah, have you ever given any thought about what job you might want to strive for?"
     GTS "I don't believe I have really. Did you have something planned already?"
-    MC "I've been thinking about Architecture as something I could do when I get out of school."
+    MC "I've been thinking about architecture as something I could do when I get out of school."
     GTS "That'd be a nice profession to get into. I would be interested in seeing what you could come up with. "
     MC "Thanks for the vote of confidence. ...So, you really haven't thought about what job you'd get after school's done?"
     GTS "Truthfully no, I've mostly focused only on my studies and hobbies. I suppose it just didn't cross my mind."
     menu:
         "So are you just going to keep doing your studies and see what happens when you reach the end?": #-1 Affection
             jump GTS014_c1
-        "Well I heard a lot of women tend to get part time jobs, so you could try something like that.": #+0 Affection 
+        "Well I heard a lot of women tend to get part time jobs, so you could try something like that.": #+0 Affection
             jump GTS014_c2
         "How about something involving flowers? I'm sure people would enjoy a unique flower shop.": #+1 Affection
             jump GTS014_c3
@@ -1172,7 +1172,7 @@ label GTS014_c1:
     GTS "This is true, but perhaps I should have put more thought into this than I had up until now."
     MC "I'm sure you'll get it all sorted out in no time, Yamazaki-san."
     jump GTS014_after
-    
+
 label GTS014_c2:
     MC "Well, I heard a lot of women tend to get part time jobs out of school, so you could try something like that."
     GTS "That's true, I'm sure there are a lot of jobs I'd be capable of doing."
@@ -1338,7 +1338,7 @@ label GTS015_c2_after:
     "She cheered and I couldn't resist giving a small cheer due to her enthusiasm, the action convincing Naomi to smile and give a delighted clap, and the rest of the film crew to look over at our sudden outburst."
     MCT "Since when were we 'the gang'...?"
     jump daymenu
-    
+
 label GTS016:
     scene School Planter with fade
     show GTS neutral at center with dissolve
@@ -1381,7 +1381,7 @@ label GTS016:
             jump GTS016_c1_1
         "Yeah, that sounds like a fun time to me.":
             jump GTS016_c1_2
-            
+
 label GTS016_c1_1:
     MC "I'd probably be too scared of getting eaten by a bird, or getting swat at by a human."
     show GTS sad
@@ -1681,7 +1681,7 @@ label GTS019:
             jump GTS019_c1_2
         "(Draw the Symbol for 'Happiness')": # +1 Affection, +2 if art stat higher than 35
             jump GTS019_c1_3
-    
+
 label GTS019_c1_1:
     "My mind drew a blank as I simply let my hand move with the first thought that came to mind, and as such my work was done almost as soon as it started."
     GTS "Let's see what you did."
@@ -1696,7 +1696,7 @@ label GTS019_c1_1:
     GTS "That's all right. I'm sorry for putting you on the spot like that. Still, I think it came out nicely."
     "She carefully removed the paper and placed it in the pile along with the ones she had done."
     jump GTS019_c1_after
-    
+
 label GTS019_c1_2:
     "I had no idea what I'd go with as I stared at the white canvas before me. Then, just like I had been inspiration for Naomi earlier, I decided she would act as my inspiration here. I got to work, planning out my movements before my hands executed them. As long as I focused, I could get this done."
     "After a few minutes passed, I finally let out a sigh of relief and placed the brush down."
@@ -1827,7 +1827,7 @@ label GTS020_c1_2:
     GTS "I'm sorry Hotsure-san, that was too forward, I shouldn't have assumed-"
     show GTS surprised
     GTS "W-wait, what did you say?"
-    MC "I said sure, where you'd like to go?"
+    MC "I said sure, where would you like to go?"
     $setAffection("GTS", 10)
     GTS "R-really!?"
     show GTS embarrassed
@@ -1906,7 +1906,7 @@ label GTS021_c1_1:
     "Naomi's body turned rigid for a moment, a subtle action enhanced by her larger frame."
     $setAffection("GTS", 5)
     show GTS embarrassed
-    GTS "U-uh, thank you." 
+    GTS "U-uh, thank you."
     GTS "It's truthfully not that difficult. It's merely repetition and sticking to a routine."
     MC "Well you've always been pretty good at organizing things, so I suppose that would make it a lot easier for you."
     "A blush was beginning to spread across her cheeks as her line of sight shifted away from me."
@@ -1996,7 +1996,7 @@ label GTS025:
     GTS "Hotsure-san..."
     MC "Yeah, Yamazaki-san?"
     GTS "I..."
-    GTS "I uh..." 
+    GTS "I uh..."
     GTS "Would it be okay... to kiss you?"
     "My heart suddenly felt like it was connected to a car whose pedal had been floored as my heart rate soared. I felt my face heat up as I gulped slightly and finally turned to face her."
     "Her face was as scarlet-coated as my own, her eyes avoiding contact with mine. They would, however, quickly glance at me once as she waited for my answer."
@@ -2153,7 +2153,7 @@ label GTS028T_c1_after:
         "The movie started out rather surprisingly as a sex scene was the first scene to greet us. I felt Naomi tense up as it might have been a little much for her. Still, once the scene pass and the movie continued she ended up relaxing and laughing quite a few times. I felt her hand move a couple of times as it seemed she was trying to muffle her laughing to not be rude. However one time when her hand settled back down, it laid on top of mine."
         "Blushing lightly, I wasn't sure if I should mention it as her hand completely covered mine. Once I noticed her softly squeeze it, I finally looked up towards her and saw her smiling which in turn made my lips smile. She laughed more openly as the film progressed and so did I, as I moved my hand so it could hold hers."
     elif getFlag("GTS028T_c1_2"):
-        "The movie opened on a long lingering shot of a quiet field of flowers. Their colors muted as the sky itself was gray. The drama that would soon play out captivated us, as I could see Naomi lean closer to as got lost in the film. She'd gasp when the action picked up, awe at set pieces, and when the ronin found his love she'd clutch my hand softly."
+        "The movie opened on a long lingering shot of a quiet field of flowers. Their colors muted as the sky itself was gray. The drama that would soon play out captivated us, as I could see Naomi lean closer to me as she got lost in the film. She'd gasp when the action picked up, awe at set pieces, and when the ronin found his love she'd clutch my hand softly."
         "I was caught by surprise when she did that, looking up at her as she looked back down at me and smiled. My cheeks grew a little warm though, as while we looked at each other the ronin spoke all his loving feelings. Sensing my nervousness, she ended up blushing as well and looked away, though her smile remained as did her hand for the remainder of the film."
     else:
         "The movie began innocently enough, a brief scene to establish all the characters and their reasons for drinking that night. There was minor tension and suspense the entire time though, yet nothing really happened for quite some time. This seem to leave Naomi feeling a little more comfortable as it seemed it might not be too bad. But then just like that, the first major scare happened and Naomi let out a startled yelp."

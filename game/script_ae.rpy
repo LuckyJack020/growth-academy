@@ -52,14 +52,14 @@ label AE001:
             jump AE001_after
         "You're worried, aren't you?":
             jump AE001_c3
-            
+
 label AE001_c1:
     MC "So... Shiori-san. How are you handling this?"
     AE "..."
     extend "I suppose... I just need to further my understanding of the situation. That's all. It's unlikely that my situation is anything to worry about, anyway."
     MCT "That... didn't really answer my question."
     jump AE001_after
-    
+
 label AE001_c3:
     $setAffection("AE", -1)
     MC "The reason you're in here... you're worried about this whole thing, right?"
@@ -71,7 +71,7 @@ label AE001_c3:
     MCT "What the hell was I thinking?!"
     show AE neutral
     jump AE001_after
-    
+
 label AE001_after:
     "We sat in silence a bit more, until I noticed something... I couldn't hear Shiori writing anymore."
     MCT "Eh? Is she done taking notes already?"
@@ -241,7 +241,7 @@ label AE002_c2_1:
     AE "Then I will see you in class. Remember, our homework is Chapter 1 section 3. I expect good results."
     MC "Yeah... See you then."
     stop music
-    
+
     scene Library with fade
     "As Shiori got back to her work, I walked out of the door and back through the library. While her talk was meant to calm me down, it only ended up raising more questions."
     jump daymenu
@@ -259,7 +259,7 @@ label AE002_c2_2:
     MC "Uh... Yeah... I will."
     "Shiori turned back to her paperwork, and I turned out of the door to leave the library, content that I had been able to get the book situation sorted. But that still left the question of what else I could do today."
     jump daymenu
-    
+
 label AE003:
     $setProgress("AE", "AE004")
     scene Campus Center with fade
@@ -383,7 +383,7 @@ label AE003_c1_after:
     if not getFlag("AE003_c1_1"):
         Student1 "Yo! I said left!"
     "Continuing right, I exhaled through my nose, just frustrating myself more thinking about it until I got to my room."
-    
+
     scene Dorm Exterior with fade
     play sound Knock
     "{i}KNOCK KNOCK{/i}"
@@ -396,7 +396,7 @@ label AE003_c1_after:
     MCT "The door opened up, this time more readily than the first few times I entered."
     show RM happy at center with dissolve
     RM "Relax! Relax! Just a joke. C'mon in."
-    
+
     scene black with fade
     pause .5
     scene Dorm Interior with fade
@@ -409,7 +409,7 @@ label AE003_c1_after:
     "I looked in my notebook and found nothing. Only a few measly papers sticking out... Airplanes are expensive."
     MCT "Damnit! Now I have to go and get a new one. Guess I'm headed out then."
     jump daymenu
-    
+
 label AE004:
     $setProgress("AE", "AE006")
     $setTimeFlag("testday")
@@ -469,7 +469,7 @@ label AE004:
         "Shiori-san paused for a moment, before turning to me and holding the file out in her hands."
         AE "I suppose if anyone should know, it should be you. Take a look."
         jump AE004_testpass
-        
+
 label AE004_testpass:
     "Shiori handed me the file with both hands and then crossed them across her chest, fingers tapping at her forearms as she awaited my response. What I saw was..."
     MC "Daichi's... student file?"
@@ -970,7 +970,7 @@ label AE007_after:
     MC "O-Oh."
     show AE angry-3
     AE "Hmm..."
-    AE "Pacing." 
+    AE "Pacing."
     MC "Huh?"
     show AE neutral
     AE "Your problem is pacing. I plan on rectifying that. I will have plenty of files tomorrow to work on as well, I hope you will be there."
@@ -1118,7 +1118,7 @@ label AE008:
     "Shiori-san bent over, bowing to the invisible teacher... When she looked back. Her back was arched, and it was impossible not to see her twin mounds, covered by her blue skirt, sticking straight out to see. She looked back, put her hands on her butt and squeezed as the color drained from her face."
     "I dared not look any more, for fear of being seen, and quickly left the library prepared to face a the rest of the day, admittedly, with a new level of concern for my classmate."
     jump daymenu
-    
+
 label AE009:
     $setTimeFlag("size2")
     $setProgress("AE", "AE011")
@@ -1127,7 +1127,7 @@ label AE009:
     MCT "Damnit, Daichi! You just had to play that homemade documentary, didn't you?!"
     "I hadn't been keeping an eye on the time. I went back to my dorm to grab a bite to eat before I went to the office, but as soon as I got in Daichi decided it was a good idea to sit me down to show me a video he made about the how the School profits are being diverted to some shady Biotech company that I'd never heard of."
     "I slowed down as I neared the library door, composing myself before entering. I made my way through and entered the office, where Shiori-san was writing a report of some kind."
-    
+
     scene Office with fade
     play music Peaceful
     show AE sad at center with dissolve
@@ -1161,7 +1161,7 @@ label AE009:
             jump AE009_c1
         "Yes, but it's fine":
             jump AE009_c2
-            
+
 label AE009_c1:
     MC "Not at all. I mean, I usually close my eyes whenever I bow, so it's no big deal."
     show AE angry-3
@@ -1280,11 +1280,11 @@ label AE009_after:
     MCT "EEEEHHHHHH?!"
     MC "A-are you sure? I mean, it could take all day! You wanna go home too, right?"
     AE "I can wait."
-    
+
     scene black with fade
     "After facing a hellscape of papers, I finally got to leave... once Shiori-san had enough pity for me to let me go."
     jump daymenu
-    
+
 label AE010:
     $setSize(2)
     $setTimeFlag("aftersize2")
@@ -1306,7 +1306,7 @@ label AE010:
     show AE aroused-3
     AE "You go first."
     MC "Um... All right then."
-    
+
     scene Library with fade
     "We walked through the library, Shiori-san following closely behind me, until we reached the office door."
     MC "Want me to take those, so you can unlock it?"
@@ -1315,7 +1315,7 @@ label AE010:
     MC "Okay...? Thanks."
     MCT "That's a bit convenient, isn't it?"
     "Taking the key in hand, I inserted it and turned the knob."
-    
+
     scene Office with fade
     "The lights were flicked on and I went to my station."
     MC "So, Shiori-san, what's with the stack of papers?"
@@ -1372,7 +1372,7 @@ label AE010:
         AE "...Yes. Yes it is."
         "Shiori-san let out as sigh. Of relief or frustration, I couldn't really tell."
         AE "Well, if I keep trying to hide myself then it seems neither of us will be able to get our work done."
-        AE "So I want you to... get it out of your system now." 
+        AE "So I want you to... get it out of your system now."
     else:
         "Shiori-san looked at me fiercely, an angry scowl spread across her face in return for what she took as grave disrespect."
         show AE aroused-3
@@ -1607,7 +1607,7 @@ label AE011_aftertest:
             jump AE011_c1
         "I guess not.":
             jump AE011_c2
-            
+
 label AE011_c1:
     $setAffection("AE", -1)
     MC "There is more to life than just going to class, you know."
@@ -1686,7 +1686,7 @@ label AE011_afterchoice:
     MCT "If this is how it's gonna be the rest of the year with her, I'm gonna be in for a mind-numbing time."
     "I finished up filing, and left through the library in order to prep for the rest of the day."
     jump daymenu
-    
+
 label AE012:
     $setProgress("AE", "AE013")
     scene Hallway with fade
@@ -1763,7 +1763,7 @@ label AE012_menu:
             pass
         "That's everything...":
             jump AE012_after
-            
+
 label AE012_activity:
     MC "What is your favorite activity?"
     show AE neutral
@@ -1777,7 +1777,7 @@ label AE012_activity:
     show AE neutral
     AE "I suppose so."
     jump AE012_menu
-    
+
 label AE012_goals:
     MC "Let's talk about goals. What do you want to do after school?"
     show AE neutral-annoyed
@@ -1798,7 +1798,7 @@ label AE012_goals:
     MC "O-Oh. Okay."
     MCT "Yeesh. Did I hit a sore spot?"
     jump AE012_menu
-    
+
 label AE012_food:
     MC "T-The food club form goes in the left cabinet."
     show AE neutral
@@ -1812,7 +1812,7 @@ label AE012_food:
     AE "Is it?"
     MCT "I... I think so?"
     jump AE012_menu
-    
+
 label AE012_music:
     MC "What is your favorite genre of music?"
     AE "I tend to listen to liturgical music."
@@ -1828,7 +1828,7 @@ label AE012_music:
     AE "Mhm."
     MCT "Yes! That's something."
     jump AE012_menu
-    
+
 label AE012_sports:
     MC "How about sports?"
     show AE neutral
@@ -1931,7 +1931,7 @@ label AE012_after:
     AE "Yes, 'see you then'."
     "I walked out of the office without a clue of what Shiori-san was talking about, but in my mind, any change of pace was a good one. Admittedly though, I came in with plenty of questions and left with plenty more."
     jump daymenu
-    
+
 label AE013:
     $setProgress("AE", "AE014")
     #FIXME character positioning probably needs work?
@@ -2884,7 +2884,7 @@ label AE017:
     AE "Hotsure-san, are you coming?"
     MC "Y-yeah! I'll be right there."
     jump daymenu
-    
+
 label AE018:
     $setProgress("AE", "AE019")
     scene Hallway with fade
@@ -3082,7 +3082,7 @@ label AE018:
         MC "I think... that you're worried about your future."
         show AE neutral-annoyed
         AE "...What?"
-        MC "Your vision of the horizon, of the top, is completely clouded by fog."        
+        MC "Your vision of the horizon, of the top, is completely clouded by fog."
         MC "You let your fears of isolation completely stop you from being able to visualize a good future for yourself."
         show AE sad-2
         AE "...I... I feel we should stop."
@@ -3315,7 +3315,7 @@ label AE020:
     MC "Oy, Shiori-san!"
     MCT "That's weird... Isn't she usually in the desk?"
     MC "Oh... um, why are you just, uhh?"
-    show AE neutral 
+    show AE neutral
     AE "Care to elaborate?"
     MC "Well, you're usually sitting down while I file, don't you have any more documents or?"
     AE "Actually no, everything is filled out for today. We'll be filing together."
@@ -3468,7 +3468,7 @@ label AE020_c1_1:
     jump daymenu
 
 label AE020_c1_2:
-    MC "Shiori-san..."    
+    MC "Shiori-san..."
     "I stood straight, though my knees felt like they were betraying me, and I bowed with the ferocity of a hammer coming down on an iron nail."
     play music Romance
     MC "P-Please be my girlfriend!"
@@ -3937,7 +3937,7 @@ label AE022:
     MC "Y-yeah, I get it."
     show RM neutral
     RM "I mean, for real, what would that even look like? A weird hawk-mouse-elephant combo. That doesn't even sound feasible, yet that's what Shiori i-"
-    show RM sad 
+    show RM sad
     RM "She's right behind me isn't she?"
     MC "Um..."
     MC "No?"
@@ -4225,7 +4225,7 @@ label AE023_c1_after:
     AE "Now what makes you think I'm opinionated?"
     MC "Ehh, I dunno. The way you talk, the way you go about enforcing things, it really makes it seem as though you have some pretty strong opinions is all."
     MC "I mean, not that that's a bad thing. I guess that's one of the reasons why I've taken such a liking to you!"
-    AE "..." 
+    AE "..."
     MC "Hm?"
     "I looked back, and saw Shiori-san staring down at the floor."
     MC "You stopped. What's up?"
@@ -4350,7 +4350,7 @@ label AE024:
     "Shiori-san's mouth changed from biting her lip to her signature smirk, her lewd eyes obscured behind the glare from her glasses."
     show AE glasses
     AE "Come on... let me feel the pleasure I've been craving for so long."
-    
+
     menu:
         "Do it.": # -33%
             jump AE024_c1_1
@@ -4691,7 +4691,7 @@ label AE025:
             "It was heat of the moment":
                 MC "It was a moment of weakness. I-I mean, it was just so sudden and... I was just so..."
                 show AE sad-2
-                AE "Hotsure-san..."        
+                AE "Hotsure-san..."
                 "Shiori-san seemed more conflicted now than I had ever been in her entire life."
                 AE "I... I expected you to be stronger. I realize my methods were crass, but..."
                 MC "I know. I needed to hold myself up to a higher standard. I needed to contain myself, but I just..."
@@ -4802,7 +4802,7 @@ label AE025:
     AE "U-um... I'm not sure. What are my duties? A-as a newly-instated girlfriend."
     MC "Your...? I guess... we can take it slow. You're new to the whole-"
     AE "D-dating scene."
-    MC "-girlfriend thi-yes, yeah, right, exactly, dating scene. Dating scene." 
+    MC "-girlfriend thi-yes, yeah, right, exactly, dating scene. Dating scene."
     AE "Mm."
     MC "And uhh..."
     show AE happy
@@ -4848,7 +4848,7 @@ label AE026:
     RM "Dude, dude, wake up."
     MC "Huh-wa?"
     show RM neutral
-    RM "Get up, we got class."   
+    RM "Get up, we got class."
     MC "Mm... what time is it?"
     show RM angry
     RM "Like, six thirty. C'mon."
@@ -5167,7 +5167,7 @@ label AE027:
     PRG "I'm... really ha-"
     FMG "No way in hell that'd happen!"
     MC "Um, girls?"
-    show GTS sad 
+    show GTS sad
     GTS "Oh dear. I apologize for all the noise, Hotsure-sa-"
     BE "I can't even remember the last time you dated anybody!"
     MC "OY!"
@@ -5293,15 +5293,15 @@ label AE027:
     TS "Any questions? No? Good."
     "After standing and bowing, I was going to talk to Shiori-chan until I was beckoned over by someone..."
     $secondHighest = getSecondHighest("AE")
-    if secondHighest == "BE": 
+    if secondHighest == "BE":
         jump AE027_BE
-    elif secondHighest == "BBW": 
+    elif secondHighest == "BBW":
         jump AE027_BBW
-    elif secondHighest == "FMG": 
+    elif secondHighest == "FMG":
         jump AE027_FMG
-    elif secondHighest == "PRG": 
+    elif secondHighest == "PRG":
         jump AE027_PRG
-    elif secondHighest == "GTS": 
+    elif secondHighest == "GTS":
         jump AE027_GTS
     else:
         jump AE027_BE #If for some reason noone is the second highest, it'll default to Honoka.
@@ -5325,7 +5325,7 @@ label AE027_BE:
     MC "Oh. Is that... do you have a problem with-?"
     BE "No, no, not at all. She's just, like... REALLY serious and stuff."
     MC "Well, yeah. But she's an amazing person. You really should try to get to know her. I think you'd make great friends."
-    show BE sad 
+    show BE sad
     BE "Mmm, I dunno. She got me in trouble just for talking too loud. I don't talk loud though!"
     MC "Well, I think the two of you will get along eventually."
     show BE neutral
@@ -5352,7 +5352,7 @@ label AE027_BBW:
     MC "Thank you, Nikumaru-san."
     BBW "Mhm~ Oh, and by the way, remember my advice, will you?"
     hide BBW neutral with fade
-    jump AE027_after    
+    jump AE027_after
 
 label AE027_FMG:
     show FMG neutral
@@ -6088,7 +6088,7 @@ label AE030:
     show AE sad:
         linear 2.0 yanchor 1.0
     "As Shiori-san entered the room, it was to the mixed reactions of the class."
-    "Some, like Honoka and Akira-chan starred with their mouths agape. Alice starred, yet placed her thick fingers over her mouth for politeness. Aida and Naomi, however, did as instructed and looked off in different directions."
+    "Some, like Honoka and Akira-chan stared with their mouths agape. Alice stared, yet placed her thick fingers over her mouth for politeness. Aida and Naomi, however, did as instructed and looked off in different directions."
     "I on the other hand, began to blush and could not keep my eyes off of my girlfriend's fairly bare figure."
     "Her legs had grown even more; each smooth swollen thigh lightly jiggling with each step. Her hips were now even larger as well, reaching past the length of her shoulders by a good few inches."
     "She got to her desk and started to sit down. In that moment, I could feel my heartbeat in my toes. Her booty had blown up immensely; a fact now made more evident by the pathetic scraps around her waist that were once a skirt. Each pale cheek jutted out a good foot or so from her body, and her panties, now visible to all, were stretched and had dug into her skin tightly."
@@ -6656,7 +6656,7 @@ label AE033:
     show AE neutral-annoyed
     AE "D-don't go acting so foolishly. When I say you wouldn't be interested, that's all I mean."
     MCT "Hmm..."
-    
+
     menu:
         "I trust you, don't you trust me?": #+1
             jump AE033_c1_1
@@ -6990,7 +6990,7 @@ label AE034:
     MC "Hi, Tomoko. Me and my... friend wanted to talk."
     AE "May we come in, please?"
     Tomoko "...Okay."
-    
+
     scene Dorm Tomoko with fade
     "She opened the door fully, and squinted as the light shone down into her room. This was hardly surprising, as a black blanket covered the window. The lights in her room were off, barring the bright intense light of the shmup's pause screen on her television."
     "As we entered the room, she crawled up onto her bed, took her comforter and covered herself in it leaving only her hands, face, and long flowing bangs exposed. Shiori-chan and I stood, as I began."
@@ -7577,7 +7577,7 @@ label AE037_c1_after:
     #GATE SFX
     "I opened the metal gate and ushered her though, admittedly taking a peek at her behind as we exited the school grounds and walked along the road through the hills."
     #BIRD SFX END
-    
+
     scene Hill Road with fade
     show AE neutral with dissolve
     "We walked along the side of the gravelly road from the school. The town was far in the distance, and seemed nestled among the green hills. After a few minutes, we'd walked past the two mountains in the front of the school into the windswept valley."
@@ -7617,7 +7617,7 @@ label AE037_c1_after:
     AE "I see... well, regardless, you smell nice."
     MC "Thanks."
     "We continued on, and after walking for a little bit more, we'd reached the town."
-    
+
     scene Town with fade
     show AE neutral with dissolve
     "The afternoon brought with it plenty of students, free from their scholarly duties and willing to spend whatever money they had either earned or been sent in order to gather food, luxuries, and experiences. As the two of us walked through town, we also gathered the occasional murmur from the odd student here or there."
@@ -7702,7 +7702,7 @@ label AE037_c1_after:
     menu:
         "I wanted to help you feel normal.": #-3
             jump AE037_c2_1
-        "I thought it'd be nice to share experiences with you.": #+2 
+        "I thought it'd be nice to share experiences with you.": #+2
             jump AE037_c2_2
 
 label AE037_c2_1:
@@ -7806,7 +7806,7 @@ label AE037_c2_after:
 
 label AE038:
     $setProgress("AE", "AE039")
-    #Scene Afternoon 
+    #Scene Afternoon
     scene Hill Road with fade
     play music Schoolday
     show AE neutral with dissolve
@@ -8088,7 +8088,7 @@ label AE039:
     AE "...M-may we?"
     MC "Eheh, sure."
     "Taking her hand, we waited at the stop light to cross before getting to the front of the store. I held it open and motioned for her to go in first."
-    
+
     scene Game Store with fade
     "As we entered the building, a strange smell of cheap cinnamon-apple air freshener and dust permeated the air. Behind glass displays, miniature soldiers and creatures were painted a variety of vibrant colors with precise detail."
     "Along the walls, wooden shelves contained a plethora of shrink wrapped books and board games, some in Japanese, but a majority having logos in what appeared to be English. While I was taking in the sights, Shiori-chan looked around, the nostalgia creeping in."
@@ -8400,7 +8400,7 @@ label AE040:
     show AE happy
     AE "L-later. For now, though, let's play."
     "The game began, and we soon began moving our soldiers to and fro."
-    
+
     scene black with fade
     pause 1
     scene Game Store with fade
@@ -8576,7 +8576,7 @@ label AE041:
     AE "I plan on testing that resolve."
     MC "Understood."
     stop music
-    
+
     scene Town with fade
     "We exited the school, went through the valley, and made our way to the commercial district. The closer I got, the more amped I became."
     "After spending all night reading up on the rules and watching games online, I'd become more motivated than ever to win. My soul felt like it was on fire as I experienced a surge of energy like I never had before."
@@ -8705,7 +8705,7 @@ label AE041_c1_after:
     show AE neutral
     AE "Um, sir? We'll be cleaning up now!"
     "I slowly helped her put everything away, and after giving a nod to the shopkeep, the two of us walked back towards the school."
-    
+
     scene Hill Road with fade
     show AE neutral with dissolve
     AE "H-Hey, don't worry about it. Tell you what, when we get back, we can go and read together before I go to my meeting. I found a really good book about-"
@@ -8902,7 +8902,7 @@ label AE042:
     AE "But you won, and that's not something I can't take from you."
     MC "So, ready to head back?"
     AE "...Yeah. Let's head back to the dorms."
-    
+
     scene black with fade
     "We walked back to the school, and as we did, Shiori-chan made sure to keep me close. Call it a hunch, but I feel as if that victory may have made us closer... somehow?"
     scene Dorm Exterior with fade
@@ -9262,7 +9262,7 @@ label AE044:
     MC "C'mon, let's head out. We can go for that walk, okay?"
     show AE neutral
     AE "Mm."
-    
+
     scene black with fade
     "Once more through the windy valley, we made our way to the town."
     scene Park with fade
@@ -9393,7 +9393,7 @@ label AE044:
     AE "I-It's nothing you did, I'm just not feeling..."
     AE "{i}Khm{/i}"
     MC "O-okay."
-    
+
     scene black with fade
     "Helping her up, the two of us walked out of town and back to the school. Not a single word spoken between the two of us."
     scene Dorm Exterior with fade
@@ -10176,7 +10176,7 @@ label AE047_c1_after:
     "Not a word needed to be said. The tension in the air said it all for me. I could feel it strongly as I stared Shiori-chan in the eyes, the same numbness I felt the day I asked her out. I opened my mouth slightly to speak the words of my heart, but they never came."
     AE "..."
     MC "..."
-    
+
     scene black with fade
     "And then, almost on instinct..."
     MC "..."
@@ -10234,7 +10234,7 @@ label AE048:
     MCT "Hell's going on out there?"
     MC "Hm..."
     "Part of my worry replaced by a heightened sense of curiosity, I exited the hallway and entered the courtyard."
-    
+
     scene Campus Center with fade
     play music Hallway
     MC "Oy! Yuki-chan, got a sec?"
@@ -10439,7 +10439,7 @@ label AE048:
     RM "Ehh, Yuki-chan, I think this is something Keisuke wants to talk about privately. You're not exactly a private girl."
     Yuki "Ah-!... Eh... faiw point."
     MCT "He will without a doubt tell her everything later."
-    
+
     scene Diner with fade
     show RM neutral with dissolve
     RM "You kissed her?!"
@@ -10474,7 +10474,7 @@ label AE048:
     MC "Hey, man, um... here's some cash, can you pay for the both of us? I'm gonna head out."
     RM "Yeah, yeah, stick me with half the bill why don't you, not like you said you'd pay or anything."
     "I placed some cash on the table and walked out, back towards the school, a new source of worry on my mind."
-    
+
     scene black with fade
     RM "{i}Sssp{/i}"
     RM "Mm, this is some damn good coffee."
@@ -10530,10 +10530,10 @@ label AE049:
     MCT "Ready?! You look like you just got out of bed!"
     "Before I could say anything more, Yureno-san already was leaving her room, and leaving me behind as she walked briskly out of the dorms."
     stop music
-    
+
     scene black with fade
     "I eventually caught up with her at the gate, and we walked out to the diner."
-    
+
     scene Restaurant with fade
     play music Busy
     "Today seemed busier than usual. As we walked in, we were greeted with the murmurs of the patrons and the smell of freshly ground coffee. Yureno-san walked up to the counter and greeted the waitress with... extra enthusiasm."
@@ -10707,10 +10707,10 @@ label AE049:
     "Shiori-chan's face was bright red, and she was fiercely shaking. I could tell that now was not the time to try and push her any further."
     MC "...Okay."
     stop music
-    
+
     scene black with fade
     "We walked out of town together, and through the valley back to the school. I pulled her in close, and yet she still seemed somewhat distant."
-    
+
     scene Dorm Exterior with fade
     play music Rain
     "We made it back in time for curfew. Yureno-san made it back by quite a bit, as it sounded like she was playing music loudly behind the doors."
@@ -10750,7 +10750,7 @@ label AE050:
     "Unclear of my motive, I slowly pulled the covers away and, as meticulously as I could, got out of my bed without a sound. Not wanting to waste time to change, I'd gone to bed with my clothes on."
     "Silently, I crept through the room as to not wake Daichi. I reached the door, slowly unlocking and opening it to the darkness of the empty hall. I turned around once more to ensure that Daichi wasn't watching."
     MCT "If whatever is going on is important enough to warrant Shiori-chan asking me to break the rules, then I think this should be private."
-    
+
     scene Dorm Exterior with fade
     "I stepped out of the room and closed the door behind me. With no hallway monitor out and about, all I needed to do was make sure that I didn't wake any of the other students or on site faculty."
     #FOOTSTEP SFX
@@ -10892,7 +10892,7 @@ label AE050_assertive:
     "I pulled my fingers out of her box, and brought my mouth closer."
     MC "It should feel something like this."
     jump AE050_after1
-    
+
 label AE050_passive:
     MC "U-Um, Shiori-chan?"
     AE "That's m-mistress to you!"
@@ -10941,7 +10941,7 @@ label AE050_passive:
     AE "Y-Yeah. What, um... what are you gonna do?"
     MC "...This."
     jump AE050_after1
-    
+
 label AE050_after1:
     "Ready to begin, I began to lap away greedily at her warm pussy."
     AE "AHN! Mmm~!"
@@ -10989,7 +10989,7 @@ label AE050_passive2:
     "Finally, and abruptly, she began to cum as she released a steady moan. I pulled myself away, panting and out of breath."
     MC "Wow... Hah..."
     AE "Haahh..."
-    MC "So... me next?"  
+    MC "So... me next?"
     AE "Huh?"
     MC "Do you wanna... do me next?"
     AE "Ah! Keisuke-kun, you don't have a... you know."
@@ -11000,7 +11000,7 @@ label AE050_passive2:
     AE "Alright... Unzip them."
     MC "Right. Got it."
     jump AE050_after2
-    
+
 label AE050_after2:
     "She looked on in anticipation as I slowly, methodically, unbuttoned my pants and pulled down my zipper; my boxers only slightly hiding my raging erection. My heart beat heavily in my chest as I did. Though it had been this whole time, I could feel it now more than ever."
     "Shiori-chan jumped back a bit and gasped, her eyes widening as my cock sprung out of the hole in my boxers."
@@ -11252,7 +11252,7 @@ label AE051:
     AE "Mmn."
     #*Creak SFX*
     "The next morning, the deep creak of the mattress roused me from my sleep, my eyes opened slowly to the white ceiling above, and the calling of birds outside the window echoed through my head as a cool breeze rolled in from the newly opened window..."
-    
+
     scene Dorm AE with fade
     play music Hallway
     MC "M-Mmmn."
@@ -11862,7 +11862,7 @@ label AE053:
         MC "I'm glad the two of you became closer. I really am."
         show BBW happy
         BBW "...I am too."
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve 
+    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     AE "Okay, I got a basket."
     show BBW happy
     BBW "Splendid. Why don't you go find some articles that appeal to you, and we can start from there? It is important that you retain your own style."
@@ -12469,7 +12469,7 @@ label AE055:
         show AE neutral
         AE "That would be for the best."
     "As I made my way up, with Shiori in tow, I began to feel a twinge of wanderlust as I continue to ascend, thankful to have Shiori by my side."
-    
+
     scene Woods with fade
     #CICADA SFX
     "As the afternoon cicadas made their soothing, yet eerie chirps throughout the forest, I brought Shiori to the forest's entrance by the hand. As we stepped into the trees, I let out a sigh of contentment."
@@ -12802,7 +12802,7 @@ label AE056_c1_3:
 
 label AE056_c1_after:
     "With that, I bowed and made my way out of the classroom towards the library."
-    
+
     scene Student Government with fade
     "Pushing open the door to the student government meeting room, I could see Shiori facing the far wall. She seemed to be focused on organizing and filing away a stack of papers that had been left out earlier."
     MC "Knock knock~"
@@ -12856,7 +12856,7 @@ label AE056_c1_after:
     Tako "H-WOAH MY GOD-!"
     show AE surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
     AE "Eek!"
-    "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling of me hurriedly."
+    "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling off of me hurriedly."
     MC "Woah, shit!"
     "Tako turned her head and covered her face with her hand."
     show Tako surprised at Position(xpos=0.5, xanchor=0.5, yanchor=1.0)
@@ -13414,7 +13414,7 @@ label AE059:
     AE "It's soothing. I sat there the other day after work. Would you like to come?"
     MC "Oh, absolutely."
     "We turned the corner and exited out of the doors to the right, leaving to the courtyard."
-    
+
     scene Campus Center with fade
     #Scene change fountain (Just courtyard for now)
     "She led me to the fountain by hand, however I was the one to usher her down. She sat on the stone edge, her humongous butt piling out on the surface. I sat close to her, and she put her hands on her thighs after patting the fountain for good measure."
@@ -13783,7 +13783,7 @@ label AE060:
     AE "I'll escort you out, Hotsure-sa-, Keisuke."
     MC "Yep, yep."
     "We made our way past Yureno-san, who's massive hips proved to be a bit of trouble to get past at first; eventually leading us to the outside as we shut the door."
-    
+
     scene Dorm Exterior with fade
     play music Hallway
     show AE angry with dissolve
@@ -13825,10 +13825,10 @@ label AE061:
     "The student council made their way out of the library door one by one, some muttering about the day's agenda, some about meeting up for lunch, while most simply kept to themselves. The last member, however, held the door open for me to enter."
     MC "Thanks man."
     CMM "Mhm. Better you than me dealing with all that paperwork. God knows why she was so insistent on working on it by herself."
-    
+
     scene Library with fade
     "Walking into the library, I made my way to the office to begin the day's work. Looking through the window, I waved at Shiori, sitting at the table. The pinkness in her face seemed to deepen, and she gave a sheepish smile as I walked in."
-    
+
     scene Office with fade
     MC "Hey! How's it going?"
     show AE embarrassed with dissolve
@@ -13883,7 +13883,7 @@ label AE061:
     "Shiori sat up, and as she did, a faint squeak escaped her lips, barely soft enough for me to miss. Grabbing the pile of folders closest to me, and reading that they were filed A-I, I went to the door facing side of the drawers while Shiori's took hers and went to the other."
     scene black with fade
     "The afternoon went through mostly without incident. As much as I was hoping to at least talk with her, our interactions followed a pattern: I say something, she responds plainly and without interest."
-    
+
     scene Office with fade
     show AE neutral with dissolve
     MCT "Man, I figured she'd been opening up a bit more, but..."
@@ -14066,7 +14066,7 @@ label AE061:
         show AE surprised
         AE "Ah! Takarada-san brought in some pocket tissues earlier. Here."
         MC "Mm, thanks."
-        
+
     scene black with fade
     "The two of us on our knees, wiping up my blood: bit of a far cry from a few minutes ago."
     scene Office with fade
@@ -14493,7 +14493,7 @@ label AE063:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
-    
+
 label AE101:
     scene Gym with fade
     show FMG neutral
@@ -14573,7 +14573,7 @@ label AE101:
     "Akira-san tried to jam the pieces back together as Shiori-san rubbed her eyes with her fingers."
     MCT "Why do I feel like... this isn't the last time I'll see these two go at it?"
     jump daymenu
-    
+
 label AE102:
     scene Hallway with fade
     "And so, we have reached the end of school for the day. I was going to just head back to my dorm room, however I saw Shiori whispered something to Akira before both of them left the room. I was just going to leave it alone, but unfortunately there still outside the classroom for all to hear."
@@ -14861,8 +14861,8 @@ label AE007b_c1_after:
 #S neutral: And yet she's perfect for her position, without anyone being any the wiser.
 #K: Eh? How...so?
 #S neutral: Doggedly loyal, rightfully forthcoming with *all* information whether it be pertinent or not, a fantastic note taker, charismatic, and hardworking. As my assistant, she carries out my will to a T.
-#S neutral: Though you may not assume much of her, all that's needed to bring someone to their full potential is a bit of guidance. 
-#S neutral: Every individual has value, regardless of their... 
+#S neutral: Though you may not assume much of her, all that's needed to bring someone to their full potential is a bit of guidance.
+#S neutral: Every individual has value, regardless of their...
 #S annoyed:... Perceived deficiencies.
 ##Running her finger across the bottom of the hall window frame, she winced for a moment as she brought her finger in front of her face.#
 #S annoyed: Uch...
@@ -14881,7 +14881,7 @@ label AE007b_c1_after:
 #K:  I never told you about my sister.
 #S neutral: It's in your household records.
 #K: Wait, you have my household records?!
-#S neutral: Indeed. Your Koseki, along with your transcripts, medical history, and an academic overview provided by your former school. 
+#S neutral: Indeed. Your Koseki, along with your transcripts, medical history, and an academic overview provided by your former school.
 #K: T-That's a little... I'm not sure if I'm comfortable with that.
 #S neutral: The information provided to me and the administrative staff is important; it helps us better adapt to meet your needs.
 #K: I mean... I guess, but... that's still a little bit creepy.
@@ -14936,7 +14936,7 @@ label AE008b:
     "I stepped away as I made my way back into the room to head out for class."
     show RM angry
     RM "Oh cool, and now there's hair on my toothbrush. Great."
-    
+
     scene Hallway with fade
     "I walked alone to class as the rays of the early morning sun bathed the hallways in bright light. While it wasn't often that I got up this early before class, I figured I'd be able to skip the hustle and bustle of my normal morning walk."
     "However, from the sound of it..."
