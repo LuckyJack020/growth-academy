@@ -3429,7 +3429,7 @@ label AE020_c1_1:
     show AE sad-2
     AE "Well..."
     show AE happy
-    AE "Thank you, Hotsure-san. I'll take what you said to heart"
+    AE "Thank you, Hotsure-san. I'll take what you said to heart."
     MC "Right... The 'anyone you want thing' not the, um-"
     show AE neutral
     AE "Oh! Yes, yes, right."
@@ -4585,7 +4585,7 @@ label AE025:
         RM "..."
         MC "...What?"
         show RM happy
-        RM "N-nothing. Go get er."
+        RM "N-nothing. Go get 'er."
         MC "...Again. Thanks."
         "I walked out the door and headed over to the sakura tree."
     elif getFlag("AE024_confusion"):
@@ -14490,9 +14490,251 @@ label AE062:
     jump daymenu
 
 label AE063:
-    "This marks the current end of Shiori's route."
-    "Her story will be continued in a later release. Until then, feel free to explore other routes."
-    jump daymenu_noadvance
+    $setProgress("AE", "AE064")
+    scene Dorm Interior with fade
+    play music Schoolday
+    #*Faucet SFX*
+    MCT "..."
+    "I stared listlessly at the water dripping out of the faucet as I let my hair dry from the shower. Despite cutting it off and disposing of it a bit earlier than usual, it had already grown back to the nape of my neck."
+    "I ran my hair through my hands, ensuring that no new knots had formed as it grew in during my shower."
+    MC "Ow-!"
+    "Apparently, I’d spent a bit longer washing than usual, seeing that the drier underside of my hair had grown well into the wetter outer locks. Taking up my brush, I ran it through the problem areas a few times; admittedly having to tear clumps here and there."
+    MCT "Ghnn... Does this really gotta happen every morning?"
+    "Once I finally got everything straightened out, I placed the brush in the cabinet and gave myself a once over in the mirror."
+    MCT "I wonder why it was that Shiori decided to go ahead and wear that dress out to the town? Was it just impulse? And why was she so lax about curfew this time around?"
+    MCT "... Eh. It’s probably nothing."
+    "Shutting off the faucet, I put on my uniform and headed out to the dorm. The minute I opened the door, the scent of scrambled egg hit my nose. I looked over into the kitchenette, where Daichi had already dressed himself and began to cook breakfast in his apron."
+    MC "*Snff*... Is that omelette rice?"
+    show RM neutral with dissolve
+    RM "Yeah."
+    MC "Some of that’s for me, right?"
+    show RM angry
+    RM "Uhh, you gonna lay another egg, my guy?"
+    MC "Only had one left?"
+    show RM neutral
+    RM "Yep. Polished off the last of the rice."
+    MC "Ahh."
+    "Grabbing a fruit bar from the cabinet, I walked over and sat down at the table as I began to eat, looking through the contents of my bag to make sure I had everything ready."
+    "However, as I looked through, I couldn’t really keep my mind off some of the worries I’d been having recently. Of course there’s the usual concerns about the nature of my growth, worries about why I’m here, but now they were compounded by a new thought nagging me."
+    "Slapping down his apron on to the ground and then tossing the steaming bowl onto the table with a loud clink, Daichi stabbed his chopsticks down into his rice as he grabbed the box of orange juice and poured his drink."
+    MC "...Um..."
+    RM "What?"
+    "I glanced down at the rice, and he pulled the bowl closer to him, grabbing the sticks."
+    show RM angry
+    RM "Oh, get over yourself, they’re eating utensils."
+    MC "Hey man, your funeral. Literally."
+    RM "Fuck that, when I’m dead, I’m getting shot out of a spaceship into the sun."
+    MC "I’m just sayin’, bad luck."
+    show RM neutral
+    RM "I don’t need luck, I have omelette rice."
+    "Taking his chopsticks in hand once more, he brought his bowl up to his face as he ate. I smirked for a bit at this, before taking a look at my phone. Opening up my photos app, I began to scroll through and mull through old memories from my high school days."
+    MCT "I gotta admit, he has a pretty good amount of confidence when he talks. Kind of even a bit of nonchalance."
+    MCT "Saying that Diachi was carefree couldn’t be further from the truth, but…"
+    MC "Do you ever think about how your friends or peers would think of you, now that you’re at Seichou?"
+    "Daichi tipped his glass of orange juice up until the glass was polished off. Placing it down on the table, he took his chopsticks up once again and continued to eat."
+    RM "Dunno, don’t care."
+    if getAffection("RM") > 5:
+        MC "How is it so easy for you to just say you don’t care about what others think?"
+        RM "Because I don’t. Why should I?"
+        MC "Well, you gotta admit, a lot of the shit you do is pretty out there. Most people don’t buy spy gear off the dark web."
+        RM "Mhm."
+        MC "Or crawl around in vents."
+        RM "Yeah?"
+        MC "...That doesn’t make you worry about how people might think of you?"
+        RM "Is Yuki safe?"
+        MC "Huh?"
+        show RM angry
+        RM "Is my sister {i}safe{/i}? Do my methods {i}work{/i}?"
+        show RM neutral
+        RM "If they do, then why care about if other people think I’m weird?"
+        RM "When you got someone you care about, what other people might think of you for it is absolutely irrelevant."
+        show RM angry
+        RM "Don’t let what others might think of you keep you from doing your thing. Especially if it’s for someone you love."
+        MC "..."
+        "I don’t know what it was, but Daichi’s words really hit me hard. I couldn’t help but feel that, in a way, he was speaking to me indirectly; he knew what I was going through."
+        MC "Yeah."
+        MC "Thanks, man."
+    else:
+        MC "Eh… fair enough."
+        MCT "Wasn’t exactly sure what I was expecting him to say. He doesn’t really seem the type to care about… basic social needs."
+        "After polishing off the rest of my “Breakfast”, I grabbed my bag and headed out of the door for class."
+
+    scene Classroom with fade
+    show HR neutral with dissolve
+    HR "Hotsure-san."
+    MC "Hm?"
+    "I looked up from my empty notebook, raising my head from my hand as I took a quick inventory around the room as everyone began to leave. Realizing that I’d completely blanked out and missed the bow, I quickly stood up and bowed to Tashi-sensei."
+    MC "Ah- Sorry, sorry, sir."
+    HR "Feh, don’t worry about it. Shiori left a bit ago anyways."
+    MC "Eh?"
+    "Looking back, I checked to confirm, and sure enough, Shiori was gone from her seat; everyone else was just now starting to leave the room themselves."
+    MC "Ah, yeah, looks like it."
+    HR "Past few days she’s been leaving pretty quick after class ends, eh? Girl must be swamped."
+    MC "No kidding."
+    HR "Anyways, you and Shiori have a good dinner last night?"
+    MC "Yeah, we-"
+    MC "...Uh... beg your pardon?"
+    HR "You and Honoka were out with Shiori at dinner, weren’t you?"
+    MC "Ah. I’m guessing she told you?"
+    HR "Did you… {i}not{/i} see me sitting near the window seat?"
+    MC "Wait, r-really?!"
+    HR "I waved at you and everything."
+    HR "Anyways, no, she didn’t tell me; but for a good while I didn’t think that was her. If not for the dress, then the fact that she was out that late."
+    "I wasn’t sure what to say, so I shrunk back a bit in an attempt to avoid his gaze, rubbing my arm silently in the hopes he’d take it as a sign of apology."
+    HR "Oy, c’mon. I’m not going to tell anyone you were out. You’re adults, I think the whole curfew thing is stupid."
+    HR "Anyways, if you could tell Shiori that for me, would you? I figure it’d be a weight off her shoulders."
+    MC "Do you think she’d take it badly knowing you… well, saw her?"
+    HR "No, she knew I was there. We locked eyes and everything."
+    MC "Wait, Shiori {i}knew{/i} you were there?"
+    HR "And didn’t say a peep, I’m guessing?"
+    MC "Not to me, no."
+    HR "Hm."
+    MC "Did she… seem alright to you, the other night?"
+    HR "... As far as I can tell, yeah. Why?"
+    "Unsure of whether or not he was being sincere, I instead merely nodded in acknowledgement."
+    MC "Nothing, sir."
+    HR "Well then, that’s all I got. See you around."
+    "After giving a respectful bow, I turned around and made my way into the halls to look for Shiori."
+
+    scene Hallway with fade
+    "I went looking around the halls for a while on the first floor, but not finding her, as well as at risk of getting lost again, I went to the second floor to continue looking. Sure enough, I came across her noticeable figure fairly quickly."
+    MC "Oy! Shiori!"
+    show AE angry with dissolve
+    AE "Yes, yes, what-?"
+    show AE surprised
+    AE "Oh! Keisuke, I… hey!"
+    "Shiori brushed a stray hair from the front of her face, as she seemed to calm down from what appeared to be a bit of a rush."
+    MC "Are you busy or-?"
+    show AE happy
+    AE "No, no, I’m perfectly fine. I was just headed back from the mailroom."
+    show AE neutral
+    AE "Sorry for heading out on you without warning earlier."
+    MC "Baah, it’s alright. I just had to talk to sensei for a bit, no worries."
+    MC "You free for the day, or-?"
+    show AE happy
+    AE "Of course."
+    "Shiori trotted over and placed my hand in hers. Before I could so much as speak, I was captivated by her smile, and in an instant, it was as though my worries had melted away."
+    MC "Alright, well, what do you want to do today?"
+    show AE neutral
+    AE "Hmm… maybe go and play some Warblade?"
+    MC "O-Oy! C’mon, not again!"
+    show AE happy
+    AE "Aww, why not!"
+    "We began to walk side by side, Shiori’s wide hips bumping in to mine every few moments. We’d spent bit of time walking and talking, but eventually we found a nice place to rest in the hall next to the stairway."
+    "Spending some time together talking about what all we could do today, the changing of seasons, and a plethora of other things, a student walked by, eating a bun from a wrapper. For a  moment, Shiori’s attention was drawn to him, and shortly after took the wrapper from his bun and dropped it on the ground."
+    show AE surprised
+    stop music
+    AE "Ah! Excuse me, sir?"
+    "Paying no mind to Shiori whatsoever, he simply kept walking up the stairs."
+    show AE sad
+    AE "..."
+    "I looked behind my shoulder to glare in his direction, but he clearly seemed to pay no mind as he rounded the corner."
+    MCT "Tshh. Prick."
+    MC "Geez, what’s his problem?"
+    show AE neutral
+    AE "I’ll just pick it up myself. No big deal."
+    MC "Well, maybe he just didn’t hear you or something."
+    AE "..."
+    show AE sad
+    play music Rain
+    AE "No, that’s not it."
+    MC "Hm? What do you mean?"
+    "Shiori seemed to sigh as she bent over and picked up the empty wrapper, the momentum of her gigantic rump causing her to stagger a bit before she walked over to the rubbish bin."
+    AE "Admittedly… for a while, now, I’ve been having that happen more and more."
+    MC "Is something going on?"
+    "Fiddling with a lock of her hair, she looked out of the window as I went to move in by her side."
+    AE "Work has been, well, rough; for lack of a better word. I’ve never experienced anything like this before."
+    AE "I’ve noticed that my words seem to cary less weight than before… maybe because I myself am not."
+    MC "So… about last night…"
+    show AE surprised
+    AE "Hm?"
+    MC "Um…"
+    MC "Were you… okay?"
+    AE "Okay?"
+    MC "Yeah, like…"
+    "My mind felt completely scrambled trying to string together how I wanted to word my question, or even what I wanted to ask."
+    MC "You seemed kind of out of it a bit yesterday, you know? Did you feel comfortable?"
+    show AE happy
+    AE "The other night was great! I had fun with you and Inoue-san."
+    MC "Yeah? So, you didn’t feel nervous or anything?"
+    show AE embarrassed
+    AE "Nervous? Of course I was nervous! That outfit makes me look like an absolute hussie."
+    show AE happy
+    AE "But it was new! It was just so {i}out there{/i}, so… different."
+    show AE neutral
+    AE "I dunno. It’s just… weird trying out all of these new things. My curiosity has just been getting the better of me recently."
+    AE "What about you? Are you okay? It was a bit out of the blue to ask me something like that."
+    if getAffection("RM") > 5:
+        MC "Actually… I’m feeling pretty good."
+        show AE happy
+        AE "Yeah, you definitely seem a lot more upbeat today."
+        MC "Oh really?"
+        AE "Yeah, you just seem a lot more lively, is all."
+        MC "Heh. Alright, nice."
+        "I took a breath of the crisp air outside as I thought about my conversation this morning. An aura of calm washed over me, as I began to rub Shiori’s back."
+        MC "Shiori?"
+        show AE neutral
+        AE "Hm?"
+        MC "I want you to know… I’ll always support you."
+        show AE surprised
+        AE "Wuh-"
+        "Shiori seemed somewhat taken aback by this, as though it’d come out of left field entirely. Puzzled, she looked up at me with a look of bewilderment as she looked me in the eye."
+        AE "W-Where did this come from all of a sudden?"
+        MC "I’ve just been thinking a lot recently, y’know. I… I dunno. I just truly, honestly, mean that."
+        "Shiori eyed me up and down, as though for a moment her more carefree tendencies as of late had completely dropped, and she could look at me only with the eyes I’d remembered from when we first met."
+        show AE sad
+        AE "Regardless, I have no intention to allow my personal failings and… disfigurement hold you back. If you were to ever decide to abandon-"
+        MC "Never."
+        show AE surprised
+        AE "..."
+        $setAffection("AE", 2)
+        show AE happy
+        AE "Thank you."
+        MC "What matters now, more than ever, is that I envision myself by your side."
+    else:
+        MC "I dunno. Just all that talk from the other day’s just been messin with me."
+        MC "I’ve been thinking about life before I came to Seichou."
+        "Shiori seemed to become a bit clammy at my statement, her presence becoming much more distant as she remained silent for a moment."
+        show AE surprised
+        AE "Oh?"
+        MC "Yeah. Just about, y’know… friends, family, idle memories and the like…"
+        AE "...What they’d think of me?"
+        "Looking over, I could see that the line of thinking had left her a bit dejected as she looked down at the ground below."
+        MC "No! No, nothing like that."
+        show AE sad
+        AE "It’s best we be realistic, Keisuke. It’s fine to think about those sorts of things."
+        AE "We’re going to face a lot of… hostility once we leave this island."
+        MC "M-Mm…"
+        MC "But still… even if I were worried about how my friends and stuff may see me after all this… I’m absolutely dedicated to seeing *us* through."
+    MC "We shouldn’t let worries about our past mess with that."
+    show AE sad
+    AE "..."
+    "Shiori stared silently out the window as she bit her lower lip, nodding in agreement as she did."
+    show AE embarrassed
+    AE "You’re right… yeah, yeah you’re right."
+    show AE happy
+    AE "Thank you, I needed that."
+    show AE sad
+    AE "And… you’re sure you’re not… disgusted by me, even a bit? What of your friends?"
+    MC "Pssh. Not at {i}all{/i}. Trust me, I’ve never been afraid of a girl with a bit more junk in the trunk; it’s a rarity here, after all, eh?"
+    show AE angry
+    AE "Tch."
+    show AE neutral
+    AE "Well…"
+    show AE embarrassed
+    AE "..."
+    "Biting her lower lip, she motioned me closer to her after taking a quick look around."
+    show AE unique
+    AE "If you’re fine with *this*, then I suppose I shouldn’t worry too much either."
+    "Turning around, she flipped up her skirt and did a small bow to reveal her booty, her eyes laced with a seductive tinge as she winked to me."
+    MC "Eheheh, you know it."
+    "As I placed a hand on her backside, she dropped her skirt down and began to walk forward, a pep in her step and a slight, yet sensuous swing to her hips as she did. I followed alongside her, ready to continue our day together."
+    jump daymenu
+
+#label AE063:
+#    "This marks the current end of Shiori's route."
+#    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+#    jump daymenu_noadvance
 
 label AE101:
     scene Gym with fade

@@ -138,7 +138,7 @@ label BE001_after:
     BE "I mean, you, me, and the roof! The original power trio. How many times do you think we snuck up to the roof when we were younger? 100? 200?"
     MC "It was probably a few dozen times if that."
     show BE sad
-    BE "Eh, you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."    
+    BE "Eh, you're exaggerating. Still, it's a great wave of nostalgia being up here with you Kei-chan."
     BE "You know, this academy's definitely a weird place, and we're gonna go through some strange stuff by the sound of it. But, I'm really glad you're here, Kei-chan. Makes things a bit easier."
     MC "Please, Honoka, when have you ever backed down from a challenge, anyway?"
     show BE happy
@@ -150,7 +150,7 @@ label BE001_after:
     extend " Her face was bright; she was no doubt thinking of all the new possibilities this academy would bring. I had to admit, I was a bit excited to see what was going to happen as well."
     "But at the moment, my focus was on Honoka. More specifically, the way her chest pushed against the chain link fence, making it look like she was wearing chainmail armor over her school uniform."
     jump daymenu
-    
+
 label BE002:
     $setProgress("BE", "BE003")
     scene Campus Center with fade
@@ -225,7 +225,7 @@ label BE002:
     BE "I know. That's because I'm awesome."
     "Honoka smiled and put her fists on her hips in haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding. We stood there chuckling for a bit more before Honoka noticed the time and decided to get going. I nodded and waved goodbye, sticking my hands in my pockets before heading off myself."
     jump daymenu
-    
+
 label BE003:
     $setProgress("BE", "BE004")
     scene Campus Center with fade
@@ -360,7 +360,7 @@ label BE003_c3:
     MC "See ya, Honoka!"
     "I gave a nod to Honoka as she ran to the soccer field, then leaned against the vending machine as I continued to drink my beverage. It was too hot today."
     jump daymenu
-    
+
 label BE004:
     $setTimeFlag("testday")
     $setProgress("BE", "BE007")
@@ -410,7 +410,7 @@ label BE004:
     extend " I sat there for a while and continued watching Honoka and the other students kick the ball around, run drills, and do some exercises. Seemed like good fun, and I was tempted to see if I could just join in."
     "But, as I looked at the sweat running down my shirt, I remembered that it was way too hot today. Maybe next time."
     jump daymenu
-    
+
 label BE005_old:
     #This scene needs to be rewritten or something, it doesn't make sense as an 005
     scene Hallway with fade
@@ -455,7 +455,7 @@ label BE005_old:
             jump BE005_c1
         "How do they feel? Your boobs, I mean.":
             jump BE005_c2
-            
+
 label BE005_c1_old:
     show BE surprised
     BE "Gee, honestly, I'm not really sure. It's not like they just shot out like bazookas one day, you know?"
@@ -507,7 +507,7 @@ label BE005_after_old:
     show BE happy
     BE "Bye Kei-chan, was nice running into you!"
     jump daymenu
-    
+
 label BE005:
     $setTimeFlag("aftertest")
     scene Classroom with fade
@@ -560,7 +560,7 @@ label BE005_c1:
     show BE angry
     BE "Oh, okay. Understood."
     jump daymenu
-    
+
 label BE005_c2:
     BE "Well, it couldn't hurt to try something out, right? Plus you've got the benefit of it growing super fast, so you could try out a new hairstyle, say it sucks, then chop it all off."
     MC "That's a good point."
@@ -713,7 +713,7 @@ label BE007_after:
     BE "Are you kidding? Two might not be enough, I'll make the trip myself!"
     "I chuckled as Honoka ran over to the vending machine to grab her delicious snack cakes, making a mental note to myself not to get between her and a box of them if she ever got hungry."
     jump daymenu
-    
+
 label BE008:
     $setProgress("BE", "BE009")
     scene Dorm Interior with fade
@@ -724,7 +724,7 @@ label BE008:
     show BE happy at center with dissolve
     BE "Oh hi Kei-chan! Good, you're hanging out here, can I come in?"
     MC "Oh!"
-    "Seeing Honoka outside of my door was definitely something I didn't expect. But it was far from unwanted. Besides, it was nice to see her head-on without having her run into me like she often did." 
+    "Seeing Honoka outside of my door was definitely something I didn't expect. But it was far from unwanted. Besides, it was nice to see her head-on without having her run into me like she often did."
     MC "Yeah, sure, come on in. There's not a rule about having girls in my room is there?"
     show BE neutral
     BE "I don't think so. I can't see why. Unless you were planning something naughty, in which case I am {i}not{/i} prepared at all."
@@ -760,7 +760,7 @@ label BE008:
             jump BE008_c2
         "Error. Does not compute.":
             jump BE008_c3
-            
+
 label BE008_c1:
     MC "So what you're saying is, you're not a cyborg."
     show BE sad
@@ -785,7 +785,7 @@ label BE008_c1:
     MC "No, that's not it at all. Let's just, let's get back to reading manga."
     $setAffection("BE", 1)
     jump BE008_after
-            
+
 label BE008_c2:
     MC "Then I guess I need to check you for mechanical parts..."
     show BE surprised
@@ -842,7 +842,7 @@ label BE008_c2:
     MC "Heh, like you're one to talk..."
     $setAffection("BE", 2)
     jump BE008_after
-            
+
 label BE008_c3:
     MC "Does not compute."
     show BE neutral
@@ -862,7 +862,7 @@ label BE008_c3:
 label BE008_after:
     "Honoka and I spent the rest of the afternoon together, just hanging out and catching up on manga. It was nice, something I hadn't really had a chance to do with a friend in a long time. Daichi was not exactly the type of guy who would just sit and read unless it was a bunch of conspiracy theories. Honoka was much, much more fun."
     jump daymenu
-    
+
 label BE009:
     $setTimeFlag("size2")
     $setProgress("BE", "BE011")
@@ -1139,7 +1139,7 @@ label BE010_c3:
     "Honoka pulled back her balloons and wordlessly left my room, leaving me utterly confused. She only came in to show off her breasts? It just didn't make sense. Maybe she wasn't feeling well. Hopefully she went off to her room to relax for a bit, it seemed like she needed it."
     $setAffection("BE", -1)
     jump daymenu
-    
+
 label BE011:
     $setProgress("BE", "BE012")
     scene Track with fade
@@ -1221,7 +1221,7 @@ label BE011_c2:
     hide BE with dissolve
     BE "I tried not to look back at the bleachers as I left the soccer field. Honoka was never the type to hold grudges, so I didn't think this would come back to bite me later. But I still felt like an idiot saying what I said..."
     jump daymenu
-    
+
 label BE011_c3:
     MC "Oh, makes sense. Hope you find a new club soon."
     show BE happy
@@ -1358,7 +1358,7 @@ label BE012:
         "Leave":
             "We left the arcade together."
             jump daymenu
-    
+
 label BE013:
     scene Arcade with fade
     play music Busy
@@ -1432,7 +1432,7 @@ label BE013:
     "But it didn't matter. She ended up destroying me with 12 points to 0. As she cheered and mocked I didn't have the heart to tell her what an unfair advantage she had."
     "With her torso bent over, her boobs completely blocked her goal."
     jump daymenu
-    
+
 label BE014:
     $setProgress("BE", "BE015")
     play music Peaceful
@@ -2033,7 +2033,7 @@ label BE018_c1_2:
     PRG "*whimper*"
     BE "Oh, wow. Heh, hands getting a little zany there. Where was I?"
     jump BE018_c1_after
-    
+
 label BE018_c1_after:
     play music Schoolday
     show BE happy
@@ -2177,7 +2177,7 @@ label BE019:
             jump BE019_c1_1
         "Yes":
             jump BE019_c1_2
-            
+
 label BE019_c1_1:
     MC "Skip day? No, I don't know what you're talking about."
     show BE sad
@@ -2302,7 +2302,7 @@ label BE019_c1_after:
         BE "Oh, better clean up. Gotta get back to class soon!"
         "Honoka hurriedly grabbed her trash to throw it away, and I soon followed after her, getting my own garbage to toss away as well. Skip day might be pretty fun, but, I had to imagine if Matsumoto-san found out that she definitely would not approve. I guess she just wouldn't find out, in that case!"
     jump daymenu
-    
+
 label BE020:
     $setProgress("BE", "BE021")
     scene Campus Center with fade
@@ -4281,7 +4281,7 @@ label BE026_c1_1:
 label BE026_c2_1:
     MC "Let's just head to the nurse's office, and get a bandage for it."
     "Honoka nodded. It sucked to put our bug-hunt to a short stop, but better to make sure Honoka didn't get an infection or anything."
-    
+
     scene Nurse Office with fade
     "We were surprised when the nurse was actually there to help Honoka."
     Nurse "Hello. How can I help you?"
@@ -4509,7 +4509,7 @@ label BE027:
     BE "That's all I need. Let's go now, I found this neat-looking store on the Internet that had a good variety of stuff."
     "I checked my pockets, making sure I had my wallet and ID on me. Seeing no reason I couldn't leave right then and there, I followed Honoka to the bus stop so we could travel into town."
     "The short ride there was uneventful. Honoka and I sat next to each other on the next bus we could grab, and made our way to the stop nearest her chosen shop."
-    
+
     scene Town with fade
     MC "'Clothes and Shoes'. That's... is that really the name of the shop?"
     show BE neutral with dissolve
@@ -4601,7 +4601,7 @@ label BE027_c1_after:
     show BE neutral
     BE "So, what do ya think? Which one should I try on?"
     jump BE027_c2
-    
+
 label BE027_c2:
     menu:
         "The jean shorts and jacket.": #BE_Tomboy +1
@@ -4612,7 +4612,7 @@ label BE027_c2:
             pass
         "The sundress.": # BE_Feminine +1
             jump BE027_c2_3
-    
+
 label BE027_c2_1:
     $setVar("BETomboy", getVar("BETomboy") + 1)
     MC "That first one seemed pretty cool, with the little half-jacket thing. How about that one?"
@@ -5268,7 +5268,7 @@ label BE030:
         jump BE030_tomboy
     else:
         jump BE030_neutral
-        
+
 label BE030_feminine:
     BE "Gorgeous, too."
     MC "Yeah..."
@@ -5410,7 +5410,7 @@ label BE031:
     stop music
     "Honoka peered her head outside her door and looked down the hallway, twice on both sides, before grabbing my hand and yanking me inside."
     #[Effect- Screen Shake (1 time, low intensity)]
-    
+
     scene Dorm BE with hpunch
     show BE surprised
     #[Transition- wipe][(S)Or other  fast  transition, I'm not sure what options we have?]
@@ -5621,7 +5621,7 @@ label BE032:
     AE "Regardless, the two of you should act responsibly."
     AE "If not, I’ll have your hide."
     hide AE with dissolve
-    "With that, Shiori turned around and walked away, her rump shaking to and fro as she did."  
+    "With that, Shiori turned around and walked away, her rump shaking to and fro as she did."
     show BE neutral at center with dissolve
     BE "Ahh, I see. She might make good on that threat. Clearly she's been taking everyone's butts and simply adding them to her own."
     "I couldn't help but snicker at that."

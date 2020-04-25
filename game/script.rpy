@@ -1,11 +1,13 @@
-﻿init python:
+default persistent.enable_notifications = True
+
+init python:
     config.use_cpickle = False
     style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
     style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
     style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
-    
+
     style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
-    
+
     eventlibrary = {}
     datelibrary = {}
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
@@ -45,14 +47,11 @@
     debugenabled = True
     debuginput = ""
     debugmappoint = False
-    globalsize = 1
-    prgsize = 1
-    activenotifications = 0
-    
+
     import math
 
     class Shaker(object):       #This is Python code to implement a feature to shake the screen around at random, not just in one direction like with the punch commands
-    
+
         anchors = {
             'top' : 0.0,
             'center' : 0.5,
@@ -60,7 +59,7 @@
             'left' : 0.0,
             'right' : 1.0,
             }
-    
+
         def __init__(self, start, child, dist):
             if start is None:
                 start = child.get_placement()
@@ -68,10 +67,10 @@
             self.start = [ self.anchors.get(i, i) for i in start ]  # central position
             self.dist = dist    # maximum distance, in pixels, from the starting point
             self.child = child
-            
+
         def __call__(self, t, sizes):
             # Float to integer... turns floating point numbers to
-            # integers.                
+            # integers.
             def fti(x, r):
                 if x is None:
                     x = 0
@@ -84,16 +83,16 @@
 
             xpos = xpos - xanchor
             ypos = ypos - yanchor
-            
+
             nx = xpos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
             ny = ypos + (1.0-t) * self.dist * (renpy.random.random()*2-1)
 
             return (int(nx), int(ny), 0, 0)
-        
+
     def _Shake(start, time, child=None, dist=100.0, **properties):
 
         move = Shaker(start, child, dist=dist)
-        
+
         return renpy.display.layout.Motion(move,
                         time,
                         child,
@@ -105,7 +104,7 @@
     #Condition enums/stuff
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK = range(10)
-    
+
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
     #FLAG: arg1 = (string) flag name, true if flag has been raised
@@ -115,24 +114,24 @@
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     #ROUTELOCK: arg1 = (string) character code, true if you're on that route (or, if empty string, true if not on any route)
     #NOROUTELOCK: arg1 = (string) character code, true if you're NOT on that route (or, if empty string, true if on any route)
-    
+
     class EventTypeEnum:
         CORE, OPTIONAL, OPTIONALCORE = range(3)
 
     #CORE: Event is in someone's core route. Cannot be selected randomly.
     #OPTIONAL: Event is an optional event. Can be selected randomly.
     #OPTIONALCORE: Event is selected like an optional event, but is displayed like a core event in the UI.
-    
+
     class PrioEnum:
         NONE, GIRL, ALL = range(3)
 
     #NONE: Not a priority. Other events available.
     #GIRL: Priority. Other events featuring the first girls in the girllist are not available.
     #ALL: Priority. Other events not available, no matter who's in them.
-    
+
     class ConditionEqualityEnum:
         EQUALS, NOTEQUALS, GREATERTHAN, LESSTHAN, GREATERTHANEQUALS, LESSTHANEQUALS = range(6)
-    
+
     def checkCriteria(clist):
         criteriavalid = True
         for c in clist:
@@ -218,12 +217,12 @@
                 criteriavalid = False
                 break
         return criteriavalid
-            
+
     def getEventForGirl(girl):
         #rewrite to return selected core event and list of optional events
         pool = []
         priority = False #true = girl priority
-        
+
         #Populate optional event pool (to find priority stuff)
         for k, v in eventlibrary.iteritems():
             badFlag = False
@@ -248,7 +247,7 @@
                 priority = True
                 pool = []
             pool.append(k)
-            
+
         #Find core event, if available
         if girl in girllist:
             if isRouteEnabled(girl):
@@ -259,17 +258,17 @@
                     if f in timeflags:
                         setProgress(girl, s["next"])
                         return getEventForGirl(girl)
-                        
+
                 #check for validity of next event (if not stale)
                 criteriavalid = checkCriteria(s["conditions"])
                 if s["priority"] == PrioEnum.GIRL or not priority:
                     if criteriavalid:
                         return routeprogress[girl], pool
-        
+
         #if we found a priority optional event, and the core event isn't priority, always offer that optional event (and no other optional events)
         if priority:
             return renpy.random.choice(pool), []
-        
+
         #If there's no core event available (either due to conditions or because it's not a main girl), just return the pool
         return None, pool
 
@@ -298,10 +297,10 @@
             return renpy.random.sample(pool, 6)
         else:
             return pool
-    
+
     def rollEvents():
         prefgirl = getHighestAffection()
-        
+
         eventchoices = []
         opteventpool = []
         allPriority = getAllPriorityEvents()
@@ -327,10 +326,10 @@
             return eventchoices
         else: #AllPriority event(s) exist, use the returned list
             return allPriority
-            
+
         #to implement:
         #route lock
-    
+
     def minorEventsEnabled():
         for t in minorDisableTimes:
             if t[0] in timeflags and not t[1] in timeflags:
@@ -347,7 +346,7 @@
         else:
             img = "Graphics/ui/notification/" + girl + "-down.png"
         showNotification(img)
-        
+
     def getAffection(girl):
         if not girl in girllist and not girl == "RM":
             renpy.log("ERROR: Could not fetch affection: Girl %s does not exist" % girl)
@@ -366,12 +365,13 @@
                 highestgirl = g
         return highestgirl
 
-    ##Checks which of the girls has the second highest affection. Doesn't account for ties.
+    ##Checks which of the girls has the highest affection, excluding any girl (or girls, if given a list) given in the argument. Ties go to earliest girl in girllist.
     def getSecondHighest(ignoreGirl):
+        ignorelist = [].append(ignoreGirl)
         highestAffection = 0
         secondGirl = ""
         for girl in girllist:
-            if girl == ignoreGirl:
+            if girl in ignorelist:
                 continue
 
             affection = getAffection(girl)
@@ -379,10 +379,10 @@
                 highestAffection = affection
                 secondGirl = girl
         return secondGirl
-        
+
     def isEventCleared(event):
         return event in clearedevents
-        
+
     def setFlag(flag, state=True):
         if state:
             if flag in flags:
@@ -394,37 +394,37 @@
                 flags.remove(flag)
             else:
                 return
-            
+
     def getFlag(flag):
         return flag in flags
-    
+
     def setVar(id, val):
         vars[id] = val
-    
+
     def getVar(id):
         if id in vars.keys():
             return vars[id]
         else:
             return 0
-    
+
     def debugListFlags():
         l = ""
         for f in flags:
             l += f + ", "
         return l
-    
+
     def debugListTimeFlags():
         l = ""
         for f in timeflags:
             l += f + ", "
         return l
-        
+
     def debugListClearedEvents():
         l = ""
         for s in clearedevents:
             l += s + ", "
         return l
-        
+
     def setSkill(s, val):
         if s not in skills.keys():
             renpy.log("Unknown skill ID: %s" % s)
@@ -437,13 +437,13 @@
                 img = "Graphics/ui/notification/" + s + "-down.png"
             showNotification(img)
             return skills[s]
-    
+
     def setSkillDebug(s, val):
         if s not in skills.keys():
             renpy.log("Unknown skill ID: %s" % s)
         else:
             skills[s] += val
-    
+
     def setSizeDebug(mod):
         global globalsize, prgsize
         globalsize += mod
@@ -459,38 +459,40 @@
             return -1
         else:
             return skills[s]
-    
+
     def showNotification(img):
         global activenotifications
+        if not persistent.enable_notifications:
+            return
         if activenotifications <= 2:
             activenotifications += 1
             renpy.show_screen("notification" + str(activenotifications), img)
-    
+
     def setProgress(girl, event):
         routeprogress[girl] = event
-    
+
     def getProgress(girl):
         return routeprogress[girl]
 
     def disableRoute(girl):
         if girl in routeenabled:
             routeenabled[girl] = False
-            
+
     def enableRoute(girl):
         if girl in routeenabled:
             routeenabled[girl] = True
-    
+
     def lockRoute(girl):
         if girl in girllist:
             routelock = girl
-    
+
     def isRouteEnabled(girl):
         return routeenabled[girl] and (routelock == girl or routelock == "")
-        
+
     def setTimeFlag(flag):
         if flag not in timeflags:
             timeflags.append(flag)
-    
+
     def debugSetTimeFlag(flag, state):
         if state:
             if flag in timeflags:
@@ -502,7 +504,7 @@
                 timeflags.remove(flag)
             else:
                 return
-            
+
     def setSize(size):
         global globalsize
         global prgsize
@@ -510,13 +512,13 @@
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
-    
+
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
         global prgsize
         if 3 > prgsize:
             prgsize = 3
-    
+
     def updateSP(event):
         global spmax
         global spspent
@@ -532,14 +534,14 @@
     class MapLine(renpy.Displayable):
         def __init__(self, **kwargs):
             super(MapLine, self).__init__(**kwargs)
-                
+
         def render(self, width, height, st, at):
             render = renpy.Render(800, 600)
             if highlitevent == "" or highlitmenuchoice == -1:
                 return render
             starty = 40 + (highlitmenuchoice * 60) #highlitmenuchoice
             end = locationlist[eventlibrary[highlitevent]["location"]][1]
-            
+
             #blit icon image on end
             #if len(eventlibrary[highlitevent]["girls"]) == 0:
             #    img = im.FactorScale("Graphics/ui/icons/minor-icon.png", .25)
@@ -548,12 +550,12 @@
             #child_render = renpy.render(img, 25, 25, st, at)
             #iconend = (end[0] - 12, end[1] - 12)
             #render.blit(child_render, iconend)
-            
+
             #draw line
             canvas = render.canvas()
             canvas.line("#000", (260, starty), (360, starty), 2) #horizontal, first point should be based on choice selected, second point should be horizontal some distance out
             canvas.line("#000", (360, starty), end, 2) #diagonal, first point here should be second point horizontal, second point should be the map point
-            
+
             return render
 
 label start:
@@ -563,9 +565,10 @@ label start:
         prefgirl = ""
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
+        prgsize = 1
         flags = []
         vars = {}
-        eventchoices = []       
+        eventchoices = []
         activeevent = ""
         timeflags = []
         clearedevents = []
@@ -578,20 +581,21 @@ label start:
         routelock = ""
         spmax = 0
         spspent = 0
-        
+
+        activenotifications = 0
         debugmapname = ""
     jump global000
 
 label splashscreen:
     scene black
     with Pause(1)
-    
+
     show splash with dissolve
     with Pause(2)
-    
+
     scene black with dissolve
     with Pause(1)
-    
+
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.
@@ -600,7 +604,7 @@ screen choicetimer:
 
 screen daymenu:
     add "Graphics/ui/map/map_school.png"
-    
+
     #event choice sidebar
     grid 1 8:
         #xalign 0.1
@@ -641,7 +645,7 @@ screen daymenu:
                 xpos (locationlist[loc][1][0] - 12)
                 ypos (locationlist[loc][1][1] - 12)
                 imagebutton idle im.FactorScale("Graphics/ui/icons/BE-icon.png", .25) action [SetVariable("debugmapname", loc)]
-    
+
     add MapLine()
 
     #studying activities (costs skill point)
@@ -651,7 +655,7 @@ screen daymenu:
             imagebutton idle "Graphics/ui/map/athletics.png" xalign 0.05 yalign 0.95 action [SetVariable("activeevent", "Athletics"), Jump("train")]
             imagebutton idle "Graphics/ui/map/art.png" xalign 0.15 yalign 0.95 action [SetVariable("activeevent", "Art"), Jump("train")]
             imagebutton idle "Graphics/ui/map/academics.png" xalign 0.25 yalign 0.95 action [SetVariable("activeevent", "Academics"), Jump("train")]
-    
+
     #scene title
     if highlitevent != "":
         frame:
@@ -672,7 +676,7 @@ screen daymenu:
                 text("Core Event")
             else:
                 text("Optional Event")
-    
+
     if debugmappoint:
         frame:
             xalign 0.5
@@ -684,7 +688,7 @@ screen daymenu:
     if debugenabled and highlitevent == "":
         #textbutton "Profiles" xalign 0.1 yalign 0.9 action Jump("profileselect")
         textbutton "Enter Debug Menu" xalign 0.9 yalign 0.95 action Jump("debugmenu")
-        
+
 screen notification1(img):
     frame:
         xalign .9
@@ -692,7 +696,7 @@ screen notification1(img):
         add img
         at notif_transform
     timer 5.0 action [Hide("notification1"), SetVariable("activenotifications", activenotifications - 1)]
-    
+
 screen notification2(img):
     frame:
         xalign .8
@@ -700,43 +704,43 @@ screen notification2(img):
         add img
         at notif_transform
     timer 5.0 action [Hide("notification2"), SetVariable("activenotifications", activenotifications - 1)]
-    
+
 screen notification3(img):
     frame:
         xalign .7
         background None
         add img
         at notif_transform
-    timer 5.0 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]    
+    timer 5.0 action [Hide("notification3"), SetVariable("activenotifications", activenotifications - 1)]
 
 transform notif_transform:
     yalign -0.2
     linear 1.0 yalign 0.009
     pause 3
     linear 1.0 yalign -0.2
-    
+
 screen debugmenu:
     $debuginput = ""
     grid 3 15:
         xalign 0.5
         yalign 0.5
-        
+
         text "Input:"
         input value VariableInputValue("debuginput")
         text ""
-        
+
         textbutton "Start Event" action Jump("debugevent")
         textbutton "List Cleared Events" action Jump("debugclearedeventlist")
         textbutton "Map Points Toggle" action SetVariable("debugmappoint", not debugmappoint)
-        
+
         textbutton "List Flags" action Jump("debugflaglist")
         textbutton "Set Flag" action Jump("setflag")
         textbutton "Unset Flag" action Jump("unsetflag")
-        
+
         textbutton "List Timeflags" action Jump("debugtimeflaglist")
         textbutton "Set Timeflag" action Jump("settimeflag")
         textbutton "Unset Timeflag" action Jump("unsettimeflag")
-        
+
         text "Girl"
         text "Affection"
         text "Core Progress"
@@ -747,21 +751,21 @@ screen debugmenu:
             text str(affection["BE"])
             textbutton "+" action Function(setAffection, "BE", 1)
         text getProgress("BE")
-            
+
         text "GTS"
         hbox:
             textbutton "-" action Function(setAffection, "GTS", -1)
             text str(affection["GTS"])
             textbutton "+" action Function(setAffection, "GTS", 1)
         text getProgress("GTS")
-            
+
         text "AE"
         hbox:
             textbutton "-" action Function(setAffection, "AE", -1)
             text str(affection["AE"])
             textbutton "+" action Function(setAffection, "AE", 1)
         text getProgress("AE")
-            
+
         text "FMG"
         hbox:
             textbutton "-" action Function(setAffection, "FMG", -1)
@@ -775,21 +779,21 @@ screen debugmenu:
             text str(affection["BBW"])
             textbutton "+" action Function(setAffection, "BBW", 1)
         text getProgress("BBW")
-            
+
         text "PRG"
         hbox:
             textbutton "-" action Function(setAffection, "PRG", -1)
             text str(affection["PRG"])
             textbutton "+" action Function(setAffection, "PRG", 1)
         text getProgress("PRG")
-            
+
         text "RM"
         hbox:
             textbutton "-" action Function(setAffection, "RM", -1)
             text str(affection["RM"])
             textbutton "+" action Function(setAffection, "RM", 1)
         text ""
-        
+
         hbox:
             text "Athletics"
             textbutton "-" action Function(setSkillDebug, "Athletics", -1)
@@ -801,17 +805,17 @@ screen debugmenu:
             textbutton "-" action Function(setSkillDebug, "Art", -1)
             text str(skills["Art"])
             textbutton "+" action Function(setSkillDebug, "Art", 1)
-        
+
         hbox:
             text "Academics"
             textbutton "-" action Function(setSkillDebug, "Academics", -1)
             text str(skills["Academics"])
             textbutton "+" action Function(setSkillDebug, "Academics", 1)
-        
+
         textbutton "Return to game" action Jump("daymenu_noadvance")
         textbutton "Load Test" action Jump("debugloadtest")
         text ""
-        
+
         text "Size: " + str(globalsize)
         textbutton "+" action Function(setSizeDebug, 1)
         textbutton "-" action Function(setSizeDebug, -1)
@@ -830,7 +834,7 @@ screen debugclearedeventlist:
     vbox:
         text debugListClearedEvents()
         textbutton "Return" action Jump("debugmenu")
-        
+
 label debugevent:
     $renpy.block_rollback()
     if debuginput in eventlibrary:
@@ -846,7 +850,7 @@ label setflag:
 label unsetflag:
     $setFlag(debuginput, False)
     jump debugmenu
-    
+
 label settimeflag:
     $debugSetTimeFlag(debuginput, True)
     jump debugmenu
@@ -872,7 +876,7 @@ label daymenu_noadvance:
     window hide None
     call screen daymenu
     window show None
-    
+
 label debugmenu:
     scene black
     window hide None
@@ -938,7 +942,7 @@ label trainathletics:
     $tmp = setSkill("Athletics", 1)
     "(Your athletics skill has increased to [tmp])"
     jump daymenu
-    
+
 label trainart:
     scene Library with fade
     $tmp = renpy.random.randint(1, 2)
@@ -1011,7 +1015,7 @@ label debugloadtest:
             pause .1
             show AE glasses-2
             pause .1
-            
+
             show BBW neutral
             pause .1
             show BBW happy
@@ -1026,7 +1030,7 @@ label debugloadtest:
             pause .1
             show BBW haughty
             pause .1
-            
+
             show BE neutral
             pause .1
             show BE happy
@@ -1041,7 +1045,7 @@ label debugloadtest:
             pause .1
             show BE zoomin
             pause .1
-            
+
             show FMG neutral
             pause .1
             show FMG happy
@@ -1056,7 +1060,7 @@ label debugloadtest:
             pause .1
             show FMG flex
             pause .1
-            
+
             show GTS neutral
             pause .1
             show GTS happy
@@ -1071,7 +1075,7 @@ label debugloadtest:
             pause .1
             show GTS embarrassed
             pause .1
-            
+
             show PRG neutral
             pause .1
             show PRG happy
@@ -1140,7 +1144,7 @@ label debugloadtest:
             pause .1
             show BBW haughty
             pause .1
-            
+
             show BE neutral
             pause .1
             show BE happy
@@ -1155,7 +1159,7 @@ label debugloadtest:
             pause .1
             show BE zoomin
             pause .1
-            
+
             show FMG neutral
             pause .1
             show FMG happy
@@ -1170,7 +1174,7 @@ label debugloadtest:
             pause .1
             show FMG flex
             pause .1
-            
+
             show GTS neutral
             pause .1
             show GTS happy
@@ -1185,7 +1189,7 @@ label debugloadtest:
             pause .1
             show GTS embarrassed
             pause .1
-            
+
             show PRG neutral
             pause .1
             show PRG happy
@@ -1200,7 +1204,7 @@ label debugloadtest:
             pause .1
             show PRG unique
             pause .1
-            
+
             show RM neutral
             pause .1
             show RM angry
@@ -1211,7 +1215,7 @@ label debugloadtest:
             pause .1
             show RM smug
             pause .1
-             
+
             show Yuki neutral
             pause .1
             show Yuki happy
@@ -1220,7 +1224,7 @@ label debugloadtest:
             pause .1
             show HR neutral
             pause .1
-            
+
             show Ryoko neutral
             pause .1
             show Ryoko happy
@@ -1231,11 +1235,11 @@ label debugloadtest:
             pause .1
             show Minori happy
             pause .1
-            
+
             show Rin neutral
             pause .1
             $globalsize = tmpsize
-            
+
         "Backgrounds":
             #FIXME adjust when you re-implement time of day
             scene Lake Road
@@ -1312,7 +1316,7 @@ label debugloadtest:
             pause .1
             scene Woods
             pause .1
-            
+
             scene Lake Road
             pause .1
             scene School Front
@@ -1387,7 +1391,7 @@ label debugloadtest:
             pause .1
             scene Woods
             pause .1
-        "CGs":    
+        "CGs":
             show cg BE001
             pause .1
             show cg BE002
@@ -1425,7 +1429,7 @@ label debugloadtest:
             pause .1
             play music Tension
             pause .1
-            
+
             play sound EventStart
             pause .1
             play sound AlarmClock

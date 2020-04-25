@@ -62,7 +62,7 @@ label FMG001:
     MC "Well that happened."
     "With that I left the building."
     jump daymenu
-    
+
 label FMG002:
     $setProgress("FMG", "FMG003")
     scene Gym with fade
@@ -100,7 +100,7 @@ label FMG002:
     MC "You're welcome Akira."
     "With that we went our separate ways."
     jump daymenu
-    
+
 label FMG003:
     $setProgress("FMG", "FMG007")
     $setTimeFlag("testday")
@@ -114,7 +114,7 @@ label FMG003:
         linear 0 xpos -0.5
         ease 0.5 xpos 0.2
     "I braced for impact, but Akira came to a screeching halt just before colliding into me."
-    show FMG neutral at Transform(xzoom=1) 
+    show FMG neutral at Transform(xzoom=1)
     show FMG neutral at Position(xpos=0.2)
     FMG "Yo, how're you?"
     "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 mph."
@@ -176,7 +176,7 @@ label FMG003_c2:
     show FMG neutral
     FMG "I'll admit I'm a little disappointed, but I'm more glad you're willing to give it a shot."
     MC "Well I am willing as long as-"
-    FMG "Oh Crap the bell's gonna to ring in 10 seconds! LATER!"
+    FMG "Oh crap! The bell's gonna ring in 10 seconds! LATER!"
     show FMG neutral at Transform(xzoom=-1)
     show FMG neutral:
         ease 0.75 xpos 0.9
@@ -203,7 +203,7 @@ label FMG003_c3:
     hide FMG
     "...Like the fact I'm going to be late for class if I don't move!"
     jump daymenu
-    
+
 label FMG004:
     scene Hallway with fade
     play music Schoolday
@@ -398,7 +398,7 @@ label FMG005_c2:
     "She pulled down her right sock, revealing a scar in the shape of a bite on her calf."
     FMG "If you were wondering why I wear my socks so high, that's why."
     MC "Oh god, looks like it was painful."
-    FMG "Yeah I guess it did, luckily I don't remember it happening... but I guess my body goes."
+    FMG "Yeah I guess it was, luckily I don't remember it happening... but I guess my body does."
     "She pulled her sock back up before continuing."
     FMG "My parents rushed me to the hospital, where they injected me with all kinds of needles."
     MC "Ah, so that's why you don't like needles. Sorry to hear."
@@ -432,7 +432,7 @@ label FMG005_c2:
     hide FMG
     "With that she left, leaving me alone in the hallway."
     jump daymenu
-    
+
 label FMG006:
     scene Classroom with fade
     play music Busy
@@ -496,7 +496,7 @@ label FMG006:
             jump FMG006_c2
         "Make your leave":
             jump FMG006_c3
-            
+
 label FMG006_c1:
     $setAffection("FMG", 1)
     MCT "Geez, I don't want her to feel bad just because I helped her, there's gotta be something I could... That's it!"
@@ -526,7 +526,7 @@ label FMG006_c1:
     MC "I think it's time we head out."
     FMG "Yeah, it's getting late, thanks again for everything."
     jump daymenu
-    
+
 label FMG006_c2:
     MC "Um... Hey, don't worry about it, it had to be cleaned up, so..."
     MCT "...Yeah, I have no idea what I'm doing, but at least she stopped looking sad."
@@ -551,7 +551,7 @@ label FMG006_c3:
     FMG "Sure, whatever."
     MCT "I think it's best just to leave her alone for now..."
     jump daymenu
-    
+
 label FMG007:
     $setProgress("FMG", "FMG008")
     scene Cafeteria with fade
@@ -604,7 +604,7 @@ label FMG007_c1:
     MC "Sure, love to."
     "The smile Akira got at the prospect seemed to break her from her torpor, and she finally got up to take her leave."
     jump daymenu
-    
+
 label FMG007_c2:
     MC "Sorry, it's just I never pictured you as the gamer type."
     show FMG neutral
@@ -717,7 +717,7 @@ label FMG009:
     Chibuki "My gut is telling me that she's hiding something, but I ain't gotta clue as to what."
     Chibuki "As for me, I suppose I'll still help her when you're not around. Later Kei."
     jump daymenu
-    
+
 label FMG010:
     $setSize(2)
     $setTimeFlag("aftersize2")
@@ -746,7 +746,7 @@ label FMG010:
         jump FMG010_testpass
     else:
         jump FMG010_testfail
-        
+
 label FMG010_testpass:
     "...At least, that was the plan before I was called out to from behind. I turned around to find Mizutani's roommate running towards me; Blackburne-san, Akira said her name was."
     show Chibuki neutral with dissolve
@@ -877,7 +877,7 @@ label FMG010_testfail:
     "Her arms were thicker than the last time I saw her, her chest more toned, abs starting to be more noticeable though the shirt. Her legs were more muscular, and I could swear she was even a bit taller, though it could just have been my mind playing tricks on me, given how big the rest of her was."
     FMG "Yes, I know I'm big but can you please not stare at me? I've had a long day!"
     MC "Um, are you all right?"
-    show FMG angry 
+    show FMG angry
     FMG "I've been stuck in my room for the past two fricking days! I had to live off of Chibuki's junk food and soda! It wasn't even the name brand, it was some cheap knock-off of Cane Cola called Kool Kola!"
     MC "Wait, why were you stuck in your room?"
     FMG "Because I had a growth spurt! I couldn't fit into my clothes without ripping them. Chibuki was supposed to get my replacement uniform from the tailor's but got detention, leaving me all alone in my room till she got back an hour ago!"
@@ -928,7 +928,7 @@ label FMG011:
         FMG "But no, people want to do it the easy way, by sitting down, getting fat, and having everything given to them. Not all of us were born with a silver spoon in our mouths."
         MC "Ak-"
         FMG "And by the way, I know you're behind me, Alice, I can hear you breathing."
-        MCT "At least your hearing's better than Alice's, I guess..." 
+        MCT "At least your hearing's better than Alice's, I guess..."
         show BBW angry
         BBW "Well at least you have some skills of perception."
         show BBW haughty
@@ -947,7 +947,7 @@ label FMG011:
         show FMG angry at Position(yalign=1.0), Transform(xzoom=-1)
         show BBW haughty at Position (xpos=0.55) with dissolve
         FMG "I'm going to take a wild guess and say you want to be player one. Doesn't matter in the long run, though."
-        BBW "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped." 
+        BBW "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped."
         show FMG neutral
         FMG "Quit speaking... whatever language that is and let's do this."
         show BBW neutral
@@ -1024,7 +1024,7 @@ label FMG011:
         FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
         "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
         "Eventually the zombies got to her, the screen turning red with blood splotches until the words 'Game Over' came up."
-        show FMG sad 
+        show FMG sad
         FMG "...Um, you shoot off the screen... to reload. I'm sorry."
         BBW "I see now."
         "She put in another 100 yen coin. Her game didn't improve by much, but she did manage to avoid getting mobbed again. Come the boss, though..."
@@ -1109,7 +1109,7 @@ label FMG012:
     show FMG happy
     FMG "I'd be insulted if we didn't."
     jump daymenu
-    
+
 label FMG013:
     #Scene Afternoon
     $setProgress("FMG", "FMG014")
@@ -1459,7 +1459,7 @@ label FMG015:
         "She was squealing like a child."
         MCT "...Huh?"
         MC "Wait, really?"
-        FMG "Yeah! I was in grade School when the manga came out and I've been a huge fan of Nya'dorable ever since! I've even plan to watch the anime when it comes out this summer!"
+        FMG "Yeah! I was in grade School when the manga came out and I've been a huge fan of Nya'dorable ever since! I even plan to watch the anime when it comes out this summer!"
         FMG "I mean, sure I'll have to cut the sleeves and a bit of the gut area, but I absolutely love it! How did you know?!"
         MC "I... had a hunch."
         show FMG neutral
@@ -1472,7 +1472,7 @@ label FMG015:
         MC "Yeah... Right..."
     show FMG happy
     FMG "Hey look, as much as we workout, why don't we just hang out?"
-    MC "Sure,we already in town, let's go exploring."
+    MC "Sure, we're already in town, let's go exploring."
     FMG "Alright! Just wait right here while I make the appropriate trimmings on this in the locker room, I'll be right back."
     "It didn't take her long to trim the hoodie, roughly ten minutes or so. By the time she came out, she was wearing the hoodie with pride."
     FMG "Okay! I'm dressed to not impress and hyped!"
@@ -1516,7 +1516,7 @@ label FMG016:
     FMG "*Giggle*"
     MCT "...Smooth move, genius... Well, at least Akira got a giggle out of my suffering."
     FMG "Well then, how about you take that offer of mine, and let's head into town?"
-    MC "Yes! ...I mean. sure."
+    MC "Yes! ...I mean, sure."
     "..."
     MCT "Okay well, I'm just going to ignore my small outburst and follow Akira to town."
     FMG "Man, you're nuts, dude. Well, come on, let's see what the town has to offer."
@@ -1622,7 +1622,7 @@ label FMG016:
     MC "....."
     MC "...Aaannnd I'm bored again. What am I going to do now?"
     jump daymenu
-    
+
 label FMG017:
     $setProgress("FMG", "FMG018")
     scene Campus Center with fade
@@ -1770,7 +1770,7 @@ label FMG018:
     "That was the question most, if not all, students were asking as they started to partner up. The thought of Aida being a suitable partner popped up, however she was taken almost right away by Alice, so that was out of the question."
     MC "Looks like the only ones who don't have a partner are Shiori, Naomi, Honoka, and that guy who always eats seaweed in the back of class."
     FMG "Well we gotta pick a third person, so who should it be?"
-    
+
     menu:
         "Choose Shiori":
             jump FMG018_c1_1
@@ -2002,7 +2002,7 @@ label FMG019:
     MC "Got it. Thanks for letting me know."
     Chibuki "No problem... Later, I guess."
     "As Chibuki closed the door, I turned around and set off towards the Athletics Building... Which, in hindsight, I should have checked anyways."
-    
+
     scene Gym with fade
     "I made my way to the back and looked around to find a door that would lead to the rooftop. After finding an easy entrance, I entered without issue, regardless of signs nearby letting me know that I was entering a restricted area, and climbed up to the roof."
 
@@ -2155,7 +2155,7 @@ label FMG021:
     hide AE with dissolve
     show HR neutral with dissolve
     HR "Alright, thank you, Mizutani-san for your... enlightening report."
-    
+
     scene Classroom with fade
     show FMG happy at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
@@ -2165,7 +2165,7 @@ label FMG021:
     MCT "Please for the love of god keep my name out of that trainwreck."
     FMG "I even took this picture to remember it by and gave him a copy!"
     MCT "Still though, I can't believe what just happened."
-    
+
     scene Classroom with fade
     show HR neutral with dissolve
     HR "Hotsure-san, did you actually help Mizutani-san?"
@@ -2191,7 +2191,7 @@ label FMGBBW001:
     scene black with fade
     "..."
     RM "Hey, wake up!"
-    MC "Wah?" 
+    MC "Wah?"
     scene Library with fade
     show RM angry with dissolve
     play music RM
@@ -2460,7 +2460,7 @@ label FMGBBW001:
     MCT "Well, this was an interesting day..."
     "..."
     MC "Wait... Was that lady hitting on me?"
-    "..." 
+    "..."
     MC "Nah..."
     jump daymenu
 
@@ -2478,7 +2478,7 @@ label FMG022:
         FMG "Whew, good run! You were really pushing it, Kei-kun!"
         "I nodded as I grabbed my water bottle, appreciating the transition from the hard track to the springy grass."
         MC "Thanks, you too. But I guess I don't need to tell you that."
-        show FMG neutral 
+        show FMG neutral
         "She smirked and grabbed hers, too, and we clinked our bottles together."
         MC "Down the hatch!"
         "Our bottles were about half empty by the time we finished the first draft. But for my part, my shirt and the tips of my bangs received about as much of that cool water as my mouth."
@@ -2495,20 +2495,20 @@ label FMG022:
         FMG "God, Kei, you're supposed to get better with practice! What'd you do, eat a whole thing of pasta right before our run?"
         MC "You..."
         extend " not supposed to do that?"
-        show FMG surprised 
+        show FMG surprised
         FMG "Oh."
         extend " My."
         extend " God."
         "I picked up my water bottle and took a long draft."
         MC "Ah, chill, I'm just joking. If I'd actually done that it would've come back up around lap two."
-        show FMG neutral 
+        show FMG neutral
         FMG "Gross. But you're probably right."
         MC "Still, yeah, I gotta work on my endurance. I'll just think about someday beating {i}you{/i} in a race."
         show FMG happy
         FMG "Heh, better get working, Kei-kun, 'cause I'm not slowing down!"
         MC "I'm counting on it."
     MC "So hey..."
-    show FMG neutral 
+    show FMG neutral
     FMG "Yeah?"
     MC "I was thinking of going rock climbing tomorrow around the time of our normal workout. I thought it'd be fun to try, and it's arm day tomorrow anyway. Think you'd be down for that?"
     FMG "Hmm..."
@@ -2516,7 +2516,7 @@ label FMG022:
     MC "Oh, see, I had something else in mind."
     MC "We'll go out into the woods and climb one of the rocks or cliffs out there."
     MC "It'll be a nice change of scenery, and we can get to know the island a little bit. How 'bout it?"
-    show FMG happy 
+    show FMG happy
     FMG "Ooh!..."
     FMG "Yeah, sounds fun!"
     FMG "In fact, I'm gonna bring a stopwatch and we're gonna make it interesting! I wanna see if I stomp you as hard climbing as I do running."
@@ -2527,21 +2527,21 @@ label FMG022:
     FMG "Lotta talk, Kei-kun. Let's see what that does for you tomorrow."
     "My shit-eating grin almost felt good as I nodded and said,"
     MC "Meet you by the lake."
-    show FMG neutral 
+    show FMG neutral
     FMG "See you there."
     hide FMG with dissolve
     "We walked off the track and parted ways, Akira to her dorm and I towards town."
-    
+
     scene Town with fade
     MCT "I am absolutely, one hundred percent gonna get smoked tomorrow."
     "But I didn't really regret putting on a show."
     "It always makes me smile when she gets all hyped up for a competition. And win or lose, it was going to be nice trying something new with her."
     MCT "Now, gonna need a couple helmets, gloves, some bug spray..."
     stop music
-    
+
     scene black with fade
     pause 1.5
-    
+
     scene Lake Road with fade
     play music Hallway
     "I got there ahead of her, so I had a minute to look out at the lake's shimmering reflection of the sky."
@@ -2558,7 +2558,7 @@ label FMG022:
     show FMG sad
     FMG "Oh God no, that would freaking suuuuuuck."
     "She rubbed her triceps at the very idea, as if to console them."
-    show FMG neutral 
+    show FMG neutral
     FMG "Not gonna lie though, it feels a little goofy walking into the woods wearing a bike helmet."
     MC "No different than if we were going to the gym. Besides, it's for safety in case one of us falls."
     "She shook the can vigorously and held it over her shins."
@@ -2567,7 +2567,7 @@ label FMG022:
     FMG "{i}Ah frick it's cold!{/i}"
     "We both jumped a little as she jerked her hand away, cringing."
     MC "Woah, you okay?"
-    show FMG neutral 
+    show FMG neutral
     FMG "Yeah, it just surprised me. I'll do the rest, one sec."
     "She finished generously coating the hoary spray up her legs and across her arms, then tossed the can back to me; it was dented and just slightly bent."
     "That done, I watched her stretch and listened to the elongated groans of the floorboards under her."
@@ -2581,7 +2581,7 @@ label FMG022:
     show FMG happy
     "She slapped the ground."
     FMG "Let's do it to it!"
-    
+
     scene Woods with fade
     "We passed a brief walk on the hiking trails with some small talk draped over our casual survey of the woods. A sea of rustling green stretched out in every direction, its horizon broken up by a thousand towers of brown and tawny."
     show FMG neutral with dissolve
@@ -2602,7 +2602,7 @@ label FMG022:
         MC "There's probably a bunch out here, we're bound to find something eventually."
         FMG "Eventually? Dude, you know I have a whole routine for the day."
         MC "I'm sorry, but look, there's some hills right there. We can't be far off."
-    show FMG neutral 
+    show FMG neutral
     "She rolled her eyes... couldn't tell if it was at me or herself... and we started down the trail again. This time, we mostly just looked around."
     "The pebbles and roots under my shoes spurred me forward, past the regularly-placed benches, gradually up the land as the pale blue sky sunk lower all around us. Lower and lower..."
     "I turned my head at the drumming of a woodpecker off in the distance, hoping to spot its creator."
@@ -2622,7 +2622,7 @@ label FMG022:
     "Akira pulled her stopwatch from her pocket and looped the lanyard around her neck."
     FMG "To the top and back down, or just to the top?"
     MC "Just to the top's good."
-    show FMG happy 
+    show FMG happy
     FMG "Then watch and be amazed!"
     MC "Shouldn't we do a test run first?"
     show FMG happy at Transform(xzoom=-1)
@@ -2632,15 +2632,15 @@ label FMG022:
     "It was a marvel; she crawled from crag to crag, nearly as natural as a spider, barely needing half a second to secure her footing before grabbing the next hold."
     "And it seemed like yesterday I'd delivered her a brand new uniform, yet the jabbing piston action of her numerous defined muscles was almost as clear under her jacket as out of it. The few times she climbed straight up, her shoulder blades seemed ready to punch right through."
     "At last she came within reach of the ledge and slid herself up it. She clicked the stopwatch; her grin looking at it was wide, heartwarming, and withering all at once."
-    show FMG flex at center with dissolve 
+    show FMG flex at center with dissolve
     FMG "43 seconds!"
-    show FMG neutral 
+    show FMG neutral
     FMG "Still think you got this?"
     "I nodded up at her."
     MC "Respectable."
     MC "But now it's my turn. Time me."
     "I saw her nod back down with a smirk and press the button, just as I took a breath and grabbed a rock."
-    hide FMG with dissolve 
+    hide FMG with dissolve
     if getSkill("Athletics") > 5:
         "My fingers pierced the loose soil veneer and dug into the cold, solid rock just past, and the dirt came with me, on my fingers and knees and the tips of my shoes, as I pulled myself higher and higher up the cliff."
         "I chanced to look up, and saw Akira's smile replaced with a dubious frown."
@@ -2669,7 +2669,7 @@ label FMG022:
             jump FMG022_c1_2
 
 label FMG022_c1_1:
-    show FMG neutral 
+    show FMG neutral
     FMG "Yeah... uh, thanks, I guess..."
     MC "Hmph... yep."
     if getSkill("Athletics") > 5:
@@ -2706,33 +2706,33 @@ label FMG022_c1_1:
         "I heard the earthy rustling of her climbing down while I rolled myself gradually to standing position."
         "The rustling stopped by the time I got up; I prodded myself to get down the slope in a hurry, and one long, wobbly shuffle later, I met with her."
     MC "Thanks for waiting up."
-    show FMG neutral 
+    show FMG neutral
     FMG "'Course. I need somebody to show me outta the sticks."
     MC "Right this way, madame."
-    hide FMG with dissolve 
+    hide FMG with dissolve
     "And so I did, after she gave my arm a good whack."
     "But there was something else I wanted to tell her, that took me the rest of our time on the trail to say."
-    
+
     scene Lake Road with fade
-    show FMG neutral with dissolve 
+    show FMG neutral with dissolve
     MC "So, like, why the concern all of a sudden back there?"
     FMG "Like I said, {i}push{/i} your limit, don't shoot past it. Because passing your limit in the gym might mean spraining your shoulder, but back there it might mean breaking your leg."
     MC "Eesh... I guess you're not wrong. I just didn't think of that."
-    show FMG happy 
+    show FMG happy
     FMG "Good thing you got me watching your back, then!"
     MCT "But you went first... and you damn near sprinted up there..."
-    show FMG neutral 
+    show FMG neutral
     FMG "And, you know..."
     extend " it wasn't a bad workout."
     "I smiled."
     MC "Glad you liked it."
-    hide FMG with dissolve 
+    hide FMG with dissolve
     "I liked it, too."
     jump daymenu
 
 label FMG022_c1_2:
     "And I started hauling ass like never ass had been hauled before or, to my knowledge, since."
-    show FMG surprised 
+    show FMG surprised
     FMG "Hey! That's the opposite of slow!"
     if getSkill("Athletics") > 5:
         "I began yanking myself up hard on every hold, even using one or two to leap up from. Higher and higher I climbed, ascending to the seat of my rocky throne."
@@ -2768,7 +2768,7 @@ label FMG022_c1_2:
         "Yep, nobody's gone nowhere faster than me."
         "The instant I summoned the energy to throw my arm up, my foot slipped and I frantically started trying to hug the rock face."
         extend " It... kind of... worked, as I avoided a freefall and instead slid straight down, the jutting rocks lifting my shirt and grinding like a dull cheese grater against my virgin underbelly."
-        hide FMG with dissolve 
+        hide FMG with dissolve
         "The lukewarm impact when I hit the ground shot up my ass and into my skull. I collapsed onto my back, hearing nothing but my own spent groan."
         "For a moment or two I laid there."
         extend " At last I rolled onto my arms and pushed myself up to a stand, and turned around to mount the rock once more. I may not be a rock climber, but I'm not a quitter either."
@@ -2786,7 +2786,7 @@ label FMG022_c1_2:
         $setAffection("FMG", -2)
         FMG "That was like a kitten watching its parents being taken away... oh, man, I wasn't ready for this..."
         MC "Y'know what, maybe we should just get outta here and never speak of this again."
-        FMG "We should do that, yeah." 
+        FMG "We should do that, yeah."
         hide FMG with dissolve
         scene Lake
         "And so we did."

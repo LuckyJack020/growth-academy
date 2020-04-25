@@ -451,6 +451,13 @@ screen preferences():
                         action Play("sound", config.sample_sound)
                         style "soundtest_button"
 
+            frame:
+                style_group "pref"
+                has vbox
+                label _("Enable Notifications")
+                textbutton _("On") action SetField(persistent, "enable_notifications", True)
+                textbutton _("Off") action SetField(persistent, "enable_notifications", False)
+
             if config.has_voice:
                 frame:
                     style_group "pref"
@@ -572,4 +579,3 @@ init -2:
         selected_idle_color "#cc08"
         selected_hover_color "#cc0"
         insensitive_color "#4448"
-

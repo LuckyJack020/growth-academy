@@ -1,16 +1,16 @@
 label global000:
     stop music
-    
+
     # Without a defined character code before the dialogue, it's unattributed speech. Good for narration.
     #EX - "This is the narrator, introducing our characters."
-    
+
     # This is what text will look like with those codes attached.
-    # Line breaks are done by inserting the command \n where you want to start a new line. No spaces allowed. 
+    # Line breaks are done by inserting the command \n where you want to start a new line. No spaces allowed.
     #Italics, bold, etc are done with curly brackets
     #
-    
+
     #EX - MC "Yo. I'm the player character, Hotsure Keisuke.\nI'm transferring to Seichou Academy this year."
-    #EX - BE "I'm the BE character, Inoue Honoka!\nIt's good to see you again, Kei{i}-chan{/i}!" 
+    #EX - BE "I'm the BE character, Inoue Honoka!\nIt's good to see you again, Kei{i}-chan{/i}!"
 
     # I'll stick new characters above so that anyone that wants to just copy those lines and replace the actual dialogue can do so without worry.
     show black
@@ -25,7 +25,7 @@ label global000:
                 jump daymenu
             "Continue":
                 "Playing intro."
-        
+
     #SFX Light Motor SFX
     Announcer "Please remain seated until the ferry comes to a full stop, then make your way to the boarding dock, following the yellow lines on the floor. An attendant will be available should you need assistance!"
     "The voice over the PA system rang out through the deck, causing a few of the other students to look up from their phones while others readied their bags for departure."
@@ -36,7 +36,7 @@ label global000:
     MC "Hm? Oh, yeah. Keisuke Hotsure."
     Teacher "Hotsure... Hotsure... Oh, you were supposed to be in group 3. Just take the path to the right to registration."
     MC "Oh, okay, thank you."
-    "I took off at a brisk walk, leaving the rest of Group 4 behind as I tried to catch up with Group 3." 
+    "I took off at a brisk walk, leaving the rest of Group 4 behind as I tried to catch up with Group 3."
 
     #scene Forest Path with fade
     scene Lake Road with fade
@@ -62,7 +62,7 @@ label global000:
     "She stared at me intently for a long time. Did I surprise her or something?"
     MC "Nothing? Eh... W-well, I'm trying to find Seichou Academy, you see, and-."
     UNKNOWN "Seichou..."
-    
+
     show BE surprised
     UNKNOWN "Oh! Yeah, you're with the new students?"
     MC "Yeah, got here about a half-hour ago."
@@ -92,7 +92,7 @@ label global000:
     BE "I-I thought, but I... Oh my god, it's been years!"
     MCT "There's that boyish grin I remember."
     "Inoue Honoka. My old childhood friend. The two of us were thick as thieves back in the day. When we weren't terrorizing Shibuya, we were spending our days chilling out in the countryside."
-    "Until one day, she was just gone. Moved over to an all-girls' school in a different part of the country. We never saw each other again." 
+    "Until one day, she was just gone. Moved over to an all-girls' school in a different part of the country. We never saw each other again."
     show BE neutral
     BE "You dork! Why didn't you say anything the first time..."
     MC "What would be the chances?!"
@@ -132,7 +132,7 @@ label global000:
     MC "Cool. Cool. Didn't know you still did that."
     BE "Yep! Frogs are cooool~"
     BE "Oh! Is Tomo-chan here too?"
-    
+
     "Tomo{i}-chan{/i}. Hotsure Tomoko. My little sister."
     MC "Yeah, she's good, she's good. Finally got her to come out of her room."
     BE "Really? What, did you finally manage to afford that crowbar?"
@@ -185,7 +185,7 @@ label global000_cbreak_3:
     BE "Kei{i}-chan{/i} the cultured gentleman... Ha!"
     MC "Ha yourself."
     jump global000_cbreak_after
-    
+
 label global000_cbreak_after:
     MC "Anyways..."
     show cg BE000b with dissolve
@@ -230,7 +230,7 @@ label global000_GTS:
     BE "Are you okay?"
     UNKNOWN "Eeep!"
     "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
-    UNKNOWN "Yes, sorry. I just fell. The planters are just rather large." 
+    UNKNOWN "Yes, sorry. I just fell. The planters are just rather large."
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."
     "Aside from the divot where she fell, the center row of vegetables did indeed look less well-watered than the ones closest to the edge."
@@ -239,7 +239,7 @@ label global000_GTS:
             jump global000_GTS_c1
         "Do you need help?":
             jump global000_GTS_c2
-            
+
 label global000_GTS_c1:
     MC "That's dumb, whose idea was that? Why plant stuff where people can't reach?"
     UNKNOWN "It may be easier for someone who is taller..."
@@ -287,7 +287,7 @@ label global000_GTS_c2:
 label global000_AE:
     scene black with dissolve
     UNKNOWN "YOU..."
-    
+
     "With only a single word, Honoka and I stopped in place as a deep paralyzing chill ran down my spine..."
     "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind..."
     scene Gate Front with dissolve
@@ -347,7 +347,7 @@ label global000_AE_c1:
     "Turning around once more, she continued to go about her business, and we made sure to get out of there as soon as possible."
     "Honoka and I looked at each other and headed for class 3-B."
     jump global000_BBW
-    
+
 label global000_AE_c2:
     MC "You should listen to your boss, you know."
     MC "If she's got a plan, going off on your own doesn't really help."
@@ -369,7 +369,7 @@ label global000_AE_c2:
     AE "Now, if you will, please get up to 3-B and help with the decorations and cleaning."
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
     jump global000_BBW
-    
+
 label global000_AE_c3:
     "I didn't want to get involved in the fight. {w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
     UNKNOWN "Look, it doesn't matter if you bring all the benches at once if I can't get them organized properly."
@@ -403,7 +403,7 @@ label global000_AE_c3:
 label global000_BBW:
     scene black with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular..."
-    
+
     scene Classroom with dissolve
     play music BBW
     "So this was Classroom 3-B. I would be spending a lot of time here for the next year."
@@ -444,7 +444,7 @@ label global000_BBW:
             jump global000_BBW_c1
         "Shouldn't you be doing something too?":
             jump global000_BBW_c2
-            
+
 label global000_BBW_c1:
     MC "Well, if you've got this under control, I guess I'll be going then."
     $ setAffection("BBW", 1)
@@ -460,7 +460,7 @@ label global000_BBW_c1:
     PRG "...I don't want to be a bother."
     BBW "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
     jump global000_RM
-            
+
 label global000_BBW_c2:
     MC "Shouldn't you be doing something too?"
     $ setAffection("BBW", -1)
@@ -478,7 +478,7 @@ label global000_BBW_c2:
     show PRG happy
     PRG "T-thank you! Thank you very much!"
     jump global000_RM
-     
+
 label global000_RM:
     scene Hallway with fade
     stop music
@@ -490,7 +490,7 @@ label global000_RM:
     "Honoka's laugh caused her impressive bust to shake violently, which was a small consolation prize as we parted ways."
     hide BE with dissolve
     scene School Inner with fade
-    
+
     "I headed over to the boy's dormitories, seeing they were just as enlarged as the rest of the school.{w} I felt like a child, trying the doorknob that I couldn't even get my entire hand around."
     "*Kunk-Kunk*"
     MC "Locked? I'm sure I had the right-"
@@ -505,7 +505,7 @@ label global000_RM:
             jump global000_RM_c2
         "Don't worry, sir, I'm from the government, just making an inspection!":
             jump global000_RM_c3
-            
+
 label global000_RM_c1:
     MC "Uh...{w} Pizza delivery?"
     UNKNOWN "I didn't order any pizza!{w} Scram!"
@@ -526,7 +526,7 @@ label global000_RM_c1:
     scene Dorm Interior with fade
     show RM neutral
     jump global000_RM_after
-    
+
 label global000_RM_c2:
     MC "Hotsure Keisuke. I...{w} think this is my room?"
     "I could hear movement behind the door, like someone searching for something.{w} After a bit, the door opened a crack, a single narrowed eye looking me up and down."
@@ -540,7 +540,7 @@ label global000_RM_c2:
     scene Dorm Interior with fade
     show RM neutral
     jump global000_RM_after
-    
+
 label global000_RM_c3:
     MC "Don't worry, sir, I'm from the government, just making an inspection!"
     "I thought my fake-authoritative voice would have been worth a laugh, but instead there was silence.{w} I knocked again, tried the knob, called out a few times, but there was no answer."
@@ -624,7 +624,7 @@ label global000_RM_after:
 
 label global000_part2:
     scene Campus Center with fade
-    "As I followed the signs to freshman welcoming, I couldn't help but notice how flat the campus seemed. Despite the large buildings, most of them were divided into a handful of floors at most." 
+    "As I followed the signs to freshman welcoming, I couldn't help but notice how flat the campus seemed. Despite the large buildings, most of them were divided into a handful of floors at most."
     "Also, there didn't seem to be any stairs anywhere. Any dips or slopes in the elevation were all traveled with ramps."
     scene Auditorium
     with dissolve
@@ -799,6 +799,7 @@ label global000_sit_c3_1:
 label global000_sit_c3_2:
     hide PRG
     hide FMG
+    $setFlag("global000_satPRG")
     MC "Seems kinda lonely back here, Aida..."
     show PRG sad
     PRG "Oh! Uh, ah, well, there's three of us now, right?"
@@ -885,7 +886,7 @@ label global000_homeroom:
     scene School Exterior with fade
     play music Schoolday
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
-    
+
     scene F1 Hallway with fade
     "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule.{w} I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
     show BE surprised
@@ -893,7 +894,7 @@ label global000_homeroom:
     hide BE
     show FMG neutral
     FMG "Beats me...{w} I feel like I should be putting up a volleyball net or something."
-    
+
     scene Classroom with fade
     MC "Whoa!"
     show BBW neutral with dissolve
@@ -953,7 +954,7 @@ label global000_homeroom:
     show HR neutral with dissolve
     HR "But make no mistake, unless you've got a sibling here at Seichou Academy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
-    HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you." 
+    HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you."
     "Tashi-sensei scanned the room, taking in the fear and confusion, then shrugged."
     HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
@@ -973,7 +974,7 @@ label global005:
     scene Hallway with fade
     play music Busy
     "As I made my way inside the classroom building, I ran into a few of my classmates."
-    
+
     if prefgirl == "BE":
         show BE neutral with dissolve
         BE "Hey there, Kei-chan! How are things going for you?"
@@ -1312,7 +1313,7 @@ label RM002_c1_1:
     $setAffection("RM", 1)
     RM "Thanks. I'll be quick."
     jump RM002_c1_after
-    
+
 label RM002_c1_2:
     $setFlag("RM002_c1_2")
     MC "What exactly are you doing in there?"

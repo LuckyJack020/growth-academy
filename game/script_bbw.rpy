@@ -6586,6 +6586,8 @@ label BBW036_c1_2:
     jump daymenu
 
 label BBW037:
+    if getProgress("BBW") == "BBW037": #fix for wrong progress issue, delete later
+        $setProgress("BBW", "BBW036")
     #Time: Morning
     scene Classroom with fade
     play music Schoolday
