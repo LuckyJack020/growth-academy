@@ -28,7 +28,7 @@ init -1 python hide:
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
     config.name = "GrowthAcademy"
-    config.version = "2020.3.4"
+    config.version = "2020.5.1"
 
     # Enables logging
     config.log = "debug_log.txt"
@@ -191,7 +191,7 @@ init -1 python hide:
     ## Music that is played while the user is at the main menu.
 
     config.main_menu_music = "Audio/BGM/hallowedhalls.ogg"
-    
+
     config.default_music_volume = 0.5
     config.default_sfx_volume = 0.5
     config.fade_music = 1.0
@@ -262,11 +262,11 @@ init -1 python hide:
 
     ## Used when the image is changed by a say statement with image attributes.
     config.say_attribute_transition = None
-    
+
     def dialog_advance():
         renpy.play("Audio/SFX/sfx_dialog.ogg")
         return True
-    
+
     config.say_allow_dismiss = dialog_advance
 
     #########################################
@@ -307,7 +307,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "GrowthAcademyDemo-2020.3.4"
+    build.directory_name = "GrowthAcademyDemo-2020.5.1"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,

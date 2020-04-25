@@ -5590,7 +5590,7 @@ label BE032:
     AE "Indeed, but what I mean is that the two of you are... oddly close today."
     AE "In addition, Inoue-san is acting odd. Her giddiness is through the roof, her pupils are dilated, and her sense of personal space is even smaller than normal."
     show AE neutral-annoyed
-    AE "What’s going on?"
+    AE "What's going on?"
     show BE angry
     BE "Jeez, can't a girl just be happy without being called cuckoo?"
     MC "Yeah, it's fine, Shiori-san. Honoka and I just had fun last night and I think we're still riding the high."
@@ -5598,16 +5598,16 @@ label BE032:
     show AE angry
     AE "{i}What{/i} did you just say?"
     "Honoka and I stiffened as a cold chill overcame us."
-    AE "I’m sorry, but I think I misheard you-"
+    AE "I'm sorry, but I think I misheard you-"
     MC "Whoa, whoa, no no no. Not at all!"
-    AE "Oh, so I didn’t?"
-    MC "N-Not like that! It’s just an expression!"
+    AE "Oh, so I didn't?"
+    MC "N-Not like that! It's just an expression!"
     show BE happy
     BE "Yeah, it's just an expression, Shiori-chan. Take a chill pill."
     AE "That was {i}terrible{/i} wording on your behalf. Unless, of course, it was a Freudian slip."
     MC "Again, it's an expression. Are you all right, Shiori-san? You're acting a bit more wound up than usual."
     show AE neutral
-    AE "I'm just fine, thank you, but if the two of you are doing something against the rules, {i}I{/i} need to know what’s going on."
+    AE "I'm just fine, thank you, but if the two of you are doing something against the rules, {i}I{/i} need to know what's going on."
     BE "Well you don't have to worry about us, class rep. Kei-chan and I are fine. We're making sure we stay safe."
     MC "Right."
     AE "Well that's good to hear. But..."
@@ -5615,11 +5615,11 @@ label BE032:
     AE "..."
     "Shiori stopped herself, and stood up straight again. She looked between me and Honoka, and made a small, noncommittal sound."
     AE "Hm."
-    AE "I see. Well... I’ll trust you."
+    AE "I see. Well... I'll trust you."
     AE "But."
     show AE angry
     AE "Regardless, the two of you should act responsibly."
-    AE "If not, I’ll have your hide."
+    AE "If not, I'll have your hide."
     hide AE with dissolve
     "With that, Shiori turned around and walked away, her rump shaking to and fro as she did."
     show BE neutral at center with dissolve
@@ -5682,7 +5682,7 @@ label BE033:
     show AE neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     "Shiori took a moment to answer. On the ground in front of her was a flattened slab of cardboard and some spray paint. She leaned in very close with an extremely fine paintbrush and dabbed a section of the item too small for me to notice."
     show AE neutral at Transform(xzoom=-1)
-    AE "Ah, good day, you two. I’m painting."
+    AE "Ah, good day, you two. I'm painting."
     "There was indeed a small set of acrylic paints nearby, and she had the leaves of a newspaper tucked around her lap as a makeshift smock."
     show AE happy
     AE "A gift from a friend, you see."
@@ -5701,11 +5701,11 @@ label BE033:
     show BE happy
     BE "Yeah, from the Warblade game!"
     show AE angry
-    AE "I... believe you’re mistaken. This character is Lord Judicator Septorum the IV."
+    AE "I... believe you're mistaken. This character is Lord Judicator Septorum the IV."
     show BE neutral
     BE "Yeah yeah that's it. He's got the wicked chainsaw teeth, right?"
     show AE neutral
-    AE "W-Well, no, they aren’t chainsaw teeth, they’re power dentures. They allow him to consume the volatile ingredients in-"
+    AE "W-Well, no, they aren't chainsaw teeth, they're power dentures. They allow him to consume the volatile ingredients in-"
     AE "W-Wait, never mind. How do you know of him?"
     show BE happy
     BE "From the Warblade game, duh. He's my favorite multiplayer character. I never knew they made a figure out of him! Would have thought they'd go for Lieutenant Metal-Butt first."
@@ -5715,19 +5715,19 @@ label BE033:
     show BE happy
     BE "Yeah!!"
     "Shiori muttered tersely under her breath."
-    AE "Maybe if he wasn’t nerfed to high hell..."
+    AE "Maybe if he wasn't nerfed to high hell..."
     MC "Eh?"
     show AE neutral
-    AE "But that’s not the point, you play Warblade too?"
+    AE "But that's not the point, you play Warblade too?"
     show BE happy
     BE "Yeah! I had it on my dad's desktop back home!"
     show AE surprised
-    AE "Oh? You played it on your father's desk? That... I doubt that’d be enough room."
+    AE "Oh? You played it on your father's desk? That... I doubt that'd be enough room."
     show BE neutral
     BE "Ehehe, no, his computer."
     show AE neutral
     AE "Com...puter?"
-    BE "Uhh, yeah? It’s a device you type in and has a screen."
+    BE "Uhh, yeah? It's a device you type in and has a screen."
     show AE angry
     AE "I know that! But... Warblade on a computer?"
     show BE angry
@@ -5736,14 +5736,14 @@ label BE033:
     AE "I..."
     "Shiori-san looked at first to me and then to Honoka."
     show AE angry
-    AE "Is this some kind of injoke? I don’t-?"
+    AE "Is this some kind of injoke? I don't-?"
     show BE angry
-    BE "It’s not a joke! It’s a fun game!"
+    BE "It's not a joke! It's a fun game!"
     AE "I {i}highly{/i} doubt that a computer game is able to capture the complexities of the tabletop game."
     show BE happy
     BE "Well my video game is a lot more fun than whatever you do with those tiny little things!"
     show AE angry
-    AE "They’re miniatures."
+    AE "They're miniatures."
     "Honoka and Shiori stared at each other from their respective seats. The air felt electrified..."
     menu:
         "Side with Honoka":
@@ -5774,16 +5774,16 @@ label BE033_honokaside:
     MC "I mean, how much of that stuff did you have on hand before you got into the game?"
     "Shiori seemed taken aback."
     show AE angry
-    AE "I-I don’t think that’s... entirely {i}comparable{/i}, I-..."
+    AE "I-I don't think that's... entirely {i}comparable{/i}, I-..."
     AE "... Hmph. Fine. I suppose you have a point."
     MC "Playing a video game version also has the benefit of, you know... you can play it by yourself. Anytime. In a few seconds."
     AE "However, the interactivity of not only painting your miniature, but setting up the field and collecting the necessary dice-"
     MC "It's a lot more grueling then handing someone a controller if they wanna play and saying 'A Button jumps'."
     show AE neutral
-    AE "Haah... very well. I’ll... accept that you have a differing opinion."
-    MC "That’s it?"
+    AE "Haah... very well. I'll... accept that you have a differing opinion."
+    MC "That's it?"
     show AE angry
-    AE "You’re lucky to be getting even that."
+    AE "You're lucky to be getting even that."
     show AE neutral-annoyed
     "Shiori-san dabbed the end of her paintbrush on a piece of paper towel, before lightly dusting her miniature with it."
     MC "Er, you're right. We'll leave you be. Sorry, Shiori-san. Um, see you around later."
@@ -5883,9 +5883,9 @@ label BE033_academics:
     show BE neutral
     BE "Oh for real. I mean, Dynasty Killers had... I mean, it's right there in the name, Kei-chan. They killed an entire dynasty."
     AE "Would you let your child play something as graphic as Warblade? Violence in media is the responsibility of parents to help guide their children through! If you just leave your children to their own devices-!"
-    BE "It’d be like having a kid play those weird H-games!"
+    BE "It'd be like having a kid play those weird H-games!"
     show AE neutral
-    AE "You’d be talking about the erosion of family values at its core-!"
+    AE "You'd be talking about the erosion of family values at its core-!"
     MC "I, I did not think you two would take my answer so seriously."
     show BE sad
     BE "Hmph, perhaps you should have thought more!"
@@ -5917,7 +5917,7 @@ label BE033_art:
     BE "Wait for real? Why?"
     AE "Have you ever {i}seen{/i} a purple Orc?"
     show BE neutral
-    BE "... Ha! Haha! For real?! That’s a thing?!"
+    BE "... Ha! Haha! For real?! That's a thing?!"
     "Shiori chuckled softly, and pushed up her glasses."
     AE "Eheheh, so you're truly not familiar with Warblade putting details of lore into the game manuals?"
     "Honoka shook her head."
@@ -6169,7 +6169,7 @@ label BE035:
     if getFlag("HONOKA_COOKING"):
         jump BE035A
     elif getFlag("HONOKA_SOFTBALL"):
-        jump BE036
+        jump BE035B
 
 label BE035A:
     $setProgress("BE", "BE036")
@@ -6347,7 +6347,173 @@ label BE035A_nosauce:
     MC "... Not remotely how I meant it."
     jump daymenu
 
+label BE035B:
+    "Softball version of this scene to be implemented."
+    $setProgress("BE", "BE036")
+    jump daymenu
+
 label BE036:
+    $setProgress("BE", "BE037")
+    scene School Planter with fade
+    play music Busy
+    "Honoka and I had some free time after classes today. She didn't have a club meeting to get to, and my own responsibilities were limited to what homework I had for that night. So we decided to just walk around the campus and get some mild exercise."
+    show BE happy with dissolve
+    BE "Ahhh. The sun is shining. The wind is nice. There's literally birds chirping nearby."
+    MC "Yep. it's quite a nice day isn't i-"
+    show BE surprised
+    BE "I am so borrrrrred!"
+    MC "Ah should have known that was coming. Well, we could go play video games if you wanted."
+    show BE neutral
+    BE "No no, I was the one who suggested we just stroll around for a bit. I have to stick to that. I don't want people thinking Honoka Inoue's a flake."
+    MC "Mmm..."
+    MC "I'll be honest, Honoka. Right now I'm looking around for anything that could be considered a conveniently-timed distraction to change the topic."
+    BE "That's totally reasonable."
+    show BE neutral:
+        xpos 0.5 xanchor 0.5 yalign 1.0
+        linear 0.5 ypos 0.9
+        linear 0.5 ypos 1.0
+    "Apart from having to sidestep a squirrel that was busy chewing on a nut in the middle of grass, Honoka and I didn't come across anything interesting to get us talking. The squirrel finished its snack and then darted under a bench back towards a tree."
+    "Until after a while, we heard some faint humming around the corner. Heading over, we saw Naomi standing around a large flower bed, in the middle of watering a variety of blooming flowers."
+    show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    GTS "La la la~"
+    show BE happy
+    BE "Oh, hey, Naomi-chan! What's up?"
+    show GTS surprised
+    GTS "Hm?!"
+    show GTS neutral
+    GTS "Oh. Ah. Hello, you two. I didn't hear you coming. You snuck up on me a bit."
+    MC "Sorry about that. Were you, ah, singing anything in particular?"
+    show GTS happy
+    GTS "No, not really. I was just trying that old wife's tale about singing to plants helping them grow larger."
+    show BE neutral
+    BE "Huh. I haven't heard that one before."
+    show BE happy
+    BE "Hehehehe, guess you listen to a lot of music, huh, Naomi-chan?"
+    "Naomi blushed with a faint smile and looked down at herself, and then back over at us. She easily stood two heads taller than us now."
+    show GTS happy
+    GTS "W-Well, no, that's not... I mean it's simply my growth factor, I don't think music would exacerbate that, do you think that's possible?"
+    MC "No, not at all. Honoka's just teasing you."
+    "I fixed a glare in Honoka's direction, as she stuck out her tongue and scratched the back of her head."
+    BE "Haha, yeah. Just messing with ya, Naomi-chan. It's not like drinking milk would make my growth factor kick into extra, mega-powered overdrive or anything like that."
+    MC "But, hey. It seems like you're using your new height for an excellent purpose. I remember you trying to water those plants around the first day of school. You were struggling to reach them all."
+    GTS "Hehe, that is true. It's much easier to tend to them all now. I suppose if I wanted to consider it a little further, being higher up also allows me a chance to see them from a better angle."
+    GTS "That makes it easier to see them when they've all bloomed, and make sure they've been spaced out properly when they've just been planted."
+    show BE surprised
+    BE "Ooh! I just got a wicked cool idea."
+    show BE neutral
+    BE "If you get a bit taller, then you would be a wizard at making those floral displays where people plant a whole bunch of things in the ground, like an entire field's worth."
+    show BE happy
+    BE "Then when they bloom, they make something cool like a country's flag or a famous picture or even just a neat rainbow spiral!"
+    show GTS neutral
+    GTS "I've seen those before. Not in person, on a grand scale. But I know what you mean. That would be quite the project to tackle."
+    MC "If you wanted to do it I'm sure it would be great."
+    show GTS happy
+    GTS "Hehe, well, if Seichou ever decides to reserve a large amount of space for such a thing for several years, I'll let you know and perhaps the two of you can assist me in coming up with a design for it."
+    "I pointed to a group of flowers near the side closest to Naomi."
+    MC "I like these ones. What are they? It looks like a..."
+    if getSkill("Academics") > 5:
+        jump BE036_c1_1
+    else:
+        jump BE036_c1_2
+
+label BE036_c1_1:
+    MC "A chrysanthemum?"
+    GTS "Oh, yes, that's correct."
+    show GTS neutral
+    GTS "It's name comes from ancient Greek, I believe, translating to 'gold flower'. But like most flowers they've been bred and crossbred so many times that you can find so many colors that are still technically considered 'chrysanthemums'."
+    MC "I was about to say this one isn't very gold in color."
+    show GTS happy
+    GTS "Indeed. But I think they have some more gold-tinted ones on the other side of the school? It's a bit tricky keeping track of them all."
+    show GTS neutral
+    GTS "But chrysanthemums are quite old in terms of cultivating them. Over 2,000 years of history in these cute little petals. They're rather special, in a way."
+    show BE angry
+    BE "Errrrr, they are?"
+    MC "Well, 'special' in a sense, right? I know they've been used before. I've definitely read about them. I think it was..."
+    menu:
+        "Cultural History.":
+            jump BE036_c2_1
+        "Warfare History.":
+            jump BE036_c2_2
+
+label BE036_c2_1:
+    MC "Yeah, the Chrysanthemum Festival... I've never been to one, but it's a big deal on the ninth of September. People literally make tea or alcohol out of the flowers. Neither sounds particularly tasty but it's what they chose as the symbol for driving away danger."
+    MC "Or celebration, too. Festivals never really keep their initial meaning for very long do they? But, whatever excuse people will come up with to have a bit of a party. I think it's done in a few other countries too. China, for sure."
+    show GTS happy
+    $setAffection("GTS", 1)
+    GTS "Oh, you're very knowledgeable. Don't take this as me knowing every little detail about every little flower out there; but chrysanthemums were one of those flowers believed to have special properties."
+    GTS "Better health, driving out demons. All that spiritual sort of talk they tended to apply to special sigils or traditions."
+    show BE neutral
+    BE "Bwuhzat? Demons?"
+    "Honoka's head perked up suddenly, a small trail of drool visible on the side of her lips."
+    MC "We were talking about flower festivals. Not as famous as the cherry blossom one, but still a neat idea."
+    BE "Ah yes. Flower festivals. Mm. Riveting. Shame you can't really eat flowers, though."
+    GTS "Actually, every part of a dandelion is edible! Though that's technically a weed, not a flower. Though even speaking of weeds, even plants like stinging nettles can be eaten if they're just treated properly..."
+    show BE neutral
+    BE "Ah, I... I actually meant more in a 'put it in a candy bar' sense of 'edible'."
+    show GTS sad
+    GTS "Oh. I see. Well. I should return to watering these plants. They won't water themselves. I mean, rain would do it, but I don't think it's predicted for a few more days."
+    MC "I got what you meant, it's cool. Come on, Honoka. Now you've got me in the mood for a candy bar."
+    jump BE036_after
+
+label BE036_c2_2:
+    MC "Something we learned in history class. We were being taught about the Sengoku period. All those armies and generals and legendary heroes fighting for a chrysanthemum-engraved throne."
+    show BE happy
+    BE "Aw yeah. That's the good stuff. Everyone was fighting and warring just to get on the Chrysanthemum Throne! It was like a war every other year just to sit on a big chair. I mean, that was more symbolic but you're right, they made a big deal out of the sigil."
+    MC "Right, right, it's literally our Imperial Seal. Big gold flower. Kind of hard to miss now that I actually remember what it looks like."
+    MC "Ha, in fact, if I remember correctly, there was an Emperor who was exiled at one point and made his own seal based on the flower. But while the official one had sixteen petals, his had seventeen."
+    MC "He was basically saying 'Nyeh, screw your government, I'll make a better one. And mine is going to have MORE petals. Deal with that!'"
+    BE "Ooh, ooh, I know this one! Emperor Go-Daigo! I think the story about him taking on a unique seal like that is kind of a myth but I like to think it's true. Because it's a hilarious amount of pettiness."
+    $setAffection("BE", 1)
+    BE "When I become the Empress of Japan, I aspire to be that smug. I'll make a nineteen-petal seal. We're skipping right past eighteen."
+    show GTS neutral
+    GTS "Empress of Japan?"
+    MC "I'll admit that idea worries me a bit as well."
+    BE "Ha. What? Are you kidding? I'd be an excellent ruler. Nobody would be getting their butt in that throne while I'm around!"
+    show BE unique
+    BE "Unless Shiori-chan managed to sit in it first. Then nobody's ever getting her out of it, unless she grows too big and busts out of it, hehehehe."
+    show GTS sad
+    GTS "Ah, I was unaware that it was used for something so... unseemly."
+    MC "Ah. Sorry to bust the oblivious bubble. Just, kind of interested in stuff like that. Nothing's ever kept pure or wholesome for very long."
+    show GTS happy
+    GTS "I suppose that's true. Well, I'll stick to the happy, joyful flowers for the time being. I think I saw some weeds earlier that need pulling."
+    MC "Gotcha. Good luck with that. Think Honoka and I will head back and play something, then... I think she's got a craving for battle now."
+    BE "Yesss... all shall be crushed."
+    jump BE036_after
+
+label BE036_c1_2:
+    MC "An azalea?"
+    show GTS sad
+    GTS "Oh, no. Not quite. There are actually chrysanthemums. Azaleas are typically large shrubberies so you wouldn't typically see them mixed in with a variety of other flowers like this."
+    MC "Ah, nuts. Heh, it was just a guess, though. I just pulled the fanciest-sounding flower name out of my head."
+    show GTS neutral
+    GTS "Of course. I can see where you made a mistake. The basic chrysanthemum is golden in color but these are a pinkish variety which is close to a common azalea in shade."
+    show GTS happy
+    GTS "And both flowers actually have festivals dedicated to them, though I would say the chrysanthemum one is more famous, though I believe I heard azalea festivals have spread to America while others have not."
+    show GTS neutral
+    GTS "That may just be due to how easier it is to grow azaleas in their climate, though? I haven't really read up on the specifics, it's just something I've noted when passing the time learning about these."
+    show GTS happy
+    GTS "Oh, now I'm wondering if it would be possible to successfully cross-pollinate the two species. It's probably been attempted already but it would be something interesting to look into..."
+    show GTS neutral
+    GTS "Oh! I'm sorry. I've been rambling. What were we talking about?"
+    $setSkill("Academics", 1)
+    MC "Ah, heh. I don't really remember anymore? But I got a quick lesson out of it, so I can't say it was time wasted, right?"
+    show GTS happy
+    GTS "Well, according to a nobel prize-winning philosopher, 'The time you enjoy wasting is not wasted time.'"
+    show BE neutral
+    BE "Hmmm. That may be true. But that impromptu factoid burst just overloaded the amount of info I can learn in one day."
+    show BE happy
+    BE "Kei-chan, wanna head back to the dorms and just, hang out inside and watch tv or something?"
+    MC "Heh, sure. That's fine. It was good seeing you, Naomi-san. Have a pleasant day."
+    GTS "You as well."
+    jump BE036_after
+
+label BE036_after:
+    "With our impromptu discussion about flowers finished, I grabbed Honoka's hand and headed back to my room so we could hang out inside."
+    "We'd had enough outside time, it was candy and couch time."
+    jump daymenu
+
+label BE037:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

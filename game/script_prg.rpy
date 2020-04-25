@@ -10175,7 +10175,7 @@ label PRG051_c1_AE:
         MC "Everything all right?"
         AE "Perfectly fine. Do you happen to smell something by any chance?"
         MC "Smell something? Nothing outside of the usual."
-        show AE unique
+        show AE glasses
         AE "It smells like someone is wearing a really cheap cologne... {i}Noticeably{/i} cheap."
         MC "Huh. That is strange."
         "I pretended to look around and tried my hardest to act natural. For her part, however, Shiori was looking at me dead on as she peered at me in a way that let me know exactly what she was trying to say."
@@ -10595,6 +10595,7 @@ label PRG051_c1_after:
 
 label PRG052:
     scene Dorm Interior with fade
+    $setProgress("PRG", "PRG053")
     "I burst into my room, immediately grabbing a bag out my closet. I threw a few movies into it and grabbed a pair of sweatpants and a t-shirt out of my drawers. Plus socks, boxers, all that."
     "Across the room, Daichi leaned back in his chair, seeing me come in."
     show RM neutral with dissolve
