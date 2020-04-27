@@ -9645,8 +9645,7 @@ label PRG048_c1_2:
     jump daymenu
 
 label PRG049:
-    #$setProgress("PRG", "PRG050")
-    $setProgress("PRG", "PRG051")
+    $setProgress("PRG", "PRG050")
     if getFlag("PRG048_c1_1"):
         jump PRG049_c1_1
     else:
@@ -9882,14 +9881,14 @@ label PRG049_c1_1:
     "On my way back to my bed, I noticed my notebook still open with my pros and cons list showing. I tore the paper from the book and crammed it to the bottom of my trash can."
     MCT "Junk."
     "Aida came back out as I was pulling my jeans off. Her towel was gone, and she'd put her hair ties back in."
-    show PRG nude-netural with dissolve
+    show PRG nude-neutral with dissolve
     MC "All good?"
     PRG "Yeah. Hopefully all of that will dry by tomorrow."
     "The two of us climbed into bed together and I pulled the covers over us. The size of Aida's middle made covering both of us a little awkward, but going into the spoon position seemed to fix that."
     "I leaned over to my nightstand and shut off my lamp, leaving us in the dark."
 
     scene black with fade
-    play music sunset
+    play music Hallway
     PRG "Hey, Keisuke?"
     MC "Hm?"
     PRG "Thank you... for being so understanding."
@@ -9918,7 +9917,7 @@ label PRG049_c1_2:
     "It had been raining most of the day, and while I'd been studying, it had morphed into a pretty insane storm. The rain pelted my windows as I brushed my teeth and pulled my hair back for bed."
     "Coming back into my room, I checked the time."
     MCT "Dang, still early. Maybe I won't feel like a caffeine deprived zombie tomorrow."
-    "I plugged my phone in and laid down. I leaned over in the awkward ‘hand off bed so I can check my phone while it's charging' pose. As I was setting my alarm, a call came through, making my phone vibrate and shocking me out of my sleepy haze."
+    "I plugged my phone in and laid down. I leaned over in the awkward 'hand off bed so I can check my phone while it's charging' pose. As I was setting my alarm, a call came through, making my phone vibrate and shocking me out of my sleepy haze."
     "Aida's name appeared at the top. Pulling myself back together, I answered quickly."
     MC "Hello?"
     PRG "Hey... were you sleeping?"
@@ -10063,7 +10062,111 @@ label PRG049_c1_2:
 
 label PRG050:
     $setProgress("PRG", "PRG051")
-    "nyi"
+    scene Dorm Interior with fade
+    play music Schoolday
+    if getFlag("PRG048_c1_1"):
+        "I shook awake as my alarm practically blasted my eardrums. I leaned over and after sleepily swatting a few things off of my nightstand, managed to turn off my alarm."
+        "I turned over next to me. Aida was gone and in her place was a small scrap piece of paper."
+        Note "I'm gonna win!"
+        "Beside the writing on the paper was a small pair of lips drawn into a kissing shape. I smiled, imagining what was coming my way tonight."
+    else:
+        "I jolted upright at the sound of my alarm. Leaning over, I swatted at my phone a few times before I managed to hit the volume button."
+        "I laid my head back against my pillow and inhaled deeply, thinking back to last night."
+        "What had begun as a rollercoaster of an experience had turned into the promise of an amazing night tonight. And, speaking of rollercoasters, I sure as hell hoped that Aida could handle a good ride."
+    "I stood up and pulled the blinds open. The storm last night had gone, leaving a bright, sunny day in its place."
+    "I checked my phone for the time."
+    MCT "All right. I've got one hour until class. Just enough time to shower."
+    "I grabbed some clean clothes from my closet, then stopped. If I wanted to impress Aida more tonight, maybe it would be best to wait and shower before she came over."
+    "Of course, how was I to know that she would be coming over to my place? Maybe she had something else in mind entirely. Perhaps she'd want to get dinner first or something."
+    "I was starting to think letting her win wasn't the best idea when it came to planning all of this out."
+    MCT "Eh. I can always shower again."
+    "About half an hour and one shower later, I walked out of my dorm room, feeling more refreshed than I had in quite a while."
+    "After talking all of this out with Aida, my entire body just felt lighter and more at ease. In addition to that, I knew I had something special coming tonight, which made me feel even better."
+
+    scene School Planter with fade
+    "I didn't want to be too early, lest Aida run behind, so I took a few minutes to stop in the garden and breeze over my notes quickly."
+    "I felt really good on everything, but if this would help me get a better grade, and ensure that Aida would beat me to class, then I'd definitely call it a win."
+    "By the time I'd reached the end of my notes, I had around ten minutes to get to class. I zipped my notebook back into my bag and started for the classroom."
+
+    scene Classroom with fade
+    "As I entered, I noticed how easy it was to tell who had been studying and who hadn't."
+    show AE neutral with dissolve
+    "Shiori sat in her usual spot, skimming over notes lightly. Her desk was in its usual state of orderliness, and she had one notebook in front of her."
+    hide AE with dissolve
+    show FMG surprised with dissolve
+    "Akira, meanwhile, had loose papers scattered all over her desk, some of which were incredibly mangled. She was tearing through them at light speed, trying to take in as much information as she could in five minutes."
+    hide FMG with dissolve
+    "Of course, the main attraction for me wasn't in who was studying harder."
+    show PRG neutral with dissolve
+    "Aida sat in her spot, with no papers on her desk. She winked at me as I met her gaze."
+    hide PRG with dissolve
+    "The bell rang right as my butt hit the seat, and Tashi-sensei was on his feet. He traveled down each aisle of desks and passed us our exam sheets."
+    show HR neutral with dissolve
+    HR "Please return these to me once you're finished. Remember to take it slow, guys. No need to rush."
+    HR "Also, expect a bit of a curveball with some of these questions."
+    hide HR with dissolve
+    "Tashi-sensei sat back down behind his desk and we all set in."
+    "Thankfully, the first page seemed almost entirely familiar, with some simple fill in the blank questions. I could tell by the rustling of paper that most of the class seemed to be on par with me."
+    "The second page expanded a little more, with a map of the United States. I went through and labeled each state with relative ease, disregarding that I probably messed up a few of the east coast ones."
+    "The third page really raised the ceiling of difficulty, with two longer essay questions. I was never a groundbreaking writer or anything, but I still managed to meet the expectations of the questions, and answered them thoroughly."
+    "As I breezed through the fourth page, I noticed how little the other students were flipping pages now. Now, I had myself in the standard student's conundrum. Was I just doing really well, or was I putting in all wrong answers and just thinking I was doing well?"
+    menu:
+        "Go back and review the first three pages.":
+            jump PRG050_c1_1
+        "Keep going. (disabled)" if getSkill("Academics") < 5:
+            pass
+        "Keep going." if getSkill("Academics") >= 5:
+            "Ignoring the nagging in my stomach, I pressed on. It was probably best to stick to my guns on my answers, and not second guess my original answers."
+            jump PRG050_c1_after
+
+label PRG050_c1_1:
+    "Sighing, I flipped back to page one and skimmed over my answers. I felt good about the first page so I moved onto the second and stared blankly at the intimidating map."
+    MCT "Okay. Nevada is the one with the weird slant on the left side, right? And, Mississippi looks like a boot. Minnesota was the one with two pieces by the great lakes."
+    "I penciled in my replacement answers and scrubbed out the old ones with my eraser."
+    "Moving onto the third page, I reread my essays and changed a few words here and there."
+    "Then, I found myself back at the fourth page, but still didn't feel much better about my answers."
+    "As I was about to turn back to the second page and rearrange some of the states again, Shiori rose from her desk and walked to the front of the room, setting her exam on Tashi-sensei's desk."
+    MCT "Shit! She's done already? All right, you're fine. You're fine. Just keep moving."
+    jump PRG050_c1_after
+
+label PRG050_c1_after:
+    "I moved onto the fifth page and breezed through it. Most of those questions were cultural things, which I knew pretty well."
+    "I flipped onto the sixth, and thankfully last page and stared at the last question."
+    "'Name the four most popular sports in America.'"
+    "Without thinking, I wrote baseball immediately."
+    MCT "Basketball is fairly popular there, I think. And I'm guessing Football is too."
+    "I wrote those two in, but got stumped on the last one."
+    MCT "I don't think Golf is super popular there, and Canada is usually the country that comes to mind when Hockey is brought up, so it probably isn't that."
+    "After racking my brain for a solid five minutes, I still hadn't thought of anything and just wrote volleyball for my last one."
+    "Satisfied with myself, I got up and laid my paper on Tashi-sensei's desk."
+    show PRG unique with dissolve
+    "As I walked back to my desk, I noticed Aida writing feverishly under one of the essay questions."
+    "Sitting down, I thought back to the night before. Maybe if we would've just talked on the phone, she would've had more time to study and wouldn't have had to rush to finish."
+    hide PRg with dissolve
+    "I was about to curse myself for taking up too much of her time, when Aida got up from her desk and laid her paper on Tashi-sensei's desk."
+    "I released a relieved sigh, happy that she'd finished on time, and that I wouldn't be the cause of her getting a bad grade."
+    "Just before I could let myself fall into a daydream, the bell rang."
+    HR "Anyone who hasn't finished, leave your exams with me. Unfortunately for you, any questions left blank will be marked incorrect, as I'm sure you could figure out."
+    "One or two students laid the papers in front of Tashi-sensei with dejected looks on their faces. Everyone else scrambled for the door, excited to get out and lead the rest of their day on with no test anxiety hanging over their heads."
+    UNKNOWN "Ahem."
+    show PRG neutral with dissolve
+    "I turned toward the source of the throat clearing sound."
+    PRG "Um, I believe I won our contest?"
+    MC "You did. So, that means the night is ours with you at the helm."
+    PRG "Yeah, it is."
+    PRG "Well, lets both go back to our dorms and get ready. Then, we can meet by the bus stop at around five-thirty?"
+    MC "Sounds great."
+    show PRG happy
+    PRG "Perfect!"
+    show PRG neutral
+    PRG "Oh, and one more thing."
+    "Aida walked close to me and craned her neck up to my ear."
+    PRG "No telling anyone about what happens tonight, okay?"
+    MC "You've got my word. Tonight, it'll be as if no one else exists, save for you and me."
+    show PRG aroused
+    PRG "I love your way with words."
+    hide PRG with dissolve
+    "Aida kissed me on the cheek and walked happily out of the room. I followed behind her, curious of what she had in store for us."
     jump daymenu
 
 label PRG051:
@@ -10102,16 +10205,16 @@ label PRG051:
     menu:
         "Wear the lighter scent.":
             $setFlag("PRG051_light")
-            "I reached for the lighter scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a ‘scent slap to the face' sort of way."
+            "I reached for the lighter scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a 'scent slap to the face' sort of way."
             "The scent seemed to compliment my outfit quite well, and seemed to give off a loose and happy vibe."
         "Wear the deeper scent.":
             $setFlag("PRG051_heavy")
-            "I grabbed the deeper scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a ‘scent slap to the face' sort of way."
+            "I grabbed the deeper scent and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a 'scent slap to the face' sort of way."
             "Since this scent was already rather bold, I took care to apply only what was necessary. No need to alert the entire island of my presence."
             "The cologne gave off a calm and chill vibe, with just a touch of a nature smell. Seemed fitting, given that Aida could use some calmness in her life lately."
         "Wear the masculine scent.":
             $setFlag("PRG051_masc")
-            "I took the masculine scent in hand and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a ‘scent slap to the face' sort of way."
+            "I took the masculine scent in hand and, just like my father had taught me many years back, sprayed one small spray onto my neck from a slight distance. This would ensure that it was noticeable, but not in a 'scent slap to the face' sort of way."
             "The scent immediately gave off a classy and suave vibe. Just by wearing it, I felt like I could charm anyone with the blink of an eye."
             MCT "If they could see my eyes."
         "Go without cologne.":
@@ -10320,7 +10423,7 @@ label PRG051_c1_after:
     #(SHOW CG?)
     "I gasped."
     MC "You... eh, you- ah..."
-    "The girl in front of me looked otherworldly. She had on a beautiful purple dress with black tights and black flats to match."
+    "The girl in front of me looked otherworldly. She had on a beautiful purple dress with black flats and black flats to match."
     "She had a tiny, silver bracelet around one wrist, which was clasped tightly. Her hair was down, sweeping elegantly down her back. In addition, she had makeup on. At least, more than she usually wore."
     PRG "Um... how do I look?"
     "I knew what I wanted to say, but my mouth was very keen on making me look stupid today."
@@ -10849,7 +10952,7 @@ label PRG052_c1_2:
     "I jumped a bit, but then relaxed as I felt her hand come up and stroke the back of my head gently. Her other arm came around and held me against her."
     "I was starting to see what babies got out of this. Not only did her milk taste incredible, but I felt more relaxed than I had in a long time. Just laying there, sucking milk from my girlfriend as she cuddled me."
     show PRG cow-aroused
-    "ut, I would've been the biggest asshole in the world if I hogged this feeling to myself, so I took one of my hands and snaked it under Aida's belly, making contact with her still sopping wet pussy. I found her clit immediately and rubbed away at it."
+    "But, I would've been the biggest asshole in the world if I hogged this feeling to myself, so I took one of my hands and snaked it under Aida's belly, making contact with her still sopping wet pussy. I found her clit immediately and rubbed away at it."
     "I worked circles at first, then tried the spell the alphabet trick on her. Both gave me the same response. Complete, unbridled satisfaction."
     PRG "Ooooooohhh!! Keisuke!!"
     "Aida pressed my head down against her breast, making the milk shoot into my mouth faster. In turn, I picked up my pace, making figure eights across her sweet spot."
