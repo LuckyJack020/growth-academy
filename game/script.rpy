@@ -465,6 +465,10 @@ init python:
         global activenotifications
         if not persistent.enable_notifications:
             return
+        try:
+            activenotifications
+        except NameError:
+            activenotifications = 0
         if activenotifications <= 2:
             activenotifications += 1
             renpy.show_screen("notification" + str(activenotifications), img)

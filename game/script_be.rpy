@@ -6362,7 +6362,7 @@ label BE036:
     MC "Yep. it's quite a nice day isn't i-"
     show BE surprised
     BE "I am so borrrrrred!"
-    MC "Ah should have known that was coming. Well, we could go play video games if you wanted."
+    MC "I should have known that was coming. Well, we could go play video games if you wanted."
     show BE neutral
     BE "No no, I was the one who suggested we just stroll around for a bit. I have to stick to that. I don't want people thinking Honoka Inoue's a flake."
     MC "Mmm..."

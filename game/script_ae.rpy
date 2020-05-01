@@ -10557,7 +10557,7 @@ label AE049:
     MC "So, uh... how's school goin'?"
     Tako "Actually, to be honest, I don't know if I'm gonna continue with school. I'm thinking about playing the guitar and joining a band."
     MC "Really? I guess it makes sense tha-"
-    Tako "Nah, I'm just messin with ya. I'm going for an engineering degree."
+    Tako "Nah, I'm just messin' with ya. I'm going for an engineering degree."
     Tako "I mean, I'm a sick guitar player too, I just {i}really{/i} like building stuff."
     MC "Yeah, that's... cool."
     Tako "..."
@@ -14529,7 +14529,7 @@ label AE063:
     RM "I don't need luck, I have omelette rice."
     "Taking his chopsticks in hand once more, he brought his bowl up to his face as he ate. I smirked for a bit at this, before taking a look at my phone. Opening up my photos app, I began to scroll through and mull through old memories from my high school days."
     MCT "I gotta admit, he has a pretty good amount of confidence when he talks. Kind of even a bit of nonchalance."
-    MCT "Saying that Diachi was carefree couldn't be further from the truth, but..."
+    MCT "Saying that Daichi was carefree couldn't be further from the truth, but..."
     MC "Do you ever think about how your friends or peers would think of you, now that you're at Seichou?"
     "Daichi tipped his glass of orange juice up until the glass was polished off. Placing it down on the table, he took his chopsticks up once again and continued to eat."
     RM "Dunno, don't care."
@@ -14692,7 +14692,7 @@ label AE063:
         AE "Thank you."
         MC "What matters now, more than ever, is that I envision myself by your side."
     else:
-        MC "I dunno. Just all that talk from the other day's just been messin with me."
+        MC "I dunno. Just all that talk from the other day's just been messin' with me."
         MC "I've been thinking about life before I came to Seichou."
         "Shiori seemed to become a bit clammy at my statement, her presence becoming much more distant as she remained silent for a moment."
         show AE surprised

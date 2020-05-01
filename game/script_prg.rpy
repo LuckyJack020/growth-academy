@@ -10134,9 +10134,9 @@ label PRG050_c1_after:
     "I flipped onto the sixth, and thankfully last page and stared at the last question."
     "'Name the four most popular sports in America.'"
     "Without thinking, I wrote baseball immediately."
-    MCT "Basketball is fairly popular there, I think. And I'm guessing Football is too."
+    MCT "Basketball is fairly popular there, I think. And I'm guessing football is too."
     "I wrote those two in, but got stumped on the last one."
-    MCT "I don't think Golf is super popular there, and Canada is usually the country that comes to mind when Hockey is brought up, so it probably isn't that."
+    MCT "I don't think golf is super popular there, and Canada is usually the country that comes to mind when hockey is brought up, so it probably isn't that."
     "After racking my brain for a solid five minutes, I still hadn't thought of anything and just wrote volleyball for my last one."
     "Satisfied with myself, I got up and laid my paper on Tashi-sensei's desk."
     show PRG unique with dissolve
@@ -10423,7 +10423,7 @@ label PRG051_c1_after:
     #(SHOW CG?)
     "I gasped."
     MC "You... eh, you- ah..."
-    "The girl in front of me looked otherworldly. She had on a beautiful purple dress with black flats and black flats to match."
+    "The girl in front of me looked otherworldly. She had on a beautiful purple dress with black flats to match."
     "She had a tiny, silver bracelet around one wrist, which was clasped tightly. Her hair was down, sweeping elegantly down her back. In addition, she had makeup on. At least, more than she usually wore."
     PRG "Um... how do I look?"
     "I knew what I wanted to say, but my mouth was very keen on making me look stupid today."
@@ -10493,7 +10493,7 @@ label PRG051_c1_after:
     MC "Ooh. Excellent choice, mi amor."
     show PRG dress-neutral
     PRG "Mi amor?"
-    MC "I'm pretty sure it means 'my love' in spanish."
+    MC "I'm pretty sure it means 'my love' in Spanish."
     "Aida shrugged and led us happily into the restaurant."
 
     scene Sushi Restaurant with fade
@@ -10505,7 +10505,7 @@ label PRG051_c1_after:
     Hostess "Welcome, you two! Just you guys tonight?"
     MC "Yes, just us."
     Hostess "Right this way!"
-    "The hostess led us across the room to a booth in the corner"
+    "The hostess led us across the room to a booth in the corner."
     show PRG dress-unique with dissolve
     Hostess "Here we are! I'll have someone over to take your drink order in just a moment."
     "I took one look at the booth and knew that that wasn't going to play."
@@ -10628,7 +10628,7 @@ label PRG051_c1_after:
     PRG "It was just a taste test, silly. You should be good at those by now."
     MC "Nonsense. I feel as though I've been issued a challenge."
     "I slid my plate forward to her side. I took both hands and gently rubbed the rim of the plate."
-    MC "This is it, buddy. You show her what you're made of."
+    MCT "This is it, buddy. You show her what you're made of."
     "I sat back in a proper pose as Aida took a bit of my gyukatsu onto her plate. She cut just a bit off and popped it into her mouth."
     MC "Well? Is it not most excellent?"
     show PRG dress-happy

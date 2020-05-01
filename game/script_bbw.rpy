@@ -6162,7 +6162,7 @@ label BBW034_c1_after:
         "And she hadn't even noticed my haircut."
         "Should have gone that extra mile."
         jump daymenu
-    if getFlag("BBW034_c1_2") and getFlag("BBW034_c3_2"):
+    if getFlag("BBW034_c2_1") and getFlag("BBW034_c3_2"):
         MC "I'm coming back from town myself. Was buying a suit for tomorrow."
         MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
         "As I opened up my bag and pulled out the suit Alice's face drooped a little."
@@ -6253,7 +6253,7 @@ label BBW034_c1_after:
         "I was feeling pretty pleased with myself"
         "It's not every day you can impress a cultured woman with your own sense of style."
         jump daymenu
-    if getFlag("BBW034_c1_2"):
+    if getFlag("BBW034_c2_1"):
         MC "I'm coming back from town myself. Was buying a suit for tomorrow."
         MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
         "As I opened up my bag and pulled out the suit Alice's face drooped a little."
@@ -6407,7 +6407,7 @@ label BBW035:
     MCT "Is this the first time Alice has never tried to delegate a job?"
     scene black with fade
     "I passed the afternoon taking care of my homework and idling online."
-    if getFlag("BBW034_c1_2"):
+    if getFlag("BBW034_c2_1"):
         "I took the suit I had bought out of the closet and looked it over."
         "It really was too extravagant for something like a school concert."
         "I just went with my regular uniform. At least it had a collar."
@@ -6882,7 +6882,7 @@ label BBW039:
     "It was still rather light, the days were getting longer, so I kept stealing glances at Alice."
     "Out of her school uniform and in a more casual - but still fashionable and presumably costly - outfit her recent growth looked even more prominent."
     "I was especially drawn to how her belly swelled out in front of her, reaching further than her breasts and coming down over the top of her legs."
-    "She was soft all over, but her middle looked especially inviting. I wanted to lay me head down on it, like an oversized pillow."
+    "She was soft all over, but her middle looked especially inviting. I wanted to lay my head down on it, like an oversized pillow."
     show BBW casual-neutral
     BBW "..."
     MCT "Crap, she saw me staring again."
