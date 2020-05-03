@@ -14557,7 +14557,7 @@ label AE063:
     else:
         MC "Eh... fair enough."
         MCT "Wasn't exactly sure what I was expecting him to say. He doesn't really seem the type to care about... basic social needs."
-        "After polishing off the rest of my 'Breakfast', I grabbed my bag and headed out of the door for class."
+        "After polishing off the rest of my 'breakfast', I grabbed my bag and headed out of the door for class."
 
     scene Classroom with fade
     show HR neutral with dissolve
@@ -14620,7 +14620,7 @@ label AE063:
     MC "O-Oy! C'mon, not again!"
     show AE happy
     AE "Aww, why not!"
-    "We began to walk side by side, Shiori's wide hips bumping in to mine every few moments. We'd spent bit of time walking and talking, but eventually we found a nice place to rest in the hall next to the stairway."
+    "We began to walk side by side, Shiori's wide hips bumping into mine every few moments. We'd spent a bit of time walking and talking, but eventually we found a nice place to rest in the hall next to the stairway."
     "Spending some time together talking about what all we could do today, the changing of seasons, and a plethora of other things, a student walked by, eating a bun from a wrapper. For a  moment, Shiori's attention was drawn to him, and shortly after took the wrapper from his bun and dropped it on the ground."
     show AE surprised
     stop music
@@ -14705,7 +14705,7 @@ label AE063:
         AE "It's best we be realistic, Keisuke. It's fine to think about those sorts of things."
         AE "We're going to face a lot of... hostility once we leave this island."
         MC "M-Mm..."
-        MC "But still... even if I were worried about how my friends and stuff may see me after all this... I'm absolutely dedicated to seeing *us* through."
+        MC "But still... even if I were worried about how my friends and stuff may see me after all this... I'm absolutely dedicated to seeing {i}us{/i} through."
     MC "We shouldn't let worries about our past mess with that."
     show AE sad
     AE "..."
@@ -14725,16 +14725,16 @@ label AE063:
     AE "..."
     "Biting her lower lip, she motioned me closer to her after taking a quick look around."
     show AE ass
-    AE "If you're fine with *this*, then I suppose I shouldn't worry too much either."
+    AE "If you're fine with {i}this{/i}, then I suppose I shouldn't worry too much either."
     "Turning around, she flipped up her skirt and did a small bow to reveal her booty, her eyes laced with a seductive tinge as she winked to me."
     MC "Eheheh, you know it."
     "As I placed a hand on her backside, she dropped her skirt down and began to walk forward, a pep in her step and a slight, yet sensuous swing to her hips as she did. I followed alongside her, ready to continue our day together."
     jump daymenu
 
-#label AE063:
-#    "This marks the current end of Shiori's route."
-#    "Her story will be continued in a later release. Until then, feel free to explore other routes."
-#    jump daymenu_noadvance
+label AE064:
+    "This marks the current end of Shiori's route."
+    "Her story will be continued in a later release. Until then, feel free to explore other routes."
+    jump daymenu_noadvance
 
 label AE101:
     scene Gym with fade
