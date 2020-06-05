@@ -10050,7 +10050,7 @@ label PRG049_c1_2:
     PRG "Big bellies?"
     MC "Yeah, that."
     PRG "Mhm. Being that we both have bigger stomachs, we understand where the other may need more help with certain things."
-    PRG "But, we still both enjoy being independant."
+    PRG "But, we still both enjoy being independent."
     MC "Well, I'm also available to lend a hand if you need it."
     PRG "I'll be sure to remember that."
     hide PRG with dissolve

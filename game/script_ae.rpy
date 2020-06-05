@@ -10318,7 +10318,7 @@ label AE048:
     Tako "Come on, don't be such a prude. There's gotta be something that gets you goin'!"
     Tako "Who knows, maybe you're one of those people that loves wearing giant animal costumes or something!"
     show AE embarrassed
-    "She bagan maniacally cackling to herself before bringing a firm hand on her roommate's extra-jiggly, sensitive rump. Shiori-chan's back immediately straightened further than I'd ever seen it, even with her sharp attention to good posture."
+    "She began maniacally cackling to herself before bringing a firm hand on her roommate's extra-jiggly, sensitive rump. Shiori-chan's back immediately straightened further than I'd ever seen it, even with her sharp attention to good posture."
     "Her eyes went wide, pupils dilating beneath the frames of her glasses, as her mouth drops open. The softest, barely-audible moan escaped her lips. A low, guttural groan of pleasure surfacing from the deepest recesses of her brain."
     "The jiggling in her rump continues unabated for several seconds, only ceasing when she finally recovers from the unexpected thrill of her buttocks being spanked."
     Tako "Shiori? Yoohoo?"
@@ -12174,7 +12174,7 @@ label AE054:
     #Scene Morning
     scene Dorm Interior with fade
     play music Schoolday
-    "I'd woken up a bit earlier than usual, getting a pretty good amount of sleep. I made myself some breakfast as Daichi got up threw on his clothes."
+    "I'd woken up a bit earlier than usual, getting a pretty good amount of sleep. I made myself some breakfast as Daichi got up and threw on his clothes."
     show RM neutral with dissolve
     RM "Hey man, did you see the game last night?"
     MC "Erm, which... one?"
@@ -13212,7 +13212,7 @@ label AE058_c1_fail:
     show AE frown
     AE "Hmm..."
     show AE smile
-    AE "Well, I'd be easier if we had some supplementary materials."
+    AE "Well, it would be easier if we had some supplementary materials."
     AE "Wait here. I'll fetch some books."
     "She stood up from her extra wide chair, causing it to nearly tip over as her rotund ass pushed it well out of it's way. Shiori jumped a bit as the loud clack echoed through the hall."
     show AE sad
