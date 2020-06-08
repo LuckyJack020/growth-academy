@@ -15041,7 +15041,7 @@ label AE007b_c1_after:
     MC "To be honest, though, I'm not quite sure how you can... {i}exceed{/i} your expectations."
     show AE neutral
     AE "Hm?"
-    MC "Well, like, let's be honest, you're the prodigy of the school, it seems. How to you exceed the expectations put on you."
+    MC "Well, like, let's be honest, you're the prodigy of the school, it seems. How do you exceed the expectations put on you?"
     AE "Because I always strive to."
     AE "I was placed in this position for good reason, Hotsure-san. The school needs an effective leader among it's student body to keep a close eye on the goings on in this school, and I intend to fulfil my duty."
     MC "You were {i}elected{/i} to be in the position, you mean?"
@@ -15051,7 +15051,7 @@ label AE007b_c1_after:
     AE "Not when no-one wants to take on the job. It was pure serendipity that I entered Seichou at the same time there was a lack of candidates; I wouldn't have won the election due to my severe personality."
     MCT "That's... shockingly self aware."
     show AE neutral
-    AE "I was, however, highly recommended by my previous school to hold this position, however."
+    AE "I was, however, highly recommended by my previous school to hold this position."
     AE "Make no mistake, it's no stroke of my ego to say I am completely, absolutely, and wholeheartedly the best at what I do."
     show AE glasses
     AE "And I intend to always do my best."
@@ -15059,7 +15059,7 @@ label AE007b_c1_after:
     "It was, at the very least, reassuring."
     MC "Well, what about the rest of the council?"
     show AE neutral
-    AE "They were elected, or course. My situation is not the norm."
+    AE "They were elected, of course. My situation is not the norm."
     MC "Ahh, so there are things even the mighty student council president can't control, eh?"
     if getAffection("AE") > 3:
         show AE neutral-eyebrow
@@ -15091,7 +15091,7 @@ label AE007b_c1_after:
     "I shivered a bit at her words as she adjusted her glasses; at this point I'm sure a big part of her doing that is intentional."
     show AE neutral
     AE "But make no mistake, each one fell perfectly into place with what I needed them to do."
-    AE "Take Yuki, for example. How to you {i}see{/i} her?"
+    AE "Take Yuki, for example. How do you {i}see{/i} her?"
     #if you haven't met yuki
     MC "Eh... run who that is by me again?"
     show AE neutral-eyebrow

@@ -377,9 +377,10 @@ image dummy = "Graphics/ui/dummy.png"
 #Audio
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
 define audio.AE = "Audio/BGM/scene_AE.ogg"
+define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
 define audio.BE = "Audio/BGM/scene_BE.mp3"
 define audio.BBW = "Audio/BGM/scene_BBW.mp3"
-define audio.FMG = "Audio/BGM/scene_FMG.mp3"
+define audio.FMG = "Audio/BGM/scene_FMG.ogg"
 define audio.GTS = "Audio/BGM/scene_GTS.mp3"
 define audio.RM = "Audio/BGM/scene_RM.ogg"
 define audio.PRG = "Audio/BGM/scene_PRG.ogg"
@@ -582,7 +583,8 @@ init 2 python:
     eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "field",            "priority": PrioEnum.NONE, "sp": 6,     "next": "BE035", "obsflags": [],                  "conditions": []}
     eventlibrary['BE035'] = {"name": "New Club Intro", "girls": ["BE"], "type": EventTypeEnum.CORE,                                     "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
     eventlibrary['BE036'] = {"name": "Flower Gazing", "girls": ["BE", "GTS"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE037", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE037'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE037'] = {"name": "Dock Musing", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "hillroad",         "priority": PrioEnum.NONE, "sp": 7,     "next": "BE038", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE038'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}

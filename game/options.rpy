@@ -24,6 +24,7 @@ init -1 python hide:
     ## running in a window.
 
     config.window_title = u"Growth Academy"
+    config.window_icon = "Graphics/ui/window_icon.png"
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.

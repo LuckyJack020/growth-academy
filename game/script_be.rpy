@@ -6514,6 +6514,117 @@ label BE036_after:
     jump daymenu
 
 label BE037:
+    $setProgress("BE", "BE038")
+    scene Lake Road with fade
+    play music Schoolday
+    show BE happy with dissolve
+    BE "Kei-chan. You're very comfy."
+    MC "The feeling is mutual, Honoka."
+    "Having Honoka's breasts on top of my head was a bit of a pain on my neck, but the soft, comforting embrace of her bosom against my head was too good to pass up."
+    "Occasionally, Honoka squeezed them together or moved them around in a circular fashion just to make my head move around. It was quite nice being her boob-rest."
+    MC "Your back must really be sore for you to want to leave them on my head so often."
+    BE "Oh, absolutely. It's just killing me. If they get any bigger, you'll just have to carry them around all the time. It'll save me money on bras, too."
+    MC "Gosh I would hate for that to happen. What a life I would lead if I just had to follow you around and hold your breasts. It's not something that anyone at all would envy."
+    "I was fairly certain that if anyone had been around, their eyes would have rolled so hard from the thickness of our sarcasm that they'd be turned permanently cross-eyed."
+    "Honoka and I had spent the afternoon working on homework together with Aida and Shiori, just working together on some difficult assignments. It had taken longer than both of us figured."
+    "Now we hung out by the outskirts of the campus. My shoes laid beside me as I dipped my feet in the water of the small river nearby, while Honoka rested her rack on my head from behind."
+    show BE unique
+    BE "I really like this place."
+    MC "My head?"
+    show BE happy
+    BE "No, goober. This little dock. It's always so quiet, it's nice. It's not like Seichou's loud or anything, but it's just…"
+    show BE neutral
+    BE "I dunno, it's neat that there's something this peaceful right next to a big campus full of big people."
+    MC "No, I think I get it. And it's like our own little spot too."
+    "I looked up when I felt a shift in Honoka's weight, and could just barely make out her looking from one side of the bridge to the other. It was mainly my own hair that blinded me, surprisingly."
+    MC "What are you looking at?"
+    BE "Mm, I'm just considering something."
+    show BE unique
+    BE "I mean, clearly I'm 'not' done growing yet… I'm wondering if they could get big enough to fill up this entire bridge."
+    MC "The whole thing? That's certainly a lot of room to cover."
+    show BE neutral
+    BE "Mm-hm."
+    show BE happy
+    BE "I'm sure it could be done somehow! Naomi-chan's getting up there in height. If she keeps it up, she might be able to reach from one end to the other."
+    show BE surprised
+    BE "Oh no."
+    MC "What?"
+    show BE neutral
+    BE "Well. If Naomi-chan could fill this space first, that's fine. That's understandable. But what if Shiori-chan's booty gets so massive it fills this place first?!"
+    show BE sad
+    BE "Then she could stake a claim on it."
+    BE "Name it 'Matsumoto Mounds Bridge'."
+    show BE unique
+    BE "And my poor little breasts would be trying desperately to catch up to try and push her out!"
+    MC "Honoka, I'm only getting out from under your boobs to look you in the eyes. Because it's still really comfy down here. But this is important."
+    MC "Ahem. Nobody is staking a claim on this bridge besides the two of us. We'll either name it after my hair or your boobs. But if we wanted tourism here, your boobs would certainly be a better draw."
+    show BE surprised
+    BE "Tourists?! Oh no wait, that's a terrible idea. Then it will be so crowded that we won't be able to do this!"
+    MC "This? Wha-"
+    "'This' wound up being Honoka pressing her breasts into my chest so hard that I was pushed down to the ground, though thankfully I was able to catch myself and soften the blow."
+    "Honoka's lips then met mine, and I felt the swiftest touch of her tongue slide into my mouth for a moment. I closed my eyes and returned the smooch, letting my hands reach down to her waist."
+    show BE neutral
+    BE "Mmf?"
+    show BE unique
+    BE "Kei-chan, you've got all this titty on top of you, and you're reaching for my waist?"
+    "I smirked. What an easy opening to tease her."
+    MC "You didn't let me finish."
+    "My hands wandered down further, and quickly slipped up under her skirt to grab her backside instead."
+    "I'd seen her blush before. But the flushed expression on her cheeks this time was different. It grew fiercer when I squeezed her cheeks."
+    show BE surprised
+    BE "Wh-what are you doing?"
+    MC "Your talk about Matsumoto-san must have gotten me in the mood for some butt, I suppose. You know, Honoka, you have a rather cute one yourself."
+    show BE aroused
+    BE "Sh-shut up."
+    "Oh I just can't though. It's soft, too. Maybe I'll move my affection down here instead. Would you mind sitting on my head next time instead of doing a boobhat?"
+    show BE surprised
+    BE "D-Don't you dare."
+    "Honoka was moaning, and shifting around on top of me. That shifting did nothing but push her boobs more insistently into my torso, and press her rump into my palms."
+    MC "What's wrong, Honoka?"
+    show BE aroused
+    BE "Why, mmf, why aren't you playing with my boobs?"
+    MC "Because they're not the only part of you that's sexy, Honoka. I'm thinking you've forgotten that."
+    show BE happy
+    BE "Hah, you really like my butt?"
+    MC "Your butt is fantastic, yes. But not just that. Your lips…"
+    "I leaned forward, through her cleavage, and met her lips once again, kissing them a few times before pulling back."
+    MC "I swear they always taste like candy."
+    MC "Your legs are cute too. Just a nice level of fit, and smooth, and lovely."
+    "My hands went up to her head after giving her rump a quick smack, and moved some of her brunette locks behind her ears."
+    MC "Your hair's very silky. I should get some tips."
+    MC "But you know, I haven't even mentioned my favorite part about you yet, Honoka?"
+    show BE aroused
+    BE "Yeah? Go, go, go on then?"
+    "I smiled, and placed my hands on her chest."
+    MC "Your eyebrows."
+    pause 1
+    show BE surprised
+    BE "Buh?"
+    MC "I can't explain it. But I'll try. They're so full of life! Every little expression you make is so cute and they're a big reason why."
+    show BE sad
+    BE "You've gotta be kidding me."
+    MC "Why would I kid about that? Each part of you is wonderful, Honoka. Even if your eyebrows are one of the smaller pieces. Especially in comparison to these huge, soft melons you're rubbing into me."
+    show BE happy
+    BE "Nnngh, Kei-chan, you're just the sweetest. How are you so good? Gah!"
+    "Honoka grabbed onto me and rolled over so I wound up on top of her instead. My hair had gotten fairly long as of late, so as I stared into her eyes my hair formed a curtain around our heads."
+    "The fading sun still shone through my own hair and allowed us to see each other as I pressed down on her chest and took a deep breath."
+    MC "I'm only as good as you make me feel. So you must make me feel 'pretty' darn wonderful if you think I'm that incredible."
+    "Honoka smiled and pulled me into another kiss. I didn't break this one for a while. It was too nice to stop right away. It was cozy."
+    "And warm."
+    "And delicate."
+    BE "Mm. I'm not sure if making out in our 'sacred place' is a good thing or not?"
+    MC "It's certainly memorable, isn't it?"
+    show BE neutral
+    BE "Oh it is. But we can't do it 'every' time we hang out here or it'll all bleed together."
+    MC "Then we'll just have to make out other places instead."
+    show BE happy
+    BE "Yes, I like the way you think."
+    MC "Should we make a schedule? Sundays here, Mondays in the dorms, Tuesday in the garden? Or should it just be a nice random-"
+    BE "Kei-chan, just shut up and kiss me."
+    "I did just that, and we proceeded to not worry about when or where we next kissed, and just enjoyed the moment until we packed up and went back to our dorms."
+    jump daymenu
+
+label BE038:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
