@@ -341,10 +341,12 @@ init python:
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
-        if val >= 0:
+        if val > 0:
             img = "Graphics/ui/notification/" + girl + "-up.png"
-        else:
+        elif val < 0:
             img = "Graphics/ui/notification/" + girl + "-down.png"
+        else:
+            return
         showNotification(img)
 
     def getAffection(girl):

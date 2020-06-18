@@ -5532,6 +5532,7 @@ label BE031_c1_after:
     "It was incredible. I wanted to do something. Anything to repay her for this right now. But my arms were useless noodles. All the blood in my head was gone, rushed down south for more important matters."
     "When this began, I thought I could last for ages. I just wanted to let myself rest in Honoka's boobs eternally. But I underestimated how sensual it felt. I could sense the inevitable coming, and had to at least summon some strength to let her know."
     "I don't know how long it was when I finally had to pat on her boobs as fast as I could to let her know what was going on. But those minutes had been, without a doubt, marvelous. I gulped as I heard Honoka's pants reach a fever pitch, and she kept building up speed as she returned her hands to the sides."
+    show cg BE031b with dissolve
     "With her vigor renewed, I stood no chance. As soon as the first sound of a grunt left my throat, Honoka squeezed her boobs as tightly together as she could, and I came all over the inside of her cleavage. With how much there was, it was like trying to coat a barn with a few teaspoons of paint."
     "The ceiling of Honoka's room was blue. I hadn't noticed it before. But with my head hung back on the chair, it was all I could see for a while. My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
     MC "H-Honoka..."
@@ -6532,7 +6533,7 @@ label BE037:
     BE "I really like this place."
     MC "My head?"
     show BE happy
-    BE "No, goober. This little dock. It's always so quiet, it's nice. It's not like Seichou's loud or anything, but it's just…"
+    BE "No, goober. This little dock. It's always so quiet, it's nice. It's not like Seichou's loud or anything, but it's just..."
     show BE neutral
     BE "I dunno, it's neat that there's something this peaceful right next to a big campus full of big people."
     MC "No, I think I get it. And it's like our own little spot too."
@@ -6540,7 +6541,7 @@ label BE037:
     MC "What are you looking at?"
     BE "Mm, I'm just considering something."
     show BE unique
-    BE "I mean, clearly I'm 'not' done growing yet… I'm wondering if they could get big enough to fill up this entire bridge."
+    BE "I mean, clearly I'm 'not' done growing yet... I'm wondering if they could get big enough to fill up this entire bridge."
     MC "The whole thing? That's certainly a lot of room to cover."
     show BE neutral
     BE "Mm-hm."
@@ -6586,7 +6587,7 @@ label BE037:
     MC "Because they're not the only part of you that's sexy, Honoka. I'm thinking you've forgotten that."
     show BE happy
     BE "Hah, you really like my butt?"
-    MC "Your butt is fantastic, yes. But not just that. Your lips…"
+    MC "Your butt is fantastic, yes. But not just that. Your lips..."
     "I leaned forward, through her cleavage, and met her lips once again, kissing them a few times before pulling back."
     MC "I swear they always taste like candy."
     MC "Your legs are cute too. Just a nice level of fit, and smooth, and lovely."

@@ -2796,6 +2796,500 @@ label FMG022_c1_2:
         jump daymenu
 
 label FMG023:
+    $setProgress("FMG", "FMG024")
+    scene Town with fade
+    play music Schoolday
+    $setVar("FMG023bored", 5)
+    MC "You still haven’t told me what we’re going to see."
+    show FMG happy with dissolve
+    "Akira slowed her stride just slightly to turn and smile at me, framed by her ponytail that swayed in the brushing breeze."
+    FMG "I did, Kei-kun!"
+    FMG "{i}It’s a surprise.{/i}"
+    menu:
+        "Is there a new arcade?":
+            jump FMG023_c1_1
+        "Is there a new restaurant or something?":
+            jump FMG023_c1_2
+        "C’mon, just tell me.":
+            jump FMG023_c1_3
+
+label FMG023_c1_1:
+    show FMG neutral
+    FMG "Mmm, prolly not. I wouldn’t {i}complain{/i} about another one, but I feel like this town isn’t big enough for two arcades."
+    MC "Yeah, you’re right."
+    jump FMG023_c2
+
+label FMG023_c1_2:
+    show FMG neutral
+    FMG "You’re getting warmer."
+    show FMG happy
+    FMG "Or should I say, colder!"
+    MC "Huh?"
+    MC "Oh wait, is it an ice cream shop?"
+    show FMG neutral
+    FMG "Good catch!"
+    MCT "Thanks?..."
+    FMG "But it's not just any ole ice cream shop..."
+    jump FMG023_c2
+
+label FMG023_c1_3:
+    show FMG neutral
+    FMG "That'll spoil the surprise, dummy. Can't you tell I'm being mysterious?"
+    MC "Right, right, sorry. I missed my breakfast today."
+    FMG "Ooh, can't do that, Kei-kun. Most important meal of the day! I guess I'll forgive ya."
+    jump FMG023_c2
+
+label FMG023_c2:
+    show FMG happy at Transform(xzoom=-1)
+    FMG "Now, why don't we just turn the corner where we'll see "
+    show FMG surprised with vpunch
+    extend "{i}WHAT THE-{/i}"
+    "Stopped dead at the corner, she said her last two words in a high-pitched wheeze. I turned to see what could possibly merit such a response."
+    "And there it was. A massive, hulking, chattering column of locals and Seichou students stretched from almost right in front of us to most of the way down the street."
+    MC "..."
+    extend "Oof."
+    show FMG surprised at Transform(xzoom=1)
+    FMG "Yeah oof! Look at that! There aren't that many people on this whole friggin' island!"
+    MC "What's it even for?"
+    show FMG neutral
+    "I tried to crane my neck over the crowd to see whatever was at the head of it."
+    extend " But a couple giants were blocking the view, so I stepped to the side and tried again."
+    "A giant red plastic bun... on a truck... with an open side... and a dancing bear mascot... with a wizard hat... holding a sign."
+    if getSkill("Academics") > 5:
+        MC "Hey, that's... Mr. Minei's Magic Mochi."
+        $setVar("FMG023bored", getVar("FMG023bored") - 1)
+        show FMG happy
+        FMG "YES!!!"
+        MC "Yeah, I read about them a while back just browsing Wigglepedia."
+        MC "What are they doing this far north, though? Business must be booming."
+        FMG "I know! Isn't it awesome?"
+    else:
+        MC "I dunno what I'm looking at."
+        show FMG happy with dissolve
+        FMG "It's... {i}Mr. Minei's Magic Mochi!{/i}"
+        "She half-sang it, maybe half-remembering an old commercial jingle."
+        if getAffection("FMG") > 4:
+            "I just grinned for a second at the attempt before I thought of anything to say."
+        MC "You and Mr. Minei go back a ways, huh?"
+    show FMG neutral with dissolve
+    FMG "My mom and dad used to take me there every summer. I actually remember when I started going there by myself."
+    FMG "I’d finish my dumb math homework, put on my ice cream sneakers, and jog down a couple blocks to the usual spot."
+    MC "Ice cream sneakers?"
+    show FMG neutral
+    FMG "Yeah. The original ones actually had a little smiling mochi bun on the side, before I outgrew ‘em."
+    MC "So they’re like my dad’s barbecue shoes?"
+    FMG "Yeah, like that!"
+    FMG "I actually got to know him a little bit once I started going alone. The guy was like, super nice, even when there was a big line."
+    FMG "(Much like today...)"
+    FMG "Oh, and the mochi..."
+    show FMG happy
+    "A warm, wide smile washed over her face and around her drifting eyes."
+    FMG "It is the nectar of the freaking gods."
+    MC "Hm! Can't wait to try it, then."
+    FMG "Yeah."
+    pause 1
+    show FMG neutral at Transform(xzoom=-1) with dissolve
+    pause 1
+    show FMG neutral at Transform(xzoom=1) with dissolve
+    pause 1
+    "Against my better judgment, I looked around and noticed we had progressed maybe half a meter down the line."
+    MC "Yeah, there was some good stuff in Tokyo. Some, uh, not as, but a lot of combinations I wouldn't have tried otherwise."
+    FMG "Oh, I bet. That kinda place takes all types."
+    MC "Sure did."
+    FMG "You visit there often?"
+    MC "Sure do. Born and raised around Shibuya."
+    FMG "Oh wow, for real?"
+    if getAffection("FMG") > 4:
+        $setVar("FMG023bored", getVar("FMG023bored") - 1)
+        extend " Damn, right at the heart of it. Must've been a ton of cool stuff."
+        MC "Definitely. Like, uh, I used to go to the Tatsumi swim center from time to time. It was closer to Koto, so a little bit of a ride there, but all the different pools there were awesome."
+        FMG "That's where they hold some international competitions, right?"
+        MC "Yeah. So, sometimes it's closed to the public. When it is open though, I bet you'd love it."
+        FMG "Hell yeah! Imagine me in one of those competitions, that'd be cooool."
+        MC "Matter of fact, I {i}can{/i} imagine that."
+        if isEventCleared("BBW009"):
+            $setVar("FMG023bored", getVar("FMG023bored") - 1)
+            MC "Never mind certain setbacks, of course."
+            show FMG angry
+            FMG "Oh, shove it. That was one time."
+            MC "Hey, that's what I'm saying. This is your redemption arc."
+            extend "You start with a loss, then stuff happens, you train, you fuel up with mochi, filler episode or something, and boom. You win the big tournament. Classic hero's journey."
+            show FMG neutral
+            FMG "What's a hero's journey?"
+            MC "It's... uh... well, basically what it sounds like."
+            FMG "Well, when you put it that way..."
+            MC "There ya go. It all comes together."
+            FMG "Did I ever tell you, though?"
+            MC "What?"
+            show FMG sad
+            FMG "Filler episodes suck."
+            MC "They. Sure. Do."
+    else:
+        FMG "Cool."
+        MC "Mhm."
+    show FMG neutral
+    "We both stared ahead into the swelling silence of the dreamland around us, bathed in the glow of the sunlight off the high windows. We were a handful of meters farther ahead from my last glance."
+    "I was about to get sucked into dreamland for real when a familiar tower of raven-black passed us by amid the sunny glow."
+    show FMG neutral at Position(xpos=0.25), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xpos=0.8) with dissolve
+    FMG "'Sup Yamazaki-san?"
+    GTS "Ah, good afternoon! I'm glad to see I'm not the only one in our class to find this delightful little establishment."
+    show FMG sad with dissolve
+    FMG "Yeah, that sure is crazy..."
+    show FMG neutral with dissolve
+    "Indeed, Yamazaki-san took a second to dab her lips with a miniscule-looking white napkin. She placed it in a clear clamshell box in her other hand, alongside a single pale, pink mochi bun speckled with gleaming frost."
+    GTS "It was the loveliest coincidence. I was on my way back from sending a letter to my family when I happened upon a line forming at that truck. It seems I was lucky to happen by when I did. The line's quite a bit longer now."
+    MC "Uh huh. So, it's good?"
+    show GTS happy
+    GTS "Superb! The one I just ate was beautifully formed and quite flavorful."
+    show GTS neutral
+    extend " I would've offered my complements to the chef, but of course holding up the line would be quite rude."
+    FMG "Didja see the guy, by any chance? We're actually from the same city."
+    show GTS surprised
+    GTS "Oh, another wonderful coincidence! I'm afraid I didn't get a good look at him, but he was quite nice. It must be quite an honor to know him."
+    show GTS neutral
+    FMG "It was really nice, yeah... well, I don't wanna hold you up. Better to take care of that before it gets all melty."
+    GTS "As you wish. Be well, Mizutani-san, Hotsure-san."
+    MC "See you later."
+    hide GTS with dissolve
+    show FMG neutral at Position(xpos=0.5), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Transform(xzoom=1) with dissolve
+    MC "...Rave reviews."
+    FMG "I told you!"
+    "We passed another ten minutes or so inching down the sidewalk, just passing by. I stretched, twisting my torso around with my fingers spiderwebbed across the back of my head."
+    "I hope it was subtle enough, because I didn't see anyone I knew behind us, either."
+    show FMG neutral at Transform(xzoom=-1)
+    "That, however, made me suddenly, acutely aware of the sweat budding at the nape of my neck. I took my hair in my hands again and fluffed my hair, sweeping away the pocket of sun-heated air."
+    show FMG neutral at Transform(xzoom=1)
+    "Somehow along the way I succeeded in sticking a few stray locks down my collar, like biting bugs to match the heat of the afternoon. I ringed two fingers around my neck and plucked them out in one stroke."
+    MCT "..."
+    MCT "..."
+    FMG "Hmm hmm hm hm hmmmmm~"
+    MC "Oh, hey. Do you know if Mr. Minei has any relation to Minei Hiroki?"
+    FMG "Uuhhhhh..."
+    extend " no. I remember 'cuz I asked him a while back."
+    MC "I figured not, but you never know. That'd be neat."
+    FMG "Yep."
+    FMG "..."
+    extend "Hm-hm hm hm hm hm..."
+    MCT "Hold on, I recognize that tune. Dang it, what is that?"
+    FMG "{i}Hm hm hm hm, hm hm hm hm, hm hm...{/i}"
+    MCT "{i}Oh nice!{/i} That's the menu theme from Golden Glock 4!"
+    MC "Hm hmm hm hmm hm hm, hm..."
+    show FMG happy
+    FMG "Ba da da da, ba da da da, na na!"
+    MC "Byow, ba bow ba bow ba bow..."
+    FMG "Ba da da da, ba da ba da!"
+    MC "Bow ba ba bap, ba na na na na na na..."
+    FMG "Bow!"
+    MC "Pa bow!"
+    FMG "Oh my {i}God{/i}, that was a bop."
+    MC "Awesome game, too. Remember in the Drakonov Mansion level where you could shoot the chandelier to take out the crocodile guy?"
+    show FMG neutral
+    FMG "Oh yeah, and then you could drive the guy's car through the first floor, take out all the ninjas. Freakin' awesome."
+    MC "Wait, what?"
+    FMG "...What, the car?"
+    MC "Yeah! How do you do that?"
+    FMG "Crocodile guy drops his keys after you kill him, it's a little gold sprite that falls out of his pocket."
+    MC "Bruuuuuuh. I spent like a week trying to get past the stupid ninja room."
+    show FMG happy
+    FMG "Pff! Learn something new every day, huh? You should go back and show 'em who's boss."
+    MC "I sold my copy like right after high school..."
+    show FMG neutral
+    FMG "Ouch. I guess croc guy got the last laugh in the end."
+    MC "That fact haunts me in my dreams."
+    FMG "Well, at least you saw it through."
+    MC "Yep. Super important to see things through. Yep..."
+    "I looked ahead again. There was still a giant customer in the way but, just slightly, beyond my ability to describe, the truck seemed larger and more detailed than about twenty minutes ago."
+    if isEventCleared("FMGBBW001"):
+        "Across the way I noticed the Kazomazumi bakery, fairly busy itself."
+        MC "There's Kazomazumi. I guess that means we're about halfway there."
+        FMG "Oh yeah, so it is. Nice place, I went there with Alice once."
+        MC "Oh yeah, I remember that."
+        MCT "{i}Shit.{/i}"
+        show FMG neutral at Transform(xzoom=-1)
+        FMG "Huh? I don't remember you being there."
+        MC "Oh yeah, nah, I was just walking by and I happened to see you in there."
+        FMG "Oh. Well why didn't you wave? I woulda waved back."
+        MC "Iunno, you looked like you were into the conversation, didn't wanna interrupt."
+        show FMG neutral at Transform(xzoom=1)
+        FMG "Eh, alright. I guess that's fair."
+        "I nodded without a word, and tried to discreetly wipe away another thin wave of sweat."
+        MCT "I'm never knuckling under to that four-eyed nutjob again."
+    "Despite it all, it seemed like a wall of impermeable minutes and sunbleached cityscape stood yet before us, tall and thick."
+    MCT "Jeez, feet are starting to hurt..."
+    show FMG sad
+    "I saw what I suppose was my own reflection in Akira's face, a stone mask being eroded by the eon, eyelids drooping lower but the same old flat line for a mouth. She sighed."
+    MCT "Agh..."
+    extend " what to do, what to do..."
+    menu:
+        "Check your phone":
+            jump FMG023_c2_1
+        "Play a game":
+            jump FMG023_c2_2
+
+label FMG023_c2_1:
+    MCT "Wait, what is this, 2006? Why am I just standing around bored?"
+    "I grabbed my phone out of my pocket and opened up the home screen, and commenced to pick a diversion."
+    "Akira seemed to catch me out of the corner of her eye. Weary and disillusioned but not a bit lethargic, she did the same."
+    if getVar("FMG023bored") > 2:
+        $setAffection("FMG", -1)
+    hide FMG with dissolve
+    menu:
+        "Browse the internet":
+            jump FMG023_c2_1_1
+        "Text Tomoko":
+            jump FMG023_c2_1_2
+        "Play a game":
+            jump FMG023_c2_1_3
+
+label FMG023_c2_1_1:
+    "For no reason in particular I looked up the Meiji Shrine I'd visited once or twice back home."
+    extend " Then I read up on Itou Chuuta."
+    extend " Then Josiah Conder."
+    $setSkill("Academics", 1)
+    "One long, rambling string of articles later I was perusing the finer points of the Quia Emptores, only to be snapped to attention by a gasp from Akira."
+    show FMG surprised with vpunch
+    FMG "Omigod!"
+    jump FMG023_c2_after
+
+label FMG023_c2_1_2:
+    MCCell "whats up"
+    "There was about thirty seconds of radio silence, but when she started typing it came quick."
+    TomokoCell "dying to this boss again thanks to u (╬ ÒㅂÓ)"
+    MCCell "ur welcome"
+    TomokoCell "ok what r u doing?"
+    MCCell "standing in line for mochi"
+    TomokoCell "why did u kill me to tell me that"
+    MCCell "to teach you to git gud"
+    MCT "{i}Two{/i} middle finger emojis. Must be a tough fight."
+    MCCell "nah fr akira said its really good"
+    TomokoCell "whats it called"
+    MCCell "mr mineis magic mochi"
+    TomokoCell "imma need it after this (-_-)"
+    MCCell "give it a couple hours. this line is stupid"
+    TomokoCell "people r stupid"
+    MCCell "tru"
+    MCCell "want me to bring you some?"
+    "A couple minutes went by with no answer. Before I ever got one, I heard Akira suddenly gasp."
+    show FMG surprised with vpunch
+    FMG "Omigod!"
+    jump FMG023_c2_after
+
+label FMG023_c2_1_3:
+    "Ironically, my options were not narrowed down much."
+    "I considered opening up Super Dungeon Chef, but remembered I was stuck on an absolute brute of a level and chickened out."
+    "Then there was a farming sim game... and a strategy game... and like five different shoot-em-ups, three of which I'm pretty sure I never actually started."
+    "But today would not be their lucky day. I settled for no particluar reason on Hop Hop Heaven, tapping the icon to arrive at a start screen of a cartoon frog gazing yearningly, with but a single welling tear, out of a terrarium."
+    "Folksy synth banjos and harmonicas played low as I looked on the scene of that helpless amphibian, but danced on tiptoes with higher notes to the tune of the coming journey."
+    "I hit start and commenced to jabbing my finger at the tiny red X on the video ad that popped up almost instantly."
+    MCT "C'mon, piece of crap..."
+    "After accidentally clicking the link twice I succeeded in closing the ad and proceeded to the first level. It was a greater challenge than expected, being as much a rhythm game as a platformer. Nevertheless I was bounding over keyboards and chairs as well as any frog I'd met, right until I had to leap from a dog's back to a windowsill."
+    "Too early and I smashed against the flowerpot. Too late and the dog ate me. After using seven of my ten lives the game informed me I could purchase more for only ten Lillypads. I scoffed the thinly-veiled sales pitch, carrying on with three lives left."
+    "On the eighth life I fumbled the tap and once again careened face-first into the flower pot. But just a hair short of clearing it."
+    "On the ninth life I redoubled my focus and held my finger poised and arched just over the screen, ready to end the matter with a single, resolute stroke."
+    "But I held just a little too long and sent the poor frog plunging into the dog's jaws."
+    "On the last life I knew the very second I needed to leap."
+    "I had every previous obstacle down to instinct."
+    "The world around me blew away like so much dust. I was the frog. The frog was me."
+    "I lept once more onto the dog and by fractions of seconds closed in on the exact pixels where I would leap to freedom. I drew my finger back for the final strike."
+    show FMG surprised with vpunch
+    FMG "{i}Omigod{/i}!"
+    "I looked up to glimpse the cause of Akira's gasp, and then looked down to see my frog avatar being gobbled by the dog. Then came the big, round, red words: Game Over."
+    "I closed the app."
+    MC "What's going on?"
+    jump FMG023_c2_after
+
+label FMG023_c2_2:
+    $setVar("FMG023bored", getVar("FMG023bored") - 1)
+    MCT "It's a long shot, but here we go."
+    show FMG neutral with dissolve
+    MC "I spy with my little eye..."
+    extend " something... "
+    extend "green."
+    FMG "Hm?"
+    FMG "Oh. Hmmmmm..."
+    FMG "The hedge?"
+    MC "Nope."
+    FMG "Okay... "
+    show FMG neutral at Transform(xzoom=-1)
+    extend "that tree?"
+    MC "'Fraid not. You're getting warmer, though."
+    FMG "Alright, alright... uhh... "
+    extend "that other tree way down the street?"
+    MC "It's not a plant. But the tree was close."
+    show FMG angry at Transform(xzoom=1)
+    FMG "We're playing hardball, huh?"
+    show FMG sad at Transform(xzoom=-1)
+    FMG "Whew, okay, green, green, green..."
+    "She scanned, it seemed, every square inch of the street and the surrounding buildings for the faintest trace of green. She squinted, chewing the corner of her lips."
+    FMG "Um..."
+    show FMG neutral at Transform(xzoom=1)
+    FMG "That girl's shoes?"
+    MC "Still no."
+    FMG "'Kay, I give up then. What was it?"
+    MC "The guy in the print shop's sweater."
+    show FMG surprised
+    FMG "WHAT!? You cheater!"
+    MC "I didn't cheat, you can see him, can't you?"
+    FMG "Yeah, I guess, but... you're not supposed to pick something in another building!"
+    show FMG angry
+    FMG "And why's he wearing a sweater? It's {i}shorts{/i} weather for Pete's sake."
+    MC "I don't know. Maybe he's like one of those guys who wear tank tops outside in January? But in reverse."
+    FMG "Pff. You're not tough just because you're sweaty, sweaty."
+    show FMG neutral
+    MC "If only everyone were as enlightened as us."
+    MC "Anyway, why don't you try and trip me up? Bet you can think of a good one."
+    $setAffection("FMG", 1)
+    FMG "Hm, okay."
+    FMG "I spy with my little eye..."
+    FMG "...Something red."
+    MCT "The truck."
+    MC "Is it that stoplight?"
+    FMG "Mm-mm."
+    MC "Darn. Is it that guy's shirt?"
+    show FMG happy
+    FMG "Try again."
+    MC "Hmmmmmmmmmmm..."
+    MC "Is it {i}your{/i} shirt?"
+    show FMG sad
+    FMG "Dangit, I thought that'd be so obvious you wouldn't guess it."
+    MC "Uh... guess I'm just lucky. You wanna go again?"
+    show FMG neutral
+    FMG "Sure, I guess. I spy with my little eye, "
+    show FMG neutral at Transform(xzoom=-1)
+    extend "something..."
+    show FMG surprised with vpunch
+    FMG "Omigod!"
+    MC "Huh?"
+    jump FMG023_c2_after
+
+label FMG023_c2_after:
+    show FMG angry at Transform(xzoom=1)
+    FMG "That friggin' clown at the head of the line is paying with {i}coins{/i}!"
+    MC "What the... maybe they're hundreds?"
+    FMG "Nope. They're bronze. Arrrgghh, why do you have to count 'em one by one!?"
+    MC "Oi, show some respect, she's like eighty. And what if she can hear you?"
+    FMG "Oh, will I hurt her feelings? She's the one prolonging our suffering! I oughta spit on her mochi when she comes back around."
+    MC "Don't be like that."
+    MC "Revenge is a fool's game."
+    show FMG sad with dissolve
+    "She breathed a long, choked sigh."
+    FMG "You're right, that was a mean thing to say."
+    FMG "Uuuaaaaggh... we're gonna die in this line..."
+    "Despite the twisting ache creeping up my arches, I couldn't help but chuckle a little."
+    show FMG angry
+    FMG "What's so funny, Kei-kun?"
+    MC "Oh come on, it's just a long wait. Is it really getting to you that badly?"
+    pause 1
+    show FMG neutral with dissolve
+    FMG "Nope. Not getting to me at all."
+    FMG "It takes more than a little line to kill this vibe."
+    MC "I had a feeling."
+    "I flashed her a stiff thumbs-up, which she reciprocated."
+    "A few more minutes came and went, and Akira kept her chin up all the while. Every handful of moments was characterized by different little random movements. Tapping her foot, swinging her arm, patting her hips."
+    "I played along with some aimless humming, wondering what to order when it was finally our turn."
+    "With my eyes now drifting back and forth between her and the ever-closer truck, I noticed just the slightest crease of a smile on Akira's face. I didn't have to ask why."
+    FMG "Gonna be so cool to see Mr. Minei again."
+    MC "Definitely. Lotta those startup guys are all business, it'll be cool to meet one who gets to know his customers."
+    MC "Put in a good word for me?"
+    if getAffection("FMG") > 3:
+        FMG "You know you got nothing to worry about. You guys are gonna get along fine."
+    else:
+        FMG "Heh, sure, yeah."
+    MC "Heh, thanks."
+    stop music
+    "And then I looked ahead, and beheld, for the last person in front of us was taking their order."
+    "It was beautiful. I was seeing the light at the end of the tunnel."
+    "I still haven't forgotten the sight of his blessed, wrinkly Hawaiian shirt or his lovely brown khakis."
+    play music Peaceful
+    show FMG happy with dissolve
+    FMG "So what're you gonna get?"
+    MC "...Crap, I never actually thought of that. Uh, what are you getting?"
+    FMG "Blueberry."
+    "No hesitation."
+    MC "You got a favorite, I guess."
+    FMG "I was thinking about shaking it up, but nah. This is a special occasion, I'm going with my favorite."
+    MC "When was the last time you ate here?"
+    show FMG sad with dissolve
+    FMG "...Last August."
+    FMG "It just feels like it's been forever, ya know?"
+    show FMG neutral with dissolve
+    MC "I get it, yeah. Feels like an age ago since I just walked down the street I used to live on."
+    MC "Like, the week before I got the letter, I went to this one vending machine that had this super weirdly rare tea I like, and I saw this old cat, we called it Admiral Sniffsnoot, just sitting right in the"
+    Minei "Miss? Sir?"
+    show FMG surprised with vpunch
+    FMG "Omigod we're up!"
+    show FMG happy:
+        ease 0.6 xpos 0.2
+    "She dashed up to the truck and after catching herself from bouncing off the protruding counter she clutched it and stiffened up, looking the man at the counter dead in the eye."
+    show FMG happy
+    "I walked up beside her as I took out my wallet."
+    FMG "I want..."
+    show FMG neutral
+    pause 1
+    show FMG sad with dissolve
+    FMG "Where's Minei-san?"
+    Miura "Huh? Well, he's operating the original franchise on Okinawa. I'm Miura Yukito."
+    FMG "Oh..."
+    show FMG neutral
+    extend "Well, okay. Can I get two blueberry ice cream mochi, please?"
+    Miura "Of course. That'll be 300, please."
+    "She laid down the money and he took it with a polite smile, revealing the faint creases of one just about to cross into middle age; his eyes seemed not begrudged, lingering a little on Akira's face before he turned to take my order."
+    Miura "And what can I get for you, sir?"
+    MC "Uh, you guys got sweet potato?"
+    Miura "Ah, I'm sorry, we just ran out. If you'd like to wait a little bit, we can make you some more."
+    MC "Mm, nah, how about strawberry?"
+    Miura "Ah, classic!"
+    "Again I caught him glncing at Akira. He looked back at me."
+    Miura "We do have strawberry flavor, does that sound good?"
+    MC "Think so. I'll take two of those, please."
+    Miura "Absolutely! That'll be 300 too, if you please."
+    "I laid down a thousand note, took my change, and then as Miura-san retrieved our orders he spoke up."
+    Miura "By the way, and I don't mean to pry, are you Mizutani Akira?"
+    FMG "Uh, yeah. Why do you ask?"
+    Miura "Ah, good. Well, Minei-sama says hello and he hopes you're doing okay."
+    show FMG happy
+    "Akira simply melted. She sank into her shoes just a little bit, tension I couldn't even see melting away in a word. She grinned and tried to say something; it took her a couple tries through soft, involuntary little chuckles."
+    FMG "Tell him I said the same, will ya?"
+    Miura "Of course, miss."
+    "He handed us each a clear box with a napkin in one half and two vibrant blue and red buns speckled with frozen dew. We exchanged thanks and he bade us to come back again as we walked away."
+    show FMG neutral at center with dissolve
+    "Without any further ado, I picked up one of mine, the melting condensation already quite welcome on my sun-dried fingertips, and took a bite."
+    "And I could swear just then there was an actual strawberry tucked under the tender crimson mochi, for in that creamy filling was all the watery, floral sweetness of one."
+    "Indeed, probing my teeth confirmed what had felt like a few minute seeds mixed in the filling."
+    "I polished off the one in my hand, and then it occurred to me to nod to Akira as I was grabbing the second."
+    MC "Worth."
+    "She nodded, knowing."
+    FMG "No one makes it like Mr. Minei."
+    "Having apparently finished hers already, Akira swabbed and rubbed the napkin over her mouth, before plopping it in the box and pinching it shut."
+    MC "Oh, and, uh..."
+    "We walked a little slower and she turned to face me."
+    MC "It was... kinda dickish of me to downplay your stress like that earlier. Sorry."
+    FMG "Nah, it's nothing. I was just overreacting to that one lady."
+    MC "And thanks for inviting me, too."
+    if getVar("FMG023bored") > 2:
+        FMG "You’re welcome."
+        show FMG sad with dissolve
+        FMG "I don't know if I wanna do that again, though."
+        MC "No kidding, that was brutal. And... Jesus H, we were in line an hour."
+        FMG "Ugh, I feel it in my soles. Gonna need to work this out before I hit the gym."
+    else:
+        show FMG happy
+        "She slapped me in between the shoulder blades, launching chewed, wet red mochi from my lips onto the sidewalk."
+        FMG "You kidding? You're the one who made that stupid wait bearable! I'm taking you along if I ever have to go get a driver's license or something."
+        "Her eyes traced a line from my face to the wad of wet crimson on the ground."
+        show FMG surprised
+        FMG "{i}Oh shit!{/i}"
+        MC "'Sallright, just spat out some of my mochi."
+        show FMG neutral
+        FMG "Oh, phew. I mean yeah, I knew that."
+        "I crouched down and wiped up as much as I could with my napkin, grateful for the trashcan but a few meters up the street."
+    "In the end, the thing we'd waited in line so long for was gone in less than a couple minutes."
+    "Or at least, that's what I thought at first. I walked away with a new respect for magic."
+    jump daymenu
+
+label FMG024:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
