@@ -1646,7 +1646,7 @@ label GTS019:
     MC "Yeah, it's pretty peaceful today. How is the shodō going?"
     show GTS neutral
     GTS "It's going well, would you like to see?"
-    "I sat up as Naomi placed her brush down onto the inkstone while I peeked at what she had created. The Kanji made me blush a little as I read, “Dream” upon the paper before hearing a giggle above me."
+    "I sat up as Naomi placed her brush down onto the inkstone while I peeked at what she had created. The Kanji made me blush a little as I read, 'Dream' upon the paper before hearing a giggle above me."
     show GTS happy
     GTS "Sorry, but seeing you sleeping inspired me to write that."
     MC "Heh, well I'm glad I could offer some inspiration. Even when I'm sleeping."

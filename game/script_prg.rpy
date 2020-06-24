@@ -11064,7 +11064,7 @@ label PRG053:
     $setProgress("PRG", "PRG054")
     scene Dorm PRG Day with dissolve
     play music Peaceful
-    "Light streamed through Aida's window as I blinked groggily. The DVD menu music of “The Sparkling” was playing on repeat on the TV. We must've passed out before the movie had finished."
+    "Light streamed through Aida's window as I blinked groggily. The DVD menu music of 'The Sparkling' was playing on repeat on the TV. We must've passed out before the movie had finished."
     "Aida had fallen asleep right beside me, and I was turned inward, spooning her. My dick, while flaccid, was nestled comfortably between her two, billowy ass cheeks."
     "My arms were around her, holding her close. One hand, the one on top, was holding onto her belly, as if I'd been guarding my treasure during the night."
     "My other hand apparently had a different agenda, because it was clinging to her right boob, her nipple poking out from between my fingers."
@@ -11566,7 +11566,7 @@ label PRG055A:
     "I had taken no more than one step outside when a gust blasted me from behind, making my hair flap like a flag in the wind. I shook my head lightly, sending tiny bits of trimmed hair flying."
 
     scene Campus Center with fade
-    "In preparation for my “official” introduction to the wondrous art of cooking, I'd trimmed my hair much shorter this morning in hopes that I could keep my hair away as far away from the food as possible."
+    "In preparation for my 'official' introduction to the wondrous art of cooking, I'd trimmed my hair much shorter this morning in hopes that I could keep my hair away as far away from the food as possible."
     "Even still, I pulled it all back into a hair tie and gave it an extra shake for good measure. God forbid any of my baby hairs ruin an otherwise wonderful meal."
     "The weight being gone from my head brought me a sort of freeing feeling as I crossed campus. I knew that the feeling would be short lived, however, because I'd more than likely have a good portion of the weight back by dinner time."
 
@@ -11574,7 +11574,7 @@ label PRG055A:
     "Surprisingly, I didn't feel overly worried about cooking with Aida. I knew I still should but my absolute best foot forward, but at the same time, I knew that I wouldn't be ostracised if I screwed up."
     "And as for Sakura, she didn't have a mean bone in her body, so no trouble there."
 
-    scene Kitchen with fade
+    scene Cooking Classroom with fade
     show PRG neutral with dissolve
     MC "All right! No one fret! The chef has arrived!"
     show PRG happy
@@ -11666,7 +11666,7 @@ label PRG055A:
         Sakura "Well, technically, this entire training regimen is for Kodama-san, so as long as you're doing good enough to pass by, it's all good."
         show PRG worried
         "Aida looked over from her plate and to my avocado, picking up a slice as if it were a snowflake."
-        PRG "I think this is better than “just good enough to pass by.”"
+        PRG "I think this is better than 'just good enough to pass by.'"
         Sakura "Oh, I didn't mean that it was shoddy quality. All I was saying was that it's good for his very first try."
         show PRG doubt
         "Aida looked up at her."
@@ -11968,7 +11968,257 @@ label PRG055B:
     jump daymenu
 
 label PRG055C:
-    jump PRG056
+    $setProgress("PRG", "PRG056")
+    scene Dorm Exterior with fade
+    MCT "Curse my big mouth."
+    "I stopped outside of the girl's dorm and hit Aida with the 'I'm here' text. I took one last look down at my printed off recipe for chicken dumplings and sighed, cramming the paper back into my pocket."
+    "Once again, Aida had clobbered me in baseball. Every pitch I'd tried to throw was hit, resulting in at least a double from each batter. And, whereas I was giving it my all, Aida was barely even trying to score on me."
+    "Needless to say, she'd brought new meaning to the phrase 'getting shut out.'"
+    if getSkill("Art") > 4:
+        "I ran over the recipe once more in my head. I knew a bit about cooking, but compared to Aida, I was nothing. It was like comparing a fast food employee to a head chef at a five star restaurant."
+        "The main difference from that analogy, though? Fast food tastes amazing after a certain time. Maybe I'd be better waiting till after like nine o'clock to cook for her."
+    else:
+        "I yanked out my recipe again and skimmed over the text. I wasn't a groundbreaking chef by any means. In fact, I didn't doubt that I could burn water if I tried hard enough."
+        "I just hoped that Aida could find something to enjoy from my toxic sludge of a meal that I'd inevitably be serving."
+    "Aida's door creaked open, and she hurried out to meet me. The wind whipped around her like a mobile blanket, sending her hair ties flying."
+    show PRG happy with dissolve
+    PRG "Morning, hun!"
+    MC "Morning..."
+    show PRG neutral
+    PRG "You're nervous, aren't you?"
+    MC "More than a little."
+    PRG "Hey, it's me that you're cooking for. I'm sure I'll love whatever you make."
+    MC "Well, here's my dilemma. See, on one hand, you're my tender, loving girlfriend. On the other, you're also the best chef I've ever met."
+    PRG "So?"
+    MC "It's like trying to show Mizutani-san how good you are at deadlifting. If she were your average girl, it'd be somewhat impressive. But, taking into account her background, it's much more intimidating."
+    PRG "Well, if it helps, I'll make sure that I'm as open minded as possible. I remember how it was getting started, Keisuke. I wasn't always a good chef."
+    MC "Oh, really? I'd been assuming this whole time that you came out of the womb with a spatula and a frying pan in your hands."
+    show PRG aroused
+    PRG "I mean... maybe I did~"
+
+    scene Campus Center with fade
+    MC "Well, that explains a lot, as well as giving you a kickass origin story."
+    show PRG neutral with dissolve
+    PRG "Origin story?"
+    MC "Mhm! Like one of those cheesy superhero stories that talk about their past. For example, on that fateful day in... when's your birthday?"
+    PRG "May. May 5th, to be specific."
+    MC "All right. On that fateful day in May, a superheroine was born with powers unlike any seen by this earth before."
+    show PRG surprised
+    PRG "I have powers?!"
+    MC "Of course, my dear girl! Powers beyond human understanding! You have..."
+    extend " cupcake vision."
+    PRG "What?! I-I never knew!"
+    MC "You haven't noticed? You have the power to turn anything into a cupcake with just a simple glance!"
+    PRG "Oh no! Well, I guess I can never look at you again!"
+    MC "Wha? Why not!"
+    show PRG unique
+    PRG "I don't wanna turn my boyfriend into a fluffy cupcake!"
+    MC "You'd have to activate your powers for that to happen! You can look at me and not turn me into a cupcake!"
+    PRG "But, I can't risk it!"
+    "She turned her back to me and looked away."
+    show PRG surprised
+    PRG "What would I do with a cupcake boyfriend?"
+    MC "Well, you could eat me!"
+    "Aida turned back around, her hands on her hips."
+    PRG "But, then I'd have no boyfriend! What would I do then?!"
+    MC "Well, as they say, with great power comes great responsibility."
+    show PRG aroused
+    PRG "Oh, I know. I used one of my powers just now."
+    MC "That power being?"
+    "Aida cleared her throat."
+    show PRG happy
+    PRG "The amazing Kodama beam of bringing happiness to her nervous boyfriend!"
+    MC "Ah, so one of your powers is cheering me up?"
+    PRG "Mhm!"
+    MC "Well, you are pretty good at that."
+    show PRG aroused
+    PRG "T-Thank you. You have that same power, you know."
+    MC "Oh, do I?"
+    PRG "You do. Now, we'd better get to the kitchen so you can use your cooking super power!"
+    MC "Pretty sure that's your power."
+    show PRG happy
+    PRG "Well, I beat you at our game yesterday, so you can borrow my power to cook today! But, hurry! It has a time limit!"
+    hide PRG with dissolve
+    "Aida took my hand and gently tugged me down the hallways and to the kitchen."
+
+    scene Hallway with fade
+    show PRG neutral with dissolve
+    "As we turned the corner by the kitchen, we both stopped short. Voices were echoing down the hall toward us."
+    UNKNOWN "... can't do it now. I feel like such a let down, though. The two of us are a team."
+    show PRG unique
+    UNKNOWN "Yeah, I understand. I'm up for whatever, and if she wants a substitute, I'll try my hardest."
+    "Aida and I looked at each other and closed the distance, entering the kitchen."
+
+    scene Cooking Classroom with fade
+    show PRG unique at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    "Sakura sat on a stool at a nearby table, a large notebook in front of her. Strangely, it seemed that she was completely alone."
+    MC "Ah... hey, Sakura."
+    Sakura "Oh! Morning, guys! What's up?"
+    PRG "Um... were you talking to yourself?"
+    Sakura "Ah... no! What do you mean?"
+    PRG "Well, we heard-"
+    show PRG surprised
+    "From behind the counter, something metal clattered to the floor."
+    UNKNOWN "Agh! Frick!"
+    show BE sad:
+        xpos 0.75 xanchor 0.5 yanchor 0.0 ypos 1.0
+        linear 1.5 yalign 1.0
+    "Honoka pulled herself up from the floor with a pan in one hand. She set the pan on the counter and dusted herself off."
+    MC "Honoka?!"
+    show BE happy
+    BE "Eheheh... hello!"
+    show PRG unique
+    PRG "Uhm... what're you doing here?"
+    show BE neutral
+    BE "Eh... that's not important."
+    show BE happy
+    BE "Oh! I don't remember if I told you guys, but I had tryouts for a club right before our big exam."
+    MC "Yeah?"
+    BE "And... I got in!"
+    MC "Oh, sick! So..."
+    extend " which club is it?"
+    show BE neutral
+    BE "Eh... this one, Kei-chan. I'm in the cooking club!"
+    show PRG surprised
+    MC "Ah... I knew that."
+    PRG "You are, Inoue-chan?!"
+    show BE happy
+    BE "Yep! I'm a fully fledged chef of Seichou!"
+    show PRG neutral
+    MC "Ohhh. So that's what you guys were talking about."
+    show BE sad
+    BE "Oh... you heard that?"
+    MC "Hallways have one hell of an echo."
+    Sakura "I hope you don't mind, Kodama-chan. I've just... I've felt so guilty about what happened with my hand, especially with me not being able to compete."
+    Sakura "When I saw that Inoue-san had joined, I had to ask her if she'd be willing to help you, should you need it. I know how much competing means to you, because it means just as much to me. The idea of me having robbed you of that feeling... it didn't feel right."
+    Sakura "I know I kind of stuck my nose where it didn't belong, but I felt so guilty."
+    Sakura "I've barely slept a wink the past few nights..."
+    show PRG worried
+    PRG "Sakura..."
+    "Aida crossed the room and sat in a chair right next to her."
+    PRG "It was an accident, and it was more my fault than yours. If anything, I should be the one feeling guilty."
+    Sakura "But, I should've known. I should've known to check the stove and make sure the pan was cool before just grabbing it."
+    Sakura "Regardless of who's fault it was, though, we have something more important to focus on now."
+    Sakura "Inoue-san has agreed to help you in any way she can, including outright taking my place for the next competition."
+    show BE neutral
+    BE "Whoa, hold up a sec. I'll help Kodama-chan in any way that I can, but I'm not your replacement. I'm just filling in for you for a bit."
+    Sakura "Well, whatever you choose to call it, that's where we stand. The only thing left to settle is... well, you, Kodama-chan."
+    show PRG unique
+    Sakura "Inoue-san is available as a substitute, if you'd like. Have you given any thought to how you wanna approach this whole thing?"
+    PRG "I... I have."
+    PRG "On one hand, I know that it'll feel really strange to not have you by my side for a competition."
+    PRG "But on the other, I'd really like the extra experience, and since I've already missed the past few practices, I need all the time in the kitchen I can get."
+    PRG "So... if you'd be willing to work with me and compete in the next competition with me, Inoue-chan, I'd really appreciate it."
+    show BE happy
+    BE "You bet I'm willing! Let's make some delicious yum yums! However, I do have one condition that will have to be met first."
+    show PRG neutral
+    PRG "Um... okay? What is it?"
+    show BE neutral
+    BE "Simple. We're friends, Kodama-chan. Just call me Honoka."
+    PRG "O-Oh! That's it? I can do that!"
+    show PRG happy
+    PRG "But... you'll have to call me Aida, then!"
+    BE "Hmm, a counteroffer. I see."
+    BE "Hm..."
+    BE "After some very well thought out pondering and consideration, I shall accept your conditions."
+    PRG "Yay!"
+    show BE happy
+    BE "Now, now. We can celebrate when we sweep the competition away. But now, you need to show me the ropes, Aida! Show me what we're making!"
+    show PRG neutral
+    PRG "Okay. Well, first off, how experienced are you with cooking?"
+    if getFlag("HONOKA_COOKING"):
+        show BE neutral
+        BE "I wouldn't put myself anywhere near your level, but I know my way around the kitchen."
+        PRG "Good! This'll be easy, then!"
+    else:
+        show BE neutral
+        BE "Well, I've cooked a bit in the past. It has been a while though..."
+        PRG "Oh, okay. Don't worry though. Between Sakura and myself, we can get you competition ready."
+        BE "All right. I shall be the humblest of pupils."
+    "Aida worked her bag off of her and set it on the counter. She produced her familiar  prize-winning recipe notebook and flipped it open."
+    PRG "I've been thinking of making something that, while simple, takes a little work to get right."
+    BE "So, you're thinking that when we get it right, it'll really impress the judges?"
+    PRG "Exactly. I think that Gyukatsu will work perfectly."
+    MC "Isn't that what I had at our dinner date?"
+    PRG "Mhm! That's where I got the idea from, Keisuke."
+    PRG "All it really consists of is two dipping sauces, deep fried steak, and some garnish, so it shouldn't be too difficult to get right."
+    BE "Yeah! So, how do you guys usually work during a competition?"
+    PRG "What do you mean?"
+    BE "Like, do you both work on the same item together, or do you split duties?"
+    PRG "Oh! Generally, we split up. We both know our workflow really well, so we can work around each other almost seamlessly."
+    BE "Hm, okay. I'll do my best to learn your flow and work around you, then. Did you want to put in some practice right now?"
+    show PRG unique
+    PRG "Uh... now?"
+    BE "Yeah! I mean, unless you have something else you need to do."
+    PRG "Well, Keisuke and I did have something planned..."
+    MC "Don't worry about it. The competition is coming soon, and any bit of preparation you two can get will help immensely. I can always cook for you another time."
+    show BE surprised
+    BE "Wait. Kei-chan... cooking?! I wanna see that!"
+    Sakura "Hey, don't leave me out! I'd like to try your cooking, as well!"
+    menu:
+        "I can cook for all of you.":
+            jump PRG055C_c1_1
+        "My cooking is only for Aida.":
+            jump PRG055c_1_2
+
+label PRG055C_c1_1:
+    MC "I can cook for all of you. But, again. Let's save that for after you guys sweep the competition away."
+    show BE happy
+    BE "Oh, that's happening for sure. And to ensure that it does, we'd better get busy, Aida."
+    PRG "All right..."
+    MC "Well, I'll let you guys do your thing. The last thing you'd want is hair in your food."
+    BE "Oh yeah, good call."
+    "Sakura joined Honoka at the counter, and together, they thumbed through Aida's recipe book."
+    show PRG neutral
+    PRG "Do you... um, wanna hang out tonight?"
+    MC "Totally! I wanna hear all the details of today's endeavours!"
+    PRG "All right. Well... I'll see you tonight, then?"
+    MC "Yep! See you then."
+    "I kissed Aida lightly on both cheeks and headed off down the hall."
+
+    scene Hallway with fade
+    "Once I was far enough from the kitchen, I breathed a sigh. I had just gotten an unexpected gift of more practice time for my cooking, but also gained two more girls to cook for."
+    "And by the time I would actually get around to cooking, Honoka would have enough kitchen skills to know what was good and what wasn't."
+    "I whipped out my phone and started searching for other recipes to try, looking more for ones that started with the phrase 'easiest blank you'll ever make!'"
+    jump daymenu
+
+label PRG055c_1_2:
+    MC "My cooking is only for Aida. My apologies."
+    show BE angry
+    show PRG neutral
+    BE "Come ooooooonnn! I wanna see your mad skills!"
+    Sakura "I think it's kind of cute that he only wants to cook for Aida. Don't you, Inoue-san?"
+    show BE sad
+    BE "I mean, I guess..."
+    show BE neutral
+    BE "Yeah, she's right. You two are totally adorable together."
+    Sakura "See?"
+    "Honoka crossed the kitchen and put an arm around Aida's shoulders."
+    "The urge to look at their sideboobs touching was... agonizingly strong."
+    BE "Now, between you and me, Aida, Kei-chan is one of the greatest guys I know. You snagged yourself one hell of a man."
+    PRG "I know. I... I love him."
+    show BE happy
+    BE "As you should! Now, when it comes to his cooking... ehhh."
+    "Honoka waved her hand in the air sideways."
+    show PRG happy
+    MC "Ay! What's that supposed to mean?"
+    show BE neutral
+    BE "Oh, nothing. Now, if you would, Kei-chan. I have much to learn from the master of mothers, here."
+    hide BE with dissolve
+    "Aida shook her head and, standing on tiptoe, kissed my cheek."
+    show PRG neutral
+    PRG "Ignore her. I know your cooking is better than what she says."
+    MC "I know. It's just friendly shit-talking."
+    PRG "Mhm. Can we meet up later? I want to tell you how our first practice session goes!"
+    MC "Course we can! I can't wait!"
+    "I squeezed Aida's hand reassuringly, and as I let go, let my hand rub across the front of her belly."
+    MC "Had to say goodbye to them, too."
+    show PRG happy
+    "Aida grinned and turned back to the girls."
+
+    scene black with fade
+    "As I headed off down the hall, I thanked my lucky stars that I had just scored more time to practice my cooking. Maybe my creations would taste more like gourmet and less like drive-thru food."
+    jump daymenu
 
 label PRG056:
     "This marks the current end of Aida's route."

@@ -2800,28 +2800,28 @@ label FMG023:
     scene Town with fade
     play music Schoolday
     $setVar("FMG023bored", 5)
-    MC "You still haven’t told me what we’re going to see."
+    MC "You still haven't told me what we're going to see."
     show FMG happy with dissolve
     "Akira slowed her stride just slightly to turn and smile at me, framed by her ponytail that swayed in the brushing breeze."
     FMG "I did, Kei-kun!"
-    FMG "{i}It’s a surprise.{/i}"
+    FMG "{i}It's a surprise.{/i}"
     menu:
         "Is there a new arcade?":
             jump FMG023_c1_1
         "Is there a new restaurant or something?":
             jump FMG023_c1_2
-        "C’mon, just tell me.":
+        "C'mon, just tell me.":
             jump FMG023_c1_3
 
 label FMG023_c1_1:
     show FMG neutral
-    FMG "Mmm, prolly not. I wouldn’t {i}complain{/i} about another one, but I feel like this town isn’t big enough for two arcades."
-    MC "Yeah, you’re right."
+    FMG "Mmm, prolly not. I wouldn't {i}complain{/i} about another one, but I feel like this town isn't big enough for two arcades."
+    MC "Yeah, you're right."
     jump FMG023_c2
 
 label FMG023_c1_2:
     show FMG neutral
-    FMG "You’re getting warmer."
+    FMG "You're getting warmer."
     show FMG happy
     FMG "Or should I say, colder!"
     MC "Huh?"
@@ -2873,11 +2873,11 @@ label FMG023_c2:
         MC "You and Mr. Minei go back a ways, huh?"
     show FMG neutral with dissolve
     FMG "My mom and dad used to take me there every summer. I actually remember when I started going there by myself."
-    FMG "I’d finish my dumb math homework, put on my ice cream sneakers, and jog down a couple blocks to the usual spot."
+    FMG "I'd finish my dumb math homework, put on my ice cream sneakers, and jog down a couple blocks to the usual spot."
     MC "Ice cream sneakers?"
     show FMG neutral
-    FMG "Yeah. The original ones actually had a little smiling mochi bun on the side, before I outgrew ‘em."
-    MC "So they’re like my dad’s barbecue shoes?"
+    FMG "Yeah. The original ones actually had a little smiling mochi bun on the side, before I outgrew 'em."
+    MC "So they're like my dad's barbecue shoes?"
     FMG "Yeah, like that!"
     FMG "I actually got to know him a little bit once I started going alone. The guy was like, super nice, even when there was a big line."
     FMG "(Much like today...)"
@@ -3269,7 +3269,7 @@ label FMG023_c2_after:
     FMG "Nah, it's nothing. I was just overreacting to that one lady."
     MC "And thanks for inviting me, too."
     if getVar("FMG023bored") > 2:
-        FMG "You’re welcome."
+        FMG "You're welcome."
         show FMG sad with dissolve
         FMG "I don't know if I wanna do that again, though."
         MC "No kidding, that was brutal. And... Jesus H, we were in line an hour."

@@ -835,7 +835,7 @@ label BBW007:
     show BBW neutral
     BBW "I suppose I could. Hitomi and I - that's Hitomi Ogawa, daughter of the president of Ogawa Electronics - aren't on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
     MC "An Ogawa laptop for under a hundred thousand yen? That's pretty steep for some old model being unloaded-"
-    BBW "That's for an Ogawa D2300. 22” monitor, if I remember correctly."
+    BBW "That's for an Ogawa D2300. 55cm monitor, if I remember correctly."
     MC "...For 99,000?! Are you serious?"
     BBW "Completely."
     MCT "Unbelievable. That's a 170,000-yen machine, and she says she can get one for under 100K?"
