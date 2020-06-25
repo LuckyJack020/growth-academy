@@ -23,6 +23,8 @@ define Haruhiro = Character('Haruhiro', color="#C0C0C0")
 define HR = Character('Tashi-sensei', color="#C0C0C0")
 define Kanami = Character('Kanami', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
+define Minei = Character('Minei', color="#C0C0C0")
+define Miura = Character('Miura', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Mom = Character('Mom', color="#FF3300")
 define Nurse = Character('Nurse', color="#FF91DC")
@@ -164,10 +166,11 @@ image RM happy = "Graphics/minor/RM-happy.png"
 image RM sad = "Graphics/minor/RM-sad.png"
 image RM smug = "Graphics/minor/RM-smug.png"
 
-image Yuki neutral = "Graphics/minor/yuki-1-neutral.png"
-image Yuki happy = "Graphics/minor/yuki-1-happy.png"
-image Yuki sad = "Graphics/minor/yuki-1-sad.png"
-image Yuki gossip = "Graphics/minor/yuki-1-neutral.png"
+image Yuki neutral = DynamicImage("Graphics/minor/yuki-[minorsize]-neutral.png")
+image Yuki happy = DynamicImage("Graphics/minor/yuki-[minorsize]-happy.png")
+image Yuki sad = DynamicImage("Graphics/minor/yuki-[minorsize]-sad.png")
+image Yuki surprised = DynamicImage("Graphics/minor/yuki-[minorsize]-surprised.png")
+image Yuki gossip = DynamicImage("Graphics/minor/yuki-[minorsize]-gossip.png")
 
 image HR neutral = "Graphics/minor/HR-neutral.png"
 image HR annoyed = "Graphics/minor/HR-neutral.png"
@@ -374,6 +377,7 @@ image Ryoko surprised = "Graphics/minor/ryoko-surprised.png"
 image Minori neutral = "Graphics/minor/minori-neutral.png"
 image Minori happy = "Graphics/minor/minori-happy.png"
 image Minori embarrassed = "Graphics/minor/minori-neutral.png"
+image Minori sad = "Graphics/minor/minori-neutral.png"
 
 image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
@@ -502,8 +506,11 @@ init 2 python:
     eventlibrary['AE063'] = {"name": "Ballade No. 1 in G Minor", "girls": ["AE"], "type": EventTypeEnum.CORE,                   "location": "classroom",        "priority": PrioEnum.NONE, "sp": 12,    "next": "AE064", "obsflags": [],                "conditions": []}
     eventlibrary['AE064'] = {"name": "Nocturne no. 2", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "hallway",          "priority": PrioEnum.NONE, "sp": 12,    "next": "AE065", "obsflags": [],                "conditions": []}
     eventlibrary['AE065'] = {"name": "Prelude in C Minor", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "musicclassroom",   "priority": PrioEnum.NONE, "sp": 13,    "next": "AE066", "obsflags": [],                "conditions": []}
+    eventlibrary['AE066'] = {"name": "Dies Irae", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "hallway",          "priority": PrioEnum.NONE, "sp": 13,    "next": "AE066", "obsflags": [],                "conditions": []}
+    eventlibrary['AE067'] = {"name": "Troparion", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "roof",          "priority": PrioEnum.NONE, "sp": 13,    "next": "AE066", "obsflags": [],                "conditions": []}
+    eventlibrary['AE068'] = {"name": "Sonata", "girls": ["AE"], "type": EventTypeEnum.CORE,                                     "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 13,    "next": "AE066", "obsflags": [],                "conditions": []}
 
-    eventlibrary['AE066'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 13,    "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['AE069'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 13,    "next": "", "obsflags": [],                     "conditions": []}
 
     eventlibrary['AE007b'] = {"name": "Peer Gynt", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "hallway",          "priority": PrioEnum.NONE, "sp": 1,    "next": "AE008b", "obsflags": [],                "conditions": []}
     eventlibrary['AE008b'] = {"name": "Made of Stone", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 1,    "next": "AE009b", "obsflags": [],                "conditions": []}

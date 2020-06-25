@@ -11281,58 +11281,58 @@ label PRG053_c1_2:
     Takara "I'm assuming that Hotsure-san is the father, correct?"
     "I took the phone from Aida's hand and held it a little closer to me."
     MC "Yes, I am."
-    TAKARA "Well, I definitely applaud you, Hotsure-san. There are very very few men your age who would be willing to stick around in a situation like this."
-    TAKARA "You'll forgive me for being forward, but I have to ask. Do you love my daughter?"
+    Takara "Well, I definitely applaud you, Hotsure-san. There are very very few men your age who would be willing to stick around in a situation like this."
+    Takara "You'll forgive me for being forward, but I have to ask. Do you love my daughter?"
     MC "I do. No question."
-    TAKARA "And Aida. Do you love Hotsure-san?"
+    Takara "And Aida. Do you love Hotsure-san?"
     $setAffection("PRG", 1)
     PRG "I do! I love him so much!"
-    TAKARA "Then, that's all I need to know. If you two love each other, then I know in my heart that you will make fantastic parents."
+    Takara "Then, that's all I need to know. If you two love each other, then I know in my heart that you will make fantastic parents."
     show PRG nude-neutral
     PRG "T-Thank you, Mom. I-Is dad awake? I'd like to tell him too."
-    TAKARA "He isn't right now, honey. But, I'll be certain to tell him when he wakes up. I'd be ready for a phone call though. You know how excitable he is."
+    Takara "He isn't right now, honey. But, I'll be certain to tell him when he wakes up. I'd be ready for a phone call though. You know how excitable he is."
     PRG "I-I know..."
-    TAKARA "Now, I expect you to send me an ultrasound photo, if you get your hands on one. I want to see my grandchild!"
+    Takara "Now, I expect you to send me an ultrasound photo, if you get your hands on one. I want to see my grandchild!"
     show PRG nude-happy
     PRG "I have one. I'll send it!"
-    TAKARA "Wonderful. Now, does your factor affect your baby in any way?"
+    Takara "Wonderful. Now, does your factor affect your baby in any way?"
     show PRG nude-neutral
     PRG "It doesn't affect anything about them, but it-"
-    TAKARA "Wait... them?"
+    Takara "Wait... them?"
     show PRG nude-unique
     MCT "Uh oh."
     PRG "Y-Yes. My factor also gives me a much higher chance of having more than one baby at a time. I-It's almost a certainty."
-    TAKARA "So, how many are you having, then?"
+    Takara "So, how many are you having, then?"
     PRG "...Five."
-    TAKARA "... Oh my."
+    Takara "... Oh my."
     PRG "I-I know. The school is going to be helping me with most of the bills, so I'll be taken care of financially."
-    TAKARA "But still... five babies."
+    Takara "But still... five babies."
     PRG "I was... really scared too at first, but..."
     show PRG nude-doubt
     PRG "But, I'm going to be the absolute best mom I can be to my babies. No matter what it takes."
-    TAKARA "Aida?"
-    TAKARA "I've never been more proud of you."
+    Takara "Aida?"
+    Takara "I've never been more proud of you."
     show PRG nude-surprised
-    TAKARA "I have no doubt in my mind that you will be a fantastic mother. No doubts at all."
+    Takara "I have no doubt in my mind that you will be a fantastic mother. No doubts at all."
     show PRG nude-unique
     PRG "M-Mom..."
-    TAKARA "May I ask you something out of complete curiosity, dear?"
+    Takara "May I ask you something out of complete curiosity, dear?"
     PRG "S-Sure?"
-    TAKARA "How are you handling the... size increase? I'm sure carrying five babies around has changed a few things."
+    Takara "How are you handling the... size increase? I'm sure carrying five babies around has changed a few things."
     PRG "I was a little self conscious of it at first, but I'm doing okay with it now. M-My factor also affects how much I grow during my pregnancy, so I..."
     PRG "I'm a little big..."
-    TAKARA "It's to be expected, honey. I gained almost ninety pounds when I was pregnant with you. So, don't let it get to you. If anything, be proud. You're a mom now, honey."
+    Takara "It's to be expected, honey. I gained almost ninety pounds when I was pregnant with you. So, don't let it get to you. If anything, be proud. You're a mom now, honey."
     show PRG nude-neutral
     PRG "I know. Keisuke tells me that all the time."
-    TAKARA "Told you he was a good guy."
-    TAKARA "Well dear, I hate to run, but I've got breakfast going for your father. Give me a call again really soon, okay honey?"
+    Takara "Told you he was a good guy."
+    Takara "Well dear, I hate to run, but I've got breakfast going for your father. Give me a call again really soon, okay honey?"
     PRG "I will, Mom. A-And thank you."
-    TAKARA "Anytime, honey. And, Hotsure-san?"
+    Takara "Anytime, honey. And, Hotsure-san?"
     MC "Yes?"
-    TAKARA "You're a very nice young man. You're the perfect fit for my daughter."
+    Takara "You're a very nice young man. You're the perfect fit for my daughter."
     MC "Thank you, ma'am."
     PRG "I love you, Mom."
-    TAKARA "Love you too, honey. Bye, now."
+    Takara "Love you too, honey. Bye, now."
     "Aida hung up the phone. We both let out a collective sigh."
     PRG "..."
     MC "Your mom is awesome."
@@ -11395,7 +11395,9 @@ label PRG053_c1_2:
     jump daymenu
 
 label PRG054:
+    #progress set through choices
     scene Campus Center with fade
+    play music Busy
     "I shielded my eyes as I strolled into the main courtyard. It was unseasonably warm, with heavy sunshine cascading over the school. The kind of weather that would kill an eternal vampire, such as myself."
     "I slammed my bag down on a bench and plopped down beside it, popping the top off of the soda I'd purchased from the cafeteria. I took a long sip and relished the feeling of the crisp, sweet drink hitting my stomach and iceboxing me from the inside out."
     "Stretching back on the bench, I flipped my hair back, letting the nearly nonexistent breeze cool my forehead."
@@ -11449,13 +11451,13 @@ label PRG054:
     PRG "I-I... I don't know. I don't want to stress myself doing this alone, but I really want the experience. But, I also don't know if I feel comfortable working with someone new."
     PRG "Sakura and I have spent so much time in the kitchen together. It'd feel weird cooking with anyone else."
     menu:
-        "Convince her to skip the competition.": #(If chosen, the next scene will be PRG55A)
+        "Convince her to skip the competition.":
             $setProgress("PRG", "PRG055A")
             jump PRG054_c1_1
-        "Convince her to do it alone.": #(If chosen, the next scene will be PRG55B)
+        "Convince her to do it alone.":
             $setProgress("PRG", "PRG055B")
             jump PRG054_c1_2
-        "Convince her to find a partner.": # (If chosen, the next scene will be PRG55C)
+        "Convince her to find a partner.":
             $setProgress("PRG", "PRG055C")
             jump PRG054_c1_3
 
@@ -11561,6 +11563,7 @@ label PRG054_c1_3:
 
 label PRG055A:
     $setProgress("PRG", "PRG056")
+    play music Schoolday
     scene Dorm Exterior with fade
     "The vigorous autumn breeze was a welcome change from the literal fiery hellscape that had overtaken the campus the day before."
     "I had taken no more than one step outside when a gust blasted me from behind, making my hair flap like a flag in the wind. I shook my head lightly, sending tiny bits of trimmed hair flying."
@@ -11770,8 +11773,8 @@ label PRG055B:
     MC "Excuse me. Could I have a look at that Dragon's collectors box, please?"
     "The cashier nodded and unlocked the case, handing me the box."
     "Even though I wasn't a huge card collector myself, just the ads on the box made me want this for a collection of my own."
-    "Not only did the pack include a card of every single player from their first season to present, but each one was also signed and certified as 100% legit."
-    "I flipped the price tag over, expecting a number in the 6 figure area, but was instead greeted with a ¥6000 tag."
+    "Not only did the pack include a card of every single player from their first season to present, but each one was also signed and certified as 100%% legit."
+    "I flipped the price tag over, expecting a number in the 6 figure area, but was instead greeted with a 6000 yen tag."
     MCT "Well, good thing the Dragon's aren't super popular."
     MC "I'll take this. Is it cool if I leave this at the counter while I look around a bit?"
     Cashier "No problem. I'll bag this up for you."
@@ -11970,6 +11973,7 @@ label PRG055B:
 label PRG055C:
     $setProgress("PRG", "PRG056")
     scene Dorm Exterior with fade
+    play music Schoolday
     MCT "Curse my big mouth."
     "I stopped outside of the girl's dorm and hit Aida with the 'I'm here' text. I took one last look down at my printed off recipe for chicken dumplings and sighed, cramming the paper back into my pocket."
     "Once again, Aida had clobbered me in baseball. Every pitch I'd tried to throw was hit, resulting in at least a double from each batter. And, whereas I was giving it my all, Aida was barely even trying to score on me."
@@ -12044,7 +12048,7 @@ label PRG055C:
     scene Hallway with fade
     show PRG neutral with dissolve
     "As we turned the corner by the kitchen, we both stopped short. Voices were echoing down the hall toward us."
-    UNKNOWN "... can't do it now. I feel like such a let down, though. The two of us are a team."
+    UNKNOWN "...can't do it now. I feel like such a let down, though. The two of us are a team."
     show PRG unique
     UNKNOWN "Yeah, I understand. I'm up for whatever, and if she wants a substitute, I'll try my hardest."
     "Aida and I looked at each other and closed the distance, entering the kitchen."
