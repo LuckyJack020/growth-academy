@@ -4141,7 +4141,7 @@ label PRG026_c1_1:
     scene Classroom with fade
     #[SCENE CHANGE CLASSROOM_DAY]
     "The classroom was bare as we walked in. Out of habit, Aida took her seat and I proceeded to hover next to her, butterflies fluttering about in my stomach as we both anxiously awaited our first classmate's arrival."
-    show PRG angry at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG sad-2 at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Mmph!"
     MC "You okay?"
     PRG "F-Fine! I just... I'm not used to sitting down... with this here."
@@ -11569,12 +11569,12 @@ label PRG055A:
     "I had taken no more than one step outside when a gust blasted me from behind, making my hair flap like a flag in the wind. I shook my head lightly, sending tiny bits of trimmed hair flying."
 
     scene Campus Center with fade
-    "In preparation for my 'official' introduction to the wondrous art of cooking, I'd trimmed my hair much shorter this morning in hopes that I could keep my hair away as far away from the food as possible."
+    "In preparation for my 'official' introduction to the wondrous art of cooking, I'd trimmed my hair much shorter this morning in hopes that I could keep my hair as far away from the food as possible."
     "Even still, I pulled it all back into a hair tie and gave it an extra shake for good measure. God forbid any of my baby hairs ruin an otherwise wonderful meal."
     "The weight being gone from my head brought me a sort of freeing feeling as I crossed campus. I knew that the feeling would be short lived, however, because I'd more than likely have a good portion of the weight back by dinner time."
 
     scene Hallway with fade
-    "Surprisingly, I didn't feel overly worried about cooking with Aida. I knew I still should but my absolute best foot forward, but at the same time, I knew that I wouldn't be ostracised if I screwed up."
+    "Surprisingly, I didn't feel overly worried about cooking with Aida. I knew I still should put my absolute best foot forward, but at the same time, I knew that I wouldn't be ostracised if I screwed up."
     "And as for Sakura, she didn't have a mean bone in her body, so no trouble there."
 
     scene Cooking Classroom with fade
@@ -11595,7 +11595,7 @@ label PRG055A:
     show PRG unique
     PRG "To be fair, I probably should've mentioned that I was heating up the pan..."
     Sakura "Now, don't you go taking the blame for my not paying attention! If I would've been watching, I would've clearly seen you heating it. But, I wasn't, so here I am!"
-    MC "She does have a point, Aida. Don't beat yourself up over it. Besides. What's done is done."
+    MC "She does have a point, Aida. Don't beat yourself up over it. Besides, what's done is done."
     PRG "Y-You're right. Sorry."
     show PRG neutral
     PRG "So! Are you ready to get cooking, Keisuke?"
@@ -11692,7 +11692,7 @@ label PRG055A:
     Sakura "Very. Thank you."
     show PRG neutral with dissolve
     Sakura "Now then, for the middle course, I wanted to have a bit of a challenge for you, Kodama-san, so I want you to try this next dish completely solo. Hotsure-san isn't allowed to assist for this course."
-    "I stepped out of the kitchen area, leaving Aida behind the counter. But, she looked ready to chef up a storm of epic proportions."
+    "I stepped out of the kitchen area, leaving Aida behind the counter. She looked ready to chef up a storm of epic proportions."
     Sakura "Okay. You'll be making Kitsune Soba."
     PRG "Okay... hot or cold?"
     Sakura "Mmm... hot."
@@ -11712,7 +11712,7 @@ label PRG055A:
     "As the tofu began to really heat up, she added soy sauce and sugar to it, which gave the tofu a sort of caramelized look."
     "Before the tofu could burn, Aida retrieved some shiitake mushrooms from the fridge and plopped a few into the broth. Taking a spoon in one hand, and a pair of tongs in the other, she worked both the pan and pot simultaneously."
     MC "Whoa."
-    Sakura "Girls got mad skills, as I'm sure you know."
+    Sakura "Girl's got mad skills, as I'm sure you know."
     "Her skills in the kitchen were impressive, no doubt. What was more mind blowing for me was how easily she could work around her belly. Her arms were stretched out past her bulk, so she wouldn't burn herself, and she leaned forward slightly to get her boobs out of the way."
     "From the way she was standing, she had her legs spread apart a bit so her belly could hang between them comfortably."
     "Finally, Aida took a pack of soba noodles and laid them gently in the pot. They saturated quickly and sank in. Taking her spoon, she stirred every so often, while still working the now nearly finished tofu."
@@ -11812,7 +11812,7 @@ label PRG055B:
     AE "Yes. Well, I reckoned that she'd be all right after a bit of time had passed."
     MC "Yeah, she picked herself up pretty quickly. But, your pep talk did wonders, too."
     AE "Bah. I was simply speaking the truth. Though, I am pleased that I could help in some way."
-    AE "At any rate, give her my best"
+    AE "At any rate, give her my best."
     MC "You've got it."
     hide AE with dissolve
     "Shiori nodded and turned to the Warblade figurines, browsing across the shelves and examining a unit here and there."

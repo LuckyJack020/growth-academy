@@ -37,6 +37,7 @@ define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0")
 define Takara = Character('Takara', color="#C0C0C0")
 define Tako = Character('Tako', color="#ce9b50")
 define Tomoko = Character('Tomoko', color="#FF3300")
+define TomokoCell = Character('Tomoko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
 

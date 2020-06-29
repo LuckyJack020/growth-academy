@@ -10617,7 +10617,7 @@ label AE049:
     MC "...What?"
     Tako "What do you mean 'what'? I wanna know if you two got it on. If you hit that dank tush, my boy."
     MC "I-I don't-"
-    Tako "Ay, ay, dude... I'm just playin. I know you didn't."
+    Tako "Ay, ay, dude... I'm just playin'. I know you didn't."
     "Her usually playful and goofy grin resurfaced, but in my current state of mind it seemed less like a gesture of friendliness and more like an open insult."
     Tako "Nah, with that weak stutter and unreliable personality, I doubt you've even had sex yet."
     MC "That's none of your business!"
@@ -11751,7 +11751,7 @@ label AE052:
     show AE sad
     AE "I promise I won't overload you with anything expensive."
     MC "Don't worry about it!"
-    MC "C'mon, lets head back down. Sun's going down."
+    MC "C'mon, let's head back down. Sun's going down."
     show AE neutral
     AE "Right."
     "Taking the lead, I held the door open for Shiori to enter. Giving her a kindly smile, she reciprocated, and headed down into the stairway."
@@ -12566,7 +12566,7 @@ label AE055:
     show AE surprised
     AE "O-Oh!"
     "I patted her round bottom like a pillow and closed my eyes as I rested on her legs. Shiori, undoubtedly, was a bit flustered by the situation, and yet she didn't object. Perhaps she too got a bit of enjoyment out of it as well."
-    MC "How you doin back there?"
+    MC "How you doin' back there?"
     show AE embarrassed
     AE "Um... Perhaps you can lay on my lap instead?"
     MC "Huh? Is it uncomfortable?"
@@ -14809,9 +14809,9 @@ label AE064:
     MC "Anything you can tell me about?"
     if getAffection("AE") > 35: #~3/4
         show AE sad
-        AE "It's just... well... I've been looking for a letter for a while"
+        AE "It's just... well... I've been looking for a letter for a while."
         MC "A letter?"
-        "Nodding, Shiori seemed to twiddle her fingers a bit, not dissimilar to a way in which I'd seen with Aida."
+        "Nodding, Shiori seemed to twiddle her fingers a bit, not dissimilar to a way which I'd seen with Aida."
         AE "Yeah, one from my mentor."
         MC "Ah, the guy who taught you how to play piano, right?"
         AE "Right. He said that he would be sending me one... I'd like to know how he's doing."
@@ -14835,7 +14835,7 @@ label AE064:
         show AE surprised
         AE "N-No, I mean... I could be, but it's not likely. My luck isn't THAT bad so consistently."
         MC "Eheh, yeah, fair, fair."
-    "We spent some time quietly enjoying eachothers company, then, however, it seemed to be disturbed by a somewhat sudden change in tone between us as Shiori looked down towards her hand."
+    "We spent some time quietly enjoying each other's company; then, however, it seemed to be disturbed by a somewhat sudden change in tone between us as Shiori looked down towards her hand."
     show AE sad
     AE "So, I'd been thinking about what we'd talked about the other day."
     MC "Oh yeah? What about?"
@@ -14865,7 +14865,7 @@ label AE064:
         MC "Well, you have the free will to decide that, don't you?"
         show AE surprised
         AE "A-..."
-        "Shiori seemed surprised that I brought on of her own personal talking points back to her. She seemed taken a back at first, but then she seemed to think over what I said."
+        "Shiori seemed surprised that I brought one of her own personal talking points back to her. She seemed taken aback at first, but then she seemed to think over what I said."
         AE "I... I hadn't..."
         $setAffection("AE", 3)
         show AE neutral
@@ -14896,8 +14896,8 @@ label AE064:
     MC "Aww, well hey now, I thought I was special. Here you are swinging your booty for the whole school~!"
     AE "That is {i}not{/i} funny."
     show AE happy
-    "I started to chuckle, but I kept my eyes trained on Shiori to see if she was being completely serious or not; as despite her more recent laxity, I *still* couldn't tell sometimes. I breathed a sigh of relief as I saw Shiori start to giggle to herself."
-    MC "Ehehe, s-sorry, I was just playin."
+    "I started to chuckle, but I kept my eyes trained on Shiori to see if she was being completely serious or not; as despite her more recent laxity, I {i}still{/i} couldn't tell sometimes. I breathed a sigh of relief as I saw Shiori start to giggle to herself."
+    MC "Ehehe, s-sorry, I was just playin'."
     AE "Pssh. I know your humor by now."
     MC "But still, if you're having problems with your skirt being blown up by the wind, have you been trying to find ways to fix it?"
     show AE angry
@@ -14905,7 +14905,7 @@ label AE064:
     MC "Yeesh. That desperate, huh?"
     AE "Do you have any bright ideas?"
     MC "Pants-?"
-    MC "As *soon* as that left my mouth I realized just how dumb that was."
+    MC "As {i}soon{/i} as that left my mouth I realized just how dumb that was."
     show AE smile
     AE "Mmmhm."
     MC "How has the whole, y'know, sensitivity thing going?"
@@ -14947,7 +14947,7 @@ label AE064:
     MC "Did you... have you been acting anxious lately just because of the postal issues, or this too?"
     AE "...This too."
     MC "Wow, okay, um..."
-    "I was extremely unsettled in this moment, and completely unsure of what to say. But still; I had absolutely no intention of just leaving Shiori hanging like that."
+    "I was extremely unsettled in this moment, and completely unsure of what to say. But still, I had absolutely no intention of just leaving Shiori hanging like that."
     MC "You know what? I think it'd be a good idea for the two of us to just spend some time to wind down a bit, yeah?"
     show AE surprised
     AE "Wind down?"
@@ -15150,7 +15150,7 @@ label AE065:
     MC "Tsh... goddamn. He hit you?"
     show AE neutral
     AE "Never."
-    AE "It missed by a wide margin on purpose, just so that it shook me up. Father was spiteful and cold towards me, but he's not enough of a coward to hit his own daughter... to my suprise."
+    AE "It missed by a wide margin on purpose, just so that it shook me up. Father was spiteful and cold towards me, but he's not enough of a coward to hit his own daughter... to my surprise."
     show AE sad
     AE "Mother was furious for it, though. Screamed at him until the middle of the night."
     AE "When I was crying in my bed, though, she came to me. Told me why he was mad, and reassured me that he loved me, and gave me a tip for life."
@@ -15280,14 +15280,14 @@ label AE066:
     Yuki "Wayduh!"
 
     scene black with fade
-    "I nodded and turned to go and walk towards the courtyard; hopefully in time to catch Shiori before she could leave."
+    "I nodded and turned to go and walk towards the courtyard, hopefully in time to catch Shiori before she could leave."
 
     scene Campus Center with fade
     stop music
     Hamikawa "Oh, bite me! You think I give two shits?!"
     MC "Huh?"
     #hamikawa angry
-    "I craned my head foreward and stood on my toes to get a better look at the scene unfolding before me in the distance."
+    "I craned my head forward and stood on my toes to get a better look at the scene unfolding before me in the distance."
     "Shiori was visibly shaken to the core when talking to this student, as though she'd seen a ghost. She had shrunken back, and was visibly struggling to find a response."
     "Meanwhile, the student she was talking with was absolutely livid. She was tall, admittedly fairly pretty, and I'd be willing to say she seemed to have a lot of class granted it's all third."
     show AE sad with dissolve
@@ -15333,7 +15333,7 @@ label AE066_c1_2:
     #hamikawa neutral
     Hamikawa "Are you supposed to be her boyfriend or something?"
     MC "Yes, I am."
-    "She seemed put of by the situation, but it seems like my straightforward and calm demeanor at least de-escalated the situation a bit."
+    "She seemed put off by the situation, but it seems like my straightforward and calm demeanor at least de-escalated the situation a bit."
     MC "I'm sorry, ma'am, but you sounded really upset."
     Hamikawa "That obvious, huh?"
     show AE sad
@@ -15368,13 +15368,13 @@ label AE066_c1_2:
     "She looked over to Shiori, who herself had given a pleading, sorrowful look to Hamikawa wordlessly before casting her eyes down to her feet; a sign of defeat I'd rarely seen in Shiori. In response, Hamikawa merely pursed her lips before exhaling in frustration and shaking her head."
     #ha neutral
     Hamikawa "I'm... someone who has better things to do with my time. Standing here and arguing about nothing is pointless."
-    MCT "Something was different about that. While it could just be seen has her being rash and dismissive... I feel like she just helped Shiori out for some reason."
+    MCT "Something was different about that. While it could just be seen as her being rash and dismissive... I feel like she just helped Shiori out for some reason."
     "She then turned and began to briskly walk away."
     if getSkill("Art") > 20 and getSkill("Academics") > 10:
         $setFlag("AE066_pass")
         MCT "Something seems wrong here. Like there's a veil of secrecy and discretion that usually isn't present unless Shiori..."
         "In a quick flash of mental associations, I began to piece the reality of the situation together in my head. Blindly, off of the assumption I {i}thought{/i} may have been true..."
-        "I took a leap foreward."
+        "I took a leap forward."
         MC "Wait, Hamikawa-san."
         Hamikawa "Ehh? 'Hell do you want?"
         MC "I'm... sorry to hear about your home situation. But... I think you and I both know that Shiori has had it rough too. Maybe differently from you, maybe not, but the point is the two of you share your pain in common."
@@ -15475,7 +15475,7 @@ label AE067:
         AE "From the bottom of my heart... thank you."
         MC "Eheh, well, what can I say."
         "With a smile on her face Shiori placed one of her hands on mine on the railing. While it was certainly a breath of fresh air, her smile slowly faded as she continued to look out into the distance."
-        MC "So, what's going on. Maybe I can help again."
+        MC "So, what's going on? Maybe I can help again."
     show AE sad
     AE "...I'm trapped."
     "Shiori's words elicited a sense of worry from my as they left her mouth, causing the hairs on the back of my neck to prickle up as I tried to understand what she meant."
@@ -15488,7 +15488,7 @@ label AE067:
     show AE sad
     AE "I... at least I've always thought..."
     AE "But now it just seems like destiny taking its course."
-    AE "And if I'm wrong about this... what other possible acts of “denying fate” am I wrong about?"
+    AE "And if I'm wrong about this... what other possible acts of 'denying fate' am I wrong about?"
     "I wasn't sure what all she was talking about, but at the very least I think I understood the crux of her concerns."
     MC "Shiori... I'm sorry that you are having to go through with this, but... if there's anything I can do to help, know that I always will."
     AE "I don't know... I just don't know any more."
@@ -15508,7 +15508,7 @@ label AE067:
     show AE sad
     AE "...Tch-Gch..."
     "Showly, Shiori's eyes closed as she began to shudder quietly, her cries, though soft, hit my ears as though the howling wind around us were nothing more than a silent murmur."
-    "I took my hand and rubbed it against her cheek. Her face was beat red, and blistering hot. I wiped away a warm stream falling from her eye as I pulled her head in close to my chest."
+    "I took my hand and rubbed it against her cheek. Her face was beet red, and blistering hot. I wiped away a warm stream falling from her eye as I pulled her head in close to my chest."
     MC "It's okay, it's okay now..."
     "We stood there as I began to rock back and forth, Shiori-chan letting loose into my school uniform. Time passed on as I held her close, lifting her head up to meet my eyes."
     AE "Th-thank you..."
@@ -15521,14 +15521,14 @@ label AE067:
     MC "Shiori..."
     "I wanted to say something more, something that would assure her completely that everything was okay, and that I was here for her, but instead I was at a loss for words."
     "Shaking my head, I held tightly on to her hand as I nodded in reassurance."
-    MC "Lets head in."
+    MC "Let's head in."
     "Shiori quietly nodded. I held her hand as she walked with me to the door to the stairwell."
     MC "You should come to my dorm to just unwind with me at some point! Get your mind off of all of this craziness around us."
     show AE surprised
     AE "I... yes. Your dorm."
     show AE smile
     AE "I must say, you've been very helpful in keeping my mind off of all of this."
-    MC "Just doin what I can."
+    MC "Just doin' what I can."
     show AE neutral
     AE "...Hm."
     "As we made our way into the stairwell, the cold wind from the evening air subsided as the door closed from behind us."
@@ -15708,7 +15708,7 @@ label AE068_c1_3:
 label AE068_c1_after:
     "As the show's credits rolled, the next came on. Shiroi-chan, however, stood up and stretched her back."
     show AE neutral
-    AE "Well, Mhn... I think I should get going."
+    AE "Well, mhn... I think I should get going."
     MC "Ah, so soon?"
     AE "Yeah. A lot of work tomorrow. If you want, come down to my room and wait for me there, okay? Maybe we can talk more, maybe spend some time together."
     MC "O-okay."
@@ -15721,7 +15721,7 @@ label AE068_c1_after:
         show AE happy
         AE "Keisuke-kun, thank you for having me over."
         MC "Mhm, anytime."
-        "I pulled her in for a kiss as she left my room with a bit of a squeeze at the door. I wasn't not much of a betting man, but at the moment I'd bet any amount of money that Shiori-chan and I were going to be okay. Though she said some things that worried me at times, I couldn't help but feel that we had a special bond between each other."
+        "I pulled her in for a kiss as she left my room with a bit of a squeeze at the door. I wasn't much of a betting man, but at the moment I'd bet any amount of money that Shiori-chan and I were going to be okay. Though she said some things that worried me at times, I couldn't help but feel that we had a special bond between each other."
         "I continued to watch television until Daichi got home, and much of the while let my mind race with what all tomorrow would bring."
     jump daymenu
 
@@ -15770,9 +15770,9 @@ label AE101:
     AE "Nggh... Just make sure you put it back before you leave."
     FMG "Can do!"
     "Shiori-san went back to her paperwork unamused as Akira-san started humming to herself."
-    FMG "Sooooo, whatcha doin?"
+    FMG "Sooooo, whatcha doin'?"
     AE "Taking inventory of the exercise equipment."
-    FMG "Bitchin."
+    FMG "Bitchin'."
     AE "Language!"
     FMG "Ehehe, sorry."
     "Shiori-san was about to go back to her work before she turned around and faced Akira-san, something on her mind as it appeared."

@@ -917,6 +917,7 @@ label startevent:
     pause .5
     python:
         highlitevent = ""
+        minorsize = int(math.floor(globalsize/2)) #backwards compatibility
         clearedevents.append(activeevent)
         updateSP(activeevent)
         renpy.block_rollback()
