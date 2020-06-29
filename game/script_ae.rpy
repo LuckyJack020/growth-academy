@@ -5310,7 +5310,7 @@ label AE027:
     TS "And that's what he meant by 'Cut his head off with a daikon.'"
     TS "Any questions? No? Good."
     "After standing and bowing, I was going to talk to Shiori-chan until I was beckoned over by someone..."
-    $secondHighest = getSecondHighest("AE")
+    $secondHighest = getSecondHighest(["AE"])
     if secondHighest == "BE":
         jump AE027_BE
     elif secondHighest == "BBW":

@@ -368,9 +368,7 @@ init python:
         return highestgirl
 
     ##Checks which of the girls has the highest affection, excluding any girl (or girls, if given a list) given in the argument. Ties go to earliest girl in girllist.
-    def getSecondHighest(ignoreGirl):
-        ignorelist = []
-        ignorelist.append(ignoreGirl)
+    def getSecondHighest(ignorelist):
         highestAffection = 0
         secondGirl = ""
         for girl in girllist:

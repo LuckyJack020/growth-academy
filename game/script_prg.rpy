@@ -1353,17 +1353,17 @@ label PRG012:
                 MC "That seems like a stretch, Honoka. I mean, she's sweet and all, but..."
                 show BE neutral
                 BE "Oh, don't take it too literally. All I'm saying is that I can picture you two together, that's all."
-                if getSecondHighest("PRG")=="BE":
+                if getSecondHighest(["PRG"])=="BE":
                     show BE unique
                     BE "Or...you and me."
                     "To make her hint even {i}less{/i} obvious, she winked."
-                elif getSecondHighest("PRG")=="BBW":
+                elif getSecondHighest(["PRG"])=="BBW":
                     BE "Or you and Nikumaru-san."
-                elif getSecondHighest("PRG")=="FMG":
+                elif getSecondHighest(["PRG"])=="FMG":
                     BE "Or you and Mizutani-san."
-                elif getSecondHighest("PRG")=="GTS":
+                elif getSecondHighest(["PRG"])=="GTS":
                     BE "Or you and Yamazaki-san."
-                elif getSecondHighest("PRG")=="AE":
+                elif getSecondHighest(["PRG"])=="AE":
                     BE "Or you and Matsumoto-san."
     else:
         MC "Honoka...I don't really think that classifies as a growth factor."
