@@ -367,7 +367,8 @@ init python:
                 highestgirl = g
         return highestgirl
 
-    ##Checks which of the girls has the highest affection, excluding any girl (or girls, if given a list) given in the argument. Ties go to earliest girl in girllist.
+    #Checks which of the girls has the highest affection, excluding any girl(s) given in the argument. Ties go to earliest girl in girllist.
+    #Function is expecting a list argument, even if there's only one girl
     def getSecondHighest(ignorelist):
         highestAffection = 0
         secondGirl = ""
