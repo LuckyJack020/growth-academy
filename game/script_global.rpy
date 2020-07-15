@@ -1,16 +1,17 @@
 #Characters
-define MC = Character('Keisuke', color="#0066CC") # Main Character, speaking.
-define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')')
-define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define MC = Character('Keisuke', color="#0066CC", image="MC") # Main Character, speaking.
+define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')', image="MC")
+define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="MC")
 
 define AE = Character('Shiori', color="#FF3300")
 define BBW = Character('Alice', color="#CC33FF")
-define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BBWCell")
 define BE = Character('Honoka', color="#FCCF20")
 define FMG = Character('Akira', color="#FF9900")
 define GTS = Character('Naomi', color="#66FF33")
+define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
-define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
 
 define Ama = Character('Amatsu-san', color="#ffc3b5")
 define Chibuki = Character('Chibuki', color="#CC33FF")
@@ -37,7 +38,7 @@ define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0")
 define Takara = Character('Takara', color="#C0C0C0")
 define Tako = Character('Tako', color="#ce9b50")
 define Tomoko = Character('Tomoko', color="#FF3300")
-define TomokoCell = Character('Tomoko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define TomokoCell = Character('Tomoko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell")
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
 
@@ -317,6 +318,22 @@ image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/angry.png")
 image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/aroused.png")
 image GTS embarrassed = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 
+image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
+image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png")
+image GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/sad.png")
+image GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/surprised.png")
+image GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/angry.png")
+image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/aroused.png")
+image GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/embarrassed.png")
+
+image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
+image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png")
+image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side-sad.png")
+image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side-surprised.png")
+image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-angry.png")
+image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-aroused.png")
+image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
+
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
 image PRG sad = DynamicImage("Graphics/PRG/[prgsize]/sad.png")
@@ -368,6 +385,12 @@ image PRG cow-admire = DynamicImage("Graphics/PRG/[prgsize]/cow-admire.png")
 image PRG pj-neutral = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-unique = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
+
+image side MC = "Graphics/side/mc.png"
+image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
+#image side GTSCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
+image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
+image side TomoCell = "Graphics/side/tomoko.png"
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"

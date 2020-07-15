@@ -8,7 +8,7 @@ label AE001:
     AE "{i}Ahem{/i}"
     MC "Eh?"
     "I looked over to the table adjacent, where I saw Shiori-san flipping through the pages of a large book."
-    play music AE
+    play music Hallway
     show AE angry at center with dissolve
     MC "A-ah! Shiori-san, how are y-"
     AE "Hotsure-san, adjust your volume in the library, please."
@@ -142,7 +142,7 @@ label AE002:
     "I took the book from my bag and put it on the table next to Shiori-san. She looked at it for a moment, and inhaled before looking to me."
     MC "I was wondering if you were wanting it back?"
     show AE neutral
-    AE "Thank you, however I have no more need or it."
+    AE "Thank you, however I have no more need of it."
     MC "Huh?"
     show AE glasses
     AE "I had read all the parts that pertained to what I was looking for, so I figured that there was no point in bringing it back to my dorm."

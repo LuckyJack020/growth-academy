@@ -2,47 +2,48 @@ default persistent.enable_notifications = True
 
 init python:
     config.use_cpickle = False
-    style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
-    style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
-    style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
+    #style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
+    #style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
+    #style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
 
-    style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
+    #style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
 
     eventlibrary = {}
     datelibrary = {}
+    showQuickMenu = False
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
-        'arcade': ("town", (400,120)),
-        'auditorium': ("school", (410,410)),
-        'cafeteria': ("school", (520,410)),
-        'campuscenter': ("school", (470,325)),
-        'classroom': ("school", (565,280)),
-        'clocktower': ("school", (470,380)),
-        'cookingclassroom': ("school", (565,375)),
-        'dormAE': ("school", (630,250)),
-        'dormBBW': ("school", (630,250)),
-        'dormBE': ("school", (630,250)),
-        'dormPRG': ("school", (630,250)),
-        'dormexterior': ("school", (600,300)),
-        'dorminterior': ("school", (645,340)),
-        'festival': ("town", (400,120)),
-        'field': ("town", (400,120)),
-        'gym': ("school", (550,225)),
-        'hallway': ("school", (565,320)),
-        'hillroad': ("town", (400,120)),
-        'library': ("school", (440,420)),
-        'musicclassroom': ("school", (565,375)),
-        'office': ("school", (480,420)),
-        'pool': ("school", (390,210)),
-        'roof': ("school", (565,320)),
-        'schoolfront': ("school", (470,470)),
-        'schoolplanter': ("school", (470,260)),
-        'schoolexterior': ("school", (400,120)),
-        'supermarket': ("town", (400,120)),
-        'town': ("town", (400,120)),
-        'track': ("school", (470,205)),
-        'woods': ("school", (400,120))
+        'arcade': ("town", (600,230)),
+        'auditorium': ("school", (710,490)),
+        'cafeteria': ("school", (770,490)),
+        'campuscenter': ("school", (720,390)),
+        'classroom': ("school", (810,390)),
+        'clocktower': ("school", (715,430)),
+        'cookingclassroom': ("school", (810,335)),
+        'dormAE': ("school", (880,330)),
+        'dormBBW': ("school", (880,330)),
+        'dormBE': ("school", (880,330)),
+        'dormPRG': ("school", (880,330)),
+        'dormexterior': ("school", (850,375)),
+        'dorminterior': ("school", (885,400)),
+        'festival': ("town", (600,230)),
+        'field': ("town", (600,230)),
+        'gym': ("school", (630,325)),
+        'hallway': ("school", (810,390)),
+        'hillroad': ("town", (600,230)),
+        'library': ("school", (810,370)),
+        'musicclassroom': ("school", (810,400)),
+        'office': ("school", (660,485)),
+        'pool': ("school", (800,295)),
+        'roof': ("school", (810,400)),
+        'schoolfront': ("school", (715,520)),
+        'schoolplanter': ("school", (720,325)),
+        'schoolexterior': ("school", (715,520)),
+        'supermarket': ("town", (600,230)),
+        'town': ("town", (600,230)),
+        'track': ("school", (715,270)),
+        'woods': ("school", (600,230))
     }
     debugenabled = True
     debuginput = ""
@@ -560,8 +561,8 @@ init python:
 
             #draw line
             canvas = render.canvas()
-            canvas.line("#000", (260, starty), (360, starty), 2) #horizontal, first point should be based on choice selected, second point should be horizontal some distance out
-            canvas.line("#000", (360, starty), end, 2) #diagonal, first point here should be second point horizontal, second point should be the map point
+            canvas.line("#000", (260, starty), (460, starty), 2) #horizontal, first point should be based on choice selected, second point should be horizontal some distance out
+            canvas.line("#000", (460, starty), end, 2) #diagonal, first point here should be second point horizontal, second point should be the map point
 
             return render
 
@@ -868,12 +869,13 @@ label unsettimeflag:
     jump debugmenu
 
 label daymenu:
-    $renpy.choice_for_skipping()
+    python:
+        renpy.choice_for_skipping()
+        showQuickMenu = False
+        activeevent = ""
+        eventchoices = rollEvents()
     scene black with fade
     play music Daymenu
-    #Roll random events
-    python:
-        eventchoices = rollEvents()
     window hide None
     call screen daymenu with fade
     window show None
@@ -919,6 +921,7 @@ label startevent:
         minorsize = int(math.floor(globalsize/2)) #backwards compatibility
         clearedevents.append(activeevent)
         updateSP(activeevent)
+        showQuickMenu = True
         renpy.block_rollback()
         renpy.jump(activeevent)
 
@@ -926,6 +929,7 @@ label train:
     stop music
     $renpy.block_rollback()
     $spspent += 1
+    $showQuickMenu = True
     if activeevent == "Athletics":
         jump trainathletics
     elif activeevent == "Art":

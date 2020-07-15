@@ -23,10 +23,11 @@ label global000:
         menu:
             "(DEBUG) Skip intro":
                 jump daymenu
-            "Continue":
-                "Playing intro."
+            "View intro":
+                pass
 
     #SFX Light Motor SFX
+    $showQuickMenu = True
     Announcer "Please remain seated until the ferry comes to a full stop, then make your way to the boarding dock, following the yellow lines on the floor. An attendant will be available should you need assistance!"
     "The voice over the PA system rang out through the deck, causing a few of the other students to look up from their phones while others readied their bags for departure."
     Announcer "Groups 4 and 3? Please exit on both sides of the boat; an attendant will be ready to lead you to registration on arrival."
