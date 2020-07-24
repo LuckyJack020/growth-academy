@@ -2134,7 +2134,7 @@ label GTS028T_c1_after:
     Ryoko "Yeah, don't sweat it Yamazaki-san. Oh! We forgot the snacks! Don't wait up for us, go get some seats!"
     hide Ryoko with dissolve
     hide Minori with dissolve
-    "Ryoko took Minori hand and quickly vanished towards the concession stand as I chuckled and looked back at Naomi who seemed a little bothered."
+    "Ryoko took Minori's hand and quickly vanished towards the concession stand as I chuckled and looked back at Naomi who seemed a little bothered."
     show GTS sad at center with dissolve
     GTS "I truly hope I didn't offend her."
     MC "Nah, I'm sure she's perfectly fine Yamazaki-san. I mean, you didn't say anything harsh."

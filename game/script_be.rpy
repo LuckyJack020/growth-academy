@@ -82,9 +82,10 @@ label BE001_c2:
     BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too."
     extend " Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used to big boobs, anyway."
-    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
+    show cg BE001
     pause 0.5
-    show BE happy at center, Transform(zoom=1.0)
+    hide cg
+    show BE happy at center
     BE "Exactly! Hehe, you know, Kei-chan, most boys wouldn't be so brazen about talking about a girl's chest, especially to her face."
     MC "W-Well, you're the one who brought them up in the first place!"
     show BE neutral
@@ -1010,7 +1011,7 @@ label BE010:
     MC "Yeah?"
     BE "Alright then."
     "Honoka stepped forward and gained a devious smirk on her face."
-    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
+    show cg BE010
     play music BE
     BE "Touch 'em."
     MC "What?"
@@ -1028,7 +1029,8 @@ label BE010:
 
 label BE010_c1:
     MC "No thanks."
-    show BE sad at center, Transform(zoom=1.0)
+    hide cg
+    show BE sad at center
     BE "Aw, really. Why not?"
     MC "I just... don't think it's appropriate, Honoka. We're friends."
     show BE neutral
@@ -1070,7 +1072,6 @@ label BE010_c2:
     MC "Well, if you insist."
     "At Honoka's pleading, I reached out towards her chest. It was only when my hands were an inch or so away that I realized I had no idea what I was doing. Was I supposed to just push my palms in? Or should I try and support them from the bottom?"
     MC "You know, this will be my first time doing this."
-    show BE zoomin at Position(xpos=0.65, ypos=0.15, yanchor=0.3), Transform(zoom=1)
     BE "Well, then I'm honored to be your first."
     MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
     "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once. It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
@@ -1078,7 +1079,8 @@ label BE010_c2:
     "But, also, they were... dense. It seemed like an odd term to describe breasts, but it was accurate. For as big as they were, they still felt heavier than I expected them to. I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up."
     "They took a slight bit more effort to move than I thought they would, and when I finally pulled my hands away, I got to see them bounce for a few seconds before stopping."
     MC "Wow."
-    show BE happy at center, Transform(zoom=1.0)
+    hide cg
+    show BE happy at center
     BE "Heh, heh. Get yourself a good handful? How did they feel? Were they as soft as you imagined? Were they warm? Tell me!"
     MC "Whoa, um, well. They're... big?"
     show BE happy at center, Transform(xzoom=-1)
@@ -1114,13 +1116,13 @@ label BE010_c2:
     show BE happy
     BE "Hehehe..."
     "Honoka suddenly loomed forward, her breasts inches away from my face. My knees buckled. I felt like I was suddenly talking to Shiori, not my childhood friend."
-    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
+    show cg BE010
     BE "It means I know what kind of guy you are."
     MC "I... um."
-    show BE zoomin at Position(xpos=0.65, ypos=0.15, yanchor=0.3), Transform(zoom=1)
     BE "A guy who takes charge and opportunity when he can."
     "Honoka pulled back and smirked at me, her smile looking like it could slide off of her face. She grabbed the handle of my door with one hand, and then turned to wink at me."
-    show BE happy at center, Transform(zoom=1.0)
+    hide cg
+    show BE happy at center
     BE "And I like that kind of guy."
     hide BE with dissolve
     "With that, Honoka shut the door behind her, leaving me to wonder what just happened."
@@ -1130,7 +1132,8 @@ label BE010_c2:
 label BE010_c3:
     MC "..."
     "I just couldn't say anything. My mouth felt like it dried up. Something about this was wrong. I wasn't sure what her game was, but I felt like the smart thing to do was just shut up."
-    show BE neutral at center, Transform(zoom=1.0)
+    hide cg
+    show BE neutral at center
     stop music
     BE "Hello, Kei-chan?"
     "The only sound that managed to come out of my mouth was a weak, guttural stutter."
@@ -4597,7 +4600,7 @@ label BE027_c1_after:
     "Lace leggings, a short camisole that barely seemed capable of going down past her hips, with an extremely low-cut top. The material was all extremely sheer, so it looked practically see-through."
     show BE happy
     BE "And this is the third one I liked."
-    "Honoka's last outfit of choice was a light blue sundress. It had thin straps, and was just a one-piece dress that went down to her thighs. It looked like the kind of outfit that would go perfect with a large, floppy hot."
+    "Honoka's last outfit of choice was a light blue sundress. It had thin straps, and was just a one-piece dress that went down to her thighs. It looked like the kind of outfit that would go perfect with a large, floppy hat."
     show BE neutral
     BE "So, what do ya think? Which one should I try on?"
     jump BE027_c2
@@ -5636,8 +5639,10 @@ label BE032:
     BE "I really thought you'd be able to figure it out, considering how... up close and personal you got with them last night."
     "Flustered, I tried to pull my hands back. Honoka simply pushed down more insistently, until my palms were flat on the desk."
     show BE unique
+    show cg BE032
     BE "My boobs got bigger. You know that bra I wore last night? I was already close to outsizing it. When I went to put it on today, I couldn't close the clasps."
     "I gulped."
+    hide cg
     BE "But I didn't have any time to get a new one, you see. So, fun fact, Kei-chan, I'm going braless today. I'll have to get a new one later. But for now, oof, my yummy, full breasts are just hanging free~"
     MC "Ahaha... well, that really is some fun news."
     "With a bit of effort, I flipped my hands over from underneath her breasts. Soon my palms were directly touching the large curves of Honoka's chest, and I pushed upwards."

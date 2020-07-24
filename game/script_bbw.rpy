@@ -1452,10 +1452,11 @@ label BBW010_c3:
     MC "At least help me clean these up."
     BE "What're these?"
     "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
-    show BE zoomin at Position(xpos=0.65, ypos=0.0, yanchor=0.25), Transform(zoom=0.8)
+    show cg BBW010
     BE "Hey, Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
-    show BE neutral at center, Transform(zoom=1.0)
+    hide cg BBW010
+    show BE neutral at center
     "And then, as if struck by inspiration, I realized this was actually perfect."
     MC "I was just noticing that your shirt looks a bit tight. That can't be comfortable, can it?"
     show BE neutral
@@ -6730,8 +6731,7 @@ label BBW038:
     scene Hallway with fade
     "Even while paying attention to the lessons, I was thinking over that tea I had mentioned."
     "I could probably find it in town. It's not a rare brand or anything."
-    "Only problem was the weather didn't look too promising."
-    "But once the idea was in my head I was pretty much decided."
+    "Only problem was the weather didn't look too promising. But once the idea was in my head I was pretty much decided."
     "Class got out, I went to my dorm to grab my umbrella, and I left to hit the town."
 
     scene Pharmacy with fade

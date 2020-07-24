@@ -156,8 +156,11 @@ image cg BBW009 = "Graphics/ui/gallery/BBW009.png"
 
 image cg BE000 = "Graphics/ui/gallery/BE000.png"
 image cg BE000b = "Graphics/ui/gallery/BE000b.png"
+image cg BE001 = "Graphics/ui/gallery/BE001.png"
+image cg BE010 = "Graphics/ui/gallery/BE010.png"
 image cg BE031 = "Graphics/ui/gallery/BE031.png"
 image cg BE031b = "Graphics/ui/gallery/BE031b.png"
+image cg BE032 = "Graphics/ui/gallery/BE032.png"
 
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 
@@ -300,7 +303,6 @@ image BE surprised = DynamicImage("Graphics/BE/[globalsize]/surprised.png")
 image BE angry = DynamicImage("Graphics/BE/[globalsize]/angry.png")
 image BE aroused = DynamicImage("Graphics/BE/[globalsize]/aroused.png")
 image BE unique = DynamicImage("Graphics/BE/[globalsize]/unique.png")
-image BE zoomin = DynamicImage("Graphics/BE/[globalsize]/hq-happy.png")
 
 image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
