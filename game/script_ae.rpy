@@ -13345,7 +13345,7 @@ label AE058_c2_2:
     show AE neutral
     AE "Oh? Why do you say that?"
     MC "Eh. There are plenty of scummy politicians and lawyers and the like, and they all seem to have good educations, yeah? Surely there must be more to morals than cultivating them through studies?"
-    AE "W-Well of course, but looking at the converse of that, learing what's {i}legal{/i} is different from being aware of what's right. It's a matter of properly learning from your studies rather than just using them as tools."
+    AE "W-Well of course, but looking at the converse of that, learning what's {i}legal{/i} is different from being aware of what's right. It's a matter of properly learning from your studies rather than just using them as tools."
     MC "Hmm... I dunno. I still can't say I see it."
     show AE sad
     AE "Ah... That's alright, then."
@@ -14217,7 +14217,7 @@ label AE062:
     MC "Table for two, please. Booth, um... extra wide, if possible."
     Waitress "Ok. Right this way, sir."
     "The waitress led me over to a corner of the restaurant with suitably sized seats, the area fairly empty in comparison to the rest of the restaurant save for a single other person looking through their menu, the table top on a swivel to give them room."
-    "As the waitress sat me down and told me that a server would be with me soon, I nodded and looked at my phone, waiting for a text from Shiori. As I did, glanced over to the other diner adjacent."
+    "As the waitress sat me down and told me that a server would be with me soon, I nodded and looked at my phone, waiting for a text from Shiori. As I did, I glanced over to the other diner adjacent."
     MC "...Hey..."
     MC "Oy! Honoka!"
     show BE neutral with dissolve
@@ -14984,7 +14984,7 @@ label AE065:
     AE "Y-Yeah, it's just hard for me to reach. I think my thighs are, um..."
     MC "Oh."
     AE "Mmpf."
-    "She made due the best she could, as the black lacquer wood of the piano dug deep into the flesh of her thighs; her feet only barely being able to reach the pedals as her arms were outstretched in what looked like an uncomfortable manner."
+    "She made do the best she could, as the black lacquer wood of the piano dug deep into the flesh of her thighs; her feet only barely being able to reach the pedals as her arms were outstretched in what looked like an uncomfortable manner."
     AE "Hmph... never thought with my buttocks growing, I'd have to worry about my front too."
     MC "Any way to adjust it?"
     show AE neutral
@@ -15201,7 +15201,7 @@ label AE065:
     AE "Keisuke... I'd like to sincerely apologize for bringing up my problems so much."
     MC "It's okay."
     AE "It's unbecoming of me."
-    MC "It's fine! It reall is-"
+    MC "It's fine! It really is-"
     #Stop playing music
     AE "No, it's not. I said I wouldn't let my past control my future and..."
     AE "I can't really help myself once I start talking about it."

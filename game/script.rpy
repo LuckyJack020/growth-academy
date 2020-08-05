@@ -47,7 +47,6 @@ init python:
     }
     debugenabled = True
     debuginput = ""
-    debugmappoint = False
 
     import math
 
@@ -410,6 +409,12 @@ init python:
         else:
             return 0
 
+    def debugListVars():
+        l = ""
+        for k, v in vars.items():
+            l += k + ": " + str(v) + ", "
+        return l
+
     def debugListFlags():
         l = ""
         for f in flags:
@@ -526,6 +531,17 @@ init python:
         global prgsize
         if 3 > prgsize:
             prgsize = 3
+
+    def cleanupCostumes():
+        #BE
+        if getVar('BEMode') == 0:
+            setVar('BEMode', 'Tomboy') #Initialize Honoka, if not initialized already
+        if getVar('BEMode') == 'Tomboy':
+            if getVar('BEFeminine') >= getVar('BETomboy') + 1: #temporarily 1, to show outfit changes at all
+                setVar('BEMode', 'Feminine')
+        else:
+            if getVar('BETomboy') >= getVar('BEFeminine') + 1: #temporarily 1, to show outfit changes at all
+                setVar('BEMode', 'Tomboy')
 
     def updateSP(event):
         global spmax
@@ -647,13 +663,6 @@ screen daymenu:
                         #        yalign 0.5
                         #        background Solid(Color((0, 0, 0, 100)))
                         #        text eventlibrary[c]["name"]
-    #map icons (for debug test)
-    if debugmappoint:
-        for loc in locationlist:
-            fixed:
-                xpos (locationlist[loc][1][0] - 12)
-                ypos (locationlist[loc][1][1] - 12)
-                imagebutton idle im.FactorScale("Graphics/ui/icons/BE-icon.png", .25) action [SetVariable("debugmapname", loc)]
 
     add MapLine()
 
@@ -685,13 +694,6 @@ screen daymenu:
                 text("Core Event")
             else:
                 text("Optional Event")
-
-    if debugmappoint:
-        frame:
-            xalign 0.5
-            yalign 0.9
-            background Solid(Color((0, 0, 0, 100)))
-            text(debugmapname)
 
     #debug menu toggle (if debug is enabled)
     if debugenabled and highlitevent == "":
@@ -740,7 +742,7 @@ screen debugmenu:
 
         textbutton "Start Event" action Jump("debugevent")
         textbutton "List Cleared Events" action Jump("debugclearedeventlist")
-        textbutton "Map Points Toggle" action SetVariable("debugmappoint", not debugmappoint)
+        textbutton "List Variables" action Jump("debugvarlist")
 
         textbutton "List Flags" action Jump("debugflaglist")
         textbutton "Set Flag" action Jump("setflag")
@@ -829,6 +831,11 @@ screen debugmenu:
         textbutton "+" action Function(setSizeDebug, 1)
         textbutton "-" action Function(setSizeDebug, -1)
 
+screen debugvarlist:
+    vbox:
+        text debugListVars()
+        textbutton "Return" action Jump("debugmenu")
+
 screen debugflaglist:
     vbox:
         text debugListFlags()
@@ -869,12 +876,13 @@ label unsettimeflag:
     jump debugmenu
 
 label daymenu:
+    scene black with fade
     python:
         renpy.choice_for_skipping()
         showQuickMenu = False
         activeevent = ""
         eventchoices = rollEvents()
-    scene black with fade
+        cleanupCostumes()
     play music Daymenu
     window hide None
     call screen daymenu with fade
@@ -891,6 +899,12 @@ label debugmenu:
     scene black
     window hide None
     call screen debugmenu
+    window show None
+
+label debugvarlist:
+    scene black
+    window hide None
+    call screen debugvarlist
     window show None
 
 label debugflaglist:
