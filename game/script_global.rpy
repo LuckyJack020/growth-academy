@@ -10,6 +10,7 @@ define BE = Character('Honoka', color="#FCCF20")
 define FMG = Character('Akira', color="#FF9900")
 define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
+define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTS_S")
 define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
 
@@ -118,6 +119,7 @@ image Clock Tower = "Graphics/ui/bg/NYI.png"
 image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 image Clothes Store = "Graphics/ui/bg/NYI.png"
 image Pharmacy = "Graphics/ui/bg/NYI.png"
+image Supermarket = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -132,10 +134,11 @@ image Dorm BE = "Graphics/ui/bg/BEdorm_day.png"
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
 image Dorm GTS = "Graphics/ui/bg/dorminterior.png"
+image Giant Dorm Exterior = "Graphics/ui/bg/NYI.png"
+image Giant Dorm Interior = "Graphics/ui/bg/NYI.png"
 
 image Dorm PRG Day = "Graphics/ui/bg/PRGdorm_day.png"
 image Dorm PRG Eve = "Graphics/ui/bg/PRGdorm_eve.png"
-image Supermarket = "Graphics/ui/bg/NYI.png"
 
 #CG + Images
 image splash = "Graphics/ui/bg/splashscreen.png"
@@ -412,11 +415,14 @@ image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 
 image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/neutral.png")
 image GTS happy = DynamicImage("Graphics/GTS/[globalsize]/happy.png")
+image GTS happy-2 = DynamicImage("Graphics/GTS/[globalsize]/happy-2.png")
 image GTS sad = DynamicImage("Graphics/GTS/[globalsize]/sad.png")
 image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/surprised.png")
 image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/angry.png")
 image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/aroused.png")
 image GTS embarrassed = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
+image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
+image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/wink.png")
 
 image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
 image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png")
@@ -425,6 +431,8 @@ image GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/surprised.png"
 image GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/angry.png")
 image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/aroused.png")
 image GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/embarrassed.png")
+image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
+image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/nwinkeutral.png")
 
 image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png")
@@ -433,6 +441,7 @@ image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side-surp
 image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-angry.png")
 image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-aroused.png")
 image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
+image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
@@ -456,6 +465,7 @@ image PRG dress-aroused = DynamicImage("Graphics/PRG/[prgsize]/dress-aroused.png
 image PRG dress-unique = DynamicImage("Graphics/PRG/[prgsize]/dress-unique.png")
 image PRG dress-worried = DynamicImage("Graphics/PRG/[prgsize]/dress-worried.png")
 image PRG dress-sad = DynamicImage("Graphics/PRG/[prgsize]/dress-sad-2.png")
+image PRG dress-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/dress-sad-2.png")
 image PRG dress-admire = DynamicImage("Graphics/PRG/[prgsize]/dress-happy.png")
 
 image PRG nude-neutral = DynamicImage("Graphics/PRG/[prgsize]/nude-neutral.png")
@@ -488,7 +498,7 @@ image PRG pj-unique = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 
 image side MC = "Graphics/side/mc.png"
 image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
-#image side GTSCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
+image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
 image side TomoCell = "Graphics/side/tomoko.png"
 

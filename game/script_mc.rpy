@@ -836,7 +836,7 @@ label global000_sit_after:
     stop music
     show AE neutral with dissolve
     play music AE
-    "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way was impossible to not draw the eye."
+    "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way that was impossible to not draw the eye."
     MC "Matsumoto-san? What's going on?"
     AE "A more apt question would be 'Where is Utagashi-san'? This assembly is mandatory."
     AE "He's your roommate, is he not?"

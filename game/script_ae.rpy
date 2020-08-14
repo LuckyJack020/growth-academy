@@ -4756,23 +4756,23 @@ label AE025:
         MC "But you have to understand, you're one of the best girls I've ever met. You're interesting to me, as well as insanely beautiful."
         show AE surprised
         "Shiori-san began to blush, her face matching the blossoms falling around us."
-        show AE embarrassed with Transform(xzoom=-1.0)
+        show AE embarrassed at Transform(xzoom=-1.0)
         AE "N-now I'm even MORE convinced you're not being honest."
         MC "It's true."
-        show AE sad-2 with Transform(xzoom=-1.0)
+        show AE sad-2 at Transform(xzoom=-1.0)
         AE "...I just... I want to understand."
-        show AE embarrassed with Transform(xzoom=-1.0)
+        show AE embarrassed at Transform(xzoom=-1.0)
         AE "I want to understand why... what this feeling is."
         "Shiori-san clutched at her breast as she bit her thumbnail with the other hand."
-        show AE sad with Transform(xzoom=-1.0)
+        show AE sad at Transform(xzoom=-1.0)
         AE "You're so... you're like no man I've ever met. I just... I'm so used to being alone."
         MC "You don't have to be. I want to be with you."
         MC "Shiori-san... once more..."
         MC "Will you be my girlfriend?"
         "I bowed a deep bow, heart racing as I let my heart pour out."
-        show AE sad-2 with Transform(xzoom=-1.0)
+        show AE sad-2 at Transform(xzoom=-1.0)
         AE "Hotsure-san..."
-        show AE aroused-4 with Transform(xzoom=1.0)
+        show AE aroused-4 at Transform(xzoom=1.0)
         AE "Yes. I... I know now without a doubt... yes."
         MC "Hah... Ah..."
         "I stood straight up and looked her in the eyes. She walked up towards me to meet my gaze further; to get closer to me."

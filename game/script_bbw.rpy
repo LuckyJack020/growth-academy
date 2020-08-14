@@ -2482,7 +2482,7 @@ label BBW015_test_fail:
     MC "Don't judge."
     show AE surprised
     AE "!"
-    show AE aroused-2
+    show AE embarrassed
     AE "O-Oh god, I..."
     MCT "Alice, you owe me."
     "She stared at me for a bit, then silently put the panties back in the envelope and handed it back."
