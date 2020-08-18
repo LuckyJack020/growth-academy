@@ -3710,7 +3710,7 @@ label GTS030_c2_2:
     MC "I trust you can handle yourself, Yamazaki-san. The stuff you have left should be of no problem to you at your current size."
     show GTS happy at Position(xalign=0.5, yalign=1.0) with dissolve
     GTS "It shouldn't be a problem at all. I'd hate for you to waste your time with such a menial task."
-    if getAffection("GTS") > 0: #FIXME
+    if getAffection("GTS") > 15: #FIXME
         $setFlag("GTS030_festival")
         MC "Oh, I nearly forgot, would you be interested in going to the Children's day festival later this month?"
         GTS "Oh my, of course, that's a wonderful idea. It has been quite some time since I last partook in a festival."
@@ -4094,7 +4094,242 @@ label GTS032_after:
     "Naomi had always been the mature one of the group, and if anyone could mentally collect herself after such a dramatic shift in scenery, it'd be her."
     jump daymenu
 
+label GTS034:
+    $setProgress("GTS", "GTS035")
+    scene Campus Center with fade #evening
+    "I checked my phone once more to make sure I was headed to the right place."
+    MCT "The campus plaza, yeah that's where she wants me to go. Not sure why she couldn't tell me why she needed me to come."
+    "As I approached, I noticed Naomi slowly pacing near the tree."
+    MC "Hey Yamazaki-san! You wanted to see me?"
+    show GTS happy-2 with dissolve
+    GTS "Oh, good afternoon, Hotsure-san. I hope you're doing well today."
+    MC "Yeah I'm alright. What's up?"
+    show GTS happy
+    GTS "I was just thinking of my plans for the weekend. I wanted to make sure I had all my things in order."
+    "She stepped over towards her garden and began inspecting the various flowers."
+    MC "You gonna leave me in the dark? What are you exactly planning?"
+    show GTS embarrassed
+    GTS "Well, would you like to spend time with me this weekend?"
+    MC "Of course I would, what did you have in mind?"
+    GTS "{i}{size=-6}A dinner with my parents.{/size}{/i}"
+    MC "Sorry, I didn't quite catch that."
+    GTS "A dinner with my parents."
+    MC "Wait, y-your parents?! Isn't this a little sudden?"
+    show GTS neutral
+    GTS "Apologies for springing it on you like this, but my parents insisted I ask you."
+    MC "Hold on, your parents know about me? Do they know about us?"
+    "She gently nods as I can feel my palms growing rather sweaty."
+    MC "Uh... okay. That's a bit to take in so quickly."
+    menu:
+        "(Decline her)" if not getFlag("GTS034_c1_1"):
+            jump GTS034_c1_1
+        "(Decline her) (disabled)" if getFlag("GTS034_c1_1"):
+            jump GTS034_c1_1
+        "Are you sure about this?":
+            jump GTS034_c1_2
+        "I suppose it is about time.":
+            jump GTS034_c1_3
+
+label GTS034_c1_1:
+    $setProgress("GTS", "GTS034")
+    $setFlag("GTS034_c1_1")
+    MC "I'm sorry Yamazaki-san, but I can't, not on such short notice. I'm not even sure if we've been together long enough for this."
+    show GTS sad
+    GTS "I understand, I suppose I got a little ahead of myself and didn't account for how you might feel in this. My apologies."
+    MC "Maybe a later time would be better. I just feel like it's a little soon to be making those introductions."
+    show GTS neutral
+    GTS "I understand completely, Hotsure-san. Hopefully they return at some point and you can meet them then."
+    MC "That sounds like a great plan. Let's do that when the time is better."
+    jump daymenu
+
+label GTS034_c1_2:
+    $setFlag("GTS034_c1_2")
+    MC "You sure about me meeting them? This is the first time you'll be seeing them since coming here. Wouldn't it be better for them to acclimate to the changes first?"
+    $setAffection("GTS", -1)
+    show GTS nervous
+    GTS "You think they'll be scared of me?"
+    MC "No, I just think it's best to address two large topics separately. That way they have room to digest both things without being bombarded."
+    "Naomi looked incredibly panicked for a moment before shaking her head and returning to her normal composure."
+    show GTS neutral
+    GTS "You are probably right, I've never had a boyfriend before so I'm pretty sure that alone is enough to overwhelm them. They are my parents after all, so I know they will be looking for something to worry about."
+    GTS "Maybe once they have seen me I can then bring you in."
+    MC "That's a good idea, I still want to meet them. Just maybe one surprise at a time for them."
+    jump daymenu
+
+label GTS034_c1_3:
+    MCT "I suppose it is about time I meet them."
+    MC "...Okay. Dinner with your parents? I can do that."
+    show GTS happy-2
+    GTS "Are you sure, Hotsure-san? It's okay if you'd rather not. I won't be mad, as it is my fault for not informing you sooner."
+    MC "No it's okay, I don't mind meeting your parents. Is there anything I need to know before I meet them?"
+    "Naomi gives me a smile, part pure happiness, part uncertainty."
+    show GTS neutral
+    GTS "Yes, quite a bit."
+    MC "Alright, what do I need to learn?"
+    GTS "Table etiquette, proper attire, manners, a couple more things that are mostly for formality."
+    MCT "Oh boy I've got a lot to do."
+    GTS "Please don't take that list the wrong way, Hotsure-san. I just want to make sure that you're fully prepared for when you meet my father. Would it be okay if we went over a few things?"
+    MC "If it's to prove to your parents I'm right for you, then I can do it. So, when should we start?"
+    "Naomi's eyes tear up a bit but she quickly wipes them away."
+    show GTS happy
+    GTS "We can start tonight if you want. But before that, can I ask you a favor?"
+    MC "Sure, what do you need me to do?"
+    "She pulls out an envelope with Alice's name written on it."
+    show GTS neutral
+    GTS "If you could, I need this delivered to Miss Nikumaru."
+    MC "Is there a reason you need me to deliver it? Wouldn't giving it to Aida make more sense since you see her nearly every day?"
+    GTS "Beyond the physical limitations, I'm not very keen on Miss Nikumaru so I'd like to keep my distance. As for me not giving it to Aida, I just didn't want to bother her. She already has to worry about enough."
+    MCT "Is she still mad about that one fight they had a couple of weeks ago?"
+    MC "Alright I'll take it over now and then head back to your dorm so we can begin my training."
+    show GTS happy
+    GTS "Thank you for doing this for me. I'll see you soon."
+    "I turn and head towards Alice's dorm."
+
+    scene Dorm Exterior with fade
+    "As I approached the dorm, I spotted Alice stepping out the door."
+    MC "Nikumaru-san, do you have a moment?"
+    show BBW neutral with dissolve
+    BBW "Hello Hotsure-san. What do you need?"
+    "I passed her the letter, which she plucked from my hands and began to read."
+    BBW "Hmph. Well, you can tell her that I can fulfill her request, though if she wants to discuss payment she'll need to talk to me in person."
+    MC "I will tell her, thank you Nikumaru-san."
+    "She nods and heads off to wherever she was heading. I make my way back to Naomi's dorm."
+
+    scene Giant Dorm Interior with fade
+    "As I entered Naomi's dorm I could see her digging through a box of her old belongings."
+    MC "Nikumaru-san said she can fulfill your request, though about payment you'd need to speak with her in person."
+    show GTS neutral with dissolve
+    GTS "She accepted my request? That's wonderful to hear. I was quite nervous if I was asking too much."
+    MC "What did you request from her?"
+    show GTS wink
+    GTS "You will see when the time comes. Now then, I've gone ahead and set up a mock dinner table. Please show me what you know about proper dining etiquette."
+    if getSkill("Academics") > 5: #tbd?
+        "As I had done many times before, I served Naomi and myself a bowl of rice. Next, I looked to Naomi and we both said 'itadakimasu'; with that out of the way we dug into our meal. Once finished, I placed my chopsticks back into place and we both said 'gochisōsama deshita'."
+        show GTS unique
+        GTS "I'm impressed by your familiarity with formal dining, though there's still room for improvement."
+        MC "What did I miss?"
+        "She reaches over and places the lid back on the pot of rice."
+        show GTS neutral
+        GTS "It is good manners to return all dishes to their places and replace any lids that were removed."
+        MC "I'll make sure to remember that when your parents arrive."
+        GTS "Your skills are much better than some others I've seen."
+        MC "Thank you, that's quite nice to hear coming from someone who knows much more about this formal stuff than me."
+        GTS "Thank you for the faith. Now then, let's continue with the other things you need to have down-pat before they arrive."
+    else:
+        "Taking a seat at our makeshift table, I served myself some rice and tea before digging in. Naomi, I noticed, paused for a moment before also eating her food. Once I had finished my food I set my chopsticks back in their place."
+        MC "How was that?"
+        show GTS neutral
+        GTS "It certainly has room for improvement. You do have some understanding, which is good to see."
+        MCT "At least she was polite about saying I'm bad at this."
+        MC "How much time do we have till your parents arrive?"
+        GTS "A week, which is more than enough time to get you familiar with everything I have in mind."
+        MC "Well, I did say I'm committed to this."
+        "She grins and cleans up our dishes."
+        GTS "Good. We have much more to go over."
+    jump daymenu
+
 label GTS033:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label GTSPRG001:
+    scene School Planter with fade
+    "As I was heading to the dorms after class I spotted Naomi and Aida down in the garden."
+    MC "Hey girls."
+    show GTS neutral at Position(xpos=0.8, xalign=0.5, yanchor=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.2, xalign=0.5, yanchor=1.0), Transform(xzoom=-1) with dissolve
+    GTS "Hey Hotsure-san."
+    PRG "G-Good evening, Hotsure-san."
+    MC "What is going on here?"
+    PRG "Well... we're working on something for the cooking club. See, the school pays for all of the food for the club to use, provided that it's all used up."
+    PRG "We've had so many new students join lately, that the school isn't able to provide as much food."
+    PRG "So, I thought that, with Yamazaki-san's assistance, we could plant a school garden, so that we could take the money that is being spent on produce and move it to other ingredients."
+    MC "That sounds like a brilliant idea."
+    show PRG happy
+    PRG "Thanks."
+    GTS "It's surprising the school didn't already have one setup, but it'll be a nice project to work on."
+    menu:
+        "I'd be down to help.":
+            jump GTSPRG001_c1_1
+        "I suppose this is something best left to the experts.":
+            jump GTSPRG001_c1_2
+
+label GTSPRG001_c1_1:
+    MC "I'd be down to help with this project."
+    GTS "You sure Hotsure-san?"
+    MC "Sure, this sounds like it would be a fun way to relax after class."
+    show GTS happy
+    GTS "Well I can't deny that it's relaxing but it does mean getting a little dirty."
+    MC "A little dirt never hurt anyone, plus you can teach me about these plants."
+    $setAffection("GTS", 1)
+    GTS "I'd be more than happy to do that."
+    show PRG neutral
+    $setAffection("PRG", 1)
+    PRG "I'm glad you'll be joining us Hotsure-san. With the three of us, it should be easy to get this started in time for next seasons competitions."
+    jump GTSPRG001_c1_after
+
+label GTSPRG001_c1_2:
+    MC "I suppose this is something best left to the experts."
+    GTS "I'd be more than happy to teach you Hotsure-san."
+    MC "It's fine Yamazaki-san, gardening isn't as much my forte as it is yours."
+    show PRG neutral
+    PRG "I-I'm not really an expert either. I just follow Yamazaki-san's instructions."
+    MC "I mean I'm with Yamazaki-san on this one, I am equally surprised the school didn't already have a dedicated produce garden."
+    MC "So I look forward to seeing what you two can put together, I bet it'll be impressive."
+    "The two girls giggle."
+    PRG "T-Thanks, Hotusre-san. We'll both try our hardest."
+    jump GTSPRG001_c1_after
+
+label GTSPRG001_c1_after:
+    MC "What crops are you planning on planting?"
+    show GTS neutral
+    GTS "Some basic tomato, basil and pepper plants should be a good start. Those grow quite easily with only basic tending."
+    show PRG neutral
+    PRG "Those would be quite to start with, especially since we use those with nearly every dish."
+    GTS "What are some other foods you use often that we could grow?"
+    PRG "Let me think..."
+    PRG "Well carrots, peas, scallions and onions are other vegetables we use often."
+    GTS "The scallions and peas should be easy to grow, the carrots and onions may take longer but shouldn't be too challenging."
+    GTS "Do you make much tofu?"
+    PRG "Not really, I'm still trying to get the recipe right."
+    GTS "Alright, so no Wakegi."
+    MC "Wakegi?"
+    GTS "It's similar to scallions, but it's most commonly used as a topping for tofu."
+    $setSkill("Academics", 1)
+    PRG "Oh, that's the name of it. I always thought they were scallions as well."
+    GTS "The only real difference is it being a form of tree onion it has a stronger taste than a normal green onion."
+    PRG "I better make a note of that when I make tofu again."
+    show PRG happy
+    PRG "Thanks for the tidbit Yamazaki-san."
+    show GTS unique
+    GTS "It's nothing, Kodama-san."
+    MC "Sounds like a pretty good starting list of veggies you have."
+    show GTS neutral
+    GTS "It's more than enough to get us moving, I may plant some smaller herbs like sage and rosemary since they don't take much space."
+    show PRG neutral
+    PRG "Those would be lovely too."
+    GTS "I'll make sure to pick those up as soon as I can, that way we have the maximum amount of time for them to grow."
+    MC "Sounds like you have this already planned out for the next couple months."
+    "Naomi blushed."
+    PRG "Well I need to be leaving, Alice said she needed me for something."
+    MC "I should be leaving too, I'm behind on some homework for class."
+    MC "Take care girls."
+    Girls "Bye, Hotsure-san."
+    jump daymenu
+
+label GTSDemo:
+    scene Dorm Interior with fade
+    show GTS neutral with dissolve
+    GTS "Hi, Kei-kun! I'm leaning over!"
+    hide GTS
+    show GTS_S neutral
+    GTS_S "I'm standing now!"
+    show GTS_S wink at Transform(xzoom=-1)
+    GTS_S "It should have just happened instantly."
+    show GTS_S happy at Transform(xzoom=1)
+    GTS_S "Isn't this exciting?"
+    hide GTS_S
+    show GTS happy
+    GTS "I'm leaning over again."
+    jump daymenu

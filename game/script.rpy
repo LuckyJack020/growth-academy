@@ -29,6 +29,7 @@ init python:
         'dorminterior': ("school", (885,400)),
         'festival': ("town", (600,230)),
         'field': ("town", (600,230)),
+        'giantdorminterior': ("town", (1000, 110)),
         'gym': ("school", (630,325)),
         'hallway': ("school", (810,390)),
         'hillroad': ("town", (600,230)),
