@@ -2146,7 +2146,7 @@ label GTS022_invite:
     MC "Yeah. So, if we were to meet in the courtyard tomorrow after classes get out, would you want to join us?"
     "Without breaking eye contact, she put her free hands to her chin, where it lingered a moment or two."
     AE "Yamazaki-san is aware that you're inviting me?"
-    MC "Yeah, ‘course."
+    MC "Yeah, 'course."
     show AE happy with dissolve
     AE "That could be fun, and I can fit it into my schedule provided we don't go on longer than two hours. I accept."
     MC "Awesome! Thank you so much, Matsumoto-san."
@@ -3175,6 +3175,7 @@ label GTS025:
     GTS "I, my apologies, Hotsure-san."
     MC "Don't worry, I like it. And I would say I agree with you, it's nice just being out here and seeing the world through this filter."
     "I moved closer to the fence and sat down, giving myself the best view that I could before Naomi sat next to me."
+    show cg GTS025 with dissolve
     "There weren't any more words at that point. Just us and the tender solace we had found."
     "My senses felt heightened, everything looked sharper and sounded clearer: The wind blowing through the leaves, the faint chatter of some students, even the soft breathing of the body next to me."
     "I made note of the air washing over me, making my bangs fly briefly. I felt the rough texture of the floor beneath my hands and fingers. And then to my surprise, felt the pressure of another body lean against mine."
@@ -3198,6 +3199,7 @@ label GTS025:
     "Reaching up, I placed my hand on her cheek as I guided her until our lips met. She was soft and warm, tender and timid as she tried not to press against me, but also feared pulling away."
     "I felt her tense up, then relax, only to tense once more as she seemed scared to ruin the kiss. My thumb gently caressed her cheek, and soon her tension eased away. We allowed ourselves to enjoy this, rather than let fear mess it up."
     "We stayed like this for merely a few seconds before I finally moved back. Her eyes opened, and while she was still deeply red, I saw the warmest smile form as her eyes looked directly into my own."
+    hide cg with dissolve
     show GTS happy
     "Her joy coaxed out my own as I smiled in response to hers. We didn't talk again, instead we looked back out into the sunset as she leaned back into me once more. This time however, I felt her gentle hand rest upon mine."
     "Softly, I shifted my hand and took what of hers I could within its grasp. Squeezing her hand tenderly, we enjoyed the view until the sun vanished behind the horizon."
@@ -3870,7 +3872,7 @@ label GTS032:
     MC "So you're telling me that you DON'T enable cookies."
     show RM angry
     RM "Enough."
-    MC "What the hell {i}do{/i} they mean by ‘cookies,' anyway..."
+    MC "What the hell {i}do{/i} they mean by 'cookies,' anyway..."
     show RM neutral
     RM "Don't you have a class to attend?"
     MC "Don't you?"

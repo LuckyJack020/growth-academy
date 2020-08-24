@@ -11040,9 +11040,9 @@ label AE050_after2:
     AE "R-Right, um... felatio. I um... I r-r-read up a bit on it."
     AE "Hoookay, you can do this..."
     "She took a deep breath in, and after planting a few tiny kisses to the tip of my dick-"
+    show cg AE050_bj1 with dissolve
     AE "HHRGK!"
     MC "Ahn!"
-    show cg AE050a with dissolve
     "Shoved the whole thing down her throat."
     "Eyes darting open in shock, she pulled away and began to cough her lungs out and gag."
     AE "{i}Kaff{/i} Pagh- {i}Kaff{/i}"
@@ -11056,6 +11056,7 @@ label AE050_after2:
 label AE050_assertive3:
     "She balled up her fist around her thumb and took a few breaths to calm herself. With her other hand, she gently wrapped her hand around my shaft and placed the head in her mouth; slowly sliding down further and further as she bobbed her head."
     AE "{i}Mmph{/i} Mmmh~"
+    show cg AE050_bj2 with dissolve
     MC "Oh fuck... ahn..."
     "Grasping her hair, I guided her head on instinct, and pulled her in further."
     AE "Gch!"
@@ -11064,19 +11065,20 @@ label AE050_assertive3:
     AE "Mmph, mmph, mmph."
     "She increased her speed as best as she could, her head bobbing back and forth; rocking her whole body with her movements. Looking past her head, I noticed her immense booty as it quaked with every rhythmic movement of her head."
     MC "H-Haaahn~"
-    show cg AE050b with dissolve
+    show cg AE050_bj3 with dissolve
     "This flipped the switch in me as I grunted and my muscles contracted. My balls seized up and tensed as a flood of my seed sprayed her mouth. I saw her eyes widen as her cheeks puffed up with my load. She pulled her head away from my cock, and covered her lips with her hand."
-    show cg AE050c with dissolve
     AE "Mmph!"
     jump AE050_after3
 
 label AE050_passive3:
+    show cg AE050_sit1 with dissolve
     "She then took a surprising turn when she ended up moving my body down a bit on the bed till I was laying down, she then hovered her gargantuan, jiggling ham-hocks over my face. Given how big it was, both cheeks brushed my own as I began to turn bright red."
     AE "I-I hope you don't mind, I just think t-this might be more comfortable... are you okay with this?"
     MCT "S-She wants to sit on my face? Huh..."
     MC "W-Well  it's, unexpected  but, just as long as it makes you comfortable."
     "She saw my warm smile and felt my warm words put her at ease as she wiggled her gargantuan hips and was about to sit on my face."
     AE "D-Dont worry, I'll try to be gentle."
+    show cg AE050_sit2 with dissolve
     "She slowly lowered herself down, her soft warm flesh engulfing my face with her two massive cheeks smushing it in-between. She lowered a bit more and more until her whole weight of her ass was comfortablely on my face, my warmth of my face seeming to make her shiver a bit."
     AE "A-ahn... You feel... really nice down there..."
     MC "Mmm~"
@@ -11090,9 +11092,7 @@ label AE050_passive3:
     AE "Mmph, mmph, mmph."
     "She increased her speed as best as she could, her head bobbing back and forth; rocking her whole body with her movements, including her ass which wobbled like mad. In the heat of the moment, she pressed her hips harder into my face, clearly getting a sense of enjoyment from the sensations it brought."
     MC "H-Haaahn~"
-    show cg AE050b with dissolve
     "This flipped the switch in me as I grunted and my muscles contracted. My balls seized up and tensed as a flood of my seed sprayed her mouth. Her eyes widened as her cheeks puffed up with my load. She pulled her head away from my cock, and covered her lips with her hand."
-    show cg AE050c with dissolve
     AE "Mmph!"
     "She then lifted up her massively plump rear carefully and slowly, so that I was able to pull myself out from underneath her. I was a bit stunned, but afterwards I got a good look at her face and chuckled a bit."
     jump AE050_after3
@@ -11100,8 +11100,8 @@ label AE050_passive3:
 label AE050_after3:
     MC "Hah... Sorry, I guess it's been a while."
     AE "Mmmgn..."
+    show cg AE050_bj4 with dissolve
     "She seemed to cringe a bit at the bitterness of my cum, her cheeks making her seem reminiscent of a chipmunk. But as I was about to make a joking comment on it... that's when I heard her do it."
-    show cg AE050d with dissolve
     AE "{i}GULP{/i}"
     "I looked on in shock as Shiori-chan not only swallowed her first blowjob rather than spit, but as she did so to the biggest nut I'd busted in a long time. Cum dribbled down her chin as she did her best to gulp down the bitter fluid. After two gulps, she opened her mouth and gasped."
     AE "Pah-{i}urp{/i}-ahgn..."
@@ -11177,10 +11177,12 @@ label AE050_after3:
         MC "I wonder... is your ass more or less sensitive than your pussy?"
         "The sight of her beautiful, jiggling butt cheeks begging for my touch caused my face to go hot and my hands to sweat."
         MC "You said it yourself. You've been feeling {i}extra{/i} sensitive back there, right?"
+        show cg AE050_spank1 with dissolve
         MC "Maybe it's high time we test that out.~"
         "I playfully gave her tush a little smack with my hand-"
         AE "HAAAH!"
         "And Shiori-chan's eyes widened as she let out a gasp."
+        show cg AE050_spank2 with dissolve
         MC "...Huh?"
         MC "Wait... you reacted the same way in the clocktower..."
         AE "Ahn... U-Um..."
@@ -11188,17 +11190,14 @@ label AE050_after3:
         MC "I think we've found your fetish."
         AE "H-HUH?!"
         MC "Well, I mean, you can deny it... but how about we try {i}juuust{/i} to make sure."
-        MC "Here."
-        "I kneeled on the bed, and patted my knee."
-        MC "If you wanna try it, just bend over my knee. If not, we can skip right to the main course."
-        AE "I..."
-        "Just as I predicted, her usual steadfast resolve couldn't keep hold. She gave into temptation, and submitted; kneeling over my knee."
+        "Just as I predicted, her usual steadfast resolve couldn't keep hold. She gave into temptation, and submitted."
         AE "Please s-s-spank me!"
         MC "Oooh? So forceful. What a naughty girl.~"
         AE "Y-Yes! I've been naughty, please, I deserve it!"
         "While what part of me that was still in conscious thought questioned if she should see someone about what she just said, the stiffness of my loins superseded that."
         MC "Mhmm~"
         "I took my middle finger and ran it gently, slowly, through the crack of her ass, sending signals of pleasure to her brain."
+        show cg AE050_spank3 with dissolve
         AE "Ho yes, yes-"
         "I reached the top of her ass and then raised my hand up."
         AE "-yes, YES, YES, YES, YES!!"
@@ -11210,6 +11209,7 @@ label AE050_after3:
         extend " {i}Smack{/i}"
         "Between each few spanks, I gently rubbed her jiggling backside, soothing the area to make it more sensitive for the next hit."
         "{i}Smack{/i}"
+        show cg AE050_spank4 with dissolve
         AE "Uu-uu-uu-UU-UU-UU~!!"
         "Her eyes became pinned as I continued, and her breathing was ragged and erratic. Her vocalisations rose in pitch as her situational awareness dropped to zero."
         AE "HARDER, HARDER, PLEASE-PLEASE-PLEASE!! OOOHH!!"

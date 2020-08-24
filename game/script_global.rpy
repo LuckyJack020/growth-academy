@@ -26,6 +26,7 @@ define HR = Character('Tashi-sensei', color="#C0C0C0")
 define Kanami = Character('Kanami', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
 define Minei = Character('Minei', color="#C0C0C0")
+define Misaki = Character('Misaki', color="#C0C0C0")
 define Miura = Character('Miura', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Mom = Character('Mom', color="#FF3300")
@@ -54,6 +55,7 @@ define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
 define Girls = Character('Girls', color="#ffffff")
+define Guard = Character('Guard', color="#C0C0C0")
 define Hostess = Character('Hostess', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Judge = Character('Judge', color="#C0C0C0")
@@ -71,6 +73,7 @@ define Teacher = Character('Teacher', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define UNKNOWNCell = Character('???', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Vendor = Character('Vendor', color="#FFFFFF")
+define Waiter = Character('Waiter', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
 
 #Scenes
@@ -120,6 +123,7 @@ image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 image Clothes Store = "Graphics/ui/bg/clothesstore.png"
 image Pharmacy = "Graphics/ui/bg/pharmacy_day.png"
 image Supermarket = "Graphics/ui/bg/supermarket_day.png"
+image Art Gallery = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -150,10 +154,17 @@ image cg AE024b = "Graphics/ui/gallery/AE024b.png"
 image cg AE024c = "Graphics/ui/gallery/AE024c.png"
 image cg AE024d = "Graphics/ui/gallery/AE024d.png"
 image cg AE024e = "Graphics/ui/gallery/AE024e.png"
-image cg AE050a = "Graphics/ui/gallery/AE050a.png"
-image cg AE050b = "Graphics/ui/gallery/AE050b.png"
-image cg AE050c = "Graphics/ui/gallery/AE050c.png"
-image cg AE050d = "Graphics/ui/gallery/AE050d.png"
+
+image cg AE050_bj1 = "Graphics/ui/gallery/AE050_bj1.png"
+image cg AE050_bj2 = "Graphics/ui/gallery/AE050_bj2.png"
+image cg AE050_bj3 = "Graphics/ui/gallery/AE050_bj3.png"
+image cg AE050_bj4 = "Graphics/ui/gallery/AE050_bj4.png"
+image cg AE050_sit1 = "Graphics/ui/gallery/AE050_sit1.png"
+image cg AE050_sit2 = "Graphics/ui/gallery/AE050_sit2.png"
+image cg AE050_spank1 = "Graphics/ui/gallery/AE050_spank1.png"
+image cg AE050_spank2 = "Graphics/ui/gallery/AE050_spank2.png"
+image cg AE050_spank3 = "Graphics/ui/gallery/AE050_spank3.png"
+image cg AE050_spank4 = "Graphics/ui/gallery/AE050_spank4.png"
 
 image cg BBW000 = "Graphics/ui/gallery/BBW000.png"
 image cg BBW009 = "Graphics/ui/gallery/BBW009.png"
@@ -165,6 +176,8 @@ image cg BE010 = "Graphics/ui/gallery/BE010.png"
 image cg BE031 = "Graphics/ui/gallery/BE031.png"
 image cg BE031b = "Graphics/ui/gallery/BE031b.png"
 image cg BE032 = "Graphics/ui/gallery/BE032.png"
+
+image cg GTS025 = "Graphics/ui/gallery/GTS025.png"
 
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 
@@ -684,9 +697,12 @@ init 2 python:
     eventlibrary['BBW035'] = {"name": "It's Showtime", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW036", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
     eventlibrary['BBW036'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW038", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
     eventlibrary['BBW038'] = {"name": "Sick Day", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                                  "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW039", "obsflags": [],                               "conditions": []}
-    eventlibrary['BBW039'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW039", "obsflags": [],                               "conditions": []}
-    eventlibrary['BBW040'] = {"name": "Helping Hands", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                             "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW039", "obsflags": [],                               "conditions": []} # >=20 affection
-    eventlibrary['BBW041'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 7,     "next": "", "obsflags": [],                                     "conditions": []}
+    eventlibrary['BBW039'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW040", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW040'] = {"name": "Helping Hands", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                             "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW041", "obsflags": [],                               "conditions": []} # >=20 affection
+    eventlibrary['BBW041'] = {"name": "Beck and Call", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW042", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW042'] = {"name": "The Bigger Picture", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW045", "obsflags": ["BBWnowork"],                    "conditions": []}
+    eventlibrary['BBW045'] = {"name": "No Need to Wine", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                           "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 8,     "next": "BBW046", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW046'] = {"name": "Alice end", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                        "location": "library",          "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],                                     "conditions": []}
 
     #Optional
     eventlibrary['BBW004'] = {"name": "As Long as the Job Gets Done, Right?", "girls": ["BBW", "PRG"], "type": EventTypeEnum.OPTIONAL,                                  "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}

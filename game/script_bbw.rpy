@@ -7312,6 +7312,1050 @@ label BBW040_c1_2:
     jump daymenu
 
 label BBW041:
+    $setProgress("BBW", "BBW042")
+    scene Dorm Interior with fade
+    MCT "Ugh. So bored."
+    MCT "At this point I'd accept a conspiracy theory debate with Daichi."
+    "{i}BZZZT{/i}"
+    MCT "Even fate wants me to avoid that conversation, it seems."
+    "I checked my phone, pleasantly surprised to see a text from Alice."
+    play music BBW
+    "Yesterday's events were… interesting, to say the least."
+    "Just having the chance to get close to her belly like that was exhilarating."
+    BBWCell "< Come to the arcade, I have something fun to show you. >"
+    MCT "Alice? At the arcade? Oh this {i}will{/i} be fun."
+    MCCell "< I'm on my way. >"
+    "I got dressed and rushed to the bus stop. I had to be there as soon as possible."
+
+    scene School Exterior with fade
+    "I got to the bus stop just in time to see the bus to town pulling away."
+    MC "Damnit."
+    MCT "Okay. The next bus isn't for half an hour. I can wait or I can run to town."
+    MCT "..."
+    MC "Better get moving."
+    if getSkill("Athletics") == 0:
+        stop music
+        scene black
+        "I was barely 5 minutes into the run when my body simply couldn't take anymore."
+        "I decided to text Alice that I couldn't make it and I slowly walked back to my dorm instead."
+        $setAffection("BBW", -1)
+        MCT "I really need to get in shape."
+        jump daymenu
+
+    scene Town with fade
+    "I finally reached the arcade, feeling like I had run a marathon."
+    show BBW neutral with dissolve
+    BBW "Wow you look spent. Did you miss the bus?"
+    MC "Yeah but that didn't stop me from getting here to see you."
+    MC "So why did you want me to come to the arcade?"
+    BBW "Because I knew you'd know where it was. Our actual destination is just around the corner."
+    show BBW haughty
+    BBW "Plus, I knew you would race here if you thought I wanted to play a game here."
+    MCT "Drat. She knows me too well."
+    MC "I raced here because seeing you is worth a sprint."
+    show BBW happy
+    BBW "Charming. Now come with me, I assure you this will be more than those flashing loud 'games' are."
+
+    if isEventCleared("FMG016"):
+        jump BBW041_FMG016
+    elif isEventCleared("FMG009"):
+        jump BBW041_FMG009
+    else:
+        jump BBW041_FMG000
+
+label BBW041_FMG016:
+    "Alice had elected to visit the island's only maid café, where I was about to meet Chibuki again."
+    "Avoiding this was suddenly my chief concern."
+    MC "A maid café? Alice, are you sure?"
+    BBW "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids."
+    BBW "It shows that people needn't money to have fine taste."
+    MCT "I guess I'll have to try and convince her."
+    menu:
+        "Insist.":
+            MC "Alice, I don't want to eat here. Can we choose somewhere else?"
+            MC "I'm afraid I have to insist."
+            show BBW stern
+            BBW "You… insist?"
+            MC "Yeah, insist."
+            BBW "Of course, Keisuke. Whatever you think is best."
+            show BBW sad
+            $setAffection("BBW", -3)
+            BBW "I will see to it."
+            MC "..."
+            BBW "Well then I suppose I'll see you in school tomorrow."
+            hide BBW with dissolve
+            "Alice turned around and walked towards the bus stop."
+            MCT "She must have really wanted to eat at the café. Was avoiding Chibuki worth upsetting my girlfriend?"
+            "I had a heavy conscience as I started the long walk back to Seichou."
+            jump daymenu
+
+        "Don't insist.":
+            play music Schoolday
+            BBW "Come on, this will be fun."
+
+            scene Cafe with fade
+            show BBW neutral at center, Transform(xzoom=-1) with dissolve
+            "Alice walked to one of the roomier booths and sat down."
+            BBW "This is a fine spot. The faux leather seating is of surprisingly good quality."
+            BBW "If the food is good, I might just find myself in here regularly."
+            MCT "Let's hope not."
+            MC "I suppose we shall see."
+            show Chibuki neutral at Position(xpos=0.8) with dissolve
+            Chibuki "Surprised to see you in here without Miss Akira, Master Kei-chan."
+            Chibuki "{size=-5}{i}Looks like he did a full 180 there.{/i}{/size}"
+            "Alice squinted, clearly perplexed."
+            MC "Yes Chibuki, I'm here with my girlfriend Alice."
+            show BBW happy at center, Transform(xzoom=1)
+            BBW "Mistress Nikumaru. I'm here for the experience."
+            Chibuki "Ahh… Well, Mistress Nikumaru, most people come for the experience and stay for the food."
+            "Alice glanced at her watch and a sly smirk quickly spread across her face."
+            show BBW haughty
+            BBW "Miss Chibuki, I'd like to put your claim to the test. Two coffees and two slices of cake of your choosing."
+            Chibuki "Wow, okay! This is going to be fun."
+            Chibuki "Right away Mistress."
+            hide Chibuki with dissolve
+            MCT "This can't end well."
+            BBW "Well Keisuke,I told you this would be fun."
+            show BBW neutral
+            MC "Are you sure about this?"
+            BBW "Of course, it'll be fun."
+            MC "Well in that case, let's do it!"
+            BBW "That's the spirit."
+            "As Alice said that, Chibuki emerged from the kitchen."
+            BBW "Now we just have to see how good our esteemed maid truly is."
+            show Chibuki neutral at Position(xpos=0.8) with dissolve
+            Chibuki "It's early so I went back there to help out and get everything set up."
+            Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
+            Chibuki "{size=-5}{i}Saves money.{/i}{/size}"
+            Chibuki "And a coffee blend that I shall specify the name of afterwards."
+            Chibuki "For Master Kei-chan, a slice of plain sponge with generous vanilla frosting, and a double espresso. You really look like you could do with it mate."
+            Chibuki "Please enjoy."
+            hide Chibuki with dissolve
+            "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
+            "Alice first bit into her cake, while I hastily sipped the coffee."
+            MCT "This caffeine will be a life-saver when it hits."
+            BBW "The cake is quite good actually, that was unexpected."
+            BBW "It certainly is rich but they have used less frosting to account for that, giving a more refined taste."
+            BBW "It certainly seems more enjoyable than how yours looks to be."
+            MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
+            BBW "I know, and as an individual I say this one is better."
+            show BBW haughty
+            BBW "It's nothing personal Keisuke, it's just business."
+            MC "Well, how's the coffee?"
+            show BBW neutral
+            BBW "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
+            BBW "But I suppose we are about to find out."
+            "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
+            "As she did so, I took the opportunity of her being unable to see me to quickly scrape the frosting from my cake into my mouth."
+            show BBW happy
+            BBW "I know this coffee. It's Antigua, a Guatemalan variety."
+            BBW "One of my favourite coffees actually."
+            BBW "Chibuki must have an excellent ability to read people, as well as a fine taste in coffee herself."
+            BBW "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
+            BBW "Are you ready to go yet Keisuke?"
+            MC "I just need to drink some more coffee."
+            "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
+            MC "I'm ready."
+            "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
+            show Chibuki neutral at Position(xpos=0.8) with dissolve
+            Chibuki "That comes to 1340 yen total, Master and Mistress."
+            "I reached for my wallet but Alice gestured at me to stop."
+            BBW "I decided to come here Keisuke, allow me."
+            "As she paid Chibuki for the breakfast, she started speaking to her in English."
+            "I could only stand there and watch, completely oblivious to what they were saying."
+            "I realised it must have been about tipping when Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
+            "Alice then returned to speaking Japanese."
+            BBW "Please, take it. You more than deserve it."
+            Chibuki "Thank you so much Al-{w} Mistress Nikumaru."
+            BBW "You will almost certainly see me in here again, this morning has been a delightful experience."
+            BBW "We should leave now, Keisuke. The next bus is in a few minutes."
+            hide BBW with fade
+            "As Alice walked towards the door I quickly spun around to face Chibuki."
+            MC "How did you know exactly which coffee to get for Alice?"
+            Chibuki "It's simple, I used the one with the fanciest looking packaging."
+            MCT "Wow. The best solution truly is the simplest."
+            Chibuki "Bye Master Kei-chan, come back any time."
+
+            scene Town with fade
+            show BBW happy with dissolve
+            BBW "That was a rather nice way to spend the morning, won't you agree?"
+            BBW "Come on now the next bus to Seichou should be here soon."
+            jump daymenu
+
+label BBW041_FMG009:
+    "Alice had elected to visit a maid café, likely the only one on the island."
+    MC "A maid café? Alice, are you sure?"
+    BBW "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
+    MC "Well, alright then. I guess this could be fun."
+    BBW "Only one way to find out."
+
+    scene Cafe with fade
+    play music Schoolday
+    show BBW neutral at center, Transform(xzoom=-1) with dissolve
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "Good morning Miss, Good morning Mast- oh bugger."
+    Chibuki "It's Keisuke isn't it?"
+    "It suddenly struck me that I remembered this girl from somewhere."
+    Chibuki "Please don't tell Akira about this job, she can't know something {i}this{/i} embarrassing about me."
+    "That was where I remembered this girl from. She is Akira's roommate, Chibuki."
+    MC "It's alright, I promise not to tell."
+    Chibuki "Thank you Keisuke. I owe you one for this."
+    Chibuki "So, are you going to introduce me?"
+    MC "Alice, this is Mizutani-san's roommate, Chibuki."
+    MC "Chibuki, this is my girlfriend, Alice."
+    BBW "Nice to meet you, though Mistress Nikumaru will suffice for the duration of our experience here."
+    Chibuki "Of course Mistress Nikumaru, Master Keisuke. How may I serve you today? Our cakes can't be beat."
+    "A sly smirk quickly spread across Alice's face."
+    show BBW haughty at center, Transform(xzoom=1)
+    BBW "Can't be beat you say?"
+    BBW "Well in that case, two slices of cake and two coffees. What kind of each is completely at your discretion."
+    Chibuki "Wow, okay! This is going to be fun."
+    Chibuki "Right away Mistress."
+    hide Chibuki with dissolve
+    MCT "This can't end well."
+    BBW "Well Keisuke, I told you we would be having some fun today."
+    "Alice and I sat at a nice booth and waited for Chibuki to return."
+    show BBW neutral
+    MC "Well, I suppose this will be an interesting experience."
+    MC "At the very least it's a delicious slice of cake"
+    BBW "That's the spirit."
+    "As Alice said that, Chibuki emerged from the kitchen."
+    BBW "Now we just have to see how good our esteemed maid truly is."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "It's early so I went back there to help out and get everything set up."
+    Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
+    Chibuki "And a coffee blend that I shall specify the name of afterwards."
+    Chibuki "For Master Keisuke, a slice of plain sponge with generous vanilla frosting, and a double espresso. You seemed drowsy, I hope it helps."
+    Chibuki "Please enjoy."
+    hide Chibuki with dissolve
+    "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
+    "Alice first bit into her cake, while I hastily sipped the coffee."
+    MCT "This caffeine will be a life-saver when it hits."
+    BBW "The cake is quite good actually, that was unexpected."
+    BBW "It certainly is rich but they have used less frosting to account for that, giving a more refined taste."
+    BBW "It certainly seems more enjoyable than how yours looks to be."
+    MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
+    BBW "I know, and as an individual I say this one is better."
+    show BBW haughty
+    BBW "It's nothing personal Keisuke, it's just business."
+    MC "Well, how's the coffee?"
+    show BBW neutral
+    BBW "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
+    BBW "But I suppose we are about to find out."
+    "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
+    "As she did so, I took the opportunity of her being unable to see me to quickly scoop the frosting from my cake into my mouth using my finger."
+    show BBW happy
+    BBW "I know this coffee. It's Antigua, a Guatemalan variety."
+    BBW "One of my favourite coffees actually."
+    BBW "Chibuki must have an excellent ability to read people, as well as a fine taste in coffee herself."
+    BBW "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
+    BBW "Are you ready to go yet Keisuke?"
+    MC "I just need to drink some more coffee."
+    "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
+    MC "I'm ready."
+    "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki  "That comes to 1340 yen total, Master and Mistress."
+    "I reached for my wallet but Alice gestured at me to stop."
+    BBW "I decided to come here Keisuke, allow me."
+    "As she paid Chibuki for the breakfast, she started speaking to her in English."
+    "I could only stand there and watch, completely oblivious to what they were saying."
+    "I realised it must have been about tipping when Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
+    "Alice then returned to speaking Japanese."
+    BBW "Please, take it. You more than deserve it."
+    Chibuki "Thank you so much Al-{w} Mistress Nikumaru. Your generosity is astounding."
+    BBW "You will almost certainly see me in here again, this morning has been a delightful experience."
+    BBW "We should leave now Keisuke. We're not late, but we don't have much time."
+    hide BBW with dissolve
+    "As Alice walked towards the door I quickly spun around to face Chibuki."
+    MC "How did you know exactly which coffee to get for Alice?"
+    Chibuki "It's simple, I used the one with the fanciest looking packaging."
+    MCT "Wow. The best solution truly is the simplest."
+    Chibuki "Goodbye Master Keisuke, please come back any time."
+    scene Town with fade
+    show BBW happy with dissolve
+    BBW "That was a rather nice way to spend the morning, won't you agree?"
+    BBW "Come on now the next bus to Seichou should be here soon."
+    jump daymenu
+
+label BBW041_FMG000:
+    "Alice had elected to stop at a maid café, likely the only one on the island."
+    MC "A maid café? Alice, are you sure?"
+    BBW "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
+    MC "Well, alright then. I guess this could be fun."
+    BBW "Only one way to find out."
+    scene Cafe with fade
+    play music Schoolday
+    show BBW neutral at center, Transform(xzoom=-1) with dissolve
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "Good morning Miss, Good morning Master."
+    "It appeared the only maid working at the moment was foreign. Her accent would be a dead giveaway, if her blue eyes didn't beat it to it. They were a deeper blue than Alice's."
+    BBW "Nice to meet you, please call me Mistress Nikumaru."
+    Chibuki "Of course Mistress Nikumaru, and you Sir?"
+    MC "Keisuke. I guess you have to call me master or something for the job though right?"
+    Chibuki "That is correct Master Keisuke."
+    Chibuki "Now how may I serve you two today? Our cakes can't be beat."
+    "Alice glanced at her watch and a sly smirk quickly spread across her face."
+    show BBW haughty at center, Transform(xzoom=1)
+    BBW "Can't be beat you say?"
+    BBW "Well in that case, two slices of cake and two coffees. What kind of each is completely at your discretion."
+    Chibuki "Wow, okay! This is going to be fun!"
+    Chibuki "I mean- right away Mistress."
+    hide Chibuki with dissolve
+    MCT "This can't end well."
+    BBW "Well Keisuke, turns out we will actually be having some fun today."
+    "Alice and I sat at a nice booth and waited for Chibuki to return."
+    show BBW neutral
+    MC "Are you sure about this?"
+    BBW "Absolutely. Trust me, it'll be fun."
+    MC "Well in that case, let's do it!"
+    BBW "That's the spirit."
+    "A few minutes passed and Chibuki emerged from the kitchen."
+    BBW "Now we just have to see how good our esteemed maid truly is."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "Thank you for waiting."
+    Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
+    Chibuki "And a coffee blend that I shall keep the name of a secret for now."
+    Chibuki "For Master Keisuke, a slice of plain sponge with generous vanilla frosting, and a double espresso. I hope it helps."
+    Chibuki "Please enjoy."
+    hide Chibuki with dissolve
+    "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
+    "Alice first bit into her cake, while I hastily sipped the coffee."
+    MCT "This caffeine will be a life-saver when it hits."
+    BBW "The cake is quite good actually, that was unexpected."
+    BBW "It certainly is rich but they have used less frosting to account for that, giving a more refined taste."
+    BBW "It certainly seems more enjoyable than how yours looks to be."
+    MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
+    BBW "I know, and as an individual I say this one is better."
+    show BBW haughty
+    BBW "It's nothing personal Keisuke, it's just business."
+    "I let out a sensible chuckle."
+    MC "How's the coffee?"
+    show BBW neutral
+    BBW "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
+    BBW "But I suppose we are about to find out."
+    "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
+    "As she did so, I took the opportunity of her being unable to see me to quickly scoop the frosting from my cake into my mouth using my finger."
+    show BBW happy
+    BBW "I know this coffee. It's Antigua, a Guatemalan variety."
+    BBW "One of my favourite coffees actually."
+    BBW "Our 'maid' must have an excellent ability to read people, as well as a fine taste in coffee herself."
+    BBW "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
+    BBW "Are you ready to go yet Keisuke?"
+    MC "I just need to drink some more coffee."
+    "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
+    MC "I'm ready."
+    "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki  "That comes to 1340 yen total, Master and Mistress."
+    "I reached for my wallet but Alice gestured at me to stop."
+    BBW "I decided to come here Keisuke, allow me."
+    "As she paid Chibuki for the breakfast, she started speaking to her in English."
+    "I could only stand there and watch, completely oblivious to what they were saying."
+    "I realised it must have been about tipping when Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
+    "Alice then returned to speaking Japanese."
+    BBW "Please, take it. You more than deserve it."
+    Chibuki "Thank you so much Mistress Nikumaru! Your generosity is astounding."
+    BBW "You will likely see me in here again, this morning has been a delightful experience."
+    BBW "Well Keisuke, let's head back to school."
+    hide BBW with dissolve
+    "As Alice walked towards the door I quickly spun around to face Chibuki."
+    MC "How did you know exactly which coffee to get for my girlfriend? That was her favourite."
+    Chibuki "It's simple, I used the one with the fanciest looking packaging. It made sense to me because of her dress."
+    MCT "Wow. The best solution truly is the simplest."
+    Chibuki "Goodbye Master Keisuke, please come back any time."
+    scene Town with fade
+    show BBW happy with dissolve
+    BBW "That was a rather nice way to spend the morning, won't you agree?"
+    BBW "Come on now the next bus to Seichou should be here soon."
+    jump daymenu
+
+label BBW042:
+    $setProgress("BBW", "BBW045")
+    scene Classroom with fade
+    "After classes I had wanted to meet up with Alice to touch base on if any deliveries were needed. She wasn't answering any texts, but when I found Aida in the cooking classroom she told me Alice was probably in the arts room."
+    "I did indeed find her there, standing at an easel. The painting she had been working on in class earlier that day was in front of her."
+    show BBW angry with dissolve
+    "Something about it seemed to be frustrating her. I weighed the pros and cons of interrupting her, and ultimately decided to do what I came to."
+    MC "Hey, Nik- Alice? Got a second?"
+    show BBW stern
+    BBW "Hmm? What can I do for you?"
+    MC "I just wanted to check with you to see if there were any deliveries I needed to make, or any other work."
+    BBW "No. We are all good on that."
+    "She was only half-paying attention as she answered me, already turning back to her painting when she finished talking."
+    "Curious what was giving her trouble, I glanced at the painting. It was a landscape, a grassy cliff overlooking the ocean."
+    MC "Nice picture."
+    "I was then going to head out, leave her to her work, but I guess Alice needed to vent."
+    show BBW angry
+    BBW "This is a bothersome experience. If it were possible to call a piece of art 'insolent,' I would."
+    MC "Is it giving you trouble? It looks really good."
+    show BBW stern
+    "The landscape itself is acceptable, and I am satisfied with the colors. I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
+    "I took a longer look at the painting, paying attention to the different shades of greens in the grass and blues in the skies. There was more detail there than I had originally noticed."
+    MC "So what's the problem?"
+    BBW "The lighting. You see how the sun is supposed to be coming from the east?"
+    "I looked to the right side of the frame, then realized from this perspective east was left."
+    "I stared for a couple minutes, expecting or rather hoping to see something jump out at me. A problem like something off-model or looking sloppy."
+    "Nothing came to me."
+    MC "I don't see what the problem is."
+    BBW "Hmm..."
+    BBW "Have you seen Arisawa's painting?"
+    "She indicated a painting done by a classmate of ours, one of the finished pieces sitting on the shelves along the wall."
+    "It was also a landscape, looking down at the rock quarry where the giant students lived. Alice's painting was good, but this one looked almost professional."
+    MC "That's really good, yeah. But yours isn't bad. It's better than mine."
+    BBW "I know mine is good. And I am not concerned about being the best in the class, but in doing the best I can."
+    BBW "Look at the lighting in Arisawa's. Do you see how the sunlight reflects off the surfaces of the rocks? How its warmth is muted by the lingering chill of the morning?"
+    BBW "I have been trying for hours to get the interplay of light and warmth in my picture perfect, but the more I work on it the more of a mess it becomes."
+    MC "Oh. Um... I'm sorry, I don't know anything about painting, really. I can't give any advice there."
+    MC "But why not be content with how good your painting is anyway?"
+    BBW "Because it is {i}only{/i} good. By my own standards that is merely adequate."
+    BBW "I have done better. Not necessarily with the lighting, I am trying something new, but the principle is the same. I do not want to rest at 'good enough.'"
+    MC "I see."
+    MC "I still think you should be satisfied with it as it is. It's very good."
+    BBW "That is not my way. If there are ways for me to improve, I pursue them. Stagnation is death."
+    MCT "That's harsh, even if she's applying it to herself. It's just something she's doing for a school assignment."
+    MCT "I should say something. Or should I? I don't know Alice that well, but she seems to take everything seriously."
+    menu:
+        "Reassure her the painting's good.":
+            MC "I think the painting looks great. You could be a real artist."
+            $setAffection("BBW", -1)
+            show BBW angry
+            MCT "I guess I didn't sound convincing."
+            "Alice turned back to her painting, clearly annoyed."
+            BBW "The level of your exuberance is so excessive you almost sound sarcastic. But I would think actual sarcasm would have been more obvious."
+            BBW "Whatever your intent, I ask that you let me resume my work. In peace."
+            MC "Okay, yeah. Sorry."
+            scene black
+            "I quietly left, feeling like I had accomplished less than nothing. I had probably come out worse than if I had said nothing."
+            MCT "Maybe blatant flattery doesn't work on her as well as I thought it would."
+            jump daymenu
+
+        "Ask her if she really needs to try so hard.":
+            MC "Even now? You don't want to slow down a bit?"
+            show BBW doubt
+            BBW "Of course even now. Why would I go easier on myself now?"
+            MC "Because of... why we're here. The news about our bodies. We're all still dealing with that."
+            show BBW neutral-2
+            BBW "My body, you mean. Not all of these 'factors' are equal burdens."
+            MC "Yeah..."
+            BBW "That has never been my way, shrinking away from bad news. What would it accomplish?"
+            BBW "Life will continue to move forward even if I stopped, people our age who are not in our situation are advancing with their lives, so the best choice is to keep moving myself."
+            BBW "Is that not what this school is for? To help us both continue our education while learning to live with our changing bodies?"
+            MC "..."
+            "I didn't have a rebuttal for that."
+            "Then I realized that maybe this wasn't about the painting... Maybe this was just her way of dealing with any frustrating experience."
+            "I couldn't say I knew Alice well enough to read into her actions like that. It could just be she was exactly that much of a perfectionist."
+            "Either way, I saw no benefit to pushing back further."
+            MC "I'll leave you to it, then. I just wanted to see if you had anything for me."
+            BBW "Not at the moment. I will see you later."
+            "She turned back to her painting and I quietly left."
+            scene black
+            "On the way back to my dorm I thought about things I could have said, or wish I had said."
+            "None of which would have been helpful. Bottom line, I needn't have tried to insert myself into her business like that, even if I was trying to be helpful."
+            "I was just hoping now that she wasn't bothered by my attempt. Hopefully she would forget about this by tomorrow."
+            jump daymenu
+
+        "Tell her she should keep at it until she gets it.":
+            MCT "On second thought, who am I to tell her to be satisfied with 'good enough?' If she thinks she can improve, she deserves encouragement."
+            MC "You're right. There's nothing wrong with wanting to get better."
+            show BBW neutral
+            BBW "Mmm."
+            BBW "..."
+            MC "..."
+            BBW "..."
+            MCT "I thought she would have appreciated that more."
+            BBW "Was that it? The entirety of your thoughts?"
+            "She said, turning back to her painting."
+            BBW "While I appreciate your attempt at being supportive, I think I will get back to this now. I am certain you have other things to do."
+            MC "Yeah, um... I'll see you around."
+            MCT "It appeared just agreeing with her wasn't enough. Which was a bit surprising."
+            MCT "I guess I'm the fool for thinking her so easily manipulated. Turns out not every pampered elite responds to such blatant ego-stroking."
+            jump daymenu
+
+        "Say nothing.":
+            "I thought about how to respond to all that. Do I flatter her? Try to soothe her ego? Would agreeing with her accomplish anything?"
+            "The pause started to get long enough to be threatening. I had to say something, so I decided... to say nothing."
+            MC "Don't let me interrupt you, then. I have some homework to do myself."
+            MC "If it's that important to you, best of luck."
+            show BBW happy
+            BBW "Thank you. I will see you in class tomorrow."
+            scene black
+            MCT "She wasn't oozing with gratitude, but she seemed to appreciate my leaving her in peace. I think that was the best outcome here."
+            jump daymenu
+
+label BBW045:
+    scene black with fade
+    "It's a beautiful Sunday morning."
+    MC "zzzzzzzzzz"
+    "And I was spending it the best way I could..."
+    MC "zzzzzzzzzzzzzzzzzzzzzzzz"
+    MC "zzzzzzzzzzzzZZZZZzzzzzzzzz"
+    play sound AlarmClock
+    "{color=#FF0000}BREEET BREEET BREEET BREEET!{/color}"
+    "...or so I thought."
+    MCT "Did I really set an alarm for Sunday morning?"
+    "I turned over in my bed and fumbled around for the alarm."
+    play sound AlarmClock
+    "{color=#FF0000}BREEET BREEET BREE-{/color}"
+    "I finally found the off button."
+    MCT "Damn alarms and them doing exactly what we want them to."
+    "I struggled to open my eyes as the battle for body control commenced."
+    scene Dorm Interior with fade
+    RM "Morning."
+    play music RM
+    MCT "I will never get used to this."
+    MC "Morning."
+    "I sat up to face my less than sociable roommate."
+    show RM neutral with dissolve
+    MC "What time did you wake up?"
+    RM "Oh only a couple hours ago."
+    MC "The alarm says it's not even 8am yet."
+    RM "The early bird gets the worm."
+    MC "I guess."
+    "I attempted to get out of bed, giving Daichi a performance akin to a corpse reanimating."
+    RM "Late night?"
+    MC "Who goes to bed early on a Saturday night?"
+    RM "Productive members of society."
+    MCT "He's got me there."
+    MC "I can be productive any other day of the week."
+    RM "Well you can be productive in your relationship today at least."
+    MC "What's that supposed to mean?"
+    RM "Remember how we synced our calendars so if one of us forgets something, the other can remind them?"
+    MC "No."
+    RM "Well we did and you definitely agreed to it, I'm sure you'll remember as you wake up more."
+    RM "Your phone hasn't buzzed once so it should be in do-not-disturb."
+    MCT "But what would I even have set on my calen-"
+    MCT "{i}Oh no.{/i}"
+    stop music
+    hide RM with dissolve
+    "I quickly disabled do-not-disturb to allow notifications to display."
+    "My phone immediately replicated the sound of a beehive as a swarm of texts from Alice came through at once."
+    MCT "I forgot that was today."
+    "I quickly opened my messages to see everything that I missed."
+    BBWCell "Hey, don't forget to sleep at a responsible time tonight, we have a big day tomorrow.    8:32pm"
+    BBWCell "I'm assuming you have already fallen asleep, it isn't like you to not respond. I hope your dreams are pleasant. Goodnight.    8:47pm"
+    BBWCell "Good morning Keisuke, I hope you slept well. Please come to my dorm at 7:30 so I can tell you what to expect today.    7:10am"
+    if getFlag("BBW034_c2_2"):
+        BBWCell "Don't forget to wear your suit, you'll look great.    7:11am"
+    elif getFlag("BBW034_c2_1"):
+        BBWCell "You will look a little overdressed in your suit, but it will still look rather appropriate.    7:11am"
+    else:
+        BBWCell "I bought you a suit for the occasion, you can get changed in my dorm.    7:11am"
+    "I looked at the clock in the corner of my phone screen."
+    MCT "7:29am, this is not going to end well."
+    "I got up and left Daichi to his book as I went to brush my teeth."
+    RM "Keisuke, are you familiar with the story of Moby Dick?"
+    MCT "Since when does he read classical literature?"
+    MC "Hear oh it"
+    RM "It's about the captain of a whaling ship named Ahab, who dies trying to hunt the whale that bit off his leg."
+    MCT "Why is he even telling me this?"
+    MC "mm-hm"
+    RM "So his ambition led to him being the architect of his own demise."
+    MCT "I'll just go along with it."
+    MC "Your poin?"
+    RM "I just think it's a good story and that 'don't lose your rationality to desire' is a good message."
+    "I spat out the toothpaste and glanced over my teeth in the mirror. Perfect pearly whites."
+    show RM neutral with dissolve
+    MC "Are you trying to say some of this applies to me?"
+    RM "I'm saying it can apply to anyone."
+    if getFlag("BBW034_c2_1") or getFlag("BBW034_c2_2"):
+        "I started to get dressed, grabbing my suit from my wardrobe."
+    else:
+        "I started to get dressed, choosing a simple track suit for the trip to Alice's dorm."
+    RM "To be overpowered by willpower is human, it is possible that striving for something more can deny you of it."
+    MCT "Where has this philosophical side come from?"
+    "I finished tying my shoelaces and headed for the door."
+    RM "Goodbye Keisuke, and don't let yourself get swallowed by the white whale."
+    "I shut the door and left for the girls' dorms."
+    scene School Inner with fade
+    MCT "..."
+    MCT "He probably didn't intend that..."
+    scene School Planter with fade
+    "Roaming school grounds without another person in sight was a surreal experience."
+    "It was extremely peaceful, it seemed almost separate from the rest of the world."
+    MC "I guess this is the calm before the storm."
+    scene Dorm Exterior with fade
+    "I arrived at the girls' dorms and took out my cell phone, texting Alice rather than knocking."
+    MCCell "<Sorry for the delay, I'm outside.>    7:48am"
+    "A few moments later, the door opened."
+    play music BBW
+    show BBW angry with dissolve
+    "She may have been furious with me, but the way the morning sun made her hair glow was so alluring."
+    "She was stunning."
+    BBW "Keisuke."
+    "...not that it changed her current emotion."
+    BBW "Do you have any idea what this means?"
+    MC "Alice I-"
+    BBW "No Keisuke, you went to bed far too late and that means you didn't get a healthy amount of sleep."
+    show BBW sad
+    BBW "I'm not upset that you're late at all, we still have plenty of time to get there. I'm upset that you sacrificed your wellbeing for this."
+    MC "Alice I assure you I'm fine, I can function perfectly well on this amount of sleep."
+    show BBW neutral
+    BBW "Well if you say you're fine then I believe you."
+    if getFlag("BBW034_c2_1") or getFlag("BBW034_c2_2"):
+         BBW "And you look so handsome in your suit, so I trust your ability to maintain appearances. Now come inside so I can tell you what to expect today."
+         jump BBW045_art
+    else:
+        BBW "Now come inside and change into your suit, you're going to look so handsome."
+        jump BBW045_suit
+
+label BBW045_art:
+    $setFlag("BBW045_art")
+    scene Dorm BBW with fade
+    "I entered Alice's dorm rather quietly, only to see that Kodama-san was already wide awake."
+    show BBW neutral at Position(xpos=0.8) with dissolve
+    show PRG pajamas at Position(xpos=0.2) with dissolve
+    PRG "Keisuke! Good morning!"
+    if getAffection("PRG") > 3:
+        MC "Good morning Aida."
+        BBW "We can sit on my bed Keisuke, I have my laptop here with me."
+        hide PRG with dissolve
+        "Aida climbed back into bed and started reading a baseball history book, of all things."
+    else:
+        MC "Good morning, Kodama-san."
+        BBW "Come and sit on my bed Keisuke, I have my laptop here with me."
+        hide PRG with dissolve
+        "Kodama-san climbed back into bed and started to read some sort of science textbook."
+    "I sat on Alice's bed. She placed her laptop on my... well... lap, and the image displayed on it was unmistakably Van Gogh's 'Starry Night', a painting anybody could recognise regardless of artistic knowledge."
+    MC "Alice, why are you showing me this?"
+    BBW "Do you know what this painting is?"
+    MC "Yes, Starry Night by Van Gogh."
+    BBW "Good, now tell me about the picture."
+    if getSkill("Art") > 4:
+        "It was painted in 1898, and it's debatably his most famous piece, alongside Sunflowers."
+    else:
+        "It was painted in the 1800s right? And it's obviously a famous picture."
+    BBW "You're not wrong Keisuke, but anybody can list simple facts about a painting, an individual of good tastes would describe the artistic methods and techniques at play."
+    BBW "Notice how each stroke of the brush was {i}physically{/i} done; quick and short individual strokes- but many of them."
+    BBW "This is a staple of Van Gogh's work and will allow you to easily identify one of his paintings."
+    $setSkill("Art", 1)
+    MC "Ok Alice, but {i}why{/i} are you telling me this?"
+    BBW "As you know, we are attending a wine tasting in… 40 minutes, minus 15 minutes travel time."
+    BBW "The building hosting the event is a small art gallery and a high-class elegant café, which will be closed, for the wealthier residents of this island."
+    BBW "Of course this is still just that- an island. You won't meet any world famous CEOs and only the more obscure paintings there are original pieces, but it still provides a high society experience for the island residents who seek it."
+    "I had read that we were attending a wine tasting when I disabled do-not-disturb on my phone and the calendar notification displayed, but in my groggy state I had not properly processed the thought."
+    "We aren't old enough to drink yet."
+    MC "Alice, how are we attending a wine tasting when we aren't old enough to drink?"
+    show BBW haughty
+    BBW "Keisuke, what kind of businesswoman would I be if I wasn't aware of legal loopholes?"
+    BBW "The law states that all citizens and tourists within Japan must be age 20 to purchase or consume alcohol."
+    MC "Right, and we aren-"
+    BBW "Aren't purchasing or consuming alcohol."
+    BBW "There isn't any law against merely tasting alcohol, and we aren't purchasing it from the business, the event is a fundraiser and attendance is free- with invitation."
+    show BBW neutral
+    MC "Remind me again why your father got us invitations?"
+    BBW "He wants {i}me{/i} to attend after I called him to let him know about the charitable work and how it will invest in the development of Seichou and its community."
+    BBW "You are naturally my plus one."
+    MC "What is the fundraiser for?"
+    BBW "Creating jobs around Seichou for former students. Most workers on the island are former students already but every year there are more people with growth factors who cannot be hired, as employers would obviously discriminate based on their bodies."
+    BBW "One idea I wanted to put forth was giant students being employed for construction, creating the buildings that would house the jobs for students with other growth factors."
+    BBW "Now, if there are no more questions, I'd like to describe the various terminologies of wine tasting to you."
+    MC "Alright."
+    "I nodded in understanding."
+    BBW "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
+    BBW "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
+    BBW "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
+    BBW "In opposition to this, a wine with no acidity is referred to as… flabby."
+    BBW "Don't say it."
+    "I fought a smirk attempting to spread across my face."
+    MC "I wasn't going to, Alice."
+    BBW "Of course you weren't."
+    BBW "Now if a wine has high acidity, but not to an unpleasant degree, it can be referred to as 'bright.'"
+    BBW "A wine with a low acidity, but not to the point of necessarily lacking in it, is described as 'blowsy.'"
+    BBW "Now for more characteristics, if a wine has too much fruit it can be called 'flamboyant,' this is usually a slight insult to the maker as wines with too much fruit are seen as trying to grab attention; A cheap tactic, if you will."
+    BBW "A wine that tastes simple, but not necessarily bad, can be called 'crisp.' This is a wine that most people can enjoy just fine, but won't be anybody's favourite."
+    BBW "The next term is one I'm sure you'll find amusing. Wine that fills the mouth to a displeasing and negative extent is labelled a 'fat' wine."
+    "I had a slight desire to chuckle, purely due to the irony of fat being deemed negative. I guess wine 'intellectuals' aren't all they claim to be."
+    "The urge was easily fought."
+    BBW "Last up before we leave is 'complex,' it is exactly as it sounds. A complex wine will change as you taste it to not be pinned down by a single label."
+    BBW "Absolutely never use the term complex as a last resort, it is only to be used when you can {i}describe{/i} how it is complex. It is better to admit uncertainty than to lie in an attempt to seem more intelligent."
+    MC "Only use complex when I can explain why, got it."
+    BBW "I think that is everything you'll need to know. This is of course the very basics of wine tasting but as the event is primarily a fundraiser, this should cover everything."
+    BBW "We should leave now, I wish to walk there to enjoy this beautiful day- as well as clear my mind for the event."
+    BBW "The best things in life aren't free, but a scenic route is."
+    jump BBW045_wine
+
+label BBW045_suit:
+    "Alice gestured at me to shush and then beckoned me in."
+    scene Dorm BBW with fade
+    "The lights were turned off, though we could see fine due to the direct sunlight."
+    show BBW neutral at Position(xpos=0.8) with dissolve
+    "It was quickly apparent that Kodama-san was still asleep."
+    "As a roommate with nothing to do should be at this hour."
+    #(Alice and Kei whisper from here)
+    BBW "Here is your suit, you can just get changed here, Kodama-san won't exactly be able to see."
+    "Alice had the suit hung over her bed frame with a clothing hanger, clean and pressed."
+    "It was a dark blue number, looking rather subdued compared to 'fancy' suits, but it was a fine piece for most occasions."
+    "Alice turned around and I began to undress, using slow movements to make as little sound as possible."
+    show BBW neutral at Transform(xzoom=-1) with dissolve
+    BBW "Staring at the wall isn't exactly fun, but the bathroom door is creaky so getting changed in there risks waking up Kodama-san."
+    MC "I'll try to be as fast as I can."
+    BBW "No, it's best you take your time, Kodama-san doesn't deserve to be disturbed."
+    "I had finished taking off my tracksuit, and reached for the dress."
+    MC "Onto the suit now."
+    BBW "Good, good. Let me know when you're done."
+    "I slowly pulled up the pants and fastened the belt with careful movements."
+    MCT "This silence is like being in a low budget horror film."
+    "Fastening the belt buckle at a comfortable tightness, I moved onto the shirt."
+    "As I had buttoned the shirt up halfway, I muttered a thought out loud."
+    MC "{i}Nearly done.{/i}"
+    BBW "Done? Oh good."
+    "As I realised the error I had just made, Alice turned around to face me."
+    show BBW neutral at Transform(xzoom=1) with dissolve
+    show BBW aroused
+    BBW "Umm, Keisuke I don't think you're done yet."
+    MCT "The fact that she isn't looking away is a great compliment."
+    MC "I said nearly done."
+    BBW "I must have misheard. Carry on then."
+    "It was apparent she didn't intend to turn back around."
+    "I suppose that whispering in the dark in the bedroom can be a little sensual."
+    "Still though, no reason to tell her to look away, it is only putting a shirt on after all."
+    MC "Okay, Alice."
+    "I buttoned up my shirt, continuing to be as silent as I could."
+    "When I was done, Alice corrected my collar for me and reached for my tie."
+    BBW "Now to show you how to properly tie a tie."
+    MCT "This is not how I saw my morning going."
+    "She put the tie around my neck, somehow performing such an average task with extreme elegance."
+    BBW "This is how high society does it."
+    "She tightened it rather slowly and deliberately, maintaining eye contact with me the whole time."
+    "When she was done, she handed me my jacket."
+    show BBW neutral:
+        ease 0.5 xpos 0.5
+    BBW "Come on now, we are pressed for time and I have to explain wine tasting."
+    "Alice sat down on her bed and I quickly threw on my jacket and joined her."
+    BBW "Now, I need to describe the various {i}terminologies{/i} of wine tasting to you."
+    "I nodded in understanding."
+    BBW "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
+    BBW "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
+    BBW "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
+    BBW "In opposition to this, a wine with no acidity is referred to as… flabby."
+    BBW "Don't say it."
+    MCT "I fought a smirk attempting to spread across my face."
+    MC "I wasn't going to, Alice."
+    BBW "Of course you weren't."
+    BBW "Now if a wine has high acidity, but not to an unpleasant degree, it can be referred to as 'bright.'"
+    BBW "A wine with a low acidity, but not to the point of necessarily lacking in it, is described as 'blowsy.'"
+    BBW "Now for more characteristics, if a wine has too much fruit it can be called 'flamboyant,' this is usually a slight insult to the maker as wines with too much fruit are seen as trying to grab attention; A cheap tactic, if you will."
+    BBW "A wine that tastes simple, but not necessarily bad, can be called 'crisp.' This is a wine that most people can enjoy just fine, but won't be anybody's favourite."
+    BBW "The next term is one I'm sure you'll find amusing. Wine that fills the mouth to a displeasing and negative extent is labelled a 'fat' wine."
+    "I had a slight desire to chuckle, purely due to the irony of fat being deemed negative. I guess wine 'intellectuals' aren't all they claim to be."
+    "The urge was easily fought."
+    BBW "Last up before we leave is 'complex,' it is exactly as it sounds. A complex wine will change as you taste it to not be pinned down by a single label."
+    BBW "Absolutely never use the term complex as a last resort, it is only to be used when you can {i}describe{/i} how it is complex. It is better to admit uncertainty than to lie in an attempt to seem more intelligent."
+    MC "Only use complex when I can explain why, got it."
+    BBW "I think that is everything you'll need to know. This is of course the very basics of wine tasting but as the event is primarily a fundraiser, this should cover everything."
+    BBW "We should leave now, I wish to walk there to enjoy this beautiful day- as well as clear my mind for the event."
+    BBW "The best things in life aren't free, but a scenic route is."
+    jump BBW045_wine
+
+label BBW045_wine:
+    scene Dorm Exterior with fade
+    show BBW neutral with dissolve
+    BBW "The weather on this island truly is a wonder."
+    MC "It truly is."
+    scene School Exterior with fade
+    show BBW neutral with dissolve
+    BBW "It's a shame really, a hotel and resort would be perfect here. Mass tourism would greatly improve the economy, though that would directly interfere with the school and its students."
+    MC "That is true. The island has a lot of hidden gems to offer."
+    BBW "Perhaps when I am an experienced businesswoman in my own right, growth factors will be widely known among the general populace. This would lead to more relaxed regulations on the island."
+    MCT "She really does plan these things ahead."
+    BBW "... although, mass tourism would severely impact the lives of the students here depending on where the resort is located. It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
+    MCT "This monologue isn't going to end any time soon, is it?"
+    scene Town with fade
+    show BBW neutral with dissolve
+    "Reaching the town was a sad end to the scenic walkways."
+    BBW "Furthermore…"
+    MCT "Not that I got to fully enjoy such scenic walkways."
+    BBW "There is no denying that some individuals would visit the island for less respectable purposes. I know some people would come here purely to see students with growth factors that they find pleasing; our conditions would be treated like some kind of game for their fetishism."
+    MCT "She said she wanted to clear her head for the wine tasting. If business conceptualisations are how she does that, I have no desire to speak up."
+    BBW "Of course among students here it is a different story, they would be here regardless and are the same age as the students they find appealing."
+    show BBW haughty
+    BBW "I know one such student who acted on the opportunity."
+    "I could feel my cheeks turning red."
+    show BBW neutral
+    BBW "However, masses of individuals specifically seeking such things specifically would lead to very very unpleasant experiences, prompting many students to stay in their dorms all weekend and ultimately ruining the island for everyone."
+    BBW "I simply cannot allow this to occur. Money will never be worth the malice behind it. Not for moral individuals anyway."
+    MCT "So Alice has no malice. Heh."
+    BBW "It's such a shame; if people were more decent, this island would be an untapped tourism gold mine."
+    BBW "Oh! Here, it's just around this corner."
+    "We turned the corner and I saw one building with a security guard at the door, clearly showing this was the gallery."
+    "The building was much more modern than I had anticipated, having plenty of window space on the exterior. It looked like a modern office building from the outside."
+    "As we approached, the security guard, evidently a man with a muscle growth factor, spoke up."
+    Guard "Invitation and name please, Sir."
+    BBW "Personally I prefer to be called Miss, but Madam will do too."
+    "The guard was clearly surprised it was Alice that was the invitation holder."
+    Guard "My apologies Miss. Name and invitation please."
+    BBW "Nikumaru Alice. This is my plus one."
+    "Alice showed the guard her invitation."
+    Guard "Allow me to double check this, standard procedure."
+    "The guard took a moment to check the authenticity of the invitation."
+    Guard "Everything is in order, welcome to the Usuda Art Gallery, Madam."
+    BBW "Thank you."
+    "The guard opened the door for us and smiled as we entered."
+    scene Art Gallery with fade
+    show BBW neutral with dissolve
+    BBW "This place certainly looks better than it does on their social media."
+    BBW "The art actually gives off a nice atmosphere, even if all of the popular pieces here are imitations."
+    MC "I agree, the mood is a lot more relaxed than what I'd anticipated."
+    BBW "Here comes the first taste."
+    "A waiter approached us with 2 glasses of wine on a serving tray in one hand and a bucket in the other."
+    Waiter "Sir, Miss, 'Avignon Southern'."
+    "He was obviously instructed to keep all conversation short and to the point."
+    BBW "Thank you."
+    "Alice and I each took a glass and sipped the contents."
+    MCT "It's… simple. It doesn't have any defining characteristics."
+    MCT "What was it called again? Avignon? That sounds French."
+    MCT "I suppose it was made to appeal to as many consumers as possible, although I doubt anyone would have this as a favourite."
+    "Alice spat the wine into the bucket, to which I immediately followed."
+    Waiter "Very good."
+    "The waiter left to go and get a new wine to begin serving again. It was clear we were the last to drink that wine."
+    BBW "So, how was it?"
+    menu:
+        "Bright.":
+            MC "It didn't do anything particularly well, it was simple, so it was bright."
+            show BBW sad
+            BBW "No Keisuke. A wine that does nothing particular and stays simple is crisp. A bright wine is a wine with high acidity."
+            show BBW neutral
+            BBW "I can forgive one mistake Keisuke, since you are only talking to me and it's natural you are nervous."
+            BBW "However, please remember what I told you when you speak to other guests here."
+            BBW "Normally I wouldn't worry so much about appearances to people not involved with my father's company, but these people would likely dismiss my ideas over something so superficial, and I cannot allow that to happen to the giant students of Seichou."
+        "Crisp.":
+            MC "It was a simple wine, so it was crisp."
+            MC "The kind of wine anybody finds acceptable but nobody finds exciting."
+            show BBW happy
+            BBW "That is absolutely correct Keisuke. I'm glad you remembered."
+            BBW "I see we'll face no issues mingling with the guests here now."
+            BBW "Normally I wouldn't worry so much about appearances to people not involved with my father's company, but these people would likely dismiss my ideas over something so superficial, and I cannot allow that to happen to the giant students of Seichou."
+            show BBW neutral
+        "Flamboyant.":
+            "It didn't do anything particularly well, it was simple, so it was flamboyant."
+            show BBW angry
+            $setAffection("BBW", -1)
+            BBW "Keisuke, not only does this mean you were not paying attention to me, it means you aren't even capable of knowing what the words mean and making informed assumptions."
+            BBW "How on earth would a wine that stays simple and does nothing extra ever be referred to as flamboyant?!"
+            BBW "Do you even know what flamboyant means?"
+            MC "Alice I-"
+            BBW "Keisuke, no."
+            show BBW sad
+            BBW "I understand you may be nervous and that could lead you to make mistakes but something like this is just silly."
+            BBW "It established that when you forget something, you won't even use your own logic and reason to form an opinion."
+            BBW "Please Keisuke, try to be better for the duration of this event."
+            show BBW neutral
+            BBW "I know you're better than this, so please display it."
+    "Suddenly the waiter emerged from the back room, carrying the bucket again."
+    "Though this time there were 10 glasses on the serving tray."
+    "As he did so, a woman came over to speak to Alice"
+    "Two things were immediately clear about this woman."
+    "The first was that she had attended the school when she was young, as her growth was self-evident."
+    "The second was that she had had plastic surgery- her face appears to be almost poorly made. Though her natural beauty was still clear behind this."
+    Misaki "You must be Nikumaru-san. It's an honour to meet you."
+    BBW "How do you know who I am?"
+    Misaki "Well, you were the only person on the guest list with blonde hair and blue eyes. It is quite a giveaway."
+    Misaki "But if you're referring to knowing who you are as the daughter of Nikumaru Daitaro- well, when Nikumaru Daitaro contacts you and says he wishes for his child to be invited, it is not a moment you decline nor forget."
+    Misaki "Your father has donated a very generous amount of over 20 million yen to this project. It is only natural I thank you personally as you attend in his place."
+    BBW "Well thank you for inviting us. We are more than happy to fund such a good cause."
+    Misaki "The pleasure is all mine. Now, where are my manners? My name is Usuda Misaki, owner of this establishment and general art enthusiast- though I made my money by selling high quality tailored suits and dresses to individuals with growth factors leaving the academy."
+    BBW "Alice Nikumaru. Please don't take my surname as a reason to treat me differently, I am my own person despite my father's status. Oh, and call me Alice."
+    Misaki "Of course Alice, and who is your plus one?"
+    BBW "This is my boyfriend, Hotsure Keisuke."
+    MC "It's a pleasure to meet you madam, please call me Keisuke."
+    Misaki "As you wish. Oh! Here comes the next wine."
+    "The waiter had finished giving out the wine to the others and awaiting their verdict."
+    Waiter "Sir, Madams, 'Amalfi Deep-Red'."
+    Misaki "Thank you, Yamada-san."
+    "We each took a glass and began our tasting."
+    MCT "Wow, now that is a low acidity, it almost tastes like a still juice."
+    MCT "And the fruit is very strong, the creators of this wine almost seem like they're compensating for something."
+    "Misaki was done with her tasting and disposed of the wine, Alice and I followed suit."
+    "The waiter went back into the storage room to get the next wine."
+    Misaki "So, what did you each think? Specifically about the acidity."
+    menu:
+        "Blowsy.":
+            MC "It's blowsy. The acidity is a little low."
+            BBW "I'd say the acidity is far too low. This is a flabby wine, no doubt."
+            Misaki "I have to agree with Alice here. Blowsy wines have a low acidity, not an absence of it."
+            Misaki "This particular wine is actually Italian, so having a relaxed product naturally reflects the culture. Of course the wine would be sold in far greater quantities there than here in Japan."
+        "Flabby.":
+            MC "There is a great absence of acidity, I'd certainly call this wine flabby."
+            BBW "I agree, the wine is far too relaxed and sweet for most palates. It is almost like juice."
+            Misaki "I couldn't agree more. This particular wine is actually Italian, so having a relaxed product naturally reflects the culture. Of course the wine would be sold in far greater quantities there than here in Japan."
+        "Bright.":
+            MC "It's very bright. The low acidity is rather displeasing."
+            Misaki "Keisuke, the wine has a low acidity. Bright is used to define wines with high acidity."
+            BBW "I'd call the wine flabby, there was too great an absence of acidity to refer to it as blowsy."
+            Misaki "I agree, Alice. The wine is Italian, so I suppose they opted for a sweeter and more relaxed taste to reflect their culture."
+    Misaki "So, Alice, are there any ideas you have for making jobs available to individuals with growth factors?"
+    BBW "Yes, actually. One idea I have been very anxious to pitch is using giant students for construction."
+    BBW "They are the ones most greatly affected by their factors and yet would be so useful in this field. This also guarantees a workforce for the construction of buildings where people with other factors can work, creating even more jobs."
+    Misaki "Wow, I had never considered that before. That would greatly speed up any construction project. You really are your father's daughter with this kind of innovation."
+    show BBW happy
+    BBW "I'm just glad that we can start this process soon. Giant students really have a harder time than the rest of us."
+    Misaki "You're absolutely right. Alice I will see to it personally that your father's donation goes to this. We will also be contacting the school about including it in the curriculum for giant students."
+    "The waiter once again emerged from the wine storage room."
+    show BBW neutral
+    Misaki "So, Keisuke, are there any ideas you had?"
+    "This caught me off guard, I had expected Alice to be the only one asked such questions."
+    "I could quickly make something up to impress Alice or I could admit I don't have an idea."
+    menu:
+        "Make it up.":
+            $setFlag("BBW045_c3_1")
+            MC "Well I uhh…"
+            MC "I had the idea that uhh…"
+            MCT "They're never going to buy this."
+            MC "Maybe people with muscle factors can be used for security?"
+            $setAffection("BBW", -1)
+            Misaki "Did… Did you just make that up on the spot?"
+            Misaki "We have a security guard just outside who attended the academy with muscle growth, he and I were in the same class."
+            Misaki "You saw him at the door."
+            Misaki "Oh now this is just a funny story, I'm going to go and tell him, I'll be right back."
+            show BBW angry
+            BBW "Keisuke."
+            MCT "(gulp)"
+            BBW "Why on earth would you attempt something like that?"
+            MC "I thought it would impress you."
+            BBW "You thought fumbling over your words to suggest something already in place that we experienced first hand just a few minutes ago would impress me?"
+            MC "Alice I-"
+            BBW "Keisuke, you aren't here to impress me. You're here to very simply do what I ask of you, following extremely simple instructions."
+            BBW "Here comes Misaki, don't do something stupid like that again."
+            show BBW neutral
+            Misaki "Keisuke that was hilarious, Suji- I mean, our security guard loved it."
+            "The waiter once again emerged from the wine room with a fresh 12 glasses."
+            Misaki "Alright, let's wait for this next one."
+        "Tell the truth.":
+            MC "No actually, I didn't think of anything that wouldn't have already been suggested. I'm not quite one to think outside the box like Alice is, so to speak."
+            Misaki "Ah that's fair, there are only so many possibilities anyway, we have to run out eventually."
+            Misaki "It's good that you're honest about it. Some partners would try to make something up to impress their love. It takes a mature individual to be beyond that at your age."
+            show BBW happy
+            BBW "Of course. I have as fine a taste in men as I do in all things."
+            "By now my cheeks were replicating the shade of that last wine."
+            MC "Thanks, Alice."
+            $setAffection("BBW", 1)
+            Misaki "Aww, that's lovely. You two make a great couple."
+            show BBW neutral
+            Misaki "Now then, here comes Yamada-san with the next wine."
+            "The waiter was just finishing with the last group and heading towards us."
+    Waiter "Sir, Madam, Usuda-san, 'Kensington Thoroughfare'."
+    "Again we each took the glass closest to us and experienced the wine."
+    MCT "Oh wow, that is very tingly. That means high acidity."
+    MCT "Too high for some, but not so absurdly high that everybody would be displeasing."
+    MCT "There is also not much fruit in this, it is quite bitter."
+    "It had been noticeably less time than we had spent tasting the others and Alice had already finished, evidently we were eager to get this wine out of our mouths."
+    Misaki "I did not like that one."
+    Misaki "Yamada-san, is the next one to be the final one?"
+    Waiter "Yes, madam."
+    Misaki "Excellent."
+    "The waiter entered the storage room once again to retrieve the final wine."
+    Misaki "So, Alice?"
+    BBW "I did not like this one either, though I don't think the acid was so high that nobody can enjoy it, it is certainly a more niche taste."
+    BBW "Keisuke, your verdict?"
+    menu:
+        "Bright.":
+            MC "Yes it was very bright, but not quite austere."
+            MC "May I ask what country this wine is made in?"
+            Misaki "England."
+            MC "Well, British people tend to be direct and hardy, even if it means their own experience is worse for it, so I believe this is reflected by the bitter taste and low fruit."
+            Misaki "I believe you're correct. Most wines tend to reflect the qualities of the people who made them, as we saw with the previous two."
+            BBW "I agree, culture plays a large role in the development of any product."
+        "Austere.":
+            MC "The acidity was too high, this wine is austere."
+            BBW "I disagree keisuke. Though the 3 of us do not like it, I believe it is not so acidic that it warrants the title of austere."
+            Misaki "I agree with Alice, austere is more used for when the acidity is too high for the majority of people to ever even enjoy the wine."
+            BBW "Exactly, this wine is bright- the acidity is not so high that nobody can enjoy this, it's just a little more niche."
+            Misaki "Like the previous two wines, this one also reflects the culture of those who made it."
+            Misaki "The wine is British and, in my experience, British people tend to be a hardy sort, even if it means drinking something generally unpleasant- but not overly so."
+            BBW "I personally believe culture has a greater impact on a product than any amount of market research ever will."
+    Misaki "While we wait for the final wine, could you two come with me for a moment? I wish to show you an art piece I recently acquired."
+    BBW "Of course."
+    Misaki "It's just through here."
+    hide BBW with fade
+    show BBW neutral with dissolve
+    Misaki "And here it is, the newest addition to the collection."
+    BBW "This is a fine piece, Keisuke what do you know about this painting?"
+    if getSkill("Art") > 5 or getFlag("BBW045_art"):
+        MC "Well the use of many short, quick brushstrokes is a tell-tale sign of Van Gogh- this is definitely one of his."
+        MC "Though I haven't seen this particular one before."
+        Misaki "That is absolutely correct. You clearly know your art."
+        Misaki "I'm very impressed, I know the current Seichou curriculum doesn't teach such things so you have clearly put the work in yourself."
+        MC "Thank you."
+    else:
+        MC "It's not a painting I recognise, but I like it."
+        MC "It looks European."
+    Misaki "This is a 'Sower with Setting Sun' by Van Gogh. I'm very proud of owning this original piece."
+    Misaki "It's the most famous original at this gallery, the more well known ones are all imitations."
+    BBW "It is a fine piece. It must have been expensive."
+    Misaki "It was. However, the way I see it is that my children and their children will be able to enjoy this art, and so on."
+    Misaki "You know, his full name was actually Vincent Willem van Gogh. In the dutch language, van means 'from' or 'of'."
+    Misaki "This means everybody remembers him as being named From Gogh."
+    Misaki "I find that rather amusing."
+    "The waiter then appeared with the final wine sample for the day."
+    Waiter "The final selection, Madam. 'Vilamoura Special', from the resort you invested in."
+    Misaki "Thank you Yamada-san, when everyone leaves you may take the rest of the day off, we won't open this evening."
+    Waiter "Thank you miss."
+    "For the final time this evening we tasted the selected wine."
+    MCT "This one is actually quite good. It has a fine amount of fruit and a fine acidity compared to the others."
+    MCT "Though, it does get around the mouth a lot- the feeling is unpleasant even if the taste itself is good."
+    "Misaki finished her tasting and Alice and I replicated the action."
+    Misaki "Now that wine actually had a perfect taste, something I expect from a vacation resort."
+    Misaki "However the wine was very fat. It lingers even now in the corners of my mouth."
+    BBW "I agree the taste was great, but I don't believe the wine being fat makes it unpleasant."
+    Misaki "Alice, a fat wine is a wine that finds its way into all parts of your mouth, a good wine stays on the tongue where it belongs."
+    BBW "Why does a fat wine have to inherently be bad?"
+    Misaki "That's just how the terminology is."
+    BBW "Keisuke, what do you think?"
+    menu:
+        "Defend Alice.":
+            $setFlag("BBW045_c5_1")
+            MC "I agree with Alice. If a wine is good, why not let it fill your whole mouth?"
+            Misaki "Because that isn't how wine as a beverage is supposed to be."
+            Misaki "You two are very mature for your age but I have been doing this a long time so trust me when I say wines are meant to stay neatly on your tongue."
+            Misaki "Anyway, that is the end of this morning's event. I truly appreciate your father's donations, Alice, and your construction proposal was great."
+        "Defend Misaki.":
+            MC "I agree with Misaki on this matter, Alice."
+            MC "Wine should stay on the tongue, not fill the mouth. That is simply not how wine is intended to be."
+            Misaki "He's right, Alice. Trust me, I have been doing this a long enough time to know how wine should be."
+            Misaki "Anyway, that is the end of this morning's event. I truly appreciate your father's donations, Alice, and your construction proposal was great."
+    Misaki "I do hope you two enjoyed your time here."
+    "Alice and I headed towards the exit."
+    scene Town with fade
+    show BBW neutral with dissolve
+    BBW "Keisuke…"
+    MC "Yes?"
+    BBW "What I said at the end about fat wines not inherently being bad was a test."
+    MC "Oh?"
+    if getFlag("BBW045_c5_1"):
+        show BBW angry
+        BBW "You failed."
+        $setAffection("BBW", -1)
+        BBW "Fat is used as a negative term in wine tasting, your views on the word in terms of body types is irrelevant."
+        BBW "Do you see me as anything more than that word, {i}fat?{/i}"
+        BBW "I am a person, Keisuke, not a body type."
+        MC "I'm sorry Alice."
+        BBW "Of course you are."
+        BBW "I'm going back to my dorm. When I see you in class tomorrow I will have forgotten about this, I hope you do the same- and improve in the future."
+        hide BBW with dissolve
+        MCT "That was bad."
+        if getFlag("BBW045_c3_1"):
+            MCT "What was it Daichi said this morning?"
+            MCT "Wanting something more will deny you of it? Or that we can be destroyed by our own ambition?"
+            MCT "I guess he was right after all."
+        jump daymenu
+    else:
+        show BBW happy
+        BBW "You passed."
+        $setAffection("BBW", 1)
+        BBW "You remembered that fat is a wholly negative term in wine tasting."
+        BBW "You didn't let your {i}ahem{/i}... other tastes get in the way."
+        BBW "I never doubted you for a second."
+        MC "Thanks Alice."
+        if getFlag("BBW045_art"):
+            MC "By the way, how did you know we would be shown that Van Gogh painting?"
+            BBW "She boasted about it on the gallery social media recently, so I thought she would try to boast about it at the event too."
+        BBW "You know, we may be in the wrong attire but we still have a lovely Sunday ahead of us."
+        BBW "The weather is perfect. I'd quite like to go to the park."
+        BBW "Come on, this'll be fun."
+        jump daymenu
+
+label BBW041:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
