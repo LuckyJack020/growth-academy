@@ -15726,6 +15726,219 @@ label AE068_c1_after:
     jump daymenu
 
 label AE069:
+    $setProgress("AE", "AE070")
+    scene Classroom
+    "Today was cooler than it had been the past few days, with a thick blanket of light grey clouds hovering gently above the school."
+    "As I sat quietly with my head resting on my hand in class, I did my best to keep my attention focused as Tashi-sensei continued on with his lesson."
+    show HR annoyed with dissolve
+    HR "In conclusion: Holy? Questionable. But it {i}was{/i} Roman and it {i}was{/i} an empire. I don't care about semantics, these are the facts."
+    "I looked around, and admittedly it seemed like not a single soul, barring Shiori, understood a single word of what Tashi-sensei had been saying for the past few minutes."
+    show HR neutral
+    HR "Have a good day."
+    hide HR with dissolve
+    "I hung my head and stared down at a shambled abortion of names and concepts I'd managed to scratch down through the last bit of the lecture. If my notes were an animal, I'd consider euthanasia."
+    "I then scratched my head and leaned toward Shiori-chan, which she readily caught wind of."
+    MC "H-Hey, um-"
+    show AE neutral with dissolve
+    AE "You can copy my notes."
+    MC "Cool."
+    "Shiori's intuition caused me to chuckle a bit. As usual, her keen senses pulled me out of hot water before I even had to ask for help."
+    "We should find somewhere else to sit down first before we start. Somewhere... quiet?"
+    MC "Like, the library?"
+    show AE happy
+    AE "...Or my dorm."
+    "In a rare instance of overt flirtiness, Shiori bashfully bit her lip and took on a more relaxed, demure pose."
+    AE "I w-want to be close to you..."
+    "I couldn't help but smirk at the suggestion as I walked over and wrapped my arms around Shioris waist, pulling her close to me as the front of her fluffy thighs rubbed against my legs."
+    MC "Oh yeah?"
+    AE "Mhm..."
+    "I gazed lovingly into her eyes as I pulled her in with a kiss on the head, causing her to visibly clam up."
+    AE "Ehe~"
+    HR "{i}Khm{/i}."
+    MC "Huh?"
+    "I looked up to notice that, despite the rest of the class having left, Tashi-sensei sat quietly, expressionless, at his desk as he kept his eyes trained on me."
+    show HR neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    HR "I'm right here."
+    "Shiori turned as well, and as she met his gaze her face went from flush and warm to pale as the grave as she completely tensed up."
+    show AE surprised
+    AE "Ah! Sensei. Sincerest apologies. Keisuke and I were just heading out."
+    show HR neutral at Transform(xzoom=-1)
+    HR "Sure, but I needed to talk to him for a sec."
+    "Shiori-chan's face and the rest of her, too, were stiff as old twigs as she stood completely still, a dire look on her face as she seemed to be hit with a sudden burst of clarity."
+    show AE sad
+    AE "I-I feel I should clarify that Keisuke is blameless in that interaction, I was the one to initiate the public display of-"
+    HR "I get it Matsumoto-san, no worries."
+    "Still somewhat shaken, Shiori looked back to me awkwardly."
+    show AE neutral
+    AE "Um, I'll be outside the library. See you there?"
+    MC "Yeah, sounds good."
+    "Turning around towards Tashi-sensei, she nodded, then bowed low in respect, to which Tashi-sensei nodded in acknowledgement. Then quickly, Shiori made her way out of the room, leaving Tashi-sensei and I alone."
+    hide AE with dissolve
+    show HR neutral:
+        ease 0.9 center
+    HR "Oy, Hotsure-san. You been doing alright?"
+    MC "Oh, um... yes, sir."
+    HR "Your classes going alright with the other teachers?"
+    if getSkill("Academics") >= 3:
+        MC "Yeah, that kinda stuff usually isn't a problem for me. I can doze off from time to time but... it's going good."
+        HR "I've noticed. You're a bright kid in your own right."
+    else:
+        MC "It... could be going better."
+        HR "You could say that, yeah. Though you're not bombing anything, so that's a plus. Still, you should spend more of your time studying."
+    HR "You don't do any extracurriculars, so I'm guessin' you have a lot of time to spend out of class?"
+    MC "Yeah, um... yeah I tend to spend a lot of it with Shiori. I mean, if anything it's what's gotten my English better recently."
+    HR "And how's Matsumoto-san doing on that; juggling the council and her time with you?"
+    MC "I... {i}think{/i} she's handling it well."
+    MC "Are her grades taking a turn or-?"
+    HR "Nah, nah, she's done perfectly on everything this far. Just that I've been seeing some changes in her attitude recently."
+    MC "..."
+    HR "Two of you've been getting pretty touchy recently."
+    MCT "{i}There it is. The crux of why he wanted to see me.{/i}"
+    MC "Apologies, sir. I hope it's not disrupting to you or the other students."
+    show HR annoyed
+    HR "Good grief, you're kids, I'm not gonna rag on the two of you for being kids. I just wanted to touch base and check in on you two."
+    MC "Is there a reason you're worried, sir?"
+    show HR neutral
+    HR "Why do you think I'm worried?"
+    MC "I mean... you wouldn't ask otherwise."
+    HR "..."
+    show HR annoyed
+    HR "... Haah..."
+    HR "I'm gonna level with you. I've been a teacher for years at this point. I'm an alumnus at the academy, you know. Got a degree and came right back here to teach."
+    show HR neutral
+    HR "In all my years, both as a student, and as a teacher, I've noticed one thing in particular:"
+    HR "Every year, without fail, there's always one student who lets it get to them."
+    MC "{i}It?{/i}"
+    HR "Their growth. With a lot of people who go through growth, the affected parts get... pretty sensitive. Dealing with that  kind of sensitivity day in and out can really mess with your head, and bad. Makes you do things you wouldn't in your right mind."
+    HR "Mix that in with a cocktail of hormones, insecurities about one's self image..."
+    HR "And your body becomes who you are. It's like a bog you can't get out of until you've gone all in, and by that point, well, there's not much I can do."
+    HR "How many have I watched go down that path... damn, I don't think I could count on both hands."
+    "As the words came out of Tashi-sensei's mouth, my heart completely sunk in my chest as the implications of what he was saying began to hit me. What he was saying about Shiori's recent behavior."
+    HR "Do you know what I'm saying?"
+    MC "...You think that will happen to Shiori?"
+    HR "..."
+    HR "It's hard to think of, I admit, but trust me when I say I'm not just saying this out of cynicism."
+    HR "I've seen plenty of students with that growth experience it. She's one of a kind, but I don't for a second think she's {i}wholly{/i} above it."
+    HR "You're probably wondering why I'm telling you all of this. Right?"
+    "I couldn't help but wonder as I looked out of the side of my eye, trying to avert his peering gaze."
+    MC "Yes, sir."
+    HR "Because if I'm being completely honest, seeing you with Shiori reminds me of... a friend, from back when I was a student."
+    MC "A friend?"
+    HR "Oh yeah, he was head over heels with a girl who was in the same boat as Shiori. But, suffice to say, it didn't pan out."
+    MC "... Why?"
+    HR "He wasn't enough for her."
+    "Hearing those words caused a pit to form in my stomach I couldn't help but feel as though I'd been dealt a searing blow as the implication, and dark realization hit me all at once. I nearly choked on my words as I struggled to find *anything* to respond with."
+    MC "I mean, I don't... that's a little-"
+    MC "Shiori... she's different. I'd like to think that if it came down to it, she'd make... the right decision."
+    show HR annoyed
+    HR "But that ain't your decision to make."
+    MCT "It... it really isn't, is it? If... if I trust Shiori... then how can I rightfully say he's in the wrong?"
+    MC "...Mm."
+    show HR neutral
+    HR "You all right?"
+    MCT "Shiori's mentioned to me before, her fear of changing as a person... is this what she was talking about?"
+    MCT "Is that what Tashi-sensei is talking about?"
+    HR "Look, kid, I'm sorry, I don't mean to spook ya. But when the chips are down, you gotta tell it like it is."
+    HR "I really care about that girl. When she came here, I saw a bright future. Please don't let her throw that away because of her... circumstances."
+    MC "I know, I know... I just... you gave me a lot to think about."
+    HR "... All right then, I think that's that."
+    HR "Now get out of here. I got papers to grade."
+    "Though his words were certainly stern, I almost couldn't help but feel a sense of paternal concern from Tashi-sensei throughout the whole encounter. It was as though he was asking me to be careful with a prized possession of his I was holding on to."
+    hide HR with dissolve
+    HR "{i}Ssp{/i}."
+    "He took a sip of his coffee as I exited the room, the mood somewhat dampened as I walked out towards the open hallway."
+
+    scene Hallway
+    Tako "Oy, Kei!"
+    "Just as soon, however, I saw a familiar face near the end of the hall near the windows. Yureno-san waved me over emphatically as I looked side to side before meeting her."
+    show Tako happy with dissolve
+    Tako "Take a look outside!"
+    "Still not quite out of my earlier funk, I put up little protest and forwent any verbal response; doing as she asked as I gazed out of the hallway window."
+    MC "Huh? Snow?"
+    show Tako unique
+    Tako "Hell, at first I thought it was your dandruff!"
+    "Small flakes of pristine white snow gently cascaded to the ground, which itself had become covered in a thin white sheet since class had started."
+    Ryoko "Seems kinda early in the year for it, but hey, looks pretty enough!"
+    "I turned to see Ryoko walking towards me with Shiori in tow. I straightened up and nodded towards the two."
+    hide Tako with dissolve
+    show Ryoko camera at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    Ryoko "OH! This will actually help for shots in a film I'm making!"
+    AE "Well, not only are we up fairly high, but the winters are fairly long up here in the north. I assume we'll have snow for a bit."
+    Tako "I CALL STUNT WORK!"
+    Ryoko "Sounds good to me!"
+    hide Ryoko with dissolve
+    Tako "Oy, Shiori, remember, practice later on tonight, aight?"
+    show AE embarrassed:
+        ease 0.8 xpos 0.5
+    AE "Wuh-ah-!"
+    "With that, Tako gave a thumbs up and a quick wink before following Ryoko on her way out, leaving Shiori and I alone."
+    "Practice?"
+    "U-Um, yeah."
+    MC "What for?"
+    "Shiori inadvertently avoided my gaze as she began to blush, biting her bottom lip."
+    "Oh, you know, um... just some stuff I was thinking of picking up on."
+    MCT "Of all the times to be cryptic, now is not one of them..."
+    MCT "Still... I shouldn't let this get to me too hard. After all, I know Shiori, and I've learned to trust her judgement."
+    MCT "Even when I feel anxious about it."
+    "Shaking my head, I did my best to push my worries aside as I smiled warmly to Shiori."
+    MC "Did you understand what Tashi-sensei was talking about in class?"
+    show AE neutral
+    AE "I did, and if you need I can give you the rundown later."
+    MC "Say what you will about him, but the guy's pretty smart, heh."
+    AE "Oh, no doubt. I can't think of any time he's led me wrong thus far."
+    "Though I nodded in agreement, I couldn't help but feel a sense of ironic concern hearing Shiori say that, especially given the circumstances."
+    show AE sad
+    AE "Uch, I was such a pig to just act so irreverently in front of Tashi-Sensei today."
+    MC "N-Nah, I think it's okay."
+    MC "Besides, I feel like it's really impossible for him to take offense to anything, not gonna lie."
+    show AE happy
+    AE "Ehehe, fair."
+    MC "So, what did you want to show me?"
+    show AE surprised
+    AE "Hm? Oh! Well..."
+    "Shiori bashfully began to twiddle her fingers as she shied away from my presence for a quick moment."
+    show AE embarrassed
+    AE "I'm going to take my measurements tomorrow, so... maybe the day after?"
+    AE "Well, here's hoping that there's not been too much of an increase since last time."
+    MC "Baah, either way, I know my girl can handle herself well."
+    show AE neutral
+    AE "Y-Yeah, maybe, maybe..."
+    show AE happy
+    AE "But I like it better when {i}you{/i} handle me~"
+    "Shiori sauntered over to me, placing her hands on my shoulders as she stared longingly into my eyes. Though I desperately wanted to respond in kind, my body stiffened up a bit as I kept my hands at her hips."
+    "The bottom of my hands still touched her rear, though, it was impossible not to by this point."
+    MC "Y-Yeah, well, uh..."
+    MCT "Should I tell her what Tashi-sensei told me? She could need to hear it?"
+    MC "I'm glad I can um... handle you like that."
+    show AE neutral
+    AE "M-Mm."
+    "Shiori appeared to pick up on the awkwardness, and slackened her hold on me, taking a few inches for space between us."
+    MCT "N-No! What am I crazy?! If I tell her then she could completely fly off the handle. It would wreck her self image and sense of identity."
+    MCT "Shit, what do I do?"
+    MC "Hey! Sooo... hows about we go and study? You can help me get the whole 'Imperial Princes' thing I was kind of confused on."
+    show AE happy
+    AE "Certainly! To your room?"
+    menu:
+        "Sounds good.":
+            "I was a bit hesitant, but..."
+            MC "Yeah, sounds good."
+            "Shiori gave me a little peck on the cheek as she took me by the hand and we headed down the halls towards the dorms in the flurry."
+            "I wasn't sure if it was my emotions taking hold, or faith in Shiori at that moment, but I caved in and did as we originally planned; heading back to my room for study... and a bit more."
+            jump daymenu
+
+        "Maybe the library?":
+            MC "Actually, um... I was thinking, maybe the library might be better. I feel like it'd help to be around some books that have more info, after all."
+            MCT "If Tashi-sensei is right... then I need to be proactive. Try to get a hold of myself and... show restraint."
+            show AE surprised
+            AE "Oh! I mean... yeah!"
+            show AE neutral
+            AE "Good idea. Shall we?"
+            "As Shiori turned around, I couldn't help but get a glimpse of her plump, fat ass, which by this point had started to ride up and tear, indicating the coming of the next measuring day."
+            "No matter how hard I- that may be."
+            jump daymenu
+
+label AE070:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

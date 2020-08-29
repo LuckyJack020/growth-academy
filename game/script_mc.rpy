@@ -44,7 +44,8 @@ label global000:
     #BIRD SFX
     MCT "Ahh... It's really hot today. And why haven't I seen anyone else on this path?"
     "I came to a stop on a wooden bridge overlooking a lake, taking the bottle of water from my gift bag and taking a sip."
-    "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tomorrow. Never thought I'd have to be transferred out of my old one so quick without knowing why. Never been this far north before, either."
+    "My name is Hotsure Keisuke. My spring vacation is coming to an end, and I'm starting at a new school tomorrow."
+    "Never thought I'd have to be transferred out of my old one so quick without knowing why. Never been this far north before, either."
     MCT "Why are my hands so sweaty? Am I that nervous, or is it just the heat getting to me?"
     "In the back of my head, I knew for a fact it was my nerves. I'm gonna be living away from home and on my own. My luggage couldn't feel more heavy if it tried. I talked a big game to my parents about how I was fine..."
     "But..."
@@ -57,7 +58,8 @@ label global000:
     show BE neutral with dissolve
     play music BE
     MC "Hey! Hi, uh... Hoo boy, eheh. Sorry, let me catch my breath."
-    "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing. Her face looked soft and effeminate, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
+    "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing."
+    "Her face looked soft and effeminate, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
     MC "Sorry about that, ma'am, um... Hey, do you know where the school is? I think I got lost a while back, eheh..."
     UNKNOWN "..."
     "She stared at me intently for a long time. Did I surprise her or something?"
@@ -290,7 +292,7 @@ label global000_AE:
     UNKNOWN "YOU..."
 
     "With only a single word, Honoka and I stopped in place as a deep paralyzing chill ran down my spine..."
-    "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind..."
+    "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} the owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind..."
     scene Gate Front with dissolve
     UNKNOWN "Mizutani-san, what do you think you're doing?"
     play music FMG

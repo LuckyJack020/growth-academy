@@ -3426,7 +3426,7 @@ label FMGBBW001:
     Chie "...But I'm sure there were others that had growth factors long before I came around. Sorry, but I can't really tell you how it started."
     show RM sad
     Chie "The school wasn't even finished when I got here, the only place that was totally furnished was some of the giant dorms."
-    "...If I had to describe Daichi's reaction... it would be pure despair. Like someone’s only hope of salvation was stripped away from them by an evil goddess. I have never felt more sorry for him since I met him yet."
+    "...If I had to describe Daichi's reaction... it would be pure despair. Like someone's only hope of salvation was stripped away from them by an evil goddess. I have never felt more sorry for him since I met him yet."
     Chie "But hey, it's not like everyone knows about that! Thanks for asking."
     MC "Well, thanks for the pie, we'll be sure to come back."
     Chie "Thanks for coming! You'll always be welcome here!"
