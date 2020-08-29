@@ -435,6 +435,7 @@ label GTS006_c1:
 
 label GTS006_c2:
     $setAffection("GTS", 1)
+    $setFlag("GTS006_c2")
     MC "Yeah, he was extremely cute!"
     show GTS happy
     GTS "Indeed, he was. Did you get a chance to play with him?"
@@ -3489,6 +3490,7 @@ label GTS028T_c1_after:
 label GTS029:
     $setProgress("GTS", "GTS030")
     scene Cafeteria with fade
+    play music Hallway
     "I moved along the cafeteria line with the other students, and picked out a few food items, such as a bowl of beef teriyaki with rice, and some miso soup. I turned towards the tables and scanned the crowd."
     "It didn't take long to spot Naomi. Even sitting down I could spot the back of her head resting above everyone else's. I headed over to her table where she was currently sitting alone and took a seat."
     MC "Hey Yamazaki-san!"
@@ -3593,7 +3595,6 @@ label GTS029_c1_3:
     jump daymenu
 
 label GTS030:
-    #A Change in Scenery
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("GTS", "GTS031")
@@ -3604,6 +3605,7 @@ label GTS030:
     "Swinging myself out of bed, I got dressed and, after some basic grooming, made my way towards Naomi's dorm."
 
     scene School Inner with fade
+    play music Schoolday
     "As I made my way towards Naomi's dorm, I noticed a board full of flyers for upcoming events. One of the flyers is for the local Children's day Festival."
     MCT "I'll take one of these, maybe Naomi would like to go to this."
     "After grabbing a copy of the flyer and stuffing it in my pocket, I spotted Ryoko walking my way briskly. I stopped and bowed to greet her."
@@ -3730,6 +3732,7 @@ label GTS030_c2_2:
 label GTS031:
     scene Giant Dorm Interior with fade
     $setProgress("GTS", "GTS032")
+    play music GTS
     "I had headed over to the giants' dorm after class to see how Naomi was handling the moving."
     "As I approached her dorm, I noticed her placing a flower box by the front door."
     MC "That's a good way to add some color to this place."
@@ -3863,6 +3866,7 @@ label GTS031_c1_2:
 label GTS032:
     $setProgress("GTS", "GTS033")
     scene Dorm Interior with fade
+    play music Busy
     "The sunlight poured in through the window as another day began. My alarm miraculously went off, and I began my daily routine on schedule. I brushed my hair into a semi-presentable style before I dressed myself, walking out of the bathroom to see Daichi typing away at his computer."
     "His shoulders were squared and firmly locked into position, defensively blocking the screen as he leaned closer to the monitor."
     MC "Make sure you use incognito mode. You never know who might be watching."
@@ -3885,6 +3889,7 @@ label GTS032:
     "Despite having taken this route dozens of times by now, I had a lingering feeling that something was different about today. Unconsciously, I knew what it was, but my mind was already on auto-pilot for the morning. All I could focus on was walking the usual hallways to class."
 
     scene Classroom with fade
+    play music Rain
     "I took my usual seat in the center of the room as the students filtered in. By the time class had officially begun, we had all settled into our seats."
     "That was when the reality set in about what would be different about today. Naomi wasn't anywhere to be found."
     show BE neutral at Position(xpos=0.65) with dissolve
@@ -4099,6 +4104,7 @@ label GTS032_after:
 label GTS034:
     $setProgress("GTS", "GTS035")
     scene Campus Center with fade #evening
+    play music GTS
     "I checked my phone once more to make sure I was headed to the right place."
     MCT "The campus plaza, yeah that's where she wants me to go. Not sure why she couldn't tell me why she needed me to come."
     "As I approached, I noticed Naomi slowly pacing near the tree."
@@ -4159,6 +4165,7 @@ label GTS034_c1_2:
     jump daymenu
 
 label GTS034_c1_3:
+    $setFlag("GTS034_c1_3")
     MCT "I suppose it is about time I meet them."
     MC "...Okay. Dinner with your parents? I can do that."
     show GTS happy-2
@@ -4230,6 +4237,472 @@ label GTS034_c1_3:
         GTS "Good. We have much more to go over."
     jump daymenu
 
+label GTS035:
+    $setProgress("GTS", "GTS036")
+    if getFlag("GTS034_c1_3"):
+        jump GTS035_testpass
+    else:
+        jump GTS035_testfail
+
+label GTS035_testfail:
+    scene Dorm Interior with fade
+    "My hands shook a little as I checked my hair in the mirror once more. I knew it didn't grow that quickly yet, but my anxiety had me constantly double-checking."
+    "I was going to meet Naomi's parents today. I didn't know much about them, and I wasn't sure just how much they even knew about me."
+    MCT "Gotta make a good first impression."
+
+    scene GTS Courtyard with fade
+    "I stood alongside Naomi as we waited. As I looked up at her, she showed no hesitation as she looked down at me and smiled."
+    show GTS_S neutral with dissolve
+    GTS_S "You look handsome today, Hotsure-san."
+    MC "Eh? Oh, thanks. You look lovely too. Where did you get that kimono? It looks new."
+    GTS_S "From the local clothing store. I had it special ordered a couple of weeks ago but asked for a slightly larger size than my height at the time."
+    MC "Good foresight on your part. It looks good on you."
+    GTS_S "Thank you, Hotsure-san. Hm?"
+    "Naomi focused her vision off to the distance, placing her hand over her forehead to shield her eyes from the sunlight."
+    GTS_S "Ah, I see them. Shall we be off?"
+    "Naomi began walking out past the gates of the school, and I followed her. I could see two figures approaching us, a middle-aged couple with the man dressed in what I would consider an expensive suit, while the woman was adorned in an elegant kimono similar to Naomi's."
+    "As we drew near, there was a pause as Naomi's mother suddenly clutched her husband's arm and concern wrung her face. Naomi stopped too, but as I turned to see what was wrong a voice called out."
+    Unknown "Hey! Heads up! Dog incoming!"
+    "I turned back just in time to see a white dog run up and reach up towards me. It gave me a quick lick and began to sniff me before focusing its attention on Naomi, barking excitedly."
+    "I heard a small giggle as Naomi kneeled down and tenderly pet the dog."
+    show GTS_S happy
+    GTS_S "Hello Kimiko, it's been a while. I hope you've been a good girl for Kazumi."
+
+    if getFlag("GTS006_c2"):
+        "I joined Naomi in the petting, kneeling beside her as a smile grew on my face and I rubbed Kimiko's fluffy fur."
+        MC "Hey there, girl. Wow, you're just as cute as Naomi said. Such nice fur, too."
+        Unknown "Thanks. I spend a lot of time taking care of her fur."
+        #show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
+        #show Kazumi at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+        "I looked up and saw a smiling face that reminded me of Naomi."
+    else:
+        "I smiled as the dog seemed happy to receive Naomi's affection before I turned my focus to the figure who had called out earlier."
+        #show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
+        #show Kazumi at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+    Kazumi "Hello, I'm Kazumi Yamazaki. It's a pleasure to meet you."
+    MC "Keisuke Hotsure, nice to meet you as well."
+    "We both gave each other a light bow as Naomi's father came up alongside Kazumi."
+    #show Akihiro neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    UNKNOWN "Kazumi, I thought you said you'd keep Kimiko in the car."
+    Kazumi "Apologies, Father. She must've smelt Naomi and became rather restless, so I thought it'd be best to let her out."
+    UNKNOWN "Hm, just make sure that she doesn't run off again."
+    "Kazumi nodded and gave a light snap of her fingers, which made Kimiko bark and move to Kazumi's side before sitting on her own."
+    UNKNOWN "Now, then. Who might you be, young man?"
+    show GTS_S embarrassed
+    GTS_S "Ah! Yes, sorry! Father, Mother, this is my... boyfriend, Keisuke Hotsure."
+    "Her father didn't react much to the news, as he only gave a small nod while, Kazumi had a more surprised expression, as did her mother."
+    MC "It's an honor to meet you, sir!"
+    "I bowed deeply."
+    #show Miko neutral at Position(xpos=0.9, xanchor=0.5, yalign=1.0) with dissolve
+    Akihiro "Hotsure-san, I'm Akihiro Yamazaki, and this is my wife Miko."
+    Miko "A pleasure, Hotsure-san."
+    MC "Likewise, ma'am."
+    Miko "Oh, so polite. And handsome too, you've done well Naomi."
+    GTS_S "U-uh, t-thank you Mother."
+    MCT "It's strange seeing Naomi so hesitant and shaky. I always took her as the collected, mature one of the group, but she appears to be just as nervous as I am."
+    MC "T-thank you ma'am. Where will you be staying, if you don't mind me asking?"
+    Akihiro "I saw that there was a respectable hotel in Satoyama Village, so we'll be staying there for the weekend. My wife and I have been more than a little curious to see the island ever since Naomi was enrolled in this school, so we will be taking in the sights."
+    MC "Sounds like a good time, sir."
+    Akihiro "I am hoping it will be, as I was hoping you'd be willing to join us."
+    MC "H-huh?"
+    Akihiro "I must admit, the sudden news of your relationship to Naomi has left me intrigued to know more about you."
+    MC "U-uh..."
+    show GTS_S shy
+    GTS_S "Father..."
+    Akihiro "Please, Naomi, as a father, I watch out for my family. So what do you say, Hotsure-san? Will you join us for a small trip tomorrow, as well as dinner perhaps?"
+    menu:
+        "S-sure, I came with Naomi to meet you. So might as well dive right in.":
+            jump GTS035_c1_1
+        "U-um actually... I-I'm rather busy this weekend...":
+            jump GTS035_c1_2
+
+label GTS035_c1_1:
+    MC "S-sure, I came with Naomi to meet you. So might as well dive right in."
+    show GTS_S happy
+    GTS_S "Keisuke..."
+    Akihiro "Good. Now, if you'll excuse us, we have to get checked in to our hotel. Please be by the hotel around 5 A.M."
+    MC "W-what!?"
+    GTS_S "Of course Father, we'll be there on time."
+    Akihiro "Good, good. It was nice meeting you, Hotsure-san."
+    #hide Akihiro with dissolve
+    Miko "It was a pleasure. Please rest well."
+    #hide Miko with dissolve
+    Kazumi "See you two tomorrow morning. Later! Come on, Kimiko."
+    #hide Kazumi with dissolve
+    "She snapped her fingers once more and the dog barked excitedly before following after her."
+    MC "N-nice to meet you all too..."
+    $setAffection("GTS", 10)
+    GTS_S "Thank you so much for accepting, Hotsure-san."
+    MC "It was bound to happen eventually. So why not now, right?"
+    GTS_S "Still, I'm happy you decided to join us."
+    MC "Well that's all the reason I need to go, then."
+    "I saw her face blush as I smirked. Taking her hand in my own I began to walk back to the school."
+    MC "Come on, I'm gonna need to get to sleep early if I'll be waking up before 5 A.M..."
+    jump daymenu
+
+label GTS035_c1_2:
+    MC "U-um actually... I-I'm rather busy this weekend..."
+    Akihiro "Hm."
+    MC "I'm sorry... I-I wasn't expecting to be asked to join you all. I assumed I would have been intruding if I invited myself so I didn't plan around it."
+    Miko "That's unfortunate, but understandable. After all, dear, we shouldn't risk hindering Hotsure-san's school work."
+    Akihiro "Yes, I suppose that's true. Very well, Hotsure-san. It was still nice to meet you."
+    #hide Akihiro with dissolve
+    "He gave me a light bow to which I bowed deeper, and he left without another word."
+    Miko "It was a pleasure to meet you, Hotsure-san. I hope we get another chance to get to know you soon."
+    #hide Miko with dissolve
+    Kazumi "Yeah, that's a bummer, but hey, what can you do? We'll be waiting at the hotel tomorrow morning, Naomi. You know what time Father likes."
+    show GTS_S neutral
+    GTS_S "Indeed. Thank you, Kazumi."
+    Kazumi "Later! Come on, Kimiko."
+    hide Kazumi with dissolve
+    "She snapped her fingers once more and the dog barked excitedly before following after her."
+    "I felt a small lump form in my throat as I looked down before finally looking towards Naomi."
+    MC "I'm sorry..."
+    $setAffection("GTS", -10)
+    GTS_S "It's fine, Hotsure-san. It was too sudden. I apologize for my father putting you on the spot like that."
+    MC "I would have loved to go. It's just... maybe a little too soon to spend the whole day with them?"
+    show GTS_S sad
+    GTS_S "Yes, I understand. Still, thank you for joining me in seeing them today."
+    MC "I'll... make it up to you. I promise."
+    show GTS_S neutral
+    GTS_S "It's perfectly okay. The last thing I'd want is for you to be uncomfortable."
+    GTS_S "Would it be okay to head back to the dorm? I need to prepare for tomorrow."
+    MC "Yeah, sure."
+    "We walked back towards the school in silence as I looked down, thinking of some way to make it up to her."
+    jump daymenu
+
+label GTS035_testpass:
+    scene Dorm Interior with fade
+    "When I awoke the next morning, it wasn't due to my alarm ringing but of someone singing."
+    MCT "The heck? That's not my alarm."
+    UNKNOWN "Sekai wa kawari dasu, Inori mo todokanai, Boku ga kawari dasu."
+    MCT "Sounds like it's coming from outside."
+    scene Dorm Exterior with fade
+    "I walk over and open my window. Naomi was leaning against the side of the dorm, humming and singing to herself."
+    show GTS_S unique with dissolve
+    GTS_S "Kimi wo motomete hashiri tsuzukete, Jibun ga dare ka wakaranaku naru, Naki-sōdakedo maketakunaikara."
+    MC "Good morning, Yamazaki-san."
+    show GTS_S surprised
+    GTS_S "Eep! Oh, it's you, Hotsure-san. Please don't spook me like that."
+    MC "Apologies, I was just listening to your singing."
+    show GTS_S embarrassed
+    GTS_S "Oh, I didn't realize you could hear me. I'm sorry if I disturbed your slumber."
+    MC "There's no need to apologize. I needed to get up anyway to prepare for our day with your parents."
+    GTS_S "Hotsure-san... I just wanted to say thank you again for doing this. If you don't wish to do this, you can just say so. I know we've only been dating for a little while, so this may be rather sudden."
+    MC "Trust me, Naomi-chan. I'm certain that I want to do this. I'm interested in you, and if that means meeting your parents, then I'll do it."
+    show GTS_S neutral
+    GTS_S "Thank you, Hotsure-san... wait, did you just call me 'Naomi-chan?'"
+    MC "I did. Must've slipped out on accident."
+    GTS_S "Let's keep the names formal for today and discuss the matter later."
+    MC "I understand, Yamazaki-san. Now, pardon me while I get ready."
+    "I closed my window and got ready all the while I could hear Naomi humming the same tune to herself."
+    if getSkill("Art") >= 6:
+        "When deciding what to wear, I decided that since this is a very special kind of event and I should dress appropriately. Reaching under my bed and I produced my dark blue Yukata that hadn't been used in some time. Throwing on the article and tying the sash I headed outside."
+        MC "How do I look?"
+        show GTS_S surprised
+        $setAffection("GTS", 1)
+        GTS_S "Oh my, that looks wonderful. I'm quite surprised you have one of those here."
+        MC "My mom made me bring it in case I found myself needing a date with a hot girl."
+        show GTS_S embarrassed
+        GTS_S "Your mother sounds like a thoughtful woman."
+        show GTS_S neutral
+        GTS_S "Anyway, we better be going, it's nearly 5. Thankfully this place is quite close so I don't need to rush."
+        MC "I'm right behind you."
+    else:
+        "When deciding what to wear I decided that a suit will be more than suitable for the occasion. Slipping on my dress shoes and straightening my tie I heard downstairs."
+        MC "How do I look?"
+        "Naomi cocked her head and looked at me like she was deciding the best way to describe a bad situation."
+        GTS_S "Well it should be adequate for today, though maybe at some point we could get you a proper Yukata."
+        GTS_S "Anyway, we better get going. It's nearly 5, and my father is very particular about timeliness."
+        MC "Just lead the way, since you appear to know where this place is."
+    scene Hill Road with fade
+    if getSkill("Athletics") >= 7:
+        "As we made our way down the road towards the inn I began to notice just how much effort it was taking to keep pace with Naomi. Every eight steps for me was like one for her which made keeping pace a good workout."
+        MCT "Man, I better not slack off on the track. Otherwise, I can't see myself keeping pace with her much longer."
+    else:
+        "As we made our way down the road toward the inn, I found myself struggling to keep pace with Naomi."
+        MC "Yamazaki-san, can you stop for a moment?"
+        "She stops and finds me trying to catch my breath."
+        show GTS_S surprised with dissolve
+        GTS_S "Hotsure-san, are you ok?"
+        MC "Yeah, just finding it a bit hard to keep pace with you. Your strides are a bit longer than mine now."
+        GTS_S "I'm sorry, Hotsure-san. I didn't mean to wear you out like that."
+        MC "It's all right. Just give me a minute to catch my breath."
+        "After a minute or so I felt my energy return and we continued on our way, though I noticed how much shorter Naomi took her strides."
+    "We reached the inn just as the first rays of the sun could be seen creeping up on the horizon. The inn was several small huts in a circle around the cul-de-sac entrance. As we approached, we heard the sound of scampering feet before the family dog came rushing up to us. Eventually, Kazumi showed up wearing her kimono."
+    if getSkill("Art") >= 6:
+        #kazumi position left, face right
+        Kazumi "Good to see you made it early. Father will be quite pleased to know you're here."
+        show GTS_S neutral with dissolve #position right, face left
+        GTS_S "Then we best not keep him waiting. He probably already has the plans for today made."
+        "Kazumi called the dog back and went back to grab her parents."
+    else:
+        "When Kazumi approached she paused, looking me over before looking at her sister. Some sort of signal I supposed, between sisters."
+        #kazumi position left, face right
+        Kazumi "Good to see you made it early. Father will be quite pleased to know you're here."
+        show GTS_S neutral with dissolve #pos r face l
+        GTS_S "Then we best not keep him waiting, he probably already has the plans for today made."
+        "Kazumi called the dog back and led us back to the front of the inn building their family was staying in."
+    "Dressed in formal kimonos were both of their parents, looking more prepared for a formal dinner then a day on the town."
+    #hide kazumi
+    MCT "I had some idea how traditional her parents were, but this is a bit more than I was led to believe."
+    #akihiro pos l face r
+    Akihiro "Good Morning, Hotsure-san. I'm pleased to see you joining us this early."
+    MC "It was no trouble, sir. Yamazaki-san made sure that we made it here in a timely manner."
+    Akihiro "I expect nothing less from my daughter. Now then, we should make our way to town. There is a coastal trail we can take."
+    MC "That sounds like a wonderful suggestion, sir."
+    GTS_S "That does sound wonderful. I haven't seen much of the ocean since arriving."
+    "Her father took the lead and guided our group through the trees behind the inn onto a well-kept trail. Kazumi and Miko followed behind Akihiro while Naomi and I brought up the rear of the party. As we walked I would occasionally peek back at Naomi and noticed her swiping and pushing away many branches that were far out of reach of the rest of us."
+    "Her strides were still much longer than ours, forcing her to deliberately take shallower steps if she didn't want to outpace the rest of the group. Considering the alternative, keeping Naomi at the back seemed like the best option."
+    "The woods faded into grassland as we approached the cliffside. When Naomi emerged I spotted that more than a few twigs had found their way into her hair."
+    MC "Yamazaki-san, you have a bit more natural radiance than normal. Have you become one with the Earth?"
+    "Naomi gives me a blank stare for a moment before hastily yanking the twigs from her hair."
+    show GTS_S embarrassed
+    GTS_S "Thank you, Hotsure-san."
+    "We exchange smiles before rejoining her family along the cliffside."
+    "The sunrise was quite radiant as its beams rested on the water. The day had just begun."
+    Akihiro "When Naomi was younger, we'd take her to visit our family's summer home on the coast. We would constantly find her up at the break of dawn sitting on the porch watching the sun rise."
+    MC "I can't blame her, this is quite a sight. I've rarely visited the coast, and even when I did, I never considered watching the sunrise."
+    Akihiro "We watched many New Years Sunrises from those steps. Hopefully, the stars will align for us to revisit that special place."
+    MC "Did something happen to prevent a return?"
+    Akihiro "Time passes and places fade."
+    "A silence fell over the group before her father spoke up again."
+    Akihiro "We should head into town and see what the local treasures are."
+    Miko "I wonder if they have any places to shop or entertainment."
+    MC "There are certainly a few good shops from what my friend Honoka has said."
+    "With a nod from Akihiro, we begin heading for town."
+
+    scene Town with fade
+    "The town was quite busy for a weekend; it was a surprise to me but I could see it was very uncomfortable for Naomi. She was constantly having to look down, watching every single one of her delicately placed footsteps."
+    MC "Would you like to do anything in particular?"
+    show GTS_S neutral with dissolve
+    GTS_S "There are few places that I can fully enjoy, I'm afraid."
+    "I didn't like seeing Naomi with that mindset. I wanted to figure out a way to let her feel at least somewhat normal. There must have been something we could do to pass the time."
+    MC "Why don't we walk around the shopping district? We might find something you like."
+    GTS_S "Oh? I suppose there are a few essentials I could pick up while we're here."
+    MC "No, I meant... fun stuff. I was offering you a gift."
+    show GTS_S embarrassed
+    GTS_S "Ah, right! I apologize. I'm not used to being offered presents."
+    MC "Really? You aren't?"
+    show GTS_S neutral
+    GTS_S "I usually just buy the things that I want myself. I haven't had someone offer to buy things for me since I was little."
+    MC "Well, there's no harm in window shopping. We can just pace around; see if there's anything you like."
+    GTS_S "Don't hesitate to purchase something for yourself too, Hotsure-san. It's important to love yourself just as much as you love others."
+    "We walked around the shopping district for several minutes. Naomi kept pace with me by intentionally slowing down her strides. Every step Naomi took was roughly three for me."
+    "Eventually, we came across a hobby store that specialized in various arts and crafts. The window display had a wide assortment of scrapbooking supplies available, including premium folder sets and binders."
+
+    "Some of them were very professional looking, like what one would see in a magazine display. Others were more intended for enthusiasts, with binders that featured characters from various anime and video games. A bright, vibrant 'OPEN' sign accompanied the display."
+    "Naomi seemed interested as we walked past, crouching down to make herself eye-level with the glass."
+    show GTS_S happy
+    GTS_S "Ahh, that reminds me. I should really get back into painting."
+    MC "You enjoy painting, Yamazaki-san?"
+    show GTS_S neutral
+    GTS_S "Well, calligraphy. I enjoyed painting banners when I was a kid. There's something innately satisfying about seeing a bold, perfectly shaped line of kanji painted in an appropriate color."
+    "To me, it's like a statement using far more than writing alone. The brushstroke can accent the word, or create a dichotomy where it doesn't match the word at all. For example, if one were to write the character for 'anger' in a very thin, subtle brushstroke."
+    MC "Would you like me to get you a calligraphy pen?"
+    show GTS_S sad
+    GTS_S "Unfortunately, I don't think I'll be able to write as well as I used to."
+    MC "Well, you said yourself that adapting to your new body would be necessary. What better way to do that than to do something you love?"
+    GTS_S "You're absolutely certain? I don't want to crush something that you've given me. I'd be worried about it every single time I use it."
+    MC "It isn't an issue at all, Yamazaki-san. I promise."
+    show GTS_S embarrassed
+    GTS_S "Would you like to head inside, then? I'd like to accompany you, but ah..."
+    "I chuckled in response."
+    MC "I'll be right back, Yamazaki-san."
+
+    scene Store with fade
+    "I walked inside the hobby store while Naomi waited outside. I could see her awkwardly cross the street and stand as far away from the sidewalk as possible to avoid blocking traffic."
+    "I paced around the aisles for about a minute before I found exactly what I was looking for. It was a set of calligraphy pens, arranged neatly in a case. On the bottom row were pre-built pens which already had the ink inside them, covering every basic color."
+    "In addition, the set also came with several pens which allowed you to insert your own inkwell and select different tips to allow for a wide variety of unique fonts and brushstrokes. Of course, they were perfectly sized for human hands."
+    MC "These are perfect."
+    "They were a little on the pricier side at 3000 yen, but for such a large variety of pens, I felt that the price was fair. I paid for the pens at the checkout before returning outside."
+    "Naomi was still standing across the street, standing just as tall as the light poles. She still looked uncomfortable, but as I got closer, I noticed that she was breathing deeply to calm herself."
+    "Occasionally, a pedestrian would walk past to stare at her in confusion. Once I returned to her side, I showed her the sealed case."
+    show GTS_S neutral with dissolve
+    GTS_S "Welcome back. I hope they weren't too much trouble to find."
+    MC "Not at all."
+    MCT "I gave her a smile as I held up the calligraphy set."
+    show GTS_S surprised
+    GTS_S "...."
+    "Naomi stood on the sidewalk in stunned silence for several seconds."
+    GTS_S "Oh my, oh my...."
+    MC "Do you like it?"
+    GTS_S "Hotsure-san, I... wasn't expecting something so elaborate. Even a single pen would have been perfectly acceptable!"
+    MC "Well, now you have 20 to practice with."
+    show GTS_S unique
+    GTS_S "Hotsure-san... thank you. With deep sincerity, thank you so much. I will treasure them always."
+    MC "I'm glad you're happy with them!"
+    MCT "Naomi took the calligraphy set from my hands and held it at her side. Unsurprisingly, they looked a lot smaller in her hands."
+    show GTS_S neutral
+    GTS_S "Shall we see what else the town has to offer?"
+    #(Dissolve in Akihiro on screen left. Shift Naomi from center to screen right.)
+    Akihiro "I spotted a flyer in there advertising a local boardwalk if you two would be interested?"
+    MC "What do you say, Yamazaki-san?"
+    show GTS_S happy
+    GTS_S "It sounds like a lovely idea. Hopefully, they have some stuff I can do."
+    MC "Let's go find out."
+
+    scene Festival with fade
+    "The boardwalk area wasn't too far from the main street. The boardwalk was a standard Carnival Matsuri but with the additional flair of an American one. Stalls full of games, food, and all sorts of fun littered the area. Carnies called out to people walking, trying to reel people over to play their games."
+    show GTS_S neutral with dissolve
+    GTS_S "This place is quite lively. Even this early in the day they are this energetic."
+    MC "Have you ever been to a carnival?"
+    GTS_S "I can't recall having gone to one previously. This is all quite new to me."
+    MC "Oh, that's a shame; these places are always good fun. My family used to visit a seasonal one that would pop up in the town near us, always had great food and activities. My sister always wanted to do the ring toss game even though I told her it was rigged."
+    GTS_S "That's adorable, you ought to bring your sister around some time. I don't think we've formally met."
+    MC "I could ask her if she's available sometime. She's typically off doing something else with Yuki."
+    "Naomi was about to respond when a carnie rushed up to me and began speaking rather fast ."
+    Barker "Step right up and test your strength. Can you ring that bell?"
+    "He handed me a large mallet."
+    Barker "C'mon kid you can do it, you'd hate to disappoint the fine lady."
+    "Naomi blushes as I raise the mallet."
+    if getSkill("Athletics") >= 7:
+        "I slammed the hammer down and watched the little peg rocket up but fall a mere inch away from the bell."
+    else:
+        "I slammed the hammer down and watched the little peg get about halfway up before falling back down."
+    Barker "Ooh, better luck next time boy. Work those arms out and try again some other time."
+    MCT "Ouch, watch the pride, dude. We all know these things are rigged anyway."
+    GTS_S "Excuse me, sir, would you mind if I tried?"
+    Barker "Well we normally have a rule on giants, but who am I to deny a pretty lady?"
+    "Naomi picked up the hammer that was more like a kids toy in her hand and brought it down hard. The peg hit the bell so quickly I couldn't even watch it move, but the loud ring certainly made it clear."
+    "The carnie blinked several times, scratching his head before handing Naomi what would normally be a massive teddy bear but in her hands seemed normal."
+    GTS_S "Thank you, sir."
+    "She bowed at the still quite shocked carnie. As she stepped away I could swear I heard the Barker muttering under his breath, 'But that shouldn't have worked.'"
+    MC "Nice work on that game. Remind me next time I need a nail fixed to call you up."
+    GTS_S "It was nothing, Hotsure-san. That man was rude to you so I needed to protect your honor."
+    "We shared a chuckle but as I looked back at the game once more I noticed that the bell now had a large peg-shaped dent in the bottom."
+    MCT "Geez, didn't know she was getting that strong."
+    #(fade to Hut BG)
+    "As we approached the inn for dinner, it dawned on me that we hadn't considered Naomi's size at all."
+    MC "If I may suggest, can dinner be held on the back porch? The weather is quite nice tonight, and it may be beneficial so that everyone can be included in tonight's meal."
+    Akihiro "The weather is quite nice, but I'd hate for our food to be interrupted by pests."
+    MC "I don't think all members present will fit within the building, sir."
+    "Naomi blushed and sunk her face into her hair, slouching as she tried to turn invisible. Her father tapped his chin for a moment."
+    Akihiro "I suppose the pests can be tolerated for this evening."
+    MC "Thank you, sir."
+    "Stepping around the house, Naomi, Akihiro, and I stood around the table as her mother and sister gathered the dishes and utensils for the meal. Glancing at Naomi, I could see that while she was smiling, there was a hint of sadness in her eyes."
+    show cg GTS035
+    "Eventually her family stepped out with the tea and food for the evening. We exchanged bows and took the Seiza position around the table. Naomi reached for the tea set but her father raised his hand."
+    Akihiro "No Naomi, I believe Kazumi should do the ceremony tonight. She has been practicing, so let us observe her work."
+    "Her mouth fell open, but she quickly snapped it shut as her sister began the tea ceremony. Kazumi exhibited a level of skill with the making of the tea, always making sure that each step was done precisely as the last. One by one she served us our tea, though I noticed her hesitation on giving Naomi her cup."
+    Akihiro "Well done, Kazumi. I see the school has taught you as well as they did your sister. Now then, let us begin our meal."
+    "Kazumi lays out some tempura, sashimi, and miso soup. I served myself a bit of every dish and was about to begin eating when I realized that Naomi hadn't been served. Taking her plate, I served her some of the available food as well. She smiled and softly thanked me."
+    Akihiro "So Hotsure-san, how long have you known my daughter?"
+    MC "Only since the beginning of the semester, sir. We have the same classes, so we see each other every day."
+    Akihiro "I assume that, since you also attend this institution, you must also have one of those abnormalities."
+    MC "A factor? Yes, I do, though mine is much more manageable. My hair grows much faster than normal."
+    Akihiro "That's quite interesting. I wasn't aware that they came in less extreme forms."
+    MC "Some don't have factors, but still attend the school. Like my roommate. Though he is there mainly for his sister who does have a factor."
+    Akihiro "Why?"
+    MC "His sister wanted him for emotional support if I recall correctly."
+    Akihiro "I see. And this is common?"
+    MC "Well, I... believe so? At least a good amount of students don't have any abnormalities."
+    #(Possibly add a check here if a relation with Daichi becomes a factor)
+    Akihiro "Ah. Well, I certainly hope they can manage resources and... space, with this program."
+    "I noticed him glance towards Naomi as he took a bite of his food."
+
+    menu:
+        "(Interject/comment)":
+            $setFlag("GTS035_int1")
+            MC "You can refer to her by her name at least."
+            "Naomi quickly shot me a glare that made me quickly drop my attitude."
+            MC "Sorry, what I meant was-"
+            "Her father held up his hand before anyone could speak further."
+            Akihiro "You are quite the outspoken one, young man. Your solicitude is very apparent indeed."
+            MC "My apologies, sir."
+        "(Let it slide)":
+            pass
+    Akihiro "When we first heard the news, we went to the temple and prayed to be spared from further misfortune."
+    MC "Are you referring to the factors?"
+    Akihiro "Indeed so."
+    MC "Ah. In which case, surely it's good to know that it's not like a virus."
+    Akihiro "So it has been said. But it is by providence, then, that I must continue to contemplate this wisdom for the sake of my remaining daughter."
+    "Suddenly, a faint SNAP could be heard from Naomi's direction. I looked over to see that her chopstick was now shattered into several fragments between her fingers."
+    Naomi "Ah, excuse me, it seems I've unduly and clumsily damaged my chopstick."
+    Akihiro "Mm."
+    Miko "Kazumi, please get your sister another pair, please."
+    Kazumi "Yes mother."
+    "Naomi's mother nodded as Kazumi bowed leaving the room, placing a hand on her husband's leg."
+    Miko "Dear, I believe Naomi put too much pressure on her chopsticks. Quite rare, is it not?"
+    Akihiro "Indeed. Her newfound strength is difficult. Very difficult indeed."
+    Miko "... Hmm~"
+    "Naomi's mother cocked her head to the side for a moment before turning to me."
+    Miko "Hotsure-san. Surely this situation is of great misfortune to you."
+    MC "Ah, you mean me being, well, afflicted?"
+    Miko "So you say, indeed."
+    "The room fell silent as Kazumi returned with a new set of chopsticks."
+    Akihiro "What are your fields of study?"
+    MC "I'm looking to study architecture in college."
+    Akihiro "How did that desire manifest?"
+    MC "When I was little my father gave me a book on famous architecture across the world. I read that thing over and over until I decided that I wanted to design something that could be in that book."
+    Akihiro "A noble endeavor to build a legacy for oneself. Though I can see your ambitions having secondary utility in more personal matters if you so choose."
+
+    menu:
+        "(Comment)":
+            $setFlag("GTS035_int2")
+            MC "If matters continue as they are then I suppose that your point is valid. However, you don't need to be so passive addressing the elephant in the room sir."
+            Akihiro "I can assure you that my words are meant to make sure that you can provide for my daughter. Any other inference you may take from my words are unintended."
+            "I recoiled a bit realizing I must've taken his bait."
+            MC "My apologies, sir."
+        "(Remain silent)":
+            pass
+    hide cg with dissolve
+    "Eventually we finished our supper with Kazumi and Miko taking care of the dishes. Naomi had wandered off towards a koi pond at the edge of the inn's yard. I stood and was preparing to walk towards her when I noticed her father stand up and approach me."
+
+    Akihiro "They say a tree is only as strong as the ground beneath it, but that is not true. A tree can grow on a rock and still thrive, but it's the support it receives that keeps it alive."
+    if getFlag("GTS035_int1") and getFlag("GTS035_int2"):
+        Akihiro "Was it out of passion?"
+        MC "Pardon?"
+        Akihiro "As I mentioned before you were only reacting as any man should when one's passion is threatened. You wear your passion for my daughter openly and for that, I cannot be mad at you."
+        Akihiro "Such passion is very awe inspiring, very awe inspiring indeed. Ensure that you do not bite your tongue with the quickness of your speech from such overwhelming passion."
+        "As I stumbled for words he turned and left me standing on the porch."
+    elif getFlag("GTS035_int1") or getFlag("GTS035_int2"):
+        Akihiro "I never doubted my daughter and she has never disappointed me. Your burst of passion, while rude, was striking. Carry that on."
+        MC "Apologies for that."
+        Akihiro "I understand how it is to love. Just make sure to direct that energy in the proper channels, please."
+        "We share a brief moment of silence."
+        $setAffection("GTS", 5)
+        Akihiro "She taught you well I have to say."
+        MC "Pardon?"
+        Akihiro "You ate with the same subtle movements she does."
+        "As I searched for a response he patted me on my back and departed the porch."
+    else:
+        $setAffection("GTS", 10)
+        Akihiro "Your love for my daughter must be strong for you to follow her directions for tonight."
+        MC "Pardon?"
+        Akihiro "Your manners tonight were quite splendid but showed obvious signs of underutilization and lack of polish. My daughter's subtle movements and mannerisms were a tad obvious in your body movement and posture during dinner."
+        MC "My family doesn't practice these sorts of traditions at home so I was a bit rusty."
+        if getSkill("Art") < 6:
+            Akihiro "I suggest the next time we meet, invest in some more appropriate attire."
+        else:
+            Akihiro "It is reassuring to know you were able to dress properly for this occasion."
+        "Before I could form a response he patted my arm and headed inside, leaving alone on the porch."
+    MCT "Well, he certainly is blunt when he wants to be."
+    show GTS neutral with dissolve
+    GTS "Is everything alright Hotsure-san?"
+    "I jumped a little from Naomi's sudden appearance."
+    MC "Oh! Yes, sorry, just thinking over some stuff your father told me."
+    show GTS happy
+    GTS "Oh, I bet it was one of his many proverbs."
+    MC "About a tree on a rock."
+    show GTS neutral
+    GTS "Yes, though that one is certainly new."
+    MC "Are you ready to head back to school? It's getting dark and I'd hate for us to be on the road at this hour."
+    GTS "Of course, let me just tell them we are leaving. I'll meet you in the parking lot, ok?"
+    MC "Sure thing."
+    "I only had to wait a few minutes before I saw Naomi walking back from the inn with a wide smile."
+    MC "Someone has heard some good news."
+    show GTS happy
+    GTS "Father approves!"
+    MC "That's great! I was scared I'd failed his tests."
+    GTS "You shouldn't doubt yourself so much Hotsure-san. If anything I'm happy you met him as it means a lot to me."
+    MC "It certainly was nerve-wracking but I think I just worried about myself too much."
+    "She leaned down and tapped the top of my head with her finger."
+    show GTS neutral
+    GTS_S "Now then let's get on our way back to school."
+    "I reshuffled my hair as we walked back to school."
+    jump daymenu
+
 label GTS033:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
@@ -4237,6 +4710,7 @@ label GTS033:
 
 label GTSPRG001:
     scene School Planter with fade
+    play music Busy
     "As I was heading to the dorms after class I spotted Naomi and Aida down in the garden."
     MC "Hey girls."
     show GTS neutral at Position(xpos=0.8, xalign=0.5, yanchor=1.0) with dissolve

@@ -7320,7 +7320,7 @@ label BBW041:
     MCT "Even fate wants me to avoid that conversation, it seems."
     "I checked my phone, pleasantly surprised to see a text from Alice."
     play music BBW
-    "Yesterday's events were… interesting, to say the least."
+    "Yesterday's events were... interesting, to say the least."
     "Just having the chance to get close to her belly like that was exhilarating."
     BBWCell "< Come to the arcade, I have something fun to show you. >"
     MCT "Alice? At the arcade? Oh this {i}will{/i} be fun."
@@ -7375,7 +7375,7 @@ label BBW041_FMG016:
             MC "Alice, I don't want to eat here. Can we choose somewhere else?"
             MC "I'm afraid I have to insist."
             show BBW stern
-            BBW "You… insist?"
+            BBW "You... insist?"
             MC "Yeah, insist."
             BBW "Of course, Keisuke. Whatever you think is best."
             show BBW sad
@@ -7407,7 +7407,7 @@ label BBW041_FMG016:
             MC "Yes Chibuki, I'm here with my girlfriend Alice."
             show BBW happy at center, Transform(xzoom=1)
             BBW "Mistress Nikumaru. I'm here for the experience."
-            Chibuki "Ahh… Well, Mistress Nikumaru, most people come for the experience and stay for the food."
+            Chibuki "Ahh... Well, Mistress Nikumaru, most people come for the experience and stay for the food."
             "Alice glanced at her watch and a sly smirk quickly spread across her face."
             show BBW haughty
             BBW "Miss Chibuki, I'd like to put your claim to the test. Two coffees and two slices of cake of your choosing."
@@ -7673,6 +7673,7 @@ label BBW041_FMG000:
 label BBW042:
     $setProgress("BBW", "BBW045")
     scene Classroom with fade
+    play music Rain
     "After classes I had wanted to meet up with Alice to touch base on if any deliveries were needed. She wasn't answering any texts, but when I found Aida in the cooking classroom she told me Alice was probably in the arts room."
     "I did indeed find her there, standing at an easel. The painting she had been working on in class earlier that day was in front of her."
     show BBW angry with dissolve
@@ -7785,6 +7786,7 @@ label BBW042:
 
 label BBW045:
     scene black with fade
+    $setProgress("BBW", "BBW046")
     "It's a beautiful Sunday morning."
     MC "zzzzzzzzzz"
     "And I was spending it the best way I could..."
@@ -7930,7 +7932,7 @@ label BBW045_art:
     BBW "This is a staple of Van Gogh's work and will allow you to easily identify one of his paintings."
     $setSkill("Art", 1)
     MC "Ok Alice, but {i}why{/i} are you telling me this?"
-    BBW "As you know, we are attending a wine tasting in… 40 minutes, minus 15 minutes travel time."
+    BBW "As you know, we are attending a wine tasting in... 40 minutes, minus 15 minutes travel time."
     BBW "The building hosting the event is a small art gallery and a high-class elegant café, which will be closed, for the wealthier residents of this island."
     BBW "Of course this is still just that- an island. You won't meet any world famous CEOs and only the more obscure paintings there are original pieces, but it still provides a high society experience for the island residents who seek it."
     "I had read that we were attending a wine tasting when I disabled do-not-disturb on my phone and the calendar notification displayed, but in my groggy state I had not properly processed the thought."
@@ -7955,7 +7957,7 @@ label BBW045_art:
     BBW "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
     BBW "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
     BBW "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
-    BBW "In opposition to this, a wine with no acidity is referred to as… flabby."
+    BBW "In opposition to this, a wine with no acidity is referred to as... flabby."
     BBW "Don't say it."
     "I fought a smirk attempting to spread across my face."
     MC "I wasn't going to, Alice."
@@ -8028,7 +8030,7 @@ label BBW045_suit:
     BBW "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
     BBW "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
     BBW "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
-    BBW "In opposition to this, a wine with no acidity is referred to as… flabby."
+    BBW "In opposition to this, a wine with no acidity is referred to as... flabby."
     BBW "Don't say it."
     MCT "I fought a smirk attempting to spread across my face."
     MC "I wasn't going to, Alice."
@@ -8064,7 +8066,7 @@ label BBW045_wine:
     scene Town with fade
     show BBW neutral with dissolve
     "Reaching the town was a sad end to the scenic walkways."
-    BBW "Furthermore…"
+    BBW "Furthermore..."
     MCT "Not that I got to fully enjoy such scenic walkways."
     BBW "There is no denying that some individuals would visit the island for less respectable purposes. I know some people would come here purely to see students with growth factors that they find pleasing; our conditions would be treated like some kind of game for their fetishism."
     MCT "She said she wanted to clear her head for the wine tasting. If business conceptualisations are how she does that, I have no desire to speak up."
@@ -8103,7 +8105,7 @@ label BBW045_wine:
     "He was obviously instructed to keep all conversation short and to the point."
     BBW "Thank you."
     "Alice and I each took a glass and sipped the contents."
-    MCT "It's… simple. It doesn't have any defining characteristics."
+    MCT "It's... simple. It doesn't have any defining characteristics."
     MCT "What was it called again? Avignon? That sounds French."
     MCT "I suppose it was made to appeal to as many consumers as possible, although I doubt anyone would have this as a favourite."
     "Alice spat the wine into the bucket, to which I immediately followed."
@@ -8199,12 +8201,12 @@ label BBW045_wine:
     menu:
         "Make it up.":
             $setFlag("BBW045_c3_1")
-            MC "Well I uhh…"
-            MC "I had the idea that uhh…"
+            MC "Well I uhh..."
+            MC "I had the idea that uhh..."
             MCT "They're never going to buy this."
             MC "Maybe people with muscle factors can be used for security?"
             $setAffection("BBW", -1)
-            Misaki "Did… Did you just make that up on the spot?"
+            Misaki "Did... Did you just make that up on the spot?"
             Misaki "We have a security guard just outside who attended the academy with muscle growth, he and I were in the same class."
             Misaki "You saw him at the door."
             Misaki "Oh now this is just a funny story, I'm going to go and tell him, I'll be right back."
@@ -8318,7 +8320,7 @@ label BBW045_wine:
     "Alice and I headed towards the exit."
     scene Town with fade
     show BBW neutral with dissolve
-    BBW "Keisuke…"
+    BBW "Keisuke..."
     MC "Yes?"
     BBW "What I said at the end about fat wines not inherently being bad was a test."
     MC "Oh?"
@@ -8355,7 +8357,7 @@ label BBW045_wine:
         BBW "Come on, this'll be fun."
         jump daymenu
 
-label BBW041:
+label BBW046:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
