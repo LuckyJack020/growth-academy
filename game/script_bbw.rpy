@@ -263,7 +263,7 @@ label BBW003_c1_1:
         BBW "What do you mean? It was your own idea that I should seek help among our classmates. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "I wasn't really suggesting you find a maid..."
     else:
-        BBW "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to flail around on my own. And Kodoma-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
+        BBW "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to flail around on my own. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "Seems like you're asking a bit much of your roommate."
     show BBW happy at center with dissolve
     BBW "Nonsense, Kodama-san is more than qualified to act as my chef, secretary, personal trainer, accountant, media relations manager, bodyguard, chauffeur and interpreter. And she's eager to start right away. Aren't you, Kodama-san?"
@@ -2859,7 +2859,7 @@ label BBW018:
     play music Busy
     "So Alice wanted to try a tycoon game, and since I was the one to suggest them to her it fell on me to hold her hand."
     "Not that I minded. I really had no experience with those games, but playing with someone else or just watching them could be fun in its own way."
-    "And when I stopped to think about it, I was having trouble thinking of times I had seen Alice hanging out with anyone besides me. Or Kodoma-san, of course."
+    "And when I stopped to think about it, I was having trouble thinking of times I had seen Alice hanging out with anyone besides me. Or Kodama-san, of course."
     "I knew she was in the music club, but from what I'd heard she wasn't exactly endearing herself to anyone there."
     "Was I her only friend at the school? Nah, it couldn't be."
     "Either way, as brusque as she could be, I didn't mind the thought of getting closer to her."
@@ -3111,7 +3111,7 @@ label BBW018_c2_4:
     $setAffection("BBW", 1)
     MC "No, yeah. Let's do this again."
     MC "Do you need help taking your computer back to your room?"
-    BBW "Oh, don't worry. Kodoma-san will handle that."
+    BBW "Oh, don't worry. Kodama-san will handle that."
     "I was hesitant to leave it for Aida until I saw she had a wheeled cart waiting by the side."
     scene black with fade
     if getFlag("BBW018_c1_lie"):
@@ -3151,7 +3151,7 @@ label BBW019_arcade:
     show BBW neutral at center with dissolve
     BBW "Oh, Keisuke. Good afternoon."
     MC "Afternoon. I didn't take you for a gamer, Alice."
-    BBW "I'm not, really. I came to town to run some errands, and Kodoma-san noticed a plush doll in one of those crane games."
+    BBW "I'm not, really. I came to town to run some errands, and Kodama-san noticed a plush doll in one of those crane games."
     BBW "So I am waiting as she tries to win it."
     BBW "I cannot say I approve of how she is spending her money, but it is hers to spend."
     BBW "Do you spend much time at these sorts of places? Is she even likely to win, or is this a fool's errand?"
@@ -3753,7 +3753,7 @@ label BBW022:
     BBW "Don't worry yourself about that. I've already planned out how I want to rejuvenate the space."
     show BBW neutral at Position(xpos=0.3) with dissolve
     show PRG neutral at Position(xpos=0.2) behind BBW with dissolve
-    BBW "I need your help moving the furniture around. Kodoma-san and I aren't strong enough to move the bed."
+    BBW "I need your help moving the furniture around. Kodama-san and I aren't strong enough to move the bed."
     MC "Oh. Well, all right."
     MC "Let me limber up here..."
     "I did a few stretches to get warmed up."
@@ -5074,7 +5074,7 @@ label BBW029A:
     MC "Sorry. Got my head in the clouds."
     BBW "I imagine you have a lot going through your head right now."
     MC "What do-? Oh, wait. You're Aida's roommate. You probably heard."
-    BBW "Kodoma-san needs what support she can get, and since she's not the most outgoing young woman to begin with it is not surprising she confided in me first."
+    BBW "Kodama-san needs what support she can get, and since she's not the most outgoing young woman to begin with it is not surprising she confided in me first."
     MC "Yeah. I was just thinking about how much easier this whole thing would be if we were regular college students, still living at home."
     MC "I know my parents would be upset, but they'd help me- us, all the same."
     MC "Aida's parents..."
@@ -5101,7 +5101,7 @@ label BBW029A:
     BBW "There is that."
     if getFlag("BBW_working"):
         BBW "At least you have a job, part-time though it is."
-        BBW "The school will take care of Kodoma-san's needs, particularly medical, but I don't foresee them covering 18 years of clothing, food, education, etc."
+        BBW "The school will take care of Kodama-san's needs, particularly medical, but I don't foresee them covering 18 years of clothing, food, education, etc."
         MC "Oi... I'll probably have to pick up a few more hours working for you, huh?"
         BBW "Oh, Keisuke. You're going to have a lot more demands on your time soon. Working for me will be the least of it."
     MC "I should probably get back to my room, take care of my homework."
@@ -5134,7 +5134,7 @@ label BBW029B:
     show BBW neutral
     BBW "You are referring to Megumi? Our business was concluded."
     MC "Business?"
-    BBW "With Kodoma-san being in the family way I am in the market for a new assistant."
+    BBW "With Kodama-san being in the family way I am in the market for a new assistant."
     BBW "I do not consider any of the other women in our class to be an adequate replacement, so I have turned to outside applicants."
     MC "Does it have to be a woman?"
     "She gave me a smirk, which I didn't understand at first."
@@ -5153,7 +5153,7 @@ label BBW029B:
     MC "So is... Megumi your new assistant? Or are you still considering other applicants?"
     show BBW sad
     BBW "I have yet to find anyone truly satisfactory."
-    BBW "For example, Kodoma-san has an unmatched skill in the kitchen."
+    BBW "For example, Kodama-san has an unmatched skill in the kitchen."
     "She pushed a plate of some kind of finger food over to me."
     BBW "Salmon pinwheels. Try one."
     MC "..."
@@ -5164,14 +5164,14 @@ label BBW029B:
     MC "At least you won't be a young, single mother."
     show BBW neutral
     BBW "That is so."
-    BBW "Though as I understand it the school will take care of Kodoma-san and her progeny. And I will be willing to step in should that prove necessary."
+    BBW "Though as I understand it the school will take care of Kodama-san and her progeny. And I will be willing to step in should that prove necessary."
     MC "That's thoughtful of you."
     "She shrugged. 'No big deal,' it said."
     BBW "Philanthropy is an ideal quality in the elite."
     "She pulled the plate of pinwheels back to herself and took a large bite of one."
     "She sighed."
     BBW "{i}Sigh{/i}"
-    BBW "I can not chastise Kodoma-san for being inconsiderate, but I do not have to be happy with how this turn has affected me."
+    BBW "I can not chastise Kodama-san for being inconsiderate, but I do not have to be happy with how this turn has affected me."
     MC "You'll get by."
     "She finished the pinwheel."
     BBW "I shall endure."
@@ -5190,7 +5190,7 @@ label BBW029C:
     MC "Ah!"
     BBW "Is what I hear true?"
     MC "Aah!"
-    BBW "Did you tell Kodoma-san that her pregnancy is none of your concern?"
+    BBW "Did you tell Kodama-san that her pregnancy is none of your concern?"
     MC "Aaah!"
     play sound Crash
     BBW "Answer me!"
@@ -5204,7 +5204,7 @@ label BBW029C:
     show BBW angry with hpunch
     MC "I mean... I..."
     MC "I said I can't deal with the pressures of fatherhood right now. I have so much going on in my life as it is."
-    BBW "And you think Kodoma-san doesn't?!"
+    BBW "And you think Kodama-san doesn't?!"
     BBW "What pressures are you grappling with that she is not doing so ten times more so?"
     MC "Well, being here and everything about that."
     BBW "You are here because of your hair!"
@@ -5214,15 +5214,15 @@ label BBW029C:
     MC "Can we go somewhere else to have this conversation? People are staring..."
     BBW "I am not concerned with your comfort, you despicable cur!"
     show BBW angry with hpunch
-    BBW "Take one second to imagine the situation Kodoma-san is in, and what it will be like several months from now."
+    BBW "Take one second to imagine the situation Kodama-san is in, and what it will be like several months from now."
     BBW "You think no one will be staring at her?"
     BBW "You contemptuous, self-centered egoist."
     BBW "Do you think we all exist to serve at your pleasure, and are to be discarded when you have had your fun?"
     #[BBW_Angry zooms in]
     "And then she leaned in closely, and her voice dropped to a perfectly normal tone, but it was still laced with barbed wire."
     "That was the scariest part."
-    BBW "If you are truly abandoning Kodoma-san in this, her most trying time, then by all the powers of heaven and hell I am warning you to make a complete break."
-    BBW "If I ever see you talking to Kodoma-san, or even looking in her direction, I will grind you under my foot like the loathsome worm that you are."
+    BBW "If you are truly abandoning Kodama-san in this, her most trying time, then by all the powers of heaven and hell I am warning you to make a complete break."
+    BBW "If I ever see you talking to Kodama-san, or even looking in her direction, I will grind you under my foot like the loathsome worm that you are."
     BBW "She is not your plaything to pick up and drop at your whim."
     BBW "As far as you are concerned, she is forbidden territory to you now."
     #[BBW_Angry moves back to regular size]
@@ -5230,7 +5230,7 @@ label BBW029C:
         BBW "Needless to say, you are fired."
         BBW "I will bring your remaining salary to class tomorrow morning. And do not think to ask for a letter of recommendation from me."
         $setFlag("BBW_working", False)
-    BBW "Perhaps it would be best if you made sure that neither Kodoma-san or I will ever run into you outside of class."
+    BBW "Perhaps it would be best if you made sure that neither Kodama-san or I will ever run into you outside of class."
     BBW "Maybe take your meals to the roof, or that stretch of dirt behind the gym."
     hide BBW with dissolve
     "I stood there, frozen, as she walked off."

@@ -108,7 +108,7 @@ image Track = "Graphics/ui/bg/track_day.png"
 image Roof = "Graphics/ui/bg/roof_day.png"
 image Nurse Office = "Graphics/ui/bg/nurseoffice_day.png"
 image Pool = "Graphics/ui/bg/schoolpool_day.png"
-image Festival = "Graphics/ui/bg/festival.png"
+image Festival = "Graphics/ui/bg/festival_day.png"
 image Bathroom = "Graphics/ui/bg/bathroom.png"
 image Recreation = "Graphics/ui/bg/NYI.png"
 image Town = "Graphics/ui/bg/town.png"
@@ -128,6 +128,7 @@ image Clothes Store = "Graphics/ui/bg/clothesstore.png"
 image Pharmacy = "Graphics/ui/bg/pharmacy_day.png"
 image Supermarket = "Graphics/ui/bg/supermarket_day.png"
 image Art Gallery = "Graphics/ui/bg/NYI.png"
+image Japanese Room = "Graphics/ui/bg/japaneseroom_day.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -144,7 +145,7 @@ image Dorm FMG = "Graphics/ui/bg/FMGdorm_day.png"
 
 image Dorm GTS = "Graphics/ui/bg/GTSdorm_day.png"
 image Giant Dorm Exterior = "Graphics/ui/bg/NYI.png"
-image Giant Dorm Interior = "Graphics/ui/bg/NYI.png"
+image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
 image GTS Courtyard = "Graphics/ui/bg/NYI.png"
 
 image Dorm PRG Day = "Graphics/ui/bg/PRGdorm_day.png"
@@ -190,6 +191,7 @@ image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 #Character sprites
 image RM neutral = "Graphics/minor/RM-neutral.png"
 image RM angry = "Graphics/minor/RM-angry.png"
+image RM distrustful = "Graphics/minor/RM-sad.png"
 image RM happy = "Graphics/minor/RM-happy.png"
 image RM sad = "Graphics/minor/RM-sad.png"
 image RM smug = "Graphics/minor/RM-smug.png"
@@ -442,8 +444,10 @@ image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/surprised.png")
 image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/angry.png")
 image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/aroused.png")
 image GTS embarrassed = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
+image GTS shy = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/wink.png")
+image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/unique.png")
 
 image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
 image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png")
@@ -454,6 +458,7 @@ image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/aroused.png")
 image GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/embarrassed.png")
 image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/wink.png")
+image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/unique.png")
 
 image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png")
@@ -463,6 +468,7 @@ image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-angry.pn
 image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-aroused.png")
 image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
 image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png")
+image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique.png")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
@@ -822,14 +828,14 @@ init 2 python:
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS021", "obsflags": [],       "conditions": []}
     eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS022", "obsflags": [],       "conditions": []}
     eventlibrary['GTS022'] = {"name": "Ya", "girls": ["GTS"], "type": EventTypeEnum.CORE,                                  "location": "library",          "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS024", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS024'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS025", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS024'] = {"name": "Splotchy Brown and Curling", "girls": ["GTS"], "type": EventTypeEnum.CORE,          "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS025", "obsflags": [],       "conditions": []}
     eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS027", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS027'] = {"name": "Splotchy Brown and Curling", "girls": ["GTS"], "type": EventTypeEnum.CORE,          "location": "roof",             "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS029", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS027'] = {"name": "Knock on Wood", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS029", "obsflags": [],       "conditions": []}
     eventlibrary['GTS028T'] = {"name": "Art of Film", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS029", "obsflags": [],       "conditions": [[ConditionEnum.FLAG, "GTS015_movie"]]}
     eventlibrary['GTS029'] = {"name": "Growing Pains", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS030", "obsflags": [],       "conditions": []}
     eventlibrary['GTS030'] = {"name": "A Change in Scenery", "girls": ["GTS"], "type": EventTypeEnum.CORE,                 "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS031", "obsflags": [],       "conditions": []}
     eventlibrary['GTS031'] = {"name": "Settling In", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "giantdorminterior","priority": PrioEnum.NONE, "sp": 6,          "next": "GTS032", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS032'] = {"name": "Journey of a Thousand Miles", "girls": ["GTS"], "type": EventTypeEnum.CORE,         "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS034", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS032'] = {"name": "Journey of a Thousand Miles", "girls": ["GTS"], "type": EventTypeEnum.CORE,         "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS033", "obsflags": [],       "conditions": []}
     eventlibrary['GTS034'] = {"name": "A Tall Order", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS035", "obsflags": [],       "conditions": []}
     eventlibrary['GTS035'] = {"name": "First Impressions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS036", "obsflags": [],       "conditions": []}
     eventlibrary['GTS036'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
@@ -909,7 +915,8 @@ init 2 python:
     eventlibrary['PRG027Z'] = {"name": "Guiding Hand", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                      "location": "dorminteror",       "priority": PrioEnum.NONE, "sp": 5,     "obsflags": [],                         "conditions": []}
     eventlibrary['PRG028Z'] = {"name": "Head Case", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                         "location": "hallway",           "priority": PrioEnum.NONE, "sp": 5,     "obsflags": [],                         "conditions": []}
     eventlibrary['PRG029Z'] = {"name": "Patchwork", "girls": ["PRG"], "type": EventTypeEnum.CORE,                               "location": "hallway",           "priority": PrioEnum.NONE, "sp": 5,     "obsflags": [],                         "conditions": []}
-    eventlibrary['PRG030Z'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "library",           "priority": PrioEnum.NONE, "sp": 11,    "obsflags": [],                         "conditions": []}
+    eventlibrary['PRG030Z'] = {"name": "Memoric Gazes", "girls": ["PRG"], "type": EventTypeEnum.CORE,                           "location": "hallway",           "priority": PrioEnum.NONE, "sp": 6,     "obsflags": [],                         "conditions": []}
+    eventlibrary['PRG031Z'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "library",           "priority": PrioEnum.NONE,              "obsflags": [],                         "conditions": []}
 
     #Optional
     eventlibrary['PRG001b'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                      "location": "schoolexterior",   "priority": PrioEnum.NONE,              "obsflags": ["testday"],                "conditions": []}

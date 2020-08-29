@@ -4455,7 +4455,7 @@ label PRG026b:
     "Going to my seat, I took one last glance back to Aida, who was trying to space herself the correct amount from her desk to accommodate her new belly."
     MCT "Who would've thought?"
     "I looked back once more to the demure, mousey girl. She was practically shaking in her seat as Nikumaru-san took the off glances at her belly. Out of all of the girls in this classroom, I would have never expected that the small woman who'd never uttered so much as a peep would have ended up pregnant at such a young age."
-    "Regardless, I nodded and looked back to the front of the class as Tashi-sensei began his lecture. This isn't the first mind boggling thing to happen in this place, and based purely on the fact that Kodoma-san's belly was as flat as a board just the night prior..."
+    "Regardless, I nodded and looked back to the front of the class as Tashi-sensei began his lecture. This isn't the first mind boggling thing to happen in this place, and based purely on the fact that Kodama-san's belly was as flat as a board just the night prior..."
     "I doubt it will be the last."
     jump daymenu
 
@@ -8850,7 +8850,7 @@ label PRG046:
     AE "And why not?"
     MC "Just didn't feel up to it, I guess."
     MCT "Honestly, why do I even bother lying anymore?"
-    AE "In which case you've dug your own grave. If Kodoma-"
+    AE "In which case you've dug your own grave. If Kodama-"
     AE "She didn't study either, did she?"
     MC "I mean..."
     AE "Hmph, I suppose her duties as a mother have given her a handicap..."
@@ -11562,7 +11562,7 @@ label PRG054_c1_3:
     jump daymenu
 
 label PRG055A:
-    $setProgress("PRG", "PRG056")
+    $setProgress("PRG", "PRG056A")
     play music Schoolday
     scene Dorm Exterior with fade
     "The vigorous autumn breeze was a welcome change from the literal fiery hellscape that had overtaken the campus the day before."
@@ -11750,7 +11750,7 @@ label PRG055A:
     jump daymenu
 
 label PRG055B:
-    $setProgress("PRG", "PRG056")
+    $setProgress("PRG", "PRG056B")
     scene Town with fade
     play music Peaceful
     "On an average day, the town felt light and fun, almost freeing in a way. The distance from the school made it a welcome reprieve from learning and general... school."
@@ -11971,7 +11971,7 @@ label PRG055B:
     jump daymenu
 
 label PRG055C:
-    $setProgress("PRG", "PRG056")
+    $setProgress("PRG", "PRG056C")
     scene Dorm Exterior with fade
     play music Schoolday
     MCT "Curse my big mouth."
@@ -12530,7 +12530,7 @@ label PRG056B:
     PRG "My grandma bought it for me before I came here. She said every home needs one."
     MC "Smart lady."
     PRG "She is. She used to clean my cuts and scrapes all the time."
-    "Aida reached into the kid, pulling out a sterile wipe. She removed the packaging and held it over my hand."
+    "Aida reached into the kit, pulling out a sterile wipe. She removed the packaging and held it over my hand."
     MC "I'm guessing this is going to hurt, too?"
     PRG "Mhm. Big breath in, now."
     "Aida laid the wipe on the back of my hand, dabbing quickly, but with care at the scraped skin."
@@ -12802,7 +12802,7 @@ label PRG056C_c1_1:
     "Closing in on the kitchen, I could vaguely make out music of some type, and someone singing... rather poorly."
     "I chuckled to myself.  I knew that voice all too well.  I heard it almost every day in class, of course."
     BE "IT'S MORE DANGEROUS!"
-    scene Kitchen with dissolve
+    scene Cooking Classroom with dissolve
     show BE happy at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     show PRG happy at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     "Honoka had a wooden spoon in her hand, her eyes shut, and was belting the lyrics to some obscure rock song into the spoon, grasping the handle as if she were on stage."
@@ -13024,7 +13024,7 @@ label PRG056C_c1_2:
     BE "Dang it!"
     "I shook my head and hurried in."
 
-    scene Kitchen with fade
+    scene Cooking Classroom with fade
     "A small mountain of green beans, onions, and peas was on the floor, with a frying pan still slightly ringing beside it.  Honoka stood over it, her hands still open from the initial drop."
     show BE embarrassed with dissolve
     BE "Eheh... hey, Kei-chan."
@@ -13083,7 +13083,7 @@ label PRG056C_c1_2:
     hide PRG with dissolve
     "Aida nodded, turning back around and going into the kitchen."
 
-    scene Kitchen with fade
+    scene Cooking Classroom with fade
     show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
     "When we entered, Honoka was moving the vegetables into a garbage bag that Sakura was holding for her.  She had a roll of paper towel on the floor next to her, along with the olive green spray bottle."
@@ -13406,7 +13406,7 @@ label PRG028Z:
     MC "Did you?"
     PRG "No..."
     "More silence.  Aida dug the toe of her shoe into the ground."
-    show PRG worried-handbehind
+    show PRG worried-handsbehind
     PRG "Um... i-if you didn't have anyone in mind already, w-would you... want to work together?"
     "I thought about it momentarily.  While I normally would've been more than happy to work with Aida, I wasn't sure how it would work out now.  If anything, we'd be stuck sitting around until one of us had an idea, then we'd both work while barely speaking to each other."
     "Plus, I knew that Honoka would be all for working together, and things would just flow easily with the two of us together."
@@ -13459,7 +13459,7 @@ label PRG028Z:
     show BE neutral
     BE "I'm gonna go on a limb and guess that I didn't miss much in class today, huh?"
     MC "Actually, yeah you did.  We've got a research paper that's due in ten days.  It can be on any topic, but it has to be 15 pages.  But, you can work with a partner or do it solo."
-    show BE shrug
+    show BE angry
     BE "Wow, the one day I skip class, and we get a bigger assignment.  Lovely."
     MC "Call it woefully bad luck, I guess.  And I hate to say it, but I'm already partnered up with someone, so I won't be able to work with you on it."
     show BE neutral
@@ -13480,7 +13480,7 @@ label PRG028Z:
     BE "So... is there anything I can do?"
     "I simply let loose a sigh."
     MC "I don't know, Honoka.  I mean, I think I know what's bothering me, but I don't know if it's something that I can really talk about with you."
-    show BE doubt
+    show BE sad
     BE "Really?"
     MC "Yeah.  And, please don't take it personally.  It's nothing that you did or anything.  It's just... it's between me and someone else."
     BE "No.  No offense taken."
@@ -13512,7 +13512,7 @@ label PRG029Z:
     show PRG unique with dissolve
     "I spied Aida at one of the tables nestled in a corner.  She had a book in her hands and was reading through it, stopping every so often to write a note down."
     MC "Hey.  Sorry if I'm late."
-    show PRG neutral-worried
+    show PRG worried
     PRG "Oh.  G-Good afternoon, Hotsure-san.  You're fine.  I just got here a little bit ago."
     MC "So, are we just gathering information right now?"
     show PRG worried
@@ -13526,14 +13526,14 @@ label PRG029Z:
     "I found it kind of impressive how quickly her mannerisms had switched from that of a young girl to that of an expecting mother.  Whether instinctual or not, she was taking up her new role wonderfully."
     "I clicked the internet browser icon and leaned over."
     MC "So, are you thinking we should cover the history of European cuisine, or more along the lines of European cuisine in today's age?"
-    show PRG neutral-worried
+    show PRG worried
     PRG "I... I think if we covered the history, it would give us more to talk about."
     MC "Yeah, I think so too.  Why don't we both spend today taking careful notes, and then, we can start on the actual paper writing portion over the next few days?"
     PRG "Okay.  We should be careful though.  We don't have much time to write 15 pages."
     MC "Right.  Let's not dawdle."
     hide PRG with dissolve
     "Aida went back to her book while I started searching a few different websites.  I had a tendency to not write enough to get my point across, so I made sure to get enough info under each bullet point.  I didn't want to screw this up for us both."
-    show PRG neutral-worried with dissolve
+    show PRG worried with dissolve
     MC "What have you taken notes on so far?  Just so I don't notate the same points."
     "Aida set down her book and handed me her thick, spiral notebook."
     PRG "The notes start on this page and continue on for the next three."
@@ -13548,7 +13548,7 @@ label PRG029Z:
     "I covered a few other countries in the centralized area of Europe before spreading out a bit to the coastal countries."
     "When I'd been researching last night, I'd been looking at a few more well known cuisines, such as Italy and France, so I opened up the notes app on my phone and copied what I'd written last night into my physical notes."
     "After about an hour of this, I'd managed to get a good enough start, with two and a half full pages.  Aida, meanwhile, had set down her pencil and was rubbing her temples."
-    show PRG neutral-worried at center with dissolve
+    show PRG worried at center with dissolve
     MC "Tired?"
     PRG "J-Just my eyes."
     MC "Yeah.  Eye strain is a killer."
@@ -13596,12 +13596,12 @@ label PRG029Z:
             PRG "M-Mainly because it's just where our skills lie.  Sakura grew up grilling a lot with her father, so she knows all about that sort of thing."
             PRG "As for me, well... I've always liked baking, and usually, preparing desserts involves more baking style techniques.  And as for the vegetables, it helps to take more of the load off of Sakura, and it keeps the two of us out of each other's way."
             MC "Out of each other's way?"
-            show PRG neutral-worried
+            show PRG worried
             PRG "L-Like this.  Sakura works at the stovetop for the majority of meat preparation.  By preparing the vegetables at that time, it allows Sakura to use the stove, while I'm using the cutting boards and knives.  It comes down to us working around each other, so we're never in the way of the other."
             MC "Oh, wow.  I would've never thought that cooking could have such a puzzle piece style to it.  That's cool though."
             PRG "T-Thanks.  Really though, it's nothing special.  It's just a way to keep us organized."
 
-            scene Kitchen with fade
+            scene Cooking Classroom with fade
             "When we walked in, Aida set down her bag and opened a cupboard, pulling out some rice flour.  From the freezer, she took out a muffin tin that had tiny balls of something in each slot."
             MC "Whatcha making?"
             show PRG neutral with dissolve
@@ -13642,14 +13642,14 @@ label PRG029Z:
             "I took the paper towel and spray and began scrubbing down the counter.  The powder that I'd ejected from my mouth had scattered across the counter like leaves on a windy fall day, so I just did the entire area near where I'd been seated, just to cover my bases."
             "I discarded my paper towels into the trash bin, then headed across the room to the utility closet to replace the paper towel roll and spray.  When I came back, Aida had finished with her mochi dusting and was covering the muffin tin."
             "She opened the freezer and bent over, sliding the tin back into place."
-            show PRG neutral-worried
+            show PRG worried
             PRG "All right.  I-I think I'm going to go home.  I'll do some more research tonight for our paper, b-but you don't have to if you don't want to."
             MC "I will as well.  It's only fair.  And, we're a team anyways.  We should both be giving it our all."
             "Aida nodded and opened the door of the kitchen, holding the door for me."
 
             scene Hallway with fade
             MC "All right.  I suppose, then."
-            show PRG neutral-worried with dissolve
+            show PRG worried with dissolve
             PRG "Yeah..."
             "Aida didn't move.  She stood in the hallway beside me, rocking back and forth on her heels, as if she were trying to think."
             show PRG unique
@@ -13683,8 +13683,261 @@ label PRG029Z:
             "I made way for the door and did the weird nose breath laugh thing."
             MCT "Yeah, right."
             jump daymenu
-
 label PRG030Z:
+    $setProgress("PRG", "PRG031Z")
+    scene Hallway with fade
+    play music Schoolday
+    "Notebook and pencil in hand, I was walking down the hall toward the library, mentally going over the countries that I'd have to take notes on today."
+    "As soon as the bell had rang to dismiss us from class, Aida had gotten up and rocketed out of the room, most likely heading off towards the library."
+    "It seemed like, at long last, things between Aida and I were finally getting back to normal after everything that had transpired."
+    "At the very least, Aida had seemed more like her usual self.  Yeah, she still shot me deer-in-the-headlights looks quite frequently and she'd almost never speak more than two words at a time, but she seemed more at peace, at least from my point of view."
+    "But as far as my own feelings, I still had the lingering burn of that weird, slumpy feeling inside of me.  Some days, I felt perfectly fine, just like any other day."
+    "But I still had a large number of mornings where I just felt ransacked and dead from the neck up.  Most of the time, the feelings seemed to fade by the time the afternoon rolled around, but still, I would've much preferred the feelings stay away altogether."
+    "I opened the library door and headed in, bound and determined to get some work done.  If I focused on my goals, it would probably help my head.  Eyes on the prize, as some philosopher probably said once."
+
+    scene Library with fade
+    "The library was completely empty today.  Seems like most students had better things to do than staring at books all afternoon."
+    "Silently trying to reject my lack of a social life, I headed in and took a seat at the same computer from yesterday.  Aida wasn't here yet, so I figured I could try and get a head start."
+    "As I logged in and began searching up information on Bulgaria, my stomach rolled."
+    "I hadn't really been hungry for lunch, but seeing all of these traditional Bulgarian food photos was really stirring the metaphorical hunger pot."
+    "To take my mind away from the photos, I found a few articles from food critics and started writing light notes from their writings, making sure to copy the source of the article into an online document for later use."
+    "Around half an hour later, and I had a full page on Bulgaria, half a page on Scotland, and a hunger pang ridden stomach."
+    "Finally submitting to my unwanted urges, I got up and slid my notebook into my bag, pushing my bag under the desk where no one would bother it."
+    PRG "H-Hotsure-san?"
+    show PRG worried with dissolve
+    "I turned.  Aida stood behind me, looking down at my bent over form, shoving my bag under my desk."
+    PRG "What are you doing?"
+    MC "Oh, I was just going to go grab something to eat.  I didn't really feel hungry at lunch."
+    PRG "And you do now?"
+    MC "Consider the subject matter of our research paper.  Looking at professional photos of food could make anyone hungry."
+    show PRG unique
+    PRG "Oh, y-yeah of course.  H-How long have you been here?"
+    MC "A little over half an hour.  Give or take."
+    PRG "Oh.  I-I'm sorry that I wasn't on time.  I-I... had something I needed to do."
+    MC "It's no worries.  I've got quite a few notes on Bulgaria and Scotland, so we can probably begin the writing process for our paper sooner than later."
+    show PRG worried
+    PRG "That sounds good.  I did a bit of research last night, too.  I bookmarked the sources on my phone so we can look back at them later."
+    PRG "B-But if you'd like, we can start writing tomorrow, so we can at least get a foundation laid down."
+    MC "Yeah, that'll work.  We can always get more notes if we need to."
+    show PRG unique
+    PRG "Right..."
+    MC "Well, do you just want to meet up here tomorrow then?  Get a start on the paper?"
+    PRG "Sure, we can.  But, w-would you... want to go into town and get some food?  I-I didn't eat lunch either."
+    show PRG worried
+    PRG "Y-You don't have to come if you don't want to!  B-But, I figured I'd ask."
+    MC "Hey, no need to worry.  Of course I'll come along."
+    show PRG unique
+    PRG "Um..."
+    PRG "O-Okay.  L-Let's go now."
+    hide PRG with dissolve
+    "Aida turned around and walked out ahead of me, leaving me to quickly pack my stuff and hurry after her."
+    MCT "Geez.  Girl must be hungry."
+
+    scene Town with fade
+    "Aida and I didn't speak more than a handful of words the entire walk and bus ride into town. And, when we did speak, it was little more than simple, idle small talk and throwing out ideas for our paper."
+    "By the time we got off of the bus, my stomach was really letting me know that I needed something of sustenance ."
+    show PRG worried with dissolve
+    MC "So, what are you thinking for food?"
+    PRG "W-Whatever you want.  I'm not picky."
+    MC "‘Kay.  Let's walk and see what we can find."
+    MCT "Or, just stop at the first restaurant in sight, because dear god, I needed food."
+    hide PRG with dissolve
+    "Surprisingly, there were actually quite a few people in town today.  A few shops dotted the stretch of buildings, selling all manor of products and so on, ranging from clothes and smaller, cheap looking jewelry, to even a game shop with what looked like a pretty sweet selection."
+    "I made a quick mental note to make a trip there at some point."
+    "On our side of the street, a small burger restaurant sat with no customers in sight.  Of course, it was probably at least an hour since their lunch rush, so the lack of hungry patrons made sense."
+    show PRG worried with dissolve
+    MC "Are you in the mood for burgers?"
+    PRG "..."
+    "Aida was gazing wistfully across the street, looking off down the road."
+    "I followed her gaze, and honestly, didn't see much of anything interesting.  There were a few more shops, plus the park and the ice cream parlor that we'd stopped at after her competition a little while back."
+    MC "Kodama-san?"
+    show PRG surprised
+    PRG "Hm?!  D-Did you need something?"
+    MC "Are you in the mood for burgers?"
+    show PRG unique
+    PRG "Oh.  I-I haven't had one in a while, so sure."
+    "I cheered loudly in my head and eagerly opened the door, holding it open for her.  She looked from me to the door as if questioning whether or not she should go in."
+    MC "Coming?"
+    show PRG worried
+    PRG "Uh, yeah!"
+
+    scene Diner with fade
+    "She awkwardly walked into the restaurant in front of me.  The restaurant smelled fantastic, like a mix of greasy fast food and home cooked deliciousness."
+    "The restaurant was fairly small, but felt cozy and relaxed all the same.  A few booths and tables were placed sparingly around the dining room in a way that allowed space to walk between the tables."
+    "I wondered if they'd arranged everything this way for the sake of the students of Seichou and their unique spatial requirements, or if it was just a funny coincidence."
+    show PRG worried with dissolve
+    MC "What looks good to you?"
+    PRG "Ah... I think I may just have something light.  Like a BLT."
+    MC "Ooh, that sounds really good.  I haven't had one of those in forever."
+    hide PRG with dissolve
+    "We placed our orders at the counter, then chose a table, sitting down while we waited."
+    "Generally, when two people waited, there was a special sort of small talk that generally took place.  What was the weather like?  How about that big game?  The typical stuff."
+    "With Aida, sitting and waiting was literally that.  Sitting and waiting.  No talking.  No big game chitter chatter.  Nothing."
+    "Being the conversationalist that I was, I felt like I should break the ice."
+    show PRG worried with dissolve
+    MC "So, you mind if I ask you something?"
+    PRG "Hm?  W-What is it?"
+    MC "I was just thinking a bit.  So, with you being in a cooking club and all, that obviously brings about a lot of dishes for you to cook and try."
+    MC "I was just wondering.  What is your absolute favorite food?"
+    PRG "Like... my favorite food of all time?"
+    MC "Yep!  All time favorite!"
+    PRG "W-Well..."
+    show PRG unique
+    "Aida's gaze fell to the table.  She had a look on her face that made her appear as if she was really contemplating this decision.  Like, if she answered incorrectly, the world would explode or something."
+    show PRG worried
+    PRG "When I was little, m-my mom would host a family reunion each year."
+    show PRG unique
+    PRG "I-I come from a relatively small family, so it was usually only my parents and grandparents, my aunt, uncle, and their two kids, and me."
+    show PRG worried
+    PRG "A-Anyway, each year, my mom would make something different for the occasion.  Usually some main course like steak, chicken, or pork with rice or vegetables, and a cake or something for dessert."
+    PRG "But, no matter what the main course was, she'd make this chicken dumpling soup every year.  The entire family loved it."
+    MC "God, it sounds good from just this story alone."
+    show PRG neutral
+    PRG "It was.  My little cousins would beg for it every time they would see my mom, but she'd turn them down every time."
+    PRG "She'd always tell them to {i}*respect the tradition.*{/i}"
+    MC "Wow.  Not gonna lie, I'd kill to try that soup.  It sounds fantastic."
+    PRG "It was.  And it was special because she'd only make it once a year for the family reunion.  But, on that day, everyone could have as much of it as they wanted.  She'd even make two pots of it so everyone could have their fill."
+    MC "That's so cool.  So, did she ever show you how to make it?"
+    show PRG unique
+    PRG "No... I-I've tried to recreate it, but it never turns out right.  And, every time I ask her, she always changes the ingredients, or tries to tell me that she adds really weird stuff to it."
+    MC "Really?"
+    show PRG worried
+    PRG "Mhm.  Last time I asked, she told me that she adds three heaping tablespoons of vegemite and two gallons of white vinegar to it.  The time before that, she told me that she adds an entire pack of chewing gum to it to help thicken the soup."
+    MC "Well, when you made it, which one of those two recipes did you follow?"
+    show PRG surprised
+    PRG "Wha...?"
+    show PRG happy
+    PRG "N-Neither!"
+    hide PRG with dissolve
+    "My mouth began running like a waterfall when I noticed the waitress slide a tray full of food onto the table in front of us.  We both thanked her and looked down at the food before us."
+    "I'd never been so excited to see a basket of french fries in my life."
+    show PRG worried with dissolve
+    "Aida picked up her BLT from the plate in front of her and plucked the toothpick out of the layers.  Holding it gingerly, so as not to disrupt it, she brought it to her nose and inhaled deeply."
+    MC "Smell good?"
+    show PRG unique
+    "Aida's eyes immediately went to the table and she seemed to sink further into her seat."
+    PRG "Uh... s-sorry.  It's an... old habit I have."
+    MC "Hey, it makes sense!  You're a chef!  It makes sense that you'd want to know as much as possible about the food you're eating."
+    "To help make Aida feel more comfortable, I brought my burger to my nose and took a whiff of it."
+    MCT "I now understand exactly why Aida does this."
+    MC "Haaaahhhh..."
+    PRG "... "
+    MC "That smells fantastic."
+    PRG "G-Good."
+    "Aida rotated the sandwich in her hands, apparently looking for the side that looked the most delectable to her."
+    "Making her selection, she took a small bite off of one of the corners and chewed thoughtfully."
+    MC "How is it?"
+    show PRG worried
+    PRG "Hm?"
+    "Her mouth full, Aida held up her hand and swallowed quickly."
+    show PRG neutral
+    PRG "It's good.  Really fresh, too."
+    MC "Good to hear.  I couldn't help but notice your careful decision in your first bite maneuver."
+    PRG "T-That's so I can make sure that I'll taste a little bit of everything at once.  You know how sometimes you take a bite of a sandwich, and all you get is the bread with a dash of mayonnaise on it?"
+    MC "Oh, yeah.  Hate that."
+    PRG "By doing it this way, I can make sure that I'm getting a taste of everything together."
+    "Picking up my burger again, I spun it in my hand until I found the even side, gently plucking a piece of lettuce and sliding it back into place before taking a bite."
+    MC "Mmm..."
+    "With everything perfectly arranged, each ingredient hit my tongue in sequence, rather than a jumble of chaotic ingredients mish-mashed together."
+    "First came the bun, which was toasted lightly on the inside edge, probably with the classic buttered bun on a hot grill method."
+    "Next came the burger patty itself.  It was perfectly juicy, with just a hint of seasoning.  On top of it was the sweet melted cheddar cheese, the flavor of which shining through perfectly."
+    "To follow came the lettuce, onion, tomato, and pickles, each one bringing its own flavor to the forefront.  The lettuce set a base, the tomato and pickles brought in a bit of bitterness and tartness together, followed up by the intense blast of onion flavor."
+    "To top off the flavoring gangbang that was going on in my mouth came the ketchup and mayonnaise on the burger.  Both of them gave just a hint of flavor over the top of everything, without overpowering anything."
+    "If anything, the two condiments seemed to meld together for unique flavor to themselves."
+    PRG "How is it?"
+    MC "Ooh... I'm never going to be able to eat an unorganized burger again."
+    PRG "It's good, right?"
+    MC "Mhm!  Everything hits so perfectly in order.  This is insane."
+    "I took another bite, only to receive the same result.  I was witnessing perfection in burger form."
+    MC "It's like... burger, then cheese, then vegetables and other health stuff, then the ketchup and mayo.  God..."
+    "Aida took another bite of her own sandwich, keeping to her orderly example."
+    show PRG aroused
+    PRG "Mmm..."
+    PRG "Perfect..."
+    MC "How does it taste?  Like what ingredients do you taste?"
+    show PRG neutral
+    "I could tell from Aida's pure expression that I'd just unlocked her inner foodie."
+    PRG "Well, first is the bread, which is perfectly toasted.  I'd probably guess that they toasted it with mayo spread on it instead of butter."
+    MC "What?!  People do that?!"
+    PRG "Y-Yeah!  I've only heard of it being done with grilled cheese, but you can taste the difference in the bread."
+    MC "Wow.  Who knew?  Anyway, what else do you taste?"
+    PRG "Um... next is the lettuce.  And... it's lettuce.  There isn't really anything special about it.  It is fresh and crunchy, though."
+    PRG "Then... there's the tomato.  This one seems to be a beefsteak tomato."
+    MC "Beefsteak tomato?  Like the tomato tastes like steak?"
+    PRG "N-No.  That's just what the tomato is called.  Usually, beefsteak tomatoes are bigger, with way less seeds than a regular tomato."
+    MC "Ah."
+    PRG "Then, the bacon completes the whole sandwich.  It adds the saltiness to the whole sandwich, plus the usual bacon flavor."
+    MC "How is the bacon done?"
+    PRG "It's right between crispy and tender.  Right where I like it."
+    MC "Shoot.  You're making me wish I'd ordered bacon on my burger."
+    MC "Is there anything else to it besides the B, the L, and the T?"
+    PRG "There is mayonnaise too.  Some people hate mayo on a BLT, but I like it."
+    "She took another bite or the sandwich."
+    PRG "There's a lot of varieties to the BLT though too."
+    MC "Yeah, I'm sure.  The BLTT, the B minus the L plus the T.  And, don't forget the BBB!"
+    show PRG unique
+    PRG "So... just a bacon sandwich?"
+    MC "Yes, but since it's a BBB, it would be three times the portion of bacon found on a normal BLT."
+    show PRG neutral
+    PRG "T-That sounds both amazing and horrifying."
+    MC "Oh, it is.  And most likely contains about 300%% of your daily sodium requirements."
+    "A bit later, I'd finished off my burger and was nibbling at my fries.  Aida took the last bite of sandwich and sat back in her seat."
+    MC "Would you like some fries?"
+    "I slid forward my tray of french fries to her.  I felt guilty just sitting here eating them in front of her."
+    if getAffection("PRG") > 20:
+        show PRG unique
+        PRG "But, they're yours.  You paid for them."
+        MC "And?  That means that they're mine to share."
+        PRG "Um... I guess."
+        PRG "Uhm..."
+        extend " would you mind if I had some?"
+        MC "Go ahead!  By all means!"
+        "Aida sat forward again and took a few fries from the pile.  The fries were perfectly salty, and crispy enough that they held their shape, but not so crispy that they tasted like eating charcoal."
+        show PRG neutral
+        PRG "Mmm... I don't remember the last time I had french fries."
+        MC "Weren't much of a fast food eater in high school, I take it?"
+        show PRG sad-2
+        PRG "N-No... not really."
+        MC "My sister and I would stop off for some on occasion.  Kind of became a tradition for a little while."
+        show PRG worried
+        PRG "You have a sister?"
+        MC "Mhm.  Her name is Tomoko.  She goes here too.  You've probably seen her around before."
+        PRG "Maybe.  What's she look like?"
+        MC "She's got a hair factor like me, so look for the trademark floor length curtain hair.  Other than that, she has pale skin and looks like she hasn't seen the sun in centuries."
+        PRG "W-Well, I-I don't recognize that description, b-but I'd probably know her if I saw her."
+        MC "Yeah, she's something."
+        hide PRG with dissolve
+        "Our conversation ground to a halt as we both finished the french fries."
+        "Once we started nearing the end of them, I noticed Aida reaching for more fries more often, and purposefully slowed myself down.  She needed the nourishment more than I did."
+        "As nourishing as french fries can be, anyway."
+    else:
+        show PRG unique with dissolve
+        PRG "O-Oh, no I'm okay.  You go ahead."
+        MC "You sure?"
+        PRG "Mhm.  T-Thank you, though."
+        hide PRG with dissolve
+        "I put my nose to the grindstone and tried picking up the pace with my fries.  I didn't want to keep her waiting longer than absolutely necessary."
+        "After a record breaking few minutes, I wiped the grease from my fingers onto a napkin and sat back."
+        show PRG worried with dissolve
+        "Aida wiped off her hands on a napkin and set it in the mess of bread crumbs on her plate."
+        MC "Good to go?"
+        PRG "Mhm.  Whenever you're ready."
+        "The two of us got up and dumped the remnants from our plates and my tray into the trash, setting them in the holder above it."
+
+        scene Town with fade
+        show PRG worried with dissolve
+        PRG "Feel better?"
+        MC "Much."
+        show PRG neutral
+        PRG "I'm glad."
+        PRG "Ready to take more notes, then?"
+        MCT "Please, for the love of all that is sacred, no more notes."
+        MC "I mean, if you'd like to."
+        PRG "I-I'm kidding.  We can do more tomorrow."
+        MC "Good call there.  I can never think clearly on a full stomach."
+    jump daymenu
+
+label PRG031Z:
     "This marks the current end of Aida's route if you are not the father of her children."
     "Her story in this scenario will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
