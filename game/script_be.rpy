@@ -148,7 +148,7 @@ label BE001_after:
     BE "Well I'm sure they call me something. I'll get a nickname by the end of the year, I guarantee it. One that suits me! Just you wait Kei-chan."
     "Honoka chuckled before she turned her attention back to the view from the roof."
     "Even through the chain link fence, it was clear she'd been captivated by the sight of the big buildings before her."
-    extend " Her face was bright; she was no doubt thinking of all the new possibilities this academy would bring. I had to admit, I was a bit excited to see what was going to happen as well."
+    "Her face was bright; she was no doubt thinking of all the new possibilities this academy would bring. I had to admit, I was a bit excited to see what was going to happen as well."
     "But at the moment, my focus was on Honoka. More specifically, the way her chest pushed against the chain link fence, making it look like she was wearing chainmail armor over her school uniform."
     jump daymenu
 
@@ -202,7 +202,8 @@ label BE002:
     MC "If I end up getting gigantic feet, I'll join the soccer club just to show you how hard I'll be able to kick."
     show BE happy
     BE "Hehehe, I'd like to see that."
-    "Honoka smiled as she gave me a little tap on the arm. I gave a sharp inhale and laughed as I began to rub the spot where she hit me. Forget worrying about her kicks, her punches still had a good sting to them after all these years. Maybe it's her subconscious way of making up for when she bumped into me with her chest earlier?"
+    "Honoka smiled as she gave me a little tap on the arm. I gave a sharp inhale and laughed as I began to rub the spot where she hit me. Forget worrying about her kicks, her punches still had a good sting to them after all these years."
+    "Maybe it's her subconscious way of making up for when she bumped into me with her chest earlier?"
     MC "Well I can assure you, you won't."
     "Honoka chuckled again, and started to meander around the campus. I kept up with her, still unfamiliar with the surroundings, but wanting to know the place better."
     MC "Actually, speaking of growth factor and everything, did you find out what yours is, yet?"
@@ -224,7 +225,8 @@ label BE002:
     BE "I'll get one when you get fitted for your size 38 feet."
     MC "Hehehe, dangit, Honoka. See, got me laughing that easily."
     BE "I know. That's because I'm awesome."
-    "Honoka smiled and put her fists on her hips in haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding. We stood there chuckling for a bit more before Honoka noticed the time and decided to get going. I nodded and waved goodbye, sticking my hands in my pockets before heading off myself."
+    "Honoka smiled and put her fists on her hips in haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding."
+    "We stood there chuckling for a bit more before Honoka noticed the time and decided to get going. I nodded and waved goodbye, sticking my hands in my pockets before heading off myself."
     jump daymenu
 
 label BE003:
