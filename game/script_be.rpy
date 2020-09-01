@@ -305,7 +305,8 @@ label BE003_c2:
     show BE neutral
     play music BE
     BE "Yeah that's probably a good idea. Hm..."
-    "Honoka walked over to the vending machine as I took another sip of my soda. She hummed to herself for a while as she looked over the various options, eventually deciding on something and paying for it. As she opened a bottle of water, I racked my brain for a point of conversation."
+    "Honoka walked over to the vending machine as I took another sip of my soda."
+    "She hummed to herself for a while as she looked over the various options, eventually deciding on something and paying for it. As she opened a bottle of water, I racked my brain for a point of conversation."
     MC "So... soccer, huh?"
     BE "Yep, should be pretty fun. Lots of running and kicking things."
     MC "I bet. Don't know a lot about it myself, but is there any specific position you want to do?"
@@ -369,13 +370,19 @@ label BE004:
     $setProgress("BE", "BE007")
     scene Track with fade
     play music Busy
-    "I decided to head over to the soccer field. Before I even got on the grass, I heard the sound of a coach whistle blowing, directing students in their training. I picked up the pace a little bit so I could see what was going on. Among the small crowd was a familiar face. I waved over to Honoka, who enthusiastically waved back to me. She seemed happy to see me. I looked around for a place to sit. There's bleachers nearby, but I decided to just sit down on the grass for a while, making sure I stayed out of the way."
+    "I decided to head over to the soccer field. Before I even got on the grass, I heard the sound of a coach whistle blowing, directing students in their training. I picked up the pace a little bit so I could see what was going on."
+    "Among the small crowd was a familiar face. I waved over to Honoka, who enthusiastically waved back to me. She seemed happy to see me. I looked around for a place to sit."
+    "There were bleachers nearby, but I decided to just sit down on the grass for a while, making sure I stayed out of the way."
     MC "This is cool. Good to see there's still a sense of normalcy in this place, doesn't look like the soccer field is anything special or different."
-    "The coach didn't look that special either. Not that he was ugly or anything, but there wasn't anything on the cap-wearing man that I recognized as being overly-large. It made sense, I guess. While there must have been enough students in the country to require a facility like this, it didn't mean that there'd be an equivalent number of faculty members who shared odd growths as well. The academy probably had to take what they could get."
+    "The coach didn't look that special either. Not that he was ugly or anything, but there wasn't anything on the cap-wearing man that I recognized as being overly-large."
+    "It made sense, I guess. While there must have been enough students in the country to require a facility like this, it didn't mean that there'd be an equivalent number of faculty members who shared odd growths as well."
+    "The academy probably had to take what they could get."
     MC "Man, Honoka's pretty good at this."
-    "That wasn't all that big of a surprise. She always was pretty athletic. We even played soccer together when we were younger, whether it was just kicking the ball around or actually trying to score goals. Maybe I'd look into joining the soccer club myself, it would give me something to do after classes, for one. Plus, it wouldn't hurt to have more chances to see a childhood friend."
+    "That wasn't all that big of a surprise. She always was pretty athletic. We even played soccer together when we were younger, whether it was just kicking the ball around or actually trying to score goals."
+    "Maybe I'd look into joining the soccer club myself, it would give me something to do after classes, for one. Plus, it wouldn't hurt to have more chances to see a childhood friend."
     MC "Phew, it's really hot today..."
-    "I wondered if there was anything nearby to drink. Fortunately, it looked like they provided a water cooler. Good, at this heat the students were likely to pass out if they didn't get any hydration. Still, I couldn't just go over there and take some when I'd just been sitting on my butt for twenty minutes. Thankfully the coach called for a break after a while, and I walked over to get some water with the others."
+    "I wondered if there was anything nearby to drink. Fortunately, it looked like they provided a water cooler. Good, at this heat the students were likely to pass out if they didn't get any hydration."
+    "Still, I couldn't just go over there and take some when I'd just been sitting on my butt for twenty minutes. Thankfully the coach called for a break after a while, and I walked over to get some water with the others."
     MC "Hey Honoka!"
     show BE surprised at center with dissolve
     BE "Woo, hey, Kei-chan. Glad you came by!"
@@ -387,9 +394,12 @@ label BE004:
     MC "That one where you hit me in the nose with a soccer ball shouldn't count!"
     BE "It wasn't intentional or anything! And besides, you still wanted to play, it was just your mom that pulled you out before you could get another goal on me, but I'm counting that as a win anyway."
     MC "Fine, what was the other win that gives you the majority over me?"
-    BE "It must have been in the summer, I guess the last one before we had to split up. You tried to shoot a goal like, four times in a row, and you just kept hitting the side of the goal. Every. Single. Time. It was funny the first three times, but the fourth one was just sad. I didn't even try to block it, I just stood there as it bounced up in the air and landed in the other goal instead. It was nuts."
+    BE "It must have been in the summer, I guess the last one before we had to split up. You tried to shoot a goal like, four times in a row, and you just kept hitting the side of the goal."
+    BE "Every. Single. Time. It was funny the first three times, but the fourth one was just sad."
+    BE "I didn't even try to block it, I just stood there as it bounced up in the air and landed in the other goal instead. It was nuts."
     MC "...Oh geez I remember that now. Ugh, I don't know what was wrong with me that day, but yeah, I must have been super distracted about something."
-    BE "I'm just glad you conceded the match right there. If you tried to do a fifth shot, you probably would have kicked the side of the goal again and then the ball would have gone through one of the windows in your house instead. A sixth attempt would have knocked you out cold."
+    BE "I'm just glad you conceded the match right there. If you tried to do a fifth shot, you probably would have kicked the side of the goal again and then the ball would have gone through one of the windows in your house instead."
+    BE "A sixth attempt would have knocked you out cold."
     MC "I can't believe you remember that."
     show BE happy
     BE "Hey I remember a lot about when we were kids, those were fun years! Lotsa good memories."
@@ -425,21 +435,25 @@ label BE005_old:
     MC "Test results? Oh! Right, for the growth factor. That's why I'm here too. I guess it's time to finally bite the bullet and figure out what's going to grow on me."
     BE "I bet it'll be your feet or something lame like that, haha."
     MC "Ugh I hope not, buying shoes would be such a pain. Besides, you can't make fun of me for whatever mine is if I can't return the favor, what'd you get?"
-    "Honoka smirked, and cupped her breasts in her arms. She lifted them up until the top curves of her fleshy spheres covered up the bottom half of her face. Her expression became hard to read once most of it was blocked by her bosom. But, it was easily assumed that she was being playful about the fact that her palms overflowed with breast flesh."
+    "Honoka smirked, and cupped her breasts in her arms. She lifted them up until the top curves of her fleshy spheres covered up the bottom half of her face. Her expression became hard to read once most of it was blocked by her bosom."
+    "But, it was easily assumed that she was being playful about the fact that her palms overflowed with breast flesh."
     BE "What do you think it was?"
     MC "Was it really that obvious?"
     show BE neutral
     BE "If it hadn't been my boobs, I would have been really surprised. Would have had to go see a regular doctor to check on my breasts if that was the case, these puppies are pretty large already. A bit more growth would have been cause for concern, I think."
     MC "And finding out that your, uh, your boobs are going to get supersized isn't a concern?"
     "Honoka shrugged, throwing up her arms and giving a grunt."
-    BE "Eh, can't be worse than what most of the others here are going to deal with, right? Besides, they gave me some good information about it. The nurse already had these printed out, too. I think the testing they did was more a formality than anything. She eyed me up and pretty much said 'So, you know what you've got, right?' Not in those words, exactly, but I got what she meant."
+    BE "Eh, can't be worse than what most of the others here are going to deal with, right? Besides, they gave me some good information about it. The nurse already had these printed out, too. I think the testing they did was more a formality than anything."
+    "She eyed me up and pretty much said 'So, you know what you've got, right?' Not in those words, exactly, but I got what she meant."
     "Honoka reached into the expanse of her cleavage and pulled out the papers to flip through them."
-    BE "I guess I'd been mentally preparing myself for this news to begin with, so, a lot of what the nurse said made sense. Plan ahead for when it comes to clothing, and they gave me a place where I can work on getting stuff fitted. A few exercises to strengthen the back and shoulder muscles, just to be safe."
+    BE "I guess I'd been mentally preparing myself for this news to begin with, so, a lot of what the nurse said made sense. Plan ahead for when it comes to clothing, and they gave me a place where I can work on getting stuff fitted."
+    BE "A few exercises to strengthen the back and shoulder muscles, just to be safe."
     MC "Well, now that you know for sure, how do you feel about it? I mean, it's boobs. So, most girls would probably be all for that, right?"
     show BE happy
     BE "Heh, I'm sure that's the male fantasy for sure. Eh, I'm sure it's true, though. I think in general, yeah, I'm excited!"
     MC "Yeah? Well, that's good. Are you going to have to keep buying new uniforms, or will they at least supply those for you?"
-    BE "It looked like the deal was regular clothes I was mostly on my own with, but school uniforms would be provided and tailor-made for me, which is nice. I mean, if you figure a normal school week anyway, uniforms are what I'll be wearing most of the time anyway. I wonder if they'll be standard or if they'll let me show off a little cleavage or something?"
+    BE "It looked like the deal was regular clothes I was mostly on my own with, but school uniforms would be provided and tailor-made for me, which is nice."
+    BE "I mean, if you figure a normal school week anyway, uniforms are what I'll be wearing most of the time anyway. I wonder if they'll be standard or if they'll let me show off a little cleavage or something?"
     MC "Honoka! This is a school, I doubt they'll intentionally sexify the uniforms."
     BE "Well it would seem like a shame, otherwise. But I guess with my own things I'll be able to get them however I want them to look."
     MC "Why do I get the feeling you're only saying these things to mess with me?"
@@ -447,7 +461,8 @@ label BE005_old:
     MC "What's the other 20%% then?"
     BE "That's me thinking 'boobs are fun'."
     MC "Heh, so, have you always wanted bigger boobs since you were younger or something?"
-    BE "Hm, I don't know if I ever really thought about it that way. Like you said, I think pretty much every girl has that moment of breast envy at some point in their youth. But, considering how much I blossomed, I guess I acclimated to the idea of huge knockers pretty easily."
+    BE "Hm, I don't know if I ever really thought about it that way. Like you said, I think pretty much every girl has that moment of breast envy at some point in their youth."
+    BE "But, considering how much I blossomed, I guess I acclimated to the idea of huge knockers pretty easily."
     "I nodded, and started to stretch my arms. After that, I lean against the wall nearby, and Honoka coincidentally does the same thing as well, so we both turned our heads to keep looking at each other."
     MC "I guess I never asked, probably because I thought it wasn't appropriate..."
     show BE neutral
@@ -462,13 +477,15 @@ label BE005_old:
 label BE005_c1_old:
     show BE surprised
     BE "Gee, honestly, I'm not really sure. It's not like they just shot out like bazookas one day, you know?"
-    BE "It had to have been a couple of years ago, at least. I guess I grew a good amount to start off with. After they started growing, I was easily a c-cup in most brands by the end of that year. But then they just kept growing, and growing. I never really thought it was anything to be concerned about though."
+    BE "It had to have been a couple of years ago, at least. I guess I grew a good amount to start off with. After they started growing, I was easily a c-cup in most brands by the end of that year. But then they just kept growing, and growing."
+    BE "I never really thought it was anything to be concerned about though."
     MC "I don't think it is, really."
     show BE neutral
     BE "Right? They haven't been much trouble so far."
     MC "Did you get, well, picked on, at all?"
     show BE sad
-    BE "Eh, a little bit here and there. Girls that were jealous, boys that wanted some. Both ended up calling me the same names though, people are so unimaginative. There must be a hundred different words for boobs and they rarely ever used more than three. Got boring pretty quick."
+    BE "Eh, a little bit here and there. Girls that were jealous, boys that wanted some. Both ended up calling me the same names though, people are so unimaginative."
+    BE "There must be a hundred different words for boobs and they rarely ever used more than three. Got boring pretty quick."
     MC "Only you would get a bit bullied and school and call it boring because their taunts weren't creative enough."
     show BE happy
     BE "Yep, because I rock, Kei-chan. The girl with big boulders rocks as hard as mountains."
@@ -515,8 +532,12 @@ label BE005:
     $setTimeFlag("aftertest")
     scene Classroom with fade
     play music Rain
-    "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors. I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable. At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool..."
-    "As I entered homeroom, it was obvious that everyone was talking about their discoveries already. It was just much louder than it typically was. Tones ranged from excitement and pride to confusion and sadness. Well, that's what the school was for, I suppose. To give everyone here a place to discuss their bodies in a safe environment. Still, it made me wonder if my trait was common or an oddity. I guess there was plenty of time to find out."
+    "So. I ended up with ever-growing hair. All things considered, that didn't sound too bad. After all, that Rapunzel character dealt with it just fine, and unlike her, I'll actually have access to scissors and razors."
+    "I scratched my chin, wondering if it'd apply to facial hair as well. That would be a bit more troublesome to deal with, but still manageable."
+    "At the worst, it just meant that a few days without a trim would have me looking like an old wizard, which was kind of cool..."
+    "As I entered homeroom, it was obvious that everyone was talking about their discoveries already."
+    "It was just much louder than it typically was. Tones ranged from excitement and pride to confusion and sadness. Well, that's what the school was for, I suppose."
+    "To give everyone here a place to discuss their bodies in a safe environment. Still, it made me wonder if my trait was common or an oddity. I guess there was plenty of time to find out."
     show BE happy at center with dissolve
     BE "Oi, Kei-chan."
     MC "Hey, Honoka. What's going on?"
@@ -535,15 +556,20 @@ label BE005:
     BE "That's fair. Me on the other hand, I've known what I was going to be growing for a while now."
     "To emphasize her point, Honoka slumped forward and let her sizable bust sit on the desk for extra comfort. It was hard not to stare, but then again she was practically begging me to look."
     MC "So you're going to be the official boob queen of Seichou Academy. Shall I fetch you a crown and scepter, my lady?"
-    BE "Don't go throwing titles at me yet. I'm sure there's other girls in this school who are going to end up with massive breasts. It surely can't just be me, right? I wonder if that's a club here, now that I think about it. Clubs for each type of growth people can get?"
-    MC "Eh, I wouldn't count on it. There might be people here who really are the only ones with that particular affliction. This school's all about inclusion, they wouldn't want people to feel left out because of that. Plus, grouping everyone together might make them feel more, I don't know how else to say it, 'freakish'?"
+    BE "Don't go throwing titles at me yet. I'm sure there's other girls in this school who are going to end up with massive breasts. It surely can't just be me, right?"
+    BE "I wonder if that's a club here, now that I think about it. Clubs for each type of growth people can get?"
+    MC "Eh, I wouldn't count on it. There might be people here who really are the only ones with that particular affliction. This school's all about inclusion, they wouldn't want people to feel left out because of that."
+    MC "Plus, grouping everyone together might make them feel more, I don't know how else to say it, 'freakish'?"
     show BE surprised
     BE "What do you mean?"
-    MC "Like, if there was a club where everyone who had a growth factor where they'd end up ridiculously obese, it would feel like they were being bunched together. Excluded from everyone else. It wouldn't be much different from cliques back in 'regular' school, you know?"
+    MC "Like, if there was a club where everyone who had a growth factor where they'd end up ridiculously obese, it would feel like they were being bunched together. Excluded from everyone else."
+    MC "It wouldn't be much different from cliques back in 'regular' school, you know?"
     show BE neutral
     BE "Yeah, I guess you've got a good point."
-    "Honoka smiled and straightened herself up in her chair. We both took a moment to look around the room and observe everyone else for a bit. Some students were looking at their own bodies, or examining their friends. One or two were just staring down at their desks."
-    BE "I guess depending on how big people get, it might not make sense to shove everyone with the same growth factor into one room, either. Otherwise, like in your case, you'd just end up with a waterfall of hair. It'd get all tangled up and messy, knotted together. Like when rats get all matted together and gross. Bleh."
+    "Honoka smiled and straightened herself up in her chair. We both took a moment to look around the room and observe everyone else for a bit."
+    "Some students were looking at their own bodies, or examining their friends. One or two were just staring down at their desks."
+    BE "I guess depending on how big people get, it might not make sense to shove everyone with the same growth factor into one room, either. Otherwise, like in your case, you'd just end up with a waterfall of hair."
+    BE "It'd get all tangled up and messy, knotted together. Like when rats get all matted together and gross. Bleh."
     MC "Yeah, heh, thanks for that lovely mental image, Honoka."
     show BE happy
     BE "I aim to please. So, tell me, any plans for how you're going to deal with your hair? Going to go ahead and grow it out for a while, to try something new?"
@@ -585,14 +611,16 @@ label BE005_c2:
     BE "Hopefully not soon at least. Got a soccer match coming up I want to make sure I kick butt in. Only been in the club for a few days and we've already got a game, they like to be active I guess."
     MC "Well that's good. Maybe I'll be able to come see it."
     BE "That'd be nice."
-    "Honoka chuckled, and then went silent as our teacher walked in. The other students all began to hush after a while, ready for class to begin. We'd all been in classes for several days already, but now that we all knew what was going to change about our bodies, it really sank in that this would be a new learning experience for us all."
+    "Honoka chuckled, and then went silent as our teacher walked in. The other students all began to hush after a while, ready for class to begin."
+    "We'd all been in classes for several days already, but now that we all knew what was going to change about our bodies, it really sank in that this would be a new learning experience for us all."
     jump daymenu
 
 label BE007:
     $setProgress("BE", "BE008")
     scene Classroom with fade
     play music Schoolday
-    "I had to give credit where credit was due. Despite having such a long tongue, Tashi-sensei seemed to be pretty good at talking without it getting in the way. It was fairly easy to understand him, and he was more than willing to repeat himself if somebody misheard."
+    "I had to give credit where credit was due. Despite having such a long tongue, Tashi-sensei seemed to be pretty good at talking without it getting in the way."
+    "It was fairly easy to understand him, and he was more than willing to repeat himself if somebody misheard."
     "That was really the only thing unusual about class. The lessons weren't that different from what I was used to back at my old school. There was just that ever-prevalent undercurrent that everyone was at this school for a very specific reason."
     "But, oddly enough, it seemed like it was already starting to fade away, bit by bit. I suspected it wouldn't be long before I wouldn't even think about it. Though, logically once my growth really kicked in, I'd be stewing on that for quite a while."
     show BE neutral at center with dissolve
@@ -653,7 +681,8 @@ label BE007_c1:
     show BE surprised
     play music BBW
     BE "Oh?"
-    MC "Yeah, I've talked to Alice a couple of times. I don't want to give out too much if she hasn't said anything herself, but, it's more the second option. She's not going to end up with a big gut. I mean, well, that'll be part of it naturally, but it's not the focus."
+    MC "Yeah, I've talked to Alice a couple of times. I don't want to give out too much if she hasn't said anything herself, but, it's more the second option."
+    MC "She's not going to end up with a big gut. I mean, well, that'll be part of it naturally, but it's not the focus."
     MC "She's basically going to get extremely overweight. Thankfully she's not going to end up with the negative effects of that."
     show BE happy
     BE "Oh, well that's good. Nothing fun about heart disease."
@@ -673,7 +702,8 @@ label BE007_c2:
     MC "I'm not really sure. I don't think it would be good to go right up and ask her about it, but, I would think it's probably something to do with fat cells in the body. So, maybe it's going to be like she is now, just scaled up."
     show BE neutral
     BE "I guess that makes sense. Do fat cells get bigger or do they just multiply? Wait, I guess if it's a cell it can't really be a different size, can it?"
-    MC "That's... a question for someone smarter than me. All I know is, it's got to be something with her body. She's definitely got a good appetite, but it doesn't seem like she's eating anything too bad. It's not like her tray is loaded up with pizza and snack cakes."
+    MC "That's... a question for someone smarter than me. All I know is, it's got to be something with her body."
+    MC "She's definitely got a good appetite, but it doesn't seem like she's eating anything too bad. It's not like her tray is loaded up with pizza and snack cakes."
     show BE happy
     BE "Oh, why did you have to bring up snack cakes? Now you've got me thinking of them. This is all your fault. Now what am I going to do?"
     jump BE007_after
@@ -721,7 +751,8 @@ label BE008:
     $setProgress("BE", "BE009")
     scene Dorm Interior with fade
     play music Hallway
-    "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water. Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
+    "It was another hot day outside the campus. Too hot for me to bear going outside for any reason that didn't involve diving into a pool of ice cold water."
+    "Instead I figured I'd spend the day in my room, catching up on updates of some weekly manga I'd lost track of."
     "I had barely gotten started when the door knocked. Daichi was out, so I figured he'd simply forgotten his key."
     MC "Hey, what's up?"
     show BE happy at center with dissolve
@@ -754,7 +785,8 @@ label BE008:
     BE "Maybe. Though, I'd hope if they turned her into a cyborg they did more than just make her more powerful."
     MC "What do you mean?"
     show BE happy
-    BE "You know. Like, it's no fun to just {i}be{/i} a cyborg if you don't look like one too. You need a cybernetic eye or some wacky hair color, some crazy speech patterns or a constant whirring sound. Make people know you're half-machine, half-badass, all-woman."
+    BE "You know. Like, it's no fun to just {i}be{/i} a cyborg if you don't look like one too."
+    BE "You need a cybernetic eye or some wacky hair color, some crazy speech patterns or a constant whirring sound. Make people know you're half-machine, half-badass, all-woman."
     MC "Hmm."
     menu:
         "So what you're saying is, you're not a cyborg.":
@@ -814,8 +846,10 @@ label BE008_c2:
     BE "Ahaha, K-Kei-chan, hahaha, stop! Ah! Hahaha, oh, not there, ah! Hehehe, you can't, ah! I'm t-too ticklish there, ha! K-Kei-chan!"
     "It was too late to stop now, I was a man on a mission. What that mission was, exactly, I couldn't say, but hearing her laugh like a little kid brought me back to when we used to hang out pretty much every day. "
     "Before I could be brought back too far to the memories of us as kids, I was thoroughly distracted by something that was definitely not there when we were kids."
-    "Obviously, since we've spent a fair amount of time together at school already, I'd seen Honoka's breasts bouncing a lot. It hadn't yet gotten to the point where I was used to it and it had lost its appeal, but normal movement had nothing on what was going on in front of me now."
-    "My breath hitched in my throat as I saw her bosom heaving up and down with her giggles, the high-pitched squeals coming from her making me feel a bit light-headed as I watched her mounds bounce up and down, a feast of jiggling that I had directly caused thanks to my ceaseless tickling."
+    "Obviously, since we've spent a fair amount of time together at school already, I'd seen Honoka's breasts bouncing a lot."
+    "It hadn't yet gotten to the point where I was used to it and it had lost its appeal, but normal movement had nothing on what was going on in front of me now."
+    "My breath hitched in my throat as I saw her bosom heaving up and down with her giggles, the high-pitched squeals coming from her making me feel a bit light-headed."
+    "I watched her mounds bounce up and down, a feast of jiggling that I had directly caused thanks to my ceaseless tickling."
     show BE happy:
         linear 0.05 xpos 0.5
     "It only ceased now because I was staring at them so hard I gave Honoka a chance to catch her breath, and slowly settle her mammaries back down."
@@ -823,7 +857,8 @@ label BE008_c2:
     MC "Oh god, Honoka, no!"
     BE "Ahahaha, so this is still your weak spot then?! Perfect! Suffer Kei-chan, suffer the wrath of Honoka Inoue!"
     "I was a goner. How on earth did she remember that I had ticklish feet? She must have a special section in her head for saving embarrassing memories."
-    "The girl was relentless, using both hands to torture me. As much as I wanted to kick at her to knock her away, I couldn't, afraid of what exactly I might hit. The suffering only ended when my laughter stopped completely because I was simply unable to take a breath."
+    "The girl was relentless, using both hands to torture me. As much as I wanted to kick at her to knock her away, I couldn't, afraid of what exactly I might hit."
+    "The suffering only ended when my laughter stopped completely because I was simply unable to take a breath."
     BE "Whew... heh. Well... that was a thing."
     MC "Guh. Honoka, you, geez."
     show BE surprised
@@ -863,7 +898,8 @@ label BE008_c3:
     jump BE008_after
 
 label BE008_after:
-    "Honoka and I spent the rest of the afternoon together, just hanging out and catching up on manga. It was nice, something I hadn't really had a chance to do with a friend in a long time. Daichi was not exactly the type of guy who would just sit and read unless it was a bunch of conspiracy theories. Honoka was much, much more fun."
+    "Honoka and I spent the rest of the afternoon together, just hanging out and catching up on manga. It was nice, something I hadn't really had a chance to do with a friend in a long time."
+    "Daichi was not exactly the type of guy who would just sit and read unless it was a bunch of conspiracy theories. Honoka was much, much more fun."
     jump daymenu
 
 label BE009:
@@ -887,7 +923,8 @@ label BE009:
 label BE009_c1:
     MC "Ho-no-ka! Ho-no-ka! Kick-ing, scor-ing, rah rah rah!"
     "Several players looked over to the sideline to see who was cheering, Honoka chief among them. She looked down at the ground, but even from this distance you could see an impish grin on her face."
-    "It wasn't long after I made a fool of myself that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal. She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
+    "It wasn't long after I made a fool of myself that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal."
+    "She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
     "After the game was won, Honoka jogged off the field, coming up to where I was sitting on the sidelines. Her gym clothes were ringed with sweat, the bottom curves of her breasts forming a crooked sweat-stain smile across her front."
     show BE happy at center with dissolve
     play music BE
@@ -922,7 +959,8 @@ label BE009_c2:
     "I wasn't a poet by any means, but it was the best I could come up with on short notice. I couldn't even tell if Honoka was able to hear me, I assumed there was a lot of chatter between the soccer players that would drown out whatever I said."
     "Then again, maybe she was able to hear me. It wasn't long after I made a fool of myself that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal."
     "She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
-    "The whole crowd cheered after that, including me. She definitely heard that. Honoka ended up scoring the goal with only a few more minutes on the timer. It wasn't enough for the other team to score again. Meaning that for all intents and purposes, Honoka had just won the game."
+    "The whole crowd cheered after that, including me. She definitely heard that. Honoka ended up scoring the goal with only a few more minutes on the timer."
+    "It wasn't enough for the other team to score again. Meaning that for all intents and purposes, Honoka had just won the game."
     MC "Heck yeah! Go Honoka!"
     "After the timer for the game went off, both teams celebrated for a while, hoots and hollers all around. It wasn't until a lot of people had left that Honoka came over to the stands."
     show BE happy at center with dissolve
@@ -955,7 +993,8 @@ label BE009_c2:
 
 label BE009_c3:
     "I didn't want to interrupt the game with a silly chant, especially when the stakes were so low, so I just stayed quiet and watched Honoka play."
-    "She really was good. It wasn't long after I arrived that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal. She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
+    "She really was good. It wasn't long after I arrived that Honoka managed to snatch the ball away from the opposition in the last minutes of play and kick it into the goal."
+    "She ended up falling over from the huge force she put onto getting the ball from midfield all the way past the goalie, but it did the trick."
     "After the game was won, Honoka jogged off the field, coming up to where I was sitting on the sidelines. Her gym clothes were ringed with sweat, the bottom curves of her breasts forming a crooked sweat-stain smile across her front."
     show BE neutral at center with dissolve
     play music BE
@@ -982,7 +1021,8 @@ label BE010:
     MC "Hi Honoka."
     show BE surprised
     BE "Oh, you recognize me?"
-    "I looked up at her in confusion. She sounded oddly serious. Stepping away, I took a better look at her face, somewhat worried that she'd cut her hair or something had happened to her face. Just something that would make me have trouble recognizing her. Nothing seemed out of the ordinary, though."
+    "I looked up at her in confusion. She sounded oddly serious."
+    "Stepping away, I took a better look at her face, somewhat worried that she'd cut her hair or something had happened to her face. Just something that would make me have trouble recognizing her. Nothing seemed out of the ordinary, though."
     MC "Of course I recognize you. Is something the matter? Why do you think I wouldn't recognize you?"
     show BE neutral
     BE "Because I'm bigger?"
@@ -990,7 +1030,8 @@ label BE010:
     "I held my hand to the top of my head, and then moved it flat towards Honoka. Seemed to be the same height difference as before..."
     show BE happy
     BE "Kei-chan, you dork. I mean, 'bigger'."
-    "Her gaze made it obvious what she was referring to, but clearly Honoka wasn't sure that I got the hint. To ensure I knew exactly what she was talking about, she reached down and grabbed her chest, lifting up a breast in each hand, as if she were presenting them to me."
+    "Her gaze made it obvious what she was referring to, but clearly Honoka wasn't sure that I got the hint."
+    "To ensure I knew exactly what she was talking about, she reached down and grabbed her chest, lifting up a breast in each hand, as if she were presenting them to me."
     MC "Oh! Duh, right. That makes sense."
     "It did, but it was strange that she was so surprised about it."
     MC "Did you, like, not believe that your breasts were going to get bigger? You were all about it when you received your confirmation."
@@ -1019,7 +1060,8 @@ label BE010:
     MC "What?"
     BE "I want you to touch them, so you have proof that they've grown significantly since you first saw them again."
     MC "You... you wha... Uh..."
-    "My brain struggled to comprehend what Honoka had just offered. Her tone of voice wasn't like she was trying to be flirtatious or intentionally sexy. It was more like a judo instructor demanding you try and grab their arm so they could perform a flip and toss you onto your back."
+    "My brain struggled to comprehend what Honoka had just offered. Her tone of voice wasn't like she was trying to be flirtatious or intentionally sexy."
+    "It was more like a judo instructor demanding you try and grab their arm so they could perform a flip and toss you onto your back."
     "It just felt like a trap. But, my hand still twitched a bit, trying to fight the impulse in my head. There was nothing that sounded bad about getting a handful of Honoka's chest, it might be worth any potential repercussions..."
     menu:
         "No thanks.":
@@ -1076,9 +1118,12 @@ label BE010_c2:
     MC "You know, this will be my first time doing this."
     BE "Well, then I'm honored to be your first."
     MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
-    "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once. It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
-    "Honoka still had a smile on her face, so I kept examining them. I felt like a doctor, medically probing her, but really all I was doing was trying to take in the feel. Soft, yes. Squishy as well. I swore they made sounds like stress balls being squeezed as I applied a bit of pressure to them."
-    "But, also, they were... dense. It seemed like an odd term to describe breasts, but it was accurate. For as big as they were, they still felt heavier than I expected them to. I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up."
+    "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once."
+    "It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
+    "Honoka still had a smile on her face, so I kept examining them. I felt like a doctor, medically probing her, but really all I was doing was trying to take in the feel. Soft, yes. Squishy as well."
+    "I swore they made sounds like stress balls being squeezed as I applied a bit of pressure to them."
+    "But, also, they were... dense. It seemed like an odd term to describe breasts, but it was accurate. For as big as they were, they still felt heavier than I expected them to."
+    "I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up."
     "They took a slight bit more effort to move than I thought they would, and when I finally pulled my hands away, I got to see them bounce for a few seconds before stopping."
     MC "Wow."
     hide cg
@@ -1111,7 +1156,8 @@ label BE010_c2:
     show BE happy
     BE "Oh, is that what happened?"
     MC "Yeah, it is."
-    BE "Ah, ah. Think back, Kei-chan. I just asked you to {i}touch{/i} them. You could have easily just poked them, and that would have sufficed. Or even just gave them a quick little grope. But, nope. You took hold, and you didn't let go for eighteen seconds. I counted."
+    BE "Ah, ah. Think back, Kei-chan. I just asked you to {i}touch{/i} them. You could have easily just poked them, and that would have sufficed. Or even just gave them a quick little grope."
+    BE "But, nope. You took hold, and you didn't let go for eighteen seconds. I counted."
     show BE neutral
     BE "You know what that means?"
     MC "N-No?"
@@ -1141,7 +1187,8 @@ label BE010_c3:
     "The only sound that managed to come out of my mouth was a weak, guttural stutter."
     show BE sad
     "Okay, Kei-chan. I get the message."
-    "Honoka pulled back her balloons and wordlessly left my room, leaving me utterly confused. She only came in to show off her breasts? It just didn't make sense. Maybe she wasn't feeling well. Hopefully she went off to her room to relax for a bit, it seemed like she needed it."
+    "Honoka pulled back her balloons and wordlessly left my room, leaving me utterly confused. She only came in to show off her breasts? It just didn't make sense. Maybe she wasn't feeling well."
+    "Hopefully she went off to her room to relax for a bit, it seemed like she needed it."
     $setAffection("BE", -1)
     jump daymenu
 
@@ -1149,8 +1196,10 @@ label BE011:
     $setProgress("BE", "BE012")
     scene Track with fade
     play music Busy
-    "It was another gorgeous day here at Seichou Academy. Though the weather as of late was beginning to edge towards the cooler side of temperatures, the sun was still bright enough, and warm enough, that many people were still hanging around outside in summer clothing."
-    "I'd heard that Honoka's soccer club was having another game today, so I thought it'd be nice to pay her another visit. I'd brought along a sweatshirt in case it did begin to get too cold, but if I figured out some cheers again, I'd have some reasons to move around and get the blood flowing."
+    "It was another gorgeous day here at Seichou Academy."
+    "Though the weather as of late was beginning to edge towards the cooler side of temperatures, the sun was still bright enough, and warm enough, that many people were still hanging around outside in summer clothing."
+    "I'd heard that Honoka's soccer club was having another game today, so I thought it'd be nice to pay her another visit."
+    "I'd brought along a sweatshirt in case it did begin to get too cold, but if I figured out some cheers again, I'd have some reasons to move around and get the blood flowing."
     MC "Huh, wonder where Honoka is."
     "I hadn't been to enough games of soccer to recognize most of the players, but there was a certain brunette friend that wasn't visible in the masses."
     MC "Huh. I wonder if she's sick or something? Maybe I should go check on her. Maybe there's a place around here that sells chanko, a bowl of that always helps when I'm sick."
@@ -1170,7 +1219,8 @@ label BE011:
     show BE happy
     BE "Oh no no! I'm definitely going to join another club. I've already got a few that I'm thinking of joining. Soccer was fun, but, how do I put this? Oh!"
     show BE neutral
-    BE "It was just something I'd already done before, you know? You and I used to play all the time and I never really stopped liking it. I just felt it was time to move onto something else. We're in this huge school after all, with dozens of clubs. Something out there's just bound to be right for me."
+    BE "It was just something I'd already done before, you know? You and I used to play all the time and I never really stopped liking it."
+    BE "I just felt it was time to move onto something else. We're in this huge school after all, with dozens of clubs. Something out there's just bound to be right for me."
     MC "So, you just quit because of your past experience with it then?"
     show BE happy
     BE "Yep, that's it!"
@@ -1189,7 +1239,8 @@ label BE011_c1:
     MC "I mean, you just went through a sizable growth spurt. Soccer can't be the easiest thing in the world when you look down and just can't see the soccer ball. Your, uh, endowments were probably getting in the way, weren't they?"
     show BE happy
     BE "Pff. Kei-chan, always thinking about boobs. I know they're magnificent. But, no, that wasn't the reason. I just needed a change. That's all."
-    MC "Ah okay. Fair enough. Yeah, I uh, sorry I didn't mean to imply anything. Trust me, I had a whole list of non-boob-related chants all ready for you to cheer you on. They're all going to go to waste now! Whatever club you do next I'll have to come up with new ones."
+    MC "Ah okay. Fair enough. Yeah, I uh, sorry I didn't mean to imply anything. Trust me, I had a whole list of non-boob-related chants all ready for you to cheer you on."
+    MC "They're all going to go to waste now! Whatever club you do next I'll have to come up with new ones."
     MC "Unless you end up in like, the chess club or something."
     BE "Are you kidding? You better come up with cheers for that, or it'd be boring otherwise!"
     MC "You know chess matches are supposed to be quiet, right?"
@@ -1252,7 +1303,8 @@ label BE012:
     $setProgress("BE", "BE014")
     scene Campus Center with fade
     play music Busy
-    "It was sometimes a bit annoying to track down Honoka when I wanted to find her. She was never really the type to have a regular hangout spot. With some of my other friends, I had a vague idea of where I could find them. With Honoka, she could have been in a dozen different places at least. I suppose it came with being such a free spirit."
+    "It was sometimes a bit annoying to track down Honoka when I wanted to find her. She was never really the type to have a regular hangout spot."
+    "With some of my other friends, I had a vague idea of where I could find them. With Honoka, she could have been in a dozen different places at least. I suppose it came with being such a free spirit."
     "Heck, if we hadn't lived next door to each other, I don't know if we'd have met enough times to be considered friends, let alone best friends."
     "It wasn't anything of vital importance I wanted to discuss with her, so it easily could wait until the next time we ran into each other."
     play sound Boing
@@ -1306,7 +1358,8 @@ label BE012:
     MC "Sure. But only if I get to be Delta Debonair."
     show BE happy
     BE "Psh, if you want to be the lamest character on the roster, go for it. Beta Beautifully is all mine."
-    "I chuckled as Honoka went over to the other side of the cabinet. We slid in our tokens and each picked our characters. With my hands on the controls I prepared myself for the game. I've had lots of practice with this game. I could crush Honoka if I wanted. But would that be too mean?"
+    "I chuckled as Honoka went over to the other side of the cabinet. We slid in our tokens and each picked our characters."
+    "With my hands on the controls I prepared myself for the game. I've had lots of practice with this game. I could crush Honoka if I wanted. But would that be too mean?"
     menu:
         "Thrash her.":
             "It had been too long since we played this together. When we were younger she used to beat me all the time. But now, I had the upper edge. I would beat the crap out of her."
@@ -1318,7 +1371,8 @@ label BE012:
             BE "Oh yeah. This is gonna be fun."
             MC "Heh, it is. Play well."
         "Let her win.":
-            "While we'd played together a few times since coming to Seichou Academy, it had been years since we were able to play MKXD together, especially on a classic machine like this one. I didn't want to get her upset either, so I thought it would be best to play it safe and easy."
+            "While we'd played together a few times since coming to Seichou Academy, it had been years since we were able to play MKXD together, especially on a classic machine like this one."
+            "I didn't want to get her upset either, so I thought it would be best to play it safe and easy."
             BE "Come on, Kei-chan, you ready to play yet?"
             MC "Yep. Sorry I'm just nervous, it's been a while since I played."
             BE "Oh is that so? Well, I'll go easy on you, then. Let's go!"
@@ -1327,18 +1381,21 @@ label BE012:
     scene Arcade with fade
     show BE happy at center with dissolve
     play music Tension
-    "As soon as the game began, I was doomed. Before I could even move my character, Honoka had leapt across the stage, performed a 14-hit combo on me, and removed a third of my health bar in one go. From her side of the cabinet, I could hear the announcer cheering her on for her devastating attacks, while he berated me on my side."
+    "As soon as the game began, I was doomed. Before I could even move my character, Honoka had leapt across the stage, performed a 14-hit combo on me, and removed a third of my health bar in one go."
+    "From her side of the cabinet, I could hear the announcer cheering her on for her devastating attacks, while he berated me on my side."
     MC "Geez, Honoka. How many, gah, times have you played this?!"
     "I had no idea what I was doing anymore. Any semblance of strategy went out the window as soon as Honoka began destroying me with such ease. My fingers ended up becoming a frenzy of button-mashing. "
     BE "Hehehe, hah, take that. Yeah. Nngh. Oh, only about ten hours a week for the last five years. Mega-Combo!"
     MC "What the heck is a Mega-Combo?!"
     "Apparently it was a cheat move designed for only Honoka to use, because that's what it felt like when she eliminated the rest of my health bar with a single attack."
-    "The announcer crying out the second round only dashed my hopes instead of encouraging me that I could make a comeback. I hadn't landed a single hit on Honoka the whole first round, and now she had a full special meter charged up, unbridled confidence, and a devious cackle that chilled me to the heart."
+    "The announcer crying out the second round only dashed my hopes instead of encouraging me that I could make a comeback."
+    "I hadn't landed a single hit on Honoka the whole first round, and now she had a full special meter charged up, unbridled confidence, and a devious cackle that chilled me to the heart."
     MC "Hey uh, Honoka? You know this is just a game, right?"
     BE "Hahahaha!"
     "All the combos I'd learned playing the game. All of the special attacks. Gone. Like flames in a rainstorm. I may as well have taken my hands off of the controls for all the good it did me."
     BE "Now behold my final attack!"
-    "I was too scared to even ask what that could be. My character was reduced to a pile of scrap metal in seconds. Then the scrap was crushed into a cube, and the cube was fed to a robotic dog. The cinematic thankfully ended before the inevitable next step in the process."
+    "I was too scared to even ask what that could be. My character was reduced to a pile of scrap metal in seconds."
+    "Then the scrap was crushed into a cube, and the cube was fed to a robotic dog. The cinematic thankfully ended before the inevitable next step in the process."
     "I stepped out from behind the cabinet to stare at her."
     MC "..."
     play music Schoolday
@@ -1458,7 +1515,8 @@ label BE014:
     MC "You're sure?"
     show BE happy
     BE "Of course. I can't have you starving in the middle of class!"
-    "I nodded and took her snack, munching on it as she let go of me so I could face her. Once I did, I was immediately drawn to her cleavage. Not for normal reasons, however. Instead it was thanks to the myriad of crumbs I saw dotting the curves of her bosom."
+    "I nodded and took her snack, munching on it as she let go of me so I could face her."
+    "Once I did, I was immediately drawn to her cleavage. Not for normal reasons, however. Instead it was thanks to the myriad of crumbs I saw dotting the curves of her bosom."
     MC "Uh, hey Honoka?"
     show BE neutral
     BE "What's up?"
@@ -1632,7 +1690,8 @@ label BE015:
     BE "N factorial over N-K... with the whole bottom factorial as well."
     MC "Awesome. Good work."
     "Despite getting two right in a row, Honoka's next question was answered incorrectly, meaning I got to enjoy another cookie myself. I wanted her to do well. These cookies had a serving size of '1 cookie'. More than five would hurt."
-    "But, it definitely seemed to be working. Maybe it was just the rush of sugar helping Honoka focus, but she was definitely getting more right than she got wrong. By the time she'd gotten to the end of the box, I'd wager she ate about 75%% of its contents."
+    "But, it definitely seemed to be working. Maybe it was just the rush of sugar helping Honoka focus, but she was definitely getting more right than she got wrong."
+    "By the time she'd gotten to the end of the box, I'd wager she ate about 75%% of its contents."
     "I felt like it helped me as well. More than just the flash cards, reading them out loud for Honoka's studying made me feel like I had a better grasp on the topic as well."
     $setSkill("Academics", 1)
     MC "So. You think you're ready now?"
@@ -1654,9 +1713,11 @@ label BE016:
     scene Gym with fade
     play music Busy
     "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was a practice for the basketball club tonight. Would be good to give her encouragement."
-    "The basketball court was fairly typical, from what I remembered of my old school. Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
+    "The basketball court was fairly typical, from what I remembered of my old school."
+    "Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
     "They also were more heavily-reinforced, which explained why they were permanent fixtures. Better seating for a constantly-growing school, I figured."
-    "Not everyone in the club was out on the court when I arrived. It looked like there were a dozen or so players, so with five players to a team they had enough for a full game and more. I decided to sit down next to one of the other players who was sitting."
+    "Not everyone in the club was out on the court when I arrived. It looked like there were a dozen or so players, so with five players to a team they had enough for a full game and more."
+    "I decided to sit down next to one of the other players who was sitting."
     MC "Hi. I'm Keisuke."
     Sakie "Ah. Hello."
     "She stuck out her hand to grab mine, where I took note of her sweatband."
@@ -1671,7 +1732,8 @@ label BE016:
     Sakie "Fun."
     "It didn't take a genius like Matsumoto-san to realize that she wasn't one for conversation. I turned my attention to the basketball game in progress and watched for a while."
     "I could tell Honoka enjoyed herself on the court. She always had a huge smile on her face even if she didn't have control of the ball. After watching for a while though, it became pretty clear that she was better at soccer. "
-    "I guess I shouldn't have judged so soon. She hadn't been doing basketball very long, but she'd been playing soccer since we were kids. Honoka made shots, and blocked well enough, but it didn't feel like it had the same spark I was used to seeing in her."
+    "I guess I shouldn't have judged so soon. She hadn't been doing basketball very long, but she'd been playing soccer since we were kids."
+    "Honoka made shots, and blocked well enough, but it didn't feel like it had the same spark I was used to seeing in her."
     play sound Whistle
     Coach "Inoue, Charanko, hit the bleachers. Kosuke, Iwata, you're up."
     "The girl I sat next to carefully stood up, and stepped down to the ground. Her sneakers looked like they were twice my size. Honoka was able to come sit next to me, and the large-foot girl didn't say a word to either of us."
@@ -1745,10 +1807,12 @@ label BE017:
     show BE happy at center with dissolve
     BE "You see, I told you that I could get a perfect score."
     MC "Yeah, you've definitely picked up some skills from basketball club, that's for sure."
-    "Honoka had told me the previous day that she'd gotten much better at shooting free throws after several meetings at her club. I believed her, but she insisted on proving it. Hence, the two of us arranged to get to the arcade, where they had a basketball challenge. As many free throws as she could make in sixty seconds."
+    "Honoka had told me the previous day that she'd gotten much better at shooting free throws after several meetings at her club. I believed her, but she insisted on proving it."
+    "Hence, the two of us arranged to get to the arcade, where they had a basketball challenge. As many free throws as she could make in sixty seconds."
     "She'd managed eighteen. Only two misses, which was an impressive score by any means. That was an A on a test, and enough to get the highest amount of tickets the game would give out."
     show BE neutral
-    BE "Well the club definitely practices a lot. Sometimes you just stand there throwing the ball from as many spots as you can. They've got so many balls, it's ridiculous. Makes it easier, so you don't have to keep running to catch one you've thrown."
+    BE "Well, the club definitely practices a lot."
+    BE "Sometimes you just stand there throwing the ball from as many spots as you can. They've got so many balls, it's ridiculous. Makes it easier, so you don't have to keep running to catch one you've thrown."
     MC "Makes sense. So basketball club is still going well?"
     show BE happy
     BE "Yeah. It's pretty good."
@@ -1889,7 +1953,8 @@ label BE017_c2_2:
 
 label BE017_c2_3:
     MC "Sorry to hear that. Have they given you a reason why they're not letting you play as much?"
-    BE "Not really. I can only assume it's because the others are just better. Even if I've gotten good at free-throws, everything else is different. I don't know if I can't undo my soccer skills to learn new basketball ones or what, but I'm floundering."
+    BE "Not really. I can only assume it's because the others are just better."
+    BE "Even if I've gotten good at free-throws, everything else is different. I don't know if I can't undo my soccer skills to learn new basketball ones or what, but I'm floundering."
     MC "Well, that's not fair then, if they won't let you play. How do they expect you to get better if you're not in the thick of it on a regular basis? You won't get any experience that way."
     show BE sad
     BE "That's what I want to say. But, I don't know. Maybe the basketball club isn't for me."
@@ -1908,7 +1973,8 @@ label BE018:
     $setProgress("BE", "BE019")
     scene Dorm BE with fade
     show BE neutral at center with dissolve
-    "I was hanging out in Honoka's room, playing video games with her, as had become a fairly frequent occurrence. She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
+    "I was hanging out in Honoka's room, playing video games with her, as had become a fairly frequent occurrence."
+    "She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
     MC "I thought you said your roomie was going to be out until evening?"
     BE "That's what she said... Maybe it's someone else?"
     "Honoka stood up to open the door, and I peered over to check out who it was. Surprisingly, there stood Aida, fiddling with her fingers, but otherwise waiting patiently."
@@ -1996,7 +2062,8 @@ label BE018:
     show BE neutral
     BE "Yes, yes, that's perfect."
     "Honoka started unspooling the measuring tape and cleared her throat, looking at Aida with a smile."
-    BE "Okay. So, like, when it comes to bra measurements, it's not just one size, really. They're going to need two measurements. At least, a good place to get bras will. So you can't just assume you're a certain cup size because of how big ya look."
+    BE "Okay. So, like, when it comes to bra measurements, it's not just one size, really. They're going to need two measurements. At least, a good place to get bras will."
+    BE "So you can't just assume you're a certain cup size because of how big ya look."
     "I watched as Honoka whipped the measuring tape around Aida's chest so it went underneath Aida's arms. Honoka pulled the two halves of the tape together and made them meet in the middle."
     stop music
     show PRG surprised
@@ -2156,7 +2223,8 @@ label BE018_c2_1:
     "I rolled up the measuring tape and put it back in my desk."
     show BE sad
     BE "Aw, but you're probably right. Eh well, let's get back to me kicking your butt."
-    "Honoka picked up her controller and proceeded to do just that, once again destroying my character 2-0. After that I decided to pack up and head back to my room as well. It was getting late. I said my goodbyes, and was soon under my sheets, proceeding to doze off."
+    "Honoka picked up her controller and proceeded to do just that, once again destroying my character 2-0."
+    "After that I decided to pack up and head back to my room as well. It was getting late. I said my goodbyes, and was soon under my sheets, proceeding to doze off."
     jump daymenu
 
 label BE018_c2_2:
@@ -2305,7 +2373,8 @@ label BE019_c1_after:
         MC "Huh?"
         show BE neutral
         BE "Oh, better clean up. Gotta get back to class soon!"
-        "Honoka hurriedly grabbed her trash to throw it away, and I soon followed after her, getting my own garbage to toss away as well. Skip day might be pretty fun, but, I had to imagine if Matsumoto-san found out that she definitely would not approve. I guess she just wouldn't find out, in that case!"
+        "Honoka hurriedly grabbed her trash to throw it away, and I soon followed after her, getting my own garbage to toss away as well."
+        "Skip day might be pretty fun, but, I had to imagine if Matsumoto-san found out that she definitely would not approve. I guess she just wouldn't find out, in that case!"
     jump daymenu
 
 label BE020:
@@ -2439,7 +2508,8 @@ label BE020_c1_after:
     MC "Ladies first."
     BE "Thank you, Kei-chan. Such a gentleman."
     "Honoka seemed to direct the second comment more to the bus driver, who barely paid it mind as he closed the doors behind us and went underway."
-    "We sat together during the short trip, watching the nice atmosphere. Seichou Academy was nestled in quite a nice area. Which was probably intentional. A school would have a tough time helping the self-esteem of young people with odd quirks if it was dingy."
+    "We sat together during the short trip, watching the nice atmosphere. Seichou Academy was nestled in quite a nice area. Which was probably intentional."
+    "A school would have a tough time helping the self-esteem of young people with odd quirks if it was dingy."
     scene Town with fade
     "Eventually our bus stopped, and we found ourselves in the middle of a small street, with several people walking around, coming in and out of various buildings."
     MC "Alright. We're here. You said the restaurant was close?"
@@ -2622,7 +2692,8 @@ label BE020_c2_1:
     "Honoka giggled and got back down on her feet, holding my arm closer."
     MC "Y-yeah? I mean. We've been out on dates before."
     show BE happy
-    BE "As friends. But friends don't typically feed each other like we did today. I'm not saying we have to make anything official. But... this was a really nice time. I think the only way it could be nicer is if it was our official first date. Don't you?"
+    BE "As friends. But friends don't typically feed each other like we did today. I'm not saying we have to make anything official."
+    BE "But... this was a really nice time. I think the only way it could be nicer is if it was our official first date. Don't you?"
     MC "...Yeah. Yeah I do."
     "I intentionally pulled Honoka closer with my arm until she was as close to my torso as she could get. She smiled back up at me, and we stood like that, waiting at the bus stop, until the bus came to take us home."
     "Yeah, this was a good day."
@@ -2686,7 +2757,8 @@ label BE021:
     show BE angry
     BE "Oh. Well, that's where the club leader said we had to meet to see if we could practice. I'm not sure if this is the right place, though. This seems pretty similar to any other spot of woods."
     UNKNOWN "Negative! The trees here are in fact, made of the same type of wood that we use for our training arrows. Meaning that if you recruits find yourselves incapable of landing a hit, the wood returns to the earth, as it should!"
-    "Honoka and I turned to find a male student had approached us from behind. His eyes were hidden under a long-brimmed hat, but his glare was pretty obvious despite that. His ears were surprisingly large, big enough to lift up as high as the brim of his hat."
+    "Honoka and I turned to find a male student had approached us from behind."
+    "His eyes were hidden under a long-brimmed hat, but his glare was pretty obvious despite that. His ears were surprisingly large, big enough to lift up as high as the brim of his hat."
     show BE neutral
     BE "Uh, hi. So are we in the right place, then?"
     play music Tension
@@ -2895,7 +2967,8 @@ label BE022:
     show BBW happy
     BBW "Now, here..."
     "Alice pulled out two extra pencils, and ripped two pieces of paper off of her notepad, then handed them over."
-    BBW "I simply want your opinion on this. I'll be regarding it in more detail. But I simply want a rank of 1 to 3. 1 for you would not eat this normally. 2 for you would eat it willingly if offered, or free. 3 for you would pay money to eat it. Understood?"
+    BBW "I simply want your opinion on this. I'll be regarding it in more detail."
+    BBW "But I simply want a rank of 1 to 3. 1 for you would not eat this normally. 2 for you would eat it willingly if offered, or free. 3 for you would pay money to eat it. Understood?"
     BE "Oh yeah, got it. This'll be fun!"
     MC "Sure, I understand. Just our personal preference?"
     show BBW neutral
@@ -2983,7 +3056,8 @@ label BE022_c1_1:
     BBW "Inoue-san, if you would be so kind as to remove all those items immediately, we can conclude this test. Those cookies first, please."
     show BE sad
     BE "Eh-heh..."
-    "Honoka blushed as she pulled treat after treat out of her bosom. The cookies first, which Alice quickly snatched and examined. Despite their location moments ago, she found three cookies in the bag that weren't broken and handed them out. She refused to let Honoka's shenanigans deter her."
+    "Honoka blushed as she pulled treat after treat out of her bosom. The cookies first, which Alice quickly snatched and examined."
+    "Despite their location moments ago, she found three cookies in the bag that weren't broken and handed them out. She refused to let Honoka's shenanigans deter her."
     BBW "I can only hope the quality of these have not been diminished due to your... boobery, Inoue-san."
     show BE angry
     BE "Hey, if anything, that would make them taste better! Right, Kei-chan?"
@@ -3279,7 +3353,8 @@ label BE022_c1_3:
     jump daymenu
 
 label BE022_c1_4:
-    "I clammed up. I didn't want to call Honoka out. But Alice was looking more frustrated by the minute. She even looked under the table and didn't find anything. I hoped Honoka would use that chance to empty her breast pocket, but she just sat there."
+    "I clammed up. I didn't want to call Honoka out. But Alice was looking more frustrated by the minute. She even looked under the table and didn't find anything."
+    "I hoped Honoka would use that chance to empty her breast pocket, but she just sat there."
     show BBW angry
     BBW "Neither of you have any idea where the remaining snacks went?"
     show BE neutral
@@ -3352,7 +3427,8 @@ label BE023:
     "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
     "Compared to other clubs that Honoka had joined, there didn't seem to be much to archery in terms of different activities they did. Apart from making sure they used the proper technique, and firing at targets, there was no variety."
     "The benefit of actually being in the club was the extra protective gear they could get for their members. Apart from the arm guards and gloves, every student got their own chest guard as well. Which was vitally important for Honoka."
-    "Apart from the sound of the captain's commands telling the members when to draw, aim, and shoot, there weren't many sounds. Just the swishes of the bowstrings getting released, the thuds of arrows hitting targets, and occasionally the duller thuds of arrows landing in the grass."
+    "Apart from the sound of the captain's commands telling the members when to draw, aim, and shoot, there weren't many sounds."
+    "Just the swishes of the bowstrings getting released, the thuds of arrows hitting targets, and occasionally the duller thuds of arrows landing in the grass."
     play sound Whistle
     Haruhiro "Good work so far. Let's break for ten. Get yourselves some drinks and snacks if you need."
     "The captain whistled again to let everyone know to stay away from the target area so he could go retrieve the arrows. I waved over to Honoka."
@@ -3382,7 +3458,8 @@ label BE023:
     UNKNOWN "Behind you..."
     show BE surprised
     BE "Oh!"
-    "After turning around we saw the voice who called out to her. The voice belonged to a small girl with dark black hair down to her shoulders. More notable were her sneakers, which looked far bigger than any I'd ever seen. One shoe could have fit both of my feet, and maybe both of Honoka's as well."
+    "After turning around we saw the voice who called out to her. The voice belonged to a small girl with dark black hair down to her shoulders."
+    "More notable were her sneakers, which looked far bigger than any I'd ever seen. One shoe could have fit both of my feet, and maybe both of Honoka's as well."
     if isEventCleared("BE016"):
         "Seeing her large feet helped me remember. This girl was in the basketball club back when Honoka was a member."
         show BE neutral
@@ -4366,7 +4443,8 @@ label BE026_c2_2:
     show BE happy
     BE "I, I have to get a new shirt, anyway. So..."
     "Honoka took the middle of her shirt, which still had a few buttons attached near the center, hiding the middle of her breasts and the bra beneath. She pulled, and thrust her chest out, causing the last buttons to explode off of her."
-    "Honoka's breasts burst out, covered in a white, lacy bra that gave her melons support. Without the barrier of her shirt, nearly all of her bosom was exposed. I never realized how much her shirt actually held them back. There was easily a few extra inches exposed now."
+    "Honoka's breasts burst out, covered in a white, lacy bra that gave her melons support. Without the barrier of her shirt, nearly all of her bosom was exposed."
+    "I never realized how much her shirt actually held them back. There was easily a few extra inches exposed now."
     MC "I, I... I..."
     show BE aroused
     BE "Heh... I've always wanted to do that..."
@@ -4413,7 +4491,8 @@ label BE026_c1_2:
     MC "What about your clothes?"
     show BE neutral
     BE "Huh? Oh, hm. That bush does look a bit thorny. There's gotta be a way to deal with this. Hm."
-    "Honoka got down in a crouched position, causing her breasts to squish into her knees as she lowered herself. She slowly urged herself forward, around the outside of the bush. She held her net tightly in her hands as she searched for a different angle. "
+    "Honoka got down in a crouched position, causing her breasts to squish into her knees as she lowered herself."
+    "She slowly urged herself forward, around the outside of the bush. She held her net tightly in her hands as she searched for a different angle."
     BE "Okay, I'm going to try from here. You let me know when I should strike, if you see it about to fly off, maybe."
     MC "Got it."
     menu:
@@ -4573,8 +4652,10 @@ label BE027_c1_2:
     "Giving Honoka a nod, I walked over to the significantly-smaller men's section."
     hide BE with dissolve
     #(possibly bump into Minori here, if they've been introduced to Keisuke by this point, otherwise this proceeding scene)
-    "I wasn't entirely sure what to look for as I picked through the various collared and non-collared shirts they had available. Should I look for something Honoka would like? Was her suggestion a hint that she wanted to see me in something particular?"
-    "If that was the case, I had no idea what that was, though. I haven't worn much else around her besides the Seichou uniform. Back when we were kids, she always liked my Starchaser United t-shirt, but I doubt they made shirts for that show anymore."
+    "I wasn't entirely sure what to look for as I picked through the various collared and non-collared shirts they had available. Should I look for something Honoka would like?"
+    "Was her suggestion a hint that she wanted to see me in something particular?"
+    "If that was the case, I had no idea what that was, though. I haven't worn much else around her besides the Seichou uniform."
+    "Back when we were kids, she always liked my Starchaser United t-shirt, but I doubt they made shirts for that show anymore."
     MC "This looks nice. Maybe? I guess if I tried it on for Honoka, she could decide for me."
     "I pulled the tag closer to my face, and brushed some of my hair out of the way to get a better look."
     MC "Jeez. That feels pricy for just a shirt. It feels nice enough. But, egh, I don't know."
@@ -4657,7 +4738,8 @@ label BE027_c2_1:
                     BE "Ooh I hadn't considered that. I like it though. Ones with tons of missiles and machine gun turrets. With a badass name like Sky Queen or something. Sweet."
                 "Like you could get into a VIP lounge.":
                     MC "So awesome, you look like you could get into a VIP lounge."
-                    BE "Mmm, like one of those exclusive club dealies. I'd need a pair of sunglasses to go with that, I think. Gotta say, pretty cool to think about strolling into a place and everyone going 'Whoa, this place must rock. Inoue the Incredible is here.' Excellent."
+                    BE "Mmm, like one of those exclusive club dealies. I'd need a pair of sunglasses to go with that, I think."
+                    BE "Gotta say, pretty cool to think about strolling into a place and everyone going 'Whoa, this place must rock. Inoue the Incredible is here.' Excellent."
         "It looks nice.":
             MC "It looks nice."
             show BE neutral
@@ -4774,7 +4856,8 @@ label BE027_c3_2:
     "I double-checked that the door was locked, and stepped behind Honoka, making sure she looked into the mirror."
     MC "How could I be lying about this figure being beautiful?"
     if getSkill("Art") > 5:
-        MC "When you look so stunning that the mirror can't even properly show all of your beauty, limited by what's achievable by the science of mirrors? When every part of you, from your cocoa-brown hair, to your soft, gentle lips, seems to have been crafted to perfection?"
+        MC "When you look so stunning that the mirror can't even properly show all of your beauty, limited by what's achievable by the science of mirrors?"
+        MC "When every part of you, from your cocoa-brown hair, to your soft, gentle lips, seems to have been crafted to perfection?"
         MC "How could I deny that I'm staring at a dress that somehow took the most magnificent set of breasts I've ever seen, and elevated them to levels that goddesses wish they could muster?"
         MC "When you're looking this lovely that my heart aches, knowing I have to blink, and that split-second of time with my eyes closed is just one moment missed where I'm not staring at your gorgeous beauty?"
         MC "Honoka, if you think you don't look beautiful in this dress, then I'm going to pick you up right now and take you to the nearest eye doctor, because everything I'm looking at right now makes me so happy that I forget all the world's problems."
@@ -5081,14 +5164,16 @@ label BE029:
     BE "So, explain this to me one more time, because, I'm just not getting it."
     "I couldn't help but sigh. Explaining something once was necessary. A second explanation could be useful for clarification. A third time would be seen as worrisome."
     "I was on the fifth explanation. At that point, it could also be my fault. Maybe I had to approach this in a different way."
-    MC "Okay, look at it this way. Imagine all of these minerals are a variety of bad guys in a video game. You know ahead of time that each one is weak to a specific combination of weapons. But they aren't named. So you need to figure out what they are."
+    MC "Okay, look at it this way. Imagine all of these minerals are a variety of bad guys in a video game."
+    MC "You know ahead of time that each one is weak to a specific combination of weapons. But they aren't named. So you need to figure out what they are."
     MC "All these tests we can do are like testing out the weapons on the minions of them we've captured ahead of time. So we can try one thing after another and make sure we know exactly what we have in our sights."
     "Honoka and I had a small tray in front of us. Twenty different minerals rested on it in five columns of four, numbered, with no other indicators of what they actually were."
     MC "So, we'll start with 1, for example. Now the first thing you look at it is color. But this is the... weakest option, I guess you'd say. Some minerals can be multiple colors. Quartz is like a mimic, it could be practically any color."
     MC "So then, you can look at the luster. Think of it as you're wanting to know if you need metal-piercing rounds for your weapon. It's either going to be metallic, or non-metallic. Or, basically, shiny or not-shiny."
     show BE neutral
     BE "Okay, got it. So this is not shiny, so it's non-metallic. And it also feels really weak. If that makes sense?"
-    MC "It does! That could do with its hardness. See how your fingernail scratches the surface, that means it's very soft. So we could tell the weapons engineers in our fictional video game to save some of the budget for the harder enemies. Er, minerals."
+    MC "It does! That could do with its hardness. See how your fingernail scratches the surface, that means it's very soft."
+    MC "So we could tell the weapons engineers in our fictional video game to save some of the budget for the harder enemies. Er, minerals."
     "I continued to assist Honoka as we went down the list of different tests we could do, to narrow down what minerals we had here."
     show BE happy
     BE "I... think I'm actually getting it. Guh, somehow when you describe it, it actually sounds a lot simpler than I thought it was."
@@ -5189,9 +5274,12 @@ label BE030:
     "As usual, there was only a certain amount of time I could handle Daichi before I felt the need to escape my room. Maybe 'escape' was a strong word."
     "It certainly wasn't one I would ever use around him, or else he might think I was so invested about his theories on Seichou Academy that I wanted to flee."
     "That certainly wasn't the case, not when it had been made clear multiple times that it'd been helpful for me and others. Not to mention I had people I considered friends here."
-    "The weather as I stepped outside was warmer than I expected. Not so hot as to make me miserable, but enough to make staying still for too long seem like a bad idea. Still, I thought it would be nice to spend some time walking around the campus for a while. "
-    "I decided to make my first stop by the garden area, figuring that the sunlight would make the blooming plants look particularly pretty. I just about felt the sun starting to bake my skin a little. It was relieved by a breeze that rolled against me and brushed my hair back."
-    "I didn't consider myself a botanist by any means, but the flowers did look splendid. Naomi was doing a good job, it seemed. I'd have to compliment her the next time I ran into her. It would have to wait though, because not long after I reached the garden, someone ran into me instead. "
+    "The weather as I stepped outside was warmer than I expected. Not so hot as to make me miserable, but enough to make staying still for too long seem like a bad idea."
+    "Still, I thought it would be nice to spend some time walking around the campus for a while. "
+    "I decided to make my first stop by the garden area, figuring that the sunlight would make the blooming plants look particularly pretty."
+    "I just about felt the sun starting to bake my skin a little. It was relieved by a breeze that rolled against me and brushed my hair back."
+    "I didn't consider myself a botanist by any means, but the flowers did look splendid. Naomi was doing a good job, it seemed. I'd have to compliment her the next time I ran into her."
+    "It would have to wait though, because not long after I reached the garden, someone ran into me instead."
     "By now I was able to recognize who it was simply by the way her breasts pushed into my back. Like a pillow fight was about to break out right behind me, and I was the first casualty. At least it would have been a nice way to go."
     MC "Hey, Honoka."
     show BE happy with dissolve
@@ -5332,7 +5420,8 @@ label BE030_tomboy:
     MC "I remembered looking at it, and thinking 'none of these seem right... it needs to go higher'."
     MC "We shouldn't have even needed to touch the sensors for the machine to go off, Honoka. I think just being next to it should have fried the device."
     BE "..."
-    MC "Despite everything you've gone through since coming here, you're still that amazing girl I was best friends with all those years ago. The goofy, sporty gal with enough spunk to last a dozen lifetimes. That's never going to change, I'll always admire that."
+    MC "Despite everything you've gone through since coming here, you're still that amazing girl I was best friends with all those years ago. The goofy, sporty gal with enough spunk to last a dozen lifetimes."
+    MC "That's never going to change, I'll always admire that."
     MC "Honoka, I don't want there to be a day where you and I aren't together. Your energy is addictive, and I just can't get enough."
     MC "I know we've been dating, but I need you to know that this is serious for me. Boyfriend and girlfriend, and in the future, something more. "
     MC "I love you, Honoka."
@@ -5392,10 +5481,13 @@ label BE031:
     $setProgress("BE", "BE032")
     scene Dorm Exterior with fade
     play music Hallway
-    "I'm not quite sure what Honoka had planned for us tonight. She had told me it would be a surprise, but didn't even indicate if she wanted to go out, or stay in. I was fine with both choices, but knowing Honoka, she probably just forgot to tell me if it was one or the other."
+    "I'm not quite sure what Honoka had planned for us tonight. She had told me it would be a surprise, but didn't even indicate if she wanted to go out, or stay in."
+    "I was fine with both choices, but knowing Honoka, she probably just forgot to tell me if it was one or the other."
     "Either way, whichever she wanted to do, I couldn't deny her. If she wanted to go to the arcade, to dinner, or watch anime inside. It was nearly impossible to say no to that face of hers."
-    "She had told me to meet her at her dorm room, so that's where I went. It was fairly late in the day, so there wasn't much foot traffic to be had in the dormitories. In general it was fairly quiet, with just the low buzz of fluorescent lights making most of the noise."
-    "It hadn't crossed into nighttime yet, so I didn't get any odd looks from the few girls I passed by as I made my way to Honoka's room. Room 08 on this floor. As I approached the door I noticed a small sticky note to the left of the room number, with '80' scribbled on it."
+    "She had told me to meet her at her dorm room, so that's where I went. It was fairly late in the day, so there wasn't much foot traffic to be had in the dormitories."
+    "In general it was fairly quiet, with just the low buzz of fluorescent lights making most of the noise."
+    "It hadn't crossed into nighttime yet, so I didn't get any odd looks from the few girls I passed by as I made my way to Honoka's room. Room 08 on this floor."
+    "As I approached the door I noticed a small sticky note to the left of the room number, with '80' scribbled on it."
     play sound Knock
     MC "Honoka?"
     "I stood there for a moment and waited for an answer."
@@ -5420,7 +5512,8 @@ label BE031:
     show BE surprised
     #[Transition- wipe][(S)Or other  fast  transition, I'm not sure what options we have?]
     play music Steamy
-    "Being unprepared for such an act, I was caught off-balance. My feet tripped over each other, and I began fumbling towards Honoka's chest. She luckily reached out to grab me, preventing me from falling onto the floor, and ensuring I fell right onto her bust instead."
+    "Being unprepared for such an act, I was caught off-balance. My feet tripped over each other, and I began fumbling towards Honoka's chest."
+    "She luckily reached out to grab me, preventing me from falling onto the floor, and ensuring I fell right onto her bust instead."
     "That, while nice as it always was, gave me the final clue to figuring out what was different about Honoka."
     "She was wearing a black bra."
     "I hadn't kept tabs on what color bra she wore on a day-to-day basis. Typically whatever bra she had was hidden by her shirt, and it wasn't easy to tell the color. But the black she wore now stood out against the white of her uniform top."
@@ -5477,7 +5570,8 @@ label BE031_c1_2:
     show BE happy
     BE "Hey, we're a couple, that means we need to be equal about things, right?"
     MC "That makes sense."
-    "At her behest, Honoka grabbed the center of her shirt and undid another button on her top, releasing more breastflesh unto the world. Every inch that revealed itself just made it more obvious how blasphemous it was that Honoka had to cover up her boobs so much."
+    "At her behest, Honoka grabbed the center of her shirt and undid another button on her top, releasing more breastflesh unto the world."
+    "Every inch that revealed itself just made it more obvious how blasphemous it was that Honoka had to cover up her boobs so much."
     MC "So, what can I do to make this more equal?"
     "Honoka paused for a moment, and tapped her chin with her finger. With a grin, she then reached down, and gently placed her hand on my trousers. With a deft flick of her wrist, my belt came undone, and slid out to fall upon the floor."
     MC "Y-Yeah that's a good start."
@@ -5500,10 +5594,13 @@ label BE031_c1_3:
     BE "Sure, I'm okay with that. But, you don't get to move from your seat."
     MC "Yeah. I'm okay with that, too."
     "There was only a brief second before Honoka was sitting on my lap, the weight of her body pressing down on me. Thankfully I was seated in a comfortable position, or I would have lost control far too quickly."
-    "Honoka's lips pressed against mine, and as always, I savored that touch of her mouth against mine. Those soft, sweet kissers always knew just when to be tender, or when to get more forceful. She hadn't slipped any tongue yet, so I waited a bit before going that far."
+    "Honoka's lips pressed against mine, and as always, I savored that touch of her mouth against mine."
+    "Those soft, sweet kissers always knew just when to be tender, or when to get more forceful. She hadn't slipped any tongue yet, so I waited a bit before going that far."
     "Sometimes, when Honoka had hit the vending machine, her lips still tasted like chocolate. This time there was a faint bit of mint, instead. I blushed, hoping my breath wasn't bad, but she didn't show any sign of it being distasteful."
-    "Eventually, I let my tongue slide between her lips, and at the same time, she grasped my hands and pulled them up to her bosom. No matter how many times I felt those mounds of dough between my hands, the sensation never got boring. I prayed that it never would."
-    "As we made out, Honoka undid two more buttons on her top. I kept my grip on the sides, and sometimes the bottoms of her boobs, feeling them overflow my hands. There was just so much to them, that I couldn't imagine how they'd feel when they were bared."
+    "Eventually, I let my tongue slide between her lips, and at the same time, she grasped my hands and pulled them up to her bosom."
+    "No matter how many times I felt those mounds of dough between my hands, the sensation never got boring. I prayed that it never would."
+    "As we made out, Honoka undid two more buttons on her top. I kept my grip on the sides, and sometimes the bottoms of her boobs, feeling them overflow my hands."
+    "There was just so much to them, that I couldn't imagine how they'd feel when they were bared."
     show BE aroused
     BE "So."
     "Honoka stared knowingly at me. She'd been sitting on me the whole time. She knew how hard I was."
@@ -5513,33 +5610,48 @@ label BE031_c1_3:
     jump BE031_c1_after
 
 label BE031_c1_after:
-    "As if she wanted to better present herself, Honoka moved until she stood three feet away from where I sat, hands clasped at her shirt. Another button undid itself, and the pillows of flesh that tried to escape looked like someone had overfilled cake tins."
+    "As if she wanted to better present herself, Honoka moved until she stood three feet away from where I sat, hands clasped at her shirt."
+    "Another button undid itself, and the pillows of flesh that tried to escape looked like someone had overfilled cake tins."
     "My mouth went dry thinking about what hid behind the fifth button, and the bra beneath. I begged my mind not to overthink it. I didn't want expectations, whether they be exceeded or not. I just wanted to see them."
     "Honoka let out the cutest groan as the last button was undone, and her shirt soon hit the floor afterwards. I was pretty sure I made a whimpering sound, like a puppy that saw a treat held just out of its reach."
     show cg BE031 with dissolve
     BE "Well. This is it. Or, rather. These are them."
-    "Honoka undid the clasp of her bra as quickly as she could. Rather than letting it fall, she carefully placed it aside, before standing up straight to let me get the best view of her breasts. My hand went up to my mouth in shock. I knew they were big. I'd felt them."
+    "Honoka undid the clasp of her bra as quickly as she could. Rather than letting it fall, she carefully placed it aside, before standing up straight to let me get the best view of her breasts."
+    "My hand went up to my mouth in shock. I knew they were big. I'd felt them."
     "But seeing them naked, it was better than I could have dreamed. They were perfect, rounded teardrop shapes. Huge spheres that hung on her torso and somehow still remained perky despite their massive size."
-    "I couldn't see a single sign of imperfection on the skin. Just immaculate, soft flesh that had been expertly taken care of. I wouldn't've doubted that she'd applied lotion or oil on them ahead of time to make them look even better. But, maybe they just looked that grand constantly."
-    "While I'd seen parts of her boobs before, this was the first time I saw her nipples, and they were great to look at as well. Firm and erect, pointing at me and begging me to take hold of them. Honoka moved closer, the slightest motions making her rack wobble up and down."
-    "With her bosom up closer to my face, I could even see the soft bumps of her areolae, and how my exhalation against her skin made more goosebumps appear. Honoka's body shivered as I looked up at her, past what seemed like a mile of cleavage just to see her smiling visage."
-    "There was a thwump, and suddenly my lap overflowed with Honoka's breasts. Her hands worked magic underneath them, as her fingers found what they needed to, in order to get my pants fully undone. A quick lift of my backside and soon I was completely bottomless."
+    "I couldn't see a single sign of imperfection on the skin. Just immaculate, soft flesh that had been expertly taken care of."
+    "I wouldn't've doubted that she'd applied lotion or oil on them ahead of time to make them look even better. But, maybe they just looked that grand constantly."
+    "While I'd seen parts of her boobs before, this was the first time I saw her nipples, and they were great to look at as well."
+    "Firm and erect, pointing at me and begging me to take hold of them. Honoka moved closer, the slightest motions making her rack wobble up and down."
+    "With her bosom up closer to my face, I could even see the soft bumps of her areolae, and how my exhalation against her skin made more goosebumps appear."
+    "Honoka's body shivered as I looked up at her, past what seemed like a mile of cleavage just to see her smiling visage."
+    "There was a thwump, and suddenly my lap overflowed with Honoka's breasts. Her hands worked magic underneath them, as her fingers found what they needed to, in order to get my pants fully undone."
+    "A quick lift of my backside and soon I was completely bottomless."
     "Honoka was totally topless. It was a scenario I'd dreamed of, but wasn't sure would ever happen in reality. But here it was. My penis throbbed less than a centimeter away from the entrance to her smothering melons."
     "Honoka and I looked at each other, our eyes glimmering, breath haggard, hands shaky. Hers rested as well as they could at the sides of each boob, unsteady and unsure. But willing, at the very least."
-    "I placed my hands upon hers, and smiled as our fingers clasped. With a deep breath, Honoka pushed herself forward, intent on covering as much of my erection as she could with her breasts. She didn't need to do much to have it completely engulfed in seconds."
-    "The feeling was immaculate. Better than I could have imagined, and she hadn't even begun to stroke it yet. Just the way that her breasts covered every bit of my shaft sent shivers down my spine. When she began moving her breasts, I felt myself twitch immediately."
+    "I placed my hands upon hers, and smiled as our fingers clasped. With a deep breath, Honoka pushed herself forward, intent on covering as much of my erection as she could with her breasts."
+    "She didn't need to do much to have it completely engulfed in seconds."
+    "The feeling was immaculate. Better than I could have imagined, and she hadn't even begun to stroke it yet."
+    "Just the way that her breasts covered every bit of my shaft sent shivers down my spine. When she began moving her breasts, I felt myself twitch immediately."
     "I bit down gently on my knuckles to stifle the sensation as best as I could, letting go of Honoka's hands now that she had taken control. Watching her work, I could have sworn she'd practiced this somehow."
-    "Each hand knew just what to do, moving a breast in a circular motion. Clockwise for a while, then the opposite way, letting my penis rub around the sensitive insides of her bosom. The sounds coming out of my mouth were embarrassing, but Honoka paid them no mind."
-    "The look on her face was a mix of determination and lust. Her tongue slightly stuck out from between her lips as her body moved back and forth with the motions of her boobs. It was two tidal waves of titflesh, and Honoka was trying not to get swept up in the tsunami."
+    "Each hand knew just what to do, moving a breast in a circular motion. Clockwise for a while, then the opposite way, letting my penis rub around the sensitive insides of her bosom."
+    "The sounds coming out of my mouth were embarrassing, but Honoka paid them no mind."
+    "The look on her face was a mix of determination and lust. Her tongue slightly stuck out from between her lips as her body moved back and forth with the motions of her boobs."
+    "It was two tidal waves of titflesh, and Honoka was trying not to get swept up in the tsunami."
     "But it was clear that, for as amazing as it felt for me, Honoka was enjoying herself as well. The redness on her cheeks and the cute panting said it all."
-    "Her hands soon switched, and moved from being on the sides of her rack to being on top. She pressed down on her own breasts, flattening them a bit until the tip of my erection poked out for a brief second. She let her breasts return to a rounded shape, and then pressed again."
-    "Honoka's hands then moved to the bottoms of her boobs as fast as they could and lifted them up, so high that I couldn't see her face at the apex. Then as they swung back down on my lap, she pressed on them. She repeated this motion over and over, making me shudder every time."
+    "Her hands soon switched, and moved from being on the sides of her rack to being on top. She pressed down on her own breasts, flattening them a bit until the tip of my erection poked out for a brief second."
+    "She let her breasts return to a rounded shape, and then pressed again."
+    "Honoka's hands then moved to the bottoms of her boobs as fast as they could and lifted them up, so high that I couldn't see her face at the apex."
+    "Then as they swung back down on my lap, she pressed on them. She repeated this motion over and over, making me shudder every time."
     "It was incredible. I wanted to do something. Anything to repay her for this right now. But my arms were useless noodles. All the blood in my head was gone, rushed down south for more important matters."
     "When this began, I thought I could last for ages. I just wanted to let myself rest in Honoka's boobs eternally. But I underestimated how sensual it felt. I could sense the inevitable coming, and had to at least summon some strength to let her know."
-    "I don't know how long it was when I finally had to pat on her boobs as fast as I could to let her know what was going on. But those minutes had been, without a doubt, marvelous. I gulped as I heard Honoka's pants reach a fever pitch, and she kept building up speed as she returned her hands to the sides."
+    "I don't know how long it was when I finally had to pat on her boobs as fast as I could to let her know what was going on. But those minutes had been, without a doubt, marvelous."
+    "I gulped as I heard Honoka's pants reach a fever pitch, and she kept building up speed as she returned her hands to the sides."
     show cg BE031b with dissolve
-    "With her vigor renewed, I stood no chance. As soon as the first sound of a grunt left my throat, Honoka squeezed her boobs as tightly together as she could, and I came all over the inside of her cleavage. With how much there was, it was like trying to coat a barn with a few teaspoons of paint."
-    "The ceiling of Honoka's room was blue. I hadn't noticed it before. But with my head hung back on the chair, it was all I could see for a while. My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
+    "With her vigor renewed, I stood no chance. As soon as the first sound of a grunt left my throat, Honoka squeezed her boobs as tightly together as she could, and I came all over the inside of her cleavage."
+    "With how much there was, it was like trying to coat a barn with a few teaspoons of paint."
+    "The ceiling of Honoka's room was blue. I hadn't noticed it before. But with my head hung back on the chair, it was all I could see for a while."
+    "My head was dizzy and the color was the only thing my blurred vision could recognize. Vaguely, I grew worried about the mess I made."
     MC "H-Honoka..."
     "I finally found my voice, as weak and groggy as it was. With a gulp, and the arms of the chair, I straightened my posture to look at Honoka. God, she was gorgeous."
     hide cg
@@ -6380,7 +6492,8 @@ label BE036:
         xpos 0.5 xanchor 0.5 yalign 1.0
         linear 0.5 ypos 0.9
         linear 0.5 ypos 1.0
-    "Apart from having to sidestep a squirrel that was busy chewing on a nut in the middle of grass, Honoka and I didn't come across anything interesting to get us talking. The squirrel finished its snack and then darted under a bench back towards a tree."
+    "Apart from having to sidestep a squirrel that was busy chewing on a nut in the middle of grass, Honoka and I didn't come across anything interesting to get us talking."
+    "The squirrel finished its snack and then darted under a bench back towards a tree."
     "Until after a while, we heard some faint humming around the corner. Heading over, we saw Naomi standing around a large flower bed, in the middle of watering a variety of blooming flowers."
     show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show GTS happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
@@ -6445,7 +6558,8 @@ label BE036_c1_1:
             jump BE036_c2_2
 
 label BE036_c2_1:
-    MC "Yeah, the Chrysanthemum Festival... I've never been to one, but it's a big deal on the ninth of September. People literally make tea or alcohol out of the flowers. Neither sounds particularly tasty but it's what they chose as the symbol for driving away danger."
+    MC "Yeah, the Chrysanthemum Festival... I've never been to one, but it's a big deal on the ninth of September."
+    MC "People literally make tea or alcohol out of the flowers. Neither sounds particularly tasty but it's what they chose as the symbol for driving away danger."
     MC "Or celebration, too. Festivals never really keep their initial meaning for very long do they? But, whatever excuse people will come up with to have a bit of a party. I think it's done in a few other countries too. China, for sure."
     show GTS happy
     $setAffection("GTS", 1)
@@ -6467,7 +6581,8 @@ label BE036_c2_1:
 label BE036_c2_2:
     MC "Something we learned in history class. We were being taught about the Sengoku period. All those armies and generals and legendary heroes fighting for a chrysanthemum-engraved throne."
     show BE happy
-    BE "Aw yeah. That's the good stuff. Everyone was fighting and warring just to get on the Chrysanthemum Throne! It was like a war every other year just to sit on a big chair. I mean, that was more symbolic but you're right, they made a big deal out of the sigil."
+    BE "Aw yeah. That's the good stuff. Everyone was fighting and warring just to get on the Chrysanthemum Throne!"
+    BE "It was like a war every other year just to sit on a big chair. I mean, that was more symbolic but you're right, they made a big deal out of the sigil."
     MC "Right, right, it's literally our Imperial Seal. Big gold flower. Kind of hard to miss now that I actually remember what it looks like."
     MC "Ha, in fact, if I remember correctly, there was an Emperor who was exiled at one point and made his own seal based on the flower. But while the official one had sixteen petals, his had seventeen."
     MC "He was basically saying 'Nyeh, screw your government, I'll make a better one. And mine is going to have MORE petals. Deal with that!'"

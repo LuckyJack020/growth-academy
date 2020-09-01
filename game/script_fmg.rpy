@@ -559,7 +559,8 @@ label FMG007:
     play music Hallway
     "Lunch hour. The cafeteria was bustling with the sounds of conversations, student voices blending together, making it hard to differentiate one from another."
     "I walked past table after table of students eating, talking, even one student was asleep, but nothing out of the norm."
-    "At the far end, near the windows, sat an all-too-familiar bodybuilder. Akira was resting her head in her hand, taking slow but big bites from what was left of her stir-fried beef and rice. She was staring into space, though she didn't look tired; it was more of a listless catatonia."
+    "At the far end, near the windows, sat an all-too-familiar bodybuilder. Akira was resting her head in her hand, taking slow but big bites from what was left of her stir-fried beef and rice."
+    "She was staring into space, though she didn't look tired; it was more of a listless catatonia."
     show FMG neutral with dissolve
     MC "Hey, is it all right if I eat with you?"
     FMG "Hm? Oh, sure, I'm almost done but take a seat."
@@ -679,7 +680,8 @@ label FMG009:
     FMG "*Sigh* I'm waiting for someone because I need to talk to her. Speak of the devil..."
     show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show Chibuki neutral at Position(xpos=0.75) with dissolve
-    "Just like she said, there really was someone walking towards us. A girl with dark red hair, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
+    "Just like she said, there really was someone walking towards us."
+    "A girl with dark red hair, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
     "There were two big things that immediately made her stand out. One, her eyes were as blue if not bluer than Alice's, which would mean she was a foreign student. And two..."
     "...Her nipples were easily seen bulging out of the fabric of her shirt."
     UNKNOWN "Yo Akira, I'm here, so what did you... wait, are you trying to hook me up with this guy?!"
@@ -756,7 +758,8 @@ label FMG010_testpass:
     Chibuki "Let me just stop you real quick, just call me Chibuki; I never did fully cotton to the weird ways my mum referred to people, all last name first."
     MC "Understandable, so what did you need Chibuki?"
     Chibuki "I'll be blunt. Akira had a growth spurt and asked me to get her new clothes she ordered from the tailor. Her old outfit got ripped pretty bad, so she was forced to stay in our room."
-    Chibuki "However, little miss Buttsumoto, in her infinite wisdom, wants me to go over the decorations for the upcoming school festival because of my duty as art club president... For the third time. Damn, I wish she'd get that stick out of her fat arse."
+    Chibuki "However, little miss Buttsumoto, in her infinite wisdom, wants me to go over the decorations for the upcoming school festival because of my duty as art club president... For the third time."
+    Chibuki "Damn, I wish she'd get that stick out of her fat arse."
     Chibuki "But anyways, I gotta be at the council room in five or I get the third degree. I figured since you both have been hanging out together, you could bring it to her. Do this, and I'll owe ya a favor you can cash in later."
     "This was interesting. It would explain why she was absent today. Without any clothes that fit her muscular body, she wouldn't be able to go out in public. She could probably use any help she could get."
     MC "All right, I'll help Akira out."
@@ -772,7 +775,8 @@ label FMG010_testpass:
     stop music
     scene Dorm Exterior with fade
     play music FMG
-    "I got the clothes and made my way to the dorms, picking up a few small pebbles I noticed along the way. I followed Chibuki's instructions and found the exact window she'd described. I threw a pebble at the window to get Akira's attention and sure enough Akira stuck her head out, looking like she was wrapped in some kind of blanket toga."
+    "I got the clothes and made my way to the dorms, picking up a few small pebbles I noticed along the way. I followed Chibuki's instructions and found the exact window she'd described."
+    "I threw a pebble at the window to get Akira's attention and sure enough Akira stuck her head out, looking like she was wrapped in some kind of blanket toga."
     FMG "Keisuke!? Why are you throwing rocks at my window? Where's Chibuki? She was supposed to be here by now with- hey, my clothes! Is that my uniform!?"
     MC "That's why I'm here, Chibuki had a meeting with Shiori and asked me to give you your new outfit."
     FMG "Well, how are you going to do that?! I wouldn't let you up here even if I wanted to!"
@@ -789,7 +793,8 @@ label FMG010_testpass:
     "She opened the door and walked out. It was only then I truly saw how big she'd gotten, to have burst through her previous uniform..."
     show FMG happy
     FMG "Oh god, it feels nice to be outside!"
-    "Her arms were thicker than the last time I saw her, her chest more toned, abs starting to be more noticeable though the shirt. Her legs were more muscular, and I could swear she was even a bit taller, though it could just have been my mind playing tricks on me, given how big the rest of her was."
+    "Her arms were thicker than the last time I saw her, her chest more toned, abs starting to be more noticeable though the shirt."
+    "Her legs were more muscular, and I could swear she was even a bit taller, though it could just have been my mind playing tricks on me, given how big the rest of her was."
     show FMG neutral
     FMG "Thanks again, man! I was really in a pickle there..."
     FMG "..."
@@ -815,7 +820,8 @@ label FMG010_testpass:
     FMG "..."
     show FMG flex
     FMG "Everyone has a life goal, mine's just that simple, I guess!"
-    "I couldn't shake the feeling that she was only giving me half of the truth, if not a quarter of it. It made me wonder if Chibuki was right about Akira hiding something. Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
+    "I couldn't shake the feeling that she was only giving me half of the truth, if not a quarter of it. It made me wonder if Chibuki was right about Akira hiding something."
+    "Still, I didn't want to force it out of her, if she wanted to tell me then I'd let it be of her own volition."
     show FMG neutral
     FMG "By the way, I gotta know, dude..."
     show FMG angry
@@ -875,7 +881,8 @@ label FMG010_testfail:
     "As I made my way down the ramp nearest to the vending machines, I saw Akira... but she was bigger than I remembered."
     show FMG sad with dissolve
     FMG "*sigh* Hey Keisuke."
-    "Her arms were thicker than the last time I saw her, her chest more toned, abs starting to be more noticeable though the shirt. Her legs were more muscular, and I could swear she was even a bit taller, though it could just have been my mind playing tricks on me, given how big the rest of her was."
+    "Her arms were thicker than the last time I saw her, her chest more toned, abs starting to be more noticeable though the shirt."
+    "Her legs were more muscular, and I could swear she was even a bit taller, though it could just have been my mind playing tricks on me, given how big the rest of her was."
     FMG "Yes, I know I'm big but can you please not stare at me? I've had a long day!"
     MC "Um, are you all right?"
     show FMG angry
@@ -1214,7 +1221,8 @@ label FMG013:
     "Jumping up in joy, I could feel the impact of her landing all the way up to my knees."
     FMG "You won't regret it, dude. Same time tomorrow!"
     MC "Same time tomorrow."
-    "As Akira grabbed her bag and walked out the door, I couldn't help but think about everything that just transpired... and I couldn't stop myself from smiling at the prospect of being a part of it again. I picked up some weights myself, and began training for next time."
+    "As Akira grabbed her bag and walked out the door, I couldn't help but think about everything that just transpired... and I couldn't stop myself from smiling at the prospect of being a part of it again."
+    "I picked up some weights myself, and began training for next time."
     $setSkill("Athletics", 3)
     jump daymenu
 
@@ -1404,7 +1412,8 @@ label FMG015:
     "As I was taking in the sites as well as wondering what store I should go to, a thought came to me."
     "Akira had been going out of her way to help me work on my muscles; while I did believe that just working out was payment enough for her, I felt like I should at least give her something."
     "While lost in thought, I came across a store called ' Pop Culture', the front of the building was made of bricks and concrete, with anime figures and cardboard cutouts in the window frames. I figured this was as good a spot as any, so I went inside."
-    "The store seemed to, as the name implied, caters to pop culture of this generation, the inside also had brick walls as well as posters of various media. The stores goods for sale consisted of toys, games, and of course, clothing. Now because of my only knowledge of what I went to the hoodie section to find a few that popped out to me."
+    "The store seemed to, as the name implied, caters to pop culture of this generation, the inside also had brick walls as well as posters of various media. The stores goods for sale consisted of toys, games, and of course, clothing."
+    "Now because of my only knowledge of what I went to the hoodie section to find a few that popped out to me."
     "On the right was a gray hoodie, the hoodie was a weightlifting stick figure sweating profusely, with the words 'No Pain no Muscle Gain.' on the bottom. Considering her lifestyle, Akira might love this one."
     "In the middle was a crimson hoodie and this one was a detective looking man holding a gun, and the words 'Sun's out Guns out!' were displayed in a word bubble. I think I recognize the guy from that one arcade game Akira likes, Cyber Rage."
     "Last but not least was... a mint green hoodie that has a picture of a cute anime cat girl with white stripes on the left chest area... on the back was the words 'Nya'dorable' above four anime cat-girls."
@@ -1422,7 +1431,8 @@ label FMG015:
             MCT "...Yeah, I don't know if she'll like this... but it might be funny to give this to her."
     "With the sweat shirt in hand, I paid for it, and set my sights on finding Akira."
     "I figured that given I was already in town, I would start my search for her at the local gym."
-    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment. The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a 'Rowing Machine', pulling the rope thing in a similar manner of rowing a boat."
+    "The gym itself was about what you expected, white walls, dark blue carpet flooring, buzzing lights, and workout equipment."
+    "The number of occupants was low given the time of day, however over in the far back I could see Akira on, something that she called a 'Rowing Machine', pulling the rope thing in a similar manner of rowing a boat."
     "It did not take long for her to see me, she smiled and gave me a wave to come over."
     show FMG happy with dissolve
     FMG "Sup Kei-kun! What brings you to this side of the island?"
@@ -1536,7 +1546,8 @@ label FMG016:
     FMG "All right!"
     scene Cafe with fade
     play music Schoolday
-    "As we entered the café, we were greeted with a flurry of pink and white decorum. The room itself felt inviting, if not a bit too... pastel, for my tastes. Still, effeminate style or not, it gave of a naturally comfortable aura enough to beckon us to stay."
+    "As we entered the café, we were greeted with a flurry of pink and white decorum. The room itself felt inviting, if not a bit too... pastel, for my tastes."
+    "Still, effeminate style or not, it gave of a naturally comfortable aura enough to beckon us to stay."
     show FMG neutral with dissolve
     FMG "Huh, this place is cute."
     MCT "I find it more cloying than cute."
@@ -1556,14 +1567,16 @@ label FMG016:
     Chibuki "Fantastic choices! I'll have them right away!"
     hide Chibuki with dissolve
     MC "...Well, this is happening, I guess."
-    "I didn't get a single response. Akira was silent the entire time, staring at the spot Chibuki was. Though to be fair, it must have been quite the shock, seeing your roommate acting the exact opposite way you'd always seen her... while dressed as a maid."
+    "I didn't get a single response. Akira was silent the entire time, staring at the spot Chibuki was."
+    "Though to be fair, it must have been quite the shock, seeing your roommate acting the exact opposite way you'd always seen her... while dressed as a maid."
     show Chibuki neutral at Position(xpos=0.75) with dissolve
     Chibuki "Here you go, and I'll see you in 10. Till then masters, I bid you adieu!"
     hide Chibuki with dissolve
     "We did nothing but consume our orders in silence while we waited for Chibuki's break to happen."
     scene Town with fade
     play music Hallway
-    "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki. I heard a 'hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
+    "Once we finished and it was time, we went out to the front of the store with no sign of Chibuki."
+    "I heard a 'hey' from the alleyway, and followed it to find Chibuki down there waiting for us. Both Akira and I walked down the alleyway to meet up with Chibuki."
     show Chibuki neutral at Position(xpos=0.75) with dissolve
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     Chibuki "God, out of all the people in the world to come to this one maid café, it had to be my roommate and her boyfriend!"
@@ -1663,8 +1676,10 @@ label FMG017:
     FMG "Trust me, I've seen it happen to another kid when I was in kindergarten."
     MC "...Okay, you have to explain this one."
     "Akira had taken a breath in before explaining what kind of oddity she had as a child... One of several, now that I look back on it."
-    FMG "Well, what happened was this girl, she found an old-looking stuffed rabbit on top of the slide. She wanted to ride the slide, so she grabbed it and tossed it; the moment she slid down, she went faster then she should and crashed into the sand ass up. Ever since then, word got around town and thus, a curse was born."
-    "Her story explained why I never heard of it since it was only local. Though in all likelihood, that girl crashing seems to be more out of bad luck than a curse from a stuffed rabbit. Despite this, it did not call much of my confusion on the subject matter."
+    FMG "Well, what happened was this girl, she found an old-looking stuffed rabbit on top of the slide."
+    FMG "She wanted to ride the slide, so she grabbed it and tossed it; the moment she slid down, she went faster then she should and crashed into the sand ass up. Ever since then, word got around town and thus, a curse was born."
+    "Her story explained why I never heard of it since it was only local."
+    "Though in all likelihood, that girl crashing seems to be more out of bad luck than a curse from a stuffed rabbit. Despite this, it did not call much of my confusion on the subject matter."
     MC "Okay, well, even so, it shouldn't matter because we're nowhere near Okinawa."
     show FMG sad
     FMG "Be that as it may, I don't think it's a great idea to mess with that bear. Look, just don't pick it up okay?"
@@ -1988,7 +2003,8 @@ label FMG019:
     play sound Knock
     pause 1
     MC "Hello?"
-    "The response was what I could only describe as swearing in another language. Judging from the language, I could at least tell Chibuki was home. A minute later, the door opened with a tired-looking Chibuki wearing a shirt that looked three sizes too large standing in front of me."
+    "The response was what I could only describe as swearing in another language. Judging from the language, I could at least tell Chibuki was home."
+    "A minute later, the door opened with a tired-looking Chibuki wearing a shirt that looked three sizes too large standing in front of me."
     show Chibuki neutral with dissolve
     Chibuki "Oh... Hey Keisuke."
     MC "Umm, hey. Did I wake you up?"
@@ -2057,7 +2073,8 @@ label FMG020:
     $setProgress("FMG", "FMG021")
     scene Campus Center with fade #night
     "Evening came, and the stars appeared through as the day ended. Street lights began to illuminate the street."
-    "As I was walking towards the school's cafeteria for dinner, I began to think about what I wanted to eat; that is, until I realized that A) I've eaten every menu dish served at least once, and B) I didn't know if I'd already eaten dinner outside of the school, and if I had I couldn't remember at that point due to hunger."
+    "As I was walking towards the school's cafeteria for dinner, I began to think about what I wanted to eat."
+    "That is, until I realized that A) I've eaten every menu dish served at least once, and B) I didn't know if I'd already eaten dinner outside of the school, and if I had I couldn't remember at that point due to hunger."
     "I stood in place thinking of what I could do, I could eat something again or go out to eat; the latter seemed more appealing. My thought process was interrupted by seeing an all-too-familiar workout partner jogging past me."
     "She stopped jogging the moment she saw me; however, her mood changed to one of concern when she saw my expression."
     show FMG neutral
@@ -2066,7 +2083,8 @@ label FMG020:
     show FMG sad
     FMG "You too? I'm only going because it's close, and I wish they mixed up the meals once in a while."
     MC "Yeah, a bit of variety would be nice, like a sandwich or..."
-    "I stopped my train of speech for a revelation I had popped into my head out of randomness; I haven't had a burger in a while, not since a month or so before I left Tokyo. With the thought of hamburgers fresh in my mind, I soon crave hamburgers, and thereby what I wanted for dinner."
+    "I stopped my train of speech for a revelation I had popped into my head out of randomness; I haven't had a burger in a while, not since a month or so before I left Tokyo."
+    "With the thought of hamburgers fresh in my mind, I soon crave hamburgers, and thereby what I wanted for dinner."
     MCT "Hmmm, I think I remember a rumor of a place that sells burgers called Lunar Burger on Shinjuku street, probably the only open one on the island if anything."
     MC "Actually, I think I'm going to get a burger."
     show FMG neutral
@@ -2087,7 +2105,8 @@ label FMG020:
     FMG "Totally."
 
     scene Town with fade
-    "It took a while to make it to town, as by the time we got there it was already seven at night. It was a busy night for everyone, people minding their own business, having fun, and relaxing. Akira and I managed to find the glowing lights of Lunar Burger, a fast-food chain whose theme was space fiction and the Moon."
+    "It took a while to make it to town, as by the time we got there it was already seven at night. It was a busy night for everyone, people minding their own business, having fun, and relaxing."
+    "Akira and I managed to find the glowing lights of Lunar Burger, a fast-food chain whose theme was space fiction and the Moon."
 
     scene Diner with fade #burger restaurant
     "The interior looked retro-futuristic, with a chrome and blue theme. Akira and I waited in line for our turn to order."
@@ -2290,7 +2309,8 @@ label FMG021:
     scene Classroom with fade
     play music Schoolday
     show FMG happy with dissolve
-    FMG "...And then! As the Americans ran across the great desert in their 1969 Brimstone muscle cars, they shot down the great emu mech robot thing piloted by sergeant general lieutenant Emmet Mel and he died in the explosion! Killing all the emus in the process! And so, the city of New Zealand, Australia was renamed to Melbourne! And then everyone ate emu burgers!"
+    FMG "...And then! As the Americans ran across the great desert in their 1969 Brimstone muscle cars, they shot down the great emu mech robot thing piloted by sergeant general lieutenant Emmet Mel and he died in the explosion!"
+    FMG "Killing all the emus in the process! And so, the city of New Zealand, Australia was renamed to Melbourne! And then everyone ate emu burgers!"
     FMG "And that's how the great emu war happened!"
     hide FMG with dissolve
     show AE neutral with dissolve
@@ -2502,7 +2522,8 @@ label FMG022:
         ease 0.75 xpos 0.9
     "I asked the empty space in front of me as Akira clicked the start button on her stopwatch and began ascending."
     "It was a marvel; she crawled from crag to crag, nearly as natural as a spider, barely needing half a second to secure her footing before grabbing the next hold."
-    "And it seemed like yesterday I'd delivered her a brand new uniform, yet the jabbing piston action of her numerous defined muscles was almost as clear under her jacket as out of it. The few times she climbed straight up, her shoulder blades seemed ready to punch right through."
+    "And it seemed like yesterday I'd delivered her a brand new uniform, yet the jabbing piston action of her numerous defined muscles was almost as clear under her jacket as out of it."
+    "The few times she climbed straight up, her shoulder blades seemed ready to punch right through."
     "At last she came within reach of the ledge and slid herself up it. She clicked the stopwatch; her grin looking at it was wide, heartwarming, and withering all at once."
     show FMG flex at center with dissolve
     FMG "43 seconds!"
@@ -2956,7 +2977,8 @@ label FMG023_c2_1_3:
     "Folksy synth banjos and harmonicas played low as I looked on the scene of that helpless amphibian, but danced on tiptoes with higher notes to the tune of the coming journey."
     "I hit start and commenced to jabbing my finger at the tiny red X on the video ad that popped up almost instantly."
     MCT "C'mon, piece of crap..."
-    "After accidentally clicking the link twice I succeeded in closing the ad and proceeded to the first level. It was a greater challenge than expected, being as much a rhythm game as a platformer. Nevertheless I was bounding over keyboards and chairs as well as any frog I'd met, right until I had to leap from a dog's back to a windowsill."
+    "After accidentally clicking the link twice I succeeded in closing the ad and proceeded to the first level."
+    "It was a greater challenge than expected, being as much a rhythm game as a platformer. Nevertheless I was bounding over keyboards and chairs as well as any frog I'd met, right until I had to leap from a dog's back to a windowsill."
     "Too early and I smashed against the flowerpot. Too late and the dog ate me. After using seven of my ten lives the game informed me I could purchase more for only ten Lillypads. I scoffed the thinly-veiled sales pitch, carrying on with three lives left."
     "On the eighth life I fumbled the tap and once again careened face-first into the flower pot. But just a hair short of clearing it."
     "On the ninth life I redoubled my focus and held my finger poised and arched just over the screen, ready to end the matter with a single, resolute stroke."
@@ -3295,8 +3317,10 @@ label FMGBBW001:
     RM "Alright, we got five minutes before the meeting time, let's head in!"
     scene Cafe with fade
     show RM neutral with dissolve
-    "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme. It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
-    "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup. She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said 'Haruko' pinned to the front."
+    "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
+    "It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
+    "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup."
+    "She wore a caramel-brown and cream-white patterned baker outfit, with a name tag that said 'Haruko' pinned to the front."
     Cashier "Hi, welcome to Kazomazumi Bakery! What can I get you two?"
     MC "Yeah, hi! This is our first time here, what do you recommend?"
     Cashier "Well, today we have a special on pies, or the cupcakes."

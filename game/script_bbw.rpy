@@ -263,7 +263,8 @@ label BBW003_c1_1:
         BBW "What do you mean? It was your own idea that I should seek help among our classmates. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "I wasn't really suggesting you find a maid..."
     else:
-        BBW "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to flail around on my own. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
+        BBW "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to flail around on my own."
+        BBW "And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "Seems like you're asking a bit much of your roommate."
     show BBW happy at center with dissolve
     BBW "Nonsense, Kodama-san is more than qualified to act as my chef, secretary, personal trainer, accountant, media relations manager, bodyguard, chauffeur and interpreter. And she's eager to start right away. Aren't you, Kodama-san?"
@@ -279,7 +280,8 @@ label BBW003_c1_1:
 label BBW003_c2_1:
     MC "Is she? I guess that's fortunate for you."
     show BBW haughty
-    BBW "It is. I would have survived just fine had I been left to my own devices, but people like me - those of us who are always looking at the big picture and have so many things to worry about - we benefit from having dedicated subordinates. Having someone to cook for me frees up time and energy I can devote to other things."
+    BBW "It is. I would have survived just fine had I been left to my own devices, but people like me - those of us who are always looking at the big picture and have so many things to worry about - we benefit from having dedicated subordinates."
+    BBW "Having someone to cook for me frees up time and energy I can devote to other things."
     MC "Like what?"
     BBW "Anything. My studies, my hobbies, being the glamorous trendsetter that I am."
     MC "I guess if she's OK helping you, there's nothing wrong with that."
@@ -470,7 +472,8 @@ label BBW005_c1:
 
 label BBW005_c2:
     MC "Modern medicine is pretty extraordinary. If you ended up getting really fat there's probably some surgery you can get."
-    BBW "I agree, this is the idea most likely to succeed. I don't know enough right now, so how am I supposed to proceed? What if my growth is miniscule? Would I end up starving myself for nothing? Or what if it is extreme, and denying myself a proper diet is for naught?"
+    BBW "I agree, this is the idea most likely to succeed. I don't know enough right now, so how am I supposed to proceed?"
+    BBW "What if my growth is miniscule? Would I end up starving myself for nothing? Or what if it is extreme, and denying myself a proper diet is for naught?"
     show PRG neutral at Position (xpos=0.8)
     PRG "N-Nikumaru-sama? The quail is ready."
     show BBW happy
@@ -523,7 +526,8 @@ label BBW005A:
     BBW "Light breakfast today, and every day. Light lunch every day. Light dinner every day."
     MC "Oh? ...Oh! Yeah. Your factor. I guess you're doing the diet thing, huh?"
     play music Tension
-    BBW "If I am to maintain authority over my own body and not be controlled by the whims of fate, then yes, I am doing 'the diet thing.' Every day, at every meal, I will be watching my intake, limiting the calories, sugars, and fats I take in. I will limit it all to what I need and no more."
+    BBW "If I am to maintain authority over my own body and not be controlled by the whims of fate, then yes, I am doing 'the diet thing.'"
+    BBW "Every day, at every meal, I will be watching my intake, limiting the calories, sugars, and fats I take in. I will limit it all to what I need and no more."
     MC "You don't seem too happy about it."
     show BBW angry
     BBW "Is there something here I should be happy about? I have a palate more refined than people twice my age. My appreciation of the arts - culinary or otherwise - exceeds that of professional critics."
@@ -533,7 +537,8 @@ label BBW005A:
     show BBW neutral
     BBW "I am already beginning to question that. I can endure an existence marked by suffering and lacking. I am strong enough to bear up in the face of abject want, unlike many others."
     show BBW angry
-    BBW "But is that a life worth living? Is the path of self-denial, of self-inflicted misery, beneficial to anyone? How can one grow as a person if they have committed their life to depriving themselves of opportunity and experience? Every bowl of plain rice, every plate of salad, is another act of self-flagellation. Shall my days be marked by anguish, my life's story a tale of torment? Who would live such a life by choice? Who would be inspired by that?"
+    BBW "But is that a life worth living? Is the path of self-denial, of self-inflicted misery, beneficial to anyone? How can one grow as a person if they have committed their life to depriving themselves of opportunity and experience?"
+    BBW "Every bowl of plain rice, every plate of salad, is another act of self-flagellation. Shall my days be marked by anguish, my life's story a tale of torment? Who would live such a life by choice? Who would be inspired by that?"
     MC "But... you just started the diet. This is your first meal."
     BBW "Is my suffering any less brutal for being so brief? Shall I remain silent until I have carried my burden for a certain number of days? No! Pain is pain. It is not to be dismissed for failing to meet some arbitrary metric."
     BBW "You were the one to suggest this trial of deprivation, and now you mock me for not embracing my torture?"
@@ -555,7 +560,8 @@ label BBW005A:
     BBW "...That is your condition? That is why you're here?"
     MC "Yep. That's it."
     show BBW neutral
-    BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself. Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
+    BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself."
+    BBW "Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
     MC "Uh huh... Consider me properly scolded."
     MCT "I was just trying to help."
     jump daymenu
@@ -647,7 +653,8 @@ label BBW005B:
     MC "Right. Anyway, we'll try not to take too long."
     FMG "Nah it's cool, I could use the breather anyways."
     show BBW neutral
-    "She stayed standing a bit to the side, watching as I decided how to adjust the weight and making me self-conscious. If it was just me and Alice I could get away with something easy, but with Akira looking over my shoulder I was afraid she would say something if I wasn't going all out."
+    "She stayed standing a bit to the side, watching as I decided how to adjust the weight and making me self-conscious."
+    "If it was just me and Alice I could get away with something easy, but with Akira looking over my shoulder I was afraid she would say something if I wasn't going all out."
     "In the end I decided to add 50%% more what I was originally going to lift. To my surprise it weighed more than what I expected. Before I could lift it up, Akira came and grabbed the bar."
     FMG "Sorry but I have a quick question, just how much did you put on the bar?"
     MC "About 150 pounds. Why?"
@@ -663,7 +670,8 @@ label BBW005B:
     "Akira puts the shake away before whispering to me."
     show FMG happy
     FMG "{i}(Between you and me, I just wanted to see Alice's reaction to drinking this sludge.){/i}"
-    FMG "All right, tips. The first thing you want to do is, like I said, know your limits and pace yourself. Take short breaks when you need it. Keep consistent and follow a routine. And the most importantly, be patient, don't expect results overnight. As long as you keep it up and actively enjoy it, you won't have any problems."
+    FMG "All right, tips. The first thing you want to do is, like I said, know your limits and pace yourself. Take short breaks when you need it. Keep consistent and follow a routine. And the most importantly, be patient, don't expect results overnight."
+    FMG " As long as you keep it up and actively enjoy it, you won't have any problems."
     show BBW happy
     BBW "Sounds good. Let's get to it."
     show BBW neutral
@@ -789,7 +797,8 @@ label BBW006_c3:
     MC "I've never performed in front of an audience. I don't have the nerves for it. Just a lot of practice in private."
     BBW "All that practice must have been worth something. Show me what you can do."
     stop music
-    "And before I could say anything she was thrusting one of the club's violins into my hands. This was too fast for me to deal with, I couldn't think of anything to say to get out of it. So, nervously, I put the violin under my chin like I had seen people do in movies and I tried stroking the bow back and forth."
+    "And before I could say anything she was thrusting one of the club's violins into my hands."
+    "This was too fast for me to deal with, I couldn't think of anything to say to get out of it. So, nervously, I put the violin under my chin like I had seen people do in movies and I tried stroking the bow back and forth."
     "The disgust on Alice's face was immediate, and I couldn't blame her. If the violin was a living being I would have been arrested for animal cruelty. But I still thought I could fake it if I could, I don't know, figure out how to stroke the chords right."
     show BBW angry
     BBW "Stop! Stop!"
@@ -803,7 +812,8 @@ label BBW006_c3:
 label BBW007:
     $setProgress("BBW", "BBW008")
     scene Cafeteria with fade
-    MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school. Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people."
+    MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school."
+    MCT "Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people."
     MCT "And I'm off by myself, which is par for the course."
     "No sooner had I thought that than someone sat down across from me."
     show BBW neutral at center with dissolve
@@ -853,7 +863,8 @@ label BBW007:
     MC "There's already a store on campus, you know."
     BBW "I know, I've seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
     PRG "What do you need me to do, Nikumaru-sama?"
-    BBW "Our first step will be to get the word out. We'll need some sort of ad campaign, make the people aware of my service. Then we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service; convenient for the customer."
+    BBW "Our first step will be to get the word out. We'll need some sort of ad campaign, make the people aware of my service."
+    BBW "Then we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service; convenient for the customer."
     BBW "But the guys' dorm... Keisuke! How would you like a job?"
     if getSkill("Academics") < 3:
         MC "Me? Doing what?"
@@ -1475,7 +1486,8 @@ label BBW010_c3:
     MC "She's also selling school supplies and other stuff, but I guess she's focusing on clothing right now because... Well."
     "I gestured at her chest, wrapped up in a too-tight shirt and bra."
     show BE happy
-    BE "Because it's like starting up an ice cream stand in the middle of a heat wave. She'll make a killing here if she can get everything authorized! You better be getting a cut of all of this if you're going to be helping her out. Don't let her take advantage of you."
+    BE "Because it's like starting up an ice cream stand in the middle of a heat wave. She'll make a killing here if she can get everything authorized!"
+    BE "You better be getting a cut of all of this if you're going to be helping her out. Don't let her take advantage of you."
     show BE surprised
     BE "Unless you're into that kind of thing. A big girl like Alice? Yeah, I could definitely see that. Was there a dominatrix getup in this catalogue? That'd be something to see on her..."
     "Man, my imagination was getting a workout today."
@@ -1483,11 +1495,14 @@ label BBW010_c3:
     MC "I am being compensated (though the specifics haven't been hammered out yet). I believe she even mentioned something about a commission."
     MC "So can I put you down for a sale? I can run your order back to her before class starts, but I'm not sure how long it will be until everything arrives. She did say she already has a lot of stuff here..."
     show BE happy
-    BE "Oh absolutely! Here, let me take a look again real quick... Yeah, I think I can spring for three bras and, maybe two shirts. No I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size. Well, as long as I'm capable of getting my arms around them that is!"
+    BE "Oh absolutely! Here, let me take a look again real quick... Yeah, I think I can spring for three bras and, maybe two shirts."
+    BE "No, I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size."
+    BE "Well, as long as I'm capable of getting my arms around them that is!"
     MC "Even if you have trouble measuring yourself, we can find clothing big enough..."
     "My voice trailed off as I was hit with the mental image of Honoka carrying a pair of breasts bigger than she was, carting them around in a wheelbarrow..."
     "...and running me over with them."
-    "Like I said, my imagination was running on all cylinders today. Salesman-mode had delayed the image conjured by her blithe comments about her growth, but the idea that she would grow so big she couldn't wrap her arms around herself... That was impossible to ignore."
+    "Like I said, my imagination was running on all cylinders today."
+    "Salesman-mode had delayed the image conjured by her blithe comments about her growth, but the idea that she would grow so big she couldn't wrap her arms around herself... That was impossible to ignore."
     "I cleared my throat, blushing as I saw her smile mischievously at me, and sputtered."
     MC "I'll get back to you on how soon we can deliver these. Do you just want the plain model for the bras?"
     show BE surprised
@@ -2569,7 +2584,8 @@ label BBW016_c1_1:
     "I unpaused the game - good thing I was between fights - when I heard another beep from my phone."
     MCT "That was fast."
     MCT "Or direct, I should say. Fitting."
-    BBWCell "<I am currently idle as well. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect. Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time.>"
+    BBWCell "<I am currently idle as well. Kodama-san is working on a new recipe for me to try, and at my insistence she is taking her time to make sure it is perfect.>"
+    BBWCell "<Thus, I am waiting later than usual for my afternoon tea and as I have completed my homework and studies I am looking for something else to occupy my time.>"
     if getFlag("BBW_working"):
         "I wasn't sure how to feel that she was hoping I could keep her entertained, but this did imply she wasn't contacting me with a new delivery assignment."
         "Right?"
@@ -5513,7 +5529,8 @@ label BBW031_c1_3:
         BBW "I guess the term isn't used in Japan."
         MC "No. I've never heard that."
         show BBW haughty
-        BBW "Back in Rubens' day, the arts were more of a patronage system. Wealthy merchants and royals commissioned portraits, and those who could afford it also tended to be people who could eat richly and didn't have to spend all day working in the fields."
+        BBW "Back in Rubens' day, the arts were more of a patronage system."
+        BBW "Wealthy merchants and royals commissioned portraits, and those who could afford it also tended to be people who could eat richly and didn't have to spend all day working in the fields."
         BBW "Thus the 'well-fed' look became a sign of wealth and privilege, and works of art from the time reflected that."
         MC "Oh. I didn't realize that."
         MCT "I guess I should make sure I know what I'm talking about before I try to show off a bit of knowledge."
@@ -7252,7 +7269,8 @@ label BBW040_c2_3:
     MC "You can't separate looking bigger and finding it pleasing to be bigger. They're both related to your factor, and true acceptance-"
     BBW "I get it."
     "She wasn't curt, but her tone did sound decisive."
-    BBW "Yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.' My father told me something similar shortly after I got here, that I should take this all as it is en total."
+    BBW "Yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.'"
+    BBW "My father told me something similar shortly after I got here, that I should take this all as it is en total."
     BBW "But I..."
     show BBW sad
     BBW "There is a part of me that does not want to give in to anything positive about this."
@@ -7691,7 +7709,8 @@ label BBW042:
     BBW "This is a bothersome experience. If it were possible to call a piece of art 'insolent,' I would."
     MC "Is it giving you trouble? It looks really good."
     show BBW stern
-    "The landscape itself is acceptable, and I am satisfied with the colors. I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
+    "The landscape itself is acceptable, and I am satisfied with the colors."
+    "I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
     "I took a longer look at the painting, paying attention to the different shades of greens in the grass and blues in the skies. There was more detail there than I had originally noticed."
     MC "So what's the problem?"
     BBW "The lighting. You see how the sun is supposed to be coming from the east?"
@@ -7949,7 +7968,8 @@ label BBW045_art:
     BBW "He wants {i}me{/i} to attend after I called him to let him know about the charitable work and how it will invest in the development of Seichou and its community."
     BBW "You are naturally my plus one."
     MC "What is the fundraiser for?"
-    BBW "Creating jobs around Seichou for former students. Most workers on the island are former students already but every year there are more people with growth factors who cannot be hired, as employers would obviously discriminate based on their bodies."
+    BBW "Creating jobs around Seichou for former students."
+    BBW "Most workers on the island are former students already but every year there are more people with growth factors who cannot be hired, as employers would obviously discriminate based on their bodies."
     BBW "One idea I wanted to put forth was giant students being employed for construction, creating the buildings that would house the jobs for students with other growth factors."
     BBW "Now, if there are no more questions, I'd like to describe the various terminologies of wine tasting to you."
     MC "Alright."
@@ -8017,9 +8037,9 @@ label BBW045_suit:
     "When I was done, Alice corrected my collar for me and reached for my tie."
     BBW "Now to show you how to properly tie a tie."
     MCT "This is not how I saw my morning going."
-    "She put the tie around my neck, somehow performing such an average task with extreme elegance."
+    "She put the tie around my neck, her belly delightfully pushing into me as she did so."
     BBW "This is how high society does it."
-    "She tightened it rather slowly and deliberately, maintaining eye contact with me the whole time."
+    "She tightened it rather slowly and deliberately, maintaining eye contact with me the whole time. She knew she was in control."
     "When she was done, she handed me my jacket."
     show BBW neutral:
         ease 0.5 xpos 0.5
@@ -8061,14 +8081,16 @@ label BBW045_wine:
     MC "That is true. The island has a lot of hidden gems to offer."
     BBW "Perhaps when I am an experienced businesswoman in my own right, growth factors will be widely known among the general populace. This would lead to more relaxed regulations on the island."
     MCT "She really does plan these things ahead."
-    BBW "... although, mass tourism would severely impact the lives of the students here depending on where the resort is located. It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
+    BBW "... although, mass tourism would severely impact the lives of the students here depending on where the resort is located."
+    BBW "It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
     MCT "This monologue isn't going to end any time soon, is it?"
     scene Town with fade
     show BBW neutral with dissolve
     "Reaching the town was a sad end to the scenic walkways."
     BBW "Furthermore..."
     MCT "Not that I got to fully enjoy such scenic walkways."
-    BBW "There is no denying that some individuals would visit the island for less respectable purposes. I know some people would come here purely to see students with growth factors that they find pleasing; our conditions would be treated like some kind of game for their fetishism."
+    BBW "There is no denying that some individuals would visit the island for less respectable purposes."
+    BBW "I know some people would come here purely to see students with growth factors that they find pleasing; our conditions would be treated like some kind of game for their fetishism."
     MCT "She said she wanted to clear her head for the wine tasting. If business conceptualisations are how she does that, I have no desire to speak up."
     BBW "Of course among students here it is a different story, they would be here regardless and are the same age as the students they find appealing."
     show BBW haughty
@@ -8156,7 +8178,8 @@ label BBW045_wine:
     Misaki "But if you're referring to knowing who you are as the daughter of Nikumaru Daitaro- well, when Nikumaru Daitaro contacts you and says he wishes for his child to be invited, it is not a moment you decline nor forget."
     Misaki "Your father has donated a very generous amount of over 20 million yen to this project. It is only natural I thank you personally as you attend in his place."
     BBW "Well thank you for inviting us. We are more than happy to fund such a good cause."
-    Misaki "The pleasure is all mine. Now, where are my manners? My name is Usuda Misaki, owner of this establishment and general art enthusiast- though I made my money by selling high quality tailored suits and dresses to individuals with growth factors leaving the academy."
+    Misaki "The pleasure is all mine. Now, where are my manners?"
+    Misaki "My name is Usuda Misaki, owner of this establishment and general art enthusiast - though I made my money by selling high quality tailored suits and dresses to individuals with growth factors leaving the academy."
     BBW "Alice Nikumaru. Please don't take my surname as a reason to treat me differently, I am my own person despite my father's status. Oh, and call me Alice."
     Misaki "Of course Alice, and who is your plus one?"
     BBW "This is my boyfriend, Hotsure Keisuke."

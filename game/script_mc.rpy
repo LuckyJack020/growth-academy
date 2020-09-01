@@ -169,7 +169,8 @@ label global000_cbreak_2:
     show BE sad
     BE "Were you kidnapped or something...?"
     "I laughed in spite of myself."
-    MC "No! I just, I was curious about stuff we never learned in high school. Things like how to say 'hello' and 'thank you' and stuff in a bunch of languages, weird science things they don't let us play with in chemistry class, all sorts of neat stuff..."
+    MC "No! I just, I was curious about stuff we never learned in high school."
+    MC "Things like how to say 'hello' and 'thank you' and stuff in a bunch of languages, weird science things they don't let us play with in chemistry class, all sorts of neat stuff..."
     show BE happy
     BE "Gosh, when you put it like that, it doesn't sound like studying!"
     show BE happy with hpunch
@@ -891,7 +892,8 @@ label global000_homeroom:
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
 
     scene F1 Hallway with fade
-    "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule.{w} I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
+    "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule."
+    "I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
     show BE surprised
     BE "Just how many students are there here, that they need such big hallways?"
     hide BE
@@ -1092,7 +1094,8 @@ label global005:
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
     Nurse "Hello, Hotsure-san, please have a seat."
-    "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp. They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
+    "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp."
+    "They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
     "What was more, she had decided to cover them in bright red lipstick. It was nearly impossible not to stare as she looked down at a clipboard full of papers."
     Nurse "So, your growth factor has been confirmed to be... Heh, you like them?"
     MCT "Oh crap, she caught me staring!"
@@ -1100,7 +1103,8 @@ label global005:
     "Her lips actually managed to pull out into a smile, making nearly the entire bottom half of her face hidden behind them."
     Nurse "It's all right, I know they can be surprising. Whenever I go off-campus I have to wear a surgical mask or I can hardly do anything for all the gawking and questions."
     "I just nodded and looked away, wondering what I would have to do to live a normal life."
-    Nurse "Anyways, your growth factor. According to these results, you have hyper-productive hair follicles. Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
+    Nurse "Anyways, your growth factor. According to these results, you have hyper-productive hair follicles."
+    Nurse "Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
     MC "My hair? It's always grown like a weed, that's nothing new."
     Nurse "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
     MC "And... and my sister? Does she have the same thing? Does she have anything at all?"

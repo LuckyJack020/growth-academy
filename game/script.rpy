@@ -14,37 +14,37 @@ init python:
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
-        'arcade': ("town", (600,230)),
-        'auditorium': ("school", (710,490)),
-        'cafeteria': ("school", (770,490)),
-        'campuscenter': ("school", (720,390)),
-        'classroom': ("school", (810,390)),
-        'clocktower': ("school", (715,430)),
-        'cookingclassroom': ("school", (810,335)),
-        'dormAE': ("school", (880,330)),
-        'dormBBW': ("school", (880,330)),
-        'dormBE': ("school", (880,330)),
-        'dormPRG': ("school", (880,330)),
-        'dormexterior': ("school", (850,375)),
-        'dorminterior': ("school", (885,400)),
-        'festival': ("town", (600,230)),
-        'field': ("town", (600,230)),
-        'giantdorminterior': ("town", (1000, 110)),
-        'gym': ("school", (630,325)),
-        'hallway': ("school", (810,390)),
-        'hillroad': ("town", (600,230)),
-        'library': ("school", (810,370)),
-        'musicclassroom': ("school", (810,400)),
-        'office': ("school", (660,485)),
-        'pool': ("school", (800,295)),
-        'roof': ("school", (810,400)),
-        'schoolfront': ("school", (715,520)),
-        'schoolplanter': ("school", (720,325)),
-        'schoolexterior': ("school", (715,520)),
-        'supermarket': ("town", (600,230)),
-        'town': ("town", (600,230)),
-        'track': ("school", (715,270)),
-        'woods': ("school", (600,230))
+        'arcade': ("town", (1100,650)),
+        'auditorium': ("school", (470,560)),
+        'cafeteria': ("school", (655,570)),
+        'campuscenter': ("school", (570,390)),
+        'classroom': ("school", (750,280)),
+        'clocktower': ("school", (570,500)),
+        'cookingclassroom': ("school", (740,490)),
+        'dormAE': ("school", (870,300)),
+        'dormBBW': ("school", (870,280)),
+        'dormBE': ("school", (870,260)),
+        'dormPRG': ("school", (870,280)),
+        'dormexterior': ("school", (860,375)),
+        'dorminterior': ("school", (880,380)),
+        'festival': ("town", (1100,650)),
+        'field': ("town", (1100,650)),
+        'giantdorminterior': ("town", (950,100)),
+        'gym': ("school", (730,220)),
+        'hallway': ("school", (745,375)),
+        'hillroad': ("town", (1100,650)),
+        'library': ("school", (490,560)),
+        'musicclassroom': ("school", (740,490)),
+        'office': ("school", (590,590)),
+        'pool': ("school", (440,165)),
+        'roof': ("school", (750,375)),
+        'schoolfront': ("school", (570,620)),
+        'schoolplanter': ("school", (570,265)),
+        'schoolexterior': ("school", (715,650)),
+        'supermarket': ("town", (1100,650)),
+        'town': ("town", (1100,650)),
+        'track': ("school", (570,165)),
+        'woods': ("school", (460,120))
     }
     debugenabled = True
     debuginput = ""
@@ -561,7 +561,7 @@ init python:
             super(MapLine, self).__init__(**kwargs)
 
         def render(self, width, height, st, at):
-            render = renpy.Render(800, 600)
+            render = renpy.Render(1280, 720)
             if highlitevent == "" or highlitmenuchoice == -1:
                 return render
             starty = 40 + (highlitmenuchoice * 60) #highlitmenuchoice
@@ -578,8 +578,8 @@ init python:
 
             #draw line
             canvas = render.canvas()
-            canvas.line("#000", (260, starty), (460, starty), 2) #horizontal, first point should be based on choice selected, second point should be horizontal some distance out
-            canvas.line("#000", (460, starty), end, 2) #diagonal, first point here should be second point horizontal, second point should be the map point
+            canvas.line("#000", (260, starty), (360, starty), 2) #horizontal, first point should be based on choice selected, second point should be horizontal some distance out
+            canvas.line("#000", (360, starty), end, 2) #diagonal, first point here should be second point horizontal, second point should be the map point
 
             return render
 
