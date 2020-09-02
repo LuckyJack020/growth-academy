@@ -23,10 +23,11 @@ label global000:
         menu:
             "(DEBUG) Skip intro":
                 jump daymenu
-            "Continue":
-                "Playing intro."
+            "View intro":
+                pass
 
     #SFX Light Motor SFX
+    $showQuickMenu = True
     Announcer "Please remain seated until the ferry comes to a full stop, then make your way to the boarding dock, following the yellow lines on the floor. An attendant will be available should you need assistance!"
     "The voice over the PA system rang out through the deck, causing a few of the other students to look up from their phones while others readied their bags for departure."
     Announcer "Groups 4 and 3? Please exit on both sides of the boat; an attendant will be ready to lead you to registration on arrival."
@@ -43,7 +44,8 @@ label global000:
     #BIRD SFX
     MCT "Ahh... It's really hot today. And why haven't I seen anyone else on this path?"
     "I came to a stop on a wooden bridge overlooking a lake, taking the bottle of water from my gift bag and taking a sip."
-    "My name is Hotsure Keisuke. My spring vacation is coming to an end,\nand I'm starting at a new school tomorrow. Never thought I'd have to be transferred out of my old one so quick without knowing why. Never been this far north before, either."
+    "My name is Hotsure Keisuke. My spring vacation is coming to an end, and I'm starting at a new school tomorrow."
+    "Never thought I'd have to be transferred out of my old one so quick without knowing why. Never been this far north before, either."
     MCT "Why are my hands so sweaty? Am I that nervous, or is it just the heat getting to me?"
     "In the back of my head, I knew for a fact it was my nerves. I'm gonna be living away from home and on my own. My luggage couldn't feel more heavy if it tried. I talked a big game to my parents about how I was fine..."
     "But..."
@@ -56,7 +58,8 @@ label global000:
     show BE neutral with dissolve
     play music BE
     MC "Hey! Hi, uh... Hoo boy, eheh. Sorry, let me catch my breath."
-    "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing. Her face looked soft and effeminate, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
+    "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing."
+    "Her face looked soft and effeminate, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
     MC "Sorry about that, ma'am, um... Hey, do you know where the school is? I think I got lost a while back, eheh..."
     UNKNOWN "..."
     "She stared at me intently for a long time. Did I surprise her or something?"
@@ -166,7 +169,8 @@ label global000_cbreak_2:
     show BE sad
     BE "Were you kidnapped or something...?"
     "I laughed in spite of myself."
-    MC "No! I just, I was curious about stuff we never learned in high school. Things like how to say 'hello' and 'thank you' and stuff in a bunch of languages, weird science things they don't let us play with in chemistry class, all sorts of neat stuff..."
+    MC "No! I just, I was curious about stuff we never learned in high school."
+    MC "Things like how to say 'hello' and 'thank you' and stuff in a bunch of languages, weird science things they don't let us play with in chemistry class, all sorts of neat stuff..."
     show BE happy
     BE "Gosh, when you put it like that, it doesn't sound like studying!"
     show BE happy with hpunch
@@ -289,7 +293,7 @@ label global000_AE:
     UNKNOWN "YOU..."
 
     "With only a single word, Honoka and I stopped in place as a deep paralyzing chill ran down my spine..."
-    "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} \nthe owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind..."
+    "When we caught our bearings{w} (and Honoka's bust stopped jiggling){w} the owner of the voice passed us from behind. Though I didn't see her face, my jaw nearly dropped when I got a look at her behind..."
     scene Gate Front with dissolve
     UNKNOWN "Mizutani-san, what do you think you're doing?"
     play music FMG
@@ -835,7 +839,7 @@ label global000_sit_after:
     stop music
     show AE neutral with dissolve
     play music AE
-    "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way was impossible to not draw the eye."
+    "I saw Shiori hustle out to stand by the doors ahead of nearly everyone else, her rear wobbling side to side in a way that was impossible to not draw the eye."
     MC "Matsumoto-san? What's going on?"
     AE "A more apt question would be 'Where is Utagashi-san'? This assembly is mandatory."
     AE "He's your roommate, is he not?"
@@ -888,7 +892,8 @@ label global000_homeroom:
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
 
     scene F1 Hallway with fade
-    "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule.{w} I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
+    "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule."
+    "I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
     show BE surprised
     BE "Just how many students are there here, that they need such big hallways?"
     hide BE
@@ -1089,7 +1094,8 @@ label global005:
     "I didn't have much time to think about it, though- my name was one of the first few called up. I was directed first to a small cubicle in the corner, where I was to hear the specific results of my growth factor test."
     "I went into the little corner-cubicle, halting in my tracks as soon as the nurse turned to face me."
     Nurse "Hello, Hotsure-san, please have a seat."
-    "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp. They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
+    "I sat on the stool, my amazement at the size of her lips only slightly eclipsing my amazement that she could talk without a lisp."
+    "They were so enormous and puffy I literally couldn't see her chin, the top curve of her upper lip nestled against the bottom of her nose."
     "What was more, she had decided to cover them in bright red lipstick. It was nearly impossible not to stare as she looked down at a clipboard full of papers."
     Nurse "So, your growth factor has been confirmed to be... Heh, you like them?"
     MCT "Oh crap, she caught me staring!"
@@ -1097,7 +1103,8 @@ label global005:
     "Her lips actually managed to pull out into a smile, making nearly the entire bottom half of her face hidden behind them."
     Nurse "It's all right, I know they can be surprising. Whenever I go off-campus I have to wear a surgical mask or I can hardly do anything for all the gawking and questions."
     "I just nodded and looked away, wondering what I would have to do to live a normal life."
-    Nurse "Anyways, your growth factor. According to these results, you have hyper-productive hair follicles. Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
+    Nurse "Anyways, your growth factor. According to these results, you have hyper-productive hair follicles."
+    Nurse "Not hypertrichosis, so you don't need to worry about having to shave your nose and forehead and so on, but you'll definitely need a barber more often than most."
     MC "My hair? It's always grown like a weed, that's nothing new."
     Nurse "Heh heh... Well, the degree is never certain, but remember that it's not fully manifested yet. Whatever rate of growth you're used to, it will increase by some amount, guaranteed."
     MC "And... and my sister? Does she have the same thing? Does she have anything at all?"

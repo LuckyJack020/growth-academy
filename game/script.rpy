@@ -2,51 +2,52 @@ default persistent.enable_notifications = True
 
 init python:
     config.use_cpickle = False
-    style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
-    style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
-    style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
+    #style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
+    #style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
+    #style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
 
-    style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
+    #style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
 
     eventlibrary = {}
     datelibrary = {}
+    showQuickMenu = False
     girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
-        'arcade': ("town", (400,120)),
-        'auditorium': ("school", (410,410)),
-        'cafeteria': ("school", (520,410)),
-        'campuscenter': ("school", (470,325)),
-        'classroom': ("school", (565,280)),
-        'clocktower': ("school", (470,380)),
-        'cookingclassroom': ("school", (565,375)),
-        'dormAE': ("school", (630,250)),
-        'dormBBW': ("school", (630,250)),
-        'dormBE': ("school", (630,250)),
-        'dormPRG': ("school", (630,250)),
-        'dormexterior': ("school", (600,300)),
-        'dorminterior': ("school", (645,340)),
-        'festival': ("town", (400,120)),
-        'field': ("town", (400,120)),
-        'gym': ("school", (550,225)),
-        'hallway': ("school", (565,320)),
-        'hillroad': ("town", (400,120)),
-        'library': ("school", (440,420)),
-        'musicclassroom': ("school", (565,375)),
-        'office': ("school", (480,420)),
-        'pool': ("school", (390,210)),
-        'roof': ("school", (565,320)),
-        'schoolfront': ("school", (470,470)),
-        'schoolplanter': ("school", (470,260)),
-        'schoolexterior': ("school", (400,120)),
-        'supermarket': ("town", (400,120)),
-        'town': ("town", (400,120)),
-        'track': ("school", (470,205)),
-        'woods': ("school", (400,120))
+        'arcade': ("town", (1100,650)),
+        'auditorium': ("school", (470,560)),
+        'cafeteria': ("school", (655,570)),
+        'campuscenter': ("school", (570,390)),
+        'classroom': ("school", (750,280)),
+        'clocktower': ("school", (570,500)),
+        'cookingclassroom': ("school", (740,490)),
+        'dormAE': ("school", (870,300)),
+        'dormBBW': ("school", (870,280)),
+        'dormBE': ("school", (870,260)),
+        'dormPRG': ("school", (870,280)),
+        'dormexterior': ("school", (860,375)),
+        'dorminterior': ("school", (880,380)),
+        'festival': ("town", (1100,650)),
+        'field': ("town", (1100,650)),
+        'giantdorminterior': ("town", (950,100)),
+        'gym': ("school", (730,220)),
+        'hallway': ("school", (745,375)),
+        'hillroad': ("town", (1100,650)),
+        'library': ("school", (490,560)),
+        'musicclassroom': ("school", (740,490)),
+        'office': ("school", (590,590)),
+        'pool': ("school", (440,165)),
+        'roof': ("school", (750,375)),
+        'schoolfront': ("school", (570,620)),
+        'schoolplanter': ("school", (570,265)),
+        'schoolexterior': ("school", (715,650)),
+        'supermarket': ("town", (1100,650)),
+        'town': ("town", (1100,650)),
+        'track': ("school", (570,165)),
+        'woods': ("school", (460,120))
     }
     debugenabled = True
     debuginput = ""
-    debugmappoint = False
 
     import math
 
@@ -409,6 +410,12 @@ init python:
         else:
             return 0
 
+    def debugListVars():
+        l = ""
+        for k, v in vars.items():
+            l += k + ": " + str(v) + ", "
+        return l
+
     def debugListFlags():
         l = ""
         for f in flags:
@@ -526,6 +533,17 @@ init python:
         if 3 > prgsize:
             prgsize = 3
 
+    def cleanupCostumes():
+        #BE
+        if getVar('BEMode') == 0:
+            setVar('BEMode', 'Tomboy') #Initialize Honoka, if not initialized already
+        if getVar('BEMode') == 'Tomboy':
+            if getVar('BEFeminine') >= getVar('BETomboy') + 1: #temporarily 1, to show outfit changes at all
+                setVar('BEMode', 'Feminine')
+        else:
+            if getVar('BETomboy') >= getVar('BEFeminine') + 1: #temporarily 1, to show outfit changes at all
+                setVar('BEMode', 'Tomboy')
+
     def updateSP(event):
         global spmax
         global spspent
@@ -543,7 +561,7 @@ init python:
             super(MapLine, self).__init__(**kwargs)
 
         def render(self, width, height, st, at):
-            render = renpy.Render(800, 600)
+            render = renpy.Render(1280, 720)
             if highlitevent == "" or highlitmenuchoice == -1:
                 return render
             starty = 40 + (highlitmenuchoice * 60) #highlitmenuchoice
@@ -646,13 +664,6 @@ screen daymenu:
                         #        yalign 0.5
                         #        background Solid(Color((0, 0, 0, 100)))
                         #        text eventlibrary[c]["name"]
-    #map icons (for debug test)
-    if debugmappoint:
-        for loc in locationlist:
-            fixed:
-                xpos (locationlist[loc][1][0] - 12)
-                ypos (locationlist[loc][1][1] - 12)
-                imagebutton idle im.FactorScale("Graphics/ui/icons/BE-icon.png", .25) action [SetVariable("debugmapname", loc)]
 
     add MapLine()
 
@@ -684,13 +695,6 @@ screen daymenu:
                 text("Core Event")
             else:
                 text("Optional Event")
-
-    if debugmappoint:
-        frame:
-            xalign 0.5
-            yalign 0.9
-            background Solid(Color((0, 0, 0, 100)))
-            text(debugmapname)
 
     #debug menu toggle (if debug is enabled)
     if debugenabled and highlitevent == "":
@@ -739,7 +743,7 @@ screen debugmenu:
 
         textbutton "Start Event" action Jump("debugevent")
         textbutton "List Cleared Events" action Jump("debugclearedeventlist")
-        textbutton "Map Points Toggle" action SetVariable("debugmappoint", not debugmappoint)
+        textbutton "List Variables" action Jump("debugvarlist")
 
         textbutton "List Flags" action Jump("debugflaglist")
         textbutton "Set Flag" action Jump("setflag")
@@ -828,6 +832,11 @@ screen debugmenu:
         textbutton "+" action Function(setSizeDebug, 1)
         textbutton "-" action Function(setSizeDebug, -1)
 
+screen debugvarlist:
+    vbox:
+        text debugListVars()
+        textbutton "Return" action Jump("debugmenu")
+
 screen debugflaglist:
     vbox:
         text debugListFlags()
@@ -868,12 +877,14 @@ label unsettimeflag:
     jump debugmenu
 
 label daymenu:
-    $renpy.choice_for_skipping()
     scene black with fade
-    play music Daymenu
-    #Roll random events
     python:
+        renpy.choice_for_skipping()
+        showQuickMenu = False
+        activeevent = ""
         eventchoices = rollEvents()
+        cleanupCostumes()
+    play music Daymenu
     window hide None
     call screen daymenu with fade
     window show None
@@ -889,6 +900,12 @@ label debugmenu:
     scene black
     window hide None
     call screen debugmenu
+    window show None
+
+label debugvarlist:
+    scene black
+    window hide None
+    call screen debugvarlist
     window show None
 
 label debugflaglist:
@@ -919,6 +936,7 @@ label startevent:
         minorsize = int(math.floor(globalsize/2)) #backwards compatibility
         clearedevents.append(activeevent)
         updateSP(activeevent)
+        showQuickMenu = True
         renpy.block_rollback()
         renpy.jump(activeevent)
 
@@ -926,6 +944,7 @@ label train:
     stop music
     $renpy.block_rollback()
     $spspent += 1
+    $showQuickMenu = True
     if activeevent == "Athletics":
         jump trainathletics
     elif activeevent == "Art":
