@@ -301,7 +301,7 @@ image BBW surprised = DynamicImage("Graphics/BBW/[globalsize]/surprised.png")
 image BBW angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 image BBW aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
-image BBW stern = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
+image BBW stern = DynamicImage("Graphics/BBW/[globalsize]/stern.png")
 
 image BBW sick = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
 image BBW sick-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
