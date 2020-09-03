@@ -1463,10 +1463,10 @@ label BBW010_c3:
     MC "At least help me clean these up."
     BE "What're these?"
     "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
-    show cg BBW010
+    show cg BE010
     BE "Hey, Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
-    hide cg BBW010
+    hide cg BE010
     show BE neutral at center
     "And then, as if struck by inspiration, I realized this was actually perfect."
     MC "I was just noticing that your shirt looks a bit tight. That can't be comfortable, can it?"
@@ -4439,6 +4439,7 @@ label BBW026:
         "I'd have to dig deeper, but when you aren't even in a relationship what can you do to woo someone?"
         "All my ideas came from movies or TV shows, the big romantic gestures that I had a feeling Alice would dismiss as superficial."
     else:
+        $setSize(3)
         "Getting Alice to say 'Yes' to a date had been a minor victory, but it also opened up a new level of challenges."
         "I had already put a lot of thought into what we would do come Saturday night. I had the movie and restaurant picked out, and I had even tried to set a reservation."
         "Turned out they didn't take reservations, but I was able to get the movie tickets in advance."

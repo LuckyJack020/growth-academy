@@ -13153,7 +13153,7 @@ label PRG056C_c1_1:
     "If one was paying close attention, they could notice that Honoka and Aida were both standing in a similar stance. They had their arms outstretched over their breasts, with their legs placed further back."
     "Given how this stance was meant to give their arms a complete range of motion, both of them had their breasts somewhat hanging underneath them, with Aida's belly underneath her own breasts."
     "Sitting back in my chair and taking in this display, I turned a bit and noticed Sakura looking on as well. Seeing me, she chuckled softly and leaned over to my ear."
-    Sakura "{size-6}They do what they have to do.{/size-6}"
+    Sakura "{size=-6}They do what they have to do.{/size}"
     "When all of the pieces were in, the two of them stood up, keeping an eye on the pot."
     show BE neutral
     BE "How long should we let them cook for?"

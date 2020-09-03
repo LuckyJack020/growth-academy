@@ -461,7 +461,7 @@ init python:
         if globalsize > 6:
             globalsize = 6
         prgsize = globalsize
-        minorsize = int(math.floor(globalsize/2))
+        minorsize = int(math.floor(globalsize/2)) + 1
 
     def getSkill(s):
         if s not in skills.keys():
@@ -525,7 +525,7 @@ init python:
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
-            minorsize = int(math.floor(globalsize/2))
+            minorsize = int(math.floor(globalsize/2)) + 1
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -933,7 +933,7 @@ label startevent:
     pause .5
     python:
         highlitevent = ""
-        minorsize = int(math.floor(globalsize/2)) #backwards compatibility
+        minorsize = int(math.floor(globalsize/2)) + 1 #backwards compatibility
         clearedevents.append(activeevent)
         updateSP(activeevent)
         showQuickMenu = True

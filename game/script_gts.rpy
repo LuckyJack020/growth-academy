@@ -4052,7 +4052,7 @@ label GTS032:
     GTS_S "You're in it."
     "I kneeled upon the floor, opposite Naomi as she spoke."
     MC "It's frustrating when the reality is nothing like how you pictured it in your head. When you notice your new surroundings and you're still mentally adjusting, it's never easy. I take it your first day could have gone better, then?"
-    GTS_S "Nothing specific really {i}happened{/i}, I'd say. The medical staff and faculty walked me through my new routine, where I'd be eating, how I'd keep up with my classes, stuff like that. It's nothing {i}horrible{/i} it's just different."
+    GTS_S "Nothing specific really {i}happened{/i}, I'd say. The medical staff and faculty walked me through my new routine, where I'd be eating, how I'd keep up with my classes, stuff like that. It's nothing {i}horrible{/i}; it's just different."
     MC "How's the food?"
     GTS_S "The selection is less diverse than the other campus, but it's still palatable. They serve it to you with much larger portions offered. I imagine they need to use surplus crates to provide that much food."
     GTS_S "A lot of the entrees appear to be heavy in protein and fat, so we stay fuller longer."
@@ -4338,6 +4338,7 @@ label GTS034_c1_3:
 label GTS035:
     $setProgress("GTS", "GTS037")
     scene Dorm Interior with fade
+    play music Peaceful
     "My hands shook a little as I checked my hair in the mirror once more. I knew it didn't grow that quickly yet, but my anxiety had me constantly double-checking."
     "I was going to meet Naomi's parents today. I didn't know much about them, and I wasn't sure just how much they even knew about me."
     MCT "Gotta make a good first impression."
@@ -4450,7 +4451,7 @@ label GTS035_c1_2:
     show GTS_S neutral
     GTS_S "Indeed. Thank you, Kazumi."
     Kazumi "Later! Come on, Kimiko."
-    hide Kazumi with dissolve
+    #hide Kazumi with dissolve
     "She snapped her fingers once more and the dog barked excitedly before following after her."
     "I felt a small lump form in my throat as I looked down before finally looking towards Naomi."
     MC "I'm sorry..."
@@ -4465,8 +4466,8 @@ label GTS035_c1_2:
     GTS_S "Would it be okay to head back to the dorm? I need to prepare for tomorrow."
     MC "Yeah, sure."
     "We walked back towards the school in silence as I looked down, thinking of some way to make it up to her."
-    if getFlag("GTS034_c1_3"):
-        jump GTS035_testpass
+    #if getFlag("GTS034_c1_3"):
+    #    jump GTS035_testpass
     jump daymenu
 
 label GTS035_testpass:
@@ -4486,7 +4487,7 @@ label GTS035_testpass:
     show GTS_S embarrassed
     GTS_S "Oh, I didn't realize you could hear me. I'm sorry if I disturbed your slumber."
     MC "There's no need to apologize. I needed to get up anyway to prepare for our day with your parents."
-    GTS_S "Hotsure-san... I just wanted to say thank you again for doing this. If you don't wish to do this, you can just say so. I know we've only been dating for a little while, so this may be rather sudden."
+    GTS_S "Hotsure-san... I just wanted to say 'thank you' again for doing this. If you don't wish to do this, you can just say so. I know we've only been dating for a little while, so this may be rather sudden."
     MC "Trust me, Naomi-chan. I'm certain that I want to do this. I'm interested in you, and if that means meeting your parents, then I'll do it."
     show GTS_S neutral
     GTS_S "Thank you, Hotsure-san... wait, did you just call me 'Naomi-chan?'"
@@ -4516,6 +4517,7 @@ label GTS035_testpass:
         MC "Just lead the way, since you appear to know where this place is."
 
     scene Hill Road with fade
+    play music GTS
     if getSkill("Athletics") >= 7:
         "As we made our way down the road towards the inn I began to notice just how much effort it was taking to keep pace with Naomi. Every eight steps for me was like one for her which made keeping pace a good workout."
         MCT "Man, I better not slack off on the track. Otherwise, I can't see myself keeping pace with her much longer."
@@ -4557,7 +4559,7 @@ label GTS035_testpass:
     "Her father took the lead and guided our group through the trees behind the inn onto a well-kept trail. Kazumi and Miko followed behind Akihiro while Naomi and I brought up the rear of the party."
     "As we walked I would occasionally peek back at Naomi and noticed her swiping and pushing away many branches that were far out of reach of the rest of us."
     "Her strides were still much longer than ours, forcing her to deliberately take shallower steps if she didn't want to outpace the rest of the group. Considering the alternative, keeping Naomi at the back seemed like the best option."
-    "The woods faded into grassland as we approached the cliffside. When Naomi emerged I spotted that more than a few twigs had found their way into her hair."
+    "The woods faded into grassland as we approached the cliffside. When Naomi emerged, I spotted that more than a few twigs had found their way into her hair."
     MC "Yamazaki-san, you have a bit more natural radiance than normal. Have you become one with the Earth?"
     "Naomi gives me a blank stare for a moment before hastily yanking the twigs from her hair."
     show GTS_S embarrassed
@@ -4580,7 +4582,7 @@ label GTS035_testpass:
     MC "Would you like to do anything in particular?"
     show GTS_S neutral with dissolve
     GTS_S "There are few places that I can fully enjoy, I'm afraid."
-    "I didn't like seeing Naomi with that mindset. I wanted to figure out a way to let her feel at least somewhat normal. There must have been something we could do to pass the time."
+    "I didn't like seeing Naomi with that mindset. I wanted to figure out a way to let her feel at least {i}somewhat{/i} normal. There must have been {i}something{/i} we could do to pass the time."
     MC "Why don't we walk around the shopping district? We might find something you like."
     GTS_S "Oh? I suppose there are a few essentials I could pick up while we're here."
     MC "No, I meant... fun stuff. I was offering you a gift."
@@ -4602,7 +4604,7 @@ label GTS035_testpass:
     MC "You enjoy painting, Yamazaki-san?"
     show GTS_S neutral
     GTS_S "Well, calligraphy. I enjoyed painting banners when I was a kid. There's something innately satisfying about seeing a bold, perfectly shaped line of kanji painted in an appropriate color."
-    "To me, it's like a statement using far more than writing alone. The brushstroke can accent the word, or create a dichotomy where it doesn't match the word at all."
+    GTS_S "To me, it's like a statement using far more than writing alone. The brushstroke can accent the word, or create a dichotomy where it doesn't match the word at all."
     "For example, if one were to write the character for 'anger' in a very thin, subtle brushstroke."
     MC "Would you like me to get you a calligraphy pen?"
     show GTS_S sad
@@ -4622,6 +4624,8 @@ label GTS035_testpass:
     "In addition, the set also came with several pens which allowed you to insert your own inkwell and select different tips to allow for a wide variety of unique fonts and brushstrokes. Of course, they were perfectly sized for human hands."
     MC "These are perfect."
     "They were a little on the pricier side at 3000 yen, but for such a large variety of pens, I felt that the price was fair. I paid for the pens at the checkout before returning outside."
+
+    scene Town with fade
     "Naomi was still standing across the street, standing just as tall as the light poles. She still looked uncomfortable, but as I got closer, I noticed that she was breathing deeply to calm herself."
     "Occasionally, a pedestrian would walk past to stare at her in confusion. Once I returned to her side, I showed her the sealed case."
     show GTS_S neutral with dissolve
@@ -4790,7 +4794,7 @@ label GTS035_testpass:
         "Before I could form a response he patted my arm and headed inside, leaving alone on the porch."
     MCT "Well, he certainly is blunt when he wants to be."
     show GTS neutral with dissolve
-    GTS "Is everything alright Hotsure-san?"
+    GTS "Is everything alright, Hotsure-san?"
     "I jumped a little from Naomi's sudden appearance."
     MC "Oh! Yes, sorry, just thinking over some stuff your father told me."
     show GTS happy
@@ -4867,7 +4871,7 @@ label GTS037:
     "A small speech bubble had appeared next to Naomi's portrait. I smiled in response, tapping the image to read the text message."
     GTSCell "<Hello, Hotsure-san. Are you available?>"
     MCT "Daichi had already returned to his laptop, but he chimed in, as if on cue."
-    show RM smug
+    show RM smug with dissolve
     RM "It's from Yamazaki-san, isn't it?"
     menu:
         "Send a text message back.":
@@ -4899,6 +4903,7 @@ label GTS037_c1_2:
     jump GTS037_c1_after
 
 label GTS037_c1_after:
+    scene Campus Center with fade
     MCT "Within a few minutes, I found myself at the school's central courtyard. Naomi wasn't exactly difficult to find. I was thankful that enough walking space remained for her to move around, even if she couldn't enter the building anymore."
     show GTS neutral with dissolve
     GTS "There you are~"
