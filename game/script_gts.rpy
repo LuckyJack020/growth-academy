@@ -692,7 +692,7 @@ label GTS009:
     MC "But yeah Honoka is right, exploring was the whole point for the trip so let's check it out."
     GTS "If it's truly alright..."
 
-    scene Store with fade
+    scene Pharmacy with fade
     "Entering the store I had to admit I was surprised that it seemed to mostly be just an assortment of knickknacks."
     show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
@@ -3220,8 +3220,10 @@ label GTS025:
     "She collected her items while I stood up, and upon her rising up from her spot, our increased height difference quickly became apparent, as I found myself face-to-bust with Naomi."
     "I averted my gaze as to not embarrass her, then looked up at her."
     MC "Ready to go?"
+    scene black with fade
     "From there, we took a miniature tour of the campus. We stayed outside for as long as we could, partially to take in the scenery and partially to allow Naomi total comfort, as once we entered the school that'd change."
     "Upon entering the school, Naomi immediately began to adjust herself to avoid possibly bumping into obstacles that I wouldn't have even considered. From there it was short trips to the cafeteria, library, and music club."
+    scene Roof with fade
     "The voyage came to its conclusion on the school roof. Bathed in the light of a setting sun, I breathed in deeply, taking in the aroma of the flowers Naomi had planted earlier."
     MC "This is nice, I don't really take many chances to go out late in the afternoon."
     GTS "I would recommend it. The way the breeze journeys along, the colors the sun paints across the land, and the calm the setting provides... It's truly a lovely hour."
@@ -3351,10 +3353,10 @@ label GTS027_c1_2:
     GTS "Well, that is something I wanted to ask you. You see, my hands have gotten too big to work with its intricate branches. Could you trim it?"
     MC "You sure about this? I have no idea what I'm doing."
     "Naomi pulled me down onto the ground between her and the table, planting her hands on my arms."
-    show GTS arouesd
+    show GTS aroused
     GTS "I can guide you, if you'd accept my help."
     MC "Su..su..sure, that would be great."
-    $setAfection("GTS", 1)
+    $setAffection("GTS", 1)
     show GTS neutral
     GTS "Well, let's start visualizing in our head what we want this tree to look like. The shape we want to imagine is this tree with a half dome. Once we have that image in our head apply it to the tree to see where we need to start trimming."
     MCT "Alright, let's try this. It shouldn't be too hard, right? Just a half dome."
@@ -3675,7 +3677,7 @@ label GTS030:
 
     scene School Inner with fade
     play music Schoolday
-    "As I made my way towards Naomi's dorm, I noticed a board full of flyers for upcoming events. One of the flyers is for the local Children's day Festival."
+    "As I made my way towards Naomi's dorm, I noticed a board full of flyers for upcoming events. One of the flyers is for the local Children's Day Festival."
     MCT "I'll take one of these, maybe Naomi would like to go to this."
     "After grabbing a copy of the flyer and stuffing it in my pocket, I spotted Ryoko walking my way briskly. I stopped and bowed to greet her."
     MC "Morning, Ryoko."
@@ -3690,7 +3692,7 @@ label GTS030:
     MC "You mean it's more than just a pit?"
     Ryoko "Yeah. You see, at the bottom of the pit is an entrance to these massive caverns. That's where they have their cafeteria and classrooms."
     MC "Oh, that's interesting. Still odd though, how big can these caverns be?"
-    Ryoko "If I remember right, when I visited there with a friend the ceiling had to be like 85 to 90 feet tall. The place makes everyone feel small, but at least it means no one is outgrowing it any time soon."
+    Ryoko "If I remember right, when I visited there with a friend the ceiling had to be like 25 to 30 meters tall. The place makes everyone feel small, but at least it means no one is outgrowing it any time soon."
     MC "Suppose so, better than having them stand outside or kneel beside the buildings to attend class."
     Ryoko "Before I get ahead of myself, she told me to give you this."
     "She handed me a sticky note with a four digit code on it."
@@ -3704,8 +3706,8 @@ label GTS030:
     "I turned and, after consulting a map of the school, made my way towards the giant's dorms."
 
     scene Giant Dorm Exterior with fade
-    "After following the directions Ryoko had given me, I found the chain-link fence gate with a large  number pad mounted on it."
-    "Punching in the code, I eventually made my way to the edge of a large, abandoned quarry. A wide road winds down the edge of the pit lined with weathered grey buildings."
+    "After following the directions Ryoko had given me, I found the chain-link fence gate with a large number pad mounted on it."
+    "After punching in the code, I eventually made my way to the edge of a large, abandoned quarry. A wide road wound down the edge of the pit lined with weathered grey buildings."
     "From down the road, I can see Naomi waving at me."
     GTS "Hotsure-san!"
     show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
@@ -3789,7 +3791,7 @@ label GTS030_c2_2:
     GTS "It shouldn't be a problem at all. I'd hate for you to waste your time with such a menial task."
     if getAffection("GTS") > 15: #FIXME
         $setFlag("GTS030_festival")
-        MC "Oh, I nearly forgot, would you be interested in going to the Children's day festival later this month?"
+        MC "Oh, I nearly forgot, would you be interested in going to the Children's Day festival later this month?"
         GTS "Oh my, of course, that's a wonderful idea. It has been quite some time since I last partook in a festival."
         MC "I'm happy to hear that, I'll make sure to note it on my calendar."
         MC "It's getting late, so I better be departing. Take care, Yamazaki-san."
@@ -3896,7 +3898,7 @@ label GTS031:
     GTS "One of the students here works as a teacher's assistant. They handle all the homework grading and just pass the results to the correct teacher for entry into the system."
     GTS "Even with all that, do you want to know the craziest thing about the Caverns is?"
     show GTS happy-2
-    GTS "Being inside there makes me feel normal. It's hard to describe but inside the Caverns, the ceiling is nearly 90 feet tall, so I suddenly feel normal again. I don't have to hunch over, I don't have to squeeze through doors. I'm free again."
+    GTS "Being inside there makes me feel normal. It's hard to describe but inside the Caverns, the ceiling is nearly 30 meters tall, so I suddenly feel normal again. I don't have to hunch over, I don't have to squeeze through doors. I'm free again."
     "I could see some tears forming in her eyes as she said those last words until she wiped them away. She took a moment to recompose herself before continuing."
     show GTS neutral
     GTS "Sorry about that moment I just had, the tea is still quite strong, made me tear up."
@@ -5127,7 +5129,7 @@ label GTSPRG001_c1_1:
     GTS "I'd be more than happy to do that."
     show PRG neutral
     $setAffection("PRG", 1)
-    PRG "I'm glad you'll be joining us Hotsure-san. With the three of us, it should be easy to get this started in time for next seasons competitions."
+    PRG "I'm glad you'll be joining us Hotsure-san. With the three of us, it should be easy to get this started in time for next season's competitions."
     jump GTSPRG001_c1_after
 
 label GTSPRG001_c1_2:
