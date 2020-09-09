@@ -565,7 +565,10 @@ init python:
             if highlitevent == "" or highlitmenuchoice == -1:
                 return render
             starty = 40 + (highlitmenuchoice * 60) #highlitmenuchoice
-            end = locationlist[eventlibrary[highlitevent]["location"]][1]
+            if eventlibrary[highlitevent]["location"] in locationlist:
+                end = locationlist[eventlibrary[highlitevent]["location"]][1]
+            else:
+                end = (260, starty)
 
             #blit icon image on end
             #if len(eventlibrary[highlitevent]["girls"]) == 0:
@@ -648,7 +651,7 @@ screen daymenu:
                     if eventlibrary[c]["location"] in locationlist:
                         imagebutton idle im.Crop("Graphics/ui/icons/bgicon-%s.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     else:
-                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png" % eventlibrary[c]["location"], (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
+                        imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png", (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     hbox:
                         spacing -120
                         order_reverse True
