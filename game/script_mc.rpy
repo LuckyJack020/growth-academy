@@ -722,7 +722,7 @@ label global000_sit_c1_2:
     hide BBW
     MC "Hi there, Nikumaru-san..."
     show BBW neutral
-    BBW "Alice, please, no need to be so formal. *giggle* {w}But I'll accept 'Princess' if you insist..."
+    BBW "Alice, please, no need to be so formal. In the west, it is unheard of for students to refer to classmates by their surnames."
     MC "Ah, so, uh, Alice..."
     BBW "Hm?"
     MC "Well, your seat- ah, I mean, the seat, it's a little..."

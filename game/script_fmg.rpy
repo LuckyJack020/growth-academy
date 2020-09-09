@@ -24,7 +24,7 @@ label FMG001:
     extend "Um, your name was Keisuke, right?"
     MC "Indeed it is."
     FMG "All right, Keisuke, got it... So as I was saying... What brings you to these parts?"
-    MC "Curiosity mostly, I wanted to checked out the Athletics Area to get a better layout of the school and when I got here I heard an echo that lead me to you."
+    MC "Curiosity mostly, I wanted to check out the Athletics Area to get a better layout of the school and when I got here I heard an echo that lead me to you."
     show FMG happy
     FMG "And here I was thinking you were here to check me out."
     "The way she said that sounded she was joking, but I just found it kinda awkward, still it would be a bit rude not to give some sort of reply."

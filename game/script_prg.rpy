@@ -859,7 +859,7 @@ label PRG008_2_a:
     PRG "Hotsure-san, are you sure you got the measurements right?"
     MC "Um... Sort... of..."
     show PRG sad
-    PRG "Oh, Hotusre-saaaaan! I- what am I going to do now?"
+    PRG "Oh, Hotsure-saaaaan! I- what am I going to do now?"
     MC "I'm sorry! I thought I remembered!"
     PRG "Now I have to start over! Alice is going to be so mad!"
     MC "I- I'm sorry! I should have looked it up somewhere..."

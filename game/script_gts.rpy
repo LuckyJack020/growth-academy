@@ -5141,7 +5141,7 @@ label GTSPRG001_c1_2:
     MC "I mean I'm with Yamazaki-san on this one, I am equally surprised the school didn't already have a dedicated produce garden."
     MC "So I look forward to seeing what you two can put together, I bet it'll be impressive."
     "The two girls giggle."
-    PRG "T-Thanks, Hotusre-san. We'll both try our hardest."
+    PRG "T-Thanks, Hotsure-san. We'll both try our hardest."
     jump GTSPRG001_c1_after
 
 label GTSPRG001_c1_after:
