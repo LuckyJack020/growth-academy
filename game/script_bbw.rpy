@@ -775,9 +775,10 @@ label BBW006_c2:
     BBW "Of course. The instruments belong to the school, and we're students."
     MC "All right."
     if getSkill("Art") > 3:
-        "I played a few strings in sequence. Nothing that requires real skill but it was a pleasant sounding tune."
+        "I played a few strings in sequence. Nothing that required real skill, but it was a pleasant sounding tune."
         BBW "Not bad."
         show BBW happy
+        $setAffection("BBW", 1)
         BBW "You should keep practicing, you could definitely make the music club if you really wanted to."
         BBW "I'll see you in class, Keisuke."
         hide BBW with dissolve
@@ -4255,16 +4256,15 @@ label BBW024_c2_3:
 
 label BBW025:
     $setProgress("BBW", "BBW026")
-    $setSize(3)
     scene Cafeteria with fade
-    "The music club was meeting today, which meant Alice wouldn't have her dinner until later."
-    "I had to pass along a payment for a delivery to her. That was the reason I gave myself for waiting to get my own dinner."
+    "The music club had a meeting today, which meant Alice was having her dinner later than usual."
+    "I had to pass along a delivery payment to her... which was the reason I gave myself for waiting to get my own dinner until later, too."
     "I could have rushed to meet her before the meeting started, get in and out of the music room, but..."
     "Anyway, I found her at her usual table."
     "I wouldn't say this out loud, but it was hard to miss her."
     show BBW neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    "I had noticed it in class this morning. While her clothes still fit her perfectly, she was unmistakably heavier."
-    "I assume she had been gaining steadily, but today was the point when I took a good look at her and realized that she was bigger."
+    "I had noticed it in class this morning. She was eating a bag of potato chips before the lecture started."
+    "She had been gaining steadily, but I'd noticed an ever so slight increase in appetite on top of this."
     "It didn't seem to bother her. She had been most pleasant all day, and right now she looked to be enjoying her dinner."
     "Maybe-"
     pause 1
@@ -4278,13 +4278,13 @@ label BBW025:
     BBW "Oh, you don't have to rush off. Have a seat."
     BBW "Aida made a bit too much flatbread. Help yourself."
     MC "Thank you."
-    MCT "It does look like there's more food than usual. Is her appetite growing with her body?"
+    MCT "It does look like there's more food than usual. Is her appetite truly growing with her body?"
     "I meant to sneak a quick peek at Alice's belly, round enough that it filled most of her lap when she sat down."
     show BBW neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "I must have been staring, because when I looked up I found her watching me."
     show BBW neutral at center, Transform(zoom=1.0)
     MCT "Crap. Say something before she does."
-    MC "I hope I'm not overstepping any boundaries, but I like how you're carrying your new weight."
+    MC "I hope I'm not overstepping any boundaries, but I like how you're carrying your weight."
     "It sounded a bit more suave in my head, and when she didn't respond at first I was worried she had taken it the wrong way."
     "But then she fluttered her eyes and laughed."
     BBW "That is rather bold, Keisuke. But I like your directness."
@@ -5171,7 +5171,7 @@ label BBW030_c1_2:
     jump daymenu
 
 label BBW031:
-    $setSzie(3)
+    $setSize(3)
     $setProgress("BBW", "BBW032")
     scene Dorm Interior with fade
     "Alice's illness had only lasted 24 hours, which meant only one thing."
@@ -6867,8 +6867,10 @@ label BBW039:
     $setProgress("BBW", "BBW040")
     #Time: Morning
     scene Classroom with fade
-    "As I app I saw her in the cafeteria eating a hearty breakfast and looking as robust as ever."
-    "If the place hadn't been so crowded I would have joined her. Would have been a good time to confirm a plan for our date."
+    "The day had come for my second date with Alice, with only a few lectures between now and then."
+    "Though strangely Alice had not yet arrived and would soon be late."
+    "As I recall, I saw her in the cafeteria eating a hearty breakfast and looking as robust as ever this morning."
+    "If the place hadn't been so crowded I would have joined her. It would have been a good time to confirm a plan for our date."
     MCT "But she's usually good about showing up early for class. I can ask her then."
     MCT "Speak of the..."
     "The thought died unfinished. Not because referring to Alice as a devil was wrong, but because-"
@@ -6903,7 +6905,7 @@ label BBW039:
     BBW "{i}Sigh{/i}"
     show BBW happy
     BBW "Let's just worry about class first, okay?"
-    RM "Everyone sit down."
+    HR "Everyone sit down."
     scene black with fade
     play sound ClockTower
     pause 4
@@ -6915,7 +6917,7 @@ label BBW039:
     show BBW casual-happy with dissolve
     BBW "Hello, Keisuke."
     BBW "Shall we be off?"
-    MC "If you're ready, let's."
+    MC "If you're ready."
     "We started walking down the hill to town."
     "It was still rather light, the days were getting longer, so I kept stealing glances at Alice."
     "Out of her school uniform and in a more casual - but still fashionable and presumably costly - outfit her recent growth looked even more prominent."
@@ -7734,8 +7736,8 @@ label BBW042:
     BBW "This is a bothersome experience. If it were possible to call a piece of art 'insolent,' I would."
     MC "Is it giving you trouble? It looks really good."
     show BBW stern
-    "The landscape itself is acceptable, and I am satisfied with the colors."
-    "I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
+    BBW "The landscape itself is acceptable, and I am satisfied with the colors."
+    BBW "I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
     "I took a longer look at the painting, paying attention to the different shades of greens in the grass and blues in the skies. There was more detail there than I had originally noticed."
     MC "So what's the problem?"
     BBW "The lighting. You see how the sun is supposed to be coming from the east?"
@@ -7968,9 +7970,9 @@ label BBW045_art:
     MC "Yes, Starry Night by Van Gogh."
     BBW "Good, now tell me about the picture."
     if getSkill("Art") > 4:
-        "It was painted in 1898, and it's debatably his most famous piece, alongside Sunflowers."
+        MC "It was painted in 1898, and it's debatably his most famous piece, alongside Sunflowers."
     else:
-        "It was painted in the 1800s right? And it's obviously a famous picture."
+        MC "It was painted in the 1800s right? And it's obviously a famous picture."
     BBW "You're not wrong Keisuke, but anybody can list simple facts about a painting, an individual of good tastes would describe the artistic methods and techniques at play."
     BBW "Notice how each stroke of the brush was {i}physically{/i} done; quick and short individual strokes- but many of them."
     BBW "This is a staple of Van Gogh's work and will allow you to easily identify one of his paintings."
@@ -8285,7 +8287,7 @@ label BBW045_wine:
             Misaki "Now then, here comes Yamada-san with the next wine."
             "The waiter was just finishing with the last group and heading towards us."
     Waiter "Sir, Madam, Usuda-san, 'Kensington Thoroughfare'."
-    "Again we each took the glass closest to us and experienced the wine."
+    "Again, we each took the glass closest to us and experienced the wine."
     MCT "Oh wow, that is very tingly. That means high acidity."
     MCT "Too high for some, but not so absurdly high that everybody would be displeasing."
     MCT "There is also not much fruit in this, it is quite bitter."

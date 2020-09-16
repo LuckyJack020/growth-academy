@@ -470,7 +470,8 @@ image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side-surp
 image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-angry.png")
 image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-aroused.png")
 image side GTS_S embarrassed = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
-image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side-shy.png")
+image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
+image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
 image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png")
 image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique.png")
 
@@ -600,7 +601,7 @@ define audio.ReleaseArrow = "Audio/SFX/sfw_releasearrow.wav"
 init 1 python:
     eventlibrary['global005'] = {"name": "And the Results Are In", "girls": [], "type": EventTypeEnum.OPTIONALCORE,        "location": "auditorium",    "priority": PrioEnum.ALL, "next": "", "obsflags": [],           "conditions": [[ConditionEnum.TIMEFLAG, "testday"]]}
     eventlibrary['RM001'] = {"name": "Getting to Know Your Roommate", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,  "location": "dorminterior",  "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": []}
-    eventlibrary['RM002'] = {"name": "You and Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": [],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
+    eventlibrary['RM002'] = {"name": "You and Yuki", "girls": ["minor"], "type": EventTypeEnum.OPTIONAL,                   "location": "hallway",       "priority": PrioEnum.NONE, "next": "", "obsflags": ["size5"],          "conditions": [[ConditionEnum.EVENT, "RM001"]]}
 
     #Causes minor character scenes to be disabled if thime is between the first and second time in a tuple
     #(In other words, if XOR any two scenes in a tuple, then disable optional events with minor characters)
@@ -712,8 +713,8 @@ init 2 python:
     eventlibrary['BBW034'] = {"name": "Smells Like Team Spirit", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                          "location": "classroom",        "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW035", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
     eventlibrary['BBW035'] = {"name": "Styling and Profiling", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                            "location": "town",             "priority": PrioEnum.NONE, "sp": 5,     "next": "BBW036", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
     eventlibrary['BBW036'] = {"name": "It's Showtime", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW037", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
-    eventlibrary['BBW037'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW039", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
-    eventlibrary['BBW039'] = {"name": "", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW040", "obsflags": [],                               "conditions": []}
+    eventlibrary['BBW037'] = {"name": "A Meeting with the Boss", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "auditorium",       "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW039", "obsflags": ["BBWnowork", "BBWclubfail"],     "conditions": []}
+    eventlibrary['BBW039'] = {"name": "A Pleasant Day in Pleasant Town", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                                 "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "BBW040", "obsflags": [],                               "conditions": []}
     eventlibrary['BBW040'] = {"name": "Helping Hands", "girls": ["BBW", "PRG"], "type": EventTypeEnum.CORE,                                                             "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW041", "obsflags": [],                               "conditions": []} # >=20 affection
     eventlibrary['BBW041'] = {"name": "Beck and Call", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW042", "obsflags": [],                               "conditions": []}
     eventlibrary['BBW042'] = {"name": "The Bigger Picture", "girls": ["BBW"], "type": EventTypeEnum.CORE,                                                               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BBW045", "obsflags": ["BBWnowork"],                    "conditions": []}
@@ -928,7 +929,7 @@ init 2 python:
     eventlibrary['PRG007'] = {"name": "A (Soft) Wall to Hide Behind", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,         "location": "cafeteria",        "priority": PrioEnum.NONE,              "obsflags": [],                         "conditions": []}
     eventlibrary['PRG011'] = {"name": "Homerun!", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                             "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['PRG018'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                      "location": "campuscenter",     "priority": PrioEnum.NONE,              "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['PRG026b'] = {"name": "", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                                    "location": "classroom",        "priority": PrioEnum.ALL,               "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.NOROUTELOCK, "PRG"], [ConditionEnum.NOROUTELOCK, ""]]}
 
     eventlibrary['PRG005'] = {"name": "Hold on Tight", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,                    "location": "auditorium",       "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['PRG010'] = {"name": "Rapidly Curvy", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,                    "location": "cookingclassroom", "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['PRG026b'] = {"name": "", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                                    "location": "classroom",        "priority": PrioEnum.ALL,               "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.NOROUTELOCK, "PRG"], [ConditionEnum.NOROUTELOCK, ""]]}

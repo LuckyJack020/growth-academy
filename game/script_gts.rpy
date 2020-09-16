@@ -4338,6 +4338,7 @@ label GTS034_c1_3:
     jump daymenu
 
 label GTS035:
+    $lockRoute("GTS")
     $setProgress("GTS", "GTS037")
     scene Dorm Interior with fade
     play music Peaceful
@@ -4662,7 +4663,7 @@ label GTS035_testpass:
     MC "Have you ever been to a carnival?"
     GTS_S "I can't recall having gone to one previously. This is all quite new to me."
     MC "Oh, that's a shame; these places are always good fun. My family used to visit a seasonal one that would pop up in the town near us, always had great food and activities."
-    "My sister always wanted to do the ring toss game even though I told her it was rigged."
+    MC "My sister always wanted to do the ring toss game even though I told her it was rigged."
     GTS_S "That's adorable, you ought to bring your sister around some time. I don't think we've formally met."
     MC "I could ask her if she's available sometime. She's typically off doing something else with Yuki."
     "Naomi was about to respond when a carnie rushed up to me and began speaking rather fast ."

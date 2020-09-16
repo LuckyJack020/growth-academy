@@ -13503,7 +13503,7 @@ label AE058_c2_after:
     AE "I mean, I wanna pass, right? Everyone {i}wants{/i} to pass their classes. If you're asking why I try with such vigor, well, I suppose it's just in my nature. Being studious is part of who I am."
     MC "Yeah, but usually people just forget that kinda stuff when they pass the class. You just seem to absorb every little detail. That seems like more than just 'being studious' to me."
     show AE happy
-    AE "Well, aren't you Mr. inquisitive."
+    AE "Well, aren't you Mr. Inquisitive."
     show AE neutral
     AE "Well... I simply did everything I could to make sure my teacher's efforts never went to waste."
     show AE happy

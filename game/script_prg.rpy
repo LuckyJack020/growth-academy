@@ -2173,7 +2173,7 @@ label PRG017_c1_2:
     show PRG neutral
     $setAffection("PRG", 2)
     PRG "T-Thank you, H-Hotsure-san. Although I'm not sure I'd call myself that..."
-    MC "Well, I'm here to tell you that you are definitely something special. No one is really 100\% in love with their own appearance. Sometimes, it just takes an outsider's point of view to see your own finer points."
+    MC "Well, I'm here to tell you that you are definitely something special. No one is really 100%% in love with their own appearance. Sometimes, it just takes an outsider's point of view to see your own finer points."
     show PRG aroused
     "Aida became even redder still, wringing her hands nervously as she looked up at me and flashed her brilliant smile once more."
     PRG "T-Thank you so much, Hotsure-san. I'm glad I have your point of view. I-I was thinking about going to practice for the second round tournament. W-Would you like to come help?"
@@ -12668,7 +12668,7 @@ label PRG056B:
     scene Dorm Exterior with fade
     "By the time I reached the dorms, huge mud puddles were forming in the lawn, and water was starting to pool on the sidewalks."
     "Somehow, even with all of the rain, and the booming thunder overhead, I managed to hear my phone's ringtone over it all. I ducked under the roof overhang from the girl's dorm and pulled my phone from my pocket."
-    "Like the other 99% of me, my phone was also wet, but still operable. I swiped to answer and held the phone to my ear, not even looking to see who was calling."
+    "Like the other 99%% of me, my phone was also wet, but still operable. I swiped to answer and held the phone to my ear, not even looking to see who was calling."
     MC "Hello?"
     PRG "Morning! Did you see the email today?"
     MC "What email?"
@@ -13119,7 +13119,7 @@ label PRG056C_c1_1:
     MC "Well, you have this sort of look that crosses your face when you're cooking. Sort of a cross between determination and excitement."
     MC "It almost looks like you're enjoying the food even before it comes out of the pan."
     MC "That was one of the reasons that I thought you should join the cooking club in the first place. You had that look then too."
-    show PRG satisfied
+    show PRG happy
     PRG "I just get so into it. Like... I start thinking about how good it will taste, and how many different ways I could take the meal from that point."
     PRG "I start thinking about how people will react to it, and how I could be more efficient the next time I make the same dish."
     PRG "Then, around that time, the smell hits me."
@@ -13175,14 +13175,14 @@ label PRG056C_c1_1:
     Sakura "You sure? That's where they always are."
     "Getting up, Sakura scooted past Honoka and over to Aida, flipping through the drawer."
     Sakura "Who moved them?"
-    show BE concerned
+    show BE surprised #concerned
     BE "Uh, not to rush you two, but the beef is about done!"
     "Sakura turned, looking toward the row of sinks."
     Sakura "There! Drying rack!"
     "Sakura dashed across the room, her body jiggling with each step. She took the cooling rack in her good hand and hurried back to Aida, passing it to her."
     "Aida slid the rack down the counter as a bartender would, straight to Honoka."
     "Honoka slammed her hand down on it and plucked the steak from the oil, laying each piece down on the rack one by one."
-    show BE embarrassed
+    show BE surprised #embarrassed
     show PRG neutral
     BE "Hah... that was close."
     PRG "Well, it wouldn't have been the end of the world if they got overdone. The steak would've just been a little more done. But, rare is how gyukatsu is traditionally served."
@@ -13258,7 +13258,7 @@ label PRG056C_c1_1:
     BE "Don't leave us hanging, girl. It's not a team without you."
     show PRG unique-happy
     "Aida's gaze went to each of us before she finally put her hand in the pile."
-    show PRG excited
+    show PRG happy #excited
     PRG "L-Let's do it!"
     BE "All right! One, two, three!"
     "ALL" "TEAM KODAMA!!"
@@ -13278,11 +13278,11 @@ label PRG056C_c1_2:
 
     scene Cooking Classroom with fade
     "A small mountain of green beans, onions, and peas was on the floor, with a frying pan still slightly ringing beside it. Honoka stood over it, her hands still open from the initial drop."
-    show BE embarrassed with dissolve
+    show BE surprised with dissolve #embarrassed
     BE "Eheh... hey, Kei-chan."
     MC "Morning. Looks like you guys are already having fun."
     BE "Yeah. Define fun."
-    show BE embarrassed at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show BE surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve #embarrassed
     show PRG worried at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     "Aida came over from the other side of the kitchen. Sakura was in her usual spot at the table, her notebooks in front of her."
     PRG "It happens to everyone, Honoka."
