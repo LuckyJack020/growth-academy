@@ -1,4 +1,5 @@
 default persistent.enable_notifications = True
+default persistent.enable_nsfw = True
 
 init python:
     config.use_cpickle = False
@@ -504,6 +505,9 @@ init python:
 
     def isRouteEnabled(girl):
         return routeenabled[girl] and (routelock == girl or routelock == "")
+
+    def isNSFW():
+        return persistent.enabled_nsfw
 
     def setTimeFlag(flag):
         if flag not in timeflags:

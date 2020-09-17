@@ -720,6 +720,18 @@ screen preferences():
                     textbutton _("After Choices") action Preference("after choices", "toggle")
                     textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
 
+                vbox:
+                    style_prefix "radio"
+                    label _("Notifications")
+                    textbutton _("On") action SetField(persistent, "enable_notifications", True)
+                    textbutton _("Off") action SetField(persistent, "enable_notifications", False)
+
+                vbox:
+                    style_prefix "radio"
+                    label _("Enable NSFW Scenes")
+                    textbutton _("On") action SetField(persistent, "enable_nsfw", True)
+                    textbutton _("Off") action SetField(persistent, "enable_nsfw", False)
+
                 ## Additional vboxes of type "radio_pref" or "check_pref" can be
                 ## added here, to add additional creator-defined preferences.
 
