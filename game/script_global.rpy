@@ -7,6 +7,7 @@ define AE = Character('Shiori', color="#FF3300")
 define BBW = Character('Alice', color="#CC33FF")
 define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BBWCell")
 define BE = Character('Honoka', color="#FCCF20")
+define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
 define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
@@ -103,6 +104,7 @@ image Office = "Graphics/ui/bg/office_day.png"
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
 image Music Classroom = "Graphics/ui/bg/music_day.png"
+image Art Classroom = "Graphics/ui/bg/NYI.png"
 image Gym = "Graphics/ui/bg/auditorium.png"
 image Track = "Graphics/ui/bg/track_day.png"
 image Roof = "Graphics/ui/bg/roof_day.png"
@@ -130,6 +132,7 @@ image Supermarket = "Graphics/ui/bg/supermarket_day.png"
 image Art Gallery = "Graphics/ui/bg/NYI.png"
 image Mountains = "Graphics/ui/bg/mountains_day.png"
 image Japanese Room = "Graphics/ui/bg/japaneseroom_day.png"
+image Club = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -532,6 +535,7 @@ image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-unique = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 
 image side MC = "Graphics/side/mc.png"
+image side BECell = DynamicImage("Graphics/side/BE-[globalsize].png")
 image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
@@ -570,6 +574,7 @@ define audio.GTS = "Audio/BGM/scene_GTS.ogg"
 define audio.RM = "Audio/BGM/scene_RM.ogg"
 define audio.PRG = "Audio/BGM/scene_PRG.ogg"
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg"
+define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg"
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
 define audio.Busy = "Audio/BGM/scene_busy.mp3"
 define audio.Festival = "Audio/BGM/scene_festival.mp3"
@@ -808,6 +813,7 @@ init 2 python:
     eventlibrary['FMG006'] = {"name": "Crying Over Spilled Milk", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                             "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,                              "location": "dormexterior",             "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
+    eventlibrary['FMG013'] = {"name": "Head Strong", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMG016'] = {"name": "Fate at the Café", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",            "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMGBBW001'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,       "location": "town",                     "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
 

@@ -8,7 +8,7 @@ init python:
     #style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
 
     #style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
-
+    activeevent = ""
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
@@ -384,6 +384,11 @@ init python:
                 secondGirl = girl
         return secondGirl
 
+    def isHighestSkill(s):
+        if getSkill(s) >= getSkill("Art") and getSkill(s) >= getSkill("Academics") and getSkill(s) >= getSkill("Athletics"):
+            return true
+        return false
+
     def isEventCleared(event):
         return event in clearedevents
 
@@ -507,7 +512,7 @@ init python:
         return routeenabled[girl] and (routelock == girl or routelock == "")
 
     def isNSFW():
-        return persistent.enabled_nsfw
+        return persistent.enable_nsfw
 
     def setTimeFlag(flag):
         if flag not in timeflags:
@@ -525,6 +530,9 @@ init python:
             else:
                 return
 
+    def getSize():
+        global globalsize
+        return globalsize
     def setSize(size):
         global globalsize, prgsize, minorsize
         if size > globalsize:

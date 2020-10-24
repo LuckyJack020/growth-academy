@@ -6751,3 +6751,176 @@ label BE038:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label BEGTS001:
+    #optional
+    #1) Honoka has more Feminine points than Tomboy points.
+    #2) Kei has seen Honoka's dress sprite at least once. (BE20 has been cleared)
+    scene Dorm Exterior with fade #evening
+    #need bgm
+    "I walked out of my dorm to get some fresh air. The sun was hanging just above the horizon, tinting the sky in a vibrant orange."
+    "I pulled my arms back, then folded my hands together while rotating my neck slowly to give my body a good stretch. I had been sitting down so long during my lectures, I had become stiff."
+    "Afterward, I checked my phone for any new messages. There was a single unread text from Honoka."
+    BECell "<Thank you for a wonderful evening.>"
+    "I read the text with a smile, then decided to send a response. I took a seat upon one of the benches outside the dorm while I typed."
+    MCCell "<You're welcome, Honoka.>"
+    "Within seconds, I saw Honoka's icon show that she was typing a message."
+    BECell "<Oh hey, Kei-chan! Are you doing anything right now?>"
+    MCCell "<Not in particular.>"
+    BECell "<Would you like to meet up on the roof?>"
+    "I thought it over for a few seconds before responding. Something seemed different about Honoka's texts, but I couldn't quite pin down what it was."
+    MCCell "<Sure thing. I'll see you in a bit.>"
+
+    scene Roof with fade #evening
+    "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
+    "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
+    #Forces Feminine costume
+    if getVar("BEMode") == "Tomboy":
+        $setVar("BEMode", "Feminine")
+        $setFlag("BEGTS001_TomFix")
+    show BE happy with dissolve
+    "Honoka was there to greet me when I arrived."
+    BE "Hey, Kei-chan! Glad you could make it!"
+    MC "Nice to see you too, Honoka. What'd you call me up here for?"
+    show BE neutral
+    BE "Oh, nothing special. I just wanted to talk. Catch up a bit."
+    "I gave a small nod in response."
+    MC "Ah, okay. Wanna sit down?"
+    show BE happy
+    BE "Certainly. Let's."
+    show BE neutral
+    "Honoka took my hand, and we walked towards a bench upon the roof. I took the left side while she sat on the right."
+    "We both reclined, watching the sun slowly begin to disappear under the treeline. We still had about an hour before the school locked down for the evening, but I made sure to keep my eye on the clock."
+    "Honoka turned towards me. The sunlight reflected off of her hair clip as she turned."
+    BE "How have you been handling your factor since you arrived? Has the medical staff given you any... special instructions?"
+    MC "Special instructions?"
+    show BE angry
+    BE "Yeah, you know, like... stuff to do daily between classes."
+    MC "Oh, you mean that. Not really. I was told to avoid cutting my hair so they can get an accurate reading on its limits, but other than that, they just... check up on me every week."
+    show BE neutral
+    BE "I'm glad, I'm glad. We can forget about the factor stuff every now and then while we're here. Sure, it'll always be part of us, but it shouldn't control our lives."
+    show BE happy
+    BE "This... this is very nice, though. I'm happy that we can take time off to just... breathe, and forget about the world."
+    MC "You and me both."
+    show BE neutral
+    "We sat beside each other for a few more moments. That's when I heard the pattering sounds of light footsteps approaching from the stairwell."
+    "Within seconds, the door clicked open. We were greeted with a familiar face."
+    show GTS sad-2:
+        xpos 0.0 xanchor 0.5 yalign 1.0 xzoom -1.0
+        linear 2 xpos 0.2
+    play music GTS
+    "Naomi stepped through the door, arriving on the roof. She held a small watering can in her hands."
+    GTS "Oh, ah. I apologize. I didn't think anyone else was up here."
+    show BE happy
+    BE "Hey, Naomi-chan! It's been a while, hasn't it?"
+    MC "Good evening, Yamazaki-san."
+    show BE happy:
+        linear 1 xpos 0.8
+    GTS "Am I interrupting something?"
+    menu:
+        "Not at all. We're just hanging out.":
+            show GTS neutral
+            GTS "Ah, that's fortunate. I just wanted to make sure the rooftop planters were watered."
+        "Well, Inoue-san wanted to show me something...":
+            GTS "Ah, is that so? Well, if that's the case, I suppose I can wait."
+            show BE surprised
+            BE "No, no! It's fine, I insist. It's not like we own the rooftop or anything!"
+        "Oh! Are you checking on your garden?" if isEventCleared("GTS008"):
+            show GTS happy
+            GTS "That's exactly right. Have you come to appreciate the planters too?"
+            show BE neutral
+            BE "Actually, we were just talking. They're nicely maintained, though!"
+        "Oh! Are you checking on your garden?(disabled)" if not isEventCleared("GTS008"):
+            pass
+    show BE neutral
+    "I could tell that Naomi was scanning her eyes over Honoka with a look of confusion. She clearly had noticed something different."
+    show GTS surprised
+    "Her expression slowly turned from one of confusion to one of astonishment."
+    "Honoka and I sat there silently for a few moments, while Naomi kept her focus on Honoka. After a few seconds had passed, Naomi spoke."
+    GTS "Inoue-san, I... didn't recognize you at first."
+    show BE doubt
+    BE "What do you mean? Am I that easy to mistake for someone else?"
+    show GTS sad-2
+    GTS "No, I didn't mean it like that. I meant that your attire is different."
+    show GTS neutral-2
+    "Naomi paused for a few seconds as she approached the two of us to get a closer look."
+    GTS "You look incredible, Inoue-san. I love how you're dressed."
+    show BE embarrassed
+    BE "Aww. Thanks, Naomi-chan!"
+    GTS "What prompted the wardrobe change? Just a personal preference?"
+    show BE neutral
+    BE "Yeah, pretty much! That, and Kei-chan seems to like it."
+    show GTS unique-2
+    GTS "I see. Well, he's certainly helped you pick out a lovely outfit."
+    show BE embarrassed
+    BE "Oh stop, Yamazaki-san! You're flattering me!"
+    GTS "The praise is well deserved, though!"
+    "Honoka and Naomi continued to talk while Naomi slowly watered the rooftop planters."
+    MC "Well, you two certainly seem to be getting along."
+    show GTS neutral-2
+    GTS "There usually isn't anyone here during the evening. You caught me off guard, is all~"
+    show BE happy
+    BE "Still. It's been a while since we've all been together like this. We sat next to each other at orientation, right?"
+    GTS "That we did."
+    show BE sad
+    BE "Gosh, it feels like that was forever ago, though. I know it hasn't been THAT long, but--"
+    show GTS unique-2:
+        linear 0.5 xpos 0.5
+    GTS "Inoue-san?"
+    show BE neutral
+    BE "Yeah?"
+    GTS "Would you like to hang out more often?"
+    "Honoka's eyes darted to attention as Naomi spoke. Naomi had finished tending to the planters, and was now looking directly at Honoka."
+    show BE happy
+    BE "Well... sure! That'd be fun! Do you have any particular place in mind?"
+    show GTS unique-2:
+        linear 0.5 xpos 0.2
+    show GTS happy
+    GTS "A few. Shall I add your number so we can make the arrangements?"
+    BE "Sure, sure!"
+    "I watched as Naomi and Honoka pulled out their phones to add each other's numbers."
+    show BE neutral
+    BE "I guess I'll see ya around, then!"
+    show GTS neutral-2
+    GTS "We certainly shall. I'll see you then, Inoue-san."
+    MC "See you later, Yamazaki-san."
+    "Naomi gave us both a respectful, graceful bow as she opened the door to the stairwell and returned to the school building."
+    show GTS neutral-2:
+        xzoom 1.0
+        linear 2 xpos 0.0
+    play music Schoolday
+    show BE neutral:
+        linear 2 xpos 0.5
+    BE "It's about time we head out too, isn't it, Kei-chan?"
+    MC "Would you like me to walk you back to your dorm?"
+    show BE happy
+    BE "I'd like that very much!"
+
+    scene Campus Center with fade #eve
+    show BE neutral with dissolve
+    "Honoka and I walked down the stairwell and exited the school building. The sun was still hanging just above the treeline, so we had a few hours left in the day."
+    BE "I'm glad that Naomi-chan is in such a good mood. We really hit it off today, huh?"
+    MC "She was the first person we met when we first arrived here, after all. Would you say that it's more than coincidence?"
+    show BE happy
+    BE "It might! She seemed to really like my new clothes."
+    MC "You know... depending on where you two end up hanging out, you could surprise her with your dress."
+    show BE angry
+    BE "Something that formal? For a casual get-together?"
+    MC "Well, no. It'd have to be something appropriate. I'm sure she'd love it, though."
+    show BE neutral
+    BE "We could bring her along for a nice meal at that sushi place, or... see a show at the theater! I wonder if Naomi-chan would be into arcades?"
+    MC "As long as she fits under the ceiling, she might."
+    BE "Right, right... well. Regardless of what we end up picking, this was fun!"
+    show BE happy
+    "Honoka turned towards the cherry tree with a smile as she began to depart."
+    MC "It was! I'll see you around, Honoka."
+    BE "See ya!"
+
+    scene black with fade
+    "As I headed back to my own dorm, I reflected on what had happened."
+    "I just witnessed the beginnings of what could potentially be a strong friendship between Inoue-san and Yamazaki-san. Was it really just her change in clothes that sparked their interest, or did they already have that kind of bond?"
+    "Regardless of what it was, I felt good today. I was very happy to see them get along, since our meeting was partially responsible."
+    "I unlocked the door to my dorm room, then headed back inside for the evening."
+    if getFlag("BEGTS001_TomFix"):
+        $setVar("BEMode", "Tomboy")
+    jump daymenu

@@ -10925,6 +10925,7 @@ label AE050:
     AE "Mmn.~"
     "As we kissed, I felt the warmth of her hand gently caress my face. I grabbed her waist and pulled her in even tighter as we started to rock back and forth together."
     "Now realizing the true reason why I'd been called to her room so late in the night, I decided to take a chance, as I grabbed two handfuls of that plump ass."
+    #NSFW
     AE "MMMM!"
     MCT "Ah! W-Was I wrong to-?"
     AE "Mmm~"
@@ -12990,6 +12991,7 @@ label AE056_c1_after:
     AE "N-No. It's nothing."
     AE "Here, let me get a bit more comfortable as well."
     play music Steamy
+    #NSFW: short(?)
     "As we sat together on the edge of her bed, her demeanor seemed to change, she pushed into me more forcefully as we sat down, her hips spilling over the top of mine and pushing into my side."
     "As we kissed, I took of her headband and placed it amongst her books, causing her raven black hair to fall loosely in front of her glasses before she sweeped one side of her locks behind her ear."
     "As my hands rode gingerly up her skirt, I reared my hands back and gave a hearty slap to her sizable rear."
@@ -13004,6 +13006,7 @@ label AE056_c1_after:
     show AE happy
     AE "Nye-he~"
     stop music
+    #NSFW
     ##Door open SFX#
     Tako "H-WOAH MY GOD-!"
     show AE surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
@@ -14119,6 +14122,7 @@ label AE061:
     "In a motion as quick as it was surprising, she turned, grabbing her skirt which had swished with her movement. She lifted it up to reveal..."
     MC "A-Ah..."
     play music Steamy
+    #NSFW
     "The most revealing thong I'd ever seen."
     MC "W-What?!"
     "Two brown strings held a piece of cloth in place in the middle of her ass. A fist sized triangle with the markings of a leopard, it's inadequate size making minor indents in the tender flesh of her ass."

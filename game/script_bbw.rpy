@@ -7717,7 +7717,7 @@ label BBW041_FMG000:
 
 label BBW042:
     $setProgress("BBW", "BBW045")
-    scene Classroom with fade
+    scene Art Classroom with fade
     play music Rain
     "After classes I had wanted to meet up with Alice to touch base on if any deliveries were needed. She wasn't answering any texts, but when I found Aida in the cooking classroom she told me Alice was probably in the arts room."
     "I did indeed find her there, standing at an easel. The painting she had been working on in class earlier that day was in front of her."
