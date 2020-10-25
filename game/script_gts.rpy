@@ -131,7 +131,7 @@ label GTS002_c2:
     GTS "Their name is Greek, meaning 'Daughter of the Wind,' and they represent sincerity."
     "As she handed me the last bag, which displayed white, five-petaled flowers I could see her smiling warmly as she finished explaining."
     MC "Heh, I can tell you really have a thing for flowers."
-    "Her smiled quickly vanished and instead a light blush formed across her cheeks."
+    "Her smile quickly vanished and instead a light blush formed across her cheeks."
     show GTS embarrassed
     GTS "O-oh yes, indeed I do. Sorry for getting rather carried away there. I didn't mean to just ramble on like that. I surely hope you don't mind."
     MC "Not at all, it's nice to learn a little bit about you, really. I also admit it was interesting to learn a bit about these flowers as well, I wasn't aware they have hidden symbolic meanings."
@@ -297,7 +297,7 @@ label GTS004_after:
     MC "How well did you take in what we learned in homeroom today?"
     "She gave the smallest sigh as she reached to her back and retrieved a rather large book."
     GTS "Unfortunately, not as well. Science is proving that it might be harder than I originally thought."
-    GTS "As you know, our professor seems rather adamant that we start of the year sooner rather than later, and regrettably the crash course we were given made it a little difficult to retain all the information we went over."
+    GTS "As you know, our professor seems rather adamant that we start off the year sooner rather than later, and regrettably the crash course we were given made it a little difficult to retain all the information we went over."
     MC "Well I don't think we're expected to get everything memorized from the start. I'm sure it'll ease up a bit in the next few days."
     GTS "We were told that we'd be given a quiz at the end of this week so I can't afford to fall behind. I'll just have to shift my focus a bit, keep my English studies to an hour while devoting more of the afternoon to this."
     MC "Heh... Why not just get a study partner? I remember when I was younger one of my teachers told me that the best way to learn and retain knowledge was to teach others."
