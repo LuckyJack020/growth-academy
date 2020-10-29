@@ -1403,7 +1403,7 @@ label FMG014_c1_3:
     jump daymenu
 
 label FMG015:
-    $setProgress("FMG", "FMG016a")
+    $setProgress("FMG", "FMG016")
     scene Town with fade
     play music Hallway
     "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."
@@ -1504,7 +1504,7 @@ label FMG015:
     "For the next hour and a half, I played various arcade games with Akira. Spending time with her, either exercising or just hanging out, has been enjoyable and exhilarating."
     jump daymenu
 
-label FMG016:
+label FMGOPT016:
     scene School Planter with fade
     play music Hallway
     "It was such a beautiful day; the sun is shining, the birds were flying, the wind was blowing..."
@@ -1635,7 +1635,7 @@ label FMG016:
     MC "...Aaannnd I'm bored again. What am I going to do now?"
     jump daymenu
 
-label FMG016a:
+label FMG016:
     #"The New Girl"
     $setProgress("FMG017")
     scene Dorm Interior with fade
@@ -1763,7 +1763,7 @@ label FMG016a:
     show FMG happy
     FMG "Yeah, food sounds really good right now."
     FMG "I forgot my wallet by the way."
-    MC "Of course you did…"
+    MC "Of course you did..."
     jump daymenu
 
 label FMG017:
@@ -3327,7 +3327,7 @@ label FMG025:
     MC "I was taking laps around the track. I wanted to beat my record, and it was going pretty well."
     show FMG neutral
     FMG "Oh yeah? How many laps did you do?"
-    MC "Well, I don't want to make you feel bad, but…"
+    MC "Well, I don't want to make you feel bad, but..."
     MC "I did three."
     show FMG sad
     FMG "That is very impressive, Kei."
@@ -3335,11 +3335,11 @@ label FMG025:
     FMG "You ALMOST beat my record."
     MC "Hmmmm, what exactly is your record?"
     show FMG flex
-    FMG "Hehehehe, ten… for now."
+    FMG "Hehehehe, ten... for now."
     show FMG happy
     FMG "Anyway, I've been meaning to ask you a question."
     MC "Really now? Well, maybe I have an answer."
-    FMG "Sooooooo, there is this dance club....and I was wondering if….  you'd want to go with me?"
+    FMG "Sooooooo, there is this dance club....and I was wondering if....  you'd want to go with me?"
     MC "I didn't take you for much of a dancer."
     show FMG flex
     FMG "Oh please, as soon as my feet hit the dance floor it's on fire. You may have to call the fire department because there's gonna be that much fire."
@@ -3358,7 +3358,7 @@ label FMG025:
     if getSize() <= 2:
         MCT "My jaw nearly hit the pavement when she walked out."
         show FMG happy with dissolve
-        MC " I'm… I'm speechless."
+        MC " I'm... I'm speechless."
         show FMG aroused
         FMG "I was worried you might think I went overboard."
         show FMG happy
@@ -3493,6 +3493,9 @@ label FMG025:
     "She smiled then leaned into my chest to rest her head and shut her eyes."
     jump daymenu
 
+label FMG024:
+    jump FMG026
+
 label FMG026:
     #Arcade Run-in
     $setProgress("FMG", "FMG028")
@@ -3566,7 +3569,7 @@ label FMG026_c1_2:
     MC "Deal... for now..."
     "She had a weak chuckle and leaned back on a tree."
     show FMG sad
-    FMG "Haaah… Natsuko sucks, dude."
+    FMG "Haaah... Natsuko sucks, dude."
     MC "C'mon, don't let her get to you."
     MC "You don't gotta worry so much about stuff that happened in the past, right? Who says you'll even gotta deal with her anymore?"
     jump FMG026_c1_after
@@ -3669,7 +3672,7 @@ label FMG028:
     MC "Heyyyy Natsuko-san, it's been great."
     MC "How have you been?"
     Natsuko "I've been doing fantastic thank you for asking, I just aced my quiz in thermodynamics."
-    MCT "She takes freaking thermodynamics…."
+    MCT "She takes freaking thermodynamics...."
     MC "Damn that's really cool."
     MC "Listen, I'd love to continue this conversation but I have to get going or I'm gonna be late."
     Natsuko "Oh you have another class? Would you want to walk together?"
@@ -3715,7 +3718,7 @@ label FMG028:
     Natsuko "Advice from you? Oh please."
     FMG "Have you ever considered wearing a condom by chance?"
     show Natsuko disappointed
-    Natsuko "No Akira-chan I haven't…"
+    Natsuko "No Akira-chan I haven't..."
     show FMG flex
     FMG "You should probably start, if you're gonna be a dick, you might as well dress like one."
     MCT "It was pretty funny, to be frank, but it looked like Natsuko just about had enough of Akira and her jokes."
@@ -3801,7 +3804,7 @@ label FMG028:
     show Natsuko neutral
     Natsuko "Onto the next hole, shall we?"
     "This next hole proved to be an issue for both of them; Natsuko got a bogey while Akira nailed an eagle, tying the game once more."
-    MCT "Well this is the final hole…"
+    MCT "Well this is the final hole..."
     MCT "I never thought I'd be nervous over a sport, especially golf, but here I was on the edge of my seat."
     "Natsuko placed her golf ball and swung just short of hitting another hole in one."
     MC "Yo, Akira you're up."
@@ -3841,10 +3844,10 @@ label FMG028:
     Natsuko "THIS ISN'T OVER, THIS IS FAR FROM OVER!"
     hide Natsuko with dissolve
     "She kicked her bag to the ground and chucked her club into the woods and stormed off."
-    MC "Well that was, um, different…"
+    MC "Well that was, um, different..."
     show FMG surprised-2
     FMG "I didn't see that coming."
-    FMG "She exploded…"
+    FMG "She exploded..."
     MC "Who knows how long she was holding that in."
     MC "I don't know if you noticed but when she met us at the second hole something seemed off."
     show FMG neutral

@@ -27,7 +27,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "2020.9.9"
+define config.version = "2020.11.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the

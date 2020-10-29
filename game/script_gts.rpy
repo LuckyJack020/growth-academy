@@ -2910,7 +2910,7 @@ label GTS023:
     menu:
         "Aw sick, you made cookies?" if getSkill("Art") > 6:
             jump GTS023_c1_1
-        "Aw sick, you made cookies?" if getSkill("Art") <= 6:
+        "Aw sick, you made cookies?(disabled)" if getSkill("Art") <= 6:
             pass
         "Jeez, I didn't see you coming.":
             jump GTS023_c1_2
@@ -5399,7 +5399,7 @@ label GTS039:
     GTS_S "You say that as if I could actually sneak!"
     MC "Hey, you've got the technique almost down. If you tiptoe a bit, you'll be a ghost."
     show GTS_S embarrassed
-    GTS_S "I'd be some sort of… abnormally tall secret agent?"
+    GTS_S "I'd be some sort of... abnormally tall secret agent?"
     MC "Part of an elite tactical stealth giant unit."
     "Naomi slowly regained her usual composure and stance. I could tell that she loved to laugh, even if she wobbled slightly as she did so."
     "Hearing the word 'giant' appeared to unsettle her, however. While her composure quickly returned, I could tell that she didn't appear comfortable being called one."
@@ -5428,7 +5428,7 @@ label GTS039:
     GTS_S "I will be with you every step of the way."
     MC "I appreciate that, Naomi-chan."
     show GTS_S happy
-    "The two of us sat next to each other beneath the cherry tree for several more moments, just staring at each other. We didn't speak for at least a minute. It felt wonderful to stop and breathe for a while; to take in the scenery and just… share time together."
+    "The two of us sat next to each other beneath the cherry tree for several more moments, just staring at each other. We didn't speak for at least a minute. It felt wonderful to stop and breathe for a while; to take in the scenery and just... share time together."
     "After a few moments had passed, Naomi spoke up. She had unconsciously started to lean upon the bench, which whined under her substantial weight."
     show GTS_S neutral-2
     GTS_S "That reminds me. I was considering taking a martial arts course to better train my body."
@@ -5447,7 +5447,7 @@ label GTS039:
     "Thankfully, it didn't break. It was built to withstand growth factors, after all."
     "I saw Naomi's breathing briefly quicken and panic, but once she saw that she didn't cause any major damage, she looked relieved."
     show GTS_S neutral-2
-    GTS_S "Admittedly, I didn't consider that. I enjoy Karate and Taekwondo, but considering that Tai Chi is the least… well, combat focused, I imagine they'd be far more accepting of someone of my size."
+    GTS_S "Admittedly, I didn't consider that. I enjoy Karate and Taekwondo, but considering that Tai Chi is the least... well, combat focused, I imagine they'd be far more accepting of someone of my size."
     MC "Sounds like we've got a plan, then. Would you like to see if there are any Tai Chi clubs available after school?"
     hide GTS_S
     show GTS wink
@@ -5467,7 +5467,7 @@ label GTS039:
         linear 2 xpos 0.5
     GTS "Are there any openings for a martial arts class?"
     "Naomi peered over my shoulder as I looked through the bulletin."
-    MC "There is an opening for a Tai Chi class, as a matter of fact. Led by a… Kutabaro Ono, looks like."
+    MC "There is an opening for a Tai Chi class, as a matter of fact. Led by a... Kutabaro Ono, looks like."
     show GTS happy-2
     GTS "Does it say there are any height restrictions?"
     MC "No height restrictions. We're in luck."

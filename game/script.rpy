@@ -105,7 +105,7 @@ init python:
 
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK = range(10)
+        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
 
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -116,6 +116,7 @@ init python:
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     #ROUTELOCK: arg1 = (string) character code, true if you're on that route (or, if empty string, true if not on any route)
     #NOROUTELOCK: arg1 = (string) character code, true if you're NOT on that route (or, if empty string, true if on any route)
+    #VAR: arg1 = (string) variable name, arg2 = (string) variable value, true if value matches the current value of the variable name
 
     class EventTypeEnum:
         CORE, OPTIONAL, OPTIONALCORE = range(3)
@@ -210,6 +211,12 @@ init python:
                     break
             elif c[0] == ConditionEnum.NOROUTELOCK:
                 if routelock != c[1]:
+                    continue
+                else:
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.VAR:
+                if getVar(c[1]) == c[2]:
                     continue
                 else:
                     criteriavalid = False

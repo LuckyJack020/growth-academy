@@ -7123,22 +7123,24 @@ label PRG038:
     hide PRG with dissolve
     "I put the game in and handed Aida the controller, taking a seat next to her."
     "Aida took a moment on the first level to learn which button made Sebo do what, and she was off. The cheery music played in the background as she came upon her first enemy."
-    show PRG surprised
+    show cg PRG038 with dissolve
+    #show PRG surprised
     PRG "W-What do I do?!"
     MC "Don't panic. Press this button."
     "I pointed at the blue button near her thumb. Aida pressed it quickly and watched as Sebo opened his mouth and the enemy was sucked into it."
-    show PRG happy
+    #show PRG happy
     PRG "I ate him! He's in my belly!"
     MC "Good job! Now, get ready for this one!"
     "A new, tougher looking enemy walked slowly onto the screen, and roared at Sebo, breathing a steady stream of fire towards him."
-    show PRG surprised
+    #show PRG surprised
     PRG "AGH!"
     "Quickly, Aida pressed the down button, and Sebo ducked, narrowly missing the flames above his head. Once the flames had passed, Aida sucked up the new enemy as well."
-    show PRG happy
+    #show PRG happy
     PRG "Yay! I'm getting good!"
     MC "You are!"
+    hide cg with dissolve
     "Aida turned towards me and set the controller down."
-    show PRG neutral
+    show PRG neutral with dissolve
     PRG "This is great, Keisuke. Thanks for introducing me to this."
     MC "It's my pleasure. I'm still kind of in shock that you've never played a video game before."
     show PRG unique
@@ -13990,7 +13992,7 @@ label PRG057B_c1_2:
 
 label PRG057C:
     $setProgress("PRG", "PRG058")
-    scene Dorminterior with fade
+    scene Dorm Interior with fade
     play music hallway
     "From the moment I sat up in bed, I had a pang of unease smash into my stomach like an 18-wheeler."
     "Today was Aida's last contest before the quarterfinals.  And Honoka was taking Sakura's place."
