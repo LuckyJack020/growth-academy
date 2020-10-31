@@ -35,6 +35,7 @@ define Miura = Character('Miura', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Mom = Character('Mom', color="#FF3300")
 define Naoki = Character('Naoki', color="#C0C0C0")
+define Natsuko = Character('Natsuko', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
@@ -52,12 +53,14 @@ define Yuki = Character('Yuki', color="#FF91DC")
 define All = Character('Everyone', color="#ffffff")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define Barker = Character('Barker', color="#C0C0C0")
+define Card = Character('Card', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
 define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
 define Coach = Character('Coach', color="#C0C0C0")
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define DJ = Character('DJ', color="#C0C0C0")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
 define Girls = Character('Girls', color="#ffffff")
@@ -559,9 +562,11 @@ image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/aroused-2.png")
 image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 
 image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/neutral.png")
+image GTS neutral-2 = DynamicImage("Graphics/GTS/[globalsize]/neutral.png") #nyi
 image GTS happy = DynamicImage("Graphics/GTS/[globalsize]/happy.png")
 image GTS happy-2 = DynamicImage("Graphics/GTS/[globalsize]/happy-2.png")
 image GTS sad = DynamicImage("Graphics/GTS/[globalsize]/sad.png")
+image GTS sad-2 = DynamicImage("Graphics/GTS/[globalsize]/sad-2.png")
 image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/surprised.png")
 image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/angry.png")
 image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/aroused.png")
@@ -570,10 +575,14 @@ image GTS shy = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/wink.png")
 image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/unique.png")
+image GTS unique-2 = DynamicImage("Graphics/GTS/[globalsize]/unique-2.png")
 
 image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
+image GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png") #nyi
 image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png")
+image GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png") #nyi
 image GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/sad.png")
+image GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/sad-2.png")
 image GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/surprised.png")
 image GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/angry.png")
 image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/aroused.png")
@@ -582,6 +591,7 @@ image GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/embarrassed.png")
 image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/wink.png")
 image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/unique.png")
+image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/unique-2.png")
 
 image GTS casual-neutral = DynamicImage("Graphics/GTS/[globalsize]/casual-neutral.png")
 image GTS casual-happy = DynamicImage("Graphics/GTS/[globalsize]/casual-happy.png")
@@ -589,8 +599,11 @@ image GTS casual-surprised = DynamicImage("Graphics/GTS/[globalsize]/casual-surp
 image GTS casual-wink = DynamicImage("Graphics/GTS/[globalsize]/casual-wink.png")
 
 image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
+image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png") #nyi
 image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png")
+image side GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png") #nyi
 image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side-sad.png")
+image side GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-sad-2.png")
 image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side-surprised.png")
 image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-angry.png")
 image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-aroused.png")
@@ -599,6 +612,7 @@ image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrasse
 image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
 image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png")
 image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique.png")
+image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique-2.png")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
@@ -695,6 +709,14 @@ image Minori sad = "Graphics/minor/minori-neutral.png"
 image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
 image Sakura neutral = "Graphics/minor/sakura-neutral.png"
+
+image Natsuko neutral = "Graphics/minor/natsuko-neutral.png"
+image Natsuko annoyed = "Graphics/minor/natsuko-neutral.png"
+image Natsuko angry = "Graphics/minor/natsuko-neutral.png"
+image Natsuko disappointed = "Graphics/minor/natsuko-neutral.png"
+image Natsuko smug = "Graphics/minor/natsuko-neutral.png"
+image Natsuko flex = "Graphics/minor/natsuko-neutral.png"
+image Natsuko happy = "Graphics/minor/natsuko-neutral.png"
 
 image Tako neutral = "Graphics/minor/tako-neutral.png"
 image Tako angry = "Graphics/minor/tako-angry.png"

@@ -1637,7 +1637,7 @@ label FMGOPT016:
 
 label FMG016:
     #"The New Girl"
-    $setProgress("FMG017")
+    $setProgress("FMG", "FMG017")
     scene Dorm Interior with fade
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by one and it's three o'clock."
 
@@ -2336,8 +2336,8 @@ label FMG020_c1_1:
     FMG "Here we are, I come here sometimes when I wanna look at the stars."
     "Sure enough, the stars were in clear, full view for anyone watching the sky on this starry night. With the stars came the company of the Moon, full and shining bright on this beautiful night."
     MC "Wow. It sure is beautiful."
-    show FMG happy #aroused?
-    Akira "Yeah, I'm just glad I can spend it with you, Kei-Kun."
+    show FMG aroused
+    FMG "Yeah, I'm just glad I can spend it with you, Kei-Kun."
     "We both just sat there for a while, spending time together as the light of a billion distant stars glittered in the sky and the Moon gleamed with beauty."
     jump daymenu
 
@@ -2780,7 +2780,7 @@ label FMG022_c1_2:
         FMG "Uh huh. No problem."
         hide FMG with dissolve
         "And we hoofed it back down the cliff and retraced our steps to the trail."
-        scene Lake
+        scene Lake Road with fade
         "A little bit of small talk later, and we were back on school grounds."
         "I tried to dust over the incoming silence, but when it finally came all I could do was wonder."
         "What was she so afraid of?"
@@ -2810,7 +2810,7 @@ label FMG022_c1_2:
         MC "Y'know what, maybe we should just get outta here and never speak of this again."
         FMG "We should do that, yeah."
         hide FMG with dissolve
-        scene Lake
+        scene Lake Road with fade
         "And so we did."
         "We made it back just in time to get ready for Akira's run, but we agreed it was better I sit that day out."
         "I was carrying a thing or two I'd learned that day about boundaries."

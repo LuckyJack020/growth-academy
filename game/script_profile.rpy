@@ -11,7 +11,7 @@ init python:
     #desc: (list of tuple<list of tuple<string, boolean>, string>)
     #Outer list is a list of description lines, each description line being a list of conditions and a line added to the description if all the conditions pass.
     #Condition list is a list of tuples, the first string in the tuple being a flag, and the second being a boolean value for whether the flag should exist or not if the condition passes.
-    
+
     profiles = {"MC":
         {
             "name": "Keisuke Hotsure",
@@ -144,7 +144,7 @@ init python:
         "minor": ["RM", None, None, None, None, None, None, None, None, None, None, None, None, None]}
     activeprofile = ""
     activepage = "main"
-        
+
     def getProfileStat(key, stat):
         if stat == "BWH":
             for t in profiles[key][stat]:
@@ -172,7 +172,7 @@ init python:
             if useDesc:
                 d += desc[1] + " "
         return d
-    
+
     def getProfileString(key):
         if profiles[key]["pimgdates"] == None:
             return "Graphics/ui/profiles/" + key + "-pimg.png"
@@ -189,8 +189,8 @@ label profileselect:
     window hide None
     call screen profileselect
     window show None
-    
-screen profileselect:
+
+screen profileselect():
     grid 2 7:
         for pk in profilepages[activepage]:
             if pk == None:
@@ -203,12 +203,12 @@ screen profileselect:
                         text pv["name"] yalign .5
                         if pv["affection"] != None:
                             image "Graphics/ui/profiles/heartsmall.png"
-        
+
     hbox:
         yalign .9
         textbutton "Main" action[SetVariable("activepage", "main")]
         textbutton "Minor" action[SetVariable("activepage", "minor")]
-    
+
     textbutton "Back" action Jump("daymenu_noadvance") yalign .95
 
 label profileview:
@@ -217,7 +217,7 @@ label profileview:
     call screen profileview
     window show None
 
-screen profileview:
+screen profileview():
     hbox:
         vbox:
             image im.Crop(getProfileString(activeprofile), (50, 0, 300, 400))
@@ -231,5 +231,5 @@ screen profileview:
             if not profiles[activeprofile]["sex"]:
                 text "BWH: " + getProfileStat(activeprofile, "BWH")
         text getDescription(activeprofile)
-    
+
     textbutton "Back" action Jump("profileselect") yalign .95

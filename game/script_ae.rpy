@@ -16388,13 +16388,13 @@ label AE007b_c1_1:
     MC "Not really, to be honest."
     AE "Oh?"
     MC "I mean, why can't I cruise by with 'good enough'? Things seem to be going well enough in the world around me, yeah?"
-    show AE annoyed
+    show AE neutral-annoyed
     AE "Tch."
     show AE angry
     $setAffection("AE", -3)
     AE "If you believe that, then you need to cut your bangs; you really are blind."
     MC "Hey, c'mon, don't be saying things like that."
-    show AE annoyed
+    show AE neutral-annoyed
     AE "..."
     show AE sad
     AE "You're right, my apologies, I was... impertinent."

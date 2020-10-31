@@ -494,7 +494,7 @@ label BE005_c1_old:
     MC "Please stop."
     BE "Spoilsport."
     MC "Tease."
-    jump BE005_after
+    jump BE005_after_old
 
 label BE005_c2_old:
     "Why does the mouth say things the brain wants to say, yet knows is dumb to state at the same time? Luckily, Honoka's reaction was as upbeat as ever."
@@ -517,7 +517,7 @@ label BE005_c2_old:
     MC "Well, that's good to know. Thanks, Honoka. That's actually a bit comforting."
     BE "If you really want comfort, you should be jealous of having some pillows like these, if I lay them on a table right they make a great headrest."
     MC "And the comfort goes to awkwardness in three seconds flat..."
-    jump BE005_after
+    jump BE005_after_old
 
 label BE005_after_old:
     MC "Well, I guess I should get going, need to find out what I'm getting after all."

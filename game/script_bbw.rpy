@@ -3387,7 +3387,7 @@ label BBW019_theater:
         "I had only come here to find a way to kill the afternoon, but now I was thinking that Iron Fan might be a little too trashy."
         menu:
             "Iron Fan 5":
-                scene Black with fade
+                scene black with fade
                 "I decided to see Iron Fan."
                 scene Town with fade
                 "Yes, it was trashy. Yes, it just repeated a lot of stuff from the earlier movies."
@@ -3395,7 +3395,7 @@ label BBW019_theater:
                 "Maybe not the best use of my free time, but I made my choice."
                 jump daymenu
             "The Chrysanthemum Shadow":
-                scene Black with fade
+                scene black with fade
                 "I decided to see Chrysanthemum Shadow."
                 scene Town with fade
                 $setSkill("Art", 1)
@@ -7952,7 +7952,7 @@ label BBW045_art:
     scene Dorm BBW with fade
     "I entered Alice's dorm rather quietly, only to see that Kodama-san was already wide awake."
     show BBW neutral at Position(xpos=0.8) with dissolve
-    show PRG pajamas at Position(xpos=0.2) with dissolve
+    show PRG pj-happy at Position(xpos=0.2) with dissolve
     PRG "Keisuke! Good morning!"
     if getAffection("PRG") > 3:
         MC "Good morning Aida."

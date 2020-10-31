@@ -4473,7 +4473,7 @@ label GTS032_after:
     GTS "I am thankful that you made that decision, Kei-chan. The happiness you bring me is far more valuable than anything material."
     MC "I'm glad to have been here, Yamazaki-san."
 
-    scene Dorm Giant with fade
+    scene Giant Dorm Exterior with fade
     "After I left Naomi's dorm for the evening, I saw her expression brighten. Seeing her relax just by talking to me raised my hopes that she'd be able to move into her new life without trouble."
     "Naomi had always been the mature one of the group, and if anyone could mentally collect herself after such a dramatic shift in scenery, it'd be her."
     jump daymenu
@@ -5462,7 +5462,7 @@ label GTS039:
     "Naomi guided me to the recreation area behind the school. She intentionally shortened her strides so that we could walk alongside each other. The afternoon sun was almost perfectly above us, so Naomi's shadow was as short as possible."
     "It was funny, seeing the shadow of such a tall person only as big as me. Naomi's pace allowed her to control the force of her limbs, softening the miniature earthquakes I had heard before. Once she stopped at the bulletin board posted along the side of the school, she stood still with both of her feet shoulder-with apart."
     "We could see various other clubs being held in the recreation area as well. Students of all shapes and sizes were out playing soccer, lacrosse, tennis, and basketball. It was surreal seeing just how accommodating they were for students of such varied sizes!"
-    show GTS neutral-1:
+    show GTS neutral:
         xpos 0.0 xanchor 0.5 yalign 1.0 xzoom -1.0
         linear 2 xpos 0.5
     GTS "Are there any openings for a martial arts class?"
