@@ -3084,7 +3084,7 @@ label AE018:
         AE "And the roof is...?"
         MC "Okay, okay, I get it, yeesh."
         AE "You're the Sigmund Freud of dream analysis, Hotsure-san."
-    elif getSkill("Academics") > 2 and getSkill("Academics") < 4:
+    elif getSkill("Academics") >= 2 and getSkill("Academics") < 4:
         MC "I think... you subconsciously believe that you're lonely."
         show AE neutral
         AE "..."
