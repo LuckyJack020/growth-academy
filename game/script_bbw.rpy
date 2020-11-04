@@ -8195,7 +8195,7 @@ label BBW045_wine:
             BBW "I know you're better than this, so please display it."
     "Suddenly the waiter emerged from the back room, carrying the bucket again."
     "Though this time there were 10 glasses on the serving tray."
-    "As he did so, a woman came over to speak to Alice"
+    "As he did so, a woman came over to speak to Alice."
     "Two things were immediately clear about this woman."
     "The first was that she had attended the school when she was young, as her growth was self-evident."
     "The second was that she had had plastic surgery- her face appears to be almost poorly made. Though her natural beauty was still clear behind this."

@@ -1639,6 +1639,7 @@ label FMG016:
     #"The New Girl"
     $setProgress("FMG", "FMG017")
     scene Dorm Interior with fade
+    play music FMG
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by one and it's three o'clock."
 
     scene Dorm Exterior with fade
@@ -1660,7 +1661,7 @@ label FMG016:
     show FMG sad
     FMG "Ughhh, so boring Kei-kun."
     show FMG happy
-    FMG "But I guess I can make an expectation for you."
+    FMG "But I guess I can make an exception for you."
 
     scene Field with fade #day
     "We set our bags down and began stretching when someone caught Akira's eye."
@@ -1669,7 +1670,7 @@ label FMG016:
     "As the girl ran closer towards us shock overtook Akira's face."
     show FMG surprised
     FMG "Holy crap! She's huge!"
-    "Akira was right! this girl was almost double her size."
+    "Akira was right! This girl was almost double her size."
     "As we watched in awe, the student slowed her pace and began walking over to us."
     show FMG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     show Natsuko annoyed at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
@@ -2248,7 +2249,7 @@ label FMG020:
     MC "Hmm? You want to pay? I invited you here so I shou-"
     FMG "Yeah I'm gonna stop you there fam. My momma taught me you should never let anyone pay for your meal if you got the cash..."
     show FMG happy
-    FMG "Unless they got more cash then you."
+    FMG "Unless they got more cash than you."
     show FMG neutral
     FMG "But in this case, I wouldn't feel right if you paid for my meal, you get me. It's honor among the workin' man, right?"
     MC "I... suppose so."
@@ -2343,7 +2344,7 @@ label FMG020_c1_1:
 
 label FMG020_c1_2:
     "I didn't say anything out of fear, fear of the unknown. By the time I did manage to say something, it was already too late."
-    "Well, this has been fun, Kei-Kun, but I feel like I got a second wind. Later, dude!"
+    MFG "Well, this has been fun, Kei-kun, but I feel like I got a second wind. Later, dude!"
     MC "Wha-"
     "I didn't even so much as finish the first word before she left."
     MCT "Well, whatever I may have to say can wait, there's always next time."
@@ -3264,7 +3265,7 @@ label FMG023_c2_after:
     Miura "Ah, I'm sorry, we just ran out. If you'd like to wait a little bit, we can make you some more."
     MC "Mm, nah, how about strawberry?"
     Miura "Ah, classic!"
-    "Again I caught him glncing at Akira. He looked back at me."
+    "Again I caught him glancing at Akira. He looked back at me."
     Miura "We do have strawberry flavor, does that sound good?"
     MC "Think so. I'll take two of those, please."
     Miura "Absolutely! That'll be 300 too, if you please."
@@ -3661,6 +3662,7 @@ label FMG028:
     #Anything but golf
     $setProgress("FMG", "FMG029")
     scene Hallway with fade #day
+    play music Busy
     MCT "Honestly, if I didn't study with Akira this week I would've failed."
     MCT "Color me surprised that Akira is THAT good at history when she pays attention."
     MC "At least it's the weekend now and I can kick back and relax."

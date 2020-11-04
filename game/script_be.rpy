@@ -6959,6 +6959,12 @@ label BE037:
     "I did just that, and we proceeded to not worry about when or where we next kissed, and just enjoyed the moment until we packed up and went back to our dorms."
     jump daymenu
 
+label BE038:
+    if getFlag("HONOKA_COOKING"):
+        jump BE038A
+    else:
+        jump BE038B
+
 label BE038A:
     jump BE039
 
@@ -7172,6 +7178,10 @@ label BEGTS001:
     #2) Kei has seen Honoka's dress sprite at least once. (BE20 has been cleared)
     scene Dorm Exterior with fade #evening
     #need bgm
+    #Forces Feminine costume
+    if getVar("BEMode") == "Tomboy":
+        $setVar("BEMode", "Feminine")
+        $setFlag("BEGTS001_TomFix")
     "I walked out of my dorm to get some fresh air. The sun was hanging just above the horizon, tinting the sky in a vibrant orange."
     "I pulled my arms back, then folded my hands together while rotating my neck slowly to give my body a good stretch. I had been sitting down so long during my lectures, I had become stiff."
     "Afterward, I checked my phone for any new messages. There was a single unread text from Honoka."
@@ -7188,10 +7198,6 @@ label BEGTS001:
     scene Roof with fade #evening
     "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
     "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
-    #Forces Feminine costume
-    if getVar("BEMode") == "Tomboy":
-        $setVar("BEMode", "Feminine")
-        $setFlag("BEGTS001_TomFix")
     show BE happy with dissolve
     "Honoka was there to greet me when I arrived."
     BE "Hey, Kei-chan! Glad you could make it!"
@@ -7279,7 +7285,7 @@ label BEGTS001:
     show BE sad
     BE "Gosh, it feels like that was forever ago, though. I know it hasn't been THAT long, but--"
     show GTS unique-2:
-        linear 0.5 xpos 0.5
+        linear 0.3 xpos 0.3
     GTS "Inoue-san?"
     show BE neutral
     BE "Yeah?"
@@ -7288,7 +7294,7 @@ label BEGTS001:
     show BE happy
     BE "Well... sure! That'd be fun! Do you have any particular place in mind?"
     show GTS unique-2:
-        linear 0.5 xpos 0.2
+        linear 0.3 xpos 0.2
     show GTS happy
     GTS "A few. Shall I add your number so we can make the arrangements?"
     BE "Sure, sure!"
@@ -7299,9 +7305,10 @@ label BEGTS001:
     GTS "We certainly shall. I'll see you then, Inoue-san."
     MC "See you later, Yamazaki-san."
     "Naomi gave us both a respectful, graceful bow as she opened the door to the stairwell and returned to the school building."
+    play music HigherEdu
     show GTS neutral-2:
         xzoom 1.0
-        linear 2 xpos 0.0
+        linear 2 xpos 0.0 xanchor 1.0
     play music Schoolday
     show BE neutral:
         linear 2 xpos 0.5
@@ -7351,7 +7358,7 @@ label BEGTS002:
     "I was just about to head back inside when I saw a distinctively tall figure. She was even taller than the light poles, which made her stand out even more in their brightness."
     show GTS neutral-2 with dissolve
     "Another figure was standing next to her. Seeing Naomi stand next to another person made me realize just how tall she was. It was easy to forget her height when she’s the only one present."
-    show GTS neutral-2 at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral-2 at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
     show BE neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     "Both Honoka and Naomi stood next to the light pole. They were illuminated by the white glow covering the sidewalk."
     show GTS unique-2
@@ -7484,7 +7491,7 @@ label BEGTS002:
     MC "Your friendliness was, and still is, one of your best traits, Honoka. You can always find a reason to smile."
     BE "For better or for worse!"
     "I could hear Naomi roll over, causing the grass around her to crunch and rumble. She then slightly shifted her position, laying on her side rather than her back. Honoka and I sat up in response."
-    show BE neutral at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
     show GTS neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     GTS "It certainly sounds like you two had a fun childhood."
     show BE seductive
@@ -7539,7 +7546,7 @@ label BEGTS002:
     scene Dorm Exterior with fade #night
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
     show GTS neutral-2 at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
     BE "Thank you for spending time with me, Naomi-chan. This was wonderful."
     show GTS unique-2
     GTS "I’m glad you had fun, Inoue-san. It was your idea, though!"

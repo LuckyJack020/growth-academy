@@ -204,7 +204,7 @@ image RM neutral = "Graphics/minor/RM-neutral.png"
 image RM angry = "Graphics/minor/RM-angry.png"
 image RM concerned = "Graphics/minor/RM-concerned.png"
 image RM concerned-2 = "Graphics/minor/RM-concerned-2.png"
-image RM distrustful = "Graphics/minor/RM-sad.png"
+image RM distrustful = "Graphics/minor/RM-distrustful.png"
 image RM doubt = "Graphics/minor/RM-doubt.png"
 image RM happy = "Graphics/minor/RM-happy.png"
 image RM sad = "Graphics/minor/RM-sad.png"
@@ -688,7 +688,8 @@ image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-unique = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 
 image side MC = "Graphics/side/mc.png"
-image side BECell = DynamicImage("Graphics/side/BE-[globalsize].png")
+image side BECell = ConditionSwitch("getVar('BEMode') == 'Feminine'", DynamicImage("Graphics/side/BE-fem-[globalsize].png"),
+                                    "True", DynamicImage("Graphics/side/BE-[globalsize].png"))
 image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
@@ -737,24 +738,27 @@ image Tako nohat-surprised = "Graphics/minor/tako-nohat-surprised.png"
 image dummy = "Graphics/ui/dummy.png"
 
 #Audio
-define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
+define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
 define audio.AE = "Audio/BGM/scene_AE.ogg"
 define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
 define audio.BE = "Audio/BGM/scene_BE.mp3"
-define audio.BBW = "Audio/BGM/scene_BBW.ogg"
-define audio.FMG = "Audio/BGM/scene_FMG.ogg"
-define audio.GTS = "Audio/BGM/scene_GTS.ogg"
+define audio.BBW = "Audio/BGM/scene_BBW.ogg" #Aristocratic Opulence
+define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
+define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
 define audio.RM = "Audio/BGM/scene_RM.ogg"
-define audio.PRG = "Audio/BGM/scene_PRG.ogg"
+define audio.MC = "Audio/BGM/scene_MC.ogg" #Our Protagonist
+define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg"
-define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg"
-define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
-define audio.Busy = "Audio/BGM/scene_busy.mp3"
-define audio.Festival = "Audio/BGM/scene_festival.mp3"
-define audio.Rain = "Audio/BGM/scene_rain.mp3"
+define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg" #The Challenge
+define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
+define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
+define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
+define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education
+define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
-define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
-define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
+define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
+define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
+define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
@@ -988,9 +992,9 @@ init 2 python:
     eventlibrary['FMG021'] = {"name": "EMUS!", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "library",                  "priority": PrioEnum.NONE, "sp": 4,     "next": "FMG022", "obsflags": [],               "conditions": []}
     eventlibrary['FMG022'] = {"name": "Rock Opera", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "track",                    "priority": PrioEnum.NONE, "sp": 4,     "next": "FMG023", "obsflags": [],               "conditions": []}
     eventlibrary['FMG023'] = {"name": "The Wizard on the Sidewalk", "girls": ["FMG", "GTS"], "type": EventTypeEnum.CORE,                        "location": "town",                     "priority": PrioEnum.NONE, "sp": 4,     "next": "FMG024", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG024'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "mountain",                 "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG026", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG026'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "mountain",                 "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG028", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG028'] = {"name": "Anything but Golf", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "hallyway",                 "priority": PrioEnum.NONE, "sp": 5,     "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['FMG024'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "arcade",                   "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG026", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG026'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "arcade",                   "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG028", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG028'] = {"name": "Anything but Golf", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "", "obsflags": [],                     "conditions": []}
     eventlibrary['FMG029'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "mountain",                 "priority": PrioEnum.NONE, "sp": 5,     "next": "", "obsflags": [],                     "conditions": []}
 
     #Optional

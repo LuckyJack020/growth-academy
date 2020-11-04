@@ -13653,7 +13653,7 @@ label PRG057A_c1_after:
     MC "Yeah?"
     Sakura "That's because each fruit has its own texture. Think like a banana compared to a peach. One is soft and dry, the other is squishy and juicy."
     Sakura "Vegetables kind of work the same way. Kodama-chan is cooking them in order of texture. So, since carrots and onions are more dense, they take longer to actually cook thoroughly."
-    Sakura "On the opposite end, Zucchini is really soft and juicy, so you barely need to cook them at all."
+    Sakura "On the opposite end, zucchini is really soft and juicy, so you barely need to cook them at all."
     MC "So, if Aida would've put all of the veggies in the pan at one time, she'd have to choose between having correctly done zucchini and only seared onions and carrots, or vice versa?"
     Sakura "Yeah. If you overcook zucchini, it just becomes a goopy, stringy pile of bleh. And, if you undercook onions or carrots, they just don't taste right."
     MC "Cool. Thanks for the lesson."
@@ -13661,7 +13661,7 @@ label PRG057A_c1_after:
     MC "Heh, will do."
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     "By now, Aida had the vegetables finished and the pasta was boiled and drained. She poured the vegetables into three small bowls, then added the pasta over it."
-    "She finished by dashing salt and lemon juice overtop of three bowls, then passing two of them to Sakura and I."
+    "She finished by dashing salt and lemon juice overtop of three bowls, then passing two of them to Sakura and me."
     Sakura "Thanks, Kodama-chan! This smells great!"
     PRG "I hope you like it. I've usually seen this made with squash, but it should taste okay without it."
     "Taking my chopsticks, I pulled up some noodles and tried to get as much of each vegetable into my bite as I could."
@@ -13711,7 +13711,7 @@ label PRG057A_c1_after:
     hide Sakura with dissolve
     "Sakura slammed down the rest of her pasta and was out the door before I could even finish chewing."
     MC "She... thinks she has a deck of cards?"
-    show PRG unique in Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG unique at Position(xalign=0.5, yalign=1.0) with dissolve
     PRG "She can be a little all over the place, sometimes. That's just how she is."
     MC "I see."
     "Having finished, I took my plate over to the sink and ran some water over it to wash away the extra sauce and bits of herbs."
@@ -14448,7 +14448,7 @@ label PRG057C_lose:
     Sakura "I can go in today and get a thinner bandage put on my hand. Once that happens, I can start practicing again!"
     show PRG worried
     PRG "You can? Isn't it a little early for that?"
-    Sakura "Well, I won't be 100% right away, but I can use the hand for simple tasks."
+    Sakura "Well, I won't be 100%% right away, but I can use the hand for simple tasks."
     Sakura "And, I'm more than ready to get back into the kitchen."
     PRG "Okay. Don't stress it, though."
     Sakura "I won't. Promise."

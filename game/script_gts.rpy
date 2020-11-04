@@ -5389,7 +5389,7 @@ label GTS039:
     "I was used to the sound of the occasional heavy, pulsing footsteps by now, but I still recoiled in surprise upon looking up."
 
     play music GTS
-    show GTS_S neutral-2
+    show GTS_S neutral-2 with dissolve
     "A familiar face greeted me, standing as tall as the cherry tree itself."
     GTS_S "Good afternoon, Kei-chan."
     "I returned a coy smile, remaining seated on the bench. From my position, I was only as tall as Naomi's knees. Her shadow eclipsed me completely as I looked up, completely blocking the sun."
@@ -5421,8 +5421,9 @@ label GTS039:
     MC "It's always a good idea to adjust yourself to your new body. The staff at this school are here to help with that, but they can only do so much."
     MC "Unless we get used to our factors and learn how to cope with them, we're just going to keep having the same problems."
     "Naomi frowned slightly, but after a deep exhale, she picked herself up with a motivated nod."
+    hide GTS_S
     show GTS neutral-2
-    GTS_S "You're right. You're absolutely right. There is no reason for us to try to fight our factors. We need to have the discipline to act on what we can change, and the wisdom to understand what we cannot change."
+    GTS "You're right. You're absolutely right. There is no reason for us to try to fight our factors. We need to have the discipline to act on what we can change, and the wisdom to understand what we cannot change."
     MC "We also can't be afraid to rely on others for support."
     "Naomi and I looked at each other as the spring breeze rolled through the cherry tree once more. We said nothing for several seconds, smiling at each other. Naomi responded with a calm, somber voice."
     GTS_S "I will be with you every step of the way."

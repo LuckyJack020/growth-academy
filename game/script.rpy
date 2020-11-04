@@ -393,8 +393,8 @@ init python:
 
     def isHighestSkill(s):
         if getSkill(s) >= getSkill("Art") and getSkill(s) >= getSkill("Academics") and getSkill(s) >= getSkill("Athletics"):
-            return true
-        return false
+            return True
+        return False
 
     def isEventCleared(event):
         return event in clearedevents
