@@ -518,6 +518,9 @@ init python:
     def isRouteEnabled(girl):
         return routeenabled[girl] and (routelock == girl or routelock == "")
 
+    def getRoutelock():
+        return routelock
+
     def isNSFW():
         return persistent.enable_nsfw
 
@@ -651,10 +654,10 @@ label splashscreen:
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.
-screen choicetimer:
+screen choicetimer():
     timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('choicetimer'), Jump(timer_jump)])
 
-screen daymenu:
+screen daymenu():
     add "Graphics/ui/map/map_school.png"
 
     #event choice sidebar
@@ -757,7 +760,7 @@ transform notif_transform:
     pause 3
     linear 1.0 yalign -0.2
 
-screen debugmenu:
+screen debugmenu():
     $debuginput = ""
     grid 3 15:
         xalign 0.5
@@ -858,22 +861,22 @@ screen debugmenu:
         textbutton "+" action Function(setSizeDebug, 1)
         textbutton "-" action Function(setSizeDebug, -1)
 
-screen debugvarlist:
+screen debugvarlist():
     vbox:
         text debugListVars()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugflaglist:
+screen debugflaglist():
     vbox:
         text debugListFlags()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugtimeflaglist:
+screen debugtimeflaglist():
     vbox:
         text debugListTimeFlags()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugclearedeventlist:
+screen debugclearedeventlist():
     vbox:
         text debugListClearedEvents()
         textbutton "Return" action Jump("debugmenu")

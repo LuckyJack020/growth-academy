@@ -2344,7 +2344,7 @@ label FMG020_c1_1:
 
 label FMG020_c1_2:
     "I didn't say anything out of fear, fear of the unknown. By the time I did manage to say something, it was already too late."
-    MFG "Well, this has been fun, Kei-kun, but I feel like I got a second wind. Later, dude!"
+    FMG "Well, this has been fun, Kei-kun, but I feel like I got a second wind. Later, dude!"
     MC "Wha-"
     "I didn't even so much as finish the first word before she left."
     MCT "Well, whatever I may have to say can wait, there's always next time."
@@ -3499,7 +3499,7 @@ label FMG024:
 
 label FMG026:
     #Arcade Run-in
-    $setProgress("FMG", "FMG028")
+    $setProgress("FMG", "FMG027")
     play music Rain
     scene Mountains with fade #day
     MCT "It was a mistake agreeing to go on a hike with Akira. My legs felt like falling off."
@@ -3656,6 +3656,140 @@ label FMG026_c1_after:
     FMG "Ughhh...yeah...."
     MCT "Natsuko was really starting to get to her."
     MCT "What can I do to help?"
+    jump daymenu
+
+label FMG027:
+    $setProgress("FMG", "FMG028")
+    scene Classroom with fade #day
+    play music Schoolday
+    MCT "Man history's dragging along today."
+    MCT "Getting no sleep doesn't help either, struggles of late night studying I guess."
+    HR "I hope everyone is prepared for the test this Friday, this one will not be open note."
+    MCT "Are you serious...a three day extension?"
+    MC "I thought it was supposed to be today Tashi-sensei?"
+    HR "It was but I feel as the class isn't quite ready for it yet, so I made the decision to push it back."
+    MCT "C'mon bruh are you kidding me…"
+    HR "Alright, that's it for today, see you all tomorrow."
+    scene Hallway with fade
+    MCT "I spent all night studying for this freaking test and it gets delayed."
+    MC "*yawn* I don't think I can even make it back to my dorm...my eyelids are so heavy."
+    MC "The floor is looking mighty comfy right now, I'm sure the janitor won't mind me sleeping here for a couple of minutes."
+    "I slid down the row of lockers and threw my backpack on the floor and fell asleep instantly."
+    scene black with fade
+    "..."
+    "..."
+    "..."
+    scene Dorm FMG with fade #day
+    MC "*yawn* Man that was a good nap...wait a hot second...this isn't the hallway. "
+    MC "Damn...why does my head hurt?"
+    MCT "I did a quick scan of the room and quickly realized where I actually was."
+    MC "How did I get here?"
+    "The door swung open and Akira walked in chugging a water bottle."
+    show FMG happy with dissolve
+    FMG "Yo, how was the nap?"
+    MC "Umm, it was good?"
+    MC "Hol' up, Akira did you bring me here?"
+    show FMG neutral
+    FMG "Yep, I was leaving class and saw you passed out on the hallway floor."
+    FMG "I figured I'd be a responsible girlfriend and help you out."
+    MC "You could've just have woken me up…"
+    FMG "I tried…a lot. You sleep like a rock, Kei-kun."
+    FMG "I poked your belly and pinched your elbow, not even a twitch."
+    FMG "Hell, I even put an ice cube from my water bottle down your shirt and you didn't even move."
+    FMG "So I got impatient and carried you back to my dorm."
+    MC "Can you also tell me why my head hurts?"
+    show FMG sad
+    FMG "Wellllll about that..."
+    MC "What did you do?"
+    FMG "You might have banged your head when I may have tossed you on the bed."
+    MC "You threw me…"
+    FMG "The thing was you're just umm so light and I wasn't prepared for that."
+    MCT "Truth be told I was both impressed and annoyed. She carried me back here out of the kindness of her heart (sort of); on the other hand, she almost tossed me through a wall."
+    MC "Thanks for helping me out Akira."
+    show FMG happy
+    FMG "Heh, don't mention it Kei."
+    show FMG aroused
+    FMG "So I was thinking since we both have that history test in a couple of days. We could maybe like...um have a study date hehe."
+    MC "S-sure, we can start right now."
+    MCT "As I was pulling my book out of my bag, Akira came and sat down next to me on the bed."
+    MC "Is there anything you want to focus on?"
+    show FMG sad
+    FMG "There are a few things I'm not too sure of."
+    MC "Such as?"
+    FMG "For starters, Oda Nobunaga is considered the first 'Great Unifier' of Japan right?"
+    MC "He is?"
+    FMG "Were you not listening to Tashi-sensei?"
+    "You were?!?!"
+    show FMG neutral
+    FMG "Pass me the book dude."
+    "..."
+    FMG "Hell yeah! It's right here."
+    FMG "It's also worth noting that under his rule, he reformed Japanese civil government and fostered free trade."
+    MC "Did you know this beforehand?"
+    show FMG happy
+    FMG "Hahaha, absolutely. This is one of the few times I'm actually interested in class."
+    FMG "My favorite thing to do in history is to imagine me in major battles and picture how cool I'd look in traditional samurai armor."
+    FMG "As silly as it sounds it really helps me remember."
+    MCT "Akira got lost in her imagination and for a minute I did too, imaging Akira like a barbarian or a samurai was pretty sweet."
+    show FMG flex
+    FMG "Damn I'd look badass."
+    MC "Yeah I have to agree, could be something to consider for a halloween costume."
+    show FMG neutral
+    FMG "Honestly, that's not a bad idea."
+    FMG "Anyway, we need to stay focused. I'm not trying to fail this."
+    MC "Alrighty then what's next?"
+    FMG "Hmmm, we should probably do Tokugawa Ieyasu."
+    MC "Toku-who?"
+    show FMG sad
+    FMG "At this point you should just sleep in class."
+    MC "I'm considering it…"
+    MCT "When did we ever discuss these people???"
+    show FMG happy
+    FMG "Okay, so for Tokugawa Ieyasu, he was the founder and the first shogun of the Tokugawa shogunate of Japan."
+    FMG "I don't know about you Keisuke-san but that's pretty rad."
+    MCT "When did Tashi-sensei teach us this stuff?!?"
+    FMG "Not only that he was another one of the 'Great Unifiers' just like Oda."
+    MCT "Have I been studying the wrong material?"
+    MC "Akira are you sure that this is what the test is on?"
+    show FMG neutral
+    FMG "One hundred percent dude. Why are you so unsure?"
+    MC "I just don't recall Tashi-sensei EVER talking about this stuff."
+    FMG "Hahaha, Kei-kun have you been living under a rock or something?"
+    FMG "Let me see your notes."
+    "I ruffled through my backpack and handed her my notebook."
+    show FMG neutral
+    FMG "Mhm, I see the problem here."
+    FMG "Instead of focusing in class you are honing your drawing skills."
+    $setSkill("Art", 1)
+    MC "Look I can explain-"
+    FMG "No need, you did a decent job on my biceps. My hair could use some work but it's not terrible."
+    show FMG happy
+    FMG "I'll give it a solid six outta ten."
+    MC "That's fair, I'll admit I'm not the best but for my first attempt I think it's definitely an eight."
+    show FMG neutral
+    FMG "Ya know Kei, I'd recommend drawing less dicks. What is it with guys and drawing dicks in books?"
+    MC "I-I can't really say…"
+    MC "Let's just pretend you didn't see this."
+    "She rolled her eyes and laughed loudly."
+    "She glanced at the clock and gasped."
+    #scene Dorm FMG with fade #eve
+    show FMG sad
+    FMG "Damn, time really does fly when you're having fun."
+    show FMG happy
+    FMG "If you want you can stay the night."
+    MC "As much as I'd like that, I can't. Daichi is probably freaking out considering I never came back after class."
+    show FMG sad
+    FMG "Ughhh, you're probably right. Man this blows."
+    MC "Aye don't worry about it, let's get together tomorrow and study some more."
+    show FMG neutral
+    FMG "I'm holding you to that Keisuke-san."
+    "I collected my things and as I was making my way to the door Akira put her hand on my shoulder."
+    show FMG happy
+    FMG "I don't want you going back empty handed."
+    "She pulled me towards her and planted a quick kiss on my cheek."
+    FMG "Thanks for the study date, now hurry back before Daichi files a missing persons report."
+    MC "R-right."
+    "And that is the story of the best study date I ever had."
     jump daymenu
 
 label FMG028:

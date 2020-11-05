@@ -7352,22 +7352,22 @@ label BEGTS002:
         $setVar("BEMode", "Feminine")
         $setFlag("BEGTS002_TomFix")
     #BGM: To be Decided
-    "The weekend had arrived, and I found myself sitting outside my dorm room just as the Sun had gone down. It was a Friday night, so I considered what I’d be doing over the weekend."
-    "Unless I actively make plans with someone else, I’ll usually just browse the internet, watch videos, or play games. Daichi usually has something to stream, so I’ll occasionally peek in and watch what he’s watching."
-    "That is, when Daichi lets me see his computer. He’s often documenting his findings or browsing conspiracy websites, so he’ll never share his screen unless he’s watching anime."
+    "The weekend had arrived, and I found myself sitting outside my dorm room just as the Sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
+    "Unless I actively make plans with someone else, I'll usually just browse the internet, watch videos, or play games. Daichi usually has something to stream, so I'll occasionally peek in and watch what he's watching."
+    "That is, when Daichi lets me see his computer. He's often documenting his findings or browsing conspiracy websites, so he'll never share his screen unless he's watching anime."
     "I was just about to head back inside when I saw a distinctively tall figure. She was even taller than the light poles, which made her stand out even more in their brightness."
     show GTS neutral-2 with dissolve
-    "Another figure was standing next to her. Seeing Naomi stand next to another person made me realize just how tall she was. It was easy to forget her height when she’s the only one present."
+    "Another figure was standing next to her. Seeing Naomi stand next to another person made me realize just how tall she was. It was easy to forget her height when she's the only one present."
     show GTS neutral-2 at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
     show BE neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     "Both Honoka and Naomi stood next to the light pole. They were illuminated by the white glow covering the sidewalk."
     show GTS unique-2
     show BE happy
-    "I couldn’t quite make out what they were saying from here, but they seemed to be deep into a conversation."
-    "I decided to approach them. The sidewalk was still brightly lit, so seeing me wouldn’t come as a surprise."
+    "I couldn't quite make out what they were saying from here, but they seemed to be deep into a conversation."
+    "I decided to approach them. The sidewalk was still brightly lit, so seeing me wouldn't come as a surprise."
     show GTS neutral-2
     GTS "...Though, most people think that they are."
-    BE "Well, yeah! Unless you’re familiar with the field, I’d assume the same thing."
+    BE "Well, yeah! Unless you're familiar with the field, I'd assume the same thing."
     "Their conversation seemed to halt as I got close, though. I gave them a small wave, which Honoka repeated."
     show BE neutral
     BE "Hey, Kei-chan."
@@ -7380,12 +7380,12 @@ label BEGTS002:
     show BE happy
     BE "Yup! Apparently most home-grown plants require way less water than most people provide."
     show GTS surprised
-    GTS "It’s a mistake that non-enthusiast plant owners make quite often. If they’re just maintaining a basic flower display for their home, the display often goes overwatered."
+    GTS "It's a mistake that non-enthusiast plant owners make quite often. If they're just maintaining a basic flower display for their home, the display often goes overwatered."
     show BE neutral
     BE "That, and some store owners only remember to maintain them when they get a really fancy display."
     show BE angry
     BE "Those like... specialty fruits that they display in the store window as a status symbol."
-    MC "I’ve seen those before, yeah. Like the cube watermelons, right?"
+    MC "I've seen those before, yeah. Like the cube watermelons, right?"
     show GTS neutral
     GTS "The very same."
     show BE confused
@@ -7394,7 +7394,7 @@ label BEGTS002:
     show BE embarrassed
     BE "Right, right! I was thinking about doing stuff all week! I hardly had any time with all my classes and clubs."
     show GTS happy-2
-    GTS "Oh, don’t feel bad about it! We got to play volleyball, didn’t we?"
+    GTS "Oh, don't feel bad about it! We got to play volleyball, didn't we?"
     show BE shrug
     BE "Yeah, but you cheat!"
     show GTS happy
@@ -7402,50 +7402,50 @@ label BEGTS002:
     GTS "My factor is hardly a form of cheating!"
     "Honoka gave a sarcastic scoff in response."
     show BE seductive
-    BE "We’d belong in different divisions anyway. I can hardly hit the ball over you!"
+    BE "We'd belong in different divisions anyway. I can hardly hit the ball over you!"
     show GTS unique
     GTS "Hmm? Would you rather I gave basketball a try, then?"
     show BE embarrassed
-    MC "Wouldn’t you get shot-clocked for holding the ball over everyone?"
+    MC "Wouldn't you get shot-clocked for holding the ball over everyone?"
     show GTS neutral
-    GTS "Sarcastic as I might have been, I’d be willing to give it a try. I’m certain that Seichou has specific rules geared towards factors, after all."
+    GTS "Sarcastic as I might have been, I'd be willing to give it a try. I'm certain that Seichou has specific rules geared towards factors, after all."
     show BE happy
-    BE "We’d be unstoppable, Naomi-chan! Maybe I can convince Akira-chan to join us too!"
-    GTS "My knowledge is limited, but I don’t think there are any body checks in basketball."
+    BE "We'd be unstoppable, Naomi-chan! Maybe I can convince Akira-chan to join us too!"
+    GTS "My knowledge is limited, but I don't think there are any body checks in basketball."
     BE "She knows how to use her strength, Naomi-chan! Just like you~!"
     show GTS happy
-    GTS "I admire your athletic discipline and positive attitude, Inoue-san. It’s truly something to behold."
+    GTS "I admire your athletic discipline and positive attitude, Inoue-san. It's truly something to behold."
     show BE embarrassed
-    BE "I could learn a few things from you myself, Naomi-chan. You’re so... well-spoken and refined and stuff. It’s not easy disciplining yourself to stay like that."
+    BE "I could learn a few things from you myself, Naomi-chan. You're so... well-spoken and refined and stuff. It's not easy disciplining yourself to stay like that."
     show GTS neutral
     GTS "Oh, hardly. You give me too much credit, Inoue-san."
     "The evening air billowed around us as we spoke. An audible gust of wind caused the nearby trees to rustle and stir. Honoka made a motion as if to respond, then tilted her head upwards to look at the darkened sky in silence."
     show BE happy
     BE "Oh, hey! I know what we can do tonight."
-    "Naomi and I repeated her gesture, craning both of our heads to look up. There didn’t appear to be a single cloud in the sky. The night had been completely clear, allowing us to see every star dotting the expansive airspace."
+    "Naomi and I repeated her gesture, craning both of our heads to look up. There didn't appear to be a single cloud in the sky. The night had been completely clear, allowing us to see every star dotting the expansive airspace."
     MC "Would you like to watch the stars, Honoka?"
     show BE neutral
-    BE "I’d like that very much, Kei-chan."
+    BE "I'd like that very much, Kei-chan."
     show BE shrug
     BE "What about you, Naomi-chan? You wanna join us?"
     show GTS embarrassed
     GTS "If you would have me."
     show BE happy
-    BE "Of course we’ll have you! Right, Kei-chan?"
+    BE "Of course we'll have you! Right, Kei-chan?"
     MC "Absolutely."
     show GTS sad
-    GTS "I appreciate it. I’m fully aware that our options are limited due to my size, so if you’re just trying to accommodate me--"
+    GTS "I appreciate it. I'm fully aware that our options are limited due to my size, so if you're just trying to accommodate me--"
     "Honoka held up her hand with a wide smile before Naomi could finish her sentence."
-    BE "Naomi-chan. It’s fine. Really, it is! We’ve all got factors. You don’t need to be so hard on yourself."
+    BE "Naomi-chan. It's fine. Really, it is! We've all got factors. You don't need to be so hard on yourself."
     show GTS neutral
-    "I could see the fog surrounding Naomi’s expression clear up as she listened to Honoka talk. Clearly, she had said something right."
+    "I could see the fog surrounding Naomi's expression clear up as she listened to Honoka talk. Clearly, she had said something right."
     show GTS embarrassed
-    GTS "Thank you, Inoue-san. Thank you. I... need to remember to see value in my company. Our factors don’t make us burdens."
-    MC "I’m glad that she’s helped you see it that way, Yamazaki-san."
+    GTS "Thank you, Inoue-san. Thank you. I... need to remember to see value in my company. Our factors don't make us burdens."
+    MC "I'm glad that she's helped you see it that way, Yamazaki-san."
     GTS "The thoughts of what difficulties my size will bring come and go, but Inoue-san helps keep me positive. Mental fortitude can only get one so far."
     show GTS neutral
     GTS "Shall we be off?"
-    MC "I’m ready if you’re ready. Honoka?"
+    MC "I'm ready if you're ready. Honoka?"
     show BE neutral
     BE "Right behind ya!"
 
@@ -7455,19 +7455,19 @@ label BEGTS002:
     "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just passed the entrance to the GTS dorm, so the walk only took us a few minutes."
     if not isEventCleared("GTS020"):
         "Naomi struggled to find the correct pace to her strides. Due to her immense height, she needed to stop in her tracks every time she outpaced us."
-        "She swayed idly on her heels as she waited for Honoka and I to catch up. It looked like she clearly didn’t intend to walk so fast. Her strides just naturally took her further."
+        "She swayed idly on her heels as she waited for Honoka and I to catch up. It looked like she clearly didn't intend to walk so fast. Her strides just naturally took her further."
     else:
         "Since I had been spending a lot of time with Naomi, we had already gotten used to walking alongside each other. She kept perfect pace with the two of us, intentionally placing her strides at the perfect distance."
-        "She was a natural at it by this point. If not for the occasional heavy pulse in her footsteps, It’d be almost impossible to tell we were walking next to someone so tall."
+        "She was a natural at it by this point. If not for the occasional heavy pulse in her footsteps, It'd be almost impossible to tell we were walking next to someone so tall."
         "...Well, until we looked to our sides, that is."
     "Honoka stretched her arms up with two fists clenched. She seemed eager to lay down in the grass."
     BE "This seems like a good spot!"
     MC "Works for me."
     "Honoka seated herself, then rocked backwards until she was laying flat upon the ground. Her entire body wobbled before it finally came to a halt."
-    "With an imposing thoom, Naomi soon joined us. Despite being over double our heights, she still found a spot for herself upon the hill. She rested herself to Honoka’s right, while I reclined to her left."
-    "Honoka’s body made it somewhat difficult to see Naomi, but it didn’t matter much since the three of us were focused on the sky."
+    "With an imposing thoom, Naomi soon joined us. Despite being over double our heights, she still found a spot for herself upon the hill. She rested herself to Honoka's right, while I reclined to her left."
+    "Honoka's body made it somewhat difficult to see Naomi, but it didn't matter much since the three of us were focused on the sky."
     "Honoka inhaled as she relaxed. Naomi inhaled as well, with a much lower and hollower tone."
-    BE "Really takes you back, doesn’t it, Kei-chan?"
+    BE "Really takes you back, doesn't it, Kei-chan?"
     MC "To the sleepovers we used to have when we were kids?"
     BE "Mhm. Exactly."
     "I could hear Honoka shifting her position and moving her arms. From my peripheral vision, I could see her faintly crack a smile."
@@ -7476,16 +7476,16 @@ label BEGTS002:
     BE "--That one time we watched a DVD before we were supposed to sleep?"
     MC "The one that was way above our age rating at the time?"
     GTS "Did you two lose your innocence that early?"
-    BE "Pff, nah! It wasn’t porn. It was more of a horror film."
+    BE "Pff, nah! It wasn't porn. It was more of a horror film."
     MC "I thought the cover looked really cool, which is why I chose it..."
     BE "The one with all the silhouettes of the students, right?"
-    MC "Yep. Where they’re all sent to an island with limited supplies, food, and water... and told to kill each other."
+    MC "Yep. Where they're all sent to an island with limited supplies, food, and water... and told to kill each other."
     "I heard Naomi physically recoil at my summary."
-    GTS "I think I know which one you’re talking about. That sounds horrific to watch during a sleepover. How old were you two?"
+    GTS "I think I know which one you're talking about. That sounds horrific to watch during a sleepover. How old were you two?"
     MC "Around 11 or 12."
     BE "We were so afraid, we shut the DVD player down and kept the lights on the entire night!"
-    GTS "Having the lights on can be very comforting when you’re afraid."
-    GTS "Though, to watch a film like that when you’re 11..."
+    GTS "Having the lights on can be very comforting when you're afraid."
+    GTS "Though, to watch a film like that when you're 11..."
     MC "Believe me, I regret it. In a way, though... it was okay. I got to see a new side of Honoka that day. She has this natural talent of just... saying the right thing to make you feel better."
     BE "Even back when I was a kid?"
     MC "Your friendliness was, and still is, one of your best traits, Honoka. You can always find a reason to smile."
@@ -7497,21 +7497,21 @@ label BEGTS002:
     show BE seductive
     BE "What about you, Naomi-chan? Do you have any fun stories to share?"
     show GTS embarrassed
-    GTS "You’re gonna think it’s stupid."
+    GTS "You're gonna think it's stupid."
     show BE happy
-    BE "Ooh, I promise I won’t! C’mon, tell me!"
+    BE "Ooh, I promise I won't! C'mon, tell me!"
     show GTS neutral-2
     GTS "All right, all right~"
     show BE neutral
     "Naomi let out a defeated exhale, followed by a giggle. We could hear the idle sounds of crickets chirping in the distance as the night breeze continued to rustle the trees."
     GTS "Once, I wanted to prepare takoyaki by myself. I saw it a few times on those home shopping shows where they demonstrate different appliances."
     show GTS neutral
-    GTS "We had most of the necessary ingredients at our house, but we didn’t have a specialized tray specifically for making takoyaki."
+    GTS "We had most of the necessary ingredients at our house, but we didn't have a specialized tray specifically for making takoyaki."
     MC "Those trays with the little circles on them?"
     show GTS unique
     GTS "Correct. The very same."
     show GTS neutral
-    GTS "Since we didn’t have a tray small enough for takoyaki, I ah-"
+    GTS "Since we didn't have a tray small enough for takoyaki, I ah-"
     show GTS embarrassed
     GTS "I ended up using a muffin tray instead. So instead of having a neat serving of 8 perfectly cut takoyaki balls, I ended up just making around -- two muffin-sized wads of octopus."
     show BE confused
@@ -7520,24 +7520,24 @@ label BEGTS002:
     GTS "My dad was genuinely impressed that I made something edible, even if the serving was completely wrong. That was the first time I had ever seen him laugh."
     show BE doubt
     BE "Wait... how old were you at the time?"
-    GTS "Around 8 years old. My dad wasn’t usually one to break tradition or display a lot of emotion, but to see his daughter make something so hilariously off--"
+    GTS "Around 8 years old. My dad wasn't usually one to break tradition or display a lot of emotion, but to see his daughter make something so hilariously off--"
     show BE happy
-    BE "You didn’t make a mistake! You invented a completely original cuisine!"
+    BE "You didn't make a mistake! You invented a completely original cuisine!"
     show GTS embarrassed
-    GTS "I suppose that’s one way of looking at it~"
+    GTS "I suppose that's one way of looking at it~"
     stop music
     "The night air came to a halt as the three of us spoke. The wind had calmed, leaving the trees completely still. Silence surrounded us as we looked up at the stars once more."
     show GTS neutral-2
     show BE neutral
-    BE "I don’t know if there are any constellations among those. I’ve never really looked for them outside of a textbook."
-    GTS "Neither have I. Still, a clear night sky has a very strong calming effect, doesn’t it?"
+    BE "I don't know if there are any constellations among those. I've never really looked for them outside of a textbook."
+    GTS "Neither have I. Still, a clear night sky has a very strong calming effect, doesn't it?"
     show BE happy
     BE "Yeah, it does. I had a chance to just... slow down, and watch the stars. Even if I focus on just one point, I can slowly shift my eyes and just... get lost in the sea of darkness."
     show GTS unique-2
-    GTS "You’re a poet, Inoue-san."
+    GTS "You're a poet, Inoue-san."
     show BE embarrassed
     BE "Oh, shut up~! I bet you could come up with something better, since you can see them closer."
-    GTS "I’ll trust your judgement, Inoue-san. Your phrase was a lovely way to describe a sea of stars."
+    GTS "I'll trust your judgement, Inoue-san. Your phrase was a lovely way to describe a sea of stars."
     show BE neutral
     BE "Would you like to head back now?"
     show GTS neutral-2
@@ -7549,34 +7549,34 @@ label BEGTS002:
     show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
     BE "Thank you for spending time with me, Naomi-chan. This was wonderful."
     show GTS unique-2
-    GTS "I’m glad you had fun, Inoue-san. It was your idea, though!"
+    GTS "I'm glad you had fun, Inoue-san. It was your idea, though!"
     show BE happy
-    BE "It doesn’t matter that it was my idea. Your company made it better."
+    BE "It doesn't matter that it was my idea. Your company made it better."
     GTS "I feel the same way, Inoue-san. I value your company just as much."
     show BE embarrassed
     BE "Awww~"
     show GTS neutral-2
     GTS "Shall we schedule something else next week?"
     show BE neutral
-    BE "If I’m not too busy with school work, sure!"
+    BE "If I'm not too busy with school work, sure!"
     show GTS unique-2
-    GTS "Fantastic. I’ll see you again soon."
+    GTS "Fantastic. I'll see you again soon."
     "Naomi gave us both a small bow. She was so tall, however, that a bow from her loomed over both of our heads."
     MC "See you around, Yamazaki-san."
     GTS "Farewell, Hotsure-san."
     hide GTS with dissolve
     show BE neutral at Position(xalign=0.5, yalign=1.0) with dissolve
     BE "I never knew how outgoing Naomi-chan was. When we first arrived, all I saw was a timid girl in the school garden. I thought there was something mysterious about her, but I never thought..."
-    "Honoka seemed to pause midway through her sentence, like she didn’t know what to say."
+    "Honoka seemed to pause midway through her sentence, like she didn't know what to say."
     MC "You never thought what?"
     show BE sad
-    BE "I never thought she’d be so special to me."
-    "Honoka’s expression clouded up in deep thought, then slowly returned to a beaming look of happiness."
+    BE "I never thought she'd be so special to me."
+    "Honoka's expression clouded up in deep thought, then slowly returned to a beaming look of happiness."
     show BE happy
-    BE "It’s all because of you, Kei-chan. If it hadn’t been for you, we would have never clicked in the way we did."
-    MC "You wouldn’t have hung out on the roof?"
+    BE "It's all because of you, Kei-chan. If it hadn't been for you, we would have never clicked in the way we did."
+    MC "You wouldn't have hung out on the roof?"
     show BE shrug
-    BE "I might have by myself, but... you were the reason we met, and I’m so happy that we did."
+    BE "I might have by myself, but... you were the reason we met, and I'm so happy that we did."
     MC "I appreciate that, Honoka."
     "Honoka pulled me into a firm hug before she left for the night. It was pretty difficult to wrap my arms all the way around her, but we managed to make it work."
     hide BE with dissolve
