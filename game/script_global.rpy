@@ -7,6 +7,7 @@ define AE = Character('Shiori', color="#FF3300")
 define BBW = Character('Alice', color="#CC33FF")
 define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BBWCell")
 define BE = Character('Honoka', color="#FCCF20")
+define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
 define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
@@ -33,6 +34,8 @@ define Misaki = Character('Misaki', color="#C0C0C0")
 define Miura = Character('Miura', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Mom = Character('Mom', color="#FF3300")
+define Naoki = Character('Naoki', color="#C0C0C0")
+define Natsuko = Character('Natsuko', color="#C0C0C0")
 define Nurse = Character('Nurse', color="#FF91DC")
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
@@ -50,12 +53,14 @@ define Yuki = Character('Yuki', color="#FF91DC")
 define All = Character('Everyone', color="#ffffff")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define Barker = Character('Barker', color="#C0C0C0")
+define Card = Character('Card', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
 define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
 define Coach = Character('Coach', color="#C0C0C0")
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define DJ = Character('DJ', color="#C0C0C0")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
 define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color maybe?
 define Girls = Character('Girls', color="#ffffff")
@@ -76,6 +81,7 @@ define Student3 = Character('Student 3', color="#FF3300")
 define Teacher = Character('Teacher', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define UNKNOWNCell = Character('???', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
+define Umpire = Character('Umpire', color="#C0C0C0")
 define Vendor = Character('Vendor', color="#FFFFFF")
 define Waiter = Character('Waiter', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
@@ -103,6 +109,7 @@ image Office = "Graphics/ui/bg/office_day.png"
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
 image Music Classroom = "Graphics/ui/bg/music_day.png"
+image Art Classroom = "Graphics/ui/bg/NYI.png"
 image Gym = "Graphics/ui/bg/auditorium.png"
 image Track = "Graphics/ui/bg/track_day.png"
 image Roof = "Graphics/ui/bg/roof_day.png"
@@ -119,6 +126,7 @@ image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/NYI.png"
 image Theater = "Graphics/ui/bg/NYI.png"
 image Field = "Graphics/ui/bg/field_day.png"
+image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
 image Game Store = "Graphics/ui/bg/gamestore.png"
 image Park = "Graphics/ui/bg/park_day.png"
@@ -130,6 +138,7 @@ image Supermarket = "Graphics/ui/bg/supermarket_day.png"
 image Art Gallery = "Graphics/ui/bg/NYI.png"
 image Mountains = "Graphics/ui/bg/mountains_day.png"
 image Japanese Room = "Graphics/ui/bg/japaneseroom_day.png"
+image Club = "Graphics/ui/bg/NYI.png"
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -172,6 +181,12 @@ image cg AE050_spank1 = "Graphics/ui/gallery/AE050_spank1.png"
 image cg AE050_spank2 = "Graphics/ui/gallery/AE050_spank2.png"
 image cg AE050_spank3 = "Graphics/ui/gallery/AE050_spank3.png"
 image cg AE050_spank4 = "Graphics/ui/gallery/AE050_spank4.png"
+image cg AE050_behind1 = "Graphics/ui/gallery/AE050_behind1.png"
+image cg AE050_behind2 = "Graphics/ui/gallery/AE050_behind2.png"
+image cg AE050_behind3 = "Graphics/ui/gallery/AE050_behind3.png"
+image cg AE050_behind4 = "Graphics/ui/gallery/AE050_behind4.png"
+image cg AE050_behind5 = "Graphics/ui/gallery/AE050_behind5.png"
+image cg AE050_behind6 = "Graphics/ui/gallery/AE050_behind6.png"
 
 image cg BBW000 = "Graphics/ui/gallery/BBW000.png"
 image cg BBW009 = "Graphics/ui/gallery/BBW009.png"
@@ -188,11 +203,15 @@ image cg GTS025 = "Graphics/ui/gallery/GTS025.png"
 image cg GTS035 = "Graphics/ui/gallery/GTS035.png"
 
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
+image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
 
 #Character sprites
 image RM neutral = "Graphics/minor/RM-neutral.png"
 image RM angry = "Graphics/minor/RM-angry.png"
-image RM distrustful = "Graphics/minor/RM-sad.png"
+image RM concerned = "Graphics/minor/RM-concerned.png"
+image RM concerned-2 = "Graphics/minor/RM-concerned-2.png"
+image RM distrustful = "Graphics/minor/RM-distrustful.png"
+image RM doubt = "Graphics/minor/RM-doubt.png"
 image RM happy = "Graphics/minor/RM-happy.png"
 image RM sad = "Graphics/minor/RM-sad.png"
 image RM smug = "Graphics/minor/RM-smug.png"
@@ -217,20 +236,25 @@ image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebro
 image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
 image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
 image AE happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
+image AE smile = DynamicImage("Graphics/AE/[globalsize]/happy-2.png")
+image AE pondering = DynamicImage("Graphics/AE/[globalsize]/pondering.png")
 image AE sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
 image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
 image AE frown = DynamicImage("Graphics/AE/[globalsize]/sad.png")
 image AE surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
+image AE admire = DynamicImage("Graphics/AE/[globalsize]/admire.png")
 image AE angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
 image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
 image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
+image AE angry-4 = DynamicImage("Graphics/AE/[globalsize]/angry-4.png")
 image AE aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
 image AE embarrassed = DynamicImage("Graphics/AE/[globalsize]/embarrassed.png")
+image AE aroused-2 = DynamicImage("Graphics/AE/[globalsize]/aroused-2.png")
 image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
 image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
 image AE glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
 image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
+image AE glasses-3 = DynamicImage("Graphics/AE/[globalsize]/unique-3.png")
 image AE ass = DynamicImage("Graphics/AE/[globalsize]/ass.png")
 image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/ass.png")
 
@@ -254,47 +278,52 @@ image AE nude-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
 image AE nude-glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
 image AE nude-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
 
-image AE dress-neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
-image AE dress-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE dress-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
-image AE dress-neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE dress-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
-image AE dress-happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE dress-smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE dress-sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE dress-sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE dress-surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE dress-angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE dress-angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE dress-angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE dress-aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
-image AE dress-embarrassed = DynamicImage("Graphics/AE/[globalsize]/aroused-2.png")
-image AE dress-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE dress-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
-image AE dress-glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
-image AE dress-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
+image AE dress-neutral = DynamicImage("Graphics/AE/[globalsize]/dress-neutral.png")
+image AE dress-neutral-2 = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-2.png")
+image AE dress-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-annoyed.png")
+image AE dress-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-eyebrow.png")
+image AE dress-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-smug.png")
+image AE dress-happy = DynamicImage("Graphics/AE/[globalsize]/dress-happy.png")
+image AE dress-smile = DynamicImage("Graphics/AE/[globalsize]/dress-happy-2.png")
+image AE dress-sad = DynamicImage("Graphics/AE/[globalsize]/dress-sad.png")
+image AE dress-sad-2 = DynamicImage("Graphics/AE/[globalsize]/dress-sad-2.png")
+image AE dress-surprised = DynamicImage("Graphics/AE/[globalsize]/dress-surprised.png")
+image AE dress-angry = DynamicImage("Graphics/AE/[globalsize]/dress-angry.png")
+image AE dress-angry-2 = DynamicImage("Graphics/AE/[globalsize]/dress-angry-2.png")
+image AE dress-angry-3 = DynamicImage("Graphics/AE/[globalsize]/dress-angry-3.png")
+image AE dress-aroused = DynamicImage("Graphics/AE/[globalsize]/dress-aroused.png")
+image AE dress-aroused-2 = DynamicImage("Graphics/AE/[globalsize]/dress-aroused-2.png")
+image AE dress-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/dress-aroused-3.png")
+image AE dress-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/dress-aroused-4.png")
+image AE dress-embarrassed = DynamicImage("Graphics/AE/[globalsize]/dress-embarrassed.png")
+image AE dress-glasses = DynamicImage("Graphics/AE/[globalsize]/dress-unique.png")
+image AE dress-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/dress-unique-2.png")
+image AE dress-glasses-3 = DynamicImage("Graphics/AE/[globalsize]/dress-unique-3.png")
 
-image AE casual-neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
-image AE casual-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE casual-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
-image AE casual-neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE casual-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
-image AE casual-happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE casual-smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE casual-sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE casual-sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE casual-surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE casual-angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE casual-angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE casual-angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE casual-aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
-image AE casual-embarrassed = DynamicImage("Graphics/AE/[globalsize]/aroused-2.png")
-image AE casual-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE casual-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
-image AE casual-glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
-image AE casual-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
+image AE casual-neutral = DynamicImage("Graphics/AE/[globalsize]/dress-neutral.png")
+image AE casual-neutral-2 = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-2.png")
+image AE casual-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-annoyed.png")
+image AE casual-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-eyebrow.png")
+image AE casual-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/dress-neutral-smug.png")
+image AE casual-happy = DynamicImage("Graphics/AE/[globalsize]/dress-happy.png")
+image AE casual-smile = DynamicImage("Graphics/AE/[globalsize]/dress-happy-2.png")
+image AE casual-sad = DynamicImage("Graphics/AE/[globalsize]/dress-sad.png")
+image AE casual-sad-2 = DynamicImage("Graphics/AE/[globalsize]/dress-sad-2.png")
+image AE casual-surprised = DynamicImage("Graphics/AE/[globalsize]/dress-surprised.png")
+image AE casual-angry = DynamicImage("Graphics/AE/[globalsize]/dress-angry.png")
+image AE casual-angry-2 = DynamicImage("Graphics/AE/[globalsize]/dress-angry-2.png")
+image AE casual-angry-3 = DynamicImage("Graphics/AE/[globalsize]/dress-angry-3.png")
+image AE casual-aroused = DynamicImage("Graphics/AE/[globalsize]/dress-aroused.png")
+image AE casual-aroused-2 = DynamicImage("Graphics/AE/[globalsize]/dress-aroused-2.png")
+image AE casual-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/dress-aroused-3.png")
+image AE casual-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/dress-aroused-4.png")
+image AE casual-embarrassed = DynamicImage("Graphics/AE/[globalsize]/dress-embarrassed.png")
+image AE casual-glasses = DynamicImage("Graphics/AE/[globalsize]/dress-unique.png")
+image AE casual-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/dress-unique-2.png")
+image AE casual-glasses-3 = DynamicImage("Graphics/AE/[globalsize]/dress-unique-3.png")
 
 image BBW neutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
+image BBW neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/neutral-2.png")
 image BBW happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW sad = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
 image BBW surprised = DynamicImage("Graphics/BBW/[globalsize]/surprised.png")
@@ -302,26 +331,33 @@ image BBW angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 image BBW aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
 image BBW haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
 image BBW stern = DynamicImage("Graphics/BBW/[globalsize]/stern.png")
+image BBW doubt = DynamicImage("Graphics/BBW/[globalsize]/doubt.png")
 
 image BBW sick = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
 image BBW sick-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW sick-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 
 image BBW swim-neutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
+image BBW swim-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/neutral-2.png")
 image BBW swim-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW swim-sad = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
 image BBW swim-surprised = DynamicImage("Graphics/BBW/[globalsize]/surprised.png")
 image BBW swim-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 image BBW swim-aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
 image BBW swim-haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
+image BBW swim-stern = DynamicImage("Graphics/BBW/[globalsize]/stern.png")
+image BBW swim-doubt = DynamicImage("Graphics/BBW/[globalsize]/doubt.png")
 
 image BBW casual-neutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
+image BBW casual-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/neutral-2.png")
 image BBW casual-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW casual-sad = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
 image BBW casual-surprised = DynamicImage("Graphics/BBW/[globalsize]/surprised.png")
 image BBW casual-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 image BBW casual-aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
 image BBW casual-haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
+image BBW casual-stern = DynamicImage("Graphics/BBW/[globalsize]/stern.png")
+image BBW casual-doubt = DynamicImage("Graphics/BBW/[globalsize]/doubt.png")
 
 image BE neutral = Composite(
     (513, 686),
@@ -371,10 +407,25 @@ image BE sad = Composite(
 image BE surprised = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/sad.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/surprised.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/sad.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/surprised.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
+image BE surprised-2 = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/surprised-2.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/surprised-2.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
         "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
@@ -428,20 +479,100 @@ image BE unique = Composite(
         "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
         None, Null())
     )
+image BE confused = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/confused.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/confused.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
+image BE doubt = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/doubt.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/doubt.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
+image BE embarrassed = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/embarrassed.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/embarrassed.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
+image BE seductive = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/seductive.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/seductive.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
+image BE shrug = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/shrug.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/shrug.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
 
 image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
 image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/sad.png")
 image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/surprised.png")
+image FMG surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/surprised-2.png")
 image FMG confused = DynamicImage("Graphics/FMG/[globalsize]/surprised.png")
 image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/angry.png")
+image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/angry-2.png")
 image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/aroused.png")
+image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/aroused-2.png")
 image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 
 image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/neutral.png")
+image GTS neutral-2 = DynamicImage("Graphics/GTS/[globalsize]/neutral.png") #nyi
 image GTS happy = DynamicImage("Graphics/GTS/[globalsize]/happy.png")
 image GTS happy-2 = DynamicImage("Graphics/GTS/[globalsize]/happy-2.png")
 image GTS sad = DynamicImage("Graphics/GTS/[globalsize]/sad.png")
+image GTS sad-2 = DynamicImage("Graphics/GTS/[globalsize]/sad-2.png")
 image GTS surprised = DynamicImage("Graphics/GTS/[globalsize]/surprised.png")
 image GTS angry = DynamicImage("Graphics/GTS/[globalsize]/angry.png")
 image GTS aroused = DynamicImage("Graphics/GTS/[globalsize]/aroused.png")
@@ -450,10 +581,14 @@ image GTS shy = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/wink.png")
 image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/unique.png")
+image GTS unique-2 = DynamicImage("Graphics/GTS/[globalsize]/unique-2.png")
 
 image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
+image GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png") #nyi
 image GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png")
+image GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/happy.png") #nyi
 image GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/sad.png")
+image GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/sad-2.png")
 image GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/surprised.png")
 image GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/angry.png")
 image GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/aroused.png")
@@ -462,10 +597,19 @@ image GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/embarrassed.png")
 image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/wink.png")
 image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/unique.png")
+image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/unique-2.png")
+
+image GTS casual-neutral = DynamicImage("Graphics/GTS/[globalsize]/casual-neutral.png")
+image GTS casual-happy = DynamicImage("Graphics/GTS/[globalsize]/casual-happy.png")
+image GTS casual-surprised = DynamicImage("Graphics/GTS/[globalsize]/casual-surprised.png")
+image GTS casual-wink = DynamicImage("Graphics/GTS/[globalsize]/casual-wink.png")
 
 image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
+image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png") #nyi
 image side GTS_S happy = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png")
+image side GTS_S happy-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-happy.png") #nyi
 image side GTS_S sad = DynamicImage("Graphics/GTS/[globalsize]_s/side-sad.png")
+image side GTS_S sad-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-sad-2.png")
 image side GTS_S surprised = DynamicImage("Graphics/GTS/[globalsize]_s/side-surprised.png")
 image side GTS_S angry = DynamicImage("Graphics/GTS/[globalsize]_s/side-angry.png")
 image side GTS_S aroused = DynamicImage("Graphics/GTS/[globalsize]_s/side-aroused.png")
@@ -474,13 +618,17 @@ image side GTS_S shy = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrasse
 image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarrassed.png")
 image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png")
 image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique.png")
+image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique-2.png")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
+image PRG excited = DynamicImage("Graphics/PRG/[prgsize]/excited.png")
 image PRG sad = DynamicImage("Graphics/PRG/[prgsize]/sad.png")
 image PRG surprised = DynamicImage("Graphics/PRG/[prgsize]/surprised.png")
+image PRG stressball = DynamicImage("Graphics/PRG/[prgsize]/stressball.png")
 image PRG angry = DynamicImage("Graphics/PRG/[prgsize]/angry.png")
 image PRG aroused = DynamicImage("Graphics/PRG/[prgsize]/aroused.png")
+image PRG flattered = DynamicImage("Graphics/PRG/[prgsize]/flattered.png")
 image PRG unique = DynamicImage("Graphics/PRG/[prgsize]/unique.png")
 image PRG unique-happy = DynamicImage("Graphics/PRG/[prgsize]/unique-happy.png")
 image PRG worried = DynamicImage("Graphics/PRG/[prgsize]/worried.png")
@@ -488,14 +636,20 @@ image PRG worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/worried.png
 image PRG sad-2 = DynamicImage("Graphics/PRG/[prgsize]/sad-2.png")
 image PRG lactate = DynamicImage("Graphics/PRG/[prgsize]/lactate.png")
 image PRG admire = DynamicImage("Graphics/PRG/[prgsize]/admire.png")
+image PRG admire-2 = DynamicImage("Graphics/PRG/[prgsize]/admire-2.png")
 image PRG doubt = DynamicImage("Graphics/PRG/[prgsize]/doubt.png")
+image PRG nervous = DynamicImage("Graphics/PRG/[prgsize]/nervous.png")
+image PRG satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.png")
 
 image PRG dress-neutral = DynamicImage("Graphics/PRG/[prgsize]/dress-neutral.png")
 image PRG dress-happy = DynamicImage("Graphics/PRG/[prgsize]/dress-happy.png")
+image PRG dress-excited = DynamicImage("Graphics/PRG/[prgsize]/dress-excited.png")
 image PRG dress-sad = DynamicImage("Graphics/PRG/[prgsize]/dress-sad.png")
 image PRG dress-surprised = DynamicImage("Graphics/PRG/[prgsize]/dress-surprised.png")
 image PRG dress-aroused = DynamicImage("Graphics/PRG/[prgsize]/dress-aroused.png")
+image PRG dress-flattered = DynamicImage("Graphics/PRG/[prgsize]/dress-flattered.png")
 image PRG dress-unique = DynamicImage("Graphics/PRG/[prgsize]/dress-unique.png")
+image PRG dress-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/dress-unique-happy.png")
 image PRG dress-worried = DynamicImage("Graphics/PRG/[prgsize]/dress-worried.png")
 image PRG dress-worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/dress-worried.png")
 image PRG dress-sad = DynamicImage("Graphics/PRG/[prgsize]/dress-sad-2.png")
@@ -504,23 +658,31 @@ image PRG dress-admire = DynamicImage("Graphics/PRG/[prgsize]/dress-happy.png")
 
 image PRG nude-neutral = DynamicImage("Graphics/PRG/[prgsize]/nude-neutral.png")
 image PRG nude-happy = DynamicImage("Graphics/PRG/[prgsize]/nude-happy.png")
+image PRG nude-excited = DynamicImage("Graphics/PRG/[prgsize]/nude-excited.png")
 image PRG nude-sad = DynamicImage("Graphics/PRG/[prgsize]/nude-sad.png")
 image PRG nude-surprised = DynamicImage("Graphics/PRG/[prgsize]/nude-surprised.png")
 image PRG nude-angry = DynamicImage("Graphics/PRG/[prgsize]/nude-angry.png")
 image PRG nude-aroused = DynamicImage("Graphics/PRG/[prgsize]/nude-aroused.png")
+image PRG nude-flattered = DynamicImage("Graphics/PRG/[prgsize]/nude-flattered.png")
 image PRG nude-unique = DynamicImage("Graphics/PRG/[prgsize]/nude-unique.png")
+image PRG nude-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/nude-unique-happy.png")
+image PRG nude-worried = DynamicImage("Graphics/PRG/[prgsize]/nude-worried.png")
 image PRG nude-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/nude-sad-2.png")
 image PRG nude-lactate = DynamicImage("Graphics/PRG/[prgsize]/nude-lactate.png")
 image PRG nude-lactate2 = DynamicImage("Graphics/PRG/[prgsize]/nude-lactate2.png")
 image PRG nude-admire = DynamicImage("Graphics/PRG/[prgsize]/nude-admire.png")
 image PRG nude-doubt = DynamicImage("Graphics/PRG/[prgsize]/nude-doubt.png")
+image PRG nude-satisfied = DynamicImage("Graphics/PRG/[prgsize]/nude-satisfied.png")
 
 image PRG cow-neutral = DynamicImage("Graphics/PRG/[prgsize]/cow-neutral.png")
 image PRG cow-happy = DynamicImage("Graphics/PRG/[prgsize]/cow-happy.png")
+image PRG cow-excited = DynamicImage("Graphics/PRG/[prgsize]/cow-excited.png")
 image PRG cow-sad = DynamicImage("Graphics/PRG/[prgsize]/cow-sad.png")
 image PRG cow-surprised = DynamicImage("Graphics/PRG/[prgsize]/cow-surprised.png")
 image PRG cow-aroused = DynamicImage("Graphics/PRG/[prgsize]/cow-aroused.png")
+image PRG cow-flattered = DynamicImage("Graphics/PRG/[prgsize]/cow-aroused.png")
 image PRG cow-unique = DynamicImage("Graphics/PRG/[prgsize]/cow-unique.png")
+image PRG cow-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/cow-unique-happy.png")
 image PRG cow-worried = DynamicImage("Graphics/PRG/[prgsize]/cow-worried.png")
 image PRG cow-worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/cow-worried.png")
 image PRG cow-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/cow-sad-2.png")
@@ -532,6 +694,8 @@ image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-unique = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 
 image side MC = "Graphics/side/mc.png"
+image side BECell = ConditionSwitch("getVar('BEMode') == 'Feminine'", DynamicImage("Graphics/side/BE-fem-[globalsize].png"),
+                                    "True", DynamicImage("Graphics/side/BE-[globalsize].png"))
 image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
@@ -539,9 +703,10 @@ image side TomoCell = "Graphics/side/tomoko.png"
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"
-image Ryoko annoyed = "Graphics/minor/ryoko-neutral.png"
+image Ryoko annoyed = "Graphics/minor/ryoko-annoyed.png"
 image Ryoko camera = "Graphics/minor/ryoko-camera.png"
 image Ryoko surprised = "Graphics/minor/ryoko-surprised.png"
+image Ryoko tongue = "Graphics/minor/ryoko-tongue.png"
 
 image Minori neutral = "Graphics/minor/minori-neutral.png"
 image Minori happy = "Graphics/minor/minori-happy.png"
@@ -550,33 +715,56 @@ image Minori sad = "Graphics/minor/minori-neutral.png"
 
 image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
+image Sakura neutral = "Graphics/minor/sakura-neutral.png"
+
+image Natsuko neutral = "Graphics/minor/natsuko-neutral.png"
+image Natsuko annoyed = "Graphics/minor/natsuko-neutral.png"
+image Natsuko angry = "Graphics/minor/natsuko-neutral.png"
+image Natsuko disappointed = "Graphics/minor/natsuko-neutral.png"
+image Natsuko smug = "Graphics/minor/natsuko-neutral.png"
+image Natsuko flex = "Graphics/minor/natsuko-neutral.png"
+image Natsuko happy = "Graphics/minor/natsuko-neutral.png"
+
 image Tako neutral = "Graphics/minor/tako-neutral.png"
 image Tako angry = "Graphics/minor/tako-angry.png"
+image Tako excited = "Graphics/minor/tako-excited.png"
 image Tako happy = "Graphics/minor/tako-happy.png"
 image Tako unique = "Graphics/minor/tako-unique.png"
-image Tako sad = "Graphics/minor/tako-angry.png"
-image Tako surprised = "Graphics/minor/tako-neutral.png"
+image Tako sad = "Graphics/minor/tako-sad.png"
+image Tako surprised = "Graphics/minor/tako-surprised.png"
+
+image Tako nohat-neutral = "Graphics/minor/tako-nohat-neutral.png"
+image Tako nohat-angry = "Graphics/minor/tako-nohat-angry.png"
+image Tako nohat-excited = "Graphics/minor/tako-nohat-excited.png"
+image Tako nohat-happy = "Graphics/minor/tako-nohat-happy.png"
+image Tako nohat-unique = "Graphics/minor/tako-nohat-unique.png"
+image Tako nohat-sad = "Graphics/minor/tako-nohat-sad.png"
+image Tako nohat-surprised = "Graphics/minor/tako-nohat-surprised.png"
 
 image dummy = "Graphics/ui/dummy.png"
 
 #Audio
-define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg"
+define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
 define audio.AE = "Audio/BGM/scene_AE.ogg"
 define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
 define audio.BE = "Audio/BGM/scene_BE.mp3"
-define audio.BBW = "Audio/BGM/scene_BBW.ogg"
-define audio.FMG = "Audio/BGM/scene_FMG.ogg"
-define audio.GTS = "Audio/BGM/scene_GTS.ogg"
+define audio.BBW = "Audio/BGM/scene_BBW.ogg" #Aristocratic Opulence
+define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
+define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
 define audio.RM = "Audio/BGM/scene_RM.ogg"
-define audio.PRG = "Audio/BGM/scene_PRG.ogg"
+define audio.MC = "Audio/BGM/scene_MC.ogg" #Our Protagonist
+define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg"
-define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3"
-define audio.Busy = "Audio/BGM/scene_busy.mp3"
-define audio.Festival = "Audio/BGM/scene_festival.mp3"
-define audio.Rain = "Audio/BGM/scene_rain.mp3"
+define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg" #The Challenge
+define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
+define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
+define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
+define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education
+define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
-define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3"
-define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3"
+define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
+define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
+define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
@@ -676,7 +864,8 @@ init 2 python:
     eventlibrary['AE067'] = {"name": "Troparion", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "roof",             "priority": PrioEnum.NONE, "sp": 13,    "next": "AE068", "obsflags": [],                "conditions": []}
     eventlibrary['AE068'] = {"name": "Sonata", "girls": ["AE"], "type": EventTypeEnum.CORE,                                     "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 13,    "next": "AE069", "obsflags": [],                "conditions": []}
     eventlibrary['AE069'] = {"name": "The Creed", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "classroom",        "priority": PrioEnum.NONE, "sp": 13,    "next": "AE070", "obsflags": [],                "conditions": []}
-    eventlibrary['AE070'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['AE070'] = {"name": "Lento Placido", "girls": ["AE"], "type": EventTypeEnum.CORE,                              "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 14,    "next": "AE071", "obsflags": [],                "conditions": []}
+    eventlibrary['AE071'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
 
     eventlibrary['AE007b'] = {"name": "Peer Gynt", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "hallway",          "priority": PrioEnum.NONE, "sp": 1,    "next": "AE008b", "obsflags": [],                "conditions": []}
     eventlibrary['AE008b'] = {"name": "Made of Stone", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 1,    "next": "AE009b", "obsflags": [],                "conditions": []}
@@ -774,16 +963,24 @@ init 2 python:
     eventlibrary['BE031'] = {"name": "Very Special Day", "girls": ["BE"], "type": EventTypeEnum.CORE,                                   "location": "dormBE",           "priority": PrioEnum.NONE, "sp": 6,     "next": "BE032", "obsflags": [],                  "conditions": []}
     eventlibrary['BE032'] = {"name": "The Day After", "girls": ["BE", "AE"], "type": EventTypeEnum.CORE,                                "location": "classroom",        "priority": PrioEnum.NONE, "sp": 6,     "next": "BE033", "obsflags": [],                  "conditions": []}
     eventlibrary['BE033'] = {"name": "The Great Debate", "girls": ["BE", "AE"], "type": EventTypeEnum.CORE,                             "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 6,     "next": "BE034", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "field",            "priority": PrioEnum.NONE, "sp": 6,     "next": "BE035", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "field",            "priority": PrioEnum.NONE, "sp": 6,     "next": "BE035A", "obsflags": [],                  "conditions": []}
     eventlibrary['BE035'] = {"name": "New Club Intro", "girls": ["BE"], "type": EventTypeEnum.CORE,                                     "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE035A'] = {"name": "Cooking Club Intro", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE035B'] = {"name": "Softball Club Intro", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "baseballfield",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
     eventlibrary['BE036'] = {"name": "Flower Gazing", "girls": ["BE", "GTS"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE037", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE037'] = {"name": "Dock Musing", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "hillroad",         "priority": PrioEnum.NONE, "sp": 7,     "next": "BE038", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE038'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE037'] = {"name": "Dock Musing", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "hillroad",         "priority": PrioEnum.NONE, "sp": 7,     "next": "BE038A", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE038'] = {"name": "Club Part 2", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "classroom",        "priority": PrioEnum.NONE,              "next": "BE039", "obsflags": [],                       "conditions": []}
+    eventlibrary['BE038A'] = {"name": "Cooking Club Part 2", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE039", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE038B'] = {"name": "Softball Club Part 2", "girls": ["BE"], "type": EventTypeEnum.CORE,                              "location": "baseballfield",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE039", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE039'] = {"name": "Honoka end", "girls": ["BE"], "type": EventTypeEnum.CORE,                                         "location": "classroom",        "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                       "conditions": []}
 
     #Optional
     eventlibrary['BE005'] = {"name": "Possible Clubs", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                             "location": "classroom",        "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                        "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['BE010'] = {"name": "Surprise, Honoka's Boobs are Bigger", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,        "location": "dorminterior",     "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],                       "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
     eventlibrary['BE013'] = {"name": "Recovering from a Defeat", "girls": ["BE"], "type": EventTypeEnum.OPTIONALCORE,                   "location": "arcade",           "priority": PrioEnum.ALL,               "obsflags": [],                                   "conditions": [[ConditionEnum.FLAG, "BE013_unlock"]]}
+
+    eventlibrary['BEGTS001'] = {"name": "You Make Me Feel Like a Woman", "girls": ["BE", "GTS"], "type": EventTypeEnum.OPTIONAL,        "location": "dormexterior",     "priority": PrioEnum.NONE,               "obsflags": [],                                   "conditions": [[ConditionEnum.VAR, "BEMode", "Feminine"], [ConditionEnum.EVENT, "BE020"]]}
+    eventlibrary['BEGTS002'] = {"name": "Shining Down", "girls": ["BE", "GTS"], "type": EventTypeEnum.OPTIONAL,                         "location": "dormexterior",     "priority": PrioEnum.NONE,               "obsflags": [],                                   "conditions": [[ConditionEnum.EVENT, "BEGTS001"]]}
 
     #Core
     eventlibrary['FMG001'] = {"name": "Tower of Athletics", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",                      "priority": PrioEnum.NONE, "sp": 0,     "next": "FMG002", "obsflags": ["testday"],      "conditions": []}
@@ -794,21 +991,28 @@ init 2 python:
     eventlibrary['FMG009'] = {"name": "Junk Food Junkie", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "cafeteria",                "priority": PrioEnum.NONE, "sp": 1,     "next": "FMG014", "obsflags": [],               "conditions": []}
     eventlibrary['FMG014'] = {"name": "A Problem Solver", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",            "priority": PrioEnum.NONE, "sp": 2,     "next": "FMG015", "obsflags": [],               "conditions": []}
     eventlibrary['FMG015'] = {"name": "Gifted Gaming", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "town",                     "priority": PrioEnum.NONE, "sp": 2,     "next": "FMG017", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG016'] = {"name": "The New Girl", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                             "location": "dorminterior",             "priority": PrioEnum.NONE, "sp": 2,     "next": "FMG017", "obsflags": [],               "conditions": []}
     eventlibrary['FMG017'] = {"name": "Beware... The Curse", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "campuscenter",             "priority": PrioEnum.NONE, "sp": 2,     "next": "FMG018", "obsflags": [],               "conditions": []}
     eventlibrary['FMG018'] = {"name": "IT'S RAW!!!", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "cookingclassroom",         "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG019", "obsflags": [],               "conditions": []}
     eventlibrary['FMG019'] = {"name": "You Shine Like the Sun", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                   "location": "roof",                     "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG020", "obsflags": [],               "conditions": []}
     eventlibrary['FMG020'] = {"name": "Fly Me to the Moon", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "campuscenter",             "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG021", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG021'] = {"name": "EMUS!", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "library",                  "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG022", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG022'] = {"name": "Rock Opera", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "track",                    "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG023", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG023'] = {"name": "The Wizard on the Sidewalk", "girls": ["FMG", "GTS"], "type": EventTypeEnum.CORE,                        "location": "town",                     "priority": PrioEnum.NONE, "sp": 3,     "next": "FMG024", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG024'] = {"name": "Akira end", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "library",                  "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['FMG021'] = {"name": "EMUS!", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "library",                  "priority": PrioEnum.NONE, "sp": 4,     "next": "FMG022", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG022'] = {"name": "Rock Opera", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "track",                    "priority": PrioEnum.NONE, "sp": 4,     "next": "FMG023", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG023'] = {"name": "The Wizard on the Sidewalk", "girls": ["FMG", "GTS"], "type": EventTypeEnum.CORE,                        "location": "town",                     "priority": PrioEnum.NONE, "sp": 4,     "next": "FMG024", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG024'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "arcade",                   "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG026", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG026'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "arcade",                   "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG027", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG027'] = {"name": "Study Date", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "classroom",                "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG028", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG028'] = {"name": "Anything but Golf", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG029", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG029'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "mountain",                 "priority": PrioEnum.NONE, "sp": 5,     "next": "", "obsflags": [],                     "conditions": []}
 
     #Optional
     eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG006'] = {"name": "Crying Over Spilled Milk", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                             "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG011'] = {"name": "Press A to Start", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,                              "location": "dormexterior",             "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
-    eventlibrary['FMG016'] = {"name": "Fate at the Café", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                         "location": "schoolplanter",            "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
+    eventlibrary['FMG013'] = {"name": "Head Strong", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
+    eventlibrary['FMGOPT016'] = {"name": "Fate at the Café", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "schoolplanter",            "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
+    eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMGBBW001'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "BBW"], "type": EventTypeEnum.OPTIONAL,       "location": "town",                     "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
 
     eventlibrary['FMG005'] = {"name": "Despair in the Hallway", "girls": ["FMG"], "type": EventTypeEnum.OPTIONALCORE,                           "location": "hallway",                  "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],                      "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
@@ -829,7 +1033,8 @@ init 2 python:
     eventlibrary['GTS019'] = {"name": "All in the Wrist", "girls": ["GTS"], "type": EventTypeEnum.CORE,                    "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 3,          "next": "GTS020", "obsflags": [],       "conditions": []}
     eventlibrary['GTS020'] = {"name": "Confessions of a Lonely Heart", "girls": ["GTS"], "type": EventTypeEnum.CORE,       "location": "roof",             "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS021", "obsflags": [],       "conditions": []}
     eventlibrary['GTS021'] = {"name": "Taking a Breather", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS022", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS022'] = {"name": "Ya", "girls": ["GTS"], "type": EventTypeEnum.CORE,                                  "location": "library",          "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS024", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS022'] = {"name": "Ya", "girls": ["GTS"], "type": EventTypeEnum.CORE,                                  "location": "library",          "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS023", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS023'] = {"name": "Smash Cut", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "schoolexterior",   "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS024", "obsflags": [],       "conditions": []}
     eventlibrary['GTS024'] = {"name": "Splotchy Brown and Curling", "girls": ["GTS"], "type": EventTypeEnum.CORE,          "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 4,          "next": "GTS025", "obsflags": [],       "conditions": []}
     eventlibrary['GTS025'] = {"name": "Would it be Okay...?", "girls": ["GTS"], "type": EventTypeEnum.CORE,                "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS027", "obsflags": [],       "conditions": []}
     eventlibrary['GTS027'] = {"name": "Knock on Wood", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "roof",             "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS029", "obsflags": [],       "conditions": []}
@@ -837,11 +1042,13 @@ init 2 python:
     eventlibrary['GTS029'] = {"name": "Growing Pains", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "cafeteria",        "priority": PrioEnum.NONE, "sp": 5,          "next": "GTS030", "obsflags": [],       "conditions": []}
     eventlibrary['GTS030'] = {"name": "A Change in Scenery", "girls": ["GTS"], "type": EventTypeEnum.CORE,                 "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS031", "obsflags": [],       "conditions": []}
     eventlibrary['GTS031'] = {"name": "Settling In", "girls": ["GTS"], "type": EventTypeEnum.CORE,                         "location": "giantdorminterior","priority": PrioEnum.NONE, "sp": 6,          "next": "GTS032", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS032'] = {"name": "Journey of a Thousand Miles", "girls": ["GTS"], "type": EventTypeEnum.CORE,         "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS033", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS032'] = {"name": "Journey of a Thousand Miles", "girls": ["GTS"], "type": EventTypeEnum.CORE,         "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS034", "obsflags": [],       "conditions": []}
     eventlibrary['GTS034'] = {"name": "A Tall Order", "girls": ["GTS"], "type": EventTypeEnum.CORE,                        "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 6,          "next": "GTS035", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS035'] = {"name": "First Impressions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS036", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS037'] = {"name": "Peak Interest", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS036", "obsflags": [],       "conditions": []}
-    eventlibrary['GTS038'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
+    eventlibrary['GTS035'] = {"name": "First Impressions", "girls": ["GTS"], "type": EventTypeEnum.CORE,                   "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS037", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS037'] = {"name": "Peak Interest", "girls": ["GTS"], "type": EventTypeEnum.CORE,                       "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS038", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS038'] = {"name": "Balance", "girls": ["GTS"], "type": EventTypeEnum.CORE,                             "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS039", "obsflags": [],       "conditions": []} #intended duplicate, temporary until actual gts038 exists
+    eventlibrary['GTS039'] = {"name": "Balance", "girls": ["GTS"], "type": EventTypeEnum.CORE,                             "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 7,          "next": "GTS040", "obsflags": [],       "conditions": []}
+    eventlibrary['GTS040'] = {"name": "Naomi end", "girls": ["GTS"], "type": EventTypeEnum.CORE,                           "location": "library",          "priority": PrioEnum.NONE,                   "next": "", "obsflags": [],             "conditions": []}
 
     #Optional
     eventlibrary['GTS003'] = {"name": "Itadakimasu", "girls": ["GTS"], "type": EventTypeEnum.OPTIONAL,                     "location": "cafeteria",        "priority": PrioEnum.NONE,                   "obsflags": [],                         "conditions": []}
@@ -899,21 +1106,22 @@ init 2 python:
     eventlibrary['PRG047'] = {"name": "Lost in the Feels", "girls": ["PRG"], "type": EventTypeEnum.CORE,                        "location": "classroom",         "priority": PrioEnum.NONE, "sp": 9,     "next": "PRG048", "obsflags": [],       "conditions": []}
     eventlibrary['PRG048'] = {"name": "Checking In", "girls": ["PRG"], "type": EventTypeEnum.CORE,                              "location": "classroom",         "priority": PrioEnum.NONE, "sp": 9,     "next": "PRG049", "obsflags": [],       "conditions": []}
     eventlibrary['PRG049'] = {"name": "Purity and Peace", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 9,     "next": "PRG050", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG050'] = {"name": "Curse of the Test Taker", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 10,     "next": "PRG051", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG050'] = {"name": "Curse of the Test Taker", "girls": ["PRG"], "type": EventTypeEnum.CORE,                  "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 10,     "next": "PRG051", "obsflags": [],       "conditions": []}
     eventlibrary['PRG051'] = {"name": "Dinner and Chill", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 10,     "next": "PRG052", "obsflags": [],       "conditions": []}
     eventlibrary['PRG052'] = {"name": "Icebreaker", "girls": ["PRG"], "type": EventTypeEnum.CORE,                               "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 10,     "next": "PRG053", "obsflags": [],       "conditions": []}
     eventlibrary['PRG053'] = {"name": "Sugar and Rainbows", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "dormPRG",           "priority": PrioEnum.ALL, "sp": 11,     "next": "PRG054", "obsflags": [],       "conditions": []}
     eventlibrary['PRG054'] = {"name": "Down to the Wire", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG055A", "obsflags": [],      "conditions": []}
-    eventlibrary['PRG055A'] = {"name": "Back to the Basics", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG056A", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG055B'] = {"name": "Snowballing", "girls": ["PRG", "AE"], "type": EventTypeEnum.CORE,                       "location": "town",              "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG056B", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG055C'] = {"name": "Successful Failure", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG056C", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG056A'] = {"name": "Fake it 'till You Make it", "girls": ["PRG"], "type": EventTypeEnum.CORE,               "location": "hallway",           "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG057A", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG056B'] = {"name": "Falling For Her", "girls": ["PRG", "AE"], "type": EventTypeEnum.CORE,                   "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG057B", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG056C'] = {"name": "Go Team!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "hallway",           "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG057C", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG055A'] = {"name": "Back to the Basics", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG056A", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG055B'] = {"name": "Snowballing", "girls": ["PRG", "AE"], "type": EventTypeEnum.CORE,                       "location": "town",              "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG056B", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG055C'] = {"name": "Successful Failure", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG056C", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG056A'] = {"name": "Fake it 'till You Make it", "girls": ["PRG"], "type": EventTypeEnum.CORE,               "location": "hallway",           "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG057A", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG056B'] = {"name": "Falling For Her", "girls": ["PRG", "AE"], "type": EventTypeEnum.CORE,                   "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG057B", "obsflags": [],      "conditions": []}
+    eventlibrary['PRG056C'] = {"name": "Go Team!", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "hallway",           "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG057C", "obsflags": [],      "conditions": []}
     eventlibrary['PRG056'] = {"name": "Down to the Wire", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "campuscenter",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG055A", "obsflags": [],      "conditions": []} #temporary hack fix
-    eventlibrary['PRG057A'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "library",           "priority": PrioEnum.NONE, "sp": 11,    "obsflags": [],                         "conditions": []}
-    eventlibrary['PRG057B'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "library",           "priority": PrioEnum.NONE, "sp": 11,    "obsflags": [],                         "conditions": []}
-    eventlibrary['PRG057C'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "library",           "priority": PrioEnum.NONE, "sp": 11,    "obsflags": [],                         "conditions": []}
+    eventlibrary['PRG057A'] = {"name": "Practicing Perfection", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "hallway",           "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG058", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG057B'] = {"name": "The Gift of Thought", "girls": ["PRG"], "type": EventTypeEnum.CORE,                     "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG058", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG057C'] = {"name": "Power of a Protoge", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 11,    "next": "PRG058", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG058'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                 "location": "library",           "priority": PrioEnum.NONE, "sp": 11,    "obsflags": [],                         "conditions": []}
 
     eventlibrary['PRGend_nofather'] = {"name": "Guiding Hand", "girls": ["PRG"], "type": EventTypeEnum.CORE,                    "location": "dorminterior",       "priority": PrioEnum.NONE, "sp": 5,     "obsflags": [],                         "conditions": []}
     eventlibrary['PRG027Z'] = {"name": "Guiding Hand", "girls": ["PRG", "BE"], "type": EventTypeEnum.CORE,                      "location": "dorminterior",       "priority": PrioEnum.NONE, "sp": 5,     "obsflags": [],                         "conditions": []}

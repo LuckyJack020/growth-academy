@@ -3387,7 +3387,7 @@ label BBW019_theater:
         "I had only come here to find a way to kill the afternoon, but now I was thinking that Iron Fan might be a little too trashy."
         menu:
             "Iron Fan 5":
-                scene Black with fade
+                scene black with fade
                 "I decided to see Iron Fan."
                 scene Town with fade
                 "Yes, it was trashy. Yes, it just repeated a lot of stuff from the earlier movies."
@@ -3395,7 +3395,7 @@ label BBW019_theater:
                 "Maybe not the best use of my free time, but I made my choice."
                 jump daymenu
             "The Chrysanthemum Shadow":
-                scene Black with fade
+                scene black with fade
                 "I decided to see Chrysanthemum Shadow."
                 scene Town with fade
                 $setSkill("Art", 1)
@@ -7717,7 +7717,7 @@ label BBW041_FMG000:
 
 label BBW042:
     $setProgress("BBW", "BBW045")
-    scene Classroom with fade
+    scene Art Classroom with fade
     play music Rain
     "After classes I had wanted to meet up with Alice to touch base on if any deliveries were needed. She wasn't answering any texts, but when I found Aida in the cooking classroom she told me Alice was probably in the arts room."
     "I did indeed find her there, standing at an easel. The painting she had been working on in class earlier that day was in front of her."
@@ -7952,7 +7952,7 @@ label BBW045_art:
     scene Dorm BBW with fade
     "I entered Alice's dorm rather quietly, only to see that Kodama-san was already wide awake."
     show BBW neutral at Position(xpos=0.8) with dissolve
-    show PRG pajamas at Position(xpos=0.2) with dissolve
+    show PRG pj-happy at Position(xpos=0.2) with dissolve
     PRG "Keisuke! Good morning!"
     if getAffection("PRG") > 3:
         MC "Good morning Aida."
@@ -8195,7 +8195,7 @@ label BBW045_wine:
             BBW "I know you're better than this, so please display it."
     "Suddenly the waiter emerged from the back room, carrying the bucket again."
     "Though this time there were 10 glasses on the serving tray."
-    "As he did so, a woman came over to speak to Alice"
+    "As he did so, a woman came over to speak to Alice."
     "Two things were immediately clear about this woman."
     "The first was that she had attended the school when she was young, as her growth was self-evident."
     "The second was that she had had plastic surgery- her face appears to be almost poorly made. Though her natural beauty was still clear behind this."

@@ -494,7 +494,7 @@ label BE005_c1_old:
     MC "Please stop."
     BE "Spoilsport."
     MC "Tease."
-    jump BE005_after
+    jump BE005_after_old
 
 label BE005_c2_old:
     "Why does the mouth say things the brain wants to say, yet knows is dumb to state at the same time? Luckily, Honoka's reaction was as upbeat as ever."
@@ -517,7 +517,7 @@ label BE005_c2_old:
     MC "Well, that's good to know. Thanks, Honoka. That's actually a bit comforting."
     BE "If you really want comfort, you should be jealous of having some pillows like these, if I lay them on a table right they make a great headrest."
     MC "And the comfort goes to awkwardness in three seconds flat..."
-    jump BE005_after
+    jump BE005_after_old
 
 label BE005_after_old:
     MC "Well, I guess I should get going, need to find out what I'm getting after all."
@@ -6085,7 +6085,6 @@ label BE033_silence:
     jump daymenu
 
 label BE034:
-    $setProgress("BE", "BE035")
     scene Field with fade
     pause 1
     play sound ReleaseArrow
@@ -6191,6 +6190,7 @@ label BE034:
             jump BE034_softball
 
 label BE034_cooking:
+    $setProgress("BE", "BE035A")
     $setFlag("HONOKA_COOKING")
     $setVar("BETomboy", getVar("BETomboy") + 2)
     MC "I think you should join the cooking club."
@@ -6234,6 +6234,7 @@ label BE034_cooking:
     jump BE034_end
 
 label BE034_softball:
+    $setProgress("BE", "BE035B")
     $setFlag("HONOKA_SOFTBALL")
     $setVar("BEFeminine", getVar("BEFeminine") + 2)
     MC "I think you should join the softball club."
@@ -6468,8 +6469,216 @@ label BE035A_nosauce:
     jump daymenu
 
 label BE035B:
-    "Softball version of this scene to be implemented."
     $setProgress("BE", "BE036")
+    scene Baseball Field with fade
+    #SFX: General chatter
+    "When Honoka and I checked out the softball club, joining was contingent on one thing. She wouldn't be put into the team right away. They'd already split into two teams early in the year and played matches against each other on a regular basis."
+    "They didn't want to put new players in the running right off the bat. So the first few meetings would be learning the basics and seeing where she performed."
+    "As seemed traditional by this point, I offered to go with her to the first meeting to check it out, and try it for myself."
+    #SFX: Whistle
+    Naoki "All right, everyone. Huddle up, huddle up."
+    "The assembled members approached a young man with three whistles around his neck. We joined with the others."
+    Naoki "Okay. Here's the deal. I've got a wicked headache today, so I don't want to hear any bellyaching because it's gonna drive me crazy. Our next match is scheduled in two days, so spend this time brushing up on your catching and throwing."
+    Naoki "We've got three batting stations reserved. So if you see one is empty, just go for it with your partner. Try not to hog it. Collect your balls when you're done. We don't wanna leave a mess anywhere."
+    Naoki "Any questions? Good. Get out there, have fun."
+    MC "Huh. Well, he was a bit rough around the edges, huh?"
+    show BE neutral with dissolve
+    BE "Eh. Headaches are a pain. Literally. What are ya gonna do about it?"
+    show BE happy
+    BE "Let's go and knock some balls around. Get a good warm-up in!"
+    "Honoka and I grabbed some gloves and balls and found a good spot on the field for us to practice."
+    MC "What do you wanna try first, just some pitches?"
+    show BE neutral
+    BE "Nah, let's just throw it back and forth first, until we get a feel for it."
+    show BE sad
+    BE "This ball's weird. It's all big and soft."
+    MC "Well."
+    MC "Yes, Honoka. Hence why they call it 'softball'."
+    show BE happy
+    BE "Well doi, Kei-chan! I just mean it's weird in my hand. Guess I won't know how it flies through the air until I throw it. Heads up!"
+    "Honoka chucked the ball through the air. I raised my gloved hand, and with a 'plop', it handed in my glove."
+    MC "Nice throw. How'd it feel?"
+    "I tossed it back towards Honoka as she considered it. As I reached back to grab her return throw, she answered."
+    show BE neutral
+    BE "Pretty good I guess. It's not so big I can't get my hand around it. And it doesn't really hurt when it lands in the glove."
+    MC "That's good. Yeah. This is pretty fun. Here, go a bit longer, I'm going to see how long I can throw this one."
+    "Honoka jogged backwards, keeping her eyes on me as I threw the ball as far back as I could. The ball went sailing through the air, and right over Honoka's head. With a jump, she hopped up and caught the ball."
+    show BE happy
+    BE "Woo! Rock on. I got it."
+    BE "Here, catch this one!"
+    "Honoka stepped forward, and tossed her arm underhand in order to pitch the ball at me. This throw had more speed to it, and went closer to my chest."
+    "I still caught it, but could tell that it had more heat behind it than her earlier throws."
+    MC "Hey, that was pretty good. Here, try doing it that way again. Underhanded. That's how you have to pitch anyway."
+    "I threw it back at a normal speed, and Honoka repeated the motion to pitch the ball again. Her arm went around, towards her back, and as her arm hit the underside of her bust, she let go of the ball."
+    MC "Damn. That's a good pitch, Honoka. Keep that up."
+    "Honoka and I kept up this pace for a while. I would throw her the ball and she'd swing it towards me, much faster than I could get. Eventually I had to ask the obvious."
+    MC "Honoka, is that, like, bruising your boob at all?"
+    BE "Huh? No, nope. It's pretty soft and it's not as if I'm jamming into it or anything. It just seems to be a good point for me to pitch. Kinda cool."
+    MC "Seems so. You should be a good pitcher if you show that off to the coaches."
+    show BE neutral
+    BE "I'll definitely show her. But for now, it looks like one of the batting positions is open. Want to take a crack at it?"
+    MC "Sure."
+    "We walked over to the batter's box and looked at the bats that had been placed there."
+    MC "I have no idea whether I want a heavier one or a lighter one. I guess I'll just use this one for now and if I really suck, I'll switch."
+    BE "Hehe, sounds like a plan. Want me to pitch first then?"
+    MC "Sure, that'd work."
+    "I discarded by glove to grab the bat, and had the implement in my hand, ready to go."
+    UNKNOWN "Oh crap, heads up!"
+
+    if getSkill("Athletics"):
+        jump BE035B_pass
+    else:
+        jump BE035B_fail
+
+label BE035B_pass:
+    "I turned towards the direction the voice yelled from. One of the softballs went wide and barreled through the air."
+    MC "Watch out!"
+    show BE surprised
+    "Dropping the bat, I reached out with my dominant hand and grabbed the ball before it hit Honoka. It quickly fell out of my grasp as I pulled my hand back."
+    MC "Ow, ow. Hot."
+    BE "Oh my god, Kei-chan, are you okay?"
+    "I yanked my hand back. It was sore. I could already see the redness."
+    MC "Yeah, yeah I'm okay. But I know now why they make you wear gloves when you play this game. But my ungloved hand was just closer so, that's the one I used."
+    Student "Hah, hah, oh my god, I'm so sorry, that pitch was totally screwed up. Are you all right?"
+    MC "Yes, I'm okay."
+    Student "Did you catch that?"
+    MC "Yeah."
+    Student "Dude. That's impressive. That ball was really zooming. It could have really hurt you if you didn't catch it right. Again, I'm so sorry, can I make it up to you somehow?"
+    MC "Uhh..."
+    $setAffection("BE", 1)
+    show BE happy
+    BE "Yooou could get some ice cream~ One for me, since you almost hit me. And one for my big hero so he can hold it until the stinging in his hand goes away."
+    "Honoka smirked and clung to my arm, holding it within her chest."
+    MC "That would be nice, actually."
+    Student "Of course, not a problem. I'll be right back."
+    "The young man who nearly beamed Honoka in the chest ran off to get our ice cream, leaving Honoka and I alone for a bit."
+    MC "Ice cream sounds good, but it might not be the best thing for us if we're playing softball."
+    show BE neutral
+    BE "Huh? How come?"
+    MC "Well, my fingers will get all sticky."
+    show BE happy
+    BE "Hehe, don't worry. I'll take care of that."
+    MC "Ah, okay. Waait, take care of it how?"
+    "Honoka simply giggled and grabbed my hand, where it still stung from the impact of the softball. She clutched it, and placed it between her breasts, then pushed her arms forward."
+    "Her pose created a cushion of her boobs that pressed on both sides of my hand, with my palm left basically clutching her left breast."
+    show BE unique
+    BE "Hehe, we've gotta make sure your hand doesn't swell up."
+    show BE aroused
+    BE "Anything else is free to swell up as much as it wants."
+    MC "Hahaha..."
+    MC "Is my hand at least free to squeeze as much as it wants?"
+    BE "Your hand is in my tits, Kei-chan."
+    MC "Right, right."
+    "That was all the confirmation I needed to have a bit of fun rubbing and squeezing Honoka's chest. I had to admit that it actually helped numb the pain. By the time our mysterious assailant returned, I barely felt anything."
+    "In his hand were two individual bowls of ice cream from a vending machine, the spoons already detached for us."
+    Student "Here you go. And again, I'm so so sorry. I'll be more careful!"
+    "He gave a quick bow before turning back to his partner and presumably explaining where he'd been for the last few minutes."
+    #SFX: Squeeze squeeze
+    "Honoka held the ice creams in both of her hands, and smirked at me."
+    show BE happy
+    BE "Now, I'm currently in the position to have two servings of ice cream while being groped. This is basically my dream."
+    show BE unique
+    BE "But if you want to share this ice cream, you're gonna have to let go."
+    "Sadly I pulled my hand out. Ice cream did sound nice right now."
+    "Honoka handed me the ice cream and we dug in."
+    MC "Well, not how I expected this visit to go."
+    show BE neutral
+    BE "Me either!"
+    MC "Do you still want to try and hit some balls?"
+    show BE sad
+    BE "...But ice cream?"
+    MC "After the ice cream."
+    show BE happy
+    BE "Oh! Yeah, sure. Let's eat then."
+    "Honoka and I finished up our ice cream. By the time we'd completed them, the pain in my hand was completely gone."
+    jump BE035B_after
+
+label BE035B_fail:
+    "I turned towards the direction the voice yelled from. One of the softballs had gone wide and barreled through the air right towards Honoka."
+    MC "Look out!"
+    "I shoved Honoka aside. There was a painful smacking sound as the softball impacted my back."
+    MC "Gaaah!"
+    "There was a sharp, stinging pain, and then suddenly there wasn't any serious pain. I crumbled forward."
+    "It was only Honoka's reaction that kept me from falling into the dirt. Her arms caught me before I went tumbling."
+    MC "Ugggh..."
+    Student "Damn it, shit. Shit."
+    "Whoever was the cause of the projectile heading towards Honoka had run up, panting hard as he arrived."
+    Student "Agh, oh my god. Are you okay?"
+    MC "Well, it really smarts. But I don't think it actually broke anything."
+    Student "Do we need someone to come take a look at you?"
+    MC "I really hope not. Hang on. Honoka, do you mind taking a look?"
+    show BE neutral
+    BE "Of course!"
+    "It was a bit embarrassing, but I pulled up my shirt so Honoka could take a look at my back. Her hand touched the top, near my armpit."
+    show BE sad
+    BE "Was it here?"
+    MC "Ah... yeah. That stings. But. Well, push a little harder."
+    "Honoka did so, but nothing seemed to feel worse."
+    show BE neutral
+    BE "I think you at least managed to avoid all the important bits. You should be good, maybe get some ice on that?"
+    Student "I can do that! I'll be right back."
+    "Our mysterious assailant left to go get ice, leaving Honoka and I alone. She snickered, and I soon felt the touch of her fingers under my arm."
+    MC "Hahaha, h-hey, haha, stop that!"
+    show BE happy
+    BE "Hehehe, sorry, Kei-chan. Opportunity arose. Still stings a bit?"
+    MC "Yeah. Some pressure and ice will help."
+    show BE aroused
+    BE "Pressure, huh?"
+    show BE unique
+    BE "I can do that..."
+    "Honoka stepped behind, and swiftly pushed her boobs into my back. The force of the squish naturally made me want to step forward, but after a while, I just leaned back into it."
+    "It helped her get a grip around my waist, where she could properly keep the pressure on the sore spot with her bust. Her hands held on to each other as her breasts squished together, overflowing her top and pressing up into her chin."
+    "I just really wished I could have seen it. But feeling it felt pretty awesome, too."
+    show BE aroused
+    BE "Is this helping, Kei-chan?"
+    MC "..."
+    MC "I was gonna say that your boobs always make me feel better. But, it is helping the soreness go away."
+    show BE happy
+    BE "That's because boobs are magic. If I could, I would bottle it up and sell it."
+    MC "Only if it didn't cause your own essence to be leeched out. What a crime that would be."
+    show BE neutral
+    BE "Heh, as if. I'd never sacrifice my chest for anyone."
+    show BE unique
+    BE "Well, almost anyone. But you'd need to buy me, like, an entire sweet shop to make up for it."
+    MC "Sorry, I can't quite hear you, I think your boobs are covering up my ears."
+    show BE happy
+    BE "Pff, they'll cover up your nostrils if you get smart with me~"
+    "Soon our unintentional attacker came back, winded from running so fast to get the aid I wanted."
+    Student "So. Here, I got you an ice pack, and some pain relievers if you want. And then I brought a few water bottles for you as well."
+    MC "Ah, perfect. Thanks a bunch. This'll help."
+    "I opened up a bottle of water and swallowed down some of the pain relievers, then looked over to Honoka."
+    MC "Honoka, could you hold the ice pack on me for a while?"
+    BE "Sure, Kei-chan. Here, why don't we sit down for a bit?"
+    "We took Honoka's suggestion and sat down for a bit, getting the weight off of our feet and recovering. It didn't take too long for it to feel okay."
+    MC "Wanna try and hit some balls?"
+    show BE surprised
+    BE "Are you sure? What about your back?"
+    MC "Eh, it feels okay now, and besides it's for you, so I'll throw and you can swing to start."
+    show BE neutral
+    BE "Hmm, if you're up for it. Sure. Let's give it a shot."
+    jump BE035B_after
+
+label BE035B_after:
+    "With a little bit of nourishment in our systems and my slight injury healed, the two of us made our way back to the batting area, which had thankfully remained unattended."
+    MC "You bat first, actually. I'll try and swing some balls to you."
+    show BE happy
+    BE "Cool. Shoot some zingers at me, Kei-chan."
+    "I got to the pitching mound and readied myself. After giving Honoka the signal, I flew a ball her way. The first one whizzed by her."
+    "I'd brought some spares, so I was able to throw another one towards Honoka. This one she hit, but it dinged off to the side, out of bounds."
+    "I continued to pitch for her. Bit by bit, she got better. It was a different type of ball than what we'd sometimes used as kids, after all. Learning anything new was a challenge. But she stuck by it."
+    "By the end of a short pitching session, she was able to mostly hit them in-field, which was pretty good progress for a rookie."
+    BE "You know what, Kei-chan? I think this club's pretty cool. I like it. Hitting stuff feels great. Is there, like, a hammer club where you just slam things with a sledgehammer?"
+    MC "Er. There might be something like an architecture group or a craft club but that might not be in this school's wheelhouse."
+    show BE sad
+    BE "Bummer."
+    MC "But, hey, you like it. That's good."
+    show BE happy
+    BE "Yeah. Just a rough go of it for you this time around, huh?"
+    MC "Ah I've already healed up magnificently. I don't remember much except for these two heavenly pillows comforting me in my time of need."
+    "Honoka rolled her eyes."
+    show BE neutral
+    BE "Come on, let's get back to the dorms, Kei-chan. I got my exercise for the day. Time for video games and sweatpants."
+    MC "That sounds good to me."
     jump daymenu
 
 label BE036:
@@ -6637,7 +6846,10 @@ label BE036_after:
     jump daymenu
 
 label BE037:
-    $setProgress("BE", "BE038")
+    if getFlag("HONOKA_COOKING"):
+        $setProgress("BE", "BE038A")
+    elif getFlag("HONOKA_SOFTBALL"):
+        $setProgress("BE", "BE038B")
     scene Lake Road with fade
     play music Schoolday
     show BE happy with dissolve
@@ -6748,6 +6960,627 @@ label BE037:
     jump daymenu
 
 label BE038:
+    if getFlag("HONOKA_COOKING"):
+        jump BE038A
+    else:
+        jump BE038B
+
+label BE038A:
+    jump BE039
+
+label BE038B:
+    $setProgress("BE", "BE039")
+    scene Baseball Field with fade
+    play music Busy
+    #SFX: General chatter
+    MC "Let's goooo, Honoka!"
+    "It was a day off of classes, and what perfect weather for it too. Honoka and her softball club were doing a match within the club."
+    "With the secrecy of the school as it was, they couldn't exactly go to challenge another academy's softball club. Honoka was first at bat. The pitcher was a rather short girl with impressive thighs."
+    "Her hips were fairly thick as well, but her thighs simply were the most notable part of her anatomy. Each of them looked nearly twice as wide around as her torso. While the pants for the softball uniform tended to be fairly tight they looked especially so on her."
+    Umpire "Strike One."
+    MC "Come on, Honoka, get it in there!"
+    "Honoka swung hard at the next pitch that came her way. The pitcher turned and watched the ball go a short distance past the infield. Honoka dropped her bat and raced towards first base as quickly as she could."
+    MC "Yes!"
+    "Honoka made it to first base and stopped there as the second-base player had caught the grounded ball and was already back at base."
+    MC "Nice job, Honoka!"
+    Student "Hey, um, I don't want to be rude, but, c-could you keep it a bit quieter. I know it's exciting and all, but it's literally the first inning..."
+    MC "O-Oh, yes, yes. I'm sorry. So sorry. My bad. Just excited, I'll cool off."
+    "My cheeks turned red after being called out. Maybe it had been a little much. I also hadn't needed to get there as early as I had, there were still some open seats in the front benches. Thankfully I wasn't the only one, at least."
+    "It would have been far more awkward if I had been the only one coming to cheer Honoka on. Whether the others with me were friends of the players, enjoyed softball, or simply had nothing better to do, it was good to give the club encouragement."
+    "Honoka smiled as she readied herself for the next batter to take a swing. I could see her on as small of the base as she could possibly get without being off of it. It was the first inning, so there was no need for her to risk stealing a base."
+    show BE happy with dissolve
+    BE "Come on, Ichiya, smack it outta there! Make this a double!"
+    "She was certainly fired up. The moment the bat connected with the ball, Honoka took off. But then came a thud from the softball landing in someone's mitt."
+    Umpire "Out!"
+    "Honoka hurried back to her base as quickly as she could. She hadn't been halfway across yet but the ball already had sailed back to first base."
+    Umpire "Out!"
+    "Various cheers and yells came from the crowd and other players at the play. Honoka stood up and grumbled, but didn't dispute it. She'd run towards base too late, the ball touched her before she stopped."
+    show BE angry
+    BE "DAAAAAAAAAANGGGIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIITTTTTTTTTTTT!"
+    MC "Nice try, Honoka. You'll get 'em next time."
+    "After losing two of their runners already, motivation for Honoka's side must have been down, as their third hitter struck out. They switched sides and Honoka took her position at one of the bases."
+    "I had no clue if the infield was supposed to be a more skilled position than the outfield, but either way Honoka looked raring to go. Payback time."
+    "Honoka and her team held steady on the second half of the inning. Nothing came Honoka's way but it looked like she was always ready to go, no matter what."
+    "At the end of the fourth inning, a break was called so the teams could grab food, water, and take a bathroom trip if they needed. I took the time to go down and see Honoka."
+    show BE sad
+    BE "Phew, dang. Down 2 to 1. Thought we'd be doing better than this!"
+    MC "Hey you're doing good. There's still five innings left, right?"
+    show BE neutral
+    BE "Three. Softball's only seven, Kei-chan."
+    MC "Oh! Well, still you're only down by one point. You just need two runs to win the game, you can easily do that."
+    show BE happy
+    BE "Heh, it shouldn't be hard. But this is a lot more tense than other sports I've played."
+    MC "How so?"
+    show BE neutral
+    BE "I dunno. It's like, Because you're not always active, it kind of makes my brain slow down. Soccer or basketball or whatever, I'm always moving around. So the blood stays flowing."
+    show BE angry
+    BE "Here, you spend so much time sitting down or waiting for a ball to be hit that you get stupid. I feel myself becoming more of a bimbo with each passing inning!"
+    show BE surprised
+    BE "Help me, Kei-chan, by the end of the game I'll start wanting to dye my hair blonde and get nail extensions."
+    "I pinched Honoka's cheek."
+    show BE angry
+    BE "Ow ow ow ow."
+    MC "No no, no dum-dum Honoka. You're gonna do fine. Besides you'd make a terrible blonde and you know it."
+    show BE happy
+    BE "Ha. Yeah, I would. Mmm, I probably will only be at bat once more before the game's over so, I gotta focus. I wanna get one of those points!"
+    "I figured she needed some extra encouragement. But I wasn't sure what to say. She walked off for a bit to grab an orange, leaving me to ponder what I could cheer her on with..."
+    "The minute whistle ran out letting the players know they were supposed to get back to their positions for the fifth inning. I grabbed Honoka before she walked back over, having come up with a cheer."
+    menu:
+        "Encouraging cheer.":
+            jump BE038B_c1_1
+        "Flirtatious cheer.":
+            jump BE038B_c1_2
+
+label BE038B_c1_1:
+    MC "Honoka's our champ, brighter than a lamp!"
+    extend " She can win the team this game and put it on a stamp!"
+    extend " Power-hungry Inoue, she can so go all the way!"
+    extend " Swing that bat and hit the ball to make her teammate's day!"
+    MC "Goooooooo Honoka!"
+    "I grabbed Honoka's wrists and threw them up in the air to get her cheering along with me. My cheeks were beet red as she giggled and giggled."
+    BE "Hehehehehe, oh, Kei-chan. You're not exactly cut out for the poetry club but I liked it. Thanks. I'll do my best!"
+    "With that, Honoka got back on the bench, waiting for her turn to come up again."
+    jump BE038B_c1_after
+
+label BE038B_c1_2:
+    MC "Honoka's the beauty queen who'll make her debut on the scene!"
+    extend " She'll win this game and get her fame and be the hottest dame!"
+    extend " Her bust will bust their heads and send them crawling to their beds!"
+    extend " I'll share a kiss to give her bliss and make sure she won't miss!"
+    MC "Goooooooo Honoka!"
+    "Then I quickly pecked her on the lips as I held her hands. My cheeks were fairly pink from the cheesy lines I'd come up with. But Honoka's were even more red."
+    show BE aroused
+    BE "Hah... hahaha... Kei-chan, yo-you... mm. You tease! How am I gonna focus like this, now? Oof, I'll get you back for this! Thank you! I'm all fired up now!"
+    "Honoka laughed as she got back to her position and smacked her cheeks a few times to try and get rid of her blush."
+    jump BE038B_c1_after
+
+label BE038B_c1_after:
+    show BE happy
+    "The game kicked back into gear, and the teams didn't miss a beat in regards to their energy levels. The first player on Honoka's team hit a wide ball that went so far that the outfielder couldn't catch it in time."
+    "The runner wound up getting to second base before the ball got into play, and took third base before they had to stop. It was a very tall student with extremely long legs. I couldn't help but wonder if that gave him an advantage."
+    "The inning finished soon after, but thankfully the player was able to score a point before it ended, tying the score. It stayed stable as it went into the eighth inning. After the first person on Honoka's team struck out, it was time for her to be at bat again."
+    "I could see Honoka's chest heave deeply as she took a breath to steady herself. The first ball whizzed past her. The second ball clipped her bat and flung off into the side of the cage. With the next hit, she smashed the ball straight into the gap between first and second base."
+    MC "Go go go go go!"
+    BE "Woo!"
+    "Honoka yelped as she raced towards first base and slid into position just to be safe. The game was tied with two innings left, meaning there was just as much time to lose as there was to win."
+    "When the next batter came up, they hit a ball that landed safely in the third baseman's mitt, making them go out instantly."
+    "Honoka looked nervous. Her foot was planted more firmly on the plate than it was the first time she got on base."
+    "The next person at bat managed to push them both forward a base, leaving Honoka halfway to home plate. She was antsy as she moved back and forth on the base."
+    "Honoka watched the pitcher as they threw the ball and it got a nice solid hit up in the air. It looked easily-caught, so she was careful and stayed put. Her intuition was right on the money as the ball was caught leaving her stuck there with only one out left."
+    if getSkill("Athletics") > 8:
+        jump BE038B_pass #+1
+    else:
+        jump BE038B_fail
+
+label BE038B_pass:
+    "I looked over at the third base player. They seemed a bit focused on the batter, and seemed to not notice Honoka was unsure about whether to steal or not."
+    MC "Honoka! Steal!"
+    "I wasn't sure if Honoka heard me or not, but she made her move. She raced towards third base as quick as she could. The pitcher noticed right before she was about to throw, and chucked the ball towards the third base."
+    "They whiffed. The ball missed the third baseman and landed in the ground behind them. Giving Honoka time to get to the third base. But she didn't stop there. Her feet smacked into the ground hard as she zoomed to home plate."
+    MC "Go go go go go go, Honoka go!"
+    "A few others began cheering for her as the ball was recovered and thrown towards home plate. Honoka dove for the plate and jumped at the last second."
+    "Her hands were right on the base as she wound up bust-down in the dirt."
+    Umpire "Safe!"
+    BE "Wooooooo yeah that's what I'm talking about!"
+    "Honoka looked happy as could be as she stood up, despite being covered from head to toe in dirt."
+    show BE surprised
+    BE "Yeah, I scored. I scored, I scored, I scored."
+    "She sang musically as she made her way back to the dugout. The player who'd been on first looked stunned and hadn't moved an inch, which was probably for the best. When the next player swung, they seemed to take on Honoka's energy."
+    "They wound up getting all the way to home base before the ball managed to tag their other player out. But they'd managed to score, currently leading at 4-2."
+    "After that, there was an inning and a half left but the other team couldn't make any points to round up the score. Leaving Honoka's team the victor."
+    show BE happy
+    BE "Keiiiiiiii-chaaaaan!"
+    "Despite hearing her approach for once I still wasn't able to get out of the way of Honoka's tackle. She wound up smashing into me, knocking us both into the grass. She snickered as she looked down at me from above her twin mountains."
+    $setAffection("BE", 1)
+    show BE neutral
+    BE "I won."
+    MC "Yeah, yeah ya did. You're also crushing me."
+    show BE unique
+    BE "Yeah that happens. We lost two other teammates this week."
+    "Honoka chuckled at her silly joke as she helped me up. Now my back was streaked green while her front was covered in tan dirt."
+    MC "Well congrats. That was a nice steal you did at the end there. Did you hear me say that, by the way?"
+    show BE happy
+    BE "Hehehe, yeah. I did. I dunno I was nervous about it but when you told me to do it, I just went for it! It worked. I mean, we maaaay have won either way, but this feels more dramatic."
+    show BE sad
+    BE "I just wish it had been like, the end of the seventh inning, with a huge dust cloud around me when I landed."
+    MC "Well life isn't a movie, unfortunately."
+    show BE neutral
+    BE "I guess not."
+    "Honoka placed her hands on her bust and stuck her bosom out more prominently."
+    show BE unique
+    BE "Besides, who'd be able to accurately play me?"
+    MC "There was this one actress that my roommate told me about recently..."
+    show BE surprised
+    BE "What?! Oh no, that won't do. I'm sure mine are perkier even if hers are bigger."
+    MC "I'm sure they are. She does have ten years on you, after all."
+    "That seemed to appease her. But then she snickered."
+    MC "What is that look?"
+    show BE happy
+    BE "You know, Kei-chan. I'm quite dirty now."
+    MC "Yeah."
+    BE "So are you."
+    MC "Yeah and whose fault is that?"
+    show BE aroused
+    BE "Well, why don't I help clean you off?"
+    MC "..."
+    MC "Yeah. That sounds fair."
+    "Honoka took my hand and we left the field before she even had a chance to regroup with her club. Victory did tend to make her feel a lot more excitable."
+    jump daymenu
+
+label BE038B_fail:
+    "Honoka looked like she considered trying to steal third base. But she decided against it, simply staying a few inches away from the plate so she had a slight lead on the next base."
+    "When the batter finally connected with the ball, Honoka had a nice head start, which allowed her to get to third quickly. The softball slammed into the mitt of the third base player, which was bad news as there was a player currently headed towards him."
+    "Honoka picked up speed and raced by the home plate as fast as she could. A second later one of the other players was tagged out and that half of the inning was over. Honoka was panting, hands on her knees."
+    BE "Hah, hah, hah. Woo! Did I score?"
+    "The cheers of her other teammates helped tell Honoka that yes, she'd managed to give them a lead. The score was now 3-2 as it went into the second half of the inning. Honoka gave a thumbs-up."
+    "Then Honoka gave a massive jumping fit of glee, bouncing up and down several times in happiness as she pumped her fists in the air. Even once she stopped jumping, her breasts continued to bounce for a few seconds after."
+    "She seemed too giddy from the point to get to her base properly, wandering around in a high for a moment before someone pulled her in the direction of her spot."
+    "Despite her brief lack of focus, Honoka didn't miss the ball that came her way early on, and the opponent team was struck out after that. The last inning came and went fast as well, with no real threat to Honoka's team's lead."
+    "By the end, Honoka pulled through with a one point lead, and went over to celebrate with her team. I gave a moment before coming back up with her to say hello."
+    MC "Honoka! Congrats. Nice job there. Good win."
+    BE "Hahaha. Thanks, Kei-chan. That was a close call."
+    show BE neutral
+    BE "Considering we didn't get any points in that last inning there, if I hadn't made it to home base on time, we wouldn't have won."
+    MC "What happens if it goes into a tie, would you have played an extra inning?"
+    show BE angry
+    BE "Eh. Sometimes but not today because we were kind of more on a time limit. Some of the others were already getting worn out too."
+    show BE happy
+    BE "But, hey. A win's a win, I'm not going to argue that!"
+    MC "Well I'm glad I could be here to witness a win."
+    show BE unique
+    BE "I like to think your little cheer helped me out. Gave me that extra little oomph I needed. Ha, what am I saying, nothing 'little' about me."
+    MC "I'd say... your patience is little."
+    show BE surprised
+    BE "Ha, what do you mean by that?"
+    MC "Hehe, I saw you trying to steal base at the end there. You looked like you were gunning for it."
+    show BE neutral
+    BE "Ah. Yeah. I thought it'd be cool but I guess it doesn't matter since we won. If I tried, we might have been taken out. So, I'm okay with that."
+    MC "Heh. I'm glad."
+    "I pulled Honoka into a quick hug and squeezed her tight."
+    MC "Did you want to do anything right now? Need a shower, I bet."
+    "Honoka laughed and stretched her arms above her head, causing her rack to stick out more prominently for a second."
+    show BE happy
+    BE "Mmf, yeah. I do. So, I think I'll want some chill time after that. Gonna hit the showers and head back to my room, wanna meet up there and we can play some games?"
+    MC "Sure. That sounds good. See you in a bit."
+    BE "Great! Thanks Kei-chan. Love ya."
+    MC "Love you too."
+    "Honoka gave another fist pump as she walked back over to her team and helped pick up the last few supplies so they could clear the field. I slowly made my way back to the dorms to have a nice relaxing time with Honoka."
+    jump daymenu
+
+label BE039:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
+
+label BEGTS001:
+    #optional
+    #1) Honoka has more Feminine points than Tomboy points.
+    #2) Kei has seen Honoka's dress sprite at least once. (BE20 has been cleared)
+    scene Dorm Exterior with fade #evening
+    #need bgm
+    #Forces Feminine costume
+    if getVar("BEMode") == "Tomboy":
+        $setVar("BEMode", "Feminine")
+        $setFlag("BEGTS001_TomFix")
+    "I walked out of my dorm to get some fresh air. The sun was hanging just above the horizon, tinting the sky in a vibrant orange."
+    "I pulled my arms back, then folded my hands together while rotating my neck slowly to give my body a good stretch. I had been sitting down so long during my lectures, I had become stiff."
+    "Afterward, I checked my phone for any new messages. There was a single unread text from Honoka."
+    BECell "<Thank you for a wonderful evening.>"
+    "I read the text with a smile, then decided to send a response. I took a seat upon one of the benches outside the dorm while I typed."
+    MCCell "<You're welcome, Honoka.>"
+    "Within seconds, I saw Honoka's icon show that she was typing a message."
+    BECell "<Oh hey, Kei-chan! Are you doing anything right now?>"
+    MCCell "<Not in particular.>"
+    BECell "<Would you like to meet up on the roof?>"
+    "I thought it over for a few seconds before responding. Something seemed different about Honoka's texts, but I couldn't quite pin down what it was."
+    MCCell "<Sure thing. I'll see you in a bit.>"
+
+    scene Roof with fade #evening
+    "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
+    "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
+    show BE happy with dissolve
+    "Honoka was there to greet me when I arrived."
+    BE "Hey, Kei-chan! Glad you could make it!"
+    MC "Nice to see you too, Honoka. What'd you call me up here for?"
+    show BE neutral
+    BE "Oh, nothing special. I just wanted to talk. Catch up a bit."
+    "I gave a small nod in response."
+    MC "Ah, okay. Wanna sit down?"
+    show BE happy
+    BE "Certainly. Let's."
+    show BE neutral
+    "Honoka took my hand, and we walked towards a bench upon the roof. I took the left side while she sat on the right."
+    "We both reclined, watching the sun slowly begin to disappear under the treeline. We still had about an hour before the school locked down for the evening, but I made sure to keep my eye on the clock."
+    "Honoka turned towards me. The sunlight reflected off of her hair clip as she turned."
+    BE "How have you been handling your factor since you arrived? Has the medical staff given you any... special instructions?"
+    MC "Special instructions?"
+    show BE angry
+    BE "Yeah, you know, like... stuff to do daily between classes."
+    MC "Oh, you mean that. Not really. I was told to avoid cutting my hair so they can get an accurate reading on its limits, but other than that, they just... check up on me every week."
+    show BE neutral
+    BE "I'm glad, I'm glad. We can forget about the factor stuff every now and then while we're here. Sure, it'll always be part of us, but it shouldn't control our lives."
+    show BE happy
+    BE "This... this is very nice, though. I'm happy that we can take time off to just... breathe, and forget about the world."
+    MC "You and me both."
+    show BE neutral
+    "We sat beside each other for a few more moments. That's when I heard the pattering sounds of light footsteps approaching from the stairwell."
+    "Within seconds, the door clicked open. We were greeted with a familiar face."
+    show GTS sad-2:
+        xpos 0.0 xanchor 0.5 yalign 1.0 xzoom -1.0
+        linear 2 xpos 0.2
+    play music GTS
+    "Naomi stepped through the door, arriving on the roof. She held a small watering can in her hands."
+    GTS "Oh, ah. I apologize. I didn't think anyone else was up here."
+    show BE happy
+    BE "Hey, Naomi-chan! It's been a while, hasn't it?"
+    MC "Good evening, Yamazaki-san."
+    show BE happy:
+        linear 1 xpos 0.8
+    GTS "Am I interrupting something?"
+    menu:
+        "Not at all. We're just hanging out.":
+            show GTS neutral
+            GTS "Ah, that's fortunate. I just wanted to make sure the rooftop planters were watered."
+        "Well, Inoue-san wanted to show me something...":
+            GTS "Ah, is that so? Well, if that's the case, I suppose I can wait."
+            show BE surprised
+            BE "No, no! It's fine, I insist. It's not like we own the rooftop or anything!"
+        "Oh! Are you checking on your garden?" if isEventCleared("GTS008"):
+            show GTS happy
+            GTS "That's exactly right. Have you come to appreciate the planters too?"
+            show BE neutral
+            BE "Actually, we were just talking. They're nicely maintained, though!"
+        "Oh! Are you checking on your garden?(disabled)" if not isEventCleared("GTS008"):
+            pass
+    show BE neutral
+    "I could tell that Naomi was scanning her eyes over Honoka with a look of confusion. She clearly had noticed something different."
+    show GTS surprised
+    "Her expression slowly turned from one of confusion to one of astonishment."
+    "Honoka and I sat there silently for a few moments, while Naomi kept her focus on Honoka. After a few seconds had passed, Naomi spoke."
+    GTS "Inoue-san, I... didn't recognize you at first."
+    show BE doubt
+    BE "What do you mean? Am I that easy to mistake for someone else?"
+    show GTS sad-2
+    GTS "No, I didn't mean it like that. I meant that your attire is different."
+    show GTS neutral-2
+    "Naomi paused for a few seconds as she approached the two of us to get a closer look."
+    GTS "You look incredible, Inoue-san. I love how you're dressed."
+    show BE embarrassed
+    BE "Aww. Thanks, Naomi-chan!"
+    GTS "What prompted the wardrobe change? Just a personal preference?"
+    show BE neutral
+    BE "Yeah, pretty much! That, and Kei-chan seems to like it."
+    show GTS unique-2
+    GTS "I see. Well, he's certainly helped you pick out a lovely outfit."
+    show BE embarrassed
+    BE "Oh stop, Yamazaki-san! You're flattering me!"
+    GTS "The praise is well deserved, though!"
+    "Honoka and Naomi continued to talk while Naomi slowly watered the rooftop planters."
+    MC "Well, you two certainly seem to be getting along."
+    show GTS neutral-2
+    GTS "There usually isn't anyone here during the evening. You caught me off guard, is all~"
+    show BE happy
+    BE "Still. It's been a while since we've all been together like this. We sat next to each other at orientation, right?"
+    GTS "That we did."
+    show BE sad
+    BE "Gosh, it feels like that was forever ago, though. I know it hasn't been THAT long, but--"
+    show GTS unique-2:
+        linear 0.3 xpos 0.3
+    GTS "Inoue-san?"
+    show BE neutral
+    BE "Yeah?"
+    GTS "Would you like to hang out more often?"
+    "Honoka's eyes darted to attention as Naomi spoke. Naomi had finished tending to the planters, and was now looking directly at Honoka."
+    show BE happy
+    BE "Well... sure! That'd be fun! Do you have any particular place in mind?"
+    show GTS unique-2:
+        linear 0.3 xpos 0.2
+    show GTS happy
+    GTS "A few. Shall I add your number so we can make the arrangements?"
+    BE "Sure, sure!"
+    "I watched as Naomi and Honoka pulled out their phones to add each other's numbers."
+    show BE neutral
+    BE "I guess I'll see ya around, then!"
+    show GTS neutral-2
+    GTS "We certainly shall. I'll see you then, Inoue-san."
+    MC "See you later, Yamazaki-san."
+    "Naomi gave us both a respectful, graceful bow as she opened the door to the stairwell and returned to the school building."
+    play music HigherEdu
+    show GTS neutral-2:
+        xzoom 1.0
+        linear 2 xpos 0.0 xanchor 1.0
+    play music Schoolday
+    show BE neutral:
+        linear 2 xpos 0.5
+    BE "It's about time we head out too, isn't it, Kei-chan?"
+    MC "Would you like me to walk you back to your dorm?"
+    show BE happy
+    BE "I'd like that very much!"
+
+    scene Campus Center with fade #eve
+    show BE neutral with dissolve
+    "Honoka and I walked down the stairwell and exited the school building. The sun was still hanging just above the treeline, so we had a few hours left in the day."
+    BE "I'm glad that Naomi-chan is in such a good mood. We really hit it off today, huh?"
+    MC "She was the first person we met when we first arrived here, after all. Would you say that it's more than coincidence?"
+    show BE happy
+    BE "It might! She seemed to really like my new clothes."
+    MC "You know... depending on where you two end up hanging out, you could surprise her with your dress."
+    show BE angry
+    BE "Something that formal? For a casual get-together?"
+    MC "Well, no. It'd have to be something appropriate. I'm sure she'd love it, though."
+    show BE neutral
+    BE "We could bring her along for a nice meal at that sushi place, or... see a show at the theater! I wonder if Naomi-chan would be into arcades?"
+    MC "As long as she fits under the ceiling, she might."
+    BE "Right, right... well. Regardless of what we end up picking, this was fun!"
+    show BE happy
+    "Honoka turned towards the cherry tree with a smile as she began to depart."
+    MC "It was! I'll see you around, Honoka."
+    BE "See ya!"
+
+    scene black with fade
+    "As I headed back to my own dorm, I reflected on what had happened."
+    "I just witnessed the beginnings of what could potentially be a strong friendship between Inoue-san and Yamazaki-san. Was it really just her change in clothes that sparked their interest, or did they already have that kind of bond?"
+    "Regardless of what it was, I felt good today. I was very happy to see them get along, since our meeting was partially responsible."
+    "I unlocked the door to my dorm room, then headed back inside for the evening."
+    if getFlag("BEGTS001_TomFix"):
+        $setVar("BEMode", "Tomboy")
+    jump daymenu
+
+label BEGTS002:
+    scene Dorm Exterior with fade #night
+    if getVar("BEMode") == "Tomboy":
+        $setVar("BEMode", "Feminine")
+        $setFlag("BEGTS002_TomFix")
+    #BGM: To be Decided
+    "The weekend had arrived, and I found myself sitting outside my dorm room just as the Sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
+    "Unless I actively make plans with someone else, I'll usually just browse the internet, watch videos, or play games. Daichi usually has something to stream, so I'll occasionally peek in and watch what he's watching."
+    "That is, when Daichi lets me see his computer. He's often documenting his findings or browsing conspiracy websites, so he'll never share his screen unless he's watching anime."
+    "I was just about to head back inside when I saw a distinctively tall figure. She was even taller than the light poles, which made her stand out even more in their brightness."
+    show GTS neutral-2 with dissolve
+    "Another figure was standing next to her. Seeing Naomi stand next to another person made me realize just how tall she was. It was easy to forget her height when she's the only one present."
+    show GTS neutral-2 at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
+    show BE neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    "Both Honoka and Naomi stood next to the light pole. They were illuminated by the white glow covering the sidewalk."
+    show GTS unique-2
+    show BE happy
+    "I couldn't quite make out what they were saying from here, but they seemed to be deep into a conversation."
+    "I decided to approach them. The sidewalk was still brightly lit, so seeing me wouldn't come as a surprise."
+    show GTS neutral-2
+    GTS "...Though, most people think that they are."
+    BE "Well, yeah! Unless you're familiar with the field, I'd assume the same thing."
+    "Their conversation seemed to halt as I got close, though. I gave them a small wave, which Honoka repeated."
+    show BE neutral
+    BE "Hey, Kei-chan."
+    MC "Hey, Honoka."
+    show GTS neutral
+    GTS "Ah, Hotsure-san. Hello."
+    "Naomi gave me a small bow."
+    MC "What were you guys talking about, if I may ask?"
+    GTS "I was telling Inoue-san about common misconceptions with botany."
+    show BE happy
+    BE "Yup! Apparently most home-grown plants require way less water than most people provide."
+    show GTS surprised
+    GTS "It's a mistake that non-enthusiast plant owners make quite often. If they're just maintaining a basic flower display for their home, the display often goes overwatered."
+    show BE neutral
+    BE "That, and some store owners only remember to maintain them when they get a really fancy display."
+    show BE angry
+    BE "Those like... specialty fruits that they display in the store window as a status symbol."
+    MC "I've seen those before, yeah. Like the cube watermelons, right?"
+    show GTS neutral
+    GTS "The very same."
+    show BE confused
+    BE "What were we talking about before the botany, though?"
+    GTS "You were considering what to do tonight."
+    show BE embarrassed
+    BE "Right, right! I was thinking about doing stuff all week! I hardly had any time with all my classes and clubs."
+    show GTS happy-2
+    GTS "Oh, don't feel bad about it! We got to play volleyball, didn't we?"
+    show BE shrug
+    BE "Yeah, but you cheat!"
+    show GTS happy
+    "Naomi let out a loud, forceful laugh while covering her mouth. The imposing sound of her voice was so great, our bodies shook slightly."
+    GTS "My factor is hardly a form of cheating!"
+    "Honoka gave a sarcastic scoff in response."
+    show BE seductive
+    BE "We'd belong in different divisions anyway. I can hardly hit the ball over you!"
+    show GTS unique
+    GTS "Hmm? Would you rather I gave basketball a try, then?"
+    show BE embarrassed
+    MC "Wouldn't you get shot-clocked for holding the ball over everyone?"
+    show GTS neutral
+    GTS "Sarcastic as I might have been, I'd be willing to give it a try. I'm certain that Seichou has specific rules geared towards factors, after all."
+    show BE happy
+    BE "We'd be unstoppable, Naomi-chan! Maybe I can convince Akira-chan to join us too!"
+    GTS "My knowledge is limited, but I don't think there are any body checks in basketball."
+    BE "She knows how to use her strength, Naomi-chan! Just like you~!"
+    show GTS happy
+    GTS "I admire your athletic discipline and positive attitude, Inoue-san. It's truly something to behold."
+    show BE embarrassed
+    BE "I could learn a few things from you myself, Naomi-chan. You're so... well-spoken and refined and stuff. It's not easy disciplining yourself to stay like that."
+    show GTS neutral
+    GTS "Oh, hardly. You give me too much credit, Inoue-san."
+    "The evening air billowed around us as we spoke. An audible gust of wind caused the nearby trees to rustle and stir. Honoka made a motion as if to respond, then tilted her head upwards to look at the darkened sky in silence."
+    show BE happy
+    BE "Oh, hey! I know what we can do tonight."
+    "Naomi and I repeated her gesture, craning both of our heads to look up. There didn't appear to be a single cloud in the sky. The night had been completely clear, allowing us to see every star dotting the expansive airspace."
+    MC "Would you like to watch the stars, Honoka?"
+    show BE neutral
+    BE "I'd like that very much, Kei-chan."
+    show BE shrug
+    BE "What about you, Naomi-chan? You wanna join us?"
+    show GTS embarrassed
+    GTS "If you would have me."
+    show BE happy
+    BE "Of course we'll have you! Right, Kei-chan?"
+    MC "Absolutely."
+    show GTS sad
+    GTS "I appreciate it. I'm fully aware that our options are limited due to my size, so if you're just trying to accommodate me--"
+    "Honoka held up her hand with a wide smile before Naomi could finish her sentence."
+    BE "Naomi-chan. It's fine. Really, it is! We've all got factors. You don't need to be so hard on yourself."
+    show GTS neutral
+    "I could see the fog surrounding Naomi's expression clear up as she listened to Honoka talk. Clearly, she had said something right."
+    show GTS embarrassed
+    GTS "Thank you, Inoue-san. Thank you. I... need to remember to see value in my company. Our factors don't make us burdens."
+    MC "I'm glad that she's helped you see it that way, Yamazaki-san."
+    GTS "The thoughts of what difficulties my size will bring come and go, but Inoue-san helps keep me positive. Mental fortitude can only get one so far."
+    show GTS neutral
+    GTS "Shall we be off?"
+    MC "I'm ready if you're ready. Honoka?"
+    show BE neutral
+    BE "Right behind ya!"
+
+    #night sky
+    scene black with fade
+    #BGM: To be decided
+    "The three of us walked to an open field with a small, steadily inclining hill to the Northeast of campus. It was just passed the entrance to the GTS dorm, so the walk only took us a few minutes."
+    if not isEventCleared("GTS020"):
+        "Naomi struggled to find the correct pace to her strides. Due to her immense height, she needed to stop in her tracks every time she outpaced us."
+        "She swayed idly on her heels as she waited for Honoka and I to catch up. It looked like she clearly didn't intend to walk so fast. Her strides just naturally took her further."
+    else:
+        "Since I had been spending a lot of time with Naomi, we had already gotten used to walking alongside each other. She kept perfect pace with the two of us, intentionally placing her strides at the perfect distance."
+        "She was a natural at it by this point. If not for the occasional heavy pulse in her footsteps, It'd be almost impossible to tell we were walking next to someone so tall."
+        "...Well, until we looked to our sides, that is."
+    "Honoka stretched her arms up with two fists clenched. She seemed eager to lay down in the grass."
+    BE "This seems like a good spot!"
+    MC "Works for me."
+    "Honoka seated herself, then rocked backwards until she was laying flat upon the ground. Her entire body wobbled before it finally came to a halt."
+    "With an imposing thoom, Naomi soon joined us. Despite being over double our heights, she still found a spot for herself upon the hill. She rested herself to Honoka's right, while I reclined to her left."
+    "Honoka's body made it somewhat difficult to see Naomi, but it didn't matter much since the three of us were focused on the sky."
+    "Honoka inhaled as she relaxed. Naomi inhaled as well, with a much lower and hollower tone."
+    BE "Really takes you back, doesn't it, Kei-chan?"
+    MC "To the sleepovers we used to have when we were kids?"
+    BE "Mhm. Exactly."
+    "I could hear Honoka shifting her position and moving her arms. From my peripheral vision, I could see her faintly crack a smile."
+    BE "Hey, do you remember that one time..."
+    MC "Oh, here we go..."
+    BE "--That one time we watched a DVD before we were supposed to sleep?"
+    MC "The one that was way above our age rating at the time?"
+    GTS "Did you two lose your innocence that early?"
+    BE "Pff, nah! It wasn't porn. It was more of a horror film."
+    MC "I thought the cover looked really cool, which is why I chose it..."
+    BE "The one with all the silhouettes of the students, right?"
+    MC "Yep. Where they're all sent to an island with limited supplies, food, and water... and told to kill each other."
+    "I heard Naomi physically recoil at my summary."
+    GTS "I think I know which one you're talking about. That sounds horrific to watch during a sleepover. How old were you two?"
+    MC "Around 11 or 12."
+    BE "We were so afraid, we shut the DVD player down and kept the lights on the entire night!"
+    GTS "Having the lights on can be very comforting when you're afraid."
+    GTS "Though, to watch a film like that when you're 11..."
+    MC "Believe me, I regret it. In a way, though... it was okay. I got to see a new side of Honoka that day. She has this natural talent of just... saying the right thing to make you feel better."
+    BE "Even back when I was a kid?"
+    MC "Your friendliness was, and still is, one of your best traits, Honoka. You can always find a reason to smile."
+    BE "For better or for worse!"
+    "I could hear Naomi roll over, causing the grass around her to crunch and rumble. She then slightly shifted her position, laying on her side rather than her back. Honoka and I sat up in response."
+    show BE neutral at Position(xpos=0.3, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
+    show GTS neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    GTS "It certainly sounds like you two had a fun childhood."
+    show BE seductive
+    BE "What about you, Naomi-chan? Do you have any fun stories to share?"
+    show GTS embarrassed
+    GTS "You're gonna think it's stupid."
+    show BE happy
+    BE "Ooh, I promise I won't! C'mon, tell me!"
+    show GTS neutral-2
+    GTS "All right, all right~"
+    show BE neutral
+    "Naomi let out a defeated exhale, followed by a giggle. We could hear the idle sounds of crickets chirping in the distance as the night breeze continued to rustle the trees."
+    GTS "Once, I wanted to prepare takoyaki by myself. I saw it a few times on those home shopping shows where they demonstrate different appliances."
+    show GTS neutral
+    GTS "We had most of the necessary ingredients at our house, but we didn't have a specialized tray specifically for making takoyaki."
+    MC "Those trays with the little circles on them?"
+    show GTS unique
+    GTS "Correct. The very same."
+    show GTS neutral
+    GTS "Since we didn't have a tray small enough for takoyaki, I ah-"
+    show GTS embarrassed
+    GTS "I ended up using a muffin tray instead. So instead of having a neat serving of 8 perfectly cut takoyaki balls, I ended up just making around -- two muffin-sized wads of octopus."
+    show BE confused
+    BE "Did they taste good, at least?"
+    show GTS neutral
+    GTS "My dad was genuinely impressed that I made something edible, even if the serving was completely wrong. That was the first time I had ever seen him laugh."
+    show BE doubt
+    BE "Wait... how old were you at the time?"
+    GTS "Around 8 years old. My dad wasn't usually one to break tradition or display a lot of emotion, but to see his daughter make something so hilariously off--"
+    show BE happy
+    BE "You didn't make a mistake! You invented a completely original cuisine!"
+    show GTS embarrassed
+    GTS "I suppose that's one way of looking at it~"
+    stop music
+    "The night air came to a halt as the three of us spoke. The wind had calmed, leaving the trees completely still. Silence surrounded us as we looked up at the stars once more."
+    show GTS neutral-2
+    show BE neutral
+    BE "I don't know if there are any constellations among those. I've never really looked for them outside of a textbook."
+    GTS "Neither have I. Still, a clear night sky has a very strong calming effect, doesn't it?"
+    show BE happy
+    BE "Yeah, it does. I had a chance to just... slow down, and watch the stars. Even if I focus on just one point, I can slowly shift my eyes and just... get lost in the sea of darkness."
+    show GTS unique-2
+    GTS "You're a poet, Inoue-san."
+    show BE embarrassed
+    BE "Oh, shut up~! I bet you could come up with something better, since you can see them closer."
+    GTS "I'll trust your judgement, Inoue-san. Your phrase was a lovely way to describe a sea of stars."
+    show BE neutral
+    BE "Would you like to head back now?"
+    show GTS neutral-2
+    GTS "Sounds good to me. Are you ready to go, Hotsure-san?"
+    MC "Right behind you."
+    scene Dorm Exterior with fade #night
+    "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
+    show GTS neutral-2 at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
+    BE "Thank you for spending time with me, Naomi-chan. This was wonderful."
+    show GTS unique-2
+    GTS "I'm glad you had fun, Inoue-san. It was your idea, though!"
+    show BE happy
+    BE "It doesn't matter that it was my idea. Your company made it better."
+    GTS "I feel the same way, Inoue-san. I value your company just as much."
+    show BE embarrassed
+    BE "Awww~"
+    show GTS neutral-2
+    GTS "Shall we schedule something else next week?"
+    show BE neutral
+    BE "If I'm not too busy with school work, sure!"
+    show GTS unique-2
+    GTS "Fantastic. I'll see you again soon."
+    "Naomi gave us both a small bow. She was so tall, however, that a bow from her loomed over both of our heads."
+    MC "See you around, Yamazaki-san."
+    GTS "Farewell, Hotsure-san."
+    hide GTS with dissolve
+    show BE neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    BE "I never knew how outgoing Naomi-chan was. When we first arrived, all I saw was a timid girl in the school garden. I thought there was something mysterious about her, but I never thought..."
+    "Honoka seemed to pause midway through her sentence, like she didn't know what to say."
+    MC "You never thought what?"
+    show BE sad
+    BE "I never thought she'd be so special to me."
+    "Honoka's expression clouded up in deep thought, then slowly returned to a beaming look of happiness."
+    show BE happy
+    BE "It's all because of you, Kei-chan. If it hadn't been for you, we would have never clicked in the way we did."
+    MC "You wouldn't have hung out on the roof?"
+    show BE shrug
+    BE "I might have by myself, but... you were the reason we met, and I'm so happy that we did."
+    MC "I appreciate that, Honoka."
+    "Honoka pulled me into a firm hug before she left for the night. It was pretty difficult to wrap my arms all the way around her, but we managed to make it work."
+    hide BE with dissolve
+    "I took one last look at the vast, open night sky before returning to my dorm and heading to sleep."
+    if getFlag("BEGTS002_TomFix"):
+        $setVar("BEMode", "Tomboy")
+    jump daymenu

@@ -1,4 +1,5 @@
 default persistent.enable_notifications = True
+default persistent.enable_nsfw = True
 
 init python:
     config.use_cpickle = False
@@ -7,7 +8,7 @@ init python:
     #style.menu_choice.color = "#fff" #These two commands set the color of the font in the in-game choice buttons.
 
     #style.menu_choice_button_disabled.background = Frame("Graphics/ui/choice_bg_disabled.jpg",28,9)
-
+    activeevent = ""
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
@@ -104,7 +105,7 @@ init python:
 
     #Condition enums/stuff
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK = range(10)
+        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
 
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -115,6 +116,7 @@ init python:
     #OR: arg1 = condition, arg2 = condition, returns true if either arg1 or arg2 are true
     #ROUTELOCK: arg1 = (string) character code, true if you're on that route (or, if empty string, true if not on any route)
     #NOROUTELOCK: arg1 = (string) character code, true if you're NOT on that route (or, if empty string, true if on any route)
+    #VAR: arg1 = (string) variable name, arg2 = (string) variable value, true if value matches the current value of the variable name
 
     class EventTypeEnum:
         CORE, OPTIONAL, OPTIONALCORE = range(3)
@@ -209,6 +211,12 @@ init python:
                     break
             elif c[0] == ConditionEnum.NOROUTELOCK:
                 if routelock != c[1]:
+                    continue
+                else:
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.VAR:
+                if getVar(c[1]) == c[2]:
                     continue
                 else:
                     criteriavalid = False
@@ -383,6 +391,11 @@ init python:
                 secondGirl = girl
         return secondGirl
 
+    def isHighestSkill(s):
+        if getSkill(s) >= getSkill("Art") and getSkill(s) >= getSkill("Academics") and getSkill(s) >= getSkill("Athletics"):
+            return True
+        return False
+
     def isEventCleared(event):
         return event in clearedevents
 
@@ -505,6 +518,12 @@ init python:
     def isRouteEnabled(girl):
         return routeenabled[girl] and (routelock == girl or routelock == "")
 
+    def getRoutelock():
+        return routelock
+
+    def isNSFW():
+        return persistent.enable_nsfw
+
     def setTimeFlag(flag):
         if flag not in timeflags:
             timeflags.append(flag)
@@ -521,6 +540,9 @@ init python:
             else:
                 return
 
+    def getSize():
+        global globalsize
+        return globalsize
     def setSize(size):
         global globalsize, prgsize, minorsize
         if size > globalsize:
@@ -632,10 +654,10 @@ label splashscreen:
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.
-screen choicetimer:
+screen choicetimer():
     timer 0.01 repeat True action If(timer_count > 0, true=SetVariable('timer_count', timer_count - 0.01), false=[Hide('choicetimer'), Jump(timer_jump)])
 
-screen daymenu:
+screen daymenu():
     add "Graphics/ui/map/map_school.png"
 
     #event choice sidebar
@@ -738,7 +760,7 @@ transform notif_transform:
     pause 3
     linear 1.0 yalign -0.2
 
-screen debugmenu:
+screen debugmenu():
     $debuginput = ""
     grid 3 15:
         xalign 0.5
@@ -839,22 +861,22 @@ screen debugmenu:
         textbutton "+" action Function(setSizeDebug, 1)
         textbutton "-" action Function(setSizeDebug, -1)
 
-screen debugvarlist:
+screen debugvarlist():
     vbox:
         text debugListVars()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugflaglist:
+screen debugflaglist():
     vbox:
         text debugListFlags()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugtimeflaglist:
+screen debugtimeflaglist():
     vbox:
         text debugListTimeFlags()
         textbutton "Return" action Jump("debugmenu")
 
-screen debugclearedeventlist:
+screen debugclearedeventlist():
     vbox:
         text debugListClearedEvents()
         textbutton "Return" action Jump("debugmenu")

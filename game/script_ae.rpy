@@ -3084,7 +3084,7 @@ label AE018:
         AE "And the roof is...?"
         MC "Okay, okay, I get it, yeesh."
         AE "You're the Sigmund Freud of dream analysis, Hotsure-san."
-    elif getSkill("Academics") > 2 and getSkill("Academics") < 4:
+    elif getSkill("Academics") >= 2 and getSkill("Academics") < 4:
         MC "I think... you subconsciously believe that you're lonely."
         show AE neutral
         AE "..."
@@ -6460,7 +6460,7 @@ label AE031:
     MC "Sounds foreign."
     AE "German, in fact. A former organist and administrator of a diocese in southern Munich. He was a true connoisseur of music; cultured beyond any man or woman I'd ever met."
     show AE happy
-    if getSkill("Arts") > 5:
+    if getSkill("Art") > 5:
         AE "You remind me a bit of him, actually."
         MC "Really?"
         AE "Mhm..."
@@ -10925,6 +10925,7 @@ label AE050:
     AE "Mmn.~"
     "As we kissed, I felt the warmth of her hand gently caress my face. I grabbed her waist and pulled her in even tighter as we started to rock back and forth together."
     "Now realizing the true reason why I'd been called to her room so late in the night, I decided to take a chance, as I grabbed two handfuls of that plump ass."
+    #NSFW
     AE "MMMM!"
     MCT "Ah! W-Was I wrong to-?"
     AE "Mmm~"
@@ -11330,7 +11331,8 @@ label AE050_after3:
         AE "M-Mhm."
         MC "Alright, how's about you get on your knees, yeah?"
         AE "Y-Yeah."
-    "We positioned ourselves on the bed. She kneeled down as I fully took my pants off; leaving the both of us now totally naked. I got a good look at her fat cheeks stuck in the air and put my hand on one, stroking my cock with my other hand."
+    show cg AE050_behind1
+    "We positioned ourselves on the bed. I got a good look at her fat cheeks stuck in the air and put my hand on one, stroking my cock with my other hand."
     MC "Such a beautiful ass. Mmn~"
     "As each pale cheek eclipsed my view of the rest of her, I lowered myself before feeling the soft, yielding flesh part for me. I began to run my tongue along her eager slit while feeling her legs quake around my head."
     MC "Mmph~"
@@ -11345,21 +11347,25 @@ label AE050_after3:
     AE "Mhm..."
     "I felt myself press against the outer slopes of her gargantuan ass and nearly came right then from the sensation of being enveloped in such a warm embrace."
     "Taking an extra moment to steel my nerves, Shiori-chan clearly felt the hesitation in my progress and decided to push back into my waist, burying myself even deeper within her."
+    show cg AE050_behind2
     "Caught off-guard by her sudden forwardness, I pushed against her and felt my rigid cock press against her hole. Then, all at once, it entered."
     AE "Hooo-OOOOOOH!!!"
     "She began cumming as soon as I'd stuck my dick in, her tongue lolling out as a rich red took up most of her cheeks. Both the ones on her face, and the gigantic ones on her backside."
     AE "OOOOOOOHHHH~!"
+    show cg AE050_behind3
     "Her hands scratched at the sheets to try and keep herself upright, but soon the strength in her arms gave way as well."
     "She was left face-down, her butt wobbling all over like a broken bowl of pudding as I pounded into her, my entire body tensed up with strength I never knew I had."
     MC "Pah-Ngh!"
     AE "HAAAH, HAAH, AAAAGN!!!"
     "Settling into a slow rhythm of bouncing away and into her fleshy cushioning I could feel her tempo begin to increase as her body began to shudder from both the motion and her own skyrocketing arousal."
     "It was like she was caught in an endless orgasm, each thrust forcing her to an even greater state of climax."
+    show cg AE050_behind4
     "I started moving on instinct, stretching my arms around both cheeks as my tempo increased. The bed began to creak with every thrust as the movements of her massive body rocked the entire bed."
     "Her body went slack as she continued to feel the barrage from my throbbing manhood thrust into her meaty backside over and over again."
     MC "Haah! Ngh! S-Shiori-chan... I'm gonna c-c... Ah!"
     "I wasn't even sure she could hear or understand what I was saying, as she only responded with a few garbled moans. One last smack to her ass, and finally..."
     MC "Ha-Ha-Haah!"
+    show cg AE050_behind5
     "The dam broke. I grabbed her arms and pulled her back, pushing my cock as deep as I could into her ass as I thrusted my hips a few more times."
     "My chest against her back, our hearts beating like mad together, I began to hyperventilate as I grabbed her waist with one hand, the other grabbing her chest and pulling her in as I bounced our bodies up and down together."
     MC "Hahn-{i}gch{/i}-ahn!"
@@ -11370,9 +11376,8 @@ label AE050_after3:
     "My energy completely spent, I slumped forward, grabbing her tight as I pulled her down with me."
     "I fell over to the side as my exhausted body went limp. I could feel her panting as I pulled my member from her cheeks. She did her best to maneuver herself over her own ass to look me in the eyes."
     AE "Ahhn... Aaaahn~"
+    show cg AE050_behind6
     AE "K-Keisuke-kun..."
-    show AE happy
-    hide cg with dissolve
     AE "I'm so happy... you were my first..."
     "I smiled and gently caressed her face with my hand, wiping away her tear."
     "The last thing I saw as I slowly drifted off to sleep was Shiori-chan's smiling face; an image that burned into my mind, and would stay there forever. The last words echoing through my mind, but never escaping my lips:"
@@ -12990,6 +12995,7 @@ label AE056_c1_after:
     AE "N-No. It's nothing."
     AE "Here, let me get a bit more comfortable as well."
     play music Steamy
+    #NSFW: short(?)
     "As we sat together on the edge of her bed, her demeanor seemed to change, she pushed into me more forcefully as we sat down, her hips spilling over the top of mine and pushing into my side."
     "As we kissed, I took of her headband and placed it amongst her books, causing her raven black hair to fall loosely in front of her glasses before she sweeped one side of her locks behind her ear."
     "As my hands rode gingerly up her skirt, I reared my hands back and gave a hearty slap to her sizable rear."
@@ -13004,6 +13010,7 @@ label AE056_c1_after:
     show AE happy
     AE "Nye-he~"
     stop music
+    #NSFW
     ##Door open SFX#
     Tako "H-WOAH MY GOD-!"
     show AE surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
@@ -13752,7 +13759,7 @@ label AE060:
     AE "Nngh..."
     MC "Trust me, hon, it's not too big."
     AE "It's {i}beyond{/i} too big."
-    if getSkill("Arts") > 17:
+    if getSkill("Art") > 17:
         MC "Is the sky too blue? Is the sun too bright?"
         MC "You're a sight to behold; a wonder. You're not {i}too{/i} anything."
         show AE smile
@@ -14119,6 +14126,7 @@ label AE061:
     "In a motion as quick as it was surprising, she turned, grabbing her skirt which had swished with her movement. She lifted it up to reveal..."
     MC "A-Ah..."
     play music Steamy
+    #NSFW
     "The most revealing thong I'd ever seen."
     MC "W-What?!"
     "Two brown strings held a piece of cloth in place in the middle of her ass. A fist sized triangle with the markings of a leopard, it's inadequate size making minor indents in the tender flesh of her ass."
@@ -15158,7 +15166,7 @@ label AE065:
     AE "Ah, there we are."
     AE "*Khm*"
     #Play Moonlight Sonata
-    if getSkill("Arts") >= 9:
+    if getSkill("Art") >= 9:
         MC "Moonlight Sonata?"
         show AE smile
         AE "Mm."
@@ -16037,11 +16045,11 @@ label AE069:
         ease 0.8 xpos 0.5
     AE "Wuh-ah-!"
     "With that, Tako gave a thumbs up and a quick wink before following Ryoko on her way out, leaving Shiori and I alone."
-    "Practice?"
-    "U-Um, yeah."
+    MC "Practice?"
+    AE "U-Um, yeah."
     MC "What for?"
     "Shiori inadvertently avoided my gaze as she began to blush, biting her bottom lip."
-    "Oh, you know, um... just some stuff I was thinking of picking up on."
+    AE "Oh, you know, um... just some stuff I was thinking of picking up on."
     MCT "Of all the times to be cryptic, now is not one of them..."
     MCT "Still... I shouldn't let this get to me too hard. After all, I know Shiori, and I've learned to trust her judgement."
     MCT "Even when I feel anxious about it."
@@ -16103,6 +16111,182 @@ label AE069:
             jump daymenu
 
 label AE070:
+    #$setSize(5)
+    $setProgress("AE", "AE071")
+    scene black with fade
+    "I'm sorry..."
+    "I'm sorry I couldn't save you from yourself."
+
+    scene Dorm Interior with fade
+    play music Rain
+    "As my eyes opened, I looked around the room to see Daichi resting quietly in bed as the light of the early sunrise filled the room. I roused lightly in bed, pulling my blanket in closer as I tried to escape the winter cold which permeated the room."
+    MC "The hell was that? Talk about a shitty dream..."
+    "I rubbed the sleep from my eyes and took a good look around my room. For a moment, I'd felt as though I had woken up in an alien place; somewhere I wasn't at all familiar with. It was only after letting the dream fade from my mind for a moment did I catch up with reality."
+    "As I shook my head, I noticed a subtle movement out of the side of my eyes. Looking down at the bed, I got a glimpse of my soft brown locks reaching down and brushing the mattress."
+    MC "Did my hair grow out even longer in my sleep? Uch, what a pain."
+    "Taking a moment to run my fingers through my hair in the silence of the room in the early morning, I felt as my fingers caught a few knots here and there. As Daichi tussled lightly in his bed, I silently got up from the bed and went into the bathroom."
+
+    scene Bathroom with fade
+    "I looked myself in the mirror for a moment... just staring. Looking at myself..."
+    "After a moment, I took off my shirt."
+    if getSkill("Athletics") > 5:
+        MCT "I'm glad I've been hitting the gym recently. I think I look pretty good."
+    MCT "..."
+    MCT "I look good enough for Shiori, right?"
+    if isNSFW():
+        "Then, I took off my pants... then my boxers."
+        "I continued to look at myself in the mirror, still under the effects of my morning wood."
+        MCT "My dick is big enough for her, right?"
+        "I looked down and poked my masculinity as it bounced with a springy motion."
+        MCT "I mean... we did it no problem before. I just kinda had to squeeze between her cheeks..."
+        MCT "If she gets any bigger, she'd need a dude with a horsecock to fuck her ass... a dude with that kinda growth isn't a thing here, right?"
+        MCT "..."
+        "As I thought about it, I imagined what it'd be like to have that growth instead... and my thoughts began to wander. I sat down on the cold toilet seat and wrapped my hand around my member, stroking it gently. Imagining what it would be like to give Shiori everything she'd want."
+        "'Oh fuck! Keisuke!'"
+        "Everything she deserves."
+        "'Yes! Yes! Harder!'"
+        "I took my hair in my hand and began to rub my cock with a higher tempo, feeling the coarse, yet silky roughness titillate me as I imagined making her cock thirsty for me. How it would break her."
+        "'Please! More! I need more!'"
+        "My eyes shot open as I quickly stopped in a state of pre-nut clarity and realized just what it was I was fantasizing about doing to her."
+        MCT "Woooah, woooah, fuck. Nonono, huh-uh. Nope. Cutting that fucking fantasy off right now."
+        MC "Shit... I need a cold ass shower right now."
+    "As I went to step into the shower, I grabbed the bottle of shampoo and conditioner from the cabinet."
+    MCT "Man, this stuff has lasted a long time. I'm amazed it's not empty ye- it's lighter than I thought..."
+    MC "..."
+    MC "Wait... is it?"
+    "I shook the bottle for a moment, only to realize that, as I feared from the weight, the bottle had been depleted."
+    MC "Ahh shit. Welp, to the nurses office I go."
+    "I put my shirt and pants back on, and then made my way out to the living room, silently making my way towards the door. I slowly closed the door behind me as not to wake Daichi, and quietly slunk out into the hallway."
+
+    scene Nurse Office with fade
+    "As I walked into the nurses office, I looked around to see if anyone was available. Sure enough, at the desk in front of the main medical wing doors, was the nurse. She looked up and greeted me with a smile, yet bowed apologetically."
+    #nurse smile
+    Nurse "Ah, apologies, Hotsure-san, but we currently have testing and therapy in progress."
+    MC "Testing?"
+    #nurse surprised
+    Nurse "Wait, are you here for Matsumoto-san?"
+    MC "Oh! I was just here to get a resupply of the shampoo but... I didn't know Shiori was here."
+    #nurse neutral
+    Nurse "Ah. Well, yes, she's going through her physical therapies today."
+    if getSkill("Art") >= 5:
+        MC "I see. Which ones in particular?"
+        MCT "Let's see if I can bluff this."
+        Nurse "Ah, no doubt the ones Matsumoto-san has already told you about: Sensitivity testing, vibration therapy, ice rod therapy, muscle density testing, elasticity tests; somewhat standard fare for students with her condition."
+        MC "Ah. Right. And the therapies are the ones that..."
+        "I made a subtle show of snapping my fingers trying to 'remember' information I was never told."
+        MCT "I wouldn't usually fish for information like this, but I know how Shiori can be when she's embarrassed, and I want to know as much as I can to help her..."
+        if getSkill("Art") >= 10 and getSkill("Academics") >= 7:
+            #nurse smile
+            Nurse "The experimental ones for slowing the process she signed up for last month, yes."
+            MCT "Experimental... to slow the process?"
+            MC "Right! Right, right. Is it showing any results?"
+            #nurse concern
+            Nurse "It's... inconclusive, currently."
+            MCT "Ah. Meaning that it's doing nothing so far."
+        else:
+            #nurse neutral
+            Nurse "...I'm sorry, Hotsure-san, but that information is strictly confidential."
+            MCT "Damn, it was worth a shot..."
+    else:
+        MC "W-What kind of testing?"
+        #concern
+        Nurse "Apologies, Hotsure-san, but I'm not at liberty to discuss these sorts of things with you. It's strictly confidential."
+        "Something about her tone made it seem like the confidentiality part spread beyond just official doctor-patient, and into something much more official. It was as though 'classified' would have worked just as effectively."
+    MC "Is it okay if I wait out here for her?"
+    #smile
+    Nurse "Yes, of course, Hotsure-san. She'll be out in a few minutes."
+    "I nodded, and sat down on one of the chairs leaning up against the walls towards the office entrance."
+    "Much to the nurses word, I simply sat out in the waiting room in silence... for a moment."
+    UNKNOWN "UUUUUUUUUUUGH~!"
+    "It was Shiori. It was distant, almost muted, but I definitely heard a loud, nauseated moan of discomfort and... pleasure?"
+    MC "W-What was that?!"
+    Nurse "It's okay, Matsumoto-san is just doing her tests."
+    MCT "Her tests?! What the hell are they doing to her in there?!"
+    "I continued to sit quietly, though now perturbed by intermittent mechanical buzzing, whirring, moans and groans."
+    MC "U-Um... my shampoo is um..."
+    Nurse "Oh! Of course, I'll go check on Matsumoto-san and get it for you."
+    "She disappeared for a while before heading back to me with a bottle in hand."
+    #neutral
+    Nurse "She's going to need a few minutes to recover, Hotsure-san. Apologies."
+    MC "No worries..."
+    #hide nurse, probably
+    "I waited for minutes on end holding my bottle of shampoo on my lap quietly as I fiddled with the cap. Soon enough, however, the door to the main wing opened up and out came Shiori... for better or worse. Assisted by a member of the medical staff, she made her way out to the lobby."
+    show AE aroused-2 with dissolve
+    AE "Haahn... mgrr..."
+    "She was red in the face, her legs were shaking as though they were made of jelly, and her glasses had become completely fogged up. As she panted, her ginormous asscheeks both wobbled gently, and what asscheeks they were. The assistant left as Shiori stood there panting."
+    MC "Hoooly shit."
+    show AE aroused-4
+    AE "H-Huh?"
+    AE "K-Keisuke? What are you doing here? Why are you up this early?"
+    MC "I was coming in to get a refill on that shampoo and um..."
+    MCT "Oh hey, I just realized I didn't put my boxers back on."
+    MC "W-what are you doing at the nurses?"
+    "Though I hadn't been seeing it as often, the look on Shiori's face was unmistakable to me at this point. She was calculating. Putting things together before speaking."
+    show AE embarrassed
+    AE "I-I woke up this morning ready for my measurements and u-um..."
+    "She looked back at her tremendous backside and placed a hand on one of her massive cheeks, her hand sinking in as she did."
+    AE "There was a spike."
+    "She was definitely bigger. Visibly so. Each cheek was now so big it looked like it'd need two benches just to sit down. Her thighs, bulging and thick, looked like small tree trunks as her calves looked as though I could no longer wrap an arm around them."
+    MCT "I knew she'd get big but... I never figure she'd ever get {i}this{/i} big."
+    show AE sad #sad-3
+    AE "I'd underestimated the speed and magnitude my growth would take hold. If this sort of growth keeps up..."
+    "Shiori looked at her massive behind and bit her bottom lip, but after a moment she shook her head and did her best to give a coy smile."
+    show AE ass
+    AE "But hey, um..."
+    show AE aroused
+    AE "A-At least there's more of me for you to love, right?"
+    MC "You can say that again."
+    if getAffection("AE") > 20: #1/3
+        "Though my delivery was a bit shaky, it seemed like she got the message."
+        show AE happy
+        AE "Ehehe, t-thanks."
+    else:
+        show AE sad
+        "It was only a moment or so after the words left my mouth that I realized just how badly my words came across. Painfully so as Shiori's face seemed to be wracked by a deep, cold, and silent sorrow."
+        MC "Ah- N-no, no, in a good way! I was trying to be flirty and I kinda-"
+        show AE surprised #surprised-2
+        AE "Oh! Um, right! Yeah, s-sorry, I kind of took that the wrong way."
+    "Shifting the weight of her hips a moment, she started to tilt foreward more."
+    show AE surprised
+    AE "W-Woah!"
+    MC "Ohp, I gotcha."
+    MC "You alright?"
+    show AE sad
+    AE "I-I'm okay. Just um... I was caught off balance for a moment."
+    MC "You all good?"
+    show AE neutral
+    AE "Yeah, I'm fine."
+    "After a moment of looking deep, silver eyes, I noticed that she'd been blushing much more heavily."
+    show AE aroused-2
+    AE "Keisuke, your hand..."
+    MC "Huh?"
+    "I paid attention to my hand, and realized that it was placed firmly on a part of the big, plushy flesh of her ass under her skirt. I quickly pulled my hand away and placed it on her shoulder."
+    MC "O-Oh! Oh, yeah, sorry."
+    show AE aroused
+    AE "No worries. I like it~"
+    MCT "Her voice seemed a bit shaky... is she really that sensitive?!"
+    MC "O-Oh, yeah?"
+    AE "Mhm."
+    "As much as I wanted to tease her back, something in the back of my head was setting off alarms. Maybe it was the dream I had this morning, but... I felt worried."
+    MC "Oh! I almost forgot, we have class soon."
+    show AE surprised
+    AE "O-Oh! Yes, yes of course. Apologies, um... right!"
+    MC "I may have forgotten to take a shower though... I kinda needed to get a bottle of shampoo."
+    show AE happy #happy-2
+    AE "Baah, nonsense, you should be fine."
+    "Taking my hair in her hand, she then ran it though her fingers before giving a cutesy sniff."
+    show AE happy
+    AE "See, you smell just fine!"
+    MC "O-Oh yeah?"
+    MCT "... Wait, was that the part of my hair that I-"
+    show AE aroused
+    AE "But um... aha... maybe come to my room after, okay?"
+    "Wanting to save off that realization as quick as possible, I hopped at Shiori's offer."
+    MC "Sure! I mean, yeah, sounds... good."
+    "I smiled and walked by her side as we went to class. I was glad to spend every second I could with her, and was happy she was taking her growth in stride, yet I still couldn't shake the feeling like I was making some sort of mistake; like there was something wrong."
+    jump daymenu
+
+label AE071:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -16384,13 +16568,13 @@ label AE007b_c1_1:
     MC "Not really, to be honest."
     AE "Oh?"
     MC "I mean, why can't I cruise by with 'good enough'? Things seem to be going well enough in the world around me, yeah?"
-    show AE annoyed
+    show AE neutral-annoyed
     AE "Tch."
     show AE angry
     $setAffection("AE", -3)
     AE "If you believe that, then you need to cut your bangs; you really are blind."
     MC "Hey, c'mon, don't be saying things like that."
-    show AE annoyed
+    show AE neutral-annoyed
     AE "..."
     show AE sad
     AE "You're right, my apologies, I was... impertinent."
