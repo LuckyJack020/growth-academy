@@ -11331,7 +11331,8 @@ label AE050_after3:
         AE "M-Mhm."
         MC "Alright, how's about you get on your knees, yeah?"
         AE "Y-Yeah."
-    "We positioned ourselves on the bed. She kneeled down as I fully took my pants off; leaving the both of us now totally naked. I got a good look at her fat cheeks stuck in the air and put my hand on one, stroking my cock with my other hand."
+    show cg AE050_behind1
+    "We positioned ourselves on the bed. I got a good look at her fat cheeks stuck in the air and put my hand on one, stroking my cock with my other hand."
     MC "Such a beautiful ass. Mmn~"
     "As each pale cheek eclipsed my view of the rest of her, I lowered myself before feeling the soft, yielding flesh part for me. I began to run my tongue along her eager slit while feeling her legs quake around my head."
     MC "Mmph~"
@@ -11346,21 +11347,25 @@ label AE050_after3:
     AE "Mhm..."
     "I felt myself press against the outer slopes of her gargantuan ass and nearly came right then from the sensation of being enveloped in such a warm embrace."
     "Taking an extra moment to steel my nerves, Shiori-chan clearly felt the hesitation in my progress and decided to push back into my waist, burying myself even deeper within her."
+    show cg AE050_behind2
     "Caught off-guard by her sudden forwardness, I pushed against her and felt my rigid cock press against her hole. Then, all at once, it entered."
     AE "Hooo-OOOOOOH!!!"
     "She began cumming as soon as I'd stuck my dick in, her tongue lolling out as a rich red took up most of her cheeks. Both the ones on her face, and the gigantic ones on her backside."
     AE "OOOOOOOHHHH~!"
+    show cg AE050_behind3
     "Her hands scratched at the sheets to try and keep herself upright, but soon the strength in her arms gave way as well."
     "She was left face-down, her butt wobbling all over like a broken bowl of pudding as I pounded into her, my entire body tensed up with strength I never knew I had."
     MC "Pah-Ngh!"
     AE "HAAAH, HAAH, AAAAGN!!!"
     "Settling into a slow rhythm of bouncing away and into her fleshy cushioning I could feel her tempo begin to increase as her body began to shudder from both the motion and her own skyrocketing arousal."
     "It was like she was caught in an endless orgasm, each thrust forcing her to an even greater state of climax."
+    show cg AE050_behind4
     "I started moving on instinct, stretching my arms around both cheeks as my tempo increased. The bed began to creak with every thrust as the movements of her massive body rocked the entire bed."
     "Her body went slack as she continued to feel the barrage from my throbbing manhood thrust into her meaty backside over and over again."
     MC "Haah! Ngh! S-Shiori-chan... I'm gonna c-c... Ah!"
     "I wasn't even sure she could hear or understand what I was saying, as she only responded with a few garbled moans. One last smack to her ass, and finally..."
     MC "Ha-Ha-Haah!"
+    show cg AE050_behind5
     "The dam broke. I grabbed her arms and pulled her back, pushing my cock as deep as I could into her ass as I thrusted my hips a few more times."
     "My chest against her back, our hearts beating like mad together, I began to hyperventilate as I grabbed her waist with one hand, the other grabbing her chest and pulling her in as I bounced our bodies up and down together."
     MC "Hahn-{i}gch{/i}-ahn!"
@@ -11371,9 +11376,8 @@ label AE050_after3:
     "My energy completely spent, I slumped forward, grabbing her tight as I pulled her down with me."
     "I fell over to the side as my exhausted body went limp. I could feel her panting as I pulled my member from her cheeks. She did her best to maneuver herself over her own ass to look me in the eyes."
     AE "Ahhn... Aaaahn~"
+    show cg AE050_behind6
     AE "K-Keisuke-kun..."
-    show AE happy
-    hide cg with dissolve
     AE "I'm so happy... you were my first..."
     "I smiled and gently caressed her face with my hand, wiping away her tear."
     "The last thing I saw as I slowly drifted off to sleep was Shiori-chan's smiling face; an image that burned into my mind, and would stay there forever. The last words echoing through my mind, but never escaping my lips:"

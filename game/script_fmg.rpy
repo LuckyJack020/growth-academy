@@ -1654,7 +1654,7 @@ label FMG016:
     MC "If you don't mind me asking why you are here, I said I'd meet you at the field."
     FMG "I figured you'd oversleep, so I came to get you."
     FMG "When we hung out these past few days you looked exhausted."
-    MC "Yeahhhhh, sorry about that. I've been so busy with homework that I passed out on my desk."
+    MC "Yeahhhhh, sorry about that. I've been so busy with homework, that I passed out at my desk."
     show FMG flex
     FMG "No sweat dude. I'll race ya to the field?"
     MC "I don't know about you but I could really go for a nice slow walk."
@@ -1666,7 +1666,7 @@ label FMG016:
     scene Field with fade #day
     "We set our bags down and began stretching when someone caught Akira's eye."
     show FMG neutral with dissolve
-    FMG "Hm, I don't recognize that girl."
+    FMG "Huh, I don't recognize that girl."
     "As the girl ran closer towards us shock overtook Akira's face."
     show FMG surprised
     FMG "Holy crap! She's huge!"
@@ -1674,7 +1674,7 @@ label FMG016:
     "As we watched in awe, the student slowed her pace and began walking over to us."
     show FMG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     show Natsuko annoyed at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    Natsuko "I'm sorry is there a problem? You two kept staring at me the whole time I was jogging."
+    UNKNOWN "I'm sorry is there a problem? You two kept staring at me the whole time I was jogging."
     show FMG neutral
     FMG "Sorry if we made you uncomfortable but we haven't seen you around campus before."
     FMG "Are you new here?"
@@ -1682,9 +1682,10 @@ label FMG016:
     Natsuko "Hmph. If you really must know, I transferred here the other day. I came from a school in Fukuoka. The name's Natsuko Okamoto."
     MC "Nice to meet you Okamoto-san, I'm Keisuke Hotsure."
     "She shook my hand with a grip so tight I thought she might break it."
+    show Natsuko happy
     Natsuko "Nice to meet you Hotsure-san."
     Natsuko "Hm, has anyone told you how cute you look with that hairstyle?"
-    MC "Ummmm, this would be a first."
+    MC "Ummmm, this would be the first."
     MCT "Something tells me that this isn't gonna end well."
     show FMG happy
     FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani."
@@ -1693,7 +1694,7 @@ label FMG016:
     Natsuko "Sorry but I don't do fist bumps, especially not with the likes of you Akira-chan."
     MCT "Welp...."
     show FMG angry
-    FMG "What do you mean the likes of me?"
+    FMG "Whoa, whoa... What do you mean the likes of me?"
     show Natsuko neutral
     Natsuko "If you really must know, it's well...how do I put this nicely without sounding rude."
     Natsuko "Pretty much everything. So unladylike."
@@ -1725,7 +1726,7 @@ label FMG016:
     MC "1."
     MC "GO!"
     "They both bolted past me throwing my hair back and pushing a huge amount of dust in my face."
-    MC "*cough* I'm getting real sick of this*cough*."
+    MC "*cough* I'm getting real sick of this *cough*."
     MC "Well I'll be damned...Akira is losing."
     MC "Hold up, Akira is losing!"
     "With every passing second, Natsuko's lead grew."
@@ -3353,7 +3354,7 @@ label FMG025:
     "For tonight, I went with a white button-down and a pair of black dress pants. Nothing over the top. I'm curious as to what Akira could be wearing; I never saw her as one to dress up. I'd be lying if I said I wasn't excited to see."
     MC "Hey Akira, I'm outside when you're all set!"
     FMG "Just need a minute, sorry for the wait!"
-    MCT "What was supposed to be a minute turned into forty-five minutes."
+    "What was supposed to be a minute turned into forty-five minutes."
     FMG "Alright, I'm ready!"
 
     if getSize() <= 2:
@@ -3378,7 +3379,7 @@ label FMG025:
         MC "The only thing that should be on your mind is how my dance moves are going to dazzle the crowd."
         show FMG flex
         $setAffection("FMG", 1)
-        FMG "Ohhhhhhh so now it's a competition dude? You're gonna regret challenging me to a dance off."
+        FMG "Ohhhhhhh so now it's a competition dude? You're gonna regret challenging me to a dance-off."
         MCT "Great, got her mind off of that. Now to make sure she enjoys the night."
     show FMG neutral
     FMG "I forgot to ask you at the field, but how do you feel about dancing anyway?"
@@ -3435,11 +3436,11 @@ label FMG025:
         FMG "This place is freaking cool, we have to come back."
         MC "Agreed, this is my first time coming to a place like this, I wish you would've asked me sooner."
     else:
-        MC "Alright Disco Queen, let's have our dance off then."
+        MC "Alright Disco Queen, let's have our dance-off then."
         show FMG flex
         FMG "You don't stand a chance, Kei."
         MC "Let me go request a song first. I need my jam if I want to be victorious."
-        MC "Excuse me DJ, I'm having a dance off with my date and I was hoping you can play this."
+        MC "Excuse me DJ, I'm having a dance-off with my date and I was hoping you can play this."
         DJ "You got it, brother. Kill it out there."
         "I shot him a thumbs up and walked back over to Akira who had taken a seat at a nearby table."
         MC "I see you're already sitting down cause you can't stand losing!"
@@ -3452,14 +3453,14 @@ label FMG025:
         FMG "So if I win, how about you carry me back. My feet are killing me."
         MC "I'll have to give that some thought, I can get back to you after I win."
         FMG "Mhmm, we'll see."
-        DJ "Everyone please clear the floor! We have a dance off tonight."
+        DJ "Everyone please clear the floor! We have a dance-off tonight."
         DJ "I'm gonna need everyone's help to determine the winner."
         "Everyone in the club started shouting and hyping it up."
         MC "Man, the enthusiasm from the crowd is nuts."
         show FMG happy
         FMG "Don't chicken out on me now Kei-kun, their energy is getting me pumped!"
         MC "Wasn't expecting to have all eyes on us, too late to back out now."
-        MCT "And with that I slid onto the dance floor and without hesitation bounced to my feet."
+        MCT "And with that, I slid onto the dance floor and without hesitation bounced to my feet."
         MCT "I have no clue what came over me, maybe it was having everyone watch or possibly the joy of seeing Akira happy...potentially both.  Every move I did felt so fluid, so natural."
         MCT "With every step I took, with every arm I raised, the crowd cheered louder giving me even more encouragement to keep going."
         DJ "There it is, everyone! He killed it out there! Another round of applause for him!"
@@ -3467,11 +3468,11 @@ label FMG025:
         show FMG aroused
         FMG "Wow, that was something else Kei, those were some moves you had."
         FMG "That is gonna be hard to top."
-        DJ "After that performance I don't know what could possibly steal the spotlight from that young man."
+        DJ "After that performance, I don't know what could possibly steal the spotlight from that young man."
         show FMG neutral
         FMG "Welp, wish me luck."
         "She finished that sentence with a wink and a fire in her eyes not looking to be extinguished and took off towards the dance floor."
-        MCT "When she started dancing I was immediately fixated on her. Just like before she was a total different woman. She had such passion in the way she moved, with every action she released such energy, such power and the crowd was eating it up."
+        MCT "When she started dancing I was immediately fixated on her. Just like before she was a totally different woman. She had such passion in the way she moved, with every action she released such energy, such power, and the crowd was eating it up."
         DJ "Well I'll be damned! The young lady put on quite a show! I think I speak for everyone here that she blew us away!"
         show FMG flex
         FMG "So what did ya think Kei-kun?"
@@ -3519,11 +3520,11 @@ label FMG026:
             jump FMG026_c1_2
 
 label FMG026_c1_1:
-    MC "What's up? you seem off today."
+    MC "What's up? You seem off today."
     show FMG sad
     FMG "It's nothing man. Let's just keep going and enjoy the view."
     MC "C'mon, you don't gotta lie to me like that..."
-    "She was taken aback by my tone, stopping dead in her tracks. ."
+    "She was taken back by my tone, stopping dead in her tracks."
     MC "I'm not going anywhere until you tell me what's bothering you."
     show FMG angry
     FMG "Drop it."
@@ -3615,7 +3616,7 @@ label FMG026_c1_after:
     MC "You haven't seen me play air hockey."
     show FMG happy
     FMG "If it's anything like StarDestroyer, I have nothing to be worried about."
-    MC "I'll wipe off that smirk quicker then you can lift a dumbbell."
+    MC "I'll wipe off that smirk quicker than you can lift a dumbbell."
     show FMG flex
     FMG "Let's see what you got, wise guy."
     MCT "We went back and forth for sometime before Akira got the final point in right as the buzzer rang."
@@ -3631,16 +3632,16 @@ label FMG026_c1_after:
     show Natsuko happy
     Natsuko "I didn't know you played video games Keisuke-san, maybe we can come here together sometime."
     MC "Yeahhh, that's going to be a hard no from me."
-    MC "But thanks for the offer...I think."
+    MC "But thanks for the offer... I guess."
     show Natsuko happy
     Natsuko "Maybe, you'd like to do something else then Keisuke-san?"
-    MC "Um, yeah, I'd like to hang out with you know...Akira."
+    MC "Um, yeah, I'd like to hang out with you know... Akira."
     show Natsuko disappointed
     Natsuko "Unfortunate, wasting your time with the likes of her. I would've hoped you had realized your mistake by now."
     show Natsuko flex
     Natsuko "Wouldn't you prefer someone more mature? Someone stronger?"
     show FMG angry-2
-    FMG "Don't you have anything better to do then ruin our date?"
+    FMG "Don't you have anything better to do than ruin our date?"
     show Natsuko neutral
     Natsuko "Hmph, well it is time for my golfing lessons so I should be going."
     show Natsuko happy
