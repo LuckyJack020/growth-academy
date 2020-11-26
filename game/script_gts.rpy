@@ -4479,8 +4479,9 @@ label GTS032_after:
     jump daymenu
 
 label GTS034:
+    $setTime(TimeEnum.EVE)
     $setProgress("GTS", "GTS035")
-    scene Campus Center with fade #evening
+    scene Campus Center with fade
     play music GTS
     "I checked my phone once more to make sure I was headed to the right place."
     MCT "The campus plaza, yeah that's where she wants me to go. Not sure why she couldn't tell me why she needed me to come."
@@ -5379,7 +5380,7 @@ label GTS038:
 
 label GTS039:
     $setProgress("GTS", "GTS040")
-    scene Campus Center with fade #day
+    scene Campus Center with fade
     play music Schoolday
     "I walked through the central courtyard as the sun had just reached its highest point in the afternoon. It was the weekend, so I had plenty of time to myself."
     "I decided to have a seat upon one of the benches surrounding the big cherry tree in the center of campus. I passed by it almost every single day, and even used it as a study spot on several occasions."
@@ -5459,7 +5460,7 @@ label GTS039:
     show GTS_S unique-2
     GTS_S "Very true. Let's go."
 
-    scene School Exterior with fade #day
+    scene School Exterior with fade
     "Naomi guided me to the recreation area behind the school. She intentionally shortened her strides so that we could walk alongside each other. The afternoon sun was almost perfectly above us, so Naomi's shadow was as short as possible."
     "It was funny, seeing the shadow of such a tall person only as big as me. Naomi's pace allowed her to control the force of her limbs, softening the miniature earthquakes I had heard before. Once she stopped at the bulletin board posted along the side of the school, she stood still with both of her feet shoulder-with apart."
     "We could see various other clubs being held in the recreation area as well. Students of all shapes and sizes were out playing soccer, lacrosse, tennis, and basketball. It was surreal seeing just how accommodating they were for students of such varied sizes!"

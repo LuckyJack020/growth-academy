@@ -7173,11 +7173,9 @@ label BE039:
     jump daymenu_noadvance
 
 label BEGTS001:
-    #optional
-    #1) Honoka has more Feminine points than Tomboy points.
-    #2) Kei has seen Honoka's dress sprite at least once. (BE20 has been cleared)
-    scene Dorm Exterior with fade #evening
-    #need bgm
+    $setTime(TimeEnum.EVE)
+    scene Dorm Exterior with fade
+    play music Sunset
     #Forces Feminine costume
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
@@ -7195,7 +7193,7 @@ label BEGTS001:
     "I thought it over for a few seconds before responding. Something seemed different about Honoka's texts, but I couldn't quite pin down what it was."
     MCCell "<Sure thing. I'll see you in a bit.>"
 
-    scene Roof with fade #evening
+    scene Roof with fade
     "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
     "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
     show BE happy with dissolve
@@ -7317,7 +7315,7 @@ label BEGTS001:
     show BE happy
     BE "I'd like that very much!"
 
-    scene Campus Center with fade #eve
+    scene Campus Center with fade
     show BE neutral with dissolve
     "Honoka and I walked down the stairwell and exited the school building. The sun was still hanging just above the treeline, so we had a few hours left in the day."
     BE "I'm glad that Naomi-chan is in such a good mood. We really hit it off today, huh?"
@@ -7347,12 +7345,13 @@ label BEGTS001:
     jump daymenu
 
 label BEGTS002:
-    scene Dorm Exterior with fade #night
+    $setTime(TimeEnum.EVE) #night?
+    scene Dorm Exterior with fade
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
         $setFlag("BEGTS002_TomFix")
-    #BGM: To be Decided
-    "The weekend had arrived, and I found myself sitting outside my dorm room just as the Sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
+    play music Peaceful
+    "The weekend had arrived, and I found myself sitting outside my dorm room just as the sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
     "Unless I actively make plans with someone else, I'll usually just browse the internet, watch videos, or play games. Daichi usually has something to stream, so I'll occasionally peek in and watch what he's watching."
     "That is, when Daichi lets me see his computer. He's often documenting his findings or browsing conspiracy websites, so he'll never share his screen unless he's watching anime."
     "I was just about to head back inside when I saw a distinctively tall figure. She was even taller than the light poles, which made her stand out even more in their brightness."
@@ -7543,7 +7542,8 @@ label BEGTS002:
     show GTS neutral-2
     GTS "Sounds good to me. Are you ready to go, Hotsure-san?"
     MC "Right behind you."
-    scene Dorm Exterior with fade #night
+
+    scene Dorm Exterior with fade
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
     show GTS neutral-2 at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve

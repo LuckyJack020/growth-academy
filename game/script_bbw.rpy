@@ -3755,7 +3755,7 @@ label BBW022:
             "I wrote back saying I still had homework and studying to take care of, but I could swing by and lend a hand."
         "Ehhhh, I don't want to deal with Alice right now.":
             jump BBW022_c1_3
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "Aida answered the door."
     show PRG neutral at center with dissolve
     PRG "H-Hello... Thank you for coming. Nikumaru-san needs help-"
@@ -5039,7 +5039,6 @@ label BBW029C:
 label BBW030:
     $setProgress("BBW", "BBW031")
     scene Dorm Interior with fade
-    #day
     "The time had come for my first date with Alice."
     "I had to admit, I had prepared for more than a few obstacles."
     "The entire day had been planned out with several different potential routes."

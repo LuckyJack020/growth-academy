@@ -681,7 +681,7 @@ label FMG009:
     show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     show Chibuki neutral at Position(xpos=0.75) with dissolve
     "Just like she said, there really was someone walking towards us."
-    "A girl with dark red hair, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
+    "A girl with violet hair and white highlights, a small scar on her right eyebrow, wearing what I could describe as an punkish version of the school uniform, which gave her this aura of disobedience and defiance."
     "There were two big things that immediately made her stand out. One, her eyes were as blue if not bluer than Alice's, which would mean she was a foreign student. And two..."
     "...Her nipples were easily seen bulging out of the fabric of her shirt."
     UNKNOWN "Yo Akira, I'm here, so what did you... wait, are you trying to hook me up with this guy?!"
@@ -1663,7 +1663,7 @@ label FMG016:
     show FMG happy
     FMG "But I guess I can make an exception for you."
 
-    scene Field with fade #day
+    scene Field with fade
     "We set our bags down and began stretching when someone caught Akira's eye."
     show FMG neutral with dissolve
     FMG "Huh, I don't recognize that girl."
@@ -2201,6 +2201,7 @@ label FMG019:
     jump daymenu
 
 label FMG020:
+    $setTime(TimeEnum.EVE)
     $setProgress("FMG", "FMG021")
     scene Campus Center with fade #night
     "Evening came, and the stars appeared through as the day ended. Street lights began to illuminate the street."
@@ -3315,10 +3316,8 @@ label FMG023_c2_after:
     jump daymenu
 
 label FMG025:
-    #Disco Queen
-    #optional
     play music Schoolday
-    scene Track with fade #day
+    scene Track with fade
     MCT "The air was crisp and refreshing as it hit my sweaty forehead, slowly cooling me down."
     MCT "I laid down and closed my eyes, relaxing for as long as possible before I had to return to the track."
     MCT "When I began slowly opening my eyes, I was met by Akira staring down at me."
@@ -3499,10 +3498,9 @@ label FMG024:
     jump FMG026
 
 label FMG026:
-    #Arcade Run-in
     $setProgress("FMG", "FMG027")
     play music Rain
-    scene Mountains with fade #day
+    scene Mountains with fade
     MCT "It was a mistake agreeing to go on a hike with Akira. My legs felt like falling off."
     MCT "While I'm all for staying active and keeping in shape, everyone has their limits and I was reaching mine."
     "The trail was way longer than I had originally thought. While the view was nice it, unfortunately, wasn't enough to take my mind off the pain I was enduring."
@@ -3661,7 +3659,7 @@ label FMG026_c1_after:
 
 label FMG027:
     $setProgress("FMG", "FMG028")
-    scene Classroom with fade #day
+    scene Classroom with fade
     play music Schoolday
     MCT "Man history's dragging along today."
     MCT "Getting no sleep doesn't help either, struggles of late night studying I guess."
@@ -3676,11 +3674,13 @@ label FMG027:
     MC "*yawn* I don't think I can even make it back to my dorm...my eyelids are so heavy."
     MC "The floor is looking mighty comfy right now, I'm sure the janitor won't mind me sleeping here for a couple of minutes."
     "I slid down the row of lockers and threw my backpack on the floor and fell asleep instantly."
+
     scene black with fade
     "..."
     "..."
     "..."
-    scene Dorm FMG with fade #day
+
+    scene Dorm FMG with fade
     MC "*yawn* Man that was a good nap...wait a hot second...this isn't the hallway. "
     MC "Damn...why does my head hurt?"
     MCT "I did a quick scan of the room and quickly realized where I actually was."
@@ -3771,10 +3771,14 @@ label FMG027:
     FMG "Ya know Kei, I'd recommend drawing less dicks. What is it with guys and drawing dicks in books?"
     MC "I-I can't really say…"
     MC "Let's just pretend you didn't see this."
+
+    scene black with fade
+    $setTime(TimeEnum.EVE)
     "She rolled her eyes and laughed loudly."
     "She glanced at the clock and gasped."
-    #scene Dorm FMG with fade #eve
-    show FMG sad
+
+    scene Dorm FMG with fade
+    show FMG sad with dissolve
     FMG "Damn, time really does fly when you're having fun."
     show FMG happy
     FMG "If you want you can stay the night."
@@ -3794,9 +3798,8 @@ label FMG027:
     jump daymenu
 
 label FMG028:
-    #Anything but golf
     $setProgress("FMG", "FMG029")
-    scene Hallway with fade #day
+    scene Hallway with fade
     play music Busy
     MCT "Honestly, if I didn't study with Akira this week I would've failed."
     MCT "Color me surprised that Akira is THAT good at history when she pays attention."
@@ -3871,7 +3874,7 @@ label FMG028:
     FMG "Come on Kei, you can watch a pro at work."
     MCT "I was worried about the outcome of this. Really worried."
 
-    scene Field with fade #day
+    scene Field with fade
     show Natsuko smug at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "We'll play four holes, it won't be considered a real game but I don't think you'll be capable of giving me a real game anyway."
     show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve

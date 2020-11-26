@@ -104,6 +104,11 @@ init python:
     Shake = renpy.curry(_Shake)
 
     #Condition enums/stuff
+    class TimeEnum:
+        DAY = "day"
+        NIGHT = "night"
+        EVE = "eve"
+
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
 
@@ -543,6 +548,7 @@ init python:
     def getSize():
         global globalsize
         return globalsize
+
     def setSize(size):
         global globalsize, prgsize, minorsize
         if size > globalsize:
@@ -552,6 +558,15 @@ init python:
             minorsize = int(math.floor(globalsize/2)) + 1
             if minorsize > 3:
                 minorsize = 3
+
+    def getTime():
+        global gametime
+        return gametime
+
+    def setTime(t):
+        global gametime
+        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT:
+            gametime = t
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -621,6 +636,7 @@ label start:
         globalsize = 1
         prgsize = 1
         minorsize = 1
+        gametime = TimeEnum.DAY
         flags = []
         vars = {}
         eventchoices = []
@@ -962,6 +978,7 @@ label startevent:
     pause .5
     python:
         highlitevent = ""
+        gametime = TimeEnum.DAY
         minorsize = int(math.floor(globalsize/2)) + 1 #backwards compatibility
         if minorsize > 3:
             minorsize = 3

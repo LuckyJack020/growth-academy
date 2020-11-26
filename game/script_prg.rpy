@@ -1671,16 +1671,18 @@ label PRG015:
     "I looked over behind her, the orange sky was slowly transitioning into a dark night. Truthfully I had hoped to spend my evening differently, the day ended up pretty tiring. But when Aida asked me for her help, with those eyes... My heart faltered."
     "Nevertheless, it was intriguing to see how Alice and Aida arranged their dorm room. The divide was eerily similar to mine and Daichi's."
     "Rather than Daichi's cluttered half, Alice's looked more like a fancy five-star hotel. The bed, chairs, table, just about everything appeared incredibly luxury. How much did she bring from her home..."
-    scene Dorm PRG Day with dissolve
+    scene Dorm PRG with dissolve
     show PRG neutral
     "And Aida's side was quite simple, but looked cleaner than any of ours did. Like it was straight out of a magazine cover."
     PRG "S-so... Where did you want to begin?"
     MC "Hrm... let's do a quick refresher of what you already know."
+
     scene black with fade
+    $setTime(TimeEnum.EVE)
     "We spent the next half hour making sure she was caught up, as most of the theory that she has problems with will presumably be in the test tomorrow."
     "After that we took a quick break, where Aida seemingly went all out on studying snacks. I pointed it out, but as expected, she said it wasn't any trouble at all. We continued on studying and snacking away."
     "As I continued... I started to notice Aida's gaze being on me, rather than the book in front of her. I tried to not let it hinder me, but time only made her staring stand out more."
-    scene Dorm PRG Eve with fade
+    scene Dorm PRG with fade
     MC "What's wrong? You having trouble focusing?"
     if getAffection("PRG") <= 2:
         show PRG sad
@@ -4129,7 +4131,7 @@ label PRG026_father:
     PRG "..."
     PRG "...Y-You can open your eyes now."
 
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "I opened my eyes slowly and lifted my head."
     show PRG unique with dissolve
     play music PRGDramatic
@@ -4426,7 +4428,7 @@ label PRG026_nofather:
     PRG "H-H-Hotsure-san, I'm... I-I..."
     PRG "I'm pregnant!"
 
-    scene Dorm PRG Day
+    scene Dorm PRG
     show PRG sad with vpunch
     play music PRGDramatic
     "My eyes opened in a flash and my head shot up. There stood Aida no more than four feet in front of me. Immediately, my eyes shot to her stomach, which in only two days, had already swollen a considerable amount."
@@ -4693,7 +4695,7 @@ label PRG027_c1_after:
     MC "Yeah, Kodama-san. It's me."
     PRG "C-Come in!"
 
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "I opened the door with a creak and was surprised by the lack of Aida in the room."
     MC "Kodama-san? Where are you?"
     PRG "I-I'm in the bathroom, but don't come in!"
@@ -5190,7 +5192,7 @@ label PRG029:
 
 label PRG030:
     $setProgress("PRG", "PRG031")
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     show PRG neutral with dissolve
     play music Rain
     MC "Now, I know the Dragons became an official team in 1946, but the city they originally started in was Himeji, right?"
@@ -5770,7 +5772,7 @@ label PRG033:
     MC "Let me explain!"
     PRG "I-I'm teasing. Ready to get started?"
     MC "Sure! I think I've got everything we need here, and from the looks of it, we don't have too much to do."
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "I waddled into Aida's room and set my bag on the floor, trying not to slam it down, lest I give Aida a new hole in her floorboards."
     "As I unzipped my bag and began organizing my supplies on the floor, a light, slightly onion based scent floated through the air, and Aida sat down on the floor next to my bag, holding a bag of sour cream and onion potato chips."
     show PRG neutral with dissolve
@@ -5929,8 +5931,9 @@ label PRG033:
     MC "Oi! I'll even do you one better and help you put it all away!"
     PRG "I-I can do that. I like my kitchen set up a certain way."
     MC "Well, let's get these bags to your dorm first. We can worry about organization later."
+    $setTime(TimeEnum.EVE)
 
-    scene Dorm PRG Eve with fade
+    scene Dorm PRG with fade
     "We managed to haul both bags into Aida's dorm, without too much trouble, and we got them unloaded fairly quickly."
     show PRG neutral with dissolve
     PRG "Thank you for all of the help, Keisuke. And for the groceries. Would... would you like to come over for dinner some time? I-I'll make you something special out of everything you got me today!"
@@ -5947,7 +5950,6 @@ label PRG033:
     jump daymenu
 
 label PRG034:
-    #PRG034: Back in the Saddle
     $setProgress("PRG", "PRG035")
     scene Hallway with fade
     UNKNOWN "OH MY GOD! YOU LOOK SO CUTE!"
@@ -6029,7 +6031,7 @@ label PRG034:
     "My search came to a halt abruptly when I stopped in front of the choir room."
     MCT "Was that... crying?"
 
-    scene Music Classroom with fade #day
+    scene Music Classroom with fade
     "I quietly pushed the door open, and leaned in. The room was silent and completely barren, the chairs set up for the next choir practice. I was about to cut my losses and go back to the kitchen, when I heard a tiny metal scraping sound."
     "I scanned the room carefully. None of the chairs had moved, and the piano still sat as it had, but I wasn't stupid. I knew I had heard something. My eyes finally fell on the far wall, where multiple racks of music stands were all lined up."
     "I crossed the room and slid a few racks out of the way."
@@ -6516,7 +6518,7 @@ label PRG036:
     scene Dorm BBW with fade
     "As per the usual, Alice's side of the room was perfectly neat and tidy, looking more princess like than ever. Crossing over to Aida's side, however..."
 
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     MC "What the...?"
     "Aida's side looked as though a bomb had gone off. Clothes were strewn everywhere, her desk was covered in random pencils and torn sheets of paper. Even Aida's prized recipe book laid in the middle of the floor, torn clean in half."
     MCT "What the hell? What happened here?"
@@ -7079,8 +7081,7 @@ label PRG038:
     PRG "Good Morning, Keisuke!"
     MC "Morning!"
 
-    scene Dorm PRG Day with fade
-    #day
+    scene Dorm PRG with fade
     "Aida stepped aside to allow me to enter. I slid the overweight bag from my shoulders and set it gingerly on the carpet."
     show PRG neutral with dissolve
     if getFlag("PRG037_pass"):
@@ -7160,10 +7161,11 @@ label PRG038:
     show PRG neutral
     PRG "O-Okay!"
 
-    scene Dorm PRG Eve with fade
-    #evening
+    scene black with fade
+    $setTime(TimeEnum.EVE)
     "For the rest of the day, Aida and I worked our way through my entire pile of games."
     "Every so often, I'd take over to get her past a particularly difficult section, but for the most part, she was able to handle herself. By the time we finished the last game, the sun was beginning to set."
+    scene Dorm PRG with fade
     show PRG happy with dissolve
     PRG "That was so much fun!"
     MC "It was! You did incredible for your first time!"
@@ -7282,8 +7284,7 @@ label PRG038_testpass:
     "We stayed like that for what seemed like only a handful of minutes, but soon we heard the music of the end credits, and I slowly turned onto my side, letting Aida rest next to me."
     "Eventually, I soon heard her breathing slow as she drifted off to sleep. Still with my arms around her, I let myself drift off as well."
 
-    scene Dorm PRG Day with fade
-    #day
+    scene Dorm PRG with fade
     "I awoke the next morning still in a sleepy haze. I quickly realized that things were not as they were when I fell asleep. Aida was turned away from me, the two of us in the spooning position."
     "Rather than wake her, I chose to lay next to her and just enjoy the moment. After nearly 30 minutes had passed, she shifted under my arm and turned towards me, slowly opening her eyes."
     show PRG pj-neutral with dissolve
@@ -7346,7 +7347,6 @@ label PRG038_testfail:
 label PRG039:
     $setProgress("PRG", "PRG040")
     scene Classroom with fade
-    #day
     play music Peaceful
     show HR neutral with dissolve
     HR "Now, the important thing to remember is that gagaku dates back to the imperial courts of the Heian period. Make a note of that."
@@ -7691,7 +7691,7 @@ label PRG040:
     MC "Aida? You around?"
     "A slight shuffling came from behind the door, followed by what sounded like something slamming. The door finally opened slowly. Aida was wrapped up in the blankets from her bed, covering her like a sort of make-shift robe."
 
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     show PRG neutral with dissolve
     PRG "Hi, Keisuke. Did... um, did you need something?"
     MC "Hey. I stopped by the cooking classroom to surprise you, but Sakura-san said you weren't feeling well. So, I just wanted to come and make sure you were all good."
@@ -8331,7 +8331,7 @@ label PRG043:
     hide PRG with dissolve
     "Aida opened her door and held it for me."
 
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "I took my backpack off and swung it onto the floor next to Aida's bed. As my bag made contact with Aida's bed frame, something clattered down behind the bed. Something fairly solid sounding."
     "I crouched so I could reach under the bed to fish out whatever had fallen, when Aida grabbed my arm."
     show PRG unique
@@ -8713,11 +8713,11 @@ label PRG044_c1_2:
     PRG "Can... can we talk about this once we get back to the dorms? We can go to my dorm and talk..."
     MC "All right. If it makes you feel better."
 
-    scene Dorm Exterior with fade
-    #eve
+    scene black with fade
+    $setTime(TimeEnum.EVE)
     "One smelly bus ride and a short walk later, and we were walking towards the dorms. Aida hadn't spoken since we had gotten on the bus, and the silence was incredibly palpable."
 
-    scene Dorm PRG Eve with fade
+    scene Dorm PRG with fade
     "Aida and I walked silently into her dorm. Alice was gone, as usual, leaving us alone."
     show PRG unique with dissolve
     PRG "Okay."
@@ -8900,7 +8900,7 @@ label PRG045:
     show BBW neutral with dissolve
     BBW "Good, you are here."
 
-    scene Dorm PRG Day with fade #day
+    scene Dorm PRG with fade
     show BBW neutral with dissolve
     "Alice hurried me through the door. Across the room, the bathroom door was slightly ajar, and the sounds of sobbing echoed into the room."
     BBW "Kodama-san? Hotsure-san is here. I will be back with you in a moment."
@@ -9653,7 +9653,6 @@ label PRG047:
     MC "Douche."
 
     scene Campus Center with fade
-    #day
     "I trudged to class in an angry haze, stopping to kick a stone, sending it careening into a tree."
     MC "The nerve of that guy."
 
@@ -9812,7 +9811,7 @@ label PRG048:
     "I slowed to a light jog when I reached the hallways. I smoothed my hair down with my palm as I moved. I'd ran a brush through it, but since I hadn't washed it, all it did was make me look like a walking mushroom."
     "I'd also just grabbed a uniform from my dirty laundry bin, instead of taking a fresh one. Hopefully, no one would be able to tell that I'd doubled down on a uniform."
 
-    scene Classroom with fade #day
+    scene Classroom with fade
     "I walked into class and took my seat just as the bell rang. Tashi-sensei promptly strutted in and began his final review for the exam."
 
     scene black with fade
@@ -10954,6 +10953,7 @@ label PRG051_c1_after:
     jump daymenu
 
 label PRG052:
+    $setTime(TimeEnum.EVE)
     scene Dorm Interior with fade
     $setProgress("PRG", "PRG053")
     "I burst into my room, immediately grabbing a bag out my closet. I threw a few movies into it and grabbed a pair of sweatpants and a t-shirt out of my drawers. Plus socks, boxers, all that."
@@ -10984,7 +10984,7 @@ label PRG052:
     PRG "H-Hey, Keisuke!"
     MC "Hey!"
 
-    scene Dorm PRG Eve with fade
+    scene Dorm PRG with fade
     show PRG dress-neutral with dissolve
     "Aida held the door for me as I entered, laying my bag on the floor by the door, and kicking my shoes off."
     MC "Eh? Weren't you planning on changing? Not that I don't like the clothes you have on, mind you!"
@@ -11321,7 +11321,7 @@ label PRG052_c1_2:
 
 label PRG053:
     $setProgress("PRG", "PRG054")
-    scene Dorm PRG Day with dissolve
+    scene Dorm PRG with dissolve
     play music Peaceful
     "Light streamed through Aida's window as I blinked groggily. The DVD menu music of 'The Sparkling' was playing on repeat on the TV. We must've passed out before the movie had finished."
     "Aida had fallen asleep right beside me, and I was turned inward, spooning her. My dick, while flaccid, was nestled comfortably between her two, billowy ass cheeks."
@@ -12578,7 +12578,7 @@ label PRG056A:
     Sakura "It's all right, Kodama-san. There's always tomorrow!"
     show PRG neutral
     PRG "Wait, I have an idea!"
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "Aida waved us into her dorm and shut the door."
     show Sakura neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
@@ -12777,7 +12777,7 @@ label PRG056B:
     MC "I... wiped out on the concrete."
     PRG "W-Well don't just stand out there! C-Come in!"
 
-    scene Dorm PRG Day with fade
+    scene Dorm PRG with fade
     "Aida took my left arm and guided me into her room. I couldn't help but feel like crap as all the water on my clothes started dripping onto the carpet."
     show PRG worried at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     "Aida hurried into her kitchen and dove into the cupboard under the sink, retrieving a large, red box. Next, she ran into her bathroom, coming back with some washcloths and an extra towel."
@@ -13537,7 +13537,7 @@ label PRG057A:
     PRG "Is... that a real word?"
     MC "Probably."
 
-    scene Dorm PRG Day with fade #day
+    scene Dorm PRG with fade
     show PRG neutral with dissolve
     "I shimmied past Aida and set my bag on the counter."
     MC "Sakura's not here yet?"
@@ -13823,7 +13823,7 @@ label PRG057B:
     "Venturing back outside, I noticed a few people had the same idea as me. Hoodies and warmer clothes seemed to be on each student. Seemed that fall had finally set in, much to my excitement."
     "Pulling my hoodie tighter around me and pulling a few stray hairs back down the nape of the sweatshirt, I went straight for the bus stop. Walking there today just wasn't in the cards."
 
-    scene Supermarket with fade #day
+    scene Supermarket with fade
     "I took a handbasket from the front of the store and walked in, examining my immediate area."
     menu:
         "Chocolate":
@@ -13867,7 +13867,7 @@ label PRG057B:
                     MCT "Maybe a pharmacy would've been the better choice for this..."
                     "After a solid five minutes of wading through the rows of cards for people's pets, congratulations on weddings, and cheesy cards about people getting old, I let my eyes drift to the bottom of the rack."
                     "On the bottom row were all of the blank cards, the ones where you wrote in your own message to the recipient. Not seeing anything else, I chose a design with some flowers, and took it and the matching envelope to the cashier."
-    scene Campus Center with fade #day
+    scene Campus Center with fade
     "By the time I got back to campus, it was around eleven in the morning. My grocery bag in hand, I headed straight for the dorms."
     scene Dorm Exterior with fade
     if getFlag("PRG057B_chocolate"):

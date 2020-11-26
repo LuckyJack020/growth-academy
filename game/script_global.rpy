@@ -90,76 +90,75 @@ define Waitress = Character('Waitress', color="#C0C0C0")
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
 
-#TBI: re-add condition switches (for time)
-image Lake Road = "Graphics/ui/bg/lakeroad.png"
+image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad.png")
 image School Front = "Graphics/ui/bg/schoolfront.png"
 image School Inner = "Graphics/ui/bg/schoolinner.png"
 image Gate Front = "Graphics/ui/bg/gatefront.png"
 image School Planter = "Graphics/ui/bg/schoolplanter.png"
 image Hallway = "Graphics/ui/bg/hallway.png"
-image Classroom = "Graphics/ui/bg/classroom_day.png"
+image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png")
 image Dorm Exterior = "Graphics/ui/bg/dormexterior.png"
 image Dorm Interior = "Graphics/ui/bg/dorminterior.png"
-image Campus Center = "Graphics/ui/bg/campuscenter_day.png"
+image Campus Center = DynamicImage("Graphics/ui/bg/campuscenter_[gametime].png")
 image Auditorium = "Graphics/ui/bg/auditorium.png"
 image School Exterior = "Graphics/ui/bg/schoolexterior.png"
 image F1 Hallway = "Graphics/ui/bg/schoolhallway1.png"
 image Library = "Graphics/ui/bg/library.png"
-image Office = "Graphics/ui/bg/office_day.png"
+image Office = DynamicImage("Graphics/ui/bg/office_[gametime].png")
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
-image Music Classroom = "Graphics/ui/bg/music_day.png"
+image Music Classroom = DynamicImage("Graphics/ui/bg/music_[gametime].png")
 image Art Classroom = "Graphics/ui/bg/NYI.png"
 image Gym = "Graphics/ui/bg/auditorium.png"
-image Track = "Graphics/ui/bg/track_day.png"
+image Track = DynamicImage("Graphics/ui/bg/track_[gametime].png")
 image Roof = "Graphics/ui/bg/roof_day.png"
-image Nurse Office = "Graphics/ui/bg/nurseoffice_day.png"
+image Nurse Office = DynamicImage("Graphics/ui/bg/nurseoffice_[gametime].png")
 image Pool = "Graphics/ui/bg/schoolpool_day.png"
-image Festival = "Graphics/ui/bg/festival_day.png"
+image Festival = DynamicImage("Graphics/ui/bg/festival_[gametime].png")
 image Bathroom = "Graphics/ui/bg/bathroom.png"
 image Recreation = "Graphics/ui/bg/NYI.png"
 image Town = "Graphics/ui/bg/town.png"
 image Arcade = "Graphics/ui/bg/arcade.png"
 image Cafe = "Graphics/ui/bg/cafe.png"
-image Woods = "Graphics/ui/bg/woods_day.png"
+image Woods = DynamicImage("Graphics/ui/bg/woods_[gametime].png")
 image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/NYI.png"
 image Theater = "Graphics/ui/bg/NYI.png"
-image Field = "Graphics/ui/bg/field_day.png"
+image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
 image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
 image Game Store = "Graphics/ui/bg/gamestore.png"
-image Park = "Graphics/ui/bg/park_day.png"
+image Park = DynamicImage("Graphics/ui/bg/park_[gametime].png")
 image Clock Tower = "Graphics/ui/bg/NYI.png"
 image Diner = "Graphics/ui/bg/burgerrestaurant.png"
 image Clothes Store = "Graphics/ui/bg/clothesstore.png"
-image Pharmacy = "Graphics/ui/bg/pharmacy_day.png"
-image Supermarket = "Graphics/ui/bg/supermarket_day.png"
+image Pharmacy = DynamicImage("Graphics/ui/bg/pharmacy_[gametime].png")
+image Supermarket = DynamicImage("Graphics/ui/bg/supermarket_[gametime].png")
 image Art Gallery = "Graphics/ui/bg/NYI.png"
-image Mountains = "Graphics/ui/bg/mountains_day.png"
-image Japanese Room = "Graphics/ui/bg/japaneseroom_day.png"
+image Mountains = DynamicImage("Graphics/ui/bg/mountains_[gametime].png")
+image Japanese Room = DynamicImage("Graphics/ui/bg/japaneseroom_[gametime].png")
 image Club = "Graphics/ui/bg/NYI.png"
+image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
-image Dorm AE = "Graphics/ui/bg/AEdorm_day.png"
-image Student Government = "Graphics/ui/bg/studentgovernment_day.png"
+image Dorm AE = DynamicImage("Graphics/ui/bg/AEdorm_[gametime].png")
+image Student Government = DynamicImage("Graphics/ui/bg/studentgovernment_[gametime].png")
 
 image Dorm BBW = "Graphics/ui/bg/BBWDorm.png"
 image Dorm BBW Flip = im.Flip("Graphics/ui/bg/BBWDorm.png", horizontal=True)
 
-image Dorm BE = "Graphics/ui/bg/BEdorm_day.png"
+image Dorm BE = DynamicImage("Graphics/ui/bg/BEdorm_[gametime].png")
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 
-image Dorm FMG = "Graphics/ui/bg/FMGdorm_day.png"
+image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
 
-image Dorm GTS = "Graphics/ui/bg/GTSdorm_day.png"
+image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
 image Giant Dorm Exterior = "Graphics/ui/bg/NYI.png"
 image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
 image GTS Courtyard = "Graphics/ui/bg/NYI.png"
 
-image Dorm PRG Day = "Graphics/ui/bg/PRGdorm_day.png"
-image Dorm PRG Eve = "Graphics/ui/bg/PRGdorm_eve.png"
+image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
 #CG + Images
 image splash = "Graphics/ui/bg/splashscreen.png"
