@@ -472,16 +472,14 @@ init python:
             skills[s] += val
 
     def setSizeDebug(mod):
-        global globalsize, prgsize, minorsize
+        global globalsize, prgsize
         globalsize += mod
         if globalsize < 1:
             globalsize = 1
         if globalsize > 6:
             globalsize = 6
         prgsize = globalsize
-        minorsize = int(math.floor(globalsize/2)) + 1
-        if minorsize > 3:
-            minorsize = 3
+        #updateMinorSizes() #change after backwards compatibility is broken
 
     def getSkill(s):
         if s not in skills.keys():
@@ -550,14 +548,29 @@ init python:
         return globalsize
 
     def setSize(size):
-        global globalsize, prgsize, minorsize
+        global globalsize, prgsize
         if size > globalsize:
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
-            minorsize = int(math.floor(globalsize/2)) + 1
-            if minorsize > 3:
-                minorsize = 3
+        #updateMinorSizes(newsize) #change after backwards compatibility is broken
+
+    def updateMinorSizes(newsize):
+        global minorsizes, legalsizes
+        legalsizes = {
+            "Yuki": [1, 3, 5]
+        }
+
+        try: #backwards compatibility, remove later
+            if instanceof(minorsizes, int):
+                minorsizes = {}
+        except NameError:
+            minorsizes = {}
+        for k in legalsizes.keys():
+            if k not in minorsizes: #backwards compatibility, remove much later (when we stop adding minor characters)
+                minorsizes[k] = legalsizes[k][0]
+            if newsize in legalsizes[k]:
+                minorsizes[k] = newsize
 
     def getTime():
         global gametime
@@ -635,7 +648,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsize = 1
+        minorsizes = {'Yuki': 1}
         gametime = TimeEnum.DAY
         flags = []
         vars = {}
@@ -977,11 +990,9 @@ label startevent:
     scene black with dissolve
     pause .5
     python:
+        updateMinorSizes(globalsize)
         highlitevent = ""
         gametime = TimeEnum.DAY
-        minorsize = int(math.floor(globalsize/2)) + 1 #backwards compatibility
-        if minorsize > 3:
-            minorsize = 3
         clearedevents.append(activeevent)
         updateSP(activeevent)
         showQuickMenu = True

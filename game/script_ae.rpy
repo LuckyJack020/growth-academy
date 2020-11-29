@@ -16111,7 +16111,7 @@ label AE069:
             jump daymenu
 
 label AE070:
-    #$setSize(5)
+    $setSize(5)
     $setProgress("AE", "AE071")
     scene black with fade
     "I'm sorry..."

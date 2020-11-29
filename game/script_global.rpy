@@ -205,30 +205,6 @@ image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
 
 #Character sprites
-image RM neutral = "Graphics/minor/RM-neutral.png"
-image RM angry = "Graphics/minor/RM-angry.png"
-image RM concerned = "Graphics/minor/RM-concerned.png"
-image RM concerned-2 = "Graphics/minor/RM-concerned-2.png"
-image RM distrustful = "Graphics/minor/RM-distrustful.png"
-image RM doubt = "Graphics/minor/RM-doubt.png"
-image RM happy = "Graphics/minor/RM-happy.png"
-image RM sad = "Graphics/minor/RM-sad.png"
-image RM smug = "Graphics/minor/RM-smug.png"
-
-image Yuki neutral = DynamicImage("Graphics/minor/yuki-[minorsize]-neutral.png")
-image Yuki happy = DynamicImage("Graphics/minor/yuki-[minorsize]-happy.png")
-image Yuki sad = DynamicImage("Graphics/minor/yuki-[minorsize]-sad.png")
-image Yuki surprised = DynamicImage("Graphics/minor/yuki-[minorsize]-surprised.png")
-image Yuki gossip = DynamicImage("Graphics/minor/yuki-[minorsize]-gossip.png")
-
-image HR neutral = "Graphics/minor/HR-neutral.png"
-image HR annoyed = "Graphics/minor/HR-neutral.png"
-
-image Tomoko neutral = "Graphics/minor/tomoko-neutral.png"
-image Tomoko happy = "Graphics/minor/tomoko-neutral.png"
-image Tomoko surprised = "Graphics/minor/tomoko-neutral.png"
-image Tomoko sad = "Graphics/minor/tomoko-neutral.png"
-
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
 image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
 image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
@@ -699,6 +675,33 @@ image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
 image side TomoCell = "Graphics/side/tomoko.png"
+
+#Minor characters
+#If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
+
+image RM neutral = "Graphics/minor/RM-neutral.png"
+image RM angry = "Graphics/minor/RM-angry.png"
+image RM concerned = "Graphics/minor/RM-concerned.png"
+image RM concerned-2 = "Graphics/minor/RM-concerned-2.png"
+image RM distrustful = "Graphics/minor/RM-distrustful.png"
+image RM doubt = "Graphics/minor/RM-doubt.png"
+image RM happy = "Graphics/minor/RM-happy.png"
+image RM sad = "Graphics/minor/RM-sad.png"
+image RM smug = "Graphics/minor/RM-smug.png"
+
+image Yuki neutral = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-neutral.png")
+image Yuki happy = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-happy.png")
+image Yuki sad = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-sad.png")
+image Yuki surprised = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-surprised.png")
+image Yuki gossip = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-gossip.png")
+
+image HR neutral = "Graphics/minor/HR-neutral.png"
+image HR annoyed = "Graphics/minor/HR-neutral.png"
+
+image Tomoko neutral = "Graphics/minor/tomoko-neutral.png"
+image Tomoko happy = "Graphics/minor/tomoko-neutral.png"
+image Tomoko surprised = "Graphics/minor/tomoko-neutral.png"
+image Tomoko sad = "Graphics/minor/tomoko-neutral.png"
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"
