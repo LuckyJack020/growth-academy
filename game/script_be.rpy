@@ -758,6 +758,7 @@ label BE008:
     show BE happy at center with dissolve
     BE "Oh hi Kei-chan! Good, you're hanging out here, can I come in?"
     MC "Oh!"
+    show cg BE010 with dissolve
     "Seeing Honoka outside of my door was definitely something I didn't expect. But it was far from unwanted. Besides, it was nice to see her head-on without having her run into me like she often did."
     MC "Yeah, sure, come on in. There's not a rule about having girls in my room is there?"
     show BE neutral
@@ -1054,7 +1055,6 @@ label BE010:
     MC "Yeah?"
     BE "Alright then."
     "Honoka stepped forward and gained a devious smirk on her face."
-    show cg BE010
     play music BE
     BE "Touch 'em."
     MC "What?"
@@ -1118,6 +1118,7 @@ label BE010_c2:
     MC "You know, this will be my first time doing this."
     BE "Well, then I'm honored to be your first."
     MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
+    show cg BE010 with dissolve
     "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once."
     "It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
     "Honoka still had a smile on her face, so I kept examining them. I felt like a doctor, medically probing her, but really all I was doing was trying to take in the feel. Soft, yes. Squishy as well."
@@ -1126,7 +1127,7 @@ label BE010_c2:
     "I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up."
     "They took a slight bit more effort to move than I thought they would, and when I finally pulled my hands away, I got to see them bounce for a few seconds before stopping."
     MC "Wow."
-    hide cg
+    hide cg with dissolve
     show BE happy at center
     BE "Heh, heh. Get yourself a good handful? How did they feel? Were they as soft as you imagined? Were they warm? Tell me!"
     MC "Whoa, um, well. They're... big?"
@@ -4990,8 +4991,9 @@ label BE028:
     "Honoka's spare hand reached over and grabbed mine. I chuckled. "
     MC "Oh, duh. It can't really test our compatibility if we're not holding hands."
     MC "Okay. Here we go!"
+    show cg BE028 with dissolve
     "The machine lit up 'Squeeze Now' and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
-    show BE happy
+    #show BE happy
     BE "Come on, Kei-chan, we can do this."
     if getAffection("BE") < 8:
         jump BE028_test_1
@@ -5004,6 +5006,7 @@ label BE028_test_1:
     "As Honoka and I squeezed the handle as hard as we could, the display on the machine moved up and down. It passed by the first two titles easily, and continued to waver around the remaining ones."
     "The rhythm was unsteady and strange. Honoka and I looked at each other and squeezed our hands as well, just to make sure it worked as well as legend said it was supposed to."
     "Eventually the device stopped, and the selection stopped third from the top, glowing a pale yellow-orange LED."
+    hide cg with dissolve
     show BE sad
     BE "Aw, Satisfying Soulmates? Darn, we should be way higher than that!"
     MC "I think it's pretty good, we're really high up. Most of the names given here aren't super flattering anyway, at least we got one of the good ones."
@@ -5055,8 +5058,9 @@ label BE028_test_1:
 label BE028_test_2:
     "The two of us looked at the display as we squeezed the handles on the love tester. A light moved back and forth between the top and bottom choices."
     "Honoka's hand was still in mine, and squeezed my hand tighter as we waited for it to make its decision. My other hand felt sweaty as it tugged on the joystick, trying to pull in the trigger as hard as it could go."
-    "It eventually stopped, and to my surprise it landed only one away from the top title. "
+    "It eventually stopped, and to my surprise it landed only one away from the top title."
     MC "Wow. Linked Lovebirds. That's really good."
+    hide cg with dissolve
     show BE happy
     BE "Huh, yeah it is. I think I'm happy with that. We got sooo close to the top though."
     MC "Hm. Well if this thing does work, we're doing pretty good considering how it's not been that long since we started dating."
@@ -5093,10 +5097,11 @@ label BE028_test_2:
 label BE028_test_3:
     "Honoka and I watched the love tester as it responded to our synchronized squeezing. The lights on the machine went wild as a display moved up and down between the best and worst options. We were obviously hoping for the best."
     MC "Come on, come on."
-    show BE happy
+    #show BE happy
     BE "We got this, Kei-chan!"
     "Honoka's fingernails dug slightly into my hand as she squeezed mine. I grit my teeth, and tugged as hard as I could until the display stopped moving."
     "Lights went off in several spots and a weary sound played, so distorted and fragmented that we couldn't make out what it originally was. But the light had stopped right at the top, signifying us as Wedding Wishers."
+    hide cg with dissolve
     show BE surprised
     BE "Holy crap, Kei-chan. Weeee did iiiit!"
     "Honoka jumped in the air, cheering for joy. She landed back down with a thud, and then a jiggle. It was hard not to notice."
@@ -7175,7 +7180,7 @@ label BE039:
 label BEGTS001:
     $setTime(TimeEnum.EVE)
     scene Dorm Exterior with fade
-    play music Sunset
+    play music Hallway
     #Forces Feminine costume
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")

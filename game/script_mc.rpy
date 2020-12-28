@@ -59,7 +59,7 @@ label global000:
     play music BE
     MC "Hey! Hi, uh... Hoo boy, eheh. Sorry, let me catch my breath."
     "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing."
-    "Her face looked soft and effeminate, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
+    "Her face looked soft and feminine, though it was hard to tell based on the confusion plastered on her face; her dark brown eyes complimenting her chin-length mahogany hair well."
     MC "Sorry about that, ma'am, um... Hey, do you know where the school is? I think I got lost a while back, eheh..."
     UNKNOWN "..."
     "She stared at me intently for a long time. Did I surprise her or something?"

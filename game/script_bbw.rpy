@@ -6623,7 +6623,7 @@ label BBW036:
     show BBW neutral
     BBW "There would usually be more people back then, yes."
     BBW "Family or other colleagues of the students, the occasional representative of a symphony or recording label."
-    MC "Oh, wow. Lot's more pressure."
+    MC "Oh, wow. Lots more pressure."
     show BBW happy
     BBW "Not for me. Music has always been a diversion, not a calling."
     BBW "The standards I hold myself to are naturally high, but not that high."
@@ -7368,7 +7368,7 @@ label BBW041:
     "Just having the chance to get close to her belly like that was exhilarating."
     BBWCell "< Come to the arcade, I have something fun to show you. >"
     MCT "Alice? At the arcade? Oh this {i}will{/i} be fun."
-    MCCell "< I'm on my way. >"
+    MCCell "<I'm on my way.>"
     "I got dressed and rushed to the bus stop. I had to be there as soon as possible."
 
     scene School Exterior with fade

@@ -2337,11 +2337,13 @@ label AE015:
     "As I walked into the office, I was greeted with an unbroken wall of black-iron filing cabinets, sitting there menacingly. And in the middle of two cabinets..."
     MC "..."
     MCT "S-Shiori-san?!"
+    show cg AE015 with dissolve
     "More specifically, the poor girl's rear and two legs stuck between the cabinets. She was lifted slightly off of the ground by the table, her thick thighs pitifully kicking in resistance."
-    MCT "O-Oh no! Shiori-san's been captured!"
+    show dummy with hpunch
+    MCT "O-Oh no! Shiori-san's stuck!"
     AE "Oh god... Mnf..."
-    MCT "W-What's gonna happen to her? Is she gonna be eaten and turned into paper? Is she going to become one of the cabinets?!"
     "It took every ounce of my mental fortitude not to start cackling like a hyena."
+    show dummy with hpunch
     AE "{i}Nngh, nnnnff{/i}"
     $setVar("AE015_watch", 0)
     jump AE015_menu
@@ -2359,17 +2361,21 @@ label AE015_menu:
 label AE015_watch:
     if getVar("AE015_watch") == 3:
         "I couldn't help but stare on at Shiori-san as she began to try and wiggle out, eyes fixed on her round rear as her hips shook more frequently."
+        show dummy with hpunch
         AE "Hoooah... W-wait... Nggggnn~!"
         "I pulled up a chair and sat down, with pursed lips and hands resting lightly on my abdomen as I watched on."
+        show dummy with hpunch
         AE "Ach-H-hold on... nhg."
         jump AE015_menu
     if getVar("AE015_watch") == 6:
         "I rested my feet up on the table, watching with intent as Shiori-san continued her struggle."
         MCT "It's like watching an adorable trainwreck."
+        show dummy with hpunch
         AE "Are you-ach- k-kidding me?!"
         jump AE015_menu
     if getVar("AE015_watch") == 9:
         "I continuously watched as sweat began to form along the seat of Shiori-san's skirt."
+        show dummy with hpunch
         AE "{i}Pant{/i}... {i}Pant{/i}... Hng... Hnnnnn~."
         "I opened up my backpack and pulled out a bag of shrimp flavored popcorn chips. I slowly began to much on the treat as sadistically and smugly as I possibly could."
         AE "H-huh? Hello? Is that shrimp? What's happening?!"
@@ -2377,13 +2383,16 @@ label AE015_watch:
         MCT "Y'know, I should probably help her... or just wait for some students to walk by for end of the day cleaning."
         jump AE015_menu
     if getVar("AE015_watch") == 10:
-        MCT "She's stopped kicking now. It's w-oh, no, there she goes again."
+        MCT "She's stopped kicking now. It's w-"
+        show dummy with hpunch
+        extend " oh, no, there she goes again."
         "I watched on, bag of popcorn now empty, as a twinge of sympathy began to set in."
         MCT "All right, now I'm getting bored, plus I'm starting to feel bad."
         jump AE015_menu
     else:
         MCT "I... I'm gonna see how this plays out. I'm sure she'll get out eventually."
         "I watched a little longer as Shiori-san kicked her massive legs up and down, her thighs wobbling like mad and her skirt swishing from side to side as she struggled in vain."
+        show dummy with hpunch
         AE "{i}Pant, pant{/i} Hggnnn."
         jump AE015_menu
 
@@ -2406,6 +2415,7 @@ label AE015_aftermenu:
     "I positioned my own legs in a way that would allow for greater force."
     MC "Three!"
     "With a quick tug, I pulled Shiori-san free from the cabinets. Once free, the two of us both collapsed to the floor, the force from dislodging her pushing us back."
+    hide cg with dissolve
     show AE aroused-3 at center with dissolve
     play music Schoolday
     AE "Nhg..."
@@ -4385,7 +4395,7 @@ label AE024:
     AE "S-sometimes, I even go jogging because the vibrations... mmmnff~"
     show cg AE024 with dissolve
     "Shiori-san made a small waddle to turn around in place, hoisted the sides of her skirt up, and bent over."
-    "Her asscheeks were on full display in front of me, a pair of massive and supple pale spheres of flesh shielded only by a pair of white panties."
+    "Her asscheeks were on full display in front of me, a pair of massive and supple pale spheres of flesh shielded only by a pair of dark blue panties."
     AE "I know why you've been spending time with me. This moment right here. So please... give me a good squeeze and I'll be yours forever~"
     "Shiori-san's mouth changed from biting her lip to her signature smirk, her lewd eyes obscured behind the glare from her glasses."
     #show AE glasses
@@ -4816,8 +4826,10 @@ label AE025:
         AE "Yes. I... I know now without a doubt... yes."
         MC "Hah... Ah..."
         "I stood straight up and looked her in the eyes. She walked up towards me to meet my gaze further; to get closer to me."
-        show AE happy
+        show cg AE025 with dissolve
         AE "I can't believe... this is what it feels like."
+        show AE happy
+        hide cg with dissolve
     "I took Shiori-sans hands in my own. Her cold, smooth hands, considered by so many to be that of a heartless woman began to warm in my own."
     MC "I promise. I will do everything to show just how much I care about you."
     MC "Even now I'm doing what I can to hide your trembling from anyone watching."
@@ -14338,7 +14350,7 @@ label AE062:
     AE "Ah-..."
     "Shiori took a moment to respond, furrowing her brow before closing her mouth."
     show AE neutral
-    AE "I...  believe I'm free."
+    AE "I... believe I'm free."
     MC "Wanna go out for dinner? We could go out to that cafe!"
     show AE surprised
     AE "Wha- What's this all of a sudden?"

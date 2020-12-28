@@ -35,7 +35,9 @@ init python:
         'hallway': ("school", (745,375)),
         'hillroad': ("town", (1100,650)),
         'library': ("school", (490,560)),
+        'lockers': ("school", (730,220)),
         'musicclassroom': ("school", (740,490)),
+        'nurseoffice': ("school", (590,590)),
         'office': ("school", (590,590)),
         'pool': ("school", (440,165)),
         'roof': ("school", (750,375)),
@@ -558,7 +560,7 @@ init python:
     def updateMinorSizes(newsize):
         global minorsizes, legalsizes
         legalsizes = {
-            "Yuki": [1, 3, 5]
+            "Yuki": [1, 3]
         }
 
         try: #backwards compatibility, remove later
@@ -673,13 +675,7 @@ label start:
 label splashscreen:
     scene black
     with Pause(1)
-
-    show splash with dissolve
-    with Pause(2)
-
-    scene black with dissolve
-    with Pause(1)
-
+    $renpy.movie_cutscene("Graphics/ui/intro.webm")
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.

@@ -3871,7 +3871,7 @@ label GTS029:
 label GTS029_c1_1:
     MC "Well, could you get a tailor to make it fit your new size?"
     "Naomi shakes her head, now poking her food with her chopsticks idly."
-    GTS "While it would be possible, I don't believe it would do me much good. I can definitely afford it, but there's no telling how much taller I'm going to get.  It would just be a waste of time."
+    GTS "While it would be possible, I don't believe it would do me much good. I can definitely afford it, but there's no telling how much taller I'm going to get. It would just be a waste of time."
     $setAffection("GTS", 1)
     show GTS neutral
     GTS "It was a good idea though, thank you."
@@ -5268,7 +5268,7 @@ label GTS037_c2_after:
     "I suppose that being outside wasn't really preference of mine, but rather it was just what I happened to do most."
     MC "Still. It must be a welcome change of scenery from being in the hangar so much."
     MCT "Naomi nodded while looking down at me."
-    GTS "If nothing else, being outside in the wilderness allows me to breathe much fresher air. Sometimes, I forget what ‘outside' is like in the giant dorms."
+    GTS "If nothing else, being outside in the wilderness allows me to breathe much fresher air. Sometimes, I forget what 'outside' is like in the giant dorms."
     MC "I've only been in there a few times, but from what I've seen, the only open part is the central pit. Otherwise, you're traveling the caverns."
     GTS "Exactly. I hardly ever see the sky, unless I walk to the auditorium. It's why I prefer to walk around as much as possible."
     MC "Personally, I think that's a really weird design. Why stick all of the giants underground in caverns? Wouldn't it be easier to just repurpose an airport instead of building hangars in caverns?"
@@ -5502,6 +5502,272 @@ label GTS039:
     jump daymenu
 
 label GTS040:
+    jump GTS043
+
+label GTS043:
+    $setProgress("GTS", "GTS044")
+    scene Hallway with fade
+    play music HigherEdu
+    "The day had finally arrived. Now that my usual classes were complete, I had made plans to begin the Tai Chi course with Naomi after school."
+    "It was still the middle of the afternoon, so I had plenty of time to prepare. I decided to head to the locker room to fetch my uniform."
+    "The tiles of the hallway floor let out a subtle tapping noise as I hastily made my way towards the gym."
+
+    scene Auditorium with fade
+    "Once inside, I made my way to the opposite end. The gym was lively with several groups of students and instructors. It seemed that they were preparing for their own after-school activities."
+    "The girls' volleyball team was practicing in the center of the court closest to the front door, while the girls' basketball team practiced on the court closest to the locker rooms."
+    "Aside from the few times I had watched Honoka participate in her clubs, it was the first time I had gotten a good look at each of the teams. Despite the vastly different array of factors on display, the instructors kept them coordinated."
+    "Naomi had mentioned an interest in how well they managed the teams at Seichou University before. As I entered the locker room to retrieve my uniform, I remembered how thankful I was that we found the Tai Chi course."
+    "After retrieving my uniform from the locker room, I neatly folded it inside a light blue duffle bag bearing Seichou's insignia."
+    "I slung the duffel bag over my shoulder and returned to the hallway."
+
+    scene Hallway with fade
+    "I was just about to head back to my dorm, when I noticed someone familiar walking towards me."
+    show FMG neutral with dissolve
+    pause 1
+    show FMG happy
+    FMG "Oh hey, Kei-kun! What's that you've got there?"
+    "Akira subtly gestured towards the bag on my shoulder. The sheer amount of muscle mass she was packing became much clearer as she held her forearm out."
+    MC "Hi, Mizutani-san. It's just my athletic clothes."
+    FMG "Oh, yeah? Are you planning on working out?"
+    "Akira stared at me with a fiery, passionate expression. I could tell that she was clearly interested in this conversation already."
+    MC "In a way, yeah. Yamazaki-san and I are planning to do some Tai Chi later."
+    show FMG flex
+    "She returned an even more passionate, excited expression. Akira was practically rumbling with anticipation as she heard me speak."
+    FMG "You're gonna see just how much power Naomi's packing in her punch?!"
+    MC "Well, Tai Chi is more about achieving coordination with your body. We're going to use it as a way for her to get used to her new size."
+    MC "She needs to be able to step lightly when she needs to, after all. If she gets even larger, it'll be necessary."
+    "I could see Akira's body language slowly relax, returning her to a more neutral level."
+    show FMG neutral
+    FMG "Ah, I gotcha. That makes sense. Still, aren't you a little bit curious?"
+    MC "Curious? I suppose. Why, did you have something planned?"
+    show FMG happy
+    FMG "No, not really! But..."
+    MC "...You want to test Naomi's strength, don't you?"
+    show FMG surprised
+    "Akira responded with a sarcastic gasp as she faked absolute bewilderment."
+    FMG "No way! How'd you know?"
+    MC "You seemed slightly interested in the idea."
+    show FMG happy
+    FMG "Well, I am! Admittedly, I've been interested ever since we learned our factors."
+    play music PRG
+    FMG "I just... haven't been speaking to Yamazaki-san much."
+    show FMG sad
+    FMG "When I learned that she'd been transferred to the other dorm, I was worried that I might have missed my opportunity. I wanted to get to know her."
+    FMG "I've got respect for everyone, as long as they extend the same level of respect. Yamazaki-san was just so... refined, though. I didn't really know how to start, you know? Especially when it feels like our hobbies completely differ."
+    FMG "I might not have really shown it when we found out, but when I learned that we'd still get to talk after class... I was really happy."
+    FMG "I was happy that... we wouldn't have to say goodbye. That she'd still be close, and I'd still be able to become friends with her. Even if some of us rarely talk... I like our little group. I don't wanna lose that."
+    show FMG neutral
+    FMG "Ah... sorry. I rambled there for a bit."
+    MC "There's nothing wrong with feeling passionate about your friends. I feel the same way, to an extent."
+    show FMG happy
+    FMG "Thank you, Kei-kun. I really appreciate that."
+    MC "Would you like to see if Naomi wants to practice for a while?"
+    show FMG neutral
+    FMG "I'll ask, yeah! Do you think she'd want to break some boards or do some lifting?"
+    MC "She's definitely more into cardio and balance training, but I did see her decimate the 'Test Your Strength' machine at the carnival..."
+    show FMG flex
+    FMG "Damn! I wish I coulda been there to witness it."
+    MC "The attendant looked so confused. It was incredible."
+    "I set my bag on the floor and pulled out my phone, sending a message to Naomi telling her where I was."
+    MCCell "Mizutani-san wants to know if you'd like to get some practice in before Tai Chi class. Would you like to meet me behind the courtyard a little early?"
+    "With the message sent, I placed my phone back into my bag."
+    MC "I let Naomi know where we'll be. Are you ready?"
+    show FMG happy
+    FMG "You know me, Kei-kun! I'm always ready."
+
+    scene School Exterior with fade
+    play music HigherEdu
+    show FMG neutral with dissolve
+    "Akira and I made our way outside, taking the sidewalk behind the main school building. Within a minute, we had arrived at the field."
+    "A large wire fence surrounded the corners. The field was originally designed to hold baseball games, but it also doubled as a spot for all of the outdoor after-school clubs to gather."
+    "The rhythmic crunch of sand beneath our shoes punctuated our walk towards the center."
+    show FMG happy
+    FMG "This looks like a good spot. It's perfect for what I had in mind."
+    "Akira quickly made her way to the other side of the field, walking towards a storage shed between the sand pit and the grass."
+    show FMG flex
+    FMG "Be right back! Don't move an inch!"
+    hide FMG with dissolve
+    "Despite how bulky she was, Akira managed to take off at a decent pace. She made it to   the storage shed across the field in seconds."
+    "I had a few moments to myself. I decided to set my bag down and have a seat on one of the benches near the field."
+    "With the weight now off my shoulders, I gave my neck a quick stretch before I paced around a bit. The slightly chilly breeze made my hair billow backwards."
+    "I was only walking for a few moments before I saw a monolith coax itself around the walls of the school, delicately pacing itself while its long strides brought them closer to me."
+    "Naomi wasn't a difficult person to spot, that was certain. I still lit up with happiness every time I saw her."
+    show GTS neutral with dissolve
+    "She was nearly as tall as the wire fence itself. She lowered herself slightly with a crouch, waving to me as she approached."
+    GTS "Hello, Kei-chan."
+    MC "Hello, Naomi-chan. I take it you saw my message?"
+    GTS "I did. You said that Mizutani-san had some sort of practice planned?"
+    MC "Yep! She saw me with the uniform, and she thought it'd be something fun to try."
+    GTS "Knowing Mizutani-san, I imagine she--"
+    FMG "Found 'em!"
+    "Akira came running back with two large objects, one in each arm. They didn't appear to slow her down in the slightest.as she galloped along the sand pit with both perched on her shoulders."
+    show GTS neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve #slide ani?
+    show FMG flex at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    "Once Akira had made her way back to the center of the field, she lowered a large wooden stand to the ground to free up her right arm. The stand was painted black, with two long wooden prongs jutting out from the top to form a U-Shape."
+    "Not finished, she then lowered her left arm to place a gigantic stack of wooden boards upon the sand. There had to have been at least 20 wooden squares in the stack, possibly more."
+    show FMG neutral
+    "With both of her hands now free, Akira stretched her left arm across her torso and patted her tricep with her right hand. She then repeated the process with her right arm and left hand."
+    show FMG happy
+    show GTS surprised
+    FMG "Aww, yeah! Still got it!"
+    GTS "A very efficient means of moving a lot of materials, Mizutani-san."
+    FMG "THANK YOU! See, you understand it, unlike Masumoto-san."
+    show GTS unique
+    GTS "As long as you don't injure yourself, it seems like a great method. You're never supposed to lift without a spotter, correct?"
+    show FMG neutral
+    FMG "You should always have a spotter if you're planning on lifting your maximum, yeah. I thought this was light enough to do on my own, though. Regardless, we've got everything we need now!"
+    MC "I actually haven't seen these board-breaking stands up close before. They're a lot smaller than I thought."
+    show FMG happy
+    FMG "Are you sure it's not because we aren't exactly to scale?"
+    MC "Point taken."
+    show GTS neutral
+    GTS "Breaking boards is more of a taekwondo or karate thing, Mizutani-san."
+    show FMG flex
+    FMG "Right! What'd you say you were getting into, again?"
+    show GTS embarrassed
+    GTS "Tai Chi."
+    show FMG sad
+    FMG "...Oh."
+    show FMG surprised
+    "Naomi let out a loud, imposing giggle with her hand covered. Akira must not have been used to the volume, because it startled her just as much as I did the first time I heard it."
+    show GTS happy-2
+    GTS "It's perfectly fine, Mizutani-san. I'd be willing to try my hand at it regardless."
+    "I could see Akira's brief moment of fogginess quickly recover. Within seconds, she was sporting her trademark smile again."
+    show FMG happy
+    FMG "Awesome! I'm... I'm glad."
+    show GTS neutral
+    "Akira placed one of the square boards atop the prongs of the stand,adjusting it to make sure it was centered. She slowly backed away from the stand, clearing the field for Naomi."
+    "Naomi's giant, encompassing shadow stretched nearly halfway across the entire sand pit. Akira, completely unphased, crossed her arms across her pecs and confidently smiled at her."
+    FMG "We haven't really hung out like this before, have we?"
+    GTS "I suppose we haven't. It's very fortunate that martial arts have brought us together."
+    show FMG neutral
+    FMG "I wanted to get to know you earlier, but then you got transferred to the GTS dorm and everything, so..."
+    "Naomi slowly nodded as she listened to Akira speak. She looked like she was equally troubled by the situation."
+    GTS "The move wasn't easy on my part, either. I had many worries of my own."
+    FMG "I'll bet. I was pretty scared when I first discovered that I had a factor, but after a while I... learned to adjust and appreciate it more."
+    show FMG sad
+    FMG "Still, though. I totally get it. Adjusting to your new height isn't going to be easy. I might have problems with doorways, but you've got even more of a challenge."
+    show GTS_S neutral-2
+    GTS_S "Kei-chan and Inoue-san have helped me cope. The medical staff offered sound advice as well, but setting my spirits at ease is another matter entirely."
+    show FMG neutral
+    play music PRGChallenge
+    FMG "Mental health is tricky, Yamazaki-san. Even the experts have trouble explaining everything. That's why I always fall back to physical health. It's simple, concrete, and easy to understand."
+    show FMG happy
+    FMG "If you're fit and your body thanks you after a solid workout, well... everything else falls into place. That high you get when you finish your last set never fails to make me happy."
+    show GTS neutral
+    GTS "I imagine it's very similar to the feeling one gets after a long, effective meditation. That's very sound advice, Mizutani-san. Thank you."
+    FMG "You're welcome! Now, put that advice to use and BREAK THAT THING!"
+    show GTS happy-2
+    GTS "All right, here goes!"
+    "I watched as Naomi raised her right hand up to shoulder level while she crouched over the wooden board. With her size, the square panel better resembled a coaster."
+    "I expected her to be able to snap the board without a problem, but Naomi's crouched position made it so that the apex of her swing wasn't in line with the board. She needed to settle for the end of the swing, where her strike would be weaker."
+    FMG "You know, crouching over like that makes it harder to-"
+    "SNAP!"
+    "Nevertheless, the sheer amount of force carried by Naomi's oversized arms allowed her to effortlessly bisect the wooden square. Both halves fell onto the sand pit with a light thud."
+    show FMG flex
+    FMG "Oh, damn! She's unstoppable!"
+    show GTS surprised #pondering
+    "Naomi curiously looked at the two halves of the board. Despite opting for a sideways chop, the impact had completely caved the center of the wood in. The board looked as if it had been broken with a closed fist instead."
+    GTS "I can definitely see why this is used for practice. It requires a certain amount of coordination just to hit your target."
+    show FMG happy
+    FMG "Yeah, and you nailed it! Your raw physical strength doesn't actually matter that much. It's all about the form of your strike and how well you can aim it."
+    show GTS neutral
+    GTS "That actually reminds me of the 'energy distribution' lesson from when I did other martial arts as a kid. The tiger was meant to symbolize fierce, powerful energy, whereas the crane represented gentle, balanced energy."
+    show FMG neutral
+    FMG "So I'm the tiger?"
+    show GTS unique
+    GTS "I think you're both, Mizutani-san."
+    "Naomi bowed in a sageful manner."
+    show FMG happy:
+        xzoom -1.0
+        linear 2.0 xpos 0.05
+    "Akira then walked over to the pile of boards and picked up another square. She then returned to the stand and set it up once again."
+    show FMG flex:
+        xzoom 1.0
+        linear 2.0 xpos 0.2
+    FMG "All right, Kei-kun. You're up."
+    "I gave Akira a small smirk before walking up to the board."
+    MC "I can't possibly allow these boards to keep insulting me."
+    show FMG happy
+    FMG "Eliminate them with extreme prejudice! And violence!"
+    "I squared my shoulders, lowered both of my hands to my sides, bent my knees slightly, then exhaled."
+    "After a few seconds of breathing, I raised my right hand with my fingers locked together. I slightly bent my fingers as I quickly lowered my wrist, sending it directly into the center of the board."
+    show FMG neutral
+    show GTS happy
+    "Akira gave a satisfied nod with her arms at her sides. Naomi smiled brightly in response. Seems like I managed to earn their respect with that one."
+    FMG "Niiiice, Kei-kun. Very nice."
+    GTS "A very respectable form, Kei-chan."
+    MC "I'm glad I can still remember how to do that. That anticipation when you exhale... hooh. You were right, Mizutani-san. It's a wonderful feeling."
+    show FMG flex
+    show GTS neutral
+    FMG "Right?! See, I told ya!"
+    show FMG happy
+    "Akira then smiled towards the pile of boards in a sinister manner."
+    FMG "We've still got tons of boards, though... you wanna see how many Miss Powerhouse can smash?"
+    MC "Powerhouse?"
+    FMG "Yeah! I cleverly combined the height of a lighthouse with her sheer strength to create the perfect wrestler alias!"
+    show GTS surprised
+    GTS "'Powerhouse' is already a term by itself though, isn't it?"
+    FMG "That only makes it even more fitting~"
+    "Naomi tossed the idea around in her head for a few seconds, then let out a defeated exhale."
+    show GTS embarrassed
+    GTS "Oh, all right. Line up ten boards for me."
+    show FMG flex #fired up
+    "Akira then lit up with a fiery, blazing passion that I could only describe as... otherworldly. Defying everyone's assumptions, Akira took off like a world class sprinter and began vigorously stacking board after board upon the stand, aligning them perfectly each time."
+    show GTS surprised
+    "With the stand fully set up, Akira banged her fists together with a mighty lunge, then gestured towards Naomi with both of her pointer fingers aimed at the sky."
+    FMG "Hyaaaaa! Give it everything you've got, Yamazaki-san! ANNIHILATE!"
+    show GTS neutral
+    GTS "Hooooh..."
+    "Naomi corrected her stance from the previous attempt, bending her knees even sharper than she did before. She then lowered both of her hands to her sides with her fingers locked and thumbs pointed up."
+    show GTS happy-2
+    GTS "KYAAA!"
+    "With a mighty roar, Naomi raised her arm. There was so much weight and winding force to her heavy, lumbering movements. Even a swift downward strike from her looked like it was moving in slow motion."
+    "When her arm made a complete circle and sailed downward, her giant right hand cleaved through the stack of ten wooden squares like it was made of tissue paper."
+    "The stack folded and buckled like an accordion, stray pieces of wood falling to the ground in sequence mere seconds later."
+    "{i}CRACKLE!{/i}"
+    show FMG surprised
+    "The shockwave from Naomi's arms was enough to send the sides of the board stand tumbling over, leaving everything in a pile of dust. While the stand itself remained intact, the impact of the stand falling over kicked up a massive cloud of sand from the field. The stray bits of yellow dust clouded up near the earth, then faded as the cloud of sand disappeared."
+    "{i}Fizzle...{/i}"
+    "Once the cloud disappeared, Akira and I stood in awe at the display of power we had just witnessed. Naomi was still following through with her heavy strike, exhaling proudly."
+    FMG "Yamazaki-san... that was AMAZING!"
+    show GTS embarrassed
+    GTS "I'm very glad that you liked it, Mizutani-san."
+    MC "Maybe ten was underestimating it."
+    show FMG flex
+    FMG "You raise a good point, Kei-kun! I'll get more!"
+    show GTS neutral
+    GTS "I believe that's enough power training for now, Mizutani-san. We need to get ready for Tai Chi very soon."
+    MC "Oh yeah, that's right! We still have about half an hour, though."
+    show FMG happy
+    FMG "You two go get ready, then! I'm just happy we got to do this today!"
+    show GTS unique
+    GTS "Likewise, Mizutani-san.Thank you for proposing such a fun idea ."
+    show FMG neutral
+    FMG "See ya around, guys. We should definitely do this again sometime."
+    show GTS neutral
+    GTS "We shall, we shall. It was wonderful spending time with you."
+    MC "Later, Akira."
+    FMG "Later, Kei-kun!"
+    hide FMG with dissolve
+    show GTS neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    "The two of us waved Akira goodbye as we left the field. We could see her packing up the equipment she brought out as Naomi's long, powerful strides took her further away from the setup."
+    show GTS embarrassed
+    GTS "You know, I didn't think I'd be breaking boards today."
+    MC "Can't say I thought I would be either. It was fun though, wasn't it?"
+    show GTS neutral
+    GTS "It was, yes. I'm glad I got to spend some time with Mizutani-san. I haven't really done so since the school year began."
+    MC "She was really interested in you, it seemed. Akira gets along with everyone pretty well, but she seemed the most upset when she found out you were moving."
+    show GTS surprised
+    GTS "Really? I didn't know she felt that way."
+    MC "Perhaps you should ask her about it the next time you see her."
+    show GTS neutral
+    GTS "Gladly. If Mizutani-san expressed interest like that, I should definitely return the favor."
+    "The two of us spent a few more minutes talking while we prepared for Tai Chi. I already had everything  with me, but Naomi needed a few minutes to grab some things from her dorm."
+    "I followed her back to the GTS hangars to make sure we had everything we needed."
+    jump daymenu
+
+label GTS044:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
