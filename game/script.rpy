@@ -675,7 +675,7 @@ label start:
 label splashscreen:
     scene black
     with Pause(1)
-    $renpy.movie_cutscene("Graphics/ui/intro.webm")
+    $renpy.movie_cutscene("Graphics/ui/intro.mkv")
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.

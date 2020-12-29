@@ -4052,7 +4052,7 @@ label GTS030_c1_after:
 
 label GTS030_c2_1:
     MC "I know you have a bunch of stuff in your dorm. You shouldn't have to move it alone."
-    show GTS surprised at Position(xalign=0.5, yalign=1.0) with dissolve
+    show GTS surprised at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     GTS "No. I can handle this. It's my mess to worry about, not yours."
     MC "Yamazaki-san..."
     show GTS angry
@@ -4070,7 +4070,7 @@ label GTS030_c2_1:
 
 label GTS030_c2_2:
     MC "I trust you can handle yourself, Yamazaki-san. The stuff you have left should be of no problem to you at your current size."
-    show GTS happy at Position(xalign=0.5, yalign=1.0) with dissolve
+    show GTS happy at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     GTS "It shouldn't be a problem at all. I'd hate for you to waste your time with such a menial task."
     if getAffection("GTS") > 15: #FIXME
         $setFlag("GTS030_festival")
@@ -5750,7 +5750,7 @@ label GTS043:
     MC "Later, Akira."
     FMG "Later, Kei-kun!"
     hide FMG with dissolve
-    show GTS neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     "The two of us waved Akira goodbye as we left the field. We could see her packing up the equipment she brought out as Naomi's long, powerful strides took her further away from the setup."
     show GTS embarrassed
     GTS "You know, I didn't think I'd be breaking boards today."
@@ -5777,8 +5777,8 @@ label GTSPRG001:
     play music Busy
     "As I was heading to the dorms after class I spotted Naomi and Aida down in the garden."
     MC "Hey girls."
-    show GTS neutral at Position(xpos=0.7, xalign=0.5, yanchor=1.0) with dissolve
-    show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xalign=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.7, xpos=0.5, xanchor=1.0, yanchor=1.0) with dissolve
+    show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xpos=0.5, xanchor=1.0, yanchor=1.0) with dissolve
     GTS "Hey Hotsure-san."
     PRG "G-Good evening, Hotsure-san."
     MC "What is going on here?"

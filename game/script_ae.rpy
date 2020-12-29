@@ -1397,7 +1397,7 @@ label AE010:
     MC "Out of my system? Shiori-san, I'm not going to insult y-"
     "Shiori-san finally turned around."
     stop music
-    show AE neutral at Position(xalign=0.5, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
+    show AE neutral at Position(xpos=0.5, xanchor=1.0, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
     play sound Boing
     MC "W-HOA MY GOD!"
     "I took the full force of the sight at once."
@@ -4299,7 +4299,7 @@ label AE023_c1_after:
     "I hadn't noticed before, but from here it was all but too obvious that you can see her ass from the front. Her hips bulged out far enough to create a wall of flesh and stretch the fabric atop two massive legs."
     MC "..."
     "I walked silently behind Shiori-san to get a better view. Though my head was turned, my eyes were focused right on her. Her growth was becoming more obvious, as her skirt was beginning to ride up even further."
-    show AE neutral at Position(xalign=0.5, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
+    show AE neutral at Position(xpos=0.5, xanchor=1.0, ypos=1.0, yanchor=0.95), Transform(zoom=2.0)
     play sound Boing
     "Her already thick thighs were plumping up quite nicely, pairing themselves with some wide, supple hips as well."
     "However, her bootyus maximus was, as always, the greatest sight to behold, the bottom of each cheek protruding through the bottom of her soon to be ruined skirt, the very bottom of her panties eliciting lewd thoughts from me."
@@ -14652,7 +14652,7 @@ label AE062:
     AE "See you later, Inoue-san."
     "Honoka and Shiori lightly bowed to each other and I gave a quick wave goodbye as Shiori and I huddled on to the shuttle and took our seats."
     hide BE with dissolve
-    show AE casual-neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    show AE casual-neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     MC "Haaah, what a night, eh?"
     AE "Hmm..."
     if getSkill("Academics") > 11:
@@ -16825,7 +16825,7 @@ label AE008b:
     AE "...-gize."
     "Shiori-san sighed in exasperation before shaking her head and turning around to face me."
     if getAffection("AE") < 2:
-        show AE neutral-annoyed at Position(xalign=0.5, yalign=1.0) with dissolve
+        show AE neutral-annoyed at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
         AE "...Oh. It's you."
         MCT "O-OY! Don't 'Oh, it's you.' me!"
         show AE neutral-eyebrow
@@ -16838,10 +16838,10 @@ label AE008b:
         show AE neutral
         AE "You're right. My apologies. What is it?"
     elif getAffection("AE") < 6:
-        show AE neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+        show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
         AE "Hm? Is there something you need, Hotsure-san?"
     else:
-        show AE neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+        show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
         AE "Can I help-"
         show AE happy
         AE "Ah. Hotsure-san. Well now, at the very least it's a welcome face. Anything you need?"

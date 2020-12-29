@@ -1655,7 +1655,7 @@ label PRG014_c1_after:
     PRG "L-Likewise!"
     hide Sakura with dissolve
     MC "You were right on that one."
-    show PRG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     PRG "Hm?"
     MC "She does seem nice."
     jump daymenu
@@ -12128,7 +12128,7 @@ label PRG055B:
     hide Sakura with dissolve
     "Sakura grabbed her backpack and threw her notebook in it, zipping it carefully and hauling it out of the room with her."
     stop music
-    show PRG doubt at Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG doubt at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     "Aida watched as Sakura left, then turned back to her cookies. I stood in the middle of the room for a moment, before sliding a stool up to the counter."
     MC "Hey."
     PRG "... Hi."
@@ -12671,7 +12671,7 @@ label PRG056A:
     PRG "Bye, Sakura!"
     Sakura "Oh, and Hotsure-chan! Keep an eye out for aliens!"
     hide Sakura with dissolve
-    show PRG unique at Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG unique at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     "She winked at me and headed off for the dorms."
     PRG "Um... what was she talking about?"
     MC "God... long story."
@@ -13443,7 +13443,7 @@ label PRG056C_c1_2:
     PRG "I-I'm sure. Let's meet again tomorrow and we can continue."
     BE "M'kay. I'll see you guys tomorrow then."
     hide BE with dissolve
-    show PRG unique at Position(xalign=0.5, yalign=0.5) with dissolve
+    show PRG unique at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
     "Honoka waved goodbye to us as she headed out the door. After she was surely gone, Aida sighed and started cleaning up the knives and cut vegetables."
     "While she was sorting the knives in the block, I joined her, putting an arm around her shoulders and pulling her into a side hug."
     MC "I know."
@@ -13711,7 +13711,7 @@ label PRG057A_c1_after:
     hide Sakura with dissolve
     "Sakura slammed down the rest of her pasta and was out the door before I could even finish chewing."
     MC "She... thinks she has a deck of cards?"
-    show PRG unique at Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG unique at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     PRG "She can be a little all over the place, sometimes. That's just how she is."
     MC "I see."
     "Having finished, I took my plate over to the sink and ran some water over it to wash away the extra sauce and bits of herbs."
@@ -14463,7 +14463,7 @@ label PRG057C_lose:
     hide Sakura with dissolve
     "Sakura hurried off to the infirmary, a happy sort of skip in her step."
     MC "Well, I guess things will be back to normal in the kitchen in no time, eh?"
-    show PRG nervous at Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG nervous at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     PRG "Yeah..."
     MC "And, you look exhausted."
     PRG "... Extremely."
@@ -14726,7 +14726,7 @@ label PRG058:
         MC "Well, I guess we have the day off then, what should we do?"
         PRG "Um... well, this is probably the last nice day we'll have for awhile. We could do something outside. I-If you want..."
         MC "Good call. Oh! I've got it! Wanna go swimming?"
-        show PRG worried at Position(xalign=0.5, yalign=1.0) with dissolve
+        show PRG worried at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
         PRG "Um... swimming?"
         MC "Sure! It'd be a ton of fun! Can you swim?"
         show PRG unique
@@ -14748,7 +14748,7 @@ label PRG058:
     "I walked out onto the pool deck and grabbed a towel for myself and another for my fair lady."
     "Off came the shirt as I stretched myself a bit. I wasn't planning on swimming olympian style today, but a few laps would probably do my body good."
     PRG "Um... Keisuke?"
-    show PRG swim-sad-2 at Position(xpos=1.0, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG swim-sad-2 at Position(xpos=0.95, xanchor=0.5, yalign=1.0) with dissolve
     "Aida was poking her head out of the changing room door, looking around like a deer in the woods."
     MC "Hey, everything okay?"
     PRG "Um... is t-there anyone else out there? L-Like by or in the pool?"
@@ -14759,7 +14759,7 @@ label PRG058:
     MC "Yep. No one but us."
     PRG "O-Okay..."
     PRG "{size=-6}Um... p-please don't laugh...{/size}"
-    show PRG swim-sad-2 at Position(xalign=0.5, yalign=0.5) with dissolve
+    show PRG swim-sad-2 at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
     MC "Uh... whoa..."
     PRG "I-I don't have a swimsuit that... f-fits me. So... I-I had to wear one of Alice's old ones..."
     PRG "And, none of her one-piece suits fit me, so..."
@@ -15034,7 +15034,7 @@ label PRG059:
     PRG "G-Good morning, Matsumoto-san."
     AE "Good morning, Kodama-san."
     hide AE with dissolve
-    show PRG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     "Aida smiled at her as she walked down the aisle between the desks towards me. Even though she had the extra room, she put her hands on her belly and looked around her to make sure she wasn't going to run anything over, or smack someone in the face."
     MC "Hey. All good?"
     PRG "Mhm!"
@@ -15308,6 +15308,7 @@ label PRG059:
     MC "Don't you say another word."
     show PRG unique
     "I pulled Aida down into a lying position, with my arms around her. I held her incredibly close to me, her eyes incredibly close to mine."
+    stop music
     MC "Aida, do you realize one thing? One huge thing? Every 'issue' you've mentioned, no matter what, doesn't matter."
     MC "I will NOT be leaving you, or the babies. I told you this same thing when you first told me that you were pregnant. And, I'm telling you again, right now."
     MC "I swear on everything that I own. I'm not going anywhere."
@@ -15364,6 +15365,7 @@ label PRG060:
     $setProgress("PRG", "PRG061")
     scene Dorm Interior with fade
     play music Schoolday
+    $setSize(5)
     "Rather than my day starting with my alarm going off and me blasting obscenities in my head as I nearly hurled my ringing phone across the room, I awoke to the sound of my phone ringing instead."
     "Sitting up, I looked over. I so rarely got phone calls, that, when I did receive one, it almost made me panic a bit."
     "When I saw the caller ID, my heart slammed to a halt in my chest and my blood ran as cold as ice. The panic had a reason for its existence now."
@@ -15434,7 +15436,7 @@ label PRG060:
     Mom "Well, all you can do is be there for her. I'm not exactly thrilled that you're first telling us this now, but I do have to commend you for being mature about this."
     MC "Thanks, Mom. I can text you a copy of the ultrasound, if you'd like."
     Mom "Yes, yes, please do. I never thought I'd be seeing my grandchild this early, but I suppose better now than never."
-    MC "And... that's the other thing. She's having more than one?"
+    MC "And... that's the other thing. She's having more than one."
     Mom "... You're joking."
     MC "No. Aida's condition raises her chances of having multiple babies at one time immensely."
     Mom "I... okay. How many is she having?"
@@ -15538,7 +15540,7 @@ label PRG060:
     PRG "We can try that."
     MC "Perfect."
     "I took Aida's notebook and pencil from her, and stuffed it back into her bag. Putting her bag over my shoulder, I slid her desk out of the way for her and held out  a hand for her."
-    "She one hand and put her other one on her thigh, pushing down to help balance as she got up."
+    "She took my hand and put the other one on her thigh, pushing down to help balance as she got up."
     show PRG angry-2
     PRG "Mmph... ngh..."
     "I held her hand for support as she eased herself to her feet. When she turned herself around, I had to let go and back up to avoid getting smashed by a swinging baby gut."
@@ -15986,6 +15988,7 @@ label PRG061:
         MC "I'm not leaving. Final answer."
         Nurse "Then go tell her that. She needs you, Hotsure-san. She needs you more than you'll ever know."
         "I walked past the nurse and opened the door back up."
+        show PRG neutral with dissolve
         "Aida sat in her chair, her belly still covered in ultrasound gel."
         "She looked up at me. And I looked down at her."
         show PRG worried

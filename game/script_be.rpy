@@ -7570,7 +7570,7 @@ label BEGTS002:
     MC "See you around, Yamazaki-san."
     GTS "Farewell, Hotsure-san."
     hide GTS with dissolve
-    show BE neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     BE "I never knew how outgoing Naomi-chan was. When we first arrived, all I saw was a timid girl in the school garden. I thought there was something mysterious about her, but I never thought..."
     "Honoka seemed to pause midway through her sentence, like she didn't know what to say."
     MC "You never thought what?"
