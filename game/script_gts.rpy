@@ -5777,8 +5777,8 @@ label GTSPRG001:
     play music Busy
     "As I was heading to the dorms after class I spotted Naomi and Aida down in the garden."
     MC "Hey girls."
-    show GTS neutral at Position(xpos=0.7, xpos=0.5, xanchor=1.0, yanchor=1.0) with dissolve
-    show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xpos=0.5, xanchor=1.0, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.7, xanchor=1.0, yanchor=1.0) with dissolve
+    show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xanchor=1.0, yanchor=1.0) with dissolve
     GTS "Hey Hotsure-san."
     PRG "G-Good evening, Hotsure-san."
     MC "What is going on here?"
