@@ -3468,6 +3468,7 @@ label GTS024_c1_2:
 
 label GTS025:
     $setProgress("GTS", "GTS027")
+    $setTime(TimeEnum.EVE)
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn't shown up."
     show GTS neutral at center with dissolve
@@ -4630,7 +4631,7 @@ label GTS035:
     "I was going to meet Naomi's parents today. I didn't know much about them, and I wasn't sure just how much they even knew about me."
     MCT "Gotta make a good first impression."
 
-    scene GTS Courtyard with fade
+    scene Courtyard GTS with fade
     "I stood alongside Naomi as we waited. As I looked up at her, she showed no hesitation as she looked down at me and smiled."
     show GTS_S neutral with dissolve
     GTS_S "You look handsome today, Hotsure-san."
@@ -4653,28 +4654,31 @@ label GTS035:
         "I joined Naomi in the petting, kneeling beside her as a smile grew on my face and I rubbed Kimiko's fluffy fur."
         MC "Hey there, girl. Wow, you're just as cute as Naomi said. Such nice fur, too."
         UNKNOWN "Thanks. I spend a lot of time taking care of her fur."
-        #show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
+        hide GTS_S with dissolve
+        show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
         #show Kazumi at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
         "I looked up and saw a smiling face that reminded me of Naomi."
     else:
         "I smiled as the dog seemed happy to receive Naomi's affection before I turned my focus to the figure who had called out earlier."
-        #show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
+        hide GTS_S with dissolve
+        show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
         #show Kazumi at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
     Kazumi "Hello, I'm Kazumi Yamazaki. It's a pleasure to meet you."
     MC "Keisuke Hotsure, nice to meet you as well."
     "We both gave each other a light bow as Naomi's father came up alongside Kazumi."
-    #show Akihiro neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Akihiro neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     UNKNOWN "Kazumi, I thought you said you'd keep Kimiko in the car."
     Kazumi "Apologies, Father. She must've smelt Naomi and became rather restless, so I thought it'd be best to let her out."
     UNKNOWN "Hm, just make sure that she doesn't run off again."
     "Kazumi nodded and gave a light snap of her fingers, which made Kimiko bark and move to Kazumi's side before sitting on her own."
     UNKNOWN "Now, then. Who might you be, young man?"
+    hide GTS
     show GTS_S embarrassed
     GTS_S "Ah! Yes, sorry! Father, Mother, this is my... boyfriend, Keisuke Hotsure."
     "Her father didn't react much to the news, as he only gave a small nod while, Kazumi had a more surprised expression, as did her mother."
     MC "It's an honor to meet you, sir!"
     "I bowed deeply."
-    #show Miko neutral at Position(xpos=0.9, xanchor=0.5, yalign=1.0) with dissolve
+    show Miko neutral at Position(xpos=0.9, xanchor=0.5, yalign=1.0) with dissolve
     Akihiro "Hotsure-san, I'm Akihiro Yamazaki, and this is my wife Miko."
     Miko "A pleasure, Hotsure-san."
     MC "Likewise, ma'am."
@@ -4706,9 +4710,9 @@ label GTS035_c1_1:
     MC "W-what!?"
     GTS_S "Of course Father, we'll be there on time."
     Akihiro "Good, good. It was nice meeting you, Hotsure-san."
-    #hide Akihiro with dissolve
+    hide Akihiro with dissolve
     Miko "It was a pleasure. Please rest well."
-    #hide Miko with dissolve
+    hide Miko with dissolve
     Kazumi "See you two tomorrow morning. Later! Come on, Kimiko."
     #hide Kazumi with dissolve
     "She snapped her fingers once more and the dog barked excitedly before following after her."
@@ -4730,10 +4734,10 @@ label GTS035_c1_2:
     MC "I'm sorry... I-I wasn't expecting to be asked to join you all. I assumed I would have been intruding if I invited myself so I didn't plan around it."
     Miko "That's unfortunate, but understandable. After all, dear, we shouldn't risk hindering Hotsure-san's school work."
     Akihiro "Yes, I suppose that's true. Very well, Hotsure-san. It was still nice to meet you."
-    #hide Akihiro with dissolve
+    hide Akihiro with dissolve
     "He gave me a light bow to which I bowed deeper, and he left without another word."
     Miko "It was a pleasure to meet you, Hotsure-san. I hope we get another chance to get to know you soon."
-    #hide Miko with dissolve
+    hide Miko with dissolve
     Kazumi "Yeah, that's a bummer, but hey, what can you do? We'll be waiting at the hotel tomorrow morning, Naomi. You know what time Father likes."
     show GTS_S neutral
     GTS_S "Indeed. Thank you, Kazumi."
@@ -4824,7 +4828,7 @@ label GTS035_testpass:
     if getSkill("Art") >= 6:
         #kazumi position left, face right
         Kazumi "Good to see you made it early. Father will be quite pleased to know you're here."
-        show GTS_S neutral with dissolve #position right, face left
+        show GTS_S neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
         GTS_S "Then we best not keep him waiting. He probably already has the plans for today made."
         "Kazumi called the dog back and went back to grab her parents."
     else:
@@ -4837,7 +4841,7 @@ label GTS035_testpass:
     "Dressed in formal kimonos were both of their parents, looking more prepared for a formal dinner then a day on the town."
     #hide kazumi
     MCT "I had some idea how traditional her parents were, but this is a bit more than I was led to believe."
-    #akihiro pos l face r
+    show Akihiro neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=1.0) with dissolve
     Akihiro "Good Morning, Hotsure-san. I'm pleased to see you joining us this early."
     MC "It was no trouble, sir. Yamazaki-san made sure that we made it here in a timely manner."
     Akihiro "I expect nothing less from my daughter. Now then, we should make our way to town. There is a coastal trail we can take."
@@ -4932,7 +4936,8 @@ label GTS035_testpass:
     MCT "Naomi took the calligraphy set from my hands and held it at her side. Unsurprisingly, they looked a lot smaller in her hands."
     show GTS_S neutral
     GTS_S "Shall we see what else the town has to offer?"
-    #(Dissolve in Akihiro on screen left. Shift Naomi from center to screen right.)
+    show GTS_S neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Akihiro neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=1.0) with dissolve
     Akihiro "I spotted a flyer in there advertising a local boardwalk if you two would be interested?"
     MC "What do you say, Yamazaki-san?"
     show GTS_S happy
@@ -4975,6 +4980,7 @@ label GTS035_testpass:
     scene Japanese Room with fade
     "As we approached the inn for dinner, it dawned on me that we hadn't considered Naomi's size at all."
     MC "If I may suggest, can dinner be held on the back porch? The weather is quite nice tonight, and it may be beneficial so that everyone can be included in tonight's meal."
+    show Akihiro neutral with dissolve
     Akihiro "The weather is quite nice, but I'd hate for our food to be interrupted by pests."
     MC "I don't think all members present will fit within the building, sir."
     "Naomi blushed and sunk her face into her hair, slouching as she tried to turn invisible. Her father tapped his chin for a moment."
@@ -5079,6 +5085,7 @@ label GTS035_testpass:
         else:
             Akihiro "It is reassuring to know you were able to dress properly for this occasion."
         "Before I could form a response he patted my arm and headed inside, leaving alone on the porch."
+    hide Akihiro with dissolve
     MCT "Well, he certainly is blunt when he wants to be."
     show GTS neutral with dissolve
     GTS "Is everything alright, Hotsure-san?"

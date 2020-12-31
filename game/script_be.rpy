@@ -2950,7 +2950,7 @@ label BE022:
     MC "Yeah, sure."
     "I took a seat next to Honoka and looked at Alice's spread."
     MC "Hey, Honoka. What's going on?"
-    MC "I'm helping Alice-chan do some sort of experiment."
+    BE "I'm helping Alice-chan do some sort of experiment."
     BBW "'Assessment' would be a more accurate way of phrasing it."
     BBW "I realize that vending machines are a valid alternative to the regular lunch line, but surely not every item in them is worth the space or cost."
     if isEventCleared("PRG002"):

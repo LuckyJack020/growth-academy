@@ -4150,7 +4150,7 @@ label FMG029:
     jump daymenu
 
 label FMG031:
-    #"Motivation"
+    $setSize(3) #TEMPORARY: intended for FMG030
     $setProgress("FMG", "FMG034")
     $setTime(TimeEnum.EVE)
     scene Lockers with fade

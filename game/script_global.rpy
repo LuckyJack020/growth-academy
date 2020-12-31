@@ -32,6 +32,7 @@ define Miko = Character('Miko', color="#C0C0C0")
 define Minei = Character('Minei', color="#C0C0C0")
 define Misaki = Character('Misaki', color="#C0C0C0")
 define Miura = Character('Miura', color="#C0C0C0")
+define Minami = Character('Minami', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
 define Mom = Character('Mom', color="#FF3300")
 define Naoki = Character('Naoki', color="#C0C0C0")
@@ -112,7 +113,7 @@ image Art Classroom = "Graphics/ui/bg/NYI.png"
 image Gym = "Graphics/ui/bg/auditorium.png"
 image Track = DynamicImage("Graphics/ui/bg/track_[gametime].png")
 image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].png")
-image Roof = "Graphics/ui/bg/roof_day.png"
+image Roof = DynamicImage("Graphics/ui/bg/roof_[gametime].png")
 image Nurse Office = DynamicImage("Graphics/ui/bg/nurseoffice_[gametime].png")
 image Pool = "Graphics/ui/bg/schoolpool_day.png"
 image Festival = DynamicImage("Graphics/ui/bg/festival_[gametime].png")
@@ -157,7 +158,7 @@ image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
 image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
 image Giant Dorm Exterior = "Graphics/ui/bg/NYI.png"
 image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
-image GTS Courtyard = "Graphics/ui/bg/NYI.png"
+image Courtyard GTS = "Graphics/ui/bg/NYI.png"
 
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
@@ -789,6 +790,10 @@ image Tako nohat-happy = "Graphics/minor/tako-nohat-happy.png"
 image Tako nohat-unique = "Graphics/minor/tako-nohat-unique.png"
 image Tako nohat-sad = "Graphics/minor/tako-nohat-sad.png"
 image Tako nohat-surprised = "Graphics/minor/tako-nohat-surprised.png"
+
+image Akihiro neutral = "Graphics/minor/akihiro-neutral.png"
+image Miko neutral = "Graphics/minor/miko-neutral.png"
+image Minami neutral = "Graphics/minor/minami-neutral.png"
 
 image dummy = "Graphics/ui/dummy.png"
 
