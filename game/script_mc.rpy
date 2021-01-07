@@ -297,17 +297,18 @@ label global000_AE:
     scene Gate Front with dissolve
     UNKNOWN "Mizutani-san, what do you think you're doing?"
     play music FMG
-    show AE angry at Position(xpos=0.75, xanchor=0.5) with vpunch
+    show cg AE000 with dissolve #show AE angry at Position(xpos=0.75, xanchor=0.5) with vpunch
     FMG "Check it out!"
     "Around the corner came a tanned girl somehow managing to carry a wooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
-    show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    #show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     FMG "I was getting two benches at once! I thought you'd like me getting twice what ya asked!"
     UNKNOWN "Not if it takes you three times as long."
-    hide AE with dissolve
-    hide FMG with dissolve
-    show BE surprised at center with dissolve
+    #hide AE with dissolve
+    #hide FMG with dissolve
+    #show BE surprised at center with dissolve
     BE "Oh boy... I feel awkward just standing here..."
-    hide BE with dissolve
+    #hide BE with dissolve
+    hide cg with dissolve
     show AE angry at Position(xpos=0.75, xanchor=0.5) with dissolve
     show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     menu:
@@ -694,7 +695,7 @@ label global000_sit_c3:
     menu:
         "Needed the room to stretch out, Mizutani?":
             jump global000_sit_c3_1
-        "Seems kinda lonely back here, Aida...":
+        "Seems kinda lonely back here, Kodama-san...":
             jump global000_sit_c3_2
 
 
@@ -804,7 +805,7 @@ label global000_sit_c3_2:
     hide PRG
     hide FMG
     $setFlag("global000_satPRG")
-    MC "Seems kinda lonely back here, Aida..."
+    MC "Seems kinda lonely back here, Kodama-san..."
     show PRG sad
     PRG "Oh! Uh, ah, well, there's three of us now, right?"
     MC "Heh, I suppose."

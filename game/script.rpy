@@ -560,7 +560,8 @@ init python:
     def updateMinorSizes(newsize):
         global minorsizes, legalsizes
         legalsizes = {
-            "Yuki": [1, 3]
+            "Yuki": [1, 3],
+            "Natsuki": [1, 2, 3]
         }
 
         try: #backwards compatibility, remove later
@@ -650,7 +651,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1}
+        minorsizes = {'Yuki': 1, 'Natsuko': 1}
         gametime = TimeEnum.DAY
         flags = []
         vars = {}
@@ -675,7 +676,7 @@ label start:
 label splashscreen:
     scene black
     with Pause(1)
-    $renpy.movie_cutscene("Graphics/ui/intro.mkv")
+    $renpy.movie_cutscene("Graphics/ui/intro.webm")
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.

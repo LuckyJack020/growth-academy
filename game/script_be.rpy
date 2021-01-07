@@ -758,7 +758,6 @@ label BE008:
     show BE happy at center with dissolve
     BE "Oh hi Kei-chan! Good, you're hanging out here, can I come in?"
     MC "Oh!"
-    show cg BE010 with dissolve
     "Seeing Honoka outside of my door was definitely something I didn't expect. But it was far from unwanted. Besides, it was nice to see her head-on without having her run into me like she often did."
     MC "Yeah, sure, come on in. There's not a rule about having girls in my room is there?"
     show BE neutral

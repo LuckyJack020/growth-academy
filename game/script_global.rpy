@@ -165,6 +165,7 @@ image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 #CG + Images
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
 
+image cg AE000 = "Graphics/ui/gallery/AE000.png"
 image cg AE015 = "Graphics/ui/gallery/AE015.png"
 image cg AE024 = "Graphics/ui/gallery/AE024.png"
 image cg AE024b = "Graphics/ui/gallery/AE024b.png"
@@ -767,13 +768,13 @@ image Sakura neutral = "Graphics/minor/sakura-neutral.png"
 image Sakura happy = "Graphics/minor/sakura-happy.png"
 image Sakura sad = "Graphics/minor/sakura-sad.png"
 
-image Natsuko neutral = "Graphics/minor/natsuko-neutral.png"
-image Natsuko annoyed = "Graphics/minor/natsuko-neutral.png"
-image Natsuko angry = "Graphics/minor/natsuko-neutral.png"
-image Natsuko disappointed = "Graphics/minor/natsuko-neutral.png"
-image Natsuko smug = "Graphics/minor/natsuko-neutral.png"
-image Natsuko flex = "Graphics/minor/natsuko-neutral.png"
-image Natsuko happy = "Graphics/minor/natsuko-neutral.png"
+image Natsuko neutral = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko angry = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko smug = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko flex = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko happy = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-happy.png")
 
 image Tako neutral = "Graphics/minor/tako-neutral.png"
 image Tako angry = "Graphics/minor/tako-angry.png"
@@ -1061,7 +1062,7 @@ init 2 python:
     eventlibrary['FMG029'] = {"name": "The Grind", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG031", "obsflags": [],               "conditions": []}
     eventlibrary['FMG031'] = {"name": "Motivation", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG034", "obsflags": [],               "conditions": []}
     eventlibrary['FMG034'] = {"name": "Big and Bad", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG035", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG035'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "mountain",                 "priority": PrioEnum.NONE, "sp": 6,     "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['FMG035'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "", "obsflags": [],                     "conditions": []}
 
     #Optional
     eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}

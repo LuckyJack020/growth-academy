@@ -4002,7 +4002,7 @@ label FMG029:
     $setProgress("FMG", "FMG031")
     scene Cafeteria with fade
     play music Schoolday
-    "Just another morning here at GA. Somehow I managed to roll out of bed once again, get dressed, and make my way to the cafeteria."
+    "Just another morning here at Seichou. Somehow I managed to roll out of bed once again, get dressed, and make my way to the cafeteria."
     MCT "Man, these waffles suck."
     MCT "How is it even possible to mess up waffles? Like, you just put batter in the waffle-maker and wait for it to be finished!"
     "I just kept poking at the half-baked waffles with my fork as I got myself mentally ready for the day."
@@ -4091,7 +4091,7 @@ label FMG029:
     FMG "Well, unless you knew you wouldn't be caught~"
     MCT "Sheesh, Akira's always playing games with my head..."
     "And with that, Akira dashed towards the stall with her gym bag in hand."
-    MCT "Well, That means I have an hour to kill."
+    MCT "Well, that means I have an hour to kill."
     "After an eternity (five minutes), Akira walked out of the lockers."
     show FMG neutral
     FMG "Alright dude, I hope you're ready for the workout of a lifetime! No stretching! No warmups! We're maxing out immediately!"
@@ -4099,7 +4099,7 @@ label FMG029:
     MC "Wait a second. You're wearing the EXACT same clothes, Akira!"
     MC "How did it take you so long to 'change,' exactly?"
     FMG "Huh? You've got it all wrong! My usual shirt is Crimson. This one's Cornell Red!"
-    MCT "Am I going insane? First Natsuko's like... a head taller than me, and now Akira's got the same shirt in 500 different shades of red! Maybe I should've attended an asylum rather than GA."
+    MCT "Am I going insane? First Natsuko's like... a head taller than me, and now Akira's got the same shirt in 500 different shades of red! Maybe I should've attended an asylum rather than Seichou."
     MC "You know what? Forget it. What're we doing today?"
     FMG "Heh, glad you asked. Like I said, it's leg day!"
     MCT "Uuuuuuuuuuuuuuugh."
@@ -4248,10 +4248,10 @@ label FMG031:
     FMG "You know what? Yeah! You're totally right!"
     MC "You're welcome. I suppose I'm just an inspirational person!"
     "Akira rolls her eyes at me."
-    FMG "Humble as always, aren't you? ."
+    FMG "Humble as always, aren't you?"
     "I flexed my arms confidently."
     show FMG happy
-    FMG "Jeez, all this motivational talk got me hungry.What about you? Ready for a post-workout meal?"
+    FMG "Jeez, all this motivational talk got me hungry. What about you? Ready for a post-workout meal?"
     MC "Yeah, I'm starving. What are you feeling tonight?"
     MC "Good question...how about... a nice, juicy steak?"
     FMG "NOW you're speaking my language!"
@@ -4383,7 +4383,7 @@ label FMG034:
     FMG "You really have to show up at the worst times to ruin my day, huh?"
     FMG "Well since it isn't obvious for you, Natsy, Kei and I are here to work out, so don't bother us."
     show Natsuko angry
-    Natsuko "Don't you ever call me natsy."
+    Natsuko "Don't you ever call me Natsy."
     show FMG surprised-2
     FMG "Oh my, I'm shaking."
     show FMG angry-2

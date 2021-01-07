@@ -5607,7 +5607,7 @@ label GTS043:
     MC "Yep! She saw me with the uniform, and she thought it'd be something fun to try."
     GTS "Knowing Mizutani-san, I imagine she--"
     FMG "Found 'em!"
-    "Akira came running back with two large objects, one in each arm. They didn't appear to slow her down in the slightest.as she galloped along the sand pit with both perched on her shoulders."
+    "Akira came running back with two large objects, one in each arm. They didn't appear to slow her down in the slightest as she galloped along the sand pit with both perched on her shoulders."
     show GTS neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve #slide ani?
     show FMG flex at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     "Once Akira had made her way back to the center of the field, she lowered a large wooden stand to the ground to free up her right arm. The stand was painted black, with two long wooden prongs jutting out from the top to form a U-Shape."
@@ -5644,24 +5644,26 @@ label GTS043:
     FMG "Awesome! I'm... I'm glad."
     show GTS neutral
     "Akira placed one of the square boards atop the prongs of the stand,adjusting it to make sure it was centered. She slowly backed away from the stand, clearing the field for Naomi."
-    "Naomi's giant, encompassing shadow stretched nearly halfway across the entire sand pit. Akira, completely unphased, crossed her arms across her pecs and confidently smiled at her."
+    "Naomi's giant, encompassing shadow stretched nearly halfway across the entire sand pit. Akira, completely unfazed, crossed her arms across her pecs and confidently smiled at her."
     FMG "We haven't really hung out like this before, have we?"
     GTS "I suppose we haven't. It's very fortunate that martial arts have brought us together."
     show FMG neutral
-    FMG "I wanted to get to know you earlier, but then you got transferred to the GTS dorm and everything, so..."
+    FMG "I wanted to get to know you earlier, but then you got transferred to the giant's dorm and everything, so..."
     "Naomi slowly nodded as she listened to Akira speak. She looked like she was equally troubled by the situation."
     GTS "The move wasn't easy on my part, either. I had many worries of my own."
     FMG "I'll bet. I was pretty scared when I first discovered that I had a factor, but after a while I... learned to adjust and appreciate it more."
     show FMG sad
     FMG "Still, though. I totally get it. Adjusting to your new height isn't going to be easy. I might have problems with doorways, but you've got even more of a challenge."
-    show GTS_S neutral-2
+    hide GTS
+    show GTS_S neutral-2 at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0)
     GTS_S "Kei-chan and Inoue-san have helped me cope. The medical staff offered sound advice as well, but setting my spirits at ease is another matter entirely."
     show FMG neutral
     play music PRGChallenge
     FMG "Mental health is tricky, Yamazaki-san. Even the experts have trouble explaining everything. That's why I always fall back to physical health. It's simple, concrete, and easy to understand."
     show FMG happy
     FMG "If you're fit and your body thanks you after a solid workout, well... everything else falls into place. That high you get when you finish your last set never fails to make me happy."
-    show GTS neutral
+    hide GTS_S
+    show GTS neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0)
     GTS "I imagine it's very similar to the feeling one gets after a long, effective meditation. That's very sound advice, Mizutani-san. Thank you."
     FMG "You're welcome! Now, put that advice to use and BREAK THAT THING!"
     show GTS happy-2
@@ -5734,7 +5736,8 @@ label GTS043:
     "The stack folded and buckled like an accordion, stray pieces of wood falling to the ground in sequence mere seconds later."
     "{i}CRACKLE!{/i}"
     show FMG surprised
-    "The shockwave from Naomi's arms was enough to send the sides of the board stand tumbling over, leaving everything in a pile of dust. While the stand itself remained intact, the impact of the stand falling over kicked up a massive cloud of sand from the field. The stray bits of yellow dust clouded up near the earth, then faded as the cloud of sand disappeared."
+    "The shockwave from Naomi's arms was enough to send the sides of the board stand tumbling over, leaving everything in a pile of dust. While the stand itself remained intact, the impact of the stand falling over kicked up a massive cloud of sand from the field."
+    "The stray bits of yellow dust clouded up near the earth, then faded as the cloud of sand disappeared."
     "{i}Fizzle...{/i}"
     "Once the cloud disappeared, Akira and I stood in awe at the display of power we had just witnessed. Naomi was still following through with her heavy strike, exhaling proudly."
     FMG "Yamazaki-san... that was AMAZING!"
@@ -5771,7 +5774,7 @@ label GTS043:
     show GTS neutral
     GTS "Gladly. If Mizutani-san expressed interest like that, I should definitely return the favor."
     "The two of us spent a few more minutes talking while we prepared for Tai Chi. I already had everything  with me, but Naomi needed a few minutes to grab some things from her dorm."
-    "I followed her back to the GTS hangars to make sure we had everything we needed."
+    "I followed her back to the giant's hangars to make sure we had everything we needed."
     jump daymenu
 
 label GTS044:
