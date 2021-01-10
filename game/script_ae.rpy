@@ -15444,7 +15444,7 @@ label AE066:
     "Upon hearing that, my eyes opened in surprise, though doubtless they went unseen by my speaking partners. Though it was comforting to know I wasn't alone in my fears, the implication was... worrying to say the least."
     Minori "She's seemed a bit on edge in recent days... maybe go check up on her when you can, okay? Ask her how she is."
     show Minori happy
-    Minori "I mean, she's usually not an open book with is, but I guess she likes opening up to you more? Mhmhm~"
+    Minori "I mean, she's usually not an open book with us, but I guess she likes opening up to you more? Mhmhm~"
     MC "Yeah, I guess so."
     show Minori neutral
     Minori "Hm..."

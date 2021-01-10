@@ -1745,7 +1745,7 @@ label PRG015_after:
     play music Schoolday
     scene black with fade
     pause 1
-    scene Hallway with fade
+    scene Drom Exterior with fade
     show PRG neutral with dissolve
     PRG "Thank you so much for helping out, Hotsure-san."
     MC "No problem. You'll do just fine tomorrow!"
@@ -5573,7 +5573,7 @@ label PRG032:
     MC "That'd be wonderful. Let's get going then."
     hide PRG with dissolve
     "The two of us took off for the infirmary. Walking along, I took notice of Aida's gait as she walked beside me."
-    "That first day she want back to class after getting pregnant, she had been much more awkward with her steps, almost leaning backwards to counter the weight of her belly. But now, she was walking as she had before, not leaning back whatsoever."
+    "That first day she went back to class after getting pregnant, she had been much more awkward with her steps, almost leaning backwards to counter the weight of her belly. But now, she was walking as she had before, not leaning back whatsoever."
     show PRG neutral with dissolve
     MC "You're looking more comfortable with yourself now."
     PRG "H-How do you mean?"
@@ -7530,6 +7530,7 @@ label PRG039_c1_1:
     "Aida and I brought our mugs to the counter and thanked the cashier. Heading outside, I took Aida's hand in mine, and she gave my hand a gentle squeeze."
 
     scene Town with fade
+    show PRG neutral with dissolve
     PRG "Um, Keisuke?"
     MC "Yeah? What's up?"
     PRG "Y-You mentioned before that you couldn't afford to get a bad grade on that paper?"
@@ -15115,32 +15116,32 @@ label PRG059:
         PRG "Um... p-please don't tell anyone about this..."
         MC "Hey, who would I tell?"
         "Aida looked around us, making doubly sure that no one was listening in."
-        PRG "{size=-6}I was doing laundry.{/size}"
+        PRG "{size=-2}I was doing laundry.{/size}"
         MC "{size=-6}Did something happen? Did you spill making dinner last night or something?{/size}"
         PRG "No..."
-        PRG "{size=-6}L-Last night, when I was asleep, I...{/size}"
-        extend "{size=-6} started lactating...{/size}"
+        PRG "{size=-2}L-Last night, when I was asleep, I...{/size}"
+        extend "{size=-2} started lactating...{/size}"
         MC "{size=-6}Oh, shoot. Wouldn't your bra catch some of it, though? Like, at least a little?{/size}"
         show PRG worried
-        PRG "{size=-6} It would have, if I was wearing one.{/size}"
+        PRG "{size=-2} It would have, if I was wearing one.{/size}"
         MC "... Oh."
-        PRG "{size=-6}Most girls don't wear one to bed. They're really uncomfortable to sleep in.{/size}"
+        PRG "{size=-2}Most girls don't wear one to bed. They're really uncomfortable to sleep in.{/size}"
         "One would think that, having a sister, I would've known this. But, usually the topic of her wearing a bra to bed wasn't on our conversation docket."
         MC "I see."
-        PRG "{size=-6}So... what I think happened is, while I was sleeping, I turned onto my back, then flipped onto my side too quickly.{/size}"
+        PRG "{size=-2}So... what I think happened is, while I was sleeping, I turned onto my back, then flipped onto my side too quickly.{/size}"
         MC "That would make that happen?"
-        PRG "{size=-6}Mhm... because...{/size}"
+        PRG "{size=-2}Mhm... because...{/size}"
         "Aida sighed, and rather than just whispering closely to me, parted my hair and actually leaned over so she could reach my ear. My right arm, meanwhile, got a nice rubbing by a passing milkmaker."
-        PRG "{size=-6}Keisuke, it's no secret. Just... look at my chest.{/size}"
-        PRG "{size=-6}I'm not exactly...{/size}"
-        extend "{size=-6} flat.{/size}"
+        PRG "{size=-2}Keisuke, it's no secret. Just... look at my chest.{/size}"
+        PRG "{size=-2}I'm not exactly...{/size}"
+        extend "{size=-2} flat.{/size}"
         MC "{size=-6}Well... I mean, I've noticed, but what does that have to do with you turning onto your side in bed?{/size}"
-        PRG "{size=-6}Turning to my side makes them squish together. And, since I wasn't wearing a bra...{/size}"
+        PRG "{size=-2}Turning to my side makes them squish together. And, since I wasn't wearing a bra...{/size}"
         MC "Oh... ohhhhh..."
         PRG "Yeah, and milk is really hard to get out of fabric if it dries."
         MC "So, how do you normally keep yourself from turning over?"
         PRG "Well, it's not that I can't sleep on my side. That's actually the healthiest way for pregnant women to sleep. I just have to make sure that I do it very slowly."
-        PRG "{size=-6}If I move too fast, they kind of bounce around a lot. And, even worse, if my arm comes up and rests on them.{/size}"
+        PRG "{size=-2}If I move too fast, they kind of bounce around a lot. And, even worse, if my arm comes up and rests on them.{/size}"
         "I imagined a jug of milk blowing up from the rubber band trick."
         MC "Oh, yeah. I understand now."
         PRG "So... I was washing my sheets and blankets this morning. That's why I couldn't eat."
