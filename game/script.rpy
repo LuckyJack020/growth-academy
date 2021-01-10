@@ -35,7 +35,9 @@ init python:
         'hallway': ("school", (745,375)),
         'hillroad': ("town", (1100,650)),
         'library': ("school", (490,560)),
+        'lockers': ("school", (730,220)),
         'musicclassroom': ("school", (740,490)),
+        'nurseoffice': ("school", (590,590)),
         'office': ("school", (590,590)),
         'pool': ("school", (440,165)),
         'roof': ("school", (750,375)),
@@ -104,6 +106,11 @@ init python:
     Shake = renpy.curry(_Shake)
 
     #Condition enums/stuff
+    class TimeEnum:
+        DAY = "day"
+        NIGHT = "night"
+        EVE = "eve"
+
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
 
@@ -467,16 +474,14 @@ init python:
             skills[s] += val
 
     def setSizeDebug(mod):
-        global globalsize, prgsize, minorsize
+        global globalsize, prgsize
         globalsize += mod
         if globalsize < 1:
             globalsize = 1
         if globalsize > 6:
             globalsize = 6
         prgsize = globalsize
-        minorsize = int(math.floor(globalsize/2)) + 1
-        if minorsize > 3:
-            minorsize = 3
+        #updateMinorSizes() #change after backwards compatibility is broken
 
     def getSkill(s):
         if s not in skills.keys():
@@ -543,15 +548,41 @@ init python:
     def getSize():
         global globalsize
         return globalsize
+
     def setSize(size):
-        global globalsize, prgsize, minorsize
+        global globalsize, prgsize
         if size > globalsize:
             globalsize = size
             if size != 3: #Aida's initial pregnancy doesn't follow globalsize schedule
                 prgsize = size
-            minorsize = int(math.floor(globalsize/2)) + 1
-            if minorsize > 3:
-                minorsize = 3
+        #updateMinorSizes(newsize) #change after backwards compatibility is broken
+
+    def updateMinorSizes(newsize):
+        global minorsizes, legalsizes
+        legalsizes = {
+            "Yuki": [1, 3],
+            "Natsuki": [1, 2, 3]
+        }
+
+        try: #backwards compatibility, remove later
+            if instanceof(minorsizes, int):
+                minorsizes = {}
+        except NameError:
+            minorsizes = {}
+        for k in legalsizes.keys():
+            if k not in minorsizes: #backwards compatibility, remove much later (when we stop adding minor characters)
+                minorsizes[k] = legalsizes[k][0]
+            if newsize in legalsizes[k]:
+                minorsizes[k] = newsize
+
+    def getTime():
+        global gametime
+        return gametime
+
+    def setTime(t):
+        global gametime
+        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT:
+            gametime = t
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -620,7 +651,8 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsize = 1
+        minorsizes = {'Yuki': 1, 'Natsuko': 1}
+        gametime = TimeEnum.DAY
         flags = []
         vars = {}
         eventchoices = []
@@ -644,13 +676,7 @@ label start:
 label splashscreen:
     scene black
     with Pause(1)
-
-    show splash with dissolve
-    with Pause(2)
-
-    scene black with dissolve
-    with Pause(1)
-
+    $renpy.movie_cutscene("Graphics/ui/intro.webm")
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.
@@ -961,10 +987,9 @@ label startevent:
     scene black with dissolve
     pause .5
     python:
+        updateMinorSizes(globalsize)
         highlitevent = ""
-        minorsize = int(math.floor(globalsize/2)) + 1 #backwards compatibility
-        if minorsize > 3:
-            minorsize = 3
+        gametime = TimeEnum.DAY
         clearedevents.append(activeevent)
         updateSP(activeevent)
         showQuickMenu = True

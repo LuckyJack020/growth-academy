@@ -1054,7 +1054,6 @@ label BE010:
     MC "Yeah?"
     BE "Alright then."
     "Honoka stepped forward and gained a devious smirk on her face."
-    show cg BE010
     play music BE
     BE "Touch 'em."
     MC "What?"
@@ -1118,6 +1117,7 @@ label BE010_c2:
     MC "You know, this will be my first time doing this."
     BE "Well, then I'm honored to be your first."
     MC "Oh, please don't say it like that. It's going to make this sound way naughtier than it already is."
+    show cg BE010 with dissolve
     "Seeing Honoka zip her lip, I finally crossed the threshold and pushed my hands into her chest. I don't know what sensation I expected her chest to have, but somehow it felt like everything all at once."
     "It was soft, that was for sure, it was easy to discern that from how my hands sank into their masses a good couple of inches."
     "Honoka still had a smile on her face, so I kept examining them. I felt like a doctor, medically probing her, but really all I was doing was trying to take in the feel. Soft, yes. Squishy as well."
@@ -1126,7 +1126,7 @@ label BE010_c2:
     "I carefully moved my hands so they cupped Honoka's boobs instead, and pushed up."
     "They took a slight bit more effort to move than I thought they would, and when I finally pulled my hands away, I got to see them bounce for a few seconds before stopping."
     MC "Wow."
-    hide cg
+    hide cg with dissolve
     show BE happy at center
     BE "Heh, heh. Get yourself a good handful? How did they feel? Were they as soft as you imagined? Were they warm? Tell me!"
     MC "Whoa, um, well. They're... big?"
@@ -2949,7 +2949,7 @@ label BE022:
     MC "Yeah, sure."
     "I took a seat next to Honoka and looked at Alice's spread."
     MC "Hey, Honoka. What's going on?"
-    MC "I'm helping Alice-chan do some sort of experiment."
+    BE "I'm helping Alice-chan do some sort of experiment."
     BBW "'Assessment' would be a more accurate way of phrasing it."
     BBW "I realize that vending machines are a valid alternative to the regular lunch line, but surely not every item in them is worth the space or cost."
     if isEventCleared("PRG002"):
@@ -4990,8 +4990,9 @@ label BE028:
     "Honoka's spare hand reached over and grabbed mine. I chuckled. "
     MC "Oh, duh. It can't really test our compatibility if we're not holding hands."
     MC "Okay. Here we go!"
+    show cg BE028 with dissolve
     "The machine lit up 'Squeeze Now' and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
-    show BE happy
+    #show BE happy
     BE "Come on, Kei-chan, we can do this."
     if getAffection("BE") < 8:
         jump BE028_test_1
@@ -5004,6 +5005,7 @@ label BE028_test_1:
     "As Honoka and I squeezed the handle as hard as we could, the display on the machine moved up and down. It passed by the first two titles easily, and continued to waver around the remaining ones."
     "The rhythm was unsteady and strange. Honoka and I looked at each other and squeezed our hands as well, just to make sure it worked as well as legend said it was supposed to."
     "Eventually the device stopped, and the selection stopped third from the top, glowing a pale yellow-orange LED."
+    hide cg with dissolve
     show BE sad
     BE "Aw, Satisfying Soulmates? Darn, we should be way higher than that!"
     MC "I think it's pretty good, we're really high up. Most of the names given here aren't super flattering anyway, at least we got one of the good ones."
@@ -5055,8 +5057,9 @@ label BE028_test_1:
 label BE028_test_2:
     "The two of us looked at the display as we squeezed the handles on the love tester. A light moved back and forth between the top and bottom choices."
     "Honoka's hand was still in mine, and squeezed my hand tighter as we waited for it to make its decision. My other hand felt sweaty as it tugged on the joystick, trying to pull in the trigger as hard as it could go."
-    "It eventually stopped, and to my surprise it landed only one away from the top title. "
+    "It eventually stopped, and to my surprise it landed only one away from the top title."
     MC "Wow. Linked Lovebirds. That's really good."
+    hide cg with dissolve
     show BE happy
     BE "Huh, yeah it is. I think I'm happy with that. We got sooo close to the top though."
     MC "Hm. Well if this thing does work, we're doing pretty good considering how it's not been that long since we started dating."
@@ -5093,10 +5096,11 @@ label BE028_test_2:
 label BE028_test_3:
     "Honoka and I watched the love tester as it responded to our synchronized squeezing. The lights on the machine went wild as a display moved up and down between the best and worst options. We were obviously hoping for the best."
     MC "Come on, come on."
-    show BE happy
+    #show BE happy
     BE "We got this, Kei-chan!"
     "Honoka's fingernails dug slightly into my hand as she squeezed mine. I grit my teeth, and tugged as hard as I could until the display stopped moving."
     "Lights went off in several spots and a weary sound played, so distorted and fragmented that we couldn't make out what it originally was. But the light had stopped right at the top, signifying us as Wedding Wishers."
+    hide cg with dissolve
     show BE surprised
     BE "Holy crap, Kei-chan. Weeee did iiiit!"
     "Honoka jumped in the air, cheering for joy. She landed back down with a thud, and then a jiggle. It was hard not to notice."
@@ -7173,11 +7177,9 @@ label BE039:
     jump daymenu_noadvance
 
 label BEGTS001:
-    #optional
-    #1) Honoka has more Feminine points than Tomboy points.
-    #2) Kei has seen Honoka's dress sprite at least once. (BE20 has been cleared)
-    scene Dorm Exterior with fade #evening
-    #need bgm
+    $setTime(TimeEnum.EVE)
+    scene Dorm Exterior with fade
+    play music Hallway
     #Forces Feminine costume
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
@@ -7195,7 +7197,7 @@ label BEGTS001:
     "I thought it over for a few seconds before responding. Something seemed different about Honoka's texts, but I couldn't quite pin down what it was."
     MCCell "<Sure thing. I'll see you in a bit.>"
 
-    scene Roof with fade #evening
+    scene Roof with fade
     "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
     "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
     show BE happy with dissolve
@@ -7317,7 +7319,7 @@ label BEGTS001:
     show BE happy
     BE "I'd like that very much!"
 
-    scene Campus Center with fade #eve
+    scene Campus Center with fade
     show BE neutral with dissolve
     "Honoka and I walked down the stairwell and exited the school building. The sun was still hanging just above the treeline, so we had a few hours left in the day."
     BE "I'm glad that Naomi-chan is in such a good mood. We really hit it off today, huh?"
@@ -7347,12 +7349,13 @@ label BEGTS001:
     jump daymenu
 
 label BEGTS002:
-    scene Dorm Exterior with fade #night
+    $setTime(TimeEnum.EVE) #night?
+    scene Dorm Exterior with fade
     if getVar("BEMode") == "Tomboy":
         $setVar("BEMode", "Feminine")
         $setFlag("BEGTS002_TomFix")
-    #BGM: To be Decided
-    "The weekend had arrived, and I found myself sitting outside my dorm room just as the Sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
+    play music Peaceful
+    "The weekend had arrived, and I found myself sitting outside my dorm room just as the sun had gone down. It was a Friday night, so I considered what I'd be doing over the weekend."
     "Unless I actively make plans with someone else, I'll usually just browse the internet, watch videos, or play games. Daichi usually has something to stream, so I'll occasionally peek in and watch what he's watching."
     "That is, when Daichi lets me see his computer. He's often documenting his findings or browsing conspiracy websites, so he'll never share his screen unless he's watching anime."
     "I was just about to head back inside when I saw a distinctively tall figure. She was even taller than the light poles, which made her stand out even more in their brightness."
@@ -7543,7 +7546,8 @@ label BEGTS002:
     show GTS neutral-2
     GTS "Sounds good to me. Are you ready to go, Hotsure-san?"
     MC "Right behind you."
-    scene Dorm Exterior with fade #night
+
+    scene Dorm Exterior with fade
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
     show GTS neutral-2 at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     show BE neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
@@ -7565,7 +7569,7 @@ label BEGTS002:
     MC "See you around, Yamazaki-san."
     GTS "Farewell, Hotsure-san."
     hide GTS with dissolve
-    show BE neutral at Position(xalign=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     BE "I never knew how outgoing Naomi-chan was. When we first arrived, all I saw was a timid girl in the school garden. I thought there was something mysterious about her, but I never thought..."
     "Honoka seemed to pause midway through her sentence, like she didn't know what to say."
     MC "You never thought what?"
