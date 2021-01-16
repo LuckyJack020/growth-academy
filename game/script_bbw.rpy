@@ -644,7 +644,7 @@ label BBW005B:
     BBW "Very well. Keisuke, you go first."
     MC "Why me- No, never mind. I'll go."
     hide PRG with dissolve
-    "As I was looking at the weights in increments of ten pounds, trying to guess what my limit was, another person came over and joined us."
+    "As I was looking at the weights in increments of five kilos, trying to guess what my limit was, another person came over and joined us."
     show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Hey sorry to bother but how much longer are you... Oh hey guys. What brings you here?"
     MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
@@ -657,7 +657,7 @@ label BBW005B:
     "If it was just me and Alice I could get away with something easy, but with Akira looking over my shoulder I was afraid she would say something if I wasn't going all out."
     "In the end I decided to add 50%% more what I was originally going to lift. To my surprise it weighed more than what I expected. Before I could lift it up, Akira came and grabbed the bar."
     FMG "Sorry but I have a quick question, just how much did you put on the bar?"
-    MC "About 150 pounds. Why?"
+    MC "About 70 kilos. Why?"
     show FMG sad
     FMG "Because it looked like it was too much for you. You gotta know your limits and take it one step at a time."
     BBW "You look like you know what you're talking about. Maybe you have some tips you can share."
@@ -3482,7 +3482,7 @@ label BBW020_c1:
     BBW "Whatever fears may have been planted by my diagnosis will not be acknowledged. We don't deal with what might be wrong, but what can go wrong or is going wrong."
     BBW "I am not worried about my weight."
     "I didn't really believe her."
-    "Maybe she wasn't concerned about her weight in a vacuous 'Oh no, I gained a couple pounds' sense, but there was something bothering her."
+    "Maybe she wasn't concerned about her weight in a vacuous 'Oh no, I gained a couple kilos' sense, but there was something bothering her."
     BBW "Question."
     MC "Yes?"
     BBW "You said 'anymore.' That I 'won't look good anymore' if I get fat."
@@ -3718,7 +3718,7 @@ label BBW021_fail2:
     "She turned to look at me, and I felt a little tongue-tied."
     MCT "Just say she looks nice even at her size, don't make it sound perverted, and then move on."
     MC "I just wanted to say, after that whole 'list' thing and the guy saying he doesn't like plump women..."
-    MC "Not all guys are turned off by a few extra pounds. Some even prefer it."
+    MC "Not all guys are turned off by a few extra weight. Some even prefer it."
     show BBW swim-neutral
     BBW "Indeed."
     BBW "I know you wouldn't just be saying that to soothe my wounded pride."
@@ -5721,7 +5721,7 @@ label BBW032_c1_after:
     BBW "I think I understand what you were trying to say."
     show BBW haughty
     BBW "No, my path was not one that relied on any form of physical ability or conditioning."
-    BBW "I am still my father's daughter, destined to become a titan of business. A few extra pounds will not impede me."
+    BBW "I am still my father's daughter, destined to become a titan of business. A few extra kilos will not impede me."
     MC "Yeah."
     "The mood seemed noticeably lighter as we finished cleaning up."
     if getAffection("BBW") < 10:

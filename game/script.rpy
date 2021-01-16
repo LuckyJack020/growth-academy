@@ -561,7 +561,7 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuki": [1, 2, 3]
+            "Natsuko": [1, 2, 3]
         }
 
         try: #backwards compatibility, remove later
@@ -571,7 +571,7 @@ init python:
             minorsizes = {}
         for k in legalsizes.keys():
             if k not in minorsizes: #backwards compatibility, remove much later (when we stop adding minor characters)
-                minorsizes[k] = legalsizes[k][0]
+                minorsizes[k] = legalsizes[k][-1]
             if newsize in legalsizes[k]:
                 minorsizes[k] = newsize
 

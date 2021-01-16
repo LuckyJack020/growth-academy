@@ -3437,7 +3437,7 @@ label AE020:
     AE "..."
     MC "..."
     MCT "..."
-    "Silence hung in the air. Shiori-san looked at me for what felt like eternity as I felt my stomach become 5 pounds lighter."
+    "Silence hung in the air. Shiori-san looked at me for what felt like eternity as I felt my stomach become a couple kilos lighter."
     show AE neutral-annoyed
     AE "What did you just say?"
     MCT "Uhn..."

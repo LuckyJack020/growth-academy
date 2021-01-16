@@ -6618,7 +6618,7 @@ label PRG036_c1_after:
     PRG "B-But... She'd never let me see my dad. She'd always say he wasn't feeling well. And then my dad came home from his appointment one night, and I finally saw him. He was..."
     extend " bald."
     MC "Bald?!"
-    PRG "Mhm... I s-screamed when I saw him. He was... pale all over and he had lost at least 30 pounds. W-What was the worst thought, was how tired he looked. H-He looked like he hadn't slept in days."
+    PRG "Mhm... I s-screamed when I saw him. He was... pale all over and he had lost at least 10 kilos. W-What was the worst thought, was how tired he looked. H-He looked like he hadn't slept in days."
     PRG "He smiled at me when he saw me, and asked 'how's my favorite girl doing?' He opened his arms for a hug, and I..."
     show PRG sad
     PRG "I-I ran away from him and hid in my room! I-I was convinced he wasn't my dad. My mom came in to see me after, and I could hear my dad crying from the other room."
@@ -11090,7 +11090,7 @@ label PRG052_c1_1:
     show PRG cow-admire
     PRG "T-Thank you, Master. I-I'm glad that you like them."
     "I showed my adoration by placing my hands on Aida's belly and letting them travel upwards until I had my hands firmly on Aida's breasts. I squeezed my hands beneath her breasts and lifted them up."
-    MC "Oy! These have to be like 20 pounds each!"
+    MC "Oy! These have to be like 10 kilos each!"
     show PRG cow-aroused
     PRG "Mhm. They get heavier when they're full..."
     MC "Well, you must be a strong cow to carry around tanks like these all day. Not to mention the bigger load below."
@@ -11584,7 +11584,7 @@ label PRG053_c1_2:
     Takara "How are you handling the... size increase? I'm sure carrying five babies around has changed a few things."
     PRG "I was a little self conscious of it at first, but I'm doing okay with it now. M-My factor also affects how much I grow during my pregnancy, so I..."
     PRG "I'm a little big..."
-    Takara "It's to be expected, honey. I gained almost ninety pounds when I was pregnant with you. So, don't let it get to you. If anything, be proud. You're a mom now, honey."
+    Takara "It's to be expected, honey. I gained almost 40 kilos when I was pregnant with you. So, don't let it get to you. If anything, be proud. You're a mom now, honey."
     show PRG nude-neutral
     PRG "I know. Keisuke tells me that all the time."
     Takara "Told you he was a good guy."

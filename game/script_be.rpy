@@ -694,7 +694,7 @@ label BE007_c1:
     BE "Of course. I should have known. That's just like you, Kei-chan. But, be careful, or you're going to end up being responsible."
     MC "Responsible for what?"
     show BE happy
-    BE "My weight of course! Stick around with Alice too much and I might be compelled to put on some pounds to keep your attention on me."
+    BE "My weight of course! Stick around with Alice too much and I might be compelled to put on some kilos to keep your attention on me."
     play music Schoolday
     jump BE007_after
 
