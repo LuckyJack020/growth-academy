@@ -2182,7 +2182,7 @@ label FMG019:
     FMG "As much as I enjoy becoming strong and muscular... it limits what I can and can't do."
     MC "What you don't want to become a bodybuilder or an athlete?"
     FMG "Maybe, but..."
-    "Akira had sat up, cracking her back in the process. The series of pops and cracks were lauder then one would think. Once done she rested her head on her hand, looking out in the setting sun."
+    "Akira had sat up, cracking her back in the process. The series of pops and cracks were loauder then one would think. Once done she rested her head on her hand, looking out in the setting sun."
     FMG "I dunno, I guess I just want more options in my life. That's not the only thing I've been thinking about, though."
     FMG "I've been wondering if destiny actually exists."
     MC "Huh, any reason?"
@@ -2255,7 +2255,7 @@ label FMG020:
     show FMG neutral
     FMG "But in this case, I wouldn't feel right if you paid for my meal, you get me. It's honor among the workin' man, right?"
     MC "I... suppose so."
-    "We paid for our meals and walked to a nearby table, waiting for our number to be called; though I will admit Akira paying for her meal did caught me off guard. I began a conversation to pass the time."
+    "We paid for our meals and walked to a nearby table, waiting for our number to be called; though I will admit Akira paying for her meal did catch me off guard. I began a conversation to pass the time."
     MC "So, guessing you were hungry, huh?"
     FMG "Yeah, I've been working hard on my arm reps and jogging today, so I've worked up a killer hunger. Plus, I haven't had a burger since... I left home, I think."
     MC "Huh, glad to see you're still keeping up the regime."
