@@ -9,6 +9,7 @@ define BBWCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suf
 define BE = Character('Honoka', color="#FCCF20")
 define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
+define FMGCell = Character('Akira', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="FMGCell")
 define GTS = Character('Naomi', color="#66FF33")
 define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTS_S")
@@ -27,7 +28,9 @@ define Haruhiro = Character('Haruhiro', color="#C0C0C0")
 define HR = Character('Tashi-sensei', color="#C0C0C0")
 define Kanami = Character('Kanami', color="#C0C0C0")
 define Kazumi = Character('Kazumi', color="#C0C0C0")
+define Kokutan = Character('Kokutan', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
+define Lee = Character('Lee', color="#C0C0C0")
 define Miko = Character('Miko', color="#C0C0C0")
 define Minei = Character('Minei', color="#C0C0C0")
 define Misaki = Character('Misaki', color="#C0C0C0")
@@ -42,6 +45,7 @@ define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakie = Character('Sakie', color="#C0C0C0")
 define Sakura = Character('Sakura', color="#FF3399")
+define Shino = Character('Shino', color="#C0C0C0")
 define Takamura = Character('Takamura-Sensei', color="#FF9900")
 define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0")
 define Takara = Character('Takara', color="#C0C0C0")
@@ -56,6 +60,7 @@ define Announcer = Character('Announcer', color="#C0C0C0")
 define Barker = Character('Barker', color="#C0C0C0")
 define Card = Character('Card', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
+define Cat = Character('Cat', color="#C0C0C0")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
 define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
@@ -125,7 +130,8 @@ image Cafe = "Graphics/ui/bg/cafe.png"
 image Woods = DynamicImage("Graphics/ui/bg/woods_[gametime].png")
 image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/NYI.png"
-image Theater = "Graphics/ui/bg/NYI.png"
+image Theater Interior = "Graphics/ui/bg/theater_interior.png"
+image Theater Exterior = DynamicImage("Graphics/ui/bg/theater_exterior_[gametime].png")
 image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
 image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
@@ -141,6 +147,7 @@ image Mountains = DynamicImage("Graphics/ui/bg/mountains_[gametime].png")
 image Japanese Room = DynamicImage("Graphics/ui/bg/japaneseroom_[gametime].png")
 image Club = "Graphics/ui/bg/NYI.png"
 image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
+image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -149,6 +156,22 @@ image Student Government = DynamicImage("Graphics/ui/bg/studentgovernment_[gamet
 
 image Dorm BBW = "Graphics/ui/bg/BBWDorm.png"
 image Dorm BBW Flip = im.Flip("Graphics/ui/bg/BBWDorm.png", horizontal=True)
+image RV Interior = DynamicImage("Graphics/ui/bg/BBW_summer_rv.png")
+image Summer House Entrance = DynamicImage("Graphics/ui/bg/BBW_summer_house_entrance.png")
+image Summer House Front = DynamicImage("Graphics/ui/bg/BBW_summer_housefront.png")
+image Summer House Back = DynamicImage("Graphics/ui/bg/BBW_summer_houseback.png")
+image Summer Beach Closed = DynamicImage("Graphics/ui/bg/BBW_summer_beach_closed.png")
+image Summer Beach = DynamicImage("Graphics/ui/bg/BBW_summer_beach_[gametime].png")
+image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/BBW_summer_balcony_ext_[gametime].png")
+image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/BBW_summer_balcony_ext_[gametime].png")
+image Summer Bedroom = DynamicImage("Graphics/ui/bg/BBW_summer_bedroom_[gametime].png")
+image Summer Guest Bedroom = DynamicImage("Graphics/ui/bg/BBW_summer_guest_bedroom_[gametime].png")
+image Summer Guest Bathroom = DynamicImage("Graphics/ui/bg/BBW_summer_guest_bathroom_[gametime].png")
+image Summer Guest Bathroom Steamed = DynamicImage("Graphics/ui/bg/BBW_summer_guest_bathroom_steamed_[gametime].png")
+image Summer Hallway = DynamicImage("Graphics/ui/bg/BBW_summer_hallway.png")
+image Summer Dining Room = DynamicImage("Graphics/ui/bg/BBW_summer_diningroom.png")
+image Summer Living Room = DynamicImage("Graphics/ui/bg/BBW_summer_livingroom.png")
+
 
 image Dorm BE = DynamicImage("Graphics/ui/bg/BEdorm_[gametime].png")
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
@@ -193,6 +216,7 @@ image cg AE050_behind6 = "Graphics/ui/gallery/AE050_behind6.png"
 
 image cg BBW000 = "Graphics/ui/gallery/BBW000.png"
 image cg BBW009 = "Graphics/ui/gallery/BBW009.png"
+image cg BBW046 = "Graphics/ui/gallery/BBW046.png"
 
 image cg BE000 = "Graphics/ui/gallery/BE000.png"
 image cg BE000b = "Graphics/ui/gallery/BE000b.png"
@@ -343,6 +367,65 @@ image BBW casual-haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
 image BBW casual-stern = DynamicImage("Graphics/BBW/[globalsize]/stern.png")
 image BBW casual-doubt = DynamicImage("Graphics/BBW/[globalsize]/doubt.png")
 image BBW casual-worried = DynamicImage("Graphics/BBW/[globalsize]/worried.png")
+
+image BBW summer-int-neutral = DynamicImage("Graphics/BBW/[globalsize]/summer-int-neutral.png")
+image BBW summer-int-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/summer-int-neutral-2.png")
+image BBW summer-int-happy = DynamicImage("Graphics/BBW/[globalsize]/summer-int-happy.png")
+image BBW summer-int-sad = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sad.png")
+image BBW summer-int-surprised = DynamicImage("Graphics/BBW/[globalsize]/summer-int-surprised.png")
+image BBW summer-int-angry = DynamicImage("Graphics/BBW/[globalsize]/summer-int-angry.png")
+image BBW summer-int-aroused = DynamicImage("Graphics/BBW/[globalsize]/summer-int-aroused.png")
+image BBW summer-int-haughty = DynamicImage("Graphics/BBW/[globalsize]/summer-int-unique.png")
+image BBW summer-int-stern = DynamicImage("Graphics/BBW/[globalsize]/summer-int-stern.png")
+image BBW summer-int-doubt = DynamicImage("Graphics/BBW/[globalsize]/summer-int-doubt.png")
+image BBW summer-int-worried = DynamicImage("Graphics/BBW/[globalsize]/summer-int-worried.png")
+
+image BBW summer-int-sg-neutral = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-neutral.png")
+image BBW summer-int-sg-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-neutral-2.png")
+image BBW summer-int-sg-happy = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-happy.png")
+image BBW summer-int-sg-sad = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-sad.png")
+image BBW summer-int-sg-surprised = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-surprised.png")
+image BBW summer-int-sg-angry = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-angry.png")
+image BBW summer-int-sg-aroused = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-aroused.png")
+image BBW summer-int-sg-haughty = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-unique.png")
+image BBW summer-int-sg-stern = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-stern.png")
+image BBW summer-int-sg-doubt = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-doubt.png")
+image BBW summer-int-sg-worried = DynamicImage("Graphics/BBW/[globalsize]/summer-int-sg-worried.png")
+
+image BBW summer-ext-neutral = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-neutral.png")
+image BBW summer-ext-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-neutral-2.png")
+image BBW summer-ext-happy = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-happy.png")
+image BBW summer-ext-sad = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sad.png")
+image BBW summer-ext-surprised = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-surprised.png")
+image BBW summer-ext-angry = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-angry.png")
+image BBW summer-ext-aroused = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-aroused.png")
+image BBW summer-ext-haughty = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-unique.png")
+image BBW summer-ext-stern = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-stern.png")
+image BBW summer-ext-doubt = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-doubt.png")
+image BBW summer-ext-worried = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-worried.png")
+
+image BBW summer-ext-sg-neutral = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-neutral.png")
+image BBW summer-ext-sg-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-neutral-2.png")
+image BBW summer-ext-sg-happy = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-happy.png")
+image BBW summer-ext-sg-sad = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-sad.png")
+image BBW summer-ext-sg-surprised = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-surprised.png")
+image BBW summer-ext-sg-angry = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-angry.png")
+image BBW summer-ext-sg-aroused = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-aroused.png")
+image BBW summer-ext-sg-haughty = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-unique.png")
+image BBW summer-ext-sg-stern = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-stern.png")
+image BBW summer-ext-sg-doubt = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-doubt.png")
+image BBW summer-ext-sg-worried = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-worried.png")
+
+image BBW swimsuit-neutral = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral.png")
+image BBW swimsuit-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral-2.png")
+image BBW swimsuit-happy = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-happy.png")
+image BBW swimsuit-sad = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-sad.png")
+image BBW swimsuit-surprised = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-surprised.png")
+image BBW swimsuit-angry = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-angry.png")
+image BBW swimsuit-aroused = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-aroused.png")
+image BBW swimsuit-stern = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-stern.png")
+image BBW swimsuit-doubt = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-doubt.png")
+image BBW swimsuit-worried = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-worried.png")
 
 image BE neutral = Composite(
     (513, 686),
@@ -698,16 +781,29 @@ image PRG cow-admire = DynamicImage("Graphics/PRG/[prgsize]/cow-admire.png")
 image PRG cow-scared = DynamicImage("Graphics/PRG/[prgsize]/cow-scared.png")
 image PRG cow-grope = DynamicImage("Graphics/PRG/[prgsize]/cow-grope.png")
 
-image PRG swim-neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
-image PRG swim-happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
-image PRG swim-excited = DynamicImage("Graphics/PRG/[prgsize]/excited.png")
-image PRG swim-surprised = DynamicImage("Graphics/PRG/[prgsize]/surprised.png")
-image PRG swim-aroused = DynamicImage("Graphics/PRG/[prgsize]/aroused.png")
-image PRG swim-unique = DynamicImage("Graphics/PRG/[prgsize]/unique.png")
-image PRG swim-worried = DynamicImage("Graphics/PRG/[prgsize]/worried.png")
-image PRG swim-nervous = DynamicImage("Graphics/PRG/[prgsize]/nervous.png")
-image PRG swim-doubt = DynamicImage("Graphics/PRG/[prgsize]/doubt.png")
-image PRG swim-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/sad-2.png")
+image PRG swimsuit-neutral = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-neutral.png")
+image PRG swimsuit-happy = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-happy.png")
+image PRG swimsuit-excited = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-excited.png")
+image PRG swimsuit-sad = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-sad.png")
+image PRG swimsuit-surprised = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-surprised.png")
+image PRG swimsuit-stressball = DynamicImage("Graphics/PRG/[prgsize]/stressball.png")
+image PRG swimsuit-angry = DynamicImage("Graphics/PRG/[prgsize]/angry.png")
+image PRG swimsuit-aroused = DynamicImage("Graphics/PRG/[prgsize]/aroused.png")
+image PRG swimsuit-flattered = DynamicImage("Graphics/PRG/[prgsize]/flattered.png")
+image PRG swimsuit-unique = DynamicImage("Graphics/PRG/[prgsize]/unique.png")
+image PRG swimsuit-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/unique-happy.png")
+image PRG swimsuit-worried = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-worried.png")
+image PRG swimsuit-worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-worried.png")
+image PRG swimsuit-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-sad-2.png")
+image PRG swimsuit-lactate = DynamicImage("Graphics/PRG/[prgsize]/lactate.png")
+image PRG swimsuit-admire = DynamicImage("Graphics/PRG/[prgsize]/admire.png")
+image PRG swimsuit-admire-2 = DynamicImage("Graphics/PRG/[prgsize]/admire-2.png")
+image PRG swimsuit-doubt = DynamicImage("Graphics/PRG/[prgsize]/doubt.png")
+image PRG swimsuit-nervous = DynamicImage("Graphics/PRG/[prgsize]/nervous.png")
+image PRG swimsuit-satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.png")
+image PRG swimsuit-angry-2 = DynamicImage("Graphics/PRG/[prgsize]/angry-2.png")
+image PRG swimsuit-scared = DynamicImage("Graphics/PRG/[prgsize]/scared.png")
+image PRG swimsuit-grope = DynamicImage("Graphics/PRG/[prgsize]/grope.png")
 
 image PRG pj-neutral = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
@@ -717,6 +813,7 @@ image side MC = "Graphics/side/mc.png"
 image side BECell = ConditionSwitch("getVar('BEMode') == 'Feminine'", DynamicImage("Graphics/side/BE-fem-[globalsize].png"),
                                     "True", DynamicImage("Graphics/side/BE-[globalsize].png"))
 image side BBWCell = DynamicImage("Graphics/side/BBW-[globalsize].png")
+image side FMGCell = DynamicImage("Graphics/side/FMG-[globalsize].png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
 image side TomoCell = "Graphics/side/tomoko.png"
@@ -764,9 +861,9 @@ image Minori sad = "Graphics/minor/minori-neutral.png"
 
 image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
-image Sakura neutral = "Graphics/minor/sakura-neutral.png"
-image Sakura happy = "Graphics/minor/sakura-happy.png"
-image Sakura sad = "Graphics/minor/sakura-sad.png"
+image Sakura neutral = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-neutral.png")
+image Sakura happy = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-happy.png")
+image Sakura sad = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-sad.png")
 
 image Natsuko neutral = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
 image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
@@ -1060,7 +1157,8 @@ init 2 python:
     eventlibrary['FMG027'] = {"name": "Study Date", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "classroom",                "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG028", "obsflags": [],               "conditions": []}
     eventlibrary['FMG028'] = {"name": "Anything but Golf", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG029", "obsflags": [],               "conditions": []}
     eventlibrary['FMG029'] = {"name": "The Grind", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG031", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG031'] = {"name": "Motivation", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG034", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG031'] = {"name": "Motivation", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG032", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG032'] = {"name": "Chumby the Cat", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                           "location": "pool",                     "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG034", "obsflags": [],               "conditions": []}
     eventlibrary['FMG034'] = {"name": "Big and Bad", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG035", "obsflags": [],               "conditions": []}
     eventlibrary['FMG035'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "", "obsflags": [],                     "conditions": []}
 

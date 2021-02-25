@@ -1745,7 +1745,7 @@ label PRG015_after:
     play music Schoolday
     scene black with fade
     pause 1
-    scene Drom Exterior with fade
+    scene Dorm Exterior with fade
     show PRG neutral with dissolve
     PRG "Thank you so much for helping out, Hotsure-san."
     MC "No problem. You'll do just fine tomorrow!"
@@ -8266,6 +8266,7 @@ label PRG042:
     "I smiled and locked lips with Aida."
     hide PRG with dissolve
     "These were the moments I liked best with Aida. Whenever that elusive silly side of hers came by for a visit. It was always a special occasion."
+    $setVar("PRGAEscore", getVar("PRGAEscore") + 2)
     jump daymenu
 
 label PRG043:
@@ -9115,6 +9116,7 @@ label PRG046:
 
 label PRG046_c1_1:
     $setFlag("PRG046_AE")
+    $setVar("PRGAEscore", getVar("PRGAEscore") + 1)
     MC "Sure, why not?"
     AE "Right, then. I've got a few things to take care of at the moment, but after I'm through with those, I can plan to meet you two somewhere."
     MC "All right, sounds good. I'll get Aida and we can meet up with you somewhere. Maybe like the library?"
@@ -9197,6 +9199,8 @@ label PRG046_c1_after:
 
 label PRG046_c2_1:
     $setFlag("PRG046_BE")
+    if not getFlag("PRG046_AE"):
+        $setVar("PRGBEscore", getVar("PRGBEscore") + 1)
     MC "Sure! I doubt she'd mind!"
     show BE neutral
     BE "Sweet! I'll just tag along with you, then. I don't have anywhere else to be."
@@ -9211,6 +9215,8 @@ label PRG046_c2_1:
 label PRG046_c2_2:
     $setFlag("PRG046_BE")
     $setFlag("PRG046_c2_2")
+    if not getFlag("PRG046_AE"):
+        $setVar("PRGBEscore", getVar("PRGBEscore") + 1)
     MC "I'll have to check with her."
     show BE neutral
     BE "Oh, of course. I don't want to butt my little ol' self into where I'm not welcome."
@@ -9556,6 +9562,7 @@ label PRG046_c3_AEBE:
     PRG "N-No problem."
     hide AE with dissolve
     "Shiori nodded at me and left the library, her leaning tower of literature in hand."
+    $setVar("PRGAEscore", getVar("PRGAEscore") + 1)
     "I leaned back into my chair and sighed."
     MC "Well."
     PRG "Well, what?"
@@ -10517,6 +10524,7 @@ label PRG051_c1_BE:
     show BE happy
     BE "I try. Well, I shall leave you to her, then. Go show her your gentlemanly charm!"
     MC "Oh, I will! Later!"
+    $setVar("PRGBEscore", getVar("PRGBEscore") + 1)
     hide BE with dissolve
     "Honoka waved goodbye to me as I set off for the bus stop. As I walked off, I turned back to the dorms and noticed Honoka walking back to hers."
     MCT "Did she come outside just to talk to me?"
@@ -10562,6 +10570,7 @@ label PRG051_c1_AE:
         AE "Wonderful. Have a good evening, Hotsure-san."
         "Shiori waved politely to me as we parted ways."
         hide AE with dissolve
+        $setVar("PRGAEscore", getVar("PRGAEscore") + 1)
         "It amazed me how, on a dime, Shiori could switch from being completely professional and unflinching to being a genuinely kind girl."
         "Since Aida and I had spent some time with her, she'd seemed to open up a bit, which was a lovely bit of relief for me."
     else:
@@ -12394,6 +12403,7 @@ label PRG055C:
     PRG "On one hand, I know that it'll feel really strange to not have you by my side for a competition."
     PRG "But on the other, I'd really like the extra experience, and since I've already missed the past few practices, I need all the time in the kitchen I can get."
     PRG "So... if you'd be willing to work with me and compete in the next competition with me, Inoue-chan, I'd really appreciate it."
+    $setVar("PRGBEscore", getVar("PRGBEscore") + 1)
     show BE happy
     BE "You bet I'm willing! Let's make some delicious yum yums! However, I do have one condition that will have to be met first."
     show PRG neutral
@@ -14749,7 +14759,7 @@ label PRG058:
     "I walked out onto the pool deck and grabbed a towel for myself and another for my fair lady."
     "Off came the shirt as I stretched myself a bit. I wasn't planning on swimming olympian style today, but a few laps would probably do my body good."
     PRG "Um... Keisuke?"
-    show PRG swim-sad-2 at Position(xpos=0.95, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG swimsuit-sad-2 at Position(xpos=0.95, xanchor=0.5, yalign=1.0) with dissolve
     "Aida was poking her head out of the changing room door, looking around like a deer in the woods."
     MC "Hey, everything okay?"
     PRG "Um... is t-there anyone else out there? L-Like by or in the pool?"
@@ -14760,7 +14770,7 @@ label PRG058:
     MC "Yep. No one but us."
     PRG "O-Okay..."
     PRG "{size=-6}Um... p-please don't laugh...{/size}"
-    show PRG swim-sad-2 at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
+    show PRG swimsuit-sad-2 at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
     MC "Uh... whoa..."
     PRG "I-I don't have a swimsuit that... f-fits me. So... I-I had to wear one of Alice's old ones..."
     PRG "And, none of her one-piece suits fit me, so..."
@@ -14787,7 +14797,7 @@ label PRG058:
     show FMG neutral at Position(xpos=0.55, xanchor=0.5, yalign=1.0) with dissolve
     "Aida turned around to go change out of her suit, and nearly plowed straight into Akira, who was walking out of the changing room behind her."
     show FMG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG swim-surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG swimsuit-surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     "Luckily for both of them, Akira backpedaled, narrowly missing a smack from Aida's belly."
     PRG "Oh! M-Mizutani-san! I-I'm sorry! I-I..."
     show FMG happy

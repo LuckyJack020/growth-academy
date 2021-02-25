@@ -110,6 +110,7 @@ init python:
         DAY = "day"
         NIGHT = "night"
         EVE = "eve"
+        NIGHTLIGHTS = "night_lights"
 
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
@@ -561,7 +562,8 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuko": [1, 2, 3]
+            "Natsuko": [1, 2, 3],
+            "Sakura": [1, 3]
         }
 
         try: #backwards compatibility, remove later
@@ -581,7 +583,7 @@ init python:
 
     def setTime(t):
         global gametime
-        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT:
+        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT or t == TimeEnum.NIGHTLIGHTS:
             gametime = t
 
     #Edge case handler for Aida's initial pregnancy
@@ -651,7 +653,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Natsuko': 1}
+        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         flags = []
         vars = {}

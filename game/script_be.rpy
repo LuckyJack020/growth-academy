@@ -7172,6 +7172,110 @@ label BE038B_fail:
     jump daymenu
 
 label BE039:
+    $setProgress("BE", "BE040")
+    scene BE Dorm with fade
+    UNKNOWN "Kukuku... so Honoka-chan, this is the boy I've heard far, far too much about."
+    MC "Eh?"
+    play music Schoolday
+    "I turned around to see who else had come in. It was only after looking at the young woman walking into the room that I remembered Honoka also had a roommate."
+    show BE happy with dissolve
+    BE "Yep. Well, I mean, what other guy would I bring in here?"
+    MC "Ha. Yeah, um, I'm Keisuke Hotsure. Nice to meet you."
+    "She was fairly short, nearly a foot smaller than Honoka. It felt embarrassing to look down so far in order to meet her gaze. It did make it more obvious to see that she wore colored contacts that made her eyes look bubblegum pink."
+    UNKNOWN "Hmm..."
+    "She took my hand and turned it around. Her fingers began to run along the lines on my palm. I looked over to Honoka for help."
+    show BE angry with dissolve
+    BE "Just go with it."
+    show BE neutral with dissolve
+    BE "What do you see, Kokutan?"
+    Kokutan "I see a dark, mysterious backdrop to your life. Your decades forward will be fraughtfrought with even more misery and woe, and there is absolutely no hope for you."
+    MC "Uh."
+    Kokutan "You will be beset by demons and devils of all sorts. You'll find yourself facing corruption and temptation from all manner of foes, and your only hope of salvation will be..."
+    MC "...What? What will my salvation be."
+    Kokutan "I cannot tell. I only see a large moon. Perhaps two? The lines are not yet perfected, I cannot truly tell your fate, you may wind up crushed beneath your own misfortune."
+    "Honoka clenched her hand into a fist and gently bopped the young woman on the head."
+    Kokutan "Owwwwwww!"
+    "Kokutan's somewhat-intimidating demeanor immediately faltered, and her big, pink eyes teared up to a comical degree."
+    show BE happy with dissolve
+    BE "Don't let her scare ya, Kei-chan. Kokutan isn't even in the fortune telling club or anything like that. She's a tailor."
+    MC "Ah, I suppose that explains the uniform."
+    "Kokutan's uniform was decked out with a lot more lace than should be expected from the Seichou uniform. A nice trail of black ruffles along the bottom, with a matching bow on theteh front of her skirt."
+    "The cuffs of her sleeves were similarly dyed black, along with the fancy lace covering the buttons on her blouse. All the black she wore matched the dark color of her hair, wrapped up into a ponytail."
+    "She'd also seemed to have done something with her sleeves to make the shoulders puffier, giving her a look like she belonged more in Victorian England than modern Japan."
+    Kokutan "Ah, you like? It's been fastened by a squadron of skeletal warriors, with silks dyed from the blackened blood of angelic saviors."
+    BE "That means she worked on it herself."
+    MC "Got it. I was not expecting to need a translator today. Honoka said your name was Kokutan?"
+    Kokutan "My full name is Kokutan, the Ebony Lord of Destruction, Master of A Thousand Demons, Emperor of the New World!"
+    "Kokutan extended her arms upward, as if expecting a bolt of lightning to strike the ground where she stood."
+    MC "Is that really your name?"
+    BE "Hahahahaha. It hasn't gotten old yet. I'm preeeetty sure her name's not actually Kokutan but she hasn't told me what it is yet."
+    show BE neutral
+    BE "Because if her name really just meant a specific shade of black, then fate's really messed up, because clearly I should have been named Chichi if that was the case."
+    Kokutan "D-Don't laugh at my dark deeds."
+    "Kokutan stuck out her tongue at Honoka, and crossed her arms over her chest. With Honoka in the same room as her, it made Kokutan's lack of breasts all the more obvious."
+    "Somehow it felt more impolite to stare at a woman's lack of a chest rather than someone's over-endowment of one."
+    MC "Well, Kokutan, I would never laugh at one of your dark deeds. I was just, hey, what are you doing?"
+    "Kokutan approached and grabbed a thick handful of hair that reached down my back."
+    Kokutan "With this amount of hair you shed on a daily basis, your body is ripe for possession if someone gets a hold of a strand. You should take care to ensure you don't leave traces of your aura around the campus."
+    MC "Thankfully I don't think there's that many people here who'd be into that sort of ritual. Right?"
+    Kokutan "Kukuku, if you can't know the answer for sure, then it's best to be wary either way. You don't want some fool trying to steal you away from your beloved."
+    "Honoka smiled and walked back over to me. With a slight swing of her chest, she knocked Kokutan to the side."
+    Kokutan "Gya!"
+    "Honoka's arms wrapped around my midsection as her breasts pushed into my back. She giggled, and tilted her head to the side."
+    show BE unique
+    BE "Muahahaha. Foolish Kokutan. Do you truly believe that anyone could manage to wrench my soulmate away from me?"
+    show BE happy
+    BE "I would race through a swarm of a million stinging beasts of hellfire to ensure he never left my side. Isn't that right, Kei-chan? Even worse than that time in the woods."
+    "It took a moment for me to remember."
+    MC "Haha, of course."
+    "I gained a smirk as well and covered one of my eyes with some outstretched fingers."
+    MC "In the summer of the most blazing heat, Honoka did race through a hornet's nest to help save me from becoming a swollen mess of injuries."
+    BE "And I came out from it without a scratch! Clearly they were afraid to sting my body, my entire figure too powerful for them to touch!"
+    MC "There are legends in our hometown to this day of how Honoka eviscerated the entire population of hornets with just her steely gaze!"
+    "Kokutan was taken aback. She stepped away, arm splayed out in fright."
+    Kokutan "W-What?! Such power. How have I not sensed this impeccable killing intent before?"
+    MC "Honoka's true power only comes out when I'm nearby."
+    show BE neutral
+    BE "And we can link our bodies as one to make a powerful being capable of anything!"
+    MC "She's powerful enough to halt the Massive Bully Squad of Inaba!"
+    show BE happy
+    BE "And the Storm of the Decade!"
+    "Kokutan fell to her knees, shivering in place."
+    Kokutan "P-Please, stop. This aura. It's overwhelming. I can feel my shadow melting beneath me."
+    BE "The bigger my boobs get the more my power grows! Bahahahaha!"
+    "That was the line that finally broke me, and I had to catch my breath from laughing so hard. I leaned over on Honoka and looked down at poor Kokutan."
+    MC "Hahaha, oh, I'm sorry Kokutan. You're okay, right?"
+    Kokutan "What?"
+    "I offered a hand to help her up. She scoffed, but took it and lifted herself up."
+    Kokutan "Of course I'm fine. Such a brief display of power isn't enough to put down the Ebony Lord of Destruction. But your list of feats was impressive."
+    MC "Heh, they're not as impressive as they sound."
+    BE "Hehehe. The Bully Squad of Inaba was a trio of dogs a neighbor of ours had. They were tiny little things that would still tackle you like they were American footballers."
+    MC "All you had to do to placate them was give them head pats."
+    show BE neutral
+    BE "And the Storm of the Decade famously only knocked over a street sign. A couple of the kids in the neighborhood talked about it with hushed voices in school as some great destruction."
+    MC "It was all a big joke, really. The weatherman kind of sucked."
+    Kokutan "I see. What about Honoka-chan charging through a storm of hornets?"
+    MC "They were actually hornets. But, paper mache hornets that a convenience store sold as part of a display. Honoka rushed through them to help me up because I was trying to hold onto my ice cream."
+    "Kokutan held onto her face in shock."
+    Kokutan "Such foul trickery."
+    "She smiled, and laughed uproariously"
+    Kokutan "I like it! You've met with my approval, Keisuke-kun. Welcome to the fold of shadow."
+    MC "...Thanks? Hey, if you're interested, Honoka and I were going to play some video games, there's room for a third player and we've got enough controllers. Wanna join in?"
+    Kokutan "I have no time for the games of mere mortals."
+    show BE happy
+    BE "It's Breathless Warriors 4."
+    Kokutan "...Can I get dibs of Ethernia?"
+    BE "Sure."
+    "Honoka turned to me."
+    show BE neutral
+    BE "You'll figure out how to get her attention. It's easy after a while. She's pretty fun."
+    MC "Ah she's fine. Is Ethernia gonna whip my butt, Kokutan?"
+    "I couldn't help myself and placed the palm of my hand on the top of her head."
+    Kokutan "Grr... yes. And for that indignancy your character will be cursed for a thousand winters."
+    "Honoka and I sat down along with Kokutan to crank out some rounds of Breathless Warriors 4. Kokutan was a bigger fan of the game than even I was. Though the fact the narration was as edgy and brooding as humanly possible was probably the main reason."
+    jump daymenu
+
+label BE040:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
