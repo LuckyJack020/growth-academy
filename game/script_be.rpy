@@ -5982,7 +5982,7 @@ label BE033_shioriside:
     show BE happy:
         ease 3 xpos 1.5
     "Shiori did a few more brush strokes on her figure, not looking back up towards me."
-    "Hotsure-san. If by some small chance, I do catch you leering at my backside in the future. There will be consequences, understood?"
+    AE "Hotsure-san. If by some small chance, I do catch you leering at my backside in the future. There will be consequences, understood?"
     "I sighed."
     MC "Yes..."
     jump daymenu
@@ -6308,7 +6308,7 @@ label BE035A:
     "Kanami Tozakura was a soft-spoken woman with very long black hair. Her posture looked perfect. She looked like she'd been designed to wear an apron, like she did currently."
     Kanami "As always, before you begin today, please make sure to wash your hands thoroughly, and to do so whenever you switch between ingredients to be safe. Those of you with long hair should tie it back, as I have."
     Kanami "For those of you in the beginner level, we have a few recipes available for you to try out today. I'd recommend the fried rice, personally. If you're more advanced, the same goes for you but my recommendation would be the okoyamonaki. "
-    Kanami "Be safe. Be clean. Be delicious. Let me or the others know if you need aide."
+    Kanami "Be safe. Be clean. Be delicious. Let me or the others know if you need aid."
     MC "Well, Honoka, what should we try?"
     show BE happy
     BE "..."
@@ -7173,7 +7173,7 @@ label BE038B_fail:
 
 label BE039:
     $setProgress("BE", "BE040")
-    scene BE Dorm with fade
+    scene Dorm BE with fade
     UNKNOWN "Kukuku... so Honoka-chan, this is the boy I've heard far, far too much about."
     MC "Eh?"
     play music Schoolday
@@ -7690,5 +7690,493 @@ label BEGTS002:
     hide BE with dissolve
     "I took one last look at the vast, open night sky before returning to my dorm and heading to sleep."
     if getFlag("BEGTS002_TomFix"):
+        $setVar("BEMode", "Tomboy")
+    jump daymenu
+
+label BEGTS003:
+    $setTime(TimeEnum.EVE)
+    if getVar("BEMode") == "Tomboy":
+        $setVar("BEMode", "Feminine")
+        $setFlag("BEGTS003_TomFix")
+    scene Dorm Interior with fade
+    play music HigherEdu
+    "The sunlight filtered in through the windows as I brushed the hair out of my eyes. I then proceeded to brush my hair back over my eyes. I liked how my hair looked that way."
+    "After checking my appearance in the mirror, I stepped out of the bathroom and made my way over to the front door."
+    show RM neutral with dissolve
+    "Daichi was at his computer like he usually was. I picked up my phone from the dresser and placed my hand on the doorknob."
+    MC "Daichi."
+    show RM concerned
+    RM "Yeah?"
+    MC "Headin' out."
+    show RM neutral
+    RM "'Kay."
+    "The doorknob clicked as I rotated it. I pulled the door open and stepped outside."
+    "Daichi's ability to focus on the reports he was typing was still something to behold. He barely glanced away from the screen when he responded."
+
+    scene Dorm Exterior with fade
+    "The clean air surrounded me after I headed out. I took a slow, heavy breath to take in the fresh air. It was slightly chilly, but not enough to need a jacket. A perfect temperature to just relax and take in the sights for a while."
+    "I took my time as I walked. Aside from the occasional breeze and branches swaying in the wind, the campus was completely silent. I traced around the sidewalk for a while before doubling back towards the main building."
+    "I pushed open the double doors to the main building and headed inside."
+
+    scene Hallway with fade
+    "I didn't often walk into the school building this late. Usually when classes were over, I'd be hanging out in my dorm or out visiting the town."
+    "It seemed like I had been finding reasons to head back during the evening, however. I thought about how beautiful the orange sky looked when Honoka invited me over."
+    "As I walked through the halls, I wondered how many other students checked out the roof. It was 'our little hangout spot,' sure, but we didn't often see anyone else up there. Honoka saw the work that Naomi was putting in, but did anyone else?"
+    "When I neared the end of the hallway, I turned right to enter the cafeteria. Coincidentally, someone I knew was seated at one of the center tables."
+
+    scene Cafeteria with fade
+    show BE neutral with dissolve
+    "She was arched over the edge while looking at her phone, which had been placed flat upon the surface of the table. She scrolled through messages with her pointer finger, giggling as she read them."
+    show BE happy
+    "I watched as she typed a message, energy flowing from her fingertips as they danced around the screen. I didn't look *too* close, however. Looking over her shoulder to read her messages would be awkward."
+    show BE embarrassed
+    "After tapping her pointer to send the message, she became awash with happiness only seconds later. I wondered what could have been sent to make her so happy and blush-filled."
+    show BE happy
+    "She turned towards me after reading the message, waving me closer to the table."
+    BE "Oh! Hey, Kei-kun!"
+    MC "Hi, Honoka."
+    BE "I don't usually see you here after school. Are you following me?"
+    "She punctuated her words with a sarcastic, sing-song tone."
+    MC "Not exactly. I was just going to get something from the vending machine."
+    show BE angry
+    BE "Oooh, I see! Out for some fine dining!"
+    MC "Only the best. What were you watching that made you so happy?"
+    show BE neutral
+    BE "Oh, it wasn't a video. I was just texting Yamazaki-chan."
+    MC "Ahh. Do you have plans?"
+    show BE happy
+    BE "Not really. A TV drama we both like is gonna be on tonight, and I wanted to make sure we both tuned in. I don't wanna spoil anything if she hasn't seen it."
+    MC "I didn't know she was into TV dramas."
+    show BE embarrassed
+    BE "She wasn't! I convinced her to give one a try, and now she's hooked. She said it reminded her of Japanese theater."
+    show BE neutral
+    BE "I believe her exact words were 'not quite as exciting as seeing the actors in person, but it still gets you invested in the story.'"
+    MC "I'm glad you two found something you both like. What else have you been up to?"
+    "Honoka was about to respond, but the chime from her phone indicated that she received a new message. It was impossible for her to see her phone on the table while standing."
+    "With a slight chuckle and a shift of her weight, she stepped backwards and crouched to pick her phone off the table."
+    show BE angry
+    BE "I can't see anything below me with these things..."
+    show BE confused
+    BE "Maybe it'd be easier if I just set my phone on top."
+    MC "If it works, it works."
+    show BE seductive
+    BE "I knew you'd be open to the idea."
+    show BE neutral
+    "I watched as Honoka placed the phone on top of her personal shelf, scrolling through the messages that way. Despite their appearance, it... was somehow a sturdy hold."
+    BE "Oh, hey. Yamazaki-chan's asking me where I am. Wonder why..."
+    "Honoka tapped the screen of her phone as she wrote a response to the text."
+    MC "She probably just wants to hang out."
+    show BE shrug
+    BE "If that's the case, then-"
+    "*THUNK THUNK*"
+    "We heard a heavy, audible clunk which sounded like it was coming from the cafeteria window."
+    show BE surprised
+    BE "...So that's why she wanted to know."
+    "A pair of large kneecaps and shins could be seen occupying the entire height of the first floor windows."
+    "I could see the slight hem of a blue skirt pressed against the top of the window frame, but the rest of it was completely shrouded in darkness due to the immense size of the figure on the other side."
+    "An upside down hand the size of a baseball mitt soon accompanied the towering set of legs. It dangled from a forearm above the window frame, belonging to an un-seen face."
+    show BE happy
+    "The hand slowly contorted itself so that two fingers were raised, creating a peace sign. Honoka chuckled in response."
+    BE "Pfff! That's Yamazaki-chan for ya~"
+    MC "She does that a lot?"
+    show BE embarrassed
+    BE "All the time! I'll be sitting in my dorm room, and she'll just be... there, waving at me from the 2nd story window!"
+    show BE happy
+    BE "C'mon, Kei-kun. She's not gonna crawl into the building, so let's go meet her outside~"
+    hide BE with dissolve
+    "I let out a quiet laugh as Honoka walked towards the exit."
+    MC "All right."
+    MCT "I never got anything from the vending machine..."
+
+    scene Campus Center with fade
+    play music MC
+    "I made my way back through the hallways and out the double doors. It didn't take long to find the massive maiden that was waving earlier. She tended to stand out."
+    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    GTS "Oh my, oh my. It seems that our secret handshake is working on other people, Inoue-chan."
+    show BE happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    BE "It's hardly a secret when you show off in front of the whole cafeteria like that!"
+    MC "I thought it was a pretty good show."
+    show GTS surprised
+    GTS "All I did was pose with a peace sign!"
+    #Following line only appears if Kei has romanced Naomi: [GTS##, filling later]
+    #show GTS aroused
+    #GTS "Besides, you know where to find me if you want a better show."
+    #End of route-exclusive line.
+    show BE neutral
+    BE "Even if it was just an idol pose, people pay attention when you're so tall! You sure you're not gonna get in trouble, being so close to the main building?"
+    show GTS neutral
+    GTS "There aren't any rules that specifically say that I can't approach or enter. It's just ill-advised for obvious reasons."
+    show BE happy
+    if getSize() >= 3:
+        BE "Right, right! I heard the other giants talking about that."
+        MC "You've been in the giants' dorm, Honoka?"
+        BE "I have, and It's so roomy! Can't wait to see how Yamazaki-chan personalizes that hangar they gave her."
+    else:
+        BE "Right, right! I heard the other students talking about that."
+        show GTS wink
+        GTS "It made having a sleepover rather difficult, though. I kept bonking my head on the door frame."
+    "Honoka and Naomi shared a giggle, as well as a repeat of the unique handshake Naomi demonstrated. Since there wasn't any glass separating them this time, I could actually see them lock their fingers together."
+    "Honoka's hand looked absolutely tiny inside Naomi's, but it was charming seeing how they made it work."
+    "Both girls made peace signs with their index and middle fingers, slid them across each other, then pulled them apart while Honoka mimicked an explosion with her palm."
+    show BE wink
+    show GTS neutral
+    BE "Ka-pow!"
+    show BE neutral
+    BE "What else have we been up to lately, Yamazaki-chan?"
+    show GTS unique
+    GTS "You showed me what it was like to go to an arcade."
+    MC "Honoka dragged you there in my place?"
+    show BE angry
+    BE "Your place is still reserved, Kei-kun. I've just added someone to keep my other shoulder company~"
+    show GTS unique-2
+    GTS "I'm afraid your shoulder is far too low, Inoue-chan. Would you prefer that I rest my elbow on your head instead?"
+    MCT "I'd like to see that, actually..."
+    show GTS neutral-2
+    GTS "I'll just be standing around waiting for the train, while using you to support my arm~"
+    show BE happy
+    BE "Is that your idea of 'leaning on each other'?"
+    show GTS angry
+    GTS "Hmph... not exactly. The phrase is a bit less literal than that."
+    show BE shrug
+    BE "Kinda like when you said we needed a 'table for two' at the café?"
+    show GTS embarrassed
+    GTS "No, that time we actually needed a table for two. We just ended up using a booth because it's easier for me to sit there."
+    show BE happy
+    BE "Hey, we made it work! Your height kinda freaked out the staff, though."
+    show GTS wink
+    GTS "Oh, and your breasts didn't?"
+    show BE angry
+    BE "Point taken."
+    "Honoka and Naomi shared a sarcastic chuckle."
+    show BE neutral
+    "I could see them start to relax after they shared their experiences with me. Clearly, they had been through a lot these past few weeks."
+    show GTS neutral-2
+    "Naomi's powerful shadow loomed over both of us once more as the sun continued to set. Her head was nearly in line with the second story window of the school."
+    GTS "Talking about the café made me remember how good the drinks were. I'd love to travel there again, Inoue-chan."
+    BE "They're probably still open. Do you wanna head out?"
+    show GTS happy
+    if getRoutelock() == "GTS":
+        GTS "As long as Kei-kun is okay with having you here too~"
+        MC "I've known Honoka for a long time. It'll be fine having all three of us."
+    elif getRoutelock() == "BE":
+        GTS "As long as you don't feel that I'm not a third wheel. I know you two are an item~"
+        MC "I don't mind. It was Honoka's idea, after all."
+        BE "I wouldn't have asked if I didn't want us to go!"
+    else:
+        GTS "As long as Hotsure-san doesn't mind us talking about TV dramas all evening~"
+        MC "Really, I don't mind at all. We can talk about anything."
+    show GTS neutral
+    show BE happy
+    BE "Are we all set, then?"
+    MC "Sure, I'm ready."
+    GTS "You two can lead the way. I'll make sure my strides aren't too long~"
+
+    scene Town with fade
+    "Honoka and I walked alongside each other as we made our way off campus. True to her word, Naomi followed behind us. Her walking was intentionally slow, her strides deliberately short."
+    show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    "Naomi's shadow slowly crept up behind us as we stopped at one of the intersections to get our bearings."
+    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    "Honoka stretched her arms behind her back, bending her elbows to rub her shoulders. Naomi reclined against a light pole, which sparkled subtly in the evening sun."
+    "I scanned my eyes across the illuminated signs lining the street."
+    MC "There are plenty of places we haven't been. Was there anywhere in particular you wanted to go?"
+    show BE happy
+    BE "It doesn't need to be anything fancy. We could even just get some snacks and eat 'em outside!"
+    show GTS neutral-2
+    GTS "That sounds wonderful, actually. It'd be a nice change of pace from what we usually do, Inoue-chan."
+    show BE shrug
+    BE "You don't like ducking through door frames?"
+    show GTS sad-2
+    GTS "Not if I can avoid it. Feeling big is only fun for a little while. Once I've had my share of inconveniences, I begin to feel like a cat in a cardboard box."
+    show BE happy
+    BE "Might be more fun with packing peanuts!"
+    show GTS unique-2
+    GTS "Hmm. It definitely would."
+
+    scene Store with fade
+    "We made our way to a convenience store tucked away in one of the alleys on the right side of the road."
+    "The path was much more narrow than the road itself, but it provided a bit more walking space than the sidewalk. A small lot with a swingset, vending machine, and phonebooth could be seen directly behind us."
+    show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    "Honoka rotated herself to the left and sidestepped in order to make room for Naomi and I. It wasn't a tiny alley, but walking was still extremely compact."
+    "Naomi ducked underneath a neon sign mounted to the wall when entering the alley, then contorted herself under the heating ducts mounted to the alley walls."
+    show BE happy
+    "By the time we had all reached the storefront, Naomi was bracing her hands near the overhead heating ducts while craning her body downward. Honoka stood next to me, smiling innocently."
+    BE "Would you mind heading inside, Kei-kun? You know, because..."
+    MC "No problem. What are we getting?"
+    "Honoka pulled out a pile of yen coins from a small bag. Naomi did the same from her purse."
+    GTS "This should cover the cost, I feel."
+    show BE neutral
+    BE "We'll all pitch in, Yamazaki-chan. Don't worry about it."
+    show GTS surprised
+    GTS "I would still feel guilty if I felt that I didn't contribute. Please, use it."
+    "I then had a generous handful of yen coins, combined with the money I happened to bring with me."
+    MCT "This should be plenty. We'll be able to get a decent meal for the three of us."
+    "Naomi shifted in her posture slightly, still awkwardly slouched due to the size of the alley. She was eyeing the interior of the store with a worried expression."
+    show BE doubt
+    BE "Is something up, Yamazaki-chan?"
+    GTS "No, nothing is wrong. I just felt that I should consider how much I'll need. Two bento boxes should be plenty."
+    show BE happy
+    BE "Oh, yeah! Bento sounds great! Want some cup noodles to go along with it?"
+    show GTS neutral
+    GTS "Perhaps. I think something to drink would be more important, though. A bottle of oolong tea would be ideal."
+    BE "Tea is fine! You could also get some of that protein jelly stuff I heard about, if you want. It's supposed to be really tasty."
+    MC "I'll keep a look out for it. Anything else?"
+    show GTS unique
+    GTS "I believe we've asked for plenty, Inoue-chan."
+    show BE embarrassed
+    BE "You're right, you're right."
+    "I proceeded into the store and picked up a stack of four bento boxes. Two for Naomi, one each for Honoka and myself."
+    "I then walked over to a small cabinet in the corner of the store and picked up two bottles of oolong tea. For myself, I decided to get..."
+    menu:
+        "A bottle of water.":
+            "I walked over to a small refrigerated cabinet in the store, and picked up a bottle of water for myself."
+        "A can of cola.":
+            "I walked over to a refrigerated mini-display in the store, and picked up a can of cola for myself."
+        "A jar of protein jelly.":
+            "I browsed the wall on the opposite end of the convenience store and found a packet of protein jelly hanging on the display."
+    "I stacked it on top of the bento boxes and proceeded towards the register. There were a few impulse items lined up on a shelf underneath the display."
+    "One item in particular that caught my eye was a bag of hard candy with a unique, bumpy texture."
+    MCT "Why not? It'll be a nice little treat."
+    "I set the stack of bento boxes on the table with the register, then placed the drinks and bag of candy next to them. With a combination of our money, there was still a decent amount left over."
+    Cashier "Thank you very much."
+    MC "You're welcome."
+    "I proceeded out of the store, carrying the stack of food. Honoka's eyes immediately lit up with an excited smile. Naomi seemed peacefully content."
+    show BE happy
+    show GTS unique
+    BE "Aww, yeah! Chow time~"
+    GTS "I appreciate this a lot, Hotsure-san. Thank you for spending time with us."
+    GTS "Would you like me to carry everything~?"
+    MC "No, thanks. I've got it."
+    show GTS aroused
+    GTS "I insist. Allow me to carry it all."
+    "A heavy, looming aura could be felt from Naomi as she craned her posture slightly lower to look at the two of us. A smile could be seen as she enveloped Honoka and I in her presence."
+    show BE shrug
+    BE "Sounds like she means business, Kei-kun."
+    MC "Hah... all right, if you insist. Here, Yamazaki-san."
+    "Naomi bent down and gathered everything I was carrying in her powerful hands. They were nearly triple the size of Honoka's."
+    "She then rose to her full height, coaxing her head to the left to avoid the heating ducts in the alley."
+    show GTS neutral
+    GTS "Shall we be off, then?"
+    show BE happy
+    BE "Of course! I'm starving!"
+    hide BE with dissolve
+    hide GTS with dissolve
+    "Naomi ducked herself underneath the neon sign and proceeded back out of the alleyway. Honoka and I followed behind, returning to the main road."
+
+    scene Park with fade
+    stop music
+    show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    "The park was only a brief walk from main street. It was a much shorter distance from here to the store we visited than from the store to Seichou."
+    "Naomi was less cautious in her strides this time around. Her pace was much more 'normal' compared to the slow and deliberate steps she usually took. Her strides were also longer."
+    "By the time Honoka and I had caught up, she had realized that her pace had quickened."
+    show GTS surprised
+    GTS "Ah. I apologize. I suppose I was eager to see this place again."
+    MC "You've been here before?"
+    show GTS neutral
+    GTS "Once. Inoue-chan and I took a detour when we were walking through town. We didn't really stop to appreciate the scenery, though."
+    show BE happy
+    BE "It's absolutely gorgeous, Yamazaki-san. Thank you for recommending this place."
+    show BE neutral
+    BE "It's so quiet, too. Way quieter than campus."
+    MC "It's true. Seichou has much fewer students than a traditional school, but even then, it's never this quiet."
+    show GTS neutral-2
+    GTS "I like it very much. The air is incredibly still here, and I can focus. I can't think of any better place to have a conversation."
+    "Naomi slightly twisted her neck twice, scanning the area for a place to sit."
+    show GTS sad-2
+    "She appeared to be indecisive, prompting Honoka to walk up next to her and offer assistance."
+    #Slide BE so that her sprite is directly next to GTS without overlap
+    GTS "Hmm..."
+    BE "Why don't we just have a seat underneath one of the trees? We can all sit in the shade."
+    GTS "I wouldn't want to deprive you two of the bench."
+    show BE happy
+    BE "We don't mind! Right, Kei-kun?"
+    menu:
+        "Actually, the bench does sound nice.":
+            $setFlag("BEGTS003_c1_1")
+            show BE neutral
+            BE "Well, you can sit on a bench nearby while Yamazaki-chan and I sit on the grass. How about that?"
+            MC "That works for me, sure."
+            $setAffection("GTS", -2)
+            GTS "I'd rather hoped we could all share a seating space, but it seems that my height has inconvenienced you."
+            #Slide BE back to her original position, screen left
+            BE "You're fine, Yamazaki-chan. We're all together, here. You're not being fair to yourself if you think you're inconveniencing us."
+        "We can sit underneath the tree.":
+            BE "That's perfect! We'll all be able to sit together that way."
+            show GTS neutral-2
+            GTS "I'm glad that you two are open to the idea."
+            MC "No sense in hanging out together if we can't all share a spot, right?"
+            show GTS neutral
+            $setAffection("BE", 1)
+            $setAffection("GTS", 1)
+            GTS "I suppose you're right."
+    "Naomi briefly paused to collect her thoughts."
+    show GTS unique
+    GTS "Thank you, Inoue-chan."
+    show BE happy
+    BE "Don't mention it, Yamazaki-chan. You deserve more credit."
+    show BE neutral
+    show GTS neutral
+    "The three of us then took our seats. Honoka lowered herself onto the grass first with an audible crunch. Naomi followed, with a resonating pulse forcing Honoka to bounce."
+    if getFlag("BEGTS003_c1_1"):
+        "I took a seat on the park bench directly next to them, turning my body to face them both."
+    else:
+        "I took a seat on the grass next to both of them, the three of us forming the points of a triangle."
+    "Naomi handed Honoka and I each a bento box, keeping two for herself. We each tore open the cardboard package, sliding the tray out from the side."
+    "The smell of noodles, chicken, steamed vegetables, salad, and rice soon filled the air. We each looked at the meals with content, satisfied smiles."
+    show BE happy
+    BE "God, it all looks so good!"
+    show GTS happy-2
+    GTS "It's very impressive the amount of variety they offer."
+    show BE shrug
+    BE "Something something, spice of life, right?"
+    show GTS happy
+    GTS "Something like that."
+    "I started by eating the chicken and noodles, occasionally combining it with the steamed broccoli to create a noodle salad."
+    show BE neutral
+    show GTS neutral
+    "I occasionally glanced at both of them while I ate. Honoka started with the rice, whereas Naomi was eating much larger bites of the chicken and vegetables."
+    "Save for the occasional chirp of a bird or the leaves of the trees rustling, the area was completely silent."
+    BE "..."
+    MC "..."
+    GTS "..."
+    "We sat in silence for a few moments, before Honoka started speaking."
+    show BE happy
+    BE "It's been a crazy semester, hasn't it?"
+    MC "What do you mean?"
+    BE "I just mean, everything that's happened, you know? I've gotten used to my schedule by now, but it still feels so surreal."
+    show GTS surprised
+    GTS "You're referring to Seichou University, correct?"
+    show BE neutral
+    BE "Yeah. It's a school like any other, but getting to know all of the people I've met... it's been fun. Not many people can say they've met such a diverse set of people."
+    show BE happy
+    BE "I wouldn't trade the experience for anything!"
+    show GTS unique
+    GTS "That's very flattering, Inoue-chan. I treasure the time we spend together too."
+    BE "Kei-kun's been my friend for as long as I can remember, but I made a note to get to know everyone else, too."
+    if getRoutelock() == "BE":
+        BE "That, and... he's much, much more than just a friend now."
+    show GTS neutral
+    GTS "Everyone else? Are you referring to the other students in our homeroom?"
+    BE "Yeah! I think I know everyone decently well."
+    MC "A regular social butterfly."
+    show BE embarrassed
+    BE "You know me!"
+    show BE neutral
+    BE "Do you hang out with the others, Yamazaki-san? I'm curious."
+    GTS "I share interests with a few of them, certainly. Kodama-san asks me for botany tips occasionally. She's considering growing her own ingredients."
+    BE "Kodama-san's such a sweet girl. It's impossible to get mad at her."
+    MC "We also joked about forming an invincible basketball team with Mizutani-san a couple days ago."
+    show GTS happy
+    GTS "Hah! I remember. I said something about body checking."
+    show BE seductive
+    BE "She's gonna challenge you to a weightlifting competition soon, Yamazaki-chan. You can bet on that."
+    show GTS unique
+    GTS "I'll be certain to give her a formidable challenge."
+    "The three of us paused for a few moments while we continued to eat. I decided to tear open the bag of bumpy candy, offering a handful to Honoka."
+    show BE happy
+    BE "Appreciated, Kei-kun."
+    if getRoutelock() == "GTS":
+        MC "You're welcome. Do you want some, Naomi-chan?"
+        show GTS neutral
+        GTS "Certainly. Thank you, Kei-kun."
+    else:
+        MC "You're welcome. Do you want some, Yamazaki-san?"
+        show GTS neutral
+        GTS "Certainly. Thank you, Hotsure-san."
+    "Naomi's hand scooped up roughly the same amount as Honoka. She deliberately slowed her arm movements down to avoid crushing the pieces in her hand."
+    "I could hear Honoka lick and crunch the candy for a few moments, before pressing a few pieces into her cheek so she could talk."
+    show BE neutral
+    BE "Who else..."
+    show BE happy
+    BE "Oh, yeah. What do you think of Matsumoto-san?"
+    "Naomi rolled the pieces of candy in her palms for a few seconds, responding before she placed them in her mouth."
+    GTS "I've got a lot of respect for the student council. A role like that must be stressful at times."
+    GTS "Matsumoto-san and I both have a clear idea of self-discipline and drive. I want to present the best possible person I can be when others look at me."
+    show GTS sad
+    GTS "The similarities stop there, however. My idea of one's best possible self comes from inner discipline and being at peace with the person we see in the mirror."
+    show GTS neutral
+    GTS "Matsumoto-san is much more focused on morality and established rules. I can respect that philosophy, even if I don't necessarily agree with it."
+    show BE neutral
+    BE "I think that inner peace and established moral rules can coexist, since they usually agree with each other. If they conflict, though, that's when you need the wisdom to decide what you should do."
+    MC "That's... pretty high brow, Honoka. I don't usually hear you talk like that."
+    show BE seductive
+    BE "I'm just full of surprises, Kei-kun."
+    show GTS unique
+    GTS "That's why I'm happy to have you, Inoue-chan. You help ease my spirits when I'm feeling conflicted."
+    show BE happy
+    BE "I try my best!"
+    show GTS happy-2
+    GTS "You succeed."
+    MC "That just leaves Nikumaru-san."
+    show GTS surprised
+    GTS "Hm."
+    "I could see Honoka focus on Naomi's face as she gradually lost her smile, a fog of uneasiness washing over her."
+    show BE doubt
+    BE "We didn't exactly have the best first impression. All Kei-kun and I saw was her bossing Kodama-san around."
+    show GTS angry
+    GTS "That's exactly why I don't have much respect for Nikumaru-san at all."
+    BE "I see the good in everyone. I'm sure you just got off on the wrong foot."
+    show GTS surprised
+    GTS "I... envy people who have not met Nikumaru-san."
+    MC "That bad, huh?"
+    "Naomi paused for a few seconds, inhaling with her nose while she collected her thoughts. She then exhaled forcefully, as if quieting the storm of her mind."
+    GTS "I apologize. I don't like to speak ill of other people behind their backs."
+    show GTS sad-2
+    GTS "Gah..."
+    BE "Did something happen, Yamazaki-chan?"
+    show GTS surprised
+    "Naomi briefly held her wrist while her hands shook, her fists briefly clenched."
+    GTS "I only felt comfortable expressing my dislikes because of how much I like you, Inoue-chan."
+    if getRoutelock() == "GTS":
+        GTS "Doubly so, because of how much time I've spent with Kei-chan."
+    GTS "Nikumaru-san has a personality type that I just... cannot stand. I don't want to express that with the others, though. It'd make me appear hostile."
+    show BE neutral
+    BE "Well... you don't need to see eye to eye with her, Yamazaki-chan. As long as you don't see each other, it shouldn't be a problem."
+    show BE doubt
+    BE "I wish you'd tell me what happened, though."
+    show GTS sad-2
+    GTS "I will, Inoue-chan. I promise you. I just find it difficult to organize my thoughts right now."
+    show GTS sad
+    GTS "Again, I deeply apologize. I didn't intend to make the conversation so tense."
+    show BE sad
+    BE "Hey... Yamazaki-chan. Do you remember what I said?"
+    show GTS surprised
+    "Naomi slowly craned her head down, looking at Honoka with a sorrowful expression."
+    GTS "Be fair to myself. I deserve credit. I'm a good person."
+    show BE neutral
+    BE "That's right. You need to remind yourself."
+    GTS "I know... I know."
+    BE "Now, give me a hug."
+    #[Potential CG here.]
+    show BE happy
+    BE "Are you ready to head back? We can take as much time as you need."
+    show GTS neutral
+    GTS "I'll be all right. You don't need to worry about me, Inoue-chan."
+    "Honoka gathered up the empty bento boxes and stacked them up into her hands."
+    show BE neutral
+    BE "Mind if I take that, Kei-kun?"
+    MC "Go ahead."
+    BE "I hope you had fun today, even if it got a little melancholy."
+    MC "I like spending time with you two. This was nice."
+    if getRoutelock() == "BE":
+        show BE aroused
+        "Honoka leaned closer to me to whisper into my ear."
+        BE "We'll have some real fun later. I promise."
+        MC "I look forward to it."
+    show BE happy
+    BE "Are you ready to head home?"
+    show GTS wink
+    GTS "I'm ready. I can carry you two, if you like."
+    show BE surprised
+    BE "I'd... love to see that, actually."
+    show GTS neutral
+    GTS "Hold on tight."
+    hide GTS with dissolve
+    hide BE with dissolve
+    "With both of us in tow, Naomi proceeded to pick us up and carry us back to the dorms just as the sun began to disappear beyond the horizon."
+    "Their discussion had me thinking about just how much more they had done with just the two of them. I was even more curious what Naomi planned on telling Honoka later."
+    "I didn't need to worry about my curiosities right this moment, however. I had a pleasant walk with Honoka and Naomi before I turned into my dorm for the night."
+    if getFlag("BEGTS003_TomFix"):
         $setVar("BEMode", "Tomboy")
     jump daymenu

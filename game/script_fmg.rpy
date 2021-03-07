@@ -4153,6 +4153,7 @@ label FMG030:
     $setProgress("FMG", "FMG031")
     $setSize(3)
     scene Dorm FMG with fade
+    play music FMG
     "Akira had invited me to spend the night at her dorm after our workout session. I figured I'd use this as a chance to strengthen our relationship."
     "Plus, I didn't feel like getting scooped off the floor and carried away like last time."
     MC "Yeesh, you take up so much room."
@@ -4202,12 +4203,12 @@ label FMG030:
     FMG "Thanks, dude!"
     #*CLICK*
     FMG "Oh, hey mom, sup. Yeah, I'm doing good, you should see how big I got."
-    show FMG normal
+    show FMG neutral
     FMG "Oh, you will!?! You, dad, and Toast are visiting the island for my birthday? That's awesome I can't wait!"
     MCT "Toast? Is that a pet or-"
     FMG "Man, I can't wait for you guys to come! I got so much to show you, like the school and the town! There's a lot to stuff in town I'd think you and dad would like, like this bakery that makes some of the best cupcakes I've had... yes they're not better than yours of course."
     FMG "Oh and I can't wait for you to meet my roommate, my friends, my boyfriend-"
-    show FMG Surprised
+    show FMG surprised
     FMG "GAK!"
     FMG "Y-Yeah mom... I met someone here! I think you'd like him... yes I know how dad gets when it comes to the ideas of boyfriends... can you make sure he's level-headed... great..."
     FMG "Hey mom, I-I gotta go eat dinner...I-I mean breakfast, it's miso soup day... yes I know miso soup is my favorite... okay, love you too, bye mom."
@@ -4258,7 +4259,8 @@ label FMG030_c1_1:
     FMG "If you can impress my dad, my mom is sure to follow. She'll ask you some stuff like your plans for the future and so on but it's nothing you can't handle."
     MCT "I'm screwed..."
     MC "Yeah, shouldn't be a problem for me, I'm looking forward to meeting your folks."
-    scene school cafe
+
+    scene Cafeteria with fade
     "We had finally reached the cafe and my heart was crushed when the lunch lady told me they had run out of miso soup."
     MCT "First, Akira almost crushes me, then her parents are coming to visit, and on top of that I'm having dinner with them!I just wanted my damn miso soup."
     MCT "Why do bad things happen to good people..."
@@ -4302,6 +4304,7 @@ label FMG031:
     $setProgress("FMG", "FMG032")
     $setTime(TimeEnum.EVE)
     scene Lockers with fade
+    play music Busy
     MC "Aagh... Hot damn, that was a brutal workout. I can hardly even feel my arms..."
     show FMG happy with dissolve
     FMG "Don't be such a baby dude, it wasn't that bad."
@@ -4435,7 +4438,7 @@ label FMG031:
     FMG "Ah, well, somewhat. Not as much as, you know, other people."
     FMG "...You feeling better now?"
     MC "Yeah. I think."
-    FMG "Come on then slowpoke, dinner's waiting! I might not be able to get seconds if someone like Alice gets to ‘em first!"
+    FMG "Come on then slowpoke, dinner's waiting! I might not be able to get seconds if someone like Alice gets to 'em first!"
     "I got up from kneeling, stretching myself out before I realized that Akira was already jogging away."
     MC "Hey! What about your water bottle?!"
     FMG "Toss it in your gym bag and start running!"
@@ -4528,7 +4531,7 @@ label FMG032:
     FMG  "Come oooonnnn, you're not safe up there mister cat!"
     "The cat just gleamed back at her, clueless of Akira's warning words. Looking a little closer, I noticed the glimmer of a tag hanging off of a collar. While I couldn't read out a name or phone number, it's pretty obvious it wasn't any sort of wild animal."
     MC "Hmmh... looks like a pet cat, but isn't there a rule against pets in certain dorms?"
-    show FMG annoyed
+    show FMG angry #annoyed
     FMG "What does that have to do with anything!?"
     MC "Oh, just uh... thinking out loud. Anyways, let's think of a different plan."
     show FMG sad
@@ -4563,6 +4566,7 @@ label FMG032:
 
 label FMG033:
    #Time: Morning
+   $setProgress("FMG", "FMG034")
    scene Classroom with fade
    "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
    "I mean, for myself, the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... My life hadn't changed."
@@ -4764,8 +4768,9 @@ label FMG033_FMG_after:
    jump daymenu
 
 label FMG034:
-    $setProgress("FMG", "FMG035")
+    $setProgress("FMG", "FMG038")
     scene Hallway with fade
+    play music Schoolday
     "I swear if I have one more pop quiz today, I'm going to highly consider jumping out the nearest window."
     "Please science class...spare me, I'm not strong enough."
     MCT "I'll grab my textbook from my locker and meet up with Daichi."
@@ -4880,12 +4885,13 @@ label FMG034:
     jump daymenu
 
 label FMG038:
-    #NEED PROGRESSION
+    $setProgress("FMG", "FMG039")
     scene Dorm Interior with fade
     "You ever have those moments where you have an amazing dream, everything is going perfect and you don't want to wake up, but then something happens and it's ruined immediately?"
     "*fffffrrh...fffffrrh*"
     MC "Huh...W-what? Is that my phone? Who is even awake this early?"
     MC "H-*yawn*...Hello?"
+    play music Busy
     FMGCell "Good morning Kei-kun!"
     MC "A-Akira?! Why are you up so early?"
     FMGCell "Haha, what do you mean? It's nearly lunch."
@@ -4998,16 +5004,16 @@ label FMG038:
     AE "So, are there any further questions?"
     show FMG neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Could you go over it one more time? I stopped listening as soon as you started talking."
-    show AE Neutral annoyed
+    show AE neutral-annoyed
     AE "Certainly. Now, when working on the-"
-    show FMG surprise
+    show FMG surprised
     FMG "H-Hey, I was just kidding! Dear god, please don't explain it again!"
     show AE neutral
     AE "Very well. When you are finished please return the key to the front desk, and remember, like I said: make sure that whatever you do, don't forget to take the key out of the lock *before* you close the door. It locks automatically so if you leave the key in it will jam from the inside."
     MC "Got it."
     "Matsumoto-san thanked us while handing the key to me before turning to leave for the student center. I turned around and tossed the key to Akira as she unlocked the door and let us in."
     hide AE with dissolve
-    show FMG happy at Position(xalign=0.5, yalign=0.5, yalign=1.0) with dissolve
+    show FMG happy at Position(xalign=0.5, yalign=1.0) with dissolve
     FMG "Okay, let's bang this out so we can get to the gym before they close."
     MC "HUH???"
     show FMG flex
@@ -5123,13 +5129,13 @@ label FMG038:
     AE "As long as the two of you are okay, that's what I care about. However, it appears as though you've done well in organizing the shed. Thank you for your cooperation."
     show FMG happy
     FMG "Awesome! We should do this more often!"
-    show AE smug
+    show AE neutral-smug
     AE "Oh?"
     MC "NO!"
     "The two girls laughed to themselves, and I couldn't help but join in. Though it was definitely a pain, I couldn't help but feel like today made me grow closer to Akira. After all, no pain, no gain."
     jump daymenu
 
-label FMG035:
+label FMG039:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -5415,4 +5421,164 @@ label FMGBBW001:
     MC "Wait... Was that lady hitting on me?"
     "..."
     MC "Nah..."
+    jump daymenu
+
+label FMGBBW002:
+    scene Hallway with fade
+    play music Busy
+    MCT "Wait for meeee she says...I won't be long she said."
+    MC "I'm going to start charging her an inconvenience fee every time she does this."
+    "I soon heard frantic footsteps coming down the stairs with a familiar voice accompanying them."
+    FMG "Sorry! Sorry! The teacher held me after class."
+    show FMG sad with dissolve
+    FMG "...Dang, I'm late again..."
+    MC "Hey, don't stress out over it. Shit happens Akira."
+    show FMG sad
+    FMG "Sigh...sorry Kei-kun...I tried to get out as fast as possible but she wouldn't let me leave."
+    MC "Wellll when you put it like that, I'll forgive you this ONE time. I'm not mad or anything like I just told you it's no big deal. Anyway, I'm curious, why did the teacher hold you after class?"
+    show FMG happy
+    FMG "I'll explain on the way to the gym!"
+    MCT "One of the few times I've seen her excited about class."
+    scene Track with fade
+    "As I said before, I had never seen her so overjoyed about school. Her smile was so wide and call it cheesy but it warmed my heart to see her so happy."
+    show FMG happy with dissolve
+    FMG "...Ohhhh and then she gave me a hug cause she was so proud of how I was turning myself around in the class."
+    MC "Haha, that's great! Feels good when you start seeing results from your hard work, yeah?"
+    FMG "Hell yeah dude! It has me so freaking pumped, we are going hard today."
+    MCT "Aaaaand I'm sad."
+    MC "Should we though? I'm thinking as a reward we should take it easy today. I'm talking like five push-ups and we call it a day."
+    show FMG neutral
+    FMG "Hmmm...Okay, I think that's fair."
+    MC "Really?!?!."
+    show FMG flex
+    FMG "Pffff, who do you take me for? When we're done you'll be crawling out of the locker room."
+    MCT "From now on, I'm going to stop talking."
+    MC "Nice, looking forward to it..."
+    show FMG neutral
+    FMG "I knew you'd love it."
+    MC "Aye, I love it as long as you're there."
+    "She smiled and laughed scooping me up into yet another one of her bear hugs."
+    show FMG aroused
+    FMG "You always know what to say."
+    MCT "While I'm never keen on dying in the gym, my day is always brighter with Akira. The pros easily outweigh the cons here."
+    scene Lockers with fade
+    "As we entered the gym, we heard something that caught Akira's attention."
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    FMG "Is-is that Alice talking? Why would she be here of all places?"
+    MC "Hey, maybe she's trying to get in shape."
+    FMG "..."
+    MC "Okay, maybe that was a stretch."
+    FMG "Anyway, let's go investigate!"
+    "We followed the sound of Alice's voice and as we turned the corner, Akira's cheerful expression quickly turned sour."
+    show FMG angry-2
+    show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show BBW neutral-2 with dissolve
+    FMG "Be careful Alice, you can't trust that one."
+    Natsuko "I have a name, I suggest you use it."
+    show BBW stern
+    BBW "Can you two control yourselves for once? I don't have time to listen to you two verbally spar."
+    Natsuko "Hmph, you always have to show up and ruin everything don't you Akira?"
+    show FMG angry
+    FMG "Put a sock in it, before I do it for you."
+    show BBW stern
+    BBW "Enough. Akira can you step aside, I'm here to deliver Natsuko's order and after that, I'll take my leave."
+    show FMG sad
+    FMG "Fine..."
+    Natsuko "Thank you again, Alice. This is everything I could've hoped for, it's incredibly challenging to find a dress that fits my proportions."
+    show FMG happy
+    FMG "Maybe if you weren't built like a gorilla you'd have an easier time."
+    MCT "Oh no..."
+    "Natsuko handed the dress back to Alice and made her way over to Akira pressing her chest to hers."
+    Natsuko "Choose your next words very very carefully."
+    show FMG surprised
+    FMG "Ooooohhhh scary."
+    show BBW angry
+    BBW  "That's enough!"
+    show BBW stern
+    BBW "Now you listen- both of you. I don't know what it is that makes two of the most good-natured and easy-going people I've met at this school turn into vulgar beasts in the presence of each other, but I am disappointed that neither of you can manage to keep your composure and act like proper adults towards each other in the presence of company. Quite frankly it's embarrassing to be seen around you two when a fight breaks out."
+    MCT "Natsuko and Akira began to look down and to the side away from each other, slowly absorbing Alice's chastising."
+    BBW "Whatever possesses you two to do so is none of my business, but what I will not stand for is listening to the two of you denigrate each other for the sake of petty one-upmanship at a time in all our lives where everyone here is the most insecure they've ever been about the changes going on with themselves."
+    show FMG sad
+    show Natsuko disappointed
+    BBW "One of the reasons I started my custom clothing business was that I knew it could be just one thing that could help students here feel normal again. They could forget about the world not built for them for a bit, just by having something fashionable that actually fit them again."
+    BBW "It doesn't feel too nice when people make fun of your body shape does it? Look at me. You two don't even know the half of it, and still, neither of you can take it. Do you see me fly off the handle every time I hear some snide, inconsiderate remark within an earshot? I suggest you both grow beyond such childish ways."
+    FMG "I guess I didn't think of it that way."
+    Natsuko "That's because you don't think about anything."
+    show FMG angry-2
+    show BBW angry
+    BBW "Zip it!"
+    show BBW stern
+    BBW "I'm done here. What you two do together in your own time with each other is your own business, but if you two can't control yourselves around other people instead of continuing these petty squabbles, you can forget about asking me for help to find clothes that actually fit."
+    hide FMG with dissolve
+    hide Natsuko with dissolve
+    show BBW neutral
+    BBW "Good luck with those two Keisuke. If you ever need help with them let me know."
+    MC "Ah-yeah will do. Thanks for your help, Alice."
+    "With that Alice handed the dress back to Natsuko and left."
+    hide BBW with dissolve
+    show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    Natsuko "If you ever insult my body again, I will bury you."
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    FMG "Take a chill pill Natsuko. We both just got lectured about our attitudes."
+    show FMG sad
+    FMG "I figured someone as bright as yourself would've caught on by now-"
+    show FMG flex
+    FMG "But I guess not."
+    MCT "Oof."
+    show Natsuko disappointed
+    Natsuko "Your 'jokes' are as pathetic as your athletic ability. Now if you'll excuse me I have other more important matters to attend to."
+    "Natsuko tossed the dress over her shoulder and was halfway out the door before stopping and turning back towards us."
+    show Natsuko smug
+    Natsuko "Next time we cross paths you better be ready."
+    hide Natsuko with dissolve
+    show FMG angry-2 at Position(xalign=0.5, yalign=1.0) with dissolve
+    FMG "Only thing bigger than those gorilla arms is her ego. Does she ever get sick of hearing herself speak?"
+    MC "Let's just put this behind us. We should go look for Alice and apologize, pretty sure the last thing she wanted today was to watch you two throw down."
+    show FMG sad
+    FMG "Yeah, totally."
+    show FMG happy
+    FMG "I have a good idea of where she could be."
+    MC "And that would be?"
+    scene Cafeteria with fade
+    MCT "I should've guessed..."
+    show FMG happy with dissolve
+    FMG "I see her! Wow...that is a huge stack of-"
+    show FMG surprised-2
+    FMG "Paper? I figured she'd be shoveling food into her mouth."
+    MC "Aye don't be saying stuff like that when we talk to her."
+    show FMG neutral
+    FMG "Promise I won't."
+    "Alice was quick to notice us as we approached. To be fair we aren't a hard couple to miss."
+    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    BBW "I hope you are in a better mood now, Mizutani-san."
+    show FMG sad
+    FMG "I am. That's actually why we were looking for you. I want to apologize for earlier."
+    FMG "Natsuko brings out the worst in me. Even after I spoke with my mom about it, I still struggle to keep my cool."
+    show BBW neutral
+    BBW "That is unfortunate. I can try and speak with her if you'd like. She really is a different person when you aren't around, always willing to help anyone no matter what."
+    show BBW sad
+    BBW "Maybe I can find out why she acts like this. I hate seeing you two at each other's throats."
+    show FMG neutral
+    FMG "I wouldn't worry about it. I don't see her changing her attitude anytime soon. Sorry to keep you from your umm...business stuff. Kei and I have to get back to the gym."
+    MCT "Damn it. She never forgets."
+    show BBW happy
+    BBW "It was no bother. Thank you for taking the time to apologize and If you ever need help with clothes, I'll be happy to assist."
+    show FMG happy
+    FMG "Heh, who knows maybe I'll be ripping out of my sleeves soon."
+    "With that, we said our goodbyes and went our separate ways."
+    hide BBW with dissolve
+    MC "That went better than I expected. So umm...about the workout for today-"
+    show FMG happy at Position(xalign=0.5, yalign=1.0) with dissolve
+    FMG "I had something else in mind."
+    show FMG flex
+    FMG "Movie night back at my dorm? I picked up a few horror movies the other day."
+    MCT "Someone is looking out for me."
+    MC "Yes! Hundred times yes...But I have one question. Popcorn?"
+    show FMG sad
+    FMG "Do you know how unhealthy that stuff is for you? Keisuke-san it's extremely important to be mindful of ones eating habits."
+    MC "...Is that a joke?"
+    show FMG neutral
+    FMG "Duhhh! I already texted Chibuki to start popping it. We need to hurry though she might eat it all."
+    MC "She better not."
     jump daymenu
