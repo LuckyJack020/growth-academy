@@ -3467,7 +3467,7 @@ label GTS024_c1_2:
     jump daymenu
 
 label GTS025:
-    $setProgress("GTS", "GTS027")
+    $setProgress("GTS", "GTS026")
     $setTime(TimeEnum.EVE)
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn't shown up."
@@ -3544,6 +3544,416 @@ label GTS025_c1_2:
     GTS "Are you certain?"
     MC "I'm certain. There's no need to apologize."
     GTS "I still feel foolish for having asked."
+    jump daymenu
+
+label GTS026:
+    $setProgress("GTS", "GTS027")
+    "I awoke in the same bed in the same room, where I could look out the window and see the same otherworldly campus under the same vermillion sky."
+    "Time stopped yesterday on the roof."
+    scene Dorm Interior with fade
+    "And all the tiny vibrations of the outside world flooded into me. My heart wrung itself in the emptiness, sending sweet vines up into my throat."
+    "Lying down, eyes glued to the ceiling, I couldn't stop smiling."
+    "As the air moved in blind circles in my chest, I thought about how everything could go so right. Could it have been a dream? I didn't remember a single other thing that happened yesterday."
+    "I soon realized I was moving in circles, too, and so I flung off my blanket and stood to get ready for day two."
+    show RM neutral with vpunch
+    MC "PFWUGAH"
+    play music RM
+    MC "Jeez, can I put my clothes on first?"
+    "Daichi had gone back to shotgunning a can of coffee while I processed the shock from the impromptu wakeup call."
+    "Apparently finished, he set the can back onto his lap."
+    show RM concerned
+    RM "I just need to know why you were sitting in bed wide awake at four-thirty this morning."
+    "For a second, I had no answer but to stare back at him agape."
+    MC "Why is that any business of yours?"
+    "He shrugged."
+    RM "Seemed like something was bothering you. I know I'm not the most charming guy, but if we're gonna be living together for a year..."
+    MC "I do not have the time nor the pants for a therapy session right now, Utagashi-san."
+    show RM neutral
+    RM "Just tell me what's up, maybe I can help."
+    MC "...Alright, if it'll end this conversation, it's not something I need help for. All it was was..."
+    MC "...I had kind of a moment with Yamazaki-san yesterday."
+    "His eyebrows rose a little bit and he said nothing for a moment."
+    RM "Okay, well good luck with that."
+    MC "Thanks, doc."
+    "He shrugged."
+    RM "I said 'maybe'."
+    show RM happy
+    RM "And hey, she seems like a good person to be friends with. Good for you."
+    "I mulled over his phrasing as I reached for my pants. The stiffness of the day's first waking moments fought me a little on the way."
+    MC "Yeah, thanks."
+    hide RM with dissolve
+    "At that, he took his backpack and slinked out of the room, holding the door tight against him all the way."
+    "And I just took a deep breath, stretched and stood. I spared a glance at the clock: forty-five minutes to class."
+
+    scene black with fade
+    pause 1
+    scene Hallway with fade
+    play music Hallway
+    "Things didn't feel much more real as I collected myself and headed to class."
+    "There was a breeze out; silhouettes of leaves milled to and fro on the windows, on the walls beyond, while our scattered procession crawled towards room 3B."
+    "Motion was coming creaking back to the world around me."
+    "That was when my eye catapulted past the mottled shades of gray and beige high above toward a jewel of jet gleaming with streaks of white; in a second she vanished past the door."
+    MCT "Yamazaki?"
+    MCT "Not often she's not first in..."
+    "Moments later, I squeezed my way into class, too."
+
+    scene black with fade
+    pause 1
+    scene Classroom with fade
+    show HR neutral with dissolve
+    HR "...And if there are no other questions, remember there's a quiz on chapter 4 tomorrow."
+    HR "And for whoever needs to hear this, any copy that comes back to me with glitter on it is getting a zero. Hope that's clear enough."
+    HR "Alright, dismissed."
+    "I slapped together my things and dumped them into my backpack as gracefully as I could manage, before standing to try and follow Naomi out the door."
+    "As I did so, passing the head of the room, I caught Tashi-sensei glancing at me; I stopped."
+    MC "..."
+    HR "Got a question, Hotsure?"
+    MC "No, sensei."
+    HR "Fantastic. See you tomorrow."
+    "His expression didn't change at all for the entire exchange. I bowed, and he nodded and returned to his paperwork."
+
+    scene Hallway with fade
+    "Luckily, I had a strong hunch where Naomi was going."
+    "I picked up the pace in her footsteps; just as we came within sight of the exit out to the roof, she turned her head slowly and I caught a glimmer of amber."
+    show GTS neutral with dissolve
+    GTS "Good afternoon, Hotsure-san."
+    MC "Same to you, Yamazaki-san. How're you doing?"
+    GTS "I am well, and I'm glad you have decided to join me."
+    MC "'Of course! Shall we?"
+
+    scene Roof with fade
+    "A handful of students were treating themselves to snacks and conversation under the noon sun there already; Naomi was almost ethereal among them, stepping in a silent, measured pace, hands folded, face like a pearl."
+    "I followed her to her mist-blanketed tulip planters, matching her meditative pace. She turned around, and revealed the swift return of her characteristic sober countenance."
+    show GTS neutral with dissolve
+    GTS "How quickly things change."
+    MC "Yeah..."
+    MC "How are the verbenas looking?"
+    GTS "Just fine. The one that was withering has just about fully recovered."
+    if getFlag("GTS025_kiss"):
+        "To my surprise, she wasn't looking at me nor at the garden as she said it; I traced her gaze as subtly as I could and peered upon a bench by the planters. Our bench."
+        "But then she turned back to me, and after a flash of surprise put on a gentle smile."
+    MC "Well, that's not so bad, right?"
+    show GTS neutral at Transform(xzoom=-1)
+    "She shook her head, and then took up her watering can and began to pour. The flowers sounded off with a grateful pitter-patter, and their faces gleamed with the droplets."
+    MC "Yamazaki-san..."
+    MC "If you don't mind, I think we have something to talk about."
+    GTS "Perhaps we do."
+    "She finished watering her flowers... and looked them over for a moment or two, before turning to me."
+    GTS "Patience, however. What do you say we talk about it on the way to lunch?"
+    MC "Yeah! Yeah, sure."
+    "She smiled at me, bowing her head, and set aside her watering can while I went to open the door."
+
+    scene Hallway with fade
+    show GTS neutral with dissolve
+    "Naomi didn't seem to mind at all as I considered what to say."
+    "It occurred to me, stealing a glance at the mild portrait of her face, if I should've said anything at all. In time, however, I realized I didn't have a choice."
+    menu:
+        "I think we should talk about yesterday.":
+            jump GTS026_c1_1
+        "Seeing the verbenas getting better must be a relief, huh?":
+            jump GTS026_c1_2
+
+label GTS026_c1_1:
+    show GTS neutral at Transform(xzoom=1)
+    GTS "I see..."
+    GTS "What do you wish to talk about?"
+    MC "I've been thinking..."
+    if getFlag("GTS025_kiss"):
+        "And it was time to act."
+        MC "Would you be available to have dinner this evening?"
+        show GTS surprised
+        GTS "Well!..."
+        show GTS happy
+        GTS "Yes, I think that should be perfectly fine."
+        MC "The sushi joint on Genki street, like five o' clock?"
+        GTS "A lovely idea. Shall I meet you at the bus stop?"
+        MC "If you would."
+        show GTS neutral
+        "Her smile drifted down over me as she nodded."
+        MCT "It's a..."
+        "I didn't say it. She didn't look quite straight at me, pulled askew by some string I couldn't see. But in a wave of time's hand I would have my answer either way."
+        MC "Well, I hope we're not too late for the mackerel soba, eh?"
+        "Naomi looked straight ahead as we meandered down the hall."
+        $setAffection("GTS", 2)
+        GTS "We will just have to wait and see."
+        jump GTS026_c2
+    else:
+        MC "Well, reconsidering."
+        "I thought about it for a second, as her eyes drifted over and down to me from those high corners, and dampened my voice a few decibels."
+        MC "I'm sure you understand why I don't go into too much detail right now, but I think my unreadiness was just sort of a... momentary thing."
+        "My flitting tongue dredged up my words like iron slag."
+        MC "And I think that now, I'm ready to say..."
+        show GTS surprised
+        GTS "Ah..."
+        MC "Hm?"
+        show GTS sad
+        $setAffection("GTS", 1)
+        GTS "I appreciate the sentiment, but..."
+        MC "Right... right, of course."
+        MC "Well, hey, what about a change of scenery? Are you free tonight?"
+        show GTS neutral
+        GTS "I believe I am, yes."
+        MC "We could have dinner at the sushi place on Genki street. Have you been there yet?"
+        show GTS neutral at Transform(xzoom=-1)
+        "The first creases of a smile blossomed on her face."
+        GTS "There were a few dishes there I still wanted to try."
+        MC "Cool. Let's say we meet by the bus stop at five tonight."
+        GTS "Let's."
+        jump GTS026_c2
+
+label GTS026_c1_2:
+    show GTS happy
+    GTS "A balm to be sure. Thank you for asking."
+    MC "Another one brought back from the brink, Doctor Yamazaki."
+    show GTS embarrassed at Transform(xzoom=1)
+    GTS "Oh, I don't know that that's necessary."
+    show GTS neutral
+    GTS "What about you, Hotsure-san? I've tried to leave you a stable foundation, if it should come to that."
+    MC "And I appreciate that. It does satisfy the monkey brain to see that hole filled in, doesn't it?"
+    GTS "Indeed."
+    show GTS neutral at Transform(xzoom=-1)
+    "A silence settled in the golden warmth of the hall, if only for a moment."
+    MCT "..."
+    extend "Damn, she's playing on another level."
+    MC "So hey, do you think you'd want to have dinner tonight? Just you and me?"
+    GTS "I think I would. Did you have anything in mind?"
+    MC "What about... the sushi place on Genki street? Like around five tonight."
+    GTS "How auspicious. There {i}were{/i} some dishes there I wanted to try. I think sitting down would be lovely."
+    MC "Same. Well, guess I'll see you then."
+    show GTS happy-2
+    GTS "Splendid!"
+    jump GTS026_c2
+
+label GTS026_c2:
+    hide GTS with dissolve
+    "We continued together to have lunch with what time remained. Of course, we spared a second to say 'itadakimasu'."
+    stop music
+    scene black with fade
+    pause 1
+    scene Dorm Exterior with fade
+    "My blood was ice."
+    "Breathing in, breathing out. I was alive."
+    "And yet, as I ambled through the school grounds with my legs clanking along on their own, I felt like an invertebrate crammed into a not-very-new school dress shirt."
+    if getFlag("GTS025_kiss"):
+        "I couldn't help but think that run over as it might, how easily my cup could shatter."
+        "What was I to her, really?"
+        "We'd known each other a couple months, and this cheesy-ass date was my idea to escalate things. One little flower in the patch that went without food for a while."
+    else:
+        "I knew by then, with needles swimming under my skin, exactly what my relationship with Naomi meant to me. And how precarious I had made it."
+        "I had to know that by tonight it could be over before it had begun. Who could blame her, really?"
+    "Breathing in, breathing out. I was alive. And I stayed the course."
+    scene School Front with fade
+    "I arrived, no less becalmed within but steady without. I set my eyes flat and my back straight; there was a certain image required, after all."
+    "And as I partook of the late afternoon quiet, a distinctly straight, gentle line of footsteps grew closer behind me. I turned to behold her."
+    play music Peaceful
+    show GTS casual-neutral with dissolve
+    "Silently, I ceased to breathe."
+    "Her very presence cast me in blessed shade, as her wavering straw hat did for her. The rest of her statuesque frame was wreathed in the sleepy, swaying grays and blues of a distant mountain."
+    if getSkill("Art") > 3:
+        MC "Yamazaki-san, you look like a work of art, and an original at that."
+        show GTS casual-happy
+        $setAffection("GTS", 1)
+        GTS "Well! One might accuse you of flattery, but your face looks especially candid right now."
+        GTS "Erm... pardon me. Thank you, Hotsure-san."
+    else:
+        MC "Wooow, is that a new outfit? You look really good."
+        show GTS casual-happy
+        GTS "Why, thank you. I actually bought this hat for working out in the sun, but I had a feeling it would be a proper cap-off for my ensemble."
+        MC "About how long were you thinking that up?"
+        show GTS casual-wink
+        GTS "I, for one, believe it's the thought that counts."
+    show GTS casual-neutral
+    GTS "You've put yourself together impressively, as well. I recognized you from across the plaza."
+    GTS "...I don't know if anyone has ever looked at me quite that way before."
+    MC "Heh heh... hope you'll pardon my tactlessness."
+    show GTS casual-happy
+    "She subtly shook with a muffled chuckle."
+    GTS "Not at all."
+    show GTS casual-neutral
+    GTS "Well then, are we waiting for a bus, or shall we walk into town?"
+    "I shrugged."
+    MC "Seems like a fine hour for a walk."
+    show GTS casual-neutral at Transform(xzoom=-1)
+    GTS "It surely does."
+    "I put one hand behind my back and held the other up by my neck, whereupon she took it in her own, smiling."
+
+    scene Field with fade
+    show GTS casual-neutral with dissolve
+    "As we made our way down the sidewalk through the valley, the vastness of the wind struck me; grasses cast in a mild pre-evening ochre swayed just in time with the folds of Naomi's skirt and jacket."
+    "It struck me how all this way she'd just been inching her feet along."
+    "She was still holding my hand as the edge of town crept into view; hers encased mine entirely, and in the direct sunlight the inside was beginning to grow damp. I decided, then, to disturb the otherwise comfortable silence."
+    MC "Should we let go now?"
+    GTS "Do you want to?"
+    MC "Well... I think it'd be best."
+    "She nodded, and I slid our hands apart. She folded hers together and kept on with her drowsy, contemplative eyes forward."
+    pause 0.5
+    "I suppose at the same time we came to notice the up-and-down whooshing of the cars and buses going by on the road; even they were low and mild."
+    "Naomi's gaze lingered on them for a few moments, while I perceived her expression shift just slightly downwards."
+    menu:
+        "What're you thinking about?":
+            jump GTS026_c2_1
+        "(Remain silent)":
+            jump GTS026_c2_2
+
+label GTS026_c2_1:
+    if getAffection("GTS") > 20:
+        $setFlag("GTS026_bus")
+        GTS "It occurs to me that if I do become tall enough to warrant moving to special facilities..."
+        show GTS casual-neutral at Transform(xzoom=-1)
+        GTS "...I suppose public transport on the mainland will be closed off to me for good."
+        MC "I mean, you could probably squeeze into a..."
+        MC "Hm... that'd be difficult with the crowds."
+        show GTS casual-neutral at Transform(xzoom=1)
+        GTS "More than difficult. Practically speaking, it would be unconscionable."
+        MC "You don't seem particularly bothered."
+        GTS "Oh, hardly. I must confess, I was hoping you would propose a stroll."
+        GTS "It's merely an observation."
+        "I twirled my finger over my scalp."
+        MC "Like how I'm never gonna be hired at a restaurant?"
+        $setAffection("GTS", 1)
+        show GTS casual-happy
+        "Her sharp, chirping guffaw told me that caught her off-guard."
+        GTS "I suppose so!"
+        MC "Well hey, I clipped it not too long ago. Maybe we can get a free meal if I can convince the waiters some of theirs got in my food."
+        GTS "Don't you dare, Hotsure-san, I {i}will{/i} hold you to your honor."
+        MC "If you say so."
+        "She smiled down at me a moment, before cracking one last inaudible chuckle."
+        jump GTS026_c3
+    else:
+        GTS "Oh, nothing in particular apart from taking in the view."
+        MC "It's a great one."
+        show GTS casual-happy
+        GTS "It really, really is."
+        jump GTS026_c3
+
+label GTS026_c2_2:
+    "The moment passed, and I wondered if I'd really seen anything at all."
+    "I took in the view alongside her, then, and I could feel myself begin to warm in spite of the uncertainty in the air. For the first time, in its way, the island began to feel a little homey."
+    jump GTS026_c3
+
+label GTS026_c3:
+    scene Town with fade
+    "Town was alive, but thankfully not crowded. We rounded a few corners and found our destination with nary a line, and I gave thanks in my head as I ushered Naomi in."
+    scene Restaurant with fade
+    "She stooped in, and after I followed suit and the door jangled behind me, I greeted the waitress; she kindly directed us to a table buffered at least one away from any other."
+    show GTS casual-neutral with dissolve
+    Waitress "Alright, welcome! Would you guys like a drink to start off?"
+    MC "Hm... what'll you have, Yamazaki-san?"
+    GTS "Do you have sencha, perchance, miss?"
+    Waitress "We do, would you like that?"
+    show GTS casual-happy
+    GTS "Yes, please!"
+    Waitress "Great! And for you, sir?"
+    show GTS casual-neutral
+    MC "I think I'll have some matcha, please."
+    Waitress "Absolutely, you guys can have a look at the menu if you please and I'll bring your drinks right out for you."
+    MC "Thanks!"
+    GTS "Thank you!"
+    "The waitress bowed with a well-crafted smile and left us."
+    MC "So what did you get last time?"
+    GTS "...The unagi roll, I believe it was. I wanted to try the crab roll as well."
+    MC "That does look good. As does the shimesaba... hmm..."
+    GTS "I should say so, looking at it."
+    "Out of the corner of my eye I spotted our server approaching the table with two steaming glass tea cups, one a familiar green and the other a more verdant gold. She set each in its place in front of us and bowed."
+    Waitress "Have you had a chance to decide?"
+    "I gave Naomi an inquisitive glance, and she nodded."
+    GTS "I would like an unagi roll, please."
+    "The woman nodded and rattled off enthusiastic affirmatives as she scratched in the order."
+    Waitress "And for you sir?"
+    menu:
+        "One crab roll, please.":
+            jump GTS026_c3_1
+        "One crab roll and a plate of shimesaba, please.":
+            jump GTS026_c3_2
+
+label GTS026_c3_1:
+    Waitress "Mm hm... coming right up!"
+    "Thanks were given, and she went away once more."
+    jump GTS026_c4
+
+label GTS026_c3_2:
+    Waitress "Mm hm... coming right up!"
+    MC "Thanks!"
+    GTS "Thank you, miss."
+    "She bowed once more and went away."
+    show GTS casual-surprised at Transform(xzoom=-1)
+    GTS "Hotsure-san... I should tell you, their proportions are generous. Do you intend to eat all of that yourself?"
+    MC "Oh, no, not at all. I figured we'd split the shimesaba."
+    show GTS casual-happy
+    GTS "Oh, I see. Thank you kindly."
+    show GTS casual-neutral at Transform(xzoom=1)
+    jump GTS026_c4
+
+label GTS026_c4:
+    "Naomi took the moment to ease her finger through her teacup handle and lift it for a sip."
+    "Her eyes drifted closed as she took it in, and I could see the languor with which she savored the hot brew."
+    "I felt compelled to take a sip of mine, too. Her eyes opened as I did, but she waited for me to finish."
+    GTS "Well now, I think it best that we clear the air."
+    GTS "There is something I would like to say first, if you wouldn't mind."
+    MC "Of course."
+    "I took another sip. It tasted not unlike what they served at my high school cafeteria."
+    show GTS casual-neutral at Transform(xzoom=-1)
+    GTS "Well, I've tried to consider what's probably been going through your mind in, well, what feels like no time at all."
+    GTS "If you find I have misunderstood you, I apologize."
+    GTS "But to tell you the truth as I see it..."
+    "I had to lock what felt like every muscle in my body to maintain eye contact."
+    "And by God, for what?"
+    GTS "I think we should be together."
+    if getAffection("GTS") > 20:
+        GTS "There's a wholesomeness in you, Hotsure-san, and I can tell that it's genuine."
+        GTS "So often you know just what to say, and not just to me, it seems, but to almost everyone."
+        if getSkill("Academics") > 5:
+            GTS "You clearly have a good head on your shoulders, as well."
+        if getSkill("Art") > 5:
+            GTS "And even more than that, you're such a soulful person, full of life."
+        GTS "It is not my nature to put it so plainly, but even for what time we've spent together, all of that means a great deal to me."
+    else:
+        GTS "It may not be particularly natural for me to put it so bluntly, but I earnestly like you, Hotsure-san."
+        GTS "I sincerely would like to get to know you better."
+    GTS "That is my truth."
+    "She folded her hands and wrung out the slightest smile."
+    GTS "I do hope I haven't just made a fool of myself."
+    "To my chagrin, I was simply gobsmacked for a few seconds. At last I let out a puff of... relief, I guess."
+    MC "Well, you didn't misunderstand me, Yamazaki-san. I feel much the same about you, to put it plainly."
+    if not getFlag("GTS025_kiss"):
+        MC "To be totally honest, I was a bit worried that I had missed my chance yesterday."
+        show GTS casual-happy
+        GTS "Certainly not. I perfectly understand why you might need time to consider it."
+        show GTS casual-neutral
+    else:
+        GTS "That puts me greatly at ease."
+    GTS "However, there's something else I would like to share with you, Hotsure-san."
+    MC "I'm listening."
+    GTS "Well, if we were to call what we have by its more proper nomenclature, I would prefer to abide by more proper channels."
+    "I took another quiet sip of the rich matcha as I pondered her meaning."
+    if getSkill("Academics") > 2:
+        MC "I see."
+        MCT "Probably should've seen this coming now that I think of it."
+        MC "Yeah, I understand, and that's fine. But what does that mean for us now?"
+    else:
+        MC "I'm, uh, not sure I follow."
+        GTS "Well, my parents' guidance is paramount to me. I would like to have their explicit blessing before I'm comfortable with anything official."
+        MCT "Well... there goes that plan."
+        MC "Oh, I get it. I respect that."
+        MC "But then... what do we do until then?"
+    show GTS casual-neutral at Transform(xzoom=1)
+    GTS "That's not to say I don't want to see you or be with you."
+    GTS "Oh, how do I put it?"
+    MC "Committed in all but name?"
+    MC "I can live with that."
+    show GTS casual-happy
+    "I got to see another glimpse of her perlescent grin as we looked over each other. I could feel that I was wearing a similar expression."
+    show GTS casual-neutral
+    "The waitress at once appeared by our table, having deftly escaped my notice, and she bore down an unequivocally generous trio of crab rolls and shimesaba betwixt us. Lastly, she set down a pair of wrapped chopsticks."
+    Waitress "Is there anything else I can help with?"
+    MC "Oh, no, this oughta be just fine. Thanks."
+    "She bade us to enjoy the meal and bowed out."
+    MC "Hmmm... ah. That marinade smells choice."
+    GTS "I agree entirely."
+    "I picked up my chopsticks and tore the top off while Naomi did the same. But then I saw her lay them down, a babe into a cradle, and she clasped her hands together."
+    "I followed."
+    MC "Itadakimasu."
+    GTS "Itadakimasu."
     jump daymenu
 
 label GTS027:
@@ -3685,7 +4095,7 @@ label GTS027_c1_2:
 
 label GTS028T:
     $setProgress("GTS", "GTS030")
-    scene Theater with fade
+    scene Theater Exterior with fade
     play music Peaceful
     "I scanned the various posters that decorated the inside of the theater, wondering what might be good. Naomi leaned down slightly to get a closer look at the posters as well."
     show GTS neutral at Position(xpos=0.8, xanchor=0.5, yanchor=1.0) with dissolve

@@ -30,6 +30,7 @@ init python:
         'dorminterior': ("school", (880,380)),
         'festival': ("town", (1100,650)),
         'field': ("town", (1100,650)),
+        'frozenbeach': ("town", (1100,650)),
         'giantdorminterior': ("town", (950,100)),
         'gym': ("school", (730,220)),
         'hallway': ("school", (745,375)),
@@ -44,6 +45,8 @@ init python:
         'schoolfront': ("school", (570,620)),
         'schoolplanter': ("school", (570,265)),
         'schoolexterior': ("school", (715,650)),
+        'summer-beach': ("town", (570,620)),
+        'summer-guestbedroom': ("town", (570,620)),
         'supermarket': ("town", (1100,650)),
         'town': ("town", (1100,650)),
         'track': ("school", (570,165)),
@@ -110,6 +113,7 @@ init python:
         DAY = "day"
         NIGHT = "night"
         EVE = "eve"
+        NIGHTLIGHTS = "night_lights"
 
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
@@ -561,7 +565,8 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuko": [1, 2, 3]
+            "Natsuko": [1, 2, 3],
+            "Sakura": [1, 3]
         }
 
         try: #backwards compatibility, remove later
@@ -581,7 +586,7 @@ init python:
 
     def setTime(t):
         global gametime
-        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT:
+        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT or t == TimeEnum.NIGHTLIGHTS:
             gametime = t
 
     #Edge case handler for Aida's initial pregnancy
@@ -651,7 +656,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Natsuko': 1}
+        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         flags = []
         vars = {}
