@@ -3562,16 +3562,16 @@ label BBW021:
     "I came out of the men's locker room to find the pool rather empty."
     "I'd complain it was a waste to let such fancy facilities go unused, but it's not like I was coming here regularly. Who was I to talk?"
     "Among the students in or around the water two caught my eye."
-    show BBW swim-neutral at center with dissolve
+    show BBW swimsuit-neutral at center with dissolve
     "Alice was climbing out of the pool, Aida ready to hand her a towel."
     MC "Hey, Alice."
     BBW "Keisuke."
     "She began drying herself off, and I knew I should just go and get started myself."
     "But at the same time our conversation about 'is big beautiful' had been on my mind since the other day."
     "I had been sneaking glances at Alice now and then, really taking in her figure."
-    show BBW swim-neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
+    show BBW swimsuit-neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "And I'd come to the decision that there wasn't anything wrong with some extra curves."
-    show BBW swim-neutral at center, Transform(zoom=1.0)
+    show BBW swimsuit-neutral at center, Transform(zoom=1.0)
     "Especially now, with the bathing suit clinging to her body, her hair wet (yet still keeping its spirals somehow). Stuff like that could make most any woman appealing."
     if getFlag("BBW020_c1"):
         jump BBW021_flagpass
@@ -3600,16 +3600,16 @@ label BBW021_beforechoice:
     MC "It's not like I have a type. Maybe more like a spectrum."
     $setAffection("BBW", 1)
     "She nodded agreeably."
-    show BBW swim-happy
+    show BBW swimsuit-happy
     BBW "Most people do, I think. Though with such a focus on superficial trappings in our society many may not recognize it."
     if getAffection("BBW") <= 7:
         MC "True. But hey, that's one of the things we're supposed to get out of this school, right? Not being so focused on the superficial."
-        show BBW swim-neutral
+        show BBW swimsuit-neutral
         BBW "That's not quite what I was thinking. You are correct, but I was going for the fact that there's nothing wrong with having a type."
         BBW "So long as you do not develop myopia, blind to the other options around you."
         MC "Oh, right."
         MC "But like I said, bigger women are attractive. Not automatically more than skinny women, but not less so, definitely."
-        show BBW swim-happy
+        show BBW swimsuit-happy
         BBW "I'm glad you got the chance to clear that up, Keisuke."
         BBW "I know you're not trying to soothe my wounded pride..."
         BBW "...but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
@@ -3625,7 +3625,7 @@ label BBW021_beforechoice:
         BBW "And you did say I was pretty, of course."
         MC "W-Well, yes."
         "She looked at me like a cat with a bowl of cream just set down in front of it. I wasn't sure I knew what she was thinking until she spoke."
-        show BBW swim-aroused
+        show BBW swimsuit-aroused
         BBW "Keisuke..."
         MC "Yes?"
         BBW "What I am about to suggest violates every ethical rule about the relationship between an employer and her employee..."
@@ -3639,7 +3639,7 @@ label BBW021_beforechoice:
                 $setFlag("BBW_dating")
                 $lockRoute("BBW")
                 MC "Sure. I'd love to, as long as it wouldn't make things weird over on the 'business' end."
-                show BBW swim-happy
+                show BBW swimsuit-happy
                 BBW "I don't think it has to. I am mature enough to separate my private life from my business ventures, and I trust that you can learn to do the same."
                 MC "Um, OK."
                 MCT "I was being a little tongue-in-cheek there..."
@@ -3648,7 +3648,7 @@ label BBW021_beforechoice:
                 BBW "I know that our options are limited here at the school, but I am interested in seeing how you express your romantic side."
                 MC "Leave it to me, then."
                 "She smiled warmly, and despite how fast everything was going I felt more elated by the thought of success than worried about failure."
-                show BBW swim-neutral
+                show BBW swimsuit-neutral
                 BBW "I'm sorry, but I have to run. The music club is meeting soon."
                 BBW "A demain."
                 hide BBW with dissolve
@@ -3659,15 +3659,15 @@ label BBW021_beforechoice:
             "That's moving a bit fast.":
                 $setFlag("BBW021_c2")
                 MC "Sorry, but I think that's a bit fast."
-                show BBW swim-sad
+                show BBW swimsuit-sad
                 $setAffection("BBW", -1)
                 BBW "Oh."
                 MC "It's not that-"
-                show BBW swim-neutral
+                show BBW swimsuit-neutral
                 BBW "No, I understand."
                 BBW "This is a trying time in our lives, there are bigger things on our minds."
                 MC "I'm not saying 'No' outright. Just... maybe later?"
-                show BBW swim-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+                show BBW swimsuit-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 BBW "Hmm. Yes, perhaps."
                 BBW "I have to go. The music club is meeting soon."
                 BBW "I'll see you in class tomorrow."
@@ -3682,19 +3682,19 @@ label BBW021_beforechoice:
                 $setFlag("BBW021_c3")
                 MC "I... don't think that would work out."
                 MC "It's a bit fast. I mean, we're in unfamiliar territory with this school and everything else, and like you said I'm working for you-"
-                show BBW swim-angry with hpunch
+                show BBW swimsuit-angry with hpunch
                 $setAffection("BBW", -5)
                 BBW "I understand!"
                 BBW "..."
                 pause 1
-                show BBW swim-sad
+                show BBW swimsuit-sad
                 BBW "I do tend to be direct, don't I?"
                 MC "That's not always a bad thing, but sometimes it can be overbearing."
                 BBW "Yes, I know."
-                show BBW swim-neutral
+                show BBW swimsuit-neutral
                 BBW "Forget I said anything, Hotsure-san."
                 MC "No, it's-"
-                show BBW swim-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+                show BBW swimsuit-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 BBW "I need to go. The music club is meeting soon and I have to get dressed."
                 hide BBW with dissolve
                 "She didn't storm off angrily, but it was obvious to anyone watching that she was hurrying to get out of there."
@@ -3704,7 +3704,7 @@ label BBW021_beforechoice:
 
 label BBW021_fail1:
     MC "Well, I'm going to get some laps in. I'll see you two later."
-    show BBW swim-neutral
+    show BBW swimsuit-neutral
     BBW "Work hard, Keisuke, but don't overdo it."
     hide BBW with dissolve
     "I tried to banish the impression of squandering the opportunity by assuring myself I would be on the lookout for a more appropriate time and place."
@@ -3720,17 +3720,17 @@ label BBW021_fail2:
     MCT "Just say she looks nice even at her size, don't make it sound perverted, and then move on."
     MC "I just wanted to say, after that whole 'list' thing and the guy saying he doesn't like plump women..."
     MC "Not all guys are turned off by a few extra weight. Some even prefer it."
-    show BBW swim-neutral
+    show BBW swimsuit-neutral
     BBW "Indeed."
     BBW "I know you wouldn't just be saying that to soothe my wounded pride."
     MC "No. It's the truth."
     MC "I've seen larger women I found attractive. Never dated one, but that was because of circumstances."
     BBW "It's all right, Keisuke. You don't have to try so hard."
-    show BBW swim-neutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
+    show BBW swimsuit-neutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
     MC "I just want you to know... That guy doesn't speak for all men."
     BBW "I know."
     BBW "I just think that it is on each man to speak for himself."
-    show BBW swim-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+    show BBW swimsuit-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
     BBW "To say something more than just 'He doesn't speak for me.'"
     BBW "Now I have to run. The music club is meeting soon."
     BBW "So if there is anything else you would like to say to me about this, we can talk later."
@@ -8441,7 +8441,7 @@ label BBW044_c2_2:
     BBW "Kei please pull this across the very front of her breasts so I can get her bust measurement."
     MCT "At this point I was beginning to wonder whether Alice was doing this more as a test."
     MCT "Carefully, I pulled the tape across Honoka's breasts, trying to avoid grazing her exposed areolas."
-    MCT "I tried to dart between looking down at her chest and Honoka's eyes to avoid staring for too long, lest I accidentally incur Alice's wraith."
+    MCT "I tried to dart between looking down at her chest and Honoka's eyes to avoid staring for too long, lest I accidentally incur Alice's wrath."
     show BE happy
     BE "Just like playing Operation."
     MC "I don't remember Operation being this big."
@@ -9801,7 +9801,7 @@ label BBW048:
     "Gazing upon the azure waters, having tinted to more of a violet from the evening sky, the gently rolling waves made me wonder if this gorgeous day spent with such a beautiful woman had been real, or if I merely found myself in some idyllic surreal fantasy of my own imagination..."
     "I ultimately decided that my imagination was not this good, so it had to have been real."
     "My thoughts drifted all the more, taking in the view from my mind's eye of how Alice had looked in her swimsuit."
-    show BBW swim-happy with dissolve
+    show BBW swimsuit-happy with dissolve
     "Every curve, every dimple, every bit as warm and invitingly luxuriant as this seaside mansion. It's crazy how soft her body has become."
     "First getting the chance to help her fit her uniform, now this? I like where things are headed between us."
     "But it's more than that... her confidence, her self-determination, her dignified bearing, not for the sake of superficial appearances, as most who are of wealthy means do- Alice cultivated these attributes out of her own sense of respect for herself."

@@ -1418,7 +1418,7 @@ label AE010:
     else:
         show AE angry
         AE "I get it."
-    "Her response served as a reminder of the situation was in, as well as the inappropriate nature of my words."
+    "Her response served as a reminder of the situation she was in, as well as the inappropriate nature of my words."
     MC "Oh! No, I mean, well... sorry."
     show AE sad
     AE "..."
