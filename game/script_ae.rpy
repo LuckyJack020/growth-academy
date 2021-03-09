@@ -3856,7 +3856,7 @@ label AE022:
     MC "Class is about to begin. Isn't yours the other way?"
     Yuki "Ah! I-I can't be late, Matsumoto-san would kill me!"
     hide Yuki with dissolve
-    "Kuchibiru-chan quickly strode in the opposite direction before turning the corner once more."
+    "Utagashi-chan quickly strode in the opposite direction before turning the corner once more."
     MC "...Tch. Nice try, kid."
     "As soon as I felt nice and smug, I turned around and face planted right into the door to my own room."
     MC "Ach... I deserved that..."
@@ -7421,7 +7421,7 @@ label AE036:
     show AE surprised
     AE "W-woah!"
     "I rushed up and grabbed Shiori-chan's hand trying to pull her away. It was strange, but since we held hands I felt as though she was more open to hold on to, and in turn I felt more tactile."
-    MC "Sorry Kuchibiru-chan, I'm gonna need to borrow her for a little bit!"
+    MC "Sorry Utagashi-chan, I'm gonna need to borrow her for a little bit!"
     if getSkill("Athletics") > 3:
         "Shiori-chan was pulled swiftly and effortlessly, and soon the two of us were going towards my planned destination."
     else:
@@ -7433,9 +7433,9 @@ label AE036:
         "I looked up, a pathetic grin forming on my face as I tried to pull her again."
         MC "C-come on! I wanna... ech..."
         show AE neutral
-        AE "I'll... I'll speak with you later, Kuchibiru-san."
+        AE "I'll... I'll speak with you later, Utagashi-san."
         Yuki "Y-Yes ma'am."
-        "Looking at me as though I was the most useless man on earth, Kuchibiru-chan shook her head and walked off."
+        "Looking at me as though I was the most useless man on earth, Utagashi-chan shook her head and walked off."
     hide Yuki with dissolve
     show AE surprised at center with dissolve
     AE "Hotsure-san? What's wrong?"
@@ -7517,7 +7517,7 @@ label AE036:
     stop music
     AE "If you want... I'll be on the roof. Meet me there at around five, please?"
     MC "...Sure."
-    AE "I just need to catch up a bit with Kuchibiru-san. Honest."
+    AE "I just need to catch up a bit with Utagashi-san. Honest."
     scene black with fade
     "She walked off, and I waited by the gate for a moment. Disappointed, I walked towards the school and waited in the courtyard."
     "Three minutes from when we'd meet, I went up to the roof and awaited her, watching the sun wane in the sky as I sat on the bench."
@@ -8356,8 +8356,8 @@ label AE040:
     show Yuki neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve #happy
     show Tomoko neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     Yuki "IT WAS CRAZY! And then, and then, Shiori-chan almost knocked over the cup with her butt, but caught it and was all like 'Who brought a drink to the meeting?' and I was all like-"
-    "Of course, the indication her meeting had ended came when Kuchibiru-san came in babbling about the new topic of the second."
-    MC "O-okay, Okay, Kuchibiru-san, I think I'm good for now."
+    "Of course, the indication her meeting had ended came when Utagashi-san came in babbling about the new topic of the second."
+    MC "O-okay, Okay, Utagashi-san, I think I'm good for now."
     "Giving a coy chuckle, I nodded to Tomoko, still perched on the edge of her bed."
     MC "I'll call mom and tell her you said hi, okay?"
     Tomoko "Okay."
@@ -9364,7 +9364,7 @@ label AE044:
     AE "Mhm. I've noticed that as I've grown, my body slowly adapts to my growing derriere. My leg muscles grow stronger to support it, but it sometimes lags behind."
     MC "Right, yeah."
     MCT "Man, at times I can't believe how complex her growth is. Sometimes she's outpacing me easily in a jog, other times she's struggling to lift her ass from where she sits."
-    MC "Anyways, you don't look to bad yourself."
+    MC "Anyways, you don't look too bad yourself."
     show AE neutral
     AE "Feh. I'm no different than I am any other day."
     MC "No, it's more than just your outfit, you just seem a bit more... radiant than usual, I guess."
