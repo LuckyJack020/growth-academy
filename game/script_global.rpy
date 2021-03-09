@@ -163,21 +163,22 @@ image Frozen Beach = "Graphics/ui/bg/NYI.png"
 
 image Dorm BBW = "Graphics/ui/bg/BBWDorm.png"
 image Dorm BBW Flip = im.Flip("Graphics/ui/bg/BBWDorm.png", horizontal=True)
-image RV Interior = DynamicImage("Graphics/ui/bg/BBW_summer_rv.png")
-image Summer House Entrance = DynamicImage("Graphics/ui/bg/BBW_summer_house_entrance.png")
-image Summer House Front = DynamicImage("Graphics/ui/bg/BBW_summer_housefront.png")
-image Summer House Back = DynamicImage("Graphics/ui/bg/BBW_summer_houseback.png")
-image Summer Beach Closed = DynamicImage("Graphics/ui/bg/BBW_summer_beach_closed.png")
+image RV Interior = "Graphics/ui/bg/BBW_summer_rv.png"
+image Summer House Entrance = "Graphics/ui/bg/BBW_summer_entrance.png"
+image Summer House Front = "Graphics/ui/bg/BBW_summer_housefront.png"
+image Summer House Back = "Graphics/ui/bg/BBW_summer_houseback.png"
+image Summer Beach Closed = "Graphics/ui/bg/BBW_summer_beach_closed.png"
 image Summer Beach = DynamicImage("Graphics/ui/bg/BBW_summer_beach_[gametime].png")
+image Summer Beach Ocean = "Graphics/ui/bg/BBW_summer_beach_ocean.png"
 image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/BBW_summer_balcony_ext_[gametime].png")
 image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/BBW_summer_balcony_ext_[gametime].png")
 image Summer Bedroom = DynamicImage("Graphics/ui/bg/BBW_summer_bedroom_[gametime].png")
 image Summer Guest Bedroom = DynamicImage("Graphics/ui/bg/BBW_summer_guest_bedroom_[gametime].png")
 image Summer Guest Bathroom = DynamicImage("Graphics/ui/bg/BBW_summer_guest_bathroom_[gametime].png")
 image Summer Guest Bathroom Steamed = DynamicImage("Graphics/ui/bg/BBW_summer_guest_bathroom_steamed_[gametime].png")
-image Summer Hallway = DynamicImage("Graphics/ui/bg/BBW_summer_hallway.png")
-image Summer Dining Room = DynamicImage("Graphics/ui/bg/BBW_summer_diningroom.png")
-image Summer Living Room = DynamicImage("Graphics/ui/bg/BBW_summer_livingroom.png")
+image Summer Hallway = "Graphics/ui/bg/BBW_summer_hallway.png"
+image Summer Dining Room = "Graphics/ui/bg/BBW_summer_diningroom.png"
+image Summer Living Room = "Graphics/ui/bg/BBW_summer_livingroom.png"
 
 
 image Dorm BE = DynamicImage("Graphics/ui/bg/BEdorm_[gametime].png")
@@ -352,17 +353,17 @@ image BBW sick = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
 image BBW sick-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
 image BBW sick-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
 
-image BBW swim-neutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
-image BBW swim-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/neutral-2.png")
-image BBW swim-happy = DynamicImage("Graphics/BBW/[globalsize]/happy.png")
-image BBW swim-sad = DynamicImage("Graphics/BBW/[globalsize]/sad.png")
-image BBW swim-surprised = DynamicImage("Graphics/BBW/[globalsize]/surprised.png")
-image BBW swim-angry = DynamicImage("Graphics/BBW/[globalsize]/angry.png")
-image BBW swim-aroused = DynamicImage("Graphics/BBW/[globalsize]/aroused.png")
-image BBW swim-haughty = DynamicImage("Graphics/BBW/[globalsize]/unique.png")
-image BBW swim-stern = DynamicImage("Graphics/BBW/[globalsize]/stern.png")
-image BBW swim-doubt = DynamicImage("Graphics/BBW/[globalsize]/doubt.png")
-image BBW swim-worried = DynamicImage("Graphics/BBW/[globalsize]/worried.png")
+image BBW swim-neutral = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral.png")
+image BBW swim-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral-2.png")
+image BBW swim-happy = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-happy.png")
+image BBW swim-sad = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-sad.png")
+image BBW swim-surprised = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-surprised.png")
+image BBW swim-angry = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-angry.png")
+image BBW swim-aroused = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-aroused.png")
+image BBW swim-haughty = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-unique.png")
+image BBW swim-stern = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-stern.png")
+image BBW swim-doubt = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-doubt.png")
+image BBW swim-worried = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-worried.png")
 
 image BBW casual-neutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
 image BBW casual-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/neutral-2.png")
@@ -1213,10 +1214,11 @@ init 2 python:
     eventlibrary['FMG030'] = {"name": "Oki", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                      "location": "dormexterior",             "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG031", "obsflags": [],               "conditions": []}
     eventlibrary['FMG031'] = {"name": "Motivation", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG032", "obsflags": [],               "conditions": []}
     eventlibrary['FMG032'] = {"name": "Chumby the Cat", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                           "location": "pool",                     "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG033", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG033'] = {"name": "Dress Malfunction", "girls": ["FMG", "BBW"], "type": EventTypeEnum.CORE,                                        "location": "classroom",                "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG034", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG033'] = {"name": "Dress Malfunction", "girls": ["FMG", "BBW"], "type": EventTypeEnum.CORE,                                 "location": "classroom",                "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG034", "obsflags": [],               "conditions": []}
     eventlibrary['FMG034'] = {"name": "Big and Bad", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG038", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG038'] = {"name": "Yokai", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                                    "location": "dorminterior",             "priority": PrioEnum.NONE, "sp": 7,     "next": "FMG039", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG039'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 7,     "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['FMG038'] = {"name": "Yokai", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "dorminterior",             "priority": PrioEnum.NONE, "sp": 7,     "next": "FMG044", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG044'] = {"name": "Shower Time", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG045", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG045'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 7,     "next": "", "obsflags": [],                     "conditions": []}
 
     #Optional
     eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
@@ -1342,7 +1344,7 @@ init 2 python:
     eventlibrary['PRG061'] = {"name": "Freshly Baked", "girls": ["PRG"], "type": EventTypeEnum.CORE,                            "location": "nurseoffice",       "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG062", "obsflags": [],       "conditions": []}
     eventlibrary['PRG062'] = {"name": "Echoes of Lunacy", "girls": ["PRG"], "type": EventTypeEnum.CORE,                         "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG063", "obsflags": [],       "conditions": []}
     eventlibrary['PRG063'] = {"name": "Autumn Rains", "girls": ["PRG"], "type": EventTypeEnum.CORE,                             "location": "hallway",           "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG064", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG064'] = {"name": "Tales of the Wives", "girls": ["PRG"], "type": EventTypeEnum.CORE,                       "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG065", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG064'] = {"name": "Where the Fairies Play", "girls": ["PRG"], "type": EventTypeEnum.CORE,                   "location": "dormexterior",      "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG065", "obsflags": [],       "conditions": []}
     eventlibrary['PRG065'] = {"name": "All Out", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                  "location": "hallway",           "priority": PrioEnum.NONE, "sp": 12,    "next": "PRG066", "obsflags": [],       "conditions": []}
     eventlibrary['PRG066'] = {"name": "Aida end", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                 "location": "library",           "priority": PrioEnum.NONE, "sp": 12,    "obsflags": [],                         "conditions": []}
 

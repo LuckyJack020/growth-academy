@@ -3637,6 +3637,7 @@ label BBW021_beforechoice:
         menu:
             "I'd love to.":
                 $setFlag("BBW_dating")
+                $lockRoute("BBW")
                 MC "Sure. I'd love to, as long as it wouldn't make things weird over on the 'business' end."
                 show BBW swim-happy
                 BBW "I don't think it has to. I am mature enough to separate my private life from my business ventures, and I trust that you can learn to do the same."
@@ -4333,7 +4334,6 @@ label BBW025_c1_1:
     jump daymenu
 
 label BBW025_c1_2:
-    $lockRoute("BBW")
     MCT "Deep breath. Here we go."
     MC "Alice. Would you like to go out some time?"
     if getAffection("BBW") < 9:
@@ -4380,6 +4380,7 @@ label BBW025_c1_2:
         jump daymenu
     else:
         $setFlag("BBW_dating")
+        $lockRoute("BBW")
         show BBW happy
         BBW "Yes, I would."
         MC "Really?"
@@ -4396,6 +4397,7 @@ label BBW025_c1_2:
         jump daymenu
 
 label BBW025A:
+    $lockRoute("BBW")
     scene Cafeteria with fade
     "I was having trouble paying attention to the week's company meeting."
     show BBW neutral at center with dissolve
@@ -7851,7 +7853,7 @@ label BBW043:
     BBW "{i}Sigh...{/i}"
     show BBW neutral-2
     BBW "Between classes, the business, and music club I fear I've begun to neglect my usual physical activities."
-    if isEventCleared(BBW009):
+    if isEventCleared("BBW009"):
         MCT "Alice didn't have the body of an athlete by any means, but from what I'd seen, she was one hell of a swimmer. She didn't seem that rusty to me."
     MC "I thought you swam fairly often in your free time? I mean, maybe not every day, but you seem pretty active to me."
     BBW "True, I do make the time to stay somewhat active with swimming but doing laps by yourself in the pool just doesn't provide the same meaningful push that direct competition does."
@@ -7961,7 +7963,7 @@ label BBW043:
     BBW "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
     PRG "Thanks, Nikumaru-san. I'll do my best."
     BBW "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
-    show Natsuko at Position(xpos=0.35, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xpos=0.35, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "Hello Alice. Thank you for the invitation again. I'm always up for a new challenge. A contact sport where you need to swim and handle a ball sounds tough. I'm ready to show you what I can do!"
     MCT "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
     MCT "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
@@ -8022,9 +8024,9 @@ label BBW043:
     show PRG neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
     show FMG neutral at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
     show Natsuko at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
-    show BE at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
     MCT "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
-    if isEventCleared(BBW009):
+    if isEventCleared("BBW009"):
         MCT "But after seeing Alice and Akira swim before, I could tell I was going to be an anchor around Natsuko's neck if she was expecting us to win."
     MCT "Alice's team seemed a bit stacked, but given Aida's timid nature, Alice probably expected her to give up more points at the goal than Honoka. It was the best that could be done with the numbers we had."
     BBW "Alright, let's get started. The ball starts in the center of the pool. Whoever gets there first to secure it will get the first possession."
@@ -9093,19 +9095,19 @@ label BBW046:
     $setProgress("BBW", "BBW047")
     scene School Front with fade
     play music Peaceful
-    MCT "It was a bright, sunny day outside. The skies were clear, and a faint breeze went against our backs. The weather app said these conditions were expected for the next few days."
-    MCT "I looked the street up and down, waiting for Alice's ride to arrive. The giddy feeling in my hands was a mix of nervousness and excitement."
+    "It was a bright, sunny day outside. The skies were clear, and a faint breeze went against our backs. The weather app said these conditions were expected for the next few days."
+    "I looked the street up and down, waiting for Alice's ride to arrive. The giddy feeling in my hands was a mix of nervousness and excitement."
     show BBW summer-ext-haughty with dissolve
     BBW "You do know that watching for the vehicle will not cause the driver to speed up, right?"
     show BBW summer-ext-happy
-    MCT "Alice's head remained facing forward, her smirk appeared as she glanced at me from the corner of her eye."
+    "Alice's head remained facing forward, her smirk appeared as she glanced at me from the corner of her eye."
     MC "Heh, yeah. I'm just a little nervous is all, this is probably going to be the most luxurious vacation I've ever been on."
     show BBW summer-ext-neutral
     BBW "Probably? I can assure you that you will be treated as a VIP, that is to say, like a five star guest."
     MC "Honestly, I'd be fine with a regular hotel chain. It's normally an extra if the places I've stayed at had a pool."
     MC "And it's a bonus if the pool water is actually clean."
     show BBW summer-ext-haughty
-    MCT "She rolled her eyes sarcastically, but I could tell she got some amusement out of my joke."
+    "She rolled her eyes sarcastically, but I could tell she got some amusement out of my joke."
     BBW "Well, you needn't worry about filthy swimming waters at the house. The shores have the most beautiful crystal clear waters, and the beaches are always kept free of litter."
     MC "Wow... I can't wait to see it in person."
     show BBW summer-ext-neutral-2
@@ -9113,23 +9115,23 @@ label BBW046:
     MC "Ah, what? You really think I'd forget something?"
     BBW "It's always better to be safe than sorry. You wouldn't want to get there and find out you left your hair comb here or something."
     MC "Don't worry about it, I have it right here in the side pocket of my bag."
-    MCT "With a confident grin, I unzipped the compartment of my travel bag where I kept my hair products."
-    MCT "My confidence quickly drained as I reached into the bag, fondling around to find my hairbrush, but it didn't seem to be there."
+    "With a confident grin, I unzipped the compartment of my travel bag where I kept my hair products."
+    "My confidence quickly drained as I reached into the bag, fondling around to find my hairbrush, but it didn't seem to be there."
     MC "Hang on, h-hang on, I know it's in here somewhere..."
     show BBW summer-ext-neutral
     BBW "You left it beside your bag, but forgot to put it in when you picked it up."
     MC "Right, r-"
-    MCT "I paused, realizing what Alice had just said. My hands stopped frantically shuffling in the bag as I looked up."
+    "I paused, realizing what Alice had just said. My hands stopped frantically shuffling in the bag as I looked up."
     show BBW summer-ext-happy
-    MCT "With a genuine smile, Alice put out her hand. In her palm was my hairbrush I was so worried about."
+    "With a genuine smile, Alice put out her hand. In her palm was my hairbrush I was so worried about."
     BBW "I would think by now that you would be more careful with such important items..."
     MC "Heh heh... thanks for getting that for me."
     show BBW summer-ext-haughty
     BBW "I don't imagine spending time in the hot sun with wild hair would be very fun."
     MC "Oh yeah, it really isn't. I actually have a sweatband that I wear secretly on some days when it's sweltering outside."
-    MCT "I finished checking my bag and zipped it back up, I was ready for some summer beach fun."
-    MCT "It wasn't too long after words that I saw it approaching on the horizon, an absolute behemoth of an RV started making its way down the road."
-    MCT "The vehicle could be more charitably referred to as a house on wheels. Quite easily out-scaling any car that tried to pass it; in fact it was so big, I questioned if it could be considered street legal."
+    "I finished checking my bag and zipped it back up, I was ready for some summer beach fun."
+    "It wasn't too long after words that I saw it approaching on the horizon, an absolute behemoth of an RV started making its way down the road."
+    "The vehicle could be more charitably referred to as a house on wheels. Quite easily out-scaling any car that tried to pass it; in fact it was so big, I questioned if it could be considered street legal."
     show BBW summer-ext-worried
     BBW "Oh my... I truly did not expect father to go all out with this."
     MC "You mean to tell me that you don't travel in luxury RV's for long distance vacations?"
@@ -9147,7 +9149,7 @@ label BBW046_c1_1:
     MC "Are you sure?  I may not be very observant, but I can tell when something has put you off."
     show BBW summer-ext-worried
     BBW "...{i}sigh{/i}... you are correct, Keisuke. There is something bothering me about this."
-    MCT "Alice turned away from the road to face me, her crystal blue eyes locked onto mine."
+    "Alice turned away from the road to face me, her crystal blue eyes locked onto mine."
     show BBW summer-ext-neutral
     BBW "My father knows that my body has... grown, whilst being here. But whenever I would make contact with him, the details of my current size were always kept vague."
     show BBW summer-ext-neutral-2
@@ -9155,7 +9157,7 @@ label BBW046_c1_1:
     MC "That's very kind of you, and I'm sure he appreciates it. But how does that tie into the RV?"
     show BBW summer-ext-happy
     BBW "Keisuke, you were right, you truly are not all that observant."
-    MCT "She gave me a sincere grin as she pointed back to the rapidly approaching vehicle."
+    "She gave me a sincere grin as she pointed back to the rapidly approaching vehicle."
     BBW "Look at the absurd size of that transit, even for me, that's far more than enough room. In fact, one could probably fit several of me in there quite comfortably."
     MC "That's a good thing isn't it? All that extra space, plenty of room to stretch your legs during the trip."
     show BBW summer-ext-neutral-2
@@ -9176,38 +9178,38 @@ label BBW046_c1_2:
     BBW "I, of course, went through the effort of hand picking the staff that will be with us during our stay."
     MC "Wow, even when going on vacation you still put in extra effort."
     BBW "Naturally. No self-respecting entrepreneur ever phones in their work, even when they are planning to relax."
-    MCT "Both caught up in our small talk, we hardly noticed the oversized transit pulling up beside us. My initial thoughts upon seeing it, would be how loud it would be."
+    "Both caught up in our small talk, we hardly noticed the oversized transit pulling up beside us. My initial thoughts upon seeing it, would be how loud it would be."
     show cg BBW046 with dissolve
-    MCT "The only kind of automobiles I've seen of this size were normally service vehicles. Billowing out smoke, and making enough noise to wake a neighborhood."
-    MCT "But despite the intimidating size, the RV was shockingly quiet. If one wasn't bearing witness to its girth, they would assume it was nothing more than a golf cart."
-    MCT "I stood in awe as the double doors on its side jolted open with a mechanical whir. A large set of steps, covered with dark red velvet cascaded like a ramp. And out stepped a very formally dressed chauffeur, sporting the Nikumaru company logo."
+    "The only kind of automobiles I've seen of this size were normally service vehicles. Billowing out smoke, and making enough noise to wake a neighborhood."
+    "But despite the intimidating size, the RV was shockingly quiet. If one wasn't bearing witness to its girth, they would assume it was nothing more than a golf cart."
+    "I stood in awe as the double doors on its side jolted open with a mechanical whir. A large set of steps, covered with dark red velvet cascaded like a ramp. And out stepped a very formally dressed chauffeur, sporting the Nikumaru company logo."
     Chauffeur "Miss Nikumaru and her plus-one, correct?"
-    MCT "Alice shifted from her normal relaxed demeanor, to the poise she normally took when best presenting herself."
+    "Alice shifted from her normal relaxed demeanor, to the poise she normally took when best presenting herself."
     BBW "You are correct, sir. And if you may, please refer to my 'plus-one' by his name. Hotsure Keisuke."
-    MCT "The driver gave me a powerful look, almost sizing me up. It almost looked like he was judging me, seeing if Alice had picked the best person to accompany her."
+    "The driver gave me a powerful look, almost sizing me up. It almost looked like he was judging me, seeing if Alice had picked the best person to accompany her."
     Chauffeur "Apologies, Mr. Hotsure. I was unaware that Miss Nikumaru would be bringing along a... male friend with her on this outing."
     BBW "Is there a problem with that?"
     Chauffeur "Of course not, madam. Please, your ride awaits."
-    MCT "The chauffeur bowed his head and extended his arm, directing us inside the RV."
+    "The chauffeur bowed his head and extended his arm, directing us inside the RV."
     BBW "After you."
-    MCT "Alice kept her chin up, calmly gesturing for me to enter first."
+    "Alice kept her chin up, calmly gesturing for me to enter first."
     MC "Why thank you, I see that the high-class guest treatment is starting early."
     BBW "Keisuke, please get in the RV before I change my mind about bringing you."
-    MCT "I gave her a cheeky grin before climbing up the stairs. It wasn't until I turned around that my mind could truly grasp how spectacular this vehicle was."
+    "I gave her a cheeky grin before climbing up the stairs. It wasn't until I turned around that my mind could truly grasp how spectacular this vehicle was."
     scene RV Interior with fade
-    MCT "The entire space was somehow even bigger than it looked on the outside. Not only was there enough room to fit an entire party, but it had an excess of extra amenities as well."
-    MCT "There was more room in here than most standard size apartments!"
-    MCT "In one corner, there was a full bathroom, with a shower and washer-dryer combo. And in the other, a full kitchen area."
-    MCT "It had an electric stove, fully stocked cabinets, and a fridge that was so massive it could probably crush anyone it fell on."
-    MCT "All of this living space was colored in a very pleasant dark shade of blue, with black and white accents scattered around. The floor itself was void black and so thick, that I could look down and it seemed as if my feet had melted into the lush comfort of the carpet."
-    MCT "I stood there in awe, my eyes were flicking around the room like a pair of flies. Everywhere I looked, there seemed to be more and more unnecessary applications to the passenger area."
-    MCT "Coherent thought had left my mind for a second. It wasn't until I felt the entire RV shake, that my focus snapped back to reality."
-    MCT "Turning around, I saw Alice calmly making her way up the steps. The look on her face wasn't nearly the same level of shock as mine,"
-    show BBW summer-ext-surprised
-    MCT "but from the slight jolt in her expression, I don't think she was really expecting this level of care as well."
+    "The entire space was somehow even bigger than it looked on the outside. Not only was there enough room to fit an entire party, but it had an excess of extra amenities as well."
+    "There was more room in here than most standard size apartments!"
+    "In one corner, there was a full bathroom, with a shower and washer-dryer combo. And in the other, a full kitchen area."
+    "It had an electric stove, fully stocked cabinets, and a fridge that was so massive it could probably crush anyone it fell on."
+    "All of this living space was colored in a very pleasant dark shade of blue, with black and white accents scattered around. The floor itself was void black and so thick, that I could look down and it seemed as if my feet had melted into the lush comfort of the carpet."
+    "I stood there in awe, my eyes were flicking around the room like a pair of flies. Everywhere I looked, there seemed to be more and more unnecessary applications to the passenger area."
+    "Coherent thought had left my mind for a second. It wasn't until I felt the entire RV shake, that my focus snapped back to reality."
+    "Turning around, I saw Alice calmly making her way up the steps. The look on her face wasn't nearly the same level of shock as mine,"
+    show BBW summer-int-surprised
+    extend " but from the slight jolt in her expression, I don't think she was really expecting this level of care as well."
     BBW "Goodness, Father has always been one for the occasional splurge. But even for him this is far too much."
     MCT "He considers this a 'splurge?' This thing probably cost more than most low-middle income houses..."
-    show BBW summer-ext-worried
+    show BBW summer-int-worried
     BBW "Do you have a problem with the arrangements, Keisuke?"
     menu:
         "No! Not at all.":
@@ -9216,7 +9218,7 @@ label BBW046_c1_2:
             jump BBW046_c2_2
 
 label BBW046_c2_1:
-    show BBW summer-ext-neutral
+    show BBW summer-int-neutral
     BBW "Oh, well that's good to hear. You looked quite pale for a second, I was worried we had overwhelmed you."
     MC "Who, me? Nah, I'm just fine. This already looks like it's shaping up to be a great vacation."
     BBW "Indeed! Now, what would you like to drink?"
@@ -9225,17 +9227,17 @@ label BBW046_c2_1:
 
 label BBW046_c2_2:
     $setAffection("BBW", 1)
-    show BBW summer-ext-neutral-2
+    show BBW summer-int-neutral-2
     BBW "Yes, I was actually a tad bit worried how you would handle all this."
     MC "I'm not complaining, obviously. It's just that- this is a lot to take in."
-    show BBW summer-ext-worried
+    show BBW summer-int-worried
     BBW "It may have been silly, but I had hoped that father wouldn't go all out for me again. Not just for my sake, but for yours as well."
     MC "For your sake? Don't you want to live it up on a vacation?"
-    show BBW summer-ext-neutral
+    show BBW summer-int-neutral
     BBW "That much goes without saying, Keisuke. But moderation is key, even when it comes to relaxing."
     BBW "If you live in moderation, the little things are just as rewarding as the bigger ones. But if you constantly live in excess, you'll burn yourself out fast."
     MC "I dunno, I've never seemed to have a problem with moderating my relaxing."
-    show BBW summer-ext-haughty
+    show BBW summer-int-haughty
     BBW "That's because you do it far too much. Now come sit down with me, I want to explain the best times to be on the beach."
     stop music
     jump BBW046_arrival
@@ -9245,11 +9247,11 @@ label BBW046_arrival:
     pause 2
     scene RV Interior with fade
     play music BBW
-    MCT "Several hours in the RV felt like nothing. Normally during road trips, I would find myself getting bored easily, always looking for something to keep myself entertained."
-    MCT "But when you're traveling in a mobile hotel suite, with an excellent conversationalist, time really does fly."
-    Chauffeur "Miss Nikumaru, and Mr Hotsure. We have arrived at our destination."
-    MCT "The chauffeur's voice came on over the speakers, interrupting the pleasant classical music Alice had put on."
-    Chauffeur "And you needn't worry about your luggage, Mr Hotsure. Someone will be along shortly to help you bring it to your room."
+    "Several hours in the RV felt like nothing. Normally during road trips, I would find myself getting bored easily, always looking for something to keep myself entertained."
+    "But when you're traveling in a mobile hotel suite, with an excellent conversationalist, time really does fly."
+    Chauffeur "Miss Nikumaru, and Mr. Hotsure. We have arrived at our destination."
+    "The chauffeur's voice came on over the speakers, interrupting the pleasant classical music Alice had put on."
+    Chauffeur "And you needn't worry about your luggage, Mr. Hotsure. Someone will be along shortly to help you bring it to your room."
     MC "Is that really going to be necessary? I'm ok with just carrying my stuff in personally."
     Chauffeur "Understood. Please enjoy your trip."
     show BBW summer-int-happy with dissolve
@@ -9258,13 +9260,13 @@ label BBW046_arrival:
     BBW "Not a moment wasted, I quite enjoy that enthusiasm. But for now, let us save the beach for sunrise. I can assure you that the sunrise on the beach is the greatest first experience here."
     MC "Awww, well that's fair I suppose-"
     play sound Knock
-    MCT "We were interrupted by the sudden rapping on the automobile's door. Someone was waiting for us outside."
+    "We were interrupted by the sudden rapping on the automobile's door. Someone was waiting for us outside."
     UNKNOWN "Lee! What are you doing?!"
-    MCT "The faint sound of a woman whispering could be heard on the other side of the door."
+    "The faint sound of a woman whispering could be heard on the other side of the door."
     UNKNOWN "We've been waitin' out here for a while, I jus' wanna make sure sure they're ok!"
-    MCT "Another voice emanated, this one was more masculine as well as younger."
+    "Another voice emanated, this one was more masculine as well as younger."
     UNKNOWN "Please, Si-Woo. You simply must exercise more patience. Young Miss Alice shall depart from her ride when she is ready."
-    MCT "The third, and seemingly final voice spoke up. This one was masculine as well, but significantly older than the other two accompanying it."
+    "The third, and seemingly final voice spoke up. This one was masculine as well, but significantly older than the other two accompanying it."
     BBW "We best not keep them in suspense."
     MC "They certainly do seem eager. Are your servants normally this energetic?"
     BBW "I should hope so! We don't pay them well above the average servant wages for sub-par service."
@@ -9273,18 +9275,18 @@ label BBW046_arrival:
     MC "Wow, if architecture doesn't really pan out, make sure to remind me about working for the Nikumaru company."
     BBW "Hmm... tempting offer, but why pay a servant who's already working for free?"
     show BBW summer-int-happy
-    MCT "Alice gave me a smug grin as she opened the RV door, letting the vivid orange coloring of the sunset wash in."
+    "Alice gave me a smug grin as she opened the RV door, letting the vivid orange coloring of the sunset wash in."
     scene Summer House Front with fade
     MC "Hey, hang on. There is no way you just said that-"
     UNKNOWN "Young Lady Alice! What a pleasure it is to see you again after all this time."
     BBW "And I could say the same to you, Takada. I am so glad that you had the time to come out here."
     Takada "Please, even if I was booked to bursting, you know that I would drop everything to come serve you."
-    MCT "I followed Alice down the stairs onto the warm tarmac of the driveway. My eyes instantly noticed the three well dressed butlers standing in front of us. They all wore the Nikumaru company logo."
+    "I followed Alice down the stairs onto the warm tarmac of the driveway. My eyes instantly noticed the three well dressed butlers standing in front of us. They all wore the Nikumaru company logo."
     UNKNOWN "Huh, wasn't expectin' this pal of hers to be a guy friend... What's your name, sir?"
-    MCT "The man talking to Alice was the older voice I had heard before. But the one questioning me now was clearly the younger, male voice."
-    MCT "The last voice then must have belonged to the young lady standing next to the questioning man. She looked about 3 seconds away from smacking her brash co-worker over the head."
+    "The man talking to Alice was the older voice I had heard before. But the one questioning me now was clearly the younger, male voice."
+    "The last voice then must have belonged to the young lady standing next to the questioning man. She looked about three seconds away from smacking her brash co-worker over the head."
     MC "Um... I..."
-    show BBW summer-int-neutral with dissolve
+    show BBW summer-ext-neutral with dissolve
     BBW "This is my good friend, Hotsure Keisuke. He shall be staying with us, along with Aida Kodama. Has she arrived safely?"
     Takada "Young Miss Aida arrived here mere moments before you did. She has been shown her room, and is unpacking her bags now."
     UNKNOWN "Keisuke? Cool, it's gotta nice ring to it!"
@@ -9301,23 +9303,23 @@ label BBW046_arrival:
     show BBW summer-ext-neutral-2
     BBW "Quite right, I better check on Aida to make sure she is adjusting well to all this."
     hide BBW with dissolve
-    MCT "With that, I adjusted my bag and set off towards the house."
+    "With that, I adjusted my bag and set off towards the house."
     scene Summer Living Room with fade
-    MCT "Once again, I was astounded by the sheer amount of space inside the beach house. Just like the RV, it was big on the outside, yet even bigger on the inside."
-    MCT "The second the door was opened, I was greeted to a living area spanning the entire homestead. It was difficult to tell where some rooms started and ended."
-    MCT "Everything was of course, fanciful and glimmering to the nines. But by this point, I would've been more surprised if the place turned out to be cozy and modest."
-    MCT "What caught my attention the most was the open wall by the far corner of the room. It led out onto a lovely wooden patio, but more importantly, it gave you an astonishing glimpse at the beach no matter where in the room you were."
+    "Once again, I was astounded by the sheer amount of space inside the beach house. Just like the RV, it was big on the outside, yet even bigger on the inside."
+    "The second the door was opened, I was greeted to a living area spanning the entire homestead. It was difficult to tell where some rooms started and ended."
+    "Everything was of course, fanciful and glimmering to the nines. But by this point, I would've been more surprised if the place turned out to be cozy and modest."
+    "What caught my attention the most was the open wall by the far corner of the room. It led out onto a lovely wooden patio, but more importantly, it gave you an astonishing glimpse at the beach no matter where in the room you were."
     Takada "I see that the accommodations are to your liking, Young Mr. Hotsure."
     MC "Huh? Yeah, you could say that. I'm just shocked by the scale of everything, I've seen a fair share of larger amenities at the school sure... But this is really something else."
     Takada "Mister Nikumaru was very clear with his plans to refurbish the homestead whilst young Miss Alice was away."
     Takada "But enough about that for now, please, let me show you to your room."
     scene Summer Guest Bedroom with fade
-    MCT "The guest bedroom was just as lavish as I had expected by this point. Queen sized bed, velvet sheets, and a personal walk-in bathroom."
+    "The guest bedroom was just as lavish as I had expected by this point. Queen sized bed, velvet sheets, and a personal walk-in bathroom."
     Takada "When you are finished setting up in here, feel free to introduce yourself properly to the other two servants. They may not have as many years of experience as me, but I can assure you with full confidence, they are quite talented."
     MC "Will do, thanks for showing me around."
-    Takada "It was my pleasure, Mr Hotsure."
-    MCT "With that, Takada gracefully bowed his head and closed the door. Leaving me with my open bag of clothes, and a choice."
-    MCT "What do I wear for tonight? I want to make a good first impression..."
+    Takada "It was my pleasure, Mr. Hotsure."
+    "With that, Takada gracefully bowed his head and closed the door. Leaving me with my open bag of clothes, and a choice."
+    "What do I wear for tonight? I want to make a good first impression..."
     menu:
         "Semi-Formal wear":
             jump BBW046_c1_3
@@ -9328,30 +9330,30 @@ label BBW046_arrival:
 
 label BBW046_c1_3:
     MC "Just because I'm on vacation doesn't mean I should make myself out to be some boorish oaf."
-    MCT "I got changed out of my casual clothing, and donned a fresh pink polo shirt, with brown slacks."
+    "I got changed out of my casual clothing, and donned a fresh pink polo shirt, with brown slacks."
     jump BBW046_afterchoice_3
 
 label BBW046_c2_3:
     MC "Yeah, let's get this vacation started early!"
-    MCT "Ditching my current clothing, I hastily threw on a vivid, floral patterned, button-up shirt. To compliment this tropical garment, on my lower half I wore a pair of white khakis."
-    MCT "The idea of wearing my sunglasses to complete the look crossed my mind, but I stopped just short of putting them on."
+    "Ditching my current clothing, I hastily threw on a vivid, floral patterned, button-up shirt. To compliment this tropical garment, on my lower half I wore a pair of white khakis."
+    "The idea of wearing my sunglasses to complete the look crossed my mind, but I stopped just short of putting them on."
     jump BBW046_afterchoice_3
 
 label BBW046_c3_3:
     MC "It's been a long trip here, the smart thing to do would be to fall asleep early. That way I can be there for Alice in the morning, to watch the sunrise..."
-    MCT "With a content smile, and a head full of excitement, I laid myself down onto the bed and drifted off to sleep."
+    "With a content smile, and a head full of excitement, I laid myself down onto the bed and drifted off to sleep."
     jump daymenu
 
 label BBW046_afterchoice_3:
-    MCT "I opened my bedroom door, and made my way to the living area. Hoping to meet up with Alice and Aida before the day was done."
+    "I opened my bedroom door, and made my way to the living area. Hoping to meet up with Alice and Aida before the day was done."
     scene Summer Living Room with fade
-    MCT "Turning a corner, I came face to face with the female staff member I had never gotten the name of."
-    UNKNOWN "Oh, Mr Hotsure, we had assumed that you went to bed like Miss Alice and her friend."
+    "Turning a corner, I came face to face with the female staff member I had never gotten the name of."
+    UNKNOWN "Oh, Mr. Hotsure, we had assumed that you went to bed like Miss Alice and her friend."
     MC "Alice and Aida already fell asleep?"
     UNKNOWN "Both of the young ladies made it very clear that they wished to be refreshed for tomorrow. As so that they may enjoy the activities to the fullest."
     MC "Huh, guess I should follow suit then."
-    UNKNOWN "That would be a wise course of action, Mr Hotsure. I hope you have a pleasant night."
-    MCT "The young servant bowed before continuing past me."
+    UNKNOWN "That would be a wise course of action, Mr. Hotsure. I hope you have a pleasant night."
+    "The young servant bowed before continuing past me."
     menu:
         "Hey, wait... I never got your name.":
             jump BBW046_afterchoice_4
@@ -9360,15 +9362,15 @@ label BBW046_afterchoice_3:
 
 label BBW046_afterchoice_4:
     UNKNOWN "Ah!"
-    MCT "She turned around in shock, her face was flush with embarrassment."
+    "She turned around in shock, her face was flush with embarrassment."
     UNKNOWN "Please forgive me, Mr. Hotsure. It completely slipped my mind after you arrived."
     Shino "You can call me Murakami Shino. Or just Shino if you wish."
     Lee "You really went and called me out, when ya didn't even do properly yourself?"
-    MCT "The youngest servant, Lee, slowly approached Shino. A goofy smile plastered across his face."
+    "The youngest servant, Lee, slowly approached Shino. A goofy smile plastered across his face."
     Shino "L-Lee! What are you doing here? You should be in the kitchen."
-    Lee "I was headin' to the hwajangsil- I mean wash closet..., What, is that not allowed?"
+    Lee "I was headin' to the hwajangsil- I mean wash closet... What, is that not allowed?"
     Shino "No, that's fine, just... don't surprise me like that!"
-    MCT "Lee changed focus to me."
+    "Lee changed focus to me."
     Lee "Wait, I see. You were gonna help our guest get to know us better, yeah?"
     Shino "What? No no, I was just-"
     Lee "Don't worry about it! If he's gonna be staying here for a bit, the least we could do is get to know him better."
@@ -9381,39 +9383,39 @@ label BBW047:
     $setProgress("BBW", "BBW048")
     scene Summer Guest Bedroom with fade
     play music Peaceful
-    MCT "Warm, soft, and safe..."
-    MCT "Those were the only words that could describe how comfortable I felt in this bed. My entire body felt like it could just sink right into the mattress."
-    MCT "Part of me wondered what time it was, maybe I had accidentally slept in? But the other part of me really didn't care, and wanted to stay in this spot for as long as possible."
+    "Warm, soft, and safe..."
+    "Those were the only words that could describe how comfortable I felt in this bed. My entire body felt like it could just sink right into the mattress."
+    "Part of me wondered what time it was, maybe I had accidentally slept in? But the other part of me really didn't care, and wanted to stay in this spot for as long as possible."
     stop music
     Shino "Rise and Shine, Mr. Hotsure!"
-    MCT "The peaceful silence of the room was shattered by the sound of my door being flung open."
+    "The peaceful silence of the room was shattered by the sound of my door being flung open."
     play music BBW
     Shino "Miss Alice specified that if you weren't awake by this time, I should give you a wake up call."
     MCT "Wake up call? With that much noise it was more like a siren."
     Shino "Make yourself presentable, she is waiting for you on the balcony. Do not fret about breakfast, it will be waiting for you afterwards."
-    MCT "Shino practically lept to the side of my bed, and ripped my covers off with such force it was surprising she didn't take me off the bed with them."
+    "Shino practically lept to the side of my bed, and ripped my covers off with such force it was surprising she didn't take me off the bed with them."
     Shino "Please hurry, Mr. Hotsure. I would hate for Miss Alice's first day of vacation to start off on a bad note."
-    MCT "With a yawn, I managed to drag myself to the edge of the bed. My eyes slowly opened to look at the time."
+    "With a yawn, I managed to drag myself to the edge of the bed. My eyes slowly opened to look at the time."
     MC "5:50 AM?"
     Shino "The sunrise. Miss Alice has always made it tradition to watch the sunrise the first day she is here."
     MC "Right... shame the sun couldn't wait for me to comb my hair first."
-    MCT "Even though I couldn't see much past my own bangs, I could physically feel the dismissive looks that Shino was giving me."
+    "Even though I couldn't see much past my own bangs, I could physically feel the dismissive looks that Shino was giving me."
     Shino "I am well aware of your unique condition, Mr. Hotsure. But that is no excuse to look like a lazy slob in the morning!"
     MC "Hey, I was just joking. Believe me, if I don't maintain my hair it becomes more of a problem for me than others."
     Shino "Good, now that that's settled, I have to check in on Lee. The last time I left him alone to cook, he broke a plate..."
-    MCT "With the same ferocity Shino had opened my door with, she bolted out of my room like it was on fire."
+    "With the same ferocity Shino had opened my door with, she bolted out of my room like it was on fire."
     MCT "Not exactly the most pleasant good morning, but I guess they really want everything to be perfect for Alice."
-    MCT "I managed to slog myself out of the comforting embrace that the linen sheets provided. My eyes barely opened as my feet automatically made me lumber to the bathroom."
-    MCT "By the time the haze in my mind had cleared, I was standing in the doorway of my room. Hair neatly combed, dressed in a pair of pajama pants and loose t-shirt."
+    "I managed to slog myself out of the comforting embrace that the linen sheets provided. My eyes barely opened as my feet automatically made me lumber to the bathroom."
+    "By the time the haze in my mind had cleared, I was standing in the doorway of my room. Hair neatly combed, dressed in a pair of pajama pants and loose t-shirt."
     MCT "I hope Alice doesn't mind me being a bit tardy to the sunrise."
     scene Summer Balcony Exterior with fade
-    MCT "Not halfway down the hall, I turned to see Alice gracefully glancing over the balcony."
-    show BBW summer-ext-neutral with dissolve
-    MCT "The cascading light coming from the early morning sun did wonders. The way she calmly lent against the wall, her head turning to the sunrise, made Alice look like she was right out of a painting."
-    MCT "Bright, vivid yellows were reflecting off the golden accents in her clothes. Giving her an almost ethereal aura that beckoned me closer."
-    MCT "The gentle orange glow, ever so faint, ended up perfectly complimenting her fair skin. Catching her golden hair as well as her cherubic face, making her features look soft and friendly."
-    MCT "Finally the red hints flawlessly captured her contours, outlining her form with vivid colors. Broadcasting an alluring appeal to anyone who was lucky enough to see her in this light."
-    MCT "I never truly considered myself to be a man with absurdly high luck. But upon witnessing this spectacle, my opinions might have just changed."
+    "Not halfway down the hall, I turned to see Alice gracefully glancing over the balcony."
+    show BBW summer-int-neutral with dissolve
+    "The cascading light coming from the early morning sun did wonders. The way she calmly lent against the wall, her head turning to the sunrise, made Alice look like she was right out of a painting."
+    "Bright, vivid yellows were reflecting off the golden accents in her clothes. Giving her an almost ethereal aura that beckoned me closer."
+    "The gentle orange glow, ever so faint, ended up perfectly complimenting her fair skin. Catching her golden hair as well as her cherubic face, making her features look soft and friendly."
+    "Finally the red hints flawlessly captured her contours, outlining her form with vivid colors. Broadcasting an alluring appeal to anyone who was lucky enough to see her in this light."
+    "I never truly considered myself to be a man with absurdly high luck. But upon witnessing this spectacle, my opinions might have just changed."
     menu:
         "Greet her.":
             jump BBW047_c1_1
@@ -9422,32 +9424,32 @@ label BBW047:
 
 label BBW047_c1_1:
     MC "Lovely morning, isn't it?"
-    show BBW summer-ext-surprised
-    MCT "Alice slightly jumped at the sound of my voice. Her head turned toward me with a warm smile"
-    show BBW summer-ext-neutral
+    show BBW summer-int-surprised
+    "Alice slightly jumped at the sound of my voice. Her head turned toward me with a warm smile"
+    show BBW summer-int-neutral
     BBW "Why, yes it is. I am glad that you managed to get out of bed for this."
     BBW "In all honesty, I truly only expected you to be awake in time for the sunset."
     MC "And miss seeing you in this early morning glow? Not a chance."
-    MCT "I made my way to Alice's side, leaning on the railing as I took in the stunning sights that cascaded before me."
+    "I made my way to Alice's side, leaning on the railing as I took in the stunning sights that cascaded before me."
     MC "In all honesty, it was Shino who made sure that I was here on time. She was deadly serious about me being here."
     BBW "Hmph, that does sound like Shino alright..."
     jump BBW047_c1_after
 
 label BBW047_c1_2:
     $setAffection("BBW", 1)
-    MCT "I carefully walked up behind Alice, making sure that my footsteps went unheard."
-    MCT "Waiting till the last second, I raised my arms and gently set them over her shoulders. Bringing her into a gentle embrace."
-    show BBW summer-ext-happy
+    "I carefully walked up behind Alice, making sure that my footsteps went unheard."
+    "Waiting till the last second, I raised my arms and gently set them over her shoulders. Bringing her into a gentle embrace."
+    show BBW summer-int-happy
     BBW "I was hoping that you would do that."
-    MCT "Alice tilted her head to look at me, an almost gleeful smile was faint on her lips."
+    "Alice tilted her head to look at me, an almost gleeful smile was faint on her lips."
     MC "You heard me?"
     BBW "I would need to be deaf to not hear the chaotic swaying and bouncing of your hair."
     MC "Ah, right. I guess I've just kind of gotten used to the noise by now."
     BBW "A part of me wonders if you can even see out of that mane. Now I'm questioning if you can hear out of it as well."
-    MCT "She gave a faint chuckle at the thought."
+    "She gave a faint chuckle at the thought."
     MC "Ears and eyes aren't a necessity, I already know that I'm with the most beautiful woman in the world. What else is there to experience?"
     BBW "Hmph, good answer."
-    MCT "We spent the next couple of minutes just standing there, enjoying the extravagant lights of the sunrise."
+    "We spent the next couple of minutes just standing there, enjoying the extravagant lights of the sunrise."
     BBW "My father used to bring me out here when I was young, we made it a tradition to watch the sunrise here together."
     jump BBW047_c1_after
 
@@ -9455,7 +9457,7 @@ label BBW047_c1_after:
     BBW "That reminds me actually, have you had a chance to get familiar with the other staff members yet?"
     MC "No, actually. I haven't had a chance to meet anyone besides Shino."
     MC "They all seem wonderful, I'm looking forward to getting to know them better."
-    show BBW summer-ext-haughty
+    show BBW summer-int-haughty
     BBW "That will have to wait unfortunately, I have other plans for you today."
     MC "Hold on, let me guess- you want to spend today at the beach?"
     BBW "Well, just the afternoon. After that, we shall see where the day takes us."
@@ -9463,19 +9465,19 @@ label BBW047_c1_after:
     scene Summer Beach with fade
     stop music
     play music Peaceful
-    MCT "After finally getting a chance to eat breakfast, I made haste to get changed into my swim trunks."
-    MCT "It was midday, the sky's were mostly cloudy with strong rays of sunshine going through the gaps. And one couldn't ask for better weather on the beach."
-    MCT "I looked around to find Alice, but the only other person at the beach was Aida."
+    "After finally getting a chance to eat breakfast, I made haste to get changed into my swim trunks."
+    "It was midday, the sky's were mostly cloudy with strong rays of sunshine going through the gaps. And one couldn't ask for better weather on the beach."
+    "I looked around to find Alice, but the only other person at the beach was Aida."
     show PRG swimsuit-neutral with dissolve
-    MCT "Who was reclined in her beach chair, under a large umbrella, reading a book."
+    "Who was reclined in her beach chair, under a large umbrella, reading a book."
     MC "Lovely weather today, yeah?"
-    MCT "Aida crooked her head to look at me."
+    "Aida crooked her head to look at me."
     PRG "It really is! I'm so glad that we get the chance to unwind over the summer like this."
     MC "Yeah, you certainly seem comfortable."
     PRG "I-I am. And, I have a spot set up for you and Alice, too."
     MC "Really? Did Alice ask you to do that?"
     PRG "No. Alice actually told me to focus less on her and more on myself. Especially considering..."
-    MCT "Aida glanced down at her enlarged abdomen, which appeared to be covered by a healthy amount of sunblock."
+    "Aida glanced down at her enlarged abdomen, which appeared to be covered by a healthy amount of sunblock."
     PRG "...But I couldn't relax while knowing that I would be distracting you two from each other!"
     MC "That's why you set up your own spot further down the beach?"
     PRG "Yep! So now you two can get even closer together."
@@ -9490,7 +9492,7 @@ label BBW047_c2_1:
     $setAffection("PRG", 1)
     MC "Thank you so much, Aida. I really don't know how you manage to still be so helpful, even during vacation."
     show PRG swimsuit-happy
-    MCT "Aida blushed and gave me a gleeful smile."
+    "Aida blushed and gave me a gleeful smile."
     PRG "Oh, don't mention it, Hotsure-san. Really, it was a pleasure."
     PRG "Now, stop worrying about me, and go see Alice!"
     MC "Right!"
@@ -9498,44 +9500,44 @@ label BBW047_c2_1:
 
 label BBW047_c2_2:
     scene Summer Beach Closed with fade
-    MCT "I made my way over to the area that Aida had set up. It was a rather elegant beach tent, almost entirely white with the exception of gold accents around the edges."
+    "I made my way over to the area that Aida had set up. It was a rather elegant beach tent, almost entirely white with the exception of gold accents around the edges."
     MC "Is there a door knocker on this, or should I just shout 'Ding-Dong?'"
-    MCT "Alice's voice came through the cloth cover draping over the entrance."
+    "Alice's voice came through the cloth cover draping over the entrance."
     BBW "You needn't worry about walking in on me unprepared, I have already changed into my swimming outfit."
     MC "Well that's unlucky for me then, isn't it?"
     BBW "This little ensemble was custom made per my instructions, I must make sure that everything is up to par."
     MC "I'm sure you look fantastic, Alice."
     BBW "Oh trust me, there is no doubt about that. The thing is..."
-    MCT "Her voice trailed off, I could hear her pacing around in the tent."
+    "Her voice trailed off, I could hear her pacing around in the tent."
     BBW "They got my requested measurements correct, I asked Aida for a double check. But yet, it still feels ever so slightly too tight."
     MC "It's probably just because the suit is new, you need to break it in."
     BBW "While that is kind of you to say, Keisuke, but we both know that is not the case."
     BBW "..."
     BBW "...I'm going to come out now, but you had better promise to not gawk like a fool."
     MC "I'll try my hardest to not notice how stunning you look."
-    MCT "Alice lightly chuckled."
+    "Alice lightly chuckled."
     BBW "Flatterer."
     MC "How can it be flattery if it's just the truth?"
     show BBW swimsuit-neutral with dissolve
-    MCT "The privacy cloth door to the tent was lifted, and Alice stepped out into the sunlight. My tongue seemed to stop working as my eyes bared witness to the majesty in front of me."
-    MCT "Two luscious pillows of bountiful beauty came forward. Each of them jostling to and fro wildly, as if they each had minds of their own. But both comfortably contained in the skin tight bikini that only accentuated their size."
-    MCT "Despite the suit being made of high quality latex, it still seemed to have trouble keeping Alice's chest in check. They seemed to actively want to escape from their damning prison. Part of me wondered if they would eventually make their great escape."
-    MCT "The sheer heft of these twin pillows was being supported by a belly that had been packed right into Alice's suit."
-    MCT "The simple yet striking black was complemented by the subtle touches of gold; Giving Alice a rather elegant aura."
-    MCT "Reaching out ever so slightly past her breasts was a belly that made sure it was the center of attention at all times. The frills descending down her magnificent gut, as if it were a waterfall."
-    MCT "Her stomach had pushed both the latex and her breasts so far up that the straps meant to support her monumental bosoms were rendered pointless. The lithe straps did little more than rest on her shoulders, occasionally being enveloped by the fat of her upper chest."
-    MCT "Even with the custom made suit, it still couldn't cover the entire soft beachball of an abdomen. At the very bottom of the bikini's frills, the smallest sliver of flawless skin came peeking out."
-    MCT "The crescent shape was all that I could see of Alice's uncovered belly. But with each breath that she took, the frills would rise more and more. Slowly, ever so carefully, the loose cover continued to climb up. Teasing me to no end, but also drawing my attention ever closer."
-    MCT "Due to the sheer size of Alice's gut, I was having a hard time figuring out where her belly ended and her waist started. It blocked out the entire view of her thighs from the front."
-    MCT "However, her love handles provided me with perfect markers. Directing my eyes further downward to see the layers of upper thigh fat layering over each other. This amazing spectacle of adipose made it so the sides of her legs extended from behind her belly."
-    MCT "Following along the trail of excess fat billowing from her legs, I finally landed on her backside."
-    MCT "Although her posture was directed to face me, I could still see the edges of her plump posterior. The magnitude of its size was taunting me, it was begging me, to see it in all its glory."
-    MCT "Only when she turned could I get a hint of its splendor, a perfectly porcine heart shape, with the ends of the heart melting into significantly chubby thighs. The sight alone was enough to drive me crazy."
-    MCT "The thought of simply touching it though, was beyond my comprehension. The idea of what it would feel like to cascade my hands down her form was heavenly. The supple layers of flab pushing through my fingers..."
-    MCT "The gentle embrace of her voluptuous form was all I could think about."
+    "The privacy cloth door to the tent was lifted, and Alice stepped out into the sunlight. My tongue seemed to stop working as my eyes bared witness to the majesty in front of me."
+    "Two luscious pillows of bountiful beauty came forward. Each of them jostling to and fro wildly, as if they each had minds of their own. But both comfortably contained in the skin tight bikini that only accentuated their size."
+    "Despite the suit being made of high quality latex, it still seemed to have trouble keeping Alice's chest in check. They seemed to actively want to escape from their damning prison. Part of me wondered if they would eventually make their great escape."
+    "The sheer heft of these twin pillows was being supported by a belly that had been packed right into Alice's suit."
+    "The simple yet striking black was complemented by the subtle touches of gold; Giving Alice a rather elegant aura."
+    "Reaching out ever so slightly past her breasts was a belly that made sure it was the center of attention at all times. The frills descending down her magnificent gut, as if it were a waterfall."
+    "Her stomach had pushed both the latex and her breasts so far up that the straps meant to support her monumental bosoms were rendered pointless. The lithe straps did little more than rest on her shoulders, occasionally being enveloped by the fat of her upper chest."
+    "Even with the custom made suit, it still couldn't cover the entire soft beachball of an abdomen. At the very bottom of the bikini's frills, the smallest sliver of flawless skin came peeking out."
+    "The crescent shape was all that I could see of Alice's uncovered belly. But with each breath that she took, the frills would rise more and more. Slowly, ever so carefully, the loose cover continued to climb up. Teasing me to no end, but also drawing my attention ever closer."
+    "Due to the sheer size of Alice's gut, I was having a hard time figuring out where her belly ended and her waist started. It blocked out the entire view of her thighs from the front."
+    "However, her love handles provided me with perfect markers. Directing my eyes further downward to see the layers of upper thigh fat layering over each other. This amazing spectacle of adipose made it so the sides of her legs extended from behind her belly."
+    "Following along the trail of excess fat billowing from her legs, I finally landed on her backside."
+    "Although her posture was directed to face me, I could still see the edges of her plump posterior. The magnitude of its size was taunting me, it was begging me, to see it in all its glory."
+    "Only when she turned could I get a hint of its splendor, a perfectly porcine heart shape, with the ends of the heart melting into significantly chubby thighs. The sight alone was enough to drive me crazy."
+    "The thought of simply touching it though, was beyond my comprehension. The idea of what it would feel like to cascade my hands down her form was heavenly. The supple layers of flab pushing through my fingers..."
+    "The gentle embrace of her voluptuous form was all I could think about."
     show BBW swimsuit-haughty
     BBW "Is this what you call 'trying your hardest?'"
-    MCT "My attention was viciously snapped back to reality. Alice gave me a dismissive look, but I could see just a smidge of pride in her eyes."
+    "My attention was viciously snapped back to reality. Alice gave me a dismissive look, but I could see just a smidge of pride in her eyes."
     MC "{i}Cough{/i} hm, yep... sorry."
     show BBW swimsuit-neutral-2
     BBW "Calm yourself will you, Keisuke? It is not as if you have never seen me in a swimsuit before."
@@ -9550,13 +9552,13 @@ label BBW047_c2_2:
 
 label BBW047_c3_1:
     show BBW swimsuit-worried
-    MCT "Alice's saunter slowed down, her prideful posture had weakened a bit."
+    "Alice's saunter slowed down, her prideful posture had weakened a bit."
     BBW "...Yes, you are correct Keisuke."
     MC "N-No! I didn't mean anything bad by it."
     BBW "I know you had no ill intent, but yet those kinds of expressions still stress me."
     MC "I'm sorry Alice, it's just... seeing you in this bikini must have fried my brain or something."
     show BBW swimsuit-neutral
-    MCT "Her smile started to faintly return to her face."
+    "Her smile started to faintly return to her face."
     BBW "At least I know that you still find me irresistible."
     MC "Was there ever any doubt?"
     show BBW swimsuit-neutral-2
@@ -9566,7 +9568,7 @@ label BBW047_c3_1:
 label BBW047_c3_2:
     show BBW swimsuit-happy
     BBW "Are you implying that I was not beautiful before?"
-    MCT "Alice gazed at me with a cocky smirk."
+    "Alice gazed at me with a cocky smirk."
     MC "No, just more so now that so much of you is on display."
     BBW "An expected answer, but true nevertheless."
     jump BBW047_c3_after
@@ -9586,7 +9588,7 @@ label BBW047_c3_after:
     BBW "Did you really plan on submerging yourself in the frigid early morning waters?"
     MC "It's definitely a good way to start off a vacation, yeah?"
     show BBW swimsuit-happy
-    MCT "Alice gave me a lighthearted giggle."
+    "Alice gave me a lighthearted giggle."
     BBW "You never cease to humor me, Keisuke."
     MC "What am I? Your date, or your personal clown?"
     BBW "Hmmm..."
@@ -9597,17 +9599,17 @@ label BBW047_c3_after:
     BBW "Folli?"
     MC "It's short for 'follicles,' on account of my hair."
     show BBW swimsuit-aroused
-    MCT "Her head turned away from me for a second, her hand going to cover her mouth."
+    "Her head turned away from me for a second, her hand going to cover her mouth."
     MC "Really? That joke got you?"
     show BBW swimsuit-neutral
     BBW "No, not at all! *ahem*...I am actually concerned that you came up with that answer so quickly."
     MC "I always figured that if going into architecture didn't pan out, the circus freak show would be guaranteed employment."
     show BBW swimsuit-happy
-    MCT "This time Alice didn't have time to cover her face as she let out a clear laugh."
+    "This time Alice didn't have time to cover her face as she let out a clear laugh."
     BBW "You really would fit right in with the rest of the clowns, Keisuke."
     MC "Naturally... Hey, is that your beach set up down by the shore?"
     scene Summer Beach with fade
-    MCT "I pointed to a cozy little set-up close to the waves. There was a rather large beach towel on the sand, and an extra large beach chair resting on it."
+    "I pointed to a cozy little set-up close to the waves. There was a rather large beach towel on the sand, and an extra large beach chair resting on it."
     show BBW swimsuit-neutral-2 with dissolve
     BBW "Aida helped me set it up, I swear, she is far too generous."
     MC "Yeah, this seems like the perfect spot to just unwind."
@@ -9615,41 +9617,41 @@ label BBW047_c3_after:
     MC "Oh? Are you going to be the stunning lifeguard that saves me from a riptide?"
     BBW "I might be, but if you get yourself into trouble on purpose, one of the servants will be the person to give you CPR."
     MC "Here's hoping for a wild current then!"
-    MCT "Taking off in a mad dash, I sprinted towards the crashing water."
-    MCT "The rising tide continued to slow me down more and more until everything below my chest was submerged."
-    MCT "Alice wasn't kidding, the sea was downright frigid. It felt like the very bones in my legs were being frozen. Part of me wondered if I would catch some form of hypothermia."
+    "Taking off in a mad dash, I sprinted towards the crashing water."
+    "The rising tide continued to slow me down more and more until everything below my chest was submerged."
+    "Alice wasn't kidding, the sea was downright frigid. It felt like the very bones in my legs were being frozen. Part of me wondered if I would catch some form of hypothermia."
     MC "Come on! The w-water is f-fine once you g-get used to it."
     show BBW swimsuit-haughty
-    MCT "Way back on the beach, I could see Alice reclining in her beach chair. Her voluptuous form shining like a lighthouse on the sand."
+    "Way back on the beach, I could see Alice reclining in her beach chair. Her voluptuous form shining like a lighthouse on the sand."
     BBW "I can see your teeth chattering from all the way over here, Keisuke. Are you sure that this was a wise move?"
     MC "Of course it is-"
-    MCT "A massive wave of chilled sea water hit me right in the back, shoving me face first into the cold abyss."
-    MCT "Emerging from the water with a gasp, I pushed my hair out of my eyes and looked back towards Alice."
+    "A massive wave of chilled sea water hit me right in the back, shoving me face first into the cold abyss."
+    "Emerging from the water with a gasp, I pushed my hair out of my eyes and looked back towards Alice."
     MC "S-See? Perfectly fine."
     show BBW swimsuit-doubt
     BBW "You are going to get yourself hurt out there, come back already!"
     MC "Ok ok, fine. But only because I forgot to pack a swim cap, and my hair is weighing me down."
-    MCT "Trudging along, I made my way back towards the shore."
+    "Trudging along, I made my way back towards the shore."
     MC "Now I know what Homer felt like in the Odyssey."
     show BBW swimsuit-neutral
     BBW "Apologies... but what do you mean by that?"
     MC "Being beckoned shoreside by the call of a beautiful siren."
     show BBW swimsuit-happy
-    MCT "Alice tried her best not to look pleased by the compliment."
+    "Alice tried her best not to look pleased by the compliment."
     BBW "Sit down and dry yourself off already. Your hair probably weighs more than you now with all that water weight."
-    MCT "The next half hour passed rather pleasantly. After draining my hair, Alice and I basked in the warm summer air while we made small talk."
+    "The next half hour passed rather pleasantly. After draining my hair, Alice and I basked in the warm summer air while we made small talk."
     show BBW swimsuit-worried
     BBW "Hmmm..."
-    MCT "After a while, I heard Alice sigh out. Something was very clearly bothering her."
+    "After a while, I heard Alice sigh out. Something was very clearly bothering her."
     BBW "Maybe if I... no, that wouldn't work."
     MC "Is something wrong?"
     if getAffection("BBW") < 17:
         show BBW swimsuit-neutral
         BBW "Of course not, I was just pondering what Aida is reading over there."
         MC "Oh, ok."
-        MCT "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
-        MCT "Although after very little time had passed, she announced that she would rather head back inside."
-        MCT "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
+        "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
+        "Although after very little time had passed, she announced that she would rather head back inside."
+        "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
         jump daymenu
     else:
         show BBW swimsuit-surprised
@@ -9666,18 +9668,18 @@ label BBW047_c3_after:
 label BBW047_c4_2:
     MC "If you say so."
     show BBW swimsuit-worried
-    MCT "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
-    MCT "Although after very little time had passed, she announced that she would rather head back inside."
-    MCT "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
+    "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
+    "Although after very little time had passed, she announced that she would rather head back inside."
+    "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
     jump daymenu
 
 label BBW047_c4_1:
     MC "Alice, I've known you for long enough to see when you're putting on a brave face. What's really bothering you?"
     show BBW swimsuit-worried
-    MCT "Shifting back and forth in her chair uncomfortably, Alice turned her head away from me and spoke into the wind."
+    "Shifting back and forth in her chair uncomfortably, Alice turned her head away from me and spoke into the wind."
     BBW "It really is nothing you need to concern yourself with-"
     MC "Tell. Me. What's. Wrong."
-    MCT "I knew that taking such a commanding tone with Alice was a risk. But she was clearly bothered by something, and I was determined to help."
+    "I knew that taking such a commanding tone with Alice was a risk. But she was clearly bothered by something, and I was determined to help."
     show BBW swimsuit-stern
     BBW "Damn it all... if you must know..."
     show BBW swimsuit-worried
@@ -9700,13 +9702,13 @@ label BBW047_c4_1:
     MC "Well what are you gonna do now?"
     show BBW swimsuit-stern
     BBW "What I need-"
-    MCT "Her cheeks flushed bright red, as her arms folded over each other."
+    "Her cheeks flushed bright red, as her arms folded over each other."
     BBW "Keisuke, I need to ask something personal from you."
-    MCT "Her voice was hushed, her crystal blue eyes were having trouble remaining focused on anything."
+    "Her voice was hushed, her crystal blue eyes were having trouble remaining focused on anything."
     BBW "Will you... Would you be so kind, as to help me apply my sun lotion?"
-    MCT "Even with the most grueling of efforts, Alice desperately tried to maintain her aura of composure. But her voice, her body language, her facial expressions. All of it was shouting that she was in a very unfamiliar situation."
-    MCT "Alice looked as if she wanted nothing more than to close her eyes, and hope that this was all a bad dream. But there was a hint of something else in her expression."
-    MCT "In a rather odd way, while her body language was very closed off, it didn't look like she was entirely uncomfortable. In fact, judging by her face, she was viciously curious about the situation and how I would respond."
+    "Even with the most grueling of efforts, Alice desperately tried to maintain her aura of composure. But her voice, her body language, her facial expressions. All of it was shouting that she was in a very unfamiliar situation."
+    "Alice looked as if she wanted nothing more than to close her eyes, and hope that this was all a bad dream. But there was a hint of something else in her expression."
+    "In a rather odd way, while her body language was very closed off, it didn't look like she was entirely uncomfortable. In fact, judging by her face, she was viciously curious about the situation and how I would respond."
     MC "Y-Yeah, no problem."
     show BBW swimsuit-neutral
     BBW "You sound hesitant, are you certain that this task isn't too much for you?"
@@ -9714,7 +9716,7 @@ label BBW047_c4_1:
     show BBW swimsuit-haughty
     BBW "Neither was I... but this is what must be done."
     BBW "Here, take it."
-    MCT "Alice handed over her bottle of sun lotion."
+    "Alice handed over her bottle of sun lotion."
     show BBW swimsuit-stern
     BBW "And if I catch you lingering over any of my areas, I will call this whole thing off."
     if getFlag("BBW040_c2_3"):
@@ -9722,7 +9724,7 @@ label BBW047_c4_1:
         BBW "As a matter of fact, that is a concern of mine."
         MC "But if I recall correctly, last time this happened, it wasn't so bad."
         show BBW swimsuit-happy
-        MCT "Reclining back in her seat, Alice gave me a slight smirk."
+        "Reclining back in her seat, Alice gave me a slight smirk."
         BBW "Consider this a rare privilege, Keisuke. It would be a shame to waste an opportunity such as this."
         BBW "Much like savoring a well made steak- you don't wolf it down, no. You savor every bite, making the most out of the experience."
         MC "Well now you've made me hungry."
@@ -9734,23 +9736,23 @@ label BBW047_c4_1:
     BBW "Now, are you going to stand around and gawk? Or are you going to help me?"
     MC "Don't have to ask me twice."
     show cg BBW047 with dissolve
-    MCT "Alice gave me a reaffirming nod as I positioned myself beside her. Lowering down onto my knees, I could feel the smooth grain of the sand envelop my shins."
-    MCT "It took only a second to position myself comfortably, but the sheer size of my task had just dawned on me."
-    MCT "It was enormous even when standing eye level with Alice, but being this close to it gave her belly gave it a daunting aura."
-    MCT "With each breath, I could see it rising and falling like the tides on the beach. A veritable tsunami of soft fat, crashing over itself again and again."
-    MCT "My hands acted almost on their own, as my eyes were too busy gawking. Before I even knew what I was doing, the bottle of lotion had been opened."
-    MCT "Tilting it over Alice's behemoth belly, I let the lotion pour out on the upper most part of her stomach. The liquid spread and pooled all across her, dripping into whatever folds it could find."
+    "Alice gave me a reaffirming nod as I positioned myself beside her. Lowering down onto my knees, I could feel the smooth grain of the sand envelop my shins."
+    "It took only a second to position myself comfortably, but the sheer size of my task had just dawned on me."
+    "It was enormous even when standing eye level with Alice, but being this close to it gave her belly gave it a daunting aura."
+    "With each breath, I could see it rising and falling like the tides on the beach. A veritable tsunami of soft fat, crashing over itself again and again."
+    "My hands acted almost on their own, as my eyes were too busy gawking. Before I even knew what I was doing, the bottle of lotion had been opened."
+    "Tilting it over Alice's behemoth belly, I let the lotion pour out on the upper most part of her stomach. The liquid spread and pooled all across her, dripping into whatever folds it could find."
     BBW "Ah... it's been sitting out in the sun, how is it still cold?"
-    MCT "I chuckled as the lotion was put away. Even with the rather excessive amount I applied, some part of me wondered if it would be enough."
-    MCT "Not wasting any more time, my eager hands got to work covering her body. Immediately the warm sensation began to coat my hands, as they sunk into her pillowy middle."
+    "I chuckled as the lotion was put away. Even with the rather excessive amount I applied, some part of me wondered if it would be enough."
+    "Not wasting any more time, my eager hands got to work covering her body. Immediately the warm sensation began to coat my hands, as they sunk into her pillowy middle."
     BBW "Mmmmph!"
     MC "Sorry! I'm being too rough aren't I?"
     BBW "No, no. It's just cold is all, that's it."
     MC "Oh, ok. Do you want me to continue?"
     BBW "Y-Yes please."
-    MCT "Despite all of Alice's bravado from before, the moment I took her in my hand, she started to unwind. Right before my very eyes, the elegant beauty was starting to relax."
-    MCT "Continuing my task, my arms kept up the attack on her belly. Flowing too and fro, back and forth, all across her rotund middle."
-    MCT "At some point I started to feel like a baker, preparing dough. I would gently knead the dough, not too much that it was disturbed. But also applying enough force that it spread was spread out evenly."
+    "Despite all of Alice's bravado from before, the moment I took her in my hand, she started to unwind. Right before my very eyes, the elegant beauty was starting to relax."
+    "Continuing my task, my arms kept up the attack on her belly. Flowing too and fro, back and forth, all across her rotund middle."
+    "At some point I started to feel like a baker, preparing dough. I would gently knead the dough, not too much that it was disturbed. But also applying enough force that it spread was spread out evenly."
     menu:
         "Push your luck.":
             jump BBW047_c5_1
@@ -9758,75 +9760,75 @@ label BBW047_c4_1:
             jump BBW047_c5_after
 
 label BBW047_c5_1:
-    MCT "Against my better judgement, the idea of holding Alice's belly proved too much for me to handle."
-    MCT "With all the subtlety one could muster, I stretched forward. Some part of me was curious if my hand could reach the other side of her belly from the other."
-    MCT "The answer to that was no, unsurprisingly. Despite my best efforts, I was only able to get most of my arm across her middle."
-    MCT "Alice's plush middle was forcing itself very harshly against my arms length. I could feel myself almost sinking into her ever so slowly. Her substantial rolls imbibing me deeper and deeper."
-    MCT "I watched in amazement as my arm slowly disappeared under an avalanche of belly. But my curiosity wasn't yet sated..."
-    MCT "Using what strength I had, my hand on her other side pulled back with all its force. However, it was met with a strong resistance."
-    MCT "In my head, the plan was to slyly pull back, and pretend that I was just adding another layer of lotion. But what happened instead, was me getting caught and almost losing balance."
-    MCT "Her belly had an absurd weight, or rather, density. It felt as if I was attempting to move a rather large water balloon..."
+    "Against my better judgement, the idea of holding Alice's belly proved too much for me to handle."
+    "With all the subtlety one could muster, I stretched forward. Some part of me was curious if my hand could reach the other side of her belly from the other."
+    "The answer to that was no, unsurprisingly. Despite my best efforts, I was only able to get most of my arm across her middle."
+    "Alice's plush middle was forcing itself very harshly against my arms length. I could feel myself almost sinking into her ever so slowly. Her substantial rolls imbibing me deeper and deeper."
+    "I watched in amazement as my arm slowly disappeared under an avalanche of belly. But my curiosity wasn't yet sated..."
+    "Using what strength I had, my hand on her other side pulled back with all its force. However, it was met with a strong resistance."
+    "In my head, the plan was to slyly pull back, and pretend that I was just adding another layer of lotion. But what happened instead, was me getting caught and almost losing balance."
+    "Her belly had an absurd weight, or rather, density. It felt as if I was attempting to move a rather large water balloon..."
     BBW "Is everything alright?"
     MC "Yeah, yep... things are just peachy keen."
-    MCT "My tone of voice betrayed my attempt to remain discreet."
+    "My tone of voice betrayed my attempt to remain discreet."
     jump BBW047_c5_after
 
 label BBW047_c5_after:
-    MCT "As the final layer was applied, I took a step back to admire my work. My hands emerged from her lower most belly roll, still slick with lotion."
+    "As the final layer was applied, I took a step back to admire my work. My hands emerged from her lower most belly roll, still slick with lotion."
     MC "Don't suppose you happen to have a hand towel I can borrow?"
     BBW "Mmmmmmm..."
-    MCT "It was then I realized just how much Alice had melted under my hands. Her entire belly was glistening in the sunlight, the bright glare could probably work as a beacon."
-    MCT "There was a rather cute smile on her face. As her head tilted, resting on her neck roll slightly, her expression was vaguely reminiscent of a content feline after getting its back scratched."
+    "It was then I realized just how much Alice had melted under my hands. Her entire belly was glistening in the sunlight, the bright glare could probably work as a beacon."
+    "There was a rather cute smile on her face. As her head tilted, resting on her neck roll slightly, her expression was vaguely reminiscent of a content feline after getting its back scratched."
     MC "Alice?"
-    MCT "I got off my knees to see past her belly and breasts, only to notice that Alice had completely fallen asleep at some point."
-    MCT "She looked so peaceful there, completely at ease. It made me wonder just how often she got to relax like this."
-    MCT "After drying off my hands, I returned to my chair. Reclining back, I just watched the endless sea flow up and down in front of me..."
-    MCT "And the ocean was pretty cool as well."
+    "I got off my knees to see past her belly and breasts, only to notice that Alice had completely fallen asleep at some point."
+    "She looked so peaceful there, completely at ease. It made me wonder just how often she got to relax like this."
+    "After drying off my hands, I returned to my chair. Reclining back, I just watched the endless sea flow up and down in front of me..."
+    "And the ocean was pretty cool as well."
     jump daymenu
 
 label BBW048:
     $setProgress("BBW", "BBW049A")
     scene Summer Guest Bedroom with fade
     play music Rain
-    MCT "Coming inside after spending a full day on the beach, the three of us went to our respective chambers to unwind for a bit and get cleaned up before dinner."
-    MCT "Having returned once again, the luxuriant accommodations had not yet ceased to inspire awe in me."
-    MCT "The striking view from the late afternoon sun beaming through the window caused me to pause as I took in the oceanside vista."
+    "Coming inside after spending a full day on the beach, the three of us went to our respective chambers to unwind for a bit and get cleaned up before dinner."
+    "Having returned once again, the luxuriant accommodations had not yet ceased to inspire awe in me."
+    "The striking view from the late afternoon sun beaming through the window caused me to pause as I took in the oceanside vista."
 
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Summer Beach with fade
-    MCT "The weather here really is amazing, the location is perfect. I can't think of a more pleasant day I have had than today."
-    MCT "Gazing upon the azure waters, having tinted to more of a violet from the evening sky, the gently rolling waves made me wonder if this gorgeous day spent with such a beautiful woman had been real, or if I merely found myself in some idyllic surreal fantasy of my own imagination..."
-    MCT "I ultimately decided that my imagination was not this good, so it had to have been real."
-    MCT "My thoughts drifted all the more, taking in the view from my mind's eye of how Alice had looked in her swimsuit."
+    "The weather here really is amazing, the location is perfect. I can't think of a more pleasant day I have had than today."
+    "Gazing upon the azure waters, having tinted to more of a violet from the evening sky, the gently rolling waves made me wonder if this gorgeous day spent with such a beautiful woman had been real, or if I merely found myself in some idyllic surreal fantasy of my own imagination..."
+    "I ultimately decided that my imagination was not this good, so it had to have been real."
+    "My thoughts drifted all the more, taking in the view from my mind's eye of how Alice had looked in her swimsuit."
     show BBW swim-happy with dissolve
-    MCT "Every curve, every dimple, every bit as warm and invitingly luxuriant as this seaside mansion. It's crazy how soft her body has become."
-    MCT "First getting the chance to help her fit her uniform, now this? I like where things are headed between us."
-    MCT "But it's more than that... her confidence, her self-determination, her dignified bearing, not for the sake of superficial appearances, as most who are of wealthy means do- Alice cultivated these attributes out of her own sense of respect for herself."
-    MCT "It was something I admired about her, all the more so given the additional challenges her growth had brought so far."
+    "Every curve, every dimple, every bit as warm and invitingly luxuriant as this seaside mansion. It's crazy how soft her body has become."
+    "First getting the chance to help her fit her uniform, now this? I like where things are headed between us."
+    "But it's more than that... her confidence, her self-determination, her dignified bearing, not for the sake of superficial appearances, as most who are of wealthy means do- Alice cultivated these attributes out of her own sense of respect for herself."
+    "It was something I admired about her, all the more so given the additional challenges her growth had brought so far."
     hide BBW with dissolve
 
     scene black with fade
     $setTime(TimeEnum.DAY)
     scene Summer Guest Bedroom with fade
     play music MC
-    MCT "Lost in my thoughts I was suddenly jerked back to the present reality as the unpleasant brackish smell of my damp, matted hair wafted into my nostrils."
-    MCT "Having just come from the beach, the natural first task should have been to hop in the shower and wash all the sand off of my body, rather than reminisce over a day that had not yet passed."
+    "Lost in my thoughts I was suddenly jerked back to the present reality as the unpleasant brackish smell of my damp, matted hair wafted into my nostrils."
+    "Having just come from the beach, the natural first task should have been to hop in the shower and wash all the sand off of my body, rather than reminisce over a day that had not yet passed."
 
     scene black with fade
     $setTime(TimeEnum.NIGHT)
     scene Summer Guest Bathroom with fade
-    MCT "After finally getting into the shower, the seemingly simple task of cleaning the sand off myself quickly proved to be more tedious than anticipated."
-    MCT "I hadn't given it much thought until now, but I haven't been to the beach since my factor started to kick in."
-    MCT "My hair, having been ravaged by the salty ocean water, combined with my careless regard when lying on the beach, created a sand encrusted tangled mop on top of my head. It felt crunchy and gross."
-    MCT "What I thought was going to be a brief, but relaxing shower in this luxury bathroom turned into a tediously difficult task that was taking the better part of an hour to accomplish."
+    "After finally getting into the shower, the seemingly simple task of cleaning the sand off myself quickly proved to be more tedious than anticipated."
+    "I hadn't given it much thought until now, but I haven't been to the beach since my factor started to kick in."
+    "My hair, having been ravaged by the salty ocean water, combined with my careless regard when lying on the beach, created a sand encrusted tangled mop on top of my head. It felt crunchy and gross."
+    "What I thought was going to be a brief, but relaxing shower in this luxury bathroom turned into a tediously difficult task that was taking the better part of an hour to accomplish."
     MC "Man, that is a lot of sand. Probably could have made a sandcastle out of all of that.
     I hope the pipes can handle all of it."
     MC "It wasn't too far fetched to imagine all of my sheddings mixed with sand was going to form some kind of makeshift concrete that would end up flooding the whole house."
     MC "Probably not... but might want to wrap this up quickly just in case."
     play sound Knock
     "{i}knock knock{/i}"
-    MCT "I heard a knock on the bathroom door."
+    "I heard a knock on the bathroom door."
     Takada "Mr. Hotsure- is everything alright in there? I didn't want to interrupt, but you've been in the shower for quite some time."
     Takada "It was requested by Miss Nikumaru that I check up on you. Dinner will be ready in 10 minutes. She wanted me to let you know so that you would not be late."
     MC "Oh! Uh, thanks, I'll be out soon."
@@ -9842,21 +9844,21 @@ label BBW048:
 
 label BBW048_c1_1:
     MCT "I'll only be late for a handful of minutes, but I'll be a disheveled mess for the rest of the evening if I cut corners and don't get my hair under control. Better take the extra time to do the job right."
-    MCT "Taking extra time didn't mean I wasn't still in a mad rush. I squeezed out the bottle of conditioner and furiously raked it through my hair. Even this little bit helped my salt fried hair soften up quite a bit."
-    MCT "Once I got it all rinsed out, my crusty wadded mat had yielded into something much lighter and more manageable."
-    MCT "Having finished with the pressing issue, I flung open the shower stall door in a whoosh, grabbed a towel and began a frenzied effort to at least get serviceably dry before starting the painstaking task of taming these gorgon locks with a blow-dryer and brush."
+    "Taking extra time didn't mean I wasn't still in a mad rush. I squeezed out the bottle of conditioner and furiously raked it through my hair. Even this little bit helped my salt fried hair soften up quite a bit."
+    "Once I got it all rinsed out, my crusty wadded mat had yielded into something much lighter and more manageable."
+    "Having finished with the pressing issue, I flung open the shower stall door in a whoosh, grabbed a towel and began a frenzied effort to at least get serviceably dry before starting the painstaking task of taming these gorgon locks with a blow-dryer and brush."
     MCT "This is a very tedious and inconvenient aspect of my growth factor, but in light of what Alice and Aida have to go through on a daily basis, I'll gladly choose to deal with this instead."
 
     scene black with fade
     $setTime(TimeEnum.NIGHT)
     scene Summer Guest Bedroom with fade
-    MCT "Having sufficiently reigned in the beast I put on the nice polo shirt and dress slacks I picked out ahead of time for dinner before getting into the shower."
-    MCT "After putting on the clothes I gave myself a once over to see how well I managed to put myself together."
+    "Having sufficiently reigned in the beast I put on the nice polo shirt and dress slacks I picked out ahead of time for dinner before getting into the shower."
+    "After putting on the clothes I gave myself a once over to see how well I managed to put myself together."
     MC "Hmm, not too shabby."
-    MCT "A few brush strokes to redo what pulling my shirt over my head messed up and I was good to go."
+    "A few brush strokes to redo what pulling my shirt over my head messed up and I was good to go."
 
     scene Summer Hallway with fade
-    MCT "Checking my phone for the time to see the damage done revealed that I was 7 minutes late."
+    "Checking my phone for the time to see the damage done revealed that I was 7 minutes late."
     MC "Seven minutes? Not great, not terrible."
     Lee "Aw, mista Hotsure, glad to greet ya comin'! I was sent to check up on ya. Ya know Miss Nikumaru won't start without ya, but she's not exactly patient either."
     MC "Sorry to cause concern. Please, lead the way."
@@ -9890,21 +9892,21 @@ label BBW048_c1_1:
     jump BBW048_afterchoice_1
 
 label BBW048_c1_2:
-    MCT  "Better get out and get dressed. If I'm even a second late, I'm gonna hear about it from Alice."
-    MCT "Once I was finally sure I got all the shampoo rinsed out of my hair I immediately turned off the water and flung open the shower stall door in a whoosh!"
+    MCT "Better get out and get dressed. If I'm even a second late, I'm gonna hear about it from Alice."
+    "Once I was finally sure I got all the shampoo rinsed out of my hair I immediately turned off the water and flung open the shower stall door in a whoosh!"
     play sound Thud
     "{i}SLAM!{/i}"
-    MCT  "Guess that was too hard, but whatever- there's no time! I grabbed a towel and began a frenzied clawing at the thick mess on top of my head, which in all likelihood only served to make it more knotted and wilder than it already was."
-    MCT "My hair was still kind of damp, but I got it dried off enough that I at least wasn't going to drip water everywhere. Done with that business, I rushed out from the bathroom to the bed to put on the nice polo shirt and dress slacks I picked out ahead of time for dinner before I got into the shower."
+    MCT "Guess that was too hard, but whatever- there's no time! I grabbed a towel and began a frenzied clawing at the thick mess on top of my head, which in all likelihood only served to make it more knotted and wilder than it already was."
+    "My hair was still kind of damp, but I got it dried off enough that I at least wasn't going to drip water everywhere. Done with that business, I rushed out from the bathroom to the bed to put on the nice polo shirt and dress slacks I picked out ahead of time for dinner before I got into the shower."
 
     scene Summer Guest Bedroom with fade
-    MCT "After putting on the clothes I gave myself a once over in the mirror and a few rakes of a comb to at least get the big knots smoothed out."
-    MCT "Smooth was not the right word, because it felt like I was tugging on my skull just to move it through my hair. I at least got the damp frizzled mess to hang down somewhat straight."
-    MCT "I managed to avoid the completely unkempt caveman look, but any honest evaluation would only rank it just a few points higher than that... which is basically your average school age guy with long hair."
+    "After putting on the clothes I gave myself a once over in the mirror and a few rakes of a comb to at least get the big knots smoothed out."
+    "Smooth was not the right word, because it felt like I was tugging on my skull just to move it through my hair. I at least got the damp frizzled mess to hang down somewhat straight."
+    "I managed to avoid the completely unkempt caveman look, but any honest evaluation would only rank it just a few points higher than that... which is basically your average school age guy with long hair."
     MC "Heh, not too bad!"
 
     scene Summer Hallway with fade
-    MCT "I sauntered down the hallway to the dining room with the knowledge that I made comfortable time, if only a minute or two to spare."
+    "I sauntered down the hallway to the dining room with the knowledge that I made comfortable time, if only a minute or two to spare."
 
     scene Summer Dining Room with fade
     play music BBW
@@ -9923,10 +9925,10 @@ label BBW048_c1_2:
     BBW "Aida, do you by chance have a spare hair tie Keisuke can use to help reign in his unruly hair?"
     PRG "Yes. I hope this will do."
     MC "Thanks."
-    MCT "Aida passed me one of her spare hair scrunchies. Not being a stranger to having to resort to them before, I quickly corralled my hair and bunched it up in order to allow it to ride up to my neck height."
-    MCT "The result was a much more proper, but constrained ponytail that wasn't really my style. I began to regret the decision of my priorities but at least this temporary embarrassment would prevent my hair from frizzing out all over the place as I tried to eat."
-    MCT "On cue, the servants came in and with swift, coordinated efficiency, proceeded to set the table with the prepared dishes. A portion of each dish was served to our plates."
-    MCT "I didn't even have a chance to process what we were going to be eating before everything was in place and the dinning table was set."
+    "Aida passed me one of her spare hair scrunchies. Not being a stranger to having to resort to them before, I quickly corralled my hair and bunched it up in order to allow it to ride up to my neck height."
+    "The result was a much more proper, but constrained ponytail that wasn't really my style. I began to regret the decision of my priorities but at least this temporary embarrassment would prevent my hair from frizzing out all over the place as I tried to eat."
+    "On cue, the servants came in and with swift, coordinated efficiency, proceeded to set the table with the prepared dishes. A portion of each dish was served to our plates."
+    "I didn't even have a chance to process what we were going to be eating before everything was in place and the dinning table was set."
     Takada "Miss Nikumaru and guests, dinner is served."
     show BBW summer-int-haughty
     BBW "Thank you Takada, that will be all for now."
@@ -9936,22 +9938,23 @@ label BBW048_afterchoice_1:
     MC "Well, let's eat."
     show BBW summer-int-haughty
     BBW "Indeed."
-    MCT "Like everything about this luxury vacation, I was quite impressed with the spread before us. My plate reminded me of a food magazine cover."
-    MCT "It was some kind of fish steak served as meticulously carved pieces with a variety of steamed vegetables- fancy heirloom varieties like red carrots and purple potatoes."
-    MCT "As for the steak, I knew it was fish, but I hadn't seen anything quite like it before. It had a seared crust on the outside where the heat had left a pale beige ring around the interior that framed the rich, pink flesh in the center."
-    MCT "It was the capstone of the best food presentation I had ever seen in real life. I took my first bite, going straight for the meat."
+    "Like everything about this luxury vacation, I was quite impressed with the spread before us. My plate reminded me of a food magazine cover."
+    "It was some kind of fish steak served as meticulously carved pieces with a variety of steamed vegetables- fancy heirloom varieties like red carrots and purple potatoes."
+    "As for the steak, I knew it was fish, but I hadn't seen anything quite like it before. It had a seared crust on the outside where the heat had left a pale beige ring around the interior that framed the rich, pink flesh in the center."
+    "It was the capstone of the best food presentation I had ever seen in real life. I took my first bite, going straight for the meat."
     MC "Mmmm..."
-    MCT "Wow! This is really good. I could get used to this. Eager to express my enthusiasm, I nearly forgot to not talk with my mouth full."
-    MCT "My hastily abrupt change in course nearly shoved it down the wrong tube."
+    MCT "Wow! This is really good. I could get used to this."
+    "Eager to express my enthusiasm, I nearly forgot to not talk with my mouth full."
+    "My hastily abrupt change in course nearly shoved it down the wrong tube."
     MC "{i}Cough{/i} -excuse me. {i}errahk{/i} Alice, what is this? It tastes amazing."
     BBW "Easy there Keisuke."
-    MCT "My fumbling of basic eating skills hadn't gone unnoticed."
+    "My fumbling of basic eating skills hadn't gone unnoticed."
     show BBW summer-int-happy
     BBW "It's seared bluefin tuna, my favorite meat."
-    MCT "That was certainly evident. I hadn't gotten the chance to notice until now, my attention previously drawn to the stunning display on my own plate, but Alice's portion of the prepared tuna was quite hardy."
-    MCT "So much so that it caught even me off guard, as I considered myself at least somewhat aware of her eating habits by this point."
-    MCT "Luckily, I had the presence of mind to restrain my reflexive facial expression of shock, so as to not draw undue attention and make her feel self-conscious."
-    MCT "Few things made me as happy as seeing Alice light up with delight when she was enjoying her food."
+    "That was certainly evident. I hadn't gotten the chance to notice until now, my attention previously drawn to the stunning display on my own plate, but Alice's portion of the prepared tuna was quite hardy."
+    "So much so that it caught even me off guard, as I considered myself at least somewhat aware of her eating habits by this point."
+    "Luckily, I had the presence of mind to restrain my reflexive facial expression of shock, so as to not draw undue attention and make her feel self-conscious."
+    "Few things made me as happy as seeing Alice light up with delight when she was enjoying her food."
     BBW "This particular preparation however..."
     show BBW summer-int-aroused
     BBW "is simply exquisite."
@@ -9970,10 +9973,10 @@ label BBW048_afterchoice_1:
     show BBW summer-int-neutral-2
     BBW "Think nothing of it."
     show PRG happy
-    MCT "Watching Alice dig into her meal, I realized what I had initially thought was an overly generous portion was all too paltry for her appetite, if her current haste was any indication."
-    MCT "True to her form, Alice was making sure each forkful was a refined action, though the pace of each was telling of her present hunger."
-    MCT "Even Aida, sitting next to her who was eating for ... well quite a few at least, was not up to the task of matching her bite for bite."
-    MCT "Admittedly, I found the spectacle rather befuddling- a strange mixture of feeling impressed, aroused, and concerned all at the same time to fluctuating degrees."
+    "Watching Alice dig into her meal, I realized what I had initially thought was an overly generous portion was all too paltry for her appetite, if her current haste was any indication."
+    "True to her form, Alice was making sure each forkful was a refined action, though the pace of each was telling of her present hunger."
+    "Even Aida, sitting next to her who was eating for ... well quite a few at least, was not up to the task of matching her bite for bite."
+    "Admittedly, I found the spectacle rather befuddling- a strange mixture of feeling impressed, aroused, and concerned all at the same time to fluctuating degrees."
     MCT "Maybe I should say something?"
     menu:
         "Play it cool. Be subtle and don't raise her suspicion, but drop a hint.":
@@ -9983,12 +9986,12 @@ label BBW048_afterchoice_1:
 
 label BBW048_c2_1:
     MC "Mmmm, I agree Alice, this dish is truly exquisite. I have to thank you for being such a generous hostess, I would never have had such a wonderful culinary experience if not for your refined pallet."
-    MCT "Each bite just makes me want to slow down and savor the flavor for as long as possible."
+    "Each bite just makes me want to slow down and savor the flavor for as long as possible."
     show BBW summer-int-happy
     BBW "I'm glad you are enjoying it as well Keisuke. Indeed, a truly great meal is worth savoring to its fullest."
     $setAffection("BBW", 1)
-    MCT "Alice modestly slowed her eating pace to a rate much more in line with her characteristic composure."
-    MCT "As much as I like seeing her enjoy her food, I know she would be hard on herself if she thought she had let her growth factor get the better of her sense of control."
+    "Alice modestly slowed her eating pace to a rate much more in line with her characteristic composure."
+    "As much as I like seeing her enjoy her food, I know she would be hard on herself if she thought she had let her growth factor get the better of her sense of control."
     show BBW summer-int-neutral-2
     BBW "After being at Sochi Academy for so long, I had nearly forgotten how much I truly have missed such fine cuisine prepared by competent professionals."
     show BBW summer-int-haughty
@@ -10000,9 +10003,9 @@ label BBW048_c2_1:
     Takada "Yes, Miss Nikumaru?"
     BBW "I request another serving of the seared tuna, if you please."
     Takada "Of course, Miss Nikumaru. We made sure to prepare plenty, knowing it was one of your favorite dishes."
-    MCT "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
+    "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
     show BBW summer-int-happy
-    MCT "Alice was clearly looking forward to getting to indulge in her favorite dish all over again."
+    "Alice was clearly looking forward to getting to indulge in her favorite dish all over again."
     Takada "Would either of Miss Nikumaru's guests be interested in another serving as well?"
     PRG "I will have some more as well, Takada-san... {size=-6}although not quite so much...{/size}"
     MC "I'm good for now, thanks though."
@@ -10017,11 +10020,11 @@ label BBW048_c2_2:
     $setAffection("BBW", -1)
     show BBW summer-int-sad
     BBW "Yes, I suppose I have been indulging my appetite since we've been on vacation. I should probably restrain myself a bit more in light of the present temptations in this environment."
-    MCT "My vocal enthusiasm backfired as Alice slowed the pace of her eating considerably. My comment must have inadvertently made her self-conscious over just how visibly she had been enjoying her food."
-    MCT "She became much more reserved in her movements. What was previously a burst of enjoyment across her face with each bite now appeared to be an expression of confliction."
-    MCT "No doubt her self-consciousness was weighing down her enthusiasm for something she had been looking forward to for quite some time."
-    MCT "Alice eventually worked her way through nearly everything on her plate, but for a few paltry bites."
-    MCT "Perhaps she was falling back on the old troupe of it being lady-like to leave something on your plate? It was one of the few assumed rules of etiquette I had never seen Alice make any effort to follow before."
+    "My vocal enthusiasm backfired as Alice slowed the pace of her eating considerably. My comment must have inadvertently made her self-conscious over just how visibly she had been enjoying her food."
+    "She became much more reserved in her movements. What was previously a burst of enjoyment across her face with each bite now appeared to be an expression of confliction."
+    "No doubt her self-consciousness was weighing down her enthusiasm for something she had been looking forward to for quite some time."
+    "Alice eventually worked her way through nearly everything on her plate, but for a few paltry bites."
+    "Perhaps she was falling back on the old troupe of it being lady-like to leave something on your plate? It was one of the few assumed rules of etiquette I had never seen Alice make any effort to follow before."
     Takada "Miss Nikumaru, would you like some more seared tuna?"
     show BBW summer-int-neutral
     BBW "No thanks Takada, I believe that will be enough for me this evening."
@@ -10034,11 +10037,11 @@ label BBW048_c2_2:
     jump BBW048_afterchoice_2
 
 label BBW048_afterchoice_2:
-    MCT "We continued eating in near silence for a minute or two, nothing much but the ambient clangs of silver and glassware that otherwise go unnoticed in the midst of conversation."
-    MCT "I've heard it said, 'better to be silent and thought a fool, than to open one's mouth and remove all doubt', but silence feels heavy and foolish decisions are my forte."
+    "We continued eating in near silence for a minute or two, nothing much but the ambient clangs of silver and glassware that otherwise go unnoticed in the midst of conversation."
+    "I've heard it said, 'better to be silent and thought a fool, than to open one's mouth and remove all doubt', but silence feels heavy and foolish decisions are my forte."
     MCT "Maybe a bit of small talk would lighten up the mood?"
     MC "So, what are the plans for tomorrow?"
-    MCT "Alice finished chewing and swallowed her food."
+    "Alice finished chewing and swallowed her food."
     show BBW summer-int-neutral
     BBW "Every summer vacation I'd play volleyball, believe it or not. It's not overly competitive and it is far more fun than other 'sports'."
     show BBW summer-int-sad
@@ -10078,36 +10081,37 @@ label BBW048_afterchoice_2:
     MC "Isn't that some kind of after-dinner wine?"
     show BBW summer-int-neutral
     BBW "Usually, but the point is to provide something after a meal that will stimulate digestion. Wine was one of the few things my father did not deign to provide for this trip."
-    MCT "Which is fine, it would not do for the occasion and would be unfitting for me as a hostess to provide, given that Aida is unable to partake."
-    MCT "I'd rather enjoy some ginger ale right now. Ginger is very effective at soothing the stomach. Would either of you care for some as well?"
+    "Which is fine, it would not do for the occasion and would be unfitting for me as a hostess to provide, given that Aida is unable to partake."
+    "I'd rather enjoy some ginger ale right now. Ginger is very effective at soothing the stomach. Would either of you care for some as well?"
     MC "Sure."
     show PRG neutral
     PRG "Me too."
     show BBW summer-int-haughty
     BBW "Lee! Could you please bring some ginger ale?"
-    MCT "A startled reply came from the kitchen."
+    "A startled reply came from the kitchen."
     Lee "S-sure can, Miss Nikumaru."
-    MCT "A moment later, Lee came rushing out into the dining room."
+    "A moment later, Lee came rushing out into the dining room."
     Lee "Here you go Miss Ni-"
     show BBW summer-int-surprised
     show PRG surprised
-    MCT "Lee had slipped and spilled the drinks everywhere, luckily managing to catch the glasses before they broke. It seemed he was used to such a feat."
+    "Lee had slipped and spilled the drinks everywhere, luckily managing to catch the glasses before they broke. It seemed he was used to such a feat."
     Lee "{size=-6}{i}jojdwaess-eo{/i}{/size}"
     Lee "Miss Nikumaru! I'm so sorry I'll clean this immediately!"
-    MCT "Shi rushed out of the kitchen to assess the situation."
+    "Shi rushed out of the kitchen to assess the situation."
     Shi "LEE! YOU IMBACI-"
     show BBW summer-int-stern
     BBW "Shino, that won't be necessary."
     Shi "-!"
     BBW "Spilling some drinks is not going to flood the house, nor set us back financially, I'm quite sure cleaning this up will rectify the situation."
-    MCT "Aida remained shocked, seeing Alice take this so calmly seemed to surprise her even more than Lee spilling the drinks did. I wasn't quite sure what to make of her reaction myself."
-    MCT "In all the time that I have known her, her exacting nature brought with it demanding expectations for the people that work for her- something Aida and I were intimately familiar with."
-    MCT "Then again, perhaps my initial assessments have proven too simplistic. She certainly has high expectations for others and herself, but she has always proven quite understanding when unforeseeable or unavoidable circumstances interfere, such as schoolwork, or in Aida's case, the increasing difficulties as her condition progressed."
+    "Aida remained shocked, seeing Alice take this so calmly seemed to surprise her even more than Lee spilling the drinks did. I wasn't quite sure what to make of her reaction myself."
+    "In all the time that I have known her, her exacting nature brought with it demanding expectations for the people that work for her- something Aida and I were intimately familiar with."
+    MCT "Then again, perhaps my initial assessments have proven too simplistic. She certainly has high expectations for others and herself, but she has always proven quite understanding when unforeseeable or unavoidable circumstances interfere, such as schoolwork..."
+    MCT "...or in Aida's case, the increasing difficulties as her condition progressed."
     BBW "Lee is perfectly capable of cleaning up this accident himself. Please retrieve an additional bottle of ginger ale for me and my guests so that we can continue the evening's pleasantries."
     show PRG worried
-    MCT "Lee's fumbling of the drinks was certainly a disastrous performance of his duties, but it was purely accidental, not something born out of laziness, insincerity, or without concern to improve in the future."
-    MCT "Perhaps that is the key difference for Alice, not that she expects perfect execution 100%% of the time, but rather a contempt for the acceptance of what is substandard and indifference towards improving one's self."
-    MCT "Or maybe she just has a soft spot for lovable klutzes like me."
+    "Lee's fumbling of the drinks was certainly a disastrous performance of his duties, but it was purely accidental, not something born out of laziness, insincerity, or without concern to improve in the future."
+    "Perhaps that is the key difference for Alice, not that she expects perfect execution 100%% of the time, but rather a contempt for the acceptance of what is substandard and indifference towards improving one's self."
+    "Or maybe she just has a soft spot for lovable klutzes like me."
     MC "Well, after all, no use crying over spilled ginger ale."
     show BBW summer-int-haughty
     BBW "Quite."
@@ -10115,17 +10119,17 @@ label BBW048_afterchoice_2:
     show BBW summer-int-neutral
     BBW "Now, where were we?"
     MC "You were talking about ginger ale as a digestif."
-    MCT "Shino came out with a new bottle per Alice's direction. Quickly and quietly, so as to not distract from our conversation, she set our glassware and poured a glass for each of us before leaving the bottle with what remained next to Alice, likely knowing she will want more later."
-    MCT "Lee, in contrast to his earlier clumsiness, cleaned up the spill with quick efficiency."
+    "Shino came out with a new bottle per Alice's direction. Quickly and quietly, so as to not distract from our conversation, she set our glassware and poured a glass for each of us before leaving the bottle with what remained next to Alice, likely knowing she will want more later."
+    "Lee, in contrast to his earlier clumsiness, cleaned up the spill with quick efficiency."
     BBW "Ah yes, as I said before, a digestif is intended to be consumed after a meal to help with digestion, this could be wine or brandy, but herbal infusions are the most classic example."
     BBW "This is in contrast to an aperitif, which is a drink consumed before a meal or during appetizers to help stimulate the appetite, as the name would imply."
-    MCT "Seemingly unphased by the previous interruption, Alice continued to expound on the topic of fine dining etiquette and terminology."
-    MCT "It was something she was well versed in, while also keen on disseminating her knowledge to her listeners whenever the occasion would arise."
-    MCT "The conversation continued for quite some time. I tried my best to keep up and absorb the information as much as possible."
+    "Seemingly unphased by the previous interruption, Alice continued to expound on the topic of fine dining etiquette and terminology."
+    "It was something she was well versed in, while also keen on disseminating her knowledge to her listeners whenever the occasion would arise."
+    "The conversation continued for quite some time. I tried my best to keep up and absorb the information as much as possible."
     MCT "I suspect I will be held accountable for knowing it later as it would likely come up as I spend more time with Alice."
-    MCT "Reflecting back on what just happened, I was proud of her. It would not have been unreasonable for her to have gotten angry, raised her voice, or even harshly chastised Lee for his mistake."
-    MCT "Instead, she displayed an unflappable grace throughout the situation that caught both me and Aida off guard."
-    MCT "Something tells me I still have a lot to learn about softer side of the hard nosed, industrious young woman I had come to fall for during my time at Sochie Academy."
+    "Reflecting back on what just happened, I was proud of her. It would not have been unreasonable for her to have gotten angry, raised her voice, or even harshly chastised Lee for his mistake."
+    "Instead, she displayed an unflappable grace throughout the situation that caught both me and Aida off guard."
+    "Something tells me I still have a lot to learn about softer side of the hard nosed, industrious young woman I had come to fall for during my time at Seichou Academy."
     show BBW summer-int-surprised
     BBW "Oh my!"
     show BBW summer-int-neutral
@@ -10137,8 +10141,8 @@ label BBW048_afterchoice_2:
     PRG "Yes, thank you Alice. It was lovely!"
     show BBW summer-int-haughty
     BBW "Excellent. Take your time going back to your rooms, but please make sure you allow enough time to sleep so that you will be refreshed in the morning. Tomorrow's activities start bright and early tomorrow."
-    MCT "Alice walked back to her room. Aida followed not long after back to her room as well."
-    MCT "I thought about a short evening stroll on the beach just to take in more of the evening, but after the ordeal I went through earlier to remove the sand from my hair- combined with my penchant for oversleeping, I decided better of it and retired to my guest room as well."
+    "Alice walked back to her room. Aida followed not long after back to her room as well."
+    "I thought about a short evening stroll on the beach just to take in more of the evening, but after the ordeal I went through earlier to remove the sand from my hair- combined with my penchant for oversleeping, I decided better of it and retired to my guest room as well."
     jump daymenu
 
 label BBW049A:
@@ -10147,42 +10151,42 @@ label BBW049A:
     play sound Knock
     "{i}knock knock{/i}"
     play music Peaceful
-    MCT "A sharp banging on my door the next morning startled me awake."
+    "A sharp banging on my door the next morning startled me awake."
     BBW "Keisuke, we are heading down to the beach. You better not be sleeping in."
-    MCT "Sleeping in was the first thing I had in mind during a vacation, but Alice did admonish me to get enough sleep last night, so I shouldn't have thought I'd get away with it this morning."
-    MCT "Rubbing the sleep from my eyes, I quickly got myself dressed for the water."
-    MCT "I put on my bathing suit and a light tee-shirt I didn't plan to wear for very long."
+    "Sleeping in was the first thing I had in mind during a vacation, but Alice did admonish me to get enough sleep last night, so I shouldn't have thought I'd get away with it this morning."
+    "Rubbing the sleep from my eyes, I quickly got myself dressed for the water."
+    "I put on my bathing suit and a light tee-shirt I didn't plan to wear for very long."
     scene Summer Living Room with fade
-    MCT "Following the stairs down from the house I could see Alice and Aida already down by the water."
-    MCT "I was hurrying a bit to not fall too far behind, but it didn't take too much time and I knew I wasn't going to miss anything."
+    "Following the stairs down from the house I could see Alice and Aida already down by the water."
+    "I was hurrying a bit to not fall too far behind, but it didn't take too much time and I knew I wasn't going to miss anything."
     scene Summer House Back with fade
-    MCT "I stepped out of the beach house, only to be nearly blinded by the radiance of the early morning summer sun."
-    MCT "Clearly, I had not managed to fully shake the sleep from my eyes. Shading my sight with my hand on my forehead, I could finally take in the grand view of the beach from the Nikumaru estate."
-    MCT "It was a calming setting with the gentle rustling from the waves of translucent light blue waters. I could feel the hot air rising up from the ground as the summer sun beamed down on the pale sand."
-    MCT "Looking over at the beachside tent, it looked like Alice and Aida hadn't wasted any time setting up for the day at the beach."
-    scene Summer Beach with fade
+    "I stepped out of the beach house, only to be nearly blinded by the radiance of the early morning summer sun."
+    "Clearly, I had not managed to fully shake the sleep from my eyes. Shading my sight with my hand on my forehead, I could finally take in the grand view of the beach from the Nikumaru estate."
+    "It was a calming setting with the gentle rustling from the waves of translucent light blue waters. I could feel the hot air rising up from the ground as the summer sun beamed down on the pale sand."
+    "Looking over at the beachside tent, it looked like Alice and Aida hadn't wasted any time setting up for the day at the beach."
+    scene Summer Beach Ocean with fade
     show BBW swimsuit-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG swimsuit-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    MCT "As I walked over, it looked like Alice and Aida had made themselves comfortable, having already arranged their towels and beach supplies out in an orderly fashion."
-    MCT "Noticing that both of them appeared to have been putting the finishing touches on each other's sunscreen coverage, I winced with the realization that I had indeed missed out on something due to sleeping in a few extra minutes."
+    "As I walked over, it looked like Alice and Aida had made themselves comfortable, having already arranged their towels and beach supplies out in an orderly fashion."
+    "Noticing that both of them appeared to have been putting the finishing touches on each other's sunscreen coverage, I winced with the realization that I had indeed missed out on something due to sleeping in a few extra minutes."
     BBW "There you are Keisuke. I was worried for a bit that you had decided to sleep in and not make the best use of our time off."
-    MCT "I honestly couldn't tell if she saw right through me and this was intended as a subtle dig at my sleeping habits, or if I had genuinely managed to make good enough time to allay suspicion."
+    "I honestly couldn't tell if she saw right through me and this was intended as a subtle dig at my sleeping habits, or if I had genuinely managed to make good enough time to allay suspicion."
     show BBW swimsuit-haughty
     BBW "I'm eager to get started swimming. It's simply been too long, and I can't let my routine slip just because I'm on vacation. I trust you will be joining me?"
     MC "Absolutely. It's been a while since I got to swim. I'm looking forward to it."
     BBW "Excellent. Do make sure you've properly covered yourself in sunscreen. I don't want either of you suffering the ill effect of too much sun by neglecting something so easily preventable."
     BBW "Make sure you've given it enough time to dry before joining me in the water Keisuke."
     hide BBW with dissolve
-    MCT "With that, Alice turned and made her way towards the water."
-    MCT "I could tell she was eager for me to join her, but having sufficiently warned me the night before she had a full day of activity planned, I couldn't help but think her unwillingness to wait for me was an intentional consequence of my tardiness."
-    MCT "Still though, looking out towards the ocean I got a good view of more than just the water. Alice carried more of her weight out front, but that didn't mean there wasn't plenty to take in from behind."
-    MCT "Always mindful of her bearing, she was dainty and deliberate in her movements, especially for someone her size. I couldn't help but think it was more than my imagination her gait had taken on a subtle waddle as she navigated the loose terrane of the beach sand on her way to the water."
+    "With that, Alice turned and made her way towards the water."
+    "I could tell she was eager for me to join her, but having sufficiently warned me the night before she had a full day of activity planned, I couldn't help but think her unwillingness to wait for me was an intentional consequence of my tardiness."
+    "Still though, looking out towards the ocean I got a good view of more than just the water. Alice carried more of her weight out front, but that didn't mean there wasn't plenty to take in from behind."
+    "Always mindful of her bearing, she was dainty and deliberate in her movements, especially for someone her size. I couldn't help but think it was more than my imagination her gait had taken on a subtle waddle as she navigated the loose terrane of the beach sand on her way to the water."
     MC "{size=-6}...she certainly fills out that swimsuit well...{/size}"
-    MCT "Snapping out of my swimsuit induced trance, I proceeded to get down to the business of slathering myself up with sunscreen, doing my best to make sure I covered everything."
+    "Snapping out of my swimsuit induced trance, I proceeded to get down to the business of slathering myself up with sunscreen, doing my best to make sure I covered everything."
     "Despite my best efforts, I couldn't quite reach everywhere."
     MC "Hey Aida, could you help me make sure I got my back covered?"
     PRG "Sure, Hotsure-san."
-    MCT "Aida was reclining back on one of the cushions with a beach towel under her while she was reading a book. I stooped down in front of her so as to not have to have her get up, trying to be mindful of her condition."
+    "Aida was reclining back on one of the cushions with a beach towel under her while she was reading a book. I stooped down in front of her so as to not have to have her get up, trying to be mindful of her condition."
     PRG "There you go!"
     MC "Thanks for the help."
     MC "Say Aida, aren't you going to join us for some swimming? I'm sure Alice would want you to join us."
@@ -10192,17 +10196,17 @@ label BBW049A:
     PRG "Thanks Keisuke, but really, it's all right. I'm still a little tired from getting up this morning and I'd rather just relax for now."
     PRG "I brought a book I've been looking forward to reading that I haven't had time for back at school. It's Diant's Inferno, one of those classics I want to check off my lifetime reading list. Please, enjoy your time with Alice."
     PRG "I don't know if or how much she shows it, but I can tell she enjoys spending time with you.  And, seeing her all happy like that makes me feel good, too."
-    MCT "Aida had always been kind of a wallflower as long as I had known her, and normally I would have persisted a bit more to get her to join in, but I thought the better of insisting otherwise given how certain she came across with her decision to sit out for now."
+    "Aida had always been kind of a wallflower as long as I had known her, and normally I would have persisted a bit more to get her to join in, but I thought the better of insisting otherwise given how certain she came across with her decision to sit out for now."
     hide PRG with dissolve
-    MCT "I couldn't help but crack a smile given what Aida said. It felt reassuring to know I had a cheerleader in my corner who had Alice's ear."
-    MCT "Giving myself a pat down, I felt reasonably sure that my brief conversation with Aida had elapsed enough time for my sunscreen to dry up enough for Alice's satisfaction."
+    "I couldn't help but crack a smile given what Aida said. It felt reassuring to know I had a cheerleader in my corner who had Alice's ear."
+    "Giving myself a pat down, I felt reasonably sure that my brief conversation with Aida had elapsed enough time for my sunscreen to dry up enough for Alice's satisfaction."
     scene Summer House Back with fade
-    MCT "With that task checked off, I proceeded to make my way down to the water's edge to see Alice steadily move through the water with a freestyle stroke."
-    MCT "Eager to meet her in the water, I waded right in, only to be caught off guard with the sudden difference in temperature from the water relative to the air when I became submerged past my groin."
+    "With that task checked off, I proceeded to make my way down to the water's edge to see Alice steadily move through the water with a freestyle stroke."
+    "Eager to meet her in the water, I waded right in, only to be caught off guard with the sudden difference in temperature from the water relative to the air when I became submerged past my groin."
     MC "WHOAH!"
-    MCT "I stood there frozen in my tracks, taking a couple of seconds to overcome the paralysis of a sudden ten degree drop in temperature, focused entirely on my nuts."
-    MCT "Having managed to overcome that initial shock, I continued to wade out into the water to greet Alice."
-    MCT "The depth was shallow enough that we could still keep our heads above water if we were standing but was still deep enough that we wouldn't have to worry about hitting the sea floor when trying to swim."
+    "I stood there frozen in my tracks, taking a couple of seconds to overcome the paralysis of a sudden ten degree drop in temperature, focused entirely on my nuts."
+    "Having managed to overcome that initial shock, I continued to wade out into the water to greet Alice."
+    "The depth was shallow enough that we could still keep our heads above water if we were standing but was still deep enough that we wouldn't have to worry about hitting the sea floor when trying to swim."
     show BBW swimsuit-neutral
     MC "Already putting the laps in?"
     BBW "I guess you could say that, but this was just a warm-up. I've been taking it too easy lately, I want to get a real swim session in. Think you can keep up?"
@@ -10216,12 +10220,12 @@ label BBW049A:
     else:
         MC "Probably not, but I'll try. Go easy on me though, all this hair is going to be like dragging a net behind me."
     BBW "Suggestion noted, Keisuke- but ignored. How do you expect to get better if you don't push yourself to do more?"
-    MCT "I wasn't sure if this was Alice's way of trying to inspire me or if she just didn't want to pass on the chance to thoroughly demonstrate her skills in something she prided herself on."
+    "I wasn't sure if this was Alice's way of trying to inspire me or if she just didn't want to pass on the chance to thoroughly demonstrate her skills in something she prided herself on."
     MC "Fair enough. What did you have in mind?"
     BBW "Let's start with the basics. We'll do a freestyle swim. See that driftwood log down the beach? Let's make that our distance marker."
-    MCT "I placed my hand above my head to block the sun's glare while I squinted into the distance to see where she was talking about."
-    MCT "It took a second to find it, but I was quite shocked at how far away it was when I did. The distance Alice had settled on was no joke for an amateur swimmer such as myself."
-    MCT "But it wasn't impossible either, especially since I wasn't trying to race."
+    "I placed my hand above my head to block the sun's glare while I squinted into the distance to see where she was talking about."
+    "It took a second to find it, but I was quite shocked at how far away it was when I did. The distance Alice had settled on was no joke for an amateur swimmer such as myself."
+    "But it wasn't impossible either, especially since I wasn't trying to race."
     MC "I'll try my best to keep up. Got any tips?"
     show BBW swimsuit-haughty
     BBW "Yes, it's tempting to be lax in your movements but try not to just kick with your knees but use all three of your leg joints in a fluid motion to propel you forward."
@@ -10231,51 +10235,51 @@ label BBW049A:
     MC "Heh, duly noted."
     BBW "Let's get started shall we?"
     stop music
-    MCT "Apparently that was as good as a 'ready-set-go' for Alice because she took off without any further delay."
+    "Apparently that was as good as a 'ready-set-go' for Alice because she took off without any further delay."
     hide BBW with dissolve
-    MCT "I took off after her but as I moved through the water the full body exertion of swimming set in after the first 40 meters."
-    MCT "I'll have to focus on the technique that Alice instructed and temper my pace if I was going to go the distance. Trying to follow her advice, I resolved not to break in order to bob my head up far enough to see my progress."
-    MCT "I just had to accept I was in for the long haul. Through the clear azure waters I could tell she was increasing the distance between us, but this wasn't a race for me, it was survival at this point as I estimated I was only a third of the way through."
-    MCT "This was even more difficult than I was expecting. I couldn't say if it was because I hadn't swum in a while or if it had more to do with my hair acting as a dragnet behind me."
-    MCT "Swimming in the open-ocean was a different animal than a pool as well. The buffeting of the waves was creating more resistance and forcing me to correct course to try to stay straight."
-    MCT "At this point I was fatigued. If the water level beneath me wasn't something I could stand in, I would have resigned myself to drowning, but I wanted to push myself."
+    "I took off after her but as I moved through the water the full body exertion of swimming set in after the first 40 meters."
+    "I'll have to focus on the technique that Alice instructed and temper my pace if I was going to go the distance. Trying to follow her advice, I resolved not to break in order to bob my head up far enough to see my progress."
+    "I just had to accept I was in for the long haul. Through the clear azure waters I could tell she was increasing the distance between us, but this wasn't a race for me, it was survival at this point as I estimated I was only a third of the way through."
+    "This was even more difficult than I was expecting. I couldn't say if it was because I hadn't swum in a while or if it had more to do with my hair acting as a dragnet behind me."
+    "Swimming in the open-ocean was a different animal than a pool as well. The buffeting of the waves was creating more resistance and forcing me to correct course to try to stay straight."
+    "At this point I was fatigued. If the water level beneath me wasn't something I could stand in, I would have resigned myself to drowning, but I wanted to push myself."
     MCT "Alice would be disappointed if I gave up. Plus, I at least had to save face for myself given that my growth came with the least amount of physical impediment compared to the rest of my classmates."
-    MCT "My muscles burned, and my patience was growing thin as I found myself getting a bit bored from this long distance (for me at least) with no relief in sight, but still I pushed through."
-    MCT "Just when I thought I was at my limit I felt a firm tug on my shoulder. It was Alice's hand."
-    MCT "Hopeful that I must have finished. I immediately surfaced."
+    "My muscles burned, and my patience was growing thin as I found myself getting a bit bored from this long distance (for me at least) with no relief in sight, but still I pushed through."
+    "Just when I thought I was at my limit I felt a firm tug on my shoulder. It was Alice's hand."
+    "Hopeful that I must have finished. I immediately surfaced."
     show BBW swimsuit-neutral with dissolve
     play music Peaceful
     BBW "It appears you took my advice not to keep looking up to heart. You looked like you were about to do another 100 meters if I didn't stop you."
     show BBW swimsuit-haughty
     BBW "I'm surprised you kept up as well as you did Keisuke."
     MCT "Another 100 meters? Taking two zeroes off that number would have been more accurate, but at least I managed to save face to Alice and pushed myself like I knew I could."
-    MCT "I seriously needed to catch my breath after that though."
+    "I seriously needed to catch my breath after that though."
     MC "Thanks...I...I tried to stay... focused.... {i}cough{/i} because I knew it wouldn't be easy for me."
     BBW "I hope you didn't use all your energy just on that. We still have the breaststroke, butterfly, and backstroke to do."
-    MCT "I put all my effort into getting this far down the beach, not thinking about having to swim back, let alone down and back again. I had a long morning ahead of me."
+    "I put all my effort into getting this far down the beach, not thinking about having to swim back, let alone down and back again. I had a long morning ahead of me."
     MC "{i}Hoo, haaa, hoo...{/i} Sure, no problem. Just shaking off the rust. I could use a minute or two."
     show BBW swimsuit-neutral-2
     BBW "Well, let me know when you are ready. I'll be waiting on you. I didn't exactly overextend myself at the pace I chose you know."
-    MCT "There's plenty of salt in the ocean water, I didn't need more rubbed into my wounded pride."
+    MCT "There's plenty of salt in the ocean water, I don't need more rubbed into my wounded pride."
     MC "I'll do my best to keep up- wouldn't want to let you down now."
     BBW "You're doing better than I expected to be honest. Keep in mind I've been doing this for nearly all of my life."
     BBW "It's one of the few physical activities I enjoy... and have a high degree of skill in."
     show BBW swimsuit-neutral
     BBW "We'll do the breaststroke back. That's an easy one to do a casual pace with. It's less movement intensive compared to freestyle."
     BBW "You'll want to save up some energy for when we do the butterfly stroke."
-    MCT "Much like before, that apparently was a sufficient indication for Alice for me to know that we were starting."
+    "Much like before, that apparently was a sufficient indication for Alice for me to know that we were starting."
     hide BBW with dissolve
-    MCT "She pushed off back towards are initial starting point, this time doing the breaststroke."
+    "She pushed off back towards are initial starting point, this time doing the breaststroke."
     stop music
-    MCT "Not quite sure how that name caught on. I always thought of it as the frog stroke, since it's kind of how frogs swim. The word breaststroke brought other things to mind..."
-    MCT "Luckily, like Alice had said, this stroke was much more manageable and lent itself to maintaining a leisurely pace."
-    MCT "Unlike the side-to-side head movements of the freestyle stroke, I could look straight ahead as I came up for air and see how long I had to go."
-    MCT "I could see Alice wasn't in a frenzied mad speed rush, but her graceful and efficient movements in the water had her continuously extending her lead over me, even more so than before."
-    MCT "That was fine though. Alice was looking to get outside and be active to maintain a sense of her regimented schedule- I was just trying to get from point A to point B and not drown in the process."
-    MCT "I found this round much more enjoyable, as the near-imminent prospect of drowning from fatigue was far more remote of a concern."
-    MCT "It gave me a bit more time to take in just how clear the water was and how good it felt relative to the hot summer air above the surface."
-    MCT "After what seemed like ages, I finally made it back to the spot near the awning in front of Alice's family beach house."
-    MCT "I undoubtedly left Alice waiting longer this time, not having the same sense of urgency that spurned my initial performance."
+    "Not quite sure how that name caught on. I always thought of it as the frog stroke, since it's kind of how frogs swim. The word breaststroke brought other things to mind..."
+    "Luckily, like Alice had said, this stroke was much more manageable and lent itself to maintaining a leisurely pace."
+    "Unlike the side-to-side head movements of the freestyle stroke, I could look straight ahead as I came up for air and see how long I had to go."
+    "I could see Alice wasn't in a frenzied mad speed rush, but her graceful and efficient movements in the water had her continuously extending her lead over me, even more so than before."
+    "That was fine though. Alice was looking to get outside and be active to maintain a sense of her regimented schedule- I was just trying to get from point A to point B and not drown in the process."
+    "I found this round much more enjoyable, as the near-imminent prospect of drowning from fatigue was far more remote of a concern."
+    "It gave me a bit more time to take in just how clear the water was and how good it felt relative to the hot summer air above the surface."
+    "After what seemed like ages, I finally made it back to the spot near the awning in front of Alice's family beach house."
+    "I undoubtedly left Alice waiting longer this time, not having the same sense of urgency that spurned my initial performance."
     show BBW swimsuit-neutral with dissolve
     play music Peaceful
     BBW "There, that wasn't so bad now was it? You certainly took your time, but at least you're managing to finish."
@@ -10290,24 +10294,24 @@ label BBW049A:
     BBW "I hope you're not already slowing down on me. Are you ready for something actually challenging this time around?"
     MCT "Actually challenging!? Was swimming the better part of a kilometer by this point in the open ocean a fake challenge?"
     MCT "Am I missing something here? If I wasn't still riding the pump of the previous swimming session while simultaneously being buoyed up from standing in the water, I felt like I would have fallen over by this point."
-    MCT "The sane part in my brain screamed to tell her no, but looking into Alice's eyes I could see how much she was enjoying herself with this."
+    "The sane part in my brain screamed to tell her no, but looking into Alice's eyes I could see how much she was enjoying herself with this."
     MC "Oh, so you're saying I should stop holding back this time?"
     show BBW swimsuit-happy
-    MCT "A wide, delighted smile spread across Alice's face."
+    "A wide, delighted smile spread across Alice's face."
     BBW "Heh! Liar. That's very funny Keisuke. I'll make you eat those words."
     BBW "Tsk, tsk, and to think all this time I held back just so you wouldn't get left too far behind."
     BBW "{i}Hehehe!{/i}"
-    MCT "Clearly Alice found great enjoyment from the fact that I jokingly insinuated my poor performance compared to hers was born out of some misplaced pity."
-    MCT "Whether or not torturing me by goading me to keep up was part of the thrill of it all, I knew there was more to why she was having such a good time dragging me along with her."
-    MCT "Like she said, this was one of the few physical activities Alice truly excelled at and actually enjoyed."
-    MCT "It was also something that wasn't hampered by her growth. Sure, her growth didn't bring about any physical decrements, but there's definite limits to how her sheer size can get in the way of doing certain activities."
-    MCT "Trying to run with a belly like hers couldn't be comfortable, sending rippling shockwaves all throughout her body with each foot fall..."
+    "Clearly Alice found great enjoyment from the fact that I jokingly insinuated my poor performance compared to hers was born out of some misplaced pity."
+    "Whether or not torturing me by goading me to keep up was part of the thrill of it all, I knew there was more to why she was having such a good time dragging me along with her."
+    "Like she said, this was one of the few physical activities Alice truly excelled at and actually enjoyed."
+    "It was also something that wasn't hampered by her growth. Sure, her growth didn't bring about any physical decrements, but there's definite limits to how her sheer size can get in the way of doing certain activities."
+    "Trying to run with a belly like hers couldn't be comfortable, sending rippling shockwaves all throughout her body with each foot fall..."
     MCT "On second thought- better refocus. If I spend too much time on that imagery my blood was going to start pumping somewhere else besides my muscles."
     MC "Alright, you got me. I'm going to need all the help I can get."
     MC "You said we're doing the butterfly stroke this time? I get tired just watching that. Got any tips for me like before?"
     show BBW swimsuit-haughty
     BBW "Of course, I do. Quite frankly I wouldn't expect you to finish without my help."
-    MCT "They say pride cometh before the fall, but I knew I was in no position to offer up a lesson in humility. On the bright side though, Alice is always interested in the tutelage of an eager pupil."
+    "They say pride cometh before the fall, but I knew I was in no position to offer up a lesson in humility. On the bright side though, Alice is always interested in the tutelage of an eager pupil."
     BBW "If you're going to try to swim fast for this distance at your skill level, you'll easily waste all your energy. Focus on being relaxed and moving fluidly with your whole body."
     BBW "Keep your neck in a neutral position, not craning up or down all the time. You don't need to take a breath with each stroke on this one."
     BBW "Don't waste energy flailing your arms all over the place either, they just need to break the surface, not raised straight up out of the water."
@@ -10315,36 +10319,36 @@ label BBW049A:
     MC "Gotcha- stay fluid, no flailing."
     BBW "Exactly, but it remains to be seen how well you'll put it into practice. Try not to keep me waiting too long this time, Keisuke."
     hide BBW with dissolve
-    MCT "Much less surprising this time, apparently that's what Alice meant to indicate 'GO!', but what was far more surprising was the speed and ease she was cruising through the water with."
-    MCT "She wasn't kidding about holding back before. I bobbed in the water dumbstruck for a couple of seconds at the unexpected athletic spectacle from Alice, but quickly snapped out of it with the realization I was expected to catch up to her sometime sooner rather than later."
+    "Much less surprising this time, apparently that's what Alice meant to indicate 'GO!', but what was far more surprising was the speed and ease she was cruising through the water with."
+    "She wasn't kidding about holding back before. I bobbed in the water dumbstruck for a couple of seconds at the unexpected athletic spectacle from Alice, but quickly snapped out of it with the realization I was expected to catch up to her sometime sooner rather than later."
     stop music
-    MCT "I dashed into the water eager to try to catch up, but after about twenty meters of that I realized even my best efforts weren't going to reduce the growing spread between us. I needed to focus on efficiency like she had said."
-    MCT "By fifty meters I knew I was in trouble, already worn out and not even that far into this one-sided race. I tried to distract myself from my fatigue by focusing on my cadence and the fluidity of my motions."
-    MCT "Effort wasn't going to get me through this, efficiency was. After what I could only guess was past the halfway point, the possibility of collapsing to the depths with Davy Jones crossed my mind, even though I could easily avoid a watery grave if I maintained the strength to stand up..."
-    MCT "NO! I had to keep going. If I just gave up, I was going to let Alice down. This was something she was really looking forward to doing on her vacation and she wanted to share it with me."
-    MCT "After the water polo fiasco, I told her to ask me whenever she wanted a swimming partner. I can't just bail on her on the first instance!"
-    MCT "This was one of the few things she could still enjoy and not feel self-conscious about her size. I know she puts on a show, but I can tell deep down she wishes this wasn't happening to her."
-    MCT "If I can help her forget about that for just a little while, then I'll swim across the whole damn Sea of Japan!"
-    MCT "My delirium induced post-fatigue pep talk wasn't quite enough to make it the full distance. I got slower... and slower... until I started to sink."
-    MCT "Before my hazy mind caused me to resort to a dog paddle flail in a vain attempt to save myself from downing, I felt a firm tug on the back of my head from my hair."
+    "I dashed into the water eager to try to catch up, but after about twenty meters of that I realized even my best efforts weren't going to reduce the growing spread between us. I needed to focus on efficiency like she had said."
+    "By fifty meters I knew I was in trouble, already worn out and not even that far into this one-sided race. I tried to distract myself from my fatigue by focusing on my cadence and the fluidity of my motions."
+    "Effort wasn't going to get me through this, efficiency was. After what I could only guess was past the halfway point, the possibility of collapsing to the depths with Davy Jones crossed my mind, even though I could easily avoid a watery grave if I maintained the strength to stand up..."
+    "NO! I had to keep going. If I just gave up, I was going to let Alice down. This was something she was really looking forward to doing on her vacation and she wanted to share it with me."
+    "After the water polo fiasco, I told her to ask me whenever she wanted a swimming partner. I can't just bail on her on the first instance!"
+    "This was one of the few things she could still enjoy and not feel self-conscious about her size. I know she puts on a show, but I can tell deep down she wishes this wasn't happening to her."
+    "If I can help her forget about that for just a little while, then I'll swim across the whole damn Sea of Japan!"
+    "My delirium induced post-fatigue pep talk wasn't quite enough to make it the full distance. I got slower... and slower... until I started to sink."
+    "Before my hazy mind caused me to resort to a dog paddle flail in a vain attempt to save myself from downing, I felt a firm tug on the back of my head from my hair."
     MCT "Oh no!"
     MCT "This is it."
     MCT "I'm being dragged towards the light. My body yielded as a golden haired cherubic figure began to pull me towards the heavens..."
     show BBW swimsuit-neutral with dissolve
     play music Peaceful
     MC "BUHAAA! {i}Hoo, haaa, hooo!{/i} Alice!"
-    MCT "Alice, holding my hair, had pulled my head above water so I could breath."
+    "Alice, holding my hair, had pulled my head above water so I could breath."
     BBW "What am I going to do with you Keisuke? You looked like you were starting to get in trouble there."
-    MCT "I tried to catch my breath, but couldn't."
+    "I tried to catch my breath, but couldn't."
     MC "{i}Hoo, haaa,{/i} maybe, {i}haa,{/i} a-little-bit, {i}hoo, hoo,{/i} yeah..."
     BBW "Come on. Let's get you out of the water."
     MC "Wait a sec- OW!"
     BBW "Oh, you'll be fine."
-    MCT "Alice apparently wasn't going to risk me sinking, still firmly holding on to my hair until she dragged me a sufficient distance to where I could easily stand on the seabed."
-    MCT "As we walked out of the water, I began to crawl across the wet sand where the waves swept over the shore of the beach and collapsed in a heap on my back once I determined I was far enough in that the waves weren't going to crash over my head."
-    MCT "Alice sat down beside me about an arm's reach away, with her hands bracing herself upright, facing backwards while her belly filled up her lap with her legs forward."
+    "Alice apparently wasn't going to risk me sinking, still firmly holding on to my hair until she dragged me a sufficient distance to where I could easily stand on the seabed."
+    "As we walked out of the water, I began to crawl across the wet sand where the waves swept over the shore of the beach and collapsed in a heap on my back once I determined I was far enough in that the waves weren't going to crash over my head."
+    "Alice sat down beside me about an arm's reach away, with her hands bracing herself upright, facing backwards while her belly filled up her lap with her legs forward."
     show BBW swimsuit-neutral-2
-    MCT "Craning my neck to peer behind me I could see the piece of driftwood Alice set as our distance marker."
+    "Craning my neck to peer behind me I could see the piece of driftwood Alice set as our distance marker."
     MC "Hey!... I {i}huff{/i} made it {i}huff{/i}"
     BBW "You certainly did. I didn't expect you to finish, you know. Honestly though, I don't know what possessed you to push yourself to the point you almost drowned."
     MC "You did."
@@ -10355,7 +10359,7 @@ label BBW049A:
     BBW "I was just teasing you back! We both know you aren't that great of a swimmer! Are you insane?"
     BBW "..."
     show BBW swimsuit-worried
-    MCT "Alice seemed to have stopped herself in the midst of her usual critical defensive reaction."
+    "Alice seemed to have stopped herself in the midst of her usual critical defensive reaction."
     BBW "...I didn't mean to put that kind of pressure on you. I'm sorry."
     MC "You didn't {i}huff{/i} there's no need to apologize."
     show BBW swimsuit-doubt
@@ -10399,111 +10403,110 @@ label BBW049A:
     MC "Nah, I can do it. It's the backstroke this time, right? I can always just stop and float on my back if I get tired."
     MC "Just don't expect me to catch up to you any time soon. I'm going to take it nice and slow this time."
     BBW "I'll be checking up on you anyway just in case."
-    MCT "Wading into the water, Alice turned around, smiling at me as she waved goodbye for now before falling backwards into the ocean to swim back the rest of the way."
+    "Wading into the water, Alice turned around, smiling at me as she waved goodbye for now before falling backwards into the ocean to swim back the rest of the way."
     hide BBW with dissolve
-    MCT "This time I wasn't surprised at her sudden departure and I didn't feel the need to immediately start chasing after her like before."
+    "This time I wasn't surprised at her sudden departure and I didn't feel the need to immediately start chasing after her like before."
     MC "Well, I certainly got my workout in for today."
     $setSkill("Athletics", 2)
-    MCT "Exhausted but content, I waded back into the water, floating on my back. It was one of the rare occasions I was grateful to have my long bangs draped over my eyes."
-    MCT "The piercing summer sun beamed down on my face as I looked up into the sky while I drifted in the water."
-    MCT "I occasionally threw in a few strokes but for the most part was content to lay back and float. This was more my pace, but I suppose I would swim an extra 10km if it meant I got to spend more time with Alice."
-    MCT "I slowly drifted along making my way back to Alice's beach house, taking about four to five times as long to get back as I did going away."
+    "Exhausted but content, I waded back into the water, floating on my back. It was one of the rare occasions I was grateful to have my long bangs draped over my eyes."
+    "The piercing summer sun beamed down on my face as I looked up into the sky while I drifted in the water."
+    "I occasionally threw in a few strokes but for the most part was content to lay back and float. This was more my pace, but I suppose I would swim an extra 10km if it meant I got to spend more time with Alice."
+    "I slowly drifted along making my way back to Alice's beach house, taking about four to five times as long to get back as I did going away."
     jump daymenu
 
 label BBW049B:
     $setProgress("BBW", "BBW049C")
     scene Summer Beach with fade
     play music BBW
-    MCT "When I finally realized I arrived at my destination I began to walk back towards the house."
-    MCT "Looking up, I could see the servants were just finishing up setting out a fully catered beachside lunch under the tent. Looks like they had set up a volleyball net at Alice's request as well."
+    "When I finally realized I arrived at my destination I began to walk back towards the house."
+    "Looking up, I could see the servants were just finishing up setting out a fully catered beachside lunch under the tent. Looks like they had set up a volleyball net at Alice's request as well."
     show BBW swimsuit-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG swimsuit-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Looks like you managed to find your way back, slowpoke."
     show BBW swimsuit-happy
-    MCT "Alice grinned at her subtle chiding of my chosen pace. I could tell she was still appreciative of my earlier efforts though."
+    "Alice grinned at her subtle chiding of my chosen pace. I could tell she was still appreciative of my earlier efforts though."
     BBW "You're just in time for lunch. Come join us."
     MC "Whoa!"
-    MCT "As I walked up closer, I got a much better look at the full splendor of the spread before us."
-    MCT "As to be expected with Alice, the usual expectation I had of some smashed sandwiches at the bottom of a cooler for a beachside lunch wouldn't do."
-    MCT "If this were any other occasion, I would have thought I'd needed a black tie just to walk around in a place serving this."
-    MCT "Everything was set out on ornate metal platters in bite sized servings as horderves. It was a cornucopia of fine dining selections."
-    MCT "There was a charcuterie board with cured meats and cheeses, most of which I
-    didn't even recognize."
-    MCT "Most of the things I did recognize though, like the brined, whole olives, both the green and black variety. Bruschetta and tapenade were set out next to toasted banquette."
-    MCT "For the healthy selections there was beet salad and gazpacho. The centerpiece however was a tiered tower of fresh and cooked seafood kept chilled on a bed of ice."
-    MCT "There was the standard jumbo shrimp and oysters on the half shell, along with lobster claws and three different types of crab claws, pre-cracked of course."
-    MCT "For dessert there were these perfectly sectioned squares of what appeared to be real deal lemon meringue pie. I'd only ever had the crummy cheap yellow snack cakes that tried to imitate the real thing."
-    MCT "The only thing missing was a swan carved out of ice."
+    "As I walked up closer, I got a much better look at the full splendor of the spread before us."
+    "As to be expected with Alice, the usual expectation I had of some smashed sandwiches at the bottom of a cooler for a beachside lunch wouldn't do."
+    "If this were any other occasion, I would have thought I'd needed a black tie just to walk around in a place serving this."
+    "Everything was set out on ornate metal platters in bite sized servings as horderves. It was a cornucopia of fine dining selections."
+    "There was a charcuterie board with cured meats and cheeses, most of which I didn't even recognize."
+    "Most of the things I did recognize though, like the brined, whole olives, both the green and black variety. Bruschetta and tapenade were set out next to toasted banquette."
+    "For the healthy selections there was beet salad and gazpacho. The centerpiece however was a tiered tower of fresh and cooked seafood kept chilled on a bed of ice."
+    "There was the standard jumbo shrimp and oysters on the half shell, along with lobster claws and three different types of crab claws, pre-cracked of course."
+    "For dessert there were these perfectly sectioned squares of what appeared to be real deal lemon meringue pie. I'd only ever had the crummy cheap yellow snack cakes that tried to imitate the real thing."
+    "The only thing missing was a swan carved out of ice."
     Takada "Miss Nikumaru and guests, lunch is served. Please, enjoy."
     show BBW swimsuit-neutral
     BBW "Thank you Takada."
     BBW "Aida, please go ahead, guests first."
     PRG "Um... thank you, Alice. But, are you sure?"
     BBW "As the hostess, I insist."
-    MCT "Unbeknownst to Alice, she would eat those words rather than get to eat any food for what seemed like an unnecessarily long delay."
-    MCT "Whether it was Aida's naturally timid and hesitant disposition, or deep contemplation concerning her changing tastes due to her pregnancy, Aida hovered indecisively in front of the food display to the point that it began to feel awkward."
-    MCT "She was standing too close to just cut in front of her, but far enough from the table she was standing in the way of everything."
+    "Unbeknownst to Alice, she would eat those words rather than get to eat any food for what seemed like an unnecessarily long delay."
+    "Whether it was Aida's naturally timid and hesitant disposition, or deep contemplation concerning her changing tastes due to her pregnancy, Aida hovered indecisively in front of the food display to the point that it began to feel awkward."
+    "She was standing too close to just cut in front of her, but far enough from the table she was standing in the way of everything."
     BBW "..."
-    MCT "Alice shot me a side glance, trying to say without saying out loud 'what is going on?'"
+    "Alice shot me a side glance, trying to say without saying out loud 'what is going on?'"
     MC "... {i}shrug{/i}"
-    MCT "I could tell Alice was getting frustrated. She was obviously very hungry by this point."
-    MCT "I myself was feeling almost ravenous after this morning's swim session, and I knew my appetite at its biggest couldn't match Alice's at its smallest."
-    MCT "I could tell Alice wanted to say something, if not outright shove Aida out of the way by this point, but even at her most impatient, she'd never lose her composure or go back on her obligation as a hostess."
-    MCT "I thought I should say something before Alice felt like she had to."
+    "I could tell Alice was getting frustrated. She was obviously very hungry by this point."
+    "I myself was feeling almost ravenous after this morning's swim session, and I knew my appetite at its biggest couldn't match Alice's at its smallest."
+    "I could tell Alice wanted to say something, if not outright shove Aida out of the way by this point, but even at her most impatient, she'd never lose her composure or go back on her obligation as a hostess."
+    "I thought I should say something before Alice felt like she had to."
     MC "Is everything alright Aida? It's okay if you aren't feeling hungry."
     PRG "It all looks so good, but my nose has been really sensitive lately.  With the ocean right there, all I can smell is salt and fish.  So... maybe something sweet would be nice?"
     MCT "Bingo! Okay, we can move this along."
     MC "Well, why not have dessert first? This lemon meringue looks great- maybe you'll get your appetite back later. Just have one of these for now."
     show PRG swimsuit-happy
     PRG "That's a great idea Hotsure-san."
-    MCT "I grabbed a plate and served up a piece for Aida, hoping to move things along faster to make up for the delay."
+    "I grabbed a plate and served up a piece for Aida, hoping to move things along faster to make up for the delay."
     show PRG swimsuit-neutral
     PRG "Thank-you Hotsure-san."
-    MCT "As Aida walked back to her seat on the cushions under the tent, Alice looked at me while shaking her head, expressing 'thank you' with an exasperated smile for what I just did."
-    $setAffection("BBW", +1)
-    MCT "I decided to forgo my turn so Alice could, in the more figurative sense, get down to business."
+    "As Aida walked back to her seat on the cushions under the tent, Alice looked at me while shaking her head, expressing 'thank you' with an exasperated smile for what I just did."
+    $setAffection("BBW", 1)
+    "I decided to forgo my turn so Alice could, in the more figurative sense, get down to business."
     MC "Ladies first- I insist."
     show BBW swimsuit-haughty
     BBW "Such a gentleman."
-    MCT "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
-    MCT "Seeing Alice's ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds."
-    MCT "It made me question whether or not her initial offer to go last served a more practical purpose."
-    MCT "As Alice took her plate back to the spot she had picked out to recline under the tent I decided it would be prudent to get what I wanted in one go on my plate."
-    MCT "I honestly did not know what else would be left if Alice decided to come back for seconds or thirds. I ended up taking a little bit of everything, since it all looked good."
+    "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
+    "Seeing Alice's ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds."
+    "It made me question whether or not her initial offer to go last served a more practical purpose."
+    "As Alice took her plate back to the spot she had picked out to recline under the tent I decided it would be prudent to get what I wanted in one go on my plate."
+    "I honestly did not know what else would be left if Alice decided to come back for seconds or thirds. I ended up taking a little bit of everything, since it all looked good."
     MC "This is really good!"
-    MCT "I exclaimed, taking my first bite as I sat down between the girls."
+    "I exclaimed, taking my first bite as I sat down between the girls."
     show BBW swimsuit-neutral
     BBW "I'm glad you're enjoying it."
-    MCT "No sooner had I sat down than Alice had gotten back up for a second pass, leaving an empty plate in her stead. One of the servants quickly removed it from her seat after barely a few seconds."
-    MCT "On her way back, Alice's plate was stacked full again, this time with different dishes she had not taken the first time around. I was surprised, maybe even a little impressed, but I decided not to say anything."
-    MCT "Anyone would be hungry after a morning of swimming. If I don't stop staring, I might accidently call attention to it. I figured I better try to steer the conversation elsewhere."
+    "No sooner had I sat down than Alice had gotten back up for a second pass, leaving an empty plate in her stead. One of the servants quickly removed it from her seat after barely a few seconds."
+    "On her way back, Alice's plate was stacked full again, this time with different dishes she had not taken the first time around. I was surprised, maybe even a little impressed, but I decided not to say anything."
+    "Anyone would be hungry after a morning of swimming. If I don't stop staring, I might accidently call attention to it. I figured I better try to steer the conversation elsewhere."
     MC "Feeling better Aida?"
     PRG "Yes, thank you. Having something small helped stir my appetite a bit.  I think I might have something more, just preferably not seafood."
-    MCT "I probably didn't need to worry about it, given how much food was set out, but part of me did think if she wanted to eat lunch, she'd better do it now before it was all gone."
-    MCT "By the time Aida came back to her seat with her food, this time with much less indecision involved, Alice was on her way back to the table to get dessert."
-    MCT "Curiosity got the better of me, but I didn't want to make her feel self-conscious. I adjusted my shoulders and neck so as to be looking at the ocean waters, belying my true gaze out of the corner of my eye."
+    "I probably didn't need to worry about it, given how much food was set out, but part of me did think if she wanted to eat lunch, she'd better do it now before it was all gone."
+    "By the time Aida came back to her seat with her food, this time with much less indecision involved, Alice was on her way back to the table to get dessert."
+    "Curiosity got the better of me, but I didn't want to make her feel self-conscious. I adjusted my shoulders and neck so as to be looking at the ocean waters, belying my true gaze out of the corner of my eye."
     show BBW swimsuit-neutral-2
-    MCT "I was right to be cautious. Alice appeared to be checking to see if anyone was noticing her."
-    MCT "I wish she wouldn't continue to cling to this kind of pretense, especially around Aida and me of all people, but in all fairness, it would be difficult for anyone to not feel self-conscious with her growth."
-    MCT "Having determined to her knowledge that no one was looking, she proceeded to serve herself the remaining lemon meringue squares from the sheet pan."
-    MCT "I suspected since Aida and I had each gotten a piece for ourselves, she didn't feel the necessity to let any more remain."
-    MCT "I continued to pretend to pay no mind as she walked back to her seat with a plate full of treats, focusing my gaze down at my own plate instead."
+    "I was right to be cautious. Alice appeared to be checking to see if anyone was noticing her."
+    "I wish she wouldn't continue to cling to this kind of pretense, especially around Aida and me of all people, but in all fairness, it would be difficult for anyone to not feel self-conscious with her growth."
+    "Having determined to her knowledge that no one was looking, she proceeded to serve herself the remaining lemon meringue squares from the sheet pan."
+    "I suspected since Aida and I had each gotten a piece for ourselves, she didn't feel the necessity to let any more remain."
+    "I continued to pretend to pay no mind as she walked back to her seat with a plate full of treats, focusing my gaze down at my own plate instead."
     show PRG swimsuit-happy
     PRG "Oh, thank you, Alice! You didn't need to get up to bring us dessert."
     show BBW swimsuit-surprised
     BBW "Oh... well it was no trouble at all..."
     BBW "I thought... we could all enjoy dessert together after this lovely meal- yes."
-    MCT "Unbeknownst to her, Aida's reflexive appreciation of what she interpreted as a nice gesture had left Alice absolutely mortified, judging by how the color had drained from her face and her hesitant reply."
+    "Unbeknownst to her, Aida's reflexive appreciation of what she interpreted as a nice gesture had left Alice absolutely mortified, judging by how the color had drained from her face and her hesitant reply."
     show PRG swimsuit-neutral
     show BBW swimsuit-worried
-    MCT "Aida had been more preoccupied with her meal at the time, so she didn't notice like I did."
-    MCT "However, her remark clearly indicated that a normal individual would not have even considered the portion Alice had selected for herself was intended for only one person."
+    "Aida had been more preoccupied with her meal at the time, so she didn't notice like I did."
+    "However, her remark clearly indicated that a normal individual would not have even considered the portion Alice had selected for herself was intended for only one person."
     PRG "Whew. I think I'm going to be pretty full by the time I finish what I have, though."
     MC "I'm good for now. Maybe I'll have one later, but don't save any on account of me."
-    MCT "I tried to play it off that her portion was not unreasonable for one person to finish."
+    "I tried to play it off that her portion was not unreasonable for one person to finish."
     show BBW swimsuit-haughty
-    MCT "Having essentially gotten 'permission', in a sense, from both of us to finish the remaining dessert, Alice's expression visibly relaxed."
-    MCT "She proceeded to work through her dessert course, though perhaps not as fervently as she initially may have before Aida had said something."
+    "Having essentially gotten 'permission', in a sense, from both of us to finish the remaining dessert, Alice's expression visibly relaxed."
+    "She proceeded to work through her dessert course, though perhaps not as fervently as she initially may have before Aida had said something."
     MC "I can see why you wanted to swim in the morning. Aren't you supposed to wait three hours after eating before swimming? That wouldn't have left much time before night."
     show BBW swimsuit-neutral
     BBW "That's just a common rumor. Swimming is no different than any other exercise where it may not be wise to exert yourself so intensely on a full stomach."
@@ -10515,36 +10518,35 @@ label BBW049B:
     BBW "I much prefer doing it on the beach. Less people on the court in sand volleyball increases the importance of strategic thinking and shot placement."
     BBW "Plus, the sand is far more forgiving when diving for the ball."
     MC "Sounds good. I'm up for it."
-    MCT "I began to get up and stretch to shake off the stiffness from the morning's previous activities."
+    "I began to get up and stretch to shake off the stiffness from the morning's previous activities."
     BBW "Easy there Keisuke. I didn't mean right now. I appreciate the willingness and enthusiasm, but part of a well-planned vacation includes some scheduled rest."
     BBW "Just because exercising after eating too soon isn't life threatening doesn't mean it's not prudent to wait a bit."
-    MCT "Having finished her dessert, Alice proceeded to reposition herself between the beach furniture cushions under the tent. She laid down along the beach blanket over the sand while propping her head up against one of the cushions."
-    MCT "Once she had found what she deemed to be a sufficiently comfortable position, she interlocked her fingers and rested them on the cresting portion of her belly, partially covered up by her boobs."
-    MCT "Having just finished lunch, her belly was looking particularly full and round- more so than I had ever recalled."
-    MCT "Watching it rise and swell with each breath she took in was turning up the heat for me far more than the radiance of the midday sun."
-    MCT "Feeling a bit of a tug on the fabric of my swim trunks, I suddenly realized the thin material of my bathing suit was not going to conceal my raised sails."
-    MCT "Thinking quickly before it became too noticeable, I decided to lie down on the beach blanket next to Alice, chest down though."
-    MCT "Turning my head to the side, I still got a good view to drink it all in. Her belly towered high over the rest of her, even more so from this angle."
+    "Having finished her dessert, Alice proceeded to reposition herself between the beach furniture cushions under the tent. She laid down along the beach blanket over the sand while propping her head up against one of the cushions."
+    "Once she had found what she deemed to be a sufficiently comfortable position, she interlocked her fingers and rested them on the cresting portion of her belly, partially covered up by her boobs."
+    "Having just finished lunch, her belly was looking particularly full and round- more so than I had ever recalled."
+    "Watching it rise and swell with each breath she took in was turning up the heat for me far more than the radiance of the midday sun."
+    "Feeling a bit of a tug on the fabric of my swim trunks, I suddenly realized the thin material of my bathing suit was not going to conceal my raised sails."
+    "Thinking quickly before it became too noticeable, I decided to lie down on the beach blanket next to Alice, chest down though."
+    "Turning my head to the side, I still got a good view to drink it all in. Her belly towered high over the rest of her, even more so from this angle."
     scene black with fade
     MC "Yeah, a little rest feels good..."
     jump daymenu
 
-#Scene Title: Serves up!
 label BBW049C:
     $setProgress("BBW", "BBW050")
-    scene Summer Beach with fade
+    scene Summer Beach Ocean with fade
     play music Peaceful
-    MCT "Whether it was from a food coma, the warm summer sun, or the pent-up exhaustion from the morning's swim, I must have dozed off."
+    "Whether it was from a food coma, the warm summer sun, or the pent-up exhaustion from the morning's swim, I must have dozed off."
     show BBW swimsuit-neutral with dissolve
     BBW "Are you awake? Honestly Keisuke, sometimes I wonder if you would just sleep forever if left to your own devices."
-    MCT "Still in a sleepy haze, it took a second or two for things to come into focus. Alice was standing over me with her arms crossed, if she hadn't been bent over enough to look down at me, I certainly would not have been able to see her face over her belly."
+    "Still in a sleepy haze, it took a second or two for things to come into focus. Alice was standing over me with her arms crossed, if she hadn't been bent over enough to look down at me, I certainly would not have been able to see her face over her belly."
     MC "Wha? Oh, yeah, guess I dozed off there."
     BBW "I think we all did for a little bit, but it would be a waste of a day just to lay about."
     BBW "You said you were up for playing some volleyball with me, so we're going to get that in before it gets too late in the day."
     MC "Fine with me. I'm up for more after some food and rest."
     show BBW swimsuit-haughty
     BBW "Good. Come on, Aida is already waiting."
-    MCT "The volleyball net was set up a short distance from the tent."
+    "The volleyball net was set up a short distance from the tent."
     show BBW swimsuit-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG swimsuit-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "I'm assuming both of you are at least somewhat familiar with the rules of volleyball?"
@@ -10555,30 +10557,30 @@ label BBW049C:
     BBW "The main skills you need to know are the forearm pass, and the set. These will help you keep the ball in the air and off the ground- even if you don't know anything else."
     MC "Gotcha."
     BBW "First I'll show you the set."
-    MCT "Alice tossed the ball straight up, bringing her hands close together over her head, nearly touching her fingertips together she pushed it straight back up in the air once it came back down and made contact with her hands."
-    MCT "She did this a few times in a row, each time perfectly straight up, never taking her eyes off the ball as she continued to explain."
+    "Alice tossed the ball straight up, bringing her hands close together over her head, nearly touching her fingertips together she pushed it straight back up in the air once it came back down and made contact with her hands."
+    "She did this a few times in a row, each time perfectly straight up, never taking her eyes off the ball as she continued to explain."
     BBW "The trick is to use more of your fingers and not so much of your palms. This is mostly a set up move for your partner to line up a good shot over the net, which is why you want it to just float up and have a simple trajectory."
-    MCT "Alice caught the ball and cradled it against her side after finishing her demonstration."
+    "Alice caught the ball and cradled it against her side after finishing her demonstration."
     BBW "Make sense?"
     MC "Yeah, easy enough, I guess."
     PRG "I think so."
     BBW "Good. The next main skill is called the forearm pass. As the name implies this lets you control the direction better when you return a volley in order to pass it to your teammate."
-    MCT "Alice tossed the ball straight up again. She brought her hands together with one hand cradling a fist made with the other while she kept her arms straight."
-    MCT "The ball landed on the lower part of her forearms as she bumped it back up into the air. This time she had to adjust her placement a little bit as the ball moved more from side to side."
-    MCT "It still wasn't much repositioning though. Her control was excellent."
+    "Alice tossed the ball straight up again. She brought her hands together with one hand cradling a fist made with the other while she kept her arms straight."
+    "The ball landed on the lower part of her forearms as she bumped it back up into the air. This time she had to adjust her placement a little bit as the ball moved more from side to side."
+    "It still wasn't much repositioning though. Her control was excellent."
     BBW "You want to make contact with your forearms. If it hits your wrist or hands, you have no control over how it will bounce off, and if it hits your upper arms, it won't go very far at all."
-    MCT "Alice caught the ball to stop it again to see if we were following along."
+    "Alice caught the ball to stop it again to see if we were following along."
     BBW "Got that?"
     MC "Makes sense to me."
     PRG "Mhmm."
     BBW "Alright, time to put your attentiveness to the test. I'm going to pass the ball to one of you and you return it to me with either a pass or a set."
     BBW "Once you return it to me, I'll pass it to the other. For now let's just try to keep it off the ground."
     "{i}Bump{/i}"
-    MCT "Alice gently passed the ball to me with a nice, easy arc that was no problem to return back to her with a pass. She deflected my volley directly at Aida who was standing to my left as we formed a triangle."
-    MCT "Aida had no problem lofting up a nice and high set. We went back and forth like this for quite a while."
-    MCT "Any time the ball landed dead on the ground was due to some wild shot from either me or Aida setting it behind us or passing it right into the sand."
-    MCT "Alice's shot placement was always spot on, and she was always able to save the ball from the ground even after some of our questionable returns."
-    MCT "We started keeping track how many successive passes we could get. Our previous best was 10, but right now we were on a roll."
+    "Alice gently passed the ball to me with a nice, easy arc that was no problem to return back to her with a pass. She deflected my volley directly at Aida who was standing to my left as we formed a triangle."
+    "Aida had no problem lofting up a nice and high set. We went back and forth like this for quite a while."
+    "Any time the ball landed dead on the ground was due to some wild shot from either me or Aida setting it behind us or passing it right into the sand."
+    "Alice's shot placement was always spot on, and she was always able to save the ball from the ground even after some of our questionable returns."
+    "We started keeping track how many successive passes we could get. Our previous best was 10, but right now we were on a roll."
     "{i}Bump{/i}"
     MC "Fifteen"
     "{i}Bump{/i}"
@@ -10588,13 +10590,13 @@ label BBW049C:
     "{i}Bump{/i}"
     BBW "Eighteen"
     "{i}SPLAT{/i}"
-    MCT "In my eagerness to receive the ball I took a couple of extra unnecessary steps, only to receive it directly with my face, rather than my forearms."
-    MCT "Having missed the ball completely with my arms, and unable to correct its trajectory, it bounced right into the sand."
+    "In my eagerness to receive the ball I took a couple of extra unnecessary steps, only to receive it directly with my face, rather than my forearms."
+    "Having missed the ball completely with my arms, and unable to correct its trajectory, it bounced right into the sand."
     show PRG swimsuit-surprised
     show BBW swimsuit-neutral
     PRG "A-Are you alright, Hotsure-san?"
     BBW "I'm sure he's fine. He's endured much worse- that's for sure."
-    MCT "Alice was right, a light bump on the head from a failed return was nothing compared to a cannon shot to face from Akira."
+    "Alice was right, a light bump on the head from a failed return was nothing compared to a cannon shot to face from Akira."
     MC "Yeah, no big deal. I'm fine. Sorry to ruin our streak."
     show PRG swimsuit-neutral
     BBW "It is not a big loss. You both maintained it for a sufficiently long period of time for me to think we're ready to play a real game."
@@ -10603,28 +10605,28 @@ label BBW049C:
     MC "Seems like it will be pretty hard to cover the whole court by yourself."
     show BBW swimsuit-haughty
     BBW "I'm up for the challenge."
-    MCT "I hadn't known Alice to take on a challenge she genuinely thought she could not win, so she must have been feeling pretty confident in her volleyball skills."
+    "I hadn't known Alice to take on a challenge she genuinely thought she could not win, so she must have been feeling pretty confident in her volleyball skills."
     BBW "Accurately serving is an advanced skill, and you can't hit the net on serve. In the
     interest of keeping the game moving, I'll play all time server, but you two can still score points like normal if you manage to have the ball land on my side."
     BBW "Does that sound fair?"
     MC "Fine for me. It's probably for the best."
     PRG "I'm okay with that."
-    MCT "We lined up as each of our respective teams on either side of the net. Alice eyed us both with a sly, possibly smug smile, as she lobbed up the ball and smacked it over our side of the net in what would be the first of many."
+    "We lined up as each of our respective teams on either side of the net. Alice eyed us both with a sly, possibly smug smile, as she lobbed up the ball and smacked it over our side of the net in what would be the first of many."
     "{i}Swoosh!{/i}"
-    MCT "In complete incoordination between Aida and I, the ball sailed right between the two of us untouched and landed in the sand on our court behind us."
+    "In complete incoordination between Aida and I, the ball sailed right between the two of us untouched and landed in the sand on our court behind us."
     MC "Oops."
     PRG "Sorry..."
     MC "Don't worry about it. We just weren't thinking. We'll have to work together. I'll stand closer to the net since I'm taller and you stand further back to get anything that goes over."
     PRG "Right!"
-    MCT "I tossed the ball back to Alice under the net. I could see her competitive nature was now fully awakened. She had a devilish grin of satisfaction from having completely outmaneuvered her opponents."
-    MCT "Alice set the ball again, placing it in the same spot, likely testing us to see if we had learned from our previous mistake. I jumped in front of it, landing a decent set which let Aida pass it over the net."
+    "I tossed the ball back to Alice under the net. I could see her competitive nature was now fully awakened. She had a devilish grin of satisfaction from having completely outmaneuvered her opponents."
+    "Alice set the ball again, placing it in the same spot, likely testing us to see if we had learned from our previous mistake. I jumped in front of it, landing a decent set which let Aida pass it over the net."
     MCT "A success!"
-    MCT "But it wasn't good enough as Alice just walked right up and lobbed it over both of us. She had placed her shot to take advantage of how we moved out of our positions and didn't reset."
+    "But it wasn't good enough as Alice just walked right up and lobbed it over both of us. She had placed her shot to take advantage of how we moved out of our positions and didn't reset."
     BBW "A slight improvement."
     MC "Better than last time at least."
     BBW "You'll have to do better than that I'm afraid if you are going to score a point. I don't see how I can go easier on you than doing this all by myself."
-    MCT "As the match continued, Aida and I continued to improve in our coordination. We were able to return more serves and more of Alice's return volleys, but at 0-7 we were still pitifully behind."
-    MCT "Alice definitely was good at this, but this was still kind of sad. We had to change something."
+    "As the match continued, Aida and I continued to improve in our coordination. We were able to return more serves and more of Alice's return volleys, but at 0-7 we were still pitifully behind."
+    "Alice definitely was good at this, but this was still kind of sad. We had to change something."
     MC "Aida, I have a plan."
     PRG "Okay! What is it?"
     MC "She keeps beating us with her shot placement. She keeps putting the ball where we aren't, while we're just trying to get it over the net."
@@ -10637,38 +10639,38 @@ label BBW049C:
     MC "Don't worry, it's just for fun, but let's try our best anyway."
     BBW "Are you ready yet?"
     MC "This time- I think so."
-    MCT "Alice lobbed a serve to the back towards Aida. To her credit Aida stayed calm and passed me a nice gentle arc towards where I was standing near the net."
-    MCT "With a very light tap of my wrist I gave the ball just enough energy to make it over the net."
-    MCT "Alice realized what happened all too late, as she ran up to the front of the net. She dove into the sand with the hope of keeping the ball alive but she did not make it."
+    "Alice lobbed a serve to the back towards Aida. To her credit Aida stayed calm and passed me a nice gentle arc towards where I was standing near the net."
+    "With a very light tap of my wrist I gave the ball just enough energy to make it over the net."
+    "Alice realized what happened all too late, as she ran up to the front of the net. She dove into the sand with the hope of keeping the ball alive but she did not make it."
     show BBW swimsuit-doubt
     BBW "Hmph."
-    MCT "Alice dusted herself off."
+    "Alice dusted herself off."
     BBW "And to think I was starting to go easy on you two."
-    MCT "Our new strategy wasn't perfect, we still gave up a few points here and there, but we slowly started inching ahead. Alice's accuracy with the ball was excellent, but it became apparent she had overestimated her ability to cover the court."
-    MCT "Knowing that she had felt confident she could beat us, as the game continued it was increasingly clear to me that Alice was not nearly as adapted to her body's recent changes as I had initially thought from seeing her swim."
-    MCT "Instead of landing on her forearms, more than a few of her passes landed with a muted {i}BLUMP{/i} as they sank into the ample flesh of her boobs, rebounding with a much weaker trajectory than intended."
+    "Our new strategy wasn't perfect, we still gave up a few points here and there, but we slowly started inching ahead. Alice's accuracy with the ball was excellent, but it became apparent she had overestimated her ability to cover the court."
+    "Knowing that she had felt confident she could beat us, as the game continued it was increasingly clear to me that Alice was not nearly as adapted to her body's recent changes as I had initially thought from seeing her swim."
+    "Instead of landing on her forearms, more than a few of her passes landed with a muted {i}BLUMP{/i} as they sank into the ample flesh of her boobs, rebounding with a much weaker trajectory than intended."
     show BBW swimsuit-worried
     BBW "Oh my... that hasn't happened before."
-    MCT "Her speed was impressive given her size, but the bulk of her thighs and her belly sticking so far out in front of her did not lend itself to an efficient running stride."
-    MCT "She jiggled all throughout her body, while her thighs rubbed together. Much more so than her speed, it was evident that her agility, the ability to change her direction to be in the right place, had been greatly affected by her added weight."
-    MCT "By the time we were able to return the ball over the net, Alice was not able to fully accelerate back towards the new spot she needed to be on the court."
+    "Her speed was impressive given her size, but the bulk of her thighs and her belly sticking so far out in front of her did not lend itself to an efficient running stride."
+    "She jiggled all throughout her body, while her thighs rubbed together. Much more so than her speed, it was evident that her agility, the ability to change her direction to be in the right place, had been greatly affected by her added weight."
+    "By the time we were able to return the ball over the net, Alice was not able to fully accelerate back towards the new spot she needed to be on the court."
     show BBW swimsuit-angry
     BBW "{i}Whew{/i}, 18-20. Match point!"
-    MCT "Alice called the score like she had for each set. Alice looked flustered and tired. Aida and I were on match point. I don't know if she thought it was supposed to be easy, but she was clearly disappointed with her performance."
-    MCT "As she wound up for this serve, she looked determined. Something told me she was going to try blasting this one as hard as she could before we even got the chance to react."
-    MCT "She hadn't really done anything like that before though, probably not wanting to accidently beam Aida in the belly with the full force of her serve, but maybe now she was desperate enough to not care."
-    MCT "After she tossed up the ball, Alice laid into this serve like I hadn't seen before. She fired it straight between us- I barely had any time to react..."
+    "Alice called the score like she had for each set. Alice looked flustered and tired. Aida and I were on match point. I don't know if she thought it was supposed to be easy, but she was clearly disappointed with her performance."
+    "As she wound up for this serve, she looked determined. Something told me she was going to try blasting this one as hard as she could before we even got the chance to react."
+    "She hadn't really done anything like that before though, probably not wanting to accidently beam Aida in the belly with the full force of her serve, but maybe now she was desperate enough to not care."
+    "After she tossed up the ball, Alice laid into this serve like I hadn't seen before. She fired it straight between us- I barely had any time to react..."
     "{i}Twack{/i}"
-    MCT "The ball hit the net. The slack let out on the upper part of the net before the ball tumbled harmlessly over the side, an illegal play on a serve."
-    MCT "It was certainly anti-climactic, but Aida and I won."
+    "The ball hit the net. The slack let out on the upper part of the net before the ball tumbled harmlessly over the side, an illegal play on a serve."
+    "It was certainly anti-climactic, but Aida and I won."
     MC "I guess that's game."
     show BBW swimsuit-worried
     BBW "That would be correct."
     show PRG swimsuit-happy
     PRG "I-I didn't think we would win! Great job Hotsure-san!"
     MC "Well it wasn't just me Aida, I needed your help."
-    MCT "Alice had a rather blank expression on her face in contrast to the fiery intensity seen just a few seconds ago."
-    MCT "No doubt she was trying to not visibly express her disappointment in herself. I didn't know how much good it would do, but I figured I'd try to cheer her up."
+    "Alice had a rather blank expression on her face in contrast to the fiery intensity seen just a few seconds ago."
+    "No doubt she was trying to not visibly express her disappointment in herself. I didn't know how much good it would do, but I figured I'd try to cheer her up."
     MC "Alice, you were amazing. We barely won, and there were two of us!"
     BBW "Not nearly amazing enough it would seem. You won according to the rules we agreed upon."
     show BBW swimsuit-neutral
@@ -10678,8 +10680,8 @@ label BBW049C:
     BBW "Strategy is also a skill. A skill of yours I underestimated."
     MC "I guess next time we'll have to do a full two on two."
     BBW "Perhaps, but that may be a while. Honestly, I didn't find it as enjoyable as I remembered, especially compared to swimming... It didn't really feel the same."
-    MCT "It was unfortunate that something she had looked forward to on this vacation turned into another reminder about the changes going on in her body that she couldn't control."
-    MCT "I wanted to say something comforting, but my initial consolatory remarks had bounced right off. Besides, for the moment, she seemed keen on moving past it."
+    "It was unfortunate that something she had looked forward to on this vacation turned into another reminder about the changes going on in her body that she couldn't control."
+    "I wanted to say something comforting, but my initial consolatory remarks had bounced right off. Besides, for the moment, she seemed keen on moving past it."
     show BBW swimsuit-haughty
     BBW "Speaking of which, Aida, if you're still feeling up for it, I believe I promised to give
     you a swimming lesson."
@@ -10688,56 +10690,56 @@ label BBW049C:
     scene Summer House Back with fade
     show BBW swimsuit-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG swimsuit-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    MCT "Alice led Aida down to the water. Alice alternated between demonstrating different techniques herself and helping to position Aida in the water so that she could mimic what she had just been shown."
-    MCT "I hung back down the beach at a slight distance, alternating between treading water and wading in the shallows."
-    MCT "I didn't want to be aloof and just stay back on the shore, but I felt it best to give them both some space so Aida's lesson could feel more private, since Alice would likely have to make some references to her pregnancy."
-    MCT "I could overhear a bit of what she was saying."
+    "Alice led Aida down to the water. Alice alternated between demonstrating different techniques herself and helping to position Aida in the water so that she could mimic what she had just been shown."
+    "I hung back down the beach at a slight distance, alternating between treading water and wading in the shallows."
+    "I didn't want to be aloof and just stay back on the shore, but I felt it best to give them both some space so Aida's lesson could feel more private, since Alice would likely have to make some references to her pregnancy."
+    "I could overhear a bit of what she was saying."
     BBW "I know you can swim quite well Aida, but there is always more to learn. I'll show you something a bit more advanced."
     BBW "Possibly the most important thing to teach you for now is the side stroke. It's not as well known, but it is an energy efficient way to move through the water."
     BBW "It lets you keep your head above water at all times, and most importantly, your belly won't get in the way of your leg and arm movements. Like so."
-    MCT "Alice proceeded to demonstrate the sidestroke she spoke of. It involved kicking the legs in a scissors like motion while lying on the side with the arms spread out in opposite directions."
-    MCT "I'd seen it before, but not that often. In all honesty, I probably could have used it this morning to go the distance rather than exhaust myself."
+    "Alice proceeded to demonstrate the sidestroke she spoke of. It involved kicking the legs in a scissors like motion while lying on the side with the arms spread out in opposite directions."
+    "I'd seen it before, but not that often. In all honesty, I probably could have used it this morning to go the distance rather than exhaust myself."
     PRG "...is this good?"
     BBW "You're doing just fine. Spread your legs and arms out further for a stronger stroke."
-    MCT "Alice for her part seemed to be enjoying herself. Her dour and frustrated expression from earlier when we were playing volleyball had turned into a content smile, as she carefully watched over her swimming pupil."
-    MCT "Much like how Alice wanted to bring me along to share how she enjoyed swimming, she was doing the same with Aida, but this time in a way that was suitable for her."
-    MCT "Earlier I couldn't find the words to help her feel better about what was undoubtedly a disappointing realization regarding her newfound dimensions and the ability to play volleyball like she used to."
-    MCT "But then I remembered what she said earlier 'I guess even here I'll have to learn to live with how my body is changing.' I suppose this was her way of doing that. After all, she seemed to have moved on from that incident rather quickly."
+    "Alice for her part seemed to be enjoying herself. Her dour and frustrated expression from earlier when we were playing volleyball had turned into a content smile, as she carefully watched over her swimming pupil."
+    "Much like how Alice wanted to bring me along to share how she enjoyed swimming, she was doing the same with Aida, but this time in a way that was suitable for her."
+    "Earlier I couldn't find the words to help her feel better about what was undoubtedly a disappointing realization regarding her newfound dimensions and the ability to play volleyball like she used to."
+    "But then I remembered what she said earlier 'I guess even here I'll have to learn to live with how my body is changing.' I suppose this was her way of doing that. After all, she seemed to have moved on from that incident rather quickly."
     BBW "It looks like you've got the basics down Aida. You've taken to my advice quite well. I think that's enough for today, however. I don't see the need to push you any further."
     PRG "Thank you Alice. I am starting to feel tired. This was fun. I'd love to swim with you again sometime... if you'd want to."
     BBW "Of course, Aida."
-    MCT "Alice turned to me."
+    "Alice turned to me."
     show BBW swimsuit-neutral
     BBW "Keisuke, we're going to head back inside. I believe I am satisfied with how well we managed to fill today with the scheduled activities. Please come join us."
     scene Summer Beach with fade
-    MCT "We walked back towards the tent to get our towels to dry off after coming out of the water. Aida went up ahead as I stopped to talk to Alice."
+    "We walked back towards the tent to get our towels to dry off after coming out of the water. Aida went up ahead as I stopped to talk to Alice."
     MC "You looked like you were enjoying yourself out there with Aida. You're quite the swim instructor it would seem. It appears you already have two students."
     show BBW swimsuit-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG swimsuit-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Well, if you enjoy something, isn't it natural to want to share that with others?"
     MC "That is true. Passion can be infectious. Even though I'm feeling worn out, today was a lot more fun than a lazy day on the beach."
     BBW "That's the advantage of structure, Keisuke. There's great satisfaction to be found in an accomplished day that eludes those who sleep halfway through it."
-    MCT "At this point, I wasn't sure if she was just making a general observation or was trying to drive home a point with a not-so-subtle jab at my tendency to hit the snooze button."
+    "At this point, I wasn't sure if she was just making a general observation or was trying to drive home a point with a not-so-subtle jab at my tendency to hit the snooze button."
     BBW "But it was indeed a full day and I'm feeling ready for some rest myself. I'm actually surprised you managed to keep up today, Keisuke."
     BBW "It just goes to show me you have a lot of untapped potential. Perhaps all that's missing is the proper motivation..."
     show BBW swimsuit-aroused
-    MCT "Alice's expression turned to a smug, yet sultry smile. My 'proper motivation' was apparently no secret to her."
+    "Alice's expression turned to a smug, yet sultry smile. My 'proper motivation' was apparently no secret to her."
     show BBW swimsuit-neutral
     BBW "Well, come on now. Let's get dried off, Aida is already ahead of us."
-    MCT "We both walked back to the tent as Aida was finishing drying off. I started rubbing my towel through my hair, knowing nothing would get dry if that wet mess was still dripping all over me."
+    "We both walked back to the tent as Aida was finishing drying off. I started rubbing my towel through my hair, knowing nothing would get dry if that wet mess was still dripping all over me."
     PRG "I think I'm going to head in. I'd like to lie down for a while, if that's okay."
     BBW "Think nothing of it. Please go ahead Aida, we'll catch up to you."
-    MCT "Not thinking much of it at first, I was standing behind Alice when I noticed her bending over to get her beach towel."
+    "Not thinking much of it at first, I was standing behind Alice when I noticed her bending over to get her beach towel."
     "{i}RIIIIP{/i}"
     show BBW swimsuit-surprised
     BBW "..."
     MC "...!"
-    MCT "My head would have snapped to attention from the sound, if my gaze hadn't already been transfixed on the sight unfolding before me."
-    MCT "Alice had ripped her swimsuit."
-    MCT "It was certainly loud enough for me to hear, but Aida was far enough away she likely didn't have any idea what just happened."
-    MCT "She was standing in front of both of us, so she didn't see. I on the other hand got quite a good look at a lot more skin on Alice's backside than the bottom part of her swimsuit intended to reveal."
-    MCT "This was not a little tear- only the edge of the fabric on the other side of the rip was hanging on for dear life where the bottom had split slightly off center, revealing nearly the entire middle of her backside."
-    MCT "Part of me wanted to stop to drink in the sight of Alice's fully exposed cheeks of her giant, plump ass. At this point however, between Alice's shocked, embarrassed expression, and the stupefied look on my face, Aida was going to realize something was up if I didn't think of something fast."
+    "My head would have snapped to attention from the sound, if my gaze hadn't already been transfixed on the sight unfolding before me."
+    "Alice had ripped her swimsuit."
+    "It was certainly loud enough for me to hear, but Aida was far enough away she likely didn't have any idea what just happened."
+    "She was standing in front of both of us, so she didn't see. I on the other hand got quite a good look at a lot more skin on Alice's backside than the bottom part of her swimsuit intended to reveal."
+    "This was not a little tear- only the edge of the fabric on the other side of the rip was hanging on for dear life where the bottom had split slightly off center, revealing nearly the entire middle of her backside."
+    "Part of me wanted to stop to drink in the sight of Alice's fully exposed cheeks of her giant, plump ass. At this point however, between Alice's shocked, embarrassed expression, and the stupefied look on my face, Aida was going to realize something was up if I didn't think of something fast."
     menu:
         "Pretend nothing happened.":
             jump BBW049C_c1
@@ -10748,59 +10750,59 @@ label BBW049C_c1:
     show PRG swimsuit-worried
     PRG "Something wrong?? You both look a little flushed.. Did you lose something in the water?"
     MC "What?! No, I don't think so."
-    MCT "I padded my swim trunk pockets in a feigned show of assurance."
+    "I padded my swim trunk pockets in a feigned show of assurance."
     MC "Nope, everything is fine!"
     PRG "Oh my! Alice, your face must have gotten sunburned."
-    MCT "Alice's cheeks were cherry red, but not for the reason Aida was thinking."
+    "Alice's cheeks were cherry red, but not for the reason Aida was thinking."
     PRG "Here, I have some aloe vera gel in my bag. I hope it helps..."
-    MCT "Aida walked back over to Alice, rummaging through her beach bag. Finally finding what she was looking for she looked up."
+    "Aida walked back over to Alice, rummaging through her beach bag. Finally finding what she was looking for she looked up."
     show PRG swimsuit-surprised
     PRG "Oh! Um... {size=-6}I see{/size}"
     show BBW swimsuit-angry
-    MCT "No longer having to be subtle Alice quickly tried to wrap her towel around herself."
-    MCT "Obviously flustered and not thinking clearly, she tried to wrap her beach towel up high over her waist, but that didn't leave enough length left for her to keep it wrapped around herself after going over her belly."
-    MCT "Embarrassed even further, she had to redo her attempt to cover herself, this time only around her hips, which easily stayed in place with the weight of her belly pressing down on the towel as she wore it."
+    "No longer having to be subtle Alice quickly tried to wrap her towel around herself."
+    "Obviously flustered and not thinking clearly, she tried to wrap her beach towel up high over her waist, but that didn't leave enough length left for her to keep it wrapped around herself after going over her belly."
+    "Embarrassed even further, she had to redo her attempt to cover herself, this time only around her hips, which easily stayed in place with the weight of her belly pressing down on the towel as she wore it."
     BBW "Hmph, so difficult to find quality materials. I expected this swimsuit to hold up for much longer than just one summer vacation. How disappointing."
     MCT "Well at least Alice was able to save face by blaming the swimsuit for being substandard quality."
     show BBW swimsuit-worried
     BBW "*{i}Sigh{/i}... Thank you Aida."
     BBW "Perhaps I didn't reapply sunscreen enough today. All the more reason for us to head inside after a long day."
     show PRG swimsuit-neutral
-    MCT "Alice's frustration quickly turned into dejection once she realized she couldn't even hide her own embarrassment anymore. I felt sad and frustrated for her."
-    MCT "She came to her family's vacation home to get away for awhile and take her mind off of the effects of her growth."
-    MCT "Getting to swim with me and Aida today seemed to have taken her mind off of it, only for this wardrobe fiasco to negate all of that by reminding her how fat she was getting."
-    MCT "I didn't think I had anything to say that could take the sting of that realization away, so I tried to change the subject."
+    "Alice's frustration quickly turned into dejection once she realized she couldn't even hide her own embarrassment anymore. I felt sad and frustrated for her."
+    "She came to her family's vacation home to get away for awhile and take her mind off of the effects of her growth."
+    "Getting to swim with me and Aida today seemed to have taken her mind off of it, only for this wardrobe fiasco to negate all of that by reminding her how fat she was getting."
+    "I didn't think I had anything to say that could take the sting of that realization away, so I tried to change the subject."
     MC "Alice, thanks for everything today. It was really fun."
     show PRG swimsuit-happy
     PRG "Yes, I agree. Thank you Alice! The food was great as well."
     MC "That too. I was blown away by the food."
     BBW "I'm glad you two enjoyed it. I had fun too... {size=-6}for the most part.{/size}. Right now, I'm looking forward to cleaning off with a warm shower. Let's head inside."
-    MCT "It was an unfortunately dour note to end on what had been an otherwise great day. I wondered if I could have better preserved Alice's feelings if I would have distracted Aida from noticing she had torn her swimsuit."
+    "It was an unfortunately dour note to end on what had been an otherwise great day. I wondered if I could have better preserved Alice's feelings if I would have distracted Aida from noticing she had torn her swimsuit."
     jump daymenu
 
 label BBW049C_c2:
     show PRG swimsuit-worried
     PRG "Is everything alright? You both look like something is wrong. Did you lose something in the water?"
-    MCT "I continued to run my beach towel through my hair as I took a couple of steps towards Aida, blocking her line of sight to Alice."
+    "I continued to run my beach towel through my hair as I took a couple of steps towards Aida, blocking her line of sight to Alice."
     MC "Oh, uh. It's nothing. I thought I lost my... uh, sandal. But I found it."
     PRG "I didn't think you wore any sandals today, Hotsure-san."
-    MCT "Damn! She noticed. Apparently, I needed a more elaborate deception than a simple distraction."
+    "Damn! She noticed. Apparently, I needed a more elaborate deception than a simple distraction."
     MC "Exactly! I forgot to bring it entirely! So therefore, it must still be in my guestroom. Nothing to worry about!"
     show BBW swimsuit-neutral
-    MCT "Looking back out of the corner of my eye, I could see Alice took the time afforded by my ruse to cover her bottom half with her beach towel, leaving Aida none the wiser."
+    "Looking back out of the corner of my eye, I could see Alice took the time afforded by my ruse to cover her bottom half with her beach towel, leaving Aida none the wiser."
     show PRG swimsuit-neutral
     PRG "Oh good!"
     BBW "Yes, quite the relief, though it is rather careless to forget something like that in the first place, Keisuke."
     MC "Heh, yeah that's true."
     BBW "Aida I'm sure you must be tired. Don't let us detain you if you would like to lie down for a while before dinner this evening."
     PRG "Yeah, I think I will. I am a little tired. Thanks Alice."
-    MCT "After watching Aida walk back towards the beach house Alice turned to me."
+    "After watching Aida walk back towards the beach house Alice turned to me."
     hide PRG with dissolve
     BBW "That was very chivalrous of you to act in order to preserve a lady's honor."
-    MCT "At this point I started to blush. Aida may have been oblivious to my act, but Alice was keen to what I had been up to."
+    "At this point I started to blush. Aida may have been oblivious to my act, but Alice was keen to what I had been up to."
     MC "I... I don't know what you mean. I guess I looked panicked for a second when I thought I lost a pair of sandals in the ocean. You know how concerned Aida is about that kind of stuff."
     show BBW swimsuit-happy at Position(xalign=0.5, yalign=1.0) with dissolve
-    MCT "Me playing dumb about the whole ordeal brought a coy smile to Alice's face."
+    "Me playing dumb about the whole ordeal brought a coy smile to Alice's face."
     $setAffection("BBW", 1)
     BBW "Sure, Keisuke."
     BBW "Thanks for a lovely day today. I had fun."
@@ -10808,9 +10810,9 @@ label BBW049C_c2:
     BBW "I'm glad you're enjoying yourself. I did have one question for you though."
     MC "What was that?"
     show BBW swimsuit-aroused
-    MCT "Alice's voice changed to a sultry tone as she sashayed her hips when she asked the question."
+    "Alice's voice changed to a sultry tone as she sashayed her hips when she asked the question."
     BBW "Did you get a good look?"
-    MCT "I didn't really know what to say, but the heat I felt on my cheeks at that moment was more than just the summer air."
+    "I didn't really know what to say, but the heat I felt on my cheeks at that moment was more than just the summer air."
     BBW "Hmm, that's what I thought."
     BBW "Keisuke dear, next time do remember to reapply sunscreen. Your face appears to have gotten sunburnt. {i}*Wink!*{/i}"
     jump daymenu
@@ -10819,60 +10821,60 @@ label BBW050:
     $setProgress("BBW", "BBW051")
     scene Summer Guest Bedroom with fade
     play music Peaceful
-    MCT "The early morning sunlight crept through my window, illuminating my room as I checked and rechecked my bags."
-    MCT "It was the day of our departure from this summer home. And even though the time here felt short, it felt like Alice and I had grown closer."
+    "The early morning sunlight crept through my window, illuminating my room as I checked and rechecked my bags."
+    "It was the day of our departure from this summer home. And even though the time here felt short, it felt like Alice and I had grown closer."
     MCT "Now if only I could remember where I left my brush..."
-    MCT "Despite my vicious upturning of the room, the brush was nowhere to be found. My mind traced back, trying to remember where I might have left it."
+    "Despite my vicious upturning of the room, the brush was nowhere to be found. My mind traced back, trying to remember where I might have left it."
     play sound Knock
     "{i}Knock Knock{/i}"
     Lee "Mornin' Mr. Kei!"
-    MCT "Lee opened the door before I even had a chance to answer his knock."
+    "Lee opened the door before I even had a chance to answer his knock."
     Lee "So, today's the day you're leavin' huh?"
     MC "Unfortunately, yeah. If I had the option, I'd rather stay here than go back to school."
     Lee "Can't say I blame ya..."
     Lee "Wait, why did I come here again?"
-    MCT "Lee turned his head down, deep in thought about why he had barged in my room."
+    "Lee turned his head down, deep in thought about why he had barged in my room."
     MC "Um..."
     Lee "Hang on, hang on- it'll come to me."
     Lee "AH-HA, right!"
-    MCT "Lee clapped his hands together enthusiastically, like he had just solved a difficult math problem."
+    "Lee clapped his hands together enthusiastically, like he had just solved a difficult math problem."
     Lee "Miss Alice says you should be out and packed within the hour!"
     MC "Yeah, I should've been down there already, but I can't find something important."
     Lee "Ah, sorry to hear that, Mr. Kei. I'll make sure to double check the entire house for you!"
-    MCT "Before even finishing that thought, Lee was out the door and speed-walking down the hall."
+    "Before even finishing that thought, Lee was out the door and speed-walking down the hall."
     MCT "...I didn't even get to tell him what to look for."
-    MCT "With a resigned sigh, I grabbed my bags and headed out. Maybe I would get lucky and he would find my brush."
-    MCT "Under all the covers, and between each cushion I checked, yet it was nowhere to be found."
+    "With a resigned sigh, I grabbed my bags and headed out. Maybe I would get lucky and he would find my brush."
+    "Under all the covers, and between each cushion I checked, yet it was nowhere to be found."
     scene Summer Balcony Exterior with fade
-    MCT "With a defeated sigh, I trudged over to the balcony. Alice was right though, the sunrise on this balcony is something to behold."
-    MCT "It was at that moment I felt something soft press into my back. No, not just soft, but warm as well. In fact I'm pretty sure I know what's behind me."
-    show BBW summer-ext-neutral with dissolve
+    "With a defeated sigh, I trudged over to the balcony. Alice was right though, the sunrise on this balcony is something to behold."
+    "It was at that moment I felt something soft press into my back. No, not just soft, but warm as well. In fact I'm pretty sure I know what's behind me."
+    show BBW summer-int-sg-neutral with dissolve
     BBW "If you are hoping, perchance, to find your brush fallen off the balcony... I am sorry to say that you will not find it there."
-    MCT "Turning around, I greeted Alice with a beaming smile. Just seeing her so relaxed put my stressed mind at ease."
+    "Turning around, I greeted Alice with a beaming smile. Just seeing her so relaxed put my stressed mind at ease."
     BBW "Here, you left it on the beach."
     MC "My brush! How did you find it?"
     BBW "The better question is how did you manage to lose it? It very clearly stands out in the sand."
     MC "I guess my mind was focused on... other things at the time."
-    show BBW summer-ext-happy
-    MCT "Her calm smile quickly turned into a pleased smirk."
+    show BBW summer-int-sg-happy
+    "Her calm smile quickly turned into a pleased smirk."
     BBW "If you continue to misplace this brush, I am going to have to make you wear it like a necklace."
-    show BBW summer-ext-neutral
+    show BBW summer-int-sg-neutral
     BBW "That way I won't have to worry about retrieving it for you anymore."
     MC "H-Hey, let's not be too hasty."
-    show BBW summer-ext-neutral-2
+    show BBW summer-int-sg-neutral-2
     BBW "I am just simply teasing you, Keisuke."
     MC "Oh, right. You had me going for a second there."
-    show BBW summer-ext-neutral
+    show BBW summer-int-sg-neutral
     BBW "I'm going to miss seeing the sunrise..."
-    MCT "Alice shifted her head to look over the balcony. Her eyes sparkled as they caught the morning lights."
+    "Alice shifted her head to look over the balcony. Her eyes sparkled as they caught the morning lights."
     MC "Me too, but hey there's always next year, yeah?"
-    show BBW summer-ext-worried
-    MCT "Alice looked a bit worried at what I said. Her jovial demeanor sank away slowly."
+    show BBW summer-int-sg-worried
+    "Alice looked a bit worried at what I said. Her jovial demeanor sank away slowly."
     BBW "Right..."
     MC "...You're worried that your growth will prevent you from coming here again, aren't you?"
-    show BBW summer-ext-surprised
+    show BBW summer-int-sg-surprised
     BBW "No! Not at all, not in the slightest."
-    show BBW summer-ext-worried
+    show BBW summer-int-sg-worried
     BBW "..."
     MC "Alice-"
     menu:
@@ -10883,33 +10885,34 @@ label BBW050:
 
 label BBW050_c1_1:
     $setAffection("BBW", 1)
-    show BBW summer-ext-haughty
+    show BBW summer-int-sg-haughty
     BBW "You're right, where there is a will there's a way."
     jump BBW050_c1_after
 
 label BBW050_c1_2:
     $setAffection("BBW", 3)
-    show BBW summer-ext-happy
-    MCT "Alice couldn't help but giggle at my comment."
+    show BBW summer-int-sg-happy
+    "Alice couldn't help but giggle at my comment."
     BBW "Oh yeah? And how would you do that?"
     MC "I'm sure that excavators aren't that expensive, we can get loads of sand from here and bring it back!"
-    MCT "My tone of voice was clearly joking, but I couldn't help but get into it as Alice started to laugh."
+    "My tone of voice was clearly joking, but I couldn't help but get into it as Alice started to laugh."
     MC "And if we need to, we can just put some seawater in a water bottle. And boom, we have a beach at home."
-    MCT "Alice's worry was completely gone. Her spirits had been lifted by my rather absurd suggestion."
+    "Alice's worry was completely gone. Her spirits had been lifted by my rather absurd suggestion."
     BBW "To be honest, I'm already taking the best thing back with me."
     MC "Oh yeah, and what's that?"
     BBW "You, Keisuke..."
-    MCT "I couldn't help but furiously blush at her comment. Thankfully, without my brush, my bangs obscured my red face."
+    "I couldn't help but furiously blush at her comment. Thankfully, without my brush, my bangs obscured my red face."
     jump BBW050_c1_after
 
 label BBW050_c1_after:
-    show BBW summer-ext-neutral
+    show BBW summer-int-sg-neutral
     BBW "We should probably check out with the butlers as well."
     MC "Good point."
     stop music
     scene Summer Living Room with fade
     play music BBW
     Lee "Mr. Kei, I couldn't find your brush anywhere!"
+    show BBW summer-int-sg-neutral with dissolve
     BBW "Oh, speak of the devil."
     MC "Heh, don't worry, Alice found it for me."
     Lee "Oh really? Huh, and here I was thinkin' about just secretly buying you a new one!"
@@ -10917,31 +10920,31 @@ label BBW050_c1_after:
     Lee "Ahhhh, right... but what if he used two normal brushes at once?"
     MC "Lee!"
     Lee "It's just a joke! Y'know?!"
-    MCT "Shino was staring daggers into Lee. Neither of them noticed Takada calmly approaching from behind."
+    "Shino was staring daggers into Lee. Neither of them noticed Takada calmly approaching from behind."
     Takada "It is good to see everyone is in high spirits on the day of departure."
     Shino "I wouldn't say that exactly..."
     Shino "That reminds me, did you pack Mr. Hotsure's luggage like I told you?"
     Lee "I was gonna, but he already packed up himself."
-    MCT "Shino shot her gaze over to me, eyes stern with doubt."
+    "Shino shot her gaze over to me, eyes stern with doubt."
     Shino "Is this true?"
     MC "Y-Yeah, I always pack my own bags."
-    show BBW summer-ext-haughty
+    show BBW summer-int-sg-haughty
     BBW "Hmmph, you try to pack your own bags, but who helps you with space management?"
     MC "...I mostly pack my own bags."
     Takada "There is no need to be so strict today, Shino. The young miss and her companions are leaving soon."
-    show BBW summer-ext-neutral-2
+    show BBW summer-int-sg-neutral-2
     BBW "That is correct, Takada. We simply wanted to thank you all for being here for us."
     Takada "I wouldn't miss it for the world."
     Shino "I'll always be by your side to help, miss Alice."
     Lee "Yeah! This was great fun!"
-    MCT "Takada chuckled as Shino continued to scowl."
+    "Takada chuckled as Shino continued to scowl."
     Takada "The transport is waiting for you, we will load your luggage onto it."
     scene Summer House Entrance with fade
-    MCT "After saying goodbyes, and making sure every bit of luggage was on board, we set off."
+    "After saying goodbyes, and making sure every bit of luggage was on board, we set off."
     stop music
     scene RV Interior with fade
     play music Peaceful
-    MCT "Looking out the window, I saw the servants slowly shrink into the distance. The home disappearing from sight not long after them."
+    "Looking out the window, I saw the servants slowly shrink into the distance. The home disappearing from sight not long after them."
     show BBW summer-int-sg-happy with dissolve
     BBW "Keisuke, thank you."
     MC "Huh, for what?"
@@ -10958,15 +10961,14 @@ label BBW050_c1_after:
     show BBW summer-int-sg-happy
     BBW "But once I came to the conclusion that you could join me, it felt like a weight had been lifted."
     BBW "So... Thank you, is all I want to say."
-    MCT "Alice blushed slightly, her smile sincere."
+    "Alice blushed slightly, her smile sincere."
     show BBW summer-int-sg-haughty
     BBW "It's a long way back to the campus, and my time was spent preparing to leave this morning."
     BBW "I am going to rest for the rest of the return trip, and I recommend that you do the same."
     show BBW summer-int-sg-neutral
-    MCT "The rest of the trip back was calm, Alice quietly resting as my own eyelids grew heavy."
-    MCT "Even though I know that the only thing waiting for me is more school work, the fact that I'll still have Alice by my side, makes everything seem like it'll turn out fine."
+    "The rest of the trip back was calm, Alice quietly resting as my own eyelids grew heavy."
+    "Even though I know that the only thing waiting for me is more school work, the fact that I'll still have Alice by my side, makes everything seem like it'll turn out fine."
     jump daymenu
-
 
 label BBW051:
     scene Dorm Interior with fade
@@ -11258,7 +11260,7 @@ label BBW051_c3_after:
         "After a couple minutes we begin retaking our seats. Alice soon returns with a small bag of popcorn as the curtains open again to continue the show."
         scene black with fade
     if getFlag("BBW051_c2_1"):
-        $setTime(TimeEnum.EVE)
+        $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
         "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
         scene BBW dress-sad with dissolve
@@ -11270,9 +11272,11 @@ label BBW051_c3_after:
         show BBW dress-neutral
         BBW "No, this is a confrontation I've been avoiding for a while now."
         MC "Is there some way I can help?"
-        BBW "Well that there is something I've wanted to ask you about. As you know Aida is in no shape to be assisting me full time. I highly doubt I'm done growing but things are already becoming more difficult. Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
+        BBW "Well that there is something I've wanted to ask you about. As you know Aida is in no shape to be assisting me full time. I highly doubt I'm done growing but things are already becoming more difficult."
+        BBW "Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
         show BBW dress-haughty
-        BBW "I have taken for granted my family's servants and Aida, but it is becoming clear that assistance will become not just a convenience for me but a necessity. The thought of being dependent like that troubles me, more so the fear that I would become a burden. Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
+        BBW "I have taken for granted my family's servants and Aida, but it is becoming clear that assistance will become not just a convenience for me but a necessity."
+        BBW "The thought of being dependent like that troubles me, more so the fear that I would become a burden. Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
         MC "Of course, I'll help you if you need it. I am your boyfriend after all."
         "She smiles and we hold hands all the way back to the school. Letting the music of the night close out our date."
     jump daymenu
