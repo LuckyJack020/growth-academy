@@ -5173,6 +5173,7 @@ label BBW030_c1_2:
 
 label BBW031:
     $setSize(3)
+    $setTimeFlag("size3")
     $setProgress("BBW", "BBW032")
     scene Dorm Interior with fade
     "Alice's illness had only lasted 24 hours, which meant only one thing."
@@ -10972,6 +10973,8 @@ label BBW050_c1_after:
 
 label BBW051:
     scene Dorm Interior with fade
+    $setSize(4)
+    $setTimeFlag("size4")
     $setProgress("BBW", "BBW052")
     "I have the tickets in hand when my phone buzzes from a text. It's from Alice."
     BBWCell "Head over when you are presentable, I'm ready."

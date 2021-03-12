@@ -521,6 +521,7 @@ init python:
             routeenabled[girl] = True
 
     def lockRoute(girl):
+        global routelock
         if girl in girllist:
             routelock = girl
 
@@ -1003,6 +1004,7 @@ label startevent:
 
 label train:
     stop music
+    $gametime = TimeEnum.DAY
     $renpy.block_rollback()
     $spspent += 1
     $showQuickMenu = True

@@ -7891,6 +7891,7 @@ label PRG041:
     scene Campus Center with fade
     "I sped walked down the hall and out into the courtyard. I chose the entrance nearest to the infirmary and worked my way through the building until I was just outside the door."
     $setSize(4)
+    $setTimeFlag("size4")
 
     scene Nurse Office with fade
     Receptionist "May I help you with something?"
@@ -15378,6 +15379,7 @@ label PRG060:
     scene Dorm Interior with fade
     play music Schoolday
     $setSize(5)
+    $setTimeFlag("size5")
     "Rather than my day starting with my alarm going off and me blasting obscenities in my head as I nearly hurled my ringing phone across the room, I awoke to the sound of my phone ringing instead."
     "Sitting up, I looked over. I so rarely got phone calls, that, when I did receive one, it almost made me panic a bit."
     "When I saw the caller ID, my heart slammed to a halt in my chest and my blood ran as cold as ice. The panic had a reason for its existence now."

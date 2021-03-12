@@ -4154,6 +4154,7 @@ label FMG029:
 label FMG030:
     $setProgress("FMG", "FMG031")
     $setSize(3)
+    $setTimeFlag("size3")
     scene Dorm FMG with fade
     play music FMG
     "Akira had invited me to spend the night at her dorm after our workout session. I figured I'd use this as a chance to strengthen our relationship."
@@ -4886,6 +4887,9 @@ label FMG034:
     MC "Looking forward to you putting her in her place."
     "With that issue behind us, we finally headed to the gym. She got so worked up that we ended up doing a full routine anyways."
     jump daymenu
+
+label FMG035: #tmp
+    jump FMG038
 
 label FMG038:
     $setProgress("FMG", "FMG044")

@@ -10866,6 +10866,7 @@ label AE049:
 label AE050:
     $setProgress("AE", "AE051")
     $setSize(4)
+    $setTimeFlag("size4")
     #SCENE NIGHTTIME
     scene Dorm Interior with fade
     play music Rain
@@ -11398,7 +11399,6 @@ label AE050_after3:
 
 label AE051:
     $setProgress("AE", "AE052")
-    $setSize(4)
     #SCENE MORNING
     scene black with fade
     AE "Mmn."
@@ -16124,6 +16124,7 @@ label AE069:
 
 label AE070:
     $setSize(5)
+    $setTimeFlag("size5")
     $setProgress("AE", "AE071")
     scene black with fade
     "I'm sorry..."

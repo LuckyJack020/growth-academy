@@ -137,7 +137,7 @@ image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/NYI.png"
 image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
-image Theater Exterior = DynamicImage("Graphics/ui/bg/theater_exterior-[gametime].png")
+image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior-[gametime].png")
 image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
 image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
@@ -1204,9 +1204,10 @@ init 2 python:
     eventlibrary['FMG032'] = {"name": "Chumby the Cat", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                           "location": "pool",                     "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG033", "obsflags": [],               "conditions": []}
     eventlibrary['FMG033'] = {"name": "Dress Malfunction", "girls": ["FMG", "BBW"], "type": EventTypeEnum.CORE,                                 "location": "classroom",                "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG034", "obsflags": [],               "conditions": []}
     eventlibrary['FMG034'] = {"name": "Big and Bad", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG038", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG035'] = {"name": "Yokai", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "dorminterior",             "priority": PrioEnum.NONE, "sp": 7,     "next": "FMG044", "obsflags": [],               "conditions": []} #tmp
     eventlibrary['FMG038'] = {"name": "Yokai", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                                              "location": "dorminterior",             "priority": PrioEnum.NONE, "sp": 7,     "next": "FMG044", "obsflags": [],               "conditions": []}
     eventlibrary['FMG044'] = {"name": "Shower Time", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                              "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG045", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG045'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 7,     "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['FMG045'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],                     "conditions": []}
 
     #Optional
     eventlibrary['FMG004'] = {"name": "Journey of 1000 Miles", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}

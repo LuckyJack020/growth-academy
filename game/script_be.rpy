@@ -7199,7 +7199,7 @@ label BE039:
     show BE happy with dissolve
     BE "Don't let her scare ya, Kei-chan. Kokutan isn't even in the fortune telling club or anything like that. She's a tailor."
     MC "Ah, I suppose that explains the uniform."
-    "Kokutan's uniform was decked out with a lot more lace than should be expected from the Seichou uniform. A nice trail of black ruffles along the bottom, with a matching bow on theteh front of her skirt."
+    "Kokutan's uniform was decked out with a lot more lace than should be expected from the Seichou uniform. A nice trail of black ruffles along the bottom, with a matching bow on the front of her skirt."
     "The cuffs of her sleeves were similarly dyed black, along with the fancy lace covering the buttons on her blouse. All the black she wore matched the dark color of her hair, wrapped up into a ponytail."
     "She'd also seemed to have done something with her sleeves to make the shoulders puffier, giving her a look like she belonged more in Victorian England than modern Japan."
     Kokutan "Ah, you like? It's been fastened by a squadron of skeletal warriors, with silks dyed from the blackened blood of angelic saviors."
