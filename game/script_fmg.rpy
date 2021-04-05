@@ -4155,6 +4155,7 @@ label FMG030:
     $setProgress("FMG", "FMG031")
     $setSize(3)
     $setTimeFlag("size3")
+    $lockRoute("FMG")
     scene Dorm FMG with fade
     play music FMG
     "Akira had invited me to spend the night at her dorm after our workout session. I figured I'd use this as a chance to strengthen our relationship."

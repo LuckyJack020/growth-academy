@@ -13009,7 +13009,7 @@ label AE056_c1_after:
     play music Steamy
     #NSFW: short(?)
     "As we sat together on the edge of her bed, her demeanor seemed to change, she pushed into me more forcefully as we sat down, her hips spilling over the top of mine and pushing into my side."
-    "As we kissed, I took of her headband and placed it amongst her books, causing her raven black hair to fall loosely in front of her glasses before she sweeped one side of her locks behind her ear."
+    "As we kissed, I took off her headband and placed it amongst her books, causing her raven black hair to fall loosely in front of her glasses before she sweeped one side of her locks behind her ear."
     "As my hands rode gingerly up her skirt, I reared my hands back and gave a hearty slap to her sizable rear."
     "{i}SMACK{/i}"
     show AE surprised
@@ -13662,7 +13662,7 @@ label AE059:
     AE "Really?"
     MC "Yeah. You were cleaning your glasses after the rain."
     AE "Hmm~"
-    "Shiori-san took of her glasses. It was the first time I think we ever truly got a glimpse at each other's full faces."
+    "Shiori-san took off her glasses. It was the first time I think we ever truly got a glimpse at each other's full faces."
     MC "Yep. Just as beautiful as you've always been."
     show AE happy
     AE "Ehehe~"

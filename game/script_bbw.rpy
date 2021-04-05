@@ -8024,7 +8024,7 @@ label BBW043:
     BBW "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
     show PRG neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
     show FMG neutral at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
-    show Natsuko at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
     show BE neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
     MCT "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
     if isEventCleared("BBW009"):
@@ -8094,7 +8094,7 @@ label BBW043:
     MCT "If I couldn't get Natsuko to see reason, maybe I could exploit her competitive nature to give us a better shot."
     hide BE with dissolve
     MC "Natsuko, don't you want to win?"
-    show Natsuko at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "Of course! That weakling's team is barely winning, even with Nikumaru-san's help. If we beat her, it would just solidify the fact she's dead weight."
     MC "I wouldn't really characterize Mizutani-san as any of that, but might I suggest you guard Alice instead, since she's the better player and you're the best one on our team, instead of constantly going after Mitzutani-san?"
     Natsuko "I see. Perhaps guarding the anchor hasn't been the best use of my abilities for the team. I think you're right, we should try that."
