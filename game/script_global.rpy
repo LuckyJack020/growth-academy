@@ -16,6 +16,8 @@ define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suf
 define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
 
+define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
+
 define Akihiro = Character('Akihiro', color="#C0C0C0")
 define Ama = Character('Amatsu-san', color="#ffc3b5")
 define Chibuki = Character('Chibuki', color="#CC33FF")
@@ -106,7 +108,9 @@ image School Front = "Graphics/ui/bg/schoolfront.png"
 image School Inner = "Graphics/ui/bg/schoolinner.png"
 image Gate Front = "Graphics/ui/bg/gatefront.png"
 image School Planter = "Graphics/ui/bg/schoolplanter.png"
-image Hallway = "Graphics/ui/bg/hallway.png"
+image Hallway = DynamicImage("Graphics/ui/bg/schoolhallway1_[gametime].png")
+image Hallway2 = DynamicImage("Graphics/ui/bg/schoolhallway2_[gametime].png")
+image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].png")
 image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png")
 image Dorm Exterior = "Graphics/ui/bg/dormexterior.png"
 image Dorm Interior = "Graphics/ui/bg/dorminterior.png"
@@ -139,6 +143,7 @@ image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
 image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior-[gametime].png")
 image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
+image Field Winter = DynamicImage("Graphics/ui/bg/field_[gametime].png") #TBI
 image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Store = "Graphics/ui/bg/NYI.png"
 image Game Store = "Graphics/ui/bg/gamestore.png"
@@ -154,6 +159,9 @@ image Japanese Room = DynamicImage("Graphics/ui/bg/japaneseroom_[gametime].png")
 image Club = "Graphics/ui/bg/NYI.png"
 image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
 image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
+image Mountains Tori Gate = "Graphics/ui/bg/mountains_gate.png"
+image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.png"
+
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
@@ -192,6 +200,8 @@ image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
 image Courtyard GTS = "Graphics/ui/bg/NYI.png"
 
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
+
+image Dorm Tomoko = DynamicImage("Graphics/ui/bg/NYI.png")
 
 #CG + Images
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
@@ -236,11 +246,14 @@ image cg BE028 = ConditionSwitch(
     None, "Graphics/ui/gallery/BE028.png")
 image cg BE031 = "Graphics/ui/gallery/BE031.png"
 image cg BE031b = "Graphics/ui/gallery/BE031b.png"
+image cg BE031c = "Graphics/ui/gallery/BE031c.png"
 image cg BE032 = "Graphics/ui/gallery/BE032.png"
 
 image cg GTS025 = "Graphics/ui/gallery/GTS025.png"
 image cg GTS035 = "Graphics/ui/gallery/GTS035.png"
 
+image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
+image cg PRG020b = "Graphics/ui/gallery/PRG020_close.png"
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
 
@@ -274,22 +287,24 @@ image AE ass = DynamicImage("Graphics/AE/[globalsize]/ass.png")
 image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/ass.png")
 
 image AE nude-neutral = DynamicImage("Graphics/AE/[globalsize]/nude-neutral.png")
-image AE nude-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE nude-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
+image AE nude-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/nude-neutral-annoyed.png")
+image AE nude-neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/nude-neutral-eyebrow.png")
+image AE nude-neutral-2 = DynamicImage("Graphics/AE/[globalsize]/nude-neutral-2.png")
 image AE nude-neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE nude-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
+image AE nude-neutral-smug = DynamicImage("Graphics/AE/[globalsize]/nude-neutral-smug.png")
 image AE nude-happy = DynamicImage("Graphics/AE/[globalsize]/nude-happy.png")
-image AE nude-smile = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE nude-sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE nude-sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE nude-surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE nude-angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE nude-angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE nude-angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE nude-aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
+image AE nude-happy-2 = DynamicImage("Graphics/AE/[globalsize]/nude-happy-2.png")
+image AE nude-sad = DynamicImage("Graphics/AE/[globalsize]/nude-sad.png")
+image AE nude-sad-2 = DynamicImage("Graphics/AE/[globalsize]/nude-sad-2.png")
+image AE nude-surprised = DynamicImage("Graphics/AE/[globalsize]/nude-surprised.png")
+image AE nude-angry = DynamicImage("Graphics/AE/[globalsize]/nude-angry.png")
+image AE nude-angry-2 = DynamicImage("Graphics/AE/[globalsize]/nude-angry-2.png")
+image AE nude-angry-3 = DynamicImage("Graphics/AE/[globalsize]/nude-angry-3.png")
+image AE nude-aroused = DynamicImage("Graphics/AE/[globalsize]/nude-aroused.png")
+image AE nude-aroused-2 = DynamicImage("Graphics/AE/[globalsize]/nude-aroused-2.png")
 image AE nude-embarrassed = DynamicImage("Graphics/AE/[globalsize]/nude-embarrassed.png")
-image AE nude-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE nude-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
+image AE nude-aroused-3 = DynamicImage("Graphics/AE/[globalsize]/nude-aroused-3.png")
+image AE nude-aroused-4 = DynamicImage("Graphics/AE/[globalsize]/nude-aroused-4.png")
 image AE nude-glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
 image AE nude-glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
 
@@ -647,6 +662,38 @@ image BE wink = Composite(
         "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
         None, Null())
     )
+image BE worried = Composite(
+    (513, 686),
+    (0, 0), ConditionSwitch(
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/worried.png"),
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/worried.png"),
+        None, Null()),
+    (0, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null()),
+    (24, 0), ConditionSwitch(
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        None, Null())
+    )
+
+
+image BE athletic-angry = DynamicImage("Graphics/BE/[globalsize]/athletic-angry.png")
+image BE athletic-aroused = DynamicImage("Graphics/BE/[globalsize]/athletic-aroused.png")
+image BE athletic-confused = DynamicImage("Graphics/BE/[globalsize]/athletic-confused.png")
+image BE athletic-doubt = DynamicImage("Graphics/BE/[globalsize]/athletic-doubt.png")
+image BE athletic-embarrassed = DynamicImage("Graphics/BE/[globalsize]/athletic-embarrassed.png")
+image BE athletic-happy = DynamicImage("Graphics/BE/[globalsize]/athletic-happy.png")
+image BE athletic-neutral = DynamicImage("Graphics/BE/[globalsize]/athletic-neutral.png")
+image BE athletic-sad = DynamicImage("Graphics/BE/[globalsize]/athletic-sad.png")
+image BE athletic-seductive = DynamicImage("Graphics/BE/[globalsize]/athletic-seductive.png")
+image BE athletic-shrug = DynamicImage("Graphics/BE/[globalsize]/athletic-shrug.png")
+image BE athletic-surprised = DynamicImage("Graphics/BE/[globalsize]/athletic-surprised.png")
+image BE athletic-surprised-2 = DynamicImage("Graphics/BE/[globalsize]/athletic-surprised-2.png")
+image BE athletic-unique = DynamicImage("Graphics/BE/[globalsize]/athletic-unique.png")
+image BE athletic-wink = DynamicImage("Graphics/BE/[globalsize]/athletic-neutral.png")
+image BE athletic-worried = DynamicImage("Graphics/BE/[globalsize]/athletic-worried.png")
 
 image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
@@ -687,7 +734,7 @@ image GTS blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/wink.png")
 image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/unique.png")
 image GTS unique-2 = DynamicImage("Graphics/GTS/[globalsize]/unique-2.png")
-image GTS dispaired-thought = DynamicImage("Graphics/GTS/[globalsize]/dispaired-thought.png")
+image GTS despaired-thought = DynamicImage("Graphics/GTS/[globalsize]/despaired-thought.png")
 
 image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
 image GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png") #nyi
@@ -704,12 +751,13 @@ image GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]/embarrassed.png")
 image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/wink.png")
 image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/unique.png")
 image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/unique-2.png")
-image GTS_S dispaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/dispaired-thought.png")
+image GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/despaired-thought.png")
 
 image GTS casual-neutral = DynamicImage("Graphics/GTS/[globalsize]/casual-neutral.png")
 image GTS casual-happy = DynamicImage("Graphics/GTS/[globalsize]/casual-happy.png")
 image GTS casual-surprised = DynamicImage("Graphics/GTS/[globalsize]/casual-surprised.png")
 image GTS casual-wink = DynamicImage("Graphics/GTS/[globalsize]/casual-wink.png")
+image GTS casual-aroused = DynamicImage("Graphics/GTS/[globalsize]/casual-aroused.png")
 
 image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png") #nyi
@@ -726,7 +774,7 @@ image side GTS_S blush = DynamicImage("Graphics/GTS/[globalsize]_s/side-embarras
 image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png")
 image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique.png")
 image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique-2.png")
-image side GTS_S dispaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side-dispaired-thought.png")
+image side GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side-despaired-thought.png")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
@@ -751,6 +799,7 @@ image PRG satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.png")
 image PRG angry-2 = DynamicImage("Graphics/PRG/[prgsize]/angry-2.png")
 image PRG scared = DynamicImage("Graphics/PRG/[prgsize]/scared.png")
 image PRG grope = DynamicImage("Graphics/PRG/[prgsize]/grope.png")
+image PRG embarrassed = DynamicImage("Graphics/PRG/[prgsize]/embarrassed.png")
 
 image PRG dress-neutral = DynamicImage("Graphics/PRG/[prgsize]/dress-neutral.png")
 image PRG dress-happy = DynamicImage("Graphics/PRG/[prgsize]/dress-happy.png")
@@ -766,6 +815,7 @@ image PRG dress-sad = DynamicImage("Graphics/PRG/[prgsize]/dress-sad-2.png")
 image PRG dress-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/dress-sad-2.png")
 image PRG dress-admire = DynamicImage("Graphics/PRG/[prgsize]/dress-happy.png")
 image PRG dress-scared = DynamicImage("Graphics/PRG/[prgsize]/dress-scared.png")
+image PRG dress-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/dress-embarrassed.png")
 
 image PRG nude-neutral = DynamicImage("Graphics/PRG/[prgsize]/nude-neutral.png")
 image PRG nude-happy = DynamicImage("Graphics/PRG/[prgsize]/nude-happy.png")
@@ -788,6 +838,7 @@ image PRG nude-angry-2 = DynamicImage("Graphics/PRG/[prgsize]/nude-angry-2.png")
 image PRG nude-grope = DynamicImage("Graphics/PRG/[prgsize]/nude-grope.png")
 image PRG nude-scared = DynamicImage("Graphics/PRG/[prgsize]/nude-scared.png")
 image PRG nude-nervous = DynamicImage("Graphics/PRG/[prgsize]/nude-nervous.png")
+image PRG nude-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/nude-embarrassed.png")
 
 image PRG cow-neutral = DynamicImage("Graphics/PRG/[prgsize]/cow-neutral.png")
 image PRG cow-happy = DynamicImage("Graphics/PRG/[prgsize]/cow-happy.png")
@@ -805,6 +856,7 @@ image PRG cow-lactate = DynamicImage("Graphics/PRG/[prgsize]/cow-lactate.png")
 image PRG cow-admire = DynamicImage("Graphics/PRG/[prgsize]/cow-admire.png")
 image PRG cow-scared = DynamicImage("Graphics/PRG/[prgsize]/cow-scared.png")
 image PRG cow-grope = DynamicImage("Graphics/PRG/[prgsize]/cow-grope.png")
+image PRG cow-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/cow-embarrassed.png")
 
 image PRG swimsuit-neutral = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-neutral.png")
 image PRG swimsuit-happy = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-happy.png")
@@ -829,10 +881,12 @@ image PRG swimsuit-satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.pn
 image PRG swimsuit-angry-2 = DynamicImage("Graphics/PRG/[prgsize]/angry-2.png")
 image PRG swimsuit-scared = DynamicImage("Graphics/PRG/[prgsize]/scared.png")
 image PRG swimsuit-grope = DynamicImage("Graphics/PRG/[prgsize]/grope.png")
+image PRG swimsuit-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-embarrassed.png")
 
 image PRG pj-neutral = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-unique = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
+image PRG pj-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 
 image side MC = "Graphics/side/mc.png"
 image side BECell = ConditionSwitch("getVar('BEMode') == 'Feminine'", DynamicImage("Graphics/side/BE-fem-[globalsize].png"),
@@ -914,6 +968,8 @@ image Tako nohat-unique = "Graphics/minor/tako-nohat-unique.png"
 image Tako nohat-sad = "Graphics/minor/tako-nohat-sad.png"
 image Tako nohat-surprised = "Graphics/minor/tako-nohat-surprised.png"
 
+image Kokutan neutral = "Graphics/minor/kokutan-neutral.png"
+
 image Akihiro neutral = "Graphics/minor/akihiro-neutral.png"
 image Miko neutral = "Graphics/minor/miko-neutral.png"
 image Minami neutral = "Graphics/minor/minami-neutral.png"
@@ -946,6 +1002,7 @@ define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
+define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 
 define audio.EventStart = "Audio/SFX/sfx_eventstart.ogg"
 define audio.AlarmClock = "Audio/SFX/sfx_alarmclock.ogg"

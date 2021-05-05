@@ -915,7 +915,7 @@ label GTS010_after:
     jump daymenu
 
 label GTS011:
-    $setProgress("GTS", "GTS014")
+    $setProgress("GTS", "GTS013")
     scene Dorm Exterior with fade
     "Journeying around the dorm, I heard whispers hang around behind me. The occasional giggle accompanied them as some girls watched me."
     "I could imagine it now, some small-time rumors about me visiting a girl at her dorm. The same happened when I saw my sister at the start of the year, but I had learned to merely ignore it."
@@ -993,7 +993,7 @@ label GTS011:
     jump daymenu
 
 label GTS011b:
-    $setProgress("GTS", "GTS014")
+    $setProgress("GTS", "GTS013")
     scene School Planter with fade
     play music Busy
     "I stepped into the garden expecting the normal serenity one would find there, but surprisingly it was more active than usual."
@@ -1148,6 +1148,397 @@ label GTS012_after:
     MC "Yeah... this subject's been kind of giving me a hard time. Thanks though, I really appreciate it."
     GTS "Anytime, Hotsure-san. We are study partners, after all, and it'd show poorly on me if I let you down already."
     "She giggled very softly, which resulted in a chuckle from me as we relaxed for a little longer before needing to go our separate ways."
+    jump daymenu
+
+label GTS013:
+    $setProgress("GTS", "GTS014")
+    scene Campus Center with fade
+    play music Peaceful
+    "{i}Shkt shkt shkt{/i}"
+    MC "Hm."
+    "{i}Pff pff{/i}"
+    "{i}Shkt shkt shkt shkt shkt{/i}"
+    MC "Hmmm..."
+    if getSkill("Academics") > 4:
+        MCT "The videos did not prepare me for this."
+        "On a whim one calm Sunday afternoon, I found myself sketching an architectural diagram of the structure of the class building."
+        "And yet, despite walking those halls almost every day for the past month..."
+        MCT "How {i}did{/i} they place those ramps?"
+    else:
+        "I was pretty satisfied with the ninja I was drawing that calm Sunday afternoon. Nice shading on the hood, the fire on his katana was good and wavy."
+        "But try after try, I couldn't make the face of his pet tiger look decent. Its eyes were too far apart, or the stripes looked wrong, or it looked like it was screaming into the void, et cetera."
+    "I absently bounced my eraser tip off the pad as my brain spun in slow, creaky circles."
+    MCT "...I {i}am{/i} feeling kind of hungry..."
+    MCT "And there's a vending machine just inside the gym over there..."
+    "Thus resolved, I slid my pencil into the spiral binding, closed the book, and stood."
+    "The vending machine had just come into view within the concrete confines of the gym; that was when I spotted Naomi walking like a Heian countess my way, carrying a plate; the pristine white tea towel covering it wavered more for the breeze than her motion."
+    show GTS neutral with dissolve
+    GTS "Good afternoon, Hotsure-san. How do you do?"
+    MC "Hey Yamazaki-san, I'm doing fine, thanks. What's that there?"
+    GTS "It's a batch of shortbread cookies I made."
+    MC "Oh, sweet, you made cookies? Can I try one?"
+    show GTS surprised
+    GTS "Well, I'm not sure they would be to your liking, Hotsure-san. This is my first time making this sort of thing."
+    menu:
+        "Please? I'm super hungry and they're probably just fine.":
+            jump GTS013_c1_1
+        "Well, if you insist. What are they for?":
+            jump GTS013_c1_2
+
+label GTS013_c1_1:
+    $setFlag("GTS013_try")
+    if isEventCleared("GTS012"):
+        MC "If it's anything like your tea, I'm sure it'll taste lovely."
+    else:
+        MC "I'm sure you put heart and soul into them like everything you do."
+    show GTS embarrassed
+    "She glanced down at the cookies, biting her lips inwards, then looked back at me and nodded; she crouched down until the platter was at my chest level and lifted the tea towel."
+    "Beneath it, like sugary embers, was a pile of crumbly-looking rounded square cookies which nigh glowed a golden cream color. I grabbed one from the edge and held it before my face."
+    MC "Thanks, Yamazaki-san."
+    "She looked down at the cookies and nodded."
+    "And so, I brought it to my mouth and bit down with a crunch."
+    $renpy.music.set_pause(True)
+    scene black
+    play sound "<from 0.0 to 2.0>Audio/SFX/sfx_bell.mp3"
+    MC "Ng!"
+    MCT "This is it. This is how I go out. I'll leave this world face down in a puddle of spittle and crumbs."
+    "After penetrating the rock-like shards of the cookie's flesh, I found the texture gritty and the flavor an obscene subversion of all that is saccharine and mild. The anti-sweet aftertaste stuck to my gums like a bitter ghost."
+    scene Campus Center with fade
+    show GTS surprised with dissolve
+    $renpy.music.set_pause(False)
+    MC "Could use some salt."
+    $setAffection("GTS", -2)
+    show GTS sad
+    GTS "I take your meaning."
+    "My stomach sank to depths I didn't think the human body possessed."
+    MC "Sorry, that was really rude of me, it just... kinda... caught me off guard."
+    show GTS neutral
+    GTS "Well, that's why I'm trying to learn."
+    GTS "In fact, since you've already sampled my work as it were, perhaps you could provide a second opinion once Kodama-san has shown me the basics."
+    GTS "Would you like to come with me to my lesson?"
+    MCT "Well I {i}am{/i} still hungry."
+    MC "Sure, sounds like a hoot."
+    jump GTS013_c2
+
+label GTS013_c1_2:
+    show GTS happy-2
+    GTS "Kodama-san is showing me how to bake like she does, and these are for her to judge how I can most improve."
+    MC "Oh, wow, that's cool. You're really going the extra mile to be a good hostess."
+    show GTS neutral
+    GTS "It's only the right thing to do, by my reckoning."
+    GTS "In fact, would you perhaps like to join me? I believe you could provide a much-needed second opinion."
+    MCT "You're too good, Hotsure, too good."
+    MC "Yeah, I'd love to. "
+    if getAffection("PRG") > 6:
+        extend "Maybe we'd both learn a thing or two. Kodama-san really knows her stuff."
+        show GTS happy
+        GTS "Manifestly."
+        show GTS neutral
+    jump GTS013_c2
+
+label GTS013_c2:
+    GTS "Very good, then. We had agreed to meet in the cooking classroom."
+    MC "After you, Yamazaki-san."
+    "She resumed walking with me following after; even with her taking such methodic, piecemeal steps to keep the plate so motionless, it was a trick to keep pace."
+    stop music
+    scene Hallway with fade
+    show GTS neutral with dissolve
+    "And yet, as we came within sight of the heavy doors it was she who puffed out a single, muted, yet alien sharp breath."
+    menu:
+        "Feeling a bit nervous?":
+            jump GTS013_c2_1
+        "(Say nothing)":
+            jump GTS013_c3
+
+label GTS013_c2_1:
+    GTS "A bit. One never aspires to look the fool."
+    GTS "Rationally, however, there is nothing to fear. Kodama-san is a long-suffering woman."
+    MC "For sure, yeah. Worst case scenario, I try to make a batch and set the building on fire."
+    GTS "Well, we did both agree to furnish our own supplies."
+    "I gave her my most appreciative nod."
+    MC "Sensible."
+    jump GTS013_c3
+
+label GTS013_c3:
+    "Naomi, in a smooth motion, opened the door for us and stepped inside; my face sank into the gregarious, tickling scent of a labor of love at once."
+    scene Cooking Classroom with fade
+    play music PRG
+    show GTS neutral at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG worried at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
+    "A labor indeed, as we found Aida standing behind the counter, scanning an array of ingredients and instruments arranged with impeccable consideration for both ease of instruction and Naomi's reach."
+    "Her hands were folded as she observed in silence, the young queen ruling softly but surely."
+    show PRG neutral at Transform(xzoom=-1) with dissolve
+    PRG "Hello, you two."
+    "She bowed to us and we to her."
+    PRG "Hotsure-san, ah... are you here to make something too?"
+    MC "Oh, no, I'm just here to observe. Yamazaki-san invited me to try out her finished batch."
+    PRG "Oh, uhm, okay."
+    GTS "Thank you kindly for your patience, Kodama-san."
+    PRG "I-It's no problem."
+    PRG "So, um, first... we need to get the oven heated to 177 Celsius."
+    show GTS happy
+    GTS "Right away!"
+    show PRG neutral at Transform(xzoom=1) with dissolve
+    show PRG neutral at Position(xpos=0.50, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    "Naomi set her plate aside and tapped the oven screen to the tune of a staccato of beeps, winding down to a halt at the display of 177."
+    show GTS at Transform(xzoom=-1) with dissolve
+    "Meanwhile, Aida was peering under the tea towel at Naomi's cookies, smiling."
+    PRG "Are these the ones you made, then?"
+    if getFlag("GTS013_try"):
+        show GTS sad
+        GTS "They are, but I would like to tell you in advance that the taste may not be up to snuff."
+        show PRG happy
+        PRG "It's okay, Yamazaki-san. Everyone has to start somewhere."
+    else:
+        GTS "Yes, they are."
+        PRG "They're really pretty."
+        GTS "That's very kind of you, Kodama-san. Of course, I wouldn't expect them to live up to appearances. I'm rather unpracticed."
+        PRG "Well, I don't think there's anything wrong with that. I-I'll do what I can to help you."
+    "She brought one golden wafer to her face, and slipped one corner past her lips. With a modicum of effort, she bit it off."
+    show PRG worried
+    show GTS embarrassed
+    PRG "Mm..."
+    "Her jaw sashayed back and forth as she stared up at the ceiling."
+    "She swallowed, then after a few moments more bit off a larger chunk; a few moments more, and she crunched down the rest of the cookie."
+    PRG "Mmhm..."
+    PRG "Okay, um, I think the... ingredients were a little off-balance... here."
+    PRG "The salt and the... the vanilla are a bit strong."
+    if getFlag("GTS013_try"):
+        MCT "R.I.P. me."
+    show GTS surprised
+    GTS "Oh, I see. I confess, when I was preparing these I added more of those things than the recipe called for."
+    show GTS embarrassed
+    extend " I thought it would balance out all the butter."
+    show PRG neutral
+    PRG "It really does call for a lot, doesn't it?"
+    show GTS neutral
+    show PRG unique-happy
+    PRG "A-And it's good to experiment. They do taste pretty good just going by the recipe, though."
+    show GTS happy
+    GTS "I will take that to heart."
+    show PRG neutral at Position(xpos=0.65, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.40, xanchor=0.5, yalign=1.0) with dissolve
+    "Naomi picked up the forearm-sized whisk laid out for her with one hand, and with the other, a bowl full of drooping little slabs of butter."
+    GTS "It's 150 milliliters of butter, as I understand?"
+    PRG "I think it's actually closer to 142 or 143, but 150 will do. You'd just have to add a little extra dash of every other ingredient."
+    "Naomi nodded with billowing vigor as she coolly folded the butter, salt, and sugar over itself in waves."
+    PRG "Oh, um... it's also important to mix the butter pretty vigorously, especially since you've thrown in the salt and sugar."
+    GTS "Oh, that makes sense."
+    PRG "And after that, you can pour in two and a half milliliters of vanilla extract."
+    PRG "That stuff can be... pretty overpowering, too, if there's too much of it."
+    "Naomi, watching the butter whip into un-shape with easy vigilance, laid the whisk down in the bowl and grabbed a petite glass bowl of the deep amber extract. She raised the vessel higher as she poured, a rock-steady flourish."
+    PRG "Okay, that's looking good, you've got more of a cake frosting texture going. Now, you can mix in the flour. Just about a third of it at a time, though."
+    PRG "That's 60 grams if you want to be exact."
+    GTS "I see, I see."
+    GTS "..."
+    PRG "..."
+    MC "..."
+    GTS "..."
+    PRG "..."
+    MC "..."
+    PRG "Y-You can um... go a bit faster than that, Yamazaki-san."
+    GTS "Ah, but it is good to take one's time and do things as they ought to be done, is it not? Faster, slower, change shall come; that is the way of things."
+    PRG "O-Okay, but the mixture is, um, starting to dry out."
+    GTS "Ah. So it is."
+    "The rest she mixed together just as Aida instructed, and repeated twice more."
+    show PRG happy
+    PRG "That looks good!"
+    show PRG neutral
+    PRG "Okay, once it's all mixed together, you can form it into a ball and... um... "
+    PRG "Have you ever seen someone make the dough for a pizza?"
+    "Naomi put a finger to her lips, and tapped it."
+    GTS "I don't well remember it if I have."
+    if getSkill("Academics") > 2:
+        MC "Where you like mush the dough ball into itself?"
+        show PRG neutral at Transform(xzoom=-1) with dissolve
+        PRG "Yeah, exactly. That helps make sure there aren't any cracks or gaps in the dough."
+        $setAffection("GTS", 1)
+        show GTS happy
+        GTS "Thank you, Hotsure-san."
+        show PRG neutral at Transform(xzoom=1) with dissolve
+        PRG "So yeah, you can do that, and then take it over to the mat and sort of... lightly throw it down, so it forms a brick shape."
+        show GTS neutral
+    else:
+        MC "Where you like toss it up into the air?"
+        show PRG worried at Transform(xzoom=-1) with dissolve
+        pause 0.5
+        show PRG unique-happy
+        PRG "Um... not quite."
+        show PRG neutral at Transform(xzoom=1) with dissolve
+        PRG "The idea is to, um, kind of mush the dough into a ball to get rid of any cracks."
+        PRG "After that, you just lightly throw it down on the mat until it forms a rough brick shape."
+    GTS "Oh, I see. Very good."
+    "She took the ball between her hands and rolled it tight, pausing every so often to press in each side."
+    "With the dough formed into a near-perfect sphere, she cupped it in her hands over the floured mat..."
+    "{i}pap{/i} "
+    extend "{i}pap{/i} "
+    extend "{i}pap{/i} "
+    "...And sort of just let it plop down out of her hands, repeatedly, until it formed what could, with some trepidation, be described as like a brick."
+    show PRG worried at Transform(xzoom=-1) with dissolve
+    "As she was absorbed in this, I caught a glimpse of Aida's eyes diverting to the wall clock and her slight frown."
+    show PRG neutral at Transform(xzoom=1) with dissolve
+    PRG "That should do it. Next, we wrap it in seran wrap and use the dough cutter to refine its shape."
+    GTS "And then allow it to chill for a few minutes in the refrigerator, if I'm not mistaken?"
+    show PRG happy
+    PRG "Mhm!"
+    "In the most delicate use of plastic wrap I'd seen before or since, Naomi swaddled the dough in that crystalline sheet and patted its faces into flat, even planes, and at last deposited it into the refrigerator."
+    show PRG neutral
+    GTS "There we are."
+    GTS "Well, where are my manners? How have you been, Kodama-san?"
+    PRG "N-Not too bad. Thanks for asking."
+    PRG "How about you two?"
+    MC "Can't complain."
+    GTS "Quite well. I've been very excited for you to teach me. I've always wanted to learn how to bake."
+    PRG "You're welcome, Yamazaki-san. This is actually kind of fun."
+    show GTS happy
+    GTS "Nevertheless, I hope I can one day furnish an adequate repayment for your kindness."
+    show PRG aroused
+    PRG "Oh, um, y-you don't need to do that..."
+    GTS "Surely your time merits something, as much skill as you clearly show."
+    show GTS neutral
+    GTS "Ah, but pardon me for gushing."
+    show PRG neutral
+    "Some milder talk came and went, where even I got in a word or two, and at last it came to our attention that a few minutes had passed."
+    "Naomi took the dough back out, and her dancing fingers shortly undid the seal of the seran wrap."
+    PRG "Okay, it looks like the oven's heated up..."
+    PRG "So, for the last part, you'll wanna cut the dough into wafers a little less than two centimeters thick... pretty much exactly what you did with the practice batch."
+    show PRG happy
+    PRG "And then just put them in the oven! It, uh, should take about ten minutes, but you can tell when they're done when the bottom edges start to turn golden brown."
+    GTS "That sounds simple enough."
+    show PRG worried
+    PRG "Yeah... but, um..."
+    show GTS surprised
+    PRG "I, um, have to go... Alice needs my help with... something."
+    show GTS neutral
+    show PRG neutral
+    PRG "I think you've got it from here anyway."
+    GTS "Thank you for the vote of confidence, Kodama-san. Thank you as well for your patience and superb instruction."
+    PRG "Oh... well... thanks..."
+    PRG "...Oh! If you save one or two of the cookies, I'd like to see how they turn out."
+    GTS "Absolutely. I'll see you then. Be well, Kodama-san!"
+    "She merely gave a sweet little nod and then a quick, yet proper bow to each of us before turning to leave."
+    hide PRG with dissolve
+    stop music
+    show GTS neutral at Position(xpos=0.55, xanchor=0.5, yalign=1.0) with dissolve
+    GTS "...Well, how fortunate that you came along, Hotsure-san."
+    play music Hallway
+    MC "Guess so. I had no idea Kodama-san's schedule was that tight, wow."
+    "Naomi began slicing into the pine-colored dough with pensive precision. Her eyes held hazily on the task, as though her mind were elsewhere."
+    GTS "One can't help but admire her sense of duty. It's just rather a shame where it seems to lead her."
+    GTS "A bit more balance in her life would do wonders for her, I'd wager."
+    MC "Tell me about it, that girl needs a vacation or something. Did I ever tell you the day I got here she was doing Nikumaru-san's chores for her?"
+    GTS "I don't believe you did."
+    "She shook her head slowly as she placed the cookie tray in the oven and set a timer for ten minutes."
+    GTS "Well, I believe more than a vacation would be in order. The root of it is that her energies are invested in an irreciprocal relationship."
+    if getSkill("Academics") < 2:
+        MC "A what relationship?"
+        GTS "In other words, she gives a good deal more in the relationship than she receives."
+        MC "Oh."
+        MC "Well, at least she gets paid for her time."
+    else:
+        "I shrugged."
+        MC "At least she gets paid for her time."
+    show GTS neutral at Transform(xzoom=1) with dissolve
+    GTS "That's true. And yet there is clearly a certain lack of harmony for which the pay does not fully compensate. The effect on Kodama-san's nerves is apparent."
+    menu:
+        "I don't know if that's totally fair.":
+            jump GTS013_c3_1
+        "What do you mean, exactly?":
+            jump GTS013_c3_2
+        "I know, Nikumaru-san's such a douche sometimes.":
+            jump GTS013_c3_3
+
+label GTS013_c3_1:
+    MC "We don't really know what their relationship is like in private, after all."
+    show GTS angry
+    GTS "I shudder to think of how much Nikumaru-san demands of her {i}away{/i} from prying eyes."
+    MC "You asked her for some of her time, too, didn't you?"
+    show GTS neutral
+    GTS "That is true, and I will try to make her glad she agreed."
+    GTS "I, however, would not offer her something as common as money as a ploy to oblige her to more than I could rightly ask."
+    GTS "We must respect our fellows in matters small and great alike."
+    if getSkill("Academics") > 4:
+        MC "...Yamazaki-san, are you trying to... teach me something?"
+        show GTS embarrassed
+        GTS "I like to think of it more as sharing my thoughts."
+        show GTS neutral
+    jump GTS013_c4
+
+label GTS013_c3_2:
+    GTS "Well, I'll put it this way. We're both aware of all the things Kodama-san must keep track of and attend to simply as a matter of course."
+    show GTS angry
+    GTS "Add onto this all of the things Nikumaru-san demands of her as if she were merely an appendage; of course, no one in their right mind would go along with such a thing, unless one were to wave around some cash."
+    GTS "In effect, Kodama-san has been goaded into exchanging half of her life for someone else's. Something as common as money hardly constitutes a fair trade."
+    show GTS neutral
+    GTS "Simply put, we must respect our fellows in matters small and great alike."
+    if getSkill("Academics") > 4:
+        MC "...Yamazaki-san, are you trying to... teach me something?"
+        show GTS embarrassed
+        GTS "I like to think of it more as sharing my thoughts."
+        show GTS neutral
+    else:
+        MC "I guess that makes sense."
+    jump GTS013_c4
+
+label GTS013_c3_3:
+    $setAffection("GTS", -1)
+    GTS "Well, I don't know that I would go that far. In fairness, there very well {i}could{/i} be something I'm missing."
+    GTS "I simply disagree with the nonchalance with which Nikumaru-san passes off such a volume of tasks onto Kodama-san."
+    MC "Yeah, that's fair."
+    jump GTS013_c4
+
+label GTS013_c4:
+    "I took in what she had to say for a second or two."
+    MC "You know, I really never realized how much thought you must put into etiquette. It's kind of impressive."
+    $setAffection("GTS", 1)
+    show GTS happy
+    GTS "Hm hm, thank you. I like to think my parents raised a lady."
+    show GTS neutral
+    "She paused and gave a glance over at the oven."
+    GTS "Now I suppose there's no better time to think of what to do for Kodama-san as thanks."
+    if isEventCleared("PRG011"):
+        MC "You know... I saw her reading a book about the Kanagawa Koi the other day. Apparently she's a big fan."
+        show GTS neutral
+        $setAffection("GTS", 1)
+        GTS "Oh, you don't say? That's very handy indeed, Hotsure-san. Perhaps I could obtain some memorabilia for her."
+        show GTS despaired-thought
+        GTS "Or see about treating her to an official baseball game, but then there's the question of how to arrange such a thing at her convenience."
+        show GTS neutral
+        GTS "Regardless, thank you for telling me that."
+        MC "Sure. Like you said, she could use a little pick-me-up."
+        "She nodded, and her eyes fell back upon the oven timer; the warmth flowing from the machine now carried a homey vanilla scent that settled like an old friend in my chest."
+    else:
+        MC "Hmm... maybe she'd like some high-end cooking gear?"
+        GTS "That would be sensible. Unfortunately I'm rather unsure what to look for with that sort of thing."
+        MC "Welp. That makes two of us."
+        GTS "Oh well. It need not be decided this instant."
+        "Thus, her eyes fell back upon the oven timer; the warmth flowing from the machine now carried a homey vanilla scent that settled like an old friend in my chest."
+    "We passed the ticking minutes away ruminating over Naomi's technique during the preparation process, always with the unspoken question of 'how are they going to turn out this time?'"
+    "And yet, somehow the hanging uncertainty didn't feel like tension."
+    "Naomi ambled over to the oven just in time to turn off the timer a bare second before the alarm was due to go off."
+    "Then, getting down on her knees, she reached into the oven with a pair of mitts the size of my head, withdrew the gold-beige bounty within, and set the sheet down on the stovetop. She at once began scooping them onto a cooling rack."
+    MC "That smell's killing me already. How long do they have to cool for?"
+    GTS "I would let them rest for at least a couple of minutes. You may have to blow on it."
+    MC "Oh, okay."
+    if getFlag("GTS013_try"):
+        MCT "Be lying if I said I wasn't a {i}liiittle{/i} hesitant."
+    "A few moments of silence passed, before Naomi spoke up from watching the windows in the hallway."
+    GTS "Whatever happens, thank you for coming with me today."
+    MC "Pff, you say that like it's gonna kill me."
+    show GTS embarrassed
+    MC "And there's only one way to really judge."
+    GTS "You're right."
+    "She clutched her skirt and hung unto a smile as I grabbed a still-hot wafer and puffed sharp breaths onto it."
+    "After a few rounds of switching hands and repeating, I was content to take a bite."
+    MC "{i}kholm{/i}"
+    "I chewed it with the pensiveness of a judge. It was... buttery. Crumbly. A little sweet."
+    MC "That was..."
+    show GTS surprised
+    extend " okay."
+    show GTS happy
+    GTS "Hooray!"
+    "That made it all the sweeter. And so, I took another bite."
     jump daymenu
 
 label GTS014:

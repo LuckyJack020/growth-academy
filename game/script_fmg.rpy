@@ -1640,132 +1640,188 @@ label FMG016:
     $setProgress("FMG", "FMG017")
     scene Dorm Interior with fade
     play music FMG
-    MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by one and it's three o'clock."
+    MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by twelve and it's three o'clock."
+    scene Dorm Exterior with fade
+    MC "I gotta hurry to the track, she's going to be pissed."
+    "As I rounded the corner I bumped into Akira, knocking myself on the floor."
+    show FMG surprised with dissolve
+    FMG "Jeez Kei-kun, are you alright?!?"
+    MC "Hehe ow... I-I'm good."
+    MC "My ass hurts just a bit, but I'll survive. Are you okay? I must've hit you pretty hard."
+    show FMG flex
+    FMG "I'm all good dude, don't worry about it!"
+    show FMG neutral
+    FMG "Come on, we're burning daylight and we have to get to the track before it gets dark."
+    FMG "I hope you're well-rested, you've looked beat these past couple of days. I figured you'd oversleep so I came to get you."
+    MC "Thanks, and I wish, but I was up all night doing math instead— and I freaking hate math."
+    show FMG sad
+    FMG "Same... Once they added in the alphabet I was over it."
+    show FMG happy
+    FMG "I have just the thing to get us in the mood. You down for a race?"
+    MC "You want to race ME? Can you even handle the embarrassment of losing?"
+    show FMG flex
+    FMG "I didn't plan on losing."
+    show FMG neutral
+    FMG "You talk big Kei-kun, but can you back it up?"
+    MCT "...perhaps..."
+    MC "Promise me you won't cry when I win."
+    FMG "I have tissues and water in my bag so you can wipe away the tears and get that salty taste out of your mouth after I win."
+    MC "Those are fighting words. "
+    FMG "Pffff, I'll give you a ten second head start when we get outside."
+    MC "Oof, really putting yourself at a disadvantage here. You sure about this?"
+    show FMG happy
+    FMG "I'll see you outside."
 
     scene Dorm Exterior with fade
-    MC "I gotta hurry to the field, she's gonna be furious."
-    "As I rounded the corner I bumped into Akira, knocking myself on the floor."
     show FMG neutral with dissolve
-    FMG "Jeez Kei, always in such a hurry."
-    MC "Good grief you are a brick wall."
-    MC "Remind me to order some shoulder pads and a helmet."
-    FMG "I'll add it to the list."
-    MC "I didn't expect to run into you here, after what we talked about yesterday."
-    MC "If you don't mind me asking why you are here, I said I'd meet you at the field."
-    FMG "I figured you'd oversleep, so I came to get you."
-    FMG "When we hung out these past few days you looked exhausted."
-    MC "Yeahhhhh, sorry about that. I've been so busy with homework, that I passed out at my desk."
-    show FMG flex
-    FMG "No sweat dude. I'll race ya to the field?"
-    MC "I don't know about you but I could really go for a nice slow walk."
-    show FMG sad
-    FMG "Ughhh, so boring Kei-kun."
+    FMG "Okay. Remember only ten seconds."
+    MC "Heh, I only need four."
     show FMG happy
-    FMG "But I guess I can make an exception for you."
-
-    scene Field with fade
-    "We set our bags down and began stretching when someone caught Akira's eye."
-    show FMG neutral with dissolve
-    FMG "Huh, I don't recognize that girl."
-    "As the girl ran closer towards us shock overtook Akira's face."
-    show FMG surprised
-    FMG "Holy crap! She's huge!"
-    "Akira was right! This girl was almost double her size."
-    "As we watched in awe, the student slowed her pace and began walking over to us."
-    show FMG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show Natsuko annoyed at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    UNKNOWN "I'm sorry is there a problem? You two kept staring at me the whole time I was jogging."
+    FMG "Okay... four it is."
+    MC "No no no wait! It was a joke."
     show FMG neutral
-    FMG "Sorry if we made you uncomfortable but we haven't seen you around campus before."
-    FMG "Are you new here?"
-    show Natsuko neutral
-    Natsuko "Hmph. If you really must know, I transferred here the other day. I came from a school in Fukuoka. The name's Natsuko Okamoto."
+    FMG "The clock is ticking Kei-kun, you better hurry."
+    FMG "One."
+    MC "You didn't even say go."
+    FMG "Doesn't matter... two."
+    MC "UGHHHH!"
+    "I swear I've never run so fast in my life. I felt like a jaguar. Fast, dangerous and-"
+    MC "What the hell just flew past me?"
+    show FMG flex
+    FMG "There's always next time, haha. See you at track slowpoke."
+    MC "W-wh... How???"
+
+    scene Track with fade
+    MC "H-H...WOW, my legs are ready to fall off. I went too hard."
+    MC "*huff* *huff*...*gasp*. I-Is this what dying feels like???"
+    show FMG neutral with dissolve
+    FMG "You are so overdramatic."
+    MC "O...Okay, I'm-I'm good... I think. Alright, so... How are you so fast?!?!"
+    show FMG flex
+    FMG "Daily jogs pay off— what can I say."
+    MC "Whatever man, I let you win."
+    show FMG sad
+    FMG "Yikes, all these flavors and you choose to be salty... We can't all be track stars Kei-kun. I think if you try harder next time you might not lose as bad."
+    MC "You might not lose as bad."
+    show FMG neutral
+    FMG "Are you mocking me now?"
+    MC "No...yes...just a little."
+    show FMG happy
+    FMG "I'll be happy to work this disrespect into our workout routine."
+    MC "Hilari-"
+    "My sassy comeback was interrupted by a large female figure in the distance."
+    MC "Hey, you know who that is?"
+    show FMG neutral
+    FMG "What are you on about?"
+    "I turned Akira around and pointed to the well-built red head running around the track."
+    show FMG surprised
+    FMG "Wow and I thought I was big. She's on another level!"
+    "We must've caught her attention as she stopped right in front of us with a not too pleasant look on her face."
+    show FMG surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    UNKNOWN "Is there a problem? I don't like people staring at me during my workouts."
+    show FMG neutral
+    FMG "We didn't mean to make you uncomfortable. We were both taken aback by...well...your size."
+    UNKNOWN "I get that a lot."
+    MC "If you don't mind me asking are you new here? We've never seen you around campus before."
+    UNKNOWN "If you really must know, I transferred here the other day. I came from a school in Fukuoka. The name is Natsuko Okamoto."
     MC "Nice to meet you Okamoto-san, I'm Keisuke Hotsure."
     "She shook my hand with a grip so tight I thought she might break it."
     show Natsuko happy
     Natsuko "Nice to meet you Hotsure-san."
-    Natsuko "Hm, has anyone told you how cute you look with that hairstyle?"
-    MC "Ummmm, this would be the first."
-    MCT "Something tells me that this isn't gonna end well."
-    show FMG happy
-    FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani."
-    "Natsuko didn't move, she kept her hands on her hips and just stared at Akira in disappointment."
+    Natsuko "My, you have beautiful hair and those eyes... I could get lost in them."
+    MC "Ummmm, thanks..."
+    show FMG neutral
+    FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani. But I'd appreciate it if you could keep those types of comments to yourself."
+    "Natsuko turned towards Akira, staring down at her in disappointment."
     show Natsuko disappointed
-    Natsuko "Sorry but I don't do fist bumps, especially not with the likes of you Akira-chan."
-    MCT "Welp...."
+    Natsuko "Unfortunately, I don't take orders from someone like you."
+    MCT "Welp, I'll be honest I didn't see that coming."
     show FMG angry
-    FMG "Whoa, whoa... What do you mean the likes of me?"
+    FMG "And what does that mean?"
     show Natsuko neutral
-    Natsuko "If you really must know, it's well...how do I put this nicely without sounding rude."
-    Natsuko "Pretty much everything. So unladylike."
-    show FMG angry-2
-    FMG "I'm sorry, does my unbuttoned shirt bother you that much?"
-    FMG "Is that it or you got any other rude remarks you want to get out?"
-    show Natsuko smug
-    Natsuko "Now that you mention it, you do seem kinda small and weak for someone with a muscle growth factor."
-    MCT "You've got to be kidding. She could've said anything else and she chose that."
-    MCT "I could see the steam coming out of Akira's ears, she was ready to burst."
+    Natsuko "If you really must know, it's well...how do I put this nicely."
+    Natsuko "Pretty much everything about you is so...unladylike. Your unbuttoned shirt, that mop you call hair. You are a slob."
     show FMG angry
-    FMG "Oh really now, so that's how it's gonna be huh. Alright, you stuck up princess, let's have a little competition."
-    FMG "Fastest time around the track wins. One lap."
+    FMG "Have you looked in a mirror? I'm surprised you don't have birds living in that nest."
+    "Natsuko ignoring Akira's comment continued to dig into her without hesitation."
+    Natsuko "Not to mention how pitiful you are with a body like that."
+    MCT "You've got to be kidding. She could've said anything else and she chose that."
+    show FMG angry-2
+    FMG "What? You think I'm small?!? You aren't anything special, red."
+    show Natsuko flex
+    Natsuko "Well I wouldn't say that. But if you feel better by insulting your superior then be my guest."
+    FMG "OH I AM GONNA...UGHHH!!!"
+    show Natsuko happy
+    Natsuko "Hotsure-san are you single?"
+    MC "Ummm... Well..."
+    Natsuko "I know you-"
+    show FMG angry-2
+    FMG "I've heard enough from you. Let's settle this right here right now. Three laps around the track. After I kick your ass, you leave us alone."
+    show Natsuko smug
+    Natsuko "And if I win?"
+    FMG "It won't matter because you aren't going to win, you hag."
+    MCT "I could see the steam coming out of Akira's ears, she was ready to burst."
     show Natsuko smug
     Natsuko "Someone's in a hurry to lose."
     MC "Relax Akira. It might be best to just walk away...forget any of this ever happened."
     show FMG angry
-    FMG "Shut up Kei, I'm gonna put this trash in her place."
+    FMG "Shut up Keisuke, I'm not in the mood."
+    MCT "Oh she is pissed now."
     show Natsuko smug
-    Natsuko "Ha! I'll humor you."
+    Natsuko "I've never met someone so...pathetic. It amazes me how you actually think you stand a chance."
     show Natsuko flex
-    Natsuko "Watch closely Keisuke-san, you are about to witness real power."
-    Natsuko "Would you mind counting down for us, sweetie."
-    MCT "Who does this chick think she is? My mother?"
+    Natsuko "Watch closely, Hotsure-san, you are about to witness perfection."
+    show Natsuko smug
+    Natsuko "Would you be so kind and count down for us?"
+    MCT "Who does this chick think she is? Kick her ass Akira...please."
     MC "I'd rather not, but I get the feeling I don't have a choice."
     MC "Okay, when I say go."
     MC "3."
     MC "2."
     MC "1."
     MC "GO!"
-    "They both bolted past me throwing my hair back and pushing a huge amount of dust in my face."
+    "They were both like lightning. Unfortunately, I was hit...with a massive amount of dust, right in my face..."
     MC "*cough* I'm getting real sick of this *cough*."
-    MC "Well I'll be damned...Akira is losing."
-    MC "Hold up, Akira is losing!"
+    MC  "*cough* How is Akira doing?"
+    MCT "Well I'll be damned...Natsuko has a massive lead over her. She's barely breaking a sweat."
+    MC "Come on Akira. I know you can beat her. Push yourself a little more."
     "With every passing second, Natsuko's lead grew."
     show Natsuko smug
-    Natsuko "Having trouble keeping up Akira-chan?"
-    Natsuko "Do you need me to slow down?"
-    Natsuko "I can sit at that bench and wait for you to catch up."
-    "With that final remark, Natsuko finished and proudly laughed."
-    MC "Holy shit. Akira didn't even stand a chance."
-    "Akira crossed the finish shortly and was left in total disbelief."
-    show FMG surprised
-    FMG "She's a machine...I wasn't expecting that at all."
+    Natsuko "Having trouble keeping up? Do you want me to sit down and wait for you to catch up? Maybe you need me to slow down a tiny bit?"
+    "With that final remark, Natsuko crossed the finish line  and proudly laughed."
+    show Natsuko flex
+    Natsuko "Better luck next time Akira-chan."
+    "Akira crossed the finish shortly after, left in disbelief and embarrassment."
+    show FMG angry
+    FMG "I didn't try hard enough. Damn it, losing to someone like her."
     MC "Hey, you tried your best Akira, don't let it get to you."
-    show Natsuko neutral
+    show Natsuko smug
     Natsuko "It's a shame that her best wasn't very good."
-    Natsuko "How did my dust taste?"
     show FMG angry-2
     FMG "Ughhh, you are infuriating."
     FMG "Don't let this win get to your head. This isn't over Natsuko, not by a long shot."
     show Natsuko flex
-    Natsuko "That's funny, I didn't think it even began"
+    Natsuko "That's funny, I didn't think it even began."
+    Natsuko "As much as I'd like to stay and rub it in, I'm running late for my class. I look forward to our rematch Akira, maybe next time I'll try."
     show Natsuko happy
-    Natsuko "Bye, for now, I'll see you later Keisuke-san."
-    show Natsuko smug
-    Natsuko "I hope you try a little harder next time Akira-chan, I'd prefer a challenge."
-    "She winked at me and jogged towards the lockers."
-    MCT "I don't think I've ever been more uncomfortable in my entire life."
+    Natsuko "Goodbye, for now, I'll see you later Keisuke-san. Don't be afraid to call me."
+    MCT "I don't even have your number. What...?"
+    "She winked at me, then jogged towards the lockers."
+    MCT "I don't think I've ever been more confused in my entire life."
     MC "Listen, I know you're mad about this but seriously don't let it get to you. This girl isn't important."
     show FMG sad
     FMG "I don't know Kei, maybe she is right, maybe my best isn't good enough."
     FMG "I hate this feeling of being weak."
-    MC "I understand, we can plan out a workout routine and we can work together to knock her down a couple of pegs"
+    MC "I understand, we can plan out a different workout routine and we can work together to knock her down a couple of pegs."
     MC "It's only a matter of time till you're strong enough to beat her."
     MC "For now, let's get your mind off this. How about we go grab a bite to eat?"
     $setAffection("FMG", 1)
     show FMG happy
     FMG "Yeah, food sounds really good right now."
-    FMG "I forgot my wallet by the way."
-    MC "Of course you did..."
+    show FMG sad
+    FMG "I don't have my wallet by the way."
+    MC "Of course you don't..."
     jump daymenu
 
 label FMG017:
@@ -4893,7 +4949,7 @@ label FMG035: #tmp
     jump FMG038
 
 label FMG038:
-    $setProgress("FMG", "FMG044")
+    $setProgress("FMG", "FMG039")
     scene Dorm Interior with fade
     "You ever have those moments where you have an amazing dream, everything is going perfect and you don't want to wake up, but then something happens and it's ruined immediately?"
     "*fffffrrh...fffffrrh*"
@@ -5143,6 +5199,673 @@ label FMG038:
     MC "NO!"
     "The two girls laughed to themselves, and I couldn't help but join in. Though it was definitely a pain, I couldn't help but feel like today made me grow closer to Akira. After all, no pain, no gain."
     jump daymenu
+
+label FMG039:
+    #Down with the sickness
+    $setProgress("FMG", "FMG040")
+    $setTime(TimeEnum.EVE)
+    scene Nurse Office with fade
+    play music Rain
+    MCT "Sitting in the nurse's office with Akira out like a light and Natsuko sitting to my right. Not really how I'd like to spend my evening."
+    Nurse "You can relax sweetie! She'll be fine, she should've stayed in bed today muscle growth students and pushing themselves too hard- Haha, name a more iconic duo."
+    MC "Tell me about it...Thank you again for your help."
+    Nurse "Don't mention it dear. Unfortunately, I have to step out for a moment to help another student. If you need my help, ring the bell on my desk and I'll come running!"
+    MC "Got it. Thanks again."
+    "The nurse smiled at us and headed out the door."
+    show Natsuko neutral with dissolve
+    Natsuko "She'll be fine Keisuke. Let this be a lesson for her."
+    MC "For once...just this once, can you keep your thoughts about Akira to yourself? I get you don't like her. But please...shut up."
+    Natsuko "..."
+    "Natsuko leaned back in her chair, crossed her arms, and stared out the window without another word."
+    MC "But I am very grateful you carried her here."
+    hide Natsuko with dissolve
+    MCT "She's going to be alright. I need to relax... Jeez, I'm acting like she's gonna die."
+
+    scene black with fade
+    stop music
+    $setTime(TimeEnum.DAY)
+    "Earlier that day..."
+    scene Lockers with fade
+    play music Busy
+    MC "Are you sure you can handle that much weight today? You look pale..."
+    show FMG neutral with dissolve
+    FMG "It's-It's...nothing Kei-kun. I'm just a little lightheaded...it's nothing to worry about. I'm staying hydrated and everything. It will pass..."
+    MC "Akira, I don't really think this is a good idea. I'm fine with spotting you...I really don't want to imagine what would happen if you're bench pressing and you suddenly faint on me."
+    MC "I won't be able to lift you or the bar."
+    show FMG sad
+    FMG "It's fine. We won't be long today."
+    hide FMG with dissolve
+    "Our workout routine went on as usual. However, it was clear Akira was pushing herself a bit too hard. With every rep she looked paler, almost ready to puke after each set."
+    MC "Maybe we should stop for today. We need to go see the nurse, you never sweat this much over the simple stuff."
+    show FMG angry-2 with dissolve
+    FMG "N-No Kei. After w-we finish, we c-can go. We are almost done."
+    "She shot up from the floor and placed her hand to forehead."
+    show FMG sad
+    stop music
+    FMG "Woah, why is the room suddenly spinning so fast. T-that's new..."
+    FMG "Suddenly... I'm- I'm not feeling so hot."
+    hide FMG with hpunch
+    "Without warning, Akira slowly began collapsing to the floor."
+    MC "Son of a bitch."
+    "I hurried over to her as fast as I could in an attempt to redirect her body away from the bench."
+    MC "Well, that could've been bad... But how am I going to get her out of here?"
+    MC "I really only have one choice, I hope she's here..."
+
+    scene Hallway with fade
+    play music Rain
+    MC "Thanks for...carrying her."
+    show Natsuko disappointed with dissolve
+    Natsuko "This is the last thing I wanted to do today. I would've assumed she'd have some common sense and have realized to stay in bed when she has a fever."
+    show Natsuko neutral
+    Natsuko "You'll owe me for this one, Hotsure-san. I could be working out right now. She'll regret being sick if I catch it."
+    MC "Do you just like, I don't know... not have any respect for her?"
+    MC "For what it's worth, I know for a fact if you were in her situation she'd help you without a second thought."
+    Natsuko "As if I care. Regardless, she'll have my respect when she earns it."
+    MC "Well could you at least carry her in your arms instead of over your shoulder?"
+    Natsuko "Would you like to carry her?"
+    MC "...No."
+    FMG "Srnnk...SRNNK..."
+    show Natsuko disappointed
+    Natsuko "Does she always snore so loud? It's putting me in a foul mood."
+    MCT "Something tells me your mood was ruined long before."
+    MC "You won't have to listen to it much longer-"
+    FMG "SRNNNNKKKKKKK."
+    show Natsuko neutral
+    Natsuko "Ughhh I can't stand this! Who actually snores this loud! She has to be doing this on purpose..."
+    MC "It would be pretty funny if she was... Anyway, can you try and calm down, please?"
+    Natsuko "How does this not frustrate you? This is unbearable..."
+    MC "Well, for starters I've gotten used to it. I tune it out most of the time and if that doesn't work I bought some earplugs."
+    show Natsuko happy
+    Natsuko "You know Hotsure-san, you can always drop this slob for someone more ladylike. I wouldn't have let this happen. It's not too late to rethink your decision."
+    MC "Wow, that's really amazing. I'll make a note of that and get back to you when I actually care."
+    show Natsuko flex
+    Natsuko "You'll come around eventually."
+    MC "This may be a lot to ask but ummm... can you not hit on me when my girlfriend is passed out on your shoulder, or just respect the fact we are dating and stop doing it in general? This whole situation is bad enough."
+    show Natsuko smug
+    Natsuko "I'll do what I want."
+    show Natsuko happy
+    Natsuko "I can't lie though, it's cute when small men think they can tell me what to do."
+    MCT "Akira please wake up and smack the fuck out of this bitch."
+    MC "I'm going to ignore that, let's focus on getting there...please?"
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    scene Nurse Office with fade
+    "I was so lost in remembering everything that led up to this, I didn't realize Akira had begun to stir."
+    show FMG sad at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    FMG "W-What happened?? Am I in the nurse's office?"
+    MC "Yeah, we had to carry you here cause you passed out."
+    FMG "W-What is that nasty red mop doing in here?"
+    show FMG neutral
+    FMG "Oooooooo...it's just Natsuko, heh...W-What are you doing here? Did you have a change of heart and want to start by bringing me flowers?"
+    show Natsuko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    Natsuko "No. I'm only here because I had to carry you, you idiot. Next time you're sick, stay in bed so I don't have to waste my time. I swear if I get sick-"
+    show FMG angry-2
+    FMG "Seriously Keisuke, this is the best you could get?!?"
+    MC "Anyway! I'm glad to see you're awake."
+    show FMG sad
+    FMG "I'm still not a hundred percent Kei-kun. Luckily, I don't feel as weak as I did this morning."
+    show FMG neutral
+    FMG "Thanks for your help Natsuko-"
+    Natsuko "I'm going to stop you right there. Don't ever bring this up when I'm around...Actually, on second thought, don't talk about it at all. Hotsure-san told me he needed help and I was happy to clean up the trash. That's it."
+    "Natsuko didn't even give us a chance to respond as she was already out the door."
+    hide Natsuko with dissolve
+    show FMG angry-2 at Position(xalign=0.5, yalign=1.0) with dissolve
+    FMG "Would it kill her to be nice for like five minutes? Everyone goes on and on about how nice she is, yet, we have to deal with this version with a constant stick up her ass."
+    MC "Forget about her. How are you feeling?"
+    show FMG neutral
+    FMG "Well, for starters I don't feel like I'm going to pass out, I should be okay to walk back to my dorm...Sigh sorry for any trouble I caused you."
+    MC "Aye, it's no problem. It's important that we look out for each other. What matters to me right now is that you're okay."
+    MC "But we should wait for the nurse before we take off. I'm not trying to send her into a panic."
+    show FMG neutral
+    FMG "Good idea-"
+    show FMG sad
+    FMG "Man, my back is killing me."
+    show FMG neutral
+    FMG "Can you help me crack it?"
+    MC "I can't even lift you! You want me to throw out my back???"
+    show FMG angry-2
+    FMG "Are you calling me fat?!?"
+    MC "W-WHAT! Nah nah nah, you can not play that card. You are built like a truck."
+    show FMG aroused
+    FMG "Heh, I know. I love when you say how big I am. Makes me want to get bigger."
+    show FMG neutral
+    FMG "But seriously...you going to help a lady out?"
+    MC "...Fine..."
+    MCT "If my back gives out she better carry me everywhere. I don't get paid enough for this..."
+    "Akira threw the covers to the side and jumped out of bed albeit rather fast."
+    show FMG surprised-2
+    FMG "Aaah too fast too fast-"
+    show FMG sad
+    FMG "Uuuuugh my head...Man, I hate this."
+    MC "Take it easy Akira. I don't need you fainting on me again."
+    FMG "Ow...Y-yeah. Sorry, I'll take it easy."
+    MC "Good, now tell me slowly, how you want to go about this...back cracking?"
+    show FMG neutral
+    FMG "I'm glad you asked! It's really simple. I used to do this all the time with my br-mother."
+    MC "I bet you weren't packing rock-hard abs and arms the size of my head when you were a kid, but go on."
+    show FMG flex
+    FMG "Mayhaps."
+    show FMG happy
+    FMG "Okay, here's the plan my man. I'll cross my arms around my chest like this. Then you'll be behind me and you'll lift me straight up and slowly arch your back a bit. Got it?"
+    MC "Good thing we're in the nurse's office already."
+    hide FMG with dissolve
+    "I planted my feet and readied myself to lift her as best I could."
+    FMG "Okay! Give it all ya got."
+    "I wrapped my arms around her forearms and used everything I had to lift her."
+    MC "Arghhhh come onnnn... A-A-Almost there!"
+    show FMG sad with dissolve
+    FMG "Uh, Kei-kun you-"
+    MC "Mphm! So close!"
+    show FMG neutral
+    MC "T-That's- jeez my chest hurts..."
+    FMG "Kei...you can stop now."
+    MC "That's g-great. H..How did I do?!?"
+    FMG "Wellllll, you tried your hardest and that's good enough for me. Good thing I stopped you when I did, it looked like you were going to pop a blood vessel, haha."
+    MC "I hope you don't mind, but I think I'm the one in need of medical attention now."
+    "I shuffled my feet towards the bed while popping my back, back into place."
+    MC "Ahhh, much better."
+    "It was at this moment the nurse walked back in and saw the situation flipped."
+    Nurse "It seems a lot happened during my absence. What did I miss?"
+    show FMG sad
+    FMG "He tried to... lift me and help me crack my back."
+    Nurse "Let me go grab a heating pad and some more pillows."
+    Nurse "Dearie, if you plan on lifting your girlfriend, I suggest going to the gym."
+    show FMG happy
+    MC "...I know- she tells me that all the time..."
+    jump daymenu
+
+label FMG040:
+    $setProgress("FMG", "FMG041")
+    scene Campus Center with fade
+    show FMG flex with dissolve
+    play music Busy
+    FMG "I'm thinking we do some back training today!"
+    show FMG happy
+    FMG "I heard they just got a new T-bar row in the gym and I've been dying to try it out."
+    FMG "Ohhhh and I can finally show you how to use the low seated row, that's one of my favorites."
+    FMG "Then we can use the pull-over machine to finish it off, that one is a LOT of fun!"
+    MC "Damn girl, take it easy. Maybe we should chill on working out considering you weren't feeling well a few days ago and trying to lift you caused me to lose five years of my life."
+    show FMG neutral
+    FMG "Hey, you did a good job! You were this close to getting my heels off the ground."
+    show FMG happy
+    FMG "But you're right! We do deserve a break from the gym. So how about we grab some ice cream? It's been a while since we treated ourselves."
+    MC "You buying this round?"
+    show FMG sad
+    FMG "...I guess..."
+    MC "Heh, now I'm getting all the toppings and that bad boy is going to be a large!"
+    show FMG angry-2
+    FMG "Hang on dude, how much money do you think I have!"
+    MC "Pffff, it won't be that bad."
+    show FMG neutral
+    FMG "Knowing you, it will be. That's why I've made the decision to order for you."
+    MC "When did you make that decision??? Hundred yen says you don't even remember what I ordered the last time we went."
+    show FMG flex
+    FMG "Oooooh really? I'll take you up on this little bet."
+    show FMG happy
+    FMG "And to make things even more interesting let's make it five hundred AND you and I are biking to the beach tomorrow."
+    MC "Are you saying I get to see you in that one piece?"
+    show FMG aroused
+    FMG "You'll see tomorrow."
+    MC "Deal!"
+    MCT "I'll lose five hundred yen and the ability to walk for three days if it means I get to see her rocking a bikini."
+    MCT "Oh baby, the mental image-"
+    show FMG neutral
+    FMG "Kei-kun!"
+    MC "AH! W-What— I'm listening!"
+    show FMG angry-2
+    FMG "Stop thinking about my ass! If we don't hurry the line is going to get long!"
+    MC "Yes ma'am!"
+    scene Town with fade
+    show FMG happy with dissolve
+    FMG "Awesome! Only a few people in front of us. I might have died of boredom if we had to wait any longer."
+    MC "It's roughly a five minute wait. Are you telling me that one more minute would've been too long???"
+    show FMG neutral
+    FMG "Yes."
+    MCT "Bruh..."
+    MC "Alright, I'm curious. Why the beach tomorrow? You haven't shown any interest in going till today."
+    show FMG happy
+    FMG "Well, I guess I can fill you in. Chibuki and I went shopping last week for bikinis..."
+    MCT "Ahhhh yeah."
+    FMG "...And she helped me pick out this really cute sports one. So I've wanted to go so I can show off, not only my killer bod but I also haven't been to the beach in years."
+    show FMG neutral
+    FMG "I'd like to think of it as a nice and relaxing date for us as well."
+    MC "I like this. I like this a lot."
+    "She rolled her eyes as usual and laughed."
+    show FMG neutral
+    FMG "You probably just want to rub sunscreen on my body dude."
+    MC "Perhaps...I can't really say. It's top secret."
+    "She quickly leaned in and plopped a quick kiss on my cheek."
+    show FMG aroused
+    FMG "Thanks Kei-kun."
+    MC "For?"
+    show FMG neutral
+    FMG "I can't really say. It's top secret."
+    MC "Ha, alright then, keep your secrets."
+    Cashier "NEXT!"
+    show FMG happy
+    FMG "Eeee!! That's us!"
+    Cashier "Afternoon, so what can I get for the lovely couple today?"
+    show FMG neutral
+    FMG "I'll take cherry dipped in chocolate on a waffle cone please."
+    Cashier "A fantastic choice, and for the young man?"
+    show FMG happy
+    FMG "He'll have Hokkaido melon in a medium bowl topped with fresh fruit and..."
+    show FMG sad
+    FMG "Shoot, what were the other things?"
+    MCT "That money and bus seat are as good as mine."
+    show FMG happy
+    FMG "...Now I remember...fresh fruit, nuts, and chocolate syrup."
+    MCT "Damn it, she's good."
+    Cashier "Great combo, we'll have those ready for you two in no time."
+    show FMG neutral
+    FMG "Thank you!"
+    MC "Thanks, man."
+    Cashier "Anytime! Let's see here, cherry dipped and Hokkaido melon in a medium bowl with three toppings...that'll be thirteen hundred yen."
+    FMG "Awesome, here ya go."
+    Cashier "Perfect, thank you."
+    Cashier "...Here is your change and your ice cream."
+    FMG "Wow, this stuff looks great! Thanks again."
+    Cashier "It's been my pleasure. Have a wonderful rest of the day."
+    FMG "You too!"
+    "We walked over to the nearest bench and sat down to enjoy our treats. Akira lifted her legs up and rested them on my lap."
+    FMG "I hope you don't mind."
+    MC "It's chill. You know, I've never realized how big your quads are until now."
+    show FMG flex
+    FMG "What can I say? Leg day pays off."
+    MC "Heh, it really does."
+    MC "So what's the plan for tomorrow?"
+    show FMG neutral
+    FMG "Since we're biking, we should head out early in the morning, I have some beach towels back at my dorm so we don't have to worry about that."
+    MC "You want to head to the market and grab some snacks for tomorrow after we finish here?"
+    show FMG happy
+    FMG "Mhmm, absolutely! Snacks are a necessity."
+    show FMG neutral
+    FMG "Also...um, are you going to finish that?"
+    MCT "I didn't even realize how quickly Akira had scarfed down her ice cream and how little of mine I touched."
+    MC "Knock yourself out.."
+    FMG "My man!"
+    FMG "Mmmm, you do have... good taste with...ice cream..."
+    MC "Slow down! You don't have to shovel it down so fast. You're gonna give yourself-"
+    show FMG surprised-2
+    FMG "BRAIN FREEZEEEEEEE!"
+    FMG "AHHHHHHHH!"
+    MC "...sigh..."
+    show FMG neutral
+    FMG "I-I'm okay. That was really close, I almost died."
+    MC "You're ridiculous, hahaha."
+    show FMG happy
+    FMG "You act like this all the time!."
+    MC "Yeah, but it's funny when I do it."
+    show FMG sad
+    FMG "..."
+    FMG "We should get going to the store."
+    MC "Yeah, we should head over before it gets dark out."
+    MC "Man, my legs are killing me from sitting for so long. Can you carry me to the store? "
+    show FMG neutral
+    FMG "Sucks to be you. I'll see you at the store."
+    "Without a second thought, Akira had begun walking towards the store at an incredibly fast pace."
+    MCT "I can't believe she's done this."
+    MC "Woah, Woah, hang on. I'm coming...Why do you have to walk so fast?  ...Akira slow down! A-Are you walking faster??? You're doing this on purpose!"
+    show FMG flex
+    FMG "I have no idea what you're talking about Kei-kun! I'll see you there!"
+    "It was at that very moment she broke into a full sprint leaving me behind."
+    MC "I'll remember this. Don't ever ask me to spot you again."
+    MC "..."
+    MC "I'm talking to myself..."
+    MC "Man, why does she have to be so fast??? Date a bodybuilder they said. It would be fun, they said."
+    MCT "If she gets gummy bears, I'm eating the whole bag. That'll teach her...maybe."
+    scene Supermarket with fade
+    "After what felt like years of walking I had finally made it to the store. I was able to pick Akira out over the swarm of people...not like you could really miss her."
+    show FMG happy with dissolve
+    FMG "What happened to you Kei-kun? Seems like you just ran a marathon."
+    MC "..."
+    MC "I-I...Forget it. What snacks are we getting for the beach?"
+    show FMG neutral
+    FMG "I haven't decided yet. But while you took your sweet time getting here, I thought about doing a movie night later this week and maybe inviting some of the other girls."
+    MC "That's not a bad idea actually."
+    show FMG happy
+    FMG "I knew you'd agree!"
+    FMG "Let's grab a cart and get shopping."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+    scene Supermarket with fade
+    MC "Do you really think we need all this?"
+    show FMG angry with dissolve
+    FMG "Are three bags of Jimmies Sour Candies and Rustlers Gummy Bears not good enough?!?"
+    MC "I'm just saying we got chips, ice cream, and soda galore. We can probably pass on the Jimmies and the Rustlers."
+    show FMG neutral
+    FMG "We don't know if Alice is coming to watch the movie. So IF she is coming it's better to be prepared."
+    MC "Do we even know if she eats that much?"
+    show FMG sad
+    FMG "Well no..."
+    show FMG happy
+    FMG "But I'm assuming because she's fat she eats a lot."
+    MC "You know what happens when you assume right?"
+    show FMG neutral
+    FMG "Hm?"
+    MC "You make an ass out of you and me..."
+    show FMG sad
+    FMG "...We should go check out..."
+    MC "W-What? Come on that was funny!"
+    FMG "If you put this much effort into working out as you do with your awful jokes, you'd be in great shape."
+    MCT "That hurts... just a little."
+    "After her rude remake about my comedic genius, we hurried to the checkout, bagged our goods, and left."
+    "I made her carry most of the bags back though..."
+    jump daymenu
+
+label FMG041:
+    $setProgress("FMG", "FMG042")
+    scene Dorm Exterior
+    play music Busy
+    MC "We got everything right?"
+    show FMG neutral with dissolve
+    FMG "I think so? Let me double check... Okay so... Sunscreen, towels, the umbrella, and goggles."
+    MC "How about the um-"
+    show FMG happy
+    FMG "Yes, Kei-kun, I brought the bikini."
+    MCT "Oh, yeah. It's all coming together."
+    MC "Alright, now that I know we have everything let's grab our bikes!"
+    show FMG neutral
+    FMG "Someone's in a good mood."
+    MC "Absolutely! Nothing can ruin this day. Although, I've been meaning to ask, do you know how long it's going to take us to get to the beach?"
+    show FMG happy
+    FMG "It's roughly forty minutes."
+    MC "...D-Did you say forty minutes???"
+    FMG "Yeah! It's going to be a lot of fun, the ride there is so pretty! We can stop now and then so we can take pictures."
+    FMG "I've been waiting like forever to get some pictures of us! The ocean behind us with the sun setting in the background... Dude, it's going to be awesome!"
+    MC "Damn, I never thought about it. But, yeah, you're right. We don't have any pictures together."
+    show FMG neutral
+    FMG "Right!?!?"
+    show FMG sad
+    FMG "Ya know, I just realized... I haven't been on my bike since the start of the school year. I hope the seat can support my weight."
+    MC "Worse comes to worst we take the bus."
+    show FMG sad
+    FMG "I hope not, I hate the bus."
+    MC "Don't even worry about it. We'll be fine."
+    scene Campus Center with fade
+    "It was not fine."
+    show FMG angry with dissolve
+    FMG "Man, come on! How does this even happen???"
+    MC "Well, I'll be damned. You crushed the seat."
+    MC "You got buns of steel, hahaha."
+    show FMG angry-2
+    FMG "..."
+    show FMG neutral
+    FMG "...Okay okay, that is pretty funny..."
+    show FMG angry
+    FMG "...But this serious Kei-kun! We have to go on the bus now."
+    MC "It won't be that bad. But, um... We definitely should look into getting you a bigger bike. I really can't believe you smushed the seat."
+    show FMG sad
+    FMG "It was my favorite bike too, damn... *sigh*  Let's go wait by the bus stop."
+    
+    scene School Front with fade
+    show FMG angry with dissolve
+    FMG "Ugh! I hate the bus..."
+    MC "Why though? It's not going to hurt you."
+    show FMG sad
+    FMG "I-I haven't told you... But I'm claustrophobic. It's the reason I don't button my shirt."
+    MC "That makes a lot of sense. I had always thought you did it cause it looked 'cool'. I wish you told me about this sooner though, I would've been willing to help."
+    FMG "You're right, I should've told you sooner. I-I guess I was scared..."
+    MC "Of what? Did you think I'd be mad or weirded out that you kept this from me? Nah, fuck that. What kind of boyfriend would I be if I didn't support you?"
+    show FMG happy
+    MC "We can try and find some other way to the beach, we don't have to take the bus. I don't want you to be uncomfortable."
+    show FMG neutral
+    FMG "It's fine, I don't faint or anything dramatic like that. It's just... Ahhh, my hands get a little shaky and my legs bounce uncontrollably."
+    MC "Hm, okay... Call me cheesy, but maybe it'll help if you hold my hand. Help keep you calm, ya know?"
+    show FMG aroused
+    FMG "T-That's a good idea."
+    show FMG neutral
+    FMG "Thank you, Kei-kun."
+    MC "Don't mention it, it's nothing. I want you to be comfortable and happy."
+    MC "The bus should be here any minute. We still have everything right?"
+    FMG "We should."
+    FMG "...Yep... Yeah, there's the sunscreen..."
+    show FMG surprised-2
+    FMG "...W-Where's the bikini!?!?"
+    MC "Hang on, you lost it???"
+    show FMG sad
+    FMG "I don't know where it could've gone! It was in the bag an hour ago."
+    MC "Well, we have to find it! This is a life or death situation."
+    show FMG neutral
+    FMG "I wouldn't go that far, I can always buy another one tomorrow."
+    MC "Ah yeah, duh. But we need it NOW."
+    FMG "Take it easy, Kei-kun. I put it on an hour ago when I went to the bathroom. I was just messing around with ya."
+    MCT "If she couldn't kick my ass I'd be throwing hands right now."
+    MC "..."
+    MC "Don't joke about these things Akira. I've been waiting to see you in this swimsuit since like...yesterday."
+    show FMG flex
+    FMG "I know, I saw the look on your face when I mentioned it."
+    FMG "I was checking myself out in the mirror after I changed... Man, I think I looked too good."
+    MC "Why must you tease me so much???"
+    show FMG neutral
+    FMG "It's fun and it's cute how you get when you think about touching me..."
+    show FMG aroused
+    FMG "...and it's a little hot..."
+    MC "What did you say?"
+    show FMG surprised-2
+    FMG "Nothing! O-Oh look here comes the bus!"
+    MC "Finally!"
+    "The bus screeched to a halt, stopping right in front of us, followed by the doors violently swinging open."
+    MC "Well that was unexpected..."
+    show FMG neutral
+    FMG "Don't chicken out on me. Who's going to hold my hand?"
+    MC "There is probably some creepy old dude sitting in the far back by himself, I'm sure he'll gladly help a beautiful young woman such as yourself."
+    FMG "Aw, thanks..."
+    show FMG angry
+    FMG "Now get on the bus, I'm not going alone."
+    MC "Ugh, you're killing me smalls..."
+    "I cautiously stepped onto the bus, Akira following close behind me gently pushing me forward."
+    MC "Aren't you the one with the fear of tight spaces? You put on your brave face?"
+    show FMG sad
+    FMG "I can't lie, my hands are getting a bit shaky."
+    show FMG happy
+    FMG "But as long as you're with me, I can do anything."
+    MC "That's my girl."
+    "We fisted bumped before continuing our search for a free seat. Thankfully we finally found one... in the far back... next to a creepy old dude."
+    MC "Told you."
+    show FMG neutral
+    FMG "Oh please, it's nothing but a coincidence."
+    MC "Hey, I'm just saying... At least he's leaving now."
+    MC "Anyway, ladies first."
+    FMG "Oh my, what a gentleman."
+    MC "What can I say? I try."
+    FMG "In that case, try harder."
+    MC "I am a hopeless romantic after all."
+    "We had finally got as comfortable as one could hope to get in those crummy bus seats. After we both sat down I reached over and took Akira's hand into mine."
+    MC "Man, I always forget how soft your hands are."
+    show FMG happy
+    FMG "Dude, I have that shit on lock. I have a moisturizing soap that I use after my workouts and it's a lifesaver!"
+    MC "Really? I figured you'd be all for having your hands covered in calluses and all that crap."
+    show FMG neutral
+    FMG "Ew, no. I might be a gym rat but I still take care of myself. Who would want to be with a girl with my build and rough ass hands?"
+    FMG "Talk about a turnoff."
+    show FMG flex
+    FMG "Not every girl can kill it like me, ya know?"
+    MC "Ha, I'm sure. I'm expecting you to share this soap with me later, my hands have been getting hella dry."
+    show FMG neutral
+    FMG "I'll think about it."
+    FMG "I have to admit... I didn't think this would keep me so relaxed. It feels good being able to enjoy the ride for once."
+    MC "Great! By the way, it's been on my mind since you told me about your fear but I was thinking we should do this more often."
+    FMG "What do you mean?"
+    MC "So my idea was we keep taking buses, cars, hell maybe even a plane. It could help you overcome your claustrophobia!"
+    show FMG aroused
+    FMG "I-I don't know, Kei-kun... A-Are you sure?"
+    MC "Baah! I'm all for it. Not only is it an excuse to spend more time with each other, but more importantly, we get to work together to overcome this obstacle that's been in your path for so long."
+    show FMG sad
+    FMG "If only you knew..."
+    MC "Knew what?"
+    show FMG surprised-2
+    pause 1
+    show FMG happy
+    FMG "Uhhh... How much I love spending time with you!"
+    MCT "Thought you could pull a quick one over me, huh?"
+    FMG "Ooooh, and would you look at that - we're here!"
+    MC "Damn, that was quick..."
+    show FMG neutral
+    FMG "Don't just stand there! We need to get a good spot."
+    MC "Hold your horses, I'm coming."
+    scene Beach with fade
+    MC "God damn, it's a beautiful day... But not as beautiful as you."
+    show FMG neutral with dissolve
+    FMG "I'll be honest that one was a little cringey."
+    MC "You're welcome."
+    "As usual she rolled her eyes at me and had started getting undressed right in front of me."
+    MC "WOAHHH, take it EASY. Don't you, I don't know... Want to do this in a bathroom???"
+    show FMG sad
+    FMG "...There isn't anyone here..."
+    FMG "Besides I told you, I put it on underneath my clothes an hour ago."
+    MC "N-N... Yeah, yeah you did..."
+    MC "My bad, I tend to forget things when I get lost in your eyes."
+    FMG "I'm going to leave you here and you can walk back."
+    MC "Jeez, I'm trying my hardest out here. Can you throw me a bone?"
+    show FMG neutral
+    FMG "...No..."
+    show FMG happy
+    FMG "Okay, now turn around and cover your eyes. No peeking!"
+    MC "Ughhhh... I guess."
+    scene black with fade
+    MC "How do I know you aren't walking back to the bus to leave without me?"
+    FMG "I would've done that right in front of you, fool."
+    MCT "... Don't ask for hugs anymore."
+    FMG "Damn, I can't get over how good I look..."
+    MC "So... Um, can I look now?"
+    FMG "Hm? Oh yeah, sorry, you can look."
+    MCT "The moment of truth..."
+    scene Beach with fade
+    show FMG swimsuit-flex with dissolve
+    FMG "Whaddya think?"
+    "I couldn't believe my eyes... everything about it complemented her body so well."
+    MC "Y-Y-You look really good... Have you considered wearing this all the time?"
+    show FMG swimsuit-happy
+    FMG "Glad you like it! By the way, I need your help with something."
+    MC "Sure, but let me get changed first. I'll be right back."
+    show FMG swimsuit-neutral
+    FMG "No problem, I'll get the umbrella and towels set up."
+    hide FMG with dissolve
+    pause 3
+    show FMG swimsuit-neutral with dissolve
+    MC "Alright, I'm back. What do you need help with?"
+    show FMG swimsuit-happy
+    FMG "Could you help with my sunscreen?"
+    MCT "Don't have to ask me twice."
+    MC "Toss me the bottle."
+    show FMG swimsuit-aroused
+    FMG "Don't be too rough..."
+    MCT "Everything I've done... Has led to this very moment."
+    MC "Little known fact about me, I trained in the mountains for years practicing the art of massages. I have the hands of a Japanese god."
+    show FMG swimsuit-aroused-2
+    FMG "How about you show me what those hands can do?"
+    MC "Say no more."
+    "I popped the cap off and shot the sunscreen into my hands as I carefully planned out my next move."
+    MCT "Legs. Legs are first."
+    MC "Would you mind turning around for me?"
+    FMG "Yeah, no problem."
+    "I placed my hands on her thighs.They were rock solid stone pillars. I could feel the strength and sturdiness pulsating off them like actual tree trunks they so closely resembled."
+    show FMG swimsuit-aroused
+    FMG "Usually people start with the upper body."
+    MC "I... Uh... During my training... W-We were told to focus on the l-lower body."
+    FMG "Mhmm, whatever you say."
+    FMG "Could you do my back next?"
+    MCT "Keep your cool Kei... You need to relax."
+    MC "Yep,  I-I'm on it."
+    "She spread her back showing off her massive physique, it was so defined and toned it looked like a leather sack full of snakes."
+    FMG "Impressed? All those long hours in the gym pay off, don't they?"
+    MC "I'd say..."
+    MC "You've been pushing yourself hard every time we go."
+    show FMG swimsuit-aroused-2
+    FMG "Well, I am trying to get bigger after all..."
+    "I moved my way up to her broad shoulders, the sunscreen helping me slide effortlessly across her impressive frame. Her biceps radiated power, they were not only as large as cannonballs but just as strong."
+    FMG "You're taking your time with this. I'd say you're enjoying this more than I am."
+    MC "Well... I mean... I may have been waiting for this for a long time."
+    "She turned herself around to face me while stroking her abs."
+    show FMG swimsuit-aroused
+    FMG "I hope you haven't forgotten these."
+    MCT "They've been on my mind all day..."
+    MC "Heh, it almost slipped my mind."
+    "I squirted another glob of sunscreen into my hands and dropped to my knees to start rubbing it in."
+    "Her abs were a labyrinth of ridges, so defined and strong they could've been sculpted with marble. I ran my hands through them steadily, savoring every ounce of her body."
+    MCT "W-Woah, I lost myself for a minute..."
+    MC "I-I-I...I think I got everywhere."
+    show FMG swimsuit-aroused-2
+    FMG "You sure did."
+    "She leaned into me, planting another one of her small kisses on my cheek."
+    show FMG swimsuit-neutral
+    FMG "Now that that's over, what do you want to do?"
+    MC "W-Well we can um... Go for a swim?  ...I guess."
+    MCT "How can she act so nonchalant after what just happened???"
+    show FMG swimsuit-happy
+    FMG "I was thinking we could pick up seashells and walk along the beach."
+    MC "Y...Yeah, that's a better idea."
+    MC "Hey... So, I've been meaning to ask you something, but I... *ahem* I was distracted for awhile."
+    show FMG swimsuit-neutral
+    FMG "Hm... Okay, but you can only ask me if you hold my hand as we walk along the shore."
+    FMG "Deal?"
+    MC "I'm sold."
+    pause 2
+    FMG "Soooooo, what did you want to ask?"
+    MC "It's not anything major. I wanted to know if you knew anything about the beachside village."
+    show FMG swimsuit-neutral
+    FMG "Sorry Kei-kun, I got nothing."
+    show FMG swimsuit-happy
+    FMG "We should definitely check- WOAAAAH, look at this seashell it's so pretty!"
+    "Akira squatted down carefully picking it up. She held the shell between her fingertips overtaken with excitement."
+    FMG "Check it out, dude. This pattern is freaking sick!"
+    MC "I'm not a seashell expert, but it's got the same pattern and colors of a Zebra."
+    show FMG swimsuit-neutral
+    FMG "This one I'm keeping too-"
+    show FMG swimsuit-surprised-2
+    FMG "AH! We have to cut the shell talk short, the sun is starting to set and I don't have my phone!"
+    MC "Uh... Su-WOAH!?!"
+    "I guess she didn't feel like waiting for me to finish my sentence since she made the executive decision to bridal carry me."
+    MC "...Next time... Can you ask me before you do these types of things???"
+    show FMG swimsuit-flex
+    FMG "Oh please, you are totally turned on by this."
+    MCT "Maybe a little bit."
+    FMG "This is quicker anyway."
+    MC "All I ask is that you don't trip."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    scene Beach with fade
+    MC "I am shocked that you were able to run that fast while carrying me."
+    show FMG swimsuit-flex with dissolve
+    FMG "Heh... Didn't even break a sweat."
+    "I collected what dignity I had left and sat down next to her, absorbing the view forming before us."
+    MC "Wow, the sunset is breathtaking. I didn't think the view would be this incredible."
+    show FMG swimsuit-surprised-2
+    FMG "Oh shit, I can't believe I forgot again!"
+    "Akira dove towards her bag, rapidly rummaging through it to grab her phone."
+    show FMG swimsuit-happy
+    FMG "AH-HA! I found it!"
+    FMG "Kei-kun, get off your ass! We have to get a picture of this before it's too late."
+    MC "Roger that."
+    "I wrapped my arm around her waist pulling her close to me as best as I could. For a moment we locked eyes and forgot about everything around us."
+    MC "Pretty romantic, wouldn't you say?"
+    show FMG swimsuit-neutral
+    FMG "I can't put my finger on it... But something is missing."
+    MC "Hm, I think I have the answer."
+    show FMG swimsuit-aroused
+    FMG "And what would-"
+    hide FMG with dissolve
+    "It felt like time stopped when our lips met. Everything seemed to disappear around us. Her kiss was like the beating of a butterfly's wings, soft, gentle yet powerful... I could feel her heart beating faster, her breathing getting heavier. Our grips tightened as it grew more intense. She softly moaned as her tongue traced the bottom of my mouth as she slowly pulled away."
+    show FMG swimsuit-aroused-2 with dissolve
+    FMG "I-I didn't think-"
+    MC "M-Me neither... But that was fucking awesome."
+    FMG "T-Totally."
+    MC "H... Hey, would... would you still want to um... get that picture?"
+    show FMG swimsuit-aroused
+    FMG "If...If you wouldn't mind..."
+    MC "No... N-Not at all."
+    "Akira fumbled to pick up her phone for a while still in awe of what happened, not like I could blame her."
+    show FMG swimsuit-neutral
+    FMG "...Okay, okay... I'm good. Are you ready?"
+    MC "For sure. I can't wait to see how it comes out."
+    "I stood behind her, my arms wrapped around her waist, my head resting on hers. I felt her free hand grip both of mine as she raised the phone into the air."
+    FMG "Say cheese."
+    scene black with fade
+    MC_FMG "I love you."
+    jump daymenu
+
 
 label FMG044:
     $setTime(TimeEnum.EVE)
