@@ -225,7 +225,7 @@ label BE002:
     BE "I'll get one when you get fitted for your size 38 feet."
     MC "Hehehe, dangit, Honoka. See, got me laughing that easily."
     BE "I know. That's because I'm awesome."
-    "Honoka smiled and put her fists on her hips in haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding."
+    "Honoka smiled and put her fists on her hips in a haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding."
     "We stood there chuckling for a bit more before Honoka noticed the time and decided to get going. I nodded and waved goodbye, sticking my hands in my pockets before heading off myself."
     jump daymenu
 
@@ -835,7 +835,7 @@ label BE008_c2:
     "That time her hand, which retracted after I poked it."
     show BE happy
     BE "Heh, Kei-chan what are you doing?"
-    MC "I have to be thorough now, I need to make sure there's not any robotic parts looking under there. Daichi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
+    MC "I have to be thorough now, I need to make sure there's not any robotic parts hiding under there. Daichi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
     "Laughing like a mad scientist, I kept poking Honoka in whatever places I could reach. Eventually I managed to reach her waist, which made her squirm and giggle as she recoiled from the contact."
     MC "Aha, it appears I've found a weakness here. I must examine further!"
     "Spurred on by her reaction, I couldn't help but keep poking her belly wherever I could reach, though by this point it was essentially tickling rather than just poking. It didn't take long to get Honoka stuck in a cycle of laughter."
@@ -1284,7 +1284,7 @@ label BE011_c3:
     BE "Thanks! I hope so too. Any recommendations?"
     MC "Hm. I haven't really looked around all that much myself in terms of clubs. If there's any sort of video game club that would be fun."
     show BE neutral
-    BE "Yeah. it would. But, I think I really want to stick to something athletic. It's good for exercise, you know? Plus it's always nice to get outside."
+    BE "Yeah. It would. But, I think I really want to stick to something athletic. It's good for exercise, you know? Plus it's always nice to get outside."
     MC "That's a good point, but the weather seems like it's going to get cool soon. You may want to look at something that would keep you inside for the semester."
     BE "I guess that would cut out things like baseball, right?"
     MC "Yeah, baseball would definitely be a no-go. What about, um, basketball? I know we have one of those here."
@@ -1742,8 +1742,8 @@ label BE016:
     BE "Who, Sakie? Yeah she tends to be on the quiet side of things. You didn't say anything to upset her did you?"
     MC "I was pretty sure I didn't. I just asked about her wristband."
     show BE happy
-    BE "Oh. That was mine. She forgot hers today."
-    MC "Well, certainly was nice of you to lend you hers."
+    BE "Oh, that was mine. She forgot hers today."
+    MC "Well, certainly was nice of you to lend her yours."
     show BE neutral
     BE "Ah. yeah. That's what happened."
     MC "Are you saying she took it without asking?"

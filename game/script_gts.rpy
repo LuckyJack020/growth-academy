@@ -205,7 +205,7 @@ label GTS003_c1:
     MC "Well, I think it suits you rather well."
     GTS "Thank you..."
     show GTS neutral
-    GTS "As for your question, this flower is a Jasmine, which tend to confuse some people, since they happen to look slightly generic."
+    GTS "As for your question, this flower is a Jasmine, which tends to confuse some people, since they happen to look slightly generic."
     MC "I will admit, it does look like what most people picture as a flower in their heads."
     GTS "Well, Jasmine does come in other forms, like the Grand Duke of Tuscany variant, which almost resembles a white rose, to those that look much like the one in my hair."
     GTS "China even uses it as an ingredient for their teas."
@@ -288,7 +288,7 @@ label GTS004_c2:
 label GTS004_after:
     MC "What language is that? English?"
     "She gave me a nod in response and shifted her book slightly so I'd be able to see it better."
-    GTS "I'm trying to get a bit more studying of it done on my free time. Just get a better understanding of it for myself."
+    GTS "I'm trying to get a bit more studying of it done in my free time. Just to get a better understanding of it for myself."
     MC "That's neat, are you planning to visit the United States in the future?"
     GTS "I can't be certain truthfully, but I think it's best to be prepared for it in case it ever happens. It's also a good skill to have if your work might require it, or if you might have international guests."
     MC "Heh, that's quite the foresight to have. I barely even think about what I'll be doing a month from now. Hey, if you manage to make it work, though, that's one massive advantage you'll have over others in the job market, so good luck!"
@@ -1769,7 +1769,7 @@ label GTS016:
     GTS "Oh? You're not allergic, are you?"
     MC "No, just don't want to get stung is all."
     GTS "I see. No need to worry, then. As long as they are allowed to do their duty, they'll be more than happy to leave you be."
-    MC "Heh, I guess you're pretty use to seeing bees around you, then?"
+    MC "Heh, I guess you're pretty used to seeing bees around you, then?"
     GTS "Indeed, it comes with the territory. Heh, I will admit I did get my fair share of stings when I was younger."
     MC "Ow, did you swipe at them or something?"
     GTS "No, nothing like that. I actually attempted to catch them. I always saw them flying around flowers, so I wanted to keep some so they could see the flowers in my room."
@@ -1934,7 +1934,7 @@ label GTS017_c1_2:
     MC "I think I need more practice."
     GTS "Don't worry, I'll help you."
     "Retrieving her canteen, she poured some more water onto the mud ball before her hand cupped my smaller one."
-    "She placed her other hand underneath my turned palm to add some more stability, guiding my in hers while turning the ball and applying light pressure."
+    "She placed her other hand underneath my turned palm to add some more stability, guiding my hand in hers while turning the ball and applying light pressure."
     show GTS neutral
     GTS "There's multiple ways one can go about doing this, so don't feel like you need to do it the way I'm showing you Hotsure-san. But sometimes being shown the way once is all one needs to find their own path."
     "Her voice was as soft as her hands as she showed me the way. Even with the mud from earlier, her hands were still warm and soft to the touch. As we worked together, a gentle humming came to emanate from her."
@@ -6637,7 +6637,7 @@ label GTSPRG001_c1_after:
     show GTS neutral
     GTS "Some basic tomato, basil and pepper plants should be a good start. Those grow quite easily with only basic tending."
     show PRG neutral
-    PRG "Those would be quite to start with, especially since we use those with nearly every dish."
+    PRG "Those would be nice to start with, especially since we use those with nearly every dish."
     GTS "What are some other foods you use often that we could grow?"
     PRG "Let me think..."
     PRG "Well carrots, peas, scallions and onions are other vegetables we use often."

@@ -567,7 +567,7 @@ init python:
         legalsizes = {
             "Yuki": [1, 3],
             "Natsuko": [1, 2, 3],
-            "Sakura": [1, 3]
+            "Sakura": [1, 2, 3]
         }
 
         try: #backwards compatibility, remove later

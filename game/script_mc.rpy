@@ -892,7 +892,7 @@ label global000_homeroom:
     play music Schoolday
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
 
-    scene F1 Hallway with fade
+    scene Hallway with fade
     "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule."
     "I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
     show BE surprised

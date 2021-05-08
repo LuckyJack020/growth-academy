@@ -3454,10 +3454,10 @@ label FMG025:
     scene Club with fade
     show FMG surprised with dissolve
     FMG "Jeez this place is freaking incredible!"
-    MCT "She was right, lights camouflaged the floor and the ceiling, surrounding us in rays of various colors. The only thing brighter than the dance floor was Akira's smile. She seemed lost in trying to take in everything around her. It was like watching a kid in a candy store."
+    "She was right, lights camouflaged the floor and the ceiling, surrounding us in rays of various colors. The only thing brighter than the dance floor was Akira's smile. She seemed lost in trying to take in everything around her. It was like watching a kid in a candy store."
     DJ "Welcome everyone! Tonight is going to be crazy, I hope to see everyone moving and having fun."
     DJ "Don't be afraid to come up and ask for requests too, I want everyone to have a good time. Without further ado let's get this party started!"
-    "With that Akira took off running...will as best she could, she was not used to heels."
+    "With that Akira took off running... wWell, as best she could, she was not used to heels."
     show FMG angry-2
     FMG "These stupid heels ughhh. I knew I should've gotten flats!"
     MC "Take it easy Akira, no need to get worked up. Here take my hand and we can walk to the dance floor."
@@ -4902,7 +4902,8 @@ label FMG034:
     MC "Okay, yeah. No problem."
     MCT "Women confuse me..."
 
-    $setTime(TimeEnum.EVE) #FIXME
+    scene black with fade
+    $setTime(TimeEnum.EVE)
     scene Lockers with fade
     show FMG flex with dissolve
     FMG "I think for today we'll keep this session short and sweet."
@@ -5146,7 +5147,7 @@ label FMG038:
     FMG "We'll start with one of my favorites! Have you heard the tale of Kuchisake onna?"
     MC "It doesn't ring a bell but that name already sends chills down my spine."
     show FMG neutral
-    FMG "Take a sit young Hotsure-san and listen to my tale."
+    FMG "Take a seat young Hotsure-san and listen to my tale."
     MC "If you're going to talk like that the whole time, I'm going to break the window and run."
     show FMG sad
     FMG "You are no fun sometimes you know that?!"
@@ -5201,7 +5202,6 @@ label FMG038:
     jump daymenu
 
 label FMG039:
-    #Down with the sickness
     $setProgress("FMG", "FMG040")
     $setTime(TimeEnum.EVE)
     scene Nurse Office with fade
@@ -5555,7 +5555,7 @@ label FMG040:
     jump daymenu
 
 label FMG041:
-    $setProgress("FMG", "FMG042")
+    $setProgress("FMG", "FMG044")
     scene Dorm Exterior
     play music Busy
     MC "We got everything right?"
@@ -5598,7 +5598,7 @@ label FMG041:
     MC "It won't be that bad. But, um... We definitely should look into getting you a bigger bike. I really can't believe you smushed the seat."
     show FMG sad
     FMG "It was my favorite bike too, damn... *sigh*  Let's go wait by the bus stop."
-    
+
     scene School Front with fade
     show FMG angry with dissolve
     FMG "Ugh! I hate the bus..."
@@ -5866,7 +5866,6 @@ label FMG041:
     MC_FMG "I love you."
     jump daymenu
 
-
 label FMG044:
     $setTime(TimeEnum.EVE)
     $setProgress("FMG", "FMG045")
@@ -5887,7 +5886,7 @@ label FMG044:
     MC "Yeah, that's fine with me. You mind if I wait and study here then?"
     FMG "I was hoping you would! I'll be back shortly."
     MCT "Doubt it."
-    "Akira took off towards the showers, leaving me with my bag to keep me company.."
+    "Akira took off towards the showers, leaving me with my bag to keep me company."
     MCT "Well, I should probably whip out the ol' math book and review a bit... even if I reaaaaaally don't want to."
     MCT "Daichi might be willing to go over them later! And well, the last thing I need to do is fail this upcoming exam."
     "My train of thought was quickly derailed as I suddenly heard Akira shout from across the hall."
@@ -5949,7 +5948,7 @@ label FMG044:
     "My heart skipped a beat."
     FMG "And be aggressive. I'm a big girl after all."
     "Her finger slowly moved down my chest."
-    FMG "Put your back into it!."
+    FMG "Put your back into it!"
     MCT "I never realized I could be so aroused, yet so scared at the same time."
     FMG "However... I think I already see a problem, Kei~"
     MC "W-what... what do you mean by that?"
@@ -5971,7 +5970,7 @@ label FMG044:
     MC "Slo-Slow down, Akira..."
     "Akira paused for a second, letting out a little huff as she dropped me down to my feet."
     show FMG aroused-2
-    FMG "Jeez, sorry for giving you a run for your money, big guy.."
+    FMG "Jeez, sorry for giving you a run for your money, big guy..."
     MC "Y-you almost drove my head through the ceiling! But... ah... sorry to be a buzzkill..."
     show FMG neutral
     FMG "It's fine, Kei~ I think it's a good idea that we stopped, though... I was really starting to get into it but I think the custodians will be here any moment..."

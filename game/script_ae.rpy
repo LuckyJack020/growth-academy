@@ -3194,7 +3194,7 @@ label AE019:
     MC "Here you go."
     AE "Many thanks."
     AE "So. The basket?"
-    MC "Well, you're in a in a rush today."
+    MC "Well, you're in a rush today."
     AE "Well, no more in a rush than anyone else kept in anticipation over a secret."
     MC "All right, all right."
     "I opened up the old wicker basket I brought from home and handed some of the food over to Shiori-san."
@@ -3811,8 +3811,8 @@ label AE022:
     "I walked with confidence through the halls, enough so that I had a slight smirk on my face."
     "{i}Tap tap{/i}"
     "I passed by a pillar in the hall, and without stopping or turning around, I took two fingers up to my head and made an aloof salute."
-    "Yooo, Amatsu-san, good morning."
-    Ama "E-eh?!"
+    "Yooo, Minori-san, good morning."
+    Minori "E-eh?!"
     "I turned a corner, and sure enough..."
     "{i}Tap tap{/i}"
     "I did a quick spin around a waiting Yuki-chan."
@@ -9989,7 +9989,7 @@ label AE046:
     scene Dorm Interior with fade
     MC "..."
     #*PHONE BEEP SFX*
-    Mom "{i}Keisuke?{/i}"
+    MomCell "{i}Keisuke?{/i}"
     MC "Hey mom... I'm just calling to say hi."
     jump daymenu
 
@@ -14944,6 +14944,7 @@ label AE064:
     show AE happy
     AE "Yep! Just some work stuff. It should all be good."
     MC "Oh! Okay, cool. Just keep me posted."
+    hide AE with dissolve
     "As Shiori left the room, I continued to pack my things, yet I couldn't get my mind off of just how rushed she looked."
     scene black with fade
     "And so it was that I decided to look around for her."
@@ -16710,7 +16711,7 @@ label AE073:
     AE "Well look at you. You're improving drastically."
     MC "Yeah, it's super easy when you just take some of the katakana from the word and read it out."
     "Shiori put aside a chart of pre-prepared words with Katakana accompanying, delicately adjusted the pencils on her desk in order to be exactly perpendicular to each other. As we worked together, I couldn't help but feel as though now was a good time to give her company."
-    MC "I really feel like my english has gotten better over the past few weeks."
+    MC "I really feel like my English has gotten better over the past few weeks."
     show AE smile
     AE "I'm glad to hear. Your grades have been improving as well. You seem to be able to read and write rather well by this point, I'd say."
     MC "You're gonna need to start giving me some {i}real{/i} challenges if you don't want me to outshine you, Shiori!"
@@ -16723,7 +16724,7 @@ label AE073:
     AE "Latin. Give it a try."
     MC "Addo me-...meruroru-meroria."
     show AE smile
-    AE "Try to press the tip of your tongue to juust above your teeth."
+    AE "Try to press the tip of your tongue to just above your teeth."
     show AE admire
     AE "'L' 'L' Me'L'oria."
     MC "Mero- Meluh-"
@@ -16735,7 +16736,7 @@ label AE073:
     MC "So what is this book?"
     show AE smile
     AE "Ah, it's an old book of poetry, works, and writings from ancient Rome with translations. I received it from my mentor after showing interest in it from his library."
-    MC "Sooo, that's latin, that's english and... what's that next to it?"
+    MC "Sooo, that's Latin, that's English and... what's that next to it?"
     show AE neutral
     AE "Italian. Let's see..."
     "Shiori squinted and looked closer at the line next to the latin phrase in the book."
@@ -16797,6 +16798,7 @@ label AE073:
         AE "Ehehe~"
         "I smiled at her coyly as she winked and trotted out of the room, putting emphasis on the swing of her hips as she did. Though I was definitely much more apprehensive about being overly sexual with her... I really couldn't help myself in indulging my gaze."
         MC "Haah... man, that girl is crazy."
+    hide AE with dissolve
     "As Shiori left the room, I turned towards her bookshelf and looked at the different options I could pick from, the rows being placed in a methodical and highly structured manner by size and title. Each one filled me with less and less confidence as I looked."
     MCT "A Critique on Materialism-"
     MC "Nope."

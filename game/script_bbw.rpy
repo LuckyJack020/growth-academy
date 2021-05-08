@@ -2067,7 +2067,7 @@ label BBW014:
     MC "I don't even know what that is."
     show BBW neutral at Position(xpos=0.2) with dissolve
     BBW "It's used in curling. It's the thing you push across the ice."
-    MC "Didn't even know we had stuff like that here. What it's called?"
+    MC "Didn't even know we had stuff like that here. What's it called?"
     BBW "A curling... rock?"
     MC "Rock?"
     BBW "Errrr..."
@@ -3366,7 +3366,7 @@ label BBW019_theater:
         jump daymenu
     else:
         MC "I was thinking of seeing Iron Fan 5. The last couple ones weren't that great, but the original director is back so maybe this one is good?"
-        "Alice looked the over the poster, with its white-suited gangsters, stern-faced police and bloodied asphalt in 'artistic' red, white and black."
+        "Alice looked over the poster, with its white-suited gangsters, stern-faced police and bloodied asphalt in 'artistic' red, white and black."
         show BBW neutral
         "It wasn't hard to see she wasn't impressed."
         BBW "I wouldn't know how the movie is. I don't have much taste for crime stories."
@@ -9463,8 +9463,7 @@ label BBW047_c1_after:
     MC "Hold on, let me guess- you want to spend today at the beach?"
     BBW "Well, just the afternoon. After that, we shall see where the day takes us."
     MC "I can't wait."
-    scene Summer Beach with fade
-    stop music
+    scene Summer Beach Ocean with fade
     play music Peaceful
     "After finally getting a chance to eat breakfast, I made haste to get changed into my swim trunks."
     "It was midday, the sky's were mostly cloudy with strong rays of sunshine going through the gaps. And one couldn't ask for better weather on the beach."
@@ -9571,6 +9570,7 @@ label BBW047_c3_2:
     BBW "Are you implying that I was not beautiful before?"
     "Alice gazed at me with a cocky smirk."
     MC "No, just more so now that so much of you is on display."
+    $setAffection("BBW", 1)
     BBW "An expected answer, but true nevertheless."
     jump BBW047_c3_after
 
@@ -9603,7 +9603,7 @@ label BBW047_c3_after:
     "Her head turned away from me for a second, her hand going to cover her mouth."
     MC "Really? That joke got you?"
     show BBW swimsuit-neutral
-    BBW "No, not at all! *ahem*...I am actually concerned that you came up with that answer so quickly."
+    BBW "No, not at all! *ahem*... I am actually concerned that you came up with that answer so quickly."
     MC "I always figured that if going into architecture didn't pan out, the circus freak show would be guaranteed employment."
     show BBW swimsuit-happy
     "This time Alice didn't have time to cover her face as she let out a clear laugh."
@@ -9859,7 +9859,7 @@ label BBW048_c1_1:
     "A few brush strokes to redo what pulling my shirt over my head messed up and I was good to go."
 
     scene Summer Hallway with fade
-    "Checking my phone for the time to see the damage done revealed that I was 7 minutes late."
+    "Checking my phone for the time to see the damage done revealed that I was seven minutes late."
     MC "Seven minutes? Not great, not terrible."
     Lee "Aw, mista Hotsure, glad to greet ya comin'! I was sent to check up on ya. Ya know Miss Nikumaru won't start without ya, but she's not exactly patient either."
     MC "Sorry to cause concern. Please, lead the way."
@@ -9877,16 +9877,16 @@ label BBW048_c1_1:
     show BBW summer-int-haughty
     BBW "Nonsense, I'm sure you're hungry as I am."
     show BBW summer-int-surprised
-    BBW "... uh, imagining you would be Aida"
+    BBW "... Uh, imagining you would be Aida."
     show BBW summer-int-neutral
-    BBW "- yes that's what I meant."
+    BBW "... Yes that's what I meant."
     MC "Pardon my tardiness. I had underestimated the effects of the ocean water and the sandy beach on my hair."
     MC "I guess I'm just not used to how much maintenance it needs these days yet. I needed some additional time in order to look presentable for the occasion."
     BBW "Hmph, some things can't be helped it would seem. You appear to have invested your time wisely."
     $setAffection("BBW", 1)
     show BBW summer-int-neutral-2
     BBW "Perhaps you can begin to appreciate how long it takes me to get ready now. I hope you realize these curls don't magically spring into place each morning when I wake up."
-    Lee "Allow me to serve you Mr. Hotsure"
+    Lee "Allow me to serve you Mr. Hotsure."
     MC "Thanks."
     show BBW summer-int-neutral
     BBW "Thank you Lee, that will be all for the moment."
@@ -12175,7 +12175,7 @@ label BBW054:
     jump daymenu
 
 label BBW055:
-    $setProgress("BBW", "BBW056")
+    $setProgress("BBW", "BBW057")
     scene Dorm Interior with fade
     play music HallowedHalls
     MC "Sigh..."
@@ -12535,7 +12535,7 @@ label BBW055_c2_2:
     jump daymenu
 
 label BBW057:
-    $setProgress("BBW", "BBW058") #FIXME
+    $setProgress("BBW", "BBW058")
     scene Field with fade
     play music Hallway
     "The weather has been really nice recently. The scorching summer from our vacation at the beach had faded into a much more temperate fall climate over the island by now."
@@ -13198,7 +13198,7 @@ label BBWGTS001:
     MCT "Although she certainly didn't make a good impression with Naomi."
     jump daymenu
 
-label BBWGTS02:
+label BBWGTS002:
     scene Hallway with fade
     play music Schoolday
     "This morning's classes had dragged more than usual. Then again I didn't exactly go to bed early the night before."
@@ -13330,7 +13330,7 @@ label BBWGTS02:
     MC "Oh? You'll have to tell me all about it. I can only imagine..."
     jump daymenu
 
-label BBWGTS03:
+label BBWGTS003:
     scene Dorm Exterior with fade
     play music Busy
     "Alice's business was starting to pick up. I'll admit I was skeptical at first, but intrigued enough to go along with the idea to make some extra money."
@@ -13394,7 +13394,7 @@ label BBWGTS03:
     MCT "Not sure how to take that, but fair enough."
     BBW "And just because Aida is timid doesn't mean she'll let someone just walk all over her like you seem to think I do. I'll have you know, she is a friend of mine, in addition to being my personal assistant."
     show BBW haughty
-    if isEventCleared("BBWGTS01"):
+    if isEventCleared("BBWGTS001"):
         BBW "I've already made it clear that my employees are well compensated for their time."
     BBW "I make sure they are putting their class responsibilities first, I ask for nothing at their personal expense."
     show BBW stern
@@ -13404,7 +13404,7 @@ label BBWGTS03:
     show BBW haughty
     BBW "Oh? Is that so? Don't hold back on account of me."
     "Alice appeared quite set on poking the hornet's nest."
-    if isEventCleared("BBWGTS01") or isEventCleared("BBWGTS02"):
+    if isEventCleared("BBWGTS001") or isEventCleared("BBWGTS002"):
         "Their past few encounters had been less than pleasant, that was for sure. Right now though..."
     "Alice seemed eager to get to the bottom of the matter in her own way. That way just happened to be much less eager to concede any fault or misunderstanding."
     GTS "If you insist, Nikumaru-san. Your bearing is unbecoming of one who fancies themselves to be part of high society."
