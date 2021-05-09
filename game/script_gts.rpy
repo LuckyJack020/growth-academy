@@ -4486,7 +4486,7 @@ label GTS027_c1_2:
 
 label GTS028T:
     $setProgress("GTS", "GTS030")
-    scene Theater Exterior with fade
+    scene Movie Theater with fade
     play music Peaceful
     "I scanned the various posters that decorated the inside of the theater, wondering what might be good. Naomi leaned down slightly to get a closer look at the posters as well."
     show GTS neutral at Position(xpos=0.8, xanchor=0.5, yanchor=1.0) with dissolve

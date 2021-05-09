@@ -4514,22 +4514,22 @@ label FMG032:
     play music Busy
     "With the weather slowly getting warmer, Akira wanted to do more of our workouts outside, So not only do I get to have some fun in the sun, I get to see her in her swimsuit. It's a match made in heaven!"
     MCT "I'd be lying if I didn't say she looked good in it. It was one of the best parts of training by the pool."
-    show FMG swimsuit-angry-2 with dissolve
+    show FMG swim-casual-angry-2 with dissolve
     FMG "Kei-kun, stop thinking about my butt and go another lap!"
     MC "Hang on, I was not!"
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "Uhhuh, suuuure~ That goofy look on your face says otherwise."
     MC "..."
     MC "Yeah yeah, whatever you say."
     "Akira chuckled to herself, strutting past me as if she were going down a catwalk."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "Like what you see?"
     MCT "God damn that swimsuit is hugging her ass. Man, what I would give to do the same..."
     MC "Life is a cruel mistress."
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "She really is, but you know what's even crueler?"
     MC "...You?"
-    show FMG swimsuit-sad
+    show FMG swim-casual-sad
     FMG "Well yes, when I'm hungry! Come on, I'm starving over here! Do your last lap before I make you my protein bar!"
     MC  "Agh! Alright, I'll do this one in record time!"
     scene Campus Center with fade
@@ -5733,28 +5733,28 @@ label FMG041:
     FMG "Hm? Oh yeah, sorry, you can look."
     MCT "The moment of truth..."
     scene Beach with fade
-    show FMG swimsuit-flex with dissolve
+    show FMG swim-casual-flex with dissolve
     FMG "Whaddya think?"
     "I couldn't believe my eyes... everything about it complemented her body so well."
     MC "Y-Y-You look really good... Have you considered wearing this all the time?"
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "Glad you like it! By the way, I need your help with something."
     MC "Sure, but let me get changed first. I'll be right back."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "No problem, I'll get the umbrella and towels set up."
     hide FMG with dissolve
     pause 3
-    show FMG swimsuit-neutral with dissolve
+    show FMG swim-casual-neutral with dissolve
     MC "Alright, I'm back. What do you need help with?"
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "Could you help with my sunscreen?"
     MCT "Don't have to ask me twice."
     MC "Toss me the bottle."
-    show FMG swimsuit-aroused
+    show FMG swim-casual-aroused
     FMG "Don't be too rough..."
     MCT "Everything I've done... Has led to this very moment."
     MC "Little known fact about me, I trained in the mountains for years practicing the art of massages. I have the hands of a Japanese god."
-    show FMG swimsuit-aroused-2
+    show FMG swim-casual-aroused-2
     FMG "How about you show me what those hands can do?"
     MC "Say no more."
     "I popped the cap off and shot the sunscreen into my hands as I carefully planned out my next move."
@@ -5762,7 +5762,7 @@ label FMG041:
     MC "Would you mind turning around for me?"
     FMG "Yeah, no problem."
     "I placed my hands on her thighs.They were rock solid stone pillars. I could feel the strength and sturdiness pulsating off them like actual tree trunks they so closely resembled."
-    show FMG swimsuit-aroused
+    show FMG swim-casual-aroused
     FMG "Usually people start with the upper body."
     MC "I... Uh... During my training... W-We were told to focus on the l-lower body."
     FMG "Mhmm, whatever you say."
@@ -5773,13 +5773,13 @@ label FMG041:
     FMG "Impressed? All those long hours in the gym pay off, don't they?"
     MC "I'd say..."
     MC "You've been pushing yourself hard every time we go."
-    show FMG swimsuit-aroused-2
+    show FMG swim-casual-aroused-2
     FMG "Well, I am trying to get bigger after all..."
     "I moved my way up to her broad shoulders, the sunscreen helping me slide effortlessly across her impressive frame. Her biceps radiated power, they were not only as large as cannonballs but just as strong."
     FMG "You're taking your time with this. I'd say you're enjoying this more than I am."
     MC "Well... I mean... I may have been waiting for this for a long time."
     "She turned herself around to face me while stroking her abs."
-    show FMG swimsuit-aroused
+    show FMG swim-casual-aroused
     FMG "I hope you haven't forgotten these."
     MCT "They've been on my mind all day..."
     MC "Heh, it almost slipped my mind."
@@ -5787,39 +5787,39 @@ label FMG041:
     "Her abs were a labyrinth of ridges, so defined and strong they could've been sculpted with marble. I ran my hands through them steadily, savoring every ounce of her body."
     MCT "W-Woah, I lost myself for a minute..."
     MC "I-I-I...I think I got everywhere."
-    show FMG swimsuit-aroused-2
+    show FMG swim-casual-aroused-2
     FMG "You sure did."
     "She leaned into me, planting another one of her small kisses on my cheek."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "Now that that's over, what do you want to do?"
     MC "W-Well we can um... Go for a swim?  ...I guess."
     MCT "How can she act so nonchalant after what just happened???"
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "I was thinking we could pick up seashells and walk along the beach."
     MC "Y...Yeah, that's a better idea."
     MC "Hey... So, I've been meaning to ask you something, but I... *ahem* I was distracted for awhile."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "Hm... Okay, but you can only ask me if you hold my hand as we walk along the shore."
     FMG "Deal?"
     MC "I'm sold."
     pause 2
     FMG "Soooooo, what did you want to ask?"
     MC "It's not anything major. I wanted to know if you knew anything about the beachside village."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "Sorry Kei-kun, I got nothing."
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "We should definitely check- WOAAAAH, look at this seashell it's so pretty!"
     "Akira squatted down carefully picking it up. She held the shell between her fingertips overtaken with excitement."
     FMG "Check it out, dude. This pattern is freaking sick!"
     MC "I'm not a seashell expert, but it's got the same pattern and colors of a Zebra."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "This one I'm keeping too-"
-    show FMG swimsuit-surprised-2
+    show FMG swim-casual-surprised-2
     FMG "AH! We have to cut the shell talk short, the sun is starting to set and I don't have my phone!"
     MC "Uh... Su-WOAH!?!"
     "I guess she didn't feel like waiting for me to finish my sentence since she made the executive decision to bridal carry me."
     MC "...Next time... Can you ask me before you do these types of things???"
-    show FMG swimsuit-flex
+    show FMG swim-casual-flex
     FMG "Oh please, you are totally turned on by this."
     MCT "Maybe a little bit."
     FMG "This is quicker anyway."
@@ -5828,36 +5828,36 @@ label FMG041:
     $setTime(TimeEnum.EVE)
     scene Beach with fade
     MC "I am shocked that you were able to run that fast while carrying me."
-    show FMG swimsuit-flex with dissolve
+    show FMG swim-casual-flex with dissolve
     FMG "Heh... Didn't even break a sweat."
     "I collected what dignity I had left and sat down next to her, absorbing the view forming before us."
     MC "Wow, the sunset is breathtaking. I didn't think the view would be this incredible."
-    show FMG swimsuit-surprised-2
+    show FMG swim-casual-surprised-2
     FMG "Oh shit, I can't believe I forgot again!"
     "Akira dove towards her bag, rapidly rummaging through it to grab her phone."
-    show FMG swimsuit-happy
+    show FMG swim-casual-happy
     FMG "AH-HA! I found it!"
     FMG "Kei-kun, get off your ass! We have to get a picture of this before it's too late."
     MC "Roger that."
     "I wrapped my arm around her waist pulling her close to me as best as I could. For a moment we locked eyes and forgot about everything around us."
     MC "Pretty romantic, wouldn't you say?"
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "I can't put my finger on it... But something is missing."
     MC "Hm, I think I have the answer."
-    show FMG swimsuit-aroused
+    show FMG swim-casual-aroused
     FMG "And what would-"
     hide FMG with dissolve
     "It felt like time stopped when our lips met. Everything seemed to disappear around us. Her kiss was like the beating of a butterfly's wings, soft, gentle yet powerful... I could feel her heart beating faster, her breathing getting heavier. Our grips tightened as it grew more intense. She softly moaned as her tongue traced the bottom of my mouth as she slowly pulled away."
-    show FMG swimsuit-aroused-2 with dissolve
+    show FMG swim-casual-aroused-2 with dissolve
     FMG "I-I didn't think-"
     MC "M-Me neither... But that was fucking awesome."
     FMG "T-Totally."
     MC "H... Hey, would... would you still want to um... get that picture?"
-    show FMG swimsuit-aroused
+    show FMG swim-casual-aroused
     FMG "If...If you wouldn't mind..."
     MC "No... N-Not at all."
     "Akira fumbled to pick up her phone for a while still in awe of what happened, not like I could blame her."
-    show FMG swimsuit-neutral
+    show FMG swim-casual-neutral
     FMG "...Okay, okay... I'm good. Are you ready?"
     MC "For sure. I can't wait to see how it comes out."
     "I stood behind her, my arms wrapped around her waist, my head resting on hers. I felt her free hand grip both of mine as she raised the phone into the air."

@@ -3688,7 +3688,7 @@ label BE023_c1_3:
     show BE surprised
     BE "Oh!"
     show BE happy
-    BE "Hirohito actually said that's just a bunch of bull! There's no proof that it was ever a thing!"
+    BE "Haruhiro actually said that's just a bunch of bull! There's no proof that it was ever a thing!"
     MC "Really? Huh, wow, I thought that was true."
     BE "Nope. Ladies with luscious lumps can still draw a bow! It's pretty awesome."
     MC "Well, that's good. Though, speaking of, you better get back there, your break time is coming to a close."

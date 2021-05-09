@@ -566,8 +566,9 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuko": [1, 2, 3],
-            "Sakura": [1, 2, 3]
+            "Natsuko": [1, 2, 3, 4, 5, 6],
+            "Sakura": [2, 3, 4, 5, 6],
+            "Tomoko": [1, 2, 3, 4, 5, 6]
         }
 
         try: #backwards compatibility, remove later

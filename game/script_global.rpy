@@ -43,7 +43,7 @@ define Mom = Character('Mom', color="#FF3300")
 define MomCell = Character('Mom', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Naoki = Character('Naoki', color="#C0C0C0")
 define Natsuko = Character('Natsuko', color="#C0C0C0")
-define Nurse = Character('Nurse', color="#FF91DC")
+define Nurse = Character('Nurse Kiyomi', color="#FF91DC")
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
 define Sakie = Character('Sakie', color="#C0C0C0")
@@ -138,6 +138,7 @@ image Cafe = "Graphics/ui/bg/cafe.png"
 image Woods = DynamicImage("Graphics/ui/bg/woods_[gametime].png")
 image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Hill Road = "Graphics/ui/bg/NYI.png"
+image Movie Theater = "Graphics/ui/bg/NYI.png"
 image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
 image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior-[gametime].png")
@@ -199,8 +200,6 @@ image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
 image Courtyard GTS = "Graphics/ui/bg/NYI.png"
 
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
-
-image Dorm Tomoko = DynamicImage("Graphics/ui/bg/NYI.png")
 
 #CG + Images
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
@@ -427,17 +426,29 @@ image BBW summer-ext-sg-stern = DynamicImage("Graphics/BBW/[globalsize]/summer-e
 image BBW summer-ext-sg-doubt = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-doubt.png")
 image BBW summer-ext-sg-worried = DynamicImage("Graphics/BBW/[globalsize]/summer-ext-sg-worried.png")
 
-image BBW swimsuit-neutral = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral.png")
-image BBW swimsuit-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral-2.png")
-image BBW swimsuit-happy = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-happy.png")
-image BBW swimsuit-sad = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-sad.png")
-image BBW swimsuit-surprised = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-surprised.png")
-image BBW swimsuit-angry = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-angry.png")
-image BBW swimsuit-aroused = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-aroused.png")
-image BBW swimsuit-stern = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-stern.png")
-image BBW swimsuit-doubt = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-doubt.png")
-image BBW swimsuit-worried = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-worried.png")
-image BBW swimsuit-haughty = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-unique.png")
+image BBW swim-casual-neutral = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral.png")
+image BBW swim-casual-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-neutral-2.png")
+image BBW swim-casual-happy = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-happy.png")
+image BBW swim-casual-sad = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-sad.png")
+image BBW swim-casual-surprised = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-surprised.png")
+image BBW swim-casual-angry = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-angry.png")
+image BBW swim-casual-aroused = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-aroused.png")
+image BBW swim-casual-stern = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-stern.png")
+image BBW swim-casual-doubt = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-doubt.png")
+image BBW swim-casual-worried = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-worried.png")
+image BBW swim-casual-haughty = DynamicImage("Graphics/BBW/[globalsize]/swimsuit-unique.png")
+
+image BBW swim-school-neutral = DynamicImage("Graphics/BBW/[globalsize]/swim-neutral.png")
+image BBW swim-school-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/swim-neutral-2.png")
+image BBW swim-school-happy = DynamicImage("Graphics/BBW/[globalsize]/swim-happy.png")
+image BBW swim-school-sad = DynamicImage("Graphics/BBW/[globalsize]/swim-sad.png")
+image BBW swim-school-surprised = DynamicImage("Graphics/BBW/[globalsize]/swim-surprised.png")
+image BBW swim-school-angry = DynamicImage("Graphics/BBW/[globalsize]/swim-angry.png")
+image BBW swim-school-aroused = DynamicImage("Graphics/BBW/[globalsize]/swim-aroused.png")
+image BBW swim-school-stern = DynamicImage("Graphics/BBW/[globalsize]/swim-stern.png")
+image BBW swim-school-doubt = DynamicImage("Graphics/BBW/[globalsize]/swim-doubt.png")
+image BBW swim-school-worried = DynamicImage("Graphics/BBW/[globalsize]/swim-worried.png")
+image BBW swim-school-haughty = DynamicImage("Graphics/BBW/[globalsize]/swim-unique.png")
 
 image BBW dress-neutral = DynamicImage("Graphics/BBW/[globalsize]/neutral.png")
 image BBW dress-neutral-2 = DynamicImage("Graphics/BBW/[globalsize]/neutral-2.png")
@@ -677,7 +688,6 @@ image BE worried = Composite(
         None, Null())
     )
 
-
 image BE athletic-angry = DynamicImage("Graphics/BE/[globalsize]/athletic-angry.png")
 image BE athletic-aroused = DynamicImage("Graphics/BE/[globalsize]/athletic-aroused.png")
 image BE athletic-confused = DynamicImage("Graphics/BE/[globalsize]/athletic-confused.png")
@@ -694,6 +704,22 @@ image BE athletic-unique = DynamicImage("Graphics/BE/[globalsize]/athletic-uniqu
 image BE athletic-wink = DynamicImage("Graphics/BE/[globalsize]/athletic-neutral.png")
 image BE athletic-worried = DynamicImage("Graphics/BE/[globalsize]/athletic-worried.png")
 
+image BE swim-school-angry = DynamicImage("Graphics/BE/[globalsize]/swim-angry.png")
+image BE swim-school-aroused = DynamicImage("Graphics/BE/[globalsize]/swim-aroused.png")
+image BE swim-school-confused = DynamicImage("Graphics/BE/[globalsize]/swim-confused.png")
+image BE swim-school-doubt = DynamicImage("Graphics/BE/[globalsize]/swim-doubt.png")
+image BE swim-school-embarrassed = DynamicImage("Graphics/BE/[globalsize]/swim-embarrassed.png")
+image BE swim-school-happy = DynamicImage("Graphics/BE/[globalsize]/swim-happy.png")
+image BE swim-school-neutral = DynamicImage("Graphics/BE/[globalsize]/swim-neutral.png")
+image BE swim-school-sad = DynamicImage("Graphics/BE/[globalsize]/swim-sad.png")
+image BE swim-school-seductive = DynamicImage("Graphics/BE/[globalsize]/swim-seductive.png")
+image BE swim-school-shrug = DynamicImage("Graphics/BE/[globalsize]/swim-shrug.png")
+image BE swim-school-surprised = DynamicImage("Graphics/BE/[globalsize]/swim-surprised.png")
+image BE swim-school-surprised-2 = DynamicImage("Graphics/BE/[globalsize]/swim-surprised-2.png")
+image BE swim-school-unique = DynamicImage("Graphics/BE/[globalsize]/swim-unique.png")
+image BE swim-school-wink = DynamicImage("Graphics/BE/[globalsize]/swim-neutral.png")
+image BE swim-school-worried = DynamicImage("Graphics/BE/[globalsize]/swim-worried.png")
+
 image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
 image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/sad.png")
@@ -706,17 +732,29 @@ image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/aroused.png")
 image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/aroused-2.png")
 image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
 
-image FMG swimsuit-neutral = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-neutral.png")
-image FMG swimsuit-happy = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-happy.png")
-image FMG swimsuit-sad = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-sad.png")
-image FMG swimsuit-surprised = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-surprised.png")
-image FMG swimsuit-surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-surprised-2.png")
-image FMG swimsuit-confused = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-surprised.png")
-image FMG swimsuit-angry = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-angry.png")
-image FMG swimsuit-angry-2 = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-angry-2.png")
-image FMG swimsuit-aroused = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-aroused.png")
-image FMG swimsuit-aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-aroused-2.png")
-image FMG swimsuit-flex = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-flex.png")
+image FMG swim-casual-neutral = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-neutral.png")
+image FMG swim-casual-happy = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-happy.png")
+image FMG swim-casual-sad = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-sad.png")
+image FMG swim-casual-surprised = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-surprised.png")
+image FMG swim-casual-surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-surprised-2.png")
+image FMG swim-casual-confused = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-surprised.png")
+image FMG swim-casual-angry = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-angry.png")
+image FMG swim-casual-angry-2 = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-angry-2.png")
+image FMG swim-casual-aroused = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-aroused.png")
+image FMG swim-casual-aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-aroused-2.png")
+image FMG swim-casual-flex = DynamicImage("Graphics/FMG/[globalsize]/swimsuit-flex.png")
+
+image FMG swim-school-neutral = DynamicImage("Graphics/FMG/[globalsize]/swim-neutral.png")
+image FMG swim-school-happy = DynamicImage("Graphics/FMG/[globalsize]/swim-happy.png")
+image FMG swim-school-sad = DynamicImage("Graphics/FMG/[globalsize]/swim-sad.png")
+image FMG swim-school-surprised = DynamicImage("Graphics/FMG/[globalsize]/swim-surprised.png")
+image FMG swim-school-surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/swim-surprised-2.png")
+image FMG swim-school-confused = DynamicImage("Graphics/FMG/[globalsize]/swim-surprised.png")
+image FMG swim-school-angry = DynamicImage("Graphics/FMG/[globalsize]/swim-angry.png")
+image FMG swim-school-angry-2 = DynamicImage("Graphics/FMG/[globalsize]/swim-angry-2.png")
+image FMG swim-school-aroused = DynamicImage("Graphics/FMG/[globalsize]/swim-aroused.png")
+image FMG swim-school-aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/swim-aroused-2.png")
+image FMG swim-school-flex = DynamicImage("Graphics/FMG/[globalsize]/swim-flex.png")
 
 image GTS neutral = DynamicImage("Graphics/GTS/[globalsize]/neutral.png")
 image GTS neutral-2 = DynamicImage("Graphics/GTS/[globalsize]/neutral.png") #nyi
@@ -857,30 +895,55 @@ image PRG cow-scared = DynamicImage("Graphics/PRG/[prgsize]/cow-scared.png")
 image PRG cow-grope = DynamicImage("Graphics/PRG/[prgsize]/cow-grope.png")
 image PRG cow-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/cow-embarrassed.png")
 
-image PRG swimsuit-neutral = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-neutral.png")
-image PRG swimsuit-happy = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-happy.png")
-image PRG swimsuit-excited = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-excited.png")
-image PRG swimsuit-sad = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-sad.png")
-image PRG swimsuit-surprised = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-surprised.png")
-image PRG swimsuit-stressball = DynamicImage("Graphics/PRG/[prgsize]/stressball.png")
-image PRG swimsuit-angry = DynamicImage("Graphics/PRG/[prgsize]/angry.png")
-image PRG swimsuit-aroused = DynamicImage("Graphics/PRG/[prgsize]/aroused.png")
-image PRG swimsuit-flattered = DynamicImage("Graphics/PRG/[prgsize]/flattered.png")
-image PRG swimsuit-unique = DynamicImage("Graphics/PRG/[prgsize]/unique.png")
-image PRG swimsuit-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/unique-happy.png")
-image PRG swimsuit-worried = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-worried.png")
-image PRG swimsuit-worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-worried.png")
-image PRG swimsuit-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-sad-2.png")
-image PRG swimsuit-lactate = DynamicImage("Graphics/PRG/[prgsize]/lactate.png")
-image PRG swimsuit-admire = DynamicImage("Graphics/PRG/[prgsize]/admire.png")
-image PRG swimsuit-admire-2 = DynamicImage("Graphics/PRG/[prgsize]/admire-2.png")
-image PRG swimsuit-doubt = DynamicImage("Graphics/PRG/[prgsize]/doubt.png")
-image PRG swimsuit-nervous = DynamicImage("Graphics/PRG/[prgsize]/nervous.png")
-image PRG swimsuit-satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.png")
-image PRG swimsuit-angry-2 = DynamicImage("Graphics/PRG/[prgsize]/angry-2.png")
-image PRG swimsuit-scared = DynamicImage("Graphics/PRG/[prgsize]/scared.png")
-image PRG swimsuit-grope = DynamicImage("Graphics/PRG/[prgsize]/grope.png")
-image PRG swimsuit-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-embarrassed.png")
+image PRG swim-casual-neutral = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-neutral.png")
+image PRG swim-casual-happy = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-happy.png")
+image PRG swim-casual-excited = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-excited.png")
+image PRG swim-casual-sad = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-sad.png")
+image PRG swim-casual-surprised = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-surprised.png")
+image PRG swim-casual-stressball = DynamicImage("Graphics/PRG/[prgsize]/stressball.png")
+image PRG swim-casual-angry = DynamicImage("Graphics/PRG/[prgsize]/angry.png")
+image PRG swim-casual-aroused = DynamicImage("Graphics/PRG/[prgsize]/aroused.png")
+image PRG swim-casual-flattered = DynamicImage("Graphics/PRG/[prgsize]/flattered.png")
+image PRG swim-casual-unique = DynamicImage("Graphics/PRG/[prgsize]/unique.png")
+image PRG swim-casual-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/unique-happy.png")
+image PRG swim-casual-worried = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-worried.png")
+image PRG swim-casual-worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-worried.png")
+image PRG swim-casual-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-sad-2.png")
+image PRG swim-casual-lactate = DynamicImage("Graphics/PRG/[prgsize]/lactate.png")
+image PRG swim-casual-admire = DynamicImage("Graphics/PRG/[prgsize]/admire.png")
+image PRG swim-casual-admire-2 = DynamicImage("Graphics/PRG/[prgsize]/admire-2.png")
+image PRG swim-casual-doubt = DynamicImage("Graphics/PRG/[prgsize]/doubt.png")
+image PRG swim-casual-nervous = DynamicImage("Graphics/PRG/[prgsize]/nervous.png")
+image PRG swim-casual-satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.png")
+image PRG swim-casual-angry-2 = DynamicImage("Graphics/PRG/[prgsize]/angry-2.png")
+image PRG swim-casual-scared = DynamicImage("Graphics/PRG/[prgsize]/scared.png")
+image PRG swim-casual-grope = DynamicImage("Graphics/PRG/[prgsize]/grope.png")
+image PRG swim-casual-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/swimsuit-embarrassed.png")
+
+image PRG swim-school-neutral = DynamicImage("Graphics/PRG/[prgsize]/swim-neutral.png")
+image PRG swim-school-happy = DynamicImage("Graphics/PRG/[prgsize]/swim-happy.png")
+image PRG swim-school-excited = DynamicImage("Graphics/PRG/[prgsize]/swim-excited.png")
+image PRG swim-school-sad = DynamicImage("Graphics/PRG/[prgsize]/swim-sad.png")
+image PRG swim-school-surprised = DynamicImage("Graphics/PRG/[prgsize]/swim-surprised.png")
+image PRG swim-school-stressball = DynamicImage("Graphics/PRG/[prgsize]/stressball.png")
+image PRG swim-school-angry = DynamicImage("Graphics/PRG/[prgsize]/angry.png")
+image PRG swim-school-aroused = DynamicImage("Graphics/PRG/[prgsize]/aroused.png")
+image PRG swim-school-flattered = DynamicImage("Graphics/PRG/[prgsize]/flattered.png")
+image PRG swim-school-unique = DynamicImage("Graphics/PRG/[prgsize]/unique.png")
+image PRG swim-school-unique-happy = DynamicImage("Graphics/PRG/[prgsize]/unique-happy.png")
+image PRG swim-school-worried = DynamicImage("Graphics/PRG/[prgsize]/swim-worried.png")
+image PRG swim-school-worried-handsbehind = DynamicImage("Graphics/PRG/[prgsize]/swim-worried.png")
+image PRG swim-school-sad-2 = DynamicImage("Graphics/PRG/[prgsize]/swim-sad-2.png")
+image PRG swim-school-lactate = DynamicImage("Graphics/PRG/[prgsize]/lactate.png")
+image PRG swim-school-admire = DynamicImage("Graphics/PRG/[prgsize]/admire.png")
+image PRG swim-school-admire-2 = DynamicImage("Graphics/PRG/[prgsize]/admire-2.png")
+image PRG swim-school-doubt = DynamicImage("Graphics/PRG/[prgsize]/doubt.png")
+image PRG swim-school-nervous = DynamicImage("Graphics/PRG/[prgsize]/nervous.png")
+image PRG swim-school-satisfied = DynamicImage("Graphics/PRG/[prgsize]/satisfied.png")
+image PRG swim-school-angry-2 = DynamicImage("Graphics/PRG/[prgsize]/angry-2.png")
+image PRG swim-school-scared = DynamicImage("Graphics/PRG/[prgsize]/scared.png")
+image PRG swim-school-grope = DynamicImage("Graphics/PRG/[prgsize]/grope.png")
+image PRG swim-school-embarrassed = DynamicImage("Graphics/PRG/[prgsize]/swim-embarrassed.png")
 
 image PRG pj-neutral = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
 image PRG pj-happy = DynamicImage("Graphics/PRG/[prgsize]/pajamas.png")
@@ -918,17 +981,21 @@ image Yuki gossip = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-gossip.
 image HR neutral = "Graphics/minor/HR-neutral.png"
 image HR annoyed = "Graphics/minor/HR-neutral.png"
 
+#legalsizes already updated, change images when bigger sprites exist
+image Tomoko annoyed = "Graphics/minor/tomoko-annoyed.png"
+image Tomoko distracted = "Graphics/minor/tomoko-distracted.png"
 image Tomoko neutral = "Graphics/minor/tomoko-neutral.png"
-image Tomoko happy = "Graphics/minor/tomoko-neutral.png"
-image Tomoko surprised = "Graphics/minor/tomoko-neutral.png"
-image Tomoko sad = "Graphics/minor/tomoko-neutral.png"
+image Tomoko happy = "Graphics/minor/tomoko-happy.png"
+image Tomoko surprised = "Graphics/minor/tomoko-surprised.png"
+image Tomoko sad = "Graphics/minor/tomoko-sad.png"
+image Tomoko unique = "Graphics/minor/tomoko-unique.png"
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"
 image Ryoko annoyed = "Graphics/minor/ryoko-annoyed.png"
 image Ryoko camera = "Graphics/minor/ryoko-camera.png"
 image Ryoko surprised = "Graphics/minor/ryoko-surprised.png"
-image Ryoko tongue = "Graphics/minor/ryoko-tongue.png"
+image Ryoko tongue = "Graphics/minor/ryoko-unique.png"
 image Ryoko confused = "Graphics/minor/ryoko-confused.png"
 image Ryoko embarrassed = "Graphics/minor/ryoko-embarrassed.png"
 
@@ -939,17 +1006,35 @@ image Minori sad = "Graphics/minor/minori-neutral.png"
 
 image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
+image Sakura angry = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-angry.png")
+image Sakura deadpan = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-deadpan.png")
+image Sakura frustrated = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-frustrated.png")
 image Sakura neutral = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-neutral.png")
 image Sakura happy = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-happy.png")
+image Sakura nervous = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-nervous.png")
 image Sakura sad = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-sad.png")
+image Sakura sad-2 = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-sad-2.png")
+image Sakura surprised = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-surprised.png")
 
 image Natsuko neutral = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko angry = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko smug = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko flex = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-annoyed.png")
+image Natsuko angry = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-angry.png")
+image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-disappointed.png")
+image Natsuko smug = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-smug.png")
+image Natsuko flex = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flex.png")
 image Natsuko happy = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-happy.png")
+image Natsuko flirty = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flirty.png")
+image Natsuko aroused = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-aroused.png")
+
+image Natsuko swim-school-neutral = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
+image Natsuko swim-school-annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-annoyed.png")
+image Natsuko swim-school-angry = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-angry.png")
+image Natsuko swim-school-disappointed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-disappointed.png")
+image Natsuko swim-school-smug = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-smug.png")
+image Natsuko swim-school-flex = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flex.png")
+image Natsuko swim-school-happy = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-happy.png")
+image Natsuko swim-school-flirty = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flirty.png")
+image Natsuko swim-school-aroused = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-aroused.png")
 
 image Tako neutral = "Graphics/minor/tako-neutral.png"
 image Tako angry = "Graphics/minor/tako-angry.png"
