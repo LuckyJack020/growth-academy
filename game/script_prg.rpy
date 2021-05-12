@@ -160,12 +160,12 @@ label PRG001:
     "Aida went quiet as we got closer to the counter."
     "When we finally got up to the counter, Aida ordered several bean paste buns and a few jelly rolls."
     "Taking the large bag of pastries in hand, we set out into the cafeteria seating, looking around for Alice."
-    show BBW neutral
+    show BBW neutral at Position(xpos=0.25) with dissolve
     BBW "Here, Kodama-san."
     PRG "C-Coming!"
-    show BBW neutral at Position(xpos=0.25) with dissolve
+    show BBW neutral
     "I followed Aida over to the table Alice was sitting at, a clean, white cloth spread over the table and actual set of silverware in front of her."
-    "Taking a seat across from Alice, I watched Aida hurriedly open each of the packaged sweets and set them out on the cloth in front of Alice.  She sat down across beside me, looking down at the selection."
+    "Taking a seat across from Alice, I watched Aida hurriedly open each of the packaged sweets and set them out on the cloth in front of Alice.  She sat down beside Alice, looking down at the selection."
     BBW "Thank you Kodama-san. Hmm, curious... is this a full selection of the snacks available, or did you prioritize some over others?"
     show PRG nervous
     PRG "Well, um, this was all I could afford, and I tried to pick a variety..."
@@ -287,6 +287,7 @@ label PRG002:
     show BE neutral
     BE "But, nope! Still snoozin' in my seat."
     scene Campus Center with fade
+    show BE neutral with dissolve
     if isEventCleared("global005"):
         MC "Well, considering that the exclusivity here comes from the condition of the students, I don't think they really need to focus too hard on next level learning techniques."
         BE "Yeah, I guess. Still kinda crazy that we both ended up here, huh?"
@@ -341,6 +342,8 @@ label PRG002:
     BE "I definitely don't blame you for your feelings in the slightest, of course. I mean, I could barely tolerate the time you and I spent with her. If I would've been there for this..."
     BE "Yeah... no way."
     MC "Mhm."
+    scene Hallway with fade
+    show BE neutral with dissolve
     "Honoka and I headed out through the large double doors into the center of campus."
     BE "Wonder what she needs an assistant for, anyway. What's she got going on that's so time consuming, that she needs a secretary?"
     MC "Good question. Maybe she is starting a company in her dorm after all."
@@ -433,7 +436,6 @@ label PRG002_c1_2:
     jump daymenu
 
 label PRG003:
-    $setTimeFlag("testday")
     $setProgress("PRG", "PRG004")
     scene Hallway with fade
     play music Busy
@@ -753,7 +755,8 @@ label PRG003_c1_3c:
     jump daymenu
 
 label PRG004:
-    $setProgress("PRG", "PRG005")
+    $setProgress("PRG", "PRG006")
+    $setTimeFlag("testday")
     scene Hallway2 with fade
     play music Peaceful
     if getFlag("PRG003_c1_1a"):
@@ -805,6 +808,7 @@ label PRG004:
         MCT "Probably that everyone is more worried about the elephant in the room than getting a good grade."
         "I shrugged to no one in particular and walked into the kitchen."
         scene Cooking Classroom with fade #kitchen?
+        show PRG neutral with dissolve
         "Aida stood off to one side of the kitchen, leaning over soapy water in the sink again."
         "A small container of fried rice sat on the counter, lavish curls of steam curling off of it."
         MC "Hey, Kodama-san!"
@@ -842,7 +846,8 @@ label PRG004:
         PRG "Um... o-okay. I-I'll walk with you."
         PRG "Can I just finish these dishes?"
         MC "By all means."
-    show PRG neutral
+    scene Campus Center with fade
+    show PRG neutral with dissolve
     "After Aida had cleaned everything up in the kitchen, the two of us headed outside into the warm sunshine."
     "The center of campus was gorgeous, and the sunshine glinted off of the brightly colored trees and shrubs."
     PRG "S-So where should we walk to?"
@@ -878,6 +883,7 @@ label PRG004:
     scene Track with dissolve
     "The track appeared behind the garden, stretching out for a long way. In the distance, Akira trotted around at a brisk pace, before turning a corner and breaking into an all out sprint."
     MC "Wow. I didn't expect an entire track to be out here."
+    show PRG neutral with dissolve
     PRG "Y-Yeah. It's big."
     MC "You ever play any sports, Kodama-san?"
     show PRG surprised
@@ -1068,6 +1074,7 @@ label PRG005:
     jump daymenu
 
 label PRG006:
+    $setProgress("PRG", "PRG007")
     $setVar("PRG006_walking", 0)
     scene Dorm Interior with fade
     play music Schoolday
@@ -1161,6 +1168,7 @@ label PRG006_c1_after:
     PRG "... thanks."
     BBW "Kodama-san? We need to start on an organized system for sorting!"
     PRG "Y-Yes, Alice!"
+    hide PRG with dissolve
     "She quickly closed the door, Alice's eager and authoritative voice already rambling out orders."
     if getVar("PRG006_walking") == 0:
             $setAffection("PRG", 1)
@@ -1169,13 +1177,19 @@ label PRG006_c1_after:
     jump daymenu
 
 label PRG006_c1_2:
-    if getVar("PRG006_walking") <= 3:
+    if getVar("PRG006_walking") == 1:
         MC "You're sure?"
         PRG "I-It's fine, I promise."
         MC "Well, want to just walk together then?"
         PRG "Uh... sure."
         "We slowly made our way through campus. I kept pace with her, not wanting her to rush. I tried to keep some semblance of a conversation going, but the focus and exertion it took her to keep the boxes balanced took up most of her attention."
         "After we'd made it about a quarter of the way back to the dorms, she exhaled and set the boxes down, rubbing her hands together."
+        jump PRG006_c1_menu
+    elif getVar("PRG006_walking") == 2:
+        MC "You're sure?"
+        PRG "Hotsure-san, I told you. I can get it."
+        MC "Alright, alright. Sorry."
+        "Aida picked up the boxes again, but could barely get them into her arms this time. I watched warily, in case the pile went falling forward or something."
         jump PRG006_c1_menu
     else:
         MC "Are you sure I can't help?"
@@ -1262,6 +1276,7 @@ label PRG007:
             jump PRG007_c1_2
 
 label PRG007_c1_1:
+    MC "Well, my dad is really into them."
     MC "He never misses a game on TV, and if you interrupt him during it, he gets all upset. Total sports freak."
     MC "Personally, I don't understand how he can be into a team with such a poor record."
     show PRG nervous
@@ -1613,7 +1628,8 @@ label PRG008_c2_2:
     jump daymenu
 
 label PRG009:
-    $setProgress("PRG", "PRG010")
+    $setProgress("PRG", "PRG012")
+    $setTimeFlag("size2")
     scene Dorm Interior with fade
     play music Hallway
     "Sunlight cascaded through the windows of my dorm, hitting me directly in the eyes."
@@ -15662,7 +15678,7 @@ label PRG058:
     "I walked out onto the pool deck and grabbed a towel for myself and another for my fair lady."
     "Off came the shirt as I stretched myself a bit. I wasn't planning on swimming olympian style today, but a few laps would probably do my body good."
     PRG "Um... Keisuke?"
-    show PRG swim-school-sad-2 at Position(xpos=0.95, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG swim-casual-sad-2 at Position(xpos=0.95, xanchor=0.5, yalign=1.0) with dissolve
     "Aida was poking her head out of the changing room door, looking around like a deer in the woods."
     MC "Hey, everything okay?"
     PRG "Um... is t-there anyone else out there? L-Like by or in the pool?"
@@ -15673,7 +15689,7 @@ label PRG058:
     MC "Yep. No one but us."
     PRG "O-Okay..."
     PRG "{size=-6}Um... p-please don't laugh...{/size}"
-    show PRG swim-school-sad-2 at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
+    show PRG swim-casual-sad-2 at Position(xpos=0.5, xanchor=1.0, yalign=0.5) with dissolve
     MC "Uh... whoa..."
     PRG "I-I don't have a swimsuit that... f-fits me. So... I-I had to wear one of Alice's old ones..."
     PRG "And, none of her one-piece suits fit me, so..."
@@ -15700,12 +15716,12 @@ label PRG058:
     show FMG swim-school-neutral at Position(xpos=0.55, xanchor=0.5, yalign=1.0) with dissolve
     "Aida turned around to go change out of her suit, and nearly plowed straight into Akira, who was walking out of the changing room behind her."
     show FMG swim-school-surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG swim-school-surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG swim-casual-surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     "Luckily for both of them, Akira backpedaled, narrowly missing a smack from Aida's belly."
     PRG "Oh! M-Mizutani-san! I-I'm sorry! I-I..."
     show FMG swim-school-happy
     FMG "Whoa, relax for a second! It's alright. I'm just glad I didn't accidently hit you! Wouldn't want to damage the goods there."
-    show PRG swim-school-unique
+    show PRG swim-casual-unique
     PRG "N-No harm done..."
     FMG "I gotta say though, you're really rocking that suit!"
     PRG "R-Rocking it?"
@@ -15721,16 +15737,16 @@ label PRG058:
     show FMG swim-school-happy
     FMG "Nope! Actually, when a girl gets pregnant, more blood goes to your blood vessels, making you look a little more pale than whatever tone your skin normally has."
     FMG "In addition to that, your body produces a little more of its natural oils, making your skin shine a little bit."
-    show PRG swim-school-worried
+    show PRG swim-casual-worried
     PRG "So, that's actually real?"
     FMG "You got it! Plus, if you want my personal opinion, pregnant girls have a certain special beauty that only they can have. Like a fertile look, I guess?"
-    show PRG swim-school-neutral
+    show PRG swim-casual-neutral
     FMG "That's kind of a bad way to describe it, but when you see a pregnant girl, she still looks as beautiful as she did before, if not more so. Something about having a baby bump just adds like ten beauty points."
     FMG "Hasn't Kei-kun told you that you're beautiful before?"
-    show PRG swim-school-unique
+    show PRG swim-casual-unique
     PRG "W-Well, yeah..."
     FMG "And, he wouldn't lie to you, would he?"
-    show PRG swim-school-worried
+    show PRG swim-casual-worried
     PRG "No. Never."
     FMG "See? That's all there is to it."
     "Seeming satisfied with her little avalanche style speech, Akira pulled on a pair of swimming goggles and sat on the edge of the pool."
@@ -15745,13 +15761,13 @@ label PRG058:
     "Aida put her hands on her belly, rubbing it nervously."
     PRG "You... actually like seeing it?"
     MC "Mhm. Not only is it really sexy, but it reminds me of what we did."
-    show PRG swim-school-neutral
+    show PRG swim-casual-neutral
     "I took Aida's hand and helped her sit on the side of the pool. She kicked her legs a bit, getting herself used to the water."
     PRG "It's like a bath."
     MC "Yeah. Nice and toasty."
     "The water was only about four feet deep where we were standing, so when Aida slid herself down into the water, she could stand perfectly fine."
     "Aida crouched down in the water a bit, dunking her head under to get her hair wet."
-    show PRG swim-school-excited
+    show PRG swim-casual-excited
     PRG "Ohhh..."
     "She didn't notice my right arm moving out from my side and going behind her. While her eyes were still shut, I moved quickly and poked her right on her left ass-cheek."
     PRG "Eh?! H-Hey!"
@@ -15762,18 +15778,18 @@ label PRG058:
     "About ten feet from us, Akira came to a stop at the end of the pool, barely even panting while she pulled her goggles off."
     show FMG swim-school-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Have you ever tried doing any water exercises, Kodama-san?"
-    show PRG swim-school-neutral
+    show PRG swim-casual-neutral
     PRG "N-No I haven't. I heard it wasn't good to do strenuous exercise when you're pregnant."
     FMG "Oh! I don't mean like intense swimming! I'm talking like aerobics!"
     PRG "Oh. No, I've never tried that."
     FMG "Want me to show you an exercise quick? It's really easy!"
-    show PRG swim-school-nervous
+    show PRG swim-casual-nervous
     PRG "Um... I-I guess."
     show FMG swim-school-flex
     FMG "Sweet! This is called 'The Cross Country Ski.'"
     show FMG swim-school-happy
     FMG "Throw your shoulders back, and stand up as straight as possible. Then, jump up and down in the water."
-    show PRG swim-school-worried
+    show PRG swim-casual-worried
     "Akira gave a demonstration in front of Aida, who tried to copy as closely as she could."
     PRG "Like... this?"
     FMG "Yep, you got it! Now, try moving your legs in a scissor type motion when you jump. Bend your front knee a bit, then drive your back heel backwards at the same time."
@@ -15786,7 +15802,7 @@ label PRG058:
     FMG "There. That's the right spot. Try that now. Ideally, you want to feel it lightly stretching your hips and thighs."
     PRG "Okay. I think I feel it there."
     FMG "Sweet! Now, you want to start swinging your arms in the opposite direction of your legs. This gets your upper body moving a bit."
-    show PRG swim-school-neutral
+    show PRG swim-casual-neutral
     PRG "O-Okay!"
     "Aida swung her arms in the correct motions, following in rhythm with her legs."
     FMG "That's it, girl! You got it!"
@@ -15802,18 +15818,18 @@ label PRG058:
     FMG "Feeling the burn?"
     PRG "Not really. It's just kind of stretching everything out."
     FMG "That's what you're looking for. The burn is related more to muscle building, and I doubt that's what you want."
-    show PRG swim-school-unique
+    show PRG swim-casual-unique
     PRG "N-No, definitely not."
-    show PRG swim-school-surprised
+    show PRG swim-casual-surprised
     PRG "I-I'm not saying I don't like muscles, though! They're just not for me."
     show FMG swim-school-happy
     FMG "You're fine, Kodama-san! No worries! I know that being jacked isn't everyone's cup of tea. But, stretching is good, no matter who you are."
-    show PRG swim-school-worried
+    show PRG swim-casual-worried
     PRG "I don't think I'm going to go much longer, though. I don't want to push myself too hard and hurt something."
     show FMG swim-school-neutral
     FMG "That's a good call. It's always best to ease yourself into a new exercise. Especially in your case."
     PRG "Of course."
-    show PRG swim-school-neutral
+    show PRG swim-casual-neutral
     hide FMG with dissolve
     "Aida stopped her gentle hopping and let herself float again. Akira pushed off the side again, going into a forward."
     PRG "Keisuke?"
@@ -15827,29 +15843,29 @@ label PRG058:
     "Aida's left arm came around my back, holding onto me. She leaned over, watching herself being craned up in the water."
     MC "Ah... there we are."
     "Her boobs and belly both stuck up out of the water like three mountainous peaks. Meanwhile, under the water, her soft ass and legs felt like pure, soft butter being pressed against me."
-    show PRG swim-school-aroused
+    show PRG swim-casual-aroused
     PRG "Wow... you're strong."
     hide PRG with dissolve
     "Aida reached her arm out and squeezed the bicep on my left arm."
     "I looked over to the side of the pool. Akira had gotten out and was heading back into the changing rooms. She waved goodbye to us, which I returned with a head nod."
-    show PRG swim-school-neutral with dissolve
+    show PRG swim-casual-neutral with dissolve
     MC "So, now that we're alone, can I ask you something?"
     PRG "Mhm!"
     MC "Why did you want me to hold you?"
-    show PRG swim-school-unique
+    show PRG swim-casual-unique
     PRG "Well... I just wanted to know how it feels."
     PRG "I don't think you'd be able to pick me up when I'm out of the water."
     if getSkill("Athletics") > 5:
         MC "Wanna bet?"
         PRG "I-I... are you sure?"
         MC "Mhm. I'll prove it."
-        show PRG swim-school-worried
+        show PRG swim-casual-worried
         PRG "P-Please don't hurt yourself..."
         "With Aida in my arms, I took a few steps toward the shallow end of the pool."
         "When we passed the four and a half foot mark, I felt Aida's weight fall more on me and less on the water. By the time we hit the four foot mark, Aida was mostly out of the water."
         PRG "Are you..."
         "Aida craned her neck over, watching the waterline get further and further away from her."
-        show PRG swim-school-excited
+        show PRG swim-casual-excited
         PRG "Y-You're really holding me!"
         MC "Hold on."
         MC "Nngh..."
@@ -15859,22 +15875,22 @@ label PRG058:
         PRG "Keisuke!! I don't believe it! I'm not even in the water!"
         "Down below, I was certain I would shatter a tooth if I kept my teeth smashed together like this any longer, and I lowered Aida back down, letting her rest partially in the water."
         "Aida put one of her hands on my face, caressing along my jawline."
-        show PRG swim-school-happy
+        show PRG swim-casual-happy
         $setAffection("PRG", 2)
         PRG "Keisuke, that was amazing!"
         MC "Heh, I'm glad you liked it."
-        show PRG swim-school-aroused
+        show PRG swim-casual-aroused
         PRG "I did. It was really manly~"
-        show PRG swim-school-neutral
+        show PRG swim-casual-neutral
         PRG "Would you mind if we got out now though? The chlorine is stinging my eyes."
         MC "Oh, good. It's not just me."
         "I climbed up the ladder on the poolside, giving Aida a hand so she could get seated on the edge of the pool and get herself out."
         "When she sat on the side, her soft ass seemed to spread on the cement, supporting the delicate girl and her load of babies."
         "She put her hands on either side of her and got her legs out and onto the side of the pool deck."
-        show PRG swim-school-doubt
+        show PRG swim-casual-doubt
         PRG "Mmph... hold on."
         "Aida got her legs underneath her and grabbed onto the side of the pool ladder, using it as an anchor as she inched her way up."
-        show PRG swim-school-neutral
+        show PRG swim-casual-neutral
         PRG "Hah... that was a lot of fun!"
         MC "I liked it too, but I can't wait to grab a shower."
         PRG "Me either."
@@ -15890,14 +15906,14 @@ label PRG058:
     else:
         "I didn't respond. I knew that I couldn't pick Aida up without the waters' help, and trying would only bring both me and her a load of embarrassment."
         MC "Sorry..."
-        show PRG swim-school-surprised
+        show PRG swim-casual-surprised
         PRG "I-It's not your fault, Keisuke!"
-        show PRG swim-school-unique
+        show PRG swim-casual-unique
         PRG "P-Please don't take it that way..."
         MC "No, it's okay."
         "Both of us went quiet. I didn't really feel upset by what Aida had said. I only felt ashamed that I couldn't hold her like any other boyfriend would hold their girlfriend."
         "If I ever needed a push to start hitting the gym, that was it."
-        show PRG swim-school-neutral
+        show PRG swim-casual-neutral
         PRG "Hey..."
         "I looked down at Aida in my arms, the water lapping up on her belly and boobs."
         "Aida laid her head against my chest, putting her hands around my sides."

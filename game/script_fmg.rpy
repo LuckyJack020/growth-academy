@@ -5847,7 +5847,8 @@ label FMG041:
     show FMG swim-casual-aroused
     FMG "And what would-"
     hide FMG with dissolve
-    "It felt like time stopped when our lips met. Everything seemed to disappear around us. Her kiss was like the beating of a butterfly's wings, soft, gentle yet powerful... I could feel her heart beating faster, her breathing getting heavier. Our grips tightened as it grew more intense. She softly moaned as her tongue traced the bottom of my mouth as she slowly pulled away."
+    "It felt like time stopped when our lips met. Everything seemed to disappear around us. Her kiss was like the beating of a butterfly's wings, soft, gentle yet powerful... I could feel her heart beating faster, her breathing getting heavier."
+    "Our grips tightened as it grew more intense. She softly moaned as her tongue traced the bottom of my mouth as she slowly pulled away."
     show FMG swim-casual-aroused-2 with dissolve
     FMG "I-I didn't think-"
     MC "M-Me neither... But that was fucking awesome."

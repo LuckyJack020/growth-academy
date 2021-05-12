@@ -7837,10 +7837,10 @@ label BBW043:
     $setProgress("BBW", "BBW044")
     scene Dorm Interior with fade
     play music Peaceful
-    MCT "Ugh, I'd been wracking my brain trying to study for an upcoming quiz for most of the afternoon. My boredom finally reached a tipping point where I found myself unable to focus. I needed a break."
-    scene Dorm Interior with fade
-    MCT "I decided my study efforts would be better served if I could get outside and clear my head for a little while. So I figured I'd take a walk around campus."
-    MCT "I didn't make it too far before I ran into a lovely, familiar face."
+    "I'd been wracking my brain trying to study for an upcoming quiz for most of the afternoon. My boredom finally reached a tipping point where I found myself unable to focus. I needed a break."
+    scene Dorm Exterior with fade
+    "I decided my study efforts would be better served if I could get outside and clear my head for a little while. So I figured I'd take a walk around campus."
+    "I didn't make it too far before I ran into a lovely, familiar face."
     show BBW haughty with dissolve
     BBW "Keisuke! Just the person I was looking for."
     MC "The one and only! At your service m'lady."
@@ -7850,12 +7850,12 @@ label BBW043:
     show BBW neutral
     BBW "I've been thinking lately that I need to do more to stay active."
     show BBW worried
-    MCT "Alice's focus shifted away from me and down towards the swell of her belly, where her feet had long since disappeared from her sight."
+    "Alice's focus shifted away from me and down towards the swell of her belly, where her feet had long since disappeared from her sight."
     BBW "{i}Sigh...{/i}"
     show BBW neutral-2
     BBW "Between classes, the business, and music club I fear I've begun to neglect my usual physical activities."
     if isEventCleared("BBW009"):
-        MCT "Alice didn't have the body of an athlete by any means, but from what I'd seen, she was one hell of a swimmer. She didn't seem that rusty to me."
+        "Alice didn't have the body of an athlete by any means, but from what I'd seen, she was one hell of a swimmer. She didn't seem that rusty to me."
     MC "I thought you swam fairly often in your free time? I mean, maybe not every day, but you seem pretty active to me."
     BBW "True, I do make the time to stay somewhat active with swimming but doing laps by yourself in the pool just doesn't provide the same meaningful push that direct competition does."
     MC "Are you going to join the swim club then?"
@@ -7868,8 +7868,8 @@ label BBW043:
     BBW "Precisely. Though I must say Keisuke, I expected a bit more enthusiasm from you."
     show BBW neutral-2
     BBW "Aren't you interested in doing something that'll let us spend more time together?"
-    MCT "Alice was layering on the guilt pretty thick with that remark. By this point I was all too used to getting dragged into doing extra work for her, but despite her obvious guilt trip, her tone was soft and sincere."
-    MCT "I suspected this was her way of expressing she was interested in spending more time with me."
+    "Alice was layering on the guilt pretty thick with that remark. By this point I was all too used to getting dragged into doing extra work for her, but despite her obvious guilt trip, her tone was soft and sincere."
+    "I suspected this was her way of expressing she was interested in spending more time with me."
     MC "Oh, of course! I didn't mean it like that. I was just thrown off a bit because I thought there couldn't be two of the same clubs."
     show BBW haughty
     BBW "That is true, which is why I came up with something different: a water polo club."
@@ -7906,7 +7906,7 @@ label BBW043:
     BBW "I accept your offer. Though, honestly Keisuke your negotiation skills could use some work if that's all you've managed to gain from this."
     MC "Isn't the pleasure of your company its own reward?"
     show BBW happy
-    MCT "Alice rolled her eyes at my lame attempt to express my affection, but it brought a giddy smile to her face nonetheless."
+    "Alice rolled her eyes at my lame attempt to express my affection, but it brought a giddy smile to her face nonetheless."
     BBW "Oh, you're hopeless. But also, very sweet."
     $setAffection("BBW", 1)
     show BBW haughty
@@ -7916,16 +7916,16 @@ label BBW043:
 
     scene black with fade
     play music Rain
-    MCT "Alice gave me a run-down on the rules so I had a basic understanding of what to expect. The rules weren't too hard to understand, but I could tell I was in for a workout with all the swimming I'd have to do just to keep up."
-    MCT "We both had to get going. I still had a lot of studying to do, so I went back to my dorm. I tried to study, but found myself distracted by both the excitement and dread of what was going to happen the next day."
+    "Alice gave me a run-down on the rules so I had a basic understanding of what to expect. The rules weren't too hard to understand, but I could tell I was in for a workout with all the swimming I'd have to do just to keep up."
+    "We both had to get going. I still had a lot of studying to do, so I went back to my dorm. I tried to study, but found myself distracted by both the excitement and dread of what was going to happen the next day."
 
     scene Classroom with fade
     play music Schoolday
-    MCT "The studying I put into the day before paid off decently well. Probably didn't get an A, but I felt confident enough I avoided worse than a C."
+    "The studying I put into the day before paid off decently well. Probably didn't get an A, but I felt confident enough I avoided worse than a C."
 
     scene Lockers with fade
-    MCT "With the quiz out of the way along with the rest of the classes I headed to the locker to change into my swimsuit. I had a little extra time to kill before the practice started, but I didn't have anything better to do and it wasn't worth walking back to my dorm."
-    MCT "So, I figured I'd show up a bit early and hang out with Alice for a little while beforehand."
+    "With the quiz out of the way along with the rest of the classes I headed to the locker to change into my swimsuit. I had a little extra time to kill before the practice started, but I didn't have anything better to do and it wasn't worth walking back to my dorm."
+    "So, I figured I'd show up a bit early and hang out with Alice for a little while beforehand."
 
     scene Pool with fade
     show BBW swim-school-haughty with dissolve
@@ -7940,10 +7940,8 @@ label BBW043:
     show BBW swim-school-worried
     BBW "{size=-6}Well that and swimming laps in the pool by myself sometimes feels a bit lonely...{/size}"
     MC "Oh, well I could come with you next time if that's the case."
-    show AE glasses at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     BBW "Oh! I didn't mean it like that."
-    hide AE with dissolve
-    MCT "More like she didn't mean that to slip. Now that I think about it, outside of Aida and me, I don't think Alice has made a lot of friends to hang out with. Maybe there's more to this than just wanting to play water polo."
+    "More like she didn't mean that to slip. Now that I think about it, outside of Aida and me, I don't think Alice has made a lot of friends to hang out with. Maybe there's more to this than just wanting to play water polo."
     show BBW swim-school-haughty
     BBW "Besides, there will be plenty of others to swim with once I get this club up and running officially. The rest should be coming along soon."
     MC "Come to think of it, I never did ask who else you convinced to come and try this out."
@@ -7967,8 +7965,8 @@ label BBW043:
     BBW "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
     show Natsuko swim-school-neutral at Position(xpos=0.35, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "Hello Alice. Thank you for the invitation again. I'm always up for a new challenge. A contact sport where you need to swim and handle a ball sounds tough. I'm ready to show you what I can do!"
-    MCT "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
-    MCT "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
+    "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
+    "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
     BBW "I'm glad to hear that Natsuko. I'm looking forward to playing with someone who can keep up with my swimming skills."
     MC "So, if you needed more strong swimmers, that means the other person you asked is probably... Ohhh, no."
     show FMG swim-school-happy at Position(xpos=0.65, xanchor=0.5, yalign=1.0) with dissolve
@@ -7982,8 +7980,8 @@ label BBW043:
     show BE swim-school-surprised-2
     show PRG swim-school-scared
     FMG "Judging by the stink lines coming off of you, I don't even think you know what a tub is used for."
-    MCT "Akira and Natsuko began to bicker back and forth, doing their best to one-up each other as they came up with even more creative ways to denigrate each other's athletic ability."
-    MCT "Looking at everyone else's reaction to the scene, this was creating a really toxic environment. While those two were still battling it out I whispered an aside to Alice."
+    "Akira and Natsuko began to bicker back and forth, doing their best to one-up each other as they came up with even more creative ways to denigrate each other's athletic ability."
+    "Looking at everyone else's reaction to the scene, this was creating a really toxic environment. While those two were still battling it out I whispered an aside to Alice."
     MC "{size=-8}Alice, you didn't know those two hate each other's guts?{/size}"
     show BBW swim-school-sad
     BBW "{size=-8}I had no idea. They're both so nice to everyone else, and I'd never heard them talk about the other before.{/size}"
@@ -8027,91 +8025,91 @@ label BBW043:
     show FMG swim-school-neutral at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
     show Natsuko swim-school-neutral at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
     show BE swim-school-neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
-    MCT "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
+    "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
     if isEventCleared("BBW009"):
-        MCT "But after seeing Alice and Akira swim before, I could tell I was going to be an anchor around Natsuko's neck if she was expecting us to win."
-    MCT "Alice's team seemed a bit stacked, but given Aida's timid nature, Alice probably expected her to give up more points at the goal than Honoka. It was the best that could be done with the numbers we had."
+        "But after seeing Alice and Akira swim before, I could tell I was going to be an anchor around Natsuko's neck if she was expecting us to win."
+    "Alice's team seemed a bit stacked, but given Aida's timid nature, Alice probably expected her to give up more points at the goal than Honoka. It was the best that could be done with the numbers we had."
     BBW "Alright, let's get started. The ball starts in the center of the pool. Whoever gets there first to secure it will get the first possession."
     hide PRG with dissolve
     hide FMG with dissolve
     hide BBW with dissolve
     hide Natsuko with dissolve
     hide BE with dissolve
-    MCT "With that, we all lined up at the roped lane markers set up as the playing field."
+    "With that, we all lined up at the roped lane markers set up as the playing field."
     BBW "Ready, set... GO!"
-    MCT "With Alice's mark there was a mad dash to the ball from Alice, Akira, and Natsuko. After the earlier exchanges, it was undoubted that all three were trying to use this as an opportunity to put their swimming skills to the test against each other."
-    MCT "I tried my best to keep up, but Natsuko left me in the dust... erm wake I guess, on her way to the ball."
+    "With Alice's mark there was a mad dash to the ball from Alice, Akira, and Natsuko. After the earlier exchanges, it was undoubted that all three were trying to use this as an opportunity to put their swimming skills to the test against each other."
+    "I tried my best to keep up, but Natsuko left me in the dust... erm wake I guess, on her way to the ball."
     BBW "Got it!"
-    MCT "Alice got there first and tipped the ball back behind her and Akira, blocking any meaningful attempt for me or Natsuko to obtain it and granting them the possession."
-    MCT "Akira went back and grabbed the ball to begin advancing to the other half of the field towards our goal."
-    MCT "And this was the start of when all hell began to break loose."
-    MCT "I used the opportunity to fall back into a more defensive position in front of the goal. I had to be clever if I was going to stay in the game against opponents that could literally swim circles around me."
-    MCT "Natsuko on the other hand, lunged forward like a shark that smelled blood in the waters to block Akira."
-    MCT "This was of course a poor decision. Natsuko should be covering Alice instead of me."
-    MCT "Alice easily slid through the water around my outside, giving a wide-open pass for Akira to send her, which she took full advantage of by immediately sailing it into the goal before Honoka could even react."
+    "Alice got there first and tipped the ball back behind her and Akira, blocking any meaningful attempt for me or Natsuko to obtain it and granting them the possession."
+    "Akira went back and grabbed the ball to begin advancing to the other half of the field towards our goal."
+    "And this was the start of when all hell began to break loose."
+    "I used the opportunity to fall back into a more defensive position in front of the goal. I had to be clever if I was going to stay in the game against opponents that could literally swim circles around me."
+    "Natsuko on the other hand, lunged forward like a shark that smelled blood in the waters to block Akira."
+    "This was of course a poor decision. Natsuko should be covering Alice instead of me."
+    "Alice easily slid through the water around my outside, giving a wide-open pass for Akira to send her, which she took full advantage of by immediately sailing it into the goal before Honoka could even react."
     show BE swim-school-angry with dissolve
     BE "Oops!"
     BBW "Don't worry about it Honoka, even the best goalies can't stop every throw. Now you know what to expect."
     show BE swim-school-neutral
     BE "Right! I think I got it now."
     hide BE with dissolve
-    MCT "This gave us possession as the fielders had to get to the other side. I signaled for Honoka to pass the ball to me, while Natsuko and Akira were already locking horns in the middle of the defender side."
-    MCT "This of course attracted Alice's attention. In any other context, her soft body coming aggressively for my ball would be a good thing, but the steely determination in her eyes told me she was going to eat me alive if I didn't get rid of this ball right now."
-    MCT "I lobbed up a pass to Natsuko, hoping to exploit the height advantage Natusko had over Akira, which let her catch the ball, even with Akira practically trying to climb over her."
-    MCT "In the brief window created by Akira failing to swipe the ball from her, Natsuko sent a screamer pitch straight into the goal."
+    "This gave us possession as the fielders had to get to the other side. I signaled for Honoka to pass the ball to me, while Natsuko and Akira were already locking horns in the middle of the defender side."
+    "This of course attracted Alice's attention. In any other context, her soft body coming aggressively for my ball would be a good thing, but the steely determination in her eyes told me she was going to eat me alive if I didn't get rid of this ball right now."
+    "I lobbed up a pass to Natsuko, hoping to exploit the height advantage Natusko had over Akira, which let her catch the ball, even with Akira practically trying to climb over her."
+    "In the brief window created by Akira failing to swipe the ball from her, Natsuko sent a screamer pitch straight into the goal."
     show PRG swim-school-scared with dissolve
-    MCT "Aida's 'block' was more of a panicked defense of her face than any real attempt to stop the ball. I couldn't blame her either."
+    "Aida's 'block' was more of a panicked defense of her face than any real attempt to stop the ball. I couldn't blame her either."
     PRG "Sorry..."
     BBW "You're fine Aida. The goal is pretty wide, so it's difficult to cover- that's part of the challenge. You'll get better as the game goes on."
     show PRG swim-school-unique
     PRG "Thanks."
     hide PRG with dissolve
-    MCT "This pattern continued for most of the game, but much less points were given up as both Honoka and Aida felt more comfortable anticipating and going after the ball."
-    MCT "As the game went on, my body was thrashed. Swimming while constantly keeping my head above water and trying not to lose the ball was hard work."
-    MCT "Aside from Natsuko, the only advantage I had over the other players to keep myself high enough in the water was my height. Alice had her natural buoyancy, while Akira and Natsuko were built like battleships."
-    MCT "I felt like I was riding a piece of driftwood in a maelstrom trying to keep up with the three of them. I was way past my limit, but the pace of the game and the competitive nature was enough to keep my energy levels on life support."
-    MCT "I could see why Alice liked this game so much."
+    "This pattern continued for most of the game, but much less points were given up as both Honoka and Aida felt more comfortable anticipating and going after the ball."
+    "As the game went on, my body was thrashed. Swimming while constantly keeping my head above water and trying not to lose the ball was hard work."
+    "Aside from Natsuko, the only advantage I had over the other players to keep myself high enough in the water was my height. Alice had her natural buoyancy, while Akira and Natsuko were built like battleships."
+    "I felt like I was riding a piece of driftwood in a maelstrom trying to keep up with the three of them. I was way past my limit, but the pace of the game and the competitive nature was enough to keep my energy levels on life support."
+    "I could see why Alice liked this game so much."
     $setSkill("Athletics", 1)
-    MCT "What was not so fun however was Akira and Natsuko constantly at each other's throats the whole game."
-    MCT "Aside from Alice, who wasn't too phased, the rest of us felt like chum in the water while two great white sharks vied for their portion."
-    MCT "They both managed to rack up a couple of personal fouls and a handful of minor fouls from guarding each other so aggressively over the course of the game."
+    "What was not so fun however was Akira and Natsuko constantly at each other's throats the whole game."
+    "Aside from Alice, who wasn't too phased, the rest of us felt like chum in the water while two great white sharks vied for their portion."
+    "They both managed to rack up a couple of personal fouls and a handful of minor fouls from guarding each other so aggressively over the course of the game."
     show BBW swim-school-angry with dissolve
     BBW "You can't pull on the other person."
     BBW "Hey! No splashing in her face."
     BBW "I don't care if it was an accident- it didn't look like one to me!"
-    MCT "To be fair, a little bit of incidental contact was unavoidable. In one of my bouts of frantic flailing to dump the ball before Alice could snatch it away from me, I accidentally slipped an open palm boob grab on her as I tried to push myself back."
+    "To be fair, a little bit of incidental contact was unavoidable. In one of my bouts of frantic flailing to dump the ball before Alice could snatch it away from me, I accidentally slipped an open palm boob grab on her as I tried to push myself back."
     show BBW swim-school-surprised
     BBW "Easy there Keisuke!"
     MC "Sorry! It was an accident. I panicked!"
     show BBW swim-school-haughty
     BBW "I understand, just try to be more careful."
     hide BBW with dissolve
-    MCT "In my defense though, at that size, her boobs are pretty hard to avoid. If I start drowning, those would be my preferred floatation device."
-    MCT "The game was almost done. We trailed Alice's team by 2 points. A time out had been called before the last few minutes so that Honoka could address a wardrobe malfunction that had her spilling out of her swimsuit."
+    "In my defense though, at that size, her boobs are pretty hard to avoid. If I start drowning, those would be my preferred floatation device."
+    "The game was almost done. We trailed Alice's team by 2 points. A time out had been called before the last few minutes so that Honoka could address a wardrobe malfunction that had her spilling out of her swimsuit."
     show BE swim-school-surprised-2 with dissolve
-    MCT "Alice wanted to save her the embarrassment, even though Honoka was probably the least concerned about that kind of thing out of anyone here."
+    "Alice wanted to save her the embarrassment, even though Honoka was probably the least concerned about that kind of thing out of anyone here."
     show BE swim-school-neutral
-    MCT "Going up against Alice and Akira, I honestly hadn't expected to win. Given their respective skills though, we would have fared a lot better if Natsuko was guarding Alice instead."
-    MCT "If I couldn't get Natsuko to see reason, maybe I could exploit her competitive nature to give us a better shot."
+    "Going up against Alice and Akira, I honestly hadn't expected to win. Given their respective skills though, we would have fared a lot better if Natsuko was guarding Alice instead."
+    "If I couldn't get Natsuko to see reason, maybe I could exploit her competitive nature to give us a better shot."
     hide BE with dissolve
     MC "Natsuko, don't you want to win?"
     show Natsuko swim-school-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "Of course! That weakling's team is barely winning, even with Nikumaru-san's help. If we beat her, it would just solidify the fact she's dead weight."
     MC "I wouldn't really characterize Mizutani-san as any of that, but might I suggest you guard Alice instead, since she's the better player and you're the best one on our team, instead of constantly going after Mitzutani-san?"
     Natsuko "I see. Perhaps guarding the anchor hasn't been the best use of my abilities for the team. I think you're right, we should try that."
-    MCT "Once the match started up again, our new strategy immediately proved more effective. Natsuko went straight for Alice, catching her off guard and managing a steal."
-    MCT "Akira went for Natsuko, leaving me wide open for a pass from her as I made it towards the goal, setting me up for a wide-open pass and a subsequent goal."
+    "Once the match started up again, our new strategy immediately proved more effective. Natsuko went straight for Alice, catching her off guard and managing a steal."
+    "Akira went for Natsuko, leaving me wide open for a pass from her as I made it towards the goal, setting me up for a wide-open pass and a subsequent goal."
     BBW "Hmph, so that's how it is now. I must admit by this point I didn't expect you to adjust your strategy."
     FMG "You too scared to compete with me, Natsy?"
     Natsuko "If you're content to let Hotsure-san swim up to the goal all by himself then you're dumber than even I thought possible."
     show FMG swim-school-angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Grrr..."
-    MCT "With this change in line up we were able to even the scores up with only 30 seconds to go. Akira was clearly the most distraught about this turn of events, not likely keen on enduring Natsuko berating her for her team's loss."
-    MCT "I was guarding Akira, standing, er- rather bobbing, in front of her between her and the goal when she managed to get a pass from Alice."
+    "With this change in line up we were able to even the scores up with only 30 seconds to go. Akira was clearly the most distraught about this turn of events, not likely keen on enduring Natsuko berating her for her team's loss."
+    "I was guarding Akira, standing, er- rather bobbing, in front of her between her and the goal when she managed to get a pass from Alice."
     Natsuko "You should have shot it Alice, she'll just miss."
-    MCT "Mizutani-san clearly heard that. That was the straw that broke the camel's back. Whatever was going on between those two boiled up and over into a fire in Akira's eyes as she lost control."
+    "Mizutani-san clearly heard that. That was the straw that broke the camel's back. Whatever was going on between those two boiled up and over into a fire in Akira's eyes as she lost control."
     FMG "{i}Aaaaarrrrrrgh!{/i}"
-    MCT "The last thing I remember seeing was Akira winding up her arm like she was going to throw a fast ball through a steel wall and firing it off like a cannon."
+    "The last thing I remember seeing was Akira winding up her arm like she was going to throw a fast ball through a steel wall and firing it off like a cannon."
     stop music
     play sound Thud
     "THUMP!"
@@ -8147,30 +8145,30 @@ label BBW043:
     hide BE with dissolve
     hide FMG with dissolve
     hide Natsuko with dissolve
-    MCT "The rest of the girls left back towards the locker. While slowly recovering from my stupor lying on the ground, Alice sulked by the side of the pool next to me with her legs in the water."
+    "The rest of the girls left back towards the locker. While slowly recovering from my stupor lying on the ground, Alice sulked by the side of the pool next to me with her legs in the water."
     show BBW swim-school-sad
     BBW "{i}...sniff...sniff...eee{/i}"
-    MCT "Was she crying? I snapped out of my haze and sat up."
+    "Was she crying? I snapped out of my haze and sat up."
     MC "Ow!"
     MCT "Okay so maybe that was a bit fast."
     MC "Alice, it's okay! I'm not hurt! Everything's fine. There's no need to cry."
-    MCT "Hoping to get through to her. I scooted next to her and held her hand."
+    "Hoping to get through to her. I scooted next to her and held her hand."
     BBW "{i}...sniff...{/i} You wouldn't say that if you could see the swelling on your face like I can, Keisuke."
     BBW "This was a complete disaster. {i}...sniff...{/i} I couldn't get enough people to do a full match- I didn't even have enough friends that I could ask!"
     BBW "I should have realized Akira and Natsuko were like oil and water. Aida and Honoka were mortified watching those two tear each other apart, but I pushed through with my idea anyway for my own selfish reasons- and you got hurt because of it."
-    MCT "At this point Alice really started to cry, wiping her tears with one hand while holding mine tight with the other."
+    "At this point Alice really started to cry, wiping her tears with one hand while holding mine tight with the other."
     MC "I don't see what was so selfish about you wanting to do this, and I don't see how you were supposed to foresee all of this happening."
     BBW "As the club president everything is ultimately my responsibility- if there were a club. No one is going to want to join after this catastrophe."
     MC "Well, maybe. But isn't it typical for successful business owners that only a handful of their ventures are ever successful? Not everything can be a smashing success, but you won't know if you don't try it."
     show BBW swim-school-worried
-    MCT "That analogy must have gotten through to Alice. She still looked pretty sad, but she appeared to have stopped sobbing, for the moment."
+    "That analogy must have gotten through to Alice. She still looked pretty sad, but she appeared to have stopped sobbing, for the moment."
     BBW "That is true. Success is never certain."
     BBW "But it's not just that Keisuke. I know it's silly and naïve, but I wanted to use this club to help me make more friends."
     show BBW swim-school-sad
-    MCT "Alice started to tear up again. I didn't like to see this, but she clearly needed to get something off her chest."
+    "Alice started to tear up again. I didn't like to see this, but she clearly needed to get something off her chest."
     BBW "I know you like me Keisuke... but most people here don't. I know what other people say about me- that I'm just an uptight fatty... or some kind of food obsessed glutton."
-    MCT "Alice was probably the most self-confident person that I knew. I was a bit surprised to hear her admit she had taken some baseless chatter from the gossip mill so personally."
-    MCT "Then again, who wouldn't get worn down from hearing that kind of talk whispered behind their back all the time?"
+    "Alice was probably the most self-confident person that I knew. I was a bit surprised to hear her admit she had taken some baseless chatter from the gossip mill so personally."
+    "Then again, who wouldn't get worn down from hearing that kind of talk whispered behind their back all the time?"
     MC "Well, no one that I know is going around saying those things, and if they did, I would set them straight."
     BBW "Thank you Keisuke. I appreciate all that you and Aida do for me, but only having two friends... well a friend and a boyfriend, it still feels a bit lonely sometimes."
     MC "I don't think that that's the case. Why else would Honoka come out to join us, despite knowing nothing about water polo?"
@@ -8181,7 +8179,7 @@ label BBW043:
     BBW "Mitzutani-san! I didn't see you there."
     FMG "Don't mind me, I didn't overhear anything else. Here, I felt bad about what happened at practice today."
     FMG "Whether I have a good workout as a reward, or a bad workout as a consolation, I like to end it with an ice cream treat."
-    MCT "Akira handed each of us a chocolate coated vanilla ice cream pop."
+    "Akira handed each of us a chocolate coated vanilla ice cream pop."
     FMG "Sorry again about your face Hotsure-san."
     MC "Thanks Mitzutani-san, but don't worry about it. I'm not worried about it."
     show FMG swim-school-happy
@@ -8203,21 +8201,21 @@ label BBW044:
     $setProgress("BBW", "BBW045")
     scene Dorm BBW with fade
     play music BBW
-    MCT "It was an off day for the residents of Seichou Academy. Both the faculty and the students were given the day to unwind and destress."
-    MCT "Many people liked to use this time to relax by themselves, away from others. This was a perfect opportunity for someone to have some alone time."
+    "It was an off day for the residents of Seichou Academy. Both the faculty and the students were given the day to unwind and destress."
+    "Many people liked to use this time to relax by themselves, away from others. This was a perfect opportunity for someone to have some alone time."
     show BBW neutral-2 with dissolve
-    MCT "Me? I had been prattling the whole afternoon away with one, Miss Nikumaru."
+    "Me? I had been prattling the whole afternoon away with one, Miss Nikumaru."
     BBW "Would you care for some more Broken Orange Pekoe Fanning?"
     MC "You know you don't have to say it in full every time."
     show BBW surprised
-    MCT "Alice pretended to look appalled as she poured another cup of tea."
+    "Alice pretended to look appalled as she poured another cup of tea."
     show BBW happy
-    MCT "Her smug smile betraying the attempt at feigned hurt."
+    "Her smug smile betraying the attempt at feigned hurt."
     BBW "Keisuke! I believe I have made it very clear before, not all tea blends are the same."
     MC "I know, I know. But honestly, growing up only exposed to green teas like sencha, it's hard to have such a refined palette like yours."
     show BBW neutral
     BBW "Then I feel sorry for you, truly I do."
-    MCT "Setting down the kettle after pouring another serving, Alice's eyes widened with a rather sudden idea."
+    "Setting down the kettle after pouring another serving, Alice's eyes widened with a rather sudden idea."
     show BBW haughty
     BBW "Maybe there just so happens to be a way to improve your taste buds' senses."
     MC "Uh, what do you mean by that?"
@@ -8229,18 +8227,18 @@ label BBW044:
     BBW "It was an attempt at explaining myself, now hurry up and close your eyes."
 
     scene black with fade
-    MCT "Not wanting to pry further, I did as Alice said."
-    MCT "I could hear the unmistakable sound of heavy footsteps, accompanied by the resulting vibrations through the floorboards as she made her way across the room."
-    MCT "The footfalls stopped, and I could tell that she was opening some sort of cabinet."
-    MCT "Only a few seconds later, did the same sound occur again. Once again, Alice's impactful stride sounded off as she approached."
-    MCT "The temptation to peek was almost unbearable, my mind raced thinking of what she was planning. And almost as if on cue, I heard the opening of several boxes."
+    "Not wanting to pry further, I did as Alice said."
+    "I could hear the unmistakable sound of heavy footsteps, accompanied by the resulting vibrations through the floorboards as she made her way across the room."
+    "The footfalls stopped, and I could tell that she was opening some sort of cabinet."
+    "Only a few seconds later, did the same sound occur again. Once again, Alice's impactful stride sounded off as she approached."
+    "The temptation to peek was almost unbearable, my mind raced thinking of what she was planning. And almost as if on cue, I heard the opening of several boxes."
     BBW "It shall be ready in just a second, I do hope that you have not snuck a glance at my setup."
     MC "..."
-    MCT "The possibilities flooded my blackened vision, the tension of the situation was almost palpable."
+    "The possibilities flooded my blackened vision, the tension of the situation was almost palpable."
     BBW "There we go... alright! You may open your eyes now."
     scene Dorm BBW with fade
     show BBW haughty with dissolve
-    MCT "I wasn't sure what to expect when my vision returned. But 5 teacups lined in front of me was quite possibly the last thing I expected to see."
+    "I wasn't sure what to expect when my vision returned. But 5 teacups lined in front of me was quite possibly the last thing I expected to see."
     MC "Uhhhh, I think you've lost me here. 'Confused' doesn't even begin to describe how I feel right now."
     BBW "You are quite the clever one Keisuke, I am sure that you can deduce what my plan is here."
     menu:
@@ -8260,7 +8258,7 @@ label BBW044_c1_1:
 label BBW044_c1_2:
     show BBW doubt
     BBW "A drinking game with tea?"
-    MCT "Alice paused, contemplating what I said."
+    "Alice paused, contemplating what I said."
     show BBW neutral
     BBW "I shall think about your idea later, but that is not what I had planned for today."
     BBW "Instead what I have devised is a plan to help you understand the various types of tea by taste alone."
@@ -8282,12 +8280,12 @@ label BBW044_afterchoice_1:
     show BBW haughty
     BBW "Well I suppose that would make it more sporting..."
     BBW "Alright, listen closely, as I shan't repeat these hints."
-    MCT "Before Alice could start listing off her selections, a knock came from the door."
+    "Before Alice could start listing off her selections, a knock came from the door."
     MC "Were you expecting anyone else to be here around this time?"
     show BBW doubt
     BBW "No, I am rather sure that-"
     show BBW surprised
-    MCT "Alice's eyes shot wide open as a realization hit her. She snapped back to face me, talking in a whispered tone."
+    "Alice's eyes shot wide open as a realization hit her. She snapped back to face me, talking in a whispered tone."
     BBW "Honoka!"
     MC "Honoka?"
     BBW "Last week, she came to me with a request for a new bra. The school-issued ones weren't fitting her needs appropriately."
@@ -8295,16 +8293,16 @@ label BBW044_afterchoice_1:
     MC "And this time being now?"
     show BBW worried
     BBW "Yes..."
-    MCT "Another series of knocks rang out, followed by a voice."
+    "Another series of knocks rang out, followed by a voice."
     BE "Alice?"
     show BBW surprised
     BBW "I'll be with you in but a second! Just finishing up preparations is all."
-    MCT "Alice leaned in close to whisper to me, her breath tense but focused."
+    "Alice leaned in close to whisper to me, her breath tense but focused."
     show BBW worried
     BBW "My deepest apologies, Keisuke. But would you mind picking up the stray bits of cloth laying around?"
     MC "What, why?"
     BBW "Well simply look at this place, there are stray clothing articles and swatches everywhere! It's quite unbecoming of me to my customers."
-    MCT "Now that she mentioned it, the state of the room became obvious. There were several articles of clothing dotting the room; oddly enough, most of them didn't seem to be her style or size."
+    "Now that she mentioned it, the state of the room became obvious. There were several articles of clothing dotting the room; oddly enough, most of them didn't seem to be her style or size."
     MC "Have you been working on new design ideas recently?"
     show BBW neutral
     BBW "Just a bit here and there, very little has been set in stone as of yet, but we can come back to that later, for now, I am asking you for help."
@@ -8327,57 +8325,57 @@ label BBW044_c2_1:
     show BBW doubt behind BE
     BBW "Keisuke, please just-"
     MC "I'm out, I'll talk to you later."
-    MCT "With that, I walked over and opened the door."
+    "With that, I walked over and opened the door."
     show BE surprised at Position(xpos=0.4, xanchor=0.5, yalign=1.0)
     BE "Ahhhh!"
-    MCT "Next thing I knew, Honoka came barreling forward into Alice's room. A soft 'plomf' noise sounded as she made contact with the floor."
-    MCT "Having landed face or rather breast first onto the floor, Honoka looked up only to find a massive overhang of belly."
+    "Next thing I knew, Honoka came barreling forward into Alice's room. A soft 'plomf' noise sounded as she made contact with the floor."
+    "Having landed face or rather breast first onto the floor, Honoka looked up only to find a massive overhang of belly."
     show BE embarrassed at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
     show BBW sad at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     BE "I know what this looks like, but I promise that I wasn't listening on the door."
     BBW "{i}sigh{/i} It's alright. I apologize for the distress caused by my lack of time management."
-    MCT "Alice and I helped Honoka back to her feet, I said my goodbyes and left."
+    "Alice and I helped Honoka back to her feet, I said my goodbyes and left."
     show BE neutral
     BE "Keisuke was right, y'know. Trust me, I'm aware that keeping on top of things can be difficult with a factor."
     BBW "But this wasn't an issue with my condition interfering with my life..."
     BBW "I was just enjoying myself so much, a bit caught in the moment. Maybe my sharpened instincts are starting to dull."
-    MCT "While I was sure that I had made the right decision for Alice's sake; part of me still wondered what caused her to act like that..."
+    "While I was sure that I had made the right decision for Alice's sake; part of me still wondered what caused her to act like that..."
     jump daymenu
 
 label BBW044_c2_2:
     $setAffection("BBW", 1)
-    MCT "Alice let out an ever so quiet sigh of relief before giving me a content smile."
+    "Alice let out an ever so quiet sigh of relief before giving me a content smile."
     show BBW happy
     BBW "Thank you, I promise I'll make it up to you."
     MC "Worry about that later, Honoka is still waiting out there."
-    MCT "Leaving my seat, I started to quickly snatch up the materials. The amount of obvious clutter was small, so my goal was to focus on that first."
-    MCT "Swatches of all colors, shirts, and pants of all sizes; Alice was underselling just how much time she had put into this."
+    "Leaving my seat, I started to quickly snatch up the materials. The amount of obvious clutter was small, so my goal was to focus on that first."
+    "Swatches of all colors, shirts, and pants of all sizes; Alice was underselling just how much time she had put into this."
     MC "Where do you want me to put these?"
     show BBW neutral
     BBW "Oh, um..."
     BBW "There is room in my wardrobe, you can set them in there for now."
-    MCT "As the wardrobe opened, I was surprised to find it already packed to the brim. Like Alice had told me, I began to hastily stuff the interior."
-    MCT "A few bits of clothing were left before I realized that not all of it was going to fit. And no matter how hard I pushed, the wall of fabric refused to make space."
-    MCT "Without thinking, I decided to try and shove myself into the blockage. Maybe then it would free some room."
-    MCT "Taking a small step back, I bravely leaped forward... This proved to be a major error in planning."
+    "As the wardrobe opened, I was surprised to find it already packed to the brim. Like Alice had told me, I began to hastily stuff the interior."
+    "A few bits of clothing were left before I realized that not all of it was going to fit. And no matter how hard I pushed, the wall of fabric refused to make space."
+    "Without thinking, I decided to try and shove myself into the blockage. Maybe then it would free some room."
+    "Taking a small step back, I bravely leaped forward... This proved to be a major error in planning."
     MC "MMMPH!"
-    MCT "The few loose areas in the pile would be my undoing; for as soon as my shoulder pushed forward, I found myself quickly sinking into the mass of clutter."
+    "The few loose areas in the pile would be my undoing; for as soon as my shoulder pushed forward, I found myself quickly sinking into the mass of clutter."
     show BBW surprised
     BBW "Oh dear!"
-    MCT "Upon hearing the commotion, Alice rushed over to check on me. Her cherubic face was awash with panic when she saw the state I was in."
+    "Upon hearing the commotion, Alice rushed over to check on me. Her cherubic face was awash with panic when she saw the state I was in."
     BBW "Kei, are you ok? Did you hurt yourself?"
-    MCT "Try as I may, the weight of all the clothing kept me down. It wasn't a bad sensation, it was rather cozy."
+    "Try as I may, the weight of all the clothing kept me down. It wasn't a bad sensation, it was rather cozy."
     MC "I'm fine, just a bit stuck is all... could you give me a hand?"
     show BBW neutral-2
     BBW "Of course, here."
-    MCT "Alice firmly grasped my one exposed hand and steadied herself to pull back. Her other hand gripping around my wrist as she found her footing."
+    "Alice firmly grasped my one exposed hand and steadied herself to pull back. Her other hand gripping around my wrist as she found her footing."
     BBW "One, two, three!"
-    MCT "One would think that several hundred pounds of mass would provide more than enough leverage. But as it turns out, I had gotten myself trapped even deeper than we thought."
+    "One would think that several hundred pounds of mass would provide more than enough leverage. But as it turns out, I had gotten myself trapped even deeper than we thought."
     MC "Ow ow ow ow OW! Stop, please!"
-    MCT "The sheer force being exerted on my shoulder joint was unbearable. A part of me thought Alice might rip my arm out of its socket if I didn't stop her."
+    "The sheer force being exerted on my shoulder joint was unbearable. A part of me thought Alice might rip my arm out of its socket if I didn't stop her."
     show BBW angry
     BBW "Damn it all... What to do, what to do?"
-    MCT "Upon releasing me from almost certain removal, Alice quickly started to try for new ideas; but I knew that we didn't have much time left."
+    "Upon releasing me from almost certain removal, Alice quickly started to try for new ideas; but I knew that we didn't have much time left."
     MC "Alice, just shut the door."
     show BBW doubt
     BBW "I beg your pardon?"
@@ -8386,28 +8384,28 @@ label BBW044_c2_2:
     BBW "This is absurd..."
     show BBW worried
     BBW "Please forgive me for this, Keisuke."
-    MCT "With a look of both panic and embarrassment, Alice soberly closed the doors to the wardrobe. Leaving me just a sliver of light in the darkness."
-    MCT "My eyes followed Alice as she hefted herself to the front door. Taking a few deep breaths to calm her nerves, she opened the door for Honoka."
+    "With a look of both panic and embarrassment, Alice soberly closed the doors to the wardrobe. Leaving me just a sliver of light in the darkness."
+    "My eyes followed Alice as she hefted herself to the front door. Taking a few deep breaths to calm her nerves, she opened the door for Honoka."
     play music Peaceful
     show BBW neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     show BE happy at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
     BBW "First and foremost, I would like to personally apologize for the wait."
-    MCT "Honoka gave a slight chuckle at her apology."
+    "Honoka gave a slight chuckle at her apology."
     BE "For what? Not immediately opening the door when I knocked?"
     BE "There's no need to apologize for not being 100%% punctual all the time, Alice."
-    MCT "The sound of small talk continued as the two moved from the door to the bedroom."
+    "The sound of small talk continued as the two moved from the door to the bedroom."
     BBW "I hope the mess is not too bad, I was busy with other work and didn't notice the mess forming."
     show BE neutral
     BE "Oh you need not worry about it. The mess at my dorm dwarfs this by a good margin."
-    MCT "I tried to readjust my position inside to try to listen in better. However, like a bad sitcom, it was this exact moment the wardrobe decided to release me from its grasp."
-    MCT "In an instant I found myself staring up at Alice and Honoka, but with a look of surprise."
+    "I tried to readjust my position inside to try to listen in better. However, like a bad sitcom, it was this exact moment the wardrobe decided to release me from its grasp."
+    "In an instant I found myself staring up at Alice and Honoka, but with a look of surprise."
     show BBW surprised
     show BE surprised-2
     BE "Now that's a surprise for sure. Didn't take you as the peeping kind Kei-chan."
     MC "It's not like that at all! I would never."
     show BE confused
     BE "Then why else would you be hiding inside there unless you were..."
-    MCT "She trailed off looking between me and Alice. It took both of us a moment before Alice blushed quite red."
+    "She trailed off looking between me and Alice. It took both of us a moment before Alice blushed quite red."
     BBW "I can assure you that nothing of that sort of nature occurred."
     show BBW neutral-2
     BBW "To be forward on the reason, Kei was over helping me earlier with picking out new patterns for the store. He attempted to help me clean up when you arrived but became lodged in the wardrobe."
@@ -8421,29 +8419,29 @@ label BBW044_c2_2:
     BE "I don't know if it's proper for a boy to see my bare chest as he will... but Kei-chan's a good boy, right?"
     show BBW happy
     BBW "He most certainly is."
-    MCT "Alice reached into a purple polka-dotted bag beneath her desk and produced a measuring tape."
+    "Alice reached into a purple polka-dotted bag beneath her desk and produced a measuring tape."
     show BBW neutral
     BBW "If you would please disrobe Honoka."
-    MCT "Honoka smiled at me as she slowly unbuttoned her shirt"
+    "Honoka smiled at me as she slowly unbuttoned her shirt"
     show BE happy
     BE "You certainly are a very lucky boy Kei-chan."
     show BBW stern
-    MCT "Looking over Honoka's shoulder I noticed Alice giving me a slight glare. Wait was she..."
-    MCT "Before I could consider the possibility Honoka finished with her shirt revealing a very overtaxed black bra."
+    "Looking over Honoka's shoulder I noticed Alice giving me a slight glare. Wait was she..."
+    "Before I could consider the possibility Honoka finished with her shirt revealing a very overtaxed black bra."
     show BBW neutral
     BBW "This does certainly look like a task for two people."
     show BE unique
     BE "Hahh, I suppose my breasts are too big to be handled by one person."
     BBW "Could you please remove your bra as well Honoka?"
-    MCT "Honoka passed me another teasing glance as she reached back to undo the bra clasp."
+    "Honoka passed me another teasing glance as she reached back to undo the bra clasp."
     show BE aroused
-    MCT "I knew she was teasing me but this was getting to be a bit beyond that point. The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare and her still smiling."
+    "I knew she was teasing me but this was getting to be a bit beyond that point. The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare and her still smiling."
     BBW "Now with that off, I can begin to get measurements. Kei would you stand in front so I can pass you the tape measure."
-    MCT "She passed me the end of the tape."
+    "She passed me the end of the tape."
     BBW "Kei please pull this across the very front of her breasts so I can get her bust measurement."
-    MCT "At this point I was beginning to wonder whether Alice was doing this more as a test."
-    MCT "Carefully, I pulled the tape across Honoka's breasts, trying to avoid grazing her exposed areolas."
-    MCT "I tried to dart between looking down at her chest and Honoka's eyes to avoid staring for too long, lest I accidentally incur Alice's wrath."
+    "At this point I was beginning to wonder whether Alice was doing this more as a test."
+    "Carefully, I pulled the tape across Honoka's breasts, trying to avoid grazing her exposed areolas."
+    "I tried to dart between looking down at her chest and Honoka's eyes to avoid staring for too long, lest I accidentally incur Alice's wrath."
     show BE happy
     BE "Just like playing Operation."
     MC "I don't remember Operation being this big."
@@ -8455,22 +8453,22 @@ label BBW044_c2_2:
     BE "It was still a fashion statement."
     MC "It was a fashion crime is what that was."
     show BE neutral
-    MCT "Alice let out a muffled chuckle as she finished the last measuring."
+    "Alice let out a muffled chuckle as she finished the last measuring."
     show BBW haughty
     BBW "Certainly sounds like a story you'll need to tell me at some point over tea Honoka. I'm quite interested in hearing about these childhood exploits."
     show BE happy
     BE "Oh certainly, I have many I can share later."
     show BBW neutral
     BBW "You are also good to redress now Honoka. This next part doesn't need you to be bare."
-    MCT "As Honoka slung the bra back over her shoulders, Alice grabbed a thick black binder from beside her desk. Flipping the cover open revealed a massive catalog of designs complete with sample patches."
+    "As Honoka slung the bra back over her shoulders, Alice grabbed a thick black binder from beside her desk. Flipping the cover open revealed a massive catalog of designs complete with sample patches."
     BBW "One thing I can't stand about the school-issued clothes is they are quite drab, with no character."
     show BBW neutral-2
     BBW "Go ahead and look through and pick whatever suits your fancy. You ordered 3 so you can pick up to 3 if you so choose."
     show BE surprised-2
-    MCT "Honoka stared at the assortment before her with eagerness."
+    "Honoka stared at the assortment before her with eagerness."
     BE "I'm not sure 3 is enough, these are all great choices."
     BBW "Take your time."
-    MCT "Honoka flipped through the pages for a few minutes while Alice and I continued to try and clean the earlier mess."
+    "Honoka flipped through the pages for a few minutes while Alice and I continued to try and clean the earlier mess."
     show BE neutral
     BE "I believe I've come to a decision."
     show BBW happy
@@ -8482,37 +8480,37 @@ label BBW044_c2_2:
     BE "A plain pink is fine. Maybe if it's possible some red roses on the nipple area."
     BBW "Is that for just one or all?"
     BE "All is fine, that way I don't have to worry too much about choosing."
-    MCT "I couldn't help but stifle a chuckle watching Alice trying to process the request. For once she truly looked baffled."
+    "I couldn't help but stifle a chuckle watching Alice trying to process the request. For once she truly looked baffled."
     BBW "I can certainly see if that's feasible. I will say that is quite the detail to add, I should maybe add that as a permanent option."
     MC "No harm in adding it to the catalog, might have others who want it to."
     show BBW neutral
     BBW "I'll put it under consideration, as from a marketing perspective you may be onto something."
     BE "Thank you again for doing for me. It was certainly an interesting and fun experience. Who knows maybe I'll come back for another sizing."
-    MCT "Naturally Honoka is a little excited about her tits getting bigger even when they are three times the size of her head."
-    MCT "Her outfit style may change, but her personality is as consistent as ever."
+    "Naturally Honoka is a little excited about her tits getting bigger even when they are three times the size of her head."
+    "Her outfit style may change, but her personality is as consistent as ever."
     show BBW happy
     BBW "It's been no trouble and I'm available if you may need any sort of adjustments or fittings."
     BE "You've got it! Have a great day."
-    MCT "With a short exchange of bows, Alice saw Honoka out. I continued cleaning up in the bedroom, noticing the forlorned teacups and pot."
-    MCT "Gathering them, I walked them out to the kitchen, setting them on the counter beside some other dishes waiting to be done."
+    "With a short exchange of bows, Alice saw Honoka out. I continued cleaning up in the bedroom, noticing the forlorned teacups and pot."
+    "Gathering them, I walked them out to the kitchen, setting them on the counter beside some other dishes waiting to be done."
     hide BE with dissolve
     play music Bittersweet
     show BBW haughty at Position(xalign=0.5, yalign=1.0) with dissolve
-    MCT "Turning around I was surprised to see Alice standing right behind me. Her belly only a few inches from my own."
+    "Turning around I was surprised to see Alice standing right behind me. Her belly only a few inches from my own."
     BBW "I would like to thank you for the help today Kei. While I'm no stranger to dealing with large breasts, Honoka-chan's are truly on their own scale and more than I could properly work with."
     MC "Oh it's nothing just..."
-    MCT "She gently pressed a finger against my lips, cutting me off."
+    "She gently pressed a finger against my lips, cutting me off."
     BBW "Acknowledging this, I just want to be clear that I expect you to keep a slightly better composure if you want to assist me with her or similarly endowed clients again."
-    MCT "She brings her finger down but does so rubbing it down my chest before pulling back."
+    "She brings her finger down but does so rubbing it down my chest before pulling back."
     BBW "I just hope that if the moment ever comes, I expect you to give me the same sorta looks I saw you giving Honoka-chan. Do you understand?"
-    MCT "I just nodded my head slowly."
-    MCT "She leaned forward and kissed me. Her body gently pressed me against the counter. The sensation was best  described as being encased in a pillow."
+    "I just nodded my head slowly."
+    "She leaned forward and kissed me. Her body gently pressed me against the counter. The sensation was best  described as being encased in a pillow."
     show BBW happy
-    MCT "Pulling back she booped me on the nose before waddling back to her room."
-    BBW "I wonder if you'd respond that way to another predicament like mine. Like Sakura, perhaps?"
-    MCT "As her door shut I had a million thoughts going through my head. The suddenness of her forwardness had shocked me on many levels and left me with many questions."
-    MCT "How much ogling did she see me doing? Would I have done the same with another weight gain girl? Was she inviting me to take things further?"
-    MCT "But somehow out of all the questions swirling about, the one that fell from my mouth was."
+    "Pulling back she booped me on the nose before waddling back to her room."
+    BBW "I wonder if you'd respond that way to another girl with a predicament like mine. Like Sakura, perhaps?"
+    "As her door shut I had a million thoughts going through my head. The suddenness of her forwardness had shocked me on many levels and left me with many questions."
+    "How much ogling did she see me doing? Would I have done the same with another weight gain girl? Was she inviting me to take things further?"
+    "But somehow out of all the questions swirling about, the one that fell from my mouth was."
     MC "Who's Sakura?"
     jump daymenu
 
@@ -10994,7 +10992,8 @@ label BBW051:
     "As Aida returns to her cooking I approach Alice's room where I can hear the sound of music leaking through"
 
     scene black with fade
-    #-Sound of knocking-
+    play music MoonlightSonata
+    play sound Knock
     BBW "Come in."
 
     scene Dorm BBW with fade
@@ -11037,6 +11036,7 @@ label BBW051_c1_1:
     "Alice gives me a smile that seemed to convey a sense of approval that I'd seen before, but this felt to be from a more genuine and heartfelt spot."
 
     scene Theater Exterior with fade
+    play music BBW
     "The theater was rather packed tonight, which wasn't unexpected since the show was a rather popular pick."
     show BBW dress-happy with dissolve
     "Seeing Alice in her dress was something I didn't know I needed, but seeing her now I'm not sure how I never imagined it before. Compared to her previous dress, this one stirred me in a new way I didn't know was possible."
@@ -11255,6 +11255,7 @@ label BBW051_c3_3:
 
 label BBW051_c3_after:
     if getFlag("BBW051_c1_3"):
+        scene Theater Interior with fade
         "The play stops to allow everyone a brief intermission to get snacks and use the restroom. Alice and I stand up from our seats to stretch out our stiff legs."
         MCT "I should probably keep quiet for now, I've already done enough damage tonight. Hopefully, I can still salvage this night and my relationship with Alice by doing so."
         "A couple times Alice opens her mouth seemingly to try and say something, but closes it quickly."
@@ -11262,12 +11263,11 @@ label BBW051_c3_after:
         BBW "I'm gonna grab myself a snack from downstairs, I'll back before we reseat."
         "I watch her disappear down the stairwell before returning to my thoughts."
         "After a couple minutes we begin retaking our seats. Alice soon returns with a small bag of popcorn as the curtains open again to continue the show."
-        scene black with fade
     if getFlag("BBW051_c2_1"):
         $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
         "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
-        scene BBW dress-sad with dissolve
+        show BBW dress-sad with dissolve
         BBW "Hey Kei, I want to thank you for tonight."
         MC "Oh it's no problem, I'm glad you've enjoyed yourself."
         BBW "Well it's more than just that. This was the first time I saw how my new size is to others."
@@ -11289,17 +11289,17 @@ label BBW052:
     $setProgress("BBW", "BBW053")
     scene Cafeteria with fade
     play music HigherEdu
-    MCT "After sitting through half a day's worth of lectures my stomach was killing me for some food. With a full tray I quickly scanned out Alice among the crowd."
-    MCT "The scene gave me a brief sense of déjà vu as it clicked that everyone now looked quite different from when the semester began."
-    MCT "Though even with everyone changing in different ways, one fact remained consistent: Alice's ability to make herself pronounced."
-    MCT "Whether it be her voice, her hair or the more obvious, her factor, she made sure to stick out. "
+    "After sitting through half a day's worth of lectures my stomach was killing me for some food. With a full tray I quickly scanned out Alice among the crowd."
+    "The scene gave me a brief sense of déjà vu as it clicked that everyone now looked quite different from when the semester began."
+    "Though even with everyone changing in different ways, one fact remained consistent: Alice's ability to make herself pronounced."
+    "Whether it be her voice, her hair or the more obvious, her factor, she made sure to stick out. "
     show BBW neutral with dissolve
     BBW "Good afternoon Keisuke, I take it your morning classes went well."
     MC "They went as slow as possible but they were bearable."
     BBW "That's good to hear, I just wanted to make sure you are feeling well and actually paying attention in class. Last thing you need is to miss anything."
     MC "I've been getting to bed earlier than normal, so sleeping during class hasn't been as much of a problem as it was earlier."
     BBW "That's good to hear, good sleep is a rare commodity."
-    MCT "As I began eating my food, I noticed that Alice seemed to be dancing her fork around her plate."
+    "As I began eating my food, I noticed that Alice seemed to be dancing her fork around her plate."
     menu:
             "Say something":
                 jump BBW052_c1_1
@@ -11328,13 +11328,13 @@ label BBW052_c1_1:
     BBW "5 pm should do fine. Do dress nicely as we will be heading into town."
     MC "Then it's a date."
     hide BBW with dissolve
-    MCT "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out. Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
+    "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out. Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
     stop music
     scene black with fade
     jump BBW052_c1_after
 
 label BBW052_c1_2:
-    MCT "I decided not to push, feeling that if it was something truly important she'd tell me when she was comfortable."
+    "I decided not to push, feeling that if it was something truly important she'd tell me when she was comfortable."
     BBW "Oh Kei, I wanted to ask, would you want to do something this evening?"
     MC "I thought I was supposed to be the one asking you on dates?"
     show BBW neutral
@@ -11349,8 +11349,8 @@ label BBW052_c1_2:
     BBW "5 pm should do fine. Do dress nicely as we will be heading into town"
     MC "Then it's a date."
     hide BBW with dissolve
-    MCT "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out."
-    MCT "Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
+    "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out."
+    "Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
     stop music
     scene black with fade
     jump BBW052_c1_after
@@ -11359,21 +11359,21 @@ label BBW052_c1_after:
     $setTime(TimeEnum.EVE)
     scene School Front with fade
     play music Peaceful
-    MCT "Double checking my watch to confirm my timeliness,  I was happy to spot Alice sitting at the bus stop bench."
+    "Double checking my watch to confirm my timeliness,  I was happy to spot Alice sitting at the bus stop bench."
     show BBW neutral with dissolve
     BBW "Glad to see your punctuality continues to be great."
     MC "I wouldn't say that in all cases but I hate leaving a lady by herself."
     BBW "You need not worry about me, I can handle myself just fine. Though the thought is appreciated, Keisuke."
-    MCT "With a rumble the bus pulled up, displaying the town as its next destination."
-    MCT "It was hard to miss Alice giving the bus doors a size up before stepping on board."
-    MCT "With a bit of trepidation she stepped on. Her broad hips brushing against the larger than average bus doors."
-    MCT "Alice found us a pair of seats near the back and gestured for me to take the seat next to her. Sliding in beside her was a bit awkward cause I don't think she noticed how much of her thigh was pressing against my leg."
-    MCT "Despite the minor discomfort in positioning I was not gonna complain about being beside her."
+    "With a rumble the bus pulled up, displaying the town as its next destination."
+    "It was hard to miss Alice giving the bus doors a size up before stepping on board."
+    "With a bit of trepidation she stepped on. Her broad hips brushing against the larger than average bus doors."
+    "Alice found us a pair of seats near the back and gestured for me to take the seat next to her. Sliding in beside her was a bit awkward cause I don't think she noticed how much of her thigh was pressing against my leg."
+    "Despite the minor discomfort in positioning I was not gonna complain about being beside her."
     scene black with fade
-    MCT "It didn't take too long to arrive at our destination."
+    "It didn't take too long to arrive at our destination."
     scene Town with fade
     show BBW neutral with dissolve
-    MCT "Once off the bus she directed me towards a shop I hadn't noticed before. The sign read 'Cold as Ice' leaving me a bit confused as to what this place could be serving."
+    "Once off the bus she directed me towards a shop I hadn't noticed before. The sign read 'Cold as Ice' leaving me a bit confused as to what this place could be serving."
     BBW "Have you ever tried rolled ice cream?"
     MC "Can't say I have. I thought ice cream was already rolled when they serve the scoops."
     show BBW happy
@@ -11381,26 +11381,26 @@ label BBW052_c1_after:
     show BBW neutral
     BBW "Though I think seeing the process will do it more justice than I could trying to explain it."
     MC "This must be interesting then if you will let it speak for itself."
-    MCT "I didn't need to be facing Alice to hear her rolling her eyes at my comment."
+    "I didn't need to be facing Alice to hear her rolling her eyes at my comment."
     scene Restaurant with fade
-    MCT "Stepping in, the first thing I noticed was the lack of giant ice cream tubs. There also appeared to be some grills where they would have normally been."
+    "Stepping in, the first thing I noticed was the lack of giant ice cream tubs. There also appeared to be some grills where they would have normally been."
     MC "You sure this is an ice cream place? It looks more like a barbeque place."
     show BBW haughty with dissolve
     BBW "Have faith Kei, this will be well worth the confusion."
-    MCT "She gave her order to the cashier, a simple strawberry cheesecake. With a nod the cashier pours what I assume was cream onto the flat griddle."
-    MCT "Disappearing under the counter, he produces a slice of cheesecake which he drops on the cream spot. With a pair of cutters he very rapidly diced the cake."
-    MCT "He then smoothed it out till it was flat. Delicately, he then scraped it into small rolls."
+    "She gave her order to the cashier, a simple strawberry cheesecake. With a nod the cashier pours what I assume was cream onto the flat griddle."
+    "Disappearing under the counter, he produces a slice of cheesecake which he drops on the cream spot. With a pair of cutters he very rapidly diced the cake."
+    "He then smoothed it out till it was flat. Delicately, he then scraped it into small rolls."
     show BBW happy
     BBW "I hope that satisfied your curiosity."
     MC "That is certainly the most aggressive and unique way I've seen someone make ice cream."
     BBW "Go ahead and order one for yourself. I already paid for a second."
     hide BBW with dissolve
-    MCT "I gave the man an order for a cookies and cream which he produced in a similar fashion to Alice's."
-    MCT "With ice cream in hand, I joined Alice at the table she'd grabbed us."
+    "I gave the man an order for a cookies and cream which he produced in a similar fashion to Alice's."
+    "With ice cream in hand, I joined Alice at the table she'd grabbed us."
     MC "Thank you for this, it looks really good."
     show BBW happy with dissolve
     BBW "Your welcome, it was the least I could do to repay you."
-    MCT "As we ate I noticed her picking at the ice cream, only taking small chunks at a time."
+    "As we ate I noticed her picking at the ice cream, only taking small chunks at a time."
     menu:
         "Ask":
             jump BBW052_c2_1
@@ -11416,11 +11416,11 @@ label BBW052_c2_1:
     show BBW neutral
     BBW "Lucky for you they didn't go quite so overboard."
     MC "It's appreciated."
-    MCT "It was clear that she wasn't gonna open up on the actual issue. I knew I was treading on something as thin as my ice cream but maybe if I played my cards right she might open up."
+    "It was clear that she wasn't gonna open up on the actual issue. I knew I was treading on something as thin as my ice cream but maybe if I played my cards right she might open up."
     jump BBW052_c2_after
 
 label BBW052_c2_2:
-    MCT "I decided to not push her on the matter while we were sharing a nice moment together"
+    "I decided to not push her on the matter while we were sharing a nice moment together"
     MC "Boy this stuff is good, how did you find out about this place?"
     show BBW neutral
     BBW "Oh Aida and I needed to head to town to get her some things. She suggested we try this place since it had recently opened."
@@ -11431,8 +11431,8 @@ label BBW052_c2_after:
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene School Front with fade
-    MCT "Once we had finished we made our way back onto the bus to return to the school."
-    MCT "While on the bus I swore I could've heard Alice's stomach growling, but dismissed it as just digestion. Though, part of me couldn't help but wonder if it was the hunch I'd been feeling all day."
+    "Once we had finished we made our way back onto the bus to return to the school."
+    "While on the bus I swore I could've heard Alice's stomach growling, but dismissed it as just digestion. Though, part of me couldn't help but wonder if it was the hunch I'd been feeling all day."
     if getFlag("BBW052_c1_1") and getFlag("BBW052_c2_1"):
         jump BBW052_c3_pass
     else:
@@ -11442,7 +11442,7 @@ label BBW052_c3_pass:
     stop music
     play music Bittersweet
     $setFlag("BBW052_pass")
-    MCT "Once off the bus I decided to try one last time at finding out the truth of the matter."
+    "Once off the bus I decided to try one last time at finding out the truth of the matter."
     MC "Alice I know I've bugged you all day, but what is going on with you? At lunch and tonight you seemed almost disgusted by your food. Are you feeling sick?"
     show BBW worried with dissolve
     BBW "Kei, if I told you something that was completely insane, you wouldn't walk away would you?"
@@ -11450,7 +11450,7 @@ label BBW052_c3_pass:
     BBW "I only ask cause the real reason is quite odd and rather embarrassing for me."
     MC "It would be unfair for me to pass judgement on you, especially since it seems to be bothering you this much."
     BBW "If that's true, then here's the reason. I've been having weird dreams, primarily ones focused on food. They vary wildly in terms of what happens, but food seems to be the one constant."
-    MCT "I took a seat on a bench and gestured for her to join me."
+    "I took a seat on a bench and gestured for her to join me."
     MC "I take it you've been paranoid about them being true."
     BBW "To an extent, yes. Now more than ever have I wanted my eating habits to not define me as a person."
     MC "I see. For the record, regardless of your habit it would not sway my feelings for you. How long have these dreams been happening?"
@@ -11471,8 +11471,8 @@ label BBW052_c3_pass:
     $setTime(TimeEnum.DAY)
     scene Hallway with fade
     play music Hallway
-    MCT "The morning classes had passed without event, but I had noticed Alice's absence. The interruption of her normal punctuality was enough to tell me she had had another dream, but checking first might be good."
-    MCT "Heading towards the nurse office I noticed another familiar face."
+    "The morning classes had passed without event, but I had noticed Alice's absence. The interruption of her normal punctuality was enough to tell me she had had another dream, but checking first might be good."
+    "Heading towards the nurse office I noticed another familiar face."
     MC "Kodama-san!"
     show PRG neutral
     PRG "Hi, Hotsure-san. What brings you here?"
@@ -11486,7 +11486,7 @@ label BBW052_c3_pass:
     MC "Exactly my thinking. Thank you for the information, have a good day."
     PRG "You too."
     scene Dorm Exterior with fade
-    MCT "Knocking on the door, I was relieved to feel the vibrations of someone approaching the door."
+    "Knocking on the door, I was relieved to feel the vibrations of someone approaching the door."
     show BBW happy with dissolve
     BBW "I take it you either encountered Aida or got curious that I wasn't in class."
     MC "A bit of both actually, how'd you guess I'd encounter Aida?"
@@ -11500,7 +11500,7 @@ label BBW052_c3_pass:
     MC "Well that's a relief that this isn't an isolated incident, but I have to ask why were you trying to limit your appetite?"
     show BBW worried
     BBW "That's a bit embarrassing I must confess. Since arriving here I could normally go two, almost three weeks, without a new uniform,"
-    BBW "but since the lake house its shortened dramatically to nearly a week at max. I've been eating the same size meals as before but the urge to snack has certainly spiked."
+    BBW "but since the lake house it's shortened dramatically to nearly a week at max. I've been eating the same size meals as before, but the urge to snack has certainly spiked."
     menu:
         "Be Understanding":
             jump BBW052_c4_1
@@ -11510,15 +11510,15 @@ label BBW052_c3_pass:
             jump BBW052_c4_3
 
 label BBW052_c3_fail:
-    MCT "I gave Alice a hand as she stepped off the bus as I had a feeling she may be unsure of her footing coming out."
+    "I gave Alice a hand as she stepped off the bus as I had a feeling she may be unsure of her footing coming out."
     MC "Thanks again for tonight, I'd never guess you could make ice cream through brute force."
     show BBW neutral-2
     BBW "I wouldn't describe it that way, but I'm glad you enjoyed it as much as I did."
     BBW "It's late and I promised Aida I'd assist her in some matters, so I shall be saying goodnight here then."
     MC "Have a good night Alice."
     scene Hallway with fade
-    MCT "The morning classes had passed without event, but I had noticed Alice's absence. The interruption of her normal punctuality was enough to tell me something was off."
-    MCT "Not being sure I decided to head to lunch and see if she had popped up there."
+    "The morning classes had passed without event, but I had noticed Alice's absence. The interruption of her normal punctuality was enough to tell me something was off."
+    "Not being sure I decided to head to lunch and see if she had popped up there."
     scene Cafeteria with fade
     MC "I ended up searching for a few minutes before my phone buzzed."
     BBWCell "<I wasn't feeling too great today so I visited the nurse and went back to my room.>"
@@ -11571,7 +11571,7 @@ label BBW052_c4_3:
     BBW "I have noticed that as well. I suppose when everyone is in the same boat, they are less inclined to make such comments, as the same could be said about them."
     BBW "...."
     show BBW worried
-    BBW "I know you mentioned earlier that your feelings wouldn't be swayed by my habits, would that still be true if I began eating more- possibly much more."
+    BBW "I know you mentioned earlier that your feelings wouldn't be swayed by my habits. Would that still be true if I began eating more- possibly much more?"
     MC "Not at all, if it would help I could be with you at all lunch times."
     show BBW haughty
     BBW "I wouldn't ask for something that extreme, but the eagerness is appreciated."
@@ -11718,8 +11718,8 @@ label BBW053:
     show BBW happy
     BBW "That certainly is a pleasant surprise. I'm genuinely impressed by your thoughtfulness. Do you have any favorites picked out?"
     MC "Well, I'm still working through the list, but this one stuck out."
-    stop music
-    #play music Brandenburg_No4
+
+    play music BrandenburgNo4
     show BBW surprised
     BBW "Oh my."
     MC "I take it you recognise it."
@@ -11897,7 +11897,7 @@ label BBW054:
     BBW "Nice to finally meet you, Tomoko."
     "Not much of anything ever phased Tomo, but her wide–eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
     Tomoko "Uhhh, hi... it's... just Tomo, by the way."
-    Tomoko "{size=8}Kei, she's huge! I knew you had a thing for bigger girls, but this is biiig! Even for you!{/size}"
+    Tomoko "{size=-6}Kei, she's huge! I knew you had a thing for bigger girls, but this is biiig! Even for you!{/size}"
     "My initial reaction was one of bewilderment, because I was not quite sure at what point she would have learned that information, but then again, I can't say I didn't do my fair share of spying on her too when we were younger."
     "But my second reaction was pure cringe, as I knew for a fact Tomo did not whisper that quietly enough for Alice to have not heard that."
     show BBW worried
@@ -12183,10 +12183,10 @@ label BBW055:
     MCT "Welp, I'm stumped."
     "Off and on for most of the early afternoon I'd been trying to think of something I could do to surprise Alice with something she'd like, but what can you offer to a person who has everything?"
     "I supposed I didn't have to, but the way things had been going in our relationship lately, I just couldn't get her out of my head. She meant the world to me; I felt the need to do something spectacular to show her that."
-    MCT "Flowers, chocolates— too pedestrian. Not that she wouldn't appreciate the gesture extirely, but she's a bit harder to impress than that."
+    MCT "Flowers, chocolates— too pedestrian. Not that she wouldn't appreciate the gesture entirely, but she's a bit harder to impress than that."
     MCT "Reservations at a fancy restaurant? No, that wouldn't do. Nothing that I could afford would even rate on her scale of fine dining."
     MCT "Come on, think man. It needs to be something that will make her feel special."
-    "Nothing was ticking off the boxes in my mind about what would actually work. But after a little bit more though, I came to a sudden realization."
+    "Nothing was ticking off the boxes in my mind about what would actually work. But after a little bit more thought, I came to a sudden realization."
     MCT "If it's going to be truly special to her, it's gotta be something money can't buy."
     MCT "Hmmm, what if I made her something? Yeah, that would show her how much she means to me, if even only a little bit. It would certainly show more effort than just going to a store and buying something off the shelf."
     "Though a great idea, upon taking inventory of my relevant skills, I came up with approximately jack shit."
@@ -12763,7 +12763,7 @@ label BBW057_c1_after:
     show Ryoko happy
     "She waved with a wide arc, using her whole arm as she greeted us with an eager smile on her face."
     Ryoko "Hi!"
-    MC "Hello. I've seen you around the academy before, but I don't think we've met. I'm Hotsure Keisuko and this is Nikumara Alice."
+    MC "Hello. I've seen you around the academy before, but I don't think we've met. I'm Hotsure Keisuke and this is Nikumaru Alice."
     show BBW neutral-2
     BBW "Hello."
     Ryoko "My name is Tanaka Ryoko! Yeah, I've seen both of you around the academy before, but I never got the chance to say hi and introduce myself."
@@ -12810,7 +12810,7 @@ label BBW057_c1_after:
     show Ryoko camera
     Ryoko "You two would be perfect for the scene! Now if only I could get Matsumoto-san to agree to be in the scene too!"
     show Ryoko happy
-    "That'd be hilarious!"
+    Ryoko "That'd be hilarious!"
     show BBW surprised
     Ryoko "Would you two be interested?"
     menu:
@@ -12883,7 +12883,7 @@ label BBW057_c2_2:
     show Ryoko happy
     Ryoko "Oh for sure, at some point! We don't really have access to fancy sound editing software like a major studio, so we're going to need actors that can really sing if we're going to be able to do a musical."
     show Ryoko camera
-    Ryoko "Good to know we have some talent to tap for future projects. Think you'd be interested, Alice?"
+    Ryoko "Good to know we have some talent to tap for future projects. Think you'd be interested, Nikumaru-san?"
     show BBW neutral-2
     BBW "Possibly. I'd have to see the script first. I won't invest my time and effort into just anything."
     show Ryoko neutral
@@ -12969,11 +12969,11 @@ label BBW058:
 label BBWFMG001:
     scene Dorm Exterior with fade
     play music Busy
-    MCT "Alice and I had planned to meet up later after class at her dorm. I started walking over a bit early so I wouldn't be late, knowing she'd expect punctuality given how tight she keeps her schedule."
-    MCT "Alice said she had to hand off an order to a client after class, or else we would have just walked back to her place together. It was a nice day, so I took a leisurely stroll since I had some extra time."
-    MCT "To my surprise I ran into a familiar face- just the person I was looking for."
+    "Alice and I had planned to meet up later after class at her dorm. I started walking over a bit early so I wouldn't be late, knowing she'd expect punctuality given how tight she keeps her schedule."
+    "Alice said she had to hand off an order to a client after class, or else we would have just walked back to her place together. It was a nice day, so I took a leisurely stroll since I had some extra time."
+    "To my surprise I ran into a familiar face- just the person I was looking for."
     show BBW neutral with dissolve
-    MCT "But I was unsure why she was meeting me here when she told me to meet her at her place."
+    "But I was unsure why she was meeting me here when she told me to meet her at her place."
     BBW "Keisuke, I'm glad I caught you on your way."
     BBW "I would have felt bad if I stood you up after telling you to come over, but I'm afraid this delivery drop off has taken much longer than initially anticipated. I could use your help."
     MC "Sure, what seems to be the problem?"
@@ -12991,16 +12991,16 @@ label BBWFMG001:
     show BBW neutral
     BBW "Hmm, well if that's the case it's probably worth checking out. I trust you won't mind making this delivery with me?"
     MC "Not at all. Here, I'll carry it."
-    MCT "I took the box from Alice. It was pretty light, just some piece of clothing after all. Though, holding it in my hands, I did kind of wonder what was inside that was so special that Alice didn't mind delivering it herself."
+    "I took the box from Alice. It was pretty light, just some piece of clothing after all. Though, holding it in my hands, I did kind of wonder what was inside that was so special that Alice didn't mind delivering it herself."
     show BBW happy
     BBW "Such a gentleman."
     hide BBW with dissolve
     scene Auditorium with fade
     show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    MCT "Walking into the gym we both spotted Natsuko almost immediately. With her tall stature and fiery red hair, she certainly stood out. She looked pre-occupied setting some things up for her workout."
+    "Walking into the gym we both spotted Natsuko almost immediately. With her tall stature and fiery red hair, she certainly stood out. She looked pre-occupied setting some things up for her workout."
     show BBW neutral-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BBW "There she is. This should be quick. I'll take it from here Keisuke."
-    MCT "I handed off the box with Natsuko's clothes to Alice, assuring that it would be delivered by her personally, as per her promise to her client."
+    "I handed off the box with Natsuko's clothes to Alice, assuring that it would be delivered by her personally, as per her promise to her client."
     BBW "There you are Natsuko. I had been looking all over for you to give you your order."
     Natsuko "Oh, sorry about that. If you have trouble finding me after class, I'm probably at the gym or at the track."
     show BBW neutral
@@ -13017,11 +13017,12 @@ label BBWFMG001:
     Natsuko "At least I actually look like a woman. You on the other hand have the silhouette of a doorframe."
     show BBW surprised
     show FMG surprised-2
-    MCT "Whoa... That was pretty harsh. You could hear a pin drop in the gymnasium after that insult landed."
+    MCT "Whoa... That was pretty harsh."
+    "You could hear a pin drop in the gymnasium after that insult landed."
     FMG "YOU..."
     show FMG angry
     FMG "TAKE THAT BACK!"
-    MCT "Just like before, things were quickly getting out of hand with these two. One of us should probably say something to help diffuse the situation."
+    "Just like before, things were quickly getting out of hand with these two. One of us should probably say something to help diffuse the situation."
     menu:
         "Speak up":
             jump BBWFMG001_c1_1
@@ -13031,15 +13032,15 @@ label BBWFMG001:
 label BBWFMG001_c1_1:
     $setFlag("BBWFMG_c1_1")
     MC "Girls please, none of this is necessary. Natsuko bought a dress from Alice- that's all there is to this story. Look, everyone in the gym is staring, this whole thing is uncomfortable for everyone."
-    MCT "Natsuko and Akira moved their gazes in my direction. For a brief moment, I thought I saw their stern, angry expressions both begin to yield into sheepish embarrassment-"
-    MCT "right before snapping right back to locking eyes with each other, renewing their fiery hatred in the process."
+    "Natsuko and Akira moved their gazes in my direction. For a brief moment, I thought I saw their stern, angry expressions both begin to yield into sheepish embarrassment-"
+    "right before snapping right back to locking eyes with each other, renewing their fiery hatred in the process."
     MC "Well, I tried."
     jump BBWFMG001_c1_2
 
 label BBWFMG001_c1_2:
     show BBW stern
     BBW "That is quite enough ladies."
-    MCT "Both Natsuko and Akira were eager to renew their argument in spite of Alice's stern reprimand, pointing their fingers at the other."
+    "Both Natsuko and Akira were eager to renew their argument in spite of Alice's stern reprimand, pointing their fingers at the other."
     FMG "But she-"
     Natsuko "But she-"
     show BBW angry
@@ -13049,7 +13050,7 @@ label BBWFMG001_c1_2:
     BBW "I don't know what it is that makes two of the most good-natured and easy-going people I've met at this school turn into vulgar beast in the presence of each other, but"
     BBW "I am disappointed that neither of you can manage to keep your composure and act like proper adults towards each other in the presence of company."
     BBW "Quite frankly it's embarrassing to be seen around you two when a fight breaks out."
-    MCT "Natsuko and Akira began to look down and to the side, away from each other, slowly absorbing Alice's chastising."
+    "Natsuko and Akira began to look down and to the side, away from each other, slowly absorbing Alice's chastising."
     BBW "Whatever possesses you two to do so is none of my business,"
     BBW "but what I will not stand for is listening to the two of you denigrate each other's bodies for the sake of petty one-upmanship at a time in all our lives where everyone here is the most insecure they've ever been about the changes going on with themselves."
     show FMG sad
@@ -13066,14 +13067,14 @@ label BBWFMG001_c1_2:
     BBW "Keisuke and I are done here."
     BBW "What you two do together in your own time with each other is your own business, but if you insist on ruining the company of our friends with your petty squabbles again, you can forget about using my help to find clothes that actually fit."
     show FMG sad
-    MCT "And with that final verdict, Alice turned around and began to walk away. I stood there, momentarily dumbstruck, trying to take in what had just transpired."
+    "And with that final verdict, Alice turned around and began to walk away. I stood there, momentarily dumbstruck, trying to take in what had just transpired."
     show BBW haughty
-    MCT "Alice briefly paused after passing me, shooting me a look to say 'Aren't you coming?' as my eyes just followed her without my feet following suit up till this point."
-    MCT "I proceeded to do an about face, hurrying my pace briefly to catch up to her, only to look back at Natsuko and Akira sulking as they walked away from each other."
-    MCT "Alice had walked right into the crossfire of a verbal sparring match between two titans, took control of the situation, and left them both looking like sad puppies just moping around."
+    "Alice briefly paused after passing me, shooting me a look to say 'Aren't you coming?' as my eyes just followed her without my feet following suit up till this point."
+    "I proceeded to do an about face, hurrying my pace briefly to catch up to her, only to look back at Natsuko and Akira sulking as they walked away from each other."
+    "Alice had walked right into the crossfire of a verbal sparring match between two titans, took control of the situation, and left them both looking like sad puppies just moping around."
     if getFlag("BBWFMG_c1_1"):
-        MCT "When I tried on the other hand, I was just brushed aside as a minor interruption to the war they were determined to wage against each other."
-    MCT "Alice certainly had a commanding presence about her when she wanted it."
+        "When I tried on the other hand, I was just brushed aside as a minor interruption to the war they were determined to wage against each other."
+    "Alice certainly had a commanding presence about her when she wanted it."
     scene Dorm Exterior with fade
     MC "Alice, how did you do that?"
     show BBW haughty with dissolve
@@ -13089,10 +13090,10 @@ label BBWFMG001_c1_2:
         BBW "I like it when a man is assertive."
         MC "Duly noted."
     show BBW happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    MCT "We proceeded to walk back to Alice's dorm, both eager to resume our original plans to hang out and put the previous incident behind us."
+    "We proceeded to walk back to Alice's dorm, both eager to resume our original plans to hang out and put the previous incident behind us."
     show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Yo! Alice."
-    MCT "Akira called out to Alice and rushed over with surprising speed as she hurried to catch up with us."
+    "Akira called out to Alice and rushed over with surprising speed as she hurried to catch up with us."
     FMG "Hey, uh, it's not easy for me to admit it, but I, um- I just wanted to say back there, you were right."
     FMG "I'm sorry about what I did to make a scene, even if it's cause of Nasty-Natsy. What she said really hurt, and I know I wasn't much better, but thanks for making her stop."
     BBW "Well you're most certainly welcome."
@@ -13113,7 +13114,7 @@ label BBWFMG001_c1_2:
     FMG "Oh for sure! I have to get back to my workout anyway- see you around!"
     hide FMG with dissolve
     show BBW neutral-2 at Position(xalign=0.5, yalign=1.0) with dissolve
-    MCT "And with that Akira ran off, likely the start of a very long and fast run, knowing her."
+    "And with that Akira ran off, likely the start of a very long and fast run, knowing her."
     MC "Huh, I thought she'd still be kind of mad, but it seems like you really got through to her."
     BBW "I guess so. I must admit I underestimated her myself even."
     MC "Maybe we'll have to hang out with her more often then."
@@ -13154,7 +13155,7 @@ label BBWGTS001:
     "In contrast to Naomi, apparently some of us weren't taking the results of the quiz very well at all."
     #Position notes: Naomi stage left facing left, Alice Center facing right, Aida stage right facing left. (I thought I've seen flipped/opposite facing sprites before, maybe I'm wrong but the order is correct)
     show GTS surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW angry at Transform(xzoom=-1) with dissolve
+    show BBW angry at Position(xalign=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     show PRG scared at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     BBW "First I find that my shirt was not properly pressed this morning, only to then realize you accidentally shrunk it in the wash."
     BBW "Now I learn, only moments ago, that you failed to write in the upcoming quiz, along with the appropriate study allotment for it, into my schedule this week."
@@ -13271,7 +13272,7 @@ label BBWGTS002:
     hide GTS_S
     show AE neutral
     AE "Very well then. These seem to be in order. Please have copies sent to the student council to have on file."
-    show GTS angry at Transform(xzoom=-1) with dissolve
+    show GTS angry at Position(xalign=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     GTS "Wait, Matsumoto-san, if I may. Truly you see how Nikumaru-san's actions and attitudes are dangerous?"
     GTS "{size=-6}She acts in a manner rather unwholesome, and unbefitting of a woman who calls herself...?{/size}"
     show BBW angry
@@ -13431,7 +13432,7 @@ label BBWGTS003:
     MC "Uh, I can't believe I'm saying this, but um, can I get back to work?"
     show GTS surprised
     GTS "Oh!"
-    show AE glasses
+    show BBW surprised
     BBW "Oh, good, you're still here, Keisuke."
     show BBW neutral
     BBW "Certainly. I will join you on your deliveries, if you'd like."
