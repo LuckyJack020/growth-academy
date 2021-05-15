@@ -1641,7 +1641,7 @@ label FMG016:
     scene Dorm Interior with fade
     play music FMG
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by twelve and it's three o'clock."
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     MC "I gotta hurry to the track, she's going to be pissed."
     "As I rounded the corner I bumped into Akira, knocking myself on the floor."
     show FMG surprised with dissolve

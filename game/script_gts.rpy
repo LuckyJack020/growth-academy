@@ -6324,7 +6324,7 @@ label GTS043:
     "Once inside, I made my way to the opposite end. The gym was lively with several groups of students and instructors. It seemed that they were preparing for their own after-school activities."
     "The girls' volleyball team was practicing in the center of the court closest to the front door, while the girls' basketball team practiced on the court closest to the locker rooms."
     "Aside from the few times I had watched Honoka participate in her clubs, it was the first time I had gotten a good look at each of the teams. Despite the vastly different array of factors on display, the instructors kept them coordinated."
-    "Naomi had mentioned an interest in how well they managed the teams at Seichou University before. As I entered the locker room to retrieve my uniform, I remembered how thankful I was that we found the Tai Chi course."
+    "Naomi had mentioned an interest in how well they managed the teams at Seichou Academy before. As I entered the locker room to retrieve my uniform, I remembered how thankful I was that we found the Tai Chi course."
     "After retrieving my uniform from the locker room, I neatly folded it inside a light blue duffle bag bearing Seichou's insignia."
     "I slung the duffel bag over my shoulder and returned to the hallway."
 

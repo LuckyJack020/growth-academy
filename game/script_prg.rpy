@@ -9107,7 +9107,7 @@ label PRG042:
     PRG "N-No trouble at all! I'm just glad you're enjoying them."
     show PRG unique
     PRG "Oh... and, uhm... if any of your textbooks need to be replaced from me knocking them over, just let me know..."
-    AE "I ensure you that they're fine."
+    AE "I assure you that they're fine."
     PRG "Oh, okay. I was just checking..."
     AE "If you'd really like to be certain, you may check my books yourself."
     "Shiori unzipped her bag and laid out it's contents across the countertop. Aida scanned across each of them until she came to a thick book on the end with a large split starting along the book's spine."

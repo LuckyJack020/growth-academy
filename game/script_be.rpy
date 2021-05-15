@@ -2632,7 +2632,7 @@ label BE020_c1_after:
     MC "That's nice. Thanks for sharing. Here, you want one of mine?"
     show BE happy at center, Transform(zoom=1.0)
     BE "Yes please!"
-    "I smiled and grabbed my shrimp roll, and put it towards her waiting mouth. Honoka closed my eyes, which seemed a bit weird. But she still accepted the sushi piece."
+    "I smiled and grabbed my shrimp roll, and put it towards her waiting mouth. Honoka closed her eyes, which seemed a bit weird. But she still accepted the sushi piece."
     "Along with the tip of my finger as her lips wrapped around it."
     show BE surprised
     BE "Omf. Hmm..."
@@ -7308,7 +7308,7 @@ label BEGTS001:
 
     scene Roof with fade
     "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
-    "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
+    "It looked very different at sunset, however. Usually, the sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
     show BE happy with dissolve
     "Honoka was there to greet me when I arrived."
     BE "Hey, Kei-chan! Glad you could make it!"
@@ -7413,7 +7413,7 @@ label BEGTS001:
     show BE neutral
     BE "I guess I'll see ya around, then!"
     show GTS neutral-2
-    GTS "We certainly shall. I'll see you then, Inoue-san."
+    GTS "I certainly shall. I'll see you then, Inoue-san."
     MC "See you later, Yamazaki-san."
     "Naomi gave us both a respectful, graceful bow as she opened the door to the stairwell and returned to the school building."
     play music HigherEdu
@@ -8051,7 +8051,7 @@ label BEGTS003:
     MC "What do you mean?"
     BE "I just mean, everything that's happened, you know? I've gotten used to my schedule by now, but it still feels so surreal."
     show GTS surprised
-    GTS "You're referring to Seichou University, correct?"
+    GTS "You're referring to Seichou Academy, correct?"
     show BE neutral
     BE "Yeah. It's a school like any other, but getting to know all of the people I've met... it's been fun. Not many people can say they've met such a diverse set of people."
     show BE happy
@@ -8344,7 +8344,8 @@ label BEGTS004_c1_after:
     PRG "I-I just don't want you to think I'm an enabler, or anything..."
     "Honoka exhaled deeply, crossing her arms with a faded, low-energy sigh."
     BE "Well, Yamazaki-chan. There's your answer. Are you satisfied?"
-    show GTS sad
+    hide GTS_S
+    show GTS sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
     "Naomi paused for a few seconds, slouching slightly while she collected her thoughts."
     GTS "I suppose I was looking for confirmation. I wanted to know that others saw the same thing I was seeing."
     BE "I don't like her attitude either, but that's no reason to put Kodama-san on the spot like that!"

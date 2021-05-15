@@ -1333,7 +1333,7 @@ label BBW010:
     show BBW happy at center, Transform(xzoom=1) with dissolve
     BBW "Now there's a better choice. I, through my personal contacts with the biggest and best names in clothing retail, can offer you-"
     MC "Hey!"
-    show AE glasses
+    show BBW surprised
     BBW "!"
     MC "I don't need a sales pitch. I know what you're doing. You offered to get a computer for me, remember?"
     show BBW neutral
@@ -5184,7 +5184,7 @@ label BBW031:
     MCT "Too late for second-guessing, my man. Let's get this going."
     scene Gate Front with fade
     MC "Alice! Hey!"
-    show AE glasses with dissolve
+    show BBW surprised with dissolve
     "She cocked an eyebrow at my informal 'Hey.'"
     MCT "Right. Gotta be a bit more polished."
     MC "I mean, it's lovely to see you."
@@ -5494,7 +5494,7 @@ label BBW031_afterdate:
             BBW "Uh-huh. And how elegant was I when I was falling onto you?"
             MC "Well... OK, you were clumsy just then."
             MC "But I'm not about to complain about feeling you pressed against me like that."
-            show AE glasses
+            show BBW surprised
             BBW "!"
             "That was bolder than I was planning, but it was worth it to see Alice stunned like that."
             "She recovered quickly, though. No surprise."
@@ -7940,6 +7940,7 @@ label BBW043:
     show BBW swim-school-worried
     BBW "{size=-6}Well that and swimming laps in the pool by myself sometimes feels a bit lonely...{/size}"
     MC "Oh, well I could come with you next time if that's the case."
+    show BBW swim-school-surprised
     BBW "Oh! I didn't mean it like that."
     "More like she didn't mean that to slip. Now that I think about it, outside of Aida and me, I don't think Alice has made a lot of friends to hang out with. Maybe there's more to this than just wanting to play water polo."
     show BBW swim-school-haughty
