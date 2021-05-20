@@ -494,12 +494,13 @@ label global000_RM:
     BE "Oh, Kei-chan! You're such a kidder!{w} Of course not!"
     "Honoka's laugh caused her impressive bust to shake violently, which was a small consolation prize as we parted ways."
     hide BE with dissolve
-    scene School Inner with fade
+    scene Dorm Hallway with fade
 
     "I headed over to the boy's dormitories, seeing they were just as enlarged as the rest of the school.{w} I felt like a child, trying the doorknob that I couldn't even get my entire hand around."
     "*Kunk-Kunk*"
     MC "Locked? I'm sure I had the right-"
     play music RM
+    show cg RM000 with dissolve
     UNKNOWN "Who is it?!"
     MC "Aaah!"
     UNKNOWN "Who is it? Who are you with? Identify yourself!"

@@ -255,6 +255,8 @@ image cg PRG020b = "Graphics/ui/gallery/PRG020_close.png"
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
 
+image cg RM000 = "Graphics/ui/gallery/RM000.png"
+
 #Character sprites
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
 image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")

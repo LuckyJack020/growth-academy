@@ -4514,22 +4514,22 @@ label FMG032:
     play music Busy
     "With the weather slowly getting warmer, Akira wanted to do more of our workouts outside, So not only do I get to have some fun in the sun, I get to see her in her swimsuit. It's a match made in heaven!"
     MCT "I'd be lying if I didn't say she looked good in it. It was one of the best parts of training by the pool."
-    show FMG swim-casual-angry-2 with dissolve
+    show FMG swim-school-angry-2 with dissolve
     FMG "Kei-kun, stop thinking about my butt and go another lap!"
     MC "Hang on, I was not!"
-    show FMG swim-casual-happy
+    show FMG swim-school-happy
     FMG "Uhhuh, suuuure~ That goofy look on your face says otherwise."
     MC "..."
     MC "Yeah yeah, whatever you say."
     "Akira chuckled to herself, strutting past me as if she were going down a catwalk."
-    show FMG swim-casual-neutral
+    show FMG swim-school-neutral
     FMG "Like what you see?"
     MCT "God damn that swimsuit is hugging her ass. Man, what I would give to do the same..."
     MC "Life is a cruel mistress."
-    show FMG swim-casual-happy
+    show FMG swim-school-happy
     FMG "She really is, but you know what's even crueler?"
     MC "...You?"
-    show FMG swim-casual-sad
+    show FMG swim-school-sad
     FMG "Well yes, when I'm hungry! Come on, I'm starving over here! Do your last lap before I make you my protein bar!"
     MC  "Agh! Alright, I'll do this one in record time!"
     scene Campus Center with fade
