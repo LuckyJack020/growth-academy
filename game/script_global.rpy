@@ -20,6 +20,7 @@ define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
 
 define Akihiro = Character('Akihiro', color="#C0C0C0")
 define Chibuki = Character('Chibuki', color="#CC33FF")
+define ChibukiCell = Character('Chibuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="ChibukiCell")
 define Chie = Character('Chie', color="#FF9900")
 define Dad = Character('Dad', color="#C0C0C0")
 define Francois = Character('François', color="#CC33FF")
@@ -975,6 +976,7 @@ image side FMGCell = DynamicImage("Graphics/side/FMG-[globalsize].png")
 image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side PRGCell = DynamicImage("Graphics/side/PRG-[prgsize].png")
 image side TomoCell = "Graphics/side/tomoko.png"
+image side ChibukiCell = DynamicImage("Graphics/side/Chibuki.png")
 
 #Minor characters
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
