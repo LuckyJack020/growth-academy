@@ -69,3 +69,4 @@ game/saves/persistent
 *.sublime-project
 *.rpyc
 *.rpyb
+debug_log.txt

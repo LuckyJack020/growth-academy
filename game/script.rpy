@@ -26,6 +26,7 @@ init python:
         'dormBBW': ("school", (870,280)),
         'dormBE': ("school", (870,260)),
         'dormPRG': ("school", (870,280)),
+        'dormFMG': ("school", (870,300)),
         'dormexterior': ("school", (860,375)),
         'dorminterior': ("school", (880,380)),
         'festival': ("town", (1100,650)),
