@@ -5876,21 +5876,21 @@ label FMG042:
     "Sadly, as I was about to dive in, my phone began buzzing and to my surprise it was..."
     MC "Chibuki?"
     ChibukiCell "Yo, Keisuke... I need your help."
-    Cell "<What’s up?>"
+    MCCell "<What’s up?>"
     ChibukiCell "Can you come-"
     FMGCell "THIS DUDE JUST SITS IN THE CORNER!"
-    Cell "<Is Akira okay? Why she is screaming so loud?>"
+    MCCell "<Is Akira okay? Why she is screaming so loud?>"
     ChibukiCell "She’s fine... I think. I know she’s not playing very well. Look, I’m suffering over here. Could you come control your girl for me?"
-    MC "Why don’t-"
+    MCCell "<Why don’t->"
     FMGCell "HA, YOU’RE TRASH! GET OUT OF MY LOBBY!"
-    MCT "Yikes." 
-    MC "As I was saying, can’t you leave and go somewhere else?"
+    MCT "Yikes."
+    MCCell "<As I was saying, can’t you leave and go somewhere else?>"
     ChibukiCell "I could..."
     ChibukiCell "... But I really don’t feel like it. I’ll be outside when you get here. Chop-chop Keisuke, she’s close to punching a hole in the wall."
-    MC "Sigh... I’ll be there in five."
+    MCCell "<Sigh... I’ll be there in five.>"
     MCT "The things I do for this girl. Don’t worry, I’ll be back for you... my precious ramen bowl."
-    
-    scene Dorm Exterior with fade
+
+    scene Dorm Hallway with fade
     "Knowing Akira was causing Chibuki trouble with her screaming, I probably should be running, but my noodles were getting cold for this."
     "It seemed Chibuki had escaped Akira’s saltiness as I found her sitting outside their dorm against the door reading a book."
     show Chibuki neutral with dissolve
@@ -5904,7 +5904,7 @@ label FMG042:
     "The door flew open and Chibuki shoved me inside, slowly closing my escape behind me."
     Chibuki "I’ll check in on you guys in an hour, good luck!"
     MCT "I don’t get paid enough for this..."
-    
+
     scene Dorm FMG with dissolve
     "Pulling open Akira’s door, I was met with an overly large woman yelling at the TV like a grouchy old man screaming at some whippersnappers to get off his lawn."
     show FMG angry
@@ -5950,7 +5950,7 @@ label FMG042:
     FMG "Do I have to do everything?..."
     show FMG neutral
     FMG "For your primary, equip the Howa Type 20, and then for its attachments, give it the corp combat holo sight, fifty round mag, rubberized grip tape, commando foregrip, and throw on the monolithic suppressor."
-    show FMG angry-2 
+    show FMG angry-2
     FMG "Everyone’s using that muzzle attachment, I don’t understand why they don’t nerf it so the meta changes a little..."
     show FMG neutral
     FMG "It’s whatever. The devs don’t even play their own game."
@@ -5998,7 +5998,7 @@ label FMG042:
     MC "Aye, don’t be a hater. With my superior game knowledge and skill, I’ll be on top of the leaderboard before you can blink."
     show FMG neutral
     FMG "You are such a nerd..."
-    show FMG happy 
+    show FMG happy
     FMG "But you’re my nerd."
     MC "Stop, I’m blushing... Oh, I got an idea! When I have the highest KDR and I’m at the top of the leaderboard. You can kiss me as a reward for being so amazing."
     show FMG aroused
@@ -6013,7 +6013,7 @@ label FMG042:
     FMG "Ugh, HOU fans-"
     "I wasn’t putting in much effort until I ran into a couple of corner campers with riot shields."
     MC "I CAN’T BELIEVE THESE DUDES!"
-    show FMG surprised-2 
+    show FMG surprised-2
     FMG "AH!"
     show FMG sad
     FMG "...Jeez, you scared the shit outta me, Kei-kun. Bring it down a little, man. It’s only a video game no need to get your panties in a twist."
@@ -6029,7 +6029,7 @@ label FMG042:
     "Angry Adolescent" "This little bitch running around with the Howa is starting to piss me off."
     "That One Squeaker" "Dude, I know, he’s so annoying... STOP DROP SHOTTING!."
     MC "Heh, this dude is foaming at the mouth. You got a mic?"
-    show FMG happy 
+    show FMG happy
     FMG "I’m glad you asked... Here ya go."
     MC "I see you, Akira. You spared no expense on your headset."
     show FMG flex
@@ -6059,7 +6059,7 @@ label FMG042:
     MC "As much as I’d love to flex you, it’s not like they’d believe us anyway."
     FMG "Heh, true. I want the next round by the way. It’s my turn to spank these guys."
     MC "Hmmmmm... if I get my prize, I’ll tap out."
-    show FMG aroused 
+    show FMG aroused
     FMG "I have something else I’d like to try... for a later date."
     FMG "And before you ask— it’s a surprise. Ever since the beach, it’s been on my mind."
     MC "You going to put your own sunscreen on?"
@@ -6091,7 +6091,7 @@ label FMG042:
     FMG "W-What?! We’ve been playing for like an hour."
     MC "I hate to admit it, but she’s right. Come on, Akira, Chibuki has suffered enough."
     show FMG sad
-    FMG "Man, I was owning... *sigh* guess we can do this again some other day, Kei-kun." 
+    FMG "Man, I was owning... *sigh* guess we can do this again some other day, Kei-kun."
     Chibuki "Thank you, guys."
     MC "Yeah, no problem. Sorry for causing you a bigger headache."
     Chibuki "In all fairness, I should’ve expected this to happen with you two."
@@ -6099,7 +6099,7 @@ label FMG042:
     FMG "Heh, true. But I guess we can get out of your hair for the time being, torpedo-nips."
     Chibuki "Thank you."
     scene black with fade
-    
+
     $setTime(TimeEnum.EVE)
     scene Dorm Exterior with fade
     show FMG neutral
@@ -6112,7 +6112,7 @@ label FMG042:
     show FMG flex
     FMG "It’s me. I want the teddy bear."
     jump daymenu
-    
+
 label FMG043:
     $setProgress("FMG", "FMG044")
     scene Dorm Interior with fade
@@ -6137,7 +6137,7 @@ label FMG043:
     MC "Love you too."
     MCT "What could she possibly want to talk about?"
     MC "Never was much of a fan of the \"I want to talk\" business. I’m sure it’s nothing to stress about... I hope."
-    
+
     scene Roof with fade
     show FMG neutral with dissolve
     FMG "Hey."
@@ -6211,7 +6211,7 @@ label FMG043:
     MC "Why should this responsibility fall on me?!?"
     show FMG neutral
     FMG "We both know, I’ve been doing all the work in the relationship recently. I’m the one wearing the pants. Help a girl out, man."
-    MC "You don’t even wear pants????" 
+    MC "You don’t even wear pants????"
     show FMG angry
     FMG "You know I don’t mean it literally, you fool!"
     MC "I can’t believe what I’m hearing. You buy ice cream ONE time and suddenly you’re carrying the relationship."
@@ -6351,14 +6351,14 @@ label FMG044:
     MCT "Gulp."
     MCT "I'm gonna be so sore tomorrow..."
     jump daymenu
-    
+
 label FMG045:
     $setProgress("FMG", "FMG046")
     scene Dorm Interior with fade
     "Following the events of yesterday, I woke up with a sore neck and an even sore-er lower region."
     MCT "Gotta give it to her, she knows how to have a good time. I just wish my life wasn’t at risk during it."
     MCT "I’ll shoot her a text and see if she’s down to talk."
-    "I fumbled on my nightstand for my phone, pulled up Akira’s contact, and began planning out my message." 
+    "I fumbled on my nightstand for my phone, pulled up Akira’s contact, and began planning out my message."
     MC "Hey, can you come to my dorm? There is something I want to talk to you about regarding yesterday."
     FMGCell "I’m already on my way. I figured you’d want to talk it out after I nearly sent you through the ceiling."
     MC "Heh, at least we’re on the same page. See you soon."
@@ -6438,7 +6438,7 @@ label FMG045:
     FMG "Out of hundred."
     MC "..."
     MC "Continuing, what I was saying before my feelings were hurt. This stuff is special to me, I want my first time to be with someone I care about, I want it to mean something."
-    show FMG aroused 
+    show FMG aroused
     FMG "I agree. Your first time should be with someone important to you."
     "Akira placed her hand on my chest and closed in for a quick kiss on my lips."
     show FMG aroused-2
@@ -6526,7 +6526,7 @@ label FMG046:
     FMG "Well, I’m trying to cook an Okinawan dish my mom used to make back when I was a kid. Unfortunately, Kei doesn’t trust me with a hot pan."
     MC "You wouldn't either, Kodama-san, if you saw what she’s cooked before!"
     "She flipped me off with a smile before continuing her call with Aida."
-    MCT "You love to see it." 
+    MCT "You love to see it."
     FMG  "...We were wondering if you’d be willing to lend us a hand or two."
     PRGCell "Uh... I-I don’t really know a lot about Okinawan food, but I can give it a try."
     FMG "Let’s get it! Thank you so much, Kodama-san, you’re the best."
@@ -6585,7 +6585,7 @@ label FMG046:
     FMG "You didn’t have to do that Kodama-san. sigh...It’s my fault... I should’ve told you that we found everything we needed."
     show FMG happy
     FMG "How much was everything? I’ll pay you back right now."
-    show PRG happy 
+    show PRG happy
     PRG "N-No, no, it’s okay! I-I wanted to do it. I don’t know much about Okinawan cooking and it was fun to learn about it at the market."
     MC "You sure, Kodama-san?"
     show PRG neutral
@@ -6594,7 +6594,7 @@ label FMG046:
     FMG "As long as it’s okay with you... You ready to start cooking?"
     show FMG sad
     FMG "I don’t know how much longer I can wait. I’m so hungry right now..."
-    show PRG surprised 
+    show PRG surprised
     PRG "Oh! We should get started then!"
     MC "Nah, take your time Kodama-san. She’s just being dramatic, she’ll be fine."
     show FMG neutral
@@ -6617,14 +6617,14 @@ label FMG046:
     MC "Well, I wouldn’t-"
     "She placed her hand over my mouth preventing me from exposing her and her lies."
     MC "Mmmmmm... MMMMMMMM"
-    show FMG happy 
+    show FMG happy
     FMG "I’ll help you chop up the komatsuna in just a second."
     show FMG neutral
     FMG "Sucks to suck, Kei-kun."
     "She pulled her hand away and kissed my cheek before running over to help Aida."
     MCT "I’m definitely stepping on the heels of your shoes now. That’s a promise."
     scene black with fade
-    
+
     scene Cooking Classroom with fade
     "The funniest thing about watching Akira cook was when Aida asked her to squeeze the lemon. Instead of using the juicer, Akira decided to use her hands... she squeezed juuuust a little too hard."
     show PRG surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
@@ -6645,11 +6645,11 @@ label FMG046:
     PRG "O-Okay!"
     hide FMG with dissolve
     MC "Thanks again for helping out, Kodama-san. She’s been wanting to learn for awhile."
-    PRG "It’s been fun teaching her! S-She’s great to be around." 
+    PRG "It’s been fun teaching her! S-She’s great to be around."
     show PRG unique-happy
     PRG "Y-You’re lucky to have her by your side, Hotsure-san."
     MC "Eh, she’s okay. Honestly, I’ve been thinking of trading her out for another muscle chick."
-    show PRG surprised 
+    show PRG surprised
     PRG "D-Don’t say those things!"
     MC "I don’t mean it, Kodama-san. Trust me, It’s just how we are. We constantly mess with each other."
     show PRG worried
@@ -6668,7 +6668,7 @@ label FMG046:
     MC "Kodama-san, invited us to try some of her cooking for an upcoming competition she has."
     show FMG happy
     FMG "You had me at free food."
-    show PRG excited 
+    show PRG excited
     PRG "Perfect!"
     show PRG neutral
     PRG "We’ll be starting around two, so could you both be there by three? We have some setting up and prep-work to do."
@@ -6677,7 +6677,7 @@ label FMG046:
     FMG "Sweet! I love meeting new people."
     show FMG surprised
     FMG "Kodama-san, the food!"
-    show PRG surprised 
+    show PRG surprised
     PRG "O-Oh no!"
     "Aida hurried over to the stove and quickly spun the dial to off. She took the pan and slid it to a cold burner."
     show PRG sad-2
@@ -6724,7 +6724,7 @@ label FMG046:
     show FMG neutral
     FMG "This is why your serving is small, no appreciation for our hard work."
     show PRG happy
-    PRG "I wanted to say, I had a lot of fun today. Thank you two for asking for my help." 
+    PRG "I wanted to say, I had a lot of fun today. Thank you two for asking for my help."
     PRG "I’d love to do this again, sometime."
     show FMG sad-2
     FMG "You’re leaving?"
