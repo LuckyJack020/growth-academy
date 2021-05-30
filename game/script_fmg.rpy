@@ -6082,9 +6082,9 @@ label FMG042:
     MC "Be my guest."
     "Akira cracked her knuckles preparing herself for the onslaught of insults."
     "Unfortunately, before she could let loose, Chibuki opened the door and walked in front of the TV."
+    show Chibuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show FMG angry-2
     FMG "Chibuki, get outta the way I can’t see the screen! You’re going to ruin my streak and then I can’t make fun of these clowns!"
-    show Chibuki neutral
     Chibuki "Keisuke, you were supposed to stop her from screaming. Yet,  I’m listening to YOU AND HER smack-talking these random people too."
     MC "Well, I...uhhh-"
     Chibuki "You guys need to go for a walk or something. I’m getting tired of sitting outside."
@@ -6118,7 +6118,7 @@ label FMG043:
     scene Dorm Interior with fade
     "I told myself that today was going to be different."
     MC "I wrote four sentences the other day. Surely, I can crank out a page or two in an hour."
-    scene back with fade
+    scene black with fade
 
     $setTime(TimeEnum.EVE)
     scene Dorm Interior with fade
