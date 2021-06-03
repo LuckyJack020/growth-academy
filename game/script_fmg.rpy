@@ -5732,11 +5732,12 @@ label FMG041:
     MC "So... Um, can I look now?"
     FMG "Hm? Oh yeah, sorry, you can look."
     MCT "The moment of truth..."
-    scene Beach with fade
-    show FMG swim-casual-flex with dissolve
+    show cg FMG041 with fade
     FMG "Whaddya think?"
     "I couldn't believe my eyes... everything about it complemented her body so well."
     MC "Y-Y-You look really good... Have you considered wearing this all the time?"
+    hide cg with dissolve
+    scene Beach with dissolve
     show FMG swim-casual-happy
     FMG "Glad you like it! By the way, I need your help with something."
     MC "Sure, but let me get changed first. I'll be right back."
