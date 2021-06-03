@@ -225,7 +225,7 @@ label BE002:
     BE "I'll get one when you get fitted for your size 38 feet."
     MC "Hehehe, dangit, Honoka. See, got me laughing that easily."
     BE "I know. That's because I'm awesome."
-    "Honoka smiled and put her fists on her hips in haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding."
+    "Honoka smiled and put her fists on her hips in a haughty pose, reminding me of Alice for a moment. Only while Alice was unbelievably serious in her holier-than-thou attitude, Honoka was obviously kidding."
     "We stood there chuckling for a bit more before Honoka noticed the time and decided to get going. I nodded and waved goodbye, sticking my hands in my pockets before heading off myself."
     jump daymenu
 
@@ -241,22 +241,22 @@ label BE003:
     "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka."
     "After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
     MC "Whoops, uh, hey Honoka. Sorry about that. Wasn't watching where I was going."
-    show BE happy at center with dissolve
+    show BE athletic-happy at center with dissolve
     BE "Hehe, hey Kei-chan. Don't worry about it, was an accident, right?"
     MC "Right."
     "I noticed that Honoka wasn't wearing the normal school uniform, having traded out the classic skirt and shirt combo for a pair of spats and a more tightly-fitted t-shirt."
     MC "What's with the get-up?"
-    show BE neutral:
+    show BE athletic-neutral:
         ypos 1.0 yanchor 1.0
         linear 0.1 ypos 1.05
         linear 0.1 ypos 1.0
     BE "Oh, I had soccer practice in a bit, this is the official uniform. Bit snug, though."
     "Honoka tugged down on her shirt and stuffed it into her shorts. Clearly that was the way it was supposed to be, but when she stood straight up, the front of the shirt kept coming out of the spats, exposing a tiny sliver of her waist."
     MC "Why didn't you just get the next size up?"
-    show BE angry
+    show BE athletic-angry
     BE "I dunno. Figured I'd try it out first, no sense causing a fuss about the size if I end up not liking soccer, after all."
     MC "I guess that makes sense. Damn, but it's going to suck having soccer practice today when it's this hot out. Hopefully it doesn't last too long."
-    show BE sad
+    show BE athletic-sad
     BE "Woof, yeah, I wasn't planning on that, either. Hopefully there'll be some refreshments there, though. They can't really keep us out for too long without giving us some water at least."
     menu:
         "You uh, want some of my drink?" if getAffection("BE") > 3:
@@ -269,10 +269,10 @@ label BE003:
             jump BE003_c3
 
 label BE003_c1:
-    show BE neutral
+    show BE athletic-neutral
     BE "Ooh, what did you get?"
     MC "Ah, like, a lemon-lime soda. It's pretty good. Want a sip?"
-    show BE happy
+    show BE athletic-happy
     BE "Heh, sure."
     "I handed the can over to Honoka and saw her sniff it a bit."
     BE "Mm, smells good."
@@ -280,21 +280,21 @@ label BE003_c1:
     "Gradually, this showed off more and more of her stomach as her shirt was lifted out of her gym shorts, showing off her thin waist and tiny belly button."
     "It also made me wonder how much of her lower vision was blocked off by her chest, because as she arched her back, her breasts were raised up higher, sticking out like buoyant balloons from her torso."
     "By the time she finished off my drink, they were practically pointed straight up, only to come swinging back down to their normal height when she swallowed the last drop and stood straight up again."
-    show BE happy
+    show BE athletic-happy
     BE "Ah, that really hit the spot! Thanks Kei-chan!"
     MC "Yeah, no problem."
     "My tongue felt like a desert. I rifled in my pockets to see if I had enough change for another drink."
-    show BE neutral
+    show BE athletic-neutral
     BE "Hm..."
     MC "What's up?"
     "Wordlessly, Honoka took the now-empty can and placed it against her chest, right between her breasts. She held it there for a moment, obviously in contemplation, but it wasn't clear what she was thinking about."
-    show BE unique
+    show BE athletic-unique
     BE "..."
     "After a while it ended up being a moot point as she just tossed the can in the nearby recycling bin."
-    show BE neutral
+    show BE athletic-neutral
     BE "Never mind, probably not big enough anyway. Would hurt, I bet."
     MC "Huh?"
-    show BE happy
+    show BE athletic-happy
     BE "Nothing, hehe. Thanks for the drink, Kei-chan, but I better get going. Next time I'll owe you a drink, okay? I'll make sure to take a sip from it first so we're even. Tricking a young girl into getting a secondhand kiss, you playboy."
     "Honoka winked and made her way over to the soccer field, leaving me there, speechless for a moment."
     hide BE with dissolve
@@ -302,7 +302,7 @@ label BE003_c1:
     jump daymenu
 
 label BE003_c2:
-    show BE neutral
+    show BE athletic-neutral
     play music BE
     BE "Yeah that's probably a good idea. Hm..."
     "Honoka walked over to the vending machine as I took another sip of my soda."
@@ -312,18 +312,18 @@ label BE003_c2:
     MC "I bet. Don't know a lot about it myself, but is there any specific position you want to do?"
     BE "Just anything besides the goalie. I'm sure it's tough work but I want to make sure I'm out in the field getting the most exercise, running around and sweating it out."
     MC "Right. Well if that's the case you really do need to make sure you stay hydrated."
-    show BE surprised
+    show BE athletic-surprised
     BE "Of course, I'm not a numbskull, Kei-chan!"
     MC "Never said you were. Just, it's an easy thing to forget when you're focused on something and I know you, Honoka. When you get focused on something, occasionally you can get a bit of tunnel vision."
     "Honoka tilted her head from side to side several times like a metronome."
-    show BE sad
+    show BE athletic-sad
     pause 0.5
-    show BE happy at center, Transform(xzoom=-1)
-    show BE angry at center, Transform(xzoom=1)
-    show BE neutral at center, Transform(xzoom=-1)
+    show BE athletic-happy at center, Transform(xzoom=-1)
+    show BE athletic-angry at center, Transform(xzoom=1)
+    show BE athletic-neutral at center, Transform(xzoom=-1)
     BE "Yeah you've kind of got a point there. Well if you wanted to, you could probably come watch me. I doubt they'd mind. Then you can remind me to drink if I forget."
     MC "Maybe I'll do that, I don't think I have anything else going on."
-    show BE neutral at center, Transform(xzoom=1)
+    show BE athletic-neutral at center, Transform(xzoom=1)
     BE "Heh, sounds good. Well, if you come I'll see you over at the soccer field. If not, well, see you whenever. Have a good day, Kei-chan."
     MC "You too."
     "Honoka raced off to the soccer field as I took another drink, and decided whether to go follow her or chill somewhere else for the rest of the afternoon. It was really hot, after all."
@@ -333,33 +333,33 @@ label BE003_c3:
     #should this be an affection loss? she even calls it a "fun talk"
     $setAffection("BE", -1)
     play music Tension
-    show BE angry
+    show BE athletic-angry
     BE "Kei-chan, you should have called them udders if you were gonna make a cow joke."
     MC "Darn, you're right. Haha."
-    show BE neutral
+    show BE athletic-neutral
     BE "Though..."
     MC "Though, what? Are you really, I mean, I didn't mean to insult you if you were. Not that I'd think it was a bad thing or something like that, I just, if you weren't cool with it, I, uhhh."
-    show BE sad
+    show BE athletic-sad
     BE "No no, it's not that. Just, now you've got me wondering if that's possible."
     BE "I mean, I'm not an expert on female mammaries or anything but, there's obviously parts of the breast meant to make milk, so what would happen if they swelled up and started getting bigger?"
-    show BE neutral
+    show BE athletic-neutral
     BE "Would that mean the woman would start making a ton of milk, or would it just increase the size of the breasts around them, but keep the level of lactation about the same?"
     MC "I uh, I don't really know how to answer that. I think it'd be weird for a tiny part of the body to be affected like that, though. If it was, I'd say, probably a bit of both?"
     BE "Huh. Interesting to think about."
     "Honoka and I both stood there for a moment, saying nothing to each other. Our eyes weren't really focused on one another either. It took a good minute or two before I finally broke the silence."
     play music BE
     MC "Have we both been thinking about milky breasts now?"
-    show BE happy
+    show BE athletic-happy
     BE "Probably! But I'm a girl, it's okay for me to think about it. You're just a pervert."
     MC "That's not fair, you put the idea in my head."
     BE "I just planted the seed. You're the one who watered it and let it grow. Could have plucked it out at any time."
     MC "That's not how thoughts work. That's not how anything works."
     BE "Apparently it is, ehehehe."
     "Honoka chuckled, and licked her lips. She looked over at the vending machine, but then pulled out her phone and checked the time."
-    show BE sad
+    show BE athletic-sad
     BE "Darn, I need to get going or I'm going to be late. Won't do good to be tardy for the first soccer club meeting."
     MC "Ah good point, don't let me hold you up then."
-    show BE neutral
+    show BE athletic-neutral
     BE "Thanks. Thanks for the fun talk, too. See you around, Kei-chan."
     MC "See ya, Honoka!"
     "I gave a nod to Honoka as she ran to the soccer field, then leaned against the vending machine as I continued to drink my beverage. It was too hot today."
@@ -384,10 +384,10 @@ label BE004:
     "I wondered if there was anything nearby to drink. Fortunately, it looked like they provided a water cooler. Good, at this heat the students were likely to pass out if they didn't get any hydration."
     "Still, I couldn't just go over there and take some when I'd just been sitting on my butt for twenty minutes. Thankfully the coach called for a break after a while, and I walked over to get some water with the others."
     MC "Hey Honoka!"
-    show BE surprised at center with dissolve
+    show BE athletic-surprised at center with dissolve
     BE "Woo, hey, Kei-chan. Glad you came by!"
     MC "Well, you know I've always had a thing for soccer."
-    show BE neutral
+    show BE athletic-neutral
     BE "Sure. I'm surprised you didn't join the soccer club, actually. Were you just afraid I'd beat you whenever we were asked to go against each other? If I recall I won more of our games when we used to play."
     MC "What? No, that can't be right. I'm positive I won more."
     BE "You beat me a lot, but I remember two wins over you that gave me the edge."
@@ -401,7 +401,7 @@ label BE004:
     BE "I'm just glad you conceded the match right there. If you tried to do a fifth shot, you probably would have kicked the side of the goal again and then the ball would have gone through one of the windows in your house instead."
     BE "A sixth attempt would have knocked you out cold."
     MC "I can't believe you remember that."
-    show BE happy
+    show BE athletic-happy
     BE "Hey I remember a lot about when we were kids, those were fun years! Lotsa good memories."
     "Honoka smiled as she finally poured herself some of the water from the cooler and took a big drink. I helped myself to some as well, after double-checking that there would be plenty for the others who needed it more."
     MC "It's good to hear that, I have to say. Definitely had some fun times together, didn't we?"
@@ -409,13 +409,13 @@ label BE004:
     "Honoka sat down in the grass, probably to rest her legs for a bit, and I joined her. She started scratching at her calves where the grass tickled her legs, groaning as she did so."
     BE "Ah, that's so much better."
     MC "What, you forgot running would make your legs tired?"
-    show BE sad
+    show BE athletic-sad
     BE "No not that. Just, I dunno, soccer's still fun but there's something missing. Maybe it'll just take me a bit to get back into it, but, it's not quite got that 'umph' I was looking for."
     MC "Well, don't give up yet. Only the first day, right? Like you said, you probably just need a bit of time to get back into it."
-    show BE neutral
+    show BE athletic-neutral
     BE "Yeah that's probably it. Heh."
     "The coach blew his whistle again and called up the students to line up and run some more drills."
-    show BE happy
+    show BE athletic-happy
     BE "Whoops, better get going. You going to stick around?"
     MC "Yeah, probably. Good luck!"
     "Honoka gave a quick wave and trotted over to the lineup, while I went and sat back down outside of the actual field."
@@ -835,7 +835,7 @@ label BE008_c2:
     "That time her hand, which retracted after I poked it."
     show BE happy
     BE "Heh, Kei-chan what are you doing?"
-    MC "I have to be thorough now, I need to make sure there's not any robotic parts looking under there. Daichi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
+    MC "I have to be thorough now, I need to make sure there's not any robotic parts hiding under there. Daichi would be distraught as hell if he knew I brought a cyborg enemy into this place without his approval!"
     "Laughing like a mad scientist, I kept poking Honoka in whatever places I could reach. Eventually I managed to reach her waist, which made her squirm and giggle as she recoiled from the contact."
     MC "Aha, it appears I've found a weakness here. I must examine further!"
     "Spurred on by her reaction, I couldn't help but keep poking her belly wherever I could reach, though by this point it was essentially tickling rather than just poking. It didn't take long to get Honoka stuck in a cycle of laughter."
@@ -1284,7 +1284,7 @@ label BE011_c3:
     BE "Thanks! I hope so too. Any recommendations?"
     MC "Hm. I haven't really looked around all that much myself in terms of clubs. If there's any sort of video game club that would be fun."
     show BE neutral
-    BE "Yeah. it would. But, I think I really want to stick to something athletic. It's good for exercise, you know? Plus it's always nice to get outside."
+    BE "Yeah. It would. But, I think I really want to stick to something athletic. It's good for exercise, you know? Plus it's always nice to get outside."
     MC "That's a good point, but the weather seems like it's going to get cool soon. You may want to look at something that would keep you inside for the semester."
     BE "I guess that would cut out things like baseball, right?"
     MC "Yeah, baseball would definitely be a no-go. What about, um, basketball? I know we have one of those here."
@@ -1742,8 +1742,8 @@ label BE016:
     BE "Who, Sakie? Yeah she tends to be on the quiet side of things. You didn't say anything to upset her did you?"
     MC "I was pretty sure I didn't. I just asked about her wristband."
     show BE happy
-    BE "Oh. That was mine. She forgot hers today."
-    MC "Well, certainly was nice of you to lend you hers."
+    BE "Oh, that was mine. She forgot hers today."
+    MC "Well, certainly was nice of you to lend her yours."
     show BE neutral
     BE "Ah. yeah. That's what happened."
     MC "Are you saying she took it without asking?"
@@ -2632,7 +2632,7 @@ label BE020_c1_after:
     MC "That's nice. Thanks for sharing. Here, you want one of mine?"
     show BE happy at center, Transform(zoom=1.0)
     BE "Yes please!"
-    "I smiled and grabbed my shrimp roll, and put it towards her waiting mouth. Honoka closed my eyes, which seemed a bit weird. But she still accepted the sushi piece."
+    "I smiled and grabbed my shrimp roll, and put it towards her waiting mouth. Honoka closed her eyes, which seemed a bit weird. But she still accepted the sushi piece."
     "Along with the tip of my finger as her lips wrapped around it."
     show BE surprised
     BE "Omf. Hmm..."
@@ -3688,7 +3688,7 @@ label BE023_c1_3:
     show BE surprised
     BE "Oh!"
     show BE happy
-    BE "Hirohito actually said that's just a bunch of bull! There's no proof that it was ever a thing!"
+    BE "Haruhiro actually said that's just a bunch of bull! There's no proof that it was ever a thing!"
     MC "Really? Huh, wow, I thought that was true."
     BE "Nope. Ladies with luscious lumps can still draw a bow! It's pretty awesome."
     MC "Well, that's good. Though, speaking of, you better get back there, your break time is coming to a close."
@@ -5674,9 +5674,13 @@ label BE031_c1_after:
     show BE angry
     BE "It's not that I hate my boobs or anything. But, knowing that you love them so much, it really makes it easier to handle."
     MC "Hey."
-    "Honoka looked up, just in time for my lips to meet hers. She kissed me back for a few seconds before I broke it, and put my hands on her shoulders."
-    MC "Remember this, Honoka. I don't love your boobs. I love you."
+    "Honoka looked up, just in time for my lips to meet hers."
+    show cg BE031c with dissolve
+    pause 2
+    "She kissed me back for a few seconds before I broke it, and put my hands on her shoulders."
     show BE happy
+    hide cg with dissolve
+    MC "Remember this, Honoka. I don't love your boobs. I love you."
     BE "Oh, g-gee, Kei-chan... I love you too."
     jump daymenu
 
@@ -7178,7 +7182,8 @@ label BE039:
     MC "Eh?"
     play music Schoolday
     "I turned around to see who else had come in. It was only after looking at the young woman walking into the room that I remembered Honoka also had a roommate."
-    show BE happy with dissolve
+    show BE happy at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show Kokutan neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     BE "Yep. Well, I mean, what other guy would I bring in here?"
     MC "Ha. Yeah, um, I'm Keisuke Hotsure. Nice to meet you."
     "She was fairly short, nearly a foot smaller than Honoka. It felt embarrassing to look down so far in order to meet her gaze. It did make it more obvious to see that she wore colored contacts that made her eyes look bubblegum pink."
@@ -7303,7 +7308,7 @@ label BEGTS001:
 
     scene Roof with fade
     "I returned to the school building and walked up three flights of stairs to the school's roof. Since beginning our classes here, Inoue-san and I had made this our little hangout spot."
-    "It looked very different at sunset, however. Usually, the Sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
+    "It looked very different at sunset, however. Usually, the sun was almost directly above us in the afternoon. When I looked towards the horizon through the safety fence, however, the Sun wasn't even visible. It had disappeared behind the trees and buildings surrounding the campus."
     show BE happy with dissolve
     "Honoka was there to greet me when I arrived."
     BE "Hey, Kei-chan! Glad you could make it!"
@@ -7408,7 +7413,7 @@ label BEGTS001:
     show BE neutral
     BE "I guess I'll see ya around, then!"
     show GTS neutral-2
-    GTS "We certainly shall. I'll see you then, Inoue-san."
+    GTS "I certainly shall. I'll see you then, Inoue-san."
     MC "See you later, Yamazaki-san."
     "Naomi gave us both a respectful, graceful bow as she opened the door to the stairwell and returned to the school building."
     play music HigherEdu
@@ -8046,7 +8051,7 @@ label BEGTS003:
     MC "What do you mean?"
     BE "I just mean, everything that's happened, you know? I've gotten used to my schedule by now, but it still feels so surreal."
     show GTS surprised
-    GTS "You're referring to Seichou University, correct?"
+    GTS "You're referring to Seichou Academy, correct?"
     show BE neutral
     BE "Yeah. It's a school like any other, but getting to know all of the people I've met... it's been fun. Not many people can say they've met such a diverse set of people."
     show BE happy
@@ -8179,4 +8184,249 @@ label BEGTS003:
     "I didn't need to worry about my curiosities right this moment, however. I had a pleasant walk with Honoka and Naomi before I turned into my dorm for the night."
     if getFlag("BEGTS003_TomFix"):
         $setVar("BEMode", "Tomboy")
+    jump daymenu
+
+label BEGTS004:
+    scene Library with fade
+    play music HigherEdu
+    "I sat with my back leaned up against one of the chairs in the library. They weren't exactly comfortable, but with headphones on, I was able to space out for a while."
+    "I rose the front two legs of the chair slightly off the ground, keeping my hands on the sides of the seat. When I shifted my balance, the chair tilted back and forth."
+    "After I stretched and stared at the ceiling for a few moments, I set the legs of the chair back down. When the song I had been listening to ended, I took a brief glance at the clock."
+    stop music
+    "It was almost 3:00 PM, so I had been relaxing for just under an hour. I stood up, rolled my neck, and decided to pack up my things."
+    "Once my books, phone, and headphones were inside my bag, I stepped out into the hallway."
+
+    scene Hallway with fade
+    "Reflections in the sunlight gave off a small sparkle as I passed the windows. Each time one of the clouds blocked the sun's rays, the hallway darkened."
+    "I could hear the clacking and sliding of various footsteps in front of and behind me. It was passing time, so a lot of students were heading to their final class for the day."
+    "As I turned one of the corners, I saw a familiar face."
+    show PRG neutral with dissolve
+    play music PRG
+    "Aida had just exited one of the rooms on the left side of the hallway, and was walking towards the double doors at the end of the hall."
+    PRG "Oh! Hi, Hotsure-san."
+    MC "Hi, Kodama-san. Did you just get out of class?"
+    show PRG worried
+    PRG "I did. Why? Was there... something you needed me for?"
+    MC "No, nothing like that. I was just curious."
+    show PRG happy
+    PRG "Right... right! I actually don't have any classes after this. I'm looking forward to heading back to my dorm early."
+    "Aida and I began walking down the hallway together while we talked. Her pace was steady and deliberate, like she took caution with every stride."
+    MC "Heading home early sounds nice. What do you usually do?"
+    show PRG neutral
+    PRG "Well, ah... usually, I'll catch up on my sleep if I need to. Or, I'll do homework, or draw, or something..."
+    MC "Oh? You draw?"
+    PRG "N-Not very well, but yes. It's a good way to keep busy whenever I find some free time."
+    show PRG unique
+    PRG "What have... you been up to?"
+    "Aida fidgeted slightly as she spoke. Her voice didn't carry very much, so a lot of what she said had a breathy wisp to it."
+    MC "School work, mostly. More recently, though, I've been spending time with Inoue-chan and Yamazaki-san."
+    show PRG happy
+    "Aida's pupils dilated quickly when she heard me speak, her eyes widening for a split second. She returned to a relaxed, collected expression just as quickly."
+    show PRG neutral
+    PRG "O-oh! That's interesting. I haven't seen those two together very often."
+    "I nodded in response."
+    MC "It's actually pretty recent. Yamazaki-san noticed that Inoue-chan started dressing up more, and she... liked it. She saw a side of her that she hadn't before. After that, they completely hit it off."
+    "Aida inhaled slowly, then exhaled with a content huff."
+    show PRG happy
+    PRG "I know that feeling really well. Seeing someone in a new light can really change your perceptions. It's like... seeing someone do something you'd never think they'd do can completely change how you view them."
+    "I pushed open one of the doors leading out into the courtyard. Fresh air poured into the hallway as I held the door open. The howling sound of the wind took us by surprise as a gust deafened us for a few seconds."
+    "After the billowing sound of the wind died down, Aida looked at the open door with a smile."
+    PRG "Oh, ah.. thank you!"
+    "The two of us walked through the doors and headed outside to the courtyard."
+
+    scene Campus Center with fade
+    show PRG neutral with dissolve
+    "The wind made the courtyard a bit chillier than it usually was, but it wasn't uncomfortable. Aida rubbed her hands together, then returned them to her lap."
+    PRG "It's a little windy, but the weather is really nice. I hope it stays that way."
+    "Aida looked whimsically content as she looked across the courtyard. She locked her vision in place once she looked past the tree, however. A quiet, audible gasp escaped her mouth."
+    show PRG surprised
+    PRG "O-Oh..."
+    "It didn't take long to figure out what Aida was staring at."
+    play music GTS
+    show PRG surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS_S neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    "Naomi stood in the courtyard, her height rivaling the cherry tree in the center. As she idly swayed and coaxed her body, light vibrations could be felt in the air."
+    "Her movements disturbed the cherry blossoms upon the nearby branches, causing them to bounce and sway in response to the wind."
+    "While Naomi wouldn't be one to intentionally get too close to buildings, there was still enough room inside the courtyard for her to stand."
+    if getSize() >= 4:
+        "Naomi's head was nearly in line with the roof of the main building. Any further growth would cause her to exceed three stories tall."
+    show PRG worried
+    PRG "She's so tall..."
+    "Naomi's sheer size made her visible from all the way across the courtyard, but Kodama-san and I were still out of earshot."
+    MC "We all knew that our factors would change us, but... talking to Yamazaki-san is a completely different experience now."
+    show PRG neutral
+    PRG "I-I feel so sorry for her. Gigantism completely changes everything about your life... from how you walk, to where you can travel."
+    menu:
+        "Naomi feels sorry for you, too.":
+            jump BEGTS004_c1_1
+        "It's a difficult factor to handle, but she's made the best of it.":
+            jump BEGTS004_c1_2
+        "[Remain Silent]":
+            jump BEGTS004_c1_after
+
+label BEGTS004_c1_1:
+    $setFlag("BEGTS004_c1_1")
+    MC "Naomi feels sorry for you, too."
+    show PRG worried
+    PRG "I... really? In what way?"
+    MC "Back when you were working for Nikumaru-san, Yamazaki-san felt that she was taking advantage of you. She... really disliked that."
+    show PRG sad
+    PRG "She shouldn't feel that way. I liked working for Alice. Why would she-?"
+    jump BEGTS004_c1_after
+
+label BEGTS004_c1_2:
+    MC "It's a difficult factor to handle, but she's made the best of it."
+    show PRG happy
+    PRG "I'm glad that she's found ways to stay positive! It can't be easy coping with such extreme changes."
+    show PRG neutral
+    $setAffection("PRG", 2)
+    PRG "And, I'm sure that you and Inoue-san have been a big part of that."
+    jump BEGTS004_c1_after
+
+label BEGTS004_c1_after:
+    BE "Oh, hey! Kodama-san!"
+    "Honoka rose from her seat, turning around to greet the two of us."
+    "From where Aida and I were standing, the other students in the courtyard were completely blocked by Naomi's legs."
+    show BE happy with dissolve
+    "When she shifted her stance in response to Honoka shouting, the shadows that spread across the courtyard moved in response."
+    PRG "H-Hi, Inoue-san. It's been a while since we've hung out, hasn't it?"
+    BE "Sure has! C'mon, have a seat."
+    PRG "...Oh? You're certain? I wouldn't want to interrupt anything..."
+    extend " or anything..."
+    BE "Pff, you're not interrupting. Right, Yamazaki-chan?"
+    GTS_S "Not at all. I actually had something I'd like to discuss with you, Kodama-san."
+    PRG "With me? O-Okay..."
+    "I watched as Aida and Honoka shared a seat on one of the courtyard benches. Naomi stood beside them for a moment, before carefully lowering herself to a seated position next to them."
+    "Naomi might have been able to have a bench to herself. The sturdy construction of Seichou was built for students of her scale. She didn't strike me as someone that would risk the bench breaking, however."
+    "I took a seat on a second bench next to one that Aida and Honoka were using. With Naomi seated on the ground, the four of us could easily see each other."
+    GTS_S "Something came up earlier that could use your input."
+    "Naomi leaned slightly closer to Aida."
+    BE "This again? I didn't think it was that big of a deal."
+    GTS_S "It isn't healthy to delay something that needs to be said."
+
+    if getFlag("BEGTS004_c1_1"):
+        PRG "Is this about me working for Alice?"
+        "Naomi leaned backward slowly, her encompassing body becoming less overwhelming."
+        GTS_S "Ah. Did Hotsure-san tell you?"
+        MC "I did. We were talking about you, and it came up."
+        $setAffection("GTS", 2)
+        GTS_S "I see. I suppose that makes sense. I've been vocal about it recently."
+    else:
+        PRG "W-What is it?"
+        "Aida tilted her head slightly in curiosity."
+    GTS_S "Inoue-chan wanted me to explain why I felt the way I do about Nikumaru-san."
+    BE "I never said that."
+    GTS_S "You didn't respond well when I made snide comments about her."
+    BE "Because I thought you were being unfair. We're all friends here."
+    "Honoka's usual bubbly expression was replaced with a foggy look of disapproval. Naomi exhaled deeply in response, causing a small gust of wind."
+    PRG "Is... that why you brought me here? To give my opinion?"
+    GTS_S "That wasn't the initial intention, but I thought this was as good a time as any."
+    play music PRGChallenge
+    BE "I wanted to have a good time, Yamazaki-chan. You didn't have to bring it up."
+    GTS_S "We are having a good time. I just wanted to make sure that we're all being treated fairly."
+    PRG "If this is about me and Alice, you don't have to worry. She always treated me right."
+    "Naomi leaned closer to Aida again with her hands in her lap, as if trying to assert herself in the conversation."
+    GTS_S "Is she a completely different person behind closed doors, then? I've never once seen her kindness outweigh her ego."
+    PRG "She... she's my friend. I did some work for her on the side, and I got paid. T-That's all...."
+    BE "Back off, Yamazaki-chan. You're doing that thing where you lean forward to look bigger again."
+    "In response, Naomi returned to sitting upright."
+    GTS_S "I apologize."
+    PRG "I-It's okay.."
+    MC "Is that all you wanted to know, Yamazaki-san?"
+    GTS_S "I wanted to make it clear that Nikumaru-san has been treating us poorly. That's all. Since Kodama-san has spoken to her the most, I wanted to know what she thought."
+    "Aida shifted her position several times, grasping the side of the bench for support. She twitched in place as she spoke, in a clear look of discomfort."
+    PRG "I-I... didn't... really see it as a problem, I guess. She's really been treating you poorly?"
+    "Naomi returned a blunt, objective stare."
+    GTS_S "I can't stand her."
+    PRG "I'm... sorry that you feel that way."
+    "Naomi's expression softened up when Aida spoke."
+    GTS_S "Why are you apologizing? Alice is the one that needs an attitude adjustment, not you."
+    PRG "I-I just don't want you to think I'm an enabler, or anything..."
+    "Honoka exhaled deeply, crossing her arms with a faded, low-energy sigh."
+    BE "Well, Yamazaki-chan. There's your answer. Are you satisfied?"
+    hide GTS_S
+    show GTS sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    "Naomi paused for a few seconds, slouching slightly while she collected her thoughts."
+    GTS "I suppose I was looking for confirmation. I wanted to know that others saw the same thing I was seeing."
+    BE "I don't like her attitude either, but that's no reason to put Kodama-san on the spot like that!"
+    GTS "What's the alternative? To pretend that nothing is wrong and keep our emotions bottled up?"
+    BE "You should see the positive in the situation! No one's hurt, and we're all still here. We'll handle problems as they come, just like we always do."
+    GTS "We don't need to be bound by ideals. We can just... avoid confrontation. Let Nikumaru-san and Kodama-san support each other, and leave it at that."
+    GTS "I appreciate that you're trying to be a mediator, Inoue-chan, but you don't have to be."
+    BE "Well, excuse me for always trying to see the good in people."
+    GTS "You'd need to look extremely thoroughly to find any good in Alice."
+    BE "Why are you being so negative?"
+    GTS "I'm not being negative. I'm doing the best I can to suppress my irritation."
+    BE "People can improve. You shouldn't talk behind people's backs like that."
+    GTS "Alice hasn't improved. There are certain pieces of one's personality that you just... can't remove completely. I fear that her ego is a lost cause."
+    BE "You didn't give up on me."
+    GTS "I've always liked you, Inoue-chan."
+    "Honoka gripped her hands upon her forehead and ran her fingers through her bangs, breathing heavily in frustration."
+    BE "If that's true, then why the fuck are we fighting?!"
+    stop music
+    "The courtyard went silent for a few seconds. With the exception of Naomi's breathing, nothing else could be heard. The conversations around us ceased, and a few of the other students began to stare."
+    MC "Are you all right, Honoka?"
+    "Honoka's breathing was heavy and forced, but she progressively began to calm herself. Her expression was still extremely tense, however."
+    BE "Maybe... maybe we just need some space."
+    "Naomi slowly frowned in response, blinking once. She kept her view firmly focused on Honoka."
+    GTS "I feel that would be best."
+    BE "Fine."
+    GTS "Fine."
+    "Honoka was the first to stand up. She turned around and quietly walked away. The sound of her shoes tapping against the sidewalk accompanied the cherry tree rustling in the afternoon breeze."
+    "I didn't clearly see Honoka's face. With the way she was hunched over, though, I presumed that she was crying."
+    hide BE with dissolve
+    GTS "...."
+    show GTS despaired-thought
+    "Naomi slowly closed her eyes and placed her hand upon her neck, inhaling firmly. Her free hand twitched at her side while she made a gentle fist."
+    "I didn't know what she was thinking about. She had a deep look of regret upon her face. A suppressed anger that she continued to contain."
+    "Without another word, she slowly rose from her seated position, bit by bit, until reaching her full height. With heavy footsteps, the giantess began to walk back to her hangar."
+    hide GTS with dissolve
+    show PRG nervous at Position(xalign=0.5, yalign=1.0) with dissolve
+    MC "Well... that could have gone better."
+    PRG "I-I had no idea..."
+    "I stood up from my seat and slowly walked towards Aida."
+    MC "Kodama-san. Listen to me. You're not at fault. No one could have prepared for this. You did everything you could."
+    show PRG sad
+    "Aida sniffled while she sat upon the bench."
+    PRG "I-I know. Still... I hate that this had to happen. I should have seen the early signs..."
+    MC "You couldn't have known."
+    "I held out my hand, offering it to Aida. She took my hand and stood up in front of me, the sadness slightly fading from her face."
+    PRG "Thank you, Hotsure-san."
+    MC "You're welcome."
+    "Aida swayed a little bit, twisting her neck as she scanned around the courtyard. She looked like she really wanted to say something."
+    show PRG neutral
+    PRG "Do you ever wish you could... go back in time? Do things differently, hoping that things will go better?"
+    menu:
+        "Sometimes, yeah, I do.":
+            MC "Sometimes, yeah, I do."
+            PRG "That's... how I'm feeling right now."
+            MC "It's natural to feel that way sometimes. I'm just... hoping that we'll all be happy where we are right now."
+            show PRG sad
+            PRG "Y-yeah, one can hope..."
+        "It's more important to look forward, rather than back.":
+            MC "It's more important to look forward, rather than back."
+            MC "Stressing out over the what-ifs and hypotheticals will only cause you pain. I think it's more important to look towards the future, rather than worry about the past."
+            $setAffection("PRG", 2)
+            PRG "I... suppose I hadn't thought of it that way. That's... nicely put, Hotsure-san. Thank you. Things seem... clearer."
+    MC "What would you do, though, if you were in my position?"
+    show PRG neutral
+    PRG "W-what exactly do you mean?"
+    MC "Well, do you think I should say something? Try to calm things down? They both looked pretty upset..."
+    "Aida pondered for a few moments, darting her head left and right while steadying her breath. After a few seconds, she returned a confident exhale."
+    PRG "If... I were you, Hotsure-san, I'd just leave the situation alone for now. I think they both need some time to cool off. Neither of them are thinking clearly right now..."
+    PRG "I-if you were to try to calm them down right away, it'd probably just make them angrier. I-I think you should wait a while."
+    MC "You raise a good point, Kodama-san. I shouldn't say anything right away. Then again, I'm going to see them both sooner or later..."
+    show PRG nervous
+    PRG "A-and I suppose you'll need to speak to one of them first... which might lead to misunderstandings."
+    MC "For now, Kodama-san, I think we all need some rest. I'll sleep on it, give it some thought, then... we can go from there, okay?"
+    show PRG happy
+    PRG "O-okay. Sounds good."
+    MC "Thank you for your help, today. I know it was unexpected, but you did well."
+    show PRG neutral
+    PRG "You're welcome, Hotsure-san. That means a lot to me."
+    MC "I'll talk to you soon."
+    PRG "Bye, Hotsure-san."
+    hide PRG with dissolve
+    "Aida slowly departed from the courtyard, using the opposite set of double doors that Honoka had used. The wind rolling against the trees and windows soon overtook the sounds of the other students once more."
+    "I made my way out of the courtyard, and returned to my dorm."
     jump daymenu

@@ -26,6 +26,7 @@ init python:
         'dormBBW': ("school", (870,280)),
         'dormBE': ("school", (870,260)),
         'dormPRG': ("school", (870,280)),
+        'dormFMG': ("school", (870,300)),
         'dormexterior': ("school", (860,375)),
         'dorminterior': ("school", (880,380)),
         'festival': ("town", (1100,650)),
@@ -566,8 +567,9 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuko": [1, 2, 3],
-            "Sakura": [1, 3]
+            "Natsuko": [1, 2, 3, 4, 5, 6],
+            "Sakura": [2, 3, 4, 5, 6],
+            "Tomoko": [1, 2, 3, 4, 5, 6]
         }
 
         try: #backwards compatibility, remove later

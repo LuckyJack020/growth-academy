@@ -494,12 +494,13 @@ label global000_RM:
     BE "Oh, Kei-chan! You're such a kidder!{w} Of course not!"
     "Honoka's laugh caused her impressive bust to shake violently, which was a small consolation prize as we parted ways."
     hide BE with dissolve
-    scene School Inner with fade
+    scene Dorm Hallway with fade
 
     "I headed over to the boy's dormitories, seeing they were just as enlarged as the rest of the school.{w} I felt like a child, trying the doorknob that I couldn't even get my entire hand around."
     "*Kunk-Kunk*"
     MC "Locked? I'm sure I had the right-"
     play music RM
+    show cg RM000 with dissolve
     UNKNOWN "Who is it?!"
     MC "Aaah!"
     UNKNOWN "Who is it? Who are you with? Identify yourself!"
@@ -892,7 +893,7 @@ label global000_homeroom:
     play music Schoolday
     "With the principal's strange welcome still echoing in my ears, I headed for the class building, ready to start my academic career at Seichou Academy..."
 
-    scene F1 Hallway with fade
+    scene Hallway with fade
     "It was very strange to be in the hallways with so few people. Well, there were a normal amount of students, but in Seichou's oversized architecture we all felt miniscule."
     "I spied Honoka and some of my other classmates as we walked along, feeling like ants in a dog carrier."
     show BE surprised
