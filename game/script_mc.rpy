@@ -351,7 +351,7 @@ label global000_AE_c1:
     show BE surprised
     "Turning around once more, she continued to go about her business, and we made sure to get out of there as soon as possible."
     "Honoka and I looked at each other and headed for class 3-B."
-    jump global000_BBW
+    jump global000_WG
 
 label global000_AE_c2:
     MC "You should listen to your boss, you know."
@@ -373,7 +373,7 @@ label global000_AE_c2:
     AE "...My apologies, but I can handle things on my own."
     AE "Now, if you will, please get up to 3-B and help with the decorations and cleaning."
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
-    jump global000_BBW
+    jump global000_WG
 
 label global000_AE_c3:
     "I didn't want to get involved in the fight. {w}Especially after seeing Mizutani lift one of those big wooden benches under each arm."
@@ -403,33 +403,34 @@ label global000_AE_c3:
     hide AE with dissolve
     show BE neutral at center with dissolve
     BE "You think she's ever happy with anyone? Doesn't seem the type..."
-    jump global000_BBW
+    jump global000_WG
 
-label global000_BBW:
+label global000_WG:
     scene black with dissolve
     "We left the arguing pair behind and entered the school proper.{w} Honoka led me through the hallways with ease, until we came to one classroom in particular..."
 
     scene Classroom with dissolve
-    play music BBW
+    play music WG
     "So this was Classroom 3-B. I would be spending a lot of time here for the next year."
     "The first thing I noticed was that, much like the rest of the school, the classroom seemed very big. It was much larger than any that I had been in before."
     "Whether or not this meant that there would be more students, or if this was just something that made this school different, I had no idea."
     "The next thing I noticed was that Honoka and I weren't alone in the room. Sitting across from us, at the head of the classroom, was another girl."
-    show cg BBW000 with dissolve
+    show cg WG000 with dissolve
     "She had a round face, and bright blue eyes framed by gold colored hair.{w} It seemed as though we had a foreigner in our midst."
-    "She was sitting with her feet on one of the desks, but stood up and grinned when she saw us enter."
+    "She was leaning back against one of the desks, looking pretty satisfied with herself, for whatever reason."
+    "She casually turned her gaze, perking her eyebrows up in interest as she saw us enter, but not so interested as to move from her comfortable position."
     UNKNOWN "Oh? What have we here? I guess that Shiori told you to come up here too?"
     UNKNOWN "Not to worry, I have everything under control here."
     BE "Who are you?"
     hide cg with dissolve
-    show BBW neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
-    BBW "I'm Alice Nikumaru.{w} Charmed, I'm sure."
-    "After introducing herself, Alice sat back down in her makeshift throne. Before I could open my mouth to speak, she looked past us."
-    show BBW angry
-    BBW "Will you hurry up already?!"
-    BBW "I want to go get something to eat and I can't do that if you're slacking off!"
+    show WG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    WG "I'm Alice Nikumaru.{w} Charmed, I'm sure."
+    "After introducing herself, Alice sat back down on her makeshift throne. Before I could open my mouth to speak, she looked past us."
+    show WG angry
+    WG "Do try to hurry now, if you'd please."
+    WG "I would like to go get something to eat, but I'll miss the opportunity if we tary any further."
     "I followed Alice's gaze. I hadn't noticed at all but there was a mousy girl in the room as well."
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
     "Her hair was tied up in a pair of tails, and she was carrying a globe."
     show PRG sad
@@ -440,22 +441,22 @@ label global000_BBW:
     BE "I'm Inoue Honoka! Pleased to meet ya!"
     MC "Hotsure Keisuke."
     show PRG neutral
-    PRG "Aida... Kodama Aida."
+    PRG "...M-My name is K-Kodama Aida."
     hide BE
-    show BBW neutral at Position (xpos=0.25, xanchor=0.5)
-    BBW "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
+    show WG neutral at Position (xpos=0.25, xanchor=0.5)
+    WG "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
     menu:
         "Well, if you've got this under control...":
-            jump global000_BBW_c1
+            jump global000_WG_c1
         "Shouldn't you be doing something too?":
-            jump global000_BBW_c2
+            jump global000_WG_c2
 
-label global000_BBW_c1:
+label global000_WG_c1:
     MC "Well, if you've got this under control, I guess I'll be going then."
-    $ setAffection("BBW", 1)
+    $ setAffection("WG", 1)
     $ setAffection("PRG", -1)
     $ setAffection("BE", -1)
-    BBW "Glad to see at least someone can follow orders."
+    WG "Glad to see at least someone can follow orders."
     show BE surprised at center with dissolve
     BE "{i}Kei-chan{/i}!"
     "I winced. I might not have seen Honoka for years, but I remembered that tone well enough."
@@ -463,21 +464,21 @@ label global000_BBW_c1:
     MC "Okay, okay. We'll help too."
     show PRG sad
     PRG "...I don't want to be a bother."
-    BBW "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
+    WG "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
     jump global000_RM
 
-label global000_BBW_c2:
+label global000_WG_c2:
     MC "Shouldn't you be doing something too?"
-    $ setAffection("BBW", -1)
+    $ setAffection("WG", -1)
     $ setAffection("PRG", 1)
-    show BBW neutral at Position (xpos=0.25, xanchor=0.5)
-    BBW "I'm doing something!"
-    show BBW happy
-    BBW "I'm su{w}per{w}vi{w}sing!"
+    show WG neutral at Position (xpos=0.25, xanchor=0.5)
+    WG "I'm doing something!"
+    show WG happy
+    WG "I'm su{w}per{w}vi{w}sing!"
     show BE neutral at center with dissolve
     BE "Supervising? There's only two of you..."
-    show BBW haughty
-    BBW "I did the work of figuring out an optimal floor plan for furniture and composition of decorations. That was my half I did earlier. Now Kodama-san is doing her half."
+    show WG haughty
+    WG "I did the work of figuring out an optimal floor plan for furniture and composition of decorations. That was my half I did earlier. Now Kodama-san is doing her half."
     PRG "It's okay...{w} I don't need any help."
     MC "It's fine. We're all supposed to be working together, right?"
     show PRG happy
@@ -655,7 +656,7 @@ label global000_sit_c1:
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show WG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
     MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" #with Shake((0, 0, 0, 0), 0.75, dist=20)
     menu:
@@ -702,7 +703,7 @@ label global000_sit_c3:
 
 label global000_sit_c1_1:
     hide AE
-    hide BBW
+    hide WG
     MC "So, Matsumoto-san..."
     show AE neutral
     "Wordlessly, she glared at me through the side of her eye before looking back to the stage and nodding."
@@ -721,19 +722,20 @@ label global000_sit_c1_1:
 
 label global000_sit_c1_2:
     hide AE
-    hide BBW
+    hide WG
     MC "Hi there, Nikumaru-san..."
-    show BBW neutral
-    BBW "Alice, please, no need to be so formal. In the west, it is unheard of for students to refer to classmates by their surnames."
+    show WG neutral
+    WG "Just call me Alice, please, no need to be so formal. In the west, it is unheard of for students to refer to classmates by their surnames."
     MC "Ah, so, uh, Alice..."
-    BBW "Hm?"
+    WG "Hm?"
     MC "Well, your seat- ah, I mean, the seat, it's a little..."
-    show BBW happy
-    BBW "Ahahaha~! Yes, the seats are a little small...{w} but you don't mind, I'm sure?"
-    "The wink she gave me made me wonder how much of her pressing into me was accidental and how much was intentional."
-    show BBW neutral
-    BBW  "Oop, they're starting. Eyes forward."
-    $ setAffection("BBW", 1)
+    show WG happy
+    WG "Hm? Yes, I do suppose they are quite tacky. It’s hard to imagine that they could have picked something that could clash with the present setting more than this. I take it you have a flair for design yourself?"
+    MCT "Uh, that’s not what I was getting at, but on second thought, this is much less awkward to explain than calling attention to the fact she’s taking up more than her fair share of the space as I squeezed in next to her."
+    MC "I guess you could say so."
+    show WG neutral
+    WG  "Oh? Quite interesting. Hmm, it appears they are starting. Very well, let's get this over with."
+    $ setAffection("WG", 1)
     jump global000_sit_after
 
 label global000_sit_c2_1:
@@ -828,7 +830,7 @@ label global000_sit_c3_2:
 
 label global000_sit_after:
     hide PRG
-    hide BBW
+    hide WG
     hide GTS
     hide FMG
     hide AE
@@ -904,9 +906,9 @@ label global000_homeroom:
 
     scene Classroom with fade
     MC "Whoa!"
-    show BBW neutral with dissolve
-    BBW "...Is this for real?{w} How come there are so few seats?"
-    hide BBW with dissolve
+    show WG neutral with dissolve
+    WG "...Is this for real?{w} How come there are so few seats?"
+    hide WG with dissolve
     show PRG neutral with dissolve
     PRG "And so far away?"
     hide PRG with dissolve
@@ -940,9 +942,9 @@ label global000_homeroom:
     show BE surprised with vpunch
     BE "Oh, ick!"
     hide BE
-    show BBW angry with vpunch
-    BBW "Keep that thing away from me!"
-    hide BBW with dissolve
+    show WG angry with vpunch
+    WG "Keep that thing away from me!"
+    hide WG with dissolve
     show HR neutral with dissolve
     "..."
     "..."
@@ -991,12 +993,12 @@ label global005:
         BE "Maybe we can go exploring together sometime!"
 
     if prefgirl == "WG":
-        show BBW neutral with dissolve
-        BBW "Hotsure-san."
+        show WG neutral with dissolve
+        WG "Hotsure-san."
         MC "Oh, hello Nikumaru-san."
-        BBW "Please, I've told you before, call me Alice. Formalities are for business, I find them so tiresome in normal conversation."
+        WG "Please, I've told you before, call me Alice. Formalities are for business, I find them so tiresome in normal conversation."
         MC "Er, okay, Alice... but you called me Hotsure-san."
-        BBW "Because you were expecting it, of course. In any case, I'm looking forward to today's lessons. You?"
+        WG "Because you were expecting it, of course. In any case, I'm looking forward to today's lessons. You?"
         MC "I suppose..."
 
     if prefgirl == "GTS":
@@ -1049,27 +1051,27 @@ label global005:
     AE "All right, everyone, it's measuring day for our class, so let's get an orderly line going."
     show FMG happy at Position (xpos=0.25, xanchor=0.5) with dissolve
     FMG "Oooh, neat! I've been wanting to get my guns professionally measured for a while!"
-    BBW "..."
+    WG "..."
     hide FMG with dissolve
     AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
     show PRG neutral at Position (xpos=0.5, xanchor=0.5) with dissolve
-    show BBW neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
-    BBW "Excuse me, but Aida is otherwise engaged."
+    show WG neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
+    WG "Excuse me, but Aida is otherwise engaged."
     show PRG neutral at Transform(xzoom=-1)
     AE "Not now she isn't, unless there's some other class president I'm unaware of."
     show PRG neutral at Transform(xzoom=1)
-    BBW "I'm sure you can find someone else. Aida is developing a set of very specialized skills."
+    WG "I'm sure you can find someone else. Aida is developing a set of very specialized skills."
     show PRG neutral at Transform(xzoom=-1)
     AE "I'm sure she is. AFTER classes. During school hours she'll submit to school authority."
     show PRG neutral at Transform(xzoom=1)
-    show BBW angry
+    show WG angry
     show AE angry
-    BBW "..."
+    WG "..."
     AE "..."
     show PRG neutral at Transform(xzoom=-1)
     pause 1
     show PRG neutral at Transform(xzoom=1)
-    BBW "..."
+    WG "..."
     AE "..."
     show PRG sad at Transform(xzoom=-1)
     pause .5
@@ -1083,8 +1085,8 @@ label global005:
     pause .5
     show PRG sad at Transform(xzoom=1)
     pause 1
-    show BBW neutral
-    BBW "...Hmph!"
+    show WG neutral
+    WG "...Hmph!"
     MCT "...Those two aren't used to accepting 'no' for an answer, that's for sure..."
 
     scene Auditorium with fade

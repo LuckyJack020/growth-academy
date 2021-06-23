@@ -5076,7 +5076,7 @@ label GTS032:
     "Tashi-sensei stood up from his desk at the corner of the room with a firm, confident look in his eyes, as if about to say something. I decided to address the lingering question before he began the lesson."
     MC "I... helped Yamazaki-san move out over the weekend. She's been transferred to the giant dorm."
     show FMG surprised at Position(xpos=0.30) with dissolve
-    show BBW surprised at Position(xpos=0.45) with dissolve
+    show WG surprised at Position(xpos=0.45) with dissolve
     show PRG surprised at Position(xpos=0.60) with dissolve
     show BE surprised at Position(xpos=0.70) with dissolve
     show AE neutral at Position(xpos=0.85) with dissolve
@@ -5085,7 +5085,7 @@ label GTS032:
     MC "You don't exactly sound surprised, Tashi-sensei."
     HR "I was informed ahead of time that Yamazaki-san's condition would mean that she wouldn't be staying with us. Since it all depended on her growth rate, no exact date was given."
     hide FMG with dissolve
-    hide BBW with dissolve
+    hide WG with dissolve
     hide PRG with dissolve
     hide BE with dissolve
 
@@ -5382,10 +5382,10 @@ label GTS034_c1_3:
     scene Dorm Exterior with fade
     "As I approached the dorm, I spotted Alice stepping out the door."
     MC "Nikumaru-san, do you have a moment?"
-    show BBW neutral with dissolve
-    BBW "Hello Hotsure-san. What do you need?"
+    show WG neutral with dissolve
+    WG "Hello Hotsure-san. What do you need?"
     "I passed her the letter, which she plucked from my hands and began to read."
-    BBW "Hmph. Well, you can tell her that I can fulfill her request, though if she wants to discuss payment she'll need to talk to me in person."
+    WG "Hmph. Well, you can tell her that I can fulfill her request, though if she wants to discuss payment she'll need to talk to me in person."
     MC "I will tell her, thank you Nikumaru-san."
     "She nodded and headed off to wherever she was heading. I made my way back to Naomi's dorm."
 
@@ -5926,9 +5926,9 @@ label GTS037:
     show HR neutral with dissolve
     HR "I imagine it's because at least one person has tried it before. It's the same reason we needed to amend the code of conduct to include a rule against asking giant students to step on you."
     hide HR with dissolve
-    show BBW stern with dissolve
-    BBW "Students have... actually agreed to that willingly?"
-    hide BBW with dissolve
+    show WG stern with dissolve
+    WG "Students have... actually agreed to that willingly?"
+    hide WG with dissolve
     show HR neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     HR "I've seen the results of it several times, as a matter of fact."
     show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
