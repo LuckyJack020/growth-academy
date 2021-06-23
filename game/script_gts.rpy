@@ -1497,7 +1497,7 @@ label GTS013_c4:
     show GTS neutral
     "She paused and gave a glance over at the oven."
     GTS "Now I suppose there's no better time to think of what to do for Kodama-san as thanks."
-    if isEventCleared("PRG011"):
+    if isEventCleared("PRG007"):
         MC "You know... I saw her reading a book about the Kanagawa Koi the other day. Apparently she's a big fan."
         show GTS neutral
         $setAffection("GTS", 1)
