@@ -232,6 +232,7 @@ label WG003:
     MC "Ah! I was supposed to turn left back there."
     UNKNOWN "Amazing!"
     MC "Oh? I think I know that voice."
+
     scene Cooking Classroom with fade
     play music Busy
     show WG happy at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
@@ -362,482 +363,510 @@ label WG003_c1_3:
     "As I left I heard Alice giving Aida notes about the texture of the soufflé."
     jump daymenu
 
-label BBW004:
-    scene Classroom with fade
-    play music Schoolday
-    show BBW neutral at center with dissolve
-    MCT "After class clean-up. That's normal. Mind-numbingly boring, but right now I'll take dull over surprising."
-    MCT "..."
-    MCT "?"
-    MC "Um, are you planning to help out?"
-    BBW "I have Aida taking care of my share of the work."
-    MC "Aida? Where is she- Why are you down there?"
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, ypos=1.0, yanchor=0.3) behind BBW with dissolve
-    PRG "Oh! H-hello Hotsure-san. I'm just doing what Nikumaru-san said."
-    MC "Did she say to scrub the floor? I'm pretty sure we just need to sweep it."
-    show PRG neutral:
-        linear 0.75 yalign 1.0
-    PRG "I- I know. I just wanted to do a good job."
-    MC "But it's not your job. Alice's name was on the roster."
-    show BBW haughty
-    BBW "And I got Aida to do it for me. It's called delegating. As long as the work gets done, nothing else matters."
+label WG004:
+    $setTimeFlag("testday")
+    $setProgress("WG", "WG005")
+    scene Dorm Interior with fade
+    play music schoolday
+    "I tried to study for today's quiz the night before, but boredom and sleepiness got the better of me. I decided to get up early instead and squeeze in a cram session before class."
+    "Boy was that ever a stupid idea. I can barely drag my ass out of bed to get to class on time on the best of days, but I somehow managed to convince myself last night I was going to study for hours on end before it even started."
+    "I couldn’t even focus with my bed being in the same room, so I decided the library might be a more productive setting."
+
+    scene Library with fade
+    "It was still fairly early, not that many people around. Admittedly, I can’t imagine too many times when the library would be a student’s first destination of the day."
+    "It felt pretty empty, but I did manage to notice someone I recognized."
+    show WG neutral
+    "I didn’t expect to see her here of all places. I figured she’d be having tea and croissants for breakfast while Aida gave her a manicure, or something like that, instead of seeing her this early in the library."
+    "She looked pretty busy too. She had a laptop in front of her with what looked like multiple spreadsheets pulled up and a bunch of files with documents near her workspace."
+    "Part of me didn’t want to bug her, but a familiar face felt more inviting than the rest of the empty study area."
+    MC "Hey, Nikumaru-san. Mind if I sit here?"
+    "Alice briefly glanced up from the work she was doing on her laptop to acknowledge my presence, before redirecting her attention back to her screen."
+    WG "You’re certainly free to. Please though, just call me Alice, especially since we’re outside of class."
+    WG "I would prefer to speak more directly, rather than endlessly fussing over proper naming conventions, as so many others here seem to enjoy occupying themselves with."
+    MC "Well that works for me, can’t say I care too much for that stuff myself."
+    "I proceeded to sit down across the table from her and take out my notes."
+    WG "Your first name was Keisuke, right?"
+    MCT "Color me surprised she actually remembered it."
+    MC "Yup, you got it. So, um... Alice, what brings you into the library so early today?"
+    WG "Hm?"
+    "Alice looked up again from her work to look at me, clearly not expecting I would continue to try to engage her in conversation after the initial pleasantries."
+    WG "Oh, well normally I would be working on my finances in my room, but I requested Aida to make a particular dish and it proved to be too distracting with the clanging of the pots and pans"
+    WG "So, I decided this would be a less distracting atmosphere."
+    MC "Oh, sorry about that, didn’t mean to distract you if you needed the peace and quiet."
+    WG "You needn’t worry. I would have expressed my wishes for you to sit elsewhere if that were the case."
+    WG "It was the particular cacophony of the kitchen that I found distracting more so than anything. Besides, I’m almost finished here anyway."
+    MC "Well, that’s good then. What are you working on? You said something about finances? Is that for a class?"
+    WG "Class? No, no, this is just part of my regular management of my financial investments. You know, stocks, bonds, market accounts, private equity, any sort of appreciable assets."
+    WG "Very standard stuff. I’m sure you have your own portfolio that you manage as well, no need to get into the details."
+    MC "Uh, can’t say that I do to be honest. I haven’t really thought about that kind of stuff much."
+    show WG surprised-2
+    WG "Seriously? Well that won’t do. How do you expect to save for the future and build your wealth if you aren’t putting your money to work?"
+    MCT "Putting my money to work? I don’t think zero yen is going to get much work done."
+    MC "Well... ahem, I guess I haven’t really considered I had enough savings to put towards investing."
+    show WG haughty
+    WG "But that’s precisely the problem, don’t you see? Even a small investment grows overtime. Especially if you start early. You’re never going to earn anything with a ‘wait and see’ attitude."
+    WG "Just look at me. I’m always on the lookout for a new investment opportunity, or a promising new business venture. A little time and due diligence pays dividends."
+    WG "Surely you can understand that?"
     menu:
-        "I... guess I can't argue with that.":
-            jump BBW004_c1
-        "It's not just about getting the work done.":
-            jump BBW004_c2
-        "Do I have to tell on you? Because that seems like a really childish thing for all of us.":
-            jump BBW004_c3
+        "Yeah I guess. I just didn’t peg you for the entrepreneurial type.":
+            jump WG004_C1_1
+        "You sound like you know a lot about this kind of stuff.":
+            jump WG004_C2_1
+        "But why all this? Sounds like you’ve got plenty of money already.":
+            jump WG004_C3_1
 
-label BBW004_c1:
-    MC "I... guess I can't argue with that."
-    show BBW neutral
-    BBW "Of course not. Aida isn't complaining, so there should be no issue here."
-    MC "I'm not saying I agree. I just can't think of a counterargument."
+label WG004_C1_1:
+    MC "Yeah I guess. I just didn’t peg you for the entrepreneurial type."
+    WG "Is that so? Did you assume that just because my father is wealthy that I just rely on him for everything?"
+    WG "I’ll have you know that he instilled in me the same work ethic and business acumen that made him the greatest modern entrepreneur in this entire country."
+    MC "Well, admittedly it seems that was a mistaken assumption on my part."
+    show WG neutral
+    WG "It appears you catch on pretty quick then. I can’t entirely blame you for your initial assumption. I’ve grown up around many people from wealthy families in my time attending private academies."
+    show WG stern
+    WG "Most all of them were utterly useless fops and bimbos that aspired to be nothing other than socialites, constantly frittering away their unearned allowances on nonsense."
+    show WG haughty
+    WG "An understandable mistake, but you’d be wise to not make it a habit of underestimating me."
+    MCT "That seems pretty apparent."
+    jump WG004_afterchoice1
+
+label WG004_C2_1:
+    MC "You sound like you know a lot about this kind of stuff."
+    $setAffection("WG", 1)
+    show WG happy
+    WG "Hmph, well maybe a little."
+    show WG neutral-2
+    WG "Admittedly, I’m still learning, but I’m determined to carve my own path in the business world. I can’t just rely on my father’s name to accomplish that."
+    show WG neutral
+    WG "Besides, I simply wouldn’t be satisfied with a life of idle luxury, knowing that my talents were being wasted."
+    show WG haughty
+    WG "Afterall, it takes hard work and initiative to succeed in business, life, and love."
+    MCT "Hmmm, I wonder what she’s getting at with that last part."
+    MC "This is true. I’m trying to do better with how I invest my time by coming here to study this morning."
+    WG "I see. It appears you’re already catching on then."
+    jump WG004_afterchoice1
+
+label WG004_C3_1:
+    MC "But why all this? Sounds like you’ve got plenty of money already. Why not just kick back and take it easy?"
+    show WG stern
+    $setAffection("WG", -1)
+    WG "Tsk. Such is the attitude of those that envy wealth, but will never possess it."
+    show WG haughty
+    WG "Everyone thinks being wealthy is some kind of life-long vacation, but it is that exact attitude of idleness that keeps them from obtaining wealth themselves."
+    WG "Constantly throwing money towards frivolous whims is why generational wealth evaporates so quickly."
+    show WG angry
+    WG "My father didn’t raise me to be a mere heiress. I will carve my own path in the business world. I hope for your sake you have more ambition than just to live in idle luxury yourself."
+    MCT "Man, this almost makes me feel guilty for wanting to sleep in... almost."
+    MC "Well, yeah, although I don’t think it’s in the cards for me anyway even if I wanted to."
+    jump WG004_afterchoice1
+
+label WG004_afterchoice1:
+    show WG neutral
+    MC "It sounds like this stuff keeps you pretty busy then."
+    WG "Yes, this is true. You have to keep on top of investments if you want them to work for you. Short term assets in particular require a lot of monitoring."
+    WG "I’ve been reviewing my portfolio’s performance in order to trim the fat. Upon review it’s apparent that some of these assets were not pulling their weight as initially speculated."
+    show WG worried
+    WG "These energy sector investments in particular were a bust."
+    show WG neutral-2
+    WG "But to answer your question from earlier, the reason why I’m working on this now is because the markets are open and I want my purchase orders to go through immediately."
+    WG "I don’t want to place them at the end of the school day after hours once the market closes."
+    MC "You seem pretty involved in this. I thought wealthy people had others manage their money for them."
+    show WG haughty
+    WG "Being ignorant of your own finances is a sure-fire way of becoming a victim of embezzlement."
+    show WG neutral
+    WG "It is true that my family employs a staff of professionals to manage our finances, but that doesn’t mean my parents are not actively managing their own money."
+    show WG happy
+    WG "My father gave me some seed money to create an investment portfolio that I would manage. He wanted me to learn from experience what it means to earn and manage your own money."
+    WG "I’ll have you know I’ve managed to earn on average a yearly 18% appreciation since I started."
+    menu:
+        "Just 18%? That doesn’t sound like much.":
+            jump WG004_C1_2
+        "Wait, 18%, that’s like... a lot!":
+            jump WG004_C2_2
+
+label WG004_C1_2:
+    MC "Just 18%? That doesn’t sound like much."
+    show WG angry
+    $setAffection("WG", -1)
+    WG "You clearly don’t know much of anything about investments then."
+    show WG stern
+    WG "People that are financially ignorant seem to think all investments magically return two to four‑fold no matter what."
+    show WG haughty
+    WG "The average market growth is historically 7% year over year. Even the best financial minds at the biggest hedge funds struggle to eek out a few percentage points above the market average."
+    WG "This past year wasn’t even a very good one for the market. So, I’d say I’m doing just fine."
+    MC "Oh, I guess that’s pretty impressive then."
+    WG "That would be the correct assessment. As you can see, my time is valuable."
+    WG "The money I spend to employ an assistant to take care of the more mundane day-to-day tasks is more than compensated for with the return I can make by focusing my efforts on business matters."
+    show WG neutral
+    WG "Now let’s see... hmm. It appears I have finished the tasks I needed to accomplish here for the day."
+    WG "I must be going. I hope you found our discussion, illuminating, shall we say, with regards to your present state of financial acuity."
+    MCT "Admittedly, she did kind of make me feel like an idiot, but to her point, now that I’m an adult, it’s way past time I started learning about how to invest."
+    hide WG
+    MCT "Welp, that was certainly interesting. I thought I had her pegged as the spoiled princess type, but she’s a lot sharper and ambitious than I gave her credit for."
+    "I spent the rest of the time I had before class trying to study for the quiz. I tried to focus, but it was a lot less interesting than the conversation I just had with Alice."
     jump daymenu
 
-label BBW004_c2:
-    MC "It's not just about getting the work done. It's about being part of a team."
-    show BBW neutral
-    BBW "I am part of the team. I'm supplying leadership and direction to Aida. If she's not complaining, is it really any of your business?"
-    MC "...You might not want to make a habit of this. That's all I'm saying."
+label WG004_C2_2:
+    $setFlag("WG004_C2_2")
+    MC "Wait, 18%, that’s like... a lot!"
+    show WG haughty
+    $setAffection("WG", 1)
+    WG "Oh? So it seems you do know a little bit about investing then."
+    WG "Most people seem to think investments constantly earn in excess of plus 100% returns. A mere fantasy of the financially illiterate."
+    WG "Given the average market last year, most people would count it fortunate to just not be in the red. I think I’ve managed to do pretty well, if I do say so myself."
+    MC "Pretty well? Seems a bit of an understatement. Think you'd be interested in managing my investments?"
+    show WG happy
+    WG "Hehe. Silly boy, then how will you ever learn to do so yourself?"
+    show WG haughty
+    WG "Besides, you can’t afford me."
+    MC "{size-6}I wasn’t being serious...{size-6}"
+    WG "As you understand, my time is quite valuable."
+    WG "The money I spend to employ an assistant to take care of the more mundane day-to-day tasks is more than compensated for with the return I can make by focusing my efforts on business matters."
+    WG "Some people look at that and think I don’t understand the value of money— absolutely laughable."
+    show WG neutral
+    WG "Now let’s see... hmm. It appears I have finished the tasks I needed to accomplish here for the day."
+    show WG neutral-2
+    WG "Unfortunately, I have to take my leave, Keisuke. I must admit, it was pleasant to converse with someone about finances without having their eyes glaze over for a change."
+    WG "I’m sure I’ll be seeing you around."
+    hide WG
+    MCT "Welp, that was certainly interesting. I thought I had her pegged as the spoiled princess type, but she’s a lot sharper and ambitious than I gave her credit for."
+    MCT "She’s certainly a lot nicer if you get on her good side too."
+    "I spent the rest of the time I had before class trying to study for the quiz. I tried to focus, but it was a lot less interesting than the conversation I just had with Alice."
     jump daymenu
 
-label BBW004_c3:
-    MC "Do I have to tell on you? Because that seems like a really childish thing for all of us."
-    show BBW angry
-    $setAffection("BBW", -1)
-    BBW "You're threatening to report me? At what point did any of this become your concern, anyway?"
-    MC "When I saw someone not doing their share. This is a collective assignment, we all have to carry our weight. You don't get to sit back and take it easy just because you managed to rope someone else in."
-    BBW "Are you a figure of authority in this class? No? Then you do not get to tell me that I do not get to do something."
-    show BBW haughty
-    BBW "As for alerting someone with actual power, go ahead. Play the sniffling toddler, tattle on me. My conscience is clear."
-    MC "Guess that's what I'll be doing..."
-    jump daymenu
-
-label BBW005:
+label WG005:
     $setTimeFlag("aftertest")
+    $setProgress("WG", "WG006")
     scene Cafeteria with fade
     play music Hallway
-    MC "Hair? What kind of mutation is hair growth? This almost seems like a joke."
-    MC "Hmm, no open tables. Oh! There's a spot."
-    show BBW sad at center with dissolve
+    MCT "Hair? What kind of mutation is hair growth? Or factor- whatever they call it. This almost seems like a joke."
+    MCT "Hmm, I must not be the only one taking the news poorly."
+    "The previously boisterous atmosphere, typical of school cafeterias, now had the life completely sucked out of it."
+    "All you could hear was the occasional low mumbles of hushed conversations that more often didn't even rise above the clanging of silverware."
+    MCT "Hmm, no open tables. Oh! There's a spot right by Alice and Aida."
+    show WG sad at center with dissolve
     show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "..."
-    PRG "I-Is something wrong, Nikumaru-sama? Did I use too much coriander, or..."
-    show BBW neutral
-    BBW "No. The dish is exemplary. It's just..."
-    MC "Stewing over the test results? Is it something bad?"
+    WG "..."
+    PRG "I-Is something wrong, Nikumaru-sama?"
+    show WG neutral
+    WG "No. The dish being served here is actually decent, for once. It's just..."
+    MC "Hey Alice, Kodama-san, mind if I sit here?"
+    "Alice barely even looked up to gesture that she acknowledged me, completely stuck in her current forlorn expression."
+    WG "I have no objection if you wish to do so, if that is what you were wondering."
+    MCT "Hmm, I think I see what's going on. She seems pretty down, maybe I could try to cheer her up?"
+    MC "Stewing over the test results, huh? Is it something wrong? I don't mean to pry. If you don't want to talk about it, that's fine too. Just thought maybe it could help."
     hide PRG with dissolve
-    BBW "A Nikumaru does not 'stew.' We take action, we confront problems. Destiny does not come to us, we make things happen."
-    MC "So what was it? Or is it too personal to tell?"
-    show BBW angry
-    BBW "(You might have thought of that before you asked.) To answer your question, yes, I am thinking about the test results. I am questioning what can be done to curtail my... expansion."
-    MC "If anything can be done."
-    show BBW haughty
-    BBW "There is always a way, even if it might be extreme. But the lengths you are willing to go to achieve something demonstrate how much you deserve it. Right, Kodama-san?"
-    show PRG neutral at Position (xpos=0.8, xanchor=0.5, yalign=1.0)
-    PRG "Ah! Y-yes, Nikumaru-sama!"
-    MC "So what is your 'factor?'"
+    WG "Your consideration is noted, but a Nikumaru does not 'stew.' We take action, we confront problems. Destiny does not come to us, we make things happen."
+    MC "What was it then, if you don't mind me asking?"
+    show WG angry
+    WG "To answer your question, yes, I am thinking about the test results."
+    show WG worried
+    WG "I am pondering what can be done to curtail my... expansion."
+    MC "{i}If{/i} anything can be done, that is. So, what were you thinking about?"
+    show WG haughty
+    WG "There is always a way, even if it might be extreme. But the lengths you are willing to go to achieve something demonstrate how much you deserve it. Wouldn't you agree, Keisuke?"
+    MC "I suppose so. That's certainly a good attitude to have, but we can't always control everything."
+    WG "Tsk, well that may be true, but in my experience people often have far more control over our present circumstances than they'd care to admit."
+    MCT "The opposite can be true as well."
+    MC "So what is your 'factor' then?"
     hide PRG with dissolve
-    show BBW neutral
-    BBW "They say, and you might have trouble believing this just as I did, that I am inclined to grow... stout."
+    show WG neutral
+    WG "They say, and you might have trouble believing this just as I did, that I am inclined to grow... stout."
     MC "Stout?"
-    BBW "..."
+    WG "..."
     extend " Obese."
     extend " Fat."
+    "I didn't have the heart to tell Alice, but given what I've seen from some of the other students and judging from her present starting point, I didn't have that much trouble believing it."
     MC "Oh. Yeah, that's, um, hard to swallow. But maybe it won't be too bad. They can't tell how 'stout' you'll end up being, right?"
-    show BBW angry
-    BBW "No, they cannot predict that. But any excessive weight is unbecoming, which brings me to my quandary. Do I restrict my diet even further than the modest regiment I already have, or do I allow the growth to happen and fix things later?"
-    MC "You think you can lose the weight after you're done growing? Isn't this supposed to be permanent?"
-    show BBW neutral
-    BBW "Failure only comes when you give up. Liposuction and similar weight loss treatments have helped others, so why not me?"
-    BBW "But I am interested in your thoughts. Which sounds like a better approach, tackling the growth now or dealing with it at a later date?"
+    show WG angry
+    WG "No, unfortunately they cannot predict that. But any means of curtailing my future expansion would be preferred."
+    WG "Which brings me to my quandary: do I restrict my diet even further than the modest regiment I already have, or do I allow the growth to happen and fix things later?"
+    WG "What if my growth is miniscule? Would I end up starving myself for nothing? Or what if it is extreme, and denying myself a proper diet is for naught?"
+    MC "Hmm, that does seem like quite the dilemma. But aren't these growths supposed to be permanent?"
+    show WG neutral
+    WG "That remains to be seen. But I am interested in your thoughts. Which sounds like a better approach, tackling the growth now or dealing with it at a later date?"
+
+label WG005_menu
     menu:
-        "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier.":
-            jump BBW005_c1
-        "Modern medicine is pretty extraordinary. If you ended up getting really fat there's probably some surgery you can get.":
-            jump BBW005_c2
-        "What if you worked out? Burn those calories before they turn into fat.":
-            jump BBW005_c3
+        "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?" if not getFlag("WG005_LipoAsk"):
+            jump WG005_c1
+        "What if you worked out? Burn those calories before they turn into fat." if not getFlag("WG005_ExerciseAsk"):
+            jump WG005_c2
+        "Maybe the only way is the hard way: try to eat healthier and eat less.":
+            jump WG005_c3
 
+label WG005_c1:
+    MC "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?."
+    show WG worried
+    WG "Unfortunately that doesn’t seem like a very promising option. I looked into that and apparently they can only remove a few kilos at a time, otherwise you would go into shock."
+    MC "Yikes! Yeah, that doesn’t sound very promising at all."
+    show WG neutral
+    WG "Indeed, I’m afraid so."
+    $setFlag("WG005_LipoAsk")
+    jump WG005_menu
 
-label BBW005_c1:
-    $setFlag("BBW005_ondiet")
-    $setAffection("BBW", -1)
-    MC "I don't know anything about liposuction, so I'd say try to work at it now. Eat less, eat healthier."
-    BBW "That does seem the best tactic. If I don't give my body the means to get fat..."
-    MC "Just don't starve yourself or anything."
-    BBW "Of course not. I know exactly what my body needs. Kodama-san!"
-    show PRG neutral at Position (xpos=0.8, xanchor=0.5, yalign=1.0)
-    PRG "Yes, Nikumaru-sama!"
-    BBW "Going forward I want my meals to have a maximum of 650 calories. Adjust my menu accordingly, but be sure to include an appetizer, entree, side dish and dessert."
-    hide PRG with dissolve
-    MC "So now she's your dietician?"
-    BBW "All part of her job description. Did you get all that?"
-    show PRG neutral at Position (xpos=0.8)
-    PRG "Yes, Nikumaru-sama."
-    MCT "Seems a bit much to ask of anyone, even if they're as eager to please as Aida is. But what do I know about cooking?"
-    jump daymenu
-
-label BBW005_c2:
-    MC "Modern medicine is pretty extraordinary. If you ended up getting really fat there's probably some surgery you can get."
-    BBW "I agree, this is the idea most likely to succeed. I don't know enough right now, so how am I supposed to proceed?"
-    BBW "What if my growth is miniscule? Would I end up starving myself for nothing? Or what if it is extreme, and denying myself a proper diet is for naught?"
-    show PRG neutral at Position (xpos=0.8)
-    PRG "N-Nikumaru-sama? The quail is ready."
-    show BBW happy
-    BBW "Then bring it out! And excellent choice to include the spicy mustard greens in this salad. It was exactly what it needed."
-    show PRG happy
-    PRG "T-thank you!"
-    MCT "Whether this will work or not, it is the path of least resistance. Maybe that's why she's eager to go along with it."
-    jump daymenu
-
-label BBW005_c3:
-    $setFlag("BBW005_workout")
-    $setAffection("BBW", 1)
+label WG005_c2:
     MC "What if you worked out? Burn those calories before they turn into fat."
-    BBW "Now that is sensible. I admit, the thought of denying myself proper meals is distressing, more so after discovering Kodama-san's talents."
-    show BBW haughty
-    BBW "I mean, who else at this school is prepared to give her ability the recognition it deserves? And if I can support her while taking care of myself at the same time, so much the better."
-    MC "Have your cake and eat it too, you mean?"
-    show BBW neutral
-    BBW "Quite. You do have a good mind, Hotsure-san, but perhaps humor is outside your reach."
-    MCT "I wasn't trying to make a joke."
-    jump daymenu
+    show WG doubt
+    WG "Contrary to the typical assumptions people may have regarding my physique and well maintained appearance, I am quite active."
+    show WG haughty
+    WG "I swim on a regular basis for my personal recreation, as well as helping to maintain my physical and mental acuity."
+    WG "Swimming is by far more physically demanding than running or riding on a bike for the same amount of time, that I can assure you."
+    MC "Huh, well admittedly I wouldn’t have guessed that about you either. That’s pretty cool. Sounds like you got that part covered about as well as anyone reasonably could."
+    show WG neutral
+    WG "Yes, I suppose I do have that working in my favor."
+    $setFlag("WG005_ExerciseAsk")
+    jump WG005_menu
 
-label BBW005A:
+label WG005_c3:
+    MC "Maybe the only way is the hard way: try to eat healthier and eat less."
+    show WG worried
+    WG "{i}Sigh{/i}... Regrettably that does seem the best tactic. If I don't give my body the means to get fat, then it won’t be possible to get fatter."
+    MCT "I don’t think I like where this is going."
+    MC "Well, just don’t take it to an extreme. You don't want to starve yourself or anything like that."
+    show WG neutral
+    WG "But perhaps extreme measures are warranted?"
+    show HR
+    HR "Mind if I take a seat here?"
+    show WG doubt
+    WG "Erm, I guess not. {size-6}Just keep that {i}thing{/i} away from me.{size-6}"
+    HR "Hm?"
+    show WG surprised
+    WG "{i}Ahem{/i}, nothing! Please, go right ahead."
+    show WG worried
+    MC "Tashi-sensei? What are you doing here?"
+    HR "Hey, I gotta eat like everyone else here too."
+    HR "I don’t want to pry, but I couldn’t help but overhear a bit of your conversation. The faculty and staff try to be especially attentive for the first few days after students get their results."
+
+    scene Auditorium with fade
+    HR "It’s the same story every year."
+    show FMG happy with dissolve
+    show BE happy with dissolve
+    HR "A few students are excited when they learn about their growths."
+    hide FMG
+    hide BE
+    show PRG sad with dissolve
+    show GTS sad with dissolve
+    HR "Most are just confused more than anything."
+    hide PRG
+    hide GTS
+    show AE sad with dissolve
+    HR "While others, like yourself, are pretty sad to hear the news. Like the stages of grief, it starts with denial, then bargaining. Sound familiar?"
+    hide AE
+
     scene Cafeteria with fade
+    show WG doubt
+    show HR
+    HR "I’m here to tell ya kid, you may think you have a plan of how to stop this, or maybe just slow it down, but that’s not how these kinds of things work."
+    HR "It can’t be stopped. That’s why you’re here, that’s why we’re here."
+    WG "What do you mean by \"can’t be stopped\"? Surely {i}something{/i} can be done? Are you really saying there’s nothing that can be done whatsoever?"
+    HR "That’s why I was so blunt about it the first day of class. The sooner you realize this is your new life, and that it’s really happening, the sooner you’ll be able to move on and accept your growth."
+    HR "Just look at me. You think I was jumping for joy when I found out about {i}this{/i} thing?"
+    HR "I can’t tell you how many times I thought about just biting this thing off, hoping it would go away."
+    HR "A teacher told me about a student with my growth who tried just that— it only grew back longer in a couple of days!"
+    HR "As morbid as that was, it was a turning point for me. I knew I couldn’t stop it, so I had to accept it. And from there, things got better for me."
+    MC "Man, that’s pretty deep Tashi-sensi."
+    HR "Just trying to help as best I know how. I may be a teacher now, but I was in your shoes once as a student here."
+    HR "Luckily for your sake, everyone else is going through the same thing, well more or less. Try to support each other the best you can. This is only the start. I’ll see you two in class."
+    hide HR
+    show WG sad
+    WG "{i}Sigh{/i}... it sounds like there really isn’t anything that can be done."
+    MC "I guess not..."
+    "The disappointment in Alice’s eyes was heartbreaking to be honest."
+    "I couldn’t blame her either. My growth was going to involve some bad hair days and more frequent haircuts, but Alice’s sounded like it was on a whole different level."
+    "I had to at least try to cheer her up."
+    MC "I know it sucks, but Tashi-sensei was just trying to help. Besides, you’ll find a way to overcome it."
+    MC "Don’t tell me you didn’t mean all that talk earlier about confronting problems. What was it? Something like \"destiny does not come to you, you make things happen.\""
+    show WG haughty
+    WG "Yes, that was the gist of it, more or less, and I most certainly meant it."
+    WG "Perhaps, it is as you say. There’s nothing more than to move on from this. I refuse to let anything stop me. Whatever this \"{i}growth{/i}\" may entail, I will overcome it like any other obstacle."
+    "Apparently that was enough to snap her out of her malaise and back into her usual sense of industriousness."
+         if getFlag("WG004_C2_2"):
+            WG "I must say Keisuke, it appears you have a way with words. Perhaps I should keep you around."
+            MC "You can’t afford me."
+            show WG happy
+            $setAffection("WG", +1)
+            WG "Ohoho! Is that so? Well, turnabout is fair play after all."
+            WG "I’m sure I’ll be seeing you again soon, Keisuke."
+            hide WG
+            jump daymenu
+        else:
+            WG "I must say Keisuke, there appears to be more to you than meets the eye. You certainly have a way with words it seems. Thank you for stopping to chat. I found our discussion most illuminating."
+           hide WG
+           jump daymenu
+
+label WG006:
+    $setProgress("WG", "WG007")
+    scene Hallway2 with fade
     play music Peaceful
-    MCT "Why do I always have trouble finding an open seat? I wonder how much harder this will be once some of the people start growing..."
-    MC "Mind if I sit here?"
-    show BBW sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    PRG "Oh! G-Good morning, Hotsure-san."
-    BBW "...By all means."
-    MC "Thanks. Say, did you two get the Lit reading done? I kind of spaced out last night."
-    show PRG happy
-    PRG "I did it. How far along did you get?"
-    MC "About... two pages in."
-    BBW "Kodama-san."
-    PRG "Yes, Nikumaru-san?"
-    BBW "Can you get the other half of the grapefruit? The first half was not adequate alone."
-    PRG "Certainly, ma'am. And would you like some more toast?"
-    BBW "...Two slices."
-    PRG "With jam or butter?"
-    BBW "No. Plain."
-    PRG "All right. I'll be right back."
-    hide PRG with dissolve
-    show BBW sad at center with dissolve
-    MCT "Someone's in a bad mood. I wonder if I should say something or not."
-    stop music
-    MC "Light breakfast today?"
-    MCT "Mouth, you're not helping."
-    BBW "Light breakfast today, and every day. Light lunch every day. Light dinner every day."
-    MC "Oh? ...Oh! Yeah. Your factor. I guess you're doing the diet thing, huh?"
-    play music Tension
-    BBW "If I am to maintain authority over my own body and not be controlled by the whims of fate, then yes, I am doing 'the diet thing.'"
-    BBW "Every day, at every meal, I will be watching my intake, limiting the calories, sugars, and fats I take in. I will limit it all to what I need and no more."
-    MC "You don't seem too happy about it."
-    show BBW angry
-    BBW "Is there something here I should be happy about? I have a palate more refined than people twice my age. My appreciation of the arts - culinary or otherwise - exceeds that of professional critics."
-    BBW "And now I must cut out my tongue, surviving on simple fruits and steamed vegetables and whatever other staples a Neanderthal wandering the plains of famine would call a meal."
-    MCT "That's a bit melodramatic. Better think of some positive way to look at this."
-    MC "At least it will help in the long run! That'll be good, right?"
-    show BBW neutral
-    BBW "I am already beginning to question that. I can endure an existence marked by suffering and lacking. I am strong enough to bear up in the face of abject want, unlike many others."
-    show BBW angry
-    BBW "But is that a life worth living? Is the path of self-denial, of self-inflicted misery, beneficial to anyone? How can one grow as a person if they have committed their life to depriving themselves of opportunity and experience?"
-    BBW "Every bowl of plain rice, every plate of salad, is another act of self-flagellation. Shall my days be marked by anguish, my life's story a tale of torment? Who would live such a life by choice? Who would be inspired by that?"
-    MC "But... you just started the diet. This is your first meal."
-    BBW "Is my suffering any less brutal for being so brief? Shall I remain silent until I have carried my burden for a certain number of days? No! Pain is pain. It is not to be dismissed for failing to meet some arbitrary metric."
-    BBW "You were the one to suggest this trial of deprivation, and now you mock me for not embracing my torture?"
-    show BBW angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    PRG "Miss Nikumaru? I brought you your food."
-    show BBW neutral
-    BBW "Thank you, Aida, but now I want you to go prepare me a real breakfast. Crepes Florentine and smoked salmon to start, along with some coffee and fresh-squeezed orange juice."
-    show PRG happy
-    PRG "Y-Yes, ma'am... I'll just leave the toast and grapefruit."
-    hide PRG with dissolve
-    show BBW angry at center with dissolve
-    BBW "Or does this not meet your approval, Hotsure-san?"
-    MC "Whoa! I'm not judging you. I'm just..."
-    BBW "You're just... what?"
-    MC "I'm just saying a diet might not be easy, but in the end you might be glad you did it."
-    BBW "Is my mood a concern of yours? Is it your business to tell me how I deal with my factor? I assume you have your own condition to deal with, no?"
-    MC "Yeah. My hair grows really fast."
-    BBW "...That is your condition? That is why you're here?"
-    MC "Yep. That's it."
-    show BBW neutral
-    BBW "I would suggest you withhold any attempts to guide others through their own crises until you have experience with actual problems yourself."
-    BBW "Some people seem to just float through life without a care in the world, never understanding how hard and unyielding life can be."
-    MC "Uh huh... Consider me properly scolded."
-    MCT "I was just trying to help."
-    jump daymenu
-
-label BBW005B:
-    scene Classroom with fade
-    play music Busy
-    "The last bell of the day rang and everyone got ready to get up and go. I had nothing in particular I wanted to do this afternoon, but like most everyone else I wanted to get out as quickly as I could."
-    "I made it halfway to the door before I was stopped by a hand on my shoulder. Turning around, I saw Alice standing there with Aida hovering behind."
-    show BBW happy at center with dissolve
-    show PRG neutral at Position (xpos=0.4, xanchor=0.5, yalign=1.0) behind BBW with dissolve
-    BBW "It's time we begin our journey."
-    MC "Journey?"
-    BBW "Our journey towards health and well-being for myself. In order to stave off the effects of my growth factor I will be taking up an exercise routine. An intense calorie-burning regimen to keep myself fit and sleek."
-    MC "Where do I come in?"
-    show BBW neutral
-    BBW "It was your idea, after all. And I can't tackle such a daunting task myself. I remember reading that new habits undertaken with others have a better success rate, and let's be frank, some exercise wouldn't do you much harm."
-    MC "I'd be insulted, but... Yeah. What about Kodama-san, though? I thought you said she would be your personal fitness trainer."
-    BBW "And she is, but she can't be both working out and coaching me. Plus, she wouldn't do as a spotter. Too frail."
-    MC "I think she should be insulted, but..."
-    show PRG sad at Position(xpos=0.75) with dissolve
-    PRG "..."
-    MC "Yeah. Well, I have nothing better to do right now, so why not? Let's hit the gym."
-    show BBW happy
-    BBW "That's the spirit. Go change, and we'll meet you at the weight room."
-
-    scene Gym with fade
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "OK! Where do we start?"
-    MC "Um..."
-    BBW "I was asking Kodama-san. She's the official expert here."
-    PRG "Uh... Maybe if we did some stretches?"
-    show BBW happy
-    BBW "Excellent. We'll ease into the workout."
-    "We went to a set of mats set up in a corner, away from the weights and machines, and Kodama-san led us in some light stretches and calisthenics that took me back to grade school. I can't say it did anything to burn calories, but it did loosen me up."
-    "Eventually she stopped (or she ran out of exercises)."
-    PRG "Now how about we... do push-ups?"
-    show BBW neutral
-    BBW "You're the boss. Come on, Keisuke."
-    hide BBW with dissolve
-    "Alice and I got down on the mat and started doing push-ups. That is, we tried. I knocked out a couple before I was struggling to keep my form, but Alice was having trouble doing just one."
-    show BBW angry:
-        xpos 0.25 xanchor 0.5
-        ypos 1.0 yanchor 0.0
-        linear 1.0 ypos 0.8
-    pause 1
-    BBW "Nnnnnhg... Gggggrrrr... One!"
-    show BBW angry:
-        linear 1.0 ypos 1.0
-    pause 1
-    BBW "Aaaaannnn..."
-    show BBW angry:
-        linear 1.0 ypos 0.8
-    pause 1
-    BBW "Two!"
-    show BBW angry:
-        linear 1.0 ypos 1.0
-    pause 1
-    show PRG happy
-    PRG "Come on, Nikumaru-san! Push it! Unleash the beast! Own your power!"
-    "Kodama-san tried encouraging Alice with some slogans I'm sure she got off fitness clothing commercials, and ever so slowly she managed to do a full set."
-    show BBW angry:
-        linear 1.0 ypos 0.8
-    pause 1
-    BBW "Ggggggggnnnnnnnn... Ten!"
-    PRG "You did it, ma'am! Well done!"
-    show BBW happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Thank you, thank you. If you'll excuse me, I need to take a quick water break. Hydration is important, after all."
-    hide BBW with dissolve
-    show PRG neutral
-    PRG "OK. We'll wait for you."
-    "I wasn't going to say anything; after all, it's not like I'm effortlessly knocking out the push-ups one-handed or anything. And Alice was sweating by the end, so she was putting in some effort."
-    "She came back five minutes later, no longer sweating and looking like she had straightened up her hair in the bathroom."
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "What shall we do next?"
-    "Kodama-san looked around, a little bit lost among the machines she clearly had no experience with."
-    PRG "Maybe we can start here? And then work our way around?"
-    "She was looking at a pulldown bar, the kind where you stay standing and pull the bar in front of your chest."
-    BBW "Very well. Keisuke, you go first."
-    MC "Why me- No, never mind. I'll go."
-    hide PRG with dissolve
-    "As I was looking at the weights in increments of five kilos, trying to guess what my limit was, another person came over and joined us."
-    show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    FMG "Hey sorry to bother but how much longer are you... Oh hey guys. What brings you here?"
-    MC "Hi, Akira. We're just working out, trying to help Alice lose weight."
-    show BBW angry
-    BBW "I don't need to lose weight. I just need to keep myself from getting fat. There is a world of difference there."
-    MC "Right. Anyway, we'll try not to take too long."
-    FMG "Nah it's cool, I could use the breather anyways."
-    show BBW neutral
-    "She stayed standing a bit to the side, watching as I decided how to adjust the weight and making me self-conscious."
-    "If it was just me and Alice I could get away with something easy, but with Akira looking over my shoulder I was afraid she would say something if I wasn't going all out."
-    "In the end I decided to add 50%% more what I was originally going to lift. To my surprise it weighed more than what I expected. Before I could lift it up, Akira came and grabbed the bar."
-    FMG "Sorry but I have a quick question, just how much did you put on the bar?"
-    MC "About 70 kilos. Why?"
-    show FMG sad
-    FMG "Because it looked like it was too much for you. You gotta know your limits and take it one step at a time."
-    BBW "You look like you know what you're talking about. Maybe you have some tips you can share."
-    show FMG neutral
-    FMG "Sure. First off, did you take a protein shake before exercising?"
-    BBW "Uh, no? Is that necessary?"
-    FMG "Not really but it helps. Here, I have an extra."
-    MC "I don't think we need it. We're not trying to build up muscle, are we?"
-    FMG "Fair enough I guess."
-    "Akira puts the shake away before whispering to me."
-    show FMG happy
-    FMG "{i}(Between you and me, I just wanted to see Alice's reaction to drinking this sludge.){/i}"
-    FMG "All right, tips. The first thing you want to do is, like I said, know your limits and pace yourself. Take short breaks when you need it. Keep consistent and follow a routine. And the most importantly, be patient, don't expect results overnight."
-    FMG "As long as you keep it up and actively enjoy it, you won't have any problems."
-    show BBW happy
-    BBW "Sounds good. Let's get to it."
-    show BBW neutral
-    BBW "..."
-    MC "..."
-    BBW "You were about to begin."
-    MC "Right."
-    "I reset the weight to what I thought was a manageable amount. Akira was still standing by, watching, but I put her out of my mind as I did ten reps with what felt like too little weight in her eyes."
-    "When I was done I stepped aside for Alice."
-    BBW "My turn."
-    "She left the weight where it was, but turned out to be too much for her."
-    show BBW angry
-    BBW "Nnnnggg! Grrrrr!"
-    "She reduced the weight and tried again, then reduced it a third time."
-    BBW "Gggnnnn!"
-    "She probably would have reduced it again if she wasn't already at the bare minimum. I looked over at Akira as Alice struggled to get to ten reps."
-    show FMG sad
-    FMG "...Um, you ok Alice? Need anything?"
-    BBW "Ggnnnooo, thank you. Just doing what you said and taking it slow."
-    FMG "...I didn't mean to the point where you're not even pulling the damn bar. For god's sake, you have it at the lowest level!"
-    BBW "Did you not just tell us to know our limits? Are you now reversing yourself and telling me to risk injury by going beyond my limitations? What is it you want me to do?"
-    show FMG angry
-    FMG "No I... Gar!"
-    FMG "Ugh, screw it. I'm getting ice cream before I really get mad!"
-    hide FMG with dissolve
-    "And she stormed off. For a second I thought about going after her, trying to cool things off so at least she wouldn't leave mad, but then I decided it'd be better this way."
-    "Plus, turning back to Alice I another opportunity to play mediator."
-    show BBW neutral
-    BBW "Well that was uncalled for. It was certainly arrogant of her."
-    MC "Arrogant?"
-    BBW "Not everyone is gifted with physical prowess, and for her to carry on as if anyone should be able to do what she can... That's arrogant."
-    MC "I'm not sure that was her problem, but I agree she could have been a bit more patient... How about I talk to her later, once she's cooled off? She probably could help you with this better than I or Aida could."
-    show BBW happy
-    BBW "That's thoughtful, but you don't need to put yourself out. This was a worthwhile experiment, but I've reached the conclusion that I'm not cut out to be a gym rat."
-    BBW "I don't think this stress of trying to constantly outdo myself would be good for my temperament, if Mizutani-san is any indication. Still, thank you for your assistance."
-    MC "You're welcome. (I guess.)"
-    BBW "Now, Aida, let's go back to the dorms. I feel a hot bath and massage is the best way to unwind after a workout like this."
-    show PRG happy at Position(xpos=0.75)
-    PRG "Y-Yes, ma'am! I'll get the oils."
-    jump daymenu
-
-label BBW006:
-    $setProgress("BBW", "BBW007")
-    scene Hallway with fade
-    play music Peaceful
-    MCT "Classes are done, so what now? Don't want to go back to my room, I've got enough weirdness going on without someone trying to find more lurking around every corner. Maybe I can see if any of the clubs are recruiting yet."
+    MCT "Welp, classes are done for the day. I should feel relieved, but to be honest I’m not sure what else to do. I don’t really feel like going back to my room. I don’t know why either."
+    "This whole ordeal has been a trip so far, I guess my mind was still reeling from this bizarre set of circumstances. I needed something to take my mind off of things, focus on something else."
+    MCT "I wonder if there are any clubs worth joining."
     "..."
-    MCT "Sounds like the music club is rehearsing. Not my thing... Oh!"
-    show BBW neutral at center with dissolve
-    MC "Niku- Alice. Thinking of joining the music club?"
-    show BBW haughty
-    BBW "Offering my services to the ensemble is one reason I'm here, though I'm disheartened to find out freshmen are not considered for seated positions. Waiting a year just to take my rightful place on the stage..."
-    show BBW neutral
-    BBW "I'm more sorry for the club, having to endure without my contribution."
-    MC "How thoughtful. So what instrument do you play?"
-    BBW "I have my own natural instrument: my voice."
-    MC "You're a singer?"
-    BBW "A soprano. And a gifted one, I should say. I've been coached since I was five."
+    "Walking down the hallway further a faint sound began to grow louder as I realized where it was coming from."
+    MCT "Huh, sounds like the music club is rehearsing. Not really my thing..."
+    MCT "Oh...is that?"
+    show WG neutral at center with dissolve
+    MC "Niku- erm, Alice. Thinking of joining the music club?"
+    show WG haughty
+    WG "Not just joining, I plan to be leading the ensemble. I am the natural and obvious choice, which will become apparent to everyone once I complete my seating audition."
+    MCT "Haughty attitude aside, she seemed pretty confident in her abilities. Her ambition was clearly evident, but that doesn't necessarily resonate with everyone."
+    MC "You think you got it in the bag then? What happens if they don't pick you for club president?"
+    show WG neutral
+    WG "Well, then I'd be more sorry for the club, having to endure without the direction of my leadership and experience."
+    MC "Hmm, yes, um- their loss I suppose. So what instrument do you play?"
+    WG "I have my own natural instrument: my voice."
+    MC "Oh, so you're a singer?"
+    WG "A soprano. I am quite adept with a natural talent for it, if I do say so myself. I've been coached since I was five."
+    MC "So, you do like...opera singing then?"
+    WG "Precisely. I have a wide range, but opera is definitely my forté."
     MC "I didn't know the music club did operas."
-    show BBW neutral
-    BBW "According to the club adviser, they do not. Put more accurately, they never have."
-    show BBW haughty
-    BBW "But the higher arts are not more difficult by nature. With sufficient commitment and practice I'm sure they could put on a fair performance. And with me as the star..."
-    show BBW neutral
-    BBW "But I'd also hoped to find a talent or two I could nurture during my time here."
+    show WG worried
+    WG "According to the club adviser, they do not. Put more accurately, they never have."
+    show WG haughty
+    WG "But the higher arts are not necessarily more difficult by nature. With sufficient commitment and practice I'm sure they could put on a fair performance. And with me as the star..."
+    show WG neutral
+    WG "Well, no need to get ahead of myself now."
+    WG "Besides my own skills, I'd like to think I have a natural eye for talent."
+    WG "During my time here, I also hope to find a talent or two I could nurture."
     MC "Nurture?"
-    BBW "The Nikumarus have a long history of patronage of the arts, one I hope to continue. I hope to get a start on it by finding a budding talent to encourage. Pushing them to refine their art and attain what greatness they were born for."
-    BBW "Privilege, after all, comes with the responsibility of helping others."
-    MCT "You sound both selfless and selfish as you say that."
-    BBW "On that note, do you play any instruments, Hotsure-san?"
+    WG "The Nikumarus have a long history of patronage of the arts, one I hope to continue. I hope to get a start on it by finding a budding talent to encourage. Pushing them to refine their art and attain what greatness they were born for."
+    WG "Pushing them to refine their art and attain what greatness they were born for. Privilege, after all, comes with the responsibility of helping others."
+    MCT "You sound both selfless and selfish when you say that."
+    MCT "She's definitely not the easiest person to pin down, that's for sure."
+    WG "On that note, do you play any instruments, Hotsure-san?"
     MC "Me? Uh..."
     menu:
-        "No, I don't.":
-            jump BBW006_c1
-        "I've practiced a little, but I'm not really talented.":
-            jump BBW006_c2
-        "I don't mean to brag, but I'm a pretty skilled musician.":
-            jump BBW006_c3
+        "(I don't want to embarrass myself, I should just tell her no.)":
+            jump WG006_c1
+        "I can play a little, but it's been a while.":
+            jump WG006_c2
+
+label WG006_c1:
+    $setFlag("WG006_C1_1")
+    MC "I mean, yeah I used to play. I took piano lessons when I was a kid, but it’s been so long I don’t really consider myself a musician."
+    $setAffection("WG", -1)
+    show WG haughty
+    WG "Tsk, such a shame really. Putting in all that time and effort to cultivate such a useful skill, only to lose it through neglect."
+    MC "I never really looked at it that way before, but I guess you’re kind of right. I probably should have stuck with it more."
+    MC "I guess I got away from it when I got older because my mom insisted on me doing those lessons even though I didn’t want to."
+    WG "Now that you’re older, don’t you think it’s beyond your maturity to resent the efforts of someone who wanted to help you cultivate your talents?"
+    MC "Well I hadn’t really thought about it that way, but I wouldn’t characterize it as cultivating my talents. I wasn’t that great at it. I’m much better at drawing and design. I want to be an architect some day."
+    WG "Is that so? Interesting. Well, I am relieved for your sake that you seemingly have some aptitude for the arts, as well as your own ambitions."
+    "Given my affinity towards hitting the snooze button as often as humanly possible, I can’t say that I considered myself ambitious, but hearing that insinuation coming from Alice did make me feel pretty good."
+    MC "Speaking of ambitions, I forgot to ask earlier, does anybody here catch your eye? Or ear, I should say, that you’d be interested in \"nurturing\"?"
+    show WG worried
+    WG "Not in particular, no, but it's too soon to say."
+    show WG neutral
+    WG "None of them are masters, so finding the seed of potential requires a deeper look. I'll need to sit in on a few more meetings, to make a proper evaluation."
+    show WG haughty
+    "After her initial answer Alice perked up slightly, eyeing me up and down for a brief, but still rather extended period of time."
+    "I began to suspect I might have inadvertently directed my question towards myself."
+    WG "Hmm, yes, still too soon to tell I’m afraid."
+    show WG neutral
+    WG "Well I must be going. My audition is soon and I need to focus."
+    WG "Might I suggest you start to practice again? I hope you will consider doing so. I will be seeing you around."
+    jump WG0006_afterchoice
 
 
-label BBW006_c1:
-    MC "No, I don't."
-    BBW "Hmm. An honest answer, but a shame."
-    MC "Does anybody here catch your eye? Or ear, I should say?"
-    BBW "It's too soon to say. None of them are masters, so finding the seed of potential requires a deeper look. I'll need to sit in on a few more meetings."
-    MC "I take it you'll be the joining the club, even as a benchwarmer?"
-    BBW "...I am unfamiliar with that term. But yes. With my gift it would only be appropriate that I join. And I cannot convince the club president of their folly in keeping me in reserve if I am not here."
-    MC "You don't take 'No' for an answer, do you?"
-    show BBW haughty
-    BBW "I'm a Nikumaru. A 'No' to me is just another obstacle to overcome."
+label WG006_c2:
+    $setFlag("WG006_C2_1")
+    MC "I can play a little, but it’s been a while."
+    WG "Oh? What instrument?"
+    MC "Piano, my mom had me take lessons as a kid. I played for a number of years. I was never that fantastic, but I still know a thing or two."
+    WG "Really? Is that so? I have some time before my audition. Surely one of these practice rooms is open."
+    show WG haughty
+    WG "I’m a firm believer that talent can blossom anywhere when given a guiding hand. Why don’t you show me what you can do?"
+
+    scene Music Classroom with fade
+    show WG neutral
+    MCT "What have I gotten myself into? I don’t want to embarrass myself this early on in the school year in front of a girl."
+    MCT "Nevermind, it’ll be fine, just do what you know you can do, man."
+    WG "Well, don’t keep me waiting now."
+    MC "Right, uh, here goes."
+    play music Gymnopedie
+    pause 10
+    stop music fadeout 1.0
+    show WG surprised-2
+    $setAffection("WG", 1)
+    WG "Keisuke, this sounds lovely."
+    MC "Oh? I’m glad you like it. It’s kind of a simple song to be honest."
+    show WG neutral
+    MC "If you notice I’m not having to use both hands at the same time too often. I guess I know it still because I practiced it over and over while starting to learn how to use both hands at once."
+    show WG happy
+    WG "Sometimes simple can be elegant."
+    MC "True, it was one of my favorites to play. I’m glad I still remember it."
+    show WG neutral-2
+    WG "There is a saying, amateurs practice until they can get it right, but professionals practice until they can’t get it wrong."
+    WG "It seems you certainly must have put your time in to learn this piece even if it’s been a while for you."
+    MC "Yeah! Heh, I guess you’re right."
+    $setSkill("Art", 1)
+    MC "Thanks for encouraging me to take a crack at it again, Alice. This was fun."
+    play music Peaceful
+    WG "Think nothing of it, as I said before I feel it is my duty to encourage and nurture talent wherever I find it."
+    MC "Well, don’t let me get your hopes up. That’s probably about the extent of my musical abilities. I’m much better at drawing and design. I want to be an architect some day."
+    WG "How interesting. It’s good to know you have your own ambitions."
+    "Given my affinity towards hitting the snooze button as often as humanly possible, I can’t say that I considered myself ambitious, but hearing that insinuation coming from Alice did make me feel pretty good."
+    MC "Speaking of ambitions, I forgot to ask earlier, does anybody here catch your eye? Or ear, I should say, that you’d be interested in \"nurturing\"?"
+    show WG worried
+    WG "Not in particular, no, but it's too soon to say."
+    show WG neutral
+    WG "None of them are masters, so finding the seed of potential requires a deeper look. I'll need to sit in on a few more meetings, to make a proper evaluation."
+    show WG haughty
+    "After her initial answer, Alice perked up slightly, eyeing me up and down for a brief, but still rather extended period of time."
+    "I began to suspect I might have inadvertently directed my question towards myself."
+    WG "Hmm, yes still too soon to tell I’m afraid."
+    show WG neutral
+    WG "Well I must be going. My audition is soon and I need to focus. Thank you for the brief, but pleasant concertino, Keisuke."
+    WG "Might I suggest you continue to practice? I hope you will consider doing so. I will be seeing you around."
+    jump WG006_afterchoice
+
+label WG006_afterchoice:
+    scene black with fade
+    pause 2
+    scene Hallway2 with fade
+    "The next day, taking Alice’s advice to heart, I found myself walking towards the music rooms after classes."
+    if getFlag("WG006_C1_1"):
+        "She did have a point after all. I have always kind of felt a little bit of guilt from not sticking with playing piano after all those years of lessons."
+    elif getFlag("WG006_C2_1"):
+        "Having gotten to play again for the first time in quite a few years, I remembered that at times I did actually enjoy it. Plus, it seemed like something Alice enjoyed, which felt encouraging."
+    WG "This is absolutely outrageous!"
+    MCT "I think I know that voice by now, sounds like she’s not happy about something."
+    "The piano could wait, I had to go see what the commotion was about."
+    show WG angry
+    show PRG sad-2
+    WG "It is repugnant and absurd! I am the clear choice to lead this ensemble with my years of experience and perfect pitch."
+    "Something told me Alice’s audition might not have gone as well as her initial confidence would have led me to believe."
+    MC "Is everything okay, Alice? I heard you yelling down the hall, you sound pretty upset."
+    show WG stern
+    WG "Hmph, I suppose I should compose myself more properly if my voice is carrying as far as you suggest, but to answer your question: NO, everything is not okay."
+    PRG "{size-6}Alice… was not selected as the music club president.{size-6}"
+    MC "I’m sorry to hear that, I know you were pretty set on that based on what you said yesterday. I meant to ask how your audition went, but it sounds like…"
+    show WG haughty
+    WG "My audition went flawlessly, thank you for asking. So much so I was selected among the top seats to be considered for club president."
+    show WG angry
+    WG "But when it came time for members to vote for the club president between the top seats, I only received one vote! Unbelievable!"
+    "Something told me I already knew who casted that single vote for Alice."
+    WG "Mizawa-san has undeniable talent, but I’ve seen her audition performance, and she doesn’t hold a candle to me!"
+    MC "Well, that may be the case, but maybe her talent isn’t why people voted for her."
+    show WG doubt
+    WG "That doesn’t make any sense. Why would someone want to do that, rather than benefit from someone who’s superior skills could serve to nurture their own?"
+    "Alice’s condescending tone regarding the subject matter told me everything I needed to understand about why no one else voted for her."
+    show WG haughty
+    WG "But still, you do have a point. That is the only logical conclusion, they apparently voted for her based on some other criteria…"
+    WG "Tsk, such a glaringly obvious lapse in judgment on their part. I’ll simply have to make it clear to everyone that I am the superior choice to lead the club."
+    WG "I’m sure this situation will be rectified in a short order once my full talents are put on display and unavoidably apparent to the entire club."
+    "Just when I thought I might have gotten through to Alice about how her attitude might rub some people the wrong way, it seemed broaching the subject had only served to entrench her present disposition even further."
+    show WG neutral
+    WG "Well there’s no need to dwell on this further, now that a present course of action has been decided on."
+    WG "Discussing this issue with you Keisuke has proved quite enlightening, thank you for that."
+    MC "Uhhh, you’re welcome?"
+    MCT "I guess."
+    WG "Where are you off to if you don’t mind me asking?"
+    MC "Oh, I was just going to practice a bit, after yesterday you got me thinking I should probably start picking up music again."
+    show WG neutral-2
+    WG "I’m glad to hear that. Well, I will leave you to it. Have a good evening Keisuke."
     jump daymenu
 
-label BBW006_c2:
-    MC "I've practiced a little, but I'm not really talented."
-    BBW "Oh? What instrument?"
-    MCT "Immediate regret setting in. What's an impressive instrument?"
-    MC "Uh... Violin. I've had a few lessons, but I'm no, you know, virtuoso."
-    stop music
-    BBW "None of the students here are, if the music club is any indicator. But talent can blossom anywhere when given a guiding hand. Show me what you can do."
-    MC "Here? Now? Are you sure it's OK to use the club's instruments?"
-    BBW "Of course. The instruments belong to the school, and we're students."
-    MC "All right."
-    if getSkill("Art") > 3:
-        "I played a few strings in sequence. Nothing that required real skill, but it was a pleasant sounding tune."
-        BBW "Not bad."
-        show BBW happy
-        $setAffection("BBW", 1)
-        BBW "You should keep practicing, you could definitely make the music club if you really wanted to."
-        BBW "I'll see you in class, Keisuke."
-        hide BBW with dissolve
-        "And with that, she took her leave."
-        jump daymenu
-    "I squeaked out a few sharp chords that sounded like someone stroking a balloon. Alice's thoughts were too easy to read as she grimaced in pain."
-    show BBW angry
-    BBW "Enough!"
-    MC "Sorry. It's been a while since I've practiced."
-    show BBW neutral
-    $setAffection("BBW", -1)
-    BBW "Maybe I shouldn't have expected much. You... You might have some skill. Some day."
-    hide BBW with dissolve
-    "She wasn't disappointed, but as she turned away I could tell she was let down."
-    jump daymenu
-
-label BBW006_c3:
-    MC "I don't mean to brag, but I'm a pretty skilled musician."
-    MCT "Oh dear god, why did I say that? I can't even play the triangle."
-    BBW "Really? Which instruments do you favor?"
-    MCT "Instruments? Plural? Oh, jeez..."
-    MC "I mostly play... violin. But I also toy with the oboe."
-    MCT "Sure, let's keep lying."
-    BBW "The violin? It wouldn't take much to outshine the other students here, but how experienced are you? Have you had many public performances?"
-    MCT "Fix this, you dolt. Now!"
-    MC "I've never performed in front of an audience. I don't have the nerves for it. Just a lot of practice in private."
-    BBW "All that practice must have been worth something. Show me what you can do."
-    if getSkill ("Art") > 3:
-        stop music
-        "She handed me a violin and I played a few notes in sequence. It was pleasant sounding but far below the level I had gloated about."
-        show BBW angry
-        BBW "Keisuke. That was..."
-        show BBW neutral
-        BBW "Look, having pride in your work is one thing but it has to be pride to an accurate level. Bragging about that which you do not possess will not take you far in life at all."
-        $setAffection("BBW", -1)
-        BBW "Keep at it. Maybe one day you'll be able to claim you are that good and actually mean it."
-        BBW "I'll see you in class."
-    stop music
-    "And before I could say anything she was thrusting one of the club's violins into my hands."
-    "This was too fast for me to deal with, I couldn't think of anything to say to get out of it. So, nervously, I put the violin under my chin like I had seen people do in movies and I tried stroking the bow back and forth."
-    "The disgust on Alice's face was immediate, and I couldn't blame her. If the violin was a living being I would have been arrested for animal cruelty. But I still thought I could fake it if I could, I don't know, figure out how to stroke the chords right."
-    show BBW angry
-    BBW "Stop! Stop!"
-    MC "Sorry. It's been a while since I-"
-    $setAffection("BBW", -3)
-    BBW "Learned how to tune it properly? I don't know what kind of goofing off you think constitutes 'practice,' but you should keep this musical torture private."
-    hide BBW with dissolve
-    "And she stormed off. Which, considering her mood, may have been preferred."
-    jump daymenu
 
 label BBW007:
     $setProgress("BBW", "BBW008")
