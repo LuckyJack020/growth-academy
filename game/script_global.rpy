@@ -1003,13 +1003,21 @@ image HR neutral = "Graphics/minor/HR-neutral.png"
 image HR annoyed = "Graphics/minor/HR-neutral.png"
 
 #legalsizes already updated, change images when bigger sprites exist
-image Tomoko annoyed = "Graphics/minor/tomoko-annoyed.png"
-image Tomoko distracted = "Graphics/minor/tomoko-distracted.png"
-image Tomoko neutral = "Graphics/minor/tomoko-neutral.png"
-image Tomoko happy = "Graphics/minor/tomoko-happy.png"
-image Tomoko surprised = "Graphics/minor/tomoko-surprised.png"
-image Tomoko sad = "Graphics/minor/tomoko-sad.png"
-image Tomoko unique = "Graphics/minor/tomoko-unique.png"
+image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-annoyed.png")
+image Tomoko distracted = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-distracted.png")
+image Tomoko neutral = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-neutral.png")
+image Tomoko happy = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-happy.png")
+image Tomoko surprised = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-surprised.png")
+image Tomoko sad = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-sad.png")
+image Tomoko unique = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-unique.png")
+
+image Tomoko casual-annoyed = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-annoyed.png")
+image Tomoko casual-distracted = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-distracted.png")
+image Tomoko casual-neutral = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-neutral.png")
+image Tomoko casual-happy = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-happy.png")
+image Tomoko casual-surprised = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-surprised.png")
+image Tomoko casual-sad = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-sad.png")
+image Tomoko casual-unique = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-unique.png")
 
 image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
 image Ryoko happy = "Graphics/minor/ryoko-happy.png"
