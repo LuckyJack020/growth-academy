@@ -1,353 +1,363 @@
-label BBW001:
-    $setProgress("BBW", "BBW002")
+label WG001:
+    $setProgress("WG", "WG002")
     scene Cafeteria with fade
     play music Busy
-    MC "Well! That was... a first day. I didn't expect the school to be exactly like my old one, but on a list of unexpected surprises I didn't think..."
-    MC "OK, I guess I couldn't have expected it for it to be a surprise."
-    extend " But still, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised."
-    MC "At least food is familiar enough. A nice snack after class is normal, right?"
-    UNKNOWN "I'm sorry, you must not realize who you're talking to."
-    MC "I wonder who that is."
-    "Standing near the doors leading to the kitchen itself was the heavyset girl from my class. There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
-    show BBW angry at center with dissolve
-    BBW "The name is Alice Nikumaru."
-    BBW "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
-    extend " A missive to let you all know that I am here and that special accommodations to satisfy me would be instituted."
+    MC "Well! That was... a first day. I didn't expect the school to be exactly like my old one, but this was almost surreal. I mean, seriously, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised."
+    MC "...which isn't too far off from what actually happened, now that I think about it."
+    MC "I could use a bit of normal right now. A nice snack after class is normal, right?"
+    UNKNOWN "I'm sorry, but you must not realize who you're talking to."
+    MC "That voice sounds familiar..."
+    "Standing near the doors leading to the kitchen itself was the heavyset girl with the blonde curles from my class. There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
+    show WG angry at center with dissolve
+    WG "The name is Alice Nikumaru."
+    WG "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
+    WG "Surely you received the instructions sent in advance of my arrival concerning the specific accommodations I require."
     Lunch "If you have an allergy or other dietary need, I would have been told."
-    show BBW angry at Position(xpos=0.4) with dissolve
-    BBW "You there. Tell... Madame Hairnet here who I am."
+    show WG angry at Position(xpos=0.4) with dissolve
+    WG "You there! Um, I apologize but your name eludes me at the moment."
+    MC "Keisuke Hotsure."
+    WG "Yes, Keisuke- I remember now. Please...tell Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
-    show BBW haughty at center with dissolve
-    BBW "I am THE student, as far as you are concerned. You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
-    MCT "You didn't hear the part about me being in your class, did you?"
-    BBW "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
-    BBW "François here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
+    show WG haughty at center with dissolve
+    WG "Ergg, this isn't really helping. Look, how else can I explain this-"
+    WG "You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
+    WG "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
+    WG "François here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
     Lunch "We make enough food for even the fat kids. Don't worry, you'll get your share."
-    show BBW angry
-    BBW "I am NOT some 'fat kid'. I am not even obese."
-    show BBW neutral at Position(xpos=0.6) with dissolve
-    BBW "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that you - as qualified for this job as you may be - cannot meet."
-    show BBW neutral at Position(xpos=0.25) with dissolve
-    BBW "Now, I've already gone to the trouble of ordering the equipment you probably don't have - wood-fire pizza oven, rotisserie, espresso machine, meat smoker; just a few odds and ends..."
-    show BBW neutral at Position(xpos=0.4) with dissolve
-    BBW "But he will need, say, 20%% of your workspace emptied out and handed over to him."
+    show WG angry
+    WG "I am NOT some 'fat kid'. I am not even obese."
+    show WG neutral at Position(xpos=0.6) with dissolve
+    WG "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that this facility in its current state - cannot meet."
+    show WG neutral at Position(xpos=0.25) with dissolve
+    WG "Now, I've already gone to the trouble of ordering the equipment you probably don't have - wood-fire oven, rotisserie, espresso machine, meat smoker; merely the basics required to craft fine cuisine..."
+    show WG neutral at Position(xpos=0.4) with dissolve
+    WG "But François will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
-    show BBW happy at center
-    BBW "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
-    MCT "Oh, is that all? Your own private chef and special deliveries every day? Just how loaded is this girl?"
-    Lunch "Students don't get to bring private chefs with them, princess. Non-faculty don't get access to our kitchen or any other facilities on campus. Either you can take what we offer you, or you can make your own meals in the Home Ec classes."
-    show BBW angry
-    BBW "What? François cannot perform at his best in a classroom kitchen. He needs a full assemblage of utensils and appliances-"
-    Lunch "I said you can make your meals."
+    show WG happy at center
+    WG "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
+    MCT "Bringing along her own private chef and taking over a fifth of the kitchen? Just how loaded is this girl?"
+    Lunch "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus. Either you can take what we offer you, or you can make your own meals in the Home Ec classes."
+    show WG angry
+    WG "What? François cannot perform at his best in a classroom kitchen. He needs a full assemblage of utensils and appliances-"
+    Lunch "I said {i}you{/i} can make your meals."
     extend " Yourself."
-    show BBW haughty
-    BBW "Do you really expect me to subject my dainty hands and creamy skin to the raw ingredients that come with making a three-star meal?"
-    BBW "Do you have any idea how much this manicure costs? What would handling an ox tongue or a raw Cornish game hen do to it?"
+    show WG haughty
+    WG "What!? That notion is absurd. It takes years of culinary study and experience to achieve the level of skill required to satisfy my fine pallet."
+    WG "I can’t be expected to devote adequate time to my studies if I am preoccupied with culinary pursuits. That is all the more ridiculous in light of the fact that François is already here."
     Lunch "If you don't get out of my kitchen in the next five seconds, you'll be dunking that expensive manicure in cold, greasy dishwater as I have you scrubbing every pot and pan we have."
-    show BBW angry
+    show WG angry
     stop music
-    BBW "You... You wouldn't."
+    WG "You... You wouldn't."
     Lunch "You wouldn't be the first student punished with kitchen duty."
-    BBW "Very well, but this is not the end. A Nikumaru does not give up."
-    show BBW neutral at Position(xpos=0.4) with dissolve
-    play music BBW
-    BBW "Did you see that?"
-    MCT "Did you forget that you talked to me not two minutes ago?"
+    WG "Very well, but this is not the end. A Nikumaru does not give up."
+    show WG neutral at Position(xpos=0.4) with dissolve
+    play music WG
+    WG "Did you see that? {w} Can you believe that? Erm, Keisuke was it?"
+    MC "Yeah."
+    WG "Right. Argh! The nerve of that woman. She doesn't know who she's dealing with."
     menu:
         "Yeah. Typical hard-ass school employee, being cruel for the sake of it.":
-            jump BBW001_c1_1
+            jump WG001_c1_1
         "That was kind of harsh. She could at least have tried to work something out with you.":
-            jump BBW001_c1_2
+            jump WG001_c1_2
         "I've heard of spoiled little girls, but your own private chef? That's a whole new level.":
             MC "I've heard of spoiled little girls, but your own private chef? That's a whole new level."
-            BBW "Is it 'spoiled' to have the best that money can buy? I am Alice Nikumaru."
-            jump BBW001_c1_after
+            WG "Is it 'spoiled' to have expectations beyond the mundane? After all, I offered to provide everything. No one is inconvenienced by my reasonable request."
+            jump WG001_c1_after
 
-label BBW001_c1_1:
+label WG001_c1_1:
     MC "Yeah. Typical hard-ass school employee, being cruel for the sake of it."
-    show BBW haughty
-    BBW "Maybe this is how they do it at lesser institutions, but in my experience schools exist for the betterment of the students."
-    extend " If this is a taste of how this place operates, perhaps transferring is the sensible thing. There must be other schools that can handle my needs."
-    MC "I guess if you can have a private chef, you can also have a private tutor."
+    show WG haughty
+    WG "Maybe this is how they do it at lesser institutions, but in my experience schools exist for the betterment of the students."
+    extend " If this is a taste of how this place operates, perhaps a more subtle work around is needed in order to properly see that my accommodations are met."
+    MCT "I wasn't sure what to make of what she just said, but if this was any indication, Alice doesn't seem the type to give up on anything so easily."
     jump daymenu
 
-label BBW001_c1_2:
+label WG001_c1_2:
     MC "That was kind of harsh. She could at least have tried to work something out with you."
-    BBW "Absolutely. Life is filled with give and take, and she wouldn't even come to the negotiating table. How is it that so many people cannot understand the basics of business deals?"
+    WG "Absolutely. Life is filled with give and take, and she wouldn't even come to the negotiating table. How is it that so many people cannot understand the basics of business deals?"
     MC "Fancy yourself something of a business-woman, eh?"
-    show BBW happy
-    BBW "I know a lot about how the world works. It's an inherited trait."
-    jump BBW001_c1_after
+    show WG happy
+    WG "I know a lot about how the world works. It's an inherited trait."
+    jump WG001_c1_after
 
-label BBW001_c1_after:
-    show BBW neutral
-    BBW "Perhaps you've heard of my father, Daitaro Nikumaru?"
+label WG001_c1_after:
+    show WG neutral
+    WG "Perhaps you've heard of my father, Daitaro Nikumaru?"
     menu:
-        "Daitaro... Isn't he some sort of businessman?":
-            jump BBW001_c2_1
-        "Oh, yeah! He's the guy who plays in that traveling jug band, isn't he?":
-            jump BBW001_c2_2
+        "Daitaro...Nikumaru...Isn't he some sort of businessman?":
+            jump WG001_c2_1
+        "Uh, can't say that I have...should I?":
+            jump WG001_c2_2
 
-label BBW001_c2_1:
+label WG001_c2_1:
     MC "Daitaro... Isn't he some sort of businessman?"
-    show BBW happy
-    BBW "Not just 'some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
+    show WG happy
+    WG "Not just 'some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
     MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install François as head chef?"
-    show BBW neutral with dissolve
-    BBW "Such a simple thought. Just because you {i}can{/i} buy something, my dear boy, does not mean you should. Not all investments are worth the trouble."
-    hide BBW
-    MC "D-Did she actually take my joke seriously?"
+    show WG neutral with dissolve
+    WG "Tsk. Such a simple thought. Just because you {i}can{/i} buy something, my dear boy, does not mean you should. Not all investments are worth the trouble."
+    hide WG
+    MCT "Did she really just call me her \"dear boy\"?"
     jump daymenu
 
-label BBW001_c2_2:
-    MC "Oh, yeah! He's the guy who plays in that traveling jug band, isn't he?"
-    show BBW angry
-    BBW "*scoff* Is there not a single ounce of class or breeding in this place?"
-    hide BBW
-    MC "I'd settle for an ounce of humor."
+label WG001_c2_2:
+    MC "Uh, can't say that I have...should I?"
+    show WG angry
+    WG "*scoff* Is there not a single ounce of class or breeding in this place?"
+    WG "As a matter of fact, you should. He is the leader of the heavy manufacturing industry in Japan. His meteoric rise to success should be an inspiration to everyone."
+    MC "Is that so? That does sound pretty impressive actually."
+    WG "Quite the understatement if anything, but at least now you know."
+    hide WG
+    MCT "Just how rich is this girl then? I'm kinda afraid to find out now."
     jump daymenu
 
-label BBW002:
-    $setProgress("BBW", "BBW003")
+label WG002:
+    $setProgress("WG", "WG003")
     scene Cafeteria with fade
     play music Schoolday
-    MCT "This place seems kind of quiet for a high school cafeteria. Everyone's so subdued, it's like someone died. Guess I'm not the only one who was thrown for a loop by yesterday's news."
+    MCT "This place seems kind of quiet for a high school cafeteria. Everyone seems so dejected. The whole atmosphere feels so unnerving without the usual chatter in the background. Guess I'm not the only one who was thrown for a loop by yesterday's news."
     MCT "We're all probably wondering the same thing: what's going to happen to me? How... big am I going to get? Am I going to end up like one of those people who can't live in normal society?"
-    MCT "Ugh, this is too heavy for first thing in the morning. Let's just get something to eat and take the day as it goes."
+    MCT "Ugh, this is too heavy for first thing in the morning. I guess I'll just get something to eat and take the day as it goes."
     MCT "..."
-    MCT "Now to find a table. Oh! There's Alice, eating by herself. I don't think she'd mind if I joined her."
+    MCT "Now to find a table... Oh! There's Alice, eating by herself. I hope she won't mind if I joined her."
     "I found Alice sitting at a table, a few plates and bowls of food in front of her. She looked unimpressed by the spread."
-    show BBW neutral at center with dissolve
+    show WG neutral at center with dissolve
     MC "Mind if I join you?"
-    BBW "Be my guest. Perhaps you could help me with something."
+    WG "Be my guest. Perhaps you could help me with something."
     MC "Uh, sure! What's on your mind?"
+    "A little perplexed by her proposition tacked on to her invitation, I plopped my tray down and took my seat across from her."
     "Alice held up a fork with a piece of fish on it."
-    BBW "This fish. There's something familiar about it."
+    WG "This fish. There's something familiar about it."
     MC "It's mackerel. Fish is a common part of Japanese breakfasts."
-    show BBW haughty
-    BBW "I know that. I've lived here for most of my life. And 'common' may be the best word for what I am eating. I would never have known what this uninspired morsel was if you hadn't told me."
-    "She ate the forkful of fish, her face displaying bland disgust."
-    BBW "So tell me this: why, when there are literally hundreds of ways of turning even as pedestrian a choice as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber?"
-    BBW "Is it because they are just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
-    MC "I don't know. Grilled mackerel's pretty good."
-    BBW "I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze, something. But I guess that's too much to ask. Just slap it on a grill, turn it after a minute, job's done, right?"
-    show BBW neutral
-    BBW "Perhaps I should find out who is supplying seafood to this school and have Father undercut them. We could get some decent food in here without profits being too razor thin."
-    MCT "Please don't talk about your father influencing the school with his wealth. I don't know if you're joking or if you actually will try it."
-    jump BBW002_prechoice
+    show WG haughty
+    WG "I know that. I've lived here for most of my life, I'll have you know. And 'common' is certainly the word for what I am eating- perhaps 'bland' would be more accurate. I would never have known what this uninspired morsel was if you hadn't told me."
+    "She ate the forkful of fish, her face displaying exasperated disappointment."
+    WG "So tell me this: why, when there are literally hundreds of ways of turning something even as pedestrian as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber?"
+    WG "Is it because they are lazy or just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
+    MC "I guess you have a point. I’ve certainly had better. I suppose after all this time I just don’t have high expectations for cafeteria food."
+    WG "But why should you? Or anyone else for that matter? I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze- {i}something{/i}. Honestly, it isn't too much to ask. But no, just slap it on a grill, turn it after a minute, job's done- completely blasé."
+    jump WG002_prechoice
 
-label BBW002_prechoice:
+label WG002_prechoice:
     menu:
-        "What do you normally have, if not mackerel?" if not getFlag("BBW002_c1_1"):
-            jump BBW002_c1_1
-        "What do you normally have, if not mackerel? (disabled)" if getFlag("BBW002_c1_1"):
+        "What do you normally have, if not mackerel?" if not getFlag("WG002_c1_1"):
+            jump WG002_c1_1
+        "What do you normally have, if not mackerel? (disabled)" if getFlag("WG002_c1_1"):
             pass
         "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once.":
-            jump BBW002_c1_2
+            jump WG002_c1_2
         "(Change the subject) So, how about that news about why we're here? How are you taking that?":
-            jump BBW002_c2_1
+            jump WG002_c2_1
 
-label BBW002_c1_1:
-    $setFlag("BBW002_c1_1")
+label WG002_c1_1:
+    $setFlag("WG002_c1_1")
     MC "What do you normally have, if not mackerel?"
-    BBW "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries in cream, and a croissant. Maybe a poached egg. I'm very particular about my breakfast; a heavy meal to start the day can leave me feeling lethargic for hours."
+    WG "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries and cream, and a croissant. Maybe a poached egg. I'm very particular about my breakfast- a heavy meal to start the day can leave me feeling lethargic for hours."
     "She picked up her mug and drank from it, showing the same mild disgust."
-    show BBW angry
-    BBW "And this is not coffee. I'll have to call Mother later, have her send my French press here."
-    BBW "I suppose it was foolish of me to think this place would have proper coffee, but I was told this was an exclusive institution. So far the only thing 'exclusive' is the most uninspired menu I have ever encountered. Is this what you eat every day?"
-    jump BBW002_prechoice
+    show WG angry
+    WG "And this is not coffee. I'll have to call Mother later, have her send my French press here."
+    WG "I suppose it was foolish of me to think this place would have proper coffee, but I was told this was an exclusive institution. So far the only thing 'exclusive' is the most uninspired menu I have ever encountered. Is this what you eat every day?"
+    jump WG002_prechoice
 
-label BBW002_c1_2:
+label WG002_c1_2:
     MC "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once."
-    show BBW neutral
-    BBW "All the more reason to let me have François on hand. It's unnecessary to force every student here to subsist on this food, and to have someone like me - someone accustomed to a certain standard - suffer this becomes downright cruel."
-    MC "It's not that bad. I've had better, but I've definitely had worse."
+    show WG neutral
+    WG "All the more reason for them to let me have François on hand. It's unnecessary to force every student here to subsist on this uninspired fair. I in particular, am accustomed to a certain standard of cuisine- this menial effort to provide us with sustenance is wholly insufficient, to even try to put it politely."
+    MC "Aw, it's not that bad. I've had better, but I've definitely had worse."
     MCT "Besides, you managed to clear your plates."
-    show BBW haughty
-    BBW "You must not have had much better than this, but trust me when I say that offering this to my refined palate is like substituting Mascagni with... I don't know, some vulgar pop diva."
+    show WG haughty
+    WG "Perhaps it is serviceable for your needs, but as for me, it simply won't do. Trust me when I say that offering this to my refined palate is like substituting Mascagni with... I don't know, some vulgar pop diva."
     MCT "I don't know who Mascagni is."
     menu:
         "(Change the subject) So, how about that news about why we're here? How are you taking that?":
-            jump BBW002_c2_1
+            jump WG002_c2_1
         "Other than the food, what do you think of this place?":
-            jump BBW002_c2_2
+            jump WG002_c2_2
 
-label BBW002_c2_1:
+label WG002_c2_1:
     MC "So, how about that news about why we're here? How are you taking that?"
-    show BBW neutral
-    BBW "I have never encountered a problem I could not deal with. Whatever sort of... mutation I am about to experience, I will handle it with grace and composure. You will not see me sobbing or wailing my misfortune."
+    show WG neutral
+    WG "I have never encountered a problem I could not deal with. Whatever sort of... growth I am about to experience, I will handle it with grace and composure. You will not see me sobbing or wailing my misfortune."
     MC "Hmm-mmm. You have any idea what it might be? Or if they even know?"
-    BBW "I haven't the slightest."
-    show BBW neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
-    MC "Yeah, it's a puzzle. Anyway..."
-    show BBW neutral at center, Transform(zoom=1.0)
-    jump BBW002_c2_2
+    WG "I haven't the slightest."
+    show WG neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
+    MC "Yeah, it's a mystery for sure. Anyway..."
+    show WG neutral at center, Transform(zoom=1.0)
+    jump WG002_c2_2
 
-label BBW002_c2_2:
+label WG002_c2_2:
     MC "Other than the food, what do you think of this place?"
-    show BBW neutral
-    BBW "I haven't formed an opinion yet, but my expectations are dropping rapidly. First the unwelcome surprise of this school's true purpose, then the matter of the food. And, of course, being denied the privilege of my servants."
-    show BBW angry
-    BBW "The term has begun with me being hobbled, almost as if they want me to flounder."
+    show WG neutral
+    WG "I haven't formed an opinion yet, but my expectations are dropping rapidly. First the unwelcome surprise of this school's true purpose, then the matter of the food. And, of course, being denied the privilege of my servants."
+    show WG angry
+    WG "The term has begun with me being hobbled, almost as if they want me to flounder."
     menu:
-        "Do you really need someone to carry your books? Is that beneath you?":
-            jump BBW002_c3_1
+        "Well, it's probably not fair to the other students to allow you to have extra help.":
+            jump WG002_c3_1
         "I'm sure you can get by without a butler or whatever.":
-            jump BBW002_c3_2
+            jump WG002_c3_2
 
-label BBW002_c3_1:
-    MC "Do you really need someone to carry your books? Is that beneath you?"
-    show BBW haughty
-    $setAffection("BBW", -1)
-    BBW "Your jealousy is so transparent. Go ahead and mock my situation, as children always make light of what they don't understand. If you had even the basic conception of culture and breeding you would understand how this all degrades me."
-    hide BBW
-    MCT "I was just teasing..."
+label WG002_c3_1:
+    MC "Well, it's probably not fair to the other students to allow you to have extra help."
+    show WG haughty
+    $setAffection("WG", -1)
+    WG "Forcing me to come to this school and then denying me the use of my resources afforded at no cost to the school isn’t going to help anyone, but it certainly is an inconvenience to me."
+    WG "How would bringing on my servants to assist me in my daily tasks put others at a disadvantage? I am not precluding others from doing so themselves, unlike the school."
+    hide WG
+    MC "Well, that's one way of looking at it, I guess."
     jump daymenu
 
-label BBW002_c3_2:
-    $setFlag("BBW002_c3_2")
+label WG002_c3_2:
+    $setFlag("WG002_c3_2")
     MC "I'm sure you can get by without a butler or whatever. I get that you're used to having... help. I'm going to guess that you've gone to private academies, right? Elite places that take care of fewer students."
-    show BBW haughty
-    BBW "I have attended only the best schools in America and Japan. Yes, this place is... different from them. There are a lot more people, for one."
+    show WG haughty
+    WG "I have attended only the best schools in America and Japan. Yes, this place is... different from them. There are a lot more people, for one."
     MC "But you're not the only one adjusting. I mean, we've all been thrown into it without warning, and none of us know what the future holds."
     MC "Maybe you should reach out to some of the other students. Someone in our class might help you deal with this upheaval. Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
-    show BBW neutral
-    BBW "You do have a point. The uncertainty we are all experiencing is a common ground I can exploit."
-    MCT "Exploit?"
-    BBW "Thank you, Hotsure-san. You've given me something to think about."
-    hide BBW
-    MC "Well that ended abruptly. Maybe if I'd been more direct..."
+    show WG neutral
+    WG "Hmmm, you do have a point. No sense in wallowing in self-pity over my unfortunate predicament. I believe there is always a workaround if you are determined enough to find one."
+    MC "See, there ya go."
+    WG "Thank you, Hotsure-san. You've given me something to think about."
+    $setAffection("WG", 1)
+    hide WG
+    MC "Well that ended abruptly. Not sure what she meant by all of that though."
     MC "Wait, did she actually remember my name?"
     jump daymenu
 
-label BBW003:
-    $setTimeFlag("testday")
-    $setProgress("BBW", "BBW006")
+label WG003:
+    $setProgress("WG", "WG004")
     scene Hallway with fade
     MC "I think the library is this way? Maybe? Wait, that bulletin board doesn't look familiar..."
     MC "Ah! I was supposed to turn left back there."
     UNKNOWN "Amazing!"
-    MC "Oh? I know that voice."
+    MC "Oh? I think I know that voice."
     scene Cooking Classroom with fade
     play music Busy
-    show BBW happy at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Simply superb. Where did you study?"
-    show PRG neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    show WG happy at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Simply superb. Where did you study?"
+    show PRG neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) behind WG with dissolve
     PRG "I didn't. I just sort of... taught myself."
-    BBW "So modest. These are fantastic."
+    WG "So modest. These are fantastic."
     show PRG happy
-    PRG "Oh! K-Keisuke!"
-    show BBW neutral
-    BBW "Hmm? Hotsure-san, what brings you here?"
+    PRG "Oh! Hotsure-san!"
+    show WG neutral
+    WG "Hmm? Hotsure-san, what brings you here?"
     MC "I was walking by and overheard you two. What's supposed to be so awesome?"
-    show BBW happy
+    show WG happy
     show PRG neutral
-    BBW "This soufflé Kodama-san has prepared. I've seen enough of Japan's attempts to mimic French cuisine to know to lower my expectations, but this is surprising."
+    WG "This soufflé Kodama-san has prepared. I've had more than my share of disappointment with what passes for French cuisine in Japan, but this is delightfully surprising."
     menu:
         "Oh, is it really that good?":
-            jump BBW003_c1_1
+            jump WG003_c1_1
         "Can I try some?":
-            jump BBW003_c1_2
+            jump WG003_c1_2
         "Aida, I didn't know you were a cook.":
             MC "Aida, I didn't know you were a cook."
-            jump BBW003_c1_3
+            jump WG003_c1_3
 
-label BBW003_c1_1:
+label WG003_c1_1:
     MC "Oh, is it really that good?"
-    show BBW neutral
-    BBW "It's all relative. I wouldn't tell her to open up a bakery, but for a high school student working with the ingredients and facilities on hand, this is almost revelatory. I can see my judgment was sound as ever to invite her into service."
+    show WG neutral
+    WG "Well, it's not to say you would find it on a dessert menu of a five-star restaurant, but for a high school student working with the ingredients and facilities on hand, this is almost revelatory. I can already see my judgment was sound as ever to invite her into my service."
     MC "Invite who?"
-    BBW "Kodama-san, of course. It almost seems destined that my roommate would turn out to be perfectly suited to act as my right-hand woman during my time at this school."
+    WG "I would have thought our previous discussions made it clear that I am in need of a reliable assistant, since the school in its short-sightedness has prohibited me from allowing my servants to accompany me."
+    WG "Despite this setback I have found a workable solution. Fortunately, it almost seems destined that my roommate would turn out to be perfectly suited to act as my right-hand woman during my time at this school."
     MC "I think I missed something."
-    if getFlag("BBW002_c3_2"):
-        BBW "What do you mean? It was your own idea that I should seek help among our classmates. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
+    if getFlag("WG002_c3_2"):
+        WG "What do you mean? It was your own idea that I should seek help among our classmates. And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "I wasn't really suggesting you find a maid..."
+        WG "Assistant."
+        MC "Erm, yes- that."
     else:
-        BBW "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to flail around on my own."
-        BBW "And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
+        WG "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to shoulder all of their usual duties onto myself."
+        WG "And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "Seems like you're asking a bit much of your roommate."
-    show BBW happy at center with dissolve
-    BBW "Nonsense, Kodama-san is more than qualified to act as my chef, secretary, personal trainer, accountant, media relations manager, bodyguard, chauffeur and interpreter. And she's eager to start right away. Aren't you, Kodama-san?"
+    show WG happy at center with dissolve
+    WG "Nonsense, Kodama-san is more than qualified to act as my personal assistant. And she's eager to start right away. Aren't you, Kodama-san?"
     PRG "Y-yes, ma'am."
     menu:
-        "Is she? I guess that's fortunate for you.":
-            jump BBW003_c2_1
+        "She is? Well, I guess that's fortunate for you.":
+            jump WG003_c2_1
         "So are you paying her, or...?":
-            jump BBW003_c2_2
+            jump WG003_c2_2
         "Aida, do you really just want to be her maid?":
-            jump BBW003_c2_3
+            jump WG003_c2_3
 
-label BBW003_c2_1:
-    MC "Is she? I guess that's fortunate for you."
-    show BBW haughty
-    BBW "It is. I would have survived just fine had I been left to my own devices, but people like me - those of us who are always looking at the big picture and have so many things to worry about - we benefit from having dedicated subordinates."
-    BBW "Having someone to cook for me frees up time and energy I can devote to other things."
-    MC "Like what?"
-    BBW "Anything. My studies, my hobbies, being the glamorous trendsetter that I am."
-    MC "I guess if she's OK helping you, there's nothing wrong with that."
-    BBW "Why wouldn't she be okay? I'm giving her focus and direction, at a time when she needs it most. All of us have been blindsided by the news of this school, and I think the best way to deal with it is to carry on as always. It's what I'm doing."
-    MC "I can't say you're letting all this get to you. Maybe you have something there."
-    show BBW neutral
-    BBW "Of course, I could use more help. It's a full-time job being me, and I'm always looking for people I can count on to help me. Would you be interested in such a position?"
-    MC "I'll... get back to you on that. I need to be somewhere else right now."
-    BBW "Very well, but don't complain if I find someone else in the meanwhile."
-    MCT "I think I'll get by."
-    MCT "There's a big difference between making friends and becoming someone's butler."
+label WG003_c2_1:
+    MC "She is? Well, I guess that's fortunate for you."
+    show WG haughty
+    WG "It is. I would have survived just fine had I been left to my own devices, but people like me - those of us who are always looking at the big picture and have so many things to worry about - we benefit from having dedicated subordinates."
+    WG "Having someone to cook for me frees up time and energy I can devote to other things."
+    MC "What other things do you mean?"
+    WG "Anything. My studies, my hobbies, entrepreneurial pursuits. I'll have you know I'm no slouch- I keep a tight schedule to maximize each day's productivity."
+    MC "I guess if she's okay helping you, then there's nothing wrong with that."
+    WG "Why wouldn't she be okay? I'm giving her focus and direction, at a time when she needs it most. All of us have been blindsided by the news of this school, and I think the best way to deal with it is to carry on as always. After all, it's what I'm doing."
+    MC "Maybe you have something there. You certainly aren't letting all this get to you, like some of the others I've seen."
+    show WG neutral
+    WG "Of course, I could use more help. It's a full-time job being me, and I'm always looking for people I can count on to help me. Would you be interested in such a position?"
+    MC "Well you never know, but I guess I could think about it."
+    MCT "I could probably use the extra money, but I don't know if I need it bad enough to become Alice's personal butler. Sure, she's pretty cute, but I'll be in the friend zone forever if I just fold to her every whim."
+    $setAffection("WG", 1)
+    WG "Very well, but don't complain if I find someone else in the meanwhile."
     jump daymenu
 
-label BBW003_c2_2:
+label WG003_c2_2:
     MC "So are you paying her, or...?"
-    show BBW haughty
-    BBW "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodama-san compensation for her services. And let us leave it at that."
-    MC "Didn't mean to offend."
-    show BBW neutral
-    BBW "I'm sure you didn't, but do be careful in the future. Now, Kodama-san and I have more to discuss, so is there something you need or...?"
-    MC "Don't mind me. I have somewhere else to be right now."
+    show WG haughty
+    WG "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodama-san compensation for her services. And let us leave it at that."
+    MC "Didn't mean to offend. Just wanting to confirm."
+    show WG neutral
+    WG "I'm sure you didn't mean to offend, but do be careful in the future. It is a mutually benficial arrangement. Now, if you please, Kodama-san and I have more to discuss, so is there something you need or...?"
+    MCT "She got a little testy when I raised the issue of Kodama-san's compensation. Better just back out gracefully from this while she's not too irked."
+    MC "Oh, don't mind me. I have somewhere else to get going to. Glad to see you found a solution."
     jump daymenu
 
-label BBW003_c2_3:
-    show BBW neutral
-    MC "Aida, do you really just want to be her maid?"
+label WG003_c2_3:
+    show WG neutral
+    MC "Kodama-san, do you really just want to be her maid?"
     PRG "O-Oh no, it's not like that. Alice- M-Madame Nikumaru is very nice, and I enjoy helping others. I'm just happy to have found a f-friend!"
     MC "Okay... I guess that's one way of looking at it."
-    BBW "Kodama-san is happy with her position, as you can see."
+    WG "Kodama-san is happy with her position, as you can see."
+    $setAffection("WG", -1)
     MC "Yeah. Sure. Happy. Well, I need to get going..."
     jump daymenu
 
-label BBW003_c1_2:
+label WG003_c1_2:
     MC "Can I try some?"
-    BBW "I suppose. There is more than enough here. Try some, and tell me my assessment was wrong."
+    WG "I suppose. There is more than enough here. Try some, and tell me my assessment was wrong."
     menu:
-        "Hey, you're right. This is pretty good.":
-            jump BBW003_c3_1
+        "Hey, you're right, Alice. This is pretty good.":
+            jump WG003_c3_1
         "Aida, this is pretty good.":
             MC "Aida, these are pretty good."
-            jump BBW003_c1_3
+            jump WG003_c1_3
 
-label BBW003_c3_1:
-    MC "Hey, you're right. These are pretty good."
-    show BBW haughty
-    $setAffection("BBW", 1)
-    BBW "Did you think I was being hyperbolic? I don't hand out praise unless it's earned, and even then I'm careful with my words."
-    BBW "I have found in Kodama-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
+label WG003_c3_1:
+    MC "Hey, you're right, Alice. These are pretty good."
+    show WG haughty
+    $setAffection("WG", 1)
+    WG "Did you think I was being hyperbolic? I don't hand out praise unless it's earned, and even then I'm careful with my words."
+    WG "I have found in Kodama-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
     MC "That's pretty generous of you."
-    BBW "I know, but it's the least I can do. It's one of the burdens of the wealthy seldom talked about: the need to foster talent wherever it is found. With my help Kodama-san will become an excellent chef, someone capable of pleasing even my tastes."
-    MCT "And now I'm wondering just how altruistic you are. Still, Aida seems happy with herself, so who am I to butt in?"
+    WG "I know, but it's the least I can do. It's one of the burdens of entrepreneurs, such as myself, that is seldom talked about: the need to foster talent wherever it is found."
+    WG "With my help, Kodama-san will become an excellent chef, someone capable of pleasing even tastes as refined as mine."
+    MCT "I didn't know Alice well enough to gauge just how altruistic her motives really were, but still, Aida seems happy with herself, so who am I to butt in?"
     jump daymenu
 
-label BBW003_c1_3:
+label WG003_c1_3:
     $setAffection("PRG", 1)
     PRG "Ohnoit'snothingspecial. I-I-I just like to make treats and share them with people."
     MCT "Cripes. Is she not used to getting compliments?"
-    BBW "Kodama-san had mentioned that she was thinking of making treats for our classmates, though I think directing her energy to one person, such as myself, is better than any scattershot approach."
+    WG "Kodama-san had mentioned that she was thinking of making treats for our classmates, though I think directing her energy to one person, such as myself, is better than any scattershot approach."
     MCT "Better for who?"
-    BBW "I'm afraid we can't stop and chat. Kodama-san has more training to do if I'm to bring her on as my assistant."
+    WG "It was nice to see you again Hotsure-san, but I'm afraid we can't stop and chat any longer. Kodama-san has more training to do regarding her new duties as my assistant."
     MC "Your assistant?"
-    BBW "Naturally I'll need to find someone to help me now that my personal retinue has been barred from the school. And Kodama-san practically begged me for the position."
-    MCT "Why do I believe things played out a little differently outside your head?"
-    MCT "I'm not up for an argument, though. I should get going."
-    MC "Well, I don't want to interrupt you two..."
-    hide BBW with dissolve
+    WG "Naturally I'll need to find someone to help me now that my personal retinue has been barred from the school. And Kodama-san was eager to take on the position."
+    MCT "I can't help but think things played out a little differently..."
+    MCT "I wasn't exactly up for an argument. Still though, Aida doesn't seem to mind the whole arrangement, so there's not much else to say."
+    MC "Well, I don't want to interrupt you two any further. I'll just be on my way then."
+    hide WG with dissolve
     hide PRG with dissolve
     "As I left I heard Alice giving Aida notes about the texture of the soufflé."
     jump daymenu
