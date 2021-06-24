@@ -16,7 +16,7 @@ label WG001:
     show WG angry at Position(xpos=0.4) with dissolve
     WG "You there! Um, I apologize but your name eludes me at the moment."
     MC "Keisuke Hotsure."
-    WG "Yes, Keisuke- I remember now. Please...tell Madame Hairnet here who I am."
+    WG "Yes, Keisuke— I remember now. Please...tell Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
     show WG haughty at center with dissolve
     WG "Ergg, this isn't really helping. Look, how else can I explain this-"
@@ -27,9 +27,9 @@ label WG001:
     show WG angry
     WG "I am NOT some 'fat kid'. I am not even obese."
     show WG neutral at Position(xpos=0.6) with dissolve
-    WG "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that this facility in its current state - cannot meet."
+    WG "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that this facility in its current state— cannot meet."
     show WG neutral at Position(xpos=0.25) with dissolve
-    WG "Now, I've already gone to the trouble of ordering the equipment you probably don't have - wood-fire oven, rotisserie, espresso machine, meat smoker; merely the basics required to craft fine cuisine..."
+    WG "Now, I've already gone to the trouble of ordering the equipment you probably don't have— wood-fire oven, rotisserie, espresso machine, meat smoker; merely the basics required to craft fine cuisine..."
     show WG neutral at Position(xpos=0.4) with dissolve
     WG "But François will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
@@ -131,12 +131,12 @@ label WG002:
     WG "This fish. There's something familiar about it."
     MC "It's mackerel. Fish is a common part of Japanese breakfasts."
     show WG haughty
-    WG "I know that. I've lived here for most of my life, I'll have you know. And 'common' is certainly the word for what I am eating- perhaps 'bland' would be more accurate. I would never have known what this uninspired morsel was if you hadn't told me."
+    WG "I know that. I've lived here for most of my life, I'll have you know. And 'common' is certainly the word for what I am eating— perhaps 'bland' would be more accurate. I would never have known what this uninspired morsel was if you hadn't told me."
     "She ate the forkful of fish, her face displaying exasperated disappointment."
     WG "So tell me this: why, when there are literally hundreds of ways of turning something even as pedestrian as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber?"
     WG "Is it because they are lazy or just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
     MC "I guess you have a point. I’ve certainly had better. I suppose after all this time I just don’t have high expectations for cafeteria food."
-    WG "But why should you? Or anyone else for that matter? I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze- {i}something{/i}. Honestly, it isn't too much to ask. But no, just slap it on a grill, turn it after a minute, job's done- completely blasé."
+    WG "But why should you? Or anyone else for that matter? I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze— {i}something{/i}. Honestly, it isn't too much to ask. But no, just slap it on a grill, turn it after a minute, job's done— completely blasé."
     jump WG002_prechoice
 
 label WG002_prechoice:
@@ -153,7 +153,7 @@ label WG002_prechoice:
 label WG002_c1_1:
     $setFlag("WG002_c1_1")
     MC "What do you normally have, if not mackerel?"
-    WG "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries and cream, and a croissant. Maybe a poached egg. I'm very particular about my breakfast- a heavy meal to start the day can leave me feeling lethargic for hours."
+    WG "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries and cream, and a croissant. Maybe a poached egg. I'm very particular about my breakfast— a heavy meal to start the day can leave me feeling lethargic for hours."
     "She picked up her mug and drank from it, showing the same mild disgust."
     show WG angry
     WG "And this is not coffee. I'll have to call Mother later, have her send my French press here."
@@ -163,7 +163,7 @@ label WG002_c1_1:
 label WG002_c1_2:
     MC "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once."
     show WG neutral
-    WG "All the more reason for them to let me have François on hand. It's unnecessary to force every student here to subsist on this uninspired fair. I in particular, am accustomed to a certain standard of cuisine- this menial effort to provide us with sustenance is wholly insufficient, to even try to put it politely."
+    WG "All the more reason for them to let me have François on hand. It's unnecessary to force every student here to subsist on this uninspired fair. I in particular, am accustomed to a certain standard of cuisine— this menial effort to provide us with sustenance is wholly insufficient, to even try to put it politely."
     MC "Aw, it's not that bad. I've had better, but I've definitely had worse."
     MCT "Besides, you managed to clear your plates."
     show WG haughty
@@ -288,7 +288,7 @@ label WG003_c1_1:
 label WG003_c2_1:
     MC "She is? Well, I guess that's fortunate for you."
     show WG haughty
-    WG "It is. I would have survived just fine had I been left to my own devices, but people like me - those of us who are always looking at the big picture and have so many things to worry about - we benefit from having dedicated subordinates."
+    WG "It is. I would have survived just fine had I been left to my own devices, but people like me— those of us who are always looking at the big picture and have so many things to worry about— we benefit from having dedicated subordinates."
     WG "Having someone to cook for me frees up time and energy I can devote to other things."
     MC "What other things do you mean?"
     WG "Anything. My studies, my hobbies, entrepreneurial pursuits. I'll have you know I'm no slouch- I keep a tight schedule to maximize each day's productivity."
@@ -538,7 +538,7 @@ label WG005:
     $setProgress("WG", "WG006")
     scene Cafeteria with fade
     play music Hallway
-    MCT "Hair? What kind of mutation is hair growth? Or factor- whatever they call it. This almost seems like a joke."
+    MCT "Hair? What kind of mutation is hair growth? Or factor— whatever they call it. This almost seems like a joke."
     MCT "Hmm, I must not be the only one taking the news poorly."
     "The previously boisterous atmosphere, typical of school cafeterias, now had the life completely sucked out of it."
     "All you could hear was the occasional low mumbles of hushed conversations that more often didn't even rise above the clanging of silverware."
@@ -587,24 +587,29 @@ label WG005:
 
 label WG005_menu
     menu:
-        "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?" if not getFlag("WG005_LipoAsk"):
+        "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?" if not getFlag("WG005_c1"):
             jump WG005_c1
-        "What if you worked out? Burn those calories before they turn into fat." if not getFlag("WG005_ExerciseAsk"):
+        "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact? (disabled)" if getFlag("WG005_c1"):
+            pass
+        "What if you worked out? Burn those calories before they turn into fat." if not getFlag("WG005_c2"):
             jump WG005_c2
+        "What if you worked out? Burn those calories before they turn into fat. (disabled)" if getFlag("WG005_c2"):
+            pass
         "Maybe the only way is the hard way: try to eat healthier and eat less.":
             jump WG005_c3
 
 label WG005_c1:
+    $setFlag("WG005_c1")
     MC "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?."
     show WG worried
     WG "Unfortunately that doesn’t seem like a very promising option. I looked into that and apparently they can only remove a few kilos at a time, otherwise you would go into shock."
     MC "Yikes! Yeah, that doesn’t sound very promising at all."
     show WG neutral
     WG "Indeed, I’m afraid so."
-    $setFlag("WG005_LipoAsk")
     jump WG005_menu
 
 label WG005_c2:
+    $setFlag("WG005_c2")
     MC "What if you worked out? Burn those calories before they turn into fat."
     show WG doubt
     WG "Contrary to the typical assumptions people may have regarding my physique and well maintained appearance, I am quite active."
@@ -614,7 +619,6 @@ label WG005_c2:
     MC "Huh, well admittedly I wouldn’t have guessed that about you either. That’s pretty cool. Sounds like you got that part covered about as well as anyone reasonably could."
     show WG neutral
     WG "Yes, I suppose I do have that working in my favor."
-    $setFlag("WG005_ExerciseAsk")
     jump WG005_menu
 
 label WG005_c3:
@@ -713,7 +717,7 @@ label WG006:
     MC "You think you got it in the bag then? What happens if they don't pick you for club president?"
     show WG neutral
     WG "Well, then I'd be more sorry for the club, having to endure without the direction of my leadership and experience."
-    MC "Hmm, yes, um- their loss I suppose. So what instrument do you play?"
+    MC "Hmm, yes, um— their loss I suppose. So what instrument do you play?"
     WG "I have my own natural instrument: my voice."
     MC "Oh, so you're a singer?"
     WG "A soprano. I am quite adept with a natural talent for it, if I do say so myself. I've been coached since I was five."
@@ -867,123 +871,138 @@ label WG006_afterchoice:
     WG "I’m glad to hear that. Well, I will leave you to it. Have a good evening Keisuke."
     jump daymenu
 
-
-label BBW007:
-    $setProgress("BBW", "BBW008")
+label WG007:
+    $setProgress("WG", "WG008")
     scene Cafeteria with fade
-    MCT "First time I haven't had trouble finding a spot. I guess other people are spending lunch up on the roof or in their classrooms, like at a normal school."
-    MCT "Looking around, it does seem like a lot of people are drifting into cliques or avoiding certain people."
-    MCT "And I'm off by myself, which is par for the course."
-    "No sooner had I thought that than someone sat down across from me."
-    show BBW neutral at center with dissolve
-    MC "Oh, Alice. Didn't know you'd be having lunch here."
-    BBW "Why wouldn't I? It is a pleasant day outside, but it seems improper to eat in some random place. Or maybe it is simply proper to eat where the food is served. Structure is an oft-overlooked virtue, in life and in business."
-    MC "If you say so."
+    MCT "First time in a while I haven't had trouble finding a spot."
+    MCT "Looking around, it seems like people are starting to form into cliques or just avoiding certain people. Just like a normal school— normal feels odd now for some reason."
+    MCT "And here I am just sitting by myself, maybe I should get out more or join a club."
+    "Before I began to give that notion more serious consideration, I realized I had an unexpected guest at my table."
+    show WG neutral at center with dissolve
+    MC "Oh, Alice— Didn't know you'd be having lunch here."
+    WG "As often as I express my disdain for the food here, I thoguht today's entree would at least be worthwhile. I'm not a relentless taskmaster, Aida deserves a break from cooking every now and then."
+    MCT "A taskmaster, just not a relentless one, good to know."
+    MC "Oh, well that's nice to hear."
     "It took me a second to realize Alice wasn't alone. Right behind her was Aida, holding a few packages."
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind WG with dissolve
     MC "Hi, Aida. How did you get so much mail already? It's still the first week of the year."
     PRG "Oh, it's not mine. I was carrying it for Nikumaru-sama. We just came from the mail room."
     show PRG sad
     extend " ...There was nothing for me."
-    MCT "She seems a bit sad. Is there something about mail that bothers her? Better change the conversation."
-    BBW "Interested in what I got?"
-    MC "Uh..."
+    MCT "I didn't even know there was a mail room, I should probably check that sometime soon for myself."
+    MC "Anything interesting arrive for you, Alice?"
     hide PRG with dissolve
-    BBW "A lot of it is the usual care package stuff. Hand lotion, chewable candies, perfume, a new phone -"
-    MCT "That left 'usual' territory pretty quickly."
-    BBW "But I also ordered myself some things. White knee-high stockings seem to be 'in' among the other students, and I was not aware how cold winters in this part of the country can get, so I needed a new coat."
-    BBW "And Aida confided in me that she only has one pair of shoes and barely any clothing besides her school uniforms. So I ordered some stuff for her."
-    MC "That was considerate."
-    BBW "Well, she doesn't have a credit card or bank account of her own, so ordering things online are beyond her means. But it was the least I could do to facilitate her shopping."
-    MC "Facilitate... You mean she still paid for the stuff herself?"
-    BBW "But of course. I'm not running a charity. And I would like to point out that with my connections I was able to buy directly from the manufacturer, saving her money."
+    WG "Just some things I ordered for myself. Some lotion I heard good things about, a new perfume fragrance that's been having a lot of buzz lately I wanted to try."
+    WG "A new phone. It's been six months, my current model was terribly out of date."
+    MCT "To be expected from Alice, I guess. I think my phone is pushing six years at this point."
+    WG "White knee-high stockings seem to be 'in' among the other students, and I was not aware of how cold winters in this part of the country can get, so I needed a new coat."
+    MC "The weather here seems pretty nice so far."
+    WG "Springtime weather can still be chilly. It simply won't do to be unprepared."
+    MC "Fair point."
+    show WG neutral-2
+    WG "And just between you and me, Aida confided in me that she only has one pair of shoes and barely any clothing besides her school uniforms. So I ordered some stuff for her."
+    MC "That was nice of you, Alice."
+    show WG neutral
+    WG "Well, she's not destitute. However, from what she told me, she prefers to save her funds. I felt it was the least that I could do."
+    MC "Well, the least you could do was absolutely nothing."
+    show WG doubt
+    "Alice rolled her eyes in response to my obvious observation."
+    WG "It was a figure of speech."
+    MC "Hehe, well I’m sure she’ll appreciate it."
+    show WG neutral
+    WG "Truth be told, it was nothing, honestly. It’s simply the price of doing business. My assistant’s professional appearance inevitably reflects on me."
+    WG "Besides, I have plenty of connections that make such transactions happen easily."
     MC "What do you mean by connections?"
-    show BBW haughty
-    BBW "I know the sons and daughters of many business owners and CEOs. We always turn up at the same hotels in Monaco or ski lodges in Switzerland. You don't think the owner of a factory that makes dresses or suits has to buy off the rack, do you?"
+    show WG haughty
+    WG "I know the sons and daughters of many business owners and CEOs. We always turn up at the same hotels in Monaco or ski lodges in Switzerland. You don't think the owner of a factory that makes dresses or suits has to buy off the rack, do you?"
     MC "I guess not. So if I needed to buy a new laptop could you get me one at a discount?"
-    show BBW neutral
-    BBW "I suppose I could. Hitomi and I - that's Hitomi Ogawa, daughter of the president of Ogawa Electronics - aren't on the closest of terms, but she could get me one for... 90,000 yen. Plus 10%% commission for myself would be 99,000."
-    MC "An Ogawa laptop for under a hundred thousand yen? That's pretty steep for some old model being unloaded-"
-    BBW "That's for an Ogawa D2300. 55cm monitor, if I remember correctly."
-    MC "...For 99,000?! Are you serious?"
-    BBW "Completely."
-    MCT "Unbelievable. That's a 170,000-yen machine, and she says she can get one for under 100K?"
-    BBW "Don't be surprised. I'd be buying direct from the company, so there's no middle-man mark-up. Except for my commission, of course."
-    MC "O-Of course."
-    BBW "Or would you prefer the Essence 4K? I could probably get that for, let me see..."
-    "And she checked her smartphone. Was she checking the manufacturing cost online, or did she know what the mark-up from retailers was?"
-    BBW "How does 115,000 yen sound?"
-    MC "I think I might faint."
-    BBW "Shall I order one? You don't have to pay me now, you can take care of that when it gets here."
-    MC "No, no. I don't need a new laptop. I mean, I could use one, but I don't have that kind of money."
-    BBW "Well you should have said so."
-    extend " ...Idea. Aida, take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind BBW with dissolve
-    MC "There's already a store on campus, you know."
-    BBW "I know, I've seen it. But it lacks many of the essentials of modern living, and the mark-up is scandalous. 300 yen for a soda? I can beat those prices and still make a worthwhile profit."
-    PRG "What do you need me to do, Nikumaru-sama?"
-    BBW "Our first step will be to get the word out. We'll need some sort of ad campaign, make the people aware of my service."
-    BBW "Then we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service; convenient for the customer."
-    BBW "But the guys' dorm... Keisuke! How would you like a job?"
-    if getSkill("Academics") < 3:
-        MC "Me? Doing what?"
-        BBW "Haven't you been listening? I'll need runners, people to deliver packages as they come in. I can offer you 1,000 yen an hour."
-    else:
-        MC "Let me guess: you need a deliveryman."
-        show BBW happy
-        BBW "Got it in one. I'm offering 1,000 yen an hour."
-        show BBW neutral
-    MC "I... will think about it."
-    MCT "She's actually serious about this. I wouldn't have guessed she was this sort of vigorous go-getter. I guess business runs in her blood."
-    "The conversation died as Alice started giving instructions to Aida."
-    "The idea had just come to her, but she was immediately rattling off ideas about what products to offer, how to acquire, pricing and advertising."
-    "I'd thought she was more a spoiled rich girl than anything, but it seemed she wasn't content to spend her daddy's money. She had a mind for business herself."
-    "Made me feel a little lazy. I was just trying to keep up with my coursework. Never mind building a business from scratch."
+    show WG neutral
+    WG "I suppose I could. Hitomi and I- that's Hitomi Ogawa, daughter of the president of Ogawa Electronics- aren't on the closest of terms, but she could get me one for... 90,000 yen."
+    MCT "I know a lot more about playing games on computers than who makes them, but even I knew that was one heck of a name drop to bring up in a casual conversation."
+    MC "Seems like quite a deal."
+    WG "Well, plus the 10% commission for myself, it would be 99,000."
+    "Clearly Alice had never thought to pass up a good business opportunity when she found one."
+    WG "Shall I order one for you? You don't have to pay me now, you can take care of that when it gets here."
+    MC "No, no. I don't need a new laptop. I mean, I could use one, and it's a good deal, but I don't have that kind of money. I appreciate the offer though."
+    show WG doubt
+    WG "Well you should have said so."
+    "I just shrugged my shoulders."
+    MC "Sorry… I guess."
+    show WG neutral
+    WG "Hmm, this does give me an idea though…"
+    "Alice stared off in deep contemplation for a moment, clearly mulling over something important in her head before articulating her thoughts."
+    WG "Now that could be just the business opportunity I've been looking for."
+    MC "What now?"
+    WG "Aida?"
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) behind WG with dissolve
+    PRG "Yes, Alice?"
+    WG "Take a note: I am going to start a business here at school. Direct retail, goods offered at a discount."
+    MC "What kind of goods are you thinking?"
+    show WG haughty
+    WG "I haven’t decided that yet. What’s important now at this stage is the concept and the vision for the business. The specifics will come in a short order."
+    "I was admittedly confused at the sudden turn of events this conversation had taken, but our previous conversations had shown me Alice possessed a relentless entrepreneurial spirit."
+    WG "NOw then, we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service, very convenient for the customer."
+    WG "Hmmm, but the mens' dorm... Keisuke! How would you like a job?"
+    MC "Let me guess: you need a deliveryman."
+    show WG happy
+    WG "Got it in one. I'm offering 2,000 yen an hour."
+    show WG neutral
+    MC "Uhhh, I...I'll think about it."
+    MCT "She's actually serious about this. That was a pretty quick decision to just start a business."
+    WG "Take your time. I didn’t expect an immediate answer anyway. A job is not something to be taken on lightly anyway. Just know that my offer won’t stand indefinitely, but I do hope you will give it a serious consideration."
+    "I was about as flattered as I was perplexed. I’d consider the offer, but I was so caught off guard I didn’t really know what to make of it."
+    "On one hand, I could certainly use the money. On the other hand, I had to wonder what it would realistically be like working a job with Alice as my boss."
+    "I mean at this point I’d be lying if I didn’t say I kinda had a thing for her, but was this really the best way to get an \"in\" with her, or would that just make things all the more difficult?"
+    "Either way I definitely needed to put some more thought into this."
+    "Thankfully, my extended silence during my contemplation had gone unnoticed, as Alice started rattling off instructions to Aida."
+    "Odd as it seemed, I had to admit I was kind of impressed. The idea had just come to her, but she was immediately rattling off ideas about what products to offer, how to acquire, pricing and advertising."
+    "Honestly, it made me feel a little lazy. I was just trying to keep up with my coursework. Never mind building a business from scratch."
     jump daymenu
 
-label BBW008:
+label WG008:
     scene Hallway with fade
-    "After another day of classes I found myself not in my dorm and not in my classroom. I wasn't heading anywhere special, I was just wandering around."
+    "After this particular day of class, I found myself in the rare occasion without any new homework."
+    "I should have been overjoyed, but at the same time I didn't quite know what to do with myself. I didn't feel like going back to my dorm right away so I just kind of wandered around."
     "I eventually found myself passing by the music room."
     scene Music Classroom with fade
-    MCT "Maybe I can listen in on them practicing."
+    MCT "Maybe I can listen in on the music club practice."
     "But the club wasn't meeting right now. There were just two people, Aida and another student. It's not like I wanted to spy on them, but I was curious and they were talking loud enough to overhear them."
     play music Bittersweet
-    Student "-alented or not, I have no patience for someone trying to undermine my authority."
+    Student "Talented or not, I have no patience for someone trying to undermine my authority."
     show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     PRG "Y-yes, ma'am. But I don't think she means to be-"
-    Student "You seem to be the closest thing she has to a friend, so maybe she'll listen to you. Tell her she can either be happy in the chorus or she can look for another club to join."
+    Student "You seem to be the closest thing she has to a friend, so maybe she'll listen to you. Tell her she can either be happy in her seat or she can look for another club to join."
     PRG "Y-yes, ma'am."
-    "The other girl (is she the music club president?) turned away, the conversation over. Head bowed, Aida made for the door. I stepped back, but not fast enough to not get caught."
+    "The other girl, she must be the music club president. She had turned away from Aida, the conversation was over. Head bowed, Aida made for the door. I stepped back, but not fast enough to not get caught."
     show PRG surprised at center, Transform(xzoom=1)
     PRG "Oh! H-Hotsure-san."
     MC "Hey, Aida."
-    MCT "Should I ask what that was about? Aida looks pretty bummed."
+    MCT "Maybe I should ask what that was about? Aida looks pretty bummed."
     MC "Is something wrong? It looked like you were being given the third degree."
     show PRG neutral
-    PRG "N-no. I wasn't in trouble. It's Nikumaru-san. She doesn't like being in the chorus, but Mizawa-san won't make her lead vocalist."
-    MC "Is that the club president? Is Alice butting heads with her or something?"
-    PRG "Yes. They keep getting into arguments, and now Mizawa-san is threatening to kick Nikumaru-san out if she doesn't behave."
+    PRG "N-no. I wasn't in trouble. It's Alice. She doesn't like being subordinate to Mizawa-san."
+    MC "I take it they've been butting heads a lot then?"
+    PRG "Yes. They keep getting into arguments, and now Mizawa-san is threatening to kick Alice out if she doesn't behave."
     MC "I haven't known her too long, but Alice doesn't seem like much of a team player. Guess I'm not surprised she's already getting into trouble like this."
     show PRG sad
-    PRG "I-I'm supposed to t-tell her to mind herself, b-but I don't think Nikumaru will listen to me. She's kind of head strong."
+    PRG "I-I'm supposed to t-tell her to mind herself, b-but I don't think Alice will listen to me. She's kind of headstrong."
     MCT "And you're kind of a pushover."
     MCT "Oh, that's mean. But it's not wrong."
     menu:
         "Well, good luck with that.":
             $setTimeFlag("size2")
-            $setProgress("BBW", "BBW012")
+            $setProgress("WG", "WG010")
             stop music fadeout 0
-            "Well, good luck with that."
+            "Well, good luck with that. That doesn't sound like an easy conversation to have with Alice."
             show PRG surprised
             $setAffection("PRG", -1)
             PRG "..."
-            MCT "I could go for a soda now."
+            "I felt bad for Aida, but honestly I didn't feel like putting myself in Alice's crosshairs by being the one to tell her she had an attitude problem."
             jump daymenu
         "Maybe I could help.":
-            jump BBW008_prechoice
+            jump WG008_prechoice
 
-label BBW008_prechoice:
+label WG008_prechoice:
     MC "Maybe I could help."
     MC "I wouldn't say Alice listens to me so much as she hears what I say. I can pass the word along for you."
     show PRG happy
@@ -991,298 +1010,257 @@ label BBW008_prechoice:
     show PRG sad
     $setAffection("PRG", 1)
     PRG "I-I don't want to trouble you, but it would be so sad if she got kicked out of the club. She's a stranger here, you know. She doesn't fit in."
-    MC "We're all strangers, but I get what you mean. She kind of fits that whole 'pushy American' stereotype, doesn't she?"
-    show PRG angry
-    PRG "Oh, no! Nikumaru-san is just very determined."
-    MCT "Determined. Sure."
+    MC "We're all strangers in a very strange place, Kodama-san, but I get what you mean. Some people look at her and just kind of read into that whole 'pushy American' stereotype with her, right?"
+    show PRG worried
+    PRG "Yes, I think so. But she's not like that, Alice is just very determined."
+    MCT "Determined. Sure. We'll go with that."
     MC "Do you know where Alice is now?"
     show PRG neutral
-    if isEventCleared("BBW007"):
-        PRG "She should be in the cafeteria. I made some snacks for her to sample while she works on setting up her business."
-    else:
-        PRG "She should be in the cafeteria. I made some snacks for her to sample."
-        MC "Might as well deliver the news now, then."
+    PRG "She should be in the cafeteria. I made some snacks for her to sample while she works on setting up her business."
     stop music
 
     scene Cafeteria with fade
     play music Hallway
     "We found Alice sitting at her usual table, one hand typing on a laptop and the other picking up high tea pastries from a tray next to her."
-    show BBW happy at center with dissolve
-    BBW "Hotsure-san, good afternoon. Thank you for bringing Aida back. I've been waiting for her for... five and a half minutes now."
-    MC "Actually she brought me here. There's something I need... Something you should know."
-    show BBW neutral
-    BBW "Oh?"
-    MC "Yeah, um... How's the music club? You're still doing that, right?"
-    BBW "Despite my feelings on how it is being managed, yes, I am still a member."
-    MC "Right, right. So I was told- That is, Aida was told..."
-    show BBW angry
-    BBW "..."
+    show WG happy at center with dissolve
+    WG "Keisuke, good afternoon. Thank you for bringing Aida back. I've been waiting for her for... five and a half minutes now."
+    MC "Actually she brought me here. There's something I need— Something you should know."
+    show WG neutral
+    WG "Oh?"
+    MC "Yeah, um... well, first, let me ask something. How's the music club? You're still doing that, right?"
+    WG "Despite my feelings on how it is being managed, yes, I am still a member."
+    MC "Right, right. So I was told— That is, Aida was told..."
+    show WG stern
+    WG "..."
     "I stammered a few words, and Alice became irritated quickly."
-    MC "We were told to tell you to, you know... Maybe ease up on the prima donna thing."
-    BBW "Excuse me?"
-    MC "It's not that you're... You can be a little..."
-    MC "You're going to get kicked out if you don't stop fighting with the president."
-    BBW "Oh, really? Aida, is this true?"
+    MC "We were told to tell you to, you know... Maybe ease up on Mizawa-san? You're pushing things a bit too far with her."
+    WG "I beg your pardon? How so?"
+    MC "It's not that you're... Well you can be a little..."
+    MC "Look, don't shoot the messenger: you're going to get kicked out if you don't stop fighting with the president."
+    show WG angry
+    WG "Oh, really? Aida, is this true?"
     show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Y-yes, Nikumaru-san."
-    BBW "I should find her at once and tell her..."
+    WG "I should find her at once and tell her..."
     hide PRG with dissolve
-    MCT "She didn't understand anything I just said, did she?"
+    MCT "Yikes! Why did I agree to help mediate this?"
     menu:
         "Say nothing. Let Alice do what she wants.":
-            jump BBW008_c1
+            jump WG008_c1
         "Suggest Alice not make things worse.":
-            jump BBW008_c2
+            jump WG008_c2
         "Tell Alice she's in the wrong.":
-            jump BBW008_c3
+            jump WG008_c3
 
-label BBW008_c1:
-    $setProgress("BBW", "BBW008A")
+label WG008_c1:
+    $setProgress("WG", "WG008A")
     MCT "Well, if she wants to pick a fight, let her. Whatever happens is on her head."
-    show BBW haughty
-    BBW "Thank you for bringing this to my attention, Hotsure-san. My esteem for Mizawa-san was already low, but to use an intermediary like this is pathetic."
+    show WG haughty
+    WG "Thank you for bringing this to my attention, Hotsure-san. My esteem for Mizawa-san was already low, but to use an intermediary like this is pathetic."
     MC "No problem."
     "I decided to excuse myself then. Didn't want to get caught up in this drama."
     jump daymenu
 
-label BBW008_c2:
+label WG008_c2:
     $setTimeFlag("size2")
-    $setProgress("BBW", "BBW012")
+    $setProgress("WG", "WG010")
     MCT "Oh man, this is going to get out of hand quickly if I don't do something."
     MC "Maybe you shouldn't push back right away."
-    show BBW angry
-    BBW "What do you mean? Should I let this stand-?"
-    MC "Some people just don't get the message right away, do they? Clearly the club president - this Mizawa girl - hasn't recognized your talent yet."
-    show BBW haughty
-    BBW "No, she hasn't-"
+    show WG angry
+    WG "What do you mean? Should I let this stand-?"
+    MC "Some people just don't get the message right away, do they? Clearly the club president- this Mizawa girl- hasn't recognized your talent yet."
+    show WG haughty
+    WG "No, she hasn't—"
     MC "So getting in her face again won't do any good. This seems like one of those times where the person needs to realize their failure on their own."
-    BBW "And what do I do in the meanwhile? Resign myself to the chorus until Mizawa-san decides to admit she was wrong?"
-    MC "I don't think there's much you can do at the moment."
-    BBW "Are you not familiar with the phrase 'The squeaky wheel gets the grease'? If I'm supposed to wait for that tone-deaf girl to realize my talent, I will be stuck in the chorus all year."
+    WG "And what do I do in the meanwhile? Resign myself to sit in silence while her substandard leadership and misguided direction continue to cause our efforts to flounder?"
+    MC "Honestly, is it really all that unbearable? Besides, I don't think there's much you can do at the moment."
+    WG "Are you not familiar with the phrase 'The squeaky wheel gets the grease'? If I'm supposed to wait for that tone-deaf girl to realize my talent, I will be stuck as a second stringer all year."
     MC "And have you ever heard the phrase 'The upturned nail gets hammered down'? If you keep fighting her you won't even be on the chorus."
-    show BBW angry
-    BBW "..."
-    BBW "Hmm..."
-    show BBW neutral
-    $setAffection("BBW", 1)
-    BBW "Is it just me, or are Japanese people excessively non-confrontational?"
-    BBW "Very well. Aida, forget my last order. I'll toe the line, for now."
-    BBW "But not forever, Hotsure-san. I don't intend to let my genius go ignored indefinitely."
-    MC "Wait, why are you making it sound like it's my job to get you out of the chorus?"
+    show WG angry
+    WG "..."
+    WG "Hmm..."
+    show WG neutral
+    $setAffection("WG", 1)
+    WG "Perhaps you are right, Keisuke. I can't say that I care for the non-confrontational approach, but it can sometimes prove prudent."
+    WG "Very well. Aida, forget my last order. I'll toe the line— for now."
+    WG "But not forever, Keisuke. I don't intend to let my genius go ignored indefinitely."
+    MCT "Wait, why are you making it sound like it's my job to get you out of the chorus?"
+    MC "Fair enough, it's just a temporary measure after all. I'm just glad you didn't say anything you'd regret later while you were mad."
+    MCT "Sounds like disaster has been averted... for now."
     jump daymenu
 
-label BBW008_c3:
+label WG008_c3:
     $setTimeFlag("size2")
-    $setProgress("BBW", "BBW012")
-    MC "Can't you just admit that you're in the wrong here?"
-    show BBW angry
-    BBW "I beg your pardon?"
+    $setProgress("WG", "WG010")
+    MC "Look, can't you just admit that you're in the wrong here?"
+    show WG angry
+    WG "Excuse me, what was that?"
     MC "You're not the leader of the music club, are you?"
-    BBW "I'm the best singer-"
+    WG "I'm the best singer-"
     MC "That's a 'No,' then. Well, the actual leader has made a decision, and it doesn't matter if you like it or not."
     MC "Maybe you are the best singer, but there's more to an ensemble than any one person getting what they want."
     MC "You're going to have a hard time getting along here if you don't understand that. We're all dealing with some pretty major stuff right now, not just you."
-    $setAffection("BBW", -1)
-    BBW "How dare you..."
+    $setAffection("WG", -1)
+    WG "How dare you..."
     "She didn't have to say anything, I knew what she was thinking. All the better, as I wasn't looking for a fight or anything."
     MC "Just something to think about."
     "And I turned and walked away. Maybe a bit quicker than I intended, but I didn't want to stay and get chewed out or anything."
     jump daymenu
 
-label BBW008A:
+label WG008A:
     $setTimeFlag("size2")
-    $setProgress("BBW", "BBW012")
+    $setProgress("WG", "WG010")
     scene Cafeteria with fade
-    show BBW angry at center with hpunch
+    show WG angry at center with hpunch
     play sound Crash
-    BBW "That impudent egotist!"
+    WG "That impudent egotist!"
     play music Tension
     "I was sitting in the cafeteria, not so much enjoying my lunch as eating it without gagging-"
-    show BBW angry at Position(xpos=0.8)
+    show WG angry at Position(xpos=0.8)
     play sound Crash
-    BBW "How could such a woman be put in a position of authority? Bribery? Blackmail? Nepotism?"
+    WG "How could such a woman be put in a position of authority? Bribery? Blackmail? Nepotism?"
     "-when Alice came up to my table and started complaining to me about someone."
     "There was no way to know how long she had already been ranting before reaching me..."
-    show BBW angry at Position(xpos=0.2)
+    show WG angry at Position(xpos=0.2)
     play sound Crash
-    BBW "A leader who thinks their job is to simply dictate to others does not understand leadership. A captain who does not know her destination might as well run the boat aground."
-    MC "Problem with authority? Is this about the music club thing?"
-    show BBW angry at center with dissolve
-    BBW "What does it say about a club leader who is more concerned with maintaining a cordial environment where mediocrity can rule than challenging everyone to deliver their best?"
+    WG "A leader who thinks their job is to simply dictate to others does not understand leadership. A captain who does not know her destination might as well run the boat aground."
+    MC "Wait, what's going on now? Is this about the music club thing?"
+    show WG angry at center with dissolve
+    WG "What does it say about a club leader who is more concerned with maintaining a cordial environment where mediocrity can rule than challenging everyone to deliver their best?"
     MC "That... this is more about having some fun than anything else?"
-    show BBW neutral
-    BBW "And how is it 'fun' to rehearse the same pieces of music without striving for improvement?"
-    show BBW angry
-    BBW "This Mizawa-san is only wasting everyone's time if she refuses to demand anything of her members."
+    show WG neutral
+    WG "And how is it 'fun' to rehearse the same pieces of music without striving for improvement?"
+    show WG angry
+    WG "This Mizawa-san is only wasting everyone's time if she refuses to demand anything of her members."
     MC "It's only the start of the year. I'm sure there must be some period of adjustment for a musical group to come together."
-    MC "Maybe if you tell her - politely - that you think she can ask a little more of everyone she'll agree. Maybe she already wants more of them, but she doesn't want to be overbearing."
-    show BBW haughty
-    BBW "I have already addressed my concerns with Mizawa-san. Just now, when she suspended me from the club."
+    MC "Maybe if you tell her, ahem - politely - that you think she can ask a little more of everyone she'll agree. Maybe she already wants more of them, but she doesn't want to be overbearing."
+    show WG haughty
+    WG "I have already addressed my concerns with Mizawa-san. Just now, when she suspended me from the club."
     MC "What?! She kicked you out?"
-    show BBW neutral
-    BBW "Not permanently, but I am on forced sabbatical until I have 'adjusted to the upheaval in my life,' as she put it."
-    show BBW haughty at Position(xpos=0.2) with dissolve
-    BBW "She thinks I am, what were her words, 'behaving out of turn' because I am in an unfamiliar environment, with the news of my condition hanging over me."
-    show BBW angry at Position(xpos=0.8) with dissolve
-    BBW "Projection. That's what it is. Mizawa-san is uncomfortable being here, and so she is pretending I am the one with the problem."
-    show BBW neutral
-    BBW "Perhaps that is easier to believe than acknowledging I am in the right."
-    MC "So... This isn't about the other students in the club? This is just about you still butting heads with her?"
-    show BBW haughty at center with dissolve
-    BBW "This is only about the club, and how I know what is best for it."
-    show BBW angry
-    BBW "Mizawa-san may try to pull rank, but shoving me aside does not win her the argument. I am still of half a mind to press the issue."
+    show WG neutral
+    WG "Not permanently, but I am on forced sabbatical until I have 'adjusted to the upheaval in my life,' as she put it."
+    show WG haughty at Position(xpos=0.2) with dissolve
+    WG "She thinks I am, what were her words, 'behaving out of turn' because I am in an unfamiliar environment, with the news of my condition hanging over me."
+    show WG angry at Position(xpos=0.8) with dissolve
+    WG "Projection. That's what it is. Mizawa-san is uncomfortable being here, and so she is pretending I am the one with the problem."
+    show WG neutral
+    WG "Perhaps that is easier to believe than acknowledging I am in the right."
+    MC "So... is this really about the other students in the club? Or is it just about you still butting heads with her?"
+    show WG haughty at center with dissolve
+    WG "This is only about the club, and how I know what is best for it."
+    show WG angry
+    WG "Mizawa-san may try to pull rank, but shoving me aside does not win her the argument. I am still of half a mind to press the issue."
     menu:
-        "I don't see what good that would do. If she's as headstrong as you say, arguing will only make her dig her heels in.":
-            jump BBW008A_c1
+        "I don't see what good that would do. I mean, didn't you just try that? If she's as headstrong as you say, arguing will only make her dig her heels in.":
+            jump WG008A_c1
         "If you feel this strongly, go for it. You're the one talking about squeaky wheels, right?":
-            jump BBW008A_c2
-        "Arguing with Mizawa-san obviously isn't doing any good. Maybe try a different tack.":
-            jump BBW008A_c3
+            jump WG008A_c2
 
-label BBW008A_c1:
+label WG008A_c1:
     play music Hallway
-    MC "I don't see what good that would do. If she's as headstrong as you say, arguing will only make her dig her heels in."
-    show BBW angry
-    BBW "Mmmf!"
-    BBW "..."
-    show BBW neutral
-    BBW "She probably would, wouldn't she?"
-    BBW "I suppose this is a situation that calls for patience rather than the firm hand of guidance."
-    BBW "Very well. I shall endure my sabbatical with my natural grace, and when I return to the music club even Mizawa-san will not be able to deny what a difference my presence makes."
-    hide BBW with dissolve
+    MC "I don't see what good that would do. I mean, didn't you just try that? If she's as headstrong as you say, arguing will only make her dig her heels in."
+    show WG angry
+    WG "Mmmf!"
+    WG "..."
+    show WG neutral
+    WG "She probably would, wouldn't she?"
+    WG "I suppose this is a situation that calls for patience rather than the firm hand of guidance."
+    WG "Very well. I shall endure my sabbatical with my natural grace, and when I return to the music club even Mizawa-san will not be able to deny what a difference my presence makes."
+    hide WG with dissolve
     "And she trotted off. I don't think she was any less angry, but at least things hadn't gotten worse."
     jump daymenu
 
-label BBW008A_c2:
+label WG008A_c2:
     MC "If you feel this strongly, go for it. You're the one talking about squeaky wheels, right?"
-    show BBW neutral
-    BBW "You are not wrong. There may still be time to find Mizawa-san before lunch ends, and we can settle this matter before the club meeting this afternoon."
-    hide BBW with dissolve
+    show WG neutral
+    "Honestly at this point, I didn't think I could stop her anyway."
+    WG "You are not wrong. There may still be time to find Mizawa-san before lunch ends, and we can settle this matter before the club meeting this afternoon."
+    hide WG with dissolve
     "And she walked off."
     scene black with fade
     stop music
     "Ten minutes later, she came back."
     scene Cafeteria with fade
-    show BBW angry
+    show WG angry
     play sound Crash
-    $setAffection("BBW", -2)
-    BBW "There is no word for 'foolishness' in your language that is strong enough for that girl."
+    $setAffection("WG", -2)
+    WG "There is no word for 'foolishness' in your language that is strong enough for that girl."
     play music Hallway
-    MC "She didn't listen to you-"
-    BBW "She says that I am a hair's breadth from being cut entirely, and she makes it sound as if she is being reasonable by giving me a 'second chance.'"
-    BBW "That my talent, which I have clearly demonstrated by this point, could be dismissed so flippantly..."
-    BBW "Argh!"
-    BBW "I almost want to leave of my own accord. Being hobbled by this enabler of mediocrity may not be worth it."
+    MC "She didn't listen to you, I take it?"
+    WG "She told me that I am a hair's breadth from being cut entirely, and she makes it sound as if she is being reasonable by giving me a 'second chance.'"
+    WG "That my talent, which I have clearly demonstrated by this point, could be dismissed so flippantly..."
+    WG "Argh!"
+    WG "I almost want to leave of my own accord. Being hobbled by this enabler of mediocrity may not be worth it."
     MC "I-"
-    hide BBW with dissolve
-    "But she was already storming away, as if she wanted to get away from the entire school."
+    hide WG with dissolve
+    "I wanted to offer some words of assurance, but she was already storming away, as if she wanted to get away from the entire school."
+    "Part of me thought I should have dissuaded her from confronting Mizawa-san, but on the other hand, this was probably a good way for her to learn her lesson about how she should have handled the situation."
     jump daymenu
 
-label BBW008A_c3:
-    $setTimeFlag("BBWclubfail")
-    stop music
-    MC "Arguing with Mizawa-san obviously isn't doing any good. Maybe try a different tack."
-    MC "Instead of taking up this fight yourself, why don't you get some others on your side?"
-    MC "Talk to the other members of the music club, see if they'll back you up. Then you can all go up to the club prez and try to reason with her."
-    show BBW happy
-    BBW "That is not a bad idea, Hotsure-san. Strength in numbers."
-    show BBW haughty
-    BBW "Or if I can convince enough members to see it my way, I could simply try to oust Mizawa-san as president."
-    MCT "OK, that is not what I'm suggesting."
-    show BBW neutral
-    BBW "There's still time before lunch ends. I need to speak with some of the other members."
-    hide BBW
-    "And she walked off, holding her chin up as if she had already won a victory."
-    scene Hallway with fade
-    "As I left the cafeteria and started to make my way back to class, I ran into Alice coming in the opposite direction."
-    show BBW angry
-    play sound Crash
-    $setAffection("BBW", -10)
-    BBW "Hotsure-san! How could you possibly suggest such a terrible idea?"
-    MC "Me? What did-"
-    MCT "Oh, this must be about the music club thing."
-    play music Bittersweet
-    BBW "I've been kicked out of the music club! Mizawa-san claims I was attempting to mutiny-"
-    MCT "Well, you did suggest-"
-    BBW "And now I have been expelled entirely."
-    "By her expression I had no doubt who she blamed for this, and while there were a number of ways I could have responded, I ultimately decided on staying silent and not making things worse."
-    "Alice continued glowering at me, perhaps waiting for me to answer, but after a while she huffed and muttered"
-    BBW "What is wrong with this place?"
-    "And then she walked away."
-    "Which was awkward, because we were headed in the same direction, so I had to hang back a couple feet and try to look anywhere besides directly at her."
-    scene Classroom with fade
-    "And when we got to class and took our seats she adamantly refused to look in my direction."
-    show BBW angry
-    BBW "Harumph!"
-    hide BBW with dissolve
-    "At least I knew where I stood at the moment."
-    jump daymenu
-
-label BBW009:
+label WG009:
     scene Hallway with fade
     play music Busy
     "It was only the second week of the year and I was already getting cabin fever being stuck at the school 24/7."
     "There was a town not far from the gates, but I hadn't gotten a chance to check it out yet. Hadn't even checked out much of the school, for that matter."
-    "That's probably why I found myself at the locker rooms after class. Going back to my dorm room didn't appeal to me; just two weeks in and I was getting tired of that place."
+    "That's probably why I found myself in the locker rooms after class. Going back to my dorm room didn't appeal to me— just two weeks in and I was getting tired of that place."
     "And I still didn't belong to a club, so I had no specific place to be..."
-    "I was thinking of maybe changing into my gym clothes and doing a little cardio when I was surprised to see Nikumaru-san, of all people, coming out of the women's locker room."
-    show BBW happy at center with dissolve
+    "I was thinking of maybe changing into my gym clothes and doing a little cardio when I was surprised to see Alice, of all people, coming out of the women's locker room."
+    show WG happy at center with dissolve
     MC "Oh, Ni- Alice! How's it going?"
-    show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    show PRG sad at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind WG with dissolve
     PRG "..."
-    MC "A-and you, Kodama-san! What were you two up to?"
-    BBW "I was doing a light workout."
-    MC "I thought you weren't going to try to lose weight just yet."
+    MC "A-and you too, Kodama-san! What were you two up to?"
+    WG "I was doing a light workout."
+    MC "I thought you weren't still trying to lose the weight?"
     hide PRG with dissolve
-    show BBW neutral
-    BBW "I'm not, but exercise has other benefits besides weight loss."
-    show BBW haughty
-    BBW "A strong mind in a strong body, as they say."
-    BBW "So I was making use of the school's swimming pool. 20 laps, back and forth. A fair workout to get my heartrate up."
+    show WG neutral
+    WG "I'm not, but exercise has other benefits besides weight loss."
+    show WG haughty
+    WG "A strong mind in a strong body, as they say."
+    WG "So I was making use of the school's swimming pool. 20 laps, back and forth. A fair workout to get my heartrate up."
     MC "20 laps!? That's... That's actually impressive."
-    BBW "I understand how it can seem like that to most people, but I have a natural affinity for the water. I've been an accomplished swimmer since I was a young girl."
-    if isEventCleared("BBW008"):
+    WG "I understand how it can seem like that to most people, but I have a natural affinity for the water. I've been an accomplished swimmer since I was a young girl."
+    if isEventCleared("WG008"):
         MC "Maybe you should have joined the swim team instead of the music club."
-        BBW "I did consider it, actually, but the school would allow me to join only one club at a time. I find the limitation frustrating but bearable."
-        show BBW angry
-        BBW "And who knows. If the matter between me and the music club president is not resolved satisfactorily I may take my talents to more appreciative grounds."
+        WG "I did consider it, actually, but the school would allow me to join only one club at a time. I find the limitation frustrating, but bearable."
+        show WG angry
+        WG "And who knows. If the matter between me and the music club president is not resolved satisfactorily I may take my talents to more appreciative grounds."
     MC "How fast can you swim? Have you ever timed yourself?"
-    show BBW neutral
-    BBW "Quite fast, actually. I should have had Kodama-san timing me, upon reflection. An accurate chart of my ability would help measure my fitness levels."
-    show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind BBW with dissolve
-    PRG "I'm sorry, Alice. I'll remember next time, I promise!"
+    show WG neutral
+    WG "Quite fast, actually. I should have had Kodama-san timing me, upon reflection. An accurate chart of my ability would help measure my fitness levels."
+    show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind WG with dissolve
+    PRG "I'm sorry, Alice. I'll make a note for next time."
     hide PRG with dissolve
-    show BBW haughty
-    BBW "I don't have a specific number, but I feel confident that I am the best swimmer in our class. Probably in the top percentile of the school."
+    show WG haughty
+    WG "I don't have a specific number, but I feel confident that I am the best swimmer in our class. Probably in the top percentile of the school."
     MC "Even better than Mizutani-san? She's pretty athletic, you know."
-    BBW "There's more to it than just physical strength. Stamina, hydrodynamics, breathing control."
+    WG "There's more to it than just physical strength. Stamina, hydrodynamics, breathing control, movement efficiency, all much more important considerations."
     stop music
     MC "!"
     "Alice didn't see her, but standing behind her was-"
-    BBW "Sheer muscle may be good for lugging heavy weights around, but swimming is a much more graceful art than being a simple pack mule."
-    show FMG angry behind BBW at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Sheer muscle may be good for lugging heavy weights around, but swimming is a much more graceful art than being a simple pack mule."
+    show FMG angry behind WG at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     play music Tension
     "-was Akira. And judging by her expression she didn't like what she was hearing."
-    BBW "It's the difference between composing poetry and punching a sack of meat. Elegance versus brute force."
+    WG "It's the difference between composing poetry and punching a brick wall. Elegance versus brute force."
     "I was just about to interrupt Alice - even though she already seemed to be wrapping up - when Akira beat me to it."
-    FMG "Hello Alice What's-your-last-name! Interesting theory you have there!"
-    show BBW haughty at Position(xpos=0.6) with dissolve
+    FMG "Yo, Alice! Interesting theory you have there!"
+    show WG haughty at Position(xpos=0.6) with dissolve
     show FMG angry at Position(xpos=0.25), Transform(xzoom=-1) with dissolve
     "Alice blanched at the sound of Akira's voice, but she recovered swiftly."
-    show BBW happy
-    BBW "It's not so much a theory as good common sense."
-    BBW "One isn't pushing against the water but rather propelling oneself through it. It's a complete different act, an interplay of body and water rather than a conflict between muscle and weight."
-    FMG "Oh yeah! Well how about we test your little 'act of pushing water by being something something BS' by seeing who's the fastest swimmer! Or are you too full of yourself to do it!?"
-    "Alice let out a single 'Ha' while brushing one of her curls over her shoulder."
-    show BBW haughty
-    BBW "Ha!"
-    BBW "I would never make a claim I could not back up. If you wish to see the truth of my words in action, then certainly. Let us race."
+    show WG happy
+    WG "It's not so much a theory as it is good common sense."
+    WG "One isn't pushing against the water but rather propelling oneself through it. It's a complete different act, an interplay of body and water rather than a conflict between muscle and weight."
+    FMG "I don't really think it's that deep... But, I think it would be fun to put your theory to the test by seeing who is the fastest swimmer! You aren't afraid of a little challenge, right?"
+    show WG haughty
+    WG "Ha!"
+    "Alice reacted with great amusement and bravado as she brushed one of her curls over her shoulder."
+    WG "I would never make a claim I could not back up. If you wish to see the truth of my words in action, then certainly. Let us race."
     FMG "God, are all Americans as snobby as you? Let's do this!"
     "Alice turned to me, her self-satisfied look still there."
-    show BBW happy
-    BBW "Any objections to Hotsure-san acting as judge? I'm sure he'll be impartial."
-    show PRG neutral at Position(xpos=0.45, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    show WG happy
+    WG "Any objections to Keisuke acting as judge? I'm sure he'll be impartial."
+    show PRG neutral at Position(xpos=0.45, xanchor=0.5, yalign=1.0) behind WG with dissolve
     PRG "I... I could, maybe..."
     show FMG neutral
     FMG "Yeah, sure. But Keisuke, don't you think this is a forgone conclusion?"
@@ -1292,156 +1270,173 @@ label BBW009:
         "You do seem the obvious choice, Mizutani-san.":
             $setAffection("FMG", 1)
             FMG "Heh, well whatever happens, happens I guess!"
-            show BBW neutral
-            BBW "Indeed..."
+            show WG neutral
+            WG "Indeed..."
         "Alice seems pretty confident. I think this might be an upset.":
-            $setAffection("BBW", 2)
-            show BBW haughty
-            BBW "Not an upset. As Mizutani-san said, it's a foregone conclusion."
+            $setAffection("WG", 2)
+            show WG haughty
+            WG "Not an upset. As Mizutani-san said, it's a foregone conclusion."
             show FMG angry
             FMG "Whatever, 'princess'!"
         "I really don't know.":
-            show BBW neutral
-            BBW "Well, you shall know soon enough."
+            show WG neutral
+            WG "Well, you shall know soon enough."
     scene Pool with fade
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
     show FMG swim-school-angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show BBW swim-school-happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Three full laps should be adequate, I think. Any objections?"
+    show WG swim-school-happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Three full laps should be adequate, I think. Any objections?"
     FMG "Just don't forget your pool cap thingy! Don't want to get your expensive mullet to get ruined by chlorine!"
+    show WG doubt
+    WG "I’m not sure what a \"mullet\" is, but I don’t think anything could look cheaper than that self-styled turnup you have on top of your head."
+    FMG "What did you just say?"
+    "Clearly neither of them were feeling all too pleasant towards each other after being told they would lose, but I needed to stop this before it got too far."
+    MC "Hey, this is a swimming race, not a trash talking contest. Save it for the water."
+    show WG stern
+    WG "Hmph."
+    FMG "Yeah, yeah, let’s do it already!"
     "They took their positions, I counted down from three, and they were off."
     stop music
     hide FMG with dissolve
-    hide BBW with dissolve
-    show cg BBW009 with dissolve
-    "It was neck and neck for most of the first lap, but when the two reached the far end and pushed off the wall to return Alice began to pull ahead."
+    hide WG with dissolve
+    show cg WG009 with dissolve
+    "It was neck and neck for most of the first lap, but when the two reached the far end and pushed off the wall to return, Alice began to pull ahead."
     "By the time she completed her first lap Alice was a full length ahead of Akira, and that lead grew for the rest of the race."
     "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
     hide cg with dissolve
     show FMG swim-school-sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show BBW swim-school-happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG swim-school-happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     play music Busy
     FMG "...Son of a bitch... Good job I guess... I'm going to bed. Later."
     hide FMG with dissolve
-    show BBW swim-school-happy at center with dissolve
-    BBW "At least she's magnanimous in defeat."
+    show WG swim-school-happy at center with dissolve
+    WG "At least she's magnanimous in defeat."
     MC "Nice job. That was quite the blowout."
-    show BBW swim-school-haughty
-    BBW "Was there ever a doubt? But as much as I enjoyed this contest, I have to get going."
-    show BBW swim-school-neutral
-    BBW "Aida, what's next on my agenda?"
-    hide BBW with dissolve
+    show WG swim-school-haughty
+    WG "Was there ever a doubt? But as much as I enjoyed this contest, I have to get going."
+    show WG swim-school-neutral
+    WG "Aida, what's next on my agenda?"
+    hide WG with dissolve
     "She was already walking away as Aida answered. Something about 'contacting her distributor.'"
     jump daymenu
 
-label BBW010:
+label WG010:
     $setSize(2)
     $setTimeFlag("aftersize2")
+    $setProgress("WG", "WG012")
     scene Cafeteria with fade
-    play music BBW
+    play music WG
     "It was a quiet morning. Reminded me of the first day, after we all learned why we were here."
-    "Looking around at the faces in the cafeteria when I arrived, I got the same vibe as before. The embarrassment everyone was probably feeling because of their 'second puberty' issue."
-    "Standing out in the mildly dark gloom of the other students, one face was unexpectedly shining."
-    show BBW happy at center with dissolve
+    "Looking around at the faces in the cafeteria when I arrived, I got the same vibe as before. The embarrassment everyone was dealing with as they were undoubtedly grasping with the effects of their new growth."
+    "Standing out amongst the mildly dark gloom of the other students, one face was unexpectedly shining."
+    show WG happy at center with dissolve
     MC "Good morning, Alice."
-    BBW "It {i}is{/i} a good morning, isn't it?"
+    WG "It {i}is{/i} a good morning, isn't it?"
     "I took another quick scan of the room, at the subdued expressions and lack of light-hearted chatting you would normally find."
-    MC "It's subjective, I guess."
+    MCT "That's subjective, I guess."
     MC "Is there a particular reason you're happy? Did Aida make some really nice treats or something?"
-    BBW "Business, my dear Hotsure-san. Business is doing well, and it's set to do even better soon."
+    WG "Business, my dear Hotsure-san. Business is doing well, and it's set to do even better soon."
     MC "Oh, your, what would you call it... Your..."
-    show BBW neutral
-    BBW "My requisition agency."
+    show WG neutral
+    WG "My requisition agency."
     MC "Yeah... That. Are people coming to you for stuff?"
-    show BBW happy
-    BBW "Word is beginning to spread of my services, with strong customer satisfaction driving an increase of my market share."
-    show BBW haughty
-    BBW "And I have set my flag on a particular shore with tremendous growth potential, based on both necessity and a consistent need for replacements."
+    show WG happy
+    WG "Word is beginning to spread of my services, with strong customer satisfaction driving an increase in market share."
+    show WG haughty
+    WG "And I have set my flag in the ground on a particular shore with tremendous growth potential, based on both necessity and a consistent need for replacements."
     MC "What... Cell phones?"
-    show BBW happy
-    BBW "Clothing, my dear boy."
-    show BBW haughty
-    BBW "It may have escaped your notice, being a guy and all - one apparently not particularly concerned with your own appearance, at that - but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
-    show BBW happy at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
-    BBW "The school {i}does{/i} supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
-    show BBW happy at Position(xpos=0.7), Transform(xzoom=1) with dissolve
-    BBW "And such aid only extends to the clothing we need as students. Personal expression and comfort is left to the individual to provide, a tiresome chore when the only stores are outside the school, all the way in town."
-    show BBW angry at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
-    BBW "And are we supposed to make that trip while wearing ill-fitting, potentially scandalous clothing?"
-    MC "Hey..."
-    show BBW happy at center, Transform(xzoom=1) with dissolve
-    BBW "Now there's a better choice. I, through my personal contacts with the biggest and best names in clothing retail, can offer you-"
-    MC "Hey!"
-    show BBW surprised
-    BBW "!"
+    show WG happy
+    WG "Clothing, my dear boy."
+    MCT "Dear boy? I'm not sure if she's being condescending or endearing at this point."
+    show WG haughty
+    WG "It may have escaped your notice, being a guy and all– one apparently not particularly concerned with your own appearance, at that— but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
+    show WG happy at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
+    WG "The school {i}does{/i} supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
+    MCT "I think I see where this is going now."
+    show WG happy at Position(xpos=0.7), Transform(xzoom=1) with dissolve
+    WG "And such aid only extends to the clothing we need as students. Personal expression and comfort is left to the individual to provide, a tiresome chore when the only stores are outside the school, all the way in town."
+    show WG angry at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
+    WG "And are we supposed to make that trip while wearing ill-fitting, potentially scandalous clothing?"
+    MC "I suppose not..."
+    show WG happy at center, Transform(xzoom=1) with dissolve
+    WG "Now, there's a better choice. I, through my personal contacts with the biggest and best names in clothing retail, can offer you-"
+    MC "Whoah, easy there Alice."
+    show WG surprised-2
+    WG "!"
     MC "I don't need a sales pitch. I know what you're doing. You offered to get a computer for me, remember?"
-    show BBW neutral
-    BBW "Yes, yes. Got carried away there for a second."
-    show BBW happy
-    BBW "But the fact that you're familiar with this is perfect, because I have a proposition for you."
-    BBW "I have more potential customers than I have time and energy to corral myself. I need subordinates out there spreading the word and taking orders."
-    BBW "How'd you like the job?"
+    show WG neutral
+    WG "Yes, yes. Pardon me, I got carried away there for a second."
+    show WG happy
+    WG "But the fact that you're familiar with this is perfect, because I have a proposition for you."
+    WG "I have more potential customers than I have time and energy to corral myself. I need subordinates out there spreading the word and taking orders."
+    WG "How'd you like the job?"
     MC "What, like a salesman?"
-    show BBW neutral
-    BBW "Not 'like' a salesman. Actually be one."
-    show BBW happy
-    BBW "It's child's play. All you have to do is distribute these catalogues I've made-"
+    show WG neutral
+    WG "Not 'like' a salesman. Actually be one."
+    MC "Uhhh..."
+    show WG happy
+    WG "It's child's play. All you have to do is distribute these catalogues I've made-"
     "She handed me a box of tri-folded papers - more like brochures than catalogues - that she must have made on her computer."
     "While they lacked the polish an experienced graphic designer would bring, they did get right to the point, emphasizing the low prices and breadth of available sizes for every body type."
-    BBW "-and talk up what a bargain this is. Be sure to emphasize the more prestigious name brands, and that other designer labels will be available in the future."
-    show BBW neutral
-    BBW "Still have a few more deals to finalize. This school is so remote, bulk shipping out here is a logistical nightmare."
-    show BBW happy
-    BBW "But we already have most of our selection here at the school, ready to distribute to any interested buyer."
-    BBW "And if anyone wants to see our products in real life, you can tell them that I'm already wearing my first new set of clothing."
-    BBW "The school told me it would take as much as a week to get me a larger set of uniforms, but I - going directly to the company that has the contract with this school - was able to get this comfortable and properly-fitting outfit before my old set became restrictive."
+    WG "-and talk up what a bargain this is. Be sure to emphasize the more prestigious name brands, and that other designer labels will be available in the future."
+    show WG neutral
+    WG "I still have a few more deals to finalize. This school is so remote, single order custom shipping out here is a logistical nightmare."
+    show WG happy
+    WG "But we already have most of our selection here at the school, ready to distribute to any interested buyer."
+    WG "And if anyone wants to see our products in real life, you can tell them that I'm already wearing my first new set of clothing."
+    WG "The school told me it would take as much as a week to get me a larger set of uniforms, but I– going directly to the company that has the contract with this school– was able to get this comfortable and properly–fitting outfit before my old set became restrictive."
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now-wider torso and rounder belly."
-    show BBW happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
-    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly."
-    "But apparently she had, because unless she had told me I wouldn't have noticed that this was a larger outfit, and it fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
-    show BBW haughty at center, Transform(zoom=1.0)
-    BBW "No muffin top, no pinching in the sleeves."
+    show WG happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
+    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly. Seeing it up close, I'd be lying if I said it didn't catch my... attention, shall we say."
+    "Unless she had told me I wouldn't have noticed that this was a larger outfit— it fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
+    show WG haughty at center, Transform(zoom=1.0)
+    WG "No muffin top, no pinching in the sleeves."
     "I was still looking over her plump middle, my eyes lingering on the soft curves of her belly, when she snapped me out of my reverie."
-    show BBW happy
-    BBW "Sound good?"
+    show WG haughty
+    WG "I take it you approve?"
+    "I had been caught red-handed ogling her curves. She didn't seem to mind the attention, but still, I figured it'd be best to play it cool."
+    MC "Seems like a pretty good fit."
+    show WG happy
+    WG "Quite. Now what about my offer, does that sound good to you?"
     menu:
         "I could use a little spending money.":
             MC "I could use a little spending money."
-            BBW "Can't we all?"
+            WG "Can't we all?"
             MCT "I don't think you're hurting..."
-            jump BBW010_accept
+            jump WG010_accept
         "(Might as well agree. I don't think she'd take 'No' for an answer.)":
             MC "Sure, I can do it."
-            show BBW neutral
-            BBW "I was hoping you'd be a little more fired up, but..."
-            BBW "As long as you bring the thunder when you're engaging the customers, it's fine."
-            MCT "Bring the thunder?"
-            jump BBW010_accept
+            show WG neutral
+            WG "I was hoping you'd be a little more fired up, but..."
+            WG "As long as you're sufficiently enthusiastic when engaging with customers, it's fine."
+            MCT "Pardon me for not being 'fired up' at the thought of selling clothes."
+            jump WG010_accept
         "You can count on me!":
             MC "You can count on me!"
-            BBW "Excellent! That enthusiasm is exactly what I'm looking for."
-            jump BBW010_accept
+            $setAffection("WG", 1)
+            WG "Excellent! That kind of enthusiasm is exactly what I'm looking for."
+            jump WG010_accept
         "No. I... I don't want to work for you.":
-            jump BBW010_decline
+            jump WG010_decline
 
-label BBW010_accept:
-    $setFlag("BBW_working")
-    show BBW happy
-    BBW "We can discuss your salary and bonuses later. Right now I want you to take advantage of the period before classes."
-    BBW "Get out there and distribute those catalogues. I want to see that box at least half-empty before the bell for first period rings."
+label WG010_accept:
+    $setFlag("WG_working")
+    show WG happy
+    WG "We can discuss your salary and bonuses later. Right now I want you to take advantage of the period before classes."
+    WG "Get out there and distribute those catalogues. I want to see that box at least half-empty before the bell for first period rings."
     "Caught up in her energy and enthusiasm, I sped away to start hawking her services."
     "I tried to think of who would need new clothes. Like Alice, I hadn't noticed any real growth in anybody yet."
     "But maybe necessity wasn't the best avenue to take yet. Maybe there was someone who just wanted something nice and flattering for after school."
     menu:
         "Shiori. She tends to dress conservatively, but doesn't every woman want to look nice?":
-            jump BBW010_c1
+            jump WG010_c1
         "Aida. Alice had mentioned she doesn't have an extensive wardrobe.":
-            jump BBW010_c2
+            jump WG010_c2
         "Honoka. Even if she hasn't grown, her needs already stretch most clothing shops.":
-            jump BBW010_c3
+            jump WG010_c3
 
-label BBW010_c1:
-    $setFlag("BBW010_shiori")
+label WG010_c1:
+    $setFlag("WG010_shiori")
     scene Hallway with fade
     show AE angry at center with dissolve
     "I found Shiori prowling the halls, eyes jumping around from student to student, as if she was looking for violations of the school dress code or something."
@@ -1449,10 +1444,10 @@ label BBW010_c1:
     "Something a little more subtle would be needed."
     MC "Hey, Matsumoto-san. You sleep well?"
     show AE neutral
-    AE "Hotsure-san. Well, I'd say about four hours at this point, however that's neither here nor there. Anything you need?"
-    MCT "I could respond with 'Actually, it's about what you need.' Except she looks more serious than usual."
-    MC "Just making conversation. We are classmates, after all. We should be friendly with one another."
-    AE "Ah, I see. Yes, well, while I'm all for interaction, I'm preoccupied at the moment. Begging your pardon."
+    AE "Hello Hotsure-san. To answer your question, I'd say about four hours at this point, however that's neither here nor there. Is there anything you need?"
+    MCT "I could respond with \"Actually, it's about what you need.\" Except she looks more serious than usual."
+    MC "Just making conversation. We are classmates, after all. We should be on friendly terms with one another."
+    AE "Ah, I see. Yes, well, while I'm all for interaction, but I'm preoccupied at the moment. Begging your pardon."
     "She started to turn away, but I at least had to give her a 'catalogue' to say I did my job."
     "Gracelessly, I almost shoved one of them at her arm."
     MC " Here. Something to check out at your leisure, when you have some free time."
@@ -1469,18 +1464,18 @@ label BBW010_c1:
     "Only now did I realize what a blunder this was. Of course the school would have some rule about not running a business out of your dorm or something like that, and of course Shiori would memorize it and expect it to be followed to the letter."
     hide AE with dissolve
     "Shiori was already brushing past me, making a direct line for the cafeteria."
-    $setAffection("BBW", -1)
+    $setAffection("WG", -1)
     "I looked down at the box of 'catalogues' I was holding, wondering if I should keep handing them out or consider myself fired."
     jump daymenu
 
-label BBW010_c2:
+label WG010_c2:
     scene Cooking Classroom with fade
     "My first guess was that Aida would be at the cooking classroom, preparing Alice's breakfast. I wasn't wrong."
     show PRG neutral at center with dissolve
     "When I saw the baggy state of her clothes I thought this was probably a dead end. But then I wondered if she had any casual clothing that fit her and pushed on."
     MC "Good morning, Kodama-san. Making breakfast?"
     show PRG happy
-    PRG "Oh! Uh, hello Hotsure-san. Is Nikumaru-sama ready for her food?  I-I can hurry it up..."
+    PRG "Oh! Uh, hello Hotsure-san. Is Alice ready for her food?  I-I can hurry it up..."
     MC "Oh no, it's not that. I was just walking by and thought I'd say hi."
     MC "Is that a new uniform? It looks a bit baggier than your old one."
     show PRG sad
@@ -1495,7 +1490,7 @@ label BBW010_c2:
     MC "What?"
     PRG "I, I'm sorry Hotsure-san, but... W-well, I already got these from Nikumaru-sama. I was her first customer."
     "I suppressed a groan as I realized that of course Aida would already be in on Alice's plans. It was her need for more clothing that had first put the idea of doing this in Alice's head."
-    MC "Right, right. Forgot. Well, sorry to bother you."
+    MC "Right, right. I forgot. Well, sorry to bother you."
     show PRG neutral
     PRG "No, no! I'm sorry for, um, wasting your time... I'll, uh, still take one of the pamphlets, if you like..."
     "Hesitantly, I handed her one. I think not doing so would have made her more embarrassed."
@@ -1510,9 +1505,9 @@ label BBW010_c2:
     "My first stab at a sale and I whiffed it. But I still had time before class started, so the morning wasn't a complete waste. Yet."
     jump daymenu
 
-label BBW010_c3:
+label WG010_c3:
     scene Hallway with fade
-    "I was trying to think of where I could find Honoka when I was tackled from behind, collapsing to the ground."
+    "I was trying to think of where I could find Honoka when I was suddenly tackled from behind, collapsing to the ground."
     play sound Thud
     "A heavy, squishy weight on my back told me my search was over."
     show BE happy at center with dissolve
@@ -1521,9 +1516,9 @@ label BBW010_c3:
     MC "You ask me that after you run into me? Project much?"
     MC "At least help me clean these up."
     BE "What're these?"
-    "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine I had curves on the brain, and Honoka was looking particularly big today."
+    "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine, I had curves on the brain, and Honoka was looking particularly curvy in her own right."
     show cg BE010
-    BE "Hey, Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
+    BE "Hey! Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
     hide cg
     show BE neutral at center
@@ -1538,8 +1533,8 @@ label BBW010_c3:
     MC "Ah!"
     "I snapped my head downward to escape eye contact with her. Only then did I remember the box I was again holding in my hands. I took out one of the 'catalogues.'"
     MC "If you're looking for new clothing, there's a new service that just opened up. Really affordable clothes, some custom-made, direct from the manufacturer."
-    "Quizzical, she looked the 'catalogue' over."
-    BE "Huh. Wow, there's a lot of stuff in here. Pretty neat, actually. Most of the time once you get past a certain size, you can only get bras in boring colors or things without patterns. It really takes the fun out of it."
+    "Quizzically, she looked the 'catalogue' over."
+    BE "Huh. Wow, there's a lot of stuff in here! Pretty neat, actually. Most of the time, once you get past a certain size, you can only get bras in boring colors, or things without patterns. It really takes the fun out of it."
     BE "But, they're saying here they can do more custom patterns? Prices seem okay too, all things considered. How'd you get your hands on this?"
     MC "Ali- Nikumaru-san hired me. She knows people in high places at all these companies, so she has an 'in,' so to speak."
     MC "She's also selling school supplies and other stuff, but I guess she's focusing on clothing right now because... Well."
@@ -1554,64 +1549,67 @@ label BBW010_c3:
     MC "I am being compensated (though the specifics haven't been hammered out yet). I believe she even mentioned something about a commission."
     MC "So can I put you down for a sale? I can run your order back to her before class starts, but I'm not sure how long it will be until everything arrives. She did say she already has a lot of stuff here..."
     show BE happy
-    BE "Oh absolutely! Here, let me take a look again real quick... Yeah, I think I can spring for three bras and, maybe two shirts."
-    BE "No, I'll just stick with this one for now. Luckily I've been looking up how to properly measure busts so I can figure out my own size."
+    BE "Oh absolutely! Here, let me take a look again real quick... Yeah, I think I can spring for three bras and... let's say two shirts."
+    BE "Luckily I've been looking up how to properly measure busts so I can figure out my own size."
     BE "Well, as long as I'm capable of getting my arms around them that is!"
     MC "Even if you have trouble measuring yourself, we can find clothing big enough..."
     "My voice trailed off as I was hit with the mental image of Honoka carrying a pair of breasts bigger than she was, carting them around in a wheelbarrow..."
     "...and running me over with them."
     "Like I said, my imagination was running on all cylinders today."
-    "Salesman-mode had delayed the image conjured by her blithe comments about her growth, but the idea that she would grow so big she couldn't wrap her arms around herself... That was impossible to ignore."
+    "Salesman-mode had postponed the image conjured by her blithe comments about her growth, but the idea that she would grow so big she couldn't wrap her arms around herself... That was impossible to ignore."
+    show BE seductive
     "I cleared my throat, blushing as I saw her smile mischievously at me, and sputtered."
     MC "I'll get back to you on how soon we can deliver these. Do you just want the plain model for the bras?"
     show BE surprised
-    BE "Oh god no. I want one with the heart design, one with the joystick design, and, hm, I dunno, probably one with just some nice color. What do you think would be best; blue, pink, or black?"
+    BE "Oh god no. I want one with the heart design, one with the joystick design, and, hm, I dunno, probably one with just some nice color. What do you think would be best? Blue, pink, or black?"
     MCT "Black! Black!"
     MC "I think... black might be best. Bold, but not garish."
     show BE neutral
     BE "Sounds good to me. We'll go with the black then. And I circled the shirt I wanted too. Thanks Kei-chan. This is pretty cool, I appreciate it."
     MC "Well, I am being paid. But you're welcome, all the same."
+    show BE seductive
     "She winked playfully and then spun around, jogging away."
     "Even from the back I could see the extra bounce... in her step. I admired it for a moment, and then turned back to the matter at hand."
-    $setAffection("BBW", 1)
+    hide BE with dissolve
+    $setAffection("WG", 1)
     "Landing a sale five minutes into my job was great, but I suspected Alice wouldn't ignore a still-full box of 'catalogues' because of it."
     jump daymenu
 
-label BBW010_decline:
+label WG010_decline:
     stop music
     MC "No. I... I don't want to work for you."
-    show BBW neutral
+    show WG neutral
     "She was quiet for a second, as if she wasn't expecting that answer."
-    BBW "I'm sorry? Could you say that again?"
+    WG "I'm sorry? Could you say that again?"
     MC "I'm not interested."
-    BBW "Do you understand what an opportunity this is?"
-    BBW "Are you worried about balancing a job and your school work? Because I can understand your trepidation."
+    WG "Do you understand what an opportunity this is?"
+    WG "Are you worried about balancing a job and your school work? Because I can understand your trepidation."
     menu:
         "It's not a question of time. I just don't want to work for you.":
             play music Bittersweet
-            $setTimeFlag("BBWnowork")
+            $setTimeFlag("WGnowork")
             MC "It's not a question of time. I just don't want to work for you."
-            $setAffection("BBW", -10)
-            show BBW angry
-            BBW "So be it."
-            BBW "I hope you learn not to dismiss future opportunities so casually."
-            BBW "The world can get quite competitive. If you expect things to be handed to you..."
-            BBW "I don't have time for this. Good day."
-            hide BBW with dissolve
+            $setAffection("WG", -10)
+            show WG angry
+            WG "So be it."
+            WG "I hope you learn not to dismiss future opportunities so casually."
+            WG "The world can get quite competitive. If you expect things to be handed to you..."
+            WG "On second thought, I don't have time for this. Good day, Keisuke."
+            hide WG with dissolve
             MCT "That was actually less volatile than I was expecting."
             jump daymenu
         "Well... I guess I can try it out.":
-            play music BBW
+            play music WG
             MC "Well... I guess I can try it out."
             MCT "It's not like I'm eager to work for her, but a little extra green wouldn't be too bad."
-            jump BBW010_accept
+            jump WG010_accept
 
-label BBW011:
+label WG011:
     scene Hallway with fade
     play music Schoolday
     "Another day done, and I find myself with no idea of what I want to do."
     "The afternoon's a blank page, but when you can start in a million different ways it's impossible to pick just one."
-    MCT "It's not like I'm hoping to find something to do if I wander around the school long enough, but... maybe I will?"
+    MCT "It's not like I'm expecting to find something to do if I wander around the school long enough, but... maybe I will?"
     scene Gym with fade
     "Half an hour passed. I walked from the classrooms to the gym to the pool to behind the campus. Nothing."
     scene School Planter with fade
@@ -1625,28 +1623,28 @@ label BBW011:
     show PRG neutral
     PRG "O-oh! I'm sorry."
     "Coming right behind her, albeit not running headlong, was Alice."
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Don't mind her. She's too excited for her own good."
-    BBW "Watch where you're going, Kodama-san."
-    PRG "Y-yes, ma'am."
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Don't mind her. She's a bit too excited for her own good."
+    WG "Please watch where you're going, Kodama-san."
+    PRG "Y-yes, Alice."
     MC "What's going on that has you in such a rush?"
-    BBW "Kodama-san wants to join the film club meeting today. Apparently they're screening one of her favorite movies."
+    WG "Kodama-san wants to go to the film club meeting today. Apparently they're screening one of her favorite movies."
     show PRG happy
-    PRG "It's called Waiting for the Wrong Bus. It's a romantic-comedy from a couple years ago."
+    PRG "It's called 'Waiting for the Wrong Bus'. It's a romantic-comedy from a couple years ago."
     MC "Yeah, I've heard of that. Typical chick flick, right?"
     PRG "Oh, it's more than that. It's a beautiful and tender tale of two destined souls overcoming circumstances working to keep them apart-"
     MC "Isn't it because they don't like each other at first, but then they do?"
     show PRG angry
     PRG "No! It's not just that. Come watch the movie with us and you'll see."
-    BBW "It does sound like every other rom-com I've seen."
-    PRG "You're both wrong."
+    WG "It does sound like every other rom-com I've seen."
+    PRG "But it's not..."
     menu:
         "Sorry, but I've got homework to do. And chick flicks aren't my thing, you know?":
-            jump BBW011_fail
+            jump WG011_fail
         "OK, OK. I'll come with and see for myself.":
-            jump BBW011_prechoice
+            jump WG011_prechoice
 
-label BBW011_fail:
+label WG011_fail:
     MC "Sorry, but I've got homework to do. And chick flicks aren't my thing, you know?"
     show PRG sad
     PRG "Oh... All right."
@@ -1655,34 +1653,35 @@ label BBW011_fail:
     MC "Uh, maybe."
     jump daymenu
 
-label BBW011_prechoice:
+label WG011_prechoice:
     MC "OK, OK. I'll come with and see for myself."
     show PRG happy
     PRG "!"
     "Aida's face lit up, clearly happy to have another person accompanying her."
     stop music
     scene Hallway with fade
-    "The three of us went to the club meeting. There were about a dozen members, the upperclassmen and women showing fully developed factors like muscles or extra-large hands."
+    "The three of us went to the club meeting. There were about a dozen members, plus quite a few extra visitors like us."
     "But the screening room was much bigger than our classroom, which left plenty of seats for guests."
-    "100 minutes later we were back out in the hallway."
+    "An hour and a half or so later, we were back out in the hallway."
     show PRG happy at Position(xpos=0.25)
-    show BBW neutral at Position(xpos=0.75)
+    show WG neutral at Position(xpos=0.75)
     play music Rain
     PRG "What did you think? Wasn't it beautiful?"
     "Aida had her hands clasped in front of her heart, her cheeks rosy and her eyes closed. She looked like she might swoon at a moment's notice."
-    BBW "..."
+    WG "..."
     "Alice, meanwhile, looked like she was listening to elevator music playing at one-half speed."
     menu:
         "It was... sweet?":
-            jump BBW011_c1
+            jump WG011_c1
         "They didn't like each other at first, and then they did. I called it.":
-            jump BBW011_c2
+            jump WG011_c2
         "Well... Alice? What did you think?":
             $setSkill("Art", 1)
-            jump BBW011_c3
+            jump WG011_c3
 
-label BBW011_c1:
+label WG011_c1:
     MC "It was... sweet?"
+    $setAffection("PRG", 1)
     PRG "Wasn't it? When Kenji ran into the burning building to get her teddy bear it was so touching."
     PRG "What was your favorite part?"
     MCT "Guess I've got to make a bluff check."
@@ -1690,9 +1689,9 @@ label BBW011_c1:
     "That actually had to have been my least favorite scene, but that's why it was the only one I could think off."
     "And the way Alice fought back a snort, it didn't look like the movie had worked on her, either."
     "But this was an opportunity to free myself from the conversation."
-    jump BBW011_c3
+    jump WG011_c3
 
-label BBW011_c2:
+label WG011_c2:
     MC "They didn't like each other at first, and then they did. I called it."
     show PRG angry
     $setAffection("PRG", -1)
@@ -1713,133 +1712,136 @@ label BBW011_c2:
     PRG "That's not the point!"
     "I could see how quickly this was falling apart, and I didn't want to keep digging myself deeper."
     "Fortunately, I had an out."
-    jump BBW011_c3
+    jump WG011_c3
 
-label BBW011_c3:
+label WG011_c3:
     show PRG neutral
     MC "Well... Alice? What did you think?"
-    "Alice looked down at Aida, still blushing deeply."
-    BBW "I think it was exactly like every other rom-com I've seen."
+    $setAffection("WG", 1)
+    "Alice certainly looked like she had plenty she wanted to say, looking down at Aida, who was still blushing deeply, I could tell she reluctantly restrained herself."
+    WG "It was... I think it was exactly like every other rom-com I've seen."
     MC "Is that a good thing?"
-    BBW "If it's what you're looking for, yes. The familiar has its own appeal."
+    WG "If it's what you're looking for, yes. The familiar has its own appeal."
     show PRG sad
     PRG "But you didn't like it?"
-    "Alice hesitated again before responding. Despite her bored expression, her quick glances at Aida told me she was being careful with her words."
+    "Alice hesitated again before responding. Despite her typically blunt disposition, her quick glances at Aida told me she was being careful with her words."
     "Concern for Aida's feelings, I would assume."
-    BBW "The genre is well-established, and as such it has too many ideas that have become clichéd through overuse."
-    BBW "And all too often that leads to an attempt to outdo the clichés, rather than to break fresh ground."
-    BBW "The once-novel idea of having two people not express their feelings gets turned into an obstinate game, each character over-exaggerated to the point of cartoonishness."
+    WG "The genre is well-established, and as such it has too many ideas that have become clichéd through overuse."
+    WG "And all too often that leads to an attempt to outdo the clichés, rather than to break fresh ground."
+    WG "The once-novel idea of having two people not express their feelings gets turned into an obstinate game, each character over-exaggerated to the point of cartoonishness."
     show PRG neutral
     PRG "Games?"
-    BBW "If there is something you want and you do not make every effort to claim it, what are you doing? You are playing around, wasting time and effort."
+    WG "If there is something you want and you do not make every effort to claim it, what are you doing? You are playing around, wasting time and effort."
     MC "That's a pretty harsh view of romance, don't you think? You make it sound like a guy going after a girl sees her as nothing but a prize."
-    BBW "Her heart is the prize."
-    BBW "Courtship is a challenge, the man is tested and tries to prove himself. And, if he is successful, he is rewarded with her love."
-    MC "But the woman doesn't have to do anything? Doesn't have to prove herself?"
-    BBW "Women have their own trials in any relationship, but how often are we the pursuer?"
-    MC "Not big on women's lib, I take it."
-    show BBW haughty
-    BBW "Au contraire. I've never met a woman in our generation more dedicated to conquering the world of business and smashing the glass ceiling than I am."
-    BBW "I'm simply a realist. Even with advances in women's equality it's considered custom for the man to initiate, to pursue, to 'win.'"
-    BBW "But this set-up gives us ladies our own power, as long as we recognize it and use it."
+    WG "Her heart is the prize."
+    WG "Courtship is a challenge, the man is tested and tries to prove himself. And, if he is successful, he is rewarded with her love."
+    MC "But the woman doesn't have to do anything? Does she have to prove herself too?"
+    WG "Women have their own trials in any relationship, but how often are we the pursuer?"
+    MC "A bit of a traditionalist, I take it? I guess I hadn't pegged you for the old–fashioned type, Alice."
+    show WG haughty
+    WG "Au contraire. I've never met a woman in our generation more dedicated to conquering the world of business and smashing the glass ceiling than I am."
+    WG "I'm simply a realist. Even with advances in women's equality it's considered custom for the man to initiate, to pursue, to 'win' the woman's heart."
+    WG "But this set-up gives us ladies our own power, as long as we recognize it and use it."
     MC "So you don't mind being considered an object, a trophy?"
     MC "You wouldn't be insulted if, say, I asked you out, dated you, and then 'won' you? Made you my wife?"
     "She chuckled, brushing one of her locks behind her shoulder."
-    BBW "Hotsure-san... Do you know what a woman wants?"
+    WG "Hotsure-san... Do you understand what a woman wants?"
     MC "Eh?"
     MC "You mean like flowers and chocolates?"
     show PRG happy
     PRG "Or stuffed animals!"
-    show BBW neutral
-    BBW "No, I'm not talking about simple gifts."
-    BBW "I'm talking about romance. Do you know how to woo a lady?"
+    show WG neutral
+    WG "No, no, I'm not talking about simple gifts."
+    WG "I'm talking about romance. Do you know how to {i}woo{/i} a lady?"
     MC "Yeah! I mean... I've dated before. I understand romantic... stuff."
-    MCT "I just lost the argument when I called it 'stuff,' didn't I?"
-    show BBW haughty
-    BBW "Romantic 'stuff.' Heh."
-    BBW "I don't think I need to worry about becoming merely your wife."
-    BBW "Thinking it is your job to win means you are destined to lose."
-    show BBW neutral
-    BBW "Fun talk, though. We should do this again."
-    BBW "Hopefully with a better movie."
+    MCT "I just lost the argument when I called it 'stuff', didn't I?"
+    show WG haughty
+    WG "Romantic 'stuff'. Heh."
+    WG "I don't think I need to worry about merely becoming your wife any time soon, Keisuke."
+    WG "Thinking it is your job to win means you are already destined to lose."
+    show WG neutral
+    WG "Fun talk, though. We should do this again."
+    WG "Hopefully with a better movie."
     show PRG sad
     PRG "But {i}I{/i} liked it."
     jump daymenu
 
-label BBW012:
-    $setProgress("BBW", "BBW015")
+label WG012:
+    $setProgress("WG", "WG015")
     scene Classroom with fade
     play music Schoolday
     "When the classes ended for the day, I was more than ready to shut my brain off."
-    "The whammy of the news of our condition didn't mean we got to stop learning. Tashi-sensei ran the class like a herd of pack mules, just instead of piling loads of goods onto our backs we were packing our brains full of facts and figures."
+    "The whammy of the news of our condition didn't mean we got to stop learning. Tashi-sensei ran the class like a herd of pack mules, but instead of piling loads of goods onto our backs we were packing our brains full of facts and figures."
     "I had several chapters of reading to get through later that day, but first I needed to decompress before my grey matter started to overheat."
-    "But as I gathered up my things and made to leave, I felt a hand on my shoulder."
-    show BBW neutral at center with dissolve
-    BBW "Keisuke, do you have a moment?"
+    "As I gathered up my things and made to leave, I felt a tap on my shoulder."
+    show WG neutral at center with dissolve
+    WG "Keisuke, do you have a moment?"
     MC "Uh... Yes?"
-    show BBW happy
-    BBW "Excellent. We need to have a meeting to discuss the future of The Nikumaru Outlet Direct."
-    BBW "I'm calling all employees in, so come along."
+    show WG happy
+    WG "Excellent. We need to have a meeting to discuss the future of The Nikumaru Direct Outlet."
+    WG "I'm calling all employees in, so come along."
     scene Cafeteria with fade
     "I followed Alice to the cafeteria, where Aida had already laid out tea and crumpets at Alice's usual table."
-    show BBW happy at center with dissolve
-    BBW "Good. We're all here."
+    show WG happy at center with dissolve
+    WG "Good. We're all here."
     MC "All three of us?"
-    show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind BBW with dissolve
-    show BBW neutral
-    BBW "Both of us. Kodama-san is still operating in her capacity as my personal assistant, so for now this is still a two-person operation."
-    show BBW happy
-    BBW "There's me in the CEO/CFO/President chair, and you pounding the pavement to get orders and make deliveries."
+    show PRG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind WG with dissolve
+    show WG neutral
+    WG "Both of us. Kodama-san is still operating in her capacity as my personal assistant, so for now, this is still a two-person operation."
+    show WG happy
+    WG "There's me in the CEO/CFO/President, and you, the field agent, pounding the pavement to get orders and make deliveries."
     hide PRG with dissolve
-    BBW "It's exactly the type of humble beginnings that all great corporate empires are born from."
-    show BBW angry
-    BBW "But we're in the midst of a crisis right now. Our very existence as this school's premiere clothing retailer is under attack."
-    show BBW neutral
-    BBW "Hence this meeting. We need to address this attack on free enterprise: Matsumoto-san asserts that it violates the school's rules and regulations for a student to run a business on campus."
-    if not getFlag("BBW010_shiori"):
+    MC "Is this really a 'company' then?"
+    show WG neutral
+    WG "It's exactly the type of humble beginnings that all great corporate empires are born from."
+    show WG angry
+    WG "But we're in the midst of a crisis right now. Our very existence as this school's premiere clothing retailer is under attack."
+    show WG neutral
+    WG "Hence this meeting. We need to address this attack on free enterprise: Matsumoto-san asserts that it violates the school's rules and regulations for a student to run a business on campus."
+    if not getFlag("WG010_shiori"):
         MC "Wait, we're not allowed to be doing this? Then why are we having this meeting?"
-        show BBW haughty
-        BBW "Don't be so hasty to accept defeat, Keisuke. As in any competition, to win in business is not just to strive for success, but to reject failure."
-        BBW "If you allow others to set the terms you're handicapping yourself. It is only when you seize control of the playing field and the rules of the game that ultimate victory becomes possible."
+        show WG haughty
+        WG "Don't be so hasty to accept defeat, Keisuke. As in any competition, to win in business is not just to strive for success, but to reject failure."
+        WG "If you allow others to set the terms you're handicapping yourself. It is only when you seize control of the playing field and the rules of the game that ultimate victory becomes possible."
     MC "So you think there's some sort of loophole to exploit?"
-    show BBW haughty
-    BBW "Over, under or through. There's always a way to get past a mountain."
-    BBW "The Nikumaru Outlet Direct will not shutter its doors just because one nosey bureaucrat seeks to hobble us. I've already found a way forward."
-    jump BBW012_c1
+    show WG haughty
+    WG "Over, under or through. There's always a way to get past a mountain."
+    WG "The Nikumaru Outlet Direct will not shutter its doors just because one nosey bureaucrat seeks to hobble us. I've already found a way forward."
+    jump WG012_c1
 
-label BBW012_c1:
+label WG012_c1:
     menu:
-        "About that name..." if not getFlag("BBW012_c1_1"):
-            jump BBW012_c1_1
-        "About that name... (disabled)" if getFlag("BBW012_c1_1"):
+        "About that name..." if not getFlag("WG012_c1_1"):
+            jump WG012_c1_1
+        "About that name... (disabled)" if getFlag("WG012_c1_1"):
             pass
-        "Maybe we should just stop before we get into real trouble." if not getFlag("BBW012_c1_2"):
-            jump BBW012_c1_2
-        "Maybe we should just stop before we get into real trouble. (disabled)" if getFlag("BBW012_c1_2"):
+        "Maybe we should just stop before we get into real trouble." if not getFlag("WG012_c1_2"):
+            jump WG012_c1_2
+        "Maybe we should just stop before we get into real trouble. (disabled)" if getFlag("WG012_c1_2"):
             pass
         "I'm all ears.":
-            jump BBW012_c1_3
+            jump WG012_c1_3
 
-label BBW012_c1_1:
-    $setFlag("BBW012_c1_1")
+label WG012_c1_1:
+    $setFlag("WG012_c1_1")
     MC "About that name... It's a bit long, isn't it? And kind of bland."
-    show BBW neutral
-    BBW "That is one thing addressed in my plans. I admit, marketing is not my strongest suit."
-    BBW "But if you have a suggestion, by all means. Share."
+    show WG neutral
+    WG "That is one thing addressed in my plans. I admit, marketing is not my strongest suit."
+    WG "But if you have a suggestion, by all means. Share."
     MC "How about... Niku-Knacks!"
-    show BBW angry
-    BBW "..."
-    show BBW neutral
-    BBW "OK. Marketing is a weak point for both of us."
-    BBW "I'll keep that in mind."
-    jump BBW012_c1
+    show WG angry
+    WG "..."
+    show WG neutral
+    WG "OK. Marketing is a weak point for both of us."
+    WG "I'll keep that in mind."
+    jump WG012_c1
 
-label BBW012_c1_2:
-    $setFlag("BBW012_c1_2")
+label WG012_c1_2:
+    $setFlag("WG012_c1_2")
     MC "Maybe we should just stop before we get into real trouble."
-    show BBW angry
+    show WG angry
     "Alice scoffed-"
-    BBW "Scoff."
+    WG "Hmph."
     "-and gave me a withering look, but I pushed on."
     MC "Maybe Matsumoto-san's a bit strict, but she's not being a hard-ass-"
     MC "Um, she's not some sort of killjoy that has it out for you personally."
@@ -1848,76 +1850,79 @@ label BBW012_c1_2:
     MC "Or maybe the teachers and administrators?"
     "She didn't respond immediately, but I simply waited. She looked irritated enough already and I knew better than to poke her."
     "After a moment she exhaled."
-    show BBW neutral
-    BBW "This is how I'm dealing with it."
+    show WG neutral
+    WG "This {i}is{/i} how I'm dealing with it."
     MC "I'm... sorry?"
-    BBW "The schoolwork isn't too much for me. If anything it's a bit easier than at my old school."
-    BBW "But the news about our condition? I've already tried to stop it by dieting and working out. It wasn't successful, and I've come to accept that - for now, at least - my weight gain will run its inevitable course."
-    show BBW angry
-    BBW "But that doesn't mean I will allow it to change my life."
-    BBW "I was already on the path to a life of success and prestige in the world of business before I came here. My size will not be a roadblock, or even an obstacle."
-    show BBW haughty
-    BBW "I will proceed as I was before, as if nothing has changed."
-    BBW "I am not ignoring what is happening, but neither will I allow it to control me or my actions. That is not the Nikumaru way."
+    WG "The schoolwork isn't too much for me. If anything it's a bit easier than at my old school."
+    WG "But the news about our condition? I've already tried to stop it by dieting and working out. It wasn't successful, and I've come to accept that - for now, at least - my weight gain will run its inevitable course."
+    show WG angry
+    WG "But that doesn't mean I will allow it to change my life."
+    WG "I was already on the path to a life of success and prestige in the world of business before I came here. My size will not be a roadblock, or even an obstacle."
+    show WG haughty
+    WG "I will proceed as I was before, as if nothing has changed."
+    WG "I am not ignoring what is happening, but neither will I allow it to control me or my actions. That is not the Nikumaru way."
     menu:
         "Oh... I think I understand.":
-            jump BBW012_c2_1
+            jump WG012_c2_1
         "I still think you're making trouble for yourself down the line.":
-            jump BBW012_c2_2
+            jump WG012_c2_2
 
-label BBW012_c2_1:
+label WG012_c2_1:
     MC "Oh... I think I understand. You're pretty serious about this, huh?"
-    $setAffection("BBW", 1)
-    BBW "I am always serious about business, Hotsure-san."
+    $setAffection("WG", 1)
+    WG "I am always serious about business, Hotsure-san."
     MC "I can respect that, even if I'm not entirely convinced it won't come back to bite you."
     MC "But if you're sure you want to do this, I can help."
-    jump BBW012_c1
+    jump WG012_c1
 
-label BBW012_c2_2:
-    $setFlag("BBW012_c1_1")
+label WG012_c2_2:
+    $setFlag("WG012_c1_1")
     MC "I still think you're making trouble for yourself down the line."
     MC "And I've gotta be blunt, I don't fancy getting Matsumoto-san or any of the teachers getting on my case because you're trying to make a few extra dollars."
-    show BBW angry
-    $setAffection("BBW", -1)
-    BBW "If you're that concerned, don't be."
-    BBW "You're simply a hired hand. If any hammer is dropped it will be on my head."
+    show WG angry
+    $setAffection("WG", -1)
+    WG "Honestly Keisuke, are you a man or a mouse? Seizing the initiative always comes with risk."
+    show WG stern
+    WG "I'm not nearly as reckless as you are suggesting. This is business, I only take calculated risks."
+    WG "Besides, if you're that concerned about getting into trouble, don't be."
+    WG "You're simply a hired hand. If any hammer is dropped, it will be on my head."
     MC "I'm not asking you to take all the blame-"
-    show BBW haughty
-    BBW "Whatever your objections, you'll be protected. This is my business, after all."
-    BBW "You worry about making your deliveries, and I'll handle everything else."
-    jump BBW012_c1
+    show WG haughty
+    WG "Whatever your objections, you'll be protected. This is my business, after all."
+    WG "You worry about making your deliveries, and I'll handle everything else."
+    jump WG012_c1
 
-label BBW012_c1_3:
-    show BBW happy
-    BBW "Earlier today I contacted a clerk at a law firm that does occasional out-of-house work for my father's business."
-    BBW "As we speak she's filing the paperwork to create the Alice's Wishes Granted LLC."
-    BBW "Its official address will be a PO box I've secured in town, with all correspondence coming or going through it. Legally speaking, no business will be conducted on school grounds."
+label WG012_c1_3:
+    show WG happy
+    WG "Earlier today I contacted a clerk at a law firm that does occasional out-of-house work for my father's business."
+    WG "As we speak she's filing the paperwork to create the Alice's Wishes Granted LLC."
+    WG "Its official address will be a PO box I've secured in town, with all correspondence coming or going through it. Legally speaking, no business will be conducted on school grounds."
     MC "That's your solution? Won't that be inconvenient for people who want to place orders, having to mail a letter to a PO box?"
     MC "And who's going to collect the mail? I don't think-"
     "Alice held up a hand to stop me."
-    show BBW neutral
-    BBW "We won't be taking orders through snail mail. That's far too inefficient."
-    BBW "If you hadn't interrupted, I would have explained that I also have a software engineer developing a website and business email account."
-    BBW "Everything involved in placing the order and paying for it will be handled online. The PO box is merely a formality."
-    BBW "Understand?"
+    show WG neutral
+    WG "We won't be taking orders through snail mail. That's far too inefficient."
+    WG "If you hadn't interrupted, I would have explained that I also have a software engineer developing a website and business email account."
+    WG "Everything involved in placing the order and paying for it will be handled online. The PO box is merely a formality."
+    WG "Understand?"
     MC "I guess. Is it really necessary?"
-    BBW "Yes. As I said, by establishing a storefront off school grounds I am no longer in violation of any rules."
+    WG "Yes. As I said, by establishing a storefront off school grounds I am no longer in violation of any rules."
     MC "And what about filling the orders? Will the packages be delivered to you here?"
-    show BBW happy
-    BBW "Got it in one. While there are prohibitions on what items can be mailed to students here, our selection of products does not include weapons, drugs, or other such items."
-    BBW "Everything to be mailed to me is in keeping with permissible personal effects."
+    show WG happy
+    WG "Got it in one. While there are prohibitions on what items can be mailed to students here, our selection of products does not include weapons, drugs, or other such items."
+    WG "Everything to be mailed to me is in keeping with permissible personal effects."
     MC "You're still exchanging goods for money."
-    BBW "No, I am accepting gifts purchased by my fellow students and then graciously returning them when it turns out they do not suit my needs."
+    WG "No, I am accepting gifts purchased by my fellow students and then graciously returning them when it turns out they do not suit my needs."
     MC "You're... what?"
-    "She grinned deviously, like a smug cat meme."
-    show BBW haughty
-    BBW "Once the website is up and running you'll see. Or perhaps I should tell you now."
-    BBW "The website and order form will be constructed so as to appear as if our customers are buying items on my personal wish list."
-    BBW "All orders will be mailed to me, with the customer's information included as a special message so I know who the thoughtful party is."
+    "She grinned deviously."
+    show WG haughty
+    WG "Once the website is up and running, you'll see. Or perhaps I should tell you now."
+    WG "The website and order form will be constructed so as to appear as if our customers are buying items on my personal wish list."
+    WG "All orders will be mailed to me, with the customer's information included as a special message so I know who the thoughtful party is."
     MC "And once you have a new skirt or set of underwear you'll say 'Oh, this doesn't fit me' or 'Oh, it's not my style' and you 'give it back' to the person who bought it."
     "Her smile didn't grow wider, but it somehow grew more smug."
     MC "One question: What's the difference between bending the rules and breaking them?"
-    BBW "Breaking gets you punished. Bending increases your profit margin."
+    WG "Breaking gets you punished. Bending increases your profit margin."
     jump daymenu
 
 label BBW013:
