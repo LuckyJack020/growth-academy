@@ -16938,9 +16938,11 @@ label AE074:
     Yuki "Buh?"
     "She looked down bashfully, trying not to make eye contact with me, but couldn't help but look back up towards me to meet my, admittedly, smug gaze."
     AE "Uch, fine, if it'll sate your boundless and unending curiosity."
+    show cg AE074_snow1 with dissolve
     "With a grunt, she laid down as flat as she could with her back toward the ground, her massive asscheeks spreading out like large doughy spheres which pushed her off the ground. She grunted as only her feet and neck made contact."
     "Her hands and feet moved from side to side as best she could, as she laughed to herself before looking up towards me and smiling."
     Yuki "Guhehe!~"
+    hide cg with dissolve
     show AE neutral-smug
     AE "As I said, I can't make a snow angel; my behind makes it logistically impossible."
     MC "Hmm. Flip over."
@@ -16954,10 +16956,14 @@ label AE074:
     AE "If you could."
     MC "Got it."
     "Putting one hand on her thigh and another on her back, I managed to flip her onto her stomach as she buried her face in the snow."
+    show cg AE074_snow2 with dissolve
     MC "Okay, now do it."
     "She listened as she began to make a snow angel face down, her rump wobbling up and down like a wave as the momentum of her fat thighs made her lower body wobble. After a moment, she stopped and waited for her backside to subside before grunting and standing up with help."
     "As Shiori got up, the imprint on the snow showed what appeared to be a normal snow angel with two big, round spheres on the lap."
+    show cg AE074_snow3 with dissolve
+    pause 2
     MC "Aha! See that! Both a giant snow angel dress, AND a super fancy one."
+    hide cg with dissolve
     show AE neutral-annoyed
     AE "Ach!"
     "I smirked as Shiori gently shoved me, her face still pink from the experience, but a gentle smile plastered on her face."
