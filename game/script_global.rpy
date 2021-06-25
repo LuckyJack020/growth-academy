@@ -197,7 +197,7 @@ image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
 
 image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
-image Giant Dorm Exterior = "Graphics/ui/bg/NYI.png"
+image Giant Dorm Exterior = "Graphics/ui/bg/GTSdorm_quarry_exterior.png"
 image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
 image Courtyard GTS = "Graphics/ui/bg/NYI.png"
 
