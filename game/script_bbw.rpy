@@ -140,8 +140,6 @@ label BBW002_prechoice:
     menu:
         "What do you normally have, if not mackerel?" if not getFlag("BBW002_c1_1"):
             jump BBW002_c1_1
-        "What do you normally have, if not mackerel? (disabled)" if getFlag("BBW002_c1_1"):
-            pass
         "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once.":
             jump BBW002_c1_2
         "(Change the subject) So, how about that news about why we're here? How are you taking that?":

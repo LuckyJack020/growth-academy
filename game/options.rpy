@@ -16,7 +16,7 @@ define config.log = "debug_log.txt"
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Growth Academy (2021.5.26)")
+define config.name = _("Growth Academy (2021.6.27)")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -27,7 +27,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "2021.5.26"
+define config.version = "2021.6.27"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -42,6 +42,11 @@ define gui.about = _p("""
 ## or semicolons.
 
 define build.name = "GrowthAcademy"
+
+## This option (when set to True) will allow for menu choices that would
+## normally be unable to be clicked, to appear to the player.
+
+define config.menu_include_disabled = True
 
 
 ## Sounds and music ############################################################
