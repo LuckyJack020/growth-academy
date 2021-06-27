@@ -160,39 +160,39 @@ label PRG001:
     "Aida went quiet as we got closer to the counter."
     "When we finally got up to the counter, Aida ordered several bean paste buns and a few jelly rolls."
     "Taking the large bag of pastries in hand, we set out into the cafeteria seating, looking around for Alice."
-    show BBW neutral at Position(xpos=0.25) with dissolve
-    BBW "Here, Kodama-san."
+    show WG neutral at Position(xpos=0.25) with dissolve
+    WG "Here, Kodama-san."
     PRG "C-Coming!"
-    show BBW neutral
+    show WG neutral
     "I followed Aida over to the table Alice was sitting at, a clean, white cloth spread over the table and actual set of silverware in front of her."
     "Taking a seat across from Alice, I watched Aida hurriedly open each of the packaged sweets and set them out on the cloth in front of Alice.  She sat down beside Alice, looking down at the selection."
-    BBW "Thank you Kodama-san. Hmm, curious... is this a full selection of the snacks available, or did you prioritize some over others?"
+    WG "Thank you Kodama-san. Hmm, curious... is this a full selection of the snacks available, or did you prioritize some over others?"
     show PRG nervous
     PRG "Well, um, this was all I could afford, and I tried to pick a variety..."
-    BBW "Kodama-san, if you lack sufficient funds to fulfill my requests, you need only to inform me and I will resolve the issue accordingly. Of course, I will reimburse you for this. Now where to begin?"
+    WG "Kodama-san, if you lack sufficient funds to fulfill my requests, you need only to inform me and I will resolve the issue accordingly. Of course, I will reimburse you for this. Now where to begin?"
     "Alice intently examined each dessert with a scrutinizing gaze I had never seen applied to snack food."
-    show BBW haughty
-    BBW "Keep a record of which ones I am sampling right now. We can repeat this process at a future time to ensure I am making the most educated decision."
-    BBW "Now, which flavor is this?"
+    show WG haughty
+    WG "Keep a record of which ones I am sampling right now. We can repeat this process at a future time to ensure I am making the most educated decision."
+    WG "Now, which flavor is this?"
     show PRG neutral
     PRG "Uhm, that's the red bean bun."
     MC "I just had one of those. They're actually not bad."
-    show BBW neutral
+    show WG neutral
     "Alice arched a brow at my comment, but didn't say anything as she cut a generous slice from the middle, as if she was cutting a fine piece of meat, and popped it in her mouth. I couldn't believe she was actually using silverware to eat a bun."
     "After she swallowed she took a sip of water, swishing it around in her mouth."
-    BBW "Initial thoughts are... mixed.  There's a strong immediate taste up front. The filling however, has a disappointing glue-like texture. It sticks to the roof of my mouth rather than coating my pallette."
-    BBW "The pastry was not fluffy in the slightest, as if it had been smashed. The backend flavor diminishes quickly."
-    BBW "Final verdict: substandard, but not entirely unpleasant."
+    WG "Initial thoughts are... mixed.  There's a strong immediate taste up front. The filling however, has a disappointing glue-like texture. It sticks to the roof of my mouth rather than coating my pallette."
+    WG "The pastry was not fluffy in the slightest, as if it had been smashed. The backend flavor diminishes quickly."
+    WG "Final verdict: substandard, but not entirely unpleasant."
     "I looked over and saw Aida studiously taking notes on a notepad."
     MCT "This girl has more notes about Alice's food than I have at the end of one class period."
     PRG "O-Okay. T-The next one is melon bread..."
     "Again with cutting a piece, tasting, then cleansing her palate."
-    BBW "A sweet taste that almost overpowers the fruitiness- perhaps due to whatever preservatives or flavor enhancers they haphazardly threw into this. The bread has the same problem as the red bean sample."
-    BBW "Perhaps unavoidable in a mass-produced and distributed product like this, the backend flavor is strong enough to be noted, and not entirely unpleasant."
-    BBW "Final verdict: sufficient, but ultimately average."
+    WG "A sweet taste that almost overpowers the fruitiness- perhaps due to whatever preservatives or flavor enhancers they haphazardly threw into this. The bread has the same problem as the red bean sample."
+    WG "Perhaps unavoidable in a mass-produced and distributed product like this, the backend flavor is strong enough to be noted, and not entirely unpleasant."
+    WG "Final verdict: sufficient, but ultimately average."
     "Again Aida took notes, and I just sort of stood there observing as Alice worked her way through the pastries, until I couldn't take the curiosity any longer."
     MC "So... what is this all about, exactly?"
-    BBW "I am familiarizing myself with the different types of snacks available. Like a wine tasting, but appropriate for the school."
+    WG "I am familiarizing myself with the different types of snacks available. Like a wine tasting, but appropriate for the school."
     menu:
         "Ask about the food":
             jump PRG001_c1_1
@@ -201,22 +201,22 @@ label PRG001:
 
 label PRG001_c1_1:
     MC "You don't plan on eating them all, then?"
-    BBW "What, all of this at once? What would be the point of that?"
+    WG "What, all of this at once? What would be the point of that?"
     "She indicated the spread of snacks in front of her, which was as much food as a normal meal."
     MC "I see your point. But why go through several at once? Why not buy one, try it, and then buy another later on?"
-    BBW "Far too time-intensive, plus I do not care to consume an entire snack that is subpar or ill-suited for my sense of taste."
+    WG "Far too time-intensive, plus I do not care to consume an entire snack that is subpar or ill-suited for my sense of taste."
     MC "So what do you do with the rest of it?"
-    BBW "The rest of what?"
+    WG "The rest of what?"
     MC "Well, you've got most of each bun left, do you give the rest to Kodama-san or something?"
-    BBW "Since you are enquiring, you and Kodama-san are more than welcome to the remainder of this substandard fair if you so choose."
-    BBW "After all, whether it's component manufacturing or one's lunch, excess inventory is just a waste. Though I do not understand why someone would waste their appetite on something so unsatisfying."
-    BBW "As for the ones that have rated fair and above, I will take them myself for later."
+    WG "Since you are enquiring, you and Kodama-san are more than welcome to the remainder of this substandard fair if you so choose."
+    WG "After all, whether it's component manufacturing or one's lunch, excess inventory is just a waste. Though I do not understand why someone would waste their appetite on something so unsatisfying."
+    WG "As for the ones that have rated fair and above, I will take them myself for later."
     show PRG unique
     MC "..."
     PRG "..."
     MC "...Glad to help...?"
     MC "Look... I've got some homework to take care of, so I'll see you later, Kodama-san.  Alice, good to see you too."
-    BBW "You as well, Hotsure-san."
+    WG "You as well, Hotsure-san."
     PRG "..."
     scene Dorm Exterior with fade
     "I did actually have homework to get done, but the way Alice had said that galled me."
@@ -231,32 +231,32 @@ label PRG001_c1_2:
     show PRG sad-2
     PRG "Um..."
     MC "I can understand favors, but is... I mean... you are paying her a decent wage, right?"
-    BBW "Yes, she is being compensated for her time and effort. Why do you ask?"
+    WG "Yes, she is being compensated for her time and effort. Why do you ask?"
     MC "Just don't want to see anyone being taken advantage of. That's all."
-    BBW "Business is not about taking advantage. Not always, at least. This is a fair and equitable exchange, my money for her labor."
+    WG "Business is not about taking advantage. Not always, at least. This is a fair and equitable exchange, my money for her labor."
     PRG "P-Please, it's okay, I don't mind..."
     MC "..."
-    BBW "..."
-    BBW "Anyways, on to the next one..."
+    WG "..."
+    WG "Anyways, on to the next one..."
     show PRG neutral
     "I hung around for a few more taste tests. Alice's palette was... refined. And, that was putting it in polite terms."
     "Aida took careful notes of each snack tasted.  By the end, she'd burned through about three pages and some change."
-    show BBW happy
-    BBW "Well, I'd note this as a success."
-    BBW "Having said that, I do think future tests will be necessary."
+    show WG happy
+    WG "Well, I'd note this as a success."
+    WG "Having said that, I do think future tests will be necessary."
     PRG "R-Right.  I-I have the notes here, and I'll keep them organized for future reference."
-    BBW "Mm, good."
-    BBW "Hotsure-san, it has been nice having you, but I'd best be going."
+    WG "Mm, good."
+    WG "Hotsure-san, it has been nice having you, but I'd best be going."
     show PRG nervous
     PRG "..."
-    BBW "Kodama-san?"
+    WG "Kodama-san?"
     PRG "..."
     show PRG surprised
     PRG "O-Oh!  Y-Yes?"
-    BBW "We'd best be on our way."
+    WG "We'd best be on our way."
     show PRG unique
     PRG "Uhm... o-okay."
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG neutral
     "The two girls got up.  Alice started out the door, while Aida stayed behind and folded the tablecloth."
     "She put all of the wrappers into a small pile and took them, the silverware, and the cloth into her arms."
@@ -1151,22 +1151,22 @@ label PRG006_c1_after:
     scene Dorm Exterior with fade
     show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     "We finally arrived at the women's dorms. Beside me, Aida was huffing from the load, her face red from the strenuous effort. I knocked on the door for her, and Alice answered after a short wait."
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Hm?"
-    show BBW happy
-    BBW "Oh! Wonderful, they've arrived!"
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Hm?"
+    show WG happy
+    WG "Oh! Wonderful, they've arrived!"
     "Alice started taking the boxes from my arms. Aida awkwardly waddled through the door, setting the boxes down out of sight."
     "Having not been invited in, I played the gentleman card and stayed outside."
     "After they had gotten all the boxes settled, Alice took a box cutter in hand and scored the tape, popping open the box tops easily."
     "Aida wandered over to the door as Alice began casting packing paper and bubble wrap to the floor."
     "Aida looked behind her at the accumulating mess on the floor. She shut her eyes for a second, then looked up at me."
-    hide BBW with dissolve
+    hide WG with dissolve
     PRG "Um... I'm going to have my hands pretty full..."
     MC "Don't even worry about it. You're a busy girl, I get it."
     PRG "Okay."
     PRG "...Good-bye, Hotsure san. And..."
     PRG "... thanks."
-    BBW "Kodama-san? We need to start on an organized system for sorting!"
+    WG "Kodama-san? We need to start on an organized system for sorting!"
     PRG "Y-Yes, Alice!"
     hide PRG with dissolve
     "She quickly closed the door, Alice's eager and authoritative voice already rambling out orders."
@@ -1527,7 +1527,7 @@ label PRG008_c1_2:
     show PRG neutral
     PRG "I promise I have more. Y-You can come see yourself, to make sure."
     "Aida turned back and walked toward her dorm. I followed behind her, going to the same door that, just the other day, had felt more like a factory than a living quarters."
-    scene Dorm BBW with fade
+    scene Dorm WG with fade
     "I'd seen Aida and Alice's dorm from outside before, but I hadn't actually gotten a closer look at it. Walking in now, I was shocked to the point of almost forgetting about my headache."
     "The room looked like something out of a millionaire's social media profile. Thick curtains surrounded a massive bed fit for a princess. A dainty tea table sat vacant in the center, with fresh china and tea cups just waiting to be used."
     "Flowing curtains hung from the windows and brought out a deep, heavenly feel to the room."
@@ -3686,114 +3686,114 @@ label PRG015:
         PRG "Y-You too."
     hide PRG with dissolve
     "I got my books awkwardly shoved into my bag and zipped over it. My poor bag was stretched past its limit and would probably burst at some point. I prayed that today was not that day, though."
-    BBW "Hotsure-san?"
-    show BBW neutral with dissolve
+    WG "Hotsure-san?"
+    show WG neutral with dissolve
     MC "Eh?"
     "I turned to find Alice, the blonde conquistador of the cafeteria, waiting for me by the door. While Aida and I were chatting, everyone else had left the classroom, including Tashi-sensei, leaving Alice and I alone."
     MC "Oh, hello Alice."
-    BBW "May I speak with you?"
+    WG "May I speak with you?"
     MCT "Oh no."
     MC "Sure. Have a specific place in mind?"
     "Alice glanced around her momentarily, then turned back."
-    BBW "We can talk here."
-    show BBW neutral-2
-    BBW "Now, I am not generally the type to get involved in other’s personal affairs. I’d much rather stick to my own business, if I’m to be blunt."
-    BBW "Having made that clear, I feel that I must intervene for a moment."
-    BBW "What are your intentions with Kodama-san?"
+    WG "We can talk here."
+    show WG neutral-2
+    WG "Now, I am not generally the type to get involved in other’s personal affairs. I’d much rather stick to my own business, if I’m to be blunt."
+    WG "Having made that clear, I feel that I must intervene for a moment."
+    WG "What are your intentions with Kodama-san?"
     MC "Ah... pardon?"
     MCT "Is she saying what I think she’s saying?"
-    BBW "What are your intentions with her? As in, are you merely looking for a friend, or are you searching for something more... amorous?"
+    WG "What are your intentions with her? As in, are you merely looking for a friend, or are you searching for something more... amorous?"
     "I couldn’t believe my ears. I would expect this sort of thing out of Honoka. It had already happened, in fact."
     "But, from Alice?! Was the world losing its shit?"
     MC "I don’t mean to be rude, but why exactly are you asking?"
-    show BBW haughty
-    BBW "Simple. Hotsure-san, Kodama-san is not just some romance novel that you can toss back on the shelf when you’ve finished. And, she is far from a cheap fling."
-    show BBW neutral
-    BBW "If your intentions are to pursue a relationship with her, I have no qualms about it, provided that you give her the proper respect that she deserves, not only now, but in the future as well."
-    show BBW worried
-    BBW "As you may have noticed, she is a bit of a shrinking violet."
+    show WG haughty
+    WG "Simple. Hotsure-san, Kodama-san is not just some romance novel that you can toss back on the shelf when you’ve finished. And, she is far from a cheap fling."
+    show WG neutral
+    WG "If your intentions are to pursue a relationship with her, I have no qualms about it, provided that you give her the proper respect that she deserves, not only now, but in the future as well."
+    show WG worried
+    WG "As you may have noticed, she is a bit of a shrinking violet."
     "I had no idea how to feel about this."
-    show BBW neutral
+    show WG neutral
     "Alice almost seemed to think that I was an asshole, which to my knowledge, she had no reason to think such things."
     menu:
         "Counter Argue":
             $setFlag("PRG015_counter")
             MC "I see. Well, allow me to be blunt for a moment. Why, if you said before that you prefer to stick to your own business, do you feel like you have any right to critique my choices?"
-            show BBW surprised-2
-            BBW "Hotsure-san, I have no intent to verbally attack you."
-            show BBW neutral
-            BBW "You must understand, Kodama-san is not only my employee, but she is also my roommate."
-            BBW "As such, the two of us do have a bond. So, I see it as my duty to help protect her, if necessary."
+            show WG surprised-2
+            WG "Hotsure-san, I have no intent to verbally attack you."
+            show WG neutral
+            WG "You must understand, Kodama-san is not only my employee, but she is also my roommate."
+            WG "As such, the two of us do have a bond. So, I see it as my duty to help protect her, if necessary."
             MC "Do you also see it as your duty to launch disguised insults at me, too?"
-            show BBW surprised-2
-            BBW "I-"
+            show WG surprised-2
+            WG "I-"
             MC "I don’t want to hear it. If I’ve given you any reason to doubt me, then may all the blame fall to me, but I truly don’t believe I’ve given you a shred of a reason to have such ill will toward me."
-            show BBW doubt
-            BBW "I’m merely trying to shield her, Hotsure-san. I hold no ill will toward you, nor do I see you as a delinquent."
+            show WG doubt
+            WG "I’m merely trying to shield her, Hotsure-san. I hold no ill will toward you, nor do I see you as a delinquent."
         "Stay quiet":
             "I simply nodded and paid attention."
             "Alice already seemed on a roll, and I had a sneaking suspicion that diving into battle would only spark her further."
-    show BBW neutral
-    BBW "My point here is simple. How well do you know Kodama-san?"
+    show WG neutral
+    WG "My point here is simple. How well do you know Kodama-san?"
     MC "I..."
     "She did have a point there. Aida and I weren’t exactly the tightest of friends who knew each other's secrets backwards and front, but I did feel a genuine connection forming."
     MC "I wouldn’t say we’re the thickest of thieves, but we have spent a decent amount of time talking."
-    BBW "Hm, I see."
-    BBW "Do you see yourself pursuing a deeper connection with her?"
+    WG "Hm, I see."
+    WG "Do you see yourself pursuing a deeper connection with her?"
     MC "I... why wouldn’t I want to get to know her better?"
     MC "Kodama-san is a very likable person. I have no reason not to."
-    BBW "Mm..."
+    WG "Mm..."
     MC "Alice, at least tell me this. Where is this coming from?"
     MC "You and I have spent little time together. You likely know nothing of me, outside of what Kodama-san has told you."
     MC "So, unless Kodama-san is trashing me to you, which I truly hope is not the case, you have no reason to doubt my intentions."
     "For once, Alice took her time to respond. I felt a touch of pride in managing to stop her ongoing flow of dialogue for a moment, but also knew that a doozy of a response was on order."
     MC "Am I wrong?"
-    show BBW neutral-2
-    BBW "It isn’t my place to go into details. What is between you and Kodama-san is your business, and not mine."
-    BBW "However, I will say this."
-    BBW "Firstly, she has said nothing about you that would give me doubts."
+    show WG neutral-2
+    WG "It isn’t my place to go into details. What is between you and Kodama-san is your business, and not mine."
+    WG "However, I will say this."
+    WG "Firstly, she has said nothing about you that would give me doubts."
     MCT "Oh, thank the heavens."
-    show BBW haughty
-    BBW "Secondly, first impressions and small talk will only get you so far, Hotsure-san. To really know someone, you need to form a deeper connection through conversation."
-    BBW "I trust that you know some surface level trivia about Kodama-san, which is well and good. But, forming a deeper connection requires the trust and effort of both sides."
-    BBW "And, you’d do well to learn more about her, Hotsure-san. There is... well, it is safe to say that there is much that you do not know."
+    show WG haughty
+    WG "Secondly, first impressions and small talk will only get you so far, Hotsure-san. To really know someone, you need to form a deeper connection through conversation."
+    WG "I trust that you know some surface level trivia about Kodama-san, which is well and good. But, forming a deeper connection requires the trust and effort of both sides."
+    WG "And, you’d do well to learn more about her, Hotsure-san. There is... well, it is safe to say that there is much that you do not know."
     MC "I... huh?"
-    show BBW neutral
-    BBW "You’ve spent time with her while she cooks and in other odds and ends situations."
-    BBW "But, that isn’t all there is to understanding a person at a deeper level. It’s far more complex than that."
-    BBW "A person is a complex melding of many different aspects chosen from a broad pool."
-    BBW "In many cases, it can take years, even decades, to truly understand another human being at the same level that you understand yourself."
-    show BBW haughty
-    BBW "Can you say with any level of confidence that you and Kodama-san share that sort of bond?"
+    show WG neutral
+    WG "You’ve spent time with her while she cooks and in other odds and ends situations."
+    WG "But, that isn’t all there is to understanding a person at a deeper level. It’s far more complex than that."
+    WG "A person is a complex melding of many different aspects chosen from a broad pool."
+    WG "In many cases, it can take years, even decades, to truly understand another human being at the same level that you understand yourself."
+    show WG haughty
+    WG "Can you say with any level of confidence that you and Kodama-san share that sort of bond?"
     MC "Of course not. In fact, I’d say that I only have that level of understanding with members of my family."
     MC "But, I never said I wasn’t open to that sort of bond with her. Friendship or relationship, I’d like to get to know her better."
-    show BBW neutral
-    BBW "You would?"
+    show WG neutral
+    WG "You would?"
     MC "Most definitely."
-    show BBW neutral-2
-    BBW "I see. Well, I believe I’ve gotten what I came for."
+    show WG neutral-2
+    WG "I see. Well, I believe I’ve gotten what I came for."
     MC "Alice, if I may. Is there something that you’re trying to tell me?"
-    BBW "I already told you before, and I will reiterate..."
-    BBW "It isn’t my place to say."
+    WG "I already told you before, and I will reiterate..."
+    WG "It isn’t my place to say."
     if getFlag("PRG015_counter"):
-        BBW "However, I will say that I do approve of you."
+        WG "However, I will say that I do approve of you."
         MC "You... approve of me?"
-        BBW "I do. Much as I was just trying to let on to you, you can learn much about a person through deep conversation."
+        WG "I do. Much as I was just trying to let on to you, you can learn much about a person through deep conversation."
         "Alice shifted toward the door, never breaking the gaze into my eyes."
-        show BBW haughty
-        BBW "And, I have learned much in the past few minutes."
+        show WG haughty
+        WG "And, I have learned much in the past few minutes."
     else:
-        show BBW haughty
-        BBW "However, I have learned much in the past few minutes."
+        show WG haughty
+        WG "However, I have learned much in the past few minutes."
         "Alice shifted toward the door, keeping a laser focused gaze trained on me."
-    BBW "If you truly wish to become closer with Kodama-san, do not wait around for an opportunity to come knocking on your door."
-    BBW "Create your own opportunity before someone else does."
+    WG "If you truly wish to become closer with Kodama-san, do not wait around for an opportunity to come knocking on your door."
+    WG "Create your own opportunity before someone else does."
     MC "I see. Well, I do appreciate the pep talk, Alice. Thank you... in a weird way."
-    BBW "Think nothing of it. I was searching for information, and now I have it."
+    WG "Think nothing of it. I was searching for information, and now I have it."
     MC "Right, of course. Be well, Alice."
-    show BBW neutral-2
-    BBW "And, you as well."
-    hide BBW with dissolve
+    show WG neutral-2
+    WG "And, you as well."
+    hide WG with dissolve
     "Alice promptly left."
     MCT "..."
     MCT "What the hell?"
@@ -4610,17 +4610,17 @@ label PRG019_c1_1:
     Announcer "And begin!"
     "As the bell rang loudly once again, Aida reached below her and pulled out an enormous steel mixing bowl, while Sakura retrieved cabbage and green onions from the fridge and began chopping furiously."
     "As their round wore on, shrimp and vegetable oil was added to their bowl, as well as a handful of other spices and herbs."
-    BBW "How is she doing?"
-    show BBW neutral with dissolve
+    WG "How is she doing?"
+    show WG neutral with dissolve
     "I jumped out of my blank stare as Alice sat down daintily next to me."
     MC "Oh! Good morning, Alice. She's doing really well, so far."
-    BBW "As expected. Kodama-san is far from a slouch when it comes to the culinary arts. Let's just hope that this Sakura character won't hold her back."
+    WG "As expected. Kodama-san is far from a slouch when it comes to the culinary arts. Let's just hope that this Sakura character won't hold her back."
     MC "I doubt she will. Those two are like a well-oiled machine. They play off of each other's strengths in ways that leave little room for error."
     "Alice nodded thoughtfully before turning her attention to Aida, who was now wrapping her nearly finished dumplings in a wonton wrapper. As she wrapped, Sakura took each dumpling and added it to a large steamer."
-    BBW "Ah, shrimp dumplings. If those two can prepare them correctly, it'll be an easy win."
+    WG "Ah, shrimp dumplings. If those two can prepare them correctly, it'll be an easy win."
     MC "How do you mean?"
-    show BBW haughty
-    BBW "You see, since dumplings are so popular, everyone knows what to expect when they eat one. If Kodama-san and Sakura-san can make theirs taste more unique than anything the judges have had before, it could easily give them the victory."
+    show WG haughty
+    WG "You see, since dumplings are so popular, everyone knows what to expect when they eat one. If Kodama-san and Sakura-san can make theirs taste more unique than anything the judges have had before, it could easily give them the victory."
     "I looked on as Aida wrapped her last dumpling and set it in the steamer. Sakura shut the lid and set the timer nearby. Both of them sighed happily as they give each other a high five."
     "After a short while, the timer dinged and the steamer lid was opened. A savory smell of freshly cooked shrimp with a hint of garlic wafted over the crowd, with the occasional 'ooh' and 'ahh' being murmured here and there."
     "Aida reached into the steamer with a pair of tongs and gently pulled out each dumpling, setting them on a large plate. She handed them off to Sakura who added a touch of garnish before bringing them to the awaiting judge's table."
@@ -4633,10 +4633,10 @@ label PRG019_c1_1:
     "As the crowd applauded furiously, Aida celebrated with her now seemingly trademark bounce."
     MC "YES! GO TEAM KODAMA!!"
     "Aida hurried from the judges table back to where Alice and I stood."
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "O-Oh! Good Morning Nikumaru-sama!"
-    BBW "No need for such formalities today, Kodama-san. That was a very well executed round. I expected no less from you."
+    WG "No need for such formalities today, Kodama-san. That was a very well executed round. I expected no less from you."
     show PRG neutral
     PRG "A-And what did you think, Hotsure-san?"
     MC "Everything she said, and more! You guys did incredible!"
@@ -4647,9 +4647,9 @@ label PRG019_c1_1:
     PRG "I-It wasn't all me. Sakura-san, you did a lot more of the work than I did."
     Sakura "Sure, I may do a bit more of the grunt work, but I don't have your finesse, your skill, your flourish, whatever you want to call it! You know exactly how every ingredient will work best and you utilize it to its fullest potential!"
     Sakura "That's a skill that isn't easily taught, Kodama-san."
-    show BBW happy
-    BBW "Well said, Sakura-san. Now then, I must be off. The music club has a performance coming up and I intend to sing a solo."
-    hide BBW with dissolve
+    show WG happy
+    WG "Well said, Sakura-san. Now then, I must be off. The music club has a performance coming up and I intend to sing a solo."
+    hide WG with dissolve
     show PRG unique at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     "Alice started toward the door, working her way through the crowds of spectators until she was out of sight."
     MC "Did you want to go do something, Kodama-san? It's still early."
@@ -4823,62 +4823,62 @@ label PRG020:
     MCT "Laundry, on the other hand, how I despise thee."
     "Daichi wasn't around. He had run off before the sun was even up, some kind of weird, tinfoil contraption tucked under his arm. So I had the place to myself until morning classes began."
     "I had finally decided on a uniform, when a light, almost inaudible knock came from my door. I hastily threw on my uniform and opened the door."
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     "There stood Alice, fist raised again to knock. Usually, she had a persistent aura of confidence surrounding her, but today, her eyes looked riddled with worry."
-    BBW "Good morning, Hotsure-san. May I speak with you?"
+    WG "Good morning, Hotsure-san. May I speak with you?"
     MC "Oh- uh, good morning, Alice. What's going on?"
     MCT "It must be important if she couldn't even wait for class to begin first."
-    BBW "Would you mind if we spoke somewhere that's a bit more private? I'd rather not have our conversation picked up by wandering ears."
+    WG "Would you mind if we spoke somewhere that's a bit more private? I'd rather not have our conversation picked up by wandering ears."
     MC "Understandable. Will my room work?"
     "I gestured back into my dorm. Thankfully, a bit of motivation had struck me to clean recently, so it now was more reminiscent of a clothing store after a large sale than the usual disaster pit that it had been."
     "Alice nodded and slowly shuffled into my room. She took one look at my room before deciding that the bed was the safest bet, and sat down elegantly."
     MC "Alright, so what's on your mind?"
-    show BBW sad
+    show WG sad
     "Alice's expression immediately soured."
-    BBW "Well... It's concerning Kodama-san."
+    WG "Well... It's concerning Kodama-san."
     MC "Kodama-san? Is everything alright? She isn't in some sort of trouble or anything, is she?"
-    BBW "Kodama-san in trouble? Nothing so dramatic. She was late with my breakfast this morning, which is quite unusual for her. She is usually so prompt and always seems ready for the day, but today, she looked exhausted and worn-out."
-    BBW "I realize that she had another cooking competition yesterday, so she is most likely a bit overtired from that whole affair, however, I must confess that I'm a bit worried about her."
+    WG "Kodama-san in trouble? Nothing so dramatic. She was late with my breakfast this morning, which is quite unusual for her. She is usually so prompt and always seems ready for the day, but today, she looked exhausted and worn-out."
+    WG "I realize that she had another cooking competition yesterday, so she is most likely a bit overtired from that whole affair, however, I must confess that I'm a bit worried about her."
     MC "How do you mean worried?"
     "I sat down on the bed next to Alice and studied her face. Alice always carried herself with such poise and grace, and could seemingly shake off any and all inconvenience."
     "For her to be coming to speak with me privately, let alone her being this upset, must mean that she was truly concerned."
-    BBW "She used to offer to help me before I'd even think to ask. And what's more, she always seemed content and happy with her work. But, as of late, her mind seems to be less and less in the moment, like she's in an eternal daydream of sorts."
-    BBW "In fact, just the other day, she completely forgot my midday snack. And when I mentioned it to her, it was as if I had just snapped her back to reality for just a moment."
-    BBW "I don't want to let her go, Hotsure-san, but I feel as if she isn't happy."
-    BBW "And if Kodama-san isn't happy working for me anymore, then why keep her as my assistant? Why force her to continue working for me if it's something she truly doesn't want to do?"
+    WG "She used to offer to help me before I'd even think to ask. And what's more, she always seemed content and happy with her work. But, as of late, her mind seems to be less and less in the moment, like she's in an eternal daydream of sorts."
+    WG "In fact, just the other day, she completely forgot my midday snack. And when I mentioned it to her, it was as if I had just snapped her back to reality for just a moment."
+    WG "I don't want to let her go, Hotsure-san, but I feel as if she isn't happy."
+    WG "And if Kodama-san isn't happy working for me anymore, then why keep her as my assistant? Why force her to continue working for me if it's something she truly doesn't want to do?"
     menu:
-        "Tell her to lighten up on Aida.": #PRG +2, BBW +1
+        "Tell her to lighten up on Aida.": #PRG +2, WG +1
             jump PRG020_c1_1
-        "Convince her to let Aida go.": #PRG -2, BBW -1
+        "Convince her to let Aida go.": #PRG -2, WG -1
             jump PRG020_c1_2
 
 label PRG020_c1_1:
     $setFlag("PRG020_c1_1")
     MC "So, you said that Kodama-san has been acting distant for a little while, yeah? As in, it didn't just begin this morning?"
-    show BBW neutral
-    BBW "Precisely. It seemed to begin just over a week ago. I tried to think of what could've possibly triggered such a drastic change, but I came up with nothing."
+    show WG neutral
+    WG "Precisely. It seemed to begin just over a week ago. I tried to think of what could've possibly triggered such a drastic change, but I came up with nothing."
     MC "Well, I know that she had first begun to train for her competition just a bit over a week ago, then she had her first round shortly thereafter."
     MC "In addition to that, she has her studies and her work with you. Not to mention her growth factor weighing on her shoulders as well."
-    BBW "I see. So you believe that she could be tired from dealing with all of these commitments?"
+    WG "I see. So you believe that she could be tired from dealing with all of these commitments?"
     MC "Not just tired, Alice. I think that she's feeling overworked and stressed out."
-    BBW "I beg your pardon?"
+    WG "I beg your pardon?"
     MC "Think about this: How often does she work for you?"
-    BBW "Every day mostly, with an occasional day off here and there."
+    WG "Every day mostly, with an occasional day off here and there."
     MC "Alright, and how often does she have classwork?"
-    BBW "Every weekday, with additional homework on the weekends, usually."
+    WG "Every weekday, with additional homework on the weekends, usually."
     MC "Yes. And finally, how often does she put in practice for her competition?"
-    BBW "I suppose I've never taken much notice, but I'd have to wager that she practices every day."
+    WG "I suppose I've never taken much notice, but I'd have to wager that she practices every day."
     MC "Okay. Final question: Have you ever seen Kodama-san relax?"
     "Alice's gaze drifted to the floor as she thought hard."
-    BBW "Ah... I think she... Well..."
-    BBW "When she does relax, it's usually not for much longer than a few minutes, at best."
+    WG "Ah... I think she... Well..."
+    WG "When she does relax, it's usually not for much longer than a few minutes, at best."
     MC "Alright, how about this? Try giving her a short amount of time off. Let her rest a bit so she can get herself back in order."
     "For a moment, I thought Alice would go off on me, but to my surprise, she kept her composure."
-    BBW "Alright. I'll give her 5 days off. Do you feel that will be sufficient for her to prepare for her next contest, and to rest a bit?"
+    WG "Alright. I'll give her 5 days off. Do you feel that will be sufficient for her to prepare for her next contest, and to rest a bit?"
     MC "I think so. I plan to help her prepare too, so I'll make sure she takes it easy."
-    BBW "See to it that she does."
+    WG "See to it that she does."
     "Alice stood and made her way to my door, opening it with a creak before turning back to me."
-    BBW "Thank you for your insight, Hotsure-san."
+    WG "Thank you for your insight, Hotsure-san."
     MC "Of course, Alice. Until class then?"
     "Alice nodded and turned down the hall, shutting the door behind her. I finished getting ready for class and found myself sitting back on my bed, my head swimming with what Alice had been talking about."
     jump PRG020_c1_after
@@ -4886,21 +4886,21 @@ label PRG020_c1_1:
 label PRG020_c1_2:
     $setFlag("PRG020_c1_2")
     MC "Alice, I hate to say it, but maybe letting Kodama-san go isn't the worst idea."
-    show BBW surprised
+    show WG surprised
     "Alice looked at me in stunned silence."
-    BBW "I-I'm sorry...?"
+    WG "I-I'm sorry...?"
     MC "Maybe what's best for her is for you to let her go."
-    BBW "But are you certain that letting her go and potentially finding someone else to fulfil her duties is entirely necessary? Maybe just letting her take a few more days off here and there would be better."
+    WG "But are you certain that letting her go and potentially finding someone else to fulfil her duties is entirely necessary? Maybe just letting her take a few more days off here and there would be better."
     MC "Alice, I'm sorry, but I think that what Kodama-san needs is more time for herself."
-    show BBW sad
+    show WG sad
     "Alice breathed a soft sigh and hung her head, clearly distraught."
-    BBW "Perhaps you're right, Hotsure-san. I suppose I'll have to let her go."
-    show BBW neutral
-    BBW "She will be quite difficult to replace, however."
+    WG "Perhaps you're right, Hotsure-san. I suppose I'll have to let her go."
+    show WG neutral
+    WG "She will be quite difficult to replace, however."
     MC "I'm sure in due time, you'll find someone to fill the mold that you're looking for."
-    BBW "I will. A Nikumaru does not settle for just anyone, you know."
+    WG "I will. A Nikumaru does not settle for just anyone, you know."
     "Alice stood promptly and opened my door."
-    BBW "Even though it wasn't quite what I anticipated coming from you, I'll take your words to heart and make my decision."
+    WG "Even though it wasn't quite what I anticipated coming from you, I'll take your words to heart and make my decision."
     "I nodded politely as she closed the door behind her. Now exasperated, I fell back into my bed and breathed a sigh of relief."
     "Soon, I'd have Aida out from under Alice's iron fist."
     jump PRG020_c1_after
@@ -4970,7 +4970,7 @@ label PRG020_c2_1:
     MC "But then, I started breaking down how much you actually do on a daily basis, and I realized how little time that leaves you for yourself."
     show PRG neutral
     $setAffection("PRG", 2)
-    $setAffection("BBW", 1)
+    $setAffection("WG", 1)
     PRG "T-That's very nice of you, Hotsure-san."
     MC "I hope I didn't overstep my boundaries at all. I just didn't want to watch you run yourself into the ground."
     PRG "You didn't overstep anything."
@@ -5062,7 +5062,7 @@ label PRG020_c2_2:
     MC "I... I saw how tired you've been lately. You've had so much on your plate lately, and I noticed you never seem to let yourself rest."
     MC "Then, when Alice told me about how you've seemed distant lately, I thought that maybe if she let you go, you'd have more time to catch up on other things, like the competition."
     $setAffection("PRG", -2)
-    $setAffection("BBW", -1)
+    $setAffection("WG", -1)
     PRG "But... I-I LIKED working for Alice, Hotsure-san."
     "I went slack jawed. It had never occurred to me that Aida may actually enjoy her time working with Alice."
     MC "K-Kodama-san. I don't know what to say. I guess I just thought that you needed more time for yourself..."
@@ -6467,21 +6467,21 @@ label PRG026_c1_1:
     MC "Weren't you going to mention the pregnancy too?"
     PRG "I'm going to tell the class all at once. I think it'll be a little easier."
     show FMG neutral at Position (xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral at Position (xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position (xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     "I nodded, not noticing Akira and Alice as they walked in. I turned to the door, spotting them and their glances at us."
-    BBW "Good morning Kodama-san and Hotsure-san."
+    WG "Good morning Kodama-san and Hotsure-san."
     PRG "Good morning, Nikumaru-san."
-    BBW "I trust you are feeling better? I'd rather not catch anything today."
+    WG "I trust you are feeling better? I'd rather not catch anything today."
     PRG "I-I'm fine now, thank you."
     show FMG surprised
     "As the two spoke, Akira's gaze traveled to Aida, her eyes glued onto her. If Akira was good at anything besides working out, it was wearing her emotions on her sleeve."
-    BBW "Well, do take care of yourself from here on out. And I'm assuming I'm safe to move back into our dorm?"
+    WG "Well, do take care of yourself from here on out. And I'm assuming I'm safe to move back into our dorm?"
     PRG "Yes. Whenever you'd like."
-    BBW "Excellent. I'll make sure to stop by for some more of these so called 'late night chat sessions,' Mizutani-san."
+    WG "Excellent. I'll make sure to stop by for some more of these so called 'late night chat sessions,' Mizutani-san."
     show FMG happy
     FMG "You'd better! I'm gonna miss having you around. It was a ton of fun while it lasted."
     hide FMG with dissolve
-    hide BBW with dissolve
+    hide WG with dissolve
     show BE happy at Position (xpos=0.9, xanchor=0.5, yalign=1.0) with dissolve
     "Behind the two of them, Honoka hurried into the room and plunked down in the desk directly in front of Aida. Shiori followed closely behind her and took her seat immediately."
     "Grabbing a notebook from her bag, she started writing something across the top of her page."
@@ -6502,7 +6502,7 @@ label PRG026_c1_1:
     show BE surprised
     BE "What?! Kodama-san is pregnant?!"
     show AE surprised at Position (xpos=0.15, xanchor=0.5, yalign=1.0)
-    show BBW neutral at Position (xpos=0.3, xanchor=0.5, yalign=1.0)
+    show WG neutral at Position (xpos=0.3, xanchor=0.5, yalign=1.0)
     show FMG surprised at Position (xpos=0.45, xanchor=0.5, yalign=1.0) behind PRG
     show GTS surprised at Position (xpos=0.75, xanchor=0.5, yalign=1.0) behind PRG
     show PRG surprised
@@ -6528,17 +6528,17 @@ label PRG026_c1_1:
     hide GTS with dissolve
     hide FMG with dissolve
     "Alice came to stand next to Aida's desk. Surprisingly, she didn't look remotely upset."
-    BBW "Is this true, Kodama-san? It happened?"
+    WG "Is this true, Kodama-san? It happened?"
     show PRG unique
     PRG "Y-Yes, Nikumaru-san."
-    BBW "Kodama-san, I'm pleased for both you and Hotsure-san."
+    WG "Kodama-san, I'm pleased for both you and Hotsure-san."
     play music Schoolday
     show PRG surprised
     PRG "W-What? You aren't mad?"
-    BBW "Not in the slightest. Surprised, yes, but not upset at all. Motherhood is a wonderous thing, and you should do your best to cherish it and all that it brings."
+    WG "Not in the slightest. Surprised, yes, but not upset at all. Motherhood is a wonderous thing, and you should do your best to cherish it and all that it brings."
     show PRG happy
     PRG "T-Thank you, Nikumaru-san. I will."
-    BBW "As for you, Hotsure-san. I expect you to act as a proper father would. There is no excuse for anything less."
+    WG "As for you, Hotsure-san. I expect you to act as a proper father would. There is no excuse for anything less."
     "I nodded at her as Tashi-sensei finally entered the room to begin class."
     jump daymenu
 
@@ -6714,7 +6714,7 @@ label PRG026b:
     AE "Please make your way to your respective classrooms {i}without{/i} running! The school thanks you for your cooperation."
     show FMG angry at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Dang, what the hell was that about?"
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     stop music
     "Across the room, Alice sat at her desk, nonchalantly scribbling in a notebook. She lifted her eyes when the students had disappeared and leaned down next to her, whispering at what appeared to be the floor tiles."
     "Crawling out from behind Alice's sizeable frame came..."
@@ -6727,7 +6727,7 @@ label PRG026b:
     PRG "H-Hi everyone. S-Sorry for causing all the commotion."
     hide FMG with dissolve
     hide BE with dissolve
-    BBW "It wasn't your doing. Don't blame yourself for something you couldn't control, Kodama-san."
+    WG "It wasn't your doing. Don't blame yourself for something you couldn't control, Kodama-san."
     PRG "I-I... Alright."
     PRG "T-There's something all of you need to hear."
     "She stopped and looked around at all of us, as if making sure we were all listening. Shiori emerged from the hallway, her expression changing the minute she saw Aida."
@@ -6735,18 +6735,18 @@ label PRG026b:
     extend " pregnant."
     show BE surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) behind PRG with vpunch
     BE "Whoa! I mean... uhm... congrats, Kodama-san!"
-    show AE surprised at Position(xpos=0.85, xanchor=0.5, yalign=1.0) behind PRG, BBW with dissolve
+    show AE surprised at Position(xpos=0.85, xanchor=0.5, yalign=1.0) behind PRG, WG with dissolve
     AE "Y-You're..."
     "I stared at Aida in complete bewilderment. Aida, the most quiet and reserved person I'd ever met, was pregnant. What was even more amazing was how quickly she had grown."
     "I had no way of knowing when... it happened, but she had barely a trace of a belly last week, and now here she was, looking as if she were eight or nine months pregnant."
     PRG "This..."
     "Aida stopped, as if she had a lump in her throat. Surprisingly, Alice gave her a reassuring pat on the arm."
-    BBW "Best to tell them now, as long as you have their undivided attention."
+    WG "Best to tell them now, as long as you have their undivided attention."
     PRG "This... is my growth factor."
     "Everyone gaped at her in total shock, before Tashi-sensei entered the room."
     hide BE with dissolve
     hide AE with dissolve
-    hide BBW with dissolve
+    hide WG with dissolve
     hide PRG with dissolve
     show HR neutral with dissolve
     HR "Everyone to your seats, if you please. Just because someone has grown a few inches doesn't excuse unprofessionalism."
@@ -8425,19 +8425,19 @@ label PRG035:
     MC "G-Got it!"
     "I pulled the key from the pocket and unlocked the door, holding it open for Aida as she entered."
 
-    scene Dorm BBW with fade
+    scene Dorm WG with fade
     show PRG unique at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Ah, thank you, Kodama-san. It smells heavenly."
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Ah, thank you, Kodama-san. It smells heavenly."
     PRG "I-It was no trouble. I hope you enjoy."
-    BBW "I believe I shall. And Hotsure-san, how thoughtful of you to escort Kodama-san back."
+    WG "I believe I shall. And Hotsure-san, how thoughtful of you to escort Kodama-san back."
     MC "Well, she is my girlfriend. Kinda comes with the title, I suppose. Not that I wouldn't help her even if she wasn't."
-    BBW "No need to cover for yourself. So, what plans have you two got for this afternoon?"
+    WG "No need to cover for yourself. So, what plans have you two got for this afternoon?"
     show PRG neutral
     PRG "W-We didn't really have any plans. We just sort of ran into each other in the hallway."
-    BBW "Ah, the chance meeting. Always a bastion for random conversation and unusual encounters."
+    WG "Ah, the chance meeting. Always a bastion for random conversation and unusual encounters."
     PRG "Yes... Well, Keisuke and I will let you eat, Alice. I-I'll be home later."
-    BBW "Very well."
+    WG "Very well."
 
     scene Dorm Exterior with fade
     show PRG unique with dissolve
@@ -8469,7 +8469,7 @@ label PRG035:
     MC "You've got me there. Maybe something happened yesterday that really threw her over the edge? Do you know if she has any events coming up with the choir?"
     PRG "Not that I know of. If something did happen yesterday, it would explain the random conversation coming out of nowhere."
     MC "All things considered, it's probably best for us to put it out of our minds. If she needs something, I'm sure she'll come to you for advice."
-    if getAffection("BBW") > 8:
+    if getAffection("WG") > 8:
         PRG "Yeah, but she could very well come to you too. S-She's mentioned before that she sees you as a trustworthy person."
         MC "Really? She said that?"
         PRG "Yeah... she did..."
@@ -8695,27 +8695,27 @@ label PRG036:
     UNKNOWNCell "Is this Hotsure Keisuke?"
     MC "Yeah, speaking?"
     play music Tension
-    BBWCell "Hotsure-san, this is Alice. I'm not going to beat around the bush. You need to come to our dorm at once."
+    WGCell "Hotsure-san, this is Alice. I'm not going to beat around the bush. You need to come to our dorm at once."
     MC "Wha? Why? Is everything okay?"
-    BBWCell "Something is going on with Kodama-san. Just... hurry over and you can see it for yourself."
+    WGCell "Something is going on with Kodama-san. Just... hurry over and you can see it for yourself."
     MC "Ah- Alright, I'm on my way!"
     "Just as I reached to hang up, I heard my phone crackle to life once more as Alice said something else."
     MC "What was that?"
-    BBWCell "I said not to worry. The babies are fine."
+    WGCell "I said not to worry. The babies are fine."
     MC "Thank you, Alice. I'll be over right away."
     "I gave myself a quick rinse and dried myself. I grabbed whatever uniform I could find and threw it on, missing a button as I hastily did it up. I grabbed my shoes and ran out the door with them in hand. There would be time to put them on later."
 
     scene Dorm Exterior with fade
     "I sprinted across the walkway between the two dorms and hauled ass down the hallway, not stopping until I was knocking on their door, and breathing so hard that I thought I'd deoxygenate the room."
-    show BBW sad with dissolve
+    show WG sad with dissolve
     "Alice opened the door in record time. One glance at her face gave away that all was not well. She lacked her usual confidence aura and barely made eye contact with me."
-    BBW "Good... Thank you for coming as quickly as you did."
+    WG "Good... Thank you for coming as quickly as you did."
     MC "Please Alice, tell me what's going on."
-    BBW "Just go talk to her. I'll leave you two alone."
-    hide BBW with dissolve
+    WG "Just go talk to her. I'll leave you two alone."
+    hide WG with dissolve
     "Alice grabbed her bag and walked off down the hallway. Taking a breath, I nudged open the door and let myself in."
 
-    scene Dorm BBW with fade
+    scene Dorm WG with fade
     "As per the usual, Alice's side of the room was perfectly neat and tidy, looking more princess like than ever. Crossing over to Aida's side, however..."
 
     scene Dorm PRG with fade
@@ -9042,44 +9042,44 @@ label PRG037:
     "Next to her, Sakura retrieved her fish filets from the fridge and began deftly removing the tender fish's meat from the skin. She sliced the filets into nice, plump pieces and arranged them on a large plate in a floral pattern."
     "I glanced across the room to the opposing teams. Compared to Aida and Sakura, their dishes weren't nearly as extravagant."
     "One team was working on tonkatsu ramen with a simple bowl of white rice for an appetizer, and some sort of fancy looking rolled pastry thing filled with a white custard type substance, all of which was covered in chocolate."
-    BBW "That combination will not sit well."
-    show BBW neutral with dissolve
+    WG "That combination will not sit well."
+    show WG neutral with dissolve
     "I whipped around to, once again, see Alice taking the seat next to me. I tried to scoot over without making it too obvious that I was making room for her."
     MC "Oh, good morning, Alice! What's wrong with that combination?"
-    BBW "The appetizer and main course will mesh quite nicely, if not a tad too simple for my tastes. Where that pair has gone wrong is in their dessert choice."
+    WG "The appetizer and main course will mesh quite nicely, if not a tad too simple for my tastes. Where that pair has gone wrong is in their dessert choice."
     MC "What even is that? I've never seen that kind of dessert before."
-    BBW "It's called a cannoli. It's an Italian dessert, and quite an upper class one at that. It's a pastry, usually filled with a sweet cream, such as ricotta cheese."
+    WG "It's called a cannoli. It's an Italian dessert, and quite an upper class one at that. It's a pastry, usually filled with a sweet cream, such as ricotta cheese."
     MC "Are they usually chocolate covered?"
-    BBW "Not traditionally, but I assume they are trying a home-style recipe out of that. But, they've made a grave error with that, as well."
+    WG "Not traditionally, but I assume they are trying a home-style recipe out of that. But, they've made a grave error with that, as well."
     MC "How do you mean? They've only added chocolate to it. How can anyone screw that up?"
-    show BBW haughty
-    BBW "Exactly. It seems simple. However, that simplicity is what just ruined their dessert. You see, adding a liquid to a pastry isn't that complex, but the timing is."
-    BBW "If they had placed it into a cup, and served the liquid chocolate alongside their cannoli, that would've been much better. But, now that the chocolate is going to be sitting on that cannoli for almost half an hour..."
+    show WG haughty
+    WG "Exactly. It seems simple. However, that simplicity is what just ruined their dessert. You see, adding a liquid to a pastry isn't that complex, but the timing is."
+    WG "If they had placed it into a cup, and served the liquid chocolate alongside their cannoli, that would've been much better. But, now that the chocolate is going to be sitting on that cannoli for almost half an hour..."
     MC "The pastry will get soggy, right?"
-    BBW "Precisely. They'll be lucky if their cannoli is anything more than soup by the time the judges get a taste of it."
+    WG "Precisely. They'll be lucky if their cannoli is anything more than soup by the time the judges get a taste of it."
     MC "I see. Frankly, I didn't know that a dessert took so much thought."
-    show BBW neutral
-    BBW "It does, and the judges won't be kind on them when it comes time for reviewing."
+    show WG neutral
+    WG "It does, and the judges won't be kind on them when it comes time for reviewing."
     MC "What do you make of the other teams, then?"
-    BBW "Let's see. The group on the far side looks as though they may have taken on too great of a challenge. They're trying to make kaiseki, from the looks of it."
+    WG "Let's see. The group on the far side looks as though they may have taken on too great of a challenge. They're trying to make kaiseki, from the looks of it."
     MC "I've never even seen that in person."
-    BBW "And for good reason. It's a delicacy, the ultimate in Japanese dining. What's more, it originated from tea ceremonies, where it's serving required an inhuman-like attention to detail and precision."
-    BBW "And tea ceremonies, as you probably know, are an affair unto themselves. They're taking on too much for this contest."
+    WG "And for good reason. It's a delicacy, the ultimate in Japanese dining. What's more, it originated from tea ceremonies, where it's serving required an inhuman-like attention to detail and precision."
+    WG "And tea ceremonies, as you probably know, are an affair unto themselves. They're taking on too much for this contest."
     MC "And the other team?"
-    BBW "Please. They've gone too simple. Fried rice may qualify as a main course, but the judges' expectations will be higher than that."
-    hide BBW with dissolve
+    WG "Please. They've gone too simple. Fried rice may qualify as a main course, but the judges' expectations will be higher than that."
+    hide WG with dissolve
     "It was true. The last team did seem to be spending more time sitting and staring at their rice than actually preparing anything. They didn't have an appetizer or a desert in sight, and they both looked overcome with nerves."
     "Meanwhile, Aida was draining the water from her rice, taking care to avoid the steam."
     "She transferred her rice to a nearby bowl while Sakura promptly covered the rice with her curry. They set their bowl to the side as Aida retrieved her mochi from the fridge."
     "The mochi was a shallow pink color and looked light and fluffy, yet held its form. Aida dusted the tops of them with powdered sugar, as Sakura took them one by one, and added them to a separate plate."
     "Finally, Sakura placed the sushi and mochi back into the fridge, leaving the kare-raisu on a warming plate on the counter to keep its temperature. The two of them shared a gleeful high five."
     "They had finished with nearly ten minutes to spare, while the other teams were rushing just to finish on time."
-    show BBW neutral with dissolve
-    BBW "Perfect. Just enough time left."
+    show WG neutral with dissolve
+    WG "Perfect. Just enough time left."
     MC "Hm? Do they have something they need to do yet?"
-    BBW "They have the upper hand now. Since they're serving two chilled items, in the mochi and sashimi, the extra time will allow them to chill properly in the fridge."
+    WG "They have the upper hand now. Since they're serving two chilled items, in the mochi and sashimi, the extra time will allow them to chill properly in the fridge."
     MC "Yeah, that's good. The others probably won't have that same luxury."
-    hide BBW with dissolve
+    hide WG with dissolve
     stop music
     "Ten minutes later, the bell finally rang and the announcer came back to the center."
     play music Schoolday
@@ -9097,8 +9097,8 @@ label PRG037:
     "The announcer pointed to the two girls who had made the ramen. They smiled confidently and brought forth the bowl of white rice, followed by the large ramen bowl."
     "The judges tasted both and murmured amongst themselves as the girls fetched their cannoli from the fridge."
     "Upon retrieving the italian dessert from the fridge, the girl's faces quickly fell."
-    show BBW neutral
-    BBW "As I thought."
+    show WG neutral
+    WG "As I thought."
     "The girls trudged back to the judges table and set the bowl before them."
     Judge "Um... what is this, please?"
     Student1 "It's..."
@@ -9106,20 +9106,20 @@ label PRG037:
     Judge "I see. We won't be needing to taste this. Thank you very much, all the same."
     "The two girls bowed and took their dishes back to their station. One of the girls burst into tears as the other rolled her eyes."
     MC "Jeez, tough team of judges."
-    BBW "But fair, Hotsure-san. If they were not prepared to be criticized they should not have entered."
+    WG "But fair, Hotsure-san. If they were not prepared to be criticized they should not have entered."
     MC "I suppose."
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG unique at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     "I looked over to Aida. As each participant had gone up, she had begun to look more and more nervous. Seeing this, Sakura patted her on the shoulder and mouthed something to her."
     Announcer "Now then, how about you two?"
     "The announcer turned to Aida and Sakura and nodded expectantly. Aida took their kare-raisu from the warming plate and set it before the judges, while Sakura waited by their table."
-    show BBW happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Excellent."
+    show WG happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Excellent."
     MC "Huh? The judges haven't even tried the food yet."
-    BBW "Not that, Hotsure-san. Notice how they're bringing forth the appetizer separate from the rest of the meal."
-    BBW "By doing that, they're not overwhelming the judges by loading up their table too much. They can focus on the first course before even considering the second."
+    WG "Not that, Hotsure-san. Notice how they're bringing forth the appetizer separate from the rest of the meal."
+    WG "By doing that, they're not overwhelming the judges by loading up their table too much. They can focus on the first course before even considering the second."
     MC "Ah. Quite a bit of psychology goes into these things, wouldn't you say?"
-    BBW "Mhm."
+    WG "Mhm."
     hide PRG with dissolve
     "The judges nodded to each other, and Aida took the appetizer back to their table. Sakura took the large plate of sashimi in hand and approached the judge's table, setting it down gently in the center."
     "She handed chopsticks to each of them before taking a measured step back."
@@ -9130,20 +9130,20 @@ label PRG037:
     "The judges each sliced into a different piece of mochi, each of them testing the consistency. More nodding to each other."
     hide PRG with dissolve
     "The judges soon waved Aida back to her table, their faces blank and unyielding as they jotted down more notes."
-    BBW "Let's see what this last team will do, now."
+    WG "Let's see what this last team will do, now."
     "The announcer came center stage once more, his hand stretched toward the last team."
     Announcer "And, last but not least, let's have our final team to the judge's table."
     "The first member of the team, a girl with reddish brown hair, walked confidently to the judges. She set three small bowls of soup before them, each one with a murky tint to it."
     "Once the judges had had their fill, the other team member, a boy with curly, dirty blonde hair, brought forth the kaiseki. To the surprise of... probably only Alice, there was no ceremony or special flair."
     "The boy walked forward and set the bowl in front of the judges, with his partner passing him on her way back."
     "Each judge's eyebrows went up. Even the announcer looked surprised. But as soon as the looks of surprise had caught them, the emotion was gone, replaced with the blank slate of impartialness once more."
-    show BBW neutral
-    BBW "They seem surprised, to say the least."
+    show WG neutral
+    WG "They seem surprised, to say the least."
     MC "Yes, but it has to be good. They can't win purely off of impressive plating and showmanship."
     "All three judges tried the kaiseki. Of course, they didn't show any emotion and proceeded to write notes down in their notepads."
     "Finally, the girl came forward once more, holding a plate with an off white piece of cake on it."
     MC "Is that a cheesecake?"
-    BBW "It seems to be. A curious choice, considering their main course."
+    WG "It seems to be. A curious choice, considering their main course."
     "The cheesecake was set before the judges and each of them took a large forkful, chewing it thoughtfully. Again, the notebooks came out as they dismissed the final team."
     "The judges whispered amongst themselves once more before calling over the announcer."
     Announcer "Yes... alright, if you say so."
@@ -9152,7 +9152,7 @@ label PRG037:
     Announcer "Ladies and gentlemen, under most circumstances, the judges would deliberate for a short while to determine a winner. However, I've been informed that they've already made their decision."
     Announcer "The winner of our four way competition is..."
     Announcer "Kodama-san and Sakura-san!"
-    show BBW happy
+    show WG happy
     show PRG happy at Transform(xzoom=-1)
     MC "YES!!"
     "The crowd erupted with cheers and gave them a standing ovation. Sakura and Aida high fived before embracing each other, tears of joy streaming down their faces."
@@ -9162,7 +9162,7 @@ label PRG037:
     "The crowd's applause didn't waiver as Aida helped me to my feet. She gasped as she finally noticed Alice next to me."
     show PRG surprised
     PRG "O-Oh! Nikumaru-san! Thank you for coming!"
-    BBW "Kodama-san, I'm impressed. Your improvement is nothing shy of remarkable. You've crossed the barrier between talented hobbyist into accomplished chef. Truly well done."
+    WG "Kodama-san, I'm impressed. Your improvement is nothing shy of remarkable. You've crossed the barrier between talented hobbyist into accomplished chef. Truly well done."
     PRG "I-I... thank you, Nikumaru-san!!"
     show PRG neutral
     "Behind Aida, Sakura came dashing through the crowd to join us. Her face was peach colored, and she looked as though she may pass out."
@@ -9181,19 +9181,19 @@ label PRG037:
     MC "Oi! So, when do the quarter finals begin?"
     show PRG neutral
     PRG "They aren't too far away. And, since Sakura-san and I have already secured our position, we could technically skip the next competition before the quarter finals."
-    show BBW neutral
-    BBW "I would advise against skipping the next competition, Kodama-san."
+    show WG neutral
+    WG "I would advise against skipping the next competition, Kodama-san."
     MC "Why do you say that, Alice?"
-    BBW "Put simply, it's a chance at more experience."
+    WG "Put simply, it's a chance at more experience."
     MC "Well... yeah, it would help them learn more. But, do you really think that's necessary? I mean, the two of them seem to be doing really well for themselves already."
-    BBW "I'm merely giving suggestions, Hotsure-san. True, they could probably get by without participating in the next competition."
-    BBW "However, it would be better to have that extra knowledge that they may pick up in that competition to fall back on later."
+    WG "I'm merely giving suggestions, Hotsure-san. True, they could probably get by without participating in the next competition."
+    WG "However, it would be better to have that extra knowledge that they may pick up in that competition to fall back on later."
     show PRG unique
     PRG "Y-Yeah. That's a good point... Well, in any case, Sakura-san and I will talk about it and come to a decision."
-    BBW "Good. Now, unfortunately, I have to be somewhere. Well done again, you two."
+    WG "Good. Now, unfortunately, I have to be somewhere. Well done again, you two."
     show PRG happy
     PRG "T-Thank you, Nikumaru-san!"
-    hide BBW with dissolve
+    hide WG with dissolve
     "Alice waved her hand nonchalantly as she made for the door."
     show PRG neutral
     show Sakura neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
@@ -9234,14 +9234,14 @@ label PRG037:
     "In a flash, I was out the door again. I knew that I had to work fast, especially since Aida and Sakura were working on dishes together, so I knew they'd be done much quicker than usual."
     "I raced across the path between the two dorms, holding the note down tightly."
     "I rounded the corner and darted down the hall until I had reached Aida and Alice's room. Panting as if I'd just ran a half marathon, I leaned the binder against the door and knocked. I was nearly out of the hallway when I heard a door open behind me."
-    BBW "Hotsure-san?"
-    show BBW surprised with dissolve
+    WG "Hotsure-san?"
+    show WG surprised with dissolve
     "I spun around. Alice stood in the hallway, my binder in hand."
     MC "Eheheh... Um, could you give that to Kodama-san? And... you didn't see me here, okay?"
-    show BBW neutral
+    show WG neutral
     "To my surprise, Alice winked at me and chuckled to herself."
-    BBW "Never saw a thing."
-    hide BBW with dissolve
+    WG "Never saw a thing."
+    hide WG with dissolve
     "She nodded to me before going back into her room. I breathed a sigh of relief as I turned back around and went down the path toward the boy's dorms."
 
     scene Dorm Interior with fade
@@ -10546,10 +10546,10 @@ label PRG043:
     "...especially if they seemed really uncomfortable about the idea alone."
     "Aida's door swung open again and Alice sauntered into the room, a small pile of mail in her hand."
     show PRG unique at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "You've returned early today, Kodama-san. Some sort of special occasion?"
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    WG "You've returned early today, Kodama-san. Some sort of special occasion?"
     PRG "N-Not really. Keisuke and I were just going to go for a little walk."
-    BBW "I see. Well, do enjoy your walk. Some mail came for you, by the way."
+    WG "I see. Well, do enjoy your walk. Some mail came for you, by the way."
     PRG "F-For me?"
     "Alice rifled through her pile and passed two off-white envelopes to Aida."
     stop music
@@ -10558,7 +10558,7 @@ label PRG043:
     MC "What's up?"
     PRG "It's..."
     PRG "They're from my mom!"
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG surprised at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
     play music PRG
     "Aida tore one of the envelopes open faster than a paper shredder and scanned the letter over carefully. Alice moved over to her side of the dorm, giving us privacy."
@@ -11011,49 +11011,49 @@ label PRG045:
     "I chuckled as we reached the front of the lunch line and started loading up our trays. I noticed Aida's tray was considerably more filled than mine, but I'd have to be dumber than a sack of bricks to bring that up."
     "Across the room, Alice sat at a table by herself, picking away at her food. Aida and I cut across the room and joined Alice at her table."
     show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
     MC "Afternoon, Alice. What's going on?"
-    BBW "Nothing terribly exciting. I do have a favor to ask of the two of you."
+    WG "Nothing terribly exciting. I do have a favor to ask of the two of you."
     MC "Shoot."
-    BBW "Over the last few weeks, I and another student have been working on a clothing line specifically catered to the growing students, or anyone with a growth factor in general."
-    BBW "We have designed a few prototype designs that I believe would be a smash hit."
+    WG "Over the last few weeks, I and another student have been working on a clothing line specifically catered to the growing students, or anyone with a growth factor in general."
+    WG "We have designed a few prototype designs that I believe would be a smash hit."
     PRG "D-Did you want Keisuke and I to look the designs over?"
-    BBW "That was the favor, yes."
+    WG "That was the favor, yes."
     MC "I may not know too much about clothing, but I could try my hand at quality control."
     "Alice nodded and produced a small portfolio from her bag. She laid it on the table and pulled five sheets of paper from it, each one featuring hand-drawn plans for a different article of clothing."
-    BBW "Please inspect each of them carefully. Actually look for flaws that might have escaped our notice."
+    WG "Please inspect each of them carefully. Actually look for flaws that might have escaped our notice."
     "Aida and I each took a print in hand and examined them carefully. I cracked open my water bottle and took a thoughtful sip. These designs were actually really in depth and detailed, not that I really knew enough about clothing to make that call."
     show PRG unique
     PRG "This is a... bra, I'm assuming?"
-    BBW "Yes. An extended size bra would be something that a number of women in this academy could make use of. Not to mention more well endowed women who do not even have a factor to begin with."
+    WG "Yes. An extended size bra would be something that a number of women in this academy could make use of. Not to mention more well endowed women who do not even have a factor to begin with."
     PRG "Would it be underwire?"
-    BBW "It would have to be, Kodama-san. Without some sort of heavy duty support, the bra would most likely buckle under the increased weight."
+    WG "It would have to be, Kodama-san. Without some sort of heavy duty support, the bra would most likely buckle under the increased weight."
     PRG "Okay... and how many hooks?"
-    BBW "It could be custom made to have any number, I suppose. I would say at least four for the smaller sizes."
+    WG "It could be custom made to have any number, I suppose. I would say at least four for the smaller sizes."
     show PRG neutral
     PRG "A-All right. I think this one is good."
     MC "And this is?"
-    BBW "That would be a skirt, Hotsure-san."
+    WG "That would be a skirt, Hotsure-san."
     MC "Ah, yes. Of course."
     "The printed plans featured a women with an enormous rear end wearing a skirt that looked more like a tarp than a skirt. Nevertheless, it was fairly stylish looking, with a small slit cut into it which faded into the fabric further up."
     MC "I'd say this is good. And this would be for women with a hip or butt factor?"
-    show BBW haughty
-    BBW "Correct. Take Matsumoto-san, for instance. Though this may be too fashionable for her tastes, not every woman dresses down out of habit."
+    show WG haughty
+    WG "Correct. Take Matsumoto-san, for instance. Though this may be too fashionable for her tastes, not every woman dresses down out of habit."
     "I shook my head and picked at my food as Aida took another sheet."
     PRG "T-This is really pretty, Nikumaru-san!"
-    BBW "Thank you. That one is my personal favorite. The crème de la crème, if you will."
+    WG "Thank you. That one is my personal favorite. The crème de la crème, if you will."
     "My eyes wandered over to the sheet that Aida was holding. A woman stood on the paper, wearing a sleeveless purple dress. Similar to the skirt, it had a slit in it, but the woman wearing it was large in every possible way."
     "Her breasts were tremendous, easily in Honoka's ballpark, and her hips and ass jutted out from her, creating literal cliffs out of her sides."
     "Most prominent, however, was the woman's stomach, which, from the looks of it, had thick rolls and hung down onto her upper thighs."
-    show BBW happy
-    BBW "The idea of this ensemble is a form fitting dress that can fit any body type. For instance, Inoue-san could be wearing this, and it would fit her more than perfectly."
-    BBW "Then, in theory, if she took it off and I put it on, it would fit me in just the right places, exactly as it did for her."
+    show WG happy
+    WG "The idea of this ensemble is a form fitting dress that can fit any body type. For instance, Inoue-san could be wearing this, and it would fit her more than perfectly."
+    WG "Then, in theory, if she took it off and I put it on, it would fit me in just the right places, exactly as it did for her."
     show PRG surprised
     PRG "I-Is that even possible?!"
-    BBW "With the correct fabric, it should be. However, that fabric definitely would not run cheap. It would have to have enough elasticity to stretch to most body shapes, while at the same time being able to revert back to its original shape."
+    WG "With the correct fabric, it should be. However, that fabric definitely would not run cheap. It would have to have enough elasticity to stretch to most body shapes, while at the same time being able to revert back to its original shape."
     show PRG neutral
     MC "Not to mention that the body shapes are rather... unique."
-    BBW "That too, Hotsure-san. I do not doubt I can make the design work. I just need to find the right sources. Preferably one that sells at high volume, so I can take advantage of any sort of bulk discount."
+    WG "That too, Hotsure-san. I do not doubt I can make the design work. I just need to find the right sources. Preferably one that sells at high volume, so I can take advantage of any sort of bulk discount."
     "I took another swig from my bottle and set it on the edge of the table. Reaching for another sheet, my elbow swiped my bottle clean from the table and onto the floor."
     MC "Agh. Dammit."
     "As I leaned over to grab my bottle, I noticed that my leg felt wet, almost as though my bottle had been steadily dripping onto me."
@@ -11064,11 +11064,11 @@ label PRG045:
     PRG "Let me see."
     "Aida turned to me a bit and grabbed my bottle, examining it closely. As she turned, I could faintly make out a small streak running across Aida's belly."
     MC "Ah, shoot. Looks like it must've gotten on you too."
-    show BBW surprised
+    show WG surprised
     "Aida patted her shirt and felt the wetness as well."
     PRG "O-Oh! But how? It was on the table this whole time, and the table is completely dry."
     stop music
-    BBW "Ahem. Kodama-san..."
+    WG "Ahem. Kodama-san..."
     "Aida looked up to Alice. Instead of finishing her thought, Alice simply pointed at her own breasts."
     show PRG unique
     PRG "What do you..."
@@ -11080,14 +11080,14 @@ label PRG045:
     play music Rain
     show PRG lactate
     "Aida's face went redder than I'd ever seen it, her face frozen in a state of horror. Her head went down and her shoulders slumped, as if to make herself look smaller. None of us spoke until-"
-    show BBW neutral
-    BBW "Come, Kodama-san. To our dorm, quickly."
+    show WG neutral
+    WG "Come, Kodama-san. To our dorm, quickly."
     "Alice gathered her papers and came around the table. To my complete amazement, she laid her hand on Aida's shoulder and took one of Aida's hands in hers."
-    BBW "When you stand, try to stay as close to me as possible."
+    WG "When you stand, try to stay as close to me as possible."
     "Aida stood and planted herself as close as she could to Alice without touching her."
-    BBW "Hotsure-san, could you please dispose of our trays? Once you are finished, come to our dorm."
+    WG "Hotsure-san, could you please dispose of our trays? Once you are finished, come to our dorm."
     hide PRG with dissolve
-    hide BBW with dissolve
+    hide WG with dissolve
     "I nodded furiously and grabbed all three trays at the table. As I dumped them in the trash can, I grabbed a handful of napkins and returned to our table."
     "I wiped the table as quick as I could, and then set to cleaning the bench. After a few minutes of wiping, I dried my hands with a remaining napkin and tossed them in the nearest trash can."
 
@@ -11100,13 +11100,13 @@ label PRG045:
     else:
         "By the time I reached the dorms, I was panting up a storm. Still, I went to Aida and Alice's door and pounded on it, desperately trying to catch my breath before the door opened."
 
-    show BBW neutral with dissolve
-    BBW "Good, you are here."
+    show WG neutral with dissolve
+    WG "Good, you are here."
 
     scene Dorm PRG with fade
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     "Alice hurried me through the door. Across the room, the bathroom door was slightly ajar, and the sounds of sobbing echoed into the room."
-    BBW "Kodama-san? Hotsure-san is here. I will be back with you in a moment."
+    WG "Kodama-san? Hotsure-san is here. I will be back with you in a moment."
     if getAffection("PRG") > 42:
         jump PRG045_c1_pass
     else:
@@ -11117,11 +11117,11 @@ label PRG045_c1_pass:
     "There was a short silence before a very small voice came from behind the door."
     PRG "C-Could... could K-Keisuke come in and h-help me instead?"
     "Alice looked to me, then back to the door."
-    BBW "Of course."
+    WG "Of course."
     "I looked at the door and then to Alice."
-    BBW "Do not be frightened."
+    WG "Do not be frightened."
     "Alice gestured toward the door, before walking to her side of the room. I took a breath and slowly pushed open the door."
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG unique with dissolve
     "Aida stood in front of the sink, her entire upper half leaned awkwardly over the basin. The entire front of her shirt was soaked, and the occasional tear still fell from her eyes."
     PRG "I-I'm sorry, Keisuke."
@@ -11236,30 +11236,30 @@ label PRG045_c1_fail:
     "There was a short silence before a very small voice came from behind the door."
     PRG "O-Okay."
     "Alice went to Aida's dresser and pulled out one of Aida's shirts. She pulled open one of the drawers on top and pulled out an enormous bra, with cups easily larger than my own head."
-    BBW "Have a seat, Hotsure-san. She will be out in a moment."
-    hide BBW with dissolve
+    WG "Have a seat, Hotsure-san. She will be out in a moment."
+    hide WG with dissolve
     "I sat down on Aida's bed as Alice joined Aida in the bathroom. After a few minutes had passed, I could make out a soft whirring sound. It sounded similar to a vacuum with a clogged hose."
     "I busied myself by fishing a pen out of my backpack and doodling on my hand. I was just finishing the tip of a fairly sad looking sword, when the door opened and Alice stepped out, followed closely by Aida, her eyes glued to the floor."
     show PRG unique at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     "Aida looked up at me, before tossing a shirt and bra into her laundry bin, both of which looked incredibly wet."
     PRG "T-Thanks for waiting, Keisuke."
-    BBW "And for picking up after us in the cafeteria."
+    WG "And for picking up after us in the cafeteria."
     PRG "Y-Yeah... that too."
     "Aida sat on the bed next to me and sighed. I laid my hand on her arm, trying to soothe her."
-    BBW "Kodama-san, you do understand that what happened today is completely natural, yes? Every woman who is with child lactates at some point or another."
+    WG "Kodama-san, you do understand that what happened today is completely natural, yes? Every woman who is with child lactates at some point or another."
     show PRG sad
     PRG "B-But not nearly as much as me. And, usually the bulk of it takes place after the baby is born, not before!"
     MC "That's true, Aida, but look at it this way. Since you'll most likely be lactating throughout the rest of your pregnancy, and afterwards, this is sort of like a tutorial on how to deal with it."
-    BBW "Precisely. Hotsure-san's analogy may be slightly atypical, but what he is saying is true. This will help you learn what's to come and how to care for yourself properly."
+    WG "Precisely. Hotsure-san's analogy may be slightly atypical, but what he is saying is true. This will help you learn what's to come and how to care for yourself properly."
     show PRG unique
     PRG "I-I see. And... you both will be here to help me, right?"
     MC "Count on it, Aida. I'll be here all the way."
-    BBW "I will assist in any way that I can as well, Kodama-san."
+    WG "I will assist in any way that I can as well, Kodama-san."
     PRG "Okay... thank you. Both of you."
-    BBW "Of course. Now, I had best be on my way. Mizutani-san and I were going to meet at a café, and I do not want to be late."
+    WG "Of course. Now, I had best be on my way. Mizutani-san and I were going to meet at a café, and I do not want to be late."
     PRG "O-Okay. Thank you for everything today, Alice."
-    hide BBW with dissolve
+    hide WG with dissolve
     "Alice nodded and hurried out the door. Once she'd left, Aida leaned over and let her head rest on my shoulder."
     MC "Tired from all that?"
     "Aida nodded."
@@ -12690,13 +12690,13 @@ label PRG051:
     scene Dorm Exterior with fade
     "The sun was drawing lower in the sky, shooting late afternoon beams of light across the campus. It was just a little breezy, but nothing too crazy. If anything, the wind felt good running through my hair."
     "I passed by the girl's dorms on my way to the bus stop, knowing that somewhere within its walls was a pregnant girl getting ready to meet me for... something tonight."
-    if getSecondHighest(["PRG", "BBW"]) == "BE":
+    if getSecondHighest(["PRG", "WG"]) == "BE":
         jump PRG051_c1_BE
-    elif getSecondHighest(["PRG", "BBW"]) == "AE":
+    elif getSecondHighest(["PRG", "WG"]) == "AE":
         jump PRG051_c1_AE
-    elif getSecondHighest(["PRG", "BBW"]) == "FMG":
+    elif getSecondHighest(["PRG", "WG"]) == "FMG":
         jump PRG051_c1_FMG
-    elif getSecondHighest(["PRG", "BBW"]) == "GTS":
+    elif getSecondHighest(["PRG", "WG"]) == "GTS":
         jump PRG051_c1_GTS
     else:
         jump PRG051_c1_BE #failsafe
@@ -14315,16 +14315,16 @@ label PRG055B:
 
     scene Dorm Exterior with fade
     "I ditched the receipt into a nearby trash can and knocked on Aida's door, praying to whoever would listen that I didn't look sweaty."
-    show BBW neutral with dissolve
-    BBW "Afternoon, Hotsure-san."
+    show WG neutral with dissolve
+    WG "Afternoon, Hotsure-san."
     MC "Same to you, Alice. Is Aida around?"
-    BBW "Unfortunately not. She never returned home after classes today. I'd imagine she's off in the heat of practice right now."
+    WG "Unfortunately not. She never returned home after classes today. I'd imagine she's off in the heat of practice right now."
     MC "Why would you reckon that?"
-    BBW "That's all she's been on about lately. Seems that something must've lit quite the fire under her recently."
+    WG "That's all she's been on about lately. Seems that something must've lit quite the fire under her recently."
     MCT "Yeah. Me."
     MC "Well, I'll go track her down myself then. Thank you, Alice."
-    BBW "Of course."
-    hide BBW with dissolve
+    WG "Of course."
+    hide WG with dissolve
     "Apparently my impassioned argument had gotten Aida in the mood to practice. Now, was it because of what I said, or was it to spite me?"
 
     scene Cooking Classroom with fade
@@ -15000,13 +15000,13 @@ label PRG056B:
     PRG "G-Good idea. Let's do this in the bathroom."
     "Aida took the box, the pile of cloths, and towel and ran them into the bathroom, coming back for me a second later."
     PRG "Alice? Are you going to need anything out of the bathroom for a while?"
-    show BBW neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Not that I can think of at the moment. Why do you a-"
-    show BBW surprised
-    BBW "My word, Hotsure-san! What happened?"
+    show WG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Not that I can think of at the moment. Why do you a-"
+    show WG surprised
+    WG "My word, Hotsure-san! What happened?"
     MC "Wiped out on the concrete outside."
     stop music
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG worried at center with dissolve
     PRG "Let's go. C'mon."
     "Aida guided me through her dorm to the bathroom, moving quickly and keeping my hands slightly elevated."
@@ -15137,10 +15137,10 @@ label PRG056B:
     "Aida had her packs of cards on her bed, just waiting to be opened. Across the room, Alice was seated at her desk, a pair of headphones over her ears."
     "I took a moment to silently thank the creator of headphones."
     "Noticing me, Alice clicked a key on her laptop and slid the headphones off of her head."
-    show BBW neutral with dissolve
-    BBW "Are your hands feeling better now, Hotsure-san?"
+    show WG neutral with dissolve
+    WG "Are your hands feeling better now, Hotsure-san?"
     MC "Yep, thanks to Aida, of course."
-    hide BBW with dissolve
+    hide WG with dissolve
     "Alice nodded, returning the headphones to her ears. Even with them on her head, I could still slightly pick up the sound of some lady screaming high pitched notes into her ears."
     show PRG neutral with dissolve
     "Aida slid off to one side of her bed, patting the free side beside her."
@@ -16140,25 +16140,25 @@ label PRG057B:
     "I headed straight back outside into the crisp, clean air. Nothing to it but to do it, now."
     "I knew immediately where to start."
     play sound Knock
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     MC "Hey, Alice. Is Aida around?"
-    BBW "Unfortunately not. She seemed quite preoccupied when she woke up this morning, so she decided to take a day for herself on the island. She said she wanted to 'clear her head.'"
+    WG "Unfortunately not. She seemed quite preoccupied when she woke up this morning, so she decided to take a day for herself on the island. She said she wanted to 'clear her head.'"
     MC "Yeah, I think I know what's up. Her and Myoga-chan were supposed to have their competition today."
-    BBW "I take it you assume that her missing it is what's on her mind?"
+    WG "I take it you assume that her missing it is what's on her mind?"
     MC "Well, yeah. I'd think it would be obvious, wouldn't you?"
-    show BBW haughty
-    BBW "Not necessarily. While yes, it could be the competition, and I don't doubt that it's got a role to play in her sudden bout of sadness, I would not be so quick to make assumptions."
-    BBW "Kodama-san isn't exactly an open and shut case, Hotsure-san. As I'm sure you know, ladies are complex and unique beings."
+    show WG haughty
+    WG "Not necessarily. While yes, it could be the competition, and I don't doubt that it's got a role to play in her sudden bout of sadness, I would not be so quick to make assumptions."
+    WG "Kodama-san isn't exactly an open and shut case, Hotsure-san. As I'm sure you know, ladies are complex and unique beings."
     MCT "Boy, do I know."
     MC "I've definitely heard that. Anyway, do you know where I might find her? I have this for her."
     if getFlag("PRG057B_apron") or getFlag("PRG057B_chocolate"):
         "I unzipped my bag and showed Alice its contents."
     if getFlag("PRG057B_card"):
         "I held up the off-white envelope in my hand."
-    show BBW neutral
-    BBW "While I'd love to be able to guide you to her, I haven't got a clue where she'd be right now. Based on the way she sounded this morning, she'd prefer to be left alone."
+    show WG neutral
+    WG "While I'd love to be able to guide you to her, I haven't got a clue where she'd be right now. Based on the way she sounded this morning, she'd prefer to be left alone."
     MC "Oh, I see."
-    BBW "I can set this on her bed for you, if you'd like."
+    WG "I can set this on her bed for you, if you'd like."
     menu:
         "Leave the gift with Alice.":
             jump PRG057B_c1_1
@@ -16167,28 +16167,28 @@ label PRG057B:
 
 label PRG057B_c1_1:
     MC "That would be wonderful. Thank you."
-    BBW "You're quite welcome."
+    WG "You're quite welcome."
     if getFlag("PRG057B_apron"):
         "I carefully pulled the apron out from my backpack, thankfully managing to not disrupt the perfect fold too much, and handed it to Alice."
-        BBW "I do recall Kodama-san mentioning last week that she was in the market for an apron of her own. I'm sure she'll appreciate this."
-        BBW "..."
-        BBW "You'd likely benefit from a class or two in penmanship, Hotsure-san."
+        WG "I do recall Kodama-san mentioning last week that she was in the market for an apron of her own. I'm sure she'll appreciate this."
+        WG "..."
+        WG "You'd likely benefit from a class or two in penmanship, Hotsure-san."
         MCT "Probably should've covered the gift tag first."
         MC "Yeah, yeah. It's the thought that counts, you know."
-        BBW "Of course. I'll ensure that she gets it. And that she knows who it's from."
+        WG "Of course. I'll ensure that she gets it. And that she knows who it's from."
     if getFlag("PRG057B_chocolate"):
         "I gently removed the box from my bag. In a stroke of luck, the bow had remained perfectly fluffed with no creasing whatsoever."
-        BBW "Excellent choice on decor, Hotsure-san."
-        BBW "Your penmanship leaves much to be desired, however."
+        WG "Excellent choice on decor, Hotsure-san."
+        WG "Your penmanship leaves much to be desired, however."
         MC "Yeah, yeah. It's the thought that counts, you know."
-        BBW "Of course. I'll ensure that she gets it. And that she knows who it's from."
+        WG "Of course. I'll ensure that she gets it. And that she knows who it's from."
     if getFlag("PRG057B_card"):
         "As I handed Alice the envelope, I suddenly felt a twinge of self consciousness. Should I have bought something to go with this?"
-        BBW "I'll ensure that she receives this, Hotsure-san. And that she knows that her gentleman suitor brought it for her."
+        WG "I'll ensure that she receives this, Hotsure-san. And that she knows that her gentleman suitor brought it for her."
         MC "Perfect. Thank you again, Alice."
-        BBW "Of course. Now, I'd best be getting back. I'm sure I'll be seeing you soon, Hotsure-san."
+        WG "Of course. Now, I'd best be getting back. I'm sure I'll be seeing you soon, Hotsure-san."
         MC "Oh, most definitely. Take it easy."
-        hide BBW with dissolve
+        hide WG with dissolve
         "For the rest of the day, I decided to just chill. After some half-assed cleaning of my dorm, I found myself sitting in bed and catching up on some manga on my phone."
         "Ideally, I would've liked to have spent the day with Aida, but I understood her desire to spend the day alone. Everyone needs that sometimes."
         jump daymenu
@@ -16197,15 +16197,15 @@ label PRG057B_c1_2:
     $setFlag("PRG057B_delaygift")
     MC "I appreciate it, Alice, but I think I'll give it to her in person tomorrow."
     MC "It would be much more meaningful than just offloading it onto you."
-    BBW "Hmm."
-    show BBW happy
-    BBW "Incredibly well said, Hotsure-san. The gift will carry much more weight from you than it will me."
+    WG "Hmm."
+    show WG happy
+    WG "Incredibly well said, Hotsure-san. The gift will carry much more weight from you than it will me."
     MC "Right. Thank you for the offer though. And, I'm sure I don't have to tell you this, but please don't tell her."
-    show BBW neutral
-    BBW "Please. This is business between you and her. It's not a matter for me to be saying anything."
+    show WG neutral
+    WG "Please. This is business between you and her. It's not a matter for me to be saying anything."
     MC "Wonderful. I'll be seeing you then, Alice. Be good, okay?"
-    BBW "Same to you."
-    hide BBW with dissolve
+    WG "Same to you."
+    hide WG with dissolve
     "When Alice shut the door, I held my gift close and headed back to my dorm."
     scene Dorm Interior with fade
     "After stashing my gift beside my desk, I spent the rest of my day one notch above sleep, catching up on some manga on my phone."
@@ -17697,9 +17697,9 @@ label PRG060:
     "I sped-walked into the classroom as quickly as I could."
     scene Classroom with fade
     "When I walked in, I saw only three people."
-    show BBW surprised with dissolve
+    show WG surprised with dissolve
     "Alice was in her usual spot, and appeared to have been getting herself ready for the day. She had her notebooks and pens all in order in front of her."
-    hide BBW with dissolve
+    hide WG with dissolve
     show AE surprised with dissolve
     "Shiori appeared to have been doing much the same thing. Her notebook was out with a proper heading at the top, and she had her bag tucked neatly under her desk."
     "My eyes scanned over to the source of the noise."
@@ -17760,9 +17760,9 @@ label PRG060:
     "I held her hand for support as she eased herself to her feet. When she turned herself around, I had to let go and back up to avoid getting smashed by a swinging baby gut."
     hide PRG with dissolve
     "Before I walked back, I looked over to Alice and Shiori."
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     "Alice was back in her notebook, getting her pages ready for the day."
-    hide BBW with dissolve
+    hide WG with dissolve
     show AE neutral with dissolve
     "Shiori, however, was watching us."
     "When my gaze met hers, rather than giving me an icy glare or a headshake of disapproval..."
@@ -18266,13 +18266,13 @@ label PRG062:
         "I opened the door and-"
         scene Dorm PRG with fade
         show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-        show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+        show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
         MC "Whoa. I can come back."
         "Alice was bent over in front of Aida, helping her get the front of her shirt buttoned. She was about halfway down when she looked over her shoulder at me."
         PRG "It's fine. Almost done."
         "The unbuttoned sections of Aida's top hung over her belly, then draped down like curtains. The sheer amount of fabric that went into covering Aida's belly alone was astounding."
         "Alice finished buttoning the bottommost button and tucked the very front of Aida's shirt in, just under her mammoth sized belly."
-        BBW "Can you get the rest?"
+        WG "Can you get the rest?"
         PRG "Mhm. Thank you."
         "Aida ran her hand along her skirt and pulled it out, allowing her shirt to drape inside before straightening it out and pressing her skirt down into place."
         "Aida backed herself up to her bed and brought herself gently down to a seated position."
@@ -18280,7 +18280,7 @@ label PRG062:
         "I came forward, taking the other sock from the bed."
         MC "I can get this, Alice."
         "Alice said nothing and simply smiled at me, handing me the other sock."
-        hide BBW with dissolve
+        hide WG with dissolve
         show PRG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
         "Aida held her leg up again."
         PRG "Hope you don't mind feet."
@@ -18315,7 +18315,7 @@ label PRG062:
         PRG "Hey, Keisuke. Sorry about that."
         MC "Oh, no problem."
         scene Dorm PRG with fade
-        show BBW neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+        show WG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
         show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
         "I walked into Aida's room, feeling more like a ghost than a man. Alice nodded at me as she got herself ready on her side of the dorm."
         "Aida motioned to me as she took a seat on her bed. As she sat, her bed creaked lightly under her."
@@ -18323,9 +18323,9 @@ label PRG062:
     PRG "So... ready for this?"
     MC "Yeah, I guess."
     MC "I don't really know what else to say. Kinda just... have to do it, I guess."
-    BBW "I'll be back later this afternoon, Kodama-san."
+    WG "I'll be back later this afternoon, Kodama-san."
     PRG "Okay. Bye."
-    hide BBW with dissolve
+    hide WG with dissolve
     show PRG worried at Position(xalign=0.5, yalign=1.0) with dissolve
     "Alice went back over to her side of the room, packing up a few things into a bag."
     MC "..."
@@ -18399,11 +18399,11 @@ label PRG062:
     PRG "I have them in the kitchen."
     "I nodded at her numbly. I didn't know what to feel. I felt like my entire family had just turned their backs on me."
     "I heard footsteps behind me and turned."
-    show BBW neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind PRG with dissolve
+    show WG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) behind PRG with dissolve
     "Alice handed me a cream colored folder."
     MC "T-Thanks, Alice."
-    BBW "Of course. Best of luck."
-    hide BBW with dissolve
+    WG "Of course. Best of luck."
+    hide WG with dissolve
     "Alice waddled across the room and out the door, leaving Aida and I together."
     "I opened my camera app and laid the ultrasounds out on the bed. I set them together to try and get them all in frame."
     "The digital shutter clicked, and I put away the photos, setting them on Aida's desk before sitting down."
@@ -19902,10 +19902,10 @@ label PRG027Z:
     "As she said that, she gently rubbed my arm with her hand and walked back to her desk."
     hide BE with dissolve
     MCT "God, I must look down in the dumps if she was able to pick up on it that easily."
-    show BBW neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
     show PRG worried-handsbehind at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
     "At the front of the room, Alice and Aida walked in together, both taking their seats."
-    hide BBW with dissolve
+    hide WG with dissolve
     hide PRG with dissolve
     "From down the hall, we could all hear footsteps pounding the tile at an insanely rapid pace, getting closer to the classroom. Just before they reached, though, they slowed to a crawl."
     show FMG neutral with dissolve

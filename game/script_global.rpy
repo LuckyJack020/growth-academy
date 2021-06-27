@@ -4,8 +4,6 @@ define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=
 define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="MC")
 
 define AE = Character('Shiori', color="#FF3300")
-define WG = Character('Alice', color="#CC33FF")
-define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
 define BE = Character('Honoka', color="#FCCF20")
 define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
 define FMG = Character('Akira', color="#FF9900")
@@ -15,6 +13,8 @@ define GTS_S = Character('Naomi', color="#66FF33", image="GTS_S")
 define GTSCell = Character('Naomi', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="GTSCell")
 define PRG = Character('Aida', color="#FF3399", what_prefix='{size=-6}', what_suffix='{/size}')
 define PRGCell = Character('Aida', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="PRGCell")
+define WG = Character('Alice', color="#CC33FF")
+define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="WGCell")
 
 define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
 
@@ -176,6 +176,18 @@ image Dorm AE = DynamicImage("Graphics/ui/bg/AEdorm_[gametime].png")
 image Student Government = DynamicImage("Graphics/ui/bg/studentgovernment_[gametime].png")
 image Frozen Beach = "Graphics/ui/bg/NYI.png"
 
+image Dorm BE = DynamicImage("Graphics/ui/bg/BEdorm_[gametime].png")
+image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
+
+image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
+
+image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
+image Giant Dorm Exterior = "Graphics/ui/bg/GTSdorm_quarry_exterior.png"
+image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
+image Courtyard GTS = "Graphics/ui/bg/NYI.png"
+
+image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
+
 image Dorm WG = "Graphics/ui/bg/WGDorm.png"
 image Dorm WG Flip = im.Flip("Graphics/ui/bg/WGDorm.png", horizontal=True)
 image RV Interior = "Graphics/ui/bg/WG_summer_rv.png"
@@ -194,19 +206,6 @@ image Summer Guest Bathroom Steamed = DynamicImage("Graphics/ui/bg/WG_summer_gue
 image Summer Hallway = "Graphics/ui/bg/WG_summer_hallway.png"
 image Summer Dining Room = "Graphics/ui/bg/WG_summer_diningroom.png"
 image Summer Living Room = "Graphics/ui/bg/WG_summer_livingroom.png"
-
-
-image Dorm BE = DynamicImage("Graphics/ui/bg/BEdorm_[gametime].png")
-image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
-
-image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
-
-image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
-image Giant Dorm Exterior = "Graphics/ui/bg/GTSdorm_quarry_exterior.png"
-image Giant Dorm Interior = "Graphics/ui/bg/GTSdorm_quarry.png"
-image Courtyard GTS = "Graphics/ui/bg/NYI.png"
-
-image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
 #CG + Images
 image daymenubg = "Graphics/ui/bg/menubg-day.png"
