@@ -10706,8 +10706,8 @@ label WG048_c2_1:
     jump WG048_afterchoice_2
 
 label WG048_c2_2:
-	$setVar("WGSSPR", getVar("WGSSPR") +1)
-	MC "I didn’t realize seared bluefin tuna was your favorite Alice. I feel like I should have asked sooner, but what are some of your other favorite foods?"
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
+    MC "I didn’t realize seared bluefin tuna was your favorite Alice. I feel like I should have asked sooner, but what are some of your other favorite foods?"
     show WG summer-int-neutral
     "Alice paused for a moment, not wanting to talk with her mouth full after having just taken a particularly large bite."
     WG "Well, favorite is a rather strong word. I suppose I should qualify this as {i}one{/i} of my favorite dishes."
@@ -11199,20 +11199,20 @@ label WG050:
             jump WG050_c3_1
 
 label WG050_c1_1:
-	$setVar("WGSSPR", getVar("WGSSPR") +1)
-	"Someone had to move this show along. Nothing was going to get in the way of Alice chowing down if I had anything to say about it."
-	"I walked up beside Aida, taking stock of the banquet along with her."
-	MC "A bit overwhelming isn’t it?"
-	PRG "Hm-hmm. It all looks so good... but my nose has been really sensitive lately. I-I don’t really know what I feel like."
-	MC "I’m having trouble making up my mind too. I was planning on following Alice’s lead to see what she was going to start with."
-	show WG swimsuit-haughty
-	"Alice perked up when she realized I gave her an in to not have to wait any longer."
-	PRG "That does sound like a good idea. I need more time to make up my mind."
-	WG "It is a tad bit overwhelming isn’t it? Don’t be afraid to take a little bit and come back for more later. I won’t be offended if you choose not to finish your initial selection."
-	WG "That being said, I have already decided what I will be selecting."
-	MC "By all means, lead the way, we’ll be right behind you."
-	show WG swimsuit-neutral
-	WG "If you insist."
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
+    "Someone had to move this show along. Nothing was going to get in the way of Alice chowing down if I had anything to say about it."
+    "I walked up beside Aida, taking stock of the banquet along with her."
+    MC "A bit overwhelming isn’t it?"
+    PRG "Hm-hmm. It all looks so good... but my nose has been really sensitive lately. I-I don’t really know what I feel like."
+    MC "I’m having trouble making up my mind too. I was planning on following Alice’s lead to see what she was going to start with."
+    show WG swimsuit-haughty
+    "Alice perked up when she realized I gave her an in to not have to wait any longer."
+    PRG "That does sound like a good idea. I need more time to make up my mind."
+    WG "It is a tad bit overwhelming isn’t it? Don’t be afraid to take a little bit and come back for more later. I won’t be offended if you choose not to finish your initial selection."
+    WG "That being said, I have already decided what I will be selecting."
+    MC "By all means, lead the way, we’ll be right behind you."
+    show WG swimsuit-neutral
+    WG "If you insist."
     "Alice didn’t seem too keen on how going first reflected on her hospitality as the hostess; nonetheless, her appreciation was still evident in her tone."
     "A big girl has to eat after all, and I felt a personal responsibility to remove any and all obstacles to make sure that happened. Besides, there was plenty of food to go around— or at least I had thought."
     "Seeing Alice’s ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds."
@@ -11244,14 +11244,14 @@ label WG050_c2_1:
     jump afterchoice_WG050
 
 label WG050_c3_1:
-	"..."
-	show PRG swimsuit-embarrassed
-	"Instead of coming to a decision, Aida seemed to freeze up as she realized she was holding up the line with her indecisiveness."
-	show WG swimsuit-stern
-	MCT "Well this doesn’t seem to be working."
-	MC "Is everything alright Aida? It’s okay if you aren’t feeling hungry."
-	PRG "S-Sorry. I just can’t seem to make up my mind. I think I’ll have one of these lemon squares for now."
-	"Aida sheepishly took one of the squares from the dessert tray and walked back under the tent."
+    "..."
+    show PRG swimsuit-embarrassed
+    "Instead of coming to a decision, Aida seemed to freeze up as she realized she was holding up the line with her indecisiveness."
+    show WG swimsuit-stern
+    MCT "Well this doesn’t seem to be working."
+    MC "Is everything alright Aida? It’s okay if you aren’t feeling hungry."
+    PRG "S-Sorry. I just can’t seem to make up my mind. I think I’ll have one of these lemon squares for now."
+    "Aida sheepishly took one of the squares from the dessert tray and walked back under the tent."
     "Honestly, she didn’t need to be so embarrassed, it’s understandable how sensitive her sense of taste and smell could be in her condition."
     "It all looked pretty good to me though, but not wanting to hold up Alice any further, I decided to let her go ahead of me."
     MC "Uh, you can go first Alice. I’m not sure what I want either."
@@ -13345,7 +13345,7 @@ label WG057_c2_2:
 
 label WG057_afterchoice_2:
     if getVar("WGSSPR") >=5:
-        $setProgress("WG", "WG059S")
+        $setProgress("WG", "WG059") #set to WG059S
     else:
         $setProgress("WG", "WG059")
     jump daymenu
