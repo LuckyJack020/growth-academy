@@ -418,7 +418,7 @@ label BE004:
     MC "Yeah, probably. Good luck!"
     "Honoka gave a quick wave and trotted over to the lineup, while I went and sat back down outside of the actual field."
     hide BE with dissolve
-    extend " I sat there for a while and continued watching Honoka and the other students kick the ball around, run drills, and do some exercises. Seemed like good fun, and I was tempted to see if I could just join in."
+    "I sat there for a while and continued watching Honoka and the other students kick the ball around, run drills, and do some exercises. Seemed like good fun, and I was tempted to see if I could just join in."
     "But, as I looked at the sweat running down my shirt, I remembered that it was way too hot today. Maybe next time."
     jump daymenu
 
@@ -6188,7 +6188,7 @@ label BE034:
 label BE034_cooking:
     $setProgress("BE", "BE035A")
     $setFlag("HONOKA_COOKING")
-    $setVar("BETomboy", getVar("BETomboy") + 2)
+    $setVar("BEFeminine", getVar("BEFeminine") + 2)
     MC "I think you should join the cooking club."
     BE "Oh? Heh, how come?"
     MC "I think it would be nice to do something different. Take a break from physical activity for a while and do something that's more chill."
@@ -6232,7 +6232,7 @@ label BE034_cooking:
 label BE034_softball:
     $setProgress("BE", "BE035B")
     $setFlag("HONOKA_SOFTBALL")
-    $setVar("BEFeminine", getVar("BEFeminine") + 2)
+    $setVar("BETomboy", getVar("BETomboy") + 2)
     MC "I think you should join the softball club."
     show BE neutral
     BE "Heh, somehow I knew you were going to pick that."
@@ -6395,7 +6395,7 @@ label BE035A_sauce:
     "Honoka gave a thumbs-up to Kanami, her mouth already full with another bite."
     Kanami "I take it that's a yes. Wonderful. So glad you could learn something new today. Next lesson we'll be doing something sweet."
     show BE happy
-    BE "Happy: Schweet? Mmf, dat schounds goohd."
+    BE "Schweet? Mmf, dat schounds goohd."
     MC "Honoka. Swallow."
     show BE neutral
     BE "{i}gulp{/i}"
@@ -6693,10 +6693,10 @@ label BE036:
     MC "Mmm..."
     MC "I'll be honest, Honoka. Right now I'm looking around for anything that could be considered a conveniently-timed distraction to change the topic."
     BE "That's totally reasonable."
-    show BE neutral:
-        xpos 0.5 xanchor 0.5 yalign 1.0
-        linear 0.5 ypos 0.9
-        linear 0.5 ypos 1.0
+    #show BE neutral
+        #xpos 0.5 xanchor 0.5 yalign 1.0
+        #linear 0.5 ypos 0.9
+        #linear 0.5 ypos 1.0
     "Apart from having to sidestep a squirrel that was busy chewing on a nut in the middle of grass, Honoka and I didn't come across anything interesting to get us talking."
     "The squirrel finished its snack and then darted under a bench back towards a tree."
     "Until after a while, we heard some faint humming around the corner. Heading over, we saw Naomi standing around a large flower bed, in the middle of watering a variety of blooming flowers."
@@ -6819,7 +6819,7 @@ label BE036_c1_2:
     show GTS happy
     GTS "And both flowers actually have festivals dedicated to them, though I would say the chrysanthemum one is more famous, though I believe I heard azalea festivals have spread to America while others have not."
     show GTS neutral
-    GTS "That may just be due to how easier it is to grow azaleas in their climate, though? I haven't really read up on the specifics, it's just something I've noted when passing the time learning about these."
+    GTS "That may just be due to how easy it is to grow azaleas in their climate, though? I haven't really read up on the specifics, it's just something I've noted when passing the time learning about these."
     show GTS happy
     GTS "Oh, now I'm wondering if it would be possible to successfully cross-pollinate the two species. It's probably been attempted already but it would be something interesting to look into..."
     show GTS neutral
@@ -6907,7 +6907,7 @@ label BE037:
     MC "Your talk about Matsumoto-san must have gotten me in the mood for some butt, I suppose. You know, Honoka, you have a rather cute one yourself."
     show BE aroused
     BE "Sh-shut up."
-    "Oh I just can't though. It's soft, too. Maybe I'll move my affection down here instead. Would you mind sitting on my head next time instead of doing a boobhat?"
+    MC "Oh I just can't though. It's soft, too. Maybe I'll move my affection down here instead. Would you mind sitting on my head next time instead of doing a boobhat?"
     show BE surprised
     BE "D-Don't you dare."
     "Honoka was moaning, and shifting around on top of me. That shifting did nothing but push her boobs more insistently into my torso, and press her rump into my palms."
@@ -7170,8 +7170,9 @@ label BE039:
     MC "Eh?"
     play music Schoolday
     "I turned around to see who else had come in. It was only after looking at the young woman walking into the room that I remembered Honoka also had a roommate."
-    show BE happy at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show Kokutan neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show BE happy at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show Kokutan neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0)
+    with dissolve
     BE "Yep. Well, I mean, what other guy would I bring in here?"
     MC "Ha. Yeah, um, I'm Keisuke Hotsure. Nice to meet you."
     "She was fairly short, nearly a foot smaller than Honoka. It felt embarrassing to look down so far in order to meet her gaze. It did make it more obvious to see that she wore colored contacts that made her eyes look bubblegum pink."

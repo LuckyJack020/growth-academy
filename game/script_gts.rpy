@@ -246,6 +246,7 @@ label GTS003_after:
     jump daymenu
 
 label GTS004:
+    $setProgress("GTS", "GTS006")
     scene Library with fade
     play music Peaceful
     "The sun shone highly in the sky as the middle of the day came by, its rays seeping through the many windows that surrounded the vast two-story room. I was honestly a little surprised to see so many people using the campus library."
@@ -518,12 +519,12 @@ label GTS007:
     MC "Yeah, especially during the holidays when all the tourists take over the streets. You basically turn an already crowded intersection into an impenetrable wall of people."
     MC "I felt bad for the people driving because, well... they weren't going anywhere for quite a long while."
     GTS "I do hope that you were careful during those times. I've heard stories of how overwhelming Shibuya can get during the holidays."
-    show GTS Sad
+    show GTS sad
     GTS "I’ve also heard quite a few horror stories about some of the nastier incidents that can take place due to the massive amount of traffic."
     MC "Yeah, I was okay. I knew well enough to not get too absorbed into the larger crowds, and kept away from people who could have looked like trouble."
     MC "Plus, it's always good to have a couple of friends with you. Makes some of the troublemakers think twice before trying anything."
     MC "That's just Shibuya during the big times of the year, though. How about Kyoto? Does it get as crowded as Tokyo?"
-    show GTS Neutral
+    show GTS neutral
     GTS "Well, it would depend on the time of year, I suppose. It's the same as any big city, I imagine. Around Christmas time, though, restaurants tend to start charging more for meals -- sometimes even doubling their prices."
     MC "Because of all the people, I assume?"
     GTS "It’d make sense, yes. A lot of people see Christmas as a big date night event in Kyoto."

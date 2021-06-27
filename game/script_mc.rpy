@@ -428,7 +428,7 @@ label global000_WG:
     "After introducing herself, Alice sat back down on her makeshift throne. Before I could open my mouth to speak, she looked past us."
     show WG angry
     WG "Do try to hurry now, if you'd please."
-    WG "I would like to go get something to eat, but I'll miss the opportunity if we tary any further."
+    WG "I would like to go get something to eat, but I'll miss the opportunity if we tarry any further."
     "I followed Alice's gaze. I hadn't noticed at all but there was a mousy girl in the room as well."
     hide WG with dissolve
     show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
@@ -527,6 +527,7 @@ label global000_RM_c1:
     UNKNOWN "Really."
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
+    hide cg with dissolve
     show RM neutral with dissolve
     RM "All right, you check out...{w} My name's Daichi Utagashi."
     $ setAffection("RM", -1)
@@ -542,6 +543,7 @@ label global000_RM_c2:
     UNKNOWN "Really."
     "Just wanting to get inside and get things over with, I sighed and handed over my ID."
     "More squinting, and then finally he opened the door all the way."
+    hide cg with dissolve
     show RM neutral with dissolve
     RM "All right, you check out...{w} My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
     scene Dorm Interior with fade
@@ -550,11 +552,12 @@ label global000_RM_c2:
 
 label global000_RM_c3:
     MC "Don't worry, sir, I'm from the government, just making an inspection!"
+    hide cg with dissolve
     "I thought my fake-authoritative voice would have been worth a laugh, but instead there was silence.{w} I knocked again, tried the knob, called out a few times, but there was no answer."
     "I put my ear against the door and could hear movement, so I moved over to one of the windows and took a peek in,{w} only to see the mystery occupant hurling his bags out the opposite window!"
     scene Dorm Exterior with fade
     "I left my luggage by the door and ran around the dorm, coming around the other side just in time to see him struggling out the window."
-    show RM angry with vpunch
+    show RM angry with hpunch
     UNKNOWN "Aaah! D-Damn you!"
     RM "Daichi Utagashi isn't going without a fight!"
     "Daichi tried to go back inside, but he had already squirmed too far out to get back through the window."
@@ -631,7 +634,7 @@ label global000_RM_after:
 
 label global000_part2:
     scene Campus Center with fade
-    "As I followed the signs to freshman welcoming, I couldn't help but notice how flat the campus seemed. Despite the large buildings, most of them were divided into a handful of floors at most."
+    "As I followed the signs to First Day Welcoming, I couldn't help but notice how flat the campus seemed. Despite the large buildings, most of them were divided into a handful of floors at most."
     "Also, there didn't seem to be any stairs anywhere. Any dips or slopes in the elevation were all traveled with ramps."
     scene Auditorium
     with dissolve
@@ -744,7 +747,7 @@ label global000_sit_c2_1:
     MC "Find your dorm okay, Honoka?"
     show BE happy
     BE "Yep! It's amazing how big it is...{w} Makes my bedroom at home look like a closet!"
-    MC "Yeah, and for freshmen, even!"
+    MC "Yeah, and for new students, even!"
     show BE neutral
     BE "But you know what's weird? I haven't seen a single upperclassman yet. Like, not anywhere. They're all starting today, right? Aren't they?"
     MC "I don't know, really. Maybe this is some kind of half-day for upperclassmen, they start later than us?"
@@ -960,12 +963,13 @@ label global000_homeroom:
     HR "Others...{w} Not so much."
     hide BE
     hide PRG
+    with dissolve
     show HR neutral with dissolve
     HR "But make no mistake, unless you've got a sibling here at Seichou Academy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you."
     "Tashi-sensei scanned the room, taking in the fear and confusion, then shrugged."
-    HR "Anyways, that's my big freshman speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
+    HR "Anyways, that's my big first day speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
     scene black with dissolve
     stop music
@@ -983,16 +987,14 @@ label global005:
     scene Hallway with fade
     play music Busy
     "As I made my way inside the classroom building, I ran into a few of my classmates."
-
-    if prefgirl == "BE":
+    if getHighestAffection() == "BE":
         show BE neutral with dissolve
         BE "Hey there, Kei-chan! How are things going for you?"
         MC "Oh, pretty good. You?"
         BE "Still getting used to how big this campus is! I've been spending some time walking around each night and I still haven't seen it all!"
         MC "Wow, I haven't been around much either..."
         BE "Maybe we can go exploring together sometime!"
-
-    if prefgirl == "WG":
+    if getHighestAffection() == "WG":
         show WG neutral with dissolve
         WG "Hotsure-san."
         MC "Oh, hello Nikumaru-san."
@@ -1000,8 +1002,7 @@ label global005:
         MC "Er, okay, Alice... but you called me Hotsure-san."
         WG "Because you were expecting it, of course. In any case, I'm looking forward to today's lessons. You?"
         MC "I suppose..."
-
-    if prefgirl == "GTS":
+    if getHighestAffection() == "GTS":
         "I noticed Naomi-san walking next to me as we made our way to class. Like, noticeably close."
         show GTS neutral with dissolve
         GTS "..."
@@ -1012,8 +1013,7 @@ label global005:
         MC "Nice day we're having, yeah?"
         GTS "...Yes."
         MCT "Boy, she's not much for conversation today... but she seems happy."
-
-    if prefgirl == "FMG":
+    if getHighestAffection() == "FMG":
         show FMG neutral with dissolve
         FMG "Hotsure-san! How ya doin'?"
         "I cringed as Akira slapped me on the back in what she probably thought was a friendly manner."
@@ -1024,8 +1024,7 @@ label global005:
         MC "Does that make a difference?"
         FMG "Sure! Morning and evening workouts can go harder than normal because you're being naturally cooled by the cold air!"
         MCT "I boggled to think what a 'harder' workout was for Akira, seeing how hard she already pushed herself..."
-
-    if prefgirl == "PRG":
+    if getHighestAffection() == "PRG":
         show PRG neutral with dissolve
         PRG "H-hi Kei-sama!"
         MC "Oh, hi Kodama-san."
@@ -1034,8 +1033,7 @@ label global005:
         PRG "Yeah. Like... a lot."
         MC "Okay, Aida. How are you today?"
         PRG "I'm fine. How are you? Did you sleep good? Get enough breakfast? I've got a snack if you're hungry..."
-
-    if prefgirl == "AE":
+    if getHighestAffection() == "AE":
         show AE neutral with dissolve
         AE "Hotsure-san."
         MC "Oh, hello Matsumoto-san."

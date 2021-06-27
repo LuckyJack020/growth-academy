@@ -9622,7 +9622,7 @@ label AE045:
     show AE sad
     AE "...Seventeen."
     MC "Wuh... t-that's insane! That's so young, I mean-"
-    AE "My father and grandmother thought so to. There was a bit of a push from father to give me up for adoption after birth, from what my mother said. And my grandmother... wanted to see me off a bit earlier."
+    AE "My father and grandmother thought so tpo. There was a bit of a push from father to give me up for adoption after birth, from what my mother said. And my grandmother... wanted to see me off a bit earlier."
     MC "..."
     "Silence. What she implied was a bit too hard for me to respond to, I was at a complete loss for words."
     MC "Your grandmother wanted you..."
@@ -11509,7 +11509,7 @@ label AE051_c1_after:
     "Dropping her sheet and leaving her breasts out in the open, she became overcome with shock as she began grasping at her lower body."
     MC "What, what's wrong?"
     AE "No. No-no-no-no-no-no."
-    "As she lifted herself out of bed, I got a good glimpse of her full enormity. I could tell without her even needing the measuring tape, the same thing I noticed last night as well, her buttcheeks are definitely bigger."
+    "As she lifted herself out of bed, I got a good glimpse of her full enormousness. I could tell without her even needing the measuring tape, the same thing I noticed last night as well, her buttcheeks are definitely bigger."
     "I sat silently, struggling for things to say as she pulled out the measure and wrapped it around each leg, then from front to the back, and-"
     AE "Gch, I can barely see. Numbers are too faded."
     show AE nude-sad
@@ -13943,7 +13943,7 @@ label AE060:
     show AE happy
     AE "I'll escort you out, Hotsure-sa-, Keisuke."
     MC "Yep, yep."
-    "We made our way past Yureno-san, who's massive hips proved to be a bit of trouble to get past at first; eventually leading us to the outside as we shut the door."
+    "We made our way past Yureno-san, whose massive hips proved to be a bit of trouble to get past at first; eventually leading us to the outside as we shut the door."
 
     scene Dorm Exterior with fade
     play music Hallway
@@ -16846,10 +16846,11 @@ label AE074:
     $setProgress("AE", "AE075")
     scene Field Winter with fade
     play music Hallway
-    show Tomoko neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
-    show AE neutral at Position(xpos=0.35, xanchor=0.5, yalign=1.0) with dissolve
-    show Tako neutral at Position(xpos=0.65, xanchor=0.5, yalign=1.0) with dissolve
-    show Yuki neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0)
+    show AE neutral at Position(xpos=0.35, xanchor=0.5, yalign=1.0)
+    show Tako neutral at Position(xpos=0.65, xanchor=0.5, yalign=1.0)
+    show Yuki neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0)
+    with dissolve
     "I ran down the hill behind the dorms, trudging through the snow as I looked behind me with a wide smile strewn across my face."
     MC "Yoo! Y'all coming, or what?"
     show Tako angry
@@ -17016,13 +17017,14 @@ label AE074:
     "As Tako got up, she began to wad a ball of snow in her hands."
     Tako "Besiiides... I think I want to give... our... VISITORS A GIFT!"
     "And chucked it at a figure hiding behind one of the trees."
-    hide AE with dissolve
-    hide Tako with dissolve
-    hide Tomoko with dissolve
-    hide Yuki with dissolve
+    hide AE
+    hide Tako
+    hide Tomoko
+    hide Yuki
+    with dissolve
     show RM angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     RM "Agh! Hey!"
-    show Tomoko at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     Tomoko "GET ‘IM!"
     "I joined in as Tomo, Yuki, and Tako began to pelt Daichi with balls of crisp, frigid snow."
     RM "ACH-! C- BAH! OY! QUIT I- GAH!"

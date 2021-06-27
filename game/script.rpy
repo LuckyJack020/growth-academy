@@ -659,7 +659,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Sakura': 1}
+        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         flags = []
         vars = {}

@@ -369,7 +369,7 @@ label PRG002:
     "Aida's head whipped up, her tied, mousy brown hair bobbing on her head."
     "She stopped on the path ahead of me, letting me catch up."
     PRG "H-Hello, Hotsure-san. D-Did you need something?"
-    MC "Oh, not all.  Just wanted to say hi."
+    MC "Oh, not at all.  Just wanted to say hi."
     PRG "Oh..."
     PRG "Well... hello."
     MC "How was class for you today?"

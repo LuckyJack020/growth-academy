@@ -365,7 +365,7 @@ label WG004:
     $setTimeFlag("testday")
     $setProgress("WG", "WG005")
     scene Dorm Interior with fade
-    play music schoolday
+    play music Schoolday
     "I tried to study for today's quiz the night before, but boredom and sleepiness got the better of me. I decided to get up early instead and squeeze in a cram session before class."
     "Boy was that ever a stupid idea. I can barely drag my ass out of bed to get to class on time on the best of days, but I somehow managed to convince myself last night I was going to study for hours on end before it even started."
     "I couldn’t even focus with my bed being in the same room, so I decided the library might be a more productive setting."
@@ -474,7 +474,7 @@ label WG004_afterchoice1:
     WG "It is true that my family employs a staff of professionals to manage our finances, but that doesn’t mean my parents are not actively managing their own money."
     show WG happy
     WG "My father gave me some seed money to create an investment portfolio that I would manage. He wanted me to learn from experience what it means to earn and manage your own money."
-    WG "I’ll have you know I’ve managed to earn on average a yearly 18% appreciation since I started."
+    WG "I’ll have you know I’ve managed to earn on average a yearly 18%% appreciation since I started."
     menu:
         "Just 18%? That doesn’t sound like much.":
             jump WG004_C1_2
@@ -516,7 +516,7 @@ label WG004_C2_2:
     WG "Hehe. Silly boy, then how will you ever learn to do so yourself?"
     show WG haughty
     WG "Besides, you can’t afford me."
-    MC "{size-6}I wasn’t being serious...{size-6}"
+    MC "{size=-6}I wasn’t being serious...{/size}"
     WG "As you understand, my time is quite valuable."
     WG "The money I spend to employ an assistant to take care of the more mundane day-to-day tasks is more than compensated for with the return I can make by focusing my efforts on business matters."
     WG "Some people look at that and think I don’t understand the value of money— absolutely laughable."
@@ -566,7 +566,6 @@ label WG005:
     WG "Tsk, well that may be true, but in my experience people often have far more control over our present circumstances than they'd care to admit."
     MCT "The opposite can be true as well."
     MC "So what is your 'factor' then?"
-    hide PRG with dissolve
     show WG neutral
     WG "They say, and you might have trouble believing this just as I did, that I am inclined to grow... stout."
     MC "Stout?"
@@ -623,10 +622,10 @@ label WG005_c3:
     MC "Well, just don’t take it to an extreme. You don't want to starve yourself or anything like that."
     show WG neutral
     WG "But perhaps extreme measures are warranted?"
-    show HR
+    show HR neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     HR "Mind if I take a seat here?"
     show WG doubt
-    WG "Erm, I guess not. {size-6}Just keep that {i}thing{/i} away from me.{size-6}"
+    WG "Erm, I guess not. {size=-6}Just keep that {i}thing{/i} away from me.{/size}"
     HR "Hm?"
     show WG surprised
     WG "{i}Ahem{/i}, nothing! Please, go right ahead."
@@ -637,23 +636,27 @@ label WG005_c3:
 
     scene Auditorium with fade
     HR "It’s the same story every year."
-    show FMG happy with dissolve
-    show BE happy with dissolve
+    show FMG happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show BE happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     HR "A few students are excited when they learn about their growths."
     hide FMG
     hide BE
-    show PRG sad with dissolve
-    show GTS sad with dissolve
+    with dissolve
+    show PRG sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show GTS sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     HR "Most are just confused more than anything."
     hide PRG
     hide GTS
+    with dissolve
     show AE sad with dissolve
     HR "While others, like yourself, are pretty sad to hear the news. Like the stages of grief, it starts with denial, then bargaining. Sound familiar?"
-    hide AE
 
     scene Cafeteria with fade
-    show WG doubt
-    show HR
+    show WG doubt at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show HR neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     HR "I’m here to tell ya kid, you may think you have a plan of how to stop this, or maybe just slow it down, but that’s not how these kinds of things work."
     HR "It can’t be stopped. That’s why you’re here, that’s why we’re here."
     WG "What do you mean by \"can’t be stopped\"? Surely {i}something{/i} can be done? Are you really saying there’s nothing that can be done whatsoever?"
@@ -665,7 +668,7 @@ label WG005_c3:
     MC "Man, that’s pretty deep Tashi-sensi."
     HR "Just trying to help as best I know how. I may be a teacher now, but I was in your shoes once as a student here."
     HR "Luckily for your sake, everyone else is going through the same thing, well more or less. Try to support each other the best you can. This is only the start. I’ll see you two in class."
-    hide HR
+    hide HR with dissolve
     show WG sad
     WG "{i}Sigh{/i}... it sounds like there really isn’t anything that can be done."
     MC "I guess not..."
@@ -763,7 +766,7 @@ label WG006_c1:
     show WG neutral
     WG "Well I must be going. My audition is soon and I need to focus."
     WG "Might I suggest you start to practice again? I hope you will consider doing so. I will be seeing you around."
-    jump WG0006_afterchoice
+    jump WG006_afterchoice
 
 
 label WG006_c2:
@@ -776,14 +779,13 @@ label WG006_c2:
     WG "I’m a firm believer that talent can blossom anywhere when given a guiding hand. Why don’t you show me what you can do?"
 
     scene Music Classroom with fade
-    show WG neutral
+    show WG neutral with dissolve
     MCT "What have I gotten myself into? I don’t want to embarrass myself this early on in the school year in front of a girl."
     MCT "Nevermind, it’ll be fine, just do what you know you can do, man."
     WG "Well, don’t keep me waiting now."
     MC "Right, uh, here goes."
     play music Gymnopedie
     pause 10
-    stop music fadeout 1.0
     show WG surprised-2
     $setAffection("WG", 1)
     WG "Keisuke, this sounds lovely."
@@ -798,6 +800,7 @@ label WG006_c2:
     WG "It seems you certainly must have put your time in to learn this piece even if it’s been a while for you."
     MC "Yeah! Heh, I guess you’re right."
     $setSkill("Art", 1)
+    stop music fadeout 1.0
     MC "Thanks for encouraging me to take a crack at it again, Alice. This was fun."
     play music Peaceful
     WG "Think nothing of it, as I said before I feel it is my duty to encourage and nurture talent wherever I find it."
@@ -830,14 +833,15 @@ label WG006_afterchoice:
     WG "This is absolutely outrageous!"
     MCT "I think I know that voice by now, sounds like she’s not happy about something."
     "The piano could wait, I had to go see what the commotion was about."
-    show WG angry
-    show PRG sad-2
+    show WG angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show PRG sad-2 at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    with dissolve
     WG "It is repugnant and absurd! I am the clear choice to lead this ensemble with my years of experience and perfect pitch."
     "Something told me Alice’s audition might not have gone as well as her initial confidence would have led me to believe."
     MC "Is everything okay, Alice? I heard you yelling down the hall, you sound pretty upset."
     show WG stern
     WG "Hmph, I suppose I should compose myself more properly if my voice is carrying as far as you suggest, but to answer your question: NO, everything is not okay."
-    PRG "{size-6}Alice... was not selected as the music club president.{size-6}"
+    PRG "{size=-6}Alice... was not selected as the music club president.{/size}"
     MC "I’m sorry to hear that, I know you were pretty set on that based on what you said yesterday. I meant to ask how your audition went, but it sounds like..."
     show WG haughty
     WG "My audition went flawlessly, thank you for asking. So much so I was selected among the top seats to be considered for club president."
@@ -1511,7 +1515,7 @@ label WG010_c3:
     MC "At least help me clean these up."
     BE "What're these?"
     "I didn't process the question as I found myself distracted by Honoka's chest. After Alice's modeling routine, I had curves on the brain, and Honoka was looking particularly curvy in her own right."
-    show cg BE010
+    show cg WG010
     BE "Hey! Earth to Keisuke? You look like you took a hit to the noggin, considering you can't lift your neck above chest level."
     MC "I was just... Um..."
     hide cg
@@ -5015,7 +5019,7 @@ label WG029:
     show WG sick at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     WG "Keisuke. You're drenched."
     MC "Alice. Here."
-    "I retrieved the tea. My backpack hadn't be spared the rain's assault, but the insides were blessedly dry."
+    "I retrieved the tea. My backpack hadn't been spared the rain's assault, but the insides were blessedly dry."
     MC "I mentioned this tea my mother always gave me. I found some at the pharmacy."
     WG "Were you out in the rain? It's pouring outside."
     menu:
@@ -6672,7 +6676,7 @@ label WG037:
     show WG happy
     WG "Good morning."
     MC "You're looking lovely today."
-    "I had hoped that would be a safely neutral comment, but as Alice sat down she sighed again."
+    "I had hoped that would be a safely neutral comment, but as Alice sat down she seemed bothered by something."
     show WG neutral
     WG "{i}Sigh{/i}"
     WG "I'm getting fatter. Still."
@@ -7401,7 +7405,7 @@ label WG039_c2_1:
     MC "Wait a second, {i}you’re{/i} her new assistant?!"
     Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
     WG "Enough chit-chat, you’ve overstayed your welcome."
-    Chibuki "{size-6}What did you do? Ugh, now I have to put up with her in a mood for the rest of the day{size-6}..."
+    Chibuki "{size=-6}What did you do? Ugh, now I have to put up with her in a mood for the rest of the day{/size}..."
 
     scene black with fade
     "I avoided Alice for the rest of the day, giving her a wide berth in the cafeteria and not giving her a reason to notice me in the class."
@@ -7439,7 +7443,7 @@ label WG039_c2_2:
     Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
     WG "Yes, this is my new assistant, Chibuki. I trust you remember her? I was impressed with her commitment to providing such great service, despite obviously not enjoying the task."
     WG "I figured with proper compensation and a more rewarding line of work, her potential could be put to better use."
-    Chibuki "{size-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{size-6}"
+    Chibuki "{size=-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{/size}"
     "Chibuki’s career change hadn’t really seemed to affect her level of enthusiasm for her job, but I could only assume she was pretty good at it if she hadn’t given someone as demanding as Alice any cause for complaint."
     MC "I see. Well, I’ll leave you to it then."
 
@@ -7524,13 +7528,13 @@ label WG039_c2_3:
     Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
     WG "Yes, this is my new assistant, Chibuki. I trust you remember her? I was impressed with her commitment to providing such great service, despite obviously not enjoying the task."
     WG "I figured with proper compensation and a more rewarding line of work, her potential could be put to better use."
-    Chibuki "{size-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{size-6}"
+    Chibuki "{size=-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{/size}"
     "Chibuki’s career change hadn’t really seemed to affect her level of enthusiasm for her job, but I could only assume she was pretty good at it if she hadn’t given someone as demanding as Alice any cause for complaint."
     show WG happy
     WG "Hmm it would seem these current measures were not necessary— but certainly serendipitous."
-    Chibuki "{size-6}She seems like she’s in a good mood.{size-6}"
+    Chibuki "{size=-6}She seems like she’s in a good mood.{/size}"
     MCT "Oh, you have no idea."
-    MC "{size-6}Eh, you could say that.{size-6}"
+    MC "{size=-6}Eh, you could say that.{/size}"
     "Chibuki raised an eyebrow to my coy reply, but I figured it was best to take my leave before any further elaboration became necessary."
 
     scene black with fade
@@ -7563,7 +7567,7 @@ label WG039_c1_2:
     Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
     WG "Yes, this is my new assistant, Chibuki. I trust you remember her? I was impressed with her commitment to providing such great service, despite obviously not enjoying the task."
     WG "I figured with proper compensation and a more rewarding line of work, her potential could be put to better use."
-    Chibuki "{size-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{size-6}"
+    Chibuki "{size=-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{/size}"
     "Chibuki’s career change hadn’t really seemed to affect her level of enthusiasm for her job, but I could only assume she was pretty good at it if she hadn’t given someone as demanding as Alice any cause for complaint."
     show WG happy
     WG "It would seem I roped you in unnecessarily Keisuke. Haste makes waste as they say. Come now Chibuki, I could use your help replacing this ill-fitting garment for the new one."
@@ -10718,7 +10722,7 @@ label WG048_c2_2:
     "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
     Takada "Would either of Miss Nikumaru’s guests be interested in another serving as well?"
     show PRG neutral
-    PRG "I will have some more as well, Takada-san... {size-6}although not quite so much...{size-6}"
+    PRG "I will have some more as well, Takada-san... {size=-6}although not quite so much...{/size}"
     MC "I’m good. Thanks though."
     jump WG048_afterchoice_2
 
@@ -14677,7 +14681,7 @@ label WG060S_Lie_C2_1:
     WG "Hmmm, well that is rather reassuring to hear."
     $setVar("WGSSPR", 0)
     WG "It seems I have misjudged you, Keisuke. I must apologise for this rather embarrassing miscalculation of mine. I appreciate your restraint with regards to this matter."
-    WG "{size-6}Though I do find it rather perplexing...{size-6}"
+    WG "{size=-6}Though I do find it rather perplexing...{/size}"
     show WG neutral-2
     WG "This has been rather illuminating to me with regards to some events I appear to have misinterpreted."
     show WG neutral
@@ -15041,7 +15045,7 @@ label WG060S_Accept:
     show WG worried
     "She closed her mouth slowly, tilted her head back, and swallowed carefully. The way her stomach bulged out, she looked more than pregnant. She lowered her head again and looked me in the eyes."
     show WG neutral-2
-    WG "Feed me, {i}huff{/i}, one more... {size-6}Please{size-6}."
+    WG "Feed me, {i}huff{/i}, one more... {size=-6}Please{/size}."
     "Part of me began to feel concern for her at this point."
     "Her strained expression seemed to indicate she was approaching the limits of her capacity, but I could never deny such a sincere longing like I felt in her whimpering plea."
     "She gulped the remaining piece down. It was difficult to convey, but she seemed so unlike her usual self."
@@ -15551,7 +15555,7 @@ label WG061:
     "It was a sight to behold, the bliss of unreserved indulgence after having denied oneself—"
     "this, combined with the peace of mind, yielding a relaxed, almost sleepy smile on her face, knowing she was loved and accepted, even as she indulged her voracious appetite."
     "It didn’t take long for her to devour the entire contents of the carton."
-    WG "{size-6}Urp!{size-6} Excuse me. That was delicious, Keisuke. Although I dare say... I could go for more. Would you like to join me at the dining hall? You still haven’t gotten to eat dinner yourself after all."
+    WG "{size=-6}Urp!{/size} Excuse me. That was delicious, Keisuke. Although I dare say... I could go for more. Would you like to join me at the dining hall? You still haven’t gotten to eat dinner yourself after all."
     MC "You are right, I am kind of hungry. Plus, I’d love to! Here, let me get the rest of those dishes first though."
     "Finally, Alice was ready to be honest with me about just how much she wants to eat. I still wished that she didn’t feel the need to eat ahead of time in order to not feel self-conscious about it in a public setting."
     "But the fact that she felt comfortable enough with me to tell me that she still felt hungry after eating enough food for over six people was a milestone in our relationship I was happy to be past."
@@ -15806,7 +15810,7 @@ label WGFMG002_c1_2:
     WG "I said that's enough!"
     show WG stern
     WG "Now you listen- both of you."
-    WG "I don't know what it is that makes two of the most good-natured and easy-going people I've met at this school turn into vulgar beast in the presence of each other, but"
+    WG "I don't know what it is that makes two of the most good-natured and easy-going people I've met at this school turn into vulgar beasts in the presence of each other, but"
     WG "I am disappointed that neither of you can manage to keep your composure and act like proper adults towards each other in the presence of company."
     WG "Quite frankly it's embarrassing to be seen around you two when a fight breaks out."
     "Natsuko and Akira began to look down and to the side, away from each other, slowly absorbing Alice's chastising."

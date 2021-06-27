@@ -1152,7 +1152,7 @@ label FMG013:
     MC "W-Woo."
     FMG "Wooo! Let's get it!"
     "Akira clapped her hands and laid prone on the cushioned bench."
-    FMG "Aight, well, get some weights and start then."
+    FMG "A'ight, well, get some weights and start then."
     stop music
     "Without warning, Akira's normally bright and cheery face suddenly became {i}far{/i} less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
     MC "Woah, you alright there?"
@@ -1467,6 +1467,7 @@ label FMG015:
         "She was squealing like a child."
         MCT "...Huh?"
         MC "Wait, really?"
+        $setAffection("FMG", 5)
         FMG "Yeah! I was in grade School when the manga came out and I've been a huge fan of Nya'dorable ever since! I even plan to watch the anime when it comes out this summer!"
         FMG "I mean, sure I'll have to cut the sleeves and a bit of the gut area, but I absolutely love it! How did you know?!"
         MC "I... had a hunch."
@@ -2942,13 +2943,13 @@ label FMG023_c2:
         FMG "I know! Isn't it awesome?"
     else:
         MC "I dunno what I'm looking at."
-        show FMG happy with dissolve
+        show FMG happy
         FMG "It's... {i}Mr. Minei's Magic Mochi!{/i}"
         "She half-sang it, maybe half-remembering an old commercial jingle."
         if getAffection("FMG") > 4:
             "I just grinned for a second at the attempt before I thought of anything to say."
         MC "You and Mr. Minei go back a ways, huh?"
-    show FMG neutral with dissolve
+    show FMG neutral
     FMG "My mom and dad used to take me there every summer. I actually remember when I started going there by myself."
     FMG "I'd finish my dumb math homework, put on my ice cream sneakers, and jog down a couple blocks to the usual spot."
     MC "Ice cream sneakers?"
@@ -2965,9 +2966,9 @@ label FMG023_c2:
     MC "Hm! Can't wait to try it, then."
     FMG "Yeah."
     pause 1
-    show FMG neutral at Transform(xzoom=-1) with dissolve
+    show FMG neutral at Transform(xzoom=-1)
     pause 1
-    show FMG neutral at Transform(xzoom=1) with dissolve
+    show FMG neutral at Transform(xzoom=1)
     pause 1
     "Against my better judgment, I looked around and noticed we had progressed maybe half a meter down the line."
     MC "Yeah, there was some good stuff in Tokyo. Some, uh, not as, but a lot of combinations I wouldn't have tried otherwise."
@@ -3007,13 +3008,13 @@ label FMG023_c2:
     show FMG neutral
     "We both stared ahead into the swelling silence of the dreamland around us, bathed in the glow of the sunlight off the high windows. We were a handful of meters farther ahead from my last glance."
     "I was about to get sucked into dreamland for real when a familiar tower of raven-black passed us by amid the sunny glow."
-    show FMG neutral at Position(xpos=0.25), Transform(xzoom=-1) with dissolve
+    show FMG neutral at Position(xpos=0.25), Transform(xzoom=-1) with move
     show GTS neutral at Position(xpos=0.8) with dissolve
     FMG "'Sup Yamazaki-san?"
     GTS "Ah, good afternoon! I'm glad to see I'm not the only one in our class to find this delightful little establishment."
-    show FMG sad with dissolve
+    show FMG sad
     FMG "Yeah, that sure is crazy..."
-    show FMG neutral with dissolve
+    show FMG neutral
     "Indeed, Yamazaki-san took a second to dab her lips with a miniscule-looking white napkin. She placed it in a clear clamshell box in her other hand, alongside a single pale, pink mochi bun speckled with gleaming frost."
     GTS "It was the loveliest coincidence. I was on my way back from sending a letter to my family when I happened upon a line forming at that truck. It seems I was lucky to happen by when I did. The line's quite a bit longer now."
     MC "Uh huh. So, it's good?"
@@ -3029,8 +3030,8 @@ label FMG023_c2:
     GTS "As you wish. Be well, Mizutani-san, Hotsure-san."
     MC "See you later."
     hide GTS with dissolve
-    show FMG neutral at Position(xpos=0.5), Transform(xzoom=-1) with dissolve
-    show FMG neutral at Transform(xzoom=1) with dissolve
+    show FMG neutral at Position(xpos=0.5), Transform(xzoom=-1) with move
+    show FMG neutral at Transform(xzoom=1)
     MC "...Rave reviews."
     FMG "I told you!"
     "We passed another ten minutes or so inching down the sidewalk, just passing by. I stretched, twisting my torso around with my fingers spiderwebbed across the back of my head."
