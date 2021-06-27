@@ -667,9 +667,9 @@ label BE007:
     MC "What do you mean?"
     BE "Like, you're going to get longer hair, I'm going to get bigger boobs. Is Alice just going to get a bigger stomach, or is it an all-over deal?"
     menu:
-        "I actually know the answer to that." if getAffection("BBW") >= 3:
+        "I actually know the answer to that." if getAffection("WG") >= 3:
             jump BE007_c1
-        "I actually know the answer to that. (disabled)" if getAffection("BBW") < 3:
+        "I actually know the answer to that. (disabled)" if getAffection("WG") < 3:
             pass
         "I'm not really sure.":
             jump BE007_c2
@@ -679,7 +679,7 @@ label BE007:
 label BE007_c1:
     MC "I actually know the answer to that."
     show BE surprised
-    play music BBW
+    play music WG
     BE "Oh?"
     MC "Yeah, I've talked to Alice a couple of times. I don't want to give out too much if she hasn't said anything herself, but, it's more the second option."
     MC "She's not going to end up with a big gut. I mean, well, that'll be part of it naturally, but it's not the focus."
@@ -2943,95 +2943,95 @@ label BE022:
     $setProgress("BE", "BE023")
     "After the last school lunch bell rang for the day, I walked down to the cafeteria, to look for a snack. There were a wide variety of quick eats to grab and I was feeling pretty peckish."
     show BE happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     BE "Oh, hey, Kei-chan. Come over here!"
     "Near the vending machine section of the cafeteria, Honoka was seated at a table with Alice across from her. The table looked quite cluttered, and caught my attention."
     MC "Yeah, sure."
     "I took a seat next to Honoka and looked at Alice's spread."
     MC "Hey, Honoka. What's going on?"
     BE "I'm helping Alice-chan do some sort of experiment."
-    BBW "'Assessment' would be a more accurate way of phrasing it."
-    BBW "I realize that vending machines are a valid alternative to the regular lunch line, but surely not every item in them is worth the space or cost."
+    WG "'Assessment' would be a more accurate way of phrasing it."
+    WG "I realize that vending machines are a valid alternative to the regular lunch line, but surely not every item in them is worth the space or cost."
     if isEventCleared("PRG002"):
-        BBW "If I recall, Hotsure-san, you're aware that Kodama-san brings me snacks. I've been taking notes on what I eat."
-    show BBW happy
-    BBW "For a possible future project, I'm asking Inoue-san to test a variety of snacks from the machine, to see which have merit."
+        WG "If I recall, Hotsure-san, you're aware that Kodama-san brings me snacks. I've been taking notes on what I eat."
+    show WG happy
+    WG "For a possible future project, I'm asking Inoue-san to test a variety of snacks from the machine, to see which have merit."
     BE "I'm the sampler!"
-    show BBW neutral
-    BBW "A third opinion would be helpful here. Hotsure-san, would you care to assist as well?"
-    BBW "I do not intend to eat all of these myself. Especially not if they are below par. I can portion them out and you are welcome to whatever you like."
+    show WG neutral
+    WG "A third opinion would be helpful here. Hotsure-san, would you care to assist as well?"
+    WG "I do not intend to eat all of these myself. Especially not if they are below par. I can portion them out and you are welcome to whatever you like."
     MC "I don't know. It's not exactly a healthy meal, is it?"
     BE "It means we get dinner for free, Kei-chan."
     MC "I'm in."
     "Alice's setup was quite in-depth. Just at a glance, I saw twenty or so snacks laid out before Alice. Cakes, candy bars, and chips of various kinds laid before her."
-    show BBW happy
-    BBW "Now, here..."
+    show WG happy
+    WG "Now, here..."
     "Alice pulled out two extra pencils, and ripped two pieces of paper off of her notepad, then handed them over."
-    BBW "I simply want your opinion on this. I'll be regarding it in more detail."
-    BBW "But I simply want a rank of 1 to 3. 1 for you would not eat this normally. 2 for you would eat it willingly if offered, or free. 3 for you would pay money to eat it. Understood?"
+    WG "I simply want your opinion on this. I'll be regarding it in more detail."
+    WG "But I simply want a rank of 1 to 3. 1 for you would not eat this normally. 2 for you would eat it willingly if offered, or free. 3 for you would pay money to eat it. Understood?"
     BE "Oh yeah, got it. This'll be fun!"
     MC "Sure, I understand. Just our personal preference?"
-    show BBW neutral
-    BBW "Exactly."
-    show BBW happy
-    BBW "Let's start with this pastry. This one intrigues me; chocolate and raspberry filling in the middle is not a common vending product."
+    show WG neutral
+    WG "Exactly."
+    show WG happy
+    WG "Let's start with this pastry. This one intrigues me; chocolate and raspberry filling in the middle is not a common vending product."
     BE "Ooh it sure isn't. Gimme."
     "Alice swiftly took a knife and sliced the pastry into three sections, taking one for herself and handing the other two to me and Honoka."
-    show BBW neutral
-    BBW "Hmm..."
+    show WG neutral
+    WG "Hmm..."
     "Alice took a bite of her pastry and closed her eyes, holding the rest of the section in her hand as she chewed."
     "Honoka on the other hand, had already consumed her chunk of pastry."
     BE "Mm. That's good. I didn't have a lot of filling in mine, though."
     MC "Me either, but the bit I had was good."
     "Honoka and I looked at Alice's piece and saw the slightly-red chocolate oozed from the center. Poor distribution of chocolate, clearly."
-    show BBW happy
-    BBW "The filling is surprisingly creamy, and doesn't affect the interior of the pastry to the extent that it becomes gummy. The outside is fairly crisp but I don't believe that's due to any stale state of the pastry..."
+    show WG happy
+    WG "The filling is surprisingly creamy, and doesn't affect the interior of the pastry to the extent that it becomes gummy. The outside is fairly crisp but I don't believe that's due to any stale state of the pastry..."
     MC "I think I'd give that a 2..."
     "I scribbled down my note as Honoka did the same. Alice took another bite to further mull over her decision. Her eyes were still closed."
     "Out of the corner of my eye I noticed Honoka snicker as she grabbed a candy bar from the far end of the pile. She quickly snuck it into her cleavage, making sure to place it so deep that there was no trace."
     "She placed her index finger up to her mouth as she looked at me, and winked. I rolled my eyes as Alice finished her bite, and wiped her mouth with a napkin."
-    show BBW neutral
-    BBW "Next, these crisps."
+    show WG neutral
+    WG "Next, these crisps."
     "Again, Alice parsed out a bag of chips between the three of us. Honoka scarfed hers down fairly quickly while I took my time. As did Alice."
     show BE neutral
     BE "Hm, yeah. These crisps are really... crispy."
     "As Honoka spoke, she once again reached down the table and grabbed one of Alice's chosen products, stuffing it down her shirt. I had no idea what her plan was."
-    BBW "Hm. A delicate texture but it might be over-encumbered with too much seasoning, which overpowers the potato flavor."
+    WG "Hm. A delicate texture but it might be over-encumbered with too much seasoning, which overpowers the potato flavor."
     "Alice went through the rest of the items on her list, writing down her long notes while Honoka and I went through our numerical scores. Every once in a while, Honoka continued to add another item to the growing collection of food in her cleavage."
     "I was surprised how much she had inside, and that Alice hadn't noticed yet."
-    BBW "Now we'll move on to..."
-    show BBW sad at Transform(xzoom=-1)
-    BBW "Wait."
-    show BBW angry at Transform(xzoom=1)
-    BBW "Where... are the fruit gums?"
+    WG "Now we'll move on to..."
+    show WG sad at Transform(xzoom=-1)
+    WG "Wait."
+    show WG angry at Transform(xzoom=1)
+    WG "Where... are the fruit gums?"
     show BE happy
     BE "Hm?"
-    BBW "The fruit gums. A small pack of gummy candies in a selection of flavors. It was next on the list. I had them in the set, and they are not here."
+    WG "The fruit gums. A small pack of gummy candies in a selection of flavors. It was next on the list. I had them in the set, and they are not here."
     show BE surprised
     BE "Oh no. Are you sure you actually got them?"
-    BBW "I'm positive."
-    show BBW neutral at Transform(xzoom=-1)
-    BBW "Well, we'll move on to the pocky until the fruit gums decide to make themselves present..."
-    show BBW neutral at Transform(xzoom=1)
-    BBW "..."
-    show BBW angry
-    BBW "These are missing as well."
+    WG "I'm positive."
+    show WG neutral at Transform(xzoom=-1)
+    WG "Well, we'll move on to the pocky until the fruit gums decide to make themselves present..."
+    show WG neutral at Transform(xzoom=1)
+    WG "..."
+    show WG angry
+    WG "These are missing as well."
     "I cast a look at Honoka, who continued to play coy."
     MC "Well, we've already done a lot. I think we're okay for now, right?"
-    show BBW neutral
-    BBW "Not at all. The entire point of this was to purchase them all at once, to judge the freshness when removed from the machine. This invalidates their future judging if I can't locate them."
+    show WG neutral
+    WG "Not at all. The entire point of this was to purchase them all at once, to judge the freshness when removed from the machine. This invalidates their future judging if I can't locate them."
     MC "It's okay, Alice, I'm sure they're here."
-    show BBW angry
-    BBW "They clearly are not."
+    show WG angry
+    WG "They clearly are not."
     BE "Yeah! Where else could they be, Kei-chan? They just vanished!"
     menu:
         "You've been hiding them in your cleavage, Honoka.":
             jump BE022_c1_1
         "I don't know, we'll just have to help with this experiment again later?":
             jump BE022_c1_2
-        "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("BBW") > 6:
+        "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("WG") > 6:
             jump BE022_c1_3
-        "(Convince Honoka to come clean) (disabled)" if getAffection("BE") <= 6 or getAffection("BBW") <=6:
+        "(Convince Honoka to come clean) (disabled)" if getAffection("BE") <= 6 or getAffection("WG") <=6:
             pass
         "(Say nothing)":
             jump BE022_c1_4
@@ -3040,8 +3040,8 @@ label BE022_c1_1:
     MC "You've been hiding them in your cleavage, Honoka."
     show BE surprised
     BE "Wh-What? Nooooo I haven't."
-    show BBW angry
-    BBW "Inoue-san, if this is indeed true, release them immediately."
+    show WG angry
+    WG "Inoue-san, if this is indeed true, release them immediately."
     show BE neutral
     BE "I don't know what you're talking about!"
     show BE angry
@@ -3052,13 +3052,13 @@ label BE022_c1_1:
     show BE neutral
     BE "Uh... oops."
     "Alice rubbed the bridge of her nose with her fingers."
-    $setAffection("BBW", 1)
-    BBW "Inoue-san, if you would be so kind as to remove all those items immediately, we can conclude this test. Those cookies first, please."
+    $setAffection("WG", 1)
+    WG "Inoue-san, if you would be so kind as to remove all those items immediately, we can conclude this test. Those cookies first, please."
     show BE sad
     BE "Eh-heh..."
     "Honoka blushed as she pulled treat after treat out of her bosom. The cookies first, which Alice quickly snatched and examined."
     "Despite their location moments ago, she found three cookies in the bag that weren't broken and handed them out. She refused to let Honoka's shenanigans deter her."
-    BBW "I can only hope the quality of these have not been diminished due to your... boobery, Inoue-san."
+    WG "I can only hope the quality of these have not been diminished due to your... boobery, Inoue-san."
     show BE angry
     BE "Hey, if anything, that would make them taste better! Right, Kei-chan?"
     MC "It's not like you touched the cookies, Honoka. But, crushed cookies are... less good than un-crushed cookies."
@@ -3066,48 +3066,48 @@ label BE022_c1_1:
     BE "Gasp! Oh Kei-chan!"
     show BE sad
     BE "To think you'd prefer a cookie held in a warm, soft hand, than in my heaving, full breast!"
-    show BBW neutral
-    BBW "Inoue-san. Please end your nonsense."
+    show WG neutral
+    WG "Inoue-san. Please end your nonsense."
     "Alice pat down her lips with a napkin."
-    BBW "And please remove the rest of the snacks. "
+    WG "And please remove the rest of the snacks. "
     show BE surprised
     BE "That was all of them!"
-    BBW "..."
+    WG "..."
     MC "..."
     show BE neutral
     BE "..."
     show BE unique
     BE "Okay, yeah, here."
     "Honoka reached back into her cleavage and pulled out a bottle of soda, then placed it on the table."
-    show BBW surprised
-    BBW "That... was not part of my selection, Inoue-san."
+    show WG surprised
+    WG "That... was not part of my selection, Inoue-san."
     show BE surprised
     BE "Oh, right."
     show BE happy at Transform(xzoom=-1)
     BE "I had that from earlier."
     show BE happy at Transform(xzoom=1)
     BE "Sorry. That's all of it, then."
-    show BBW happy
-    BBW "Well. Then. We can finish this test. If you are free of any further urges to distract us."
+    show WG happy
+    WG "Well. Then. We can finish this test. If you are free of any further urges to distract us."
     show BE sad
     BE "I aaaam..."
-    BBW "Good!"
+    WG "Good!"
     "Alice took a deep breath and resumed portioning out the snacks. Honoka continued eating her snacks for a while, judging them accordingly. It wasn't until we neared the end that Alice asked the question that deserved to be asked."
-    show BBW neutral
-    BBW "May I ask why you thought it necessary to hide some of the snacks?"
+    show WG neutral
+    WG "May I ask why you thought it necessary to hide some of the snacks?"
     BE "Um. Honestly, I thought if we got to do this again, it would just be fun. I don't spend that much time with you!"
-    show BBW surprised
-    BBW "You, huh?"
+    show WG surprised
+    WG "You, huh?"
     show BE happy
     BE "Mm-hm. I mean, the free snacks are nice, for sure. But, hey, it's something fun to do with one of my classmates. And Kei-chan too. I like that. Don't you?"
-    show BBW neutral
-    BBW "Oh. Well."
-    show BBW happy
-    BBW "I thought I had mentioned there would be more experiments like this. There are more treats in those vending machines, after all."
+    show WG neutral
+    WG "Oh. Well."
+    show WG happy
+    WG "I thought I had mentioned there would be more experiments like this. There are more treats in those vending machines, after all."
     show BE neutral
     BE "Oh! You mean..."
-    show BBW happy
-    BBW "Yes, Inoue-san, I was planning on calling you forward to do more of this. It would help to have the same palette each time."
+    show WG happy
+    WG "Yes, Inoue-san, I was planning on calling you forward to do more of this. It would help to have the same palette each time."
     show BE happy
     BE "Well gosh, I guess I should have paid better attention, then!"
     MC "Yeah, you probably should have."
@@ -3115,18 +3115,18 @@ label BE022_c1_1:
     MC "Still. As... entertaining as it is. Maybe don't hide other people's things in your boobs."
     show BE neutral
     BE "Gah, it's so tempting, though."
-    show BBW neutral
+    show WG neutral
     "Alice and I sighed."
-    show BBW happy
-    BBW "I suppose now that we're finished I should look at your scores. I... Inoue-san, did you give everything a 3?"
+    show WG happy
+    WG "I suppose now that we're finished I should look at your scores. I... Inoue-san, did you give everything a 3?"
     show BE happy
     BE "Yeah. It was all so good."
     "Alice suddenly leaned forward and slumped her head into her hands."
-    show BBW sad
-    BBW "There may have been a flaw in my thinking process."
+    show WG sad
+    WG "There may have been a flaw in my thinking process."
     MC "Er, you still have mine."
-    show BBW neutral
-    BBW "Yes. Thank you for that, Hotsure-san. It's very much appreciated. I'll put this to good use."
+    show WG neutral
+    WG "Yes. Thank you for that, Hotsure-san. It's very much appreciated. I'll put this to good use."
     show BE happy
     BE "And my results too, right?"
     "I saw Alice physically struggle with how to answer her."
@@ -3134,13 +3134,13 @@ label BE022_c1_1:
     MC "But you lose points for hiding stuff in your cleavage."
     show BE sad
     BE "Dang it."
-    BBW "Thank you, Hotsure-san."
+    WG "Thank you, Hotsure-san."
     show BE happy
     BE "Yeah, thanks, Kei-chan, food is always better with more people."
     BE "Here, Kei-chan and I will help clean up."
-    show BBW happy
-    BBW "Thank you. I'll just peruse your scores a bit more."
-    hide BBW with dissolve
+    show WG happy
+    WG "Thank you. I'll just peruse your scores a bit more."
+    hide WG with dissolve
     hide BE with dissolve
     "Honoka and I grabbed the bevy of wrappers and brought them over to the bins to toss them out. As we left the cafeteria, Honoka nudged my ribs with her elbow."
     MC "Ow."
@@ -3160,59 +3160,59 @@ label BE022_c1_1:
 
 label BE022_c1_2:
     MC "I don't know, we'll just have to help with this experiment again later?"
-    show BBW angry
-    BBW "No no no. That won't do. If you're judging things, they have to be on equal terms."
+    show WG angry
+    WG "No no no. That won't do. If you're judging things, they have to be on equal terms."
     show BE neutral
     $setAffection("BE", 1)
     BE "Does that really work with vending machine goods? I don't think everything in there was packaged on the same day."
-    show BBW surprised
-    BBW "Why... had I not thought of that?"
+    show WG surprised
+    WG "Why... had I not thought of that?"
     show BE happy
     BE "I mean, with how many students we have here, it's possible they're restocked pretty regularly."
     MC "Honoka has a good point. I've seen some sections of the machine that go empty pretty regularly, because they're pretty popular."
     BE "Right! But some of that seems to sit there for ages. I've seen a vending machine once where, no kidding, twenty of the slots were for diet cola. What's the point! If you're on a diet you're not getting crap from a vending machine."
-    show BBW neutral
-    BBW "You make some fair points. But then, what else could I do in this situation?"
+    show WG neutral
+    WG "You make some fair points. But then, what else could I do in this situation?"
     MC "The idea is to see what we'd rank each snack, right?"
-    BBW "That's correct."
+    WG "That's correct."
     MC "Then, maybe the best thing to do would be, something where we try them from a convenience store, or supermarket. A vending machine doesn't guarantee as much freshness."
-    BBW "But my idea behind this is, what are your thoughts on the product as they're presented in the vending machine."
+    WG "But my idea behind this is, what are your thoughts on the product as they're presented in the vending machine."
     show BE neutral
     BE "Hm. Well, if your plan is to like, have your own vending machine in the future, then wouldn't you make sure it was stocked full of items everyone liked?"
-    show BBW happy
-    BBW "Of course."
+    show WG happy
+    WG "Of course."
     show BE happy
     BE "Then, you wouldn't need to worry about freshness. Ideally, it would be getting stocked so often that the turnaround time is really low."
-    show BBW happy
-    BBW "A large amount of stock would be beneficial, then. It would be good to maybe limit the machine to the most popular snacks out there, and then work from there to stock multiples of each."
+    show WG happy
+    WG "A large amount of stock would be beneficial, then. It would be good to maybe limit the machine to the most popular snacks out there, and then work from there to stock multiples of each."
     BE "Like how there's usually a few for sodas, because those go quickly. But even more for water."
-    show BBW neutral
-    BBW "Precisely. This is a better way of thinking. Hm."
-    show BBW happy
-    BBW "Thank you. This might be helpful. I suppose, even with that said, there's still these to test out, and there's no sense letting them go to waste. Shall we finish?"
+    show WG neutral
+    WG "Precisely. This is a better way of thinking. Hm."
+    show WG happy
+    WG "Thank you. This might be helpful. I suppose, even with that said, there's still these to test out, and there's no sense letting them go to waste. Shall we finish?"
     BE "Yes, please!"
     MC "I'm game."
     "As Alice portioned out the snacks that Honoka hadn't stuffed away, I looked to Honoka to see if she was going to come clean. She just snatched the first bit of food placed in front of her. So, the answer was, 'no she wasn't'."
     "After we'd eaten what we could, Alice collected our scores."
-    BBW "Once again, thank you for this information. It may change how I value your scores, but it's important to have feedback like this either way."
+    WG "Once again, thank you for this information. It may change how I value your scores, but it's important to have feedback like this either way."
     MC "Well, we're happy to help. Do call us over again if you need more help."
     BE "Absolutely. This was fun. I never knew you had such a refined palate, Alice-chan."
-    show BBW neutral
-    BBW "Oh, I don't think it's all that impressive."
+    show WG neutral
+    WG "Oh, I don't think it's all that impressive."
     show BE surprised
     BE "It totally is! I never heard potato chips described in such a beautiful way before."
-    show BBW aroused
-    BBW "Oh... thank you."
+    show WG aroused
+    WG "Oh... thank you."
     show BE happy
     BE "Hehe, you're welcome. Yes, please let me know if you need me to eat more food. I'll do it."
-    show BBW happy
-    BBW "I'm sure you will."
+    show WG happy
+    WG "I'm sure you will."
     MC "Here, I'll help take care of all this."
     "I gestured to the wrappers and empty containers."
-    show BBW neutral
-    BBW "Thank you, Hotsure-san. I shall see you in class tomorrow, then?"
+    show WG neutral
+    WG "Thank you, Hotsure-san. I shall see you in class tomorrow, then?"
     MC "Yeah. Have a good night."
-    hide BBW with dissolve
+    hide WG with dissolve
     hide BE with dissolve
     "I nudged Honoka to have her help me grab the food wrappers and we brought them over to the trash cans."
     MC "So, what was the deal with hiding her food?"
@@ -3243,81 +3243,81 @@ label BE022_c1_3:
     show BE neutral
     BE "Ahem. Um, sorry, Alice-chan."
     "Honoka reached into her breast pocket and slowly pulled the snacks out, placing them on the table in front of Alice."
-    show BBW neutral
-    BBW "Inoue-san, I'm going to assume you had a reason for doing this?"
+    show WG neutral
+    WG "Inoue-san, I'm going to assume you had a reason for doing this?"
     BE "Partly just to see if I could, honestly?"
-    BBW "And the other reason would be?"
+    WG "And the other reason would be?"
     BE "Well, I guess to eat them later."
-    show BBW sad
-    BBW "But the point of this test is to eat them now."
+    show WG sad
+    WG "But the point of this test is to eat them now."
     BE "Right, but, I guess I don't understand that?"
-    show BBW angry
-    BBW "How could you say that now when I explained it earlier?"
+    show WG angry
+    WG "How could you say that now when I explained it earlier?"
     MC "H-Hold on a second. Honoka, what's the problem with this?"
     BE "Vending machines aren't really thought of as 'fresh' to begin with. If it's stale, that's a problem for sure. But it's not like steak. A candy bar doesn't taste different on a day to day basis."
     MC "Alice, does that make sense?"
-    show BBW neutral
-    BBW "I suppose it does. But if you had an issue with my setup you could have simply explained it to me, rather than try to scurry food away and assume I would change my idea."
+    show WG neutral
+    WG "I suppose it does. But if you had an issue with my setup you could have simply explained it to me, rather than try to scurry food away and assume I would change my idea."
     MC "That's fair. Honoka, you understand that it was a mistake to do that?"
     show BE happy
     BE "I do. I'm sorry, Alice-chan. I didn't think that it would upset you that much but, that was still stupid."
-    BBW "I appreciate and accept your apology, Inoue-san. Is this all of the snacks we had left to test?"
+    WG "I appreciate and accept your apology, Inoue-san. Is this all of the snacks we had left to test?"
     BE "It is!"
-    show BBW happy
-    BBW "Well then, I shall clearly need to re-evaluate what I had planned. But if you had more ideas, I'd like to hear them. We can continue this as well."
+    show WG happy
+    WG "Well then, I shall clearly need to re-evaluate what I had planned. But if you had more ideas, I'd like to hear them. We can continue this as well."
     show BE neutral
     BE "I am still hungry."
     MC "I am too. Glad to see this didn't get into an argument."
-    $setAffection("BBW", 2)
-    show BBW neutral
-    BBW "You should know me better, Hotsure-san. I'm a rational person."
+    $setAffection("WG", 2)
+    show WG neutral
+    WG "You should know me better, Hotsure-san. I'm a rational person."
     $setAffection("BE", 1)
     show BE surprised
     BE "And arguments are stupid anyway. We can just eat our problems away!"
     MC "Not what I would have said, but I suppose that's a fair point."
-    show BBW happy
-    BBW "I'll admit, I do not tend to go for these kind of snacks. But in good company, they're much more enjoyable."
+    show WG happy
+    WG "I'll admit, I do not tend to go for these kind of snacks. But in good company, they're much more enjoyable."
     show BE happy
     BE "Exactly. It's like, if everyone always had to eat together with someone, everybody would be friends with everybody else."
-    BBW "Er, I can't say I necessarily understand that sentiment, but it's a nice one all the same."
+    WG "Er, I can't say I necessarily understand that sentiment, but it's a nice one all the same."
     BE "Oh my gosh, hey, Alice-chan. Have you ever fed someone?"
-    show BBW neutral
-    BBW "I'm feeding you right now, aren't I?"
+    show WG neutral
+    WG "I'm feeding you right now, aren't I?"
     show BE neutral
     BE "No no, I meant, like, feeding someone hand-to-mouth."
-    BBW "No. Why would I have done that before?"
+    WG "No. Why would I have done that before?"
     show BE surprised
     BE "What?! You've gotta try, it's so great. It feels fantastic. Watch."
     "Honoka grabbed my shoulder and flipped me towards her."
     show BE happy
     BE "Open wide, Kei-chan!"
     MC "Hono-mph!"
-    show BBW surprised
+    show WG surprised
     "Before I could respond, Honoka grabbed one of her fruit snacks and fed it to me, keeping her finger on my mouth until I swallowed."
     MC "U-um, thanks."
     BE "See! It's so fun!"
-    BBW "I... see."
-    show BBW neutral
-    BBW "May I try it as well?"
+    WG "I... see."
+    show WG neutral
+    WG "May I try it as well?"
     BE "Go for it."
-    show BBW aroused
-    BBW "A-Ahem, Hotsure-san, if you wouldn't mind... "
+    show WG aroused
+    WG "A-Ahem, Hotsure-san, if you wouldn't mind... "
     "Honoka's eyebrows raised as she looked at me, and turned my body back towards Alice. I leaned forward and opened my mouth as she fed me the gummy snack."
     MC "Ah, th-thank you."
-    BBW "You're... quite welcome..."
+    WG "You're... quite welcome..."
     show BE happy
     BE "Okay Alice-chan, my turn!"
-    show BBW surprised
-    BBW "Hm?!"
+    show WG surprised
+    WG "Hm?!"
     "Honoka leaned all the way forward out of her seat, and plopped another gummy snack in Alice's mouth, giggling all the while."
-    show BBW happy
-    BBW "Um, th-thank you. That was quite good."
+    show WG happy
+    WG "Um, th-thank you. That was quite good."
     BE "Hehe!"
     "Honoka stayed there. Her butt was higher up than the back of the chair as she stayed leant forward, her mouth open."
     show BE neutral
     BE "Ah."
-    show BBW surprised
-    BBW "Oh! Um. Yes. Here."
+    show WG surprised
+    WG "Oh! Um. Yes. Here."
     "Alice hesitantly placed a gummy snack in Honoka's mouth, who snatched it like a snapping turtle."
     show BE happy
     BE "Mm. Yum."
@@ -3328,14 +3328,14 @@ label BE022_c1_3:
     show BE happy
     BE "Mm, so tasty, Kei-chan."
     MC "Alice?"
-    show BBW surprised
-    BBW "I-If only to be fair..."
+    show WG surprised
+    WG "I-If only to be fair..."
     "Alice leaned forward and opened her mouth, blushing heavily as I slipped the gummy onto her tongue."
-    show BBW happy
-    BBW "I-It is quite delicious. Thank you."
+    show WG happy
+    WG "I-It is quite delicious. Thank you."
     MC "You're welcome."
-    show BBW neutral
-    BBW "I, ah, think I must be going. I have some things to think over."
+    show WG neutral
+    WG "I, ah, think I must be going. I have some things to think over."
     show BE neutral
     BE "I better get goin' too."
     MC "Yeah, me three."
@@ -3343,9 +3343,9 @@ label BE022_c1_3:
     show BE happy
     BE "Thanks for inviting me, Alice-chan. This was fun!"
     MC "Yeah, I had a fun time. Was certainly interesting."
-    show BBW happy
-    BBW "Well, thank you for your cooperation. I will remember to keep you informed on what I have planned. Have a pleasant evening, you two."
-    hide BBW with dissolve
+    show WG happy
+    WG "Well, thank you for your cooperation. I will remember to keep you informed on what I have planned. Have a pleasant evening, you two."
+    hide WG with dissolve
     "Alice turned to leave as Honoka waved goodbye."
     BE "I'm off too. Bye Kei-chan!"
     hide BE with dissolve
@@ -3355,44 +3355,44 @@ label BE022_c1_3:
 label BE022_c1_4:
     "I clammed up. I didn't want to call Honoka out. But Alice was looking more frustrated by the minute. She even looked under the table and didn't find anything."
     "I hoped Honoka would use that chance to empty her breast pocket, but she just sat there."
-    show BBW angry
-    BBW "Neither of you have any idea where the remaining snacks went?"
+    show WG angry
+    WG "Neither of you have any idea where the remaining snacks went?"
     show BE neutral
     BE "Nope!"
-    BBW "I am not stupid. It is just the three of us here. There is clearly some foul play at work and I do not appreciate it!"
+    WG "I am not stupid. It is just the three of us here. There is clearly some foul play at work and I do not appreciate it!"
     play sound Thud
-    show BBW angry with vpunch
+    show WG angry with vpunch
     "Alice suddenly slammed her hand on the table and stood up, tossing the used wrappers up in the air from the impact of the punch."
-    BBW "Tell me now. What is going on?"
+    WG "Tell me now. What is going on?"
     "Honoka hurriedly held up her hands."
     show BE sad
     BE "O-Okay, sorry, just hang on a moment."
     "Honoka reached into her cleavage and began pulling out the snacks she had pilfered from Alice's stash. With each item extracted, Alice's face grew more red, until Honoka stopped."
     "Alice's eyes looked over all the goodies that Honoka had hidden away, and exhaled a breath she had been holding in."
-    show BBW neutral at Transform(xzoom=-1)
-    BBW "Inoue-san, I do not appreciate this."
+    show WG neutral at Transform(xzoom=-1)
+    WG "Inoue-san, I do not appreciate this."
     BE "S-Sorry, Alice-chan, I thought it would be funny."
-    show BBW angry
-    BBW "I repeat. Inoue-san, this is in every way; unfunny, unappreciated, and unwanted. Do you have anything to say about this, Hotsure-san?"
+    show WG angry
+    WG "I repeat. Inoue-san, this is in every way; unfunny, unappreciated, and unwanted. Do you have anything to say about this, Hotsure-san?"
     MC "Well, um. Honoka didn't mean anything by it. It was just meant to be a joke."
-    $setAffection("BBW", -1)
-    show BBW angry at Transform(xzoom=1)
-    BBW "You saw I was getting upset, and that did nothing to change your mind?"
+    $setAffection("WG", -1)
+    show WG angry at Transform(xzoom=1)
+    WG "You saw I was getting upset, and that did nothing to change your mind?"
     MC "I'm, I'm sorry. That was clearly a mistake."
-    if getAffection("BBW") > 4:
-        BBW "Really, Hotsure-san, I thought you were a better judge of character..."
+    if getAffection("WG") > 4:
+        WG "Really, Hotsure-san, I thought you were a better judge of character..."
     else:
-        BBW "Thank you for your unique, valuable input. Clearly you were a boon to this test."
+        WG "Thank you for your unique, valuable input. Clearly you were a boon to this test."
     BE "H-Hey. Kei-chan didn't mean anything, he meant less than me. Even if he tried to get me to stop, there's no guarantee I would have..."
-    show BBW sad
-    BBW "The fact he did not even try is indictment enough."
+    show WG sad
+    WG "The fact he did not even try is indictment enough."
     MC "I, I really am sorry, though."
     "Alice was still standing up. She grabbed her backpack, and with one sweep, pulled most of the treats into the bag. She left the ones that Honoka had hidden originally."
-    show BBW angry
-    BBW "Never mind. If you wanted them so much, you can just have them."
+    show WG angry
+    WG "Never mind. If you wanted them so much, you can just have them."
     "Alice turned around and began walking out of the cafeteria."
     MC "Wait, please, let us make it up to you!"
-    hide BBW with dissolve
+    hide WG with dissolve
     show BE at center with dissolve
     "Honoka opened her mouth to speak, but nothing came out. Alice left the room in a huff. I slumped back down in my seat and looked over at Honoka."
     BE "I feel... like a real jerk."
@@ -3407,7 +3407,7 @@ label BE022_c1_4:
     MC "You're probably right."
     show BE sad
     BE "I'm sorry, Kei-chan. I didn't mean to get Alice-chan upset at you."
-    if getAffection("BBW") > 4:
+    if getAffection("WG") > 4:
         BE "I really hope I didn't screw up your relationship with her. You two seem close."
     else:
         BE "She's always been hard to get friendly with, I hope this doesn't wreck everything."

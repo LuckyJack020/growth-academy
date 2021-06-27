@@ -908,7 +908,7 @@ label FMG011:
     MC "How old is this place, anyway?"
     "A few fellow students had the same idea I had, taking shelter from the downpour, but I realized there was someone who had already been in here before the rain started."
     "To my surprise, Akira was playing on one of the machines..."
-    if isEventCleared("BBW009"):
+    if isEventCleared("WG009"):
         "...And she looked focused. I walked up to get a better view of the game."
         show FMG neutral at Position (xpos=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
         FMG "Hey. Can't talk now. Killing."
@@ -930,60 +930,60 @@ label FMG011:
         MC "Well, you never know. She could be good at this kinda stuff."
         FMG "Any overweight, smug overachiever can play and be good, but it takes skill and practice to be great at something."
         "Oh great, history was repeating itself. This time, the one behind her was-"
-        show BBW neutral at Position (xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+        show WG neutral at Position (xpos=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
         FMG "You don't just sit around to be great at something, you gotta go out there and do it yourself."
         "Alice, and she looked angry. I'd say I was surprised this was happening again... but I wasn't."
         FMG "But no, people want to do it the easy way, by sitting down, getting fat, and having everything given to them. Not all of us were born with a silver spoon in our mouths."
         MC "Ak-"
         FMG "And by the way, I know you're behind me, Alice, I can hear you breathing."
         MCT "At least your hearing's better than Alice's, I guess..."
-        show BBW angry
-        BBW "Well at least you have some skills of perception."
-        show BBW haughty
-        BBW "I'm just curious how it is someone who 'sits around all day' trounced you so thoroughly at the pool."
+        show WG angry
+        WG "Well at least you have some skills of perception."
+        show WG haughty
+        WG "I'm just curious how it is someone who 'sits around all day' trounced you so thoroughly at the pool."
         show FMG angry at Transform(xzoom=1)
         FMG "What the heck does 'trounced' mean?"
-        BBW "Beaten. Clobbered."
+        WG "Beaten. Clobbered."
         FMG "T-Then why didn't you- you know what, I want a rematch- and I pick this time."
-        BBW "Certainly, assuming you have any interests besides athletics?"
+        WG "Certainly, assuming you have any interests besides athletics?"
         FMG "...Do you not see that I'm standing next to an arcade game?"
-        BBW "Oh! I didn't know you were actually playing."
-        BBW "I thought you were just waving a toy gun around, going 'Pew pew!'"
+        WG "Oh! I didn't know you were actually playing."
+        WG "I thought you were just waving a toy gun around, going 'Pew pew!'"
         MCT "Oh no, Alice... now you've done it."
         FMG "...You... grab the gun and put your cash in so we can start."
         "Akira was visibly shaking with rage while Alice got into position. All I could do was watch this happen while Akira grabbed the second player gun."
         show FMG angry at Position(yalign=1.0), Transform(xzoom=-1)
-        show BBW haughty at Position (xpos=0.55) with dissolve
+        show WG haughty at Position (xpos=0.55) with dissolve
         FMG "I'm going to take a wild guess and say you want to be player one. Doesn't matter in the long run, though."
-        BBW "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped."
+        WG "{i}Au contraire{/i}, you can be whichever you want. I wouldn't want you handicapped."
         show FMG neutral
         FMG "Quit speaking... whatever language that is and let's do this."
-        show BBW neutral
+        show WG neutral
         "Thus began a duel for honor, pride, and some other third thing. About ten minutes into it Akira was already ahead of Alice by ten thousand points, mostly because Alice was shooting normal civilians before realizing she lost points for doing that."
         "Both were too focused on the game to say anything to the other, but I could tell that Akira was feeling smug about her lead, while Alice was both confused and annoyed."
         "An hour later, and a lot of both their coins, they managed to get to the final boss, and once it was dead, the scoreboard tallied up the results, with Alice's score first."
-        show BBW neutral at Position (xpos=0.40) with dissolve
+        show WG neutral at Position (xpos=0.40) with dissolve
         "Player One Score: 21521"
         show FMG neutral
         FMG "Huh. Not bad..."
-        BBW "Why of course I would do great, only someone like me can reach a score lik-"
+        WG "Why of course I would do great, only someone like me can reach a score lik-"
         "Player Two Score: 74681 !NEW RECORD!"
-        show BBW angry
-        BBW "-What!?"
+        show WG angry
+        WG "-What!?"
         show FMG happy at Transform(xzoom=1)
         FMG "...For a beginner, that is!"
         "Alice looked at her gun for a moment before putting it back, her face stony."
-        show BBW neutral
-        BBW "It should be expected that I would not master this the first time."
-        BBW "So congratulations. You have defeated a newcomer."
+        show WG neutral
+        WG "It should be expected that I would not master this the first time."
+        WG "So congratulations. You have defeated a newcomer."
         show FMG sad
         FMG "...I'm just trying to show how I felt at the swim dare and you can't even let me have that..."
-        BBW "..."
-        BBW "That wasn't your first time swimming, though, was it?"
+        WG "..."
+        WG "That wasn't your first time swimming, though, was it?"
         FMG "No, and that's why it hurt when you acted all high and mighty, especially when you didn't realize I was behind you."
-        BBW "..."
+        WG "..."
         "Alice didn't reply for a moment, and I thought she was about to say something vicious or snide. Instead she exhaled slowly, pinching the bridge of her nose."
-        BBW "I was unaware it would hurt you. I apologize if you were offended."
+        WG "I was unaware it would hurt you. I apologize if you were offended."
         MCT "That's not really an apology..."
         FMG "Whatever, just promise me one thing..."
         "As if a burning passion was ignited, Akira stared down Alice with fire in her eyes..."
@@ -995,13 +995,13 @@ label FMG011:
         "That was all Akira said before leaving me, Alice, and the machine in the room..."
         MC "Alice, are you okay?"
         "She took a second to clear her throat before responding."
-        BBW "S-strange girl..."
-        BBW "She's upset about losing at swimming, but she's more concerned about her gaming skills?"
+        WG "S-strange girl..."
+        WG "She's upset about losing at swimming, but she's more concerned about her gaming skills?"
         MC "To be fair, you did say something about waving the gun around, going 'Pew pew'. She takes her hobby seriously, I guess."
-        BBW "Apparently..."
+        WG "Apparently..."
         MC "Well, thanks for kinda apologizing. I'm heading back to my room. See you at class."
-        show BBW happy
-        BBW "Indeed. Good day, Hotsure-san."
+        show WG happy
+        WG "Indeed. Good day, Hotsure-san."
     else:
         "...Though she looked rather casual, like she was really just playing it for fun, not trying to beat it or anything. I walked up to get a better look of the game."
         show FMG neutral at Position (xpos=0.75) with dissolve
@@ -1020,35 +1020,35 @@ label FMG011:
         FMG "Nah, unless I've got a VERY good reason, I'm not that competitive. Speaking of competitiveness, look who just came in..."
         "By the doorway was a slightly soaked Alice, looking annoyed."
         FMG "Hey Alice! How's it going?"
-        show BBW angry at Position(xpos=0.25) with dissolve
-        BBW "Irritatingly. The weather report said nothing of showers, and... Look at me."
+        show WG angry at Position(xpos=0.25) with dissolve
+        WG "Irritatingly. The weather report said nothing of showers, and... Look at me."
         FMG "Oh yeah, Kei said something about rain but I wasn't paying attention. At least you found shelter before it really got bad."
-        show BBW neutral
-        BBW "(Sigh) Any damage to my hair or clothing is bad enough, but I won't bemoan a fair sprinkling."
+        show WG neutral
+        WG "(Sigh) Any damage to my hair or clothing is bad enough, but I won't bemoan a fair sprinkling."
         "Akira turned to Alice and  pointed her thumb at the arcade game behind her."
         FMG "Well, wanna take your anger out on these zombies?"
         "Alice's expression remained like she was smelling something slightly unpleasant, but she walked up to Akira and took the proffered gun."
-        BBW "Let me guess, I point and shoot anything that moves?"
+        WG "Let me guess, I point and shoot anything that moves?"
         FMG "Well, yeah, if you wanna lose points by killing innocent people. It's to keep the game balanced. Focus on the things that look like they shouldn't be alive. Oh and watch your ammo, you're a sitting duck if you can't shoot. To reloa-"
         "She didn't have a chance to explain how to reload as Alice had already started, once Alice had emptied her clip she continued firing to no avail, with increasing irritation."
         "Eventually the zombies got to her, the screen turning red with blood splotches until the words 'Game Over' came up."
         show FMG sad
         FMG "...Um, you shoot off the screen... to reload. I'm sorry."
-        BBW "I see now."
+        WG "I see now."
         "She put in another 100 yen coin. Her game didn't improve by much, but she did manage to avoid getting mobbed again. Come the boss, though..."
-        BBW "And this is what people do for fun?"
+        WG "And this is what people do for fun?"
         FMG "Eh, it's not for everyone, I know. I've been playing arcade games most of my life. But yeah, if this isn't doing anything for you, you can stop playing."
-        BBW "Not so fast. I'm not going to let some cheap toy beat me." #had suggestion
+        WG "Not so fast. I'm not going to let some cheap toy beat me." #had suggestion
         FMG "Um actually, they cost a lot of cash to produce, you gotta program, animate the people, it's basically like a movie..."
         "This cycle went on for about an hour, Alice making incrementally more progress with each bit of cash, but eventually I realized the rain stopped."
         MC "Hey, the rain stopped, I should head back to my room."
         FMG "Yeah, Hey... Alice, the rain stopped, are you going to stop?"
-        show BBW angry
-        BBW "Not just yet. One more go at that cyber-brain and I should have it beat."
+        show WG angry
+        WG "Not just yet. One more go at that cyber-brain and I should have it beat."
         show FMG sad at Position(yalign=1.0), Transform(xzoom=-1.0)
         FMG "{i}(Yeah I don't think she realizes that's the third boss and there's three more to go...){/i}"
         FMG "Well, see you at class tomorrow, don't play for too long."
-        BBW "I'll be fine."
+        WG "I'll be fine."
         "We left Alice there, playing that game for who knows how long. As for Akira and I, we exchanged goodbyes and went our separate ways."
     jump daymenu
 
@@ -2988,7 +2988,7 @@ label FMG023_c2:
         MC "Yeah. So, sometimes it's closed to the public. When it is open though, I bet you'd love it."
         FMG "Hell yeah! Imagine me in one of those competitions, that'd be cooool."
         MC "Matter of fact, I {i}can{/i} imagine that."
-        if isEventCleared("BBW009"):
+        if isEventCleared("WG009"):
             $setVar("FMG023bored", getVar("FMG023bored") - 1)
             MC "Never mind certain setbacks, of course."
             show FMG angry
@@ -3082,7 +3082,7 @@ label FMG023_c2:
     FMG "Well, at least you saw it through."
     MC "Yep. Super important to see things through. Yep..."
     "I looked ahead again. There was still a giant customer in the way but, just slightly, beyond my ability to describe, the truck seemed larger and more detailed than about twenty minutes ago."
-    if isEventCleared("FMGBBW001"):
+    if isEventCleared("FMGWG001"):
         "Across the way I noticed the Kazomazumi bakery, fairly busy itself."
         MC "There's Kazomazumi. I guess that means we're about halfway there."
         FMG "Oh yeah, so it is. Nice place, I went there with Alice once."
@@ -4633,59 +4633,59 @@ label FMG033:
    "And even being surrounded by ladies who were getting improbably muscular or tall or whatever, didn't elicit so much as a second glance."
    "So when I entered the class and saw a very heavy woman arguing with a very muscled woman, my only thought was how the morning's peace was going to be broken by their bickering."
    play music Tension
-   show BBW angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-   BBW "I do not care to repeat myself, and asking again is not going to result in a different answer."
+   show WG angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+   WG "I do not care to repeat myself, and asking again is not going to result in a different answer."
    show FMG angry at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
    FMG "At least give me a reason. Would it kill you to not act like a selfish-"
-   if getAffection("BBW") >= getAffection("FMG"):
-       jump FMG033_BBW
+   if getAffection("WG") >= getAffection("FMG"):
+       jump FMG033_WG
    else:
        jump FMG033_FMG
 
-label FMG033_BBW:
+label FMG033_WG:
    "Akira was cut off when Alice noticed my arrival and turned to me."
-   BBW "Keisuke, can you talk some sense into this woman? I am quickly running out of patience."
+   WG "Keisuke, can you talk some sense into this woman? I am quickly running out of patience."
    MC "What's the issue?"
    FMG "I just want-"
-   BBW "Ms. Mizutani asked if she could borrow a certain garment of mine, I said no, and she will not let matter drop."
+   WG "Ms. Mizutani asked if she could borrow a certain garment of mine, I said no, and she will not let matter drop."
    FMG "You won't even explain why, though."
-   BBW "Must I? Must I justify the decisions I make concerning my own property?"
+   WG "Must I? Must I justify the decisions I make concerning my own property?"
    menu:
        "You can at least give her a reason. Saying 'No' just because comes across as rather petty.":
-           jump FMG033_BBW_1
+           jump FMG033_WG_1
        "If she said 'No,' Akira, you should just accept it. She doesn't have to give a reason.":
-           jump FMG033_BBW_2
+           jump FMG033_WG_2
 
-label FMG033_BBW_1:
+label FMG033_WG_1:
    stop music
    FMG "Yeah Alice, it's common courtesy."
    play music Peaceful
-   show BBW neutral
-   BBW "Very well."
-   BBW "The fact is, the article in question was tailored to me specifically. To my proportions."
-   BBW "Just because it is... 'expansive' does not mean it's suitable for any plus-sized woman."
-   BBW "You don't have the right figure for it, Mizutani-san."
+   show WG neutral
+   WG "Very well."
+   WG "The fact is, the article in question was tailored to me specifically. To my proportions."
+   WG "Just because it is... 'expansive' does not mean it's suitable for any plus-sized woman."
+   WG "You don't have the right figure for it, Mizutani-san."
    show FMG sad
    FMG "Oh..."
    FMG "I hadn't thought about that."
-   show BBW happy
-   BBW "If you would like something appropriate for this special occasion (whatever it may be), I would happy to procure a dress better-suited to you."
-   BBW "My business caters to men and women of all dimensions."
+   show WG happy
+   WG "If you would like something appropriate for this special occasion (whatever it may be), I would happy to procure a dress better-suited to you."
+   WG "My business caters to men and women of all dimensions."
    FMG "No. I don't have money for that. That's why I needed to borrow something."
    FMG "It's OK. I'll figure something else out... hopefully."
    hide FMG with dissolve
-   show BBW happy at center with dissolve
-   $setAffection("BBW", 1)
+   show WG happy at center with dissolve
+   $setAffection("WG", 1)
    $setAffection("FMG", 1)
-   BBW "Thank you for your help, Keisuke."
+   WG "Thank you for your help, Keisuke."
    MC "It was really nothing. People like it when you give them a reason for rejection."
    MC "You can't just say 'Because I said so.' I think any parent could tell you that never works."
    "She raised an eyebrow."
-   BBW "Really? I never had trouble acquiescing to my parent's authority."
+   WG "Really? I never had trouble acquiescing to my parent's authority."
    "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I bit my tongue and found my seat."
    jump daymenu
 
-label FMG033_BBW_2:
+label FMG033_WG_2:
    "Akira didn't get any angrier, but having her glare at me instead of Alice was chilling."
    FMG "Of course you'd take her side."
    $setAffection("FMG", -1)
@@ -4693,11 +4693,11 @@ label FMG033_BBW_2:
    FMG "Fine! Forget I even asked."
    play music Peaceful
    hide FMG with dissolve
-   show BBW neutral at center with dissolve
+   show WG neutral at center with dissolve
    "Alice clucked her tongue."
-   BBW "Most unbecoming. Rejection is an inevitability in life, but disappointment only comes when we open the door to it."
+   WG "Most unbecoming. Rejection is an inevitability in life, but disappointment only comes when we open the door to it."
    MC "Maybe you should have just told her why you turned her down."
-   BBW "Why? I already said I don't have to justify myself."
+   WG "Why? I already said I don't have to justify myself."
    MC "Yeah, but-"
    "And that's when Tashi-sensei walked in, so I shut my mouth and found my seat."
    MCT "Maybe I shouldn't have taken Alice's side so readily."
@@ -4709,9 +4709,9 @@ label FMG033_FMG:
    FMG "I just asked Queen Belly-"
    #[Crash SFX]
    #[Screen shakes]
-   BBW "Grrrr!"
+   WG "Grrrr!"
    FMG "...if I could borrow a dress of hers for our date, and she won't even give me a reason why not!"
-   BBW "As if I'm going to help you out after insulting me like that."
+   WG "As if I'm going to help you out after insulting me like that."
    menu:
        "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.":
            jump FMG033_FMG_1
@@ -4719,65 +4719,65 @@ label FMG033_FMG:
            jump FMG033_FMG_2
 
 label FMG033_FMG_1:
-   if getAffection("BBW") < 6:
+   if getAffection("WG") < 6:
        MC "Alice-"
-       BBW "Nikumaru-san. Let's observe propriety while we're in class."
+       WG "Nikumaru-san. Let's observe propriety while we're in class."
        MC "OK. Nikumaru-san, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
    else:
        MC "Alice, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
    stop music
    "She exhaled slowly."
    play music Peaceful
-   show BBW neutral
-   $setAffection("BBW", 1)
-   BBW "Very well."
-   BBW "If you must know, I do not believe the dress would flatter Mizutani-san."
-   BBW "It was designed for me personally, for my proportions."
+   show WG neutral
+   $setAffection("WG", 1)
+   WG "Very well."
+   WG "If you must know, I do not believe the dress would flatter Mizutani-san."
+   WG "It was designed for me personally, for my proportions."
    jump FMG033_FMG_after
 
 label FMG033_FMG_2:
    MC "Saying 'I don't wanna' sounds childish."
    MC "You could at least say why you don't want to."
-   $setAffection("BBW", -1)
+   $setAffection("WG", -1)
    stop music
-   BBW "You want to know why not?"
+   WG "You want to know why not?"
    play music Peaceful
-   BBW "It's because Mizutani is much too bulky to wear the dress."
+   WG "It's because Mizutani is much too bulky to wear the dress."
    FMG "Hey! You're no stringbean yourself."
-   BBW "My body may have a little extra here and there-"
+   WG "My body may have a little extra here and there-"
    FMG "A lot of extra everywhere, you mean."
-   BBW "-which is why I've had my clothes specially made to suit me."
+   WG "-which is why I've had my clothes specially made to suit me."
    jump FMG033_FMG_after
 
 label FMG033_FMG_after:
    show FMG neutral
    FMG "Yeah, so it should be big enough to fit me."
-   show BBW angry
-   BBW "Grrr..."
-   show BBW neutral
-   BBW "That is not how clothing works. Not everything is designed to be stretchy like tracksuits or yoga pants."
+   show WG angry
+   WG "Grrr..."
+   show WG neutral
+   WG "That is not how clothing works. Not everything is designed to be stretchy like tracksuits or yoga pants."
    FMG "Couldn't I at least try it on? It can't be that tight on you, otherwise you'd rip-"
-   show BBW angry
-   BBW "Grrr..."
+   show WG angry
+   WG "Grrr..."
    MC "I think what Akira means to say is that your outfits probably have a certain amount of give."
    MC "And with a little work the dress can be adapted to suit her. We could find video tutorials online to help with that."
-   BBW "You can't just take 'No' for an answer."
+   WG "You can't just take 'No' for an answer."
    FMG "Hey, I don't work for you."
    MC "If there's a solution to your objection it's worth trying to work around it."
-   show BBW neutral
-   BBW "Why don't you just buy a dress that would fit you? I sell clothing for men and women of all dimensions."
+   show WG neutral
+   WG "Why don't you just buy a dress that would fit you? I sell clothing for men and women of all dimensions."
    show FMG sad
    FMG "I don't have money for that."
    MC "Think of it as a test-drive. Akira could buy something else later once she sees how fashionable your inventory is."
    show FMG happy
    FMG "Yeah! Think of it like a test-drive."
-   if getAffection("BBW") < 6:
-       BBW "Well-played, Hotsure-san."
+   if getAffection("WG") < 6:
+       WG "Well-played, Hotsure-san."
    else:
-       show BBW happy
-       BBW "Well-played, Keisuke."
-   show BBW neutral
-   BBW "Very well. Consider this a free trial of the wares the Nikumaru Outlet Direct has for offer."
+       show WG happy
+       WG "Well-played, Keisuke."
+   show WG neutral
+   WG "Very well. Consider this a free trial of the wares the Nikumaru Outlet Direct has for offer."
    FMG "Sweet, thanks Alice!"
    "Tashi-sensei showed up then, so we tabled the conversation as class started."
    stop music
@@ -4788,33 +4788,33 @@ label FMG033_FMG_after:
    scene Cafeteria with fade
    "But when I went to the cafeteria for dinner I found out things hadn't worked out like I'd hoped."
    play music Tension
-   show BBW angry with dissolve
-   BBW "Hotsure-san!"
+   show WG angry with dissolve
+   WG "Hotsure-san!"
    MC "Gah!"
    MC "What?"
-   show BBW angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+   show WG angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
    show FMG sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-   BBW "My custom-made Vantelli dress. Ruined!"
+   WG "My custom-made Vantelli dress. Ruined!"
    FMG "I said I was sorry."
    MC "I take it the dress didn't fit?"
-   BBW "No, it fit. I made it work."
-   BBW "But your girlfriend apparently thought that she could compete in a decathlon while wearing a designer evening gown."
+   WG "No, it fit. I made it work."
+   WG "But your girlfriend apparently thought that she could compete in a decathlon while wearing a designer evening gown."
    show FMG angry
    FMG "Hey! All I did was bend over."
-   BBW "You can't make any sudden movements while wearing a dress like that!"
-   BBW "You have to move elegantly. Slow, sweeping motions."
+   WG "You can't make any sudden movements while wearing a dress like that!"
+   WG "You have to move elegantly. Slow, sweeping motions."
    show FMG sad
    FMG "Well I know that now."
    MCT "I was almost expecting her to say Akira flexed her arms and the sleeves exploded."
    MC "I'm sure Akira will make it up to you."
-   BBW "She'd better."
+   WG "She'd better."
    show FMG angry
    FMG "I will! I'll pay you back!"
    show FMG sad
    FMG "Somehow..."
-   BBW "We'll see."
-   BBW "Now if you'll excuse me, I need to get my seamstress on the phone. The dress may still be salvageable."
-   hide BBW with dissolve
+   WG "We'll see."
+   WG "Now if you'll excuse me, I need to get my seamstress on the phone. The dress may still be salvageable."
+   hide WG with dissolve
    show FMG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
    FMG "She didn't have to take it so personally."
    MC "Well, it sounds like it was an expensive dress."
@@ -7750,7 +7750,7 @@ label FMG051:
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
 
-label FMGBBW001:
+label FMGWG001:
     scene black with fade
     "..."
     RM "Hey, wake up!"
@@ -7804,42 +7804,42 @@ label FMGBBW001:
     hide RM with dissolve
     "Daichi moved to the side to get a look for himself. To both of our surprise the person who was coming down the stairs..."
     show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1) with dissolve
-    show BBW neutral at Position(xpos=0.75) with dissolve
+    show WG neutral at Position(xpos=0.75) with dissolve
     RM "Alice Nikumaru? She's without the assistance of Miss Kodama. That alone raises more red flags."
     MC "Be quiet, I think they're about to talk..."
-    BBW "Alright Mizutani, what was so important that you had me wake up so early?"
+    WG "Alright Mizutani, what was so important that you had me wake up so early?"
     FMG "Hey Alice, the reason I wanted to talk to you..."
     show FMG sad
     FMG "I wanna get to know you better!"
-    show BBW surprised
-    BBW "Um... sorry?"
+    show WG surprised
+    WG "Um... sorry?"
     FMG "I know we don't really see eye to eye, but I generally want to get along with you."
-    show BBW neutral
-    BBW "Well, I appreciate the desire. However, I fail to see much common ground between us."
+    show WG neutral
+    WG "Well, I appreciate the desire. However, I fail to see much common ground between us."
     FMG "That's the thing, you don't know. I really wanna give this a chance."
-    show BBW sad
-    BBW "...I'm still not seeing-"
+    show WG sad
+    WG "...I'm still not seeing-"
     show FMG neutral
     FMG "Tell you what, do you know Kazomazumi Bakery on Genki Street?"
-    show BBW neutral
-    BBW "I do. Why?"
+    show WG neutral
+    WG "I do. Why?"
     FMG "If you're willing to get to know each other, I'll treat you to some cupcakes there."
-    show BBW happy
-    BBW "This does sound like it could be beneficial. I accept your invitation."
+    show WG happy
+    WG "This does sound like it could be beneficial. I accept your invitation."
     show FMG happy
     FMG "Great! How does twelve sound?"
-    show BBW haughty
-    BBW "Well, they're rather small, I'd want a half-dozen at least, so that would-"
+    show WG haughty
+    WG "Well, they're rather small, I'd want a half-dozen at least, so that would-"
     show FMG surprised
     FMG "Wha? No, I mean twelve o'clock."
-    show BBW surprised
-    BBW "O-Oh um... *ahem*."
-    show BBW neutral
-    BBW "T-That is customarily during my study time, but I can fit you into my schedule. Until then, I bid you adieu."
+    show WG surprised
+    WG "O-Oh um... *ahem*."
+    show WG neutral
+    WG "T-That is customarily during my study time, but I can fit you into my schedule. Until then, I bid you adieu."
     show FMG happy
     FMG "Sweet, see you then."
     hide FMG with dissolve
-    hide BBW with dissolve
+    hide WG with dissolve
     "Once both of them were done, they went their own ways."
     MC "Huh, that's something."
     show RM neutral with dissolve
@@ -7904,86 +7904,86 @@ label FMGBBW001:
     RM "Zip it."
     hide RM with dissolve
     show FMG neutral at Position(xpos=0.20), Transform(xzoom=-1) with dissolve
-    show BBW neutral at Position(xpos=0.75) with dissolve
+    show WG neutral at Position(xpos=0.75) with dissolve
     "Both Akira and Alice entered the building. They were a few feet away from us but enough to not recognize us."
     Cashier "Oh hi, is it just you two?"
     FMG "Yes ma'am, just me and my friend."
     Cashier "Well, what would you two students like?"
     FMG "Let's see, we'll have a box of cupcakes, please."
-    BBW "I'll have coffee. Cream and sugar."
+    WG "I'll have coffee. Cream and sugar."
     FMG "Yeah, me too."
-    BBW "Oh? You take your coffee sweet as well?"
+    WG "Oh? You take your coffee sweet as well?"
     FMG "Sure, so long as it's not that water downed sludge the school cafeteria serves that is."
-    show BBW happy
-    BBW "I couldn't have said it better. Is it too much to ask for a nice cup of coffee to start the day off? With the budget the school has, you would think they could put some aside for an espresso machine."
+    show WG happy
+    WG "I couldn't have said it better. Is it too much to ask for a nice cup of coffee to start the day off? With the budget the school has, you would think they could put some aside for an espresso machine."
     FMG "Wouldn't be surprised, their chefs aren't exactly winning any awards for niceness."
-    BBW "That is the truth. It's nice to meet someone who gets it, Mizutani-san."
+    WG "That is the truth. It's nice to meet someone who gets it, Mizutani-san."
     FMG "Yeah, but you can just call me Akira, no need for formalities."
-    show BBW neutral
-    BBW "Very well, now shall we take a seat?"
+    show WG neutral
+    WG "Very well, now shall we take a seat?"
     "They got their food and sat at the table behind us. Once there, Daichi did a zipping motion around his lips and slumped farther into the table; I followed suit and we listened in while pretending to read the menus."
-    BBW "All right Akira, how are we doing this?"
+    WG "All right Akira, how are we doing this?"
     FMG "I ask a question, and you ask a question."
-    BBW "Seems almost like a game. Very well. You brought me here, you may begin."
+    WG "Seems almost like a game. Very well. You brought me here, you may begin."
     FMG "First, what's your last name?"
-    BBW "Nikumaru. For my question: how long have you not remembered my last name?"
+    WG "Nikumaru. For my question: how long have you not remembered my last name?"
     FMG "Um... Since the beginning of school. I'm sorry it's just for the life of me I couldn't remember your last name."
-    BBW "It's fine. I prefer going by my first name anyway."
+    WG "It's fine. I prefer going by my first name anyway."
     FMG "Right, my next question is, have you ever gone to America?"
-    BBW "Yes. My mother is from there and I did most of my schooling there."
+    WG "Yes. My mother is from there and I did most of my schooling there."
     FMG "That's cool!"
-    BBW "Indeed. Where do you see yourself in five years?"
+    WG "Indeed. Where do you see yourself in five years?"
     FMG "I dunno."
-    show BBW surprised
-    BBW "..."
-    BBW "T-that's it? You don't know?"
+    show WG surprised
+    WG "..."
+    WG "T-that's it? You don't know?"
     FMG "Well, how can any of us expect how the future will turn out? I like, think about the future as much as the next girl, but you gotta put in some room for the unknown."
-    show BBW neutral
-    BBW "I can understand that rationale, but leaving so much to chance..."
+    show WG neutral
+    WG "I can understand that rationale, but leaving so much to chance..."
     "Alice shook her head, flummoxed."
     FMG "Now for this next question, I want you to be honest."
     FMG "Is it true that Americans deep fry soda and junk food?"
-    BBW "Wha-? Where did you hear that?"
+    WG "Wha-? Where did you hear that?"
     FMG "The Internet."
-    show BBW sad
-    BBW "...Just to be clear, I do not partake of that kind of food. But yes, some places deep fry soda, Tronkos, chocolate bars..."
+    show WG sad
+    WG "...Just to be clear, I do not partake of that kind of food. But yes, some places deep fry soda, Tronkos, chocolate bars..."
     FMG "Huh. No offense, but Americans seem kinda weird."
-    show BBW neutral
-    BBW "It is a large country and there are many... eccentrics on the fringes."
+    show WG neutral
+    WG "It is a large country and there are many... eccentrics on the fringes."
     "I heard Akira sipping her coffee as she processed the idea of deep-fried candy."
     FMG "Man, the coffee is a hell of a lot better here than the stuff at school."
-    BBW "Mmm, yes. Not my preferred choice, but it's one of the more palatable substitute brands I've had since coming here."
-    BBW "Now, why did you pick cupcakes?"
+    WG "Mmm, yes. Not my preferred choice, but it's one of the more palatable substitute brands I've had since coming here."
+    WG "Now, why did you pick cupcakes?"
     "Akira put down the cupcake she was eating and looked down at it before answering."
     FMG "Whenever I was really down, my mom would always bake cupcakes. She would always do it all by hand, and it made it that much more tasty."
     FMG "Even now, I always go eat a cupcake when I'm sad; I do it to remind myself that whenever something bad happens, there will always be something to make life a little bit sweeter."
-    BBW "I had you pegged as the brash tomboy who didn't have a care."
-    BBW "What do you have to be sad about, if it is not too personal?"
+    WG "I had you pegged as the brash tomboy who didn't have a care."
+    WG "What do you have to be sad about, if it is not too personal?"
     FMG "Sorry, I couldn't tell you, besides it's my turn."
     FMG "Why did you agree to come join me?"
-    show BBW sad
-    BBW "I came to see..."
-    show BBW happy
+    show WG sad
+    WG "I came to see..."
+    show WG happy
     extend " If you were a fellow connoisseur of cupcakes."
     "It seemed like she wanted to say something else at first, but Akira didn't seem to notice."
     FMG "Heh, yeah I am."
     FMG "Oh, it's almost 12:30, we should probably get going."
-    show BBW neutral
-    BBW "You go on ahead. I'll handle the check."
+    show WG neutral
+    WG "You go on ahead. I'll handle the check."
     show FMG surprised
     FMG "What? But I-"
-    show BBW happy
-    BBW "Please, this is nothing to me. Consider it a show of my enjoyment of this get-together."
+    show WG happy
+    WG "Please, this is nothing to me. Consider it a show of my enjoyment of this get-together."
     show FMG happy
     FMG "All right, I hope we can do this again. Later."
-    BBW "As do I. Pleasant travels, Mizutani-san."
+    WG "As do I. Pleasant travels, Mizutani-san."
     hide FMG with dissolve
-    show BBW sad
-    BBW "*Sigh* You had a potential sale there Nikumaru, until that personal matter cropped up."
-    show BBW neutral
-    BBW "No way to foresee that, though. Next time, keep the mood light."
+    show WG sad
+    WG "*Sigh* You had a potential sale there Nikumaru, until that personal matter cropped up."
+    show WG neutral
+    WG "No way to foresee that, though. Next time, keep the mood light."
     "After talking to herself, she paid the bill and left."
-    hide BBW with dissolve
+    hide WG with dissolve
     show RM angry at center with dissolve
     RM "Wait... That's it? We've been here for 20 minutes listening to girl talk, and they didn't say a single thing about the article, let alone this stupid bakery!?"
     MC "Huh, maybe it really was just a coincidence."
@@ -8033,7 +8033,7 @@ label FMGBBW001:
     MC "Nah..."
     jump daymenu
 
-label FMGBBW002:
+label FMGWG002:
     scene Hallway with fade
     play music Busy
     MCT "Wait for meeee she says...I won't be long she said."
@@ -8082,16 +8082,16 @@ label FMGBBW002:
     "We followed the sound of Alice's voice and as we turned the corner, Akira's cheerful expression quickly turned sour."
     show FMG angry-2
     show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral-2 with dissolve
+    show WG neutral-2 with dissolve
     FMG "Be careful Alice, you can't trust that one."
     Natsuko "I have a name, I suggest you use it."
-    show BBW stern
-    BBW "Can you two control yourselves for once? I don't have time to listen to you two verbally spar."
+    show WG stern
+    WG "Can you two control yourselves for once? I don't have time to listen to you two verbally spar."
     Natsuko "Hmph, you always have to show up and ruin everything don't you Akira?"
     show FMG angry
     FMG "Put a sock in it, before I do it for you."
-    show BBW stern
-    BBW "Enough. Akira can you step aside, I'm here to deliver Natsuko's order and after that, I'll take my leave."
+    show WG stern
+    WG "Enough. Akira can you step aside, I'm here to deliver Natsuko's order and after that, I'll take my leave."
     show FMG sad
     FMG "Fine..."
     Natsuko "Thank you again, Alice. This is everything I could've hoped for, it's incredibly challenging to find a dress that fits my proportions."
@@ -8102,31 +8102,31 @@ label FMGBBW002:
     Natsuko "Choose your next words very very carefully."
     show FMG surprised
     FMG "Ooooohhhh scary."
-    show BBW angry
-    BBW  "That's enough!"
-    show BBW stern
-    BBW "Now you listen- both of you. I don't know what it is that makes two of the most good-natured and easy-going people I've met at this school turn into vulgar beasts in the presence of each other..."
-    BBW "...but I am disappointed that neither of you can manage to keep your composure and act like proper adults towards each other in the presence of company. Quite frankly it's embarrassing to be seen around you two when a fight breaks out."
+    show WG angry
+    WG  "That's enough!"
+    show WG stern
+    WG "Now you listen- both of you. I don't know what it is that makes two of the most good-natured and easy-going people I've met at this school turn into vulgar beasts in the presence of each other..."
+    WG "...but I am disappointed that neither of you can manage to keep your composure and act like proper adults towards each other in the presence of company. Quite frankly it's embarrassing to be seen around you two when a fight breaks out."
     MCT "Natsuko and Akira began to look down and to the side away from each other, slowly absorbing Alice's chastising."
-    BBW "Whatever possesses you two to do so is none of my business, but what I will not stand for is listening to the two of you denigrate each other for the sake of petty one-upmanship at a time in all our lives where everyone here is the most insecure they've ever been about the changes going on with themselves."
+    WG "Whatever possesses you two to do so is none of my business, but what I will not stand for is listening to the two of you denigrate each other for the sake of petty one-upmanship at a time in all our lives where everyone here is the most insecure they've ever been about the changes going on with themselves."
     show FMG sad
     show Natsuko disappointed
-    BBW "One of the reasons I started my custom clothing business was that I knew it could be just one thing that could help students here feel normal again. They could forget about the world not built for them for a bit, just by having something fashionable that actually fit them again."
-    BBW "It doesn't feel too nice when people make fun of your body shape does it? Look at me. You two don't even know the half of it, and still, neither of you can take it. Do you see me fly off the handle every time I hear some snide, inconsiderate remark within an earshot? I suggest you both grow beyond such childish ways."
+    WG "One of the reasons I started my custom clothing business was that I knew it could be just one thing that could help students here feel normal again. They could forget about the world not built for them for a bit, just by having something fashionable that actually fit them again."
+    WG "It doesn't feel too nice when people make fun of your body shape does it? Look at me. You two don't even know the half of it, and still, neither of you can take it. Do you see me fly off the handle every time I hear some snide, inconsiderate remark within an earshot? I suggest you both grow beyond such childish ways."
     FMG "I guess I didn't think of it that way."
     Natsuko "That's because you don't think about anything."
     show FMG angry-2
-    show BBW angry
-    BBW "Zip it!"
-    show BBW stern
-    BBW "I'm done here. What you two do together in your own time with each other is your own business, but if you two can't control yourselves around other people instead of continuing these petty squabbles, you can forget about asking me for help to find clothes that actually fit."
+    show WG angry
+    WG "Zip it!"
+    show WG stern
+    WG "I'm done here. What you two do together in your own time with each other is your own business, but if you two can't control yourselves around other people instead of continuing these petty squabbles, you can forget about asking me for help to find clothes that actually fit."
     hide FMG with dissolve
     hide Natsuko with dissolve
-    show BBW neutral
-    BBW "Good luck with those two Keisuke. If you ever need help with them let me know."
+    show WG neutral
+    WG "Good luck with those two Keisuke. If you ever need help with them let me know."
     MC "Ah-yeah will do. Thanks for your help, Alice."
     "With that Alice handed the dress back to Natsuko and left."
-    hide BBW with dissolve
+    hide WG with dissolve
     show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "If you ever insult my body again, I will bury you."
     show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
@@ -8161,24 +8161,24 @@ label FMGBBW002:
     FMG "Promise I won't."
     "Alice was quick to notice us as we approached. To be fair we aren't a hard couple to miss."
     show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "I hope you are in a better mood now, Mizutani-san."
+    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    WG "I hope you are in a better mood now, Mizutani-san."
     show FMG sad
     FMG "I am. That's actually why we were looking for you. I want to apologize for earlier."
     FMG "Natsuko brings out the worst in me. Even after I spoke with my mom about it, I still struggle to keep my cool."
-    show BBW neutral
-    BBW "That is unfortunate. I can try and speak with her if you'd like. She really is a different person when you aren't around, always willing to help anyone no matter what."
-    show BBW sad
-    BBW "Maybe I can find out why she acts like this. I hate seeing you two at each other's throats."
+    show WG neutral
+    WG "That is unfortunate. I can try and speak with her if you'd like. She really is a different person when you aren't around, always willing to help anyone no matter what."
+    show WG sad
+    WG "Maybe I can find out why she acts like this. I hate seeing you two at each other's throats."
     show FMG neutral
     FMG "I wouldn't worry about it. I don't see her changing her attitude anytime soon. Sorry to keep you from your umm...business stuff. Kei and I have to get back to the gym."
     MCT "Damn it. She never forgets."
-    show BBW happy
-    BBW "It was no bother. Thank you for taking the time to apologize and If you ever need help with clothes, I'll be happy to assist."
+    show WG happy
+    WG "It was no bother. Thank you for taking the time to apologize and If you ever need help with clothes, I'll be happy to assist."
     show FMG happy
     FMG "Heh, who knows maybe I'll be ripping out of my sleeves soon."
     "With that, we said our goodbyes and went our separate ways."
-    hide BBW with dissolve
+    hide WG with dissolve
     MC "That went better than I expected. So umm...about the workout for today-"
     show FMG happy at Position(xalign=0.5, yalign=1.0) with dissolve
     FMG "I had something else in mind."
