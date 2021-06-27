@@ -1262,8 +1262,6 @@ label FMG014_c1:
             jump FMG014_c1_1
         "Teach her yourself" if not getFlag("FMG014_testfail"):
             jump FMG014_c1_2
-        "Teach her yourself (disabled)" if getFlag("FMG014_testfail"):
-            pass
         "Don't do it":
             jump FMG014_c1_3
 
@@ -2332,8 +2330,6 @@ label FMG020:
     menu:
         "Ask her out" if getAffection("FMG") >= 10:
             jump FMG020_c1_1
-        "Ask her out(disabled)" if getAffection("FMG") < 10:
-            pass
         "Say nothing":
             jump FMG020_c1_2
 

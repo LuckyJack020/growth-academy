@@ -587,12 +587,8 @@ label WG005_menu:
     menu:
         "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?" if not getFlag("WG005_c1"):
             jump WG005_c1
-        "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact? (disabled)" if getFlag("WG005_c1"):
-            pass
         "What if you worked out? Burn those calories before they turn into fat." if not getFlag("WG005_c2"):
             jump WG005_c2
-        "What if you worked out? Burn those calories before they turn into fat. (disabled)" if getFlag("WG005_c2"):
-            pass
         "Maybe the only way is the hard way: try to eat healthier and eat less.":
             jump WG005_c3
 
@@ -1811,12 +1807,8 @@ label WG012_c1:
     menu:
         "About that name..." if not getFlag("WG012_c1_1"):
             jump WG012_c1_1
-        "About that name... (disabled)" if getFlag("WG012_c1_1"):
-            pass
         "Maybe we should just stop before we get into real trouble." if not getFlag("WG012_c1_2"):
             jump WG012_c1_2
-        "Maybe we should just stop before we get into real trouble. (disabled)" if getFlag("WG012_c1_2"):
-            pass
         "I'm all ears.":
             jump WG012_c1_3
 
@@ -6008,8 +6000,6 @@ label WG034_c1_1:
     if not getFlag("WG034_c1_2") and not getFlag("WG034_c1_3"):
         MCT "Still have enough to get a new outfit, if I want."
         menu:
-            "Get a haircut (disabled)":
-                pass
             "Get a nice suit.":
                 jump WG034_c1_2
             "Get a suit, but let's not break the bank.":
@@ -6043,15 +6033,11 @@ label WG034_c1_2:
         "You know what? Maybe I should check the department store instead." if not getFlag("WG034_c1_3"):
             MCT "I don't have to buy something at the first store I go to, do I?"
             jump WG034_c1_3
-        "You know what? Maybe I should check the department store instead. (disabled)" if getFlag("WG034_c1_3"):
-            pass
     if not getFlag("WG034_c1_1") and not getFlag("WG034_c1_3"):
         MCT "Still have enough to get a haircut. Or maybe there's an accessory I can find at the department store. Something to compliment the suit."
         menu:
             "Get a haircut.":
                 jump WG034_c1_1
-            "Get a nice suit. (disabled)":
-                pass
             "Get a suit, but let's not break the bank.":
                 jump WG034_c1_3
             "That's enough for today. I should get back to campus.":
@@ -6083,10 +6069,6 @@ label WG034_c1_3:
                     menu:
                         "Get a haircut.":
                             jump WG034_c1_1
-                        "Get a nice suit. (disabled)":
-                            pass
-                        "Get a suit, but let's not break the bank. (disabled)":
-                            pass
                         "That's enough for today. I should get back to campus.":
                             jump WG034_c1_after
                 else:
@@ -6112,10 +6094,6 @@ label WG034_c1_3:
                     menu:
                         "Get a haircut.":
                             jump WG034_c1_1
-                        "Get a nice suit. (disabled)":
-                            pass
-                        "Get a suit, but let's not break the bank. (disabled)":
-                            pass
                         "That's enough for today. I should get back to campus.":
                             jump WG034_c1_after
                 else:
@@ -14409,7 +14387,7 @@ label WG060:
     play sound Knock
     WG "Who is it?"
     MC "It’s Keisuke. Can I come in?"
-    WG "... Yes, please… come in."
+    WG "... Yes, please... come in."
     "Alice’s tone was conflicted, which made me think she both did and did not want me to come in. Nonetheless, I heard the latch unlock and I opened the door inside."
     scene WG dorm with fade
     show WG neutral with dissolve
@@ -14418,7 +14396,7 @@ label WG060:
     show WG neutral-2
     WG "That’s very nice of you Keisuke to check up on me like that."
     show WG worried
-    WG "But… I-I’m fine."
+    WG "But... I-I’m fine."
     "Clearly everything was not fine. In addition to her nervous expression, Alice didn’t look too well. She was a bit pale, almost as if she looked ill."
     MCT "Huh, maybe she really is sick. I guess that’s why she’s feeling a bit off..."
     stop music
@@ -14439,7 +14417,7 @@ label WG060:
     show WG doubt
     WG "Yes, I did."
     show WG sad
-    WG "...But it wasn’t nearly enough I’m afraid…"
+    WG "...But it wasn’t nearly enough I’m afraid..."
     MC "Alice, just tell me what’s going on. I don’t know if I can, but I promise I’ll do everything I can to help. Please tell me you aren’t intentionally starving yourself."
     WG "..."
     "Alice couldn’t even meet my eyes to answer that."
@@ -14447,31 +14425,31 @@ label WG060:
         MC "But why though? I thought we were past this the last time we talked about it?"
     else:
         MC "But why though?"
-    WG "I know it’s ridiculous, nonsensical even, to think I can somehow slow this process at this point, but part of me just…"
+    WG "I know it’s ridiculous, nonsensical even, to think I can somehow slow this process at this point, but part of me just..."
     MC "Please, Alice, don’t be so apprehensive. You can tell me anything. That’s why I came."
     show WG stern
     WG "Alright. Damn it all. I’ll admit it. Ever since yesterday in the kitchen with Sakura I’ve been jealous. I know it’s juvenile and petty, but I can’t shake the notion from my mind."
     show WG worried
     WG "I never even thought to worry about it before, but seeing you two together in the same setting was an entirely different story."
-    WG "I’m well aware of your preference by now for ‘ample’ physiques. I just…"
+    WG "I’m well aware of your preference by now for ‘ample’ physiques. I just..."
     MC "Whoah, if this is about—"
     WG "Please, let me finish Keisuke."
     show WG sad
     WG "I-I just felt so jealous of her. I wondered why my factor, if I had to have it at all, couldn’t have been more like hers? Would you care for me even more?"
     WG "Her form is much more in keeping with the classic Rubenesque ideal, while I’m steadily becoming this giant... orb."
-    WG "That, and I’m so much bigger than the other students with a weight gain factor…"
-    WG "I’m worried I’m becoming too big for you…"
+    WG "That, and I’m so much bigger than the other students with a weight gain factor..."
+    WG "I’m worried I’m becoming too big for you..."
     stop music
     MC "Pffftt- Hehaha!"
     play music MCGuitar
     show WG angry
     WG "Keisuke! I’m being serious here!"
-    MC "Ahem...erragh… Sorry, sorry. I know, Alice. And I really appreciate you opening up and being completely honest with me. But I couldn’t help myself! Especially at that last part. It’s just completely ridiculous!"
+    MC "Ahem...erragh... Sorry, sorry. I know, Alice. And I really appreciate you opening up and being completely honest with me. But I couldn’t help myself! Especially at that last part. It’s just completely ridiculous!"
     show WG doubt
     WG "I told you I was being serious!"
     MC "Yes, but I’m being serious too! Look, I’d be lying if I said Sakura isn’t attractive, but she doesn’t hold a candle to you Alice. It’s not even close!"
     show WG surprised-2
-    MC "And this idea that you might be too big for me… too big? I don’t even know what those words mean when they’re put next to each other."
+    MC "And this idea that you might be too big for me... too big? I don’t even know what those words mean when they’re put next to each other."
     show WG neutral
     "Alice couldn’t even suppress the urge to roll her eyes at that remark, but I could tell she was greatly relieved to hear me say it still."
     show WG neutral-2
@@ -14490,13 +14468,13 @@ label WG060:
     "Well, except for that matter."
     play music WG
     show WG worried
-    WG "Well, this has been rather embarrassing…"
+    WG "Well, this has been rather embarrassing..."
     MC "How so?"
     show doubt
     WG "How could it not be? You heard how loud—"
     MC "Yes. I did. No one else. It’s just me and you in your room. I know what you’re going through. I know why it’s happening, and I completely understand. What’s there to be embarrassed about?"
     show WG neutral-2
-    WG "Sigh…"
+    WG "Sigh..."
     "It was one of the rare occasions to hear a genuine sigh of relief from Alice, rather than her typical tone of exasperation."
     WG "You’re right. I know I don’t need to be so guarded when I’m around you. I know it, but it’s still hard for me sometimes. Please, continue to be patient."
     MC "Don’t worry. I will."
@@ -14530,7 +14508,7 @@ label WG060:
     "Before any further protest could be mustered, I shoved the desert into her open mouth as quickly as I could, while still being gentle."
     WG "Hphhmm!"
     show WG aroused
-    WG "Mmmmmm…"
+    WG "Mmmmmm..."
     "Her initial resistance had changed to a pleasant surprise, eventually yielding to euphoria."
     WG "Keisuke, that tastes amazing!"
     MC "Would you like more?"
@@ -14560,7 +14538,7 @@ label WG060:
     "Alice lunged forward with surprising quickness, unexpectedly smothering me with a jowelly smooch while her massive belly crashed into me as I began to sink into it with her embrace."
     "Holding this kiss, I could taste faint notes of custard and coffee, but the joy I felt from being able to bring Alice out of her sense of doubt,"
     "assuring her that she was all mine— it welled up inside me until my heart felt fit to burst."
-    WG "Mmmm…"
+    WG "Mmmm..."
     "Releasing our embrace Alice looked at me with her brilliant blue eyes, and her devilishly smug smile."
     show WG haughty
     WG "That was a nice appetizer, but I fear an inadequate amount of sustenance will only serve to arouse my appetite, rather than bed it back down."
@@ -14569,7 +14547,1090 @@ label WG060:
     MC "I would agree. No time like the present."
     jump daymenu
 
+label WG060S:
+    play music Rain
+    $setTime(TimeEnum.EVE)
+    if getFlag("WG059S_Lie"):
+        jump WG060S_LiePath
+    else:
+        jump WG060S_TruthPath
 
+label WG060S_LiePath:
+    scene Dorm Interior with fade
+    "The day had passed rather slowly for once. I couldn’t help but feel a heavy burden, despite the fact I had managed the previous day to avoid bringing disaster upon myself."
+    "It had been a full day since the talk with Sakura, and Alice had not even made herself present. No note, not even a text from her since then."
+    "It seemed fishy to me, but I felt confident enough I made the correct choice to allay suspicion."
+    "Still though, I was a bit on edge as to what the next text or conversation held for us."
+    "As the sun was setting, I was just finishing a shower when my phone lit up."
+    WGCell "<I’d like you to come over tonight. I have something I want to discuss.>"
+    "Shit! Despite my best efforts to deflect the issue, she knows!"
+    "Right? ... I mean, what else could it be about?"
+    "My mind was pulling in two directions: was she actually up for it or would this be the final test? I hoped against all hope that it was the former and not the latter."
+    "My anxiety did not subside, but my curiosity was through the roof. I headed over right away."
+    scene black with fade
+    $setTime(TimeEnum.NIGHT)
+    play sound Knock
+    stop music
+    "There was a moment of silence before I heard a muffled voice"
+    WG "It’s unlocked, come in."
+    MCT "Deep breaths man! If this leads to what I think it will, I'm never doubting our relationship again."
+    scene Dorm WG with fade
+    MC "Whoo..."
+    "With a deep breath, I stepped through the threshold."
+    "All lights save the ones in the kitchen area were off."
+    "Slightly stumbling my way in the dark, I continued to follow the sound of Alice’s voice. My eyes started to adjust, as a warm orange glow emanated from around the corner."
+    #play music requiem
+    "The shock I felt upon turning the corner was indescribable."
+    show WG neutral with dissolve
+    "Sat in front of me was Alice, comfortably lounging in her loveseat. What really stood out though was what she had donned for the evening."
+    "At first I assumed it to be a bathrobe, but as I got closer it looked more akin to a regal gown. Muted red pallets canvased across her corpulent body, stretched out by every single pound they were trying so desperately to contain."
+    "Though her belly had long since folded over into two separate fatty rolls, her gowns belt tie sat between them. Possibly Alice was unaware of the danger that posed, after all, if she even inhaled too hard... it could snap off very easily."
+    "Sitting atop her two levels of belly fat were the massive orbs of her breasts. From the looks of it, even she wasn’t able to coax them into the robe."
+    "As such, they rested outside, the only cloth between them and fresh air was the button down shirt Alice wore."
+    "The buttons themselves looked as if they fared no better than the tie, as each one looked strained, albeit still sturdy. One wonders just how much tensile force her entire ensemble was under."
+    show WG aroused
+    WG "I hope you don’t mind the rather unreserved clothing of mine."
+    MC "I...uh...umm...its uh...quite ok."
+    show WG haughty
+    WG "I knew I had a good feeling about this investment. Now I’m not the only one made of putty."
+    "Putty was a euphemism, I was melting like ice cream on a hot summer day at the sight of her sheer splendor."
+    "My mind, nearly turning to mush at this real life fantasy, suddenly snapped back to the present moment as I tried to remind myself to keep it together."
+    MCT "This could be a trap. Don’t be stupid now."
+    MC "Ahem- uh, Alice, just what exactly is going on here? What exactly did you have in mind for tonight?"
+    WG "That’s entirely up to you Keisuke. You see, I’m quite hungry. I didn’t have much free time today and unfortunately for me, I missed my last few meals."
+    WG "I wanted to gauge your interest in... assisting me with this predicament, shall we say."
+    MCT "Is this an offer or a trap?"
+    "I heard what she was saying, and I was seeing what I was seeing, but this felt surreal to me. Was this really happening?"
+    "I couldn’t make up my mind if this was the opportunity of a lifetime or the ultimate test of a man’s limits. But I had to decide!"
+    menu:
+        "Yes, more than anything!":
+            jump WG060S_Lie_C1_1
+        "No, this isn’t right.":
+            jump WG060S_Lie_C2_1
+
+label WG060S_Lie_C1_1:
+    $setProgress("WG", "WG061S")
+    MC "Yes, more than anything! I’d love to. You shouldn’t have to go without, not even for a second."
+    show WG happy
+    WG "Mm-hmm. That’s what I thought. Now, here’s what I need you to do."
+    "Alice proceeded to give me a detailed list of instructions as to where and how I should procure a stash of food sufficient for the task of quelling her appetite."
+    scene black with fade
+    pause 1
+    scene Cooking Classroom with fade
+    "These instructions directed me to the cooking club kitchen. Stepping into the club room, I was surprised to find Sakura there."
+    show Sakura neutral with dissolve
+    Sakura "Hello there stranger, what's the occasion for your visit?"
+    MC "Alice requested I grab a cart from the fridge here."
+    Sakura "Oh that thing, sure. I’ll bring it in a jiff."
+    "As she walked over to the fridge’s large door, I stole a glance or two at her rump again. The glance, while satisfying to see, didn’t help my fears, unfortunately."
+    "She soon reemerged with a cart draped in a sheet. Though one detail about this cart piqued my curiosity, it was about twice as large as a normal cart."
+    Sakura "Glad Alice offered to help us with these, we were worried it would all go to waste."
+    MC "What is it?"
+    show Sakura happy
+    Sakura "Oh it’s...you’ll have to find out. Aida told me not to tell you, Alice’s orders."
+    MCT "This is really going to happen isn’t it?"
+    MC "T-Thanks, I um uh guess... have a goodnight."
+    show Sakura neutral
+    Sakura "No problem and I guarantee you will."
+    show Sakura happy
+    Sakura "Oh wait! One more thing."
+    "She rushed back into the fridge before sneaking whatever she grabbed under the sheet."
+    Sakura "Hopefully she's not watching her calories too much."
+    "Sakura gave me a wink before stepping out."
+    hide Sakura with dissolve
+    "I didn’t know whether to be reassured, or even more concerned that other people were in on this,"
+    "but gears were turning too fast in my mind to really process anything else beyond what I thought was about to take place."
+    "As I wheeled the cart out, I debated peeking under the sheet, but decided against it, cause if Alice planned this all out, I might as well play her game."
+    scene black with fade
+    pause 1
+    scene Dorm WG with fade
+    show WG haughty with dissolve
+    WG "Wonderful, I knew I could count on you."
+    "Alice sat haughtily, her hands resting at the sides of her overflowing hips."
+    MC "What? You really thought I wouldn’t deliver the goods?"
+    WG "I must say, it was quite easy to predict how... excited, you would be at my proposal."
+    WG "The real question is why would you initially deny so in the first place?"
+    MC "I... uh..."
+    show WG stern
+    "Alice was beginning to be impatient with my stalling."
+    MC "Okay! I wasn’t sure you’d be into it. I didn’t want you to think I was trying to take advantage of your... predicament, as you refer to it."
+    show WG neutral
+    "The loveseat shifted slightly as Alice attempted to adjust her bulk. Rolls folding over each other like crashing waves."
+    WG "I see. It appears that your heart was in the right place. But you should know by now that I prefer a more direct approach to things, yes?"
+    MC "Yes, this is true. I apologise for not being more forthright."
+    show WG haughty
+    WG "Your apology will suffice. This is not a guilt trip Keisuke. I wasn’t playing games when I said I was hungry."
+    MC "I see... as you wish."
+    jump WG060S_Accept
+
+label WG060S_Lie_C2_1:
+    $setProgress("WG", "WG061D")
+    MCT "This had to be a trick right? There’s no way she’d actually be willing to go along with this. If I just gave into this urge I could screw everything up! I don’t want to risk that."
+    play music WG
+    MC "No, this isn’t right."
+    show WG surprised-2
+    WG "Oh? Is that how you really feel?"
+    MC "Yes. I-I think I might have inadvertently given you the wrong impression, Alice."
+    MC "Maybe I haven’t demonstrated it all too well with my past actions, but I wouldn’t ever want to do something that would take advantage of your situation."
+    MCT "I mean I want to... but I probably shouldn’t."
+    show WG neutral
+    WG "Hmmm, well that is rather reassuring to hear."
+    $setVar("WGSSPR", 0)
+    WG "It seems I have misjudged you, Keisuke. I must apologise for this rather embarrassing miscalculation of mine. I appreciate your restraint with regards to this matter."
+    WG "{size-6}Though I do find it rather perplexing...{size-6}"
+    show WG neutral-2
+    WG "This has been rather illuminating to me with regards to some events I appear to have misinterpreted."
+    show WG neutral
+    WG "I will not detain you any longer. I do not require anything further of you this evening, Keisuke. Please have a good night, I wouldn’t want Shiori to catch you coming by at this late hour."
+    stop music
+    scene Dorm Hallway with fade
+    "And with that, the evening’s encounter abruptly ended. If this was all a test, I wasn’t sure if I passed or failed. I felt like I did the right thing, but I certainly didn’t feel good about it either."
+    jump daymenu
+
+label WG060S_TruthPath:
+    $setProgress("WG", "WG061S")
+    scene Dorm Interior with fade
+    "The day had passed rather slowly for once, and unfortunately I knew the reason."
+    "It had been a full day since the talk with Sakura, and Alice had not even made herself present. No note, not even a text from her since then. I had encountered Aida earlier that morning, but even she seemed to be as lost as I."
+    "My worries had not subsided and I truly feared what the next text or conversation held for us."
+    "As the sun was setting, I was just finishing a shower when my phone lit up."
+    WGCell "<I’d like you to come over tonight. I have something I want to discuss. On your way please stop by the cooking club and retrieve a cart from the fridge.>"
+    "My mind was pulling in two directions. Unfettering excitement that this cart may lead to what I think it might, and concern that I’m misinterpreting this."
+    "Shit! Either she’s gonna end it tonight... or she just needs me to fetch something completely unrelated. My anxiety did not subside, but a bit of hope was restored."
+    "Taking a deep breath I got on my clothes and headed down to the club room"
+    scene black with fade
+    pause 1
+    scene Cooking Classroom with fade
+    "Stepping into the club room, I was surprised to find Sakura there."
+    show Sakura neutral with dissolve
+    Sakura "Hello there stranger, what's the occasion for your visit?"
+    MC "Alice requested I grab a cart from the fridge here."
+    Sakura "Oh that thing, sure. I’ll bring it in a jiff."
+    "As she walked over to the fridge’s large door, I stole a glance or two at her rump again. The glance, while satisfying to see, didn’t help my fears, unfortunately."
+    "She soon reemerged with a cart draped in a sheet. Though one detail about this cart piqued my curiosity, it was about twice as large as a normal cart."
+    Sakura "Glad Alice offered to help us with these, we were worried it would all go to waste."
+    MC "What is it?"
+    show Sakura happy
+    Sakura "Oh it’s...you’ll have to find out. Aida told me not to tell you, Alice’s orders."
+    MCT "The heck is going on tonight?"
+    MC "Thanks, I suppose... have a goodnight."
+    show Sakura neutral
+    Sakura "No problem and I guarantee you will."
+    Sakura "Oh wait! One more thing."
+    "She rushed back into the fridge before sneaking whatever she grabbed under the sheet."
+    show Sakura happy
+    Sakura "Hopefully she's not watching her calories too much."
+    "Sakura gave me a wink before stepping out."
+    hide Sakura with dissolve
+    MCT "If this leads to what I think it will, I'm never doubting our relationship again."
+    "As I wheeled the cart out, I debated peeking under the sheet, but decided against it cause if Alice planned this all out, might as well play her game."
+    scene black with fade
+    pause 1
+    scene Dorm Hallway with fade
+    "Making my way through the hallways was stressful. Even though I assumed I understood now what was happening, there was still a lingering fear that I had it all wrong and was gonna get dumped."
+    "That and I was not sure how to explain this to someone like Shiori if I got caught."
+    "And then I was at her door. It was time for me to face whatever lay ahead of me."
+    play sound Knock
+    "{i}Knock Knock{/i}"
+    stop music
+    "There was a moment of silence before I heard a muffled voice"
+    WG "It's unlocked, come in."
+    MC "{i}Whew{/i}..."
+    "With a deep breath, I stepped through the threshold"
+    scene Dorm WG with fade
+    MC "I got the cart as you requested."
+    WG "Leave it there, I’ll require it later. However, for now I’d like you to come here."
+    "All lights save the ones in the kitchen area were off, but the dim light was enough for me to navigate towards the sound of Alice’s voice."
+    MCT "Please let this not be the end."
+    #play music sunset
+    "Slightly stumbling my way in the dark, I continued to follow the sound of Alice’s voice. My eyes started to adjust, as a warm orange glow emanated from around the corner. The shock I felt upon turning the corner was indescribable."
+    show WG neutral
+    "Sat in front of me was Alice, comfortably lounging in her loveseat. What really stood out though was what she had donned for the evening."
+    "At first I assumed it to be a bathrobe, but as I got closer it looked more akin to a regal gown. Muted red pallets canvased across her corpulent body, stretched out by every single pound they were trying so desperately to contain."
+    "Though her belly had long since folded over into two separate fatty rolls, her gowns belt tie sat between them."
+    "Possibly Alice was unaware of the danger that posed, after all, if she even inhaled too hard... it could snap off very easily."
+    "Sitting atop her two levels of belly fat were the massive orbs of her breasts. From the looks of it, even she wasn’t able to coax them into the robe."
+    "As such, they rested outside, the only cloth between them and fresh air was the button down shirt Alice wore under the gown."
+    "The buttons themselves looked as if they fared no better than the tie, as each one looked strained, albeit still sturdy. One wonders just how much tensile force her entire ensemble was under."
+    show WG aroused
+    WG "I hope you don’t mind the rather unreserved clothing of mine."
+    MC "I...uh...umm...its uh...quite ok."
+    show WG happy
+    WG "I knew I had a good feeling about this investment. Now I’m not the only one made of putty."
+    MC "Ok, I really would appreciate an explanation as to what's going on cause I’ve been worried these past couple days."
+    show WG haughty
+    WG "I’ll be able to give you an answer after tonight, I’ll say that much."
+    MC "What are we doing tonight?"
+    show WG aroused
+    WG "Well, I was wrapped in getting things ready for tonight. I unfortunately missed my last few meals. Mind helping me correct that?"
+    "The moment I heard those words I was afraid I may faint from giddiness. My hopes and efforts had paid off."
+    MC "Su..sure. Er, I mean, of course, my lady."
+    show WG happy
+    WG "Wonderful, I knew I could count on you."
+    show WG haughty
+    WG "I do hope you brought something rather decadent for the evening. Even with my offer, I would still prefer my cuisine to be of high quality."
+    "Alice sat haughtily, her hands resting at the sides of her overflowing hips."
+    MC "What? You really thought I would bring subpar food?"
+    show WG happy
+    WG "As a matter of fact, the thought hadn’t even crossed my mind."
+    show WG aroused
+    WG "It was quite easy to predict how... excited, you would be at my proposal."
+    show WG happy
+    WG "Why, I would even bet that you went out of your way to procure some lavish-but more importantly-highly caloric meal, yes?"
+    "Damn, was I really that predictable? Well, she probably figured that out easily after realizing my preferences..."
+    MC "I couldn’t- no, I wouldn’t go out of my way for a personal desire."
+    MC "Although, I certainly wouldn’t mind it if it was for you."
+    show WG neutral
+    "The loveseat shifted slightly as Alice attempted to adjust her bulk. Rolls folding over each other like crashing waves."
+    WG "My, how romantic, Keisuke. It seems as if you can be a real Casanova if I push your buttons right."
+    "I couldn’t help but smirk somewhat at her mention of pushing buttons. As if she was referring to the buttons on her shirt, which struggled in vain to keep her monumental breasts of fat covered."
+    "It dawned on me at that moment. If her shirt was struggling up top, the buttons on her belly must... Oh man! Her shirt was doomed..."
+    jump WG060S_Accept
+
+label WG060S_Accept:
+    MC "Now then, which fine meal would you like to have first?"
+    show WG happy
+    "With excitement, Alice glanced across the selection of bountiful foods. Her eyes eventually settling on a rather meaty dish of confit de canard."
+    MC "Ah, good choice. Can’t really go wrong with a bit of poultry, yeah?"
+    WG "Hmh, I would say that’s certainly more than just a bit."
+    "She had a point, traditional confit de canard had one, maybe two duck legs. But the dish Alice had ready? It looked as if a whole flock was packed into it."
+    "Stacked on top of one another, the fatty grease dripped down the stack. It gave the plate a lustrous shine, almost overshadowing the side dishes served beside it."
+    "Just thinking about the amount of fat coating one leg... well it made me slightly nauseous to be honest. But thankfully, I wasn’t the one who would be dining on it."
+    MC "How does that old saying go? You can’t have too much of a good thing? Something to that effect."
+    WG "Well I suppose we’re about to test if that expression holds true. If you wouldn’t mind."
+    MC "Way ahead of you."
+    "I’d never had this dish, but I knew Alice had raved about it before. Few things were as decadent as large chunks of meat swimming in their own fat."
+    "I tried my best to make sure the fat soaked drumstick didn’t drip across her clothes as I brought it to her mouth."
+    show WG aroused
+    "Her lips were quivering in anticipation, betraying an appetite beyond mere hunger, eager to finally cross the threshold of abandoning restraint."
+    WG  "MMMM!"
+    "The instant the fatty richness hit her lips, I could tell behind her eyes a passion had been ignited. Her initial modest bites turned into chomps as she greedily devoured the first leg."
+    WG "Ohhh."
+    "She softly moaned. No doubt feeling the rush of release from having restrained her appetite earlier for this occasion."
+    show WG happy
+    WG "I haven’t had this in ages. It’s even better than I remember."
+    MC "That’s what I had hoped. Good thing there’s plenty left— and you’re going to finish it all."
+    show WG surprised-2
+    "I knew I was taking a risk, taking a more dominant tone with Alice, but at this point she was as beholden to her hungry urges as I was to testing the limits of her capacity."
+    show WG happy
+    WG "That was never in question. It will take more than that to satisfy my appetite tonight, I’m afraid."
+    MC "Then I will most certainly oblige."
+    "Holding the other leg up to her mouth she devoured it in half the time of the first. Not wanting her impulses to get the better of her, I withdrew the leg bone lest I thought she might attempt to consume it as well."
+    show WG aroused
+    WG "Please tell me there’s more."
+    MC "Oh mon chéri, there is still much more."
+    "The remainder of it was shredded meat from the breast, all the more soaked through and through, dripping with fat. I began to feed her by the fork-full."
+    MC "Open wide."
+    show WG happy
+    "Alice accepted my offer without any hesitancy, opening wide, longing to eat every last fatty morsel."
+    "A slight shiver ran up my spine as I entertained a tantalizing thought. This single dish had a days worth of calories for a family of six, and it was merely the first course."
+    WG "Mmmm, more please."
+    "Apparently I was not keeping the proper pace if she had to verbally express her need for more. I moved in closer so as to minimize the time and distance from the serving dish to her mouth."
+    "As soon as she swallowed I was already moving another bite past her lips. The pace accelerated until there were only meat crumbles floating in a roasting pan of liquid fat."
+    MC "I’m afraid that’s all that’s left. I must say I’m impressed with your handiwork."
+    show WG neutral
+    WG "I’m glad you think so. I do not intend to disappoint, but for your part, that better not be all you have to offer."
+    "I tried to restrain my reaction as my eyes nearly bugged out of my head at her remark. She was way more into it than I could have ever dared to imagine."
+    "She was toying with me, no doubt, but her enjoyment from giving into this indulgence was obviously no mere act solely for my sake."
+    "In the back of my mind, I could only wonder who would lose control first."
+    MC "Perish the thought. There’s plenty more."
+    MCT "Maybe even more than you can handle, but that remains to be seen..."
+    "Looking back at the cart, my eyes scanned through the cornucopia of fattening delights. I did not fully recognize most of what was there, but my eyes and nose were sufficient to guide my intuition as to what to offer next."
+    "What was this? A souffle? Some kind of pie? Whatever it was, it looked fattening."
+    show WG neutral
+    WG "Is that Quiche? My, should I be expecting a full French menu?"
+    MC "Who’s to say? The night is still young."
+    "I honestly had no idea what other French items were still on the cart, but I knew it was one of Alice’s favorite types of food."
+    "Cutting a large slice of this... egg pie as it were, it jiggled and quivered as it must have been equal parts cream and egg with ham and Swiss cheese embedded in it."
+    "Dispensing with the pretense of utensils, I offered the quarter slice directly into her mouth."
+    show WG surprised
+    WG "That’s too bi—"
+    WG "Hmft!"
+    show WG aroused
+    WG "Mmmm..."
+    "With no further protest she inhaled the monster slice of quiche as well. With each thick, excited chew, she sent more creamy, fatty food into her plump belly."
+    "It expanded in kind, roaring with excitement as it busily digested the heavy meat pastry one giant slice at a time. At the same time, its swelling pressed hard against her robes. She finished the quiche without noticing how fast it was gone."
+    WG "..."
+    show WG surprised-2
+    WG "Oh! Is it all gone?"
+    "Alice appeared to have snapped out of her gluttony induced haze once she registered more quiche was not being served to her."
+    MCT "Pick up the pace dude, she’s hungry."
+    "I was kicking myself for leaving a gap in the flow of food, but I could scarcely help myself from being mesmerized by watching all that food disappear into the seemingly bottomless pit that was her belly."
+    MC "The quiche may be gone, but the show must go on."
+    show WG happy
+    WG "Heh! Clever choice of words."
+    show WG neutral
+    WG "How about something sweet this time? Granted these savory dishes have been utterly divine, but even the greatest hunger can dull with monotony."
+    MC "Way ahead of ya. I couldn’t agree more."
+    "Looking back at the tray I hastily tried to find something that screamed sweet when a shiny glint in the corner of my eye caught my attention."
+    "A sticky, goopy pastry, so syrupy it had a sheen to it. It was the obvious choice to help satisfy her craving."
+    "Cutting up some not so dainty slices of this sugar bomb of a pastry, I proceeded to serve her a slice using the pie cutter, lest it collapse under the weight of its own syrup glaze."
+    WG "{i}Sniiiifff{/i}"
+    show WG aroused
+    "Despite her extensive bingeing, Alice looked as if an eternity had passed since she last ate. Deep in her blue eyes lay a voracious hunger, amidst something else..."
+    WG "Is that..."
+    show WG happy
+    WG "Yes! It’s Tarte Tatin! It has simply been too long."
+    "She opened her mouth wide and tore into it. They were dense and chewy, although little bits of caramelized sugar here and there crunched between her teeth."
+    "I could scarcely keep up. She wasn’t kidding when she said she craved something sweet. An ecstatic mewl shot forth from her, signaling me to bring another piece."
+    "The rich cinnamon flavor permeated each bite, so much so that it wafted into my nostrils as she devoured it."
+    "They plummeted down her gullet and into a bottomless stomach. She ordered yet another four and shredded those to pieces as well."
+    "Even though her midsection tensed against her limited clothing, her insides seemed to lack a hard cap."
+    MCT "This woman is insatiable!"
+    "Alice had not shown any signs of stopping despite having consumed more food than what one would expect to serve at a small party."
+    show WG aroused
+    WG "Oh my! I fear this sweet intermission has only served to reawaken my appetite for something rich and decadent all over again."
+    "At this point, her stomach was visibly throbbing. But it wasn't the taxing ache of an overfull belly, the kind of pain that harshly punishes an overeager appetite."
+    "Instead, it was the gnawing pain of hunger, the kind of pain that prompts action, that urges itself onward. The kind that electrified Alice’s senses and made her distressed and exhilarated all at once."
+    show WG happy
+    WG "The Croque-monsieur à la sauce béchamel, Keisuke. I simply must sample that next, it looks delightful."
+    "Lost in a daze attempting to contemplate the sheer scale of her unchained appetite, Alice had looked past me to see something she noticed on the cart that caught her eye."
+    "Taking a second to make sure I had heard Alice correctly, I spoke up with a question."
+    MC "Croque-mon... sauce- what did you say?"
+    WG "The Croque-monsieur à la sauce béchamel— it’s a staple dish of French cuisine."
+    MC "I could tell by the name, but it’s such an absurdly long name is my point."
+    MC "You’d finish the food before fishing the name, it’s that long."
+    show WG doubt
+    WG "Please, Croque-monsieur isn’t something to mindlessly scarf down like a rabid dog."
+    MC "Now you say this, but that rule hasn’t stopped you from wolfing down every other dish."
+    show WG surprised-2
+    WG "W-well, I... J-Just, you-"
+    MC "I’m just messing with you, Alice. No need to get all stressed, just relax and enjoy."
+    show WG stern
+    "The annoyed look she gave me was priceless, I know joking around with her was risky. But wow, was it worth it to see her try and mentally unwrap the situation."
+    "I set the Croque-monsieur beside Alice."
+    show WG happy
+    "With each new meal added to her growing belly I set the plates further and further away."
+    "Even now, the plate was starting to teeter slightly off the edge. Perhaps I’ll just set the next serving dish on the expanding shelf of her gut."
+    MC "So uh..."
+    "I had planned to serve her, but it seems I underestimated her eagerness for this dish."
+    "With an excited glee, Alice bit down on the sandwich-esqe food. A white sauce coating the top of it slipped off onto her straining clothes. To my surprise, she didn’t even notice it. I guess she was just so caught up in the flavor."
+    MC "You call it a Croquette-mister la sauce or whatever, but it’s clearly just grilled cheese."
+    show WG stern
+    "Her chewing stopped, eyes glaring at my comment like I had just insulted someone close to her."
+    WG "Mhow dha-!"
+    MC "Pfft! Hehe."
+    "Whatever I had said to offend her must have really thrown her off. Alice was so ready to snap back, she had forgotten to fully swallow first. Just how far into food euphoria was she?"
+    MC "...You good?"
+    show WG neutral
+    WG "-Mmph."
+    WG "Ah, please pardon my slip-up."
+    MC "You’re pardoned... but just this once."
+    show WG doubt
+    WG "I’m going to forget I heard that last part."
+    show WG haughty
+    WG "Hmph, you should know that the croque-monsieur is nothing like a simple grilled cheese sandwich."
+    MC "Yeah, you can actually finish saying \"grilled cheese\" before it gets cold."
+    show WG doubt
+    WG "Ugh, a room temperature croque-monsieur. Just the thought of such a thing is nauseating."
+    MC "Well it’s a good thing I heated up the meals before serving them. Honestly, I was so excited by your offer that I almost skipped over re-heating them."
+    show WG happy
+    WG "Your attention to detail is noted."
+    MC "Pardon my interruption, please continue. There is still plenty left."
+    "With each munch of the sauce laden sandwich, cheese oozed out every crack and opening from the overstrained bread and meat construct."
+    "Alice greedily licked her lips as the excess sauce attempted to spill across her face, but she was not wasting a single morsel."
+    "If it had been a normal sandwich of similar size, the caloric content would have been paltry." "However, Alice had just polished off a cream sauce laden, cheese entombed monster that had to have been a couple of kilos by my estimate, all with little effort."
+    show WG neutral
+    WG "Oof..."
+    "Alice adjusted herself in her chair with her legs splayed as wide as the loveseat allowed. With her back arched outward to give her stomach more room to spread its rapidly expanding girth."
+    show WG happy
+    WG "Ahh... much better."
+    "I was mesmerized. Her lower belly, a veritable thick apron, smooshed against her legs. It provided a wide mattress for the inflated dome of her upper gut."
+    "She huffed heavily between puffy cheeks, blowing them out along with her plump lips. Each breath pushed her belly out even further, which pushed up her tits in turn."
+    MC "Making room?"
+    show WG neutral
+    WG "It would seem so, a welcome side effect of getting more comfortable."
+    show WG haughty
+    WG "I have appetites that need to be satisfied, Keisuke."
+    show WG aroused
+    WG "I hope you intend to satiate them."
+    "Whether she was purposefully teasing me with this inexhaustible enthusiasm for food, or simply craved more and more, I could not tell, but I was in no way capable of denying her impulses at this point."
+    "Alice’s wandering eyes betrayed her true desire. I could tell she was anticipating the next dish in line. Though her hunger seemed bottomless, this was a marathon, not a sprint."
+    "And I knew her taste buds were what was going to be what pushed her to the finish line."
+    "With that in mind I decided to contrast the previous dish with something sweet, a reliable strategy I hoped not to over play in order to ensure she reached her full capacity."
+    "A unique design caught my attention as I looked through the remaining dishes. A pastry dessert, with alternating layers of puff pastry dough and pastry cream topped with a pin striped pattern in its frosting."
+    show WG happy
+    WG "Eee!"
+    "Alice clapped her hands briefly in a fit of giddy excitement."
+    WG "It's been too long since I had a proper millefeuille!"
+    "I was completely caught off guard by her abandonment of restraint for her emotions, while at the same time my heart melted at seeing her unrestrained joy for something she had obviously missed for so long."
+    MC "Oh, so that’s what you call those? Well your long wait is over."
+    "There were six in total, each one a rectangle slightly larger than my extended hand. Bringing the first one up to Alice’s lips it immediately became clear just how much she had abandoned restraint."
+    show WG surprised-2
+    "With each delicible bite, cream oozed out the sides of the pastry layers, plopping on to the plate and out towards the sides of her cheeks."
+    "Not wanting her to be self conscious of the consequences of her unbridled appetite, I took a napkin and daintily wiped the excess cream from her cheeks as her tongue lapped up the excess on her lips."
+    WG "O-Oh... I-I apologize for my unbecoming appearance-"
+    "Before Alice could even finish, I stood up to meet her mouth with a gentle kiss."
+    MC "Hey, you don’t ever need to apologize for enjoying food. Ok?"
+    show WG neutral-2
+    WG "Thank you. These certainly are delicious, but their structural integrity leaves something to be desired."
+    MC "I would say so, good thing I’m here to make sure that isn’t an issue."
+    show WG happy
+    WG "I’m inclined to agree."
+    "Though her initial enthusiasm for the dish was indomitable, by the fifth one her pace had noticeably slowed."
+    show WG neutral-2
+    "However she did not shy away when I presented her with the sixth and final millefeuille."
+    "It was clear her exuberance had faded, but her determination had not faltered and she munched her way through the oozing pastry as I cleaned her overstuffed cheeks once again."
+    show WG worried
+    WG "{i}Whew{/i}..."
+    "Panting, heavy breasts rapidly bouncing up and down up and down; Alice looked me dead on, the conflicting mix of pleasure and pain overwhelming her. With a final deep breath she spoke out."
+    WG "{i}Hic{/i}... K-Kei, I think-{i}Hic{/i}-this is my limit."
+    "Her tone was uncharacteristically pleading, as if she was desperate to retreat and reflect on her awakening desires."
+    MCT "How the mighty have fallen, it would seem..."
+    "I, however, had bigger plans for this evening. And besides, Alice had far more room in her cavernous belly, all I have to do is-"
+    "{i}Fwip{/i}"
+    "With but a single, firm tug on her robes belt, the entire length flew off with a burst of speed. With force, the cascading rolls of Alice’s ever growing belly flopped forward."
+    show WG surprised
+    "Alice was in shock from my brash act."
+    show WG surprised-2
+    "But it was clear she felt no anger towards my choice. Much like before, a billowing roar echoed from Alice’s engorged middle."
+    MC "See? Now isn’t that so much better."
+    "My voice thick with desire and my hands gently patted the newly freed behemoth."
+    "Even as turgidly round as it was from all that food, the sheer softness of her thick layers of fat still quivered at the slightest touch."
+    show WG aroused
+    MC "I bet you feel so much better now, think about all the room you freed up!"
+    "Alice’s face was beat red. So many new feelings must have been weighing on her mind as well as her body. My eyes were drawn to the tightening shirt she wore under the robe."
+    WG "I wouldn’t disagree that it does feel better..."
+    "Despite it being custom made, even the most form fitting of attire wouldn’t be able to handle such a binge. Small pockets of fat oozed out of the areas between the buttons."
+    MCT "I wonder how long before her continued indulgence puts this little number out to pasture."
+    "Despite freeing up more room, I thought it better to be more strategic with my selected offerings. Seeing what was left on the cart, my devilish impulses took hold when I noticed what looked to be a pizza."
+    MCT "Few things are less filling for the amount of calories than pizza, plus who couldn’t go for another slice even when they’re full?"
+    "Upon closer inspection, though it bared a striking resemblance to a meaty pizza, something about it seemed off. In fact it looked kind of gross."
+    MCT "What the hell? How do you screw up pizza?"
+    MC "Hey, Alice?"
+    show WG surprised-2
+    WG "What is it, is there something wrong with the dish?"
+    MC "Maybe, I’m not really sure how this is supposed to look normally."
+    "With a heavy grunt Alice valiantly attempted to heft herself forward. Only to fall backwards under the new weight sitting comfily in her middle."
+    show WG stern
+    WG "W-Well, this is certainly embarrassing."
+    show WG neutral
+    WG "{i}Ahem{/i}, would you mind describing it for me? Perhaps I can deduce if the meal is searvable."
+    MC "Describe it? Can’t you see it from th-"
+    "My mind clicked into place as I looked up at Alice. The reason for the obstruction in her vision was obvious."
+    show WG surprised-2
+    "The two, heaving mounds of fat resting atop her gut actually started to block her sight. From the looks of it, even she was shocked by this turn of events."
+    "I could only assume that the increasing size of her bulky belly had forced the tubby twins upwards and into her face. It didn’t help that she was seated back in a recliner position."
+    show WG doubt
+    WG "This is-This is troubling enough wi-without you gawking at me, Keisuke!"
+    MC "Heh, how did you know? I’d have thought your field of vision was limited by... well..."
+    "Even with Alice’s face out of view from where I was, her flushed red tone was metaphorically glowing."
+    show WG neutral-2
+    WG "P-Please, would you kindly detail the meal?"
+    MC "It looks like... I want to say a flatbread base? Toasted, with caramelized onions and olives."
+    WG "Oh! That must be a pissaladière!"
+    MCT "Pissaladière? Is that French for crappy pizza? This looks awful."
+    MC "Wait a minute, pissaladière? Don’t you mean pizza."
+    WG "Ahem, I understand how you could mix the two up. But while they share similar qualities, pissaladière is the far more nuanced dish."
+    show WG aroused
+    WG "Mmm, now that I think about it, the savory saltiness of the briny olives and anchovies is exactly what I’m craving after that sweet dessert."
+    show WG happy
+    WG "But in case you forgot, I’ve not had my food presented to me yet."
+    MC "Hm? Oh right! Forgive the slow service, your waiter seems to be distracted this evening."
+    WG "I can tell. It’s all coming out of your tip, I’ll have you know."
+    MC "Oh but the pleasure of serving you is more than enough mademoiselle."
+    show WG haughty
+    WG "That’s what I like to hear."
+    show WG surprised-2
+    "Alice showed a spark of renewed vigor as the first slice of the salty umami bread bomb touched her lips."
+    "I found the prospect of this combination of ingredients rather nauseating and would have otherwise hesitated to serve her this close to her capacity."
+    "But her enthusiasm for the dish could not be denied. Clearly the appreciation for such a dish was a product of her refined palette, something she had apparently not lost in this gluttonous frenzy."
+    pause 2
+    show WG doubt
+    "With just a couple slices of pissaladière left, she slowed down. She panted heavily, pushing out her breasts over her rock-solid belly. She breathed deep through her nose as she took a rather large bite out of a slice."
+    show WG worried
+    "She closed her mouth slowly, tilted her head back, and swallowed carefully. The way her stomach bulged out, she looked more than pregnant. She lowered her head again and looked me in the eyes."
+    show WG neutral-2
+    WG "Feed me, {i}huff{/i}, one more... {size-6}Please{size-6}."
+    "Part of me began to feel concern for her at this point."
+    "Her strained expression seemed to indicate she was approaching the limits of her capacity, but I could never deny such a sincere longing like I felt in her whimpering plea."
+    "She gulped the remaining piece down. It was difficult to convey, but she seemed so unlike her usual self."
+    "To think, I would have Alice Nikumaru, one of the most influential figures in all of Japan, eating out of my hand. Such a bizarre state of affairs... but oh, what a delightful situation nevertheless."
+    show WG worried
+    WG "Ohhh..."
+    "Her own hands focused on her gut. It bloated further and further outward. Now, it covered over her thighs even as she had spread her legs outward to make room for its unprecedented expansion."
+    "Since Alice was sitting back, it was easy to see the impact of her appetite. Her stomach was still unarguably flabby, but its bulge was still very pronounced. Her gut was like a round, gurgling beachball."
+    "Usually, it had a sloped, mercurial shape. However, it was slowly hardening into a stiff, inflated ball. And, as part of the process, her plush legs continued to part, giving her belly room to grow."
+    show WG aroused
+    WG "Hfft! Ohhh!"
+    "Her moans were a mix of pleasure and pain. I couldn’t quite process what exactly was going on, but something was happening."
+    "Even with the removal of Alice’s confining robes, her attire still faced another oncoming threat."
+    "{i}Creeeeak{/i}"
+    "Those shirt buttons were finally at death's door, stretched far beyond breaking point I waited for the straw that would break the camel's back"
+    "{i}Creeeeeeeak{/i}"
+    "Shockingly, Alice had yet to notice the impending wardrobe malfunction she was creating. Each bite she took pulled the shirt further into demise."
+    "{i}Creak...Creeeeee{/b}AAAAAK!{/b}{/i}"
+    show WG surprised-2
+    "Alice froze mid swallow, even with the raucous sounds of her enjoyment and chewing— she had to have heard that one."
+    WG "Did you say something, {i}HIC{/i}... Keisuke?"
+    MC "Hmm? Oh!"
+    MC "N-Nope, I didn’t say a word."
+    show WG neutral
+    "There are some perks to having such absurdly long hair, one of them being that people can’t tell where you’re looking."
+    "Even with my head pointed towards Alice’s fluffy face, I couldn’t take my eyes off her middle if I tried."
+    "This moment was going to be burned into my mind forever, I can’t let myself miss a second!"
+    "{i}Pop!{/i}"
+    MCT "We have liftoff."
+    "With the force of a speeding bullet, the lowest button on Alice’s shirt sprang off. Hurtling across half the room, it landed with a minute {i}tink{/i} on the wooden floor."
+    show WG surprised
+    pause 1
+    "There was a pause, both Alice and I remained silent, almost in awe of what had just transpired."
+    show WG surprised-2
+    WG "..."
+    MC "..."
+    WG "...M-Maybe I should sto-"
+    "{i}Ping ping pop ping!!{/i}"
+    "It was a salvo of buttons, each popping off with more and more power as the pressure mounted. The bottom most button must have been acting as a final pin, and with it gone all the others fell."
+    "In but a single second, the veritable dam straining to contain Alice’s heaving blubber burst forth. Wave after wave of fat flowed freely, toppling over each other in a desperate attempt to find space, now that the restrictions were lifted."
+    "But oh my word, was it truly a spectacular sight. I was glad my hair concealed my bulging eyes. As hard as those buttons had busted off of her, I felt as if I was about to bust as well."
+    "The buttons containing her bountiful chest were troopers, they had managed to keep Alice’s modesty even after the initial hail fire of buttons. But alas, it wasn’t meant to hold forever."
+    "With one final surge of flab, the stiff dome of her gut forced itself outwards. This proved to be her upper button’s undoing, as the momentum of this actually knocked the soft beach balls resting on her belly upwards."
+    "{i}Ping ping ping!{/i}"
+    "And with that, the shirt was no more..."
+    "Two cascading orbs of fat shot upwards in response to her greedy gut finding room to rest." "Unlike the lower buttons, these ones shot upward with such force they bounced off the ceiling. If Alice had been slightly more endowed, or perhaps slightly heavier, I bet they would’ve gotten stuck in the roof."
+    "Even after the great jailbreak of Alice’s fat, she continued to wobble for what seemed like several seconds. Almost as if her belly and breasts were celebrating their new found freedom."
+    "There was one final thing that caught my eye, though. Alice had eaten far more than I thought possible, and her turgid belly was a sign of how far she pushed herself."
+    "There was an unmistakable pinkish-red hue coating the upper part of her belly rolls. A testament to her own desire overwriting any discomfort she should’ve been feeling."
+    "It’s quite a blessing that growths prevent stretch marks. Because any other person wouldn’t be able to weather this punishment, and walk away without any battle-scars."
+    "With that veritable climax of the evening, it was clear Alice was at her physical limit, and well past her own personal boundaries of modesty."
+    "As much as it pained me to do it, I knew this just wasn’t right. Alice was a refined gourmet, and my actions had lured her into a pit of unabashed hedonism."
+    "For her sake, I had to stop this... right?"
+    menu:
+        "Call it a night. She’s had enough.":
+            jump WG060S_Stop
+        "Keep going! She can handle more.":
+            jump WG060S_Greedy
+
+label WG060S_Stop:
+    MC "Hey, Alice...Alice?"
+    "I gently nudged the side of her taut gut, it roared in ferocity."
+    WG "Huh? Yes, Keisuke?"
+    MC "We, uh, should probably call it quits for now."
+    show WG neutral
+    "The attempts to hide my disappointment were pointless, I sounded like a kid being denied his birthday gift."
+    pause 1
+    "A moment passed before Alice responded, well, she didn’t vocally respond but her body definitely did."
+    show WG surprised-2
+    "Once again her demanding gut produced an uproar, I wasn’t sure if that meant she was still hungry or she was way past full."
+    WG "Guh... {i}hic{/i}... uhh."
+    show WG neutral-2
+    "Slowly, the light started to return to Alice’s eyes, although they still remained half-lidded." WG "Kei-{i}HIC{/i} ugh...wh...w-why did you-{i}HIC{/i} stop?"
+    show WG worried
+    WG "Hng..."
+    "Part of me wasn’t quite sure why I stopped, I’d waited so long for this after all. But deep down, I knew exactly what came over me."
+    MC "You stopped enjoying it."
+    show WG surprised-2
+    "Alice’s tired gaze looked at me questioningly."
+    MC "I didn’t want to keep going just for my sake."
+    WG "I don’t think I-hhhhugr...guh-{i}HIC{/i}..."
+    "The repercussions of her excessive hedonism started to catch up with her."
+    show WG neutral
+    WG "H-How, How did {i}HIC{/i}... Did you know to stop?"
+    "Her words were punctuated with deep, bellowing breaths."
+    MC "...Can you name the last two dishes you ate?"
+    WG "{i}HIC{/i}, wha-{i}HIC{/i}... oh..."
+    "More life started to color her face, realizing just how far she had fallen into the moment."
+    MC "It was a chocolate parfait, and a selection of mint macaroons. Both of which you imbibed like they were your last meal."
+    "That did the trick, Alice’s face was glowing red as her eyelids flung open."
+    show WG surprised-2
+    WG "Wha-Hic-What?! ...How much- or how long..."
+    "Alice stumbled over her words, frantically trying to make sense of her actions. The panic in her voice grew as she saw how many empty plates were scattered around her."
+    show WG sad
+    WG "Oh, Keisuke. I can’t- it’s just... I’ve made such an emba-{i}HIC{/i}-embarrassment out of myself."
+    "The shame and disappointment was too much for her to handle, especially in her current state."
+    "Her eyes started to tear up slightly, while her flabby arms tried to cover her face. This isn’t how the night should end, after all she did for me, Alice did not deserve to feel appalled by her actions."
+    "Without hesitation, my lips planted a kiss firmly into Alice's rotund ball of belly. The heat emanating from it was rather inviting."
+    "The cacophony of noises her taxed middle made were like a symphony as I laid my head on the warm, inviting pillow. Her hands lowered, revealing an upset, but mostly surprised expression."
+    show WG worried
+    WG "Keisuke...you- what are you doing?"
+    "Baffled, Alice attempted to sit up. Only to find that her belly decided to betray her, and shot a bolt of pain back. Sending her back into a reclined position with a harsh grunt."
+    MC "Careful, try not to put too much pressure on your gut or you’ll get indigestion."
+    show WG doubt
+    "I playfully teased as Alice took deep breaths, recovering from her sudden shock."
+    WG "Mmmguhh...{i}HIC{/i}- Kei-{i}HIC{/i}...Ughhhh..."
+    MC "Here, let me help."
+    "Once again, my hands found themselves in full contact with her humongous abdomen. This time, I made sure to go the extra mile with the belly rub."
+    show WG aroused
+    WG "I can’t-guhhh- can’t believe you find this kind of stuff appealing {i}HIC{/i}... Let alone attractive."
+    show WG happy
+    "A confident smile ever so carefully crept onto Alice’s lips."
+    MC "Attractive? Heh, not just that, you were already attractive before this. This here? This is just the icing on the cake."
+    show WG surprised
+    "A loud groan bellowed forth from Alice."
+    show WG worried
+    WG "Uhhg. p-please don’t mention cake— or any food for that matter. Just thinking about eating another morsel is revolting."
+    show WG happy
+    "For a couple minutes of quiet, we both sat there in peace. Alice quietly moaned to herself as my palms explored and soothed her upset stomach."
+    $setAffection("WG", 1)
+    WG "Ohhh, Keisuke, this is such a relief, thank you. I hope you don’t plan on stopping that any time soon. My belly needs all the help it can get at this point."
+    MC "Oh fear not, I intend to give it all the help it can handle."
+    jump daymenu
+
+label WG060S_Greedy:
+    $setFlag("WG060S_Greedy")
+    "No. This didn’t stop until she physically refused any more food I had to offer— and she wasn’t anywhere close to that point."
+    "Having picked over most everything else there was on the cart and finding nothing left but some miscellaneous parfetts, cookies, brownies, whatever had been seemingly left over from unfinished kitchen batches."
+    "I peaked under the mid level of the three shelved cart to see a meter long submarine sandwich."
+    "Needless to say, I was quite surprised to find such a mundane offering along with these gourmet options. It must have been accidentally added, left over from some kind of party platter."
+    "I lifted the stacked sub to Alice’s lips. Trying my damndest to keep the plate steady as it inched closer to her awaiting maw. It's not easy to hold a tray steady when it's that big."
+    "So, in an act of quick thinking, I simply set the sub lengthwise across the bare peaks of Alice’s gelatinous breasts. Her generous chest provided more fat than enough to balance a sandwich of such magnitude."
+    show WG surprised-2
+    WG "What- What’s this about?"
+    MC "Don’t worry, we’re just using your beautiful assets to our advantage, right?"
+    "Alice gave me a befuddled look, but soon followed it with a quiet confirmation."
+    show WG neutral-2
+    "Craning her neck forward, she bit down into the sub, and its super-salty, savory and spicy flavors surprised her."
+    show WG happy
+    "Closing her eyes in delight as she swallowed, her soft cooing told me she wanted more."
+    "Slowly but surely, I pushed the entire length of the sub up her chest. Surprisingly, Alice increased her speed more and more as she reached the subs end. In my mind, I was worried that she would have bitten my hand if I didn’t pull it away at the end."
+    "As she leaned forward, her chin scrunched into a pack of folds. I couldn't help but notice a smear of mayonnaise along her portly cheeks."
+    "Her bouncy, jiggly jowls must have brushed against the sandwich as she bit in."
+    MCT "My my, you certainly did have more in you it would seem."
+    "Alice continued to slow down, but her voracity kept increasing. It was as if her mind and body were in conflict, trying to keep the other from acting up."
+    "Her chewing became more laborious, as she had to take deep breaths between each large bite. The once vibrant, blue eyes she had to begin with started to glaze over."
+    show WG doubt
+    WG "{i}Ohm, monch, nom, muuunch{i/i}..."
+    "But the strange thing was, she didn’t even seem aware of it. She just continued to inhale dish after dish, albeit at a slower pace."
+    "Alice was hardly even saying anything by this point, she wasn’t even fully enjoying the food, she was just eating for the sake of eating."
+    "A wave of guilt suddenly hit me. This wasn’t like her at all."
+    $setAffection("WG", -2)
+    "Before I could process what was actually happening, Alice had eaten herself into a total food coma."
+    show WG neutral-2
+    WG "{i}Zzzzzzzz...{/i}"
+    "Ger cherubic cheeks lightly fluttered with each labored breath as she gently rested her hands across her over taxed belly."
+    "Her belly was stretched far beyond what I could have thought possible, with a warm pink hue that belied it’s fierce anger from having to endure such strain."
+    "Beach ball was not the word, this behemoth was like one of those giant yoga balls you see in a gym."
+    "As much as I wanted to reach out and rub it, in the back of my mind I worried that the slightest disturbance might result in its entire contents being rejected."
+    "Not wanting to tempt fate, or wake her from her slumber, I retrieved a blanket from the foot of her bed to keep her warm for the rest of her night’s slumber and proceeded to return the cart back to the kitchen."
+    scene Dorm Hallway with fade
+    "It had been a wild night, that was for sure. I had no idea she was willing to go that far, or even that she could. I could scarcely process what I had just witnessed."
+    "I couldn’t help but feel a little guilty for pushing her past her limits, but she was quite insistent on what she wanted, and I had an obligation to oblige her... at least that’s what I told myself."
+    jump daymenu
+
+label WG061:
+    $setProgress("WG", "WG062")
+    scene Cooking Classroom with fade
+    play music Schoolday
+    MCT "Hmmm, looks like I have everything. Better double check though."
+    "I was pleasantly surprised I was able to convince Alice to go along with the idea of cooking together for our next ‘date’, as it were."
+    "Honestly it was a pretty good solution to the dilemma I constantly have trying to plan one of our dates: what do you give to the girl that has everything?"
+    "My wallet wasn’t big enough to hold all the bills needed to pay for a fancy dinner that would impress her refined pallet, even if such a restaurant existed on this island."
+    "That, and just plain dinner at a restaurant was far too mundane after a while, even for such an enthusiastic gourmand as Alice."
+    "Not that it wasn’t a solid option every now and then, I knew I just couldn’t over-rely on it."
+    "The other part of it was that I wanted to see if I could get Alice to do something outside of her comfort zone. If Alice didn’t want to do something, she wasn’t going to do it."
+    "But I figured if anything was going to convince her to go along with something she wasn’t too keen on, the best bet would be something that somehow involved food."
+    "After all, it got her to go to the carnival with me. This was an easy sell by comparison. I was genuinely curious to see how she’d do with actually making a recipe herself."
+    "Based on our previous conversations, on a scale of ‘Five Star Chef’ to ‘Can make instant ramen’, I don’t think Alice has ever had to use a microwave before."
+    show WG neutral with dissolve
+    "I heard the door swing open and looked up to see Alice had arrived. Right on time, per usual."
+    MC "Alice, glad you made it. I think I have everything all ready to go."
+    show WG haughty
+    "Alice was keenly scanning the kitchen prep counter to assess the ingredients and kitchenware. I could tell she was rather intrigued by the assortment I had laid out."
+    show WG neutral
+    WG "Curious… What exactly do you plan on having us make?"
+    MC "Well I was thinking of doing something that involved a more hands on approach, for an authentic experience. I asked Aida if she knew of anything like that and she suggested…"
+    "I fumbled around for the recipe sheet she had printed out for me."
+    MC "Ah, here we go— Pasta Carbonara."
+    show WG neutral-2
+    WG "That sounds delightful! I don’t think I’ve had that dish since the last time I visited Milan. It feels like it’s been ages, honestly."
+    MC "Heh, Aida told me you’d be familiar with it. She walked me through how to make it, saying she needed the practice, so I at least know what’s supposed to happen."
+    MC "It should turn out pretty decent if we stick to this recipe."
+    MC "Alright, now wash your hands and come join me over here. We’ll start making the pasta."
+    show WG neutral
+    WG "Sounds good."
+    "Checking the recipe, I placed the called‑for amount of flour out on the counter and created a little well for the eggs. I’d never made fresh pasta dough myself, but it didn’t look too difficult, just time consuming."
+    "Aida told me a pasta dough used basically one egg per person, so I cracked open six into the flour crater I made, knowing two wasn’t going to be enough for me and Alice."
+    "Not that six would either, but I wasn’t sure I had enough eggs for what I needed for the rest of the recipe if I was actually going to attempt to satisfy her appetite— assuming that was even possible."
+    show WG worried
+    "Alice came over after drying her hands off at the sink. I was admiring my handiwork, having not gotten any eggshells into it. For whatever reason though Alice didn’t seem as enthusiastic."
+    WG "What is this?"
+    MC "Pasta dough. Erhm, at least the start of it."
+    show WG doubt
+    WG "It just looks like a mess to be honest."
+    MC "It’s a work in progress. Like all good things. We just need to mix it up. Like this."
+    "I proceeded to stick a couple fingers into the egg well and shake it back and forth, scrambling them all up into a uniform bright yellow goop."
+    MC "Now you just have to get in there with your hands and mash up all that flour into it to make the dough."
+    show WG worried
+    "Whether it was the goopy texture, the slimy clinging of the runny egg on my fingers, or the seemingly unsanitary nature of handling raw egg, Alice’s expression was one of intense hesitation."
+    show WG haughty
+    WG "You seem to have this adequately handled, Keisuke. Here, I’ll hold on to this recipe card to prevent it from accidently becoming soiled, and supervise the process so that you don’t accidentally make any missteps."
+    MCT "Oh ho ho, mon chéri. You’re not weaseling your way out of this one."
+    MC "Oh that should work fine, but you do know the first rule about couples that cook together, right?"
+    show WG surprised-2
+    WG "What rule? Have I missed something?"
+    MC "The person that doesn’t do the cooking has to do the dishes."
+    show WG neutral
+    WG "On second thought, I can handle the dough. You watched Aida make this so you would be better suited to supervising in this case."
+    MCT "That was almost {i}too{/i} easy."
+    MC "Oh, almost forgot— don’t forget the salt."
+    "I slid a small jar full of rock salt over towards Alice on the counter, before walking to the sink to wash my hands."
+    MC "A healthy pinch should do."
+    "Alice had no trouble with that step, being well accustomed to optimally seasoning her food as she saw fit. The dough on the other hand was a different story."
+    show WG doubt
+    WG "Keisuke, you left this as a complete mess, what am I supposed to do with this?"
+    MC "It’s fine, just mix it all around and knead it up, until it… well looks like dough."
+    WG "Alright, if you say so."
+    "Alice fussed around with it, mushing it back and forth for a bit, bringing it into a kind of ugly, shaggy looking state."
+    show WG stern
+    WG "Keisuke, this looks even worse. Are you sure you didn’t forget to add something?"
+    MC "It’s fine, it just needs more flour, you have to keep working and kneading it. It will eventually come together."
+    MC "Aida said the trick is not to fuss too much with pushing it, just lean in with your weight and it will take care of itself."
+    "I said that, only to start wondering if Alice would crack the counter if she took my instruction too literally."
+    "With this easier technique in mind, the dough actually started to come together in a more solid looking state."
+    show WG neutral
+    "Alice didn’t seem so impatient now that she got to see some results."
+    WG "Okay, that looks like a ball of dough. Now what?"
+    MC "We have to let it rest. I don’t know why exactly, but it gives us time to do the other stuff."
+    WG "It lets the structure loosen up. If you don’t do it, it will come out dense and less flavorful."
+    MC "You seem to know a lot about cooking for someone who hasn’t cooked before."
+    show WG haughty
+    WG "Great chefs are always eager to boast about their technique to a discerning gourmand."
+    MC "Well hopefully we’re going to put all that knowledge to good use."
+    show WG neutral
+    MC "Okay, next we need to make the sauce. It goes in last, but Aida said to make it now because you need to add it at exactly the right time and won’t be able to do it fast enough if you start late."
+    MC "Now let’s see… separate six egg yolks."
+    WG "I see, we’re going with the authentic version. In America, they often try to pass this dish off as carbonara with a cream sauce, making it as bland as any standard fair alfredo dish."
+    MC "Really? That sucks. I’m glad I specifically asked Aida for the most authentic version possible when she offered to make an easier version."
+    show WG happy
+    WG "A man after my own heart it would seem."
+    MC "What can I say? You’re a very lucky woman to have a guy like me."
+    show WG doubt
+    WG "Yes... oh {i}soooo{/i} lucky…"
+    show WG aroused
+    WG "Although, I will admit, your confidence is not entirely misplaced."
+    show WG haughty
+    WG "Just don’t get too cocky."
+    "Alice articulated her last point with a gentle {i}boop{/i} on my nose with her finger, letting me know I was dancing very close to a line… and that she liked it."
+    $setAffection("WG", 1)
+    show WG neutral
+    MC "Heh, I’ll try not to, but I can’t promise I’ll try too hard."
+    "I slid two bowls in front of her along with the rest of the eggs from the carton for her to separate."
+    MC "One bowl for the whites, one for the yolks, just toss the shells in the trash."
+    show WG worried
+    "Alice seemed unsure what to do next."
+    MC "Uhh, do you need some help?"
+    show WG stern
+    WG "I can manage just fine."
+    MCT "Yikes, alright, if you got it handled…"
+    "But she didn’t have it handled. Alice proceeded to gently tap the egg against the counter only to barely cause it to crack. A similar result was seen after a few more light taps."
+    show WG angry
+    "Visibly impatient, Alice decided to up the ante—"
+    show WG surprise
+    "Only to completely smash the egg against the counter, splattering egg all over the counter and the floor."
+    MC "Pffft! Hahaha! That was a little too much, Alice."
+    show WG angry
+    WG "Well, it wasn’t working! What else was I supposed to do?"
+    MC "Easy now, that’s why we’re here, to do something we haven’t done before. It wouldn’t be worth learning if everything came out flawless the first time."
+    show WG neutral-2
+    WG "I suppose you are right."
+    show WG worried
+    WG "But it’s such a mess."
+    MC "Hey that’s no problem. I’ll clean up the mess, don’t worry about that. Here let me show you what I do."
+    show WG neutral
+    "I proceeded to crack an egg against the counter with a couple of firm knocks and split the eggshell into two relatively even portions."
+    "I then proceeded to sift the yolk back and forth between the shell halves, using the edge of the shell to help slough off the white before dumping the yolk into the other bowl."
+    MC "See, this way if everything goes well you don’t get your hands messy."
+    WG "Hmm, that seems to be the best way."
+    "Alice cracked an egg open successfully only to have done it too hard again, puncturing the yolk while the goopy mix oozed out over the sides of the shell into the discard bowl."
+    show WG doubt
+    MC "Don’t sweat it. It happens sometimes, even with someone as skilled as Aida. That’s why we have two bowls."
+    "Alice proceeded to try again. Not particularly thrilled that she managed to get egg white on her fingers, but this next attempt proved successful in separating the two."
+    show WG neutral
+    "Having tasted success, and overcoming her initial hesitancy, Alice proceeded to breeze through the last few eggs."
+    show WG happy
+    WG "There. That is six. That didn’t seem too difficult after all."
+    MC "See? Now you got the hang of it. Now, all it needs is pepper and shredded parmesan. Those are really just to taste, so add as much or as little as you want. You’re the chef now."
+    show WG haughty
+    WG "Well, it simply won’t do to have our dish be under–seasoned now would it?"
+    "I couldn’t help but slightly raise my eyebrow at just how much Alice added of both. By the time she was done, it smelled quite pungent of pepper and the liquid itself could barely hold all of the finely shredded cheese."
+    "It was quite a bit more than how Aida prepared it, but she did say you could add more than she did. Despite her lack of cooking skills, I didn’t doubt Alice felt confident about how much seasoning her food should have."
+    show WG neutral
+    MC "Looks good. Alright, now we need to get the meat going in the pan. The recipe is supposed to use this stuff called... guan-chall-ee?"
+    WG "Gaunciale."
+    MC "Right, that’s it. But good luck finding that on this island. Aida recommended this stuff called pancetta instead, which I managed to find."
+    WG "I must say Keisuke, I’m impressed with your effort to provide an authentic experience. You could have just done a lazy cop-out and used bacon, but pancetta is much closer to the spirit of the dish."
+    MC "Well, Chef Hotsure caters to only the most discerning and exclusive clientele. I wouldn’t risk my reputation with substandard ingredients."
+    show WG happy
+    WG "I thought you said I was the chef?"
+    MC "Of course! Consider this your audition to become my sous chef."
+    show WG surprised-2
+    "Alice proceeded to throw one of the dish towels hanging out on the counter right at my face as it draped over my head harmlessly."
+    show WG happy
+    MC "Tsk, tsk, disrespecting the head chef like that. I don’t think you’ll make it very far in the restaurant biz with that attitude."
+    WG "Oh, shut it. Good thing there’s a lot of hair to cover up that big head of yours. What’s next?"
+    MC "We gotta dice up the pancetta. I’ll leave it up to you how big you want the pieces, just keep in mind they’re going to shrink. You feel okay about using a kitchen knife right?"
+    show WG neutral
+    WG "I appreciate the concern, but I’ve had plenty of mishaps and near misses using tailoring shears to know enough to respect a sharp blade."
+    MC "Good to know, just make sure you’re letting the knife do the work. Don’t force anything. They keep them in pretty good condition here considering they’re shared by so many people."
+    "I was a bit concerned letting Alice chop something up herself since she basically had zero experience with this, but she proceeded to dice up the pancetta in a controlled, deliberate manner."
+    "Feeling relieved her previous impatience was not causing her to rush this task, I noted just how large the pieces she cut were. She must have liked a more hearty and rustic texture for this dish."
+    "Or maybe she was just being impatient after all and didn’t want to cut so much."
+    WG "All done."
+    MC "Alright, looks good. Into the pan."
+    WG "Okay, but why didn’t you start heating it yet? Wouldn’t that have saved some time?"
+    MC "That’s what I would have thought, but Sakura said with fatty cuts the fat melts at a lower temperature than the meat cooks, so you want to start with a cold pan if you’re going to try to render the fat."
+    show WG neutral-2
+    WG "You seem to have thought of everything, I guess I should try not to second guess your judgement."
+    MC "What was that? Can I get that in writing?"
+    show WG doubt
+    WG "Must you always make me regret encouraging you?"
+    MC "...No— just most of the time."
+    show WG happy
+    "Alice just smiled and shook her head."
+    WG "You’re incorrigible, you know that?"
+    MC "My sister tells me that all the time. You two really do get along well then. Speaking of heating up ahead of time, we should get a pot starting to heat so it’ll be ready to boil the pasta."
+    show WG neutral
+    MC "I’ll get that ready, just keep the meat moving in the pan so it doesn’t stick and burn up. Here, I’ll get you something that should help with that."
+    "Fumbling around though some of the cabinets I managed to find Alice a cooking apron. Most of the cooking club members had their own but I knew they had some spares. I made sure to grab the largest size they had."
+    MC "Alright, try this out. We don’t want pork grease splattering on your shirt now."
+    show WG neutral-2
+    "I looped the top opening over Alice’s head and helped drape it down across her protruding middle. Coming around the back to help tie it off I realized I only had a few centimeters of overlap to work with."
+    MCT "Shit! Are you kidding me?"
+    "Alice really had been getting big recently. I mean she had been since I met her, but I meant BIG, even for this place. The fact that this apron, which resembled a picnic cloth, didn’t adequately wrap her was evidence of that."
+    MCT "Time to get creative."
+    MC "Hmm, looks like we could get a better fit."
+    "Trying not to hesitate so as to not elicit any protest from Alice, I seized the initiative and proceeded to stretch the apron out to gain some extra slack, getting a little handsy in the process."
+    show WG surprised-2
+    "Reaching around her front, I proceeded to stretch the fabric down across the top of her boobs and tuck it in slightly under, cupping more than a handful in the process."
+    WG "Keisuke, what on earth—"
+    MC "Just trying to get a good fit so you’ll be comfortable."
+    "I proceeded to smooth out the wrinkles in the fabric across the top of her belly, sinking my hand into the doughy mound as I brushed my hand downwards until I simply couldn’t reach further."
+    show WG aroused
+    WG "Easy there. That spot is a bit sensitive."
+    "I proceeded to move my hands outward, smoothing out the fabric out to her sides, slightly digging into her jiggly love handles in the process."
+    WG "Mmmph!"
+    "Keeping the fabric taut, I pulled the drawstrings together in the back, securing quite a few more centimeters of string to work with to easily tie it off."
+    MC "There you go. Perfect fit."
+    show WG happy
+    WG "Excellent. I appreciate your -ahem- thoroughness in securing a proper fitting."
+    show WG neutral
+    "Knowing that a grease stain on her shirt might sour her mood about the whole experience, I thought the extra effort was necessary."
+    "I knew this was a fair bit out of her comfort zone, so I thought it’d be best to accommodate her as much as possible so it’d still be a positive experience for her."
+    "Feeling a bit better that Alice wasn’t going to get grease spots on her shirt, I filled a large pot half full with water and got it on the burner."
+    MC "How’s it looking?"
+    WG "Seems to be looking good. Nothing is burning, and the fat is starting to render out and onto the pan."
+    MC "Yup, looks good. Tell you what, I’ll watch this while you roll out the pasta dough. I think it’s been long enough."
+    "I handed Alice a rolling pin."
+    MC "Flour up the rolling pin and the counter and just roll it out as thin as you reasonably can. You might want to do it in a few batches since it will spread out so much."
+    "I tried not to call too much attention to the fact that six servings of fresh pasta would cover more surface than the entire counter, but she’ll figure it out sooner or later."
+    show WG happy
+    "Bit by bit the balls of dough she sectioned into three were flattened out into sheets. Alice did seem to be enjoying herself. My guess was it was from the satisfaction of the unfolding transformation process."
+    MC "Hey, looking pretty good. Go ahead and cut them into strips."
+    "I handed Alice a pizza cutter, figuring that’d be easier than a knife for all that pasta."
+    MC "This looks about done, so I’ll add the peas from the freezer."
+    show WG neutral
+    WG "Frozen peas? I thought you were going for the ‘authentic’ experience?"
+    MC "Well, that’s what I thought too at first, but Sakura said some vegetables hold up really well being frozen, especially if you’re going to cook them. She said no restaurant is using fresh peas."
+    MC "As skeptical as I was, it sounded a lot better than using canned peas."
+    show WG angry
+    WG "Ack! Don’t even say that Keisuke— that sounds awful!"
+    show WG neutral
+    "While Alice worked on slicing the pasta into tagliatelle, I dumped the bag of frozen peas into the pan."
+    "I thought the peas were supposed to add a healthy veg to such a rich dish, but Sakura mentioned that peas aren’t as healthy as you’d think, because they have a lot of starch."
+    "So this dish had no redeeming health qualities. It was basically one big decadent, creamy, fatty, starch bomb."
+    "I couldn’t wait to see Alice’s reaction to the taste. Maybe I should have planned for more servings?"
+    show WG neutral-2
+    WG "All done."
+    MC "Hey, those look really even in size. Are you sure this is your first time cooking?"
+    show WG happy
+    WG "Flatterer."
+    show WG smug
+    WG "But yes, I must admit, I am also impressed with my handiwork."
+    MC "Okay, so this is about done. Go ahead and dump all that pasta into the pot, just be careful not to let it splash. Fresh pasta only takes like three minutes to cook."
+    show WG neutral
+    MC "Well, that didn’t take very long. Let’s kill the heat and drain it in the sink, just save some of the pasta water… for whatever reason."
+    WG "It carries starch from the pasta, chefs use it to help with the consistency of the sauce."
+    MC "Hmm, interesting. I guess that makes sense. Whoa! Those pasta noodles really swelled up. That looks like over twice as much as we started with."
+    WG "That does tend to happen with starchy foods."
+    MC "Alright, dump it into the pan. Here, this is your show after all, start mixing it in with the rest of the ingredients."
+    pause 2
+    MC "That looks good, I’m going to dump in the egg yolks, be ready to stir or else we’ll get scrambled eggs and pasta."
+    "I dumped the goopy yellow mixture into the pan, circling the surface in order to get an even distribution."
+    MC "Stir stir stir! This is a crucial part!"
+    show WG surprised-2
+    WG "I got it!"
+    pause 2
+    WG "Hey! It looks like it’s coming together. It actually looks how it's supposed to!"
+    MC "Good! Let’s kill the heat and take it off the burner. Looks like it’s ready to plate."
+    "I went to see if I could find a large enough bowl for all the pasta that we just made. Searching through the cabinetes, nothing seemed suitable until I came across what appeared to be a punch bowl for a party."
+    show WG doubt
+    "Placing it on the counter, I could tell by Alice’s expression she had doubts as to the appropriateness of this serving vessel, but there weren’t too many other options."
+    show WG neutral
+    "Grabbing some additional dining bowls from the cabinet, I set out some dishes for us to eat our respective meals out of."
+    "I kind of wanted to just take a small bowl and give Alice the whole punch bowl, but I didn’t want her to feel self conscious about how much I expected she would eat."
+    "I ladled a rather modest serving for myself into my bowl and made sure to give an overflowing portion into Alice’s."
+    MC "Bon appétit! Enjoy the fruits of your labor."
+    play music WG
+    show WG happy
+    WG "It smells delightful."
+    show WG neutral
+    "Taking a forkful, I watch as Alice munched on the soft and creamy dish I helped her make, her jowly cheeks swashing back and forth as she moved the food around her tongue, intent on fully experiencing the flavor."
+    MC "...So? What’s the verdict?"
+    show WG neutral-2
+    WG "Well… it’s just okay."
+    WG "The pasta is a tad bit firm, slightly overcooked I’m afraid. The sauce has a slight bit of grit to it, which means it probably got too hot, or I didn’t stir it fast enough."
+    WG "The amount of salt seems appropriate, but I think I added too much black pepper."
+    MC "Well, doesn’t it taste all the more better knowing that this was something you made yourself?"
+    show WG neutral
+    WG "To be honest… not really."
+    MC "Oh… So I guess this was a bit of a bust then?"
+    show WG neutral
+    WG "Well, I wouldn’t say that entirely, Keisuke. Admittedly, the process itself was challenging and occasionally fun in its own right."
+    show WG neutral-2
+    WG "It did give me a newfound appreciation for just how skilled Aida is and the skills my personal chefs have honed over their lifetime. It was illuminating from a managerial aspect, as you suggested it would be."
+    show WG haughty
+    WG "Ultimately though, I prefer my culinary experiences to be as optimal as possible, so I would rather defer to the professionals."
+    show WG aroused
+    WG "But if you would like to cook for me again… I would gladly accept."
+    MC "Is that so? Well, I’ll have to take you up on that offer."
+    "I’d be lying if I said I wasn’t disappointed that Alice didn’t exactly swoon over the dish we made."
+    "But in retrospect, I don’t know why I would have expected two novice chefs to create something that could fully satisfy a pallet as sophisticated as Alice’s."
+    "I took a forkful of my own serving to try it out myself. Honestly, I hadn’t had anything like it."
+    "The creamy yolk sauce, the meaty bits of crisped pork, and a slight veg taste of the peas cutting through it with the thick starch. It was great!"
+    "I didn’t know what it was supposed to taste like, but it seemed pretty good to me. I was happy with it, but despite her qualified criticisms, I still felt like a bit of a failure for not making something Alice liked."
+    MC "Well, I’ll guess I’ll start on the dishes. You held up your end of the bargain, so it’s only fair I do mine."
+    "Pots, pans, stirring spoons, bowls— it’s amazing how much of a mess cooking anything makes. I worked my way through all the dishes. It didn’t seem like too much time to be honest, but it was a bit tedious."
+    "Having finally finished the dishes, save for our serving dishes and silverware, I walked back over to Alice."
+    MCT "Wait… WHAT!?"
+    play music Bittersweet
+    MC "Alice… I thought you didn’t like it…"
+    show WG worried
+    WG "I didn’t say it was that bad… I was hungry. I guess I still haven’t really caught up since I denied myself a couple of days ago."
+    "Alice had eaten every bit of it from the punch bowl. It was completely clean, save for some smears of sauce. All that was left was the small serving left in my bowl."
+    "And even after all of that, I could tell she was still hungry."
+    MC "Would you like the rest of mine?"
+    show WG angry
+    WG "Do you think I’m some kind of food crazed maniac that has no self control?!"
+    MC "No, I think as your boyfriend I should be as understanding as possible and attentive to your needs. Right now you’re hungry, so I want to offer you my food."
+    show WG sad
+    WG "That’s… That’s very thoughtful of you Keisuke. I’m sorry I got mad."
+    show WG neutral
+    WG "I… I would like more, if you would let me have yours."
+    MC "Please, I insist."
+    "Alice proceeded to finish off the rest of my moderate portion I had served for myself. I knew it would not be enough to satisfy her, but it pained me to see her deny herself as her body cried out for more."
+    MC "Oh, hey! I almost forgot something. I got something special for you."
+    play music Peaceful
+    show WG surprised-2
+    WG "Oh? What is it?"
+    MC "Let’s see here, looks like it got buried in the back of the freezer somewhere… Ah! Here it is."
+    "I pulled out the liter carton from the freezer that I placed there the day before."
+    MC "Here. I wanted to give you a real Italian dinner experience, so I scrounged around town and found this. I’m told it’s an authentic Italian dessert, a gelato flavor called spumoni."
+    WG "Keisuke! You really did think of everything! I can’t remember the last time I had this."
+    $setAffection("WG", 1)
+    "I handed Alice a large spoon so she could get down to business."
+    show WG neutral
+    WG "Do you have any bowls to serve this in?"
+    MC "Naw, just eat it out of the carton. The flavor combo didn’t sound that great to me so I don’t need any."
+    show WG doubt
+    WG "You expect me to just eat this out of the carton?"
+    MC "Why not? It’s just me and you here, Alice. There’s no need to worry about proper plating, pretense, or judgement from prying eyes."
+    MC "I know you were hesitant to go along with this idea, so I figured you deserved a reward for pushing through and trusting me, despite your doubts."
+    show WG happy
+    WG "You’re very good to me, you know that, right?"
+    MC "What can I say? I try—"
+    show WG doubt
+    WG "Yes yes, bravado aside, shut up for a second, Keisuke. I’m being serious."
+    show WG worried
+    WG "In the beginning, I kept you at arms length, but you persisted. As I’ve continued to grow and been forced to face the day to day issues with that, you’ve been a constant source of reassurance."
+    show WG happy
+    WG "All through my doubts and struggles, particularly with this most recent incident, you’ve been nothing but understanding and accommodating… I’ve never felt so loved."
+    WG "Thank you Keisuke. I’m so glad you’re my boyfriend."
+    "I reached over and leaned in, giving Alice a tender kiss. I stayed in close, nuzzling her forehead against mine after the fact."
+    MC "I don’t ever want you to feel embarrassed about your needs."
+    "I reached down and began to gently rub her belly. Soft, pillowy, and flabby, without any defined firmness. I could tell she wasn’t even full."
+    MC "If you’re hungry and you want more: tell me."
+    MC "If you need help with your clothes: tell me."
+    MC "If you’re ever less than 100% convinced you’re the only one for me: tell me. I want nothing more than to show you how much I love you."
+    show WG aroused
+    WG "I had a feeling that’s what you’d say."
+    "I brought the carton of gelato up to Alice’s face."
+    MC "Now please, enjoy. I insist."
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
+    show WG happy
+    "With renewed eagerness, Alice took the carton of gelato from my hands and proceeded to shovel spoonfuls from the carton into her waiting maw."
+    "It was a sight to behold, the bliss of unreserved indulgence after having denied oneself—"
+    "this, combined with the peace of mind, yielding a relaxed, almost sleepy smile on her face, knowing she was loved and accepted, even as she indulged her voracious appetite."
+    "It didn’t take long for her to devour the entire contents of the carton."
+    WG "{size-6}Urp!{size-6} Excuse me. That was delicious, Keisuke. Although I dare say… I could go for more. Would you like to join me at the dining hall? You still haven’t gotten to eat dinner yourself after all."
+    MC "You are right, I am kind of hungry. Plus, I’d love to! Here, let me get the rest of those dishes first though."
+    "Finally, Alice was ready to be honest with me about just how much she wants to eat. I still wished that she didn’t feel the need to eat ahead of time in order to not feel self-conscious about it in a public setting."
+    "But the fact that she felt comfortable enough with me to tell me that she still felt hungry after eating enough food for over six people was a milestone in our relationship I was happy to be past."
+    jump daymenu
+
+label WG061S:
+    $setProgress("WG", "WG062")
+    "Scene to come in future update. Pardon our dust."
+    jump daymenu
+
+label WG061D:
+    $setProgress("WG", "WG062")
+    $setTime(TimeEnum.DAY)
+    scene Dorm Interior with fade
+    "I woke up early the next day. Needless to say, I had a restless night’s sleep as I agonized over if I had made the right decision or not."
+    "Unfortunately, the dawn of a new day did not bring any further clarity as I had hoped it would."
+    MCT "I mean, what the hell was I supposed to do? Completely give in to my own desires and gain a permanent black mark on myself from Alice?"
+    "That’s what the sensible side of me thought, but the other part of me just screamed {b}YES YOU SHOULD HAVE!{/b}"
+    "Who was I kidding? My decision to take the ‘moral high road’ was simply a lie, tainting any noble purpose I thought it would have served."
+    "I love Alice. I didn’t want to hurt her or make her think less of me, but just plain lying to her about what I really wanted flew in the face of all of that."
+    MCT "This sucks, I need some fresh air."
+    scene Dorm Exterior with fade
+    "I got dressed and walked outside, hoping the cool autumn air would sooth my sordid conscience."
+    "I walked around aimlessly for a while, my mind numb from the unceasing conflict bouncing all over inside my head all night. Since it was so early, I didn’t see a single soul around."
+    "That was until I almost bumped right into someone I knew, barely paying attention to where I was going."
+    show Sakura neutral with dissolve
+    Sakura "Hello, Hotsure-san."
+    MC "Wha? Oh! H-Hello Myoga-san. I didn’t expect to see anyone else around so early."
+    Sakura "I didn’t exactly want to be up this early either, but Aida and I have a dough recipe that we’re working on that needs a lot of prep."
+    Sakura "I have to pull it out of the fridge soon so it has time to do multiple rising steps today in order to be ready. But that’s boring stuff."
+    show Sakura happy
+    Sakura "So… tell me, how did it go last night?"
+    MC "How did what go last night?"
+    show Sakura neutral
+    Sakura "You know…"
+    "Sakura shot me a wink, but when I responded with a perplexed look her demeanor shifted."
+    Sakura "I mean, I don’t need to know the details but… wink wink, nudge nudge."
+    "My face turned beet red at the realization that Sakura was in on it. I had no idea how to even respond."
+    show Sakura happy
+    Sakura "That good, huh?"
+    MC "Uh… actually, nothing happened last night."
+    show Sakura deadpan
+    Sakura "... I’m sorry?"
+    MC "I don’t know what you know, but nothing of the sort happened, if that’s what you think you know."
+    MCT "As if any of that made any sense, you idiot."
+    Sakura "Wait, what? Are you serious?!"
+    show Sakura angry
+    Sakura "After all I did to-"
+    "Sakura cut herself off, despite giving the impression she wanted to say a lot more."
+    show Sakura neutral
+    Sakura "Okay, that was a bit much, but did you really decline Nikumaru-san’s offer?"
+    MC "Well… yeah."
+    show Sakura angry
+    Sakura "Why?!"
+    show Sakura neutral
+    Sakura "Come on Hotsure-san, I mean I know I don’t know you that well, but I could tell that you were into it when I saw you watching us eating cupcakes back in her room."
+    Sakura "If you’re dating a girl her size, it’s not a mystery to anyone else what you’re into."
+    MC "Is it that obvious?"
+    Sakura "Totally, I’m afraid."
+    show Sakura frustrated
+    Sakura "Why couldn’t you just be honest with her?"
+    MC "Ahh! Come on! Don’t put me on the spot like that! Do you think I wanted to lie to her or turn down what could have been the high point of my existence?"
+    MC "I’ll have you know it took a lot to set aside my true feelings just so I could spare her feelings. I know she doesn’t enjoy what’s happening to her. I don’t want her to think I enjoy it at her expense!"
+    MC "I love her… I thought the truth would jeopardize our relationship and that wasn’t a risk I wanted to take."
+    show Sakura neutral
+    Sakura "That’s... actually pretty understandable."
+    Sakura "But how do you think you’re going to maintain that relationship if you don’t feel comfortable being completely honest with her?"
+    MC "I know, I know. I’ve been kicking myself all night and this morning agonizing over that very point."
+    Sakura "Look, you seem like a sweet guy Hotsure-san, but maybe you’re a bit too sweet. You gotta learn when to grab the bull by the horns on occasion."
+    Sakura "Nikumaru-san really likes you, and I think you underestimated just how much she’s willing to do to show she appreciates you."
+    MC "You mean you think she would have really gone for it?"
+    show Sakura deadpan
+    Sakura "I mean probably, but now you’ll never know."
+    MCT "{i}Son of a bitch!{/i} I really squandered that opportunity after all."
+    show Sakura neutral
+    Sakura "Hey, don’t beat yourself up over it too much. These things happen. I’ll put in a good word for you with Nikumaru-san to help smooth things over. Your secret is safe with me."
+    Sakura "Just promise me from now on you’re going to be 100% honest with her about your feelings. You two are really cute together, I want to see it last."
+    MC "Thanks, Myoga-san. I appreciate that."
+    jump daymenu
 
 label WG062:
     "This marks the current end of Alice's route."

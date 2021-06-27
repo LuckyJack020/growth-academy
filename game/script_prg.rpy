@@ -3858,7 +3858,7 @@ label PRG016:
     scene black with fade
     pause 1
     scene Dorm Exterior with fade
-    play music Peaceful
+    play music DayByDay
     "Ten minutes later, I emerged with brushed teeth, combed and trimmed hair, and freshly pulled up pants."
     MCT "Okay. We’re off to cheer like a madman."
     "I started off down toward the main buildings. It was a little cloudy out, but the inner sunshine I felt emanating from my chest cavity lit up my whole perspective."
@@ -4014,7 +4014,7 @@ label PRG016:
     Ryoko "And..."
     show Ryoko happy
     extend " BEGIN!"
-    play music PRG
+    play music PRGChallenge
     hide Ryoko with dissolve
     show PRG worried at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1)
     show Sakura neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
@@ -4247,8 +4247,6 @@ label PRG017:
             jump PRG017_c1_1
         "That's an Azalea, right?" if isEventCleared("GTS002"): #PRG +2
             jump PRG017_c1_2
-        "That's an Azalea, right? (disabled)" if not isEventCleared("GTS002"):
-            pass
 
 label PRG017_c1_1:
     MC "Wow, I never knew that you could draw."
@@ -12579,8 +12577,6 @@ label PRG050:
     menu:
         "Go back and review the first three pages.":
             jump PRG050_c1_1
-        "Keep going. (disabled)" if getSkill("Academics") < 5:
-            pass
         "Keep going." if getSkill("Academics") >= 5:
             "Ignoring the nagging in my stomach, I pressed on. It was probably best to stick to my guns on my answers, and not second guess my original answers."
             jump PRG050_c1_after
@@ -18016,8 +18012,6 @@ label PRG061:
             Nurse "Of course, assumptions are just asking for trouble, so I'll make sure during the ultrasound. That should tell us all we need to know."
             MC "All right. Thank you."
             Nurse "Of course. Now, let's get to work."
-        "Is it safe for us to have sex?(disabled)" if getAffection("PRG") <= 44:
-            pass
         "No. Nothing.":
             MC "No. Nothing."
             Nurse "Right, then. Let's get going."

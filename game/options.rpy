@@ -44,7 +44,7 @@ define gui.about = _p("""
 define build.name = "GrowthAcademy"
 
 ## This option (when set to True) will allow for menu choices that would
-## normally be unable to be clicked, to appear to the player.
+## normally be unable to be clicked, to appear to the player as inactive.
 
 define config.menu_include_disabled = True
 

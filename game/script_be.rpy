@@ -261,8 +261,6 @@ label BE003:
     menu:
         "You uh, want some of my drink?" if getAffection("BE") > 3:
             jump BE003_c1
-        "You uh, want some of my drink? (disabled)" if getAffection("BE") <= 3:
-            pass
         "Maybe grab something to drink then before you get going":
             jump BE003_c2
         "Are you telling me those melons of yours don't produce milk?":
@@ -669,8 +667,6 @@ label BE007:
     menu:
         "I actually know the answer to that." if getAffection("WG") >= 3:
             jump BE007_c1
-        "I actually know the answer to that. (disabled)" if getAffection("WG") < 3:
-            pass
         "I'm not really sure.":
             jump BE007_c2
         "Maybe it's just hidden under all that weight.":
@@ -3031,8 +3027,6 @@ label BE022:
             jump BE022_c1_2
         "(Convince Honoka to come clean)" if getAffection("BE") > 6 and getAffection("WG") > 6:
             jump BE022_c1_3
-        "(Convince Honoka to come clean) (disabled)" if getAffection("BE") <= 6 or getAffection("WG") <=6:
-            pass
         "(Say nothing)":
             jump BE022_c1_4
 
@@ -4694,8 +4688,6 @@ label BE027_c2:
             jump BE027_c2_1
         "The skimpy lingerie." if not getFlag("BE027_c2_2"):
             jump BE027_c2_2
-        "The skimpy lingerie. (disabled)" if getFlag("BE027_c2_2"):
-            pass
         "The sundress.": # BE_Feminine +1
             jump BE027_c2_3
 
@@ -5880,12 +5872,8 @@ label BE033:
             jump BE033_shioriside
         "They're both just games for kids. Relax!" if getSkill("Academics") > 7:
             jump BE033_academics
-        "They're both just games for kids. Relax! (disabled)" if getSkill("Academics") <= 7:
-            pass
         "Both versions bring different parts of the same world to life, focus on the commonalities." if getSkill("Art") > 7:
             jump BE033_art
-        "Both versions bring different parts of the same world to life, focus on the commonalities. (disabled)" if getSkill("Art") <= 7:
-            pass
         "Say nothing":
             jump BE033_silence
 
@@ -7361,8 +7349,6 @@ label BEGTS001:
             GTS "That's exactly right. Have you come to appreciate the planters too?"
             show BE neutral
             BE "Actually, we were just talking. They're nicely maintained, though!"
-        "Oh! Are you checking on your garden?(disabled)" if not isEventCleared("GTS008"):
-            pass
     show BE neutral
     "I could tell that Naomi was scanning her eyes over Honoka with a look of confusion. She clearly had noticed something different."
     show GTS surprised

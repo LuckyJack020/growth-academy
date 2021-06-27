@@ -580,8 +580,6 @@ label GTS008:
     menu:
         "What about one of the flowers you told me about earlier?" if getFlag("GTS008_flowers"): #(Only appears if you learned about the other flowers she's mentioned.)
             jump GTS008_c1
-        "What about one of the flowers you told me about earlier? (disabled)" if not getFlag("GTS008_flowers"):
-            pass
         "Yeah, I can't really help in that department. Maybe some daisies or roses? Sorry.":
             jump GTS008_c2
 
@@ -2458,16 +2456,10 @@ label GTS022:
     menu:
         "Whose woods these are I think I know..." if getSkill("Academics") > 6:
             jump GTS022_frost
-        "Whose woods these are I think I know... (disabled)" if getSkill("Academics") <= 6:
-            pass
         "On a bright, calm day..." if getSkill("Academics") > 4:
             jump GTS022_nijou
-        "On a bright, calm day... (disabled)" if getSkill("Academics") <= 4:
-            pass
         "There was an old drunkard from Devon..." if getSkill("Academics") > 2:
             jump GTS022_limerick
-        "There was an old drunkard from Devon... (disabled)" if getSkill("Academics") <= 2:
-            pass
         "Not very, to tell you the truth.":
             jump GTS022_none
 
@@ -3312,8 +3304,6 @@ label GTS023:
     menu:
         "Aw sick, you made cookies?" if getSkill("Art") > 6:
             jump GTS023_c1_1
-        "Aw sick, you made cookies?(disabled)" if getSkill("Art") <= 6:
-            pass
         "Jeez, I didn't see you coming.":
             jump GTS023_c1_2
 
@@ -5323,8 +5313,6 @@ label GTS034:
     MC "Uh... okay. That's a bit to take in so quickly."
     menu:
         "(Decline her)" if not getFlag("GTS034_c1_1"):
-            jump GTS034_c1_1
-        "(Decline her) (disabled)" if getFlag("GTS034_c1_1"):
             jump GTS034_c1_1
         "Are you sure about this?":
             jump GTS034_c1_2

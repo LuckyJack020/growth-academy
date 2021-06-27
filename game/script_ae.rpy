@@ -1753,28 +1753,18 @@ label AE012_menu:
         "Favorite activity?" if not getFlag("AE012_activity"):
             $setFlag("AE012_activity")
             jump AE012_activity
-        "Favorite activity? (disabled)" if getFlag("AE012_activity"):
-            pass
         "Life goals?" if not getFlag("AE012_goals"):
             $setFlag("AE012_goals")
             jump AE012_goals
-        "Life goals? (disabled)" if getFlag("AE012_goals"):
-            pass
         "Food?" if not getFlag("AE012_food"):
             $setFlag("AE012_food")
             jump AE012_food
-        "Food? (disabled)" if getFlag("AE012_food"):
-            pass
         "Favorite music?" if not getFlag("AE012_music"):
             $setFlag("AE012_music")
             jump AE012_music
-        "Favorite music? (disabled)" if getFlag("AE012_music"):
-            pass
         "Favorite sport?" if not getFlag("AE012_sports"):
             $setFlag("AE012_sports")
             jump AE012_sports
-        "Favorite sport? (disabled)" if getFlag("AE012_sports"):
-            pass
         "That's everything...":
             jump AE012_after
 
@@ -2353,8 +2343,6 @@ label AE015_menu:
         "Watch her a little longer." if getVar("AE015_watch") < 10:
             $setVar("AE015_watch", getVar("AE015_watch") + 1)
             jump AE015_watch
-        "Watch her a little longer. (disabled)" if getVar("AE015_watch") >= 10:
-            pass
         "Help her out.":
             jump AE015_aftermenu
 
@@ -6622,8 +6610,6 @@ label AE032:
         "You aren't.":
             MC "That's... true, unfortunately. You're not a very comfortable person."
             jump AE032_c1_after
-        "You are to me. (disabled)" if getSkill("Art") < 3:
-            pass
         "You are to me." if getSkill("Art") >= 3:
             jump AE032_c1_3
 
@@ -10170,24 +10156,14 @@ label AE047_c1_menu:
     menu:
         "How are you with children?" if not getFlag("AE047_c1_1"): # +2
             jump AE047_c1_1
-        "How are you with children? (disabled)" if getFlag("AE047_c1_1"):
-            pass
         "Can you lie on your back?" if not getFlag("AE047_c1_2"):
             jump AE047_c1_2
-        "Can you lie on your back? (disabled)" if getFlag("AE047_c1_2"):
-            pass
         "How does it feel?" if not getFlag("AE047_c1_3"): # +1
             jump AE047_c1_3
-        "How does it feel? (disabled)" if getFlag("AE047_c1_3"):
-            pass
         "Anything positive?" if not getFlag("AE047_c1_4"):
             jump AE047_c1_4
-        "Anything positive? (disabled)" if getFlag("AE047_c1_4"):
-            pass
         "Ever skip leg day?" if not getFlag("AE047_c1_5"): # -1
             jump AE047_c1_5
-        "Ever skip leg day? (disabled)" if getFlag("AE047_c1_5"):
-            pass
         "Nothing else.":
             MC "I think that should be it. Everything I feel would be polite to ask, anyways."
             "Nodding, Shiori-chan leaned back into the weight of her own puffy ass, acting as a sort of natural cushion."

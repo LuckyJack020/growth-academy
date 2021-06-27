@@ -1312,8 +1312,6 @@ label RM002_choice:
             jump RM002_c1_1
         "What are you doing, exactly?" if not getFlag("RM002_c1_2"):
             jump RM002_c1_2
-        "What are you doing, exactly? (disabled)" if getFlag("RM002_c1_2"):
-            pass
         "This is a stupid idea.":
             jump RM002_c1_3
 
@@ -1355,8 +1353,6 @@ label RM002_c1_after:
     menu:
         "Let her in" if not getFlag("RM002_c1_1"):
             jump RM002_c2_1
-        "Let her in (disabled)" if getFlag("RM002_c1_1"):
-            pass
         "Signal Daichi":
             jump RM002_c2_2
         "Make up a story":
