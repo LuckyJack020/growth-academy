@@ -7255,19 +7255,19 @@ label FMG048:
 
     scene Roof with fade
     Dad "Your mother was telling me you’ve been having trouble with a bully at school lately, right?"
-    MC "Yeah... All he does is make fun of me!"
+    AltMC "Yeah... All he does is make fun of me!"
     Dad "Hm. I see. How does it make you feel?"
-    MC "Bad. His words hurt, I start doubting myself."
+    AltMC "Bad. His words hurt, I start doubting myself."
     Dad "Let me show you something... What is this?"
-    MC "It’s a thousand yen note."
+    AltMC "It’s a thousand yen note."
     Dad "That’s correct and its value is?"
-    MC "A thousand... Where are you going with this, Dad?"
+    AltMC "A thousand... Where are you going with this, Dad?"
     Dad "Now if I crumble it up... like this! What value does it have now?"
-    MC "Uh... a thousand."
+    AltMC "Uh... a thousand."
     Dad "Right again, if I throw it on the ground. What is it worth now?"
-    MC "A thousand."
+    AltMC "A thousand."
     Dad "If I stomp on the bill like so, what is its value?"
-    MC "It’s a thousand..."
+    AltMC "It’s a thousand..."
     Dad "Good. Remember that, Kei. Whatever happens in your life, however people treat you. You are still as valuable as before. Don’t let these meaningless words decide who or what you are."
     pause 3
     MC "So do you see what I’m saying? Don’t let this stuff mess with you. You know who you are."
@@ -7742,6 +7742,177 @@ label FMG050:
     jump daymenu
 
 label FMG051:
+    $setProgress("FMG", "FMG052")
+    $setTime(TimeEnum.DAY)
+    scene Lockers with fade
+    "Today was the first day in the gym with Akira and her new size. I told myself it wouldn’t be {i}that{/i} bad... and it really wasn’t. Of course, I wasn’t able to keep up with her but with the routine she gave me today, I knocked it out of the freaking park!"
+    $setSkill("Athletics", 2)
+    show FMG happy with dissolve
+    FMG "Good job, dude! Fifty mountain climbers is a lot for anyone. Not to mention you held the plank for two minutes. You’ve come a long way!"
+    $setAffection("FMG", 2)
+    MC "T-Thanks. My legs hurt a little and I’m ready to collapse after that plank. I-It felt good though. C...Can I get some of your water, I’m out."
+    show FMG neutral
+    FMG "Sure. You need to get a bigger water bottle, five hundred milliliters is nothing."
+    "When Akira handed me her jug of water I noticed for the first time how big her hands were, and so did she."
+    FMG "Wow, you really are small compared to me now, Kei-kun. Can you open your hand? I want to see the difference."
+    MC "I was thinking the same thing."
+    "We put our hands together and the difference was nothing but impressive."
+    show FMG happy
+    FMG "Ha, my hand is like twice the size of yours. Kei-kun, I don’t think you understand how cool it is to be this big."
+    show FMG flex
+    FMG "I love it!"
+    MC "I’m happy to see you enjoy it. So many people hate their factors, like some I understand. I would not want to be stuck with massive feet. Could you imagine the clown jokes??? No, thank you."
+    show FMG neutral
+    FMG "Totally, agree with that. You’d think with the other muscle students or all the giants we have walking around they’d enjoy it more... Actually, Now that I think about it, I’m surprised we don’t have a bullying problem."
+    MC "That’s... That’s a really good point."
+    MC "Counterpoint, couldn’t some weight gain students simply sit on their bullies? Assert dominance by suffocation."
+    show FMG surprised
+    FMG "Speaking of fat people, I forgot to call Alice!"
+    show FMG sad
+    FMG "I’m never going to hear the end of this..."
+    MC "It’s two o’clock, she won’t be that mad."
+    FMG "Let’s hope."
+    "Akira pulled out her phone and stared at it for a few seconds."
+    FMG "Sigh... didn’t even realize how small my phone was yesterday. With these big ass hands, I’m going to need to order a larger one."
+    MC "It could be worse. You could’ve crushed it like the doorknob."
+    show FMG happy
+    FMG "Heh... Oops..."
+    show FMG neutral
+    FMG "Welp. Pray Alice is in a good mood."
+    MC "Fingers are crossed."
+    FMG "Heh, Hey, Alice. Sorry for not calling you back... I kinda forgot."
+    show FMG happy
+    FMG "It’s not my fault! Kei distracts me, he always wants to go to the gym. I can’t say no to a good time!"
+    MCT "Okay, now THAT is bullshit."
+    show FMG sad
+    FMG "You can’t do it today?... No, it’s fine. I really need these clothes. The school gave me a few more days to get something that fits."
+    show FMG neutral
+    FMG "Huh? Saturday? Yeah, that should work... Cool, thanks again. Bye."
+    FMG "On the bright side, that phone call could've gone worse. Buuuut, now I don’t know what we should do to kill time."
+    MC "Want to go to the woods and see what you can smash?"
+    show FMG flex
+    FMG "Absolutely."
+
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+    scene Lake Road with fade
+    show FMG sad with dissolve
+    FMG "Damn, it won't be light out much longer. Sucks that we’ll have to keep this short for today."
+    MC "It will be fun either way. We both want to see what you can do at this size. Now, madam, would you care to join me for a walk in the woods to find rocks to crush?"
+    show FMG happy
+    FMG "Eh, I’ll come if you don’t call me madam again."
+    "I laughed a little at it."
+    FMG "You might want to buy a joke book and learn some new material if this is what you find funny."
+    MC "BuY a JoKe BoOk..."
+    show FMG neutral
+    FMG "You get butthurt so fast, haha."
+    MC "YoU gEt BuTtHuRt..."
+    show FMG flex
+    FMG "Does someone need a hug? I haven’t given you one since I got this big."
+    MC "Wow, that’s a great idea! Let’s like totally not do that!"
+    MC "..."
+    MC "Actually, Can... Can I save that hug for later? I-If that’s okay with you... obviously."
+    show FMG happy
+    FMG "I’ll get back to you on that. Come on, let’s get moving. I have things to smash!"
+    "Yet again, without asking she picked me up with one arm and carried me into the woods."
+    MC "I think you enjoy this more than me."
+    show FMG flex
+    FMG "What gave it away?"
+    MC "I can’t say, maybe the fact you do it all the time now... keep doing it though, it’s pretty fun."
+    FMG "It would be my pleasure..."
+
+    scene black with fade
+    pause 1
+    scene Woods with fade
+    MC "How about one of these trees? Doesn’t look like it would take much for you to uproot."
+    show FMG neutral with dissolve
+    FMG "Hm, I was thinking we start small and work my way up."
+    FMG "Something like... something like... THAT!"
+    MCT "Start small and work your way up, eh? You choose the rock the size of a cinderblock."
+    MC "Do you plan to like wrap your arms around it and squeeze it till it pops?"
+    FMG "Um... No? I was going to take my left hand and place it here and then take my right hand and place it here."
+    MC "I felt a LOT of sass coming from that sentence."
+    show FMG happy
+    FMG "You asked a horrible question! I had to be sassy. Would you like to crush the rock for our entertainment?"
+    MC "I might need a couple of years to build the muscle mass you have. Ah, and I need to figure out how to grow taller since I guess that’s a thing for you."
+    show FMG flex
+    FMG "It’s a pretty sweet bonus."
+    show FMG neutral
+    FMG "Okay, okay, no more talking. I need to focus if I want to smash this thing."
+    MC "I guess, I can wait till after the show."
+    FMG "Thank you."
+    FMG "Now, then..."
+    "Akira stuck her elbows out and began to tighten her grip around the rock. Her biceps starting to bulge, her veins were beginning to show around her forearms as well as her biceps."
+    show FMG flex
+    FMG "Come on!"
+    "With each passing second, her grip tightened. Her frustration was growing however when she noticed she wasn’t making any progress."
+    show FMG angry
+    FMG "Argh! I didn’t think it would be this hard!"
+    "And there it was... a crack right down the middle."
+    show FMG happy
+    FMG "Yes!"
+    MCT "To think... that could be me one day."
+    MC "Smash it to pieces, Akira! You can do it!"
+    show FMG flex
+    FMG "I’m trying! I just need to push myself a little harder!"
+    FMG "Hrgh!!!"
+    "She had pushed herself so much to crush this thing she ended up pumping herself up, her arms looked even bigger as she began to make more cracks throughout the rock."
+    show dummy with hpunch
+    FMG "EEEEEERGH!"
+    show dummy with hpunch
+    FMG "GAAAH!"
+    "The rock had finally gave and shattered into pieces between her hands."
+    show FMG happy
+    FMG "Ha...Hahaha! I FREAKING DID IT! Did you see me!?!?"
+    MC "That was nuts! I knew you could do it. Let’s go, Akira! That’s what I’m talking about!"
+    FMG "Hell yeah! Chest bump?"
+    MCT "Hm, I could get sent flying into the ground... "
+    MC "Uhhh... Absolutely!"
+    "We both jumped into the air and bumped our chests. Of course, Akira landed on her feet, however, I wasn’t that lucky."
+    show dummy with hpunch
+    play sound Thud
+    show FMG surprised
+    FMG "Oh my god, are you okay, Kei-kun? I’m so sorry!"
+    MC "I’m good, I’m good. My broken bones cushioned my fall."
+    FMG "I’ll carry you to the nurse, I-I didn’t mean to hurt you."
+    MC "Woah, relax Akira, I was joking around, I’m fine. That was awesome."
+    show FMG sad
+    FMG "Please, don’t joke about that stuff, Kei. You really had me worried."
+    MC "O-Oh... Sure, I won’t do that again. I didn’t think you’d take it so hard."
+    FMG "It’s fine. Could we get going? It’s getting late."
+    MC "Yeah, no problem."
+    MCT "What happened? She’s like a totally different person."
+    MC "Do you want to talk about something? You’ve never acted like this before."
+    FMG "Not at the moment, no. I-I just don’t like seeing people I care about getting hurt because of me being careless."
+    MC "Back it up, Akira. You- WE were excited about what you did. I mean, look... you crushed a rock with your bare hands. That’s freaking cool. WE got lost in the excitement. This isn’t on you."
+    MC "Tell you what, I know you said you’re scared of hurting me now, but let’s work together to make you more comfortable in your body. I don’t want you to live in fear of hurting me. I want to be around you every chance I get."
+    MC "I didn’t start really living my life till I met you. The joy and excitement you bring me are unlike anything I’ve experienced before. I don’t want to lose that."
+    show FMG sad
+    FMG "..."
+    show FMG happy
+    FMG "Thank you, Keisuke. I...I really needed to hear that."
+    MC "I ain’t ever gonna stop loving you. Don’t forget that."
+    FMG "I won’t."
+    show FMG flex
+    FMG "How about I give you the special Akira treatment and carry you back to campus?"
+    show FMG happy
+    FMG "I won’t even charge you this time!"
+    MC "You’ve been charging me? You haven’t even been asking me if you could pick me up! This is highway robbery!"
+    show FMG neutral
+    FMG "You don’t owe me that much."
+    MC "Breh. I shouldn’t owe you at all. I’m walking back, this is ridiculous."
+    FMG "I didn’t say you could do that, come here!"
+    MC "AH!"
+    MC "Unhand me, woman! You can’t do this! I won’t be put into debt because of your lies!"
+    show FMG aroused
+    FMG "You can pay me back some other way..."
+    show FMG flex
+    extend " When I’m more comfortable at this size, that is."
+    MCT "The future is looking bright, Keisuke Hotsure!"
+    jump daymenu
+
+label FMG052:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

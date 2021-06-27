@@ -15227,8 +15227,8 @@ label WG061:
     show WG haughty
     "Alice was keenly scanning the kitchen prep counter to assess the ingredients and kitchenware. I could tell she was rather intrigued by the assortment I had laid out."
     show WG neutral
-    WG "Curious… What exactly do you plan on having us make?"
-    MC "Well I was thinking of doing something that involved a more hands on approach, for an authentic experience. I asked Aida if she knew of anything like that and she suggested…"
+    WG "Curious... What exactly do you plan on having us make?"
+    MC "Well I was thinking of doing something that involved a more hands on approach, for an authentic experience. I asked Aida if she knew of anything like that and she suggested..."
     "I fumbled around for the recipe sheet she had printed out for me."
     MC "Ah, here we go— Pasta Carbonara."
     show WG neutral-2
@@ -15268,7 +15268,7 @@ label WG061:
     "Alice had no trouble with that step, being well accustomed to optimally seasoning her food as she saw fit. The dough on the other hand was a different story."
     show WG doubt
     WG "Keisuke, you left this as a complete mess, what am I supposed to do with this?"
-    MC "It’s fine, just mix it all around and knead it up, until it… well looks like dough."
+    MC "It’s fine, just mix it all around and knead it up, until it... well looks like dough."
     WG "Alright, if you say so."
     "Alice fussed around with it, mushing it back and forth for a bit, bringing it into a kind of ugly, shaggy looking state."
     show WG stern
@@ -15288,19 +15288,19 @@ label WG061:
     MC "Well hopefully we’re going to put all that knowledge to good use."
     show WG neutral
     MC "Okay, next we need to make the sauce. It goes in last, but Aida said to make it now because you need to add it at exactly the right time and won’t be able to do it fast enough if you start late."
-    MC "Now let’s see… separate six egg yolks."
+    MC "Now let’s see... separate six egg yolks."
     WG "I see, we’re going with the authentic version. In America, they often try to pass this dish off as carbonara with a cream sauce, making it as bland as any standard fair alfredo dish."
     MC "Really? That sucks. I’m glad I specifically asked Aida for the most authentic version possible when she offered to make an easier version."
     show WG happy
     WG "A man after my own heart it would seem."
     MC "What can I say? You’re a very lucky woman to have a guy like me."
     show WG doubt
-    WG "Yes... oh {i}soooo{/i} lucky…"
+    WG "Yes... oh {i}soooo{/i} lucky..."
     show WG aroused
     WG "Although, I will admit, your confidence is not entirely misplaced."
     show WG haughty
     WG "Just don’t get too cocky."
-    "Alice articulated her last point with a gentle {i}boop{/i} on my nose with her finger, letting me know I was dancing very close to a line… and that she liked it."
+    "Alice articulated her last point with a gentle {i}boop{/i} on my nose with her finger, letting me know I was dancing very close to a line... and that she liked it."
     $setAffection("WG", 1)
     show WG neutral
     MC "Heh, I’ll try not to, but I can’t promise I’ll try too hard."
@@ -15311,7 +15311,7 @@ label WG061:
     MC "Uhh, do you need some help?"
     show WG stern
     WG "I can manage just fine."
-    MCT "Yikes, alright, if you got it handled…"
+    MCT "Yikes, alright, if you got it handled..."
     "But she didn’t have it handled. Alice proceeded to gently tap the egg against the counter only to barely cause it to crack. A similar result was seen after a few more light taps."
     show WG angry
     "Visibly impatient, Alice decided to up the ante—"
@@ -15438,7 +15438,7 @@ label WG061:
     WG "But yes, I must admit, I am also impressed with my handiwork."
     MC "Okay, so this is about done. Go ahead and dump all that pasta into the pot, just be careful not to let it splash. Fresh pasta only takes like three minutes to cook."
     show WG neutral
-    MC "Well, that didn’t take very long. Let’s kill the heat and drain it in the sink, just save some of the pasta water… for whatever reason."
+    MC "Well, that didn’t take very long. Let’s kill the heat and drain it in the sink, just save some of the pasta water... for whatever reason."
     WG "It carries starch from the pasta, chefs use it to help with the consistency of the sauce."
     MC "Hmm, interesting. I guess that makes sense. Whoa! Those pasta noodles really swelled up. That looks like over twice as much as we started with."
     WG "That does tend to happen with starchy foods."
@@ -15467,13 +15467,13 @@ label WG061:
     "Taking a forkful, I watch as Alice munched on the soft and creamy dish I helped her make, her jowly cheeks swashing back and forth as she moved the food around her tongue, intent on fully experiencing the flavor."
     MC "...So? What’s the verdict?"
     show WG neutral-2
-    WG "Well… it’s just okay."
+    WG "Well... it’s just okay."
     WG "The pasta is a tad bit firm, slightly overcooked I’m afraid. The sauce has a slight bit of grit to it, which means it probably got too hot, or I didn’t stir it fast enough."
     WG "The amount of salt seems appropriate, but I think I added too much black pepper."
     MC "Well, doesn’t it taste all the more better knowing that this was something you made yourself?"
     show WG neutral
-    WG "To be honest… not really."
-    MC "Oh… So I guess this was a bit of a bust then?"
+    WG "To be honest... not really."
+    MC "Oh... So I guess this was a bit of a bust then?"
     show WG neutral
     WG "Well, I wouldn’t say that entirely, Keisuke. Admittedly, the process itself was challenging and occasionally fun in its own right."
     show WG neutral-2
@@ -15481,7 +15481,7 @@ label WG061:
     show WG haughty
     WG "Ultimately though, I prefer my culinary experiences to be as optimal as possible, so I would rather defer to the professionals."
     show WG aroused
-    WG "But if you would like to cook for me again… I would gladly accept."
+    WG "But if you would like to cook for me again... I would gladly accept."
     MC "Is that so? Well, I’ll have to take you up on that offer."
     "I’d be lying if I said I wasn’t disappointed that Alice didn’t exactly swoon over the dish we made."
     "But in retrospect, I don’t know why I would have expected two novice chefs to create something that could fully satisfy a pallet as sophisticated as Alice’s."
@@ -15491,11 +15491,11 @@ label WG061:
     MC "Well, I’ll guess I’ll start on the dishes. You held up your end of the bargain, so it’s only fair I do mine."
     "Pots, pans, stirring spoons, bowls— it’s amazing how much of a mess cooking anything makes. I worked my way through all the dishes. It didn’t seem like too much time to be honest, but it was a bit tedious."
     "Having finally finished the dishes, save for our serving dishes and silverware, I walked back over to Alice."
-    MCT "Wait… WHAT!?"
+    MCT "Wait... WHAT!?"
     play music Bittersweet
-    MC "Alice… I thought you didn’t like it…"
+    MC "Alice... I thought you didn’t like it..."
     show WG worried
-    WG "I didn’t say it was that bad… I was hungry. I guess I still haven’t really caught up since I denied myself a couple of days ago."
+    WG "I didn’t say it was that bad... I was hungry. I guess I still haven’t really caught up since I denied myself a couple of days ago."
     "Alice had eaten every bit of it from the punch bowl. It was completely clean, save for some smears of sauce. All that was left was the small serving left in my bowl."
     "And even after all of that, I could tell she was still hungry."
     MC "Would you like the rest of mine?"
@@ -15503,16 +15503,16 @@ label WG061:
     WG "Do you think I’m some kind of food crazed maniac that has no self control?!"
     MC "No, I think as your boyfriend I should be as understanding as possible and attentive to your needs. Right now you’re hungry, so I want to offer you my food."
     show WG sad
-    WG "That’s… That’s very thoughtful of you Keisuke. I’m sorry I got mad."
+    WG "That’s... That’s very thoughtful of you Keisuke. I’m sorry I got mad."
     show WG neutral
-    WG "I… I would like more, if you would let me have yours."
+    WG "I... I would like more, if you would let me have yours."
     MC "Please, I insist."
     "Alice proceeded to finish off the rest of my moderate portion I had served for myself. I knew it would not be enough to satisfy her, but it pained me to see her deny herself as her body cried out for more."
     MC "Oh, hey! I almost forgot something. I got something special for you."
     play music Peaceful
     show WG surprised-2
     WG "Oh? What is it?"
-    MC "Let’s see here, looks like it got buried in the back of the freezer somewhere… Ah! Here it is."
+    MC "Let’s see here, looks like it got buried in the back of the freezer somewhere... Ah! Here it is."
     "I pulled out the liter carton from the freezer that I placed there the day before."
     MC "Here. I wanted to give you a real Italian dinner experience, so I scrounged around town and found this. I’m told it’s an authentic Italian dessert, a gelato flavor called spumoni."
     WG "Keisuke! You really did think of everything! I can’t remember the last time I had this."
@@ -15533,7 +15533,7 @@ label WG061:
     show WG worried
     WG "In the beginning, I kept you at arms length, but you persisted. As I’ve continued to grow and been forced to face the day to day issues with that, you’ve been a constant source of reassurance."
     show WG happy
-    WG "All through my doubts and struggles, particularly with this most recent incident, you’ve been nothing but understanding and accommodating… I’ve never felt so loved."
+    WG "All through my doubts and struggles, particularly with this most recent incident, you’ve been nothing but understanding and accommodating... I’ve never felt so loved."
     WG "Thank you Keisuke. I’m so glad you’re my boyfriend."
     "I reached over and leaned in, giving Alice a tender kiss. I stayed in close, nuzzling her forehead against mine after the fact."
     MC "I don’t ever want you to feel embarrassed about your needs."
@@ -15551,7 +15551,7 @@ label WG061:
     "It was a sight to behold, the bliss of unreserved indulgence after having denied oneself—"
     "this, combined with the peace of mind, yielding a relaxed, almost sleepy smile on her face, knowing she was loved and accepted, even as she indulged her voracious appetite."
     "It didn’t take long for her to devour the entire contents of the carton."
-    WG "{size-6}Urp!{size-6} Excuse me. That was delicious, Keisuke. Although I dare say… I could go for more. Would you like to join me at the dining hall? You still haven’t gotten to eat dinner yourself after all."
+    WG "{size-6}Urp!{size-6} Excuse me. That was delicious, Keisuke. Although I dare say... I could go for more. Would you like to join me at the dining hall? You still haven’t gotten to eat dinner yourself after all."
     MC "You are right, I am kind of hungry. Plus, I’d love to! Here, let me get the rest of those dishes first though."
     "Finally, Alice was ready to be honest with me about just how much she wants to eat. I still wished that she didn’t feel the need to eat ahead of time in order to not feel self-conscious about it in a public setting."
     "But the fact that she felt comfortable enough with me to tell me that she still felt hungry after eating enough food for over six people was a milestone in our relationship I was happy to be past."
@@ -15583,16 +15583,16 @@ label WG061D:
     Sakura "I didn’t exactly want to be up this early either, but Aida and I have a dough recipe that we’re working on that needs a lot of prep."
     Sakura "I have to pull it out of the fridge soon so it has time to do multiple rising steps today in order to be ready. But that’s boring stuff."
     show Sakura happy
-    Sakura "So… tell me, how did it go last night?"
+    Sakura "So... tell me, how did it go last night?"
     MC "How did what go last night?"
     show Sakura neutral
-    Sakura "You know…"
+    Sakura "You know..."
     "Sakura shot me a wink, but when I responded with a perplexed look her demeanor shifted."
-    Sakura "I mean, I don’t need to know the details but… wink wink, nudge nudge."
+    Sakura "I mean, I don’t need to know the details but... wink wink, nudge nudge."
     "My face turned beet red at the realization that Sakura was in on it. I had no idea how to even respond."
     show Sakura happy
     Sakura "That good, huh?"
-    MC "Uh… actually, nothing happened last night."
+    MC "Uh... actually, nothing happened last night."
     show Sakura deadpan
     Sakura "... I’m sorry?"
     MC "I don’t know what you know, but nothing of the sort happened, if that’s what you think you know."
@@ -15603,7 +15603,7 @@ label WG061D:
     "Sakura cut herself off, despite giving the impression she wanted to say a lot more."
     show Sakura neutral
     Sakura "Okay, that was a bit much, but did you really decline Nikumaru-san’s offer?"
-    MC "Well… yeah."
+    MC "Well... yeah."
     show Sakura angry
     Sakura "Why?!"
     show Sakura neutral
@@ -15615,7 +15615,7 @@ label WG061D:
     Sakura "Why couldn’t you just be honest with her?"
     MC "Ahh! Come on! Don’t put me on the spot like that! Do you think I wanted to lie to her or turn down what could have been the high point of my existence?"
     MC "I’ll have you know it took a lot to set aside my true feelings just so I could spare her feelings. I know she doesn’t enjoy what’s happening to her. I don’t want her to think I enjoy it at her expense!"
-    MC "I love her… I thought the truth would jeopardize our relationship and that wasn’t a risk I wanted to take."
+    MC "I love her... I thought the truth would jeopardize our relationship and that wasn’t a risk I wanted to take."
     show Sakura neutral
     Sakura "That’s... actually pretty understandable."
     Sakura "But how do you think you’re going to maintain that relationship if you don’t feel comfortable being completely honest with her?"

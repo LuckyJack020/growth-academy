@@ -17629,6 +17629,334 @@ label AE076_c1_after:
         jump daymenu
 
 label AE077:
+    #(At the moment, for Nurse1 and Nurse2, just use Nurse)
+    $setProgress("AE", "AE078")
+    $setTime(TimeEnum.EVE)
+    scene Nurse Office with fade
+    MC "Haah, okay."
+    "As I entered the nurse's office, I was hit with the smell of freshly brewed coffee and the gleam of the bright office lights above."
+    "I was admittedly pretty nervous. Shiori would begin the process of walking again, and I made sure that I could be present to help out. Still, I wasn’t too sure of what I was doing, but thankfully Nurse Kiyomi had guaranteed me she’d help guide me where possible."
+    "From behind the table, Nurse Kiyomi was watching the morning news on the overhead television with distress as she paused in painting her nails."
+    "\"-victim of Tokyo's black tar heroin epidemic; the first of its kind. Police say she is the most recent in a line of missing peoples to have been found overdosed-\""
+    "{i}click{/i}"
+    Nurse "Ugh, god, I can’t watch any more." #Nurse1
+    "As she turned off the T.V. I greeted her with a smile and a polite bow, which she reciprocated before giving me a wave with a clack of her nails."
+    MC "Good afternoon, Nurse Kiyomi."
+    Nurse "Hey, Hotsure-san. You’re here early. Here to see Matsumoto-san today?" #Nurse1
+    MCT "Did... she forget about the appointment we scheduled?"
+    MC "Yeah, that was the plan."
+    Nurse "Sure thing. There are a few other students visiting her at the moment, but no doubt you’ll get to see her." #Nurse 1
+    MC "A few other students? Who all is-?"
+    "I cut myself off immediately as I simply took a deep breath and sighed."
+    MC "She’s working, isn’t she?"
+    Nurse "Triiiied to stop her." #Nurse1
+    MC "She let you try?"
+    Nurse "Not without an injunction." #Nurse 1
+    MC "Oof, gotta get those submitted between 3:00 and 3:05."
+    Nurse "Your relationship is weird." #Nurse 1
+    "I snickered to myself and shook my head as I headed past the curtained area over to the beds. There, Shiori lay in bed with three other student council members surrounding her, along with a few neatly organized stacks of folders."
+    show Minori neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
+    Minori "We’re collecting the signatures now, ma’am."
+    AE "Good. I requested that his form be ready by five, and I will get it by five even if I have to walk there myself."
+    Minori "Yes, ma’am."
+    AE "Yoritaka-san, ensure that the financial committee is {i}again{/i} reminded that cutbacks to the art club from the student council fund do {i}not{/i} mean defunding."
+    CMF "Yes, ma’am."
+    MC "Minori-chan, schedule the president for a talk with me in twenty seconds."
+    Minori "Yes, sir. Matsumoto-san, you’re scheduled to- wait, huh?"
+    "Minori did a double take as she looked at me, and then to her clipboard as she clutched it close in a flustered manner."
+    show Minori embarrassed
+    Minori "Oh! Hotsure-san! Sorry, just some council business, we’ll leave you to your alone time!"
+    hide Minori with dissolve
+    show AE neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with move
+    "After a light bow, she and the other council members left before I was able to get a word in edgewise. With a chuckle, I turned to Shiori with a smile."
+    MC "Eheheh, so, what’s up?"
+    show AE neutral-smug
+    AE "..."
+    MC "Wow, you’re really gonna wait twenty seconds aren’t you?"
+    AE "... You have an appointment?"
+    MCT "Well, good to see her sense of humor wasn’t damaged any."
+    MC "How’s the ankle?"
+    show AE neutral
+    AE "A bit sore, but I think I should be fine. I walked over to the counter just this morning to check and make sure nothing was amiss with my file."
+    MC "Ahhh, c’mon, you need rest!"
+    AE "I certainly have been resting. I’ve been stationary for enough time to where I can {i}feel{/i} myself getting bigger because of it."
+    MC "Mental rest too."
+    AE "... Well, that’s certainly out of the question."
+    MC "Baaaah."
+    AE "I still have responsibilities. Besides, I must do what I can to keep things running while I’m incapacitated, even during the litany of questions from the medical team assigned to me and central administration."
+    MC "Huh? Wait, why would-"
+    Nurse "Excuse me, you two!" #Nurse 1
+    "Before I could finish my question, Nurse Kiyomi pulled open the curtain to look in on us."
+    Nurse "You two aren’t smoochin’ are ya?" #Nurse 1
+    AE "Oh come now, Nurse Kiyomi; I figured you thought better of me-"
+    Nurse "Feh! Just a little joke, is all. Besides, we gotta get you moving to the therapy building." #Nurse1
+    MC "Do you need me to help Shiori get there? I’ll do my best to help like you asked, but I’m admittedly a little lost."
+    Nurse "Hm? When did I say that?" #Nurse 1
+    MC "J-Just yesterday ma’am."
+    MCT "Did she forget?"
+    Nurse "..." #Nurse 1
+    Nurse "Ahhhh, okay. That explains a few things!" #Nurse 1
+    MC "What does?"
+    "She put her hand up to her mouth and giggled, loosening her stance a bit as she dismissively waved at me."
+    Nurse "Aaaactually, you’ll be dealing with my sister for that." #Nurse 1
+    MC "U-Um... okay, cool."
+    AE "I don’t see how I’m supposed to walk all the way over there in my current condition."
+    MC "Grab my arm and lean against me, I can-"
+    AE "N-No, that won’t be necessary."
+    MC "You sure? I don’t want you messing up your ankle even more; you remember how nurse-"
+    AE "It’s fine."
+    "Her response was quick and blunt. One which told me all I needed to know."
+    MC "...All right, all right, I gotcha, you’re fine."
+    AE "..."
+    AE "I’m sorry, it’s just, I’m a bit worried."
+    MC "It’s gonna be okay. C’mon, let’s head over to the physical therapy building."
+    MC "Here, let me help you."
+    "I leaned forward and pulled Shiori up and draped her arm over my shoulder. Walking together like this I was able to help take some pressure off her injury, and we managed to walk at a decent enough rate toward the physical therapy building."
+    AE "...Thanks."
+    "Her arm shook as she grabbed tightly onto my arm, which I tensed for support. Then, with Nurse Kiyomi in tow and supporting Shiori’s back with her hand, we made our way over to the physical therapy room."
+    scene black with fade
+    pause 1
+    scene Gym with fade
+    "The building we went to looked like a modified gym, the walls surrounded by mirrors, the floors covered in a soft padding, and from up above a chassis held ropes overhead which hung down and buckled into various harnesses. There, waiting with a few men, was..."
+    Nurse "Ah, hello, Matsumoto-san." #Nurse 2
+    MC "Huh? Nurse Kiyomi?"
+    #Show Nurse1
+    MC "W-Wait-!"
+    Nurse "Surprise!" #Nurse 1
+    Nurse "Hm? Surprise?" #Nurse 2
+    Nurse "It seems like Hotsure-san here didn’t know we were different people." #Nurse 1
+    Nurse "Looks like someone didn’t pay attention to your fingernails, sister." #Nurse 2
+    MC "Wait, the two of you are... twins? I thought Tomo and I were the only ones here."
+    Nurse "Ahh, very true! You and Tomo-chan are twins as well, right?" #Nurse 2
+    MC "Y-Yeah."
+    show AE neutral-eyebrow with dissolve
+    AE "Hotsure-san... did you really not know there were two nurses here?"
+    MC "Um..."
+    show AE neutral
+    AE "The school nurse and the head nurse of the hospital facility are sisters."
+    MC "I see."
+    MCT "This place really is part wonderland, part soapland, isn’t it?"
+    Nurse "So, Matsumoto-san, are you ready to begin?" #Nurse 2
+    AE "Oh. I... suppose, yes."
+    Nurse "Understood." #Nurse 2
+    "With a gentle smile, Nurse Kiyomi ordered her assistants to surround Shiori as she gave her a few tasks; walking to a rope she would grab, holding up her hands for leverage, and other manner of exercises."
+    AE "Ugh, a-alright. I think I got the h-hip movement right, at least."
+    Nurse "You’re doing a phenomenal job, Matsumoto-san. Now, let go of the rope and walk towards me until I tell you to stop." #Nurse 2
+    AE "If you insist."
+    "She began to walk with an effeminate sashay; her back straight as a board as she put one foot in front of the other, her hips swinging with an exaggerated bell-like movement as she put her arms out for balance."
+    AE "Mmfhg! Haah, what the... rrgh! How am I supposed to-? Nurse Kiyomi, are you sure this method is sensible? It’s rather... onerous."
+    Nurse "Well, Matsumoto-san, if you’re finding this too difficult, we can instead provide you with a walker to-" #Nurse 2
+    show AE neutral-annoyed with hpunch
+    AE "N-No!"
+    Nurse "..." #Nurse 2
+    AE "..."
+    show AE embarrassed
+    AE "No, no, I... I should be fine."
+    show AE neutral
+    AE "Let’s continue."
+    MCT "Fuck. I really hate seeing her struggle like this..."
+    MC "C-Can I jump in and help?"
+    Nurse "Hm... she may respond better if you were to give some instructions. Okay, so, the next few steps-" #Nurse1
+    "Nurse Kiyomi went over what to do as the other gave Shiori more instructions with the help of the other assistants present. Every few sentences, however, I would glance over at Shiori to observe."
+    "I watched attentively as Shiori shifted her stance somewhat and made her way back down the walkway. Her pace was very slow, but showing moderate improvement once she had figured out how to properly utilize the rope draped from the track on the ceiling to help balance herself as she walked."
+    Nurse "Hotsure-san." #Nurse1
+    Nurse "Do you know what you’re supposed to do?" #Nurse 1
+    MC "Yeah, I think I got it. I spent some time looking stuff up last night."
+    Nurse "I bet. I’d say your eyes are probably bloodshot, but y’know, can’t see ‘em." #Nurse1
+    MC "Ahh, it’s a style choice, c’mon."
+    "Nurse Kiyomi rolled her eyes as she directed me over to her much more formal sister, whom I greeted with a polite nod."
+    Nurse "Caught up to speed?" #Nurse 2
+    MC "Only way to know if I got it is to try, I suppose."
+    Nurse "Very true. Alright, ready to give it a try, then, Matsumoto-san?" #Nurse 2
+    AE "U-Um..."
+    Nurse "If you’re not comfortable with that, we can arrange for privacy." #Nurse 2
+    MC "Right, I wouldn’t want to make you uncomfortable."
+    show AE embarrassed
+    AE "I... well, I- um..."
+    "Shiori was visibly flustered; it was clear she didn’t want me to see her as she went through all this, and yet I could see as her eyes looked me over, visibly going through possibilities in her head, before with a nervous nod, she made her decision."
+    AE "I’d greatly prefer his presence right now."
+    Nurse "I understand. Well, Hotsure-san, don’t be afraid to ask if you need help. We’ll step in if we feel it’s necessary." #Nurse 2
+    MC "Right. Thank you, everyone."
+    "The members of the staff attending bowed before walking over to the bleachers, sitting down to watch."
+    MCT "Why am I suddenly so nervous? Seriously, did they have to move that far away?"
+    MCT "It’s all good. I got this. I need to be there for her."
+    AE "Well, I’m in your hands now."
+    MC "Hey, there are worse hands to be in, right?"
+    AE "Heh, I suppose so."
+    AE "Haah... Okay, Keisuke. I’m ready to begin."
+    MC "Okay, try to sway your hips a bit more when you step off."
+    AE "Sway my hips? Wouldn’t that look..."
+    AE "N-No, you’re right, the gait would make me more stable."
+    AE "Okay, let me try."
+    "She held onto the rope with one hand and with every step, she began to swing her billboard like hips from side to side; each exaggerated sway making her fat ass wobble with a light clap as she did."
+    MC "You need to stick your butt out more."
+    AE "Okay, now you’re just doing this on purpose!"
+    MC "No, I understand how useless all of this sounds, but I promise I’m doing it to help you. I wouldn’t try to mess with you at a time like this."
+    AE "I... you’re right. I’m sorry, but this all just looks and feels so ridiculous."
+    MC "I know it might seem silly right now, but it’s for your own good."
+    AE "Nngh..."
+    "Shiori arched her back forward as she grasped onto the rope nearby, moving to grab it and continue on. By doing so, however, a very obvious failing of her new method was beginning to make itself abundantly clear."
+    MC "A-Ah, your skirt..."
+    AE "Tsh..."
+    "Though clearly downtrodden, Shiori followed instructions unquestioningly as the aides walked over and began to guide her motions."
+    Nurse "It’s alright, Hotsure-san, we can take it from here." #Nurse 2
+    MC "M-hm."
+    scene black with fade
+    pause 2
+    "First one hour, then two, and as time moved on, bit by bit, Shiori began to show signs of progress until eventually she was able to get it."
+    "However, what ‘getting it’ looked like..."
+    scene Gym with fade
+    MC "Okay, over to me. You think you can do it?"
+    show AE neutral with dissolve
+    AE "Mhm."
+    MC "Okay, show me."
+    AE "Right..."
+    "Shiori, who’d once walked upright with grace and dignity, was now forced to walk with a clumsy, exaggerated gait. Her thighs were too large to keep close to each other in a natural way, her walk has transformed into a strange mix of both swinging her hips and waddling forward. "
+    "As mean as it sounds, if I didn’t know any better, I’d call it obnoxious looking, like she was intentionally sticking her ass out and shaking it from side to side to flaunt it when she walked... but I did know better. I could tell that this whole situation was ungodly humiliating for her."
+    "After reaching the near side of the track she released her grip on the rope, bent her legs, and tipped backwards onto her extensive backside, the impact causing it to quake and wobble with great intensity. I walked over and sat down next to her as she groaned and put her face in her hands. "
+    MC "Is everything okay?"
+    AE "I look absurd!"
+    AE "W-Will I... will I have to walk in such a humiliating way for the rest of my life?"
+    MC "... I don’t think it looks humiliating. Every time you turn that corner to start heading back toward me I can see that look in your eye. A look that tells me in no uncertain terms that you are trying your best, no matter the circumstances."
+    MC "Why else would you even agree to come out here with me, if not to try and get back on your feet?"
+    "Though I held a confident and supporting face, deep down I knew I wasn’t being entirely honest. She really was trying her best but... the way she walked now was somewhat..."
+    MC "I know that it’s going to be hard getting used to walking like this. But I want you to know that I’m going to be with you the entire way. If you aren’t ready to give up, neither am I. And besides, who knows if it’s even permanent! It may only be a temporary thing!"
+    AE "..."
+    "Though it was clear that she didn’t take solace in my words, her fear seemed to dissipate into a chilled melancholy."
+    AE "Am I free to go?"
+    Nurse "We’re going to run through a few further examinations to ensure your walking pattern is stable so as not to cause further accidents. However, you’re free to go afterwards; but do stay if you want to practice more." #Nurse 2
+    AE "Right. Thank you, madam."
+    MC "Want me to wait for ya? I brought a book and some snacks so I-"
+    AE "A-Actually-"
+    MC "Hm?"
+    AE "I... I kind of want to practice alone for a bit. It’ll be a few hours so um... y-yeah."
+    MC "Ahh, alright, no problem."
+    AE "I’m sorry I’m wasting your weekend with this."
+    MC "You’re not wasting anything. You need this, and I wouldn’t dream of doing anything other than helping you through it."
+    AE "Ah. T-Thank you."
+    MC "Hey."
+    AE "Hm?"
+    MC "Cocoa later tonight?"
+    AE "... Sure."
+    "With a smile back to Shiori, I nodded as I began to walk back to my dorm. However, though she said it would take a few hours, I never heard back from her for the rest of the night."
+    "Not until late."
+    jump daymenu
+
+label AE078:
+    $setProgress("AE", "AE079")
+    $setTime(TimeEnum.NIGHT)
+    scene black with fade
+    MCT "..."
+    MCT "..."
+    MCT "..."
+    "{i}BRRR-{/i}...{i}BRRR-{/i}..."
+    MC "M-Mgn..."
+    scene Dorm Interior with fade
+    "As my eyes fluttered open from my dreamless sleep, I felt, for a moment, that I was not yet awake as my eyes adjusted to the moonlight shining into the room. Reaching over to the nightstand, I grabbed for my phone."
+    "{i}Klk!{/i}"
+    MC "Ach."
+    "I squinted as I had to let my eyes adjust to the sudden burst of light from the screen, each blink stinging as I looked to find two messages awaiting me. My eyes adjusted to the screen as my thumb tapped on the message box and lingered for a moment."
+    "<Apologies, but I’m currently unable to enter my room. I just left the physical therapy building.>" #Should we create an AECell for stuff like this?
+    "Exhaling through my nose, I stumbled out of bed and threw on the pair of clothes I dropped onto the floor, and headed out."
+
+    scene Dorm Exterior with fade
+    "I walked through the hallway and out the door, exiting to the dark campus. The cool wind hit my face as my hair began to whip about wildly. I exhaled through tight lips as I walked about."
+    MC "Pfffhaaa..."
+    "I blew warm air into my hands and rubbed them together before wrapping my hair around them. The starless night sky shone bright under the full, yet distant moon. Though it was still about an hour and a half off until sunrise began, the smell of morning dew began to permeate the air."
+    MCT "I guess Shiori-san... the door and... mngh..."
+    "At this time of night, even forming a coherent thought was like a distant hope. The school lights had all been turned off, and the silence was penetrated only by the sound of the industrial heater on the roof whirring away as it warmed its sleeping occupants."
+    "After a good bit of walking, flanked on all sides by the tall facades of the dorm buildings, I headed over to the women's dorm, only to see a familiar face awaiting me right at the entrance."
+    MC "Hey."
+    show AE sad with dissolve
+    AE "H-Hi."
+    MC "Mhn... can’t get the door open?"
+    AE "No... no, I think Yureno-san is either out or asleep... I don’t have my room keys."
+    MC "Mmh. C’mon."
+    AE "Hm?"
+    MC "Let’s head over to my room."
+    show AE embarrassed
+    AE "No, it’s against the... {i}haahn{/i} mgh..."
+    "Protest as she tried, even her steadfast mind needed rest after such a stressful and difficult day."
+    MC "C’mon, did you plan on sleeping in the office? Let’s go to my room. It’s warm."
+    show AE neutral
+    AE "Ghn... alright."
+    "As we walked toward the other side of the building towards the entrance of the men's dorm, for the first time I noticed Shiori shivering; something I never thought I’d see."
+    MC "Well, at the very least you shouldn’t mind the temp, right?"
+    AE "What on earth are you saying? It's brick outside."
+    MC "... Huh?"
+    show AE embarrassed
+    AE "Is that not...? Um... it’s really cold."
+    MC "Ah... yeah, yeah it is."
+    "And as we headed out towards the door, I noticed someone on the bench. Someone I didn’t see when I came outside the first time."
+    MC "Daichi?"
+    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with move
+    show RM neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    RM "Huh? Oh, hey, hey man what’s up?"
+    MC "N-nothin', dude it’s like... early in the morning, what are you doing out here?"
+    show RM concerned
+    RM "Eh... my sis texted me and said she couldn’t sleep... I went over to pat her head to sleep... now I can't. Haha... ha... ehh..."
+    show RM concerned-2
+    "In Daichi’s eyes, I saw something I’d never seen before. He was tired. Not just in the sense of sleep deprivation, it looked as though his soul itself had been ragged and worn out... then again, he always kind of looked that way. I guess I never noticed before then."
+    RM "Hey, Matsumoto-san."
+    AE "Good morning, Utagashi-san."
+    MC "Hey, um... I hope it’s not a problem, but if you’re gonna be... you know, up and stuff, can Shiori-chan sleep in your bed for the night?"
+    show RM concerned
+    RM "Pfffch... ahhh... sure man, go on ahead."
+    MC "Cool."
+    AE "Thank you, Utagashi-san."
+    RM "... Oy, Matsumoto-san."
+    AE "Y-yes?"
+    show RM concerned-2
+    RM "Uh... I know I give you a hard time a lot. But like... I’m just trying to look out for my sister, y’know? I know you aren’t actually a dangerous person or anything."
+    show AE pondering
+    AE "Ah... thank you, then."
+    MC "Mhm..."
+    show RM concerned
+    RM "Hmn..."
+    "Not much else was said. Daichi sat there on the bench, throwing his head back as he exhaled and looked up at the bluing sky."
+    RM "I’m just gonna hang out here till class starts. Yureno-chan is probably gonna be late again, so I can use that as a... I dunno, a cover or something."
+    MC "Heh... well, if you’re gonna be out here... Here, look forward."
+    "I took off my jacket and rolled it into a ball, all the buttons and zippers hidden."
+    show RM neutral
+    RM "Huh...wuh?"
+    "When he lifted his head, I packed the jacket behind it for him to use as a small pillow."
+    show AE neutral
+    AE "Ehe..."
+    show RM concerned
+    RM "Ah...thanks man."
+    AE "Are you going to be alright out here in the cold?"
+    show RM concerned-2
+    RM "Baaah."
+    "Daichi restfully closed his eyes as he exhaled a breath which puffed as a cloud out of his mouth. I looked at Shiori with a loving smile, as we continued our way towards my room."
+
+    scene black with fade
+    pause 1
+    scene Dorm Interior with fade
+    "Entering in, everything was bathed in a blue morning hue from the window as my vision began to blur."
+    MC "Okay, um... Daichi’s bed is that one over there."
+    "Shiori trudged over to the bed as she inspected it momentarily, looking back to me with worry in her eyes."
+    show AE sad with dissolve
+    AE "I... I’m sure I don’t fit."
+    MC "Bah, it’ll work."
+    "I walked over and inspected it for a moment, looking Shiori’s proportions over as I did. Looking at the bed, I then walked over to my side and, with a bit of strength, pushed it over to connect the two beds."
+    MC "Theeeere we go."
+    show AE sad-2
+    AE "Thank you."
+    "As I flopped on the bed, I couldn’t help but watch Shiori’s every move as she prepared herself to get in, gently and carefully raising up the blanket as not to disturb it’s carefully tucked placement before trying to get in on her stomach."
+    AE "Mmmgh..."
+    MC "Goodnight, Shiori."
+    "As I wrapped myself up in my blanket, I threw it over her to give her a bit more coverage, facing her as we both huddled together under the same blanket."
+    AE "I’m sorry."
+    MC "Hm?"
+    AE "I’m sorry I’m such a burden."
+    MC "... You’re not... a burden."
+    AE "Hm..."
+    "I huddled up close to Shiori. Her pale, soft flesh was still cold from the outside air, which only invited me to hold her tighter as we drifted off to sleep."
+    jump daymenu
+
+label AE079:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

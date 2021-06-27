@@ -956,8 +956,9 @@ label PRG004_c1_1:
 
     scene School Exterior with fade
     play music Rain
-    show FMG angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     MC "Excuse me, do you know anything about birds? This one's injured, and- oh, you don't? Alright, thanks anyways."
     FMG "Hey! We've got an injured animal here, and- hey! Where are you- agh!"
     show FMG angry-2
