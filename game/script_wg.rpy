@@ -585,7 +585,7 @@ label WG005:
     show WG neutral
     WG "That remains to be seen. But I am interested in your thoughts. Which sounds like a better approach, tackling the growth now or dealing with it at a later date?"
 
-label WG005_menu
+label WG005_menu:
     menu:
         "Modern medicine is pretty extraordinary. What about liposuction surgery after the fact?" if not getFlag("WG005_c1"):
             jump WG005_c1
@@ -684,19 +684,19 @@ label WG005_c3:
     WG "Yes, that was the gist of it, more or less, and I most certainly meant it."
     WG "Perhaps, it is as you say. There’s nothing more than to move on from this. I refuse to let anything stop me. Whatever this \"{i}growth{/i}\" may entail, I will overcome it like any other obstacle."
     "Apparently that was enough to snap her out of her malaise and back into her usual sense of industriousness."
-         if getFlag("WG004_C2_2"):
-            WG "I must say Keisuke, it appears you have a way with words. Perhaps I should keep you around."
-            MC "You can’t afford me."
-            show WG happy
-            $setAffection("WG", +1)
-            WG "Ohoho! Is that so? Well, turnabout is fair play after all."
-            WG "I’m sure I’ll be seeing you again soon, Keisuke."
-            hide WG
-            jump daymenu
-        else:
-            WG "I must say Keisuke, there appears to be more to you than meets the eye. You certainly have a way with words it seems. Thank you for stopping to chat. I found our discussion most illuminating."
-           hide WG
-           jump daymenu
+    if getFlag("WG004_C2_2"):
+        WG "I must say Keisuke, it appears you have a way with words. Perhaps I should keep you around."
+        MC "You can’t afford me."
+        show WG happy
+        $setAffection("WG", +1)
+        WG "Ohoho! Is that so? Well, turnabout is fair play after all."
+        WG "I’m sure I’ll be seeing you again soon, Keisuke."
+        hide WG
+        jump daymenu
+    else:
+        WG "I must say Keisuke, there appears to be more to you than meets the eye. You certainly have a way with words it seems. Thank you for stopping to chat. I found our discussion most illuminating."
+        hide WG
+        jump daymenu
 
 label WG006:
     $setProgress("WG", "WG007")
@@ -6010,7 +6010,7 @@ label WG034_c1_1:
     if not getFlag("WG034_c1_2") and not getFlag("WG034_c1_3"):
         MCT "Still have enough to get a new outfit, if I want."
         menu:
-            "Get a haircut (disabled"):
+            "Get a haircut (disabled)":
                 pass
             "Get a nice suit.":
                 jump WG034_c1_2
@@ -8076,7 +8076,7 @@ label WG041_C4_HD2:
     $setFlag("chedderchilli")
     jump WG_Condiments
 
-label WG_Condiments
+label WG_Condiments:
     MC "Here you go! One 25cm long stick of meat coated in fried dough."
     show WG doubt
     WG "Hmph, it is not as if the dish needed help to be less appetizing."
@@ -8093,7 +8093,7 @@ label WG_Condiments
         WG "Spicy foods are something, I personally, have had mixed feelings on. Some dishes need that extra kick to fully come together."
         WG "But this wasn’t what the meal needed. The sour cream is rather cheap, and I can taste the plastic jar the jalapeños clearly came from."
     if getFlag("cheesesauce"):
-        WG "Ugh, this cheese couldn’t possibly be any more processed. I can’t help but wonder if any dairy actually went into this artificial "fondue" of sorts."
+        WG "Ugh, this cheese couldn’t possibly be any more processed. I can’t help but wonder if any dairy actually went into this artificial \"fondue\" of sorts."
     if getFlag("chedderchilli"):
         WG "While the chili by itself is passable, I can’t help but feel it is out of place here. If I were to have the chili myself, my opinion might change."
         WG "But the actual intended main aspect of the dish seems to draw away from that."
@@ -8282,7 +8282,7 @@ label WG042_C1_1:
     menu:
         "That was rude of her.":
             jump WG042_C1_rude
-        "She really did mean well."
+        "She really did mean well.":
             jump WG042_C2_rude
 
 label WG042_C1_rude:
