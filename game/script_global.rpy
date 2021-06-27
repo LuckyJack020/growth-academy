@@ -65,14 +65,18 @@ define All = Character('Everyone', color="#ffffff")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define Barker = Character('Barker', color="#C0C0C0")
 define Card = Character('Card', color="#C0C0C0")
+define Carnie = Character('Carnie', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Cat = Character('Cat', color="#C0C0C0")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Chauffeur = Character('Chauffeur', color="#C0C0C0")
+define Chef = Character('Chef', color="#C0C0C0")
+define Clown = Character('Clown', color="#C0C0C0")
 define CMM = Character('Male Council Member', color="#ffa18a") #Lighter Orange
 define CMF = Character('Female Council Member', color="#ffa18a") #Lighter Orange
 define Coach = Character('Coach', color="#C0C0C0")
+define Cook = Character('Cook', color="#C0C0C0")
 define Computer = Character('Computer', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define DJ = Character('DJ', color="#C0C0C0")
 define FemStudent1 = Character('Female Student 1', color="#ce6950") #New color maybe?
@@ -231,11 +235,6 @@ image cg AE050_behind4 = "Graphics/ui/gallery/AE050_behind4.png"
 image cg AE050_behind5 = "Graphics/ui/gallery/AE050_behind5.png"
 image cg AE050_behind6 = "Graphics/ui/gallery/AE050_behind6.png"
 
-image cg WG000 = "Graphics/ui/gallery/WG000.png"
-image cg WG009 = "Graphics/ui/gallery/WG009.png"
-image cg WG046 = "Graphics/ui/gallery/WG046.png"
-image cg WG047 = "Graphics/ui/gallery/WG047.png"
-
 image cg BE000 = "Graphics/ui/gallery/BE000.png"
 image cg BE000b = "Graphics/ui/gallery/BE000b.png"
 image cg BE001 = "Graphics/ui/gallery/BE001.png"
@@ -257,6 +256,11 @@ image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
 image cg PRG020b = "Graphics/ui/gallery/PRG020_close.png"
 image cg PRG025 = "Graphics/ui/gallery/PRG025.png"
 image cg PRG038 = "Graphics/ui/gallery/PRG038.png"
+
+image cg WG000 = "Graphics/ui/gallery/WG000.png"
+image cg WG009 = "Graphics/ui/gallery/WG009.png"
+image cg WG046 = "Graphics/ui/gallery/WG046.png"
+image cg WG047 = "Graphics/ui/gallery/WG047.png"
 
 image cg RM000 = "Graphics/ui/gallery/RM000.png"
 
@@ -1504,6 +1508,8 @@ init 2 python:
     eventlibrary['WG038'] = {"name": "Beck and Call", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                                    "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "WG039", "obsflags": [],                               "conditions": []}
     eventlibrary['WG039'] = {"name": "Helping Hands", "girls": ["WG", "PRG"], "type": EventTypeEnum.CORE,                                                             "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "WG040", "obsflags": [],                               "conditions": []} # >=20 affection
     eventlibrary['WG040'] = {"name": "The Bigger Picture", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "WG041", "obsflags": ["WGnowork"],                    "conditions": []}
+    eventlibrary['WG041'] = {"name": "Carnival of Delights", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                              "location": "festival",        "priority": PrioEnum.NONE, "sp": 7,     "next": "WG042", "obsflags": [],                               "conditions": []}
+    eventlibrary['WG042'] = {"name": "Carnival of Sins", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                                 "location": "festival",        "priority": PrioEnum.ALL, "sp": 7,      "next": "WG043", "obsflags": [],                                "conditions": []}
     eventlibrary['WG043'] = {"name": "Pool Sharks", "girls": ["WG", "PRG", "BE", "FMG"], "type": EventTypeEnum.CORE,                                                  "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "WG044", "obsflags": [],                               "conditions": []}
     eventlibrary['WG044'] = {"name": "A Totally Fitting Meeting", "girls": ["WG"], "type": EventTypeEnum.CORE,                                                        "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "WG045", "obsflags": [],                               "conditions": []}
     eventlibrary['WG045'] = {"name": "No Need to Wine", "girls": ["WG", "PRG"], "type": EventTypeEnum.CORE,                                                           "location": "dorminterior",     "priority": PrioEnum.NONE, "sp": 8,     "next": "WG046", "obsflags": [],                               "conditions": []}
@@ -1534,7 +1540,7 @@ init 2 python:
     eventlibrary['WG029B'] = {"name": "Things Happen", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                               "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "PRG026b"]]}
     eventlibrary['WG029C'] = {"name": "You Did a Bad, Bad Thing", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                    "location": "cafeteria",        "priority": PrioEnum.ALL,               "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "PRG026_c1_2"]]}
     eventlibrary['WG032'] = {"name": "Wardrobe Dysfunction", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.OR, [ConditionEnum.AFFECTION, "WG", ConditionEqualityEnum.GREATERTHAN, 10], [ConditionEnum.AFFECTION, "FMG", ConditionEqualityEnum.GREATERTHAN, 10]]]}
-    eventlibrary['WG058'] = {"name": "Silver Screen Starlet", "girls": ["WG", "PRG"], "type": EventTypeEnum.CORE,                                                     "location": "field",            "priority": PrioEnum.NONE,              "obsflags": ["size5"],                       "conditions": [[ConditionEnum.EVENT, "WG057"]]}
+    eventlibrary['WG058'] = {"name": "Silver Screen Starlet", "girls": ["WG", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "field",            "priority": PrioEnum.NONE,              "obsflags": ["size5"],                       "conditions": [[ConditionEnum.EVENT, "WG057"]]}
 
     eventlibrary['WGBE001'] = {"name": "Deal With It", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.NOEVENT, "WG044"]]}
     eventlibrary['WGFMG002'] = {"name": "Tamer of Dragons", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                                                   "location": "dorminterior",     "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "WG043"]]}

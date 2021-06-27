@@ -843,8 +843,8 @@ label WG006_afterchoice:
     MC "Is everything okay, Alice? I heard you yelling down the hall, you sound pretty upset."
     show WG stern
     WG "Hmph, I suppose I should compose myself more properly if my voice is carrying as far as you suggest, but to answer your question: NO, everything is not okay."
-    PRG "{size-6}Alice… was not selected as the music club president.{size-6}"
-    MC "I’m sorry to hear that, I know you were pretty set on that based on what you said yesterday. I meant to ask how your audition went, but it sounds like…"
+    PRG "{size-6}Alice... was not selected as the music club president.{size-6}"
+    MC "I’m sorry to hear that, I know you were pretty set on that based on what you said yesterday. I meant to ask how your audition went, but it sounds like..."
     show WG haughty
     WG "My audition went flawlessly, thank you for asking. So much so I was selected among the top seats to be considered for club president."
     show WG angry
@@ -856,7 +856,7 @@ label WG006_afterchoice:
     WG "That doesn’t make any sense. Why would someone want to do that, rather than benefit from someone who’s superior skills could serve to nurture their own?"
     "Alice’s condescending tone regarding the subject matter told me everything I needed to understand about why no one else voted for her."
     show WG haughty
-    WG "But still, you do have a point. That is the only logical conclusion, they apparently voted for her based on some other criteria…"
+    WG "But still, you do have a point. That is the only logical conclusion, they apparently voted for her based on some other criteria..."
     WG "Tsk, such a glaringly obvious lapse in judgment on their part. I’ll simply have to make it clear to everyone that I am the superior choice to lead the club."
     WG "I’m sure this situation will be rectified in a short order once my full talents are put on display and unavoidably apparent to the entire club."
     "Just when I thought I might have gotten through to Alice about how her attitude might rub some people the wrong way, it seemed broaching the subject had only served to entrench her present disposition even further."
@@ -927,9 +927,9 @@ label WG007:
     show WG doubt
     WG "Well you should have said so."
     "I just shrugged my shoulders."
-    MC "Sorry… I guess."
+    MC "Sorry... I guess."
     show WG neutral
-    WG "Hmm, this does give me an idea though…"
+    WG "Hmm, this does give me an idea though..."
     "Alice stared off in deep contemplation for a moment, clearly mulling over something important in her head before articulating her thoughts."
     WG "Now that could be just the business opportunity I've been looking for."
     MC "What now?"
@@ -2776,7 +2776,7 @@ label WG016_c3_1:
     MCT "Swing and a miss with that one."
     "Wasn’t the best answer in retrospect, but I thought I could still prove my point."
     WGCell "<I take it you had some other example in mind?>"
-    MCT "Let’s see…"
+    MCT "Let’s see..."
     "I gritted my teeth, trying to think of an example that would blow away her contempt in one move."
     jump WG016_c3
 
@@ -6910,123 +6910,522 @@ label WG037_c1_2:
     "I took some solace in the feeling that Alice wasn't angry with me personally, but all the same the night had been a failure."
     jump daymenu
 
-label BBW040:
+label WG038:
+    $setProgress("WG", "WG039")
+    scene Dorm Interior with fade
+    play music DayByDay
+    MCT "Ugh. So bored."
+    MCT "At this point I'd accept a conspiracy theory debate with Daichi."
+    MCT "Now that I think about it, where is that guy? I haven't seen him in days."
+    "{i}BZZZT{/i}"
+    MCT "No need to give that a second thought anymore."
+    "I checked my phone, pleasantly surprised to see a text from Alice."
+    play music WG
+    WGCell "< Come to the arcade, I have something fun to show you. >"
+    MCT "Alice? At the arcade? Ohhh, this {i}will{/i} be fun!"
+    MCCell "<I'm on my way.>"
+    "I got dressed and rushed to the bus stop. I had to be there as soon as possible."
+
+    scene School Exterior with fade
+    "I got to the bus stop just in time to see the bus to town pulling away."
+    MC "Damnit. I suppose that's what I get for not getting dressed before noon."
+    MCT "Okay. The next bus isn't for half an hour. I can wait or I can run to town."
+    MCT "..."
+    MC "Better get moving."
+    if getSkill("Athletics") == 0:
+        stop music
+        scene black
+        "I was barely 5 minutes into the run when my body simply couldn't take anymore."
+        "I decided I better just walk it and texted Alice that I'd be late."
+        $setAffection("WG", -1)
+        MCT "I really need to get in shape."
+        jump WG038_Part2
+    else:
+        jump WG038_Part2
+
+label WG038_Part2:
+    scene Town with fade
+    "I finally reached the arcade, feeling like I had run a marathon."
+    show WG neutral with dissolve
+    WG "Wow you look spent. Did you miss the bus?"
+    MC "Yeah but that didn't stop me from getting here to see you."
+    MC "So why did you want me to come to the arcade?"
+    WG "Because I knew you'd know where it was. Our actual destination is just around the corner."
+    show WG haughty
+    WG "Plus, I knew you would race here if you thought I wanted to play a game here."
+    MCT "Drat. She knows me too well."
+    MC "I raced here because seeing you is worth a sprint."
+    show WG happy
+    WG "Charming. Now come with me, I assure you this will be more than those flashing loud 'games' are."
+
+    if isEventCleared("FMG016"):
+        jump WG038_FMG016
+    elif isEventCleared("FMG009"):
+        jump WG038_FMG009
+    else:
+        jump WG038_FMG000
+
+label WG038_FMG016:
+    "Alice had elected to visit the island's only maid café, where I was about to meet Chibuki again."
+    "Avoiding this was suddenly my chief concern."
+    MC "A maid café? Alice, are you sure?"
+    WG "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids."
+    WG "It shows that people needn't money to have fine taste."
+    MCT "I guess I'll have to try and convince her."
+    menu:
+        "Insist.":
+            MC "Alice, I don't want to eat here. Can we choose somewhere else?"
+            MC "I'm afraid I have to insist."
+            show WG stern
+            WG "You... insist?"
+            MC "Yeah, insist."
+            WG "Of course, Keisuke. Whatever you think is best."
+            show WG sad
+            $setAffection("WG", -3)
+            WG "I will see to it."
+            MC "..."
+            WG "Well then I suppose I'll see you in school tomorrow."
+            hide WG with dissolve
+            "Alice turned around and walked towards the bus stop."
+            MCT "She must have really wanted to eat at the café. Was avoiding Chibuki worth upsetting my girlfriend?"
+            "I had a heavy conscience as I started the long walk back to Seichou."
+            jump daymenu
+
+        "Don't insist.":
+            WG "Come on, this will be fun."
+
+            scene Cafe with fade
+            show WG neutral at center, Transform(xzoom=-1) with dissolve
+            "Alice walked to one of the roomier booths and sat down."
+            WG "This is a fine spot. The faux leather seating is of surprisingly good quality."
+            WG "If the food is good, I might just find myself in here regularly."
+            MCT "Let's hope not."
+            MC "I suppose we shall see."
+            show Chibuki neutral at Position(xpos=0.8) with dissolve
+            Chibuki "Surprised to see you in here without Miss Akira, Master Kei-chan."
+            Chibuki "{size=-5}{i}Looks like he did a full 180 there.{/i}{/size}"
+            "Alice squinted, clearly perplexed."
+            MC "Yes Chibuki, I'm here with my girlfriend Alice."
+            show WG happy at center, Transform(xzoom=1)
+            WG "Mistress Nikumaru. I'm here for the experience."
+            Chibuki "Ahh... Well, Mistress Nikumaru, most people come for the experience and stay for the food."
+            "Alice glanced at her watch and a sly smirk quickly spread across her face."
+            show WG haughty
+            WG "Miss Chibuki, I'd like to put your claim to the test. Two coffees and two slices of cake of your choosing."
+            Chibuki "Wow, okay! This is going to be fun."
+            Chibuki "Right away Mistress."
+            hide Chibuki with dissolve
+            MCT "This can't end well."
+            WG "Well Keisuke, I told you this would be fun."
+            show WG neutral
+            MC "Are you sure about this?"
+            WG "Of course, it'll be fun."
+            "Thinking about it a bit more, if something involving cake was Alice's idea of fun, I certainly was in no position to object."
+            MC "Well in that case, let's do it!"
+            WG "That's the spirit."
+            "As Alice said that, Chibuki emerged from the kitchen."
+            WG "Now we just have to see how good our esteemed maid truly is."
+            show Chibuki neutral at Position(xpos=0.8) with dissolve
+            Chibuki "It's early so I went back there to help out and get everything set up."
+            Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
+            Chibuki "And a coffee blend that I shall specify the name of afterwards."
+            Chibuki "For Master Kei-chan, a slice of plain sponge with generous vanilla frosting, and a double espresso. You really look like you could do with it mate."
+            Chibuki "Please enjoy."
+            hide Chibuki with dissolve
+            "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
+            "Alice first bit into her cake, while I hastily sipped the coffee."
+            MCT "This caffeine will be a life-saver when it hits."
+            WG "The cake is quite good actually, that was unexpected."
+            WG "It certainly is rich but they should have used less frosting to account for that, giving a more refined taste."
+            WG "It certainly seems more enjoyable than how yours looks to be."
+            MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
+            WG "I know, and as an individual I say this one is better."
+            show WG haughty
+            WG "It's nothing personal Keisuke, it's just business."
+            "Business must have been booming considering how fast she devoured that slice."
+            MC "Well, how's the coffee?"
+            show WG neutral
+            WG "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
+            WG "But I suppose we are about to find out."
+            "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
+            "As she did so, I took the opportunity of her being unable to see me to quickly scrape the frosting from my cake into my mouth."
+            show WG happy
+            WG "I know this coffee. It's Antigua, a Guatemalan variety."
+            WG "One of my favourite coffees actually."
+            WG "Chibuki must have an excellent ability to read people, as well as a fine taste in coffee herself."
+            WG "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
+            WG "Are you ready to go yet Keisuke?"
+            MC "I just need to drink some more coffee."
+            "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
+            MC "I'm ready."
+            "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
+            show Chibuki neutral at Position(xpos=0.8) with dissolve
+            Chibuki "That comes to 1340 yen total, Master and Mistress."
+            "I reached for my wallet but Alice gestured at me to stop."
+            WG "I decided to come here Keisuke, allow me."
+            "As she paid Chibuki for the breakfast, she started speaking to her in English."
+            "I could only stand there and watch, completely oblivious to what they were saying."
+            "If I hadn't known any better I would have assumed they were working out the details of some kind of business deal, but this certainly wasn't the setting for something like that."
+            "I guess it must have been about tipping because Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
+            "Alice then returned to speaking Japanese."
+            WG "Please, take it. You more than deserve it."
+            Chibuki "Thank you so much Al-{w} Mistress Nikumaru."
+            WG "You will almost certainly see me in here again, this morning has been a delightful experience."
+            WG "We should leave now, Keisuke. The next bus is in a few minutes."
+            hide WG with fade
+            "As Alice walked towards the door I quickly spun around to face Chibuki."
+            MC "How did you know exactly which coffee to get for Alice?"
+            Chibuki "It's simple, I used the one with the fanciest looking packaging."
+            MCT "Wow. The best solution truly is the simplest."
+            Chibuki "Bye Master Kei-chan, come back any time."
+            Chibuki "I'm sure I'll be seeing you again soon."
+            MCT "What the hell did she mean with that last part? I don't plan to come here again unless Alice drags me by the ear all the way from school."
+
+            scene Town with fade
+            show WG happy with dissolve
+            WG "That was a rather nice way to spend the morning, wouldn't you agree?"
+            MC "I have to admit, it was surprisingly pleasant, despite my initial misgivings. Thanks for paying again."
+            WG "You're certainly welcome, but as I said, we came at my insistence, so it is only fair. I'm glad you enjoyed yourself as well."
+            WG "Come on now, the next bus to Seichou should be here soon."
+            jump daymenu
+
+label WG038_FMG009:
+    "Alice had elected to visit a maid café, likely the only one on the island."
+    MC "A maid café? Alice, are you sure?"
+    WG "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
+    MC "Well, alright then. I guess this could be fun."
+    WG "Only one way to find out."
+
+    scene Cafe with fade
+    show WG neutral at center, Transform(xzoom=-1) with dissolve
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "Good morning Miss, Good morning Mast- oh bugger."
+    Chibuki "It's Keisuke isn't it?"
+    "It suddenly struck me that I remembered this girl from somewhere."
+    Chibuki "Please don't tell Akira about this job, she can't know something {i}this{/i} embarrassing about me."
+    "That was where I remembered this girl from. She is Akira's roommate, Chibuki."
+    MC "It's alright, I promise not to tell."
+    Chibuki "Thank you Keisuke. I owe you one for this."
+    Chibuki "So, are you going to introduce me?"
+    MC "Alice, this is Mizutani-san's roommate, Chibuki."
+    MC "Chibuki, this is my girlfriend, Alice."
+    WG "Nice to meet you, though Mistress Nikumaru will suffice for the duration of our experience here."
+    Chibuki "Of course Mistress Nikumaru, Master Keisuke. How may I serve you today? Our cakes can't be beat."
+    "A sly smirk quickly spread across Alice's face."
+    show WG haughty at center, Transform(xzoom=1)
+    WG "Can't be beat you say?"
+    WG "Well in that case, two slices of cake and two coffees. What kind of each is completely at your discretion."
+    Chibuki "Wow, okay! This is going to be fun."
+    Chibuki "Right away Mistress."
+    hide Chibuki with dissolve
+    MCT "This can't end well."
+    WG "Well Keisuke, I told you we would be having some fun today."
+    "If something involving cake was Alice's idea of fun, I certainly was in no position to object."
+    "Alice and I sat at a nice booth and waited for Chibuki to return."
+    show WG neutral
+    MC "Well, I suppose this will be an interesting experience."
+    MC "At the very least it's a delicious slice of cake"
+    WG "That's the spirit."
+    "As Alice said that, Chibuki emerged from the kitchen."
+    WG "Now we just have to see how good our esteemed maid truly is."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "It's early so I went back there to help out and get everything set up."
+    Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
+    Chibuki "And a coffee blend that I shall specify the name of afterwards."
+    Chibuki "For Master Keisuke, a slice of plain sponge with generous vanilla frosting, and a double espresso. You seem drowsy, I hope it helps."
+    Chibuki "Please enjoy."
+    hide Chibuki with dissolve
+    "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
+    "Alice first bit into her cake, while I hastily sipped the coffee."
+    MCT "This caffeine will be a life-saver when it hits."
+    WG "The cake is quite good actually, that was unexpected."
+    WG "It certainly is rich but they should have used less frosting to account for that, giving a more refined taste."
+    WG "It certainly seems more enjoyable than how yours looks to be."
+    MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
+    WG "I know, and as an individual I say this one is better."
+    show WG haughty
+    WG "It's nothing personal Keisuke, it's just business."
+    "Business must have been booming considering how fast she devoured that slice."
+    MC "Well, how's the coffee?"
+    show WG neutral
+    WG "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
+    WG "But I suppose we are about to find out."
+    "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
+    "As she did so, I took the opportunity of her being unable to see me to quickly scoop the frosting from my cake into my mouth using my finger."
+    show WG happy
+    WG "I know this coffee. It's Antigua, a Guatemalan variety."
+    WG "One of my favourite coffees actually."
+    WG "Chibuki must have an excellent ability to read people, as well as a fine taste in coffee herself."
+    WG "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
+    WG "Are you ready to go yet Keisuke?"
+    MC "I just need to drink some more coffee."
+    "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
+    MC "I'm ready."
+    "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki  "That comes to 1340 yen total, Master and Mistress."
+    "I reached for my wallet but Alice gestured at me to stop."
+    WG "I decided to come here Keisuke, allow me."
+    "As she paid Chibuki for the breakfast, she started speaking to her in English."
+    "I could only stand there and watch, completely oblivious to what they were saying."
+    "If I hadn't known any better I would have assumed they were working out the details of some kind of business deal, but this certainly wasn't the setting for something like that."
+    "I guess it must have been about tipping because Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
+    "Alice then returned to speaking Japanese."
+    WG "Please, take it. You more than deserve it."
+    Chibuki "Thank you so much Al-{w} Mistress Nikumaru. Your generosity is astounding."
+    WG "You will almost certainly see me in here again, this morning has been a delightful experience."
+    WG "We should leave now Keisuke. We're not late, but we don't have much time."
+    hide WG with dissolve
+    "As Alice walked towards the door I quickly spun around to face Chibuki."
+    MC "How did you know exactly which coffee to get for Alice?"
+    Chibuki "It's simple, I used the one with the fanciest looking packaging."
+    MCT "Wow. The best solution truly is the simplest."
+    Chibuki "Goodbye Master Keisuke, please come back any time."
+    Chibuki "I'm sure I'll be seeing you again soon."
+    MCT "What the hell did she mean with that last part? I don't plan to come here again unless Alice drags me by the ear all the way from school."
+
+    scene Town with fade
+    show WG happy with dissolve
+    WG "That was a rather nice way to spend the morning, won't you agree?"
+    MC "I have to admit, it was surprisingly pleasant, despite my initial misgivings. Thanks for paying again."
+    WG "You're certainly welcome, but as I said, we came at my insistence, so it is only fair. I'm glad you enjoyed yourself as well."
+    WG "Come on now, the next bus to Seichou should be here soon."
+    jump daymenu
+
+label WG038_FMG000:
+    "Alice had elected to stop at a maid café, likely the only one on the island."
+    MC "A maid café? Alice, are you sure?"
+    WG "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
+    "I wasn't entirely sure if Alice understood just what kind of maid these types of places usually had, but I didn't want to betray any further knowledge of the subject than necessary."
+    MC "Well, alright then. I guess this could be fun."
+    WG "Only one way to find out."
+    scene Cafe with fade
+    show WG neutral at center, Transform(xzoom=-1) with dissolve
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "Good morning Miss, Good morning Master."
+    "It appeared the only maid working at the moment was foreign. Her accent would be a dead giveaway, if her blue eyes didn't already. They were a deeper blue than Alice's."
+    "She looked familiar, but I didn't know her. Maybe I had seen her before?"
+    WG "Nice to meet you, please call me Mistress Nikumaru."
+    Chibuki "Of course Mistress Nikumaru, and you Sir?"
+    MC "Keisuke. I guess you have to call me master or something for the job though right?"
+    Chibuki "That is correct Master Keisuke."
+    Chibuki "Now how may I serve you two today? Our cakes can't be beat."
+    "Alice glanced at her watch and a sly smirk quickly spread across her face."
+    show WG haughty at center, Transform(xzoom=1)
+    WG "Can't be beat you say?"
+    WG "Well in that case, two slices of cake and two coffees. What kind of each is completely at your discretion."
+    Chibuki "Wow, okay! This is going to be fun!"
+    Chibuki "I mean- right away Mistress."
+    hide Chibuki with dissolve
+    MCT "This can't end well."
+    WG "Well Keisuke, turns out we will actually be having some fun today."
+    "Alice and I sat at a nice booth and waited for Chibuki to return."
+    show WG neutral
+    MC "Are you sure about this?"
+    WG "Absolutely. Trust me, it'll be fun."
+    "Thinking about it a bit more, if something involving cake was Alice's idea of fun, I certainly was in no position to object."
+    MC "Well in that case, let's do it!"
+    WG "That's the spirit."
+    "A few minutes passed and Chibuki emerged from the kitchen."
+    WG "Now we just have to see how good our esteemed maid truly is."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki "Thank you for waiting."
+    Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
+    Chibuki "And a coffee blend that I shall keep the name of a secret for now."
+    Chibuki "For Master Keisuke, a slice of plain sponge with generous vanilla frosting, and a double espresso. I hope it helps."
+    Chibuki "Please enjoy."
+    hide Chibuki with dissolve
+    "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
+    "Alice first bit into her cake, while I hastily sipped the coffee."
+    MCT "This caffeine will be a life-saver when it hits."
+    WG "The cake is quite good actually, that was unexpected."
+    WG "It certainly is rich but they should have used less frosting to account for that, giving a more refined taste."
+    WG "It certainly seems more enjoyable than how yours looks to be."
+    MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
+    WG "I know, and as an individual I say this one is better."
+    show WG haughty
+    WG "It's nothing personal Keisuke, it's just business."
+    "Business must have been booming considering how fast she devoured that slice."
+    "I chuckled a little bit at that one."
+    MC "How's the coffee?"
+    show WG neutral
+    WG "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
+    WG "But I suppose we are about to find out."
+    "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
+    "As she did so, I took the opportunity of her being unable to see me to quickly scoop the frosting from my cake into my mouth using my finger."
+    show WG happy
+    WG "I know this coffee. It's Antigua, a Guatemalan variety."
+    WG "One of my favourite coffees actually."
+    WG "Our 'maid' must have an excellent ability to read people, as well as a fine taste in coffee herself."
+    WG "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
+    WG "Are you ready to go yet Keisuke?"
+    MC "I just need to drink some more coffee."
+    "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
+    MC "I'm ready."
+    "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
+    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    Chibuki  "That comes to 1340 yen total, Master and Mistress."
+    "I reached for my wallet but Alice gestured at me to stop."
+    WG "I decided to come here Keisuke, allow me."
+    "As she paid Chibuki for the breakfast, she started speaking to her in English."
+    "I could only stand there and watch, completely oblivious to what they were saying."
+    "If I hadn't known any better I would have assumed they were working out the details of some kind of business deal, but this certainly wasn't the setting for something like that."
+    "I guess it must have been about tipping because Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
+    "Alice then returned to speaking Japanese."
+    WG "Please, take it. You more than deserve it."
+    Chibuki "Thank you so much Mistress Nikumaru! Your generosity is astounding."
+    WG "You will likely see me in here again, this morning has been a delightful experience."
+    WG "Well Keisuke, let's head back to school."
+    hide WG with dissolve
+    "As Alice walked towards the door I quickly spun around to face Chibuki."
+    MC "How did you know exactly which coffee to get for my girlfriend? That was her favourite."
+    Chibuki "It's simple, I used the one with the fanciest looking packaging. It made sense to me because of her dress."
+    MCT "Wow. The best solution truly is the simplest."
+    Chibuki "Goodbye Master Keisuke, please come back any time."
+    Chibuki "I'm sure I'll be seeing you again soon."
+    MCT "What the hell did she mean with that last part? I don't plan to come here again unless Alice drags me by the ear all the way from school."
+
+    scene Town with fade
+    show WG happy with dissolve
+    WG "That was a rather nice way to spend the morning, won't you agree?"
+    MC "I have to admit, it was surprisingly pleasant, despite my initial misgivings. Thanks for paying again."
+    WG "You're certainly welcome, but as I said, we came at my insistence, so it is only fair. I'm glad you enjoyed yourself as well."
+    WG "Come on now, the next bus to Seichou should be here soon."
+    jump daymenu
+
+label WG039:
     #Time: Morning
     scene Dorm Interior with fade
-    $setProgress("BBW", "BBW041")
+    $setProgress("WG", "WG040")
     "In the middle of getting dressed for the day my phone buzzed with a text. It was from Alice."
-    BBWCell "I need your help with something. Can you come to my dorm room?"
-    "A week ago I would have assumed this was something work related, but after our second date I let myself hope this would turn out to be something..."
+    WGCell "I need your help with something. Can you come to my dorm room?"
+    "A week ago I would have assumed this was something work related, but after our third date I let myself hope this would turn out to be something..."
     "... more intimate, perhaps?"
     "I checked myself in the mirror to make sure I was more than 'classroom presentable,' then left for the girl's dorm."
 
     scene black with fade
     MC "Alice?"
     play sound Knock
-    BBW "Keisuke? Come in and shut the door, please."
+    WG "Keisuke? Come in and shut the door, please."
 
-    scene Dorm BBW with fade
+    scene Dorm WG with fade
     "Aida was out, so it was just me and Alice, who had her back to me as she sat on her bed."
     MC "What's up?"
     "When she turned around I got the picture."
-    show BBW sad at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=0.5) with dissolve
-    play music BBW
-    BBW "Thank you for coming. I am having trouble getting dressed."
+    show WG sad at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=0.5) with dissolve
+    play music WG
+    WG "Thank you for coming. I am having trouble getting dressed."
     "She was trying to button her shirt, and had fallen short by three buttons."
-    BBW "I have a better fitting wardrobe on order, but I had not expected to need it this soon."
-    BBW "I believe I can make it through the day if I am cautious and do not move too much, but first I need help getting those buttons around the... widest part of my belly done."
+    WG "I have a better fitting wardrobe on order, but I had not expected to need it this soon."
+    WG "I believe I can make it through the day if I am cautious and do not move too much, but first I need help getting those buttons around the... widest part of my belly done."
     MC "And it looks like Aida is out... Don't you have a new assistant?"
-    BBW "She is on another errand right now, and I have already had to delay my normal routine."
+    WG "She is on another errand right now, and I have already had to delay my normal routine."
     MC "Couldn't you have asked another woman here?"
-    BBW "I suppose, but the thought of letting another woman - or anyone, for that matter - see me in this situation..."
-    show BBW happy
-    BBW "But I trust you to be circumspect."
-    BBW "Just as I trust you not to abuse this opportunity."
+    WG "I suppose, but the thought of letting another woman - or anyone, for that matter - see me in this situation..."
+    show WG happy
+    WG "But I trust you to be circumspect."
+    WG "Just as I trust you not to abuse this opportunity."
     MC "Not sure what you mean by 'opportunity.'"
-    BBW "You get to put your hands on me. And we've only gone out twice."
+    WG "You get to put your hands on me. And we've only gone out three times."
     if getSkill("Academics") > 10:
         MC "Yes, but this isn't undressing you. This is the exact opposite."
         MC "A real opportunity would be to help you take the shirt off later."
-        $setAffection("BBW", 1)
-        BBW "Don't get cheeky."
+        $setAffection("WG", 1)
+        WG "Don't get cheeky."
     else:
         "She was smiling, but I was about to break out in a cold sweat."
         "I knew enough about her temper not to step out of line."
     MC "All right, I promise to behave."
-    hide BBW with dissolve
     #[CG from the perspective of kneeling in front of Alice, her belly filling most of the screen and her breasts at the top. Her shirt is mostly buttoned, with the bottom three undone, the flaps parted to reveal her creamy skin and belly button.]
     "I knelt down in front of her and took the two flaps of her shirt. My thumbs pressed lightly against her belly, and I heard her inhale sharply."
     MC "Are you okay?"
-    BBW "I'm fine. It is just... sensitive."
+    show WG aroused
+    WG "I'm fine. It is just... sensitive."
     MC "It?"
-    BBW "My belly."
-    BBW "I would not have thought it could develop into an erogenous zone, but it seems there are secondary attributes to these physical changes."
+    WG "My belly."
+    WG "I would not have thought it could develop into an erogenous zone, but it seems there are secondary attributes to these physical changes."
     if getAffection("AE") > 12:
         MC "You sound kind of like Shiori."
     else:
         MC "You sound like Matsumoto-san."
-    BBW "Hmm?"
+    WG "Hmm?"
     MC "So formal just now. Almost analytical."
-    BBW "I am simply stating how things are."
+    show WG neutral
+    WG "I am simply stating how things are."
     MC "In a detached sort of way."
-    "She did not respond immediately. I expected her to tell me to get one with it, but instead when she spoke she said"
-    BBW "Staying detached helps deal with this."
+    "She did not respond immediately. I expected her to tell me to get on with it, but instead she continued."
+    show WG worried
+    WG "Staying detached helps deal with this."
     "I nodded, then realized she couldn't see me."
     MCT "Better get on with it."
     "I took the shirt flaps and pulled them together. Because there was no extra room I had to run my thumbs along Alice's belly, eliciting another moan."
+    show WG aroused
+    WG "{i}Ephhh, ohhh{/i}!"
     "She tried to suppress this one, or at least keep it quiet, but it was no use."
     "And, none too surprisingly, her arousal affected me. That and the fact that I was kneeling in front of her with her big, soft, bulging belly inches from my face."
     "I almost wondered if this was a test, but that seemed particularly harsh, almost downright cruel. For all her faults Alice didn't seem the type to tease people."
-    "But as my hands ached to stroke that plush middle, I knew there was still a way to fail this."
-    MCT "But why should I be so timid? If she thinks I'm going too far what is the worst she will do?"
+    "But as my hands ached to stroke that plush middle, I knew there was still a way to screw this up."
+    MCT "But why should I be so timid? If she thinks I'm going too far, what's the worst she will do?"
     menu:
         "Stroke her belly.":
-            jump BBW040_c1_1
+            jump WG039_c1_1
         "Play it safe.":
-            jump BBW040_c1_2
+            jump WG039_c1_2
 
-label BBW040_c1_1:
-    MCT "The third date is when you're supposed to go all the way, yes?"
+label WG039_c1_1:
+    MCT "The third date is when you're supposed to go all the way, yes? By that line of logic we're a bit overdue here."
     MCT "It's not out of line to treat light petting as a stone on the path to actual sex, is it?"
-    if getFlag("BBW039_c2_2"):
+    if getFlag("WG037_c2_2"):
         MCT "And on our last date she kissed me. Does that not open any doors for me?"
     "It took a bit to psyche myself up for what I was thinking."
-    "But once the idea was in my head I think it was inevitable. The potential risk of angering Alice didn't compare to the anticipated rewards."
+    "But once the idea was in my head, it became inevitable. The potential risk of angering Alice didn't compare to the anticipated rewards."
     "I thought about starting slow, but decided if I was going to go I had to go all out."
     "I pressed one hand against her belly and rubbed it in a wide circle. Not rough, but as sensual as I could manage with my heart racing."
     "Alice's reaction was instant."
-    BBW "Oh!"
-    BBW "What are you doing?!"
+    show WG surprised-2
+    WG "Oh!"
+    show WG stern
+    WG "What are you doing?!"
     MCT "Oh, poopie. I didn't expect her to be that angry."
     "First reaction? Abort mission!"
     "Maybe I could play it off as a joke, or an accident."
     menu:
         "Say it was a joke.":
-            jump BBW040_c2_1
+            jump WG039_c2_1
         "My hand slipped.":
-            jump BBW040_c2_2
+            jump WG039_c2_2
         "Don't back down.":
-            jump BBW040_c2_3
+            jump WG039_c2_3
 
-label BBW040_c2_1:
+label WG039_c2_1:
     MC "Just playing around!"
     "I pulled my hand away immediately, then grabbed the shirt and resumed closing it."
     stop music
+    show WG angry
     "Alice wasn't having it, though."
     play music Tension
-    BBW "What do you mean 'playing around'?!"
+    WG "What do you mean 'playing around'?!"
     MC "I-! I just thought it would be funny."
     show dummy with hpunch
-    BBW "Get your hands off me!"
+    WG "Get your hands off me!"
     #[Return to normal background.]
-    show BBW angry at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
-    $setAffection("BBW", -1)
-    BBW "Get out."
+    show WG angry at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    $setAffection("WG", -1)
+    WG "Get out."
     MC "I'm sorr-"
-    BBW "No! I don't want to hear it! Out!"
+    WG "No! I don't want to hear it! Out!"
     MC "I..."
     "Her glare shut me up."
-    "Trying to not look cowed - I wouldn't meet her gaze, but I also didn't want to be staring at the floor - I left."
+    "Trying to not look cowed - I wouldn't meet her gaze, but I also didn't want to be staring at the floor."
+    play sound DoorOpen
+    show WG at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
+    show Chibuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    Chibuki "Alice, I retrieved your new order of clothes, it seems there was a mishap in receiving and they actually had arrived."
+    MCT "What the hell was she doing here?"
+    MC "Wait a second, {i}you’re{/i} her new assistant?!"
+    Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
+    WG "Enough chit-chat, you’ve overstayed your welcome."
+    Chibuki "{size-6}What did you do? Ugh, now I have to put up with her in a mood for the rest of the day{size-6}..."
 
     scene black with fade
     "I avoided Alice for the rest of the day, giving her a wide berth in the cafeteria and not giving her a reason to notice me in the class."
@@ -7034,26 +7433,39 @@ label BBW040_c2_1:
     "But even if she didn't, I was going to be walking on eggshells for a while. Whatever had been building up between Alice and me, it was in a tenuous place now."
     jump daymenu
 
-label BBW040_c2_2:
-    $setFlag("BBWdom")
+label WG039_c2_2:
+    $setFlag("WGdom")
     MC "Sorry! My hand slipped!"
     "I pulled my hand back at once, chastened by the whipcrack of her tone, but I didn't panic."
     "She was simply too intimidationg for me to press further."
-    BBW "Hmmm..."
-    BBW "Very well... next time I'm sure you'll know to not be rash."
+    WG "Hmmm..."
+    show WG haughty
+    WG "Very well... next time I'm sure you'll know to not be so rash."
     "Her voice was even-tempered, in a chilling way, but I still let myself give a sigh of relief. Too quiet to be heard, of course."
     "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
     "She was going to have to be careful the rest of the day."
     #[Revert to Int. Alice's room]
-    show BBW neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "This is adequate, which is the best I can hope for in this situation."
-    BBW "Thank you, Keisuke."
+    show WG neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    WG "This is adequate, which is the best I can hope for in this situation."
+    WG "Thank you, Keisuke."
     MC "Glad to help. And sorry about my hand slipping."
-    BBW "Mmmm... Yes. 'Slipping', of course."
-    BBW "Sometimes it is better to retreat than to advance."
-    show BBW haughty
-    $setAffection("BBW", 1)
-    BBW "And sometimes it shows who is really in control."
+    WG "Mmmm... Yes. 'Slipping', of course."
+    WG "Sometimes it is better to retreat than to advance."
+    show WG haughty
+    $setAffection("WG", 1)
+    WG "And sometimes it shows who is really in control."
+    play sound DoorOpen
+    show WG at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
+    show Chibuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    Chibuki "Alice, I retrieved your new order of clothes, it seems there was a mishap in receiving and they actually had arrived."
+    MCT "What the hell was she doing here?"
+    MC "Wait a second, {i}you’re{/i} her new assistant?!"
+    Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
+    WG "Yes, this is my new assistant, Chibuki. I trust you remember her? I was impressed with her commitment to providing such great service, despite obviously not enjoying the task."
+    WG "I figured with proper compensation and a more rewarding line of work, her potential could be put to better use."
+    Chibuki "{size-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{size-6}"
+    "Chibuki’s career change hadn’t really seemed to affect her level of enthusiasm for her job, but I could only assume she was pretty good at it if she hadn’t given someone as demanding as Alice any cause for complaint."
+    MC "I see. Well, I’ll leave you to it then."
 
     scene Hallway with fade
     "I was halfway to the cafeteria to grab a quick breakfast when I was suddenly hit with a realization that made me stop."
@@ -7066,525 +7478,183 @@ label BBW040_c2_2:
     MCT "And that doesn't sound bad at all."
     jump daymenu
 
-label BBW040_c2_3:
-    $setFlag("BBW040_c2_3")
+label WG039_c2_3:
+    $setFlag("WG039_c2_3")
     "On second thought... no. I came this far, I'm seeing it through."
+    show WG surprised-2
     MC "I'm rubbing your belly. It's so soft and inviting."
     "Alice didn't have an answer to that. Not right away."
     "So I continued rubbing, my hand moving around in a large, slow circle."
+    show WG aroused
     MC "And I think you like it, too."
-    $setAffection("BBW", 1)
-    BBW "Oooooh!"
+    $setAffection("WG", 1)
+    WG "Oooooh! Ahh..."
+    show dummy with hpunch
+    extend " {i}MMMM{/i}!"
     "She was enjoying it, that was clear as day. And I certainly was, of course."
     "Alice's belly was as soft as I had imagined, but not in a doughy sort of way. There was a firmness to it, not unlike a mattress."
     "I wondered if there was a part of her growth factor that maintained her fat's consistency, avoiding the sagging or oozing qualities I'd seen in other fat people."
     "I thought about mentioning this hypothesis that she was primed to receive only the most pleasing of adipose, but I knew how she would react and I didn't want to spoil the moment."
     MC "This really does feel so nice."
-    BBW "Mmmmm... I know..."
-    BBW "But I need you to stop, Keisuke. I've got to get ready for class."
-    BBW "And I expect Aida will be back soon."
+    WG "Mmmmm... I know..."
+    WG "But I need you to stop, Keisuke. I've got to get ready for class."
+    WG "And I expect Aida will be back soon."
     MC "Oh. Right."
     "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
     MC "You're going to have to be careful for the rest of the day."
     #hide CG
-    show BBW neutral with dissolve
-    BBW "I should be upset that you would take advantage of me when I needed help like that, but you less crossed the line than stuck your foot over it."
-    show BBW happy
-    BBW "And it would be an obvious lie if I said I had not enjoyed it."
-    show BBW neutral
-    BBW "But do not make a habit of letting your hands off the leash like that."
-    BBW "Spontaneity can become harassment very quickly."
-    MC "Oh! I wasn't trying to force myself on you!"
-    show BBW happy
-    BBW "I know. And I respect that you took the initiative."
-    show BBW neutral
-    BBW "Though..."
+    show WG neutral with dissolve
+    WG "I should be upset that you would take advantage of me when I needed help like that, but you less crossed the line than stuck your foot over it."
+    show WG happy
+    WG "And it would be an obvious lie if I said I had not enjoyed it."
+    show WG neutral
+    WG "But do not make a habit of letting your hands off the leash like that."
+    WG "Spontaneity can become harassment very quickly."
+    MC "Oh! I-I wasn't trying to force myself on you!"
+    show WG happy
+    WG "I know. And I respect that you took the initiative."
+    show WG neutral
+    WG "Though..."
     MC "What?"
     "Alice placed her hands on the sides of her belly and jiggled it ever-so-slightly."
-    BBW "Nothing."
+    show WG neutral-2
+    WG "Nothing."
     MC "It's all right to find this enjoyable."
+    show WG worried
     "She didn't say anything, just looked down to the side."
     "This wasn't the first time she had gone silent when the issue of her growing had come up, but I didn't want to let it spoil the moment this time."
     MC "I mean it. I'm not saying you're wrong to be upset about how things are turning out..."
     MC "...but trying to find the positive doesn't mean 'what's good despite everything else.' Sometimes something isn't good or bad, it's both."
     MC "You can't separate looking bigger and finding it pleasing to be bigger. They're both related to your factor, and true acceptance-"
-    BBW "I get it."
+    show WG neutral
+    WG "I get it."
     "She wasn't curt, but her tone did sound decisive."
-    BBW "Yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.'"
-    BBW "My father told me something similar shortly after I got here, that I should take this all as it is en total."
-    BBW "But I..."
-    show BBW sad
-    BBW "There is a part of me that does not want to give in to anything positive about this."
+    WG "Yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.'"
+    WG "My father told me something similar shortly after I got here, that I should take this all as it is in total."
+    show WG worried
+    WG "But I..."
+    show WG sad
+    WG "There is a part of me that does not want to give in to anything positive about this."
     MC "You're afraid accepting any part of it will make you accept all of it?"
-    show BBW neutral
-    BBW "Not simply accept it as it is, but accept that it is as it must be."
-    MC "Even though you're planning to deal with the excess weight once this is all over, right?"
-    show BBW sad
-    BBW "Assuming I can, yes."
+    show WG neutral
+    WG "Not simply accept it as it is, but accept that it is as it must be."
     play sound DoorOpen
-    "It wasn't the worst time to be interrupted like this, but Aida showing up just then brought the conversation to a halt."
-    show BBW sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    if getAffection("PRG") < 10:
-        show PRG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-        PRG "Ah! Hotsure-san! W-what are you doing here?"
-        MC "Alice needed help with... opening a jar."
-        MC "I was just leaving."
-        MC "See you two in class."
-        show BBW neutral
-        BBW "Thank you for your help, Keisuke."
-    else:
-        show PRG aroused at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-        PRG "Kei-chan. What are you doing here?"
-        MC "Alice needed help with... opening a jar."
-        MC "I was just leaving."
-        MC "See you two in class."
-        show BBW neutral
-        BBW "Thank you for your help, Keisuke."
-        PRG "Are you sure you can't stay? We can walk to class together."
-        MC "I've got to get my backpack. See you later."
+    "It wasn't the worst time to be interrupted like this, but it was to be expected that Aida would be showing up."
+    show WG sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
+    show Chibuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    Chibuki "Alice, I retrieved your new order of clothes, it seems there was a mishap in receiving and they actually had arrived."
+    MCT "What the hell was she doing here?"
+    MC "Wait a second, {i}you’re{/i} her new assistant?!"
+    Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
+    WG "Yes, this is my new assistant, Chibuki. I trust you remember her? I was impressed with her commitment to providing such great service, despite obviously not enjoying the task."
+    WG "I figured with proper compensation and a more rewarding line of work, her potential could be put to better use."
+    Chibuki "{size-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{size-6}"
+    "Chibuki’s career change hadn’t really seemed to affect her level of enthusiasm for her job, but I could only assume she was pretty good at it if she hadn’t given someone as demanding as Alice any cause for complaint."
+    show WG happy
+    WG "Hmm it would seem these current measures were not necessary— but certainly serendipitous."
+    Chibuki "{size-6}She seems like she’s in a good mood.{size-6}"
+    MCT "Oh, you have no idea."
+    MC "{size-6}Eh, you could say that.{size-6}"
+    "Chibuki raised an eyebrow to my coy reply, but I figured it was best to take my leave before any further elaboration became necessary."
 
     scene black with fade
     "I left the girls' dorm and went back to my room to grab my stuff, frustrated more with myself than anything at how the discussion with Alice had ended unresolved."
     "I don't know what the right thing to say to her would have been, but it felt like she was about to open up more than she had already."
     "And this isn't the sort of thing I could just bring up casually later on, but it was out there, so we were going to talk about it again sooner or later."
-    MCT "Maybe it's not even something I can lead her through. Maybe I should let her handle it herself."
+    MCT "Maybe it's not even something I can lead her through. Maybe I should let her handle it herself. I guess I won't know until I get another chance."
     jump daymenu
 
-label BBW040_c1_2:
+label WG039_c1_2:
     MCT "Better play it safe."
     "Being as careful as possible not to rub Alice's belly, holding my fingers away from her middle except for those holding the shirt flaps, I tugged the two sides together and buttoned it up."
     "She was going to have to be careful for the rest of the day, but the job was done."
     #hide CG
-    show BBW neutral with dissolve
-    BBW "This leaves me little room to breathe, but it will do."
-    show BBW happy
-    BBW "Thank you, Keisuke. And thank you for not being too handsy."
-    BBW "The teasing was unexpected, but not unenjoyable."
+    show WG neutral with dissolve
+    WG "This leaves me little room to breathe, but it will do."
+    show WG happy
+    WG "Thank you, Keisuke. And thank you for not being too handsy."
+    WG "The teasing was unexpected, but not unenjoyable."
     MC "Oh, it was an accident."
-    BBW "So you said..."
-    BBW "You should probably finish getting ready for class. I will see you later."
+    WG "So you said..."
+    WG "You should probably finish getting ready for class. I will see you later."
     MC "I was- ... Yeah. See you later."
+    play sound DoorOpen
+    show WG at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
+    show Chibuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    Chibuki "Alice, I retrieved your new order of clothes, it seems there was a mishap in receiving and they actually had arrived."
+    MCT "What the hell was she doing here?"
+    MC "Wait a second, {i}you’re{/i} her new assistant?!"
+    Chibuki "Anything’s less embarrassing than that maid café gig I was doing before."
+    WG "Yes, this is my new assistant, Chibuki. I trust you remember her? I was impressed with her commitment to providing such great service, despite obviously not enjoying the task."
+    WG "I figured with proper compensation and a more rewarding line of work, her potential could be put to better use."
+    Chibuki "{size-6}I’ll be honest chap, it’s not that hard. I mostly just nod my head and say ‘Yes ma’am’ to everything she says.{size-6}"
+    "Chibuki’s career change hadn’t really seemed to affect her level of enthusiasm for her job, but I could only assume she was pretty good at it if she hadn’t given someone as demanding as Alice any cause for complaint."
+    show WG happy
+    WG "It would seem I roped you in unnecessarily Keisuke. Haste makes waste as they say. Come now Chibuki, I could use your help replacing this ill-fitting garment for the new one."
+    Chibuki "Yes, ma’am."
+    "I had the feeling I wasn’t invited to stick around to see my handiwork undone so I showed myself out."
 
     scene black with fade
-    "I really hadn't been trying to get her worked up, but her thinking I had wasn't what bothered me."
+    "Looking back on what just happened, I really hadn't been trying to get her worked up, but her thinking I had wasn't what bothered me."
     "It was the implication that if I had dived in she would have liked it more. Why did I hold back!?"
     jump daymenu
 
-label BBW041:
-    $setProgress("BBW", "BBW042")
-    scene Dorm Interior with fade
-    MCT "Ugh. So bored."
-    MCT "At this point I'd accept a conspiracy theory debate with Daichi."
-    "{i}BZZZT{/i}"
-    MCT "Even fate wants me to avoid that conversation, it seems."
-    "I checked my phone, pleasantly surprised to see a text from Alice."
-    play music BBW
-    "Yesterday's events were... interesting, to say the least."
-    "Just having the chance to get close to her belly like that was exhilarating."
-    BBWCell "< Come to the arcade, I have something fun to show you. >"
-    MCT "Alice? At the arcade? Oh this {i}will{/i} be fun."
-    MCCell "<I'm on my way.>"
-    "I got dressed and rushed to the bus stop. I had to be there as soon as possible."
-
-    scene School Exterior with fade
-    "I got to the bus stop just in time to see the bus to town pulling away."
-    MC "Damnit."
-    MCT "Okay. The next bus isn't for half an hour. I can wait or I can run to town."
-    MCT "..."
-    MC "Better get moving."
-    if getSkill("Athletics") == 0:
-        stop music
-        scene black
-        "I was barely 5 minutes into the run when my body simply couldn't take anymore."
-        "I decided to text Alice that I couldn't make it and I slowly walked back to my dorm instead."
-        $setAffection("BBW", -1)
-        MCT "I really need to get in shape."
-        jump daymenu
-
-    scene Town with fade
-    "I finally reached the arcade, feeling like I had run a marathon."
-    show BBW neutral with dissolve
-    BBW "Wow you look spent. Did you miss the bus?"
-    MC "Yeah but that didn't stop me from getting here to see you."
-    MC "So why did you want me to come to the arcade?"
-    BBW "Because I knew you'd know where it was. Our actual destination is just around the corner."
-    show BBW haughty
-    BBW "Plus, I knew you would race here if you thought I wanted to play a game here."
-    MCT "Drat. She knows me too well."
-    MC "I raced here because seeing you is worth a sprint."
-    show BBW happy
-    BBW "Charming. Now come with me, I assure you this will be more than those flashing loud 'games' are."
-
-    if isEventCleared("FMG016"):
-        jump BBW041_FMG016
-    elif isEventCleared("FMG009"):
-        jump BBW041_FMG009
-    else:
-        jump BBW041_FMG000
-
-label BBW041_FMG016:
-    "Alice had elected to visit the island's only maid café, where I was about to meet Chibuki again."
-    "Avoiding this was suddenly my chief concern."
-    MC "A maid café? Alice, are you sure?"
-    BBW "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids."
-    BBW "It shows that people needn't money to have fine taste."
-    MCT "I guess I'll have to try and convince her."
-    menu:
-        "Insist.":
-            MC "Alice, I don't want to eat here. Can we choose somewhere else?"
-            MC "I'm afraid I have to insist."
-            show BBW stern
-            BBW "You... insist?"
-            MC "Yeah, insist."
-            BBW "Of course, Keisuke. Whatever you think is best."
-            show BBW sad
-            $setAffection("BBW", -3)
-            BBW "I will see to it."
-            MC "..."
-            BBW "Well then I suppose I'll see you in school tomorrow."
-            hide BBW with dissolve
-            "Alice turned around and walked towards the bus stop."
-            MCT "She must have really wanted to eat at the café. Was avoiding Chibuki worth upsetting my girlfriend?"
-            "I had a heavy conscience as I started the long walk back to Seichou."
-            jump daymenu
-
-        "Don't insist.":
-            play music Schoolday
-            BBW "Come on, this will be fun."
-
-            scene Cafe with fade
-            show BBW neutral at center, Transform(xzoom=-1) with dissolve
-            "Alice walked to one of the roomier booths and sat down."
-            BBW "This is a fine spot. The faux leather seating is of surprisingly good quality."
-            BBW "If the food is good, I might just find myself in here regularly."
-            MCT "Let's hope not."
-            MC "I suppose we shall see."
-            show Chibuki neutral at Position(xpos=0.8) with dissolve
-            Chibuki "Surprised to see you in here without Miss Akira, Master Kei-chan."
-            Chibuki "{size=-5}{i}Looks like he did a full 180 there.{/i}{/size}"
-            "Alice squinted, clearly perplexed."
-            MC "Yes Chibuki, I'm here with my girlfriend Alice."
-            show BBW happy at center, Transform(xzoom=1)
-            BBW "Mistress Nikumaru. I'm here for the experience."
-            Chibuki "Ahh... Well, Mistress Nikumaru, most people come for the experience and stay for the food."
-            "Alice glanced at her watch and a sly smirk quickly spread across her face."
-            show BBW haughty
-            BBW "Miss Chibuki, I'd like to put your claim to the test. Two coffees and two slices of cake of your choosing."
-            Chibuki "Wow, okay! This is going to be fun."
-            Chibuki "Right away Mistress."
-            hide Chibuki with dissolve
-            MCT "This can't end well."
-            BBW "Well Keisuke,I told you this would be fun."
-            show BBW neutral
-            MC "Are you sure about this?"
-            BBW "Of course, it'll be fun."
-            MC "Well in that case, let's do it!"
-            BBW "That's the spirit."
-            "As Alice said that, Chibuki emerged from the kitchen."
-            BBW "Now we just have to see how good our esteemed maid truly is."
-            show Chibuki neutral at Position(xpos=0.8) with dissolve
-            Chibuki "It's early so I went back there to help out and get everything set up."
-            Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
-            Chibuki "{size=-5}{i}Saves money.{/i}{/size}"
-            Chibuki "And a coffee blend that I shall specify the name of afterwards."
-            Chibuki "For Master Kei-chan, a slice of plain sponge with generous vanilla frosting, and a double espresso. You really look like you could do with it mate."
-            Chibuki "Please enjoy."
-            hide Chibuki with dissolve
-            "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
-            "Alice first bit into her cake, while I hastily sipped the coffee."
-            MCT "This caffeine will be a life-saver when it hits."
-            BBW "The cake is quite good actually, that was unexpected."
-            BBW "It certainly is rich but they have used less frosting to account for that, giving a more refined taste."
-            BBW "It certainly seems more enjoyable than how yours looks to be."
-            MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
-            BBW "I know, and as an individual I say this one is better."
-            show BBW haughty
-            BBW "It's nothing personal Keisuke, it's just business."
-            MC "Well, how's the coffee?"
-            show BBW neutral
-            BBW "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
-            BBW "But I suppose we are about to find out."
-            "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
-            "As she did so, I took the opportunity of her being unable to see me to quickly scrape the frosting from my cake into my mouth."
-            show BBW happy
-            BBW "I know this coffee. It's Antigua, a Guatemalan variety."
-            BBW "One of my favourite coffees actually."
-            BBW "Chibuki must have an excellent ability to read people, as well as a fine taste in coffee herself."
-            BBW "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
-            BBW "Are you ready to go yet Keisuke?"
-            MC "I just need to drink some more coffee."
-            "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
-            MC "I'm ready."
-            "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
-            show Chibuki neutral at Position(xpos=0.8) with dissolve
-            Chibuki "That comes to 1340 yen total, Master and Mistress."
-            "I reached for my wallet but Alice gestured at me to stop."
-            BBW "I decided to come here Keisuke, allow me."
-            "As she paid Chibuki for the breakfast, she started speaking to her in English."
-            "I could only stand there and watch, completely oblivious to what they were saying."
-            "I realised it must have been about tipping when Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
-            "Alice then returned to speaking Japanese."
-            BBW "Please, take it. You more than deserve it."
-            Chibuki "Thank you so much Al-{w} Mistress Nikumaru."
-            BBW "You will almost certainly see me in here again, this morning has been a delightful experience."
-            BBW "We should leave now, Keisuke. The next bus is in a few minutes."
-            hide BBW with fade
-            "As Alice walked towards the door I quickly spun around to face Chibuki."
-            MC "How did you know exactly which coffee to get for Alice?"
-            Chibuki "It's simple, I used the one with the fanciest looking packaging."
-            MCT "Wow. The best solution truly is the simplest."
-            Chibuki "Bye Master Kei-chan, come back any time."
-
-            scene Town with fade
-            show BBW happy with dissolve
-            BBW "That was a rather nice way to spend the morning, won't you agree?"
-            BBW "Come on now the next bus to Seichou should be here soon."
-            jump daymenu
-
-label BBW041_FMG009:
-    "Alice had elected to visit a maid café, likely the only one on the island."
-    MC "A maid café? Alice, are you sure?"
-    BBW "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
-    MC "Well, alright then. I guess this could be fun."
-    BBW "Only one way to find out."
-
-    scene Cafe with fade
-    play music Schoolday
-    show BBW neutral at center, Transform(xzoom=-1) with dissolve
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
-    Chibuki "Good morning Miss, Good morning Mast- oh bugger."
-    Chibuki "It's Keisuke isn't it?"
-    "It suddenly struck me that I remembered this girl from somewhere."
-    Chibuki "Please don't tell Akira about this job, she can't know something {i}this{/i} embarrassing about me."
-    "That was where I remembered this girl from. She is Akira's roommate, Chibuki."
-    MC "It's alright, I promise not to tell."
-    Chibuki "Thank you Keisuke. I owe you one for this."
-    Chibuki "So, are you going to introduce me?"
-    MC "Alice, this is Mizutani-san's roommate, Chibuki."
-    MC "Chibuki, this is my girlfriend, Alice."
-    BBW "Nice to meet you, though Mistress Nikumaru will suffice for the duration of our experience here."
-    Chibuki "Of course Mistress Nikumaru, Master Keisuke. How may I serve you today? Our cakes can't be beat."
-    "A sly smirk quickly spread across Alice's face."
-    show BBW haughty at center, Transform(xzoom=1)
-    BBW "Can't be beat you say?"
-    BBW "Well in that case, two slices of cake and two coffees. What kind of each is completely at your discretion."
-    Chibuki "Wow, okay! This is going to be fun."
-    Chibuki "Right away Mistress."
-    hide Chibuki with dissolve
-    MCT "This can't end well."
-    BBW "Well Keisuke, I told you we would be having some fun today."
-    "Alice and I sat at a nice booth and waited for Chibuki to return."
-    show BBW neutral
-    MC "Well, I suppose this will be an interesting experience."
-    MC "At the very least it's a delicious slice of cake"
-    BBW "That's the spirit."
-    "As Alice said that, Chibuki emerged from the kitchen."
-    BBW "Now we just have to see how good our esteemed maid truly is."
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
-    Chibuki "It's early so I went back there to help out and get everything set up."
-    Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
-    Chibuki "And a coffee blend that I shall specify the name of afterwards."
-    Chibuki "For Master Keisuke, a slice of plain sponge with generous vanilla frosting, and a double espresso. You seemed drowsy, I hope it helps."
-    Chibuki "Please enjoy."
-    hide Chibuki with dissolve
-    "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
-    "Alice first bit into her cake, while I hastily sipped the coffee."
-    MCT "This caffeine will be a life-saver when it hits."
-    BBW "The cake is quite good actually, that was unexpected."
-    BBW "It certainly is rich but they have used less frosting to account for that, giving a more refined taste."
-    BBW "It certainly seems more enjoyable than how yours looks to be."
-    MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
-    BBW "I know, and as an individual I say this one is better."
-    show BBW haughty
-    BBW "It's nothing personal Keisuke, it's just business."
-    MC "Well, how's the coffee?"
-    show BBW neutral
-    BBW "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
-    BBW "But I suppose we are about to find out."
-    "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
-    "As she did so, I took the opportunity of her being unable to see me to quickly scoop the frosting from my cake into my mouth using my finger."
-    show BBW happy
-    BBW "I know this coffee. It's Antigua, a Guatemalan variety."
-    BBW "One of my favourite coffees actually."
-    BBW "Chibuki must have an excellent ability to read people, as well as a fine taste in coffee herself."
-    BBW "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
-    BBW "Are you ready to go yet Keisuke?"
-    MC "I just need to drink some more coffee."
-    "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
-    MC "I'm ready."
-    "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
-    Chibuki  "That comes to 1340 yen total, Master and Mistress."
-    "I reached for my wallet but Alice gestured at me to stop."
-    BBW "I decided to come here Keisuke, allow me."
-    "As she paid Chibuki for the breakfast, she started speaking to her in English."
-    "I could only stand there and watch, completely oblivious to what they were saying."
-    "I realised it must have been about tipping when Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
-    "Alice then returned to speaking Japanese."
-    BBW "Please, take it. You more than deserve it."
-    Chibuki "Thank you so much Al-{w} Mistress Nikumaru. Your generosity is astounding."
-    BBW "You will almost certainly see me in here again, this morning has been a delightful experience."
-    BBW "We should leave now Keisuke. We're not late, but we don't have much time."
-    hide BBW with dissolve
-    "As Alice walked towards the door I quickly spun around to face Chibuki."
-    MC "How did you know exactly which coffee to get for Alice?"
-    Chibuki "It's simple, I used the one with the fanciest looking packaging."
-    MCT "Wow. The best solution truly is the simplest."
-    Chibuki "Goodbye Master Keisuke, please come back any time."
-    scene Town with fade
-    show BBW happy with dissolve
-    BBW "That was a rather nice way to spend the morning, won't you agree?"
-    BBW "Come on now the next bus to Seichou should be here soon."
-    jump daymenu
-
-label BBW041_FMG000:
-    "Alice had elected to stop at a maid café, likely the only one on the island."
-    MC "A maid café? Alice, are you sure?"
-    BBW "Absolutely. I like the idea that businesses have been formed to provide an imitation of maid services to those who cannot afford actual maids, it shows that people don't need money to have taste."
-    MC "Well, alright then. I guess this could be fun."
-    BBW "Only one way to find out."
-    scene Cafe with fade
-    play music Schoolday
-    show BBW neutral at center, Transform(xzoom=-1) with dissolve
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
-    Chibuki "Good morning Miss, Good morning Master."
-    "It appeared the only maid working at the moment was foreign. Her accent would be a dead giveaway, if her blue eyes didn't beat it to it. They were a deeper blue than Alice's."
-    BBW "Nice to meet you, please call me Mistress Nikumaru."
-    Chibuki "Of course Mistress Nikumaru, and you Sir?"
-    MC "Keisuke. I guess you have to call me master or something for the job though right?"
-    Chibuki "That is correct Master Keisuke."
-    Chibuki "Now how may I serve you two today? Our cakes can't be beat."
-    "Alice glanced at her watch and a sly smirk quickly spread across her face."
-    show BBW haughty at center, Transform(xzoom=1)
-    BBW "Can't be beat you say?"
-    BBW "Well in that case, two slices of cake and two coffees. What kind of each is completely at your discretion."
-    Chibuki "Wow, okay! This is going to be fun!"
-    Chibuki "I mean- right away Mistress."
-    hide Chibuki with dissolve
-    MCT "This can't end well."
-    BBW "Well Keisuke, turns out we will actually be having some fun today."
-    "Alice and I sat at a nice booth and waited for Chibuki to return."
-    show BBW neutral
-    MC "Are you sure about this?"
-    BBW "Absolutely. Trust me, it'll be fun."
-    MC "Well in that case, let's do it!"
-    BBW "That's the spirit."
-    "A few minutes passed and Chibuki emerged from the kitchen."
-    BBW "Now we just have to see how good our esteemed maid truly is."
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
-    Chibuki "Thank you for waiting."
-    Chibuki "For Mistress Nikumaru, a rich yet light chocolate cake, house recipe."
-    Chibuki "And a coffee blend that I shall keep the name of a secret for now."
-    Chibuki "For Master Keisuke, a slice of plain sponge with generous vanilla frosting, and a double espresso. I hope it helps."
-    Chibuki "Please enjoy."
-    hide Chibuki with dissolve
-    "Chibuki went to sit near the door, no doubt awaiting any potential customers walking in."
-    "Alice first bit into her cake, while I hastily sipped the coffee."
-    MCT "This caffeine will be a life-saver when it hits."
-    BBW "The cake is quite good actually, that was unexpected."
-    BBW "It certainly is rich but they have used less frosting to account for that, giving a more refined taste."
-    BBW "It certainly seems more enjoyable than how yours looks to be."
-    MC "Well enjoyment is for the individual, perhaps I prefer a larger amount of frosting at a weaker flavour."
-    BBW "I know, and as an individual I say this one is better."
-    show BBW haughty
-    BBW "It's nothing personal Keisuke, it's just business."
-    "I let out a sensible chuckle."
-    MC "How's the coffee?"
-    show BBW neutral
-    BBW "Well, as you know, coffee is not my preferred beverage. Though that isn't to say I don't have preferred blends."
-    BBW "But I suppose we are about to find out."
-    "Alice sipped her coffee slowly, clearly making sure to properly taste each aspect of it."
-    "As she did so, I took the opportunity of her being unable to see me to quickly scoop the frosting from my cake into my mouth using my finger."
-    show BBW happy
-    BBW "I know this coffee. It's Antigua, a Guatemalan variety."
-    BBW "One of my favourite coffees actually."
-    BBW "Our 'maid' must have an excellent ability to read people, as well as a fine taste in coffee herself."
-    BBW "I know tipping isn't particularly common in Japan at all, but I feel she has earned it."
-    BBW "Are you ready to go yet Keisuke?"
-    MC "I just need to drink some more coffee."
-    "I drank a good third of my espresso, as fast as I could without burning my mouth. I really did need the caffeine."
-    MC "I'm ready."
-    "Alice and I got up and walked over to the counter. Chibuki immediately stood up and walked behind it when she saw us moving."
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
-    Chibuki  "That comes to 1340 yen total, Master and Mistress."
-    "I reached for my wallet but Alice gestured at me to stop."
-    BBW "I decided to come here Keisuke, allow me."
-    "As she paid Chibuki for the breakfast, she started speaking to her in English."
-    "I could only stand there and watch, completely oblivious to what they were saying."
-    "I realised it must have been about tipping when Alice took 500 more yen out of her purse. Chibuki was clearly shocked at the amount."
-    "Alice then returned to speaking Japanese."
-    BBW "Please, take it. You more than deserve it."
-    Chibuki "Thank you so much Mistress Nikumaru! Your generosity is astounding."
-    BBW "You will likely see me in here again, this morning has been a delightful experience."
-    BBW "Well Keisuke, let's head back to school."
-    hide BBW with dissolve
-    "As Alice walked towards the door I quickly spun around to face Chibuki."
-    MC "How did you know exactly which coffee to get for my girlfriend? That was her favourite."
-    Chibuki "It's simple, I used the one with the fanciest looking packaging. It made sense to me because of her dress."
-    MCT "Wow. The best solution truly is the simplest."
-    Chibuki "Goodbye Master Keisuke, please come back any time."
-    scene Town with fade
-    show BBW happy with dissolve
-    BBW "That was a rather nice way to spend the morning, won't you agree?"
-    BBW "Come on now the next bus to Seichou should be here soon."
-    jump daymenu
-
-label BBW042:
-    $setProgress("BBW", "BBW043")
+label WG040:
+    $setProgress("WG", "WG041")
     scene Art Classroom with fade
     play music Rain
     "After classes I had wanted to meet up with Alice to touch base on if any deliveries were needed. She wasn't answering any texts, but when I found Aida in the cooking classroom she told me Alice was probably in the arts room."
     "I did indeed find her there, standing at an easel. The painting she had been working on in class earlier that day was in front of her."
-    show BBW angry with dissolve
+    show WG angry with dissolve
     "Something about it seemed to be frustrating her. I weighed the pros and cons of interrupting her, and ultimately decided to do what I came to."
     MC "Hey, Nik- Alice? Got a second?"
-    show BBW stern
-    BBW "Hmm? What can I do for you?"
+    show WG stern
+    WG "Hmm? What can I do for you?"
     MC "I just wanted to check with you to see if there were any deliveries I needed to make, or any other work."
-    BBW "No. We are all good on that."
+    WG "No. We are all good on that."
     "She was only half-paying attention as she answered me, already turning back to her painting when she finished talking."
     "Curious what was giving her trouble, I glanced at the painting. It was a landscape, a grassy cliff overlooking the ocean."
     MC "Nice picture."
     "I was then going to head out, leave her to her work, but I guess Alice needed to vent."
-    show BBW angry
-    BBW "This is a bothersome experience. If it were possible to call a piece of art 'insolent,' I would."
+    show WG angry
+    WG "This is a bothersome experience. If it were possible to call a piece of art 'insolent,' I would."
     MC "Is it giving you trouble? It looks really good."
-    show BBW stern
-    BBW "The landscape itself is acceptable, and I am satisfied with the colors."
-    BBW "I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
+    show WG stern
+    WG "The landscape itself is acceptable, and I am satisfied with the colors."
+    WG "I have had to make due with a limited array of paint tones, the art department is not the best funded, but I was always good with color theory if I say so. Mixing just the right shades was not difficult."
     "I took a longer look at the painting, paying attention to the different shades of greens in the grass and blues in the skies. There was more detail there than I had originally noticed."
     MC "So what's the problem?"
-    BBW "The lighting. You see how the sun is supposed to be coming from the east?"
+    WG "The lighting. You see how the sun is supposed to be coming from the east?"
     "I looked to the right side of the frame, then realized from this perspective east was left."
     "I stared for a couple minutes, expecting or rather hoping to see something jump out at me. A problem like something off-model or looking sloppy."
     "Nothing came to me."
     MC "I don't see what the problem is."
-    BBW "Hmm..."
-    BBW "Have you seen Arisawa's painting?"
+    WG "Hmm..."
+    WG "Have you seen Arisawa's painting?"
     "She indicated a painting done by a classmate of ours, one of the finished pieces sitting on the shelves along the wall."
     "It was also a landscape, looking down at the rock quarry where the giant students lived. Alice's painting was good, but this one looked almost professional."
     MC "That's really good, yeah. But yours isn't bad. It's better than mine."
-    BBW "I know mine is good. And I am not concerned about being the best in the class, but in doing the best I can."
-    BBW "Look at the lighting in Arisawa's. Do you see how the sunlight reflects off the surfaces of the rocks? How its warmth is muted by the lingering chill of the morning?"
-    BBW "I have been trying for hours to get the interplay of light and warmth in my picture perfect, but the more I work on it the more of a mess it becomes."
+    WG "I know mine is good. And I am not concerned about being the best in the class, but in doing the best I can."
+    WG "Look at the lighting in Arisawa's. Do you see how the sunlight reflects off the surfaces of the rocks? How its warmth is muted by the lingering chill of the morning?"
+    WG "I have been trying for hours to get the interplay of light and warmth in my picture perfect, but the more I work on it the more of a mess it becomes."
     MC "Oh. Um... I'm sorry, I don't know anything about painting, really. I can't give any advice there."
     MC "But why not be content with how good your painting is anyway?"
-    BBW "Because it is {i}only{/i} good. By my own standards that is merely adequate."
-    BBW "I have done better. Not necessarily with the lighting, I am trying something new, but the principle is the same. I do not want to rest at 'good enough.'"
+    WG "Because it is {i}only{/i} good. By my own standards that is merely adequate."
+    WG "I have done better. Not necessarily with the lighting, I am trying something new, but the principle is the same. I do not want to rest at 'good enough.'"
     MC "I see."
     MC "I still think you should be satisfied with it as it is. It's very good."
-    BBW "That is not my way. If there are ways for me to improve, I pursue them. Stagnation is death."
+    WG "That is not my way. If there are ways for me to improve, I pursue them. Stagnation is death."
     MCT "That's harsh, even if she's applying it to herself. It's just something she's doing for a school assignment."
     MCT "I should say something. Or should I? I don't know Alice that well, but she seems to take everything seriously."
     menu:
         "Reassure her the painting's good.":
             MC "I think the painting looks great. You could be a real artist."
-            $setAffection("BBW", -1)
-            show BBW angry
+            $setAffection("WG", -1)
+            show WG angry
             MCT "I guess I didn't sound convincing."
             "Alice turned back to her painting, clearly annoyed."
-            BBW "The level of your exuberance is so excessive you almost sound sarcastic. But I would think actual sarcasm would have been more obvious."
-            BBW "Whatever your intent, I ask that you let me resume my work. In peace."
+            WG "The level of your exuberance is so excessive you almost sound sarcastic. But I would think actual sarcasm would have been more obvious."
+            WG "Whatever your intent, I ask that you let me resume my work. In peace."
             MC "Okay, yeah. Sorry."
             scene black
             "I quietly left, feeling like I had accomplished less than nothing. I had probably come out worse than if I had said nothing."
@@ -7593,22 +7663,22 @@ label BBW042:
 
         "Ask her if she really needs to try so hard.":
             MC "Even now? You don't want to slow down a bit?"
-            show BBW doubt
-            BBW "Of course even now. Why would I go easier on myself now?"
+            show WG doubt
+            WG "Of course even now. Why would I go easier on myself now?"
             MC "Because of... why we're here. The news about our bodies. We're all still dealing with that."
-            show BBW neutral-2
-            BBW "My body, you mean. Not all of these 'factors' are equal burdens."
+            show WG neutral-2
+            WG "My body, you mean. Not all of these 'factors' are equal burdens."
             MC "Yeah..."
-            BBW "That has never been my way, shrinking away from bad news. What would it accomplish?"
-            BBW "Life will continue to move forward even if I stopped, people our age who are not in our situation are advancing with their lives, so the best choice is to keep moving myself."
-            BBW "Is that not what this school is for? To help us both continue our education while learning to live with our changing bodies?"
+            WG "That has never been my way, shrinking away from bad news. What would it accomplish?"
+            WG "Life will continue to move forward even if I stopped, people our age who are not in our situation are advancing with their lives, so the best choice is to keep moving myself."
+            WG "Is that not what this school is for? To help us both continue our education while learning to live with our changing bodies?"
             MC "..."
             "I didn't have a rebuttal for that."
             "Then I realized that maybe this wasn't about the painting... Maybe this was just her way of dealing with any frustrating experience."
             "I couldn't say I knew Alice well enough to read into her actions like that. It could just be she was exactly that much of a perfectionist."
             "Either way, I saw no benefit to pushing back further."
             MC "I'll leave you to it, then. I just wanted to see if you had anything for me."
-            BBW "Not at the moment. I will see you later."
+            WG "Not at the moment. I will see you later."
             "She turned back to her painting and I quietly left."
             scene black
             "On the way back to my dorm I thought about things I could have said, or wish I had said."
@@ -7619,15 +7689,15 @@ label BBW042:
         "Tell her she should keep at it until she gets it.":
             MCT "On second thought, who am I to tell her to be satisfied with 'good enough?' If she thinks she can improve, she deserves encouragement."
             MC "You're right. There's nothing wrong with wanting to get better."
-            show BBW neutral
-            BBW "Mmm."
-            BBW "..."
+            show WG neutral
+            WG "Mmm."
+            WG "..."
             MC "..."
-            BBW "..."
+            WG "..."
             MCT "I thought she would have appreciated that more."
-            BBW "Was that it? The entirety of your thoughts?"
+            WG "Was that it? The entirety of your thoughts?"
             "She said, turning back to her painting."
-            BBW "While I appreciate your attempt at being supportive, I think I will get back to this now. I am certain you have other things to do."
+            WG "While I appreciate your attempt at being supportive, I think I will get back to this now. I am certain you have other things to do."
             MC "Yeah, um... I'll see you around."
             MCT "It appeared just agreeing with her wasn't enough. Which was a bit surprising."
             MCT "I guess I'm the fool for thinking her so easily manipulated. Turns out not every pampered elite responds to such blatant ego-stroking."
@@ -7638,91 +7708,894 @@ label BBW042:
             "The pause started to get long enough to be threatening. I had to say something, so I decided... to say nothing."
             MC "Don't let me interrupt you, then. I have some homework to do myself."
             MC "If it's that important to you, best of luck."
-            show BBW happy
-            BBW "Thank you. I will see you in class tomorrow."
+            show WG happy
+            WG "Thank you. I will see you in class tomorrow."
             scene black
             MCT "She wasn't oozing with gratitude, but she seemed to appreciate my leaving her in peace. I think that was the best outcome here."
             jump daymenu
 
-label BBW043:
-    $setProgress("BBW", "BBW044")
+label WG041:
+    $setProgress("WG", "WG042")
+    $setTime(TimeEnum.DAY)
+    play music Schoolday
+    show Classroom with fade
+    "While buying it without talking to Alice may have been risky on its own. It was an entirely different problem figuring out when to ask her about it."
+    show WG neutral with dissolve
+    "Clutching them in my hand, I waited till the end of class. It was then that I made my move, gently placing it on her desk. Her piercing blue eyes gazed up to match mine."
+    show WG surprised-2
+    WG "Keisuke... What are these?"
+    MC "Two tickets to the carnival in town, I was wondering if you wanted to attend the festivities with me?"
+    show WG doubt
+    WG "Hmph, \"attend the festivities?\" There is no need to be so formal about it."
+    MC "Why not? I felt it gave my proposal a certain Je ne sais quoi."
+    WG "Because formalities are wasted on such a low-class event, beating around the bush does little to increase its appeal."
+    MC "Low-class event? Festivals and traveling amusements have been around for ages! Some of the highest kings and queens would have their own performances made just for them."
+    show WG haughty
+    WG "That may be true, but that falls more in line with early theatre. I am doubtful the highest of nobles dined on cheap fried junk, while sitting in a tetanus–ridden thrill ride."
+    MC "C’mon, this isn’t just some two-bit traveling circus! This is a proper full-fledged carnival. Everything is up to code and 100% safe. Plus, the food is nothing like you’ve tried before."
+    WG "Far be it from me to tell people how to run their business, but maybe they should serve some proper cuisine if they wish to attract more clientele."
+    MC "Really? You can’t tell me that the greasy, fried food isn’t half the appeal of carnivals. I could smell the intoxicating aroma outside the venue."
+    WG "Well I’m sorry to say that you will have to tell me about it, because your polite offer has been declined."
+    MC "Tell you about it? Wait, you’ve been to a carnival before, right?"
+    WG "I can not say that I have, nor do I ever intend to visit one in my lifetime."
+    MC "Well..."
+    menu:
+        "How can you judge something you’ve never experienced?":
+            jump WG041_C1_1
+        "Aren’t you curious what they’re like in person?":
+            jump WG041_C2_1
+
+label WG041_C1_1:
+    MC "How can you judge something you’ve never experienced?"
+    show WG surprised-2
+    WG "I beg your pardon?"
+    MC "You’re planning to miss out on this because of some outdated stereotypes?"
+    show WG haughty
+    WG "I shall be doing no such thing, the fact is I’m \"missing out\" because of repeated trends in history."
+    jump WG041_after_choice1
+
+label WG041_C2_1:
+    MC "Aren’t you curious what they’re like in person?"
+    WG "Not particularly, no."
+    MC "C’mon, there has to be some part of you that’s just that little bit curious."
+    show WG doubt
+    WG "Oh, fine. You are not wrong,"
+    show WG neutral
+    WG "A small percentile of me is curious. But unlike {i}some{/i} people, I know how to control my impulsivity."
+    jump WG041_after_choice1
+
+label WG041_after_choice1:
+    WG "I am sorry that you went through the trouble of procuring these tickets, but I must decline your kind offer."
+    "Alice handed the tickets back to me. Defeated, I turned around to leave the room. But just as I reached the door, inspiration struck me."
+    MC "Y’know, it’s really a shame... all those dishes you’ll never get to try."
+    show WG doubt
+    WG "Hmph, if I want to try such low-class foods, I’ll simply order a professional to make it."
+    MC "But will it be the same? Having a five star professional chef preparing churros for dessert rather than an enthusiastic amateur who just wants to make the best type of food?"
+    show WG stern
+    WG "...I’m sorry but maybe you-"
+    MC "Think of it like going to a concert, if you will."
+    show WG neutral
+    WG "...I’m listening"
+    MC "Sure there’s always the option to watch a video of the concert online. Or you could even just listen to the music digitally."
+    MC "But actually going to a concert, and experiencing it first hand. That! That is how music is meant to be enjoyed. The same thing applies to food as well. The experience is half the fun."
+    "I could tell by the look on Alice’s face that I had struck some kind of cord. Her defensive posture loosened as she started to ponder my offer."
+    show WG neutral-2
+    WG "{i}Sigh{/i}... Fine, I-I will accompany you—"
+    MC "YES! Alright!"
+    show WG stern
+    WG "Let me finish! I will accompany you on one condition."
+    WG "This fair cuisine had better be fantastic, or I’m never attending such a low-class event with you ever again."
+    MC "It’s a promise, you’ll be amazed by the carnival in its entirety."
+    show WG haughty
+    WG "I am highly doubtful of that, but for some reason I trust your judgement. Don’t disappoint me, Keisuke."
+    show WG neutral
+    "After giving her the time and location for the date, we had some small talk before leaving. My excitement was more than visible as I giddily made my way back to get changed."
+    "In a way, this entire date setup was an excuse to pull Alice out of her comfort zone. As hard as it is to explain, I just feel like there are so many ‘commoner’ things that she’d love if given the chance."
+    stop music
+    scene black with fade
+    pause 2
+    "Later that evening..."
+    $setTime(TimeEnum.NIGHTLIGHTS)
+
+    scene Festival with fade
+    play music Festival
+    "Standing by the brightly illuminated entrance of the carnival, I nervously checked the tickets again and again. The weight of the situation started to hit me— just how much of a gamble did I take by inviting Alice here?"
+    "So caught up in my own mind, I didn’t even notice the sleek, black, convertible pulling up in front of me. Alice tipped the chauffeur before slowly stepping out to greet me."
+    show WG doubt with dissolve
+    WG "Are you positive this is the place you wanted to take me?"
+    "Alice was wearing a form fitting teal striped tank-top with light jean shorts that must’ve been custom made by her specifications."
+    "I was rather caught off guard to see her in something so casual, and well... revealing, at least for her."
+    MC "Hm? Oh yeah! What do you think, it’s certainly a shining spectacle isn’t it?"
+    show WG stern
+    "Alice slowly peered back and forth, observing the area like a hawk. Her arms crossed as she focused back on me."
+    WG "It’s certainly a spectacle all right. All the contrasting lights, flashing in a gaudy attempt to draw patrons in."
+    show WG neutral
+    WG "Although, it must be working. There seems to be an abundance of people enjoying their time here. I’m glad my choice of wardrobe fits the situation."
+    "Despite her attempt to come off as just another middle-low class visitor, it was clear that she put a lot of time into this look."
+    "Not too fancy so that she stood out, but coordinated in just a way so that she would still come across as graceful."
+    MC "You look lovely. Now, shall we depart for a joyous evening?"
+    show WG haughty
+    WG "Hmph, what did I say about being so formal?"
+    WG "Not that I mind your efforts entirely, of course."
+    MC "Sorry, force of habit I guess."
+    "Without any more delay, I deposited the tickets and led Alice past the turnstiles. My mind couldn’t help but wonder what it would’ve been like if the turnstiles were proportioned normally."
+    "Obviously the carnival was designed with the island's factors in mind, giving Alice more than enough room to comfortably pass through. But if they were just normal sized?"
+    "Her pillowy haunches would get pressed up against the sides. Not to mention, there’s no way her belly would make it past the revolving bars in one turn. It would probably just end up rolling over them like a conveyor belt of flab-"
+    show WG doubt
+    WG "Kei, aren’t you also planning to come along?"
+    MC "Right right! Sorry, just thinking of what to show you first."
+    show WG haughty
+    WG "You sounded so cocksure of the cuisine here. I request that we visit a food stall first."
+    show WG stern
+    WG "That way, I will know if I wasted my time or not."
+    MC "Don’t worry, I know just the place. Did you eat before coming here?"
+    show WG surprised-2
+    WG "O-Of course not... eating before a dinner invite is just rude."
+    MC "Perfect! Then come along, you’re gonna love..."
+    jump WG041_menu
+
+label WG041_menu:
+    menu:
+        "Funnel cake" if not getFlag("funnel-cake"):
+            $setFlag("funnel-cake")
+            jump WG041_C1_2
+        "Corn Dogs" if not getFlag("corndog"):
+            $setFlag("corndog")
+            jump WG041_C2_2
+
+label WG041_C1_2:
+    show WG neutral
+    MC "Elephant ears! Er, I guess it’s actually funnel cake. I tend to get them mixed up a lot, hehe."
+    WG "So it’s called funnel cake, as in it’s made with a funnel, yes?"
+    show WG doubt
+    WG "You don’t actually..."
+    MC "What, eat it via a funnel?"
+    show WG stern
+    WG "Judging by the hedonistic aura of this venue, forgive me if my first impressions were off."
+    MC "Nah, you don’t actually eat it with a funnel... although I’m surprised that hasn’t been done before."
+    MCT "Not that I’d admit it, but that did give me a certain visual."
+    show WG neutral
+    WG "Seems like a rather odd thing to confuse with— what did you call it? An elephant ear?"
+    MC "Trust me, they are pretty similar, but whatever you want to call it, the taste is still the same. And I know just where to get the best fried dough."
+    "I eagerly led Alice to the funnel cake stand, the cook behind the counter had a jovial look on him. His eyes widened upon seeing Alice and I approaching."
+    Cook "Now ain’t this a classic sight, two young lovebirds at the carnival. What can I get ‘cha?"
+    MC "One of your biggest funnel cakes, please. Oh, and can you add extra powdered sugar?"
+    Cook "Not a problem, it’ll be ready in a hot minute. Feel free to take a seat on the bench."
+    WG "Extra sugar? As if the food here wasn’t front-loaded with enough sweetness already."
+    MC "This is a special case, you gotta make sure there’s enough powdered sugar to dip it in."
+    WG "It never ceases to amaze me just how far lower-class cuisine will push the concept of ‘fried dough’."
+    WG "Why did you just order one? Do you not plan to eat as well?"
+    MC "Oh I do, but these are {i}massive{/i} funnel cakes. One of them is more than enough for three people to share."
+    show WG surprised-2
+    WG "That much food for such a cheap price?"
+    show WG doubt
+    WG "I suppose they believe in quantity over quality..."
+    MC "Cheap? I’m not too sure about that, really. Sometimes carnival food can get quite expensive. It really just depends on the place."
+    show WG neutral
+    MC "Anyway, you won’t be saying that once you actually get a taste of it though."
+    "As if on cue, the jovial cook came out of the stall holding our massive funnel cake with both hands."
+    "The smell was intoxicating, the powdered sugar caramelizing into the golden-brown slivers of fried dough. It seemed to be almost too much for even the paper plate it was served on to handle. As it bowed under the weight of the meal."
+    show WG surprised-2
+    WG "My word, are you sure this is the standard serving size?"
+    Cook "Yessiry, been the same since I started workin’ here."
+    MC "Ah, actually would you mind getting us a pair of forks?"
+    Cook "Sure thing, we’re told to keep extra utensil packets in our aprons for stuff like this."
+    WG "Does that mean this meal is normally eaten by hand?"
+    Cook "Ha! Well you might wanna when it’s hot out da frier, but I’ve always thought by hand is the only good way to eat funnel cake. But some folk aren’t keen on gettin’ their hands sticky."
+    Cook "I gotta get back to the line, you two enjoy your dessert!"
+    MC "Thank you! ...Would you like the first bite, Alice?"
+    show WG neutral-2
+    if getFlag("funnel-cake"):
+        WG "I shall accept the first forkful, but remember the deal."
+    else:
+        WG "Why thank you, Keisuke."
+    "With a confident smirk, Alice stabbed her fork forward into the mess of sugar and dough. Pulling out a tiny section of unpowdered funnel cake. After lightly blowing on it to cool down, she placed it in her mouth."
+    WG "Hmm..."
+    show WG worried
+    "Although the look on her face wasn’t one of displeasure, the sense of disappointment was immeasurable. Calmly removing the fork, Alice turned to me."
+    show WG neutral
+    WG "While it certainly wasn’t bad in any sense of the word, I can’t help but feel underwhelmed somewhat. The taste, while somewhat pleasant, is dreadfully bland and uneventful."
+    MC "Well yeah, you only got one part of the dish. You need both elements to make it shine."
+    WG "I beg your pardon?"
+    MC "Well... think of it like caprese salad, you need both the tomato {i}and{/i} mozzarella to bring the dish together. It’s like that with the dough and sugar."
+    WG "If that truly is the case, I must try this in a different way."
+    "Carefully selecting a large outer chunk of the funnel cake, Alice picked the area that looked to have the most sugar. Cutting it out with the fork, she went to blow on it before I stopped her."
+    MC "Hang on, hang on!"
+    show WG surprised-2
+    WG "What’s wrong? Did I pick the wrong area?"
+    MC "No no, just-just don’t blow on it this time. Now that it’s loaded up, powdered sugar will fly everywhere if you try to cool it down."
+    show WG happy
+    WG "Hehe, I assume you learned that from personal experience?"
+    MC "Unfortunately, yes. And it was a pain to wash out."
+    show WG doubt
+    "Cautiously, Alice opened wide to take in the substantial chunk of funnel cake."
+    show WG surprised-2
+    "Her eyes went wide in surprise for a second, although I couldn’t tell if it was from the heat or the taste."
+    show WG happy
+    "However, my worry subsided as her surprised face joyfully turned into one of contentment. Each time she chewed, her fluffy jowls bounced in excitement as she enjoyed the new taste dancing upon her tongue."
+    MC "Judging by your expression, I take it you enjoyed the funnel cake?"
+    WG "Mmph..."
+    show WG neutral-2
+    WG "I simply must apologize for judging it so soon. Had I sampled it correctly first, a second review wouldn’t have been needed."
+    WG "Such a straight-forward dish, the combination of dough and sugar. But the way the dough melds with the sweet taste of the powdered sugar is spectacular."
+    WG "The rather drab texture of the base compliments the overpowering flavor of the seasoning."
+    MC "Could it really be classified as seasoning if it’s most of the dish?"
+    show WG neutral
+    WG "Hmm, fair point. It may be possible that I must rethink the way I review my meals in the future."
+    WG "Although this was rather pleasant, I can’t help but feel as if it’s missing something."
+    MC "Perhaps some sort of sweet jam to go on top of it?"
+    show WG happy
+    WG "What a fantastic idea! The tart and bitter flavoring of the jam being mixed with the powdered sugar— they would work in perfect unison over the doughy base."
+    MC "Heh, I was actually being somewhat coy. Jam and fruit are some of the most common toppings to put on funnel cake."
+    WG "Truly? Then I simply must try that variety next time! But for now I shall enjoy the base form in front of me."
+    "With gusto, Alice started taking forkful after forkful of the funnel cake. We had a pleasant chat as she pondered in what ways this simple dish could be improved."
+    "By the time the plate was cleared, I came to the realization Alice had managed to eat over three quaters of the whole thing. Which by itself was impressive, but the fact she still looked hungry afterwards was shocking."
+    show WG neutral
+    WG "Pardon me for a second... The compliments must go to the chef. I must thank you for such a wonderful meal, my apologies for any prior judgements of your cuisine."
+    Cook "Woah, really? Well thank you kindly, ma’am! Don’t think I’ve ever gotten a compliment for my stall food before, heh."
+    Cook "You two have a great time at the rest of the fair."
+    MC "We will, thank you!"
+    WG "So what else did you have in mind?"
+    if getFlag("corndog"):
+        jump WG041_AfterFood
+    else:
+        jump WG041_menu
+
+label WG041_C2_2:
+    show WG neutral
+    MC "Something we can walk with!"
+    WG "Won’t that be messy, not to mention rude?"
+    MC "Nah, don’t worry. They expect people to walk around while eating it."
+    WG "Eating while looking for what to eat next? What an amusing concept."
+    WG "What exactly are you getting at, Keisuke?"
+    MC "Corn dogs!"
+    show WG doubt
+    WG "Corn... dogs?"
+    MC "Yep, corn dogs. Foot long sections of hotdogs, coated in a thick layer of cornmeal batter, and then fried to a perfect crispy brown texture."
+    if getFlag("funnel-cake"):
+        WG "And you also eat this with your hands like the funnel cake?"
+    else:
+        WG "Are you telling me to eat this... small, hotdog loaf... {i}thing{/i} with my bare hands?!"
+    MC "Haha! I’m not even sure I would do that. No, they put the hotdog on a stick first before they coat and fry it. Probably should have mentioned that before."
+    show WG haughty
+    WG "While I do admire the intent, a meal is meant to be enjoyed by itself. The recipient shouldn’t be required to walk around while enjoying their food."
+    show WG neutral
+    WG "Although, it does sound like an inventive way to work off excess calories."
+    MC "I really don’t think you would burn the same amount of calories walking. It is still deep fried meat."
+    show WG worried
+    WG "Much like everything else here, as it would seem."
+    show WG neutral-2
+    WG "But I was referring to the idea of working out while also enjoying a finely prepared meal... you must remind me of that idea sometime in the future."
+    MC "I will— now come on! The hotdog stand is close. I heard they use proper corn bread here. Not just that, but the meat is of significantly higher quality than most hotdogs."
+    show WG stern
+    WG "Ugh, hotdogs. Those I have tried before, what a mistake that was."
+    menu:
+        "Not a fan of hotdogs, I take it?":
+            jump WG041_C1_HD1
+        "I gotta agree with you, hot dogs really aren’t all that fantastic.":
+           jump WG041_C2_HD1
+
+label WG041_C1_HD1:
+    MC "Not a fan of hotdogs, I take it?"
+    "Alice scowled at me as if I had said something truly vulgar. Her brows pushed together with both a mix of frustration and disgust."
+    $setAffection("WG", -1)
+    WG "Not a fan? Keisuke, there are many things that I am ambivalent towards. Foods like caviar and truffles, for example. And what would you say they have in common?"
+    MC "Uh, they’re both expensive?"
+    show WG haughty
+    WG "Correct, but they are not highly priced for their taste. They cost so much simply because they are both hard to procure."
+    WG "But whilst I myself am not a fan of such practices, I can at least enjoy the taste and quality in some regard."
+    show WG doubt
+    WG "However, ‘hotdogs’ are a different story..."
+    show WG stern
+    WG "Right from the start, hotdogs are produced with not only all the animal byproducts no sensible person would eat. But they are the byproducts from low-quality stock, the kind used to make other cheaply priced meats."
+    WG "So that means hotdogs the lower quality scraps of low-quality food. They are truly revolting in both appearance and taste."
+    MC "Are you sure about that? When was the last time you had one?"
+    show WG doubt
+    WG "Admittedly, I do not recall."
+    MC "Uh huh. You eat pâté right?"
+    show WG neutral
+    WG "Why yes, it is rich, savvory, and somewhat decadent. I enjoy it on occasion. What does that have to do with hotdogs?"
+    MC "Well, you know what that is made of right?"
+    show WG doubt
+    WG "...I am aware, yes."
+    MC "See? Sometimes it’s best to not think about where food comes from and just enjoy it in the moment."
+    show WG neutral-2
+    WG "Very well. I shall concede your point— for now. Given how underwhelming the cafeteria options at school have been I can’t imagine it being the worst thing I’ll have eaten since arriving here."
+    jump afterhotdog_Choice
+
+label WG041_C2_HD1:
+    MC "I gotta agree with you, hot dogs really aren’t all that fantastic. It’s not like I’d seek out a corndog outside of a carnival."
+    show WG haughty
+    WG "Hmph, I’m glad you do at least have enough sense to know how horrific they are."
+    MC "Are you sure about that? That’s a bit harsh, even for hotdogs. When was the last time you had one?"
+    show WG doubt
+    WG "Admittedly, I do not recall."
+    MC "Uh huh. You eat pâté right?"
+    show WG neutral
+    WG "Why yes, it is rich, savvory, and somewhat decadent. I enjoy it on occasion. I don’t see how you can compare it to hotdogs"
+    MC "Well, you know what that is made of right?"
+    show WG doubt
+    WG "...Point taken."
+    jump afterhotdog_Choice
+
+label afterhotdog_Choice:
+    MC "I wouldn’t worry too much, these aren’t store brand meats. Almost every ingredient here is produced locally, so you don’t have to worry."
+    show WG haughty
+    WG "A rose by any other name, Keisuke. I shall believe it when I actually try it myself."
+    show WG neutral
+    "Arriving at the stand, we were surprised to find it packed with people. A small concession of carnival goers crowded the orders line. It could take a while before we got ours in."
+    "Suddenly I noticed a sign hastily taped to the side of the pick-up window. \"Pre-cooked, sleeved corndogs. Leave money in the box, toppings around back. Thank you!\""
+    "Sure enough, there was a vast array of prepped corn dogs sitting there, almost like an afterthought, offered in a similar fashion to how some restaurant would offer a mint."
+    "Each one was definitely a foot long, and concealed in a cheap wax paper wrapper."
+    show WG worried
+    WG "Oh...how charming..."
+    "Alice was doing her best to come across as genuine, but the sliver of unease she felt was clear. Something about this method of serving really seemed to put her off."
+    MC "Here, I’ll pick one out for you."
+    show WG neutral
+    WG "Oh, thank you."
+    WG "This whole system is rather alien to me. I must apologize for possibly coming across as rather crass."
+    MC "Alice, look around at all the people here. The last thing you need to worry about is coming across as unrefined."
+    MC "This is supposed to be a relaxing time out, you needn’t fret over every step you take."
+    WG "Hmph, maybe such boorish behavior is common for you, Keisuke. But I must confess that this is far outside of my comfort zone."
+    MC "That’s why I’ve invited you here, isn’t it? To broaden your horizons, see what you’ve been missing out on. Now come on, the corn dogs are going to cool off soon."
+    MC "What type of condiments do you normally like?"
+    WG "Unless I have a specific request, I would normally defer to the chef and trust their skill to execute their intended vision of the dish."
+    show WG haughty
+    WG "To leave it as a blank canvas suggests a lack of culinary instinct or just plain laziness."
+    "My arms crossed in mild frustration, Alice quickly took notice."
+    show WG neutral2
+    WG "{i}Sigh{/i}... I apologize again, refraining from chastising is turning out to be quite difficult. What are my choices for flavorings?"
+    MC "Let’s see... we have"
+    menu:
+        "Ketchup & mustard":
+            jump WG041_C1_HD2
+        "Sour cream & Jalapeños":
+            jump WG041_C2_HD2
+        "Cheese sauce":
+            jump WG041_C3_HD2
+        "Cheddar cheese & Chilli":
+            jump WG041_C4_HD2
+
+label WG041_C1_HD2:
+    MC "Well, you can’t go wrong with the classic."
+    $setFlag("ketchup")
+    jump WG_Condiments
+
+label WG041_C2_HD2:
+    MC "Let’s try something with a bit more kick."
+    $setFlag("jalapenos")
+    jump WG_Condiments
+
+label WG041_C3_HD2:
+    MC "It’s almost like nachos and a corn dog at the same time."
+    $setFlag("cheesesauce")
+    jump WG_Condiments
+
+label WG041_C4_HD2:
+    MC "Messy, but delicious."
+    $setFlag("chedderchilli")
+    jump WG_Condiments
+
+label WG_Condiments
+    MC "Here you go! One 25cm long stick of meat coated in fried dough."
+    show WG doubt
+    WG "Hmph, it is not as if the dish needed help to be less appetizing."
+    show WG worried
+    WG "Best to just go for it, no point in stalling. The pungent odor is already clogging my senses with conflicting aromas."
+    "Turning the corn dog around a couple times, Alice found a good angle to eat from. With deep hesitation, she daintily bit off a piece from the top. She chewed for a couple seconds, pondering the taste before swallowing."
+    MC "Well...What do you think?"
+    show WG neutral
+    WG "It’s not terrible, as I had been expecting. But that is mostly due to a lack of complexity-I mean, there is very little to praise or critique."
+    WG "Even with the choice of toppings."
+    if getFlag("ketchup"):
+        WG "I am well aware that this combination is considered to be the proper choice of condiments. But the sauces used were very watery and bland, I can’t say that I enjoyed it all too much."
+    if getFlag("jalapenos"):
+        WG "Spicy foods are something, I personally, have had mixed feelings on. Some dishes need that extra kick to fully come together."
+        WG "But this wasn’t what the meal needed. The sour cream is rather cheap, and I can taste the plastic jar the jalapeños clearly came from."
+    if getFlag("cheesesauce"):
+        WG "Ugh, this cheese couldn’t possibly be any more processed. I can’t help but wonder if any dairy actually went into this artificial "fondue" of sorts."
+    if getFlag("chedderchilli"):
+        WG "While the chili by itself is passable, I can’t help but feel it is out of place here. If I were to have the chili myself, my opinion might change."
+        WG "But the actual intended main aspect of the dish seems to draw away from that."
+    MC "So, a bit of a bum pick, huh? Don’t worry, it can only get better from here."
+    WG "I will take one more though, for the walk to the next stall. Maybe I shall be able to understand the meal better if I have it plain."
+    MC "Heh, it can’t have been all that bad if you’re planning to have another one."
+    show WG surprised-2
+    WG "T-That’s not the reason at all."
+    show WG haughty
+    WG "It is simply a case of minor hunger, and a second one would satiate me, is all."
+    MC "...Minor?"
+    show WG stern
+    WG "What are you implying, Keisuke?"
+    MCT "Apparently, I shouldn’t bat an eye about her wanting another half kilo hotdog wrapped in fried dough."
+    MC "Oh nothing! I’m just glad this selection wasn’t such a dud afterall."
+    show WG neutral
+    if getFlag("funnel-cake"):
+        jump WG041_AfterFood
+    else:
+        jump WG041_menu
+
+label WG041_AfterFood:
+    show WG neutral-2
+    "Alice did seem to be enjoying herself so far. At least somewhat, as far as I could tell."
+    "As I suspected, she had quite the appetite. She already had eaten more than I could in an entire day and didn’t seem too phased by it."
+    "She never really displayed anything close to this kind of voraciousness at school. At least that I had seen, and we weren’t even half-way done with the night."
+    "I couldn’t help but think things were going to get pretty interesting in that regard before this was over."
+    MC "Well there’s still plenty more to see, and the food stalls are kind of interspersed throughout. How about we play some games and see if we find anything else that sounds good?"
+    show WG neutral
+    WG "Games? What kind of games?"
+    MC "Allow me to show you."
+    jump daymenu
+
+label WG042:
+    $setProgress("WG", "WG043")
+    $setTime(TimeEnum.NIGHT)
+    scene Festival with fade
+    play music Festival
+    show WG neutral with dissolve
+    "We walked around taking in the sights and sounds of the rest of the carnival. It wasn’t quite the magical wonderland I remember from when I was a kid, but it still felt like something fun for the summer time."
+    "I thought about asking Alice if she wanted to go on any of the rides, but given her initial disinterest in them when I asked her out, on top of a couple of kilograms of fried junk sitting in her gut, I decided that outcome wouldn’t go over well."
+    "Looking around at the games, I recognized the familiar standbys. Basketball shooting, skeeball— but they had those at the arcade in town, I could do those any time."
+    "What else? They had that fishing game where if you won you could take home a goldfish in a bag that never stayed alive by the time you brought it back home. Pass."
+    "I was thinking about showing off to Alice on the ‘High Striker’ as they called it. I just always called it the ‘ring the bell with the hammer’ game."
+    "But after watching a guy nearly twice my size come up about half a meter short, I figured I was better off saving myself the embarrassment, even if it was just because it was rigged."
+    MCT "Man, a lot of these games suck. Why did I like this so much as a kid?"
+    MC "See anything that catches your curiosity?"
+    WG "Not in particular. None of these games look all that challenging, but I suppose that’s keeping with the relative value of the prizes."
+    "Such a statement aptly captured the extent of Alice’s familiarity with carnivals."
+    MC "Uh, are you sure about that? These games are a lot harder than they look. I think you’ll find trying to win a plush teddy bear can cost someone quite a bit of money."
+    show WG haughty
+    WG "Surely it can be that difficult. Are you sure you aren’t just covering for your own lack of skills? Look at this game, how hard can it be to land a ring that big onto a bottle?"
+    "I couldn’t help but raise an eyebrow at that remark."
+    MCT "Ring toss is one of the most rigged games there is at a carnival. She doesn’t understand what she’s getting into."
+    MC "If you say so. Go on, give it a shot."
+    "Rather than undergoing the herculean task of convincing Alice she had the wrong idea, I decided to let experience be her teacher instead."
+    WG "I will then."
+    "Alice slammed her money on the counter, receiving a small bucket of plastic rings in exchange. I could tell she had a bit of fire in her eyes, now determined to prove a point."
+    "{i}Plink{/i}… {i}plink{/i}… {i}plink{/i}…"
+    show WG doubt
+    "Alice’s initial confidence began to falter into minor frustration."
+    WG "I see. So that must be it. There’s so many of them it’s distracting from choosing a single target. It just requires focus."
+    "{i}Plink{/i}… {i}plink{/i}…"
+    show WG stern
+    "Alice’s newfound strategy did not bring about any further improvements."
+    WG "Hmph. Perhaps the trajectory is wrong, I’ll toss them up higher so it has a more gentle arc."
+    "{i}Plink{/i}… {i}plink{/i}…"
+    "Alice’s ideas for how to win were pretty sound strategies, but all the same ones many a carnival goer before her had tried."
+    "Alice lofted up one last ring. This toss caught my attention because it was heading straight down— a perfect shot!..."
+    "{i}Plink{/i}!"
+    show WG angry
+    "The ring landed perfectly around the top of one of the bottles, barely fitting within the ring itself, only to have it bounce off anyway onto the ground below."
+    WG "You’ve got to be kidding me!"
+    "Alice turned around to face me standing behind her. This time, it was my turn to gloat with a satisfied, smug smile."
+    show WG stern
+    WG "Not. A. Word."
+    "Alice had clearly learned her lesson, she just wasn’t quite ready to admit it yet."
+    MC "I didn’t say anything."
+    WG "You know what I meant. Come on. I’m still hungry, let’s get some more food."
+    MC "Alright, sounds good to me."
+    show WG neutral
+    "Meandering through the rest of the game booths to get back to the food stalls, we came increasingly closer to the source of some unusually raucous yelling."
+    Clown "Hey Horseface! I bet you couldn’t hit the broad side of a barn, despite living in one!"
+    extend "What are you mad about? No one’s looking at your face anyway with melons that big."
+    Clown "What about you there Mr. Beanpole? Think you can throw a ball without it going across the parking lot instead?"
+    "It was your stereotypical carni dunk tank clown, riling up passersbys with the most personal insults a stranger could muster."
+    Clown "Hey Bigfoot chick! Did you bring the yeti with you too? Those shoes are even bigger than mine! Where’da gett’m?"
+    "This one was particularly grating, having no qualms about making fun of people's factors, just to goad them into paying for the chance to dunk his sorry ass."
+    Clown "Woah! Wide load coming through! You gotta CDL to drive that dump truck there?"
+    show WG stern
+    WG "How incredibly rude! What kind of place let’s their employees act like that?"
+    MC "It’s all part of the draw, get people mad enough and they won’t be able to resist folking over the cash just to get a shot at him."
+    MC "If they’re really mad, they won’t be that accurate either. It’s a pretty good grift to be honest."
+    WG "Still, it’s positively obnoxious."
+    "Walking on past, I should have known better than to think we’d escape the clown’s attention."
+    Clown "Hey little girl with the long hair! Where did you win that giant blonde balloon you’re holding on to? What have you been feeding her? She looks like she’s about to pop!"
+    show WG surprised
+    MCT "That’s it! His ass is getting dunked!"
+    show WG sad
+    MC "I’ll take care of this."
+    "Without hesitation, I proceeded to silently walk over to the stall with determined strides. I handed the cashier my money for the standard three balls. I only needed one."
+    Clown "Ooo looks like we got a taker everyone. Hey that’s not a little girl! It’s just an angry mop!"
+    "The clown kept blabbing, but I wasn’t paying attention. I’d seen enough of these to know how they just try to distract you while doing a simple throw that requires a bit more accuracy than average."
+    "I wound up my pitch like I was standing on the mound, blocking out the sights and sounds of the carnival to just focus in on the bullseye."
+    MCT "Cool, calm, focused, right down the center like you’ve done a thousand times before."
+    "{i}Ping!{/i}"
+    "{i}SPLOOOSH!{/i}"
+    show WG surprised
+    "The clown was clearly not expecting me to actually hit the mark. The look on his face as he thrashed around to swim back to the edge of the tank was more than worth the price I paid for the throw."
+    MC "That oughta shut you up!"
+    $setAffection("WG", 1)
+    show WG happy
+    "Wanting to walk away before the clown could get his bearings back and start hurdling insults at us again, I took Alice by the hand and walked us back towards the food stalls."
+    "Alice for her part seemed quite appreciative of my actions, pulling herself closer to me as she wrapped her arm up around mine as we walked side by side."
+    show WG aroused
+    WG "You have quite the arm on you Keisuke!"
+    MC "Oh? I guess so. My dad was really into baseball. He taught me how to throw. Seems like it came in handy."
+    "Having left that temporary interruption, in an otherwise pleasant evening behind us, we found ourselves back in the food stall section."
+    MC "Thinking of anything in particular?"
+    show WG neutral-2
+    WG "Is there anything that’s not fried?"
+    MC "Not a chance."
+    show WG worried
+    WG "That figures. Well, what else is there?"
+    jump WG042_Food_Menu
+
+label WG042_Food_Menu:
+    menu:
+        "Yakisoba" if not getFlag("Yakisoba"):
+            $setFlag("Yakisoba")
+            jump WG042_C1_1
+        "Takoyaki" if not getFlag("Takoyaki"):
+            $setFlag("Takoyaki")
+            jump WG042_C2_2
+
+label WG042_C1_1:
+    MC "Can’t go wrong with some fried noodles."
+    show WG neutral
+    WG "Hmph, well frying noodles doesn’t seem like that odd of a concept."
+    MC "You’re not wrong, frying food is the quickest and tastiest way to serve a large number of people."
+    WG "Quickest, most definitely. However frying a meal does not make the taste inherently better."
+    show WG haughty
+    WG "In fact, I find that frying foods tends to distract from the full taste of the meal. As with anything breaded and fried, the bread coating takes control and overpowers the inner flavors."
+    MC "Now that may be true for a lot of foods, but what if a dish could taste better if it was fried. Take noodles for example, wheat noodles to be exact."
+    MC "By themself, there is not much to talk about. But that’s why they work so well as a base for full meals. Noodles won’t draw focus from the other ingredients combined with it."
+    MC "Now— imagine if the plain noodles were fried, along with several other vegetables and meats."
+    show WG neutral
+    WG "I see what you are alluding to, Keisuke. But I must sample the meal before my mind is made up."
+    "Arriving at the Yakisoba stand, we could see the smoke of the fryer billowing out from the sides of the stall. And the sounds of sizzling, freshly cooked Yakisoba were almost deafening."
+    "Before I could even place an order, a large, rather portly woman slammed her hand down on the counter."
+    Chef "No gawkin, what’s ya ordah?"
+    "Her hair was in a chef's net, and a half-burnt cigarette hung loosely from the corners of her mouth."
+    show WG doubt
+    WG "My, that was rather blunt! Even more so than I was expecting."
+    Chef "You two kids gonna ordah or not? Hurry up already, we got other condiments."
+    MC "One order of chicken Yakisoba, and another of beef Yakisoba please."
+    Chef "Finally! Took ya long enough. Next in line!"
+    MC "You can try both and then pick the one you want, yeah?"
+    show WG haughty
+    WG "Hmph, you have confidence that I will like either of them?"
+    MC "Honestly, I’m pretty sure you’ll end up liking both of them. Picking between the two is going to be the challenging part."
+    Chef "Beef and chicken! Pick up!"
+    show WG surprised-2
+    WG "My word that was fast, did they even cook the noodles?"
+    MC "The noodles have been cooked for a while, look at that big pile of them on the fryer. They have them cooking constantly, then divide certain proportions out as needed."
+    show WG neutral-2
+    MC "All that’s needed then are the meat and vegetables on the noodles. That’s really all it takes to make Yakisoba, it’s a simple dish in practice."
+    WG "I must confess, those do smell rather appetizing."
+    show WG worried
+    WG "But… I can’t say for sure if I could eat this many noodles now…"
+    show WG neutral
+    WG "Wait. Is that… pickled ginger? What an interesting choice, it surprises me that I have not tried something similar before."
+    WG "And, I am picking up the distinct aroma of kewpie as well. Mayonnaise on noodles, what an odd dish this is."
+    Chef "Ya could actually pick that out jus’ by tha smell?"
+    MC "Ah, sorry for holding up the crowd-"
+    Chef "Nah nah nah, m’just impressed by that blonde girl's senses."
+    WG "That ‘Blonde Girl’ has a name, I’ll have you know."
+    Chef "So do I, but you don’t see me complainin’ when I’m not called by it."
+    show WG stern
+    WG "How dare-"
+    Chef "Don’t get me wrong here, it was a compliment. You must be a serious foodie, ma’am!"
+    show WG haughty
+    WG "I am not a \"foodie\" as it were, I am a gourmand!"
+    Chef "Hold that thought, nutha order over here."
+    WG "Hmph."
+    menu:
+        "That was rude of her.":
+            jump WG042_C1_rude
+        "She really did mean well."
+            jump WG042_C2_rude
+
+label WG042_C1_rude:
+    MC "That was rude of her."
+    show WG angry
+    WG "The nerve of some people! {i}Sigh{/i}."
+    MC "Don’t worry about it, now let’s go eat before it gets cold."
+    show WG neutral
+    jump WG042_after_rude
+
+label WG042_C2_rude:
+    MC "She really did mean well."
+    $setAffection("WG", 1)
+    show WG sad
+    WG "Forgive me, Keisuke. I have trouble remembering that some of these people simply don’t know better."
+    show WG neutral
+    WG "While it was rude on her part, I forget that I am the outsider here. Presumably, my actions were rather odd to them."
+    WG "You must remind me to apologize to her after the meal, the last thing I want her to remember me as is a snob."
+    MC "Sure, now let’s go eat before it gets cold."
+    jump WG042_after_rude
+
+label WG042_after_rude:
+    MC "There’s a little dining area down the path, assuming it’s not too crowded we can use that."
+    "With the orders of Yakisoba in each of my hands, Alice followed me to the sitting area. All the while, her eyes kept floating over to the styrofoam containers. Maybe it was curiosity, or perhaps it was simply just hunger."
+    MC "Any preference to which one you want to try first? I’m more of a beef fan, personally. Although sometimes I’ll get chicken, it depends on my mood."
+    WG "The beef variety it is then. The inviting aroma has been taunting me— time to see if it’s flavorful boasting was fitting."
+    MC "Yeah, I uhhh, oops— hang on."
+    show WG surprised-2
+    WG "Is there a problem?"
+    MC "Well no, I just forgot to grab some chopsticks for you at the stand. Here, you can use mine, I’ll be right back."
+    show WG neutral
+    WG "Hmph. Do make sure to hurry back, I need to give you my impressions before the dish cools off."
+    hide WG with dissolve
+    "With a light jog, I made my way back to pick up a set of chopsticks. Quickly nabbing a pair, I waved back to the cook and started to jog back to the sitting area."
+    "On the way there, my eyes were drawn to a middling sized tent. The words ‘Masterful Face Paint’ were plastered over the opening in bright lights."
+    "Chances are this was just a case of grabbing customers by the eyes, but right below the sign was small after note: ‘5 minutes or it’s free!’ "
+    "Normally, these kinds of side attractions wouldn’t catch a second glance from me. And yet, some small part of me was curious how Alice would react if I suddenly returned with a different face…"
+    menu:
+        "(Get some face paint)":
+            jump WG042_facepaint_yes
+        "(Resist the urge)":
+            jump WG042_facepaint_no
+
+label WG042_facepaint_yes:
+    $setFlag("WG042_facepaint")
+    "I’m probably going to end up regretting this, but I let my impulses get the better of me."
+    "After paying, I sat down on the rather cheap looking stool, if someone of my size was causing it to wobble, it wouldn’t have stood a chance under Alice."
+    "The ‘master’ face painter slowly exited the tent. He was definitely a foreigner. Before I could even say anything, he shoved a list of numbers in my face."
+    "Each one had a different design of face art on it, but the names were all in a language I wasn’t too familiar with."
+    MC "I— um, the… h-here, this one… I think."
+    "Panicked, I hastily pointed at what looked to be a rather intricate tiger design. In my worried rush, I picked out the one choice that looked cool. My brain acted before looking at the other options on hand."
+    "The man raised an eyebrow, it was hard to tell what kind of emotion he was trying to convey. But he shrugged his shoulders and went to work, forcefully pushing my hair back and holding it up with one hand."
+    "His dominant hand reached for his brush, and with surprising grace, the cool brush strokes rode over my face."
+    "Before I knew it, the forgein man was blasting me in the face with a hair dryer. Presumably, this was to make the paint dry quicker. By the time he was done, my own hair was frazzled beyond belief."
+    "In a partial daze, I stood up from the stool and continued back to Alice. Unsure if I’d had my face painted, or was victim to a very strange form of mugging."
+    jump WG042_afterpaint
+
+label WG042_facepaint_no:
+    "Shaking my head, I removed the idea from my mind."
+    jump WG042_afterpaint
+
+label WG042_afterpaint:
+    "Finally I made it back to Alice. Hoping my little distraction didn’t take up too much time, I returned to the table to find a rather odd sight…"
+    show WG neutral
+    if getFlag("WG042_facepaint"):
+        WG "My my, you certainly took your time— oh."
+        show WG surprised-2
+        "To my surprise, Alice had not only finished all the beef Yakisoba. But had actually started working on the chicken one as well."
+        "I would have had a hard time finishing one on an empty stomach. It was truly amazing to see just how much Alice could eat when she really enjoys a meal."
+        "It did appear to be catching up to her though, that was clear. Alice was leaning backwards in her seat, taking slow, soft breaths. Something tells me even she wasn’t prepared for how much she ate."
+        MC "Ta-dah! What do you think, pretty cool huh?"
+        show WG happy
+        WG "Mmmm.... mhm... pffff… hehe, HAHAHA!"
+        WG "Oh… mpff, heheheh…"
+        WG "It’s plenty \"cool\" alright. I have not had a good laugh like this in a while."
+        MC "Huh? What’s so funny about the tiger face paint?"
+        WG "Tiger? I am sorry to say, but no tiger in the world looks like that."
+        MC "What are you talking about, is- there’s something wrong with the paint isn’t there?"
+        "Panicking, I pulled up my phone camera. My jaw dropped upon seeing what had happened to my face."
+        WG "Far from it, Keisuke. I’d even say it’s an improvement."
+        "What I had originally thought to be a stylish tiger design, turned out to be a rather slap-dash attempt at what might have been a feline."
+        "But with the way the lines were drawn, it looked as if I’d had makeup done by a three year old."
+        MC "You get what you pay for, I guess…"
+        WG "Oh, it was worth every yen spent."
+        MC "Yeah, yeah. I can already feel the cheap paint irritating my skin."
+    else:
+        WG "To your credit, the beef variety does in fact, taste ever so slightly better than the chicken. Although they both have their strengths."
+        "How long was I gone? Only a couple minutes at most? But upon my return, my eyes bolted open to see Alice already finishing up the beef Yakisoba. It was stunning, there had to have been enough noodles on there to feed two people."
+        MCT "...Wow."
+        show WG worried
+        "It did appear to be catching up to her though, that was clear. Alice was leaning backwards in her seat, taking slow, soft breaths. Something tells me even she wasn’t prepared for how much she ate."
+        MC "Well, what did you think of the beef Yakisoba?"
+    show WG neutral
+    WG "Well, there are very few dishes that I can say pleasantly surprised me. And this one, well, not only did it shatter my expectations- it blew them out of the water!"
+    show WG happy
+    WG "The noodles have been fired to a perfect golden consistency, perfectly pairing with the beef texture and taste."
+    WG "Not to mention, the dried seaweed mixed wonderfully with the kewpie. Giving it both a rich and thick texture. What a marvelous dish, I must try it again some time in the future."
+    MC "Heh, well I’m glad you got such a kick out of it. I can take my chicken Yakisoba for later, we still have more stalls to check out!"
+    if getFlag("Takoyaki"):
+        jump WG042_AfterFood
+    else:
+        jump WG042_Food_Menu
+
+label WG042_C2_2:
+    MC "You like octopus, yes?"
+    show WG neutral
+    WG "I am rather fond of it. Allow me to hazard a guess, it’s fried as well?"
+    MC "It is fried, but not just that, it’s coated with a variety of different things."
+    MC "And it’s definitely the most expensive dish here. But for good reason, they wouldn’t want to serve the best for cheap."
+    WG "I had assumed that most of, if not all, the food here was sold for less?"
+    MC "Well, most of it is, yeah. But sometimes even stall food can be expensive. After all, it’s not about price, it’s about taste."
+    show WG happy
+    WG "Hmph, I am glad we can see eye to eye on that."
+    "The Takoyaki stall wasn’t too hard to find. All we had to do was follow the smell of seafood and sure enough, it was there."
+    "Manning the orders station was a rather bored looking student. He was probably working there part-time. In fact, I think I might have recognized him from the academy."
+    MC "Perfect! Sometimes this place can be really busy-"
+    show WG doubt
+    WG "Hold on for just a moment, Keisuke. You have yet to explain what goes into this meal."
+    MC "Octopus, for a start. They coat it in a thick layer of batter, deep fry it, then top it with a special sauce and dried seaweed."
+    show WG neutral
+    WG "My, that certainly does sound interesting."
+    MC "Can’t wait to have some myself, this is gonna be a treat."
+    "The lackadaisical attendant took our orders without issue, within minutes another cook brought out two servings of piping hot Takoyaki."
+    show WG neutral-2
+    WG "Is that-"
+    MC "Melted cheese, yeah. After coating it in sauce, they top it off with some melted cheese to really bring the whole treat together."
+    MC "It’s better to just try it for yourself. The best way to enjoy Takoyaki is while it’s still piping hot!"
+    "Without hesitation, I picked up one of the sticks and bit down. The singeing heat burnt the roof of my mouth, but the taste was worth it."
+    "Tears lightly started to fill my eyes, Alice sat wide eyed in disbelief."
+    MC "...mmph {i}ahh!{/i}"
+    show WG stern
+    WG "Are you mad!? Don’t do such foolish things— you’ll end up hurting yourself!"
+    MC "I-It’s really not that bad, and you barely notice it once the flavors hit you."
+    if getAffection("WG") < 20:
+        WG "You must be joking. There is no way I am damaging my tastebuds with this dubious method of eating."
+        "Alice’s stern face watched me eat while her Takoyaki cooled off. Although there were several seconds where it looked like she was about to crack and start eating."
+        "She did poke and prod the ball of fried dough. And even took the slightest nibble out of it, but eventually she set it back down, likely not wanting to join me in burning the roof of her mouth off."
+        show WG haughty
+        WG "There, patience is a virtue. Now I can enjoy it properly, without the risk of burns."
+        "A vast array of emotions flew across Alice’s face, it was impossible to pin down her feelings at first."
+        show WG surprised-2
+        WG "...Mmmph-gmmh…"
+        "First it was shock, the confusion, finally yielding to sheer delight."
+        show WG happy
+        "Well? How is it?"
+    else:
+        show WG doubt
+        WG "I swear, if this is some sort of elaborate prank…"
+        "With a deep hesitation, Alice gently lifted the skewer to her lips. Giving me one last skeptical look, she daintily placed one of the dough balls in her mouth."
+        show WG surprised
+        WG "{i}Mffphgrr{/i}…"
+        "A vast array of emotions flew across Alice’s face, it was impossible to pin down her feelings at first."
+        WG "...Mmmph-gmmh…"
+        "First it was shocked."
+        show WG angry
+        "Quickly followed by a flash of anger."
+        show WG happy
+        "And finally rounding off with sheer delight."
+        WG "...Hah…"
+        MC "Did you enjoy it?"
+        $setAffection("WG", 1)
+        WG "Well, baring the exception of my burnt tongue, it was quite possibly one of the most delicious bites I’ve ever tasted!"
+    WG "The fresh doughy exterior, hiding the centerpiece of chewy seafood. Combined with the sauces and cheese, it is almost too much for me to handle."
+    MC "Heh heh, that’s why it’s sold at such a high price. Everybody enjoys a good bit of fair Takoyaki."
+    WG "And I am no exception, this is simply divine. I must look into this meal at a later date."
+    if getFlag("Yakisoba"):
+        jump WG042_AfterFood
+    else:
+        jump WG042_Food_Menu
+
+label WG042_AfterFood:
+    MC "Ok next we need to check out the okonomiyaki stand, they have some amazing-"
+    show WG sad
+    "Alice held up her hand, her movements were rather lethargic. Actually, her demeanor had changed quite a bit from when we entered."
+    WG "K-Keisuke, I appreciate the offer but I must decline."
+    "As opposed to the prim and proper posture she usually had, Alice stood loosely, albeit comfortably. She was tilted backwards, presumably to lessen the strain on her middle. And her breathing was slow and deliberate."
+    MC "Oh, is everything alright?"
+    show WG neutral-2
+    "Alice gave a light chuckle, her dimpled smile was genuine."
+    WG "You have nothing to worry about, I’ve just… indulged a bit more than I had anticipated tonight."
+    WG "I am unsure if my palette could, well, enjoy another meal properly after all the cuisine sampled tonight."
+    "That may have been putting it lightly. My idea was for Alice to taste a few more common dishes. What I hadn’t accounted for was her incredible enjoyment of the dishes."
+    show WG neutral
+    "With her hand resting atop her belly, she looked properly glutted. Even with her the rather exorbitant coating of fat, it still managed to look incredibly tight."
+    MC "You may have a point there, you want to head back?"
+    WG "That would be preferable, yes. But before we do, there is something I must say."
+    WG "You were correct, this has been a rather pleasant evening. And my prior assumptions about lower class foods were… misinformed."
+    MC "Does that mean you’re willing to try more common food?"
+    show WG neutral-2
+    WG "In time, yes. But for now, I wish to retire to my room for the night."
+    MC "Understandable, I’m also kind of tired. Let’s head on back."
+    "We made our way back towards the exit. Or what I thought would be the closest exit. What I thought would have been a straight path turned out to be a bit more of a winding road."
+    "As chance would have it though, we wondered back towards some of the games, with one booth in particular catching my eye."
+    MCT "Well hello old friend."
+    "It was my favorite game, the milk bottle toss. I pitched a perfect game so far tonight, maybe I could keep it going?"
+    MC "Hey Alice, I know you were wanting to head out, but give me a couple minutes here. I like this one and it’s been a while."
+    show WG stern
+    WG "What? Why? If my experience is anything to go by, all these games are a rip-off! You aren’t just going to foolishly waste your money on something as trivial as this ‘milk bottle’ game are you?"
+    MC "You aren’t wrong, but indulge me for the moment."
+    show WG neutral
+    WG "Well, you did wait on me earlier when I selected a game, I suppose it is only fair."
+    "I handed the booth worker my money for the game. I was handed three baseballs and I had to clear out an entire ten bottle pyramide in three shots."
+    "Luckily for me now, I wasted plenty of money as a kid on this game so that adult me knew how it worked."
+    "You’d think to just hit the bottom ones so the pyramid collapses, but no. They put the heavy ones on the bottom so they won’t get knocked over easily. You gotta hit the middle ones so everything falls on the bottom ones."
+    "I wound up a slammer on the first pitch, wiping out five of them on the first go."
+    Carnie "That’s a line drive! Look at him go!"
+    "Three on the bottom, two on top of them left. This is where people choked, which is probably why the booth worker was so encouraging."
+    "I wound up for my second pitch, slamming a curveball inbetween the top portion of two of the bottom bottles near the top."
+    Carnie "That’s a solid hit… but you still got one left. No dice just yet kid!"
+    "One ball left, one bottle still standing. I could feel how underweight and crummy this ball was, knowing how I needed to nail this sucker solidly if I was going to knock this rigged piece of crap over."
+    show WG neutral-2
+    "I looked over my shoulder briefly to see Alice with a hopeful expression on her face. It was just a silly game, but it made me feel pretty good to see she was rooting for me in her own reserved fashion."
+    "With a renewed sense of confidence, I lobbed a nasty sidewinder with as much heat as I could muster."
+    "{i}PLUNK{/i}"
+    Carnie "Ladies and gentlemen we got a major league arm right here!"
+    "The booth worker was enthusiastic in announcing my victory to nearby crowds, but a bit less so when it came to my reward."
+    Carnie "Alright kid, you get to pick from any of the prizes on the top rack. Make up your mind quick cause I ain’t got all night."
+    "Among all the chincy and goofy looking plushies, I selected what I thought resembled an actual animal the most."
+    MC "Uh, I’ll take the pink teddy bear, I guess."
+    Carnie "A fine choice! Here ya go. Now beat it!"
+    show WG happy
+    "With a bit of a chocksure shagger, I walked back over to Alice, a special delivery in hand just for her."
+    MC "I figured you might want a souvenir to take home from the occasion."
+    WG "How cute! I certainly would."
+    "To my surprise, Alice snatched up the cheaply constructed plushie bear from my hand and proceeded to smother it in her embrace like an over eager little girl and her doll."
+    "Alice leaned in close to me. I was a bit caught off guard, but I managed to embrace her in kind by wrapping my arm around her hip while she nuzzled her head into my cheek, resting her head on my shoulder."
+    "She had a look of true contentment on her face, something I don’t think I had ever seen from her before. Over a little bear plushie? It must have been something more than that."
+    WG "Keisuke?"
+    MC "Yes?"
+    WG "I’m sorry I was so reluctant initially to want to come with you tonight. This was such a unique experience I would have never allowed myself to try, and it was a lovely evening all around. Thank you."
+    MC "Well, thank you for accepting my invitation. I figured I’d eventually win you over."
+    WG "Don’t let it get to your head now— but yes, you certainly did."
+    jump daymenu
+
+label WG043:
+    $setProgress("WG", "WG044")
     scene Dorm Interior with fade
     play music Peaceful
     "I'd been wracking my brain trying to study for an upcoming quiz for most of the afternoon. My boredom finally reached a tipping point where I found myself unable to focus. I needed a break."
     scene Dorm Exterior with fade
     "I decided my study efforts would be better served if I could get outside and clear my head for a little while. So I figured I'd take a walk around campus."
     "I didn't make it too far before I ran into a lovely, familiar face."
-    show BBW haughty with dissolve
-    BBW "Keisuke! Just the person I was looking for."
+    show WG haughty with dissolve
+    WG "Keisuke! Just the person I was looking for."
     MC "The one and only! At your service m'lady."
-    show BBW happy
-    BBW "Heh, cute. Charmed, I'm sure."
+    show WG happy
+    WG "Heh, cute. Charmed, I'm sure."
     MC "As always. What's up?"
-    show BBW neutral
-    BBW "I've been thinking lately that I need to do more to stay active."
-    show BBW worried
+    show WG neutral
+    WG "I've been thinking lately that I need to do more to stay active."
+    show WG worried
     "Alice's focus shifted away from me and down towards the swell of her belly, where her feet had long since disappeared from her sight."
-    BBW "{i}Sigh...{/i}"
-    show BBW neutral-2
-    BBW "Between classes, the business, and music club I fear I've begun to neglect my usual physical activities."
-    if isEventCleared("BBW009"):
+    WG "{i}Sigh...{/i}"
+    show WG neutral-2
+    WG "Between classes, the business, and music club I fear I've begun to neglect my usual physical activities."
+    if isEventCleared("WG009"):
         "Alice didn't have the body of an athlete by any means, but from what I'd seen, she was one hell of a swimmer. She didn't seem that rusty to me."
     MC "I thought you swam fairly often in your free time? I mean, maybe not every day, but you seem pretty active to me."
-    BBW "True, I do make the time to stay somewhat active with swimming but doing laps by yourself in the pool just doesn't provide the same meaningful push that direct competition does."
+    WG "True, I do make the time to stay somewhat active with swimming but doing laps by yourself in the pool just doesn't provide the same meaningful push that direct competition does."
     MC "Are you going to join the swim club then?"
-    show BBW haughty
-    BBW "Close, but no. Unfortunately, their meeting times conflict with the music club. A minor inconvenience, but one I worked out how to overcome. I came up with an even better idea."
+    show WG haughty
+    WG "Close, but no. Unfortunately, their meeting times conflict with the music club. A minor inconvenience, but one I worked out how to overcome. I came up with an even better idea."
     MC "Oh? Sounds interesting. What is it?"
-    BBW "I'll merely start my own club. Since I'll be the head of it, I can schedule the meetings when it fits into my schedule. I just need to get enough members to charter the club."
+    WG "I'll merely start my own club. Since I'll be the head of it, I can schedule the meetings when it fits into my schedule. I just need to get enough members to charter the club."
     MC "Let me guess- that's where I come in."
-    show BBW neutral
-    BBW "Precisely. Though I must say Keisuke, I expected a bit more enthusiasm from you."
-    show BBW neutral-2
-    BBW "Aren't you interested in doing something that'll let us spend more time together?"
+    show WG neutral
+    WG "Precisely. Though I must say Keisuke, I expected a bit more enthusiasm from you."
+    show WG neutral-2
+    WG "Aren't you interested in doing something that'll let us spend more time together?"
     "Alice was layering on the guilt pretty thick with that remark. By this point I was all too used to getting dragged into doing extra work for her, but despite her obvious guilt trip, her tone was soft and sincere."
     "I suspected this was her way of expressing she was interested in spending more time with me."
     MC "Oh, of course! I didn't mean it like that. I was just thrown off a bit because I thought there couldn't be two of the same clubs."
-    show BBW haughty
-    BBW "That is true, which is why I came up with something different: a water polo club."
+    show WG haughty
+    WG "That is true, which is why I came up with something different: a water polo club."
     MC "Like that sport in the Olympics where they throw a volleyball while swimming?"
-    show BBW neutral-2
-    BBW "Well it's not exactly like a volleyball, though I do suppose they look similar. So do you understand the basics of how it's played then?"
+    show WG neutral-2
+    WG "Well it's not exactly like a volleyball, though I do suppose they look similar. So do you understand the basics of how it's played then?"
     MC "Uh, no, not really. That was pretty much everything I know about water polo."
-    show BBW neutral
-    BBW "Well, you aren't the only one it would seem. Unfortunately, that is consistent with the reactions of everyone else I've approached with this idea."
-    BBW "No one here seems to know anything about it at all. Such a disappointing lack of culture. In all the schools I've attended prior, it was offered as an extracurricular."
-    BBW "No matter, this is just another hurdle to overcome. I'll merely have to teach the new members how to play."
+    show WG neutral
+    WG "Well, you aren't the only one it would seem. Unfortunately, that is consistent with the reactions of everyone else I've approached with this idea."
+    WG "No one here seems to know anything about it at all. Such a disappointing lack of culture. In all the schools I've attended prior, it was offered as an extracurricular."
+    WG "No matter, this is just another hurdle to overcome. I'll merely have to teach the new members how to play."
     MC "Is it difficult to play?"
-    BBW "It is an extremely demanding sport."
+    WG "It is an extremely demanding sport."
     MCT "Crap."
-    BBW "You are basically always swimming, and you need to keep yourself high enough in the water to be able to catch and throw the ball. I asked the best and strongest swimmers I knew to come join because I need people that can keep up."
+    WG "You are basically always swimming, and you need to keep yourself high enough in the water to be able to catch and throw the ball. I asked the best and strongest swimmers I knew to come join because I need people that can keep up."
     MC "I'm one of the best swimmers you know?"
-    show BBW neutral-2
-    BBW "Well, maybe not the best, but still pretty good. I had to reserve the goalie positions for swimmers I thought would have a hard time keeping up and I need more fielders."
-    show BBW happy
-    BBW "I'm confident you're up to the task."
-    show BBW aroused
-    BBW "Especially with the right motivation."
+    show WG neutral-2
+    WG "Well, maybe not the best, but still pretty good. I had to reserve the goalie positions for swimmers I thought would have a hard time keeping up and I need more fielders."
+    show WG happy
+    WG "I'm confident you're up to the task."
+    show WG aroused
+    WG "Especially with the right motivation."
     "I was picking up what she was laying down. This was clearly something Alice was really hoping to make happen and apparently I was the missing piece of the puzzle."
     MCT "I'm not sure I've ever had the upper hand in a negotiation with Alice before. Knowing her, I probably never will again either. Better leverage this to my benefit."
     MC "Alright Alice, I will join your water polo club."
-    BBW "Thank you Keisuke. I knew I could rely on you."
+    WG "Thank you Keisuke. I knew I could rely on you."
     MC "On one condition."
-    show BBW stern
-    BBW "Oh?"
+    show WG stern
+    WG "Oh?"
     MC "You'll owe me a date. How about ice cream after club practice?"
-    show BBW aroused
-    BBW "Well, that doesn't seem like too hard of a bargain."
-    show BBW haughty
-    BBW "I accept your offer. Though, honestly Keisuke your negotiation skills could use some work if that's all you've managed to gain from this."
+    show WG aroused
+    WG "Well, that doesn't seem like too hard of a bargain."
+    show WG haughty
+    WG "I accept your offer. Though, honestly Keisuke your negotiation skills could use some work if that's all you've managed to gain from this."
     MC "Isn't the pleasure of your company its own reward?"
-    show BBW happy
+    show WG happy
     "Alice rolled her eyes at my lame attempt to express my affection, but it brought a giddy smile to her face nonetheless."
-    BBW "Oh, you're hopeless. But also, very sweet."
-    $setAffection("BBW", 1)
-    show BBW haughty
-    BBW "The first preliminary club meeting is tomorrow afternoon at the pool. I didn't get enough people for a full team, but I at least managed to scrape up enough to form a group charter."
-    BBW "Assuming everyone wants to join up that is. I expect to drum up more interest once people have had a chance to play."
+    WG "Oh, you're hopeless. But also, very sweet."
+    $setAffection("WG", 1)
+    show WG haughty
+    WG "The first preliminary club meeting is tomorrow afternoon at the pool. I didn't get enough people for a full team, but I at least managed to scrape up enough to form a group charter."
+    WG "Assuming everyone wants to join up that is. I expect to drum up more interest once people have had a chance to play."
     MC "I'll be there."
 
     scene black with fade
@@ -7739,23 +8612,23 @@ label BBW043:
     "So, I figured I'd show up a bit early and hang out with Alice for a little while beforehand."
 
     scene Pool with fade
-    show BBW swim-school-haughty with dissolve
-    BBW "Ah, Keisuke, you're here early. What a pleasant surprise."
+    show WG swim-school-haughty with dissolve
+    WG "Ah, Keisuke, you're here early. What a pleasant surprise."
     MCT "Is everyone surprised when I'm not late?"
     MC "Well, I don't think I would have been on time if I went back to my room, so I decided to just come here instead. Do you need help setting anything up?"
-    BBW "No, that's quite alright. Thank you for offering though. I have the zone markers and the goals already set up. I'm just waiting for everyone else to show up."
-    BBW "With you we'll have just enough to do a three on three. It's not the full experience, but at least we'll be able to have a game."
+    WG "No, that's quite alright. Thank you for offering though. I have the zone markers and the goals already set up. I'm just waiting for everyone else to show up."
+    WG "With you we'll have just enough to do a three on three. It's not the full experience, but at least we'll be able to have a game."
     MC "You seem like you're pretty excited for this. I guess you missed playing water polo."
-    show BBW swim-school-happy
-    BBW "Very much so. My hope is that once people experience it, they'll also come to enjoy it as much as I do."
-    show BBW swim-school-worried
-    BBW "{size=-6}Well that and swimming laps in the pool by myself sometimes feels a bit lonely...{/size}"
+    show WG swim-school-happy
+    WG "Very much so. My hope is that once people experience it, they'll also come to enjoy it as much as I do."
+    show WG swim-school-worried
+    WG "{size=-6}Well that and swimming laps in the pool by myself sometimes feels a bit lonely...{/size}"
     MC "Oh, well I could come with you next time if that's the case."
-    show BBW swim-school-surprised
-    BBW "Oh! I didn't mean it like that."
+    show WG swim-school-surprised
+    WG "Oh! I didn't mean it like that."
     "More like she didn't mean that to slip. Now that I think about it, outside of Aida and me, I don't think Alice has made a lot of friends to hang out with. Maybe there's more to this than just wanting to play water polo."
-    show BBW swim-school-haughty
-    BBW "Besides, there will be plenty of others to swim with once I get this club up and running officially. The rest should be coming along soon."
+    show WG swim-school-haughty
+    WG "Besides, there will be plenty of others to swim with once I get this club up and running officially. The rest should be coming along soon."
     MC "Come to think of it, I never did ask who else you convinced to come and try this out."
     show BE swim-school-happy at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
     BE "The last person you'd ever expect, Kei-chan."
@@ -7772,21 +8645,21 @@ label BBW043:
     MC "If the goalie position doesn't require as much swimming, I think I know who the next person will be."
     show PRG swim-school-neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
     PRG "H-Hello everyone."
-    BBW "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
+    WG "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
     PRG "Thanks, Nikumaru-san. I'll do my best."
-    BBW "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
+    WG "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
     show Natsuko swim-school-neutral at Position(xpos=0.35, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "Hello Alice. Thank you for the invitation again. I'm always up for a new challenge. A contact sport where you need to swim and handle a ball sounds tough. I'm ready to show you what I can do!"
     "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
     "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
-    BBW "I'm glad to hear that Natsuko. I'm looking forward to playing with someone who can keep up with my swimming skills."
+    WG "I'm glad to hear that Natsuko. I'm looking forward to playing with someone who can keep up with my swimming skills."
     MC "So, if you needed more strong swimmers, that means the other person you asked is probably... Ohhh, no."
     show FMG swim-school-happy at Position(xpos=0.65, xanchor=0.5, yalign=1.0) with dissolve
     FMG "Hey dudes! What's up everyone! I'm ready to crush it in the pool today!"
     show FMG swim-school-angry-2
     FMG "Wait. What's {i}SHE{/i} doing here?"
-    show BBW swim-school-surprised
-    BBW "Oh, I see you two know each other alrea-"
+    show WG swim-school-surprised
+    WG "Oh, I see you two know each other alrea-"
     Natsuko "I should say the same! Alice said this is a sport for strong swimmers. I don't even trust you to not drown in the tub."
     show FMG swim-school-angry
     show BE swim-school-surprised-2
@@ -7795,63 +8668,65 @@ label BBW043:
     "Akira and Natsuko began to bicker back and forth, doing their best to one-up each other as they came up with even more creative ways to denigrate each other's athletic ability."
     "Looking at everyone else's reaction to the scene, this was creating a really toxic environment. While those two were still battling it out I whispered an aside to Alice."
     MC "{size=-8}Alice, you didn't know those two hate each other's guts?{/size}"
-    show BBW swim-school-sad
-    BBW "{size=-8}I had no idea. They're both so nice to everyone else, and I'd never heard them talk about the other before.{/size}"
+    show WG swim-school-sad
+    WG "{size=-8}I had no idea. They're both so nice to everyone else, and I'd never heard them talk about the other before.{/size}"
     MC "{size=-8}Well, this looks pretty bad.{/size}"
-    show BBW swim-school-neutral
-    BBW "{size=-8}Perhaps, but it's nothing a reasonable person can't get over and act like an adult.{/size}"
+    show WG swim-school-neutral
+    WG "{size=-8}Perhaps, but it's nothing a reasonable person can't get over and act like an adult.{/size}"
     MC "{size=-8}This doesn't look like it's going to end any time soon. I think you should say something. Aida and Honoka look scared.{/size}"
-    show BBW swim-school-doubt
+    show WG swim-school-doubt
     Natsuko "Why don't you go back to the locker and get your pool floaties if you're planning on lasting the whole match."
     FMG "I don't have any, but I'm sure you have plenty of extra pairs."
-    BBW "Alright ladies that's quite enough! Save your energy for the pool. You'll need it."
-    BBW "We don't have enough players for substitutions. You're both going to be in there the whole time."
-    show BBW swim-school-stern
-    BBW "Whatever rivalry you two have going on, I suggest you channel that animosity towards something constructive. I'll be watching for fouls."
-    BBW "Fouls lead to time out penalties, and when teams can't substitute, that leads to the opponent scoring- and you losing. Got it?"
+    WG "Alright ladies that's quite enough! Save your energy for the pool. You'll need it."
+    WG "We don't have enough players for substitutions. You're both going to be in there the whole time."
+    show WG swim-school-stern
+    WG "Whatever rivalry you two have going on, I suggest you channel that animosity towards something constructive. I'll be watching for fouls."
+    WG "Fouls lead to time out penalties, and when teams can't substitute, that leads to the opponent scoring- and you losing. Got it?"
     Natsuko "I see. Very well then."
     show FMG angry-2
     FMG "Yeah, I got it."
-    hide PRG with dissolve
-    hide BE with dissolve
-    hide FMG with dissolve
-    hide Natsuko with dissolve
-    show BBW swim-school-haughty
-    BBW "Alright then, with that out of the way let's get started. I've explained the rules to each of you earlier, but I'll give a refresher on some of the basics right now before we start."
-    BBW "Fielders can only handle the ball with one hand, while goalies can use two. You only have 30 seconds to attempt to shoot once your team gets the ball or you lose possession- this game moves fast."
-    show BBW swim-school-doubt
-    BBW "Also, I didn't think I'd have to say this, but there's no deliberate striking or splashing in the face of an opponent."
-    show BBW swim-school-haughty
-    BBW "Other than that, you score by getting the ball into the net. The team with the most points wins. Simple enough, right?"
+    hide PRG
+    hide BE
+    hide FMG
+    hide Natsuko
+    with dissolve
+    show WG swim-school-haughty
+    WG "Alright then, with that out of the way let's get started. I've explained the rules to each of you earlier, but I'll give a refresher on some of the basics right now before we start."
+    WG "Fielders can only handle the ball with one hand, while goalies can use two. You only have 30 seconds to attempt to shoot once your team gets the ball or you lose possession- this game moves fast."
+    show WG swim-school-doubt
+    WG "Also, I didn't think I'd have to say this, but there's no deliberate striking or splashing in the face of an opponent."
+    show WG swim-school-haughty
+    WG "Other than that, you score by getting the ball into the net. The team with the most points wins. Simple enough, right?"
     MC "Easy enough."
     MCT "Easier said than done, more like it."
-    BBW "To balance the teams we have to spread out the relative swimming skills of everyone as best as possible. That means I'll be on one team and Natsuko on the other."
+    WG "To balance the teams we have to spread out the relative swimming skills of everyone as best as possible. That means I'll be on one team and Natsuko on the other."
     FMG "Hey! She's nothing special compared to me!"
-    if isEventCleared("BBW009"):
-        show BBW swim-school-doubt
-        BBW "It's nothing personal Mizutani-san, but I am factoring in your performance the last time we raced."
-        show BBW swim-school-haughty
-    BBW "You'll have your chance to prove your skills if you want me to change my evaluation of them. Besides, you'll have the fortune of being on my team."
-    BBW "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
+    if isEventCleared("WG009"):
+        show WG swim-school-doubt
+        WG "It's nothing personal Mizutani-san, but I am factoring in your performance the last time we raced."
+        show WG swim-school-haughty
+    WG "You'll have your chance to prove your skills if you want me to change my evaluation of them. Besides, you'll have the fortune of being on my team."
+    WG "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
     show PRG swim-school-neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
     show FMG swim-school-neutral at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
     show Natsuko swim-school-neutral at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
     show BE swim-school-neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
     "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
-    if isEventCleared("BBW009"):
+    if isEventCleared("WG009"):
         "But after seeing Alice and Akira swim before, I could tell I was going to be an anchor around Natsuko's neck if she was expecting us to win."
     "Alice's team seemed a bit stacked, but given Aida's timid nature, Alice probably expected her to give up more points at the goal than Honoka. It was the best that could be done with the numbers we had."
-    BBW "Alright, let's get started. The ball starts in the center of the pool. Whoever gets there first to secure it will get the first possession."
-    hide PRG with dissolve
-    hide FMG with dissolve
-    hide BBW with dissolve
-    hide Natsuko with dissolve
-    hide BE with dissolve
+    WG "Alright, let's get started. The ball starts in the center of the pool. Whoever gets there first to secure it will get the first possession."
+    hide PRG
+    hide FMG
+    hide WG
+    hide Natsuko
+    hide BE
+    with dissolve
     "With that, we all lined up at the roped lane markers set up as the playing field."
-    BBW "Ready, set... GO!"
+    WG "Ready, set... GO!"
     "With Alice's mark there was a mad dash to the ball from Alice, Akira, and Natsuko. After the earlier exchanges, it was undoubted that all three were trying to use this as an opportunity to put their swimming skills to the test against each other."
     "I tried my best to keep up, but Natsuko left me in the dust... erm wake I guess, on her way to the ball."
-    BBW "Got it!"
+    WG "Got it!"
     "Alice got there first and tipped the ball back behind her and Akira, blocking any meaningful attempt for me or Natsuko to obtain it and granting them the possession."
     "Akira went back and grabbed the ball to begin advancing to the other half of the field towards our goal."
     "And this was the start of when all hell began to break loose."
@@ -7861,7 +8736,7 @@ label BBW043:
     "Alice easily slid through the water around my outside, giving a wide-open pass for Akira to send her, which she took full advantage of by immediately sailing it into the goal before Honoka could even react."
     show BE swim-school-angry with dissolve
     BE "Oops!"
-    BBW "Don't worry about it Honoka, even the best goalies can't stop every throw. Now you know what to expect."
+    WG "Don't worry about it Honoka, even the best goalies can't stop every throw. Now you know what to expect."
     show BE swim-school-neutral
     BE "Right! I think I got it now."
     hide BE with dissolve
@@ -7872,7 +8747,7 @@ label BBW043:
     show PRG swim-school-scared with dissolve
     "Aida's 'block' was more of a panicked defense of her face than any real attempt to stop the ball. I couldn't blame her either."
     PRG "Sorry..."
-    BBW "You're fine Aida. The goal is pretty wide, so it's difficult to cover- that's part of the challenge. You'll get better as the game goes on."
+    WG "You're fine Aida. The goal is pretty wide, so it's difficult to cover- that's part of the challenge. You'll get better as the game goes on."
     show PRG swim-school-unique
     PRG "Thanks."
     hide PRG with dissolve
@@ -7885,17 +8760,17 @@ label BBW043:
     "What was not so fun however was Akira and Natsuko constantly at each other's throats the whole game."
     "Aside from Alice, who wasn't too phased, the rest of us felt like chum in the water while two great white sharks vied for their portion."
     "They both managed to rack up a couple of personal fouls and a handful of minor fouls from guarding each other so aggressively over the course of the game."
-    show BBW swim-school-angry with dissolve
-    BBW "You can't pull on the other person."
-    BBW "Hey! No splashing in her face."
-    BBW "I don't care if it was an accident- it didn't look like one to me!"
+    show WG swim-school-angry with dissolve
+    WG "You can't pull on the other person."
+    WG "Hey! No splashing in her face."
+    WG "I don't care if it was an accident- it didn't look like one to me!"
     "To be fair, a little bit of incidental contact was unavoidable. In one of my bouts of frantic flailing to dump the ball before Alice could snatch it away from me, I accidentally slipped an open palm boob grab on her as I tried to push myself back."
-    show BBW swim-school-surprised
-    BBW "Easy there Keisuke!"
+    show WG swim-school-surprised
+    WG "Easy there Keisuke!"
     MC "Sorry! It was an accident. I panicked!"
-    show BBW swim-school-haughty
-    BBW "I understand, just try to be more careful."
-    hide BBW with dissolve
+    show WG swim-school-haughty
+    WG "I understand, just try to be more careful."
+    hide WG with dissolve
     "In my defense though, at that size, her boobs are pretty hard to avoid. If I start drowning, those would be my preferred floatation device."
     "The game was almost done. We trailed Alice's team by 2 points. A time out had been called before the last few minutes so that Honoka could address a wardrobe malfunction that had her spilling out of her swimsuit."
     show BE swim-school-surprised-2 with dissolve
@@ -7911,7 +8786,7 @@ label BBW043:
     Natsuko "I see. Perhaps guarding the anchor hasn't been the best use of my abilities for the team. I think you're right, we should try that."
     "Once the match started up again, our new strategy immediately proved more effective. Natsuko went straight for Alice, catching her off guard and managing a steal."
     "Akira went for Natsuko, leaving me wide open for a pass from her as I made it towards the goal, setting me up for a wide-open pass and a subsequent goal."
-    BBW "Hmph, so that's how it is now. I must admit by this point I didn't expect you to adjust your strategy."
+    WG "Hmph, so that's how it is now. I must admit by this point I didn't expect you to adjust your strategy."
     FMG "You too scared to compete with me, Natsy?"
     Natsuko "If you're content to let Hotsure-san swim up to the goal all by himself then you're dumber than even I thought possible."
     show FMG swim-school-angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
@@ -7931,64 +8806,66 @@ label BBW043:
 
     scene Pool with fade
     play music Bittersweet
-    show PRG swim-school-scared at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
-    show FMG swim-school-surprised-2 at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW swim-school-surprised with dissolve
-    show BE swim-school-surprised at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
-    show Natsuko swim-school-disappointed at Position(xpos=0.85, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG swim-school-scared at Position(xpos=0.15, xanchor=0.5, yalign=1.0)
+    show FMG swim-school-surprised-2 at Position(xpos=0.3, xanchor=0.5, yalign=1.0)
+    show WG swim-school-surprised
+    show BE swim-school-surprised at Position(xpos=0.7, xanchor=0.5, yalign=1.0)
+    show Natsuko swim-school-disappointed at Position(xpos=0.85, xanchor=0.5, yalign=1.0)
+    with dissolve
     BE "Akira-chan! You killed him."
     FMG "It was an accident!"
-    BBW "Don't joke about that now Honoka. Look, he's already coming to."
+    WG "Don't joke about that now Honoka. Look, he's already coming to."
     PRG "Hotsure-chan! Are you okay?"
     MC "Whaa...? What happened? And why does my face hurt so much?"
     Natsuko "Because apparently someone can't aim their throws to save their life, much less yours."
     show BE swim-school-embarrassed
     BE "Yeah, Akira-chan really plastered you across the face Kei-chan. You're lucky to be alive!"
     FMG "I {i}said{/i} it was an accident!"
-    show BBW swim-school-worried
-    BBW "{i}Sigh...{/i}"
-    BBW "Practice is over. Thank you for coming, everyone. I'll stay with Keisuke until he feels like getting up. Please go on ahead back to the lockers."
+    show WG swim-school-worried
+    WG "{i}Sigh...{/i}"
+    WG "Practice is over. Thank you for coming, everyone. I'll stay with Keisuke until he feels like getting up. Please go on ahead back to the lockers."
     show PRG swim-school-sad-2
     show BE swim-school-doubt
     show FMG swim-school-sad
     Natsuko "Would you like us to help put away the equipment Nikumaru-san?"
-    BBW "No, that's quite alright. Thank you for offering though. Please, everyone- go on."
-    hide PRG with dissolve
-    hide BE with dissolve
-    hide FMG with dissolve
-    hide Natsuko with dissolve
+    WG "No, that's quite alright. Thank you for offering though. Please, everyone- go on."
+    hide PRG
+    hide BE
+    hide FMG
+    hide Natsuko
+    with dissolve
     "The rest of the girls left back towards the locker. While slowly recovering from my stupor lying on the ground, Alice sulked by the side of the pool next to me with her legs in the water."
-    show BBW swim-school-sad
-    BBW "{i}...sniff...sniff...eee{/i}"
+    show WG swim-school-sad
+    WG "{i}...sniff...sniff...eee{/i}"
     "Was she crying? I snapped out of my haze and sat up."
     MC "Ow!"
     MCT "Okay so maybe that was a bit fast."
     MC "Alice, it's okay! I'm not hurt! Everything's fine. There's no need to cry."
     "Hoping to get through to her. I scooted next to her and held her hand."
-    BBW "{i}...sniff...{/i} You wouldn't say that if you could see the swelling on your face like I can, Keisuke."
-    BBW "This was a complete disaster. {i}...sniff...{/i} I couldn't get enough people to do a full match- I didn't even have enough friends that I could ask!"
-    BBW "I should have realized Akira and Natsuko were like oil and water. Aida and Honoka were mortified watching those two tear each other apart, but I pushed through with my idea anyway for my own selfish reasons- and you got hurt because of it."
+    WG "{i}...sniff...{/i} You wouldn't say that if you could see the swelling on your face like I can, Keisuke."
+    WG "This was a complete disaster. {i}...sniff...{/i} I couldn't get enough people to do a full match- I didn't even have enough friends that I could ask!"
+    WG "I should have realized Akira and Natsuko were like oil and water. Aida and Honoka were mortified watching those two tear each other apart, but I pushed through with my idea anyway for my own selfish reasons- and you got hurt because of it."
     "At this point Alice really started to cry, wiping her tears with one hand while holding mine tight with the other."
     MC "I don't see what was so selfish about you wanting to do this, and I don't see how you were supposed to foresee all of this happening."
-    BBW "As the club president everything is ultimately my responsibility- if there were a club. No one is going to want to join after this catastrophe."
+    WG "As the club president everything is ultimately my responsibility- if there were a club. No one is going to want to join after this catastrophe."
     MC "Well, maybe. But isn't it typical for successful business owners that only a handful of their ventures are ever successful? Not everything can be a smashing success, but you won't know if you don't try it."
-    show BBW swim-school-worried
+    show WG swim-school-worried
     "That analogy must have gotten through to Alice. She still looked pretty sad, but she appeared to have stopped sobbing, for the moment."
-    BBW "That is true. Success is never certain."
-    BBW "But it's not just that Keisuke. I know it's silly and naïve, but I wanted to use this club to help me make more friends."
-    show BBW swim-school-sad
+    WG "That is true. Success is never certain."
+    WG "But it's not just that Keisuke. I know it's silly and naïve, but I wanted to use this club to help me make more friends."
+    show WG swim-school-sad
     "Alice started to tear up again. I didn't like to see this, but she clearly needed to get something off her chest."
-    BBW "I know you like me Keisuke... but most people here don't. I know what other people say about me- that I'm just an uptight fatty... or some kind of food obsessed glutton."
+    WG "I know you like me Keisuke... but most people here don't. I know what other people say about me- that I'm just an uptight fatty... or some kind of food obsessed glutton."
     "Alice was probably the most self-confident person that I knew. I was a bit surprised to hear her admit she had taken some baseless chatter from the gossip mill so personally."
     "Then again, who wouldn't get worn down from hearing that kind of talk whispered behind their back all the time?"
     MC "Well, no one that I know is going around saying those things, and if they did, I would set them straight."
-    BBW "Thank you Keisuke. I appreciate all that you and Aida do for me, but only having two friends... well a friend and a boyfriend, it still feels a bit lonely sometimes."
+    WG "Thank you Keisuke. I appreciate all that you and Aida do for me, but only having two friends... well a friend and a boyfriend, it still feels a bit lonely sometimes."
     MC "I don't think that that's the case. Why else would Honoka come out to join us, despite knowing nothing about water polo?"
     MCT "Don't you think you also have the respect of Natsuko and Akira from outclassing them with your swimming skills?"
-    show FMG swim-school-neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) behind BBW with dissolve
+    show FMG swim-school-neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) behind WG with dissolve
     FMG "He is right you know. You were amazing out there today."
-    show BBW swim-school-surprised at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Mitzutani-san! I didn't see you there."
+    show WG swim-school-surprised at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
+    WG "Mitzutani-san! I didn't see you there."
     FMG "Don't mind me, I didn't overhear anything else. Here, I felt bad about what happened at practice today."
     FMG "Whether I have a good workout as a reward, or a bad workout as a consolation, I like to end it with an ice cream treat."
     "Akira handed each of us a chocolate coated vanilla ice cream pop."
@@ -7999,44 +8876,44 @@ label BBW043:
     hide FMG with dissolve
     MCT "Maybe she overheard more than she let on..."
     MC "Well, this wasn't quite the ice cream date I had envisioned, but I think it'll do just nicely."
-    show BBW swim-school-happy at Position(xalign=0.5, yalign=1.0) with dissolve
-    BBW "Hehe, I suppose so. But I do think I still owe you, based on our initial deal."
+    show WG swim-school-happy at Position(xalign=0.5, yalign=1.0) with dissolve
+    WG "Hehe, I suppose so. But I do think I still owe you, based on our initial deal."
     MC "Well it's more than enough for me."
     MC "Oh and Alice?"
-    BBW "What is it, Keisuke?"
+    WG "What is it, Keisuke?"
     MC "From now on, if you ever need a swimming partner, don't hesitate to ask me."
-    show BBW swim-school-aroused
-    BBW "I just might take you up on that offer."
+    show WG swim-school-aroused
+    WG "I just might take you up on that offer."
     jump daymenu
 
-label BBW044:
-    $setProgress("BBW", "BBW045")
-    scene Dorm BBW with fade
-    play music BBW
+label WG044:
+    $setProgress("WG", "WG045")
+    scene Dorm WG with fade
+    play music WG
     "It was an off day for the residents of Seichou Academy. Both the faculty and the students were given the day to unwind and destress."
     "Many people liked to use this time to relax by themselves, away from others. This was a perfect opportunity for someone to have some alone time."
-    show BBW neutral-2 with dissolve
+    show WG neutral-2 with dissolve
     "Me? I had been prattling the whole afternoon away with one, Miss Nikumaru."
-    BBW "Would you care for some more Broken Orange Pekoe Fanning?"
+    WG "Would you care for some more Broken Orange Pekoe Fanning?"
     MC "You know you don't have to say it in full every time."
-    show BBW surprised
+    show WG surprised
     "Alice pretended to look appalled as she poured another cup of tea."
-    show BBW happy
+    show WG happy
     "Her smug smile betraying the attempt at feigned hurt."
-    BBW "Keisuke! I believe I have made it very clear before, not all tea blends are the same."
+    WG "Keisuke! I believe I have made it very clear before, not all tea blends are the same."
     MC "I know, I know. But honestly, growing up only exposed to green teas like sencha, it's hard to have such a refined palette like yours."
-    show BBW neutral
-    BBW "Then I feel sorry for you, truly I do."
+    show WG neutral
+    WG "Then I feel sorry for you, truly I do."
     "Setting down the kettle after pouring another serving, Alice's eyes widened with a rather sudden idea."
-    show BBW haughty
-    BBW "Maybe there just so happens to be a way to improve your taste buds' senses."
+    show WG haughty
+    WG "Maybe there just so happens to be a way to improve your taste buds' senses."
     MC "Uh, what do you mean by that?"
-    BBW "If you may, please close your eyes for just a second-I must go prepare something."
+    WG "If you may, please close your eyes for just a second-I must go prepare something."
     MC "You're scaring me a bit here, Alice."
-    BBW "Oh please, you needn't worry. I just happened upon a rather ingenious idea is all, and you are the perfect recipient for my theory."
+    WG "Oh please, you needn't worry. I just happened upon a rather ingenious idea is all, and you are the perfect recipient for my theory."
     MC "Was that an attempt at making me feel more on edge, or less on edge?"
-    show BBW stern
-    BBW "It was an attempt at explaining myself, now hurry up and close your eyes."
+    show WG stern
+    WG "It was an attempt at explaining myself, now hurry up and close your eyes."
 
     scene black with fade
     "Not wanting to pry further, I did as Alice said."
@@ -8044,98 +8921,98 @@ label BBW044:
     "The footfalls stopped, and I could tell that she was opening some sort of cabinet."
     "Only a few seconds later, did the same sound occur again. Once again, Alice's impactful stride sounded off as she approached."
     "The temptation to peek was almost unbearable, my mind raced thinking of what she was planning. And almost as if on cue, I heard the opening of several boxes."
-    BBW "It shall be ready in just a second, I do hope that you have not snuck a glance at my setup."
+    WG "It shall be ready in just a second, I do hope that you have not snuck a glance at my setup."
     MC "..."
     "The possibilities flooded my blackened vision, the tension of the situation was almost palpable."
-    BBW "There we go... alright! You may open your eyes now."
-    scene Dorm BBW with fade
-    show BBW haughty with dissolve
+    WG "There we go... alright! You may open your eyes now."
+    scene Dorm WG with fade
+    show WG haughty with dissolve
     "I wasn't sure what to expect when my vision returned. But 5 teacups lined in front of me was quite possibly the last thing I expected to see."
     MC "Uhhhh, I think you've lost me here. 'Confused' doesn't even begin to describe how I feel right now."
-    BBW "You are quite the clever one Keisuke, I am sure that you can deduce what my plan is here."
+    WG "You are quite the clever one Keisuke, I am sure that you can deduce what my plan is here."
     menu:
         "You want me to identify tea?":
-            jump BBW044_c1_1
+            jump WG044_c1_1
         "Do you want to do a drinking game?":
-            jump BBW044_c1_2
+            jump WG044_c1_2
         "You poisoned one of these cups, and I have to pick one?":
-            jump BBW044_c1_3
+            jump WG044_c1_3
 
-label BBW044_c1_1:
-    $setAffection("BBW", 1)
-    show BBW happy
-    BBW "That is correct. Now, which cup would you like to try first?"
-    jump BBW044_afterchoice_1
+label WG044_c1_1:
+    $setAffection("WG", 1)
+    show WG happy
+    WG "That is correct. Now, which cup would you like to try first?"
+    jump WG044_afterchoice_1
 
-label BBW044_c1_2:
-    show BBW doubt
-    BBW "A drinking game with tea?"
+label WG044_c1_2:
+    show WG doubt
+    WG "A drinking game with tea?"
     "Alice paused, contemplating what I said."
-    show BBW neutral
-    BBW "I shall think about your idea later, but that is not what I had planned for today."
-    BBW "Instead what I have devised is a plan to help you understand the various types of tea by taste alone."
-    jump BBW044_afterchoice_1
+    show WG neutral
+    WG "I shall think about your idea later, but that is not what I had planned for today."
+    WG "Instead what I have devised is a plan to help you understand the various types of tea by taste alone."
+    jump WG044_afterchoice_1
 
-label BBW044_c1_3:
-    show BBW surprised
-    BBW "...What?"
+label WG044_c1_3:
+    show WG surprised
+    WG "...What?"
     MC "I dunno, the way you laid the cups out just really has me worried is all."
-    BBW "My word, Keisuke- no, I do not plan to poison you!"
-    show BBW haughty
-    BBW "The things that go through your head..."
+    WG "My word, Keisuke- no, I do not plan to poison you!"
+    show WG haughty
+    WG "The things that go through your head..."
     MC "Well then what's with the setup?"
-    BBW "My idea was to simply have you sample these teas, and then attempt to name each one by taste alone."
-    jump BBW044_afterchoice_1
+    WG "My idea was to simply have you sample these teas, and then attempt to name each one by taste alone."
+    jump WG044_afterchoice_1
 
-label BBW044_afterchoice_1:
+label WG044_afterchoice_1:
     MC "Woah, Woah. Hold on, can I at least get a refresher first before I start sampling?"
-    show BBW haughty
-    BBW "Well I suppose that would make it more sporting..."
-    BBW "Alright, listen closely, as I shan't repeat these hints."
+    show WG haughty
+    WG "Well I suppose that would make it more sporting..."
+    WG "Alright, listen closely, as I shan't repeat these hints."
     "Before Alice could start listing off her selections, a knock came from the door."
     MC "Were you expecting anyone else to be here around this time?"
-    show BBW doubt
-    BBW "No, I am rather sure that-"
-    show BBW surprised
+    show WG doubt
+    WG "No, I am rather sure that-"
+    show WG surprised
     "Alice's eyes shot wide open as a realization hit her. She snapped back to face me, talking in a whispered tone."
-    BBW "Honoka!"
+    WG "Honoka!"
     MC "Honoka?"
-    BBW "Last week, she came to me with a request for a new bra. The school-issued ones weren't fitting her needs appropriately."
-    BBW "At the time she came to me, I had my hands full with other projects. So, I told her to meet me at this time next week."
+    WG "Last week, she came to me with a request for a new bra. The school-issued ones weren't fitting her needs appropriately."
+    WG "At the time she came to me, I had my hands full with other projects. So, I told her to meet me at this time next week."
     MC "And this time being now?"
-    show BBW worried
-    BBW "Yes..."
+    show WG worried
+    WG "Yes..."
     "Another series of knocks rang out, followed by a voice."
     BE "Alice?"
-    show BBW surprised
-    BBW "I'll be with you in but a second! Just finishing up preparations is all."
+    show WG surprised
+    WG "I'll be with you in but a second! Just finishing up preparations is all."
     "Alice leaned in close to whisper to me, her breath tense but focused."
-    show BBW worried
-    BBW "My deepest apologies, Keisuke. But would you mind picking up the stray bits of cloth laying around?"
+    show WG worried
+    WG "My deepest apologies, Keisuke. But would you mind picking up the stray bits of cloth laying around?"
     MC "What, why?"
-    BBW "Well simply look at this place, there are stray clothing articles and swatches everywhere! It's quite unbecoming of me to my customers."
+    WG "Well simply look at this place, there are stray clothing articles and swatches everywhere! It's quite unbecoming of me to my customers."
     "Now that she mentioned it, the state of the room became obvious. There were several articles of clothing dotting the room; oddly enough, most of them didn't seem to be her style or size."
     MC "Have you been working on new design ideas recently?"
-    show BBW neutral
-    BBW "Just a bit here and there, very little has been set in stone as of yet, but we can come back to that later, for now, I am asking you for help."
+    show WG neutral
+    WG "Just a bit here and there, very little has been set in stone as of yet, but we can come back to that later, for now, I am asking you for help."
     MC "I mean, I don't think Honoka would mind it all that much-"
-    BBW "Of course she wouldn't, I am well aware of that."
-    show BBW stern
-    BBW "But a promise was made to her, and I intend to make good on that."
+    WG "Of course she wouldn't, I am well aware of that."
+    show WG stern
+    WG "But a promise was made to her, and I intend to make good on that."
     BE "If now isn't a good time, I could always just come back later."
-    show BBW surprised
-    BBW "No no, everything is fine."
+    show WG surprised
+    WG "No no, everything is fine."
     menu:
         "Leave the room":
-            jump BBW044_c2_1
+            jump WG044_c2_1
         "Follow Alice's instructions":
-            jump BBW044_c2_2
+            jump WG044_c2_2
 
-label BBW044_c2_1:
-    $setAffection("BBW", -1)
+label WG044_c2_1:
+    $setAffection("WG", -1)
     MC "You're being ridiculous, Alice. Just because you slipped up on the timing doesn't mean you should lie."
-    show BBW doubt behind BE
-    BBW "Keisuke, please just-"
+    show WG doubt behind BE
+    WG "Keisuke, please just-"
     MC "I'm out, I'll talk to you later."
     "With that, I walked over and opened the door."
     show BE surprised at Position(xpos=0.4, xanchor=0.5, yalign=1.0)
@@ -8143,114 +9020,114 @@ label BBW044_c2_1:
     "Next thing I knew, Honoka came barreling forward into Alice's room. A soft 'plomf' noise sounded as she made contact with the floor."
     "Having landed face or rather breast first onto the floor, Honoka looked up only to find a massive overhang of belly."
     show BE embarrassed at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW sad at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show WG sad at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     BE "I know what this looks like, but I promise that I wasn't listening on the door."
-    BBW "{i}sigh{/i} It's alright. I apologize for the distress caused by my lack of time management."
+    WG "{i}sigh{/i} It's alright. I apologize for the distress caused by my lack of time management."
     "Alice and I helped Honoka back to her feet, I said my goodbyes and left."
     show BE neutral
     BE "Keisuke was right, y'know. Trust me, I'm aware that keeping on top of things can be difficult with a factor."
-    BBW "But this wasn't an issue with my condition interfering with my life..."
-    BBW "I was just enjoying myself so much, a bit caught in the moment. Maybe my sharpened instincts are starting to dull."
+    WG "But this wasn't an issue with my condition interfering with my life..."
+    WG "I was just enjoying myself so much, a bit caught in the moment. Maybe my sharpened instincts are starting to dull."
     "While I was sure that I had made the right decision for Alice's sake; part of me still wondered what caused her to act like that..."
     jump daymenu
 
-label BBW044_c2_2:
-    $setAffection("BBW", 1)
+label WG044_c2_2:
+    $setAffection("WG", 1)
     "Alice let out an ever so quiet sigh of relief before giving me a content smile."
-    show BBW happy
-    BBW "Thank you, I promise I'll make it up to you."
+    show WG happy
+    WG "Thank you, I promise I'll make it up to you."
     MC "Worry about that later, Honoka is still waiting out there."
     "Leaving my seat, I started to quickly snatch up the materials. The amount of obvious clutter was small, so my goal was to focus on that first."
     "Swatches of all colors, shirts, and pants of all sizes; Alice was underselling just how much time she had put into this."
     MC "Where do you want me to put these?"
-    show BBW neutral
-    BBW "Oh, um..."
-    BBW "There is room in my wardrobe, you can set them in there for now."
+    show WG neutral
+    WG "Oh, um..."
+    WG "There is room in my wardrobe, you can set them in there for now."
     "As the wardrobe opened, I was surprised to find it already packed to the brim. Like Alice had told me, I began to hastily stuff the interior."
     "A few bits of clothing were left before I realized that not all of it was going to fit. And no matter how hard I pushed, the wall of fabric refused to make space."
     "Without thinking, I decided to try and shove myself into the blockage. Maybe then it would free some room."
     "Taking a small step back, I bravely leaped forward... This proved to be a major error in planning."
     MC "MMMPH!"
     "The few loose areas in the pile would be my undoing; for as soon as my shoulder pushed forward, I found myself quickly sinking into the mass of clutter."
-    show BBW surprised
-    BBW "Oh dear!"
+    show WG surprised
+    WG "Oh dear!"
     "Upon hearing the commotion, Alice rushed over to check on me. Her cherubic face was awash with panic when she saw the state I was in."
-    BBW "Kei, are you ok? Did you hurt yourself?"
+    WG "Kei, are you ok? Did you hurt yourself?"
     "Try as I may, the weight of all the clothing kept me down. It wasn't a bad sensation, it was rather cozy."
     MC "I'm fine, just a bit stuck is all... could you give me a hand?"
-    show BBW neutral-2
-    BBW "Of course, here."
+    show WG neutral-2
+    WG "Of course, here."
     "Alice firmly grasped my one exposed hand and steadied herself to pull back. Her other hand gripping around my wrist as she found her footing."
-    BBW "One, two, three!"
+    WG "One, two, three!"
     "One would think that several hundred pounds of mass would provide more than enough leverage. But as it turns out, I had gotten myself trapped even deeper than we thought."
     MC "Ow ow ow ow OW! Stop, please!"
     "The sheer force being exerted on my shoulder joint was unbearable. A part of me thought Alice might rip my arm out of its socket if I didn't stop her."
-    show BBW angry
-    BBW "Damn it all... What to do, what to do?"
+    show WG angry
+    WG "Damn it all... What to do, what to do?"
     "Upon releasing me from almost certain removal, Alice quickly started to try for new ideas; but I knew that we didn't have much time left."
     MC "Alice, just shut the door."
-    show BBW doubt
-    BBW "I beg your pardon?"
+    show WG doubt
+    WG "I beg your pardon?"
     MC "Honoka can't see me like this, she'd have too many questions."
     MC "Think about how it'll make you look as well."
-    BBW "This is absurd..."
-    show BBW worried
-    BBW "Please forgive me for this, Keisuke."
+    WG "This is absurd..."
+    show WG worried
+    WG "Please forgive me for this, Keisuke."
     "With a look of both panic and embarrassment, Alice soberly closed the doors to the wardrobe. Leaving me just a sliver of light in the darkness."
     "My eyes followed Alice as she hefted herself to the front door. Taking a few deep breaths to calm her nerves, she opened the door for Honoka."
     play music Peaceful
-    show BBW neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
     show BE happy at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "First and foremost, I would like to personally apologize for the wait."
+    WG "First and foremost, I would like to personally apologize for the wait."
     "Honoka gave a slight chuckle at her apology."
     BE "For what? Not immediately opening the door when I knocked?"
     BE "There's no need to apologize for not being 100%% punctual all the time, Alice."
     "The sound of small talk continued as the two moved from the door to the bedroom."
-    BBW "I hope the mess is not too bad, I was busy with other work and didn't notice the mess forming."
+    WG "I hope the mess is not too bad, I was busy with other work and didn't notice the mess forming."
     show BE neutral
     BE "Oh you need not worry about it. The mess at my dorm dwarfs this by a good margin."
     "I tried to readjust my position inside to try to listen in better. However, like a bad sitcom, it was this exact moment the wardrobe decided to release me from its grasp."
     "In an instant I found myself staring up at Alice and Honoka, but with a look of surprise."
-    show BBW surprised
+    show WG surprised
     show BE surprised-2
     BE "Now that's a surprise for sure. Didn't take you as the peeping kind Kei-chan."
     MC "It's not like that at all! I would never."
     show BE confused
     BE "Then why else would you be hiding inside there unless you were..."
     "She trailed off looking between me and Alice. It took both of us a moment before Alice blushed quite red."
-    BBW "I can assure you that nothing of that sort of nature occurred."
-    show BBW neutral-2
-    BBW "To be forward on the reason, Kei was over helping me earlier with picking out new patterns for the store. He attempted to help me clean up when you arrived but became lodged in the wardrobe."
-    BBW "He didn't want me to let you wait and asked to be left in there till our appointment had concluded."
+    WG "I can assure you that nothing of that sort of nature occurred."
+    show WG neutral-2
+    WG "To be forward on the reason, Kei was over helping me earlier with picking out new patterns for the store. He attempted to help me clean up when you arrived but became lodged in the wardrobe."
+    WG "He didn't want me to let you wait and asked to be left in there till our appointment had concluded."
     MC "There was some tea in there but that's about it."
     show BE embarrassed
     BE "Apologies for the insinuation, I do apologize if you took offense to that."
-    BBW "You are fine dear, the situation does lend itself to that sort of thinking."
-    BBW "Anyway, I suppose now with Kei here I could use the assistance with your request. Are you ok with Kei helping me measure you?"
+    WG "You are fine dear, the situation does lend itself to that sort of thinking."
+    WG "Anyway, I suppose now with Kei here I could use the assistance with your request. Are you ok with Kei helping me measure you?"
     show BE seductive
     BE "I don't know if it's proper for a boy to see my bare chest as he will... but Kei-chan's a good boy, right?"
-    show BBW happy
-    BBW "He most certainly is."
+    show WG happy
+    WG "He most certainly is."
     "Alice reached into a purple polka-dotted bag beneath her desk and produced a measuring tape."
-    show BBW neutral
-    BBW "If you would please disrobe Honoka."
+    show WG neutral
+    WG "If you would please disrobe Honoka."
     "Honoka smiled at me as she slowly unbuttoned her shirt"
     show BE happy
     BE "You certainly are a very lucky boy Kei-chan."
-    show BBW stern
+    show WG stern
     "Looking over Honoka's shoulder I noticed Alice giving me a slight glare. Wait was she..."
     "Before I could consider the possibility Honoka finished with her shirt revealing a very overtaxed black bra."
-    show BBW neutral
-    BBW "This does certainly look like a task for two people."
+    show WG neutral
+    WG "This does certainly look like a task for two people."
     show BE unique
     BE "Hahh, I suppose my breasts are too big to be handled by one person."
-    BBW "Could you please remove your bra as well Honoka?"
+    WG "Could you please remove your bra as well Honoka?"
     "Honoka passed me another teasing glance as she reached back to undo the bra clasp."
     show BE aroused
     "I knew she was teasing me but this was getting to be a bit beyond that point. The overtaxed garment fell to the floor with a dull thud, leaving Honoka's chest bare and her still smiling."
-    BBW "Now with that off, I can begin to get measurements. Kei would you stand in front so I can pass you the tape measure."
+    WG "Now with that off, I can begin to get measurements. Kei would you stand in front so I can pass you the tape measure."
     "She passed me the end of the tape."
-    BBW "Kei please pull this across the very front of her breasts so I can get her bust measurement."
+    WG "Kei please pull this across the very front of her breasts so I can get her bust measurement."
     "At this point I was beginning to wonder whether Alice was doing this more as a test."
     "Carefully, I pulled the tape across Honoka's breasts, trying to avoid grazing her exposed areolas."
     "I tried to dart between looking down at her chest and Honoka's eyes to avoid staring for too long, lest I accidentally incur Alice's wrath."
@@ -8266,69 +9143,69 @@ label BBW044_c2_2:
     MC "It was a fashion crime is what that was."
     show BE neutral
     "Alice let out a muffled chuckle as she finished the last measuring."
-    show BBW haughty
-    BBW "Certainly sounds like a story you'll need to tell me at some point over tea Honoka. I'm quite interested in hearing about these childhood exploits."
+    show WG haughty
+    WG "Certainly sounds like a story you'll need to tell me at some point over tea Honoka. I'm quite interested in hearing about these childhood exploits."
     show BE happy
     BE "Oh certainly, I have many I can share later."
-    show BBW neutral
-    BBW "You are also good to redress now Honoka. This next part doesn't need you to be bare."
+    show WG neutral
+    WG "You are also good to redress now Honoka. This next part doesn't need you to be bare."
     "As Honoka slung the bra back over her shoulders, Alice grabbed a thick black binder from beside her desk. Flipping the cover open revealed a massive catalog of designs complete with sample patches."
-    BBW "One thing I can't stand about the school-issued clothes is they are quite drab, with no character."
-    show BBW neutral-2
-    BBW "Go ahead and look through and pick whatever suits your fancy. You ordered 3 so you can pick up to 3 if you so choose."
+    WG "One thing I can't stand about the school-issued clothes is they are quite drab, with no character."
+    show WG neutral-2
+    WG "Go ahead and look through and pick whatever suits your fancy. You ordered 3 so you can pick up to 3 if you so choose."
     show BE surprised-2
     "Honoka stared at the assortment before her with eagerness."
     BE "I'm not sure 3 is enough, these are all great choices."
-    BBW "Take your time."
+    WG "Take your time."
     "Honoka flipped through the pages for a few minutes while Alice and I continued to try and clean the earlier mess."
     show BE neutral
     BE "I believe I've come to a decision."
-    show BBW happy
-    BBW "Wonderful, what have you decided."
+    show WG happy
+    WG "Wonderful, what have you decided."
     show BE happy
     BE "Pink."
-    show BBW surprised
-    BBW "Uhh come again?"
+    show WG surprised
+    WG "Uhh come again?"
     BE "A plain pink is fine. Maybe if it's possible some red roses on the nipple area."
-    BBW "Is that for just one or all?"
+    WG "Is that for just one or all?"
     BE "All is fine, that way I don't have to worry too much about choosing."
     "I couldn't help but stifle a chuckle watching Alice trying to process the request. For once she truly looked baffled."
-    BBW "I can certainly see if that's feasible. I will say that is quite the detail to add, I should maybe add that as a permanent option."
+    WG "I can certainly see if that's feasible. I will say that is quite the detail to add, I should maybe add that as a permanent option."
     MC "No harm in adding it to the catalog, might have others who want it to."
-    show BBW neutral
-    BBW "I'll put it under consideration, as from a marketing perspective you may be onto something."
+    show WG neutral
+    WG "I'll put it under consideration, as from a marketing perspective you may be onto something."
     BE "Thank you again for doing for me. It was certainly an interesting and fun experience. Who knows maybe I'll come back for another sizing."
     "Naturally Honoka is a little excited about her tits getting bigger even when they are three times the size of her head."
     "Her outfit style may change, but her personality is as consistent as ever."
-    show BBW happy
-    BBW "It's been no trouble and I'm available if you may need any sort of adjustments or fittings."
+    show WG happy
+    WG "It's been no trouble and I'm available if you may need any sort of adjustments or fittings."
     BE "You've got it! Have a great day."
     "With a short exchange of bows, Alice saw Honoka out. I continued cleaning up in the bedroom, noticing the forlorned teacups and pot."
     "Gathering them, I walked them out to the kitchen, setting them on the counter beside some other dishes waiting to be done."
     hide BE with dissolve
     play music Bittersweet
-    show BBW haughty at Position(xalign=0.5, yalign=1.0) with dissolve
+    show WG haughty at Position(xalign=0.5, yalign=1.0) with dissolve
     "Turning around I was surprised to see Alice standing right behind me. Her belly only a few inches from my own."
-    BBW "I would like to thank you for the help today Kei. While I'm no stranger to dealing with large breasts, Honoka-chan's are truly on their own scale and more than I could properly work with."
+    WG "I would like to thank you for the help today Kei. While I'm no stranger to dealing with large breasts, Honoka-chan's are truly on their own scale and more than I could properly work with."
     MC "Oh it's nothing just..."
     "She gently pressed a finger against my lips, cutting me off."
-    BBW "Acknowledging this, I just want to be clear that I expect you to keep a slightly better composure if you want to assist me with her or similarly endowed clients again."
+    WG "Acknowledging this, I just want to be clear that I expect you to keep a slightly better composure if you want to assist me with her or similarly endowed clients again."
     "She brings her finger down but does so rubbing it down my chest before pulling back."
-    BBW "I just hope that if the moment ever comes, I expect you to give me the same sorta looks I saw you giving Honoka-chan. Do you understand?"
+    WG "I just hope that if the moment ever comes, I expect you to give me the same sorta looks I saw you giving Honoka-chan. Do you understand?"
     "I just nodded my head slowly."
     "She leaned forward and kissed me. Her body gently pressed me against the counter. The sensation was best  described as being encased in a pillow."
-    show BBW happy
+    show WG happy
     "Pulling back she booped me on the nose before waddling back to her room."
-    BBW "I wonder if you'd respond that way to another girl with a predicament like mine. Like Sakura, perhaps?"
+    WG "I wonder if you'd respond that way to another girl with a predicament like mine. Like Sakura, perhaps?"
     "As her door shut I had a million thoughts going through my head. The suddenness of her forwardness had shocked me on many levels and left me with many questions."
     "How much ogling did she see me doing? Would I have done the same with another weight gain girl? Was she inviting me to take things further?"
     "But somehow out of all the questions swirling about, the one that fell from my mouth was."
     MC "Who's Sakura?"
     jump daymenu
 
-label BBW045:
+label WG045:
     scene black with fade
-    $setProgress("BBW", "BBW046")
+    $setProgress("WG", "WG046")
     "It's a beautiful Sunday morning."
     MC "zzzzzzzzzz"
     "And I was spending it the best way I could..."
@@ -8376,15 +9253,15 @@ label BBW045:
     "My phone immediately replicated the sound of a beehive as a swarm of texts from Alice came through at once."
     MCT "I forgot that was today."
     "I quickly opened my messages to see everything that I missed."
-    BBWCell "Hey, don't forget to sleep at a responsible time tonight, we have a big day tomorrow.    8:32pm"
-    BBWCell "I'm assuming you have already fallen asleep, it isn't like you to not respond. I hope your dreams are pleasant. Goodnight.    8:47pm"
-    BBWCell "Good morning Keisuke, I hope you slept well. Please come to my dorm at 7:30 so I can tell you what to expect today.    7:10am"
-    if getFlag("BBW035_c2_2"):
-        BBWCell "Don't forget to wear your suit, you'll look great.    7:11am"
-    elif getFlag("BBW035_c2_1"):
-        BBWCell "You will look a little overdressed in your suit, but it will still look rather appropriate.    7:11am"
+    WGCell "Hey, don't forget to sleep at a responsible time tonight, we have a big day tomorrow.    8:32pm"
+    WGCell "I'm assuming you have already fallen asleep, it isn't like you to not respond. I hope your dreams are pleasant. Goodnight.    8:47pm"
+    WGCell "Good morning Keisuke, I hope you slept well. Please come to my dorm at 7:30 so I can tell you what to expect today.    7:10am"
+    if getFlag("WG034_c2_2"):
+        WGCell "Don't forget to wear your suit, you'll look great.    7:11am"
+    elif getFlag("WG034_c2_1"):
+        WGCell "You will look a little overdressed in your suit, but it will still look rather appropriate.    7:11am"
     else:
-        BBWCell "I bought you a suit for the occasion, you can get changed in my dorm.    7:11am"
+        WGCell "I bought you a suit for the occasion, you can get changed in my dorm.    7:11am"
     "I looked at the clock in the corner of my phone screen."
     MCT "7:29am, this is not going to end well."
     "I got up and left Daichi to his book as I went to brush my teeth."
@@ -8402,7 +9279,7 @@ label BBW045:
     show RM neutral with dissolve
     MC "Are you trying to say some of this applies to me?"
     RM "I'm saying it can apply to anyone."
-    if getFlag("BBW035_c2_1") or getFlag("BBW035_c2_2"):
+    if getFlag("WG034_c2_1") or getFlag("WG034_c2_2"):
         "I started to get dressed, grabbing my suit from my wardrobe."
     else:
         "I started to get dressed, choosing a simple track suit for the trip to Alice's dorm."
@@ -8422,233 +9299,233 @@ label BBW045:
     "I arrived at the girls' dorms and took out my cell phone, texting Alice rather than knocking."
     MCCell "<Sorry for the delay, I'm outside.>    7:48am"
     "A few moments later, the door opened."
-    play music BBW
-    show BBW angry with dissolve
+    play music WG
+    show WG angry with dissolve
     "She may have been furious with me, but the way the morning sun made her hair glow was so alluring."
     "She was stunning."
-    BBW "Keisuke."
+    WG "Keisuke."
     "...not that it changed her current emotion."
-    BBW "Do you have any idea what this means?"
+    WG "Do you have any idea what this means?"
     MC "Alice I-"
-    BBW "No Keisuke, you went to bed far too late and that means you didn't get a healthy amount of sleep."
-    show BBW sad
-    BBW "I'm not upset that you're late at all, we still have plenty of time to get there. I'm upset that you sacrificed your wellbeing for this."
+    WG "No Keisuke, you went to bed far too late and that means you didn't get a healthy amount of sleep."
+    show WG sad
+    WG "I'm not upset that you're late at all, we still have plenty of time to get there. I'm upset that you sacrificed your wellbeing for this."
     MC "Alice I assure you I'm fine, I can function perfectly well on this amount of sleep."
-    show BBW neutral
-    BBW "Well if you say you're fine then I believe you."
-    if getFlag("BBW035_c2_1") or getFlag("BBW035_c2_2"):
-         BBW "And you look so handsome in your suit, so I trust your ability to maintain appearances. Now come inside so I can tell you what to expect today."
-         jump BBW045_art
+    show WG neutral
+    WG "Well if you say you're fine then I believe you."
+    if getFlag("WG034_c2_1") or getFlag("WG034_c2_2"):
+         WG "And you look so handsome in your suit, so I trust your ability to maintain appearances. Now come inside so I can tell you what to expect today."
+         jump WG045_art
     else:
-        BBW "Now come inside and change into your suit, you're going to look so handsome."
-        jump BBW045_suit
+        WG "Now come inside and change into your suit, you're going to look so handsome."
+        jump WG045_suit
 
-label BBW045_art:
-    $setFlag("BBW045_art")
-    scene Dorm BBW with fade
+label WG045_art:
+    $setFlag("WG045_art")
+    scene Dorm WG with fade
     "I entered Alice's dorm rather quietly, only to see that Kodama-san was already wide awake."
-    show BBW neutral at Position(xpos=0.8) with dissolve
+    show WG neutral at Position(xpos=0.8) with dissolve
     show PRG pj-happy at Position(xpos=0.2) with dissolve
     PRG "Keisuke! Good morning!"
     if getAffection("PRG") > 3:
         MC "Good morning Aida."
-        BBW "We can sit on my bed Keisuke, I have my laptop here with me."
+        WG "We can sit on my bed Keisuke, I have my laptop here with me."
         hide PRG with dissolve
         "Aida climbed back into bed and started reading a baseball history book, of all things."
     else:
         MC "Good morning, Kodama-san."
-        BBW "Come and sit on my bed Keisuke, I have my laptop here with me."
+        WG "Come and sit on my bed Keisuke, I have my laptop here with me."
         hide PRG with dissolve
         "Kodama-san climbed back into bed and started to read some sort of science textbook."
     "I sat on Alice's bed. She placed her laptop on my... well... lap, and the image displayed on it was unmistakably Van Gogh's 'Starry Night', a painting anybody could recognise regardless of artistic knowledge."
     MC "Alice, why are you showing me this?"
-    BBW "Do you know what this painting is?"
+    WG "Do you know what this painting is?"
     MC "Yes, Starry Night by Van Gogh."
-    BBW "Good, now tell me about the picture."
+    WG "Good, now tell me about the picture."
     if getSkill("Art") > 4:
         MC "It was painted in 1898, and it's debatably his most famous piece, alongside Sunflowers."
     else:
         MC "It was painted in the 1800s right? And it's obviously a famous picture."
-    BBW "You're not wrong Keisuke, but anybody can list simple facts about a painting, an individual of good tastes would describe the artistic methods and techniques at play."
-    BBW "Notice how each stroke of the brush was {i}physically{/i} done; quick and short individual strokes- but many of them."
-    BBW "This is a staple of Van Gogh's work and will allow you to easily identify one of his paintings."
+    WG "You're not wrong Keisuke, but anybody can list simple facts about a painting, an individual of good tastes would describe the artistic methods and techniques at play."
+    WG "Notice how each stroke of the brush was {i}physically{/i} done; quick and short individual strokes- but many of them."
+    WG "This is a staple of Van Gogh's work and will allow you to easily identify one of his paintings."
     $setSkill("Art", 1)
     MC "Ok Alice, but {i}why{/i} are you telling me this?"
-    BBW "As you know, we are attending a wine tasting in... 40 minutes, minus 15 minutes travel time."
-    BBW "The building hosting the event is a small art gallery and a high-class elegant café, which will be closed, for the wealthier residents of this island."
-    BBW "Of course this is still just that- an island. You won't meet any world famous CEOs and only the more obscure paintings there are original pieces, but it still provides a high society experience for the island residents who seek it."
+    WG "As you know, we are attending a wine tasting in... 40 minutes, minus 15 minutes travel time."
+    WG "The building hosting the event is a small art gallery and a high-class elegant café, which will be closed, for the wealthier residents of this island."
+    WG "Of course this is still just that- an island. You won't meet any world famous CEOs and only the more obscure paintings there are original pieces, but it still provides a high society experience for the island residents who seek it."
     "I had read that we were attending a wine tasting when I disabled do-not-disturb on my phone and the calendar notification displayed, but in my groggy state I had not properly processed the thought."
     "We aren't old enough to drink yet."
     MC "Alice, how are we attending a wine tasting when we aren't old enough to drink?"
-    show BBW haughty
-    BBW "Keisuke, what kind of businesswoman would I be if I wasn't aware of legal loopholes?"
-    BBW "The law states that all citizens and tourists within Japan must be age 20 to purchase or consume alcohol."
+    show WG haughty
+    WG "Keisuke, what kind of businesswoman would I be if I wasn't aware of legal loopholes?"
+    WG "The law states that all citizens and tourists within Japan must be age 20 to purchase or consume alcohol."
     MC "Right, and we aren-"
-    BBW "Aren't purchasing or consuming alcohol."
-    BBW "There isn't any law against merely tasting alcohol, and we aren't purchasing it from the business, the event is a fundraiser and attendance is free- with invitation."
-    show BBW neutral
+    WG "Aren't purchasing or consuming alcohol."
+    WG "There isn't any law against merely tasting alcohol, and we aren't purchasing it from the business, the event is a fundraiser and attendance is free- with invitation."
+    show WG neutral
     MC "Remind me again why your father got us invitations?"
-    BBW "He wants {i}me{/i} to attend after I called him to let him know about the charitable work and how it will invest in the development of Seichou and its community."
-    BBW "You are naturally my plus one."
+    WG "He wants {i}me{/i} to attend after I called him to let him know about the charitable work and how it will invest in the development of Seichou and its community."
+    WG "You are naturally my plus one."
     MC "What is the fundraiser for?"
-    BBW "Creating jobs around Seichou for former students."
-    BBW "Most workers on the island are former students already but every year there are more people with growth factors who cannot be hired, as employers would obviously discriminate based on their bodies."
-    BBW "One idea I wanted to put forth was giant students being employed for construction, creating the buildings that would house the jobs for students with other growth factors."
-    BBW "Now, if there are no more questions, I'd like to describe the various terminologies of wine tasting to you."
+    WG "Creating jobs around Seichou for former students."
+    WG "Most workers on the island are former students already but every year there are more people with growth factors who cannot be hired, as employers would obviously discriminate based on their bodies."
+    WG "One idea I wanted to put forth was giant students being employed for construction, creating the buildings that would house the jobs for students with other growth factors."
+    WG "Now, if there are no more questions, I'd like to describe the various terminologies of wine tasting to you."
     MC "Alright."
     "I nodded in understanding."
-    BBW "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
-    BBW "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
-    BBW "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
-    BBW "In opposition to this, a wine with no acidity is referred to as... flabby."
-    BBW "Don't say it."
+    WG "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
+    WG "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
+    WG "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
+    WG "In opposition to this, a wine with no acidity is referred to as... flabby."
+    WG "Don't say it."
     "I fought a smirk attempting to spread across my face."
     MC "I wasn't going to, Alice."
-    BBW "Of course you weren't."
-    BBW "Now if a wine has high acidity, but not to an unpleasant degree, it can be referred to as 'bright.'"
-    BBW "A wine with a low acidity, but not to the point of necessarily lacking in it, is described as 'blowsy.'"
-    BBW "Now for more characteristics, if a wine has too much fruit it can be called 'flamboyant,' this is usually a slight insult to the maker as wines with too much fruit are seen as trying to grab attention; A cheap tactic, if you will."
-    BBW "A wine that tastes simple, but not necessarily bad, can be called 'crisp.' This is a wine that most people can enjoy just fine, but won't be anybody's favourite."
-    BBW "The next term is one I'm sure you'll find amusing. Wine that fills the mouth to a displeasing and negative extent is labelled a 'fat' wine."
+    WG "Of course you weren't."
+    WG "Now if a wine has high acidity, but not to an unpleasant degree, it can be referred to as 'bright.'"
+    WG "A wine with a low acidity, but not to the point of necessarily lacking in it, is described as 'blowsy.'"
+    WG "Now for more characteristics, if a wine has too much fruit it can be called 'flamboyant,' this is usually a slight insult to the maker as wines with too much fruit are seen as trying to grab attention; A cheap tactic, if you will."
+    WG "A wine that tastes simple, but not necessarily bad, can be called 'crisp.' This is a wine that most people can enjoy just fine, but won't be anybody's favourite."
+    WG "The next term is one I'm sure you'll find amusing. Wine that fills the mouth to a displeasing and negative extent is labelled a 'fat' wine."
     "I had a slight desire to chuckle, purely due to the irony of fat being deemed negative. I guess wine 'intellectuals' aren't all they claim to be."
     "The urge was easily fought."
-    BBW "Last up before we leave is 'complex,' it is exactly as it sounds. A complex wine will change as you taste it to not be pinned down by a single label."
-    BBW "Absolutely never use the term complex as a last resort, it is only to be used when you can {i}describe{/i} how it is complex. It is better to admit uncertainty than to lie in an attempt to seem more intelligent."
+    WG "Last up before we leave is 'complex,' it is exactly as it sounds. A complex wine will change as you taste it to not be pinned down by a single label."
+    WG "Absolutely never use the term complex as a last resort, it is only to be used when you can {i}describe{/i} how it is complex. It is better to admit uncertainty than to lie in an attempt to seem more intelligent."
     MC "Only use complex when I can explain why, got it."
-    BBW "I think that is everything you'll need to know. This is of course the very basics of wine tasting but as the event is primarily a fundraiser, this should cover everything."
-    BBW "We should leave now, I wish to walk there to enjoy this beautiful day- as well as clear my mind for the event."
-    BBW "The best things in life aren't free, but a scenic route is."
-    jump BBW045_wine
+    WG "I think that is everything you'll need to know. This is of course the very basics of wine tasting but as the event is primarily a fundraiser, this should cover everything."
+    WG "We should leave now, I wish to walk there to enjoy this beautiful day- as well as clear my mind for the event."
+    WG "The best things in life aren't free, but a scenic route is."
+    jump WG045_wine
 
-label BBW045_suit:
+label WG045_suit:
     "Alice gestured at me to shush and then beckoned me in."
-    scene Dorm BBW with fade
+    scene Dorm WG with fade
     "The lights were turned off, though we could see fine due to the direct sunlight."
-    show BBW neutral at Position(xpos=0.8) with dissolve
+    show WG neutral at Position(xpos=0.8) with dissolve
     "It was quickly apparent that Kodama-san was still asleep."
     "As a roommate with nothing to do should be at this hour."
     #(Alice and Kei whisper from here)
-    BBW "Here is your suit, you can just get changed here, Kodama-san won't exactly be able to see."
+    WG "Here is your suit, you can just get changed here, Kodama-san won't exactly be able to see."
     "Alice had the suit hung over her bed frame with a clothing hanger, clean and pressed."
     "It was a dark blue number, looking rather subdued compared to 'fancy' suits, but it was a fine piece for most occasions."
     "Alice turned around and I began to undress, using slow movements to make as little sound as possible."
-    show BBW neutral at Transform(xzoom=-1) with dissolve
-    BBW "Staring at the wall isn't exactly fun, but the bathroom door is creaky so getting changed in there risks waking up Kodama-san."
+    show WG neutral at Transform(xzoom=-1) with dissolve
+    WG "Staring at the wall isn't exactly fun, but the bathroom door is creaky so getting changed in there risks waking up Kodama-san."
     MC "I'll try to be as fast as I can."
-    BBW "No, it's best you take your time, Kodama-san doesn't deserve to be disturbed."
+    WG "No, it's best you take your time, Kodama-san doesn't deserve to be disturbed."
     "I had finished taking off my tracksuit, and reached for the dress."
     MC "Onto the suit now."
-    BBW "Good, good. Let me know when you're done."
+    WG "Good, good. Let me know when you're done."
     "I slowly pulled up the pants and fastened the belt with careful movements."
     MCT "This silence is like being in a low budget horror film."
     "Fastening the belt buckle at a comfortable tightness, I moved onto the shirt."
     "As I had buttoned the shirt up halfway, I muttered a thought out loud."
     MC "{i}Nearly done.{/i}"
-    BBW "Done? Oh good."
+    WG "Done? Oh good."
     "As I realised the error I had just made, Alice turned around to face me."
-    show BBW neutral at Transform(xzoom=1) with dissolve
-    show BBW aroused
-    BBW "Umm, Keisuke I don't think you're done yet."
+    show WG neutral at Transform(xzoom=1) with dissolve
+    show WG aroused
+    WG "Umm, Keisuke I don't think you're done yet."
     MCT "The fact that she isn't looking away is a great compliment."
     MC "I said nearly done."
-    BBW "I must have misheard. Carry on then."
+    WG "I must have misheard. Carry on then."
     "It was apparent she didn't intend to turn back around."
     "I suppose that whispering in the dark in the bedroom can be a little sensual."
     "Still though, no reason to tell her to look away, it is only putting a shirt on after all."
     MC "Okay, Alice."
     "I buttoned up my shirt, continuing to be as silent as I could."
     "When I was done, Alice corrected my collar for me and reached for my tie."
-    BBW "Now to show you how to properly tie a tie."
+    WG "Now to show you how to properly tie a tie."
     MCT "This is not how I saw my morning going."
     "She put the tie around my neck, somehow performing such an average task with extreme elegance."
-    BBW "This is how high society does it."
+    WG "This is how high society does it."
     "She tightened it rather slowly and deliberately, maintaining eye contact with me the whole time."
     "When she was done, she handed me my jacket."
-    show BBW neutral:
+    show WG neutral:
         ease 0.5 xpos 0.5
-    BBW "Come on now, we are pressed for time and I have to explain wine tasting."
+    WG "Come on now, we are pressed for time and I have to explain wine tasting."
     "Alice sat down on her bed and I quickly threw on my jacket and joined her."
-    BBW "Now, I need to describe the various {i}terminologies{/i} of wine tasting to you."
+    WG "Now, I need to describe the various {i}terminologies{/i} of wine tasting to you."
     "I nodded in understanding."
-    BBW "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
-    BBW "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
-    BBW "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
-    BBW "In opposition to this, a wine with no acidity is referred to as... flabby."
-    BBW "Don't say it."
+    WG "Pay very close attention Keisuke, you will need to know this information and refer to it during the event."
+    WG "First is 'acidity,' this is how much a wine tingles in your mouth, like sour candy."
+    WG "If a wine has a very high acidity, to the point of being unpleasant, you may refer to it as 'austere.'"
+    WG "In opposition to this, a wine with no acidity is referred to as... flabby."
+    WG "Don't say it."
     MCT "I fought a smirk attempting to spread across my face."
     MC "I wasn't going to, Alice."
-    BBW "Of course you weren't."
-    BBW "Now if a wine has high acidity, but not to an unpleasant degree, it can be referred to as 'bright.'"
-    BBW "A wine with a low acidity, but not to the point of necessarily lacking in it, is described as 'blowsy.'"
-    BBW "Now for more characteristics, if a wine has too much fruit it can be called 'flamboyant,' this is usually a slight insult to the maker as wines with too much fruit are seen as trying to grab attention; A cheap tactic, if you will."
-    BBW "A wine that tastes simple, but not necessarily bad, can be called 'crisp.' This is a wine that most people can enjoy just fine, but won't be anybody's favourite."
-    BBW "The next term is one I'm sure you'll find amusing. Wine that fills the mouth to a displeasing and negative extent is labelled a 'fat' wine."
+    WG "Of course you weren't."
+    WG "Now if a wine has high acidity, but not to an unpleasant degree, it can be referred to as 'bright.'"
+    WG "A wine with a low acidity, but not to the point of necessarily lacking in it, is described as 'blowsy.'"
+    WG "Now for more characteristics, if a wine has too much fruit it can be called 'flamboyant,' this is usually a slight insult to the maker as wines with too much fruit are seen as trying to grab attention; A cheap tactic, if you will."
+    WG "A wine that tastes simple, but not necessarily bad, can be called 'crisp.' This is a wine that most people can enjoy just fine, but won't be anybody's favourite."
+    WG "The next term is one I'm sure you'll find amusing. Wine that fills the mouth to a displeasing and negative extent is labelled a 'fat' wine."
     "I had a slight desire to chuckle, purely due to the irony of fat being deemed negative. I guess wine 'intellectuals' aren't all they claim to be."
     "The urge was easily fought."
-    BBW "Last up before we leave is 'complex,' it is exactly as it sounds. A complex wine will change as you taste it to not be pinned down by a single label."
-    BBW "Absolutely never use the term complex as a last resort, it is only to be used when you can {i}describe{/i} how it is complex. It is better to admit uncertainty than to lie in an attempt to seem more intelligent."
+    WG "Last up before we leave is 'complex,' it is exactly as it sounds. A complex wine will change as you taste it to not be pinned down by a single label."
+    WG "Absolutely never use the term complex as a last resort, it is only to be used when you can {i}describe{/i} how it is complex. It is better to admit uncertainty than to lie in an attempt to seem more intelligent."
     MC "Only use complex when I can explain why, got it."
-    BBW "I think that is everything you'll need to know. This is of course the very basics of wine tasting but as the event is primarily a fundraiser, this should cover everything."
-    BBW "We should leave now, I wish to walk there to enjoy this beautiful day- as well as clear my mind for the event."
-    BBW "The best things in life aren't free, but a scenic route is."
-    jump BBW045_wine
+    WG "I think that is everything you'll need to know. This is of course the very basics of wine tasting but as the event is primarily a fundraiser, this should cover everything."
+    WG "We should leave now, I wish to walk there to enjoy this beautiful day- as well as clear my mind for the event."
+    WG "The best things in life aren't free, but a scenic route is."
+    jump WG045_wine
 
-label BBW045_wine:
+label WG045_wine:
     scene Dorm Exterior with fade
-    show BBW neutral with dissolve
-    BBW "The weather on this island truly is a wonder."
+    show WG neutral with dissolve
+    WG "The weather on this island truly is a wonder."
     MC "It truly is."
     scene School Exterior with fade
-    show BBW neutral with dissolve
-    BBW "It's a shame really, a hotel and resort would be perfect here. Mass tourism would greatly improve the economy, though that would directly interfere with the school and its students."
+    show WG neutral with dissolve
+    WG "It's a shame really, a hotel and resort would be perfect here. Mass tourism would greatly improve the economy, though that would directly interfere with the school and its students."
     MC "That is true. The island has a lot of hidden gems to offer."
-    BBW "Perhaps when I am an experienced businesswoman in my own right, growth factors will be widely known among the general populace. This would lead to more relaxed regulations on the island."
+    WG "Perhaps when I am an experienced businesswoman in my own right, growth factors will be widely known among the general populace. This would lead to more relaxed regulations on the island."
     MCT "She really does plan these things ahead."
-    BBW "... although, mass tourism would severely impact the lives of the students here depending on where the resort is located."
-    BBW "It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
+    WG "... although, mass tourism would severely impact the lives of the students here depending on where the resort is located."
+    WG "It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
     MCT "This monologue isn't going to end any time soon, is it?"
     scene Town with fade
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     "Reaching the town was a sad end to the scenic walkways."
-    BBW "Furthermore..."
+    WG "Furthermore..."
     MCT "Not that I got to fully enjoy such scenic walkways."
-    BBW "There is no denying that some individuals would visit the island for less respectable purposes."
-    BBW "I know some people would come here purely to see students with growth factors that they find pleasing; our conditions would be treated like some kind of game for their fetishism."
+    WG "There is no denying that some individuals would visit the island for less respectable purposes."
+    WG "I know some people would come here purely to see students with growth factors that they find pleasing; our conditions would be treated like some kind of game for their fetishism."
     MCT "She said she wanted to clear her head for the wine tasting. If business conceptualisations are how she does that, I have no desire to speak up."
-    BBW "Of course among students here it is a different story, they would be here regardless and are the same age as the students they find appealing."
-    show BBW haughty
-    BBW "I know one such student who acted on the opportunity."
+    WG "Of course among students here it is a different story, they would be here regardless and are the same age as the students they find appealing."
+    show WG haughty
+    WG "I know one such student who acted on the opportunity."
     "I could feel my cheeks turning red."
-    show BBW neutral
-    BBW "However, masses of individuals specifically seeking such things specifically would lead to very very unpleasant experiences, prompting many students to stay in their dorms all weekend and ultimately ruining the island for everyone."
-    BBW "I simply cannot allow this to occur. Money will never be worth the malice behind it. Not for moral individuals anyway."
+    show WG neutral
+    WG "However, masses of individuals specifically seeking such things specifically would lead to very very unpleasant experiences, prompting many students to stay in their dorms all weekend and ultimately ruining the island for everyone."
+    WG "I simply cannot allow this to occur. Money will never be worth the malice behind it. Not for moral individuals anyway."
     MCT "So Alice has no malice. Heh."
-    BBW "It's such a shame; if people were more decent, this island would be an untapped tourism gold mine."
-    BBW "Oh! Here, it's just around this corner."
+    WG "It's such a shame; if people were more decent, this island would be an untapped tourism gold mine."
+    WG "Oh! Here, it's just around this corner."
     "We turned the corner and I saw one building with a security guard at the door, clearly showing this was the gallery."
     "The building was much more modern than I had anticipated, having plenty of window space on the exterior. It looked like a modern office building from the outside."
     "As we approached, the security guard, evidently a man with a muscle growth factor, spoke up."
     Guard "Invitation and name please, Sir."
-    BBW "Personally I prefer to be called Miss, but Madam will do too."
+    WG "Personally I prefer to be called Miss, but Madam will do too."
     "The guard was clearly surprised it was Alice that was the invitation holder."
     Guard "My apologies Miss. Name and invitation please."
-    BBW "Nikumaru Alice. This is my plus one."
+    WG "Nikumaru Alice. This is my plus one."
     "Alice showed the guard her invitation."
     Guard "Allow me to double check this, standard procedure."
     "The guard took a moment to check the authenticity of the invitation."
     Guard "Everything is in order, welcome to the Usuda Art Gallery, Madam."
-    BBW "Thank you."
+    WG "Thank you."
     "The guard opened the door for us and smiled as we entered."
     scene Art Gallery with fade
-    show BBW neutral with dissolve
-    BBW "This place certainly looks better than it does on their social media."
-    BBW "The art actually gives off a nice atmosphere, even if all of the popular pieces here are imitations."
+    show WG neutral with dissolve
+    WG "This place certainly looks better than it does on their social media."
+    WG "The art actually gives off a nice atmosphere, even if all of the popular pieces here are imitations."
     MC "I agree, the mood is a lot more relaxed than what I'd anticipated."
-    BBW "Here comes the first taste."
+    WG "Here comes the first taste."
     "A waiter approached us with 2 glasses of wine on a serving tray in one hand and a bucket in the other."
     Waiter "Sir, Miss, 'Avignon Southern'."
     "He was obviously instructed to keep all conversation short and to the point."
-    BBW "Thank you."
+    WG "Thank you."
     "Alice and I each took a glass and sipped the contents."
     MCT "It's... simple. It doesn't have any defining characteristics."
     MCT "What was it called again? Avignon? That sounds French."
@@ -8656,39 +9533,39 @@ label BBW045_wine:
     "Alice spat the wine into the bucket, to which I immediately followed."
     Waiter "Very good."
     "The waiter left to go and get a new wine to begin serving again. It was clear we were the last to drink that wine."
-    BBW "So, how was it?"
+    WG "So, how was it?"
     menu:
         "Bright.":
             MC "It didn't do anything particularly well, it was simple, so it was bright."
-            show BBW sad
-            BBW "No Keisuke. A wine that does nothing particular and stays simple is crisp. A bright wine is a wine with high acidity."
-            show BBW neutral
-            BBW "I can forgive one mistake Keisuke, since you are only talking to me and it's natural you are nervous."
-            BBW "However, please remember what I told you when you speak to other guests here."
-            BBW "Normally I wouldn't worry so much about appearances to people not involved with my father's company, but these people would likely dismiss my ideas over something so superficial, and I cannot allow that to happen to the giant students of Seichou."
+            show WG sad
+            WG "No Keisuke. A wine that does nothing particular and stays simple is crisp. A bright wine is a wine with high acidity."
+            show WG neutral
+            WG "I can forgive one mistake Keisuke, since you are only talking to me and it's natural you are nervous."
+            WG "However, please remember what I told you when you speak to other guests here."
+            WG "Normally I wouldn't worry so much about appearances to people not involved with my father's company, but these people would likely dismiss my ideas over something so superficial, and I cannot allow that to happen to the giant students of Seichou."
         "Crisp.":
             MC "It was a simple wine, so it was crisp."
             MC "The kind of wine anybody finds acceptable but nobody finds exciting."
-            show BBW happy
-            BBW "That is absolutely correct Keisuke. I'm glad you remembered."
-            BBW "I see we'll face no issues mingling with the guests here now."
-            BBW "Normally I wouldn't worry so much about appearances to people not involved with my father's company, but these people would likely dismiss my ideas over something so superficial, and I cannot allow that to happen to the giant students of Seichou."
-            show BBW neutral
+            show WG happy
+            WG "That is absolutely correct Keisuke. I'm glad you remembered."
+            WG "I see we'll face no issues mingling with the guests here now."
+            WG "Normally I wouldn't worry so much about appearances to people not involved with my father's company, but these people would likely dismiss my ideas over something so superficial, and I cannot allow that to happen to the giant students of Seichou."
+            show WG neutral
         "Flamboyant.":
             "It didn't do anything particularly well, it was simple, so it was flamboyant."
-            show BBW angry
-            $setAffection("BBW", -1)
-            BBW "Keisuke, not only does this mean you were not paying attention to me, it means you aren't even capable of knowing what the words mean and making informed assumptions."
-            BBW "How on earth would a wine that stays simple and does nothing extra ever be referred to as flamboyant?!"
-            BBW "Do you even know what flamboyant means?"
+            show WG angry
+            $setAffection("WG", -1)
+            WG "Keisuke, not only does this mean you were not paying attention to me, it means you aren't even capable of knowing what the words mean and making informed assumptions."
+            WG "How on earth would a wine that stays simple and does nothing extra ever be referred to as flamboyant?!"
+            WG "Do you even know what flamboyant means?"
             MC "Alice I-"
-            BBW "Keisuke, no."
-            show BBW sad
-            BBW "I understand you may be nervous and that could lead you to make mistakes but something like this is just silly."
-            BBW "It established that when you forget something, you won't even use your own logic and reason to form an opinion."
-            BBW "Please Keisuke, try to be better for the duration of this event."
-            show BBW neutral
-            BBW "I know you're better than this, so please display it."
+            WG "Keisuke, no."
+            show WG sad
+            WG "I understand you may be nervous and that could lead you to make mistakes but something like this is just silly."
+            WG "It established that when you forget something, you won't even use your own logic and reason to form an opinion."
+            WG "Please Keisuke, try to be better for the duration of this event."
+            show WG neutral
+            WG "I know you're better than this, so please display it."
     "Suddenly the waiter emerged from the back room, carrying the bucket again."
     "Though this time there were 10 glasses on the serving tray."
     "As he did so, a woman came over to speak to Alice."
@@ -8696,16 +9573,16 @@ label BBW045_wine:
     "The first was that she had attended the school when she was young, as her growth was self-evident."
     "The second was that she had had plastic surgery- her face appears to be almost poorly made. Though her natural beauty was still clear behind this."
     Misaki "You must be Nikumaru-san. It's an honour to meet you."
-    BBW "How do you know who I am?"
+    WG "How do you know who I am?"
     Misaki "Well, you were the only person on the guest list with blonde hair and blue eyes. It is quite a giveaway."
     Misaki "But if you're referring to knowing who you are as the daughter of Nikumaru Daitaro- well, when Nikumaru Daitaro contacts you and says he wishes for his child to be invited, it is not a moment you decline nor forget."
     Misaki "Your father has donated a very generous amount of over 20 million yen to this project. It is only natural I thank you personally as you attend in his place."
-    BBW "Well thank you for inviting us. We are more than happy to fund such a good cause."
+    WG "Well thank you for inviting us. We are more than happy to fund such a good cause."
     Misaki "The pleasure is all mine. Now, where are my manners?"
     Misaki "My name is Usuda Misaki, owner of this establishment and general art enthusiast - though I made my money by selling high quality tailored suits and dresses to individuals with growth factors leaving the academy."
-    BBW "Alice Nikumaru. Please don't take my surname as a reason to treat me differently, I am my own person despite my father's status. Oh, and call me Alice."
+    WG "Alice Nikumaru. Please don't take my surname as a reason to treat me differently, I am my own person despite my father's status. Oh, and call me Alice."
     Misaki "Of course Alice, and who is your plus one?"
-    BBW "This is my boyfriend, Hotsure Keisuke."
+    WG "This is my boyfriend, Hotsure Keisuke."
     MC "It's a pleasure to meet you madam, please call me Keisuke."
     Misaki "As you wish. Oh! Here comes the next wine."
     "The waiter had finished giving out the wine to the others and awaiting their verdict."
@@ -8720,52 +9597,52 @@ label BBW045_wine:
     menu:
         "Blowsy.":
             MC "It's blowsy. The acidity is a little low."
-            BBW "I'd say the acidity is far too low. This is a flabby wine, no doubt."
+            WG "I'd say the acidity is far too low. This is a flabby wine, no doubt."
             Misaki "I have to agree with Alice here. Blowsy wines have a low acidity, not an absence of it."
             Misaki "This particular wine is actually Italian, so having a relaxed product naturally reflects the culture. Of course the wine would be sold in far greater quantities there than here in Japan."
         "Flabby.":
             MC "There is a great absence of acidity, I'd certainly call this wine flabby."
-            BBW "I agree, the wine is far too relaxed and sweet for most palates. It is almost like juice."
+            WG "I agree, the wine is far too relaxed and sweet for most palates. It is almost like juice."
             Misaki "I couldn't agree more. This particular wine is actually Italian, so having a relaxed product naturally reflects the culture. Of course the wine would be sold in far greater quantities there than here in Japan."
         "Bright.":
             MC "It's very bright. The low acidity is rather displeasing."
             Misaki "Keisuke, the wine has a low acidity. Bright is used to define wines with high acidity."
-            BBW "I'd call the wine flabby, there was too great an absence of acidity to refer to it as blowsy."
+            WG "I'd call the wine flabby, there was too great an absence of acidity to refer to it as blowsy."
             Misaki "I agree, Alice. The wine is Italian, so I suppose they opted for a sweeter and more relaxed taste to reflect their culture."
     Misaki "So, Alice, are there any ideas you have for making jobs available to individuals with growth factors?"
-    BBW "Yes, actually. One idea I have been very anxious to pitch is using giant students for construction."
-    BBW "They are the ones most greatly affected by their factors and yet would be so useful in this field. This also guarantees a workforce for the construction of buildings where people with other factors can work, creating even more jobs."
+    WG "Yes, actually. One idea I have been very anxious to pitch is using giant students for construction."
+    WG "They are the ones most greatly affected by their factors and yet would be so useful in this field. This also guarantees a workforce for the construction of buildings where people with other factors can work, creating even more jobs."
     Misaki "Wow, I had never considered that before. That would greatly speed up any construction project. You really are your father's daughter with this kind of innovation."
-    show BBW happy
-    BBW "I'm just glad that we can start this process soon. Giant students really have a harder time than the rest of us."
+    show WG happy
+    WG "I'm just glad that we can start this process soon. Giant students really have a harder time than the rest of us."
     Misaki "You're absolutely right. Alice I will see to it personally that your father's donation goes to this. We will also be contacting the school about including it in the curriculum for giant students."
     "The waiter once again emerged from the wine storage room."
-    show BBW neutral
+    show WG neutral
     Misaki "So, Keisuke, are there any ideas you had?"
     "This caught me off guard, I had expected Alice to be the only one asked such questions."
     "I could quickly make something up to impress Alice or I could admit I don't have an idea."
     menu:
         "Make it up.":
-            $setFlag("BBW045_c3_1")
+            $setFlag("WG045_c3_1")
             MC "Well I uhh..."
             MC "I had the idea that uhh..."
             MCT "They're never going to buy this."
             MC "Maybe people with muscle factors can be used for security?"
-            $setAffection("BBW", -1)
+            $setAffection("WG", -1)
             Misaki "Did... Did you just make that up on the spot?"
             Misaki "We have a security guard just outside who attended the academy with muscle growth, he and I were in the same class."
             Misaki "You saw him at the door."
             Misaki "Oh now this is just a funny story, I'm going to go and tell him, I'll be right back."
-            show BBW angry
-            BBW "Keisuke."
+            show WG angry
+            WG "Keisuke."
             MCT "(gulp)"
-            BBW "Why on earth would you attempt something like that?"
+            WG "Why on earth would you attempt something like that?"
             MC "I thought it would impress you."
-            BBW "You thought fumbling over your words to suggest something already in place that we experienced first hand just a few minutes ago would impress me?"
+            WG "You thought fumbling over your words to suggest something already in place that we experienced first hand just a few minutes ago would impress me?"
             MC "Alice I-"
-            BBW "Keisuke, you aren't here to impress me. You're here to very simply do what I ask of you, following extremely simple instructions."
-            BBW "Here comes Misaki, don't do something stupid like that again."
-            show BBW neutral
+            WG "Keisuke, you aren't here to impress me. You're here to very simply do what I ask of you, following extremely simple instructions."
+            WG "Here comes Misaki, don't do something stupid like that again."
+            show WG neutral
             Misaki "Keisuke that was hilarious, Suji- I mean, our security guard loved it."
             "The waiter once again emerged from the wine room with a fresh 12 glasses."
             Misaki "Alright, let's wait for this next one."
@@ -8773,13 +9650,13 @@ label BBW045_wine:
             MC "No actually, I didn't think of anything that wouldn't have already been suggested. I'm not quite one to think outside the box like Alice is, so to speak."
             Misaki "Ah that's fair, there are only so many possibilities anyway, we have to run out eventually."
             Misaki "It's good that you're honest about it. Some partners would try to make something up to impress their love. It takes a mature individual to be beyond that at your age."
-            show BBW happy
-            BBW "Of course. I have as fine a taste in men as I do in all things."
+            show WG happy
+            WG "Of course. I have as fine a taste in men as I do in all things."
             "By now my cheeks were replicating the shade of that last wine."
             MC "Thanks, Alice."
-            $setAffection("BBW", 1)
+            $setAffection("WG", 1)
             Misaki "Aww, that's lovely. You two make a great couple."
-            show BBW neutral
+            show WG neutral
             Misaki "Now then, here comes Yamada-san with the next wine."
             "The waiter was just finishing with the last group and heading towards us."
     Waiter "Sir, Madam, Usuda-san, 'Kensington Thoroughfare'."
@@ -8794,8 +9671,8 @@ label BBW045_wine:
     Misaki "Excellent."
     "The waiter entered the storage room once again to retrieve the final wine."
     Misaki "So, Alice?"
-    BBW "I did not like this one either, though I don't think the acid was so high that nobody can enjoy it, it is certainly a more niche taste."
-    BBW "Keisuke, your verdict?"
+    WG "I did not like this one either, though I don't think the acid was so high that nobody can enjoy it, it is certainly a more niche taste."
+    WG "Keisuke, your verdict?"
     menu:
         "Bright.":
             MC "Yes it was very bright, but not quite austere."
@@ -8803,23 +9680,23 @@ label BBW045_wine:
             Misaki "England."
             MC "Well, British people tend to be direct and hardy, even if it means their own experience is worse for it, so I believe this is reflected by the bitter taste and low fruit."
             Misaki "I believe you're correct. Most wines tend to reflect the qualities of the people who made them, as we saw with the previous two."
-            BBW "I agree, culture plays a large role in the development of any product."
+            WG "I agree, culture plays a large role in the development of any product."
         "Austere.":
             MC "The acidity was too high, this wine is austere."
-            BBW "I disagree keisuke. Though the 3 of us do not like it, I believe it is not so acidic that it warrants the title of austere."
+            WG "I disagree keisuke. Though the 3 of us do not like it, I believe it is not so acidic that it warrants the title of austere."
             Misaki "I agree with Alice, austere is more used for when the acidity is too high for the majority of people to ever even enjoy the wine."
-            BBW "Exactly, this wine is bright- the acidity is not so high that nobody can enjoy this, it's just a little more niche."
+            WG "Exactly, this wine is bright- the acidity is not so high that nobody can enjoy this, it's just a little more niche."
             Misaki "Like the previous two wines, this one also reflects the culture of those who made it."
             Misaki "The wine is British and, in my experience, British people tend to be a hardy sort, even if it means drinking something generally unpleasant- but not overly so."
-            BBW "I personally believe culture has a greater impact on a product than any amount of market research ever will."
+            WG "I personally believe culture has a greater impact on a product than any amount of market research ever will."
     Misaki "While we wait for the final wine, could you two come with me for a moment? I wish to show you an art piece I recently acquired."
-    BBW "Of course."
+    WG "Of course."
     Misaki "It's just through here."
-    hide BBW with fade
-    show BBW neutral with dissolve
+    hide WG with fade
+    show WG neutral with dissolve
     Misaki "And here it is, the newest addition to the collection."
-    BBW "This is a fine piece, Keisuke what do you know about this painting?"
-    if getSkill("Art") > 5 or getFlag("BBW045_art"):
+    WG "This is a fine piece, Keisuke what do you know about this painting?"
+    if getSkill("Art") > 5 or getFlag("WG045_art"):
         MC "Well the use of many short, quick brushstrokes is a tell-tale sign of Van Gogh- this is definitely one of his."
         MC "Though I haven't seen this particular one before."
         Misaki "That is absolutely correct. You clearly know your art."
@@ -8830,7 +9707,7 @@ label BBW045_wine:
         MC "It looks European."
     Misaki "This is a 'Sower with Setting Sun' by Van Gogh. I'm very proud of owning this original piece."
     Misaki "It's the most famous original at this gallery, the more well known ones are all imitations."
-    BBW "It is a fine piece. It must have been expensive."
+    WG "It is a fine piece. It must have been expensive."
     Misaki "It was. However, the way I see it is that my children and their children will be able to enjoy this art, and so on."
     Misaki "You know, his full name was actually Vincent Willem van Gogh. In the dutch language, van means 'from' or 'of'."
     Misaki "This means everybody remembers him as being named From Gogh."
@@ -8845,14 +9722,14 @@ label BBW045_wine:
     "Misaki finished her tasting and Alice and I replicated the action."
     Misaki "Now that wine actually had a perfect taste, something I expect from a vacation resort."
     Misaki "However the wine was very fat. It lingers even now in the corners of my mouth."
-    BBW "I agree the taste was great, but I don't believe the wine being fat makes it unpleasant."
+    WG "I agree the taste was great, but I don't believe the wine being fat makes it unpleasant."
     Misaki "Alice, a fat wine is a wine that finds its way into all parts of your mouth, a good wine stays on the tongue where it belongs."
-    BBW "Why does a fat wine have to inherently be bad?"
+    WG "Why does a fat wine have to inherently be bad?"
     Misaki "That's just how the terminology is."
-    BBW "Keisuke, what do you think?"
+    WG "Keisuke, what do you think?"
     menu:
         "Defend Alice.":
-            $setFlag("BBW045_c5_1")
+            $setFlag("WG045_c5_1")
             MC "I agree with Alice. If a wine is good, why not let it fill your whole mouth?"
             Misaki "Because that isn't how wine as a beverage is supposed to be."
             Misaki "You two are very mature for your age but I have been doing this a long time so trust me when I say wines are meant to stay neatly on your tongue."
@@ -8865,148 +9742,148 @@ label BBW045_wine:
     Misaki "I do hope you two enjoyed your time here."
     "Alice and I headed towards the exit."
     scene Town with fade
-    show BBW neutral with dissolve
-    BBW "Keisuke..."
+    show WG neutral with dissolve
+    WG "Keisuke..."
     MC "Yes?"
-    BBW "What I said at the end about fat wines not inherently being bad was a test."
+    WG "What I said at the end about fat wines not inherently being bad was a test."
     MC "Oh?"
-    if getFlag("BBW045_c5_1"):
-        show BBW angry
-        BBW "You failed."
-        $setAffection("BBW", -1)
-        BBW "Fat is used as a negative term in wine tasting, your views on the word in terms of body types is irrelevant."
-        BBW "Do you see me as anything more than that word, {i}fat?{/i}"
-        BBW "I am a person, Keisuke, not a body type."
+    if getFlag("WG045_c5_1"):
+        show WG angry
+        WG "You failed."
+        $setAffection("WG", -1)
+        WG "Fat is used as a negative term in wine tasting, your views on the word in terms of body types is irrelevant."
+        WG "Do you see me as anything more than that word, {i}fat?{/i}"
+        WG "I am a person, Keisuke, not a body type."
         MC "I'm sorry Alice."
-        BBW "Of course you are."
-        BBW "I'm going back to my dorm. When I see you in class tomorrow I will have forgotten about this, I hope you do the same- and improve in the future."
-        hide BBW with dissolve
+        WG "Of course you are."
+        WG "I'm going back to my dorm. When I see you in class tomorrow I will have forgotten about this, I hope you do the same- and improve in the future."
+        hide WG with dissolve
         MCT "That was bad."
-        if getFlag("BBW045_c3_1"):
+        if getFlag("WG045_c3_1"):
             MCT "What was it Daichi said this morning?"
             MCT "Wanting something more will deny you of it? Or that we can be destroyed by our own ambition?"
             MCT "I guess he was right after all."
         jump daymenu
     else:
-        show BBW happy
-        BBW "You passed."
-        $setAffection("BBW", 1)
-        BBW "You remembered that fat is a wholly negative term in wine tasting."
-        BBW "You didn't let your {i}ahem{/i}... other tastes get in the way."
-        BBW "I never doubted you for a second."
+        show WG happy
+        WG "You passed."
+        $setAffection("WG", 1)
+        WG "You remembered that fat is a wholly negative term in wine tasting."
+        WG "You didn't let your {i}ahem{/i}... other tastes get in the way."
+        WG "I never doubted you for a second."
         MC "Thanks Alice."
-        if getFlag("BBW045_art"):
+        if getFlag("WG045_art"):
             MC "By the way, how did you know we would be shown that Van Gogh painting?"
-            BBW "She boasted about it on the gallery social media recently, so I thought she would try to boast about it at the event too."
-        BBW "You know, we may be in the wrong attire but we still have a lovely Sunday ahead of us."
-        BBW "The weather is perfect. I'd quite like to go to the park."
-        BBW "Come on, this'll be fun."
+            WG "She boasted about it on the gallery social media recently, so I thought she would try to boast about it at the event too."
+        WG "You know, we may be in the wrong attire but we still have a lovely Sunday ahead of us."
+        WG "The weather is perfect. I'd quite like to go to the park."
+        WG "Come on, this'll be fun."
         jump daymenu
 
-label BBW046:
-    $setProgress("BBW", "BBW047")
+label WG046:
+    $setProgress("WG", "WG047")
     scene School Front with fade
     play music Peaceful
     "It was a bright, sunny day outside. The skies were clear, and a faint breeze went against our backs. The weather app said these conditions were expected for the next few days."
     "I looked the street up and down, waiting for Alice's ride to arrive. The giddy feeling in my hands was a mix of nervousness and excitement."
-    show BBW summer-ext-haughty with dissolve
-    BBW "You do know that watching for the vehicle will not cause the driver to speed up, right?"
-    show BBW summer-ext-happy
+    show WG summer-ext-haughty with dissolve
+    WG "You do know that watching for the vehicle will not cause the driver to speed up, right?"
+    show WG summer-ext-happy
     "Alice's head remained facing forward, her smirk appeared as she glanced at me from the corner of her eye."
     MC "Heh, yeah. I'm just a little nervous is all, this is probably going to be the most luxurious vacation I've ever been on."
-    show BBW summer-ext-neutral
-    BBW "Probably? I can assure you that you will be treated as a VIP, that is to say, like a five star guest."
+    show WG summer-ext-neutral
+    WG "Probably? I can assure you that you will be treated as a VIP, that is to say, like a five star guest."
     MC "Honestly, I'd be fine with a regular hotel chain. It's normally an extra if the places I've stayed at had a pool."
     MC "And it's a bonus if the pool water is actually clean."
-    show BBW summer-ext-haughty
+    show WG summer-ext-haughty
     "She rolled her eyes sarcastically, but I could tell she got some amusement out of my joke."
-    BBW "Well, you needn't worry about filthy swimming waters at the house. The shores have the most beautiful crystal clear waters, and the beaches are always kept free of litter."
+    WG "Well, you needn't worry about filthy swimming waters at the house. The shores have the most beautiful crystal clear waters, and the beaches are always kept free of litter."
     MC "Wow... I can't wait to see it in person."
-    show BBW summer-ext-neutral-2
-    BBW "Before our driver arrives here, you should probably double check your bag to make sure you have everything."
+    show WG summer-ext-neutral-2
+    WG "Before our driver arrives here, you should probably double check your bag to make sure you have everything."
     MC "Ah, what? You really think I'd forget something?"
-    BBW "It's always better to be safe than sorry. You wouldn't want to get there and find out you left your hair comb here or something."
+    WG "It's always better to be safe than sorry. You wouldn't want to get there and find out you left your hair comb here or something."
     MC "Don't worry about it, I have it right here in the side pocket of my bag."
     "With a confident grin, I unzipped the compartment of my travel bag where I kept my hair products."
     "My confidence quickly drained as I reached into the bag, fondling around to find my hairbrush, but it didn't seem to be there."
     MC "Hang on, h-hang on, I know it's in here somewhere..."
-    show BBW summer-ext-neutral
-    BBW "You left it beside your bag, but forgot to put it in when you picked it up."
+    show WG summer-ext-neutral
+    WG "You left it beside your bag, but forgot to put it in when you picked it up."
     MC "Right, r-"
     "I paused, realizing what Alice had just said. My hands stopped frantically shuffling in the bag as I looked up."
-    show BBW summer-ext-happy
+    show WG summer-ext-happy
     "With a genuine smile, Alice put out her hand. In her palm was my hairbrush I was so worried about."
-    BBW "I would think by now that you would be more careful with such important items..."
+    WG "I would think by now that you would be more careful with such important items..."
     MC "Heh heh... thanks for getting that for me."
-    show BBW summer-ext-haughty
-    BBW "I don't imagine spending time in the hot sun with wild hair would be very fun."
+    show WG summer-ext-haughty
+    WG "I don't imagine spending time in the hot sun with wild hair would be very fun."
     MC "Oh yeah, it really isn't. I actually have a sweatband that I wear secretly on some days when it's sweltering outside."
     "I finished checking my bag and zipped it back up, I was ready for some summer beach fun."
     "It wasn't too long after words that I saw it approaching on the horizon, an absolute behemoth of an RV started making its way down the road."
     "The vehicle could be more charitably referred to as a house on wheels. Quite easily out-scaling any car that tried to pass it; in fact it was so big, I questioned if it could be considered street legal."
-    show BBW summer-ext-worried
-    BBW "Oh my... I truly did not expect father to go all out with this."
+    show WG summer-ext-worried
+    WG "Oh my... I truly did not expect father to go all out with this."
     MC "You mean to tell me that you don't travel in luxury RV's for long distance vacations?"
-    BBW "No, that's not it."
-    BBW "The shocking part is the... well the size of it. I have traveled in many exquisite transits before, but none of this size."
+    WG "No, that's not it."
+    WG "The shocking part is the... well the size of it. I have traveled in many exquisite transits before, but none of this size."
     menu:
         "You sound uncomfortable, is something wrong?":
-            jump BBW046_c1_1
+            jump WG046_c1_1
         "Hey, c'mon. Less time worrying and more time relaxing!":
-            jump BBW046_c1_2
+            jump WG046_c1_2
 
-label BBW046_c1_1:
-    show BBW summer-ext-surprised
-    BBW "What? No, nothing in particular is wrong."
+label WG046_c1_1:
+    show WG summer-ext-surprised
+    WG "What? No, nothing in particular is wrong."
     MC "Are you sure?  I may not be very observant, but I can tell when something has put you off."
-    show BBW summer-ext-worried
-    BBW "...{i}sigh{/i}... you are correct, Keisuke. There is something bothering me about this."
+    show WG summer-ext-worried
+    WG "...{i}sigh{/i}... you are correct, Keisuke. There is something bothering me about this."
     "Alice turned away from the road to face me, her crystal blue eyes locked onto mine."
-    show BBW summer-ext-neutral
-    BBW "My father knows that my body has... grown, whilst being here. But whenever I would make contact with him, the details of my current size were always kept vague."
-    show BBW summer-ext-neutral-2
-    BBW "Not because I happen to be ashamed of it, no. But because he is a very caring person, and it just wasn't in my heart to reveal information that might worry him."
+    show WG summer-ext-neutral
+    WG "My father knows that my body has... grown, whilst being here. But whenever I would make contact with him, the details of my current size were always kept vague."
+    show WG summer-ext-neutral-2
+    WG "Not because I happen to be ashamed of it, no. But because he is a very caring person, and it just wasn't in my heart to reveal information that might worry him."
     MC "That's very kind of you, and I'm sure he appreciates it. But how does that tie into the RV?"
-    show BBW summer-ext-happy
-    BBW "Keisuke, you were right, you truly are not all that observant."
+    show WG summer-ext-happy
+    WG "Keisuke, you were right, you truly are not all that observant."
     "She gave me a sincere grin as she pointed back to the rapidly approaching vehicle."
-    BBW "Look at the absurd size of that transit, even for me, that's far more than enough room. In fact, one could probably fit several of me in there quite comfortably."
+    WG "Look at the absurd size of that transit, even for me, that's far more than enough room. In fact, one could probably fit several of me in there quite comfortably."
     MC "That's a good thing isn't it? All that extra space, plenty of room to stretch your legs during the trip."
-    show BBW summer-ext-neutral-2
-    BBW "Oh no, I am far from ungrateful, believe me."
-    BBW "He's always cared for my comfort, but something about this gives me concerns he's overthinking things."
+    show WG summer-ext-neutral-2
+    WG "Oh no, I am far from ungrateful, believe me."
+    WG "He's always cared for my comfort, but something about this gives me concerns he's overthinking things."
     MC "I still think it's best not to look a gift horse in the mouth. This is supposed to be a fun time out, yeah?"
-    jump BBW046_c1_2
+    jump WG046_c1_2
 
-label BBW046_c1_2:
-    show BBW summer-ext-neutral
-    BBW "Yes, you are correct. Currently I need to take my mind off things, and enjoy my vacation with pleasant company."
+label WG046_c1_2:
+    show WG summer-ext-neutral
+    WG "Yes, you are correct. Currently I need to take my mind off things, and enjoy my vacation with pleasant company."
     MC "Speaking of pleasant company, where's Aida?"
-    BBW "Don't worry, I arranged a separate transit for her. I didn't want her overstressing about us on the way there. Especially in her current state."
+    WG "Don't worry, I arranged a separate transit for her. I didn't want her overstressing about us on the way there. Especially in her current state."
     MC "Yeah, you do have a point."
-    BBW "She'll get there before we do, the servants shall help her accommodate."
+    WG "She'll get there before we do, the servants shall help her accommodate."
     MC "Servants... you were serious about that five star vacation service, huh?"
-    show BBW summer-ext-haughty
-    BBW "I, of course, went through the effort of hand picking the staff that will be with us during our stay."
+    show WG summer-ext-haughty
+    WG "I, of course, went through the effort of hand picking the staff that will be with us during our stay."
     MC "Wow, even when going on vacation you still put in extra effort."
-    BBW "Naturally. No self-respecting entrepreneur ever phones in their work, even when they are planning to relax."
+    WG "Naturally. No self-respecting entrepreneur ever phones in their work, even when they are planning to relax."
     "Both caught up in our small talk, we hardly noticed the oversized transit pulling up beside us. My initial thoughts upon seeing it, would be how loud it would be."
-    show cg BBW046 with dissolve
+    show cg WG046 with dissolve
     "The only kind of automobiles I've seen of this size were normally service vehicles. Billowing out smoke, and making enough noise to wake a neighborhood."
     "But despite the intimidating size, the RV was shockingly quiet. If one wasn't bearing witness to its girth, they would assume it was nothing more than a golf cart."
     "I stood in awe as the double doors on its side jolted open with a mechanical whir. A large set of steps, covered with dark red velvet cascaded like a ramp. And out stepped a very formally dressed chauffeur, sporting the Nikumaru company logo."
     Chauffeur "Miss Nikumaru and her plus-one, correct?"
     "Alice shifted from her normal relaxed demeanor, to the poise she normally took when best presenting herself."
-    BBW "You are correct, sir. And if you may, please refer to my 'plus-one' by his name. Hotsure Keisuke."
+    WG "You are correct, sir. And if you may, please refer to my 'plus-one' by his name. Hotsure Keisuke."
     "The driver gave me a powerful look, almost sizing me up. It almost looked like he was judging me, seeing if Alice had picked the best person to accompany her."
     Chauffeur "Apologies, Mr. Hotsure. I was unaware that Miss Nikumaru would be bringing along a... male friend with her on this outing."
-    BBW "Is there a problem with that?"
+    WG "Is there a problem with that?"
     Chauffeur "Of course not, madam. Please, your ride awaits."
     "The chauffeur bowed his head and extended his arm, directing us inside the RV."
-    BBW "After you."
+    WG "After you."
     "Alice kept her chin up, calmly gesturing for me to enter first."
     MC "Why thank you, I see that the high-class guest treatment is starting early."
-    BBW "Keisuke, please get in the RV before I change my mind about bringing you."
+    WG "Keisuke, please get in the RV before I change my mind about bringing you."
     "I gave her a cheeky grin before climbing up the stairs. It wasn't until I turned around that my mind could truly grasp how spectacular this vehicle was."
     scene RV Interior with fade
     "The entire space was somehow even bigger than it looked on the outside. Not only was there enough room to fit an entire party, but it had an excess of extra amenities as well."
@@ -9017,48 +9894,48 @@ label BBW046_c1_2:
     "I stood there in awe, my eyes were flicking around the room like a pair of flies. Everywhere I looked, there seemed to be more and more unnecessary applications to the passenger area."
     "Coherent thought had left my mind for a second. It wasn't until I felt the entire RV shake, that my focus snapped back to reality."
     "Turning around, I saw Alice calmly making her way up the steps. The look on her face wasn't nearly the same level of shock as mine,"
-    show BBW summer-int-surprised
+    show WG summer-int-surprised
     extend " but from the slight jolt in her expression, I don't think she was really expecting this level of care as well."
-    BBW "Goodness, Father has always been one for the occasional splurge. But even for him this is far too much."
+    WG "Goodness, Father has always been one for the occasional splurge. But even for him this is far too much."
     MCT "He considers this a 'splurge?' This thing probably cost more than most low-middle income houses..."
-    show BBW summer-int-worried
-    BBW "Do you have a problem with the arrangements, Keisuke?"
+    show WG summer-int-worried
+    WG "Do you have a problem with the arrangements, Keisuke?"
     menu:
         "No! Not at all.":
-            jump BBW046_c2_1
+            jump WG046_c2_1
         "I mean, this does seem kind of extra.":
-            jump BBW046_c2_2
+            jump WG046_c2_2
 
-label BBW046_c2_1:
-    show BBW summer-int-neutral
-    BBW "Oh, well that's good to hear. You looked quite pale for a second, I was worried we had overwhelmed you."
+label WG046_c2_1:
+    show WG summer-int-neutral
+    WG "Oh, well that's good to hear. You looked quite pale for a second, I was worried we had overwhelmed you."
     MC "Who, me? Nah, I'm just fine. This already looks like it's shaping up to be a great vacation."
-    BBW "Indeed! Now, what would you like to drink?"
+    WG "Indeed! Now, what would you like to drink?"
     stop music
-    jump BBW046_arrival
+    jump WG046_arrival
 
-label BBW046_c2_2:
-    $setAffection("BBW", 1)
-    show BBW summer-int-neutral-2
-    BBW "Yes, I was actually a tad bit worried how you would handle all this."
+label WG046_c2_2:
+    $setAffection("WG", 1)
+    show WG summer-int-neutral-2
+    WG "Yes, I was actually a tad bit worried how you would handle all this."
     MC "I'm not complaining, obviously. It's just that- this is a lot to take in."
-    show BBW summer-int-worried
-    BBW "It may have been silly, but I had hoped that father wouldn't go all out for me again. Not just for my sake, but for yours as well."
+    show WG summer-int-worried
+    WG "It may have been silly, but I had hoped that father wouldn't go all out for me again. Not just for my sake, but for yours as well."
     MC "For your sake? Don't you want to live it up on a vacation?"
-    show BBW summer-int-neutral
-    BBW "That much goes without saying, Keisuke. But moderation is key, even when it comes to relaxing."
-    BBW "If you live in moderation, the little things are just as rewarding as the bigger ones. But if you constantly live in excess, you'll burn yourself out fast."
+    show WG summer-int-neutral
+    WG "That much goes without saying, Keisuke. But moderation is key, even when it comes to relaxing."
+    WG "If you live in moderation, the little things are just as rewarding as the bigger ones. But if you constantly live in excess, you'll burn yourself out fast."
     MC "I dunno, I've never seemed to have a problem with moderating my relaxing."
-    show BBW summer-int-haughty
-    BBW "That's because you do it far too much. Now come sit down with me, I want to explain the best times to be on the beach."
+    show WG summer-int-haughty
+    WG "That's because you do it far too much. Now come sit down with me, I want to explain the best times to be on the beach."
     stop music
-    jump BBW046_arrival
+    jump WG046_arrival
 
-label BBW046_arrival:
+label WG046_arrival:
     scene black with fade
     pause 2
     scene RV Interior with fade
-    play music BBW
+    play music WG
     "Several hours in the RV felt like nothing. Normally during road trips, I would find myself getting bored easily, always looking for something to keep myself entertained."
     "But when you're traveling in a mobile hotel suite, with an excellent conversationalist, time really does fly."
     Chauffeur "Miss Nikumaru, and Mr. Hotsure. We have arrived at our destination."
@@ -9066,10 +9943,10 @@ label BBW046_arrival:
     Chauffeur "And you needn't worry about your luggage, Mr. Hotsure. Someone will be along shortly to help you bring it to your room."
     MC "Is that really going to be necessary? I'm ok with just carrying my stuff in personally."
     Chauffeur "Understood. Please enjoy your trip."
-    show BBW summer-int-happy with dissolve
-    BBW "Excellent, the journey here seems to take longer and longer each year. Or perhaps that is just the excitement I am feeling?"
+    show WG summer-int-happy with dissolve
+    WG "Excellent, the journey here seems to take longer and longer each year. Or perhaps that is just the excitement I am feeling?"
     MC "Hey, if we unpack fast, there may still be some sunlight left to hit the beach!"
-    BBW "Not a moment wasted, I quite enjoy that enthusiasm. But for now, let us save the beach for sunrise. I can assure you that the sunrise on the beach is the greatest first experience here."
+    WG "Not a moment wasted, I quite enjoy that enthusiasm. But for now, let us save the beach for sunrise. I can assure you that the sunrise on the beach is the greatest first experience here."
     MC "Awww, well that's fair I suppose-"
     play sound Knock
     "We were interrupted by the sudden rapping on the automobile's door. Someone was waiting for us outside."
@@ -9079,27 +9956,27 @@ label BBW046_arrival:
     "Another voice emanated, this one was more masculine as well as younger."
     UNKNOWN "Please, Si-Woo. You simply must exercise more patience. Young Miss Alice shall depart from her ride when she is ready."
     "The third, and seemingly final voice spoke up. This one was masculine as well, but significantly older than the other two accompanying it."
-    BBW "We best not keep them in suspense."
+    WG "We best not keep them in suspense."
     MC "They certainly do seem eager. Are your servants normally this energetic?"
-    BBW "I should hope so! We don't pay them well above the average servant wages for sub-par service."
-    show BBW summer-int-haughty
-    BBW "They are also provided with an array of benefits, as well as a very flexible contract. If you want the best, you have to treat them like the best."
+    WG "I should hope so! We don't pay them well above the average servant wages for sub-par service."
+    show WG summer-int-haughty
+    WG "They are also provided with an array of benefits, as well as a very flexible contract. If you want the best, you have to treat them like the best."
     MC "Wow, if architecture doesn't really pan out, make sure to remind me about working for the Nikumaru company."
-    BBW "Hmm... tempting offer, but why pay a servant who's already working for free?"
-    show BBW summer-int-happy
+    WG "Hmm... tempting offer, but why pay a servant who's already working for free?"
+    show WG summer-int-happy
     "Alice gave me a smug grin as she opened the RV door, letting the vivid orange coloring of the sunset wash in."
     scene Summer House Front with fade
     MC "Hey, hang on. There is no way you just said that-"
     UNKNOWN "Young Lady Alice! What a pleasure it is to see you again after all this time."
-    BBW "And I could say the same to you, Takada. I am so glad that you had the time to come out here."
+    WG "And I could say the same to you, Takada. I am so glad that you had the time to come out here."
     Takada "Please, even if I was booked to bursting, you know that I would drop everything to come serve you."
     "I followed Alice down the stairs onto the warm tarmac of the driveway. My eyes instantly noticed the three well dressed butlers standing in front of us. They all wore the Nikumaru company logo."
     UNKNOWN "Huh, wasn't expectin' this pal of hers to be a guy friend... What's your name, sir?"
     "The man talking to Alice was the older voice I had heard before. But the one questioning me now was clearly the younger, male voice."
     "The last voice then must have belonged to the young lady standing next to the questioning man. She looked about three seconds away from smacking her brash co-worker over the head."
     MC "Um... I..."
-    show BBW summer-ext-neutral with dissolve
-    BBW "This is my good friend, Hotsure Keisuke. He shall be staying with us, along with Aida Kodama. Has she arrived safely?"
+    show WG summer-ext-neutral with dissolve
+    WG "This is my good friend, Hotsure Keisuke. He shall be staying with us, along with Aida Kodama. Has she arrived safely?"
     Takada "Young Miss Aida arrived here mere moments before you did. She has been shown her room, and is unpacking her bags now."
     UNKNOWN "Keisuke? Cool, it's gotta nice ring to it!"
     play sound Thud
@@ -9109,12 +9986,12 @@ label BBW046_arrival:
     Lee "Pleased to meet cha'. I'm Si-Woo Lee, but you can just stick to calling me Lee! And I'll be serving you for this vacation."
     UNKNOWN "{i}Sigh{/i} At least you are steadily improving, but you're still far from the standard of quality we expect."
     UNKNOWN "You'll have to forgive him, he's still quite new to this profession. But Miss Alice decided that he would be an invaluable asset for the rest of us."
-    BBW "This will be a learning opportunity for him. I picked Lee because he came with high marks from my father, but lacked many of the traits that are present in our other servants."
+    WG "This will be a learning opportunity for him. I picked Lee because he came with high marks from my father, but lacked many of the traits that are present in our other servants."
     Lee "Mr. Nikumaru said that I had serious potential! ...I just gotta learn when to act professional is all."
     Takada "Young Miss Alice, I do believe it would be best to do with the formalities after you unpack."
-    show BBW summer-ext-neutral-2
-    BBW "Quite right, I better check on Aida to make sure she is adjusting well to all this."
-    hide BBW with dissolve
+    show WG summer-ext-neutral-2
+    WG "Quite right, I better check on Aida to make sure she is adjusting well to all this."
+    hide WG with dissolve
     "With that, I adjusted my bag and set off towards the house."
     scene Summer Living Room with fade
     "Once again, I was astounded by the sheer amount of space inside the beach house. Just like the RV, it was big on the outside, yet even bigger on the inside."
@@ -9134,29 +10011,29 @@ label BBW046_arrival:
     "What do I wear for tonight? I want to make a good first impression..."
     menu:
         "Semi-Formal wear":
-            jump BBW046_c1_3
+            jump WG046_c1_3
         "Vacation shirt and shorts":
-            jump BBW046_c2_3
+            jump WG046_c2_3
         "Actually, I should just head to bed early":
-            jump BBW046_c3_3
+            jump WG046_c3_3
 
-label BBW046_c1_3:
+label WG046_c1_3:
     MC "Just because I'm on vacation doesn't mean I should make myself out to be some boorish oaf."
     "I got changed out of my casual clothing, and donned a fresh pink polo shirt, with brown slacks."
-    jump BBW046_afterchoice_3
+    jump WG046_afterchoice_3
 
-label BBW046_c2_3:
+label WG046_c2_3:
     MC "Yeah, let's get this vacation started early!"
     "Ditching my current clothing, I hastily threw on a vivid, floral patterned, button-up shirt. To compliment this tropical garment, on my lower half I wore a pair of white khakis."
     "The idea of wearing my sunglasses to complete the look crossed my mind, but I stopped just short of putting them on."
-    jump BBW046_afterchoice_3
+    jump WG046_afterchoice_3
 
-label BBW046_c3_3:
+label WG046_c3_3:
     MC "It's been a long trip here, the smart thing to do would be to fall asleep early. That way I can be there for Alice in the morning, to watch the sunrise..."
     "With a content smile, and a head full of excitement, I laid myself down onto the bed and drifted off to sleep."
     jump daymenu
 
-label BBW046_afterchoice_3:
+label WG046_afterchoice_3:
     "I opened my bedroom door, and made my way to the living area. Hoping to meet up with Alice and Aida before the day was done."
     scene Summer Living Room with fade
     "Turning a corner, I came face to face with the female staff member I had never gotten the name of."
@@ -9168,11 +10045,11 @@ label BBW046_afterchoice_3:
     "The young servant bowed before continuing past me."
     menu:
         "Hey, wait... I never got your name.":
-            jump BBW046_afterchoice_4
+            jump WG046_afterchoice_4
         "I should head back to bed.":
             jump daymenu
 
-label BBW046_afterchoice_4:
+label WG046_afterchoice_4:
     UNKNOWN "Ah!"
     "She turned around in shock, her face was flush with embarrassment."
     UNKNOWN "Please forgive me, Mr. Hotsure. It completely slipped my mind after you arrived."
@@ -9191,8 +10068,8 @@ label BBW046_afterchoice_4:
     MC "That is true, I guess I should be off to bed. Nice to meet you all."
     jump daymenu
 
-label BBW047:
-    $setProgress("BBW", "BBW048")
+label WG047:
+    $setProgress("WG", "WG048")
     scene Summer Guest Bedroom with fade
     play music Peaceful
     "Warm, soft, and safe..."
@@ -9201,7 +10078,7 @@ label BBW047:
     stop music
     Shino "Rise and Shine, Mr. Hotsure!"
     "The peaceful silence of the room was shattered by the sound of my door being flung open."
-    play music BBW
+    play music WG
     Shino "Miss Alice specified that if you weren't awake by this time, I should give you a wake up call."
     MCT "Wake up call? With that much noise it was more like a siren."
     Shino "Make yourself presentable, she is waiting for you on the balcony. Do not fret about breakfast, it will be waiting for you afterwards."
@@ -9222,7 +10099,7 @@ label BBW047:
     MCT "I hope Alice doesn't mind me being a bit tardy to the sunrise."
     scene Summer Balcony Exterior with fade
     "Not halfway down the hall, I turned to see Alice gracefully glancing over the balcony."
-    show BBW summer-int-neutral with dissolve
+    show WG summer-int-neutral with dissolve
     "The cascading light coming from the early morning sun did wonders. The way she calmly lent against the wall, her head turning to the sunrise, made Alice look like she was right out of a painting."
     "Bright, vivid yellows were reflecting off the golden accents in her clothes. Giving her an almost ethereal aura that beckoned me closer."
     "The gentle orange glow, ever so faint, ended up perfectly complimenting her fair skin. Catching her golden hair as well as her cherubic face, making her features look soft and friendly."
@@ -9230,49 +10107,49 @@ label BBW047:
     "I never truly considered myself to be a man with absurdly high luck. But upon witnessing this spectacle, my opinions might have just changed."
     menu:
         "Greet her.":
-            jump BBW047_c1_1
+            jump WG047_c1_1
         "Give her a soft hug.":
-            jump BBW047_c1_2
+            jump WG047_c1_2
 
-label BBW047_c1_1:
+label WG047_c1_1:
     MC "Lovely morning, isn't it?"
-    show BBW summer-int-surprised
+    show WG summer-int-surprised
     "Alice slightly jumped at the sound of my voice. Her head turned toward me with a warm smile"
-    show BBW summer-int-neutral
-    BBW "Why, yes it is. I am glad that you managed to get out of bed for this."
-    BBW "In all honesty, I truly only expected you to be awake in time for the sunset."
+    show WG summer-int-neutral
+    WG "Why, yes it is. I am glad that you managed to get out of bed for this."
+    WG "In all honesty, I truly only expected you to be awake in time for the sunset."
     MC "And miss seeing you in this early morning glow? Not a chance."
     "I made my way to Alice's side, leaning on the railing as I took in the stunning sights that cascaded before me."
     MC "In all honesty, it was Shino who made sure that I was here on time. She was deadly serious about me being here."
-    BBW "Hmph, that does sound like Shino alright..."
-    jump BBW047_c1_after
+    WG "Hmph, that does sound like Shino alright..."
+    jump WG047_c1_after
 
-label BBW047_c1_2:
-    $setAffection("BBW", 1)
+label WG047_c1_2:
+    $setAffection("WG", 1)
     "I carefully walked up behind Alice, making sure that my footsteps went unheard."
     "Waiting till the last second, I raised my arms and gently set them over her shoulders. Bringing her into a gentle embrace."
-    show BBW summer-int-happy
-    BBW "I was hoping that you would do that."
+    show WG summer-int-happy
+    WG "I was hoping that you would do that."
     "Alice tilted her head to look at me, an almost gleeful smile was faint on her lips."
     MC "You heard me?"
-    BBW "I would need to be deaf to not hear the chaotic swaying and bouncing of your hair."
+    WG "I would need to be deaf to not hear the chaotic swaying and bouncing of your hair."
     MC "Ah, right. I guess I've just kind of gotten used to the noise by now."
-    BBW "A part of me wonders if you can even see out of that mane. Now I'm questioning if you can hear out of it as well."
+    WG "A part of me wonders if you can even see out of that mane. Now I'm questioning if you can hear out of it as well."
     "She gave a faint chuckle at the thought."
     MC "Ears and eyes aren't a necessity, I already know that I'm with the most beautiful woman in the world. What else is there to experience?"
-    BBW "Hmph, good answer."
+    WG "Hmph, good answer."
     "We spent the next couple of minutes just standing there, enjoying the extravagant lights of the sunrise."
-    BBW "My father used to bring me out here when I was young, we made it a tradition to watch the sunrise here together."
-    jump BBW047_c1_after
+    WG "My father used to bring me out here when I was young, we made it a tradition to watch the sunrise here together."
+    jump WG047_c1_after
 
-label BBW047_c1_after:
-    BBW "That reminds me actually, have you had a chance to get familiar with the other staff members yet?"
+label WG047_c1_after:
+    WG "That reminds me actually, have you had a chance to get familiar with the other staff members yet?"
     MC "No, actually. I haven't had a chance to meet anyone besides Shino."
     MC "They all seem wonderful, I'm looking forward to getting to know them better."
-    show BBW summer-int-haughty
-    BBW "That will have to wait unfortunately, I have other plans for you today."
+    show WG summer-int-haughty
+    WG "That will have to wait unfortunately, I have other plans for you today."
     MC "Hold on, let me guess- you want to spend today at the beach?"
-    BBW "Well, just the afternoon. After that, we shall see where the day takes us."
+    WG "Well, just the afternoon. After that, we shall see where the day takes us."
     MC "I can't wait."
     scene Summer Beach Ocean with fade
     play music Peaceful
@@ -9295,11 +10172,11 @@ label BBW047_c1_after:
     MC "Wow."
     menu:
         "Thank her":
-            jump BBW047_c2_1
+            jump WG047_c2_1
         "Check out the spot she set up.":
-            jump BBW047_c2_2
+            jump WG047_c2_2
 
-label BBW047_c2_1:
+label WG047_c2_1:
     $setAffection("PRG", 1)
     MC "Thank you so much, Aida. I really don't know how you manage to still be so helpful, even during vacation."
     show PRG swim-casual-happy
@@ -9307,29 +10184,29 @@ label BBW047_c2_1:
     PRG "Oh, don't mention it, Hotsure-san. Really, it was a pleasure."
     PRG "Now, stop worrying about me, and go see Alice!"
     MC "Right!"
-    jump BBW047_c2_2
+    jump WG047_c2_2
 
-label BBW047_c2_2:
+label WG047_c2_2:
     scene Summer Beach Closed with fade
     "I made my way over to the area that Aida had set up. It was a rather elegant beach tent, almost entirely white with the exception of gold accents around the edges."
     MC "Is there a door knocker on this, or should I just shout 'Ding-Dong?'"
     "Alice's voice came through the cloth cover draping over the entrance."
-    BBW "You needn't worry about walking in on me unprepared, I have already changed into my swimming outfit."
+    WG "You needn't worry about walking in on me unprepared, I have already changed into my swimming outfit."
     MC "Well that's unlucky for me then, isn't it?"
-    BBW "This little ensemble was custom made per my instructions, I must make sure that everything is up to par."
+    WG "This little ensemble was custom made per my instructions, I must make sure that everything is up to par."
     MC "I'm sure you look fantastic, Alice."
-    BBW "Oh trust me, there is no doubt about that. The thing is..."
+    WG "Oh trust me, there is no doubt about that. The thing is..."
     "Her voice trailed off, I could hear her pacing around in the tent."
-    BBW "They got my requested measurements correct, I asked Aida for a double check. But yet, it still feels ever so slightly too tight."
+    WG "They got my requested measurements correct, I asked Aida for a double check. But yet, it still feels ever so slightly too tight."
     MC "It's probably just because the suit is new, you need to break it in."
-    BBW "While that is kind of you to say, Keisuke, but we both know that is not the case."
-    BBW "..."
-    BBW "...I'm going to come out now, but you had better promise to not gawk like a fool."
+    WG "While that is kind of you to say, Keisuke, but we both know that is not the case."
+    WG "..."
+    WG "...I'm going to come out now, but you had better promise to not gawk like a fool."
     MC "I'll try my hardest to not notice how stunning you look."
     "Alice lightly chuckled."
-    BBW "Flatterer."
+    WG "Flatterer."
     MC "How can it be flattery if it's just the truth?"
-    show BBW swim-casual-neutral with dissolve
+    show WG swim-casual-neutral with dissolve
     "The privacy cloth door to the tent was lifted, and Alice stepped out into the sunlight. My tongue seemed to stop working as my eyes bared witness to the majesty in front of me."
     "Two luscious pillows of bountiful beauty came forward. Each of them jostling to and fro wildly, as if they each had minds of their own. But both comfortably contained in the skin tight bikini that only accentuated their size."
     "Despite the suit being made of high quality latex, it still seemed to have trouble keeping Alice's chest in check. They seemed to actively want to escape from their damning prison. Part of me wondered if they would eventually make their great escape."
@@ -9346,232 +10223,232 @@ label BBW047_c2_2:
     "Only when she turned could I get a hint of its splendor, a perfectly porcine heart shape, with the ends of the heart melting into significantly chubby thighs. The sight alone was enough to drive me crazy."
     "The thought of simply touching it though, was beyond my comprehension. The idea of what it would feel like to cascade my hands down her form was heavenly. The supple layers of flab pushing through my fingers..."
     "The gentle embrace of her voluptuous form was all I could think about."
-    show BBW swim-casual-haughty
-    BBW "Is this what you call 'trying your hardest?'"
+    show WG swim-casual-haughty
+    WG "Is this what you call 'trying your hardest?'"
     "My attention was viciously snapped back to reality. Alice gave me a dismissive look, but I could see just a smidge of pride in her eyes."
     MC "{i}Cough{/i} hm, yep... sorry."
-    show BBW swim-casual-neutral-2
-    BBW "Calm yourself will you, Keisuke? It is not as if you have never seen me in a swimsuit before."
+    show WG swim-casual-neutral-2
+    WG "Calm yourself will you, Keisuke? It is not as if you have never seen me in a swimsuit before."
     MC "Yeah, but... last time I saw you in a swimsuit, you weren't this-"
     menu:
         "Big":
-            jump BBW047_c3_1
+            jump WG047_c3_1
         "Beautiful":
-            jump BBW047_c3_2
+            jump WG047_c3_2
         "Exposed":
-            jump BBW047_c3_3
+            jump WG047_c3_3
 
-label BBW047_c3_1:
-    show BBW swim-casual-worried
+label WG047_c3_1:
+    show WG swim-casual-worried
     "Alice's saunter slowed down, her prideful posture had weakened a bit."
-    BBW "...Yes, you are correct Keisuke."
+    WG "...Yes, you are correct Keisuke."
     MC "N-No! I didn't mean anything bad by it."
-    BBW "I know you had no ill intent, but yet those kinds of expressions still stress me."
+    WG "I know you had no ill intent, but yet those kinds of expressions still stress me."
     MC "I'm sorry Alice, it's just... seeing you in this bikini must have fried my brain or something."
-    show BBW swim-casual-neutral
+    show WG swim-casual-neutral
     "Her smile started to faintly return to her face."
-    BBW "At least I know that you still find me irresistible."
+    WG "At least I know that you still find me irresistible."
     MC "Was there ever any doubt?"
-    show BBW swim-casual-neutral-2
-    BBW "Your eyes nearly left your head when you saw me come out! Any doubts I had were crushed on the spot."
-    jump BBW047_c3_after
+    show WG swim-casual-neutral-2
+    WG "Your eyes nearly left your head when you saw me come out! Any doubts I had were crushed on the spot."
+    jump WG047_c3_after
 
-label BBW047_c3_2:
-    show BBW swim-casual-happy
-    BBW "Are you implying that I was not beautiful before?"
+label WG047_c3_2:
+    show WG swim-casual-happy
+    WG "Are you implying that I was not beautiful before?"
     "Alice gazed at me with a cocky smirk."
     MC "No, just more so now that so much of you is on display."
-    $setAffection("BBW", 1)
-    BBW "An expected answer, but true nevertheless."
-    jump BBW047_c3_after
+    $setAffection("WG", 1)
+    WG "An expected answer, but true nevertheless."
+    jump WG047_c3_after
 
-label BBW047_c3_3:
-    show BBW swim-casual-doubt
-    BBW "There is next to nobody else out here, my choice in attire is perfectly fine."
+label WG047_c3_3:
+    show WG swim-casual-doubt
+    WG "There is next to nobody else out here, my choice in attire is perfectly fine."
     MC "What about Aida?"
-    BBW "Who do you think helped me pick this design? Besides, it's nothing she hasn't seen before."
-    jump BBW047_c3_after
+    WG "Who do you think helped me pick this design? Besides, it's nothing she hasn't seen before."
+    jump WG047_c3_after
 
-label BBW047_c3_after:
-    show BBW swim-casual-neutral
+label WG047_c3_after:
+    show WG swim-casual-neutral
     MC "Are you planning to swim first, or do you want to go sunbathing?"
-    BBW "I had considered taking a leisurely swim, but the water will be less cold at midday. So I shall rest on the beach for now, and listen to the calming sound of the waves."
+    WG "I had considered taking a leisurely swim, but the water will be less cold at midday. So I shall rest on the beach for now, and listen to the calming sound of the waves."
     MC "That's a good point actually, I probably should have thought about that."
-    BBW "Did you really plan on submerging yourself in the frigid early morning waters?"
+    WG "Did you really plan on submerging yourself in the frigid early morning waters?"
     MC "It's definitely a good way to start off a vacation, yeah?"
-    show BBW swim-casual-happy
+    show WG swim-casual-happy
     "Alice gave me a lighthearted giggle."
-    BBW "You never cease to humor me, Keisuke."
+    WG "You never cease to humor me, Keisuke."
     MC "What am I? Your date, or your personal clown?"
-    BBW "Hmmm..."
+    WG "Hmmm..."
     MC "T-That was a rhetorical question."
-    show BBW swim-casual-neutral
-    BBW "Oh I know. But now my mind is trying to picture you in a full clown suit."
+    show WG swim-casual-neutral
+    WG "Oh I know. But now my mind is trying to picture you in a full clown suit."
     MC "I could make it work, they'd call me Folli the clown."
-    BBW "Folli?"
+    WG "Folli?"
     MC "It's short for 'follicles,' on account of my hair."
-    show BBW swim-casual-aroused
+    show WG swim-casual-aroused
     "Her head turned away from me for a second, her hand going to cover her mouth."
     MC "Really? That joke got you?"
-    show BBW swim-casual-neutral
-    BBW "No, not at all! *ahem*... I am actually concerned that you came up with that answer so quickly."
+    show WG swim-casual-neutral
+    WG "No, not at all! *ahem*... I am actually concerned that you came up with that answer so quickly."
     MC "I always figured that if going into architecture didn't pan out, the circus freak show would be guaranteed employment."
-    show BBW swim-casual-happy
+    show WG swim-casual-happy
     "This time Alice didn't have time to cover her face as she let out a clear laugh."
-    BBW "You really would fit right in with the rest of the clowns, Keisuke."
+    WG "You really would fit right in with the rest of the clowns, Keisuke."
     MC "Naturally... Hey, is that your beach set up down by the shore?"
     scene Summer Beach with fade
     "I pointed to a cozy little set-up close to the waves. There was a rather large beach towel on the sand, and an extra large beach chair resting on it."
-    show BBW swim-casual-neutral-2 with dissolve
-    BBW "Aida helped me set it up, I swear, she is far too generous."
+    show WG swim-casual-neutral-2 with dissolve
+    WG "Aida helped me set it up, I swear, she is far too generous."
     MC "Yeah, this seems like the perfect spot to just unwind."
-    BBW "And when I am this close to the ocean, I can keep an eye on you to make sure you stay safe."
+    WG "And when I am this close to the ocean, I can keep an eye on you to make sure you stay safe."
     MC "Oh? Are you going to be the stunning lifeguard that saves me from a riptide?"
-    BBW "I might be, but if you get yourself into trouble on purpose, one of the servants will be the person to give you CPR."
+    WG "I might be, but if you get yourself into trouble on purpose, one of the servants will be the person to give you CPR."
     MC "Here's hoping for a wild current then!"
     "Taking off in a mad dash, I sprinted towards the crashing water."
     "The rising tide continued to slow me down more and more until everything below my chest was submerged."
     "Alice wasn't kidding, the sea was downright frigid. It felt like the very bones in my legs were being frozen. Part of me wondered if I would catch some form of hypothermia."
     MC "Come on! The w-water is f-fine once you g-get used to it."
-    show BBW swim-casual-haughty
+    show WG swim-casual-haughty
     "Way back on the beach, I could see Alice reclining in her beach chair. Her voluptuous form shining like a lighthouse on the sand."
-    BBW "I can see your teeth chattering from all the way over here, Keisuke. Are you sure that this was a wise move?"
+    WG "I can see your teeth chattering from all the way over here, Keisuke. Are you sure that this was a wise move?"
     MC "Of course it is-"
     "A massive wave of chilled sea water hit me right in the back, shoving me face first into the cold abyss."
     "Emerging from the water with a gasp, I pushed my hair out of my eyes and looked back towards Alice."
     MC "S-See? Perfectly fine."
-    show BBW swim-casual-doubt
-    BBW "You are going to get yourself hurt out there, come back already!"
+    show WG swim-casual-doubt
+    WG "You are going to get yourself hurt out there, come back already!"
     MC "Ok ok, fine. But only because I forgot to pack a swim cap, and my hair is weighing me down."
     "Trudging along, I made my way back towards the shore."
     MC "Now I know what Homer felt like in the Odyssey."
-    show BBW swim-casual-neutral
-    BBW "Apologies... but what do you mean by that?"
+    show WG swim-casual-neutral
+    WG "Apologies... but what do you mean by that?"
     MC "Being beckoned shoreside by the call of a beautiful siren."
-    show BBW swim-casual-happy
+    show WG swim-casual-happy
     "Alice tried her best not to look pleased by the compliment."
-    BBW "Sit down and dry yourself off already. Your hair probably weighs more than you now with all that water weight."
+    WG "Sit down and dry yourself off already. Your hair probably weighs more than you now with all that water weight."
     "The next half hour passed rather pleasantly. After draining my hair, Alice and I basked in the warm summer air while we made small talk."
-    show BBW swim-casual-worried
-    BBW "Hmmm..."
+    show WG swim-casual-worried
+    WG "Hmmm..."
     "After a while, I heard Alice sigh out. Something was very clearly bothering her."
-    BBW "Maybe if I... no, that wouldn't work."
+    WG "Maybe if I... no, that wouldn't work."
     MC "Is something wrong?"
-    if getAffection("BBW") < 17:
-        show BBW swim-casual-neutral
-        BBW "Of course not, I was just pondering what Aida is reading over there."
+    if getAffection("WG") < 17:
+        show WG swim-casual-neutral
+        WG "Of course not, I was just pondering what Aida is reading over there."
         MC "Oh, ok."
         "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
         "Although after very little time had passed, she announced that she would rather head back inside."
         "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
         jump daymenu
     else:
-        show BBW swim-casual-surprised
-        BBW "What? Oh no, it's nothing to worry about."
+        show WG swim-casual-surprised
+        WG "What? Oh no, it's nothing to worry about."
         MC "Really?"
-        show BBW swim-casual-neutral-2
-        BBW "Yes, it's nothing that important."
+        show WG swim-casual-neutral-2
+        WG "Yes, it's nothing that important."
         menu:
             "Question further":
-                jump BBW047_c4_1
+                jump WG047_c4_1
             "Stop asking":
-                jump BBW047_c4_2
+                jump WG047_c4_2
 
-label BBW047_c4_2:
+label WG047_c4_2:
     MC "If you say so."
-    show BBW swim-casual-worried
+    show WG swim-casual-worried
     "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
     "Although after very little time had passed, she announced that she would rather head back inside."
     "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
     jump daymenu
 
-label BBW047_c4_1:
+label WG047_c4_1:
     MC "Alice, I've known you for long enough to see when you're putting on a brave face. What's really bothering you?"
-    show BBW swim-casual-worried
+    show WG swim-casual-worried
     "Shifting back and forth in her chair uncomfortably, Alice turned her head away from me and spoke into the wind."
-    BBW "It really is nothing you need to concern yourself with-"
+    WG "It really is nothing you need to concern yourself with-"
     MC "Tell. Me. What's. Wrong."
     "I knew that taking such a commanding tone with Alice was a risk. But she was clearly bothered by something, and I was determined to help."
-    show BBW swim-casual-stern
-    BBW "Damn it all... if you must know..."
-    show BBW swim-casual-worried
-    BBW "I- I don't know if I'll be able to properly cover myself."
+    show WG swim-casual-stern
+    WG "Damn it all... if you must know..."
+    show WG swim-casual-worried
+    WG "I- I don't know if I'll be able to properly cover myself."
     MC "I can get an umbrella if you want."
-    show BBW swim-casual-neutral
-    BBW "No no, I wish to tan myself properly. But if I'm unable to coat my body, the risks of sunburn will be far too high."
+    show WG swim-casual-neutral
+    WG "No no, I wish to tan myself properly. But if I'm unable to coat my body, the risks of sunburn will be far too high."
     MC "Oh, I see... Do you really think you're too big to do it yourself?"
-    BBW "Keisuke, I know my own body better than anyone else. And I'm also aware of what areas I can and can't reach."
+    WG "Keisuke, I know my own body better than anyone else. And I'm also aware of what areas I can and can't reach."
     MC "What about one of the butlers? I can go ask one of them to help-"
-    show BBW swim-casual-surprised
-    BBW "No!"
-    show BBW swim-casual-sad
-    BBW "I mean... please don't let them see me like this."
+    show WG swim-casual-surprised
+    WG "No!"
+    show WG swim-casual-sad
+    WG "I mean... please don't let them see me like this."
     MC "Huh?"
-    BBW "I've known these people for so long, and they've known me since before I could even walk."
-    BBW "Having to rely on one of them for such a basic task, would not only be humiliating for me, but for them as well."
-    show BBW swim-casual-worried
-    BBW "So please, Kei, I'm asking you to not tell them about this."
+    WG "I've known these people for so long, and they've known me since before I could even walk."
+    WG "Having to rely on one of them for such a basic task, would not only be humiliating for me, but for them as well."
+    show WG swim-casual-worried
+    WG "So please, Kei, I'm asking you to not tell them about this."
     MC "Well what are you gonna do now?"
-    show BBW swim-casual-stern
-    BBW "What I need-"
+    show WG swim-casual-stern
+    WG "What I need-"
     "Her cheeks flushed bright red, as her arms folded over each other."
-    BBW "Keisuke, I need to ask something personal from you."
+    WG "Keisuke, I need to ask something personal from you."
     "Her voice was hushed, her crystal blue eyes were having trouble remaining focused on anything."
-    BBW "Will you... Would you be so kind, as to help me apply my sun lotion?"
+    WG "Will you... Would you be so kind, as to help me apply my sun lotion?"
     "Even with the most grueling of efforts, Alice desperately tried to maintain her aura of composure. But her voice, her body language, her facial expressions. All of it was shouting that she was in a very unfamiliar situation."
     "Alice looked as if she wanted nothing more than to close her eyes, and hope that this was all a bad dream. But there was a hint of something else in her expression."
     "In a rather odd way, while her body language was very closed off, it didn't look like she was entirely uncomfortable. In fact, judging by her face, she was viciously curious about the situation and how I would respond."
     MC "Y-Yeah, no problem."
-    show BBW swim-casual-neutral
-    BBW "You sound hesitant, are you certain that this task isn't too much for you?"
+    show WG swim-casual-neutral
+    WG "You sound hesitant, are you certain that this task isn't too much for you?"
     MC "Of course not! It's just- I wasn't expecting this."
-    show BBW swim-casual-haughty
-    BBW "Neither was I... but this is what must be done."
-    BBW "Here, take it."
+    show WG swim-casual-haughty
+    WG "Neither was I... but this is what must be done."
+    WG "Here, take it."
     "Alice handed over her bottle of sun lotion."
-    show BBW swim-casual-stern
-    BBW "And if I catch you lingering over any of my areas, I will call this whole thing off."
-    if getFlag("BBW040_c2_3"):
+    show WG swim-casual-stern
+    WG "And if I catch you lingering over any of my areas, I will call this whole thing off."
+    if getFlag("WG039_c2_3"):
         MC "You really expect me to take advantage of the situation like that?"
-        BBW "As a matter of fact, that is a concern of mine."
+        WG "As a matter of fact, that is a concern of mine."
         MC "But if I recall correctly, last time this happened, it wasn't so bad."
-        show BBW swim-casual-happy
+        show WG swim-casual-happy
         "Reclining back in her seat, Alice gave me a slight smirk."
-        BBW "Consider this a rare privilege, Keisuke. It would be a shame to waste an opportunity such as this."
-        BBW "Much like savoring a well made steak- you don't wolf it down, no. You savor every bite, making the most out of the experience."
+        WG "Consider this a rare privilege, Keisuke. It would be a shame to waste an opportunity such as this."
+        WG "Much like savoring a well made steak- you don't wolf it down, no. You savor every bite, making the most out of the experience."
         MC "Well now you've made me hungry."
-        show BBW swim-casual-neutral
-        BBW "...I'm afraid I may be a bit peckish at the moment now that you mention that."
-        show BBW swim-casual-haughty
-        BBW "Regardless, what I am trying to convey, is that the choice is up to you. Do you want to savor this gift, or do you want to rush through it?"
+        show WG swim-casual-neutral
+        WG "...I'm afraid I may be a bit peckish at the moment now that you mention that."
+        show WG swim-casual-haughty
+        WG "Regardless, what I am trying to convey, is that the choice is up to you. Do you want to savor this gift, or do you want to rush through it?"
         MC "If it's all the same to you, I'd want to enjoy this as if it was my last meal."
-    BBW "Now, are you going to stand around and gawk? Or are you going to help me?"
+    WG "Now, are you going to stand around and gawk? Or are you going to help me?"
     MC "Don't have to ask me twice."
-    show cg BBW047 with dissolve
+    show cg WG047 with dissolve
     "Alice gave me a reaffirming nod as I positioned myself beside her. Lowering down onto my knees, I could feel the smooth grain of the sand envelop my shins."
     "It took only a second to position myself comfortably, but the sheer size of my task had just dawned on me."
     "It was enormous even when standing eye level with Alice, but being this close to it gave her belly gave it a daunting aura."
     "With each breath, I could see it rising and falling like the tides on the beach. A veritable tsunami of soft fat, crashing over itself again and again."
     "My hands acted almost on their own, as my eyes were too busy gawking. Before I even knew what I was doing, the bottle of lotion had been opened."
     "Tilting it over Alice's behemoth belly, I let the lotion pour out on the upper most part of her stomach. The liquid spread and pooled all across her, dripping into whatever folds it could find."
-    BBW "Ah... it's been sitting out in the sun, how is it still cold?"
+    WG "Ah... it's been sitting out in the sun, how is it still cold?"
     "I chuckled as the lotion was put away. Even with the rather excessive amount I applied, some part of me wondered if it would be enough."
     "Not wasting any more time, my eager hands got to work covering her body. Immediately the warm sensation began to coat my hands, as they sunk into her pillowy middle."
-    BBW "Mmmmph!"
+    WG "Mmmmph!"
     MC "Sorry! I'm being too rough aren't I?"
-    BBW "No, no. It's just cold is all, that's it."
+    WG "No, no. It's just cold is all, that's it."
     MC "Oh, ok. Do you want me to continue?"
-    BBW "Y-Yes please."
+    WG "Y-Yes please."
     "Despite all of Alice's bravado from before, the moment I took her in my hand, she started to unwind. Right before my very eyes, the elegant beauty was starting to relax."
     "Continuing my task, my arms kept up the attack on her belly. Flowing too and fro, back and forth, all across her rotund middle."
     "At some point I started to feel like a baker, preparing dough. I would gently knead the dough, not too much that it was disturbed. But also applying enough force that it spread was spread out evenly."
     menu:
         "Push your luck.":
-            jump BBW047_c5_1
+            jump WG047_c5_1
         "Show some restraint.":
-            jump BBW047_c5_after
+            jump WG047_c5_after
 
-label BBW047_c5_1:
+label WG047_c5_1:
     "Against my better judgement, the idea of holding Alice's belly proved too much for me to handle."
     "With all the subtlety one could muster, I stretched forward. Some part of me was curious if my hand could reach the other side of her belly from the other."
     "The answer to that was no, unsurprisingly. Despite my best efforts, I was only able to get most of my arm across her middle."
@@ -9580,15 +10457,15 @@ label BBW047_c5_1:
     "Using what strength I had, my hand on her other side pulled back with all its force. However, it was met with a strong resistance."
     "In my head, the plan was to slyly pull back, and pretend that I was just adding another layer of lotion. But what happened instead, was me getting caught and almost losing balance."
     "Her belly had an absurd weight, or rather, density. It felt as if I was attempting to move a rather large water balloon..."
-    BBW "Is everything alright?"
+    WG "Is everything alright?"
     MC "Yeah, yep... things are just peachy keen."
     "My tone of voice betrayed my attempt to remain discreet."
-    jump BBW047_c5_after
+    jump WG047_c5_after
 
-label BBW047_c5_after:
+label WG047_c5_after:
     "As the final layer was applied, I took a step back to admire my work. My hands emerged from her lower most belly roll, still slick with lotion."
     MC "Don't suppose you happen to have a hand towel I can borrow?"
-    BBW "Mmmmmmm..."
+    WG "Mmmmmmm..."
     "It was then I realized just how much Alice had melted under my hands. Her entire belly was glistening in the sunlight, the bright glare could probably work as a beacon."
     "There was a rather cute smile on her face. As her head tilted, resting on her neck roll slightly, her expression was vaguely reminiscent of a content feline after getting its back scratched."
     MC "Alice?"
@@ -9598,8 +10475,9 @@ label BBW047_c5_after:
     "And the ocean was pretty cool as well."
     jump daymenu
 
-label BBW048:
-    $setProgress("BBW", "BBW049A")
+label WG048:
+    $setProgress("WG", "WG049")
+    $setTime(TimeEnum.DAY)
     scene Summer Guest Bedroom with fade
     play music Rain
     "Coming inside after spending a full day on the beach, the three of us went to our respective chambers to unwind for a bit and get cleaned up before dinner."
@@ -9613,12 +10491,12 @@ label BBW048:
     "Gazing upon the azure waters, having tinted to more of a violet from the evening sky, the gently rolling waves made me wonder if this gorgeous day spent with such a beautiful woman had been real, or if I merely found myself in some idyllic surreal fantasy of my own imagination..."
     "I ultimately decided that my imagination was not this good, so it had to have been real."
     "My thoughts drifted all the more, taking in the view from my mind's eye of how Alice had looked in her swimsuit."
-    show BBW swim-casual-happy with dissolve
+    show WG swim-casual-happy with dissolve
     "Every curve, every dimple, every bit as warm and invitingly luxuriant as this seaside mansion. It's crazy how soft her body has become."
     "First getting the chance to help her fit her uniform, now this? I like where things are headed between us."
     "But it's more than that... her confidence, her self-determination, her dignified bearing, not for the sake of superficial appearances, as most who are of wealthy means do- Alice cultivated these attributes out of her own sense of respect for herself."
     "It was something I admired about her, all the more so given the additional challenges her growth had brought so far."
-    hide BBW with dissolve
+    hide WG with dissolve
 
     scene black with fade
     $setTime(TimeEnum.DAY)
@@ -9650,11 +10528,11 @@ label BBW048:
     MCT "What should I do?"
     menu:
         "Take the extra time to be clean and presentable.":
-            jump BBW048_c1_1
+            jump WG048_c1_1
         "Cut the shower short to make it to dinner on time.":
-            jump BBW048_c1_2
+            jump WG048_c1_2
 
-label BBW048_c1_1:
+label WG048_c1_1:
     MCT "I'll only be late for a handful of minutes, but I'll be a disheveled mess for the rest of the evening if I cut corners and don't get my hair under control. Better take the extra time to do the job right."
     "Taking extra time didn't mean I wasn't still in a mad rush. I squeezed out the bottle of conditioner and furiously raked it through my hair. Even this little bit helped my salt fried hair soften up quite a bit."
     "Once I got it all rinsed out, my crusty wadded mat had yielded into something much lighter and more manageable."
@@ -9676,34 +10554,34 @@ label BBW048_c1_1:
     MC "Sorry to cause concern. Please, lead the way."
 
     scene Summer Dining Room with fade
-    play music BBW
-    show BBW summer-int-stern at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    play music WG
+    show WG summer-int-stern at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Keisuke! Why are you late? I specifically had Takada check up on you earlier so you would know when you were expected to arrive."
-    BBW "Dinner does not start until all guests are present- it would be rude of me as the hostess to do otherwise. In turn, as a courtesy to the other guests it is imperative that you be punctual."
-    show BBW summer-int-neutral-2
-    BBW "Speaking for myself, a few minutes delay is rather inconsequential but I'm sure Aida is absolutely famished by now."
+    WG "Keisuke! Why are you late? I specifically had Takada check up on you earlier so you would know when you were expected to arrive."
+    WG "Dinner does not start until all guests are present- it would be rude of me as the hostess to do otherwise. In turn, as a courtesy to the other guests it is imperative that you be punctual."
+    show WG summer-int-neutral-2
+    WG "Speaking for myself, a few minutes delay is rather inconsequential but I'm sure Aida is absolutely famished by now."
     show PRG unique
     PRG "...I'm okay... I don't mind waiting for Hotsure-san..."
-    show BBW summer-int-haughty
-    BBW "Nonsense, I'm sure you're hungry as I am."
-    show BBW summer-int-surprised
-    BBW "... Uh, imagining you would be Aida."
-    show BBW summer-int-neutral
-    BBW "... Yes that's what I meant."
+    show WG summer-int-haughty
+    WG "Nonsense, I'm sure you're hungry as I am."
+    show WG summer-int-surprised
+    WG "... Uh, imagining you would be Aida."
+    show WG summer-int-neutral
+    WG "... Yes that's what I meant."
     MC "Pardon my tardiness. I had underestimated the effects of the ocean water and the sandy beach on my hair."
     MC "I guess I'm just not used to how much maintenance it needs these days yet. I needed some additional time in order to look presentable for the occasion."
-    BBW "Hmph, some things can't be helped it would seem. You appear to have invested your time wisely."
-    $setAffection("BBW", 1)
-    show BBW summer-int-neutral-2
-    BBW "Perhaps you can begin to appreciate how long it takes me to get ready now. I hope you realize these curls don't magically spring into place each morning when I wake up."
+    WG "Hmph, some things can't be helped it would seem. You appear to have invested your time wisely."
+    $setAffection("WG", 1)
+    show WG summer-int-neutral-2
+    WG "Perhaps you can begin to appreciate how long it takes me to get ready now. I hope you realize these curls don't magically spring into place each morning when I wake up."
     Lee "Allow me to serve you Mr. Hotsure."
     MC "Thanks."
-    show BBW summer-int-neutral
-    BBW "Thank you Lee, that will be all for the moment."
-    jump BBW048_afterchoice_1
+    show WG summer-int-neutral
+    WG "Thank you Lee, that will be all for the moment."
+    jump WG048_afterchoice_1
 
-label BBW048_c1_2:
+label WG048_c1_2:
     MCT "Better get out and get dressed. If I'm even a second late, I'm gonna hear about it from Alice."
     "Once I was finally sure I got all the shampoo rinsed out of my hair I immediately turned off the water and flung open the shower stall door in a whoosh!"
     play sound Thud
@@ -9721,20 +10599,21 @@ label BBW048_c1_2:
     "I sauntered down the hallway to the dining room with the knowledge that I made comfortable time, if only a minute or two to spare."
 
     scene Summer Dining Room with fade
-    play music BBW
-    show BBW summer-int-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Keisuke, glad you could join us. I was worried you were not going to make it to dinner in a timely manner when you hadn't reemerged from your quarters in quite some time."
-    show BBW summer-int-doubt
-    BBW "Oh... Keisuke, what's wrong with your hair?"
+    play music WG
+    show WG summer-int-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Keisuke, glad you could join us. I was worried you were not going to make it to dinner in a timely manner when you hadn't reemerged from your quarters in quite some time."
+    show WG summer-int-doubt
+    WG "Oh... Keisuke, what's wrong with your hair?"
     MCT "Damn, she noticed. Then again, who wouldn't?"
     MC "Heh, yeah, I kind of had to rush to make sure I wasn't late. I hadn't realized what a number the ocean and the sand did on my hair."
     MC "I guess I didn't quite finish the job- it's more to manage than I realized."
-    show BBW summer-int-stern
-    BBW "Your appreciation for punctuality is noted but it won't do for the occasion to remain in such a state."
-    $setAffection("BBW", -1)
-    show BBW summer-int-neutral
-    BBW "Aida, do you by chance have a spare hair tie Keisuke can use to help reign in his unruly hair?"
+    show WG summer-int-stern
+    WG "Your appreciation for punctuality is noted but it won't do for the occasion to remain in such a state."
+    $setAffection("WG", -1)
+    show WG summer-int-neutral
+    WG "Aida, do you by chance have a spare hair tie Keisuke can use to help reign in his unruly hair?"
     PRG "Yes. I hope this will do."
     MC "Thanks."
     "Aida passed me one of her spare hair scrunchies. Not being a stranger to having to resort to them before, I quickly corralled my hair and bunched it up in order to allow it to ride up to my neck height."
@@ -9742,14 +10621,15 @@ label BBW048_c1_2:
     "On cue, the servants came in and with swift, coordinated efficiency, proceeded to set the table with the prepared dishes. A portion of each dish was served to our plates."
     "I didn't even have a chance to process what we were going to be eating before everything was in place and the dinning table was set."
     Takada "Miss Nikumaru and guests, dinner is served."
-    show BBW summer-int-haughty
-    BBW "Thank you Takada, that will be all for now."
-    jump BBW048_afterchoice_1
+    show WG summer-int-haughty
+    WG "Thank you Takada, that will be all for now."
+    jump WG048_afterchoice_1
 
-label BBW048_afterchoice_1:
+label WG048_afterchoice_1:
+    $setVar("WGSSPR", 0)
     MC "Well, let's eat."
-    show BBW summer-int-haughty
-    BBW "Indeed."
+    show WG summer-int-haughty
+    WG "Indeed."
     "Like everything about this luxury vacation, I was quite impressed with the spread before us. My plate reminded me of a food magazine cover."
     "It was some kind of fish steak served as meticulously carved pieces with a variety of steamed vegetables- fancy heirloom varieties like red carrots and purple potatoes."
     "As for the steak, I knew it was fish, but I hadn't seen anything quite like it before. It had a seared crust on the outside where the heat had left a pale beige ring around the interior that framed the rich, pink flesh in the center."
@@ -9759,31 +10639,31 @@ label BBW048_afterchoice_1:
     "Eager to express my enthusiasm, I nearly forgot to not talk with my mouth full."
     "My hastily abrupt change in course nearly shoved it down the wrong tube."
     MC "{i}Cough{/i} -excuse me. {i}errahk{/i} Alice, what is this? It tastes amazing."
-    BBW "Easy there Keisuke."
+    WG "Easy there Keisuke."
     "My fumbling of basic eating skills hadn't gone unnoticed."
-    show BBW summer-int-happy
-    BBW "It's seared bluefin tuna, my favorite meat."
+    show WG summer-int-happy
+    WG "It's seared bluefin tuna, my favorite meat."
     "That was certainly evident. I hadn't gotten the chance to notice until now, my attention previously drawn to the stunning display on my own plate, but Alice's portion of the prepared tuna was quite hardy."
     "So much so that it caught even me off guard, as I considered myself at least somewhat aware of her eating habits by this point."
     "Luckily, I had the presence of mind to restrain my reflexive facial expression of shock, so as to not draw undue attention and make her feel self-conscious."
     "Few things made me as happy as seeing Alice light up with delight when she was enjoying her food."
-    BBW "This particular preparation however..."
-    show BBW summer-int-aroused
-    BBW "is simply exquisite."
-    show BBW summer-int-neutral
-    BBW "Though I'm unsure of the exact preparation used in this particular dish."
-    show BBW summer-int-haughty
-    BBW "Aida, with your culinary expertise, can you tell what was used for the seasoning?"
+    WG "This particular preparation however..."
+    show WG summer-int-aroused
+    WG "is simply exquisite."
+    show WG summer-int-neutral
+    WG "Though I'm unsure of the exact preparation used in this particular dish."
+    show WG summer-int-haughty
+    WG "Aida, with your culinary expertise, can you tell what was used for the seasoning?"
     show PRG excited
     PRG "I can definitely taste soy sauce and cayenne pepper, but there are several other seasonings I'm not sure of."
     show PRG unique
     PRG "I wonder if the chef will let me have the recipe, this tastes great!"
-    show BBW summer-int-happy
-    BBW "I'll have Francois write it down for you later. The servants here all cook to his recipes and specifications."
+    show WG summer-int-happy
+    WG "I'll have Francois write it down for you later. The servants here all cook to his recipes and specifications."
     show PRG excited
     PRG "Thanks, Alice."
-    show BBW summer-int-neutral-2
-    BBW "Think nothing of it."
+    show WG summer-int-neutral-2
+    WG "Think nothing of it."
     show PRG happy
     "Watching Alice dig into her meal, I realized what I had initially thought was an overly generous portion was all too paltry for her appetite, if her current haste was any indication."
     "True to her form, Alice was making sure each forkful was a refined action, though the pace of each was telling of her present hunger."
@@ -9791,150 +10671,193 @@ label BBW048_afterchoice_1:
     "Admittedly, I found the spectacle rather befuddling- a strange mixture of feeling impressed, aroused, and concerned all at the same time to fluctuating degrees."
     MCT "Maybe I should say something?"
     menu:
-        "Play it cool. Be subtle and don't raise her suspicion, but drop a hint.":
-            jump BBW048_c2_1
+        "Play it off with the subtle approach.":
+            jump WG048_c2_1
+        "Inquire with curiosity.":
+            jump WG048_c2_2
         "Encourage her to eat more.":
-            jump BBW048_c2_2
+            jump WG048_c3_2
 
-label BBW048_c2_1:
+label WG048_c2_1:
     MC "Mmmm, I agree Alice, this dish is truly exquisite. I have to thank you for being such a generous hostess, I would never have had such a wonderful culinary experience if not for your refined pallet."
     "Each bite just makes me want to slow down and savor the flavor for as long as possible."
-    show BBW summer-int-happy
-    BBW "I'm glad you are enjoying it as well Keisuke. Indeed, a truly great meal is worth savoring to its fullest."
-    $setAffection("BBW", 1)
+    show WG summer-int-happy
+    WG "I'm glad you are enjoying it as well Keisuke. Indeed, a truly great meal is worth savoring to its fullest."
+    $setAffection("WG", 1)
     "Alice modestly slowed her eating pace to a rate much more in line with her characteristic composure."
     "As much as I like seeing her enjoy her food, I know she would be hard on herself if she thought she had let her growth factor get the better of her sense of control."
-    show BBW summer-int-neutral-2
-    BBW "After being at Sochi Academy for so long, I had nearly forgotten how much I truly have missed such fine cuisine prepared by competent professionals."
-    show BBW summer-int-haughty
-    BBW "It would be a shame to not fully seize on the opportunity to avail myself to the present offerings."
-    show BBW summer-int-happy
-    BBW "I dare say I think I will elect to have another serving of seared tuna."
-    show BBW summer-int-neutral-2
-    BBW "Takada."
+    show WG summer-int-neutral-2
+    WG "After being at Seichou Academy for so long, I had nearly forgotten how much I truly have missed such fine cuisine prepared by competent professionals."
+    show WG summer-int-haughty
+    WG "It would be a shame to not fully seize on the opportunity to avail myself to the present offerings."
+    show WG summer-int-happy
+    WG "I dare say I think I will elect to have another serving of seared tuna."
+    show WG summer-int-neutral-2
+    WG "Takada."
     Takada "Yes, Miss Nikumaru?"
-    BBW "I request another serving of the seared tuna, if you please."
+    WG "I request another serving of the seared tuna, if you please."
     Takada "Of course, Miss Nikumaru. We made sure to prepare plenty, knowing it was one of your favorite dishes."
     "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
-    show BBW summer-int-happy
+    show WG summer-int-happy
     "Alice was clearly looking forward to getting to indulge in her favorite dish all over again."
     Takada "Would either of Miss Nikumaru's guests be interested in another serving as well?"
     PRG "I will have some more as well, Takada-san... {size=-6}although not quite so much...{/size}"
     MC "I'm good for now, thanks though."
-    jump BBW048_afterchoice_2
+    jump WG048_afterchoice_2
 
-label BBW048_c2_2:
+label WG048_c2_2:
+	$setVar("WGSSPR", getVar("WGSSPR") +1)
+	MC "I didn’t realize seared bluefin tuna was your favorite Alice. I feel like I should have asked sooner, but what are some of your other favorite foods?"
+    show WG summer-int-neutral
+    "Alice paused for a moment, not wanting to talk with her mouth full after having just taken a particularly large bite."
+    WG "Well, favorite is a rather strong word. I suppose I should qualify this as {i}one{/i} of my favorite dishes."
+    show WG summer-int-haughty
+    WG "After all, no singular dish can completely satisfy the entire range of gustatory experiences."
+    show WG summer-int-neutral
+    WG "Even if one dish were to stand out above others, it would lose its luster to the point of being mundane if divulged in too frequently."
+    MC "True, variety is the spice of life, as they say. When I was a kid I thought when I became an adult I’d get to eat as much candy as I’d want. I learned pretty fast that gets way too sickening real quick."
+    WG "Precisely. Glad to know your pallet has matured."
+    show WG summer-int-neutral-2
+    WG "But to answer your question, I couldn’t possibly begin to rank my favorite dishes. There’s simply too many considerations to account for in what constitutes the perfect meal for the occasion."
+    WG "The ambiance, time of day, the seasons, pairing with drinks and h’orderves— what makes for the perfect dish can only truly be evaluated in the moment..."
+    "Alice’s thoughts had seemingly drifted from the present conversation as her mind swirled amidst some blissful realm of infinite culinary delights."
+    MC "Uh... Alice?"
+    show WG summer-int-surprised
+    WG "Oh. Yes, where was I?"
+    show WG summer-int-neutral
+    WG "There’s just so many different categories. If I had to say, I do quite enjoy quiche for breakfast, or even brunch."
+    WG "Though far too rich and heavy for this summer weather, few things are quite as rich and decadent as confit de canard."
+    MC "Seems like you favor French cuisine."
+    WG "Not exclusively mind you, but your assessment is not inaccurate by any means."
+    show WG summer-int-neutral-2
+    WG "For example, as much as I enjoy crème brûlée, I would prefer tiramisu if that were on the menu."
+    WG "Though I’ve enjoyed this line of inquiry, why do you ask, Keisuke?"
+    MC "Oh, just for my own curiosity. Who knows? Maybe I’ll surprise you sometime with one of your favorites."
+    show WG summer-int-happy
+    WG "Is that so? Well, I’ll be looking forward to the occasion then."
+    Takada "Miss Nikumaru, would you like some more seared tuna?"
+    show WG summer-int-neutral
+    WG "Yes please, Takada. Thank you for asking. I had been so swept up in the present conversation I had lost track of how little remained on my plate."
+    Takada "Think nothing of it, Miss Nikumaru. That is why we are here. We made sure to prepare plenty, knowing it was one of your favorite dishes."
+    "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
+    Takada "Would either of Miss Nikumaru’s guests be interested in another serving as well?"
+    show PRG neutral
+    PRG "I will have some more as well, Takada-san… {size-6}although not quite so much…{size-6}"
+    MC "I’m good. Thanks though."
+    jump WG048_afterchoice_2
+
+label WG048_c3_2:
     MC "I can see why you were looking forward to this trip."
-    show BBW summer-int-neutral
-    BBW "Oh, what do you mean?"
+    show WG summer-int-neutral
+    WG "Oh, what do you mean?"
     MC  "Well, I've never seen you have such enthusiasm for any of the food at school like this meal. With good reason- it's exquisite, as you said."
-    MCT "Why not fully avail yourself to as much of these culinary delights as possible before we have to head back?"
-    $setAffection("BBW", -1)
-    show BBW summer-int-sad
-    BBW "Yes, I suppose I have been indulging my appetite since we've been on vacation. I should probably restrain myself a bit more in light of the present temptations in this environment."
+    MC "Why not fully avail yourself to as much of these culinary delights as possible before we have to head back?"
+    $setAffection("WG", -1)
+    show WG summer-int-sad
+    WG "Yes, I suppose I have been indulging my appetite since we've been on vacation. I should probably restrain myself a bit more in light of the present temptations in this environment."
     "My vocal enthusiasm backfired as Alice slowed the pace of her eating considerably. My comment must have inadvertently made her self-conscious over just how visibly she had been enjoying her food."
     "She became much more reserved in her movements. What was previously a burst of enjoyment across her face with each bite now appeared to be an expression of confliction."
     "No doubt her self-consciousness was weighing down her enthusiasm for something she had been looking forward to for quite some time."
     "Alice eventually worked her way through nearly everything on her plate, but for a few paltry bites."
     "Perhaps she was falling back on the old troupe of it being lady-like to leave something on your plate? It was one of the few assumed rules of etiquette I had never seen Alice make any effort to follow before."
     Takada "Miss Nikumaru, would you like some more seared tuna?"
-    show BBW summer-int-neutral
-    BBW "No thanks Takada, I believe that will be enough for me this evening."
+    show WG summer-int-neutral
+    WG "No thanks Takada, I believe that will be enough for me this evening."
     Takada "Are you sure Miss Nikumaru? I am aware that it was one of your favorite dishes, so we prepared extra. Was it not to your liking?"
-    BBW "Not at all. It was exquisite, but I fear I have had too much already."
+    WG "Not at all. It was exquisite, but I fear I have had too much already."
     Takada "Very well then Miss Nikumaru. Would either of Miss Nikumaru's guests be interested in another serving as well?"
     show PRG neutral
     PRG "I will have some more as well, Takada-san... Although not quite so much..."
     MC "I'm good. Thanks though."
-    jump BBW048_afterchoice_2
+    jump WG048_afterchoice_2
 
-label BBW048_afterchoice_2:
+label WG048_afterchoice_2:
     "We continued eating in near silence for a minute or two, nothing much but the ambient clangs of silver and glassware that otherwise go unnoticed in the midst of conversation."
     "I've heard it said, 'better to be silent and thought a fool, than to open one's mouth and remove all doubt', but silence feels heavy and foolish decisions are my forte."
     MCT "Maybe a bit of small talk would lighten up the mood?"
     MC "So, what are the plans for tomorrow?"
     "Alice finished chewing and swallowed her food."
-    show BBW summer-int-neutral
-    BBW "Every summer vacation I'd play volleyball, believe it or not. It's not overly competitive and it is far more fun than other 'sports'."
-    show BBW summer-int-sad
-    BBW "However, I'm certainly less agile than I was before."
-    show BBW summer-int-haughty
-    BBW "I'd like to go swimming on the beach since we didn't swim earlier today."
+    show WG summer-int-neutral
+    WG "Every summer vacation I'd play volleyball, believe it or not. It's not overly competitive and it is far more fun than other 'sports'."
+    show WG summer-int-sad
+    WG "However, I'm certainly less agile than I was before."
+    show WG summer-int-haughty
+    WG "I'd like to go swimming on the beach since we didn't swim earlier today."
     MC "Yeah, wading into the water is a bit different than actually swimming in the open ocean."
-    BBW "Precisely, it would also be good exercise. I can't slip on my routine just because I'm on vacation."
-    show BBW summer-int-neutral
-    BBW "I trust you'll join me tomorrow?"
+    WG "Precisely, it would also be good exercise. I can't slip on my routine just because I'm on vacation."
+    show WG summer-int-neutral
+    WG "I trust you'll join me tomorrow?"
     MC "Of course, I'm also a bit curious what swimming with all this hair is going to be like."
     MC "I'm sure there's no way though I'll be able to keep up with you with all the extra drag on me in the water."
-    show BBW summer-int-happy
-    BBW "Aida, I understand you may prefer to stay on the beach but swimming is actually one of the best forms of exercise during pregnancy, if you'd care to join us."
+    show WG summer-int-happy
+    WG "Aida, I understand you may prefer to stay on the beach but swimming is actually one of the best forms of exercise during pregnancy, if you'd care to join us."
     show PRG worried
     PRG "I- I don't know."
     show PRG unique
     PRG "This isn't a normal pregnancy. I'm not sure."
-    show BBW summer-int-surprised
-    BBW "-!"
-    show BBW summer-int-neutral-2
-    BBW "Aida, it's okay."
-    show BBW summer-int-neutral
-    BBW "If you'd like, I can help teach you to start swimming properly again."
-    show BBW summer-int-neutral-2
-    BBW "Trust me. I know how to swim with a belly."
+    show WG summer-int-surprised
+    WG "-!"
+    show WG summer-int-neutral-2
+    WG "Aida, it's okay."
+    show WG summer-int-neutral
+    WG "If you'd like, I can help teach you to start swimming properly again."
+    show WG summer-int-neutral-2
+    WG "Trust me. I know how to swim with a belly."
     show PRG happy
     PRG "Okay, Alice. If you're willing to help me then I'll try swimming."
-    show BBW summer-int-haughty
-    BBW "Fantastic. It's settled then."
-    show BBW summer-int-neutral-2
-    BBW "Ahhh, what a lovely dinner, both food and present company included."
+    show WG summer-int-haughty
+    WG "Fantastic. It's settled then."
+    show WG summer-int-neutral-2
+    WG "Ahhh, what a lovely dinner, both food and present company included."
     MC "We would say the same as well."
     show PRG happy
     PRG "Thanks Alice."
-    BBW "But I am quite full myself from the evening's delectable offerings. I could use post meal digestif."
+    WG "But I am quite full myself from the evening's delectable offerings. I could use post meal digestif."
     MC "Isn't that some kind of after-dinner wine?"
-    show BBW summer-int-neutral
-    BBW "Usually, but the point is to provide something after a meal that will stimulate digestion. Wine was one of the few things my father did not deign to provide for this trip."
-    "Which is fine, it would not do for the occasion and would be unfitting for me as a hostess to provide, given that Aida is unable to partake."
-    "I'd rather enjoy some ginger ale right now. Ginger is very effective at soothing the stomach. Would either of you care for some as well?"
+    show WG summer-int-neutral
+    WG "Usually, but the point is to provide something after a meal that will stimulate digestion. Wine was one of the few things my father did not deign to provide for this trip."
+    WG "Which is fine, it would not do for the occasion and would be unfitting for me as a hostess to provide, given that Aida is unable to partake."
+    WG "I'd rather enjoy some ginger ale right now. Ginger is very effective at soothing the stomach. Would either of you care for some as well?"
     MC "Sure."
     show PRG neutral
     PRG "Me too."
-    show BBW summer-int-haughty
-    BBW "Lee! Could you please bring some ginger ale?"
+    show WG summer-int-haughty
+    WG "Lee! Could you please bring some ginger ale?"
     "A startled reply came from the kitchen."
     Lee "S-sure can, Miss Nikumaru."
     "A moment later, Lee came rushing out into the dining room."
     Lee "Here you go Miss Ni-"
-    show BBW summer-int-surprised
+    show WG summer-int-surprised
     show PRG surprised
     "Lee had slipped and spilled the drinks everywhere, luckily managing to catch the glasses before they broke. It seemed he was used to such a feat."
     Lee "{size=-6}{i}jojdwaess-eo{/i}{/size}"
     Lee "Miss Nikumaru! I'm so sorry I'll clean this immediately!"
     "Shi rushed out of the kitchen to assess the situation."
     Shi "LEE! YOU IMBACI-"
-    show BBW summer-int-stern
-    BBW "Shino, that won't be necessary."
+    show WG summer-int-stern
+    WG "Shino, that won't be necessary."
     Shi "-!"
-    BBW "Spilling some drinks is not going to flood the house, nor set us back financially, I'm quite sure cleaning this up will rectify the situation."
+    WG "Spilling some drinks is not going to flood the house, nor set us back financially, I'm quite sure cleaning this up will rectify the situation."
     "Aida remained shocked, seeing Alice take this so calmly seemed to surprise her even more than Lee spilling the drinks did. I wasn't quite sure what to make of her reaction myself."
     "In all the time that I have known her, her exacting nature brought with it demanding expectations for the people that work for her- something Aida and I were intimately familiar with."
     MCT "Then again, perhaps my initial assessments have proven too simplistic. She certainly has high expectations for others and herself, but she has always proven quite understanding when unforeseeable or unavoidable circumstances interfere, such as schoolwork..."
     MCT "...or in Aida's case, the increasing difficulties as her condition progressed."
-    BBW "Lee is perfectly capable of cleaning up this accident himself. Please retrieve an additional bottle of ginger ale for me and my guests so that we can continue the evening's pleasantries."
+    WG "Lee is perfectly capable of cleaning up this accident himself. Please retrieve an additional bottle of ginger ale for me and my guests so that we can continue the evening's pleasantries."
     show PRG worried
     "Lee's fumbling of the drinks was certainly a disastrous performance of his duties, but it was purely accidental, not something born out of laziness, insincerity, or without concern to improve in the future."
     "Perhaps that is the key difference for Alice, not that she expects perfect execution 100%% of the time, but rather a contempt for the acceptance of what is substandard and indifference towards improving one's self."
     "Or maybe she just has a soft spot for lovable klutzes like me."
     MC "Well, after all, no use crying over spilled ginger ale."
-    show BBW summer-int-haughty
-    BBW "Quite."
+    show WG summer-int-haughty
+    WG "Quite."
     show PRG admire
-    show BBW summer-int-neutral
-    BBW "Now, where were we?"
+    show WG summer-int-neutral
+    WG "Now, where were we?"
     MC "You were talking about ginger ale as a digestif."
     "Shino came out with a new bottle per Alice's direction. Quickly and quietly, so as to not distract from our conversation, she set our glassware and poured a glass for each of us before leaving the bottle with what remained next to Alice, likely knowing she will want more later."
     "Lee, in contrast to his earlier clumsiness, cleaned up the spill with quick efficiency."
-    BBW "Ah yes, as I said before, a digestif is intended to be consumed after a meal to help with digestion, this could be wine or brandy, but herbal infusions are the most classic example."
-    BBW "This is in contrast to an aperitif, which is a drink consumed before a meal or during appetizers to help stimulate the appetite, as the name would imply."
+    WG "Ah yes, as I said before, a digestif is intended to be consumed after a meal to help with digestion, this could be wine or brandy, but herbal infusions are the most classic example."
+    WG "This is in contrast to an aperitif, which is a drink consumed before a meal or during appetizers to help stimulate the appetite, as the name would imply."
     "Seemingly unphased by the previous interruption, Alice continued to expound on the topic of fine dining etiquette and terminology."
     "It was something she was well versed in, while also keen on disseminating her knowledge to her listeners whenever the occasion would arise."
     "The conversation continued for quite some time. I tried my best to keep up and absorb the information as much as possible."
@@ -9942,29 +10865,29 @@ label BBW048_afterchoice_2:
     "Reflecting back on what just happened, I was proud of her. It would not have been unreasonable for her to have gotten angry, raised her voice, or even harshly chastised Lee for his mistake."
     "Instead, she displayed an unflappable grace throughout the situation that caught both me and Aida off guard."
     "Something tells me I still have a lot to learn about softer side of the hard nosed, industrious young woman I had come to fall for during my time at Seichou Academy."
-    show BBW summer-int-surprised
-    BBW "Oh my!"
-    show BBW summer-int-neutral
-    BBW "It appears we have run out of time if we are to retire early enough to be ready for tomorrow morning's activities."
-    show BBW summer-int-neutral-2
-    BBW "I trust you enjoyed this evening's dinner as much as I did?"
+    show WG summer-int-surprised
+    WG "Oh my!"
+    show WG summer-int-neutral
+    WG "It appears we have run out of time if we are to retire early enough to be ready for tomorrow morning's activities."
+    show WG summer-int-neutral-2
+    WG "I trust you enjoyed this evening's dinner as much as I did?"
     MC "Absolutely, thank you again Alice."
     show PRG happy
     PRG "Yes, thank you Alice. It was lovely!"
-    show BBW summer-int-haughty
-    BBW "Excellent. Take your time going back to your rooms, but please make sure you allow enough time to sleep so that you will be refreshed in the morning. Tomorrow's activities start bright and early tomorrow."
+    show WG summer-int-haughty
+    WG "Excellent. Take your time going back to your rooms, but please make sure you allow enough time to sleep so that you will be refreshed in the morning. Tomorrow's activities start bright and early tomorrow."
     "Alice walked back to her room. Aida followed not long after back to her room as well."
     "I thought about a short evening stroll on the beach just to take in more of the evening, but after the ordeal I went through earlier to remove the sand from my hair- combined with my penchant for oversleeping, I decided better of it and retired to my guest room as well."
     jump daymenu
 
-label BBW049A:
-    $setProgress("BBW", "BBW049B")
+label WG049:
+    $setProgress("WG", "WG050")
     scene Summer Guest Bedroom with fade
     play sound Knock
     "{i}knock knock{/i}"
     play music Peaceful
     "A sharp banging on my door the next morning startled me awake."
-    BBW "Keisuke, we are heading down to the beach. You better not be sleeping in."
+    WG "Keisuke, we are heading down to the beach. You better not be sleeping in."
     "Sleeping in was the first thing I had in mind during a vacation, but Alice did admonish me to get enough sleep last night, so I shouldn't have thought I'd get away with it this morning."
     "Rubbing the sleep from my eyes, I quickly got myself dressed for the water."
     "I put on my bathing suit and a light tee-shirt I didn't plan to wear for very long."
@@ -9977,18 +10900,19 @@ label BBW049A:
     "It was a calming setting with the gentle rustling from the waves of translucent light blue waters. I could feel the hot air rising up from the ground as the summer sun beamed down on the pale sand."
     "Looking over at the beachside tent, it looked like Alice and Aida hadn't wasted any time setting up for the day at the beach."
     scene Summer Beach Ocean with fade
-    show BBW swim-casual-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG swim-casual-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     "As I walked over, it looked like Alice and Aida had made themselves comfortable, having already arranged their towels and beach supplies out in an orderly fashion."
     "Noticing that both of them appeared to have been putting the finishing touches on each other's sunscreen coverage, I winced with the realization that I had indeed missed out on something due to sleeping in a few extra minutes."
-    BBW "There you are Keisuke. I was worried for a bit that you had decided to sleep in and not make the best use of our time off."
+    WG "There you are Keisuke. I was worried for a bit that you had decided to sleep in and not make the best use of our time off."
     "I honestly couldn't tell if she saw right through me and this was intended as a subtle dig at my sleeping habits, or if I had genuinely managed to make good enough time to allay suspicion."
-    show BBW swim-casual-haughty
-    BBW "I'm eager to get started swimming. It's simply been too long, and I can't let my routine slip just because I'm on vacation. I trust you will be joining me?"
+    show WG swim-casual-haughty
+    WG "I'm eager to get started swimming. It's simply been too long, and I can't let my routine slip just because I'm on vacation. I trust you will be joining me?"
     MC "Absolutely. It's been a while since I got to swim. I'm looking forward to it."
-    BBW "Excellent. Do make sure you've properly covered yourself in sunscreen. I don't want either of you suffering the ill effect of too much sun by neglecting something so easily preventable."
-    BBW "Make sure you've given it enough time to dry before joining me in the water Keisuke."
-    hide BBW with dissolve
+    WG "Excellent. Do make sure you've properly covered yourself in sunscreen. I don't want either of you suffering the ill effect of too much sun by neglecting something so easily preventable."
+    WG "Make sure you've given it enough time to dry before joining me in the water Keisuke."
+    hide WG with dissolve
     "With that, Alice turned and made her way towards the water."
     "I could tell she was eager for me to join her, but having sufficiently warned me the night before she had a full day of activity planned, I couldn't help but think her unwillingness to wait for me was an intentional consequence of my tardiness."
     "Still though, looking out towards the ocean I got a good view of more than just the water. Alice carried more of her weight out front, but that didn't mean there wasn't plenty to take in from behind."
@@ -10019,36 +10943,36 @@ label BBW049A:
     "I stood there frozen in my tracks, taking a couple of seconds to overcome the paralysis of a sudden ten degree drop in temperature, focused entirely on my nuts."
     "Having managed to overcome that initial shock, I continued to wade out into the water to greet Alice."
     "The depth was shallow enough that we could still keep our heads above water if we were standing but was still deep enough that we wouldn't have to worry about hitting the sea floor when trying to swim."
-    show BBW swim-casual-neutral
+    show WG swim-casual-neutral
     MC "Already putting the laps in?"
-    BBW "I guess you could say that, but this was just a warm-up. I've been taking it too easy lately, I want to get a real swim session in. Think you can keep up?"
-    if isEventCleared("BBW009"):
+    WG "I guess you could say that, but this was just a warm-up. I've been taking it too easy lately, I want to get a real swim session in. Think you can keep up?"
+    if isEventCleared("WG009"):
         MC "Definitely not after watching you crush Mizutani-san in a swimming race. And I know I'm not as fast as her."
-        BBW "Tsk tsk, you have much to learn it would seem. If anything, Mizutani-san's loss to me should encourage you."
+        WG "Tsk tsk, you have much to learn it would seem. If anything, Mizutani-san's loss to me should encourage you."
         MC "What do you mean?"
-        BBW "Swimming is more about efficiency and grace while gliding through the water, rather than forcing yourself through it."
-        BBW "Raw power is not enough to make up for poor technique. Keep that in mind and you'll do fine."
+        WG "Swimming is more about efficiency and grace while gliding through the water, rather than forcing yourself through it."
+        WG "Raw power is not enough to make up for poor technique. Keep that in mind and you'll do fine."
         MC "I guess I can see that. Go easy on me though, all this hair is going to be like dragging a net behind me."
     else:
         MC "Probably not, but I'll try. Go easy on me though, all this hair is going to be like dragging a net behind me."
-    BBW "Suggestion noted, Keisuke- but ignored. How do you expect to get better if you don't push yourself to do more?"
+    WG "Suggestion noted, Keisuke- but ignored. How do you expect to get better if you don't push yourself to do more?"
     "I wasn't sure if this was Alice's way of trying to inspire me or if she just didn't want to pass on the chance to thoroughly demonstrate her skills in something she prided herself on."
     MC "Fair enough. What did you have in mind?"
-    BBW "Let's start with the basics. We'll do a freestyle swim. See that driftwood log down the beach? Let's make that our distance marker."
+    WG "Let's start with the basics. We'll do a freestyle swim. See that driftwood log down the beach? Let's make that our distance marker."
     "I placed my hand above my head to block the sun's glare while I squinted into the distance to see where she was talking about."
     "It took a second to find it, but I was quite shocked at how far away it was when I did. The distance Alice had settled on was no joke for an amateur swimmer such as myself."
     "But it wasn't impossible either, especially since I wasn't trying to race."
     MC "I'll try my best to keep up. Got any tips?"
-    show BBW swim-casual-haughty
-    BBW "Yes, it's tempting to be lax in your movements but try not to just kick with your knees but use all three of your leg joints in a fluid motion to propel you forward."
-    BBW "During the stroke, make sure your hand gently enters the water with your fingertips first while keeping your wrist and elbows above your hand."
-    BBW " Keep your fingers extended underwater so you maximize how much of a paddle you can form with your hands. And try not to get too caught up in checking how far you have to go by raising your head out of water to see."
-    BBW "That's a rookie mistake. You'll know when you've reached the end once you get there- because I'll be waiting there for you."
+    show WG swim-casual-haughty
+    WG "Yes, it's tempting to be lax in your movements but try not to just kick with your knees but use all three of your leg joints in a fluid motion to propel you forward."
+    WG "During the stroke, make sure your hand gently enters the water with your fingertips first while keeping your wrist and elbows above your hand."
+    WG " Keep your fingers extended underwater so you maximize how much of a paddle you can form with your hands. And try not to get too caught up in checking how far you have to go by raising your head out of water to see."
+    WG "That's a rookie mistake. You'll know when you've reached the end once you get there- because I'll be waiting there for you."
     MC "Heh, duly noted."
-    BBW "Let's get started shall we?"
+    WG "Let's get started shall we?"
     stop music
     "Apparently that was as good as a 'ready-set-go' for Alice because she took off without any further delay."
-    hide BBW with dissolve
+    hide WG with dissolve
     "I took off after her but as I moved through the water the full body exertion of swimming set in after the first 40 meters."
     "I'll have to focus on the technique that Alice instructed and temper my pace if I was going to go the distance. Trying to follow her advice, I resolved not to break in order to bob my head up far enough to see my progress."
     "I just had to accept I was in for the long haul. Through the clear azure waters I could tell she was increasing the distance between us, but this wasn't a race for me, it was survival at this point as I estimated I was only a third of the way through."
@@ -10059,28 +10983,28 @@ label BBW049A:
     "My muscles burned, and my patience was growing thin as I found myself getting a bit bored from this long distance (for me at least) with no relief in sight, but still I pushed through."
     "Just when I thought I was at my limit I felt a firm tug on my shoulder. It was Alice's hand."
     "Hopeful that I must have finished. I immediately surfaced."
-    show BBW swim-casual-neutral with dissolve
+    show WG swim-casual-neutral with dissolve
     play music Peaceful
-    BBW "It appears you took my advice not to keep looking up to heart. You looked like you were about to do another 100 meters if I didn't stop you."
-    show BBW swim-casual-haughty
-    BBW "I'm surprised you kept up as well as you did Keisuke."
+    WG "It appears you took my advice not to keep looking up to heart. You looked like you were about to do another 100 meters if I didn't stop you."
+    show WG swim-casual-haughty
+    WG "I'm surprised you kept up as well as you did Keisuke."
     MCT "Another 100 meters? Taking two zeroes off that number would have been more accurate, but at least I managed to save face to Alice and pushed myself like I knew I could."
     "I seriously needed to catch my breath after that though."
     MC "Thanks...I...I tried to stay... focused.... {i}cough{/i} because I knew it wouldn't be easy for me."
-    BBW "I hope you didn't use all your energy just on that. We still have the breaststroke, butterfly, and backstroke to do."
+    WG "I hope you didn't use all your energy just on that. We still have the breaststroke, butterfly, and backstroke to do."
     "I put all my effort into getting this far down the beach, not thinking about having to swim back, let alone down and back again. I had a long morning ahead of me."
     MC "{i}Hoo, haaa, hoo...{/i} Sure, no problem. Just shaking off the rust. I could use a minute or two."
-    show BBW swim-casual-neutral-2
-    BBW "Well, let me know when you are ready. I'll be waiting on you. I didn't exactly overextend myself at the pace I chose you know."
+    show WG swim-casual-neutral-2
+    WG "Well, let me know when you are ready. I'll be waiting on you. I didn't exactly overextend myself at the pace I chose you know."
     MCT "There's plenty of salt in the ocean water, I don't need more rubbed into my wounded pride."
     MC "I'll do my best to keep up- wouldn't want to let you down now."
-    BBW "You're doing better than I expected to be honest. Keep in mind I've been doing this for nearly all of my life."
-    BBW "It's one of the few physical activities I enjoy... and have a high degree of skill in."
-    show BBW swim-casual-neutral
-    BBW "We'll do the breaststroke back. That's an easy one to do a casual pace with. It's less movement intensive compared to freestyle."
-    BBW "You'll want to save up some energy for when we do the butterfly stroke."
+    WG "You're doing better than I expected to be honest. Keep in mind I've been doing this for nearly all of my life."
+    WG "It's one of the few physical activities I enjoy... and have a high degree of skill in."
+    show WG swim-casual-neutral
+    WG "We'll do the breaststroke back. That's an easy one to do a casual pace with. It's less movement intensive compared to freestyle."
+    WG "You'll want to save up some energy for when we do the butterfly stroke."
     "Much like before, that apparently was a sufficient indication for Alice for me to know that we were starting."
-    hide BBW with dissolve
+    hide WG with dissolve
     "She pushed off back towards are initial starting point, this time doing the breaststroke."
     stop music
     "Not quite sure how that name caught on. I always thought of it as the frog stroke, since it's kind of how frogs swim. The word breaststroke brought other things to mind..."
@@ -10092,27 +11016,27 @@ label BBW049A:
     "It gave me a bit more time to take in just how clear the water was and how good it felt relative to the hot summer air above the surface."
     "After what seemed like ages, I finally made it back to the spot near the awning in front of Alice's family beach house."
     "I undoubtedly left Alice waiting longer this time, not having the same sense of urgency that spurned my initial performance."
-    show BBW swim-casual-neutral with dissolve
+    show WG swim-casual-neutral with dissolve
     play music Peaceful
-    BBW "There, that wasn't so bad now was it? You certainly took your time, but at least you're managing to finish."
+    WG "There, that wasn't so bad now was it? You certainly took your time, but at least you're managing to finish."
     MC "Thanks, uh, I guess."
     MC "It's pretty tough for me to go this long, but you don't seem to be having too much trouble."
-    BBW "It's not always a matter of effort Keisuke. Efficiency is just as important, so your efforts aren't wasted."
-    BBW "It takes practice to master the mechanics of swimming in order to move through the water as smoothly as possible. In fact, it's far more important to keep in mind than in any other sport."
-    BBW "Water is much denser than air, so anything you can do to cut down on drag is going to pay greater dividends than what you're able to do for running."
+    WG "It's not always a matter of effort Keisuke. Efficiency is just as important, so your efforts aren't wasted."
+    WG "It takes practice to master the mechanics of swimming in order to move through the water as smoothly as possible. In fact, it's far more important to keep in mind than in any other sport."
+    WG "Water is much denser than air, so anything you can do to cut down on drag is going to pay greater dividends than what you're able to do for running."
     MC "Makes sense. I guess I hadn't thought about it that way before."
-    show BBW swim-casual-haughty
-    BBW "Now that I've sufficiently warmed up, I'm fully prepared to go all out this time."
-    BBW "I hope you're not already slowing down on me. Are you ready for something actually challenging this time around?"
+    show WG swim-casual-haughty
+    WG "Now that I've sufficiently warmed up, I'm fully prepared to go all out this time."
+    WG "I hope you're not already slowing down on me. Are you ready for something actually challenging this time around?"
     MCT "Actually challenging!? Was swimming the better part of a kilometer by this point in the open ocean a fake challenge?"
     MCT "Am I missing something here? If I wasn't still riding the pump of the previous swimming session while simultaneously being buoyed up from standing in the water, I felt like I would have fallen over by this point."
     "The sane part in my brain screamed to tell her no, but looking into Alice's eyes I could see how much she was enjoying herself with this."
     MC "Oh, so you're saying I should stop holding back this time?"
-    show BBW swim-casual-happy
+    show WG swim-casual-happy
     "A wide, delighted smile spread across Alice's face."
-    BBW "Heh! Liar. That's very funny Keisuke. I'll make you eat those words."
-    BBW "Tsk, tsk, and to think all this time I held back just so you wouldn't get left too far behind."
-    BBW "{i}Hehehe!{/i}"
+    WG "Heh! Liar. That's very funny Keisuke. I'll make you eat those words."
+    WG "Tsk, tsk, and to think all this time I held back just so you wouldn't get left too far behind."
+    WG "{i}Hehehe!{/i}"
     "Clearly Alice found great enjoyment from the fact that I jokingly insinuated my poor performance compared to hers was born out of some misplaced pity."
     "Whether or not torturing me by goading me to keep up was part of the thrill of it all, I knew there was more to why she was having such a good time dragging me along with her."
     "Like she said, this was one of the few physical activities Alice truly excelled at and actually enjoyed."
@@ -10121,16 +11045,16 @@ label BBW049A:
     MCT "On second thought- better refocus. If I spend too much time on that imagery my blood was going to start pumping somewhere else besides my muscles."
     MC "Alright, you got me. I'm going to need all the help I can get."
     MC "You said we're doing the butterfly stroke this time? I get tired just watching that. Got any tips for me like before?"
-    show BBW swim-casual-haughty
-    BBW "Of course, I do. Quite frankly I wouldn't expect you to finish without my help."
+    show WG swim-casual-haughty
+    WG "Of course, I do. Quite frankly I wouldn't expect you to finish without my help."
     "They say pride cometh before the fall, but I knew I was in no position to offer up a lesson in humility. On the bright side though, Alice is always interested in the tutelage of an eager pupil."
-    BBW "If you're going to try to swim fast for this distance at your skill level, you'll easily waste all your energy. Focus on being relaxed and moving fluidly with your whole body."
-    BBW "Keep your neck in a neutral position, not craning up or down all the time. You don't need to take a breath with each stroke on this one."
-    BBW "Don't waste energy flailing your arms all over the place either, they just need to break the surface, not raised straight up out of the water."
-    BBW "Think of pushing yourself backwards with the stroke of your arms, don't just flare them out to the sides, you're trying to keep a minimal profile in the water."
+    WG "If you're going to try to swim fast for this distance at your skill level, you'll easily waste all your energy. Focus on being relaxed and moving fluidly with your whole body."
+    WG "Keep your neck in a neutral position, not craning up or down all the time. You don't need to take a breath with each stroke on this one."
+    WG "Don't waste energy flailing your arms all over the place either, they just need to break the surface, not raised straight up out of the water."
+    WG "Think of pushing yourself backwards with the stroke of your arms, don't just flare them out to the sides, you're trying to keep a minimal profile in the water."
     MC "Gotcha- stay fluid, no flailing."
-    BBW "Exactly, but it remains to be seen how well you'll put it into practice. Try not to keep me waiting too long this time, Keisuke."
-    hide BBW with dissolve
+    WG "Exactly, but it remains to be seen how well you'll put it into practice. Try not to keep me waiting too long this time, Keisuke."
+    hide WG with dissolve
     "Much less surprising this time, apparently that's what Alice meant to indicate 'GO!', but what was far more surprising was the speed and ease she was cruising through the water with."
     "She wasn't kidding about holding back before. I bobbed in the water dumbstruck for a couple of seconds at the unexpected athletic spectacle from Alice, but quickly snapped out of it with the realization I was expected to catch up to her sometime sooner rather than later."
     stop music
@@ -10146,77 +11070,77 @@ label BBW049A:
     MCT "Oh no!"
     MCT "This is it."
     MCT "I'm being dragged towards the light. My body yielded as a golden haired cherubic figure began to pull me towards the heavens..."
-    show BBW swim-casual-neutral with dissolve
+    show WG swim-casual-neutral with dissolve
     play music Peaceful
     MC "BUHAAA! {i}Hoo, haaa, hooo!{/i} Alice!"
     "Alice, holding my hair, had pulled my head above water so I could breath."
-    BBW "What am I going to do with you Keisuke? You looked like you were starting to get in trouble there."
+    WG "What am I going to do with you Keisuke? You looked like you were starting to get in trouble there."
     "I tried to catch my breath, but couldn't."
     MC "{i}Hoo, haaa,{/i} maybe, {i}haa,{/i} a-little-bit, {i}hoo, hoo,{/i} yeah..."
-    BBW "Come on. Let's get you out of the water."
+    WG "Come on. Let's get you out of the water."
     MC "Wait a sec- OW!"
-    BBW "Oh, you'll be fine."
+    WG "Oh, you'll be fine."
     "Alice apparently wasn't going to risk me sinking, still firmly holding on to my hair until she dragged me a sufficient distance to where I could easily stand on the seabed."
     "As we walked out of the water, I began to crawl across the wet sand where the waves swept over the shore of the beach and collapsed in a heap on my back once I determined I was far enough in that the waves weren't going to crash over my head."
     "Alice sat down beside me about an arm's reach away, with her hands bracing herself upright, facing backwards while her belly filled up her lap with her legs forward."
-    show BBW swim-casual-neutral-2
+    show WG swim-casual-neutral-2
     "Craning my neck to peer behind me I could see the piece of driftwood Alice set as our distance marker."
     MC "Hey!... I {i}huff{/i} made it {i}huff{/i}"
-    BBW "You certainly did. I didn't expect you to finish, you know. Honestly though, I don't know what possessed you to push yourself to the point you almost drowned."
+    WG "You certainly did. I didn't expect you to finish, you know. Honestly though, I don't know what possessed you to push yourself to the point you almost drowned."
     MC "You did."
-    show BBW swim-casual-surprised
-    BBW "What?!"
+    show WG swim-casual-surprised
+    WG "What?!"
     MC "I didn't {i}huff{/i} want to let you down {i}huff{/i}"
-    show BBW swim-casual-angry
-    BBW "I was just teasing you back! We both know you aren't that great of a swimmer! Are you insane?"
-    BBW "..."
-    show BBW swim-casual-worried
+    show WG swim-casual-angry
+    WG "I was just teasing you back! We both know you aren't that great of a swimmer! Are you insane?"
+    WG "..."
+    show WG swim-casual-worried
     "Alice seemed to have stopped herself in the midst of her usual critical defensive reaction."
-    BBW "...I didn't mean to put that kind of pressure on you. I'm sorry."
+    WG "...I didn't mean to put that kind of pressure on you. I'm sorry."
     MC "You didn't {i}huff{/i} there's no need to apologize."
-    show BBW swim-casual-doubt
-    BBW "Well then why are you blaming me!"
+    show WG swim-casual-doubt
+    WG "Well then why are you blaming me!"
     MC "Alice, you didn't pressure me to push myself to my limit, you inspired me to."
     MC "I could tell you were looking forward to getting to do this on your vacation, and I wanted to be a part of doing something that you love, with you."
     MC "I knew I couldn't keep up with you, but I could tell you were enjoying having someone with you to share the experience."
     MC "If I just gave up, I thought it would just put a damper on the whole day."
-    show BBW swim-casual-neutral
-    BBW "It's just swimming, Keisuke. I do it all the time for exercise at school you know."
+    show WG swim-casual-neutral
+    WG "It's just swimming, Keisuke. I do it all the time for exercise at school you know."
     MC "No, it's not just that- this place, the water, you're in your element. It's an escape and a refuge for you, isn't it?"
     MC "I didn't want to do anything that would diminish it for you at a time in your life when you need it more than ever."
-    show BBW swim-casual-sad
-    BBW "That's very sweet of you Keisuke."
-    $setAffection("BBW", 1)
-    BBW "{i}Sigh{/i}... You're not wrong. I had hoped my yearly summer retreat from my childhood would help bring me solace by taking me back to a time and place from before I started growing."
-    show BBW swim-casual-worried
-    BBW "Such a silly notion really. Even if it could all go away for a week I'd still have to return to school where it would all be waiting for me."
-    show BBW swim-casual-neutral-2
-    BBW "I guess even here I'll have to learn to live with how my body is changing. Swimming helps me do that. Thank you for joining me today Keisuke."
+    show WG swim-casual-sad
+    WG "That's very sweet of you Keisuke."
+    $setAffection("WG", 1)
+    WG "{i}Sigh{/i}... You're not wrong. I had hoped my yearly summer retreat from my childhood would help bring me solace by taking me back to a time and place from before I started growing."
+    show WG swim-casual-worried
+    WG "Such a silly notion really. Even if it could all go away for a week I'd still have to return to school where it would all be waiting for me."
+    show WG swim-casual-neutral-2
+    WG "I guess even here I'll have to learn to live with how my body is changing. Swimming helps me do that. Thank you for joining me today Keisuke."
     MC "You're welcome- I wouldn't have missed it for anything!"
-    show BBW swim-casual-happy
-    BBW "Hehe! Well you've certainly proved that."
+    show WG swim-casual-happy
+    WG "Hehe! Well you've certainly proved that."
     MC "So, tell me more about this place then. It sounds like you have a lot of good memories from spending summers here growing up."
-    BBW "I do. It's why I came to love swimming so much, and even volleyball like I mentioned last night."
-    show BBW swim-casual-neutral
-    BBW "My parents, especially my father, were always busy when I was young. Still are."
-    BBW "I don't begrudge them for it, they taught me how much work it takes to be successful in business because of that. But when we stayed here, they got to spend time with me."
-    BBW "As a little girl, I loved finally getting all the attention. Each year we came, I never wanted to leave."
-    show BBW swim-casual-sad
-    BBW "I guess part of me hasn't quite grown out of that yet."
+    WG "I do. It's why I came to love swimming so much, and even volleyball like I mentioned last night."
+    show WG swim-casual-neutral
+    WG "My parents, especially my father, were always busy when I was young. Still are."
+    WG "I don't begrudge them for it, they taught me how much work it takes to be successful in business because of that. But when we stayed here, they got to spend time with me."
+    WG "As a little girl, I loved finally getting all the attention. Each year we came, I never wanted to leave."
+    show WG swim-casual-sad
+    WG "I guess part of me hasn't quite grown out of that yet."
     MC "I don't know if anyone ever grows out of that. Isn't that what nostalgia is? Who doesn't get sentimental from time to time about childhood memories?"
     MC "Maybe it's just something silly about us we have to learn to accept and not worry about so much."
-    show BBW swim-casual-haughty
-    BBW "Perhaps you're right."
-    show BBW swim-casual-surprised
+    show WG swim-casual-haughty
+    WG "Perhaps you're right."
+    show WG swim-casual-surprised
     "Alice began to take a look around, her expression looked like she had just remembered something she had forgotten."
-    BBW "Oh! We should get going. This far down isn't part of our beachfront. These are all private beaches, so it would be frowned upon if we were caught loitering on someone else's beach."
-    show BBW swim-casual-neutral-2
-    BBW "I'm going to swim back. You're welcome to walk instead, you know."
+    WG "Oh! We should get going. This far down isn't part of our beachfront. These are all private beaches, so it would be frowned upon if we were caught loitering on someone else's beach."
+    show WG swim-casual-neutral-2
+    WG "I'm going to swim back. You're welcome to walk instead, you know."
     MC "Nah, I can do it. It's the backstroke this time, right? I can always just stop and float on my back if I get tired."
     MC "Just don't expect me to catch up to you any time soon. I'm going to take it nice and slow this time."
-    BBW "I'll be checking up on you anyway just in case."
+    WG "I'll be checking up on you anyway just in case."
     "Wading into the water, Alice turned around, smiling at me as she waved goodbye for now before falling backwards into the ocean to swim back the rest of the way."
-    hide BBW with dissolve
+    hide WG with dissolve
     "This time I wasn't surprised at her sudden departure and I didn't feel the need to immediately start chasing after her like before."
     MC "Well, I certainly got my workout in for today."
     $setSkill("Athletics", 2)
@@ -10226,18 +11150,19 @@ label BBW049A:
     "I slowly drifted along making my way back to Alice's beach house, taking about four to five times as long to get back as I did going away."
     jump daymenu
 
-label BBW049B:
-    $setProgress("BBW", "BBW049C")
+label WG050:
+    $setProgress("WG", "WG051")
     scene Summer Beach with fade
-    play music BBW
+    play music WG
     "When I finally realized I arrived at my destination I began to walk back towards the house."
     "Looking up, I could see the servants were just finishing up setting out a fully catered beachside lunch under the tent. Looks like they had set up a volleyball net at Alice's request as well."
-    show BBW swim-casual-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Looks like you managed to find your way back, slowpoke."
-    show BBW swim-casual-happy
+    show WG swim-casual-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Looks like you managed to find your way back, slowpoke."
+    show WG swim-casual-happy
     "Alice grinned at her subtle chiding of my chosen pace. I could tell she was still appreciative of my earlier efforts though."
-    BBW "You're just in time for lunch. Come join us."
+    WG "You're just in time for lunch. Come join us."
     MC "Whoa!"
     "As I walked up closer, I got a much better look at the full splendor of the spread before us."
     "As to be expected with Alice, the usual expectation I had of some smashed sandwiches at the bottom of a cooler for a beachside lunch wouldn't do."
@@ -10250,21 +11175,53 @@ label BBW049B:
     "For dessert there were these perfectly sectioned squares of what appeared to be real deal lemon meringue pie. I'd only ever had the crummy cheap yellow snack cakes that tried to imitate the real thing."
     "The only thing missing was a swan carved out of ice."
     Takada "Miss Nikumaru and guests, lunch is served. Please, enjoy."
-    show BBW swim-casual-neutral
-    BBW "Thank you Takada."
-    BBW "Aida, please go ahead, guests first."
+    show WG swim-casual-neutral
+    WG "Thank you Takada."
+    WG "Aida, please go ahead, guests first."
     PRG "Um... thank you, Alice. But, are you sure?"
-    BBW "As the hostess, I insist."
+    WG "As the hostess, I insist."
     "Unbeknownst to Alice, she would eat those words rather than get to eat any food for what seemed like an unnecessarily long delay."
     "Whether it was Aida's naturally timid and hesitant disposition, or deep contemplation concerning her changing tastes due to her pregnancy, Aida hovered indecisively in front of the food display to the point that it began to feel awkward."
     "She was standing too close to just cut in front of her, but far enough from the table she was standing in the way of everything."
-    BBW "..."
+    WG "..."
     "Alice shot me a side glance, trying to say without saying out loud 'what is going on?'"
     MC "... {i}shrug{/i}"
     "I could tell Alice was getting frustrated. She was obviously very hungry by this point."
     "I myself was feeling almost ravenous after this morning's swim session, and I knew my appetite at its biggest couldn't match Alice's at its smallest."
     "I could tell Alice wanted to say something, if not outright shove Aida out of the way by this point, but even at her most impatient, she'd never lose her composure or go back on her obligation as a hostess."
-    "I thought I should say something before Alice felt like she had to."
+    "I thought maybe I should say something before Alice felt like she had to."
+    menu:
+        "Distract Aida so Alice can eat.":
+            jump WG050_c1_1
+        "Help Aida pick something.":
+            jump WG050_c2_1
+        "Don't be rude, just be patient.":
+            jump WG050_c3_1
+
+label WG050_c1_1:
+	$setVar("WGSSPR", getVar("WGSSPR") +1)
+	"Someone had to move this show along. Nothing was going to get in the way of Alice chowing down if I had anything to say about it."
+	"I walked up beside Aida, taking stock of the banquet along with her."
+	MC "A bit overwhelming isn’t it?"
+	PRG "Hm-hmm. It all looks so good... but my nose has been really sensitive lately. I-I don’t really know what I feel like."
+	MC "I’m having trouble making up my mind too. I was planning on following Alice’s lead to see what she was going to start with."
+	show WG swimsuit-haughty
+	"Alice perked up when she realized I gave her an in to not have to wait any longer."
+	PRG "That does sound like a good idea. I need more time to make up my mind."
+	WG "It is a tad bit overwhelming isn’t it? Don’t be afraid to take a little bit and come back for more later. I won’t be offended if you choose not to finish your initial selection."
+	WG "That being said, I have already decided what I will be selecting."
+	MC "By all means, lead the way, we’ll be right behind you."
+	show WG swimsuit-neutral
+	WG "If you insist."
+    "Alice didn’t seem too keen on how going first reflected on her hospitality as the hostess; nonetheless, her appreciation was still evident in her tone."
+    "A big girl has to eat after all, and I felt a personal responsibility to remove any and all obstacles to make sure that happened. Besides, there was plenty of food to go around— or at least I had thought."
+    "Seeing Alice’s ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds."
+    "It made me question whether or not her initial offer to go last served a more practical purpose."
+    WG "Here, Aida. I recommend having one of these lemon meringue squares. Perhaps something sweet and tart will help cleanse your palette and stimulate your appetite?"
+    PRG "That does sound good, Alice. Thank you."
+    jump afterchoice_WG050
+
+label WG050_c2_1:
     MC "Is everything alright Aida? It's okay if you aren't feeling hungry."
     PRG "It all looks so good, but my nose has been really sensitive lately.  With the ocean right there, all I can smell is salt and fish.  So... maybe something sweet would be nice?"
     MCT "Bingo! Okay, we can move this along."
@@ -10274,21 +11231,46 @@ label BBW049B:
     "I grabbed a plate and served up a piece for Aida, hoping to move things along faster to make up for the delay."
     show PRG swim-casual-neutral
     PRG "Thank-you Hotsure-san."
+    $setAffection("PRG", 1)
     "As Aida walked back to her seat on the cushions under the tent, Alice looked at me while shaking her head, expressing 'thank you' with an exasperated smile for what I just did."
-    $setAffection("BBW", 1)
+    $setAffection("WG", 1)
     "I decided to forgo my turn so Alice could, in the more figurative sense, get down to business."
     MC "Ladies first- I insist."
-    show BBW swim-casual-haughty
-    BBW "Such a gentleman."
+    show WG swim-casual-haughty
+    WG "Such a gentleman."
     "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
-    "Seeing Alice's ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds."
+    "Seeing Alice's ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds—"
     "It made me question whether or not her initial offer to go last served a more practical purpose."
+    jump afterchoice_WG050
+
+label WG050_c3_1:
+	"..."
+	show PRG swimsuit-embarrassed
+	"Instead of coming to a decision, Aida seemed to freeze up as she realized she was holding up the line with her indecisiveness."
+	show WG swimsuit-stern
+	MCT "Well this doesn’t seem to be working."
+	MC "Is everything alright Aida? It’s okay if you aren’t feeling hungry."
+	PRG "S-Sorry. I just can’t seem to make up my mind. I think I’ll have one of these lemon squares for now."
+	"Aida sheepishly took one of the squares from the dessert tray and walked back under the tent."
+    "Honestly, she didn’t need to be so embarrassed, it’s understandable how sensitive her sense of taste and smell could be in her condition."
+    "It all looked pretty good to me though, but not wanting to hold up Alice any further, I decided to let her go ahead of me."
+    MC "Uh, you can go first Alice. I’m not sure what I want either."
+    show WG swimsuit-doubt
+    WG "Honestly, I don’t understand this hesitancy,"
+    show WG swimsuit-neutral
+    WG "but thank you for offering."
+    "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
+    "By this point Alice was absolutely ravenous. She piled up her plate high and managed to fill every square centimeter of it in just a few seconds—"
+    "If I didn’t get enough for myself on my first go round I wasn’t sure if there was going to be anything left by the time Alice came back for seconds."
+    jump afterchoice_WG050
+
+label afterchoice_WG050:
     "As Alice took her plate back to the spot she had picked out to recline under the tent I decided it would be prudent to get what I wanted in one go on my plate."
     "I honestly did not know what else would be left if Alice decided to come back for seconds or thirds. I ended up taking a little bit of everything, since it all looked good."
     MC "This is really good!"
     "I exclaimed, taking my first bite as I sat down between the girls."
-    show BBW swim-casual-neutral
-    BBW "I'm glad you're enjoying it."
+    show WG swim-casual-neutral
+    WG "I'm glad you're enjoying it."
     "No sooner had I sat down than Alice had gotten back up for a second pass, leaving an empty plate in her stead. One of the servants quickly removed it from her seat after barely a few seconds."
     "On her way back, Alice's plate was stacked full again, this time with different dishes she had not taken the first time around. I was surprised, maybe even a little impressed, but I decided not to say anything."
     "Anyone would be hungry after a morning of swimming. If I don't stop staring, I might accidently call attention to it. I figured I better try to steer the conversation elsewhere."
@@ -10297,7 +11279,7 @@ label BBW049B:
     "I probably didn't need to worry about it, given how much food was set out, but part of me did think if she wanted to eat lunch, she'd better do it now before it was all gone."
     "By the time Aida came back to her seat with her food, this time with much less indecision involved, Alice was on her way back to the table to get dessert."
     "Curiosity got the better of me, but I didn't want to make her feel self-conscious. I adjusted my shoulders and neck so as to be looking at the ocean waters, belying my true gaze out of the corner of my eye."
-    show BBW swim-casual-neutral-2
+    show WG swim-casual-neutral-2
     "I was right to be cautious. Alice appeared to be checking to see if anyone was noticing her."
     "I wish she wouldn't continue to cling to this kind of pretense, especially around Aida and me of all people, but in all fairness, it would be difficult for anyone to not feel self-conscious with her growth."
     "Having determined to her knowledge that no one was looking, she proceeded to serve herself the remaining lemon meringue squares from the sheet pan."
@@ -10305,34 +11287,34 @@ label BBW049B:
     "I continued to pretend to pay no mind as she walked back to her seat with a plate full of treats, focusing my gaze down at my own plate instead."
     show PRG swim-casual-happy
     PRG "Oh, thank you, Alice! You didn't need to get up to bring us dessert."
-    show BBW swim-casual-surprised
-    BBW "Oh... well it was no trouble at all..."
-    BBW "I thought... we could all enjoy dessert together after this lovely meal- yes."
+    show WG swim-casual-surprised
+    WG "Oh... well it was no trouble at all..."
+    WG "I thought... we could all enjoy dessert together after this lovely meal- yes."
     "Unbeknownst to her, Aida's reflexive appreciation of what she interpreted as a nice gesture had left Alice absolutely mortified, judging by how the color had drained from her face and her hesitant reply."
     show PRG swim-casual-neutral
-    show BBW swim-casual-worried
+    show WG swim-casual-worried
     "Aida had been more preoccupied with her meal at the time, so she didn't notice like I did."
     "However, her remark clearly indicated that a normal individual would not have even considered the portion Alice had selected for herself was intended for only one person."
     PRG "Whew. I think I'm going to be pretty full by the time I finish what I have, though."
     MC "I'm good for now. Maybe I'll have one later, but don't save any on account of me."
     "I tried to play it off that her portion was not unreasonable for one person to finish."
-    show BBW swim-casual-haughty
+    show WG swim-casual-haughty
     "Having essentially gotten 'permission', in a sense, from both of us to finish the remaining dessert, Alice's expression visibly relaxed."
     "She proceeded to work through her dessert course, though perhaps not as fervently as she initially may have before Aida had said something."
     MC "I can see why you wanted to swim in the morning. Aren't you supposed to wait three hours after eating before swimming? That wouldn't have left much time before night."
-    show BBW swim-casual-neutral
-    BBW "That's just a common rumor. Swimming is no different than any other exercise where it may not be wise to exert yourself so intensely on a full stomach."
-    BBW "It comes from people worrying about getting cramps while swimming that could interfere with their ability to come up for air, but that problem is more related to hydration than if you just ate food."
+    show WG swim-casual-neutral
+    WG "That's just a common rumor. Swimming is no different than any other exercise where it may not be wise to exert yourself so intensely on a full stomach."
+    WG "It comes from people worrying about getting cramps while swimming that could interfere with their ability to come up for air, but that problem is more related to hydration than if you just ate food."
     MC "Makes sense. Three hours always sounded way too long to me anyway. Professional swimmers are in the pool almost all day- they can't just not eat."
-    BBW "Exactly. It's never been a problem for myself."
+    WG "Exactly. It's never been a problem for myself."
     MC "What did you have in mind for the rest of the day?"
-    BBW "Well as I mentioned last night, I would like to play some volleyball, especially since I have the both of you to play with. I haven't gotten to in quite some time."
-    BBW "I much prefer doing it on the beach. Less people on the court in sand volleyball increases the importance of strategic thinking and shot placement."
-    BBW "Plus, the sand is far more forgiving when diving for the ball."
+    WG "Well as I mentioned last night, I would like to play some volleyball, especially since I have the both of you to play with. I haven't gotten to in quite some time."
+    WG "I much prefer doing it on the beach. Less people on the court in sand volleyball increases the importance of strategic thinking and shot placement."
+    WG "Plus, the sand is far more forgiving when diving for the ball."
     MC "Sounds good. I'm up for it."
     "I began to get up and stretch to shake off the stiffness from the morning's previous activities."
-    BBW "Easy there Keisuke. I didn't mean right now. I appreciate the willingness and enthusiasm, but part of a well-planned vacation includes some scheduled rest."
-    BBW "Just because exercising after eating too soon isn't life threatening doesn't mean it's not prudent to wait a bit."
+    WG "Easy there Keisuke. I didn't mean right now. I appreciate the willingness and enthusiasm, but part of a well-planned vacation includes some scheduled rest."
+    WG "Just because exercising after eating too soon isn't life threatening doesn't mean it's not prudent to wait a bit."
     "Having finished her dessert, Alice proceeded to reposition herself between the beach furniture cushions under the tent. She laid down along the beach blanket over the sand while propping her head up against one of the cushions."
     "Once she had found what she deemed to be a sufficiently comfortable position, she interlocked her fingers and rested them on the cresting portion of her belly, partially covered up by her boobs."
     "Having just finished lunch, her belly was looking particularly full and round- more so than I had ever recalled."
@@ -10344,49 +11326,49 @@ label BBW049B:
     MC "Yeah, a little rest feels good..."
     jump daymenu
 
-label BBW049C:
-    $setProgress("BBW", "BBW050")
+label WG051:
+    $setProgress("WG", "WG052")
     scene Summer Beach Ocean with fade
     play music Peaceful
     "Whether it was from a food coma, the warm summer sun, or the pent-up exhaustion from the morning's swim, I must have dozed off."
-    show BBW swim-casual-neutral with dissolve
-    BBW "Are you awake? Honestly Keisuke, sometimes I wonder if you would just sleep forever if left to your own devices."
+    show WG swim-casual-neutral with dissolve
+    WG "Are you awake? Honestly Keisuke, sometimes I wonder if you would just sleep forever if left to your own devices."
     "Still in a sleepy haze, it took a second or two for things to come into focus. Alice was standing over me with her arms crossed, if she hadn't been bent over enough to look down at me, I certainly would not have been able to see her face over her belly."
     MC "Wha? Oh, yeah, guess I dozed off there."
-    BBW "I think we all did for a little bit, but it would be a waste of a day just to lay about."
-    BBW "You said you were up for playing some volleyball with me, so we're going to get that in before it gets too late in the day."
+    WG "I think we all did for a little bit, but it would be a waste of a day just to lay about."
+    WG "You said you were up for playing some volleyball with me, so we're going to get that in before it gets too late in the day."
     MC "Fine with me. I'm up for more after some food and rest."
-    show BBW swim-casual-haughty
-    BBW "Good. Come on, Aida is already waiting."
+    show WG swim-casual-haughty
+    WG "Good. Come on, Aida is already waiting."
     "The volleyball net was set up a short distance from the tent."
-    show BBW swim-casual-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show WG swim-casual-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "I'm assuming both of you are at least somewhat familiar with the rules of volleyball?"
+    WG "I'm assuming both of you are at least somewhat familiar with the rules of volleyball?"
     PRG "A little..."
     MC "Yeah, but it's been a while."
-    BBW "That's fine, we'll just stick with the basics. The obvious rules are you can't catch the ball, and the goal is to not let the ball touch the ground on your side."
-    BBW "You can't have any successive contacts with the ball, so you need to either send it over the net or pass it to a teammate. In sand volleyball only three total contacts are allowed per volley, but we'll ignore that for now."
-    BBW "The main skills you need to know are the forearm pass, and the set. These will help you keep the ball in the air and off the ground- even if you don't know anything else."
+    WG "That's fine, we'll just stick with the basics. The obvious rules are you can't catch the ball, and the goal is to not let the ball touch the ground on your side."
+    WG "You can't have any successive contacts with the ball, so you need to either send it over the net or pass it to a teammate. In sand volleyball only three total contacts are allowed per volley, but we'll ignore that for now."
+    WG "The main skills you need to know are the forearm pass, and the set. These will help you keep the ball in the air and off the ground- even if you don't know anything else."
     MC "Gotcha."
-    BBW "First I'll show you the set."
+    WG "First I'll show you the set."
     "Alice tossed the ball straight up, bringing her hands close together over her head, nearly touching her fingertips together she pushed it straight back up in the air once it came back down and made contact with her hands."
     "She did this a few times in a row, each time perfectly straight up, never taking her eyes off the ball as she continued to explain."
-    BBW "The trick is to use more of your fingers and not so much of your palms. This is mostly a set up move for your partner to line up a good shot over the net, which is why you want it to just float up and have a simple trajectory."
+    WG "The trick is to use more of your fingers and not so much of your palms. This is mostly a set up move for your partner to line up a good shot over the net, which is why you want it to just float up and have a simple trajectory."
     "Alice caught the ball and cradled it against her side after finishing her demonstration."
-    BBW "Make sense?"
+    WG "Make sense?"
     MC "Yeah, easy enough, I guess."
     PRG "I think so."
-    BBW "Good. The next main skill is called the forearm pass. As the name implies this lets you control the direction better when you return a volley in order to pass it to your teammate."
+    WG "Good. The next main skill is called the forearm pass. As the name implies this lets you control the direction better when you return a volley in order to pass it to your teammate."
     "Alice tossed the ball straight up again. She brought her hands together with one hand cradling a fist made with the other while she kept her arms straight."
     "The ball landed on the lower part of her forearms as she bumped it back up into the air. This time she had to adjust her placement a little bit as the ball moved more from side to side."
     "It still wasn't much repositioning though. Her control was excellent."
-    BBW "You want to make contact with your forearms. If it hits your wrist or hands, you have no control over how it will bounce off, and if it hits your upper arms, it won't go very far at all."
+    WG "You want to make contact with your forearms. If it hits your wrist or hands, you have no control over how it will bounce off, and if it hits your upper arms, it won't go very far at all."
     "Alice caught the ball to stop it again to see if we were following along."
-    BBW "Got that?"
+    WG "Got that?"
     MC "Makes sense to me."
     PRG "Mhmm."
-    BBW "Alright, time to put your attentiveness to the test. I'm going to pass the ball to one of you and you return it to me with either a pass or a set."
-    BBW "Once you return it to me, I'll pass it to the other. For now let's just try to keep it off the ground."
+    WG "Alright, time to put your attentiveness to the test. I'm going to pass the ball to one of you and you return it to me with either a pass or a set."
+    WG "Once you return it to me, I'll pass it to the other. For now let's just try to keep it off the ground."
     "{i}Bump{/i}"
     "Alice gently passed the ball to me with a nice, easy arc that was no problem to return back to her with a pass. She deflected my volley directly at Aida who was standing to my left as we formed a triangle."
     "Aida had no problem lofting up a nice and high set. We went back and forth like this for quite a while."
@@ -10396,31 +11378,31 @@ label BBW049C:
     "{i}Bump{/i}"
     MC "Fifteen"
     "{i}Bump{/i}"
-    BBW "Sixteen"
+    WG "Sixteen"
     "{i}Bump{/i}"
     PRG  "Seventeen"
     "{i}Bump{/i}"
-    BBW "Eighteen"
+    WG "Eighteen"
     "{i}SPLAT{/i}"
     "In my eagerness to receive the ball I took a couple of extra unnecessary steps, only to receive it directly with my face, rather than my forearms."
     "Having missed the ball completely with my arms, and unable to correct its trajectory, it bounced right into the sand."
     show PRG swim-casual-surprised
-    show BBW swim-casual-neutral
+    show WG swim-casual-neutral
     PRG "A-Are you alright, Hotsure-san?"
-    BBW "I'm sure he's fine. He's endured much worse- that's for sure."
+    WG "I'm sure he's fine. He's endured much worse- that's for sure."
     "Alice was right, a light bump on the head from a failed return was nothing compared to a cannon shot to face from Akira."
     MC "Yeah, no big deal. I'm fine. Sorry to ruin our streak."
     show PRG swim-casual-neutral
-    BBW "It is not a big loss. You both maintained it for a sufficiently long period of time for me to think we're ready to play a real game."
+    WG "It is not a big loss. You both maintained it for a sufficiently long period of time for me to think we're ready to play a real game."
     MC "A real game? But there's only three of us. Don't we at least need four people?"
-    BBW "I'll make do. You and Aida will be on one team, and I will be the other. Considering your fledgling skills, this will be an appropriate handicap, but I get two volleys to keep it fair."
+    WG "I'll make do. You and Aida will be on one team, and I will be the other. Considering your fledgling skills, this will be an appropriate handicap, but I get two volleys to keep it fair."
     MC "Seems like it will be pretty hard to cover the whole court by yourself."
-    show BBW swim-casual-haughty
-    BBW "I'm up for the challenge."
+    show WG swim-casual-haughty
+    WG "I'm up for the challenge."
     "I hadn't known Alice to take on a challenge she genuinely thought she could not win, so she must have been feeling pretty confident in her volleyball skills."
-    BBW "Accurately serving is an advanced skill, and you can't hit the net on serve. In the
+    WG "Accurately serving is an advanced skill, and you can't hit the net on serve. In the
     interest of keeping the game moving, I'll play all time server, but you two can still score points like normal if you manage to have the ball land on my side."
-    BBW "Does that sound fair?"
+    WG "Does that sound fair?"
     MC "Fine for me. It's probably for the best."
     PRG "I'm okay with that."
     "We lined up as each of our respective teams on either side of the net. Alice eyed us both with a sly, possibly smug smile, as she lobbed up the ball and smacked it over our side of the net in what would be the first of many."
@@ -10434,9 +11416,9 @@ label BBW049C:
     "Alice set the ball again, placing it in the same spot, likely testing us to see if we had learned from our previous mistake. I jumped in front of it, landing a decent set which let Aida pass it over the net."
     MCT "A success!"
     "But it wasn't good enough as Alice just walked right up and lobbed it over both of us. She had placed her shot to take advantage of how we moved out of our positions and didn't reset."
-    BBW "A slight improvement."
+    WG "A slight improvement."
     MC "Better than last time at least."
-    BBW "You'll have to do better than that I'm afraid if you are going to score a point. I don't see how I can go easier on you than doing this all by myself."
+    WG "You'll have to do better than that I'm afraid if you are going to score a point. I don't see how I can go easier on you than doing this all by myself."
     "As the match continued, Aida and I continued to improve in our coordination. We were able to return more serves and more of Alice's return volleys, but at 0-7 we were still pitifully behind."
     "Alice definitely was good at this, but this was still kind of sad. We had to change something."
     MC "Aida, I have a plan."
@@ -10449,25 +11431,25 @@ label BBW049C:
     PRG "That should work..."
     PRG "I hope I don't let you down."
     MC "Don't worry, it's just for fun, but let's try our best anyway."
-    BBW "Are you ready yet?"
+    WG "Are you ready yet?"
     MC "This time- I think so."
     "Alice lobbed a serve to the back towards Aida. To her credit Aida stayed calm and passed me a nice gentle arc towards where I was standing near the net."
     "With a very light tap of my wrist I gave the ball just enough energy to make it over the net."
     "Alice realized what happened all too late, as she ran up to the front of the net. She dove into the sand with the hope of keeping the ball alive but she did not make it."
-    show BBW swim-casual-doubt
-    BBW "Hmph."
+    show WG swim-casual-doubt
+    WG "Hmph."
     "Alice dusted herself off."
-    BBW "And to think I was starting to go easy on you two."
+    WG "And to think I was starting to go easy on you two."
     "Our new strategy wasn't perfect, we still gave up a few points here and there, but we slowly started inching ahead. Alice's accuracy with the ball was excellent, but it became apparent she had overestimated her ability to cover the court."
     "Knowing that she had felt confident she could beat us, as the game continued it was increasingly clear to me that Alice was not nearly as adapted to her body's recent changes as I had initially thought from seeing her swim."
     "Instead of landing on her forearms, more than a few of her passes landed with a muted {i}BLUMP{/i} as they sank into the ample flesh of her boobs, rebounding with a much weaker trajectory than intended."
-    show BBW swim-casual-worried
-    BBW "Oh my... that hasn't happened before."
+    show WG swim-casual-worried
+    WG "Oh my... that hasn't happened before."
     "Her speed was impressive given her size, but the bulk of her thighs and her belly sticking so far out in front of her did not lend itself to an efficient running stride."
     "She jiggled all throughout her body, while her thighs rubbed together. Much more so than her speed, it was evident that her agility, the ability to change her direction to be in the right place, had been greatly affected by her added weight."
     "By the time we were able to return the ball over the net, Alice was not able to fully accelerate back towards the new spot she needed to be on the court."
-    show BBW swim-casual-angry
-    BBW "{i}Whew{/i}, 18-20. Match point!"
+    show WG swim-casual-angry
+    WG "{i}Whew{/i}, 18-20. Match point!"
     "Alice called the score like she had for each set. Alice looked flustered and tired. Aida and I were on match point. I don't know if she thought it was supposed to be easy, but she was clearly disappointed with her performance."
     "As she wound up for this serve, she looked determined. Something told me she was going to try blasting this one as hard as she could before we even got the chance to react."
     "She hadn't really done anything like that before though, probably not wanting to accidently beam Aida in the belly with the full force of her serve, but maybe now she was desperate enough to not care."
@@ -10476,75 +11458,77 @@ label BBW049C:
     "The ball hit the net. The slack let out on the upper part of the net before the ball tumbled harmlessly over the side, an illegal play on a serve."
     "It was certainly anti-climactic, but Aida and I won."
     MC "I guess that's game."
-    show BBW swim-casual-worried
-    BBW "That would be correct."
+    show WG swim-casual-worried
+    WG "That would be correct."
     show PRG swim-casual-happy
     PRG "I-I didn't think we would win! Great job Hotsure-san!"
     MC "Well it wasn't just me Aida, I needed your help."
     "Alice had a rather blank expression on her face in contrast to the fiery intensity seen just a few seconds ago."
     "No doubt she was trying to not visibly express her disappointment in herself. I didn't know how much good it would do, but I figured I'd try to cheer her up."
     MC "Alice, you were amazing. We barely won, and there were two of us!"
-    BBW "Not nearly amazing enough it would seem. You won according to the rules we agreed upon."
-    show BBW swim-casual-neutral
+    WG "Not nearly amazing enough it would seem. You won according to the rules we agreed upon."
+    show WG swim-casual-neutral
     show PRG swim-casual-neutral
-    BBW "I wouldn't have set them out as such if I thought it was not possible for me to win. I must admit, you both did better than I expected. Even my miss at the end could be attributed to your efforts to wear me down."
+    WG "I wouldn't have set them out as such if I thought it was not possible for me to win. I must admit, you both did better than I expected. Even my miss at the end could be attributed to your efforts to wear me down."
     MC "Well, that was technically the strategy. We weren't going to win just with skill."
-    BBW "Strategy is also a skill. A skill of yours I underestimated."
+    WG "Strategy is also a skill. A skill of yours I underestimated."
     MC "I guess next time we'll have to do a full two on two."
-    BBW "Perhaps, but that may be a while. Honestly, I didn't find it as enjoyable as I remembered, especially compared to swimming... It didn't really feel the same."
+    WG "Perhaps, but that may be a while. Honestly, I didn't find it as enjoyable as I remembered, especially compared to swimming... It didn't really feel the same."
     "It was unfortunate that something she had looked forward to on this vacation turned into another reminder about the changes going on in her body that she couldn't control."
     "I wanted to say something comforting, but my initial consolatory remarks had bounced right off. Besides, for the moment, she seemed keen on moving past it."
-    show BBW swim-casual-haughty
-    BBW "Speaking of which, Aida, if you're still feeling up for it, I believe I promised to give
+    show WG swim-casual-haughty
+    WG "Speaking of which, Aida, if you're still feeling up for it, I believe I promised to give
     you a swimming lesson."
     PRG "I'd like that. I almost forgot about it. Thanks for remembering."
-    BBW "Come with me."
+    WG "Come with me."
     scene Summer House Back with fade
-    show BBW swim-casual-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG swim-casual-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     "Alice led Aida down to the water. Alice alternated between demonstrating different techniques herself and helping to position Aida in the water so that she could mimic what she had just been shown."
     "I hung back down the beach at a slight distance, alternating between treading water and wading in the shallows."
     "I didn't want to be aloof and just stay back on the shore, but I felt it best to give them both some space so Aida's lesson could feel more private, since Alice would likely have to make some references to her pregnancy."
     "I could overhear a bit of what she was saying."
-    BBW "I know you can swim quite well Aida, but there is always more to learn. I'll show you something a bit more advanced."
-    BBW "Possibly the most important thing to teach you for now is the side stroke. It's not as well known, but it is an energy efficient way to move through the water."
-    BBW "It lets you keep your head above water at all times, and most importantly, your belly won't get in the way of your leg and arm movements. Like so."
+    WG "I know you can swim quite well Aida, but there is always more to learn. I'll show you something a bit more advanced."
+    WG "Possibly the most important thing to teach you for now is the side stroke. It's not as well known, but it is an energy efficient way to move through the water."
+    WG "It lets you keep your head above water at all times, and most importantly, your belly won't get in the way of your leg and arm movements. Like so."
     "Alice proceeded to demonstrate the sidestroke she spoke of. It involved kicking the legs in a scissors like motion while lying on the side with the arms spread out in opposite directions."
     "I'd seen it before, but not that often. In all honesty, I probably could have used it this morning to go the distance rather than exhaust myself."
     PRG "...is this good?"
-    BBW "You're doing just fine. Spread your legs and arms out further for a stronger stroke."
+    WG "You're doing just fine. Spread your legs and arms out further for a stronger stroke."
     "Alice for her part seemed to be enjoying herself. Her dour and frustrated expression from earlier when we were playing volleyball had turned into a content smile, as she carefully watched over her swimming pupil."
     "Much like how Alice wanted to bring me along to share how she enjoyed swimming, she was doing the same with Aida, but this time in a way that was suitable for her."
     "Earlier I couldn't find the words to help her feel better about what was undoubtedly a disappointing realization regarding her newfound dimensions and the ability to play volleyball like she used to."
     "But then I remembered what she said earlier 'I guess even here I'll have to learn to live with how my body is changing.' I suppose this was her way of doing that. After all, she seemed to have moved on from that incident rather quickly."
-    BBW "It looks like you've got the basics down Aida. You've taken to my advice quite well. I think that's enough for today, however. I don't see the need to push you any further."
+    WG "It looks like you've got the basics down Aida. You've taken to my advice quite well. I think that's enough for today, however. I don't see the need to push you any further."
     PRG "Thank you Alice. I am starting to feel tired. This was fun. I'd love to swim with you again sometime... if you'd want to."
-    BBW "Of course, Aida."
+    WG "Of course, Aida."
     "Alice turned to me."
-    show BBW swim-casual-neutral
-    BBW "Keisuke, we're going to head back inside. I believe I am satisfied with how well we managed to fill today with the scheduled activities. Please come join us."
+    show WG swim-casual-neutral
+    WG "Keisuke, we're going to head back inside. I believe I am satisfied with how well we managed to fill today with the scheduled activities. Please come join us."
     scene Summer Beach with fade
     "We walked back towards the tent to get our towels to dry off after coming out of the water. Aida went up ahead as I stopped to talk to Alice."
     MC "You looked like you were enjoying yourself out there with Aida. You're quite the swim instructor it would seem. It appears you already have two students."
-    show BBW swim-casual-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Well, if you enjoy something, isn't it natural to want to share that with others?"
+    show WG swim-casual-haughty at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG swim-casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Well, if you enjoy something, isn't it natural to want to share that with others?"
     MC "That is true. Passion can be infectious. Even though I'm feeling worn out, today was a lot more fun than a lazy day on the beach."
-    BBW "That's the advantage of structure, Keisuke. There's great satisfaction to be found in an accomplished day that eludes those who sleep halfway through it."
+    WG "That's the advantage of structure, Keisuke. There's great satisfaction to be found in an accomplished day that eludes those who sleep halfway through it."
     "At this point, I wasn't sure if she was just making a general observation or was trying to drive home a point with a not-so-subtle jab at my tendency to hit the snooze button."
-    BBW "But it was indeed a full day and I'm feeling ready for some rest myself. I'm actually surprised you managed to keep up today, Keisuke."
-    BBW "It just goes to show me you have a lot of untapped potential. Perhaps all that's missing is the proper motivation..."
-    show BBW swim-casual-aroused
+    WG "But it was indeed a full day and I'm feeling ready for some rest myself. I'm actually surprised you managed to keep up today, Keisuke."
+    WG "It just goes to show me you have a lot of untapped potential. Perhaps all that's missing is the proper motivation..."
+    show WG swim-casual-aroused
     "Alice's expression turned to a smug, yet sultry smile. My 'proper motivation' was apparently no secret to her."
-    show BBW swim-casual-neutral
-    BBW "Well, come on now. Let's get dried off, Aida is already ahead of us."
+    show WG swim-casual-neutral
+    WG "Well, come on now. Let's get dried off, Aida is already ahead of us."
     "We both walked back to the tent as Aida was finishing drying off. I started rubbing my towel through my hair, knowing nothing would get dry if that wet mess was still dripping all over me."
     PRG "I think I'm going to head in. I'd like to lie down for a while, if that's okay."
-    BBW "Think nothing of it. Please go ahead Aida, we'll catch up to you."
+    WG "Think nothing of it. Please go ahead Aida, we'll catch up to you."
     "Not thinking much of it at first, I was standing behind Alice when I noticed her bending over to get her beach towel."
     "{i}RIIIIP{/i}"
-    show BBW swim-casual-surprised
-    BBW "..."
+    show WG swim-casual-surprised
+    WG "..."
     MC "...!"
     "My head would have snapped to attention from the sound, if my gaze hadn't already been transfixed on the sight unfolding before me."
     "Alice had ripped her swimsuit."
@@ -10554,11 +11538,11 @@ label BBW049C:
     "Part of me wanted to stop to drink in the sight of Alice's fully exposed cheeks of her giant, plump ass. At this point however, between Alice's shocked, embarrassed expression, and the stupefied look on my face, Aida was going to realize something was up if I didn't think of something fast."
     menu:
         "Pretend nothing happened.":
-            jump BBW049C_c1
+            jump WG051_c1
         "Come up with a distraction.":
-            jump BBW049C_c2
+            jump WG051_c2
 
-label BBW049C_c1:
+label WG051_c1:
     show PRG swim-casual-worried
     PRG "Something wrong?? You both look a little flushed.. Did you lose something in the water?"
     MC "What?! No, I don't think so."
@@ -10570,15 +11554,15 @@ label BBW049C_c1:
     "Aida walked back over to Alice, rummaging through her beach bag. Finally finding what she was looking for she looked up."
     show PRG swim-casual-surprised
     PRG "Oh! Um... {size=-6}I see{/size}"
-    show BBW swim-casual-angry
+    show WG swim-casual-angry
     "No longer having to be subtle Alice quickly tried to wrap her towel around herself."
     "Obviously flustered and not thinking clearly, she tried to wrap her beach towel up high over her waist, but that didn't leave enough length left for her to keep it wrapped around herself after going over her belly."
     "Embarrassed even further, she had to redo her attempt to cover herself, this time only around her hips, which easily stayed in place with the weight of her belly pressing down on the towel as she wore it."
-    BBW "Hmph, so difficult to find quality materials. I expected this swimsuit to hold up for much longer than just one summer vacation. How disappointing."
+    WG "Hmph, so difficult to find quality materials. I expected this swimsuit to hold up for much longer than just one summer vacation. How disappointing."
     MCT "Well at least Alice was able to save face by blaming the swimsuit for being substandard quality."
-    show BBW swim-casual-worried
-    BBW "*{i}Sigh{/i}... Thank you Aida."
-    BBW "Perhaps I didn't reapply sunscreen enough today. All the more reason for us to head inside after a long day."
+    show WG swim-casual-worried
+    WG "*{i}Sigh{/i}... Thank you Aida."
+    WG "Perhaps I didn't reapply sunscreen enough today. All the more reason for us to head inside after a long day."
     show PRG swim-casual-neutral
     "Alice's frustration quickly turned into dejection once she realized she couldn't even hide her own embarrassment anymore. I felt sad and frustrated for her."
     "She came to her family's vacation home to get away for awhile and take her mind off of the effects of her growth."
@@ -10588,11 +11572,11 @@ label BBW049C_c1:
     show PRG swim-casual-happy
     PRG "Yes, I agree. Thank you Alice! The food was great as well."
     MC "That too. I was blown away by the food."
-    BBW "I'm glad you two enjoyed it. I had fun too... {size=-6}for the most part.{/size}. Right now, I'm looking forward to cleaning off with a warm shower. Let's head inside."
+    WG "I'm glad you two enjoyed it. I had fun too... {size=-6}for the most part.{/size}. Right now, I'm looking forward to cleaning off with a warm shower. Let's head inside."
     "It was an unfortunately dour note to end on what had been an otherwise great day. I wondered if I could have better preserved Alice's feelings if I would have distracted Aida from noticing she had torn her swimsuit."
     jump daymenu
 
-label BBW049C_c2:
+label WG051_c2:
     show PRG swim-casual-worried
     PRG "Is everything alright? You both look like something is wrong. Did you lose something in the water?"
     "I continued to run my beach towel through my hair as I took a couple of steps towards Aida, blocking her line of sight to Alice."
@@ -10600,37 +11584,37 @@ label BBW049C_c2:
     PRG "I didn't think you wore any sandals today, Hotsure-san."
     "Damn! She noticed. Apparently, I needed a more elaborate deception than a simple distraction."
     MC "Exactly! I forgot to bring it entirely! So therefore, it must still be in my guestroom. Nothing to worry about!"
-    show BBW swim-casual-neutral
+    show WG swim-casual-neutral
     "Looking back out of the corner of my eye, I could see Alice took the time afforded by my ruse to cover her bottom half with her beach towel, leaving Aida none the wiser."
     show PRG swim-casual-neutral
     PRG "Oh good!"
-    BBW "Yes, quite the relief, though it is rather careless to forget something like that in the first place, Keisuke."
+    WG "Yes, quite the relief, though it is rather careless to forget something like that in the first place, Keisuke."
     MC "Heh, yeah that's true."
-    BBW "Aida I'm sure you must be tired. Don't let us detain you if you would like to lie down for a while before dinner this evening."
+    WG "Aida I'm sure you must be tired. Don't let us detain you if you would like to lie down for a while before dinner this evening."
     PRG "Yeah, I think I will. I am a little tired. Thanks Alice."
     "After watching Aida walk back towards the beach house Alice turned to me."
     hide PRG with dissolve
-    BBW "That was very chivalrous of you to act in order to preserve a lady's honor."
+    WG "That was very chivalrous of you to act in order to preserve a lady's honor."
     "At this point I started to blush. Aida may have been oblivious to my act, but Alice was keen to what I had been up to."
     MC "I... I don't know what you mean. I guess I looked panicked for a second when I thought I lost a pair of sandals in the ocean. You know how concerned Aida is about that kind of stuff."
-    show BBW swim-casual-happy at Position(xalign=0.5, yalign=1.0) with dissolve
+    show WG swim-casual-happy at Position(xalign=0.5, yalign=1.0) with dissolve
     "Me playing dumb about the whole ordeal brought a coy smile to Alice's face."
-    $setAffection("BBW", 1)
-    BBW "Sure, Keisuke."
-    BBW "Thanks for a lovely day today. I had fun."
+    $setAffection("WG", 1)
+    WG "Sure, Keisuke."
+    WG "Thanks for a lovely day today. I had fun."
     MC "I should be saying that to you, since you're the host. This whole vacation has been amazing."
-    BBW "I'm glad you're enjoying yourself. I did have one question for you though."
+    WG "I'm glad you're enjoying yourself. I did have one question for you though."
     MC "What was that?"
-    show BBW swim-casual-aroused
+    show WG swim-casual-aroused
     "Alice's voice changed to a sultry tone as she sashayed her hips when she asked the question."
-    BBW "Did you get a good look?"
+    WG "Did you get a good look?"
     "I didn't really know what to say, but the heat I felt on my cheeks at that moment was more than just the summer air."
-    BBW "Hmm, that's what I thought."
-    BBW "Keisuke dear, next time do remember to reapply sunscreen. Your face appears to have gotten sunburnt. {i}*Wink!*{/i}"
+    WG "Hmm, that's what I thought."
+    WG "Keisuke dear, next time do remember to reapply sunscreen. Your face appears to have gotten sunburnt. {i}*Wink!*{/i}"
     jump daymenu
 
-label BBW050:
-    $setProgress("BBW", "BBW051")
+label WG052:
+    $setProgress("WG", "WG053")
     scene Summer Guest Bedroom with fade
     play music Peaceful
     "The early morning sunlight crept through my window, illuminating my room as I checked and rechecked my bags."
@@ -10660,72 +11644,72 @@ label BBW050:
     scene Summer Balcony Exterior with fade
     "With a defeated sigh, I trudged over to the balcony. Alice was right though, the sunrise on this balcony is something to behold."
     "It was at that moment I felt something soft press into my back. No, not just soft, but warm as well. In fact I'm pretty sure I know what's behind me."
-    show BBW summer-int-sg-neutral with dissolve
-    BBW "If you are hoping, perchance, to find your brush fallen off the balcony... I am sorry to say that you will not find it there."
+    show WG summer-int-sg-neutral with dissolve
+    WG "If you are hoping, perchance, to find your brush fallen off the balcony... I am sorry to say that you will not find it there."
     "Turning around, I greeted Alice with a beaming smile. Just seeing her so relaxed put my stressed mind at ease."
-    BBW "Here, you left it on the beach."
+    WG "Here, you left it on the beach."
     MC "My brush! How did you find it?"
-    BBW "The better question is how did you manage to lose it? It very clearly stands out in the sand."
+    WG "The better question is how did you manage to lose it? It very clearly stands out in the sand."
     MC "I guess my mind was focused on... other things at the time."
-    show BBW summer-int-sg-happy
+    show WG summer-int-sg-happy
     "Her calm smile quickly turned into a pleased smirk."
-    BBW "If you continue to misplace this brush, I am going to have to make you wear it like a necklace."
-    show BBW summer-int-sg-neutral
-    BBW "That way I won't have to worry about retrieving it for you anymore."
+    WG "If you continue to misplace this brush, I am going to have to make you wear it like a necklace."
+    show WG summer-int-sg-neutral
+    WG "That way I won't have to worry about retrieving it for you anymore."
     MC "H-Hey, let's not be too hasty."
-    show BBW summer-int-sg-neutral-2
-    BBW "I am just simply teasing you, Keisuke."
+    show WG summer-int-sg-neutral-2
+    WG "I am just simply teasing you, Keisuke."
     MC "Oh, right. You had me going for a second there."
-    show BBW summer-int-sg-neutral
-    BBW "I'm going to miss seeing the sunrise..."
+    show WG summer-int-sg-neutral
+    WG "I'm going to miss seeing the sunrise..."
     "Alice shifted her head to look over the balcony. Her eyes sparkled as they caught the morning lights."
     MC "Me too, but hey there's always next year, yeah?"
-    show BBW summer-int-sg-worried
+    show WG summer-int-sg-worried
     "Alice looked a bit worried at what I said. Her jovial demeanor sank away slowly."
-    BBW "Right..."
+    WG "Right..."
     MC "...You're worried that your growth will prevent you from coming here again, aren't you?"
-    show BBW summer-int-sg-surprised
-    BBW "No! Not at all, not in the slightest."
-    show BBW summer-int-sg-worried
-    BBW "..."
+    show WG summer-int-sg-surprised
+    WG "No! Not at all, not in the slightest."
+    show WG summer-int-sg-worried
+    WG "..."
     MC "Alice-"
     menu:
         "You know that we'll find a way to make it, no matter what.":
-            jump BBW050_c1_1
+            jump WG052_c1_1
         "Even if it's impossible to bring you to the beach- I'll bring the beach to you!":
-            jump BBW050_c1_2
+            jump WG052_c1_2
 
-label BBW050_c1_1:
-    $setAffection("BBW", 1)
-    show BBW summer-int-sg-haughty
-    BBW "You're right, where there is a will there's a way."
-    jump BBW050_c1_after
+label WG052_c1_1:
+    $setAffection("WG", 1)
+    show WG summer-int-sg-haughty
+    WG "You're right, where there is a will there's a way."
+    jump WG052_c1_after
 
-label BBW050_c1_2:
-    $setAffection("BBW", 3)
-    show BBW summer-int-sg-happy
+label WG052_c1_2:
+    $setAffection("WG", 3)
+    show WG summer-int-sg-happy
     "Alice couldn't help but giggle at my comment."
-    BBW "Oh yeah? And how would you do that?"
+    WG "Oh yeah? And how would you do that?"
     MC "I'm sure that excavators aren't that expensive, we can get loads of sand from here and bring it back!"
     "My tone of voice was clearly joking, but I couldn't help but get into it as Alice started to laugh."
     MC "And if we need to, we can just put some seawater in a water bottle. And boom, we have a beach at home."
     "Alice's worry was completely gone. Her spirits had been lifted by my rather absurd suggestion."
-    BBW "To be honest, I'm already taking the best thing back with me."
+    WG "To be honest, I'm already taking the best thing back with me."
     MC "Oh yeah, and what's that?"
-    BBW "You, Keisuke..."
+    WG "You, Keisuke..."
     "I couldn't help but furiously blush at her comment. Thankfully, without my brush, my bangs obscured my red face."
-    jump BBW050_c1_after
+    jump WG052_c1_after
 
-label BBW050_c1_after:
-    show BBW summer-int-sg-neutral
-    BBW "We should probably check out with the butlers as well."
+label WG052_c1_after:
+    show WG summer-int-sg-neutral
+    WG "We should probably check out with the butlers as well."
     MC "Good point."
     stop music
     scene Summer Living Room with fade
-    play music BBW
+    play music WG
     Lee "Mr. Kei, I couldn't find your brush anywhere!"
-    show BBW summer-int-sg-neutral with dissolve
-    BBW "Oh, speak of the devil."
+    show WG summer-int-sg-neutral with dissolve
+    WG "Oh, speak of the devil."
     MC "Heh, don't worry, Alice found it for me."
     Lee "Oh really? Huh, and here I was thinkin' about just secretly buying you a new one!"
     Shino "You should know that Mr. Hotsure requires a specific brush. Standard commercial brushes will only get stuck."
@@ -10740,12 +11724,12 @@ label BBW050_c1_after:
     "Shino shot her gaze over to me, eyes stern with doubt."
     Shino "Is this true?"
     MC "Y-Yeah, I always pack my own bags."
-    show BBW summer-int-sg-haughty
-    BBW "Hmmph, you try to pack your own bags, but who helps you with space management?"
+    show WG summer-int-sg-haughty
+    WG "Hmmph, you try to pack your own bags, but who helps you with space management?"
     MC "...I mostly pack my own bags."
     Takada "There is no need to be so strict today, Shino. The young miss and her companions are leaving soon."
-    show BBW summer-int-sg-neutral-2
-    BBW "That is correct, Takada. We simply wanted to thank you all for being here for us."
+    show WG summer-int-sg-neutral-2
+    WG "That is correct, Takada. We simply wanted to thank you all for being here for us."
     Takada "I wouldn't miss it for the world."
     Shino "I'll always be by your side to help, miss Alice."
     Lee "Yeah! This was great fun!"
@@ -10757,38 +11741,38 @@ label BBW050_c1_after:
     scene RV Interior with fade
     play music Peaceful
     "Looking out the window, I saw the servants slowly shrink into the distance. The home disappearing from sight not long after them."
-    show BBW summer-int-sg-happy with dissolve
-    BBW "Keisuke, thank you."
+    show WG summer-int-sg-happy with dissolve
+    WG "Keisuke, thank you."
     MC "Huh, for what?"
-    BBW "For accepting my invitation to accompany me. This quite possibly... no, this vacation was the most enjoyable one I've had at the beach home."
+    WG "For accepting my invitation to accompany me. This quite possibly... no, this vacation was the most enjoyable one I've had at the beach home."
     MC "Ah, c'mon. I really couldn't have added that much."
-    show BBW summer-int-sg-neutral-2
-    BBW "You needn't be so modest, my mind wasn't set on going for the longest time."
-    BBW "If you hadn't accepted my offer, my plans for the summer should have been drastically different."
+    show WG summer-int-sg-neutral-2
+    WG "You needn't be so modest, my mind wasn't set on going for the longest time."
+    WG "If you hadn't accepted my offer, my plans for the summer should have been drastically different."
     MC "You didn't really expect me to turn down an offer like this, right?!"
-    show BBW summer-int-sg-neutral
-    BBW "No no, the idea of you denying my offer was an impossibility."
-    show BBW summer-int-sg-sad
-    BBW "But due to my mother and father being unable to attend this year, my heart refused to even go."
-    show BBW summer-int-sg-happy
-    BBW "But once I came to the conclusion that you could join me, it felt like a weight had been lifted."
-    BBW "So... Thank you, is all I want to say."
+    show WG summer-int-sg-neutral
+    WG "No no, the idea of you denying my offer was an impossibility."
+    show WG summer-int-sg-sad
+    WG "But due to my mother and father being unable to attend this year, my heart refused to even go."
+    show WG summer-int-sg-happy
+    WG "But once I came to the conclusion that you could join me, it felt like a weight had been lifted."
+    WG "So... Thank you, is all I want to say."
     "Alice blushed slightly, her smile sincere."
-    show BBW summer-int-sg-haughty
-    BBW "It's a long way back to the campus, and my time was spent preparing to leave this morning."
-    BBW "I am going to rest for the rest of the return trip, and I recommend that you do the same."
-    show BBW summer-int-sg-neutral
+    show WG summer-int-sg-haughty
+    WG "It's a long way back to the campus, and my time was spent preparing to leave this morning."
+    WG "I am going to rest for the rest of the return trip, and I recommend that you do the same."
+    show WG summer-int-sg-neutral
     "The rest of the trip back was calm, Alice quietly resting as my own eyelids grew heavy."
     "Even though I know that the only thing waiting for me is more school work, the fact that I'll still have Alice by my side, makes everything seem like it'll turn out fine."
     jump daymenu
 
-label BBW051:
+label WG053:
     scene Dorm Interior with fade
     $setSize(4)
     $setTimeFlag("size4")
-    $setProgress("BBW", "BBW052")
+    $setProgress("WG", "WG054")
     "I have the tickets in hand when my phone buzzes from a text. It's from Alice."
-    BBWCell "Head over when you are presentable, I'm ready."
+    WGCell "Head over when you are presentable, I'm ready."
     "I check myself over again since I'm dressing far more formally than I have on any of our previous dates. Straightening my tie, I head towards her dorm."
     $setTime(TimeEnum.EVE)
 
@@ -10806,376 +11790,377 @@ label BBW051:
     scene black with fade
     play music MoonlightSonata
     play sound Knock
-    BBW "Come in."
+    WG "Come in."
 
-    scene Dorm BBW with fade
+    scene Dorm WG with fade
     "Closing the door behind me I notice Alice standing in front of her makeup mirror putting on lipstick. Standing in front of me is Alice, wrapped in a floor-length dress. Out of all her outfits so far, this one was by far the one I think I liked the most."
-    show BBW dress-neutral with dissolve
-    BBW "Do you recognize the piece playing Kei?"
+    show WG dress-neutral with dissolve
+    WG "Do you recognize the piece playing Kei?"
     if getSkill("Art") > 4:
          MC "It's Beethoven's Moonlight Sonata. At least one section of it, correct?"
-         show BBW dress-happy
-         BBW "It is indeed, it's good to see the classics are still appreciated."
+         show WG dress-happy
+         WG "It is indeed, it's good to see the classics are still appreciated."
          MC "It's a piece that I'm sure many recognize but few know the name of, most classical pieces are that way."
 
     else:
         MC "Sounds like a normal classical piece of music."
-        show BBW dress-angry
-        BBW "I do hope it would be a bit more than a normal classical piece, seeing as it's rather famous."
+        show WG dress-angry
+        WG "I do hope it would be a bit more than a normal classical piece, seeing as it's rather famous."
         MC "Sorry, suppose it just didn't ring any bells for me. It's not exactly within my avenue of musical interest."
-    show BBW dress-neutral
-    BBW "It's a wonderful song regardless, that deserves its own recognition. Though you aren't here to discuss my music choices are you. You've been rather vague with me on exactly what you are planning with me tonight. Care to layout your grand scheme?"
+    show WG dress-neutral
+    WG "It's a wonderful song regardless, that deserves its own recognition. Though you aren't here to discuss my music choices are you. You've been rather vague with me on exactly what you are planning with me tonight. Care to layout your grand scheme?"
     menu:
         "Tell her the true plans":
-            jump BBW051_c1_1
+            jump WG053_c1_1
         "Tell her to wait":
-            jump BBW051_c1_2
+            jump WG053_c1_2
         "Tell her false plans":
-            jump BBW051_c1_3
+            jump WG053_c1_3
 
-label BBW051_c1_1:
+label WG053_c1_1:
     MC "Well I guessed that since we've done restaurants for the last few dates, a change of pace would be nice."
-    show BBW dress-happy
-    BBW "Oh? Is that your plan mister?"
+    show WG dress-happy
+    WG "Oh? Is that your plan mister?"
     MC "It's much more impressive once we get to the theater."
-    $setAffection("BBW", 1)
-    show BBW dress-surprised
-    BBW "The theater, oh that's a very nice idea."
-    show BBW dress-happy
-    BBW "I look forward to seeing what show you've decided would pique my interest."
+    $setAffection("WG", 1)
+    show WG dress-surprised
+    WG "The theater, oh that's a very nice idea."
+    show WG dress-happy
+    WG "I look forward to seeing what show you've decided would pique my interest."
     "To be honest I hadn't considered whether she'd ever seen this show before."
     MC "Well we'd better get going to make sure we can find our seats without much trouble."
     "Alice gives me a smile that seemed to convey a sense of approval that I'd seen before, but this felt to be from a more genuine and heartfelt spot."
 
     scene Theater Exterior with fade
-    play music BBW
+    play music WG
     "The theater was rather packed tonight, which wasn't unexpected since the show was a rather popular pick."
-    show BBW dress-happy with dissolve
+    show WG dress-happy with dissolve
     "Seeing Alice in her dress was something I didn't know I needed, but seeing her now I'm not sure how I never imagined it before. Compared to her previous dress, this one stirred me in a new way I didn't know was possible."
     "Where her previous dress had been quite..."
-    show BBW dress-neutral
-    BBW "Kei, the man at the ticket booth is calling you."
+    show WG dress-neutral
+    WG "Kei, the man at the ticket booth is calling you."
     MC "Oh, I guess I zoned out there."
     "I give the man our tickets and mention that I'd called ahead for accommodations. He nods and assures me that our accommodations have been met before waving us in."
-    jump BBW051_c1_after
+    jump WG053_c1_after
 
-label BBW051_c1_2:
+label WG053_c1_2:
     MC "I hate to spoil surprises, it ruins all the fun and anticipation."
-    show BBW dress-haughty
-    BBW "Then I guess I'll have to wait, which I normally hate to do. Though I think I'll make an exception this time."
+    show WG dress-haughty
+    WG "Then I guess I'll have to wait, which I normally hate to do. Though I think I'll make an exception this time."
     "She gives me a smirk as we exit from the room."
 
     scene Theater Exterior with fade
-    show BBW dress-surprised with dissolve
-    BBW "Oh my! I was certainly not expecting this to be in consideration!"
+    show WG dress-surprised with dissolve
+    WG "Oh my! I was certainly not expecting this to be in consideration!"
     MC "Oh and why so?"
-    show BBW dress-sad
-    BBW "It's been a rather long time since I've been to an opera or play. I was beginning to think I'd never be able to go back due to, well, everything so far."
+    show WG dress-sad
+    WG "It's been a rather long time since I've been to an opera or play. I was beginning to think I'd never be able to go back due to, well, everything so far."
     MC "Don't worry I've been careful this time to account for everything."
-    show BBW dress-haughty
-    BBW "Is that so?"
+    show WG dress-haughty
+    WG "Is that so?"
     MC "I've got this date handled so relax tonight."
-    show BBW dress-neutral
-    BBW "If you say so Mr. In Charge."
+    show WG dress-neutral
+    WG "If you say so Mr. In Charge."
     "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
-    jump BBW051_c1_after
+    jump WG053_c1_after
 
-label BBW051_c1_3:
-    $setFlag("BBW051_c1_3")
+label WG053_c1_3:
+    $setFlag("WG053_c1_3")
     MC "There is a new seafood restaurant that recently opened in town, they have a dress code that's why I asked that you get dressed up for this occasion."
-    $setAffection("BBW", -1)
-    show BBW dress-sad
-    BBW "Oh, that's very nice."
+    $setAffection("WG", -1)
+    show WG dress-sad
+    WG "Oh, that's very nice."
     MC "Is there a problem with that plan?"
-    BBW "Well I was hoping we could maybe do something besides food, but I suppose if the reservations are made we shouldn't disappoint."
+    WG "Well I was hoping we could maybe do something besides food, but I suppose if the reservations are made we shouldn't disappoint."
     "I feel bad for lying about something so simple but my certainty on what she wants is still rather blurry. So playing it safe this time might've been a bad call."
 
     scene Theater Interior with fade
-    show BBW dress-surprised with dissolve
-    BBW "Wait, is this where we were actually going?"
+    show WG dress-surprised with dissolve
+    WG "Wait, is this where we were actually going?"
     MC "Yeah, I wanted to surprise you."
-    show BBW dress-angry
-    BBW "Why would you lie about something so important to our plans?"
+    show WG dress-angry
+    WG "Why would you lie about something so important to our plans?"
     MC "Well this was supposed to be a surprise after all so I wanted to keep up the illusion till we got here."
-    BBW "That's still a stupid reason. Did you assume I wouldn't enjoy anything that didn't involve food?"
+    WG "That's still a stupid reason. Did you assume I wouldn't enjoy anything that didn't involve food?"
     MC "No, not at all. I just used the restaurant excuse since our last couple of dates have been to restaurants."
-    BBW "You should've just surprised me back at the dorm. I was expecting us to be doing something else till you said we were doing a dinner date again."
+    WG "You should've just surprised me back at the dorm. I was expecting us to be doing something else till you said we were doing a dinner date again."
     MC "I'm sorry, I didn't know that was your expectation going into this."
-    BBW "It wasn't just that Kei, I had fears you might be seeing me as this gluttonous person that was losing control. That's why I was a little disappointed when you said we were doing another restaurant."
+    WG "It wasn't just that Kei, I had fears you might be seeing me as this gluttonous person that was losing control. That's why I was a little disappointed when you said we were doing another restaurant."
     MC "I'd never think that about you! You are far more than something so shallow."
-    show BBW dress-sad
-    BBW "That's not how it came off, so much has been happening recently that just having that idea seemingly confirmed, struck a little too deep to be comfortable."
+    show WG dress-sad
+    WG "That's not how it came off, so much has been happening recently that just having that idea seemingly confirmed, struck a little too deep to be comfortable."
     MC "Well as I've said time and time before, that is not how I see you at all. I probably can't understand everything you've been feeling recently but I'm still here regardless of your size."
-    if getAffection("BBW") >= 25:
-        show BBW dress-haughty
-        BBW "If you truly mean that, then that's what I will expect from now on."
+    if getAffection("WG") >= 25:
+        show WG dress-haughty
+        WG "If you truly mean that, then that's what I will expect from now on."
         MC "You have my word, Alice."
         "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
 
         scene Theater Interior with fade
-        show BBW dress-neutral with dissolve
-        BBW "So what was the talk with the usher about?"
+        show WG dress-neutral with dissolve
+        WG "So what was the talk with the usher about?"
         MC "I had a feeling that certain features might not properly cooperate with your current size. So I went ahead and called ahead to see what accommodations could be made."
-        show BBW dress-haughty
-        BBW "What kind of accommodations do you mean?"
+        show WG dress-haughty
+        WG "What kind of accommodations do you mean?"
         MC "Making sure we have seats that fit each of our figures."
-        show BBW dress-surprised
-        BBW "Oh, you went ahead and looked into something like that for us?"
+        show WG dress-surprised
+        WG "Oh, you went ahead and looked into something like that for us?"
         MC "Of course, I care for your comfort, so naturally I wanted to make sure you could enjoy this night without concerning yourself with those sorts of things."
-        $setAffection("BBW", 1)
-        show BBW dress-happy
-        BBW "You always find a way to impress me, Kei."
+        $setAffection("WG", 1)
+        show WG dress-happy
+        WG "You always find a way to impress me, Kei."
         MC "And I'll never stop trying."
         "As we enter the theater hall I spot a large couch near the front. Pointing it out to Alice I could tell she was happy to see my efforts had worked. She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
         MC "Everything okay for you?"
-        show BBW dress-neutral
-        BBW "Yeah that was just surprising, that's all."
+        show WG dress-neutral
+        WG "Yeah that was just surprising, that's all."
         MC "Just making sure everything was to your satisfaction."
         "Alice gives me a smile as the lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
-        jump BBW051_c2_after
+        jump WG053_c2_after
     else:
         MC "Also everyone needs to eat so it shouldn't be taken as an insult. It's just a fact of life."
         pause 2
-        BBW "Fine, I suppose I may have been a bit harsh, I guess this stuff has been getting to me a bit."
+        WG "Fine, I suppose I may have been a bit harsh, I guess this stuff has been getting to me a bit."
         MC "You still want to continue tonight?"
-        show BBW dress-neutral
-        BBW "Well I'd hate for all our efforts to go to waste tonight. So we may as well enjoy the show."
+        show WG dress-neutral
+        WG "Well I'd hate for all our efforts to go to waste tonight. So we may as well enjoy the show."
         MCT "Well this certainly was not how I imagined this night going at all."
         "I gave our tickets to the man at the ticket booth and mentioned that I had called ahead for accommodations. He nods and says they've fulfilled the request."
 
         scene Theater Interior with fade
-        show BBW dress-neutral with dissolve
+        show WG dress-neutral with dissolve
         "As we enter we can both see the large couch like chair in the front row. As we approach I notice Alice giving me a glance with a slight smirk on her lips. She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
         MCT "That was kinda hot, but I better not approach that subject tonight."
         "We both remain silent as the lights dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
-        jump BBW051_c2_after
+        jump WG053_c2_after
 
-label BBW051_c1_after:
+label WG053_c1_after:
     scene Theater Interior with fade
-    show BBW dress-neutral with dissolve
-    BBW "So what was the talk with the usher about?"
+    show WG dress-neutral with dissolve
+    WG "So what was the talk with the usher about?"
     MC "I had a feeling that you might not be able to use their normal seating, so I called ahead to see what they could accommodate."
-    show BBW dress-sad
-    BBW "Oh. It sounds like a lot of effort to go through just for me."
+    show WG dress-sad
+    WG "Oh. It sounds like a lot of effort to go through just for me."
     MC "Well you shouldn't have to miss out on the things you enjoy. Adapt maybe, but not abandon them."
-    BBW "I suppose, but that still doesn't change the fact I'm far larger than most."
+    WG "I suppose, but that still doesn't change the fact I'm far larger than most."
     MC "That doesn't change who you are underneath. You are still the confident girl I met all those months ago."
-    show BBW dress-haughty
-    BBW "I wonder when you picked up such a silver tongue? Though I doubt that the effort of guessing as to such would prove pointless."
+    show WG dress-haughty
+    WG "I wonder when you picked up such a silver tongue? Though I doubt that the effort of guessing as to such would prove pointless."
     "We shared a laugh, causing her body to bounce and roll in a rather satisfying way as we made our way to our seats. As we enter the hall I spot a large looking couch near the front. Pointing it out to Alice, I could tell she was happy to see what my effort was towards."
     MC "So is this good enough my dear?"
-    show BBW dress-neutral
-    BBW "You've certainly gone beyond what I could ask of you."
+    show WG dress-neutral
+    WG "You've certainly gone beyond what I could ask of you."
     MC "It was nothing, you deserve to be treated well."
-    show BBW dress-haughty
-    BBW "Certainly are proving to be quite the gentlemen aren't we?"
+    show WG dress-haughty
+    WG "Certainly are proving to be quite the gentlemen aren't we?"
     "Alice looks over the couch with a certain level of prudence before gently seating herself. Her cheeks flushing red as the couch gives a small groan as she eases herself down."
     menu:
         "Ask her about the reaction.":
-            jump BBW051_c2_1
+            jump WG053_c2_1
         "Leave it alone.":
-            jump BBW051_c2_2
+            jump WG053_c2_2
 
-label BBW051_c2_1:
-    $setFlag("BBW051_c2_1")
+label WG053_c2_1:
+    $setFlag("WG053_c2_1")
     MC "You ok?"
-    show BBW dress-sad
-    BBW "Lately my experiences with furniture have been... inconsistent, to put it lightly. Waking up with a few broken bed slats doesn't make for a pleasant morning."
+    show WG dress-sad
+    WG "Lately my experiences with furniture have been... inconsistent, to put it lightly. Waking up with a few broken bed slats doesn't make for a pleasant morning."
     "She broke her bed, now that I would've loved to see happen. It was one thing to imagine it, but knowing it came true is another."
     MC "Is that why you were very surprised by me deciding on this?"
-    BBW "Honestly, yes. Even as much as I accept my size, there's always uncertainty when using furniture that isn't my own. I have no prior warning if it can hold me or I'll be sent falling to the floor in a minute."
+    WG "Honestly, yes. Even as much as I accept my size, there's always uncertainty when using furniture that isn't my own. I have no prior warning if it can hold me or I'll be sent falling to the floor in a minute."
     MC "I'm sure I can probably help in that matter. An extra pair of eyes never hurts to have around. Not to mention an extra pair of hands to catch you if you fall."
-    show BBW dress-haughty
-    BBW "Well I hope you intend to keep that promise because I'm certain my future at school will involve more than a few splintered chairs."
+    show WG dress-haughty
+    WG "Well I hope you intend to keep that promise because I'm certain my future at school will involve more than a few splintered chairs."
     "Now that's something I will certainly have to see."
     "The lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound. Taking my seat next to Alice, I soon feel her hand grip mine as the first scene begins."
-    jump BBW051_c2_after
+    jump WG053_c2_after
 
-label BBW051_c2_2:
+label WG053_c2_2:
     "She's probably embarrassed I had to hear that so I'd better not push it."
     "The lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
-    jump BBW051_c2_after
+    jump WG053_c2_after
 
-label BBW051_c2_after:
+label WG053_c2_after:
     scene black with fade
     pause 1
     scene Theater Interior with fade
     "The play stops to allow everyone a brief intermission to use the restroom. Alice and I stand up from our seats to stretch out our stiff legs. We eventually wander over to a balcony overlooking the entrance."
     MC "Have to say that mask-wearing guy, he is one strange dude."
-    show BBW dress-happy with dissolve
-    BBW "That is the point Kei, he's meant to be off-putting and slightly standoffish. He's a character we have to warm up to and gain empathy for."
+    show WG dress-happy with dissolve
+    WG "That is the point Kei, he's meant to be off-putting and slightly standoffish. He's a character we have to warm up to and gain empathy for."
     MC "Have you seen this play before?"
-    BBW "I did a while back with my parents. We visited some of my mother's family and my father got us tickets for the performance happening on Broadway. It was one of the first shows I saw, so seeing it again is very nice."
+    WG "I did a while back with my parents. We visited some of my mother's family and my father got us tickets for the performance happening on Broadway. It was one of the first shows I saw, so seeing it again is very nice."
     MC "Glad you enjoy it, I had a feeling you might enjoy since I remembered you mentioning a fondness for Opera and singing."
-    show BBW dress-neutral
-    BBW "Do you remember back when we first started here, I wanted to lead the music club?"
+    show WG dress-neutral
+    WG "Do you remember back when we first started here, I wanted to lead the music club?"
     menu:
         "Of course, I remember you mentioned wanting to be a seated soprano.":
-            jump BBW051_c3_1
+            jump WG053_c3_1
         "How could I forget, you did make quite a scene.":
-            jump BBW051_c3_2
+            jump WG053_c3_2
         "Vaguely. It was quite some time ago.":
-            jump BBW051_c3_3
+            jump WG053_c3_3
 
-label BBW051_c3_1:
-    show BBW dress-happy
-    BBW "I did, and well I still do, that's why I've been very critical about the matter. Though I suppose now in hindsight I may have been a tad overbearing."
+label WG053_c3_1:
+    show WG dress-happy
+    WG "I did, and well I still do, that's why I've been very critical about the matter. Though I suppose now in hindsight I may have been a tad overbearing."
     MC "I think you just matured and dropped some of the brashness you had when you first arrived."
-    show BBW dress-neutral
-    BBW "Perhaps, though despite my squabbles with the club president I still plan to see myself in a leading position in the club."
-    BBW "That is a dream I plan to fulfill, regardless of whatever obstacles may lie ahead of me."
+    show WG dress-neutral
+    WG "Perhaps, though despite my squabbles with the club president I still plan to see myself in a leading position in the club."
+    WG "That is a dream I plan to fulfill, regardless of whatever obstacles may lie ahead of me."
     MC "That does mean you need to have good relationships with your other club members, including Mizawa-san."
-    BBW "I'm aware and I'm already working on plans to improve my standings among them. Like you said, patience is valuable in this matter and that is what my plan hinges on."
+    WG "I'm aware and I'm already working on plans to improve my standings among them. Like you said, patience is valuable in this matter and that is what my plan hinges on."
     "Well she has certainly matured on this front, I hope that she's able to continue without falling back to her old habits."
     "I notice the flow of people heading back into the theater and extend my hand out"
     MC "It would appear it's time to retake our seats. Shall we?"
-    show BBW dress-haughty
-    BBW "Indeed we shall."
+    show WG dress-haughty
+    WG "Indeed we shall."
 
     scene black with fade
-    jump BBW051_c3_after
+    jump WG053_c3_after
 
-label BBW051_c3_2:
-    show BBW dress-angry
-    BBW "I had hoped you might have overlooked that low point in my career."
+label WG053_c3_2:
+    show WG dress-angry
+    WG "I had hoped you might have overlooked that low point in my career."
     MC "Sorry for bringing that detail back up."
-    show BBW dress-neutral
-    BBW "Regardless of how you remember that event, you can't deny I wasn't passionate."
+    show WG dress-neutral
+    WG "Regardless of how you remember that event, you can't deny I wasn't passionate."
     MC "I doubt a case disproving that idea could exist."
-    BBW "It's that exact passion for singing that helps me stay in the music club. Seeing these beautiful plays helps remind me why I remain loyal to that idea."
+    WG "It's that exact passion for singing that helps me stay in the music club. Seeing these beautiful plays helps remind me why I remain loyal to that idea."
     MC "Don't you need the help of the other club members as well?"
-    show BBW dress-haughty
-    BBW "I have a plan for helping me return to their good graces."
+    show WG dress-haughty
+    WG "I have a plan for helping me return to their good graces."
     "I consider asking further but decide against it knowing she won't explain her grand plan."
     "Besides people are beginning to return to their seats so we should as well."
     "I offer her my hand but she instead walks ahead. This date is not going as well as I hoped."
     scene black with fade
-    jump BBW051_c3_after
+    jump WG053_c3_after
 
-label BBW051_c3_3:
-    show BBW dress-neutral
-    BBW "The details aren't important to the matter I'm addressing, what is important is that I wanted to be a part of that club a lot."
-    BBW "The passion I have for music helps me stay in the club. Seeing these beautiful plays helps remind me why I need to continue to commit to that idea. I want to prove that I'm as good as I say I am."
+label WG053_c3_3:
+    show WG dress-neutral
+    WG "The details aren't important to the matter I'm addressing, what is important is that I wanted to be a part of that club a lot."
+    WG "The passion I have for music helps me stay in the club. Seeing these beautiful plays helps remind me why I need to continue to commit to that idea. I want to prove that I'm as good as I say I am."
     MC "That's an impressive amount of dedication but won't you need the help of the other club members?"
-    show BBW dress-haughty
-    BBW "I have a plan for helping me return to their good grace."
+    show WG dress-haughty
+    WG "I have a plan for helping me return to their good grace."
     "I consider asking further but decide against it knowing she won't explain her grand plan."
     "Besides people are beginning to return to their seats so we should as well."
     "I offer her my hand but she instead walks ahead. This date is not going as well as I hoped."
     scene black with fade
-    jump BBW051_c3_after
+    jump WG053_c3_after
 
-label BBW051_c3_after:
-    if getFlag("BBW051_c1_3"):
+label WG053_c3_after:
+    if getFlag("WG053_c1_3"):
         scene Theater Interior with fade
         "The play stops to allow everyone a brief intermission to get snacks and use the restroom. Alice and I stand up from our seats to stretch out our stiff legs."
         MCT "I should probably keep quiet for now, I've already done enough damage tonight. Hopefully, I can still salvage this night and my relationship with Alice by doing so."
         "A couple times Alice opens her mouth seemingly to try and say something, but closes it quickly."
-        show BBW dress-neutral with dissolve
-        BBW "I'm gonna grab myself a snack from downstairs, I'll back before we reseat."
+        show WG dress-neutral with dissolve
+        WG "I'm gonna grab myself a snack from downstairs, I'll back before we reseat."
         "I watch her disappear down the stairwell before returning to my thoughts."
         "After a couple minutes we begin retaking our seats. Alice soon returns with a small bag of popcorn as the curtains open again to continue the show."
-    if getFlag("BBW051_c2_1"):
+    if getFlag("WG053_c2_1"):
         $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
         "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
-        show BBW dress-sad with dissolve
-        BBW "Hey Kei, I want to thank you for tonight."
+        show WG dress-sad with dissolve
+        WG "Hey Kei, I want to thank you for tonight."
         MC "Oh it's no problem, I'm glad you've enjoyed yourself."
-        BBW "Well it's more than just that. This was the first time I saw how my new size is to others."
-        BBW "As I said back in the theater, my experience with furniture lately has been quite varied. So trusting you to have made the right seating arrangements, made me feel, well helpless. This growth I feel has finally gotten beyond a manageable point."
+        WG "Well it's more than just that. This was the first time I saw how my new size is to others."
+        WG "As I said back in the theater, my experience with furniture lately has been quite varied. So trusting you to have made the right seating arrangements, made me feel, well helpless. This growth I feel has finally gotten beyond a manageable point."
         MC "Oh I didn't realize you felt that way. I was just doing what I believed would make you feel appreciated and cared for. Are you mad at me?"
-        show BBW dress-neutral
-        BBW "No, this is a confrontation I've been avoiding for a while now."
+        show WG dress-neutral
+        WG "No, this is a confrontation I've been avoiding for a while now."
         MC "Is there some way I can help?"
-        BBW "Well that there is something I've wanted to ask you about. As you know Aida is in no shape to be assisting me full time. I highly doubt I'm done growing but things are already becoming more difficult."
-        BBW "Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
-        show BBW dress-haughty
-        BBW "I have taken for granted my family's servants and Aida, but it is becoming clear that assistance will become not just a convenience for me but a necessity."
-        BBW "The thought of being dependent like that troubles me, more so the fear that I would become a burden. Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
+        WG "Well that there is something I've wanted to ask you about. As you know Aida is in no shape to be assisting me full time. I highly doubt I'm done growing but things are already becoming more difficult."
+        WG "Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
+        show WG dress-haughty
+        WG "I have taken for granted my family's servants and Aida, but it is becoming clear that assistance will become not just a convenience for me but a necessity."
+        WG "The thought of being dependent like that troubles me, more so the fear that I would become a burden. Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
         MC "Of course, I'll help you if you need it. I am your boyfriend after all."
         "She smiles and we hold hands all the way back to the school. Letting the music of the night close out our date."
     jump daymenu
 
-label BBW052:
-    $setProgress("BBW", "BBW053")
+label WG054:
+    $setProgress("WG", "WG055")
     scene Cafeteria with fade
     play music HigherEdu
     "After sitting through half a day's worth of lectures my stomach was killing me for some food. With a full tray I quickly scanned out Alice among the crowd."
-    "The scene gave me a brief sense of déjà vu as it clicked that everyone now looked quite different from when the semester began."
+    "The scene gave me a brief sense of {i}déjà vu{/i} as it clicked that everyone now looked quite different from when the semester began."
     "Though even with everyone changing in different ways, one fact remained consistent: Alice's ability to make herself pronounced."
     "Whether it be her voice, her hair or the more obvious, her factor, she made sure to stick out. "
-    show BBW neutral with dissolve
-    BBW "Good afternoon Keisuke, I take it your morning classes went well."
+    show WG neutral with dissolve
+    WG "Good afternoon Keisuke, I take it your morning classes went well."
     MC "They went as slow as possible but they were bearable."
-    BBW "That's good to hear, I just wanted to make sure you are feeling well and actually paying attention in class. Last thing you need is to miss anything."
-    MC "I've been getting to bed earlier than normal, so sleeping during class hasn't been as much of a problem as it was earlier."
-    BBW "That's good to hear, good sleep is a rare commodity."
+    WG "That's good to hear, I just wanted to make sure you are feeling well and actually paying attention in class. Last thing you need is to miss anything."
+    MC "I've been getting to bed earlier than normal, so sleeping during class hasn't been as much of a problem as it was before."
+    WG "That's good to hear, good sleep is a rare commodity."
     "As I began eating my food, I noticed that Alice seemed to be dancing her fork around her plate."
     menu:
             "Say something":
-                jump BBW052_c1_1
+                jump WG054_c1_1
             "Continue eating":
-                jump BBW052_c1_2
+                jump WG054_c1_2
 
-label BBW052_c1_1:
-    $setFlag("BBW052_c1_1")
+label WG054_c1_1:
+    $setFlag("WG_SSPR1")
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
     MC "Everything alright there Alice? Is something on your mind?"
-    show BBW worried
-    BBW "No, the food today tastes underwhelming, as per usual. I also had a large breakfast and am still quite full from that meal."
+    show WG worried
+    WG "No, the food today tastes underwhelming, as per usual. I also had a large breakfast and am still quite full from that meal."
     MC "Did you get the fried rice? It's amazing, especially with some soy sauce."
-    BBW "I didn't but it's a little late to grab some anyway."
-    show BBW neutral-2
-    BBW "Though that does remind me, would you want to do something this evening?"
+    WG "I didn't but it's a little late to grab some anyway."
+    show WG neutral-2
+    WG "Though that does remind me, would you want to do something this evening?"
     MC "I thought I was supposed to be the one asking you on dates?"
-    show BBW neutral
-    BBW "It would be more gentlemanly of you, but considering the lengths you went through last night for me, I feel it necessary to return the courtesy."
+    show WG neutral
+    WG "It would be more gentlemanly of you, but considering the lengths you went through last night for me, I feel it necessary to return the courtesy."
     MC "You don't need to repay me for treating you like my girlfriend. I wanted to spoil you and that doesn't require you to do anything back."
-    show BBW doubt
-    BBW "I hate that term, spoil, makes me sound like princess."
-    show BBW neutral-2
-    BBW "Anyway, I get your concern Keisuke, but let me do this for you. It will make me happy."
+    show WG doubt
+    WG "I hate that term, {i}spoil{/i}, makes me sound like a princess."
+    show WG neutral-2
+    WG "Anyway, I get your concern Keisuke, but let me do this for you. It will make me happy."
     MCT "Weird how she worded it like that."
     MC "Alright what time tonight?"
-    BBW "5 pm should do fine. Do dress nicely as we will be heading into town."
+    WG "5 PM should do fine. Do dress nicely as we will be heading into town."
     MC "Then it's a date."
-    hide BBW with dissolve
+    hide WG with dissolve
     "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out. Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
     stop music
     scene black with fade
-    jump BBW052_c1_after
+    jump WG054_c1_after
 
-label BBW052_c1_2:
+label WG054_c1_2:
     "I decided not to push, feeling that if it was something truly important she'd tell me when she was comfortable."
-    BBW "Oh Kei, I wanted to ask, would you want to do something this evening?"
+    WG "Oh Kei, I wanted to ask, would you want to do something this evening?"
     MC "I thought I was supposed to be the one asking you on dates?"
-    show BBW neutral
-    BBW "It would be more gentlemanly of you, but considering the lengths you went through last night for me, I feel it necessary to return the courtesy."
+    show WG neutral
+    WG "It would be more gentlemanly of you, but considering the lengths you went through last night for me, I feel it necessary to return the courtesy."
     MC "You don't need to repay me for treating you like my girlfriend. I wanted to spoil you and that doesn't require you to do anything back."
-    show BBW doubt
-    BBW "I hate that term, spoil, makes me sound like princess."
-    show BBW neutral-2
-    BBW "Anyway, I get your concern Keisuke but let me do this for you. It will make me happy."
+    show WG doubt
+    WG "I hate that term, spoil, makes me sound like princess."
+    show WG neutral-2
+    WG "Anyway, I get your concern Keisuke but let me do this for you. It will make me happy."
     MCT "Weird how she worded it like that."
     MC "Alright what time tonight?"
-    BBW "5 pm should do fine. Do dress nicely as we will be heading into town"
+    WG "5 PM should do fine. Do dress nicely as we will be heading into town"
     MC "Then it's a date."
-    hide BBW with dissolve
+    hide WG with dissolve
     "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out."
     "Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
     stop music
     scene black with fade
-    jump BBW052_c1_after
+    jump WG054_c1_after
 
-label BBW052_c1_after:
+label WG054_c1_after:
     $setTime(TimeEnum.EVE)
     scene School Front with fade
     play music Peaceful
     "Double checking my watch to confirm my timeliness,  I was happy to spot Alice sitting at the bus stop bench."
-    show BBW neutral with dissolve
-    BBW "Glad to see your punctuality continues to be great."
+    show WG neutral with dissolve
+    WG "Glad to see your punctuality continues to be great."
     MC "I wouldn't say that in all cases but I hate leaving a lady by herself."
-    BBW "You need not worry about me, I can handle myself just fine. Though the thought is appreciated, Keisuke."
+    WG "You need not worry about me, I can handle myself just fine. Though the thought is appreciated, Keisuke."
     "With a rumble the bus pulled up, displaying the town as its next destination."
     "It was hard to miss Alice giving the bus doors a size up before stepping on board."
     "With a bit of trepidation she stepped on. Her broad hips brushing against the larger than average bus doors."
@@ -11184,100 +12169,101 @@ label BBW052_c1_after:
     scene black with fade
     "It didn't take too long to arrive at our destination."
     scene Town with fade
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     "Once off the bus she directed me towards a shop I hadn't noticed before. The sign read 'Cold as Ice' leaving me a bit confused as to what this place could be serving."
-    BBW "Have you ever tried rolled ice cream?"
+    WG "Have you ever tried rolled ice cream?"
     MC "Can't say I have. I thought ice cream was already rolled when they serve the scoops."
-    show BBW happy
-    BBW "Not like that! No, this is something very different, but I appreciate the humor."
-    show BBW neutral
-    BBW "Though I think seeing the process will do it more justice than I could trying to explain it."
+    show WG happy
+    WG "Not like that! No, this is something very different, but I appreciate the humor."
+    show WG neutral
+    WG "Though I think seeing the process will do it more justice than I could trying to explain it."
     MC "This must be interesting then if you will let it speak for itself."
     "I didn't need to be facing Alice to hear her rolling her eyes at my comment."
     scene Restaurant with fade
     "Stepping in, the first thing I noticed was the lack of giant ice cream tubs. There also appeared to be some grills where they would have normally been."
     MC "You sure this is an ice cream place? It looks more like a barbeque place."
-    show BBW haughty with dissolve
-    BBW "Have faith Kei, this will be well worth the confusion."
+    show WG haughty with dissolve
+    WG "Have faith Kei, this will be well worth the confusion."
     "She gave her order to the cashier, a simple strawberry cheesecake. With a nod the cashier pours what I assume was cream onto the flat griddle."
     "Disappearing under the counter, he produces a slice of cheesecake which he drops on the cream spot. With a pair of cutters he very rapidly diced the cake."
     "He then smoothed it out till it was flat. Delicately, he then scraped it into small rolls."
-    show BBW happy
-    BBW "I hope that satisfied your curiosity."
+    show WG happy
+    WG "I hope that satisfied your curiosity."
     MC "That is certainly the most aggressive and unique way I've seen someone make ice cream."
-    BBW "Go ahead and order one for yourself. I already paid for a second."
-    hide BBW with dissolve
+    WG "Go ahead and order one for yourself. I already paid for a second."
+    hide WG with dissolve
     "I gave the man an order for a cookies and cream which he produced in a similar fashion to Alice's."
     "With ice cream in hand, I joined Alice at the table she'd grabbed us."
     MC "Thank you for this, it looks really good."
-    show BBW happy with dissolve
-    BBW "Your welcome, it was the least I could do to repay you."
+    show WG happy with dissolve
+    WG "Your welcome, it was the least I could do to repay you."
     "As we ate I noticed her picking at the ice cream, only taking small chunks at a time."
     menu:
         "Ask":
-            jump BBW052_c2_1
+            jump WG054_c2_1
         "Leave her be":
-            jump BBW052_c2_2
+            jump WG054_c2_2
 
-label BBW052_c2_1:
-    $setFlag("BBW052_c2_1")
+label WG054_c2_1:
+    $setFlag("WG_SSPR2")
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
     MC "Your meal is melting away."
-    show BBW worried
-    BBW "Oh, apologies. I wasn't expecting it to be so rich. When I previously visited, I ordered a simple strawberry flavor which was not so sweet. Them using a whole slice of cake was a bit surprising to be honest."
+    show WG worried
+    WG "Oh, apologies. I wasn't expecting it to be so rich. When I previously visited, I ordered a simple strawberry flavor which was not so sweet. Them using a whole slice of cake was a bit surprising to be honest."
     MC "Yeah that was a bit surprising for me as well. Made me scared how many oreos they were gonna use for my order."
-    show BBW neutral
-    BBW "Lucky for you they didn't go quite so overboard."
+    show WG neutral
+    WG "Lucky for you they didn't go quite so overboard."
     MC "It's appreciated."
     "It was clear that she wasn't gonna open up on the actual issue. I knew I was treading on something as thin as my ice cream but maybe if I played my cards right she might open up."
-    jump BBW052_c2_after
+    jump WG054_c2_after
 
-label BBW052_c2_2:
+label WG054_c2_2:
     "I decided to not push her on the matter while we were sharing a nice moment together"
     MC "Boy this stuff is good, how did you find out about this place?"
-    show BBW neutral
-    BBW "Oh Aida and I needed to head to town to get her some things. She suggested we try this place since it had recently opened."
+    show WG neutral
+    WG "Oh Aida and I needed to head to town to get her some things. She suggested we try this place since it had recently opened."
     MC "That's good to hear."
-    jump BBW052_c2_after
+    jump WG054_c2_after
 
-label BBW052_c2_after:
+label WG054_c2_after:
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene School Front with fade
     "Once we had finished we made our way back onto the bus to return to the school."
     "While on the bus I swore I could've heard Alice's stomach growling, but dismissed it as just digestion. Though, part of me couldn't help but wonder if it was the hunch I'd been feeling all day."
-    if getFlag("BBW052_c1_1") and getFlag("BBW052_c2_1"):
-        jump BBW052_c3_pass
+    if getFlag("WG_SSPR1") or getFlag("WG_SSPR2"):
+        jump WG054_c3_pass
     else:
-        jump BBW052_c3_fail
+        jump WG054_c3_fail
 
-label BBW052_c3_pass:
+label WG054_c3_pass:
+    $setFlag("WG_SSPR3")
     stop music
     play music Bittersweet
-    $setFlag("BBW052_pass")
     "Once off the bus I decided to try one last time at finding out the truth of the matter."
     MC "Alice I know I've bugged you all day, but what is going on with you? At lunch and tonight you seemed almost disgusted by your food. Are you feeling sick?"
-    show BBW worried with dissolve
-    BBW "Kei, if I told you something that was completely insane, you wouldn't walk away would you?"
+    show WG worried with dissolve
+    WG "Kei, if I told you something that was completely insane, you wouldn't walk away would you?"
     MC "Of course not, I'm here for you in all circumstances."
-    BBW "I only ask cause the real reason is quite odd and rather embarrassing for me."
+    WG "I only ask cause the real reason is quite odd and rather embarrassing for me."
     MC "It would be unfair for me to pass judgement on you, especially since it seems to be bothering you this much."
-    BBW "If that's true, then here's the reason. I've been having weird dreams, primarily ones focused on food. They vary wildly in terms of what happens, but food seems to be the one constant."
+    WG "If that's true, then here's the reason. I've been having weird dreams, primarily ones focused on food. They vary wildly in terms of what happens, but food seems to be the one constant."
     "I took a seat on a bench and gestured for her to join me."
     MC "I take it you've been paranoid about them being true."
-    BBW "To an extent, yes. Now more than ever have I wanted my eating habits to not define me as a person."
+    WG "To an extent, yes. Now more than ever have I wanted my eating habits to not define me as a person."
     MC "I see. For the record, regardless of your habit it would not sway my feelings for you. How long have these dreams been happening?"
-    BBW "Since we returned from the lakehouse, so approximately two weeks, almost three."
+    WG "Since we returned from the lakehouse, so approximately two weeks, almost three."
     MC "If it occurs tonight I'd suggest going to the school nurse. She's probably one of the few here that has any sort of idea about our factors, let alone this sort of specific thing."
-    BBW "I suppose you are right in that regard, I'd considered going to her, but felt this was just a fluke. If it happens again I'll go there tomorrow before class."
+    WG "I suppose you are right in that regard, I'd considered going to her, but felt this was just a fluke. If it happens again I'll go there tomorrow before class."
     MC "Sounds like a good plan, if I do say so myself."
-    show BBW neutral
-    BBW "Don't go getting a big head over this, you already have enough hair on top of it to make it look inflated."
+    show WG neutral
+    WG "Don't go getting a big head over this, you already have enough hair on top of it to make it look inflated."
     MC "I meant to trim it earlier, but got busy with preparing for tonight."
-    BBW "If it gets too unruly, I could probably try my hand at it. I've never done haircuts on men but your hair is closer to that of a woman that it should be comparable."
+    WG "If it gets too unruly, I could probably try my hand at it. I've never done haircuts on men but your hair is closer to that of a woman that it should be comparable."
     MC "If my trimmers give out I'll take you up on that offer."
-    BBW "It's getting late, so I think now we should begin parting ways. Have a goodnight Keisuke."
+    WG "It's getting late, so I think now we should begin parting ways. Have a goodnight Keisuke."
     MC "You as well Alice, sweet dreams, er... I mean, pleasant dreams."
-    BBW "Charmer as always Keisuke."
+    WG "Charmer as always Keisuke."
     stop music
     scene black with fade
     $setTime(TimeEnum.DAY)
@@ -11299,106 +12285,106 @@ label BBW052_c3_pass:
     PRG "You too."
     scene Dorm Exterior with fade
     "Knocking on the door, I was relieved to feel the vibrations of someone approaching the door."
-    show BBW happy with dissolve
-    BBW "I take it you either encountered Aida or got curious that I wasn't in class."
+    show WG happy with dissolve
+    WG "I take it you either encountered Aida or got curious that I wasn't in class."
     MC "A bit of both actually, how'd you guess I'd encounter Aida?"
-    BBW "She'd be the only other one who might know where I am, so I guessed you'd seek her out."
+    WG "She'd be the only other one who might know where I am, so I guessed you'd seek her out."
     MC "Fair enough."
-    BBW "Come in, you are probably curious about what the nurse said."
-    scene Dorm BBW with fade
-    show BBW neutral-2 with dissolve
-    BBW "Now that we have a bit of privacy, let me explain."
-    BBW "According to the nurse, my dreams are being caused because I'm not eating enough. Apparently this is a semi-common thing among those with weight gain factors if they limit their intake."
+    WG "Come in, you are probably curious about what the nurse said."
+    scene Dorm WG with fade
+    show WG neutral-2 with dissolve
+    WG "Now that we have a bit of privacy, let me explain."
+    WG "According to the nurse, my dreams are being caused because I'm not eating enough. Apparently this is a semi-common thing among those with weight gain factors if they limit their intake."
     MC "Well that's a relief that this isn't an isolated incident, but I have to ask why were you trying to limit your appetite?"
-    show BBW worried
-    BBW "That's a bit embarrassing I must confess. Since arriving here I could normally go two, almost three weeks, without a new uniform,"
-    BBW "but since the lake house it's shortened dramatically to nearly a week at max. I've been eating the same size meals as before, but the urge to snack has certainly spiked."
+    show WG worried
+    WG "That's a bit embarrassing I must confess. Since arriving here I could normally go two, almost three weeks, without a new uniform,"
+    WG "but since the lake house it's shortened dramatically to nearly a week at max. I've been eating the same size meals as before, but the urge to snack has certainly spiked."
     menu:
         "Be Understanding":
-            jump BBW052_c4_1
+            jump WG054_c4_1
         "Be Curious":
-            jump BBW052_c4_2
+            jump WG054_c4_2
         "Be Encouraging":
-            jump BBW052_c4_3
+            jump WG054_c4_3
 
-label BBW052_c3_fail:
+label WG054_c3_fail:
     "I gave Alice a hand as she stepped off the bus as I had a feeling she may be unsure of her footing coming out."
     MC "Thanks again for tonight, I'd never guess you could make ice cream through brute force."
-    show BBW neutral-2
-    BBW "I wouldn't describe it that way, but I'm glad you enjoyed it as much as I did."
-    BBW "It's late and I promised Aida I'd assist her in some matters, so I shall be saying goodnight here then."
+    show WG neutral-2
+    WG "I wouldn't describe it that way, but I'm glad you enjoyed it as much as I did."
+    WG "It's late and I promised Aida I'd assist her in some matters, so I shall be saying goodnight here then."
     MC "Have a good night Alice."
     scene Hallway with fade
     "The morning classes had passed without event, but I had noticed Alice's absence. The interruption of her normal punctuality was enough to tell me something was off."
     "Not being sure I decided to head to lunch and see if she had popped up there."
     scene Cafeteria with fade
     MC "I ended up searching for a few minutes before my phone buzzed."
-    BBWCell "<I wasn't feeling too great today so I visited the nurse and went back to my room.>"
+    WGCell "<I wasn't feeling too great today so I visited the nurse and went back to my room.>"
     Cell "<Need me to bring you anything?>"
-    BBWCell "<Not right now, I ate earlier and I have some orders to fill out. Though I may need some help tomorrow if you are available.>"
+    WGCell "<Not right now, I ate earlier and I have some orders to fill out. Though I may need some help tomorrow if you are available.>"
     Cell "<I certainly can be.>"
-    BBWCell "<Thank you Kei, have a good day.>"
+    WGCell "<Thank you Kei, have a good day.>"
     MCT "Guess she must've just been feeling under the weather."
     jump daymenu
 
-label BBW052_c4_1:
+label WG054_c4_1:
     MC "I can see how that sort of thing would kill an appetite. It would not be my first guess since you always appear so sure in your appearance."
-    show BBW doubt
-    BBW "Normally I am but some memories from earlier in the year got at me again recently."
-    show BBW neutral-2
-    BBW "Though our talks yesterday reminded me that such comments are only made by those looking to make themselves feel better."
+    show WG doubt
+    WG "Normally I am but some memories from earlier in the year got at me again recently."
+    show WG neutral-2
+    WG "Though our talks yesterday reminded me that such comments are only made by those looking to make themselves feel better."
     MC "They also might just be jealous of what they can't have."
-    show BBW haughty
-    BBW "Doubtful that's the case."
+    show WG haughty
+    WG "Doubtful that's the case."
     MC "Just a fun thought to consider, be funnier if it was true."
-    show BBW neutral-2
-    BBW "I do appreciate it Keisuke, but the constant flattery isn't necessary. I prefer a man to show rather than tell me his affection for me."
+    show WG neutral-2
+    WG "I do appreciate it Keisuke, but the constant flattery isn't necessary. I prefer a man to show rather than tell me his affection for me."
     MC "Noted, guess I'll need to get more creative in my approach then."
     jump daymenu
 
-label BBW052_c4_2:
+label WG054_c4_2:
     MC "Really? your previous size meals aren't cutting it anymore?"
-    show BBW doubt
-    BBW "It would appear not, which is quite ridiculous. I already look quite..."
-    show BBW angry
-    BBW "No, I won't bow to use that word."
-    show BBW stern
-    BBW "This whole matter is beyond ridiculous."
+    show WG doubt
+    WG "It would appear not, which is quite ridiculous. I already look quite..."
+    show WG angry
+    WG "No, I won't bow to use that word."
+    show WG stern
+    WG "This whole matter is beyond ridiculous."
     MC "Well there's no use getting mad at what you can't control. It'll only make you more mad at it."
-    BBW "I suppose you are correct in that matter. Being mad about it isn't gonna solve anything."
-    BBW "*sigh*"
-    show BBW neutral-2
-    BBW "Thank you for tolerating my rant there. The clothes and dream stuff had really begun getting to me."
-    BBW "This will sound rather funny, but can you grab me a granola bar from the kitchen? I'm feeling a bit peckish."
-    $setAffection("BBW", 1)
+    WG "I suppose you are correct in that matter. Being mad about it isn't gonna solve anything."
+    WG "*sigh*"
+    show WG neutral-2
+    WG "Thank you for tolerating my rant there. The clothes and dream stuff had really begun getting to me."
+    WG "This will sound rather funny, but can you grab me a granola bar from the kitchen? I'm feeling a bit peckish."
+    $setAffection("WG", 1)
     MC "I'd be foolish to disagree with the doctor's orders."
     jump daymenu
 
-label BBW052_c4_3:
-    $setFlag("BBW052_c4_3")
+label WG054_c4_3:
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
     MC "Are you afraid people will notice your clothes are slightly ill-fitting?"
-    show BBW neutral
-    BBW "Not really, I was just a bit self conscious of what they would say if I were to start acting more into their cliched image for me."
+    show WG neutral
+    WG "Not really, I was just a bit self conscious of what they would say if I were to start acting more into their cliched image for me."
     MC "It's highly doubtful that they would pass such judgement on you now. At the beginning of the year things were far different than they are now. If anything, people now seem far kinder than before."
-    BBW "I have noticed that as well. I suppose when everyone is in the same boat, they are less inclined to make such comments, as the same could be said about them."
-    BBW "...."
-    show BBW worried
-    BBW "I know you mentioned earlier that your feelings wouldn't be swayed by my habits. Would that still be true if I began eating more- possibly much more?"
+    WG "I have noticed that as well. I suppose when everyone is in the same boat, they are less inclined to make such comments, as the same could be said about them."
+    WG "...."
+    show WG worried
+    WG "I know you mentioned earlier that your feelings wouldn't be swayed by my habits. Would that still be true if I began eating more- possibly much more?"
     MC "Not at all, if it would help I could be with you at all lunch times."
-    show BBW haughty
-    BBW "I wouldn't ask for something that extreme, but the eagerness is appreciated."
+    show WG haughty
+    WG "I wouldn't ask for something that extreme, but the eagerness is appreciated."
     "There was a brief silence before a low guttural growl echoed through the room."
-    show BBW surprised
-    BBW "Oh my."
-    show BBW happy
-    BBW "I suppose I should take the doctor's advice soon."
+    show WG surprised
+    WG "Oh my."
+    show WG happy
+    WG "I suppose I should take the doctor's advice soon."
     MC "I would agree that would be a good thing to act on. Say, if you aren't busy, I believe the archery club was hosting a barbeque around lunch today. Interested in attending?"
-    $setAffection("BBW", 1)
-    BBW "It has been a while since I've had some good barbeque, sure."
+    $setAffection("WG", 1)
+    WG "It has been a while since I've had some good barbeque, sure."
     jump daymenu
 
-label BBW053:
-    $setProgress("BBW", "BBW054")
+label WG055:
+    $setProgress("WG", "WG056")
     scene School Planter with fade
     play music MC
     "Having a full afternoon with nothing much to do, I decided to take a walk through the school courtyards. Alice said she'd be busy around this time, but to swing by her room later."
@@ -11408,44 +12394,44 @@ label BBW053:
     "I had recently created a playlist on my phone for this particular occasion. Something just to zone out to and take it all in."
     "Hitting play with the list set to shuffle the earbuds assaulted my auditory senses with some overly saccharine 80's pop music sound."
     "I had to chuckle to myself, hoping no one would catch me listening to this embarrassing stuff."
-    show BBW neutral with dissolve
-    BBW "Well, you seem to be enjoying yourself."
+    show WG neutral with dissolve
+    WG "Well, you seem to be enjoying yourself."
     MC "Alice!"
     MCT "Aw crap, she's the last person I'd want catching me listening to my guilty pleasure song selections."
     MCT "I'm sure Honoka would tease me more, but it's nothing she wouldn't know about already."
     MC "You startled me. I wasn't expecting anyone to be around. I guess I was pretty spaced out."
-    show BBW neutral-2
-    BBW "I suppose I could have made my presence more readily known."
-    BBW "Though, I didn't think that would be necessary given the more recent changes to my body have precluded any sort of subtlety to my approach."
-    show BBW haughty
-    BBW "Just how loud did you have your headphones anyway?"
+    show WG neutral-2
+    WG "I suppose I could have made my presence more readily known."
+    WG "Though, I didn't think that would be necessary given the more recent changes to my body have precluded any sort of subtlety to my approach."
+    show WG haughty
+    WG "Just how loud did you have your headphones anyway?"
     MCT "Pretty loud apparently if I couldn't sense Alice's footsteps less than 20 meters away."
     MC "Louder than what was probably reasonable."
     MC "Hey— what are you doing here? I thought you said you'd be busy."
-    show BBW doubt
-    BBW "I go out of my way to drop by and spend time with you and all you have to say in return is 'What are you doing here?' Am I interrupting something important?"
+    show WG doubt
+    WG "I go out of my way to drop by and spend time with you and all you have to say in return is 'What are you doing here?' Am I interrupting something important?"
     "Alice was being playfully coy in her tone and faux expression, but I could tell she was trying to get a point across too."
     MC "No, not at all. You're right, that's not the best way to express my thoughts properly. Sorry about that. Let's try this again."
     MC "Ahem— Why Alice, what a lovely surprise that such beauty deigns to grace my presence! Pray tell what circumstance allowed for such a serendipitous rendezvous?"
-    show BBW happy
+    show WG happy
     "Alice smiled as she rolled her eyes and shook her head. It may have been over the top, but it was much closer to my true feelings than my initial flummoxed reply."
-    BBW "Much better, but I don't think you'll be the headliner at a Shakespearean theatre any time soon."
+    WG "Much better, but I don't think you'll be the headliner at a Shakespearean theatre any time soon."
     MC "Dreams. Crushed."
-    show BBW haughty
-    BBW "It's for your own good."
-    show BBW neutral-2
-    BBW "To answer your question though, my errands did not take as long as the time I had initially allotted for them in my schedule. It was pure happenstance I managed to find you here."
-    BBW "Truth be told I usually try to avoid coming through this part of the school grounds—"
-    show BBW stern
-    BBW "Knowing {color=#66FF33}who{/color} I would normally expect to run into here..."
-    show BBW neutral
-    BBW "But on this occasion it was simply a much more direct route back to my room. So, now it's my turn— What are you doing here?"
+    show WG haughty
+    WG "It's for your own good."
+    show WG neutral-2
+    WG "To answer your question though, my errands did not take as long as the time I had initially allotted for them in my schedule. It was pure happenstance I managed to find you here."
+    WG "Truth be told I usually try to avoid coming through this part of the school grounds—"
+    show WG stern
+    WG "Knowing {color=#66FF33}who{/color} I would normally expect to run into here..."
+    show WG neutral
+    WG "But on this occasion it was simply a much more direct route back to my room. So, now it's my turn— What are you doing here?"
     MC "Didn't you just chastise me about the overly abrupt nature of that same question?"
-    show BBW haughty
-    BBW "Tit for tat. All's fair in love and war."
+    show WG haughty
+    WG "Tit for tat. All's fair in love and war."
     MCT "For my sake I hope she's talking about love."
     MC "Ah, fair enough, I guess. I wasn't doing anything really. I was uh... just taking a break. Trying to... relax. Yep, nothing much at all."
-    show BBW doubt
+    show WG doubt
     "Alice's skepticism was apparent in her expression, her eyes narrowing on me. My pathetic attempt to distract from my true purpose had only served to create more suspicion."
     "Wanting to change the subject and move on from here, I stood up from my position leaning back against the tree."
     "As I leaned over to dust myself off from sitting on the ground, I must have bumped the play button on my phone."
@@ -11454,178 +12440,178 @@ label BBW053:
     "♪...If I'm having fun then it's okay...♪"
     "As much as I liked the song, though loath to admit it, even I had to confess the electronic drums and jazzy discotheque sound of 80s J-pop was painfully outdated by current music standards."
     "I felt myself wince, as I knew Alice wasn't going to let me off the hook, given her strict preference for high art and classical music."
-    show BBW happy
-    BBW "Pffft, hahaha! Keisuke, what on earth are you listening to?"
+    show WG happy
+    WG "Pffft, hahaha! Keisuke, what on earth are you listening to?"
     "I'm not sure what was a worse reaction, her expected disappointment or her current uncontainable laughter."
     "♪...I'm just playing games, I know that's plasti—...♪"
     MC "Okaay! That's enough of that."
-    show BBW neutral
-    BBW "Now I see why you were being evasive."
+    show WG neutral
+    WG "Now I see why you were being evasive."
     MC "Yeah, yeah. Admittingly not my finest hour. Pile it on if you must."
-    show BBW haughty
-    BBW "Well, it's no fun if you've already conceded the point. I'd be lying if I said I wasn't at least a little bit disappointed with what you apparently choose to listen to in your own time."
-    BBW "Honestly, it sounds like something our parents used to listen to."
+    show WG haughty
+    WG "Well, it's no fun if you've already conceded the point. I'd be lying if I said I wasn't at least a little bit disappointed with what you apparently choose to listen to in your own time."
+    WG "Honestly, it sounds like something our parents used to listen to."
     MC "Yeah, that's true, but that's kind of why I was listening to it."
-    show BBW neutral
-    BBW "That's an odd thing to say. What do you mean by that?"
+    show WG neutral
+    WG "That's an odd thing to say. What do you mean by that?"
     MC "Well, it kind of reminds me of home, when I was a kid. I would normally go back home for the summer, but I didn't do that this year, obviously."
     MC "Don't get me wrong, going to your beach house was the best vacation I could have ever asked for, but I guess since I didn't go back home, I found myself in a sentimental mood."
     MC "That song was one of my mother's favorites. It was popular when she was our age, and she would play it for me and my sister. We would dance along to it."
-    show BBW surprised
-    BBW "You have a sister?"
-    show BBW neutral-2
-    BBW "That's news to me."
+    show WG surprised
+    WG "You have a sister?"
+    show WG neutral-2
+    WG "That's news to me."
     MC "Uh... yeah. I probably should have mentioned that at some point. She goes to school here too, would you like to meet her sometime?"
-    show BBW stern
-    BBW "..."
+    show WG stern
+    WG "..."
     "Alice stared at me like she was trying to bore a hole through my head with sheer exasperation. Admittingly, this far into our relationship I should have at least said something."
-    BBW "Of course I would like to meet her!"
-    show BBW neutral
-    BBW "She's your sister after all. I think it would be nice if you introduced us."
-    show BBW sad
-    BBW "I... I always wanted a little sister..."
+    WG "Of course I would like to meet her!"
+    show WG neutral
+    WG "She's your sister after all. I think it would be nice if you introduced us."
+    show WG sad
+    WG "I... I always wanted a little sister..."
     MCT "Yeah, well, you can take her."
     "That was my initial reaction anyway. But seeing the forlorn look in Alice's eyes, as she reflected on her memories growing up as an only child, made me realize I couldn't imagine life without her."
     MC "Oh? I see... I guess I've always kind of taken for granted that I've had a sibling. She's just always been there— we're twins. We even have the same factor."
-    show BBW neutral
-    BBW "Twins!? That's interesting. Honestly, I've never heard you talk about your family before..."
+    show WG neutral
+    WG "Twins!? That's interesting. Honestly, I've never heard you talk about your family before..."
     "The sound of Alice's words started to trail off."
-    show BBW neutral-2
-    BBW "..."
+    show WG neutral-2
+    WG "..."
     "Alice's expression went blank as she looked right at me. Her eyes softened as she appeared to contemplate an uncomfortable realization."
-    show BBW sad
-    BBW "Then again... now that I think about it... I never bothered to ask."
+    show WG sad
+    WG "Then again... now that I think about it... I never bothered to ask."
     MC "Well, I'm kind of guilty of that too. The most I ever asked about your family was when I was lying half dead and delirious on the beach."
-    show BBW happy
-    BBW "How could I forget?"
+    show WG happy
+    WG "How could I forget?"
     MC "But you're asking now, right? I guess I never thought you'd be this interested."
-    show BBW haughty
-    BBW "Yes! I am asking now."
-    show BBW aroused
-    BBW "You should know by now that I'm interested in you, in more than a few ways..."
+    show WG haughty
+    WG "Yes! I am asking now."
+    show WG aroused
+    WG "You should know by now that I'm interested in you, in more than a few ways..."
     MCT "I like where this is going!"
-    show BBW neutral
-    BBW "But finish the story about the song and your mom."
+    show WG neutral
+    WG "But finish the story about the song and your mom."
     MCT "I don't like where this is going!"
     MC "Well it's kind of a dumb story, but the song always stuck with me because as a kid I didn't really understand most of what the song was talking about."
     MC "I thought it was a silly song about a girl who loved plastic and was just having fun."
     MC "Buuutt, when I got older, way older than I should have, I finally figured out the song was about a girl who had her heart broken."
     MC "She tries to dull the pain by dancing the night away at clubs, and admits her love is as fake as plastic."
-    BBW "I suppose that does sound deeper than I would have initially given credit to it, just from listening to the melody."
+    WG "I suppose that does sound deeper than I would have initially given credit to it, just from listening to the melody."
     MC "Yeah, so it just just kind of stuck with me because of all of that. It reminds me of home because it makes me think of my mom."
     MC "It makes me laugh that I used to like it as a kid when I had no idea what it was about."
     MC "And now that I'm older, there's just something about the upbeat sound contrasting with the heartbreaking story that's almost confusing— maybe tantalizing is a better word?"
     MC "It just pulls me in so many different directions, I don't know what to think. So I find myself getting lost in it."
-    BBW "You managed to pull all of that from a superficial pop song from over a decade before you were born?"
+    WG "You managed to pull all of that from a superficial pop song from over a decade before you were born?"
     MC "That about sums it up, I suppose."
-    show BBW haughty
-    BBW "Honestly Keisuke, I don't know if I'm impressed by the depth of your contemplation or if I should hopelessly resign from any attempts to remediate your taste in music."
+    show WG haughty
+    WG "Honestly Keisuke, I don't know if I'm impressed by the depth of your contemplation or if I should hopelessly resign from any attempts to remediate your taste in music."
     MC "Hey, don't give up hope. I'll have you know you're a bigger influence on me than you give yourself credit for."
     MCT "Figuratively and literally."
-    show BBW neutral-2
-    BBW "Oh? Is that so?"
+    show WG neutral-2
+    WG "Oh? Is that so?"
     MC "Yeah. I made this new playlist, but only a few of them were cheesy pop songs I consider guilty pleasures. The rest were classical songs I picked out that I recognized and liked, but hadn't ever really fully listened to."
-    show BBW surprised
+    show WG surprised
     MC "I thought I should try to learn to appreciate classical music more, since it seemed to mean so much to you."
-    show BBW happy
-    BBW "That certainly is a pleasant surprise. I'm genuinely impressed by your thoughtfulness. Do you have any favorites picked out?"
+    show WG happy
+    WG "That certainly is a pleasant surprise. I'm genuinely impressed by your thoughtfulness. Do you have any favorites picked out?"
     MC "Well, I'm still working through the list, but this one stuck out."
 
     play music BrandenburgNo4
-    show BBW surprised
-    BBW "Oh my."
+    show WG surprised
+    WG "Oh my."
     MC "I take it you recognise it."
-    show BBW neutral
-    BBW "I most certainly do. It's one of the all time greatest pieces of symphony, by arguably the greatest composer in history. I was caught off guard at first, as it is quite a contrast from your previous selection."
+    show WG neutral
+    WG "I most certainly do. It's one of the all time greatest pieces of symphony, by arguably the greatest composer in history. I was caught off guard at first, as it is quite a contrast from your previous selection."
     MC "Heh, I suppose so."
-    show BBW neutral-2
+    show WG neutral-2
     "Alice was quiet as she started to stare off into the distance. No doubt she was focusing on the song and getting lost in it in the process."
     MC "Hey, we don't have any place to be for a while. Come join me here. The view, the weather, the music— we can just sit for a while and take it all in."
     "I sat back down under the tree and patted the ground beside me, beckoning Alice to come sit next to me."
-    show BBW happy
-    BBW "What a wonderful suggestion."
+    show WG happy
+    WG "What a wonderful suggestion."
     "Alice walked a couple of paces to the tree. As graceful as she was in her movements, she did have a noticeable waddle to her steps these days."
     "She had to do a bit of maneuvering to turn herself around and check to see if she was going to land close enough to be against the tree to lean back, while leaving enough room for her ass to fit between."
     play sound Thud
     "{i}THUD{/i}"
     "She managed well enough, but even so, I still felt a noticeable shockwave from her butt free‑falling to the ground with those last few centimeters."
-    show BBW neutral
-    BBW "{i}Sigh{/i}... this place does offer some wonderful scenery. Makes me almost regret not coming here so often."
+    show WG neutral
+    WG "{i}Sigh{/i}... this place does offer some wonderful scenery. Makes me almost regret not coming here so often."
     "I scooted in closer to Alice, bringing my arm behind her back, cupping the back part of her love handles on the opposite side, while I squooshed into the side of her hips."
-    show BBW aroused
-    BBW "Oh!"
+    show WG aroused
+    WG "Oh!"
     "Alice in turn reached across my back behind me to squeeze me in closer to her. I rested my head on her pillowy shoulder while she leaned her soft cheek against my head as we sat next to each other."
     MCT "This feels nice."
-    show BBW neutral-2
-    BBW "I was thinking about what you said earlier, about how you liked that song because it pulls you in so many different directions?"
+    show WG neutral-2
+    WG "I was thinking about what you said earlier, about how you liked that song because it pulls you in so many different directions?"
     MC "Oh yeah?"
-    BBW "Well, it made me think about how that's kind of why I like this style of music so much. Symphonic music is so layered with all the different instruments with their own respective timings."
-    BBW "You can't just focus on the melody, there's such a rich undercurrent to it all. The dramatic shifts in volume and tone— the depth cannot fully be appreciated by just listening to the song once."
-    BBW "It feels like a warm ocean I could just swim in forever..."
+    WG "Well, it made me think about how that's kind of why I like this style of music so much. Symphonic music is so layered with all the different instruments with their own respective timings."
+    WG "You can't just focus on the melody, there's such a rich undercurrent to it all. The dramatic shifts in volume and tone— the depth cannot fully be appreciated by just listening to the song once."
+    WG "It feels like a warm ocean I could just swim in forever..."
     "We sat for a few more minutes just taking in the sights and sounds, enjoying each other's embrace."
     pause 2
-    show BBW doubt
-    BBW "Ehh."
+    show WG doubt
+    WG "Ehh."
     "Alice shifted her position a bit. She looked a little uncomfortable."
     MC "Something wrong?"
-    show BBW worried
-    BBW "Oh. Sorry to interrupt the moment, it's just that the tree and the ground are really hard. It isn't the most comfortable."
+    show WG worried
+    WG "Oh. Sorry to interrupt the moment, it's just that the tree and the ground are really hard. It isn't the most comfortable."
     MC "Hmmm, I think I have an idea."
-    show BBW neutral
-    BBW "What do you suggest?"
+    show WG neutral
+    WG "What do you suggest?"
     MC "Here, stand back up."
-    show BBW neutral-2
-    BBW "Okay..."
+    show WG neutral-2
+    WG "Okay..."
     MC "Now sit here."
     "I patted the ground in front of me between my legs as I moved them apart."
-    BBW "Are you sure?"
+    WG "Are you sure?"
     MC "Positive. I'll be your literal body pillow against the tree."
-    BBW "If you say so..."
+    WG "If you say so..."
     "Alice turned around and began her deliberate descent into my lap."
     "I probably needed a license to handle heavy machinery just to make sure I didn't die here, but it was worth the risk as I gently placed my hands on the sides of her hips to help guide her down nice and easy."
     play sound Boing
     "{i}Bloop{/i}"
     MC "HRM!"
     "I stifled my instinctive reaction to the sudden increase in pressure on my body. Alice's butt and hips overflowed up onto my lap, while her pudgy legs partially draped over the top of mine all the way down to my feet."
-    show BBW doubt
-    BBW "Are you okay back there?"
+    show WG doubt
+    WG "Are you okay back there?"
     MC "Never been better. Now lean back and make yourself comfortable."
     "Alice reclined backwards releasing the full weight of her torso back onto me. I felt like I sunk in quite a few centimeters into her soft, pillowy back fat before it finally yielded and began to push me up against the tree."
     MC "Oof."
     "Though I felt like I was stuck between a rock and a soft place, I wouldn't have traded this for the finest satin sheets in the world."
-    BBW "If I'm too heavy, just say something and I'll—"
+    WG "If I'm too heavy, just say something and I'll—"
     MC "{size=-6}Shhhh...{/size}"
     "I whispered into Alice's ear."
     MC "{size=-6}I would never say that.{/size}"
-    show BBW happy
-    BBW "I'm glad to hear that."
+    show WG happy
+    WG "I'm glad to hear that."
     "Now fully behind Alice, I was able to make a better attempt at reaching my arms around to the front of her belly. This was easier said than done, if not impossible."
     "I ran my hands along the outside edges of her belly, starting low at her love handles. I let my hands glide along the smooth surface as my hands sunk deeper and deeper as I moved further out in front of her."
-    show BBW aroused
-    BBW "Mmmm..."
+    show WG aroused
+    WG "Mmmm..."
     "Her belly was so big now there was no way I could get my hands to the front of the widest part. I decided to move them upwards, but even then I couldn't get my arms to meet, even around the upper half of her belly."
     "I kept moving up to see if I could meet up somewhere closer to where it began to bulge out from her body."
     "Still no luck. I eventually was able to meet my hands, but by this point my hands were completely engulfed under her boobs. Not what I initially had planned, but this was good too!"
     "I continued to move up the contours of the sides towards the front of her breasts."
-    show BBW neutral
-    BBW "Erhem. Not that I wouldn't mind Keisuke, but why don't we save that for a more private setting?"
+    show WG neutral
+    WG "Erhem. Not that I wouldn't mind Keisuke, but why don't we save that for a more private setting?"
     "Alice firmly grasped my hands and repositioned them lower, out onto the sides of her belly."
-    show BBW happy
-    BBW "This, however, I don't care who sees. It feels too good."
+    show WG happy
+    WG "This, however, I don't care who sees. It feels too good."
     "I proceeded to rub my hands back and forth along her belly. Front to back at first, but then down lower into a circular motion."
-    show BBW aroused
-    BBW "MMMMMM!"
+    show WG aroused
+    WG "MMMMMM!"
     stop music
     MC "Oh, I guess the song ended. Did you want to head back—"
     "Alice leaned her head back into my ear, giving me a low, sleepy whisper."
-    BBW "{size=-6}Please... don't stop.{/size}"
+    WG "{size=-6}Please... don't stop.{/size}"
     "I turned my head into her face and gave her a soft kiss on her pillowy cheek."
     MC "As if I would ever want to."
     "Needless to say, this continued for quite a while."
     jump daymenu
 
-label BBW054:
-    $setProgress("BBW", "BBW055")
+label WG056:
+    $setProgress("WG", "WG057")
     scene Dorm Interior with fade
     play music Peaceful
     MCT "Well sooner or later it was going to be time for Alice to meet Tomo. Like we talked about before, it's been way past due by this point in our relationship."
@@ -11646,41 +12632,41 @@ label BBW054:
     "I shot her a quick text."
     Cell "<Hey Alice, you up for stopping by my sister's room so you can meet her? She should be around.>"
     "Part of me hoped she didn't have her phone on her, but it didn't even take her a couple of minutes to reply."
-    BBWCell "<Absolutely. What time?>"
+    WGCell "<Absolutely. What time?>"
     Cell "<Now if that works. I'll meet you at your place and we'll walk over.>"
-    BBWCell "<Okay, see you soon.>"
+    WGCell "<Okay, see you soon.>"
     scene Dorm Exterior with fade
     "I stepped out into the afternoon sun. The short walk to Alice's room, a walk I'd done many times by this point, had never felt so long."
     "The bright blue sky dotted with puffy clouds, the gentle breeze that fluttered around me, I tried to take it all in like it was my last day on earth."
     "I knew I was being melodramatic about the whole thing, but I couldn't help but drag my feet. I did not want to do this."
     "I knocked on Alice's door."
     play sound Knock
-    show BBW neutral with dissolve
+    show WG neutral with dissolve
     MC "Hello."
-    BBW "Hello to you as well, Keisuke."
+    WG "Hello to you as well, Keisuke."
     "Alice had picked up on my overly stiff intonation and uncharacteristically truncated greeting."
     MC "Say, it's a nice day out. Want to go for a walk? Tomoko's not going anywhere, she lives here after all."
-    show BBW doubt
-    BBW "Keisuke, quit stalling. You've stalled enough this entire time we've been together."
+    show WG doubt
+    WG "Keisuke, quit stalling. You've stalled enough this entire time we've been together."
     MCT "Alright, the jig is up."
     MC "You're right. Let's go."
-    show BBW happy
+    show WG happy
     "I took her hand in mine as we walked around to the other side of the girl's dorm where Tomo's room was. Even her hands felt soft and puffy at this stage in her growth. Looking down I noticed the dimples where her knuckles should be as I gave her hand a gentle squeeze."
     MC "I should warn you Alice, Tomoko can be... well, a bit rough around the edges."
-    show BBW neutral-2
-    BBW "Sounds like you two have a bit more in common than you care to admit."
+    show WG neutral-2
+    WG "Sounds like you two have a bit more in common than you care to admit."
     MC "Heh, fair enough, but I'm serious, Alice. She can be quite blunt at times. Just try not to get mad if she says something stupid."
-    BBW "Oh you're just being nervous. I'm sure she's fine."
+    WG "Oh you're just being nervous. I'm sure she's fine."
     MC "I don't know if you understand. So picture all the stuff about me that annoys you."
-    show BBW neutral
+    show WG neutral
     pause 1
-    BBW "Okay."
+    WG "Okay."
     MC "Now take away my more redeeming qualities and that's all your left with. Times ten. That's Tomoko."
     "Alice just stared at me, completely unphased by the point I was trying to drive home."
-    BBW "So, if I understand you correctly, what you're trying to say is, you two are exactly alike?"
+    WG "So, if I understand you correctly, what you're trying to say is, you two are exactly alike?"
     "I couldn't help but slump my neck and shoulders in response to that. I expressed my disappointment in her assessment with an unamused and mopey glare."
-    show BBW haughty
-    BBW "Come now, don't pout. It takes the fun out of teasing you. Honestly, there's no need to make such a big deal out of this. Drama isn't exactly flattering on you Keisuke."
+    show WG haughty
+    WG "Come now, don't pout. It takes the fun out of teasing you. Honestly, there's no need to make such a big deal out of this. Drama isn't exactly flattering on you Keisuke."
     MC "{i}Sigh{/i}, I know. You're right. I'll stop whining."
     MCT "Get it together, stay positive."
     MC "I hope you like her. I hope she likes you. Like you said, it'll be fine."
@@ -11688,14 +12674,15 @@ label BBW054:
     "Arriving at our destination, I knocked on Tomo's door."
     play sound Knock
     pause 2
-    show BBW neutral
+    show WG neutral
     play sound Knock
-    BBW "..."
-    BBW "Keisuke, did you even check to make sure she'd be in her room?"
+    WG "..."
+    WG "Keisuke, did you even check to make sure she'd be in her room?"
     MC "I did. It just takes a while to wake a bear from hibernation."
     "After an embarrassingly long time, I heard the sounds of the door unlatching and beginning to open. True to her nocturnal nature, she only cracked the door open wide enough to see me."
-    show BBW neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show Tomoko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show Tomoko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
     Tomoko "Wha? Oh, hey Kei. What do you want? You interrupted a perfectly good nap."
     Tomoko "Cell phones exist for a reason, you know. Just call me next time."
     MC "I did. You do realize that requires you to actually check your phone right?"
@@ -11706,35 +12693,37 @@ label BBW054:
     MC "I don't {i}need{/i} anything from you. I just wanted to introduce you to someone I thought you should get to know."
     "I pushed on Tomo's door to open it wider with one hand, while gesturing towards Alice behind me with the other."
     MC "Tomoko — Alice. Alice  — Tomoko."
-    BBW "Nice to finally meet you, Tomoko."
+    WG "Nice to finally meet you, Tomoko."
     "Not much of anything ever phased Tomo, but her wide–eyed, paralyzed reaction to seeing Alice was all the confirmation of my worst fears how the rest of this was going to go."
     Tomoko "Uhhh, hi... it's... just Tomo, by the way."
     Tomoko "{size=-6}Kei, she's huge! I knew you had a thing for bigger girls, but this is biiig! Even for you!{/size}"
     "My initial reaction was one of bewilderment, because I was not quite sure at what point she would have learned that information, but then again, I can't say I didn't do my fair share of spying on her too when we were younger."
     "But my second reaction was pure cringe, as I knew for a fact Tomo did not whisper that quietly enough for Alice to have not heard that."
-    show BBW worried
+    show WG worried
     MCT "Whew, deep breaths buddy. Time to turn on the charm and get to work cleaning up her messes."
     MC "Yes! This is big for me! Huge, in fact! We've been dating for quite a while and she's become such a big part of my life I realized it was a big mistake to not keep you looped in sooner."
-    show BBW neutral-2
+    show WG neutral-2
     MC "Say, if you don't have anything going on, let's visit for a while."
     "I said as I proceeded to walk through her door and invite myself in. I motioned in a jovial manner for Alice to follow me in, then immediately shot a death glare at Tomo once Alice was no longer looking at me."
     scene black with fade
     $setTime(TimeEnum.NIGHT)
     scene Dorm Tomoko with fade
     play music Rain
-    show Tomoko neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW surprised at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Oh my."
+    show Tomoko neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show WG surprised at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Oh my."
     "Tomoko's room looked like a bomb had gone off. It would have been easier to set the whole thing ablaze and start new than to tackle this clean-up project."
     MC "Tomo, can you at least turn the lights on?"
     Tomoko "Fine."
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Dorm Tomoko with fade
-    show Tomoko neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW doubt at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show WG doubt at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
     "Turning the lights on only served to clarify the magnitude of the mess that was surrounding us, but at least we wouldn't trip over a random pile of junk in the dark anymore."
-    BBW "{size=-6}Keisuke, this place is filthy!{/size}"
+    WG "{size=-6}Keisuke, this place is filthy!{/size}"
     MC "{size=-6}Can't say I didn't warn ya.{/size}"
     MC "Tomo, this is pretty out of hand, even for you."
     Tomoko "You sound like Mom. It's not like I knew you were coming over."
@@ -11743,95 +12732,95 @@ label BBW054:
     MCT "Ugh, she's hopeless."
     MC "Fine, this will do nicely, we'll just grab a seat here."
     "I proceeded to clean off the various articles of clothing and random food bits and trash from her couch in order to create a spot for Alice to sit down."
-    show BBW neutral-2
+    show WG neutral-2
     "I sat down on the couch and patted the seat next to me to invite Alice to sit down."
     "Alice waddled over, turning around to start to sit before Tomo spoke up."
     Tomoko "Wait! You're not going to break my couch are you?"
-    show BBW surprised
-    BBW "What?"
+    show WG surprised
+    WG "What?"
     MC "Tomo!"
     Tomoko "What? I like that couch. It's where I put my dirty clothes. I heard about a student with a weight gain factor who broke her bed and had to get a new one not that long ago."
-    show BBW stern
-    BBW "{size=-6}How did you know I...{/size}?"
+    show WG stern
+    WG "{size=-6}How did you know I...{/size}?"
     "Tomo's roommate sat on the student council and that blabbermouth tells her everything. It's why Tomo always knows about what's going on in the school, despite being a recluse who doesn't leave her room unless she has to."
     MC "Your roommate Yuki has quite the reputation as a chatterbox. Perhaps you should be a bit more skeptical of the things she repeats from the rumor mill?"
     Tomoko "Oh, uh, I guess you're right. I mean the school is supposed to be built to prevent those kinds of things. Someone would have to be really heavy to break the furniture in a place that's built to handle that kind of thing."
-    show BBW worried
+    show WG worried
     "Even when dropping the matter, Tomo still managed to make things ten times more embarrassing for Alice."
     MC "Uh, right. Nothing to worry about!"
     "I reached out and offered my hand to Alice to brace hers while I provided support against her back with my other arm to assist with a gentle descent on to the couch cushions."
     "{i}CREEEEK{/i}"
-    show BBW surprised
+    show WG surprised
     "Alice and I gave each other a frightened look for a split second, but after silence hung in the air for a bit, we relaxed once we realized the couch was going to hold up."
-    show BBW neutral
-    BBW "So Tomo, tell me about yourself."
+    show WG neutral
+    WG "So Tomo, tell me about yourself."
     Tomoko "Uh, I don't know what there is to tell. What did you want to know?"
-    BBW "Well, what are some of your interests?"
+    WG "Well, what are some of your interests?"
     Tomoko "Oh, um, well I don't have a lot of hobbies. I just like to hang out in my room and play video games."
     Tomoko "{i}Yawn{/i}"
     Tomoko "It's annoying to have to get up for class, so I'd usually be catching a nap about now."
-    show BBW neutral-2
-    BBW "Oh. I see... Well what do you like to do when you're not at school?"
+    show WG neutral-2
+    WG "Oh. I see... Well what do you like to do when you're not at school?"
     Tomoko "I go shopping if I really need something. Sometimes I go to the arcade. I don't know, there's not that much else to do on this island."
     "As verbose as Tomo was, her entire autobiography wouldn't have even filled two pages. Alice was quite the conversationalist, so I'm sure she found the prospect of extracting anything interesting out of Tomo just as excruciating as it was for me to listen to this."
-    BBW "Uh-huh... Yes, um, fascinating. So, what was it like growing up with Keisuke?"
+    WG "Uh-huh... Yes, um, fascinating. So, what was it like growing up with Keisuke?"
     Tomoko "Oh, well, we would always fight about everything because we were the same age and never wanted to share our stuff. He's always acting like the 'big brother' even though he's not even an hour older than me."
     "I could only roll my eyes at the sheer ingratitude."
-    BBW "Is that so? That's rather sweet of you to look out for your little sister like that Keisuke."
+    WG "Is that so? That's rather sweet of you to look out for your little sister like that Keisuke."
     MC "What can I say? I try, but as you can see, I can only do so much."
     Tomoko "Oh. Yes. My dear brother, where would I be if not for your guiding hand?"
     MC "If you're thinking it's some place better than this current pig-stye, I got news for ya."
     Tomoko "Yes, {i}Mother{/i}. I'm so sorry my procrastination to do my laundry has brought dishonor to our family."
-    show BBW stern
-    BBW "Easy now. Do you always talk like this to each other?"
+    show WG stern
+    WG "Easy now. Do you always talk like this to each other?"
     Tomoko "Yeah."
     MC "Pretty much."
-    show BBW surprised
+    show WG surprised
     Tomoko "Geeze, we were just having fun talking back to each other. You didn't need to get all serious. Don't you have siblings?"
-    show BBW sad
-    BBW "Well, no. I'm an only child."
+    show WG sad
+    WG "Well, no. I'm an only child."
     Tomoko "Oh. Uh, that's okay too. I guess."
     MCT "Quite the wordsmith aren't we Tomo?"
-    show BBW neutral
+    show WG neutral
     pause 2
     "Sensing that Tomo wasn't exactly going to naturally move along the flow of a conversation I decided I better start trying to facilitate things."
     MC "Sooo Tomo, you told Alice a bit about yourself, is there anything you want to know about her?"
-    BBW "Yes. Is there anything you'd like to know, Tomo?"
+    WG "Yes. Is there anything you'd like to know, Tomo?"
     Tomoko "Aren't you like, really rich or something? Like {i}suuuper-rich{/i}?"
     MC "Tomo, it's not really a polite topic of conversation to bring up personal finances."
     Tomoko "What? You're the one asking me what I wanted to know. I don't see what the big deal is."
-    BBW "It's alright Keisuke, I can handle this. Even though it is not the most proper of subject matter, it is something that I get asked about fairly often. We might as well get it out of the way."
-    BBW "My father is indeed a very successful businessman, you have probably heard of the name Nikumaru before. He is the head of a major heavy industry conglomerate in Japan."
+    WG "It's alright Keisuke, I can handle this. Even though it is not the most proper of subject matter, it is something that I get asked about fairly often. We might as well get it out of the way."
+    WG "My father is indeed a very successful businessman, you have probably heard of the name Nikumaru before. He is the head of a major heavy industry conglomerate in Japan."
     Tomoko "Nik-u-mar...u...!"
     Tomoko "Holy shit! You must be loaded!"
-    BBW "Um, well—"
+    WG "Um, well—"
     Tomoko "You really hit the jackpot with her Kei!"
     MC "Tomo, please, this isn't about money. I didn't come here to talk about her wealth. I wanted to introduce her to you because we've grown so close in our relationship, I thought it was past time you met her."
     Tomoko "Do you have a yacht? Like one of those mega-yachts? Or a private jet even?"
-    BBW "If you are curious to know, yes, my family does have those things."
+    WG "If you are curious to know, yes, my family does have those things."
     Tomoko "So, you're like, set for life then?"
     MC "Tomo..."
     Tomoko "Must make it easy to afford all that food—"
     MC "Tomo!"
     Tomoko "Okay, fine. I get it, she's rich, but don't ask about it. I just thought it was cool, that's all."
-    BBW "Is there anything else you were curious about? Like how we met?"
+    WG "Is there anything else you were curious about? Like how we met?"
     Tomoko "Not really. You both go to the same school. Kei always had a thing for big girls, I can put the pieces together from there."
-    BBW "... I suppose you are right."
-    BBW "Was there more you wanted to know about me, or us?"
+    WG "... I suppose you are right."
+    WG "Was there more you wanted to know about me, or us?"
     MC "—That wasn't about money."
     Tomoko "Yeah. What's it like being so big?"
-    show BBW surprised
+    show WG surprised
     MC "..."
     "I could feel the color drain out of my face from the shock that she actually said that. Tomo had always been as blunt as a sledgehammer, but I would have thought even she knew better than this."
     Tomoko "I mean I've seen some giant students that were really tall, and obviously big, but you're like the biggest person I've seen that's a normal height here."
-    show BBW sad
-    BBW "Oh. Umm, I guess you're right. I suppose I hadn't realized I stood out so much..."
+    show WG sad
+    WG "Oh. Umm, I guess you're right. I suppose I hadn't realized I stood out so much..."
     "Whatever color had drained out of my face before began to boil up red. Deep in my heart, I know Tomo didn't mean it like that, but seeing Alice looking so embarrassed and hurt by her careless words— I completely snapped!"
     MC "Damn-it Tomoko! What the hell is wrong with you!?"
-    show BBW surprised
+    show WG surprised
     Tomoko "What? I was just asking—"
     MC "Yeah, I know. Shut up! You've embarrassed the hell out of me and yourself. First, you barely drag your ass out of bed to greet us at the door."
-    show BBW worried
+    show WG worried
     MC "Then I have to scrape three layers of garbage off your couch just so we could sit and visit, only for you to show approximately zero interest in holding basic conversation unless you're asking about the most invasively private shit possible!"
     MC "For once, could you just take a hint and take something seriously? I {i}LOVE{/i} this woman. She's the most important thing I've got going on in my life. Excuse the hell out of me for wanting to include you with that."
     "Even Tomo's usually shameless and unflappable demeanor was shocked, if not a bit shamed, by my unexpected diatribe."
@@ -11845,57 +12834,57 @@ label BBW054:
     $setTime(TimeEnum.DAY)
     scene Dorm Exterior with fade
     play music Hallway
-    show BBW worried with dissolve
+    show WG worried with dissolve
     "We walked in silence for a little while. Alice was still looking sullen and dejected, while I was trying to take in some calm breaths to simmer myself back down to something closer to sanity."
     MC "Sorry about that."
-    BBW "You don't need to apologise Keisuke. It's not like you can control her and what she does. Now I see why you were so nervous about introducing us."
+    WG "You don't need to apologise Keisuke. It's not like you can control her and what she does. Now I see why you were so nervous about introducing us."
     "Prior to this, my sister's bafflingly uncouth mannerisms made me relish at the thought of getting to tell Alice 'I told you so!' for once."
     "But seeing the look on her face after that disaster— I didn't care anymore if I ever got the chance to say that."
     MC "But I am sorry. I guess I could have tried to give her more of a heads up. {i}Sigh{/i}. I don't know."
     MC "It's just, she's— aaaaargh! That's what it's like having a sibling. They annoy you to no end, but you love them anyway."
-    show BBW happy
-    BBW "Hmmm, that reminds me of someone I love."
+    show WG happy
+    WG "Hmmm, that reminds me of someone I love."
     "Alice turned to face me, wrapping her arms behind my head, she pulled me down as she leaned in, giving me a kiss."
     MC "Oh? I'm glad you feel the same way."
     "We were forehead to forehead, still in our embrace. I had to lean in a lot with my back just to get in close as my body hugged the contour of her belly. Even I hadn't realized until now just how big it's been getting lately."
     "Alice's arms were heavy on my shoulders. They felt like soft pillows while at the same time they were crushing me like I was literally carrying the weight of the world on my shoulders."
-    show BBW aroused
-    BBW "You certainly showed some fiery intensity back there. I must say, I'm quite flattered I could serve as the muse for such passion."
+    show WG aroused
+    WG "You certainly showed some fiery intensity back there. I must say, I'm quite flattered I could serve as the muse for such passion."
     MC "You are my muse. I may not always get things right, but everyday I try harder to be the kind of guy that could win your heart."
-    show BBW happy
-    BBW "I know. And it's much appreciated. Don't ever think that I don't notice."
+    show WG happy
+    WG "I know. And it's much appreciated. Don't ever think that I don't notice."
     "A wide stupid grin crawled across my face as I realized she might just be as crazy about me as I am about her."
-    show BBW haughty
-    BBW "Hey now! Don't be getting a big head now over that. You've got some pretty high expectations to measure up to now."
+    show WG haughty
+    WG "Hey now! Don't be getting a big head now over that. You've got some pretty high expectations to measure up to now."
     MC "Yes ma'am! Of course."
-    show BBW happy
-    BBW "Hehe. Oh what will I do with you Keisuke?"
+    show WG happy
+    WG "Hehe. Oh what will I do with you Keisuke?"
     MC "Oh I don't know, enjoy another lovely evening together?"
-    BBW "Well, if you insist."
+    WG "Well, if you insist."
     "We walked back at a leisurely pace towards Alice's dorm. Laughing while we impishly pestered each other with where we were putting our hands all over each other."
     "The unpleasantries of the earlier meeting had seemingly vanished, but even so, as we approached Alice's room door it was still weighing on me in the back of my mind."
     "I didn't want to ruin the mood by broaching the subject again, but part of me knew I had to do something."
     MC "Hey, um, Alice. About Tomoko. I just wanted to say, the things that she said earlier, I know she didn't mean it like that. She's not an uncaring person, she just doesn't often say things the way she should."
-    show BBW neutral
-    BBW "Well, thinking back I might have overreacted a bit myself to some of the things she said. In some ways her honesty was refreshing."
-    BBW "We invited her to ask what she wanted to, and she spoke what was on her mind. That kind of straightforwardness is pretty rare I've noticed, especially when everyone around me is too afraid to say anything about how fat I am."
+    show WG neutral
+    WG "Well, thinking back I might have overreacted a bit myself to some of the things she said. In some ways her honesty was refreshing."
+    WG "We invited her to ask what she wanted to, and she spoke what was on her mind. That kind of straightforwardness is pretty rare I've noticed, especially when everyone around me is too afraid to say anything about how fat I am."
     "Alice certainly didn't sugar coat it. It was true. Alice was fat. Not just kind of fat, at this point she was probably the fattest person I'd ever seen, well... in person anyway."
     "I know myself I'd danced around the word more times than I can recall, if only to help not cast the situation in a negative light for Alice's sake, despite my own proclivities."
     MC "I see. I hope I haven't come across that way. I just want to be supportive."
-    show BBW neutral-2
-    BBW "Oh you're fine Keisuke, I didn't mean you. Besides, I'm well aware of your preferences, and I know where your heart is at."
-    BBW "But it made me realize that if I'm ever going to learn to live with this, I'm going to have to be able to move past people's reactions to my size."
+    show WG neutral-2
+    WG "Oh you're fine Keisuke, I didn't mean you. Besides, I'm well aware of your preferences, and I know where your heart is at."
+    WG "But it made me realize that if I'm ever going to learn to live with this, I'm going to have to be able to move past people's reactions to my size."
     "Alice was right. Honestly, I had always been surprised at how well she took her situation in stride."
     "People who don't know her well misunderstand her as being vain and egotistical, but those kinds of people would have crumpled under the pressure of this kind of trial."
     "Alice was determined to not have her growth slow her down. Thinking about it now, I could definitely see how everyone around her constantly walking on eggshells was going to be counter productive towards that end."
     MC "I think that's the right attitude to have."
-    show BBW neutral
-    BBW "I think so too. Still though, I wish I would have moved past my initial reactions sooner to try to hit it off better with your sister."
+    show WG neutral
+    WG "I think so too. Still though, I wish I would have moved past my initial reactions sooner to try to hit it off better with your sister."
     MCT "Hmmm, well no time like the present."
     MC "Hey, that gives me an idea. Give me a couple of minutes. I'll meet you back at your room in a bit."
-    show BBW neutral
-    BBW "Oh? Well, don't take too long now."
-    show BBW happy
+    show WG neutral
+    WG "Oh? Well, don't take too long now."
+    show WG happy
     MC "No problem, I'll be right back."
     "I stole a quick peck on her soft chubby cheek before darting off to my destination."
     scene black with fade
@@ -11923,75 +12912,76 @@ label BBW054:
     Tomoko "You're gonna owe me for this one."
     MC "Big time. Now get in there."
     stop music
-    scene Dorm BBW with fade
-    play music BBW
-    show Tomoko neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW surprised at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Tomo, what a lovely surprise. I didn't expect I'd be seeing you again so soon."
+    scene Dorm WG with fade
+    play music WG
+    show Tomoko neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show WG surprised at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Tomo, what a lovely surprise. I didn't expect I'd be seeing you again so soon."
     Tomoko "Well, me either to be honest."
-    show BBW neutral
+    show WG neutral
     MC "Ahem."
     Tomoko "So, anyway, I wanted to say I was sorry about back there. I didn't mean to be rude. You seem kind of cool, I was just curious, that's all."
-    BBW "I see. That's perfectly fine. What were you curious about? I promise I won't get mad— whatever you want to know."
+    WG "I see. That's perfectly fine. What were you curious about? I promise I won't get mad— whatever you want to know."
     Tomoko "Well, honestly, I wanted to know what it's like being so big."
     "My eyes nearly jumped out of their sockets as I felt my heart stop for a split second."
-    show BBW surprised
+    show WG surprised
     Tomoko "I mean, it looks like it'd be hard. I can't even imagine. I-I was just wondering."
-    show BBW neutral-2
-    BBW "I certainly can't begrudge your sincerity. To answer your question, yes it can be challenging. Some things are definitely more difficult."
-    BBW "The facilities at the school accommodate about as well as can be expected, so I haven't gotten stuck or unable to get anywhere."
-    BBW "Some of the more mundane aspects of life have presented additional challenges. It is admittedly difficult to find clothes that fit, and continue to fit."
-    BBW "My roommate and I have to help each other to get dressed in the morning because we can't quite reach everywhere ourselves."
-    BBW "New challenges emerge as I continue to grow, but they don't bother me as much because I have someone I can count on for help and support."
-    show BBW happy
+    show WG neutral-2
+    WG "I certainly can't begrudge your sincerity. To answer your question, yes it can be challenging. Some things are definitely more difficult."
+    WG "The facilities at the school accommodate about as well as can be expected, so I haven't gotten stuck or unable to get anywhere."
+    WG "Some of the more mundane aspects of life have presented additional challenges. It is admittedly difficult to find clothes that fit, and continue to fit."
+    WG "My roommate and I have to help each other to get dressed in the morning because we can't quite reach everywhere ourselves."
+    WG "New challenges emerge as I continue to grow, but they don't bother me as much because I have someone I can count on for help and support."
+    show WG happy
     "Alice turned away from talking to Tomo and shot me a knowing smile."
     Tomoko "Yeah, I guess he can be kind of nice sometimes."
-    show BBW neutral
-    BBW "Thank you for asking Tomo. You're the only person besides Keisuke and my roommate who's ever genuinely asked to know more about me and my factor without trying to make fun of me."
+    show WG neutral
+    WG "Thank you for asking Tomo. You're the only person besides Keisuke and my roommate who's ever genuinely asked to know more about me and my factor without trying to make fun of me."
     Tomoko "No problem. Huh, that kind of sucks people treat you that way."
-    BBW "Well that's their problem— I refuse to make it mine any longer."
+    WG "Well that's their problem— I refuse to make it mine any longer."
     "A still pause in the conversation hung in the air as Alice tilted her head, giving Tomo an up and down with her eyes."
-    BBW "You poor thing. Your hair is just not cooperating is it?"
+    WG "You poor thing. Your hair is just not cooperating is it?"
     Tomoko "What? Oh, yeah, it just kind of gets like that on its own. I can't really keep up with it anyway. It's whatever, I don't think about it too much."
-    show BBW neutral-2
-    BBW "If you wouldn't mind. I could help you with it."
+    show WG neutral-2
+    WG "If you wouldn't mind. I could help you with it."
     Tomoko "Uhhh..."
     "Tomo turned to look at me for some kind of reassurance, only to see me give her a double thumbs up and an overly enthusiastic grin."
     "Her dour stare told me 'I want off this ride' but she was on the hook for this and couldn't do anything about it. I had zero sympathy."
     Tomoko "Suuure."
-    show BBW happy
-    BBW "Excellent. Now let's see here."
+    show WG happy
+    WG "Excellent. Now let's see here."
     "Alice proceeded to pull out one of her hair brushes from her vanity dresser and began to work it through that tangled rat's nest attached to Tomo's skull."
     "Work was not the correct word, because nothing about this was working. Tomo's head was being pulled around a lot more than the brush was through her hair."
     Tomoko "Ow! Don't- give me- brain- ach, damage!"
     MC "{size=-6}It's probably too late for that anyway.{/size}"
     Tomoko "I heard that."
-    show BBW doubt
-    BBW "Hmmm, well this just won't do."
-    show BBW haughty
-    BBW "Aha! I have just the solution!"
-    show BBW neutral
+    show WG doubt
+    WG "Hmmm, well this just won't do."
+    show WG haughty
+    WG "Aha! I have just the solution!"
+    show WG neutral
     "Alice began looking through the drawers in her vanity dresser."
-    BBW "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up. Ah, here it is. This is a leave–in dry conditioner."
+    WG "There's no getting through those tangles if we just try to brush your hair as is. We need something to soften it up. Ah, here it is. This is a leave–in dry conditioner."
     "Alice proceeded to pump the foam into her hands and began to massage it into Tomo's hair."
     "Since we have the same factor, it was quite a lot of hair. The pump started to sputter, so I'm guessing she used all of what had been in the bottle."
-    BBW "There, now this can actually work."
+    WG "There, now this can actually work."
     "Newly softened from the conditioner, Alice proceeded to work the brush through every tangle and bramble of that knotted mess Tomo had long neglected."
     "She worked the brush from top to bottom through every single layer of that thick mat of hair. Honestly, it was like watching a horse whisperer breaking a wild stallion."
-    show BBW happy
+    show WG happy
     "For a brief moment I saw a kind of glee in Alice's face that I had not seen before. Sure it wasn't exactly the same, but for just a little while, as she played hair-stylist with Tomo, Alice got to feel like the big sister she always wished she could have been."
-    BBW "What do you think?"
+    WG "What do you think?"
     "Alice handed Tomo a mirror."
     Tomoko "Whoa! I didn't realize it could look like this. Thanks! Although... I'm kind of sad it is not going to stay like this. It's going to get tangled and frizzy again."
-    BBW "Well, you could always come see me when you need help with it again."
+    WG "Well, you could always come see me when you need help with it again."
     Tomoko "Thanks Alice... I think I will."
     jump daymenu
 
-label BBW055:
-    $setProgress("BBW", "BBW057")
+label WG057:
+    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music HallowedHalls
-    MC "Sigh..."
+    MC "{i}Sigh{/i}..."
     MCT "Welp, I'm stumped."
     "Off and on for most of the early afternoon I'd been trying to think of something I could do to surprise Alice with something she'd like, but what can you offer to a person who has everything?"
     "I supposed I didn't have to, but the way things had been going in our relationship lately, I just couldn't get her out of my head. She meant the world to me; I felt the need to do something spectacular to show her that."
@@ -12013,7 +13003,7 @@ label BBW055:
     MC "That's fine, Kodama-san. Actually, I was looking for you."
     PRG "Me? D-Did you need something?"
     MC "I wanted to do something special for Alice, but I don't really know what I could do. I thought maybe— if you're up for it —you could, uh... teach me how to cook something for her?"
-    if getFlag("BBW052_pass"): #this should be SSPR3, but I'm not sure what that is, fix later
+    if getFlag("WG_SSPR3"):
         "Ever since Alice confided in me about her hunger induced dreams, I had been concerned that she wasn't eating enough. Maybe if it was something I made for her, it would encourage her to eat more?"
     show PRG excited
     PRG "That's so sweet! I'll help however I can!"
@@ -12034,11 +13024,12 @@ label BBW055:
     PRG "Great! What kind of dessert were you thinking of then?"
     menu:
         "The sweetest dessert you can think of.":
-            jump BBW055_c1_1
+            jump WG057_c1_1
         "Whatever has the most calories.":
-            jump BBW055_c1_2
+            jump WG057_c1_2
 
-label BBW055_c1_1:
+label WG057_c1_1:
+    $setFlag("WG057_C1_1")
     show PRG neutral
     PRG "Oh... I-If I may suggest, Hotsure-san, sweeter isn't always better. If something is too sweet, it gets really overbearing."
     MC "Oh yeah, I guess I wasn't thinking about that. I just was thinking more would be better."
@@ -12114,11 +13105,12 @@ label BBW055_c1_1:
     PRG "I think it's ready, Hotsure-san. Go ahead and take it out."
     "Putting on some oven mitts, I pulled it out and placed it on the stove range. All bubbly and golden brown to syrupy perfection. I was genuinely surprised I managed to make something that looked this good."
     PRG "Oh, it turned out perfectly! Alice will love it. But we have to let it cool for about 20 minutes. It's way too hot to eat now."
-    jump BBW055_c1_after
+    jump WG057_c1_after
 
-label BBW055_c1_2:
-    $setFlag("BBW_SSPR4")
-    #SSPR4
+label WG057_c1_2:
+    $setFlag("WG057_C2_1")
+    $setFlag("WG_SSPR4")
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
     show PRG neutral
     PRG "Oh... ummm, I-I've never had anyone intentionally select a dessert because it had more calories."
     "Aida's reaction made me realize that was a bit too on the nose— even for me."
@@ -12209,9 +13201,9 @@ label BBW055_c1_2:
     MCT "Out of sight and out of mind."
     show PRG excited
     PRG "Oh it turned out, perfectly! Alice will love it."
-    jump BBW055_c1_after
+    jump WG057_c1_after
 
-label BBW055_c1_after:
+label WG057_c1_after:
     MC "Thanks Kodama-san, it looks great! You're one heck of a teacher. I never would have thought I could make anything like this. Do you think you'd be up for teaching me some more stuff in the future?"
     show PRG happy
     PRG "You're welcome, Hotsure-san. I'd like that. I think it's so sweet of you to want to do this for Alice. If we plan ahead more next time, I can bring Sakura too. I've never seen someone who can work a grill better than her."
@@ -12227,56 +13219,60 @@ label BBW055_c1_after:
     MC "Alright, let me check and see if Alice is back at her dorm."
     Cell "<Alice, are you back at your room yet?>"
     "It didn't take too long to get a response."
-    BBWCell "<I am, did you want to come over?>"
+    WGCell "<I am, did you want to come over?>"
     Cell "<Yes, I have a surprise for you.>"
-    BBWCell "<Is that so? Now I'm intrigued.>"
+    WGCell "<Is that so? Now I'm intrigued.>"
     Cell "<Be there soon.>"
     MC "Alright, let's head back."
-    scene Dorm BBW with fade
-    play music BBW
-    show PRG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW haughty at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Alright now Keisuke, praytell what is this 'surprise' of yours? You do realize it's not much of a surprise if you've already told me in advance."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.DAY)
+    scene Dorm WG with fade
+    play music WG
+    show PRG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show WG haughty at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Alright now Keisuke, praytell what is this 'surprise' of yours? You do realize it's not much of a surprise if you've already told me in advance."
     MC "True, but I thought it'd peak your interest if I did. Let's just call it an 'unexpected pleasantry' then."
-    show BBW happy
+    show WG happy
     "Alice couldn't help but give a slight smirk in response to my goofy smile and feigned attempt to be suave."
-    BBW "I'm assuming it's under that sheet you're holding?"
+    WG "I'm assuming it's under that sheet you're holding?"
     "I had wrapped the dish in a kitchen sheet to help keep it covered on the walk over here."
     MC "You assume correctly. Here, let me show you."
     "I set the dish down on Alice's tea table in the middle of her room."
     if getSkill("Athletics") >= 7:
         "Moving the sheet out from under the dish, so as to not mess it up, I quickly pulled off the sheet, clearing it from the table in a split second while presenting the dish with an outstretched arm using my free hand."
     MC "Voila!"
-    show BBW surprised
+    show WG surprised
     MC "Made specially for one, Miss Nikumaru, by yours truly."
-    BBW "Keisuke, this looks amazing!"
-    show BBW doubt
-    BBW "Did you really make this yourself?"
+    WG "Keisuke, this looks amazing!"
+    show WG doubt
+    WG "Did you really make this yourself?"
     "Alice turned and looked directly at Aida."
-    BBW "Or did you have a {i}lot{/i} of help?"
+    WG "Or did you have a {i}lot{/i} of help?"
     PRG "A-Actually, Alice, H-Hotsure-san did it all on his own. I just told him the recipe and watched him. He insisted on doing everything himself, even the clean up."
-    $setAffection("BBW", 1)
-    show BBW aroused
-    BBW "Is that so?"
+    $setAffection("WG", 1)
+    show WG aroused
+    WG "Is that so?"
     MC "Tsk, tsk. Oh ye of little faith..."
-    show BBW haughty
-    BBW "Fair enough, I will concede I underestimated you this time Keisuke."
+    show WG haughty
+    WG "Fair enough, I will concede I underestimated you this time Keisuke."
     "I was pretty satisfied with myself after hearing that coming from Alice. I tried not to think about how that just meant her expectations were going to be even higher after this."
-    BBW "But sincerity doesn't equate to flavor, there's still one more test."
+    WG "But sincerity doesn't equate to flavor, there's still one more test."
     MC "Way ahead of ya."
     "I pulled out some dessert plates I borrowed from the kitchen and set them down on the table. I served a small piece for both myself and Aida, while carving out a generous portion for Alice."
-    BBW "Mmmm, it smells delectable."
+    WG "Mmmm, it smells delectable."
     "At this point I was getting nervous. I suddenly realized I actually had no idea how this thing was going to taste."
     "I know in cooking you're supposed to be constantly tasting your food so you know if it's good. But you can't do that with raw baking ingredients, and sampling the finished product would have ruined the presentation."
     MCT "...{i}Gulp{/i}..."
     "Alice began to take a dainty forkful and brought it to her mouth. Closing her lips around the first bite, her expression instantly changed."
-    show BBW surprised
+    show WG surprised
     MCT "Please don't spit it out..."
-    show BBW aroused
-    BBW "Oooohh my... Keisuke, it's-it's exquisite!"
-    show BBW happy
+    show WG aroused
+    WG "Oooohh my... Keisuke, it's-it's exquisite!"
+    show WG happy
     "Alice took another bite, and then another, then even more in increasingly rapid succession. I took great satisfaction in seeing her dimpled smile grow wider and wider as her chubby cheeks quivered with each bite of food that I had made for her."
-    BBW "I will have another serving please, if you would be so kind."
+    WG "I will have another serving please, if you would be so kind."
     MC "Absolutely. Would you like another piece as well, Kodama-san?"
     PRG "I'm okay. Thank you for asking Hotsure-san. I'm a little tired. I think I'm going to take a nap."
     show PRG excited
@@ -12287,69 +13283,76 @@ label BBW055_c1_after:
     hide PRG with dissolve
     "I served Alice her second piece."
     MC "Here you are Mademoiselle."
-    BBW "Merci, Monsieur! Hehe!"
+    WG "Merci, Monsieur! Hehe!"
     "Not even bothering to quip at my usual brand of groan inducing faux formality, Alice was so giddy at this point she eagerly played along with it."
-    show BBW aroused
-    BBW "Mmmmm!"
-    if getFlag("BBW_SSPR4"):
-        BBW "It's so rich and decadent."
+    show WG aroused
+    WG "Mmmmm!"
+    if getFlag("WG_SSPR4"):
+        WG "It's so rich and decadent."
     else:
-        BBW "It's so sweet and gooey."
+        WG "It's so sweet and gooey."
     "My plan to surprise Alice had been working better than I thought possible. Judging by the flush in her cheeks, she was enjoying this on an entirely other level that I hadn't anticipated."
-    BBW "{i}Whew{/i}... Perhaps it has simply been too long since I've had a proper desert given the uninspired selection available at the cafeteria."
-    show BBW happy
-    BBW "This was such a refreshing change of pace for my pallet. I must say, your dish has been an unqualified success, Keisuke. Most impressive for a first time as well."
+    WG "{i}Whew{/i}... Perhaps it has simply been too long since I've had a proper desert given the uninspired selection available at the cafeteria."
+    show WG happy
+    WG "This was such a refreshing change of pace for my pallet. I must say, your dish has been an unqualified success, Keisuke. Most impressive for a first time as well."
     "Leaning back in her chair with her hand on top of her belly and a satisfied smile on her face, Alice motioned for me to come closer."
-    BBW "Thank you for such a thoughtful gift."
+    WG "Thank you for such a thoughtful gift."
     "She pulled me in close and gave me a long wet kiss on the lips."
-    if getFlag("BBW_SSPR4"):
+    if getFlag("WG_SSPR4"):
         "Her lips tasted faintly of vanilla, with a few stray gram-cracker crumbs still clinging to them."
     else:
         "Her lips tasted faintly of peaches."
     MC "My pleasure."
     "Looking back at the serving dish, there was still quite a bit left."
     MC "Would you like some more?"
-    show BBW neutral
+    show WG neutral
     "Alice looked like she was contemplating a rather agonizing decision."
-    BBW "Hmmm..."
-    BBW "Ummm... no thanks, Keisuke. It was wonderful, but I think I've had enough."
+    WG "Hmmm..."
+    WG "Ummm... no thanks, Keisuke. It was wonderful, but I think I've had enough."
     menu:
         "Leave it at that.":
-            jump BBW055_c2_1
+            jump WG057_c2_1
         "Ask her to reconsider.":
-            jump BBW055_c2_2
+            jump WG057_c2_2
 
-label BBW055_c2_1:
+label WG057_c2_1:
     MC "Okay, well there's always more for tomorrow. I'll leave the rest with you here. I should probably get going. I got some studying to catch up on, but I'm glad you enjoyed it."
-    show BBW neutral-2
-    BBW "I truly did Keisuke. Thank you so much. I'm looking forward to more 'unexpected pleasantries' in the future."
-    jump daymenu
+    show WG neutral-2
+    WG "I truly did Keisuke. Thank you so much. I'm looking forward to more 'unexpected pleasantries' in the future."
+    jump WG057_afterchoice_2
 
-label BBW055_c2_2:
-    $setFlag("BBW_SSPR5")
-    #$setFlag("SSPR5")
+label WG057_c2_2:
+    $setFlag("WG_SSPR5")
+    $setVar("WGSSPR", getVar("WGSSPR") +1)
     MC "Are you sure? I made more because I figured you'd want more than just a couple of small pieces."
     MCT "Small is a relative term after all."
-    show BBW worried
-    BBW "Ehhh..."
-    if getFlag("BBW055_c1_1"):
+    show WG worried
+    WG "Ehhh..."
+    if getFlag("WG057_C1_1"):
         MC "I mean I suppose you could have the rest whenever, but it's just nice and warm out of the oven now. It just doesn't quite taste the same reheated for whatever reason."
     else:
         MC "I mean I suppose you could have the rest whenever, I'd just worry it's going to dry out and crack sitting in your fridge. It's not going to have the same texture if that happens."
     "The gears were turning behind Alice's eyes, until her look of trepidation yielded back to the joyfully giddy demeanor from just moments ago."
-    show BBW happy
-    BBW "On second thought, I believe you are correct. It would be a shame to waste such an exquisite dessert by not fully enjoying it at its peak of freshness right after preparation."
+    show WG happy
+    WG "On second thought, I believe you are correct. It would be a shame to waste such an exquisite dessert by not fully enjoying it at its peak of freshness right after preparation."
     MC "I concur. Spoken like a true gourmand. It is all for you after all."
     "I placed another serving onto her plate and served it to her."
     MC "Please, do not hesitate to ask for more."
-    show BBW aroused
-    BBW "Mmmm, thank you. I'm certain that I will."
+    show WG aroused
+    WG "Mmmm, thank you. I'm certain that I will."
     "To my unending delight, after about another 20 minutes, Alice had finished the whole thing."
+    jump WG057_afterchoice_2
+
+label WG057_afterchoice_2:
+    if getVar("WGSSPR") >=5:
+        $setProgress("WG", "WG059S")
+    else:
+        $setProgress("WG", "WG059")
     jump daymenu
 
-label BBW057:
-    $setProgress("BBW", "BBW058")
-    scene Field with fade
+label BBW058:
+    $setTime(TimeEnum.Day)
+    scene Woods with fade
     play music Hallway
     "The weather has been really nice recently. The scorching summer from our vacation at the beach had faded into a much more temperate fall climate over the island by now."
     "I knew I'd be kicking myself later if I didn't do something to take advantage of the nice weather before winter set in."
