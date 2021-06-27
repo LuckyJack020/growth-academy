@@ -3580,23 +3580,25 @@ label AE021:
     show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve #not sure if aroused, surprised or sad/shy
     MC "U-um... Shiori-cha-"
     "As I was about to speak, Alice walked into the room with Aida in tow."
-    show PRG neutral at Position(xpos=0.90, xanchor=0.5, yalign=1.0) with dissolve
-    show BBW happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    BBW "Ohoho, now what's going on here?~"
+    show PRG neutral at Position(xpos=0.90, xanchor=0.5, yalign=1.0)
+    show WG happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
+    WG "Ohoho, now what's going on here?~"
     MC "E-eh? Oh, Nikumaru-san, good morning."
-    if getAffection("BBW") < 0:
-        BBW "My my, Hotsure-san, mind telling what's going on here with our dear president?"
+    if getAffection("WG") < 0:
+        WG "My my, Hotsure-san, mind telling what's going on here with our dear president?"
         MC "E-eh?"
-        BBW "From the sounds of it, that was a '-chan' forming in your mouth. You and miss assiduous are getting a bit close I see."
+        WG "From the sounds of it, that was a '-chan' forming in your mouth. You and miss assiduous are getting a bit close I see."
         show AE neutral-annoyed
         AE "Our business is between ourselves."
-        BBW "Of course it is. Don't let me interrupt."
+        WG "Of course it is. Don't let me interrupt."
         "Alice gave a little wink before walking to her chair. Before sitting down, she motioned to me to come over to where she was."
-        hide AE with dissolve
-        hide PRG with dissolve
+        hide AE
+        hide PRG
+        with dissolve
         MC "U-um... yeah?"
-        show BBW neutral
-        BBW "Bit of advice... you'll catch pneumonia if you stay to close to the ice queen. I'd recommend keeping your distance a bit for fear of frostbite."
+        show WG neutral
+        WG "Bit of advice... you'll catch pneumonia if you stay to close to the ice queen. I'd recommend keeping your distance a bit for fear of frostbite."
         MC "...I'll keep that in mind."
         if getAffection("PRG") > 0:
             show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
@@ -3604,24 +3606,24 @@ label AE021:
             MC "Hey, Kodama-san."
             "Aida gave a little smile. It felt nice to know the whole school wasn't against me."
             hide PRG with dissolve
-            hide BBW with dissolve
+            hide WG with dissolve
     else:
-        show BBW neutral
-        BBW "G-good morning, Hotsure-san."
+        show WG neutral
+        WG "G-good morning, Hotsure-san."
         "Aida shrunk back a bit and gave a tiny smile. I reciprocated with a nod and a smile as well."
         MC "Good morning, Kodama-san."
-        BBW "I see you're a bit busy. I don't want to interrupt."
+        WG "I see you're a bit busy. I don't want to interrupt."
         MC "Ah, no, it's fine."
-        show BBW happy
-        BBW "Hmm... well now... the student council president, eh?"
+        show WG happy
+        WG "Hmm... well now... the student council president, eh?"
         show AE neutral
         AE "Is there something you need, Nikumaru-san?"
-        BBW "Oh, no, no, no not at all, dear... mhm~"
+        WG "Oh, no, no, no not at all, dear... mhm~"
         "Alice walked over to her seat, but not before leaning in and whispering to me."
-        BBW "Good luck, dear. Don't catch a cold, now~."
+        WG "Good luck, dear. Don't catch a cold, now~."
         MC "E-eh? Oh. Thanks, Nikumaru-san."
         hide AE with dissolve
-        hide BBW with dissolve
+        hide WG with dissolve
         hide PRG with dissolve
     show HR neutral at center with dissolve
     "Tashi-sensei walked in the room, and after standing and bowing; as well as opening the door for Honoka, we began our lessons... however there was a problem. I couldn't help it, but I felt like I was being watched."
@@ -4976,7 +4978,7 @@ label AE026:
     AE "S-sorry."
     MC "Hm?"
     show AE neutral
-    BBW "...Hm?"
+    WG "...Hm?"
     "I responded in a light whispery voice as well."
     MC "It's all right. Don't worry about it."
     "Shiori-san nodded as I sat down in my seat. As soon as I sat, however, Tashi sensei walked into class, suit jacket slung over his right shoulder with a mug of coffee in his left hand."
@@ -4991,19 +4993,19 @@ label AE026:
     "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
     show PRG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "N-N-Nikumaru-san, are you sure you don't need me? I don't mind, really-"
-    show BBW neutral at Position(xpos=0.25) with dissolve
-    BBW "Yes, yes, Kodama-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
+    show WG neutral at Position(xpos=0.25) with dissolve
+    WG "Yes, yes, Kodama-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
     PRG "O-okay."
     hide PRG sad with dissolve
     "The tiny Kodama-chan, usually seen with Nikumaru-san, left the room alone, and somewhat morose."
     MC "U-um, hey, Nikumaru-san? Why did you make Kodama-chan leave?"
-    show BBW happy
-    BBW "Ohoho, don't worry about that now. I simply wanted a bit of space is all. Oh! Matsumoto-san is looking this way now, dear. Don't let the poor girl get the wrong idea now."
+    show WG happy
+    WG "Ohoho, don't worry about that now. I simply wanted a bit of space is all. Oh! Matsumoto-san is looking this way now, dear. Don't let the poor girl get the wrong idea now."
     MC "O-oh?"
     MCT "How did she... know I was waiting for Shiori-san?"
     MC "Well... thank you, Nikumaru-san."
-    BBW "Mhm~."
-    hide BBW happy with dissolve
+    WG "Mhm~."
+    hide WG happy with dissolve
     "I turned around to see Shiori-san waiting patiently, her bag slung over her shoulder, with her generous frame almost the width of the window she was standing in front of."
     show AE neutral
     MC "Hey."
@@ -5229,14 +5231,14 @@ label AE027:
     show FMG surprised at Position(xpos=0.20)
     show BE surprised at Position(xpos=0.35)
     show PRG happy at Position(xpos=0.95)
-    show BBW neutral at Position(xpos=0.75)
+    show WG neutral at Position(xpos=0.75)
     MC "..."
     All "..."
     GTS "Good morning, Hotsure-sa-"
     FMG "Is it true?! Are you and Shio-"
     BE "Kei-chan for real?! The president?!"
     MC "Wait, hold on-"
-    BBW "Perhaps you can be a humanizing influence on our dear president."
+    WG "Perhaps you can be a humanizing influence on our dear president."
     PRG "I'm... really ha-"
     FMG "No way in hell that'd happen!"
     MC "Um, girls?"
@@ -5265,8 +5267,8 @@ label AE027:
     GTS "Good morning, Matsumoto-san."
     AE "Good morning Hotsure-san, Yamazaki-san."
     BE "Ah, see, Hotsure-SAN. Nothing after all."
-    show BBW angry
-    BBW "You don't know yet!"
+    show WG angry
+    WG "You don't know yet!"
     MCT "What is even happening?!"
     "I beckoned to Shiori-chan and she begrudgingly leaned forward, her wide hips accidentally pushing away her own desk."
     MC "So, something really weird is going on today and I have no idea what's happening. Do you know anything?"
@@ -5285,8 +5287,8 @@ label AE027:
     MC "O-oh, no, wait. It's right here! Ha ha. Guess I was worried about nothing."
     show AE neutral
     AE "Oh... I see."
-    show BBW neutral
-    BBW "Wait, then what were you two-"
+    show WG neutral
+    WG "Wait, then what were you two-"
     MC "{i}HAAAAAHN~{/i} Man I woke up early! I spent my whole night working on homework, I barely got any sleep."
     show AE happy
     AE "Mmm, I appreciate the hard work, but you need rest, Hotsure-san. I don't want you to fall behind."
@@ -5300,8 +5302,8 @@ label AE027:
     FMG "Yooo! What?!"
     PRG "S-so then the rumor is true?"
     MC "Wait- What do you mean?"
-    show BBW neutral
-    BBW "I brought us all here because I heard you'd woken up early. I had some acquaintances of mine wake up the class because I wanted to have you confirm with-"
+    show WG neutral
+    WG "I brought us all here because I heard you'd woken up early. I had some acquaintances of mine wake up the class because I wanted to have you confirm with-"
     show BE angry
     BE "That's not what happened at all! I just woke up early."
     show FMG neutral
@@ -5309,10 +5311,10 @@ label AE027:
     show GTS neutral
     GTS "I as well was tending to the garden."
     BE "In fact, it was one of the other girls who woke YOU up to tell you."
-    BBW "..."
+    WG "..."
     PRG "Y-you woke me up early, Nikumaru-san."
-    show BBW happy
-    BBW "As I said, I woke our class up early to meet you here."
+    show WG happy
+    WG "As I said, I woke our class up early to meet you here."
     MCT "Uhuh..."
     MC "How did you know I'd get here before Shiori-chan?!"
     FMG "She always gets here at the same time... every day... since school started."
@@ -5326,15 +5328,15 @@ label AE027:
     "Shiori-chan stood from her seat and looked around the room."
     AE "Who was it, hm?"
     "Almost instantaneously, all eyes in the class were on Nikumaru-san, filing her nails in her seat."
-    show BBW angry
-    BBW "Wh-ah-tch- I did not!"
+    show WG angry
+    WG "Wh-ah-tch- I did not!"
     MC "Erm... I kind of doubt Nikumaru-san was sneaking around. She isn't exactly..."
-    BBW "Isn't exactly what?"
+    WG "Isn't exactly what?"
     MC "N-nothing! Sor-"
-    BBW "PAH!"
+    WG "PAH!"
     AE "..."
-    show BBW neutral
-    BBW "Well... I was simply shocked, was all. It'd be absolutely horrid of me to ignore the well-being of my fellow students, right?"
+    show WG neutral
+    WG "Well... I was simply shocked, was all. It'd be absolutely horrid of me to ignore the well-being of my fellow students, right?"
     AE "A-I will have you know that invasion of privacy is a very serious-!"
     MC "Um, Shiori-chan."
     AE "-offense and I-"
@@ -5368,8 +5370,8 @@ label AE027:
     $secondHighest = getSecondHighest(["AE"])
     if secondHighest == "BE":
         jump AE027_BE
-    elif secondHighest == "BBW":
-        jump AE027_BBW
+    elif secondHighest == "WG":
+        jump AE027_WG
     elif secondHighest == "FMG":
         jump AE027_FMG
     elif secondHighest == "PRG":
@@ -5407,24 +5409,24 @@ label AE027_BE:
     jump AE027_after
 
 
-label AE027_BBW:
-    show BBW neutral with dissolve
+label AE027_WG:
+    show WG neutral with dissolve
     MC "Hey Nikumaru-sa-"
-    show BBW happy
-    BBW "I knew it! I knew it all along!~"
-    BBW "I'll have to admit, I was thrown for a bit of a loop by the 'Hotsure-san' title, however I just knew the two of you were an item!"
+    show WG happy
+    WG "I knew it! I knew it all along!~"
+    WG "I'll have to admit, I was thrown for a bit of a loop by the 'Hotsure-san' title, however I just knew the two of you were an item!"
     MC "Y-yeah, about that. Why did you spy on us the other day?"
-    BBW "While I realize it was a bit crass of me... this is a major opportunity!"
+    WG "While I realize it was a bit crass of me... this is a major opportunity!"
     MC "Opportunity-?"
-    BBW "To think, you have the entire student council in your pocket, which by extension means I do as well! Do put in a good word for me, will you, dear?"
+    WG "To think, you have the entire student council in your pocket, which by extension means I do as well! Do put in a good word for me, will you, dear?"
     MC "W-wait, I'm not going to-"
-    show BBW neutral
-    BBW "Mhmhmhm~ Don't worry, it's just a little joke. I was simply curious about a friend's life is all. You understand that."
+    show WG neutral
+    WG "Mhmhmhm~ Don't worry, it's just a little joke. I was simply curious about a friend's life is all. You understand that."
     MC "Oh. Well, yeah, I guess so."
-    BBW "Wonderful. I may have my... reservations about your taste in women, but I'm quite glad for you."
+    WG "Wonderful. I may have my... reservations about your taste in women, but I'm quite glad for you."
     MC "Thank you, Nikumaru-san."
-    BBW "Mhm~ Oh, and by the way, remember my advice, will you?"
-    hide BBW neutral with fade
+    WG "Mhm~ Oh, and by the way, remember my advice, will you?"
+    hide WG neutral with fade
     jump AE027_after
 
 label AE027_FMG:
@@ -6101,50 +6103,50 @@ label AE030:
         MC "Um, hey, I hope you guys don't mind, but..."
         show BE neutral with dissolve
         show FMG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-        show BBW neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+        show WG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
         "When I turned around, much of the class looked up towards me. We were a fairly small class, but it still felt weird to be the center of attention in the room."
         MC "Have any of you seen Shiori-chan?"
         "Honoka rested her elbow on one of her enormous breasts and put a finger to her lips."
         BE "Hmm? Uhhh... no, I actually haven't."
         "Mizutani-san, however, continued eying her phone as she rested her head on her arm; legs crossed with one bouncing listlessly."
         FMG "I haven't seen her for a while, man."
-        BBW "{i}Ahem{/i} Pardon, however I think I know why."
+        WG "{i}Ahem{/i} Pardon, however I think I know why."
         MC "Hm? Nikumaru-chan?"
         "Nikumaru-chan flipped her hair on being acknowledged, something I felt was intentional on the grounds that she waited till both Honoka and I were looking at her."
-        BBW "Simply put, Matsumoto-chan's skirts gradually become a bit... worse for the wear over time. I'm sure you've noticed, right?"
+        WG "Simply put, Matsumoto-chan's skirts gradually become a bit... worse for the wear over time. I'm sure you've noticed, right?"
         MC "U-um-"
-        show BBW happy
-        BBW "I'll take your usual stutterings as a confession of guilt, then."
+        show WG happy
+        WG "I'll take your usual stutterings as a confession of guilt, then."
         MCT "Ga-ch!"
         BE "Wait, t-then why do you notice?"
-        show BBW neutral
-        BBW "Mmm, darling, not a single student passes my eye without thorough wardrobe examination."
+        show WG neutral
+        WG "Mmm, darling, not a single student passes my eye without thorough wardrobe examination."
         MCT "I... could believe that. Though whether she was looking for potential customers for her business or simply making sure she looked the best in the room, I had no idea."
-        BBW "Anyways, though it may as of yet be coincidental, the only times Matsumoto-chan is missing from class is when she's awaiting a new wardrobe."
-        BBW "In fact, I believe that last time she {i}ahem{/i} 'outgrew her apparel', she only left her room to work with lover boy over there-"
+        WG "Anyways, though it may as of yet be coincidental, the only times Matsumoto-chan is missing from class is when she's awaiting a new wardrobe."
+        WG "In fact, I believe that last time she {i}ahem{/i} 'outgrew her apparel', she only left her room to work with lover boy over there-"
         MC "Lover boy?!"
         show FMG happy
         FMG "{i}Pfft{/i} Heh."
-        BBW "-and when she came back to class the next day she had her new skirt."
+        WG "-and when she came back to class the next day she had her new skirt."
         MCT "Oh yeah... I remember her being missing from class a while back."
         MC "That... makes a lot of sense, actually."
-        BBW "Precisely. As to why she doesn't simply buy a new one beforehand is beyond me. You'd think for as many schedules as she keeps she'd have a bit more forward planning, hm~?"
+        WG "Precisely. As to why she doesn't simply buy a new one beforehand is beyond me. You'd think for as many schedules as she keeps she'd have a bit more forward planning, hm~?"
         MC "But Shiori-chan isn't the type to value her pride over her responsibilities. I couldn't imagine her skipping class over her skirt not fitting."
-        BBW "Perhaps not normally, however, I'd suppose that current situations may have changed that."
+        WG "Perhaps not normally, however, I'd suppose that current situations may have changed that."
         MC "How so?"
-        BBW "Well? Think about it, where do you sit?"
+        WG "Well? Think about it, where do you sit?"
         MC "Um... A-ah... I see."
-        BBW "I doubt she'd willingly skip class unless it could lead to something that would cause a more... indecent infraction."
+        WG "I doubt she'd willingly skip class unless it could lead to something that would cause a more... indecent infraction."
         show BE surprised
         BE "Woah, Nikumaru-chan, you're way smarter than you look!"
-        BBW "Mhm, thank you da-"
-        show BBW angry
-        BBW "Wait, what do you mean by that?!"
+        WG "Mhm, thank you da-"
+        show WG angry
+        WG "Wait, what do you mean by that?!"
         BE "Eh? W-woah, woah, woah, I didn't mean it like that-!"
         MCT "I do not envy Honoka right now."
         hide BE with dissolve
         hide FMG with dissolve
-        hide BBW with dissolve
+        hide WG with dissolve
     MC "Still though, it's hard to think she'd just miss a day every time she outgrows her skirt."
     AE "Which is exactly why I plan for that NOT to be the case."
     MC "Eh?"
@@ -11948,156 +11950,156 @@ label AE053:
     UNKNOWN "Oh? What's this now?"
     "As Shiori voiced her concerns, a familiar face made her way over to us."
     show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     MC "Ah, Nikumaru-san!"
-    BBW "Good afternoon, Keisuke. I wouldn't expect to see you here."
+    WG "Good afternoon, Keisuke. I wouldn't expect to see you here."
     AE "Good afternoon, Nikumaru-san."
-    show BBW surprised
-    BBW "Hm? Ah! I {i}certainly{/i} didn't expect to see {i}you{/i} here. No offense."
+    show WG surprised
+    WG "Hm? Ah! I {i}certainly{/i} didn't expect to see {i}you{/i} here. No offense."
     AE "None taken. It's not often I leave the campus."
-    show BBW neutral
-    BBW "Indeed. It must be something dramatic to call you away from the campus."
-    show BBW haughty
-    BBW "And to a clothing store of all places. That is a surprise."
+    show WG neutral
+    WG "Indeed. It must be something dramatic to call you away from the campus."
+    show WG haughty
+    WG "And to a clothing store of all places. That is a surprise."
     MC "Yeah, it's actually Shiori's first time going clothes shopping."
     show AE embarrassed
     AE "K-Keisuke, don't-"
-    show BBW surprised
-    BBW "Truly? Your first time, ever?"
+    show WG surprised
+    WG "Truly? Your first time, ever?"
     show AE sad
     AE "I... yes. That's true."
-    BBW "That is..."
+    WG "That is..."
     "She coughed into her hand, looking embarrassed."
-    show BBW happy
-    BBW "Well, I hope your first time leads to something memorable. Find something that will {i}wow{/i} those around you."
+    show WG happy
+    WG "Well, I hope your first time leads to something memorable. Find something that will {i}wow{/i} those around you."
     AE "I doubt it."
     AE "Admittedly, I... don't know much about fashion or design-"
     "As Shiori continued, I could see Nikumaru-san's eyes light up as a small grin slowly formed across her face."
     show AE neutral
     AE "-and really, I've never had the luxury of-"
-    BBW "Of course! I completely understand."
-    show BBW haughty
-    BBW "You're a hard working woman; things like shopping or accessorizing can take a backseat. Here. You go get a basket and we'll start immediately."
+    WG "Of course! I completely understand."
+    show WG haughty
+    WG "You're a hard working woman; things like shopping or accessorizing can take a backseat. Here. You go get a basket and we'll start immediately."
     show AE surprised
     AE "Start...?"
-    show BBW neutral
-    BBW "Since you need someone to be a fair and experienced judge, I will help you put together a wardrobe."
+    show WG neutral
+    WG "Since you need someone to be a fair and experienced judge, I will help you put together a wardrobe."
     AE "Y-You'll help?"
-    show BBW haughty
-    BBW "Of course! There are a few ways to flatter your body and a million ways to not, and my sense of style won't abide someone pulling just anything off the rack."
-    BBW "Now, chop, chop. We both can appreciate things being done efficiently and quickly, hm?"
+    show WG haughty
+    WG "Of course! There are a few ways to flatter your body and a million ways to not, and my sense of style won't abide someone pulling just anything off the rack."
+    WG "Now, chop, chop. We both can appreciate things being done efficiently and quickly, hm?"
     show AE neutral
     AE "Right. Thank you."
-    show BBW neutral
-    BBW "Mhm, no worries."
+    show WG neutral
+    WG "Mhm, no worries."
     hide AE with dissolve
     if True: #If you haven't gone through crossover scenes (TBI)
-        if getAffection("BBW") < 10:
+        if getAffection("WG") < 10:
             MC "Alright, Nikumaru-san, what's the end goal?"
-            show BBW angry
-            BBW "Moi? I don't have any sort of..."
-            BBW "..."
+            show WG angry
+            WG "Moi? I don't have any sort of..."
+            WG "..."
             "Nikumaru-san craned her puffy neck to look over in Shiori's direction, using her thick, pillowy arm to bring her fingers up to her chin as she smirked."
-            show BBW happy
-            BBW "Just making sure she's out of earshot."
-            BBW "It's simple diplomacy, Keisuke. The Student Council president is seen wearing something fashionable, she's asked who assembled her wardrobe, she tells them it was yours truly, and I get publicity for my business."
+            show WG happy
+            WG "Just making sure she's out of earshot."
+            WG "It's simple diplomacy, Keisuke. The Student Council president is seen wearing something fashionable, she's asked who assembled her wardrobe, she tells them it was yours truly, and I get publicity for my business."
             MC "So... manipulating, basically?"
-            show BBW haughty
-            BBW "No, no. Just seizing an opportunity that presented itself."
+            show WG haughty
+            WG "No, no. Just seizing an opportunity that presented itself."
             MC "Well, whatever, just please don't mess with her too much."
-            BBW "Ohohoo, Hotsure-san, I would never.~"
+            WG "Ohohoo, Hotsure-san, I would never.~"
         else:
             MC "Thanks a lot for this, Nikumaru-san. I know you don't exactly get along with Shiori."
-            BBW "Oh, she's definitely a thorn in my side from time to time, but don't be fooled. I intend to help her to the best of my ability."
-            show BBW happy
-            BBW "After all, she has a good taste in suitors."
+            WG "Oh, she's definitely a thorn in my side from time to time, but don't be fooled. I intend to help her to the best of my ability."
+            show WG happy
+            WG "After all, she has a good taste in suitors."
             MC "Eheh, well, thanks."
     else: #If you have gone through crossover scenes
         MC "Thanks for helping out Shiori, Alice."
-        show BBW neutral
-        BBW "Not at all. She and I share an understanding. It's only right that I lend her a hand in my area of expertise."
+        show WG neutral
+        WG "Not at all. She and I share an understanding. It's only right that I lend her a hand in my area of expertise."
         MC "I'm glad the two of you became closer. I really am."
-        show BBW happy
-        BBW "...I am too."
+        show WG happy
+        WG "...I am too."
     show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
     AE "Okay, I got a basket."
-    show BBW happy
-    BBW "Splendid. Why don't you go find some articles that appeal to you, and we can start from there? It is important that you retain your own style."
-    show BBW neutral
-    BBW "And, mhm, I appreciate the look, but I think your hair would look much better with a more fashionable headband on. How about we try-"
+    show WG happy
+    WG "Splendid. Why don't you go find some articles that appeal to you, and we can start from there? It is important that you retain your own style."
+    show WG neutral
+    WG "And, mhm, I appreciate the look, but I think your hair would look much better with a more fashionable headband on. How about we try-"
     "As Nikumaru-san reached out her hand, Shiori reacted quicker than I'd ever seen before, and quickly jumped out of the way and next to me."
     show AE surprised
     AE "W-Wait!"
-    show BBW surprised
-    BBW "Oh, wuh-?"
+    show WG surprised
+    WG "Oh, wuh-?"
     show AE sad
     AE "I- um... I'd like to keep the headband on."
-    show BBW neutral
-    BBW "Hm?"
+    show WG neutral
+    WG "Hm?"
     AE "Y-You're an expert on fashion, right? You can integrate it into an outfit, can't you?"
-    show BBW surprised
-    BBW "Erm... I suppose..."
+    show WG surprised
+    WG "Erm... I suppose..."
     "Nikumaru-san turned to me with a puzzled look. I mouthed 'It's complicated' and she nodded in understanding."
-    show BBW neutral
-    BBW "Of course I can, dear! I make it work for myself, why not you too?"
+    show WG neutral
+    WG "Of course I can, dear! I make it work for myself, why not you too?"
     show AE smile
     AE "Thank you."
-    BBW "Now, I want you to find an outfit and bring it to me. {i}I'll{/i} judge whether or not you should wear it."
+    WG "Now, I want you to find an outfit and bring it to me. {i}I'll{/i} judge whether or not you should wear it."
     show AE neutral
     AE "Understood."
     "As the minutes passed, Shiori walked around the store, collecting up clothes. Finally, she brought her basket of clothes, folded neatly, over to Nikumaru-san."
-    BBW "Let's take a look here."
+    WG "Let's take a look here."
     "She went through the first set."
-    show BBW angry
-    BBW "Ugh! Gaudy."
+    show WG angry
+    WG "Ugh! Gaudy."
     "Second."
-    show BBW neutral
-    BBW "Mmm. These pants could work, but this shirt is too much to pair with anything."
+    show WG neutral
+    WG "Mmm. These pants could work, but this shirt is too much to pair with anything."
     "Third."
-    show BBW angry
-    BBW "...A tweed pantsuit? A bowtie? Dear, are you actively trying to sabotage your public image?"
+    show WG angry
+    WG "...A tweed pantsuit? A bowtie? Dear, are you actively trying to sabotage your public image?"
     show AE sad
     AE "I... I was hoping you'd say yes to the pantsuit."
-    BBW "You're not going to work at a retirement home, are you?"
+    WG "You're not going to work at a retirement home, are you?"
     "I looked at Shiori, and it seemed obvious that her last statement really irked her."
     MC "Well, I mean, I think it looks good."
-    BBW "What you think looks good and what the public thinks are two different things, then."
-    show BBW neutral
-    BBW "But! I digress. I assume that even Matsumoto-san would agree that being presentable is one of society's most important expectations. That's part of the reason why we wear uniforms, right, Matsumoto-san?"
+    WG "What you think looks good and what the public thinks are two different things, then."
+    show WG neutral
+    WG "But! I digress. I assume that even Matsumoto-san would agree that being presentable is one of society's most important expectations. That's part of the reason why we wear uniforms, right, Matsumoto-san?"
     show AE neutral
     AE "Well, I suppose looking {i}respectable{/i} is a key aspect of-"
-    show BBW happy
-    BBW "Exactly. Now, on to the next one."
-    show BBW angry
-    BBW "Oh my god. PLEASE tell me you're not going to try to wear a beige dress shirt."
+    show WG happy
+    WG "Exactly. Now, on to the next one."
+    show WG angry
+    WG "Oh my god. PLEASE tell me you're not going to try to wear a beige dress shirt."
     show AE angry
     AE "I-I'm sorry, but I don't see what's wrong with any of what I brought."
-    BBW "Well, for starters most of what you bought is suited more for an old man than for a young woman."
+    WG "Well, for starters most of what you bought is suited more for an old man than for a young woman."
     show AE neutral
     AE "Well... is that a problem?"
-    BBW "My dear, 'professional' does not simply mean 'office appropriate.' You need to take into consideration your femininity, your physique."
-    BBW "Dressing like a senior male partner at a law firm won't work for you, no matter how spiritually in sync you may be with that sort."
-    show BBW neutral
-    BBW "Well, it's fine. I suppose I'll put in a bit of leg work myself and find something {i}for{/i} you. No use standing around all day."
-    BBW "But this is for you, after all. What would you like? Generally, I mean."
+    WG "My dear, 'professional' does not simply mean 'office appropriate.' You need to take into consideration your femininity, your physique."
+    WG "Dressing like a senior male partner at a law firm won't work for you, no matter how spiritually in sync you may be with that sort."
+    show WG neutral
+    WG "Well, it's fine. I suppose I'll put in a bit of leg work myself and find something {i}for{/i} you. No use standing around all day."
+    WG "But this is for you, after all. What would you like? Generally, I mean."
     AE "W-"
-    BBW "Think {i}feminine{/i}."
+    WG "Think {i}feminine{/i}."
     show AE embarrassed
     AE "U-Um... well... I suppose if I were to go for more... feminine clothing, I would want..."
     "Shiori leaned in and whispered to Nikumaru-san, whose eyes widened in surprise."
-    show BBW surprised
-    BBW "What? Really?"
+    show WG surprised
+    WG "What? Really?"
     MC "Wait, what?"
-    BBW "I see... I mean, I could see the look working for you, but... are you sure?"
+    WG "I see... I mean, I could see the look working for you, but... are you sure?"
     AE "M-Mm."
     MC "Huh? What? What was that whisper about?"
-    show BBW happy
-    BBW "It appears that little miss stern and stone faced wants to try something a bit unexpected."
+    show WG happy
+    WG "It appears that little miss stern and stone faced wants to try something a bit unexpected."
     AE "Mm. Hopefully it will be something that will 'wow' all of us."
-    BBW "..."
-    show BBW haughty
-    BBW "Ohoho, very well dear. I'll find you something that will make you absolutely shine."
-    hide BBW with dissolve
+    WG "..."
+    show WG haughty
+    WG "Ohoho, very well dear. I'll find you something that will make you absolutely shine."
+    hide WG with dissolve
     "As Nikumaru-san waddled away and over towards the ladies clothes, I leaned over to Shiori."
     MC "I... don't think she liked your tone."
     show AE neutral
@@ -12108,27 +12110,27 @@ label AE053:
     show AE sad
     AE "You're right. I wouldn't have took her help if I didn't trust her judgement."
     "After a few more moments, she returned."
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    BBW "And here we are. Your outfit and undergarments."
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    WG "And here we are. Your outfit and undergarments."
     show AE surprised
     AE "U-Undergarments?!"
-    BBW "An outfit needs to match even what isn't seen, dear. I'm sure you understand."
+    WG "An outfit needs to match even what isn't seen, dear. I'm sure you understand."
     show AE angry
     AE "W-Buh-tch-ah!"
-    show BBW haughty
-    BBW "Come now, dear. Try it on."
-    show BBW neutral
-    BBW "I believe this could be what you're looking for."
+    show WG haughty
+    WG "Come now, dear. Try it on."
+    show WG neutral
+    WG "I believe this could be what you're looking for."
     AE "...Fine, I'll-"
-    BBW "Oh, and by the way?"
+    WG "Oh, and by the way?"
     show AE neutral
     AE "Hm?"
-    BBW "I think it would go best without your headband."
+    WG "I think it would go best without your headband."
     AE "Wait, what?"
-    BBW "It simply wouldn't look as good with it."
+    WG "It simply wouldn't look as good with it."
     AE "Well, that's fine, I'm not taking off my headband."
-    show BBW angry
-    BBW "Tsk! Listen, I don't know {i}why{/i} you can't just take it off for a moment, but I'm being honest with you when I tell you this outfit {i}needs{/i} you to try it on without the accessories."
+    show WG angry
+    WG "Tsk! Listen, I don't know {i}why{/i} you can't just take it off for a moment, but I'm being honest with you when I tell you this outfit {i}needs{/i} you to try it on without the accessories."
     MCT "Damn, these two are at a pretty rough impasse."
     menu:
         "Take it off": #+1 alice
@@ -12138,9 +12140,9 @@ label AE053:
 
 label AE053_c1_1:
     MC "Shiori, I don't know much about fashion, but... she might have a point."
-    show BBW happy
-    $setAffection("BBW", 1)
-    BBW "Thank you. Your boyfriend has a good eye for this sort of thing as well, I see."
+    show WG happy
+    $setAffection("WG", 1)
+    WG "Thank you. Your boyfriend has a good eye for this sort of thing as well, I see."
     show AE sad
     AE "B-But..."
     MC "I mean... I know it means a lot to you, but it's only for a little bit. You don't have to wear it 24/7."
@@ -12148,8 +12150,8 @@ label AE053_c1_1:
     AE "Haah, you're right. It's childish of me to cling to it."
     show AE angry
     AE "Still, though... it'll only be while I'm trying it on. After, I want it back."
-    show BBW neutral
-    BBW "Of course."
+    show WG neutral
+    WG "Of course."
     jump AE053_c1_after
 
 label AE053_c1_2:
@@ -12157,28 +12159,28 @@ label AE053_c1_2:
     $setAffection("AE", 1)
     show AE sad
     AE "Y-Yeah, I know. Thanks for understanding."
-    BBW "Very well, stepping {i}away{/i} from the {i}boyfriend bias{/i}, you need to understand that even the smallest detail can make or break a look. You get that, right?"
+    WG "Very well, stepping {i}away{/i} from the {i}boyfriend bias{/i}, you need to understand that even the smallest detail can make or break a look. You get that, right?"
     AE "Well, I... I suppose."
-    show BBW neutral
-    BBW "If a student walked in with a school uniform with a gold tie, you would tell him to take it off. Fashion's the same way."
+    show WG neutral
+    WG "If a student walked in with a school uniform with a gold tie, you would tell him to take it off. Fashion's the same way."
     jump AE053_c1_after
 
 label AE053_c1_after:
     AE "..."
-    BBW "Come now, don't be so bashful. You {i}did{/i} ask me to find you something."
+    WG "Come now, don't be so bashful. You {i}did{/i} ask me to find you something."
     AE "I... you're right. I trust your judgement."
-    BBW "Well, then, off to the dressing room with you!"
+    WG "Well, then, off to the dressing room with you!"
     "Shiori nodded, as she handed me her prized headband, letting her hair down and walked into the dressing room."
 
     scene black with fade
     pause 1
     scene Clothes Store with fade
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
     "I sat next to Nikumaru-san for a few minutes as she filed her nails. Waiting in anticipation to see Shiori. Just then, she stepped out..."
-    show BBW haughty
-    BBW "Well, dear? How is-"
-    show BBW surprised
-    BBW "..."
+    show WG haughty
+    WG "Well, dear? How is-"
+    show WG surprised
+    WG "..."
     MC "Hm? What?"
     MC "A-"
     MC "..."
@@ -12186,14 +12188,14 @@ label AE053_c1_after:
     "I couldn't believe my eyes. It was as though the girl I saw once before in Shiori's bed had returned. She was dressed in a tight pink bodycon dress, a magenta sash tied around her waist."
     "The outfit being made for her body type, it clung to her body, leaving a definite outline of her enormous tush."
     "For the first time since I'd seen her, Shiori didn't just look like 'The Student Council President', when I saw her... I saw a girl."
-    BBW "Oh. My. God."
-    show BBW happy
-    BBW "I... I wasn't sure it would be the case, but pink really DOES work well for you!"
+    WG "Oh. My. God."
+    show WG happy
+    WG "I... I wasn't sure it would be the case, but pink really DOES work well for you!"
     show AE dress-surprised
     AE "It does?"
     "Hearing her voice gave me whiplash. I was still in shock from just how different she looked."
     MC "Shiori, you... {i}asked{/i} Alice to find you a tube dress?"
-    BBW "She simply asked for something pink. It's a bit revealing, but she {i}does{/i} look rather nice, hm?"
+    WG "She simply asked for something pink. It's a bit revealing, but she {i}does{/i} look rather nice, hm?"
     AE "I... I look beautiful?"
     MC "Well, yeah!"
     "Shiori turned around, her humongous rump facing us as she did her best to pat it, she then ran her hands along her sides as she looked at herself in shock, blushing pink enough to make her dress look pale."
@@ -12210,13 +12212,13 @@ label AE053_c1_after:
     show AE dress-happy
     AE "Haah! I look pretty! For the first time in my life, I-!"
     MC "Well, Nikumaru-san, you definitely 'wowed' me."
-    show BBW happy
-    BBW "I... I actually picked it out for a bit of a laugh, but... you're right!"
-    BBW "She looks like the belle of the ball!"
+    show WG happy
+    WG "I... I actually picked it out for a bit of a laugh, but... you're right!"
+    WG "She looks like the belle of the ball!"
     show AE dress-surprised
     AE "Really?"
-    show BBW haughty
-    BBW "Of course, dear! Why if you weren't dating Keisuke, the boys would be coming for miles!"
+    show WG haughty
+    WG "Of course, dear! Why if you weren't dating Keisuke, the boys would be coming for miles!"
     show AE dress-neutral
     AE "..."
     MC "You got that right. You look like the kind of girl that men would line up just to see."
@@ -12228,14 +12230,14 @@ label AE053_c1_after:
     AE "I hate it."
     MC "Eh?"
     AE "I... Get this off of me. I hate it."
-    show BBW surprised
-    BBW "Oh? But... I thought you, um-"
+    show WG surprised
+    WG "Oh? But... I thought you, um-"
     hide AE with dissolve
     "Without a word, Shiori walked into the changing room and shut the door. A few moments later, she carefully slid the folded outfit under the door."
     MC "U-Um... Sorry."
-    show BBW sad
-    BBW "..."
-    BBW "I'll... go find her something a bit more conservative."
+    show WG sad
+    WG "..."
+    WG "I'll... go find her something a bit more conservative."
     MC "Yeah... Yeah, I'll help."
     scene black with fade
     pause 1
@@ -12248,13 +12250,13 @@ label AE053_c1_after:
     AE "{i}Keisuke, are you sure? I don't have many means to-{/i}"
     MC "No worries, I can swing it."
     AE "I had no idea clothes cost that much."
-    show BBW neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    BBW "That much? Honey, that was a steal."
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    WG "That much? Honey, that was a steal."
     "Pulling out my card, I handed it to the cashier who swiped it and then input the numbers onto her pad. Printing out a receipt, she gave it, and the card, to me with both hands and a smile."
     Cashier "Have a good day, sir."
     MC "Have a good day, ma'am."
-    BBW "Enjoy, you two!"
-    BBW "Now, I'd also like to make a purchase-"
+    WG "Enjoy, you two!"
+    WG "Now, I'd also like to make a purchase-"
     "As we walked out of the door, I looked at Nikumaru-san to see her put a red basket on the counter."
 
     scene Town with fade
@@ -12279,51 +12281,51 @@ label AE053_c1_after:
     MC "...You're welcome."
     hide AE with dissolve
     "As she shut the door, I could hear Tako's hearty cackle as I rounded the corner and headed down the stairs to the main floor of the girls dorm."
-    show BBW neutral with dissolve
-    BBW "Get home oka-"
+    show WG neutral with dissolve
+    WG "Get home oka-"
     MC "WOAH, JE-"
-    show BBW surprised
-    BBW "Ah!"
+    show WG surprised
+    WG "Ah!"
     MC "Fff, oh, woah, eh- Ah... S-sorry, you startled me."
-    show BBW neutral
-    BBW "Mm."
-    BBW "Admittedly, I may have brought her that tube-dress for my own amusement, but... despite her proportions, she truly is quite stunning."
+    show WG neutral
+    WG "Mm."
+    WG "Admittedly, I may have brought her that tube-dress for my own amusement, but... despite her proportions, she truly is quite stunning."
     "Hearing Nikumaru-san say that made me chuckle a bit. It wasn't often she was very open with compliments, let alone for Shiori."
     MC "Eheh, yeah, she really is-"
-    show BBW haughty
-    BBW "Not quite on {i}my{/i} level, but she certainly has something going for her."
+    show WG haughty
+    WG "Not quite on {i}my{/i} level, but she certainly has something going for her."
     MCT "There we go. Wouldn't want to think I slipped into the wrong timeline."
-    show BBW sad
-    BBW "...Satisfy my curiosity... why is she so attached to her headpiece?"
+    show WG sad
+    WG "...Satisfy my curiosity... why is she so attached to her headpiece?"
     if getSkill("Academics") < 10:
         MC "Honestly? I'm not completely sure, but... I know it's important to her. That should be all that matters."
-        show BBW neutral
-        BBW "Hm... I understand."
+        show WG neutral
+        WG "Hm... I understand."
     else:
         MC "I think... I think that it means something deeper to her about {i}who{/i} she is. Like... she attaches it to her identity."
         MC "Does that make sense?"
-        show BBW sad
-        BBW "I see."
-    show BBW happy
-    BBW "Clothes have strong powers, Keisuke. They determine how someone is seen by a simple glance. It gives people insight into who they are, even if they don't want to let it be known."
+        show WG sad
+        WG "I see."
+    show WG happy
+    WG "Clothes have strong powers, Keisuke. They determine how someone is seen by a simple glance. It gives people insight into who they are, even if they don't want to let it be known."
     MC "Heh, I get you. I mean, I love this old jacket too."
-    show BBW neutral
-    BBW "Yes... Well, have a good night."
+    show WG neutral
+    WG "Yes... Well, have a good night."
     MC "Yeah, you too."
-    BBW "Oh, Keisuke?"
+    WG "Oh, Keisuke?"
     MC "Yeah?"
-    show BBW haughty
-    BBW "That jacket is ratty. It doesn't suit you at all."
+    show WG haughty
+    WG "That jacket is ratty. It doesn't suit you at all."
     MC "..."
-    show BBW happy
-    BBW "You somehow make it work well, though. You should keep it."
+    show WG happy
+    WG "You somehow make it work well, though. You should keep it."
     "Handing me a brown bag, she turned around and headed back further into the dorms."
     MCT "A bag?"
-    BBW "She'll appreciate it one day."
+    WG "She'll appreciate it one day."
     MC "..."
     MC "...Thanks, Nikumaru-san. Really. {i}I{/i} appreciate it."
-    show BBW neutral
-    BBW "Have a good night."
+    show WG neutral
+    WG "Have a good night."
     "I left the girls dorm, and headed out to the dimming courtyard as the lights flickered on, satisfied by a good day."
     jump daymenu
 

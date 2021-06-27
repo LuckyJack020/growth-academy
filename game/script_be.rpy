@@ -1,4 +1,4 @@
-WGlabel BE001:
+label BE001:
     $setProgress("BE", "BE002")
     scene Classroom with fade
     play music Schoolday

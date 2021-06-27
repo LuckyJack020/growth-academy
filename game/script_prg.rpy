@@ -1,4 +1,4 @@
-WGlabel PRG001b:
+label PRG001b:
     scene School Exterior with fade
     play music Hallway
     "On my way to the vending machines for a drink, I spied Aida-san from my class, frowning down at a can of tea."
@@ -18619,11 +18619,13 @@ label PRG027Z:
     "As she said that, she gently rubbed my arm with her hand and walked back to her desk."
     hide BE with dissolve
     MCT "God, I must look down in the dumps if she was able to pick up on it that easily."
-    show WG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG worried-handsbehind at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show WG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show PRG worried-handsbehind at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
     "At the front of the room, Alice and Aida walked in together, both taking their seats."
-    hide WG with dissolve
-    hide PRG with dissolve
+    hide WG
+    hide PRG
+    with dissolve
     "From down the hall, we could all hear footsteps pounding the tile at an insanely rapid pace, getting closer to the classroom. Just before they reached, though, they slowed to a crawl."
     show FMG neutral with dissolve
     "Akira walked in at a casual pace, getting a wicked glare from Shiori as she passed by to her seat."
@@ -18637,8 +18639,9 @@ label PRG027Z:
     HR "All right. That's all I've got. I'll see you all tomorrow."
     hide HR with dissolve
     "Tashi-sensei popped open his back and packed up, and was out the door in no time."
-    show GTS surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show FMG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show FMG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    with dissolve
     GTS "Is he serious? That was hardly any information, save for the assignment."
     FMG "Are you saying that you don't want more time off?"
     GTS "Ah... no?"

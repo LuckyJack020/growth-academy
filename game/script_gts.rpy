@@ -5075,19 +5075,21 @@ label GTS032:
     show HR neutral at Position(xpos=0.15) with dissolve
     "Tashi-sensei stood up from his desk at the corner of the room with a firm, confident look in his eyes, as if about to say something. I decided to address the lingering question before he began the lesson."
     MC "I... helped Yamazaki-san move out over the weekend. She's been transferred to the giant dorm."
-    show FMG surprised at Position(xpos=0.30) with dissolve
-    show WG surprised at Position(xpos=0.45) with dissolve
-    show PRG surprised at Position(xpos=0.60) with dissolve
-    show BE surprised at Position(xpos=0.70) with dissolve
-    show AE neutral at Position(xpos=0.85) with dissolve
+    show FMG surprised at Position(xpos=0.30)
+    show WG surprised at Position(xpos=0.45)
+    show PRG surprised at Position(xpos=0.60)
+    show BE surprised at Position(xpos=0.70)
+    show AE neutral at Position(xpos=0.85)
+    with dissolve
     "Mixed expressions of surprise, relief, and intrigue filled the room as I answered Honoka's question. Tashi-sensei seemed to be the only one that didn't visibly react at all."
     HR "Ah, so that's what's happened, then. I'm certain that they'll have an appropriate lesson plan for her."
     MC "You don't exactly sound surprised, Tashi-sensei."
     HR "I was informed ahead of time that Yamazaki-san's condition would mean that she wouldn't be staying with us. Since it all depended on her growth rate, no exact date was given."
-    hide FMG with dissolve
-    hide WG with dissolve
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide FMG
+    hide WG
+    hide PRG
+    hide BE
+    with dissolve
 
     AE "Is there any specific height threshold where the transfer is made?"
     HR "The medical staff make the call as soon as a student begins brushing the ceiling. Even with our custom-built amenities, this campus is only equipped to deal with heights of 300cm and below. Beyond that, it becomes far too inconvenient to move around."
