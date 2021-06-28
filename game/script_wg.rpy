@@ -119,7 +119,8 @@ label WG002:
     $setProgress("WG", "WG003")
     scene Cafeteria with fade
     play music Schoolday
-    MCT "This place seems kind of quiet for a high school cafeteria. Everyone seems so dejected. The whole atmosphere feels so unnerving without the usual chatter in the background. Guess I'm not the only one who was thrown for a loop by yesterday's news."
+    MCT "This place seems kind of quiet for a high school cafeteria. Everyone seems so dejected."
+    MCT "The whole atmosphere feels so unnerving without the usual chatter in the background. Guess I'm not the only one who was thrown for a loop by yesterday's news."
     MCT "We're all probably wondering the same thing: what's going to happen to me? How... big am I going to get? Am I going to end up like one of those people who can't live in normal society?"
     MCT "Ugh, this is too heavy for first thing in the morning. I guess I'll just get something to eat and take the day as it goes."
     MCT "..."
@@ -134,12 +135,15 @@ label WG002:
     WG "This fish. There's something familiar about it."
     MC "It's mackerel. Fish is a common part of Japanese breakfasts."
     show WG haughty
-    WG "I know that. I've lived here for most of my life, I'll have you know. And 'common' is certainly the word for what I am eating— perhaps 'bland' would be more accurate. I would never have known what this uninspired morsel was if you hadn't told me."
+    WG "I know that. I've lived here for most of my life, I'll have you know."
+    WG "And 'common' is certainly the word for what I am eating— perhaps 'bland' would be more accurate. I would never have known what this uninspired morsel was if you hadn't told me."
     "She ate the forkful of fish, her face displaying exasperated disappointment."
-    WG "So tell me this: why, when there are literally hundreds of ways of turning something even as pedestrian as mackerel into an appetizing entree, did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber?"
+    WG "So tell me this: why, when there are literally hundreds of ways of turning something even as pedestrian as mackerel into an appetizing entree,"
+    WG "did the staff in this kitchen decide to approach their job like they were vulcanizing a piece of rubber?"
     WG "Is it because they are lazy or just that incompetent? What sort of 'cook' treats their ingredients so disdainfully?"
     MC "I guess you have a point. I’ve certainly had better. I suppose after all this time I just don’t have high expectations for cafeteria food."
-    WG "But why should you? Or anyone else for that matter? I wouldn't mind having mackerel if it was properly prepared. Poach it, bake it in a honey chipotle glaze— {i}something{/i}. Honestly, it isn't too much to ask. But no, just slap it on a grill, turn it after a minute, job's done— completely blasé."
+    WG "But why should you? Or anyone else for that matter? I wouldn't mind having mackerel if it was properly prepared."
+    WG "Poach it, bake it in a honey chipotle glaze— {i}something{/i}. Honestly, it isn't too much to ask. But no, just slap it on a grill, turn it after a minute, job's done— completely blasé."
     jump WG002_prechoice
 
 label WG002_prechoice:
@@ -154,17 +158,20 @@ label WG002_prechoice:
 label WG002_c1_1:
     $setFlag("WG002_c1_1")
     MC "What do you normally have, if not mackerel?"
-    WG "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries and cream, and a croissant. Maybe a poached egg. I'm very particular about my breakfast— a heavy meal to start the day can leave me feeling lethargic for hours."
+    WG "Tuna, usually. Though for breakfast I prefer something more like a French menu with coffee, berries and cream, and a croissant."
+    WG "Maybe a poached egg. I'm very particular about my breakfast— a heavy meal to start the day can leave me feeling lethargic for hours."
     "She picked up her mug and drank from it, showing the same mild disgust."
     show WG angry
     WG "And this is not coffee. I'll have to call Mother later, have her send my French press here."
-    WG "I suppose it was foolish of me to think this place would have proper coffee, but I was told this was an exclusive institution. So far the only thing 'exclusive' is the most uninspired menu I have ever encountered. Is this what you eat every day?"
+    WG "I suppose it was foolish of me to think this place would have proper coffee, but I was told this was an exclusive institution."
+    WG "So far the only thing 'exclusive' is the most uninspired menu I have ever encountered. Is this what you eat every day?"
     jump WG002_prechoice
 
 label WG002_c1_2:
     MC "Well, they have to make food for a few hundred people, you know? There's only so much you can do when you're preparing so much at once."
     show WG neutral
-    WG "All the more reason for them to let me have François on hand. It's unnecessary to force every student here to subsist on this uninspired fair. I in particular, am accustomed to a certain standard of cuisine— this menial effort to provide us with sustenance is wholly insufficient, to even try to put it politely."
+    WG "All the more reason for them to let me have François on hand. It's unnecessary to force every student here to subsist on this uninspired fair."
+    WG "I in particular, am accustomed to a certain standard of cuisine— this menial effort to provide us with sustenance is wholly insufficient, to even try to put it politely."
     MC "Aw, it's not that bad. I've had better, but I've definitely had worse."
     MCT "Besides, you managed to clear your plates."
     show WG haughty
@@ -190,7 +197,8 @@ label WG002_c2_1:
 label WG002_c2_2:
     MC "Other than the food, what do you think of this place?"
     show WG neutral
-    WG "I haven't formed an opinion yet, but my expectations are dropping rapidly. First the unwelcome surprise of this school's true purpose, then the matter of the food. And, of course, being denied the privilege of my servants."
+    WG "I haven't formed an opinion yet, but my expectations are dropping rapidly."
+    WG "First the unwelcome surprise of this school's true purpose, then the matter of the food. And, of course, being denied the privilege of my servants."
     show WG angry
     WG "The term has begun with me being hobbled, almost as if they want me to flounder."
     menu:
@@ -205,7 +213,7 @@ label WG002_c3_1:
     $setAffection("WG", -1)
     WG "Forcing me to come to this school and then denying me the use of my resources afforded at no cost to the school isn’t going to help anyone, but it certainly is an inconvenience to me."
     WG "How would bringing on my servants to assist me in my daily tasks put others at a disadvantage? I am not precluding others from doing so themselves, unlike the school."
-    hide WG
+    hide WG with dissolve
     MC "Well, that's one way of looking at it, I guess."
     jump daymenu
 
@@ -215,13 +223,14 @@ label WG002_c3_2:
     show WG haughty
     WG "I have attended only the best schools in America and Japan. Yes, this place is... different from them. There are a lot more people, for one."
     MC "But you're not the only one adjusting. I mean, we've all been thrown into it without warning, and none of us know what the future holds."
-    MC "Maybe you should reach out to some of the other students. Someone in our class might help you deal with this upheaval. Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
+    MC "Maybe you should reach out to some of the other students. Someone in our class might help you deal with this upheaval."
+    WG "Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
     show WG neutral
     WG "Hmmm, you do have a point. No sense in wallowing in self-pity over my unfortunate predicament. I believe there is always a workaround if you are determined enough to find one."
     MC "See, there ya go."
     WG "Thank you, Hotsure-san. You've given me something to think about."
     $setAffection("WG", 1)
-    hide WG
+    hide WG with dissolve
     MC "Well that ended abruptly. Not sure what she meant by all of that though."
     MC "Wait, did she actually remember my name?"
     jump daymenu
@@ -261,7 +270,8 @@ label WG003:
 label WG003_c1_1:
     MC "Oh, is it really that good?"
     show WG neutral
-    WG "Well, it's not to say you would find it on a dessert menu of a five-star restaurant, but for a high school student working with the ingredients and facilities on hand, this is almost revelatory. I can already see my judgment was sound as ever to invite her into my service."
+    WG "Well, it's not to say you would find it on a dessert menu of a five-star restaurant, but for a high school student working with the ingredients and facilities on hand, this is almost revelatory."
+    WG "I can already see my judgment was sound as ever to invite her into my service."
     MC "Invite who?"
     WG "I would have thought our previous discussions made it clear that I am in need of a reliable assistant, since the school in its short-sightedness has prohibited me from allowing my servants to accompany me."
     WG "Despite this setback I have found a workable solution. Fortunately, it almost seems destined that my roommate would turn out to be perfectly suited to act as my right-hand woman during my time at this school."
@@ -272,7 +282,8 @@ label WG003_c1_1:
         WG "Assistant."
         MC "Erm, yes- that."
     else:
-        WG "I've decided not to let the loss of my servants hold me back. Just because I cannot have trained professionals on hand to help me does not mean I need to shoulder all of their usual duties onto myself."
+        WG "I've decided not to let the loss of my servants hold me back."
+        WG "Just because I cannot have trained professionals on hand to help me does not mean I need to shoulder all of their usual duties onto myself."
         WG "And Kodama-san is all too eager to fill the role of my servants while I'm left to fend for myself here."
         MC "Seems like you're asking a bit much of your roommate."
     show WG happy at center with dissolve
@@ -289,17 +300,20 @@ label WG003_c1_1:
 label WG003_c2_1:
     MC "She is? Well, I guess that's fortunate for you."
     show WG haughty
-    WG "It is. I would have survived just fine had I been left to my own devices, but people like me— those of us who are always looking at the big picture and have so many things to worry about— we benefit from having dedicated subordinates."
+    WG "It is. I would have survived just fine had I been left to my own devices, but people like me—"
+    WG "those of us who are always looking at the big picture and have so many things to worry about— we benefit from having dedicated subordinates."
     WG "Having someone to cook for me frees up time and energy I can devote to other things."
     MC "What other things do you mean?"
     WG "Anything. My studies, my hobbies, entrepreneurial pursuits. I'll have you know I'm no slouch- I keep a tight schedule to maximize each day's productivity."
     MC "I guess if she's okay helping you, then there's nothing wrong with that."
-    WG "Why wouldn't she be okay? I'm giving her focus and direction, at a time when she needs it most. All of us have been blindsided by the news of this school, and I think the best way to deal with it is to carry on as always. After all, it's what I'm doing."
+    WG "Why wouldn't she be okay? I'm giving her focus and direction, at a time when she needs it most."
+    WG "All of us have been blindsided by the news of this school, and I think the best way to deal with it is to carry on as always. After all, it's what I'm doing."
     MC "Maybe you have something there. You certainly aren't letting all this get to you, like some of the others I've seen."
     show WG neutral
     WG "Of course, I could use more help. It's a full-time job being me, and I'm always looking for people I can count on to help me. Would you be interested in such a position?"
     MC "Well you never know, but I guess I could think about it."
-    MCT "I could probably use the extra money, but I don't know if I need it bad enough to become Alice's personal butler. Sure, she's pretty cute, but I'll be in the friend zone forever if I just fold to her every whim."
+    MCT "I could probably use the extra money, but I don't know if I need it bad enough to become Alice's personal butler."
+    MCT "Sure, she's pretty cute, but I'll be in the friend zone forever if I just fold to her every whim."
     $setAffection("WG", 1)
     WG "Very well, but don't complain if I find someone else in the meanwhile."
     jump daymenu
@@ -307,6 +321,7 @@ label WG003_c2_1:
 label WG003_c2_2:
     MC "So are you paying her, or...?"
     show WG haughty
+    $setAffection("WG", -1)
     WG "It's not polite to talk about money so plainly. But to answer your question, I have offered Kodama-san compensation for her services. And let us leave it at that."
     MC "Didn't mean to offend. Just wanting to confirm."
     show WG neutral
@@ -340,7 +355,8 @@ label WG003_c3_1:
     show WG haughty
     $setAffection("WG", 1)
     WG "Did you think I was being hyperbolic? I don't hand out praise unless it's earned, and even then I'm careful with my words."
-    WG "I have found in Kodama-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine? No one else at this school can help her like I can."
+    WG "I have found in Kodama-san a rare talent, waiting to be nurtured and cultivated. And who better to guide her than someone with a palette as refined as mine?"
+    WG "No one else at this school can help her like I can."
     MC "That's pretty generous of you."
     WG "I know, but it's the least I can do. It's one of the burdens of entrepreneurs, such as myself, that is seldom talked about: the need to foster talent wherever it is found."
     WG "With my help, Kodama-san will become an excellent chef, someone capable of pleasing even tastes as refined as mine."
@@ -370,7 +386,8 @@ label WG004:
     scene Dorm Interior with fade
     play music Schoolday
     "I tried to study for today's quiz the night before, but boredom and sleepiness got the better of me. I decided to get up early instead and squeeze in a cram session before class."
-    "Boy was that ever a stupid idea. I can barely drag my ass out of bed to get to class on time on the best of days, but I somehow managed to convince myself last night I was going to study for hours on end before it even started."
+    "Boy was that ever a stupid idea. I can barely drag my ass out of bed to get to class on time on the best of days—"
+    "but I somehow managed to convince myself last night I was going to study for hours on end before it even started."
     "I couldn’t even focus with my bed being in the same room, so I decided the library might be a more productive setting."
 
     scene Library with fade
@@ -501,7 +518,7 @@ label WG004_C1_2:
     WG "Now let’s see... hmm. It appears I have finished the tasks I needed to accomplish here for the day."
     WG "I must be going. I hope you found our discussion, illuminating, shall we say, with regards to your present state of financial acuity."
     MCT "Admittedly, she did kind of make me feel like an idiot, but to her point, now that I’m an adult, it’s way past time I started learning about how to invest."
-    hide WG
+    hide WG with dissolve
     MCT "Welp, that was certainly interesting. I thought I had her pegged as the spoiled princess type, but she’s a lot sharper and ambitious than I gave her credit for."
     "I spent the rest of the time I had before class trying to study for the quiz. I tried to focus, but it was a lot less interesting than the conversation I just had with Alice."
     jump daymenu
@@ -528,7 +545,7 @@ label WG004_C2_2:
     show WG neutral-2
     WG "Unfortunately, I have to take my leave, Keisuke. I must admit, it was pleasant to converse with someone about finances without having their eyes glaze over for a change."
     WG "I’m sure I’ll be seeing you around."
-    hide WG
+    hide WG with dissolve
     MCT "Welp, that was certainly interesting. I thought I had her pegged as the spoiled princess type, but she’s a lot sharper and ambitious than I gave her credit for."
     MCT "She’s certainly a lot nicer if you get on her good side too."
     "I spent the rest of the time I had before class trying to study for the quiz. I tried to focus, but it was a lot less interesting than the conversation I just had with Alice."
@@ -575,7 +592,8 @@ label WG005:
     WG "..."
     extend " Obese."
     extend " Fat."
-    "I didn't have the heart to tell Alice, but given what I've seen from some of the other students and judging from her present starting point, I didn't have that much trouble believing it."
+    "I didn't have the heart to tell Alice, but given what I've seen from some of the other students and judging from her present starting point,"
+    extend " I didn't have that much trouble believing it."
     MC "Oh. Yeah, that's, um, hard to swallow. But maybe it won't be too bad. They can't tell how 'stout' you'll end up being, right?"
     show WG angry
     WG "No, unfortunately they cannot predict that. But any means of curtailing my future expansion would be preferred."
@@ -655,7 +673,7 @@ label WG005_c3:
     with dissolve
     show AE sad with dissolve
     HR "While others, like yourself, are pretty sad to hear the news. Like the stages of grief, it starts with denial, then bargaining. Sound familiar?"
-
+    hide AE with dissolve
     scene Cafeteria with fade
     show WG doubt at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
     show HR neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
@@ -691,11 +709,11 @@ label WG005_c3:
         $setAffection("WG", +1)
         WG "Ohoho! Is that so? Well, turnabout is fair play after all."
         WG "I’m sure I’ll be seeing you again soon, Keisuke."
-        hide WG
+        hide WG with dissolve
         jump daymenu
     else:
         WG "I must say Keisuke, there appears to be more to you than meets the eye. You certainly have a way with words it seems. Thank you for stopping to chat. I found our discussion most illuminating."
-        hide WG
+        hide WG with dissolve
         jump daymenu
 
 label WG006:
@@ -706,14 +724,14 @@ label WG006:
     "This whole ordeal has been a trip so far, I guess my mind was still reeling from this bizarre set of circumstances. I needed something to take my mind off of things, focus on something else."
     MCT "I wonder if there are any clubs worth joining."
     "..."
-    "Walking down the hallway further a faint sound began to grow louder as I realized where it was coming from."
+    "Walking down the hallway further, a faint sound began to grow louder as I realized where it was coming from."
     MCT "Huh, sounds like the music club is rehearsing. Not really my thing..."
     MCT "Oh...is that?"
     show WG neutral at center with dissolve
     MC "Niku- erm, Alice. Thinking of joining the music club?"
     show WG haughty
     WG "Not just joining, I plan to be leading the ensemble. I am the natural and obvious choice, which will become apparent to everyone once I complete my seating audition."
-    MCT "Haughty attitude aside, she seemed pretty confident in her abilities. Her ambition was clearly evident, but that doesn't necessarily resonate with everyone."
+    "Haughty attitude aside, she seemed pretty confident in her abilities. Her ambition was clearly evident, but that doesn't necessarily resonate with everyone."
     MC "You think you got it in the bag then? What happens if they don't pick you for club president?"
     show WG neutral
     WG "Well, then I'd be more sorry for the club, having to endure without the direction of my leadership and experience."
@@ -942,7 +960,7 @@ label WG007:
     show WG haughty
     WG "I haven’t decided that yet. What’s important now at this stage is the concept and the vision for the business. The specifics will come in a short order."
     "I was admittedly confused at the sudden turn of events this conversation had taken, but our previous conversations had shown me Alice possessed a relentless entrepreneurial spirit."
-    WG "NOw then, we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service, very convenient for the customer."
+    WG "Now then, we'll need a system of taking orders and fulfilling them. Dorm-room delivery would be an enticing service, very convenient for the customer."
     WG "Hmmm, but the mens' dorm... Keisuke! How would you like a job?"
     MC "Let me guess: you need a deliveryman."
     show WG happy
@@ -994,7 +1012,7 @@ label WG008:
             $setTimeFlag("size2")
             $setProgress("WG", "WG010")
             stop music fadeout 0
-            "Well, good luck with that. That doesn't sound like an easy conversation to have with Alice."
+            MC "Well, good luck with that. That doesn't sound like an easy conversation to have with Alice."
             show PRG surprised
             $setAffection("PRG", -1)
             PRG "..."
@@ -1350,22 +1368,23 @@ label WG010:
     WG "Clothing, my dear boy."
     MCT "Dear boy? I'm not sure if she's being condescending or endearing at this point."
     show WG haughty
-    WG "It may have escaped your notice, being a guy and all– one apparently not particularly concerned with your own appearance, at that— but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
-    show WG happy at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
+    WG "It may have escaped your notice, being a guy and all– one apparently not particularly concerned with your own appearance, at that—"
+    WG "but the changes we are experiencing are already making the clothing and other accessories we arrived with obsolete."
+    show WG happy at Position(xpos=0.3) with move
     WG "The school {i}does{/i} supply new uniforms in larger sizes as we need them, but their system does not have the motivating factor of free market capitalism to push their productivity."
     MCT "I think I see where this is going now."
-    show WG happy at Position(xpos=0.7), Transform(xzoom=1) with dissolve
+    show WG happy at Position(xpos=0.7), Transform(xzoom=-1) with move
     WG "And such aid only extends to the clothing we need as students. Personal expression and comfort is left to the individual to provide, a tiresome chore when the only stores are outside the school, all the way in town."
-    show WG angry at Position(xpos=0.3), Transform(xzoom=-1) with dissolve
+    show WG angry at Position(xpos=0.3), Transform(xzoom=1) with move
     WG "And are we supposed to make that trip while wearing ill-fitting, potentially scandalous clothing?"
     MC "I suppose not..."
-    show WG happy at center, Transform(xzoom=1) with dissolve
+    show WG happy at center, Transform(xzoom=-1) with move
     WG "Now, there's a better choice. I, through my personal contacts with the biggest and best names in clothing retail, can offer you-"
     MC "Whoah, easy there Alice."
     show WG surprised-2
     WG "!"
     MC "I don't need a sales pitch. I know what you're doing. You offered to get a computer for me, remember?"
-    show WG neutral
+    show WG neutral at Transform(xzoom=1)
     WG "Yes, yes. Pardon me, I got carried away there for a second."
     show WG happy
     WG "But the fact that you're familiar with this is perfect, because I have a proposition for you."
@@ -1385,10 +1404,12 @@ label WG010:
     show WG happy
     WG "But we already have most of our selection here at the school, ready to distribute to any interested buyer."
     WG "And if anyone wants to see our products in real life, you can tell them that I'm already wearing my first new set of clothing."
-    WG "The school told me it would take as much as a week to get me a larger set of uniforms, but I– going directly to the company that has the contract with this school– was able to get this comfortable and properly–fitting outfit before my old set became restrictive."
+    WG "The school told me it would take as much as a week to get me a larger set of uniforms,"
+    WG "but I– going directly to the company that has the contract with this school– was able to get this comfortable and properly–fitting outfit before my old set became restrictive."
     "She did a quick modeling job, turning around to show how her top didn't pinch or roll up on her now-wider torso and rounder belly."
     show WG happy at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
-    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly. Seeing it up close, I'd be lying if I said it didn't catch my... attention, shall we say."
+    "I actually hadn't noticed that she had gotten plumper. It hadn't been two weeks yet, and I wasn't expecting to see such changes so quickly."
+    "Seeing it up close, I'd be lying if I said it didn't catch my... attention, shall we say."
     "Unless she had told me I wouldn't have noticed that this was a larger outfit— it fit her as well as her old set. I could see how she thought this would be a good advertisement for her business."
     show WG haughty at center, Transform(zoom=1.0)
     WG "No muffin top, no pinching in the sleeves."
@@ -1588,7 +1609,7 @@ label WG010_decline:
     menu:
         "It's not a question of time. I just don't want to work for you.":
             play music Bittersweet
-            $setTimeFlag("WGnowork")
+            $disableRoute("WG")
             MC "It's not a question of time. I just don't want to work for you."
             $setAffection("WG", -10)
             show WG angry
@@ -1772,7 +1793,8 @@ label WG012:
     scene Classroom with fade
     play music Schoolday
     "When the classes ended for the day, I was more than ready to shut my brain off."
-    "The whammy of the news of our condition didn't mean we got to stop learning. Tashi-sensei ran the class like a herd of pack mules, but instead of piling loads of goods onto our backs we were packing our brains full of facts and figures."
+    "The whammy of the news of our condition didn't mean we got to stop learning."
+    "Tashi-sensei ran the class like a herd of pack mules, but instead of piling loads of goods onto our backs we were packing our brains full of facts and figures."
     "I had several chapters of reading to get through later that day, but first I needed to decompress before my grey matter started to overheat."
     "As I gathered up my things and made to leave, I felt a tap on my shoulder."
     show WG neutral at center with dissolve
@@ -1837,9 +1859,8 @@ label WG012_c1_2:
     $setFlag("WG012_c1_2")
     MC "Maybe we should just stop before we get into real trouble."
     show WG angry
-    "Alice scoffed-"
     WG "Hmph."
-    "-and gave me a withering look, but I pushed on."
+    "Alice gave me a withering look, but I pushed on."
     MC "Maybe Matsumoto-san's a bit strict, but she's not being a hard-ass-"
     MC "Um, she's not some sort of killjoy that has it out for you personally."
     MC "The school has rules for a reason, even if we don't always like them. It's lame, but true."
@@ -2028,8 +2049,10 @@ label WG013_c2:
     show WG angry at center with dissolve
     play music Rain
     WG "..."
+    show WG doubt
     WG "Shiori wasn't in the classroom, was she?"
     MC "Heh, for all I know she could have been, but Daichi doesn't know."
+    show WG neutral-2
     "Alice let out a gust of air, relaxing in body, but not quite in spirit. A feeling of tension hung around her, like an aura."
     show WG haughty
     WG "A clever ruse it would seem on your part."
@@ -2050,7 +2073,7 @@ label WG013_c2:
     WG "I suppose some of us are having a harder time dealing with this than others."
     WG "Assigning blame for this may be more accommodating than accepting it's pure chance. It's easier when you can be angry at someone."
     WG "What is his growth factor? It must be severe to set him off like that."
-    MC "Well actually, he's here because his sister has a growth factor. As far as I know, he doesn't have anything goin on other than being a nutjob."
+    MC "Well actually, he's here because his sister has a growth factor. As far as I know, he doesn't have anything going on other than being a nutjob."
     show WG doubt
     WG "Just when I was thinking about having any sort of sympathy for him."
     show WG neutral
@@ -2122,14 +2145,14 @@ label WG014:
     MC "Hmm, I guess it is just a handle attached to a rock after all. Is that a popular sport in America?"
     WG "Nobody curls in America! That's a Canadian thing. I don't even know why it would be here, this isn't an ice rink."
     "She huffed as she kicked the curling 'rock' across the floor and to the equipment room."
-    show WG neutral at Position(xpos=0.35), Transform(xzoom=-1) with move
-    WG "Grr."
-    show WG neutral at Position(xpos=0.5) with move
-    WG "Bah!"
-    show WG neutral at Position(xpos=0.65) with move
-    WG "Huff."
-    show WG neutral at Position(xpos=0.8) with move
-    WG "Gar."
+    show WG angry at Position(xpos=0.35), Transform(xzoom=-1) with move
+    WG "{i}Grr.{/i}"
+    show WG angry at Position(xpos=0.5) with move
+    WG "{i}Bah!{/i}"
+    show WG angry at Position(xpos=0.65) with move
+    WG "{i}Huff.{/i}"
+    show WG angry at Position(xpos=0.8) with move
+    WG "{i}Gar.{/i}"
     "I found a couple skis propped up against the wall and followed her."
     MC "Somebody was messing with the skis as well. Did I sleep through the summer and fall?"
     show WG neutral
@@ -2143,9 +2166,13 @@ label WG014:
     pause 2
     MC "You're not joking."
     MC "Who thought to put those two things together?"
+    show WG doubt
     WG "I don't know. It's a Scandinavian sport. It's not something people do in America either."
-    WG "I saw it at the Winter Games a few years ago. It was... interesting to say the least."
+    WG "I saw it at the Winter Games a few years ago. It was..."
+    show WG haughty
+    extend " interesting to say the least."
     MC "You've been to the Olympics?"
+    show WG neutral
     WG "As a spectator."
     if isEventCleared("WG009"):
         "Not sure why she thought she needed to clarify that, but then again, after seeing her blow away Akira in the pool, if she had told me she qualified for the swim team, I'd have believed her."
@@ -2160,13 +2187,14 @@ label WG014:
     WG "Don't get me wrong, it is nice, but traveling to other countries can actually feel tedious."
     WG "Everywhere you go it's the same franchises, the same highly polished tourist spots where the poverty or unrest is kept at bay to present a picture perfect image of the country."
     WG "You don't really get a taste for the culture that way."
-    show WG neutral at Position(xpos=0.65), Transform(xzoom=-1) with move
+    show WG neutral-2 at Position(xpos=0.65), Transform(xzoom=-1) with move
     WG "As for meeting other people... Only if you speak the same language."
     MC "Oh... hadn't thought of it that way."
     "I didn't have much to say to that, so as Alice and I picked up some kendo sticks I let things get quiet."
     "But things felt even more awkward being next to someone in complete silence."
     "I've never thought small talk was something essential, but as I saw the time needed to finish this stretching out before me I realized I needed to fill it somehow."
     MC "So... have you traveled a lot?"
+    show WG neutral
     "She looked down at a pair of luchador masks she had picked up before answering. Just what the hell had people been doing here before we started cleaning up?"
     WG "I've 'been' to several countries in Europe and Asia, in that I've flown to them while Father conducted business."
     WG "And we've vacationed in places like Geneva and Tuscany and Monte Carlo. Though we spent almost all our time at exclusive hotels and resorts."
@@ -2178,6 +2206,7 @@ label WG014:
     show WG neutral at Position(xpos=0.8) with move
     WG "I've always found more amusement and insight in those times when we left the carefully constructed pockets of luxury."
     MC "You like rubbing elbows with the common folk, eh?"
+    show WG neutral-2
     WG "Nnnnnn- Sort of."
     WG "Don't get me wrong, I don't want to sleep on a straw mat or wash myself in an outdoor shower."
     show WG neutral at Position(xpos=0.2), Transform(xzoom=1) with dissolve
@@ -2195,9 +2224,10 @@ label WG014:
     show WG happy
     WG "Yes!"
     MC "And you don't find that odd?"
-    show WG neutral
+    show WG surprised-2
     WG "Why should I?"
     "I just scratched my head. I genuinely had no answer to that. I guess she liked to have her cake and eat it too."
+    show WG neutral
     "After enough time had passed I shifted the conversation."
     MC "Have you been in touch with any friends from your old school?"
     show WG neutral at Position(xpos=0.2), Transform(xzoom=1) with move
@@ -2207,8 +2237,10 @@ label WG014:
     MC "I was just thinking..."
     WG "..."
     MC "It's been a couple weeks since we all got here. It's starting to feel like I'm used to this place."
-    MC "At first I didn't try to get in touch with my friends from back home, because none of them probably know about this place or the whole 'factor' thing. But now that I've come to grips with it I can't think of a reason not to tell them."
-    "Too late I realized what I had just done: opened the door to bringing up Alice's factor. Again."
+    MC "At first I didn't try to get in touch with my friends from back home, because none of them probably know about this place or the whole 'factor' thing."
+    MC "But now that I've come to grips with it I can't think of a reason not to tell them."
+    MC "..."
+    "Too late, I realized what I had just done: opened the door to bringing up Alice's factor. Again."
     WG "Your factor concerns your hair, yes?"
     MC "Yeah..."
     WG "It doesn't seem to be that significant of a dilemma."
@@ -7524,7 +7556,7 @@ label WG039_c2_3:
     WG "Not simply accept it as it is, but accept that it is as it must be."
     play sound DoorOpen
     "It wasn't the worst time to be interrupted like this, but it was to be expected that Aida would be showing up."
-    show WG sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
+    show WG neutral-2 at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
     show Chibuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Chibuki "Alice, I retrieved your new order of clothes, it seems there was a mishap in receiving and they actually had arrived."
     MCT "What the hell was she doing here?"
@@ -7563,7 +7595,7 @@ label WG039_c1_2:
     WG "You should probably finish getting ready for class. I will see you later."
     MC "I was- ... Yeah. See you later."
     play sound DoorOpen
-    show WG at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
+    show WG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
     show Chibuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Chibuki "Alice, I retrieved your new order of clothes, it seems there was a mishap in receiving and they actually had arrived."
     MCT "What the hell was she doing here?"

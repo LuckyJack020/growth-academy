@@ -6529,9 +6529,10 @@ label PRG026_c1_1:
     "Only two people didn't speak up."
     hide AE with dissolve
     "Shiori shook her head, turned, and went back to her desk, clearly wanting no part in this."
-    hide BE with dissolve
-    hide GTS with dissolve
-    hide FMG with dissolve
+    hide BE
+    hide GTS
+    hide FMG
+    with dissolve
     "Alice came to stand next to Aida's desk. Surprisingly, she didn't look remotely upset."
     WG "Is this true, Kodama-san? It happened?"
     show PRG unique

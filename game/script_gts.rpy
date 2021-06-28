@@ -6242,6 +6242,7 @@ label GTS039:
     "Naomi and I looked at each other as the spring breeze rolled through the cherry tree once more. We said nothing for several seconds, smiling at each other. Naomi responded with a calm, somber voice."
     GTS_S "I will be with you every step of the way."
     MC "I appreciate that, Naomi-chan."
+    hide GTS
     show GTS_S happy
     "The two of us sat next to each other beneath the cherry tree for several more moments, just staring at each other. We didn't speak for at least a minute. It felt wonderful to stop and breathe for a while; to take in the scenery and just... share time together."
     "After a few moments had passed, Naomi spoke up. She had unconsciously started to lean upon the bench, which whined under her substantial weight."

@@ -6,13 +6,11 @@ label global000:
 
     # This is what text will look like with those codes attached.
     # Line breaks are done by inserting the command \n where you want to start a new line. No spaces allowed.
-    #Italics, bold, etc are done with curly brackets
+    #Italics, bold, etc are done with curly brackets {i}{/i}{size=-5}{/size}
     #
 
     #EX - MC "Yo. I'm the player character, Hotsure Keisuke.\nI'm transferring to Seichou Academy this year."
     #EX - BE "I'm the BE character, Inoue Honoka!\nIt's good to see you again, Kei{i}-chan{/i}!"
-
-    # I'll stick new characters above so that anyone that wants to just copy those lines and replace the actual dialogue can do so without worry.
     show black
     centered "The following represents a work in progress."
     centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
