@@ -6295,7 +6295,8 @@ label FMG044:
     MCT "God, please don't let this end."
     MC "Of course, Akira."
     show FMG aroused
-    "She released my hands, letting them drop to the side for a moment before I quickly brought them back up, squeezing myself behind her in that cramped shower stall. Bringing my hands up to her defined shoulders, I began to work my way down, caressing and savoring every last inch of her body."
+    "She released my hands, letting them drop to the side for a moment before I quickly brought them back up, squeezing myself behind her in that cramped shower stall."
+    "Bringing my hands up to her defined shoulders, I began to work my way down, caressing and savoring every last inch of her body."
     show FMG aroused-2
     FMG "M-mnh... Don't... don't stop, Kei..."
     "I softly gulped, only to nod as I eventually got to her hips and her firm, defined ass. She tensed up, veins throbbing about her body as she knocked me over with a simple swing of her body."
@@ -6828,8 +6829,9 @@ label FMG047:
     show FMG angry
     FMG "What self-respecting man runs like that?!?!"
     show FMG surprised
+    show dummy with vpunch
+    play sound Thud
     FMG "AH!"
-    #[screen shake]
     show FMG angry
     FMG "When did you tie my shoelaces together?!?! Oh, it is so on— You better keep running now!"
     hide FMG with dissolve
@@ -7336,7 +7338,7 @@ label FMG048:
     MC "What are they talking about? I wonder if it’s me... wait no, Nat told me what she was going to talk about."
     MC "Wow, Akira looks really good with that skirt. Hold up, were Nat’s thighs always that big? Oh shit, they’re coming back and is... Nat smiling?"
     show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    FMG "While I don’t fully agree with how you handle it. I still appreciate the thought."
+    FMG "While I don’t fully agree with how you handled it. I still appreciate the thought."
     show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Natsuko "I can’t stand people like him. He had it coming."
     show FMG happy
@@ -7490,13 +7492,14 @@ label FMG049:
     "She crashed down to her knees, the reinforced bed groaning as she continued to hug around my body. Her enormous thighs wrapped around my torso as she tried to stop her body from shaking."
     show FMG aroused-nude
     FMG "Come on, start touching me, dude!"
-    "I couldn’t even manage to respond, fireworks going off in my head as I kept slamming my hips into her. My hands, almost instinctively, went up to her firm, musclebound chest and gave them a strong squeeze. My thumbs couldn’t help but roll over her nipples with it. I watched her body seemingly writhe and squirm in pleasure, a complete contrast to what I’d believed was an impervious body and mind."
+    "I couldn’t even manage to respond, fireworks going off in my head as I kept slamming my hips into her. My hands, almost instinctively, went up to her firm, musclebound chest and gave them a strong squeeze."
+    "My thumbs couldn’t help but roll over her nipples with it. I watched her body seemingly writhe and squirm in pleasure, a complete contrast to what I’d believed was an impervious body and mind."
     FMG "O-oooohnh~! I... Haaahnh~! I-I didn’t think you’d do thaaaaht~!"
     FMG "D-don’t stop, Kei-kun! Don’t even think about stopping!"
     MCT "I’ll admit... You’re crushing me a little bit, but the pain is totally worth it."
     MC "A-ah... I won’t!"
     "I moved my hands off her breasts and over to her arms.  I’d never seen her this pumped before, but simultaneously I’d never seen her this fragile either."
-    "Without warning, Akira started taking control, pushing me down with hands, and started to ride me herself. That "fragility" was quick to dissipate."
+    "Without warning, Akira started taking control, pushing me down with hands, and started to ride me herself. That \"fragility\" was quick to dissipate."
     FMG "O-Oooh~! It’s even better when I do it! I hope you’re okay down there."
     MC "I’m...I’m hanging in there..."
     show FMG aroused-2-nude

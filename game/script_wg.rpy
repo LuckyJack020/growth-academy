@@ -2,12 +2,14 @@ label WG001:
     $setProgress("WG", "WG002")
     scene Cafeteria with fade
     play music Busy
-    MC "Well! That was... a first day. I didn't expect the school to be exactly like my old one, but this was almost surreal. I mean, seriously, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised."
+    MC "Well! That was... a first day. I didn't expect the school to be exactly like my old one, but this was almost surreal."
+    MC "I mean, seriously, if the teacher had ripped off his face to reveal an alien underneath I wouldn't have been more surprised."
     MC "...which isn't too far off from what actually happened, now that I think about it."
     MC "I could use a bit of normal right now. A nice snack after class is normal, right?"
     UNKNOWN "I'm sorry, but you must not realize who you're talking to."
     MC "That voice sounds familiar..."
-    "Standing near the doors leading to the kitchen itself was the heavyset girl with the blonde curles from my class. There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
+    "Standing near the doors leading to the kitchen itself was the heavyset girl with the blonde curls from my class."
+    "There was a man in a chef's outfit standing behind her, and she was arguing with an old woman in an apron and hairnet."
     show WG angry at center with dissolve
     WG "The name is Alice Nikumaru."
     WG "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
@@ -19,7 +21,7 @@ label WG001:
     WG "Yes, Keisuke— I remember now. Please...tell Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
     show WG haughty at center with dissolve
-    WG "Ergg, this isn't really helping. Look, how else can I explain this-"
+    WG "{i}Ergg{/i}, this isn't really helping. Look, how else can I explain this-"
     WG "You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     WG "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
     WG "François here studied at the finest institutes in France, Italy and Japan, all for the sake of honing his skills to a level suitable for me."
@@ -36,7 +38,8 @@ label WG001:
     show WG happy at center
     WG "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
     MCT "Bringing along her own private chef and taking over a fifth of the kitchen? Just how loaded is this girl?"
-    Lunch "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus. Either you can take what we offer you, or you can make your own meals in the Home Ec classes."
+    Lunch "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus."
+    Lunch "Either you can take what we offer you, or you can make your own meals in the Home Ec classes."
     show WG angry
     WG "What? François cannot perform at his best in a classroom kitchen. He needs a full assemblage of utensils and appliances-"
     Lunch "I said {i}you{/i} can make your meals."
@@ -69,7 +72,7 @@ label WG001_c1_1:
     MC "Yeah. Typical hard-ass school employee, being cruel for the sake of it."
     show WG haughty
     WG "Maybe this is how they do it at lesser institutions, but in my experience schools exist for the betterment of the students."
-    extend " If this is a taste of how this place operates, perhaps a more subtle work around is needed in order to properly see that my accommodations are met."
+    WG "If this is a taste of how this place operates, perhaps a more subtle work around is needed in order to properly see that my accommodations are met."
     MCT "I wasn't sure what to make of what she just said, but if this was any indication, Alice doesn't seem the type to give up on anything so easily."
     jump daymenu
 
@@ -97,7 +100,7 @@ label WG001_c2_1:
     MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install François as head chef?"
     show WG neutral with dissolve
     WG "Tsk. Such a simple thought. Just because you {i}can{/i} buy something, my dear boy, does not mean you should. Not all investments are worth the trouble."
-    hide WG
+    hide WG with dissolve
     MCT "Did she really just call me her \"dear boy\"?"
     jump daymenu
 
@@ -108,7 +111,7 @@ label WG001_c2_2:
     WG "As a matter of fact, you should. He is the leader of the heavy manufacturing industry in Japan. His meteoric rise to success should be an inspiration to everyone."
     MC "Is that so? That does sound pretty impressive actually."
     WG "Quite the understatement if anything, but at least now you know."
-    hide WG
+    hide WG with dissolve
     MCT "Just how rich is this girl then? I'm kinda afraid to find out now."
     jump daymenu
 
@@ -7277,6 +7280,7 @@ label WG039:
     #Time: Morning
     scene Dorm Interior with fade
     $setProgress("WG", "WG040")
+    play music Peaceful
     "In the middle of getting dressed for the day my phone buzzed with a text. It was from Alice."
     WGCell "I need your help with something. Can you come to my dorm room?"
     "A week ago I would have assumed this was something work related, but after our third date I let myself hope this would turn out to be something..."
@@ -7292,7 +7296,7 @@ label WG039:
     "Aida was out, so it was just me and Alice, who had her back to me as she sat on her bed."
     MC "What's up?"
     "When she turned around I got the picture."
-    show WG sad at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=0.5) with dissolve
+    show WG sad with dissolve
     play music WG
     WG "Thank you for coming. I am having trouble getting dressed."
     "She was trying to button her shirt, and had fallen short by three buttons."
@@ -8023,7 +8027,7 @@ label afterhotdog_Choice:
     show WG haughty
     WG "To leave it as a blank canvas suggests a lack of culinary instinct or just plain laziness."
     "My arms crossed in mild frustration, Alice quickly took notice."
-    show WG neutral2
+    show WG neutral-2
     WG "{i}Sigh{/i}... I apologize again, refraining from chastising is turning out to be quite difficult. What are my choices for flavorings?"
     MC "Let’s see... we have"
     menu:
@@ -10459,7 +10463,7 @@ label WG048:
     $setProgress("WG", "WG049")
     $setTime(TimeEnum.DAY)
     scene Summer Guest Bedroom with fade
-    play music Rain
+    play music Sunset
     "Coming inside after spending a full day on the beach, the three of us went to our respective chambers to unwind for a bit and get cleaned up before dinner."
     "Having returned once again, the luxuriant accommodations had not yet ceased to inspire awe in me."
     "The striking view from the late afternoon sun beaming through the window caused me to pause as I took in the oceanside vista."
@@ -10477,6 +10481,7 @@ label WG048:
     "But it's more than that... her confidence, her self-determination, her dignified bearing, not for the sake of superficial appearances, as most who are of wealthy means do- Alice cultivated these attributes out of her own sense of respect for herself."
     "It was something I admired about her, all the more so given the additional challenges her growth had brought so far."
     hide WG with dissolve
+    stop music
 
     scene black with fade
     $setTime(TimeEnum.DAY)
@@ -10532,11 +10537,12 @@ label WG048_c1_1:
     MC "Seven minutes? Not great, not terrible."
     Lee "Aw, mista Hotsure, glad to greet ya comin'! I was sent to check up on ya. Ya know Miss Nikumaru won't start without ya, but she's not exactly patient either."
     MC "Sorry to cause concern. Please, lead the way."
-
+    stop music
     scene Summer Dining Room with fade
     play music WG
-    show WG summer-int-stern at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show WG summer-int-stern at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    with dissolve
     WG "Keisuke! Why are you late? I specifically had Takada check up on you earlier so you would know when you were expected to arrive."
     WG "Dinner does not start until all guests are present- it would be rude of me as the hostess to do otherwise. In turn, as a courtesy to the other guests it is imperative that you be punctual."
     show WG summer-int-neutral-2
@@ -10577,7 +10583,7 @@ label WG048_c1_2:
 
     scene Summer Hallway with fade
     "I sauntered down the hallway to the dining room with the knowledge that I made comfortable time, if only a minute or two to spare."
-
+    stop music
     scene Summer Dining Room with fade
     play music WG
     show WG summer-int-neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
@@ -11185,13 +11191,13 @@ label WG050_c1_1:
     MC "A bit overwhelming isn’t it?"
     PRG "Hm-hmm. It all looks so good... but my nose has been really sensitive lately. I-I don’t really know what I feel like."
     MC "I’m having trouble making up my mind too. I was planning on following Alice’s lead to see what she was going to start with."
-    show WG swimsuit-haughty
+    show WG swim-casual-haughty
     "Alice perked up when she realized I gave her an in to not have to wait any longer."
     PRG "That does sound like a good idea. I need more time to make up my mind."
     WG "It is a tad bit overwhelming isn’t it? Don’t be afraid to take a little bit and come back for more later. I won’t be offended if you choose not to finish your initial selection."
     WG "That being said, I have already decided what I will be selecting."
     MC "By all means, lead the way, we’ll be right behind you."
-    show WG swimsuit-neutral
+    show WG swim-casual-neutral
     WG "If you insist."
     "Alice didn’t seem too keen on how going first reflected on her hospitality as the hostess; nonetheless, her appreciation was still evident in her tone."
     "A big girl has to eat after all, and I felt a personal responsibility to remove any and all obstacles to make sure that happened. Besides, there was plenty of food to go around— or at least I had thought."
@@ -11225,9 +11231,9 @@ label WG050_c2_1:
 
 label WG050_c3_1:
     "..."
-    show PRG swimsuit-embarrassed
+    show PRG swim-casual-embarrassed
     "Instead of coming to a decision, Aida seemed to freeze up as she realized she was holding up the line with her indecisiveness."
-    show WG swimsuit-stern
+    show WG swim-casual-stern
     MCT "Well this doesn’t seem to be working."
     MC "Is everything alright Aida? It’s okay if you aren’t feeling hungry."
     PRG "S-Sorry. I just can’t seem to make up my mind. I think I’ll have one of these lemon squares for now."
@@ -11235,9 +11241,9 @@ label WG050_c3_1:
     "Honestly, she didn’t need to be so embarrassed, it’s understandable how sensitive her sense of taste and smell could be in her condition."
     "It all looked pretty good to me though, but not wanting to hold up Alice any further, I decided to let her go ahead of me."
     MC "Uh, you can go first Alice. I’m not sure what I want either."
-    show WG swimsuit-doubt
+    show WG swim-casual-doubt
     WG "Honestly, I don’t understand this hesitancy,"
-    show WG swimsuit-neutral
+    show WG swim-casual-neutral
     WG "but thank you for offering."
     "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
     "By this point Alice was absolutely ravenous. She piled up her plate high and managed to fill every square centimeter of it in just a few seconds—"
@@ -12105,7 +12111,8 @@ label WG054_c1_1:
     WG "5 PM should do fine. Do dress nicely as we will be heading into town."
     MC "Then it's a date."
     hide WG with dissolve
-    "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out. Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
+    "As the words left my mouth the bell rang again. Gathering my garbage I noticed Alice hastily toss her leftovers out."
+    "Her tray still had a fair amount of food on it. Something had happened since the lake house- her appetite wasn't adding up."
     stop music
     scene black with fade
     jump WG054_c1_after
@@ -12135,7 +12142,7 @@ label WG054_c1_2:
 label WG054_c1_after:
     $setTime(TimeEnum.EVE)
     scene School Front with fade
-    play music Peaceful
+    play music Sunset
     "Double checking my watch to confirm my timeliness,  I was happy to spot Alice sitting at the bus stop bench."
     show WG neutral with dissolve
     WG "Glad to see your punctuality continues to be great."
@@ -12975,8 +12982,10 @@ label WG057:
     MCT "Great plan so far genius. Alright, this isn't entirely unsalvageable, if I don't know, I'll just have to learn."
     stop music
     "Luckily I had the perfect teacher in mind."
-    scene Dorm PRG with fade
+    scene black with fade
+    pause 1
     play music PRG
+    scene Dorm PRG with fade
     "I stopped in at Alice's and Aida's dorm."
     show PRG neutral with dissolve
     PRG "H-Hello, Hotsure-san. Alice isn't here right now, but I'm sure she'll be back in a couple of hours if you wanted to stop by later."
@@ -13844,6 +13853,7 @@ label WG059:
     PRG "Hello Alice. T-Thank you for coming."
     show PRG happy
     PRG "Oh, H-Hotsure-san. I didn’t realize you’d be coming as well."
+    show PRG happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with move
     show WG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
     WG "I hope you don’t mind that I brought him along. I figured a passive observer wouldn’t be too difficult to accommodate."
     UNKNOWN "I’m cool with it. We could probably use an extra set of taste buds since this is our first time making the dish."
@@ -13851,7 +13861,7 @@ label WG059:
     "Peering over one of the ranges in the center of the kitchen, I could make out the top part of what appeared to be a rather large posterior, with a surprising lack of coverage from her skirt."
     "I tried not to let my eyes bug out of my head too much, but I was pretty caught off guard by both the size and visible surface area of such a meaty set of cheeks out of nowhere."
     "Having retrieved from the cabinet what looked to be a large, deep steel pan, the woman in question stood up straight."
-    show Sakura neutral with dissolve
+    show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     "So this was the elusive Sakura. Elusive is the right word, because I would have remembered seeing her if I had before."
     "Long, dark auburn hair, big, soft brown eyes, a warm smile, with femine curves that flared out dramatically at the hips. This girl had some serious chunk on her, and in the right places."
     "Simply put, Sakura was a knockout."
@@ -13928,16 +13938,16 @@ label WG059:
     "Despite hearing the occasional clanging of pots and pans and the sizzle of food on the stovetop, I hadn’t really been paying much attention to Aida and Sakura as they cooked."
     "I had been more wrapped up in my conversation with Alice, which in light of how... well, distracting, Sakura’s own rump roast was, that was probably for the best."
     "Hopefully I hadn’t preoccupied Alice away from her primary task with our conversation. Looking over at their stations, Alice took it upon herself to walk over and investigate."
-    show Sakura happy with dissolve
+    show Sakura happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Sakura "I think we’re ready to wrap these up. I’ll pull out the puff pastry sheets from the fridge so they’ll be ready."
     "Sakura had just pulled out some seared beef medallions from her pan, and onto a plate, while Aida was manning a pan that contained the chopped mushrooms."
     hide Sakura with dissolve
-    show PRG neutral with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     WG "Hmm, not quite it would seem. You still need to draw off a lot more water from those mushrooms, otherwise it will be mushy."
     PRG "Y-Yes, I think you’re right. They still look a little watery. I’ll turn up the heat."
     hide PRG with dissolve
     WG "Sakura?"
-    show Sakura neutral with dissolve
+    show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     Sakura "Yeah?"
     WG "While the beef loin medallions are sitting, don’t forget to coat them with horseradish mustard."
     show Sakura surprised
@@ -13947,11 +13957,11 @@ label WG059:
     WG "I strongly recommend against that substitution."
     show Sakura angry
     Sakura "Ach, okay. I’m going to have to find that stuff then. Where on earth did I put it?"
-    show Sakura happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with move
-    show PRG neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    show Sakura happy at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with move
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
     PRG "Thank you for the recommendation, Alice."
     Sakura "Oh, yeah. Thank you, Alice."
-    show WG neutral with none
+    show WG neutral with None
     hide PRG
     hide Sakura
     with dissolve
@@ -13960,7 +13970,7 @@ label WG059:
     "Satisfied she had fulfilled her supervisorial duties, Alice walked back to her seat behind the counter next to me."
     hide WG
     show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
-    show PRG neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
     with dissolve
     "Watching the two of them buzz back and forth across the stations was an entertaining spectacle. The pace was frantic, but the coordination was seamless. They appeared to be firing on the same cylinders."
     "Sakura transferred the mushrooms and the beef loan to the pastry sheets, and then immediately swapped with Aida to finish wrapping up some vegetables in a roasting pan after adding the beef drippings."
@@ -13996,13 +14006,16 @@ label WG059:
     MCT "Right... sudsy water— dishes man, focus on the dishes. This is getting out of hand all over the place."
     "Eventually I made my way through the stack of dishes. Grateful that I had been able to find a distraction, I took my seat next to Alice back at the counter as the girls went to their station to plate the dish."
     hide WG with dissolve
-    show PRG excited at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG excited at Position(xpos=0.25, xanchor=0.5, yalign=1.0) behind Sakura with dissolve
     show Sakura happy
     "Pulling the beef Wellingtons out of the oven, they looked like golden brown meat pies with a crosshatched pattern on the top, courtesy of Aida’s extra touch, which made them look all the more enticing."
     "The pan roasted vegetables turned out perfectly as well: a mix of carrots, potatoes, and pearl onions with golden brown streaks across them from the ultra-hot oven."
     "Cross sectioned, with a pan sauce from the meat drippings gently ladened over them, it was one of the most enticing plates I’d seen as they placed one each in front of Alice and me."
-    show PRG neutral
-    show WG neutral-2 at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1)
+    show Sakura at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    with move
+    show PRG neutral at Transform(xzoom=1)
+    show WG neutral-2 at Position(xpos=0.25, xanchor=0.5, yalign=1.0) behind Sakura with dissolve
     Sakura "Dig in!"
     MC "Thanks girls. It looks great!"
     "Before I dug into my plate, I looked over at Alice to see her reaction first. Few things delighted me as much as seeing Alice enjoying food."
@@ -14044,7 +14057,7 @@ label WG059:
     WG "It was quite delightful. It’s just very rich and filling. I don’t think I can have anymore."
     "When we were at her summer house, I watched this same woman (who was significantly smaller at the time) absolutely demolish a small banquet."
     "Now she says she’s full after eating half a plate of beef pastry? What’s going on?"
-    show Sakura confused
+    show Sakura nervous
     Sakura "Oh, um, I guess I didn’t think of that. Kodama-chan told me you had quite a ‘healthy’ appetite."
     PRG "W-We made four servings because that’s what we would have to do for judging, but we didn’t think we’d have any leftovers."
     show WG sad
@@ -14285,7 +14298,7 @@ label WG059S_C1_1:
     WG "You best be leaving Kei, it's almost time for Shiori to do her patrol past here."
     "Her tone was unfamiliar, it was a mix of conflict and something else that I couldn’t pinpoint. Knowing that trying to stay any further with her in this mood wouldn’t be of any benefit to me, I grabbed my bag and departed."
     hide WG with dissolve
-    #play music memories
+    play music Memories
     scene black with fade
     pause 1
     $setTime(TimeEnum.EVE)
@@ -14386,7 +14399,7 @@ label WG060:
     scene black with fade
     pause 1
     scene Dorm Hallway with fade
-    #play music requiem
+    play music Requiem
     "If Alice truly was trying to avoid me, I didn’t want to give her a head’s up I’d be coming over with a text. I was going to confront this head on."
     play sound Knock
     WG "Who is it?"
@@ -14583,7 +14596,7 @@ label WG060S_LiePath:
     "With a deep breath, I stepped through the threshold."
     "All lights save the ones in the kitchen area were off."
     "Slightly stumbling my way in the dark, I continued to follow the sound of Alice’s voice. My eyes started to adjust, as a warm orange glow emanated from around the corner."
-    #play music requiem
+    #play music requiem possibly
     "The shock I felt upon turning the corner was indescribable."
     show WG neutral with dissolve
     "Sat in front of me was Alice, comfortably lounging in her loveseat. What really stood out though was what she had donned for the evening."
@@ -14746,7 +14759,7 @@ label WG060S_TruthPath:
     WG "Leave it there, I’ll require it later. However, for now I’d like you to come here."
     "All lights save the ones in the kitchen area were off, but the dim light was enough for me to navigate towards the sound of Alice’s voice."
     MCT "Please let this not be the end."
-    #play music sunset
+    play music Sunset
     "Slightly stumbling my way in the dark, I continued to follow the sound of Alice’s voice. My eyes started to adjust, as a warm orange glow emanated from around the corner. The shock I felt upon turning the corner was indescribable."
     show WG neutral
     "Sat in front of me was Alice, comfortably lounging in her loveseat. What really stood out though was what she had donned for the evening."

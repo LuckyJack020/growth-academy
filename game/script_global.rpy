@@ -111,7 +111,7 @@ image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
 
 image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
-image School Front = "Graphics/ui/bg/schoolfront.png"
+image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].png")
 image School Inner = "Graphics/ui/bg/schoolinner.png"
 image Gate Front = "Graphics/ui/bg/gatefront.png"
 image School Planter = "Graphics/ui/bg/schoolplanter.png"
@@ -124,7 +124,7 @@ image Dorm Interior = "Graphics/ui/bg/dorminterior_[gametime].png"
 image Dorm Hallway = "Graphics/ui/bg/dormhall.png"
 image Campus Center = DynamicImage("Graphics/ui/bg/campuscenter_[gametime].png")
 image Auditorium = "Graphics/ui/bg/auditorium.png"
-image School Exterior = "Graphics/ui/bg/schoolexterior.png"
+image School Exterior = DynamicImage("Graphics/ui/bg/schoolexterior_[gametime].png")
 image Library = "Graphics/ui/bg/library.png"
 image Office = DynamicImage("Graphics/ui/bg/office_[gametime].png")
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
@@ -1131,12 +1131,15 @@ define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
 define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
 define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education
+define audio.Memories = "Audio/BGM/memories.mp3"
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
+define audio.Requiem = "Audio/BGM/reqiuem.mp3"
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
+define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
 define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
@@ -1507,7 +1510,7 @@ init 2 python:
 
     eventlibrary['PRG005'] = {"name": "Camouflage", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,                       "location": "auditorium",       "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['PRG010'] = {"name": "Buckle Up", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,                        "location": "hallway", "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
-    eventlibrary['PRG026b'] = {"name": "New Arrival", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                                    "location": "classroom",        "priority": PrioEnum.ALL,               "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.NOROUTELOCK, "PRG"], [ConditionEnum.NOROUTELOCK, ""]]}
+    eventlibrary['PRG026b'] = {"name": "New Arrival", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                        "location": "classroom",        "priority": PrioEnum.ALL,               "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size3"], [ConditionEnum.NOROUTELOCK, "PRG"], [ConditionEnum.NOROUTELOCK, ""]]}
     #Using filler title "New Arrival" for now.
 
     #Core

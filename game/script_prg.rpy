@@ -2095,7 +2095,8 @@ label PRG011:
     "I sat back in my chair a little too hard. My chair leaned on it’s back legs, teetering back and throwing my stomach in circles."
     MC "Bagh?!"
     "My arms were suddenly set to flail mode and I threw myself forward, my arms flying around like a cartoon character falling off a cliff."
-    #SCREEN SHAKE
+    show dummy with vpunch
+    play sound Thud
     "My chair slammed back down on all four legs and I gripped the seat with both hands, patiently waiting for my heart to return to a somewhat normal speed."
     MC "Gah... agh... alright. We good."
     "I shut my laptop and got up. Clearly this was a sign that I was not meant to be a well educated young lad today."
@@ -2650,11 +2651,11 @@ label PRG012:
     show HR neutral with dissolve
     HR "Hotsure-san. Good to see you."
     "All eyes went to me while I found my seat."
-    hide HR neutral
-    show FMG neutral
+    hide HR neutral with dissolve
+    show FMG neutral with dissolve
     "Some of the looks I got were fairly welcoming, all things considered."
-    hide FMG
-    show AE neutral-annoyed
+    hide FMG with dissolve
+    show AE neutral-annoyed with dissolve
     "Others, not so much."
 
     scene black with fade
@@ -2677,11 +2678,12 @@ label PRG012:
 
     scene Hallway with dissolve
     BE "Hey, Kei-chan!"
+    show dummy with vpunch
     MC "Agh?!"
     "I nearly jumped straight out of my skin."
     show BE happy with dissolve
     BE "BAAHAAHAAHAA!"
-    play music Hallway
+    play music DayByDay
     MC "Geez! I already woke up late! You wanna give me a heart attack on top of that?!"
     BE "Haahhh... give me a minute... catch... my breath..."
     MC "You know we’re adults now, right? Couldn’t you leave that back home?"
@@ -2793,7 +2795,7 @@ label PRG012:
             MC "Well... there you go."
             show BE happy
             BE "Well, I... I’m really happy for you, Kei-chan."
-            MC "Hey, I’m not 100% sure on this, you know, so don’t go jumping to conclusions."
+            MC "Hey, I’m not 100%% sure on this, you know, so don’t go jumping to conclusions."
             show BE neutral
             BE "I know, I know."
         "I don’t know yet.":
@@ -2813,15 +2815,17 @@ label PRG012:
     hide BE with dissolve
     "I scoffed and shook my head. Honoka spun around and turned off for the women’s dorms as I headed off for mine."
     BE "Oh! Hey, Kodama-san!"
-    show BE neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG neutral at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0)
+    show PRG neutral at Position (xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
     "I turned back around. Honoka was standing at the end of the dorms, and across from her, Aida stood. The two seemed to be small talking it up."
     "Aida had a small plastic bag clasped in both hands, and her bag over both shoulders."
     menu:
         "Go take a nap.":
             $setFlag("PRG012_nap")
-            hide BE with dissolve
-            hide PRG with dissolve
+            hide BE
+            hide PRG
+            with dissolve
             "I turned back around and continued to my dorms. I felt exhausted."
             scene black with fade
             pause 1
@@ -2852,7 +2856,7 @@ label PRG012:
     PRG "B-Bye, Inoue-san."
     hide BE with dissolve
     "Honoka ran off behind Aida, going down the line of dorms."
-    show PRG neutral at Position (xpos=0.5, xanchor=0.5, yalign=1.0)
+    show PRG neutral at Position (xpos=0.5, xanchor=0.5, yalign=1.0) with move
     PRG "D-Do you and Inoue-san know each other?"
     MC "Oh, yeah. We were friends when we were little."
     PRG "Really?"
@@ -2901,13 +2905,13 @@ label PRG013:
     $setProgress("PRG", "PRG014")
     $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
-    #play music Sunset
+    play music Sunset
     "Double kill! Caustic finish!"
     MCT "Yes! Take that, you CPU douchebags!"
     "I fist pumped as I moved onto the next stage."
     "I’d been at this for about three hours. Banging out combos and smashing hardcore cpus into the dirt."
     "Pausing my game, I hoisted myself from my bed and trudged to the kitchen in my sweats, grabbing a glass from the cupboard and filling it at the sink."
-    "After another week of classes and haphazard hair trimming, I’d woken up a little after noon and had spent all day playing on my bed."
+    "After another week of classes and haphazard hair trimming, I’d woken up a little after noon and had spent all day playing games on my bed."
     "Now, it was a little after five, and I’d barely moved. I had curb stomped more enemy fighters than I could count, though."
     "I itched my back and pulled my hair away from my neck."
     MCT "I’m not wasting my time cutting this crap on a weekend. Especially if I’m going to be a recluse in my dark room."
@@ -3145,7 +3149,7 @@ label PRG013:
     hide PRG with dissolve
 
     scene Cooking Classroom with dissolve
-    play music Schoolday
+    play music DayByDay
     "Inside, all four of the sections had students in them. A mix of both girls and guys were at the four stations. They all appeared to be working on the same thing, mostly in pairs."
     show PRG worried with dissolve
     MC "Excuse me! Takamura-sensei?"
@@ -3305,7 +3309,7 @@ label PRG014:
     scene black with fade
     pause 1
     scene Cafeteria with fade
-    "When the two of us swung open the door of the cafeteria, the sweet, sweet smell of food hit me square in the schnozz.... Aaand the tremendously long line made my heart sink."
+    "When the two of us swung open the door of the cafeteria, the sweet, sweet smell of food hit me square in the schnozz.... aaand the tremendously long line made my heart sink."
     MC "Agh. Dammit. Guess we’ve got a wait ahead of us."
     show PRG unique with dissolve
     PRG "W-Well..."
@@ -3388,9 +3392,9 @@ label PRG014:
     PRG "I-I had fun. But... I just don’t know if I can keep up with the other members."
     PRG "A lot of cooking is based on speed, and I kind of like to take my time sometimes."
     PRG "I-I can cook faster for some food, but I j-just... I..."
-    pause 1
+    pause 0.5
     show PRG unique
-    pause 1
+    pause 0.5
     PRG "I-I’m not competitive. I... I don’t think I’m what they’re looking for."
     MC "Are you-"
     UNKNOWN "Hey! Kodama-san!"
@@ -3426,7 +3430,7 @@ label PRG014:
     show PRG surprised
     PRG "W-Wha?! W-Wait a moment!"
     PRG "I-I’m not a member! I didn’t sign up!"
-    pause 2
+    pause 0.5
     "Sakura’s eyes went down to the table, then slowly craned back up to Aida."
     Sakura "Yeah... well, uh..."
     extend " could you?"
@@ -3503,6 +3507,7 @@ label PRG014:
     pause 2
     show PRG worried
     PRG "I-I’ll try."
+    show Sakura happy
     Sakura "YES! Our team is gonna rock!"
     Sakura "Okay! I’ll go get you signed up! See you both!"
     hide Sakura with dissolve
@@ -3513,7 +3518,7 @@ label PRG014:
     MC "What’s that smile for?"
     PRG "J-Just thinking..."
     show PRG neutral
-    pause 2
+    pause 1
     PRG "T-Thank you."
     MC "Hey, I should be thanking you. Not only for being a friend, but also for this amazing meal."
     if getFlag("PRG014_classmates"):
@@ -3585,7 +3590,7 @@ label PRG014:
             $setAffection("PRG", 2)
 
     scene black with fade
-    pause 2
+    pause 1
     scene Cafeteria with fade
     show PRG neutral with dissolve
     "After the box had been successfully emptied, I shut it and left it in front of me."
@@ -3620,7 +3625,8 @@ label PRG015:
     "I hung my head in my hand and gripped at the roots of my hair, then ran my hand through the thick strands."
     "I could be doing anything. Literally, anything else. Instead, I was sitting here listening to something I could look up online and learn more about in half the time."
     "And, it didn’t help that everything else had already been going wrong."
-    "I’d woken up late and didn’t have time to trim my hair, so the brown mop of grandeur was hanging around my face and head like fuzzy drapes. Even still, I showed up five minutes late to class, and had gotten a lecture about the importance of punctuality after class was out."
+    "I’d woken up late and didn’t have time to trim my hair, so the brown mop of grandeur was hanging around my face and head like fuzzy drapes."
+    "Even still, I showed up five minutes late to class, and had gotten a lecture about the importance of punctuality after class was out."
     "To make matters worse, I’d been late for lunch too, and had gotten in line when there were only a few minutes left."
     "Since shoveling food down my throat at mach 12 speed was no fun, I just skipped lunch altogether."
     MCT "Literally, what else could-"
@@ -3647,7 +3653,7 @@ label PRG015:
         MCT "Stupid class..."
 
     scene black with fade
-    pause 2
+    pause 1
     scene Classroom with fade
     show HR neutral with dissolve
     HR "Now, remember to study up on this. Tomorrow, we’ll be delving even deeper into more renaissance culture and art, and I expect no slacking."
@@ -3655,7 +3661,7 @@ label PRG015:
     hide HR with dissolve
     "I was out of my seat and packing up faster than I could say ‘I’m tired and I want to go pass out.’"
     PRG "E-Excuse me? H-Hotsure-san?"
-    show PRG worried with dissolved
+    show PRG worried with dissolve
     "Aida stood behind me waiting patiently."
     MC "Oh, hey Kodama-san. Afternoon."
     PRG "Um... I-I just wanted to let you know that my first cooking competition is coming up this weekend."
@@ -3663,7 +3669,7 @@ label PRG015:
     PRG "W-Well, yes. Since I joined later than everyone else, I didn’t have as much time to practice."
     MC "Ah. Kind of sucks for you, but you were already putting in mega hours in the kitchen before joining. You and Myoga-san will kick some serious tail."
     show PRG aroused
-    pause 2
+    pause 1
     PRG "W-Well, it’s on Saturday at one o’clock in the afternoon, if you’d like to come."
     show PRG surprised
     PRG "D-Don’t feel like you have to attend though! Y-You don’t have to! I-I don’t need you there!"
@@ -3802,6 +3808,7 @@ label PRG015:
     scene black with fade
     pause 2
     scene Hallway2 with fade
+    stop music fadeout 1.0
     "I found myself trudging around the halls, deep in thought."
     "Alice’s talk, though mildly rough and harsh at first, had done something."
     "It had lit the hell fires of vesuvius under my butt, and I felt invigorated by motivation."
@@ -3809,7 +3816,8 @@ label PRG015:
     "I was going to make things with Aida happen, no matter what it took."
     "Alice had had a point back there. Opportunity only came to those who made it happen."
     "And I was going to make it happen."
-    "I didn’t care. Aida was special... and I liked her."
+    "I didn’t care. Aida was special..."
+    extend " and I liked her."
     "I walked past the kitchen. Inside, I caught waves of cinnamon and sugar, and the insides of my nose sung with glee."
     Sakura "I need a bit more frosting for this one!"
     PRG "Oh! There’s some left in the bowl!"
@@ -4096,7 +4104,7 @@ label PRG016:
     "I couldn’t quite tell from the angle, but I could’ve sworn that the crusts of the pie looked a little... blackened."
     "The two girls returned to their stations, as did their competitors. The three judges each tasted the cinnamon rolls, then took some water before moving to the pie."
     "Since spectators were not allowed at the judges table, I trained my eyes on their mouths and hoped that I could read lips well enough to decipher any inkling of what they were saying."
-    pause 2
+    pause 1
     "I could not."
     "As I studied their faces, I couldn’t make out a single showing of an opinion."
     MCT "Wait..."
@@ -4107,7 +4115,7 @@ label PRG016:
     Ryoko "Thank you both. We thoroughly enjoyed both dishes."
     Ryoko "However, as every competition goes, there has to be a winner."
     Ryoko "And, our winners for round two are..."
-    pause 2
+    pause 1
     Ryoko "Aida Kodama and Sakura Myoga!"
     play music Busy
     hide Ryoko with dissolve
@@ -4116,9 +4124,7 @@ label PRG016:
     MC "YES!"
     "All of the spectators politely applauded, as did the previous teams and the other waiting competitors."
     "Aida beamed brightly from across the room, her gaze first going to Sakura, then to me."
-    show Natsuko happy with dissolve
     "Down the way from me, the redheaded girl applauded as well for the two girls."
-    hide Natsuko with dissolve
     "Across from Aida and Sakura, the boy who had turned up the oven at the very end received a dark glare from his teammate once more before the two set on cleaning up."
     hide Sakura with dissolve
     show PRG at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with move
