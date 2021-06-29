@@ -6090,9 +6090,10 @@ label AE030:
         hide BE with dissolve
     else:
         MC "Um, hey, I hope you guys don't mind, but..."
-        show BE neutral with dissolve
-        show FMG neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
-        show WG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+        show BE neutral
+        show FMG neutral at Position(xcenter=0.2, yalign=1.0)
+        show WG neutral at Position(xcenter=0.8, yalign=1.0)
+        with dissolve
         "When I turned around, much of the class looked up towards me. We were a fairly small class, but it still felt weird to be the center of attention in the room."
         MC "Have any of you seen Shiori-chan?"
         "Honoka rested her elbow on one of her enormous breasts and put a finger to her lips."
@@ -6133,9 +6134,10 @@ label AE030:
         WG "Wait, what do you mean by that?!"
         BE "Eh? W-woah, woah, woah, I didn't mean it like that-!"
         MCT "I do not envy Honoka right now."
-        hide BE with dissolve
-        hide FMG with dissolve
-        hide WG with dissolve
+        hide BE
+        hide FMG
+        hide WG
+        with dissolve
     MC "Still though, it's hard to think she'd just miss a day every time she outgrows her skirt."
     AE "Which is exactly why I plan for that NOT to be the case."
     MC "Eh?"
@@ -7033,7 +7035,7 @@ label AE034:
     stop music
     AE "And don-! Ach-Oh, nevermind."
     "Shiori-chan turned around and sighed before adjusting her slipping glasses."
-    show AE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show AE neutral at center with dissolve
     AE "Now that that's out of the way, come."
     "We continued, however I finally had the opportunity to speak up."
     MC "So where are you going?"
@@ -7161,7 +7163,7 @@ label AE034:
     pause 1
     scene Dorm Tomoko with fade
     "After a strict talking by Shiori-chan, Yuki-chan was able to keep her seat on the student council, but was no longer allowed anywhere near student files."
-    show AE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show AE neutral at center with dissolve
     MC "Well, I guess that settles that."
     AE "Mm. Hopefully I won't be hearing any more personal information of students being shared."
     show AE neutral-annoyed
@@ -13009,7 +13011,7 @@ label AE056_c1_after:
     "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling off of me hurriedly."
     MC "Woah, shit!"
     "Tako turned her head and covered her face with her hand."
-    show Tako surprised at Position(xcenter=0.5, yanchor=1.0)
+    show Tako surprised at center
     Tako "S-Sorry! Sorry!"
     AE "I thought you were out for the night-!"
     Tako "Holy shit, can you give a girl some warning if you're gonna bring Keisuke in here?!"
@@ -17672,7 +17674,7 @@ label AE077:
     show Minori embarrassed
     Minori "Oh! Hotsure-san! Sorry, just some council business, we’ll leave you to your alone time!"
     hide Minori with dissolve
-    show AE neutral at Position(xcenter=0.5, yalign=1.0) with move
+    show AE neutral at center with move
     "After a light bow, she and the other council members left before I was able to get a word in edgewise. With a chuckle, I turned to Shiori with a smile."
     MC "Eheheh, so, what’s up?"
     show AE neutral-smug

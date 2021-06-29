@@ -15,12 +15,12 @@ label WG001:
     WG "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
     WG "Surely you received the instructions sent in advance of my arrival concerning the specific accommodations I require."
     Lunch "If you have an allergy or other dietary need, I would have been told."
-    show WG angry at Position(xpos=0.4) with dissolve
+    show WG angry at Position(xpos=0.4) with move
     WG "You there! Um, I apologize but your name eludes me at the moment."
     MC "Keisuke Hotsure."
     WG "Yes, Keisuke— I remember now. Please...tell Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
-    show WG haughty at center with dissolve
+    show WG haughty at center, Transform(xzoom=-1) with move
     WG "{i}Ergg{/i}, this isn't really helping. Look, how else can I explain this-"
     WG "You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     WG "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
@@ -28,14 +28,14 @@ label WG001:
     Lunch "We make enough food for even the fat kids. Don't worry, you'll get your share."
     show WG angry
     WG "I am NOT some 'fat kid'. I am not even obese."
-    show WG neutral at Position(xpos=0.6) with dissolve
+    show WG neutral at Position(xpos=0.6) with move
     WG "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that this facility in its current state— cannot meet."
-    show WG neutral at Position(xpos=0.25) with dissolve
+    show WG neutral at Position(xpos=0.25), Transform(xzoom=1) with move
     WG "Now, I've already gone to the trouble of ordering the equipment you probably don't have— wood-fire oven, rotisserie, espresso machine, meat smoker; merely the basics required to craft fine cuisine..."
-    show WG neutral at Position(xpos=0.4) with dissolve
+    show WG neutral at Position(xpos=0.4), Transform(xzoom=-1) with move
     WG "But François will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
-    show WG happy at center
+    show WG happy at center with move
     WG "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
     MCT "Bringing along her own private chef and taking over a fifth of the kitchen? Just how loaded is this girl?"
     Lunch "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus."
@@ -53,7 +53,7 @@ label WG001:
     WG "You... You wouldn't."
     Lunch "You wouldn't be the first student punished with kitchen duty."
     WG "Very well, but this is not the end. A Nikumaru does not give up."
-    show WG neutral at Position(xpos=0.4) with dissolve
+    show WG neutral at Position(xpos=0.4), Transform(xzoom=1) with move
     play music WG
     WG "Did you see that? {w} Can you believe that? Erm, Keisuke was it?"
     MC "Yeah."
@@ -98,7 +98,7 @@ label WG001_c2_1:
     show WG happy
     WG "Not just 'some sort' of businessman. He is the leader of the heavy manufacturing and seafood industries in Japan. He is ranked on the list of the richest people in the world."
     MC "Consider me impressed. But if he's so rich, couldn't he just buy this school and install François as head chef?"
-    show WG neutral with dissolve
+    show WG neutral
     WG "Tsk. Such a simple thought. Just because you {i}can{/i} buy something, my dear boy, does not mean you should. Not all investments are worth the trouble."
     hide WG with dissolve
     MCT "Did she really just call me her \"dear boy\"?"
@@ -675,7 +675,7 @@ label WG005_c3:
     HR "While others, like yourself, are pretty sad to hear the news. Like the stages of grief, it starts with denial, then bargaining. Sound familiar?"
     hide AE with dissolve
     scene Cafeteria with fade
-    show WG doubt at Position(xcenter=0.5, yalign=1.0)
+    show WG doubt at center
     show HR neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     HR "I’m here to tell ya kid, you may think you have a plan of how to stop this, or maybe just slow it down, but that’s not how these kinds of things work."
@@ -7425,7 +7425,7 @@ label WG039_c2_1:
     show dummy with hpunch
     WG "Get your hands off me!"
     #[Return to normal background.]
-    show WG angry at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show WG angry at center with dissolve
     $setAffection("WG", -1)
     WG "Get out."
     MC "I'm sorr-"
@@ -7461,7 +7461,7 @@ label WG039_c2_2:
     "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
     "She was going to have to be careful the rest of the day."
     #[Revert to Int. Alice's room]
-    show WG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show WG neutral at center with dissolve
     WG "This is adequate, which is the best I can hope for in this situation."
     WG "Thank you, Keisuke."
     MC "Glad to help. And sorry about my hand slipping."
@@ -13989,7 +13989,7 @@ label WG059:
     WG "I strongly recommend against that substitution."
     show Sakura angry
     Sakura "Ach, okay. I’m going to have to find that stuff then. Where on earth did I put it?"
-    show Sakura happy at Position(xcenter=0.5, yalign=1.0) with move
+    show Sakura happy at center with move
     show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Thank you for the recommendation, Alice."
     Sakura "Oh, yeah. Thank you, Alice."
@@ -14044,7 +14044,7 @@ label WG059:
     "The pan roasted vegetables turned out perfectly as well: a mix of carrots, potatoes, and pearl onions with golden brown streaks across them from the ultra-hot oven."
     "Cross sectioned, with a pan sauce from the meat drippings gently ladened over them, it was one of the most enticing plates I’d seen as they placed one each in front of Alice and me."
     show PRG neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1)
-    show Sakura at Position(xcenter=0.5, yalign=1.0)
+    show Sakura at center
     with move
     show PRG neutral at Transform(xzoom=1)
     show WG neutral-2 at Position(xcenter=0.25, yalign=1.0) behind Sakura with dissolve
@@ -14279,7 +14279,7 @@ label WG059S:
     show Sakura neutral
     show WG neutral
     WG "No it's not that, it's just that I’m thinking back over the last few months and things are starting to make sense."
-    show PRG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show PRG neutral at center with dissolve
     "At that moment Aida finally re-emerged from her room in some more casual clothes."
     show WG doubt
     WG "So if I’m understanding this, some men and women derive pleasure from this act of feeding. Do they normally overlap with those that enjoy gaining weight?"
@@ -14298,7 +14298,7 @@ label WG059S:
     hide Sakura with dissolve
     MC "Well she is quite nice... not to mention that was quite a conversation."
     WG "Certainly, I’m glad you two were cordial."
-    show WG neutral at Position(xcenter=0.5, yalign=1.0) with move
+    show WG neutral at center with move
     WG "The conversation was indeed informative, I’ll admit. Can’t say I was familiar with that concept before now."
     "A silence descended on the room as I struggled on how to approach the matter."
     menu:

@@ -230,9 +230,9 @@ label global000_GTS:
     UNKNOWN "Aaah!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
     "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her skirt."
-    show GTS sad at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show GTS sad at Position(xcenter=0.75) with dissolve
     UNKNOWN "Oooh, darn..."
-    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show BE surprised at Position (xcenter=0.25) with dissolve
     BE "Are you okay?"
     UNKNOWN "Eeep!"
     "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
@@ -249,7 +249,7 @@ label global000_GTS:
 label global000_GTS_c1:
     MC "That's dumb, whose idea was that? Why plant stuff where people can't reach?"
     UNKNOWN "It may be easier for someone who is taller..."
-    show BE neutral at Position (xpos=0.25, xanchor=0.5)
+    show BE neutral at Position (xcenter=0.25)
     BE "Hey, you're plenty tall enough! Don't be down on yourself, miss... Uh..."
     GTS "Oh, I'm sorry, I forgot entirely! My name's Yamazaki Naomi."
     "She bowed, and we returned the gesture."
@@ -274,7 +274,7 @@ label global000_GTS_c2:
     "I leaned way over the planter and watered the middle row of plants, having to stretch as far as I could reach but managing to get all of them."
     GTS "Thank you so much! Oh, I'm sorry, I didn't even introduce myself properly. My name's Yamazaki Naomi."
     "She bowed, and we returned the gesture."
-    show BE neutral at Position (xpos=0.25, xanchor=0.5)
+    show BE neutral at Position (xcenter=0.25)
     MC "I'm Hotsure Keisuke, and this bundle of smiles here is Inoue Honoka. Nice to meet you."
     show BE happy
     BE "Hi there!"
@@ -307,8 +307,8 @@ label global000_AE:
     UNKNOWN "Not if it takes you three times as long."
     BE "Oh boy... I feel awkward just standing here..."
     hide cg with dissolve
-    show AE angry at Position(xpos=0.75, xanchor=0.5)
-    show FMG neutral at Position (xpos=0.25, xanchor=0.5)
+    show AE angry at Position(xcenter=0.75)
+    show FMG neutral at Position (xcenter=0.25)
     with dissolve
     menu:
         "She was just trying to help...":
@@ -333,7 +333,7 @@ label global000_AE_c1:
     show AE neutral
     AE "Do you really think it wise to speak to your class representative in such-"
     hide FMG with dissolve
-    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show BE surprised at Position (xcenter=0.25) with dissolve
     BE "You're class rep already? But I thought classes didn't start until tomorrow."
     AE "I was granted the position along with my internment here. The school expects much of my abilities, and I expect to live up to those expectations..."
     BE "(Keisuke, this girl is kinda scary...)"
@@ -423,7 +423,7 @@ label global000_WG:
     UNKNOWN "Not to worry, I have everything under control here."
     BE "Who are you?"
     hide cg with dissolve
-    show WG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show WG neutral at Position (xcenter=0.25) with dissolve
     WG "I'm Alice Nikumaru.{w} Charmed, I'm sure."
     "After introducing herself, Alice sat back down on her makeshift throne. Before I could open my mouth to speak, she looked past us."
     show WG angry
@@ -431,11 +431,11 @@ label global000_WG:
     WG "I would like to go get something to eat, but I'll miss the opportunity if we tarry any further."
     "I followed Alice's gaze. I hadn't noticed at all but there was a mousy girl in the room as well."
     hide WG with dissolve
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show PRG neutral at Position(xcenter=0.75) with dissolve
     "Her hair was tied up in a pair of tails, and she was carrying a globe."
     show PRG sad
     UNKNOWN "{size=-6}Sorry!{/size}"
-    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show BE surprised at Position (xcenter=0.25) with dissolve
     BE "Oh wow! Sorry about that, but I totally didn't see you there!"
     show BE neutral
     BE "I'm Inoue Honoka! Pleased to meet ya!"
@@ -443,7 +443,7 @@ label global000_WG:
     show PRG neutral
     PRG "...M-My name is K-Kodama Aida."
     hide BE with dissolve
-    show WG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show WG neutral at Position (xcenter=0.25) with dissolve
     WG "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
     menu:
         "Well, if you've got this under control...":
@@ -471,7 +471,7 @@ label global000_WG_c2:
     MC "Shouldn't you be doing something too?"
     $ setAffection("WG", -1)
     $ setAffection("PRG", 1)
-    show WG neutral at Position (xpos=0.25, xanchor=0.5)
+    show WG neutral at Position (xcenter=0.25)
     WG "I'm doing something!"
     show WG happy
     WG "I'm su{w}per{w}vi{w}sing!"
@@ -654,12 +654,12 @@ label global000_sit_c1:
     "{color=#FF69B4}*FLUMPH!*{/color}"
     MCT "!!"
     MCT "I... Is that..."
-    show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show AE neutral at Position(xcenter=0.75) with dissolve
     MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w} I can't say anything about it with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
-    show WG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show WG neutral at Position(xcenter=0.25) with dissolve
     MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
     MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" #with Shake((0, 0, 0, 0), 0.75, dist=20)
     menu:
@@ -672,13 +672,13 @@ label global000_sit_c2:
     "I decided to sit in the middle of the auditorium, where I could still hear the speeches without being so front-and-center."
     MCT "Let's see, somewhere around here should be-"
     BE "Pssst! Kei-chan!"
-    show BE happy at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show BE happy at Position(xcenter=0.25) with dissolve
     MC "Honoka?"
     BE "Kei-chan, over here! I've got a seat saved for you!"
     "I made my way down the row of chairs to the seat Honoka was patting next to her."
     "I noticed when I passed by Honoka, she had to lean back slightly to keep her bosoms from dragging across me, and the thought made me blush."
     "When I sat down and let the breath I'd been holding out, I realized I was sitting next to the girl we'd met gardening the evening before."
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show GTS neutral at Position(xcenter=0.75) with dissolve
     show BE happy
     BE "Isn't this great, Kei-chan? It's just like grade school again!"
     GTS "You two... went to school together?"
@@ -692,10 +692,10 @@ label global000_sit_c2:
 
 label global000_sit_c3:
     "I decided to sit in the back, where I wouldn't have to worry about anyone seeing me."
-    show FMG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show FMG neutral at Position(xcenter=0.75) with dissolve
     "The back rows were sparsely filled, so much so that I saw Mizutani-san could afford to hang her toned arms off of the backs of the chairs on either side of her."
     "The rest of the row was nearly empty, save for a small girl in the corner who I recognized from the night before as Aida-san."
-    show PRG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
+    show PRG neutral at Position(xcenter=0.25) with dissolve
     "I also noticed she was looking at me, but as soon as our eyes met she turned away...{w} before slowly turning back to watch me from the corner of her eye."
     menu:
         "Needed the room to stretch out, Mizutani?":
@@ -764,10 +764,10 @@ label global000_sit_c2_2:
     hide BE
     hide GTS
     MC "What was your grade school like, Naomi?"
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5)
+    show GTS neutral at Position(xcenter=0.75)
     GTS "Mine?"
     MC "Sure, you heard about ours..."
-    show BE neutral at Position(xpos=0.25, xanchor=0.5)
+    show BE neutral at Position(xcenter=0.25)
     BE "Yeah, what was yours like, Naomi-san?"
     show GTS neutral
     GTS "Well, ah, it was...{w} pleasant, I suppose."
@@ -957,9 +957,9 @@ label global000_homeroom:
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
     hide HR with dissolve
-    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show BE surprised at Position (xcenter=0.25) with dissolve
     HR "Some of your growths are already obvious..."
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
+    show PRG neutral at Position(xcenter=0.75) with dissolve
     HR "Others...{w} Not so much."
     hide BE
     hide PRG
@@ -1045,15 +1045,15 @@ label global005:
 
     scene Classroom with fade
     "When we got to Room 3-B, we found a message written out on the blackboard, announcing that we were all supposed to head to the gymnasium."
-    show AE neutral at Position (xpos=0.8, xanchor=0.5) with dissolve
+    show AE neutral at Position (xcenter=0.8) with dissolve
     AE "All right, everyone, it's measuring day for our class, so let's get an orderly line going."
-    show FMG happy at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show FMG happy at Position (xcenter=0.25) with dissolve
     FMG "Oooh, neat! I've been wanting to get my guns professionally measured for a while!"
     WG "..."
     hide FMG with dissolve
     AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
-    show PRG neutral at Position (xpos=0.5, xanchor=0.5)
-    show WG neutral at Position (xpos=0.2, xanchor=0.5)
+    show PRG neutral at center
+    show WG neutral at Position (xcenter=0.2)
     with dissolve
     WG "Excuse me, but Aida is otherwise engaged."
     show PRG neutral at Transform(xzoom=-1)
@@ -1290,14 +1290,13 @@ label RM002:
     scene Hallway with fade
     "I followed the crowd out of the classroom as everyone shuffled toward the cafeteria."
     "Out of the corner of my eye, inside another classroom, I noticed..."
-    show RM neutral at Position (xpos=0.95, xanchor=0.5) with dissolve
+    show RM neutral at Position (xcenter=0.95) with dissolve
     play music RM
     pause 2
     show RM angry
     "He glared at me and made a beckoning motion."
     "Resigned, I walked over to him and hissed..."
-    hide RM with dissolve
-    show RM neutral at Position (xpos=0.5, xanchor=0.5) with dissolve
+    show RM neutral at center with move
     MC "What?"
     RM "I need your help with something."
     MC "Daichi, I'm hungry. Can it wait until after lunch?"
@@ -1363,8 +1362,9 @@ label RM002_c2_1:
     show Yuki happy
     UNKNOWN "Thanks!"
     RM "Wait! Wait wait wait!"
-    show Yuki happy at Position (xpos=0.25, xanchor=0.5) with dissolve
-    show RM angry at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show Yuki happy at Position (xcenter=0.25)
+    show RM angry at Position (xcenter=0.75)
+    with dissolve
     pause .5
     show RM happy
     $setAffection("RM", -1)
@@ -1385,8 +1385,8 @@ label RM002_c2_2:
     show Yuki sad
     UNKNOWN "...Math? Why does it matter?"
     "Before I could think of another way to stall her, Daichi came out of the room."
-    show Yuki neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
-    show RM neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show Yuki neutral at Position (xcenter=0.25) with dissolve
+    show RM neutral at Position (xcenter=0.75) with dissolve
     RM "Yuki-chan! What a pleasant surprise."
     Yuki "Daichi-kun? What are you doing here?"
     jump RM002_c2_after
@@ -1399,8 +1399,8 @@ label RM002_c2_3:
     show Yuki sad
     UNKNOWN "...Hmm."
     "Suddenly, the door opened."
-    show Yuki sad at Position (xpos=0.25, xanchor=0.5) with dissolve
-    show RM neutral at Position (xpos=0.75, xanchor=0.5) with dissolve
+    show Yuki sad at Position (xcenter=0.25) with dissolve
+    show RM neutral at Position (xcenter=0.75) with dissolve
     RM "Yuki-chan?"
     Yuki "Daichi-kun? Are you... de-roaching?"
     "Daichi gave me a confused glance before turning back to this Yuki girl."

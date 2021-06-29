@@ -2775,7 +2775,7 @@ label PRG012:
     "Then, there were those moments where Aida just blossomed."
     "Something as simple as talking about baseball could bring out a whole new side of her. And, it didn’t even have to be anything complex. Just a quick show of interest was enough."
     "Then, there was her giggle."
-    show PRG excited at Position (xcenter=0.5, yalign=1.0) with dissolve:
+    show PRG excited at center with dissolve:
         alpha 0.65
     "When Aida laughed, she seemed to fill the entire room. It was so heartfelt and genuine."
     "I knew well enough when people were faking feelings, like when parents make their kids apologize for something they aren’t truly sorry for. But, I truly believed in my heart that Aida didn’t have the capability to fake a feeling."
@@ -2856,7 +2856,7 @@ label PRG012:
     PRG "B-Bye, Inoue-san."
     hide BE with dissolve
     "Honoka ran off behind Aida, going down the line of dorms."
-    show PRG neutral at Position (xcenter=0.5, yalign=1.0) with move
+    show PRG neutral at center with move
     PRG "D-Do you and Inoue-san know each other?"
     MC "Oh, yeah. We were friends when we were little."
     PRG "Really?"
@@ -3005,7 +3005,7 @@ label PRG013:
     MC "Thank you."
     "I sat on the bench beside her. It was fairly wide, so I sat a bit of distance away, so as not to crowd her."
     MC "So, what’s your day been like today?"
-    show PRG sad-2 at Position (xcenter=0.5, yalign=1.0) with dissolve
+    show PRG sad-2 at center with dissolve
     PRG "Well..."
     show PRG nervous
     PRG "..."
@@ -3941,7 +3941,7 @@ label PRG016:
     hide Sakura with dissolve
     "A loud bell rang out twice in succession, echoing from the judge’s table."
     MC "What’s with the bell?"
-    show PRG neutral at Position(xcenter=0.5, yalign=1.0)
+    show PRG neutral at center
     PRG "It’s our five minute warning."
     MC "Ah."
     "I glanced at the judges table. That same group of students were taking the chairs behind the table."
@@ -4127,7 +4127,7 @@ label PRG016:
     "Down the way from me, the redheaded girl applauded as well for the two girls."
     "Across from Aida and Sakura, the boy who had turned up the oven at the very end received a dark glare from his teammate once more before the two set on cleaning up."
     hide Sakura with dissolve
-    show PRG at Position(xcenter=0.5, yalign=1.0) with move
+    show PRG at center with move
     "In that moment, I wanted to get up. I wanted to run across the room and congratulate Aida personally."
     "That look. The one that could light up a room. It was there, and it burned brightly."
     "Even Sakura, and her exposed asscheeks, couldn’t draw my eyes away from the beautiful glow of Aida’s smile."
@@ -4648,7 +4648,7 @@ label PRG019_c1_1:
     show Sakura neutral at Position(xcenter=0.8, yalign=1.0) behind PRG with dissolve
     Sakura "All thanks to the master chef, here!"
     "Sakura came up behind Aida and hugged her tightly."
-    show PRG unique at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve
+    show PRG unique at center, Transform(xzoom=-1.0) with dissolve
     PRG "I-It wasn't all me. Sakura-san, you did a lot more of the work than I did."
     Sakura "Sure, I may do a bit more of the grunt work, but I don't have your finesse, your skill, your flourish, whatever you want to call it! You know exactly how every ingredient will work best and you utilize it to its fullest potential!"
     Sakura "That's a skill that isn't easily taught, Kodama-san."
@@ -5909,7 +5909,7 @@ label PRG024_c1_after:
     MC "And then, the nurse had us fill out a bit of paperwork before we-"
     hide RM with dissolve
     "I had turned to Aida for her input, but when I turned back to Daichi, he was gone. Neither I nor Aida had heard the door open."
-    show PRG surprised at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show PRG surprised at center with dissolve
     PRG "W-Where did he go?"
     MC "He does that from time to time. At first, I didn't know what to make of it, but now I think the man just has a penchant for dramatic entrances and exits."
     "Aida nodded before standing and walking around my room, taking it all in as she went."
@@ -10565,7 +10565,7 @@ label PRG043:
     PRG "It's..."
     PRG "They're from my mom!"
     hide WG with dissolve
-    show PRG surprised at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show PRG surprised at center with dissolve
     play music PRG
     "Aida tore one of the envelopes open faster than a paper shredder and scanned the letter over carefully. Alice moved over to her side of the dorm, giving us privacy."
     if getAffection("PRG") > 34:
@@ -11269,7 +11269,7 @@ label PRG045_c1_fail:
     "Alice nodded and hurried out the door. Once she'd left, Aida leaned over and let her head rest on my shoulder."
     MC "Tired from all that?"
     "Aida nodded."
-    show PRG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show PRG neutral at center with dissolve
     PRG "I think I may take a nap."
     MC "Good idea. The fuel of every student."
     PRG "And moms. Don't forget the fuel of moms."
@@ -11553,7 +11553,7 @@ label PRG046_c3_AE:
     hide AE with dissolve
     "Shiori hauled the entire stack of literature into her arms and waddled her way out the door and down the hall."
     MC "Well, that went well, didn't it?"
-    show PRG neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
+    show PRG neutral at center with dissolve
     PRG "Yeah. I feel like I learned a lot."
     MC "Me too. Did you want to go do something now? The night is still young."
     show PRG unique
