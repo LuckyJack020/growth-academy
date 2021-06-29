@@ -1716,8 +1716,8 @@ label FMG016:
     show FMG surprised
     FMG "Wow and I thought I was big. She's on another level!"
     "We must've caught her attention as she stopped right in front of us with a not too pleasant look on her face."
-    show FMG surprised at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-    show Natsuko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG surprised at Position(xcenter=0.2, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     UNKNOWN "Is there a problem? I don't like people staring at me during my workouts."
     show FMG neutral
     FMG "We didn't mean to make you uncomfortable. We were both taken aback by...well...your size."
@@ -2410,8 +2410,8 @@ label FMG021:
     play music Busy
     scene Library with fade
     "Well, I should probably get to that report before it's due. What I didn't expect at the library was a bored Akira and an angry Shiori... at the same table."
-    show FMG sad at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show FMG sad at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     FMG "Ugh... Matsumoto-san... I'm SO bored..."
     AE "If I'm not mistaken, it was YOU who decided on this topic, and I already spent valuable time researching this for your sake."
     show AE angry
@@ -2511,8 +2511,8 @@ label FMG021:
     HR "Alright, thank you, Mizutani-san for your... enlightening report."
 
     scene Classroom with fade
-    show FMG happy at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show FMG happy at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     FMG "Guys guess what! I got an A+ on my report!"
     AE "What report? I never-wait, what?!"
     FMG "Oh don't worry Shiori, I told Tashi all about how you and Kei helped me-"
@@ -3678,8 +3678,8 @@ label FMG026_c1_after:
     show FMG angry-2
     FMG "Ew, what are you doing here Natsuko?"
     MCT "This was the last thing we needed."
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "Sorry, am I interrupting something important, silly me."
     Natsuko "If you really must know Akira-chan, I am very fond of video games and come here during my free time."
     show Natsuko happy
@@ -3875,8 +3875,8 @@ label FMG028:
     FMG "HEY KEI-KUN!"
     MCT "At this point in my life, I am convinced I have the worst luck."
     "Akira jogged over to greet me and that cheerful expression quickly changed into one of anger."
-    show Natsuko happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "So I see you've taken to bothering my friends in your free time now."
     FMG "Watch yourself Natsuko."
     show Natsuko neutral
@@ -3896,8 +3896,8 @@ label FMG028:
     show Natsuko neutral
     Natsuko "For once we agree on something."
     MCT "Can't these two just agree to disagree and leave each other alone."
-    show Natsuko neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
-    show FMG angry at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
+    show FMG angry at Position(xcenter=0.6, yalign=1.0) with dissolve
     "Natsuko and Akira started closing the distance between them, ending up face to face."
     show Natsuko disappointed
     Natsuko "You never cease to disappoint me. I figured you wouldn't be able to appreciate something as prestigious as golf. You simply lack the awareness and the confidence to excel at it."
@@ -3930,9 +3930,9 @@ label FMG028:
     MCT "I was worried about the outcome of this. Really worried."
 
     scene Field with fade
-    show Natsuko smug at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko smug at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "We'll play four holes, it won't be considered a real game but I don't think you'll be capable of giving me a real game anyway."
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "Oh my god do you ever shut up?"
     FMG "Let's just hurry this up, I gave up my running time for this."
     MCT "I figured I'd make conversation with Akira as we walked over to the first hole."
@@ -4186,7 +4186,7 @@ label FMG029:
     MC "Sounds good to me."
     "As Akira approached door to the gym, Natsuko pushed it open from the other side."
     "She was drenched in sweat, legs trembling, still catching her breath as she just locked eyes with Akira's."
-    show Natsuko angry at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko angry at Position(xcenter=0.6, yalign=1.0) with dissolve
     Natsuko "Excuse me. You're in my way."
     "And with that, she just held her head down and pushed between us."
     hide Natsuko with dissolve
@@ -4594,8 +4594,8 @@ label FMG032:
     show FMG sad
     FMG "Gah, I can't climb the stupid tree because Shiori would be mad at me. Again."
     "The only thing we came up with was for her to just... jump around the tree to try and spook the cat off of it. People were giving us weird looks, and eventually embarrassment settled in before we just... stopped."
-    show FMG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show Chibuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Chibuki neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Chibuki "What are you guys doing out here so late?"
     show FMG neutral
     FMG "Boy am I glad to see you, Chibuki! We're trying to get this darn cat out of the tree."
@@ -4630,9 +4630,9 @@ label FMG033:
    "And even being surrounded by ladies who were getting improbably muscular or tall or whatever, didn't elicit so much as a second glance."
    "So when I entered the class and saw a very heavy woman arguing with a very muscled woman, my only thought was how the morning's peace was going to be broken by their bickering."
    play music Tension
-   show WG angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+   show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
    WG "I do not care to repeat myself, and asking again is not going to result in a different answer."
-   show FMG angry at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+   show FMG angry at Position(xcenter=0.75, yanchor=1.0) with dissolve
    FMG "At least give me a reason. Would it kill you to not act like a selfish-"
    if getAffection("WG") >= getAffection("FMG"):
        jump FMG033_WG
@@ -4789,8 +4789,8 @@ label FMG033_FMG_after:
    WG "Hotsure-san!"
    MC "Gah!"
    MC "What?"
-   show WG angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-   show FMG sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+   show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
+   show FMG sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
    WG "My custom-made Vantelli dress. Ruined!"
    FMG "I said I was sorry."
    MC "I take it the dress didn't fit?"
@@ -4910,8 +4910,8 @@ label FMG034:
     show FMG happy
     FMG "Cool, let's get started!"
     "As we headed to the door, Natsuko appeared from around the corner. Of course, she did."
-    show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "Ugh, what are you doing here Akira?"
     show FMG angry-2
     FMG "You really have to show up at the worst times to ruin my day, huh?"
@@ -4997,8 +4997,8 @@ label FMG038:
     AE "Preventing an injury."
     "Shiori removed her jacket, methodically placing it on the ground a few inches behind the chair, after which she took her tie at the spot she measured and tied it around the two posts tightly. Finally, she turned around, indignantly, and finished counting."
     AE "3, 2, 1."
-    show AE angry at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    show FMG surprised at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show AE angry at Position(xcenter=0.3, yalign=1.0) with dissolve
+    show FMG surprised at Position(xcenter=0.7, yalign=1.0) with dissolve
     FMG "Almooost- OH SHI-"
     "Akira tripped on the final stair, and as she turned she fell directly onto the chair, which careened backwards before being slowed by Shiori's jacket on the ground. Once it came to a stop, Akira's head was softly cushioned by the tie, which prevented her from hitting her head on the wall."
     show FMG happy
@@ -5049,9 +5049,9 @@ label FMG038:
     MC "Say no more."
 
     scene Track with fade
-    show AE neutral at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.3, yalign=1.0) with dissolve
     AE "There you are."
-    show FMG sad at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG sad at Position(xcenter=0.7, yalign=1.0) with dissolve
     FMG "Sorry about that Matsumoto-san, we got caught up with uhhh... yeah I got nothing, we're just late."
     show AE neutral-annoyed
     AE "Well, at the very least I can be sure you didn't run."
@@ -5062,9 +5062,9 @@ label FMG038:
 
     scene School Shed with fade
     "Matsumoto-san led us to the school shed and went over a methodical step by step process of how to clean the shed every step of the way."
-    show AE neutral at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.3, yalign=1.0) with dissolve
     AE "So, are there any further questions?"
-    show FMG neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
     FMG "Could you go over it one more time? I stopped listening as soon as you started talking."
     show AE neutral-annoyed
     AE "Certainly. Now, when working on the-"
@@ -5181,8 +5181,8 @@ label FMG038:
     show FMG happy
     FMG "You definitely did. I didn't expect you to be such a good story teller Kei-kun."
     "And with that the shed door creeped open and Matsumoto-san rushed in from the opening."
-    show FMG happy at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    show AE angry at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG happy at Position(xcenter=0.3, yalign=1.0) with dissolve
+    show AE angry at Position(xcenter=0.7, yalign=1.0) with dissolve
     AE "Is everyone alright?"
     FMG "Yo! We're good, we just uhh, y'know... locked ourselves in."
     show AE angry
@@ -5288,13 +5288,13 @@ label FMG039:
     $setTime(TimeEnum.EVE)
     scene Nurse Office with fade
     "I was so lost in remembering everything that led up to this, I didn't realize Akira had begun to stir."
-    show FMG sad at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG sad at Position(xcenter=0.2, yalign=1.0) with dissolve
     FMG "W-What happened?? Am I in the nurse's office?"
     MC "Yeah, we had to carry you here cause you passed out."
     FMG "W-What is that nasty red mop doing in here?"
     show FMG neutral
     FMG "Oooooooo...it's just Natsuko, heh...W-What are you doing here? Did you have a change of heart and want to start by bringing me flowers?"
-    show Natsuko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     Natsuko "No. I'm only here because I had to carry you, you idiot. Next time you're sick, stay in bed so I don't have to waste my time. I swear if I get sick-"
     show FMG angry-2
     FMG "Seriously Keisuke, this is the best you could get?!?"
@@ -6080,7 +6080,7 @@ label FMG042:
     MC "Be my guest."
     "Akira cracked her knuckles preparing herself for the onslaught of insults."
     "Unfortunately, before she could let loose, Chibuki opened the door and walked in front of the TV."
-    show Chibuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Chibuki neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     show FMG angry-2
     FMG "Chibuki, get outta the way I can’t see the screen! You’re going to ruin my streak and then I can’t make fun of these clowns!"
     Chibuki "Keisuke, you were supposed to stop her from screaming. Yet,  I’m listening to YOU AND HER smack-talking these random people too."
@@ -6574,8 +6574,8 @@ label FMG046:
     FMG "Yeah... yeah, you’re right."
     UNKNOWN "S-Sorry I’m late!"
     MC "Kodama-san, is that you?"
-    show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
-    show PRG sad-2 at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show PRG sad-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
     PRG "Yeh... heh... yeah... I... I went to the store to pick up some ingredients that are commonly found in Okinawan dishes."
     PRG "I... I tried to get here as fast as I could."
     "Aida set down two overstuffed shopping bags on the counter and held onto the counter with one hand, catching her breath."
@@ -6601,7 +6601,7 @@ label FMG046:
     hide PRG with dissolve
     "Akira walked over to me while chuckling to herself before whispering in my ear."
     MC "What’s so funny?"
-    show FMG aroused at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show FMG aroused at center
     FMG "I won’t let you touch my butt anymore if you speak before everything is done."
     MC "You wouldn’t dare."
     show FMG flex
@@ -6625,8 +6625,8 @@ label FMG046:
 
     scene Cooking Classroom with fade
     "The funniest thing about watching Akira cook was when Aida asked her to squeeze the lemon. Instead of using the juicer, Akira decided to use her hands... she squeezed juuuust a little too hard."
-    show PRG surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
-    show FMG angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show PRG surprised at Position(xcenter=0.25, yalign=1.0)
+    show FMG angry at Position(xcenter=0.75, yalign=1.0)
     FMG "Man, come on! Now it’s going to stain my shirt... UGH!"
     MC "Heh, I think you should’ve tried the juicer."
     show FMG angry-2
@@ -6658,7 +6658,7 @@ label FMG046:
     PRG "Me and my cooking partner, Sakura, are looking for volunteers to taste one of our recipes for a competition we have soon. W-Would you and Mizutani-san possibly be available?"
     MC "I don’t see why not. When Akira gets back we can ask her too."
     show PRG happy
-    show FMG sad-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG sad-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "I’m back, I’m back! Sorry, that took so long... I... forgot to do laundry so I was looking for a clean shirt."
     show FMG neutral
     FMG "So, what did I miss?"
@@ -6875,9 +6875,9 @@ label FMG047:
     pause 2
     scene Cooking Classroom with fade
     "We spotted Aida by the sink cleaning some dishes, her partner nowhere in sight."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     FMG "Yo, Kodama-san, do you need some help?"
-    show PRG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show PRG surprised at Position(xcenter=0.75, yalign=1.0)
     PRG "O-Oh! I didn’t hear you two come in."
     show PRG happy
     PRG "I-I got it. But, thank you for the offer!"
@@ -6893,9 +6893,9 @@ label FMG047:
     hide FMG
     hide PRG
     "And that’s when the door swung open, a girl with some really big thighs and bit too much cheek hanging out entered, who I presumed to be Sakura... followed by her..."
-    show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Sakura "Sorry, everyone. We had a bit of a hair emergency! But we’re here now."
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "We would’ve been here sooner if you let me use the hair straightener."
     Sakura "Oh, come on, Nat. Do you remember what happened last time you used it? You got frustrated and ended up snapping it in half."
     show Natsuko disappointed
@@ -6905,12 +6905,12 @@ label FMG047:
     show Sakura neutral
     Sakura "Grab a seat, I’m going to-"
     hide Sakura
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0)
     FMG "What are you doing here, Natsuko?"
     show Natsuko neutral
     Natsuko "I was invited. That’s why I’m here. I was hoping you’d keep your mouth shut so I could continue ignoring you."
     "Aida turned the face the rows of cupboards, suddenly becoming much more interested in the variety of mixing bowls."
-    show Sakura neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show Sakura neutral at center
     Sakura "Nat, please. Can we not right now? This is a good chance for you two to learn about each other."
     Natsuko "Hmph, whatever."
     Sakura "Go for a walk to chill out. Please."
@@ -6920,7 +6920,7 @@ label FMG047:
     FMG "Man, what’s her damage? How can you live with that???"
     Sakura "She isn’t always like that. I promise. She just has... she’s got a short fuse."
     Sakura "In all seriousness, I don’t know why she has such a bone to pick with you."
-    show PRG worried at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show PRG worried at Position(xcenter=0.25, yalign=1.0)
     PRG "D-Didn’t you mention that you tried talking to her about it once?"
     Sakura "I did! I told her she was overreacting, but she just wouldn’t listen."
     Sakura "Best thing you can do when she gets like this is to get out of her way."
@@ -6956,16 +6956,16 @@ label FMG047:
     hide Sakura with dissolve
     hide PRG with dissolve
     MC "You think Nat’s coming back?"
-    show FMG neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show FMG neutral at center
     FMG "I hope not. I don’t know how Myoga-san is able to live with her. I think I’d dive out my window if I was stuck with her."
     MC "And I’m the dramatic one..."
     "We sat down at one of the tables to watch Aida and Sakura cook. The cooperation between the two was insane."
     hide FMG with dissolve
     "The two of them split up, each one gathering different ingredients."
-    show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Aida took butter, cream cheese, and milk and added it to a pan on the stove, turning on the burner and stirring them."
     "She had to turn her entire body to the side to allow her to even interact with the pot in front of her."
-    show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Meanwhile, Sakura was separating eggs and whisking the yolks together off to one side. Occasionally, one of them would make a move to grab something or to switch utensils, but it was all done smoothly."
     MCT "Even with the size of these two now, they don’t even touch."
     PRG "Eggs ready yet?"
@@ -6974,9 +6974,9 @@ label FMG047:
     "We were so distracted by their teamwork we didn’t realize Natsuko had returned... and she had pulled up a seat right next to me."
     hide PRG
     hide Sakura
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0)
     FMG "Who said you could sit there?"
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     Natsuko "I didn’t ask for your approval."
     FMG "I don’t care. Move."
     Natsuko "I have an idea. How about you go sit over there, put your head down, and shut up."
@@ -6993,10 +6993,10 @@ label FMG047:
     hide Natsuko with dissolve
     MCT "Anything to get me away from that."
     MC "What’s up?"
-    show PRG worried at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG worried at Position(xcenter=0.25, yalign=1.0) with dissolve
     PRG "Um... is everything okay over there?"
     MC "Welllllll... um... no. This is probably your first time seeing this firsthand but um, yeah, it’s uh... always like this with the two of them."
-    show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Sakura "I’ll chat with Nat when we’re all done. I hate it when she gets like this. The last thing we need is for these two to start throwing hands."
     PRG "Uh... throwing hands?"
     Sakura "Punching each other."
@@ -7010,8 +7010,8 @@ label FMG047:
     MC "Hopefully I get to try the cheesecake before I get crushed in my seat."
     hide PRG
     hide Sakura
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     FMG "We can settle this outside, right now!"
     Natsuko "If you want to get hospitalized all you have to do is ask!"
     MC "I’ll fight both of you if you two keep it at this."
@@ -7023,8 +7023,8 @@ label FMG047:
     hide Natsuko
     hide FMG
     "The dynamic duo slid each of us a dish with a massive fluffy slice of cheesecake. Thankfully both behemoths seemed hypnotized by it, completely forgetting they were arguing."
-    show PRG happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
-    show Sakura happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show PRG happy at Position(xcenter=0.25, yalign=1.0)
+    show Sakura happy at Position(xcenter=0.75, yalign=1.0)
     MCT "Thank god, the food relaxed these two. They were ready to rip each other heads off..."
     PRG "T-Tell us what you think! A-And please be honest!"
     MC "Mmmmm.... wow... that is a good freaking piece of cheesecake. It’s so light but it’s packed with flavor. Can I um... take the rest home?"
@@ -7033,37 +7033,37 @@ label FMG047:
     PRG "We can split it after everyone has had some."
     Sakura "So Nat? What do you think?"
     hide PRG with dissolve
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "I agree with Hotsure-san. It’s tangy, with a moist, cotton-soft texture. Well done, I’m impressed."
     hide Natsuko with dissolve
-    show PRG happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG happy at Position(xcenter=0.25, yalign=1.0) with dissolve
     show Sakura happy
     PRG "T-Thank you."
     show PRG neutral
     hide Sakura with dissolve
-    show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Mizutani-san?"
     "Akira had cleaned her plate within seconds leaving not even a crumb."
     show FMG happy
     FMG "It was great! I’d love another slice!"
     hide FMG with dissolve
     show PRG excited
-    show Sakura happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Sakura happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Thank you, everyone! I-I’m glad you all enjoyed it!"
     Sakura "Never doubted us for a second!"
     hide PRG with dissolve
-    show Sakura neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show Sakura neutral at center
     MC "Hey, Myoga-san, if you want to take Nat back so you can speak with her, Akira and I can help Kodama-san clean up."
     Sakura "You sure?"
     MC "Positive. It’s the least we can do after you guys treated us."
     Sakura "Okay. I’ll go let Aida know."
     hide Sakura with dissolve
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     FMG "That was delicious. I hope we can take the rest back."
     MC "You better share if we can. I don’t want you hogging all that fluffy goodness."
     FMG "It’s a first come first serve. And I’m serving myself."
     MC "..."
-    show Sakura neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Sakura "Aida’s okay with it. Sorry that you guys had to deal with Nat’s poor attitude."
     MC "It’s been a common thing for a while now, don’t worry about it."
     FMG "I hope she treats you better than me, Myoga-san. If you ever need help just let me know."
@@ -7073,7 +7073,7 @@ label FMG047:
     Natsuko "If it’s what I think, I’d prefer you spare me this time."
     Sakura "Nope. We are having our girl time."
     "Sakura and Natsuko left shortly after. Leaving Akira and me to assist Aida with the clean-up."
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "T-Thank you both for helping."
     MC "It’s nothing. Thank you for the invite. I’d love to help you two taste more food."
     show FMG happy
@@ -7289,9 +7289,9 @@ label FMG048:
     show FMG flex
     FMG "No promises."
     MC "OH! Ummm... Nat wants to talk to you. I’ve been keeping her waiting."
-    show Natsuko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "Yes. Yes, you have."
-    show FMG angry-2 at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show FMG angry-2 at Position(xcenter=0.75, yalign=1.0)
     FMG "Come here to insult me?"
     Natsuko "No."
     "Nat tossed the overweight student to the ground where he instantly dropped to his knees."
@@ -7337,16 +7337,16 @@ label FMG048:
     MC "I can’t believe I got kicked out. This is bullshit."
     MC "What are they talking about? I wonder if it’s me... wait no, Nat told me what she was going to talk about."
     MC "Wow, Akira looks really good with that skirt. Hold up, were Nat’s thighs always that big? Oh shit, they’re coming back and is... Nat smiling?"
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     FMG "While I don’t fully agree with how you handled it. I still appreciate the thought."
-    show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "I can’t stand people like him. He had it coming."
     show FMG happy
     FMG "Well... Thanks for that."
     Natsuko "It’s nothing... But I must be going."
     hide Natsuko with dissolve
     MC "Sooooo what did you two talk about?"
-    show FMG neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show FMG neutral at center
     FMG "We decided that we like each other a lot and want to start dating."
     MC "...Excuse me?"
     show FMG flex
@@ -7556,8 +7556,8 @@ label FMG050:
     FMG "Isn’t this the coolest thing ever?! I’m huge!"
     MC "Why are you so freaking tall now??? What caused this? You like tripled in size overnight!"
     Chibuki "W-What’s with all the shouting? I’m trying to sleep."
-    show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
-    show Chibuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Chibuki neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Chibuki "..."
     Chibuki "How are... Why are you-. You know what, I don’t even want to know... It’s too early for this. Keisuke, explain what you fed my roommate when I get back."
     hide Chibuki with dissolve
@@ -7565,7 +7565,7 @@ label FMG050:
     "Chibuki continued her rant as she closed the door behind her."
     FMG "She’ll be fine. She just needs some time to process this."
     MC "She’s not the only one. Like, holy crap, you are massive."
-    show FMG flex at Position(xpos=0.5, xanchor=0.5, yalign=1.0)
+    show FMG flex at center
     FMG "I know, right? My arms are enormous!"
     show FMG happy
     FMG "Ha, I can’t get over how small you look now, Kei-kun. Actually... everything looks a bit smaller now, I’m surprised the bed didn’t break."
@@ -8244,7 +8244,7 @@ label FMGWG002:
     MCT "While I'm never keen on dying in the gym, my day is always brighter with Akira. The pros easily outweigh the cons here."
     scene Lockers with fade
     "As we entered the gym, we heard something that caught Akira's attention."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     FMG "Is-is that Alice talking? Why would she be here of all places?"
     MC "Hey, maybe she's trying to get in shape."
     FMG "..."
@@ -8252,7 +8252,7 @@ label FMGWG002:
     FMG "Anyway, let's go investigate!"
     "We followed the sound of Alice's voice and as we turned the corner, Akira's cheerful expression quickly turned sour."
     show FMG angry-2
-    show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     show WG neutral-2 with dissolve
     FMG "Be careful Alice, you can't trust that one."
     Natsuko "I have a name, I suggest you use it."
@@ -8298,9 +8298,9 @@ label FMGWG002:
     MC "Ah-yeah will do. Thanks for your help, Alice."
     "With that Alice handed the dress back to Natsuko and left."
     hide WG with dissolve
-    show Natsuko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "If you ever insult my body again, I will bury you."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     FMG "Take a chill pill Natsuko. We both just got lectured about our attitudes."
     show FMG sad
     FMG "I figured someone as bright as yourself would've caught on by now-"
@@ -8331,8 +8331,8 @@ label FMGWG002:
     show FMG neutral
     FMG "Promise I won't."
     "Alice was quick to notice us as we approached. To be fair we aren't a hard couple to miss."
-    show FMG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show WG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "I hope you are in a better mood now, Mizutani-san."
     show FMG sad
     FMG "I am. That's actually why we were looking for you. I want to apologize for earlier."

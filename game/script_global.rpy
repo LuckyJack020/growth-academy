@@ -1140,8 +1140,10 @@ define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
-define audio.Hallway = "Audio/BGM/scene_Hallway.ogg"
-define audio.Tension = "Audio/BGM/scene_tbi.ogg" #NEED
+define audio.Hallway = "Audio/BGM/scene_Hallway.ogg" #possibly replace with all HigherEdu instances
+define audio.Tension = "Audio/BGM/tension.ogg"
+define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"
+define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
 
@@ -1369,7 +1371,7 @@ init 2 python:
     eventlibrary['FMG012'] = {"name": "Rubbing One Out", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                      "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.FLAG, "FMG_workout"]]}
     eventlibrary['FMG013'] = {"name": "Head Strong", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "gym",                      "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMGOPT016'] = {"name": "Fate at the Café", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                      "location": "schoolplanter",            "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
-    eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
+    eventlibrary['FMG025'] = {"name": "Disco Queen", "girls": ["FMG"], "type": EventTypeEnum.OPTIONAL,                                          "location": "track",                    "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG028"]]}
     eventlibrary['FMGWG001'] = {"name": "Conspiracies with a Side of Cupcakes", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,       "location": "town",                     "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": []}
     eventlibrary['FMGWG002'] = {"name": "Built like a Gorilla", "girls": ["FMG", "WG"], "type": EventTypeEnum.OPTIONAL,                       "location": "hallway",                  "priority": PrioEnum.NONE,              "obsflags": [],                                 "conditions": [[ConditionEnum.EVENT, "FMG033"]]}
 
@@ -1579,8 +1581,8 @@ init 2 python:
     eventlibrary['WG013'] = {"name": "The Elephant In The Room", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                     "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "WG012"]]}
     eventlibrary['WG014'] = {"name": "Silence Can Be Heavy", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                         "location": "gym",              "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "WG012"]]}
     eventlibrary['WG018'] = {"name": "All the Tycoons", "girls": ["WG", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "cafeteria",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "WG016_testpass"]]}
-    eventlibrary['WG019'] = {"name": "Time Management", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                              "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
-    eventlibrary['WG024'] = {"name": "Mental Defragmentation", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": []}
+    eventlibrary['WG019'] = {"name": "Time Management", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                              "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "WG017"]]}
+    eventlibrary['WG024'] = {"name": "Mental Defragmentation", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                       "location": "hallway",          "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "WG023"]]}
     eventlibrary['WG027'] = {"name": "Have it All?", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                                 "location": "cafeteria",        "priority": PrioEnum.NONE,              "obsflags": [],                              "conditions": [[ConditionEnum.FLAG, "WG_working"]]}
     #eventlibrary['WG029A'] = {"name": "Do the Right Thing", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.ROUTELOCK, "PRG"]]}
     #eventlibrary['WG029B'] = {"name": "Things Happen", "girls": ["WG"], "type": EventTypeEnum.OPTIONAL,                                                               "location": "cafeteria",        "priority": PrioEnum.GIRL,              "obsflags": [],                              "conditions": [[ConditionEnum.EVENT, "PRG026b"]]}

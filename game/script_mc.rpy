@@ -7,10 +7,14 @@ label global000:
     # This is what text will look like with those codes attached.
     # Line breaks are done by inserting the command \n where you want to start a new line. No spaces allowed.
     #Italics, bold, etc are done with curly brackets {i}{/i}{size=-5}{/size}
+    # Position(xpos=.99, xanchor=0.5, yalign=1.0)
     #
 
     #EX - MC "Yo. I'm the player character, Hotsure Keisuke.\nI'm transferring to Seichou Academy this year."
     #EX - BE "I'm the BE character, Inoue Honoka!\nIt's good to see you again, Kei{i}-chan{/i}!"
+
+
+
     show black
     centered "The following represents a work in progress."
     centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
@@ -253,11 +257,11 @@ label global000_GTS_c1:
     MC "Nice to meet you."
     GTS "Well, I've done as much as I can today, it seems. I'll leave the rest to the groundskeepers."
     GTS "I'll see you all at orientation tomorrow."
-    show BE happy at Position (xpos=0.25, xanchor=0.5)
+    show BE happy
     BE "Goodbye! See you around!"
     hide GTS with dissolve
     BE "..."
-    show BE neutral
+    show BE neutral at Position(xpos=.5, xanchor=0.5, yalign=1.0) with move
     BE "...Boy, that's kind of a fancy lady to be kneeling in the dirt, don't you think?"
     "I nodded, and we continued on to the front doors of the school."
     jump global000_AE
@@ -280,7 +284,7 @@ label global000_GTS_c2:
     BE "Yeah! See you later!"
     hide GTS with dissolve
     BE "..."
-    show BE neutral
+    show BE neutral at Position(xpos=.5, xanchor=0.5, yalign=1.0) with move
     BE "Well that was nice of you to help her, Kei-chan!"
     $ setAffection("BE", 1)
     "I nodded, and we continued on to the front doors of the school."
@@ -295,20 +299,17 @@ label global000_AE:
     scene Gate Front with dissolve
     UNKNOWN "Mizutani-san, what do you think you're doing?"
     play music FMG
-    show cg AE000 with dissolve #show AE angry at Position(xpos=0.75, xanchor=0.5) with vpunch
+    show cg AE000 with dissolve
     FMG "Check it out!"
     "Around the corner came a tanned girl somehow managing to carry a wooden bench under each arm, her short-sleeved shirt baring her defined muscles for all to see."
-    #show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+
     FMG "I was getting two benches at once! I thought you'd like me getting twice what ya asked!"
     UNKNOWN "Not if it takes you three times as long."
-    #hide AE with dissolve
-    #hide FMG with dissolve
-    #show BE surprised at center with dissolve
     BE "Oh boy... I feel awkward just standing here..."
-    #hide BE with dissolve
     hide cg with dissolve
-    show AE angry at Position(xpos=0.75, xanchor=0.5) with dissolve
-    show FMG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
+    show AE angry at Position(xpos=0.75, xanchor=0.5)
+    show FMG neutral at Position (xpos=0.25, xanchor=0.5)
+    with dissolve
     menu:
         "She was just trying to help...":
             jump global000_AE_c1
@@ -370,6 +371,7 @@ label global000_AE_c2:
     show AE neutral
     AE "...My apologies, but I can handle things on my own."
     AE "Now, if you will, please get up to 3-B and help with the decorations and cleaning."
+    hide AE with dissolve
     "Honoka and I quickly fled the scene before the temperature dropped so low as to be freezing."
     jump global000_WG
 
@@ -380,11 +382,11 @@ label global000_AE_c3:
     show FMG sad
     FMG "All right, all right, I get it, sheesh. Don't get your panties in a bunch, Matsumoto..."
     show FMG happy
-    extend "with a butt that size, you'll never fish 'em back out."
+    extend " with a butt that size, you'll never fish 'em back out."
     hide FMG with dissolve
     "Matsumoto shot daggers at Mizutani with her eyes until she left to get more benches, then she turned to me in a huff."
     "My eyes snap to hers, momentarily mesmerized by just how sizable her rear was underneath the school-issue uniform."
-    $ setAffection("AE", 1)
+    $setAffection("AE", 1)
     show AE neutral
     AE "Thank you for waiting. Was there something you needed?"
     MC "Oh, y-yeah... no worries. I just got here, and we were looking around is all."
@@ -399,7 +401,7 @@ label global000_AE_c3:
     AE "Then perhaps you could check on the students I sent to prepare the room while you're there? I sent one, however I doubt her... resolve, so to speak."
     MC "Understood."
     hide AE with dissolve
-    show BE neutral at center with dissolve
+    show BE neutral at center with move
     BE "You think she's ever happy with anyone? Doesn't seem the type..."
     jump global000_WG
 
@@ -433,15 +435,15 @@ label global000_WG:
     "Her hair was tied up in a pair of tails, and she was carrying a globe."
     show PRG sad
     UNKNOWN "{size=-6}Sorry!{/size}"
-    show BE surprised at Position (xpos=0.25, xanchor=0.5)
+    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     BE "Oh wow! Sorry about that, but I totally didn't see you there!"
     show BE neutral
     BE "I'm Inoue Honoka! Pleased to meet ya!"
     MC "Hotsure Keisuke."
     show PRG neutral
     PRG "...M-My name is K-Kodama Aida."
-    hide BE
-    show WG neutral at Position (xpos=0.25, xanchor=0.5)
+    hide BE with dissolve
+    show WG neutral at Position (xpos=0.25, xanchor=0.5) with dissolve
     WG "Great, great.{w} Now everybody knows everybody, and Aida can finish decorating. She's almost done anyway."
     menu:
         "Well, if you've got this under control...":
@@ -1050,8 +1052,9 @@ label global005:
     WG "..."
     hide FMG with dissolve
     AE "Kodama-san, you stay behind, we've got... five stragglers, it looks like."
-    show PRG neutral at Position (xpos=0.5, xanchor=0.5) with dissolve
-    show WG neutral at Position (xpos=0.2, xanchor=0.5) with dissolve
+    show PRG neutral at Position (xpos=0.5, xanchor=0.5)
+    show WG neutral at Position (xpos=0.2, xanchor=0.5)
+    with dissolve
     WG "Excuse me, but Aida is otherwise engaged."
     show PRG neutral at Transform(xzoom=-1)
     AE "Not now she isn't, unless there's some other class president I'm unaware of."

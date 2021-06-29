@@ -86,7 +86,7 @@ label GTS002:
     "And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
     "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me."
     "In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
     play music Hallway
     MC "Yo Yamazaki-san!"
     "I lifted one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
@@ -465,7 +465,7 @@ label GTS006_after:
     MC "Whoa, seriously!? Aren't those extremely rare?"
     GTS "I've never heard that, but I suppose they could be. I always thought they were rather common, since SoftBank uses one as a mascot."
     MC "I don't know, I've always heard they were really rare, even in Japan. Your family must be loaded!"
-    show GTS embarrassed at Position(xpos=0.4, xanchor=0.5, yalign=1.0)
+    show GTS embarrassed at Position(xcenter=0.4, yalign=1.0)
     "There was the faintest hint of a blush on Naomi's face as she broke eye contact and looked to the side for a second, before returning her attention."
     show GTS embarrassed
     GTS "My father always said he picked that breed because the Hokkaido has the three characteristic he looks for in people: bravery, loyalty, and intelligence."
@@ -641,9 +641,9 @@ label GTS009:
     "My stride was rather lax as I wandered the various blocks of the town. It was rather quaint and not crowded."
     "Well, that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
     "I didn't get to stay on that train of thought for long however as I faintly heard a gentle voice speaking."
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     GTS "... Are you certain, Inoue-san? I know many lovely tailors and vendors who could find you the loveliest yukata."
-    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     BE "Heh, nah, I'm good. They just really aren't my thing. Plus, with these girls, it's more of a hassle than you'd think."
     GTS "Well, if you're certain. Though I'd gladly help you get dressed, if you're concerned about your bust getting in the way..."
     BE "Well, I appreciate the help, Yamazaki-san, but it's okay. I'm good. Besides, right now I need the support, and I know if you're wearing a yukata properly, you're not wearing anything underneath it. That goes for bras, too! Oh, look."
@@ -701,8 +701,8 @@ label GTS009:
 
     scene Pharmacy with fade
     "Entering the store I had to admit I was surprised that it seemed to mostly be just an assortment of knickknacks."
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     MC "Was there... anything particular that caught your eye Yamazaki-san?"
     GTS "No, I just wanted to look around. My mother has a tendency to give me some random items like these whenever she goes away on a trip."
     show BE neutral
@@ -730,8 +730,8 @@ label GTS009:
 
 label GTS009_c1_1:
     "Making up my mind, I took a pin with a silly nerdy design on it and took it to the cashier. The girls seemed to notice me pay for the item as they came over."
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     BE "Hm? Whatcha get Kei-chan?"
     MC "Well I was looking around and I found one of these."
     "I showed her the pin, making her smirk as she examined the pin."
@@ -757,8 +757,8 @@ label GTS009_c1_1:
 
 label GTS009_c1_2:
     "Making up my mind, I took the headband with the flower and took it to the cashier. The girls seemed to notice me pay for the item as they came over."
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     GTS "Did you find something Hotsure-san?"
     show BE happy
     BE "Pfft! Hahahaha! Kei-chan! Already preparing to accessorize when your hair grows out?"
@@ -786,7 +786,7 @@ label GTS009_c1_3:
     "I looked at both items once more and then back to my wallet again. Sighing in defeat, I put my wallet away and left the items where they were. I may need the money later, so it was probably for the best."
     "I moved over to Naomi and observed the various landscapes on display."
     MC "Like postcards?"
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     GTS "Yes. These are usually the things my mother sends me when she travels. These and occasionally a small trinket."
     MC "I take it she travels a lot then."
     GTS "On occasion. Normally with my father."
@@ -795,7 +795,7 @@ label GTS009_c1_3:
     MC "You're lucky. I've always wanted to travel, see some landmarks and try out new foods. Must have been fun."
     show GTS happy
     GTS "Indeed it was. My sister and I did enjoy seeing other areas of Japan. We never left the country though unlike my parents."
-    show BE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0)
     BE "Oh? Secret second honeymoons?"
     "Naomi and I both jumped as Honoka suddenly peeked around the corner of the aisle at us."
     show GTS embarrassed
@@ -868,7 +868,7 @@ label GTS010:
     GTS "I'm sorry, It's not really the height that bothers me it's just that..."
     "Her cheeks seemed to gain a slight shade of red as she looked away."
     GTS "My clothes don't fit as well, and I don't want to make a poor impression."
-    show GTS embarrassed at Position(xpos=0.5, xanchor=0.5)
+    show GTS embarrassed at center
     menu:
         "(Check to see what she means)":
             jump GTS010_c1
@@ -935,10 +935,10 @@ label GTS011:
     scene Dorm GTS with fade
     play music Busy
     "As I entered her dorm room, I saw another girl already inside. She sat kneeling at table, a cup of tea in her hand as she smiled and waved."
-    show Ryoko neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Ryoko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     UNKNOWN "Howdy! You must be Hotsure-san."
     MC "Uh... yeah, I am. Hello."
-    show GTS happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS happy at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
     GTS "Hotsure-san, this is Ryoko Tanaka. Tanaka-san, this is Keisuke Hotsure. Tanaka-san is my next-door neighbor who I met a couple days ago, so I invited her over for some tea as well. I hope that isn't a problem."
     MC "No, it's all right. It's nice to meet you, Tanaka-san."
     Ryoko "Likewise, come on, have a seat."
@@ -1008,13 +1008,13 @@ label GTS011b:
     "The garden was normally a place of solitude for the students, but it was interrupted by a red haired girl carrying around what appeared to be a film camera. "
     "Noticing Naomi sitting under a tree and watching the girl, I decided to investigate what was going on."
     MC "Hey Yamazaki-san, what's going on here?"
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     GTS "Good afternoon Hotsure-san. It appears Tanaka-san is location scouting."
     MC "Tanaka-san?"
     GTS "Yes, she's my neighbor at the dorm. We had been discussing-"
     UNKNOWN "Oh hey!"
     "The shout caught my attention as I turned to spot Tanaka rushing over with her camera in hand. The quirky girl smiling as she arrived back at us."
-    show Ryoko neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show Ryoko neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     UNKNOWN "Hi there, I'm Ryoko Tanaka. Nice to meet you."
     MC "Nice to meet you too, I'm Keisuke Hotsure."
     Ryoko "Pleasure. Saw you talking to Yamazaki-san, you two friends?"
@@ -1270,8 +1270,8 @@ label GTS013_c3:
     "Naomi, in a smooth motion, opened the door for us and stepped inside; my face sank into the gregarious, tickling scent of a labor of love at once."
     scene Cooking Classroom with fade
     play music PRG
-    show GTS neutral at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
-    show PRG worried at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show PRG worried at Position(xcenter=0.7, yalign=1.0) with dissolve
     "A labor indeed, as we found Aida standing behind the counter, scanning an array of ingredients and instruments arranged with impeccable consideration for both ease of instruction and Naomi's reach."
     "Her hands were folded as she observed in silence, the young queen ruling softly but surely."
     show PRG neutral at Transform(xzoom=-1) with dissolve
@@ -1286,8 +1286,8 @@ label GTS013_c3:
     show GTS happy
     GTS "Right away!"
     show PRG neutral at Transform(xzoom=1) with dissolve
-    show PRG neutral at Position(xpos=0.50, xanchor=0.5, yalign=1.0) with dissolve
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at center with dissolve
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Naomi set her plate aside and tapped the oven screen to the tune of a staccato of beeps, winding down to a halt at the display of 177."
     show GTS at Transform(xzoom=-1) with dissolve
     "Meanwhile, Aida was peering under the tea towel at Naomi's cookies, smiling."
@@ -1324,8 +1324,8 @@ label GTS013_c3:
     PRG "A-And it's good to experiment. They do taste pretty good just going by the recipe, though."
     show GTS happy
     GTS "I will take that to heart."
-    show PRG neutral at Position(xpos=0.65, xanchor=0.5, yalign=1.0) with dissolve
-    show GTS neutral at Position(xpos=0.40, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.65, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
     "Naomi picked up the forearm-sized whisk laid out for her with one hand, and with the other, a bowl full of drooping little slabs of butter."
     GTS "It's 150 milliliters of butter, as I understand?"
     PRG "I think it's actually closer to 142 or 143, but 150 will do. You'd just have to add a little extra dash of every other ingredient."
@@ -1427,7 +1427,7 @@ label GTS013_c3:
     "She merely gave a sweet little nod and then a quick, yet proper bow to each of us before turning to leave."
     hide PRG with dissolve
     stop music
-    show GTS neutral at Position(xpos=0.55, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
     GTS "...Well, how fortunate that you came along, Hotsure-san."
     play music Hallway
     MC "Guess so. I had no idea Kodama-san's schedule was that tight, wow."
@@ -1639,10 +1639,10 @@ label GTS015:
     play music Busy
     Ryoko "...And cut! Good job everyone!"
     "These were the first words Naomi and I heard as we waited outside of Ryoko's dorm room before we were allowed in, the 'QUIET! Filming inside!' sign taped on the door preventing us from knocking."
-    show Ryoko happy at Position(xpos=0.70, xanchor=0.5, yalign=1.0) with dissolve
+    show Ryoko happy at Position(xcenter=0.7, yalign=1.0) with dissolve
     "The bedroom had been transformed into a makeshift set, with extra curtains put up to eliminate any natural sunlight while other lights were set up to enhance the shot's lighting."
     "Two students I assumed were actresses were casually chatting to themselves while a couple of students worked to start putting away the camera, lighting, and various other bits of equipment."
-    show GTS neutral at Position(xpos=0.30, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
     MC "Um... hey there, Tanaka-san."
     show Ryoko happy at Transform(xzoom=-1)
     Ryoko "Hm? Ah! Hotsure-san! Yamazaki-san! I'm so glad you could make it. Please take a seat, we're wrapping up for today."
@@ -2083,7 +2083,7 @@ label GTS019:
     scene black with fade
     "Eventually a soft chuckle made me realize that I had fallen asleep at some point..."
     scene School Planter with fade
-    show GTS happy at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS happy at Position(xcenter=0.8, yalign=1.0) with dissolve
     "...as my eyes opened and I saw Naomi smiling down at me."
     play music Schoolday
     GTS "Very sorry Hotsure-san, I didn't mean to wake you."
@@ -2670,8 +2670,8 @@ label GTS022_scribe:
     "I peered out with my hand over my eyes to try and spot them, but despite their distinct combination of figures I couldn't see them anywhere."
     AE "Hotsure-san."
     "Shiori's flat register sounded from a few meters away directly to my right; I looked, and lo, there they were tucked in the shade under a young painted maple."
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     "I joined them in its spotted shadow; up close I could see a single branch hanging just by Naomi's head."
     GTS "I hope you approve the spot."
     "I nodded with consideration."
@@ -3356,8 +3356,8 @@ label GTS023_c1_2:
 label GTS023_c2:
     play music Peaceful
     "We arrived on the scene with Tanaka-san visibly brainstorming with herself in her chair, extras standing around chatting, and Honoka, her co-star, and the cameraman doing the same over packs of seaweed, sitting down. After the jumpstart a few moments ago, the stillness eased my heart to a contented rhythm."
-    show GTS neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show Ryoko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Ryoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     BE "Hey, Yamazaki-san!"
     Ryoko "Oh, Yamazaki-san! You disappeared after class, how's your evening going?"
     GTS "Rather well, thank you. I brought some refreshments for the film crew here, as a matter of fact, hence my sequestering myself in my room."
@@ -3411,15 +3411,15 @@ label GTS023_c2:
         "Soon after, Ryoko shouted everything into place and shooting resumed one more time for the evening."
         "I didn't quite catch the beats that time; I was weighing in my head whether I should take a cookie or not."
         "It was sorta my fault a few of them were wasted, after all."
-        show GTS neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
-        show Ryoko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with vpunch
+        show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+        show Ryoko neutral at Position(xcenter=0.75, yalign=1.0) with vpunch
         Ryoko "Cut!"
         Ryoko "And that's a wrap, great job everybody!"
         MC "Anything you want me to do?"
         Ryoko "I... think you're good? Yeah, if you wanna have a cookie and call it a day, go ahead. Thanks for helping out today."
         MC "Sure, you're welcome."
         hide Ryoko with dissolve
-        show GTS neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+        show GTS neutral at center with dissolve
         "I paused a moment and unfolded the cloth, and took my piece of the treasure hoard beneath."
         MCT "Shortbread. Crumbly but soft, and still quite warm. Hm!"
         MC "Even better yet, Yamazaki-san."
@@ -3434,7 +3434,7 @@ label GTS023_c2:
         GTS "A pleasant evening to all of you."
         MC "You too, Yamazaki-san."
         hide GTS with dissolve
-        show Ryoko neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+        show Ryoko neutral at center with dissolve
         Ryoko "Alright, this time extras are gonna be off-screen! Tsukasa-san, Inoue-san, I want you guys right under that light pole. We're picking up right where we left off on the script!"
         MC "Hey, Tanaka-san, is there anything else you need help with?"
         Ryoko "Nothing I can think of right now. Why?"
@@ -4492,12 +4492,12 @@ label GTS028T:
     scene Movie Theater with fade
     play music Peaceful
     "I scanned the various posters that decorated the inside of the theater, wondering what might be good. Naomi leaned down slightly to get a closer look at the posters as well."
-    show GTS neutral at Position(xpos=0.8, xanchor=0.5, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.8, yanchor=1.0) with dissolve
     GTS "I like the artwork used in some of these posters."
     MC "Yeah, I like it when the poster is more than just a character standing in the center with the title on them. "
     show GTS surprised
     GTS "Oh, this one reminds me of those ancient paintings you'd see in a museum."
-    show Ryoko happy at Position(xpos=0.4, xanchor=0.5, yanchor=1.0) with dissolve
+    show Ryoko happy at Position(xcenter=0.4, yanchor=1.0) with dissolve
     Ryoko "That's Koichi: A battle of love and honor. It's a period piece. Also hey you two!"
     show Minori neutral at center with dissolve
     Minori "Good afternoon. I hope we didn't keep you two waiting long."
@@ -4798,7 +4798,7 @@ label GTS030:
     "After punching in the code, I eventually made my way to the edge of a large, abandoned quarry. A wide road wound down the edge of the pit lined with weathered grey buildings."
     "From down the road, I can see Naomi waving at me."
     GTS "Hotsure-san!"
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "Hey Naomi, Ryoko said you were moving into your new dorm."
     GTS "Indeed. I suppose that is simply the way of things with my growth."
     MC "This place is pretty big."
@@ -4809,7 +4809,7 @@ label GTS030:
     scene Giant Dorm Interior with fade
     "The exterior of the room was similar to an aircraft hangar, rather dull and plain-looking. The inside was very similar in appearance, with only basic furniture being provided."
     MC "Seems very utilitarian, don't you think?"
-    show GTS neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     GTS "...Why yes, it certainly seems that way at face value, doesn't it... but, instead let us focus on the possibilities that it could be, hm? Maybe a nice baby blue wallpaper with some small rugs, that would be a good start."
     MC "How can you imagine those sorts of things with such a bland canvas, so to speak?"
     GTS "Well, each building can be thought of as a flower. Each one may be the same in looks and design, but each still has their own unique quirks and flaws."
@@ -5459,18 +5459,18 @@ label GTS035:
         MC "Hey there, girl. Wow, you're just as cute as Naomi said. Such nice fur, too."
         UNKNOWN "Thanks. I spend a lot of time taking care of her fur."
         hide GTS_S with dissolve
-        show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
-        #show Kazumi at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+        show GTS neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
+        #show Kazumi at Position(xcenter=0.6, yalign=1.0) with dissolve
         "I looked up and saw a smiling face that reminded me of Naomi."
     else:
         "I smiled as the dog seemed happy to receive Naomi's affection before I turned my focus to the figure who had called out earlier."
         hide GTS_S with dissolve
-        show GTS neutral at Position(xpos=0.4, xanchor=0.5, yalign=1.0) with dissolve
-        #show Kazumi at Position(xpos=0.6, xanchor=0.5, yalign=1.0) with dissolve
+        show GTS neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
+        #show Kazumi at Position(xcenter=0.6, yalign=1.0) with dissolve
     Kazumi "Hello, I'm Kazumi Yamazaki. It's a pleasure to meet you."
     MC "Keisuke Hotsure, nice to meet you as well."
     "We both gave each other a light bow as Naomi's father came up alongside Kazumi."
-    show Akihiro neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Akihiro neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     UNKNOWN "Kazumi, I thought you said you'd keep Kimiko in the car."
     Kazumi "Apologies, Father. She must've smelt Naomi and became rather restless, so I thought it'd be best to let her out."
     UNKNOWN "Hm, just make sure that she doesn't run off again."
@@ -5482,7 +5482,7 @@ label GTS035:
     "Her father didn't react much to the news, as he only gave a small nod while, Kazumi had a more surprised expression, as did her mother."
     MC "It's an honor to meet you, sir!"
     "I bowed deeply."
-    show Miko neutral at Position(xpos=0.9, xanchor=0.5, yalign=1.0) with dissolve
+    show Miko neutral at Position(xcenter=0.9, yalign=1.0) with dissolve
     Akihiro "Hotsure-san, I'm Akihiro Yamazaki, and this is my wife Miko."
     Miko "A pleasure, Hotsure-san."
     MC "Likewise, ma'am."
@@ -5632,7 +5632,7 @@ label GTS035_testpass:
     if getSkill("Art") >= 6:
         #kazumi position left, face right
         Kazumi "Good to see you made it early. Father will be quite pleased to know you're here."
-        show GTS_S neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+        show GTS_S neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
         GTS_S "Then we best not keep him waiting. He probably already has the plans for today made."
         "Kazumi called the dog back and went back to grab her parents."
     else:
@@ -5645,7 +5645,7 @@ label GTS035_testpass:
     "Dressed in formal kimonos were both of their parents, looking more prepared for a formal dinner then a day on the town."
     #hide kazumi
     MCT "I had some idea how traditional her parents were, but this is a bit more than I was led to believe."
-    show Akihiro neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=1.0) with dissolve
+    show Akihiro neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=1.0) with dissolve
     Akihiro "Good Morning, Hotsure-san. I'm pleased to see you joining us this early."
     MC "It was no trouble, sir. Yamazaki-san made sure that we made it here in a timely manner."
     Akihiro "I expect nothing less from my daughter. Now then, we should make our way to town. There is a coastal trail we can take."
@@ -5740,8 +5740,8 @@ label GTS035_testpass:
     MCT "Naomi took the calligraphy set from my hands and held it at her side. Unsurprisingly, they looked a lot smaller in her hands."
     show GTS_S neutral
     GTS_S "Shall we see what else the town has to offer?"
-    show GTS_S neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show Akihiro neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=1.0) with dissolve
+    show GTS_S neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Akihiro neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=1.0) with dissolve
     Akihiro "I spotted a flyer in there advertising a local boardwalk if you two would be interested?"
     MC "What do you say, Yamazaki-san?"
     show GTS_S happy
@@ -5932,9 +5932,9 @@ label GTS037:
     show WG stern with dissolve
     WG "Students have... actually agreed to that willingly?"
     hide WG with dissolve
-    show HR neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     HR "I've seen the results of it several times, as a matter of fact."
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "Why am I not the least bit surprised by that information?"
     "I briefly glanced over to my phone. On the screen, my most recently dialed contact was Naomi. I stared at her contact icon for several seconds, before darting my vision back over to Matsumoto-san."
     "My eyes wandered back and forth between my phone and the active conversation a few more times before I slowly slid my phone into my bag and casually stood up to leave the room. This news... probably wasn't anything to worry about. Probably."
@@ -6416,8 +6416,8 @@ label GTS043:
     GTS "Knowing Mizutani-san, I imagine she--"
     FMG "Found 'em!"
     "Akira came running back with two large objects, one in each arm. They didn't appear to slow her down in the slightest as she galloped along the sand pit with both perched on her shoulders."
-    show GTS neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0) with dissolve #slide ani?
-    show FMG flex at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.8, yalign=1.0), Transform(xzoom=-1.0) with dissolve #slide ani?
+    show FMG flex at Position(xcenter=0.2, yalign=1.0) with dissolve
     "Once Akira had made her way back to the center of the field, she lowered a large wooden stand to the ground to free up her right arm. The stand was painted black, with two long wooden prongs jutting out from the top to form a U-Shape."
     "Not finished, she then lowered her left arm to place a gigantic stack of wooden boards upon the sand. There had to have been at least 20 wooden squares in the stack, possibly more."
     show FMG neutral
@@ -6463,7 +6463,7 @@ label GTS043:
     show FMG sad
     FMG "Still, though. I totally get it. Adjusting to your new height isn't going to be easy. I might have problems with doorways, but you've got even more of a challenge."
     hide GTS
-    show GTS_S neutral-2 at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0)
+    show GTS_S neutral-2 at Position(xcenter=0.8, yalign=1.0), Transform(xzoom=-1.0)
     GTS_S "Kei-chan and Inoue-san have helped me cope. The medical staff offered sound advice as well, but setting my spirits at ease is another matter entirely."
     show FMG neutral
     play music PRGChallenge
@@ -6471,7 +6471,7 @@ label GTS043:
     show FMG happy
     FMG "If you're fit and your body thanks you after a solid workout, well... everything else falls into place. That high you get when you finish your last set never fails to make me happy."
     hide GTS_S
-    show GTS neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0), Transform(xzoom=-1.0)
+    show GTS neutral at Position(xcenter=0.8, yalign=1.0), Transform(xzoom=-1.0)
     GTS "I imagine it's very similar to the feeling one gets after a long, effective meditation. That's very sound advice, Mizutani-san. Thank you."
     FMG "You're welcome! Now, put that advice to use and BREAK THAT THING!"
     show GTS happy-2

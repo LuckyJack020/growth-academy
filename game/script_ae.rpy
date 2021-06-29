@@ -1306,7 +1306,7 @@ label AE010:
     MCT "Hmm? Wait... Shiori-san?"
     "Shiori-san stood by the entrance to the library, holding a stack of yellow sheets in both arms. The spectacled girl had her back against the hallway wall, looking at me from the side."
     MC "Hey, Shiori-san! Have you been waiting out here for me?"
-    show AE neutral at Position(xpos=.99, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.99, yalign=1.0) with dissolve
     AE "Good day, Hotsure-san, I had to get these papers from inventory, so I figured we would meet here around the same time."
     MC "Need me to get those?"
     show AE embarrassed
@@ -1321,7 +1321,7 @@ label AE010:
     scene Library with fade
     "We walked through the library, Shiori-san following closely behind me, until we reached the office door."
     MC "Want me to take those, so you can unlock it?"
-    show AE neutral at Position(xpos=.99, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.99, yalign=1.0) with dissolve
     AE "Here. The key is on the stack. Take it."
     MC "Okay...? Thanks."
     MCT "That's a bit convenient, isn't it?"
@@ -1330,7 +1330,7 @@ label AE010:
     scene Office with fade
     "The lights were flicked on and I went to my station."
     MC "So, Shiori-san, what's with the stack of papers?"
-    show AE neutral at Position(xpos=.99, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.99, yalign=1.0) with dissolve
     AE "These forms are going to processing after they're filled out, don't worry about them."
     MC "Okay."
     MCT "Doesn't really tell me anything, but whatever."
@@ -3565,11 +3565,11 @@ label AE021:
     scene Classroom with fade
     "When I walked into class today, Shiori-san was the first in the room."
     "Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve #not sure if aroused, surprised or sad/shy
+    show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve #not sure if aroused, surprised or sad/shy
     MC "U-um... Shiori-cha-"
     "As I was about to speak, Alice walked into the room with Aida in tow."
-    show PRG neutral at Position(xpos=0.90, xanchor=0.5, yalign=1.0)
-    show WG happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.90, yalign=1.0)
+    show WG happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Ohoho, now what's going on here?~"
     MC "E-eh? Oh, Nikumaru-san, good morning."
@@ -3589,7 +3589,7 @@ label AE021:
         WG "Bit of advice... you'll catch pneumonia if you stay to close to the ice queen. I'd recommend keeping your distance a bit for fear of frostbite."
         MC "...I'll keep that in mind."
         if getAffection("PRG") > 0:
-            show PRG neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+            show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
             PRG "H-hi, Hotsure-san."
             MC "Hey, Kodama-san."
             "Aida gave a little smile. It felt nice to know the whole school wasn't against me."
@@ -3859,12 +3859,12 @@ label AE022:
     BE "Pfft, ehehe..."
     MC "Hm?"
     "I turned to see Honoka, giggling into her hand."
-    show BE happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "Good morning, Honoka!"
     show BE neutral
     BE "Hey, Hotsure-san... Sooo, what's with the shades?"
     MC "Huh, oh, these? They-"
-    show AE neutral-annoyed at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral-annoyed at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "Are against dress code, as well as disallowed in class."
     show FMG happy at center with dissolve
     FMG "Ooooo."
@@ -3996,7 +3996,7 @@ label AE022:
     MC "..."
     AE "..."
     AE "Ngh."
-    show AE aroused-3 at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show AE aroused-3 at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "Hmph."
     show RM angry
     RM "She was stalking us?!"
@@ -4947,9 +4947,9 @@ label AE026:
     "Of course, the first one on my mind in the room was Shiori-san, who looked up towards me and nodded before bashfully looking back down at her desk. I walked over to her desk, a faint flutter in my heart as I went to talk."
     MC "Um... g-good morning, Shiori-san."
     "She looked up back at me, a light blush covering her face as she rubbed her arm with her other hand."
-    show AE embarrassed at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE embarrassed at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "Good morning, Hotsure-san."
-    show FMG angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG angry at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "O-oy! You chewed me out for almost being late, why does he get a pass?!"
     show AE neutral
     AE "O-oh! Yes. Hotsure-san, you were almost late. It's b-best you not make a habit of this."
@@ -4970,7 +4970,7 @@ label AE026:
     "I responded in a light whispery voice as well."
     MC "It's all right. Don't worry about it."
     "Shiori-san nodded as I sat down in my seat. As soon as I sat, however, Tashi sensei walked into class, suit jacket slung over his right shoulder with a mug of coffee in his left hand."
-    show HR neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "Stand."
     MCT "Ohp, hey, here we go."
     AE "Bow."
@@ -4979,7 +4979,7 @@ label AE026:
     scene Classroom with fade
     TS "-Okay. Any questions? I'm leaving either way. See you tomorrow."
     "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
-    show PRG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "N-N-Nikumaru-san, are you sure you don't need me? I don't mind, really-"
     show WG neutral at Position(xpos=0.25) with dissolve
     WG "Yes, yes, Kodama-chan. Everything is perfectly fine. Simply wait for me by our usual spot, okay dear?"
@@ -5220,6 +5220,7 @@ label AE027:
     show BE surprised at Position(xpos=0.35)
     show PRG happy at Position(xpos=0.95)
     show WG neutral at Position(xpos=0.75)
+    with dissolve
     MC "..."
     All "..."
     GTS "Good morning, Hotsure-sa-"
@@ -5243,7 +5244,7 @@ label AE027:
     FMG "Did the two of you bang yet?!"
     MC "Eh?! What even-"
     "As I talked, Shiori-chan walked into the room with a look of surprise and confusion on her face."
-    show AE angry at Position(xpos=0.55, xanchor=0.5, yalign=1.0) with dissolve
+    show AE angry at Position(xcenter=0.55, yalign=1.0) with dissolve
     AE "What is going-?!"
     show AE neutral
     show BE neutral
@@ -5868,8 +5869,8 @@ label AE029:
     play music Busy
     UNKNOWN "A-HAHAHAHA! Ohhh my god, that was bad~!"
     "Out from the bathroom door came a girl, clutching at her stomach and cackling loudly like a hyena."
-    show AE angry at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show Tako neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show AE angry at Position (xcenter=0.25, yalign=1.0) with dissolve
+    show Tako neutral at Position (xcenter=0.75, yalign=1.0) with dissolve
     AE "Ngh, Yureno-san!"
     Tako "Oy, oy, Shio-rear, what, didn't hear me in the bathroom?"
     AE "I thought I told you not to call me that!"
@@ -6090,8 +6091,8 @@ label AE030:
     else:
         MC "Um, hey, I hope you guys don't mind, but..."
         show BE neutral with dissolve
-        show FMG neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
-        show WG neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+        show FMG neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+        show WG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
         "When I turned around, much of the class looked up towards me. We were a fairly small class, but it still felt weird to be the center of attention in the room."
         MC "Have any of you seen Shiori-chan?"
         "Honoka rested her elbow on one of her enormous breasts and put a finger to her lips."
@@ -6139,7 +6140,7 @@ label AE030:
     AE "Which is exactly why I plan for that NOT to be the case."
     MC "Eh?"
     stop music
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, ypos=1.0, yanchor=0.5) with dissolve
+    show AE neutral at Position(xcenter=0.5, ypos=1.0, yanchor=0.5) with dissolve
     "I looked at the doorway, and sure enough, Shiori-chan poked her head out from behind the wall. I smiled at her, my fears dashed and my worry alleviated."
     MC "Shiori-chan! I'm glad you're okay."
     show AE angry
@@ -6198,9 +6199,9 @@ label AE030:
     scene Classroom with fade
     "Class had continued on normally, but I couldn't shake the pinkness from my face."
     "Upon Tashi-sensei ending the class, I got up and talked to Shiori-chan as everyone started to leave."
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     MC "Shiori-chan, I'm so-"
-    show HR neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     HR "Matsumoto-chan, can I talk to you for a moment?"
     "She looked towards me, and then towards him, then back to me."
     AE "This may be important. Wait for me outside of class, Hotsure-san."
@@ -6992,8 +6993,8 @@ label AE034:
     show AE surprised
     AE "Oh dear lord."
     "Shiori-chan jogged over to where she was, with me following closely by."
-    show Ryoko neutral at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
-    show AE sad at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Ryoko neutral at Position (xcenter=0.75, yalign=1.0) with dissolve
+    show AE sad at Position (xcenter=0.25, yalign=1.0) with dissolve
     AE "Are you alright? "
     Ryoko "Egch. I think I bit my tongue."
     "She opened her mouth, and from it flopped out a lengthy pink tongue; a small spot of red on the very end."
@@ -7032,7 +7033,7 @@ label AE034:
     stop music
     AE "And don-! Ach-Oh, nevermind."
     "Shiori-chan turned around and sighed before adjusting her slipping glasses."
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
     AE "Now that that's out of the way, come."
     "We continued, however I finally had the opportunity to speak up."
     MC "So where are you going?"
@@ -7052,7 +7053,7 @@ label AE034:
     AE "Please. Follow me."
 
     scene Dorm Exterior with fade
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "We reached her room, and I walked up to knock on the door."
     play sound Knock
     MC "Tomoko, it's me, Keisuke. Can we talk?"
@@ -7060,7 +7061,7 @@ label AE034:
     MC "T-Tomoko, please open up."
     Tomoko "Auuuu~"
     "I heard the sound of footsteps and then the click of the door unlocking as she opened the door a crack."
-    show Tomoko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Tomoko "Hm? Big bro?"
     "Tomoko's hair reached down to her calves at this point, her silken ebony locks swaying with even the gentlest touch of the wind. Her bangs covered but one eye."
     MCT "Her depth perception must be terrible. I can't understand how anyone sees so easily with their hair in the way..."
@@ -7072,8 +7073,8 @@ label AE034:
     "She opened the door fully, and squinted as the light shone down into her room. This was hardly surprising, as a black blanket covered the window."
     "The lights in her room were off, barring the bright intense light of the shmup's pause screen on her television."
     "As we entered the room, she crawled up onto her bed, took her comforter and covered herself in it leaving only her hands, face, and long flowing bangs exposed. Shiori-chan and I stood, as I began."
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show Tomoko neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "Tomoko, do you know who this is?"
     Tomoko "...Not really. Sorry."
     show AE neutral
@@ -7143,8 +7144,8 @@ label AE034:
     hide Tomoko
     show Yuki neutral
     Yuki "OH MY GOD GIRL, YOU WILL NOT BELIEVE THIS!"
-    show Yuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "..."
     Yuki "Did you know that Yureno-chan got in trouble for-... erm..."
     show AE neutral-smug
@@ -7160,12 +7161,12 @@ label AE034:
     pause 1
     scene Dorm Tomoko with fade
     "After a strict talking by Shiori-chan, Yuki-chan was able to keep her seat on the student council, but was no longer allowed anywhere near student files."
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.5, yalign=1.0) with dissolve
     MC "Well, I guess that settles that."
     AE "Mm. Hopefully I won't be hearing any more personal information of students being shared."
     show AE neutral-annoyed
     AE "Isn't that right, Yuki-chan?"
-    show Yuki neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
     Yuki "Eep! Y-yes ma'am!"
     AE "Good. Then, I hope you both have a good day."
     MC "Oh, real quick, before I go."
@@ -7174,7 +7175,7 @@ label AE034:
     show AE angry
     AE "Hotsure-san, out, now."
     MC "Ghgn!"
-    show Tomoko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
     Tomoko "Eek!"
     "At the same time, Tomoko and I sprung up and ran out of the room to Shiori-chan. She looked at the two of us, before clearing her throat and bowing to Tomoko."
     AE "N-not you."
@@ -7396,11 +7397,11 @@ label AE036:
     "I crouched down further to hide myself from the girl who was staring intently at me. After a few seconds, she backed away and left me to continue."
     "I'd been waiting here for a good amount of time for Shiori-chan to get out, and just as I felt that I was acting silly..."
     #Creeeak
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     AE "Until then, I can't see that being an issue."
     MCT "THERE SHE IS."
     "I got out from behind the plant. I slowly snuck up behind Shiori-chan, whose massive rear end seemed to have grown even more since the last time we spoke."
-    show Yuki neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Yuki "Okay. I'll inform Ryoko-chan about the-"
     #show Yuki surprised
     Yuki "...Um. Ma'am?"
@@ -8341,8 +8342,8 @@ label AE040:
     scene Dorm Exterior with fade
     play music Schoolday
     "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomoko, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
-    show Yuki neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve #happy
-    show Tomoko neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve #happy
+    show Tomoko neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     Yuki "IT WAS CRAZY! And then, and then, Shiori-chan almost knocked over the cup with her butt, but caught it and was all like 'Who brought a drink to the meeting?' and I was all like-"
     "Of course, the indication her meeting had ended came when Utagashi-san came in babbling about the new topic of the second."
     MC "O-okay, Okay, Utagashi-san, I think I'm good for now."
@@ -8385,9 +8386,9 @@ label AE040:
     Tako "Here, she'll tell ya."
     show Tako happy
     Tako "OOOOOOI! Shiorear-saaan!~"
-    show Tako happy at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-    show Tako neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE neutral-annoyed at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tako happy at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show Tako neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show AE neutral-annoyed at Position(xcenter=0.25, yanchor=1.0) with dissolve
     "I turned around with the speed of a cheetah, Shiori-chan quick to take note of the urgency in my eyes appeared surprised, but then quelled it with annoyance."
     AE "I don't know why you think you can just give me an asinine name such as-"
     #show Tako smug
@@ -8639,9 +8640,9 @@ label AE041:
     MCT "Today's the day... It's almost time."
     play music Rain
     if getAffection("FMG") > 0:
-        show AE neutral at Position(xpos=.25, xanchor=0.5, yalign=1.0) with dissolve
+        show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         AE "..."
-        show FMG happy at Position(xpos=.75, xanchor=0.5, yalign=1.0) with dissolve
+        show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
         FMG "Woah, someone's pumped up! Catch me in the gym later. We can hit a few reps, 'kay?"
     else:
         show AE neutral with dissolve
@@ -9026,8 +9027,8 @@ label AE042:
     AE "I... was wrong. You're a great Warblade player."
     MC "...Eh?"
     "To compound to my confusion, Yureno-chan bounded out of the room and between the two of us, grappling me in a bear hug."
-    show AE sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show Tako happy at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show AE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Tako happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     Tako "YOU WON?!"
     Tako "AHAHAHAH! NO WAY!"
     show AE neutral-annoyed
@@ -10372,8 +10373,8 @@ label AE048:
     UNKNOWN "-room isn't private enough."
     UNKNOWN "Fine, but why don't-...-makes absolutely no sense."
     "The closer I got, the more clear they became, until I finally poked my head into the main chamber."
-    show Tako angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tako angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show AE sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
     Tako "Look, are you gonna get 'em or not?"
     AE "I... I am. I can't risk-"
     Tako "Then go get 'em. I said I'll do it, but not if you just sit around being indecisive about it."
@@ -10479,9 +10480,9 @@ label AE048:
     "A bit taken aback from her reaction, I nodded and turned around, descending the stairway."
 
     scene Campus Center with fade
-    show Yuki neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     Yuki "Ah'm tewwin 'ou, 'ou cannawt go in dewe!"
-    show RM neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show RM neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     RM "C'mon! He's my roomate! He could be in trouble!"
     Yuki "Yea wite! Daichi yow mai bwudder, 'ou can't twick me wiff dat!"
     RM "I'm telling you, Keisuke's been looking forlorn and hurt since class ended! If he's hurting, it's my responsibility as a friend to help."
@@ -10522,7 +10523,7 @@ label AE048:
     hide AE with dissolve
     Yuki "Uuu~ Daichi, duh bwoom twick won't wuwk awn me!"
     RM "..."
-    show RM neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show RM neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     RM "...I never could get it to work with you."
     MC "OH FU- Dude, how do you do that?!"
     RM "You jokin me? I learned that from a magic trick book for kids."
@@ -10768,8 +10769,8 @@ label AE049:
     MC "D-did we just dine and dash?! What was that? Why did that waitress-?!"
     "I didn't continue my question, because I could tell it would fall on deaf ears. Yureno-san was grinning ear to ear, enveloped in whatever situation she's seeing unfold."
     "We stopped in front of the Kazoku-mart, and just waited until out from the door came..."
-    show Tako neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE embarrassed at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tako neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show AE embarrassed at Position(xcenter=0.75, yanchor=1.0) with dissolve
     MC "S-Shi-"
     Tako "Oy! Shiorear!"
     show AE neutral
@@ -11646,8 +11647,8 @@ label AE052:
     MC "If you needed to-"
     "{i}Creak{/i}"
     "I stopped mid sentence to look to the door, saving Tomo from a a verbal lashing. As students piled out from the office, Shiori made her way out before turning back to the office."
-    show Tomoko neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show Tomoko neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     AE "-and be sure to lock up when you're done."
     MC "Long day at work, eh?"
     AE "Hm?"
@@ -11925,8 +11926,8 @@ label AE053:
     AE "W-Well, indeed, but I should find something that would make me {i}look{/i} good. That should at least help justify the expense-"
     UNKNOWN "Oh? What's this now?"
     "As Shiori voiced her concerns, a familiar face made her way over to us."
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
-    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     MC "Ah, Nikumaru-san!"
     WG "Good afternoon, Keisuke. I wouldn't expect to see you here."
     AE "Good afternoon, Nikumaru-san."
@@ -11997,7 +11998,7 @@ label AE053:
         MC "I'm glad the two of you became closer. I really am."
         show WG happy
         WG "...I am too."
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     AE "Okay, I got a basket."
     show WG happy
     WG "Splendid. Why don't you go find some articles that appeal to you, and we can start from there? It is important that you retain your own style."
@@ -12086,7 +12087,7 @@ label AE053:
     show AE sad
     AE "You're right. I wouldn't have took her help if I didn't trust her judgement."
     "After a few more moments, she returned."
-    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     WG "And here we are. Your outfit and undergarments."
     show AE surprised
     AE "U-Undergarments?!"
@@ -12151,7 +12152,7 @@ label AE053_c1_after:
     scene black with fade
     pause 1
     scene Clothes Store with fade
-    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     "I sat next to Nikumaru-san for a few minutes as she filed her nails. Waiting in anticipation to see Shiori. Just then, she stepped out..."
     show WG haughty
     WG "Well, dear? How is-"
@@ -12160,7 +12161,7 @@ label AE053_c1_after:
     MC "Hm? What?"
     MC "A-"
     MC "..."
-    show AE dress-neutral at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE dress-neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     "I couldn't believe my eyes. It was as though the girl I saw once before in Shiori's bed had returned. She was dressed in a tight pink bodycon dress, a magenta sash tied around her waist."
     "The outfit being made for her body type, it clung to her body, leaving a definite outline of her enormous tush."
     "For the first time since I'd seen her, Shiori didn't just look like 'The Student Council President', when I saw her... I saw a girl."
@@ -12222,11 +12223,11 @@ label AE053_c1_after:
     "Eventually, we settled on something completely different. A grey turtleneck with a black long-skirt. Shiori looked great when she tried it on, and it even matched with her headband, as Alice pointed out."
     Cashier "Alright, with the student discount, your total comes up to 18,197 yen, sir."
     "Shiori seemed to tense up a bit, looking at me for a moment for confirmation. She lowered her voice to a whisper."
-    show AE sad at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
     AE "{i}Keisuke, are you sure? I don't have many means to-{/i}"
     MC "No worries, I can swing it."
     AE "I had no idea clothes cost that much."
-    show WG neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     WG "That much? Honey, that was a steal."
     "Pulling out my card, I handed it to the cashier who swiped it and then input the numbers onto her pad. Printing out a receipt, she gave it, and the card, to me with both hands and a smile."
     Cashier "Have a good day, sir."
@@ -12335,8 +12336,8 @@ label AE054:
     "As I got up from the table, grabbed my bag, and headed towards the door, I shook my head and raised an eyebrow at Daichi."
     MC "Nah. She doesn't need disguises when she can hide in plain sight."
     "I opened the door to see my loving girlfriend taking up most of the frame."
-    show RM angry at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show AE happy at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show RM angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show AE happy at Position(xcenter=0.75, yanchor=1.0) with dissolve
     AE "Keisuke."
     MC "Hey Shiori."
     "At this point, I'd gotten used to Shiori showing up unannounced at my door. To a point, it was even endear-"
@@ -12792,12 +12793,12 @@ label AE056:
     "All except Mizutani-san, who continued to snooze in class."
     "I stood up quickly, trying to wake myself up and get ready to throw myself back into the whirlpool of other students making their way down the halls."
     MCT "Geeze, did he have to go over the meaning of {i}every{/i} word in the constitution?! I felt like I was gonna start bleeding out of my eye sockets."
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     AE "Mizutani-san... Mizutani-san."
     FMG "HHHNK- Hm?! Woah, yeah?"
     show AE neutral-annoyed
     AE "Please don't sleep in class. It's disrespectful to your peers."
-    show FMG surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show FMG surprised at Position(xcenter=0.75, yanchor=1.0) with dissolve
     FMG "Eh? Oh! Yeah, yeah, totally. I get it. I totally get it..."
     hide FMG with dissolve
     FMG "..."
@@ -12811,7 +12812,7 @@ label AE056:
     "As I began to leave the room with Shiori in tow, a whistle came unexpectedly back from the room."
     HR "Hey. Shaggy. 'Mere."
     AE "Hm?"
-    show BE surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show BE surprised at Position(xcenter=0.75, yanchor=1.0) with dissolve
     BE "Huh? What'd I do?"
     HR "Nooot talking to you, Inoue-san. Keisuke. 'Mere."
     hide BE with dissolve
@@ -13003,12 +13004,12 @@ label AE056_c1_after:
     #NSFW
     ##Door open SFX#
     Tako "H-WOAH MY GOD-!"
-    show AE surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0)
+    show AE surprised at Position(xcenter=0.75, yanchor=1.0)
     AE "Eek!"
     "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling off of me hurriedly."
     MC "Woah, shit!"
     "Tako turned her head and covered her face with her hand."
-    show Tako surprised at Position(xpos=0.5, xanchor=0.5, yanchor=1.0)
+    show Tako surprised at Position(xcenter=0.5, yanchor=1.0)
     Tako "S-Sorry! Sorry!"
     AE "I thought you were out for the night-!"
     Tako "Holy shit, can you give a girl some warning if you're gonna bring Keisuke in here?!"
@@ -13919,8 +13920,8 @@ label AE060:
     stop music
     show Tako surprised
     Tako "WOAH, SHIT!"
-    show AE surprised at Position(xpos=0.25, xanchor=0.5, yanchor=1.0) with dissolve
-    show Tako surprised at Position(xpos=0.75, xanchor=0.5, yanchor=1.0) with dissolve
+    show AE surprised at Position(xcenter=0.25, yanchor=1.0) with dissolve
+    show Tako surprised at Position(xcenter=0.75, yanchor=1.0) with dissolve
     AE "EEK!"
     MC "Woah, whoa- Uh-!!"
     Tako "Seriously?! Again?"
@@ -14403,8 +14404,8 @@ label AE062:
     MC "Ahh, things are going great. They're really going good."
     AE "U-Um."
     MC "Hm? Oh, hey, S-"
-    show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show AE casual-embarrassed at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show AE casual-embarrassed at Position(xcenter=0.75, yalign=1.0) with dissolve
     MC "W-Woah... hey."
     "Shiori stood as still as a statue as both my and Honoka's full attention was purloined by her frankly shocking appearance."
     show BE happy
@@ -14535,8 +14536,8 @@ label AE062:
     play music Rain
     "As the night went on, Honoka, Shiori and I spent our evening spending a nice time amongst ourselves."
     "We talked about things that've been going on at school, outside, and eventually, the conversation veered into just how much our lives have changed in even just the past few months."
-    show BE angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show AE casual-sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show BE angry at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show AE casual-sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     BE "Ugh! At first it was fun, but now they're just... ugh!"
     BE "Having big boobs suck. I don't even have the back problems most girls with boobs have, but it still sucks!"
     AE "Yeah, I know what you mean. My behind has been... well, it's certainly been one of the most trying tests I've had to endure."
@@ -14615,8 +14616,8 @@ label AE062:
     BE "Check please!"
 
     scene Town with fade
-    show BE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show AE casual-neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show AE casual-neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     BE "...Okay, 100%% honest, you didn't know there was a bus from the school to here, did you?"
     MC "I did!"
     show BE happy
@@ -15388,8 +15389,8 @@ label AE066:
     "Taking a quick look back, I then walked down the hall for a time before, thankfully, catching a glimpse of a pair of students wearing dark gray jackets. Though it clearly wasn't Shiori, it was a lead nevertheless."
     MC "Minori, Yuki!"
     "The two looked over as I trotted along to meet up with them."
-    show Minori neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show Yuki neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Minori neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Minori "Hello, Hotsure-san. Lovely weather today, hm?"
     MC "Oh, yeah, it is. Hey, have you two seen Shiori around anywhere? I haven't seen her at all."
     "Yuki perked up and snapped her fingers to get my attention at this, and then nodded in confirmation."
@@ -15917,7 +15918,7 @@ label AE069:
     HR "{i}Khm{/i}."
     MC "Huh?"
     "I looked up to notice that, despite the rest of the class having left, Tashi-sensei sat quietly, expressionless, at his desk as he kept his eyes trained on me."
-    show HR neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0) with dissolve
+    show HR neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
     HR "I'm right here."
     "Shiori turned as well, and as she met his gaze her face went from flush and warm to pale as the grave as she completely tensed up."
     show AE surprised
@@ -16024,8 +16025,8 @@ label AE069:
     Ryoko "Seems kinda early in the year for it, but hey, looks pretty enough!"
     "I turned to see Ryoko walking towards me with Shiori in tow. I straightened up and nodded towards the two."
     hide Tako with dissolve
-    show Ryoko camera at Position(xpos=0.3, xanchor=0.5, yalign=1.0) with dissolve
-    show AE neutral at Position(xpos=0.7, xanchor=0.5, yalign=1.0) with dissolve
+    show Ryoko camera at Position(xcenter=0.3, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
     Ryoko "OH! This will actually help for shots in a film I'm making!"
     AE "Well, not only are we up fairly high, but the winters are fairly long up here in the north. I assume we'll have snow for a bit."
     Tako "I CALL STUNT WORK!"
@@ -16289,9 +16290,9 @@ label AE071:
     show AE pondering
     AE "Ah, one moment, Keisuke."
     "As Shiori looked over towards Aida, who had dropped her books, I noticed as the blush which had been etched on her face all day had quickly faded as she assumed her usual professional demeanor."
-    show AE neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "Kodoma-san, do you need any help?"
-    show PRG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Ah, t-thank you."
     "Of course, her 'usual professional demeanor' is exactly what I wanted to talk to her about. As Shiori walked over to Aida, it gave me a moment to think to myself and process not only the wildness of this morning, but of Shiori's behavior in general recently."
     MCT "Am I just being paranoid? That dream must have really messed with me..."
@@ -16846,10 +16847,10 @@ label AE074:
     $setProgress("AE", "AE075")
     scene Field Winter with fade
     play music Hallway
-    show Tomoko neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0)
-    show AE neutral at Position(xpos=0.35, xanchor=0.5, yalign=1.0)
-    show Tako neutral at Position(xpos=0.65, xanchor=0.5, yalign=1.0)
-    show Yuki neutral at Position(xpos=0.85, xanchor=0.5, yalign=1.0)
+    show Tomoko neutral at Position(xcenter=0.15, yalign=1.0)
+    show AE neutral at Position(xcenter=0.35, yalign=1.0)
+    show Tako neutral at Position(xcenter=0.65, yalign=1.0)
+    show Yuki neutral at Position(xcenter=0.85, yalign=1.0)
     with dissolve
     "I ran down the hill behind the dorms, trudging through the snow as I looked behind me with a wide smile strewn across my face."
     MC "Yoo! Y'all coming, or what?"
@@ -16956,7 +16957,7 @@ label AE074:
     show AE neutral-annoyed
     AE "I know exactly what it is."
     "As we walked over, Tako unveiled a snow sculpture of her own design. A regular enough looking snowman with its features sculpted to resemble a certain student council president... with two big snowballs in the back for added effect."
-    show Tako excited at Position(xpos=0.65, xanchor=0.5, yalign=1.0) with dissolve
+    show Tako excited at Position(xcenter=0.65, yalign=1.0) with dissolve
     Tako "Tadaa! Snowori!"
     AE "Of course."
     MC "Ahh c'mon, don't make it look like that! Ahaha!"
@@ -16980,7 +16981,7 @@ label AE074:
     Tako "A big ol' pair of lips!"
     Yuki "Upph gbl ffffphh."
     "Utagashi-san looked to Tomo and began to sign, but Tomo nodded and spoke."
-    show Tomoko neutral at Position(xpos=0.15, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
     Tomoko "She says 'Alright, lemme at her!'"
     "Utagashi-san nodded cheerfully as she sauntered forward to the snowwoman. Placing three large bits of snow from the ground, she placed them on the mouth and then knelt forward with a kiss."
     Yuki "Mwaah!"
@@ -17022,9 +17023,9 @@ label AE074:
     hide Tomoko
     hide Yuki
     with dissolve
-    show RM angry at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show RM angry at Position(xcenter=0.75, yalign=1.0) with dissolve
     RM "Agh! Hey!"
-    show Tomoko surprised at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Tomoko surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
     Tomoko "GET ‘IM!"
     "I joined in as Tomo, Yuki, and Tako began to pelt Daichi with balls of crisp, frigid snow."
     RM "ACH-! C- BAH! OY! QUIT I- GAH!"
@@ -17045,14 +17046,14 @@ label AE074:
     show RM angry
     RM "And then I noticed *THIS* one following me!"
     hide RM with dissolve
-    show Minori sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show Minori sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Popping out from behind the other tree, Minori-san shook violently as she appeared absolutely frozen to the bone."
     Minori "O-o-o-oh my g-g-g-g-god, why did I w-w-wear my skirt..."
     Tako "Well where are your leggings, girl?"
     Minori "F-F-Forgot t-t-to grab t-thaaa-mmf-them..."
     "Her voice seemed even higher pitch than usual as she held onto her clipboard for dear life."
     hide Tomoko with dissolve
-    show RM angry at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show RM angry at Position(xcenter=0.25, yalign=1.0) with dissolve
     RM "Thought I didn't see you rush out of the student council room when you saw me, eh?"
     Minori "T-T-Trying t-t-to m-m-make sure you d-d-didn't harass... s-s-so c-c-cold!"
     hide Tako with dissolve
@@ -17065,7 +17066,7 @@ label AE074:
     RM "I got that much."
     Minori "C-C-Can we go i-i-inside now?"
     hide RM with dissolve
-    show Tako happy at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show Tako happy at Position(xcenter=0.25, yalign=1.0) with dissolve
     Tako "Sure! Let's see if Kodama-san can make us some warm soup!"
     AE "Don't go disturbing Kodama-san for so-"
     hide Tako with dissolve
@@ -17453,10 +17454,10 @@ label AE076_c1_fail:
     "Akira hauled ass with me in tow into the halls, nearly busting down the doors as she entered."
 
     scene Hallway with fade
-    show AE sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "Oooogh!"
     MC "Shiori-chan, are-"
-    show FMG surprised at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "OH SHIT!"
     MC "-You holding up? I brought Mizutani-san, she's going to help."
     FMG "OH MY GOD YOU WEREN'T JOKING!"
@@ -17608,8 +17609,8 @@ label AE076_c1_after:
     else:
         show AE sad
         AE "Could you bring in Mizutani-san?"
-        show AE sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-        show FMG neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+        show AE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
+        show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
         FMG "I'm already listening in."
         MC "Gch- Ah! S-Sorry, forgot you were there."
         show FMG happy
@@ -17657,8 +17658,8 @@ label AE077:
     MC "Oof, gotta get those submitted between 3:00 and 3:05."
     Nurse "Your relationship is weird." #Nurse 1
     "I snickered to myself and shook my head as I headed past the curtained area over to the beds. There, Shiori lay in bed with three other student council members surrounding her, along with a few neatly organized stacks of folders."
-    show Minori neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0)
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.25, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     Minori "We’re collecting the signatures now, ma’am."
     AE "Good. I requested that his form be ready by five, and I will get it by five even if I have to walk there myself."
@@ -17671,7 +17672,7 @@ label AE077:
     show Minori embarrassed
     Minori "Oh! Hotsure-san! Sorry, just some council business, we’ll leave you to your alone time!"
     hide Minori with dissolve
-    show AE neutral at Position(xpos=0.5, xanchor=0.5, yalign=1.0) with move
+    show AE neutral at Position(xcenter=0.5, yalign=1.0) with move
     "After a light bow, she and the other council members left before I was able to get a word in edgewise. With a chuckle, I turned to Shiori with a smile."
     MC "Eheheh, so, what’s up?"
     show AE neutral-smug
@@ -17893,8 +17894,8 @@ label AE078:
     MC "Ah... yeah, yeah it is."
     "And as we headed out towards the door, I noticed someone on the bench. Someone I didn’t see when I came outside the first time."
     MC "Daichi?"
-    show AE neutral at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with move
-    show RM neutral at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yalign=1.0) with move
+    show RM neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     RM "Huh? Oh, hey, hey man what’s up?"
     MC "N-nothin', dude it’s like... early in the morning, what are you doing out here?"
     show RM concerned
@@ -17979,7 +17980,7 @@ label AE101:
     FMG "Y'know Hotsure-chi, if you wanna build up muscle right, you gotta start off a bit slow, hell, someday you may be able to do more than a seven year old!"
     "Akira-san's boisterous laugh echoed through the gym, as I turned a shade of crimson. I covered my face with a hand and looked to the side to hide my shame when I came across someone who I would have never expected to see here."
     "Akira-san, however, appeared to notice first."
-    show FMG neutral at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG neutral at Position (xcenter=0.25, yalign=1.0) with dissolve
     FMG "OOOOOI, Matsumoto-chi, what's up!"
     show AE neutral at Position (xpos=0.75) with dissolve
     "Shiori-san looked over towards our direction and, in acknowledgement to Akira-san's waving, nodded before going back to her clipboard."
@@ -18054,8 +18055,8 @@ label AE102:
     AE "It is indeed the last time, Mizutani-san, because you WILL be wearing your uniform properly. If you would have listened to me the first time, this wouldn't have been an issue."
     FMG "If you listened the first time, you know I'm not going to button it, not for you or anyone! What is the big deal, it's not like I'm wearing something that shows anything I'm not supposed too!"
     MCT "Ohhh boy, this looks like trouble. If I don't intervene soon these two are going to be going at it for hours."
-    show FMG angry at Position (xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
-    show AE angry at Position (xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show FMG angry at Position (xcenter=0.25, yalign=1.0) with dissolve
+    show AE angry at Position (xcenter=0.75, yalign=1.0) with dissolve
     AE "It's not about what you're wearing, it's about what you're NOT wearing. The student handbook page 45-"
     MC "H-hey girls, what's going on?"
     FMG "Little miss honor role here is bugging me about how my shirt isn't buttoned. Oh and by the way, I've been using that handbook to keep the table in my dorm room balanced!"
@@ -18470,10 +18471,10 @@ label AE008b:
     Student1 "Man, that guy was a dick."
     Student2 "Yeah, but I kinda feel bad for him. Prez is waaay too scary."
     Student3 "I'm just glad it wasn't me..."
-    show AE sad at Position(xpos=0.25, xanchor=0.5, yalign=1.0) with dissolve
+    show AE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
     AE "I apologize for the unwanted attention. Are you alright, Kodama-san?"
     "Kodama-san, for her part, did very well to keep her composure under pressure. She sheepishly took a step back before bowing."
-    show PRG sad at Position(xpos=0.75, xanchor=0.5, yalign=1.0) with dissolve
+    show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "M-Mhm."
     show AE neutral
     AE "Alright. Well then... you be on your way too."
