@@ -3863,6 +3863,7 @@ label WG021_fail2:
 label WG022:
     $setProgress("WG", "WG023")
     scene Dorm Interior with fade
+    play music WG
     "I was back in my room relaxing after another day of studies when my phone buzzed."
     "It was Alice."
     WGCell "<Can you come to my room? I need help with something.>"
@@ -5982,6 +5983,7 @@ label WG034:
     $setProgress("WG", "WG035")
     #Time: Afternoon
     scene Classroom with fade
+    play music DayByDay
     "After class ended for the day I swung over to Alice's desk."
     MC "Hey, boss. Do we have a meeting today?"
     show WG neutral with dissolve
@@ -6455,7 +6457,9 @@ label WG034_c1_after:
 label WG035:
     $setProgress("WG", "WG036")
     #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     scene Classroom with fade
+    play music WG
     "It had arrived, the day of the concert."
     "Of course I wasn't a member of the music club, so to me it was like any other day."
     "But starting yesterday afternoon and ramping up to today I was wondering more and more about what Alice must be going through."
@@ -6523,7 +6527,9 @@ label WG035:
         "I just went with my regular uniform. At least it had a collar."
     "Then I grabbed an early dinner to make sure I could get a good seat for the concert."
 
+
     #Time: Night.
+    $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     "The concert wasn't a required activity, so I can't say I was surprised at how few people showed up."
     "Maybe a third of the auditorium was filled."
@@ -6532,8 +6538,10 @@ label WG035:
     "The concert lasted a little over an hour, mixing a couple classical-sounding tunes with a lot of modern hits redone for an orchestra and squad of singers."
     "From the audience Alice looked like one singer among several, but I concentrated all my attention on her."
     "She really did have a splendid voice."
+    stop music fadeout 2.0
 
     scene School Planter with fade
+    play music TwilightBright
     #Time: Night
     "After the concert I met up with Alice outside the auditorium."
     MC "You were great."
@@ -6592,7 +6600,9 @@ label WG035:
 label WG036:
     $setProgress("WG", "WG037")
     #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     scene Classroom with fade
+    play music Schoolday
     "Approaching Alice after class had become the easiest thing in the world, but not quite for the reasons I wanted."
     "Case in point, when I wanted to quickly reiterate my compliments on her performance at the concert, and also ask how things between her and the club president have been shaping out..."
     MC "Alice, got a minute?"
@@ -6698,7 +6708,9 @@ label WG036_c1_2:
 label WG037:
     $setProgress("WG", "WG038")
     #Time: Morning
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
+    play music Peaceful
     "The day had come for my second date with Alice, with only a few lectures between now and then."
     "Though strangely Alice had not yet arrived and would soon be late."
     "As I recall, I saw her in the cafeteria eating a hearty breakfast and looking as robust as ever this morning."
