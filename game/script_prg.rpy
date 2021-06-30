@@ -4029,9 +4029,10 @@ label PRG016:
     show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
     "The bell rang out again and the two teams began."
-    show Sakura neutral at Position(xcenter=0.85, yalign=1.0), Transform(xzoom=-1)
-    show PRG worried at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=1)
-    with move
+    show Sakura neutral at Transform(xzoom=-1)
+    show Sakura neutral at altMove(0.85)
+    show PRG worried at Transform(xzoom=1)
+    show PRG worried at altMove(0.25)
     "Sakura flew to the fridge and grabbed out a gallon of milk, a carton of eggs and a large stick of butter, while Aida began combining sugar, salt, and flour into a large bowl."
     "Sakura quickly measured the milk and butter before slowly heating them on the stove. As they heated, she grabbed two eggs out of the carton and passed them to Aida.  Taking the egg in one hand, Aida deftly cracked and emptied it into the bowl."
     show PRG nervous
@@ -4039,9 +4040,10 @@ label PRG016:
     MCT "No... come on."
     show Sakura neutral at Transform(xzoom=1)
     show PRG nervous at Transform(xzoom=-1)
-    show Sakura neutral at Position(xcenter=0.45, yalign=1.0) with move
+    show Sakura neutral at altMove(0.45)
     "Sakura wasted no time in getting another egg, as Aida quickly wiped the counter clean.  This time, she brought the egg down firmly, cracking it cleanly on the countertop and draining it into the bowl."
-    show Sakura neutral at Position(xcenter=0.85, yalign=1.0), Transform(xzoom=-1) with move
+    show Sakura neutral at Transform(xzoom=-1)
+    show Sakura neutral at altMove(0.85)
     "Meanwhile, Sakura armed herself with two spoons and slowly stirred the milk and butter, while Aida reached her free hand across the counter and pulled a large hand mixer toward her."
     "However, when she pressed the power button on the top, her finger nudged the eject button for the whisks and they came loose, clattering down into the bowl."
     show PRG scared
@@ -4050,14 +4052,18 @@ label PRG016:
     "She momentarily shut her eyes and deeply inhaled."
     show PRG angry
     "Aida pressed the mixer into the bowl, cranking it up to medium speed."
-    show Sakura neutral at Position(xcenter=0.45, yalign=1.0), Transform(xzoom=1) with move
+    show Sakura neutral at Transform(xzoom=1)
+    show Sakura neutral at altMove(0.45)
     "As Aida blended, Sakura went to work activating the yeast and joined Aida by the blender, slowly adding the butter to Aida’s mixture."
     "The two of them were simply incredible to watch, working together like gears in a clock. As Aida worked on the main mixture for the rolls, Sakura would supplement around her, grabbing ingredients for her and taking the used ones away."
-    show Sakura neutral at Position(xcenter=0.85, yalign=1.0), Transform(xzoom=-1) with move
+    show Sakura neutral at Transform(xzoom=-1)
+    show Sakura neutral at altMove(0.85)
     "However, even with the two of them working together, it was clear that Aida was running the show. As she went, Sakura would check to see how far she was, and then adjust herself to work around her."
-    show Sakura neutral at Position(xcenter=0.45, yalign=1.0), Transform(xzoom=1) with move
+    show Sakura neutral at Transform(xzoom=1)
+    show Sakura neutral at altMove(0.45)
     "Finally, Sakura emptied her activated yeast into the bowl.  Aida turned her mixer onto a higher speed as the dough began to thicken, while Sakura hurried to the other side of the counter and began to work on mixing the filling and frosting."
-    show Sakura neutral at Position(xcenter=0.85, yalign=1.0), Transform(xzoom=-1) with move
+    show Sakura neutral at Transform(xzoom=-1)
+    show Sakura neutral at altMove(0.85)
     show PRG doubt
     "After a few more minutes of mixing, Aida shut off the mixer and dumped the dough onto the counter, kneading it firmly with both hands.  The dough started fairly rough looking, and didn’t exactly look the most appetizing."
     "Kind of like a pile of mush with some bubbles here and there."
@@ -4065,9 +4071,11 @@ label PRG016:
     show Sakura neutral at Position(xcenter=0.45, yalign=1.0), Transform(xzoom=1) with move
     show Sakura neutral at Transform(yoffset=20) with move
     show Sakura neutral at Transform(yoffset=0) with move
-    show Sakura neutral at Position(xcenter=0.85, yalign=1.0), Transform(xzoom=-1) with move
+    show Sakura neutral at Transform(xzoom=-1)
+    show Sakura neutral at altMove(0.85)
     "Sakura grabbed an extra bowl from her side of the counter and covered it with oil.  Taking the bowl from her, Aida took her doughy blob and pressed it into the bowl, covered it in plastic wrap, and set a timer next to the bowl for the sake of precision."
-    show PRG neutral at Position(xcenter=0.65, yalign=1.0), Transform(xzoom=-1) with move
+    show PRG neutral at Transform(xzoom=-1)
+    show PRG neutral at altMove(0.65)
     "Letting her dough rise on the counter, Aida came to Sakura’s side of the counter and helped her prepare the frosting.  The frosting was a thick, white cream, and looked so damn tasty, even without being on anything."
     hide PRG
     hide Sakura
@@ -6750,10 +6758,11 @@ label PRG026b:
     WG "Best to tell them now, as long as you have their undivided attention."
     PRG "This... is my growth factor."
     "Everyone gaped at her in total shock, before Tashi-sensei entered the room."
-    hide BE with dissolve
-    hide AE with dissolve
-    hide WG with dissolve
-    hide PRG with dissolve
+    hide BE
+    hide AE
+    hide WG
+    hide PRG
+    with dissolve
     show HR neutral with dissolve
     HR "Everyone to your seats, if you please. Just because someone has grown a few inches doesn't excuse unprofessionalism."
     "Going to my seat, I took one last glance back to Aida, who was trying to space herself the correct amount from her desk to accommodate her new belly."

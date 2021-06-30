@@ -1,6 +1,14 @@
 default persistent.enable_notifications = True
 default persistent.enable_nsfw = True
 
+#Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
+#xcenter value (basically the same as what value between 0.00 and 1.00 along the x-axis) is passed as variable.
+#if combining with "Transform(xzoom=+-1)", separate into two different "show ______ at" statements
+#error happens whenever xzoom is set to +1 only, but for consistency's sake; we'll separate them regardless.
+
+transform altMove (xCen):
+    linear 0.5 xcenter xCen
+
 init python:
     config.use_cpickle = False
     #style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
@@ -57,6 +65,10 @@ init python:
     debuginput = ""
 
     import math
+
+
+
+
 
     class Shaker(object):       #This is Python code to implement a feature to shake the screen around at random, not just in one direction like with the punch commands
 

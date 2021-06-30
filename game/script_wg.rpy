@@ -15,12 +15,13 @@ label WG001:
     WG "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
     WG "Surely you received the instructions sent in advance of my arrival concerning the specific accommodations I require."
     Lunch "If you have an allergy or other dietary need, I would have been told."
-    show WG angry at Position(xpos=0.4) with move
+    show WG angry at altMove(0.4)
     WG "You there! Um, I apologize but your name eludes me at the moment."
     MC "Keisuke Hotsure."
     WG "Yes, Keisuke— I remember now. Please...tell Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
-    show WG haughty at center, Transform(xzoom=-1) with move
+    show WG haughty at Transform(xzoom=-1)
+    show WG haughty at altMove(0.5)
     WG "{i}Ergg{/i}, this isn't really helping. Look, how else can I explain this-"
     WG "You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     WG "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
@@ -28,14 +29,16 @@ label WG001:
     Lunch "We make enough food for even the fat kids. Don't worry, you'll get your share."
     show WG angry
     WG "I am NOT some 'fat kid'. I am not even obese."
-    show WG neutral at Position(xpos=0.6) with move
+    show WG neutral at altMove(0.6)
     WG "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that this facility in its current state— cannot meet."
-    show WG neutral at Position(xpos=0.25), Transform(xzoom=1) with move
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(0.25)
     WG "Now, I've already gone to the trouble of ordering the equipment you probably don't have— wood-fire oven, rotisserie, espresso machine, meat smoker; merely the basics required to craft fine cuisine..."
-    show WG neutral at Position(xpos=0.4), Transform(xzoom=-1) with move
+    show WG neutral at Transform(xzoom=-1)
+    show WG neutral at altMove(0.4)
     WG "But François will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
-    show WG happy at center with move
+    show WG happy at altMove(0.5)
     WG "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
     MCT "Bringing along her own private chef and taking over a fifth of the kitchen? Just how loaded is this girl?"
     Lunch "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus."
@@ -53,7 +56,8 @@ label WG001:
     WG "You... You wouldn't."
     Lunch "You wouldn't be the first student punished with kitchen duty."
     WG "Very well, but this is not the end. A Nikumaru does not give up."
-    show WG neutral at Position(xpos=0.4), Transform(xzoom=1) with move
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(0.4)
     play music WG
     WG "Did you see that? {w} Can you believe that? Erm, Keisuke was it?"
     MC "Yeah."
@@ -15633,6 +15637,7 @@ label WG061S:
 label WG061D:
     $setProgress("WG", "WG062")
     $setTime(TimeEnum.DAY)
+    play music Memories
     scene Dorm Interior with fade
     "I woke up early the next day. Needless to say, I had a restless night’s sleep as I agonized over if I had made the right decision or not."
     "Unfortunately, the dawn of a new day did not bring any further clarity as I had hoped it would."
