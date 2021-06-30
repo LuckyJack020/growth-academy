@@ -893,6 +893,7 @@ label WG006_afterchoice:
 label WG007:
     $setProgress("WG", "WG008")
     scene Cafeteria with fade
+    play music Schoolday
     MCT "First time in a while I haven't had trouble finding a spot."
     MCT "Looking around, it seems like people are starting to form into cliques or just avoiding certain people. Just like a normal school— normal feels odd now for some reason."
     MCT "And here I am just sitting by myself, maybe I should get out more or join a club."
@@ -3445,7 +3446,7 @@ label WG019_cafe:
                 jump daymenu
 
 label WG019_theater:
-    scene Movie Theater with fade
+    scene Theater Exterior with fade
     play music Hallway
     "I found myself walking by the town's movie theater, looking over the posters."
     "There were a couple blockbuster-type movies showing, but also a historical drama, a romantic comedy and an indie melodrama."
@@ -3478,7 +3479,7 @@ label WG019_theater:
         "She and Aida walked off, and I went to buy a ticket."
         scene black with fade
         pause 2
-        scene Town with fade
+        scene Theater Interior with fade
         "The movie wasn't bad. A bit dry in the second half, and the battle scenes seemed almost perfunctory, but overall it was a solid flick."
         MCT "Need to remember to tell Alice about this one later."
         jump daymenu
@@ -3507,7 +3508,7 @@ label WG019_theater:
             "Iron Fan 5":
                 scene black with fade
                 "I decided to see Iron Fan."
-                scene Town with fade
+                scene Theater Interior with fade
                 "Yes, it was trashy. Yes, it just repeated a lot of stuff from the earlier movies."
                 "But it let me shut my brain off for a couple hours, so it wasn't all bad."
                 "Maybe not the best use of my free time, but I made my choice."
@@ -3515,7 +3516,7 @@ label WG019_theater:
             "The Chrysanthemum Shadow":
                 scene black with fade
                 "I decided to see Chrysanthemum Shadow."
-                scene Town with fade
+                scene Theater Interior with fade
                 $setSkill("Art", 1)
                 "It was actually pretty good."
                 "The subject matter was a bit dry - too much talk about what might happen if the characters do this or don't do that - but I found the camerawork interesting. The director has an eye for balancing epic sweep with personal experience."
@@ -3907,8 +3908,9 @@ label WG022:
     MC "Hey, it's your space. But I don't know much about interior decorating."
     show WG happy
     WG "Don't worry yourself about that. I've already planned out how I want to rejuvenate the space."
-    show WG neutral at Position(xpos=0.3) with dissolve
-    show PRG neutral at Position(xpos=0.2) behind WG with dissolve
+    show WG neutral at Position(xpos=0.4)
+    show PRG neutral at Position(xpos=0.2) behind WG
+    with dissolve
     WG "I need your help moving the furniture around. Kodama-san and I aren't strong enough to move the bed."
     MC "Oh. Well, all right."
     MC "Let me limber up here..."
@@ -4022,8 +4024,9 @@ label WG022_c1_3:
 label WG023:
     $setProgress("WG", "WG025")
     scene Classroom with fade
-    show WG neutral at center with dissolve
-    show PRG neutral at Position(xcenter=0.6, yalign=1.0) behind WG with dissolve
+    show WG neutral at center
+    show PRG neutral at Position(xcenter=0.8, yalign=1.0) behind WG
+    with dissolve
     "After classes, Alice called Aida and I together for a business meeting."
     "She played it all straight-laced, going through a list of topics like an actual agenda."
     hide PRG with dissolve
@@ -4074,7 +4077,7 @@ label WG023:
     WG "So I'm going to make plans for a sale on bath salts, perfume and assorted beauty products soon as well."
     show WG neutral
     WG "Kodama-san. Is there a dance or some form of soiree planned for next month?"
-    show PRG neutral at Position(xcenter=0.6, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.7, yalign=1.0) behind WG with dissolve
     PRG "Um... I don't know. I'll check."
     WG "Thank you."
     hide PRG with dissolve
@@ -4321,8 +4324,9 @@ label WG024_c2_2:
     show BE happy at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
     "As I was talking Honoka walked up to Alice."
     "Not right in her face. She hung back a bit. But it was close enough to disturb Alice."
-    show BE happy at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
-    show WG angry at Position (xcenter=0.8, yalign=1.0) behind BE with dissolve
+    show BE happy at Position(xpos=0.55) with None
+    show WG angry at Position (xcenter=0.8, yalign=1.0) behind BE
+    with dissolve
     WG "..."
     "She opened one eye, frowning."
     if getAffection("WG") >= 8:
@@ -4995,7 +4999,7 @@ label WG029:
     PRG "Nikumaru-san is not feeling well. She won't be in class today."
     MC "Oh, man. Is it bad?"
     PRG "She wouldn't let me near her. She said she didn't want to risk passing whatever she had to me in my condition."
-    PRG "But she took her own temperature. It's 101.2. And she was complaining of aches and chills."
+    PRG "But she took her own temperature. It's 38.4. And she was complaining of aches and chills."
     MC "Bummer. Hopefully it's just a 24-hour thing."
     MC "Either way, our date's off, I guess."
     MC "I'll go see her during lunch. See how she's doing."
@@ -14124,14 +14128,14 @@ label WG059:
     jump daymenu
 
 label WG059S:
-    $setprogress("WG", "WG060S")
+    $setProgress("WG", "WG060S")
     $setTime(TimeEnum.DAY)
     scene WGdorm with fade
     play music WG
     show WG neutral with dissolve
     WG "Were you able to deliver that package to Akira?"
     MC "Yeah, I caught her out by the track, as you predicted."
-    show WG unique
+    show WG haughty
     WG "Good to know my intuition is still on point."
     MC "I don’t think it’ll ever be dull."
     WG "A good business person needs to keep theirs sharp or else risk losing a deal."
@@ -14154,7 +14158,7 @@ label WG059S:
     show WG at Position(xcenter=0.25, yalign=1.0) with move
     show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "Are you sure you don’t need any help Aida?"
-    Aida "No, Sakura and I have it."
+    PRG "No, Sakura and I have it."
     hide PRG with dissolve
     "As Alice stepped aside to let the gravid Aida through, I finally caught sight of Sakura. At first glance I assumed Alice must’ve been wrong on her factor."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -14978,7 +14982,8 @@ label WG060S_Accept:
     MC "Pardon my interruption, please continue. There is still plenty left."
     "With each munch of the sauce laden sandwich, cheese oozed out every crack and opening from the overstrained bread and meat construct."
     "Alice greedily licked her lips as the excess sauce attempted to spill across her face, but she was not wasting a single morsel."
-    "If it had been a normal sandwich of similar size, the caloric content would have been paltry." "However, Alice had just polished off a cream sauce laden, cheese entombed monster that had to have been a couple of kilos by my estimate, all with little effort."
+    "If it had been a normal sandwich of similar size, the caloric content would have been paltry."
+    "However, Alice had just polished off a cream sauce laden, cheese entombed monster that had to have been a couple of kilos by my estimate, all with little effort."
     show WG neutral
     WG "Oof..."
     "Alice adjusted herself in her chair with her legs splayed as wide as the loveseat allowed. With her back arched outward to give her stomach more room to spread its rapidly expanding girth."
@@ -15108,7 +15113,7 @@ label WG060S_Accept:
     "Those shirt buttons were finally at death's door, stretched far beyond breaking point I waited for the straw that would break the camel's back"
     "{i}Creeeeeeeak{/i}"
     "Shockingly, Alice had yet to notice the impending wardrobe malfunction she was creating. Each bite she took pulled the shirt further into demise."
-    "{i}Creak...Creeeeee{/b}AAAAAK!{/b}{/i}"
+    "{i}Creak...Creeeeee{b}AAAAAK!{/b}{/i}"
     show WG surprised-2
     "Alice froze mid swallow, even with the raucous sounds of her enjoyment and chewing— she had to have heard that one."
     WG "Did you say something, {i}HIC{/i}... Keisuke?"
@@ -15136,7 +15141,8 @@ label WG060S_Accept:
     "With one final surge of flab, the stiff dome of her gut forced itself outwards. This proved to be her upper button’s undoing, as the momentum of this actually knocked the soft beach balls resting on her belly upwards."
     "{i}Ping ping ping!{/i}"
     "And with that, the shirt was no more..."
-    "Two cascading orbs of fat shot upwards in response to her greedy gut finding room to rest." "Unlike the lower buttons, these ones shot upward with such force they bounced off the ceiling. If Alice had been slightly more endowed, or perhaps slightly heavier, I bet they would’ve gotten stuck in the roof."
+    "Two cascading orbs of fat shot upwards in response to her greedy gut finding room to rest."
+    "Unlike the lower buttons, these ones shot upward with such force they bounced off the ceiling. If Alice had been slightly more endowed, or perhaps slightly heavier, I bet they would’ve gotten stuck in the roof."
     "Even after the great jailbreak of Alice’s fat, she continued to wobble for what seemed like several seconds. Almost as if her belly and breasts were celebrating their new found freedom."
     "There was one final thing that caught my eye, though. Alice had eaten far more than I thought possible, and her turgid belly was a sign of how far she pushed herself."
     "There was an unmistakable pinkish-red hue coating the upper part of her belly rolls. A testament to her own desire overwriting any discomfort she should’ve been feeling."
@@ -15163,7 +15169,8 @@ label WG060S_Stop:
     "Once again her demanding gut produced an uproar, I wasn’t sure if that meant she was still hungry or she was way past full."
     WG "Guh... {i}hic{/i}... uhh."
     show WG neutral-2
-    "Slowly, the light started to return to Alice’s eyes, although they still remained half-lidded." WG "Kei-{i}HIC{/i} ugh...wh...w-why did you-{i}HIC{/i} stop?"
+    "Slowly, the light started to return to Alice’s eyes, although they still remained half-lidded."
+    WG "Kei-{i}HIC{/i} ugh...wh...w-why did you-{i}HIC{/i} stop?"
     show WG worried
     WG "Hng..."
     "Part of me wasn’t quite sure why I stopped, I’d waited so long for this after all. But deep down, I knew exactly what came over me."
@@ -15238,7 +15245,7 @@ label WG060S_Greedy:
     "Alice continued to slow down, but her voracity kept increasing. It was as if her mind and body were in conflict, trying to keep the other from acting up."
     "Her chewing became more laborious, as she had to take deep breaths between each large bite. The once vibrant, blue eyes she had to begin with started to glaze over."
     show WG doubt
-    WG "{i}Ohm, monch, nom, muuunch{i/i}..."
+    WG "{i}Ohm, monch, nom, muuunch{/i}..."
     "But the strange thing was, she didn’t even seem aware of it. She just continued to inhale dish after dish, albeit at a slower pace."
     "Alice was hardly even saying anything by this point, she wasn’t even fully enjoying the food, she was just eating for the sake of eating."
     "A wave of guilt suddenly hit me. This wasn’t like her at all."
@@ -15364,7 +15371,7 @@ label WG061:
     "But she didn’t have it handled. Alice proceeded to gently tap the egg against the counter only to barely cause it to crack. A similar result was seen after a few more light taps."
     show WG angry
     "Visibly impatient, Alice decided to up the ante—"
-    show WG surprise
+    show WG surprised
     "Only to completely smash the egg against the counter, splattering egg all over the counter and the floor."
     MC "Pffft! Hahaha! That was a little too much, Alice."
     show WG angry
@@ -15483,7 +15490,7 @@ label WG061:
     MC "Hey, those look really even in size. Are you sure this is your first time cooking?"
     show WG happy
     WG "Flatterer."
-    show WG smug
+    show WG haughty
     WG "But yes, I must admit, I am also impressed with my handiwork."
     MC "Okay, so this is about done. Go ahead and dump all that pasta into the pot, just be careful not to let it splash. Fresh pasta only takes like three minutes to cook."
     show WG neutral
@@ -15587,9 +15594,9 @@ label WG061:
     "I reached over and leaned in, giving Alice a tender kiss. I stayed in close, nuzzling her forehead against mine after the fact."
     MC "I don’t ever want you to feel embarrassed about your needs."
     "I reached down and began to gently rub her belly. Soft, pillowy, and flabby, without any defined firmness. I could tell she wasn’t even full."
-    MC "If you’re hungry and you want more: tell me."
-    MC "If you need help with your clothes: tell me."
-    MC "If you’re ever less than 100%% convinced you’re the only one for me: tell me. I want nothing more than to show you how much I love you."
+    MC "If you’re hungry and you want more, tell me."
+    MC "If you need help with your clothes, tell me."
+    MC "If you’re ever less than 100%% convinced you’re the only one for me, tell me. I want nothing more than to show you how much I love you."
     show WG aroused
     WG "I had a feeling that’s what you’d say."
     "I brought the carton of gelato up to Alice’s face."
