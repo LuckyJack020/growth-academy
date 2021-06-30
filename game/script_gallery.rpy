@@ -3,7 +3,7 @@ init python:
     galleries = {"BE": Gallery(), "AE": Gallery(), "GTS": Gallery(), "FMG": Gallery(), "WG": Gallery(), "PRG": Gallery()}
     galImgList = {}
     galImgList["BE"] = ["BE001"]
-    galImgList["AE"] = ["AE000", "AE015", "AE024", "AE024b", "AE024c", "AE024d", "AE024e", "AE025", "AE050_behind1", "AE050_behind2", "AE050_behind3", "AE050_behind4", "AE050_behind5", "AE050_behind6", "AE050_bj0", "AE050_bj1", "AE050_bj2", "AE050_bj3"]
+    galImgList["AE"] = ["AE000", "AE015", "AE024", "AE024b", "AE024c", "AE024d", "AE024e", "AE025", "AE050_behind1", "AE050_behind2", "AE050_behind3", "AE050_behind4", "AE050_behind5", "AE050_behind6", "AE050_bj1", "AE050_bj2", "AE050_bj3", "AE050_bj4", "AE050_sit1", "AE050_bj1", "AE050_bj2", "AE050_bj3", "AE050_bj4"]
     galImgList["GTS"] = []
     galImgList["FMG"] = []
     galImgList["WG"] = ["WG000", "WG009", "WG046", "WG047"]
