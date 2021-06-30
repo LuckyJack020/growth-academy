@@ -701,8 +701,9 @@ label GTS009:
 
     scene Pharmacy with fade
     "Entering the store I had to admit I was surprised that it seemed to mostly be just an assortment of knickknacks."
-    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0)
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
     MC "Was there... anything particular that caught your eye Yamazaki-san?"
     GTS "No, I just wanted to look around. My mother has a tendency to give me some random items like these whenever she goes away on a trip."
     show BE neutral
@@ -711,8 +712,9 @@ label GTS009:
     MC "Well, take as long as you need."
     show GTS neutral
     GTS "Thank you Hotsure-san."
-    hide GTS with dissolve
-    hide BE with dissolve
+    hide GTS
+    hide BE
+    with dissolve
     "We explored the store out our own leisure, Naomi seeming distracted with some postcards while Honoka was examining small trinkets."
     "As for myself, I was mostly just examining some accessories when one really caught my interest. It was a headband that had a fake flower on one side of it. But its color was what made it so alluring."
     "It was a baby blue flower with a golden ring in the middle. My first thought was Naomi possibly liking it."
@@ -730,8 +732,9 @@ label GTS009:
 
 label GTS009_c1_1:
     "Making up my mind, I took a pin with a silly nerdy design on it and took it to the cashier. The girls seemed to notice me pay for the item as they came over."
-    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0)
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
     BE "Hm? Whatcha get Kei-chan?"
     MC "Well I was looking around and I found one of these."
     "I showed her the pin, making her smirk as she examined the pin."
@@ -757,8 +760,9 @@ label GTS009_c1_1:
 
 label GTS009_c1_2:
     "Making up my mind, I took the headband with the flower and took it to the cashier. The girls seemed to notice me pay for the item as they came over."
-    show GTS neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yanchor=1.0)
+    show BE neutral at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
     GTS "Did you find something Hotsure-san?"
     show BE happy
     BE "Pfft! Hahahaha! Kei-chan! Already preparing to accessorize when your hair grows out?"
@@ -1237,7 +1241,7 @@ label GTS013_c1_2:
     MCT "You're too good, Hotsure, too good."
     MC "Yeah, I'd love to. "
     if getAffection("PRG") > 6:
-        extend "Maybe we'd both learn a thing or two. Kodama-san really knows her stuff."
+        extend " Maybe we'd both learn a thing or two. Kodama-san really knows her stuff."
         show GTS happy
         GTS "Manifestly."
         show GTS neutral
@@ -1270,8 +1274,9 @@ label GTS013_c3:
     "Naomi, in a smooth motion, opened the door for us and stepped inside; my face sank into the gregarious, tickling scent of a labor of love at once."
     scene Cooking Classroom with fade
     play music PRG
-    show GTS neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
-    show PRG worried at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.7, yalign=1.0)
+    show PRG worried at Position(xcenter=0.7, yalign=1.0)
+    with dissolve
     "A labor indeed, as we found Aida standing behind the counter, scanning an array of ingredients and instruments arranged with impeccable consideration for both ease of instruction and Naomi's reach."
     "Her hands were folded as she observed in silence, the young queen ruling softly but surely."
     show PRG neutral at Transform(xzoom=-1) with dissolve
@@ -1285,9 +1290,10 @@ label GTS013_c3:
     PRG "So, um, first... we need to get the oven heated to 177 Celsius."
     show GTS happy
     GTS "Right away!"
-    show PRG neutral at Transform(xzoom=1) with dissolve
-    show PRG neutral at center with dissolve
-    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show PRG neutral at Transform(xzoom=1)
+    show PRG neutral at center
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     "Naomi set her plate aside and tapped the oven screen to the tune of a staccato of beeps, winding down to a halt at the display of 177."
     show GTS at Transform(xzoom=-1) with dissolve
     "Meanwhile, Aida was peering under the tea towel at Naomi's cookies, smiling."
@@ -1324,8 +1330,9 @@ label GTS013_c3:
     PRG "A-And it's good to experiment. They do taste pretty good just going by the recipe, though."
     show GTS happy
     GTS "I will take that to heart."
-    show PRG neutral at Position(xcenter=0.65, yalign=1.0) with dissolve
-    show GTS neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.65, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.4, yalign=1.0)
+    with dissolve
     "Naomi picked up the forearm-sized whisk laid out for her with one hand, and with the other, a bowl full of drooping little slabs of butter."
     GTS "It's 150 milliliters of butter, as I understand?"
     PRG "I think it's actually closer to 142 or 143, but 150 will do. You'd just have to add a little extra dash of every other ingredient."
@@ -1379,8 +1386,8 @@ label GTS013_c3:
     "She took the ball between her hands and rolled it tight, pausing every so often to press in each side."
     "With the dough formed into a near-perfect sphere, she cupped it in her hands over the floured mat..."
     "{i}pap{/i} "
-    extend "{i}pap{/i} "
-    extend "{i}pap{/i} "
+    extend "{i} pap{/i} "
+    extend "{i} pap{/i} "
     "...And sort of just let it plop down out of her hands, repeatedly, until it formed what could, with some trepidation, be described as like a brick."
     show PRG worried at Transform(xzoom=-1) with dissolve
     "As she was absorbed in this, I caught a glimpse of Aida's eyes diverting to the wall clock and her slight frown."
@@ -2466,12 +2473,12 @@ label GTS022:
 
 label GTS022_frost:
     MC "His house is in the village, though; "
-    extend "he will not see me stopping here to watch his woods fill up with snow."
+    extend " he will not see me stopping here to watch his woods fill up with snow."
     show GTS surprised with dissolve
     MC "My little horse must think it queer to stop without a farmhouse near,"
     extend " between the woods and frozen lake, the darkest evening of the year."
     MC "He gives his harness bells a shake to ask if there is some mistake. "
-    extend "The only other sound's the sweep of easy wind and downy flake."
+    extend " The only other sound's the sweep of easy wind and downy flake."
     show GTS aroused with dissolve
     MC "The woods are lovely, dark and deep."
     extend " But I have promises to keep, and miles to go before I sleep."
@@ -2555,7 +2562,7 @@ label GTS022_c2:
 label GTS022_invite:
     $setFlag("GTS022_scribe")
     MC "..."
-    extend "Actually, though..."
+    extend " Actually, though..."
     GTS "Hm?"
     MCT "I have a feeling she might like a little more authentic approach."
     MC "There's supposed to be a scribe who writes stuff down and, like, arbitrates the rules, right?"
@@ -2670,8 +2677,9 @@ label GTS022_scribe:
     "I peered out with my hand over my eyes to try and spot them, but despite their distinct combination of figures I couldn't see them anywhere."
     AE "Hotsure-san."
     "Shiori's flat register sounded from a few meters away directly to my right; I looked, and lo, there they were tucked in the shade under a young painted maple."
-    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
     "I joined them in its spotted shadow; up close I could see a single branch hanging just by Naomi's head."
     GTS "I hope you approve the spot."
     "I nodded with consideration."
@@ -2709,10 +2717,10 @@ label GTS022_scribe:
     "I leaned forward to think."
     MC "..."
     if getSkill("Art") > 4:
-        extend "Skylark in her nest, never fearing the far earth, chirps up to the sun."
+        extend " Skylark in her nest, never fearing the far earth, chirps up to the sun."
         "Another nod, another scribble."
     else:
-        extend "Skylark in her humble nest, never fearing the far earth, chirps up to the sun."
+        extend " Skylark in her humble nest, never fearing the far earth, chirps up to the sun."
         AE "Your first line contains seven mora. You have to shorten it to five."
         MC "Ah, crud. Hmm..."
         MC "Skylark in her nest, never fearing the far earth, chirps up to the sun."
@@ -2857,8 +2865,9 @@ label GTS022_c7a:
     show AE happy with dissolve
     AE "Likewise, Yamazaki-san."
     "We all stood to leave, nothing more to say left among us."
-    hide AE with dissolve
-    hide GTS with dissolve
+    hide AE
+    hide GTS
+    with dissolve
     scene Hallway with fade
     "Naomi said nothing as we took the same path out of the building."
     MC "How did you feel about that whole thing? It might not've lived up to expectations, I guess."
@@ -2893,8 +2902,9 @@ label GTS022_cutoff_a_early:
     MC "'Course!"
     GTS "Thank you very much for joining us."
     "We bowed in turn and gathered our things to part ways."
-    hide AE with dissolve
-    hide GTS with dissolve
+    hide AE
+    hide GTS
+    with dissolve
     scene black with fade
     $setAffection("GTS", -2)
     "To my surprise, Naomi said nothing to me whatsoever afterward."
@@ -2920,8 +2930,9 @@ label GTS022_cutoff_a:
     MC "'Course!"
     GTS "Thank you very much for joining us."
     "We bowed in turn and gathered our things to part ways."
-    hide AE with dissolve
-    hide GTS with dissolve
+    hide AE
+    hide GTS
+    with dissolve
     scene Hallway with fade
     "We split off each our own way; as for me, I went back inside to let my mind wander to the next diversion."
     "That is, until Naomi approached me from behind and gently, distinctly called my name."
@@ -3356,8 +3367,9 @@ label GTS023_c1_2:
 label GTS023_c2:
     play music Peaceful
     "We arrived on the scene with Tanaka-san visibly brainstorming with herself in her chair, extras standing around chatting, and Honoka, her co-star, and the cameraman doing the same over packs of seaweed, sitting down. After the jumpstart a few moments ago, the stillness eased my heart to a contented rhythm."
-    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show Ryoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+    show Ryoko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "Hey, Yamazaki-san!"
     Ryoko "Oh, Yamazaki-san! You disappeared after class, how's your evening going?"
     GTS "Rather well, thank you. I brought some refreshments for the film crew here, as a matter of fact, hence my sequestering myself in my room."
@@ -3516,7 +3528,7 @@ label GTS024:
     "I stepped away from the fence to see Naomi kneeling by her verbena planters, her skirt a gentle blue cascade over her knees and the watering can tipped nearly sideways, dribbling over the soil by her gentle hand."
     MC "Think it'll rain?"
     GTS "Hmm... "
-    extend "It might. I believe it will be gentle if it does."
+    extend " It might. I believe it will be gentle if it does."
     MC "Next time maybe you could let me do that."
     GTS "Perhaps, if you so wished."
     MC "Yeah. I mean, I probably can't do it like you, but... I've had some time to observe your technique."
@@ -3684,7 +3696,7 @@ label GTS024:
         pause 2
         scene Dorm Exterior with fade
         "I fear I ended up forcing Naomi to wait some time as well. I searched every nook and cranny of my dorm that I could conceive in the quest for my umbrella... "
-        extend "ultimately to find it in my raincoat pocket."
+        extend " ultimately to find it in my raincoat pocket."
         "This done, I hastened to beneath the awning where Naomi was standing, hands folded in front of her thighs and eyes cast aloft to the sky."
         show GTS neutral with dissolve
         GTS "You found it?"
@@ -3700,9 +3712,9 @@ label GTS024:
         show GTS embarrassed with dissolve
         GTS "It might be considered a bit uncouth..."
         MC "You? Having uncouth thoughts? Please, do tell."
-        GTS "Well, what if we were to walk over there together? "
-        extend "At the same time... "
-        extend "under my umbrella?"
+        GTS "Well, what if we were to walk over there together?"
+        extend " At the same time... "
+        extend " under my umbrella?"
         "Some air caught in my chest for a second and I prayed the clouds obscured the blush I could feel coming on."
         if getSkill("Academics") > 1:
             MC "On the contrary, that sounds like a perfectly lovely idea."
@@ -3853,9 +3865,9 @@ label GTS024_c1_2:
     GTS "Let us cultivate each other, as well."
     MC "I think we've got something else to cultivate right now."
     show GTS surprised
-    GTS "Oh! "
+    GTS "Oh!"
     show GTS happy with dissolve
-    extend "Yes, you're absolutely right. Let's tend to that right away."
+    extend " Yes, you're absolutely right. Let's tend to that right away."
     hide GTS with dissolve
     scene black with fade
     "She picked up her jug and we made our way up the stairs, umbrellas ready. I managed to reach the door first, and soaking up a few seconds of unabated rain before holding the door for Naomi to huddle through."
@@ -4111,7 +4123,7 @@ label GTS026_c1_2:
     show GTS neutral at Transform(xzoom=-1)
     "A silence settled in the golden warmth of the hall, if only for a moment."
     MCT "..."
-    extend "Damn, she's playing on another level."
+    extend " Damn, she's playing on another level."
     MC "So hey, do you think you'd want to have dinner tonight? Just you and me?"
     GTS "I think I would. Did you have anything in mind?"
     MC "What about... the sushi place on Genki street? Like around five tonight."
@@ -4611,8 +4623,9 @@ label GTS028T_c1_after:
     show Minori happy
     Minori "Indeed, and I would agree with your point. Stage actors truly go through the gauntlet for every single one of their performances. That's no small task."
     Ryoko "Yeah, don't sweat it Yamazaki-san. Oh! We forgot the snacks! Don't wait up for us, go get some seats!"
-    hide Ryoko with dissolve
-    hide Minori with dissolve
+    hide Ryoko
+    hide Minori
+    with dissolve
     "Ryoko took Minori's hand and quickly vanished towards the concession stand as I chuckled and looked back at Naomi who seemed a little bothered."
     show GTS sad at center with dissolve
     GTS "I truly hope I didn't offend her."
@@ -5743,8 +5756,9 @@ label GTS035_testpass:
     MCT "Naomi took the calligraphy set from my hands and held it at her side. Unsurprisingly, they looked a lot smaller in her hands."
     show GTS_S neutral
     GTS_S "Shall we see what else the town has to offer?"
-    show GTS_S neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show Akihiro neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=1.0) with dissolve
+    show GTS_S neutral at Position(xcenter=0.75, yalign=1.0)
+    show Akihiro neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=1.0)
+    with dissolve
     Akihiro "I spotted a flyer in there advertising a local boardwalk if you two would be interested?"
     MC "What do you say, Yamazaki-san?"
     show GTS_S happy
@@ -6607,7 +6621,7 @@ label GTS044:
     "But I stopped."
     MCT "Hold on..."
     MCT "Naomi-chan said she was gonna text me after class."
-    MCT "Odd, it's been a couple minutes... "
+    MCT "Odd, it's been a couple minutes..."
     extend " probably going back to her room or something."
     play music MCGuitar
     "Without another thought, I drank a few hearty gulps of the wonderful coolness, some splashing on my chin, and went on my way."
@@ -7265,8 +7279,9 @@ label GTSPRG001:
     play music Busy
     "As I was heading to the dorms after class I spotted Naomi and Aida down in the garden."
     MC "Hey girls."
-    show GTS neutral at Position(xpos=0.7, xanchor=1.0, yanchor=1.0) with dissolve
-    show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xanchor=1.0, yanchor=1.0) with dissolve
+    show GTS neutral at Position(xpos=0.7, xanchor=1.0, yanchor=1.0)
+    show PRG neutral at Transform(xzoom=-1), Position(xpos=0.3, xanchor=1.0, yanchor=1.0)
+    with dissolve
     GTS "Hey Hotsure-san."
     PRG "G-Good evening, Hotsure-san."
     MC "What is going on here?"

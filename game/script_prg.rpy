@@ -985,8 +985,9 @@ label PRG004_c1_1:
     FMG "Oh, awesome! Thank you, Yare... um... Yamazu... uh..."
     GTS "Yamazaki."
     FMG "Yamazaki! Thank you, Yamazaki-san!"
-    hide FMG with dissolve
-    hide GTS with dissolve
+    hide FMG
+    hide GTS
+    with dissolve
     "Akira ran off to find what she needed, yelling for me to follow. I turned to Aida with an apologetic look."
     show PRG neutral at Position(xalign=0.5, yalign=1.0) with dissolve
     MC "So much for a relaxing walk, huh? Sorry you got wrapped up in all this excitement."
@@ -1716,7 +1717,7 @@ label PRG009:
         MC "From the other day? You said you weren't feeling well?"
         PRG "I..."
         show PRG surprised
-        extend "Oh! Y-Yes, I'm feeling much better. Thank you for asking."
+        extend " Oh! Y-Yes, I'm feeling much better. Thank you for asking."
         PRG "Y-You're feeling better too?"
         MC "Much better, thank you. Your soup really hit the spot. I see why you keep a few cans around now."
         show PRG neutral
@@ -1995,7 +1996,7 @@ label PRG010:
     pause 1.5
     show PRG unique-happy
     PRG "..."
-    extend "Thank you."
+    extend " Thank you."
     MC "May I help you finish the cookies?"
     PRG "T-They just have to go in the oven, now. T-There isn't much more to do..."
     MC "Alright. Well, I'm sure there are dishes to do, right?"
@@ -3194,8 +3195,9 @@ label PRG013:
     "The straps were fraying in a few spots, and a small hole was worn in one side."
     "Two of the zippers had been replaced with paper clips, presumably after the old ones had fallen off."
     "I walked with Aida back over to the counters."
-    show PRG worried with dissolve
-    show Sakura neutral at Position (xcenter=0.25, yalign=1.0) with dissolve
+    show PRG worried
+    show Sakura neutral at Position (xcenter=0.25, yalign=1.0)
+    with dissolve
     "At the third row of counters, the redheaded girl that Sano-san had mentioned was staring at an open carton of eggs on the counter."
     "She was leaning forward over the counter, as if assessing each egg one by one to find the best method of approach."
     "Her lean made her skirt pop up in the back, to the point that a good portion of her left buttcheek was just... out there."
@@ -3243,8 +3245,9 @@ label PRG013:
     show Sakura neutral
     MC "Well, I’m gonna let you guys have at it. Make sure you tell me how it goes."
     PRG "I-I will."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "I nodded and headed out the door."
     if getAffection("PRG") > 5:
         "I’d admittedly had my doubts, especially when Aida seemed so hellbent against even cooking in the same room with them."
@@ -4646,8 +4649,9 @@ label PRG019_c1_1:
     "As the crowd applauded furiously, Aida celebrated with her now seemingly trademark bounce."
     MC "YES! GO TEAM KODAMA!!"
     "Aida hurried from the judges table back to where Alice and I stood."
-    show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     PRG "O-Oh! Good Morning Nikumaru-sama!"
     WG "No need for such formalities today, Kodama-san. That was a very well executed round. I expected no less from you."
     show PRG neutral
@@ -5910,8 +5914,9 @@ label PRG024_c1_after:
     "Daichi, in a sudden moment of politeness, held the door for me so I could enter."
 
     scene Dorm Interior
-    show RM neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show RM neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG sad at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     RM "Okay, so details. What happened to you?"
     "Aida helped lower me onto my bed, before taking a seat at my chair by my desk. Over the next ten or so minutes, I filled him in on the whole story."
     MC "And then, the nurse had us fill out a bit of paperwork before we-"
@@ -6479,8 +6484,9 @@ label PRG026_c1_1:
     "Naomi bowed courteously to both of us. She took her seat and began rifling through her bag. I leaned over to Aida so I could whisper in her ear."
     MC "Weren't you going to mention the pregnancy too?"
     PRG "I'm going to tell the class all at once. I think it'll be a little easier."
-    show FMG neutral at Position (xcenter=0.8, yalign=1.0) with dissolve
-    show WG neutral at Position (xcenter=0.2, yalign=1.0) with dissolve
+    show FMG neutral at Position (xcenter=0.8, yalign=1.0)
+    show WG neutral at Position (xcenter=0.2, yalign=1.0)
+    with dissolve
     "I nodded, not noticing Akira and Alice as they walked in. I turned to the door, spotting them and their glances at us."
     WG "Good morning Kodama-san and Hotsure-san."
     PRG "Good morning, Nikumaru-san."
@@ -6493,8 +6499,9 @@ label PRG026_c1_1:
     WG "Excellent. I'll make sure to stop by for some more of these so called 'late night chat sessions,' Mizutani-san."
     show FMG happy
     FMG "You'd better! I'm gonna miss having you around. It was a ton of fun while it lasted."
-    hide FMG with dissolve
-    hide WG with dissolve
+    hide FMG
+    hide WG
+    with dissolve
     show BE happy at Position (xcenter=0.9, yalign=1.0) with dissolve
     "Behind the two of them, Honoka hurried into the room and plunked down in the desk directly in front of Aida. Shiori followed closely behind her and took her seat immediately."
     "Grabbing a notebook from her bag, she started writing something across the top of her page."
@@ -6739,8 +6746,9 @@ label PRG026b:
     FMG "W-Whoa!"
     BE "A-Ah... Hello, Kodama-san."
     PRG "H-Hi everyone. S-Sorry for causing all the commotion."
-    hide FMG with dissolve
-    hide BE with dissolve
+    hide FMG
+    hide BE
+    with dissolve
     WG "It wasn't your doing. Don't blame yourself for something you couldn't control, Kodama-san."
     PRG "I-I... Alright."
     PRG "T-There's something all of you need to hear."
@@ -7235,8 +7243,9 @@ label PRG029:
     PRG "H-Hey, it's Inoue-san."
     MC "Yeah, I wonder where she's going this early, and all by herself too."
     "The two of us crossed over to the bus stop. Honoka looked up as we approached."
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "Hey guys! What's shakin'?"
     show PRG unique
     PRG "Uhm..."
@@ -7271,16 +7280,18 @@ label PRG029:
 
     scene Town with fade
     "By the time we got into town, the bus still hadn't picked anyone else up, and there was hardly anyone walking down the streets."
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     MC "Honoka, are you sure that the arcade is even open this early?"
     BE "Yeah... I mean I think so."
     "Just as we reached the arcade, an employee flipped the sign to open and unlocked the doors."
     BE "Perfect timing, as usual."
 
     scene Arcade with fade
-    show PRG surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG surprised at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "The three of us entered the arcade and I heard Aida audibly gasp. I suppose for someone who had never been to an arcade before, it was impressive, with the flashing lights everywhere and the sound effects from all of the games being played at once."
     MC "What do you think?"
     PRG "It's... wow."
@@ -7298,14 +7309,16 @@ label PRG029:
     MC "Watch me!"
     "I led Honoka over to the machine, and fished two quarters out of my pocket."
     MC "Character choice is everything in games like these, Aida. Each character has a different playstyle, and different strengths and weaknesses, so naturally, certain characters are going to counter others."
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "Aida nodded as she looked on. I hovered my cursor over Ri, a man wearing a red gi with a black belt around his waist. Honoka chose Lun Chi, a girl with brown hair and muscular looking arms."
     "The pounding bass of the background music kicked in as the fight started. I had Honoka in the first half of the first round, but she came back and beat me with a final combo into a special attack."
     "The second round went to me as I kept her at a distance with my characters long distance energy ball attack."
     "The final round was completely even, until Honoka jumped at just the wrong time, letting me finish her with an easy aerial combo."
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "C'mon, Kei-Chan! I almost had you!"
     MC "Almost beating me and actually beating me are two different things, Honoka."
     show BE neutral
@@ -7316,8 +7329,9 @@ label PRG029:
     PRG "Okay. I think I'm ready!"
     "I brought Ri in close and went for a jumping combo, which Aida was quick to counter with a special attack. Tanca's body went up in flames as Ri made contact, damaging me instead of her."
     MC "Alright, the gloves are off!"
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "I managed to beat Aida in the first round. The next two rounds were a bloodbath. Aida had all but mastered her special attacks already, and had no intent on holding back."
     "Each time I'd go for an attack, she'd either block or dodge, before retorting with a brutal counter, usually opening me up for another barrage of attacks."
     "Then, at the end of the third round, Aida unleashed a brutal final combo, covering Ri in flames."
@@ -7327,21 +7341,25 @@ label PRG029:
     BE "Oh my god! You're some kind of fighting game prodigy, Kodama-san!"
     PRG "It's not hard, I just pressed the buttons in the right order and made sure to keep myself safe."
     BE "Still, that's insane for your first time! I have to take you on myself!"
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "I stepped back with my hands raised in defeat. Honoka and Aida chose their characters and went into the fight once again."
     "Honoka held up slightly better than I did, but Aida still clobbered her, leaving her speechless as the game announced Aida as the winner."
-    show PRG happy at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG happy at Position(xcenter=0.25, yalign=1.0)
+    show BE surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "I-I... How the... ?"
     PRG "You guys were right, this is fun! "
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "The three of us made our way around the arcade, playing different games as we went. Honoka generally came out on top, but whenever we played a fighting game, Aida completely destroyed us."
 
     scene Town with fade
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "Damn, girl. I've never seen someone tear up at a fighting game like that on their first try!"
     PRG "It isn't that hard for me. I-I just think about how I need to guard myself, but attack during the intervals between the other person's attacks. It's kinda like chess in a sense."
     PRG "You make your move when the opponent screws up, and eventually, you win."
@@ -7365,8 +7383,9 @@ label PRG029:
     "The bus pulled up, this time with quite a few more people on board. Honoka and I stood, while Aida took the only available seat. Soon, the academy came into view as the bus screeched to a halt."
 
     scene School Front with fade
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "Thanks for tagging along guys! The arcade is a ton more fun with other people!"
     PRG "Y-You usually go alone?"
     show BE sad
@@ -8177,8 +8196,9 @@ label PRG034:
     PRG "O-Oh! Keisuke!!"
     MC "Oi! I'm not interrupting anything, am I?"
     PRG "No! Not at all!"
-    show PRG unique at Position(xcenter=0.7, yalign=1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.3, yalign=1.0) with dissolve
+    show PRG unique at Position(xcenter=0.7, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.3, yalign=1.0)
+    with dissolve
     Sakura "Nice job there, Hotsure-san! You really did a number on my partner, here!"
     PRG "S-S-Sakura-san! P-Please!"
     Sakura "Oh, I'm only kidding! But seriously, congrats you guys! You two are going to be amazing parents, not to mention that those kids are going to be spoiled rotten from all of the amazing food they'll have!"
@@ -8358,14 +8378,16 @@ label PRG034_c1_after:
     "Sakura nodded as the two hugged it out."
     PRG "Now, I think you and I have a cake to finish?"
     Sakura "We do! Except now, it's a cake for new relationships and forgiveness!"
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "The two of them set back to making the cake once more. Their former speed and ability to gel together came back instantly, until finally, the cake was chilled and set on the table in front of me."
     "Sakura took a knife in hand and deftly sliced the cake into eight even pieces, and served myself and Aida before plating a piece for herself."
     "Meanwhile, Aida came to the table with some freshly cut strawberries and a bowl of homemade chocolate syrup. She loaded up Sakura's piece before starting on mine and moving onto hers."
     "I took my fork in hand and firmly pierced through the point of my slice, and once I had a good strawberry to chocolate to cake ratio, I gently shoveled the forkful into my mouth."
-    show PRG neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0)
+    show Sakura neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     MC "Wow. It's so light and fluffy, like what I'd picture a cloud tasting like. And the chocolate and the strawberries are perfect too. The strawberries aren't soggy or anything. Who handled which part of the cake?"
     PRG "Since I usually do the baking and everything involving the main part of the cake, Sakura-san and I decided to swap roles for this one. So she baked the cake, while I handled the toppings."
     MC "You both did an incredible job! Like, this is something that would be served on one of those cooking shows."
@@ -8441,8 +8463,9 @@ label PRG035:
     "I pulled the key from the pocket and unlocked the door, holding it open for Aida as she entered."
 
     scene Dorm WG with fade
-    show PRG unique at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG unique at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     WG "Ah, thank you, Kodama-san. It smells heavenly."
     PRG "I-It was no trouble. I hope you enjoy."
     WG "I believe I shall. And Hotsure-san, how thoughtful of you to escort Kodama-san back."
@@ -8995,8 +9018,9 @@ label PRG037:
     scene Classroom with fade
     "At their team's table, Sakura was already working on setting up bowls in the right spot and double checking their ingredients. Aida stood adjacent to her, leafing through some sheets of paper."
     "Since the tournament hadn't begun yet, there was no harm in me going to give them a pep talk before they got underway."
-    show PRG neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.7, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1.0)
+    with dissolve
     MC "Hey, you two! All ready to go?"
     PRG "G-Good morning Keisuke! Yeah, we're all good!"
     Sakura "More than good, we're ready to dominate!"
@@ -9630,8 +9654,9 @@ label PRG039:
     "After a handful of minutes spent walking, the café came into view. It looked fairly trendy, but being that it was the mid afternoon, there were hardly any people."
     UNKNOWN "Hey, Kei-chan!! Kodama-chan!!"
     play music Busy
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Both of us whipped around to see Honoka across the street, waving to us vigorously. She waited on a passing car before crossing the street with a huge grin on her face."
     BE "What brings you love birds here today?"
     PRG "W-We wanted to try this new café."
@@ -9659,8 +9684,9 @@ label PRG039_c1_1:
     show BE neutral
     BE "That's okay, Kei-chan. Some other time then. You kids have fun, 'kay?"
     MC "We will. See ya around, Honoka!"
-    hide BE with dissolve
-    hide PRG with dissolve
+    hide BE
+    hide PRG
+    with dissolve
     "Honoka waved goodbye and continued down the street as Aida and I entered the café."
 
     scene Cafe with fade
@@ -9766,14 +9792,16 @@ label PRG039_c1_2:
     MC "Warblade 4000? Can't say I've heard of it?"
     show BE surprised
     BE "You've never... Kei-chan, I am surprised at you! Shame shame."
-    hide BE with dissolve
-    hide PRG with dissolve
+    hide BE
+    hide PRG
+    with dissolve
     "Honoka shook her head and tsk-tsked all the way across the street and into the game store with Aida and I close behind her."
 
     scene Game Store with fade
     MC "Oy..."
-    show PRG surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG surprised at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     PRG "W-Wow..."
     "The store was jam packed full of any game you could think of. The walls were stacked high with different board games of all sorts ranging from strategy to chance."
     "Near the front counter was a huge case filled with different colored dice and assorted game pieces."
@@ -9801,8 +9829,9 @@ label PRG039_c1_2:
     MC "Honoka! That's... that's..."
     BE "I know! I didn't even need to go back for a second shot!"
     MC "That's not what I... gah, whatever."
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "The three of us split up. Honoka looked over each Warblade figurine on display, picking them up here and there to examine them closer. I picked out a few packs of Tapinon cards while Aida wandered toward the front of the store."
     "I was flipping through a binder of foil cards and wishing I had more yen to my name when heard an excited gasp from up front. I looked toward the noise and saw Aida walking towards me, a single laminated card held in her hands."
     show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -10274,8 +10303,9 @@ label PRG042:
     stop music
     "I saw it before it even happened."
     "Aida turned and swung her swollen stomach..."
-    show PRG surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show AE surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG surprised at Position(xcenter=0.25, yalign=1.0)
+    show AE surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "...directly into Shiori's stack of books and papers on her desk."
     play music Hallway
     "I winced as Shiori's entire workload met the floor, pens and pencils flying everywhere like tiny graphite and ink missiles. Papers were swept beneath desks, and notebooks bent this way and that on the cold linoleum."
@@ -10334,8 +10364,9 @@ label PRG042:
     "Aida's stunned expression gave away each emotion she felt. Her eyes went misty again as she turned to rub her belly."
     stop music
     UNKNOWN "What Hotsure-san says is true, you know."
-    show PRG surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG surprised at Position(xcenter=0.25, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Both of us looked towards the new voice. To the surprise of both of us, Shiori stood by the corner's edge, looking down to the two of us."
     play music AE
     AE "I am not normally an eavesdropper. If I'm being blunt, I find the practice to be rather childish and rude. That being said, I simply had to come find you two."
@@ -10387,8 +10418,9 @@ label PRG042:
 
     scene Cooking Classroom with fade
     play music Hallway
-    show AE surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show AE surprised at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     AE "Oh my... oh my word!"
     PRG "D-Do you like it?"
     AE "This is stupendous!"
@@ -10436,8 +10468,9 @@ label PRG042:
     MC "It just means I'll see you later."
     AE "Ah, I'm not exactly well versed in the realm of common colloquialisms. But, I will be seeing you both tomorrow."
     PRG "B-Bye!"
-    hide AE with dissolve
-    hide PRG with dissolve
+    hide AE
+    hide PRG
+    with dissolve
     "Once Shiori had gone, Aida and I set to scrubbing the dishes and cleaning up the naked kabob rods."
     show PRG neutral with dissolve
     MC "These turned out really well."
@@ -10560,8 +10593,9 @@ label PRG043:
     "I knew better than to go fishing underneath someone's bed."
     "...especially if they seemed really uncomfortable about the idea alone."
     "Aida's door swung open again and Alice sauntered into the room, a small pile of mail in her hand."
-    show PRG unique at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show PRG unique at Position(xcenter=0.75, yalign=1.0)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     WG "You've returned early today, Kodama-san. Some sort of special occasion?"
     PRG "N-Not really. Keisuke and I were just going to go for a little walk."
     WG "I see. Well, do enjoy your walk. Some mail came for you, by the way."
@@ -10857,8 +10891,9 @@ label PRG044_c1_2:
     "I took Aida's hand and we began our trek to the bus stop."
     "We were just passing by the café, when someone walked out of the door and I accidently ran into them."
     MC "Oh, excuse m-"
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Tomoko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     MC "Tomo?!"
     Tomoko "Oh, hey big bro."
     MC "W-What are you doing here?"
@@ -11101,8 +11136,9 @@ label PRG045:
     WG "When you stand, try to stay as close to me as possible."
     "Aida stood and planted herself as close as she could to Alice without touching her."
     WG "Hotsure-san, could you please dispose of our trays? Once you are finished, come to our dorm."
-    hide PRG with dissolve
-    hide WG with dissolve
+    hide PRG
+    hide WG
+    with dissolve
     "I nodded furiously and grabbed all three trays at the table. As I dumped them in the trash can, I grabbed a handful of napkins and returned to our table."
     "I wiped the table as quick as I could, and then set to cleaning the bench. After a few minutes of wiping, I dried my hands with a remaining napkin and tossed them in the nearest trash can."
 
@@ -11255,8 +11291,9 @@ label PRG045_c1_fail:
     hide WG with dissolve
     "I sat down on Aida's bed as Alice joined Aida in the bathroom. After a few minutes had passed, I could make out a soft whirring sound. It sounded similar to a vacuum with a clogged hose."
     "I busied myself by fishing a pen out of my backpack and doodling on my hand. I was just finishing the tip of a fairly sad looking sword, when the door opened and Alice stepped out, followed closely by Aida, her eyes glued to the floor."
-    show PRG unique at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG unique at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Aida looked up at me, before tossing a shirt and bra into her laundry bin, both of which looked incredibly wet."
     PRG "T-Thanks for waiting, Keisuke."
     WG "And for picking up after us in the cafeteria."
@@ -11538,12 +11575,14 @@ label PRG046_c3_AE:
     MC "Yeah, I think so. We've already gotten a fairly good start."
     AE "Excellent. Hopefully this won't take too terribly long, then."
     MCT "Judging by your stack, let's pray for this century."
-    hide AE with dissolve
-    hide PRG with dissolve
+    hide AE
+    hide PRG
+    with dissolve
     "Surprisingly, Shiori was actually fairly straightforward to study with. If she asked a question and you got it wrong, as long as you seemed like you were paying attention and made note of the right answer, she seemed satisfied."
     "Finally, Shiori shut the cover on the last notebook and looked fairly pleased."
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show AE neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     AE "Well, I'd say you both did fairly well, at least for not studying before now."
     PRG "You think so?"
     AE "I do. But don't rest on your laurels. I want you *both* to pass this exam."
@@ -11630,8 +11669,9 @@ label PRG046_c3_BE:
     BE "Five babies! I can't believe it. That's so awesome, guys!"
     BE "Remember, Auntie Honoka is always available if you need a babysitter!"
     PRG "We'll keep that in mind."
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "After around an hour of Honoka rattling on about what had been happening in her life and raving over the new babies, we hadn't even touched our books."
     show BE surprised at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     BE "Oh, jeez! It's that late already? I was supposed to be at tryouts for a new club!"
@@ -11689,8 +11729,9 @@ label PRG046_c3_AEBE:
         "I sat down next to Aida while Honoka took the seat across from her."
     "Before we could get too distracted, I pulled out one of my textbooks and flipped it open."
     "The absolute worst thing that could happen would be Shiori showing up to us all talking with no studying materials at the ready, and I wanted to take any and all steps to avoid that."
-    show BE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show PRG neutral at Position(xcenter=0.85, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(xcenter=0.85, yalign=1.0)
+    with dissolve
     BE "So, should we all take a section and take notes on it, then quiz each other on the material after that?"
     "I looked up from my book."
     MC "I'm shocked. When did you get so studious all of the sudden?"
@@ -11720,15 +11761,17 @@ label PRG046_c3_AEBE:
     "Honoka arched her back, so she was looking at the ceiling and sighed."
     show BE sad
     BE "...I hope you're right about this, girl."
-    hide PRG with dissolve
-    hide BE with dissolve
+    hide PRG
+    hide BE
+    with dissolve
     "Honoka sighed again and opened her textbook. Instead of note taking, she scribbled across her notebook cover as she read, then opened her notebook and began to write down bullet points."
     "Aida went sentence by sentence, writing down a few things word for word as she went along."
     "I sort of skimmed the text then wrote down key points from my skimming."
     "After about half an hour, we each had a section of notes to use. We all looked up as Shiori walked into the library, a stack of notebooks and her textbooks in her arms."
-    show BE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show PRG neutral at Position(xcenter=0.85, yalign=1.0) with dissolve
-    show AE neutral with dissolve
+    show BE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(xcenter=0.85, yalign=1.0)
+    show AE neutral
+    with dissolve
     AE "Good afternoon everyone."
     show AE neutral-eyebrow
     AE "Well now, Inoue-san. I'm sorry, I didn't expect to see you here."
@@ -11740,13 +11783,15 @@ label PRG046_c3_AEBE:
     AE "Unfortunately so. If you three split up the studying, each of you is only going to understand a third of the material."
     BE "We were going to combine our notes later. Then, we'd probably quiz each other or something."
     AE "Oh? Then I suppose I'll give each of you a sort of quiz now, to see how far along each of you are with the material."
-    hide BE with dissolve
-    hide PRG with dissolve
-    hide AE with dissolve
+    hide BE
+    hide PRG
+    hide AE
+    with dissolve
     "Shiori went around the table for the next twenty minutes or so, firing off seemingly random questions at us to test our comprehension. By the end of her makeshift test, she leaned back in her chair, seeming satisfied."
-    show BE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show PRG neutral at Position(xcenter=0.85, yalign=1.0) with dissolve
-    show AE neutral with dissolve
+    show BE neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(xcenter=0.85, yalign=1.0)
+    show AE neutral
+    with dissolve
     AE "I'd say each of you has a fairly good grasp of it. Kodama-san, you got 24 out of my 30 questions correct."
     AE "Hotsure-san, you had 22 out of 30 correct."
     show AE surprised
@@ -14066,8 +14111,9 @@ label PRG055A:
     "And as for Sakura, she didn't have a mean bone in her body, so no trouble there."
 
     scene Cooking Classroom with fade
-    show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     MC "All right! No one fret! The chef has arrived!"
     show PRG happy
     PRG "Yay!!"
@@ -14174,8 +14220,9 @@ label PRG055A:
     "Aida stepped forward and collected the avocado slices and her vegetables. She made a base of tomato halves and cucumbers, then topped it with avocado, staggering it across the top."
     PRG "Anything extra, or just a basic salad?"
     Sakura "Hmm... I think some extra virgin olive oil would be perfect on this. Could you grab the bottle, Hotsure-san? It should be in the oils and seasonings cabinet."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "I nodded and went to the enormous wall of cabinets, scanning across until my eyes landed on the right one. The thing was stocked from wall to wall with bottles, but I found the extra virgin olive oil fairly easily."
     MC "Here you are."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -14199,8 +14246,9 @@ label PRG055A:
     Sakura "Ohhhh, you're asking for it now!"
     MC "Ah, no no! Judges can not interfere with the participants!"
     Sakura "Ah, shoot. You're right. You win this round, Kodama-san."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "Aida grinned as the water came to a boil. She added some beef stock powder to it, which formed into a savory smelling broth after a few minutes. She went to the cupboard, returning with mirin and soy sauce, which both went into the pot."
     "Once the three ingredients were mixed into the water, she set the pot to keep its heat, and grabbed a new pan, turning another burner on. She chopped some tofu into thin pieces and began frying it on the stovetop."
     "As the tofu began to really heat up, she added soy sauce and sugar to it, which gave the tofu a sort of caramelized look."
@@ -14240,8 +14288,9 @@ label PRG055A:
     MC "It's the least I can do. Why don't you two go figure out a training regimen for you to follow tomorrow, as well? I'll take care of these."
     show PRG neutral
     PRG "If you say so. Thank you, hun."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "Aida kissed me on the cheek and joined Sakura at the table. She took Sakura's notebook that she'd written a few ideas in, and added onto them."
     "They had the makings of a true team. Hell, they already were one in my eyes. But, their ability to adapt was truly remarkable."
     jump daymenu
@@ -14342,8 +14391,9 @@ label PRG055B:
 
     scene Cooking Classroom with fade
     "Upon entering the kitchen, the scent of something freshly baked smacked me in the face like a baseball bat."
-    show PRG worried at Position(xcenter=0.3, yalign=1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show PRG worried at Position(xcenter=0.3, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.7, yalign=1.0)
+    with dissolve
     "Sakura sat at the table, jotting down some notes with her good hand, while Aida was leaning over some cookies on the counter, frosting them one by one."
     Sakura "Oh, hello Hotsure-san!"
     MC "Hey, you two. What's going on?"
@@ -14557,8 +14607,9 @@ label PRG055C:
     "Aida and I looked at each other and closed the distance, entering the kitchen."
 
     scene Cooking Classroom with fade
-    show PRG unique at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show Sakura neutral with dissolve
+    show PRG unique at Position(xcenter=0.25, yalign=1.0)
+    show Sakura neutral
+    with dissolve
     "Sakura sat on a stool at a nearby table, a large notebook in front of her. Strangely, it seemed that she was completely alone."
     MC "Ah... hey, Sakura."
     Sakura "Oh! Morning, guys! What's up?"
@@ -14792,8 +14843,9 @@ label PRG056A:
     PRG "J-Just a minute!"
     "Both Sakura and I heard a soft slam, followed by a door shutting. It was hard to tell, but I could've sworn that I heard a pouring sound coming from inside."
     "About a minute later, Aida's door swung open."
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     PRG "Oh! I... uh, I didn't expect to see you two together."
     show PRG unique
     PRG "Um... is something wrong?"
@@ -14806,8 +14858,9 @@ label PRG056A:
     PRG "Wait, I have an idea!"
     scene Dorm PRG with fade
     "Aida waved us into her dorm and shut the door."
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Her dorm was in its usual pristine state, save for her desk off to one side, which was dusted with notes and sheets of loose leaf paper, with more notes strewn across them."
     "Aida waddled over to the kitchen, and threw one hand out, as if introducing someone to us for the first time."
     PRG "We can use my kitchen here!"
@@ -14824,15 +14877,17 @@ label PRG056A:
     scene Supermarket with fade
     play music Busy
     "By the time we got to the grocery store, it was already getting into the later parts of the afternoon. And, we still had two whole recipes to make."
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     PRG "Okay. I think what we should do is have each of you take a cart and fill it up with whatever you need."
     Sakura "Why not just use one cart? Seems like that would be easier."
     PRG "Well, for one thing, we can separate out the ingredients for each meal, so we don't have to sort through it all later. Plus, separating you two will stop me from walking with you while you shop."
     MC "Wait, what're you gonna do while we're shopping then?"
     PRG "I need a few things for my dorm. Let's all meet at the registers once we're finished."
-    hide Sakura with dissolve
-    hide PRG with dissolve
+    hide Sakura
+    hide PRG
+    with dissolve
     "The three of us split off into different directions."
     "I headed to the meat aisles first. Looking down at my recipe, I figured I could start at the meat, then work over to the spices and sauces, and finish at the fruits and vegetables."
     "So long as we could avoid Aida, Sakura could probably do the inverse of my route, and we'd finish at the same time, give or take a few minutes."
@@ -14878,8 +14933,9 @@ label PRG056A:
     "Aida's selection wasn't so lucky, however, and had to be split amongst the three of us to haul back."
     scene Hill Road with fade
     play music Hallway
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG unique at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG unique at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Sakura "Hahhh... Haaaaaahhhh... I'm beat."
     "The three of us all stopped to catch our breath just outside the academy. Walking to the grocery store had been way easier than walking back."
     PRG "I-I'd like to make an executive decision..."
@@ -15319,10 +15375,11 @@ label PRG056C_c1_1:
     "Closing in on the kitchen, I could vaguely make out music of some type, and someone singing... rather poorly."
     "I chuckled to myself. I knew that voice all too well. I heard it almost every day in class, of course."
     BE "IT'S MORE DANGEROUS!"
-    scene Cooking Classroom with dissolve
-    show BE happy at Position(xcenter=0.2, yalign=1.0) with dissolve
-    show PRG happy at Position(xcenter=0.8, yalign=1.0) with dissolve
-    show Sakura neutral with dissolve
+    scene Cooking Classroom with fade
+    show BE happy at Position(xcenter=0.2, yalign=1.0)
+    show PRG happy at Position(xcenter=0.8, yalign=1.0)
+    show Sakura neutral
+    with dissolve
     "Honoka had a wooden spoon in her hand, her eyes shut, and was belting the lyrics to some obscure rock song into the spoon, grasping the handle as if she were on stage."
     "Sakura sat at the table nearby, laughing so hard that she was practically falling off of her chair."
     "Aida was at the counter nearby, slicing some vegetables into a bowl, a wide grin spread across her cheeks."
@@ -15339,16 +15396,18 @@ label PRG056C_c1_1:
     Sakura "I didn't think it was bad!"
     BE "Yes! Point for Honoka!"
     "Honoka pumped her fist excitedly, going back to the steak she was preparing on the counter. I made myself busy by walking over to Aida and hugging her from behind, rubbing her belly on either side."
-    hide BE with dissolve
-    hide Sakura with dissolve
+    hide BE
+    hide Sakura
+    with dissolve
     show PRG neutral at center with dissolve
     MC "How's it going?"
     PRG "Good. She was singing folk songs earlier."
     MC "I'm almost sorry I missed it. What's the dish of the day today?"
     PRG "Gyukatsu. I thought that we'd be better off practicing the dish that we're making for the competition. It isn't too far off from now, and the more time we put into it, the better."
     MC "Good. So... can I try it once it's done?"
-    show BE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.2, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     BE "Who died and made you the taste tester?"
     MC "If we want to get all technical, Aida did. But, I'm pretty sure she's alive."
     BE "You sure about that? I've seen some convincing zombies in movies and stuff."
@@ -15395,8 +15454,9 @@ label PRG056C_c1_1:
     show PRG aroused
     PRG "That's my favorite part~"
     MC "My favorite part happens to be shoveling said food into my mouth, but I see where you're going, there."
-    show BE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
-    show PRG aroused at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.2, yalign=1.0)
+    show PRG aroused at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     "Honoka leaned her head over the counter toward us."
     BE "Hey, Aida? I'm good to start deep frying this now, right?"
     show PRG neutral
@@ -15408,8 +15468,9 @@ label PRG056C_c1_1:
     BE "About here."
     PRG "Good. That'll make sure the beef cooks correctly."
     "Aida hurried back to the counter where Honoka had a pot and frying oil at the ready. I claimed a chair at Sakura's table and took a seat."
-    hide BE with dissolve
-    hide PRG with dissolve
+    hide BE
+    hide PRG
+    with dissolve
     MC "So, did I miss anything interesting?"
     show Sakura neutral with dissolve
     Sakura "Not particularly. Honoka is a really quick study, though!"
@@ -15417,8 +15478,9 @@ label PRG056C_c1_1:
     Sakura "Mhm! Obviously, she hasn't been in classes for cooking, like Kodama-chan and I have, but she's keeping up really well!"
     MC "Awesome! So, you're proud of your understudy, then?"
     Sakura "Oh, yes. Incredibly proud."
-    show PRG neutral at Transform(xzoom=-1), Position(xcenter=0.8, yalign=1.0) with dissolve
-    show BE happy at Position(xcenter=0.2, yalign=1.0) with dissolve
+    show PRG neutral at Transform(xzoom=-1), Position(xcenter=0.8, yalign=1.0)
+    show BE happy at Position(xcenter=0.2, yalign=1.0)
+    with dissolve
     "While the two of us made small talk, Aida was holding the pot full of oil while Honoka lowered each piece of beef into the heated oil."
     "If one was paying close attention, they could notice that Honoka and Aida were both standing in a similar stance. They had their arms outstretched over their breasts, with their legs placed further back."
     "Given how this stance was meant to give their arms a complete range of motion, both of them had their breasts somewhat hanging underneath them, with Aida's belly underneath her own breasts."
@@ -15452,18 +15514,20 @@ label PRG056C_c1_1:
     "Sakura dashed across the room, her body jiggling with each step. She took the cooling rack in her good hand and hurried back to Aida, passing it to her."
     "Aida slid the rack down the counter as a bartender would, straight to Honoka."
     "Honoka slammed her hand down on it and plucked the steak from the oil, laying each piece down on the rack one by one."
-    show BE surprised #embarrassed
+    show BE embarrassed
     show PRG neutral
     BE "Hah... that was close."
     PRG "Well, it wouldn't have been the end of the world if they got overdone. The steak would've just been a little more done. But, rare is how gyukatsu is traditionally served."
     show BE neutral
     "While the meat cooled, Aida started on making a dipping sauce for the gyukatsu. Honoka gathered all of the vegetables that Aida had sliced and took them to the stove where she'd begun sauteing them with some butter, oil, and garlic."
-    hide BE with dissolve
-    hide PRG with dissolve
+    hide BE
+    hide PRG
+    with dissolve
     MC "God, that smells fantastic."
     Sakura "Right? I love gyukatsu."
-    show BE neutral at Transform(xzoom=-1), Position(xcenter=0.2, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show BE neutral at Transform(xzoom=-1), Position(xcenter=0.2, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     "In the kitchen, Aida and Honoka were plating the gyukatsu and the vegetables. Aida took her sauce and ladled it into four smaller cups, carrying them two at a time to the table."
     show BE happy
     BE "Dinner is served!"
@@ -15548,13 +15612,14 @@ label PRG056C_c1_2:
 
     scene Cooking Classroom with fade
     "A small mountain of green beans, onions, and peas was on the floor, with a frying pan still slightly ringing beside it. Honoka stood over it, her hands still open from the initial drop."
-    show BE surprised with dissolve #embarrassed
+    show BE embarrassed with dissolve
     BE "Eheh... hey, Kei-chan."
     MC "Morning. Looks like you guys are already having fun."
     BE "Yeah. Define fun."
-    show BE surprised at Position(xcenter=0.2, yalign=1.0) with dissolve #embarrassed
-    show PRG worried at Position(xcenter=0.8, yalign=1.0) with dissolve
-    show Sakura neutral with dissolve
+    show BE embarrassed at Position(xcenter=0.2, yalign=1.0)
+    show PRG worried at Position(xcenter=0.8, yalign=1.0)
+    show Sakura neutral
+    with dissolve
     "Aida came over from the other side of the kitchen. Sakura was in her usual spot at the table, her notebooks in front of her."
     PRG "It happens to everyone, Honoka."
     Sakura "Yep! During one of my first meetings, I dumped an entire pot of soup onto the stove."
@@ -15563,8 +15628,9 @@ label PRG056C_c1_2:
     BE "Lucky me. So, where would a girl go to find cleaning supplies around here?"
     PRG "T-There's a supply closet down at the end of the kitchen. Look on the middle shelf for some spray bottles. The blue spray bottle is for counters and the green one is for floors."
     BE "Roger!"
-    hide BE with dissolve
-    hide Sakura with dissolve
+    hide BE
+    hide Sakura
+    with dissolve
     show PRG worried at center with dissolve
     "Honoka headed for the closet at the end of the room."
     PRG "Thanks for coming."
@@ -15608,9 +15674,10 @@ label PRG056C_c1_2:
     "Aida nodded, turning back around and going into the kitchen."
 
     scene Cooking Classroom with fade
-    show BE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.2, yalign=1.0)
     show PRG neutral at Position(xcenter=0.8, yalign=1.0)
-    show Sakura neutral with dissolve
+    show Sakura neutral
+    with dissolve
     "When we entered, Honoka was moving the vegetables into a garbage bag that Sakura was holding for her. She had a roll of paper towel on the floor next to her, along with the olive green spray bottle."
     BE "Sorry to waste everyone's time. I'll have this done in a sec."
     Sakura "No worries. Like Kodama-chan said, it happens to everyone."
@@ -15683,8 +15750,9 @@ label PRG056C_c1_2:
     PRG "H-How do you know?"
     MC "I've known her since we were little. She hasn't changed much."
     "Aida nodded and started organizing the vegetables back in the fridge. The door creaked open as Sakura back in."
-    show PRG worried at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show PRG worried at Position(xcenter=0.25, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Sakura "Huh? Where'd Inoue-san go?"
     PRG "H-Her shirt got dirty when she was cleaning the floor."
     Sakura "Ah, of course. So, are we just calling it for today?"
@@ -15712,13 +15780,15 @@ label PRG056C_c1_2:
     PRG "I-I'm hungry too."
     Sakura "Yeah, I could eat."
     MC "Sweet. Let's head off then."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "The two girls gathered their belongings and did a once over in the kitchen before shutting everything down."
 
     scene Hallway with fade
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     MC "So, what should the plan be for tomorrow?"
     show PRG unique
     PRG "Um..."
@@ -15780,8 +15850,9 @@ label PRG057A:
     show PRG unique
     PRG "Y-Yeah..."
     "Anyone could tell from the way that Aida went to the door that she was upset. Unfortunately for her, she wore her emotions on both sleeves."
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG unique at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG unique at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Sakura "Hey, lovebirds!"
     MC "Mornin'!"
     PRG "Hey..."
@@ -15848,8 +15919,9 @@ label PRG057A_c1_after:
     show PRG happy
     PRG "The good thing is she has a pretty varied palette, s-so I have no idea what you chose."
     MC "Wonderful. Keep guessing then."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "As Aida turned back to the counter, a sort of weird thought struck me. Sakura had chosen pasta primavera, which of course, consisted of vegetables, pasta, and spices."
     "And here I sat with a rack of ribs, some basic vegetables, and some simple sauces and spices. I was beginning to wonder if taking the rustic route was going to come back and bite me when Aida got around to preparing my dish."
     "I tried to allow my mind to wander from it. I listened to the rhythmic crunch of Aida running the knife through bell peppers and zucchini."
@@ -15859,8 +15931,9 @@ label PRG057A_c1_after:
     "As she pushed the broccoli into the pepper pile, she set down her knife and reached above the stove into a cupboard, producing a large, deep bowl. She went to the freezer of her fridge and pulled a small ice cube tray from it."
     "After bashing the tray on the counter once or twice to break the bonds of cube and tray, she took a few cubes and added them to the bowl, filling the bowl with water afterwards."
     "Bringing the filled bowl by her cutting board, she took the onion and dropped it into the ice water."
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     MC "Wow. Never had onions on ice before. How do you take yours?"
     PRG "Stirred, not shaken. Doing this gets rid of the acidity in the onions."
     MC "So they taste better?"
@@ -15994,8 +16067,9 @@ label PRG057A_c1_after:
         PRG "I-I mean our babies. Sorry..."
         MC "No! No worries! This is amazing!"
     "I ran my hands in the same spot, feeling the dull thud once more."
-    show PRG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show PRG happy at Position(xcenter=0.75, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     Sakura "I found them!"
     Sakura "W-Whoa. I-I can come back..."
     PRG "Sakura! Quickly! They're kicking!"
@@ -16024,8 +16098,9 @@ label PRG057A_c1_after:
     "Across the room, the oven chimed brightly. Aida walked over, her eyes never leaving her belly as she opened it and stuck the ribs in on a tray, slathering some sauce and spice on them for good measure."
     Sakura "So! Good for cards then?"
     PRG "Mhm. I'll do the vegetables when the ribs are about finished."
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide PRG
+    hide Sakura
+    with dissolve
     "The three of us passed the next few hours playing variations of poker and blackjack. Aida showed us a game that her and her grandparents would play together. She called it sheepshead or something weird like that."
     show PRG admire with dissolve
     "Throughout the rest of the day and even while we were eating, Aida would press her hand into her belly's side every so often, hoping for a little bump back."
@@ -16382,9 +16457,10 @@ label PRG057C:
         PRG "I know we're in already, but... I feel like if I let myself start thinking that this competition doesn't matter, I'll get complacent."
         PRG "So, to me... this competition matters just as much as the next one."
         "I had to grin at Aida beside me. How far she'd come over the course of this year was nothing short of astounding."
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show Sakura neutral with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show Sakura neutral
+    with dissolve
     Sakura "Alright! Chefs hats on, ladies!"
     show PRG neutral
     "Down at the other side of the room, Sakura and Honoka had walked in together and were making a beeline for us."
@@ -16410,16 +16486,18 @@ label PRG057C:
         BE "And, what should I do if I, like, freeze up or something?"
         PRG "Just follow my lead. I'll help you however I can."
         BE "All right. Thanks a ton."
-    hide BE with dissolve
-    hide PRG with dissolve
-    hide Sakura with dissolve
+    hide BE
+    hide PRG
+    hide Sakura
+    with dissolve
     "The announcer came forward, giving the usual bland and droning introduction, then introducing all of the judges one by one."
     "After his generic speech of good sportsmanlike conduct and the listing of the rules was finished, he called forward the first teams."
     "Luckily, Aida and Honoka would be cooking in the last heat, so Honoka could watch the other teams and see how they did things."
     stop music
     "About an hour or so later, and the rest of the teams had all taken their turn. Now, only two remained."
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     "On one side stood Aida and Honoka, aprons on and ready to roll."
     "On the other stood two guys, both of which looked fairly seasoned."
     Announcer "Both teams ready?"
@@ -16489,8 +16567,9 @@ label PRG057C:
         Sakura "I'm sure you could already tell this, but as time passes, there's significantly less room in the kitchen."
         "I didn't want to say anything out of line, but Sakura simply looked down at herself."
         MC "Yeah. Safety first."
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     "As the two of us were chatting, Honoka was finishing up the vegetables. Aida had gotten her oil ready and was heating it up, while simultaneously getting a pan ready for Honoka. Her gyukatsu sat breaded on a plate beside her, ready for the heat."
     "Honoka had her veggies in a bowl, ready for the pan. She made her move across the kitchen where the heated pan was ready and waiting."
     "A dash of butter was put into the pan with a bit of garlic, and Honoka added her veggies in. A loud sizzle came from the pan, and Sakura did a slight fist pump."
@@ -16548,8 +16627,9 @@ label PRG057C:
 label PRG057C_win:
     Announcer "Kodama-san and Inoue-san!"
     play music Schoolday
-    show BE happy at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG excited at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    show PRG excited at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Sakura and I both burst into applause, as did each spectator. The judges applauded politely from their table."
     "Aida's face was akin to a child on Christmas as she spun to look at Honoka. Sakura and I stood from our chairs to join them."
     BE "We did it! We actually won!"
@@ -16580,9 +16660,10 @@ label PRG057C_win:
     scene School Front with fade
     "A few hours later, the four of us walked back through the front gates of the school. It was still early afternoon, but all of us felt wiped out."
     "We'd all chipped in to pay for Honoka's ice cream as a thank you. She, of course, had tried to fight it, but we were all having none of it."
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show Sakura neutral with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Sakura neutral
+    with dissolve
     BE "Well, guys, I think I'm gonna go have a nap. This cooking stuff is exhausting."
     Sakura "I feel that, and I just sat on my butt watching."
     PRG "Thank you so much for helping again, Honoka."
@@ -16623,8 +16704,9 @@ label PRG057C_win:
 label PRG057C_lose:
     "Ushi-san and Ito-san!"
     play music Rain
-    show PRG nervous at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show BE sad at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show PRG nervous at Position(xcenter=0.75, yalign=1.0)
+    show BE sad at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     "The crowd applauded for the winning team. Beside me, Sakura began clapping as well."
     "In front of us, Aida applauded politely, as did Honoka, though it took her a second longer."
     "Once the applause died down, Sakura and I got up to meet them."
@@ -16654,9 +16736,10 @@ label PRG057C_lose:
     Sakura "Ditto."
     scene Hallway with fade
     "About an hour later, we all left the cafeteria together. After we'd all helped out with dishes, we decided to have some food and just relax."
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show Sakura neutral with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show Sakura neutral
+    with dissolve
     BE "Okay, so if you don't mind, could each of you give me one thing to improve on for the next time I cook?"
     Sakura "You're talking from the contest?"
     BE "Yep. Just give me a quick performance review."
@@ -17011,8 +17094,9 @@ label PRG058:
     PRG "I-I'm just gonna go home..."
     show FMG swim-school-neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
     "Aida turned around to go change out of her suit, and nearly plowed straight into Akira, who was walking out of the changing room behind her."
-    show FMG swim-school-surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
-    show PRG swim-casual-surprised at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show FMG swim-school-surprised at Position(xcenter=0.75, yalign=1.0)
+    show PRG swim-casual-surprised at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
     "Luckily for both of them, Akira backpedaled, narrowly missing a smack from Aida's belly."
     PRG "Oh! M-Mizutani-san! I-I'm sorry! I-I..."
     show FMG swim-school-happy
@@ -19725,8 +19809,9 @@ label PRG065_fail:
     MC "Soup me."
     show PRG neutral
     "Aida fished a ladle out of a nearby drawer. Behind us, I heard the low creak of a door."
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     Sakura "It already smells good in here!"
     "Sakura waddled in and over to the stove, joining us."
     PRG "We didn't really have anything else to do, so I figured I'd try making it myself and see what you thought when you got here."
@@ -19758,8 +19843,9 @@ label PRG065_fail:
     show PRG happy
     PRG "Yes! We're back!"
     Sakura "Yeah, we are!"
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "All three of us dove back into our bowls with renewed gusto. The team was back in action, and winning the finals seemed even more reachable than before."
     show PRG neutral
     show Sakura neutral
@@ -19913,11 +19999,13 @@ label PRG027Z:
     "As she said that, she gently rubbed my arm with her hand and walked back to her desk."
     hide BE with dissolve
     MCT "God, I must look down in the dumps if she was able to pick up on it that easily."
-    show WG neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
-    show PRG worried-handsbehind at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.2, yalign=1.0)
+    show PRG worried-handsbehind at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     "At the front of the room, Alice and Aida walked in together, both taking their seats."
-    hide WG with dissolve
-    hide PRG with dissolve
+    hide WG
+    hide PRG
+    with dissolve
     "From down the hall, we could all hear footsteps pounding the tile at an insanely rapid pace, getting closer to the classroom. Just before they reached, though, they slowed to a crawl."
     show FMG neutral with dissolve
     "Akira walked in at a casual pace, getting a wicked glare from Shiori as she passed by to her seat."
@@ -19931,8 +20019,9 @@ label PRG027Z:
     HR "All right. That's all I've got. I'll see you all tomorrow."
     hide HR with dissolve
     "Tashi-sensei popped open his back and packed up, and was out the door in no time."
-    show GTS surprised at Position(xcenter=0.2, yalign=1.0) with dissolve
-    show FMG neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show GTS surprised at Position(xcenter=0.2, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     GTS "Is he serious? That was hardly any information, save for the assignment."
     FMG "Are you saying that you don't want more time off?"
     GTS "Ah... no?"

@@ -55,7 +55,7 @@ label BE001_c1:
     extend " If anything, she looked pleased as punch, considering she lifted up her boobs like she was about to serve them on a silver tray."
     MC "Well if that is the case, hopefully I grow something big that you'll enjoy, too."
     "..."
-    extend "What did I just say?"
+    extend " What did I just say?"
     show BE surprised
     BE "Kei-chan! To think you'd be so forward..."
     show BE surprised at center, Transform(xzoom=-1)
@@ -548,7 +548,7 @@ label BE005:
     show BE surprised
     play music Schoolday
     BE "..."
-    extend "Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
+    extend " Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
     MC "I guess so? I've never really noticed it before if that's the case. I mean, I suppose I might have gotten haircuts a bit more often but it wasn't really something I paid much attention to."
     show BE neutral
     BE "That's fair. Me on the other hand, I've known what I was going to be growing for a while now."
@@ -1974,8 +1974,9 @@ label BE018:
     MC "I thought you said your roomie was going to be out until evening?"
     BE "That's what she said... Maybe it's someone else?"
     "Honoka stood up to open the door, and I peered over to check out who it was. Surprisingly, there stood Aida, fiddling with her fingers, but otherwise waiting patiently."
-    show BE happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     play music PRG
     BE "Oh hey! Aida-chan, what's going on?"
     PRG "Hello Inoue-san. I'm not interrupting you, am I? I was hoping to ask you something."
@@ -2010,11 +2011,13 @@ label BE018:
     PRG "You're sure?"
     BE "Tell you what, here, just whisper the problem to me and if I think he can't handle it, we'll get him outta here."
     MC "Do I get any say in this whatsoever?"
-    show BE neutral at Position(xpos=0.45) with dissolve
-    show PRG neutral at Position(xpos=0.55) with dissolve
+    show BE neutral at Position(xpos=0.45)
+    show PRG neutral at Position(xpos=0.55)
+    with dissolve
     "Apparently I didn't as Aida leaned up into Honoka's ear and whispered something I couldn't make out. I turned away from them as well to make it easier for Aida."
-    show BE unique at Position(xpos=0.25) with dissolve
-    show PRG neutral at Position(xpos=0.75) with dissolve
+    show BE unique at Position(xpos=0.25)
+    show PRG neutral at Position(xpos=0.75)
+    with dissolve
     BE "Oh, I getcha. Heh, I guess as far as our class goes I'm the go-to girl, aren't I? Well I'll see if I can help out with this. "
     show BE happy
     BE "Come on, here, sit down."
@@ -2189,8 +2192,9 @@ label BE018_c1_after:
     MC "You too, Kodama-san. Be safe."
     show BE happy
     BE "Yep! Good talkin' to ya, Aida-chan!"
-    hide BE with dissolve
-    hide PRG with dissolve
+    hide BE
+    hide PRG
+    with dissolve
     "Honoka got up to walk Aida over to the door, and then came back to sit down next to me after she'd left."
     show BE neutral at center with dissolve
     BE "Hahhh. That was nice. Glad to help her out."
@@ -2938,8 +2942,9 @@ label BE022:
     play music Peaceful
     $setProgress("BE", "BE023")
     "After the last school lunch bell rang for the day, I walked down to the cafeteria, to look for a snack. There were a wide variety of quick eats to grab and I was feeling pretty peckish."
-    show BE happy at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     BE "Oh, hey, Kei-chan. Come over here!"
     "Near the vending machine section of the cafeteria, Honoka was seated at a table with Alice across from her. The table looked quite cluttered, and caught my attention."
     MC "Yeah, sure."
@@ -3134,8 +3139,9 @@ label BE022_c1_1:
     BE "Here, Kei-chan and I will help clean up."
     show WG happy
     WG "Thank you. I'll just peruse your scores a bit more."
-    hide WG with dissolve
-    hide BE with dissolve
+    hide WG
+    hide BE
+    with dissolve
     "Honoka and I grabbed the bevy of wrappers and brought them over to the bins to toss them out. As we left the cafeteria, Honoka nudged my ribs with her elbow."
     MC "Ow."
     show BE sad at center with dissolve
@@ -3206,8 +3212,9 @@ label BE022_c1_2:
     show WG neutral
     WG "Thank you, Hotsure-san. I shall see you in class tomorrow, then?"
     MC "Yeah. Have a good night."
-    hide WG with dissolve
-    hide BE with dissolve
+    hide WG
+    hide BE
+    with dissolve
     "I nudged Honoka to have her help me grab the food wrappers and we brought them over to the trash cans."
     MC "So, what was the deal with hiding her food?"
     show BE neutral at center with dissolve
@@ -5697,8 +5704,9 @@ label BE032:
     BE "Hehehe, I'm so glad."
     "Honoka's finger left my finger, and moved up to my hair, moving another strand of it behind my ear. She giggled, and ran her palm along my cheek."
     BE "Your hair's so shaggy. I like it."
-    show BE happy at Position(xcenter=0.25, yanchor=1.0) with dissolve
-    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show BE happy at Position(xcenter=0.25, yanchor=1.0)
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
     AE "Inoue-san, class is about to begin. It would be prudent for you to return to your seat."
     "Shiori had stood up and trotted over to the opposite side of my desk. She pressed her glasses further up her nose and crossed her arms together."
     show BE neutral
@@ -6700,8 +6708,9 @@ label BE036:
     "Apart from having to sidestep a squirrel that was busy chewing on a nut in the middle of grass, Honoka and I didn't come across anything interesting to get us talking."
     "The squirrel finished its snack and then darted under a bench back towards a tree."
     "Until after a while, we heard some faint humming around the corner. Heading over, we saw Naomi standing around a large flower bed, in the middle of watering a variety of blooming flowers."
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show GTS happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     GTS "La la la~"
     show BE happy
     BE "Oh, hey, Naomi-chan! What's up?"
@@ -7457,8 +7466,9 @@ label BEGTS002:
     "I was just about to head back inside when I saw a distinctively tall figure. She was even taller than the light poles, which made her stand out even more in their brightness."
     show GTS neutral-2 with dissolve
     "Another figure was standing next to her. Seeing Naomi stand next to another person made me realize just how tall she was. It was easy to forget her height when she's the only one present."
-    show GTS neutral-2 at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1.0) with dissolve
-    show BE neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show GTS neutral-2 at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1.0)
+    show BE neutral at Position(xcenter=0.7, yalign=1.0)
+    with dissolve
     "Both Honoka and Naomi stood next to the light pole. They were illuminated by the white glow covering the sidewalk."
     show GTS unique-2
     show BE happy
@@ -7590,8 +7600,9 @@ label BEGTS002:
     MC "Your friendliness was, and still is, one of your best traits, Honoka. You can always find a reason to smile."
     BE "For better or for worse!"
     "I could hear Naomi roll over, causing the grass around her to crunch and rumble. She then slightly shifted her position, laying on her side rather than her back. Honoka and I sat up in response."
-    show BE neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1.0) with dissolve
-    show GTS neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1.0)
+    show GTS neutral at Position(xcenter=0.7, yalign=1.0)
+    with dissolve
     GTS "It certainly sounds like you two had a fun childhood."
     show BE seductive
     BE "What about you, Naomi-chan? Do you have any fun stories to share?"
@@ -7645,8 +7656,9 @@ label BEGTS002:
 
     scene Dorm Exterior with fade
     "We made our way back to the dorms. We had been out for quite a while, so the school building was locked down. The light poles that previously illuminated the sidewalk were now off."
-    show GTS neutral-2 at Position(xcenter=0.8, yalign=1.0) with dissolve
-    show BE neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0) with dissolve
+    show GTS neutral-2 at Position(xcenter=0.8, yalign=1.0)
+    show BE neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1.0)
+    with dissolve
     BE "Thank you for spending time with me, Naomi-chan. This was wonderful."
     show GTS unique-2
     GTS "I'm glad you had fun, Inoue-san. It was your idea, though!"
@@ -7887,8 +7899,9 @@ label BEGTS003:
     scene Store with fade
     "We made our way to a convenience store tucked away in one of the alleys on the right side of the road."
     "The path was much more narrow than the road itself, but it provided a bit more walking space than the sidewalk. A small lot with a swingset, vending machine, and phonebooth could be seen directly behind us."
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Honoka rotated herself to the left and sidestepped in order to make room for Naomi and I. It wasn't a tiny alley, but walking was still extremely compact."
     "Naomi ducked underneath a neon sign mounted to the wall when entering the alley, then contorted herself under the heating ducts mounted to the alley walls."
     show BE happy
@@ -7951,14 +7964,16 @@ label BEGTS003:
     GTS "Shall we be off, then?"
     show BE happy
     BE "Of course! I'm starving!"
-    hide BE with dissolve
-    hide GTS with dissolve
+    hide BE
+    hide GTS
+    with dissolve
     "Naomi ducked herself underneath the neon sign and proceeded back out of the alleyway. Honoka and I followed behind, returning to the main road."
 
     scene Park with fade
     stop music
-    show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show GTS neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show BE neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "The park was only a brief walk from main street. It was a much shorter distance from here to the store we visited than from the store to Seichou."
     "Naomi was less cautious in her strides this time around. Her pace was much more 'normal' compared to the slow and deliberate steps she usually took. Her strides were also longer."
     "By the time Honoka and I had caught up, she had realized that her pace had quickened."
@@ -8164,8 +8179,9 @@ label BEGTS003:
     BE "I'd... love to see that, actually."
     show GTS neutral
     GTS "Hold on tight."
-    hide GTS with dissolve
-    hide BE with dissolve
+    hide GTS
+    hide BE
+    with dissolve
     "With both of us in tow, Naomi proceeded to pick us up and carry us back to the dorms just as the sun began to disappear beyond the horizon."
     "Their discussion had me thinking about just how much more they had done with just the two of them. I was even more curious what Naomi planned on telling Honoka later."
     "I didn't need to worry about my curiosities right this moment, however. I had a pleasant walk with Honoka and Naomi before I turned into my dorm for the night."
@@ -8230,8 +8246,9 @@ label BEGTS004:
     PRG "O-Oh..."
     "It didn't take long to figure out what Aida was staring at."
     play music GTS
-    show PRG surprised at Position(xcenter=0.2, yalign=1.0) with dissolve
-    show GTS_S neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show PRG surprised at Position(xcenter=0.2, yalign=1.0)
+    show GTS_S neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     "Naomi stood in the courtyard, her height rivaling the cherry tree in the center. As she idly swayed and coaxed her body, light vibrations could be felt in the air."
     "Her movements disturbed the cherry blossoms upon the nearby branches, causing them to bounce and sway in response to the wind."
     "While Naomi wouldn't be one to intentionally get too close to buildings, there was still enough room inside the courtyard for her to stand."

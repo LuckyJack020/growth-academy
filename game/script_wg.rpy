@@ -379,8 +379,9 @@ label WG003_c1_3:
     MCT "I can't help but think things played out a little differently..."
     MCT "I wasn't exactly up for an argument. Still though, Aida doesn't seem to mind the whole arrangement, so there's not much else to say."
     MC "Well, I don't want to interrupt you two any further. I'll just be on my way then."
-    hide WG with dissolve
-    hide PRG with dissolve
+    hide WG
+    hide PRG
+    with dissolve
     "As I left I heard Alice giving Aida notes about the texture of the soufflé."
     jump daymenu
 
@@ -565,8 +566,9 @@ label WG005:
     "The previously boisterous atmosphere, typical of school cafeterias, now had the life completely sucked out of it."
     "All you could hear was the occasional low mumbles of hushed conversations that more often didn't even rise above the clanging of silverware."
     MCT "Hmm, no open tables. Oh! There's a spot right by Alice and Aida."
-    show WG sad at center with dissolve
-    show PRG sad at Position(xcenter=0.8, yalign=1.0) with dissolve
+    show WG sad at center
+    show PRG sad at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
     WG "..."
     PRG "I-Is something wrong, Nikumaru-sama?"
     show WG neutral
@@ -1269,8 +1271,9 @@ label WG009:
     WG "It's the difference between composing poetry and punching a brick wall. Elegance versus brute force."
     "I was just about to interrupt Alice - even though she already seemed to be wrapping up - when Akira beat me to it."
     FMG "Yo, Alice! Interesting theory you have there!"
-    show WG haughty at Position(xpos=0.6) with dissolve
-    show FMG angry at Position(xpos=0.25), Transform(xzoom=-1) with dissolve
+    show WG haughty at Position(xpos=0.6)
+    show FMG angry at Position(xpos=0.25), Transform(xzoom=-1)
+    with dissolve
     "Alice blanched at the sound of Akira's voice, but she recovered swiftly."
     show WG happy
     WG "It's not so much a theory as it is good common sense."
@@ -1307,8 +1310,9 @@ label WG009:
             WG "Well, you shall know soon enough."
     scene Pool with fade
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
-    show FMG swim-school-angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show FMG swim-school-angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     WG "Three full laps should be adequate, I think. Any objections?"
     FMG "Just don't forget your pool cap thingy! Don't want to get your expensive mullet to get ruined by chlorine!"
     show WG doubt
@@ -1321,15 +1325,14 @@ label WG009:
     FMG "Yeah, yeah, let’s do it already!"
     "They took their positions, I counted down from three, and they were off."
     stop music
-    hide FMG with dissolve
-    hide WG with dissolve
     show cg WG009 with dissolve
     "It was neck and neck for most of the first lap, but when the two reached the far end and pushed off the wall to return, Alice began to pull ahead."
     "By the time she completed her first lap Alice was a full length ahead of Akira, and that lead grew for the rest of the race."
     "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
     hide cg with dissolve
-    show FMG swim-school-sad at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
-    show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show FMG swim-school-sad at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     play music Busy
     FMG "...Son of a bitch... Good job I guess... I'm going to bed. Later."
     hide FMG with dissolve
@@ -3028,8 +3031,9 @@ label WG018:
     "I knew she was in the music club, but from what I'd heard she wasn't exactly endearing herself to anyone there."
     "Was I her only friend at the school? Nah, it couldn't be."
     "Either way, as brusque as she could be, I didn't mind the thought of getting closer to her."
-    show WG happy at center with dissolve
-    show PRG neutral at Position (xcenter=0.45, yalign=1.0) behind WG with dissolve
+    show WG happy at center
+    show PRG neutral at Position (xcenter=0.35, yalign=1.0) behind WG
+    with dissolve
     WG "Ah, Keisuke. Over here."
     "I found Alice and Aida sitting at her usual table, but instead of tea and cakes there was a full computer set-up. Monitor, tower, keyboard, mouse."
     "And jeez, this wasn't cheap. I wasn't up on the latest gaming hardware, but it looked like a Hayashi ZX-5000. Fresh out of the box, even."
@@ -5841,8 +5845,9 @@ label WG032_FMG_after:
     WG "Hotsure-san!"
     MC "Gah!"
     MC "What?"
-    show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
-    show FMG sad at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show WG angry at Position(xcenter=0.25, yanchor=1.0)
+    show FMG sad at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
     WG "My custom-made Vantelli dress. Ruined!"
     FMG "I said I was sorry."
     MC "I take it the dress didn't fit?"
@@ -7132,8 +7137,9 @@ label WG038_FMG009:
     WG "Only one way to find out."
 
     scene Cafe with fade
-    show WG neutral at center, Transform(xzoom=-1) with dissolve
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    show WG neutral at center, Transform(xzoom=-1)
+    show Chibuki neutral at Position(xpos=0.8)
+    with dissolve
     Chibuki "Good morning Miss, Good morning Mast- oh bugger."
     Chibuki "It's Keisuke isn't it?"
     "It suddenly struck me that I remembered this girl from somewhere."
@@ -7235,8 +7241,8 @@ label WG038_FMG000:
     MC "Well, alright then. I guess this could be fun."
     WG "Only one way to find out."
     scene Cafe with fade
-    show WG neutral at center, Transform(xzoom=-1) with dissolve
-    show Chibuki neutral at Position(xpos=0.8) with dissolve
+    show WG neutral at center, Transform(xzoom=-1)
+    with dissolve
     Chibuki "Good morning Miss, Good morning Master."
     "It appeared the only maid working at the moment was foreign. Her accent would be a dead giveaway, if her blue eyes didn't already. They were a deeper blue than Alice's."
     "She looked familiar, but I didn't know her. Maybe I had seen her before?"
@@ -8213,7 +8219,7 @@ label WG042:
     show WG neutral
     "Meandering through the rest of the game booths to get back to the food stalls, we came increasingly closer to the source of some unusually raucous yelling."
     Clown "Hey Horseface! I bet you couldn’t hit the broad side of a barn, despite living in one!"
-    extend "What are you mad about? No one’s looking at your face anyway with melons that big."
+    extend " What are you mad about? No one’s looking at your face anyway with melons that big."
     Clown "What about you there Mr. Beanpole? Think you can throw a ball without it going across the parking lot instead?"
     "It was your stereotypical carni dunk tank clown, riling up passersbys with the most personal insults a stranger could muster."
     Clown "Hey Bigfoot chick! Did you bring the yeti with you too? Those shoes are even bigger than mine! Where’da gett’m?"
@@ -8743,10 +8749,11 @@ label WG043:
         show WG swim-school-haughty
     WG "You'll have your chance to prove your skills if you want me to change my evaluation of them. Besides, you'll have the fortune of being on my team."
     WG "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
-    show PRG swim-school-neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
-    show FMG swim-school-neutral at Position(xcenter=0.3, yalign=1.0) with dissolve
-    show Natsuko swim-school-neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
-    show BE swim-school-neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show PRG swim-school-neutral at Position(xcenter=0.15, yalign=1.0)
+    show FMG swim-school-neutral at Position(xcenter=0.3, yalign=1.0)
+    show Natsuko swim-school-neutral at Position(xcenter=0.7, yalign=1.0)
+    show BE swim-school-neutral at Position(xcenter=0.7, yalign=1.0)
+    with dissolve
     "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
     if isEventCleared("WG009"):
         "But after seeing Alice and Akira swim before, I could tell I was going to be an anchor around Natsuko's neck if she was expecting us to win."
@@ -9055,8 +9062,9 @@ label WG044_c2_1:
     BE "Ahhhh!"
     "Next thing I knew, Honoka came barreling forward into Alice's room. A soft 'plomf' noise sounded as she made contact with the floor."
     "Having landed face or rather breast first onto the floor, Honoka looked up only to find a massive overhang of belly."
-    show BE embarrassed at Position(xcenter=0.3, yalign=1.0) with dissolve
-    show WG sad at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show BE embarrassed at Position(xcenter=0.3, yalign=1.0)
+    show WG sad at Position(xcenter=0.7, yalign=1.0)
+    with dissolve
     BE "I know what this looks like, but I promise that I wasn't listening on the door."
     WG "{i}sigh{/i} It's alright. I apologize for the distress caused by my lack of time management."
     "Alice and I helped Honoka back to her feet, I said my goodbyes and left."
@@ -9112,8 +9120,9 @@ label WG044_c2_2:
     "With a look of both panic and embarrassment, Alice soberly closed the doors to the wardrobe. Leaving me just a sliver of light in the darkness."
     "My eyes followed Alice as she hefted herself to the front door. Taking a few deep breaths to calm her nerves, she opened the door for Honoka."
     play music Peaceful
-    show WG neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
-    show BE happy at Position(xcenter=0.3, yalign=1.0) with dissolve
+    show WG neutral at Position(xcenter=0.7, yalign=1.0)
+    show BE happy at Position(xcenter=0.3, yalign=1.0)
+    with dissolve
     WG "First and foremost, I would like to personally apologize for the wait."
     "Honoka gave a slight chuckle at her apology."
     BE "For what? Not immediately opening the door when I knocked?"
@@ -9360,8 +9369,9 @@ label WG045_art:
     $setFlag("WG045_art")
     scene Dorm WG with fade
     "I entered Alice's dorm rather quietly, only to see that Kodama-san was already wide awake."
-    show WG neutral at Position(xpos=0.8) with dissolve
-    show PRG pj-happy at Position(xpos=0.2) with dissolve
+    show WG neutral at Position(xpos=0.8)
+    show PRG pj-happy at Position(xpos=0.2)
+    with dissolve
     PRG "Keisuke! Good morning!"
     if getAffection("PRG") > 3:
         MC "Good morning Aida."
@@ -11379,8 +11389,9 @@ label WG051:
     show WG swim-casual-haughty
     WG "Good. Come on, Aida is already waiting."
     "The volleyball net was set up a short distance from the tent."
-    show WG swim-casual-haughty at Position(xcenter=0.25, yalign=1.0) with dissolve
-    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG swim-casual-haughty at Position(xcenter=0.25, yalign=1.0)
+    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     WG "I'm assuming both of you are at least somewhat familiar with the rules of volleyball?"
     PRG "A little..."
     MC "Yeah, but it's been a while."
@@ -13409,13 +13420,13 @@ label WG058:
         show Sakura happy at Position(xcenter=0.8, yalign=1.0)
         with dissolve
         "They said I didn't need to pay them, insisting that they needed the practice anyway and that the cooking club paid for the ingredients,"
-        extend "but I convinced them that their time and effort was of obvious value and gave them some money anyway, despite their objections."
+        extend " but I convinced them that their time and effort was of obvious value and gave them some money anyway, despite their objections."
         "I walked away with a five-star feast at a fraction of the cost. I couldn't help but be grateful. Plus, I was sure to need their skills in the future to help me out if Alice's appetite was going to grow with the rest of her."
     else:
         "I asked Aida to help me make something memorable that would survive the trek intact and didn't have to stay hot to still taste good."
         show PRG excited with dissolve
         "She told me I didn't need to pay her, insisting that she needed the practice anyway and that the cooking club paid for the ingredients,"
-        extend "but I convinced her that her time and effort was of obvious value and gave her some money anyway, despite her initial objection."
+        extend " but I convinced her that her time and effort was of obvious value and gave her some money anyway, despite her initial objection."
         "I walked away with a five-star feast at a fraction of the cost. I couldn't help but be grateful. Plus, I was sure to need her skills in the future to help me out if Alice's appetite was going to grow with the rest of her."
     scene Field with fade
     "I had the perfect meal and the perfect spot picked out for a (hopefully) sufficiently romantic picnic."
@@ -13486,7 +13497,7 @@ label WG058:
     with dissolve
     Ryoko "Alight, action!"
     "They were a good distance from us, but her director's cues were still audible to us. I don't know too much about cinematography,"
-    extend "but they were clearly going for the 'long lost lovers finally reunited' vibe as the costumed actors raced across the field to embrace each other."
+    extend " but they were clearly going for the 'long lost lovers finally reunited' vibe as the costumed actors raced across the field to embrace each other."
     MC "Looks like the film club is getting some footage. Not quite dinner and a movie, but lunch and a preview isn't too bad for a date, huh?"
     show WG stern
     WG "Tsk, they're interrupting our view of the mountain vista. Cinema is the lowest form of the visual arts. How much more cliché than this typological scene could they get?"
@@ -15792,8 +15803,9 @@ label WGBE001:
     "Turning in her seat, Alice glared at us."
     show WG angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
     WG "Grrrrr..."
-    hide BE with dissolve
-    hide WG with dissolve
+    hide BE
+    hide WG
+    with dissolve
     "I tried to stifle my laughter, but Honoka, taking her own seat, kept chuckling right up until the teacher arrived."
     "It was hard to concentrate on the lesson now that I had that stupid song playing in my head, but at least I wasn't about to fall asleep."
     jump daymenu
@@ -15972,8 +15984,9 @@ label WGGTS001:
     "most of them must have done about as well as I did."
     show FMG sad at Position(xcenter=0.8, yalign=1.0) with dissolve
     "Not that I gained anything from the misery of others, but admittedly I did feel a bit better knowing I wasn't the only one that bombed that quiz."
-    hide BE with dissolve
-    hide FMG with dissolve
+    hide BE
+    hide FMG
+    with dissolve
     show GTS happy with dissolve
     "However, one face stood out among the dour and disappointed expressions."
     MC "Hey Yamazaki-san. You look particularly upbeat considering we just had a quiz. I take it you did pretty well?"

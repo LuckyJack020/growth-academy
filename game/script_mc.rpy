@@ -1385,8 +1385,9 @@ label RM002_c2_2:
     show Yuki sad
     UNKNOWN "...Math? Why does it matter?"
     "Before I could think of another way to stall her, Daichi came out of the room."
-    show Yuki neutral at Position (xcenter=0.25) with dissolve
-    show RM neutral at Position (xcenter=0.75) with dissolve
+    show Yuki neutral at Position (xcenter=0.25)
+    show RM neutral at Position (xcenter=0.75)
+    with dissolve
     RM "Yuki-chan! What a pleasant surprise."
     Yuki "Daichi-kun? What are you doing here?"
     jump RM002_c2_after
@@ -1395,7 +1396,7 @@ label RM002_c2_3:
     MC "I wouldn't go in there. They're... de-roaching."
     UNKNOWN "Roaches? In just the one classroom?"
     MC "..."
-    extend "Yes."
+    extend " Yes."
     show Yuki sad
     UNKNOWN "...Hmm."
     "Suddenly, the door opened."
@@ -1426,8 +1427,9 @@ label RM002_c2_after:
         MCT "But he'll probably get upset if I don't play along."
     MC "Oh, good. Alright, I'll see you back at the dorm, then."
     RM "Yeah, sure. Talk to you later, man."
-    hide RM with dissolve
-    hide Yuki with dissolve
+    hide RM
+    hide Yuki
+    with dissolve
     stop music
     "I began to walk down the hallway, but after a couple of seconds Yuki ran up to me."
     show Yuki neutral with dissolve
