@@ -3717,6 +3717,8 @@ label GTS024:
         GTS "I'll hold my umbrella over us, and you can walk directly in front of me. I'll do my best to match your pace."
         MC "Okay, that should work for me, um... that should work."
         "She was blushing a little, too, through a teacher's gently unrevealing expression."
+        show cg GTS024 with dissolve
+        pause 2
         "Naomi unfurled her umbrella to its span of a little over two meters, and stepped out from under the awning with a space in front of her."
         "It looked like just slightly more than enough room for me. I stepped inside it, and without a word, took a few slow steps forward."
         "She indeed matched my pace rather well, though the space under the umbrella necessitated that we stay quite close together."
@@ -3724,6 +3726,7 @@ label GTS024:
         "She didn't say a word, though."
         extend " I couldn't say why it occurred to me, but I couldn't hear her breathe, either. The only thing between us was the soft pitter-patter of rain just a little ways over my head."
         "We shortly reached my dorm. She walked up to the point where I could get into the lobby without getting wet, and stopped."
+        hide cg with dissolve
         MC "Ah... thank you, that worked out pretty well."
         MC "...I'll be back in just a minute, okay?"
         "She nodded."
