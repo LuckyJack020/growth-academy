@@ -635,6 +635,7 @@ label GTS009:
         $setProgress("GTS", "GTS011")
     else:
         $setProgress("GTS", "GTS011b")
+    $setTime(TimeEnum.EVE)
     scene Town with fade
     play music Hallway
     #Afternoon, gentle music, scene becomes locked after scene 10.
@@ -3251,7 +3252,8 @@ label GTS022_cutoff_b:
 
 label GTS023:
     $setProgress("GTS", "GTS024")
-    scene School Exterior with fade #set to school exterior eve if possible in next build
+    $setTime(TimeEnum.EVE)
+    scene School Exterior with fade
     play music Busy
     Ryoko "Cut!"
     "The actors broke their self-imposed stasis and looked up and over at Tanaka-san."
@@ -3880,6 +3882,7 @@ label GTS025:
     scene Campus Center with fade
     "I tapped my foot on the grass as I checked my watch once more. It was already half past five, and yet Ryoko still hadn't shown up."
     show GTS neutral at center with dissolve
+    play music GTS
     "Naomi seemed more patient than me as she sat under the tree, drinking tea from her cup."
     MC "I wonder what's keeping Tanaka-san. She was supposed to be here thirty minutes ago."
     GTS "It could possibly be some sudden school work she realized she needed to do. I'm sure she'll be here soon, though. By the way, would you like some tea, Hotsure-san? I brought some extra cups in case you and Tanaka-san wanted some."
@@ -4366,7 +4369,6 @@ label GTS026_c4:
     jump daymenu
 
 label GTS027:
-    #Knock on Wood
     if getFlag("GTS015_movie"):
         $setProgress("GTS", "GTS028T")
     else:
@@ -4380,6 +4382,7 @@ label GTS027:
     "Saving my game, I grabbed the scissors from my supply drawer and headed over to her dorm."
 
     scene Dorm GTS with fade
+    play music GTS
     "Stepping inside, I saw Naomi sitting in a Seiza position next to the table. Her hands worked on something obscured by her body."
     "Walking over I saw that on the table in front of her was a Bonsai tree."
     MC "Oh, a Bonsai tree. Now the scissors make sense."
@@ -5936,6 +5939,7 @@ label GTS035_testpass:
 label GTS037:
     $setProgress("GTS", "GTS038")
     scene Classroom with fade
+    play music Schoolday
     "Another day of my classes had come and gone. I sat in my chair, packing up my supplies as the other students prepared to leave. Tashi-sensei chimed in with a personal anecdote after the lesson was over."
     show HR neutral with dissolve
     HR "...and that's why you should never use a power drill in place of a dental drill."

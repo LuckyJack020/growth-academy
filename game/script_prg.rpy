@@ -1411,6 +1411,7 @@ label PRG007_c1_after:
 label PRG008:
     $setProgress("PRG", "PRG009")
     scene Dorm Exterior with fade
+    play music Peaceful
     "I blocked my eyes from the morning sunshine as I stepped outside. My hair probably could've done the job on its own, but I felt like crap, so I didn't really care."
     "I'd woken up with one of those headaches that feels like your eyes are about to explode in your head and splatter on the floor like eggs."
     "I probably could have taken the day off and just slept until I felt better, but I didn't feel like making up the homework and trying to catch up on whatever Tashi-sensei was going on about that day, so toughing it out seemed like a far superior option."
@@ -5110,8 +5111,8 @@ label PRG020_c2_2:
 
 label PRG021:
     $setProgress("PRG", "PRG022")
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
-    #SCENE - CLASSROOM DAY
     show AE neutral with dissolve
     play music Schoolday
     AE "And bow!"
@@ -5582,8 +5583,8 @@ label PRG022_c1_after:
 
 label PRG023:
     $setProgress("PRG", "PRG024")
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
-    #SCENE: CLASSROOM DAY
     play music Busy
     "As per usual, I didn't pay much attention in class, choosing instead to stare at the wall in front of me. Tashi-sensei was engrossed in his typical long running lectures, and didn't seem to care whether the class paid any notice."
     show HR neutral with dissolve
@@ -5961,6 +5962,7 @@ label PRG025:
     "I finished drying my hair and put on a pair of sweatpants while leaving my chest bare, the perfect gaming attire. Just as I went to my bedside to lay down, I heard a rapidfire knock coming from the door."
     "Groaning, I went to the door and opened it, expecting it to be Daichi, forgetting something important for his 'mission' tonight."
     show PRG sad with dissolve
+    play music PRG
     "There stood Aida, fist raised as if she was about to knock again."
     MC "Augh! K-Kodama-san?!"
     PRG "Oh Hotsure-san, thank god!"
@@ -6315,6 +6317,7 @@ label PRG026:
 label PRG026_father:
     $setProgress("PRG", "PRG027")
     scene Dorm Interior with fade
+    play music Hallway
     "I smoothed my shirt with my hand and smiled. It had been a few days since Aida and I had... made love, and weirdly, I hadn't seen her since."
     "She hadn't been in class for two days. According to Alice, she hadn't been feeling well as of late and was resting in their dorm. Although, even with Alice's assurance that she would be alright, I still was worried."
     "I ran a brush through my hair in a failed attempt to look less shaggy than I was. After our special moment together, I wanted to make sure that I at least looked presentable."
@@ -6596,6 +6599,7 @@ label PRG026_nofather:
     $setProgress("PRG", "PRG027Z")
     #$lockRoute("PRG") #when route is complete
     scene Dorm Interior with fade
+    play music Hallway
     "I brushed a stray piece of hair off of my uniform and took a breath. I was going to go to Aida's room and I planned to walk her to class."
     "She'd been sick the last few days, so I hadn't seen her recently, but from the occasional text here and there, I gathered that she was feeling at least passable."
     "It was strange. Even though I felt comfortable with Aida, having spent so much time with her, after our latest encounter, I wasn't quite sure how to feel."
@@ -6876,7 +6880,7 @@ label PRG027:
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("PRG", "PRG028")
-    #[SCENE CAMPUSCENTER_DAY]
+    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     play music Busy
     MCT "Music is best when it makes you go deaf later."
@@ -7057,9 +7061,9 @@ label PRG027_c1_after:
 
 label PRG028:
     $setProgress("PRG", "PRG029")
+    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     play music Hallway
-    #[SCENE- CAMPUS CENTER-DAY]
     show PRG neutral with dissolve
     PRG "What would you think if I made fried rice today?"
     MC "I'd commend you for the delicious, yet simple rice, but also suggest that you try making something more complex."
@@ -7556,7 +7560,7 @@ label PRG031:
     "With a huff, I flew into my dorm and threw my backpack on the floor, diving straight for my bed. It had been a crazy, long day, and I wanted nothing more than to just sleep until the next morning."
     "My classes had been long and boring, and on top of the monotony, an assignment had come from every class, meaning I had a night full of studying and penciling in answers ahead of me."
     "Bashing my fist into my pillow in frustration, I rose from my bed and sat at my desk, rifling through the crowded mess of books and paper. Organization was never a strong point of mine, and it came back to burn me during times like this."
-    #(knocking SFX)
+    play sound Knock
     "I had just found my first assignment and was starting in on the first row of questions, when a tiny knock came from the door."
     MCT "Thank you, dear stranger, for the distraction."
     show PRG neutral with dissolve
@@ -9004,8 +9008,8 @@ label PRG036_c1_after:
 
 label PRG037:
     $setProgress("PRG", "PRG038")
+    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
-    #[SCENE - CAMPUSCENTER_DAY]
     play sound AlarmClock
     play music Busy
     "My backup alarm rang out from my phone as I leisurely crossed the courtyard. I shut it off quickly before continuing on my way. Today was the day of Aida's third competition, and I intended to show up in a timely fashion."
@@ -9909,7 +9913,7 @@ label PRG039_c1_2:
     jump daymenu
 
 label PRG040:
-    #[SCENE - CAMPUSCENTER_DAY]
+    $setTime(TimeEnum.DAY)
     $setProgress("PRG", "PRG041")
     scene Campus Center with fade
     play music Peaceful
@@ -10097,6 +10101,7 @@ label PRG040_c1_after:
     jump daymenu
 
 label PRG041:
+    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     $setProgress("PRG", "PRG042")
     play music Rain
@@ -10107,7 +10112,6 @@ label PRG041:
     "Rather than being proper and untying my shoes, I crammed my feet into them and popped the backs over my heels. I couldn't bother to waste time now, and risk being late for our early morning get together."
 
     scene Campus Center with fade
-    #[SCENE CHANGE - CAMPUSCENTER_DAY]
     "The campus was deserted, as it was every weekend before noon. Clearly every student enjoyed their sleep more than they cared about anything else."
     "To be fair, I wouldn't be up this early if it wasn't for the promise of delicious breakfast food being served to me."
 
@@ -10248,8 +10252,8 @@ label PRG041:
     jump daymenu
 
 label PRG042:
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
-    #[SCENE - CLASSROOM_DAY]
     $setProgress("PRG", "PRG043")
     play music Schoolday
     "{i}Tap. Tap. Tap. Tap.{/i}"
@@ -10519,7 +10523,7 @@ label PRG042:
     jump daymenu
 
 label PRG043:
-    #[SCENE - CLASSROOM_DAY]
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     $setProgress("PRG", "PRG044")
     play music Busy
@@ -11335,6 +11339,7 @@ label PRG045_c1_fail:
 label PRG046:
     $setProgress("PRG", "PRG047")
     scene Hallway with fade
+    play music Hallway
     "The cold nip of the school's walls felt almost comforting as I pressed my back against it and shut my eyes, letting my backpack sag down onto the floor next to me."
     "I'd been sitting in class today when Tashi-sensei had reminded all of us of this huge exam coming up at the end of the week. Me being me, I'd totally blanked on it, and hadn't studied a thing."
     "Thankfully, I still had a good three nights that I could use for some solid studying, but I really didn't feel like being a sleepless shut-in for the next 72 hours."
@@ -12014,6 +12019,7 @@ label PRG047:
 label PRG048:
     $setProgress("PRG", "PRG049")
     scene Dorm Interior with fade
+    play music HigherEdu
     "I rubbed my eyes and checked my alarm clock. Even though the clock read 12:15, I still felt as if I'd barely made a dent in this."
     "Across the room, Daichi was snoring softly into his pillow, laying in a pile of notes, pencils, and printed off articles from a number of sketchy sites."
     "The exam was in two days, and after class today, I felt way less than prepared. Tashi-sensei had done a full review with us, and the minute I saw everything that would be on the test, I knew I was in deep trouble."
@@ -12696,6 +12702,7 @@ label PRG050_c1_after:
 label PRG051:
     $setProgress("PRG", "PRG052")
     scene Dorm Interior with fade
+    play music Peaceful
     #(ALL PRG SPRITES WILL BE USING HER DRESS SPRITES)
     "I looked in the mirror at myself once last time. I wanted to make sure that I looked my absolute best for Aida tonight, even if it killed me."
     #(IF AIDA BOUGHT KEI CLOTHES)
@@ -13225,6 +13232,7 @@ label PRG051_c1_after:
 label PRG052:
     $setTime(TimeEnum.EVE)
     scene Dorm Interior with fade
+    play music Busy
     $setProgress("PRG", "PRG053")
     "I burst into my room, immediately grabbing a bag out my closet. I threw a few movies into it and grabbed a pair of sweatpants and a t-shirt out of my drawers. Plus socks, boxers, all that."
     "Across the room, Daichi leaned back in his chair, seeing me come in."
@@ -14969,6 +14977,7 @@ label PRG056A:
 label PRG056B:
     $setProgress("PRG", "PRG057B")
     scene Dorm Interior with fade
+    play music Busy
     "As per the usual, I'd slept like crap last night. It took every bit of willpower I had to roll off the side of the bed and get dressed."
     "As I was brushing my teeth, I took one look out the window and saw that apparently the earth was having a rough morning right along with me. The campus was being pelted by rain, accompanied by the occasional gunshot-like thunderclap."
     "I took one of my many sweatshirts from my closet and slipped it over my uniform, tucking my hair into it, and pulling my hood up. I would've given the world for an umbrella right now."
@@ -15808,7 +15817,6 @@ label PRG056C_c1_2:
     jump daymenu
 
 label PRG057A:
-    #Practicing Perfection
     $setProgress("PRG", "PRG058")
     scene Dorm Exterior with fade
     play music Hallway
@@ -16108,7 +16116,6 @@ label PRG057A_c1_after:
     jump daymenu
 
 label PRG057B:
-    #The Gift of Thought
     $setProgress("PRG", "PRG058")
     scene Dorm Interior with fade
     "Sunlight shone through my window, the morning light beaming against me. Thanks be to my hair, for shielding me from the inevitable eyeball sear that would've come were it not for the constant curtain."

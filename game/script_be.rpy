@@ -328,7 +328,6 @@ label BE003_c2:
     jump daymenu
 
 label BE003_c3:
-    #should this be an affection loss? she even calls it a "fun talk"
     $setAffection("BE", -1)
     play music Tension
     show BE athletic-angry
@@ -3424,6 +3423,7 @@ label BE022_c1_4:
 
 label BE023:
     scene Track with dissolve
+    play music BE
     $setProgress("BE", "BE024")
     "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
     "Compared to other clubs that Honoka had joined, there didn't seem to be much to archery in terms of different activities they did. Apart from making sure they used the proper technique, and firing at targets, there was no variety."
@@ -5095,7 +5095,7 @@ label BE028_test_2:
 label BE028_test_3:
     "Honoka and I watched the love tester as it responded to our synchronized squeezing. The lights on the machine went wild as a display moved up and down between the best and worst options. We were obviously hoping for the best."
     MC "Come on, come on."
-    #show BE happy
+    show BE happy
     BE "We got this, Kei-chan!"
     "Honoka's fingernails dug slightly into my hand as she squeezed mine. I grit my teeth, and tugged as hard as I could until the display stopped moving."
     "Lights went off in several spots and a weary sound played, so distorted and fragmented that we couldn't make out what it originally was. But the light had stopped right at the top, signifying us as Wedding Wishers."
@@ -6475,6 +6475,7 @@ label BE035A_nosauce:
 label BE035B:
     $setProgress("BE", "BE036")
     scene Baseball Field with fade
+    play music BE
     #SFX: General chatter
     "When Honoka and I checked out the softball club, joining was contingent on one thing. She wouldn't be put into the team right away. They'd already split into two teams early in the year and played matches against each other on a regular basis."
     "They didn't want to put new players in the running right off the bat. So the first few meetings would be learning the basics and seeing where she performed."

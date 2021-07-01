@@ -1056,6 +1056,7 @@ label FMG011:
 label FMG012:
     scene Gym with fade
     show FMG neutral with dissolve
+    play music FMG
     FMG "Come on, harder!"
     MC "Gah!"
     "For the past two hours, with Akira's help, I learned some boxing moves thanks to a punching bag. Once we were done, I could feel myself stronger already."
@@ -1121,6 +1122,7 @@ label FMG012:
 
 label FMG013:
     #Scene Afternoon
+    $setTime(TimeEnum.EVE)
     scene Gym with fade
     play music Schoolday
     "After a long day, I headed back to my dorm and grabbed my gym clothes. Since Akira invited me to watch how she works out, I figured I might end up getting some exercise in myself."
@@ -1639,7 +1641,6 @@ label FMGOPT016:
     jump daymenu
 
 label FMG016:
-    #"The New Girl"
     $setProgress("FMG", "FMG017")
     scene Dorm Interior with fade
     play music FMG
@@ -2267,9 +2268,10 @@ label FMG019:
     jump daymenu
 
 label FMG020:
-    $setTime(TimeEnum.EVE)
+    $setTime(TimeEnum.NIGHT)
     $setProgress("FMG", "FMG021")
     scene Campus Center with fade #night
+    play music FMG
     "Evening came, and the stars appeared through as the day ended. Street lights began to illuminate the street."
     "As I was walking towards the school's cafeteria for dinner, I began to think about what I wanted to eat."
     "That is, until I realized that A) I've eaten every menu dish served at least once, and B) I didn't know if I'd already eaten dinner outside of the school, and if I had I couldn't remember at that point due to hunger."
@@ -4640,6 +4642,7 @@ label FMG032:
 
 label FMG033:
    #Time: Morning
+   $setTime(TimeEnum.DAY)
    $setProgress("FMG", "FMG034")
    scene Classroom with fade
    "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
@@ -6134,6 +6137,7 @@ label FMG042:
 label FMG043:
     $setProgress("FMG", "FMG044")
     scene Dorm Interior with fade
+    play music FMG
     "I told myself that today was going to be different."
     MC "I wrote four sentences the other day. Surely, I can crank out a page or two in an hour."
     scene black with fade
@@ -6374,6 +6378,7 @@ label FMG044:
 label FMG045:
     $setProgress("FMG", "FMG046")
     scene Dorm Interior with fade
+    play music FMG
     "Following the events of yesterday, I woke up with a sore neck and an even sore-er lower region."
     MCT "Gotta give it to her, she knows how to have a good time. I just wish my life wasn’t at risk during it."
     MCT "I’ll shoot her a text and see if she’s down to talk."
@@ -6499,6 +6504,7 @@ label FMG046:
     $setProgress("FMG", "FMG047")
     $setTime(TimeEnum.DAY)
     scene Hallway2 with fade
+    play music FMG
     MC "So, let me get this straight. You want to cook me an Okinawan dish that your mom used to make when you were a kid, but you don’t remember the recipe..."
     extend " Will this kill me?"
     show FMG angry
@@ -6647,6 +6653,7 @@ label FMG046:
     "The funniest thing about watching Akira cook was when Aida asked her to squeeze the lemon. Instead of using the juicer, Akira decided to use her hands... she squeezed juuuust a little too hard."
     show PRG surprised at Position(xcenter=0.25, yalign=1.0)
     show FMG angry at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     FMG "Man, come on! Now it’s going to stain my shirt... UGH!"
     MC "Heh, I think you should’ve tried the juicer."
     show FMG angry-2
@@ -6767,6 +6774,7 @@ label FMG046:
 label FMG047:
     $setTime(TimeEnum.DAY)
     $setProgress("FMG", "FMG048")
+    play music FMG
     scene Campus Center with fade
     MC_FMG "One... Two... Three!"
     show FMG happy
@@ -6881,8 +6889,9 @@ label FMG047:
     show FMG neutral
     FMG "Chicken. But fine, when you’re ready to get your ass handed to you, just say."
     MCT "You won’t see it coming, fool."
-    MC "Would you look at that? We arrived right on time. Pretty impressive- AH!"
-    #[screen shake]
+    MC "Would you look at that? We arrived right on time. Pretty impressive-"
+    show dummy with vpunch
+    extend "  AH!"
     show FMG happy
     FMG "You didn’t think I’d just let you get away with tying my shoelaces, did you?"
     FMG "Let me go get the janitor so he can clean up the trash, hahahaha."
@@ -6912,6 +6921,7 @@ label FMG047:
     MC "Hey, Kodama-san... Sakura’s roommate wouldn’t happen to be-"
     hide FMG
     hide PRG
+    with dissolve
     "And that’s when the door swung open, a girl with some really big thighs and bit too much cheek hanging out entered, who I presumed to be Sakura... followed by her..."
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Sakura "Sorry, everyone. We had a bit of a hair emergency! But we’re here now."
@@ -7147,7 +7157,8 @@ label FMG047:
 label FMG048:
     $setProgress("FMG", "FMG049")
     scene Cafeteria with fade
-    show FMG neutral
+    play music FMG
+    show FMG neutral with dissolve
     FMG "You... You going to finish those fries?"
     MC "I would like to but if you’re still hungry... uhhg, I GUESS."
     show FMG happy
@@ -7391,6 +7402,7 @@ label FMG048:
 label FMG049:
     $setProgress("FMG", "FMG050")
     $setTime(TimeEnum.EVE)
+    play music FMG
     scene Dorm Interior with fade
     "Ah, Sunday, the day before I have to suffer more in class."
     MC "I really should finish that essay. When is it due again?"
@@ -7562,6 +7574,7 @@ label FMG050:
     $setTime(TimeEnum.DAY)
     $setSize(4)
     scene Dorm FMG with fade
+    play music FMG
     "Yesterday... Yesterday was something else. Sharing that special moment with Akira was unreal. I never would’ve thought in a million years that’s how my first time would’ve gone. Fortunately, the surprises didn’t stop there."
     MC "Maaaan, I am beat. I don’t know if I could’ve survived round two."
     MCT "...Why is she taking up so much room today...? Whatever, I should get my stuff together. Well, what’s left of it. At least I saved my pants."
@@ -7771,6 +7784,7 @@ label FMG050:
 label FMG051:
     $setProgress("FMG", "FMG052")
     $setTime(TimeEnum.DAY)
+    play music FMG
     scene Lockers with fade
     "Today was the first day in the gym with Akira and her new size. I told myself it wouldn’t be {i}that{/i} bad... and it really wasn’t. Of course, I wasn’t able to keep up with her but with the routine she gave me today, I knocked it out of the freaking park!"
     $setSkill("Athletics", 2)

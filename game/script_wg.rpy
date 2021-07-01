@@ -3684,6 +3684,7 @@ label WG020_c2:
 
 label WG021:
     scene Pool with fade
+    play music WG
     "I had a creative writing assignment I needed to work on, and I just couldn't think of any ideas. Thus I found myself at the pool."
     "I had read somewhere that physical activity could get the mind working, get those creative juices flowing, so I thought I'd do a little exercising."
     "I came out of the men's locker room to find the pool rather empty."
@@ -4036,6 +4037,7 @@ label WG023:
     show WG neutral at center
     show PRG neutral at Position(xcenter=0.8, yalign=1.0) behind WG
     with dissolve
+    play music WG
     "After classes, Alice called Aida and I together for a business meeting."
     "She played it all straight-laced, going through a list of topics like an actual agenda."
     hide PRG with dissolve
@@ -4228,6 +4230,7 @@ label WG024:
     "I thought about going back to my dorm, but I wasn't really 'feeling' it."
     "Maybe if I took the long way around I would find something more interesting than those now familiar four walls."
     show WG angry at center with dissolve
+    play music WG
     MC "Oh, Alice. Good afternoon."
     MC "Something bothering you?"
     WG "No. Just a minor perturbance."
@@ -4387,6 +4390,7 @@ label WG024_c2_3:
 label WG025:
     $setProgress("WG", "WG026")
     scene Cafeteria with fade
+    play music WG
     "The music club had a meeting today, which meant Alice was having her dinner later than usual."
     "I had to pass along a delivery payment to her... which was the reason I gave myself for waiting to get my own dinner until later, too."
     "I could have rushed to meet her before the meeting started, get in and out of the music room, but..."
@@ -4532,6 +4536,7 @@ label WG025A:
     scene Cafeteria with fade
     "I was having trouble paying attention to the week's company meeting."
     show WG neutral at center with dissolve
+    play music WG
     WG "Moving on to new business, the recent tariff battle between America and China has me concerned blah blah blah..."
     "After building up the courage to ask Alice out it was hard not to treat her 'Ask me later' response as a loss."
     "A straight up 'No' would have been like ripping the band-aid off, the pain strong but gone quickly."
@@ -4607,6 +4612,7 @@ label WG026:
     hide HR with dissolve
     "But as I was getting ready to leave Alice put a hand on my shoulder."
     show WG neutral with dissolve
+    play music WG
     WG "May I have a moment?"
     MC "Uh, sure."
     "Her tone of voice almost made my stomach drop. This wasn't good news, whatever it was."
@@ -4737,6 +4743,7 @@ label WG027:
     "I had too much to do right now to relax."
     "I was in the middle of my meal and a description of eukaryotes when Alice appeared."
     show WG happy with dissolve
+    play music WG
     WG "Hello, Keisuke."
     WG "Studying while eating? I applaud your efficiency."
     MC "Thanks..."
@@ -5123,6 +5130,7 @@ label WG030:
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("WG", "WG031")
+    play music WG
     scene Dorm Interior with fade
     "Alice's illness had only lasted 24 hours, which meant only one thing."
     "Whether I was ready or not, my first date with Alice had come."
@@ -5484,6 +5492,7 @@ label WG030_afterdate:
 
 label WG031:
     #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     $setProgress("WG", "WG033")
     scene Classroom with fade
     play music Hallway
@@ -5678,6 +5687,7 @@ label WG031_c1_after:
 
 label WG032:
     #Time: Morning
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
     "I mean, for myself the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... My life hadn't changed."
@@ -5884,6 +5894,7 @@ label WG032_FMG_after:
 label WG033:
     $setProgress("WG", "WG034")
     #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     scene Cafeteria with fade
     "After class I went to the cafeteria to get a drink while doing the reading parts of my homework."
     "Despite the place being a somewhat popular hang-out spot after classes (I guess others had the same idea as me, free food to accompany homework), it was fairly quiet at this point."
@@ -5991,6 +6002,7 @@ label WG033_c1_2:
 label WG034:
     $setProgress("WG", "WG035")
     #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     scene Classroom with fade
     play music DayByDay
     "After class ended for the day I swung over to Alice's desk."
@@ -7336,6 +7348,7 @@ label WG038_FMG000:
 
 label WG039:
     #Time: Morning
+    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     $setProgress("WG", "WG040")
     play music Peaceful
@@ -11822,6 +11835,7 @@ label WG053:
     $setProgress("WG", "WG054")
     "I have the tickets in hand when my phone buzzes from a text. It's from Alice."
     WGCell "Head over when you are presentable, I'm ready."
+    play music WG
     "I check myself over again since I'm dressing far more formally than I have on any of our previous dates. Straightening my tie, I head towards her dorm."
     $setTime(TimeEnum.EVE)
 
@@ -15725,6 +15739,7 @@ label WGBE001:
     if getProgress("WG") == "WG038": #fix for wrong progress issue, delete later
         $setProgress("WG", "WG037")
     #Time: Morning
+    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     play music Schoolday
     "I got to class early today."

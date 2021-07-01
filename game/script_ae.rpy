@@ -3566,6 +3566,7 @@ label AE021:
     "When I walked into class today, Shiori-san was the first in the room."
     "Admittedly I was a bit awkward around her, seeing as how a day before I told her I wanted her to be my girlfriend. I nodded and smiled to her and she turned a shade of pink before doing the same. She pulled out her notebook and began to write."
     show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve #not sure if aroused, surprised or sad/shy
+    play music AE
     MC "U-um... Shiori-cha-"
     "As I was about to speak, Alice walked into the room with Aida in tow."
     show PRG neutral at Position(xcenter=0.90, yalign=1.0)
@@ -3795,6 +3796,7 @@ label AE021:
 label AE022:
     $setProgress("AE", "AE023")
     scene Dorm Exterior with fade
+    play music Hallway
     "As I exited my room, I took a breath of fresh air as I stretched my back. Daichi walked out next and nodded to me, purpose in his eyes."
     "One of my own still shut mid yawn, I nodded as Daichi opened the grate to the vents and climbed in, heading towards his planned destination."
     MCT "Alright. So far so good, I guess. Now I just head to class."
@@ -4107,6 +4109,7 @@ label AE023:
     $setProgress("AE", "AE024")
     scene Classroom with fade
     show HR neutral at center with dissolve
+    play music AE
     HR "-and essentially, you end up with an absolute mess called the Treaty of Versailles."
     "Class had been going by fairly normally. My eyes had begun to flutter as fatigue began to set in. I looked up towards Shiori-san, who was sitting with her usual composed demeanor."
     GTS "U-um."
@@ -4916,6 +4919,7 @@ label AE026:
     RM "Get up, we got class."
     MC "Mm... what time is it?"
     show RM angry
+    play music Busy
     RM "Like, six thirty. C'mon."
     MC "Aagn, damnit. Do you think I have time for-"
     RM "I get to class via air duct and I'm still gonna cut it close; you don't have time for nothin'."
@@ -5181,6 +5185,7 @@ label AE026:
 label AE027:
     $setProgress("AE", "AE028")
     scene Hallway with fade
+    play music Schoolday
     MC "Mgn... {i}Haaahn~{/i}"
     "This morning was eventful to say the least. At five in the morning my clock sounded off and scared me senseless, clearly taking exception to its poor treatment the other day."
     "Without thinking, I shot out of bed and hurriedly put on my clothes before running out the door."
@@ -6328,6 +6333,7 @@ label AE030_c1_after:
 label AE031:
     $setProgress("AE", "AE032")
     scene Hallway with fade
+    play music Peaceful
     "Once class ended, I spent some time with Shiori-chan. We talked for a while, and generally had a good time. However, after an hour or two, we parted ways and, with little to do, I decided to explore a bit."
     "I stood up straight and popped my back. My exploration had led me do a fairly empty part of the school, and in front of the music room."
     MCT "If a seasoned soccer player loses his breath just walking around the first floor, how the hell is anyone else supposed to-?!"
@@ -7394,9 +7400,9 @@ label AE035:
     jump daymenu
 
 label AE036:
+    $setTime(TimeEnum.EVE)
     scene Hallway with fade
     $setProgress("AE", "AE037")
-    #SCENE IN AFTERNOON
     play music Busy
     "As the day came and went, I had found time to talk with Shiori-chan when I could, and as usual, she was whisked away into a meeting after class."
     "Thankfully, according to her, her schedule had been clearing up and soon we'd be able to spend more time together."
@@ -7589,8 +7595,8 @@ label AE036:
 
 label AE037:
     $setProgress("AE", "AE038")
+    $setTime(TimeEnum.EVE)
     scene School Front with fade
-    #SCENE AFTERNOON
     #BIRD CHIRPING SFX
     play music Peaceful
     "The day had come for Shiori-chan and I to go to town. Thankfully, the forecast was sunny and cool for the rest of the day, and the birds chirped happily in the branches of the tree near the gate I was resting my back against."
@@ -7908,7 +7914,7 @@ label AE037_c2_after:
 
 label AE038:
     $setProgress("AE", "AE039")
-    #Scene Afternoon
+    $setTime(TimeEnum.EVE)
     scene Hill Road with fade
     play music Schoolday
     show AE neutral with dissolve
@@ -8139,7 +8145,7 @@ label AE038:
     jump daymenu
 
 label AE039:
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE040")
     scene Town with fade
     play music Schoolday
@@ -8346,14 +8352,14 @@ label AE039:
     jump daymenu
 
 label AE040:
-    #SCENE AFTERNOON
-    #SCENE OUTSIDE GIRLS DORM
+    $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE041")
     scene Dorm Exterior with fade
     play music Schoolday
     "As I exited the room, my eyes adjusted to the bright light of the adjacent window. I'd spent some of the afternoon with Tomoko, waiting for Shiori-chan to get done with her meeting so we could have one of our usual excursions to town."
-    show Yuki neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve #happy
-    show Tomoko neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show Yuki neutral at Position(xcenter=0.25, yanchor=1.0)
+    show Tomoko neutral at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
     Yuki "IT WAS CRAZY! And then, and then, Shiori-chan almost knocked over the cup with her butt, but caught it and was all like 'Who brought a drink to the meeting?' and I was all like-"
     "Of course, the indication her meeting had ended came when Utagashi-san came in babbling about the new topic of the second."
     MC "O-okay, Okay, Utagashi-san, I think I'm good for now."
@@ -8645,8 +8651,8 @@ label AE040_c1_after:
 
 label AE041:
     $setProgress("AE", "AE042")
+    $setTime(TimeEnum.EVE)
     scene Classroom with fade
-    #SCENE AFTERNOON
     play sound ClockTower
     "As the bell rang out Shiori-chan concluded the class with a respectful bow to the teacher, however, I didn't take the leisure of looking up, as my mind was focused elsewhere."
     MCT "Today's the day... It's almost time."
@@ -8836,7 +8842,7 @@ label AE041_c1_after:
 
 label AE042:
     $setProgress("AE", "AE043")
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Game Store with fade
     #STORE BELL SFX
     play music Tension
@@ -9097,7 +9103,7 @@ label AE042:
 
 label AE043:
     $setProgress("AE", "AE044")
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Town with fade
     play music Rain
     "As we walked through town, the bright afternoon sun shone only in short rays as silver clouds rolled in and filled the air with the rain's fragrance."
@@ -9344,7 +9350,7 @@ label AE043:
 
 label AE044:
     $setProgress("AE", "AE045")
-#SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Campus Center with fade
     #BIRD SFX
     "Entering the courtyard, I took a look around for Shiori-chan, who I'd promised to meet with for another afternoon out on the town."
@@ -9575,7 +9581,7 @@ label AE044:
 
 label AE045:
     $setProgress("AE", "AE046")
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Campus Center with fade
     "The wind howled and whipped about as I walked through the campus. Classes had ended, none of the student organization members had appeared outside of class, and yet Shiori-chan had yet to talk with me at all today."
     "She avoided eye contact, refused to speak, the whole shebang."
@@ -9797,8 +9803,7 @@ label AE045:
 
 label AE046:
     $setProgress("AE", "AE047")
-    #MUST HAVE SEEN AE 045
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Dorm Exterior with fade #girl's dorm
     play music Rain
     play sound Knock
@@ -9998,9 +10003,9 @@ label AE046:
 
 label AE047:
     $setProgress("AE", "AE048")
+    $setTime(TimeEnum.EVE)
     scene Dorm AE with fade
     play music Hallway
-    #SCENE AFTERNOON
     "A brisk wind blew through the open bedroom window, the curtains fluttering lightly at it's passing. Shiori-chan and I had spent much of the afternoon talking together, and before we knew it, we'd reached into the early hours of sundown."
     "As it so happened, the two of us had gotten onto the topic of music. Her piano teacher apparently playing a more prominent role in her life than I'd thought, it turned out she was a pretty big connoisseur on the topic."
     show AE happy with dissolve
@@ -10338,8 +10343,8 @@ label AE047_c1_after:
 
 label AE048:
     $setProgress("AE", "AE049")
+    $setTime(TimeEnum.EVE)
     scene Hallway with fade
-    #SCENE AFTERNOON
     "I paced the halls worriedly, and the longer I looked, the stronger my anxiety became."
     "Just the other day, I felt like I was on the top of the world; I'd finally kissed Shiori-chan. But just when I get excited to spend my afternoon with her and talk it over."
     "She vanished."
@@ -10600,8 +10605,8 @@ label AE048:
 
 label AE049:
     $setProgress("AE", "AE050")
+    $setTime(TimeEnum.EVE)
     scene Dorm Exterior with fade
-    #SCENE AFTERNOON
     play sound Knock
     MC "Shiori-chan, it's me. Can you open up?"
     "Shiori-chan had been acting strange recently, and it left me worried and confused. Up until the other day, I'd felt we'd been getting closer. But after that kiss..."
@@ -10862,7 +10867,7 @@ label AE050:
     $setProgress("AE", "AE051")
     $setSize(4)
     $setTimeFlag("size4")
-    #SCENE NIGHTTIME
+    $setTime(TimeEnum.NIGHT)
     scene Dorm Interior with fade
     play music Rain
     "The room was completely silent, save for Daichi's soft breathing as he slept. The only source of light in the room was the bedside alarm clock, the faded glow illuminating the far side of the room."
@@ -11394,7 +11399,7 @@ label AE050_after3:
 
 label AE051:
     $setProgress("AE", "AE052")
-    #SCENE MORNING
+    $setTime(TimeEnum.DAY)
     scene black with fade
     AE "Mmn."
     #*Creak SFX*
@@ -11618,7 +11623,7 @@ label AE051_c1_after:
 
 label AE052:
     $setProgress("AE", "AE053")
-    #AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Library with fade
     play music Peaceful
     "As I walked into the library, I was surprised to not only find it occupied, but occupied by a familiar face."
@@ -11892,7 +11897,7 @@ label AE052:
 
 label AE053:
     $setProgress("AE", "AE054")
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Town with fade
     play music Busy
     AE "Are you sure you know where it is?"
@@ -12326,7 +12331,7 @@ label AE053_c1_after:
 
 label AE054:
     $setProgress("AE", "AE055")
-    #Scene Morning
+    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music Schoolday
     "I'd woken up a bit earlier than usual, getting a pretty good amount of sleep. I made myself some breakfast as Daichi got up and threw on his clothes."
@@ -12592,10 +12597,11 @@ label AE054:
     jump daymenu
 
 label AE055:
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE056")
     scene Hill Road with fade
     show AE happy with dissolve
+    play music AE
     "The cold, autumnal wind echoed through the hills as we descended down into the glen. Holding Shiori by the hand, we crossed a narrow stream together as we made our way around the bend."
     "She stopped for a moment and looked around with a gentle smile."
     MC "What's wrong?  Tired already?"
@@ -12794,7 +12800,7 @@ label AE055:
 
 label AE056:
     $setProgress("AE", "AE057")
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Classroom with fade
     play music Peaceful
     "It was nearly time for homeroom to end, and I could barely keep my head focused toward the front of the class. I found myself nodding and fading for a few seconds before catching myself again."
@@ -13087,7 +13093,7 @@ label AE056_c1_after:
 
 label AE057:
     $setProgress("AE", "AE058")
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Music Classroom with fade
     #PLAY SONG: Kinderszenen
     "Entering the music lab, the soft, gentle tones from the piano graced my ears as I slowly shut the door."
@@ -13709,7 +13715,7 @@ label AE059:
 
 label AE060:
     $setProgress("AE", "AE061")
-    #AFTERNOON
+    $setTime(TimeEnum.EVE)
     scene Library with fade
     play music Hallway
     "Entering the library, I once again found myself greeted with a mostly empty room, save for a few members of student council having a chat at one of the free tables."
@@ -13998,7 +14004,7 @@ label AE060:
     jump daymenu
 
 label AE061:
-    #AFTERNOON
+    $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE062")
     scene Hallway with fade
     play music Rain
@@ -15140,7 +15146,7 @@ label AE064:
     jump daymenu
 
 label AE065:
-    #SCENE AFTERNOON
+    $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE066")
     scene Music Classroom with fade
     play music Rain
@@ -15914,6 +15920,7 @@ label AE068_c1_after:
 label AE069:
     $setProgress("AE", "AE070")
     scene Classroom
+    play music Schoolday
     "Today was cooler than it had been the past few days, with a thick blanket of light grey clouds hovering gently above the school."
     "As I sat quietly with my head resting on my hand in class, I did my best to keep my attention focused as Tashi-sensei continued on with his lesson."
     show HR annoyed with dissolve
@@ -17323,6 +17330,7 @@ label AE076:
     scene Hallway with fade
     #Door closing sfx
     show AE angry-3 with dissolve
+    play music Rain
     MC "Are you sure you don't want me to carry those?"
     AE "Positive. I can handle carrying files, Keisuke."
     MC "I know, I know, you just seem a bit uneasy today."
@@ -17663,6 +17671,7 @@ label AE077:
     $setProgress("AE", "AE078")
     $setTime(TimeEnum.EVE)
     scene Nurse Office with fade
+    play music TwilightAmbient
     MC "Haah, okay."
     "As I entered the nurse's office, I was hit with the smell of freshly brewed coffee and the gleam of the bright office lights above."
     "I was admittedly pretty nervous. Shiori would begin the process of walking again, and I made sure that I could be present to help out. Still, I wasn’t too sure of what I was doing, but thankfully Nurse Kiyomi had guaranteed me she’d help guide me where possible."
@@ -17884,6 +17893,7 @@ label AE078:
     "{i}BRRR-{/i}...{i}BRRR-{/i}..."
     MC "M-Mgn..."
     scene Dorm Interior with fade
+    play music Reqiuem
     "As my eyes fluttered open from my dreamless sleep, I felt, for a moment, that I was not yet awake as my eyes adjusted to the moonlight shining into the room. Reaching over to the nightstand, I grabbed for my phone."
     "{i}Klk!{/i}"
     MC "Ach."
@@ -17994,6 +18004,7 @@ label AE079:
 label AE101:
     scene Gym with fade
     show FMG neutral
+    play music FMG
     MC "Twelve..."
     FMG "COME ON HOTSURE, GO AT IT LIKE YOU HAVE A PAIR!"
     "Akira-san jeered me on as I lay on the mat... I never even asked her to come over, she just saw what I was doing and started shouting."
@@ -18076,6 +18087,7 @@ label AE101:
 
 label AE102:
     scene Hallway with fade
+    play music AE
     "And so, we have reached the end of school for the day. I was going to just head back to my dorm room, however I saw Shiori whispered something to Akira before both of them left the room."
     "I was just going to leave it alone, but unfortunately there still outside the classroom for all to hear."
     FMG "For that last time, I ain't buttoning my shirt no matter what the stupid dress code says!"
@@ -18177,6 +18189,7 @@ label AE102_c2:
 label AE007b:
     $setProgress("AE", "AE008b")
     scene Dorm Interior with fade
+    play music Schoolday
     MC "M-Mgn... {i}haahn{/i}..."
     "I stretched my arms as I sat up in bed, rubbing the back of my neck as I yawned. I took a deep breath as I looked around and noticed an eerie silence."
     "Glancing over at Daichi still asleep, the next thing I noticed was just how... purple the room looked."
@@ -18871,6 +18884,7 @@ label AE011b:
 label AE015b:
     $setProgress("AE", "AE016b")
     scene School Planter with fade
+    play music AE
     "As I looked out to the whisps of snow blowing off of the top of the snow capped peaks in the distance, I couldn't help but feel as though I was utterly dwarfed by my surroundings. Running my hands through my hair, I felt lost in thought over what all may have gotten me here."
     MC "...Hm..."
     "The more I thought, however, the deeper into myself I went. I felt like I'd been standing in place for an entire hour before I'd grasped on to the smallest shred of self awareness."
