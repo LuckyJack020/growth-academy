@@ -14171,7 +14171,7 @@ label WG059:
 label WG059S:
     $setProgress("WG", "WG060S")
     $setTime(TimeEnum.DAY)
-    scene WGdorm with fade
+    scene Dorm WG with fade
     play music WG
     show WG neutral with dissolve
     WG "Were you able to deliver that package to Akira?"
@@ -14564,7 +14564,7 @@ label WG060:
     show WG worried
     WG "Well, this has been rather embarrassing..."
     MC "How so?"
-    show doubt
+    show WG doubt
     WG "How could it not be? You heard how loud—"
     MC "Yes. I did. No one else. It’s just me and you in your room. I know what you’re going through. I know why it’s happening, and I completely understand. What’s there to be embarrassed about?"
     show WG neutral-2
@@ -14820,6 +14820,7 @@ label WG060S_TruthPath:
     "As I wheeled the cart out, I debated peeking under the sheet, but decided against it cause if Alice planned this all out, might as well play her game."
     scene black with fade
     pause 1
+    $setTime(TimeEnum.NIGHT)
     scene Dorm Hallway with fade
     "Making my way through the hallways was stressful. Even though I assumed I understood now what was happening, there was still a lingering fear that I had it all wrong and was gonna get dumped."
     "That and I was not sure how to explain this to someone like Shiori if I got caught."
