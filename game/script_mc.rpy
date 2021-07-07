@@ -229,10 +229,9 @@ label global000_GTS:
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized at Seichou Academy."
     UNKNOWN "Aaah!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
+    show cg GTS000 with dissolve
     "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her skirt."
-    show GTS sad at Position(xcenter=0.75) with dissolve
     UNKNOWN "Oooh, darn..."
-    show BE surprised at Position (xcenter=0.25) with dissolve
     BE "Are you okay?"
     UNKNOWN "Eeep!"
     "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
@@ -240,6 +239,10 @@ label global000_GTS:
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."
     "Aside from the divot where she fell, the center row of vegetables did indeed look less well-watered than the ones closest to the edge."
+    hide cg with dissolve
+    show GTS sad at Position(xcenter=0.75)
+    show BE surprised at Position (xcenter=0.25)
+    with dissolve
     menu:
         "That's dumb, whose idea was that?":
             jump global000_GTS_c1

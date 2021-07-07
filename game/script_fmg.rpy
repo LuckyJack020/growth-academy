@@ -1738,12 +1738,12 @@ label FMG016:
     MC "Ummmm, thanks..."
     show FMG neutral
     FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani. But I'd appreciate it if you could keep those types of comments to yourself."
+    show cg FMG016 with dissolve
     "Natsuko turned towards Akira, staring down at her in disappointment."
-    show Natsuko disappointed
     Natsuko "Unfortunately, I don't take orders from someone like you."
     MCT "Welp, I'll be honest I didn't see that coming."
-    show FMG angry
     FMG "And what does that mean?"
+    hide cg with dissolve
     show Natsuko neutral
     Natsuko "If you really must know, it's well...how do I put this nicely."
     Natsuko "Pretty much everything about you is so...unladylike. Your unbuttoned shirt, that mop you call hair. You are a slob."

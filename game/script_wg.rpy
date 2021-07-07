@@ -228,7 +228,7 @@ label WG002_c3_2:
     WG "I have attended only the best schools in America and Japan. Yes, this place is... different from them. There are a lot more people, for one."
     MC "But you're not the only one adjusting. I mean, we've all been thrown into it without warning, and none of us know what the future holds."
     MC "Maybe you should reach out to some of the other students. Someone in our class might help you deal with this upheaval."
-    WG "Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
+    MC "Listen to your problems, help you navigate the school culture. You don't have to deal with this on your own."
     show WG neutral
     WG "Hmmm, you do have a point. No sense in wallowing in self-pity over my unfortunate predicament. I believe there is always a workaround if you are determined enough to find one."
     MC "See, there ya go."
@@ -906,7 +906,7 @@ label WG007:
     "Before I began to give that notion more serious consideration, I realized I had an unexpected guest at my table."
     show WG neutral at center with dissolve
     MC "Oh, Alice— Didn't know you'd be having lunch here."
-    WG "As often as I express my disdain for the food here, I thoguht today's entree would at least be worthwhile. I'm not a relentless taskmaster, Aida deserves a break from cooking every now and then."
+    WG "As often as I express my disdain for the food here, I thought today's entree would at least be worthwhile. I'm not a relentless taskmaster, Aida deserves a break from cooking every now and then."
     MCT "A taskmaster, just not a relentless one, good to know."
     MC "Oh, well that's nice to hear."
     "It took me a second to realize Alice wasn't alone. Right behind her was Aida, holding a few packages."
@@ -2066,7 +2066,7 @@ label WG013_c2:
     WG "A clever ruse it would seem on your part."
     show WG neutral
     WG "No, at this time she should be in the student council office, taking care of her paperwork. She's nothing if not predictable."
-    WG "The face he didn't even pause to question it... Is he afraid of her or something?"
+    WG "The fact he didn't even pause to question it... Is he afraid of her or something?"
     MC "Who isn't on some level? But I got the impression they have some kind of history. Whatever it is, he sure goes out of his way to avoid her."
     show WG happy
     $setAffection("WG", 1)
@@ -3962,7 +3962,7 @@ label WG022:
         "After that it was considerably easier. The table, chairs, dresser and TV stand weren't nearly as heavy."
         "But since I was already there I got conscripted into doing most of the grunt work, moving everything heavier than a pillow and adjusting it to Alice's eyeballing whims."
         "She said she had everything planned out, but it ended up taking an hour to get everything just right."
-        scene Dorm WG Flip with fade
+        scene Dorm WG at Transform(xzoom=-1) with fade
         "I couldn't tell you if the room looked better when it was done. It was fancier than anything I was used to, but I guess for Alice this was a step down from whatever mansion she had grown up in."
         "I was thinking of a way to politely excuse myself as Alice set out pictures and knick-knacks on her bookshelf, when suddenly I was blindsided by Aida."
         show PRG neutral at center with dissolve
@@ -4995,6 +4995,7 @@ label WG028_c1_3:
 
 label WG029:
     $setProgress("WG", "WG030")
+    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     "The time had come for my first date with Alice."
     "I had to admit, I had prepared for more than a few obstacles."
@@ -5012,10 +5013,10 @@ label WG029:
     show PRG neutral with dissolve
     MC "Where's Alice?"
     show PRG sad
-    PRG "Nikumaru-san is not feeling well. She won't be in class today."
+    PRG "Nikumaru-san isn’t feeling well. She won't be in class today."
     MC "Oh, man. Is it bad?"
-    PRG "She wouldn't let me near her. She said she didn't want to risk passing whatever she had to me in my condition."
-    PRG "But she took her own temperature. It's 38.4. And she was complaining of aches and chills."
+    PRG "W-Well, she won’t even let me near her. She’s really concerned about getting me sick."
+    PRG "And, when she took her temperature earlier, it came out to just under 39 degrees. And she was complaining of aches and chills."
     MC "Bummer. Hopefully it's just a 24-hour thing."
     MC "Either way, our date's off, I guess."
     MC "I'll go see her during lunch. See how she's doing."
@@ -5023,7 +5024,7 @@ label WG029:
     PRG "She would like that."
 
     scene Hallway with fade
-    #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     "Lunchtime arrived, and I made my way to Alice's dorm."
 
     scene Dorm WG with fade
@@ -5100,6 +5101,7 @@ label WG029_c1_1:
     "I went back to my room feeling more than a little peeved."
     "I was still soaked from head to toe, and I didn't even have anything to show for it."
     "Shouldn't have even bothered."
+    $setTimeFlag("size3")
     jump daymenu
 
 label WG029_c1_2:
@@ -5124,11 +5126,11 @@ label WG029_c1_2:
     "I did as I said I would, changing clothes and showering."
     "Then I made myself the tea while doing my homework."
     "Not the night I had hoped for, but it seemed the best possible outcome given the curveball thrown at me."
+    $setTimeFlag("size3")
     jump daymenu
 
 label WG030:
     $setSize(3)
-    $setTimeFlag("size3")
     $setProgress("WG", "WG031")
     play music WG
     scene Dorm Interior with fade
@@ -7936,7 +7938,7 @@ label WG041_C1_2:
     MC "Ah, actually would you mind getting us a pair of forks?"
     Cook "Sure thing, we’re told to keep extra utensil packets in our aprons for stuff like this."
     WG "Does that mean this meal is normally eaten by hand?"
-    Cook "Ha! Well you might wanna when it’s hot out da frier, but I’ve always thought by hand is the only good way to eat funnel cake. But some folk aren’t keen on gettin’ their hands sticky."
+    Cook "Ha! Well you might not wanna when it’s hot out da frier, but I’ve always thought by hand is the only good way to eat funnel cake. But some folk aren’t keen on gettin’ their hands sticky."
     Cook "I gotta get back to the line, you two enjoy your dessert!"
     MC "Thank you! ...Would you like the first bite, Alice?"
     show WG neutral-2
@@ -8200,7 +8202,7 @@ label WG042:
     "Such a statement aptly captured the extent of Alice’s familiarity with carnivals."
     MC "Uh, are you sure about that? These games are a lot harder than they look. I think you’ll find trying to win a plush teddy bear can cost someone quite a bit of money."
     show WG haughty
-    WG "Surely it can be that difficult. Are you sure you aren’t just covering for your own lack of skills? Look at this game, how hard can it be to land a ring that big onto a bottle?"
+    WG "Surely it can't be {i}that{/i} difficult. Are you sure you aren’t just covering for your own lack of skills? Look at this game, how hard can it be to land a ring that big onto a bottle?"
     "I couldn’t help but raise an eyebrow at that remark."
     MCT "Ring toss is one of the most rigged games there is at a carnival. She doesn’t understand what she’s getting into."
     MC "If you say so. Go on, give it a shot."
@@ -8559,7 +8561,7 @@ label WG042_AfterFood:
     MC "Uh, I’ll take the pink teddy bear, I guess."
     Carnie "A fine choice! Here ya go. Now beat it!"
     show WG happy
-    "With a bit of a chocksure shagger, I walked back over to Alice, a special delivery in hand just for her."
+    "With a bit of a cocksure swagger, I walked back over to Alice, a special delivery in hand just for her."
     MC "I figured you might want a souvenir to take home from the occasion."
     WG "How cute! I certainly would."
     "To my surprise, Alice snatched up the cheaply constructed plushie bear from my hand and proceeded to smother it in her embrace like an over eager little girl and her doll."
@@ -8703,13 +8705,13 @@ label WG043:
     WG "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
     PRG "Thanks, Nikumaru-san. I'll do my best."
     WG "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
-    show Natsuko swim-school-neutral at Position(xcenter=0.35, yalign=1.0) with dissolve
+    show Natsuko swim-school-neutral at Position(xcenter=0.30, yalign=1.0) with dissolve
     Natsuko "Hello Alice. Thank you for the invitation again. I'm always up for a new challenge. A contact sport where you need to swim and handle a ball sounds tough. I'm ready to show you what I can do!"
     "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
     "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
     WG "I'm glad to hear that Natsuko. I'm looking forward to playing with someone who can keep up with my swimming skills."
     MC "So, if you needed more strong swimmers, that means the other person you asked is probably... Ohhh, no."
-    show FMG swim-school-happy at Position(xcenter=0.65, yalign=1.0) with dissolve
+    show FMG swim-school-happy at Position(xcenter=0.85, yalign=1.0) with dissolve
     FMG "Hey dudes! What's up everyone! I'm ready to crush it in the pool today!"
     show FMG swim-school-angry-2
     FMG "Wait. What's {i}SHE{/i} doing here?"
@@ -8738,7 +8740,7 @@ label WG043:
     WG "Whatever rivalry you two have going on, I suggest you channel that animosity towards something constructive. I'll be watching for fouls."
     WG "Fouls lead to time out penalties, and when teams can't substitute, that leads to the opponent scoring- and you losing. Got it?"
     Natsuko "I see. Very well then."
-    show FMG angry-2
+    show FMG swim-school-angry-2
     FMG "Yeah, I got it."
     hide PRG
     hide BE
@@ -14153,7 +14155,7 @@ label WG059:
     scene Dorm Exterior with fade
     show WG neutral with dissolve
     "I could tell something was amiss. On our way walking back to her dorm, I tried to think of a way to broach the subject, but it was easier said than done."
-    MC "Is everyone alright Alice?"
+    MC "Is everything alright, Alice?"
     WG "What do you mean, Keisuke?"
     MC "Well, it’s just... back there, you didn’t eat very much. At least, not as much as I would have expected. Are you feeling okay?"
     show WG stern
@@ -14483,7 +14485,7 @@ label WG060:
     MC "It’s Keisuke. Can I come in?"
     WG "... Yes, please... come in."
     "Alice’s tone was conflicted, which made me think she both did and did not want me to come in. Nonetheless, I heard the latch unlock and I opened the door inside."
-    scene WG dorm with fade
+    scene Dorm WG with fade
     show WG neutral with dissolve
     WG "Keisuke, I was not expecting you. Is there something you need?"
     MC "Not in particular. I was just concerned. You said you weren’t feeling well last night, and I didn’t get a chance to talk with you after homeroom class this morning. I wanted to make sure you were okay."

@@ -1,13 +1,14 @@
 init python:
     activegal = ""
-    galleries = {"BE": Gallery(), "AE": Gallery(), "GTS": Gallery(), "FMG": Gallery(), "WG": Gallery(), "PRG": Gallery()}
+    galleries = {"BE": Gallery(), "AE": Gallery(), "GTS": Gallery(), "FMG": Gallery(), "WG": Gallery(), "PRG": Gallery(), "RM": Gallery()}
     galImgList = {}
-    galImgList["BE"] = ["BE001"]
-    galImgList["AE"] = ["AE000", "AE015", "AE024", "AE024b", "AE024c", "AE024d", "AE024e", "AE025", "AE050_behind1", "AE050_behind2", "AE050_behind3", "AE050_behind4", "AE050_behind5", "AE050_behind6", "AE050_bj1", "AE050_bj2", "AE050_bj3", "AE050_bj4", "AE050_sit1", "AE050_bj1", "AE050_bj2", "AE050_bj3", "AE050_bj4"]
-    galImgList["GTS"] = []
-    galImgList["FMG"] = []
-    galImgList["WG"] = ["WG000", "WG009", "WG046", "WG047"]
-    galImgList["PRG"] = []
+    galImgList["BE"] = ["BE000", "BE000b", "BE001", "BE010", "BE028", "BE028_fem", "BE031", "BE031b", "BE031c", "BE032"]
+    galImgList["AE"] = ["AE000", "AE015", "AE024", "AE024b", "AE024c", "AE024d", "AE024e", "AE025", "AE050_behind1", "AE050_behind2", "AE050_behind3", "AE050_behind4", "AE050_behind5", "AE050_behind6", "AE050_bj1", "AE050_bj2", "AE050_bj3", "AE050_bj4", "AE050_sit1", "AE050_sit2", "AE050_spank1", "AE050_spank2", "AE050_spank3", "AE050_spank4", "AE074_snow1", "AE074_snow2", "AE074_snow3"]
+    galImgList["GTS"] = ["GTS000", "GTS024", "GTS025", "GTS035"]
+    galImgList["FMG"] = ["FMG016", "FMG041"]
+    galImgList["WG"] = ["WG000", "WG009", "WG010", "WG046", "WG047"]
+    galImgList["PRG"] = ["PRG020", "PRG020b", "PRG025", "PRG038"]
+    galImgList["RM"] = ["RM000"]
 
     for g in girllist:
         galleries[g].locked_button = im.Scale("Graphics/ui/galleryicon-imglocked.png", 200, 150, bilinear=True)
