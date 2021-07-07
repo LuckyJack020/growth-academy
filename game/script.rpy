@@ -1,6 +1,14 @@
 default persistent.enable_notifications = True
 default persistent.enable_nsfw = True
 
+#Custom ATL-based move transition for character sprites. Allows for movement WHILE dialogue is shown.
+#xcenter value (basically the same as what value between 0.00 and 1.00 along the x-axis) is passed as variable.
+#if combining with "Transform(xzoom=+-1)", separate into two different "show ______ at" statements
+#error happens whenever xzoom is set to +1 only, but for consistency's sake; we'll separate them regardless.
+
+transform altMove (xCen):
+    linear 0.5 xcenter xCen
+
 init python:
     config.use_cpickle = False
     #style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
@@ -12,7 +20,7 @@ init python:
     eventlibrary = {}
     datelibrary = {}
     showQuickMenu = False
-    girllist = ['BE', 'GTS', 'AE', 'FMG', 'BBW', 'PRG']
+    girllist = ['BE', 'GTS', 'AE', 'FMG', 'WG', 'PRG']
     locationlist = {
         #name of place: (map used, x/y pixel position)
         'arcade': ("town", (1100,650)),
@@ -23,7 +31,7 @@ init python:
         'clocktower': ("school", (570,500)),
         'cookingclassroom': ("school", (740,490)),
         'dormAE': ("school", (870,300)),
-        'dormBBW': ("school", (870,280)),
+        'dormWG': ("school", (870,280)),
         'dormBE': ("school", (870,260)),
         'dormPRG': ("school", (870,280)),
         'dormFMG': ("school", (870,300)),
@@ -57,6 +65,10 @@ init python:
     debuginput = ""
 
     import math
+
+
+
+
 
     class Shaker(object):       #This is Python code to implement a feature to shake the screen around at random, not just in one direction like with the punch commands
 
@@ -567,9 +579,9 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuko": [1, 2, 3, 4, 5, 6],
-            "Sakura": [2, 3, 4, 5, 6],
-            "Tomoko": [1, 2, 3, 4, 5, 6]
+            "Natsuko": [1, 2, 3, 4, 5],
+            "Tomoko": [1, 2, 3, 4, 5],
+            "Sakura": [1, 2, 3, 4, 5]
         }
 
         try: #backwards compatibility, remove later
@@ -654,12 +666,12 @@ init python:
 label start:
     python:
         #Global Variables
-        affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'BBW': 0, 'PRG': 0, 'RM': 0}
+        affection = {'BE': 0, 'GTS': 0, 'AE': 0, 'FMG': 0, 'WG': 0, 'PRG': 0, 'RM': 0}
         prefgirl = ""
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Sakura': 1}
+        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         flags = []
         vars = {}
@@ -672,7 +684,7 @@ label start:
             routeprogress[g] = g + "001"
         highlitevent = ""
         hightlitmenuchoice = -1
-        routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'BBW': True, 'PRG': True}
+        routeenabled = {'BE': True, 'GTS': True, 'AE': True, 'FMG': True, 'WG': True, 'PRG': True}
         routelock = ""
         spmax = 0
         spspent = 0
@@ -848,12 +860,12 @@ screen debugmenu():
             textbutton "+" action Function(setAffection, "FMG", 1)
         text getProgress("FMG")
 
-        text "BBW"
+        text "WG"
         hbox:
-            textbutton "-" action Function(setAffection, "BBW", -1)
-            text str(affection["BBW"])
-            textbutton "+" action Function(setAffection, "BBW", 1)
-        text getProgress("BBW")
+            textbutton "-" action Function(setAffection, "WG", -1)
+            text str(affection["WG"])
+            textbutton "+" action Function(setAffection, "WG", 1)
+        text getProgress("WG")
 
         text "PRG"
         hbox:
