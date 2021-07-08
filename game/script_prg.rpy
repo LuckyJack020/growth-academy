@@ -1034,6 +1034,7 @@ label PRG004_c1_2:
     show PRG neutral
     pause 2
     show PRG unique
+    pause 2
     jump daymenu
 
 label PRG005:

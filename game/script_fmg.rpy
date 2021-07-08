@@ -4,7 +4,7 @@ label FMG001:
     play music Schoolday
     "After thinking of what to do after class, I decided to check out the Athletics Area, so when I have P.E. I would know where it is."
     "Compared to the rest of the academy, the building itself was not only taller, but almost as wide as the rest of the school."
-    "From how tall the windows were made the building looked least two or three stories tall."
+    "From how tall the windows were made, the building looked at least two or three stories tall."
     scene Gym with fade
     "I walked inside to see if it really was as big as it looked."
     "The inside was not what I thought it would look like, what I imagined to be a normal three story building turned out to be just one room that was three stories high."
@@ -431,7 +431,7 @@ label FMG005_c2:
     FMG "But for what it's worth, thanks for the talk... I REALLY needed it."
     hide FMG with dissolve
     "With that she left, leaving me alone in the hallway."
-    MCT "Man, Who would have thought someone as tough as Akira would have had such a deep fear from her childhood."
+    MCT "Man, who would have thought someone as tough as Akira would have had such a deep fear from her childhood."
     jump daymenu
 
 label FMG006:
