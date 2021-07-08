@@ -11,7 +11,7 @@ init python:
     galImgList["RM"] = ["RM000"]
 
     for g in girllist:
-        galleries[g].locked_button = im.Scale("Graphics/ui/galleryicon-imglocked.png", 200, 150, bilinear=True)
+        galleries[g].locked_button = im.Scale("Graphics/ui/dummy.png", 200, 150, bilinear=True) #image-locked button
         for i in galImgList[g]:
             galleries[g].button("cg " + i)
             galleries[g].unlock_image("cg " + i)
@@ -26,7 +26,7 @@ screen galleryselect():
             imagebutton:
                 xalign 0.5
                 yalign 0.5
-                idle "Graphics/ui/galleryicon-" + g + ".png"
+                idle "Graphics/ui/icons/" + g + "-icon.png"
                 action [SetVariable("activegal", g), ShowMenu("gallery")]
 
         null
@@ -42,7 +42,7 @@ screen gallery():
 
         for i in range(page * 6, (page * 6) + 6):
             if i < len(galImgList[activegal]):
-                add galleries[activegal].make_button("cg " + galImgList[activegal][i], im.Scale("Graphics/cg-" + galImgList[activegal][i] + ".png", 200, 150, bilinear=True), xalign=0.5, yalign=0.5)
+                add galleries[activegal].make_button("cg " + galImgList[activegal][i], im.Scale("Graphics/ui/gallery/" + galImgList[activegal][i] + ".png", 200, 150, bilinear=True), xalign=0.5, yalign=0.5)
             else:
                 null
 
