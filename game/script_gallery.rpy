@@ -1,5 +1,7 @@
 init python:
     activegal = ""
+    hovergal = ""
+    convertGal = {"BE": "Honoka", "AE": "Shiori", "GTS": "Naomi", "FMG": "Akira", "WG": "Alice", "PRG": "Aida"}
     galleries = {"BE": Gallery(), "AE": Gallery(), "GTS": Gallery(), "FMG": Gallery(), "WG": Gallery(), "PRG": Gallery(), "RM": Gallery()}
     galImgList = {}
     galImgList["BE"] = ["BE000", "BE000b", "BE001", "BE010", "BE028", "BE028_fem", "BE031", "BE031b", "BE031c", "BE032"]
@@ -29,10 +31,17 @@ screen galleryselect():
                 yalign 0.5
                 idle "Graphics/ui/gallery/gallery-" + g + ".png"
                 action [SetVariable("activegal", g), ShowMenu("gallery")]
-
+                hovered SetVariable("hovergal", g)
         null
-        textbutton "Return" action Return() xalign 0.5 yalign 0.5
+        textbutton "Return" action ShowMenu("extras") xalign 0.5 yalign 0.5
         null
+    if hovergal != "":
+        frame:
+            xalign 0.9
+            yalign 0.9
+            xanchor 1.0
+            background Solid(Color((0, 0, 0, 100)))
+            text(convertGal[hovergal] + "'s Gallery")
 
 screen gallery():
     tag menu
