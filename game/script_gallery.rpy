@@ -11,15 +11,14 @@ init python:
     galImgList["RM"] = ["RM000"]
 
     for g in girllist:
-        galleries[g].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 200, 150, bilinear=True)
-        galleries[g].transition = dissolve
+        galleries[g].locked_button = im.Scale("Graphics/ui/dummy.png", 200, 150, bilinear=True) #image-locked button
         for i in galImgList[g]:
             galleries[g].button("cg " + i)
             galleries[g].unlock_image("cg " + i)
 
 screen galleryselect():
     tag menu
-    add "Graphics/ui/bg/artroom_eve.png"
+
     grid 3 3:
         xfill True
         yfill True
@@ -27,7 +26,7 @@ screen galleryselect():
             imagebutton:
                 xalign 0.5
                 yalign 0.5
-                idle "Graphics/ui/gallery/gallery-" + g + ".png"
+                idle "Graphics/ui/icons/" + g + "-icon.png"
                 action [SetVariable("activegal", g), ShowMenu("gallery")]
 
         null
@@ -36,7 +35,6 @@ screen galleryselect():
 
 screen gallery():
     tag menu
-    add "Graphics/ui/bg/artroom_eve.png"
     default page = 0
     grid 3 3:
         xfill True
