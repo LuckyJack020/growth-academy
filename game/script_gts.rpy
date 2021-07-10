@@ -6767,7 +6767,6 @@ label GTS044_c3:
     "With the locking of my phone, my spirits were restored. I set my pencil back to paper and my finger to my chin, now a little surer that I had it in me."
     scene black with fade
     $setTime(TimeEnum.EVE)
-    #if possible, please define time variants for the library and dorm interior backgrounds in the code
     pause 2
     if getFlag("GTS044_meet"):
         jump GTS044_c3a
@@ -6793,7 +6792,6 @@ label GTS044_c3a:
         ease 2.0 xpos 0.7
     show GTS neutral with dissolve
     GTS "There we are. How far did you get on your own, exactly?"
-    #If possible, please define time variants for the mountains background in the code
     if getSkill("Academics") > 7:
         MC "121?... Yeah, 121."
         GTS "Oh my, you're almost done as it is. Well, what would you say to going on a bit of a stroll to pass the time afterward?"
@@ -6836,7 +6834,7 @@ label GTS044_c4a:
     show GTS neutral with dissolve
     GTS "Now {i}that{/i} is absurd."
     "She chuckled, as did I. I sat, as did she."
-    #insert CG 1 here
+    show cg GTS044_stars1 with dissolve
     "It seemed every star ever given a name smiled down on her that shimmering night, along with their sisters and brothers suspended on the glassy sheen of the lake."
     "But the misty periwinkle sheen of the grass we sat on was all thanks to the moon above. ‘Super’ was right; it was bigger and brighter and a purer white than ever I’d seen, its divine glow casting the night into its own kind of day."
     "It occurred to me to look over to Naomi; her calligraphy set was nestled in the grass beside her, while she had settled into a meditative pose."
@@ -6850,7 +6848,7 @@ label GTS044_c4a_1:
     "As quietly as I could, I eased myself to my feet and stalked across the grass, until I was directly beside her."
     "At the last instant I pounced, craning my neck up to kiss her warm, creased cheek."
     show GTS unique
-    #hide cg with dissolve
+    hide cg with dissolve
     "Her serene mask broke along with her focus to the sound of her girlish laugh."
     GTS "I suppose it was rather ungenerous of me to keep you waiting."
     MC "Oh, pshaw. I'm the one who can't keep my hands off you."

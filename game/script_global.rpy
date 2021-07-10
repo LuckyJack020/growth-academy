@@ -257,6 +257,7 @@ image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.png"
 image cg GTS025 = "Graphics/ui/gallery/GTS025.png"
 image cg GTS035 = "Graphics/ui/gallery/GTS035.png"
+image cg GTS044_stars1 = "Graphics/ui/gallery/GTS044_stars1.png"
 
 image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
 image cg PRG020b = "Graphics/ui/gallery/PRG020_close.png"
