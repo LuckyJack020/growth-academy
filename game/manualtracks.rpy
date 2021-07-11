@@ -248,17 +248,6 @@ init python:
     )
     ost.manualDefineList.append(SchoolDay)
 
-    SunSet = ost.soundtrack(
-        name = "Sunset",
-        path = "Audio/BGM/scene_sunset.mp3",
-        priority = 3,
-        author = "Post-Bop",
-        description = "Soothing Music",
-        cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_sunset.mp3")
-    )
-    ost.manualDefineList.append(SunSet)
-
     HallWay = ost.soundtrack(
         name = "Hallway",
         path = "Audio/BGM/scene_hallway.ogg",
