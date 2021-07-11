@@ -399,7 +399,7 @@ def get_info(path, tags):
             cover_formats=".png" # set image format to png
         altAlbum = re.sub(r"\[|\]|/|:|\?",'', tags.album) # converts problematic symbols to nothing i.e Emotion [Deluxe] to Emotion Deluxe
 
-        with open(gamedir + '/Audio/BGM/covers/' + altAlbum + cover_formats, 'wb') as f: # writes image data with proper extension to destination
+        with open(gamedir + '/Graphics/ui/covers/' + altAlbum + cover_formats, 'wb') as f: # writes image data with proper extension to destination
             f.write(image_data)
         art = altAlbum + cover_formats
         return tags.title, tags.artist, sec, art, tags.album, tags.comment
@@ -414,7 +414,7 @@ def scan_song(rescan=False):
         songList = []
 
     for ext in file_types:
-        songList += ["Audio/BGM/covers" + x for x in os.listdir(gamedir + '/Audio/BGM/covers') if x.endswith(ext)]
+        songList += ["Graphics/ui/covers/" + x for x in os.listdir(gamedir + '/Graphics/ui/covers') if x.endswith(ext)]
 
     for y in range(len(songList)):
         path = songList[y]
@@ -432,7 +432,7 @@ def def_song(title, artist, path, priority, sec, altAlbum, y, album, comment, ex
         description = "Non-Metadata " + str(ext) + " File"
         altAlbum = "Graphics/ui/icons/nocover.png"
     else:
-        altAlbum = "Audio/BGM/covers/"+altAlbum
+        altAlbum = "Graphics/ui/covers/"+altAlbum
         try:
             renpy.exports.image_size(altAlbum)
         except:
@@ -501,13 +501,13 @@ def rpa_load_mapping():
 
 #try: os.mkdir(gamedir + "/Audio/BGM")
 #except: pass
-#try: os.mkdir(gamedir + "/Audio/BGM/covers")
-#except: pass
+try: os.mkdir(gamedir + "/Graphics/ui/covers")
+except: pass
 
 scan_song()
 
 # checks for non-existant song covers for cleaning the covers directory
-cover_list = ["Audio/BGM/covers/" + x for x in os.listdir(gamedir + '/Audio/BGM/covers')]
+cover_list = ["Graphics/ui/covers/" + x for x in os.listdir(gamedir + '/Graphics/ui/covers')]
 for x in reversed(cover_list):
     for y in soundtracks:
         if y.cover_art == x:
