@@ -83,6 +83,50 @@ init python:
     )
     ost.manualDefineList.append(theme_MC)
 
+    daymenu = ost.soundtrack(
+        name = "Choose Your Story",
+        path = "Audio/BGM/menu_daymenu.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Map Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/menu_daymenu.ogg")
+    )
+    ost.manualDefineList.append(daymenu)
+
+    theme_RM = ost.soundtrack(
+        name = "Roommate",
+        path = "Audio/BGM/scene_RM.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Daichi's Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_RM.ogg")
+    )
+    ost.manualDefineList.append(theme_RM)
+
+    PRGDrama = ost.soundtrack(
+        name = "Small Moments",
+        path = "Audio/BGM/scene_PRGdrama.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Aida's Drama Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_PRGdrama.ogg")
+    )
+    ost.manualDefineList.append(PRGDrama)
+
+    PRGChallenge = ost.soundtrack(
+        name = "The Challenge",
+        path = "Audio/BGM/scene_PRGchallenge.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Aida's Challenge Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_PRGchallenge.ogg")
+    )
+    ost.manualDefineList.append(PRGChallenge)
+
     ## Base Template
     ######################################
 

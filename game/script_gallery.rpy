@@ -22,6 +22,7 @@ init python:
 screen galleryselect():
     tag menu
     add "Graphics/ui/bg/artroom_eve.png"
+    add "gui/overlay/confirm.png"
     grid 3 3:
         xfill True
         yfill True
@@ -32,6 +33,7 @@ screen galleryselect():
                 idle "Graphics/ui/gallery/gallery-" + g + ".png"
                 action [SetVariable("activegal", g), ShowMenu("gallery")]
                 hovered SetVariable("hovergal", g)
+                unhovered SetVariable("hovergal", "")
         null
         textbutton "Return" action ShowMenu("extras") xalign 0.5 yalign 0.5
         null
@@ -46,6 +48,7 @@ screen galleryselect():
 screen gallery():
     tag menu
     add "Graphics/ui/bg/artroom_eve.png"
+    add "gui/overlay/confirm.png"
     default page = 0
     grid 3 3:
         xfill True

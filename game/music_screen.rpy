@@ -66,6 +66,7 @@ image playPauseButton = DynamicDisplayable(ost.auto_play_pause_button)
 screen music_room():
 
     tag menu
+    add "Graphics/ui/bg/music_eve.png"
 
     default bar_val = ost.AdjustableAudioPositionValue()
 
@@ -186,7 +187,7 @@ screen music_room():
     textbutton _("Return"):
         style "return_button"
 
-        action [Return(), If(renpy.music.is_playing(channel='music_room'), true=Function(ost.current_music_pause), false=None), If(ost.music_muted, true=None, false=SetMute('music', False)), SetVariable("ost.music_muted", False)]
+        action [ShowMenu("extras"), If(renpy.music.is_playing(channel='music_room'), true=Function(ost.current_music_pause), false=None), If(ost.music_muted, true=None, false=SetMute('music', False)), SetVariable("ost.music_muted", False)]
 
 style music_room_frame is empty
 style music_room_viewport is gui_viewport
@@ -203,7 +204,8 @@ style music_room_duration_text is gui_text
 style music_room_frame:
     yfill True
 
-    background "gui/overlay/game_menu.png"
+    background "Graphics/ui/bg/music_eve.png"
+    foreground "gui/overlay/game_menu.png"
 
 style music_room_button is default:
     font gui.text_font
