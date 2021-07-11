@@ -11195,7 +11195,7 @@ label AE050_passive3:
     AE "D-Dont worry, I'll try to be gentle."
     show cg AE050_sit2 with dissolve
     "She slowly lowered herself down, her soft warm flesh engulfing my face with her two massive cheeks smushing it in-between."
-    "She lowered a bit more and more until her whole weight of her ass was comfortablely on my face, my warmth of my face seeming to make her shiver a bit."
+    "She lowered a bit more and more until the whole weight of her ass was comfortably on my face, the warmth of my face seeming to make her shiver a bit."
     AE "A-ahn... You feel... really nice down there..."
     MC "Mmm~"
     "Preparing for a second try at my cock, she balled up her fist around her thumb and took a few breaths to calm herself."

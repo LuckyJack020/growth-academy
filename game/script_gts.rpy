@@ -1275,7 +1275,7 @@ label GTS013_c3:
     "Naomi, in a smooth motion, opened the door for us and stepped inside; my face sank into the gregarious, tickling scent of a labor of love at once."
     scene Cooking Classroom with fade
     play music PRG
-    show GTS neutral at Position(xcenter=0.7, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.3, yalign=1.0)
     show PRG worried at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     "A labor indeed, as we found Aida standing behind the counter, scanning an array of ingredients and instruments arranged with impeccable consideration for both ease of instruction and Naomi's reach."
@@ -1647,7 +1647,7 @@ label GTS015:
     play music Busy
     Ryoko "...And cut! Good job everyone!"
     "These were the first words Naomi and I heard as we waited outside of Ryoko's dorm room before we were allowed in, the 'QUIET! Filming inside!' sign taped on the door preventing us from knocking."
-    show Ryoko happy at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show Ryoko happy at Position(xcenter=0.3, yalign=1.0) with dissolve
     "The bedroom had been transformed into a makeshift set, with extra curtains put up to eliminate any natural sunlight while other lights were set up to enhance the shot's lighting."
     "Two students I assumed were actresses were casually chatting to themselves while a couple of students worked to start putting away the camera, lighting, and various other bits of equipment."
     show GTS neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
