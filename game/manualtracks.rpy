@@ -127,6 +127,182 @@ init python:
     )
     ost.manualDefineList.append(PRGChallenge)
 
+    Bittersweet = ost.soundtrack(
+        name = "Bittersweet",
+        path = "Audio/BGM/scene_bittersweet.mp3",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Bitter Mood Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_bittersweet.mp3")
+    )
+    ost.manualDefineList.append(Bittersweet)
+
+    Busy = ost.soundtrack(
+        name = "Busy",
+        path = "Audio/BGM/scene_busy.mp3",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Bustlin' Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_busy.mp3")
+    )
+    ost.manualDefineList.append(Busy)
+
+    Festival = ost.soundtrack(
+        name = "Festival",
+        path = "Audio/BGM/scene_festival.mp3",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Town Festival Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_festival.mp3")
+    )
+    ost.manualDefineList.append(Festival)
+
+    Higheredu = ost.soundtrack(
+        name = "Higher Education",
+        path = "Audio/BGM/scene_higheredu.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Scholarly Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_higheredu.ogg")
+    )
+    ost.manualDefineList.append(Higheredu)
+
+    Memory = ost.soundtrack(
+        name = "Memories",
+        path = "Audio/BGM/memories.mp3",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Reminiscing Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/memories.mp3")
+    )
+    ost.manualDefineList.append(Memory)
+
+    Rainy = ost.soundtrack(
+        name = "Rain",
+        path = "Audio/BGM/scene_rain.mp3",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Somber Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_rain.mp3")
+    )
+    ost.manualDefineList.append(Rainy)
+
+    Requi = ost.soundtrack(
+        name = "Requiem",
+        path = "Audio/BGM/requiem.mp3",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Resolved Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/requiem.mp3")
+    )
+    ost.manualDefineList.append(Requi)
+
+    HallowHall = ost.soundtrack(
+        name = "Hallowed Halls",
+        path = "Audio/BGM/hallowedhalls.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Main Menu Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/hallowedhalls.ogg")
+    )
+    ost.manualDefineList.append(HallowHall)
+
+    DayBy = ost.soundtrack(
+        name = "Day By Day",
+        path = "Audio/BGM/scene_daybyday.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Casual Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_daybyday.ogg")
+    )
+    ost.manualDefineList.append(DayBy)
+
+    SunSet = ost.soundtrack(
+        name = "Sunset",
+        path = "Audio/BGM/scene_sunset.mp3",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Soothing Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_sunset.mp3")
+    )
+    ost.manualDefineList.append(SunSet)
+
+    SchoolDay = ost.soundtrack(
+        name = "Schoolday",
+        path = "Audio/BGM/scene_schoolday.mp3",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Classroom Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_schoolday.mp3")
+    )
+    ost.manualDefineList.append(SchoolDay)
+
+    SunSet = ost.soundtrack(
+        name = "Sunset",
+        path = "Audio/BGM/scene_sunset.mp3",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Soothing Music",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_sunset.mp3")
+    )
+    ost.manualDefineList.append(SunSet)
+
+    HallWay = ost.soundtrack(
+        name = "Hallway",
+        path = "Audio/BGM/scene_hallway.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Academy Campus Theme",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/scene_hallway.ogg")
+    )
+    ost.manualDefineList.append(HallWay)
+
+    Tense = ost.soundtrack(
+        name = "Tension",
+        path = "Audio/BGM/tension.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Conflicted Music",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(Tense)
+
+    TwiBright = ost.soundtrack(
+        name = "Bright Twilight",
+        path = "Audio/BGM/twilightBright.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Twilight (Happy)",
+        cover_art = False,
+        unlocked = renpy.seen_audio("Audio/BGM/twilightBright.ogg")
+    )
+    ost.manualDefineList.append(TwiBright)
+
+    TwiAmb = ost.soundtrack(
+        name = "Ambient Twilight",
+        path = "Audio/BGM/twilightAmbient.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Twilight (Moody)",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(TwiAmb)
+
     ## Base Template
     ######################################
 
