@@ -12501,6 +12501,7 @@ label WG055:
     "Alice's skepticism was apparent in her expression, her eyes narrowing on me. My pathetic attempt to distract from my true purpose had only served to create more suspicion."
     "Wanting to change the subject and move on from here, I stood up from my position leaning back against the tree."
     "As I leaned over to dust myself off from sitting on the ground, I must have bumped the play button on my phone."
+    play music KnowMyself
     "With the earbuds no longer connected, it started broadcasting the song I was listening to for anyone passing by to hear."
     "♪...Love is just a game...♪"
     "♪...If I'm having fun then it's okay...♪"
@@ -12511,9 +12512,11 @@ label WG055:
     "I'm not sure what was a worse reaction, her expected disappointment or her current uncontainable laughter."
     "♪...I'm just playing games, I know that's plasti—...♪"
     MC "Okaay! That's enough of that."
+    stop music
     show WG neutral
     WG "Now I see why you were being evasive."
     MC "Yeah, yeah. Admittingly not my finest hour. Pile it on if you must."
+    play music MC
     show WG haughty
     WG "Well, it's no fun if you've already conceded the point. I'd be lying if I said I wasn't at least a little bit disappointed with what you apparently choose to listen to in your own time."
     WG "Honestly, it sounds like something our parents used to listen to."

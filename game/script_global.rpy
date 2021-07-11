@@ -1134,6 +1134,7 @@ define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
 define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
 define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education
+define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
 define audio.Memories = "Audio/BGM/memories.mp3"
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
 define audio.Requiem = "Audio/BGM/requiem.mp3"
