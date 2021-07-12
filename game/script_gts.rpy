@@ -1,24 +1,61 @@
 label GTS001:
     $setProgress("GTS", "GTS002")
-    scene black with fade
-    "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn't sure how to properly process what we were told."
-    "What Daichi had told me earlier was starting to resonate more, and I began to wonder if perhaps others knew about the purpose of this school before they were enrolled."
-    scene School Planter with fade
+    scene Campus Center with fade
     play music Peaceful
-    "I hadn't realized how long I was lost in my own thoughts until I finally noticed my surroundings; I was at the school's garden."
-    "It was nice here, the cool breeze along with the sound of it blowing through the leaves had a sort of calming effect. I stood there for a few moments longer until a figure walked beside me, catching me by surprise."
-    show GTS neutral:
+    "The words from Tashi-Sensei stayed with me long after class had concluded. I just wasn't sure how to properly process what we were told."
+    "What Daichi had told me earlier was starting to resonate more, and I began to wonder if others knew about the purpose of this school before they were enrolled."
+    "If only to focus on the things I could understand for a while, I decided to take a walk and take stock of the new campus; the little pamphlet map they gave us, I figured, would only do for so long."
+    UNKNOWN "Excuse me!"
+    if getSkill("Athletics") > 2:
+        "No sooner had the shout crossed my ears than something smacked hard into my shoulder, and some guy my age stumbled in front of me before breaking back into a stampede."
+    else:
+        "A fraction of a second after I processed the machine-gun footsteps behind me, their owner smashed into me like someone throwing a machine gun at me."
+        "I just recovered my footing in time to see a half-flailing student running off without a glance back."
+    MC "Ay, watch it!"
+    UNKNOWN "Sorry!"
+    "He didn’t look back, fading into the crowds alongside the wind."
+    MCT "Dick."
+    UNKNOWN "Hotsure-san? Are you alright?"
+    "The next thing to catch me off guard was a girl’s voice, one enveloping and immaterial, like spring mist."
+    show GTS surprised:
         xpos 0.99 xanchor 0.0 yalign 1.0
         linear 5.0 xpos 0.5 xanchor 0.5
-    MC "Hm? Oh, Yamazaki-san. Sorry, I wasn't aware you were here."
-    GTS "It's all right, Hotsure-san. I hope I didn't disturb you."
-    "She stood there, smiling ever so slightly, the flow of wind causing her long hair to dance tenderly until I decided to break the silence."
-    MC "Not at all, I was just thinking. Were you doing the same?"
-    GTS "Yes, I was merely hoping to spend a little time here. Reflect on my thoughts about the day's events thus far."
-    MC "I see... Were you also possibly thinking about what Tashi-sensei told us earlier?"
-    GTS "A little yes, I think most of the students are. Were you as well?"
-    MC "Yeah I was. It really came out of left field, so it's been lingering in my brain all day."
-    show GTS neutral at center
+    extend " I twisted around; one of the girls from my class was walking up to me from behind while raven locks waved behind her in the breeze."
+    MC "Yamazaki-san, right? Yeah, I’m okay. That dude just surprised me."
+    GTS "It would seem so. How peculiar. I wonder what compelled him to act so brashly?"
+    MC "Dunno. He’s probably not available for interview."
+    GTS "I suppose he wouldn’t."
+    GTS "Well now, what are you up to?"
+    MC "Nothing much, just checking out what’s on campus. How about you?"
+    GTS "Much the same. For all its peculiarities, this place has a sort of charm to it, does it not?"
+    MC "I guess so. I’m kinda distracted by all the ‘peculiarities’ at the moment."
+    show GTS happy
+    "She closed her eyes in a genteel, whispered chuckle, which she moved to cover with her hand."
+    show GTS neutral at Transform(xzoom=-1)
+    GTS "Who could blame you? It's one thing to hear about this phenomenon in passing, it's entirely another to walk through the midst of it."
+    MC "Tell me about it. First time I heard about these... growths? Mutations? When I first saw 'em on TV, I thought it was special effects, some kind of hoax."
+    show GTS despaired-thought
+    GTS "They appeared on television? The things the stations will do for ratings these days, I swear..."
+    MCT "You... didn't know that?"
+    show GTS neutral at Transform(xzoom=1)
+    GTS "But let us contemplate more wholesome things."
+    if getAffection("GTS") > 1:
+        extend " If you are also getting familiar with the campus, would you perhaps like to take a walk together?"
+        MC "Sure, I'm down for that. Did you have anywhere you wanted to check out next, or?..."
+        GTS "Oh, no. It is well with me if you lead the way, if you would."
+    else:
+        MC "Uh... yeah, sure."
+        MC "Hey, if we're both doing the same thing, you wanna take a tour around campus together?"
+        GTS "That is a fine idea, Hotsure-san. Please, lead the way."
+    "She joined me by my side, and we resumed the walk. Even with her keeping a polite distance, I couldn't help but steal a glance or two at her."
+    "The demure, waifish little thing walked with posture that, frankly, put me to shame. The flowing wind across the campus set her long, jet hair to a swaying dance as gentle as her pace."
+    "Every time I looked, she nodded at me with a polite suggestion of a smile."
+    scene School Exterior with fade
+    "It didn't take long until our walk turned less into a tour and more into a friendly chat with a scenic backdrop."
+    show GTS neutral with dissolve
+    MC "So, uh... were you thinking about what Tashi-sensei told us, too?"
+    GTS "A little, yes, as I think most of the students have been. Were you as well?"
+    MC "Yeah, I was. It's just... weird, isn't it? It's been lingering in my brain all day."
     menu:
         "What do you think about it?":
             jump GTS001_c1
@@ -28,28 +65,26 @@ label GTS001:
             jump GTS001_c3
 
 label GTS001_c1:
-    MC "What do you think about it?"
-    GTS "It's a little concerning I will admit; however, I think some of those feelings come from the sudden nature in which we were told."
-    GTS "I'm sure if we take more time to process it and reflect on it, the situation won't feel as frightening as it possibly does for some."
+    GTS "It is a little concerning, I will admit; however, I think some of those feelings come from the suddenness with which we were introduced to this world, as it were."
+    GTS "I'm sure if we take more time to reflect on it and take it in, the situation won't feel quite so frightening."
     extend " Thank you for asking, though."
-    MC "No problem, we're in this together after all, right?"
-    GTS "An interesting way to put it, but indeed I would say so."
+    MC "No problem. We're in this together after all, right?"
+    GTS "I daresay that is a wise and uncommon sentiment. I agree."
     jump GTS001_after
 
 label GTS001_c2:
-    MC "I'm curious about what changes I might go through..."
-    GTS "It's good to see you're looking at the news with curiosity rather than concern. Without knowing all the facts, some may worry needlessly about it."
-    MC "I suppose you're right. But I wonder how the school figures out what we'll end up having."
-    GTS "I'm sure they have methods to tell what will be changing in us, though with some students it may be more obvious than others."
+    GTS "Oh, it is surely better to be curious than fearful. Too easily are we tempted into worry and turmoil."
+    MC "Yeah, yeah. Come to think of it, I wonder how the school figures out what we'll end up like."
+    GTS "I'm sure they have methods. I understand the academy's medical facilities are superbly furnished and staffed. Though I daresay intuition suffices for some cases..."
+    MC "Heh, yeah, I get you."
     show GTS embarrassed
-    GTS "Oh, I'm sorry! That sounded rather rude didn't it? I don't mean to judge any of the other students."
-    MC "Heh, it's okay Yamazaki-san, I can tell you're not the type to do that."
+    GTS "Oh, I'm sorry! That sounded rather rude, didn't it? I don't mean to disparage any of the other students."
+    MC "Heh, it's okay, Yamazaki-san. I can tell you didn't mean anything by it."
     show GTS neutral
     GTS "Thank goodness, I wouldn't want to start making the wrong impressions on the first day of school."
     jump GTS001_after
 
 label GTS001_c3:
-    MC "I'm concerned about what that might mean for my younger sister honestly."
     $setAffection("GTS", 1)
     GTS "Oh? You have a younger sister, Hotsure-san?"
     MC "Yeah, she's going to school here, too. I'm just thinking about what Sensei said, about how sometimes siblings are transferred to this school simply because of the results of the other."
@@ -58,24 +93,45 @@ label GTS001_c3:
     MC "Yeah, I guess that's true. Sorry for sounding like a mother hen here."
     GTS "There's no need to apologize for it. I know I'm very much the same with my own sister."
     MC "You have a sister too?"
-    GTS "Yes, she's a couple years younger than me, so just know that you're not the only one who can come off as a mother hen at times."
+    GTS "Yes, she's a couple years younger than me. I hope it's some comfort that you're not the only one who can come off as a mother hen at times."
     jump GTS001_after
 
 label GTS001_after:
-    "She gave a soft chuckle and kept her warm smile that soothed my worries."
-    "I guess she must have noticed me staring, because she soon chimed in."
-    show GTS embarrassed
-    GTS "It's quite rude to stare."
-    MC "O-Oh! Sorry... I was just thinking again, haha... So, are you going to be doing anything else later today?"
+    GTS "And you know... just this morning I went to buy a pack of nori from the vending machine by the administrative building... not something I am wont to do, I confess... "
+    MC "Yeah?"
+    GTS "Yes... but as I withdrew a bill from my money clip, a 5000 yen note slipped out and blew away in the wind."
+    show GTS unique-2
+    GTS "But as the saying goes, easy come, easy go. The nori was quite satisfying regardless."
     show GTS neutral
-    "She placed a finger on her lip as she thought about her plans for the evening, before finally replying."
-    GTS "Well, I had planned to return to my dorm room so I could tell my family about how my first day went."
-    GTS "However, I do plan to explore the garden later this evening. There's a surprisingly large variety of flowers here. At least, more than I had expected."
-    GTS "So, I want to make a list of what's here and maybe ask the groundskeeper about where they obtained the seeds for them."
-    MC "Oh, I see; I won't hold you up, then. I should probably do the same myself, really, I'm sure my family would love to hear about how my day went as well. I'll see you around, Yamazaki-san."
-    GTS "Farewell, Hotsure-san, I hope the rest of your day goes well. Do try to visit the garden every so often, you'll be surprised how much good can come from resting in a garden for a few moments."
-    MC "Heh, I might take you up on that advice. Later, Yamazaki-san."
+    MC "I..."
+    MC "You..."
+    MC "I'm sorry, you lost {i}how{/i} much? And you're just... {i}okay{/i} with it?"
+    GTS "Attachments are the root of suffering in this life, Hotsure-san. Attachments to our status quo and attachments to yen notes alike."
+    MC "That's... that's interesting."
+    GTS "I am glad you think so."
+    scene School Planter with fade
+    show GTS neutral with dissolve
+    "Through my half-stunned silence, she gave a soft chuckle and kept her warm smile that soothed my worries."
+    "In the midst of it, I just processed that we had wandered back to the spot where I'd first met her, before an array of massive planters that shone emerald-green in the afternoon sunlight."
+    "But my eyes shortly found their way back to Naomi; I guess she must have noticed me staring, because she soon chimed in."
+    show GTS neutral at Transform(xzoom=-1)
+    GTS "I wasn't going to say anything, Hotsure-san, but it's rather rude to stare."
+    MC "O-Oh! Sorry... I was just thinking again, haha... So, are you going to be doing anything else later today?"
+    show GTS neutral at Transform(xzoom=1)
+    "She placed a finger on her lip as she thought, before finally replying."
+    GTS "Well, I had planned to return to my dormitory so I could tell my family about how my first day went."
+    GTS "However, before I do that, I may take in these gardens more. There's a surprisingly large variety of flowers here, more than I expected."
+    GTS "In particular, I would like to perhaps ask the groundskeeper about where the school obtained the seeds."
+    MC "You're into gardening, huh? I never put it together but it makes a lot of sense."
+    show GTS unique
+    GTS "Hmhm, very much so. Ever since I was little, I've loved the way one cultivates himself alongside the plants, and the inimitable beauty it can bestow on one's space."
+    MC "That's really cool, Yamazaki-san."
+    MC "Well hey, I won't hold you up, then. I should probably send my family a text, too. They'd probably love to hear about how my day went, too. I'll see you around, Yamazaki-san."
+    GTS "Farewell, Hotsure-san. I hope the rest of your day goes well. Do try to visit the garden every so often. You might be surprised how much good can come from a moment's repose in the right environs."
+    MC "Heh, I might take you up on that advice. See you later, Yamazaki-san."
     "She gave me a small bow before I departed."
+    hide GTS with dissolve
+    MCT "Heh. Nice girl."
     jump daymenu
 
 label GTS002:
