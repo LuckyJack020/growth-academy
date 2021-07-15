@@ -8,7 +8,7 @@ label AE001:
     AE "{i}Ahem{/i}"
     MC "Eh?"
     "I looked over to the table adjacent, where I saw Shiori-san flipping through the pages of a large book."
-    play music Hallway
+    play music HigherEdu
     show AE angry at center with dissolve
     MC "A-ah! Shiori-san, how are y-"
     AE "Hotsure-san, adjust your volume in the library, please."
@@ -98,7 +98,7 @@ label AE001_after:
 label AE002:
     $setProgress("AE", "AE003")
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "I walked around the hallways after class looking for Shiori-san, so far having no luck."
     "In class, she wouldn't acknowledge me when I whispered to her, and every time I tried to get close to her, she just got pulled aside by another student."
     Student "-merging the committees into student council. I don't get it either man."
@@ -388,7 +388,7 @@ label AE003_c1_after:
     scene Dorm Exterior with fade
     play sound Knock
     "{i}KNOCK KNOCK{/i}"
-    play music Hallway
+    play music HigherEdu
     MC "Daichi! C'mon man, open the door."
     RM "Who is it?"
     MC "It's the colonel, I got some recipes to share. Open up."
@@ -992,7 +992,7 @@ label AE008:
     $setProgress("AE", "AE009")
     scene Office with fade
     show AE neutral at center with dissolve
-    play music Hallway
+    play music HigherEdu
     "Today was the second day I went to the office with Shiori-san. I kind of felt like I was missing out on a bright, sunny day, but at least I could redeem myself for the other day's failure."
     AE "Remember, steady breathing. No matter how quickly you receive files, double check to make sure that everything is in order."
     MC "Got it."
@@ -2116,7 +2116,7 @@ label AE013:
     MC "Decided to bring me straight here."
     show AE surprised
     AE "...W-Hotsure-san you-"
-    play music Hallway
+    play music HigherEdu
     Nurse "Well, it was a kind gesture, Matsumoto-san, however it seems as though it wasn't necessary."
     show AE neutral-annoyed
     AE "N-not necessary? He was bleeding from the impact point."
@@ -2159,7 +2159,7 @@ label AE013:
 label AE014:
     $setProgress("AE", "AE015")
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "I walked over to the library doors to begin another day of work with Shiori. Newly printed posters adorned the halls, as well as the doors themselves."
     MCT "Yeesh, she really got to work after yesterday, didn't she?"
     "I opened the library door, but this time I noticed something strange. It only opened part of the way before jamming."
@@ -2906,7 +2906,7 @@ label AE017:
 label AE018:
     $setProgress("AE", "AE019")
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "I sat at the windowsill waiting. My feet dangling just slightly off of the floor as I kicked them back and forth. Looking down at them, I was given a slight tunnel vision from my own black locks dangling down a few inches from my face."
     "I looked up to the ceiling, inhaling and letting out a low gust of air from my lips. As I looked back forward, I saw a familiar face slowly heading up the stairs."
     MC "Oy, Shiori-san."
@@ -3335,7 +3335,7 @@ label AE019_c1_2:
 
 label AE020:
     scene Office with fade
-    play music Hallway
+    play music HigherEdu
     "As I walked into the office, I was greeted with Shiori-san, kneeling over in order to place some files in a cabinet, butt positioned directly in my line of sight. I looked to the side a moment, before moving over to her."
     "She looked over towards me and gave a small smile."
     show AE happy at center with dissolve
@@ -3796,7 +3796,7 @@ label AE021:
 label AE022:
     $setProgress("AE", "AE023")
     scene Dorm Exterior with fade
-    play music Hallway
+    play music HigherEdu
     "As I exited my room, I took a breath of fresh air as I stretched my back. Daichi walked out next and nodded to me, purpose in his eyes."
     "One of my own still shut mid yawn, I nodded as Daichi opened the grate to the vents and climbed in, heading towards his planned destination."
     MCT "Alright. So far so good, I guess. Now I just head to class."
@@ -4344,7 +4344,7 @@ label AE024:
     scene black with fade
     "{i}Creeeeak{/i}"
     scene Roof with fade
-    play music Hallway
+    play music HigherEdu
     "The light from the roof was blinding. I brought my arm up and looked down to shield my eyes as I stepped out from the stairwell."
     MC "U-um, Shiori-san? Are you there?"
     "After feeling my eyes had adjusted enough, I looked up to find..."
@@ -6539,7 +6539,7 @@ label AE032:
     CMF "Yes, ma'am!"
     "The girl walked off in the other direction, leaving Shiori-chan and I alone."
     "I looked up towards her. Her eyes were weary, with dark circles forming under them. She sat down next to me; her butt pillowing out over onto my leg slightly, forcing me to scoot away to net her more room."
-    play music Hallway
+    play music HigherEdu
     AE "Ngf..."
     MC "Long day?"
     AE "Longer still, considering I'd stayed up most of the night working on filling out the forms for the new legislation brought up by Amigawa-san, to actually do something about the surplus food."
@@ -7528,7 +7528,7 @@ label AE036:
     "Three minutes from when we'd meet, I went up to the roof and awaited her, watching the sun wane in the sky as I sat on the bench."
     scene Roof with fade
     #CREEAK
-    play music Hallway
+    play music HigherEdu
     MCT "Ah, there she is."
     "Shiori-chan came up from the stairway, her black hair blowing softly with the wind as she walked over to me."
     show AE neutral with dissolve
@@ -8635,7 +8635,7 @@ label AE040_c1_2:
     jump AE040_c1_after
 
 label AE040_c1_after:
-    play music Hallway
+    play music HigherEdu
     show AE neutral
     AE "Well, Hotsure-san, that's that."
     MC "I... I put up a good fight though. Right to the-"
@@ -8813,7 +8813,7 @@ label AE041_c1_2:
     jump AE041_c1_after
 
 label AE041_c1_after:
-    play music Hallway
+    play music HigherEdu
     "I hung my head in defeat. The fire I went in with had been blown away by the icy chill of her calculating tactics."
     show AE sad
     AE "Um... good game."
@@ -10005,7 +10005,7 @@ label AE047:
     $setProgress("AE", "AE048")
     $setTime(TimeEnum.EVE)
     scene Dorm AE with fade
-    play music Hallway
+    play music HigherEdu
     "A brisk wind blew through the open bedroom window, the curtains fluttering lightly at it's passing. Shiori-chan and I had spent much of the afternoon talking together, and before we knew it, we'd reached into the early hours of sundown."
     "As it so happened, the two of us had gotten onto the topic of music. Her piano teacher apparently playing a more prominent role in her life than I'd thought, it turned out she was a pretty big connoisseur on the topic."
     show AE happy with dissolve
@@ -10307,7 +10307,7 @@ label AE047_c1_after:
     "Neither of us wanted to let go. We didn't know when to let go. We kissed for a minute which felt like eternity. When we finally did, she opened her beautiful silvery eyes, her glasses having slipped down to the tip of her nose in our embrace."
     scene Dorm AE with fade
     show AE happy with dissolve
-    play music Hallway
+    play music HigherEdu
     AE "...Wow..."
     MC "Mhm, yeah... wow."
     "The bell chimed in the tower as golden sunlight bathed the room in its radiance. There it was. Our first kiss."
@@ -10356,7 +10356,7 @@ label AE048:
     "Part of my worry replaced by a heightened sense of curiosity, I exited the hallway and entered the courtyard."
 
     scene Campus Center with fade
-    play music Hallway
+    play music HigherEdu
     MC "Oy! Yuki-chan, got a sec?"
     show Yuki neutral with dissolve
     Yuki "Huh? Keithuke-than?"
@@ -11406,7 +11406,7 @@ label AE051:
     "The next morning, the deep creak of the mattress roused me from my sleep, my eyes opened slowly to the white ceiling above, and the calling of birds outside the window echoed through my head as a cool breeze rolled in from the newly opened window..."
 
     scene Dorm AE with fade
-    play music Hallway
+    play music HigherEdu
     MC "M-Mmmn."
     "I yawned as I wiped the sleep from my eyes, memories of last night still replaying fondly in my head. I almost began to wonder if it was a dream, until I looked over to my lover."
     MC "Haah, morning."
@@ -12405,7 +12405,7 @@ label AE054:
     AE "It most certainly wasn't nothing."
     show AE neutral
     AE "I can't thank you enough. Truly."
-    play music Hallway
+    play music HigherEdu
     "Taking a rectangular metal box from under her bed, she lifted a hatch on the side and pulled it up to open the top."
     MCT "Ah. I see... down, boy."
     AE "However, be that as it may, I have no intention of letting your kindness go unrewarded."
@@ -13047,7 +13047,7 @@ label AE056_c1_after:
     "I nodded wordlessly and stroked my long, brown locks in embarrassment. Shiori grabbed my hand and led me out of the room past Tako as she pursed her lips, held open the door for Shiori, and closed the door behind herself."
 
     scene Dorm Exterior with fade
-    play music Hallway
+    play music HigherEdu
     MC "Well... damn."
     show AE sad with dissolve
     AE "I am... {i}SO{/i} sorry for that."
@@ -13717,7 +13717,7 @@ label AE060:
     $setProgress("AE", "AE061")
     $setTime(TimeEnum.EVE)
     scene Library with fade
-    play music Hallway
+    play music HigherEdu
     "Entering the library, I once again found myself greeted with a mostly empty room, save for a few members of student council having a chat at one of the free tables."
     "Meetings had thankfully been getting much shorter for her, and I could tell. She seemed way less high strung, and the council itself began to relax a bit more in her presence."
     MC "Yo! Is Shiori in the office?"
@@ -13973,7 +13973,7 @@ label AE060:
     "We made our way past Yureno-san, whose massive hips proved to be a bit of trouble to get past at first; eventually leading us to the outside as we shut the door."
 
     scene Dorm Exterior with fade
-    play music Hallway
+    play music HigherEdu
     show AE angry with dissolve
     AE "{i}Why{/i} did I forget to lock the door? Uch..."
     "Sighing, Shiori took off her glasses and massaged her eyes; her face still pink from our session."
@@ -14315,7 +14315,7 @@ label AE061:
 label AE062:
     $setProgress("AE", "AE063")
     scene Hill Road with fade
-    play music Hallway
+    play music HigherEdu
     "A gentle, brisk wind blew through the fields outside the school, causing my bangs to flutter as Shiori gingerly pet my head."
     show AE happy with dissolve
     MC "Eheheh, enjoying yourself?"
@@ -14936,7 +14936,7 @@ label AE063:
 
 label AE064:
     $setProgress("AE", "AE065")
-    play music Hallway
+    play music HigherEdu
     scene Classroom with fade
     show AE neutral with dissolve
     AE "Stand."
@@ -15134,7 +15134,7 @@ label AE064:
     show AE surprised
     AE "Wind down?"
     MC "Yeah, like..."
-    play music Hallway
+    play music HigherEdu
     MC "It's been a while since I last heard you play."
     show AE neutral
     AE "Ah, true. I haven't really gotten behind the keys in a while..."
@@ -15730,7 +15730,7 @@ label AE068:
     $setProgress("AE", "AE069")
     scene Dorm Interior with fade
     #$TV ON SFX$
-    play music Hallway
+    play music HigherEdu
     show AE neutral with dissolve
     AE "Hmm."
     AE "Is this something couples do often?"
@@ -16879,7 +16879,7 @@ label AE073_c1_after:
 label AE074:
     $setProgress("AE", "AE075")
     scene Field Winter with fade
-    play music Hallway
+    play music HigherEdu
     show Tomoko neutral at Position(xcenter=0.15, yalign=1.0)
     show AE neutral at Position(xcenter=0.35, yalign=1.0)
     show Tako neutral at Position(xcenter=0.65, yalign=1.0)

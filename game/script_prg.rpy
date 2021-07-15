@@ -1,6 +1,6 @@
 label PRG001b:
     scene School Exterior with fade
-    play music Hallway
+    play music HigherEdu
     "On my way to the vending machines for a drink, I spied Aida-san from my class, frowning down at a can of tea."
     show PRG sad with dissolve
     "Her worried look made me think back to that first morning with Tashi-Sensei, and how she'd reacted to his tongue."
@@ -1635,7 +1635,7 @@ label PRG009:
     $setProgress("PRG", "PRG011")
     $setTimeFlag("size2")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "Sunlight cascaded through the windows of my dorm, hitting me directly in the eyes."
     "I let out an almost primal groan, flipping over and pulling at my hair, wishing that my hair  would hurry up and grow to protect my delicate peepers from the harsh early sun."
     "I yanked the pillow over my head and sighed. It was Saturday, and I knew that laying in bed and wasting my morning would just leave me regretting it later, so I wrenched my poor legs out of bed and sat up."
@@ -4238,7 +4238,7 @@ label PRG016:
 label PRG017:
     $setProgress("PRG", "PRG019")
     scene School Planter with fade
-    play music Hallway
+    play music HigherEdu
     "After classes had ended for the day, I was left with not only a cramped wrist from the usual excessive note taking, but also a pounding tension headache that felt as though someone was hammering a nail deep into my forehead."
     "Rather than going back to my dorm and allowing it get any worse, I decided to go au naturel and take in a little fresh air. Seeing as how the roof would no doubt be packed with students at this time of day, I found my way to the gardens."
     "The garden was quiet and peaceful, as always. Beams of warm, afternoon sun shone down and warmed the courtyard, as I wandered around for a moment, looking for a place to rest my head."
@@ -4681,7 +4681,7 @@ label PRG019_c1_1:
     PRG "O-Okay! Thank you, Sakura-san."
 
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "Aida led the way through the crowd, with me in tow, until we were finally out in the hallway."
     MC "Well, I'm glad I'm not claustrophobic. That room was a bit cramped."
     show PRG neutral with dissolve
@@ -4943,7 +4943,7 @@ label PRG020_c1_after:
     "Rather than going straight back to the dorm, I took a brief stroll around the school. Daichi was usually at the dorm about now, and I wasn't really in the mood to talk about his latest radical theory."
 
     scene Roof with fade
-    play music Hallway
+    play music HigherEdu
     "Eventually, my stroll took me up to the roof. Since it was a Friday night, and most students had better things to do than wander aimlessly, the roof was deserted."
     "I went to the chain-link fence that surrounded the roof and gazed out over the campus, now bathed in the warmth of the setting sun."
     "Taking a seat on a nearby metal bench, I pulled out the handheld system that I carried with me specifically for times like this."
@@ -5028,7 +5028,7 @@ label PRG020_c2_1:
     "Slowly, Aida began to lean herself closer to me. I found myself leaning in closer, as if being pulled in by her. Our faces met in the middle, staying only a scant few inches from one another."
     "Now we were both just sitting there, incredibly close to each other, staring into each other's eyes. It felt like we were standing by an extremely calm, tranquil lake. No movement at all: Just stillness and complete lucidity."
     "Then, the stillness was shattered. I closed the distance and kissed her. Right on the lips."
-    play music Hallway fadein 1.0
+    play music HigherEdu fadein 1.0
     show cg PRG020 with dissolve
     "Aida's arms instantly wrapped around me, and mine around her. We embraced tightly as we kissed, Aida leaning even more into me, her huge chest sandwiched between myself and her."
     "I jumped a bit as I felt her tongue brush tentatively against my lips. Taking the hint, I opened my mouth ever so slightly, inviting her in."
@@ -5362,7 +5362,7 @@ label PRG022:
     "We passed through the school's gates and turned left, heading south, towards the supermarket."
 
     scene Town with fade
-    play music Hallway
+    play music HigherEdu
     show PRG neutral with dissolve
     PRG "I wrote down a few recipes here along with the items I'll need to make them. Pick three of them, and we'll get the items we need to make those."
     "She passed me the wrinkled piece of paper so I could read it."
@@ -5879,7 +5879,7 @@ label PRG024_c1_after:
     "I bowed to her as best I could with only one foot and hobbled my way out the door, with Aida holding it open for me."
 
     scene Campus Center with fade
-    play music Hallway
+    play music HigherEdu
     #[SCENE CHANGE CAMPUSCENTER_DAY]
     MC "Thanks by the way, Kodama-san."
     show PRG neutral with dissolve
@@ -6318,7 +6318,7 @@ label PRG026:
 label PRG026_father:
     $setProgress("PRG", "PRG027")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "I smoothed my shirt with my hand and smiled. It had been a few days since Aida and I had... made love, and weirdly, I hadn't seen her since."
     "She hadn't been in class for two days. According to Alice, she hadn't been feeling well as of late and was resting in their dorm. Although, even with Alice's assurance that she would be alright, I still was worried."
     "I ran a brush through my hair in a failed attempt to look less shaggy than I was. After our special moment together, I wanted to make sure that I at least looked presentable."
@@ -6600,7 +6600,7 @@ label PRG026_nofather:
     $setProgress("PRG", "PRG027Z")
     #$lockRoute("PRG") #when route is complete
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "I brushed a stray piece of hair off of my uniform and took a breath. I was going to go to Aida's room and I planned to walk her to class."
     "She'd been sick the last few days, so I hadn't seen her recently, but from the occasional text here and there, I gathered that she was feeling at least passable."
     "It was strange. Even though I felt comfortable with Aida, having spent so much time with her, after our latest encounter, I wasn't quite sure how to feel."
@@ -7064,7 +7064,7 @@ label PRG028:
     $setProgress("PRG", "PRG029")
     $setTime(TimeEnum.DAY)
     scene Campus Center with fade
-    play music Hallway
+    play music HigherEdu
     show PRG neutral with dissolve
     PRG "What would you think if I made fried rice today?"
     MC "I'd commend you for the delicious, yet simple rice, but also suggest that you try making something more complex."
@@ -7557,7 +7557,7 @@ label PRG030_c1_2:
 label PRG031:
     $setProgress("PRG", "PRG032")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "With a huff, I flew into my dorm and threw my backpack on the floor, diving straight for my bed. It had been a crazy, long day, and I wanted nothing more than to just sleep until the next morning."
     "My classes had been long and boring, and on top of the monotony, an assignment had come from every class, meaning I had a night full of studying and penciling in answers ahead of me."
     "Bashing my fist into my pillow in frustration, I rose from my bed and sat at my desk, rifling through the crowded mess of books and paper. Organization was never a strong point of mine, and it came back to burn me during times like this."
@@ -7793,7 +7793,7 @@ label PRG032:
     show PRG surprised with hpunch
     MC "W-Wha?!!"
     "I bolted up, heart slamming inside my chest."
-    play music Hallway
+    play music HigherEdu
     PRG "I-I'm so sorry! W-Were you sleeping? I-I'll let you sleep!"
     MC "It's alright! You just startled me, is all!"
     show PRG unique
@@ -8276,7 +8276,7 @@ label PRG034:
     "I scanned the room carefully. None of the chairs had moved, and the piano still sat as it had, but I wasn't stupid. I knew I had heard something. My eyes finally fell on the far wall, where multiple racks of music stands were all lined up."
     "I crossed the room and slid a few racks out of the way."
     show PRG sad with dissolve
-    play music Hallway
+    play music HigherEdu
     "Aida sat on the floor, looking up at me, her eyes stained a light pink. Tear spots dotted the front of her uniform and trailed down onto her belly."
     MC "Aida..."
     PRG "..."
@@ -8688,7 +8688,7 @@ label PRG035_c1_after:
     PRG "You too!"
 
     scene Town with fade
-    play music Hallway
+    play music HigherEdu
     show PRG neutral with dissolve
     "The town had quieted down by the time we left the restaurant. Besides us and the scarce jogger or two, the streets were barren."
     PRG "Was there anything else you wanted to do, Keisuke?"
@@ -9261,7 +9261,7 @@ label PRG037:
         jump daymenu
 
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     $setFlag("PRG037_pass")
     "After I had gorged myself on cheap cafeteria ramen and doused my mouth with water afterwards to clear my system of god knows how much extra sodium, I went back to my dorm, ready to slip away into a college style food coma."
     "My bed had never looked more heavenly as I flopped face first into it."
@@ -10312,7 +10312,7 @@ label PRG042:
     show AE surprised at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     "...directly into Shiori's stack of books and papers on her desk."
-    play music Hallway
+    play music HigherEdu
     "I winced as Shiori's entire workload met the floor, pens and pencils flying everywhere like tiny graphite and ink missiles. Papers were swept beneath desks, and notebooks bent this way and that on the cold linoleum."
     PRG "M-M-Matsumoto-san! I-I-I am so so so sorry!"
     "Rather than blowing up in Aida's face or scolding her for being unnecessarily clumsy, Shiori's face softened."
@@ -10422,7 +10422,7 @@ label PRG042:
     AE "I would hate to impose... but, if you'll have me, I gladly accept."
 
     scene Cooking Classroom with fade
-    play music Hallway
+    play music HigherEdu
     show AE surprised at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -10943,7 +10943,7 @@ label PRG044_c1_2:
     PRG "B-Bye..."
     hide Tomoko with dissolve
     "Tomoko turned and went towards the way we had come from. Aida and I continued until we had reached the bus stop."
-    play music Hallway
+    play music HigherEdu
     MC "I'm sorry about my sister. She was born with foot in mouth syndrome."
     PRG "Oh... well, she looks okay for having a condition..."
     MC "That just means that she says stupid stuff a lot."
@@ -11340,7 +11340,7 @@ label PRG045_c1_fail:
 label PRG046:
     $setProgress("PRG", "PRG047")
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "The cold nip of the school's walls felt almost comforting as I pressed my back against it and shut my eyes, letting my backpack sag down onto the floor next to me."
     "I'd been sitting in class today when Tashi-sensei had reminded all of us of this huge exam coming up at the end of the week. Me being me, I'd totally blanked on it, and hadn't studied a thing."
     "Thankfully, I still had a good three nights that I could use for some solid studying, but I really didn't feel like being a sleepless shut-in for the next 72 hours."
@@ -11891,7 +11891,7 @@ label PRG046_c3_alone:
 label PRG047:
     $setProgress("PRG", "PRG048")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "After a restless night, I turned over in bed and silenced my phone alarm. I'd had one of those nights where you don't really remember falling asleep, but you feel like you've been up for a really long time."
     "I sighed, threw my blankets into a heap and went for my morning shower."
     "I'd been up late studying, on top of not sleeping well, so I felt like a zombie. Thankfully, my shower always seemed to wake me up, so I felt pretty okay once I left the bathroom."
@@ -12294,7 +12294,7 @@ label PRG049_c1_1:
     show PRG nude-sad-2
     PRG "I've been masturbating like crazy!"
     "My mouth opened and I blinked. Every inch of my body relaxed and I let out a massive sigh of relief."
-    play music Hallway
+    play music HigherEdu
     MC "That's it?"
     PRG "I know! I'm sor..."
     show PRG nude-unique
@@ -12419,7 +12419,7 @@ label PRG049_c1_1:
     "I leaned over to my nightstand and shut off my lamp, leaving us in the dark."
 
     scene black with fade
-    play music Hallway
+    play music HigherEdu
     PRG "Hey, Keisuke?"
     MC "Hm?"
     PRG "Thank you... for being so understanding."
@@ -12509,7 +12509,7 @@ label PRG049_c1_2:
     PRG "Keisuke... I..."
     PRG "I've been masturbating almost every night."
     "I blinked."
-    play music Hallway
+    play music HigherEdu
     MC "Really?"
     show PRG sad
     PRG "Yes! I'm sorry! I'm so sorry! I know I should've told you about my feelings or made them more clear, but I've been feeling this intense lust. Just a longing and a needy feeling inside of me."
@@ -14797,7 +14797,7 @@ label PRG056:
 label PRG056A:
     $setProgress("PRG", "PRG057A")
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "As I rounded another corner in the halls leading up to the kitchen, I reached into my pocket and fished out my printed off recipe from the internet."
     "Before we'd all left the kitchen yesterday, Aida and Sakura had come up with the idea of both myself and Sakura finding a random recipe online, printing it off, and bringing it to Aida to make today."
     "The logic behind it was that, with Aida not knowing ahead of time what she would be making, she'd have to think on her feet."
@@ -14941,7 +14941,7 @@ label PRG056A:
     "Fortunately enough, both my recipe and Sakura's didn't call for a huge variety of ingredients, so we both managed to fit all of our items into one or two bags."
     "Aida's selection wasn't so lucky, however, and had to be split amongst the three of us to haul back."
     scene Hill Road with fade
-    play music Hallway
+    play music HigherEdu
     show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG unique at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -15820,7 +15820,7 @@ label PRG056C_c1_2:
 label PRG057A:
     $setProgress("PRG", "PRG058")
     scene Dorm Exterior with fade
-    play music Hallway
+    play music HigherEdu
     MCT "Okay. Don't freaking trip. No tripping."
     "I cradled my bag of food in my arms as though it were a wee little baby in need of protection."
     "True, all that was in the bag was some spices, sauces, vegetables, and meat, but I figured with the ever looming task of fatherhood popping up in my rearview mirror, training with some ribs and vegetables didn't seem like a bad idea."
@@ -16311,7 +16311,7 @@ label PRG057B_c1_2:
 label PRG057C:
     $setProgress("PRG", "PRG058")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "From the moment I sat up in bed, I had a pang of unease smash into my stomach like an 18-wheeler."
     "Today was Aida's last contest before the quarterfinals. And Honoka was taking Sakura's place."
     "I rubbed my eyes. I had that feeling when you get up in the morning and feel relaxed, but you know that in no time, you'll have a lot more to deal with."
@@ -16795,7 +16795,7 @@ label PRG057C_lose:
 label PRG058:
     $setProgress("PRG", "PRG059")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     if getFlag("PRG057B_delaygift"):
         "By the time my alarm blared out in my dorm, I was already showered and ready to roll. I'd been up for around an hour already, getting myself into proper gift giving form."
         "On my bed was my backpack, which held my gift for Aida."
@@ -19947,7 +19947,7 @@ label PRG066:
 label PRG027Z:
     $setProgress("PRG", "PRG028Z")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "I grabbed my shoes from my closet, stopping in my bathroom to make sure that I'd cut my hair evenly."
     "Feeling satisfied with my self trim, I sat in my desk chair and leaned over to lace my shoes."
     "For the last day or so, I'd been in some sort of weird funk that I couldn't shake. Nothing really felt special anymore."
@@ -20079,7 +20079,7 @@ label PRG027Z:
 label PRG028Z:
     $setProgress("PRG", "PRG029Z")
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "After a fairly lax weekend, I headed into the hallways on the first class day of the week, feeling more alive than I'd felt in some time."
     "Honoka and I had hung out each day of the weekend, doing everything from going to a movie downtown to grabbing lunch together."
     "It really felt like, at long last, I was finally getting to know my childhood best friend all over again."

@@ -1144,7 +1144,6 @@ define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
-define audio.Hallway = "Audio/BGM/scene_Hallway.ogg" #possibly replace with all HigherEdu instances
 define audio.Tension = "Audio/BGM/tension.ogg"
 define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"
 define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"

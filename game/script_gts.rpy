@@ -143,7 +143,7 @@ label GTS002:
     "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me."
     "In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
     show GTS neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
-    play music Hallway
+    play music HigherEdu
     MC "Yo Yamazaki-san!"
     "I lifted one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
     show GTS embarrassed at Position(xpos=0.5), Transform(xzoom=1) with dissolve
@@ -613,7 +613,7 @@ label GTS007:
 label GTS008:
     $setProgress("GTS", "GTS009")
     scene Roof with fade
-    play music Hallway
+    play music HigherEdu
     "My footsteps echoed up the stairwell as I ascended to the peak. Upon opening the door, a wave of warm sunlight washed over me."
     "As my eyes adjusted and I stepped out onto the school roof, I scanned the area to see if Honoka might be around. There were a small number of students hanging out and chatting but no sign of Honoka."
     "I didn't call out her name, but I did walk around to see if she might be around the stairway entrance. Surprisingly, it wasn't Honoka I found, but Naomi."
@@ -693,7 +693,7 @@ label GTS009:
         $setProgress("GTS", "GTS011b")
     $setTime(TimeEnum.EVE)
     scene Town with fade
-    play music Hallway
+    play music HigherEdu
     #Afternoon, gentle music, scene becomes locked after scene 10.
     "My stride was rather lax as I wandered the various blocks of the town. It was rather quaint and not crowded."
     "Well, that wasn't entirely true, as on occasion I'd spot someone with a rather large endowment and see them journey through the other people. A faint reminder on what may be the future for some of the others."
@@ -1142,7 +1142,7 @@ label GTS011b:
 label GTS012:
     scene School Planter with fade
     show GTS neutral at center with dissolve
-    play music Hallway
+    play music HigherEdu
     "A small sigh left my body as I rested back against a tree. I was in the garden, Naomi having invited me for some tea after class had ended."
     "She had set up a blanket on the grass and was preparing the drinks. It was an interesting sight as she sat on her knees, an assortment of items in front of her as she began the long process of making the tea."
     MC "I've never seen someone do this in person before. That's pretty impressive."
@@ -1493,7 +1493,7 @@ label GTS013_c3:
     stop music
     show GTS neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
     GTS "...Well, how fortunate that you came along, Hotsure-san."
-    play music Hallway
+    play music HigherEdu
     MC "Guess so. I had no idea Kodama-san's schedule was that tight, wow."
     "Naomi began slicing into the pine-colored dough with pensive precision. Her eyes held hazily on the task, as though her mind were elsewhere."
     GTS "One can't help but admire her sense of duty. It's just rather a shame where it seems to lead her."
@@ -2029,7 +2029,7 @@ label GTS017_c1_2:
 label GTS018:
     $setProgress("GTS", "GTS019")
     scene School Exterior with fade
-    play music Hallway
+    play music HigherEdu
     #SFX wind
     "There it was, again. The spring breeze always managed to blow my hair directly over my eyes."
     MC "One of these days, I'm just going to gel my hair back..."
@@ -2118,7 +2118,7 @@ label GTS018_c1_2:
     Fumika "Yeah, that's perfectly fine. If you want, you can stop by some time and meet the other girls, too. We're at the gym after class on Thursdays, so if you're ever curious, just come visit and I'll be happy to introduce you!"
     GTS "Thank you Usui-san. I'll be sure to come by and meet everyone."
     Fumika "Great! Can't wait to see you there. Well, I'll see you two later, then."
-    play music Hallway
+    play music HigherEdu
     "She gave us a small wave as she took off back to the campus. I waited until I was sure she was out of earshot before I spoke."
     MC "Well, that was something."
     GTS "Indeed, it was."
@@ -4056,7 +4056,7 @@ label GTS026:
     scene black with fade
     pause 1
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "Things didn't feel much more real as I collected myself and headed to class."
     "There was a breeze out; silhouettes of leaves milled to and fro on the windows, on the walls beyond, while our scattered procession crawled towards room 3B."
     "Motion was coming creaking back to the world around me."
@@ -4723,7 +4723,7 @@ label GTS028T_c1_after:
 label GTS029:
     $setProgress("GTS", "GTS030")
     scene Cafeteria with fade
-    play music Hallway
+    play music HigherEdu
     "I moved along the cafeteria line with the other students, and picked out a few food items, such as a bowl of beef teriyaki with rice, and some miso soup. I turned towards the tables and scanned the crowd."
     "It didn't take long to spot Naomi. Even sitting down I could spot the back of her head resting above everyone else's. I headed over to her table where she was currently sitting alone and took a seat."
     MC "Hey Yamazaki-san!"

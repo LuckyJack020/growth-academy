@@ -560,7 +560,7 @@ label WG005:
     $setTimeFlag("aftertest")
     $setProgress("WG", "WG006")
     scene Cafeteria with fade
-    play music Hallway
+    play music HigherEdu
     MCT "Hair? What kind of mutation is hair growth? Or factor— whatever they call it. This almost seems like a joke."
     MCT "Hmm, I must not be the only one taking the news poorly."
     "The previously boisterous atmosphere, typical of school cafeterias, now had the life completely sucked out of it."
@@ -1046,7 +1046,7 @@ label WG008_prechoice:
     stop music
 
     scene Cafeteria with fade
-    play music Hallway
+    play music HigherEdu
     "We found Alice sitting at her usual table, one hand typing on a laptop and the other picking up high tea pastries from a tray next to her."
     show WG happy at center with dissolve
     WG "Keisuke, good afternoon. Thank you for bringing Aida back. I've been waiting for her for... five and a half minutes now."
@@ -1183,7 +1183,7 @@ label WG008A:
             jump WG008A_c2
 
 label WG008A_c1:
-    play music Hallway
+    play music HigherEdu
     MC "I don't see what good that would do. I mean, didn't you just try that? If she's as headstrong as you say, arguing will only make her dig her heels in."
     show WG angry
     WG "Mmmf!"
@@ -1211,7 +1211,7 @@ label WG008A_c2:
     play sound Crash
     $setAffection("WG", -2)
     WG "There is no word for 'foolishness' in your language that is strong enough for that girl."
-    play music Hallway
+    play music HigherEdu
     MC "She didn't listen to you, I take it?"
     WG "She told me that I am a hair's breadth from being cut entirely, and she makes it sound as if she is being reasonable by giving me a 'second chance.'"
     WG "That my talent, which I have clearly demonstrated by this point, could be dismissed so flippantly..."
@@ -2712,7 +2712,7 @@ label WG015_c1_3:
 label WG016:
     $setProgress("WG", "WG017")
     scene Dorm Interior with fade
-    play music Hallway
+    play music HigherEdu
     "Classes were done, my homework was done, and even though I had wandered around the school for over an hour, I hadn't found anything to do."
     "No one to talk to, nobody that needed help with anything. I was left to myself."
     "So I came back to the dorm. Daichi was out - fortunately - so I had a nice quiet room to relax in."
@@ -3455,7 +3455,7 @@ label WG019_cafe:
 
 label WG019_theater:
     scene Theater Exterior with fade
-    play music Hallway
+    play music HigherEdu
     "I found myself walking by the town's movie theater, looking over the posters."
     "There were a couple blockbuster-type movies showing, but also a historical drama, a romantic comedy and an indie melodrama."
     "I had enough money in my wallet that I could buy a movie ticket, and I could think of worse ways to while away a couple hours."
@@ -5497,7 +5497,7 @@ label WG031:
     $setTime(TimeEnum.EVE)
     $setProgress("WG", "WG033")
     scene Classroom with fade
-    play music Hallway
+    play music HigherEdu
     "Alice and I were on clean-up duty after class."
     "We were both focused on our work, not trying to make conversation or anything. But as we did so, my attention kept drifting over to Alice."
     if getAffection("WG") < 10:
@@ -12334,7 +12334,7 @@ label WG054_c3_pass:
     scene black with fade
     $setTime(TimeEnum.DAY)
     scene Hallway with fade
-    play music Hallway
+    play music HigherEdu
     "The morning classes had passed without event, but I had noticed Alice's absence. The interruption of her normal punctuality was enough to tell me she had had another dream, but checking first might be good."
     "Heading towards the nurse office I noticed another familiar face."
     MC "Kodama-san!"
@@ -12902,7 +12902,7 @@ label WG056:
     scene black with fade
     $setTime(TimeEnum.DAY)
     scene Dorm Exterior with fade
-    play music Hallway
+    play music HigherEdu
     show WG worried with dissolve
     "We walked in silence for a little while. Alice was still looking sullen and dejected, while I was trying to take in some calm breaths to simmer myself back down to something closer to sanity."
     MC "Sorry about that."
@@ -13424,7 +13424,7 @@ label WG057_afterchoice_2:
 label WG058:
     $setTime(TimeEnum.Day)
     scene Woods with fade
-    play music Hallway
+    play music HigherEdu
     "The weather has been really nice recently. The scorching summer from our vacation at the beach had faded into a much more temperate fall climate over the island by now."
     "I knew I'd be kicking myself later if I didn't do something to take advantage of the nice weather before winter set in."
     "Thinking ahead of time for once, I asked Alice out for an outdoor lunch date so we could share some time together during this all-too-brief part of the season."
@@ -14468,7 +14468,7 @@ label WG060:
     $setProgress("WG", "WG061")
     $setTime(TimeEnum.DAY)
     scene Classroom with fade
-    play music Hallway
+    play music HigherEdu
     "Everyone has their off days, but after yesterday, I couldn’t shake the feeling that something was up with Alice, and that she wasn’t telling me."
     show WG neutral with dissolve
     "She greeted me at the start of class, but once class was over, she had apparently rushed out the door by the time I pulled out my books from underneath my desk."
@@ -16222,7 +16222,7 @@ label WGGTS003:
     GTS "Deliveries? I gather that's what those boxes you are carrying are for then. If you don't mind me asking, what are you delivering?"
     MC "Oh, it's nothing too special. I'm just dropping off deliveries for students that have ordered clothes through Alice's custom clothing business. I work for her and it's one of my main jobs."
     show GTS sad-2
-    play music Hallway
+    play music HigherEdu
     GTS "Oh... I see. Hotsure-san, can I ask you something?"
     "I was a bit perplexed about Naomi's sudden change in disposition. It made me wonder if I had accidentally said something wrong."
     MC "Sure, Yamazaki-san. Is there something wrong?"
