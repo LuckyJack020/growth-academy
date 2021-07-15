@@ -697,6 +697,7 @@ image GTS wink = DynamicImage("Graphics/GTS/[globalsize]/wink.png")
 image GTS unique = DynamicImage("Graphics/GTS/[globalsize]/unique.png")
 image GTS unique-2 = DynamicImage("Graphics/GTS/[globalsize]/unique-2.png")
 image GTS despaired-thought = DynamicImage("Graphics/GTS/[globalsize]/despaired-thought.png")
+image GTS pondering = DynamicImage("Graphics/GTS/[globalsize]/pondering.png")
 
 image GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png")
 image GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/neutral.png") #nyi
@@ -714,12 +715,14 @@ image GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/wink.png")
 image GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/unique.png")
 image GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/unique-2.png")
 image GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/despaired-thought.png")
+image GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/pondering.png")
 
 image GTS casual-neutral = DynamicImage("Graphics/GTS/[globalsize]/casual-neutral.png")
 image GTS casual-happy = DynamicImage("Graphics/GTS/[globalsize]/casual-happy.png")
 image GTS casual-surprised = DynamicImage("Graphics/GTS/[globalsize]/casual-surprised.png")
 image GTS casual-wink = DynamicImage("Graphics/GTS/[globalsize]/casual-wink.png")
 image GTS casual-aroused = DynamicImage("Graphics/GTS/[globalsize]/casual-aroused.png")
+image GTS casual-pondering = DynamicImage("Graphics/GTS/[globalsize]/casual-pondering.png")
 
 image side GTS_S neutral = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png")
 image side GTS_S neutral-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-neutral.png") #nyi
@@ -737,6 +740,7 @@ image side GTS_S wink = DynamicImage("Graphics/GTS/[globalsize]_s/side-wink.png"
 image side GTS_S unique = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique.png")
 image side GTS_S unique-2 = DynamicImage("Graphics/GTS/[globalsize]_s/side-unique-2.png")
 image side GTS_S despaired-thought = DynamicImage("Graphics/GTS/[globalsize]_s/side-despaired-thought.png")
+image side GTS_S pondering = DynamicImage("Graphics/GTS/[globalsize]_s/side-pondering.png")
 
 image PRG neutral = DynamicImage("Graphics/PRG/[prgsize]/neutral.png")
 image PRG happy = DynamicImage("Graphics/PRG/[prgsize]/happy.png")
