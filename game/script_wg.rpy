@@ -6479,7 +6479,6 @@ label WG034_c1_after:
 
 label WG035:
     $setProgress("WG", "WG036")
-    #Time: Afternoon
     $setTime(TimeEnum.EVE)
     scene Classroom with fade
     play music WG
@@ -6551,7 +6550,6 @@ label WG035:
     "Then I grabbed an early dinner to make sure I could get a good seat for the concert."
 
 
-    #Time: Night.
     $setTime(TimeEnum.NIGHT)
     scene Auditorium with fade
     "The concert wasn't a required activity, so I can't say I was surprised at how few people showed up."
@@ -6563,9 +6561,9 @@ label WG035:
     "She really did have a splendid voice."
     stop music fadeout 2.0
 
+    $setTime(TimeEnum.NIGHT)
     scene School Planter with fade
     play music TwilightBright
-    #Time: Night
     "After the concert I met up with Alice outside the auditorium."
     MC "You were great."
     show WG happy with dissolve
