@@ -5094,8 +5094,10 @@ label GTS031:
 
 label GTS031_c1_1:
     MC "Yes, I would love for you to walk back with me."
-
-    #scene change? should be night
+    scene black with fade
+    pause 2
+    $setTime(TimeEnum.NIGHT)
+    scene Giant Dorm Exterior with fade
     $setAffection("GTS", 1)
     "Naomi blushed as she stood up to walk with me. Once outside, I looked up and realized how nice the stars are here."
     MC "The sky looks amazing from here."
