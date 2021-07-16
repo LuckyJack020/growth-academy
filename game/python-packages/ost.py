@@ -251,7 +251,7 @@ def auto_play_pause_button(st, at):
 
 def rpa_mapping_detection(style_name, st, at):
     try:
-        renpy.exports.file("RPASongMetadata.json")
+        #renpy.exports.file("RPASongMetadata.json")
         return Text("", size=23), 0.0
     except:
         return Text("{b}Warning:{/b} The RPA metadata file hasn't been generated. Songs in the {i}track{/i} folder that are archived into a RPA won't work without it. Set {i}config.developer{/i} to {i}True{/i} in order to generate this file.", style=style_name, size=20), 0.0
@@ -459,46 +459,46 @@ def def_song(title, artist, path, priority, sec, altAlbum, y, album, comment, ex
     )
 
 # maps track files in track folder before building the game
-def rpa_mapping():
-    data = []
-    try: os.remove(gamedir + "/RPASongMetadata.json")
-    except: pass
-    for y in songList:
-        data.append ({
-            "class": re.sub(r"-|'| ", "_", y.name),
-            "title": y.name,
-            "artist": y.author,
-            "path": y.path,
-            "sec": y.byteTime,
-            "altAlbum": y.cover_art,
-            "description": y.description,
-            "unlocked": y.unlocked,
-        })
-    with open(gamedir + "/RPASongMetadata.json", "a") as f:
-        json.dump(data, f)
+#def rpa_mapping():
+#    data = []
+#    try: os.remove(gamedir + "/RPASongMetadata.json")
+#    except: pass
+#    for y in songList:
+#        data.append ({
+#            "class": re.sub(r"-|'| ", "_", y.name),
+#            "title": y.name,
+#            "artist": y.author,
+#            "path": y.path,
+#            "sec": y.byteTime,
+#            "altAlbum": y.cover_art,
+#            "description": y.description,
+#            "unlocked": y.unlocked,
+#        })
+#    with open(gamedir + "/RPASongMetadata.json", "a") as f:
+#        json.dump(data, f)
 
 # loads the JSON file that holds RPA metadata
-def rpa_load_mapping():
-    try: renpy.exports.file("RPASongMetadata.json")
-    except: return
+#def rpa_load_mapping():
+#    try: renpy.exports.file("RPASongMetadata.json")
+#    except: return
 
-    with renpy.exports.file("RPASongMetadata.json") as f:
-        data = json.load(f)
+#    with renpy.exports.file("RPASongMetadata.json") as f:
+#        data = json.load(f)
 
-    for p in data:
-        title, artist, path, sec, altAlbum, description, unlocked = p['title'], p['artist'], p["path"], p["sec"], p["altAlbum"], p["description"], p["unlocked"]
+#    for p in data:
+#        title, artist, path, sec, altAlbum, description, unlocked = p['title'], p['artist'], p["path"], p["sec"], p["altAlbum"], p["description"], p["unlocked"]
 
-        p['class'] = soundtrack(
-            name = title,
-            author = artist,
-            path = path,
-            byteTime = sec,
-            priority = priorityScan,
-            description = description,
-            cover_art = altAlbum,
-            unlocked = unlocked
-        )
-        songList.append(p['class'])
+#        p['class'] = soundtrack(
+#            name = title,
+#            author = artist,
+#            path = path,
+#            byteTime = sec,
+#            priority = priorityScan,
+#            description = description,
+#            cover_art = altAlbum,
+#            unlocked = unlocked
+#        )
+#        songList.append(p['class'])
 
 def get_music_channel_info():
     global prevTrack
@@ -506,8 +506,8 @@ def get_music_channel_info():
     if prevTrack is None:
         prevTrack = False
 
-try: os.mkdir(gamedir + "/track")
-except: pass
+#try: os.mkdir(gamedir + "/track")
+#except: pass
 try: os.mkdir(gamedir + "/Graphics/ui/covers")
 except: pass
 
@@ -516,8 +516,8 @@ for x in os.listdir(gamedir + '/Graphics/ui/covers'):
     os.remove(gamedir + '/Graphics/ui/covers/' + x)
 
 scan_song()
-if renpy.config.developer:
-    rpa_mapping()
-else:
-    rpa_load_mapping()
+#if renpy.config.developer:
+    #rpa_mapping()
+#else:
+    #rpa_load_mapping()
 resort()
