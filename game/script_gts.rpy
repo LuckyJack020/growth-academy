@@ -4971,72 +4971,73 @@ label GTS031:
     scene Giant Dorm Interior with fade
     $setProgress("GTS", "GTS032")
     play music GTS
-    "I had headed over to the giants' dorm after class to see how Naomi was handling the moving."
-    "As I approached her dorm, I noticed her placing a flower box by the front door."
+    "I headed over to the giants' dorm after class to check in on Naomi. I hoped that she had moved in well."
+    "As I approached her dorm, I noticed her placing a flower box on the front porch."
     MC "That's a good way to add some color to this place."
     show GTS happy with dissolve
-    GTS "Oh, Hotsure-san, I didn't even hear you approach. I'm glad you approve of the flowers. I had a feeling they were good choices to brighten the building."
+    GTS "Oh, Hotsure-san! I didn't even hear you approach. I'm glad you approve of the flowers. I had a feeling it was a good choice to brighten up this place."
     show GTS neutral
-    GTS "Are you thirsty by chance? I'm thinking of brewing a pot of tea for myself."
-    MC "I could go for a cup. It has been some time since I've had a cup of home-brewed tea."
-    "She held open the door for me; I suppose she didn't want it to hit me on the way in."
+    GTS "Are you thirsty, by chance? I'm considering brewing a pot of tea for myself."
+    MC "I could go for a cup. It’s been a while since I've had a cup of home-brewed tea."
+    "She held open the door for me. I suppose she didn't want it to hit me on the way in."
     "The dorms inside had changed slightly since I'd visited yesterday. For one, there was some more furniture, like a couch, a table, some chairs, and nearly a full kitchen."
     "Though all the new additions had a similar utilitarian aesthetic as the rest of the dorm, it was good to see some of the space filled."
     MC "Did the school provide furniture and appliances?"
-    GTS "Yes, they did. Early this morning several trucks showed up and delivered all this stuff. I'm glad they did, as last night I was worrying where I'd get furniture in plus-ultra size."
-    MC "That's a good question. Where do you shop for stuff in your size?"
+    GTS "Yes, they did. Early this morning, several trucks showed up and delivered all this stuff. I'm glad they did, as last night I was worrying where I'd get furniture my size."
+    MC "Now you’ve got me curious. Where DOES Seichou get furniture this big?"
     GTS "One of the other students here mentioned there's a shop away from town disguised as a hill."
-    GTS "I believe they said it was called Mt. Fuji Outfitters, it's run by a former student like many of the other shops around town. They mainly sell clothes, which is pretty good to know since mine are starting to get a bit tight."
-    MC "Good to see the island and the school have ways to provide for everyone. Now, all we need is a place that makes wigs and I'll be their first customer."
+    GTS "I believe they said it was called Mt. Fuji Outfitters. It's run by a former student, like many of the other shops around town. They mainly sell clothes, which is pretty good to know since mine are starting to get a bit tight."
+    MC "I’m glad that the island and the school have ways to provide for everyone. Now all we need is a place that makes wigs, and I'll be their first customer."
     "Naomi chuckled as she began prepping a pot of tea on the stove."
-    MC "So I take it that moving your stuff from your old dorm wasn't too hard."
+    MC "I hope that moving your stuff from your old dorm wasn't too hard."
     "Naomi's expression sank a little at the question."
     hide GTS
     show GTS_S sad
-    GTS_S "Yes, it was quite easy to move everything over, though I realized something while I was doing it."
-    "She grabs two boxes off the tabletop and places them down beside me."
-    GTS_S "Nothing I had when I arrived I can use anymore, none of my clothes fit, all of my school supplies don't fit my hands, none of this is usable anymore."
-    "She pauses for a moment before shaking her head and turning her mood around."
+    GTS_S "Yes, it was quite easy to move everything over. However, I realized something while I was doing it."
+    "She grabbed two moderately-sized boxes off of the nearby tabletop and placed them in front of me."
+    GTS_S "I can’t wear any of the clothing that I brought with me anymore. None of my clothes fit, and all of my school supplies don't fit my hands. None of this is usable."
+    "She paused for a moment before shaking her head and turning her mood around."
     hide GTS_S
     show GTS neutral
-    GTS "Well, it's best to not dwell on what has been lost. If you find anything in here of use you can keep it; otherwise, I'm gonna donate it."
-    "I open one of the boxes, finding some mugs and silverware resting atop what I assume is her wardrobe."
-    MC "You know, you could probably keep some of these things for me. You can't use them, but whenever I visit I can use the dishes and silverware."
+    "Although she was clearly feeling unwell, Naomi seemed to be able to collect herself almost immediately. With a deep breath, she slowly returned to her original position."
+    GTS "Well, it's best to not dwell on what has been lost. If you find anything in here that you can use, you can keep it. Otherwise, I'm gonna donate them."
+    "I opened one of the boxes, finding some mugs and silverware resting atop what I assumed was her wardrobe."
+    MC "You know, you could probably keep some of these things for visitors. You can't use them, but whenever you have company, they can use the dishes and silverware."
     show GTS happy
-    GTS "That is a good point, I'm glad you thought of that. I was so caught up in getting myself settled, I hadn't stopped to consider future guests."
-    MC "Glad I could help you with that. I hope you weren't concerning yourself with the idea of guests so soon after moving in."
+    GTS "That is a good point. I'm glad you thought of that. I was so caught up in getting myself settled, I hadn't stopped to consider future guests."
+    MC "I’m glad I could help you with that. I hope you weren't concerning yourself with the idea of having guests so soon after moving in."
     show GTS neutral
-    GTS "Well it would be rude of me to not think of others entering my dorm."
-    MC "Yes, but so soon after moving seems a bit weird. I didn't even consider guests coming to my dorm until maybe three days after settling in."
+    GTS "Well, it would be rude of me to not think of others visiting my dorm."
+    MC "Yes, but so soon after moving?  That seems a bit weird. I didn't even consider guests coming to my dorm until maybe three days after settling in."
     GTS "It's just good etiquette to always be mindful of guests if they ever enter your home. Not being prepared for guests would show a host who is inconsiderate of others."
-    MC "I'm just saying you should at least look out for yourself first sometimes. Once you have yourself settled, then you accommodate for others."
+    MC "I'm just saying, you should look out for yourself sometimes. Once you have yourself settled, then you accommodate others."
     "Naomi stopped like she's trying to formulate a proper response, but before she could respond the teapot began to whistle. Taking the pot, she carefully poured me a cup of hot water before pouring herself one."
-    "She offered me a teabag, which I accepted before she dumped the other 11 bags into her cup."
-    MC "Won't that be extremely strong? Eleven bags seems excessive for one cup."
-    GTS "With this much water it balances out. You have to remember, your mug is roughly one cup, while my cup is about twelve gallons. I'm glad one of the graduating students was kind enough to donate this and the teapot."
-    MC "Well it's good to hear that the other students here are very welcoming. I guess when there are only a few of you, everyone is a friend."
+    "She offered me a teabag, which I accepted before she dumped 4 bags total into her cup."
+    MC "Won't that be extremely strong? Four bags seems a little excessive."
+    GTS "With this much water, it balances out. You have to remember, your mug is roughly one pint, while mine is about one liter. I'm glad one of the graduating students was kind enough to donate these oversized cups and teapot."
+    MC "Well, it's good to hear that the other students here are very welcoming. I guess when there are only a few of you, everyone is a neighbor."
     show GTS happy
     GTS "It is extremely pleasant to be welcomed with open arms. It's like we are one big family..."
     "She stopped for a moment before shaking her head again."
-    GTS "I can't complain about anything so far here."
+    GTS "I can't complain about anything so far. It’s very nice here."
     MCT "She's not admitting something but I'd hate to ruin her mood by digging into it."
-    MC "I'm happy to hear that. I'm sure Ryoko will be happy to hear you are doing well."
+    MC "I'm happy to hear that. I'm sure Ryoko will be happy to hear that you’re doing well."
     show GTS neutral
     GTS "If you could tell her, I'd appreciate it. I'd hate for her to be worrying about me."
-    MC "Did you not speak to her when you went back to the dorm?"
+    MC "Did you speak to her when you went back to the dorm?"
     hide GTS
     show GTS_S sad
-    GTS_S "No, she was out filming I guess. Either that or hanging with her friends from the film club."
-    MC "Well then, I will make sure to speak with her, just because you asked so nicely."
+    GTS_S "No, she was out filming, I suppose. Either that, or hanging with her friends from the film club."
+    MC "Well then, I will make sure to speak with her since you asked so nicely."
     hide GTS_S
     show GTS neutral
-    GTS "Only do it if it's not a bother, otherwise I'm sure I can find time to do it myself."
+    GTS "Only do it if it isn’t a bother, please. Otherwise, I'm sure I can find time to do it myself."
     MC "It's fine Yamazaki-san, it's a simple favor. Plus I occasionally pass her between classes, so more than likely I will see her tomorrow."
 
     if not getFlag("GTS030_festival"):
         $setFlag("GTS030_festival")
         MC "Oh, and before I forget, I meant to ask you something yesterday."
-        "I pull out the Children's Day flyer from my pocket and hand it to her."
+        "I pulled out the Children's Day flyer from my pocket and handed it to her."
         GTS "Oh, the Children's Day festival, I haven't been to a festival in a long time."
         MC "Would you like to go with me?"
         show GTS happy-2
@@ -5045,39 +5046,39 @@ label GTS031:
         GTS "I mean if you are available to go as well, then it would be perfect."
         MC "Of course I can, I just wanted to ask you since I was planning on making it a date."
         show GTS embarrassed
-        GTS "Oh Hotsure-san, that's a wonderful idea. I'll need to figure out something to wear for such an occasion but I would love to go with you."
+        GTS "Oh, Hotsure-san. That's a wonderful idea. I'll need to figure out something to wear for such an occasion but I would love to go with you."
         MC "Then I look forward to our night out together."
     "Naomi sips her tea with a face of displeasure, before adding some more water."
     MC "Is the tea a bit too strong?"
     show GTS neutral
     GTS "Unfortunately. I need to work on estimating how many packets I need."
-    MC "You know that brings up a good question, where do you get food? You can't go to the normal cafeteria anymore."
-    GTS "Oh, this will be fun to explain. So you see, at the bottom of the pit is the entrance to a place simply called the Caverns. It's like a second school down there complete with classrooms, some club rooms, and a cafeteria."
-    GTS "Maybe sometime during the school day you can come down and see it, it truly is a marvel."
+    MC "You know, that brings up a good question. Where do you get food? You can't go to the normal cafeteria anymore."
+    GTS "Oh, this will be fun to explain. You see, at the bottom of the pit is the entrance to a place simply called The Caverns. It's like a second school down there, complete with classrooms, some club rooms, and a cafeteria."
+    GTS "Maybe sometime during the school day you can come down and see it. It truly is a marvel of engineering."
     MC "Do you take separate classes, or how do classes work?"
     GTS "The way it works is that every classroom has a camera that is connected to a projector. That projector then displays the class in real time to us in our lecture hall."
-    GTS "Class participation, unfortunately, doesn't work, but we still have to submit our homework on time."
-    MC "How does that work? I can't recall seeing jumbo sheets of paper on Tashi's desk before."
+    GTS "Class participation, unfortunately, doesn't work. We’re still required to submit our homework on time."
+    MC "How does that work? I can't recall seeing giant sheets of paper on Tashi's desk before."
     GTS "One of the students here works as a teacher's assistant. They handle all the homework grading and just pass the results to the correct teacher for entry into the system."
-    GTS "Even with all that, do you want to know the craziest thing about the Caverns is?"
+    GTS "Even with all that, do you want to know what the craziest thing about The Caverns is?"
     show GTS happy-2
-    GTS "Being inside there makes me feel normal. It's hard to describe but inside the Caverns, the ceiling is nearly 30 meters tall, so I suddenly feel normal again. I don't have to hunch over, I don't have to squeeze through doors. I'm free again."
+    GTS "Being inside there makes me feel normal. It's hard to describe, but inside there, the ceiling is nearly 30 meters tall. Everything feels so natural and safe. I don't have to hunch over, or squeeze through doors. I'm free again."
     "I could see some tears forming in her eyes as she said those last words until she wiped them away. She took a moment to recompose herself before continuing."
     show GTS neutral
-    GTS "Sorry about that moment I just had, the tea is still quite strong, made me tear up."
-    MC "It's good, I was interested in all of it. The giants' area isn't an area many students get to see often, so hearing how it operates is quite fascinating."
+    GTS "Sorry about that. The tea is still quite strong, so it made me tear up."
+    MC "You don’t need to apologize. I was interested in all of it. The giants' area isn't an area many students get to see often, so hearing how it operates is quite fascinating."
     GTS "I'm glad you enjoyed my rambling there, I was afraid I got lost there for a moment in my own world."
     "She pauses again staring into her tea for a moment before sipping it."
     hide GTS
     show GTS_S sad
-    GTS_S "You like me, right, Hotsure-san?"
-    MC "Yamazaki-san, of course I do, I wouldn't have shared many a kiss with you if I didn't."
-    GTS_S "Why me though? There are plenty of normal-sized people at school, yet you chose me."
+    GTS_S "Do you like me, Hotsure-san?"
+    MC "Of course I do, Yamazaki-san. I wouldn't have shared a kiss with you if I didn't."
+    GTS_S "Why me, though? There are plenty of normal-sized people at school, yet you chose me."
     MC "Well, you are incredibly kind to everyone you meet. Your knowledge of gardening and plants is beyond compare. I suppose you've never given me a moment to doubt that you are an amazing person."
-    MC "That's why I've stuck with you regardless of whatever problems you believe that causes."
+    MC "That's why I've stuck with you, regardless of whatever problems you believe it’ll cause."
     hide GTS_S
     show GTS embarrassed
-    GTS "Thank you, Hotsure-san, I'm not sure why, but I just really needed to hear something like that."
+    GTS "Thank you, Hotsure-san. I'm not sure why, but I feel like I really needed to hear something like that."
     MC "Any time, Yamazaki-san."
     "Naomi wiped a tear from her eye before finishing her tea."
     show GTS neutral
@@ -5099,17 +5100,17 @@ label GTS031_c1_1:
     "Naomi blushed as she stood up to walk with me. Once outside, I looked up and realized how nice the stars are here."
     MC "The sky looks amazing from here."
     show GTS neutral
-    GTS "My first night here, I laid down at the bottom of the pit staring into the sky. The view was beyond amazing, you can watch the stars travel across the heavens without even moving. Nothing I've seen so far can compare to that night."
-    MC "Maybe next time I can join you? You have sold me that this is an experience I can't miss."
+    GTS "My first night here, I laid down at the bottom of the pit staring into the sky. The view was beyond amazing, you can watch the stars travel across the heavens without even moving. Nothing I've seen so far can compare."
+    MC "Perhaps I could join you next time? You’ve confirmed that this is an experience I can't miss."
     show GTS aroused
-    GTS "Just tell me when it works for you and I'll make it happen. I think it's better viewed together anyway."
+    GTS "Just tell me when it works for you, and I'll make it happen. Not only that, but I have a few ideas on how it can be made even better."
     "We both ended up chuckling as we headed back to campus."
     jump daymenu
 
 label GTS031_c1_2:
-    MC "No, I think I'm good to go back alone. You might raise some suspicion with Matsumoto-san and then she'll yell at both of us."
+    MC "No, I think I'm good to go back alone. You might raise some suspicion with Matsumoto-san, and then she'll yell at both of us."
     show GTS neutral
-    GTS "You certainly aren't wrong with that assumption, she would probably do exactly that. Do take care, Hotsure-san."
+    GTS "You certainly aren't wrong with that assumption. She would probably do exactly that. Do take care, Hotsure-san."
     "I waved back to her as I exited the dorm and began my trek back to the school."
     jump daymenu
 

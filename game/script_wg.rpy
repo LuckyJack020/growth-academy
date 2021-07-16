@@ -9232,7 +9232,7 @@ label WG044_c2_2:
     MC "No harm in adding it to the catalog, might have others who want it to."
     show WG neutral
     WG "I'll put it under consideration, as from a marketing perspective you may be onto something."
-    BE "Thank you again for doing for me. It was certainly an interesting and fun experience. Who knows maybe I'll come back for another sizing."
+    BE "Thank you again for doing this for me. It was certainly an interesting and fun experience. Who knows maybe I'll come back for another sizing."
     "Naturally Honoka is a little excited about her tits getting bigger even when they are three times the size of her head."
     "Her outfit style may change, but her personality is as consistent as ever."
     show WG happy

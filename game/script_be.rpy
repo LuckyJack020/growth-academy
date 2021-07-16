@@ -2219,7 +2219,7 @@ label BE018_c1_after:
 
 label BE018_c2_1:
     MC "It's probably been too long since it touched her anyway."
-    "I rolled up the measuring tape and put it back in my desk."
+    "I rolled up the measuring tape and put it back in her desk."
     show BE sad
     BE "Aw, but you're probably right. Eh well, let's get back to me kicking your butt."
     "Honoka picked up her controller and proceeded to do just that, once again destroying my character 2-0."
