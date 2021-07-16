@@ -12,7 +12,7 @@ screen extras():
         null
         imagebutton idle "Graphics/ui/icons/ArtGalleryIcon.png" action ShowMenu("galleryselect") xalign 0.5 yalign 0.5 hovered SetVariable("hoverExtra", "Scene Gallery") unhovered SetVariable("hoverExtra", "")
         null
-        imagebutton idle "Graphics/ui/icons/MusicRoomIcon.png" action [ShowMenu("music_room"), Stop('music', fadeout=2.0), If(preferences.get_volume("music") == 0.0, true=SetVariable("ost.music_muted", True), false=SetMute('music', True)), Function(ost.refresh_list)] xalign 0.5 yalign 0.5 hovered SetVariable("hoverExtra", "Music Player") unhovered SetVariable("hoverExtra", "")
+        imagebutton idle "Graphics/ui/icons/MusicRoomIcon.png" action [ShowMenu("music_room"), Function(ost.get_music_channel_info), Stop('music', fadeout=2.0), Function(ost.refresh_list)] xalign 0.5 yalign 0.5 hovered SetVariable("hoverExtra", "Music Player") unhovered SetVariable("hoverExtra", "")
         null
         textbutton "Return" action Return() xalign 0.5 yalign 0.5
         null

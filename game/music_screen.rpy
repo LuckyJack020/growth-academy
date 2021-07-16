@@ -90,13 +90,12 @@ screen music_room():
             spacing gui.navigation_spacing
 
             for st in ost.soundtracks:
-                if st.unlocked:
-                    textbutton "[st.name]":
-                        text_style "music_room_button"
-                        if ost.game_soundtrack:
-                            action [SensitiveIf(ost.game_soundtrack.name != st.name or ost.game_soundtrack.author != st.author or ost.game_soundtrack.description != st.description), SetVariable("ost.game_soundtrack", st), Play("music_room", st.path, loop=ost.loopSong, fadein=2.0)]
-                        else:
-                            action [SetVariable("ost.game_soundtrack", st), Play("music_room", st.path, loop=ost.loopSong, fadein=2.0)]
+                textbutton "[st.name]":
+                    text_style "music_room_button"
+                    if ost.game_soundtrack:
+                        action [SensitiveIf(ost.game_soundtrack.name != st.name or ost.game_soundtrack.author != st.author or ost.game_soundtrack.description != st.description), SetVariable("ost.game_soundtrack", st), Play("music_room", st.path, loop=ost.loopSong, fadein=2.0)]
+                    else:
+                        action [SetVariable("ost.game_soundtrack", st), Play("music_room", st.path, loop=ost.loopSong, fadein=2.0)]
 
         vbar value YScrollValue("vpo") xpos 1.0 ypos 20
 
@@ -187,7 +186,7 @@ screen music_room():
     textbutton _("Return"):
         style "return_button"
 
-        action [ShowMenu("extras"), If(renpy.music.is_playing(channel='music_room'), true=Function(ost.current_music_pause), false=None), If(ost.music_muted, true=None, false=SetMute('music', False)), SetVariable("ost.music_muted", False)]
+        action [ShowMenu("extras"), If(renpy.music.is_playing(channel='music_room'), true=Function(ost.current_music_pause), false=None), If(ost.prevTrack == False, true=None, false=Play('music', ost.prevTrack, fadein=2.0))]
 
 style music_room_frame is empty
 style music_room_viewport is gui_viewport

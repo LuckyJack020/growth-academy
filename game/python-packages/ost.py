@@ -29,7 +29,7 @@ import renpy.audio.music as music
 import renpy.display.behavior as displayBehavior
 
 # Creation of Music Room and Code Setup
-version = 1.4
+version = 1.5
 music.register_channel("music_room", mixer="music_room_mixer", loop=False)
 if renpy.windows:
     gamedir = renpy.config.gamedir.replace("\\", "/")
@@ -42,7 +42,6 @@ else:
 
 
 # Lists for holding media types
-renpyFileList = renpy.exports.list_files(common=False)
 songList = []
 manualDefineList = []
 soundtracks = []
@@ -60,11 +59,13 @@ scale = 1.0
 
 # Stores paused track/player controls
 game_soundtrack_pause = False
-music_muted = False
+prevTrack = False
 randomSong = False
 loopSong = False
 organizeAZ = False
 organizePriority = True
+
+random.seed()
 
 class soundtrack:
     def __init__(self, name="", path="", priority=2, author="", byteTime=False, description="", cover_art=False, unlocked=True):
@@ -326,7 +327,7 @@ def next_track(back=False):
     global game_soundtrack
 
     for st in range(len(soundtracks)):
-        if game_soundtrack == soundtracks[st] or game_soundtrack.description == soundtracks[st].description and game_soundtrack.name == soundtracks[st].name:
+        if game_soundtrack.description == soundtracks[st].description and game_soundtrack.name == soundtracks[st].name:
             try:
                 if back:
                     game_soundtrack = soundtracks[st-1]
@@ -346,7 +347,6 @@ def next_track(back=False):
 def random_song():
     global game_soundtrack
 
-    random.seed()
     unique = 1
     while unique != 0:
         a = random.randrange(0,len(soundtracks)-1)
@@ -376,10 +376,12 @@ def refresh_list():
 def resort():
     global soundtracks
     soundtracks = [] # resets soundtrack list
-    for obj in songList:
-        soundtracks.append(obj)
+    #for obj in songList:
+    #    if obj.unlocked:
+    #        soundtracks.append(obj)
     for obj in manualDefineList:
-        soundtracks.append(obj)
+        if obj.unlocked:
+            soundtracks.append(obj)
     if organizeAZ:
         soundtracks = sorted(soundtracks, key=lambda soundtracks: soundtracks.name)
     if organizePriority:
@@ -414,7 +416,7 @@ def scan_song(rescan=False):
         songList = []
 
     for ext in file_types:
-        songList += ["Graphics/ui/covers/" + x for x in os.listdir(gamedir + '/Graphics/ui/covers') if x.endswith(ext)]
+        songList += ["Audio/BGM/" + x for x in os.listdir(gamedir + '/Audio/BGM') if x.endswith(ext)]
 
     for y in range(len(songList)):
         path = songList[y]
@@ -425,11 +427,11 @@ def scan_song(rescan=False):
 # Makes a class for a track to the OST Player
 def def_song(title, artist, path, priority, sec, altAlbum, y, album, comment, ext, unlocked=True, rpa=False):
     if title is None:
-        title = "Unknown " + str(ext) + " File " + str(y)
+        title = "Unknown " + str(ext.replace(".", "")).upper() + " File " + str(y)
     if artist is None:
         artist = "Unknown Artist"
     if altAlbum is None:
-        description = "Non-Metadata " + str(ext) + " File"
+        description = "Non-Metadata " + str(ext.replace(".", "")).upper() + " File"
         altAlbum = "Graphics/ui/icons/nocover.png"
     else:
         altAlbum = "Graphics/ui/covers/"+altAlbum
@@ -459,7 +461,6 @@ def def_song(title, artist, path, priority, sec, altAlbum, y, album, comment, ex
 # maps track files in track folder before building the game
 def rpa_mapping():
     data = []
-    global soundtracks
     try: os.remove(gamedir + "/RPASongMetadata.json")
     except: pass
     for y in songList:
@@ -499,23 +500,24 @@ def rpa_load_mapping():
         )
         songList.append(p['class'])
 
-#try: os.mkdir(gamedir + "/Audio/BGM")
-#except: pass
+def get_music_channel_info():
+    global prevTrack
+    prevTrack = music.get_playing(channel='music')
+    if prevTrack is None:
+        prevTrack = False
+
+try: os.mkdir(gamedir + "/track")
+except: pass
 try: os.mkdir(gamedir + "/Graphics/ui/covers")
 except: pass
 
+# cleans cover directory
+for x in os.listdir(gamedir + '/Graphics/ui/covers'):
+    os.remove(gamedir + '/Graphics/ui/covers/' + x)
+
 scan_song()
-
-# checks for non-existant song covers for cleaning the covers directory
-cover_list = ["Graphics/ui/covers/" + x for x in os.listdir(gamedir + '/Graphics/ui/covers')]
-for x in reversed(cover_list):
-    for y in soundtracks:
-        if y.cover_art == x:
-            cover_list.pop(x)
-for x in cover_list:
-    os.remove(gamedir + "/" + x)
-
 if renpy.config.developer:
     rpa_mapping()
 else:
     rpa_load_mapping()
+resort()

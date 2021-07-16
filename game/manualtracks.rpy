@@ -165,7 +165,7 @@ init python:
         path = "Audio/BGM/scene_higheredu.ogg",
         priority = 2,
         author = "Post-Bop",
-        description = "Scholarly Music",
+        description = "Hallway Music",
         cover_art = False,
         unlocked = renpy.seen_audio("Audio/BGM/scene_higheredu.ogg")
     )
@@ -247,17 +247,6 @@ init python:
         unlocked = renpy.seen_audio("Audio/BGM/scene_schoolday.mp3")
     )
     ost.manualDefineList.append(SchoolDay)
-
-    HallWay = ost.soundtrack(
-        name = "Hallway",
-        path = "Audio/BGM/scene_hallway.ogg",
-        priority = 3,
-        author = "Post-Bop",
-        description = "Academy Campus Theme",
-        cover_art = False,
-        unlocked = renpy.seen_audio("Audio/BGM/scene_hallway.ogg")
-    )
-    ost.manualDefineList.append(HallWay)
 
     Tense = ost.soundtrack(
         name = "Tension",
