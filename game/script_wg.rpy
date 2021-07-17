@@ -1310,9 +1310,10 @@ label WG009:
             WG "Well, you shall know soon enough."
     scene Pool with fade
     $setFMGOutfit(OutfitEnum.SWIM)
+    $setWGOutfit(OutfitEnum.SWIM)
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
     show FMG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0)
+    show WG happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Three full laps should be adequate, I think. Any objections?"
     FMG "Just don't forget your pool cap thingy! Don't want to get your expensive mullet to get ruined by chlorine!"
@@ -1332,17 +1333,17 @@ label WG009:
     "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
     hide cg with dissolve
     show FMG sad at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0)
+    show WG happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     play music Busy
     FMG "...Son of a bitch... Good job I guess... I'm going to bed. Later."
     hide FMG with dissolve
-    show WG swim-school-happy at center with dissolve
+    show WG happy at center with dissolve
     WG "At least she's magnanimous in defeat."
     MC "Nice job. That was quite the blowout."
-    show WG swim-school-haughty
+    show WG haughty
     WG "Was there ever a doubt? But as much as I enjoyed this contest, I have to get going."
-    show WG swim-school-neutral
+    show WG neutral
     WG "Aida, what's next on my agenda?"
     hide WG with dissolve
     "She was already walking away as Aida answered. Something about 'contacting her distributor.'"
@@ -3686,21 +3687,22 @@ label WG020_c2:
 label WG021:
     scene Pool with fade
     play music WG
+    $setWGOutfit(OutfitEnum.SWIM)
     "I had a creative writing assignment I needed to work on, and I just couldn't think of any ideas. Thus I found myself at the pool."
     "I had read somewhere that physical activity could get the mind working, get those creative juices flowing, so I thought I'd do a little exercising."
     "I came out of the men's locker room to find the pool rather empty."
     "I'd complain it was a waste to let such fancy facilities go unused, but it's not like I was coming here regularly. Who was I to talk?"
     "Among the students in or around the water two caught my eye."
-    show WG swim-school-neutral at center with dissolve
+    show WG neutral at center with dissolve
     "Alice was climbing out of the pool, Aida ready to hand her a towel."
     MC "Hey, Alice."
     WG "Keisuke."
     "She began drying herself off, and I knew I should just go and get started myself."
     "But at the same time our conversation about 'is big beautiful' had been on my mind since the other day."
     "I had been sneaking glances at Alice now and then, really taking in her figure."
-    show WG swim-school-neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
+    show WG neutral at Position(xpos=0.5, ypos=0.0, yanchor=0.3), Transform(zoom=2.0)
     "And I'd come to the decision that there wasn't anything wrong with some extra curves."
-    show WG swim-school-neutral at center, Transform(zoom=1.0)
+    show WG neutral at center, Transform(zoom=1.0)
     "Especially now, with the bathing suit clinging to her body, her hair wet (yet still keeping its spirals somehow). Stuff like that could make most any woman appealing."
     if getFlag("WG020_c1"):
         jump WG021_flagpass
@@ -3729,16 +3731,16 @@ label WG021_beforechoice:
     MC "It's not like I have a type. Maybe more like a spectrum."
     $setAffection("WG", 1)
     "She nodded agreeably."
-    show WG swim-school-happy
+    show WG happy
     WG "Most people do, I think. Though with such a focus on superficial trappings in our society many may not recognize it."
     if getAffection("WG") <= 7:
         MC "True. But hey, that's one of the things we're supposed to get out of this school, right? Not being so focused on the superficial."
-        show WG swim-school-neutral
+        show WG neutral
         WG "That's not quite what I was thinking. You are correct, but I was going for the fact that there's nothing wrong with having a type."
         WG "So long as you do not develop myopia, blind to the other options around you."
         MC "Oh, right."
         MC "But like I said, bigger women are attractive. Not automatically more than skinny women, but not less so, definitely."
-        show WG swim-school-happy
+        show WG happy
         WG "I'm glad you got the chance to clear that up, Keisuke."
         WG "I know you're not trying to soothe my wounded pride..."
         WG "...but if you're explaining this as part of some larger scheme, I'm afraid I have to cut you off."
@@ -3754,7 +3756,7 @@ label WG021_beforechoice:
         WG "And you did say I was pretty, of course."
         MC "W-Well, yes."
         "She looked at me like a cat with a bowl of cream just set down in front of it. I wasn't sure I knew what she was thinking until she spoke."
-        show WG swim-school-aroused
+        show WG aroused
         WG "Keisuke..."
         MC "Yes?"
         WG "What I am about to suggest violates every ethical rule about the relationship between an employer and her employee..."
@@ -3768,7 +3770,7 @@ label WG021_beforechoice:
                 $setFlag("WG_dating")
                 $lockRoute("WG")
                 MC "Sure. I'd love to, as long as it wouldn't make things weird over on the 'business' end."
-                show WG swim-school-happy
+                show WG happy
                 WG "I don't think it has to. I am mature enough to separate my private life from my business ventures, and I trust that you can learn to do the same."
                 MC "Um, OK."
                 MCT "I was being a little tongue-in-cheek there..."
@@ -3777,7 +3779,7 @@ label WG021_beforechoice:
                 WG "I know that our options are limited here at the school, but I am interested in seeing how you express your romantic side."
                 MC "Leave it to me, then."
                 "She smiled warmly, and despite how fast everything was going I felt more elated by the thought of success than worried about failure."
-                show WG swim-school-neutral
+                show WG neutral
                 WG "I'm sorry, but I have to run. The music club is meeting soon."
                 WG "A demain."
                 hide WG with dissolve
@@ -3788,15 +3790,15 @@ label WG021_beforechoice:
             "That's moving a bit fast.":
                 $setFlag("WG021_c2")
                 MC "Sorry, but I think that's a bit fast."
-                show WG swim-school-sad
+                show WG sad
                 $setAffection("WG", -1)
                 WG "Oh."
                 MC "It's not that-"
-                show WG swim-school-neutral
+                show WG neutral
                 WG "No, I understand."
                 WG "This is a trying time in our lives, there are bigger things on our minds."
                 MC "I'm not saying 'No' outright. Just... maybe later?"
-                show WG swim-school-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+                show WG neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 WG "Hmm. Yes, perhaps."
                 WG "I have to go. The music club is meeting soon."
                 WG "I'll see you in class tomorrow."
@@ -3811,19 +3813,19 @@ label WG021_beforechoice:
                 $setFlag("WG021_c3")
                 MC "I... don't think that would work out."
                 MC "It's a bit fast. I mean, we're in unfamiliar territory with this school and everything else, and like you said I'm working for you-"
-                show WG swim-school-angry with hpunch
+                show WG angry with hpunch
                 $setAffection("WG", -5)
                 WG "I understand!"
                 WG "..."
                 pause 1
-                show WG swim-school-sad
+                show WG sad
                 WG "I do tend to be direct, don't I?"
                 MC "That's not always a bad thing, but sometimes it can be overbearing."
                 WG "Yes, I know."
-                show WG swim-school-neutral
+                show WG neutral
                 WG "Forget I said anything, Hotsure-san."
                 MC "No, it's-"
-                show WG swim-school-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+                show WG neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
                 WG "I need to go. The music club is meeting soon and I have to get dressed."
                 hide WG with dissolve
                 "She didn't storm off angrily, but it was obvious to anyone watching that she was hurrying to get out of there."
@@ -3833,7 +3835,7 @@ label WG021_beforechoice:
 
 label WG021_fail1:
     MC "Well, I'm going to get some laps in. I'll see you two later."
-    show WG swim-school-neutral
+    show WG neutral
     WG "Work hard, Keisuke, but don't overdo it."
     hide WG with dissolve
     "I tried to banish the impression of squandering the opportunity by assuring myself I would be on the lookout for a more appropriate time and place."
@@ -3849,17 +3851,17 @@ label WG021_fail2:
     MCT "Just say she looks nice even at her size, don't make it sound perverted, and then move on."
     MC "I just wanted to say, after that whole 'list' thing and the guy saying he doesn't like plump women..."
     MC "Not all guys are turned off by a few extra weight. Some even prefer it."
-    show WG swim-school-neutral
+    show WG neutral
     WG "Indeed."
     WG "I know you wouldn't just be saying that to soothe my wounded pride."
     MC "No. It's the truth."
     MC "I've seen larger women I found attractive. Never dated one, but that was because of circumstances."
     WG "It's all right, Keisuke. You don't have to try so hard."
-    show WG swim-school-neutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
+    show WG neutral at Position(xpos=0.65), Transform(xzoom=-1) with dissolve
     MC "I just want you to know... That guy doesn't speak for all men."
     WG "I know."
     WG "I just think that it is on each man to speak for himself."
-    show WG swim-school-neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
+    show WG neutral at Position(xpos=0.8), Transform(xzoom=-1) with dissolve
     WG "To say something more than just 'He doesn't speak for me.'"
     WG "Now I have to run. The music club is meeting soon."
     WG "So if there is anything else you would like to say to me about this, we can talk later."
@@ -5029,9 +5031,10 @@ label WG029:
     "Lunchtime arrived, and I made my way to Alice's dorm."
 
     scene Dorm WG with fade
+    $setWGOutfit(OutfitEnum.SICK)
     play music Rain
     "I hoped I wasn't disturbing her sleep, but I knocked lightly all the same."
-    show WG sick with dissolve
+    show WG sad with dissolve
     WG "Keisuke."
     "Her voice was a croak, and she looked pale and tired."
     MC "Sorry for bothering you. Aida told me you were sick, and I wanted to see how you were doing."
@@ -5073,7 +5076,7 @@ label WG029:
     show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     PRG "Hotsure-san."
     MC "Hey, Aida. Is Alice awake?"
-    show WG sick at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "Keisuke. You're drenched."
     MC "Alice. Here."
     "I retrieved the tea. My backpack hadn't been spared the rain's assault, but the insides were blessedly dry."
@@ -5087,7 +5090,7 @@ label WG029:
 
 label WG029_c1_1:
     MC "I hope you appreciate what I went through."
-    show WG sick-angry
+    show WG angry
     WG "Ugghh..."
     WG "I appreciate you went out of your way to help me-"
     WG "Even though I told you this will probably pass with some rest."
@@ -5107,15 +5110,15 @@ label WG029_c1_1:
 
 label WG029_c1_2:
     "It was hard to tell with her mask, but it looked like Alice was smiling."
-    show WG sick-happy
+    show WG happy
     $setAffection("WG", 1)
     WG "I appreciate the trouble you went through, but you really didn't need to."
     WG "I said before, I just needed some rest."
-    show WG sick
+    show WG sad
     WG "I hope you don't get sick now, though."
     MC "I'm sure I'll be fine."
     MC "Just need to get out of these wet clothes. Maybe take a hot shower."
-    show WG sick-happy
+    show WG happy
     WG "Well, here."
     "She opened the tea box and handed me one of the bags."
     WG "Just in case."
@@ -6777,10 +6780,12 @@ label WG037:
     pause 4
 
     #Time: Afternoon
+    $setTime(TimeEnum.EVE)
     scene School Front with fade
+    $setWGOutfit(OutfitEnum.CASUAL)
     "I arrived at the school gate a few minutes before 5."
     "Being early is better than being on time, and it gave me a chance to calm my nerves before Alice showed up."
-    show WG casual-happy with dissolve
+    show WG happy with dissolve
     WG "Hello, Keisuke."
     WG "Shall we be off?"
     MC "If you're ready."
@@ -6789,7 +6794,7 @@ label WG037:
     "Out of her school uniform and in a more casual - but still fashionable and presumably costly - outfit her recent growth looked even more prominent."
     "I was especially drawn to how her belly swelled out in front of her, reaching further than her breasts and coming down over the top of her legs."
     "She was soft all over, but her middle looked especially inviting. I wanted to lay my head down on it, like an oversized pillow."
-    show WG casual-neutral
+    show WG neutral
     WG "..."
     MCT "Crap, she saw me staring again."
     MCT "Gotta say something..."
@@ -6821,7 +6826,7 @@ label WG037:
     "At the restaurant we had to wait a couple minutes before being seated."
     "And then once we were we waited so long just to get some water that we were ready to order our meals by then."
     "Alice was particularly irked."
-    show WG casual-angry with dissolve
+    show WG angry with dissolve
     WG "(Such subpar service.)"
     MC "(Can't blame our waitress. Don't you see that party over there?)"
     "I indicated a group of almost a dozen people, adults and a couple children, gathered around two large tables pushed together in the far corner."
@@ -6829,7 +6834,7 @@ label WG037:
     "And there were a couple women who were significantly fatter than a typical middle-aged person who had stopped exercising regularly."
     "And there might have also been an overweight man, but I couldn't see the entire table."
     MC "(And there's just the one waitress working tonight.)"
-    show WG casual-neutral
+    show WG neutral
     WG "Who are those people? I don't recognize them as teachers or administrators."
     MC "Maybe they're alumni."
     MC "Not enough people for a class reunion, but maybe they're a group of friends getting back together."
@@ -6852,18 +6857,18 @@ label WG037:
 
 label WG037_c1_1:
     MC "There's no guarantee you're going to get that fat, you know."
-    show WG casual-angry
+    show WG angry
     WG "Excuse me?"
     MC "You're not exactly hiding your thoughts right now."
     MC "Those women over there? The overweight ones?"
     MC "You see them and you're thinking 'Am I going to end up that fat?'"
-    show WG casual-neutral
+    show WG neutral
     WG "I don't think both of them are fat."
     WG "One looks like she is very busty, and the rest of her has gotten soft in middle age."
     "I turned back to the group and saw the one Alice was talking about. She might have been right."
     MC "Okay, but still."
     MC "Am I wrong? Are you not preoccupied with how big you'll get?"
-    show WG casual-angry
+    show WG angry
     WG "I came with you tonight because I wanted to take my mind off such things."
     WG "Had that not been obvious?"
     MCT "Yikes. Maybe I should back off."
@@ -6889,9 +6894,10 @@ label WG037_c2_1:
     "When we were done there was no talk of dessert or anything else. We just left and headed back to the school."
 
     #Time: Evening
+    $setTime(TimeEnum.EVE)
     scene School Front with fade
     "At the entrance Alice gave a curt goodbye."
-    show WG casual-neutral with dissolve
+    show WG neutral with dissolve
     WG "Good night."
     hide WG with dissolve
     "And I was left alone."
@@ -6908,7 +6914,7 @@ label WG037_c2_2:
     WG "..."
     "She glared at me for a second, but I didn't look away. I held her gaze."
     "Finally she exhaled, visibly deflating."
-    show WG casual-neutral
+    show WG neutral
     WG "You're not wrong."
     WG "Running from problems is not in my nature."
     WG "But when an issue is outside of my power to control, it..."
@@ -6923,7 +6929,7 @@ label WG037_c2_2:
     WG "There's not much comfort there."
     MC "Sorry, but I wasn't trying to be comforting. I'm just stating the facts."
     "That actually made Alice laugh."
-    show WG casual-happy
+    show WG happy
     WG "Heh."
     WG "I have to give you that."
     MC "But if you want to be comforted, you should know it's not any kind of failing that you're getting fatter."
@@ -6938,7 +6944,7 @@ label WG037_c2_2:
 
     #Time: Evening
     scene School Front with fade
-    show WG casual-happy with dissolve
+    show WG happy with dissolve
     $setAffection("WG", 1)
     WG "It wasn't the best date I've been on, Keisuke, but I think it was what I needed."
     WG "Thank you."
@@ -6950,9 +6956,9 @@ label WG037_c2_2:
 
 label WG037_c1_2:
     MC "Do you ever listen to Day Shift? They have a new album coming out."
-    show WG casual-angry
+    show WG angry
     WG "..."
-    show WG casual-neutral
+    show WG neutral
     WG "No. I've never heard of them."
     MC "Oh. They're this rock duo. I have a couple of their albums. They're pretty good."
     "I rambled a bit more until, mercifully, our food arrived."
@@ -8670,22 +8676,24 @@ label WG043:
     scene Pool with fade
     $setBEOutfit(OutfitEnum.SWIM)
     $setFMGOutfit(OutfitEnum.SWIM)
-    show WG swim-school-haughty with dissolve
+    $setPRGOutfit(OutfitEnum.SWIM)
+    $setWGOutfit(OutfitEnum.SWIM)
+    show WG haughty with dissolve
     WG "Ah, Keisuke, you're here early. What a pleasant surprise."
     MCT "Is everyone surprised when I'm not late?"
     MC "Well, I don't think I would have been on time if I went back to my room, so I decided to just come here instead. Do you need help setting anything up?"
     WG "No, that's quite alright. Thank you for offering though. I have the zone markers and the goals already set up. I'm just waiting for everyone else to show up."
     WG "With you we'll have just enough to do a three on three. It's not the full experience, but at least we'll be able to have a game."
     MC "You seem like you're pretty excited for this. I guess you missed playing water polo."
-    show WG swim-school-happy
+    show WG happy
     WG "Very much so. My hope is that once people experience it, they'll also come to enjoy it as much as I do."
-    show WG swim-school-worried
+    show WG worried
     WG "{size=-6}Well that and swimming laps in the pool by myself sometimes feels a bit lonely...{/size}"
     MC "Oh, well I could come with you next time if that's the case."
-    show WG swim-school-surprised
+    show WG surprised
     WG "Oh! I didn't mean it like that."
     "More like she didn't mean that to slip. Now that I think about it, outside of Aida and me, I don't think Alice has made a lot of friends to hang out with. Maybe there's more to this than just wanting to play water polo."
-    show WG swim-school-haughty
+    show WG haughty
     WG "Besides, there will be plenty of others to swim with once I get this club up and running officially. The rest should be coming along soon."
     MC "Come to think of it, I never did ask who else you convinced to come and try this out."
     show BE happy at Position(xcenter=0.7, yalign=1.0) with dissolve
@@ -8701,7 +8709,7 @@ label WG043:
     "She certainly did have a point, but I thought I should change the subject before I got caught up in Honoka's penchant for calling attention to her chest- especially with Alice right next to me."
     show BE neutral
     MC "If the goalie position doesn't require as much swimming, I think I know who the next person will be."
-    show PRG swim-school-neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
+    show PRG neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
     PRG "H-Hello everyone."
     WG "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
     PRG "Thanks, Nikumaru-san. I'll do my best."
@@ -8716,28 +8724,28 @@ label WG043:
     FMG "Hey dudes! What's up everyone! I'm ready to crush it in the pool today!"
     show FMG angry-2
     FMG "Wait. What's {i}SHE{/i} doing here?"
-    show WG swim-school-surprised
+    show WG surprised
     WG "Oh, I see you two know each other alrea-"
     Natsuko "I should say the same! Alice said this is a sport for strong swimmers. I don't even trust you to not drown in the tub."
     show FMG angry
     show BE surprised-2
-    show PRG swim-school-scared
+    show PRG scared
     FMG "Judging by the stink lines coming off of you, I don't even think you know what a tub is used for."
     "Akira and Natsuko began to bicker back and forth, doing their best to one-up each other as they came up with even more creative ways to denigrate each other's athletic ability."
     "Looking at everyone else's reaction to the scene, this was creating a really toxic environment. While those two were still battling it out I whispered an aside to Alice."
     MC "{size=-8}Alice, you didn't know those two hate each other's guts?{/size}"
-    show WG swim-school-sad
+    show WG sad
     WG "{size=-8}I had no idea. They're both so nice to everyone else, and I'd never heard them talk about the other before.{/size}"
     MC "{size=-8}Well, this looks pretty bad.{/size}"
-    show WG swim-school-neutral
+    show WG neutral
     WG "{size=-8}Perhaps, but it's nothing a reasonable person can't get over and act like an adult.{/size}"
     MC "{size=-8}This doesn't look like it's going to end any time soon. I think you should say something. Aida and Honoka look scared.{/size}"
-    show WG swim-school-doubt
+    show WG doubt
     Natsuko "Why don't you go back to the locker and get your pool floaties if you're planning on lasting the whole match."
     FMG "I don't have any, but I'm sure you have plenty of extra pairs."
     WG "Alright ladies that's quite enough! Save your energy for the pool. You'll need it."
     WG "We don't have enough players for substitutions. You're both going to be in there the whole time."
-    show WG swim-school-stern
+    show WG stern
     WG "Whatever rivalry you two have going on, I suggest you channel that animosity towards something constructive. I'll be watching for fouls."
     WG "Fouls lead to time out penalties, and when teams can't substitute, that leads to the opponent scoring- and you losing. Got it?"
     Natsuko "I see. Very well then."
@@ -8748,24 +8756,24 @@ label WG043:
     hide FMG
     hide Natsuko
     with dissolve
-    show WG swim-school-haughty
+    show WG haughty
     WG "Alright then, with that out of the way let's get started. I've explained the rules to each of you earlier, but I'll give a refresher on some of the basics right now before we start."
     WG "Fielders can only handle the ball with one hand, while goalies can use two. You only have 30 seconds to attempt to shoot once your team gets the ball or you lose possession- this game moves fast."
-    show WG swim-school-doubt
+    show WG doubt
     WG "Also, I didn't think I'd have to say this, but there's no deliberate striking or splashing in the face of an opponent."
-    show WG swim-school-haughty
+    show WG haughty
     WG "Other than that, you score by getting the ball into the net. The team with the most points wins. Simple enough, right?"
     MC "Easy enough."
     MCT "Easier said than done, more like it."
     WG "To balance the teams we have to spread out the relative swimming skills of everyone as best as possible. That means I'll be on one team and Natsuko on the other."
     FMG "Hey! She's nothing special compared to me!"
     if isEventCleared("WG009"):
-        show WG swim-school-doubt
+        show WG doubt
         WG "It's nothing personal Mizutani-san, but I am factoring in your performance the last time we raced."
-        show WG swim-school-haughty
+        show WG haughty
     WG "You'll have your chance to prove your skills if you want me to change my evaluation of them. Besides, you'll have the fortune of being on my team."
     WG "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
-    show PRG swim-school-neutral at Position(xcenter=0.15, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.15, yalign=1.0)
     show FMG neutral at Position(xcenter=0.3, yalign=1.0)
     show Natsuko swim-school-neutral at Position(xcenter=0.7, yalign=1.0)
     show BE neutral at Position(xcenter=0.7, yalign=1.0)
@@ -8803,11 +8811,11 @@ label WG043:
     "This of course attracted Alice's attention. In any other context, her soft body coming aggressively for my ball would be a good thing, but the steely determination in her eyes told me she was going to eat me alive if I didn't get rid of this ball right now."
     "I lobbed up a pass to Natsuko, hoping to exploit the height advantage Natusko had over Akira, which let her catch the ball, even with Akira practically trying to climb over her."
     "In the brief window created by Akira failing to swipe the ball from her, Natsuko sent a screamer pitch straight into the goal."
-    show PRG swim-school-scared with dissolve
+    show PRG scared with dissolve
     "Aida's 'block' was more of a panicked defense of her face than any real attempt to stop the ball. I couldn't blame her either."
     PRG "Sorry..."
     WG "You're fine Aida. The goal is pretty wide, so it's difficult to cover- that's part of the challenge. You'll get better as the game goes on."
-    show PRG swim-school-unique
+    show PRG unique
     PRG "Thanks."
     hide PRG with dissolve
     "This pattern continued for most of the game, but much less points were given up as both Honoka and Aida felt more comfortable anticipating and going after the ball."
@@ -8819,15 +8827,15 @@ label WG043:
     "What was not so fun however was Akira and Natsuko constantly at each other's throats the whole game."
     "Aside from Alice, who wasn't too phased, the rest of us felt like chum in the water while two great white sharks vied for their portion."
     "They both managed to rack up a couple of personal fouls and a handful of minor fouls from guarding each other so aggressively over the course of the game."
-    show WG swim-school-angry with dissolve
+    show WG angry with dissolve
     WG "You can't pull on the other person."
     WG "Hey! No splashing in her face."
     WG "I don't care if it was an accident- it didn't look like one to me!"
     "To be fair, a little bit of incidental contact was unavoidable. In one of my bouts of frantic flailing to dump the ball before Alice could snatch it away from me, I accidentally slipped an open palm boob grab on her as I tried to push myself back."
-    show WG swim-school-surprised
+    show WG surprised
     WG "Easy there Keisuke!"
     MC "Sorry! It was an accident. I panicked!"
-    show WG swim-school-haughty
+    show WG haughty
     WG "I understand, just try to be more careful."
     hide WG with dissolve
     "In my defense though, at that size, her boobs are pretty hard to avoid. If I start drowning, those would be my preferred floatation device."
@@ -8865,9 +8873,9 @@ label WG043:
 
     scene Pool with fade
     play music Bittersweet
-    show PRG swim-school-scared at Position(xcenter=0.15, yalign=1.0)
+    show PRG scared at Position(xcenter=0.15, yalign=1.0)
     show FMG surprised-2 at Position(xcenter=0.3, yalign=1.0)
-    show WG swim-school-surprised
+    show WG surprised
     show BE surprised at Position(xcenter=0.7, yalign=1.0)
     show Natsuko swim-school-disappointed at Position(xcenter=0.7, yalign=1.0)
     with dissolve
@@ -8880,10 +8888,10 @@ label WG043:
     show BE embarrassed
     BE "Yeah, Akira-chan really plastered you across the face Kei-chan. You're lucky to be alive!"
     FMG "I {i}said{/i} it was an accident!"
-    show WG swim-school-worried
+    show WG worried
     WG "{i}Sigh...{/i}"
     WG "Practice is over. Thank you for coming, everyone. I'll stay with Keisuke until he feels like getting up. Please go on ahead back to the lockers."
-    show PRG swim-school-sad-2
+    show PRG sad-2
     show BE doubt
     show FMG sad
     Natsuko "Would you like us to help put away the equipment Nikumaru-san?"
@@ -8894,7 +8902,7 @@ label WG043:
     hide Natsuko
     with dissolve
     "The rest of the girls left back towards the locker. While slowly recovering from my stupor lying on the ground, Alice sulked by the side of the pool next to me with her legs in the water."
-    show WG swim-school-sad
+    show WG sad
     WG "{i}...sniff...sniff...eee{/i}"
     "Was she crying? I snapped out of my haze and sat up."
     MC "Ow!"
@@ -8908,11 +8916,11 @@ label WG043:
     MC "I don't see what was so selfish about you wanting to do this, and I don't see how you were supposed to foresee all of this happening."
     WG "As the club president everything is ultimately my responsibility- if there were a club. No one is going to want to join after this catastrophe."
     MC "Well, maybe. But isn't it typical for successful business owners that only a handful of their ventures are ever successful? Not everything can be a smashing success, but you won't know if you don't try it."
-    show WG swim-school-worried
+    show WG worried
     "That analogy must have gotten through to Alice. She still looked pretty sad, but she appeared to have stopped sobbing, for the moment."
     WG "That is true. Success is never certain."
     WG "But it's not just that Keisuke. I know it's silly and naïve, but I wanted to use this club to help me make more friends."
-    show WG swim-school-sad
+    show WG sad
     "Alice started to tear up again. I didn't like to see this, but she clearly needed to get something off her chest."
     WG "I know you like me Keisuke... but most people here don't. I know what other people say about me- that I'm just an uptight fatty... or some kind of food obsessed glutton."
     "Alice was probably the most self-confident person that I knew. I was a bit surprised to hear her admit she had taken some baseless chatter from the gossip mill so personally."
@@ -8923,7 +8931,7 @@ label WG043:
     MCT "Don't you think you also have the respect of Natsuko and Akira from outclassing them with your swimming skills?"
     show FMG neutral at Position(xcenter=0.7, yalign=1.0) behind WG with dissolve
     FMG "He is right you know. You were amazing out there today."
-    show WG swim-school-surprised at Position(xcenter=0.3, yalign=1.0) with dissolve
+    show WG surprised at Position(xcenter=0.3, yalign=1.0) with dissolve
     WG "Mitzutani-san! I didn't see you there."
     FMG "Don't mind me, I didn't overhear anything else. Here, I felt bad about what happened at practice today."
     FMG "Whether I have a good workout as a reward, or a bad workout as a consolation, I like to end it with an ice cream treat."
@@ -8935,13 +8943,13 @@ label WG043:
     hide FMG with dissolve
     MCT "Maybe she overheard more than she let on..."
     MC "Well, this wasn't quite the ice cream date I had envisioned, but I think it'll do just nicely."
-    show WG swim-school-happy at Position(xalign=0.5, yalign=1.0) with dissolve
+    show WG happy at Position(xalign=0.5, yalign=1.0) with dissolve
     WG "Hehe, I suppose so. But I do think I still owe you, based on our initial deal."
     MC "Well it's more than enough for me."
     MC "Oh and Alice?"
     WG "What is it, Keisuke?"
     MC "From now on, if you ever need a swimming partner, don't hesitate to ask me."
-    show WG swim-school-aroused
+    show WG aroused
     WG "I just might take you up on that offer."
     jump daymenu
 
@@ -9384,9 +9392,10 @@ label WG045:
 label WG045_art:
     $setFlag("WG045_art")
     scene Dorm WG with fade
+    $setPRGOutfit(OutfitEnum.PAJAMAS)
     "I entered Alice's dorm rather quietly, only to see that Kodama-san was already wide awake."
     show WG neutral at Position(xpos=0.8)
-    show PRG pj-happy at Position(xpos=0.2)
+    show PRG happy at Position(xpos=0.2)
     with dissolve
     PRG "Keisuke! Good morning!"
     if getAffection("PRG") > 3:
@@ -9845,23 +9854,24 @@ label WG045_wine:
 label WG046:
     $setProgress("WG", "WG047")
     scene School Front with fade
+    $setWGOutfit(OutfitEnum.SUMEXT)
     play music Peaceful
     "It was a bright, sunny day outside. The skies were clear, and a faint breeze went against our backs. The weather app said these conditions were expected for the next few days."
     "I looked the street up and down, waiting for Alice's ride to arrive. The giddy feeling in my hands was a mix of nervousness and excitement."
-    show WG summer-ext-haughty with dissolve
+    show WG haughty with dissolve
     WG "You do know that watching for the vehicle will not cause the driver to speed up, right?"
-    show WG summer-ext-happy
+    show WG happy
     "Alice's head remained facing forward, her smirk appeared as she glanced at me from the corner of her eye."
     MC "Heh, yeah. I'm just a little nervous is all, this is probably going to be the most luxurious vacation I've ever been on."
-    show WG summer-ext-neutral
+    show WG neutral
     WG "Probably? I can assure you that you will be treated as a VIP, that is to say, like a five star guest."
     MC "Honestly, I'd be fine with a regular hotel chain. It's normally an extra if the places I've stayed at had a pool."
     MC "And it's a bonus if the pool water is actually clean."
-    show WG summer-ext-haughty
+    show WG haughty
     "She rolled her eyes sarcastically, but I could tell she got some amusement out of my joke."
     WG "Well, you needn't worry about filthy swimming waters at the house. The shores have the most beautiful crystal clear waters, and the beaches are always kept free of litter."
     MC "Wow... I can't wait to see it in person."
-    show WG summer-ext-neutral-2
+    show WG neutral-2
     WG "Before our driver arrives here, you should probably double check your bag to make sure you have everything."
     MC "Ah, what? You really think I'd forget something?"
     WG "It's always better to be safe than sorry. You wouldn't want to get there and find out you left your hair comb here or something."
@@ -9869,21 +9879,21 @@ label WG046:
     "With a confident grin, I unzipped the compartment of my travel bag where I kept my hair products."
     "My confidence quickly drained as I reached into the bag, fondling around to find my hairbrush, but it didn't seem to be there."
     MC "Hang on, h-hang on, I know it's in here somewhere..."
-    show WG summer-ext-neutral
+    show WG neutral
     WG "You left it beside your bag, but forgot to put it in when you picked it up."
     MC "Right, r-"
     "I paused, realizing what Alice had just said. My hands stopped frantically shuffling in the bag as I looked up."
-    show WG summer-ext-happy
+    show WG happy
     "With a genuine smile, Alice put out her hand. In her palm was my hairbrush I was so worried about."
     WG "I would think by now that you would be more careful with such important items..."
     MC "Heh heh... thanks for getting that for me."
-    show WG summer-ext-haughty
+    show WG haughty
     WG "I don't imagine spending time in the hot sun with wild hair would be very fun."
     MC "Oh yeah, it really isn't. I actually have a sweatband that I wear secretly on some days when it's sweltering outside."
     "I finished checking my bag and zipped it back up, I was ready for some summer beach fun."
     "It wasn't too long after words that I saw it approaching on the horizon, an absolute behemoth of an RV started making its way down the road."
     "The vehicle could be more charitably referred to as a house on wheels. Quite easily out-scaling any car that tried to pass it; in fact it was so big, I questioned if it could be considered street legal."
-    show WG summer-ext-worried
+    show WG worried
     WG "Oh my... I truly did not expect father to go all out with this."
     MC "You mean to tell me that you don't travel in luxury RV's for long distance vacations?"
     WG "No, that's not it."
@@ -9895,37 +9905,37 @@ label WG046:
             jump WG046_c1_2
 
 label WG046_c1_1:
-    show WG summer-ext-surprised
+    show WG surprised
     WG "What? No, nothing in particular is wrong."
     MC "Are you sure?  I may not be very observant, but I can tell when something has put you off."
-    show WG summer-ext-worried
+    show WG worried
     WG "...{i}sigh{/i}... you are correct, Keisuke. There is something bothering me about this."
     "Alice turned away from the road to face me, her crystal blue eyes locked onto mine."
-    show WG summer-ext-neutral
+    show WG neutral
     WG "My father knows that my body has... grown, whilst being here. But whenever I would make contact with him, the details of my current size were always kept vague."
-    show WG summer-ext-neutral-2
+    show WG neutral-2
     WG "Not because I happen to be ashamed of it, no. But because he is a very caring person, and it just wasn't in my heart to reveal information that might worry him."
     MC "That's very kind of you, and I'm sure he appreciates it. But how does that tie into the RV?"
-    show WG summer-ext-happy
+    show WG happy
     WG "Keisuke, you were right, you truly are not all that observant."
     "She gave me a sincere grin as she pointed back to the rapidly approaching vehicle."
     WG "Look at the absurd size of that transit, even for me, that's far more than enough room. In fact, one could probably fit several of me in there quite comfortably."
     MC "That's a good thing isn't it? All that extra space, plenty of room to stretch your legs during the trip."
-    show WG summer-ext-neutral-2
+    show WG neutral-2
     WG "Oh no, I am far from ungrateful, believe me."
     WG "He's always cared for my comfort, but something about this gives me concerns he's overthinking things."
     MC "I still think it's best not to look a gift horse in the mouth. This is supposed to be a fun time out, yeah?"
     jump WG046_c1_2
 
 label WG046_c1_2:
-    show WG summer-ext-neutral
+    show WG neutral
     WG "Yes, you are correct. Currently I need to take my mind off things, and enjoy my vacation with pleasant company."
     MC "Speaking of pleasant company, where's Aida?"
     WG "Don't worry, I arranged a separate transit for her. I didn't want her overstressing about us on the way there. Especially in her current state."
     MC "Yeah, you do have a point."
     WG "She'll get there before we do, the servants shall help her accommodate."
     MC "Servants... you were serious about that five star vacation service, huh?"
-    show WG summer-ext-haughty
+    show WG haughty
     WG "I, of course, went through the effort of hand picking the staff that will be with us during our stay."
     MC "Wow, even when going on vacation you still put in extra effort."
     WG "Naturally. No self-respecting entrepreneur ever phones in their work, even when they are planning to relax."
@@ -9948,6 +9958,7 @@ label WG046_c1_2:
     WG "Keisuke, please get in the RV before I change my mind about bringing you."
     "I gave her a cheeky grin before climbing up the stairs. It wasn't until I turned around that my mind could truly grasp how spectacular this vehicle was."
     scene RV Interior with fade
+    $setWGOutfit(OutfitEnum.SUMINT)
     "The entire space was somehow even bigger than it looked on the outside. Not only was there enough room to fit an entire party, but it had an excess of extra amenities as well."
     "There was more room in here than most standard size apartments!"
     "In one corner, there was a full bathroom, with a shower and washer-dryer combo. And in the other, a full kitchen area."
@@ -9956,11 +9967,11 @@ label WG046_c1_2:
     "I stood there in awe, my eyes were flicking around the room like a pair of flies. Everywhere I looked, there seemed to be more and more unnecessary applications to the passenger area."
     "Coherent thought had left my mind for a second. It wasn't until I felt the entire RV shake, that my focus snapped back to reality."
     "Turning around, I saw Alice calmly making her way up the steps. The look on her face wasn't nearly the same level of shock as mine,"
-    show WG summer-int-surprised
+    show WG surprised
     extend " but from the slight jolt in her expression, I don't think she was really expecting this level of care as well."
     WG "Goodness, Father has always been one for the occasional splurge. But even for him this is far too much."
     MCT "He considers this a 'splurge?' This thing probably cost more than most low-middle income houses..."
-    show WG summer-int-worried
+    show WG worried
     WG "Do you have a problem with the arrangements, Keisuke?"
     menu:
         "No! Not at all.":
@@ -9969,7 +9980,7 @@ label WG046_c1_2:
             jump WG046_c2_2
 
 label WG046_c2_1:
-    show WG summer-int-neutral
+    show WG neutral
     WG "Oh, well that's good to hear. You looked quite pale for a second, I was worried we had overwhelmed you."
     MC "Who, me? Nah, I'm just fine. This already looks like it's shaping up to be a great vacation."
     WG "Indeed! Now, what would you like to drink?"
@@ -9978,17 +9989,17 @@ label WG046_c2_1:
 
 label WG046_c2_2:
     $setAffection("WG", 1)
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Yes, I was actually a tad bit worried how you would handle all this."
     MC "I'm not complaining, obviously. It's just that- this is a lot to take in."
-    show WG summer-int-worried
+    show WG worried
     WG "It may have been silly, but I had hoped that father wouldn't go all out for me again. Not just for my sake, but for yours as well."
     MC "For your sake? Don't you want to live it up on a vacation?"
-    show WG summer-int-neutral
+    show WG neutral
     WG "That much goes without saying, Keisuke. But moderation is key, even when it comes to relaxing."
     WG "If you live in moderation, the little things are just as rewarding as the bigger ones. But if you constantly live in excess, you'll burn yourself out fast."
     MC "I dunno, I've never seemed to have a problem with moderating my relaxing."
-    show WG summer-int-haughty
+    show WG haughty
     WG "That's because you do it far too much. Now come sit down with me, I want to explain the best times to be on the beach."
     stop music
     jump WG046_arrival
@@ -10005,7 +10016,7 @@ label WG046_arrival:
     Chauffeur "And you needn't worry about your luggage, Mr. Hotsure. Someone will be along shortly to help you bring it to your room."
     MC "Is that really going to be necessary? I'm ok with just carrying my stuff in personally."
     Chauffeur "Understood. Please enjoy your trip."
-    show WG summer-int-happy with dissolve
+    show WG happy with dissolve
     WG "Excellent, the journey here seems to take longer and longer each year. Or perhaps that is just the excitement I am feeling?"
     MC "Hey, if we unpack fast, there may still be some sunlight left to hit the beach!"
     WG "Not a moment wasted, I quite enjoy that enthusiasm. But for now, let us save the beach for sunrise. I can assure you that the sunrise on the beach is the greatest first experience here."
@@ -10021,11 +10032,11 @@ label WG046_arrival:
     WG "We best not keep them in suspense."
     MC "They certainly do seem eager. Are your servants normally this energetic?"
     WG "I should hope so! We don't pay them well above the average servant wages for sub-par service."
-    show WG summer-int-haughty
+    show WG haughty
     WG "They are also provided with an array of benefits, as well as a very flexible contract. If you want the best, you have to treat them like the best."
     MC "Wow, if architecture doesn't really pan out, make sure to remind me about working for the Nikumaru company."
     WG "Hmm... tempting offer, but why pay a servant who's already working for free?"
-    show WG summer-int-happy
+    show WG happy
     "Alice gave me a smug grin as she opened the RV door, letting the vivid orange coloring of the sunset wash in."
     scene Summer House Front with fade
     MC "Hey, hang on. There is no way you just said that-"
@@ -10037,7 +10048,8 @@ label WG046_arrival:
     "The man talking to Alice was the older voice I had heard before. But the one questioning me now was clearly the younger, male voice."
     "The last voice then must have belonged to the young lady standing next to the questioning man. She looked about three seconds away from smacking her brash co-worker over the head."
     MC "Um... I..."
-    show WG summer-ext-neutral with dissolve
+    $setWGOutfit(OutfitEnum.SUMEXT)
+    show WG neutral with dissolve
     WG "This is my good friend, Hotsure Keisuke. He shall be staying with us, along with Aida Kodama. Has she arrived safely?"
     Takada "Young Miss Aida arrived here mere moments before you did. She has been shown her room, and is unpacking her bags now."
     UNKNOWN "Keisuke? Cool, it's gotta nice ring to it!"
@@ -10051,7 +10063,7 @@ label WG046_arrival:
     WG "This will be a learning opportunity for him. I picked Lee because he came with high marks from my father, but lacked many of the traits that are present in our other servants."
     Lee "Mr. Nikumaru said that I had serious potential! ...I just gotta learn when to act professional is all."
     Takada "Young Miss Alice, I do believe it would be best to do with the formalities after you unpack."
-    show WG summer-ext-neutral-2
+    show WG neutral-2
     WG "Quite right, I better check on Aida to make sure she is adjusting well to all this."
     hide WG with dissolve
     "With that, I adjusted my bag and set off towards the house."
@@ -10160,8 +10172,9 @@ label WG047:
     "By the time the haze in my mind had cleared, I was standing in the doorway of my room. Hair neatly combed, dressed in a pair of pajama pants and loose t-shirt."
     MCT "I hope Alice doesn't mind me being a bit tardy to the sunrise."
     scene Summer Balcony Exterior with fade
+    $setWGOutfit(OutfitEnum.SUMINT)
     "Not halfway down the hall, I turned to see Alice gracefully glancing over the balcony."
-    show WG summer-int-neutral with dissolve
+    show WG neutral with dissolve
     "The cascading light coming from the early morning sun did wonders. The way she calmly lent against the wall, her head turning to the sunrise, made Alice look like she was right out of a painting."
     "Bright, vivid yellows were reflecting off the golden accents in her clothes. Giving her an almost ethereal aura that beckoned me closer."
     "The gentle orange glow, ever so faint, ended up perfectly complimenting her fair skin. Catching her golden hair as well as her cherubic face, making her features look soft and friendly."
@@ -10175,9 +10188,9 @@ label WG047:
 
 label WG047_c1_1:
     MC "Lovely morning, isn't it?"
-    show WG summer-int-surprised
+    show WG surprised
     "Alice slightly jumped at the sound of my voice. Her head turned toward me with a warm smile"
-    show WG summer-int-neutral
+    show WG neutral
     WG "Why, yes it is. I am glad that you managed to get out of bed for this."
     WG "In all honesty, I truly only expected you to be awake in time for the sunset."
     MC "And miss seeing you in this early morning glow? Not a chance."
@@ -10190,7 +10203,7 @@ label WG047_c1_2:
     $setAffection("WG", 1)
     "I carefully walked up behind Alice, making sure that my footsteps went unheard."
     "Waiting till the last second, I raised my arms and gently set them over her shoulders. Bringing her into a gentle embrace."
-    show WG summer-int-happy
+    show WG happy
     WG "I was hoping that you would do that."
     "Alice tilted her head to look at me, an almost gleeful smile was faint on her lips."
     MC "You heard me?"
@@ -10208,17 +10221,18 @@ label WG047_c1_after:
     WG "That reminds me actually, have you had a chance to get familiar with the other staff members yet?"
     MC "No, actually. I haven't had a chance to meet anyone besides Shino."
     MC "They all seem wonderful, I'm looking forward to getting to know them better."
-    show WG summer-int-haughty
+    show WG haughty
     WG "That will have to wait unfortunately, I have other plans for you today."
     MC "Hold on, let me guess- you want to spend today at the beach?"
     WG "Well, just the afternoon. After that, we shall see where the day takes us."
     MC "I can't wait."
     scene Summer Beach Ocean with fade
+    $setPRGOutfit(OutfitEnum.SWIMSUIT)
     play music Peaceful
     "After finally getting a chance to eat breakfast, I made haste to get changed into my swim trunks."
     "It was midday, the sky's were mostly cloudy with strong rays of sunshine going through the gaps. And one couldn't ask for better weather on the beach."
     "I looked around to find Alice, but the only other person at the beach was Aida."
-    show PRG swim-casual-neutral with dissolve
+    show PRG neutral with dissolve
     "Who was reclined in her beach chair, under a large umbrella, reading a book."
     MC "Lovely weather today, yeah?"
     "Aida crooked her head to look at me."
@@ -10241,7 +10255,7 @@ label WG047_c1_after:
 label WG047_c2_1:
     $setAffection("PRG", 1)
     MC "Thank you so much, Aida. I really don't know how you manage to still be so helpful, even during vacation."
-    show PRG swim-casual-happy
+    show PRG happy
     "Aida blushed and gave me a gleeful smile."
     PRG "Oh, don't mention it, Hotsure-san. Really, it was a pleasure."
     PRG "Now, stop worrying about me, and go see Alice!"
@@ -10250,6 +10264,7 @@ label WG047_c2_1:
 
 label WG047_c2_2:
     scene Summer Beach Closed with fade
+    $setWGOutfit(OutfitEnum.SWIMSUIT)
     "I made my way over to the area that Aida had set up. It was a rather elegant beach tent, almost entirely white with the exception of gold accents around the edges."
     MC "Is there a door knocker on this, or should I just shout 'Ding-Dong?'"
     "Alice's voice came through the cloth cover draping over the entrance."
@@ -10268,7 +10283,7 @@ label WG047_c2_2:
     "Alice lightly chuckled."
     WG "Flatterer."
     MC "How can it be flattery if it's just the truth?"
-    show WG swim-casual-neutral with dissolve
+    show WG neutral with dissolve
     "The privacy cloth door to the tent was lifted, and Alice stepped out into the sunlight. My tongue seemed to stop working as my eyes bared witness to the majesty in front of me."
     "Two luscious pillows of bountiful beauty came forward. Each of them jostling to and fro wildly, as if they each had minds of their own. But both comfortably contained in the skin tight bikini that only accentuated their size."
     "Despite the suit being made of high quality latex, it still seemed to have trouble keeping Alice's chest in check. They seemed to actively want to escape from their damning prison. Part of me wondered if they would eventually make their great escape."
@@ -10285,11 +10300,11 @@ label WG047_c2_2:
     "Only when she turned could I get a hint of its splendor, a perfectly porcine heart shape, with the ends of the heart melting into significantly chubby thighs. The sight alone was enough to drive me crazy."
     "The thought of simply touching it though, was beyond my comprehension. The idea of what it would feel like to cascade my hands down her form was heavenly. The supple layers of flab pushing through my fingers..."
     "The gentle embrace of her voluptuous form was all I could think about."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Is this what you call 'trying your hardest?'"
     "My attention was viciously snapped back to reality. Alice gave me a dismissive look, but I could see just a smidge of pride in her eyes."
     MC "{i}Cough{/i} hm, yep... sorry."
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     WG "Calm yourself will you, Keisuke? It is not as if you have never seen me in a swimsuit before."
     MC "Yeah, but... last time I saw you in a swimsuit, you weren't this-"
     menu:
@@ -10301,22 +10316,22 @@ label WG047_c2_2:
             jump WG047_c3_3
 
 label WG047_c3_1:
-    show WG swim-casual-worried
+    show WG worried
     "Alice's saunter slowed down, her prideful posture had weakened a bit."
     WG "...Yes, you are correct Keisuke."
     MC "N-No! I didn't mean anything bad by it."
     WG "I know you had no ill intent, but yet those kinds of expressions still stress me."
     MC "I'm sorry Alice, it's just... seeing you in this bikini must have fried my brain or something."
-    show WG swim-casual-neutral
+    show WG neutral
     "Her smile started to faintly return to her face."
     WG "At least I know that you still find me irresistible."
     MC "Was there ever any doubt?"
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     WG "Your eyes nearly left your head when you saw me come out! Any doubts I had were crushed on the spot."
     jump WG047_c3_after
 
 label WG047_c3_2:
-    show WG swim-casual-happy
+    show WG happy
     WG "Are you implying that I was not beautiful before?"
     "Alice gazed at me with a cocky smirk."
     MC "No, just more so now that so much of you is on display."
@@ -10325,43 +10340,43 @@ label WG047_c3_2:
     jump WG047_c3_after
 
 label WG047_c3_3:
-    show WG swim-casual-doubt
+    show WG doubt
     WG "There is next to nobody else out here, my choice in attire is perfectly fine."
     MC "What about Aida?"
     WG "Who do you think helped me pick this design? Besides, it's nothing she hasn't seen before."
     jump WG047_c3_after
 
 label WG047_c3_after:
-    show WG swim-casual-neutral
+    show WG neutral
     MC "Are you planning to swim first, or do you want to go sunbathing?"
     WG "I had considered taking a leisurely swim, but the water will be less cold at midday. So I shall rest on the beach for now, and listen to the calming sound of the waves."
     MC "That's a good point actually, I probably should have thought about that."
     WG "Did you really plan on submerging yourself in the frigid early morning waters?"
     MC "It's definitely a good way to start off a vacation, yeah?"
-    show WG swim-casual-happy
+    show WG happy
     "Alice gave me a lighthearted giggle."
     WG "You never cease to humor me, Keisuke."
     MC "What am I? Your date, or your personal clown?"
     WG "Hmmm..."
     MC "T-That was a rhetorical question."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "Oh I know. But now my mind is trying to picture you in a full clown suit."
     MC "I could make it work, they'd call me Folli the clown."
     WG "Folli?"
     MC "It's short for 'follicles,' on account of my hair."
-    show WG swim-casual-aroused
+    show WG aroused
     "Her head turned away from me for a second, her hand going to cover her mouth."
     MC "Really? That joke got you?"
-    show WG swim-casual-neutral
+    show WG neutral
     WG "No, not at all! *ahem*... I am actually concerned that you came up with that answer so quickly."
     MC "I always figured that if going into architecture didn't pan out, the circus freak show would be guaranteed employment."
-    show WG swim-casual-happy
+    show WG happy
     "This time Alice didn't have time to cover her face as she let out a clear laugh."
     WG "You really would fit right in with the rest of the clowns, Keisuke."
     MC "Naturally... Hey, is that your beach set up down by the shore?"
     scene Summer Beach with fade
     "I pointed to a cozy little set-up close to the waves. There was a rather large beach towel on the sand, and an extra large beach chair resting on it."
-    show WG swim-casual-neutral-2 with dissolve
+    show WG neutral-2 with dissolve
     WG "Aida helped me set it up, I swear, she is far too generous."
     MC "Yeah, this seems like the perfect spot to just unwind."
     WG "And when I am this close to the ocean, I can keep an eye on you to make sure you stay safe."
@@ -10372,32 +10387,32 @@ label WG047_c3_after:
     "The rising tide continued to slow me down more and more until everything below my chest was submerged."
     "Alice wasn't kidding, the sea was downright frigid. It felt like the very bones in my legs were being frozen. Part of me wondered if I would catch some form of hypothermia."
     MC "Come on! The w-water is f-fine once you g-get used to it."
-    show WG swim-casual-haughty
+    show WG haughty
     "Way back on the beach, I could see Alice reclining in her beach chair. Her voluptuous form shining like a lighthouse on the sand."
     WG "I can see your teeth chattering from all the way over here, Keisuke. Are you sure that this was a wise move?"
     MC "Of course it is-"
     "A massive wave of chilled sea water hit me right in the back, shoving me face first into the cold abyss."
     "Emerging from the water with a gasp, I pushed my hair out of my eyes and looked back towards Alice."
     MC "S-See? Perfectly fine."
-    show WG swim-casual-doubt
+    show WG doubt
     WG "You are going to get yourself hurt out there, come back already!"
     MC "Ok ok, fine. But only because I forgot to pack a swim cap, and my hair is weighing me down."
     "Trudging along, I made my way back towards the shore."
     MC "Now I know what Homer felt like in the Odyssey."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "Apologies... but what do you mean by that?"
     MC "Being beckoned shoreside by the call of a beautiful siren."
-    show WG swim-casual-happy
+    show WG happy
     "Alice tried her best not to look pleased by the compliment."
     WG "Sit down and dry yourself off already. Your hair probably weighs more than you now with all that water weight."
     "The next half hour passed rather pleasantly. After draining my hair, Alice and I basked in the warm summer air while we made small talk."
-    show WG swim-casual-worried
+    show WG worried
     WG "Hmmm..."
     "After a while, I heard Alice sigh out. Something was very clearly bothering her."
     WG "Maybe if I... no, that wouldn't work."
     MC "Is something wrong?"
     if getAffection("WG") < 17:
-        show WG swim-casual-neutral
+        show WG neutral
         WG "Of course not, I was just pondering what Aida is reading over there."
         MC "Oh, ok."
         "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
@@ -10405,10 +10420,10 @@ label WG047_c3_after:
         "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
         jump daymenu
     else:
-        show WG swim-casual-surprised
+        show WG surprised
         WG "What? Oh no, it's nothing to worry about."
         MC "Really?"
-        show WG swim-casual-neutral-2
+        show WG neutral-2
         WG "Yes, it's nothing that important."
         menu:
             "Question further":
@@ -10418,7 +10433,7 @@ label WG047_c3_after:
 
 label WG047_c4_2:
     MC "If you say so."
-    show WG swim-casual-worried
+    show WG worried
     "Alice still looked uncomfortable, but decided to stay outside for a little while longer."
     "Although after very little time had passed, she announced that she would rather head back inside."
     "It seemed like a rather odd thing for her to do, especially considering how excited she got for this. I wonder if I could have helped with whatever was bothering her..."
@@ -10426,32 +10441,32 @@ label WG047_c4_2:
 
 label WG047_c4_1:
     MC "Alice, I've known you for long enough to see when you're putting on a brave face. What's really bothering you?"
-    show WG swim-casual-worried
+    show WG worried
     "Shifting back and forth in her chair uncomfortably, Alice turned her head away from me and spoke into the wind."
     WG "It really is nothing you need to concern yourself with-"
     MC "Tell. Me. What's. Wrong."
     "I knew that taking such a commanding tone with Alice was a risk. But she was clearly bothered by something, and I was determined to help."
-    show WG swim-casual-stern
+    show WG stern
     WG "Damn it all... if you must know..."
-    show WG swim-casual-worried
+    show WG worried
     WG "I- I don't know if I'll be able to properly cover myself."
     MC "I can get an umbrella if you want."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "No no, I wish to tan myself properly. But if I'm unable to coat my body, the risks of sunburn will be far too high."
     MC "Oh, I see... Do you really think you're too big to do it yourself?"
     WG "Keisuke, I know my own body better than anyone else. And I'm also aware of what areas I can and can't reach."
     MC "What about one of the butlers? I can go ask one of them to help-"
-    show WG swim-casual-surprised
+    show WG surprised
     WG "No!"
-    show WG swim-casual-sad
+    show WG sad
     WG "I mean... please don't let them see me like this."
     MC "Huh?"
     WG "I've known these people for so long, and they've known me since before I could even walk."
     WG "Having to rely on one of them for such a basic task, would not only be humiliating for me, but for them as well."
-    show WG swim-casual-worried
+    show WG worried
     WG "So please, Kei, I'm asking you to not tell them about this."
     MC "Well what are you gonna do now?"
-    show WG swim-casual-stern
+    show WG stern
     WG "What I need-"
     "Her cheeks flushed bright red, as her arms folded over each other."
     WG "Keisuke, I need to ask something personal from you."
@@ -10461,27 +10476,27 @@ label WG047_c4_1:
     "Alice looked as if she wanted nothing more than to close her eyes, and hope that this was all a bad dream. But there was a hint of something else in her expression."
     "In a rather odd way, while her body language was very closed off, it didn't look like she was entirely uncomfortable. In fact, judging by her face, she was viciously curious about the situation and how I would respond."
     MC "Y-Yeah, no problem."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "You sound hesitant, are you certain that this task isn't too much for you?"
     MC "Of course not! It's just- I wasn't expecting this."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Neither was I... but this is what must be done."
     WG "Here, take it."
     "Alice handed over her bottle of sun lotion."
-    show WG swim-casual-stern
+    show WG stern
     WG "And if I catch you lingering over any of my areas, I will call this whole thing off."
     if getFlag("WG039_c2_3"):
         MC "You really expect me to take advantage of the situation like that?"
         WG "As a matter of fact, that is a concern of mine."
         MC "But if I recall correctly, last time this happened, it wasn't so bad."
-        show WG swim-casual-happy
+        show WG happy
         "Reclining back in her seat, Alice gave me a slight smirk."
         WG "Consider this a rare privilege, Keisuke. It would be a shame to waste an opportunity such as this."
         WG "Much like savoring a well made steak- you don't wolf it down, no. You savor every bite, making the most out of the experience."
         MC "Well now you've made me hungry."
-        show WG swim-casual-neutral
+        show WG neutral
         WG "...I'm afraid I may be a bit peckish at the moment now that you mention that."
-        show WG swim-casual-haughty
+        show WG haughty
         WG "Regardless, what I am trying to convey, is that the choice is up to you. Do you want to savor this gift, or do you want to rush through it?"
         MC "If it's all the same to you, I'd want to enjoy this as if it was my last meal."
     WG "Now, are you going to stand around and gawk? Or are you going to help me?"
@@ -10549,11 +10564,12 @@ label WG048:
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
     scene Summer Beach with fade
+    $setWGOutfit(OutfitEnum.SWIMSUIT)
     "The weather here really is amazing, the location is perfect. I can't think of a more pleasant day I have had than today."
     "Gazing upon the azure waters, having tinted to more of a violet from the evening sky, the gently rolling waves made me wonder if this gorgeous day spent with such a beautiful woman had been real, or if I merely found myself in some idyllic surreal fantasy of my own imagination..."
     "I ultimately decided that my imagination was not this good, so it had to have been real."
     "My thoughts drifted all the more, taking in the view from my mind's eye of how Alice had looked in her swimsuit."
-    show WG swim-casual-happy with dissolve
+    show WG happy with dissolve
     "Every curve, every dimple, every bit as warm and invitingly luxuriant as this seaside mansion. It's crazy how soft her body has become."
     "First getting the chance to help her fit her uniform, now this? I like where things are headed between us."
     "But it's more than that... her confidence, her self-determination, her dignified bearing, not for the sake of superficial appearances, as most who are of wealthy means do- Alice cultivated these attributes out of her own sense of respect for herself."
@@ -10617,31 +10633,32 @@ label WG048_c1_1:
     MC "Sorry to cause concern. Please, lead the way."
     stop music
     scene Summer Dining Room with fade
+    $setWGOutfit(OutfitEnum.SUMINT)
     play music WG
-    show WG summer-int-stern at Position(xcenter=0.25, yalign=1.0)
+    show WG stern at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Keisuke! Why are you late? I specifically had Takada check up on you earlier so you would know when you were expected to arrive."
     WG "Dinner does not start until all guests are present- it would be rude of me as the hostess to do otherwise. In turn, as a courtesy to the other guests it is imperative that you be punctual."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Speaking for myself, a few minutes delay is rather inconsequential but I'm sure Aida is absolutely famished by now."
     show PRG unique
     PRG "...I'm okay... I don't mind waiting for Hotsure-san..."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Nonsense, I'm sure you're hungry as I am."
-    show WG summer-int-surprised
+    show WG surprised
     WG "... Uh, imagining you would be Aida."
-    show WG summer-int-neutral
+    show WG neutral
     WG "... Yes that's what I meant."
     MC "Pardon my tardiness. I had underestimated the effects of the ocean water and the sandy beach on my hair."
     MC "I guess I'm just not used to how much maintenance it needs these days yet. I needed some additional time in order to look presentable for the occasion."
     WG "Hmph, some things can't be helped it would seem. You appear to have invested your time wisely."
     $setAffection("WG", 1)
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Perhaps you can begin to appreciate how long it takes me to get ready now. I hope you realize these curls don't magically spring into place each morning when I wake up."
     Lee "Allow me to serve you Mr. Hotsure."
     MC "Thanks."
-    show WG summer-int-neutral
+    show WG neutral
     WG "Thank you Lee, that will be all for the moment."
     jump WG048_afterchoice_1
 
@@ -10663,20 +10680,21 @@ label WG048_c1_2:
     "I sauntered down the hallway to the dining room with the knowledge that I made comfortable time, if only a minute or two to spare."
     stop music
     scene Summer Dining Room with fade
+    $setWGOutfit(OutfitEnum.SUMINT)
     play music WG
-    show WG summer-int-neutral at Position(xcenter=0.25, yalign=1.0)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Keisuke, glad you could join us. I was worried you were not going to make it to dinner in a timely manner when you hadn't reemerged from your quarters in quite some time."
-    show WG summer-int-doubt
+    show WG doubt
     WG "Oh... Keisuke, what's wrong with your hair?"
     MCT "Damn, she noticed. Then again, who wouldn't?"
     MC "Heh, yeah, I kind of had to rush to make sure I wasn't late. I hadn't realized what a number the ocean and the sand did on my hair."
     MC "I guess I didn't quite finish the job- it's more to manage than I realized."
-    show WG summer-int-stern
+    show WG stern
     WG "Your appreciation for punctuality is noted but it won't do for the occasion to remain in such a state."
     $setAffection("WG", -1)
-    show WG summer-int-neutral
+    show WG neutral
     WG "Aida, do you by chance have a spare hair tie Keisuke can use to help reign in his unruly hair?"
     PRG "Yes. I hope this will do."
     MC "Thanks."
@@ -10685,14 +10703,14 @@ label WG048_c1_2:
     "On cue, the servants came in and with swift, coordinated efficiency, proceeded to set the table with the prepared dishes. A portion of each dish was served to our plates."
     "I didn't even have a chance to process what we were going to be eating before everything was in place and the dinning table was set."
     Takada "Miss Nikumaru and guests, dinner is served."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Thank you Takada, that will be all for now."
     jump WG048_afterchoice_1
 
 label WG048_afterchoice_1:
     $setVar("WGSSPR", 0)
     MC "Well, let's eat."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Indeed."
     "Like everything about this luxury vacation, I was quite impressed with the spread before us. My plate reminded me of a food magazine cover."
     "It was some kind of fish steak served as meticulously carved pieces with a variety of steamed vegetables- fancy heirloom varieties like red carrots and purple potatoes."
@@ -10705,28 +10723,28 @@ label WG048_afterchoice_1:
     MC "{i}Cough{/i} -excuse me. {i}errahk{/i} Alice, what is this? It tastes amazing."
     WG "Easy there Keisuke."
     "My fumbling of basic eating skills hadn't gone unnoticed."
-    show WG summer-int-happy
+    show WG happy
     WG "It's seared bluefin tuna, my favorite meat."
     "That was certainly evident. I hadn't gotten the chance to notice until now, my attention previously drawn to the stunning display on my own plate, but Alice's portion of the prepared tuna was quite hardy."
     "So much so that it caught even me off guard, as I considered myself at least somewhat aware of her eating habits by this point."
     "Luckily, I had the presence of mind to restrain my reflexive facial expression of shock, so as to not draw undue attention and make her feel self-conscious."
     "Few things made me as happy as seeing Alice light up with delight when she was enjoying her food."
     WG "This particular preparation however..."
-    show WG summer-int-aroused
+    show WG aroused
     WG "is simply exquisite."
-    show WG summer-int-neutral
+    show WG neutral
     WG "Though I'm unsure of the exact preparation used in this particular dish."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Aida, with your culinary expertise, can you tell what was used for the seasoning?"
     show PRG excited
     PRG "I can definitely taste soy sauce and cayenne pepper, but there are several other seasonings I'm not sure of."
     show PRG unique
     PRG "I wonder if the chef will let me have the recipe, this tastes great!"
-    show WG summer-int-happy
+    show WG happy
     WG "I'll have Francois write it down for you later. The servants here all cook to his recipes and specifications."
     show PRG excited
     PRG "Thanks, Alice."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Think nothing of it."
     show PRG happy
     "Watching Alice dig into her meal, I realized what I had initially thought was an overly generous portion was all too paltry for her appetite, if her current haste was any indication."
@@ -10745,24 +10763,24 @@ label WG048_afterchoice_1:
 label WG048_c2_1:
     MC "Mmmm, I agree Alice, this dish is truly exquisite. I have to thank you for being such a generous hostess, I would never have had such a wonderful culinary experience if not for your refined pallet."
     "Each bite just makes me want to slow down and savor the flavor for as long as possible."
-    show WG summer-int-happy
+    show WG happy
     WG "I'm glad you are enjoying it as well Keisuke. Indeed, a truly great meal is worth savoring to its fullest."
     $setAffection("WG", 1)
     "Alice modestly slowed her eating pace to a rate much more in line with her characteristic composure."
     "As much as I like seeing her enjoy her food, I know she would be hard on herself if she thought she had let her growth factor get the better of her sense of control."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "After being at Seichou Academy for so long, I had nearly forgotten how much I truly have missed such fine cuisine prepared by competent professionals."
-    show WG summer-int-haughty
+    show WG haughty
     WG "It would be a shame to not fully seize on the opportunity to avail myself to the present offerings."
-    show WG summer-int-happy
+    show WG happy
     WG "I dare say I think I will elect to have another serving of seared tuna."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Takada."
     Takada "Yes, Miss Nikumaru?"
     WG "I request another serving of the seared tuna, if you please."
     Takada "Of course, Miss Nikumaru. We made sure to prepare plenty, knowing it was one of your favorite dishes."
     "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
-    show WG summer-int-happy
+    show WG happy
     "Alice was clearly looking forward to getting to indulge in her favorite dish all over again."
     Takada "Would either of Miss Nikumaru's guests be interested in another serving as well?"
     PRG "I will have some more as well, Takada-san... {size=-6}although not quite so much...{/size}"
@@ -10772,35 +10790,35 @@ label WG048_c2_1:
 label WG048_c2_2:
     $setVar("WGSSPR", getVar("WGSSPR") +1)
     MC "I didn’t realize seared bluefin tuna was your favorite Alice. I feel like I should have asked sooner, but what are some of your other favorite foods?"
-    show WG summer-int-neutral
+    show WG neutral
     "Alice paused for a moment, not wanting to talk with her mouth full after having just taken a particularly large bite."
     WG "Well, favorite is a rather strong word. I suppose I should qualify this as {i}one{/i} of my favorite dishes."
-    show WG summer-int-haughty
+    show WG haughty
     WG "After all, no singular dish can completely satisfy the entire range of gustatory experiences."
-    show WG summer-int-neutral
+    show WG neutral
     WG "Even if one dish were to stand out above others, it would lose its luster to the point of being mundane if divulged in too frequently."
     MC "True, variety is the spice of life, as they say. When I was a kid I thought when I became an adult I’d get to eat as much candy as I’d want. I learned pretty fast that gets way too sickening real quick."
     WG "Precisely. Glad to know your pallet has matured."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "But to answer your question, I couldn’t possibly begin to rank my favorite dishes. There’s simply too many considerations to account for in what constitutes the perfect meal for the occasion."
     WG "The ambiance, time of day, the seasons, pairing with drinks and h’orderves— what makes for the perfect dish can only truly be evaluated in the moment..."
     "Alice’s thoughts had seemingly drifted from the present conversation as her mind swirled amidst some blissful realm of infinite culinary delights."
     MC "Uh... Alice?"
-    show WG summer-int-surprised
+    show WG surprised
     WG "Oh. Yes, where was I?"
-    show WG summer-int-neutral
+    show WG neutral
     WG "There’s just so many different categories. If I had to say, I do quite enjoy quiche for breakfast, or even brunch."
     WG "Though far too rich and heavy for this summer weather, few things are quite as rich and decadent as confit de canard."
     MC "Seems like you favor French cuisine."
     WG "Not exclusively mind you, but your assessment is not inaccurate by any means."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "For example, as much as I enjoy crème brûlée, I would prefer tiramisu if that were on the menu."
     WG "Though I’ve enjoyed this line of inquiry, why do you ask, Keisuke?"
     MC "Oh, just for my own curiosity. Who knows? Maybe I’ll surprise you sometime with one of your favorites."
-    show WG summer-int-happy
+    show WG happy
     WG "Is that so? Well, I’ll be looking forward to the occasion then."
     Takada "Miss Nikumaru, would you like some more seared tuna?"
-    show WG summer-int-neutral
+    show WG neutral
     WG "Yes please, Takada. Thank you for asking. I had been so swept up in the present conversation I had lost track of how little remained on my plate."
     Takada "Think nothing of it, Miss Nikumaru. That is why we are here. We made sure to prepare plenty, knowing it was one of your favorite dishes."
     "Takada proceeded to serve Alice a portion that was nearly equal to her first offering, filling her plate all over again."
@@ -10812,12 +10830,12 @@ label WG048_c2_2:
 
 label WG048_c3_2:
     MC "I can see why you were looking forward to this trip."
-    show WG summer-int-neutral
+    show WG neutral
     WG "Oh, what do you mean?"
     MC  "Well, I've never seen you have such enthusiasm for any of the food at school like this meal. With good reason- it's exquisite, as you said."
     MC "Why not fully avail yourself to as much of these culinary delights as possible before we have to head back?"
     $setAffection("WG", -1)
-    show WG summer-int-sad
+    show WG sad
     WG "Yes, I suppose I have been indulging my appetite since we've been on vacation. I should probably restrain myself a bit more in light of the present temptations in this environment."
     "My vocal enthusiasm backfired as Alice slowed the pace of her eating considerably. My comment must have inadvertently made her self-conscious over just how visibly she had been enjoying her food."
     "She became much more reserved in her movements. What was previously a burst of enjoyment across her face with each bite now appeared to be an expression of confliction."
@@ -10825,7 +10843,7 @@ label WG048_c3_2:
     "Alice eventually worked her way through nearly everything on her plate, but for a few paltry bites."
     "Perhaps she was falling back on the old troupe of it being lady-like to leave something on your plate? It was one of the few assumed rules of etiquette I had never seen Alice make any effort to follow before."
     Takada "Miss Nikumaru, would you like some more seared tuna?"
-    show WG summer-int-neutral
+    show WG neutral
     WG "No thanks Takada, I believe that will be enough for me this evening."
     Takada "Are you sure Miss Nikumaru? I am aware that it was one of your favorite dishes, so we prepared extra. Was it not to your liking?"
     WG "Not at all. It was exquisite, but I fear I have had too much already."
@@ -10841,64 +10859,64 @@ label WG048_afterchoice_2:
     MCT "Maybe a bit of small talk would lighten up the mood?"
     MC "So, what are the plans for tomorrow?"
     "Alice finished chewing and swallowed her food."
-    show WG summer-int-neutral
+    show WG neutral
     WG "Every summer vacation I'd play volleyball, believe it or not. It's not overly competitive and it is far more fun than other 'sports'."
-    show WG summer-int-sad
+    show WG sad
     WG "However, I'm certainly less agile than I was before."
-    show WG summer-int-haughty
+    show WG haughty
     WG "I'd like to go swimming on the beach since we didn't swim earlier today."
     MC "Yeah, wading into the water is a bit different than actually swimming in the open ocean."
     WG "Precisely, it would also be good exercise. I can't slip on my routine just because I'm on vacation."
-    show WG summer-int-neutral
+    show WG neutral
     WG "I trust you'll join me tomorrow?"
     MC "Of course, I'm also a bit curious what swimming with all this hair is going to be like."
     MC "I'm sure there's no way though I'll be able to keep up with you with all the extra drag on me in the water."
-    show WG summer-int-happy
+    show WG happy
     WG "Aida, I understand you may prefer to stay on the beach but swimming is actually one of the best forms of exercise during pregnancy, if you'd care to join us."
     show PRG worried
     PRG "I- I don't know."
     show PRG unique
     PRG "This isn't a normal pregnancy. I'm not sure."
-    show WG summer-int-surprised
+    show WG surprised
     WG "-!"
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Aida, it's okay."
-    show WG summer-int-neutral
+    show WG neutral
     WG "If you'd like, I can help teach you to start swimming properly again."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Trust me. I know how to swim with a belly."
     show PRG happy
     PRG "Okay, Alice. If you're willing to help me then I'll try swimming."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Fantastic. It's settled then."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "Ahhh, what a lovely dinner, both food and present company included."
     MC "We would say the same as well."
     show PRG happy
     PRG "Thanks Alice."
     WG "But I am quite full myself from the evening's delectable offerings. I could use post meal digestif."
     MC "Isn't that some kind of after-dinner wine?"
-    show WG summer-int-neutral
+    show WG neutral
     WG "Usually, but the point is to provide something after a meal that will stimulate digestion. Wine was one of the few things my father did not deign to provide for this trip."
     WG "Which is fine, it would not do for the occasion and would be unfitting for me as a hostess to provide, given that Aida is unable to partake."
     WG "I'd rather enjoy some ginger ale right now. Ginger is very effective at soothing the stomach. Would either of you care for some as well?"
     MC "Sure."
     show PRG neutral
     PRG "Me too."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Lee! Could you please bring some ginger ale?"
     "A startled reply came from the kitchen."
     Lee "S-sure can, Miss Nikumaru."
     "A moment later, Lee came rushing out into the dining room."
     Lee "Here you go Miss Ni-"
-    show WG summer-int-surprised
+    show WG surprised
     show PRG surprised
     "Lee had slipped and spilled the drinks everywhere, luckily managing to catch the glasses before they broke. It seemed he was used to such a feat."
     Lee "{size=-6}{i}jojdwaess-eo{/i}{/size}"
     Lee "Miss Nikumaru! I'm so sorry I'll clean this immediately!"
     "Shi rushed out of the kitchen to assess the situation."
     Shi "LEE! YOU IMBACI-"
-    show WG summer-int-stern
+    show WG stern
     WG "Shino, that won't be necessary."
     Shi "-!"
     WG "Spilling some drinks is not going to flood the house, nor set us back financially, I'm quite sure cleaning this up will rectify the situation."
@@ -10912,10 +10930,10 @@ label WG048_afterchoice_2:
     "Perhaps that is the key difference for Alice, not that she expects perfect execution 100%% of the time, but rather a contempt for the acceptance of what is substandard and indifference towards improving one's self."
     "Or maybe she just has a soft spot for lovable klutzes like me."
     MC "Well, after all, no use crying over spilled ginger ale."
-    show WG summer-int-haughty
+    show WG haughty
     WG "Quite."
     show PRG admire
-    show WG summer-int-neutral
+    show WG neutral
     WG "Now, where were we?"
     MC "You were talking about ginger ale as a digestif."
     "Shino came out with a new bottle per Alice's direction. Quickly and quietly, so as to not distract from our conversation, she set our glassware and poured a glass for each of us before leaving the bottle with what remained next to Alice, likely knowing she will want more later."
@@ -10929,16 +10947,16 @@ label WG048_afterchoice_2:
     "Reflecting back on what just happened, I was proud of her. It would not have been unreasonable for her to have gotten angry, raised her voice, or even harshly chastised Lee for his mistake."
     "Instead, she displayed an unflappable grace throughout the situation that caught both me and Aida off guard."
     "Something tells me I still have a lot to learn about softer side of the hard nosed, industrious young woman I had come to fall for during my time at Seichou Academy."
-    show WG summer-int-surprised
+    show WG surprised
     WG "Oh my!"
-    show WG summer-int-neutral
+    show WG neutral
     WG "It appears we have run out of time if we are to retire early enough to be ready for tomorrow morning's activities."
-    show WG summer-int-neutral-2
+    show WG neutral-2
     WG "I trust you enjoyed this evening's dinner as much as I did?"
     MC "Absolutely, thank you again Alice."
     show PRG happy
     PRG "Yes, thank you Alice. It was lovely!"
-    show WG summer-int-haughty
+    show WG haughty
     WG "Excellent. Take your time going back to your rooms, but please make sure you allow enough time to sleep so that you will be refreshed in the morning. Tomorrow's activities start bright and early tomorrow."
     "Alice walked back to her room. Aida followed not long after back to her room as well."
     "I thought about a short evening stroll on the beach just to take in more of the evening, but after the ordeal I went through earlier to remove the sand from my hair- combined with my penchant for oversleeping, I decided better of it and retired to my guest room as well."
@@ -10964,14 +10982,16 @@ label WG049:
     "It was a calming setting with the gentle rustling from the waves of translucent light blue waters. I could feel the hot air rising up from the ground as the summer sun beamed down on the pale sand."
     "Looking over at the beachside tent, it looked like Alice and Aida hadn't wasted any time setting up for the day at the beach."
     scene Summer Beach Ocean with fade
-    show WG swim-casual-neutral at Position(xcenter=0.25, yalign=1.0)
-    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    $setPRGOutfit(OutfitEnum.SWIMSUIT)
+    $setWGOutfit(OutfitEnum.SWIMSUIT)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     "As I walked over, it looked like Alice and Aida had made themselves comfortable, having already arranged their towels and beach supplies out in an orderly fashion."
     "Noticing that both of them appeared to have been putting the finishing touches on each other's sunscreen coverage, I winced with the realization that I had indeed missed out on something due to sleeping in a few extra minutes."
     WG "There you are Keisuke. I was worried for a bit that you had decided to sleep in and not make the best use of our time off."
     "I honestly couldn't tell if she saw right through me and this was intended as a subtle dig at my sleeping habits, or if I had genuinely managed to make good enough time to allay suspicion."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "I'm eager to get started swimming. It's simply been too long, and I can't let my routine slip just because I'm on vacation. I trust you will be joining me?"
     MC "Absolutely. It's been a while since I got to swim. I'm looking forward to it."
     WG "Excellent. Do make sure you've properly covered yourself in sunscreen. I don't want either of you suffering the ill effect of too much sun by neglecting something so easily preventable."
@@ -10992,7 +11012,7 @@ label WG049:
     MC "Say Aida, aren't you going to join us for some swimming? I'm sure Alice would want you to join us."
     PRG "That's okay Hosure-san. Maybe a little later. You two deserve some alone time together, so don't worry about me."
     MC "Oh, don't worry about that Aida. You make it sound like you're a third wheel- that's simply not the case if that's what you're trying to imply."
-    show PRG swim-casual-happy
+    show PRG happy
     PRG "Thanks Keisuke, but really, it's all right. I'm still a little tired from getting up this morning and I'd rather just relax for now."
     PRG "I brought a book I've been looking forward to reading that I haven't had time for back at school. It's Diant's Inferno, one of those classics I want to check off my lifetime reading list. Please, enjoy your time with Alice."
     PRG "I don't know if or how much she shows it, but I can tell she enjoys spending time with you.  And, seeing her all happy like that makes me feel good, too."
@@ -11007,7 +11027,7 @@ label WG049:
     "I stood there frozen in my tracks, taking a couple of seconds to overcome the paralysis of a sudden ten degree drop in temperature, focused entirely on my nuts."
     "Having managed to overcome that initial shock, I continued to wade out into the water to greet Alice."
     "The depth was shallow enough that we could still keep our heads above water if we were standing but was still deep enough that we wouldn't have to worry about hitting the sea floor when trying to swim."
-    show WG swim-casual-neutral
+    show WG neutral
     MC "Already putting the laps in?"
     WG "I guess you could say that, but this was just a warm-up. I've been taking it too easy lately, I want to get a real swim session in. Think you can keep up?"
     if isEventCleared("WG009"):
@@ -11027,7 +11047,7 @@ label WG049:
     "It took a second to find it, but I was quite shocked at how far away it was when I did. The distance Alice had settled on was no joke for an amateur swimmer such as myself."
     "But it wasn't impossible either, especially since I wasn't trying to race."
     MC "I'll try my best to keep up. Got any tips?"
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Yes, it's tempting to be lax in your movements but try not to just kick with your knees but use all three of your leg joints in a fluid motion to propel you forward."
     WG "During the stroke, make sure your hand gently enters the water with your fingertips first while keeping your wrist and elbows above your hand."
     WG " Keep your fingers extended underwater so you maximize how much of a paddle you can form with your hands. And try not to get too caught up in checking how far you have to go by raising your head out of water to see."
@@ -11047,10 +11067,10 @@ label WG049:
     "My muscles burned, and my patience was growing thin as I found myself getting a bit bored from this long distance (for me at least) with no relief in sight, but still I pushed through."
     "Just when I thought I was at my limit I felt a firm tug on my shoulder. It was Alice's hand."
     "Hopeful that I must have finished. I immediately surfaced."
-    show WG swim-casual-neutral with dissolve
+    show WG neutral with dissolve
     play music Peaceful
     WG "It appears you took my advice not to keep looking up to heart. You looked like you were about to do another 100 meters if I didn't stop you."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "I'm surprised you kept up as well as you did Keisuke."
     MCT "Another 100 meters? Taking two zeroes off that number would have been more accurate, but at least I managed to save face to Alice and pushed myself like I knew I could."
     "I seriously needed to catch my breath after that though."
@@ -11058,13 +11078,13 @@ label WG049:
     WG "I hope you didn't use all your energy just on that. We still have the breaststroke, butterfly, and backstroke to do."
     "I put all my effort into getting this far down the beach, not thinking about having to swim back, let alone down and back again. I had a long morning ahead of me."
     MC "{i}Hoo, haaa, hoo...{/i} Sure, no problem. Just shaking off the rust. I could use a minute or two."
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     WG "Well, let me know when you are ready. I'll be waiting on you. I didn't exactly overextend myself at the pace I chose you know."
     MCT "There's plenty of salt in the ocean water, I don't need more rubbed into my wounded pride."
     MC "I'll do my best to keep up- wouldn't want to let you down now."
     WG "You're doing better than I expected to be honest. Keep in mind I've been doing this for nearly all of my life."
     WG "It's one of the few physical activities I enjoy... and have a high degree of skill in."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "We'll do the breaststroke back. That's an easy one to do a casual pace with. It's less movement intensive compared to freestyle."
     WG "You'll want to save up some energy for when we do the butterfly stroke."
     "Much like before, that apparently was a sufficient indication for Alice for me to know that we were starting."
@@ -11080,7 +11100,7 @@ label WG049:
     "It gave me a bit more time to take in just how clear the water was and how good it felt relative to the hot summer air above the surface."
     "After what seemed like ages, I finally made it back to the spot near the awning in front of Alice's family beach house."
     "I undoubtedly left Alice waiting longer this time, not having the same sense of urgency that spurned my initial performance."
-    show WG swim-casual-neutral with dissolve
+    show WG neutral with dissolve
     play music Peaceful
     WG "There, that wasn't so bad now was it? You certainly took your time, but at least you're managing to finish."
     MC "Thanks, uh, I guess."
@@ -11089,14 +11109,14 @@ label WG049:
     WG "It takes practice to master the mechanics of swimming in order to move through the water as smoothly as possible. In fact, it's far more important to keep in mind than in any other sport."
     WG "Water is much denser than air, so anything you can do to cut down on drag is going to pay greater dividends than what you're able to do for running."
     MC "Makes sense. I guess I hadn't thought about it that way before."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Now that I've sufficiently warmed up, I'm fully prepared to go all out this time."
     WG "I hope you're not already slowing down on me. Are you ready for something actually challenging this time around?"
     MCT "Actually challenging!? Was swimming the better part of a kilometer by this point in the open ocean a fake challenge?"
     MCT "Am I missing something here? If I wasn't still riding the pump of the previous swimming session while simultaneously being buoyed up from standing in the water, I felt like I would have fallen over by this point."
     "The sane part in my brain screamed to tell her no, but looking into Alice's eyes I could see how much she was enjoying herself with this."
     MC "Oh, so you're saying I should stop holding back this time?"
-    show WG swim-casual-happy
+    show WG happy
     "A wide, delighted smile spread across Alice's face."
     WG "Heh! Liar. That's very funny Keisuke. I'll make you eat those words."
     WG "Tsk, tsk, and to think all this time I held back just so you wouldn't get left too far behind."
@@ -11109,7 +11129,7 @@ label WG049:
     MCT "On second thought- better refocus. If I spend too much time on that imagery my blood was going to start pumping somewhere else besides my muscles."
     MC "Alright, you got me. I'm going to need all the help I can get."
     MC "You said we're doing the butterfly stroke this time? I get tired just watching that. Got any tips for me like before?"
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Of course, I do. Quite frankly I wouldn't expect you to finish without my help."
     "They say pride cometh before the fall, but I knew I was in no position to offer up a lesson in humility. On the bright side though, Alice is always interested in the tutelage of an eager pupil."
     WG "If you're going to try to swim fast for this distance at your skill level, you'll easily waste all your energy. Focus on being relaxed and moving fluidly with your whole body."
@@ -11134,7 +11154,7 @@ label WG049:
     MCT "Oh no!"
     MCT "This is it."
     MCT "I'm being dragged towards the light. My body yielded as a golden haired cherubic figure began to pull me towards the heavens..."
-    show WG swim-casual-neutral with dissolve
+    show WG neutral with dissolve
     play music Peaceful
     MC "BUHAAA! {i}Hoo, haaa, hooo!{/i} Alice!"
     "Alice, holding my hair, had pulled my head above water so I could breath."
@@ -11147,58 +11167,58 @@ label WG049:
     "Alice apparently wasn't going to risk me sinking, still firmly holding on to my hair until she dragged me a sufficient distance to where I could easily stand on the seabed."
     "As we walked out of the water, I began to crawl across the wet sand where the waves swept over the shore of the beach and collapsed in a heap on my back once I determined I was far enough in that the waves weren't going to crash over my head."
     "Alice sat down beside me about an arm's reach away, with her hands bracing herself upright, facing backwards while her belly filled up her lap with her legs forward."
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     "Craning my neck to peer behind me I could see the piece of driftwood Alice set as our distance marker."
     MC "Hey!... I {i}huff{/i} made it {i}huff{/i}"
     WG "You certainly did. I didn't expect you to finish, you know. Honestly though, I don't know what possessed you to push yourself to the point you almost drowned."
     MC "You did."
-    show WG swim-casual-surprised
+    show WG surprised
     WG "What?!"
     MC "I didn't {i}huff{/i} want to let you down {i}huff{/i}"
-    show WG swim-casual-angry
+    show WG angry
     WG "I was just teasing you back! We both know you aren't that great of a swimmer! Are you insane?"
     WG "..."
-    show WG swim-casual-worried
+    show WG worried
     "Alice seemed to have stopped herself in the midst of her usual critical defensive reaction."
     WG "...I didn't mean to put that kind of pressure on you. I'm sorry."
     MC "You didn't {i}huff{/i} there's no need to apologize."
-    show WG swim-casual-doubt
+    show WG doubt
     WG "Well then why are you blaming me!"
     MC "Alice, you didn't pressure me to push myself to my limit, you inspired me to."
     MC "I could tell you were looking forward to getting to do this on your vacation, and I wanted to be a part of doing something that you love, with you."
     MC "I knew I couldn't keep up with you, but I could tell you were enjoying having someone with you to share the experience."
     MC "If I just gave up, I thought it would just put a damper on the whole day."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "It's just swimming, Keisuke. I do it all the time for exercise at school you know."
     MC "No, it's not just that- this place, the water, you're in your element. It's an escape and a refuge for you, isn't it?"
     MC "I didn't want to do anything that would diminish it for you at a time in your life when you need it more than ever."
-    show WG swim-casual-sad
+    show WG sad
     WG "That's very sweet of you Keisuke."
     $setAffection("WG", 1)
     WG "{i}Sigh{/i}... You're not wrong. I had hoped my yearly summer retreat from my childhood would help bring me solace by taking me back to a time and place from before I started growing."
-    show WG swim-casual-worried
+    show WG worried
     WG "Such a silly notion really. Even if it could all go away for a week I'd still have to return to school where it would all be waiting for me."
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     WG "I guess even here I'll have to learn to live with how my body is changing. Swimming helps me do that. Thank you for joining me today Keisuke."
     MC "You're welcome- I wouldn't have missed it for anything!"
-    show WG swim-casual-happy
+    show WG happy
     WG "Hehe! Well you've certainly proved that."
     MC "So, tell me more about this place then. It sounds like you have a lot of good memories from spending summers here growing up."
     WG "I do. It's why I came to love swimming so much, and even volleyball like I mentioned last night."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "My parents, especially my father, were always busy when I was young. Still are."
     WG "I don't begrudge them for it, they taught me how much work it takes to be successful in business because of that. But when we stayed here, they got to spend time with me."
     WG "As a little girl, I loved finally getting all the attention. Each year we came, I never wanted to leave."
-    show WG swim-casual-sad
+    show WG sad
     WG "I guess part of me hasn't quite grown out of that yet."
     MC "I don't know if anyone ever grows out of that. Isn't that what nostalgia is? Who doesn't get sentimental from time to time about childhood memories?"
     MC "Maybe it's just something silly about us we have to learn to accept and not worry about so much."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Perhaps you're right."
-    show WG swim-casual-surprised
+    show WG surprised
     "Alice began to take a look around, her expression looked like she had just remembered something she had forgotten."
     WG "Oh! We should get going. This far down isn't part of our beachfront. These are all private beaches, so it would be frowned upon if we were caught loitering on someone else's beach."
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     WG "I'm going to swim back. You're welcome to walk instead, you know."
     MC "Nah, I can do it. It's the backstroke this time, right? I can always just stop and float on my back if I get tired."
     MC "Just don't expect me to catch up to you any time soon. I'm going to take it nice and slow this time."
@@ -11217,14 +11237,16 @@ label WG049:
 label WG050:
     $setProgress("WG", "WG051")
     scene Summer Beach with fade
+    $setPRGOutfit(OutfitEnum.SWIMSUIT)
+    $setWGOutfit(OutfitEnum.SWIMSUIT)
     play music WG
     "When I finally realized I arrived at my destination I began to walk back towards the house."
     "Looking up, I could see the servants were just finishing up setting out a fully catered beachside lunch under the tent. Looks like they had set up a volleyball net at Alice's request as well."
-    show WG swim-casual-neutral at Position(xcenter=0.25, yalign=1.0)
-    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Looks like you managed to find your way back, slowpoke."
-    show WG swim-casual-happy
+    show WG happy
     "Alice grinned at her subtle chiding of my chosen pace. I could tell she was still appreciative of my earlier efforts though."
     WG "You're just in time for lunch. Come join us."
     MC "Whoa!"
@@ -11239,7 +11261,7 @@ label WG050:
     "For dessert there were these perfectly sectioned squares of what appeared to be real deal lemon meringue pie. I'd only ever had the crummy cheap yellow snack cakes that tried to imitate the real thing."
     "The only thing missing was a swan carved out of ice."
     Takada "Miss Nikumaru and guests, lunch is served. Please, enjoy."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "Thank you Takada."
     WG "Aida, please go ahead, guests first."
     PRG "Um... thank you, Alice. But, are you sure?"
@@ -11269,13 +11291,13 @@ label WG050_c1_1:
     MC "A bit overwhelming isn’t it?"
     PRG "Hm-hmm. It all looks so good... but my nose has been really sensitive lately. I-I don’t really know what I feel like."
     MC "I’m having trouble making up my mind too. I was planning on following Alice’s lead to see what she was going to start with."
-    show WG swim-casual-haughty
+    show WG haughty
     "Alice perked up when she realized I gave her an in to not have to wait any longer."
     PRG "That does sound like a good idea. I need more time to make up my mind."
     WG "It is a tad bit overwhelming isn’t it? Don’t be afraid to take a little bit and come back for more later. I won’t be offended if you choose not to finish your initial selection."
     WG "That being said, I have already decided what I will be selecting."
     MC "By all means, lead the way, we’ll be right behind you."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "If you insist."
     "Alice didn’t seem too keen on how going first reflected on her hospitality as the hostess; nonetheless, her appreciation was still evident in her tone."
     "A big girl has to eat after all, and I felt a personal responsibility to remove any and all obstacles to make sure that happened. Besides, there was plenty of food to go around— or at least I had thought."
@@ -11290,17 +11312,17 @@ label WG050_c2_1:
     PRG "It all looks so good, but my nose has been really sensitive lately.  With the ocean right there, all I can smell is salt and fish.  So... maybe something sweet would be nice?"
     MCT "Bingo! Okay, we can move this along."
     MC "Well, why not have dessert first? This lemon meringue looks great- maybe you'll get your appetite back later. Just have one of these for now."
-    show PRG swim-casual-happy
+    show PRG happy
     PRG "That's a great idea Hotsure-san."
     "I grabbed a plate and served up a piece for Aida, hoping to move things along faster to make up for the delay."
-    show PRG swim-casual-neutral
+    show PRG neutral
     PRG "Thank-you Hotsure-san."
     $setAffection("PRG", 1)
     "As Aida walked back to her seat on the cushions under the tent, Alice looked at me while shaking her head, expressing 'thank you' with an exasperated smile for what I just did."
     $setAffection("WG", 1)
     "I decided to forgo my turn so Alice could, in the more figurative sense, get down to business."
     MC "Ladies first- I insist."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Such a gentleman."
     "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
     "Seeing Alice's ruthless efficiency as she picked out every dish she wanted without hesitation and managed to fill every square centimeter of her plate in just a few seconds—"
@@ -11309,9 +11331,9 @@ label WG050_c2_1:
 
 label WG050_c3_1:
     "..."
-    show PRG swim-casual-embarrassed
+    show PRG embarrassed
     "Instead of coming to a decision, Aida seemed to freeze up as she realized she was holding up the line with her indecisiveness."
-    show WG swim-casual-stern
+    show WG stern
     MCT "Well this doesn’t seem to be working."
     MC "Is everything alright Aida? It’s okay if you aren’t feeling hungry."
     PRG "S-Sorry. I just can’t seem to make up my mind. I think I’ll have one of these lemon squares for now."
@@ -11319,9 +11341,9 @@ label WG050_c3_1:
     "Honestly, she didn’t need to be so embarrassed, it’s understandable how sensitive her sense of taste and smell could be in her condition."
     "It all looked pretty good to me though, but not wanting to hold up Alice any further, I decided to let her go ahead of me."
     MC "Uh, you can go first Alice. I’m not sure what I want either."
-    show WG swim-casual-doubt
+    show WG doubt
     WG "Honestly, I don’t understand this hesitancy,"
-    show WG swim-casual-neutral
+    show WG neutral
     WG "but thank you for offering."
     "Whether she meant that in the sincerest sense of the word or not, her appreciation was still evident in her tone. There was plenty of food to go around, or at least I had thought."
     "By this point Alice was absolutely ravenous. She piled up her plate high and managed to fill every square centimeter of it in just a few seconds—"
@@ -11333,7 +11355,7 @@ label afterchoice_WG050:
     "I honestly did not know what else would be left if Alice decided to come back for seconds or thirds. I ended up taking a little bit of everything, since it all looked good."
     MC "This is really good!"
     "I exclaimed, taking my first bite as I sat down between the girls."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "I'm glad you're enjoying it."
     "No sooner had I sat down than Alice had gotten back up for a second pass, leaving an empty plate in her stead. One of the servants quickly removed it from her seat after barely a few seconds."
     "On her way back, Alice's plate was stacked full again, this time with different dishes she had not taken the first time around. I was surprised, maybe even a little impressed, but I decided not to say anything."
@@ -11343,30 +11365,30 @@ label afterchoice_WG050:
     "I probably didn't need to worry about it, given how much food was set out, but part of me did think if she wanted to eat lunch, she'd better do it now before it was all gone."
     "By the time Aida came back to her seat with her food, this time with much less indecision involved, Alice was on her way back to the table to get dessert."
     "Curiosity got the better of me, but I didn't want to make her feel self-conscious. I adjusted my shoulders and neck so as to be looking at the ocean waters, belying my true gaze out of the corner of my eye."
-    show WG swim-casual-neutral-2
+    show WG neutral-2
     "I was right to be cautious. Alice appeared to be checking to see if anyone was noticing her."
     "I wish she wouldn't continue to cling to this kind of pretense, especially around Aida and me of all people, but in all fairness, it would be difficult for anyone to not feel self-conscious with her growth."
     "Having determined to her knowledge that no one was looking, she proceeded to serve herself the remaining lemon meringue squares from the sheet pan."
     "I suspected since Aida and I had each gotten a piece for ourselves, she didn't feel the necessity to let any more remain."
     "I continued to pretend to pay no mind as she walked back to her seat with a plate full of treats, focusing my gaze down at my own plate instead."
-    show PRG swim-casual-happy
+    show PRG happy
     PRG "Oh, thank you, Alice! You didn't need to get up to bring us dessert."
-    show WG swim-casual-surprised
+    show WG surprised
     WG "Oh... well it was no trouble at all..."
     WG "I thought... we could all enjoy dessert together after this lovely meal- yes."
     "Unbeknownst to her, Aida's reflexive appreciation of what she interpreted as a nice gesture had left Alice absolutely mortified, judging by how the color had drained from her face and her hesitant reply."
-    show PRG swim-casual-neutral
-    show WG swim-casual-worried
+    show PRG neutral
+    show WG worried
     "Aida had been more preoccupied with her meal at the time, so she didn't notice like I did."
     "However, her remark clearly indicated that a normal individual would not have even considered the portion Alice had selected for herself was intended for only one person."
     PRG "Whew. I think I'm going to be pretty full by the time I finish what I have, though."
     MC "I'm good for now. Maybe I'll have one later, but don't save any on account of me."
     "I tried to play it off that her portion was not unreasonable for one person to finish."
-    show WG swim-casual-haughty
+    show WG haughty
     "Having essentially gotten 'permission', in a sense, from both of us to finish the remaining dessert, Alice's expression visibly relaxed."
     "She proceeded to work through her dessert course, though perhaps not as fervently as she initially may have before Aida had said something."
     MC "I can see why you wanted to swim in the morning. Aren't you supposed to wait three hours after eating before swimming? That wouldn't have left much time before night."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "That's just a common rumor. Swimming is no different than any other exercise where it may not be wise to exert yourself so intensely on a full stomach."
     WG "It comes from people worrying about getting cramps while swimming that could interfere with their ability to come up for air, but that problem is more related to hydration than if you just ate food."
     MC "Makes sense. Three hours always sounded way too long to me anyway. Professional swimmers are in the pool almost all day- they can't just not eat."
@@ -11393,20 +11415,22 @@ label afterchoice_WG050:
 label WG051:
     $setProgress("WG", "WG052")
     scene Summer Beach Ocean with fade
+    $setPRGOutfit(OutfitEnum.SWIMSUIT)
+    $setWGOutfit(OutfitEnum.SWIMSUIT)
     play music Peaceful
     "Whether it was from a food coma, the warm summer sun, or the pent-up exhaustion from the morning's swim, I must have dozed off."
-    show WG swim-casual-neutral with dissolve
+    show WG neutral with dissolve
     WG "Are you awake? Honestly Keisuke, sometimes I wonder if you would just sleep forever if left to your own devices."
     "Still in a sleepy haze, it took a second or two for things to come into focus. Alice was standing over me with her arms crossed, if she hadn't been bent over enough to look down at me, I certainly would not have been able to see her face over her belly."
     MC "Wha? Oh, yeah, guess I dozed off there."
     WG "I think we all did for a little bit, but it would be a waste of a day just to lay about."
     WG "You said you were up for playing some volleyball with me, so we're going to get that in before it gets too late in the day."
     MC "Fine with me. I'm up for more after some food and rest."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Good. Come on, Aida is already waiting."
     "The volleyball net was set up a short distance from the tent."
-    show WG swim-casual-haughty at Position(xcenter=0.25, yalign=1.0)
-    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    show WG haughty at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "I'm assuming both of you are at least somewhat familiar with the rules of volleyball?"
     PRG "A little..."
@@ -11451,18 +11475,18 @@ label WG051:
     "{i}SPLAT{/i}"
     "In my eagerness to receive the ball I took a couple of extra unnecessary steps, only to receive it directly with my face, rather than my forearms."
     "Having missed the ball completely with my arms, and unable to correct its trajectory, it bounced right into the sand."
-    show PRG swim-casual-surprised
-    show WG swim-casual-neutral
+    show PRG surprised
+    show WG neutral
     PRG "A-Are you alright, Hotsure-san?"
     WG "I'm sure he's fine. He's endured much worse- that's for sure."
     "Alice was right, a light bump on the head from a failed return was nothing compared to a cannon shot to face from Akira."
     MC "Yeah, no big deal. I'm fine. Sorry to ruin our streak."
-    show PRG swim-casual-neutral
+    show PRG neutral
     WG "It is not a big loss. You both maintained it for a sufficiently long period of time for me to think we're ready to play a real game."
     MC "A real game? But there's only three of us. Don't we at least need four people?"
     WG "I'll make do. You and Aida will be on one team, and I will be the other. Considering your fledgling skills, this will be an appropriate handicap, but I get two volleys to keep it fair."
     MC "Seems like it will be pretty hard to cover the whole court by yourself."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "I'm up for the challenge."
     "I hadn't known Alice to take on a challenge she genuinely thought she could not win, so she must have been feeling pretty confident in her volleyball skills."
     WG "Accurately serving is an advanced skill, and you can't hit the net on serve. In the
@@ -11501,19 +11525,19 @@ label WG051:
     "Alice lobbed a serve to the back towards Aida. To her credit Aida stayed calm and passed me a nice gentle arc towards where I was standing near the net."
     "With a very light tap of my wrist I gave the ball just enough energy to make it over the net."
     "Alice realized what happened all too late, as she ran up to the front of the net. She dove into the sand with the hope of keeping the ball alive but she did not make it."
-    show WG swim-casual-doubt
+    show WG doubt
     WG "Hmph."
     "Alice dusted herself off."
     WG "And to think I was starting to go easy on you two."
     "Our new strategy wasn't perfect, we still gave up a few points here and there, but we slowly started inching ahead. Alice's accuracy with the ball was excellent, but it became apparent she had overestimated her ability to cover the court."
     "Knowing that she had felt confident she could beat us, as the game continued it was increasingly clear to me that Alice was not nearly as adapted to her body's recent changes as I had initially thought from seeing her swim."
     "Instead of landing on her forearms, more than a few of her passes landed with a muted {i}BLUMP{/i} as they sank into the ample flesh of her boobs, rebounding with a much weaker trajectory than intended."
-    show WG swim-casual-worried
+    show WG worried
     WG "Oh my... that hasn't happened before."
     "Her speed was impressive given her size, but the bulk of her thighs and her belly sticking so far out in front of her did not lend itself to an efficient running stride."
     "She jiggled all throughout her body, while her thighs rubbed together. Much more so than her speed, it was evident that her agility, the ability to change her direction to be in the right place, had been greatly affected by her added weight."
     "By the time we were able to return the ball over the net, Alice was not able to fully accelerate back towards the new spot she needed to be on the court."
-    show WG swim-casual-angry
+    show WG angry
     WG "{i}Whew{/i}, 18-20. Match point!"
     "Alice called the score like she had for each set. Alice looked flustered and tired. Aida and I were on match point. I don't know if she thought it was supposed to be easy, but she was clearly disappointed with her performance."
     "As she wound up for this serve, she looked determined. Something told me she was going to try blasting this one as hard as she could before we even got the chance to react."
@@ -11523,17 +11547,17 @@ label WG051:
     "The ball hit the net. The slack let out on the upper part of the net before the ball tumbled harmlessly over the side, an illegal play on a serve."
     "It was certainly anti-climactic, but Aida and I won."
     MC "I guess that's game."
-    show WG swim-casual-worried
+    show WG worried
     WG "That would be correct."
-    show PRG swim-casual-happy
+    show PRG happy
     PRG "I-I didn't think we would win! Great job Hotsure-san!"
     MC "Well it wasn't just me Aida, I needed your help."
     "Alice had a rather blank expression on her face in contrast to the fiery intensity seen just a few seconds ago."
     "No doubt she was trying to not visibly express her disappointment in herself. I didn't know how much good it would do, but I figured I'd try to cheer her up."
     MC "Alice, you were amazing. We barely won, and there were two of us!"
     WG "Not nearly amazing enough it would seem. You won according to the rules we agreed upon."
-    show WG swim-casual-neutral
-    show PRG swim-casual-neutral
+    show WG neutral
+    show PRG neutral
     WG "I wouldn't have set them out as such if I thought it was not possible for me to win. I must admit, you both did better than I expected. Even my miss at the end could be attributed to your efforts to wear me down."
     MC "Well, that was technically the strategy. We weren't going to win just with skill."
     WG "Strategy is also a skill. A skill of yours I underestimated."
@@ -11541,14 +11565,14 @@ label WG051:
     WG "Perhaps, but that may be a while. Honestly, I didn't find it as enjoyable as I remembered, especially compared to swimming... It didn't really feel the same."
     "It was unfortunate that something she had looked forward to on this vacation turned into another reminder about the changes going on in her body that she couldn't control."
     "I wanted to say something comforting, but my initial consolatory remarks had bounced right off. Besides, for the moment, she seemed keen on moving past it."
-    show WG swim-casual-haughty
+    show WG haughty
     WG "Speaking of which, Aida, if you're still feeling up for it, I believe I promised to give
     you a swimming lesson."
     PRG "I'd like that. I almost forgot about it. Thanks for remembering."
     WG "Come with me."
     scene Summer House Back with fade
-    show WG swim-casual-haughty at Position(xcenter=0.25, yalign=1.0)
-    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    show WG haughty at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     "Alice led Aida down to the water. Alice alternated between demonstrating different techniques herself and helping to position Aida in the water so that she could mimic what she had just been shown."
     "I hung back down the beach at a slight distance, alternating between treading water and wading in the shallows."
@@ -11569,13 +11593,13 @@ label WG051:
     PRG "Thank you Alice. I am starting to feel tired. This was fun. I'd love to swim with you again sometime... if you'd want to."
     WG "Of course, Aida."
     "Alice turned to me."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "Keisuke, we're going to head back inside. I believe I am satisfied with how well we managed to fill today with the scheduled activities. Please come join us."
     scene Summer Beach with fade
     "We walked back towards the tent to get our towels to dry off after coming out of the water. Aida went up ahead as I stopped to talk to Alice."
     MC "You looked like you were enjoying yourself out there with Aida. You're quite the swim instructor it would seem. It appears you already have two students."
-    show WG swim-casual-haughty at Position(xcenter=0.25, yalign=1.0)
-    show PRG swim-casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    show WG haughty at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Well, if you enjoy something, isn't it natural to want to share that with others?"
     MC "That is true. Passion can be infectious. Even though I'm feeling worn out, today was a lot more fun than a lazy day on the beach."
@@ -11583,16 +11607,16 @@ label WG051:
     "At this point, I wasn't sure if she was just making a general observation or was trying to drive home a point with a not-so-subtle jab at my tendency to hit the snooze button."
     WG "But it was indeed a full day and I'm feeling ready for some rest myself. I'm actually surprised you managed to keep up today, Keisuke."
     WG "It just goes to show me you have a lot of untapped potential. Perhaps all that's missing is the proper motivation..."
-    show WG swim-casual-aroused
+    show WG aroused
     "Alice's expression turned to a smug, yet sultry smile. My 'proper motivation' was apparently no secret to her."
-    show WG swim-casual-neutral
+    show WG neutral
     WG "Well, come on now. Let's get dried off, Aida is already ahead of us."
     "We both walked back to the tent as Aida was finishing drying off. I started rubbing my towel through my hair, knowing nothing would get dry if that wet mess was still dripping all over me."
     PRG "I think I'm going to head in. I'd like to lie down for a while, if that's okay."
     WG "Think nothing of it. Please go ahead Aida, we'll catch up to you."
     "Not thinking much of it at first, I was standing behind Alice when I noticed her bending over to get her beach towel."
     "{i}RIIIIP{/i}"
-    show WG swim-casual-surprised
+    show WG surprised
     WG "..."
     MC "...!"
     "My head would have snapped to attention from the sound, if my gaze hadn't already been transfixed on the sight unfolding before me."
@@ -11608,7 +11632,7 @@ label WG051:
             jump WG051_c2
 
 label WG051_c1:
-    show PRG swim-casual-worried
+    show PRG worried
     PRG "Something wrong?? You both look a little flushed.. Did you lose something in the water?"
     MC "What?! No, I don't think so."
     "I padded my swim trunk pockets in a feigned show of assurance."
@@ -11617,24 +11641,24 @@ label WG051_c1:
     "Alice's cheeks were cherry red, but not for the reason Aida was thinking."
     PRG "Here, I have some aloe vera gel in my bag. I hope it helps..."
     "Aida walked back over to Alice, rummaging through her beach bag. Finally finding what she was looking for she looked up."
-    show PRG swim-casual-surprised
+    show PRG surprised
     PRG "Oh! Um... {size=-6}I see{/size}"
-    show WG swim-casual-angry
+    show WG angry
     "No longer having to be subtle Alice quickly tried to wrap her towel around herself."
     "Obviously flustered and not thinking clearly, she tried to wrap her beach towel up high over her waist, but that didn't leave enough length left for her to keep it wrapped around herself after going over her belly."
     "Embarrassed even further, she had to redo her attempt to cover herself, this time only around her hips, which easily stayed in place with the weight of her belly pressing down on the towel as she wore it."
     WG "Hmph, so difficult to find quality materials. I expected this swimsuit to hold up for much longer than just one summer vacation. How disappointing."
     MCT "Well at least Alice was able to save face by blaming the swimsuit for being substandard quality."
-    show WG swim-casual-worried
+    show WG worried
     WG "*{i}Sigh{/i}... Thank you Aida."
     WG "Perhaps I didn't reapply sunscreen enough today. All the more reason for us to head inside after a long day."
-    show PRG swim-casual-neutral
+    show PRG neutral
     "Alice's frustration quickly turned into dejection once she realized she couldn't even hide her own embarrassment anymore. I felt sad and frustrated for her."
     "She came to her family's vacation home to get away for awhile and take her mind off of the effects of her growth."
     "Getting to swim with me and Aida today seemed to have taken her mind off of it, only for this wardrobe fiasco to negate all of that by reminding her how fat she was getting."
     "I didn't think I had anything to say that could take the sting of that realization away, so I tried to change the subject."
     MC "Alice, thanks for everything today. It was really fun."
-    show PRG swim-casual-happy
+    show PRG happy
     PRG "Yes, I agree. Thank you Alice! The food was great as well."
     MC "That too. I was blown away by the food."
     WG "I'm glad you two enjoyed it. I had fun too... {size=-6}for the most part.{/size}. Right now, I'm looking forward to cleaning off with a warm shower. Let's head inside."
@@ -11642,16 +11666,16 @@ label WG051_c1:
     jump daymenu
 
 label WG051_c2:
-    show PRG swim-casual-worried
+    show PRG worried
     PRG "Is everything alright? You both look like something is wrong. Did you lose something in the water?"
     "I continued to run my beach towel through my hair as I took a couple of steps towards Aida, blocking her line of sight to Alice."
     MC "Oh, uh. It's nothing. I thought I lost my... uh, sandal. But I found it."
     PRG "I didn't think you wore any sandals today, Hotsure-san."
     "Damn! She noticed. Apparently, I needed a more elaborate deception than a simple distraction."
     MC "Exactly! I forgot to bring it entirely! So therefore, it must still be in my guestroom. Nothing to worry about!"
-    show WG swim-casual-neutral
+    show WG neutral
     "Looking back out of the corner of my eye, I could see Alice took the time afforded by my ruse to cover her bottom half with her beach towel, leaving Aida none the wiser."
-    show PRG swim-casual-neutral
+    show PRG neutral
     PRG "Oh good!"
     WG "Yes, quite the relief, though it is rather careless to forget something like that in the first place, Keisuke."
     MC "Heh, yeah that's true."
@@ -11662,7 +11686,7 @@ label WG051_c2:
     WG "That was very chivalrous of you to act in order to preserve a lady's honor."
     "At this point I started to blush. Aida may have been oblivious to my act, but Alice was keen to what I had been up to."
     MC "I... I don't know what you mean. I guess I looked panicked for a second when I thought I lost a pair of sandals in the ocean. You know how concerned Aida is about that kind of stuff."
-    show WG swim-casual-happy at Position(xalign=0.5, yalign=1.0) with dissolve
+    show WG happy at Position(xalign=0.5, yalign=1.0) with dissolve
     "Me playing dumb about the whole ordeal brought a coy smile to Alice's face."
     $setAffection("WG", 1)
     WG "Sure, Keisuke."
@@ -11670,7 +11694,7 @@ label WG051_c2:
     MC "I should be saying that to you, since you're the host. This whole vacation has been amazing."
     WG "I'm glad you're enjoying yourself. I did have one question for you though."
     MC "What was that?"
-    show WG swim-casual-aroused
+    show WG aroused
     "Alice's voice changed to a sultry tone as she sashayed her hips when she asked the question."
     WG "Did you get a good look?"
     "I didn't really know what to say, but the heat I felt on my cheeks at that moment was more than just the summer air."
@@ -11707,35 +11731,36 @@ label WG052:
     "With a resigned sigh, I grabbed my bags and headed out. Maybe I would get lucky and he would find my brush."
     "Under all the covers, and between each cushion I checked, yet it was nowhere to be found."
     scene Summer Balcony Exterior with fade
+    $setWGOutfit(OutfitEnum.SUMINTSG)
     "With a defeated sigh, I trudged over to the balcony. Alice was right though, the sunrise on this balcony is something to behold."
     "It was at that moment I felt something soft press into my back. No, not just soft, but warm as well. In fact I'm pretty sure I know what's behind me."
-    show WG summer-int-sg-neutral with dissolve
+    show WG neutral with dissolve
     WG "If you are hoping, perchance, to find your brush fallen off the balcony... I am sorry to say that you will not find it there."
     "Turning around, I greeted Alice with a beaming smile. Just seeing her so relaxed put my stressed mind at ease."
     WG "Here, you left it on the beach."
     MC "My brush! How did you find it?"
     WG "The better question is how did you manage to lose it? It very clearly stands out in the sand."
     MC "I guess my mind was focused on... other things at the time."
-    show WG summer-int-sg-happy
+    show WG happy
     "Her calm smile quickly turned into a pleased smirk."
     WG "If you continue to misplace this brush, I am going to have to make you wear it like a necklace."
-    show WG summer-int-sg-neutral
+    show WG neutral
     WG "That way I won't have to worry about retrieving it for you anymore."
     MC "H-Hey, let's not be too hasty."
-    show WG summer-int-sg-neutral-2
+    show WG neutral-2
     WG "I am just simply teasing you, Keisuke."
     MC "Oh, right. You had me going for a second there."
-    show WG summer-int-sg-neutral
+    show WG neutral
     WG "I'm going to miss seeing the sunrise..."
     "Alice shifted her head to look over the balcony. Her eyes sparkled as they caught the morning lights."
     MC "Me too, but hey there's always next year, yeah?"
-    show WG summer-int-sg-worried
+    show WG worried
     "Alice looked a bit worried at what I said. Her jovial demeanor sank away slowly."
     WG "Right..."
     MC "...You're worried that your growth will prevent you from coming here again, aren't you?"
-    show WG summer-int-sg-surprised
+    show WG surprised
     WG "No! Not at all, not in the slightest."
-    show WG summer-int-sg-worried
+    show WG worried
     WG "..."
     MC "Alice-"
     menu:
@@ -11746,13 +11771,13 @@ label WG052:
 
 label WG052_c1_1:
     $setAffection("WG", 1)
-    show WG summer-int-sg-haughty
+    show WG haughty
     WG "You're right, where there is a will there's a way."
     jump WG052_c1_after
 
 label WG052_c1_2:
     $setAffection("WG", 3)
-    show WG summer-int-sg-happy
+    show WG happy
     "Alice couldn't help but giggle at my comment."
     WG "Oh yeah? And how would you do that?"
     MC "I'm sure that excavators aren't that expensive, we can get loads of sand from here and bring it back!"
@@ -11766,14 +11791,14 @@ label WG052_c1_2:
     jump WG052_c1_after
 
 label WG052_c1_after:
-    show WG summer-int-sg-neutral
+    show WG neutral
     WG "We should probably check out with the butlers as well."
     MC "Good point."
     stop music
     scene Summer Living Room with fade
     play music WG
     Lee "Mr. Kei, I couldn't find your brush anywhere!"
-    show WG summer-int-sg-neutral with dissolve
+    show WG neutral with dissolve
     WG "Oh, speak of the devil."
     MC "Heh, don't worry, Alice found it for me."
     Lee "Oh really? Huh, and here I was thinkin' about just secretly buying you a new one!"
@@ -11789,11 +11814,11 @@ label WG052_c1_after:
     "Shino shot her gaze over to me, eyes stern with doubt."
     Shino "Is this true?"
     MC "Y-Yeah, I always pack my own bags."
-    show WG summer-int-sg-haughty
+    show WG haughty
     WG "Hmmph, you try to pack your own bags, but who helps you with space management?"
     MC "...I mostly pack my own bags."
     Takada "There is no need to be so strict today, Shino. The young miss and her companions are leaving soon."
-    show WG summer-int-sg-neutral-2
+    show WG neutral-2
     WG "That is correct, Takada. We simply wanted to thank you all for being here for us."
     Takada "I wouldn't miss it for the world."
     Shino "I'll always be by your side to help, miss Alice."
@@ -11806,27 +11831,27 @@ label WG052_c1_after:
     scene RV Interior with fade
     play music Peaceful
     "Looking out the window, I saw the servants slowly shrink into the distance. The home disappearing from sight not long after them."
-    show WG summer-int-sg-happy with dissolve
+    show WG happy with dissolve
     WG "Keisuke, thank you."
     MC "Huh, for what?"
     WG "For accepting my invitation to accompany me. This quite possibly... no, this vacation was the most enjoyable one I've had at the beach home."
     MC "Ah, c'mon. I really couldn't have added that much."
-    show WG summer-int-sg-neutral-2
+    show WG neutral-2
     WG "You needn't be so modest, my mind wasn't set on going for the longest time."
     WG "If you hadn't accepted my offer, my plans for the summer should have been drastically different."
     MC "You didn't really expect me to turn down an offer like this, right?!"
-    show WG summer-int-sg-neutral
+    show WG neutral
     WG "No no, the idea of you denying my offer was an impossibility."
-    show WG summer-int-sg-sad
+    show WG sad
     WG "But due to my mother and father being unable to attend this year, my heart refused to even go."
-    show WG summer-int-sg-happy
+    show WG happy
     WG "But once I came to the conclusion that you could join me, it felt like a weight had been lifted."
     WG "So... Thank you, is all I want to say."
     "Alice blushed slightly, her smile sincere."
-    show WG summer-int-sg-haughty
+    show WG haughty
     WG "It's a long way back to the campus, and my time was spent preparing to leave this morning."
     WG "I am going to rest for the rest of the return trip, and I recommend that you do the same."
-    show WG summer-int-sg-neutral
+    show WG neutral
     "The rest of the trip back was calm, Alice quietly resting as my own eyelids grew heavy."
     "Even though I know that the only thing waiting for me is more school work, the fact that I'll still have Alice by my side, makes everything seem like it'll turn out fine."
     jump daymenu
@@ -11859,21 +11884,22 @@ label WG053:
     WG "Come in."
 
     scene Dorm WG with fade
+    $setWGOutfit(OutfitEnum.DRESS)
     "Closing the door behind me I notice Alice standing in front of her makeup mirror putting on lipstick. Standing in front of me is Alice, wrapped in a floor-length dress. Out of all her outfits so far, this one was by far the one I think I liked the most."
-    show WG dress-neutral with dissolve
+    show WG neutral with dissolve
     WG "Do you recognize the piece playing Kei?"
     if getSkill("Art") > 4:
          MC "It's Beethoven's Moonlight Sonata. At least one section of it, correct?"
-         show WG dress-happy
+         show WG happy
          WG "It is indeed, it's good to see the classics are still appreciated."
          MC "It's a piece that I'm sure many recognize but few know the name of, most classical pieces are that way."
 
     else:
         MC "Sounds like a normal classical piece of music."
-        show WG dress-angry
+        show WG angry
         WG "I do hope it would be a bit more than a normal classical piece, seeing as it's rather famous."
         MC "Sorry, suppose it just didn't ring any bells for me. It's not exactly within my avenue of musical interest."
-    show WG dress-neutral
+    show WG neutral
     WG "It's a wonderful song regardless, that deserves its own recognition. Though you aren't here to discuss my music choices are you. You've been rather vague with me on exactly what you are planning with me tonight. Care to layout your grand scheme?"
     menu:
         "Tell her the true plans":
@@ -11885,13 +11911,13 @@ label WG053:
 
 label WG053_c1_1:
     MC "Well I guessed that since we've done restaurants for the last few dates, a change of pace would be nice."
-    show WG dress-happy
+    show WG happy
     WG "Oh? Is that your plan mister?"
     MC "It's much more impressive once we get to the theater."
     $setAffection("WG", 1)
-    show WG dress-surprised
+    show WG surprised
     WG "The theater, oh that's a very nice idea."
-    show WG dress-happy
+    show WG happy
     WG "I look forward to seeing what show you've decided would pique my interest."
     "To be honest I hadn't considered whether she'd ever seen this show before."
     MC "Well we'd better get going to make sure we can find our seats without much trouble."
@@ -11900,10 +11926,10 @@ label WG053_c1_1:
     scene Theater Exterior with fade
     play music WG
     "The theater was rather packed tonight, which wasn't unexpected since the show was a rather popular pick."
-    show WG dress-happy with dissolve
+    show WG happy with dissolve
     "Seeing Alice in her dress was something I didn't know I needed, but seeing her now I'm not sure how I never imagined it before. Compared to her previous dress, this one stirred me in a new way I didn't know was possible."
     "Where her previous dress had been quite..."
-    show WG dress-neutral
+    show WG neutral
     WG "Kei, the man at the ticket booth is calling you."
     MC "Oh, I guess I zoned out there."
     "I give the man our tickets and mention that I'd called ahead for accommodations. He nods and assures me that our accommodations have been met before waving us in."
@@ -11911,21 +11937,21 @@ label WG053_c1_1:
 
 label WG053_c1_2:
     MC "I hate to spoil surprises, it ruins all the fun and anticipation."
-    show WG dress-haughty
+    show WG haughty
     WG "Then I guess I'll have to wait, which I normally hate to do. Though I think I'll make an exception this time."
     "She gives me a smirk as we exit from the room."
 
     scene Theater Exterior with fade
-    show WG dress-surprised with dissolve
+    show WG surprised with dissolve
     WG "Oh my! I was certainly not expecting this to be in consideration!"
     MC "Oh and why so?"
-    show WG dress-sad
+    show WG sad
     WG "It's been a rather long time since I've been to an opera or play. I was beginning to think I'd never be able to go back due to, well, everything so far."
     MC "Don't worry I've been careful this time to account for everything."
-    show WG dress-haughty
+    show WG haughty
     WG "Is that so?"
     MC "I've got this date handled so relax tonight."
-    show WG dress-neutral
+    show WG neutral
     WG "If you say so Mr. In Charge."
     "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
     jump WG053_c1_after
@@ -11934,17 +11960,17 @@ label WG053_c1_3:
     $setFlag("WG053_c1_3")
     MC "There is a new seafood restaurant that recently opened in town, they have a dress code that's why I asked that you get dressed up for this occasion."
     $setAffection("WG", -1)
-    show WG dress-sad
+    show WG sad
     WG "Oh, that's very nice."
     MC "Is there a problem with that plan?"
     WG "Well I was hoping we could maybe do something besides food, but I suppose if the reservations are made we shouldn't disappoint."
     "I feel bad for lying about something so simple but my certainty on what she wants is still rather blurry. So playing it safe this time might've been a bad call."
 
     scene Theater Interior with fade
-    show WG dress-surprised with dissolve
+    show WG surprised with dissolve
     WG "Wait, is this where we were actually going?"
     MC "Yeah, I wanted to surprise you."
-    show WG dress-angry
+    show WG angry
     WG "Why would you lie about something so important to our plans?"
     MC "Well this was supposed to be a surprise after all so I wanted to keep up the illusion till we got here."
     WG "That's still a stupid reason. Did you assume I wouldn't enjoy anything that didn't involve food?"
@@ -11953,32 +11979,32 @@ label WG053_c1_3:
     MC "I'm sorry, I didn't know that was your expectation going into this."
     WG "It wasn't just that Kei, I had fears you might be seeing me as this gluttonous person that was losing control. That's why I was a little disappointed when you said we were doing another restaurant."
     MC "I'd never think that about you! You are far more than something so shallow."
-    show WG dress-sad
+    show WG sad
     WG "That's not how it came off, so much has been happening recently that just having that idea seemingly confirmed, struck a little too deep to be comfortable."
     MC "Well as I've said time and time before, that is not how I see you at all. I probably can't understand everything you've been feeling recently but I'm still here regardless of your size."
     if getAffection("WG") >= 25:
-        show WG dress-haughty
+        show WG haughty
         WG "If you truly mean that, then that's what I will expect from now on."
         MC "You have my word, Alice."
         "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
 
         scene Theater Interior with fade
-        show WG dress-neutral with dissolve
+        show WG neutral with dissolve
         WG "So what was the talk with the usher about?"
         MC "I had a feeling that certain features might not properly cooperate with your current size. So I went ahead and called ahead to see what accommodations could be made."
-        show WG dress-haughty
+        show WG haughty
         WG "What kind of accommodations do you mean?"
         MC "Making sure we have seats that fit each of our figures."
-        show WG dress-surprised
+        show WG surprised
         WG "Oh, you went ahead and looked into something like that for us?"
         MC "Of course, I care for your comfort, so naturally I wanted to make sure you could enjoy this night without concerning yourself with those sorts of things."
         $setAffection("WG", 1)
-        show WG dress-happy
+        show WG happy
         WG "You always find a way to impress me, Kei."
         MC "And I'll never stop trying."
         "As we enter the theater hall I spot a large couch near the front. Pointing it out to Alice I could tell she was happy to see my efforts had worked. She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
         MC "Everything okay for you?"
-        show WG dress-neutral
+        show WG neutral
         WG "Yeah that was just surprising, that's all."
         MC "Just making sure everything was to your satisfaction."
         "Alice gives me a smile as the lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
@@ -11988,13 +12014,13 @@ label WG053_c1_3:
         pause 2
         WG "Fine, I suppose I may have been a bit harsh, I guess this stuff has been getting to me a bit."
         MC "You still want to continue tonight?"
-        show WG dress-neutral
+        show WG neutral
         WG "Well I'd hate for all our efforts to go to waste tonight. So we may as well enjoy the show."
         MCT "Well this certainly was not how I imagined this night going at all."
         "I gave our tickets to the man at the ticket booth and mentioned that I had called ahead for accommodations. He nods and says they've fulfilled the request."
 
         scene Theater Interior with fade
-        show WG dress-neutral with dissolve
+        show WG neutral with dissolve
         "As we enter we can both see the large couch like chair in the front row. As we approach I notice Alice giving me a glance with a slight smirk on her lips. She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
         MCT "That was kinda hot, but I better not approach that subject tonight."
         "We both remain silent as the lights dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
@@ -12002,22 +12028,22 @@ label WG053_c1_3:
 
 label WG053_c1_after:
     scene Theater Interior with fade
-    show WG dress-neutral with dissolve
+    show WG neutral with dissolve
     WG "So what was the talk with the usher about?"
     MC "I had a feeling that you might not be able to use their normal seating, so I called ahead to see what they could accommodate."
-    show WG dress-sad
+    show WG sad
     WG "Oh. It sounds like a lot of effort to go through just for me."
     MC "Well you shouldn't have to miss out on the things you enjoy. Adapt maybe, but not abandon them."
     WG "I suppose, but that still doesn't change the fact I'm far larger than most."
     MC "That doesn't change who you are underneath. You are still the confident girl I met all those months ago."
-    show WG dress-haughty
+    show WG haughty
     WG "I wonder when you picked up such a silver tongue? Though I doubt that the effort of guessing as to such would prove pointless."
     "We shared a laugh, causing her body to bounce and roll in a rather satisfying way as we made our way to our seats. As we enter the hall I spot a large looking couch near the front. Pointing it out to Alice, I could tell she was happy to see what my effort was towards."
     MC "So is this good enough my dear?"
-    show WG dress-neutral
+    show WG neutral
     WG "You've certainly gone beyond what I could ask of you."
     MC "It was nothing, you deserve to be treated well."
-    show WG dress-haughty
+    show WG haughty
     WG "Certainly are proving to be quite the gentlemen aren't we?"
     "Alice looks over the couch with a certain level of prudence before gently seating herself. Her cheeks flushing red as the couch gives a small groan as she eases herself down."
     menu:
@@ -12029,13 +12055,13 @@ label WG053_c1_after:
 label WG053_c2_1:
     $setFlag("WG053_c2_1")
     MC "You ok?"
-    show WG dress-sad
+    show WG sad
     WG "Lately my experiences with furniture have been... inconsistent, to put it lightly. Waking up with a few broken bed slats doesn't make for a pleasant morning."
     "She broke her bed, now that I would've loved to see happen. It was one thing to imagine it, but knowing it came true is another."
     MC "Is that why you were very surprised by me deciding on this?"
     WG "Honestly, yes. Even as much as I accept my size, there's always uncertainty when using furniture that isn't my own. I have no prior warning if it can hold me or I'll be sent falling to the floor in a minute."
     MC "I'm sure I can probably help in that matter. An extra pair of eyes never hurts to have around. Not to mention an extra pair of hands to catch you if you fall."
-    show WG dress-haughty
+    show WG haughty
     WG "Well I hope you intend to keep that promise because I'm certain my future at school will involve more than a few splintered chairs."
     "Now that's something I will certainly have to see."
     "The lights soon dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound. Taking my seat next to Alice, I soon feel her hand grip mine as the first scene begins."
@@ -12052,12 +12078,12 @@ label WG053_c2_after:
     scene Theater Interior with fade
     "The play stops to allow everyone a brief intermission to use the restroom. Alice and I stand up from our seats to stretch out our stiff legs. We eventually wander over to a balcony overlooking the entrance."
     MC "Have to say that mask-wearing guy, he is one strange dude."
-    show WG dress-happy with dissolve
+    show WG happy with dissolve
     WG "That is the point Kei, he's meant to be off-putting and slightly standoffish. He's a character we have to warm up to and gain empathy for."
     MC "Have you seen this play before?"
     WG "I did a while back with my parents. We visited some of my mother's family and my father got us tickets for the performance happening on Broadway. It was one of the first shows I saw, so seeing it again is very nice."
     MC "Glad you enjoy it, I had a feeling you might enjoy since I remembered you mentioning a fondness for Opera and singing."
-    show WG dress-neutral
+    show WG neutral
     WG "Do you remember back when we first started here, I wanted to lead the music club?"
     menu:
         "Of course, I remember you mentioned wanting to be a seated soprano.":
@@ -12068,10 +12094,10 @@ label WG053_c2_after:
             jump WG053_c3_3
 
 label WG053_c3_1:
-    show WG dress-happy
+    show WG happy
     WG "I did, and well I still do, that's why I've been very critical about the matter. Though I suppose now in hindsight I may have been a tad overbearing."
     MC "I think you just matured and dropped some of the brashness you had when you first arrived."
-    show WG dress-neutral
+    show WG neutral
     WG "Perhaps, though despite my squabbles with the club president I still plan to see myself in a leading position in the club."
     WG "That is a dream I plan to fulfill, regardless of whatever obstacles may lie ahead of me."
     MC "That does mean you need to have good relationships with your other club members, including Mizawa-san."
@@ -12079,22 +12105,22 @@ label WG053_c3_1:
     "Well she has certainly matured on this front, I hope that she's able to continue without falling back to her old habits."
     "I notice the flow of people heading back into the theater and extend my hand out"
     MC "It would appear it's time to retake our seats. Shall we?"
-    show WG dress-haughty
+    show WG haughty
     WG "Indeed we shall."
 
     scene black with fade
     jump WG053_c3_after
 
 label WG053_c3_2:
-    show WG dress-angry
+    show WG angry
     WG "I had hoped you might have overlooked that low point in my career."
     MC "Sorry for bringing that detail back up."
-    show WG dress-neutral
+    show WG neutral
     WG "Regardless of how you remember that event, you can't deny I wasn't passionate."
     MC "I doubt a case disproving that idea could exist."
     WG "It's that exact passion for singing that helps me stay in the music club. Seeing these beautiful plays helps remind me why I remain loyal to that idea."
     MC "Don't you need the help of the other club members as well?"
-    show WG dress-haughty
+    show WG haughty
     WG "I have a plan for helping me return to their good graces."
     "I consider asking further but decide against it knowing she won't explain her grand plan."
     "Besides people are beginning to return to their seats so we should as well."
@@ -12103,11 +12129,11 @@ label WG053_c3_2:
     jump WG053_c3_after
 
 label WG053_c3_3:
-    show WG dress-neutral
+    show WG neutral
     WG "The details aren't important to the matter I'm addressing, what is important is that I wanted to be a part of that club a lot."
     WG "The passion I have for music helps me stay in the club. Seeing these beautiful plays helps remind me why I need to continue to commit to that idea. I want to prove that I'm as good as I say I am."
     MC "That's an impressive amount of dedication but won't you need the help of the other club members?"
-    show WG dress-haughty
+    show WG haughty
     WG "I have a plan for helping me return to their good grace."
     "I consider asking further but decide against it knowing she won't explain her grand plan."
     "Besides people are beginning to return to their seats so we should as well."
@@ -12121,7 +12147,7 @@ label WG053_c3_after:
         "The play stops to allow everyone a brief intermission to get snacks and use the restroom. Alice and I stand up from our seats to stretch out our stiff legs."
         MCT "I should probably keep quiet for now, I've already done enough damage tonight. Hopefully, I can still salvage this night and my relationship with Alice by doing so."
         "A couple times Alice opens her mouth seemingly to try and say something, but closes it quickly."
-        show WG dress-neutral with dissolve
+        show WG neutral with dissolve
         WG "I'm gonna grab myself a snack from downstairs, I'll back before we reseat."
         "I watch her disappear down the stairwell before returning to my thoughts."
         "After a couple minutes we begin retaking our seats. Alice soon returns with a small bag of popcorn as the curtains open again to continue the show."
@@ -12129,18 +12155,18 @@ label WG053_c3_after:
         $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
         "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
-        show WG dress-sad with dissolve
+        show WG sad with dissolve
         WG "Hey Kei, I want to thank you for tonight."
         MC "Oh it's no problem, I'm glad you've enjoyed yourself."
         WG "Well it's more than just that. This was the first time I saw how my new size is to others."
         WG "As I said back in the theater, my experience with furniture lately has been quite varied. So trusting you to have made the right seating arrangements, made me feel, well helpless. This growth I feel has finally gotten beyond a manageable point."
         MC "Oh I didn't realize you felt that way. I was just doing what I believed would make you feel appreciated and cared for. Are you mad at me?"
-        show WG dress-neutral
+        show WG neutral
         WG "No, this is a confrontation I've been avoiding for a while now."
         MC "Is there some way I can help?"
         WG "Well that there is something I've wanted to ask you about. As you know Aida is in no shape to be assisting me full time. I highly doubt I'm done growing but things are already becoming more difficult."
         WG "Even small tasks have an added challenge to them nowadays. I can't imagine trying to accomplish them at a larger size without some help."
-        show WG dress-haughty
+        show WG haughty
         WG "I have taken for granted my family's servants and Aida, but it is becoming clear that assistance will become not just a convenience for me but a necessity."
         WG "The thought of being dependent like that troubles me, more so the fear that I would become a burden. Directly, I'm saying if we were to become serious about this relationship I would need you there for me."
         MC "Of course, I'll help you if you need it. I am your boyfriend after all."

@@ -4211,42 +4211,43 @@ label GTS026_c2:
         "I had to know that by tonight it could be over before it had begun. Who could blame her, really?"
     "Breathing in, breathing out. I was alive. And I stayed the course."
     scene School Front with fade
+    $setGTSOutfit(OutfitEnum.CASUAL)
     "I arrived, no less becalmed within but steady without. I set my eyes flat and my back straight; there was a certain image required, after all."
     "And as I partook of the late afternoon quiet, a distinctly straight, gentle line of footsteps grew closer behind me. I turned to behold her."
     play music Peaceful
-    show GTS casual-neutral with dissolve
+    show GTS neutral with dissolve
     "Silently, I ceased to breathe."
     "Her very presence cast me in blessed shade, as her wavering straw hat did for her. The rest of her statuesque frame was wreathed in the sleepy, swaying grays and blues of a distant mountain."
     if getSkill("Art") > 3:
         MC "Yamazaki-san, you look like a work of art, and an original at that."
-        show GTS casual-happy
+        show GTS happy
         $setAffection("GTS", 1)
         GTS "Well! One might accuse you of flattery, but your face looks especially candid right now."
         GTS "Erm... pardon me. Thank you, Hotsure-san."
     else:
         MC "Wooow, is that a new outfit? You look really good."
-        show GTS casual-happy
+        show GTS happy
         GTS "Why, thank you. I actually bought this hat for working out in the sun, but I had a feeling it would be a proper cap-off for my ensemble."
         MC "About how long were you thinking that up?"
-        show GTS casual-wink
+        show GTS wink
         GTS "I, for one, believe it's the thought that counts."
-    show GTS casual-neutral
+    show GTS neutral
     GTS "You've put yourself together impressively, as well. I recognized you from across the plaza."
     GTS "...I don't know if anyone has ever looked at me quite that way before."
     MC "Heh heh... hope you'll pardon my tactlessness."
-    show GTS casual-happy
+    show GTS happy
     "She subtly shook with a muffled chuckle."
     GTS "Not at all."
-    show GTS casual-neutral
+    show GTS neutral
     GTS "Well then, are we waiting for a bus, or shall we walk into town?"
     "I shrugged."
     MC "Seems like a fine hour for a walk."
-    show GTS casual-neutral at Transform(xzoom=-1)
+    show GTS neutral at Transform(xzoom=-1)
     GTS "It surely does."
     "I put one hand behind my back and held the other up by my neck, whereupon she took it in her own, smiling."
 
     scene Field with fade
-    show GTS casual-neutral with dissolve
+    show GTS neutral with dissolve
     "As we made our way down the sidewalk through the valley, the vastness of the wind struck me; grasses cast in a mild pre-evening ochre swayed just in time with the folds of Naomi's skirt and jacket."
     "It struck me how all this way she'd just been inching her feet along."
     "She was still holding my hand as the edge of town crept into view; hers encased mine entirely, and in the direct sunlight the inside was beginning to grow damp. I decided, then, to disturb the otherwise comfortable silence."
@@ -4267,11 +4268,11 @@ label GTS026_c2_1:
     if getAffection("GTS") > 20:
         $setFlag("GTS026_bus")
         GTS "It occurs to me that if I do become tall enough to warrant moving to special facilities..."
-        show GTS casual-neutral at Transform(xzoom=-1)
+        show GTS neutral at Transform(xzoom=-1)
         GTS "...I suppose public transport on the mainland will be closed off to me for good."
         MC "I mean, you could probably squeeze into a..."
         MC "Hm... that'd be difficult with the crowds."
-        show GTS casual-neutral at Transform(xzoom=1)
+        show GTS neutral at Transform(xzoom=1)
         GTS "More than difficult. Practically speaking, it would be unconscionable."
         MC "You don't seem particularly bothered."
         GTS "Oh, hardly. I must confess, I was hoping you would propose a stroll."
@@ -4279,7 +4280,7 @@ label GTS026_c2_1:
         "I twirled my finger over my scalp."
         MC "Like how I'm never gonna be hired at a restaurant?"
         $setAffection("GTS", 1)
-        show GTS casual-happy
+        show GTS happy
         "Her sharp, chirping guffaw told me that caught her off-guard."
         GTS "I suppose so!"
         MC "Well hey, I clipped it not too long ago. Maybe we can get a free meal if I can convince the waiters some of theirs got in my food."
@@ -4290,7 +4291,7 @@ label GTS026_c2_1:
     else:
         GTS "Oh, nothing in particular apart from taking in the view."
         MC "It's a great one."
-        show GTS casual-happy
+        show GTS happy
         GTS "It really, really is."
         jump GTS026_c3
 
@@ -4304,15 +4305,15 @@ label GTS026_c3:
     "Town was alive, but thankfully not crowded. We rounded a few corners and found our destination with nary a line, and I gave thanks in my head as I ushered Naomi in."
     scene Restaurant with fade
     "She stooped in, and after I followed suit and the door jangled behind me, I greeted the waitress; she kindly directed us to a table buffered at least one away from any other."
-    show GTS casual-neutral with dissolve
+    show GTS neutral with dissolve
     Waitress "Alright, welcome! Would you guys like a drink to start off?"
     MC "Hm... what'll you have, Yamazaki-san?"
     GTS "Do you have sencha, perchance, miss?"
     Waitress "We do, would you like that?"
-    show GTS casual-happy
+    show GTS happy
     GTS "Yes, please!"
     Waitress "Great! And for you, sir?"
-    show GTS casual-neutral
+    show GTS neutral
     MC "I think I'll have some matcha, please."
     Waitress "Absolutely, you guys can have a look at the menu if you please and I'll bring your drinks right out for you."
     MC "Thanks!"
@@ -4344,12 +4345,12 @@ label GTS026_c3_2:
     MC "Thanks!"
     GTS "Thank you, miss."
     "She bowed once more and went away."
-    show GTS casual-surprised at Transform(xzoom=-1)
+    show GTS surprised at Transform(xzoom=-1)
     GTS "Hotsure-san... I should tell you, their proportions are generous. Do you intend to eat all of that yourself?"
     MC "Oh, no, not at all. I figured we'd split the shimesaba."
-    show GTS casual-happy
+    show GTS happy
     GTS "Oh, I see. Thank you kindly."
-    show GTS casual-neutral at Transform(xzoom=1)
+    show GTS neutral at Transform(xzoom=1)
     jump GTS026_c4
 
 label GTS026_c4:
@@ -4360,7 +4361,7 @@ label GTS026_c4:
     GTS "There is something I would like to say first, if you wouldn't mind."
     MC "Of course."
     "I took another sip. It tasted not unlike what they served at my high school cafeteria."
-    show GTS casual-neutral at Transform(xzoom=-1)
+    show GTS neutral at Transform(xzoom=-1)
     GTS "Well, I've tried to consider what's probably been going through your mind in, well, what feels like no time at all."
     GTS "If you find I have misunderstood you, I apologize."
     GTS "But to tell you the truth as I see it..."
@@ -4385,9 +4386,9 @@ label GTS026_c4:
     MC "Well, you didn't misunderstand me, Yamazaki-san. I feel much the same about you, to put it plainly."
     if not getFlag("GTS025_kiss"):
         MC "To be totally honest, I was a bit worried that I had missed my chance yesterday."
-        show GTS casual-happy
+        show GTS happy
         GTS "Certainly not. I perfectly understand why you might need time to consider it."
-        show GTS casual-neutral
+        show GTS neutral
     else:
         GTS "That puts me greatly at ease."
     GTS "However, there's something else I would like to share with you, Hotsure-san."
@@ -4404,14 +4405,14 @@ label GTS026_c4:
         MCT "Well... there goes that plan."
         MC "Oh, I get it. I respect that."
         MC "But then... what do we do until then?"
-    show GTS casual-neutral at Transform(xzoom=1)
+    show GTS neutral at Transform(xzoom=1)
     GTS "That's not to say I don't want to see you or be with you."
     GTS "Oh, how do I put it?"
     MC "Committed in all but name?"
     MC "I can live with that."
-    show GTS casual-happy
+    show GTS happy
     "I got to see another glimpse of her perlescent grin as we looked over each other. I could feel that I was wearing a similar expression."
-    show GTS casual-neutral
+    show GTS neutral
     "The waitress at once appeared by our table, having deftly escaped my notice, and she bore down an unequivocally generous trio of crab rolls and shimesaba betwixt us. Lastly, she set down a pair of wrapped chopsticks."
     Waitress "Is there anything else I can help with?"
     MC "Oh, no, this oughta be just fine. Thanks."

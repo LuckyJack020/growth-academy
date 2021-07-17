@@ -138,12 +138,12 @@ init python:
         SWIM = "swim"
         SWIMSUIT = "swimsuit"
         COW = "cow"
-        PJ = "pajamas"
+        PAJAMAS = "pajamas"
         SICK = "sick"
-        SUMEXT = "summer_exterior"
-        SUMEXTSG = "summer_exterior_sunglasses"
-        SUMINT = "summer_interior"
-        SUMINTSG = "summer_interior_sunglasses"
+        SUMEXT = "summer_ext"
+        SUMEXTSG = "summer_ext_sg"
+        SUMINT = "summer_int"
+        SUMINTSG = "summer_int_sg"
         NOHAT = "no_hat"
 
     class ConditionEnum:
@@ -639,15 +639,18 @@ init python:
 
     def setGTSOutfit(o):
         global GTSOutfit
-        GTSOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+            GTSOutfit = o
 
     def setPRGOutfit(o):
         global PRGOutfit
-        PRGOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.DRESS or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+            PRGOutfit = o
 
     def setWGOutfit(o):
         global WGOutfit
-        WGOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SICK or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+            WGOutfit = o
 
     def setTakoOutfit(o):
         global TakoOutfit
