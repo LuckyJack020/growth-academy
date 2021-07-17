@@ -133,10 +133,10 @@ init python:
         DEFAULT = "default"
         DRESS = "dress"
         NUDE = "nude"
-        ATHLETE = "athletic"
+        ATHLETIC = "athletic"
         CASUAL = "casual"
-        SWIMSCHOOL = "swim"
-        SWIMCASUAL = "swimsuit"
+        SWIM = "swim"
+        SWIMSUIT = "swimsuit"
         COW = "cow"
         PJ = "pajamas"
         SICK = "sick"
@@ -624,15 +624,18 @@ init python:
 
     def setAEOutfit(o):
         global AEOutfit
-        AEOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL:
+            AEOutfit = o
 
     def setBEOutfit(o):
         global BEOutfit
-        BEOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.SWIM:
+            BEOutfit = o
 
     def setFMGOutfit(o):
         global FMGOutfit
-        FMGOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+            FMGOutfit = o
 
     def setGTSOutfit(o):
         global GTSOutfit

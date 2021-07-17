@@ -273,33 +273,33 @@ image cg WG047 = "Graphics/ui/gallery/WG047.png"
 image cg RM000 = "Graphics/ui/gallery/RM000.png"
 
 #Character sprites
-image AE neutral = DynamicImage("Graphics/AE/[globalsize]/neutral.png")
-image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/neutral-annoyed.png")
-image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/neutral-eyebrow.png")
-image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/neutral-noglasses.png")
-image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/neutral-smug.png")
-image AE happy = DynamicImage("Graphics/AE/[globalsize]/happy.png")
-image AE smile = DynamicImage("Graphics/AE/[globalsize]/happy-2.png")
-image AE pondering = DynamicImage("Graphics/AE/[globalsize]/pondering.png")
-image AE sad = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/sad-2.png")
-image AE frown = DynamicImage("Graphics/AE/[globalsize]/sad.png")
-image AE surprised = DynamicImage("Graphics/AE/[globalsize]/surprised.png")
-image AE admire = DynamicImage("Graphics/AE/[globalsize]/admire.png")
-image AE angry = DynamicImage("Graphics/AE/[globalsize]/angry.png")
-image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/angry-2.png")
-image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/angry-3.png")
-image AE angry-4 = DynamicImage("Graphics/AE/[globalsize]/angry-4.png")
-image AE aroused = DynamicImage("Graphics/AE/[globalsize]/aroused.png")
-image AE embarrassed = DynamicImage("Graphics/AE/[globalsize]/embarrassed.png")
-image AE aroused-2 = DynamicImage("Graphics/AE/[globalsize]/aroused-2.png")
-image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/aroused-3.png")
-image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/aroused-4.png")
-image AE glasses = DynamicImage("Graphics/AE/[globalsize]/unique.png")
-image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/unique-2.png")
-image AE glasses-3 = DynamicImage("Graphics/AE/[globalsize]/unique-3.png")
-image AE ass = DynamicImage("Graphics/AE/[globalsize]/ass.png")
-image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/ass.png")
+image AE neutral = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral.png")
+image AE neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-annoyed.png")
+image AE neutral-eyebrow = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-eyebrow.png")
+image AE neutral-noglasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-noglasses.png")
+image AE neutral-smug = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral-smug.png")
+image AE happy = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy.png")
+image AE smile = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/happy-2.png")
+image AE pondering = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/pondering.png")
+image AE sad = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.png")
+image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad-2.png")
+image AE frown = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.png")
+image AE surprised = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised.png")
+image AE admire = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/admire.png")
+image AE angry = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry.png")
+image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-2.png")
+image AE angry-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-3.png")
+image AE angry-4 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-4.png")
+image AE aroused = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused.png")
+image AE embarrassed = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/embarrassed.png")
+image AE aroused-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-2.png")
+image AE aroused-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-3.png")
+image AE aroused-4 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/aroused-4.png")
+image AE glasses = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique.png")
+image AE glasses-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique-2.png")
+image AE glasses-3 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/unique-3.png")
+image AE ass = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.png")
+image AE ass-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/ass.png")
 
 image AE nude-neutral = DynamicImage("Graphics/AE/[globalsize]/nude-neutral.png")
 image AE nude-neutral-annoyed = DynamicImage("Graphics/AE/[globalsize]/nude-neutral-annoyed.png")
@@ -370,251 +370,251 @@ image AE casual-glasses-3 = DynamicImage("Graphics/AE/[globalsize]/dress-unique-
 image BE neutral = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/neutral.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/neutral.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE happy = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/happy.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/happy.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/happy.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE sad = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/sad.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/sad.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/sad.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE surprised = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/surprised.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/surprised.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE surprised-2 = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/surprised-2.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/surprised-2.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/surprised-2.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE angry = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/angry.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/angry.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/angry.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE aroused = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/aroused.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/aroused.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/aroused.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE unique = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/unique.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/unique.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/unique.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE confused = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/confused.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/confused.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/confused.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE doubt = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/doubt.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/doubt.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/doubt.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE embarrassed = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/embarrassed.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/embarrassed.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/embarrassed.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE seductive = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/seductive.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/seductive.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/seductive.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE shrug = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/shrug.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/shrug.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/shrug.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE wink = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/neutral.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/neutral.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/neutral.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 image BE worried = Composite(
     (513, 686),
     (0, 0), ConditionSwitch(
-        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/worried.png"),
+        "globalsize >= 4", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.png"),
         None, Null()),
     (24, 0), ConditionSwitch(
-        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/worried.png"),
+        "globalsize <= 3", DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/worried.png"),
         None, Null()),
     (0, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize >= 4", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize >= 4 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null()),
     (24, 0), ConditionSwitch(
-        "getVar('BEMode') == 'Feminine' and globalsize <= 3", "Graphics/BE/[globalsize]/fem_outfit.png",
+        "getVar('BEMode') == 'Feminine' and globalsize <= 3 and BEOutfit == OutfitEnum.DEFAULT", "Graphics/BE/[globalsize]/[BEOutfit]/fem_outfit.png",
         None, Null())
     )
 
-image BE athletic-angry = DynamicImage("Graphics/BE/[globalsize]/athletic-angry.png")
-image BE athletic-aroused = DynamicImage("Graphics/BE/[globalsize]/athletic-aroused.png")
-image BE athletic-confused = DynamicImage("Graphics/BE/[globalsize]/athletic-confused.png")
-image BE athletic-doubt = DynamicImage("Graphics/BE/[globalsize]/athletic-doubt.png")
-image BE athletic-embarrassed = DynamicImage("Graphics/BE/[globalsize]/athletic-embarrassed.png")
-image BE athletic-happy = DynamicImage("Graphics/BE/[globalsize]/athletic-happy.png")
-image BE athletic-neutral = DynamicImage("Graphics/BE/[globalsize]/athletic-neutral.png")
-image BE athletic-sad = DynamicImage("Graphics/BE/[globalsize]/athletic-sad.png")
-image BE athletic-seductive = DynamicImage("Graphics/BE/[globalsize]/athletic-seductive.png")
-image BE athletic-shrug = DynamicImage("Graphics/BE/[globalsize]/athletic-shrug.png")
-image BE athletic-surprised = DynamicImage("Graphics/BE/[globalsize]/athletic-surprised.png")
-image BE athletic-surprised-2 = DynamicImage("Graphics/BE/[globalsize]/athletic-surprised-2.png")
-image BE athletic-unique = DynamicImage("Graphics/BE/[globalsize]/athletic-unique.png")
-image BE athletic-wink = DynamicImage("Graphics/BE/[globalsize]/athletic-neutral.png")
-image BE athletic-worried = DynamicImage("Graphics/BE/[globalsize]/athletic-worried.png")
+image BE athletic-angry = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-angry.png")
+image BE athletic-aroused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-aroused.png")
+image BE athletic-confused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-confused.png")
+image BE athletic-doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-doubt.png")
+image BE athletic-embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-embarrassed.png")
+image BE athletic-happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-happy.png")
+image BE athletic-neutral = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-neutral.png")
+image BE athletic-sad = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-sad.png")
+image BE athletic-seductive = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-seductive.png")
+image BE athletic-shrug = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-shrug.png")
+image BE athletic-surprised = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-surprised.png")
+image BE athletic-surprised-2 = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-surprised-2.png")
+image BE athletic-unique = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-unique.png")
+image BE athletic-wink = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-neutral.png")
+image BE athletic-worried = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/athletic-worried.png")
 
-image BE swim-school-angry = DynamicImage("Graphics/BE/[globalsize]/swim-angry.png")
-image BE swim-school-aroused = DynamicImage("Graphics/BE/[globalsize]/swim-aroused.png")
-image BE swim-school-confused = DynamicImage("Graphics/BE/[globalsize]/swim-confused.png")
-image BE swim-school-doubt = DynamicImage("Graphics/BE/[globalsize]/swim-doubt.png")
-image BE swim-school-embarrassed = DynamicImage("Graphics/BE/[globalsize]/swim-embarrassed.png")
-image BE swim-school-happy = DynamicImage("Graphics/BE/[globalsize]/swim-happy.png")
+image BE swim-school-angry = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/swim-angry.png")
+image BE swim-school-aroused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/swim-aroused.png")
+image BE swim-school-confused = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/swim-confused.png")
+image BE swim-school-doubt = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/swim-doubt.png")
+image BE swim-school-embarrassed = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/swim-embarrassed.png")
+image BE swim-school-happy = DynamicImage("Graphics/BE/[globalsize]/[BEOutfit]/swim-happy.png")
 image BE swim-school-neutral = DynamicImage("Graphics/BE/[globalsize]/swim-neutral.png")
 image BE swim-school-sad = DynamicImage("Graphics/BE/[globalsize]/swim-sad.png")
 image BE swim-school-seductive = DynamicImage("Graphics/BE/[globalsize]/swim-seductive.png")
@@ -625,19 +625,19 @@ image BE swim-school-unique = DynamicImage("Graphics/BE/[globalsize]/swim-unique
 image BE swim-school-wink = DynamicImage("Graphics/BE/[globalsize]/swim-neutral.png")
 image BE swim-school-worried = DynamicImage("Graphics/BE/[globalsize]/swim-worried.png")
 
-image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
-image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/happy.png")
-image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/sad.png")
-image FMG sad-2 = DynamicImage("Graphics/FMG/[globalsize]/sad-2.png")
-image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/surprised.png")
-image FMG surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/surprised-2.png")
-image FMG confused = DynamicImage("Graphics/FMG/[globalsize]/surprised.png")
-image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/angry.png")
-image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/angry-2.png")
-image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/aroused.png")
-image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/aroused-2.png")
-image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/flex.png")
-image FMG upbeat = DynamicImage("Graphics/FMG/[globalsize]/upbeat.png")
+image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/neutral.png")
+image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/happy.png")
+image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad.png")
+image FMG sad-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-2.png")
+image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.png")
+image FMG surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised-2.png")
+image FMG confused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.png")
+image FMG angry = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry.png")
+image FMG angry-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/angry-2.png")
+image FMG aroused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused.png")
+image FMG aroused-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/aroused-2.png")
+image FMG flex = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/flex.png")
+image FMG upbeat = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/upbeat.png")
 
 image FMG neutral-nude = DynamicImage("Graphics/FMG/[globalsize]/neutral.png")
 image FMG happy-nude = DynamicImage("Graphics/FMG/[globalsize]/happy.png")

@@ -114,8 +114,7 @@ label FMG003:
         linear 0 xpos -0.5
         ease 0.5 xpos 0.2
     "I braced for impact, but Akira came to a screeching halt just before colliding into me."
-    show FMG neutral at Transform(xzoom=1)
-    show FMG neutral at Position(xpos=0.2)
+    show FMG neutral at Position(xpos=0.2), Transform(xzoom=1)
     FMG "Yo, how're you?"
     "Akira asked that almost too casually for someone who just came sprinting down a hallway at 32 mph."
     MC "Um... Fine?"

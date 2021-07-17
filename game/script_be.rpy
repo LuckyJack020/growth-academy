@@ -231,6 +231,7 @@ label BE002:
 
 label BE003:
     $setProgress("BE", "BE004")
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     scene Campus Center with fade
     play music HigherEdu
     "The sun was scorching today. The kind of heat that tricked you into thinking it would be all right to go outside for a while, but once you were in the rays of the sun, you realized what a horrible mistake that was."
@@ -241,22 +242,22 @@ label BE003:
     "I turn around to walk off and end up bumping into someone. More specifically, I bumped into Honoka. Even more specifically, I bumped into the spot where one was most likely to bump into Honoka."
     "After I caught my balance from the impact of stepping right into her chest, I cleared my throat and looked at her."
     MC "Whoops, uh, hey Honoka. Sorry about that. Wasn't watching where I was going."
-    show BE athletic-happy at center with dissolve
+    show BE happy at center with dissolve
     BE "Hehe, hey Kei-chan. Don't worry about it, was an accident, right?"
     MC "Right."
     "I noticed that Honoka wasn't wearing the normal school uniform, having traded out the classic skirt and shirt combo for a pair of spats and a more tightly-fitted t-shirt."
     MC "What's with the get-up?"
-    show BE athletic-neutral:
+    show BE neutral:
         ypos 1.0 yanchor 1.0
         linear 0.1 ypos 1.05
         linear 0.1 ypos 1.0
     BE "Oh, I had soccer practice in a bit, this is the official uniform. Bit snug, though."
     "Honoka tugged down on her shirt and stuffed it into her shorts. Clearly that was the way it was supposed to be, but when she stood straight up, the front of the shirt kept coming out of the spats, exposing a tiny sliver of her waist."
     MC "Why didn't you just get the next size up?"
-    show BE athletic-angry
+    show BE angry
     BE "I dunno. Figured I'd try it out first, no sense causing a fuss about the size if I end up not liking soccer, after all."
     MC "I guess that makes sense. Damn, but it's going to suck having soccer practice today when it's this hot out. Hopefully it doesn't last too long."
-    show BE athletic-sad
+    show BE sad
     BE "Woof, yeah, I wasn't planning on that, either. Hopefully there'll be some refreshments there, though. They can't really keep us out for too long without giving us some water at least."
     menu:
         "You uh, want some of my drink?" if getAffection("BE") > 3:
@@ -267,10 +268,10 @@ label BE003:
             jump BE003_c3
 
 label BE003_c1:
-    show BE athletic-neutral
+    show BE neutral
     BE "Ooh, what did you get?"
     MC "Ah, like, a lemon-lime soda. It's pretty good. Want a sip?"
-    show BE athletic-happy
+    show BE happy
     BE "Heh, sure."
     "I handed the can over to Honoka and saw her sniff it a bit."
     BE "Mm, smells good."
@@ -278,21 +279,21 @@ label BE003_c1:
     "Gradually, this showed off more and more of her stomach as her shirt was lifted out of her gym shorts, showing off her thin waist and tiny belly button."
     "It also made me wonder how much of her lower vision was blocked off by her chest, because as she arched her back, her breasts were raised up higher, sticking out like buoyant balloons from her torso."
     "By the time she finished off my drink, they were practically pointed straight up, only to come swinging back down to their normal height when she swallowed the last drop and stood straight up again."
-    show BE athletic-happy
+    show BE happy
     BE "Ah, that really hit the spot! Thanks Kei-chan!"
     MC "Yeah, no problem."
     "My tongue felt like a desert. I rifled in my pockets to see if I had enough change for another drink."
-    show BE athletic-neutral
+    show BE neutral
     BE "Hm..."
     MC "What's up?"
     "Wordlessly, Honoka took the now-empty can and placed it against her chest, right between her breasts. She held it there for a moment, obviously in contemplation, but it wasn't clear what she was thinking about."
-    show BE athletic-unique
+    show BE unique
     BE "..."
     "After a while it ended up being a moot point as she just tossed the can in the nearby recycling bin."
-    show BE athletic-neutral
+    show BE neutral
     BE "Never mind, probably not big enough anyway. Would hurt, I bet."
     MC "Huh?"
-    show BE athletic-happy
+    show BE happy
     BE "Nothing, hehe. Thanks for the drink, Kei-chan, but I better get going. Next time I'll owe you a drink, okay? I'll make sure to take a sip from it first so we're even. Tricking a young girl into getting a secondhand kiss, you playboy."
     "Honoka winked and made her way over to the soccer field, leaving me there, speechless for a moment."
     hide BE with dissolve
@@ -300,7 +301,7 @@ label BE003_c1:
     jump daymenu
 
 label BE003_c2:
-    show BE athletic-neutral
+    show BE neutral
     play music BE
     BE "Yeah that's probably a good idea. Hm..."
     "Honoka walked over to the vending machine as I took another sip of my soda."
@@ -310,18 +311,18 @@ label BE003_c2:
     MC "I bet. Don't know a lot about it myself, but is there any specific position you want to do?"
     BE "Just anything besides the goalie. I'm sure it's tough work but I want to make sure I'm out in the field getting the most exercise, running around and sweating it out."
     MC "Right. Well if that's the case you really do need to make sure you stay hydrated."
-    show BE athletic-surprised
+    show BE surprised
     BE "Of course, I'm not a numbskull, Kei-chan!"
     MC "Never said you were. Just, it's an easy thing to forget when you're focused on something and I know you, Honoka. When you get focused on something, occasionally you can get a bit of tunnel vision."
     "Honoka tilted her head from side to side several times like a metronome."
-    show BE athletic-sad
+    show BE sad
     pause 0.5
-    show BE athletic-happy at center, Transform(xzoom=-1)
-    show BE athletic-angry at center, Transform(xzoom=1)
-    show BE athletic-neutral at center, Transform(xzoom=-1)
+    show BE happy at center, Transform(xzoom=-1)
+    show BE angry at center, Transform(xzoom=1)
+    show BE neutral at center, Transform(xzoom=-1)
     BE "Yeah you've kind of got a point there. Well if you wanted to, you could probably come watch me. I doubt they'd mind. Then you can remind me to drink if I forget."
     MC "Maybe I'll do that, I don't think I have anything else going on."
-    show BE athletic-neutral at center, Transform(xzoom=1)
+    show BE neutral at center, Transform(xzoom=1)
     BE "Heh, sounds good. Well, if you come I'll see you over at the soccer field. If not, well, see you whenever. Have a good day, Kei-chan."
     MC "You too."
     "Honoka raced off to the soccer field as I took another drink, and decided whether to go follow her or chill somewhere else for the rest of the afternoon. It was really hot, after all."
@@ -330,33 +331,33 @@ label BE003_c2:
 label BE003_c3:
     $setAffection("BE", -1)
     play music Tension
-    show BE athletic-angry
+    show BE angry
     BE "Kei-chan, you should have called them udders if you were gonna make a cow joke."
     MC "Darn, you're right. Haha."
-    show BE athletic-neutral
+    show BE neutral
     BE "Though..."
     MC "Though, what? Are you really, I mean, I didn't mean to insult you if you were. Not that I'd think it was a bad thing or something like that, I just, if you weren't cool with it, I, uhhh."
-    show BE athletic-sad
+    show BE sad
     BE "No no, it's not that. Just, now you've got me wondering if that's possible."
     BE "I mean, I'm not an expert on female mammaries or anything but, there's obviously parts of the breast meant to make milk, so what would happen if they swelled up and started getting bigger?"
-    show BE athletic-neutral
+    show BE neutral
     BE "Would that mean the woman would start making a ton of milk, or would it just increase the size of the breasts around them, but keep the level of lactation about the same?"
     MC "I uh, I don't really know how to answer that. I think it'd be weird for a tiny part of the body to be affected like that, though. If it was, I'd say, probably a bit of both?"
     BE "Huh. Interesting to think about."
     "Honoka and I both stood there for a moment, saying nothing to each other. Our eyes weren't really focused on one another either. It took a good minute or two before I finally broke the silence."
     play music BE
     MC "Have we both been thinking about milky breasts now?"
-    show BE athletic-happy
+    show BE happy
     BE "Probably! But I'm a girl, it's okay for me to think about it. You're just a pervert."
     MC "That's not fair, you put the idea in my head."
     BE "I just planted the seed. You're the one who watered it and let it grow. Could have plucked it out at any time."
     MC "That's not how thoughts work. That's not how anything works."
     BE "Apparently it is, ehehehe."
     "Honoka chuckled, and licked her lips. She looked over at the vending machine, but then pulled out her phone and checked the time."
-    show BE athletic-sad
+    show BE sad
     BE "Darn, I need to get going or I'm going to be late. Won't do good to be tardy for the first soccer club meeting."
     MC "Ah good point, don't let me hold you up then."
-    show BE athletic-neutral
+    show BE neutral
     BE "Thanks. Thanks for the fun talk, too. See you around, Kei-chan."
     MC "See ya, Honoka!"
     "I gave a nod to Honoka as she ran to the soccer field, then leaned against the vending machine as I continued to drink my beverage. It was too hot today."
@@ -364,6 +365,7 @@ label BE003_c3:
 
 label BE004:
     $setTimeFlag("testday")
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     $setProgress("BE", "BE007")
     scene Track with fade
     play music Busy
@@ -381,10 +383,10 @@ label BE004:
     "I wondered if there was anything nearby to drink. Fortunately, it looked like they provided a water cooler. Good, at this heat the students were likely to pass out if they didn't get any hydration."
     "Still, I couldn't just go over there and take some when I'd just been sitting on my butt for twenty minutes. Thankfully the coach called for a break after a while, and I walked over to get some water with the others."
     MC "Hey Honoka!"
-    show BE athletic-surprised at center with dissolve
+    show BE surprised at center with dissolve
     BE "Woo, hey, Kei-chan. Glad you came by!"
     MC "Well, you know I've always had a thing for soccer."
-    show BE athletic-neutral
+    show BE neutral
     BE "Sure. I'm surprised you didn't join the soccer club, actually. Were you just afraid I'd beat you whenever we were asked to go against each other? If I recall I won more of our games when we used to play."
     MC "What? No, that can't be right. I'm positive I won more."
     BE "You beat me a lot, but I remember two wins over you that gave me the edge."
@@ -398,7 +400,7 @@ label BE004:
     BE "I'm just glad you conceded the match right there. If you tried to do a fifth shot, you probably would have kicked the side of the goal again and then the ball would have gone through one of the windows in your house instead."
     BE "A sixth attempt would have knocked you out cold."
     MC "I can't believe you remember that."
-    show BE athletic-happy
+    show BE happy
     BE "Hey I remember a lot about when we were kids, those were fun years! Lotsa good memories."
     "Honoka smiled as she finally poured herself some of the water from the cooler and took a big drink. I helped myself to some as well, after double-checking that there would be plenty for the others who needed it more."
     MC "It's good to hear that, I have to say. Definitely had some fun times together, didn't we?"
@@ -406,13 +408,13 @@ label BE004:
     "Honoka sat down in the grass, probably to rest her legs for a bit, and I joined her. She started scratching at her calves where the grass tickled her legs, groaning as she did so."
     BE "Ah, that's so much better."
     MC "What, you forgot running would make your legs tired?"
-    show BE athletic-sad
+    show BE sad
     BE "No not that. Just, I dunno, soccer's still fun but there's something missing. Maybe it'll just take me a bit to get back into it, but, it's not quite got that 'umph' I was looking for."
     MC "Well, don't give up yet. Only the first day, right? Like you said, you probably just need a bit of time to get back into it."
-    show BE athletic-neutral
+    show BE neutral
     BE "Yeah that's probably it. Heh."
     "The coach blew his whistle again and called up the students to line up and run some more drills."
-    show BE athletic-happy
+    show BE happy
     BE "Whoops, better get going. You going to stick around?"
     MC "Yeah, probably. Good luck!"
     "Honoka gave a quick wave and trotted over to the lineup, while I went and sat back down outside of the actual field."
