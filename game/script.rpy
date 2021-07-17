@@ -129,6 +129,23 @@ init python:
         EVE = "eve"
         NIGHTLIGHTS = "night_lights"
 
+    class OutfitEnum:
+        DEFAULT = "default"
+        DRESS = "dress"
+        NUDE = "nude"
+        ATHLETE = "athletic"
+        CASUAL = "casual"
+        SWIMSCHOOL = "swim"
+        SWIMCASUAL = "swimsuit"
+        COW = "cow"
+        PJ = "pajamas"
+        SICK = "sick"
+        SUMEXT = "summer_exterior"
+        SUMEXTSG = "summer_exterior_sunglasses"
+        SUMINT = "summer_interior"
+        SUMINTSG = "summer_interior_sunglasses"
+        NOHAT = "no_hat"
+
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
 
@@ -605,6 +622,34 @@ init python:
         if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT or t == TimeEnum.NIGHTLIGHTS:
             gametime = t
 
+    def setAEOutfit(o):
+        global AEOutfit
+        AEOutfit = o
+
+    def setBEOutfit(o):
+        global BEOutfit
+        BEOutfit = o
+
+    def setFMGOutfit(o):
+        global FMGOutfit
+        FMGOutfit = o
+
+    def setGTSOutfit(o):
+        global GTSOutfit
+        GTSOutfit = o
+
+    def setPRGOutfit(o):
+        global PRGOutfit
+        PRGOutfit = o
+
+    def setWGOutfit(o):
+        global WGOutfit
+        WGOutfit = o
+
+    def setTakoOutfit(o):
+        global TakoOutfit
+        TakoOutfit = o
+
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
         global prgsize
@@ -674,6 +719,13 @@ label start:
         prgsize = 1
         minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
+        AEOutfit = OutfitEnum.DEFAULT
+        BEOutfit = OutfitEnum.DEFAULT
+        FMGOutfit = OutfitEnum.DEFAULT
+        GTSOutfit = OutfitEnum.DEFAULT
+        PRGOutfit = OutfitEnum.DEFAULT
+        WGOutfit = OutfitEnum.DEFAULT
+        TakoOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []
@@ -1011,6 +1063,13 @@ label startevent:
         updateMinorSizes(globalsize)
         highlitevent = ""
         gametime = TimeEnum.DAY
+        AEOutfit = OutfitEnum.DEFAULT
+        BEOutfit = OutfitEnum.DEFAULT
+        FMGOutfit = OutfitEnum.DEFAULT
+        GTSOutfit = OutfitEnum.DEFAULT
+        PRGOutfit = OutfitEnum.DEFAULT
+        WGOutfit = OutfitEnum.DEFAULT
+        TakoOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
         updateSP(activeevent)
         showQuickMenu = True
