@@ -11406,6 +11406,7 @@ label AE051:
     "The next morning, the deep creak of the mattress roused me from my sleep, my eyes opened slowly to the white ceiling above, and the calling of birds outside the window echoed through my head as a cool breeze rolled in from the newly opened window..."
 
     scene Dorm AE with fade
+    $setAEOutfit(OutfitEnum.NUDE)
     play music HigherEdu
     MC "M-Mmmn."
     "I yawned as I wiped the sleep from my eyes, memories of last night still replaying fondly in my head. I almost began to wonder if it was a dream, until I looked over to my lover."
@@ -11417,10 +11418,10 @@ label AE051:
     "She had raven dark hair that obscured well over half of her visage, what I could see revealed a silver eye that conveyed a look of uncertainty."
     MCT "Who... who is this?"
     MC "U-um..."
-    show AE nude-surprised with dissolve
+    show AE surprised with dissolve
     UNKNOWN "..."
     MC "Hi?"
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "...Hey."
     "I raised my eyebrows as her familiar voice rocked me back to consciousness. It was Shiori-chan alright. I would've never expected her to look so different with her hair down, though morning haze may have played a part as well."
     MC "Hah, u-um, good morning."
@@ -11430,14 +11431,14 @@ label AE051:
     MC "How are you doing?"
     "Catching a glance at her book, it looked thick and somewhat old, bound with brown leather."
     "The words, at first glance, looked like a foreign language, and the pages were marked here and there with yellow highlighting. Breathing through her nose, she closed her book and looked down."
-    show AE nude-happy
+    show AE happy
     AE "I feel... I don't know how to describe it. I feel lighter than air."
     MC "Sleep well?"
     "I reached over to pat her leg under the covers, as my hands sunk into her smooth flesh, all doubt was removed, and replaced with a sense of content and a small amount of personal pride."
-    show AE nude-neutral
+    show AE neutral
     AE "I, um... I didn't get much sleep last night."
     MC "Eheh, yeah, me either."
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "..."
     "She brought her knees up as far as her giant asscheeks would allow, her hands reaching out and sinking into her meaty calves."
     AE "Did I... do a good job?"
@@ -11451,15 +11452,15 @@ label AE051:
 
 label AE051_c1_1:
     MC "You were great!"
-    show AE nude-happy
+    show AE happy
     AE "R-Really? I made you feel good?"
     MC "Without a doubt! I don't know why you're worried, you're a natural!"
     AE "Mhmhm~"
-    show AE nude-neutral
+    show AE neutral
     AE "..."
     $setAffection("AE", -1)
     "Shiori-chan's smile faded, she broke eye contact with me and just stared straight forward. After giving a slow gulp, she blinked and reared her head back a bit."
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "A natural, huh..."
     MCT "...Oh my god I'm such an idiot."
     MC "Well, I mean, I wouldn't say {i}that{/i}. You were uh... you were special, to me, and... you know, it was like we were naturally meant to be."
@@ -11468,11 +11469,11 @@ label AE051_c1_1:
 
 label AE051_c1_2:
     "Scooting up next to her until our hips were touching, I wrapped my arms around her and buried my face in her hair, nuzzling her gently."
-    show AE nude-surprised
+    show AE surprised
     AE "Eh?"
     MC "You were perfect in every way."
     "She put her hand on my arm and looked up to my face, we stared each other in the eyes for a moment before she leaned in with a kiss."
-    show AE nude-happy
+    show AE happy
     AE "Mm~"
     $setAffection("AE", 2)
     AE "Thank you, Keisuke-kun. I'm happy I was able to please you."
@@ -11480,53 +11481,53 @@ label AE051_c1_2:
 
 label AE051_c1_3:
     MC "I... I dunno. It was my first time, remember?"
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "Ah, y-yes. Mine too."
-    show AE nude-sad
+    show AE sad
     AE "I'm sorry, I don't know why I'm concerned with such things."
     MC "Don't worry about it... you felt... really nice though."
-    show AE nude-happy
+    show AE happy
     AE "...Thank you."
     jump AE051_c1_after
 
 label AE051_c1_after:
     MC "So, you really put a lot of work into all of this. I can tell this was planned to a T."
-    show AE nude-neutral
+    show AE neutral
     AE "Yeah. I mean, I had a lot of help. Yureno-san was meant to act as a watchdog as I bought the condoms and-"
     MC "Why not have her get them?"
     AE "Huh?"
     MC "Why couldn't you spend time with me and have her get them?"
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "...I couldn't control myself around you."
     MC "Couldn't control yourself?"
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "Over the past few days... I've... I've NEEDED you inside me. I couldn't help it, it was like I was in heat."
     AE "As my growth progressed, my... feminine parts began to rub against my thighs constantly, and my behind started to feel so sensitive..."
     AE "If I tried to spend time with you as we usually do, I don't know if I would have been able to control myself."
     MCT "Wow. It was that serious, huh?"
-    show AE nude-neutral
+    show AE neutral
     AE "Of course, I feel much better now. At least enough to focus on classes."
     MC "Yureno-chan must have been driven up the wall with your... um..."
     "I looked over to Yureno-san's side of the room, completely cleaned, and noticed two neat squares on the side of the bed."
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "W-Well, I requested for her to stay with a friend, but she was very hesitant. She said she didn't mind being in the roo-"
     MC "Are... those my clothes?"
-    show AE nude-neutral
+    show AE neutral
     AE "Hm? Oh."
-    show AE nude-happy
+    show AE happy
     AE "Yeah, I made sure to prepare them for you when you woke up."
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "I'd also tried to set up to prepare something for breakfast, but... well, I'm admittedly still a bit weak in the knees after last night."
     AE "Although... I have to confess something."
     AE "After getting you under the covers, I um... I began to cuddle you."
     MC "Oh?"
-    show AE nude-neutral
+    show AE neutral
     AE "You can attribute it to post-coital giddiness, I suppose. I apologize for intruding on your personal space."
     MC "Hm. Darn. Wish I'd been awake for that."
-    show AE nude-happy
+    show AE happy
     AE "Mhn."
     "Shiori-chan began to blush as she placed her hand on her hip... and she went wide eyed."
-    show AE nude-surprised
+    show AE surprised
     AE "What... what on earth?"
     "Dropping her sheet and leaving her breasts out in the open, she became overcome with shock as she began grasping at her lower body."
     MC "What, what's wrong?"
@@ -11534,7 +11535,7 @@ label AE051_c1_after:
     "As she lifted herself out of bed, I got a good glimpse of her full enormousness. I could tell without her even needing the measuring tape, the same thing I noticed last night as well, her buttcheeks are definitely bigger."
     "I sat silently, struggling for things to say as she pulled out the measure and wrapped it around each leg, then from front to the back, and-"
     AE "Gch, I can barely see. Numbers are too faded."
-    show AE nude-sad
+    show AE sad
     AE "Hotsure-san, can you come here for a moment? I need your hands and eyes."
     "As I got up naked from the bed, a cold breeze hit my groin as Shiori-chan looked back at me. Her face turning red, she quickly looked away and back to her front."
     "Taking the measure in both hands, I ran my hands across the material until they were at width with her behind."
@@ -11542,25 +11543,25 @@ label AE051_c1_after:
     AE "How large is my... rump from end to end?"
     MC "From the looks of it... here. Take a look."
     "Shiori took the tape and nearly pressed it against her face as close as possible."
-    show AE nude-surprised
+    show AE surprised
     AE "W-What?!"
     AE "Is-Is that number exact?!"
-    show AE nude-sad
+    show AE sad
     AE "H-How am I getting so big?! This stage of growth is only found in the top 30th percentile of students with lower body growth!"
     "She let out a sigh and put the tape measure down. Taking this as my cue, I walked up behind her and placed my back against hers. I had to bend my back a bit, as her ass pressed against my crotch."
-    show AE nude-surprised
+    show AE surprised
     AE "Eep!"
     AE "O-Oh."
     MC "Hey, it's gonna be okay, alright? You're strong."
     "As she looked back, I did little to hesitate as I pulled her in for another kiss."
-    show AE nude-happy
+    show AE happy
     AE "Mmm~"
     "As we kissed, the tension in the room rose. Feeling her heat, I reached down slowly towards her slit as I felt my manhood get stiff, forcing it's way between her buttcheeks."
-    show AE nude-surprised
+    show AE surprised
     AE "Mmph!"
     "At the feeling, she pushed my hand away, and pulled her rear away from my groin. She looked at me with shock and what seemed to be some fear."
     MC "Huh?"
-    show AE nude-embarrassed
+    show AE embarrassed
     AE "Ah-U-Um..."
     MC "I'm sorry, was I-... you okay?"
     AE "Yes! Um... ah! The clock! Look at the time! We shouldn't dawdle longer."
@@ -11584,6 +11585,7 @@ label AE051_c1_after:
     "As I went to the other side of the bed, I looked back to Shiori-chan, who had put on her shirt and was hiking up her panties as best she could, her ass engulfing it to make a triangle shaped thong."
     "I handed her the accessories as I put my own uniform on as she squeezed as best she could into an ill-fitting skirt."
     #$Ripping sfx$
+    $setAEOutfit(OutfitEnum.DEFAULT)
     show AE sad with dissolve
     AE "Haah. Of course. Let me guess-"
     MC "It's... right over the crack."
@@ -12175,6 +12177,7 @@ label AE053_c1_after:
     scene black with fade
     pause 1
     scene Clothes Store with fade
+    $setAEOutfit(OutfitEnum.DRESS)
     show WG neutral at Position(xcenter=0.25, yanchor=1.0) with dissolve
     "I sat next to Nikumaru-san for a few minutes as she filed her nails. Waiting in anticipation to see Shiori. Just then, she stepped out..."
     show WG haughty
@@ -12184,14 +12187,14 @@ label AE053_c1_after:
     MC "Hm? What?"
     MC "A-"
     MC "..."
-    show AE dress-neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
     "I couldn't believe my eyes. It was as though the girl I saw once before in Shiori's bed had returned. She was dressed in a tight pink bodycon dress, a magenta sash tied around her waist."
     "The outfit being made for her body type, it clung to her body, leaving a definite outline of her enormous tush."
     "For the first time since I'd seen her, Shiori didn't just look like 'The Student Council President', when I saw her... I saw a girl."
     WG "Oh. My. God."
     show WG happy
     WG "I... I wasn't sure it would be the case, but pink really DOES work well for you!"
-    show AE dress-surprised
+    show AE surprised
     AE "It does?"
     "Hearing her voice gave me whiplash. I was still in shock from just how different she looked."
     MC "Shiori, you... {i}asked{/i} Alice to find you a tube dress?"
@@ -12200,29 +12203,29 @@ label AE053_c1_after:
     MC "Well, yeah!"
     "Shiori turned around, her humongous rump facing us as she did her best to pat it, she then ran her hands along her sides as she looked at herself in shock, blushing pink enough to make her dress look pale."
     AE "I look..."
-    show AE dress-happy
+    show AE happy
     AE "Ehe... ehehehe~"
     MC "A-Ah."
     "Nikumaru-san and I both looked at her with wide eyes and open mouths."
     MCT "Did Shiori just... giggle?!"
     "Now I was without a doubt convinced; this woman was not my girlfriend."
     MC "U-Um... you... you just giggled."
-    show AE dress-surprised
+    show AE surprised
     AE "I... did I? I'm sorry, I just..."
-    show AE dress-happy
+    show AE happy
     AE "Haah! I look pretty! For the first time in my life, I-!"
     MC "Well, Nikumaru-san, you definitely 'wowed' me."
     show WG happy
     WG "I... I actually picked it out for a bit of a laugh, but... you're right!"
     WG "She looks like the belle of the ball!"
-    show AE dress-surprised
+    show AE surprised
     AE "Really?"
     show WG haughty
     WG "Of course, dear! Why if you weren't dating Keisuke, the boys would be coming for miles!"
-    show AE dress-neutral
+    show AE neutral
     AE "..."
     MC "You got that right. You look like the kind of girl that men would line up just to see."
-    show AE dress-glasses
+    show AE glasses
     stop music
     AE "..."
     "In hindsight, I damn my obliviousness."
@@ -12242,6 +12245,7 @@ label AE053_c1_after:
     scene black with fade
     pause 1
     scene Clothes Store with fade
+    $setAEOutfit(OutfitEnum.DEFAULT)
     play music Rain
     "Eventually, we settled on something completely different. A grey turtleneck with a black long-skirt. Shiori looked great when she tried it on, and it even matched with her headband, as Alice pointed out."
     Cashier "Alright, with the student discount, your total comes up to 18,197 yen, sir."
@@ -14380,6 +14384,7 @@ label AE062:
     MCT "She's an adult. I trust her."
 
     scene Restaurant with fade
+    $setAEOutfit(OutfitEnum.CASUAL)
     play music Busy
     Waitress "Welcome!"
     MC "Table for two, please. Booth, um... extra wide, if possible."
@@ -14431,7 +14436,7 @@ label AE062:
     AE "U-Um."
     MC "Hm? Oh, hey, S-"
     show BE neutral at Position(xcenter=0.25, yalign=1.0)
-    show AE casual-embarrassed at Position(xcenter=0.75, yalign=1.0)
+    show AE embarrassed at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     MC "W-Woah... hey."
     "Shiori stood as still as a statue as both my and Honoka's full attention was purloined by her frankly shocking appearance."
@@ -14452,18 +14457,18 @@ label AE062:
     BE "No way!"
     "Shiori sheepishly shrunk back as a light pink hue spread across her cheeks, accenting her frankly vibrant dress."
     BE "You look sooooooo pretty!"
-    show AE casual-surprised
+    show AE surprised
     AE "I-I umm..."
     AE "T-Thank you."
     "Shiori looked over to me and nodded, brushing her hair to the side with a smile."
-    show AE casual-happy
+    show AE happy
     AE "...Do you agree?"
     MC "Yeah... yeah I do."
     MC "So, uhh... take a seat?"
     show BE surprised
     BE "Oh! Yeah, yeah, sorry, go ahead!"
     "Shiori walked to the other side of the table and moved the table on its swivel to better scoot into the booth."
-    show AE casual-neutral
+    show AE neutral
     AE "So, Inoue-san... what are you doing here?"
     show BE happy
     BE "I'm just out gettin dinner! Suddenly fuzzy walks in and tells me he's out on a date with you!"
@@ -14471,14 +14476,14 @@ label AE062:
     show BE neutral
     BE "Ohp! But no worries! I'll be as quiet as a mouse. I won't interrupt. In fact, I'll just order-"
     MC "Yeah, um, we-"
-    show AE casual-neutral
+    show AE neutral
     AE "A-Actually-"
     MC "Just want- oh? Yeah?"
-    show AE casual-happy
+    show AE happy
     AE "Actually, no worries. It's good to have you here. I don't mind."
     show BE surprised
     BE "Oh, are you sure?"
-    show AE casual-neutral
+    show AE neutral
     AE "Indeed, yes."
     AE "If that's alright with you, Keisuke?"
     MCT "I think this is one of the few times I've seen Shiori open up so readily in front of others. I figure she'd have been an embarrassed wreck."
@@ -14486,24 +14491,24 @@ label AE062:
     MC "The more the merrier, right?"
     show BE happy
     BE "Yay!"
-    show AE casual-happy
+    show AE happy
     AE "Ehehe."
     "An air of levity washed over the room as Shiori seemed to become visibly less tense."
-    show AE casual-neutral
+    show AE neutral
     AE "How have classes been going?"
     "Honoka tilted her head back letting out an exaggerated groan in response."
     show BE angry
     BE "Uwaaaa, c'mon, Shii-chan!"
-    show AE casual-surprised
+    show AE surprised
     AE "Eh?"
     show BE happy
     BE "We're not in school right now, so why worry about it? Let loose a lil'!"
     AE "I..."
-    show AE casual-neutral
+    show AE neutral
     AE "Well, I suppose you're right."
     AE "Certainly! Well... how have..."
     BE "I've been doing good!"
-    show AE casual-surprised
+    show AE surprised
     AE "O-Oh! Indeed?"
     BE "Yep! Now that fall is on the way, I've been looking into how to spice up my room!"
     MC "Your room?"
@@ -14513,7 +14518,7 @@ label AE062:
     MC "Whaaat? Since when were you into all that girly incense stuff? You sound like a middle aged housewife."
     show BE angry
     BE "Ach-! I'm a girl! What's wrong with liking girl stuff every now and again!"
-    show AE casual-neutral
+    show AE neutral
     AE "I concur! Liking feminine things is perfectly fine."
     AE "Just make sure not to make a mess of your room, though."
     BE "That's just it! I think I lost a cinnamon stick somewhere when I was putting it on a shelf. Just dropped it and it disappeared!"
@@ -14525,20 +14530,20 @@ label AE062:
     show BE surprised
     BE "'Vassu-eiru?' Eh? What's that?"
     MC "Yeah, I don't think I've heard of that either."
-    show AE casual-happy
+    show AE happy
     AE "Oh! Yes, that's a drink that my piano teacher showed me how to make! If you'd like I can show you some time."
     show BE neutral
     BE "Is it like an orange juice?"
-    show AE casual-neutral
+    show AE neutral
     AE "Not exactly, no, but it does use oranges."
     show BE happy
     BE "Mm, you know something I always used to do was make an orange smile whenever I got one."
     MC "Eheh, yeah, I remember you doing that."
-    show AE casual-happy
+    show AE happy
     AE "Hm? Oh, what did you... tell it an orange joke? Mhmhm."
     BE "Pfff, oh my god that was bad."
     MC "Eheheh."
-    show AE casual-surprised
+    show AE surprised
     AE "Well, how did you make one smile or whatever that means?"
     BE "An orange smile! You know?"
     show BE neutral
@@ -14565,7 +14570,7 @@ label AE062:
     "As the night went on, Honoka, Shiori and I spent our evening spending a nice time amongst ourselves."
     "We talked about things that've been going on at school, outside, and eventually, the conversation veered into just how much our lives have changed in even just the past few months."
     show BE angry at Position(xcenter=0.25, yalign=1.0)
-    show AE casual-sad at Position(xcenter=0.75, yalign=1.0)
+    show AE sad at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     BE "Ugh! At first it was fun, but now they're just... ugh!"
     BE "Having big boobs suck. I don't even have the back problems most girls with boobs have, but it still sucks!"
@@ -14573,17 +14578,17 @@ label AE062:
     AE "My life has definitely changed drastically. Some for better and some for worse, if I'm to be honest."
     show BE surprised
     BE "How so?"
-    show AE casual-neutral
+    show AE neutral
     AE "Well, with Keisuke, I definitely feel my life is much, much better."
     "I smiled as Shiori looked my way and smiled too, though after a moment, her eyes were cast down and the smile faded from her face."
-    show AE casual-sad
+    show AE sad
     AE "But reflecting on it... not much else is positive. In fact, I'd say if it weren't for him I'd be at my lowest point."
     AE "I've been feeling such a rush of..."
     show BE sad
     BE "Emotion-?"
-    show AE casual-surprised
+    show AE surprised
     AE "Emotion! Yes, exactly. I've been feeling it ever since he first asked me to be his girlfriend. I don't think I've felt this way in a long time. I'd built this shell around myself for years, but now that I'm out... I feel so much more free, but..."
-    show AE casual-sad
+    show AE sad
     AE "As you can guess, I didn't have many friends... and I doubt I'll be able to make any when I come home looking like this..."
     BE "I haven't really spoken to my friends from highschool in awhile... I don't wanna be a drama queen but... I sometimes fear what they'd think if they see me."
     MC "..."
@@ -14615,29 +14620,29 @@ label AE062:
     BE "N- Dude, it's a few miles!"
     MC "Shiori does it too!"
     MC "Like, Shiori, you walked here too, right?"
-    show AE casual-surprised
+    show AE surprised
     AE "Hm? Oh, um-"
-    show AE casual-neutral
+    show AE neutral
     AE "No, no, I took the bus."
     AE "That's why I was saying we could make it back before curfew if we take it-"
     MC "Oh shit, we're breaking curfew!"
     show BE surprised
     BE "Oh shit, Shiori's here while I'm breaking curfew!"
-    show AE casual-sad
+    show AE sad
     AE "..."
-    show AE casual-happy
+    show AE happy
     AE "Ehehe, don't worry too much about it."
     MC "Huh?"
     "With a smile, Shiori-san nodded and held my hand."
-    show AE casual-neutral
+    show AE neutral
     AE "To be honest, curfew isn't a hard rule, it's just there as a precaution. We're perfectly fine."
     show BE angry
     BE "Wha- pfff! Shiori-san! You've been making a big fuss about it this whole time and it's not even a big deal?"
     MC "..."
-    show AE casual-neutral
+    show AE neutral
     AE "The rulebook only says that you 'shouldn't', not that you can't."
     MC "Well damn, wish I'd known that sooner! I could have taken you out on all sorts of fancy dinner dates!"
-    show AE casual-angry
+    show AE angry
     AE "Oooh no, that's on {i}you{/i} for not reading the rules!"
     show BE surprised
     BE "Oh boy."
@@ -14646,7 +14651,7 @@ label AE062:
 
     scene Town with fade
     show BE neutral at Position(xcenter=0.25, yalign=1.0)
-    show AE casual-neutral at Position(xcenter=0.75, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     BE "...Okay, 100%% honest, you didn't know there was a bus from the school to here, did you?"
     MC "I did!"
@@ -14661,7 +14666,7 @@ label AE062:
     AE "See you later, Inoue-san."
     "Honoka and Shiori lightly bowed to each other and I gave a quick wave goodbye as Shiori and I huddled on to the shuttle and took our seats."
     hide BE with dissolve
-    show AE casual-neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
+    show AE neutral at Position(xpos=0.5, xanchor=1.0, yalign=1.0) with dissolve
     MC "Haaah, what a night, eh?"
     AE "Hmm..."
     if getSkill("Academics") > 11:
@@ -14669,20 +14674,20 @@ label AE062:
         AE "...Yeah, yeah I'm feeling fine. Why do you ask?"
         MC "First time I've seen you budge on a rule like that."
         "Shiori closed her eyes for a moment and took a deep breath."
-        show AE casual-sad
+        show AE sad
         AE "I just didn't want to ruin the moment."
         MC "Becoming a bit of a softie, are ya? Eheheh."
         $setAffection("AE", 1)
-        show AE casual-surprised
+        show AE surprised
         AE "Tch, tell me about it."
         MC "Naw, c'mere."
     "Shiori leaned in closer to me, resting her head on my shoulder. I leaned back, resting my head atop hers."
-    show AE casual-sad
+    show AE sad
     AE "Sorry for turning our date night into a social night."
     MC "Nah..."
     "I leaned in and kissed her on the top of her warm head, pulling her closer in."
     MC "It's okay, I had fun."
-    show AE casual-happy
+    show AE happy
     AE "Hmm~"
     "As the bus made it's slow incline up the mountain, we stayed moderately quiet the entire way home. Regardless, there was very little to be said as I gently embraced her through our trip back."
     jump daymenu

@@ -17052,6 +17052,7 @@ label PRG058:
         PRG "True. Okay, I'll meet you at the pool in like... half an hour?"
         MC "Sounds good to me."
     scene Pool with fade
+    $setFMGOutfit(OutfitEnum.SWIM)
     "About half an hour later, I was outside the pool. I'd already changed and had on my black swimming trunks and an old T-shirt that I'd dug out of the back depths of my closet."
     "The sun was warm on my skin, but didn't feel harsh. Hell, if I played my cards right today, I could be going into winter with a full tan, then promptly lose it by sitting in front of the T.V. and shutting out the rest of the world."
     "Except Aida, of course. She was more than welcome in my desolate, loner world."
@@ -17100,14 +17101,14 @@ label PRG058:
     PRG "But, I... I look like..."
     PRG "I-I just don't look good, okay?"
     PRG "I-I'm just gonna go home..."
-    show FMG swim-school-neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.55, yalign=1.0) with dissolve
     "Aida turned around to go change out of her suit, and nearly plowed straight into Akira, who was walking out of the changing room behind her."
-    show FMG swim-school-surprised at Position(xcenter=0.75, yalign=1.0)
+    show FMG surprised at Position(xcenter=0.75, yalign=1.0)
     show PRG swim-casual-surprised at Position(xcenter=0.25, yalign=1.0)
     with dissolve
     "Luckily for both of them, Akira backpedaled, narrowly missing a smack from Aida's belly."
     PRG "Oh! M-Mizutani-san! I-I'm sorry! I-I..."
-    show FMG swim-school-happy
+    show FMG happy
     FMG "Whoa, relax for a second! It's alright. I'm just glad I didn't accidently hit you! Wouldn't want to damage the goods there."
     show PRG swim-casual-unique
     PRG "N-No harm done..."
@@ -17115,14 +17116,14 @@ label PRG058:
     PRG "R-Rocking it?"
     FMG "Yeah girl! Look at you, you're a knockout! Like, not even messing with you, you could get any man you wanted."
     PRG "T-Thank you, but-"
-    show FMG swim-school-neutral
+    show FMG neutral
     FMG "You don't see yourself as beautiful?"
     "Aida didn't even respond. The only response she gave was a quick shake of the head."
     FMG "Geez, alright. Guess I've gotta break into some anatomy. You ever hear someone describe a pregnant girl as glowing?"
     PRG "I-In movies sometimes..."
     FMG "Okay! Well, do you know why they say that?"
     PRG "I just thought it was a dumb expression."
-    show FMG swim-school-happy
+    show FMG happy
     FMG "Nope! Actually, when a girl gets pregnant, more blood goes to your blood vessels, making you look a little more pale than whatever tone your skin normally has."
     FMG "In addition to that, your body produces a little more of its natural oils, making your skin shine a little bit."
     show PRG swim-casual-worried
@@ -17164,7 +17165,7 @@ label PRG058:
     MC "Just couldn't resist, I guess. It looked so soft and supple under the water."
     "Aida grinned at me as she laid back, floating on her back as best as she could. Her belly somewhat forced her middle down a bit, but she bobbed there well enough."
     "About ten feet from us, Akira came to a stop at the end of the pool, barely even panting while she pulled her goggles off."
-    show FMG swim-school-neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "Have you ever tried doing any water exercises, Kodama-san?"
     show PRG swim-casual-neutral
     PRG "N-No I haven't. I heard it wasn't good to do strenuous exercise when you're pregnant."
@@ -17173,9 +17174,9 @@ label PRG058:
     FMG "Want me to show you an exercise quick? It's really easy!"
     show PRG swim-casual-nervous
     PRG "Um... I-I guess."
-    show FMG swim-school-flex
+    show FMG flex
     FMG "Sweet! This is called 'The Cross Country Ski.'"
-    show FMG swim-school-happy
+    show FMG happy
     FMG "Throw your shoulders back, and stand up as straight as possible. Then, jump up and down in the water."
     show PRG swim-casual-worried
     "Akira gave a demonstration in front of Aida, who tried to copy as closely as she could."
@@ -17184,7 +17185,7 @@ label PRG058:
     "Aida tried the movement, looking at herself in the water."
     PRG "Is this good?"
     "Akira pressed her goggles onto her face and put her head under. She checked Aida's form, then brought her head back up."
-    show FMG swim-school-neutral
+    show FMG neutral
     FMG "Here, try this. Balance on your right foot and bring your left leg into the back position."
     "Akira walked behind Aida and when Aida's back leg came back, Akira took a gentle hold of it and moved it into the correct position."
     FMG "There. That's the right spot. Try that now. Ideally, you want to feel it lightly stretching your hips and thighs."
@@ -17201,7 +17202,7 @@ label PRG058:
     MC "Do you feel sore a lot?"
     PRG "Not really. I usually just feel exhausted after a long day, especially lately."
     MC "Well, stretch out all you'd like. We've got most of the day."
-    show FMG swim-school-neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Akira reached the end of the pool by us and pulled herself up onto the side."
     FMG "Feeling the burn?"
     PRG "Not really. It's just kind of stretching everything out."
@@ -17210,11 +17211,11 @@ label PRG058:
     PRG "N-No, definitely not."
     show PRG swim-casual-surprised
     PRG "I-I'm not saying I don't like muscles, though! They're just not for me."
-    show FMG swim-school-happy
+    show FMG happy
     FMG "You're fine, Kodama-san! No worries! I know that being jacked isn't everyone's cup of tea. But, stretching is good, no matter who you are."
     show PRG swim-casual-worried
     PRG "I don't think I'm going to go much longer, though. I don't want to push myself too hard and hurt something."
-    show FMG swim-school-neutral
+    show FMG neutral
     FMG "That's a good call. It's always best to ease yourself into a new exercise. Especially in your case."
     PRG "Of course."
     show PRG swim-casual-neutral

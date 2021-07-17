@@ -4525,28 +4525,31 @@ label FMG031:
 label FMG032:
     $setProgress("FMG", "FMG033")
     scene Pool with fade
+    $setFMGOutfit(OutfitEnum.SWIM)
     play music Busy
     "With the weather slowly getting warmer, Akira wanted to do more of our workouts outside, So not only do I get to have some fun in the sun, I get to see her in her swimsuit. It's a match made in heaven!"
     MCT "I'd be lying if I didn't say she looked good in it. It was one of the best parts of training by the pool."
-    show FMG swim-school-angry-2 with dissolve
+    show FMG angry-2 with dissolve
     FMG "Kei-kun, stop thinking about my butt and go another lap!"
     MC "Hang on, I was not!"
-    show FMG swim-school-happy
+    show FMG happy
     FMG "Uhhuh, suuuure~ That goofy look on your face says otherwise."
     MC "..."
     MC "Yeah yeah, whatever you say."
     "Akira chuckled to herself, strutting past me as if she were going down a catwalk."
-    show FMG swim-school-neutral
+    show FMG neutral
     FMG "Like what you see?"
     MCT "God damn that swimsuit is hugging her ass. Man, what I would give to do the same..."
     MC "Life is a cruel mistress."
-    show FMG swim-school-happy
+    show FMG happy
     FMG "She really is, but you know what's even crueler?"
     MC "...You?"
-    show FMG swim-school-sad
+    show FMG sad
     FMG "Well yes, when I'm hungry! Come on, I'm starving over here! Do your last lap before I make you my protein bar!"
     MC  "Agh! Alright, I'll do this one in record time!"
+
     scene Campus Center with fade
+    $setFMGOutfit(OutfitEnum.DEFAULT)
     "After our fin in the pool, we changed in the locker room and made our way to the cafeteria across campus."
     show FMG sad with dissolve
     FMG "I'll do it in record time... What record were you going for, exactly? Fastest drowning time?!"
@@ -4576,6 +4579,7 @@ label FMG032:
     FMG "Agreed."
     scene black with fade
     $setTime(TimeEnum.EVE)
+
     scene Campus Center with fade
     "After around half an hour of aimlessly wandering around, we just found our way to a bench and sat down completely stumped."
     Cat "Meowwwww."
@@ -4640,7 +4644,6 @@ label FMG032:
     jump daymenu
 
 label FMG033:
-   #Time: Morning
    $setTime(TimeEnum.DAY)
    $setProgress("FMG", "FMG034")
    scene Classroom with fade
@@ -5757,24 +5760,25 @@ label FMG041:
     MC "Y-Y-You look really good... Have you considered wearing this all the time?"
     hide cg with dissolve
     scene Beach with dissolve
-    show FMG swim-casual-happy
+    $setFMGOutfit(OutfitEnum.SWIMSUIT)
+    show FMG happy
     FMG "Glad you like it! By the way, I need your help with something."
     MC "Sure, but let me get changed first. I'll be right back."
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "No problem, I'll get the umbrella and towels set up."
     hide FMG with dissolve
     pause 3
-    show FMG swim-casual-neutral with dissolve
+    show FMG neutral with dissolve
     MC "Alright, I'm back. What do you need help with?"
-    show FMG swim-casual-happy
+    show FMG happy
     FMG "Could you help with my sunscreen?"
     MCT "Don't have to ask me twice."
     MC "Toss me the bottle."
-    show FMG swim-casual-aroused
+    show FMG aroused
     FMG "Don't be too rough..."
     MCT "Everything I've done... Has led to this very moment."
     MC "Little known fact about me, I trained in the mountains for years practicing the art of massages. I have the hands of a Japanese god."
-    show FMG swim-casual-aroused-2
+    show FMG aroused-2
     FMG "How about you show me what those hands can do?"
     MC "Say no more."
     "I popped the cap off and shot the sunscreen into my hands as I carefully planned out my next move."
@@ -5782,7 +5786,7 @@ label FMG041:
     MC "Would you mind turning around for me?"
     FMG "Yeah, no problem."
     "I placed my hands on her thighs.They were rock solid stone pillars. I could feel the strength and sturdiness pulsating off them like actual tree trunks they so closely resembled."
-    show FMG swim-casual-aroused
+    show FMG aroused
     FMG "Usually people start with the upper body."
     MC "I... Uh... During my training... W-We were told to focus on the l-lower body."
     FMG "Mhmm, whatever you say."
@@ -5793,13 +5797,13 @@ label FMG041:
     FMG "Impressed? All those long hours in the gym pay off, don't they?"
     MC "I'd say..."
     MC "You've been pushing yourself hard every time we go."
-    show FMG swim-casual-aroused-2
+    show FMG aroused-2
     FMG "Well, I am trying to get bigger after all..."
     "I moved my way up to her broad shoulders, the sunscreen helping me slide effortlessly across her impressive frame. Her biceps radiated power, they were not only as large as cannonballs but just as strong."
     FMG "You're taking your time with this. I'd say you're enjoying this more than I am."
     MC "Well... I mean... I may have been waiting for this for a long time."
     "She turned herself around to face me while stroking her abs."
-    show FMG swim-casual-aroused
+    show FMG aroused
     FMG "I hope you haven't forgotten these."
     MCT "They've been on my mind all day..."
     MC "Heh, it almost slipped my mind."
@@ -5807,39 +5811,39 @@ label FMG041:
     "Her abs were a labyrinth of ridges, so defined and strong they could've been sculpted with marble. I ran my hands through them steadily, savoring every ounce of her body."
     MCT "W-Woah, I lost myself for a minute..."
     MC "I-I-I...I think I got everywhere."
-    show FMG swim-casual-aroused-2
+    show FMG aroused-2
     FMG "You sure did."
     "She leaned into me, planting another one of her small kisses on my cheek."
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "Now that that's over, what do you want to do?"
     MC "W-Well we can um... Go for a swim?  ...I guess."
     MCT "How can she act so nonchalant after what just happened???"
-    show FMG swim-casual-happy
+    show FMG happy
     FMG "I was thinking we could pick up seashells and walk along the beach."
     MC "Y...Yeah, that's a better idea."
     MC "Hey... So, I've been meaning to ask you something, but I... *ahem* I was distracted for awhile."
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "Hm... Okay, but you can only ask me if you hold my hand as we walk along the shore."
     FMG "Deal?"
     MC "I'm sold."
     pause 2
     FMG "Soooooo, what did you want to ask?"
     MC "It's not anything major. I wanted to know if you knew anything about the beachside village."
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "Sorry Kei-kun, I got nothing."
-    show FMG swim-casual-happy
+    show FMG happy
     FMG "We should definitely check- WOAAAAH, look at this seashell it's so pretty!"
     "Akira squatted down carefully picking it up. She held the shell between her fingertips overtaken with excitement."
     FMG "Check it out, dude. This pattern is freaking sick!"
     MC "I'm not a seashell expert, but it's got the same pattern and colors of a Zebra."
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "This one I'm keeping too-"
-    show FMG swim-casual-surprised-2
+    show FMG surprised-2
     FMG "AH! We have to cut the shell talk short, the sun is starting to set and I don't have my phone!"
     MC "Uh... Su-WOAH!?!"
     "I guess she didn't feel like waiting for me to finish my sentence since she made the executive decision to bridal carry me."
     MC "...Next time... Can you ask me before you do these types of things???"
-    show FMG swim-casual-flex
+    show FMG flex
     FMG "Oh please, you are totally turned on by this."
     MCT "Maybe a little bit."
     FMG "This is quicker anyway."
@@ -5848,37 +5852,37 @@ label FMG041:
     $setTime(TimeEnum.EVE)
     scene Beach with fade
     MC "I am shocked that you were able to run that fast while carrying me."
-    show FMG swim-casual-flex with dissolve
+    show FMG flex with dissolve
     FMG "Heh... Didn't even break a sweat."
     "I collected what dignity I had left and sat down next to her, absorbing the view forming before us."
     MC "Wow, the sunset is breathtaking. I didn't think the view would be this incredible."
-    show FMG swim-casual-surprised-2
+    show FMG surprised-2
     FMG "Oh shit, I can't believe I forgot again!"
     "Akira dove towards her bag, rapidly rummaging through it to grab her phone."
-    show FMG swim-casual-happy
+    show FMG happy
     FMG "AH-HA! I found it!"
     FMG "Kei-kun, get off your ass! We have to get a picture of this before it's too late."
     MC "Roger that."
     "I wrapped my arm around her waist pulling her close to me as best as I could. For a moment we locked eyes and forgot about everything around us."
     MC "Pretty romantic, wouldn't you say?"
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "I can't put my finger on it... But something is missing."
     MC "Hm, I think I have the answer."
-    show FMG swim-casual-aroused
+    show FMG aroused
     FMG "And what would-"
     hide FMG with dissolve
     "It felt like time stopped when our lips met. Everything seemed to disappear around us. Her kiss was like the beating of a butterfly's wings, soft, gentle yet powerful... I could feel her heart beating faster, her breathing getting heavier."
     "Our grips tightened as it grew more intense. She softly moaned as her tongue traced the bottom of my mouth as she slowly pulled away."
-    show FMG swim-casual-aroused-2 with dissolve
+    show FMG aroused-2 with dissolve
     FMG "I-I didn't think-"
     MC "M-Me neither... But that was fucking awesome."
     FMG "T-Totally."
     MC "H... Hey, would... would you still want to um... get that picture?"
-    show FMG swim-casual-aroused
+    show FMG aroused
     FMG "If...If you wouldn't mind..."
     MC "No... N-Not at all."
     "Akira fumbled to pick up her phone for a while still in awe of what happened, not like I could blame her."
-    show FMG swim-casual-neutral
+    show FMG neutral
     FMG "...Okay, okay... I'm good. Are you ready?"
     MC "For sure. I can't wait to see how it comes out."
     "I stood behind her, my arms wrapped around her waist, my head resting on hers. I felt her free hand grip both of mine as she raised the phone into the air."
@@ -7441,6 +7445,7 @@ label FMG049:
     MC "Hey, Akira, you here?"
     FMG "The door's open, come in!"
     scene Dorm FMG with fade
+    $setFMGOutfit(OutfitEnum.NUDE)
     "Akira’s room seemed... different. I couldn’t place my finger on it but something felt off. I shut the door and walked in."
     FMG "Just hang out for a bit, I need five minutes!"
     MC "Yeah, no problem."
@@ -7450,14 +7455,14 @@ label FMG049:
     pause 2
     MC "Okay? ...So what did you want to show me?"
     pause 1
-    show FMG flex-nude
+    show FMG flex with dissolve
     FMG "Myself."
     MC "I-I..."
     MC "I felt my heart skip a beat and my jaw dropped in pure fixation. Every inch of her body was a masterpiece of beauty and brawn."
     "From her sinewy shoulders to her chiseled abs and long, bulky legs that could likely snap trees in half, all contrasted by her gentle, sweet face that was painted red with a blush."
     "I slowly regained composure, shaking my head out before attempting to sputter a response."
     MC "A-akira I... uhm... What’s all this about?"
-    show FMG aroused-nude
+    show FMG aroused
     FMG "You and me."
     MC "I see. I see. Do you um... want me to take-"
     "She already had her hands on my shirt before I could blink."
@@ -7465,52 +7470,52 @@ label FMG049:
     "An audible *SHRIIIIIIIP* sounded out as my shirt was torn to shreds with a single tug. At least I had gotten to kicking off my shorts and underwear before she could lay a finger on them."
     "And there I was. Naked...again"
     FMG "Heh, it seems someone is excited for what’s about to happen... I’ll try my best to not crush you."
-    show FMG aroused-2-nude
+    show FMG aroused-2
     FMG "Here, you’ll need this... I hope I got the right size."
     "I quickly snatched it out of the air and looked at the label. XXL."
     MC "Damn... you were close. If only they had XXXL."
-    show FMG sad-nude
+    show FMG sad
     FMG "Relax, Kei-kun, we both know it’s not that big."
     MC "..."
-    show FMG aroused-nude
+    show FMG aroused
     FMG "I hope you don’t mind if I’m on top..."
     MC "Uh, well... considering we’ve never done this before, I wouldn’t mind you leading the way..."
     FMG "Don’t worry, I won’t coach you! We’ll just do this naturally!"
     MCT "There’s nothing natural about any of this, but... I think that’s alright."
     FMG "I ah... sorry for throwing myself on top of you out of nowhere, but after yesterday... I-I really felt loved by you..."
-    show FMG neutral-nude
+    show FMG neutral
     FMG "I’m not good at these relationship things, but I really want to take our relationship to the next level. That is... if you are too."
     "I quickly nodded my head."
     MC "Yeah, I am. I definitely am."
-    show FMG happy-nude
+    show FMG happy
     FMG "Great."
     MC "So, how do you want to go about this?"
-    show FMG sad-nude
+    show FMG sad
     FMG "I don’t know. I didn’t think I’d get this far..."
-    show FMG neutral-nude
+    show FMG neutral
     FMG "I guess we can just get on the bed and try? When I was looking this stuff up it seemed like being on top was the best choice."
     MC "Alright, just don’t kill me..."
-    show FMG flex-nude
+    show FMG flex
     FMG "No promises~"
     "She rolled her eyes at me like she usually does, only to sweep me off the floor. She quickly brought me into a bridal carry.."
     MC "Uwah! You gotta tell me when you plan on doing this next time! I nearly had a heart attack when you just... walked in like that, now you’re gonna do this?!"
-    show FMG neutral-nude
+    show FMG neutral
     FMG "I’ll think about it. I think this makes it much more romantic, doesn’t it?"
     FMG "Besides, I know you love it."
     MCT "I couldn’t make it more obvious... "
     "She lowered me on the bed and hopped up to join me."
     MC "Hang on, let me get this thing on first before we do anything else..."
     MC "Okay, I’m all set."
-    show FMG aroused-2-nude
+    show FMG aroused-2
     FMG "Do... Do you want to do a little warm-up, or should we just... get right to it?"
     MC "It’s not a sport! I’m sure we’ll be fine without stretching!"
     FMG "Kei, haven’t you heard of foreplay?!"
     MC "Well... um... no. But you haven’t had sex before either."
-    show FMG neutral-nude
+    show FMG neutral
     FMG "It’s important to know these things! Do some research, fool."
     "I paused, only to just cover my hands over my face in embarrassment."
     MC "Riiiiiiight..."
-    show FMG aroused-nude
+    show FMG aroused
     "Akira was quick to grab my shoulders, just pinning me against the bed. I shuddered gently, the awkwardness in the air evaporated by her sheer presence alone."
     "She had an almost predatory look on her face, one I’d only seen when she’s trying to max out or break a new fitness record."
     "She began to squat her hips down, her whole body visibly tensing up before guiding her slit right atop my stiff cock. She moaned out in a silky soft tone."
@@ -7524,7 +7529,7 @@ label FMG049:
     "I began to pick up the pace, making hastier bucks into her body with my hips."
     "I could feel her whole body tremble, leaning her face closer to me as she struggled to even keep her balance."
     "She crashed down to her knees, the reinforced bed groaning as she continued to hug around my body. Her enormous thighs wrapped around my torso as she tried to stop her body from shaking."
-    show FMG aroused-nude
+    show FMG aroused
     FMG "Come on, start touching me, dude!"
     "I couldn’t even manage to respond, fireworks going off in my head as I kept slamming my hips into her. My hands, almost instinctively, went up to her firm, musclebound chest and gave them a strong squeeze."
     "My thumbs couldn’t help but roll over her nipples with it. I watched her body seemingly writhe and squirm in pleasure, a complete contrast to what I’d believed was an impervious body and mind."
@@ -7536,12 +7541,12 @@ label FMG049:
     "Without warning, Akira started taking control, pushing me down with hands, and started to ride me herself. That \"fragility\" was quick to dissipate."
     FMG "O-Oooh~! It’s even better when I do it! I hope you’re okay down there."
     MC "I’m...I’m hanging in there..."
-    show FMG aroused-2-nude
+    show FMG aroused-2
     "Her wild expression quickly shifted back into her more passive, caring self."
     FMG "L-Let me know if I’m hurting you, okay?"
     MC "Don’t worry about me. I’m having a great time!"
     "The bed was constantly creaking with  how hard she was coming down atop me, all without a care in the world."
-    show FMG aroused-nude
+    show FMG aroused
     FMG "I-I don’t think this kinda bed can support me for much longer, hehe."
     "She seemed to stop for a moment. I slowly tried to prop myself up on my elbows, only for her to push me right back down to the mattress."
     FMG "I just had a great idea, I promise I won’t let go, okay?"
@@ -7556,14 +7561,14 @@ label FMG049:
     "Before I could say anything else, my hips slammed into her face one last time. She squealed in surprise as I began to shoot rope after rope of cum right into her mouth."
     "After a couple of moments, she seemed to wince as she became familiar with its taste, only for her to swallow it down and pull herself off of my length."
     "She looked up at me, winking as she opened her mouth wide to reveal an empty mouth."
-    show FMG flex-nude
+    show FMG flex
     FMG "Better than a protein shake~"
     "...I was hard again in an instant."
-    show FMG aroused-nude
+    show FMG aroused
     FMG "Someone’s ready for round two."
     MC "Considering my soul was sucked out of my body, can we take a time-out?"
     MC "But damn... that was incredible."
-    show FMG happy-nude
+    show FMG happy
     FMG "You know, it is getting pretty late. You wanna... stay the night?"
     MC "I don’t think I could walk back if I wanted to."
     jump daymenu

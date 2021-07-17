@@ -1309,8 +1309,9 @@ label WG009:
             show WG neutral
             WG "Well, you shall know soon enough."
     scene Pool with fade
+    $setFMGOutfit(OutfitEnum.SWIM)
     "I went out to the pool as the two ladies got changed. Aida came out and stood next to me, and then the swimmers showed up."
-    show FMG swim-school-angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show FMG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     WG "Three full laps should be adequate, I think. Any objections?"
@@ -1330,7 +1331,7 @@ label WG009:
     "By the time she completed her first lap Alice was a full length ahead of Akira, and that lead grew for the rest of the race."
     "When she completed her third lap Alice almost leapt out of the pool, springing to her feet and looking down to watch Akira reach the end."
     hide cg with dissolve
-    show FMG swim-school-sad at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show FMG sad at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     show WG swim-school-happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve
     play music Busy
@@ -8667,6 +8668,8 @@ label WG043:
     "So, I figured I'd show up a bit early and hang out with Alice for a little while beforehand."
 
     scene Pool with fade
+    $setBEOutfit(OutfitEnum.SWIM)
+    $setFMGOutfit(OutfitEnum.SWIM)
     show WG swim-school-haughty with dissolve
     WG "Ah, Keisuke, you're here early. What a pleasant surprise."
     MCT "Is everyone surprised when I'm not late?"
@@ -8685,18 +8688,18 @@ label WG043:
     show WG swim-school-haughty
     WG "Besides, there will be plenty of others to swim with once I get this club up and running officially. The rest should be coming along soon."
     MC "Come to think of it, I never did ask who else you convinced to come and try this out."
-    show BE swim-school-happy at Position(xcenter=0.7, yalign=1.0) with dissolve
+    show BE happy at Position(xcenter=0.7, yalign=1.0) with dissolve
     BE "The last person you'd ever expect, Kei-chan."
     MC "Honoka, given how many different clubs you've been in and out of, you're the first person I should have suspected."
-    show BE swim-school-angry
+    show BE angry
     BE "I don't have the slightest idea what you're talking about Kei-chan."
-    show BE swim-school-neutral
+    show BE neutral
     MC "I'm sure. But I will say I didn't think you'd be up for something that required so much swimming."
     BE "Eh, you know me. I'm always up for something new and exciting, and I'd never heard of water polo before. Alice told me I could be a goalie, so I won't have to swim that much, just keep my head above water most of the time."
-    show BE swim-school-unique
+    show BE unique
     BE "Besides, with these built-in floatation devices, how hard could that be?"
     "She certainly did have a point, but I thought I should change the subject before I got caught up in Honoka's penchant for calling attention to her chest- especially with Alice right next to me."
-    show BE swim-school-neutral
+    show BE neutral
     MC "If the goalie position doesn't require as much swimming, I think I know who the next person will be."
     show PRG swim-school-neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
     PRG "H-Hello everyone."
@@ -8709,15 +8712,15 @@ label WG043:
     "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
     WG "I'm glad to hear that Natsuko. I'm looking forward to playing with someone who can keep up with my swimming skills."
     MC "So, if you needed more strong swimmers, that means the other person you asked is probably... Ohhh, no."
-    show FMG swim-school-happy at Position(xcenter=0.85, yalign=1.0) with dissolve
+    show FMG happy at Position(xcenter=0.85, yalign=1.0) with dissolve
     FMG "Hey dudes! What's up everyone! I'm ready to crush it in the pool today!"
-    show FMG swim-school-angry-2
+    show FMG angry-2
     FMG "Wait. What's {i}SHE{/i} doing here?"
     show WG swim-school-surprised
     WG "Oh, I see you two know each other alrea-"
     Natsuko "I should say the same! Alice said this is a sport for strong swimmers. I don't even trust you to not drown in the tub."
-    show FMG swim-school-angry
-    show BE swim-school-surprised-2
+    show FMG angry
+    show BE surprised-2
     show PRG swim-school-scared
     FMG "Judging by the stink lines coming off of you, I don't even think you know what a tub is used for."
     "Akira and Natsuko began to bicker back and forth, doing their best to one-up each other as they came up with even more creative ways to denigrate each other's athletic ability."
@@ -8738,7 +8741,7 @@ label WG043:
     WG "Whatever rivalry you two have going on, I suggest you channel that animosity towards something constructive. I'll be watching for fouls."
     WG "Fouls lead to time out penalties, and when teams can't substitute, that leads to the opponent scoring- and you losing. Got it?"
     Natsuko "I see. Very well then."
-    show FMG swim-school-angry-2
+    show FMG angry-2
     FMG "Yeah, I got it."
     hide PRG
     hide BE
@@ -8763,9 +8766,9 @@ label WG043:
     WG "You'll have your chance to prove your skills if you want me to change my evaluation of them. Besides, you'll have the fortune of being on my team."
     WG "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
     show PRG swim-school-neutral at Position(xcenter=0.15, yalign=1.0)
-    show FMG swim-school-neutral at Position(xcenter=0.3, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.3, yalign=1.0)
     show Natsuko swim-school-neutral at Position(xcenter=0.7, yalign=1.0)
-    show BE swim-school-neutral at Position(xcenter=0.7, yalign=1.0)
+    show BE neutral at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
     if isEventCleared("WG009"):
@@ -8790,10 +8793,10 @@ label WG043:
     "Natsuko on the other hand, lunged forward like a shark that smelled blood in the waters to block Akira."
     "This was of course a poor decision. Natsuko should be covering Alice instead of me."
     "Alice easily slid through the water around my outside, giving a wide-open pass for Akira to send her, which she took full advantage of by immediately sailing it into the goal before Honoka could even react."
-    show BE swim-school-angry with dissolve
+    show BE angry with dissolve
     BE "Oops!"
     WG "Don't worry about it Honoka, even the best goalies can't stop every throw. Now you know what to expect."
-    show BE swim-school-neutral
+    show BE neutral
     BE "Right! I think I got it now."
     hide BE with dissolve
     "This gave us possession as the fielders had to get to the other side. I signaled for Honoka to pass the ball to me, while Natsuko and Akira were already locking horns in the middle of the defender side."
@@ -8829,9 +8832,9 @@ label WG043:
     hide WG with dissolve
     "In my defense though, at that size, her boobs are pretty hard to avoid. If I start drowning, those would be my preferred floatation device."
     "The game was almost done. We trailed Alice's team by 2 points. A time out had been called before the last few minutes so that Honoka could address a wardrobe malfunction that had her spilling out of her swimsuit."
-    show BE swim-school-surprised-2 with dissolve
+    show BE surprised-2 with dissolve
     "Alice wanted to save her the embarrassment, even though Honoka was probably the least concerned about that kind of thing out of anyone here."
-    show BE swim-school-neutral
+    show BE neutral
     "Going up against Alice and Akira, I honestly hadn't expected to win. Given their respective skills though, we would have fared a lot better if Natsuko was guarding Alice instead."
     "If I couldn't get Natsuko to see reason, maybe I could exploit her competitive nature to give us a better shot."
     hide BE with dissolve
@@ -8845,7 +8848,7 @@ label WG043:
     WG "Hmph, so that's how it is now. I must admit by this point I didn't expect you to adjust your strategy."
     FMG "You too scared to compete with me, Natsy?"
     Natsuko "If you're content to let Hotsure-san swim up to the goal all by himself then you're dumber than even I thought possible."
-    show FMG swim-school-angry at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show FMG angry at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "Grrr..."
     "With this change in line up we were able to even the scores up with only 30 seconds to go. Akira was clearly the most distraught about this turn of events, not likely keen on enduring Natsuko berating her for her team's loss."
     "I was guarding Akira, standing, er- rather bobbing, in front of her between her and the goal when she managed to get a pass from Alice."
@@ -8863,9 +8866,9 @@ label WG043:
     scene Pool with fade
     play music Bittersweet
     show PRG swim-school-scared at Position(xcenter=0.15, yalign=1.0)
-    show FMG swim-school-surprised-2 at Position(xcenter=0.3, yalign=1.0)
+    show FMG surprised-2 at Position(xcenter=0.3, yalign=1.0)
     show WG swim-school-surprised
-    show BE swim-school-surprised at Position(xcenter=0.7, yalign=1.0)
+    show BE surprised at Position(xcenter=0.7, yalign=1.0)
     show Natsuko swim-school-disappointed at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     BE "Akira-chan! You killed him."
@@ -8874,15 +8877,15 @@ label WG043:
     PRG "Hotsure-chan! Are you okay?"
     MC "Whaa...? What happened? And why does my face hurt so much?"
     Natsuko "Because apparently someone can't aim their throws to save their life, much less yours."
-    show BE swim-school-embarrassed
+    show BE embarrassed
     BE "Yeah, Akira-chan really plastered you across the face Kei-chan. You're lucky to be alive!"
     FMG "I {i}said{/i} it was an accident!"
     show WG swim-school-worried
     WG "{i}Sigh...{/i}"
     WG "Practice is over. Thank you for coming, everyone. I'll stay with Keisuke until he feels like getting up. Please go on ahead back to the lockers."
     show PRG swim-school-sad-2
-    show BE swim-school-doubt
-    show FMG swim-school-sad
+    show BE doubt
+    show FMG sad
     Natsuko "Would you like us to help put away the equipment Nikumaru-san?"
     WG "No, that's quite alright. Thank you for offering though. Please, everyone- go on."
     hide PRG
@@ -8918,7 +8921,7 @@ label WG043:
     WG "Thank you Keisuke. I appreciate all that you and Aida do for me, but only having two friends... well a friend and a boyfriend, it still feels a bit lonely sometimes."
     MC "I don't think that that's the case. Why else would Honoka come out to join us, despite knowing nothing about water polo?"
     MCT "Don't you think you also have the respect of Natsuko and Akira from outclassing them with your swimming skills?"
-    show FMG swim-school-neutral at Position(xcenter=0.7, yalign=1.0) behind WG with dissolve
+    show FMG neutral at Position(xcenter=0.7, yalign=1.0) behind WG with dissolve
     FMG "He is right you know. You were amazing out there today."
     show WG swim-school-surprised at Position(xcenter=0.3, yalign=1.0) with dissolve
     WG "Mitzutani-san! I didn't see you there."
@@ -8927,7 +8930,7 @@ label WG043:
     "Akira handed each of us a chocolate coated vanilla ice cream pop."
     FMG "Sorry again about your face Hotsure-san."
     MC "Thanks Mitzutani-san, but don't worry about it. I'm not worried about it."
-    show FMG swim-school-happy
+    show FMG happy
     FMG "Ha! You're pretty tough bro, I'll give you that. I'm going to get going and leave you two love birds to it."
     hide FMG with dissolve
     MCT "Maybe she overheard more than she let on..."
