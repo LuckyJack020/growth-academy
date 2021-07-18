@@ -8678,6 +8678,7 @@ label WG043:
     $setFMGOutfit(OutfitEnum.SWIM)
     $setPRGOutfit(OutfitEnum.SWIM)
     $setWGOutfit(OutfitEnum.SWIM)
+    $setNatsOutfit(OutfitEnum.SWIM)
     show WG haughty with dissolve
     WG "Ah, Keisuke, you're here early. What a pleasant surprise."
     MCT "Is everyone surprised when I'm not late?"
@@ -8714,7 +8715,7 @@ label WG043:
     WG "Right on time, Aida. Thank you for coming. Let me know whenever you think you need a break, but I think you'll be just fine if you can tread water."
     PRG "Thanks, Nikumaru-san. I'll do my best."
     WG "Don't worry so much about that, I want you to just try to have fun. Our remaining participants on the other hand, I have some pretty high expectations for."
-    show Natsuko swim-school-neutral at Position(xcenter=0.30, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.30, yalign=1.0) with dissolve
     Natsuko "Hello Alice. Thank you for the invitation again. I'm always up for a new challenge. A contact sport where you need to swim and handle a ball sounds tough. I'm ready to show you what I can do!"
     "When Alice told me yesterday she asked the strongest swimmers that she knew, I didn't think she meant that quite so literally."
     "Thankfully, this wasn't a rugby match, but looking at Natsuko's towering stature and broad shoulders, I had a feeling I was still going to get run over."
@@ -8775,7 +8776,7 @@ label WG043:
     WG "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
     show PRG neutral at Position(xcenter=0.15, yalign=1.0)
     show FMG neutral at Position(xcenter=0.3, yalign=1.0)
-    show Natsuko swim-school-neutral at Position(xcenter=0.7, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.7, yalign=1.0)
     show BE neutral at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
@@ -8847,7 +8848,7 @@ label WG043:
     "If I couldn't get Natsuko to see reason, maybe I could exploit her competitive nature to give us a better shot."
     hide BE with dissolve
     MC "Natsuko, don't you want to win?"
-    show Natsuko swim-school-neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "Of course! That weakling's team is barely winning, even with Nikumaru-san's help. If we beat her, it would just solidify the fact she's dead weight."
     MC "I wouldn't really characterize Mizutani-san as any of that, but might I suggest you guard Alice instead, since she's the better player and you're the best one on our team, instead of constantly going after Mitzutani-san?"
     Natsuko "I see. Perhaps guarding the anchor hasn't been the best use of my abilities for the team. I think you're right, we should try that."
@@ -8877,7 +8878,7 @@ label WG043:
     show FMG surprised-2 at Position(xcenter=0.3, yalign=1.0)
     show WG surprised
     show BE surprised at Position(xcenter=0.7, yalign=1.0)
-    show Natsuko swim-school-disappointed at Position(xcenter=0.7, yalign=1.0)
+    show Natsuko disappointed at Position(xcenter=0.7, yalign=1.0)
     with dissolve
     BE "Akira-chan! You killed him."
     FMG "It was an accident!"

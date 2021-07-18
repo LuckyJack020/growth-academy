@@ -647,109 +647,81 @@ image side ChibukiCell = DynamicImage("Graphics/side/Chibuki.png")
 #Minor characters
 #If you add new sizes here, remember to update "legalsizes" in updateMinorSizes() in script.rpy
 
-image RM neutral = "Graphics/minor/RM-neutral.png"
-image RM angry = "Graphics/minor/RM-angry.png"
-image RM concerned = "Graphics/minor/RM-concerned.png"
-image RM concerned-2 = "Graphics/minor/RM-concerned-2.png"
-image RM distrustful = "Graphics/minor/RM-distrustful.png"
-image RM doubt = "Graphics/minor/RM-doubt.png"
-image RM happy = "Graphics/minor/RM-happy.png"
-image RM sad = "Graphics/minor/RM-sad.png"
-image RM smug = "Graphics/minor/RM-smug.png"
+image RM neutral = "Graphics/minor/RM/neutral.png"
+image RM angry = "Graphics/minor/RM/angry.png"
+image RM concerned = "Graphics/minor/RM/concerned.png"
+image RM concerned-2 = "Graphics/minor/RM/concerned-2.png"
+image RM distrustful = "Graphics/minor/RM/distrustful.png"
+image RM doubt = "Graphics/minor/RM/doubt.png"
+image RM happy = "Graphics/minor/RM/happy.png"
+image RM sad = "Graphics/minor/RM/sad.png"
+image RM smug = "Graphics/minor/RM/smug.png"
 
-image Yuki neutral = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-neutral.png")
-image Yuki happy = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-happy.png")
-image Yuki sad = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-sad.png")
-image Yuki surprised = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-surprised.png")
-image Yuki gossip = DynamicImage("Graphics/minor/yuki-[minorsizes[Yuki]]-gossip.png")
+image Yuki neutral = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/neutral.png")
+image Yuki happy = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/happy.png")
+image Yuki sad = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/sad.png")
+image Yuki surprised = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/surprised.png")
+image Yuki gossip = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/gossip.png")
 
-image HR neutral = "Graphics/minor/HR-neutral.png"
-image HR annoyed = "Graphics/minor/HR-neutral.png"
+image HR neutral = "Graphics/minor/HR/neutral.png"
+image HR annoyed = "Graphics/minor/HR/annoyed.png" #NYI
 
 #legalsizes already updated, change images when bigger sprites exist
-image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-annoyed.png")
-image Tomoko distracted = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-distracted.png")
-image Tomoko neutral = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-neutral.png")
-image Tomoko happy = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-happy.png")
-image Tomoko surprised = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-surprised.png")
-image Tomoko sad = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-sad.png")
-image Tomoko unique = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-unique.png")
+image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/annoyed.png")
+image Tomoko distracted = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/distracted.png")
+image Tomoko neutral = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/neutral.png")
+image Tomoko happy = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/happy.png")
+image Tomoko surprised = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/surprised.png")
+image Tomoko sad = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/sad.png")
+image Tomoko unique = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/unique.png")
 
-image Tomoko casual-annoyed = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-annoyed.png")
-image Tomoko casual-distracted = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-distracted.png")
-image Tomoko casual-neutral = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-neutral.png")
-image Tomoko casual-happy = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-happy.png")
-image Tomoko casual-surprised = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-surprised.png")
-image Tomoko casual-sad = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-sad.png")
-image Tomoko casual-unique = DynamicImage("Graphics/minor/tomoko-[minorsizes[Tomoko]]-casual-unique.png")
+image Ryoko neutral = "Graphics/minor/ryoko/neutral.png"
+image Ryoko happy = "Graphics/minor/ryoko/happy.png"
+image Ryoko annoyed = "Graphics/minor/ryoko/annoyed.png"
+image Ryoko camera = "Graphics/minor/ryoko/camera.png"
+image Ryoko surprised = "Graphics/minor/ryoko/surprised.png"
+image Ryoko tongue = "Graphics/minor/ryoko/unique.png"
+image Ryoko confused = "Graphics/minor/ryoko/confused.png"
+image Ryoko embarrassed = "Graphics/minor/ryoko/embarrassed.png"
 
-image Ryoko neutral = "Graphics/minor/ryoko-neutral.png"
-image Ryoko happy = "Graphics/minor/ryoko-happy.png"
-image Ryoko annoyed = "Graphics/minor/ryoko-annoyed.png"
-image Ryoko camera = "Graphics/minor/ryoko-camera.png"
-image Ryoko surprised = "Graphics/minor/ryoko-surprised.png"
-image Ryoko tongue = "Graphics/minor/ryoko-unique.png"
-image Ryoko confused = "Graphics/minor/ryoko-confused.png"
-image Ryoko embarrassed = "Graphics/minor/ryoko-embarrassed.png"
+image Minori neutral = "Graphics/minor/minori/neutral.png"
+image Minori happy = "Graphics/minor/minori/happy.png"
+image Minori embarrassed = "Graphics/minor/minori/embarrassed.png"
+image Minori sad = "Graphics/minor/minori/sad.png"
 
-image Minori neutral = "Graphics/minor/minori-neutral.png"
-image Minori happy = "Graphics/minor/minori-happy.png"
-image Minori embarrassed = "Graphics/minor/minori-neutral.png"
-image Minori sad = "Graphics/minor/minori-neutral.png"
+image Sakura angry = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/angry.png")
+image Sakura deadpan = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/deadpan.png")
+image Sakura frustrated = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/frustrated.png")
+image Sakura neutral = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/neutral.png")
+image Sakura happy = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/happy.png")
+image Sakura nervous = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/nervous.png")
+image Sakura sad = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/sad.png")
+image Sakura sad-2 = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/sad-2.png")
+image Sakura surprised = DynamicImage("Graphics/minor/sakura/[minorsizes[Sakura]]/surprised.png")
 
-image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
+image Natsuko neutral = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/neutral.png")
+image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/annoyed.png")
+image Natsuko angry = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/angry.png")
+image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/disappointed.png")
+image Natsuko smug = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/smug.png")
+image Natsuko flex = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flex.png")
+image Natsuko happy = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/happy.png")
+image Natsuko flirty = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/flirty.png")
+image Natsuko aroused = DynamicImage("Graphics/minor/natsuko/[minorsizes[Natsuko]]/[NatsOutfit]/aroused.png")
 
-image Sakura angry = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-angry.png")
-image Sakura deadpan = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-deadpan.png")
-image Sakura frustrated = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-frustrated.png")
-image Sakura neutral = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-neutral.png")
-image Sakura happy = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-happy.png")
-image Sakura nervous = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-nervous.png")
-image Sakura sad = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-sad.png")
-image Sakura sad-2 = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-sad-2.png")
-image Sakura surprised = DynamicImage("Graphics/minor/sakura-[minorsizes[Sakura]]-surprised.png")
-
-image Natsuko neutral = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-annoyed.png")
-image Natsuko angry = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-angry.png")
-image Natsuko disappointed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-disappointed.png")
-image Natsuko smug = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-smug.png")
-image Natsuko flex = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flex.png")
-image Natsuko happy = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-happy.png")
-image Natsuko flirty = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flirty.png")
-image Natsuko aroused = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-aroused.png")
-
-image Natsuko swim-school-neutral = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-neutral.png")
-image Natsuko swim-school-annoyed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-annoyed.png")
-image Natsuko swim-school-angry = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-angry.png")
-image Natsuko swim-school-disappointed = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-disappointed.png")
-image Natsuko swim-school-smug = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-smug.png")
-image Natsuko swim-school-flex = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flex.png")
-image Natsuko swim-school-happy = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-happy.png")
-image Natsuko swim-school-flirty = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-flirty.png")
-image Natsuko swim-school-aroused = DynamicImage("Graphics/minor/natsuko-[minorsizes[Natsuko]]-aroused.png")
-
-image Tako neutral = "Graphics/minor/tako-neutral.png"
-image Tako angry = "Graphics/minor/tako-angry.png"
-image Tako excited = "Graphics/minor/tako-excited.png"
-image Tako happy = "Graphics/minor/tako-happy.png"
-image Tako unique = "Graphics/minor/tako-unique.png"
-image Tako sad = "Graphics/minor/tako-sad.png"
-image Tako surprised = "Graphics/minor/tako-surprised.png"
-
-image Tako nohat-neutral = "Graphics/minor/tako-nohat-neutral.png"
-image Tako nohat-angry = "Graphics/minor/tako-nohat-angry.png"
-image Tako nohat-excited = "Graphics/minor/tako-nohat-excited.png"
-image Tako nohat-happy = "Graphics/minor/tako-nohat-happy.png"
-image Tako nohat-unique = "Graphics/minor/tako-nohat-unique.png"
-image Tako nohat-sad = "Graphics/minor/tako-nohat-sad.png"
-image Tako nohat-surprised = "Graphics/minor/tako-nohat-surprised.png"
+image Tako neutral = "Graphics/minor/tako/[TakoOutfit]/neutral.png"
+image Tako angry = "Graphics/minor/tako/[TakoOutfit]/angry.png"
+image Tako excited = "Graphics/minor/tako/[TakoOutfit]/excited.png"
+image Tako happy = "Graphics/minor/tako/[TakoOutfit]/happy.png"
+image Tako unique = "Graphics/minor/tako/[TakoOutfit]/unique.png"
+image Tako sad = "Graphics/minor/tako/[TakoOutfit]/sad.png"
+image Tako surprised = "Graphics/minor/tako/[TakoOutfit]/surprised.png"
 
 image Kokutan neutral = "Graphics/minor/kokutan-neutral.png"
-
 image Akihiro neutral = "Graphics/minor/akihiro-neutral.png"
 image Miko neutral = "Graphics/minor/miko-neutral.png"
 image Minami neutral = "Graphics/minor/minami-neutral.png"
+image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 
 image dummy = "Graphics/ui/dummy.png"
 

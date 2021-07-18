@@ -654,7 +654,18 @@ init python:
 
     def setTakoOutfit(o):
         global TakoOutfit
-        TakoOutfit = o
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.NOHAT:
+            TakoOutfit = o
+
+    def setTomoOutfit(o):
+        global TomoOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+            TomoOutfit = o
+
+    def setNatsOutfit(o):
+        global NatsOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.SWIM:
+            NatsOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -732,6 +743,8 @@ label start:
         PRGOutfit = OutfitEnum.DEFAULT
         WGOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
+        TomoOutfit = OutfitEnum.DEFAULT
+        NatsOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []
@@ -1076,6 +1089,8 @@ label startevent:
         PRGOutfit = OutfitEnum.DEFAULT
         WGOutfit = OutfitEnum.DEFAULT
         TakoOutfit = OutfitEnum.DEFAULT
+        TomoOutfit = OutfitEnum.DEFAULT
+        NatsOutfit = OutfitEnum.DEFAULT
         clearedevents.append(activeevent)
         updateSP(activeevent)
         showQuickMenu = True
