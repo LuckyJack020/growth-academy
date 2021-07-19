@@ -7646,10 +7646,12 @@ label FMG050:
     show FMG neutral
     FMG "...Right! No reason to worry about it."
     FMG "Well, no time like the present."
+    show cg FMG050 with dissolve
     "Akira grabbed her clothes and headed towards the bathroom."
     MCT "Wow, her back is shredded. Heh, her butt got bigger too. Sweet."
     hide FMG with dissolve
-    pause 2
+    hide cg with dissolve
+    pause 1
     FMG "The skirt fits, it’s definitely smaller than I would like. Luckily for you, you get to see more of my quads."
     MCT "Someone is looking out for me. Thank you."
     FMG "Hell yes! The top and the button-up fit!"
