@@ -258,6 +258,7 @@ image cg GTS024 = "Graphics/ui/gallery/GTS024.png"
 image cg GTS025 = "Graphics/ui/gallery/GTS025.png"
 image cg GTS035 = "Graphics/ui/gallery/GTS035.png"
 image cg GTS044_stars1 = "Graphics/ui/gallery/GTS044_stars1.png"
+image cg GTS044_stars2 = "Graphics/ui/gallery/GTS044_stars2.png"
 
 image cg PRG020 = "Graphics/ui/gallery/PRG020.png"
 image cg PRG020b = "Graphics/ui/gallery/PRG020_close.png"
@@ -639,7 +640,7 @@ image side BECell = ConditionSwitch("getVar('BEMode') == 'Feminine'", DynamicIma
                                     "True", DynamicImage("Graphics/side/be-[globalsize].png"))
 image side WGCell = DynamicImage("Graphics/side/wg-[globalsize].png")
 image side FMGCell = DynamicImage("Graphics/side/fmg-[globalsize].png")
-image side GTSCell = DynamicImage("Graphics/GTS/[globalsize]_s/side/neutral.png")
+image side GTSCell = DynamicImage("Graphics/side/gts-[globalsize].png")
 image side PRGCell = DynamicImage("Graphics/side/prg-[prgsize].png")
 image side TomoCell = DynamicImage("Graphics/side/tomoko-[minorsizes[Tomoko]].png")
 image side ChibukiCell = DynamicImage("Graphics/side/Chibuki.png")

@@ -5096,7 +5096,7 @@ label GTS031:
 label GTS031_c1_1:
     MC "Yes, I would love for you to walk back with me."
     scene black with fade
-    pause 2
+    pause 1
     $setTime(TimeEnum.NIGHT)
     scene Giant Dorm Exterior with fade
     $setAffection("GTS", 1)
@@ -7000,6 +7000,7 @@ label GTS044_c5a:
     show GTS happy with hpunch
     MC "Gwoh!..."
     "When Naomi's arm reached out like pale, vengeful seaweed, she lashed her hand around my forearm and pulled."
+    show cg GTS044_stars2 with dissolve
     "Before I processed my new, salmon-like state, she caught me with her other hand and laid me face-up over her torso. Naomi sighed while I said nothing."
     "I decided, with my feet nestled between her knees and my head between her plush breasts, that I was pretty okay with this."
     "But..."
@@ -7012,6 +7013,7 @@ label GTS044_c5a:
     MC "I love you just the same, Naomi-chan."
     "She laid her arms over my stomach and gently squeezed, and I reached back to tousle her hair."
     "For a while, that was the last of it; with my arms resting over hers I shut my eyes to the brightness of the sky, in favor of Naomi's deep breaths humming a lullaby and with such tenderness rocking me."
+    scene black with fade
     "Very soon, I fell asleep."
     jump daymenu
 
@@ -7325,11 +7327,6 @@ label GTS044_c5b_2:
     MC "I love you, too. Good night."
     "I hung up, and spared one last glance up at the brightness of the sky. I wished the kind little rabbit good night before I went back to my room."
     jump daymenu
-
-
-
-
-
 
 label GTS045:
     "This marks the current end of Naomi's route."
