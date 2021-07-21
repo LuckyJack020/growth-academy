@@ -17898,7 +17898,7 @@ label AE078:
     "{i}BRRR-{/i}...{i}BRRR-{/i}..."
     MC "M-Mgn..."
     scene Dorm Interior with fade
-    play music Reqiuem
+    play music Requiem
     "As my eyes fluttered open from my dreamless sleep, I felt, for a moment, that I was not yet awake as my eyes adjusted to the moonlight shining into the room. Reaching over to the nightstand, I grabbed for my phone."
     "{i}Klk!{/i}"
     MC "Ach."

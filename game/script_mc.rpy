@@ -16,11 +16,6 @@ label global000:
 
 
     show black
-    centered "The following represents a work in progress."
-    centered "Art assets are placeholders or otherwise unfinished and all general content has yet to be finalized."
-    centered "This is a work of fiction. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental."
-    centered "For more information, visit\n https://discord.gg/Hs6ggpp"
-    centered "Enjoy."
     if debugenabled:
         menu:
             "(DEBUG) Skip intro":
