@@ -147,7 +147,7 @@ init python:
         NOHAT = "no_hat"
 
     class ConditionEnum:
-        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, OR, ROUTELOCK, NOROUTELOCK, VAR = range(11)
+        EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, AND, OR, ROUTELOCK, NOROUTELOCK, VAR = range(12)
 
     #EVENT: arg1 = (string) event code, true if event has been seen
     #NOEVENT: arg1 = (string) event code, true if event has NOT been seen
@@ -237,6 +237,12 @@ init python:
                         continue
                 else:
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[2]))
+                    criteriavalid = False
+                    break
+            elif c[0] == ConditionEnum.AND:
+                if checkCriteria([c[1]]) and checkCriteria([c[2]]):
+                    continue
+                else:
                     criteriavalid = False
                     break
             elif c[0] == ConditionEnum.OR:

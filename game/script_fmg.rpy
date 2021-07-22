@@ -8413,3 +8413,399 @@ label FMGWG002:
     FMG "Duhhh! I already texted Chibuki to start popping it. We need to hurry though she might eat it all."
     MC "She better not."
     jump daymenu
+
+label FMGWG003:
+    scene Hallway with fade
+    play music FMG
+    MC "Is everything ready for the movie night, tonight?"
+    show FMG neutral with dissolve
+    FMG "Yes sir, I took inventory this morning... We just have one teensy tiny problem..."
+    MC "Yeah?"
+    show FMG sad
+    FMG "All the girls are busy... Honoka has a club meeting, Shiori is being herself, Naomi ummm... doesn’t really fit in our dorms anymore."
+    show FMG happy
+    FMG "But I haven’t called Aida yet!"
+    MC "Imma be honest, I don’t think you should. I’d rather not give a pregnant woman a heart attack."
+    show FMG sad
+    FMG "That’s..."
+    extend " That’s a good point."
+    MC "What about Alice? Did you give her a call or send her a text?"
+    show FMG neutral
+    FMG "Uhhhhh... No."
+    FMG "But I guess, I can do it now."
+    pause 2
+    FMGCell "<Hey Alice, Kei and I were wondering if you’d like to join us for a horror movie tonight>"
+    FMG "... aaand send."
+    MC "There’s no way she’ll-"
+    show FMG sad
+    FMG "She said no."
+    MCT "Wow, that was quick, damn."
+    MC "How did she respond?"
+    show FMG neutral
+    FMG "Let me clear my throat, this is a doozy... *ahem* *hehemmmmm*."
+    "Akira then proceeded to mimic Alice’s voice doing her best to sound as stuck-up as possible."
+    FMG "Sorry, I have no interest in wasting my time on something as bland as a horror film or any form of cinematography, for that matter."
+    MC "You did a solid job mimicking her voice, I felt so talked down to I was starting to hate myself."
+    show FMG happy
+    FMG "Thank you, I’ll be here all week..."
+    show FMG angry-2
+    FMG "...But how does anyone even like her??? Not only does her attitude suck major ass, but she’s also fat."
+    MCT "What does her being fat have to do with this?!?"
+    MC "Hey, don’t judge. Maybe some people are into that type of stuff. She probably has all sorts of guys lined up."
+    FMG "Yeah, so she can eat them. Ughhhhh, come on! We are going to find her. I will not stand for someone disrespecting the horror genre."
+    MC "Can’t you just text her? And aren’t you overreacting just a little bit?"
+    show FMG angry
+    FMG "No, this has to be done face to face. I know exactly where she is."
+    MC "And that would be?"
+    scene black with fade
+    pause 1
+    scene Cafeteria with fade
+    MCT "Of course..."
+    MC "Last time we came here she wasn’t even eating. You’re making her out to be the stereotypical fat chick."
+    show FMG angry-2 with dissolve
+    FMG "Okay and? What else does she do besides eat???"
+    MC "She ummm... has a clothing business. You know, the same one that Natsuko got her dress from... and the *ahem* dress you ripped..."
+    MC "It’s just a guess, but maybe you’re a tad too angry? You can’t talk to her if you’re going to keep acting like this."
+    show FMG angry
+    FMG "I’ll control myself when we find her. Humpty Dumpty is going to learn today."
+    MCT "Welp, the bull has seen red. Good luck, Alice, and godspeed."
+    MC "Akira, I’m telling you she-"
+    show FMG angry-2 at Transform(xzoom=-1)
+    FMG "There she is!"
+    MCT "Maybe if I stop talking, this stuff won’t happen anymore."
+    show FMG angry
+    FMG "Alice! We need to have a chat!"
+    show FMG angry at altMove(0.25)
+    show WG stern at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "I hope you plan on dropping that tone if you intend to speak with me!"
+    FMG "Admit your wrong about horror movies."
+    show WG stern
+    WG "This is what you’re mad about? Because I said I didn’t want to waste my time on them?"
+    show FMG angry-2
+    FMG "Uh, yeah!?! That’s exactly what this is about!"
+    MC "Can we dial it down a tiny bit?"
+    FMG "Uhhhhh, No! She doesn’t get to trash them and walk away without facing my wrath."
+    WG "Your \"wrath\" means nothing to me and this whole temper tantrum you’re throwing doesn’t help your case."
+    show FMG angry
+    FMG "A part of me thinks you're bullshitting us and you don’t watch horror movies because you’re a chicken."
+    show WG angry
+    WG "That is simply not true!"
+    FMG "Prove it."
+    "Even with Akira being in a sour mood she didn’t want to waste this opportunity to perform the chicken dance while continuing to mock Alice."
+    FMG "Buck-buck-bagaack!"
+    show WG surprised
+    WG "S-Stop that childish dance this instant!"
+    show FMG angry-2
+    FMG "Not until you admit you’re afraid. I’ll follow you around all day doing this until you come clean!"
+    show WG doubt
+    WG "You wouldn’t dare!"
+    FMG "Try me."
+    MCT "Should I just walk away?"
+    show WG angry
+    WG "Enough! People are starting to stare."
+    show FMG angry
+    FMG "I have nothing to lose from this."
+    WG "I’m sure it’s hard to bargain with dignity when you have none."
+    "And with that, Akira had picked up speed and even threw in some clucks for extra effect."
+    WG "Would you stop that? If I agree to watch your stupid movie will you cease this embarrassing display?"
+    show FMG neutral
+    FMG "Good. Now that that’s settled, we’ll see you tonight! And the best part is since you're a guest, I’ll let you pick one of the movies."
+    show WG stern
+    MC "Really? Just one?"
+    FMG "Kei-kun, we’ve established that she has bad taste in movies. I can’t let her pick constant stinkers the whole time."
+    MC "Hmm, makes sense."
+    WG "It most certainly does not make sense! Do you truly think your taste is better than mine?"
+    FMG "You want the truth?"
+    MCT "I think I should step outside it’s getting hot in here."
+    show WG angry
+    WG "Enough of this! I will be at your dorm tonight and you will see who is wrong."
+    hide WG with dissolve
+    show FMG happy at Transform(xzoom=1)
+    show FMG happy at altMove(0.5)
+    FMG "That went rather well. She didn’t seem too mad."
+    MC "Mhmmmmmm, I doooon’t know."
+    MC "You think she’s actually going to show?"
+    show FMG neutral
+    FMG "Without a doubt in my mind. I challenged her. She hates being challenged."
+    show FMG happy
+    FMG "The selection I have for tonight is all top tier stuff, she can’t possibly pick a shitty movie."
+    MC "What if she brings her own? We’d have to watch it..."
+    show FMG neutral
+    FMG "Pffft... I’d eat my socks if she does."
+    MC "Hm, I’ll keep that in mind. You want to head back to your dorm and get everything set up for tonight?"
+    FMG "Sure, but can we get some food first? I'm starving!"
+    MC "When aren’t you hungry?"
+    show FMG angry
+    FMG "Are you calling me fat???"
+    MC "...Yes. Yes, I am."
+    show FMG neutral
+    FMG "You’re not invited to the movie night anymore."
+    MC "Ha... HAHA. Like you could deal with Alice by yourself. I’d pay good money to see that. Now before you clap back, let’s get in line. They are serving tempura today and I’m not missing out on that."
+    FMG "And you call me fat. Hmph, I’ll remember this."
+    MC "I’m gonna slap your tempura onto the floor if you want to keep that attitude, missy."
+    show FMG angry
+    FMG "You don’t have the balls. I’d toss you in the trash."
+    MC "That’s a risk I’m willing to take."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+    scene Dorm FMG with fade
+    MC "Do we have enough bowls for all these snacks? You went a little overboard with them."
+    show FMG neutral with dissolve
+    FMG "Just mix some chips together, it’s not that big a deal."
+    MC "You can’t simply mix different flavors of chips, you’d ruin them! They have to stay in their own bowls."
+    FMG "I bet you were the kid who wouldn’t let his food touch because it's \"gross\". Three hundred yen your mom cut the crust off your sandwiches too."
+    MC "I’m insulted. You have no chip etiquette and now you assume things about me... Give me those! You don’t get to touch the sour cream and onion."
+    show FMG angry
+    FMG "It’s the best flavor! I’ll slap your hand away so fast if you try to take them from me!"
+    MC "Give me the chips, Akira!"
+    FMG "No! These are mine! Go buy your own!"
+    MC "I paid for them because you bought the ice cream."
+    show FMG sad
+    FMG "..."
+    show FMG angry
+    FMG "You’ll have to catch me first!"
+    MC "I am not chasing you around your room, hand over the bag and no one gets hurt."
+    show FMG happy
+    FMG "HA! Like you could hurt me with those toothpicks you call arms."
+    "I didn’t give her the luxury of responding instead I chose to take the initiative and lept towards MY bag of chips."
+    show FMG surprised
+    FMG "WHAT?!?!"
+    "I knocked her off balance and onto the bed freeing the potato chips from her clutches."
+    MC "AHA, victory. How does- Oof!"
+    "She was quick to recover from my surprise attack as she proceeded to jump on my back pushing me to the ground."
+    show FMG flex
+    FMG "Like you could keep me down. I’ll take these back, thank you very much."
+    MC "Not so fast."
+    "My second attempt at trying to get my chips back was... well, very ineffective. She stuck her hand out, stopping me from closing the gap."
+    FMG "Unfortunately, for you, these are mine now. Better luck next time."
+    "We were so busy messing around with each other we didn’t notice a certain person standing by the door, looking very disappointed."
+    show FMG flex at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show WG stern at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    WG "Do you two always behave in such a childish manner?"
+    show FMG surprised
+    MC "How long have you been here?!?"
+    WG "Long enough."
+    show FMG neutral
+    FMG "Who let you in, Captain Killjoy? Chibuki said she was working late tonight and I locked the door."
+    show WG neutral
+    WG "Chibuki works for me and I informed her that I’d be paying you two a visit. So she gave me the key, so I could let myself in if you weren’t here."
+    MCT "That poor girl..."
+    show FMG sad
+    FMG "I didn’t think Chibuki was so desperate for money..."
+    show WG stern
+    WG "As if working for me is a bad thing."
+    show WG haughty
+    WG "Opportunities like that should never be passed up."
+    show FMG neutral
+    FMG "Before you put me to sleep with your business talk, we should pick out a movie."
+    show WG neutral
+    WG "You’d be pleased to know I bought my own selection of movies that were hand-picked by people with, well, more discerning tastes than yourselves, we’ll put it that way."
+    FMG "You had like four hours, how did you get all this together? And no Kei-kun, this doesn’t count. I'm not eating my socks."
+    MCT "Coward."
+    MC "Fine, I guess we can let it slide this one time."
+    show FMG angry
+    FMG "Hang on, hang on. You’re telling me, someone you paid picked out the reboot of Definitely Not a Dream On Mel Street. This shit sucks balls."
+    show FMG sad
+    FMG "I hope you can get your money back."
+    show FMG surprised
+    FMG "Oh my god..."
+    show FMG angry
+    FMG "Was this group of people you paid blind???  Anyone with common sense knows that The Being remake is unwatchable! Have you seen the CGI? It should have been considered a crime. You never pick the remakes and reboots."
+    MC "They can’t be that bad, Akira. If anything your overexaggerating."
+    show FMG sad
+    FMG "Look up the reviews for both of these films and tell me the scores."
+    show WG angry
+    WG "No need, Hotsure-san. I did it myself. She’s right... both of these movies failed miserably at the box office. These \"professionals\" will be hearing from me!"
+    show FMG neutral
+    FMG "No reason to cry about this any longer. I’ll go grab my collection from underneath my desk and we can pick from that."
+    hide FMG with dissolve
+    show WG neutral
+    WG "So be it. What an unfortunate turn of events..."
+    MCT "I wouldn’t  call it unfortunate."
+    "Akira came back carrying about ten movies in her hands."
+    show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Alright, have a look and see what might interest you guys!"
+    MC "Hm, I think-"
+    show WG doubt
+    WG "This is the best you can do, Akira? None of these movies seem remotely interesting. I mean Brain Eaters from Mars 5? Please."
+    show FMG flex
+    FMG "Okay, so you want the big guns."
+    show FMG neutral
+    FMG "I’ll be right back!"
+    hide FMG with dissolve
+    show WG neutral
+    pause 2
+    show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Here it is, the best horror movie of all time. The Bracelet of Rancor. This is an absolute classic and I guarantee it’s going to scare the shit out of you."
+    MC "Oh, I’ve heard some great things about this movie! I never got the chance to see it."
+    show WG doubt
+    WG "We shall see."
+    MC "We lost a lot of time picking out a movie. Use the bathroom or do whatever else you have to do so we don’t have to pause during it."
+    show FMG neutral
+    show WG neutral
+    "Akira and Alice" "Right."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.NIGHT)
+    scene Dorm FMG with fade
+    MC "Man, you two take up so much room!"
+    show FMG angry at Position(xcenter=0.75, yalign=1.0)
+    show WG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    "Akira and Alice" "Are you calling me fat!?"
+    MC "NO! Just scooch over, damn! You both know I didn’t mean it that way."
+    show WG neutral
+    show FMG neutral
+    MCT "When they act like this I think back to an old quote I heard \"A wise man once said, if you understand why pizza is made round, packed into a square box and eaten as a triangle then you’ll understand women.\""
+    MCT "I’m still struggling."
+    "After they stopped hogging the couch, I worked my way in between them the best I could, having Akira’s beefy arm and her enormous legs pressed against me while Alice’s um..."
+    "Belly fat? I couldn’t tell and I didn’t want to ask— was smushing me from the other side."
+    MC "Hey, Akira, can you move your leg juuuust a little bit."
+    FMG "Kei-kun, I’m sorry my quads are the size of a small continent but you’re going to have to suck it up for the movie at least."
+    MCT "Maybe I’ll have better luck asking Alice..."
+    MCT "...On second thought, it’s not worth it."
+    show FMG happy
+    FMG "Everyone ready? This is going to be awesome!"
+    "Akira hit the play button and the night could finally start."
+    show FMG neutral
+    "The movie opened up with a middle-aged man walking in an old abandoned house and carefully scanning the living room."
+    MCT "Hm, it’s starting like any other horror movie. They even made the guy go into an abandoned house..."
+    MC "OH MY GOODNESS, HE’S DEAD!"
+    show WG surprised
+    show FMG happy
+    "It didn’t take long for what I think was a demon to pick him up by the neck and crush his head sending blood flying towards the walls."
+    MC "Holy crap... what the hell was even that?!?!"
+    WG "I-I didn’t think they would kill someone so soon. It hasn’t even been ten minutes!"
+    FMG "Oh don’t worry, it gets better."
+    "The movie seemed to calm down as for the next thirty or so minutes, nothing much really happened besides some world building and the occasional jump scare."
+    "While the jump scares weren’t the worst, they did make Alice jump a few times which was pretty funny."
+    show FMG neutral
+    "Well, it was... until her arm kept smacking me in the chest."
+    MC "Alice, can you please keep your arms down? You smacked me like three times."
+    show WG surprised-2
+    WG "Sorry, Keisuke, I didn’t think that one would have startled me so much."
+    show FMG happy
+    FMG "Heh, I see someone is getting the shakes."
+    show WG angry
+    WG "I was merely taken aback by an unexpected story element, not by these cheap tricks these films abuse for reactions."
+    FMG "Whaaaateveeeer you say, Alice."
+    MC "Not now, ladies. The movie is still playing. Please keep your hands to yourselves until the movie is finished."
+    show FMG neutral
+    show WG neutral
+    WG "Very well."
+    "The movie had begun to pick up speed and people started getting picked off by the spirit one by one. Some of the kills were pretty intense for a movie made in the early 2000s."
+    "There was this one where the mother was taking a bath and the demon jammed her hands through her chest and split her in half."
+    show WG surprised-2
+    show FMG surprised
+    "After that scene happened the three of us were equally invested. We had all leaned forward completely absorbed waiting to see what other twists and kills the movie would throw at us."
+    show WG neutral
+    show FMG neutral
+    WG "My theory is the son has the bracelet and is going to use its power to kill the people who murdered his sister."
+    MC "What? Nah, I can’t see that happening. His sister wouldn’t want that. I think he’s going to return the bracelet from where he got it so all of this stops. He’s already lost so much."
+    FMG "I’d give my theory, but I’ve seen this movie roughly ten times."
+    MC "Woah, did you hear that Alice? It’s the sound of no one asking."
+    show WG haughty
+    show FMG angry
+    MC "Ow! Why’d you pinch me?"
+    FMG "Cause you wanted to be an ass!"
+    MC "I mean yeah... but it was funny."
+    show FMG neutral
+    FMG "A tiny bit. Now no more talking, we are missing the good stuff."
+    show WG neutral
+    WG "Agreed. It would be wonderful if you could stop bothering Akira so we can enjoy the movie."
+    MCT "You didn’t even want to be here!"
+    MC "Sorry, won’t happen again... heh, silly me!"
+    MCT "I can’t believe they are actually bonding over a horror movie of all things..."
+    "The film continued and was starting to throw twist after twist at us. First, the son lost control of the bracelet and ended up having his body torn into pieces by a wood chipper. So that was very pleasant on the eyes."
+    show WG surprised
+    show FMG surprised
+    "Then the sister is revealed to be the spirit and that the wearer of the bracelet was never in control of her after all. So much was thrown at us and I don’t know if my heart can handle all this stress."
+    show FMG neutral
+    FMG "Be honest, did any of you see that coming?"
+    MC "Of course not. The whole time the movie is selling that if you can control the bracelet’s power the spirit’s power is yours to command. But now they’ve revealed that she was doing it for fun? Smells like bullshit to me."
+    show WG neutral
+    WG "I must agree with Hotsure-san here. While this has been quite the experience, this seems like a last-minute plot twist that they just tossed in, disregarding everything they’ve established previously."
+    FMG "I thought the same thing when I watched it the first time. It didn’t feel warranted. But remember we still have at least another forty-five minutes left. A lot can happen in that time."
+    MC "Don’t keep me waiting, unpause it!"
+    FMG "Yeah, yeah, I’m going... so pushy."
+    "As the movie went on, the pacing started to really pick up speed. People were dying at an alarmingly fast pace, a lot of them being a bunch of one-note characters that we only saw for maybe five minutes."
+    "They delivered some exposition, most of it was focused on how the sister became attached to the bracelet and how they needed to destroy the link between her and the bracelet."
+    "Of course, smashing the bracelet didn’t work because that would’ve been too easy."
+    "They had to head back to the house we saw at the start of the movie and locate the \"heart\", whatever that was."
+    "Everything got dark when the final girl arrived at the house with the shaman. The music got super eerie, it didn’t feel like the same film we’ve been watching for the last hour. The tension was so thick you could cut it with a knife."
+    MC "Akira, if I somehow in some way end up in your arms... please do not let go of me."
+    show FMG angry-2
+    FMG "Shhhhh, you’re ruining the moment."
+    show WG angry
+    WG "Hotsure-san, please keep your comments to yourself until the movie is over!"
+    MC "Sorry..."
+    "Akira and Alice" "Good, now be quiet."
+    MCT "Of all the things to agree on it’s this."
+    show FMG neutral
+    show WG neutral
+    "This is when the scares jumped from tolerable to the extreme. This one part had them walking down the stairs to the basement, each step was followed by the floorboards creaking."
+    "Then as that was going on they started hearing whispers from their dead friends about how they should’ve saved them, the lights flickering with each word."
+    show FMG surprised-2
+    show WG surprised
+    "Just before the shaman reached the bottom he was pulled back up by an unseen force, as he was getting dragged up the stairs his body was turned inside out and then thrown back down the stairs resting at the girl's feet."
+    MCT "How it must feel when Alice sits on someone... heh, good one Kei. High five."
+    "Unfortunately, the horrors didn’t end there. The shaman’s corpse stood up on its own and had started chasing the final girl. She quickly lost it by hiding in a locker, but hearing those footsteps drag across the stone floor was genuinely terrifying."
+    FMG "I don’t know how much more my heart can take."
+    WG "Same, that scene sent chills down my back."
+    MC "Shhhh, I’m trying to watch the movie!"
+    show FMG angry-2
+    show WG angry
+    "Akira and Alice" "No one asked!"
+    MCT "Man, I can’t have any fun."
+    show FMG surprised-2
+    show WG surprised-2
+    "The ending was closing in and was the spirit as the girl attempted to perform the ritual. We had all leaned back in our seats carefully watching the final act fall into place."
+    "And then... it happened."
+    show Chibuki neutral at Position(xcenter=0.5) behind FMG, WG
+    Chibuki "What are you guys watching?"
+    show FMG surprised
+    show WG surprised
+    show dummy with vpunch
+    "Movie-Watchers" "Holy shit!"
+    "I had shot out of my seat right into Akira’s arms."
+    MC "Stay away evil spirit! Take Akira instead! I didn’t do anything!"
+    show FMG angry behind Chibuki
+    show WG surprised behind Chibuki
+    FMG "Relax, it’s just Chibuki! ...I can’t believe you’d offer me up instead of protecting me!"
+    MC "It was an honest mistake, I swear. Nothing more than a slip of the tongue. Next time we have an encounter with a demon, I’ll put my life on the line for you."
+    FMG "Mhm..."
+    WG "Chibuki, what are you doing back here so soon? I didn’t expect you to be finished for at least another hour."
+    Chibuki "Well, I didn’t finish... I forgot some stuff and came back to grab it. You guys didn’t hear me open the door?"
+    MC "No! You almost killed me."
+    show FMG neutral
+    FMG "He’ll survive. I think we all needed a break anyway, it was getting pretty intense. You’d think with how often I’ve seen the movie, I would’ve gotten used to the scares by now, hehehe."
+    show WG neutral
+    WG "It was building up to something very horrifying. Maybe we should stop the flim here? I can go to bed peacefully not knowing how it ended."
+    FMG "Yeah, we can always finish it some other time. Did you enjoy it, Alice?"
+    MC "She did, I heard her swear. Watching movies is bringing out a whole other side of her."
+    show WG angry
+    WG "I said no such thing! It was from the movie!"
+    MCT "Heh, Okaaaaay."
+    show WG neutral
+    WG "Anyway, I’ll admit, I didn’t think I’d get so invested. Movies were never my thing, after this, I’ll consider giving more of them a chance."
+    WG "{size=-6}Just... not these ones.{/size}"
+    FMG "You love to hear it. What about you, Kei-kun?"
+    MC "It... it was something. I need to use the bathroom, I’ll be right back."
+    show FMG happy
+    FMG "I figured you already went after how badly you reacted to Chibuki."
+    MC "I’m leaving the seat up this time. You can fall in now."
+    show FMG angry
+    Chibuki "Seems to me that Keisuke can’t handle horror movies."
+    MC "You didn’t see the whole movie. You wouldn’t understand."
+    show FMG neutral
+    FMG "Actually, she does. She’s watched this one with me four times."
+    MC "..."
+    Chibuki "It was pretty funny watching you jump right into Akira’s arms. I didn’t think you could move that fast."
+    MCT "Good thing all this hair can hide my tears."
+    WG "Well, I should head back with Chibuki to help speed things along. I will admit, it wasn’t an entirely unpleasant experience."
+    FMG "Uh, you’re welcome, I guess? Hey, we should do this again! Maybe we can leave Kei-kun out next time, he was kinda crashing our style."
+    WG "That could be for the best."
+    MC "I am standing right here..."
+    "Akira and Alice" "We know."
+    MCT "Sticks and stones may break my bones but their words will always hurt me."
+    jump daymenu
