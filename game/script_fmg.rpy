@@ -7788,7 +7788,7 @@ label FMG050:
     jump daymenu
 
 label FMG051:
-    $setProgress("FMG", "FMG052")
+    $setProgress("FMG", "FMG056")
     $setTime(TimeEnum.DAY)
     play music FMG
     scene Lockers with fade
@@ -7959,7 +7959,192 @@ label FMG051:
     MCT "The future is looking bright, Keisuke Hotsure!"
     jump daymenu
 
-label FMG052:
+label FMG056:
+    $setProgress("FMG", "FMG057")
+    scene Gym with fade
+    play music FMG
+    "Normally I wouldn’t be looking forward to getting absolutely obliterated by Akira’s program for me, which seemed designed as a punishment."
+    "But today was arm day, which was probably the most fun, along with chest day. Actually, any day that isn’t leg day is fun by comparison."
+    show FMG neutral with dissolve
+    FMG "Alright, let me show you here. The key to big guns like these is to pump them up with some bicep curls."
+    FMG "There’s so many kinds, barbell, dumbbell, preacher curls, hammer curls, concentration curls..."
+    MC "We’re not going to do all of those today are we?"
+    FMG "All of them? I wasn’t even finished."
+    MCT "Kill me."
+    show FMG neutral at altMove(0.25)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "You really think Hotsure-san can handle all of this? Especially with those toothpicks..."
+    MC "{i}Ahem{/i}... for your information, Nat, I’ve put on some muscle lately. Women have been losing their minds when they see me in the halls."
+    "Akira and Nat didn’t say anything back. They looked at each other and rolled their eyes at me."
+    FMG "Whatever you say, Kei-kun."
+    Natsuko "Is he like this all the time?"
+    FMG "Sadly."
+    Natsuko "Hotsure-san, after you’re done with bicep curls, you’re working your triceps with me."
+    FMG "If you thought I was bad just wait, Nat’s routine will rip you a new one."
+    MCT "Quick, how do I get out of this? Wait, I’ll drop the weight on my foot."
+    MCT "Hm, but that could really freaking hurt... but working out with Nat could hurt more."
+    MC "Is it worth it...?"
+    "Akira & Natsuko" "Is what worth it?"
+    MC "OH! Uh... uh... If I should purchase some protein powder online. Yeah, that’s what I was talking about."
+    FMG "If you stick with us, you’ll see results soon enough."
+    show FMG flex
+    extend " Maybe not as big as yours truly, but still."
+    Natsuko "Really? That’s it? Come on, Akira."
+    show Natsuko flex
+    Natsuko "I’ll help you get arms like these, Hotsure-san."
+    show FMG angry
+    FMG "Oh, I did {i}not{/i} just hear what I think I did!"
+    Natsuko "You heard me. You don’t hold a candle to these arms."
+    FMG "Hm, okay... Keisuke, who would you want to train with?"
+    MCT "Get ripped apart training with Nat or get ripped apart training with Akira."
+    MC "I’ll train with-"
+    Natsuko  "Has he even been improving following your advice?"
+    if getSkill("Athletics") < 5:
+        FMG "Uhh...well, he’s a work in progress. Aren’t we all? Hehe..."
+        MC "I’m right here! Under the bus, where you threw me."
+        Natsuko "I’ll take that as a no."
+    else:
+        FMG "Kei-kun has improved a lot. I mean sure, he doesn’t have any natural talent for this sort of thing, but he’s definitely one of the more athletic guys at the school by this point."
+        MC "If only your natural talents extended to compliments."
+        Natsuko "Improvement should be expected, not a surprise."
+    Natsuko "Hotsure-san, if you’re serious about getting stronger, I’ll invite you to train with someone who actually knows what they’re doing."
+    show FMG angry
+    Natsuko "I promise better results一 and more pleasant company."
+    FMG "As if you know more. You couldn’t even do a lat spread before I came along."
+    show FMG flex #flex-2
+    FMG "But I can’t blame you, not everyone can be good at everything."
+    show Natsuko disappointed
+    Natsuko "Posing and proper form aren’t the same thing..."
+    MC "You have to admit, she’s killing it right now. You look great, Akira."
+    show FMG aroused
+    FMG "Thank you, Kei-kun."
+    MCT "Please crush my head."
+    show FMG neutral
+    FMG "If you think you know so much more and train so much better, then why don’t you try to beat me in a max curling contest?"
+    Natsuko "Are you being serious? I’ve seen what you can curl. I warm up with your max."
+    FMG "We both know that isn’t true."
+    MC "If you girls desperately want to know who's stronger why not do something like armwrestling?"
+    show FMG flex
+    FMG "I don’t see a problem with that."
+    Natsuko "No offense, Hotsure-san, but I don’t want to send her back to her dorm crying."
+    show FMG neutral
+    FMG "What’s that smell? It smells like chicken to me."
+    FMG "{i}Buk-buk-bagaaawk!{/i}"
+    MCT "If the two of them weren’t at least somewhat friendly with each other, I get the feeling Nat would’ve thrown the one of the weight benches at her."
+    show Natsuko disappointed
+    Natsuko "..."
+    show Natsuko neutral
+    Natsuko "Fine, if you want to really see who has the stronger arms, let’s take it to the table."
+    "Natsuko gestured with her thumb over to the corner of the gym where there was an arm wrestling table."
+    show FMG happy
+    FMG "Hell yeah! You’re on!"
+    "Akira and Natsuko walked side-by-side over towards the table, glaring at each other and sizing each other up along the way."
+    "That was until they had to walk past one of the machines that jutted out from the aisle and their combined shoulder widths were too wide to pass."
+    show FMG angry
+    FMG "Hey! I’m walking here."
+    Natsuko "Yeah, and it was too slow for my taste."
+    MC "May I offer a solution?"
+    "Akira & Natsuko" "What!?"
+    MC "How about... and I know this is going to sound crazy. BUT... you girls could go one at a time."
+    "Completely ignoring my genius, they continued to try and push past each other making no progress. Eventually, Akira was able to force her way through after she shoved her hand into Nat’s face, pushing her out of her way."
+    Natsuko "Try that again and watch what happens."
+    FMG "Maybe let the more important people go first!"
+    Natsuko "Whatever. Enough talk."
+    "Akira and Natsuko faced each other on opposite sides of the arm wrestling table."
+    "I’d only ever seen one of these while watching arm wrestling on TV. Like when you’re watching that weird crap on the sports channel at 2AM for some reason."
+    show FMG neutral
+    "When guys at school would arm wrestle, we’d just use the cafeteria table without anything to hold onto."
+    "This thing had two pads for their elbows to rest, a crossbar that indicated a pin, and handles on either side."
+    "Being able to hold on to those handles with the opposite hand lets people really torque their whole bodies into it."
+    "The thing had a metal frame, but it looked pretty chincy compared to the two hulking titans that had to hunch their shoulders slightly just to fit on the thing in order to square up with each other."
+    Natsuko "The rules are simple. Any part of your arm makes contact with the crossbar on your side, you lose. Wrists have to be straight when we lock hands at the start."
+    FMG "Yeah, yeah, I know. Don’t cry when I win."
+    Natsuko "In your dreams."
+    "Akira extended her hand out over the threshold after planting her elbow on the pad and gripping into the handle on the other side."
+    "She grasped it with a hooked wrist that made her bicep pop into a huge mound, even as her arm was mostly extended."
+    "Natsuko on the other hand took a rather odd grip on the handle, hooking her wrist over the top, with her forearm in a ‘gooseneck’ position."
+    "Natsuko reached for Akiras hand forcefully, aggressively wringing across the back of her palm and jostling her as she vied for a better hand position."
+    FMG "Hey! Two can play that game."
+    "The two massive mitts squirmed across the backs of their hands as each tried to crush the other while craning their wrist to sink into the other’s fingers more."
+    FMG "Cut it out! I thought you said our wrists had to be straight to start."
+    Natsuko "They do, this is just part of getting a good grip. Hotsure-san, you make sure our wrists are straight and set it right with your hands. When you let your hands go, that is the signal to start."
+    MC "Okay, let me take a look."
+    MCT "What a couple of cheaters."
+    MC "Hey, these don’t look straight at all, stop jockeying for position. It hasn’t started yet."
+    FMG "Well get your hands in there and set us then."
+    "I clasped my hands on opposite sides of this wad of fist. As if I was going to be able to move them into position, but since apparently I was the appointed official, they had to listen to me."
+    MC "Alright, straighten out."
+    "My efforts to corral their hands were futile, but like herding bulls, my annoying prodding was enough to get them to move into a fair position."
+    MC "Ready?"
+    "Akira & Natsuko" "Ready!"
+    "I released my hands from theirs as if I just dropped a water balloon and I didn’t want to get splashed. I wasn’t about to get in the way of two of those fists potentially slamming into me."
+    MC "GO!"
+    "In what seemed like a blur, an instantaneous explosion of force, the muscles in both their arms surged to life. The extended arms on the handles bulged to peak heights I’d never seen before."
+    "Similarly, their hands and wrists locked together, pulling taut what looked like steel cables writhing to life in their forearms as their hands slammed into each other like a head on collision."
+    "The air was silent, save for a few grunts from Akira."
+    FMG "{i}Erh!{/i}"
+    FMG "{i}Uffm!{/i}"
+    "Neither hand yielded any ground at first, but shortly after the initial burst, Natsuko turned her wrist in on Akira and began to lean back."
+    show FMG happy
+    "Akira had a renewed burst of energy once she saw Natsuko yield ground. She shifted her whole body towards the handle side in an attempt to put her full weight into it."
+    "Akira was putting everything into it. Sweat poured off her forehead while the veins on her neck bulged as much as the ones across her arms."
+    "Natsuko on the other hand... looked bored."
+    MCT "Shit!"
+    extend " Akira is losing and she doesn’t even realize it."
+    "Natsuko’s hand posted her arm in a strong position and was letting Akira wear herself out."
+    "It had to have been more difficult than her blank stare suggested though, right? The tendon on her bicep was so taught I thought I could slice my finger on it if I was dumb enough to reach in there."
+    FMG "{i}Huff...huff...{/i}"
+    show FMG angry
+    "It was like watching waves crash harmlessly against a cliff. Akira had the fury of a typhoon, but Natsuko was content to wait out the storm."
+    "Frustrated and exhausted, Akira dug in deep and gave one last pull."
+    FMG "{i}ERRRRAAAARRRRHHHGGG!{/i}"
+    "{i}Creeeaak{/i}"
+    "The table handled started to creak from the strain of her pulling."
+    "Natsuko’s expression changed from bored to what looked like concern."
+    FMG "ERHAA! AHH! Ahhh... ahhh... {size=-6}ahhh{/size}."
+    play sound Crash
+    MCT "Wait? What the hell just happened?"
+    "It was almost too fast to see, but the results spoke for themselves."
+    "Sensing Akira had finally wore herself down一 taking advantage of her lapse in focus from fatigue一 in a split second, Natsuko rolled her wrist over the top of Akira’s."
+    show FMG surprised
+    "Whipping Akira’s entire body in the opposite direction, she slammed Akira’s hand down on the table so hard it put a dent in the steel table like someone took a sledge hammer to it for hours."
+    show FMG angry
+    FMG "Hey! Why did you have to do that so hard?"
+    Natsuko "In my defense, I expected at least {i}some{/i} resistance."
+    FMG "Well now the table is ruined because of you."
+    Natsuko "Like you didn’t do your part."
+    "Natsuko pointed towards Akira’s handle, which had a small, but noticeable kink in it."
+    FMG "Whatever."
+    FMG "That was so cheap! If you think you’re so strong, why didn’t you just try to face me head on?"
+    Natsuko "Why waste my energy when I still have half a workout to get through? You’re so predictable, you just charge right into everything without thinking."
+    show FMG sad
+    Natsuko "I knew I could get you to waste all your energy without having to break a sweat. Because you want to prove yourself so badly, but you just end up making a fool of yourself."
+    Natsuko "It makes you sloppy and reckless. If I really wanted to, I could have broken your arm. Just because I don’t sugar coat things for you doesn’t mean I’m cruel."
+    FMG "Thanks... I guess."
+    "Akira didn’t just look defeated, she had the look of complete resignation. It was a stark contrast to the happy-go-lucky, unstoppable girl I loved. It made me sad to see her this way."
+    show Natsuko disappointed
+    Natsuko "{i}Sigh{/i}. Look, you have tenacity, there’s no doubt about that, but there’s more to being strong than brute force. If you don’t learn to control your body, you’ll never reach your potential."
+    show FMG neutral
+    FMG "Actual sincere heartfelt advice from Natsuko? Pinch me Kei, I must be dreaming."
+    MC "First time for everything, I guess."
+    Natsuko "Forget I said anything."
+    FMG "No, wait, for real. You have a point. I have been riding the pump from my new gains and how good it feels, I haven’t been doing enough to learn to control it."
+    FMG "If I don’t learn to control it, I’ll keep breaking stuff and I might even hurt someone. And even if I’m trying to lift something, if I don’t learn control, I’ll just be wasting my energy."
+    Natsuko "You catch on quicker than I would have suspected."
+    FMG "Would you be interested in training together some time?"
+    Natsuko "...I’ll think about it."
+    hide Natsuko with fade
+    "Natsuko went off to the opposite side of the gym to finish her workout."
+    show FMG neutral at altMove(0.5)
+    FMG "Whew, well I got my upper body workout in with all of that. They may not look like noodle arms but they sure feel like it now."
+    MC "So we’re done for the day?"
+    FMG "I’m done for the day. You still have twelve sets of curls left to do before we get to doing dips and skull crushers."
+    MC "What are skull crushers anyway? Is that where you put my head between your thi一"
+    FMG "No! Stop asking about that!"
+    MCT "One day..."
+    jump daymenu
+
+label FMG057:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -8668,6 +8853,7 @@ label FMGWG003:
     FMG "Everyone ready? This is going to be awesome!"
     "Akira hit the play button and the night could finally start."
     show FMG neutral
+    play music TremblingWhispers
     "The movie opened up with a middle-aged man walking in an old abandoned house and carefully scanning the living room."
     MCT "Hm, it’s starting like any other horror movie. They even made the guy go into an abandoned house..."
     MC "OH MY GOODNESS, HE’S DEAD!"
@@ -8769,6 +8955,7 @@ label FMGWG003:
     "Movie-Watchers" "Holy shit!"
     "I had shot out of my seat right into Akira’s arms."
     MC "Stay away evil spirit! Take Akira instead! I didn’t do anything!"
+    play music FMG
     show FMG angry behind Chibuki
     show WG surprised behind Chibuki
     FMG "Relax, it’s just Chibuki! ...I can’t believe you’d offer me up instead of protecting me!"

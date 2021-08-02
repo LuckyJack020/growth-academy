@@ -16277,7 +16277,7 @@ label AE070:
         MC "Ah- N-no, no, in a good way! I was trying to be flirty and I kinda-"
         show AE surprised #surprised-2
         AE "Oh! Um, right! Yeah, s-sorry, I kind of took that the wrong way."
-    "Shifting the weight of her hips a moment, she started to tilt foreward more."
+    "Shifting the weight of her hips a moment, she started to tilt forward more."
     show AE surprised
     AE "W-Woah!"
     MC "Ohp, I gotcha."
@@ -16931,7 +16931,7 @@ label AE074:
     MC "C'mere, you!"
     show AE surprised
     AE "Eek!"
-    "The two of us tumbled to the ground as I lunged foreward and grabbed Shiori, Tako herself almost dying of laughter as I fell on top of her."
+    "The two of us tumbled to the ground as I lunged forward and grabbed Shiori, Tako herself almost dying of laughter as I fell on top of her."
     AE "Ooph!"
     show Tomoko happy
     Tomoko "Ahh, he got ‘er!"
@@ -18002,6 +18002,254 @@ label AE078:
     jump daymenu
 
 label AE079:
+    $setProgress("AE", "AE080")
+    scene Dorm Interior with fade
+    MCT "Mm... mhn..."
+    "I squinted at the bright morning sun intruding on my restful sleep as it bathed the room in its light. I turned in my bed and got a good look at Shiori, resting silently as her every breath caused her body to undulate ever so slightly."
+    "Looking a bit further down, I was confused as to just how it was that our jerry rigged double wide bed was able to contain an ass of that magnitude. Most of Shiori’s blanket covered it, though she had pulled it up in the night to cover her back, leaving it exposed."
+    MC "Hmm..."
+    "As softly as I could, I moved some locks of hair out of her face as she slept, letting my hand caress her gently as I smiled."
+    MCT "She’s so beautiful. Seriously, I’m so..."
+    "My thoughts trailed off as my expression hardened. Moving a stray lock to the side, I looked at her eyes and saw them much redder and puffier than I’d first noticed. Then, meanwhile, I also noticed her pillow."
+    MCT "Are those... tears on her pillow?"
+    "It was clear she’d been crying in her sleep. I didn’t know what to say, if I should wake her up, however..."
+    MCT "I should make her something good for breakfast."
+    "I decided to show her I care in my own way."
+    MCT "How about some omurice? Moms specialty, so it can’t hurt to try making it myself."
+    "Slowly, quiety, I made my way out of bed, making sure not to disturb Shiori as I did. Making my way to the kitchenette, I opened the fridge to grab an egg, filled the rice cooker with rice and water, and began to cook."
+    "{i}Szzz{/i}"
+    "The egg sizzled as I cracked it over the skillet. Though I wouldn’t call myself a gourmet chef, I spent enough time watching mom to pick up on the movements. After a bit, everything was looking good, the rice set to be finished soon as I focused on getting everything ready."
+    "As I did, meanwhile, I heard the gentle rustle of sheets behind me, along with a quiet murmur."
+    show AE sad with dissolve
+    play music AE
+    AE "M-Mmhn."
+    MC "Morning."
+    AE "Morning..."
+    "I watched as she tried to push herself up a bit, but with a grunt merely laid down again."
+    show AE pondering
+    AE "Ah... we have class today, right?"
+    MC "Ehh... I think so, yeah."
+    AE "Haaah... This is something that can't be done in bed."
+    "Shiori spoke to herself in a monotone, almost empty voice."
+    AE "So don't keep trying to do it."
+    "As I began to walk over to help, she used all of her strength to get her fat ass to sway to the side, the momentum dragging her body to the ground as she clung tightly to the sheets. Her feet hit the ground first, and she was able to get some footing."
+    "Her big, plump ass collided with the drawer, making both the appliance and my lovers ass begin to wobble. Shiori let out a very audible moan before placing one hand to her mouth and her other to stabilize the nightstand."
+    show AE aroused-3
+    AE "I’m... fine."
+    MC "Got it."
+    "Nodding, I walked over and put down plates, chopsticks, and napkins at the table as Shiori stood up and looked herself over; putting her glasses on and using the back of her hand to pop her neck."
+    AE "Mmgrh..."
+    "{i}Click{/i}"
+    "As I turned off the oven, Shiori turned around to see what I was doing."
+    show AE surprised
+    AE "What’s this?"
+    MC "Um... breakfast?"
+    AE "You... made me breakfast?"
+    MC "I mean, yeah. It’s the least I could do."
+    show AE smile
+    AE "... Keisuke, that’s so sweet of you."
+    "She smiled warmly at me as she walked over and sat down, the chair creaking under her weight."
+    "{i}Crrrk{/i}"
+    MC "Let’s eat."
+    "She nodded and reached over for the chopsticks next to her plate. As she picked them up and placed them in her hands, however, she paused and slowly began to look them over."
+    show AE glasses-3
+    AE "What is that, do you see that?"
+    MC "Huh?"
+    AE "There’s a spot on these chopsticks."
+    MC "I don’t see anything. Maybe it’s a water spot?"
+    show AE pondering
+    AE "Oh."
+    "She sat completely still and quiet as I continued to eat. Noticing that she hadn’t moved an inch, however, I decided to see what was on her mind."
+    MC "Everything all good? I can get you some wooden ones if-"
+    "Shiori, apropos of nothing, stood up, supporting her weight by putting her hand on the counter, and walked over with the chopsticks to the sink as she began to wash them."
+    hide AE with dissolve
+    MCT "Heh, some things don’t change at all with that girl."
+    pause 0.5
+    show AE neutral with dissolve
+    "Sitting back down, she made sure not to press the enormity of her bottom on the seat before taking a bite."
+    AE "Mmph..."
+    MC "Good, right?"
+    show AE smile
+    AE "Mhm."
+    MCT "Every time she eats... I don’t think I’ve ever seen someone so appreciative of food before."
+    show AE sad
+    AE "I’m really sorry about last night, I swear I thought I’d brought my keys back with me from my time at the physical therapy room."
+    MC "No worries. Did they have you in there until 4 AM?"
+    show AE pondering
+    AE "Huh? Oh, no, no, I... I just wasn’t confident I was um... ready yet."
+    AE "I tried to walk like I usually did, and practiced for a few hours but... it seems like there’s nothing to be done."
+    MC "Wait, so you were alone training for that long? Do you know how dangerous that could have been if you- if you..."
+    show AE sad-2
+    AE "I know... I was just... I know."
+    "As tired as she looked, it was clear that she was using all of her mental power to try to explain herself to me. I winced a bit, deciding to instead let the conversation drop there."
+    MC "R-Right, sorry, I was just a bit nervous, is all."
+    AE "Hm."
+    AE "..."
+    show AE surprised
+    AE "Oh my god, I better find those keys; replacements are 10 dollars and I absolutely cannot afford to-"
+    MC "I got you covered if you need me to-"
+    AE "To get a repla- no, no, Keisuke you will not be doing that-"
+    MC "It’s all good! I totally can-"
+    show AE sad-2
+    AE "I do-{i}tch{/i}, I don’t need to be m-more of a burden on you, alright?"
+    MC "You’re not a burden! I swear."
+    show AE pondering
+    AE "..."
+    MC "Hey."
+    show AE neutral
+    AE "Hm?"
+    MC "Everythings going to be alright."
+    show AE smile
+    "She smiled, looking down at her food before taking the last bite."
+    "{i}Crrrrk{/i}"
+    show AE neutral
+    AE "Oookay. Right. That’s my cue to get up."
+    MC "Ah, alright. I’m just gonna finish eating."
+    "Inhaling, she stood up quietly and walked over towards the bathroom, grabbing her uniform as she did."
+    hide AE with dissolve
+    AE "I almost forgot to take it off last night. I didn’t want it to get wrinkled by me sleeping in i-"
+    "{i}Thunk{/i}"
+    AE "Gch-"
+    "I furroughed my brow as Shiori made odd sounds from the bathroom doorway. Finishing off my meal, I tried to crane my neck to see."
+    AE "Hrrg, mmph!"
+    AE "Haaah, Keisuke, a little help?"
+    MC "What’s up?"
+    "Getting up, I walked over to the doorway and, sure enough..."
+    show AE embarrassed with dissolve
+    MC "Oooh..."
+    "The room wasn’t built with her proportions in mind."
+    AE "Give me a little push?"
+    "I looked down at her butt, squeezed into the doorway with its full enormity with the fullness of her ass not only squeezed by her attire, but the doorframe itself."
+    "Though I hesitated for a moment, I put both of my arms against her fat booty, pushing my body in close."
+    show AE aroused-3
+    AE "Nyah~"
+    MCT "I don’t think I’ll ever get used to that."
+    MC "One, two, three!"
+    "I thrust forward into her soft, supple flesh with my entire body leading to me getting pushed back as it jiggled a bit from the force, along with a shaky moan from Shiori."
+    "This time, I put both hands on her cheeks and pushed forward into her rear as she was popped forward."
+
+    scene Bathroom with dissolve
+    show AE aroused-3 with dissolve
+    AE "Ach-! Hooh, um... t-thank you."
+    MC "No problem, I figure I should have started getting ready anyway."
+    scene black with fade
+    "As we took turns brushing our teeth and doing our morning routines, I couldn’t help that Shiori was taking everything rather slow."
+    "At first I thought it may have been because it wasn’t her room, but it quickly became apparent that she was being overly meticulous with everything."
+    scene Dorm Interior with fade
+    show AE neutral with dissolve
+    "After putting on her headband, she reached into her bag and went over herself with a lint roller as I put on my shoes."
+    MC "Be honest, how many of those hairs are mine?"
+    AE "None are mine."
+    MC "Ahhh, darn."
+    "{i}Shhk... shhk{/i}"
+    "Slowly... every single roll was done as slowly and methodically as possible. Eventually, however, she looked herself over again, craning her head to look at her own behind."
+    AE "No. No, this won’t do. There’s a few hairs on my skirt. I’ll have to take it off and ensure it’s cleaned properly."
+    MC "Oh, here, I can get it for you."
+    show AE aroused
+    AE "W-What? Oh, um... certainly."
+    "{i}Shhk... shhk{/i}"
+    MC "Ah, there’s um... some on your panties too."
+    show AE embarrassed
+    AE "My undergarments as well?"
+    MC "Y-Yeah, you may need to um..."
+    AE "... They’d be visible today, so..."
+    AE "C-Can you do them for me while they’re on?"
+    "I paused a moment, blushing as I stood there holding on to the lint roller, but after a second I took it and placed it on the tight, stretched sides of her pink panties."
+    "{i}Shhk... shhk{/i}"
+    "As the roller did its job, it brushed up against her sensitive skin, causing her to jitter a bit where she stood bending over. As I rolled it down onto the seat of her underwear, she began to subtly gyrate her hips."
+    show AE aroused
+    AE "Haahn... ooh~"
+    MC "S-Shiori..."
+    show AE aroused-4
+    AE "H-Huh? Ah! S-Sincerest apologies. T-That should be good."
+    MC "M-Mm."
+    "As I put the lint roller down, I walked up towards the door and got my shoes on, grabbing a hair tie from the top of my desk."
+    show AE pondering
+    AE "Ah, your hair."
+    MC "Hm?"
+    show AE neutral
+    AE "Don’t forget to brush it."
+    MC "Oh, I already did. I’m just going to put in this hair tie."
+    show AE smile
+    AE "Here, let me do it for you."
+    MC "Eheh, alright. You know how to do it?"
+    AE "Of course."
+    "I held my hair in place as Shiori fiddled with the tie in her hands, slowly taking my hair and putting it through, making sure that it wasn’t being unnaturally pinched. After a minute, however, I turned around and nodded in thanks."
+    MC "Alright, should be good."
+    show AE pondering
+    AE "Hm... are you sure? I can go over it again to make sure it’s properly situated in the center, or-"
+    MC "I can’t believe I’m the one saying this to you, but c’mon, we’re gonna be late."
+    show AE surprised
+    AE "Ah! Yes, good observation."
+    show AE pondering
+    AE "..."
+    AE "Anything else?"
+    MC "Anything else what?"
+    AE "Is there anything else we need to do before we head out?"
+    MC "Um... nah, I think I got everything ready."
+    AE "I see. I suppose that is the case."
+    MC "Y-Yeah."
+    AE "Hm."
+    MC "..."
+    show AE sad-2
+    AE "..."
+    MC "Is everything alright?"
+    AE "..."
+    show AE sad
+    AE "I... I don’t want to leave."
+    MC "You don’t want...?"
+    "I was puzzled until, of course, I watched her shrink back and stare at her own behind. Remembering the other day, and the outcome of the therapy..."
+    MC "Ah..."
+    AE "..."
+    "I understood why she wouldn’t want to be out and about in public yet."
+    MC "Shiori, just call in today. Take a day for yourself here. We can play some games, or even just do english reading like before."
+    MC "We can stay in, okay?"
+    AE "..."
+    show AE neutral-annoyed
+    AE "I refuse to be truant."
+    if getAffection("AE") >= 10:
+        AE "And I refuse to cause you to be truant as well."
+    else:
+        AE "And I refuse to let you be truant as well."
+    MC "Shiori..."
+    MCT "As expected of Shiori-chan..."
+    pause 1
+    MC "Understood."
+    AE "...I’m going to need to go out eventually."
+    AE "Let’s not make a habit of forestalling judgement, shall we?"
+    hide AE with dissolve
+    "As she opened up the door, she began to walk out but stumbled for a moment before adjusting her posture and waddling forward."
+    MC "Ah-!"
+    MC "... Hm."
+    "Though she left first, it wasn’t too hard to catch up with her... "
+
+    scene Hallway with fade
+    show AE embarrassed with dissolve
+    Student "No way... is that Matsumoto-san?"
+    Student "Why’s she walking all bent over like that?"
+    Student "Why is she swaying her butt like that? Are her arms out so she can keep balance?"
+    AE "..."
+    Student "At least I haven’t gotten as big as her..."
+    Student "Yeah, I don’t know what I’d do if I ever got anywhere near that big."
+    Student "Poor girl..."
+    AE "..."
+    Student "C-Come on that’s not... {i}pff{/i} f-funny."
+    Student "Don’t let her catch you laughing, she’ll cry for sure."
+    Student "Her butt shows from time to time, but now it’s just all sticking out... why even wear a skirt any more?"
+    AE "..."
+    Student "Ah, Matsumoto-san wears such lewd panties?"
+    Student "Unforgivable. Totally unforgivable..."
+    AE "..."
+    MC "Hey."
+    AE "Nngh..."
+    MC "We’re almost at class..."
+    MC "Don’t listen to anyone, okay?"
+    AE "..."
+    "She nodded quietly, her face completely beet red as she huddled in closer to me. We endured the backtalk and snickering all the way to class..."
+    "This would become the new normal."
+    jump daymenu
+
+label AE080:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -18961,7 +19209,7 @@ label AE015b:
     AE "Well, it's the truth."
     show AE neutral
     AE "Rules and regulations are important, to me they are some of the most precious things we have as a species, but they are so because they are meant to be reflections of natural law."
-    "Taking a few steps foreward, she ushered me on as I followed."
+    "Taking a few steps forward, she ushered me on as I followed."
     AE "What I care about is the *moral* law. And to understand the *moral* law, you must first be able to properly perceive the moral 'aught'. As I've heard it said, man doesn't differ greatly on things which are evil, but they very much so do on which evils are permissible."
     AE "However, reality is not simple. Morality very much so is, but the issue is that things can be so complex that it is difficult to perceive what one 'ought' to do. Indeed we can intuit morality, but just as well I believe one can use proper reason to understand the deeper facets of any situation."
     "As Shiori and I continued to walk, I became more engrossed in her topic. Admittedly, these were things I didn't think of all that often."

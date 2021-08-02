@@ -281,6 +281,17 @@ init python:
     )
     ost.manualDefineList.append(TwiAmb)
 
+    TremWhis = ost.soundtrack(
+        name = "Trembling Whispers",
+        path = "Audio/BGM/tremblingWhispers.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Horror Movie Night",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(TwiAmb)
+
     ## Base Template
     ######################################
 
