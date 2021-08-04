@@ -11399,7 +11399,6 @@ label AE050_after3:
 
 label AE051:
     $setProgress("AE", "AE052")
-    $setTime(TimeEnum.DAY)
     scene black with fade
     AE "Mmn."
     #*Creak SFX*
@@ -12335,7 +12334,6 @@ label AE053_c1_after:
 
 label AE054:
     $setProgress("AE", "AE055")
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music Schoolday
     "I'd woken up a bit earlier than usual, getting a pretty good amount of sleep. I made myself some breakfast as Daichi got up and threw on his clothes."

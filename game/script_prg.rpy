@@ -2089,7 +2089,6 @@ label PRG010:
 
 label PRG011:
     $setProgress("PRG", "PRG012")
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music Schoolday
     MCT "Okay..."
@@ -2628,7 +2627,6 @@ label PRG011:
 
 label PRG012:
     $setProgress("PRG", "PRG013")
-    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     play music Busy
     MCT "Crap!"
@@ -2906,7 +2904,6 @@ label PRG012:
 
 label PRG013:
     $setProgress("PRG", "PRG014")
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music Sunset
     "Double kill! Caustic finish!"
@@ -3270,7 +3267,6 @@ label PRG013:
 
 label PRG014:
     $setProgress("PRG", "PRG015")
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     play music Schoolday
     "The silence of the class finishing tests was interrupted by the sound of my stomach growling, though no one acknowledged it."
@@ -3622,7 +3618,6 @@ label PRG014:
 
 label PRG015:
     $setProgress("PRG", "PRG016")
-    $setTime(TimeEnum.DAY)
     scene Classroom with dissolve
     play music Schoolday
     HR "... that began in 1508, though more of the ceiling was completed between 1535 and 1541."
@@ -3837,7 +3832,6 @@ label PRG015:
 
 label PRG016:
     $setProgress("PRG", "PRG017")
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music Rain
     play sound AlarmClock
@@ -5112,7 +5106,6 @@ label PRG020_c2_2:
 
 label PRG021:
     $setProgress("PRG", "PRG022")
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     show AE neutral with dissolve
     play music Schoolday
@@ -5584,7 +5577,6 @@ label PRG022_c1_after:
 
 label PRG023:
     $setProgress("PRG", "PRG024")
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     play music Busy
     "As per usual, I didn't pay much attention in class, choosing instead to stare at the wall in front of me. Tashi-sensei was engrossed in his typical long running lectures, and didn't seem to care whether the class paid any notice."
@@ -6884,7 +6876,6 @@ label PRG027:
     $setSize(3)
     $setTimeFlag("size3")
     $setProgress("PRG", "PRG028")
-    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     play music Busy
     MCT "Music is best when it makes you go deaf later."
@@ -7065,7 +7056,6 @@ label PRG027_c1_after:
 
 label PRG028:
     $setProgress("PRG", "PRG029")
-    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     play music HigherEdu
     show PRG neutral with dissolve
@@ -9012,7 +9002,6 @@ label PRG036_c1_after:
 
 label PRG037:
     $setProgress("PRG", "PRG038")
-    $setTime(TimeEnum.DAY)
     scene Campus Center with fade
     play sound AlarmClock
     play music Busy
@@ -9918,7 +9907,6 @@ label PRG039_c1_2:
     jump daymenu
 
 label PRG040:
-    $setTime(TimeEnum.DAY)
     $setProgress("PRG", "PRG041")
     scene Campus Center with fade
     play music Peaceful
@@ -10106,7 +10094,6 @@ label PRG040_c1_after:
     jump daymenu
 
 label PRG041:
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     $setProgress("PRG", "PRG042")
     play music Rain
@@ -10257,7 +10244,6 @@ label PRG041:
     jump daymenu
 
 label PRG042:
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     $setProgress("PRG", "PRG043")
     play music Schoolday
@@ -10528,7 +10514,6 @@ label PRG042:
     jump daymenu
 
 label PRG043:
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     $setProgress("PRG", "PRG044")
     play music Busy

@@ -2408,7 +2408,6 @@ label afterchoice_WG014:
 
 label WG015:
     $setProgress("WG", "WG016")
-    $setTime(TimeEnum.DAY)
     scene Hallway with fade
     play music DayByDay
     "It was looking to be a nice spring day, with the gentle morning light breaking through the hallway windows."
@@ -5086,7 +5085,6 @@ label WG028_c1_3:
 
 label WG029:
     $setProgress("WG", "WG030")
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     "The time had come for my first date with Alice."
     "I had to admit, I had prepared for more than a few obstacles."
@@ -5780,8 +5778,6 @@ label WG031_c1_after:
     jump daymenu
 
 label WG032:
-    #Time: Morning
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
     "I mean, for myself the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... My life hadn't changed."
@@ -6820,8 +6816,6 @@ label WG036_c1_2:
 
 label WG037:
     $setProgress("WG", "WG038")
-    #Time: Morning
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     play music Peaceful
     "The day had come for my second date with Alice, with only a few lectures between now and then."
@@ -7442,8 +7436,6 @@ label WG038_FMG000:
     jump daymenu
 
 label WG039:
-    #Time: Morning
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     $setProgress("WG", "WG040")
     play music Peaceful
@@ -7866,7 +7858,6 @@ label WG040:
 
 label WG041:
     $setProgress("WG", "WG042")
-    $setTime(TimeEnum.DAY)
     play music Schoolday
     show Classroom with fade
     "While buying it without talking to Alice may have been risky on its own. It was an entirely different problem figuring out when to ask her about it."
@@ -10643,7 +10634,6 @@ label WG047_c5_after:
 
 label WG048:
     $setProgress("WG", "WG049")
-    $setTime(TimeEnum.DAY)
     scene Summer Guest Bedroom with fade
     play music Sunset
     "Coming inside after spending a full day on the beach, the three of us went to our respective chambers to unwind for a bit and get cleaned up before dinner."
@@ -13163,7 +13153,6 @@ label WG056:
     jump daymenu
 
 label WG057:
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music HallowedHalls
     MC "{i}Sigh{/i}..."
@@ -13538,7 +13527,6 @@ label WG057_afterchoice_2:
     jump daymenu
 
 label WG058:
-    $setTime(TimeEnum.Day)
     scene Woods with fade
     play music HigherEdu
     "The weather has been really nice recently. The scorching summer from our vacation at the beach had faded into a much more temperate fall climate over the island by now."
@@ -13966,7 +13954,6 @@ label WG058_c2_3:
 
 label WG059:
     $setProgress("WG", "WG060")
-    $setTime(TimeEnum.DAY)
     scene Dorm Interior with fade
     play music Busy
     "There were still a few hours left in the school day, but rather than having my mind on classes, I was looking forward to meeting up with Alice after they were done."
@@ -14291,7 +14278,6 @@ label WG059:
 
 label WG059S:
     $setProgress("WG", "WG060S")
-    $setTime(TimeEnum.DAY)
     scene Dorm WG with fade
     play music WG
     show WG neutral with dissolve
@@ -14582,7 +14568,6 @@ label WG059S_C2_1:
 
 label WG060:
     $setProgress("WG", "WG061")
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     play music HigherEdu
     "Everyone has their off days, but after yesterday, I couldn’t shake the feeling that something was up with Alice, and that she wasn’t telling me."
@@ -15783,7 +15768,6 @@ label WG061S:
 
 label WG061D:
     $setProgress("WG", "WG062")
-    $setTime(TimeEnum.DAY)
     play music Memories
     scene Dorm Interior with fade
     "I woke up early the next day. Needless to say, I had a restless night’s sleep as I agonized over if I had made the right decision or not."
@@ -15860,8 +15844,6 @@ label WG062:
 label WGBE001:
     if getProgress("WG") == "WG038": #fix for wrong progress issue, delete later
         $setProgress("WG", "WG037")
-    #Time: Morning
-    $setTime(TimeEnum.DAY)
     scene Classroom with fade
     play music Schoolday
     "I got to class early today."

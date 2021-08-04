@@ -4644,7 +4644,6 @@ label FMG032:
     jump daymenu
 
 label FMG033:
-   $setTime(TimeEnum.DAY)
    $setProgress("FMG", "FMG034")
    scene Classroom with fade
    "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
@@ -6505,7 +6504,6 @@ label FMG045:
 
 label FMG046:
     $setProgress("FMG", "FMG047")
-    $setTime(TimeEnum.DAY)
     scene Hallway2 with fade
     play music FMG
     MC "So, let me get this straight. You want to cook me an Okinawan dish that your mom used to make when you were a kid, but you don’t remember the recipe..."
@@ -6775,7 +6773,6 @@ label FMG046:
     jump daymenu
 
 label FMG047:
-    $setTime(TimeEnum.DAY)
     $setProgress("FMG", "FMG048")
     play music FMG
     scene Campus Center with fade
@@ -7575,7 +7572,6 @@ label FMG049:
 
 label FMG050:
     $setProgress("FMG", "FMG051")
-    $setTime(TimeEnum.DAY)
     $setSize(4)
     scene Dorm FMG with fade
     play music FMG
@@ -7789,7 +7785,6 @@ label FMG050:
 
 label FMG051:
     $setProgress("FMG", "FMG056")
-    $setTime(TimeEnum.DAY)
     play music FMG
     scene Lockers with fade
     "Today was the first day in the gym with Akira and her new size. I told myself it wouldn’t be {i}that{/i} bad... and it really wasn’t. Of course, I wasn’t able to keep up with her but with the routine she gave me today, I knocked it out of the freaking park!"
