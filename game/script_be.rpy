@@ -902,6 +902,7 @@ label BE008_after:
 label BE009:
     $setTimeFlag("size2")
     $setProgress("BE", "BE011")
+    $setBEOutfit(OutfitEnum.ATHLETIC-SOCCER)
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."
@@ -1707,8 +1708,9 @@ label BE015:
 
 label BE016:
     $setProgress("BE", "BE017")
-    scene Gym with fade
+    scene Auditorium with fade
     play music Busy
+    $setBEOutfit(OutfitEnum.ATHLETIC-BASKETBALL)
     "With nothing particularly exciting to do tonight, I decided to go and check on Honoka. She told me that there was a practice for the basketball club tonight. Would be good to give her encouragement."
     "The basketball court was fairly typical, from what I remembered of my old school."
     "Everything seemed pretty standard, although the stands for people to sit seemed to be permanently out. I was used to seeing ones that could be put away during school."
@@ -2752,6 +2754,7 @@ label BE021:
     play music HigherEdu
     show BE happy at center with dissolve
     $setProgress("BE", "BE022")
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     MC "Honoka, why am I here again?"
     BE "Kei-chan, you still haven't decided on a club yet. You sounded like you'd be into archery. So I thought you could come and try out."
     MC "Sure, no, I get that. What I mean is. Why are we out here in the woods?"
@@ -3427,6 +3430,7 @@ label BE023:
     scene Track with dissolve
     play music BE
     $setProgress("BE", "BE024")
+    $setBEOutfit(OutfitEnum.ATHLETIC-ARCHERY)
     "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
     "Compared to other clubs that Honoka had joined, there didn't seem to be much to archery in terms of different activities they did. Apart from making sure they used the proper technique, and firing at targets, there was no variety."
     "The benefit of actually being in the club was the extra protective gear they could get for their members. Apart from the arm guards and gloves, every student got their own chest guard as well. Which was vitally important for Honoka."
@@ -4016,6 +4020,7 @@ label BE025:
     scene Field with fade
     $setProgress("BE", "BE026")
     play music Schoolday
+    $setBEOutfit(OutfitEnum.ATHLETIC-ARCHERY)
     "As much as I wanted to be close to the action for Honoka's archery competition, I had to keep a good distance away from the archers. Not just for safety's sake, but the whistling happened frequently enough that it bothered me to no end."
     "It was a simple enough contest. No other school was involved. Just a way for the archery club members to see how they did against one another. The targets were placed at a competitive distance. "
     "Honoka said they'd only practiced at that distance once before. So this would be a challenge for her. Still, I was cheering her on. Quietly. Unlike a regular sport, archery liked to be nice and quiet."
@@ -6096,6 +6101,7 @@ label BE034:
     play sound ReleaseArrow
     pause 1.5
     play sound Thud
+    $setBEOutfit(OutfitEnum.ATHLETIC-ARCHERY)
     "With nothing important to do during the afternoon, I'd gone to one of Honoka's archery club meetings to watch her perform."
     play music HigherEdu
     "I suppose it was wrong to say it was unimportant. Considering what we'd done, and how we felt for one another, coming to support someone you cared about seemed to be pretty vital."
@@ -6114,6 +6120,7 @@ label BE034:
     MC "..."
     MC "It was rough today, yeah."
     "Honoka reached behind her shoulder and unstrapped her breast guard. With the garment on the ground, she rubbed at the side of her boob, wincing as she did."
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     BE "This is the biggest size they have. But even if they had one that fit, I just can't spread my arms out far enough to avoid smacking a boob without losing out on power."
     show BE angry
     BE "But a full-power shot means I have to be close which means, bowstring against the titty and ow, it really smarts..."
@@ -6478,6 +6485,7 @@ label BE035B:
     $setProgress("BE", "BE036")
     scene Baseball Field with fade
     play music BE
+    $setBEOutfit(OutfitEnum.ATHLETIC)
     #SFX: General chatter
     "When Honoka and I checked out the softball club, joining was contingent on one thing. She wouldn't be put into the team right away. They'd already split into two teams early in the year and played matches against each other on a regular basis."
     "They didn't want to put new players in the running right off the bat. So the first few meetings would be learning the basics and seeing where she performed."
@@ -6981,6 +6989,7 @@ label BE038B:
     scene Baseball Field with fade
     play music Busy
     #SFX: General chatter
+    $setBEOutfit(OutfitEnum.ATHLETIC-SOFTBALL)
     MC "Let's goooo, Honoka!"
     "It was a day off of classes, and what perfect weather for it too. Honoka and her softball club were doing a match within the club."
     "With the secrecy of the school as it was, they couldn't exactly go to challenge another academy's softball club. Honoka was first at bat. The pitcher was a rather short girl with impressive thighs."

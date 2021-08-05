@@ -1697,6 +1697,7 @@ label WG010_decline:
             jump WG010_accept
 
 label WG011:
+    $setTime(TimeEnum.EVE)
     scene Hallway with fade
     play music Schoolday
     "Another day done, and I find myself with no idea of what I want to do."
@@ -2191,7 +2192,7 @@ label WG013_c2:
     jump daymenu
 
 label WG014:
-    scene Gym with fade
+    scene Auditorium with fade
     play music Peaceful
     "Gym today was a free day, everyone finding something quasi-athletic to do. Afterwards I ended up being one of those called on to clean up the equipment lying around."
     "I wasn't alone, {i}per se{/i}, but with a handful of us spread across the entire gym it was dead quiet."
@@ -3463,6 +3464,7 @@ label WG019_arcade:
                 "I was entertained, at least."
                 jump daymenu
             "Hit the gym.":
+                $setTime(TimeEnum.EVE)
                 scene Gym with fade
                 "I went back to my dorm and changed into some workout clothes. Faded shorts, an old shirt."
                 "The gym wasn't too crowded, so I had my pick of the machines. Just like the arcade nothing really appealed to me, but going around the weight machines and jogging for half an hour on the treadmill was a better use of my time, I will admit."

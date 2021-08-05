@@ -1120,7 +1120,6 @@ label FMG012:
     jump daymenu
 
 label FMG013:
-    #Scene Afternoon
     $setTime(TimeEnum.EVE)
     scene Gym with fade
     play music Schoolday

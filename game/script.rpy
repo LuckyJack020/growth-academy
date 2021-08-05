@@ -134,17 +134,21 @@ init python:
         DRESS = "dress"
         NUDE = "nude"
         ATHLETIC = "athletic"
+        ATHLETIC-SOCCER = "athletic-soccer"
+        ATHLETIC-ARCHERY = "athletic-archery"
+        ATHLETIC-BASKETBALL = "athletic-basketball"
+        ATHLETIC-SOFTBALL = "athletic-softball"
         CASUAL = "casual"
-        SWIM = "swimsuit_athletic"
-        SWIMSUIT = "swimsuit_casual"
+        SWIM = "swim"
+        SWIMSUIT = "swimsuit"
         COW = "cow"
         PAJAMAS = "pajamas"
         SICK = "sick"
-        SUMEXT = "summer_ext"
-        SUMEXTSG = "summer_ext_sg"
-        SUMINT = "summer_int"
-        SUMINTSG = "summer_int_sg"
-        NOHAT = "no_hat"
+        SUMEXT = "summer-exterior"
+        SUMEXTSG = "summer-exterior-sunglasses"
+        SUMINT = "summer-interior"
+        SUMINTSG = "summer-interior-sunglasses"
+        NOHAT = "nohat"
 
     class ConditionEnum:
         EVENT, NOEVENT, FLAG, NOFLAG, AFFECTION, SKILL, TIMEFLAG, AND, OR, ROUTELOCK, NOROUTELOCK, VAR = range(12)
@@ -635,7 +639,7 @@ init python:
 
     def setBEOutfit(o):
         global BEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.SWIM:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ATHLETIC-SOCCER or o == OutfitEnum.ATHLETIC-ARCHERY or o == OutfitEnum.ATHLETIC-BASKETBALL or o == OutfitEnum.ATHLETIC-SOFTBALL or o == OutfitEnum.SWIM:
             BEOutfit = o
 
     def setFMGOutfit(o):
