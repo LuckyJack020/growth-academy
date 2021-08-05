@@ -134,10 +134,10 @@ init python:
         DRESS = "dress"
         NUDE = "nude"
         ATHLETIC = "athletic"
-        ATHLETIC-SOCCER = "athletic-soccer"
-        ATHLETIC-ARCHERY = "athletic-archery"
-        ATHLETIC-BASKETBALL = "athletic-basketball"
-        ATHLETIC-SOFTBALL = "athletic-softball"
+        ATHLETICSOCCER = "athletic-soccer"
+        ATHLETICARCHERY = "athletic-archery"
+        ATHLETICBASKETBALL = "athletic-basketball"
+        ATHLETICSOFTBALL = "athletic-softball"
         CASUAL = "casual"
         SWIM = "swim"
         SWIMSUIT = "swimsuit"
@@ -639,7 +639,7 @@ init python:
 
     def setBEOutfit(o):
         global BEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ATHLETIC-SOCCER or o == OutfitEnum.ATHLETIC-ARCHERY or o == OutfitEnum.ATHLETIC-BASKETBALL or o == OutfitEnum.ATHLETIC-SOFTBALL or o == OutfitEnum.SWIM:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ATHLETICSOCCER or o == OutfitEnum.ATHLETICARCHERY or o == OutfitEnum.ATHLETICBASKETBALL or o == OutfitEnum.ATHLETICSOFTBALL or o == OutfitEnum.SWIM:
             BEOutfit = o
 
     def setFMGOutfit(o):
