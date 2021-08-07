@@ -1308,6 +1308,7 @@ label FMG014_c1_1:
     MC "..."
     "I looked up to the heavens, as if they could answer my prayer for answers."
     scene Town with fade
+    play music BrightLights
     "By the time I got to the back of the bookstore, Akira... was all alone. I have no idea why I thought Daichi would be here."
     show FMG neutral with dissolve
     FMG "Hey dude, how'd it go?"
@@ -1531,6 +1532,7 @@ label FMGOPT016:
     MCT "Okay well, I'm just going to ignore my small outburst and follow Akira to town."
     FMG "Man, you're nuts, dude. Well, come on, let's see what the town has to offer."
     scene Town with fade
+    play music BrightLights
     "While walking down a street, we came across what appeared to be a shopping district dedicated to technology and electronics. Despite the fact we could pick literally any electronic store, retro shop, or even the otaku store to check out..."
     show FMG neutral with dissolve
     FMG "You know what, what the hell, let's check out this café!"
@@ -2303,6 +2305,7 @@ label FMG020:
     FMG "Totally."
 
     scene Town with fade
+    play music BrightLights
     "It took a while to make it to town, as by the time we got there it was already seven at night. It was a busy night for everyone, people minding their own business, having fun, and relaxing."
     "Akira and I managed to find the glowing lights of Lunar Burger, a fast-food chain whose theme was space fiction and the Moon."
 
@@ -2889,7 +2892,7 @@ label FMG022_c1_2:
 label FMG023:
     $setProgress("FMG", "FMG026")
     scene Town with fade
-    play music Schoolday
+    play music BrightLights
     $setVar("FMG023bored", 5)
     MC "You still haven't told me what we're going to see."
     show FMG happy with dissolve
@@ -5436,6 +5439,7 @@ label FMG040:
     FMG "Stop thinking about my ass! If we don't hurry the line is going to get long!"
     MC "Yes ma'am!"
     scene Town with fade
+    play music BrightLights
     show FMG happy with dissolve
     FMG "Awesome! Only a few people in front of us. I might have died of boredom if we had to wait any longer."
     MC "It's roughly a five minute wait. Are you telling me that one more minute would've been too long???"

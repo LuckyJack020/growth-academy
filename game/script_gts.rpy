@@ -4302,6 +4302,7 @@ label GTS026_c2_2:
 
 label GTS026_c3:
     scene Town with fade
+    play music BrightLights
     "Town was alive, but thankfully not crowded. We rounded a few corners and found our destination with nary a line, and I gave thanks in my head as I ushered Naomi in."
     scene Restaurant with fade
     "She stooped in, and after I followed suit and the door jangled behind me, I greeted the waitress; she kindly directed us to a table buffered at least one away from any other."
@@ -5752,6 +5753,7 @@ label GTS035_testpass:
     "With a nod from Akihiro, we begin heading for town."
 
     scene Town with fade
+    play music BrightLights
     "The town was quite busy for a weekend; it was a surprise to me but I could see it was very uncomfortable for Naomi. She was constantly having to look down, watching every single one of her delicately placed footsteps."
     MC "Would you like to do anything in particular?"
     show GTS_S neutral with dissolve
@@ -5800,6 +5802,7 @@ label GTS035_testpass:
     "They were a little on the pricier side at 3000 yen, but for such a large variety of pens, I felt that the price was fair. I paid for the pens at the checkout before returning outside."
 
     scene Town with fade
+    play music BrightLights
     "Naomi was still standing across the street, standing just as tall as the light poles. She still looked uncomfortable, but as I got closer, I noticed that she was breathing deeply to calm herself."
     "Occasionally, a pedestrian would walk past to stare at her in confusion. Once I returned to her side, I showed her the sealed case."
     show GTS_S neutral with dissolve

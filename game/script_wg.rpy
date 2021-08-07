@@ -3385,6 +3385,7 @@ label WG019:
     "But it was too nice a day outside to stay cooped up in my room. I could almost hear my parents getting on my case, that if I was so bored I should go out and find some entertainment of my own."
 
     scene Town with fade
+    play music BrightLights
     "I was kind of tired of the school grounds, so I walked to the nearby town. Still nothing caught my eye. It became more a question of, what was the least unexciting thing?"
     menu:
         "The arcade":
@@ -5306,6 +5307,7 @@ label WG030:
     "Having found something not related to school or work to talk about, the rest of the walk to town went by quickly."
 
     scene Town with fade
+    play music BrightLights
     show WG neutral
     "When we got to the town I felt a brief resurgence of dread."
     "Like I needed to make an excuse for how my plans for today couldn't possibly measure up to her normal expectations."
@@ -5397,7 +5399,9 @@ label WG030_cafe:
     "Our conversation went on from there."
     "Alice argued that if people demanded better cuisine there would be more of a market for real restaurants, not fast food places. And I brought up things like the need for quick-service food that was affordable."
 
+    $setTime(TimeEnum.EVE)
     scene Town with fade
+    play music BrightLights
     #time = dusk
     show WG neutral
     "The conversation ran off on its own tangents from there. Even when we were done with our food we were still chatting as we left the cafe and started walking around the town."
@@ -5470,7 +5474,9 @@ label WG030_rest:
     "Our conversation went on from there."
     "Alice argued that if people demanded better cuisine there would be more of a market for real restaurants, not fast food places. And I brought up things like the need for quick-service food that was affordable."
 
+    $setTime(TimeEnum.EVE)
     scene Town with fade
+    play music BrightLights
     #time = dusk
     show WG neutral
     "The conversation ran off on its own tangents from there. We were still chatting as we left the restaurant, and I would have enjoyed just walking around the town and talking."
@@ -6140,6 +6146,7 @@ label WG034:
     "I went back to my dorm to drop off my backpack, then I headed off for town."
 
     scene Town with fade
+    play music BrightLights
     "When I got to town I had to walk around a bit before I found what I was looking for."
     MCT "Barbershop's by the arcade, and there's a menswear store by the movie theater."
     MCT "There's also a department store across from the cafe. I could probably find something to wear for less money over there..."
@@ -7088,6 +7095,7 @@ label WG038:
 
 label WG038_Part2:
     scene Town with fade
+    play music BrightLights
     "I finally reached the arcade, feeling like I had run a marathon."
     show WG neutral with dissolve
     WG "Wow you look spent. Did you miss the bus?"
@@ -9638,6 +9646,7 @@ label WG045_wine:
     WG "It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
     MCT "This monologue isn't going to end any time soon, is it?"
     scene Town with fade
+    play music BrightLights
     show WG neutral with dissolve
     "Reaching the town was a sad end to the scenic walkways."
     WG "Furthermore..."
@@ -9895,6 +9904,7 @@ label WG045_wine:
     Misaki "I do hope you two enjoyed your time here."
     "Alice and I headed towards the exit."
     scene Town with fade
+    play music BrightLights
     show WG neutral with dissolve
     WG "Keisuke..."
     MC "Yes?"
@@ -12235,6 +12245,7 @@ label WG053_c3_after:
     if getFlag("WG053_c2_1"):
         $setTime(TimeEnum.NIGHTLIGHTS)
         scene Town with fade
+        play music BrightLights
         "By the time the play finished, the sun had already set behind the horizon. The final bus back to the academy had already departed, thus leaving Alice and I to walk back."
         show WG sad with dissolve
         WG "Hey Kei, I want to thank you for tonight."
@@ -12343,6 +12354,7 @@ label WG054_c1_after:
     scene black with fade
     "It didn't take too long to arrive at our destination."
     scene Town with fade
+    play music BrightLights
     show WG neutral with dissolve
     "Once off the bus she directed me towards a shop I hadn't noticed before. The sign read 'Cold as Ice' leaving me a bit confused as to what this place could be serving."
     WG "Have you ever tried rolled ice cream?"

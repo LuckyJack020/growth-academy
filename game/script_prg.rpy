@@ -4687,6 +4687,7 @@ label PRG019_c1_1:
     "Aida and I hurried toward the bus stop, catching it just in time, and rode into town, passing by the lush springtime trees as we went."
 
     scene Town with fade
+    play music BrightLights
     "Soon the bus screeched to a halt in the middle of the main street."
     MC "Here we are!"
     show PRG surprised with dissolve
@@ -7277,6 +7278,7 @@ label PRG029:
     PRG "But, I... urgh."
 
     scene Town with fade
+    play music BrightLights
     "By the time we got into town, the bus still hadn't picked anyone else up, and there was hardly anyone walking down the streets."
     show PRG neutral at Position(xcenter=0.25, yalign=1.0)
     show BE neutral at Position(xcenter=0.75, yalign=1.0)
@@ -7355,6 +7357,7 @@ label PRG029:
     "The three of us made our way around the arcade, playing different games as we went. Honoka generally came out on top, but whenever we played a fighting game, Aida completely destroyed us."
 
     scene Town with fade
+    play music BrightLights
     show PRG neutral at Position(xcenter=0.25, yalign=1.0)
     show BE happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -9874,6 +9877,7 @@ label PRG039_c1_2:
     Owner "You three are good to go. Have a good one!"
 
     scene Town with fade
+    play music BrightLights
     "As the door shut behind us, Honoka turned back and blew a raspberry towards the shop."
     show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     BE "I'd take any bet that that guy has never even felt a woman's touch before."
@@ -10867,6 +10871,7 @@ label PRG044_c1_2:
     PRG "Y-You too."
 
     scene Town with fade
+    play music BrightLights
     show PRG neutral with dissolve
     "The two of us left with bags in hand, heading back out to the half deserted sidewalk."
     PRG "Do you like your new clothes, Keisuke?"
@@ -12981,6 +12986,7 @@ label PRG051_c1_after:
     "Turns out we didn't have long to wait. The bus pulled up about a minute later. I took Aida's hand and helped her up the steps, before hopping on myself."
 
     scene Town with fade
+    play music BrightLights
     "Upon getting off in town, Aida ran her hands down her dress and fluffed it out a bit. I brushed a few stray hairs away from my button down."
     if getFlag("PRG044_c1_2"):
         show PRG surprised with dissolve
@@ -13164,6 +13170,7 @@ label PRG051_c1_after:
     "After we'd both finished up and paid, I offered Aida a hand and led her out of the restaurant."
 
     scene Town with fade
+    play music BrightLights
     "The sun had set while we were eating, leaving us with a crisp, calm night. The town was quiet, save for the hum of idle chit chat from restaurants."
     show PRG happy with dissolve
     PRG "Ugh. I'm stuffed."
@@ -20469,6 +20476,7 @@ label PRG030Z:
     MCT "Geez. Girl must be hungry."
 
     scene Town with fade
+    play music BrightLights
     "Aida and I didn't speak more than a handful of words the entire walk and bus ride into town. And, when we did speak, it was little more than simple, idle small talk and throwing out ideas for our paper."
     "By the time we got off of the bus, my stomach was really letting me know that I needed something of sustenance ."
     show PRG worried with dissolve

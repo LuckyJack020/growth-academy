@@ -7725,6 +7725,7 @@ label AE037_c1_after:
     "We continued on, and after walking for a little bit more, we'd reached the town."
 
     scene Town with fade
+    play music BrightLights
     show AE neutral with dissolve
     "The afternoon brought with it plenty of students, free from their scholarly duties and willing to spend whatever money they had either earned or been sent in order to gather food, luxuries, and experiences."
     "As the two of us walked through town, we also gathered the occasional murmur from the odd student here or there."
@@ -7941,6 +7942,7 @@ label AE038:
     scene black with fade
     "We continued to walk, and eventually we reached the town."
     scene Town with fade
+    play music BrightLights
     show AE neutral with dissolve
     "The town was much more calm today. We walked around for a bit, taking in the layout of the different shops, and we soon found ourselves in a part of the town neither of us had ventured to yet."
     MC "Oh cool, there's the convenience store! It's the same chain as the one my dad ran."
@@ -8148,7 +8150,7 @@ label AE039:
     $setTime(TimeEnum.EVE)
     $setProgress("AE", "AE040")
     scene Town with fade
-    play music Schoolday
+    play music BrightLights
     show AE neutral with dissolve
     "As Shiori-chan and I walked through town, the murmur of bustling crowds and the gentle rumble of vehicles permeated the air, giving me a distinct feeling of nostalgia for home."
     #%If the area hasn't been seen before%
@@ -8465,6 +8467,7 @@ label AE040:
 
     #SCENE STORE FRONT/STREET
     scene Town with fade
+    play music BrightLights
     show AE sad with dissolve
     "I traveled through the mountains high and the valleys green, through the streets paved with cobble and stone."
     "Indeed, there have been many men who have done so for the sake of booty, yay. But nary a man to do so for the promise of panties. This is my creed."
@@ -8694,6 +8697,7 @@ label AE041:
     stop music
 
     scene Town with fade
+    play music BrightLights
     "We exited the school, went through the valley, and made our way to the commercial district. The closer I got, the more amped I became."
     "After spending all night reading up on the rules and watching games online, I'd become more motivated than ever to win. My soul felt like it was on fire as I experienced a surge of energy like I never had before."
 
@@ -9411,6 +9415,7 @@ label AE044:
         "Whether it was because of her smiling face or the exposed flesh popping out of a small rip in her skirt, I couldn't tell."
 
     scene Town with fade
+    play music BrightLights
     "As we made our way out of the park, we had just the right sight awaiting us."
     MC "Ah, there we go! I knew I smelled something good."
     show AE happy with dissolve
@@ -10786,6 +10791,7 @@ label AE049:
     Tako "This is going to be hilarious."
 
     scene Town with fade
+    play music BrightLights
     MC "D-did we just dine and dash?! What was that? Why did that waitress-?!"
     "I didn't continue my question, because I could tell it would fall on deaf ears. Yureno-san was grinning ear to ear, enveloped in whatever situation she's seeing unfold."
     "We stopped in front of the Kazoku-mart, and just waited until out from the door came..."
@@ -14648,6 +14654,7 @@ label AE062:
     BE "Check please!"
 
     scene Town with fade
+    play music BrightLights
     show BE neutral at Position(xcenter=0.25, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve

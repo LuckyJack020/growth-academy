@@ -1343,6 +1343,7 @@ label BE012:
     "I pointed in the opposite direction."
     BE "Oh. Heh. Okay, fixed!"
     scene Town with fade
+    play music BrightLights
     show BE neutral at center with dissolve
     "Now that she was headed in the right direction, I followed Honoka to the bus stop, where we were just in time to hop aboard. With a little more hop in Honoka's case. After a few stops, we ended up in a small shopping district in the city."
     MC "Now, if I remember the directions right, we just go this way, and take a right, and we should be there soon."
@@ -2514,6 +2515,7 @@ label BE020_c1_after:
     "We sat together during the short trip, watching the nice atmosphere. Seichou Academy was nestled in quite a nice area. Which was probably intentional."
     "A school would have a tough time helping the self-esteem of young people with odd quirks if it was dingy."
     scene Town with fade
+    play music BrightLights
     "Eventually our bus stopped, and we found ourselves in the middle of a small street, with several people walking around, coming in and out of various buildings."
     MC "Alright. We're here. You said the restaurant was close?"
     show BE neutral
@@ -4603,6 +4605,7 @@ label BE027:
     "The short ride there was uneventful. Honoka and I sat next to each other on the next bus we could grab, and made our way to the stop nearest her chosen shop."
 
     scene Town with fade
+    play music BrightLights
     MC "'Clothes and Shoes'. That's... is that really the name of the shop?"
     show BE neutral with dissolve
     BE "Yep. Nice isn't it? Straightforward and to the point. Would be better if more things were like that. 'Let's go to 'Grocery Store' to get some food for dinner and then we'll head to 'Movie Theater' later.'"
@@ -7888,6 +7891,7 @@ label BEGTS003:
     GTS "You two can lead the way. I'll make sure my strides aren't too long~"
 
     scene Town with fade
+    play music BrightLights
     "Honoka and I walked alongside each other as we made our way off campus. True to her word, Naomi followed behind us. Her walking was intentionally slow, her strides deliberately short."
     show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Naomi's shadow slowly crept up behind us as we stopped at one of the intersections to get our bearings."

@@ -290,7 +290,18 @@ init python:
         cover_art = False,
         unlocked = True
     )
-    ost.manualDefineList.append(TwiAmb)
+    ost.manualDefineList.append(TremWhis)
+
+    BriLi = ost.soundtrack(
+        name = "Bright Lights",
+        path = "Audio/BGM/BrightLights.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Town Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(BriLi)
 
     ## Base Template
     ######################################

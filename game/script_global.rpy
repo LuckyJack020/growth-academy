@@ -762,6 +762,7 @@ define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
 define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
+define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
 
 define audio.BrandenburgNo4 = "Audio/BGM/brandenburgno4.mp3"
 define audio.MoonlightSonata = "Audio/BGM/moonlightsonata.mp3"
