@@ -186,6 +186,7 @@ image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
 image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].png")
 image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].png")
 image Courtyard GTS = "Graphics/ui/bg/NYI.png"
+image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].png")
 
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
