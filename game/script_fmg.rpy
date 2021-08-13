@@ -7787,7 +7787,7 @@ label FMG050:
     jump daymenu
 
 label FMG051:
-    $setProgress("FMG", "FMG056")
+    $setProgress("FMG", "FMG052")
     play music FMG
     scene Lockers with fade
     "Today was the first day in the gym with Akira and her new size. I told myself it wouldn’t be {i}that{/i} bad... and it really wasn’t. Of course, I wasn’t able to keep up with her but with the routine she gave me today, I knocked it out of the freaking park!"
@@ -7955,6 +7955,303 @@ label FMG051:
     show FMG flex
     extend " When I’m more comfortable at this size, that is."
     MCT "The future is looking bright, Keisuke Hotsure!"
+    jump daymenu
+
+label FMG052:
+    $setProgress("FMG", "FMG056")
+    scene Track with fade
+    play music FMG
+    "For today’s exercise Akira wanted to train abs today... it was supposed to be leg day but I convinced her to move that to another day."
+    show FMG neutral with dissolve
+    FMG "We can start with crunches followed by mountain climbers and then we can finish it off with hollow holds. I know you haven’t done hollow holds before so I’ll teach you the proper form when we get to that."
+    FMG "For now, let me see how you do crunches."
+    MC "Prepare to be blown away."
+    "I laid on my back, bent my knees, and rested my arms at my side. I did one whole sit-up before Akira came over to judge me."
+    show FMG sad-2
+    FMG "Yeesh, you’ve only done one and your form is trash."
+    MC "Uh, no it’s not... This is exactly what you do."
+    show FMG neutral
+    FMG "Let me show you how it’s really done, scrub."
+    MCT "Scrub? Excuse me."
+    FMG "Okay, okay get back down on the ground and follow me."
+    FMG "You were flat on your back which was a good start, it’s the easiest part. Now bend your knees like this and your feet need to stay flat. I saw you coming off the ground."
+    MCT "You can’t mess up any exercise when she’s around..."
+    FMG "You can cross your arms across your chest or keep your hands by your forehead, whichever is easier for you."
+    MC "Hm, arms across the chest it is."
+    FMG "And now we contract our abs, slowly bringing our ribcage close to our hips. It’s important to remember that your lower back stays on the floor."
+    "I couldn’t admit that I wasn’t fully listening. It’s been about four days since Akira nearly doubled in size and seeing her do... pretty much anything was amazing. She leaves me speechless all the time."
+    show FMG angry
+    FMG "Stop gawking at my body and do the exercise!"
+    "Well, maybe not all the time..."
+    MC "Not my fault you chose to be incredibly gorgeous."
+    show FMG aroused
+    FMG "Aww, thanks, Kei-kun."
+    show FMG neutral
+    FMG "Flattery won’t get you out of the crunches though."
+    MC "Eh, it was worth a shot. Can’t blame a guy for trying."
+    "As I started the exercise, Akira kept inching closer."
+    MC "What are you doing? I can’t keep doing this if you’re in my no-no square."
+    FMG "Hush, close your eyes and keep going."
+    MC "Uh, sure thing."
+    MCT "As if closing my eyes adds any benefit to crunches. I might not be a bodybuilder but you can’t fool me."
+    MC "Is this bet-"
+    "The sneaky devil baited me into a kiss."
+    pause 1
+    show FMG aroused
+    FMG "Yes, it is much better. You look good when you do your workout properly."
+    MC "Heh, well I learned from the best."
+    show FMG flex
+    FMG "You sure did."
+    show FMG neutral
+    FMG "Now, pick up the pace, slowpoke― my grandma could do this faster than you."
+    MC "You don’t rush perfection. If you want the proper form you’ll have to wait patiently and now I feel like going even slower."
+    pause 3
+    show FMG surprised
+    FMG "Oh crap! I just remembered what day it is! Come on, Kei!"
+    MC "But I didn’t even finish a set..."
+    $setSkill("Athletics", 1)
+    show FMG angry
+    FMG "There’s no time! She’ll kill us both."
+    MC "What are you on about?"
+    pause 2
+    MC "OOOOOOOH, it’s Saturday! Oh no... quick, pick me up— we need to go!"
+    show FMG neutral
+    FMG "I was thinking the same thing."
+    pause 1
+    MC "This really is an effective way of transportation."
+    show FMG happy
+    FMG "Yeah, it’s a lot of fun carrying you and I don’t have to see your girly ass run. There is nothing but positives."
+    MC "Hey man, it’s gotten better. I know it was bad in the past, but not anymore."
+    show FMG neutral
+    FMG "It still needs more work, you need to avoid rotating your torso and slumping your shoulders."
+    FMG "But we can worry about this later... and can you stop moving around? You’re making it hard to hold you."
+    MC "Sorry, your bicep is hitting me in the face."
+    FMG "Suck it up buttercup they’re only getting bigger."
+    MC "{i}sigh{/i}... I guess."
+    scene black with fade
+
+    pause 1
+    scene Dorm Exterior with fade
+    MC "You got here in record time, very impressive."
+    show FMG flex with dissolve
+    FMG "Have you seen these legs? This was nothing."
+    show FMG neutral
+    FMG "Let me put you down... Soooo, you want to knock?"
+    MC "Not really, no. But it’s probably for the best that I do it. Knowing Alice she’ll be mad we’re late and that we forgot. Hopefully, she won’t be as mad if she sees me first."
+    FMG "Good idea. The shock from her seeing me this big could also make her forget."
+    MC "Ooh, I didn’t even think of that... yeah, yeah this is perfect. There is no way she’ll be able to yell at us because she’ll be so intimidated by the size of you."
+    FMG "Nah, no way we get that lucky."
+    "We were so distracted about thinking of ways to avoid getting yelled at, we didn’t see Alice sitting on the bench... across from us."
+    show FMG neutral at altMove(0.75)
+    show WG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    WG "You two have some nerve! You should’ve been here twenty minutes ago!"
+    show FMG sad
+    FMG "Sorry, Alice..."
+    MC "Take it easy, Alice, we both forgot. But we are here now... and um, that’s what matters."
+    show FMG neutral
+    FMG "Y-Yeah, Kei-kun is right! So we should put this mistake behind us so we can get me some proper clothes!"
+    show WG stern
+    WG "Fine, let’s hurry this along. I have other things I have to do."
+    scene black with fade
+    pause 1
+
+    scene Dorm WG with fade
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    FMG "You do this in your room? Shouldn’t you have like I don’t know... your own building for this?"
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "In time. But at the moment it isn’t a concern to me. Chibuki, we have a customer!"
+    WG "Chibuki knows what she’s doing and will get you fitted in no time."
+    MC "So... uh, do you not do the measurements or anything anymore, Alice?"
+    show WG worried
+    WG "Unfortunately, due to being like... this"
+    extend "— it has become increasingly difficult to do the measurements myself."
+    FMG "You can count on Chibuki... sometimes. She isn’t the hardest worker but she gets the job done!"
+    hide WG
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0)
+    Chibuki "I’m standing right here..."
+    show FMG surprised
+    FMG "When did you get here?!?!"
+    Chibuki "I’ve been here the whole time, you probably couldn’t spot me with those big muscles blocking everything."
+    show FMG happy
+    FMG "Heh, they are pretty cool though. My bicep is bigger than Kei’s head now."
+    MCT "Please... one time is all I ask."
+    hide FMG
+    show WG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    WG "Chibuki, please take them to the fitting area."
+    Chibuki "Come on, you two. Let’s get this over with."
+    hide WG
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    FMG "Sound a bit more enthusiastic, torpedo-nips."
+    show FMG flex
+    FMG "You have the pleasure of measuring these bad boys today! Who wouldn’t want to do that?"
+    Chibuki "..."
+    Chibuki "Me."
+    MC "Well... I-I can give it a shot if you don’t want to do it."
+    Chibuki "And get yelled at? I’ll pass, I need this gig."
+    show FMG neutral
+    FMG "Ah, come on. Alice might be a hardass like... only eighty percent of the time, heh."
+    Chibuki "Meh, it’s nothing to worry about. Now stand here so we can get started, I’m trying to get out early today."
+    FMG "Sheesh, no need to be so pushy."
+    hide Chibuki
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    WG "You know the drill Chibuki. I've taught you well enough. I trust you to be accurate with the measurements. Let me know what they are and I will write them down."
+    hide WG
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0)
+    Chibuki "Ah, I almost forgot. You have to take off your clothes, Akira."
+    MCT "Ah, yeah, I’m loving this already."
+    Chibuki "You can keep your bra and underwear on for now."
+    MCT "Can’t win ‘em all..."
+    "Chibuki pulled out a measuring tape while Akira stripped down, revealing her new chiseled body."
+    MCT "It never gets old..."
+    "The size difference between Akira and I was staggering. With her standing next to Chibuki it was even more jaw-dropping."
+    Chibuki "Keisuke, how do you even do...anything with this giant? One hundred seventy-three for her shoulders, Alice."
+    WG "Got it."
+    MC "You should see her in action! She crushed a rock with her bare hands the other day. {size=-6}Shame, it wasn’t my head.{/size}"
+    hide FMG with dissolve
+    Chibuki "Uh-huh..."
+    show WG surprised-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    WG "Hmm?..."
+    MC "IS WHAT I WOULD’VE SAID IF I WAS INTO THAT! Hahaha...ha"
+    MCT "As always, you’ve saved the day, Keisuke. Well done."
+    hide WG
+    show FMG sad-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    FMG "I’m going to buy a muzzle for you."
+    MC "Heh, whoopsies."
+    show FMG neutral
+    MC "So *cough*... what’s next?"
+    Chibuki "Arm length. Akira stick your arm out like this for me."
+    FMG "No problem."
+    Chibuki "Thanks. Let’s see here... seventy-seven centimeters."
+    MC "Sorry to interrupt, but can you measure mine real quick?"
+    "Chibuki looked over to Alice to get her approval to which Alice responded with a nod."
+    Chibuki "Same thing Keisuke. Arm out like this... thanks."
+    Chibuki "Seventy-one."
+    show FMG flex
+    FMG "Ha, I’m a giant compared to you, Kei-kun."
+    MC "Pffft, you got a few couple centimeters on me. What I lack in height, I make for elsewhere."
+    Chibuki "Dude... gross."
+    WG "Hotsure-san!"
+    show FMG sad-2
+    FMG "..."
+    MCT "!"
+    MC "Wow, I can’t believe you guys took it like that. Freaking perverts..."
+    show FMG neutral
+    MCT "Heh, fantastic cover-up."
+    Chibuki "Ignoring that, time for your waist, Akira. Put your hands above your head this won’t take long."
+    pause 1
+    Chibuki "Jeez, your abs are defined."
+    show FMG flex
+    FMG "Heh, thanks. We don’t do core exercises as often as we should though."
+    MCT "Are you sure about that?"
+    show FMG neutral
+    FMG "Guess we’ll start doing it more often, Kei-kun."
+    MC "Sweet!"
+    MCT "Maybe she’ll forget!"
+    Chibuki "Ninety-one centimeters."
+    WG "Got it."
+    FMG "I never get tired of hearing these numbers... it is so cool to be this big!"
+    Chibuki "Almost done, two more measurements and we can call it a day."
+    hide Chibuki
+    show WG neutral at Position(xcenter=0.75, yalign=1.0)
+    WG "I’ll put this in as an express order to have your uniform ready by tomorrow, Akira. You’ve been playing it dangerously close with this ripped one."
+    show FMG sad
+    FMG "Yeaaaah, I was lucky the school was so lenient."
+    show FMG neutral
+    FMG "At first they didn’t believe me until they saw me. It’s a recurring thing, I guess."
+    WG "I was a little taken aback myself."
+    hide WG
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0)
+    Chibuki "I hope you told them about the three doorknobs you crushed. Do you know how hard I have to turn the handle to get into the bathroom?"
+    MC "...You broke two more doorknobs?"
+    show FMG happy
+    FMG "Heh, that’s not really important right now! Chibuki, don't you have to measure my hips or something?"
+    "Chibuki rolled her eyes and sighed."
+    Chibuki "You forgot... Ugh, I’ll do it when we’re done with this. Keep your arms up."
+    show FMG flex
+    FMG "I was busy!!! I had to test out these bad boys!"
+    Chibuki "Yeah, yeah. Ninety-three, Alice."
+    Chibuki "Okay, you can finally drop your arms, I need to measure your inseam and we’re done."
+    show FMG neutral
+    MC "Sheesh, finally. I’m falling asleep over here."
+    show FMG flex
+    FMG "Hey, at least you get to look at my killer bod."
+    MC "True, that is a massive bonus."
+    hide FMG
+    hide Chibuki
+    show WG neutral
+    MCT "To be honest it wasn’t like that was helping..."
+    hide WG
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0)
+    Chibuki "Don’t flex your quads. You’ll throw off the measurement a little."
+    FMG "I’m not trying to!"
+    MC "Stupid question... but um, what’s the inseam?"
+    hide FMG
+    hide Chibuki
+    show WG neutral
+    WG "It’s the seam in a pair of pants from the crotch to the bottom of the leg."
+    MC "Huh, the more you know. By the way, I’ve been meaning to ask you something, Alice."
+    WG "Hm?"
+    MC "Do you plan on moving this business out of the room? It’s going to get real cramped sooner or later."
+    Chibuki "Akira, quit moving! Why are you making this difficult on the last measurement?"
+    FMG "My leg was getting uncomfortable!"
+    WG "I’ve been looking to expand into an actual building, yes. I have a lot on my plate currently so it’s been pushed to the side right now."
+    MCT "She looks like she always has a lot on her plates if we’re being honest."
+    MC "I assume you’ll be hiring more people other than Chibuki?"
+    WG "In time, yes. It shouldn’t be hard to find other students looking for a job. Why do you ask? Are you looking for work?"
+    MCT "Heh, no..."
+    MC "Ahem, uh... no, not at the moment."
+    WG "Hmm, how unfortunate. Do you have the final measurement, Chibuki?"
+    hide WG
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0)
+    Chibuki "I can’t believe how long that took... seventy-three and a half."
+    FMG "You kept tickling my legs! I’m sorry..."
+    WG "Good, you can put your clothes back on Akira. We are all done."
+    hide Chibuki with dissolve
+    show FMG neutral at altMove(0.5)
+    FMG "Finally. I didn’t want to say anything but you sure took your sweet time, Chibuki. I thought it would never end."
+    WG "She isn’t the fastest but at least she’s thorough."
+    Chibuki "I’m punching out. I’ll see you two back at the dorm."
+    "Chibuki walked out, a little annoyed by Akira’s comment after nearly getting kicked in the face not even ten minutes prior."
+    FMG "She’ll be asleep by the time we get back. Thanks again, Alice. I really appreciate it."
+    WG "It’s nothing really. I’ll gladly help you next time you have another growth spurt."
+    show FMG flex
+    FMG "I’ll be back soon, I guess."
+    show FMG neutral
+    FMG "You ready to go, Kei-kun?"
+    MC "Uh? O-Oh yeah... sorry. I zoned out for a minute. Thanks for helping out, Alice."
+    WG " I am glad I could assist you in this matter. Though in the future, please make a more concerted effort to arrive on time."
+    MC "Heh, yeah, sorry about that."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm Exterior
+    show FMG happy with dissolve
+    FMG "Man, I can not wait for these new clothes. I’m going to look great."
+    show FMG flex
+    FMG "I hope the sleeves can hold, haha."
+    MC "Same, I don’t know what the school will do if your clothes ripped again, haha."
+    show FMG neutral
+    FMG "Sooooo, what caused you to zone out back there? That’s not usually your thing."
+    MC "I was... imagining you in your... *cough*... underwear."
+    show FMG aroused
+    FMG "You won’t have to imagine much longer. I’ll give you a closer look when we get back."
+    MCT "Thank you for this."
+    "I was so distracted in my thoughts I didn’t see Akira come in for a kiss."
+    pause 2
+    show FMG neutral
+    FMG "Where was the effort? I feel like I was doing all the work that time."
+    MC "Would you believe I was distracted again? Because I was."
+    show FMG aroused
+    FMG "Ugh, Come on, let’s get going. I need to get out of these clothes, they feel kinda tight."
+    MC "Say no more."
+    "This might have been the first time in my life that I’ve ever been faster than Akira. Even she was taken aback."
+    show FMG surprised
+    FMG "You can move that fast???"
+    show FMG angry
+    extend " And your mile time is that bad?!?!?"
     jump daymenu
 
 label FMG056:

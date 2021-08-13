@@ -243,6 +243,35 @@ init python:
                     renpy.log("Invalid criteria equality enum ID: %s" % str(c[2]))
                     criteriavalid = False
                     break
+            elif c[0] == ConditionEnum.SKILL:
+                if c[2] == ConditionEqualityEnum.LESSTHAN:
+                    if getSkill(c[1]) >= int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[2] == ConditionEqualityEnum.LESSTHANEQUALS:
+                    if getSkill(c[1]) > int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[2] == ConditionEqualityEnum.GREATERTHAN:
+                    if getSkill(c[1]) <= int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                elif c[2] == ConditionEqualityEnum.GREATERTHANEQUALS:
+                    if getSkill(c[1]) < int(c[3]):
+                        criteriavalid = False
+                        break
+                    else:
+                        continue
+                else:
+                    renpy.log("Invalid criteria equality enum ID: %s" % str(c[2]))
+                    criteriavalid = False
+                    break
             elif c[0] == ConditionEnum.AND:
                 if checkCriteria([c[1]]) and checkCriteria([c[2]]):
                     continue

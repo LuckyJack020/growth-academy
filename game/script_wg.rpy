@@ -1883,6 +1883,84 @@ label WG011_c3:
         PRG "But {i}I{/i} liked it."
         jump daymenu
 
+label WG001M:
+    scene Music Classroom with fade
+    play music Gymnopedie
+    "Ever since I talked with Alice about how I used to take piano lessons as a kid, and learning about her enthusiasm for music performance, I found myself motivated to practice again."
+    "I honestly couldn’t say whether I was simply reminded of something that I used to do, and at least somewhat enjoyed, or if it was born out of some subconscious effort to impress her."
+    "She was really pretty after all. I’d be lying if I said her approval didn’t factor into at least a few of my decisions recently."
+    "Kind of naïve on my part, to be honest. It’s not like I was Mozart incarnate. Alice wasn’t exactly going to swoon over my musical talents any time soon at the rate of progress I was making."
+    "Still though, her words stuck with me about cultivating my musical skills and it got me motivated to pick up the habit again."
+    play music Gymnopedie
+    pause 2
+    "It was satisfying every time I sat down and played something that actually sounded like it should. I was just warming up, but as simple as it was, I still liked this song."
+    pause 2
+    "Nice and easy. I could get lost in this one for quite a while,"
+    extend " but to be honest it was a bit too easy."
+    play sound Knock
+    stop music
+    play music Peaceful
+    "I was startled to hear a knock on the door, but was pleasantly surprised to see through the narrow window Alice smiling and giving me a wave before I gestured her to come into the room."
+    show WG happy with dissolve
+    WG "Keisuke, I didn’t expect to run into you here on my way to practice."
+    if isEventCleared("WG008A") and not isEventCleared("WG024"):
+        MC "Practice? I thought you were... well, on mandatory leave, so to speak."
+        show WG stern
+        WG "{i}Ergh{/i}, don’t remind me."
+        show WG neutral
+        WG "Just because I can’t practice with the club doesn’t mean I can use that as an excuse to be rusty. I would practice my skills regardless if I was in the music club or not."
+        WG "It would seem you have a similar mentality."
+    else:
+        MC "Well why wouldn’t you? I told you I could play."
+    show WG neutral-2
+    WG "To be honest, I didn’t know how diligently you’d follow through with taking up practicing again."
+    MC "Well, I didn’t know myself, but you did remind me I should get back in the habit."
+    WG "I’m glad I could serve as a positive influence to get you to use your time and efforts constructively."
+    MC "‘Alice the Inspirerer’, it has a certain ring to it, don’t you think?"
+    WG "Not really, but nice try nonetheless."
+    MCT "Swing and a miss there, dude."
+    if isEventCleared("WG008A") and not isEventCleared("WG024"):
+        WG "Since I’m on my own schedule, I’m in no rush."
+    else:
+        WG "I still have plenty of time before music club practice starts."
+    WG "So, why don’t you show me what you’ve been working on? I do enjoy classical music, assuming it is played properly."
+    MC "Man, you’re really putting me on the spot here, you know that?"
+    WG "Perhaps, but don’t talk-the-talk if you can’t walk-the-walk."
+    MC "Alright, I don’t normally take requests, but for you Alice— anything."
+    show WG happy
+    "Alice just rolled her eyes, seemingly unamused by my ironic (but also not ironic) attempt at flattering her."
+    play music SimpleSonata
+    pause 7
+    show WG surprised-2
+    WG "I must say, this is a step beyond what I’d expect from someone who said it’s been so long since they’ve played and weren’t that experienced."
+    MC "I’m sure you can tell. I do have to focus though. Sorry if I don’t say much."
+    show WG neutral-2
+    WG "Understandable. I’ll keep quiet."
+    pause 5
+    "I had to focus. This song was barely in my reach in terms of the skill necessary to play it, and I desperately didn’t want to screw it up in front of Alice."
+    show WG happy
+    "I reached that weird but awesome stage where you’re doing everything perfect, but you don’t know how and you’re a hair’s width from screwing it all up. I’ve heard this feeling is called ‘flow’."
+    "Maybe all my practice had paid off, or maybe it was the pressure of having Alice in the room that pushed me to do better, but I was nailing this thing."
+    pause 5
+    "I tried not to think about it too much out of fear of losing the feeling, just trying to live in the moment."
+    pause 10
+    stop music
+    MC "How was that?"
+    play music Peaceful
+    $setAffection("WG", 1)
+    show WG happy
+    WG "Bravo, Keisuke"
+    "Alice even gave a gentle, but sincere clap for my performance."
+    WG "I’m glad to see you’ve invested your time wisely. I genuinely enjoyed listening to this. I do hope you continue to stick with it."
+    MC "Well I’m glad you like it. I’m still not as good as I used to be, but I’m getting there. It’s honestly been fun getting back into this and I have you to thank for it."
+    WG "Is that so? Well I’m flattered I could be your muse."
+    show WG neutral
+    WG "Sorry to cut this short, but I do have to get going to practice. I do hope we can do this again sometime."
+    MC "For sure."
+    hide WG with dissolve
+    "I tried playing the same song again, but I kept screwing it up in the transitions. I guess I had a lot more practice to do if I was going to impress Alice with anything new."
+    jump daymenu
+
 label WG012:
     $setProgress("WG", "WG015")
     scene Classroom with fade
@@ -3379,14 +3457,17 @@ label WG018_c2_4:
 
 label WG019:
     scene Dorm Interior with fade
-    "It was afternoon and I was bored. I was so bored I can't think of any way more exciting than that to put it."
-    "I didn't have any immediate homework to work on, just essays and projects due later in the term."
-    "And none of my usual hobbies could even hold my attention long enough to not grab it. As soon as I thought of something to do I'd think 'Nah' and forget it."
-    "But it was too nice a day outside to stay cooped up in my room. I could almost hear my parents getting on my case, that if I was so bored I should go out and find some entertainment of my own."
+    play music MC
+    "It was afternoon and I was bored. I couldn’t for the life of me think of anything to occupy my time with either."
+    "I didn't have any immediate homework to work on, just essays and projects due later in the term. So as far as I was concerned, that meant they weren’t getting done now."
+    "None of my usual hobbies were grabbing my attention at the moment either. I thought about drawing, or practicing piano— or even guitar. Maybe even read a book."
+    "But as soon as I thought of something to do, I'd think 'Nah', and forget it."
+    "Not even any of my video games sounded like fun, despite having dozens to choose from. I could definitely stand to get some new ones, but that was money I didn’t have."
+    "If I had to guess, it was probably because it was such a nice day out, part of me felt the itch to get outside."
+    "I could almost hear my parents getting on my case, that if I was so bored I should go out and find some entertainment of my own. Funny how that annoying kind of stuff sticks with you."
 
     scene Town with fade
-    play music BrightLights
-    "I was kind of tired of the school grounds, so I walked to the nearby town. Still nothing caught my eye. It became more a question of, what was the least unexciting thing?"
+    "I was kind of tired of the school grounds, so I walked to the nearby town. Still, nothing caught my eye. It became more a question of, what was the least unexciting thing?"
     menu:
         "The arcade":
             jump WG019_arcade
@@ -3398,136 +3479,157 @@ label WG019:
 label WG019_arcade:
     scene Arcade with fade
     play music Busy
-    "The arcade was probably the best shot at ending my boredom. With all those bright lights and electronic chimes I at least couldn't zone out."
+    "The arcade was probably the best shot at ending my boredom. With all those bright lights and electronic chimes, I at least couldn't zone out."
     "I got some change and walked around the floor once, seeing if maybe something caught my eye. When that failed, I went for one of the racing games."
-    "Oddly, driving around in circles turned out to not be the key to shaking off my lethargy. I won a couple races, the changing scenery of each track more interesting than the races themselves, but after the difficulty stepped up I quickly lost."
-    "I left to look for another game, and a pattern had been established. I would start a game, play a little, lose because my heart wasn't in it and move on."
-    "After a few rounds of this I started thinking of going somewhere else, but then I ran into a familiar face."
-    show WG neutral at center with dissolve
-    WG "Oh, Keisuke. Good afternoon."
-    MC "Afternoon. I didn't take you for a gamer, Alice."
-    WG "I'm not, really. I came to town to run some errands, and Kodama-san noticed a plush doll in one of those crane games."
-    WG "So I am waiting as she tries to win it."
-    WG "I cannot say I approve of how she is spending her money, but it is hers to spend."
-    WG "Do you spend much time at these sorts of places? Is she even likely to win, or is this a fool's errand?"
-    MC "I actually don't come here all that often, but as I understand it those types of games aren't too easy to win."
-    MC "Some people are skilled, though. Or maybe there's a trick."
-    if getAffection("WG") >= 4 and getFlag("WG_working"):
+    "Oddly, driving around in circles turned out to not be the key to shaking off my lethargy."
+    "I won a couple races, the changing scenery of each track more interesting than the races themselves, but after the difficulty stepped up I quickly lost."
+    MCT "Man, the computer just cheats on these higher difficulties."
+    "I left to look for another game, and a pattern had been established. I would start a game, play a little, then lose because my heart wasn't in it and I’d move on."
+    "After a few rounds of that, I had already run out of tokens. I went back to the token change machine near the front of the place to get more."
+    "As I was about to feed my bills into the token machine, a certain head of blonde curls caught my attention from the passersby on the sidewalk through the window."
+    "I looked up and waved at Alice and Aida as they walked past the arcade."
+    WG "?"
+    "Catching Alice’s attention, she proceeded to walk in to see what I was up to."
+    show WG neutral at center
+    show PRG neutral at Position (xcenter=0.75, yalign=1.0) behind WG
+    with dissolve
+    WG "Hello, Keisuke. I almost passed right by you until you waved through the window."
+    MC "Heh, no problem. I almost missed you two passing by too. What brings you into town?"
+    WG "Aida and I were on our way to a cafe just down the street to get some refreshments after running errands."
+    WG "I can’t say I’ve ever been to this place before."
+    WG "Is it fair to assume you have spent some time at these sorts of places?"
+    MC "I actually don't come here all that often, but it sounded like fun for a change."
+    if getAffection("WG") >= 10:
         MC "Hey, you don't have any delivery jobs for me, do you?"
         $setAffection("WG", 1)
         show WG happy
         WG "Not at the moment. Why so eager, though?"
-    MC "I'm just here because I'm bored. Don't have any homework to worry about, got nothing else going on."
+        MC "Well, to be honest, I’m kinda bored."
+    MC "I just came here for something to do. Don't have any homework to worry about, got nothing else going on."
     show WG neutral
     WG "Hmm..."
-    WG "So with your free time you decided to while away an afternoon playing video games?"
-    if getSkill("Athletics") >= 5:
-        MC "You make it sound worse than it is."
-        MC "I've done my homework, I did a good workout the other day, I've got no other obligations to take care of."
-        MC "What's wrong with spending an afternoon playing games and having frivolous fun?"
-        "Her expression, slightly judgmental, softened."
-        WG "You do have a point."
-        WG "I personally have little interest in games, particularly ones where you have to keep pumping money in just to play, but it is your time, your money."
-        WG "As long as your priorities are in order an afternoon or evening of, as you say, frivolous fun is defensible."
-        WG "Enjoy yourself, Keisuke."
-        hide WG with dissolve
-        "And she wandered off, probably to find Aida."
-        "For my part I spent another hour-plus playing different games, never truly getting into them but having enough fun I didn't feel the afternoon was a waste."
-        jump daymenu
+    WG "Just 'something' to do, huh?"
+    MC "Yeah, I guess."
+    "I shrugged in response to her question, there wasn’t much else to it."
+    MC "Why do you ask?"
+    show WG doubt
+    WG "{i}Sigh{/i}"
+    show WG neutral
+    WG "You make it sound as if your only goal is to kill time, to speed through the prime of your life distracted and complacent."
+    MC "Huh? What do you mean?"
+    show WG haughty
+    WG "Your passive attitude, my dear boy. You say you are looking for something to do, rather than going out and doing it."
+    MCT "My dear boy? I can never tell if she’s being endearing or condescending with that."
+    WG "Life either happens to you or you make it happen, but it never comes to you. Understand?"
+    MC "Yes... uh, I think."
+    show WG stern
+    "She closed her eyes and breathed in and out slowly."
+    show WG neutral
+    WG "If there is something you want, be it mastering a skill, or acquiring an object, or achieving something— you must work for it. {i}You{/i} have to make it happen."
+    WG "You can't sit back and just wait for it to drop in your lap."
+    WG "For instance, do you get any exercise outside of gym? Staying motionless in front of these flashing screens isn't good for your health in the long run."
+    MC "I... Get in workouts now and then."
+    show WG doubt
+    "She closed her eyes again and shook her head."
+    WG "You don't sound too confident, Keisuke."
+    show WG neutral
+    WG "Remember, habits you develop now can last a lifetime. If you don't take care of yourself today you can't just make up for it when you're 40 or 50."
+    MC "I'm not that lazy."
+    show WG happy
+    "She gave me a look that was one part 'Uh huh' and one part 'Really?'"
+    show WG neutral
+    WG "What about practicing piano? Have you been keeping up with it?"
+    if getSkill("Art") >= 3 and isEventCleared("WG001M"):
+        MC "Yeah, I’ve been making pretty decent progress, like you saw last time. I’ve even started playing guitar a bit. Think you’d be up for another mini-concert?"
+        WG "Well that’s good to hear— and I certainly would."
+    elif getSkill("Art") >= 3:
+        MC "Yeah, I’ve been making pretty decent progress. I’ll have to show you some time."
+        show WG neutral-2
+        WG "Oh? Is that so? I would certainly be interested in seeing that for myself."
     else:
-        MC "More like I just found myself here. Looking for something to do."
-        WG "'Looking' for something to do."
-        WG "{i}Sigh{/i}"
-        WG "You make it sound as if your only goal is to kill time, to speed through the prime of your life distracted and complacent."
-        MC "What do you mean?"
-        WG "Your passive tone, my dear boy. You say you are looking for something to do, rather than going out and doing it."
-        WG "Life either happens to you or you make it happen, but it never comes to you. Understand?"
-        MC "Ye-... No."
-        "She closed her eyes and breathed in and out slowly."
-        WG "If there is something you want, be it mastering a skill or acquiring an object or achieving something, you must work for it. You have to make it happen."
-        WG "You can't sit back and just wait for it to drop in your lap."
-        WG "For instance, do you get any exercise outside of gym? Staying motionless in front of these flashing screens isn't good for your health in the long run."
-        MC "I... Get in workouts now and then."
-        "She closed her eyes again and shook her head."
-        WG "You don't sound too confident, Keisuke."
-        WG "Remember, habits you develop now can last a lifetime. If you don't take care of yourself today you can't just make up for it when you're 40 or 50."
-        MC "I'm not that lazy."
-        "She gave me a look that was one part 'Uh huh' and one part 'Really?'"
-        "Then we heard Aida squealing with joy. Apparently she had gotten her plushie."
-        WG "Sounds like our business is done here."
-        WG "Keisuke, have a good afternoon. I hope you put it to good use."
-        hide WG with dissolve
-        "She headed to the exit, and I was left to decide if I wanted to play some more games or do something a little more active."
-        menu:
-            "Keep playing games.":
-                "Going back to the school, changing my clothes and hitting the gym sounded like too much work."
-                "I found a fighting game to dump a few yen into, doing OK at first but never making it to the boss."
-                "I was entertained, at least."
-                jump daymenu
-            "Hit the gym.":
-                $setTime(TimeEnum.EVE)
-                scene Gym with fade
-                "I went back to my dorm and changed into some workout clothes. Faded shorts, an old shirt."
-                "The gym wasn't too crowded, so I had my pick of the machines. Just like the arcade nothing really appealed to me, but going around the weight machines and jogging for half an hour on the treadmill was a better use of my time, I will admit."
-                "I saw Akira at one of the other machines, pulling a monstrous amount of weight with her legs. But that area was seeing heavy use and crowds, so I didn't want to bother her."
-                $setSkill("Athletics", 1)
-                "When I left I felt mildly better. Not as listless, at any rate."
-                jump daymenu
+        MC "Uh, not exactly to be honest. I’ve been meaning to get around to it. I had time today, but I just wasn’t feeling it."
+        show WG haughty
+        WG "{i}Tsk.{/i} You won’t ever cultivate a skill if training it is predicated on your fickle enthusiasm. It takes persistence and consistency if you want to improve yourself."
+        MCT "Well, she’s got me there."
+    show WG neutral-2
+    WG "As much as I’d like to stay here and chat, I don’t want to keep Aida waiting any longer."
+    WG "Have a good rest of the afternoon, Keisuke. I hope you put it to good use."
+    hide WG
+    hide PRG
+    with dissolve
+    "I wasn’t exactly looking for a lecture on time management, but her words did make me reflect on how my choice to pursue a bit of mindless fun hadn’t proved fruitful."
+    "Watching her head to the exit, and I was left to decide if I wanted to play some more games or do something a little more constructive."
+    menu:
+        "Keep playing games.":
+            "Going back to the school, changing my clothes and hitting the gym sounded like too much work."
+            "I found a fighting game to dump a few yen into, doing OK at first but never making it to the boss."
+            "I was entertained, at least."
+            jump daymenu
+        "Hit the gym.":
+            scene Gym with fade
+            "I went back to my dorm and changed into some workout clothes. Faded shorts, an old shirt."
+            "The gym wasn't too crowded, so I had my pick of the machines. Just like the arcade, nothing really appealed to me, but hitting up the weight machines and jogging for half an hour on the treadmill was a better use of my time, I will admit."
+            show FMG flex with dissolve
+            "I saw Akira at one of the other machines, pushing a monstrous amount of weight with her legs. But that area was seeing heavy use and crowds, so I didn't want to bother her."
+            $setSkill("Athletics", 1)
+            hide FMG with dissolve
+            "When I left I felt mildly better. Not as listless, at any rate."
+            jump daymenu
+        "Practice music.":
+            scene Music Classroom with fade
+            stop music
+            "Not finding anything that grabbed my attention at the arcade, I headed back to school and found an empty practice room."
+            "Taking Alice’s words to heart, I forced myself to sit down and give it a shot, even though doing something constructive was the last thing I felt like doing."
+            play music MinuetG
+            "I started with something really easy. It didn’t take much effort, but it got my fingers loose and it was satisfying in its own right."
+            $setSkill("Art", 1)
+            "After playing around with that one for a bit, it got me motivated to tackle some more challenging songs."
+            jump daymenu
 
 label WG019_cafe:
     scene Cafe with fade
     play music Rain
     "I bought a coffee and a muffin and took a seat by the window, watching the townsfolk walking by."
     "I wondered how much they knew about the school. Surely they had to know about why it existed, but did they keep abreast of the school's operations, or did they avoid even thinking about it?"
-    "I wasn't there long before in came Alice and Aida. The latter meekly waved when she saw me, but Alice was bolder, walking up to my table."
+    "I wasn't there long before in came Alice and Aida. The latter meekly waved when she saw me, but Alice was bolder, walking right up to my table."
     show WG happy at center with dissolve
-    WG "Keisuke. Are you meeting someone here? A date, perhaps?"
+    WG "Keisuke. Fancy running into you here."
+    "Alice looked around a bit, seemingly curious that I came here by myself."
+    WG "Are you meeting someone? A date, perhaps?"
     MC "Wha-? N-no! No, I'm just having a coffee."
-    WG "Relax. I'm just saying 'Hi.'"
+    WG "No need to get into a fuss. I was just curious as to the reason for you being here by yourself. I was just saying 'Hi'."
     show WG neutral
     WG "Aida and I were running errands and we stopped in for refreshments."
     WG "But are you really just having coffee by yourself on an afternoon like this?"
-    if getAffection("WG") >= 4 and getFlag("WG_working"):
+    if getAffection("WG") >= 10:
         MC "Why? You don't have any delivery jobs for me, do you?"
         show WG happy
         $setAffection("WG", 1)
-        WG "Not at the moment. You sound eager for work though. Good to hear."
+        WG "Not at the moment, but I do appreciate the eagerness to get some work in."
     MC "Well, I don't have anything else going on today. I came to town and found myself here. Drinking my coffee, watching the people go by, having a leisurely afternoon."
     show WG neutral
     WG "You don't even have a book with you? Nothing goes better with a cup of coffee than a good book."
-    if getSkill("Academics") >= 5:
-        MC "Didn't think to bring one with me. I've done plenty of studying lately, I can use a day without sticking my nose in a book."
-        show WG happy
-        WG "I can understand that."
-        WG "Sometimes you need to take a day off and give your brain a chance to rest up."
-        if getFlag("WG_working"):
-            WG "I won't interrupt your day off. But keep your phone handy. If a new order comes in I'll be messaging you."
-        else:
-            WG "I won't interrupt your day off."
-        hide WG with dissolve
-        "She went back to the counter, where Aida had already placed their order. When they got their drinks they walked out, and I was by myself again."
-        "I took my time enjoying the coffee, even though it wasn't particularly great. After I was done I strolled around the town some more, then went back to the school to grab dinner from the cafeteria."
-        "An unexciting day, but a restful one."
-        jump daymenu
-    else:
-        MC "No. Wouldn't care to."
-        MC "Honestly, the reading we've had to do for class has been kicking my butt. I needed a break."
-        "I could see in her expression I had said something wrong."
-        WG "I see."
-        WG "I don't think the course load has been overly burdensome, but this may be subjective."
-        WG "Though I would think that if you are having trouble right now, so early in the term, that you would want to spend more time studying and developing better habits, not less."
-        MC "Everyone deserves some time off now and then."
-        "I sounded more defensive than I had intended. Alice's expression didn't change that much, but something in her eyes told me I had lost some standing in her mind."
-        WG "Hmm, yes. Leisure time is important, but I find it can be too easy to mistake the necessity of downtime for an entitlement."
-        WG "An important part of success is making sure you earn your downtime by driving yourself in your work."
-        WG "You don't stop running halfway through a race, you reach the finish line first."
-        MC "Yeah, but if you get a cramp or something-"
-        WG "It means you should have done more work conditioning yourself beforehand. Preparation is another component of success."
-        "She looked back to the counter, where Aida was holding two drinks and hanging back."
-        WG "But how you spend your time is up to you, Hotsure-san."
-        hide WG with dissolve
-        "And she went back to Aida, and the two left the cafe."
-        menu:
+    MC "No, I hadn’t really thought to come to think of it. I was bored hanging out in my dorm with nothing to do, so I thought I could use a change in scenery."
+    MC "I mean yeah, leisure reading can be fun, but I feel like I get plenty with how much we have to do for class. I guess I just thought I could use a break from it."
+    show WG doubt
+    "I could see in her expression I had said something wrong."
+    WG "I don't think the course load has been overly burdensome."
+    show WG haughty
+    WG "Though, I would think that if you are having trouble right now, so early in the term, that you would want to spend more time studying and developing better habits, not less."
+    MC "Everyone deserves some time off now and then."
+    "I sounded more defensive than I had intended, but Alice's expression didn't change that much. She clearly wasn’t buying my excuses."
+    WG "Hmm, yes. Leisure time is important, but I find it can be too easy to mistake the necessity of downtime for an entitlement."
+    MCT "Of all the people to be lectured about entitlement from. If I didn’t feel like a lazy piece of crap before, I sure do now."
+    WG "An important part of success is making sure you earn your downtime by driving yourself in your work."
+    WG "You don't stop running halfway through a race, you reach the finish line first."
+    MC "Yeah, but if you get a cramp or something-"
+    WG "It means you should have done more work conditioning yourself beforehand. Preparation is another component of success."
+    "I honestly had nothing to say that could refute her words or justify my lazy afternoon, at least in her eyes."
+    "She looked back to the counter, where Aida was holding two drinks and hanging back."
+    WG "But how you spend your time is up to you, Hotsure-san."
+    hide WG with dissolve
+    "And she went back to Aida, and the two left the cafe."
+    menu:
             "Stay at the cafe.":
                 "I couldn't find fault in Alice's argument, but that didn't mean a fire had been lit under my seat."
                 "I was already off campus, enjoying a change in scenery and general break from the school."
@@ -3544,31 +3646,41 @@ label WG019_cafe:
                 "But I managed. I spent a couple hours going over the past week's history and literature lessons, refreshing what I already knew and getting a better handle on what had been giving me trouble."
                 "Not what I would call an exciting afternoon, but a productive one."
                 jump daymenu
+            "Practice music instead.":
+                "Despite Alice’s not-so-subtle chastising about not taking a more proactive approach to my studies, I just couldn’t bring myself to hunker down with a textbook."
+                "That wasn’t to say her industrious nature failed to rub off on me. I at least felt motivated to do something constructive."
+                scene Music Classroom with fade
+                "Instead, I headed back to school and found an empty practice room."
+                play music MinuetG
+                "I started with something really easy. It didn’t take much effort, but it got my fingers loose and it was satisfying in its own right."
+                $setSkill("Art", 1)
+                "After playing around with that one for a bit, it got me motivated to tackle some more challenging songs."
+                jump daymenu
 
 label WG019_theater:
     scene Theater Exterior with fade
-    play music HigherEdu
+    play music Hallway
     "I found myself walking by the town's movie theater, looking over the posters."
     "There were a couple blockbuster-type movies showing, but also a historical drama, a romantic comedy and an indie melodrama."
     "I had enough money in my wallet that I could buy a movie ticket, and I could think of worse ways to while away a couple hours."
     "After I had decided to catch a flick, but before I had decided what to see, I heard someone call my name."
-    UNKNOWN "Keisuke!"
+    WG "Keisuke!"
     show WG happy at center with dissolve
-    MC "Alice. Good afternoon."
+    MC "Hello Alice. Good afternoon."
     WG "Good afternoon."
     show PRG neutral at Position (xcenter=0.75, yalign=1.0) behind WG with dissolve
     MC "And Aida."
     PRG "H-Hello."
     hide PRG with dissolve
-    WG "Taking in a show?"
-    MC "I was thinking about it."
-    if getAffection("WG") >= 4 and getFlag("WG_working"):
+    WG "Thinking of catching a show?"
+    MC "I was considering the idea."
+    if getAffection("WG") >= 10:
         MC "Why? You don't have any delivery jobs for me, do you?"
         $setAffection("WG", 1)
-        WG "Not at the moment. Why so eager, though?"
+        WG "Not at the moment. Why the eagerness?"
         MC "No particular reason."
     MC "None of these speak to me, but I've got nothing else going on right now."
-    if getSkill("Art") >= 5:
+    if getSkill("Art") >= 3:
         MC "I might check out this one. The Chrysanthemum Shadow."
         WG "Ah. A fan of historical dramas?"
         MC "Not exactly, but it's supposed to have gotten good reviews. And the director's well-regarded."
@@ -3582,6 +3694,8 @@ label WG019_theater:
         scene Theater Interior with fade
         "The movie wasn't bad. A bit dry in the second half, and the battle scenes seemed almost perfunctory, but overall it was a solid flick."
         MCT "Need to remember to tell Alice about this one later."
+        $setAffection("WG", 1)
+        pause 1
         jump daymenu
     else:
         MC "I was thinking of seeing Iron Fan 5. The last couple ones weren't that great, but the original director is back so maybe this one is good?"
@@ -3599,10 +3713,12 @@ label WG019_theater:
         WG "Oh! The Chrysanthemum Shadow. I've heard good things about this."
         WG "And Hagiwara-san is rather acclaimed, is he not?"
         MC "Who?"
+        show WG doubt
         "She gave a brief but stinging look, then quietly suppressed a sigh."
+        show WG haughty
         WG "Never mind. Enjoy your popcorn flick."
         hide WG with dissolve
-        "As she walked off the quasi-dismissive tone in her voice gave me second thoughts."
+        "As she walked off, the quasi-dismissive tone in her voice gave me second thoughts."
         "I had only come here to find a way to kill the afternoon, but now I was thinking that Iron Fan might be a little too trashy."
         menu:
             "Iron Fan 5":
