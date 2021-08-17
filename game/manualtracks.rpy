@@ -286,11 +286,33 @@ init python:
         path = "Audio/BGM/tremblingWhispers.ogg",
         priority = 3,
         author = "Post-Bop",
-        description = "Horror Movie Night",
+        description = "Horror Movie Night Track 1",
         cover_art = False,
         unlocked = True
     )
     ost.manualDefineList.append(TremWhis)
+
+    CrePres = ost.soundtrack(
+        name = "Creeping Presence",
+        path = "Audio/BGM/CreepingPresence.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Horror Movie Night Track 2",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(CrePres)
+
+    Cha = ost.soundtrack(
+        name = "The Chase",
+        path = "Audio/BGM/Chase.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Horror Movie Night Track 3",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(Cha)
 
     BriLi = ost.soundtrack(
         name = "Bright Lights",

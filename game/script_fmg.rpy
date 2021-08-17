@@ -4258,7 +4258,7 @@ label FMG030:
     MC"...Wow, that's kinda crazy to think about."
     show FMG happy
     FMG "How big are they now? Before I was roughly thirty-three centimeters when I last measured."
-    MC "Don't freak out on me now, but those bad boys are at sixty centimeters."
+    MC "Don't freak out on me now, but those bad boys are at forty-eight centimeters."
     show FMG flex
     FMG "Yo! That's freaking awesome, I didn't think I'd get so big."
     "She walked over to me and wrapped me up in her arms giving me a taste of her new strength."
@@ -9158,6 +9158,7 @@ label FMGWG003:
     MC "Holy crap... what the hell was even that?!?!"
     WG "I-I didn’t think they would kill someone so soon. It hasn’t even been ten minutes!"
     FMG "Oh don’t worry, it gets better."
+    play music CreepingPresence
     "The movie seemed to calm down as for the next thirty or so minutes, nothing much really happened besides some world building and the occasional jump scare."
     "While the jump scares weren’t the worst, they did make Alice jump a few times which was pretty funny."
     show FMG neutral
@@ -9174,6 +9175,7 @@ label FMGWG003:
     show FMG neutral
     show WG neutral
     WG "Very well."
+    play music Chase
     "The movie had begun to pick up speed and people started getting picked off by the spirit one by one. Some of the kills were pretty intense for a movie made in the early 2000s."
     "There was this one where the mother was taking a bath and the demon jammed her hands through her chest and split her in half."
     show WG surprised-2
@@ -9214,6 +9216,7 @@ label FMGWG003:
     "Of course, smashing the bracelet didn’t work because that would’ve been too easy."
     "They had to head back to the house we saw at the start of the movie and locate the \"heart\", whatever that was."
     "Everything got dark when the final girl arrived at the house with the shaman. The music got super eerie, it didn’t feel like the same film we’ve been watching for the last hour. The tension was so thick you could cut it with a knife."
+    play music CreepingPresence
     MC "Akira, if I somehow in some way end up in your arms... please do not let go of me."
     show FMG angry-2
     FMG "Shhhhh, you’re ruining the moment."
