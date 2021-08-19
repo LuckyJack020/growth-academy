@@ -5508,7 +5508,7 @@ label GTS034_c1_3:
 
 label GTS035:
     $lockRoute("GTS")
-    $setProgress("GTS", "GTS037")
+    $setProgress("GTS", "GTS036")
     scene Dorm Interior with fade
     play music Peaceful
     "My hands shook a little as I checked my hair in the mirror once more. I knew it didn't grow that quickly yet, but my anxiety had me constantly double-checking."
@@ -5997,6 +5997,292 @@ label GTS035_testpass:
     show GTS neutral
     GTS_S "Now then let's get on our way back to school."
     "I reshuffled my hair as we walked back to school."
+    jump daymenu
+
+label GTS036:
+    $setProgress("GTS", "GTS037")
+    scene Dorm Interior with fade
+    "It had been two days since the meeting with Naomi’s parents, and things had been quiet between us."
+    "This left me plenty of time to repeat the dinner scene over and over. Her father had been particularly difficult to deal with, but not in a way that was malicious."
+    "It had grown apparent the task that lay ahead of me in rising not only to Naomi's standards, but her family's too."
+    if getAffection("GTS") > 30:
+        extend " But it would be a small price to pay."
+    "Eventually, I had to roll out of bed and get to work on my homework. A shower would hopefully allow me some time to destress."
+    play sound Knock
+    play music RM
+    RM "Hey Hotsure-san, you got some mail."
+    MCT "...From who?"
+    show RM neutral with dissolve
+    "Opening the door, I could see a box wrapped in brown paper clutched under Daichi’s arm."
+    RM "There's this letter, too. They're both addressed to you."
+    "He produced a small envelope with a green wax seal."
+    RM "Whoever sent you this evidently has no idea what email is. Who the hell owns a wax stamp?"
+    MC "Not everyone owns a top end laptop. Some people don’t even have internet."
+    RM "I'm not sure how some people survive."
+    hide RM with dissolve
+    stop music
+    "He handed me the box and returned to his room. Looking over the package, there appeared to be no markings besides the address."
+    MCT "I wonder who could've sent me this. I doubt my parents would; they normally only send that stuff to Tomoko for some reason."
+    Letter "Dear Hotsure-san,"
+    extend " our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind."
+    extend " Please accept this gift as a display of hope towards your futures."
+    "After I set the letter down, I began disassembling the brown packaging. Lifting the lid, I spotted an ornate, lacquered black box sitting amongst the packing material. With leaden curiosity, I lifted the box out, and gently opened the smaller box."
+    "Inside was a tanto, its flawless blade glaring white in the afternoon sun."
+    MCT "...How the hell did this get through customs?"
+    "Looking the blade over, I decided to set it on the bookshelf hanging over my desk. I began wondering if Naomi knew they had done this."
+    "After fiddling with it a bit more, I eventually found a spot on my shelf to display it. The tanto must’ve had a link to Naomi, because the moment the metal left my fingers my phone buzzed."
+    GTSCell "Hotsure-san, do you mind meeting me at Chūkan Point in a few minutes?"
+    menu:
+        "Sure thing, see you in a few.":
+            jump GTS036_c1_1
+        "I have some stuff to take care of, but I'll meet you as soon as I'm done.":
+            jump GTS036_c1_2
+
+label GTS036_c1_1:
+    GTSCell "Thank you."
+    MCT "What's up with that? She isn't normally that hasty."
+    "...But I shrugged, and put on my shoes."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+    jump GTS036_c2
+
+label GTS036_c1_2:
+    $setAffection("GTS", -1)
+    GTSCell "This is rather important. Are you sure you cannot find the time?"
+    MCCell "sorry but yes. You won't have to wait long i promise"
+    GTSCell "As you wish. I hope your errands go well."
+    MCCell "thanks"
+    "At least I wasn't too dense to take a hint. I snatched up my laundry basket and marched out the door."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+    jump GTS036_c2
+
+label GTS036_c2:
+    scene Chukan Point with fade
+    play music GTS
+    "As I approached the small park area, I couldn’t help but be in awe how Naomi was nearly as tall... or taller... than the trees around her. Granted, many were cherry blossoms, but it was still a considerable line to cross."
+    MC "Yamazaki-san!"
+    show GTS despaired-thought with dissolve
+    GTS "Oh. Good evening, Hotsure-san."
+    "Her tone was different, like cracked glass, her usual smoothness absent and poorly substituted."
+    MC "Sooo, uh... why the short notice text?"
+    GTS "I will explain shortly. Did you receive the package from my parents?"
+    MC "The tanto? Yeah, I picked out a spot for it above my desk."
+    show GTS neutral
+    GTS "I’m glad that you took it so well. I was unsure how you would receive it when father informed me that he’d given that to you. I assume that he attached a letter as well?"
+    MC "Yep, he said he hoped that it would serve as a visual symbol of hope for our relationship."
+    GTS "He normally isn’t that forward with people, especially concerning matters related to his family."
+    MC "I guessed not. So again, what was with the short notice text?"
+    show GTS sad-2 at Transform(xzoom=-1) with dissolve
+    "Naomi seemed to look for a place to sit, glancing at the various benches, each time considering her options before remembering her size. A few times, she opened her mouth as though to say something."
+    show GTS despaired-thought at Transform(xzoom=1) with dissolve
+    GTS "Do you remember that evening on the roof?"
+    if getFlag("GTS025_kiss"):
+        MC "You mean when we first kissed? The suddenness of that moment, I doubt I could forget if I tried."
+        show GTS neutral
+        GTS "I am glad that we experienced similar feelings."
+    else:
+        MC "Yeah, I do."
+        MC "I know nothing really happened, but... it kind of did, you know?"
+        show GTS neutral
+        GTS "I understand completely."
+    GTS "Well, back then I wasn’t certain what to think, or even where I’d be in due time. This past weekend brought that feeling back, and I wanted to find out if it's mutual."
+    GTS "So, there's something I need to ask you."
+    MC "Okay... I'm ready."
+    show GTS embarrassed
+    pause 0.5
+    GTS "Do you love me?"
+    jump GTS036_menu
+
+label GTS036_menu:
+    menu:
+        "I do.":
+            $setFlag("GTS036_declare")
+            jump GTS036_c2_1
+        "What do you mean, exactly?" if not getFlag("GTS036_middlepath"):
+            $setFlag("GTS036_middlepath")
+            jump GTS036_c2_2
+        "Well, that's complicated.":
+            $setFlag("GTS036_nodeclare")
+            jump GTS036_c2_3
+
+label GTS036_c2_1:
+    MC "I wasn’t sure when we first met what the feeling in my chest meant, but the more we’ve talked, I’ve only grown more certain that it's love."
+    $setAffection("GTS", 1)
+    show GTS happy
+    GTS "I shared those feelings, but wasn’t sure if I could trust them."
+    show GTS neutral
+    GTS "I know, despite that, I've asked of you a number of things you would be well within your rights to move on for."
+    MC "You know there was no real choice."
+    show GTS unique
+    "A sputtering grin escaped her, before with a wave of her hand she composed herself again."
+    if getAffection("GTS") > 70:
+        show GTS aroused
+        GTS "I love you, too, Hotsure-san."
+        show GTS aroused at Transform(yoffset=90) with move
+        "She knelt down beside me in one smooth motion, her countenance still warm and her face growing warmer."
+        GTS "Oh my, that felt good."
+        GTS "I confess I've been trying to maintain my composure for some time now."
+        "And then, I couldn't help but chuckle as my eyes drifted up to the sky."
+        MC "You wouldn't be you if you didn't, would you? That's part of what makes you so special."
+        show GTS unique
+        "She covered her mouth, and I could hear her chest rumbling with uneven laughter punctuated with a dreamy sigh."
+        "What more was there to say? I stepped in closer, felt her presence, and raised my arms around the back of her neck in a gentle embrace. Naomi reciprocated, bracing my back with one bending arm and catching my arm in her other hand. "
+        "For a moment, she was the air around me, warmly hazy and still."
+        show GTS aroused
+        "She lingered a moment longer as I ran my hand down one pearl-like cheek, and kissed the other; while I felt her breath flutter, she turned her head to plant a kiss on my cheek... and despite herself, a bit of my neck and my hair, too."
+        MC "Ksh..."
+        "She sputtered, puffing the hair off her lips. At last, we parted together."
+        show GTS neutral
+        MC "Heh, would you believe me if I said I cut it this morning?"
+        GTS "There's nothing to be done about it, I suppose."
+        show GTS neutral at Transform(yoffset=0) with move
+        GTS "Ah well... where was I?"
+        jump GTS036_c3
+    else:
+        "She clasped her hands together, now large enough that I could see the faintest trembling, and then she looked into the depths of me."
+        GTS "I love you too, Keisuke-chan."
+        "I stepped closer to run my hands on the backs of hers, and in the embrace of Naomi's warm aura, I leaned up and in for a kiss on the cheek, which she reciprocated."
+        "After a very comfortable moment, I stepped away."
+        jump GTS036_c3
+
+label GTS036_c2_2:
+    show GTS sad
+    GTS "Well... how do I put this?"
+    show GTS neutral
+    GTS "I feel that you’ve expressed an interest in me, since you were willing to go so far as to meet my family."
+    GTS "I hope that I have conveyed my interest in you as well. But then, to answer your question, I want to know how {i}you{/i} see our relationship."
+    if getAffection("GTS") < 40:
+        MC "I’m still figuring that out for myself."
+    else:
+        MC "Well, I've sort of... been in this kind of thing before, I guess. But never with someone like you. I guess I sort of feel like... I want to try to live life the way you do."
+    "She nodded."
+    GTS "Based on your experience, how do you feel? Do you see us as a couple? Are you comfortable with saying that you love me?"
+    jump GTS036_menu
+
+label GTS036_c2_3:
+    MC "Well, ‘love’ is a very complicated word. I don’t know if I’m ready to say it yet."
+    show GTS neutral
+    GTS "Then what are you ready to say?"
+    MC "Huh?"
+    GTS "If not ‘love,’ then what?"
+    MC "I mean, I respect you a lot. You've got a lot of talents, and you're always so chill and nice. I just like spending time with you."
+    show GTS despaired-thought
+    GTS "So, you enjoy spending time with me, but you're afraid of the implications that come with saying that you love me. I understand. It can't be an easy thing to say."
+    GTS "I'm curious about one other thing, if you would indulge me. What is love to you?"
+    if getAffection("GTS") > 60 and getSkill("Art") > 5:
+        MC "Love is an unbreakable bond. You don't think about it, you feel it. The way you light up when the other person's happy. The way they can cover each other's weaknesses. How you can know they'll be there for you, even on your darkest days..."
+        MC "...That's what love means to me."
+        show GTS unique
+        "An uneasy laugh peeked out from between her lips."
+        GTS "You were able to conjure that up, just now?"
+        "I shrugged."
+        MC "For what it's worth, it's been crystalizing for a long time."
+        show GTS embarrassed with dissolve
+        "Blushing, her stoic countenance regarded her hands wringing in her lap."
+        GTS "Indeed, nothing worth having is easily gained."
+        show GTS neutral
+    elif getAffection("GTS") > 40:
+        MC "...Something to be cultivated, I suppose."
+        $setAffection("GTS", -5)
+        show GTS embarrassed
+        "She pursed her lips and stared off into the treeline. The wind and the leaves spoke for her for a moment or two, before she looked back down upon me."
+    else:
+        "My tongue writhed around on itself, until at last I sighed."
+        MC "I don't really know."
+        "She nodded, her face a stone mask."
+        GTS "As I said, it can't be an easy thing to say."
+        $setAffection("GTS", -10)
+    jump GTS036_c3
+
+label GTS036_c3:
+    MC "Well, since we're talking about this, I have to ask you something, too."
+    show GTS neutral
+    GTS "Yes?"
+    MC "That dinner we had with your parents... that wasn't normal, right?"
+    MC "I mean, I know it wasn't like... I don't know how to feel about all that."
+    show GTS despaired-thought
+    GTS "It was rather unfortunate, yes. Of course I didn't mean to disturb the meal by breaking my chopsticks, but I suppose one could see it as a sign that I should exercise more caution..."
+    MC "What? No, Akihiro-san was totally icing you out. Like, he was reading the look on your face just as well as I was, and it was like nothing was happening. What's with that?"
+    MC "A father's supposed to be loving and supportive. He just looked like he was scolding you for even showing up."
+    show GTS sad
+    GTS "The look on my face?..."
+    show GTS neutral
+    GTS "Well, it is no secret that I did err. The mood would not have been so harsh but for my carelessness, and one can understand how it might be disappointing when one has poured so much effort into giving his child a proper upbringing."
+    "I began to wonder whether she was missing the point, or ignoring it."
+    MC "So... that wasn't a normal interaction between you and your family, is what you're saying?"
+    "She reached up and pinched one of the tree trunks hanging centimeters above her head, and bent it down slightly."
+    GTS "Manifestly."
+    MC "Alright, well, I'm glad to hear that. So then what's he like normally?"
+    GTS "As loving as any father should be. When I said my parents raised a lady, I quite meant it, especially as Kazumi-chan was growing up."
+    MC "Especially?"
+    GTS "Well, of course. It's only right that the elder sibling should help as well."
+    MC "...Yeah, that's fair."
+    MC "I just want to say that all this leaves me wondering if they see you differently because of your condition."
+    "Naomi, like a judge, slowly but firmly shook her head."
+    GTS "I cannot believe that to be true. With respect, I know them, and you do not yet. Believe me when I say their love has not faltered."
+    MC "Then why didn't they ever address your condition during dinner? It only came up when I said we should dine outside."
+    MC "Do they not see it as a part of you? Don't they see it's not something you can control?"
+    hide GTS
+    show GTS_S angry
+    GTS_S "Please do not speak of my mother and father so impertinently."
+    hide GTS_S
+    show GTS neutral
+    GTS "But you are right, Keisuke-san. I can't control it."
+    GTS "But I need not let it control me or my loved ones, either. I have no intention of creating more disharmony than is absolutely unavoidable."
+    show GTS sad
+    "She folded her hands together."
+    GTS "...Can you accept that?"
+    "I felt compelled to roll my answer around in my head. Really, I couldn't be surprised she would react this way, nor could I be upset for her just doing the best she could."
+    "Nodding, I put my insubstantial hand on her knee."
+    show GTS neutral
+    MC "I can accept that."
+    show GTS happy
+    "I felt, I thought, her whole being relax as I said it."
+    show GTS happy at Transform(yoffset=90) with move
+    "She then brushed my hand aside with the motion of her kneeling on the ground in front of the bench."
+    "She was facing me, smiling warmly, as she wrapped her arms around me in a familial embrace. As her head floated close to mine, I heard her whisper."
+    show GTS unique
+    GTS "Thank you."
+    stop music
+    "I returned the hug, probably tighter than she was giving me. Her delicately perfumed warmth mixed with the sunny summer evening air, drawing me in, such that her embrace enveloped all of me."
+    "I rubbed my arm up and down her back, feeling the tidal ebb and flow of her pensive breaths."
+    play music Sunset
+    pause 1
+    "She didn't part from me, but her hold loosened just a bit after a moment or two."
+    MC "Do you want me to walk you back to your dorm?"
+    show GTS neutral
+    GTS "I would rather... like to stay here for a while."
+    "She righted herself, and sat back on the bench. She was looking off into the citrus glow of the horizon, and I joined her."
+    if getFlag("GTS036_declare"):
+        show GTS unique
+        GTS "I love you, Keisuke-chan."
+        MC "I love you too, Naomi-chan."
+    else:
+        GTS "I'm glad that you were here tonight."
+        MC "I'm glad to be here."
+    "After a pause, she turned her head back down to face me and put her hand over my knees. Her smile was like candlelight."
+    MC "You know, after all this, it feels like some kinda veil's been lifted. I feel a lot closer to you."
+    show GTS happy
+    GTS "As do I, Keisuke-chan, as do I."
+    pause 1
+    show GTS aroused
+    GTS "And yet, I should like to be much closer."
+    MCT "..."
+    extend " Meaning?..."
+    show GTS embarrassed
+    "It was at that point I realized I was staring directly ahead... directly into Naomi's chest."
+    "She looked away, and gently took her hands off my lap to cover her mouth in advance of a demure cough."
+    GTS "Well... yes, I'll stay behind a little longer."
+    MC "Alright, I'm gonna get going. See you tomorrow."
+    show GTS neutral
+    "She nodded but once."
+    GTS "Have a pleasant evening."
+    hide GTS with dissolve
+    "Just a little longer, and I started walking back to the dorms on my own. Naomi remained in the park, only partially obscured by the trees."
+    "She remained in my sight only until I exited the park gate. I walked out on surer steps than I came in with; energy that I didn’t know I had powering my strides."
     jump daymenu
 
 label GTS037:

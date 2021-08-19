@@ -7958,7 +7958,7 @@ label FMG051:
     jump daymenu
 
 label FMG052:
-    $setProgress("FMG", "FMG056")
+    $setProgress("FMG", "FMG053")
     scene Track with fade
     play music FMG
     "For today’s exercise Akira wanted to train abs today... it was supposed to be leg day but I convinced her to move that to another day."
@@ -8252,6 +8252,264 @@ label FMG052:
     FMG "You can move that fast???"
     show FMG angry
     extend " And your mile time is that bad?!?!?"
+    jump daymenu
+
+label FMG053:
+    $setProgress("FMG", "FMG056")
+    scene Classroom with fade
+    play music Schoolday
+    "Classes had ended for the day and I did my best to try and slip out between the other students so Tashi-sensei wouldn’t call me over about the page I didn’t turn in."
+    "If my hair didn’t give me away, I’m pretty sure I could’ve gotten away with it."
+    show HR neutral with dissolve
+    HR "Hotsure-san, I see you didn’t turn in your essay. I gave you guys an extension as well. What happened?"
+    MC "It’s well... have you seen Mizutani-san recently?"
+    HR "I have. I fail to see how she would have affected your ability to do your homework."
+    MC "You won’t believe this but um... I... technically am little responsible for... uh... all of that."
+    HR "How so?"
+    MC "I-I-I-I... I HELPED HER TRY THIS NEW ROUTINE! I was spending a lot of my time helping her get used to her new size. Because you know... we’re um dating."
+    HR "Sigh... I’ll give you three days to turn it into me. This is the last time I’m doing this for you."
+    MC "You won’t regret it, Tashi-sensei!"
+    "I bowed and sprinted out of the room hurrying back to my room to actually start writing."
+    scene Hallway with fade
+    "Well, that was the plan until I ran into Akira."
+    stop music
+    show dummy with vpunch
+    play sound Thud
+    MC "Damn, that stings."
+    show FMG neutral with dissolve
+    play music FMG
+    FMG "You okay? You ran face first into my abs, haha. Let me help you up."
+    "She grabbed the back of my shirt collar and pulled me to my feet with ease."
+    FMG "I would’ve grabbed your arm but I didn’t want to fling you across the hallway."
+    MC "Thanks, I appreciate not being tossed like a ragdoll. Are you okay? I must’ve hit you pretty hard."
+    FMG "Don’t worry about me, I only felt a slight tickle, these babies are like steel!"
+    "She lifted up her shirt to flex her abs but quickly put it back down when she remembered we were still in the hallway."
+    show FMG happy
+    FMG "Heh, whoops. Got a little too into for a second."
+    show FMG neutral
+    extend " Seriously though, do you want to go to nurse real quick? I want to make sure you don’t have a concussion or anything serious."
+    MC "I feel fine now. But, yeah, that’s probably a good idea."
+    FMG "You want me to carry you?"
+    MC "Nah, I should be fine to walk, thanks though."
+    show FMG aroused
+    FMG "I’ll hold your hand just in case something happens."
+    MC "Good thinking, who knows what might happen. This school is crazy."
+    scene black with fade
+    pause 1
+
+    scene Nurse Office with fade
+    play music Peaceful
+    Nurse "Okay! We’ll send you a reminder for scheduling your next appointment. It doesn’t have to be exact, but we generally try to aim for an every two weeks basis."
+    show PRG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    PRG "Okay. Thank you very much."
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "Yo, Kodama-san! How have you been? It’s been a while."
+    MC "Yeah, for real. You look great."
+    show PRG surprised
+    PRG "Oh! H-Hello, Mizutani-san. Hotsure-san. I-I didn’t see you come in."
+    MC "I’m surprised, it’s kinda hard to miss this brick wall walking around."
+    show FMG happy
+    FMG "You’re not so easy on the eyes either, sasquatch."
+    show PRG neutral
+    MC "Well that’s just plain rude. I’m taking my hand back."
+    show FMG angry
+    FMG "Hey!"
+    FMG "If I tightened my grip just a little you were mine."
+    "I stuck my tongue out at her and she retaliated with the same thing."
+    PRG "Aheh... you two are cute together..."
+    pause .5
+    show PRG worried
+    PRG "Um... what are you doing here, though?"
+    MC "It’s a funny story actually. I may or may not have ran into Akira’s abs face first."
+    Nurse "Mizutani-san, you hurt him again?"
+    show FMG neutral
+    FMG "It wasn’t my fault, haha. He came sprinting out of class!"
+    Nurse "Come here, dearie, let me make sure you’re still in one piece."
+    PRG "D-Does your face hurt, Hotsure-san?"
+    MC "Eh, I’m good."
+    FMG "Sadly. If my abs couldn’t crack that thick head of his open, nothing will."
+    MC "Wow, it’s crazy. It’s like I can still hear you talking smack!"
+    FMG "I know, that’s why I said it."
+    FMG "You never answered my question, Aida. How have you been?"
+    show PRG surprised
+    PRG "O-Oh, I’m sorry!"
+    "As Aida and Akira caught up and talked about... I don’t know, girl things? The nurse kept asking me questions so I couldn’t listen in."
+    hide FMG
+    hide PRG
+    with dissolve
+    Nurse "Headache?"
+    MC "Nope."
+    Nurse "Anything ringing in your eyes?"
+    pause 1
+    MC "No."
+    Nurse "Feelings of nausea or vomiting?"
+    MC "Thankfully, no."
+    Nurse "Fatigue and or blurry vision."
+    MC "I wish I had blurry vision, I get sick of looking at Akira sometimes."
+    FMG "The feeling’s mutual, Kei-kun!"
+    Nurse "Heh, you’re all set. I’ll write this down and you’re free to leave."
+    MC "Awesome, thank you so much."
+    Nurse "My pleasure."
+    "I walked back over to Akira and Aida to see them saying their goodbyes."
+    show FMG happy at Position(xcenter=0.75, yalign=1.0)
+    show PRG happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    FMG "It was great talking to you, Kodama-san. We should get together more, without... this guy."
+    MC "Like you bring anything to the table besides muscle."
+    show FMG flex #flex-2
+    FMG "My incredible good looks?"
+    MC "...yikes."
+    show FMG neutral
+    PRG "I-I would love that. I’d love to talk more now, but I need to meet up with Sakura for our competition practice."
+    MC_FMG "Good Luck!"
+    PRG "T-Thank you both!"
+    hide PRG with dissolve
+    show FMG neutral at altMove(0.5)
+    FMG "You good to go?"
+    MC "Pretty sure, yeah."
+    MC "Thanks again!"
+    Nurse "Anytime, dear!"
+    scene black with fade
+    pause 1
+
+    scene Dorm Hallway with fade
+    play music FMG
+    MC "Alright, hear me out. I’m supposed to be writing a paper but I really don’t want to. Would you want to try out this new MOBA I’ve been playing?"
+    show FMG neutral with dissolve
+    FMG "MOBA’s have never really been my thing. I played one for a little but had to stop because I got really toxic towards my teammates."
+    MC "Great, so you already know what to expect."
+    FMG "To a degree, yeah. What’s the name of the one you’ve been playing?"
+    MC "League of Ancients or LoA for short."
+    show FMG happy
+    FMG "Sounds like fun!"
+    MC "No, it is most definitely not fun."
+    show FMG neutral
+    FMG "Then why do you keep playing it? If you aren’t having fun, play a game you actually enjoy."
+    MC "You wouldn’t get it. This game freaking sucks and I hate every minute of it but god damn it’s like a drug."
+    show FMG sad-2
+    FMG "You worry me a lot."
+    MC "You’ll see what I’m talking about when you play a game, trust me."
+    scene Dorm Interior with fade
+    show FMG neutral with dissolve
+    FMG "Man, it’s been a while since I’ve been in here. Heh, everything looks even smaller here than in my dorm."
+    MC "I don’t really get or need the dorm upgrades you and the others get. Not like Daichi has anything going on with his body either."
+    FMG "Oh yeah, I totally forgot about him. What’s he been up to? I never heard anything else from him about our bodyguard agreement."
+    MC "I couldn’t tell you. That dude is in his own world... all the time. He comes back every now and then but I haven’t seen much of him recently."
+    FMG "Do you want to go look for him? Maybe he’s in trouble or something."
+    MC "Let me think about that..."
+    extend " Nah."
+    FMG "Whatever you say, dude. But if he shows up wondering why you didn’t help, I’m throwing you under the bus."
+    MC "Knock yourself out. Now then, it’s time to hate ourselves with some LoA."
+    "Akira sat down on my bed causing it to creak heavily."
+    MC "Hey, don’t be breaking my bed. I didn’t get those thick metal beams like yours got."
+    show FMG flex
+    FMG "Not my fault, it can’t support all of this."
+    MC "I don’t know if I want you sitting in my chair now..."
+    show FMG neutral
+    FMG "It’ll be fine, I promise. I won’t put too much of my weight on it. Come on, slowpoke show me the game already."
+    MC "Don’t tell me what to do..."
+    pause 2
+    MC "Damn, that took forever to load, what the hell."
+    FMG "Probably cause your rig sucks. You call this a gaming set-up? Where is the TXD 1079r and does your monitor even have 4k resolution?"
+    MC "Do I look like I’m made of money? TXD’s go for a small fortune. You know what, whatever. Let me show you the champs."
+    show FMG sad-2
+    FMG "And you call yourself a gamer..."
+    show FMG neutral
+    FMG "But alright, show me these ‘champs’."
+    MC "Finally, I didn’t think you’d ever stop talking, haha."
+    show FMG angry
+    FMG "I’ll leave."
+    MC "SO ANYWAY, let’s start with some top lane champs."
+    show FMG neutral
+    MC "This guy is called Susan. Now I know what you’re thinking \"What’s so scary about Susan?\" Let me break it down for you. So when he gets last hits with his Q it increases the damage on it permanently. If the game goes on long enough he can one-shot most champs."
+    FMG "Wow, that sounds stupid and unbalanced. What else can he do?"
+    MC "His W is slow that increases over time, he’ll cast it on you and he’ll take away roughly half your movement speed and at max rank it scales up to a ninety percent slow."
+    FMG "Why not just make it a stun? It has a freaking seven second cooldown and lasts for four seconds. How is that okay?"
+    show FMG angry
+    FMG "I’m getting annoyed just by reading his abilities. His ultimate reduces the cooldown on his Q even more!"
+    MC "But wait— there’s more!"
+    MC "This champ is called Slett. He’s-"
+    show FMG surprised
+    FMG "Oh no, he’s hot!"
+    MC "I know right! I’d let this guy beat the shit outta me."
+    show FMG sad-2
+    FMG "You always have to make it weird..."
+    show FMG neutral
+    FMG "But this dude sounds freaking awesome! You get to perform wrestling moves on people?!?!?"
+    MC "He’s one of my favorites. His W lets him store damage and then unleash it into one massive AOE punch. It’s bullshit but when you hit people with that giant fist... oh man, it is satisfying."
+    FMG "Are there any buff girls? There has to be at least one."
+    MC "Actually, yeah! There is one. Let me find her on the champ page."
+    pause 2
+    MC "Bam, right here... her name is Alani."
+    FMG "What??? That’s it? She’s got twigs for arms."
+    show FMG flex
+    extend " She has nothing on me."
+    MC "W-What... She’s jacked! Are we looking at the same character????"
+    show FMG happy
+    FMG "I guess it’s fine they couldn’t make her too big. At least you got the real thing."
+    "She walked over to the back of my chair, got on her knees, and wrapped her arms around me."
+    MC "Thanks I needed this."
+    FMG "When don’t you? I give the best hugs, my guy."
+    show FMG neutral
+    FMG "Alright, let me play a game."
+    MC "I didn’t even show you the rest of the characters. You have so much to learn!"
+    FMG "That’s gonna take all day, I need some action. I’m going mid and I’m winning."
+    MC "...Alright but when you start losing I don’t want to hear you complain about bad teammates, lack of vision, or anything."
+    FMG "Yeah, yeah."
+    "She lifted me out of the chair (without asking, might I add) and plopped me on my bed."
+    MC "If you wanted my chair you could’ve liked... I don’t know... asked?"
+    show FMG flex
+    FMG "You’re absolutely correct. However, I love picking you up and it’s been roughly a day since I got to do it. I was getting frisky."
+    MC "Well if you want we can um get frisky cough in this bed?"
+    show FMG aroused
+    FMG "When I get more comfortable at this size, I promise you we can do something."
+    MCT "Keisuke Hotsure, you have such a way with words."
+    show FMG neutral
+    FMG "Now, stop being horny for a minute and help me find a game."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm Interior with fade
+    "One game turned into five..."
+    show FMG happy
+    FMG "HA! Nice try bitch. Wasted your blink and enflame and you still lost the fight. Maybe learn your matchups, next time!"
+    MC "GO BACK TO YOUR TOWER, YOU’RE GONNA GET GANKED!"
+    FMG "I’m fine-"
+    show FMG angry
+    FMG "Bro! I swear invis champs are nothing but bullshit. Whoever thought this stupid little jester was balanced should be fired. Nerf this crap already, god."
+    MC "If you backed when I told you too, you would’ve lived. You can’t push with that much HP and no vision. Are you trying to lower my MMR? I worked hard for that?"
+    FMG "Aren’t you like bronze? It’s not even like that matters, top is feeding to no end. We’re better off surrendering at fifteen. My teammates are clueless."
+    pause 1
+    FMG "Oh my god... come on! Bot lane pushes up with no vision and gets ganked. How do you not see that coming???"
+    MC "Didn’t you do that same thing not even two minutes ago?"
+    FMG "The difference is I’m actually playing LoA and my teammates are playing checkers."
+    FMG "OOOOOH, would you look at that top is now zero and seven. Fantastic work."
+    MCT "This was a horrible idea but at the same time, it’s kinda funny. Her team does blow total ass, but it was going to happen sooner or later."
+    FMG "Where is my jungle? Why is he sitting in a bush top? That isn’t helping; come gank mid, you idiot!"
+    MC "You can probably solo kill him, your ultimate is percentage based and you have enflame up."
+    show FMG neutral
+    FMG "I’ll give it a shot, I’ll harass him a bit and see if I can make a play."
+    "She got ganked... and killed."
+    show FMG angry
+    FMG "GG EZ? MID DIFF? You got freaking camped the whole game cause you’re terrible. Maybe learn to play the game."
+    "After a few more horrible team fights and a lot more screaming. Akira had lost."
+    MCT "Nat never made her this mad..."
+    FMG "Can you believe this guy? You missed your E maybe twenty times and then you flame me in all chat cause your jungle did all the work. Like what?????"
+    MCT "I can see why she stopped playing MOBAs..."
+    MC "I thought you never let games make you mad?"
+    show FMG neutral
+    FMG "I don’t want to hear it, mister. You saw my teammates, It was basically a one versus nine. What was I supposed to do?"
+    MC "I don’t know... you could’ve tried playing better..."
+    FMG "Bruh, are you kidding me right now."
+    MC "I calls it like I sees it, fam. Do you want to go for a walk? I think some fresh air could do both of us some good."
+    FMG "Yeah, I’d love that. Also, I’m never playing this game again. It sucks."
+    MC "I told you. At least you can’t ruin my rank anymore. Luckily for you, I’m feeling generous today so I’ll let you hold my hand."
+    show FMG happy
+    FMG "Wow, what an honor."
+    MC "It really is."
+    MCT "I guess I can start the paper when I get back..."
+    extend " maybe."
     jump daymenu
 
 label FMG056:
