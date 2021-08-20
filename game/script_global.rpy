@@ -254,6 +254,7 @@ image cg BE032 = "Graphics/ui/gallery/BE032.png"
 image cg FMG016 = "Graphics/ui/gallery/FMG016.png"
 image cg FMG041 = "Graphics/ui/gallery/FMG041.png"
 image cg FMG050 = "Graphics/ui/gallery/FMG050.png"
+image cg FMG056 = "Graphics/ui/gallery/FMG056.png"
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.png"

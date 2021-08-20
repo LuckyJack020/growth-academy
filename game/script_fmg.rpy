@@ -8632,8 +8632,10 @@ label FMG056:
     "Akira & Natsuko" "Ready!"
     "I released my hands from theirs as if I just dropped a water balloon and I didn’t want to get splashed. I wasn’t about to get in the way of two of those fists potentially slamming into me."
     MC "GO!"
+    show cg FMG056 with dissolve
     "In what seemed like a blur, an instantaneous explosion of force, the muscles in both their arms surged to life. The extended arms on the handles bulged to peak heights I’d never seen before."
     "Similarly, their hands and wrists locked together, pulling taut what looked like steel cables writhing to life in their forearms as their hands slammed into each other like a head on collision."
+    hide cg with dissolve
     "The air was silent, save for a few grunts from Akira."
     FMG "{i}Erh!{/i}"
     FMG "{i}Uffm!{/i}"
