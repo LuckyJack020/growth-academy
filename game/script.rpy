@@ -6,8 +6,8 @@ default persistent.enable_nsfw = True
 #if combining with "Transform(xzoom=+-1)", separate into two different "show ______ at" statements
 #error happens whenever xzoom is set to +1 only, but for consistency's sake; we'll separate them regardless.
 
-transform altMove (xCen):
-    linear 0.5 xcenter xCen
+transform altMove (xSp, xCen):
+    linear xSp xcenter xCen
 
 init python:
     preferences.set_volume("music", 1.0)

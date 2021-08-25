@@ -4202,7 +4202,7 @@ label FMG029:
     MC "Sounds good to me."
     "As Akira approached the door to the gym, Natsuko pushed it open from the other side."
     "She was drenched in sweat, still catching her breath as she just locked eyes with Akira’s."
-    show Natsuko neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     Natsuko "Get out of my way."
     "And with that, she pushed between us."
     hide Natsuko with dissolve
@@ -8041,7 +8041,7 @@ label FMG052:
     MC "Ooh, I didn’t even think of that... yeah, yeah this is perfect. There is no way she’ll be able to yell at us because she’ll be so intimidated by the size of you."
     FMG "Nah, no way we get that lucky."
     "We were so distracted about thinking of ways to avoid getting yelled at, we didn’t see Alice sitting on the bench... across from us."
-    show FMG neutral at altMove(0.75)
+    show FMG neutral at altMove(0.5, 0.75)
     show WG angry at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     WG "You two have some nerve! You should’ve been here twenty minutes ago!"
     show FMG sad
@@ -8208,7 +8208,7 @@ label FMG052:
     FMG "You kept tickling my legs! I’m sorry..."
     WG "Good, you can put your clothes back on Akira. We are all done."
     hide Chibuki with dissolve
-    show FMG neutral at altMove(0.5)
+    show FMG neutral at altMove(0.5, 0.5)
     FMG "Finally. I didn’t want to say anything but you sure took your sweet time, Chibuki. I thought it would never end."
     WG "She isn’t the fastest but at least she’s thorough."
     Chibuki "I’m punching out. I’ll see you two back at the dorm."
@@ -8363,7 +8363,7 @@ label FMG053:
     MC_FMG "Good Luck!"
     PRG "T-Thank you both!"
     hide PRG with dissolve
-    show FMG neutral at altMove(0.5)
+    show FMG neutral at altMove(0.5, 0.5)
     FMG "You good to go?"
     MC "Pretty sure, yeah."
     MC "Thanks again!"
@@ -8523,7 +8523,7 @@ label FMG056:
     MC "We’re not going to do all of those today are we?"
     FMG "All of them? I wasn’t even finished."
     MCT "Kill me."
-    show FMG neutral at altMove(0.25)
+    show FMG neutral at altMove(0.5, 0.25)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "You really think Hotsure-san can handle all of this? Especially with those toothpicks..."
     MC "{i}Ahem{/i}... for your information, Nat, I’ve put on some muscle lately. Women have been losing their minds when they see me in the halls."
@@ -8689,7 +8689,7 @@ label FMG056:
     Natsuko "...I’ll think about it."
     hide Natsuko with fade
     "Natsuko went off to the opposite side of the gym to finish her workout."
-    show FMG neutral at altMove(0.5)
+    show FMG neutral at altMove(0.5, 0.5)
     FMG "Whew, well I got my upper body workout in with all of that. They may not look like noodle arms but they sure feel like it now."
     MC "So we’re done for the day?"
     FMG "I’m done for the day. You still have twelve sets of curls left to do before we get to doing dips and skull crushers."
@@ -9214,7 +9214,7 @@ label FMGWG003:
     MCT "Maybe if I stop talking, this stuff won’t happen anymore."
     show FMG angry
     FMG "Alice! We need to have a chat!"
-    show FMG angry at altMove(0.25)
+    show FMG angry at altMove(0.5, 0.25)
     show WG stern at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "I hope you plan on dropping that tone if you intend to speak with me!"
     FMG "Admit your wrong about horror movies."
@@ -9260,7 +9260,7 @@ label FMGWG003:
     WG "Enough of this! I will be at your dorm tonight and you will see who is wrong."
     hide WG with dissolve
     show FMG happy at Transform(xzoom=1)
-    show FMG happy at altMove(0.5)
+    show FMG happy at altMove(0.5, 0.5)
     FMG "That went rather well. She didn’t seem too mad."
     MC "Mhmmmmmm, I doooon’t know."
     MC "You think she’s actually going to show?"

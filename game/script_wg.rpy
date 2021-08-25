@@ -15,13 +15,13 @@ label WG001:
     WG "I am sure there was some kind of memorandum circulated among the staff announcing my arrival at this school."
     WG "Surely you received the instructions sent in advance of my arrival concerning the specific accommodations I require."
     Lunch "If you have an allergy or other dietary need, I would have been told."
-    show WG angry at altMove(0.4)
+    show WG angry at altMove(0.5, 0.4)
     WG "You there! Um, I apologize but your name eludes me at the moment."
     MC "Keisuke Hotsure."
     WG "Yes, Keisuke— I remember now. Please...tell Madame Hairnet here who I am."
     MC "She's a student. She's in my class."
     show WG haughty at Transform(xzoom=-1)
-    show WG haughty at altMove(0.5)
+    show WG haughty at altMove(0.5, 0.5)
     WG "{i}Ergg{/i}, this isn't really helping. Look, how else can I explain this-"
     WG "You may see hundreds of others passing down your line as you ladle warmed over spaghetti sauce onto rubber pasta, but I am not just another stomach to fill."
     WG "The meals you mass-produce for the student body may be satisfactory given the level of culinary talent you possess, but I have greater needs."
@@ -29,16 +29,16 @@ label WG001:
     Lunch "We make enough food for even the fat kids. Don't worry, you'll get your share."
     show WG angry
     WG "I am NOT some 'fat kid'. I am not even obese."
-    show WG neutral at altMove(0.6)
+    show WG neutral at altMove(0.5, 0.6)
     WG "And it is not a matter of quantity, but quality. My palate is a delicate instrument that needs to be handled with care. I have certain expectations that this facility in its current state— cannot meet."
     show WG neutral at Transform(xzoom=1)
-    show WG neutral at altMove(0.25)
+    show WG neutral at altMove(0.5, 0.25)
     WG "Now, I've already gone to the trouble of ordering the equipment you probably don't have— wood-fire oven, rotisserie, espresso machine, meat smoker; merely the basics required to craft fine cuisine..."
     show WG neutral at Transform(xzoom=-1)
-    show WG neutral at altMove(0.4)
+    show WG neutral at altMove(0.5, 0.4)
     WG "But François will need, say, 20%% of your workspace emptied out and handed over to him."
     Francois "And deliveries."
-    show WG happy at altMove(0.5)
+    show WG happy at altMove(0.5, 0.5)
     WG "Of course. And he needs to have deliveries made every day, so if you could give him the address and directions to this building, that would be wonderful."
     MCT "Bringing along her own private chef and taking over a fifth of the kitchen? Just how loaded is this girl?"
     Lunch "Students don't get to bring private chefs with them, princess. Non-staff don't get access to our kitchen or any other facilities on campus."
@@ -57,7 +57,7 @@ label WG001:
     Lunch "You wouldn't be the first student punished with kitchen duty."
     WG "Very well, but this is not the end. A Nikumaru does not give up."
     show WG neutral at Transform(xzoom=1)
-    show WG neutral at altMove(0.4)
+    show WG neutral at altMove(0.5, 0.4)
     play music WG
     WG "Did you see that? {w} Can you believe that? Erm, Keisuke was it?"
     MC "Yeah."
@@ -2286,7 +2286,7 @@ label WG014:
     "Looking at Alice and knowing about her factor, I couldn't help but wonder what the future had in store for her. Just how big was she going to get? Like, sumo wrestler big?"
     "Part of me wondered if what I said stuck out to her, but a brief look at her expression without trying to stare led me to believe she hadn't noticed."
     MC "I don't think I've asked this before, but you're from America, right?"
-    show WG neutral at Position(xpos=0.3) with move
+    show WG neutral at altMove(0.5, 0.3)
     WG "My mother is. I've lived both there and here in Japan, going to school in both countries."
     MC "What part? Of America, I mean."
     WG "The East Coast. My mom's side of the family has been involved in banking and investing for generations."
@@ -2296,7 +2296,8 @@ label WG014:
     WG "But they're not all sun and warm water. Up in New England... You're not doing much surfing or sunning."
     "We finished stacking the mats up, but continued chatting as we cleaned up."
     WG "Did you grow up near the water?"
-    show WG neutral at Position(xpos=0.8), Transform(xzoom=-1) with move
+    show WG neutral at Transform(xzoom=-1)
+    show WG neutral at altMove(1.0, 0.8)
     MC "No. I just... When I think of America I think of beaches, for whatever reason."
     MC "Either that or burgers and fries."
     WG "Yes, well I suppose that is what comes to mind when most people think about American cuisine, but I assure you there is a much greater variety over there than anything you've seen in Japan."
@@ -2305,7 +2306,8 @@ label WG014:
     "The thought of her and her appetite growing... well it piqued my interest to say the least, but I certainly wouldn't want to do or say anything that would make her self-conscious about it."
     pause 0.5
     "Realizing I was starting to space out getting lost in my thoughts, I looked around desperately for something else to talk about to hopefully avoid coming off as a weirdo."
-    show WG neutral at Position(xpos=0.65), Transform(xzoom=1) with move
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(0.5, 0.65)
     MC "Why are there hockey sticks here?"
     WG "For the winter, I assume."
     MC "No, out here. Who was trying to play hockey?"
@@ -2314,20 +2316,21 @@ label WG014:
     MC "That makes sense. Think we should put them off to the side?"
     "I carried the weights to the bleachers, where I found a large round thing on the floor."
     MC "I don't even know what that is."
-    show WG neutral at Position(xpos=0.2) with move
+    show WG neutral at altMove(1.0, 0.2)
     WG "It's used in curling. It's the thing you push across the ice."
     MC "Didn't even know we had stuff like that here. What's it called?"
     WG "A curling stone."
     MC "Hmm, I guess it is just a handle attached to a rock after all. Is that a popular sport in America?"
     WG "Nobody curls in America! That's a Canadian thing. I don't even know why it would be here, this isn't an ice rink."
     "She huffed as she kicked the curling 'rock' across the floor and to the equipment room."
-    show WG angry at Position(xpos=0.35), Transform(xzoom=-1) with move
+    show WG angry at Transform(xzoom=-1)
+    show WG angry at altMove(0.5, 0.35)
     WG "{i}Grr.{/i}"
-    show WG angry at Position(xpos=0.5) with move
+    show WG angry at altMove(0.5, 0.5)
     WG "{i}Bah!{/i}"
-    show WG angry at Position(xpos=0.65) with move
+    show WG angry at altMove(0.5, 0.65)
     WG "{i}Huff.{/i}"
-    show WG angry at Position(xpos=0.8) with move
+    show WG angry at altMove(0.5, 0.8)
     WG "{i}Gar.{/i}"
     "I found a couple skis propped up against the wall and followed her."
     MC "Somebody was messing with the skis as well. Did I sleep through the summer and fall?"
@@ -2337,7 +2340,8 @@ label WG014:
     WG "It's fake. I assume it's used for biathlon practice."
     MC "Biath-wha now?"
     WG "Cross-country skiing and rifle shooting. It's an Olympic sport, haven't you seen it before?"
-    show WG neutral at center, Transform(xzoom=1) with move
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(0.75, 0.5)
     MC "Seriously?"
     pause 2
     MC "You're not joking."
@@ -2356,14 +2360,15 @@ label WG014:
         "Not sure why she thought she needed to clarify that. No offense to Alice, but nothing about her physique or athletic talent led me to believe she would have gone as a participant."
     MC "Wow, that's pretty cool."
     "She shrugged."
-    show WG neutral at Position(xpos=0.2) with move
+    show WG neutral at altMove(1.0, 0.2)
     WG "Far too many crowds, security checkpoints every twenty feet, and if you wanted to see two different competitions in one day you had to hope they were in the same arena."
     WG "Too much of a headache to be worth the trouble, if I'm being honest."
     MC "But to travel to another country, meet people from other nations..."
     WG "Don't get me wrong, it is nice, but traveling to other countries can actually feel tedious."
     WG "Everywhere you go it's the same franchises, the same highly polished tourist spots where the poverty or unrest is kept at bay to present a picture perfect image of the country."
     WG "You don't really get a taste for the culture that way."
-    show WG neutral-2 at Position(xpos=0.65), Transform(xzoom=-1) with move
+    show WG neutral-2 at Transform(xzoom=-1)
+    show WG neutral-2 at altMove(1.0, 0.65)
     WG "As for meeting other people... Only if you speak the same language."
     MC "Oh... hadn't thought of it that way."
     "I didn't have much to say to that, so as Alice and I picked up some kendo sticks I let things get quiet."
@@ -2379,19 +2384,21 @@ label WG014:
     MC "Huh?"
     show WG neutral
     WG "The places that cater to the rich tend to have the same trappings, the same luxuries. Sometimes there's an effort to bring a taste of the local cuisine, music and whatnot in, but the separation can become palpable."
-    show WG neutral at Position(xpos=0.8) with move
+    show WG neutral at altMove(0.5, 0.8)
     WG "I've always found more amusement and insight in those times when we left the carefully constructed pockets of luxury."
     MC "You like rubbing elbows with the common folk, eh?"
     show WG neutral-2
     WG "Nnnnnn- Sort of."
     WG "Don't get me wrong, I don't want to sleep on a straw mat or wash myself in an outdoor shower."
-    show WG neutral at Position(xpos=0.2), Transform(xzoom=1) with dissolve
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(1.5, 0.2)
     WG "But if I'm going to spend several hours flying just to have the same spa services, the same massages, the same Swiss chocolates and mineral water, why even travel?"
     WG "When I leave home I want to leave my comfort zone. I want to experience something new."
     MC "So when you were in Geneva did you ever go hiking up the alps?"
     WG "Oh, heavens no! As beautiful as it is, the steep climb and thin air are something you have to prepare for, at great personal risk mind you."
     WG "It's not something for the typical tourist or part of a luxury vacation."
-    show WG happy at Position(xpos=0.65), Transform(xzoom=-1) with move
+    show WG happy at Transform(xzoom=-1)
+    show WG happy at altMove(1.0, 0.65)
     WG "But I did ride the cable-car up to the top of one of the mountains. A splendid view."
     WG "And the brisk wind made the hot tub extra luxurious that evening."
     MC "So you want to leave your comfort zone, but you don't want to be uncomfortable while you do it?"
@@ -2406,7 +2413,8 @@ label WG014:
     show WG neutral
     "After enough time had passed I shifted the conversation."
     MC "Have you been in touch with any friends from your old school?"
-    show WG neutral at Position(xpos=0.2), Transform(xzoom=1) with move
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(1.0, 0.2)
     WG "Not lately."
     WG "There were several people from my old academy I was friendly with, but we've all gone to different places for our higher education."
     MC "Oh."
@@ -2421,7 +2429,8 @@ label WG014:
     MC "Well, that is true... especially considering what others are going through."
     MCT "Shit. I shouldn't have brought this up."
     MC "Hey, uh, I didn't mean-"
-    show WG neutral at Position(xpos=0.8), Transform(xzoom=-1) with move
+    show WG neutral at Transform(xzoom=-1)
+    show WG neutral at altMove(1.75, 0.8)
     "She looked at me sideways with a calm, knowing expression on her face."
     WG "You're pretty easy to read, Keisuke."
     MC "Uh..."
@@ -2430,7 +2439,8 @@ label WG014:
         WG "After the incident with your roommate the other day I can understand your trepidation."
     MCT "She's pretty observant, I'll give her that."
     MC "Sorry about that."
-    show WG neutral at Position(xpos=0.35), Transform(xzoom=1) with move
+    show WG neutral at Transform(xzoom=1)
+    show WG neutral at altMove(1.25, 0.35)
     WG "You don't have to apologize for making me aware of my condition. I'm well aware of it myself without anyone broaching the subject in conversation."
     WG "Though if you want to apologize for thinking that I am so frail as to need to be shielded from reality, I will accept it."
     menu:
@@ -2462,7 +2472,8 @@ label WG014_C2_1:
     show WG neutral-2
     WG "Having everyone here walk on eggshells around one another would be antithetical to this institution's reason for being, would it not?"
     WG "We're supposed to address our inevitable growth and learn to live with it, aren't we? A direct confrontation is the only way to do so."
-    show WG neutral at center, Transform(xzoom=-1) with move
+    show WG neutral at Transform(xzoom=-1)
+    show WG neutral at altMove(0.5, 0.5)
     WG "I've already done that, thinking of dieting or exercise and deciding not to make myself miserable."
     WG "And if I can turn that page, what makes you think you need to shoulder my burden?"
     MC "I wasn't... I mean, not everyone is as fine with this as you."
@@ -2476,7 +2487,8 @@ label afterchoice_WG014:
     show WG happy
     WG "Now, that matter aside, it looks like we're almost done with this."
     WG "I need to take care of my studies, and then it's back to work getting this little business venture of mine going."
-    show WG happy at Position(xpos=0.2), Transform(xzoom=1) with move
+    show WG happy at Transform(xzoom=1)
+    show WG happy at altMove(0.5, 0.2)
     WG "Pick up the pace, Keisuke! We're almost out of here."
     hide WG with dissolve
     "We stuffed the last pieces of equipment in the closet, closed it, and went our separate ways."
@@ -16221,7 +16233,7 @@ label WGFMG001:
     hide FMG with dissolve
     "With that matter resolved (if one could call it that) I figured it’d be best if I slinked away into the background."
     show WG doubt at Transform(xzoom=1)
-    show WG doubt at altMove(0.5)
+    show WG doubt at altMove(0.5, 0.5)
     WG "Keisuke..."
     MCT "Eep!"
     show WG haughty
@@ -16291,7 +16303,7 @@ label WGFMG001:
     FMG "Pffft! Whatever you say, dude."
     show WG haughty at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
     WG "I thought my ears were burning."
-    show FMG surprised at altMove(0.75)
+    show FMG surprised at altMove(0.5, 0.75)
     MC "Oh, hey Alice. We were just talking about you."
     show FMG surprised-2
     FMG "Hey, how did you get in? ... And how much of that did you hear?"
