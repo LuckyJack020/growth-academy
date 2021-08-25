@@ -4074,154 +4074,153 @@ label FMG028:
 
 label FMG029:
     $setProgress("FMG", "FMG030")
-    scene Cafeteria with fade
+    scene Dorm Interior
     play music Schoolday
-    "Just another morning here at Seichou. Somehow I managed to roll out of bed once again, get dressed, and make my way to the cafeteria."
+    "Just another morning where I didn’t feel like doing much of anything. Somehow, I managed to roll out of bed once again, get dressed, and make my way to the cafeteria."
+    scene Cafeteria with fade
     MCT "Man, these waffles suck."
     MCT "How is it even possible to mess up waffles? Like, you just put batter in the waffle-maker and wait for it to be finished!"
     "I just kept poking at the half-baked waffles with my fork as I got myself mentally ready for the day."
-    show Natsuko happy with dissolve
-    Natsuko "Morning, Keisuke-san. Mind if I join you?"
+    MC "Life isn’t fair..."
+    show Natsuko neutral
+    Natsuko "Good morning, Hotsure-san. Do you mind if I join you?"
     "I raised my head to see a familiar redhead staring down at me."
     MCT "There really is no escaping her, is there?"
-    MC "Yeah, no problem take a seat."
-    show Natsuko happy
-    Natsuko "Are you going to finish those? They're like, REALLY good."
-    MC "Trust me, these aren't really that good. If anything, I'm doing you a favor by not letting you eat them."
+    MCT "I’d rather eat alone..."
+    extend " Ugh, I’ll suck it up this time."
+    MC "Yeah, no problem— take a seat."
     show Natsuko neutral
-    Natsuko "Oh? Maybe you grabbed the wrong ones?"
-    "I just looked at her, completely confused."
-    MC "Huh? Wrong ones?"
-    Natsuko "Don't you know that they make protein waffles as well? They taste a bit different, but they help fuel you for the day!"
-    MC "I... I see. That makes sense."
+    Natsuko "I’m surprised you aren’t shoveling your face with those waffles, they’re some of the best."
+    MC "Trust me, these aren’t really that good. Are you sure we’re talking about the same breakfast food?"
+    Natsuko "I am. Perhaps, you grabbed the wrong ones?"
+    "I just looked at her, completely confused. Maybe I was going crazy?"
+    MC "I don’t think so... I’m pretty sure these ones just suck."
+    Natsuko "You grabbed the protein waffles... I’m not surprised you don’t like them. Those ones look incredibly dry."
+    MC "Mhm... T-That would make sense. Do you want them? I kinda covered them in a ton of maple syrup."
+    Natsuko "It’s fine. I’m not much of a fan of that sugary garbage. But, I’m always prepared."
     "She took out a protein bar and began unwrapping it."
-    Natsuko "Anyway, it's fine. I'm always prepared."
     MC "Hey, mind if I ask you a question?"
-    Natsuko "Sure, ask away."
-    MC "How're you feeling after the golf tourney?"
+    Natsuko "Hm?"
+    MC "Are uh, you okay after the golf tourney? You seemed really mad after Akira beat you."
     show Natsuko disappointed
-    Natsuko "Don't even get me started on it. Pathetic. Weak. Disappointed."
-    MC "Doesn't feel too good calling yourself that, does it?"
+    Natsuko "Don’t remind me. Losing to her... was embarrassing. I train to be elite at most things I do and losing to her makes all of that meaningless."
+    MC "Feels pretty shitty to feel like that, huh?"
     show Natsuko neutral
-    Natsuko "What are you getting at, Keisuke-san?"
-    MC "I'm surprised that you don't understand."
-    MC "You realize how Akira feels when you insult her like that?"
-    "I realized how angry I sounded, reeling back my frustration and just trying to explain my thoughts better."
+    Natsuko "What are you getting at, Hotsure-san?"
+    MC "I’m surprised that you don’t understand. You do realize Akira feels horrible when you beat her and then fling insults at her non-stop, right?"
+    MC "Now she’s beaten you and now you feel horrible and she didn’t even have to belittle you... What I’m trying to say is both of you wouldn’t feel horrible if this was in a friendly setting."
+    MC "You, especially, are out for her blood. Maybe pull back a little, Akira is a wonderful person. I’m sure the two of you could learn a lot from each other."
     show Natsuko disappointed
-    Natsuko "You wouldn't get it. Those words kinda sting, sure, but the way I see it they're all the more reason to get off your ass and do something about it."
+    Natsuko "You wouldn’t get it. She doesn’t hold a candle to me. What happened, happened because she got lucky. Nothing else."
     "Natsuko sighed heavily and got up from her table."
     show Natsuko neutral
-    Natsuko "Now if you'll excuse me, I must be going."
-    Natsuko "I've got lots of work to do so I don't let a catastrophe like that happen again."
-    Natsuko "Have a lovely day Keisuke-san."
-    MC "Whatever you say. Seeya..."
+    Natsuko "If you’ll excuse me, I must be going. I have a lot of training to do so this won’t happen again."
+    Natsuko "Enjoy the rest of your day, Hotsure-san."
+    MC "Later..."
     hide Natsuko with dissolve
-    MCT "Sheesh, what's her deal?"
-    MC "Alright, I'm throwing these waffles out. I can't believe they'd leave out chocolate chips."
-    MCT "Well, actually, it makes sense that they don't. Protein pancakes are supposed to be healthy, I'd assume. Or wait, maybe not? Protein bars have chocolate in them and they're-"
+    MCT "I hope she considers what I said. This rivalry is so pointless."
+    MC "Alright, I’m throwing these waffles out. I can’t believe they’d leave out chocolate chips."
+    MCT "Well, actually, it makes sense that they don’t. Protein pancakes are supposed to be healthy, I’d assume. Or wait, maybe not? Protein bars have chocolate in them and they’re-"
     FMG "KEEEEEI-KUN!"
     "I jumped in surprise, nearly dropping my tray as Akira somehow popped out of nowhere."
-    show FMG happy
-    FMG "Hello, sleepy head! I called your name like, twenty times!"
-    FMG "How's your day been? You seem a little lost in your own head there."
-    MC "Well, my breakfast was some sorta weird-tasting waffle-"
-    FMG "Ooh, is it protein waffle day again? I didn't even notice!"
-    MCT "Am I the ONLY one who didn't know about these things?!"
-    MC "...Right. And then I was talking a bit to Na-"
-    "I froze up, falling quiet for a second."
-    MC "My... mother, Nana."
-    FMG "Your mother's name is Nana?"
-    MC "Uh... yeah! Wait, no! It's like a nickname for mom. Kinda like uh... papa or something."
-    MCT "Huh. Somehow I pulled that off."
+    show FMG happy with dissolve
+    FMG "Hey, sleepyhead! I called your name like, twenty times!"
+    FMG "How’s your day been? You seem a little lost in your own head there."
+    MC "I just had some of the worst waffles ever. I can’t believe they’d serve them to normal people."
+    FMG "Ooh, is it protein waffle day again? Yeah, they kinda suck. They are always so dry... ew. The last ingredient I want in my waffles is protein powder. "
+    MCT "Finally someone who understands!"
+    MC "It doesn’t end there. Nat sat down with me and we talked about the golf tourney between you and her."
     show FMG angry-2
-    FMG "You were gonna say Natsuko, weren't you?"
-    show FMG sad
-    FMG "Geez, you suck at lying."
-    MC "Look, it's no big deal. She just... sat down for a few minutes, rambled a bit and then left to go work out. Or something."
-    FMG "What did she say to you, Keisuke?"
+    FMG "And how did that go?"
+    MC "I tried to explain how I see this rivalry you two have going isn’t helping anyone and how I think you’d guys would be better off putting this behind you."
+    FMG "And what did she say, {i}Keisuke{/i}? I wouldn’t be surprised if she talked more shit."
     MCT "Oh geez, she never calls me by my first name."
-    MC "Well, uh... she just talked a little about the golf match."
+    MC "I don’t think it would be Natsuko if she didn’t. She didn’t say much besides how she thinks you won with pure luck and that she’s going to train harder."
     show FMG angry
-    FMG "Is she ready to apologize for being a total bitch?"
-    MC "I'm... pretty sure she isn't."
+    FMG "Pfff, luck? Sorry, princess but you got laid out fair and square. Sucks to suck."
+    FMG "Ugh, maybe, she should learn to stop being a total bitch first, then she’ll see how much of a sore loser she is."
+    MC "That would be pretty sweet... unfortunately, that’s not in the cards."
     show FMG angry-2
-    FMG "Tch. Figures she wouldn't be. She's just too full of herself."
+    FMG "Tch. Figures. She’s too full of herself."
     show FMG flex
-    FMG "Well, one things definitely for sure. I'm going extra hard just so I can stick it to her. It's time to REALLY get fired up!"
+    FMG "Well, one thing is definitely for sure. I’m going extra hard just so I can stick it to her. It’s time to REALLY get fired up!"
     show FMG neutral
-    FMG "So... wanna go work out? It's leg day!"
-    MC "Uh... yeah. Sure. I've had a good bit of protein already so that'll help I'm sure!"
-    FMG "Sweet. Let's go now then!"
-
+    FMG "So... wanna go work out? It’s leg day!"
+    MC "Uh... yeah. Sure? I don’t have anything else going on."
+    FMG "Hell yeah, let’s kill it today."
+    scene black with fade
+    pause 1
     scene Lockers with fade
     "And so, the two of us headed to the locker rooms to get changed."
-    show FMG neutral with dissolve
-    FMG "Just give me a moment to get changed!"
-    MC "Alright! I'll just meet you here after then!"
-    show FMG aroused-2
-    FMG "Oh? Well, I better not catch you peeking, Kei-kun~"
-    MC "H-hey! I'd... I'd never do such a thing!"
-    show FMG neutral
-    FMG "Well, unless you knew you wouldn't be caught~"
-    MCT "Sheesh, Akira's always playing games with my head..."
-    "And with that, Akira dashed towards the stall with her gym bag in hand."
-    MCT "Well, that means I have an hour to kill."
+    FMG "Just give me a moment to get changed."
+    MC "No rush, I’ll wait by the door."
+    FMG "I better not catch you peeking, Kei-kun~"
+    MC "H-Hey! I’d... I’d never do such a thing!"
+    MCT "Just say the word and I’m there."
+    FMG "Unless you knew you wouldn’t be caught~"
+    MCT "Sheesh, Akira’s always playing games with my head..."
+    pause 2
     "After an eternity (five minutes), Akira walked out of the lockers."
+    show FMG neutral with dissolve
+    FMG "Alright dude, I hope you’re ready for the workout of a lifetime! No stretching! No warmups! We’re maxing out immediately!"
+    "I blinked a few times at the intensity of her workout plan..."
+    MC "Hm, on second thought-"
+    show FMG flex
+    FMG "Nope! You don’t get to drop out now."
+    MC "..."
+    MCT "It can’t be that bad. After all, with those protein waffles in me. This workout will be child’s play."
+    MC "Fine, fine. I’m sure, I’ll be okay. Leg day is gonna be my bitch."
     show FMG neutral
-    FMG "Alright dude, I hope you're ready for the workout of a lifetime! No stretching! No warmups! We're maxing out immediately!"
-    "I blinked a few times, not from the intensity of her workout plan, but..."
-    MC "Wait a second. You're wearing the EXACT same clothes, Akira!"
-    MC "How did it take you so long to 'change,' exactly?"
-    FMG "Huh? You've got it all wrong! My usual shirt is Crimson. This one's Cornell Red!"
-    MCT "Am I going insane? First Natsuko's like... a head taller than me, and now Akira's got the same shirt in 500 different shades of red! Maybe I should've attended an asylum rather than Seichou."
-    MC "You know what? Forget it. What're we doing today?"
-    FMG "Heh, glad you asked. Like I said, it's leg day!"
-    MCT "Uuuuuuuuuuuuuuugh."
+    FMG "With what I have planned for today, I wouldn’t be so sure."
+    MCT "Always next time, I guess."
     MC "Will I be able to walk when this is over?"
     show FMG flex
-    FMG "Good question, hahah..."
+    FMG "Good question, haha..."
     "She just fell quiet for a few moments, completely dodging it."
     FMG "Well, shall we get started then?"
     MC "..."
-    FMG "Hey, don't be too excited, Kei-kun. It'll be just a nice, easy, thirty-minute workout. You'll be just fine!"
-    show FMG neutral
-    FMG "Here. Let me show you the routine."
+    FMG "Hey, don’t be {i}too{/i} excited, Kei-kun. When we get to the gym, I’ll show you what we’re doing. I’m making it out to be worse than it really is."
+    MCT "I can only hope."
+    scene Gym with fade
+    show FMG neutral with dissolve
+    FMG "As promised, here’s the routine for today!"
     MC "Routine?"
-    FMG "Yeah! I write down a quick and simple list of things I want to get done during my workout. Have a look!"
+    FMG "Yeah! I write down a quick and simple list of things I want to get done during my workout."
     "She unlocked her phone, and showed me a literal manifestation of hell."
-    MC "You... you want me to do FORTY squats?"
+    MC "You... you want me to do FOURTY squats?"
     MC "Wait, while carrying a barbell? How much wei-"
     "My jaw dropped as I read the weight aloud."
     MC "115 KILOS?!"
-    FMG "Huh? Oh, no no. Don't look at the numbers! Those are for me, silly. If anything, I haven't even updated it for my current gains!"
-    FMG "Let's see here... how about... five. Unweighted."
-    MC "Okay, that's waaaaaay too little. Even for me, Akira."
-    FMG "Of course not, but are you sure you can use proper form? I don't want you to get hurt."
-    MC "Well, I can't argue with that."
+    FMG "Huh? Oh, no-no. Don’t look at the numbers! Those are for me, silly. Let’s see here... how about... five. Unweighted."
+    MC "Okay, that’s way too little. Even for me, Akira."
+    FMG "Are you sure you can do them with proper form? I don’t want you to get hurt. When you can do it correctly, you can do more."
+    MC "Well, I can’t argue with that."
     show FMG flex
-    FMG "Don't sweat it! We can start you on something a bit easier while I do my regular routine. You might need to come spot me though at some point."
+    FMG "I’ll help you, don’t worry. You’ll have it down in no time."
     show FMG neutral
-    FMG "We'll get you doing some box jumps. They're as simple as they sound!"
+    FMG "I think for now though, we’ll get you started on some box jumps. They’re as simple as they sound!"
     MC "Sounds good to me."
-    "As Akira approached door to the gym, Natsuko pushed it open from the other side."
-    "She was drenched in sweat, legs trembling, still catching her breath as she just locked eyes with Akira's."
-    show Natsuko angry at Position(xcenter=0.6, yalign=1.0) with dissolve
-    Natsuko "Excuse me. You're in my way."
-    "And with that, she just held her head down and pushed between us."
+    "As Akira approached the door to the gym, Natsuko pushed it open from the other side."
+    "She was drenched in sweat, still catching her breath as she just locked eyes with Akira’s."
+    show Natsuko neutral at Position(xcenter=0.15, yalign=1.0) with dissolve
+    Natsuko "Get out of my way."
+    "And with that, she pushed between us."
     hide Natsuko with dissolve
-    show FMG sad
-    FMG "Sheesh... what did you even say to her?"
-    MC "I told you. All I did was ask about the golf tournament."
+    show FMG angry
+    FMG "She’s definitely considering what you told her..."
+    MC "Honestly... I don’t know what to say. Maybe she just needs some alone time?"
     "Akira just turned back as she watched Natsuko continue to walk away. She just let out a soft sigh as she shook her head."
-    FMG "Maybe the two of us have a lot more in common than I thought."
+    show FMG sad-2
+    FMG "{size=-6}Maybe the two of us have a lot more in common than I thought.{/size}"
     MC "Huh?"
     show FMG neutral
-    FMG "Oh! Uh... Routine wise! Seems like today's leg day for her too!"
+    FMG "Oh! Uh... Nothing! Nothing at all!"
     show FMG flex
-    FMG "Come on, let's go! We're wasting time!"
+    FMG "Come on, let’s go! We’re wasting time!"
     MC "Right!"
-    MCT "Sheesh, who's the terrible liar here?"
+    MCT "That was... odd. What did she mean about that?"
     jump daymenu
+
 
 label FMG030:
     $setProgress("FMG", "FMG031")

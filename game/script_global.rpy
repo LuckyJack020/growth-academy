@@ -748,6 +748,8 @@ define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
 define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
+define audio.Love = "Audio/BGM/love.ogg"
+define audio.LoveMB = "Audio/BGM/love_mb.ogg" #Music Box variant of Love
 define audio.Memories = "Audio/BGM/memories.mp3"
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
 define audio.Requiem = "Audio/BGM/requiem.mp3"
@@ -965,7 +967,7 @@ init 2 python:
     eventlibrary['FMG026'] = {"name": "Arcade Run-in", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                            "location": "arcade",                   "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG027", "obsflags": [],               "conditions": []}
     eventlibrary['FMG027'] = {"name": "Study Date", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "classroom",                "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG028", "obsflags": [],               "conditions": []}
     eventlibrary['FMG028'] = {"name": "Anything but Golf", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG029", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG029'] = {"name": "The Grind", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG030", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG029'] = {"name": "Man, These Waffles Suck", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                  "priority": PrioEnum.NONE, "sp": 5,     "next": "FMG030", "obsflags": [],               "conditions": []}
     eventlibrary['FMG030'] = {"name": "Oki", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                      "location": "dormexterior",             "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG031", "obsflags": [],               "conditions": []}
     eventlibrary['FMG031'] = {"name": "Motivation", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                               "location": "lockers",                  "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG032", "obsflags": [],               "conditions": []}
     eventlibrary['FMG032'] = {"name": "Chumby the Cat", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                           "location": "pool",                     "priority": PrioEnum.NONE, "sp": 6,     "next": "FMG033", "obsflags": [],               "conditions": []}
