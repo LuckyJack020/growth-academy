@@ -8254,7 +8254,7 @@ label FMG052:
     jump daymenu
 
 label FMG053:
-    $setProgress("FMG", "FMG056")
+    $setProgress("FMG", "FMG054")
     scene Classroom with fade
     play music Schoolday
     "Classes had ended for the day and I did my best to try and slip out between the other students so Tashi-sensei wouldn’t call me over about the page I didn’t turn in."
@@ -8509,6 +8509,203 @@ label FMG053:
     MC "It really is."
     MCT "I guess I can start the paper when I get back..."
     extend " maybe."
+    jump daymenu
+
+label FMG054:
+    $setProgress("FMG", "FMG056")
+    scene Gym with fade
+    play music FMG
+    show FMG neutral with dissolve
+    FMG "Come on, Kei-kun! One more! One more pull-up! You can do it!"
+    MC "Y-Yeah, I got this."
+    "Akira wanted to start using the weighted vest when I did my exercises and boy it makes a difference."
+    MC "{i}Arrrrrrgh!{/i}"
+    pause 0.5
+    show FMG happy
+    FMG "Hell yeah, dude! Let’s go! You did great today. You’ve been improving so much lately."
+    $setSkill("Athletics", 2)
+    MC "WOW, that one hurt, fuck. H-High five me. That was freaking awesome. Won’t be feeling my arms after all of that, but I still did it..."
+    FMG "We can take a shower and go grab some ice cream. I could go for something sweet right now."
+    MC "Yeah, agreed. I’m going to take off the vest and wipe down the area."
+    show FMG neutral
+    FMG "I’ll go grab our bags, I’ll meet you outside the locker room, don’t keep me waiting."
+    hide FMG with dissolve
+    "I walked over to the rack, undid the straps, and pulled the vest off."
+    Natsuko "I never thought I’d see you in the gym by yourself, Hotsure-san."
+    MC "Uh...You’d be correct. Akira went to grab our bags and I’m going to clean up our area. Give me a second and you’ll have my full attention."
+    "After I grabbed the disinfectant spray, I turned around to properly greet Nat... if I was sitting down I would’ve fallen out of my chair."
+    show Natsuko neutral with dissolve
+    MC "What the hell... happened to you... why are you so-"
+    Natsuko "Surprised? I’m sure. So was Myoga-san when she saw me like this for the first time."
+    MC "I can only wonder how that went..."
+    Natsuko "Do you know where Akira is?"
+    MC "She should be waiting outside the locker room, why?"
+    Natsuko "I would like to speak to her about something privately. Thank you for telling me."
+    hide Natsuko with dissolve
+    MC "Ooooookay..."
+    MC "You know, why does no one ever want to talk to me privately? I’m a cool dude."
+    scene black with fade
+    pause 1
+    "I had cleaned everything up and had headed to the locker room to meet up with Akira. When I pushed open the door, I heard what sounded like Akira laughing."
+
+    scene Lockers with fade
+    FMG "He’ll be fine. When we explain everything I think he’ll be more than okay with it."
+    pause 1
+    MC "What’s going on over here? You’re laughing with Nat???? What did I miss?"
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "Heh, she’ll be joining us for ice cream!"
+    MC "Ooooookay... but why? This was kind of a you and I thing."
+    MCT "What the hell is going on? So now she’s ruining things for me?"
+    FMG "Well, Nat and I were talking and she told me she’s been having problems trying to make friends."
+    MCT "OH GEE I WONDER WHY."
+    MC "I think it could be the resting bitch face and that she looks like she ate the whole football team."
+    Natsuko "..."
+    Natsuko "Both of those are reasons, yes..."
+    show Natsuko disappointed
+    Natsuko "... Hotsure-san, my only real friend is Myoga-san. I don’t interact with the other girls with the exception of Nikumaru-san when I need clothes."
+    MC "I never thought I’d hear any of that come out of your mouth. I am genuinely blown away."
+    MC "Uh, I guess if Akira is cool with you tagging along, I don’t mind..."
+    extend " Um, I’ll leave now so you guys can get changed..."
+    FMG "That would be great, thanks, Kei."
+    scene black with fade
+    pause 1
+    "I hurried my way out of the locker room and waited for them outside, my mind racing with thoughts."
+
+    scene Dorm Exterior with fade
+    MCT "If Nat is coming, maybe Akira is going to make me pay this time..."
+    MC "UUUUUGH, she’d totally do that."
+    MCT "That means they’d both get a massive serving. Man, this has to be what’s it like to date Alice. At least she wouldn’t make me pay. Hm, it’s not too late to swap teams."
+    pause 1
+    MC "I-I can’t believe I just thought about doing that."
+    scene black with fade
+    pause 1
+
+    scene Town with fade
+    play music BrightLights
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "We had decided to walk to town so we could get to know each other a little more. Akira was very persistent about it and I was happy for her."
+    "She wanted to be friends with Nat for a while, and she had finally gotten her chance. Nat might not be good at expressing herself... like at all, but I could tell she enjoyed Akira’s company."
+    MC "I got one question for you, Nat. What happened to your jacket? You wore it all the time."
+    show Natsuko disappointed
+    Natsuko "It ripped... when I was flexing in the mirror..."
+    "You can not imagine how hard I had to hold back my laughter."
+    show FMG happy
+    FMG "Hahaha, that’s hilarious! What were you even doing?"
+    Natsuko "I was practicing my lat spread and it tore apart instantly."
+    FMG "That’s-That’s the funniest thing I’ve heard all day, hahaha."
+    Natsuko "I told the school I needed a bigger size, but my request was rejected, so I’m stuck with this."
+    show FMG neutral
+    FMG "It could’ve been worse, at least you didn’t crush anything. I broke about four doorknobs."
+    Natsuko "..."
+    MC "Now, you have to tell us, Nat. I NEED to know."
+    Natsuko "Before I even got in the bathroom, I had ripped the door off its hinges..."
+    Natsuko "I didn’t think I was that strong, {i}sigh{/i}... I got used to it quickly but that didn’t fix how mad Myoga-san was about the door."
+    MC "That is equal parts terrifying and awesome. Why don’t you do things like that?"
+    show FMG surprised
+    FMG "What????"
+    show FMG angry
+    FMG "Are you kidding me? I’m not trying to destroy my dorm. The bed got reinforced the other day and it still struggles to hold me."
+    show Natsuko neutral
+    Natsuko "You too? I swear they gave us the bare minimum..."
+    MC "I’d say I can relate but well... I can’t. You guys crush everything you touch and I have to tie my hair. Some would say I have it worse and sometimes I think they’re right."
+    show FMG sad-2
+    show Natsuko disappointed
+    "Both of them ignored me and kept walking towards the ice cream truck."
+    MC "Girls, come on, it was a joke... This is when you laugh..."
+    FMG "I’m sorry about him. He has this problem where he thinks he’s funny."
+    Natsuko "Don’t worry about it. Maybe if we ignore him, he’ll stop."
+    FMG "I’ve tried it before— it doesn’t work as well as you’d think."
+    MC "I hope the two of you drop your ice cream. No respect at all for the effort I put in for comedic relief."
+    Natsuko "If that’s the best you can do. I’d hate to see what your worst is."
+    MC "I-I... never mind. Let’s just get in line, this isn’t worth it. One day you’ll appreciate my wit."
+    show FMG neutral
+    FMG "I love you, Kei, but even I’m not sure about that."
+    show Natsuko neutral
+    Natsuko "You two can talk about it later. Hurry up and get in line, I don’t want to wait."
+    MC "So damn pushy..."
+    Natsuko "I’m not here for stupid games, Hotsure-san."
+    FMG "Relax, Nat. Seriously."
+    Natsuko "Hmph, whatever..."
+    "I leaned in towards Akira and nudged her arm to get her attention."
+    hide Natsuko with fade
+    FMG "What’s up?"
+    MC "Are you sure that letting Nat hang out with us is a good idea? I don’t know how long I can tolerate her attitude."
+    show FMG sad-2
+    FMG "I know, Kei, I know. I haven’t told you everything yet but you’ll just have to trust me. She has a lot going on in her life right now and she isn’t good at dealing with it."
+    show FMG neutral
+    FMG "Give her some time and I’m sure she’ll warm-up. We can always go to Sakura or Aida for help if we need some advice."
+    MC "Yeah... I guess."
+    FMG "Don’t worry about it, dude. Everything will be fine, I promise."
+    "She put out her pinky so we could make it official."
+    FMG "Now you know I mean it."
+    MC "Nothing is more sacred than the pinky promise."
+    FMG "Nothing."
+    "We hurried back in line just as Nat finished ordering."
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "I paid for you two already, get whatever you want."
+    MC "We didn’t even order? How did you know how much to pay?"
+    Natsuko "Doesn’t matter, it’s done. Consider it my apology for my rude outburst from before."
+    FMG "Thanks Nat, we appreciate it."
+    "Nat got out of line and went to sit down at one of the benches as she waited for us."
+    hide Natsuko with dissolve
+    MC "Can you tell me what you and Nat talked about? Maybe I can help."
+    show FMG sad-2
+    FMG "I want to, Kei-kun. But, I told her I’d keep it between us until she’s ready. She isn’t a bad person..."
+    extend " {i}sigh{/i} it’s a lot for one person to deal with alone that’s all I’ll say."
+    show FMG neutral
+    FMG "For now, let’s put it behind us and focus on the now, okay?"
+    MC "Whatever you say, I trust you."
+    FMG "Thank you."
+    Vendor "Next!"
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Town with fade
+    show FMG happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    FMG "Thanks for paying today, Nat."
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "Yes, I know. You already told me."
+    show FMG sad-2
+    FMG "Sometimes I wonder if you act like this on purpose. All you have to do is say ‘Yeah, no problem, it was my pleasure.’"
+    show Natsuko disappointed
+    Natsuko "Right... Sorry. I swear I’m not always like this."
+    MC "Nat, seriously, it’s chill. Since you were an ass to Akira for a long time, I assume it’s like a force of habit. I can’t say I blame you, she sucks..."
+    extend " especially at video games"
+    show FMG angry
+    FMG "Hey!"
+    MC "You know I’m playing."
+    show FMG neutral
+    show Natsuko neutral
+    Natsuko "Again, I’m sorry. I’m not very good at interacting with people. It’s something I’m trying to improve, hence why I asked if I could join you two."
+    Natsuko "Myoga-san has been helping me a bit... since well, people aren’t afraid of her."
+    MC "We’ve both heard from people like Chibuki and Alice about how you are extremely friendly and kind, I’m still a bit lost... sorry."
+    show Natsuko disappointed
+    Natsuko "It’s fine. You’d think with how this place is with all these factors, people would be more accepting of each other. However, that isn’t the case for me... people judge me before they even know me."
+    MCT "Sigh... I feel for her but that last part is so hypocritical. It’s hard for me to get behind this. I wonder what Akira thinks about all of this."
+    FMG "Natsuko, I know we hated each other for a while. But it’s different now! It’s hard for people to make friends sometimes, but Kei and I will help you!"
+    MC "Uh, yeah, what Akira said. Maybe getting together with Aida and Sakura to talk this out would help too?"
+    FMG "That sounds like a great idea. I’ll text Aida later today."
+    Natsuko "I’ll speak with Myoga-san then."
+    Natsuko "... Thank you, you two. Today was exactly what I needed."
+    "Nat got up to leave but Akira grabbed her wrist stopping her."
+    show FMG happy
+    FMG "Come on! After all that you’re going to leave alone? We just started to know each other."
+    show Natsuko happy
+    "Both of the girls smiled at each other and started walking off... without me."
+    hide FMG
+    hide Natsuko
+    with dissolve
+    MC "Stop! I didn’t even finish my cone after all this. I need like five more minutes! Girls!"
+    "I was ignored..."
+    MC "Man, now I’m going to drop this running after them..."
+    pause 1
+    "And that’s exactly what happened."
+    MC "AW MAN, COME ON!"
     jump daymenu
 
 label FMG056:
