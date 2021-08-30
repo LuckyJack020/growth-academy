@@ -16350,10 +16350,12 @@ label AE071:
     AE "Y-Yeah, um... I wanted to show you something."
     MCT "It was then that any residual worry I may have had turned into confusion, as I tried to think more on what it was she may have wanted to show me."
     MC "Oh! I mean, alright, sure."
+    scene Dorm Hallway with fade
     "With an uncharacteristically coy smile, she shakily grabbed my hand and led me through the halls and up the stairs with a lot more pep in her step, until we eventually reached her bedroom door."
     "I looked behind my shoulder as Shiori unlocked the door to her room, following along quietly as she let me in. In the back of my mind, I had a suspicion on what was going on."
+    scene Dorm AE with fade
     MC "You'd think Tako would be back by now, huh?"
-    show AE embarrassed
+    show AE embarrassed with dissolve
     AE "M-Mhm, she actually won't be back for a bit; she's helping the music club practice."
     MCT "Tako is helping? That... is a very obvious coverup."
     MC "So uh... what's up?"

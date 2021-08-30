@@ -260,7 +260,7 @@ label BE003:
     show BE sad
     BE "Woof, yeah, I wasn't planning on that, either. Hopefully there'll be some refreshments there, though. They can't really keep us out for too long without giving us some water at least."
     menu:
-        "You uh, want some of my drink?" if getAffection("BE") > 3:
+        "You uh, want some of my drink?" if getAffection("BE") > 2:
             jump BE003_c1
         "Maybe grab something to drink then before you get going":
             jump BE003_c2
@@ -8281,7 +8281,7 @@ label BEGTS004:
             jump BEGTS004_c1_1
         "It's a difficult factor to handle, but she's made the best of it.":
             jump BEGTS004_c1_2
-        "[Remain Silent]":
+        "[[Remain Silent]":
             jump BEGTS004_c1_after
 
 label BEGTS004_c1_1:
