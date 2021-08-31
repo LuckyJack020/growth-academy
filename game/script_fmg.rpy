@@ -8512,7 +8512,7 @@ label FMG053:
     jump daymenu
 
 label FMG054:
-    $setProgress("FMG", "FMG056")
+    $setProgress("FMG", "FMG055")
     scene Gym with fade
     play music FMG
     show FMG neutral with dissolve
@@ -8706,6 +8706,182 @@ label FMG054:
     pause 1
     "And that’s exactly what happened."
     MC "AW MAN, COME ON!"
+    jump daymenu
+
+label FMG055:
+    $setProgress("FMG", "FMG056")
+    scene Supermarket with fade
+    MC "Aren’t we supposed to be at the gym? Today was chest day... and I was looking forward to that."
+    show FMG neutral with dissolve
+    FMG "Sorry, Kei-kun, we’ll have to move it to tomorrow. I got a package in the mail today and I need you to see it. You’ll love it!"
+    MC "What does that have to do with us being at the supermarket? I’m confused, hahaha."
+    FMG "You’ll see soon enough. I’ve been waiting for this moment for so long."
+    show FMG happy
+    extend " AH! I am so excited!"
+    "She went row by row grabbing a wide assortment of goods. From gummy bears to bento boxes and inarizushi."
+    MC "You need all of this stuff to show me a package? This is a little weird."
+    show FMG neutral
+    FMG "Do you have no faith in me? You’ll love it. I don’t think you’ll be able to handle it."
+    MC "Now you have to tell me. You can’t say that and not give me a hint."
+    FMG "Tell ya what. If you carry all the groceries back, I’ll give you something better than a hint."
+    MCT "Is this bait? This could be bait. She doesn’t want to carry them so she’s going to make me do all the hard work. Classic Akira."
+    MC "Fine, I’ll play your game."
+    scene black with fade
+    pause 1
+
+    scene Dorm FMG with fade
+    "I felt like I was going to pass out. Akira had about eight bags full of groceries and I sure as shit wasn’t making two trips... I should’ve made like three trips but I wasn’t going to let my pride take the hit."
+    show FMG sad-2 with dissolve
+    FMG "You know you could’ve asked me for help..."
+    MC "N-Never. I wanted something... b-better than... than the hint."
+    show FMG neutral
+    FMG "You are motivated by the strangest things. Is it a guy thing? It seems like a guy thing."
+    "I threw myself on her bed taking up as much room as I possibly could."
+    MC "Kinda? It’s an unwritten rule that you never do more than one trip for groceries."
+    FMG "Kei, you carried them from the store to the bus and then to my dorm. I didn’t think you’d take it so seriously. You only needed to hold two or three bags at most. Thanks for putting them on my desk though, I’ll put them away later."
+    MC "Back up a second... Are you calling me weak? Did you have your eyes closed the whole time? I was Hercules for twenty-five minutes."
+    FMG "What you did was {i}very{/i} impressive... {size=-6}but I wouldn’t say you were Hercules...{/size}"
+    MC "Mhmm, I see. Have you {i}seen{/i} how ripped I’ve gotten? All those gym hours are paying off. I got abs of steel and arms that would put you to shame."
+    show FMG sad-2
+    FMG "You don’t want this smoke, Kei. You won’t be able to recover from the embarrassment."
+    MC "Nah, I think I do want the smoke. The surprise is on hold for now. Bathroom— me and you, right now."
+    show FMG neutral
+    FMG "You understand you stand no chance against me in a posing contest, right?"
+    show FMG flex
+    FMG "Come on, sit back down-"
+    MC "Scared? I would be too. It’s okay, I understand completely. With how hard I’ve been killing it in the gym, I must be pretty intimidating."
+    show FMG angry
+    FMG "You asked for this..."
+    MC "Stop... I can walk there... Don’t touch me!"
+    "And there I was, getting carried to the bathroom..."
+
+    scene Bathroom with fade
+    show FMG aroused with dissolve
+    FMG "Hm, the only way we can properly compare is without our clothes on..."
+    MC "STOP! I can take them off myself. I don’t need you to rip another shirt."
+    $setFMGOutfit(OutfitEnum.NUDE)
+    show FMG happy
+    FMG "I wasn’t going to, I swear~"
+    MC "No more stalling. The kid gloves are coming off."
+    "I threw my shirt off and started posing in the mirror poking fun at Akira’s poses."
+    show FMG sad-2
+    FMG "This was a horrible idea... I should’ve backed out."
+    show FMG flex
+    extend " But I have to put you in your place."
+    "To say I was a little distracted... by Akira being half-naked and flexing in the mirror would be a lie. I was, uh... extremely distracted."
+    MCT "Keep your head in the game, Kei. You can drool over her body after."
+    MC "This seems a little unfair the more I think about it..."
+    "Akira kept showing off and making faces at me."
+    show FMG flex
+    FMG "What gave you that idea? Was it my bicep being the size of your face {i}ooooor{/i} when I was struggling to take off my skirt cause my quads are too big?"
+    MCT "Why are you the way that you are?"
+    MC "Enough with the mind games. Stop trying to throw me off."
+    show FMG neutral
+    FMG "Fine, fine. I’ll take it seriously. At least we’re in the bathroom so you can always hop in the shower and cry when this wraps up."
+    MC "..."
+    MC "You... I love you a lot, I do. But god damn, you make it so hard."
+    FMG "Wouldn’t be fun if it was easy. So what pose are we starting with? Side chest? Double bicep? Side triceps?"
+    MC "Akira... do I look like I know what any of those mean besides the double bicep? Whatever— let's do the double bicep. It's probably the easiest."
+    show FMG sad-2
+    FMG "Aw, I always do that one!"
+    show FMG happy
+    extend " This will go quick at least. Then I can finally show you the dress I bought!"
+    MC "You bought a dress?"
+    show FMG surprised
+    FMG "Heh...no."
+    show FMG happy
+    FMG "Hehe, we should get to posing..."
+    show FMG flex
+    "Akira was trying hard to show me up. It’s not like she had to but it wouldn’t be Akira if she didn’t get so intense over some friendly competition."
+    "I did my best double bicep pose, puffing my chest out to look somewhat big."
+    extend " I-It didn’t work so well."
+    show FMG neutral
+    FMG "You need to breathe, Kei-kun. Relax, and do it like this."
+    show FMG flex
+    FMG "You don’t need to kill yourself trying to pose, we aren’t competing for a trophy."
+    MC "But-"
+    show FMG neutral
+    FMG "No, I’m not trying my hardest, it comes naturally to me because I do it all the time and I’ve been practicing different poses for fun."
+    MC "Yeah, that’s true enough. I say we call it a draw and we can take a look at this dress you got."
+    FMG "I wouldn’t call it a draw but I’ll let you have it this one time."
+    FMG "I’m going to teach you these poses one day, it would be fun to do this again when you have the form down."
+    MC "I’m holding you to that."
+
+    scene Dorm FMG with fade
+    MC "You, uh, going to put your clothes back on?"
+    show FMG neutral with dissolve
+    FMG "Kei-kun, I have to put the dress on. It would be a waste of time to get dressed and then undressed again."
+    MC "True, my bad. Wasn’t thinking, I’m a little distracted right now."
+    show FMG happy
+    FMG "I can’t blame you, it must be difficult to take your eyes off me."
+    MC "Actually no, this time it isn’t you and your body. I was thinking about the math homework I have to do later."
+    show FMG neutral
+    FMG "Ew, stop. We aren’t here to talk about math. We’re here to see how sexy I look in a dress."
+    MC "I think I’d have more fun talking about math, my eyes get sick of looking at you."
+    FMG "Ha, as if. Don’t even start with that. You were losing your mind in the bathroom. Your pants gave you away."
+    MC "That’s not important right now! Just put on the dress, jeez... You don’t have to expose me."
+    FMG "Uh-huh. I get it though, you have this {i}super{/i} hot girlfriend, has big arms, incredible abs, and killer thighs."
+    MC "This is true."
+    extend " So how did you find out about her?"
+    FMG "Like you could get another woman to sleep with you."
+    MC "I mean with my good looks nothing is impossible. I definitely wouldn’t do it knowing you could snap me like a twig though."
+    MC "But, it’s a good thing your ego matches the size of your muscles. I hate to be that guy...{size=-6}not really{/size}... but what about this dress?"
+    show FMG happy
+    FMG "Right, sorry, my bad. Let me go grab it."
+    hide FMG with dissolve
+    pause 1
+    $setFMGOutfit(OutfitEnum.DEFAULT)
+    show FMG neutral with dissolve #(sundress)
+    FMG "Bam!"
+    MC "First off, holy shit, you look amazing! Second, I have a question. How did you get a sundress to fit you? There is no way the school is providing you with something {i}that{/i} nice."
+    FMG "Funny that you ask. After you left the day I got measured for the new clothes, I texted Alice and asked if she could get something different for me."
+    FMG "I don’t know, I don’t get to be girly a lot. I figured with this, I could get my hair done and we could do something like a picnic."
+    MC "Oh, so that’s why you bought all these groceries! Should’ve told me you wanted to go on a picnic sooner. I would’ve postponed your defeat ‘till tomorrow."
+    show FMG sad-2
+    FMG "What??? You didn’t even win."
+    MC "I did. Anyway, do you want to get going now??? Do you want me to go change into something nicer??? Or is what I have on now good???"
+    show FMG neutral
+    FMG "Calm down, Kei. I don’t think we can go today, as much as I’d like to. By the time we get there, the sun would be going down."
+    show FMG angry
+    FMG "If someone didn’t want to have a flexing competition, we could’ve gone!"
+    MC "Ahem, unfortunately, we can’t always get the things we want. I think we can reschedule this for another day, no problem."
+    show FMG neutral
+    FMG "We are obviously doing it this week. OOOH, I need to see how good I look! "
+    hide FMG with dissolve
+    MCT "She is adorable."
+    FMG "YO! I look good! You can see my pecs but not too much boob. Ha, my arms look massive. I might rip it if I keep flexing, haha."
+    MC "Oh, let me see!"
+    pause .5
+    show FMG neutral with dissolve
+    FMG "That last part was a trick. I wasn’t going to do that."
+    MCT "These games, man. I hate them."
+    FMG "Do you want me to rip out of every piece of clothing I have?"
+    MC "Yes."
+    show FMG sad-2
+    FMG "That was a stupid question..."
+    show FMG neutral
+    FMG "Wait... what’s that on your face?"
+    MC "Huh?... I don’t have anything-Woah!"
+    "She picked me up like a doll and planted a kiss on my lips."
+    show FMG aroused
+    FMG "Sorry, I couldn’t help myself. You being so light and small now is starting to do stuff to me."
+    MC "Well, you don’t have to stop. I mean, it’s up to you but I would prefer it if you didn’t. You’ve gotten better at kissing."
+    FMG "You talk too much."
+    MC "I-mmmm..."
+    hide FMG with dissolve
+    "Our eyes closed as we embraced each other, her warm smooth lips once again meeting mine."
+    FMG "You’ll love this..."
+    "Her grip tightened on me as she got into it, carrying me over to the bed in the process. She laid down first, the bed creaking as it struggled to support her massive frame."
+    FMG "I should’ve taken it off before we got in bed..."
+    extend " Oh well~"
+    "She placed me down and threw off the sundress revealing her chiseled body..."
+    FMG "Come here, Kei-kun, we weren’t finished~"
+    MCT "This is the greatest day of my life."
+    scene black with fade
+    FMG "Put the condom away, we aren’t doing that today."
+    MC "Sorry, sorry, I was getting into it."
+    FMG "Do you just keep them in your pockets all the time?"
+    MC "...I liked it more when we were kissing."
     jump daymenu
 
 label FMG056:
