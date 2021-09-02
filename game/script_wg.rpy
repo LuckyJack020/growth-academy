@@ -1891,7 +1891,6 @@ label WG001M:
     "She was really pretty after all. I’d be lying if I said her approval didn’t factor into at least a few of my decisions recently."
     "Kind of naïve on my part, to be honest. It’s not like I was Mozart incarnate. Alice wasn’t exactly going to swoon over my musical talents any time soon at the rate of progress I was making."
     "Still though, her words stuck with me about cultivating my musical skills and it got me motivated to pick up the habit again."
-    play music Gymnopedie
     pause 2
     "It was satisfying every time I sat down and played something that actually sounded like it should. I was just warming up, but as simple as it was, I still liked this song."
     pause 2
@@ -3671,7 +3670,7 @@ label WG019_cafe:
 
 label WG019_theater:
     scene Theater Exterior with fade
-    play music Hallway
+    play music Peaceful
     "I found myself walking by the town's movie theater, looking over the posters."
     "There were a couple blockbuster-type movies showing, but also a historical drama, a romantic comedy and an indie melodrama."
     "I had enough money in my wallet that I could buy a movie ticket, and I could think of worse ways to while away a couple hours."
@@ -3683,7 +3682,6 @@ label WG019_theater:
     show PRG neutral at Position (xcenter=0.75, yalign=1.0) behind WG with dissolve
     MC "And Aida."
     PRG "H-Hello."
-    hide PRG with dissolve
     WG "Thinking of catching a show?"
     MC "I was considering the idea."
     if getAffection("WG") >= 10:
@@ -3699,7 +3697,9 @@ label WG019_theater:
         WG "I've heard of Hagiwara, but I'm unfamiliar with his work."
         WG "It's too bad I have other errands to attend to. This looks to be a promising film."
         WG "Let me know how it is. I might go see it later."
-        hide WG with dissolve
+        hide WG
+        hide PRG
+        with dissolve
         "She and Aida walked off, and I went to buy a ticket."
         scene black with fade
         pause 2
