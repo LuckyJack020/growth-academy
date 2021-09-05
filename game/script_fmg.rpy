@@ -1121,109 +1121,148 @@ label FMG012:
 
 label FMG013:
     $setTime(TimeEnum.EVE)
-    scene Gym with fade
-    play music Schoolday
+    scene Dorm Interior with fade
     "After a long day, I headed back to my dorm and grabbed my gym clothes. Since Akira invited me to watch how she works out, I figured I might end up getting some exercise in myself."
-    "Walking over to where she was sitting, I waved and greeted her."
-    MC "Yo, Akira!"
+    scene black with fade
+    pause 1
+    scene Lockers with fade
+    "She told me to meet her in the locker room and we would head towards the gym from there."
+    MC "It’s a little weird that they don’t have separate locker rooms... I guess it’s not that big a deal. Don’t think anyone would try-"
+    FMG "Yo! Earth to Keisuke!"
+    MC "H-Huh?!?"
+    play music FMG
     show FMG neutral with dissolve
-    FMG "Ahaaay! Yo! Look who's all ready for a nice workout!"
-    MC "Yeah, I'm probably gonna do some reps too. I will say, I'm a bit more excited to watch a pro do her thing."
-    FMG "Aww, c'mon, I wouldn't say {i}pro{/i}."
+    "I snapped out of my thoughts and turned my head towards the noise. I spotted Akira frantically waving at me from the bench. I jogged over to her while apologizing."
+    MC "Hey, Akira. Sorry about that, I was lost in my thoughts for a moment, haha."
+    FMG "Don’t worry about it, it happens to everyone. Hey, look who’s all ready for a workout!"
+    MC "Yeah, I’m probably gonna do some sets too. I must say, my dear Watson, I’m a bit more excited to watch a pro do her thing."
+    show FMG happy
+    FMG "Aww, c’mon, I wouldn’t say {i}pro{/i}."
     MC "I mean, you-"
+    show FMG flex
     FMG "Now, ready to get a closer look at perfection?"
-    MCT "Eheheh... Yep, I should have expected that."
-    FMG "C'mon, c'mon, c'mon, let's start!"
-    MC "Alright, well, you get ready and I'll-"
-    FMG "Nah, nah, nah, you're gonna spot me!"
-    MC "I... Huh?"
-    FMG "Yep!"
-    "Akira laid down on the bench and brought the bar, loaded with weights bigger than my head, to her chest."
+    MCT "That was fast..."
+    MC "Lead the way. Let’s see what you can do."
+    show FMG neutral
+    FMG "You’ll have a great time, come on!"
+    scene black with fade
+    pause 1
+
+    scene Gym with fade
+    "I didn’t know Akira too well but she seemed very happy to have someone to be her gym partner. She hurried over to the weight rack and started loading picking up weights bigger than my head."
+    MC "Alright, show me how it’s done."
+    show FMG flex with dissolve
+    FMG "Nah, nah, nah, you’re gonna spot me!"
+    MC "Am I really the best choice for this? Should I go get someone more... buff?"
+    show FMG neutral
+    FMG "It’s not that bad, trust me. Stand behind and just be ready to help if you see something go wrong."
+    MCT "I don’t think I can move them even if I wanted to."
+    "Akira laid down on the bench and brought the dumbells to her chest repeating the motion several times with minimal effort."
+    pause 1
+    show FMG happy
     FMG "Here, try it out."
-    MCT "There is... no way in hell I'm going to be able to lift that."
-    "Succumbing to Akira's innocent gaze, I put both of my hands on the bar."
+    MCT "Surely, the nurse isn’t {i}that{/i} far away. How bad can this be?"
+    "Succumbing to Akira’s innocent gaze, I put both of my hands on the bar."
+    show FMG neutral
     FMG "Nyaah~"
-    "With little to no effort, Akira pushed on the bar, making it look as though I lifted her weights for her."
-    FMG "See? You're a lifesaver, my dude!"
+    "With little to no effort, Akira assisted me with the weights, making it look as though I lifted them for her."
+    show FMG happy
+    FMG "See? You’re a lifesaver, my dude!"
     MC "Eheh, I mean... thanks?"
-    FMG "Yep!"
-    FMG "Now, let's do this!"
+    FMG "Don’t mention it. You did great!"
+    FMG "Now, let’s do this!"
     FMG "Woo!"
-    FMG "C'mon, Kei, do it with me; Woo!"
-    MC "W-Woo."
-    FMG "Wooo! Let's get it!"
+    show FMG neutral
+    FMG "C’mon, Kei, do it with me—"
+    show FMG happy
+    extend " Woo!"
+    MC " Uh... W-Woo?"
+    show FMG flex
+    FMG  "Hell yeah! Let’s get it!"
     "Akira clapped her hands and laid prone on the cushioned bench."
-    FMG "A'ight, well, get some weights and start then."
+    show FMG neutral
+    FMG "What are you waiting for? Get some weights and join me."
     stop music
-    "Without warning, Akira's normally bright and cheery face suddenly became {i}far{/i} less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
+    "Without warning, Akira’s normally bright and cheery face suddenly became {i}far{/i} less inviting. In a look of sheer contempt and dissonance, she began her routine, treating me as though I were a non-entity."
+    hide FMG with dissolve
     MC "Woah, you alright there?"
     FMG "..."
     MC "..."
     MC "Um..."
     FMG "..."
-    MC "Okay, I guess I can just sit over here, then?"
-    FMG "Mm."
-    MC "..."
-    FMG "*Khm*..."
-    MC "..."
-    MCT "It feels like I'm in a cage with a lion, like at any second I'm gonna get torn apart if I make even one wrong move."
+    MC "I-I guess I can just sit over here, then?"
+    FMG "Mmm."
+    MC  "{i}Mhm{/i}... Okay..."
     FMG "..."
+    "It feels like I’m in a cage with a lion-like at any second I’m gonna get torn apart if I make even one wrong move."
+    show FMG neutral
     "She lifted those massive blocks of iron for what felt like a good forty minutes, never once responding to my comments or meeting my gaze."
-    "Afterwards, she sat up and began lifting the dumbbells one at a time. Once more, same treatment."
+    "Afterwards, she sat up and began lifting the dumbells one at a time. Once more, same treatment."
     FMG "..."
-    MC "...Is everything all right-?"
-    "Akira didn't say anything. She did, however, lower the bar a bit too quick into her chest. Her face went determined and scowly for a moment before she snapped herself out of it and continued."
+    MC "... Is everything alright?"
+    "Akira didn’t say anything. She did, however, lower the dumbells a bit too quickly into her chest. Her face went determined and scowly for a moment before she snapped herself out of it and continued."
     FMG "Mm."
-    MC "Ah... Got it."
-    "After a few more reps with the dumbbells, she reached into her bag and rustled around."
-    MCT "A...Juice box?"
-    "No doubt about it, right on the label; Grape Juice Explosion. A popular brand of kid's juice."
-    MCT "Ehhh?!"
-    MCT "N-No way. Is she gonna drink that in public?! I remember drinking that as a kid!"
+    MC "Uh-huh..."
+    MCT "What did I do? Did I have the wrong form when she helped with the dumbells? No... there’s no way."
+    "After a few more reps with the dumbells, she reached into her bag and rustled around."
+    "A... juice box???"
+    "No doubt about it, right on the label: Grape Juice Explosion. A popular brand of kid's juice."
+    MCT "Who drinks a juice box after a workout? Especially that brand... N-No way. Is she gonna drink that in public?! I remember drinking that as a kid!"
     "Angrily, she forced the straw in and began to sip."
-    FMG "...*Sssspp*"
-    MC "..."
-    MC "Y'know, despite the fact that I just watched you lift twice my bodyweight, it's kinda cute watching you drink juice out of a box like a kid."
-    $setAffection("FMG", 4)
+    show FMG happy
+    FMG "{i}Sssspp{/i}"
+    MCT "She actually doesn’t care... She’s hardcore."
+    MC "You know, despite the fact that I just watched you lift twice my bodyweight, it’s kinda cute watching you drink juice out of a box like a kid."
+    $setAffection("FMG", 1)
+    show FMG aroused
     FMG "...Heh..."
+    show FMG happy
     "With only the most subtle of smirks, she went back to drinking from her juice box."
-    play music Schoolday
+    play music Busy
+    pause 1
     FMG "WOO!"
     MC "Hoh, shit-!"
     "Nearly making my heart burst, Akira returned to her usual goofy self with a room quaking shout. Pumping her fist, she gave a big, toothy grin."
+    show FMG flex
     FMG "I am feelin' nice!"
-    FMG "So, how'd I do? Was it cool?"
+    show FMG neutral
+    FMG "So, how’d I do? Was it cool? Come on, you can tell me!"
     MC "U-Uh..."
-    FMG "Speechless, eh? Yep, these puppies tend to do that, hehe!"
-    MC "Uh, yeah, you looked... kinda pissed, though."
-    "What I imagined what was going to happen was either she was going to laugh it off or get actually angry at me... but what happened was she looked surprised and then sad."
-    FMG "Pissed? O-oh shit, sorry dude. I guess when I get too focused on my workout I can come off as a jerk. I never noticed cuz nobody wants to work out with me..."
-    MC "Hey don't worry about it okay?"
-    FMG "Umm, you sure? I don't want you to get used to that type of attitude. I'm surprised you actually showed up, most people I invite to work out with me don't."
-    MC "Hey, we all have our bad days. This is probably just one of those days for you. I know you're not like that, okay? Besides, those people probably don't have to motivation to work out in the first place."
-    FMG "Yeah okay; I guess I can't focus JUST on the weights when I have someone with me. The only things a girl needs in life to make her happy is someone to spot her, a goal to work towards, and a whole ton of protein!"
-    MC "*pfft*"
-    FMG "Eh?"
-    MC "S-Sorry, that was immature."
-    FMG "..."
-    FMG "PFFF GYAHAHAHAAA~"
-    FMG "Oh damn, nice one, dude. You got me on that."
-    MC "Eheheh."
-    "I couldn't help but chuckle with Akira. It wasn't even my dumb joke that got me, it was the fact that my dumb joke got her."
-    FMG "Man, I oughta hang out with you more."
-    FMG "So... how's about we do just that!"
-    MC "Eh?"
-    FMG "Same time tomorrow, you'll spot for me, let's do it!"
-    MC "I- uh,"
-    FMG "Yeees, yes, say it, {i}yeees{/i}."
-    MC "Y-Yes."
-    FMG "Woo!"
+    show FMG flex
+    FMG "Speechless? Yep, these puppies tend to do that, hehe!"
+    MC "Uh, yeah, you looked... kinda pissed, though. Is that like your thing?"
+    "What I imagined was going to happen was either she was going to laugh it off or get actually angry at me..."
+    show FMG surprised
+    FMG "Pissed?"
+    show FMG sad
+    FMG "O-oh shit, sorry dude. I guess when I get too focused on my workout I can come off as a jerk. I never noticed cause nobody wants to work out with me..."
+    MC "Oh, gotcha, that makes sense. I thought you were mad at me, haha. Honestly, don’t worry about it."
+    show FMG neutral
+    FMG "You sure? I don’t want you to get used to that type of attitude. I'm surprised you actually showed up, most people I invite to work out with me... well, they don't show up, and if they do, they don’t come back."
+    MC "Hey, we all have our bad days. This is probably just one of those days for you. I know you’re not like that. Besides, those people probably don’t have the motivation to work out in the first place."
+    show FMG happy
+    FMG "Yeah! I guess I can't focus JUST on the weights when I have someone with me. The only things a girl needs in life to make her happy is someone to work out with, a goal to work towards, and a whole ton of protein!"
+    MC "Sounds good to me."
+    pause 1
+    show FMG neutral
+    FMG "Man, I oughta hang out with you more. I had a lot of fun today..."
+    show FMG sad
+    extend " even though I wasn’t working out with you..."
+    MC "Like I said, it’s cool. I’m totally up for hanging out with you more. Just promise me you’ll include me in your routine some more."
+    show FMG neutral
+    FMG "I promise, haha."
+    FMG "Same time tomorrow? You can try the leg press, you’ll love it!"
+    MC "I-uh, don’t you think we’re moving a little fast?"
+    show FMG happy
+    FMG "Pffft, don’t be ridiculous."
+    MCT "It won’t be that bad, Kei. Don’t overthink it."
+    FMG "This is awesome! Finally, someone to work out with! Thanks, Kei!"
     "Jumping up in joy, I could feel the impact of her landing all the way up to my knees."
-    FMG "You won't regret it, dude. Same time tomorrow!"
-    MC "Same time tomorrow."
-    "As Akira grabbed her bag and walked out the door, I couldn't help but think about everything that just transpired... and I couldn't stop myself from smiling at the prospect of being a part of it again."
-    "I picked up some weights myself, and began training for next time."
-    $setSkill("Athletics", 3)
+    FMG "You won’t regret it, dude. Same time tomorrow!"
+    MC "Uh, yeah... same time tomorrow."
+    $setSkill("Athletics", 1)
+    "As Akira grabbed her bag and walked out the door, I couldn’t help but think about everything that just transpired..."
+    "And I couldn’t stop myself from smiling at the prospect of being a part of it again. I picked up some weights myself, and began training for next time."
     jump daymenu
 
 label FMG014:

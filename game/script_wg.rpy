@@ -2235,7 +2235,7 @@ label WG013_c2:
     MC "Who isn't on some level? But I got the impression they have some kind of history. Whatever it is, he sure goes out of his way to avoid her."
     show WG happy
     $setAffection("WG", 1)
-    WG "Well, regardless, I owe you my thanks, Hotsure-san. If that fool had continued, I'm not sure I could have restrained myself any further."
+    WG "Well, regardless, I owe you my thanks, Keisuke. If that fool had continued, I'm not sure I could have restrained myself any further."
     MC "Completely understandable. At least you don't have to share a room with him."
     show WG neutral
     WG "He's your roommate? Then you must know if he's always like that."
