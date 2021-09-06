@@ -1825,7 +1825,7 @@ label PRG009:
         MC "Oh, this? Just some book I grabbed out of the fiction section. It looked kind of interesting, I guess. I figured it could be something to do for my essay."
         PRG "M-May I see it?"
         MC "Oh, go ahead."
-        PRG "This is... Miniscule Cruise."
+        PRG "This is... Minuscule Cruise."
         show PRG happy
         PRG "I read this book when I was younger. I loved it."
         MC "You did? What's it about?"

@@ -37,11 +37,11 @@ define Koneko = Character('Koneko', color="#C0C0C0")
 define Lee = Character('Lee', color="#C0C0C0")
 define Michiko = Character('Michiko', color="#C0C0C0")
 define Miko = Character('Miko', color="#C0C0C0")
+define Minami = Character('Minami', color="#C0C0C0")
 define Minei = Character('Minei', color="#C0C0C0")
+define Minori = Character('Minori', color="#FF91DC")
 define Misaki = Character('Misaki', color="#C0C0C0")
 define Miura = Character('Miura', color="#C0C0C0")
-define Minami = Character('Minami', color="#C0C0C0")
-define Minori = Character('Minori', color="#FF91DC")
 define Mom = Character('Mom', color="#FF3300")
 define MomCell = Character('Mom', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Naoki = Character('Naoki', color="#C0C0C0")
@@ -71,7 +71,6 @@ define Carnie = Character('Carnie', color="#C0C0C0")
 define Cashier = Character('Cashier', color="#C0C0C0")
 define Cat = Character('Cat', color="#C0C0C0")
 define Cell = Character('Cell', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
-define Cashier = Character('Cashier', color="#C0C0C0")
 define Chauffeur = Character('Chauffeur', color="#C0C0C0")
 define Chef = Character('Chef', color="#C0C0C0")
 define Clown = Character('Clown', color="#C0C0C0")
@@ -86,8 +85,8 @@ define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color m
 define Girls = Character('Girls', color="#ffffff")
 define Guard = Character('Guard', color="#C0C0C0")
 define Hostess = Character('Hostess', color="#C0C0C0")
-define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Judge = Character('Judge', color="#C0C0C0")
+define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Lunch = Character('Lunchlady', color="#CC33FF")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
@@ -99,9 +98,9 @@ define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
 define Student3 = Character('Student 3', color="#FF3300")
 define Teacher = Character('Teacher', color="#C0C0C0")
+define Umpire = Character('Umpire', color="#C0C0C0")
 define UNKNOWN = Character('???', color="#FFFFFF")
 define UNKNOWNCell = Character('???', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
-define Umpire = Character('Umpire', color="#C0C0C0")
 define Vendor = Character('Vendor', color="#FFFFFF")
 define Waiter = Character('Waiter', color="#C0C0C0")
 define Waitress = Character('Waitress', color="#C0C0C0")
@@ -110,72 +109,72 @@ define Waitress = Character('Waitress', color="#C0C0C0")
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
 
-image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
-image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].png")
-image School Inner = "Graphics/ui/bg/schoolinner.png"
+image Arcade = DynamicImage("Graphics/ui/bg/arcade_[gametime].png")
+image Art Classroom = DynamicImage("Graphics/ui/bg/artroom_[gametime].png")
+image Art Gallery = "Graphics/ui/bg/NYI.png"
+image Auditorium = DynamicImage("Graphics/ui/bg/auditorium_[gametime].png")
+image Baseball Field = "Graphics/ui/bg/NYI.png"
+image Bathroom = "Graphics/ui/bg/bathroom.png"
+image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
+image Cafe = DynamicImage("Graphics/ui/bg/cafe_[gametime].png")
+image Cafeteria = "Graphics/ui/bg/cafeteria.png"
+image Campus Center = DynamicImage("Graphics/ui/bg/campuscenter_[gametime].png")
+image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png")
+image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].png")
+image Clothes Store = "Graphics/ui/bg/clothesstore.png"
+image Club = "Graphics/ui/bg/NYI.png"
+image Cooking Classroom = "Graphics/ui/bg/cooking.png"
+image Diner = "Graphics/ui/bg/burgerrestaurant.png"
+image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
+image Dorm Hallway = "Graphics/ui/bg/dormhall.png"
+image Dorm Interior = DynamicImage("Graphics/ui/bg/dorminterior_[gametime].png")
+image Festival = DynamicImage("Graphics/ui/bg/festival_[gametime].png")
+image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
+image Field Winter = DynamicImage("Graphics/ui/bg/field_[gametime].png") #TBI
+image Game Store = "Graphics/ui/bg/gamestore.png"
 image Gate Front = "Graphics/ui/bg/gatefront.png"
-image School Planter = "Graphics/ui/bg/schoolplanter.png"
+image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].png")
 image Hallway = DynamicImage("Graphics/ui/bg/schoolhallway1_[gametime].png")
 image Hallway2 = DynamicImage("Graphics/ui/bg/schoolhallway2_[gametime].png")
 image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].png")
-image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png")
-image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
-image Dorm Interior = DynamicImage("Graphics/ui/bg/dorminterior_[gametime].png")
-image Dorm Hallway = "Graphics/ui/bg/dormhall.png"
-image Campus Center = DynamicImage("Graphics/ui/bg/campuscenter_[gametime].png")
-image Auditorium = DynamicImage("Graphics/ui/bg/auditorium_[gametime].png")
-image School Exterior = DynamicImage("Graphics/ui/bg/schoolexterior_[gametime].png")
+image Hill Road = "Graphics/ui/bg/NYI.png"
+image Japanese Room = DynamicImage("Graphics/ui/bg/japaneseroom_[gametime].png")
+image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
 image Library = DynamicImage("Graphics/ui/bg/library_[gametime].png")
-image Office = DynamicImage("Graphics/ui/bg/office_[gametime].png")
-image Cafeteria = "Graphics/ui/bg/cafeteria.png"
-image Cooking Classroom = "Graphics/ui/bg/cooking.png"
-image Music Classroom = DynamicImage("Graphics/ui/bg/music_[gametime].png")
-image Art Classroom = DynamicImage("Graphics/ui/bg/artroom_[gametime].png")
-image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].png")
-image Track = DynamicImage("Graphics/ui/bg/track_[gametime].png")
 image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].png")
+image Mountains = DynamicImage("Graphics/ui/bg/mountains_[gametime].png")
+image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.png"
+image Mountains Tori Gate = "Graphics/ui/bg/mountains_gate.png"
+image Movie Theater = "Graphics/ui/bg/NYI.png"
+image Music Classroom = DynamicImage("Graphics/ui/bg/music_[gametime].png")
+image Nurse Office = DynamicImage("Graphics/ui/bg/nurseoffice_[gametime].png")
+image Office = DynamicImage("Graphics/ui/bg/office_[gametime].png")
+image Park = DynamicImage("Graphics/ui/bg/park_[gametime].png")
+image Pharmacy = DynamicImage("Graphics/ui/bg/pharmacy_[gametime].png")
+image Pool = DynamicImage("Graphics/ui/bg/schoolpool_[gametime].png")
+image Recreation = "Graphics/ui/bg/NYI.png"
+image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Roof = DynamicImage("Graphics/ui/bg/roof_[gametime].png")
 image Roof Entrance = DynamicImage("Graphics/ui/bg/roofentrance_[gametime].png")
-image Nurse Office = DynamicImage("Graphics/ui/bg/nurseoffice_[gametime].png")
-image Pool = DynamicImage("Graphics/ui/bg/schoolpool_[gametime].png")
-image Festival = DynamicImage("Graphics/ui/bg/festival_[gametime].png")
-image Bathroom = "Graphics/ui/bg/bathroom.png"
-image Recreation = "Graphics/ui/bg/NYI.png"
-image Town = DynamicImage("Graphics/ui/bg/town_[gametime].png")
-image Arcade = DynamicImage("Graphics/ui/bg/arcade_[gametime].png")
-image Cafe = DynamicImage("Graphics/ui/bg/cafe_[gametime].png")
-image Woods = DynamicImage("Graphics/ui/bg/woods_[gametime].png")
-image Restaurant = "Graphics/ui/bg/restaurant.png"
-image Hill Road = "Graphics/ui/bg/NYI.png"
-image Movie Theater = "Graphics/ui/bg/NYI.png"
+image School Exterior = DynamicImage("Graphics/ui/bg/schoolexterior_[gametime].png")
+image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].png")
+image School Inner = "Graphics/ui/bg/schoolinner.png"
+image School Planter = "Graphics/ui/bg/schoolplanter.png"
+image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
+image Store = "Graphics/ui/bg/NYI.png"
+image Supermarket = DynamicImage("Graphics/ui/bg/supermarket_[gametime].png")
+image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime].png")
 image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
-image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime].png")
-image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
-image Field Winter = DynamicImage("Graphics/ui/bg/field_[gametime].png") #TBI
-image Baseball Field = "Graphics/ui/bg/NYI.png"
-image Store = "Graphics/ui/bg/NYI.png"
-image Game Store = "Graphics/ui/bg/gamestore.png"
-image Park = DynamicImage("Graphics/ui/bg/park_[gametime].png")
-image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].png")
-image Diner = "Graphics/ui/bg/burgerrestaurant.png"
-image Clothes Store = "Graphics/ui/bg/clothesstore.png"
-image Pharmacy = DynamicImage("Graphics/ui/bg/pharmacy_[gametime].png")
-image Supermarket = DynamicImage("Graphics/ui/bg/supermarket_[gametime].png")
-image Art Gallery = "Graphics/ui/bg/NYI.png"
-image Mountains = DynamicImage("Graphics/ui/bg/mountains_[gametime].png")
-image Japanese Room = DynamicImage("Graphics/ui/bg/japaneseroom_[gametime].png")
-image Club = "Graphics/ui/bg/NYI.png"
-image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
-image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
-image Mountains Tori Gate = "Graphics/ui/bg/mountains_gate.png"
-image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.png"
+image Town = DynamicImage("Graphics/ui/bg/town_[gametime].png")
+image Track = DynamicImage("Graphics/ui/bg/track_[gametime].png")
+image Woods = DynamicImage("Graphics/ui/bg/woods_[gametime].png")
 
 image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
 
 image Dorm AE = DynamicImage("Graphics/ui/bg/AEdorm_[gametime].png")
-image Student Government = DynamicImage("Graphics/ui/bg/studentgovernment_[gametime].png")
 image Frozen Beach = "Graphics/ui/bg/NYI.png"
+image Student Government = DynamicImage("Graphics/ui/bg/studentgovernment_[gametime].png")
 
 image Dorm BE = DynamicImage("Graphics/ui/bg/BEdorm_[gametime].png")
 image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
@@ -183,29 +182,29 @@ image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 image Dorm FMG = DynamicImage("Graphics/ui/bg/FMGdorm_[gametime].png")
 
 image Dorm GTS = DynamicImage("Graphics/ui/bg/GTSdorm_[gametime].png")
+image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].png")
+image Courtyard GTS = "Graphics/ui/bg/NYI.png"
 image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].png")
 image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].png")
-image Courtyard GTS = "Graphics/ui/bg/NYI.png"
-image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].png")
 
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
 image Dorm WG = DynamicImage("Graphics/ui/bg/WGDorm_[gametime].png")
 image RV Interior = "Graphics/ui/bg/WG_summer_rv.png"
-image Summer House Entrance = "Graphics/ui/bg/WG_summer_entrance.png"
-image Summer House Front = "Graphics/ui/bg/WG_summer_housefront.png"
-image Summer House Back = "Graphics/ui/bg/WG_summer_houseback.png"
-image Summer Beach Closed = "Graphics/ui/bg/WG_summer_beach_closed.png"
-image Summer Beach = DynamicImage("Graphics/ui/bg/WG_summer_beach_[gametime].png")
-image Summer Beach Ocean = "Graphics/ui/bg/WG_summer_beach_ocean.png"
 image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
 image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
+image Summer Beach = DynamicImage("Graphics/ui/bg/WG_summer_beach_[gametime].png")
+image Summer Beach Closed = "Graphics/ui/bg/WG_summer_beach_closed.png"
+image Summer Beach Ocean = "Graphics/ui/bg/WG_summer_beach_ocean.png"
 image Summer Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_bedroom_[gametime].png")
-image Summer Guest Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bedroom_[gametime].png")
+image Summer Dining Room = "Graphics/ui/bg/WG_summer_diningroom.png"
 image Summer Guest Bathroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bathroom_[gametime].png")
 image Summer Guest Bathroom Steamed = DynamicImage("Graphics/ui/bg/WG_summer_guest_bathroom_steamed_[gametime].png")
+image Summer Guest Bedroom = DynamicImage("Graphics/ui/bg/WG_summer_guest_bedroom_[gametime].png")
 image Summer Hallway = "Graphics/ui/bg/WG_summer_hallway.png"
-image Summer Dining Room = "Graphics/ui/bg/WG_summer_diningroom.png"
+image Summer House Back = "Graphics/ui/bg/WG_summer_houseback.png"
+image Summer House Entrance = "Graphics/ui/bg/WG_summer_entrance.png"
+image Summer House Front = "Graphics/ui/bg/WG_summer_housefront.png"
 image Summer Living Room = "Graphics/ui/bg/WG_summer_livingroom.png"
 
 #CG + Images
@@ -730,11 +729,9 @@ image Chibuki neutral = "Graphics/minor/chibuki-neutral.png"
 image dummy = "Graphics/ui/dummy.png"
 
 #Audio
-define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
 define audio.AE = "Audio/BGM/scene_AE.ogg"
 define audio.AEAlt = "Audio/BGM/scene_AEalt.ogg"
 define audio.BE = "Audio/BGM/scene_BE.mp3"
-define audio.WG = "Audio/BGM/scene_WG.ogg" #Aristocratic Opulence
 define audio.FMG = "Audio/BGM/scene_FMG.ogg" #Pump It
 define audio.GTS = "Audio/BGM/scene_GTS.ogg" #Hidden Meadow
 define audio.RM = "Audio/BGM/scene_RM.ogg"
@@ -743,31 +740,33 @@ define audio.MCGuitar = "Audio/BGM/scene_MCguitar.ogg"
 define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg" #Small Moments
 define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg" #The Challenge
+define audio.WG = "Audio/BGM/scene_WG.ogg" #Aristocratic Opulence
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
+define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
 define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
+define audio.Chase = "Audio/BGM/Chase.ogg"
+define audio.CreepingPresence = "Audio/BGM/CreepingPresence.ogg"
+define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
+define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
 define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
+define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
 define audio.Love = "Audio/BGM/love.ogg"
 define audio.LoveMB = "Audio/BGM/love_mb.ogg" #Music Box variant of Love
 define audio.Memories = "Audio/BGM/memories.mp3"
+define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
 define audio.Requiem = "Audio/BGM/requiem.mp3"
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
-define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH
 define audio.Secret = "Audio/BGM/scene_secret.ogg" #A Secret Place
 define audio.Steamy = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Sunset = "Audio/BGM/scene_sunset.mp3"
 define audio.Tension = "Audio/BGM/tension.ogg"
+define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
 define audio.TwilightBright = "Audio/BGM/twilightBright.ogg"
 define audio.TwilightAmbient = "Audio/BGM/twilightAmbient.ogg"
-define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
-define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
-define audio.TremblingWhispers = "Audio/BGM/tremblingWhispers.ogg"
-define audio.CreepingPresence = "Audio/BGM/CreepingPresence.ogg"
-define audio.Chase = "Audio/BGM/Chase.ogg"
-define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
 
 define audio.BrandenburgNo4 = "Audio/BGM/brandenburgno4.mp3"
 define audio.Gymnopedie = "Audio/BGM/gymnopedie.mp3"
