@@ -16469,6 +16469,962 @@ label WG061D:
     jump daymenu
 
 label WG062:
+    $setProgress("WG", "WG063")
+    scene Dorm Exterior with fade
+    play music DayByDay
+    "Alice had invited me over to her room today for some afternoon tea."
+    "Though this had become a regular occurrence as we’d grown closer, it still felt special to me that she’d go out of her way to clear part of her busy schedule to make time for us."
+    "The clear fall weather was a bit chilly today and the wind didn’t help in that regard. A hot cup of tea sounded pretty good right about now."
+    "I finally arrived at Alice’s dorm, giving a knock on the door."
+    play sound Knock
+    UNKNOWN "{i}Tehehe!{/i}"
+    MCT "Wait a second... I recognize that laugh."
+    WG "Come in!"
+    scene Dorm WG with fade
+    show BE happy at Position(xpos=0.35, yalign=1.0)
+    show WG happy at Position(xpos=0.65, yalign=1.0) behind BE
+    with dissolve
+    BE "So after we got our yakitori, we started walking back home. I told Kei-chan he should have gotten the beef like me, and that his fish was stinky."
+    MCT "Uhhg, not this story..."
+    BE "And apparently I wasn’t the only one that thought so, because unbeknownst to Kei, his stinky fish was attracting some unwanted attention."
+    WG "Oh?"
+    BE "A stray cat came up to Kei-chan and nudged his leg, hoping to get a piece. It was really cute."
+    MC "Yes, cute. For a fanged monster."
+    show BE neutral
+    BE "But Kei told it ‘No! This is my yakitori!’ and he walked away from it."
+    show BE happy
+    BE "But the faster he walked, the closer it followed until he started running down the street being chased by a cat, all while trying to scarf down the yakitori in a full sprint!"
+    show WG surprised-2
+    MC "I... I was hungry."
+    BE "Eventually he trips and falls over, panics by curling into a ball— crying mind you— totally resigned to his fate,"
+    BE "waiting for the fearsome tiger to maul him for his yakitori, all the while it just sat there licking the empty stick he dropped on the ground."
+    show WG happy
+    WG "{i}Pfffft{/i} Hahaha!"
+    MC "Really, Honoka? Of all the stories to tell her, you chose that one?"
+    show BE shrug
+    BE "Hey, if she can handle that story, then all your other stories are gonna be masterpieces by comparison!"
+    WG "Well, I found it to be quite entertaining."
+    MC "I’m sure."
+    MC "Maybe the next one can be about how I was such a sweet and caring friend, or how I was a tough kid, not afraid of anything— stalking cats notwithstanding."
+    show BE angry
+    BE "Sorry Kei-chan, but I’m drawing a blank on those. Pretty sure I would have remembered something like that too."
+    show BE wink
+    "Normally I would find Honoka’s humor quite amusing, even if it was at my expense, but in front of Alice— part of me wasn’t really sure how I felt about that."
+    "Regardless, Honoka wasn’t going to let off the gas anytime soon, so I got the feeling I was in it for the long haul."
+    MC "Wait a minute, why are you here, Honoka? Don’t you have some kind of club practice to get to? Like underwater basket weaving or something?"
+    show BE seductive
+    BE "Oof, okay. Fair play. Hitting me where it hurts."
+    MCT "Uhg, I finally land a solid jab and then she hits me with {i}that{/i} look."
+    MC "Aw come on, you know I didn’t mean it like that."
+    show BE happy
+    BE "Nah, truth can just be the harshest mistress when it comes to scathing comments."
+    MCT "Wait a second, why am I made to feel guilty now? This woman is relentless."
+    show WG neutral
+    WG "To answer your question, I ran into Honoka after class and we got to discussing her need for a re-fit since her last order."
+    show BE unique
+    BE "Yeah, Kei-chan, in case you hadn’t noticed, I’ve recently been in need of a wardrobe ‘upgrade’."
+    MCT "Noticed? If I was blind I’d still be able to feel the gravitational pull from those planet sized orbs."
+    WG "I invited her to stay to join us for tea after we took her measurements and got her order in."
+    MCT "Oh, joy."
+    show WG neutral-2
+    WG "It simply had been too long since her last visit. I wanted to hear about all these ‘stories’ about you she mentioned last time."
+    "I turned Honoka with a weary stare."
+    show BE seductive
+    extend " Shameless, no remorse was found behind those deceptively innocent eyes."
+    "{i}WheeeeeeEEEEEE{/i}"
+    show WG surprised-2
+    show BE neutral
+    WG "Oh, it seems that the kettle is boiling."
+    show WG neutral
+    extend " Excuse me while I prepare the tea."
+    MC "Here, I’ll come help."
+    show WG neutral-2
+    WG "I appreciate your willingness, Keisuke, but it would be rude to leave our guest unattended. Please keep her company while I make the necessary preparations."
+    hide WG with dissolve
+    show BE wink
+    BE "Heh, you forgot to say 'Mistress' at the end there."
+    show BE neutral
+    MC "What does that mean?"
+    BE "I mean, are you sure you’re not her servant? Because with how you act around her, you could’ve fooled me."
+    MC "Wha- you..."
+    show BE shrug
+    "The look on her face was undeniably smug, like she had lit a fuse and was waiting for the explosion."
+    menu:
+        "So what if I was? Are you jealous that she gets all my attention?":
+            jump WG062_C1_1
+        "You’re talking nonsense, it’s nothing like that.":
+            jump WG062_C1_2
+        "That’s quite a rude thing to say":
+            jump WG062_C1_3
+
+label WG062_C1_1:
+    "Tit for tat, I threw it right back in her face."
+    MC "So what if I was? Are you jealous that she gets all my attention?"
+    $setAffection("BE", 1)
+    show BE happy
+    BE "Heh heh... I guess you could say something like that."
+    MC "Would you rather I wait on you hand and foot, your majesty?"
+    "The tone of my sarcasm was figuratively dripping from each word that left my mouth. To overemphasize, I bowed my head with my hand to my chest."
+    show BE neutral
+    BE "Now, you see, THAT is what I’m referring to. Did Alice teach you to bow like that?"
+    MC "Nah, I looked it up myself."
+    BE "How proactive of you."
+    BE "..."
+    show BE happy
+    BE "Now that I think about it, I would actually like you to wait on me hand and foot like that. That sounds nice."
+    MC "Yeah, well, keep dreaming."
+    jump WG062_C1_after
+
+label WG062_C1_2:
+    "I didn’t like where this was going but I decided to just shrug it off."
+    MC "You’re talking nonsense, it’s nothing like that."
+    BE "I'm not judging if it is! Some people are into that. Just wasn't sure if it was the case. Kinda looked like it, "
+    extend " at least to me."
+    MC "It’s nothing of the sort. What do you take me for?"
+    show BE angry
+    MC "On second thought, don’t answer that."
+    jump WG062_C1_after
+
+label WG062_C1_3:
+    "I didn’t like where this was going, so I decided to nip it in the bud right here."
+    "That’s quite a rude thing to say. I’ll have you know, I’m not just some monkey in a suit for her. We have a really good relationship."
+    show BE surprised-2
+    $setAffection("BE", -1)
+    BE "Woah, sorry. Didn’t know this was a touchy subject."
+    MC "Sorry. I know you didn’t mean it like that, but I get the feeling that other people do."
+    show BE neutral
+    BE "Okay, sorry. I'll back off. Didn't mean to take it too far."
+    jump WG_C1_after
+
+label WG062_C1_after:
+    show BE neutral
+    MC "Now do the friend thing and help a guy out here. How’s my shirt looking? Too messy? Too casual? Should I have worn something else?"
+    BE "I don’t think it’s that big of a deal, Kei-chan."
+    MC "Well, maybe for you it’s not, but Alice’s tea time invitations are a bit more than casual affairs. They’re kind of like mini-dates."
+    MC "That and she’s pretty formal and intentional with just about everything. I want to look at least somewhat dressed for the occasion."
+    BE "You’re being ridiculous."
+    show BE happy
+    extend " Though it is kind of sweet to see you so flustered by trying to make sure everything is just right for Alice."
+    show BE neutral
+    BE "But we’re just going to sample some imported tea, Kei-chan, not meet Alice’s parents."
+    "Meeting Alice’s parents... I’ve thought about the day when that might come and to be honest, I much preferred to not think about it."
+    "I don’t know what I was worried about specifically, I think they would respect Alice’s choice... but what if they didn’t?"
+    MCT "Neither here nor there, no sense in getting worked up about it now."
+    "Despite what I said earlier, Honoka continued to poke fun at me until Alice returned with the tea. I wasn’t nearly as good at dishing it back at her as she was at giving it."
+    "So I felt some relief to finally see Alice return from the kitchen, knowing that I might at least catch a break."
+    show WG neutral at Position(xpos=0.65, yalign=1.0) with dissolve
+    "Alice came carrying a platter with the tea kettle and cups on it. Though she declined my offer to help earlier. I wished she hadn’t."
+    "She practically had to carry the thing arms extended out in front of her just to avoid bumping it against her belly and so it could clear her boobs."
+    "Though she took these things in stride and she was managing just fine, it was still apparent to see her reach was starting to run out of room as her body steadily piled on the weight this past year."
+    "Alice placed the platter gently on her tea table in the center of her room, bending over to do so. If she stood up too close to the table, she would risk having her protruding belly knock the entire thing over."
+    MCT "I wonder if she ever had a situation like that happen when nobody was around..."
+    "As she poured each of us a cup, my attention was drawn to the elegant movements of her pudgy fingers, with her dimpled knuckles and wrists."
+    WG "This blend is specifically designed to be enjoyed at temperatures over 90 degrees. To let it cool would diminish the taste. Otherwise I would have had it already prepared before your arrival."
+    MC "Sounds interesting, such specific directions. What kind of tea is it?"
+    BE "It smells like green tea, is it a type of exotic matcha?"
+    show WG neutral-2
+    WG "Not quite, this delicacy is a rather strong herbal tea. The rare caffeinated holly leaf known as Guayusa makes a splendid morning tea."
+    BE "Guayusa?"
+    WG "{i}Ilex guayusa{/i}, to be precise. A species of tree that can be found in the Amazon."
+    MC "Seems like a long way to go for some tea leaves. Somebody could probably get a similar tea at a farmers market."
+    show WG haughty
+    WG "I have no doubt you can find some store brand tea bags claiming they come from Ecuador. But none of them can actually back up that claim."
+    WG "I, on the other hand, have it on good authority that these come straight from the source. It was rather costly to procure them in bulk, but they are well worth the expense."
+    play sound Thud
+    show WG surprised-2
+    "As graceful as Alice was, even she couldn’t help but send a bit of a shockwave through the floor when her mass finally settled into her seat."
+    show WG neutral
+    "These days she was using two chairs to sit comfortably. At the rate she was growing, she’d need a third pretty soon."
+    MC "So what exactly does it taste like?"
+    WG "The texture is reminiscent of matcha tea. However, Guayusa has an almost caramel-like taste, giving it a far sweeter body."
+    show BE happy
+    BE "Ooooo, sounds tasty. I wanna try some before it cools off!"
+    show WG neutral-2
+    WG "By all means, please. I have already spent far too long explaining it, the best way to understand is to try it yourself."
+    BE "Mmph... {i}Ah!{/i}"
+    show BE surprised-2
+    BE "Woah, you weren’t kidding. This is some seriously high quality tea!"
+    show WG happy
+    WG "But of course. I would never invite company over and serve them sub-par tea. Those close to me should expect the most excellent hospitality."
+    show BE happy
+    BE "Honestly, I would’ve been happy with just some cheap candy. Heh, even something from a 100 yen vending machine would’ve been enough to impress me."
+    MC "You wouldn’t be able to get hot tea from a 100 yen machine..."
+    show WG neutral
+    WG "I respect your honesty, Honoka. But I personally would consider such a gift to be distasteful."
+    BE "Hmm? Why’s that?"
+    menu:
+        "Chances are they probably didn’t put much thought into the gift.":
+            MC "100 yen isn’t much of an investment, more of an afterthought. Chances are they probably didn’t put much thought into the gift. "
+            WG "Keisuke’s sentiment is correct."
+            BE "Really?"
+            MC "Would you appreciate a gift bought with pocket change?"
+            BE "A gift is still a gift! Even if it’s cheap, it was still bought with someone else’s cash."
+            WG "Perhaps, but there’s a difference between hard earned cash someone worked for and an incidental expense. 100 yen doesn’t really rise to the level of any appreciable effort."
+            show BE angry
+            BE "Eh, I’d still take it."
+
+        "What if the person didn’t have that much money though?":
+            MC "What if the person didn’t have that much money though?"
+            BE "Yeah, what if that’s all someone could really afford? That could be a lot to somebody."
+            WG "Perhaps, I suppose. The relative cost to the giver does merit some consideration."
+            WG "But if someone considers 100 yen to be an extraordinary expenditure doesn’t that burden the recipient with the knowledge that the giver over-extended their means to procure it for them?"
+            show BE worried
+            BE "I hadn’t really thought about it like that."
+
+    show BE neutral
+    WG "I do believe in the idea of ‘It’s the thought that counts’, and if I were to be presented with such a gift, it would be painfully obvious the offering was an afterthought."
+    show WG neutral-2
+    WG "However, by no means does that mean a cheap gift is inherently bad. In fact it’s quite the contrary. For example, a single pencil and paper would cost about the same."
+    show BE shrug
+    BE "I’m not sure I follow."
+    WG "It’s less so about the cost as it is the potential."
+    WG "Let’s say, instead of spending that 100 yen on some cheap machine, they use it to make something. A simple sketch devoted to the gift recipient has far more value than a single drink."
+    show WG happy at Transform(xzoom=-1)
+    "Alice turned her gaze towards me with a wry smile. She was aware of my drawing talent, or at least capabilities, but I hadn’t shown her any of my artwork yet."
+    "I had no doubt her seemingly arbitrary example was actually a not-so-subtle hint for a gift idea."
+    show BE neutral
+    BE "Yeah, but you can’t exactly drink a notebook sketch."
+    show WG neutral
+    WG "...Amusing. That is certainly one way to think about it."
+    show BE angry
+    BE "Eh, I’d be happy with either gift to be honest. Though maybe I'd appreciate it more if I knew the person giving it didn't have much to begin with."
+    show BE happy
+    BE "Actually... Speaking of cheap vending machines, did Kei-chan ever tell you about the time he and I found a 2,000 yen bill?"
+    MC "When you and I found— oooooh, right."
+    show WG surprised-2
+    WG "A 2,000 yen bill...?"
+    BE "Yeah, we were like nine or something. Neither of us had even held a bill that large before."
+    show WG neutral-2
+    WG "Ah, that clears things up."
+    extend " For a moment there I had assumed this was a recent event."
+    BE "I mean, if we did find a 2,000 bill now, the story would probably be the same, more or less."
+    MC "Speak for yourself, I’m actually quite good at saving my money now."
+    show BE wink
+    BE "Yeah, but that’s only because you don’t have any money to save in the first place!"
+    MC "Wha, Hey!-"
+    WG "I’m quite intrigued, what exactly did you do with this newfound wealth?"
+    show BE happy
+    BE "I like to think we did what any sensible kid would do-"
+    MC "-We spent it all on sugary drinks and candy from vending machines."
+    BE "Hehe, yep. Every last yen was used to buy junk food, and it was certainly an experience I’ll never forget."
+    MC "I wish I could forget it. The stomach aches I had that night still plague me like a curse."
+    BE "But it was definitely worth it, right?"
+    MC "..."
+    menu:
+        "Ugh, I’m going to have to disagree with you there.":
+            BE "{i}Pfffft{/i} c’mon, I know you enjoyed it more than that."
+            MC "And I can assure you with utmost certainty that it wasn’t a good time."
+
+        "...Maybe a bit":
+            show BE doubt
+            BE "Really just a bit?"
+            $setAffection("BE", 1)
+            show BE happy
+            extend " Ah well, I guess you did eat more than me after all. Hehe!"
+            MC "Honoka, please, I beg you. Even just talking about that night is making my stomach queasy."
+
+    BE "Come to think of it, that was the last time I ever had a Miracle Bar."
+    MC "That’s probably a good thing, you were downright addicted to those."
+    BE "No kidding, I’d probably be the size of Al..."
+    extend " a lot more than I am now, if that wasn’t the case."
+    MCT "I can’t believe you seriously almost said that."
+    show WG surprised-2
+    WG "I beg your pardon, but what exactly is a ‘Miracle bar’?"
+    show BE surprised
+    BE "{i}Gasp{/i} Have you really never tried one?!"
+    show WG neutral
+    WG "I can’t say that I have, but your enthusiasm is tempting me into trying one for myself."
+    show BE surprised-2
+    BE "They’re these super thick slabs of dark chocolate coated with pecans, right? And the middle is filled with this kind of red liquid caramel filling- I don’t know what to call it."
+    MC "It’s a candy bar they stopped selling a while back. Turns out it contained like three times your recommended daily sugar intake. Thing was practically lethal."
+    show BE neutral
+    BE "Right, yeah... I forgot they stopped supplying them to Japan. Something about stupid health concerns."
+    show BE happy
+    extend " God I miss them, they were the best!"
+    WG "Oh that shouldn’t pose too much of a problem."
+    show BE confused
+    BE "Huh?"
+    WG "This candy, is it still sold elsewhere in the world?"
+    MC "Last I remember, it was still going strong in the western parts of the world."
+    show WG happy
+    WG "How fortunate, I could have a sampling brought here in a couple days."
+    show BE surprised-2
+    BE "What? Is it really that simple, th-there’s no way!"
+    MC "Honoka, I can see you salivating..."
+    show WG haughty
+    WG "Hmph, just because a product isn’t sold here any more, doesn’t mean it will be lost forever."
+    "As much Alice tried to play this off as passé and not a big deal. The palpable smugness in her tone rang true."
+    "Whether it was the flaunting of wealth, or the joy of presenting a gift to Honoka. Alice was positively beaming with pride."
+    show BE happy
+    BE "Kei! C’mon, aren’t you excited?"
+    MC "Mostly nauseous, actually-"
+    show BE angry
+    BE "{i}Pft{/i}, nah. You’ve got a strong stomach, I know it."
+    MC "Oh yeah? And what makes you so sure, pray tell?"
+    show BE neutral
+    BE "Because you watched Vein Leeches all the way through! You’ve gotta have guts to power through that."
+    MC "..."
+    MC "Please never say that name again, the only reason I have a phobia of leeches is because of that whole experience."
+    BE "You’re the one who wanted to keep it playing. I tried to eject the disk, but {i}noooooo{/i}. You wanted to act all grown up, didn’t you?"
+    MC "Well I— we already rented it! I thought this was going to be the only chance we had to watch an R-rated movie."
+    show WG doubt
+    WG "Forgive me, but I feel as if I am missing some vital context for this argument."
+    show BE wink
+    BE "There really isn’t a lot to give context to."
+    show WG neutral
+    MC "Now wait a minute, hold on-"
+    show BE neutral
+    BE "Mr. ‘adult’ over here, and I rented this low budget horror movie when we were far too young."
+    show WG surprised-2
+    WG "They let you rent out those kinds of movies at such a young age?"
+    BE "Nah, we switched the disks out with this kids show he used to watch."
+    show WG neutral-2
+    MC "I just want to make this clear, switching the disks was entirely her idea. I was just the accomplice."
+    show BE happy
+    BE "Hehehe, I mean it did work didn’t it?"
+    show WG happy
+    WG "Intriguing, I had almost hoped Keisuke was the one who came up with that plan. It is rather ingenious."
+    BE "He wishes!"
+    "The two of us continued to regale Alice with more stories of getting into trouble together as kids."
+    "Though Honoka’s story selection and sense of humor was often at my expense, it still felt nice seeing my best friend and my girlfriend hitting it off so well with each other."
+    "It wasn’t until late in the day that we realized how much time we’d spent prattling on."
+    show BE surprised
+    BE "Oh geez, I have to get going. I still have homework to get done."
+    show BE angry
+    BE "Doesn’t mean I’m going to do it tonight,"
+    show BE happy
+    BE "but I should probably head out. Thanks for the tea, Alice. I’ve never had anything like it before."
+    WG "It was my pleasure. We’ll have to do this again sometime."
+    MC "Maybe next time I’ll get to share my embarrassing stories about you."
+    BE "Ha! Do your worst."
+    show BE shrug
+    extend " I’m pretty sure all of those stories still manage to make you look bad too."
+    show BE seductive
+    MCT "She’s absolutely right— I got nothing."
+    show BE neutral
+    BE "Well, I’ll see you two in class."
+    hide WG with dissolve
+    "But when Honoka went to open the door to leave,"
+    show BE surprised at altMove(0.5, 0.5)
+    extend " she was quite surprised to find someone waiting on the other side."
+    play sound Thud
+    "All I saw was a flurry of what appeared to be a head of dark raven hair, and the person it was attached to face-planting onto the floor."
+    show Kokutan neutral at Transform(xzoom=-1, yalign=1.0) with easeinleft
+    BE "Kokutan!?"
+    "Standing up to dust herself off, the mysterious stranger had revealed herself."
+    Kokutan "Ah, yes, it is I!"
+    "This had to be Honoka’s roommate. An odd duck by all accounts from the things Honoka told me. Her manner of dress was enough to tell you already that she was a little ‘different’."
+    "Kokutan's uniform looked like it had been customized with extra lace, a trail of black ruffles along the skirt rim, with a matching bow on the front of her skirt."
+    show BE surprised-2
+    BE "Well I can see that. What are you doing here?"
+    Kokutan "!"
+    "Kokutan seized up for a brief second."
+    Kokutan "It-It had been so long since you came back to your room. I thought something must have happened to you."
+    Kokutan "Dark forces swirl about this place, I thought for sure you had somehow managed to get yourself entrapped by them when you failed to return, so I came to your rescue."
+    WG "?!?"
+    "Alice was just as bewildered as I was, but at least I was somewhat prepared for this peculiar interaction based on what Honoka had told me of her."
+    "Oddities aside, her tone was evasive. Come to think of it, why did she fall forward when Honoka opened the door? Had she been listening in the whole time?"
+    show BE doubt
+    BE "That was, uh, considerate of you Kokutan, but how did you know I was here? It was just a spur of the moment invite before I came back to my dorm. I didn’t tell you where I was going."
+    Kokutan "!"
+    Kokutan "Ko- Kodama-san told me when I pried into the deepest recesses of her mindscape."
+    BE "So you asked her? Well, I guess she’d know."
+    show BE neutral
+    BE "Not to worry, I’m alive and well. I was just having some tea with Kei-chan."
+    "I waved as Honoka introduced me."
+    MC "Hello."
+    BE "And Alice Nikumaru."
+    WG "Charmed, I’m sure."
+    Kokutan "H-Hello."
+    show BE neutral
+    BE "Alright, let’s get going. Thank you for rescuing me. They were just about to chop me up and throw me in the oven."
+    MC "I think you need to eat a few more Miracle Bars before we bother doing that."
+    show BE angry
+    BE "Very funny, Kei-chan."
+    BE "Come on, Kokutan."
+    hide BE with dissolve
+    show WG neutral with dissolve
+    Kokutan "..."
+    "Our new visitor apparently hadn’t left. She was just standing there, looking like she wanted to say something to Alice."
+    WG "Can I help you with something?"
+    extend " Kokutan, was it?"
+    BE "Aaand we’re leaving."
+    hide Kokutan with dissolve
+    "Honoka reached back through the still open door to yank Kokutan back into the hallway. I appreciated Honoka’s efforts to cut short that rather awkward encounter to give us some alone time."
+    show WG surprised-2
+    WG "What an odd little girl."
+    show WG neutral
+    "‘Little’ was an apt description. For a school where most people were growing out of proportion, Kokutan was diminutive, even by normal standards."
+    WG "Did you notice how she was dressed?"
+    MC "How could I not? She certainly stood out in that regard... among other things. Honoka mentioned to me she is a tailor who made that get-up herself."
+    show WG surprised-2
+    WG "Really? Is that so?"
+    show WG neutral
+    WG "Hmm, though it certainly doesn’t match my style,"
+    WG "it doesn’t take a trained eye to recognize she has some talent with a needle and thread to make something like that out of a basic school uniform."
+    show WG neutral-2
+    WG "The altered sleeves with the puffier shoulders gives her dress a sort of Victorian look, which I found interesting, but all the black just clashed with everything unnecessarily."
+    "Alice seemed more intrigued than perplexed by Honoka’s roommate, despite her not making a particularly good first impression."
+    show PRG neutral at Position(xpos=0.75, yalign=1.0) with dissolve
+    PRG "{i}Yaaawn{/i}"
+    "Aida had emerged from her room, looking like she just got up from a long nap. With how far along she was, I’m sure she needed all the rest she could get."
+    MCT "Wait a second."
+    MC "Aida, if you don’t mind me asking, when did you lay down to take a nap."
+    show PRG surprised
+    PRG "Oh goodness! You weren’t waiting on me to wake up were you?"
+    MC "No, no, it’s not that. You’re fine, take all the rest you need. I was just curious, did you lie down before Honoka was here?"
+    show PRG neutral
+    PRG "Inoue-san was here?"
+    show WG neutral
+    WG "Interesting..."
+    extend " Aida, do you happen to know anyone who goes to this school named Kokutan?"
+    PRG "Umm, no. That doesn’t sound familiar."
+    show PRG embarrassed
+    extend " Should I?"
+    WG "No, just curious is all. I wouldn’t worry about it."
+    show PRG neutral
+    "Alice and I turned to look at each other with raised eyebrows, realizing our encounter with Kokutan left us with more questions than answers."
+    jump daymenu
+
+label WG063:
+    $setProgress("WG", "WG066")
+    play music Schoolday
+    scene Dorm Exterior with fade
+    "I was walking back to my dorm, getting ready to grab some stuff I’d need for my afternoon classes."
+    "I contemplated taking a quick power nap, but on the other hand, I didn’t trust my alarm to wake me back up."
+    WG "Keisuke!"
+    "I knew who was calling my name, but she sounded far off. I turned around towards the sound of her voice."
+    "I waved at Alice to greet her while she was still a little ways off. She was moving with what seemed to be an urgent pace."
+    show WG surprised-2 with dissolve
+    MC "Is something wrong? You look a bit rushed."
+    WG "No, nothing that urgent—"
+    show WG neutral
+    extend " also, hello!"
+    "In her typical fashion, Alice didn’t want to neglect a proper greeting."
+    show WG happy
+    "She flicked one of her locks back over her shoulder, letting me know she expected a proper greeting in kind."
+    "I reached in and planted a smooch on the cheek she had uncovered by moving her hair, while proceeding to wrap my arms around her waist— as best I could of course."
+    MC "Hi."
+    "I squeezed into her a bit deeper. Alice felt so soft, almost like a water bed, but like a really, really full one. It was all too easy to find myself lost in her embrace as I felt myself sink deeper and deeper."
+    "I’ve found myself completely infatuated with her body. Not the least of the reasons why was because it was constantly changing. It was hard to see, but each day there was a bit more of her."
+    WG "Mmm. Always nice to exchange ‘pleasantries’ with you before getting down to business matters."
+    MC "Business? Did you need some more deliveries? I checked this morning and it looked like I was caught up on those."
+    show WG neutral
+    WG "Oh, you are. This is something else. Like I said, it’s not urgent, but I could use your assistance."
+    WG "I have a client coming in to get measurements done for a custom dress fitting this afternoon. Chibuki is out running errands for me in town and I’d like your help."
+    MC "Uhhg, yeah, because I did such a {i}gooood{/i} job last time with Honoka."
+    show WG neutral-2
+    WG "I understand your misgivings, but I thought your professionalism was more than sufficient, especially given the nature of the task."
+    "Alice doesn’t dole out praise lightly. I had to wonder if she was genuinely impressed with how I handled temptation or if she was just buttering me up because she really needed my help."
+    "Knowing Alice, it was probably both."
+    MC "Yeah, but that was Honoka. We’re really good friends, as awkward and embarrassing as it was, it's just something we can laugh about later."
+    show WG haughty
+    WG "Oh come now. That may be true, but I also don’t think a more neutral party is going to go out of their way to make it as awkward for you either."
+    "She did have a point."
+    MC "Ehh, I don’t know. It just feels like an intimate thing, getting in that close and personal to make sure you get a good fit. It just feels odd to do that with someone you don’t know."
+    MC "...On the other hand, I wouldn’t mind taking your measurements..."
+    show WG doubt
+    WG "{i}Tsk{/i}. You’re hopeless."
+    MC "So that’s a no I take it?"
+    show WG aroused
+    WG "I never said no."
+    "I was initially determined to weasel my way out of this one, but by this point I knew I was already caught in her web and she was weaving my silk coffin."
+    show WG stern
+    WG "Look, I’m not going to beg."
+    show WG neutral-2
+    extend " But I am asking."
+    WG "I could use some extra muscle for this one, you’ll see why."
+    "With a cocky smirk on my face I proceeded to interlock my fingers and give my knuckles a good crack."
+    MC "Ahhh. Well, I certainly couldn’t turn down a lady in need."
+    show WG happy
+    "Alice shook her head as she rolled her eyes."
+    show WG neutral
+    WG "You certainly are the hero of your own story, but keep in mind, that is a work of fiction."
+    "I shrugged at her retort."
+    MC "But it’s an interesting read at least."
+    show WG happy
+    "Alice chortled at my rather amusing defense of my ego."
+    show WG neutral-2
+    WG "Alright, you get to be the knight in shining armor for coming to my aid on this occasion, but I’m not exactly holding my breath betting you’ll come riding in on a white stallion."
+    MC "Would it be more impressive if I did?"
+    show WG aroused
+    WG "..."
+    "Alice paused for a bit, as if seriously contemplating my question for a brief moment."
+    show WG haughty
+    WG "I’m starting to think I need to be more careful about ideas I’m inadvertently putting into your head."
+    show WG happy
+    "Alice gave me a soft, parting kiss before proceeding to walk back to her dorm."
+    WG "The appointment is at four, try to come about ten minutes early if you can."
+    MC "I noticed you didn’t exactly say no to my question."
+    "I was expecting some snappy retort from her as she turned back towards me while still walking, but Alice just shrugged her shoulders with a coy smile as she continued on her way."
+    hide WG with dissolve
+    MCT "Wait. She wasn’t serious was she?"
+    MCT "I sure hope not anyway. How the hell am I supposed to find a horse stable on this island?"
+    show black with fade
+    pause 1
+
+    scene Dorm WG with fade
+    play sound Knock
+    play music WG
+    "I knocked on the door as I let myself in, since she was already expecting me."
+    show WG neutral with dissolve
+    WG "Glad you could make it, and with plenty of time to spare. Thanks for coming. Here, have some tea, we have enough time for a cup before she arrives."
+    "Alice proceeded to pour me a cup from her teapot as she gestured for me to sit down."
+    "It was black tea, with a hint of orange peel and bergamot oil. I still don’t know that much about tea, but it was good."
+    MC "Well, I thought about it a bit more, and I know how much you pride yourself on your business exceeding customer expectations."
+    MC "I shouldn’t have been so whiny about agreeing to do measurements again. I don’t want you to think I’m not willing to help more with the business when you need it."
+    show WG neutral-2
+    WG "I appreciate that Keisuke, but I was actually thinking the opposite."
+    show WG worried
+    WG "You already do plenty to help me and it’s not good for the business, or our relationship, if I keep having to spring these last minute appointments on you."
+    MC "It’s only been two so far counting this occasion. It doesn’t seem too unreasonable to me."
+    show WG neutral
+    WG "Perhaps, but business has been picking up quite a bit. I’ve been thinking that it’s time I brought on some extra help."
+    WG "By this point many of the students experiencing a growth have begun to go beyond the limits of non-custom clothes."
+    MC "Hmm, now that you mention it, I was going to ask you about that since I noticed the delivery numbers had been ticking up quite a bit lately."
+    MC "Just how many fitting appointments do you do in a week?"
+    WG "More than a few at this point."
+    WG "Most items can be sized well enough based on self measurements, but if it’s something that needs a specific fit, like bras, dresses, or suits, then I insist on the client getting measured."
+    WG "Otherwise there’s no way to guarantee a proper fit that would satisfy the customer."
+    MC "Wait a minute. Suits? You’ve had guys in your dorm for suit fittings?"
+    show WG surprised-2
+    WG "I hadn’t pegged you for the jealous kind, Keisuke."
+    MC "I mean, maybe a little, if I’m being honest. I should have guessed you already were without any issue, but I hadn’t really thought about it before."
+    show WG happy
+    WG "Heh, you’re fine."
+    show WG haughty
+    WG "Honestly, I would have been a little suspicious if that information hadn’t elicited any reaction at all from you."
+    "She certainly likes to keep me on my toes."
+    show WG neutral-2
+    WG "I can assure you, you have nothing to worry about. I have Chibuki to handle the physical measurements in those cases."
+    show WG haughty
+    WG "Besides, do you honestly think I’d tolerate any funny business for even a second from another man?"
+    "I would genuinely fear for any guy that would try something like that on her or Chibuki while she was in the room."
+    "Not that I think she would, but if Alice threatened to sit on someone, I think they’d rightly fear for their life."
+    MC "Nope, can’t say I would imagine that happening now that you mention it."
+    MC "That does make me wonder, what do you do for orders from the giant students?"
+    show WG neutral
+    WG "Oh, they’re easy. I just take a picture of them from multiple angles in tighter fitting clothes next to a flagpole, or a statue, something of a known height depending on how tall they are."
+    WG "With an image software that can measure pixels, it just takes a bit of math of the relative distances to get their measurements."
+    WG "They are so tall, a little bit of extra leeway in the measurements doesn’t negatively impact the fit of their clothes like it would on you or I."
+    MC "That’s... actually really clever."
+    show WG doubt
+    WG "Does my intelligence somehow surprise you?"
+    MCT "I’m not falling for that trap."
+    MC "I wouldn’t say surprised, I’m just genuinely impressed, as I so often find myself when talking to you."
+    show WG happy
+    WG "Not the smoothest recovery, but enough that I’ll turn a blind eye to the overt flattery on display."
+    show WG haughty
+    WG "But just this once."
+    MC "Hehe."
+    show WG neutral
+    WG "While we’re on the subject, I’m thinking about booking you an appointment myself."
+    MC "But I already have a suit."
+    show WG stern
+    WG "{i}A{/i} suit— emphasis on one."
+    show WG haughty
+    WG "A gentleman should have enough to not have to wear the same one again during the work week."
+    MC "Four more suits? I can’t afford that! My boss doesn’t pay me enough."
+    show WG doubt
+    WG "Har, har. Hilarious, Keisuke."
+    show WG haughty
+    WG "If not entirely ungrateful."
+    MC "Is now a bad time to ask for a raise?"
+    show WG happy
+    WG "You should be paying me to put up with you at this point."
+    MC "That sounds much more expensive than four suits."
+    show WG neutral-2
+    WG "I think it’s safe to say you’re already overdrawn."
+    show WG neutral
+    WG "But seriously, you don’t have to worry about the cost. You are an employee, so it’s a tax write-off, not a personal expense."
+    play sound Knock
+    show WG surprised-2
+    WG "That must be her."
+    show WG neutral
+    WG "We’ll schedule your appointment some other time, just know that you’re on the hook for it."
+    "Part of me was baffled that I essentially had no say in the matter, but on the other hand, I wasn’t going to be turning down a free suit or two any time soon."
+    WG "Coming!"
+    hide WG with dissolve
+    MC "Come to think of it, I never did ask who..."
+    show Natsuko neutral at Position(xpos=0.25, yalign=1.0)
+    show WG neutral at Position(xpos=0.75, yalign=1.0)
+    with dissolve
+    Natsuko "Thank you for working me into your busy schedule, Nikumaru-san. There’s no way I’m going to be able to find a flattering dress, in light of my more recent developments."
+    show Natsuko flex
+    Natsuko "Heh, not that I’m complaining otherwise."
+    WG "Please, just call me Alice. And you don’t have to thank me. As the business owner it’s on me to be as accommodating to a client’s schedule as possible."
+    show Natsuko neutral
+    Natsuko "Hello, Hotsure-san. I’m surprised to see you here."
+    WG "I hope you don’t mind. My assistant is out of the office, so to speak, but Keisuke is experienced in helping me with this. I assure you, you’ll find him to be quite professional."
+    "Whether she intended it or not, Natsuko’s gaze bore through me with the intensity of a plasma beam."
+    MC "Uhh, hai-i... Natsuko."
+    "I hadn’t had my voice crack like that since I was fourteen, but I’d be lying if I said I didn’t know why it did."
+    "If Alice was a warm soft pillow to lie down on, Natsuko was a floor of broken glass. This girl had lines and ridges I didn’t even know were possible to have all over her ultra-muscled body."
+    Natsuko "Well I’m sure he'll do just fine. I hope my height won’t be a problem for you, Hotsure-san."
+    MCT "Easier said than done."
+    "Natsuko was imposing enough as it was and I already made an awkward mess out of myself with my cracked voice."
+    WG "Alright, let’s get you in front of the three-way mirror."
+    "Alice handed me the measuring tape as we walked with Natsuko over to the fitting area."
+    "Standing face to face, no, scratch that— face to chest with Natsuko, I could see why Alice wanted me to help."
+    "Alice had been getting so big her ability to physically reach around someone like Natsuko would definitely be a challenge. Hell, it was going to be a challenge for me!"
+    "Natsuko had the body of a rugby player, or should I say the body of two fused together. She was easily the tallest non-giant person I’d ever seen in my life."
+    "Seeing her up close with her most recent growth gave me mixed feelings of awe and terror."
+    show WG surprised-2
+    WG "Uh, Keisuke, Natsuko isn’t here to just hang-out for fun, let’s move things along, shall we?"
+    MC "Oh, right."
+    Natsuko "Don’t worry about it, Alice. I’ve been getting a lot of looks recently regarding my new... size. Hotsure-san just needs some time to take it in, haha."
+    MCT "There’s not enough time in the world, Natsuko."
+    "Alice was wrong, this wasn’t going to be better than helping fit Honoka. As embarrassing as that ordeal was, at least I got to hold a pair of monster tits in my hands."
+    "Natsuko was apparently also enjoying how painfully awkward this was for me, but in contrast to this occasion, I felt like Natsuko was going to snap my neck if I brushed up against the wrong part of her."
+    WG "Alright, same as usual, top to bottom, get her shoulders first and then do the chest. I’ll write them down as you go."
+    "Unlike Honoka, at least Natsuko was cooperative with the process. She was no stranger to getting sized up like this before."
+    "She didn’t need to be told to put her arms down, or arms up for the measurements as we went along."
+    "Her chest was impressive enough, but it was a far cry from Alice’s— or so I thought until I got the measuring tape all the way around her upper torso. All that extra back muscle made it pretty close."
+    WG "Pull the tape taught, Keisuke."
+    MC "Oh, uh, right!"
+    "I tried my best to not get handsy by meeting the ends of the tape on the sides."
+    "But when I reflexively jumped at Alice’s command the back of my hand made pretty decent contact across her boob."
+    Natsuko "Hmm?"
+    MCT "Ack!"
+    Natsuko "Are you sure you’ve done this before, Hotsure-san? I didn’t take you for someone who would try and cop a feel."
+    MC "I-It was an accident, sorry!"
+    Natsuko "Relax, little guy, I was joking. However, please try and avoid touching them again."
+    MCT "Good one, I’m just rolling on my sides, as you can see."
+    MC "Sorry, I guess I had a bit too much tea earlier. I think my hands aren’t so steady from all the caffeine."
+    WG "Now’s not the time to be shy Keisuke, it’s much easier for her if you just get to it."
+    MC "Right. S-Sorry about that."
+    Natsuko "Calm down, Hotsure-san. I know I have an intimidating physique,"
+    show Natsuko aroused
+    extend " but I don’t bite."
+    "Her semi-sultry tone caused the hair on my neck to stand up. Natsuko biting me was the least of my worries. Her crushing my head on the other hand was the first of my worries."
+    show Natsuko neutral
+    "After that little pep-talk from Alice I proceeded to bang out the measurements as efficiently as I knew how to, trying not to think about getting too touchy feely."
+    "It wasn’t without distractions though, her whole body was an anomaly in it’s own right. Her arms were bigger than the size of my thighs, and her thighs were bigger than my waist."
+    "Her waist on the other hand was unusually tapered, like that of a model— that was also built like a tank."
+    "I could see why Alice didn’t want to disappoint. Her unique proportions made Natsuko a sure-fire repeat customer if Alice could deliver."
+    MC "A-All d-done..."
+    show WG surprised-2
+    WG "My, this is quite a change from last time. You certainly were overdue for a new fitting."
+    Natsuko "It is the one unfortunate downside of this for me. It would be impossible to find flattering clothes for myself without your services though, Alice."
+    show WG neutral-2
+    Natsuko "I appreciate how you help the student’s at the school with your business."
+    show WG happy
+    WG "It is my pleasure."
+    show WG haughty
+    WG "You see that Keisuke? She gets it. Why Matsumoto-san and Yamazaki-san are so obtuse as to the obvious need for this business, I will never understand."
+    show WG angry
+    WG "{size=-6}Jealous of my acumen and success, no doubt.{/size}"
+    Natsuko "Ahem. Are there any other measurements you need to take?"
+    show WG surprised-2
+    WG "Oh, my apologies for getting distracted."
+    show WG neutral
+    extend " No, that will be all for now."
+    WG "We already have you schedule for next week when it should arrive to get assessed for any final alterations, if they are needed."
+    WG "You are welcome to stay and join us for tea if you’d like."
+    Natsuko "Thank you for the offer, but I have plans for the evening. I will see you when the order arrives, if not sooner."
+    Natsuko "And don’t be so nervous next time, Hotsure-san. It may make other customers uncomfortable."
+    MCT "Yeah, and some might enjoy it..."
+    hide Natsuko with dissolve
+    MC "Whew, glad that’s over."
+    show WG stern at altMove(0.5, 0.5)
+    WG "That was certainly not your finest performance!"
+    WG "Of all the women I might have expected to catch you ogling and getting all flustered over, Natsuko is the last one I would have suspected."
+    MC "I think you’re misinterpreting the reason why I couldn’t stop staring at her."
+    show WG doubt
+    WG "Oh? And what is the reason?"
+    MC "Uh, because she’s terrifying?"
+    WG "Oh come on. You’re being dramatic. Natsuko is a gentle giant— well, as long as she’s not around Akira."
+    MC "Don’t get me wrong, she is polite, but her RBF is seriously intense. Especially when your face is centimeters away from her chest and you’re one hand slip away from getting your head caved in."
+    show WG neutral
+    WG "When you put it that way, I guess I can see your point."
+    show WG neutral-2
+    WG "That explanation does make a lot more sense in light of your rather obvious preferences in the other direction."
+    MC "Oh ye of little faith."
+    show WG worried
+    WG "Sorry about the accusation."
+    show WG neutral
+    extend " I guess you’re not the only one with a spark of jealousy."
+    WG "This occasion has been illuminating though. Given current trends and the increasing volume of clients, this isn’t sustainable with the current size of the operation."
+    WG "I’m definitely going to have to bring in some extra help."
+    MCT "Whew, boy am I glad to be off the hook for this going forward."
+    MC "Well, now that that’s wrapped up, there’s still the matter of your appointment."
+    show WG surprised-2
+    WG "Oh?"
+    show WG aroused
+    WG "I wasn’t aware I had one booked."
+    MC "Oh, but you didn’t {i}not{/i} book an appointment for your measurements, per our earlier conversation."
+    "I partly unfurled the measuring tape as I raised an eyebrow with a devilish grin."
+    "It was time for me to find out just how big that behemoth of a belly really was. As far as I was concerned, this was well worth the risk of almost getting pounded flat by Natsuko."
+    "I looped the measuring tape around her, pulling her in close in the process as I wrapped my arms around as best I could"
+    show WG surprised-2
+    WG "Oh!"
+    show WG happy
+    "Hehe."
+    "The tape flopped across her backside, but I hiked it up across the small of her back, if anything could still be called small on her anymore."
+    "Spreading out my arms as wide as I could, I began to pull it taught across the sides of her belly."
+    MC "..."
+    "Only to realize the ends of the measuring tape were nowhere near meeting together."
+    MCT "Are you freaking kidding me?"
+    "I turned to look at the top of Alice’s vanity dresser and realized I had grabbed the standard 150cm measuring tape and not the extra long one used for growth factor students."
+    MC "Uhhh, just a sec. I grabbed the wrong one."
+    show WG neutral
+    WG "Not that I don’t appreciate your enthusiasm, Keisuke, but maybe we should save this for when we’re not expecting more visitors."
+    MC "What do you mean? Are you expecting Chibuki to come back soon?"
+    show WG neutral-2
+    WG "Umm, well, let’s just say I might have double-booked your available time slot."
+    "Alice was anything but meek, so her sheepish grin was telling me she had done something she knew was not so good."
+    play sound Knock
+    #$setFMGOutfit(OutfitEnum.RIPPED)
+    show WG neutral-2 at altMove(0.5, 0.75)
+    show FMG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    play music Busy
+    FMG "Yo, Alice! Thanks for working me in at the last minute! These clothes have had it!"
+    "I turned and glared at Alice with the intensity of the sun."
+    show WG neutral
+    WG "You know I can’t see your eyes with your hair like that, right?"
+    MCT "There’s no winning with this woman is there?"
+    FMG "Oh, hey Kei-kun! I didn’t expect to see you here. But that’s cool,"
+    show FMG flex
+    extend " because you’ve got a front row seat to the gun show!"
+    "I couldn’t tell what made me groan inside more, having to go through this whole ordeal again, or being subjected to Akira’s puns."
+    MC "You owe me for this."
+    show WG neutral-2
+    WG "I never said I didn’t."
+    jump daymenu
+
+label WG066:
+    $setProgress("WG", "WG067")
+    scene Dorm Exterior with fade
+    play music Sunset
+    "Walking outside in the cool autumn air, I couldn’t help but notice the change in scenery as the leaves had begun to change."
+    "I wouldn’t usually have thought much of it, other than it being the normal course of things."
+    "But in light of everything that’s happened this year, I couldn’t help but think of it as some sort of allegory for how we’ve all been changing since we got here."
+    "Well, some changes have definitely been more dramatic than others. Even after learning about growth factors and then finding out what Alice’s was,"
+    "I would have never imagined it could go this far— with no signs of stopping any time soon either."
+    "That’s not even to say others hadn’t undergone similarly staggering transformations in their own right."
+    "Quite frankly, most of the growths I’d seen made mine seem insignificant, even to me, and I had to deal with brushing and cutting this tangled mess all the time."
+    "Not exactly something a guy was prepared to do for the rest of his life."
+    scene Dorm Hallway with fade
+    "But that was precisely the cause for the occasion of today. Alice had previously offered to cut and style my hair for me. Given its increasing unruliness, her offers had turned into continued insistences as of late."
+    "True to her form, if my efforts to look presentable weren’t cutting it, Alice had no hesitation about doing the job herself to make sure it was done right. Thus, was my current destination to her dorm."
+    play sound Knock
+    WG "Come in."
+    scene Dorm WG with fade
+    play music WG
+    #$setTakoOutfit(OufitEnum.NOHAT) - Programmer's note: Tako isn't in this scene? Not sure why this was included in the doc
+    show Tomoko neutral at Position(xpos=0.40, yalign=1.0)
+    show WG neutral at Position(xpos=0.65, yalign=1.0) behind Tomoko
+    with dissolve
+    "My sister was probably about the last person I expected to bump into in my girlfriend’s dorm."
+    MC "Tomo? What are you doing here?"
+    "Assessing the scene further, it looked like Tomo took Alice up on her offer to help her with her hair."
+    "Alice was carefully, and painstakingly braiding Tomo’s hair into what looked like a fairly intricate style."
+    Tomoko "Alice! You didn’t tell me he was coming."
+    WG "Well, I didn’t anticipate any overlap between your ‘appointments’, so to speak, but you insisted on me redoing your hair after I had finished styling it the first time."
+    Tomoko "Yeah, well, Alice, the spiral curls look isn’t for everyone."
+    show WG angry
+    Tomoko "I mean, uh, it looks great on you... I just needed something a little bit more... me, you know?"
+    show WG neutral
+    WG "Hmph, I still think you should reconsider, but I suppose everyone has to find their own style."
+    "I couldn’t suppress the gleeful smirk that crept across my face at the thought of Alice using my sister like her personal hairstyle doll."
+    "If she had any clothes that actually fit Tomo, I would have fully expected at this point for Alice to rope her into a ‘game’ of dress up."
+    MC "Hehehe."
+    Tomoko "What’s so funny?"
+    MC "Your face."
+    "Tomo proceeded to shoot me a squinty eyed glare as she stuck her tongue out at me while shaking her head."
+    show WG stern
+    WG "Hold still, I’m almost done."
+    show WG neutral
+    "As funny as the whole situation was for me, the gears began to slowly turn in my mind."
+    extend " There was a little bit more going on..."
+    "Tomo hardly ever did anything to take care of her hair, or her general appearance for that matter..."
+    extend " Why the sudden effort put into looking nice?"
+    "Wait a second— why wasn’t she still in her school uniform so soon after classes?"
+    MCT "Oooohhhhhh."
+    MC "Tomo, why are you having Alice fix your hair today?"
+    Tomoko "Uh, well, ummm, I just got tired of it getting so tangled."
+    MC "That’s never bothered you much before."
+    WG "Does a lady need an excuse to want to look her best?"
+    "Even Alice was in on it, trying to give Tomo some cover, but I knew better."
+    MC "A lady, no, but a gorgon misanthrope that doesn’t ever leave her room would need quite the motivation."
+    Tomoko "..."
+    MC "What’s the occasion Tomo? You got a hot date tonight?"
+    Tomoko "What?! No! I just... got tired of my hair being like this, is all."
+    MC "Uh huh, sure. Who’s the lucky guy? Anyone we know?"
+    MCT "Oh God, please don’t be Daichi."
+    Tomoko "I told you it’s not like that."
+    "I could tell I was really getting to her. No sense in pumping the breaks now."
+    MC "What’s his factor? Are you into muscular guys? Tall ones? Oh, I know, somebody with a really long tongue, that sounds about right for you."
+    Tomoko "Ew! No, he’s not like that—"
+    "And just like that, I got her to fall into my trap."
+    Tomoko "... Shit!"
+    show WG stern
+    "Leaning over Tomo’s shoulder to meet my gaze, Alice shot me a look of disapproval."
+    "No doubt that she was none too pleased that my persistence revealed the secret she had tried to help Tomo conceal."
+    show WG neutral
+    Tomoko "Alright, alright. I’m meeting a guy at the arcade in town this evening. It’s just a date. It’s not a big deal."
+    MC "Anything that gets you out of bed and out of your dorm is a big deal."
+    MC "That on top of the fact you’re making the effort to do up your hair all fancy makes me think you must have a crush on this guy."
+    Tomoko "Ugh! Don’t make it weird man. Like I said, it’s just a date."
+    MC "Aww, my little sister is growing up so fast."
+    Tomoko "Oh, shut up."
+    MC "Young lady I expect you back in your dorm before 8PM, no shenanigans now."
+    Tomoko "Whatever you say, Dad."
+    MC "You see what I have to put up with? I’m just trying to do my best to be a good brother."
+    show WG doubt
+    "Alice rolled her eyes at my sarcastic quip, as she put the finishing touches on Tomo’s hair."
+    show WG haughty
+    WG "There. All done. I’m quite pleased with how it turned out if I do say so myself."
+    "Alice handed Tomo a mirror so she could see the results."
+    "Alice had braided her hair in two separate braids that ran along the sides of her head while forming into a larger one that ran down her back on top of another layer that remained straight."
+    "On top of styling her hair, Alice must have washed and brushed it to a shine, in what looked to be a very thorough job."
+    "Even though I was loath to admit it, Tomo looked nice, and part of me was glad to see her taking more of an interest in how she presented herself."
+    Tomoko "Ohh... wow! This is more than I could’ve ever asked for..."
+    extend " It looks— well I never thought it could look this good! Thanks so much Alice!"
+    show WG neutral-2
+    WG "You’re certainly welcome. Let me know if you ever need help with your hair again."
+    Tomoko "I probably will— just make sure Mr. Nosey over there doesn’t make another surprise appearance."
+    show Tomoko distracted
+    "Tomo pulled out her phone to check the time."
+    Tomoko "Crap, I gotta get going to make it out there on time."
+    show Tomoko neutral
+    extend " Thanks again, Alice."
+    Tomoko "And no thanks to you, Kei. Later."
+    hide Tomoko with dissolve
+    MC "Huh, who would have thought. My sister, actually going out on a date... "
+    extend " I don’t like it."
+    show WG doubt at altMove(0.5, 0.5)
+    WG "Seriously Keisuke? Why can’t you just be happy for her?"
+    show WG neutral-2
+    WG "I think it’s wonderful that she's getting out and doing more."
+    WG "Isn’t that what you wanted her to do anyway? Honestly, I don’t understand why you had to pester her so much about it."
+    MC "That’s just what siblings do, we annoy each other because we wouldn’t trust the other to not pass up an opportunity to do it."
+    show WG doubt
+    WG "Well you’re obviously dating, I don’t see what the big deal is. Why is it okay for you to make a big deal about her doing the same thing?"
+    MC "It’s different when you’re a guy and it’s your sister."
+    show WG stern
+    WG "Are you actually being serious? How so?"
+    MC "I don’t know... it just is."
+    show WG stern
+    WG "..."
+    "Alice clearly didn’t find that to be a satisfactory explanation, as she responded only with an impatient glare."
+    MC "Look, I know it sounds silly but it’s true..."
+    extend " {i}Argh!{/i} Maybe Tomo’s right. Maybe I am acting too much like Dad."
+    show WG neutral
+    MC "I know she’s a grown adult now, but part of me just always thinks of her as my little sister, even if we are technically the same age."
+    show WG happy
+    WG "I think it’s cute that you have such a soft spot for your sister."
+    show WG neutral
+    WG "But why does it bother you so much if you’re out doing the same thing with me?"
+    MC "I don’t know, I guess I don’t understand it well myself. I guess part of me just isn’t convinced some random dude is good enough for my sister."
+    MCT "Even if she isn’t much of a prize by any stretch of the imagination."
+    WG "Well, how would it make you feel if someone told you they didn’t think you were good enough for me?"
+    MC "It would make me pretty pissed off, to be honest. That’s our business, not someone else’s."
+    "As soon as those words left my mouth, I started to understand what Alice was getting at, and it didn’t exactly feel comfortable having to grasp the realization."
+    show WG happy
+    WG "That’s a good answer, Keisuke."
+    show WG worried
+    WG "It’s an unfortunate reality, but if we’re going to be together, you’re going to have to confront that kind of attitude from other people in my family’s social circle."
+    show WG neutral-2
+    WG "Maybe you should start by easing up on your sister."
+    MC "{i}Sigh{/i}... you’re right. I’ll lay off her when it comes up again."
+    MC "Oh, and thanks for helping my sister with her hair. You did a great job. I like seeing my girlfriend get along with my sister."
+    WG "You’re welcome. Honestly, I enjoy it. So I’m happy to help her."
+    show WG doubt
+    WG "Though I do wish you two wouldn’t bicker with each other so needlessly all the time."
+    show WG sad
+    WG "I know deep down you don’t mean it, but coming from someone who grew up as an only child, it makes me feel like you don’t appreciate each other like you should."
+    "Alice obviously didn’t understand very much about the relationship dynamics between siblings."
+    "But she did provide a fresh perspective about how much I took for granted that I always had a sister."
+    MC "Well, when you put it that way, I can see your point."
+    MC "Since we are adults now I suppose it is past time we started to try to avoid petty squabbles between us, rather than look for excuses to instigate them."
+    show WG neutral
+    "I reached around her side as best I could to squeeze her in close, and gave her a quick smooch on the cheek."
+    show WG happy
+    MC "Thanks again."
+    WG "You’re welcome."
+    show WG neutral
+    WG "Now, let’s fix this, {i}ahem{/i}... situation, we’ll call it, you have going on here with your hair."
+    MC "Is it really that bad?"
+    "Alice began running her fingers through my hair, turning my head side to side as she sized up the task before her."
+    show WG haughty
+    WG "Well, if you’d been stranded on a deserted island for two years, I’d say it looks pretty good."
+    WG "But as much as Seichou Island is lacking in luxury amenities, I think we can do a bit better than this."
+    MC "Yikes, don’t hold back on account of me, tell me how you really feel."
+    WG "Have I ever not?"
+    MC "Fair enough."
+    WG "I’m honestly surprised you don’t have a bird’s nest hiding in this thing somewhere."
+    MC "Is that what you’re feeling around for?"
+    show WG happy
+    WG "Hehehe. Maybe. Or maybe I just like the way it feels."
+    show WG neutral
+    WG "I suppose the wild man look has its own appeal to some, but I’d prefer it if my boyfriend had a bit more of a refined style to his hair."
+    MC "Well, if it makes you happy, and I’m not the one having to mess with my hair, I’d say have at it. I leave it completely in your hands."
+    WG "That’s good to hear, quite frankly I’ve been looking forward to finally getting a chance to try my hand at this for a while."
+    MC "I hope you don’t have your hopes too high, though. You do realize my growth is going to wipe out the work you’ve put into it in less than a few days right?"
+    WG "True, but all haircuts are temporary. It’s not supposed to be like carving a marble statue."
+    MC "Good point. What did you have in mind? I was thinking maybe something like shorter up front and on the sides, while keeping the other part kind of long."
+    MC "You know like a business upfront, party in the back kind of vibe."
+    show WG doubt
+    WG "You’ve literally just described the worst hairstyle possible."
+    show WG neutral
+    WG "Luckily, for {i}both{/i} our sakes, I’m the one doing this."
+    "Alice proceeded to wrap a salon cape around my neck and over my shoulders after sitting me down in front of her vanity mirror."
+    show WG haughty
+    WG "Alright, let’s see here. We could probably first start out with cutting back enough so I can actually see your eyes."
+    WG "And I’ll take off most of this back here just so I can actually get in there."
+    show WG surprised-2
+    WG "Wow, Keisuke, your hair is surprisingly thick. I can’t even cut through much all at once, and these are really sharp styling scissors."
+    show WG neutral
+    WG "Okay, let’s get into the details here."
+    "Alice proceeded to work her way through my hair with a combination of using her fingers or a styling comb to guide the length she wanted to cut off with the scissors."
+    "I couldn’t really tell how it was coming together, but judging from Alice’s expression, she was having a more difficult time than she must have anticipated."
+    show WG doubt
+    WG "{size=-6}Well that’s odd... I could have sworn...{/size}"
+    "Alice proceeded to continue on with her work. I trusted her skills completely, but I was beginning to wonder why it was taking her so long."
+    WG "{size=-6}This can’t be right. What have I been doing this whole time?{/size}"
+    "Something was clearly amiss. Alice’s once careful and detailed movements had begun to lose their delicate touch at an almost frantic pace as she began to grab larger sections of my hair to cut."
+    show WG angry
+    WG "{size=-6}{i}Arhhhhg!{/i} Am I losing my mind?{/size}"
+    show WG doubt
+    WG "Nooo, is that really it?..."
+    extend " You can’t be serious..."
+    MC "Is something wrong?"
+    show WG angry
+    WG "Your hair! It just keeps growing! By the time I finish one section the other one is back to where it was before!"
+    show WG worried
+    WG "I knew you had a hair growth factor, but I had no idea it was this aggressive."
+    MC "Well, I cut it every morning, but it just keeps growing back faster一 especially these days."
+    show WG doubt
+    WG "You mean to tell me it still looks like this even though you cut it everyone morning?"
+    MC "Uh, yeah."
+    show WG worried
+    WG "{i}Sigh{/i}... I must apologize, Keisuke. I hadn’t realized how much you have been trying to keep up with it. I thought you were just being lazy about keeping it properly groomed."
+    WG "I really underestimated what you’ve been dealing with. This is pretty inconvenient in it’s own way."
+    MC "It is pretty annoying, but it certainly isn’t anything to get too hung up on, especially compared to what other people have to learn to cope with from their growths."
+    show WG neutral
+    MC "I try not to bring it up too much, cause it would just come off as whiny if I did."
+    WG "It certainly isn’t the worst thing, but it would seem that it’s not without its own trials."
+    show WG worried
+    extend " I just wish I had been a bit more attentive and understanding, instead of dismissing it as trivial."
+    show WG neutral-2
+    WG "{i}Hmph.{/i} Seeing as this has been an exercise in futility, let’s get you out of this and clean up the hair trimmings."
+    MC "So the wild man style is what we’re going with then?"
+    show WG happy
+    WG "Hah! I suppose it will have to do for now. But don’t think I’ve given up. I’ll come up with a way to tame these savage locks, just you wait!"
+    show WG aroused
+    play music Love
+    WG "Though I do have to admit, it does have a certain allure to it, and you do a pretty decent job of keeping it brushed. I’ll have to take a closer look again."
+    "Alice proceeded to run her fingers through my hair, as she had before with her initial ‘inspection’, but this was quite a bit more aggressive than previously."
+    "Before I understood the true purpose, she yanked my head in close and gave me a deep wet kiss, with plenty of tongue. I relaxed a bit and pulled her into me in return."
+    "It was a rather precarious position, with Alice leaning so hard into me I heard the chair groan under the partially shared load as her breast and belly softly poured over the surface of my chest."
+    "This kiss felt like it lasted for minutes on end before we eventually released, both leaving both of us faintly panting from the experience."
+    show WG happy
+    WG "There'll be plenty more of that once we get all this hair cleaned up."
+    MC "Don’t have to tell me twice."
+    jump daymenu
+
+label WG067:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -17262,6 +18218,345 @@ label WGFMG002_c1_2:
     MC "Huh, I thought she'd still be kind of mad, but it seems like you really got through to her."
     WG "I guess so. I must admit I underestimated her myself even."
     MC "Maybe we'll have to hang out with her more often then."
+    jump daymenu
+
+label WGFMG003:
+    scene School Exterior with fade
+    play music DayByDay
+    "I decided to take a walk around campus and get some fresh air. Looking around, off in the distance, I noticed Honoka."
+    show BE neutral with dissolve
+    "I hadn’t seen her outside of class since the last time we had tea with Alice. So I thought it might be a good chance to catch up with her."
+    show BE doubt
+    "But as I got closer I realized she looked distracted by something."
+    MC "Yo, Honoka, what’s going on?"
+    show BE neutral
+    BE "Hey Kei-chan! Surprised to see you out and about by yourself. Was Alice busy?"
+    MC "Hey, I do things by myself,"
+    extend " without her,"
+    extend " occasionally."
+    extend " But to answer your question, yes."
+    show BE shrug
+    BE "Thought so."
+    show BE happy
+    BE "Hey, if you aren’t busy then, do you want to hit up the arcade?"
+    MC "Yeah, that sounds pretty fun actually. It’s been a while for me. It’s not exactly something Alice is too keen on."
+    MC "Hey, I meant to ask you though, you looked like you were occupied with something before I walked up here."
+    FMG "Where do you get off, calling me weak?"
+    Natsuko "It’s an obvious statement."
+    "The answer came before Honoka could even reply."
+    show BE doubt
+    BE "Those two. Listening to them argue is like a trainwreck. It’s bad, but you can’t look away."
+    hide BE with dissolve
+    show FMG angry at Position(xpos=0.75, yalign=1.0)
+    show Natsuko neutral at Position(xpos=0.25, yalign=1.0)
+    with dissolve
+    MC "Is it just me, or do those two look... well, bigger?"
+    BE "What do you mean? They’re always getting bigger, like most of us."
+    MC "Touché."
+    MCT "Just seems like they’re a LOT bigger to me, for whatever reason."
+    FMG "I bet you I could lift that rock right off the ground, easily, and you couldn’t even budge it."
+    "Akira was pointing towards a large natural stone used in the landscape of the school at the edge of the field."
+    Natsuko "You understand that anything you can lift, I can lift, yes? These digs at me are meaningless."
+    FMG "Wow, it’s almost like... I didn’t ask!"
+    show Natsuko smug
+    Natsuko "That pebble looks like it’s barely over 200kg. Do you honestly think that would be a challenge for someone like me?"
+    FMG "God, you are the worst."
+    "I’m not sure in what context 200kg was considered \"light\", but I left normal behind a long time ago once I set foot on the island."
+    Natsuko "The more I think about it... it would be pretty impressive if you lifted it over your head— and then dropped it."
+    show FMG happy
+    FMG "I’d prefer to chuck it at you— with some luck it could fix that resting bitch face of yours. Anyways, how about that tree over there? Seems easy enough."
+    Natsuko "A tree that size weighs over a ton and has two stories worth of roots and soil stuck to it. Do you actually think you’re going to pull out over 50 tons like a carrot?"
+    show FMG sad
+    FMG "I guess I wasn’t thinking about that..."
+    show Natsuko annoyed
+    Natsuko "Tell me something I don’t know..."
+    show FMG angry
+    FMG "Oh shove it!"
+    pause 1
+    show FMG neutral
+    "After mulling something over in her head for a bit, Akira seemed to have come up with an idea."
+    show FMG happy
+    FMG "I got it!"
+    show FMG neutral
+    FMG "I bet you I could lift Alice!"
+    show Natsuko annoyed
+    Natsuko "Are you trying to throw out your back?"
+    show FMG flex
+    FMG "Sounds like you're scared, Natsy. This is the perfect challenge! But I’ll understand if you want to back down."
+    show Natsuko angry
+    Natsuko "If I ever hear \"Natsy\" come out of your mouth again. It won’t be Nikumaru-san’s weight that sends you to the nurse."
+    MCT "I don’t know if I like where this is going."
+    show FMG neutral
+    FMG "Nothing but empty threats... I take it that even you think you can’t lift her?"
+    show Natsuko neutral
+    Natsuko "No. I know I can lift her. However, I’m positive Nikumaru-san wouldn’t want your filthy hands on her."
+    show FMG happy
+    FMG "All I’m hearing is excuses for why you’re such a big chicken."
+    Natsuko "I’ve wasted enough of my time listening to these ridiculous attempts to prove you are stronger than me. We both know you are beneath me. You always will be."
+    "With that, Natsuko abruptly walked away, paying no regard to Akira’s efforts to continue their argument."
+    FMG "Did anyone ever tell you your red hair kind of looks like a chicken comb?"
+    hide Natsuko with dissolve
+    show FMG angry
+    FMG "Hey, don’t ignore me!"
+    show FMG sad
+    FMG "Damnit, she already left."
+    show FMG happy
+    "Akira perked back up when she noticed Honoka and I standing around not too far away. She immediately ran over."
+    show BE neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    FMG "Yo Kei-kun! You’d probably know! Do you think Alice would—"
+    MC "No."
+    show FMG neutral
+    FMG "But you didn’t even hear what I was going to say!"
+    MC "We heard pretty much everything already that you were talking to Natsuko about."
+    show FMG angry
+    FMG "What are you, eavesdropping on me?"
+    BE "Well, kind of, but how could we not?"
+    show BE angry
+    BE "You’re both practically yelling at each other all the time."
+    show BE neutral
+    show FMG sad
+    FMG "Oh, I guess I didn’t realize that."
+    show FMG neutral
+    FMG "So you heard the part about that I wanted to lift Alice then?"
+    MC "Yes, and the answer is no."
+    FMG "Aw come on, we haven’t even asked her yet! How do you know?"
+    MC "She’s not going to go for it, Mizutani-san. Her factor isn’t like yours, she doesn’t enjoy having attention called to it."
+    show FMG sad
+    FMG "Yeah, sorry about that."
+    show FMG neutral
+    FMG "But no one else would have to see it besides us. It’s not going to be embarrassing, I promise!"
+    FMG "Come on, it’d really help me out! You don’t know how much it means to me to get a one-up over Natsuko."
+    MC "Eh... I don’t know. What do you think, Honoka?"
+    MCT "Come on, back me up here."
+    show BE happy
+    BE "Honestly, I think it’d be pretty cool to see Akira-chan lift her."
+    show FMG flex
+    FMG "Booyah! Ya hear that! Of course it would be!"
+    MCT "Why did I expect anything different?"
+    MC "Alright, alright. You can ask her. She was swimming with Aida. She’s probably about finished up by now. We can probably catch up to her."
+    scene black with fade
+    pause 1
+
+    scene Pool with fade
+    "The whole way over I couldn’t help but think to myself how much of a disaster this was going to be. That, and I could only assume I’d never hear the end of it from Alice about going along with this whole thing."
+    $setWGOutfit(OutfitEnum.SWIM)
+    show WG neutral at Position(xpos=0.25, yalign=1.0)
+    show FMG happy at Position(xpos=0.75, yalign=1.0)
+    with dissolve
+    WG "Keisuke? I didn’t expect to see you here. Were you looking for me?"
+    MC "Yes, well, Mizutani-san is anyway. She insisted on finding you, and I figured you’d still be here."
+    WG "Oh? Is it something urgent then, Akira?"
+    FMG "Totally! Let me lift you, Alice!"
+    show WG doubt
+    WG "Let you what? I don’t think I understand... what exactly are you talking about?"
+    FMG "Lift- like pick you up,"
+    extend " in the air,"
+    extend " off the ground."
+    WG "I’m aware of what that word means. I was hoping you’d clarify some non–literal context that was somehow less absurd of a proposition."
+    FMG "So that’s a yes?"
+    show WG stern
+    WG "That’s a no."
+    show FMG neutral
+    FMG "Aw, come on! Pleeeease!"
+    show WG neutral-2
+    WG "Well, when you put it that way..."
+    show FMG happy
+    FMG "Yes!"
+    show WG stern
+    WG "Absolutely not."
+    show FMG sad
+    FMG "Damnit."
+    show FMG neutral
+    FMG "Why not, Alice? It’ll be fun. Even Honoka thinks so!"
+    BE "I do kinda want to see it..."
+    show WG doubt
+    WG "Hmph. And what do you think, Keisuke?"
+    menu:
+        "I told her you wouldn’t be interested...":
+            MC "I told her you wouldn’t be interested, but I figured she deserved to at least hear it from the source."
+            $setAffection("WG", 1)
+            show WG haughty
+            WG "How considerate of you, Keisuke. Since you’ve exercised such good judgement, feel free to speak on my behalf when it comes to such ridiculous requests in the future."
+        "I’m kind of curious to see it myself to be honest.":
+            MC "I’m kind of curious to see it myself to be honest."
+            $setAffection("BE", 1)
+            $setAffection("FMG", 1)
+            show WG stern
+            MCT "Please don’t hate me forever!"
+            WG "Arhg! You too? I can’t believe this!"
+            FMG "Hey, don’t be mad at Kei-kun. He was just being honest, and he went out of his way to try to help me out. Seems like he’s a pretty good guy to have as a boyfriend, if you ask me."
+            show WG neutral
+            WG "{i}Sigh{/i}... I suppose he does have {i}some{/i} redeeming qualities."
+            MCT "Thanks for getting me out of the doghouse there, Akira."
+    show WG doubt
+    WG "Why is something so frivolous so important to you anyway?"
+    show FMG flex
+    FMG "Alice, you don’t understand! This is a sure-fire chance for me to show up Nat!"
+    show WG angry
+    WG "That’s what this is about!?"
+    show FMG surprised
+    WG "I refuse to be made a prop in your performance just for the sake of fueling your pointless, petty rivalry!"
+    show FMG sad
+    FMG "{size=-6}Uhhg, Kei-kun was right. This isn’t going well.{/size}"
+    "This was going about as badly as I predicted it would, but I had to at least try to salvage the situation."
+    "I decided to pull Alice aside for a bit to see if I could win her over."
+    hide FMG with dissolve
+    show WG angry at altMove(0.85, 0.5)
+    MC "Look, I know you aren’t too keen on this, and Akira isn’t the best with words, but it seems like it means a lot to her."
+    show WG doubt
+    MC "I know she’s tough, and she can take care of herself just fine, but Natsuko says a lot of mean things to her all the time and I think it really gets to her."
+    show WG stern
+    WG "I don’t care about that! I care about being made a spectacle over my weight!"
+    show WG worried
+    MC "Oh, come on now, I know you care about how Akira feels. Besides, there’s no ‘spectacle’ to speak of. We’re all friends here. No one else is around."
+    MC "We all have something different going on with us. Sometimes you just gotta try to have a little fun with it."
+    show WG neutral
+    WG "{i}Sigh{/i}... fine."
+    MC "Thanks, I’m sure she’ll appreciate it."
+    show WG neutral at altMove(0.5, 0.25)
+    show FMG sad at Position(xpos=0.75, yalign=1.0) with dissolve
+    WG "Alright, I will go along with this... production, as it were."
+    show FMG happy
+    FMG "Hell yeah! You must be one smooth talker Kei-kun!"
+    WG "Admittedly, on occasion he does have his charms."
+    MC "So, um, Mizutani-san, just how were you planning on doing this?"
+    show FMG neutral
+    FMG "Hmmm, I don’t know. I was just going to pick her up. There’s not much else to it."
+    MCT "Oh for shit’s sake! Do I have to coordinate everything around here?"
+    "I pulled Akira aside before she did something brash."
+    hide WG with dissolve
+    show FMG neutral at altMove(0.5, 0.5)
+    MC "Mizutani-san, you can’t just bear hug her! You’re going to hurt her doing that. Besides, you can’t wrap your arms around her anyway."
+    show FMG surprised-2
+    FMG "Crap! You’re right."
+    show FMG neutral
+    FMG "She’s a lot bigger up close than I would have guessed."
+    MC "You weren’t going to try to lift her over your head were you?"
+    show FMG angry
+    FMG "I’m strong— not stupid, Kei-kun."
+    MC "Alright, fair enough. But you gotta think of some way that won’t feel uncomfortable for her."
+    show FMG neutral
+    FMG "Right, right..."
+    extend " Hmmmm, let me think..."
+    show FMG happy
+    FMG "I got it!"
+    show FMG flex
+    FMG "I’ll squat under her and lift her seated across my shoulders."
+    MC "That sounds like it’d work."
+    show FMG sad
+    FMG "I’m going to have to hold my breath while my head is trapped under that belly."
+    MC "Probably, but keep that to yourself."
+    show FMG happy at altMove(0.75, 0.5)
+    show WG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    WG "Well? What was that about? I thought you were eager to do this. Personally I’d prefer to get this over with as soon as possible, if you don’t mind."
+    FMG "Kei-kun was just making sure you’d be comfortable."
+    WG "Well that was certainly considerate of hi—"
+    show WG surprised
+    show FMG upbeat
+    WG "Oh! What on earth?!"
+    "Akira had some serious fire in her eyes, wasting no time now that she had a plan of attack."
+    "Akira immediately slipped her shoulders under Alice’s haunches and wrapped her arms around Alice’s doughy calves before Alice could react with any meaningful protest."
+    show FMG angry-2
+    "Starting at the bottom of a deep squat for the Amazon, I saw the tension nearly explode from within her thighs as she began to push off."
+    "For a brief moment, there was no movement. I wasn’t sure if Akira was struggling or if she was just sinking into Alice’s blubbery backside before she could actually start getting somewhere."
+    "Sure enough, after that brief delay, Alice began a slow, shaky ascent into the air, her feet now completely off the ground."
+    FMG "{i}Mmmmmrrrrrrggg!{/i}"
+    "Akira was clearly trying really hard. Her guttural scream was muffled under Alice’s smothering belly. I would have imagined her face to be as red as a tomato, if it were visible."
+    "Steadily, Alice and Akira rose. Well, steady pace-wise, the motion itself was pretty shaky."
+    "I take that back, it was REALLY shaky. Akira’s legs wobbled as she started to lean forward."
+    show FMG surprised-2
+    MCT "This doesn’t look good."
+    "Akira had not accounted for Alice’s particular weight distribution. Alice’s front heavy physique, courtesy of her incomprehensibly massive belly, was dragging Akira down and forward."
+    show FMG surprised
+    "The super-muscled Amazon panickedly struggled to keep herself under the center of Alice’s mass by stepping forward, but the combined momentum of the two behemoths proved impossible to stop."
+    "Honoka’s words from earlier suddenly came to mind: this was a trainwreck, and I could not for the life of me look away."
+    hide WG
+    hide FMG
+    with dissolve
+    "{i}SPLOOOOOSH!{/i}"
+    "Akira had run out of ground trying to reclaim her footing and ended up dumping the both of them into the pool."
+    show BE surprised-2 with dissolve
+    "Honoka and I were completely drenched, despite standing over two meters away from the pool’s edge."
+    "The combined mass of the two titans haphazardly flopping into water had created a tsunami, leaving disaster in its wake."
+    hide BE with dissolve
+    show WG doubt at Position(xpos=0.25, yalign=1.0)
+    show FMG surprised at Position(xpos=0.75, yalign=1.0)
+    with dissolve
+    MCT "Aw, crap."
+    "Alice did not look amused. I immediately regretted instigating any of this—"
+    show WG happy
+    WG "{i}Pfft{/i}..."
+    WG "Hahaha! What on earth was that, Akira?"
+    MCT "Wait. She’s not mad?"
+    FMG "Wait, you’re not mad?"
+    "Alice for her part couldn’t seem to stop laughing."
+    WG "Hehe-{i}pfft{/i}-HAHA! Of course not. I’m still in my swimsuit. I wasn’t even completely dried off. You on the other hand managed to dunk yourself into the pool in your school clothes."
+    BE "Hehehe! It is pretty funny, Akira-chan."
+    WG "Hahaha! You should see yourself- you look completely ridiculous!"
+    show FMG angry-2
+    FMG "Hey now."
+    "Alice did have a point, Akira drenching herself along with the initial shock on her face was pretty hilarious."
+    "I was just relieved I wouldn’t be hearing about this later for my part in helping to orchestrate this disaster."
+    show FMG flex
+    FMG "Well, that could’ve gone better, but thanks for letting me test my strength, Alice!"
+    MC "You were pretty close, just a little off balance."
+    BE "Yeah, you would have totally had it if the pool wasn’t in the way!"
+    show FMG happy
+    FMG "Totally! We’ll have to try it again some other time."
+    show WG haughty
+    WG "{size=-6}...Let us hope not.{/size-6}"
+    hide WG with dissolve
+    show FMG neutral
+    FMG "I should probably get going, and get dried off."
+    show FMG sad
+    FMG "Man, I’m going to have to do laundry now."
+    show FMG flex
+    FMG "Oh well, it was worth it."
+    "Akira placed her hands at the edges of the pool and launched herself out..."
+    extend " soaking me... again."
+    show FMG surprised-2
+    FMG "Oh, my bad, Kei-kun."
+    show FMG neutral
+    FMG "I’m still getting used to my new size."
+    show BE happy at Position(xpos=0.25, yalign=1.0) with dissolve
+    BE "Hehehe! Your hair! Poor Kei-chan isn’t having much luck. Haha! Maybe you should shake it out, like a wet dog."
+    MC "Um, Honoka, don’t you have your own issue to worry about with your shirt soaking wet like that?"
+    show BE embarrassed
+    BE "I guess I probably should get dried off soon—"
+    show BE aroused
+    extend " before I cause a scene with these babies!"
+    show BE seductive
+    BE "I mean, Kei-chan seemed to notice right away!"
+    "Honoka was always relentless with her teasing, which normally I would laugh along with, but weaponizing those monster funbags in front of my girlfriend was pretty unfair, even for her."
+    MC "Yes, yes, very funny, now go get dried off."
+    show BE angry
+    BE "Aw, you’re no fun."
+    hide BE with dissolve
+    show FMG neutral
+    show WG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    FMG "Here, give me your hand Alice. I’ll give you a lift up."
+    WG "Thank you, Akira."
+    FMG "It’s the least I can do, after dunking you by accident."
+    "In contrast to the intense effort earlier in the attempt to lift her on land, Alice’s buoyant body required only minimal effort from Akira to hoist out of the pool."
+    show FMG happy
+    FMG "I’ll see you two lovebirds around. I’m going to dry myself off and hit the gym."
+    hide FMG with dissolve
+    FMG "Yo, Honks, wait up!"
+    MCT "Well that went better than I expected."
+    MC "Thanks for going along with Akira’s idea. I know you didn’t want to, and it was kind of silly, but it really meant a lot to her."
+    MC "She seemed like she had fun, even though things didn’t quite go according to plan."
+    show WG neutral-2
+    WG "If I’m being honest, it was a bit more... entertaining, than what I had initially expected."
+    WG "That and you were rather persistent that I should go along with it."
+    show WG happy
+    WG "But Akira and Honoka enjoyed themselves. I did too. All because you tried your best to be a good friend for them, Keisuke."
+    WG "I guess I could learn a thing or two from you in that regard."
+    MC "Does that mean you’ll be willing to go along with the next time we come up with something fun to do?"
+    show WG worried
+    WG "I will probably regret this..."
+    show WG happy
+    WG "But yes, I will."
+    "I’m sure Alice would eventually eat her words, but for now we had to go get dried off."
     jump daymenu
 
 label WGGTS001:
