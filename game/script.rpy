@@ -143,6 +143,7 @@ init python:
         SWIMSUIT = "swimsuit"
         COW = "cow"
         PAJAMAS = "pajamas"
+        RIPPED = "uniform-ripped"
         SICK = "sick"
         SUMEXT = "summer-exterior"
         SUMEXTSG = "summer-exterior-sunglasses"
@@ -546,6 +547,11 @@ init python:
             renpy.log("Unknown skill ID: %s" % s)
         else:
             skills[s] += val
+            if val >= 0:
+                img = "Graphics/ui/notification/" + s + "-up.png"
+            else:
+                img = "Graphics/ui/notification/" + s + "-down.png"
+            showNotification(img)
 
     def setSizeDebug(mod):
         global globalsize, prgsize
@@ -673,7 +679,7 @@ init python:
 
     def setFMGOutfit(o):
         global FMGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             FMGOutfit = o
 
     def setGTSOutfit(o):

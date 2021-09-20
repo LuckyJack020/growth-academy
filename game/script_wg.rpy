@@ -1902,7 +1902,7 @@ label WG001M:
     "I was startled to hear a knock on the door, but was pleasantly surprised to see through the narrow window Alice smiling and giving me a wave before I gestured her to come into the room."
     show WG happy with dissolve
     WG "Keisuke, I didn’t expect to run into you here on my way to practice."
-    if isEventCleared("WG008A") and not isEventCleared("WG021"):
+    if isEventCleared("WG008A") and not isEventCleared("WG025"):
         MC "Practice? I thought you were... well, on mandatory leave, so to speak."
         show WG stern
         WG "{i}Ergh{/i}, don’t remind me."
@@ -1918,7 +1918,7 @@ label WG001M:
     MC "‘Alice the Inspirerer’, it has a certain ring to it, don’t you think?"
     WG "Not really, but nice try nonetheless."
     MCT "Swing and a miss there, dude."
-    if isEventCleared("WG008A") and not isEventCleared("WG021"):
+    if isEventCleared("WG008A") and not isEventCleared("WG025"):
         WG "Since I’m on my own schedule, I’m in no rush."
     else:
         WG "I still have plenty of time before music club practice starts."
@@ -3992,6 +3992,105 @@ label WG020_c1_2:
     "Maybe asking her out would turn out to be a good thing. We might have more in common than I know."
     "Or if I'm this undecided I should just back off, and let her know. She didn't deserve to be left hanging, did she?"
     "Either way, this would have to wait to be settled for another day."
+    jump daymenu
+
+label WG002M:
+    scene Music Classroom with fade
+    play music SimpleSonata
+    "I had been practicing piano more recently. Not having any interest in joining any of the clubs here at school, it was a pretty good use of my spare time, and it kept me focused."
+    "If I was being honest, I’d rather spend my time outside of class napping, but having been hanging around Alice so much lately,"
+    "her industriousness made me feel more than a little self-conscious about my usual slacker nature."
+    "Well, that and I prided myself on not being as much of a sleeping hermit as my sister."
+    "Last time Alice asked me to play for her, I could barely play this song with any measurable degree of proficiency, but having practiced it quite a bit more, I felt like I could do it easily on a bad day."
+    "As much of a chore it was to drag my butt down here to practice from time to time, it did bring with it a sense of progression I found intensely satisfying."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+    scene Music Classroom with fade
+    pause 0.5
+    stop music
+    $setSkill("Art", 1)
+    MCT "Well, that’s enough for today."
+    play music Peaceful
+
+    scene Hallway2 with fade
+    "I grabbed my bag and headed back to my dorm. I must have lost track of time as I noticed the sun setting through the hallway windows."
+    "But I hadn’t made it very far from the practice room before I ran into someone I probably should have expected to see down here."
+    show WG neutral with dissolve
+    WG "Hello, Keisuke. Surprised to find you here."
+    MC "Really? You shouldn’t be. I’ve been practicing quite a bit more lately. I mean I don’t come here everyday, but more often than not lately."
+    show WG surprised-2
+    WG "Oh? Is that so?"
+    show WG happy
+    extend " I’m glad to hear that."
+    show WG neutral
+    WG "How has your practicing been going, by the way?"
+    MC "Pretty good. I mean, I think I’ve had a pretty noticeable improvement since the last time you came by to listen to me."
+    show WG haughty
+    WG "If that is the case... perhaps a demonstration is in order?"
+    MCT "Oh crap. You brought this on yourself Mr. Bigshot."
+    MC "Uh, you mean, like now?"
+    show WG neutral-2
+    WG "That would be lovely."
+    "I should have known better that subtly hinting at the absurdity of a suggestion would only give Alice ideas. Part of me wanted to tell her I had done enough for the day."
+    "But on the other hand, I had nowhere pressing to be and I wasn’t too keen on letting her down, especially since, per her logic, I suggested it in the first place."
+    MC "Sure. My fingers are still warm."
+    "I fluttered my fingers for effect."
+    MC "Now would be as good a time as any."
+
+    scene Music Classroom with fade
+    show WG neutral-2 with dissolve
+    MC "Alright, I’ve been working on this one recently. It’s still kind of new to me, so don’t judge too harshly if it isn’t the greatest."
+    WG "I’m sure you’ll do fine. It’s more admirable to falter when trying to reach your aspirations than to be content with complacency."
+    MC "I might just have to hold you to that then."
+    play music Pastorale
+    pause 3
+    show WG happy
+    WG "You weren’t merely boasting, Keisuke, this is certainly a step up from last time."
+    MC "Thanks, it’s one of my recent favorites. You like it?"
+    WG "Very much so."
+    show WG neutral
+    WG "{i}Sigh{/i}..."
+    MC "Everything okay? I don’t think I made a mistake. Well, yet anyway."
+    WG "Oh, sorry. Didn’t mean to throw you off. This song, it just reminds me of home, that’s all."
+    MC "Really? How so?"
+    extend " If you don’t mind me asking."
+    show WG neutral-2
+    WG "Growing up in my parents’ manor, we had a grand piano in one of the study rooms. One of our servants, Takada, was quite proficient at playing. Classical was the style he knew best."
+    WG "Even as a little girl, I remember being enamored by the deep, rich sound. I would ask him to play it over and over again."
+    show WG happy
+    WG "I’m sure there were times when he grew tired of me asking. But he never refused, and was always happy to have such a captive audience."
+    MCT "I think I can relate."
+    show WG worried
+    WG "{i}Sigh{/i}."
+    "Alice looked down at her bulging midsection, her face revealing a growing double chin as she did so."
+    WG "I’m not one for saccharine nostalgia, but given recent developments, I’d be lying if I said part of me didn’t wish to relive more simpler times."
+    "Alice was probably the most headstrong person I’d ever met. For her to admit that, it must have meant her factor was weighing on her,"
+    extend " well... figuratively, as well as literally."
+    show WG haughty
+    WG "But there’s no use in looking back. We can only move forward."
+    MC "True. I’ve found that keeping busy gives me less time to worry about that kind of stuff. Maybe that’s why I’ve thrown myself more into music lately?"
+    "I was too embarrassed to tell her she was the primary reason."
+    show WG happy
+    WG "And it appears to have paid off. I don’t think you’ll be filling concert halls any time soon, but your proficiency for this song is certainly presentable."
+    "Alice wasn’t one to gush with praise just to bolster someone’s ego. It wasn’t a masterful performance by any means, but it made me feel good to know she genuinely appreciated my efforts."
+    MC "Why thank you."
+    stop music
+    MC "That’s all I got."
+    play music Peaceful
+    show WG neutral-2
+    WG "Well it was more than enough, especially for an impromptu concert on such short notice."
+    $setAffection("WG", 1)
+    WG "Thanks for letting me sit in on another performance."
+    show WG haughty
+    extend " I trust you’ll have something even more impressive for next time?"
+    MCT "Oh great, what kind of expectations have I set for myself now?"
+    MC "Uh, sure thing. You got it."
+    show WG happy
+    WG "Excellent, I look forward to it then. Have a good evening, Keisuke."
+    hide WG with dissolve
+    "At this point I had played more than enough for a typical practice day, and wanted to head out myself."
+    "But instead I found myself combing through my song books to find the next best thing I could tackle that might be good enough to show off to Alice again."
     jump daymenu
 
 label WG021:
@@ -8097,7 +8196,7 @@ label WG039:
     WG "Just as I trust you not to abuse this opportunity."
     MC "Not sure what you mean by 'opportunity.'"
     WG "You get to put your hands on me. And we've only gone out three times."
-    if getSkill("Academics") > 10:
+    if getSkill("Academics") > 3:
         MC "Yes, but this isn't undressing you. This is the exact opposite."
         MC "A real opportunity would be to help you take the shirt off later."
         $setAffection("WG", 1)
@@ -16395,7 +16494,196 @@ label WG061:
 
 label WG061S:
     $setProgress("WG", "WG062")
-    "Scene to come in future update. Pardon our dust."
+    "That night I had one of the best dreams in my life. A land of softness was the best description for it. Mountains of pillows and clouds made of cotton candy."
+    "The ground was a massive heated blanket. It was incredibly relaxing and I never wanted to leave."
+    "That was till it growled at me."
+    #play sound growl
+    WG "Oh my, I overdid it. Kei wake up dear!"
+    scene Dorm WG with fade
+    show WG surprised-2 with dissolve
+    "Slowly my senses came back and I found myself looking up at Alice who was staring back at me with a look of astonishment and embarrassment."
+    "It was then that I began to grasp the inspiration for my dream and looked at the cream colored divide between us."
+    WG "Keisuke dear, if you could please, sit up, I’d appreciate it."
+    MC "Oh, oh, yeah, yeah, sorry."
+    "Scampering to my feet I began taking note of the debris from last night's indulgence. Plates, silverware, and glasses lay strewn across the room in varying states of dirtiness."
+    show WG worried
+    WG "I, {i}oof{/i} uh, have no words for myself. This is quite degrading for me and quite frankly, unbecoming of me in all aspects."
+    show WG doubt
+    "She tried to swing herself off the loveseat but the sudden motion didn’t agree with her still quite packed stomach as it let out a disgruntled growl."
+    "With one hand Alice rubbed her engorged belly while the other hand tried to tug the tattered remains of her bathrobe together, the efforts proving futile. Eventually she let the battered fabric fall limply against her side."
+    show WG sad
+    WG "I liked that robe..."
+    "Her tone was quite deflated from her normal confident one. This was the first time I could recall seeing her actively assessing herself."
+    MC "Everything alright, babe?"
+    show WG surprised-2
+    "My question appeared to catch her attention and bring her reeling back to reality."
+    show WG worried
+    WG "Yes, though if you could be a dear and help me up I’d appreciate it."
+    if getSkill("Athletics") >= 4:
+        show WG doubt
+        "Grabbing hold of her hand and with our strength combined we were able to get her standing. Her body rolled like jello as she found her new balance."
+    else:
+        show WG doubt
+        "Grabbing a hold of her hand, I quickly found that even with my full strength Alice had passed my limit."
+        MC "I think I may need to work out a bit more."
+        show WG neutral
+        WG "I won’t complain if you pursue that idea."
+        "Adjusting the remains of her robe again, Alice was able to rock till she gained enough momentum to get back to her feet."
+    show WG worried
+    WG "Oh dear... this is certainly a new feeling."
+    MC "What do you mean by that?"
+    WG "I think it may just be due to the sheer amount of food, cause this is the first time I’ve needed to adjust myself to my weight."
+    MC "I guess I never considered that possibility. You always seemed to naturally adjust to your size."
+    show WG neutral
+    WG "Typically I can, but I wouldn’t call last night within my natural intake."
+    MC "Fair enough, I hope I didn’t go overboard with it."
+    show WG worried
+    WG "No, but I may have overdone it on my end. I was trying to keep my composure a bit more, however my appetite kinda got away at the end there."
+    show WG neutral
+    "Adjusting her weight again, she made her way towards her bedroom."
+    hide WG with dissolve
+    "Now alone, I decided to go about cleaning some of the remains from last night’s event."
+    "As I moved the plate from the table to the counter I could hear the sound of water coming from her bedroom."
+    MCT "Figures she’d want a shower, probably has a serious case of sticky fingers."
+    MCT "Though I could probably use one as well."
+    "*{i}Sniff sniff{/i}*"
+    MCT "Yep, definitely."
+    if getFlag("WG060S_Greedy"):
+        "Alice seemed to be taking her time in the shower. That was fine. We left a big mess and I felt pretty guilty about how this little escapade basically trashed her room."
+        scene black with fade
+        pause 1
+        scene Dorm WG with fade
+        show WG neutral with dissolve
+        "After a while, Alice emerged from her bathroom, now dressed back into her school uniform, which while fitting, was unmistakably tight around her still taunt middle."
+        WG "Thanks for cleaning up. I appreciate it."
+        show WG doubt
+        WG "Though considering that you pushed me to finish it all, I think it’s the least that you could do."
+        "A pang of guilt shot through me, I really did push her last night, past the point of where she was enjoying it, all for sake of my own selfish desires."
+        MC "Yeah, I got a bit carried away last night, not gonna lie. I mean, it was really hot Alice. You’re amazing. I’d never seen anything like it."
+        show WG stern
+        WG "And you’re not likely to ever again I’m afraid."
+        show WG worried
+        WG "I still feel painfully full, and I can’t even remember when the last time was that I felt truly full, given my recent developments."
+        show WG stern
+        WG "You really did a number on my poor belly."
+        MC "Would it feel better if I kissed it?"
+        show WG aroused
+        WG "Maybe..."
+        show WG neutral
+        WG "On second thought, better to cut things short before they get out of hand again."
+        WG "If you leave now it’s still early enough you can slink out before Shiori will spot you. I’ll see you later, Keisuke."
+        scene Dorm Hallway with fade
+        "I was kicking myself now for giving into temptation last night. It was an amazing feeling at the time, but one that now left me feeling oddly empty inside."
+        jump daymenu
+    else:
+        "As I made my way through the pile of dishes, the buzzing of my phone distracted me."
+        WGCell "<Can you come to the bathroom for a moment?>"
+        MCT "Am I about to do, what I think I’m about to do?"
+        "Abandoning the pile of dishes, I collectedly, but eagerly, made my way towards her bathroom door."
+        play sound Knock
+        "*{i}knock knock{/i}*"
+        MC "Is everything ok?"
+        show WG worried with dissolve
+        WG "I wish this could happen under less embarrassing circumstances, but could you come in the shower with me. I require a second pair of hands for some areas."
+        MCT "Who am I to turn this opportunity down?"
+        MC "Sure thing, give me a minute."
+        "Like a man possessed, I tossed my clothes onto the floor, before scampering into the bathroom."
+        "Before now I had never considered what Alice’s bathroom would look like. Though seeing a floor to ceiling shower that took up the entire back wall was still more than I could’ve guessed."
+        play music Love
+        show WG surprised
+        "However, in my blind eagerness I had forgotten to prepare myself for actually facing Alice in nothing but my birthday suit."
+        show WG aroused
+        "Even through the steam of the showers heat I could still make out the blush on her cheeks as we shared the embarrassment of the moment."
+        show WG neutral
+        "Alice quickly regained her composure which I was thankful for."
+        WG "I’m happy you are eager to help me Kei, though I should’ve thought my request through a bit more. I was hoping the first time we’d see each other compromised would’ve been a little more elegant."
+        MC "My apologies, I forgot my manners."
+        WG "It’s fine dear, I am glad to see that you have energy this morning. Why don’t you put that energy to use?"
+        MC "I can see what I can do."
+        "Stepping into the shower and through the steam, I noticed just how much space Alice took up. In a shower that could fit eight people comfortably, Alice took up half of it."
+        show WG neutral-2
+        WG "Can you grab the bottle of body wash and the luffa behind you?"
+        MC "The pink bottle and pink sponge thing?"
+        WG "Yes those two, I need you to wash my front. I find my arm length to be ineffective for the job."
+        MC "Sure thing mademoiselle."
+        "Picking up the sponge and body wash, I got to work scrubbing every surface of her plush frame. Needless to say, there was a lot. I was gentle in my strokes, as I remembered how sensitive Alice’s belly is."
+        "I imagined that since it was still packed full with a family of fives dinner, that it would be even more sensitive."
+        show WG aroused
+        "Looking up I could tell that even with my delicateness, the shower was not the only thing getting steamed."
+        MC "Everything ok?"
+        WG "Ye..yes, I appreciate your effort at being delicate with the sponge."
+        MC "No problem, should I continue?"
+        WG "Please do."
+        "I continued my diligent task, though now I did get a bit more touchy. Grazing her ponderous breasts did result in a subdued yelp, which Alice waved off when I expressed concern. A few scrubs between her folds did produce a few moans."
+        "I did not help matters by occasionally pressing myself against her, letting myself sink ever so slightly into her softness."
+        #if getVar("WGSSPR") >=7:
+           #menu:
+               #"Be bold":
+                    #jump WG061S_C1_1
+                #"Be cautious":
+                    #jump WG061S_C2_1
+
+        #else:
+        jump WG061S_C2_1
+
+label WG061S_C1_1:
+    #No peeking
+    "Branch not yet finished."
+    jump daymenu
+
+label WG061S_C2_1:
+    MC "No problem my lady."
+    show WG neutral-2
+    WG "You don’t have to be so formal, but I won’t stop you."
+    MC "I feel that a lady should be pampered whenever her man can spare."
+    WG "I appreciate your gentlemen's conduct, but it is not necessary at all times."
+    MC "You just seem rather... steamed."
+    show WG aroused
+    WG "As you know my belly is quite sensitive. It’s only gotten worse as it's gotten larger."
+    WG "I guess the tautness of it from all that food is compounding the issue that even your delicate scrubbing is a little mind scrambling."
+    MC "What would you like me to do?"
+    WG "What you are doing now is fine. I just may need a minute afterwards to recompose myself."
+    WG "Though if I might take this time to try and distract myself. I’d like to say thank you for last night."
+    MC "Oh, it was nothing. I was merely your acting servant."
+    show WG neutral
+    WG "I’m not sure that is a fitting title, we are dating after all."
+    MC "I know, I just mean in a roleplaying sort of way."
+    WG "I see, it still feels weird to think of it in that context but I can’t say it wasn’t nice."
+    MC "Then I will remember that for later situations."
+    show WG aroused
+    "I couldn’t tell what contributing factor caused it, but Alice’s face turned a faint shade of red."
+    "She’d never admit it, but I could read her face like a book when it came to knowing that her mind was a buzz. What thoughts were churning in there, I couldn’t guess."
+    show WG neutral
+    WG "Thank you for your assistance Keisuke, but I’m gonna have to ask for you to give me some personal time again."
+    MC "Oh sure. Mind if I borrow a towel? I can’t say I intended to take a shower while here."
+    WG "Of course, they are in the basket next to the sink."
+    "As I stepped out I gently ran my hand against the front bulge of her belly. The simple action caused her to flinch. Stifling a chuckle, I closed the shower door and grabbed a towel."
+    hide WG with dissolve
+    play music Sunset
+    "Once dry and reclothed, I continued my task of cleaning up the discarded scraps and dishes."
+    "The sound of the shower eventually stopped and the audible thuds of Alice walking around replaced it. The gentle shuddering of the floor below me was a strange sensation, but relaxing in an odd sort of way."
+    MCT "She’s already this big, I can’t imagine her being larger. Heck, her bedroom door is beginning to look snug."
+    show WG neutral with dissolve
+    "Eventually Alice made her not so unannounced reentry to the kitchen. Now dressed back into her school uniform, which while fitting, was unmistakably tight around her still taunt middle."
+    WG "Thank you again Keisuke for this, but I think I ought to finish cleaning the mess I made."
+    MC "You sure? I don’t mind staying and cleaning."
+    show WG haughty
+    WG "What do you think I pay Chibuki for?"
+    show WG neutral
+    WG "Besides, it feels improper to ask more out of you. I’d feel like a burden on you otherwise, seeing as all I did last night was stuffing my face."
+    MC "I mean that was at my request, so I don’t feel that's a justified feeling."
+    MC "Though if I may make a selfish request, would that be something we could do again?"
+    WG "I think some time to recover would be necessary, but since this is something that you not only enjoy, I don’t mind the rush either. So simply, yes, I wouldn’t be against doing that again in the future."
+    MC "You don’t need to do it out of pity for me if you aren’t comfortable about it."
+    WG "Keisuke dear, you wouldn’t have gotten anywhere with me if I took pity on you. Have I ever had trouble saying ‘No’ to anyone in all the time you’ve known me?"
+    MC "That is a good point..."
+    WG "So if I say yes, then you can take that to the bank."
+    MC "I feel like you own the bank in this case."
+    show WG happy
+    WG "Hahaha! Well, you wouldn’t be wrong..."
+    "Maybe she was still feeling tipsy from last night’s overindulgence, but of all the bad jokes I’ve cracked, this was the one that made her genuinely crack up."
+    MCT "So this is what they meant by feeling like a million bucks."
+    "Yeesh, I was glad I didn’t say that joke out loud."
     jump daymenu
 
 label WG061D:
@@ -16887,7 +17175,7 @@ label WG062_C1_after:
     jump daymenu
 
 label WG063:
-    $setProgress("WG", "WG066")
+    $setProgress("WG", "WG064")
     play music Schoolday
     scene Dorm Exterior with fade
     "I was walking back to my dorm, getting ready to grab some stuff I’d need for my afternoon classes."
@@ -17174,7 +17462,7 @@ label WG063:
     WG "Umm, well, let’s just say I might have double-booked your available time slot."
     "Alice was anything but meek, so her sheepish grin was telling me she had done something she knew was not so good."
     play sound Knock
-    #$setFMGOutfit(OutfitEnum.RIPPED)
+    $setFMGOutfit(OutfitEnum.RIPPED)
     show WG neutral-2 at altMove(0.5, 0.75)
     show FMG neutral at Position(xpos=0.25, yalign=1.0) with dissolve
     play music Busy
@@ -17190,6 +17478,236 @@ label WG063:
     MC "You owe me for this."
     show WG neutral-2
     WG "I never said I didn’t."
+    jump daymenu
+
+label WG064:
+    $setProgress("WG", "WG066")
+    scene Dorm Exterior with fade
+    play music Busy
+    "I swung by Alice’s dorm after classes."
+    "I was in a bit of a rush because she said there were quite a few orders to deliver this time around and I wanted to make sure I had time to finish them all before evening."
+    "Just because Alice was my girlfriend didn’t mean I could afford to be a slouch when working for her. If anything with Alice, it just raised her expectations of me all the more to be professional."
+    "Coming up to her and Aida’s dorm, I gave a light wrap on the door as I let myself in."
+    scene Dorm PRG with fade
+    "Normally I’d wait for a reply, but since I knew she was expecting me didn’t bother with the formality."
+    "Aida’s side of the room was neat and orderly, if not entirely bare bones, as per usual— nothing out of the ordinary."
+    "{i}Taktaktaktaktaktakaktak{/i}"
+    "That noise, on the other hand, was a different story."
+    "{i}Taktaktak{/i}"
+    extend " {i} taktak{/i}"
+    extend " {i} taktaktaktakaktak{/i}"
+    MCT "What the hell is that sound?"
+    "It was coming from Alice’s room. Which was my original destination anyway."
+    scene Dorm WG with fade
+    show WG happy with dissolve
+    WG "Keisuke, so nice to see you."
+    MC "I should say the same as well."
+    show WG haughty
+    WG "Yes, yes you should."
+    show WG happy
+    extend " Hehe."
+    WG "I’m glad you could come by a little early."
+    show WG neutral-2
+    WG "It appears you have your work cut out for you this afternoon. There are quite a few deliveries."
+    WG "If at all possible, I’d like you to finish in a timely manner so you can join me for dinner this evening."
+    "There was a decent stack of boxes and padded pack envelopes. It would be a tall order, but not unreasonable either."
+    MC "You got it. Consider it done."
+    "{i}TAKTAKTAKTAKTAKTAKTAK{/i}"
+    "Whatever that sound was, it was a hell of a lot louder now."
+    MC "Okay, I gotta ask, where is that sound coming from?"
+    show WG surprised-2
+    WG "Oh, yes!"
+    show WG neutral at altMove(0.2, 0.35)
+    show Kokutan neutral at Position(xpos=0.7, yalign=1.0) with dissolve
+    extend " I nearly forgot to introduce you to the newest employee of Alice's Wishes Granted."
+    MCT "You’ve got to be kidding me."
+    "Hunched over a sewing machine, Kokutan was laser focused as she guided what looked to be a full length dress through the mechanized thread and needle."
+    "It appeared to be a rather extensive alteration."
+    "Between the whirring of the sewing machine and her attention being completely occupied by the task at hand, she didn’t appear to notice my arrival or any part of our conversion."
+    "{i}TAKTAKTAKTAK{/i}"
+    MC "Are you sure this is a good idea?"
+    show WG haughty
+    play music WG
+    WG "Are you questioning my judgement?"
+    menu:
+        "Yes, it’s obvious she has a few screws loose.":
+            MC "Yes, unfortunately I am. It’s obvious she has a few screws loose. Are you sure you’re comfortable with this?"
+            $setAffection("WG", 1)
+            show WG neutral
+            WG "I appreciate your honesty and your concern. I had similar concerns myself, but I changed my mind after a lot of thought. I’ll explain."
+        "Nope. You’re the boss.":
+            $setAffection("WG", -1)
+            show WG stern
+            WG "If I wanted to ask someone that would just reluctantly agree to everything I say, I’d ask Chibuki."
+            show WG haughty
+            WG "You’re selling yourself short. I do actually value your input, I hope you know."
+            show WG stern
+            WG "But I won’t get any if you’re going to fold like a chair everytime just to tell me what you think I want to hear. I can tell by your tone what you’re really thinking."
+            MC "Sorry. To be honest, yes, I am a bit concerned how good of a fit this is for you."
+    show WG neutral
+    WG "I understand your misgivings. But, as I’ve shared with you before, I have a keen interest in fostering and nurturing talent."
+    WG "Eccentricities aside, her skill with a needle and thread is undeniable, as is her passion for the craft."
+    MCT "Like arts and crafts, or witchcraft? Which one are we talking about here?"
+    show WG neutral-2
+    WG "I believe with a bit of structure and direction she’ll be able to hone her skills into something truly exceptional."
+    MC "Alright, you gotta tell me, how did this arrangement come about exactly?"
+    WG "It is a bit of a tale, as you can imagine."
+    show WG neutral
+    WG "After the previous fitting session you assisted me with—"
+    MCT "Ugh, how could I forget?"
+    WG "it was clear that I needed someone who could fill in the role on a more dedicated basis."
+    MCT "Kokutan is barely one and a half meters, how is she going to measure someone like Natsuko?"
+    "In my prying curiosity, I looked over at the three-way fitting mirror and noticed a meter high step stool that wasn’t there before."
+    WG "I originally sought her out to approach her with the offer."
+    WG "But I hadn’t made it very far outside the dorms before I was suddenly accosted by a tiny figure who jumped out from the bushes, claiming to have an offer that I ‘could not refuse’."
+    MC "Apparently no one told her you’ve never had trouble saying ‘No’ to anyone."
+    show WG haughty
+    WG "Precisely. My first instinct was to put her in her place, but I thought the better of it since I was expecting to enter into a negotiation."
+    show WG neutral
+    WG "She went on to explain something to the effect of how our fates were interwoven within the fabric of the cosmos, and that joining forces would allow us to overcome the encroaching sundering."
+    MC "That’s certainly a... uh, ‘poetic’ way of asking for a tailoring job."
+    WG "Indeed. I initially didn’t have much patience for such foolery,"
+    show WG worried
+    WG "but part of me suspects this is her way of dealing with some kind of personal trauma that’s causing her to act out."
+    show WG neutral
+    WG "It’s not my business to pry, and I’m not a psychologist, but for now, I do think she will benefit from some structure and an outlet for her talents."
+    "{i}TAKTAKTAKTAK{/i}"
+    MC "She does seem to know what she’s doing, I’ll give you that."
+    WG "You haven’t even seen the half of it. Her speed and proficiency are machine-like."
+    WG "With her skills, I no longer need to order the clothes already customized. I can simply order the fabric in bulk and have her craft it in-house."
+    show WG haughty
+    WG "It’s an excellent solution to the increasing difficulty I was having in getting orders through with more extreme measurements."
+    show WG doubt
+    WG "I was beginning to get sick of all the ‘Are you sure this is correct?’ supplier callbacks I was getting after placing these orders."
+    show WG happy
+    WG "She’s already added so much to the bottom line in such a short time."
+    show WG haughty
+    extend " Of course, she is compensated accordingly."
+    MC "Wait a second. Are you paying her more than me?"
+    WG "Her skills are rare and her level of expertise is advanced, would it really be fair to compensate you two the same?"
+    MC "Hey, I got skills..."
+    show WG doubt
+    extend " Okay, maybe not, but doesn’t seniority within the company count for something?"
+    show WG haughty
+    WG "Sorry Keisuke, but nepotism has no place in a well run operation."
+    show WG happy
+    WG "Like I told you before, you should be paying me to put up with you."
+    show WG aroused
+    WG "Besides..."
+    "Alice began to slowly tip-toe her fingers up my arm and across my shoulder as she began to run her fingers through my hair."
+    WG "Your position comes with some unique ‘fringe benefits’."
+    "Alice’s soft moist lips were inviting as she began to lean in close, her belly pressing into me as I recovered from nearly being knocked over with a half-step back to brace myself for the full impact."
+    "Her belly began to mold around my torso as it enveloped me, while her heavy boobs began to press into my chest. I began to lean forward too, as I—"
+    "{i}TAKTAKTAKTAK{/i}"
+    show WG neutral
+    "Alice and I abruptly halted our advances, having been jolted out of the moment from the whir of the sewing machine that had been going off and on throughout our conversation."
+    WG "One second."
+    "Alice ‘booped’ her finger to my lips before she turned around to address some business matters."
+    WG "Kokutan, why are you still working on that dress alteration? This was a pre-ordered dress that was already made to measure. It shouldn’t require that much work."
+    Kokutan "Yes, but I sensed an aura of dark energies tethered to this gown. It cried out to me and I heeded its call to be cloaked in darkness."
+    "Now finished with her masterwork, Kokutan freed the dress from the sewing machine, unfurling it for a full display."
+    play music Tension
+    show WG doubt
+    MCT "?"
+    pause .8
+    show WG stern
+    pause .8
+    show WG angry
+    pause .8
+    MCT "Oooooh SHIT!"
+    "It was Natsuko’s custom dress that she ordered. The dress itself was forest green with a luster to it, which would contrast well with her fire-red hair."
+    "It had thin straps at the top, and was one of those double front slit style skirts at legs. A bit revealing, but given the size of Natsuko’s thighs, it was probably her best option."
+    "All that was fine, it was Kokutan’s alterations that were no doubt the focus of Alice’s simmering fury."
+    "She had put a black lace trim all along the edges of the dress, coming together at the neck with a black lace choker."
+    "Though adequate for a normal recipient, if she had seen Natsuko before, she would have known it was not big enough for her neck."
+    "Even putting that aside, I sincerely doubted all this would mesh well with Natsuko’s sense of style."
+    show WG angry at altMove(0.05, 0.33)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.37)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.33)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.37)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.35)
+    pause 0.05
+    WG "!"
+    show WG angry at altMove(0.05, 0.33)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.37)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.33)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.37)
+    pause 0.05
+    show WG angry at altMove(0.05, 0.35)
+    pause 0.05
+    "Alice was practically shaking with rage. Though she was not the kind to conceal her displeasure, this was probably the most angry I’d ever seen her in my life."
+    "Alice prided herself on her professionalism and the duty she felt towards ensuring the satisfaction of her customers and Natsuko was one of her most important clients."
+    "I half suspected she had bitten off more than she could chew by taking on Kokutan, but she looked like she was about to blow a gasket."
+    "I didn’t want to be in the blast radius when this bomb went off, so I had to think fast."
+    play music WG
+    MC "Kokutan, that looks great and all, but... I think you’ve been deceived."
+    show WG doubt
+    Kokutan "Deceived? How can this be?"
+    MC "The dark forces tethered to this dress, they tricked you. This was not merely a dress, it was a meticulously crafted talisman to contain a fearsome fiery demon."
+    Kokutan "A f-fire demon?"
+    MC "This demon towers over mere mortals such as ourselves, with red flames coming out of the top of her head, eyes that bore through your soul and make your knees tremble in fear."
+    MC "Without the confines of this precise tapestry to quell her rage, her strength will become unchained and she will rampage across the school, destroying everything in her path."
+    show WG surprised-2
+    Kokutan "Oh no! ... What have I done? I should have known!"
+    show WG neutral
+    WG "It’s not your fault. I didn’t want to put too much pressure on you."
+    WG "Knowing the grave consequences of mishandling the binding charm would have made it all the more difficult to perform the... um, ritual, as it were, yes."
+    show WG worried
+    WG "I underestimated the influence this... ahem, fire demon, as it were, had imprinted on the garb."
+    Kokutan "Wh-What should I do?"
+    show WG neutral
+    MC "Restore it to its initial design. And in the future, follow all specifications exactly. You never know which ones are ordinary clothes and which ones could be seals to imprison evil spirits."
+    Kokutan "R-Right. I must fix this immediately."
+    "{i}TAKTAKTAKTAK{/i}"
+    hide Kokutan with dissolve
+    show WG neutral at altMove(0.2, 0.5)
+    play music Bittersweet
+    show WG neutral-2
+    WG "Thank you for that."
+    MC "I figured you could use a little help."
+    show WG worried
+    WG "I was very close to losing my temper and firing her on the spot— which I would have regretted."
+    show WG neutral
+    WG "But you stepped in and handled it."
+    show WG neutral-2
+    $setAffection("WG", 1)
+    extend " And though I hate to admit it— much better than I would have."
+    "I could tell it took a lot for Alice to admit that to herself, let alone to say it outloud to me. She was obviously really grateful."
+    show WG happy
+    WG "You complement me so well, you know that? I knew I kept you around for some reason."
+    MC "I suppose there are some ‘fringe benefits’ to our arrangement."
+    show WG aroused
+    WG "Mmmm, yes, I suppose so..."
+    show WG doubt
+    "{i}TAKTAKTAKTAK{/i}"
+    WG "{i}Sigh{/i}"
+    show WG happy
+    extend " It would seem you’ll have to take a rain check. Get back here soon when you’re done with the deliveries. I promise some peace and quiet, and privacy, when you return."
+    play sound Knock
+    show WG surprised-2
+    WG "Who would that be?"
+    show WG surprised
+    play music Peaceful
+    extend " Oh no!"
+    show WG worried at altMove(0.3, 0.75)
+    show Natsuko neutral at Position(xpos=0.25, yalign=1.0) with dissolve
+    Natsuko "Hello Alice, I was wondering if my dres—"
+    show WG surprised
+    Kokutan "{i}EEEEEEHHHHHAAAAAAAHHHH!{/i}"
+    Kokutan "It’s the fire demon! It’s finished, but I was too late. RUN!"
+    show WG surprised-2
+    "Kokutan proceeded to jump out the open window as we both watched her run at dizzying speed until she faded from view."
+    "For her part, the dress was finished, with Kokutans ‘adjustments’ removed."
+    Natsuko "Hmm?"
+    show WG neutral
+    WG "Ignore that. She’s new."
     jump daymenu
 
 label WG066:
@@ -17211,7 +17729,7 @@ label WG066:
     WG "Come in."
     scene Dorm WG with fade
     play music WG
-    #$setTakoOutfit(OufitEnum.NOHAT) - Programmer's note: Tako isn't in this scene? Not sure why this was included in the doc
+    $setTomoOutfit(OutfitEnum.CASUAL)
     show Tomoko neutral at Position(xpos=0.40, yalign=1.0)
     show WG neutral at Position(xpos=0.65, yalign=1.0) behind Tomoko
     with dissolve
@@ -17430,8 +17948,6 @@ label WG067:
     jump daymenu_noadvance
 
 label WGBE001:
-    #if getProgress("WG") == "WG038": #fix for wrong progress issue, delete later
-    #    $setProgress("WG", "WG037")
     scene Classroom with fade
     play music Schoolday
     "I got to class early today."
@@ -17441,27 +17957,45 @@ label WGBE001:
     "And it took me another second to realize what it was."
     MC "Was that the 'Everything is two' theme?"
     show BE happy at Position(xcenter=0.3, yalign=1.0), Transform(xzoom=-1) with dissolve
-    BE "Yeah! Someone mentioned it in a comment thread I was looking at yesterday and I ended up watching a bunch of remixes of it yesterday."
+    BE "Yeah! Someone mentioned it in a comment thread I was looking at yesterday and I ended up watching a bunch of remixes of it."
     BE "I changed my ringtone to it."
-    MC "I remember that. There was that one video with the frog jumping onto a window sill, and it doesn't quite make it."
+    MC "{i}Pfft!{/i} You would."
+    show BE angry
+    BE "Don’t judge."
+    MC "But will— harshly, in fact."
+    show BE happy
+    BE "Whatever. I know you enjoyed it back then as much as I did."
+    MC "Well you got me there. Hehe, there was that one video with the frog jumping onto a window sill, and it doesn't quite make it."
     MC "It's hanging onto the edge, trying to climb up, and the music gets really dramatic."
     show BE neutral
     BE "Which one's that? I haven't seen it."
     MC "Let me see if I can find it."
-    show WG neutral at Position(xcenter=0.7, yalign=1.0) with dissolve
+    "I pulled out my phone, frantically putting all my useless knowledge of obscure meme references to good use for once to find the right video title."
+    show WG surprised-2 at Position(xcenter=0.7, yalign=1.0) with dissolve
     WG "Everything is two? What does that mean?"
+    "I wasn’t at all surprised that Alice had no idea what we were talking about."
     show BE happy
+    show WG neutral
     BE "It was the stupid thing from a few years ago."
-    BE "Somebody took a snippet of a song from... What was it from, Keisuke?"
-    MC "Oh... It was this old ghost kung fu movie."
+    BE "Somebody took a snippet of a song from..."
+    extend " What was it from, Keisuke?"
+    MC "Oh... It was this old ghost kung fu movie. I never saw it cause it was way too old, but I remember that part."
     MC "There was a scene in the middle, just out of nowhere, where the hero and the girl are stuck in a temple while it rains, and this romantic song plays in its entirety."
-    MC "Someone in America posted the scene online because there's a sign in the temple that apparently is really filthy, the way it's written in English."
+    MC "Someone in America posted the scene online because there's a sign in the temple that apparently is really filthy the way it's written in English."
     BE "Something about grabbing the Buddha's nipples."
-    MC "Oh god, is that what it was?"
-    BE "But someone else did a cover of the song, and they made the cheesiest, most over-the-top video of romantic cliches to go with it."
+    MC "Oh god, is that what it was? How did you know that?"
+    show BE neutral
+    BE "I looked it up, duh."
+    MC "..."
+    show BE angry
+    BE "So sue me, I was curious."
+    show BE happy
+    BE "But anyway, someone else did a cover of the song, and they made the cheesiest, most over-the-top video of romantic cliches to go with it."
     MC "And then other people made their own videos, or they took movie clips. Completely inappropriate stuff, like someone mourning a dead person or a slow pan over a cemetary."
     BE "All with the sappy song playing over it."
-    BE "Then people started covering the song, but in completely different musical styles. Thrash metal, ukelele hip-hop, stuff like that."
+    WG "A parody of a parody then?"
+    MC "Exactly, only it got even worse."
+    BE "Yeah, then people started covering the song, but in completely different musical styles. Thrash metal, ukulele hip-hop, stuff like that."
     MC "Not long after people started taking the most extreme covers and pairing them with the weirdest videos they could find."
     MC "Found it! The frog video."
     show BE happy at Position(xpos=0.25, ypos=0.5, yanchor=0.3), Transform(zoom=2.0)
@@ -17470,50 +18004,108 @@ label WGBE001:
     "I showed Alice and Honoka the video I had been talking about."
     "The love song plays like normal as we watch a frog prepare to jump from a fence post onto a window sill."
     "The video is in slow motion, and as the frog jumps the song immediately shifts to the most dramatic movie score-style rendition."
+    show BE surprised-2
     BE "Oh!"
     "But the frog doesn't quite make it. Its front legs reach the sill, but its back legs kick in the air, then try to climb up the wall so it can get in."
     "And eventually it does."
+    show BE happy
+    show WG surprised-2
     BE "Ha ha ha! It did it!"
-    "Honoka found the thing hilarious, but Alice look confused. Then quickly angry."
+    MC "Ha, that’s hilarious!"
+    "I couldn’t barely contain myself, it was even more funny than I remembered."
+    show WG doubt
+    "Honoka found the thing hilarious, but Alice looked confused."
+    extend " Then quickly irritated."
     show BE happy at Position(xpos=0.3, yalign=1.0), Transform(zoom=1.0)
-    show WG angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
+    show WG stern at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
     WG "That's it?"
     WG "What's so amusing about that?"
     BE "By itself, nothing. But the song is so over-the-top to begin with and the frog looked so determined..."
+    show BE confused
     "Noticing Alice's irritation, Honoka trailed off."
     MC "It's just a meme. Something goofy to laugh about."
+    extend " I suppose it doesn’t make much sense if you haven’t already seen the hundreds of other spoofs that came before it for context."
     WG "Empty frivolity."
+    MCT "You’d think with all the time I spent with her, my sense of humor might have rubbed off a little."
     WG "To think that standards of entertainment can sink so low that thousands of people will share an image of a cat with a goofy expression or... or a frog trying to jump into a window."
     WG "Why is he even trying to get into the window? Why is he on the fence post to begin with!?"
-    show BE surprised:
-        linear 0.5 xpos 0.1
-    BE "Whoa!"
-    BE "Calm down."
-    show BE neutral:
-        linear 1 xpos 0.3
-    BE "It's just a meme."
-    WG "It's a stupid-!"
+    show BE happy
+    MC "Exactly! That’s the point. It’s funny because none of it makes sense."
+    show WG doubt
+    WG "Well that doesn’t make any sense."
+    BE "See? Now she gets it."
+    WG "I’m not sure that I do."
+    MC_BE "Hahaha!"
+    show WG angry
+    WG "What’s so funny?"
+    show BE neutral
+    BE "You’re being so serious, Alice. It’s just a silly video meant to make you laugh."
+    MC "You seem like you’re trying really hard to figure it out, but there isn’t really anything to {i}get{/i}. If explaining a joke would make it funny, believe me I would, but that’s all there is to it."
+    show WG doubt
+    WG "Hmph. Well I still think it sounds stupid."
+    show BE happy
+    BE "See? She gets it after all."
+    MC_BE "Hahaha!"
+    show WG angry
+    WG "{i}Errr!{/i}"
+    BE "Don’t worry, Kei-chan and I will get you up to speed after class when we show you the original video and remixes."
+    show WG doubt
+    WG "That wasn’t exactly the solution I had in mind."
+    MC "I think Alice will take a rain check on that Honoka, but we can catch up later. Man, it’s been forever since I watched that stuff."
+    BE "Aw yeah! It’s gonna be good."
+    MC "Actually it’s going to be awful, but I still can’t help myself."
+    WG "Why would you willingly subject yourself to something you know is going to be awful?"
+    show BE neutral
+    BE "Come on, Alice. Don’t you have any guilty pleasures? Like you know it’s bad but you still kind of like it?"
+    show WG haughty
+    WG "Not even in the slightest. I wouldn’t waste my time on such frivolities."
+    "I definitely raised my eyebrow with that remark."
+    MC "Is that so?"
+    show WG surprised-2
+    WG "Hmm?"
+    MC "I mean, it just seems like an odd thing to hear coming from you, considering those cheesy romance novels I saw on your bookshelf last time I was in your room."
+    show WG surprised
+    show BE surprised
+    pause 1
+    show BE happy
+    show WG stern
+    BE "{i}Pfft{/i}! HAHAHA!"
+    WG "I can’t believe you noticed those."
+    extend " I should have been a bit more discreet when I asked you to come over."
+    BE "Ah, it’s no big deal. What girl doesn’t like throwing herself into a sappy romance story every now and then?"
+    MC "You see? Something doesn’t have to be ‘good’ to be fun."
+    show WG neutral
+    WG "{i}Sigh{/i}. Alright, you’ve made your point."
+    show WG stern
+    extend " But I’m still not watching those stupid videos."
+    show BE shrug
+    BE "Eh, that’s probably for the best."
+    show BE surprised-2
+    BE "Oh! That reminded me of something else."
+    "Honoka, looked at me and, in a voice like a drunk robot, said"
+    show BE happy
+    BE "{i}No, Goro, truck cannot go to roof.{/i}"
+    MC "Ha ha ha ha ha!"
+    show WG doubt
+    WG "Do I even want to know?"
+    MC "No. No you don’t. That one actually does suck and I feel ashamed of myself."
+    show BE angry
+    BE "It wasn’t that bad."
+    show BE neutral
+    BE "Okay, it kind of was."
     show AE neutral at Position(xcenter=0.9, yalign=1.0) behind WG with dissolve
     AE "Is there a problem here?"
+    MCT "There wasn’t until madame buzzkill showed up."
     MC "No... No. We just got a little overly exuberant."
     AE "I suggest you save your energy for class."
     AE "Now take your seats."
     hide AE with dissolve
-    "The mood was still tense after that interruption. Before turning to leave Alice muttered something at half-volume."
-    WG "Stupid video about a stupid frog."
-    hide WG with dissolve
-    "Honoka, meanwhile, looked at me and, in a voice like a drunk robot, said"
-    show BE happy
-    BE "No, Goro, truck can not go to roof."
-    MC "Ha ha ha ha ha!"
-    "And I erupted in laughter."
-    "Turning in her seat, Alice glared at us."
-    show WG angry at Position(xpos=0.7, yalign=1.0), Transform(zoom=1.0)
-    WG "Grrrrr..."
-    hide BE
-    hide WG
-    with dissolve
-    "I tried to stifle my laughter, but Honoka, taking her own seat, kept chuckling right up until the teacher arrived."
+    show BE neutral:
+        linear 1 xpos 0.3
+    pause 1
+    #[SFX: Simple electronic melody]
+    "Honoka’s phone went off again."
+    "I tried to stifle my laughter, while Honoka for her part kept chuckling right up until the teacher arrived."
     "It was hard to concentrate on the lesson now that I had that stupid song playing in my head, but at least I wasn't about to fall asleep."
     jump daymenu
 
@@ -17708,7 +18300,7 @@ label WGFMG001:
     scene black with fade
     pause 1
     $setTime(TimeEnum.EVE)
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     play music Peaceful
     "It looked like I got to Akira’s place before Alice."
     play sound Knock

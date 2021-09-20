@@ -2474,7 +2474,7 @@ label BE020_c1_3:
         show BE sad
         BE "I'm sure she would, Kei-chan. But I came to you for a reason."
         "The realization hit me and I couldn't help feel like a bit of an idiot."
-        BE "You ah. You were asking me if I wanted to go, weren't you?"
+        MC "You ah. You were asking me if I wanted to go, weren't you?"
         show BE angry
         BE "Yeah. Duh."
         MC "Well, If I didn't embarrass myself enough to get booted off of your list, I could still go."

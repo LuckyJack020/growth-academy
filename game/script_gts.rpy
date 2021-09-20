@@ -6286,7 +6286,7 @@ label GTS036_c3:
     jump daymenu
 
 label GTS037:
-    $setProgress("GTS", "GTS038")
+    $setProgress("GTS", "GTS039")
     scene Classroom with fade
     play music Schoolday
     "Another day of my classes had come and gone. I sat in my chair, packing up my supplies as the other students prepared to leave. Tashi-sensei chimed in with a personal anecdote after the lesson was over."
@@ -6562,7 +6562,7 @@ label GTS038:
     jump GTS039
 
 label GTS039:
-    $setProgress("GTS", "GTS040")
+    $setProgress("GTS", "GTS041")
     scene Campus Center with fade
     play music Schoolday
     "I walked through the central courtyard as the sun had just reached its highest point in the afternoon. It was the weekend, so I had plenty of time to myself."
@@ -6687,7 +6687,222 @@ label GTS039:
     jump daymenu
 
 label GTS040:
-    jump GTS043
+    jump GTS041
+
+label GTS041:
+    $setProgress("GTS", "GTS043")
+    play music DayByDay
+    "More frequently than ever, I found myself going straight over to the Giants' Dorm after class. I didn’t even need a call from Naomi."
+    "She didn’t mind me coming by; she treasured my company just  as much as I treasured hers."
+    "Normally when I came over, we didn’t tend to do much. If we did, it was small things, pun intended, like homework, cooking, or just watching a show I could stream from my phone onto her tv."
+    "Today however, was a bit different..."
+    scene Giant Dorm Interior with fade
+    show GTS neutral with dissolve
+    GTS "Kei, could you tell me which color you think looks better? The red,"
+    show GTS neutral at Transform(xzoom=-1)
+    extend " or the blue?"
+    "She put each dress in front of her, swapping between the two."
+    MC "They’re both quite flattering. The blue matches your personality, while the red has a sort of fierceness to it."
+    show GTS neutral at Transform(xzoom=1)
+    GTS "Fierceness? I don't think I want to project that image. I don’t want anyone to think I’m scary."
+    MC "Not that kind of fierce, more of the..."
+    MCT "I’m gonna expose myself saying this, won’t I?"
+    GTS "..."
+    GTS "Oh, well I’ll just keep that in mind, the blue will do just fine then."
+    MCT "Smooth is not my middle name apparently."
+    "Naomi disappeared into her bedroom and reappeared in the blue dress, which to say was form fitting would be an understatement."
+    "The dress was probably a few sizes too small and was hugging every inch of her body that the poor fabric could reach."
+    MC "Is that comfortable? Looks a little tight."
+    GTS "It’s a little tight, but it should be fi..."
+    stop music
+    show GTS surprised
+    "*{i}RIIIIIP{/i}*"
+    "In an instant, starting from the bottom of the dress, up her thigh and past her hips, the seams holding the side together gave out. Naomi flailed wildly to grab the two sides to retain some modesty."
+    play music Sunset
+    show GTS sad
+    GTS "If you can excuse me for a moment.... I need to correct my appearance."
+    MC "Take your time, I don’t mind."
+    hide GTS with dissolve
+    "With a glum expression she shuffled back into the bedroom. Eventually she reemerged holding the fallen garment."
+    show GTS sad with dissolve
+    MC "Where did you get that dress? Was it from Alice?"
+    GTS "No, there is a small store inside the caverns that has some old clothes that previous students have donated. I was hoping this one was a bit looser, but I may have underestimated how much I’ve grown in the past weeks."
+    MC "Is that the only place for giants to get clothes?"
+    show GTS neutral
+    GTS "There {i}is{/i} a shopping district that specializes in Giant clothing, but I haven’t made the journey to visit it."
+    MC "It’s not too late. Would you want to go find this place?"
+    "She glanced at the blue dress."
+    GTS "I {i}would{/i} like to have more than just my set of school uniforms."
+    MC "Do you have a map of the area?"
+    GTS "We just need to follow the road that stretches northeast  towards the mountains."
+    MC "Is there a thing with giants and mountains, or do I need to lay off playing Skyledge?"
+    show GTS pondering
+    GTS "I’m not sure why it’s there, but... that IS a rather ironic coincidence, yes. But pray tell, what is 'Skyledge'?"
+    MC "It’s one of the video games I play. I can explain it on the way there if you’d like."
+    show GTS happy
+    GTS "I would love to hear about it if you would like to."
+    MC "Um, one thing before we head off, would you mind... uh... carrying me?"
+    show GTS pondering
+    GTS "...May I ask why?"
+    MC "I’ve been having a hard time keeping up with your pace. If we're gonna travel far, it may be better for you to carry me."
+    show GTS neutral
+    GTS "If you wish, I can do that for you."
+    "She crouched down and let me step onto her hands."
+    "The sensation as she lifted me back up was one I can safely say I’ve never encountered before. I’ve taken a plane before so the lifting sensation was similar, but the openness while experiencing this did rattle me."
+    show GTS surprised
+    "I noticed Naomi make a face of concern seeing my expression of shock. If she wanted to say something, she decided against it."
+    MC "Alright, I’m ready to go. So, what would you like to know about Skyledge?"
+    show GTS neutral
+    GTS "The beginning will do."
+    scene black with fade
+    pause 1
+    stop music fadeout 0.5
+
+    scene Field with fade
+    show GTS neutral with dissolve
+    MC "...and you’re in a cart after being captured because you were crossing the border illegally. Once you’re in control, some guy says he's glad you are awake."
+    GTS "I wish I could recall all that kind of stuff as well as you can."
+    MC "I’ll be honest I’ve just played the game and the others in the series too much."
+    GTS "Oh, I think that we are here."
+    scene Giants Town with fade
+    show GTS neutral with dissolve
+    "I had been so caught up in my tale that I hadn’t noticed us reach the large gate. A pair of guard towers bracketed the gate."
+    MC "You sure this is the place?"
+    GTS "Someone had mentioned it was government run, but I’m not entirely sure."
+    MC "I wonder how you actually enter."
+    "Looking around, I spotted a large metal plate in the ground ahead of the gate."
+    MC "You may need to step on that to get in."
+    GTS "It seems rather odd to need someone to weigh a certain amount just to get some clothes."
+    MC "I guess they suspect that if you’re coming here, then you are of a certain type. It’s likely put in place to keep non-giants safe."
+    "As she gingerly stepped onto the plate, the sound of clicking could be heard. The gate slowly parted to reveal a road leading towards a cluster of buildings."
+    MC "A rather curious place so far, a lot of odd security and engineering for a rather secluded place."
+    GTS "It {i}is{/i} government run, so that would make sense."
+    "Approaching the buildings, we could see more people walking around. While everyone’s height varied, I could guess everyone here exceeded 4 meters in height."
+    show GTS pondering
+    GTS "I’m surprised to see this many giants outside the dorm. I do wonder what the greater purpose of this place is."
+    MC "Is there a more formal map of the area?"
+    GTS "I don’t see one, but maybe we could  head over to that large shop at the end of the road ahead."
+    "Looking down the road I noticed the building she was pointing out. It was by far the largest building in the 'small' town. The sign clearly read 'Mt.Fuji Outfitters' which was rather fitting for a place located in the mountains of the island."
+    MC "That’s probably a good spot to head towards, seems popular."
+    show GTS neutral
+    GTS "I hope they may have some clothing as well, it seems like some sort of general store."
+    "As we approached the store, the sheer size of the building was becoming more apparent. The entirety of the school could easily have fit in this place three or four times over, and that was what I could see."
+    "The front doors slid open revealing a massive warehouse-like building. Everything from minute trinkets to whole TVs was on display, except these were five to seven times their normal size."
+    MC "See any clothes? I can’t see a whole lot from here."
+    GTS "I don’t see any from right here. Perhaps there's someone to talk to about finding them."
+    MC "I don't think I'll be much help in that regard. I can barely see past these shelves."
+    GTS "I can see a larger gentleman at a counter ahead of us. It’s safe to assume he’s an employee here right?"
+    MC "That’s up to you, I can’t see to judge that."
+    GTS "Oh right, apologies."
+
+    scene Giants Town Store
+    play music BrightLights
+    show GTS neutral with dissolve
+    "Going further into the store from my perspective brought on this feeling of truly entering a foreign world. Items that are so common to me are now taller than my entire body, or even taller than my house."
+    "A feeling of alienation I could feel welling in my stomach, though there was another feeling I wasn’t sure how to describe in there as well."
+    "As we rounded the endcap of an aisle, I found myself looking higher still. Ahead of me was a gentleman that towered even over Naomi. He was quite toned as evident by the muscles outlined by his button down shirt."
+    UNKNOWN "Welcome to Mt. Fuji Outfitters. How can I help you, young lady?"
+    GTS "Thank you, sir. My boyfriend and I were just looking for some more fitting clothing... for me, obviously. I can get my school uniform replaced, but casual wear is a little tricky."
+    UNKNOWN "I understand, that was a problem when I went to Seichou as well. Never really could find a nice casual shirt or jeans."
+    UNKNOWN "Come along, and I’ll show you our clothing selection. This place can be a maze at times."
+    GTS "That would be appreciated. This is our first time here."
+    "The gentleman looked over the counter to look down at me, before breaking into a smile and laughing."
+    UNKNOWN "Apologies, it's rare that a normal sized person wanders in here. Especially one not associated with the government."
+    "Stepping out from behind the counter, he began taking us through the winding pathways of the store."
+    MCT "I think I wasn’t far off in assuming this place is much bigger then I assumed it was."
+    GTS "If I may ask sir, you did say you went to Seichou correct?"
+    UNKNOWN "I went there some years ago. I do wonder what the place looks like now."
+    GTS "Are you by chance Akio Fumihiro?"
+    Akio "I am, indeed. Where’d you get my name from?"
+    GTS "You were much taller than everyone at the dorms by a good margin, and I recall seeing a name on the record wall that was above everyone else’s."
+    Akio "I’m surprised that the record wall is still a tradition. From what I heard, the record wall was established by the class before me and only had about a dozen names or so."
+    "When I left and recorded my name on it, there was a certain surprise since I was a head taller than nearly everyone."
+    Akio "I take it I’m still the record holder?"
+    GTS "Indeed, a few have come close I recall but none have surpassed you."
+    Akio "Interesting, surprising that someone hasn’t grown past me."
+    GTS "There is an upward trend with heights I observed."
+    Akio "Guess it's only a matter of time until someone else takes the crown."
+    Akio "Anyway, enough of my rambling and reminiscing. You were looking for some new clothes, well here we are."
+    "Stepping aside he revealed rack after rack of clothing, all in sizes that could be measured in square footage of cloth."
+    MC "Now {i}this{/i} is quite a selection."
+    show GTS surprised
+    GTS "Where do you get all the material?"
+    Akio "The government may be difficult to work with, but they do have the supply line to provide the resources for an army, or in this case, a few giants."
+    show GTS neutral
+    GTS "So you work for the government?"
+    Akio "Somewhat. I run the store, and they provide the goods that I have specified for sale. There's some other interactions but that's unimportant."
+    GTS "Fair enough, it is rude to poke too much into another’s business."
+    Akio "It’s fine, though I do need to return to the front counter. I hope you find everything you are looking for."
+    "He waved and disappeared behind the shelves."
+    MC "He’s quite nice. I didn’t expect him to also be the record holder."
+    show GTS unique
+    GTS "That was quite a nice surprise."
+    MC "So were you only looking for a dress or were you looking for something else?"
+    show GTS neutral
+    GTS "A new dress would be good, but I did have some other things in mind. I wonder if they may have a new kimono? The one I used for dinner is getting rather short."
+    MC "Possibly. You know, I’ve never considered if those are common items. I got mine a few years ago, but I can’t recall seeing them on a clothing rack at a store."
+    GTS "It depends on the store, I would assume. Though you certainly have a point that they're a rather niche item outside of holidays."
+    MC "What else were you thinking?"
+    GTS "I may not be using the school's primary pool anymore, but I have heard of a spring in the caverns as well as a good beach spot. I wonder if they have bathing suits?"
+    MCT "Please only be bikinis. Please only be bikinis. Please only be bikinis."
+    MC "I wasn’t aware there was a spring in the caverns. At least you haven’t mentioned it before."
+    GTS "It's a warm spring, but I’d still need a suit. ...Ah, there they are!"
+    "Past a few racks of pants was a single rack of just bathing wear. Like someone was listening above, every single option was a two piece suit."
+    MCT "I think I just used up all my luck for the year, but so worth it."
+    show GTS despaired-thought
+    GTS "Oh, drat. I was hoping they had a one piece I could pick, but I suppose that may use a little too much material."
+    menu:
+        "I think you would look great in a two piece.":
+            jump GTS041_A1
+        "You might be able to order a one piece, but get a two piece till then.":
+            jump GTS041_A2
+
+label GTS041_A1:
+    MC "I think you would look great in a two piece."
+    show GTS sad
+    GTS "You flatter me, Kei, but I’m not sure I’m comfortable showing that much skin to anyone else."
+    MC "I hate to sound ignorant, but I don’t think you have a choice if this is their selection."
+    GTS "You’re fine, I can see that my preferences aren’t possible with this selection."
+    GTS "*sigh*"
+    show GTS neutral
+    jump GTS041_After_C1
+
+label GTS041_A2:
+    $setFlag("GTS041_A2")
+    MC "You might be able to order a one piece, but get a two piece until then."
+    show GTS pondering
+    GTS "That may be, he did mention that he orders through the military. He might have a design I could order."
+    show GTS neutral
+    GTS "I’ll grab one of these in case he doesn’t. It’s not my preference, but I think I may be losing my ability to have a choice on these matters."
+    jump GTS041_After_C1
+
+label GTS041_After_C1:
+    "She grabbed off the rack a plain white two piece suit, the bottoms had a sort of skirt on them which was quite flattering as I imagined Naomi strutting down the sand in it."
+    GTS "This is a nice color. Can’t say I’ve considered a lot of white in my wardrobe outside of my uniform shirt."
+    MC "I think it would look great on you."
+    GTS "Then I guess it’s settled, can’t disagree with such an expert assessor."
+    "She picked out a few more items before making her way back to the front counter where Akio was standing."
+    Akio "I see you found everything you were looking for."
+    if getFlag("GTS041_A2"):
+        GTS "I was wondering if it would be possible to order a one piece swimsuit. I noticed you only had two pieces."
+        Akio "I could but the price would be pretty steep. The material cost alone would be higher than 10 to 11 two pieces. Not to mention shipping time."
+        GTS "Ah I see, then in that case this is fine."
+    "He quickly scanned all the items before handing the bag back to us."
+    Akio "Thank you.  I hope to see you again soon."
+    "Naomi gave Akio a deep bow in appreciation."
+    GTS "I suppose I will from now on. Thank you."
+    "Exchanging parting waves, we began our trek back to the school."
+    MC "I wonder what sorta lives await giants when they finish school..."
+    GTS "Although it may sound bad on my part, I haven’t really looked into it. I was hoping that I would stay below the 4 meter threshold, but as we both can see that ship has sailed."
+    GTS "I’d love to return to the mainland someday, but I fear I may not be permitted to."
+    MC "I assume you mean ‘without resistance from the government’."
+    GTS "Correct."
+    MC "Yeah, that already brings up a lot of issues. I was surprised to hear how involved they are in the store."
+    GTS "It was quite surprising, but considering how prominent they are in the dorms, I shouldn’t be."
+    MCT "I do wonder how much the government will get involved as she grows taller."
+    MCT "{i}Bleck{/i}. I’m starting to sound like Daichi now."
+    "I was left to wonder as the sun finally set upon our return to school."
+    jump daymenu
 
 label GTS043:
     $setProgress("GTS", "GTS044")

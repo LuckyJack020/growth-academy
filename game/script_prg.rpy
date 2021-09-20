@@ -2112,7 +2112,7 @@ label PRG011:
     scene black with fade
     pause 1
     scene Dorm Exterior with fade
-    "The temperature was fairly warm, though not nearly at the levels of ‘hellfire’. Despite that, My hair seemed to trap the sun’s heat under it like a fuzzy tarp."
+    "The temperature was fairly warm, though not nearly at the levels of ‘hellfire’. Despite that, my hair seemed to trap the sun’s heat under it like a fuzzy tarp."
     "This not only meant that my neck was always warm, but it also kept me from getting burnt. So yeah, double edged sword."
 
     scene black with fade
@@ -4544,7 +4544,7 @@ label PRG018_c1_after:
     PRG "YES! FINALLY!! THEY'RE IN!!"
     "She was practically shaking with excitement, jumping up and down like a kid in a candy store."
     "I stood there staring at Aida, dumbfounded. I'd never seen her so excited, but there she was, cheering for her favorite team. It was pretty cool to see actually."
-    "Aida ran over to me and hugged me, almost surprising me more than the Dragon's victory."
+    "Aida ran over to me and hugged me, almost surprising me more than the Koi's victory."
     PRG "Thanks for listening to this with me. You must've been my good luck charm!"
     MC "I'd be happy to listen to more games with you if that's the case!"
     PRG "Would you? I'd love that!"
@@ -5616,7 +5616,7 @@ label PRG023:
     MC "Alright..."
     "We both sat for a moment before Aida jumped up from her chair, excitedly knocking it over."
     show PRG happy
-    PRG "I've got it! We can do a 15 page paper on the history of the Dragon's baseball team!"
+    PRG "I've got it! We can do a 15 page paper on the history of the Koi's baseball team!"
     if getFlag("PRG011_b"):
         MC "Yes! That's an awesome idea, Kodama-san!"
         show PRG neutral
@@ -8028,7 +8028,7 @@ label PRG033:
     MC "I know for a fact that my grade could use those, so if there are any extra points to be earned, I want to go for them!"
     "The two of us started leafing through the books."
     "Being that these books were sorted in a timeline form from the team's beginnings to the present, finding information was as easy as going to the correct section in relation to how far we were in our paper."
-    MC "Did we cover the Dragon's first shutout in 2006 yet?"
+    MC "Did we cover the Koi's first shutout in 2006 yet?"
     PRG "No, but that's a good event to explain. It was one of the team's biggest highlights."
     MC "I think I've seen video clips from that game on the internet before."
     PRG "It was incredible. The pitcher that year was one of the best that Japan has ever seen. His name was Anahi Koji. I remember watching the game on TV, and my whole family being on their feet in our living room."
@@ -9849,8 +9849,8 @@ label PRG039_c1_2:
     "I looked from the card to Aida's face. She had the look of a kid who had just gotten exactly what they wanted for christmas. In fact, the look on her face kind of reminded me of myself."
     MC "Wow, talk about crazy odds! Is there something special about this card that made it so hard to track down? Like, is it rare or anything?"
     show PRG neutral
-    PRG "Out of all of the Dragon's players, Hyousuke Domen had the least cards printed for him. Only a few thousand, I think. That made his card insanely hard to find."
-    PRG "However, since the Dragon's record when it comes to winning big ticket games isn't exactly... stellar, the card never sold for high prices."
+    PRG "Out of all of the Koi's players, Hyousuke Domen had the least cards printed for him. Only a few thousand, I think. That made his card insanely hard to find."
+    PRG "However, since the Koi's record when it comes to winning big ticket games isn't exactly... stellar, the card never sold for high prices."
     PRG "And apart from that, he... he was my dad's favorite player."
     MC "Oh... Oh, I see. May I see the card?"
     "Aida handed it over to me as if it were made from pure gold. Just then, Honoka came around the corner and spotted us."
@@ -13624,7 +13624,7 @@ label PRG053:
     "I craned my neck to peer around Aida's room. I only realized then that I'd never paid much attention to the actual decor of it. It was simple, like most college dorms, but she had still clearly put a bit of work into it."
     "On her desk were all of her notebooks, and her bag hanging neatly from her chair. Next to the notebooks were a few picture frames that I could make out."
     "I squinted to see them from my current pinned down position. One had a much younger looking Aida and a bigger man sitting in some stadium chairs."
-    "Aida was on the man's lap and they were both wearing matching hats, the Dragon's logo emblazoned on them."
+    "Aida was on the man's lap and they were both wearing matching hats, the Koi's logo emblazoned on them."
     "The man looked to be fairly young, probably around late twenties. He had a light mustache and a faint bit of growth on his chin, as well. No doubt this was Aida's father."
     "In a frame beside it was another photo. This one had Aida and a woman standing over a baking tin together. The tin held an insanely good looking cake, which the woman was helping Aida frost."
     "The woman looked to be a near identical copy of Aida. Their hair color was the same, and their eyes had the same sort of stormy color to them. The woman also looked to be rather bottom heavy, with a skinny top half and some rather blossomed hips."
@@ -14323,7 +14323,7 @@ label PRG055B:
     "The doorbell clanged above my head as I swung the door of the game shop open. I nodded at the dude behind the counter and walked in, scanning shelves as I went along."
     "I moved past the standard Tapinon cards and C&C die, turning the corner and heading towards the front of the store."
     "Loads of baseball team logos leapt from the shelf at me. Flipping through, I didn't see much of what I wanted."
-    "Most of the Dragon's merch and cards seemed to be nothing outside of the usual. Small packs of cards, folders with their logo on it, the common stuff. I grabbed a few of the smaller packs, then turned the corner again."
+    "Most of the Koi's merch and cards seemed to be nothing outside of the usual. Small packs of cards, folders with their logo on it, the common stuff. I grabbed a few of the smaller packs, then turned the corner again."
     "It wouldn't hurt to look for myself as long as I was here."
     "As I worked my way past displays and a carefully stacked tower of dominoes, I happened to glance at the cashiers counter. On one side was a long, glass case, packed to the brim with expensive cards and other hard to find collectors items."
     "My curiosity proved too strong to ignore and I walked over to it, scanning the case carefully. On one end was all of the rarest of rare Tapinon cards, dominated by a third edition shimmering Eliphar card."
@@ -14331,12 +14331,12 @@ label PRG055B:
     MCT "No way. Nope."
     "Looking over to the other side, there were a few other odds and ends cards, and then an ultra-tiny baseball section."
     "In the middle of the shelf was a section devoted to deluxe card boxes, and dead center was the familiar green and red logo of a certain team."
-    MC "Excuse me. Could I have a look at that Dragon's collectors box, please?"
+    MC "Excuse me. Could I have a look at that Koi's collectors box, please?"
     "The cashier nodded and unlocked the case, handing me the box."
     "Even though I wasn't a huge card collector myself, just the ads on the box made me want this for a collection of my own."
     "Not only did the pack include a card of every single player from their first season to present, but each one was also signed and certified as 100%% legit."
     "I flipped the price tag over, expecting a number in the 6 figure area, but was instead greeted with a 6000 yen tag."
-    MCT "Well, good thing the Dragon's aren't super popular."
+    MCT "Well, good thing the Koi's aren't super popular."
     MC "I'll take this. Is it cool if I leave this at the counter while I look around a bit?"
     Cashier "No problem. I'll bag this up for you."
     "I thanked him and worked my way further into the back, being careful to not touch the precariously stacked domino pile. The back seemed to be filled with figurines and the like, nothing I was too terribly interested in."
