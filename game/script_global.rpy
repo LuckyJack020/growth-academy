@@ -38,6 +38,7 @@ define Kokutan = Character('Kokutan', color="#C0C0C0")
 define Koneko = Character('Koneko', color="#C0C0C0")
 define Lee = Character('Lee', color="#C0C0C0")
 define Michiko = Character('Michiko', color="#C0C0C0")
+define Midori = Character('Midori', color="#C0C0C0")
 define Miko = Character('Miko', color="#C0C0C0")
 define Minami = Character('Minami', color="#C0C0C0")
 define Minei = Character('Minei', color="#C0C0C0")
@@ -64,6 +65,7 @@ define Tomoko = Character('Tomoko', color="#FF3300")
 define TomokoCell = Character('Tomoko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell")
 define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
+define Yuko = Character('Yuko', color="#C0C0C0")
 
 define All = Character('Everyone', color="#ffffff")
 define Announcer = Character('Announcer', color="#C0C0C0")
@@ -725,6 +727,22 @@ image Tako happy = "Graphics/minor/tako/[TakoOutfit]/happy.png"
 image Tako unique = "Graphics/minor/tako/[TakoOutfit]/unique.png"
 image Tako sad = "Graphics/minor/tako/[TakoOutfit]/sad.png"
 image Tako surprised = "Graphics/minor/tako/[TakoOutfit]/surprised.png"
+
+image Midori neutral = "Graphics/minor/midori/midori-neutral.png"
+image Midori happy = "Graphics/minor/midori/midori-happy.png"
+image Midori nervous = "Graphics/minor/midori/midori-nervous.png"
+image Midori pout = "Graphics/minor/midori/midori-pout.png"
+image Midori sad = "Graphics/minor/midori/midori-sad.png"
+image Midori surprised = "Graphics/minor/midori/midori-surprised.png"
+image Midori unique = "Graphics/minor/midori/midori-unique.png"
+
+image Yuko neutral = "Graphics/minor/yuko/yuko-neutral.png"
+image Yuko angry = "Graphics/minor/yuko/yuko-angry.png"
+image Yuko happy = "Graphics/minor/yuko/yuko-happy.png"
+image Yuko shrug = "Graphics/minor/yuko/yuko-shrug.png"
+image Yuko smug = "Graphics/minor/yuko/yuko-smug.png"
+image Yuko surprised = "Graphics/minor/yuko/yuko-surprised.png"
+image Yuko unique = "Graphics/minor/yuko/yuko-unique.png"
 
 image Kokutan neutral = "Graphics/minor/kokutan-neutral.png"
 image Akihiro neutral = "Graphics/minor/akihiro-neutral.png"
