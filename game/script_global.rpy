@@ -130,9 +130,11 @@ image Clothes Store = "Graphics/ui/bg/clothesstore.png"
 image Club = "Graphics/ui/bg/NYI.png"
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
 image Diner = "Graphics/ui/bg/burgerrestaurant.png"
+image Dock = "Graphics/ui/bg/NYI.png"
 image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
 image Dorm Hallway = "Graphics/ui/bg/dormhall.png"
 image Dorm Interior = DynamicImage("Graphics/ui/bg/dorminterior_[gametime].png")
+image Ferry = "Graphics/ui/bg/NYI.png"
 image Festival = DynamicImage("Graphics/ui/bg/festival_[gametime].png")
 image Field = DynamicImage("Graphics/ui/bg/field_[gametime].png")
 image Field Winter = DynamicImage("Graphics/ui/bg/field_[gametime].png") #TBI
@@ -296,6 +298,7 @@ image AE sad = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.png")
 image AE sad-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad-2.png")
 image AE frown = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/sad.png")
 image AE surprised = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised.png")
+image AE surprised-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/surprised-2.png")
 image AE admire = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/admire.png")
 image AE angry = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry.png")
 image AE angry-2 = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/angry-2.png")
@@ -676,6 +679,7 @@ image Yuki gossip = DynamicImage("Graphics/minor/yuki/[minorsizes[Yuki]]/gossip.
 
 image HR neutral = "Graphics/minor/HR/neutral.png"
 image HR annoyed = "Graphics/minor/HR/annoyed.png" #NYI
+image HR unique = "Graphics/minor/HR/unique.png" #NYI
 
 #legalsizes already updated, change images when bigger sprites exist
 image Tomoko annoyed = DynamicImage("Graphics/minor/tomoko/[minorsizes[Tomoko]]/[TomoOutfit]/annoyed.png")
@@ -904,7 +908,9 @@ init 2 python:
     eventlibrary['AE077'] = {"name": "Pas de Deux", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "hallway",          "priority": PrioEnum.NONE, "sp": 15,    "next": "AE078", "obsflags": [],                "conditions": []}
     eventlibrary['AE078'] = {"name": "Méditation", "girls": ["AE"], "type": EventTypeEnum.CORE,                                "location": "hallway",          "priority": PrioEnum.ALL, "sp": 15,       "next": "AE079", "obsflags": [],                "conditions": []}
     eventlibrary['AE079'] = {"name": "Metamorphosis", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 15,       "next": "AE080", "obsflags": [],                "conditions": []}
-    eventlibrary['AE080'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['AE080'] = {"name": "Pavane for Dead Princess", "girls": ["AE"], "type": EventTypeEnum.CORE,                  "location": "dormtomoko",      "priority": PrioEnum.ALL, "sp": 15,       "next": "AE081", "obsflags": [],                "conditions": []}
+    eventlibrary['AE081'] = {"name": "Arabesque No. 1", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "classroom",      "priority": PrioEnum.ALL, "sp": 15,       "next": "AE082", "obsflags": [],                "conditions": []}
+    eventlibrary['AE082'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
 
     eventlibrary['AE007b'] = {"name": "Peer Gynt", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "hallway",          "priority": PrioEnum.NONE, "sp": 1,    "next": "AE008b", "obsflags": [],                "conditions": []}
     eventlibrary['AE008b'] = {"name": "Made of Stone", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 1,    "next": "AE009b", "obsflags": [],                "conditions": []}
@@ -1101,9 +1107,9 @@ init 2 python:
     eventlibrary['PRG014'] = {"name": "Major Leagues", "girls": ["PRG"], "type": EventTypeEnum.CORE,                            "location": "classroom",         "priority": PrioEnum.NONE, "sp": 2,     "next": "PRG015", "obsflags": [],       "conditions": []}
     eventlibrary['PRG015'] = {"name": "Seal of Approval", "girls": ["PRG"], "type": EventTypeEnum.CORE,                          "location": "classroom",        "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG016", "obsflags": [],       "conditions": []}
     eventlibrary['PRG016'] = {"name": "The First Step", "girls": ["PRG"], "type": EventTypeEnum.CORE,                           "location": "classroom",         "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG017", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG017'] = {"name": "Slowly Blooming", "girls": ["PRG"], "type": EventTypeEnum.CORE,                          "location": "schoolplanter",     "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG019", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG019'] = {"name": "Seconds Please", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,                    "location": "classroom",         "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG020", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG020'] = {"name": "Scheduling Conflict", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,               "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG021", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG017'] = {"name": "Full Bloom", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "schoolplanter",     "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG019", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG019'] = {"name": "Cream and Sugar", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,                    "location": "classroom",         "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG020", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG020'] = {"name": "R&R", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,               "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG021", "obsflags": [],       "conditions": []}
     eventlibrary['PRG021'] = {"name": "Practice Makes Perfect", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,            "location": "cafeteria",         "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG022", "obsflags": [],       "conditions": []}
     eventlibrary['PRG022'] = {"name": "Grocery Run", "girls": ["PRG"], "type": EventTypeEnum.CORE,                              "location": "supermarket",       "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG023", "obsflags": [],       "conditions": []}
     eventlibrary['PRG023'] = {"name": "Invaluable Research", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "library",           "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG024", "obsflags": [],       "conditions": []}
@@ -1167,7 +1173,7 @@ init 2 python:
 
     #Optional
     eventlibrary['PRG001b'] = {"name": "Tongue Twister", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                      "location": "schoolexterior",   "priority": PrioEnum.NONE,              "obsflags": ["testday"],                "conditions": []}
-    eventlibrary['PRG018'] = {"name": "A Small Touchup", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                      "location": "campuscenter",     "priority": PrioEnum.NONE,              "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
+    eventlibrary['PRG018'] = {"name": "A Cut Above", "girls": ["PRG"], "type": EventTypeEnum.OPTIONAL,                      "location": "campuscenter",     "priority": PrioEnum.NONE,              "obsflags": [],                         "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}
 
     eventlibrary['PRG005'] = {"name": "Camouflage", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,                       "location": "auditorium",       "priority": PrioEnum.GIRL, "sp": 1,     "obsflags": ["aftertest"],              "conditions": [[ConditionEnum.TIMEFLAG, "testday2"]]}
     eventlibrary['PRG010'] = {"name": "Buckle Up", "girls": ["PRG"], "type": EventTypeEnum.OPTIONALCORE,                        "location": "hallway", "priority": PrioEnum.GIRL, "sp": 2,     "obsflags": ["aftersize2"],             "conditions": [[ConditionEnum.TIMEFLAG, "size2"]]}

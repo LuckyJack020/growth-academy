@@ -16835,10 +16835,13 @@ label AE073:
     MCT "That was easy, at least. Which book should I pick?"
     menu:
         "'The Trial' by Franz Kafka":
+            $setFlag("AE073_trial")
             jump AE073_c1_1
         "'The Great Gatsby' by F. Scott Fitzgerald":
+            $setFlag("AE073_gatsby")
             jump AE073_c1_2
         "'Crime and Punishment' by Fyodor Dostoevsky":
+            $setFlag("AE073_crime")
             jump AE073_c1_3
 
 label AE073_c1_1:
@@ -17867,6 +17870,7 @@ label AE077:
     "Shiori, who’d once walked upright with grace and dignity, was now forced to walk with a clumsy, exaggerated gait. Her thighs were too large to keep close to each other in a natural way, her walk has transformed into a strange mix of both swinging her hips and waddling forward. "
     "As mean as it sounds, if I didn’t know any better, I’d call it obnoxious looking, like she was intentionally sticking her ass out and shaking it from side to side to flaunt it when she walked... but I did know better. I could tell that this whole situation was ungodly humiliating for her."
     "After reaching the near side of the track she released her grip on the rope, bent her legs, and tipped backwards onto her extensive backside, the impact causing it to quake and wobble with great intensity. I walked over and sat down next to her as she groaned and put her face in her hands. "
+    $setAEOutfit(OutfitEnum.BEND)
     MC "Is everything okay?"
     AE "I look absurd!"
     AE "W-Will I... will I have to walk in such a humiliating way for the rest of my life?"
@@ -18231,6 +18235,7 @@ label AE079:
     "Though she left first, it wasn’t too hard to catch up with her... "
 
     scene Hallway with fade
+    $setAEOutfit(OutfitEnum.BEND)
     show AE embarrassed with dissolve
     Student "No way... is that Matsumoto-san?"
     Student "Why’s she walking all bent over like that?"
@@ -18257,6 +18262,394 @@ label AE079:
     jump daymenu
 
 label AE080:
+    $setProgress("AE", "AE081")
+    scene Dorm Tomoko with fade
+    play music Peaceful
+    "*Thnk* *Thnk*"
+    "As I threw Tomo’s rubber ball against the ceiling and let it bounce back down into my hand. I sighed as Tomo sat in her computer chair and continued to play Toehoe in silence."
+    "Her long, black hair cascaded down to the ground and covered a good foot or so of ground at her feet."
+    MC "Hey, Tomo?"
+    show Tomoko neutral with dissolve
+    Tomoko "Hm?"
+    MC "Can I ask you a question?"
+    Tomoko "You’re gonna anyways."
+    MC "Thanks, so I was thinking-"
+    Tomoko "That’s a first."
+    MC "Shut up. So I was- Pffff-"
+    show Tomoko happy
+    Tomoko "Ehehehe."
+    MC "Oooh shit, ahah, anyways- um, I was thinking about um..."
+    "I stopped throwing the ball by this point, my mind lingering on how to word my question."
+    MC "Have you heard anything about what’s going on with Shiori?"
+    show Tomoko neutral
+    Tomoko "Is something up?"
+    MC "... W-Well, nah, nah, it’s just, uhh... y’know, have you heard anything? Like, has Yuki said anything about it?"
+    "Tomo stopped playing, turning in her chair to look at me as she rested her hands on her lap."
+    Tomoko "Um, yeah... I heard she was showing off her butt to the entire school the other day."
+    MC "Haaah, shit, so people are talking about her."
+    "I leaned forward in bed looking over to Tomo as my hair cascaded down to cover all of my face."
+    MC "I don’t know what to do. How do I make this go away?"
+    show Tomoko sad
+    Tomoko "..."
+    "Tomo let out a sigh, of frustration or pity I couldn’t tell, but she reached out and put her hand on my shoulder."
+    Tomoko "Bro, dude, I get it, but like... you’re not gonna be able to be there for her always. Sometimes you gotta know that the girls in your life... they’re grown ups."
+    Tomoko "They’re gonna get into some tough shit. That’s life."
+    Tomoko "That doesn’t mean you can’t try to be there for ‘em, but... yeah. You can’t control the hearts of everyone around you. That’d be fucked up if you could, right?"
+    Tomoko "What fun is a game where you always know what to say to get people to do what you want? Just say what you feel."
+    MC "..."
+    MCT "She has a point but... the idea of Shiori bearing the weight of everyone being shitty to her like that... that idea is..."
+    MCT "She’s always been talked down to because she’s a stickler. I’d say she can handle it, but... this is different."
+    MC "Eh, yeah, I can see what you mean."
+    show Tomoko neutral
+    Tomoko "I’m still amazed you can see anything. Seriously, why do you never move your hair out of your eyes?"
+    MC "O-Oy! Who are you to talk, cyclops?!"
+    Tomoko "Tcccch."
+    "With a smile, Tomoko turned around and unpaused her game. At that, I began to pack up my things and walked over to her door."
+    Tomoko "What, headed out already?"
+    MC "I mean, I’m not allowed to be in here anyways."
+    Tomoko "... You’re not?"
+    MC "I don’t think...? Um, I dunno, to be honest. But um... thanks for helping me out, sis. I really appreciate it."
+    Tomoko "Mhm."
+    MCT "After spending 18 years with her, I can never really fathom her unabashed aloofness, but still... I’m glad to have Tomo with me through this."
+    "With a smile, I got my shoes on and left for the office to meet with Shiori."
+    scene black with fade
+    pause 1
+
+    scene Office with fade
+    play music Bittersweet
+    show AE sad with dissolve
+    "As I entered in, the smell of freshly printed paper followed shortly after I caught a glimpse at Shiori, head in her hand and sitting using four chairs."
+    "She sat listlessly tapping the end of her pen on the hard wood table. She didn’t look up to meet my gaze, though if not wanting to engage or too lost in thought, I wasn’t sure. Still, though, I decided to make the first move."
+    MC "Hey..."
+    AE "Hello."
+    "After responding, she stopped tapping her pencil and looked up at me. She looked tired, exhausted, and yet... as though she was completely lost in her own mind."
+    MC "Are you busy?"
+    AE "I feel like I should be."
+    MCT "Like you should be? Should be busy? When is... Shiori ever not busy?"
+    MC "Like you should be? Well, what do you mean?"
+    show AE angry
+    AE "I’m not doing enough. I need to be more busy but..."
+    show AE sad
+    AE "I don’t know what I need to do at the moment. I’ve done what I needed to for a recent..."
+    show AE angry
+    AE "Issue."
+    show AE neutral
+    AE "Now it’s just a matter of sitting back and waiting."
+    "As Shiori sighed, she leaned back in her chair and began to massage the area between her eyes with her hand."
+    MC "So, what happened?"
+    show AE angry
+    AE "I’ve found in recent days there’s been a marked anomaly in how much of the allocation of funds is being tracked and reported."
+    MC "Allocation of... wait, like, someone has been stealing money?"
+    AE "No. It’s that money is going to school functions that it shouldn’t be. More than what was agreed on at our meetings."
+    AE "I estimate that it’s been like that for the past three weeks."
+    MC "Oh... I um... are you alright?"
+    AE "I wasn’t giving due diligence to my work aaannnd... this happens."
+    show AE sad
+    AE "So, yeah. I’m... admittedly not doing well."
+    MC "Do you know who all is behind it?"
+    show AE angry
+    AE "I’ve been combing over the records of the past few months to figure that out. The obvious answer would be to look at the clubs where the funds were spent,"
+    AE "but I can’t discount possible attempts at smokescreening and misdirection. I handchose-"
+    "Before Shiori could finish her sentence, she clenched her fist and scowled angrily as she dug her other into the arm of the chair."
+    show AE sad
+    AE "I handchose my subordinates for their intellect and principles. The idea that they would betray me..."
+    AE "It seems my judgement has failed."
+    if getSkill("Academics") > 13:
+        MC "What if there was an oversight?"
+        AE "An oversight?"
+        MC "Right, like instead of there being intentional manipulation, there was a mix up in some of the records?"
+        AE "I’ve considered that possibility but..."
+        AE "..."
+        MC "But... what?"
+        AE "... Why wouldn’t they betray me? It’s obvious they don’t like me, and I’ve given them ample opportunity to act behind my back as they please."
+        MC "Obvious? The council has always been at your beck and call."
+        AE "I chose my cabinet, but not the entire council. Either this is a case of GRIM incompetence, or outright malice."
+        AE "At the moment, I’m more inclined to assume the latter. As I mentioned, when assigning members, I chose those with strong moral principle and intellect."
+        AE "Now, assuming I was incorrect on the first, then the latter has turned from an important asset to a dangerous tool."
+        AE "When I consider the fact that the cabinet has knowledge on how I think about and approach problems, as well as expertise in organizing and allocating resources,"
+        AE "and even the slightest weakness on my end could be fatal in giving them an opportunity to do ill if desired."
+    MC "Does anyone else know?"
+    AE "I haven’t let on I know about anything to anyone, no."
+    MC "What about Yuki?"
+    AE "She and Minori are absolutely blameless in all this. They’ve been pillars that keep the student council together."
+    AE "But... Yuki’s growth has now become too much of an impediment for her. She’s taking a break from her duties to focus on her sign language courses; all of the work has fallen to Minori and I."
+    AE "They’re a genius, no doubt, but even they have limits, and those limits are being tested."
+    AE "At the current moment, there are few I can trust, however. Even they might..."
+    "She cut herself off before she could continue, looking down at the ground before resting a hand on her head and another on her ample behind."
+    AE "Why is this all happening? I just feel like- like everyone's turning against me."
+    AE "Whenever I try to do my job, students just defy me, documents have been piling up, and I’ve been having to deal with constant harassment from disgruntled students for things I can’t control!"
+    AE "It’s reprehensible, it... it sucks!"
+    AE "It’s bullshit! Complete bullshit!"
+    MCT "Holy shit... I knew she was feeling down recently but... this is a whole nother level. I haven’t heard her swear that flagrantly or... loudly before."
+    AE "C’mon, Shiori... keep calm."
+    MC "Hey um... do you need some time alone? Like, just to vent?"
+    AE "N-No! Or... yes?"
+    "She stood up, putting her hands on the table as she exhaled in exhaustion and desperation, pushing her rear far out behind her as she tried to keep her balance."
+    $setAEOutfit(OutfitEnum.BEND)
+    AE "I don’t know... things have just seemed... wrong recently. Like everything's just falling out of control."
+    MC "Not being in control all the time is a natural part of life. People seeing you not being in control is a natural part of opening up."
+    AE "I..."
+    AE "I don’t think I like it."
+    MC "Not being in control all the time? I mean, I guess that can make sense if you’re so used to it."
+    AE "Considering the actual nature of some of the things I can’t control..."
+    "She looked back at her behind as her face reddened, slowly, she stood up as she pushed her butt out, leaving its enormity on display."
+    $setAEOutfit(OutfitEnum.DEFAULT)
+    MC "Ah... right... that’s part of what I wanted to talk about. So... about what’s been happening recently considering your growth."
+    MCT "Shit, what am I even supposed to say? Sorry your ass is so big that you have to bend over to walk? Sorry everyone is gawking at you?"
+    AE "... Yeah?"
+    MC "I know that what’s been going on recently is hard-"
+    AE "You can say that again."
+    MC "Right, but... you need to trust that everything will be okay. This will all pass. That you are strong enough to weather this."
+    AE "How do I know I can trust myself?"
+    menu:
+        "If you can't trust yourself, who can you trust?":
+            MC "I mean, you gotta at least trust yourself. If you can’t trust yourself, who can you trust?"
+            AE "..."
+            AE "You’re right."
+            AE "Who can I trust?"
+            $setAffection("AE", -2)
+            MCT "It looked like what I said devastated her. I don’t think she took that the way I hoped she would..."
+        "It's your duty to.":
+            MC "It’s your duty to. It comes with the territory of your position, after all."
+            AE "Which is the point!"
+            MC "..."
+            AE "... I’m sorry. I didn’t mean to shout."
+            MC "It’s okay. I understand."
+            AE "Uch... I know you’re right, it’s just... keeping that in mind is always difficult."
+        "You can't. But you can trust me.":
+            MC "You can’t. You can’t just trust and rely on yourself always, but I’m here for you... and you can trust me."
+            MCT "That... didn’t at all come off how I wanted it to. I feel like something about what I said is on the right track, but..."
+            MC "I-I don’t mean to say that I’m your only friend, or that I know what’s best for you, just like... I’m there for you."
+            AE "... I... I can trust you, right?"
+            $setAffection("AE", -1)
+            MC "Of course."
+    "Shiori stumbled forward a bit as I went to catch her, but she held her hand out to stop me. She stabilized herself, despite her hefty size, and stood up straight to meet my eyes."
+    MC "So... what now?"
+    AE "I don’t know, but I do know this."
+    AE "I have my dignity to uphold. Even if my shame is on full display."
+    AE "And {i}no-one{/i} will take that from me. If I have nothing... I have a job to do. And as long as I have that, I have my pride."
+    "I nodded in agreement, unsure of just the full extent of what she was saying but... she seemed in better spirits. Even if only more driven."
+    AE "Until then, please... if my presence is at all an inconvenience, don’t be afraid of distancing yourself from me."
+    MC "Of course I won’t. You’re not an inconvenience, no matter how many stares I get, I’ll always be happy to be with you."
+    AE "M-Mm..."
+    AE "Well, um, thank you. For now, though, I need to get back to work, so..."
+    MC "O-Oh! Of course, yeah."
+    AE "I’m sorry."
+    MC "Nah, nah, it’s fine, I’ll get out of your hair."
+    "She gave me a weak smile as I nodded and exited the office into the library, a few students looking up to the door as I did before looking back down to their books."
+    MCT "Tomo... I really hope you’re right."
+    jump daymenu
+
+label AE081:
+    $setProgress("AE", "AE082")
+    scene Classroom with fade
+    play music Schoolday
+    show HR neutral with dissolve
+    "As Tashi-sensei wrote on the board, I peered over at Honoka, who met my gaze for a moment. She smiled, and yet I could tell she found herself in the same position as me; more or less lost."
+    "I had to crane my neck in order to peer past Shiori’s all encompassing booty and check the assignment written on the board. Shiori, having finished with her notes, simply sat with her head in her hand as she tapped her pencil."
+    HR "Everyone get the assignment? Yeah? If that’s all, then class is dismissed."
+    show HR neutral at altMove(0.5, 0.85)
+    show AE pondering at Position(xcenter=0.25, yalign=1.0) with easeinleft
+    AE "..."
+    "There was a moment of trepidation as everyone began to stand up, only to pause before doing so as Shiori remained seated and silent."
+    HR "... Uh..."
+    show AE surprised-2 at Transform(xzoom=-1)
+    AE "H-Huh? Oh, right, stand."
+    show AE neutral
+    "Caught off guard, the class stood as quickly as they could, Aida struggling to get on her feet for a moment."
+    PRG "Eep! Unnf- guuh-"
+    AE "Bow."
+    PRG "Wai-"
+    "We all bowed as Aida simply looked on, mouth open to speak up as the class bowed and began to head out. Aida finally managed to get up, but wound up unable to bow."
+    PRG "Mmf. Nnn..."
+    WG "Don't strain yourself, dear, it's not good for the babies..."
+    "Defeated, she settled for a tiny nod as she arched her back back and began to waddle out of class. Honoka followed suit, but seemed to hesitate as she looked back at me,"
+    "but ultimately exited after doing her best to heave her massive jugs past the exit without incident."
+    "I sighed and looked over my notes, hoping to fill in the blanks by reading up tonight with Shiori. I turned around to talk with her,"
+    "however it seemed that she’d been talking to Tashi-sensei for a few moments before I was able to hear exactly what the context was."
+    HR "U-Um..."
+    HR "If I’m gonna be completely honest... that’s a bit beyond me."
+    show AE sad
+    "Shiori was taken aback for a moment, but she quietly bowed as she accepted his response."
+    AE "Y-Yes, I... apologize, sir."
+    HR "No worries, just... make sure to focus on your school work, okay?"
+    AE "Of course. I just... I’m simply a bit overwhelmed."
+    HR "I get you, but maybe something to help you focus would do well; something to keep your mind off of things going on around you."
+    AE "Something to help me focus... focus... alright. Thank you, sir."
+    show AE neutral at Transform(xzoom=1)
+    "She turned around to greet me with a tired smile."
+    MC "Ready to go?"
+    AE "Actually, I might be a bit busy, but um-"
+    HR "Oy, Hotsure-san. C’mere for a second."
+    "I turned to see Tashi-sensei looking over in my direction, I bowed before turning back to Shiori."
+    MC "Seems like I am too. No worries, we’ll catch up later."
+    AE "Mm."
+    hide AE with easeoutleft
+    "Though I had a few things I wanted to tell her, or at least try to pick her mind, I nevertheless headed Tashi-sensei’s call as Shiori walked out of the room as best she could."
+    MC "You wanted to see me, sir?"
+    show HR neutral at altMove(0.8, 0.5)
+    HR "Yeah, sorry about that but this is really important."
+    "Tashi-sensei looked over my shoulder to make sure Shiori was out of earshot before sitting on his desk and sighing in exhaustion."
+    HR "Matsumoto-san has been acting... erratic, recently."
+    MC "Y-Yeah, I’ve heard."
+    HR "Can you tell me a bit about what’s going on?"
+    "I hesitated. I didn’t want to be sharing Shiori’s business but if it could help, even at all, I needed to take the chance."
+    MC "So, Shiori has been worrying a lot recently because of stress from work."
+    HR "Mhm, I figured."
+    MC "I’ve been trying to help but, you know, there’s only so much I can do on that front."
+    MC "But also... I feel like her growth is really taking a toll on her. Like how it’s affected her self esteem and worth."
+    HR "... Mhm."
+    MC "It’s like a feedback loop where her growth makes her do stuff that draws attention to herself, which causes people to treat her poorly, which makes her do things that draw attention to herself."
+    HR "And is that your concern; that she’s bringing a lot of attention?"
+    MC "Y- No, not at all. That’s not... that’s the least of my worries. I’m concerned with how he’s dealing with everything going on, and I feel like I’m the cause of a lot of her issues; like if I were never with her-"
+    HR "Oy, c’mon, don’t think like that. I don’t want you breaking down in my classroom."
+    MC "Ah... right, sorry."
+    HR "Anything else you can tell me?"
+    MC "I... I wish I knew more but... I don’t know if I have the full image."
+    HR "Nah, it’s okay, I get it. Todays just been kind of an eye opener, is all."
+    MC "An eye opener, sir?"
+    HR "You heard the last bit of that, right? When Shiori and I were talking?"
+    MC "Yeah, but... I didn’t manage to hear what you were talking about."
+    HR "Eh... maybe that’s for the best."
+    MCT "Should I press him?"
+    "I thought about it for a second, but ultimately decided not to speak up. If Shiori wanted to tell me, she would. As I was about to speak up to thank him for talking with me,"
+    "however, he cut me off by pointing at my book with a puzzled look on his face."
+    if getFlag("AE073_trial"):
+        HR "What’s that?"
+        MC "Huh? Oh. I dunno, it’s just some reading I’m trying to get through..."
+        HR "\"The Trial\" by... Franz Kafka?"
+        HR "Kid, this isn’t some light reading an eighteen year old just picks up in their free time, this is some heavy shit. Where did you find a translation of this in Japanese?"
+        "He picked up the book and began to thumb through it, looking over each page carefully to read through the writing."
+        HR "... Is this all in English?"
+        MC "Y-Yeah."
+        HR "Did Matsumoto-san know you took one of her books?"
+        MC "Well, yeah, it’s not like I was going to take her stuff without asking. She said I could borrow her books whenever I felt."
+        "Confused and concerned, Tashi-sensei looked at the cover once more deeply in thought."
+        HR "When on earth did Matsumoto-san pick up Kafka and why?"
+    elif getFlag("AE073_crime"):
+        HR "What’s that?"
+        MC "Ah, a book I borrowed from Shiori."
+        "I held it forward as he squinted to look at the cover, reading it slowly to take in the English."
+        HR "\"Crime and Punishment\" by... Dostoyevsky? Wait, isn’t that one...?"
+        MC "Huh?"
+        "Tashi-sensei brought his hand to his chin as his tongue recoiled a bit into his mouth."
+        HR "I did a report on that book in college. It’s a story about justification and guilt."
+        HR "... Guilt."
+        HR "... I think I was off the mark about what Shiori’s going through."
+        MC "What do you mean?"
+        HR "This is... way deeper than just worries and hormones. Has Shiori... done anything that she might feel guilty about?"
+        MCT "Anything she might feel guilty about?"
+        MC "I... don’t know. I’ll need to think on it."
+        HR "Well, don’t press her too much, okay?"
+        HR "I feel like I’ve really misjudged... a lot of things."
+    elif getFlag("AE073_gatsby"):
+        HR "Eheeey, Gatsby. That’s a classic."
+        MC "Huh?"
+        "I looked down at Shiori’s book and then nodded to Tashi-sensei with a light smile."
+        MC "Yeah, it’s pretty good so far. Shiori let me borrow it."
+        HR "Well nice. I hope you’re able to follow along."
+        MC "Yeah, the English isn’t too bad."
+        HR "Hmph, aye. I’m a bit of an English Literature buff myself. Shiori has some good tastes. I never got to the end, though. Maybe I oughta finish it one of these days."
+        MC "Well, I’ll make sure not to spoil you, sir."
+        HR "Appreciated, \"old sport\"."
+    HR "Take it easy, kid."
+    MC "You too, sir."
+    "With a respectful bow, I turned around and left class. Today was odd, but at the very least, I hoped it was at least insightful."
+
+    scene Hallway with fade
+    play music BE
+    show BE neutral with dissolve
+    BE "KEI-!"
+    MC "GAH-! Oh j- Honoka?"
+    BE "Haaaah, I love doing that."
+    MC "Haven’t gotten a spook from you in a while, damn."
+    "Honoka greeted me with a big, toothy grin as she arched her back for emphasis."
+    show BE unique
+    BE "Well it’s kinda hard when you’re luggin around boobage like this!"
+    MC "Eheh, yeah, that’s fair."
+    "She nodded, poking me in the shoulder before ushering me to the side."
+    BE "Anyways, I wanted to talk for a sec. You good?"
+    MC "Oh, sure, I’m always open for a talk."
+    MCT "I know I could sure use it right now."
+    "I walked alongside Honoka as she did her best to do a little skip, but the bouncing of her breasts made it much too difficult."
+    BE "Sooo what’s up?"
+    MC "Feh, the usual. Not too much going on. How about you?"
+    show BE wink
+    BE "I’m all good! I’m just chilin, not doing too much but gettin through classes! When Shi-chan is feeling better, could you see if she can help me out with my schoolwork?"
+    MC "When she’s better? Ah, so you’ve noticed something’s up."
+    BE "Weeeell-"
+    MC "Uh-oh."
+    BE "What-oh?"
+    MC "You usually only do that when I’m right."
+    show BE doubt
+    BE "N-Not completely! She’s just... really antsy, y’know? Is she mad about something?"
+    MC "Less mad and more... I dunno... it’s like she’s reacting to a bunch of stuff going on with increasing hostility."
+    BE "What happened?"
+    MC "Eh, life stuff."
+    show BE neutral
+    BE "Duh, life is stuff. I mean what’s going on?"
+    MC "Her growth has taken a toll on her recently, and I don’t know how to help."
+    BE "Oh. Yeah, I can see that going around at the moment. How about you? How have you been feeling?"
+    MC "Empty... desolate, you know?"
+    show BE sad
+    BE "Ah..."
+    MC "Like, I’m happy to have my friends, and my relationship with Shiori has been one of the best things to happen, but... I can’t help but feeling like there’s some kind of impending doom. Something I’m helpless to stop."
+    show BE neutral
+    BE "Hmm... well, maybe you can do something to clear your mind and figure things out?"
+    MC "Yeah, I might go for a walk later."
+    show BE wink
+    BE "Go for a walk? It’s colder than a witch's tit out, dude! You’re gonna get sick."
+    MC "Bah, I feel like I’ve gotten used to the cold recently."
+    BE "You don't have the same insulation most of us have. Don’t come crying to me when you start looking like a red nosed reindeer."
+    stop music
+    AE "Hey!"
+    show BE surprised with vpunch
+    BE "Eep!"
+    hide BE with dissolve
+    "Honoka jumped up and moved in closer to me as she heard Shiori shout, a few other students nearby turning their heads to see what was going on in the adjacent hallway. Honoka and I peered around the corner."
+    play music Tension
+    show AE angry-4 with vpunch
+    AE "I {i}saw{/i} you just throw that to the ground. Do you think I’m blind?"
+    Student "Huh? It’s just a wrapper, no big deal."
+    AE "Then pick it up."
+    Student "Get bent, like I care if-"
+    show AE angry-3
+    AE "10."
+    Student "Eh? What’s '10' supposed to-?"
+    AE "9. 8. 7-"
+    "I watched everyone in the area step back as I felt a paralyzing chill rush up my spine. As Shiori counted down, I saw the student she was chewing out freeze before panickedly scrambling to grab the wrapper, turning around, and running away."
+    AE "And no running!"
+    AE "..."
+    show AE angry-2
+    AE "Tch."
+    "Angrily, Shiori did her best to waddle away, her feet stomping on the ground as she kept her balance holding onto the wall. As she noticed everyone looking at her, she sheepishly turned around and spoke up."
+    show AE embarrassed
+    AE "U-Um... apologies for interrupting. Carry on."
+    hide AE with dissolve
+    "Once she got a few feet away, people began to talk amongst each other once again."
+    show BE surprised-2 with dissolve
+    BE "Holy shit."
+    MC "Yeah. I don’t know what’s going on either."
+    BE "Does she have mind control powers?"
+    MC "... Why was {i}that{/i} your takeaway?"
+    show BE doubt
+    BE "Well, you know what I mean though, right? She seems really out of it. Is there anything I can do to help?"
+    MC "Hmm..."
+    MCT "What could Honoka do?"
+    MC "Well, when possible... just let her know you appreciate her, okay?"
+    show BE happy
+    BE "You got it, tiger!"
+    MC "In a way that doesn't involve talking about how big her ass is!"
+    show BE wink
+    BE "Ah. Good thing you specified. Harder to do, but still manageable."
+    MC "I’m gonna go for a walk. I figure I have a lot to think about tonight."
+    show BE unique
+    BE "Red noooose!~"
+    MC "Baah."
+    "I shook my head as Honoka laughed to herself. Still, as I went to head out, she gave me a knowing smile, though concerned, and walked away. With that, I sighed as I put my hand on the doorknob to the courtyard and exited the hall to clear my mind."
+    jump daymenu
+
+label AE082:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

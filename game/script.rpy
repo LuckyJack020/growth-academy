@@ -138,6 +138,7 @@ init python:
         ATHLETICARCHERY = "athletic-archery"
         ATHLETICBASKETBALL = "athletic-basketball"
         ATHLETICSOFTBALL = "athletic-softball"
+        BEND = "bend"
         CASUAL = "casual"
         SWIM = "swim"
         SWIMSUIT = "swimsuit"
@@ -669,7 +670,7 @@ init python:
 
     def setAEOutfit(o):
         global AEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL:
             AEOutfit = o
 
     def setBEOutfit(o):
