@@ -8,9 +8,7 @@ label BE001:
     "Then again, there was another seat in the room that easily caught my attention, thanks to how big it was. It was without a doubt, the largest I'd ever seen, and now it was clear why."
     "Though, the teacher said not everyone's growth factor was visible right away, it could have been something else."
     "The classroom slowly started to empty out, and I made my way out of the room as well."
-    "There were two questions that ran through my head."
-    extend " First, what was going to grow on me?"
-    extend " Second, where was I? It was hard getting used to a new school so quickly."
+    "There were two questions that ran through my head.{w} First, what was going to grow on me?{w} Second, where was I? It was hard getting used to a new school so quickly."
     "I decided to walk around a bit, to get the lay of the land. Maybe if I lucked out I could find it..."
     scene Hallway with fade
     "The school seemed relatively normal, apart from the size and the people within. It didn't take me long to get the gist of where everything was. Hopefully I'd remember it all when tomorrow came around."
@@ -31,8 +29,7 @@ label BE001:
     MC "I guess not. My head's kind of all over the place after learning why we're here. How about you? You said you didn't know what this academy was for, right?"
     show BE neutral
     BE "Nope, no clue until teach explained it. It's so weird, don't you think something like this would be more public knowledge?"
-    MC "I'd say so. But, if it's only a small group of people affected by this weird growth hormone thing, maybe it's better to not cause a panic of people assuming they've got it."
-    extend " 'Oh gosh, I shot up two inches over the summer, I'm going to end up ten feet tall!'"
+    MC "I'd say so. But, if it's only a small group of people affected by this weird growth hormone thing, maybe it's better to not cause a panic of people assuming they've got it.{w} 'Oh gosh, I shot up two inches over the summer, I'm going to end up ten feet tall!'"
     show BE happy
     BE "Yeah I guess that makes sense. Still, it's a lot to take in. I have to say though, part of me is kind of excited. They didn't make it sound like it was a bad thing, just a bit of an inconvenience. Maybe I'll get something cool."
     BE "What do you think my growth factor is?"
@@ -51,11 +48,9 @@ label BE001_c1:
     show BE happy
     BE "Hehehe, I'm kidding, Kei-chan. Yeah, I'd say bigger boobs is definitely the most likely choice for me."
     BE "I guess you were never there to see them grow, were you? Wow, you really missed out. Then again, you'll probably be seeing a lot more of them if our hunch is correct!"
-    "It was pretty clear that Honoka wasn't all that upset about this situation."
-    extend " If anything, she looked pleased as punch, considering she lifted up her boobs like she was about to serve them on a silver tray."
+    "It was pretty clear that Honoka wasn't all that upset about this situation.{w} If anything, she looked pleased as punch, considering she lifted up her boobs like she was about to serve them on a silver tray."
     MC "Well if that is the case, hopefully I grow something big that you'll enjoy, too."
-    "..."
-    extend " What did I just say?"
+    "...{w} What did I just say?"
     show BE surprised
     BE "Kei-chan! To think you'd be so forward..."
     show BE surprised at center, Transform(xzoom=-1)
@@ -79,8 +74,7 @@ label BE001_c2:
     BE "Sure. Still, if it was my boobs, I wouldn't mind it."
     MC "You wouldn't? But you just said everyone at your old school mentioned them all the time."
     show BE angry
-    BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too."
-    extend " Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
+    BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too.{w} Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used to big boobs, anyway."
     show cg BE001
     pause 0.5
@@ -104,8 +98,7 @@ label BE001_c3:
     BE "Oh wow you still remember that! Haha I really did whoop you at all those games, didn't I? Still, huge feet? That's so weird. Imagine how many socks and shoes I'd need to buy!"
     MC "Well, regardless of what we end up getting, we'll all probably have to change our wardrobes eventually. Hopefully they'll help cover expenses."
     show BE neutral
-    BE "That'd be nice. Heh, though I doubt Alice would need the help, Little Miss Fancy down there."
-    extend " Then again, she's practically bursting out of her uniform already, so she's probably too lazy to get new clothing or something."
+    BE "That'd be nice. Heh, though I doubt Alice would need the help, Little Miss Fancy down there.{w} Then again, she's practically bursting out of her uniform already, so she's probably too lazy to get new clothing or something."
     MC "Maybe. Hm, I guess you could get a big long tongue, too. That wouldn't require new clothes."
     show BE sad
     BE "Yeah but then it'd be hard to talk with you. That'd stink."
@@ -548,8 +541,7 @@ label BE005:
     MC "Hair."
     show BE surprised
     play music Schoolday
-    BE "..."
-    extend " Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
+    BE "...{w} Really? That's it? Huh, I was hoping for something a little stranger. Is that why you've always got your bangs covering your eyes then?"
     MC "I guess so? I've never really noticed it before if that's the case. I mean, I suppose I might have gotten haircuts a bit more often but it wasn't really something I paid much attention to."
     show BE neutral
     BE "That's fair. Me on the other hand, I've known what I was going to be growing for a while now."
@@ -7052,10 +7044,7 @@ label BE038B:
             jump BE038B_c1_2
 
 label BE038B_c1_1:
-    MC "Honoka's our champ, brighter than a lamp!"
-    extend " She can win the team this game and put it on a stamp!"
-    extend " Power-hungry Inoue, she can so go all the way!"
-    extend " Swing that bat and hit the ball to make her teammate's day!"
+    MC "Honoka's our champ, brighter than a lamp!{w} She can win the team this game and put it on a stamp!{w} Power-hungry Inoue, she can so go all the way!{w} Swing that bat and hit the ball to make her teammate's day!"
     MC "Goooooooo Honoka!"
     "I grabbed Honoka's wrists and threw them up in the air to get her cheering along with me. My cheeks were beet red as she giggled and giggled."
     BE "Hehehehehe, oh, Kei-chan. You're not exactly cut out for the poetry club but I liked it. Thanks. I'll do my best!"
@@ -7063,10 +7052,7 @@ label BE038B_c1_1:
     jump BE038B_c1_after
 
 label BE038B_c1_2:
-    MC "Honoka's the beauty queen who'll make her debut on the scene!"
-    extend " She'll win this game and get her fame and be the hottest dame!"
-    extend " Her bust will bust their heads and send them crawling to their beds!"
-    extend " I'll share a kiss to give her bliss and make sure she won't miss!"
+    MC "Honoka's the beauty queen who'll make her debut on the scene!{w} She'll win this game and get her fame and be the hottest dame!{w} Her bust will bust their heads and send them crawling to their beds!{w} I'll share a kiss to give her bliss and make sure she won't miss!"
     MC "Goooooooo Honoka!"
     "Then I quickly pecked her on the lips as I held her hands. My cheeks were fairly pink from the cheesy lines I'd come up with. But Honoka's were even more red."
     show BE aroused
@@ -8311,8 +8297,7 @@ label BEGTS004_c1_after:
     "When she shifted her stance in response to Honoka shouting, the shadows that spread across the courtyard moved in response."
     PRG "H-Hi, Inoue-san. It's been a while since we've hung out, hasn't it?"
     BE "Sure has! C'mon, have a seat."
-    PRG "...Oh? You're certain? I wouldn't want to interrupt anything..."
-    extend " or anything..."
+    PRG "...Oh? You're certain? I wouldn't want to interrupt anything...{w} or anything..."
     BE "Pff, you're not interrupting. Right, Yamazaki-chan?"
     GTS_S "Not at all. I actually had something I'd like to discuss with you, Kodama-san."
     PRG "With me? O-Okay..."

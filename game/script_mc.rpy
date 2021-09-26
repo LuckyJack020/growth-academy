@@ -82,8 +82,7 @@ label global000:
     hide Tomoko with dissolve
     Takamura "And, your name, please?"
     MC "Keisuke Hotsure."
-    Takamura "Another Hotsure? Okay... one second..."
-    extend " Ah! There you are."
+    Takamura "Another Hotsure? Okay... one second...{w} Ah! There you are."
     "The teacher turned and glanced off at the group of students who were already almost out of sight."
     Takamura "Well, looks like they were a little eager to get a move on. Just follow this path here all the way down."
     MC "Alright. Thank you very much."
@@ -116,11 +115,11 @@ label global000:
     "Ahead of me, I spotted a flash of pure white. A young woman was bent down beside the river, trawling one hand through the water."
     MCT "Oh, thank God."
     MC "Excuse me!"
-    show BE doubt with dissolve
+    show BE neutral with dissolve
     "The girl looked up from the river in surprise as I bounded up to her, panting and out of breath."
     play music BE
-    MC "Hey! Hi, uh..."
-    extend " heh... Sorry, one sec..."
+    MC "Hey! Hi, uh...{w} heh... Sorry, one sec..."
+    show BE confused
     "As I knelt over with my hands on my knees, panting from the heat, I got a better look at the woman I was addressing."
     "Her face looked soft and feminine, though it was hard to tell based on the confusion plastered on her face; her brown eyes complimenting her chin-length mahogany hair well."
     MC "Sorry about that. Uh... do you know where the school is around here?"
@@ -129,7 +128,6 @@ label global000:
     MC "Yeah. Seichou Academy? I think I took a wrong turn or something on my way here."
     UNKNOWN "Uh..."
     pause .5
-    show BE confused
     UNKNOWN "Oh, wait! Are you with the new students?"
     MC "Yep. I got here like, half an hour ago."
     show BE neutral
@@ -153,7 +151,7 @@ label global000:
     MCT "..."
     MCT "Oh my god. There's no way."
     MC "...So, how did that all-girls' school treat you?"
-    show BE doubt
+    show BE confused
     BE "...Excuse me? How did you know I went to an all-girls' school?"
     "I bit my bottom lip and put my hands into my pockets, shrugging off her question."
     MC "Because you never forget the girl who kicks your ass in a Beetle Fighting Tournament-"
@@ -515,7 +513,6 @@ label global000_WG:
     show WG angry
     WG "Do try to hurry now, if you'd please."
     WG "I would like to go get something to eat, but I'll miss the opportunity if we tarry any further."
-    "I followed Alice's gaze. Across the room, another girl was walking awkwardly, a large globe in her arms."
     hide WG
     show PRG neutral at Position(xpos=0.75, xanchor=0.5)
     with dissolve
@@ -595,6 +592,7 @@ label global000_RM:
     "A moment later, my phone buzzed in my hand."
     TomokoCell "Yeah."
     MCCell "Good. Meet your roommate yet?"
+    scene Dorm Hallway with fade
     "Another few steps, capped off with a vibrate."
     TomokoCell "Mhm."
     MCCell "Cool. Let me know if you need anything."
@@ -666,8 +664,7 @@ label global000_RM_c3:
     MC "Whoa, whoa! Can we just talk for a sec? I’m not with the-"
     RM "That’s what you want me to think! I’m not for it! Daichi Utagashi will not go down without a fight!"
     "He leaned down and clutched two more bags, a mess of papers and cloth sticking through one of the zippers."
-    "Daichi leaned over to throw one, and in a panic..."
-    extend " slipped and threw himself straight over the edge, somehow managing to catch the rail in one flailing hand."
+    "Daichi leaned over to throw one, and in a panic...{w} slipped and threw himself straight over the edge, somehow managing to catch the rail in one flailing hand."
     #show new RM cg here
     RM "Gah! Rgh, dammit!"
     "I heard the sound of the bag hitting the ground, but all I saw was his knuckles ratcheted onto the railing."
@@ -962,8 +959,7 @@ label global000_sit_c3_2:
     MCT "Geez. It’s like she’s never spoken before."
     pause .25
     MC "So... nervous about starting at a new school?"
-    PRG "A little..."
-    extend " yeah."
+    PRG "A little...{w} yeah."
     MC "I can relate to that. It is definitely different."
     PRG "Yeah..."
     pause 1
@@ -1066,14 +1062,14 @@ label global000_homeroom:
     "Eventually we all took our seats, looking around at the sparse classroom. All the usual educational aids seemed to be on shelves or set into the wall, making the room seem even more like an empty box than it already was."
     "If not for the teacher's lectern at the front of the class, you'd be forgiven for thinking we were in a pen instead of a classroom."
     "Finally the bell rang, and at the last possible second one could enter and not be late, our homeroom teacher slid open the door and entered."
-    show HR unique with dissolve
+    #show HR unique with dissolve REMOVE WHEN UNIQUE SPRITE IS READY
     MCT "'Dour' is the first word that comes to mind... Guy looks like he's been middle-aged his entire life."
     "The man was tall, thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
     "{i}Tashi{/i}"
     "Tashi-sensei dropped the chalk back on the tray, turned to us, and stepped forward, leaning against the lectern."
     stop music
     HR "..."
-    hide HR with dissolve
+    #hide HR with dissolve
     show GTS neutral with dissolve
     GTS "..."
     hide GTS with dissolve
@@ -1083,7 +1079,7 @@ label global000_homeroom:
     hide RM with dissolve
     HR "..."
     MC "..."
-    show HR neutral
+    show HR neutral with dissolve #remove with dissolve when unique sprite is ready
     "Without a word, Tashi-sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
     hide HR
     show AE surprised
@@ -1543,8 +1539,7 @@ label RM002_c2_2:
 label RM002_c2_3:
     MC "I wouldn't go in there. They're... de-roaching."
     UNKNOWN "Roaches? In just the one classroom?"
-    MC "..."
-    extend " Yes."
+    MC "...{w} Yes."
     show Yuki sad
     UNKNOWN "...Hmm."
     "Suddenly, the door opened."

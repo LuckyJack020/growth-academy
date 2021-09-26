@@ -66,8 +66,7 @@ label GTS001:
 
 label GTS001_c1:
     GTS "It is a little concerning, I will admit; however, I think some of those feelings come from the suddenness with which we were introduced to this world, as it were."
-    GTS "I'm sure if we take more time to reflect on it and take it in, the situation won't feel quite so frightening."
-    extend " Thank you for asking, though."
+    GTS "I'm sure if we take more time to reflect on it and take it in, the situation won't feel quite so frightening.{w} Thank you for asking, though."
     MC "No problem. We're in this together after all, right?"
     GTS "I daresay that is a wise and uncommon sentiment. I agree."
     jump GTS001_after
@@ -433,8 +432,7 @@ label GTS005_c2:
     "I rose my arms in a zombie like pose and made a rattling noise in my throat which caused her to flinch just slightly."
     show GTS sad
     GTS "I... hope you do not plan on actually doing that."
-    MC "Heh... Not a fan of horror movies then, huh? Well don't worry, I'm mostly teasing, I wouldn't actually do that."
-    extend " Well okay, maybe on Halloween."
+    MC "Heh... Not a fan of horror movies then, huh? Well don't worry, I'm mostly teasing, I wouldn't actually do that.{w} Well okay, maybe on Halloween."
     GTS "..."
     MC "Basically though, my hair is going to grow a lot and rather quickly too. So, I had better learn how to cut my own hair, or else I'll be spending a ton of money just so people can see me."
     show GTS neutral
@@ -1442,9 +1440,7 @@ label GTS013_c3:
     GTS "Oh, I see. Very good."
     "She took the ball between her hands and rolled it tight, pausing every so often to press in each side."
     "With the dough formed into a near-perfect sphere, she cupped it in her hands over the floured mat..."
-    "{i}pap{/i} "
-    extend "{i} pap{/i} "
-    extend "{i} pap{/i} "
+    "{i}pap{/i}{w}{i} pap{/i}{w}{i} pap{/i} "
     "...And sort of just let it plop down out of her hands, repeatedly, until it formed what could, with some trepidation, be described as like a brick."
     show PRG worried at Transform(xzoom=-1) with dissolve
     "As she was absorbed in this, I caught a glimpse of Aida's eyes diverting to the wall clock and her slight frown."
@@ -2529,16 +2525,12 @@ label GTS022:
             jump GTS022_none
 
 label GTS022_frost:
-    MC "His house is in the village, though; "
-    extend " he will not see me stopping here to watch his woods fill up with snow."
+    MC "His house is in the village, though;{w} he will not see me stopping here to watch his woods fill up with snow."
     show GTS surprised with dissolve
-    MC "My little horse must think it queer to stop without a farmhouse near,"
-    extend " between the woods and frozen lake, the darkest evening of the year."
-    MC "He gives his harness bells a shake to ask if there is some mistake. "
-    extend " The only other sound's the sweep of easy wind and downy flake."
+    MC "My little horse must think it queer to stop without a farmhouse near,{w} between the woods and frozen lake, the darkest evening of the year."
+    MC "He gives his harness bells a shake to ask if there is some mistake.{w} The only other sound's the sweep of easy wind and downy flake."
     show GTS aroused with dissolve
-    MC "The woods are lovely, dark and deep."
-    extend " But I have promises to keep, and miles to go before I sleep."
+    MC "The woods are lovely, dark and deep.{w} But I have promises to keep, and miles to go before I sleep."
     MC "And miles to go before I sleep."
     "I let the silence hang a moment, as I deemed was fitting. As I looked across at Naomi, and gave thanks to whatever spirit helped me recite that piece from memory, I took in her swimming eyes and speechless, just-parted lips."
     GTS "Heavens, I don't quite know what to say. That was beautiful."
@@ -2554,8 +2546,7 @@ label GTS022_frost:
     jump GTS022_c2
 
 label GTS022_nijou:
-    MC "...During a spring festival,"
-    extend " blossoms shine bright, and when the wind is at peace,"
+    MC "...During a spring festival,{w} blossoms shine bright, and when the wind is at peace,"
     MC "I will bow my head and pray."
     MC "...Wow, I just realized how much of a showoff I must sound like."
     GTS "Not at all. I should think it perfectly appropriate under the circumstances."
@@ -2567,9 +2558,7 @@ label GTS022_nijou:
     jump GTS022_c2
 
 label GTS022_limerick:
-    MC "...who died and ascended to heaven."
-    extend " But he cried, 'This is Hades!"
-    extend " There are no naughty ladies,"
+    MC "...who died and ascended to heaven.{w} But he cried, 'This is Hades!{w} There are no naughty ladies,"
     show GTS surprised
     extend " and the pubs are all shut by eleven.'"
     show GTS angry
@@ -2618,8 +2607,7 @@ label GTS022_c2:
 
 label GTS022_invite:
     $setFlag("GTS022_scribe")
-    MC "..."
-    extend " Actually, though..."
+    MC "...{w} Actually, though..."
     GTS "Hm?"
     MCT "I have a feeling she might like a little more authentic approach."
     MC "There's supposed to be a scribe who writes stuff down and, like, arbitrates the rules, right?"
@@ -2800,8 +2788,7 @@ label GTS022_scribe:
         MC "Right, sorry. Lemme try that one again."
         MC "Uh... earthworm swimming up, up again on mother's wings, her young ones to feed."
         "Shiori nodded."
-    "At once I saw Naomi's gaze float up and away from us, while her oscillating fingers gently pinched her skirt."
-    extend " She pondered a moment or two more after Shiori finished writing, then raised a finger."
+    "At once I saw Naomi's gaze float up and away from us, while her oscillating fingers gently pinched her skirt.{w} She pondered a moment or two more after Shiori finished writing, then raised a finger."
     GTS "Let us dine in kind someday soon, and bestow each other kinship."
     show GTS sad with dissolve
     GTS "Oh, drat, that's too long."
@@ -2838,8 +2825,7 @@ label GTS022_c4a:
     GTS "Well..."
     pause 1
     GTS "Hmm..."
-    GTS "Ah! The high chill may stay a while, 'till..."
-    extend " 'till, um..."
+    GTS "Ah! The high chill may stay a while, 'till...{w} 'till, um..."
     show AE neutral-eyebrow
     GTS "'Till off it goes its own way."
     "I barely caught Shiori giving me a stony yet expectant glance, but it was gone like the flicker of a candle."
@@ -2867,8 +2853,7 @@ label GTS022_c5a:
     GTS "She awaits among cedars, roots below, her leaves in heav-"
     GTS "No."
     GTS "She awaits among cedars, roots below, leaves in heaven."
-    AE "I think that lingers a bit too long on the theme of nature..."
-    extend " but I don't think any harm will come if we overlook that."
+    AE "I think that lingers a bit too long on the theme of nature...{w} but I don't think any harm will come if we overlook that."
     GTS "No, no, you were right. I think I can fix it."
     pause 1
     GTS "Her face is like a blossom, yet in her hands rests my heart."
@@ -2890,8 +2875,7 @@ label GTS022_c6a:
     GTS "Hmm..."
     GTS "Ahh..."
     "Shiori looked down at the notebook with her pen perched."
-    GTS "Behold..."
-    extend " on the mountainside, a cane, a cloak, and a hearth."
+    GTS "Behold...{w} on the mountainside, a cane, a cloak, and a hearth."
     menu:
         "Keep going":
             jump GTS022_c7a
@@ -3052,8 +3036,7 @@ label GTS022_noscribe:
         GTS "I forgot the cutting word."
         MC "Oh, um... yeah."
         GTS "Bother. Hmm..."
-    MC "Well hey, what about..."
-    extend " like..."
+    MC "Well hey, what about...{w} like..."
     MC "Take us under wing, we below and nests above; haze again rolls off."
     GTS "Ah, yes, that fits the bill."
     GTS "Actually, would you mind if I composed the waki? I know it's unorthodox, but I feel I have a good idea."
@@ -3140,8 +3123,7 @@ label GTS022_c4b:
     GTS "Well..."
     pause 1
     GTS "Hmm..."
-    GTS "Ah! The high chill may stay a while, 'till..."
-    extend " 'till, um..."
+    GTS "Ah! The high chill may stay a while, 'till...{w} 'till, um..."
     GTS "'Till off it goes its own way."
     menu:
         "Keep going":
@@ -3191,8 +3173,7 @@ label GTS022_c6b:
     show GTS sad with dissolve
     GTS "Hmm..."
     GTS "Ahh..."
-    GTS "Behold..."
-    extend " on the mountainside, a cane, a cloak, and a hearth."
+    GTS "Behold...{w} on the mountainside, a cane, a cloak, and a hearth."
     menu:
         "Keep going":
             jump GTS022_c7b
@@ -3340,12 +3321,7 @@ label GTS023:
     show Ryoko neutral
     Ryoko "Hotsure-san, I left a black pen with some of the other props back by the parking lot, it's from the bank on Genki street. Would you mind going to get it, please?"
     MC "...What about the one you're holding?"
-    Ryoko "Con"
-    extend "ti"
-    extend "nu"
-    extend "i"
-    extend "ty."
-    extend " It needs to be the exact same pen she had from the previous scenes. Plus, it has symbolic value for the character's role in the story, y'see? She's taking account of our protagonist's feelings."
+    Ryoko "Con{w}ti{w}nu{w}i{w}ty.{w} It needs to be the exact same pen she had from the previous scenes. Plus, it has symbolic value for the character's role in the story, y'see? She's taking account of our protagonist's feelings."
     MC "Ah, alright, I get it. Yeah, I'll go grab it."
     Ryoko "Thanks. No need to sprint, but we've only got this lighting for another forty-five minutes, so try not to dawdle."
     "I gave her another affirmative as I walked off toward the parking lot."
@@ -3412,8 +3388,7 @@ label GTS023_c1_2:
     MC "Uh huh. So, what're the cookies for?"
     GTS "Just a little gift for you, Tanaka-san, and everyone working on the set."
     GTS "I didn't quite feel comfortable lending a hand directly, but I have been practicing my baking. I thought providing some refreshments would be a neighborly thing to do."
-    "She re-wrapped the remaining cookies on the platter with a large cloth napkin and bent down to pick up the fallen cookies."
-    extend " It occurred to me that was the first time her eye level had been lower than mine in a good while."
+    "She re-wrapped the remaining cookies on the platter with a large cloth napkin and bent down to pick up the fallen cookies.{w} It occurred to me that was the first time her eye level had been lower than mine in a good while."
     MC "Well, that's thoughtful of you. We're currently on take fifty bajillion of one scene, so I think everyone could use a cookie about now."
     GTS "Really, now? It seems refreshments really are in order."
     MC "For sure. And since I got what I needed here, shall we go meet the director?"
@@ -3585,8 +3560,7 @@ label GTS024:
     show GTS neutral with dissolve
     "I stepped away from the fence to see Naomi kneeling by her verbena planters, her skirt a gentle blue cascade over her knees and the watering can tipped nearly sideways, dribbling over the soil by her gentle hand."
     MC "Think it'll rain?"
-    GTS "Hmm... "
-    extend " It might. I believe it will be gentle if it does."
+    GTS "Hmm...{w} It might. I believe it will be gentle if it does."
     MC "Next time maybe you could let me do that."
     GTS "Perhaps, if you so wished."
     MC "Yeah. I mean, I probably can't do it like you, but... I've had some time to observe your technique."
@@ -3692,9 +3666,7 @@ label GTS024:
     "In a desperate bid not to look like a massive creep, I set my backpack down and leaned against the wall. Momentarily I thought to take out my phone to flip through for good measure."
     "A minute or two went by. So did a number of hopefully inconsequential emails."
     MCT "Did she lose the thing, maybe?"
-    MCT "Maybe she ran into Tanaka-san or..."
-    extend " um..."
-    extend " her roommate, what was her name?..."
+    MCT "Maybe she ran into Tanaka-san or...{w} um...{w} her roommate, what was her name?..."
     "*plip*"
     "Quiet as everything was, I only just heard something small and wet hit the ground a few inches to my left."
     "To my relief, it {i}wasn't{/i} rain, but I couldn't explain how a tiny, dampened, off-white wad of notebook paper had appeared at my side. There was no one nearby and the wind wasn't strong enough to blow it around."
@@ -3706,8 +3678,7 @@ label GTS024:
     BE "Let them come. I have enough wads to hold this dorm against a thousand men."
     "I one hundred percent believed her."
     "To demonstrate her point, she produced a third spitball, licked it, loaded it into her straw, and fired it at me with a steely gaze and a puff of her cheeks. It missed, splatting against the wall and tumbling down."
-    BE "Dangit."
-    extend " Anyway, whatcha doing Kei-chan?"
+    BE "Dangit.{w} Anyway, whatcha doing Kei-chan?"
     MC "Helping Yamazaki-san with her garden. She's getting something from her room, I'm just waiting out here."
     BE "Ooh, mysterious!"
     MC "Heh, far as I know she's just going in to get an eyedropper. Drip some plant food on one specific patch, y'know?"
@@ -3720,8 +3691,7 @@ label GTS024:
     BE "Better take cover under the awning, Kei-chan. You're so sweet doing all this for your girlfriend, you must be made of sugar. You'll melt~"
     MC "Thanks for the tip."
     "She gave me a sharp salute, a dainty little wave, and slid her window closed. I took her advice and moved."
-    "I played over what Honoka said once or twice in my head."
-    extend " Then, as raindrops began to dot the now stony-smelling ground, it occurred to me to take my umbrella out and have it ready."
+    "I played over what Honoka said once or twice in my head.{w} Then, as raindrops began to dot the now stony-smelling ground, it occurred to me to take my umbrella out and have it ready."
     pause 1
     MCT "..."
     MCT "I forgot the damn thing in my room."
@@ -3753,8 +3723,7 @@ label GTS024:
         scene black with fade
         pause 2
         scene Dorm Exterior with fade
-        "I fear I ended up forcing Naomi to wait some time as well. I searched every nook and cranny of my dorm that I could conceive in the quest for my umbrella... "
-        extend " ultimately to find it in my raincoat pocket."
+        "I fear I ended up forcing Naomi to wait some time as well. I searched every nook and cranny of my dorm that I could conceive in the quest for my umbrella...{w} ultimately to find it in my raincoat pocket."
         "This done, I hastened to beneath the awning where Naomi was standing, hands folded in front of her thighs and eyes cast aloft to the sky."
         show GTS neutral with dissolve
         GTS "You found it?"
@@ -3770,9 +3739,7 @@ label GTS024:
         show GTS embarrassed with dissolve
         GTS "It might be considered a bit uncouth..."
         MC "You? Having uncouth thoughts? Please, do tell."
-        GTS "Well, what if we were to walk over there together?"
-        extend " At the same time... "
-        extend " under my umbrella?"
+        GTS "Well, what if we were to walk over there together?{w} At the same time...{w} under my umbrella?"
         "Some air caught in my chest for a second and I prayed the clouds obscured the blush I could feel coming on."
         if getSkill("Academics") > 1:
             MC "On the contrary, that sounds like a perfectly lovely idea."
@@ -3793,8 +3760,7 @@ label GTS024:
         "It looked like just slightly more than enough room for me. I stepped inside it, and without a word, took a few slow steps forward."
         "She indeed matched my pace rather well, though the space under the umbrella necessitated that we stay quite close together."
         "I could just see a hint of her arm in my peripheral vision, and the swish of her skirt as she walked caused it to occasionally brush against my lower back."
-        "She didn't say a word, though."
-        extend " I couldn't say why it occurred to me, but I couldn't hear her breathe, either. The only thing between us was the soft pitter-patter of rain just a little ways over my head."
+        "She didn't say a word, though.{w} I couldn't say why it occurred to me, but I couldn't hear her breathe, either. The only thing between us was the soft pitter-patter of rain just a little ways over my head."
         "We shortly reached my dorm. She walked up to the point where I could get into the lobby without getting wet, and stopped."
         hide cg with dissolve
         MC "Ah... thank you, that worked out pretty well."
@@ -4181,8 +4147,7 @@ label GTS026_c1_2:
     GTS "Indeed."
     show GTS neutral at Transform(xzoom=-1)
     "A silence settled in the golden warmth of the hall, if only for a moment."
-    MCT "..."
-    extend " Damn, she's playing on another level."
+    MCT "...{w} Damn, she's playing on another level."
     MC "So hey, do you think you'd want to have dinner tonight? Just you and me?"
     GTS "I think I would. Did you have anything in mind?"
     MC "What about... the sushi place on Genki street? Like around five tonight."
@@ -6023,9 +5988,7 @@ label GTS036:
     stop music
     "He handed me the box and returned to his room. Looking over the package, there appeared to be no markings besides the address."
     MCT "I wonder who could've sent me this. I doubt my parents would; they normally only send that stuff to Tomoko for some reason."
-    Letter "Dear Hotsure-san,"
-    extend " our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind."
-    extend " Please accept this gift as a display of hope towards your futures."
+    Letter "Dear Hotsure-san,{w} our meeting the other night was reassuring in many ways to my wife and I. We know that our eldest is a special person, and she deserves someone of equal kind.{w} Please accept this gift as a display of hope towards your futures."
     "After I set the letter down, I began disassembling the brown packaging. Lifting the lid, I spotted an ornate, lacquered black box sitting amongst the packing material. With leaden curiosity, I lifted the box out, and gently opened the smaller box."
     "Inside was a tanto, its flawless blade glaring white in the afternoon sun."
     MCT "...How the hell did this get through customs?"
@@ -6270,8 +6233,7 @@ label GTS036_c3:
     pause 1
     show GTS aroused
     GTS "And yet, I should like to be much closer."
-    MCT "..."
-    extend " Meaning?..."
+    MCT "...{w} Meaning?..."
     show GTS embarrassed
     "It was at that point I realized I was staring directly ahead... directly into Naomi's chest."
     "She looked away, and gently took her hands off my lap to cover her mouth in advance of a demure cough."
@@ -6844,7 +6806,7 @@ label GTS041:
     GTS "It depends on the store, I would assume. Though you certainly have a point that they're a rather niche item outside of holidays."
     MC "What else were you thinking?"
     GTS "I may not be using the school's primary pool anymore, but I have heard of a spring in the caverns as well as a good beach spot. I wonder if they have bathing suits?"
-    MCT "Please only be bikinis. Please only be bikinis. Please only be bikinis."
+    MCT "Please be bikinis. Please be bikinis. Please be bikinis."
     MC "I wasn’t aware there was a spring in the caverns. At least you haven’t mentioned it before."
     GTS "It's a warm spring, but I’d still need a suit. ...Ah, there they are!"
     "Past a few racks of pants was a single rack of just bathing wear. Like someone was listening above, every single option was a two piece suit."
@@ -7189,8 +7151,7 @@ label GTS044:
     "But I stopped."
     MCT "Hold on..."
     MCT "Naomi-chan said she was gonna text me after class."
-    MCT "Odd, it's been a couple minutes..."
-    extend " probably going back to her room or something."
+    MCT "Odd, it's been a couple minutes...{w} probably going back to her room or something."
     play music MCGuitar
     "Without another thought, I drank a few hearty gulps of the wonderful coolness, some splashing on my chin, and went on my way."
     scene black with fade
@@ -7691,8 +7652,7 @@ label GTS044_c5b:
         MCT "Ah, what the hell, it's tiny!"
         "My camera registered the biggest, brightest moon I'd ever seen as a large-ish lightbulb floating above the clock tower."
         MCT "I need some way to zoom in farther..."
-        MCT "..."
-        extend " Wait..."
+        MCT "...{w} Wait..."
         scene Dorm Interior with fade
         MC "Hey, Utagashi-san, can I borrow your binoculars?"
         show RM neutral
@@ -7808,8 +7768,7 @@ label GTS044_c5b_1:
     GTS "Don’t you believe that your unadorned self is memorable enough for me?"
     MC "Um... uh..."
     GTS "Please, why don’t you send me a nice smile?"
-    MC "Uh..."
-    extend " yeah! Yeah, sure."
+    MC "Uh...{w} yeah! Yeah, sure."
     GTS "Thank you dearly."
     "Not quite processing what just happened, I smiled for her earnestly, snapped the picture and sent it."
     jump GTS044_c5b_2

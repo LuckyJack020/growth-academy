@@ -32,11 +32,7 @@ label AE001:
     MCT "Uaaah, she's absolutely chilling me to the bone!"
     AE "Researching questions I had that Tashi-Sensei was unable to answer."
     MC "Ah, what about?"
-    AE "The nature of the Academy."
-    extend " What is going on,"
-    extend " how long has this been happening,"
-    extend " what preventative measures there are,"
-    extend " what school records exist."
+    AE "The nature of the Academy.{w} What is going on,{w} how long has this been happening,{w} what preventative measures there are,{w} what school records exist."
     AE "There are so many questions I have, and I plan to make sure they are all answered."
     MC "I see... That book has all that?"
     AE "Clearly not, why would a single book have all of the answers? I'm merely researching the questions that are the most relevant to me at this moment."
@@ -55,8 +51,7 @@ label AE001:
 
 label AE001_c1:
     MC "So... Shiori-san. How are you handling this?"
-    AE "..."
-    extend " I suppose... I just need to further my understanding of the situation. That's all. It's unlikely that my situation is anything to worry about, anyway."
+    AE "...{w} I suppose... I just need to further my understanding of the situation. That's all. It's unlikely that my situation is anything to worry about, anyway."
     MCT "That... didn't really answer my question."
     jump AE001_after
 
@@ -1177,8 +1172,7 @@ label AE009_c1:
     MC "Not at all. I mean, I usually close my eyes whenever I bow, so it's no big deal."
     show AE angry-3
     AE "Hm... I suppose that if we all bowed at the same time it wouldn't be too much of a problem."
-    MC "Exactly. You can rest assured that I'm not..."
-    extend " You know, gawking."
+    MC "Exactly. You can rest assured that I'm not...{w} You know, gawking."
     show AE neutral
     AE "Good. I didn't want to have to file a request for seat transfer. However, since it seems as though it won't be affecting you no action will need to be taken."
     jump AE009_after
@@ -2824,8 +2818,7 @@ label AE017:
     MC "Yeah, it kinda feels like middle school again."
     AE "Do you feel like that's a bad thing?"
     MC "Hmmm..."
-    MC "Well, no, to be honest. I'm glad we have a cafeteria."
-    extend " Why? Do you?"
+    MC "Well, no, to be honest. I'm glad we have a cafeteria.{w} Why? Do you?"
     show AE neutral-annoyed
     AE "There are some things I feel the school needs to change for the sake of maturity."
     MC "Ehhh, I dunno. Seeking maturity for the sake of just 'being mature' can often get in the way of stuff getting done."
@@ -2847,8 +2840,7 @@ label AE017:
     AE "Undoubtedly."
     show AE angry
     AE "I tell you, it may work fine for now, but when the rainy days really start, that's when administration will regret not installing them."
-    MC "Hmn..."
-    extend " Y-know i-"
+    MC "Hmn...{w} Y'know i-"
     stop music
     "As I began to speak, I moved my hand over my tray, accidentally putting my hand on some of the peach-filling from the pastry."
     MC "Ohp..."
@@ -2970,8 +2962,7 @@ label AE018:
     "Shiori-san sat down on the double wide bench, with me sitting beside her. We sat in contemplation for a moment, taking in the surroundings."
     MC "Haaaahn~"
     show AE neutral
-    AE "..."
-    extend " Hotsure-san, do you hear that?"
+    AE "...{w} Hotsure-san, do you hear that?"
     play sound Bird
     MC "Hm?"
     AE "That bird."
@@ -11331,9 +11322,7 @@ label AE050_after3:
         "And brought it down."
         "{i}SMACK{/i}"
         AE "HAAAAHN!!!"
-        "{i}Smack{/i}"
-        extend " {i}Smack{/i}"
-        extend " {i}Smack{/i}"
+        "{i}Smack{/i}{w} {i}Smack{/i}{w} {i}Smack{/i}"
         "Between each few spanks, I gently rubbed her jiggling backside, soothing the area to make it more sensitive for the next hit."
         "{i}Smack{/i}"
         show cg AE050_spank4 with dissolve
