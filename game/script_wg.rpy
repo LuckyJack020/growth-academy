@@ -5458,7 +5458,7 @@ label WG028:
     show PRG sad
     PRG "Alice is not feeling well. She won't be in class today."
     MC "Oh, man. Is it bad?"
-    PRG "She wouldn't let me near her. She said she didn't want to risk passing whatever she had to me in my condition."
+    PRG "She wouldn't let me near her. She said she didn't want to risk passing whatever she had to me."
     PRG "But she took her own temperature. It's 38.4. And she was complaining of aches and chills."
     MC "Bummer. Hopefully, it's just a 24-hour thing."
     MC "Either way, our date's off, I guess."
@@ -5535,8 +5535,8 @@ label WG028:
     "I retrieved the tea. My backpack hadn't been spared the rain's assault, but the insides were blessedly dry."
     show WG neutral
     MC "I mentioned this tea my mother always gave me. I found some at the pharmacy. I mean, I don’t know, I thought it could help. Always seemed to work for me."
-    WG "Were you out in the rain? It's pouring outside."
     WG "Why on earth were you out in the rain? It’s absolutely pouring outside!"
+    show PRG neutral
     menu:
         "Yeah, I tried to hurry to beat the rain, but...":
             jump WG028_c1_1
@@ -5746,7 +5746,7 @@ label WG029:
             pass
     WG "Sounds delightful."
 
-    scene Hill Road with fade
+    scene School Front with fade
     play music BrightLights
     show WG happy with dissolve
     "We decided to walk to town instead of waiting for the bus. The weather was accommodating and this would give us a chance to talk."
@@ -5792,7 +5792,7 @@ label WG029:
     MCT "Stop overthinking, it’ll be fine."
     MC "There's not a lot to do in this town, have you noticed? Not too many places to eat, not much in the way of entertainment."
     WG "I've noticed."
-    WG "It makes sense, I suppose. Businesses are like plants,; they need the right environment to grow and thrive."
+    WG "It makes sense, I suppose. Businesses are like plants, they need the right environment to grow and thrive."
     WG "A niche biome like this island - dedicated to the school and its student body - can only support so much in the way of capital."
     show WG happy
     WG "Still, there's something pleasant in the quaintness of it all. I think there’s plenty of untapped potential."
@@ -6043,7 +6043,7 @@ label WG029_afterdate:
     scene black with fade
     pause 1
 
-    scene Hill Road with fade
+    scene School Front with fade
     show WG happy with dissolve
     "We headed back to campus, our conversation dying down as we took in the twilight."
     MC "Huh, the island really isn't that developed, other than the school and town."
@@ -6192,7 +6192,7 @@ label WG030:
         "She handed me the stack of original fliers."
         scene black with fade
         pause 1
-        scene Hallway with fade
+        scene Computer Room with fade
         "The computer lab was busy, but I found an open station and got to work."
         "I didn't spend too long on it, just copying the info from the original fliers and changing the fonts to make them pop."
         "Add a few flourishing patterns in the corners and bold the showtime to have it stand out, and it was a marked improvement over the original."
@@ -6200,8 +6200,8 @@ label WG030:
         show WG happy with dissolve
         $setAffection("WG", 2)
         WG "Oh, these are much better."
-        WG "I still have time to hang them up tonight. Care to join me?"
-        MC "Sure. It's a nice night."
+        MC "I still have time to hang them up tonight. Care to join me?"
+        WG "Sure. It's a nice night."
         "We walked all over the campus, Alice taping up the fliers as we chatted."
         "It wasn't what I would call 'romantic,' but in its own simple way it was nicer than some dates I'd had."
         jump daymenu
@@ -14835,7 +14835,7 @@ label WG059:
     show PRG neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
     "Watching the two of them buzz back and forth across the stations was an entertaining spectacle. The pace was frantic, but the coordination was seamless. They appeared to be firing on the same cylinders."
-    "Sakura transferred the mushrooms and the beef loan to the pastry sheets, and then immediately swapped with Aida to finish wrapping up some vegetables in a roasting pan after adding the beef drippings."
+    "Sakura transferred the mushrooms and the beef loin to the pastry sheets, and then immediately swapped with Aida to finish wrapping up some vegetables in a roasting pan after adding the beef drippings."
     "Aida began working on carefully wrapping the beef medallions in the pastry dough, enveloping them quickly without tearing anything while proceeding to score the dough in what seemed to be a rather intricate design."
     "Opening the oven, in quick succession, they both placed their respective pans inside. Judging by their initial reactions to its opening, the oven was blasting."
     "Looking at the monitor it said 230 degrees. I guess they really were crunched for time during these competitions."
@@ -16448,6 +16448,7 @@ label WG061S:
     scene Dorm WG with fade
     show WG surprised-2 with dissolve
     "Slowly my senses came back and I found myself looking up at Alice who was staring back at me with a look of astonishment and embarrassment."
+    play music WG
     "It was then that I began to grasp the inspiration for my dream and looked at the cream colored divide between us."
     WG "Keisuke dear, if you could please, sit up, I’d appreciate it."
     MC "Oh, oh, yeah, yeah, sorry."
@@ -16709,6 +16710,7 @@ label WG062:
     "Alice had invited me over to her room today for some afternoon tea."
     "Though this had become a regular occurrence as we’d grown closer, it still felt special to me that she’d go out of her way to clear part of her busy schedule to make time for us."
     "The clear fall weather was a bit chilly today and the wind didn’t help in that regard. A hot cup of tea sounded pretty good right about now."
+    scene Dorm Hallway with fade
     "I finally arrived at Alice’s dorm, giving a knock on the door."
     play sound Knock
     UNKNOWN "{i}Tehehe!{/i}"
@@ -16820,14 +16822,14 @@ label WG062_C1_2:
 
 label WG062_C1_3:
     "I didn’t like where this was going, so I decided to nip it in the bud right here."
-    "That’s quite a rude thing to say. I’ll have you know, I’m not just some monkey in a suit for her. We have a really good relationship."
+    MC "That’s quite a rude thing to say. I’ll have you know, I’m not just some monkey in a suit for her. We have a really good relationship."
     show BE surprised-2
     $setAffection("BE", -1)
     BE "Woah, sorry. Didn’t know this was a touchy subject."
     MC "Sorry. I know you didn’t mean it like that, but I get the feeling that other people do."
     show BE neutral
     BE "Okay, sorry. I'll back off. Didn't mean to take it too far."
-    jump WG_C1_after
+    jump WG062_C1_after
 
 label WG062_C1_after:
     show BE neutral
@@ -17320,6 +17322,7 @@ label WG063:
     Natsuko "Relax, little guy, I was joking. However, please try and avoid touching them again."
     MCT "Good one, I’m just rolling on my sides, as you can see."
     MC "Sorry, I guess I had a bit too much tea earlier. I think my hands aren’t so steady from all the caffeine."
+    show WG neutral
     WG "Now’s not the time to be shy Keisuke, it’s much easier for her if you just get to it."
     MC "Right. S-Sorry about that."
     Natsuko "Calm down, Hotsure-san. I know I have an intimidating physique,"
@@ -17720,7 +17723,7 @@ label WG066:
     Tomoko "Alright, alright. I’m meeting a guy at the arcade in town this evening. It’s just a date. It’s not a big deal."
     MC "Anything that gets you out of bed and out of your dorm is a big deal."
     MC "That on top of the fact you’re making the effort to do up your hair all fancy makes me think you must have a crush on this guy."
-    Tomoko "Ugh! Don’t make it weird man. Like I said, it’s just a date."
+    Tomoko "Ugh! Don’t make it weird, dude. Like I said, it’s just a date."
     MC "Aww, my little sister is growing up so fast."
     Tomoko "Oh, shut up."
     MC "Young lady I expect you back in your dorm before 8PM, no shenanigans now."
@@ -17845,7 +17848,7 @@ label WG066:
     WG "Your hair! It just keeps growing! By the time I finish one section the other one is back to where it was before!"
     show WG worried
     WG "I knew you had a hair growth factor, but I had no idea it was this aggressive."
-    MC "Well, I cut it every morning, but it just keeps growing back faster一 especially these days."
+    MC "Well, I cut it every morning, but it just keeps growing back faster- especially these days."
     show WG doubt
     WG "You mean to tell me it still looks like this even though you cut it everyone morning?"
     MC "Uh, yeah."

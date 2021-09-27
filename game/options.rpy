@@ -16,7 +16,7 @@ define config.log = "debug_log.txt"
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Growth Academy (2021.9.22)")
+define config.name = _("Growth Academy (2021.10.1)")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -27,7 +27,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "2021.9.22"
+define config.version = "2021.10.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -200,9 +200,22 @@ init python:
     build.classify('**/thumbs.db', None)
 
     ## To archive files, classify them as 'archive'.
+    #build.archive("scripts", "all")
+    #build.archive("images", "all")
+    #build.archive("audio", "all")
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    # Put scripts into the scripts archive.
+    #build.classify("game/**.rpy", "scripts")
+    #build.classify("game/**.rpyc", "scripts")
+
+    # Put images into the images archive.
+    #build.classify("game/**.jpg", "images")
+    #build.classify("game/**.png", "images")
+
+    # Put audio into the audio archive.
+    #build.classify('game/**.mp3', 'archive')
+    #build.classify('game/**.ogg', 'archive')
+    #build.classify('game/**.wav', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
