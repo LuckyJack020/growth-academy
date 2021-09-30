@@ -18018,7 +18018,8 @@ label AE079:
     MCT "How about some omurice? Moms specialty, so it can’t hurt to try making it myself."
     "Slowly, quiety, I made my way out of bed, making sure not to disturb Shiori as I did. Making my way to the kitchenette, I opened the fridge to grab an egg, filled the rice cooker with rice and water, and began to cook."
     "{i}Szzz{/i}"
-    "The egg sizzled as I cracked it over the skillet. Though I wouldn’t call myself a gourmet chef, I spent enough time watching mom to pick up on the movements. After a bit, everything was looking good, the rice set to be finished soon as I focused on getting everything ready."
+    "The egg sizzled as I cracked it over the skillet. Though I wouldn’t call myself a gourmet chef, I spent enough time watching mom to pick up on the movements."
+    "After a bit, everything was looking good, the rice set to be finished soon as I focused on getting everything ready."
     "As I did, meanwhile, I heard the gentle rustle of sheets behind me, along with a quiet murmur."
     show AE sad with dissolve
     play music AE
@@ -18564,7 +18565,7 @@ label AE081:
     BE "Sooo what’s up?"
     MC "Feh, the usual. Not too much going on. How about you?"
     show BE wink
-    BE "I’m all good! I’m just chilin, not doing too much but gettin through classes! When Shi-chan is feeling better, could you see if she can help me out with my schoolwork?"
+    BE "I’m all good! I’m just chiling, not doing too much but gettin through classes! When Shi-chan is feeling better, could you see if she can help me out with my schoolwork?"
     MC "When she’s better? Ah, so you’ve noticed something’s up."
     BE "Weeeell-"
     MC "Uh-oh."
@@ -18666,7 +18667,7 @@ label AE101:
     "Shiori-san looked over towards our direction and, in acknowledgement to Akira-san's waving, nodded before going back to her clipboard."
     FMG "Awwww, what's with that crap?! Come on over dude!"
     AE "I'm fine, thank you."
-    FMG "Aww, come on now, I'm chillin with Hotsure-chi; don't you wanna come over? I can save you a seat on the bench... though you'll probably need two! BAHA!"
+    FMG "Aww, come on now, I'm chilling with Hotsure-chi; don't you wanna come over? I can save you a seat on the bench... though you'll probably need two! BAHA!"
     MCT "Ow. I mean, I get it was with good intentions, but that was harsh."
     "Shiori-san closed her eyes and gave a deep inhale, before going back to her examination of... whatever that machine is."
     AE "And have you sweating all over me? No. That won't be happening."
