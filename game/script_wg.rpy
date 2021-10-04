@@ -4725,7 +4725,7 @@ label WG024_c1_2:
 
 label WG024_c2_2:
     MC "Well, I can’t speak for others, but if I had to guess— it might not be physical."
-    show WG surprise-2
+    show WG surprised-2
     WG "Oh? How so then?"
     MC "Well, personality–wise, you can be kind of abrasive."
     show WG doubt
@@ -17437,7 +17437,7 @@ label WG064:
     "Aida’s side of the room was neat and orderly, if not entirely bare bones, as per usual— nothing out of the ordinary."
     "{i}Taktaktaktaktaktakaktak{/i}"
     "That noise, on the other hand, was a different story."
-    "{i}Taktaktak{/i{w} {i} taktak{/i}{w} {i} taktaktaktakaktak{/i}"
+    "{i}Taktaktak{/i}{w} {i} taktak{/i}{w} {i} taktaktaktakaktak{/i}"
     MCT "What the hell is that sound?"
     "It was coming from Alice’s room. Which was my original destination anyway."
     scene Dorm WG with fade

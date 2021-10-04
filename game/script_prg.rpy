@@ -4212,7 +4212,7 @@ label PRG016:
         jump daymenu
 
 label PRG017:
-    $setProgress("PRG", "PRG019")
+    $setProgress("PRG", "PRG018")
     scene Classroom with fade
     play music HigherEdu
     "I sat back in my chair and sighed."
@@ -4951,6 +4951,7 @@ label PRG017:
         jump daymenu
 
 label PRG018:
+    $setProgress("PRG", "PRG019")
     scene Classroom with fade
     play music Schoolday
     "From the minute I sat down at my desk, the day just felt lazy and sluggish, like a cloud of mediocrity was hanging over mine, and the rest of the class’s heads."
