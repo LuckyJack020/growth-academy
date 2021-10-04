@@ -14222,13 +14222,17 @@ label WG058:
         show PRG excited at Position(xcenter=0.2, yalign=1.0)
         show Sakura happy at Position(xcenter=0.8, yalign=1.0)
         with dissolve
-        "They said I didn't need to pay them, insisting that they needed the practice anyway and that the cooking club paid for the ingredients,{w} but I convinced them that their time and effort was of obvious value and gave them some money anyway, despite their objections."
-        "I walked away with a five-star feast at a fraction of the cost. I couldn't help but be grateful. Plus, I was sure to need their skills in the future to help me out if Alice's appetite was going to grow with the rest of her."
+        "They said I didn't need to pay them, insisting that they needed the practice anyway and that the cooking club paid for the ingredients,"
+        "but I convinced them that their time and effort was of obvious value and gave them some money anyway, despite their objections."
+        "I walked away with a five-star feast at a fraction of the cost. I couldn't help but be grateful."
+        "Plus, I was sure to need their skills in the future to help me out if Alice's appetite was going to grow with the rest of her."
     else:
         "I asked Aida to help me make something memorable that would survive the trek intact and didn't have to stay hot to still taste good."
         show PRG excited with dissolve
-        "She told me I didn't need to pay her, insisting that she needed the practice anyway and that the cooking club paid for the ingredients,{w} but I convinced her that her time and effort was of obvious value and gave her some money anyway, despite her initial objection."
-        "I walked away with a five-star feast at a fraction of the cost. I couldn't help but be grateful. Plus, I was sure to need her skills in the future to help me out if Alice's appetite was going to grow with the rest of her."
+        "She told me I didn't need to pay her, insisting that she needed the practice anyway and that the cooking club paid for the ingredients,"
+        "but I convinced her that her time and effort was of obvious value and gave her some money anyway, despite her initial objection."
+        "I walked away with a five-star feast at a fraction of the cost. I couldn't help but be grateful."
+        "Plus, I was sure to need her skills in the future to help me out if Alice's appetite was going to grow with the rest of her."
     scene Field with fade
     "I had the perfect meal and the perfect spot picked out for a (hopefully) sufficiently romantic picnic."
     show WG doubt with dissolve
@@ -14353,7 +14357,7 @@ label WG058_c1_1:
     WG "What a lovely character arc. And this is all told through singing?"
     MC "Well, a lot of it anyway. I haven't seen the whole thing, just some of the more classic numbers and I heard the gist of the plot."
     show WG haughty
-    WG "Well, I'm sold. I'll think I will make an exception to my usual rule and watch this film."
+    WG "Well, I'm sold. I think I will make an exception to my usual rule and watch this film."
     $setAffection("WG", 1)
     show WG neutral
     WG "And I have just the person in mind to watch it with me."
@@ -14416,7 +14420,8 @@ label WG058_c1_after:
     show WG neutral at Position(xcenter=0.2, yalign=1.0)
     show Ryoko camera at Position(xcenter=0.8, yalign=1.0)
     with dissolve
-    "In the background, our conversation would occasionally be interjected with '{i}Action!{/i}' and '{i}Cut!{/i}' from the distant exuberant shouts from the director. Looking over in their direction, it looked like they were winding down."
+    "In the background, our conversation would occasionally be interjected with '{i}Action!{/i}' and '{i}Cut!{/i}' from the distant exuberant shouts from the director."
+    "Looking over in their direction, it looked like they were winding down."
     show Ryoko happy
     Ryoko "Alright folks, that's a wrap for today! Great work!"
     show Ryoko embarrassed
@@ -14431,10 +14436,10 @@ label WG058_c1_after:
     show Ryoko happy
     "She waved with a wide arc, using her whole arm as she greeted us with an eager smile on her face."
     Ryoko "Hi!"
-    MC "Hello. I've seen you around the academy before, but I don't think we've met. I'm Hotsure Keisuke and this is Nikumaru Alice."
+    MC "Hello. I've seen you around the academy before, but I don't think we've met. I'm Keisuke Hotsure and this is Alice Nikumaru."
     show WG neutral-2
     WG "Hello."
-    Ryoko "My name is Tanaka Ryoko! Yeah, I've seen both of you around the academy before, but I never got the chance to say hi and introduce myself."
+    Ryoko "My name is Ryoko Tanaka! Yeah, I've seen both of you around the academy before, but I never got the chance to say hi and introduce myself."
     if isEventCleared("WG011"):
         Ryoko "Oh yeah, I remember now! I saw both of you with another girl at one of our screenings. Did you enjoy the movie?"
         show WG neutral
@@ -14536,10 +14541,12 @@ label WG058_c2_1:
 
 label WG058_c2_2:
     MC "I think we'll pass."
+    show WG surprised-2
     "As much as I would certainly enjoy getting smothered by the two biggest asses I've ever seen. This was clearly not something Alice would want to do."
     MC "Tanaka-san, I'm sure you didn't mean it that way, but a lot of people at the academy are still trying to come to terms with their growth and learning to be comfortable in their own skin again."
     MC "Maybe some are able to laugh at themselves, but making a joke at the expense of someone because of their growth for an entire audience to see is a bit insensitive."
     show Ryoko surprised
+    show WG stern
     Ryoko "Oh..."
     "Ryoko turned her attention away from me over towards Alice."
     "Despite how well Alice carries her weight, it didn't take a lot of imagination on Ryoko's part to begin to realize why someone with her factor might not find any humor with it being used as the basis for a joke."
@@ -14610,7 +14617,7 @@ label WG058_c2_3:
     Ryoko "Understandable."
     show Ryoko neutral
     Ryoko "I should probably get going. I got a lot of editing to do. It was nice to finally get to meet both of you. Sorry to interrupt your picnic."
-    MCT "Ryoko began her walk back to the academy."
+    "Ryoko began her walk back to the academy."
     hide Ryoko with dissolve
     show WG doubt at Position(xalign=0.5, yalign=1.0) with move
     WG "Keisuke— you didn't have anything to say about her rude proposition?"
