@@ -8775,10 +8775,11 @@ label FMG055:
     FMG "This was a horrible idea... I should’ve backed out."
     show FMG flex
     extend " But I have to put you in your place."
+    show image cg FMG055 with dissolve
     "To say I was a little distracted... by Akira being half-naked and flexing in the mirror would be a lie. I was, uh... extremely distracted."
     MCT "Keep your head in the game, Kei. You can drool over her body after."
     MC "This seems a little unfair the more I think about it..."
-    "Akira kept showing off and making faces at me."
+    hide cg with dissolve
     show FMG flex
     FMG "What gave you that idea? Was it my bicep being the size of your face {i}ooooor{/i} when I was struggling to take off my skirt cause my quads are too big?"
     MCT "Why are you the way that you are?"
@@ -9075,7 +9076,7 @@ label FMG056:
     jump daymenu
 
 label FMG057:
-    $setProgress("FMG", "FMG058")
+    $setProgress("FMG", "FMG059")
     scene Dorm Interior with fade
     play music FMG
     "Ever since Akira’s massive growth spurt, we’ve been trying to get her more comfortable with her body. It started out a little rough but she adapted pretty fast."
@@ -9252,7 +9253,152 @@ label FMG057:
     MCT "Soooo worth it."
     jump daymenu
 
-label FMG058:
+label FMG059:
+    $setProgress("FMG", "FMG060")
+    scene Park with fade
+    play music FMG
+    show FMG neutral with dissolve
+    FMG "We should come here more often. It’s beautiful!"
+    MC "I’ve asked you about six times if you want to go to the park and sit on the bench and just talk, away from the school."
+    FMG "Hmm... I definitely would’ve remembered you asking. Maybe it was one of those days where I felt like ignoring you, haha."
+    MC "I asked EVERY day this week!"
+    show FMG happy
+    FMG "What a coincidence! I started doing it this week too!"
+    MC "..."
+    show FMG neutral
+    FMG "Turn that frown upside down... Come on, Kei, you know I’m kidding!!! Do you want a hug? I think you need one."
+    MC "..."
+    FMG "You want me to carry you back to campus? I know you love being held in my big strong arms."
+    show FMG flex
+    FMG "I know you like what you see."
+    MC "...{size=-6}I do{/size}..."
+    show FMG neutral
+    FMG "Uh-huh, that’s what I thought. So what’s the plan for today? What does Keisuke Hotsure want to do on a day like this?"
+    MC "Hm, I don’t know. I didn’t think I’d get this far... I uh... kinda asked you to come here so we could work around and pick a spot you’d like for our picnic later this week."
+    show FMG happy
+    FMG "Aw, hell yeah! Let’s do it!"
+    "We began working around the park looking for the {i}perfect{/i} spot. The right amount of shade, the right amount of sun. We wouldn’t settle for less. And while we looked... my plan was set into motion."
+    hide FMG with dissolve
+    MCT "Think you can ignore me, huh? I’ve been waiting for the right moment to continue our little prank war."
+    "I pulled a sticky note out of my pocket with a sinister grin stretching across my face."
+    MCT "Kick me... a classic. Hm... wait. Who in their right mind would kick someone like Akira. You’re asking for a bad time."
+    MC "Meh, fuck it. I’ll do it myself."
+    show FMG neutral with dissolve
+    FMG "You say something?"
+    MC "!"
+    MC "Uh... no? ...AKIRA LOOK A CUTE DOG!"
+    show FMG surprised
+    FMG "Where!??!? I have to pet it!"
+    "With her back turned to me I took the sticky note and slapped it on her back with a little too much enthusiasm... Which wasn’t my brightest idea."
+    MCT "Holy shit! T-That fucking huuuuuurts. Damnit, I got lost in the moment..."
+    show FMG angry-3
+    FMG "Why did you slap my back?"
+    MC "!"
+    MCT "My plan is ruined before it even started because I’m an idiot. I can’t believe I didn’t break my hand... It’s like I slapped a tank."
+    MC "T-T-There was a fly."
+    FMG "..."
+    MC "...Heh."
+    pause 1
+    show FMG happy
+    FMG "Thanks, dude. I appreciate it. I’ve been having trouble trying to reach my back lately."
+    show FMG flex
+    FMG "Only downside of being huge and sexy is I can’t scratch my back, heh."
+    MCT "Perfect."
+    MC "Aw, that kinda blows. But, hey, look on the bright side... at least we picked out a spot for our picnic, right?"
+    MCT "Please say yes, I was too busy planning this at the moment and wasn’t paying attention."
+    show FMG neutral
+    FMG "Yep, I was thinking right over there by those two trees and that pond. I’ll bring my phone too so we can take pictures, so you need to wear something decent."
+    MC "Sure thing, you can count on me... Y-You ready to head back to campus?"
+    FMG "Mhm, you want to take the bus or walk back?"
+    MC "...Can you even fit on the bus now? That door isn’t very wide."
+    show FMG happy
+    FMG "That’s a good question. Guess we’ll find out."
+    scene black with fade
+    pause 1
+
+    scene Hill Road with fade
+    MC "Well, it could’ve been worse. At least you got past the door. You didn’t have to turn yourself {i}that{/i} much."
+    show FMG flex with dissolve
+    FMG "As if that bus door could hold me. If I ever get stuck you can count on me plowing right through it."
+    show FMG neutral
+    FMG "Unless it’s on school property..."
+    FMG "By the way, do you know why those passengers were giving me such weird looks when we got off?"
+    MCT "It’s definitely not the "Kick me" sign on your back."
+    MC "Now, this is only a guess but it could be due to um... your size. You’re probably one of the bigger people on campus now."
+    FMG "Could be. It’s not anything to pay any attention to. You hungry? I could go for a burger right now."
+    MC "Totally."
+    MCT "Is no one going to kick her???? Bunch of cowards at this campus. Someone will come along, I’m sure of it."
+    scene black with fade
+    pause 1
+
+    scene Cafeteria with fade
+    MCT "Nothing but staring. Is anyone brave enough to kick her for the sake of my enjoyment?"
+    show FMG neutral with dissolve
+    FMG "Man, everyone is giving me weird looks. Weirder than when I was wearing my ripped clothes. There isn’t anything on me?"
+    MC "N-Nope! Why would you say something so ridiculous, haha."
+    show FMG sad-2
+    FMG "...Right. Even you’re acting weird."
+    show FMG sad-2 at altMove(0.5, 0.25)
+    show Tako neutral at at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Tako "Yo! Buff-y! Diggin the cool advert!"
+    show FMG neutral
+    FMG "Hey! What’s up, Yureno-san? It’s been a while!"
+    MC "Uh, Akira... who dis?"
+    show FMG happy
+    FMG "My bad, Kei. This is Yureno-san. Tako Yureno."
+    MCT "Huh, she sure has some wide... hips. Heh, it would be funny if she was roommates with Shiori. Cause she has a big butt too."
+    MCT "Did I just explain the joke to myself...? This is what it’s come to, huh."
+    MC "Nice to meet you, Yureno-san. I hope Akira has told you all the great things about me."
+    Tako "Yeah, dude! She told me everything about ya, and I do mean everything. Sorry to hear about the peanut butter incident, my guy."
+    MC "I see... so how did you two even meet?"
+    Tako "Haaa? How could I *not* get to know her? She’s helped me with so many schemes I can’t count ‘em all! She’s the muscle, and I’m...!"
+    show FMG neutral
+    FMG "Yureno-san, you mentioned something about some advert?"
+    Tako "Ehhhh? For real? No props for me? And here I was gonna tell you you got this kick me sign on you!"
+    show FMG angry-3
+    FMG "Care to explain, Kei-kun? There was no fly on my back. I can’t believe you lied to me."
+    MC "It’s not what it looks like."
+    FMG "Mhm."
+    MC "So, uh, that prank war thingy we had going on. My p-plan was to have someone kick you with the sticky note on your back trick."
+    Tako "Who would try and kick Mizutani-san?"
+    FMG "For real."
+    show FMG sad-2
+    FMG "This is certainly one of your weaker attempts, Kei-kun. No one would even attempt"
+    show FMG flex
+    extend " to kick someone as built as me."
+    show FMG angry-2
+    FMG "...But I can’t get this sticky note off my back because my muscles are too huge!"
+    MC "I got it, I got it. Cool your jets."
+    "While Akira was grilling me for my lack of planning and innovation. I noticed Tako was struggling to get the cap off her water bottle."
+    show FMG neutral
+    MC "You want some help, Yureno-san?"
+    Tako "Tch, yeah I got bitch hands, dude."
+    "As I easily unscrewed the top and I had realized my mistake... Tako and Akira both lunged at the water bottle. My face was met with a waterfall."
+    show FMG happy
+    FMG "He makes it so easy, I swear. Nice one, Yureno-san, hahaha."
+    Tako "Get got, my guy!"
+    MC "..."
+    MC "My disappointment is immeasurable and my day is ruined."
+    MC "I’ll see you tomorrow, Akira. I’m going to go sulk..."
+    Tako "Is he going to be okay?"
+    show FMG neutral
+    FMG "Ya, he’ll be fine. He gets salty when he gets outplayed."
+    MCT "If you’re dragging friends into this Akira... two can play that game."
+    hide Tako with dissolve
+    "Akira caught up to me as I was walking out."
+    show FMG happy at altMove(0.5, 0.5)
+    FMG "Hey, man. You tried and that’s what counts. But I just wanted to let you know that I love you. Your prank game needs some work though."
+    show FMG neutral
+    FMG "Here, let me carry you back to my place to make up for it. We can take a shower together and get cleaned up."
+    MCT "God damn, I love her so much."
+    MC "Thanks fam, I appreciate you. I don’t know where I’d be without you."
+    FMG "For starters, you’d probably be dry, heh."
+    MC "Yeah, but I get to be... wet with you? Sorry, that was weird. I didn’t know where to go with that."
+    show FMG sad-2
+    FMG "Ruining the moment is definitely your specialty."
+    jump daymenu
+
+label FMG060:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

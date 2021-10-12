@@ -4991,7 +4991,10 @@ label BE028:
     "Honoka's spare hand reached over and grabbed mine. I chuckled. "
     MC "Oh, duh. It can't really test our compatibility if we're not holding hands."
     MC "Okay. Here we go!"
-    show cg BE028 with dissolve
+    if getVar("BEMode") == "Feminine":
+        show cg BE028 with dissolve
+    else:
+        show cg BE028_fem with dissolve
     "The machine lit up 'Squeeze Now' and Honoka and I both grit our teeth as we pulled on the handle with all our might. Slowly, the marker on the display moved upwards, past the worst position and up towards the middle."
     #show BE happy
     BE "Come on, Kei-chan, we can do this."

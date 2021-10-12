@@ -11156,7 +11156,7 @@ label WG047_c3_after:
     WG "You are going to get yourself hurt out there, come back already!"
     MC "Ok ok, fine. But only because I forgot to pack a swim cap, and my hair is weighing me down."
     "Trudging along, I made my way back towards the shore."
-    MC "Now I know what Homer felt like in the Odyssey."
+    MC "Now I know what Odysseus felt like in the Odyssey."
     show WG neutral
     WG "Apologies... but what do you mean by that?"
     MC "Being beckoned shoreside by the call of a beautiful siren."
@@ -17857,7 +17857,7 @@ label WG066:
     WG "I knew you had a hair growth factor, but I had no idea it was this aggressive."
     MC "Well, I cut it every morning, but it just keeps growing back faster- especially these days."
     show WG doubt
-    WG "You mean to tell me it still looks like this even though you cut it everyone morning?"
+    WG "You mean to tell me it still looks like this even though you cut it every morning?"
     MC "Uh, yeah."
     show WG worried
     WG "{i}Sigh{/i}... I must apologize, Keisuke. I hadn’t realized how much you have been trying to keep up with it. I thought you were just being lazy about keeping it properly groomed."

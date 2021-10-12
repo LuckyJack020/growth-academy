@@ -105,7 +105,7 @@ label PRG001:
     scene Hallway with fade
     "As I walked out of the classroom, I looked down the halls."
     MCT "Everyone...{w} looks normal."
-    "I shook my head. The idea of most, or all of these students growing into some sort of supersized version of themselves still seemed so farfetch'd to me."
+    "I shook my head. The idea of most, or all of these students growing into some sort of supersized version of themselves still seemed so farfetched to me."
     MCT "This doesn't make sense. Besides the occasional outlier, everyone still looks normal."
     "But as I mulled this over and walked through the halls, my head hung up on what Daichi had been going on and on about."
     "Sure, he defined the word ‘eccentric,' but he didn't seem stupid."
@@ -16340,7 +16340,7 @@ label PRG055C:
     PRG "Origin story?"
     MC "Mhm! Like one of those cheesy superhero stories that talk about their past. For example, on that fateful day in... when's your birthday?"
     PRG "March. March 3rd, to be specific."
-    MC "All right. On that fateful day in May, a superheroine was born with powers unlike any seen by this earth before."
+    MC "All right. On that fateful day in March, a superheroine was born with powers unlike any seen by this earth before."
     show PRG surprised
     PRG "I have powers?!"
     MC "Of course, my dear girl! Powers beyond human understanding! You have...{w} cupcake vision."

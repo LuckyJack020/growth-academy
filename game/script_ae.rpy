@@ -9639,7 +9639,7 @@ label AE045:
     show AE sad
     AE "...Seventeen."
     MC "Wuh... t-that's insane! That's so young, I mean-"
-    AE "My father and grandmother thought so tpo. There was a bit of a push from father to give me up for adoption after birth, from what my mother said. And my grandmother... wanted to see me off a bit earlier."
+    AE "My father and grandmother thought so too. There was a bit of a push from father to give me up for adoption after birth, from what my mother said. And my grandmother... wanted to see me off a bit earlier."
     MC "..."
     "Silence. What she implied was a bit too hard for me to respond to, I was at a complete loss for words."
     MC "Your grandmother wanted you..."
@@ -16594,7 +16594,7 @@ label AE072:
     MC "What do ya say, winter vacation? Yes? No?"
     show AE neutral-smug
     AE "If you want to try to swim to Sakhalin be my guest."
-    "I chucked to myself as Shiori took out a blanket from the wicker basket I had brought and placed it down on the ground beneath her."
+    "I chuckled to myself as Shiori took out a blanket from the wicker basket I had brought and placed it down on the ground beneath her."
     MCT "Y'know... that's not a bad idea."
     "I'm not quite sure exactly why I decided to do it. Maybe I wanted to show off or just joke around, but regardless, I took off my coat and shoes, rolling up my pant legs as I removed my socks."
     "Suffice to say, after I winced at stepping on the snowy beach, Shiori had to do a double take when she looked over to watch me walk towards the shoreline."

@@ -144,7 +144,7 @@ init python:
         SWIMSUIT = "swimsuit"
         COW = "cow"
         PAJAMAS = "pajamas"
-        RIPPED = "uniform-ripped"
+        RIPPED = "ripped"
         SICK = "sick"
         SUMEXT = "summer-exterior"
         SUMEXTSG = "summer-exterior-sunglasses"
