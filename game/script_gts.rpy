@@ -6400,6 +6400,8 @@ label GTS037_c2_after:
     "Naomi covered her mouth before she let out a powerful, brief chuckle."
     GTS "Does that mean that you're interested?"
     MC "Absolutely. Let's go."
+    scene black with fade
+    pause 1
 
     scene Woods with fade #mountain forest?
     "Naomi was generous with her strides as we walked away from the campus, Northeast to the secluded forests which rested just past the borders of the island town."
@@ -6412,6 +6414,9 @@ label GTS037_c2_after:
     GTS "Not necessarily. I was raised with a very closed and restricted view of the world, having never really been exposed to any hobbies outside from traditional Japanese teachings. Botany, calligraphy, origami, martial arts... stuff like that."
     GTS "I suppose that being outside wasn't really preference of mine, but rather it was just what I happened to do most."
     MC "Still. It must be a welcome change of scenery from being in the hangar so much."
+
+    scene Mountains Tori Gate with fade
+    show GTS neutral with dissolve
     "Naomi nodded while looking down at me."
     GTS "If nothing else, being outside in the wilderness allows me to breathe much fresher air. Sometimes, I forget what 'outside' is like in the giant dorms."
     MC "I've only been in there a few times, but from what I've seen, the only open part is the central pit. Otherwise, you're traveling the caverns."
@@ -6429,6 +6434,8 @@ label GTS037_c2_after:
     GTS "We may be onto something, Kei-chan. You'd certainly have my support."
     hide GTS with dissolve
     "As we continued to walk, the trail slowly began to ascend up a shallow, manageable hill. Naomi's strides made quick work of the trail, clearing it in a matter of three steps. We had been walking alongside each other for the past half hour."
+
+    scene Mountains Shrine with fade
     "When Naomi spotted a peculiar stone statue tucked away in a nearby hilltop, however, she took the lead. Within seconds, I saw her kneeling at the foot of the shrine with a careful, yet heavy thud."
     show GTS_S neutral with dissolve
     "It was somewhat surreal, seeing the person kneeling at the shrine bigger than the shrine itself. Usually, they were large enough for several people at once to gather around them. Naomi's presence barely left any room for me."
@@ -6444,7 +6451,7 @@ label GTS037_c2_after:
     "I pulled upon the green rubber band, freeing the bundle of incense sticks. I pulled two of them from the bundle, placing one of them in a small hole upon the base of the shrine."
     "I handed Naomi the other one. Once again, she carefully and deliberately pinched her pointer and thumb upon it, using only the faintest amount of pressure to carefully grip it between two fingers. She then placed the incense stick next to mine."
     show GTS_S happy
-    GTS "Thank you, Kei-chan. I wouldn't have been able to do this without you."
+    GTS_S "Thank you, Kei-chan. I wouldn't have been able to do this without you."
     MC "I'm a man of many talents."
     "Naomi covered her mouth with a deep, booming laugh. Several of the birds nearby scattered in response to her powerful voice."
     GTS_S "I'll be certain to call upon you whenever I need to defeat another rubber band."
@@ -6501,15 +6508,23 @@ label GTS037_c3_after:
     "Soon, the sounds of Naomi's breathing, the hum of the wind, and the chirp of the nearby birds all blended together into low, white noise. I had completely tuned out all distractions."
     "I kneeled in place with my eyes closed for a while longer, before I eventually opened my eyes."
 
-    scene Mountains with fade
+    scene Mountains Shrine with fade
     show GTS happy with dissolve
     "Naomi's face met mine as I opened my eyes, her smile taking up most of my field of vision. She had lowered her position even further to meet my gaze, still in the same position as she was when we first arrived."
     GTS "Thank you for being here with me today. This was fun."
     MC "It's so quiet out here. I almost forgot where we were."
     show GTS neutral
     GTS "It is quite a ways away from campus, isn't it? It's difficult to believe that such a vast mountain range is out here. It feels rather disconnected from the rest of the world."
-    MC "Not that it matters, as long as I'm here with you."
-    show GTS unique
+    MC "Not that it matters, as long as I’m here with you."
+    GTS "I’m flattered that you feel that way, Kei-chan."
+    "The two of us turned around, leaving the shrine behind. The smoke trails from the burning incense still lingered, coating the area outside the shrine in a thin layer of white vapor."
+    GTS "Do you mind if we take our time walking back down the trail? I’d like to… remember this view. Take in all of the scenery."
+    MC "Not at all."
+    "The two of us proceeded to walk back down the trail. Naomi walked in front of me, intentionally making her strides slow and delicate so I could keep up. The stones were sturdy, and didn’t vibrate at all under Naomi’s light steps."
+
+    scene Mountains Tori Gate with fade
+    show GTS unique with dissolve
+    "By the time we had returned to the gate leading up to the shrine, Naomi had entered a complete state of relaxation. Her walking was rhythmic and precise, her breathing perfectly paced."
     "Naomi shifted her position, raising her head as she scooted slightly closer, rotating so her knees were pointed towards me rather than towards the shrine. She had a broad, content smile upon her face."
     GTS "May I have a hug?"
     MC "Of course you may."

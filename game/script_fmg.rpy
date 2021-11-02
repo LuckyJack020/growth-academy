@@ -8775,7 +8775,7 @@ label FMG055:
     FMG "This was a horrible idea... I should’ve backed out."
     show FMG flex
     extend " But I have to put you in your place."
-    show image cg FMG055 with dissolve
+    show cg FMG055 with dissolve
     "To say I was a little distracted... by Akira being half-naked and flexing in the mirror would be a lie. I was, uh... extremely distracted."
     MCT "Keep your head in the game, Kei. You can drool over her body after."
     MC "This seems a little unfair the more I think about it..."
@@ -9259,7 +9259,7 @@ label FMG059:
     play music FMG
     show FMG neutral with dissolve
     FMG "We should come here more often. It’s beautiful!"
-    MC "I’ve asked you about six times if you want to go to the park and sit on the bench and just talk, away from the school."
+    MC "I’ve asked you about six times if you wanted to go to the park and chill on the benches to just talk about life or something, away from the school."
     FMG "Hmm... I definitely would’ve remembered you asking. Maybe it was one of those days where I felt like ignoring you, haha."
     MC "I asked EVERY day this week!"
     show FMG happy
@@ -9323,7 +9323,7 @@ label FMG059:
     show FMG neutral
     FMG "Unless it’s on school property..."
     FMG "By the way, do you know why those passengers were giving me such weird looks when we got off?"
-    MCT "It’s definitely not the "Kick me" sign on your back."
+    MCT "It’s definitely not the \"Kick me\" sign on your back."
     MC "Now, this is only a guess but it could be due to um... your size. You’re probably one of the bigger people on campus now."
     FMG "Could be. It’s not anything to pay any attention to. You hungry? I could go for a burger right now."
     MC "Totally."
@@ -9339,9 +9339,9 @@ label FMG059:
     show FMG sad-2
     FMG "...Right. Even you’re acting weird."
     show FMG sad-2 at altMove(0.5, 0.25)
-    show Tako neutral at at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show Tako neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Tako "Yo! Buff-y! Diggin the cool advert!"
-    show FMG neutral
+    show FMG neutral at Transform(xzoom=-1)
     FMG "Hey! What’s up, Yureno-san? It’s been a while!"
     MC "Uh, Akira... who dis?"
     show FMG happy

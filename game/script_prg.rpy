@@ -9142,7 +9142,6 @@ label PRG029:
     "The three of us made our way around the arcade, playing different games as we went. Honoka generally came out on top, but whenever we played a fighting game, Aida completely destroyed us."
 
     scene Town with fade
-    play music BrightLights
     show PRG neutral at Position(xcenter=0.25, yalign=1.0)
     show BE happy at Position(xcenter=0.75, yalign=1.0)
     with dissolve

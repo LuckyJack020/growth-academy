@@ -16903,7 +16903,7 @@ label AE074:
     show AE neutral-annoyed
     show Tako neutral
     AE "Oh yeah?"
-    "As we all met up together, Yuki turned to tomo after patting her on the shoulder."
+    "As we all met up together, Yuki turned to Tomo after patting her on the shoulder."
     Yuki "Wuhpfff guh ung pffft."
     Tomoko "I dunno, but I rarely get to hang out with Kei too much. Even if the sun is a pain..."
     MCT "It's completely overcast, girl, damn!"

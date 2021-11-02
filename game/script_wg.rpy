@@ -3047,20 +3047,20 @@ label WG016_c1_3:
     jump daymenu
 
 label WG017:
-    scene Cafeteria with fade
+    scene Dorm WG with fade
     play music Busy
-    "So Alice wanted to try a tycoon game, and since I was the one to suggest them to her it fell on me to hold her hand."
-    "Not that I minded. I really had no experience with those games, but playing with someone else or just watching them could be fun in its own way."
-    "And when I stopped to think about it, I was having trouble thinking of times I had seen Alice hanging out with anyone besides me. Or Kodama-san, of course."
-    "I knew she was in the music club, but from what I'd heard she wasn't exactly endearing herself to anyone there."
-    "Was I her only friend at the school? Nah, it couldn't be."
+    "Alice apparently had been serious about wanting to try some video games, and since I was the one to suggest them to her it fell on me to be her guide."
+    "Not that I minded. I had some experience with tycoon type games, though they didn’t hold my attention well. However, playing with someone else or just watching them could be fun in its own way."
+    "It was then that I stopped to think about the fact I couldn’t recall Alice hanging out with anyone else besides me or Kodama-san."
+    "She was in the music club, that I was sure of, but from what I gathered she wasn't exactly endearing herself to anyone there."
+    "Was I her only friend at the school? Nah, that couldn't be. Someone like her typically had a small group they’d converse with."
     "Either way, as brusque as she could be, I didn't mind the thought of getting closer to her."
     show WG happy at center
-    show PRG neutral at Position (xcenter=0.35, yalign=1.0) behind WG
+    show PRG neutral at Position(xcenter=0.35, yalign=1.0) behind WG
     with dissolve
     WG "Ah, Keisuke. Over here."
-    "I found Alice and Aida sitting at her usual table, but instead of tea and cakes there was a full computer set-up. Monitor, tower, keyboard, mouse."
-    "And jeez, this wasn't cheap. I wasn't up on the latest gaming hardware, but it looked like a Hayashi ZX-5000. Fresh out of the box, even."
+    "I found Alice and Aida sitting around the table in Alice’s room, but instead of tea and cakes there was a full computer set-up. Monitor, tower, keyboard, mouse."
+    "And jeez was this not a cheap looking device. I wasn't up on the latest gaming hardware, but it looked like a Hayashi ZX-5000. It was the kind of thing I’d have on my Christmas list."
     MC "Is this new?"
     WG "Indeed. It arrived just this morning."
     WG "I don't know anything about video game hardware, but the reviews for this model were uniformly good."
@@ -3068,11 +3068,11 @@ label WG017:
     show WG neutral
     WG "Well, yes. If I am to give this endeavor the best opportunity I need to have the finest equipment possible, wouldn't you agree?"
     hide PRG with dissolve
-    MCT "Not really. Graphics and sound aren't as important as gameplay, and we aren't going to be looking at the latest AAA titles or anything."
-    MC "Did you find any games you were interested in? I know the names of some of the more popular titles, though I'm not as familiar with them."
-    WG "I just finished our reading for Literature a few minutes ago, so I haven't had much chance to find anything yet."
+    MC "Not really. Graphics and sound aren't as important as gameplay, and we aren't going to be looking at the latest AAA titles or anything."
+    MC "I picked out the names of some of the more popular titles of the tycoon genre, though I'm not as familiar with them as I used to."
+    WG "I trust your judgement on this as you seem to be an expert in the field of videogames."
     WG "You have taken care of your homework, yes? I wouldn't want to impose on your time with something as frivolous as this."
-    if getSkill("Academics") >= 4:
+    if getSkill("Academics") >= 2:
         MC "Huh? Oh, yeah. I've taken care of everything."
         show WG happy
         WG "Excellent."
@@ -3083,7 +3083,7 @@ label WG017:
         menu:
             "Sure, I'm all caught up.":
                 $setFlag("WG017_c1_lie")
-                MC "Yeah, I'm on top of everything."
+                MC "Sure, I’m all caught up."
                 "A blatant lie, but Alice didn't even blink."
                 show WG happy
                 WG "Excellent."
@@ -3097,15 +3097,15 @@ label WG017_c1_2:
     WG "Well, business before pleasure. By which I mean your studies come before games."
     WG "I will wait here while you go take care of your obligations first. There is still much I can do to familiarize myself with this machine."
     MC "OK..."
-    $setAffection("WG", -1)
-    "She wasn't angry as she said that, but she was clearly disappointed."
+    "Her disappointment was obvious but she obviously was trying to not sound too angry."
     "She sounded almost like Shiori in that moment, though I guess with Alice it was less about adhering to the rules and more about striving for excellence or whatever."
     scene black with fade
     "I went back to my dorm and hit the books, double-checking my math homework and trying not to take any shortcuts with the reading."
-    "It took almost two hours, but I finished it all and headed back to the cafeteria on the off-chance that Alice was still waiting for me."
-    scene Cafeteria with fade
-    show WG neutral at Position (xpos=0.25)
-    show PRG neutral at Position (xpos=0.75)
+    "It took almost two hours, but I finished it all and headed back to her dorm."
+    scene Dorm WG with fade
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "I expected her to have started a game already, figuring it out on her own, but nope. She was having tea, not even looking at her computer."
     show WG happy
     WG "Finished your work?"
@@ -3121,48 +3121,43 @@ label WG017_c1_after:
     MC "Well, the most popular titles are..."
     $setVar("WG017_gamesplayed", 0)
     menu:
-        "Rollercoaster Tycoon":
+        "Roller Coaster Empire" if not getFlag("WG017_rollercoaster"):
             jump WG017_c2_1
-        "Railroad Tycoon":
+        "Rail Barons" if not getFlag("WG017_railroad"):
             jump WG017_c2_2
-        "Professional Wrestler Tycoon":
-            jump WG017_c2_3
 
 label WG017_c2_menu:
     menu:
-        "Rollercoaster Tycoon" if not getFlag("WG017_rollercoaster"):
+        "Roller Coaster Empire" if not getFlag("WG017_rollercoaster"):
             jump WG017_c2_1
-        "Railroad Tycoon" if not getFlag("WG017_railroad"):
+        "Rail Barons" if not getFlag("WG017_railroad"):
             jump WG017_c2_2
-        "Professional Wrestler Tycoon" if not getFlag("WG017_wrestler"):
+        "Superpower" if getVar("WG017_gamesplayed") >= 1:
             jump WG017_c2_3
-        "Imperialis" if getVar("WG017_gamesplayed") >= 2:
-            jump WG017_c2_4
 
 label WG017_c2_1:
     MC "It's kind of the standard for these types of games. You're put in charge of an amusement park and you need to make money by putting in rides and concessions, adjusting the ticket prices, stuff like that."
-    WG "Sounds straightforward enough, and running a business - even a simulacrum of one - is perfect for me."
+    WG "Sounds straightforward enough, and running a business - even a simulated one - sounds perfect for me."
     if not getFlag("WG017_railroad"):
         "Even though there was an older version of the game discounted 75%% off, Alice went with the latest one."
         WG "I want to experience the best possible version of the game."
-        "Never mind that 'latest' didn't necessarily mean 'best.' But all right, Alice is new to gaming and I didn't feel up to opening that can of worms."
-        "I was more bothered by the fact that even the latest version was two years old, and she was using a ZX-5000 to play it. So much processing power called up in service of so little."
-        "The game started with a tutorial; how to place or destroy attractions, change ticket prices, read the interface."
-        "It took almost 15 minutes, and I could see Alice losing interest. But finally it was done and she got to start her own game."
-        "She played in silence for a while, getting the hang of the basics and, as far as I could tell, doing OK."
+        "Never mind that 'latest' didn't necessarily mean 'best.' But all right, Alice is new to gaming and I didn't feel like trying to be elitist about her selection of game."
+        "The game started with a tutorial; how to place and destroy attractions, change ticket prices, and build pathways."
+        "It took almost 15 minutes, and I could see Alice losing interest. But once it was done she seemed to be eager to get into it."
+        "She played in silence for a while, getting the hang of the basics as far as I could tell."
         "She was making money, expanding her operations and improving the existing ones."
     else:
         "So she bought the game, again going with the latest version, and sat through another tutorial."
-        "Once she got into the game proper she seemed to do OK."
+        "Once she got into the game proper she seemed to understand its operations well."
     "Her rollercoaster designs were kind of basic, but serviceable. And I think she was overcharging on the pictures you had taken on the rides."
     "Eventually, though, she started to look annoyed."
-    "The monthly status report that gauge her park's finances, growth and expenses was on the screen, and something on it was irritating her."
+    "The monthly status report that gauged her park's finances, growth and expenses was on the screen, and something on it was irritating her."
     "She went through the drop-down menus and other screens, searching for something."
     show WG angry
-    WG "Grrrr..."
+    WG "{i}Grrrr{/i}..."
     MC "What's up?"
     WG "Look at that."
-    "She pointed to the screen, the tip of her finger on 'Taxes.' It was a deduction taken out of her monthly earning based on how much her park was making."
+    "She pointed to the screen, the tip of her finger on 'Taxes'. It was a deduction taken out of her monthly earnings based on how much her park was making."
     MC "What about it?"
     WG "There's no way to contest this."
     WG "It's completely unbelievable."
@@ -3172,132 +3167,97 @@ label WG017_c2_1:
     WG "Hiring local labor to build and expand the park, the extra business people would bring to the surrounding restaurants and shops."
     WG "I'm constructing a keystone of the local economy, and yet the city or state won't incentivize my work? It's absurd."
     MC "These games aren't supposed to be 100%% realistic."
-    MC "I can see how a 'Lobby the mayor' side-mission would be kind of distracting."
-    WG "Whatever. I was losing interest in this game anyway."
+    MC "A 'Lobby the mayor' side-mission would be kind of distracting from the game’s basic premise."
+    WG "I suppose, but they shouldn’t claim to be a tycoon if those options aren’t available."
     show WG neutral
-    WG "It's too casual in how it depicts things like pricing and expanding the grounds."
+    WG "It's too rudimentary in how it depicts things like pricing and expanding the grounds."
     WG "You can't even set wages for your workers, or handle advertising!"
+    MCT "I see her expectations for these games are as real as you can get. I can’t recall if the others are that realistic."
     WG "What other games are there?"
     $setFlag("WG017_rollercoaster")
     $setVar("WG017_gamesplayed", getVar("WG017_gamesplayed") + 1)
     jump WG017_c2_menu
 
 label WG017_c2_2:
-    MC "Railroad Tycoon is a pretty well-known title. I've never played it, but it must have its fans."
-    WG "'Build your own railroad empire across Europe as you construct routes, upgrade your trains and handle both commercial and passenger business.'"
-    WG "So it's like operating a business, but more concerned with the ground-level operations instead of dealing with shareholders or building a brand."
+    MC "Rail Baron'' is a pretty well-known title. I've played it, but it must have its fans."
+    WG "'Build your own railroad empire across Europe and North America as you construct routes, upgrade your trains and handle both commercial and passenger business.'"
+    WG "So it's about operating a business, but how deep does that go?"
+    MC "I haven’t played it in awhile but you lay track between cities, establish trains and compete with other AI companies. Lost once due to a hostile takeover."
     show WG happy
-    WG "I can see how this would be fun."
+    WG "I can see how this would be fun. Didn’t know you could simulate a hostile takeover."
     if not getFlag("WG017_rollercoaster"):
         "Even though there was an older version of the game discounted 75%% off, Alice went with the latest one."
         show WG neutral
         WG "I want to experience the best possible version of the game."
-        "Never mind that 'latest' didn't necessarily mean 'best.' But all right, Alice is new to gaming and I didn't feel up to opening that can of worms."
-        "I was more bothered by the fact that even the latest version was two years old, and she was using a ZX-5000 to play it. So much processing power called up in service of so little."
-        "The game started with a tutorial; how to place or destroy train tracks, change ticket prices, read the interface."
-        "It took almost 15 minutes, and I could see Alice losing interest. But finally it was done and she got to start her own game."
-        "She played in silence for a while, getting the hang of the basics and, as far as I could tell, doing OK."
+        "It had been a bit since I’d touched this particular franchise but I could recall the most recent third installment to be rather fun and engaging."
+        "The game started with a tutorial; how to place or destroy train tracks, change ticket prices, issue stocks and bonds and propose mergers."
+        "It took almost 15 minutes, and I could see Alice looking rather eager as she read on."
+        "She played in silence for a while, getting the hang of the basics and, even getting more into the stock aspect of it."
+        MC "I’m surprised you picked up on the stocks stuff. I could never quite figure that out."
+        WG "It's quite accurate, so I understand what's happening. This James J Hill guy keeps trying to execute a hostile takeover."
+        MC "What's that, might I ask?"
+        WG "When you buy enough stock of a company to become a primary shareholder."
+        MC "Ahh, I think that's happened to me a few times in this game. Would explain a few things."
         "She was making money, expanding her operations and improving the existing ones."
+        MC "You got the hang of this pretty well."
+        WG "It’s rather straightforward once I figured out where all the options are. A lot of this is similar to what I do."
+        WG "Minus the trains of course."
     else:
         "So she bought the game, again going with the latest version, and sat through another tutorial."
-        "Once she got into the game proper she seemed to do OK."
-    "She was more interested in commercial fare than catering to passengers, probably because that brought in more money."
+        "Once she got into the game proper she seemed to be doing quite well."
+    "She was more interested in commercial fare than catering to passengers, probably because that brought in more money as the years progressed in-game."
     show WG neutral
-    "After a while, a bored expression crept onto her face."
     MC "Having fun?"
-    WG "No, I cannot say that I am."
-    WG "This isn't exactly the most realistic depiction of the railroad enterprise, is it?"
-    MC "No, of course not. It's just a game."
-    WG "I understand that, but to have each country charge the same tax rate? To have the same cost of building and maintaining the tracks no matter where in Europe I go?"
-    WG "And how is it I cannot undercut my competitors when I clearly have the most advanced trains and access to the most routes?"
-    MC "Uh, anti-monopoly policies?"
-    WG "I should then be able to lobby the various governments and secure special exemptions."
-    WG "For that matter, why aren't government contracts an option? There's so much revenue unaccounted for!"
-    show WG angry
-    WG "Argh!"
-    "She closed her eyes. Inhaled, exhaled."
+    WG "Oh certainly, this is much more realistic."
+    MC "Really? Didn’t know it was that close to reality."
+    WG "It does have its faults. Having the same cost of building and maintaining the tracks no matter where in Europe or America I go is a little immersion breaking"
+    WG "I will admit to enjoying being able to undercut my competitors when I clearly have the most advanced trains and access to the largest network."
+    MC "I would assume that's how it should work."
+    WG "Sometimes it’s true, though things like Penn Central show that that thinking has its faults."
+    WG "The touch of cities offering incentives to reach them was a nice touch."
+    MC "Want to try another game?"
     show WG neutral
-    WG "No, I don't think this game is for me."
-    WG "What else is there?"
+    WG "Sure, what else is there?"
+    $setAffection("WG", 2)
     $setFlag("WG017_railroad")
     $setVar("WG017_gamesplayed", getVar("WG017_gamesplayed") + 1)
     jump WG017_c2_menu
 
 label WG017_c2_3:
-    MC "This one is a little off-beat, but it falls under the 'business simulator' banner."
-    WG "Professional Wrestler Tycoon?"
-    WG "I know even less of pro-wrestling than I do video games. Why would I play this?"
-    MC "Just give a try. Who knows, maybe you'll get into it."
-    "Alice shrugged and bought the game. That it was full-price didn't seem to bother her (though I made a note to myself to point out she could get a refund if she didn't care for the game)."
-    "The game downloaded and the instant she opened it the cafeteria was filled with a primal roar."
-    show WG neutral with hpunch
-    play sound Crash
-    Computer "<RWAAAARRRR!>"
-    show WG angry
-    WG "Ah!"
-    show WG angry with hpunch
-    Computer "<DO YOU HAVE WHAT IT TAKES TO BUILD THE GREATEST WRESTLING FRANCHISE THE WORLD HAS EVER KNOWN?!>"
-    "I lunged forward and hit the mute button on Alice's keyboard, then looked around the cafeteria."
-    "The place was mostly empty, but everyone around had heard the full volume outburst. More than a couple heads turned in our direction, their expressions irritated at best."
-    "Nobody was as upset as Alice, though."
-    WG "Oh! What was that assault? Is this game trying to punish you for playing it?"
-    MC "It was surprisingly aggressive."
-    "I turned the volume down to a reasonable amount, which for this game turned out to be 5 out of 100."
-    MC "Still, might as well see how the game plays."
-    "I could tell it was futile. From the moment she started the tutorial, directed by a wrestler called 'White Jaguar,' she was put off by everything."
-    WG "..."
-    "That the game had almost nothing to do with actual wrestling and was instead built around managing a wrestling federation."
-    "You started with a small roster of performers divided into heavyweights, cruiserweights and tag teams, and you made choices about which ones to push, which ones feed to other stars, and which to give championship belts to."
-    "The objective was to build up stars that would bring in audiences, but not have them win all the time lest the fans get bored. Having a stable of villains the audience cared about was integral too."
-    "So it was more like a resource management game with the twist that you needed both good and bad elements, faces and heels."
-    "It wasn't the worst idea for a game, but the mechanics meant nothing to Alice."
-    "The surface aesthetics were not doing it for her, and whatever enjoyment she would find in building a business was buried under her disinterest in the spandex-clad beefcakes going through exaggerated poses whenever you selected one."
+    MC "This is a bit different then the business tycoon games, so we shall see if it's to your tastes."
+    MC "How about something like Superpower? A civilization builder could be good."
     show WG neutral
-    WG "I'm done with this. Surely there must be less off-putting displays than this."
-    $setFlag("WG017_wrestler")
-    $setVar("WG017_gamesplayed", getVar("WG017_gamesplayed") + 1)
-    jump WG017_c2_menu
-
-label WG017_c2_4:
-    MC "Maybe the regular business simulators aren't for you. They kind of are straightforward."
-    MC "How about something like Imperialis? A 4X game might be more your thing."
-    WG "4X?"
-    MC "Explore, expand, exploit and exterminate."
-    MC "The goal is to build an empire and either conquer the world or achieve some sort of technological achievement before anyone else."
-    WG "An empire? Like ancient Rome or China?"
-    MC "Yeah. There actually are games that use ancient civilizations-"
-    show WG happy
-    WG "And I'd be empress?"
-    "As I said 'Yes' I could see her eyes taking on a dreamy expression, like she was losing herself to some beautiful vision."
-    play sound Cheer
-    WG "Let's play that one!"
-    show WG neutral
-    "She bought and downloaded the second-to-latest version of Imperialis, ignoring the space-based game that had come out last year, a giddy smile on her face."
-    "It didn't even fade when she had to sit through yet another tutorial, the longest one by far."
-    "I probably should have told her how much micromanaging there was in these sorts of games, but she wasn't bothered at all. She drank it all in."
-    "When she started the game proper she selected the Roman-esque option, and was mildly put out that she couldn't change her avatar to a female. A fair criticism."
-    "Other than that, she was clearly having a ball."
-    "She didn't master it right away - there was just too much going on to get a feel for everything all at once."
-    "But even when she started to get outclassed by the other empires, and when she engaged in an ill-fated war against one of her neighbors, she was still beaming."
-    "It took almost six hours for her to get through her first game. For a while she had the lead, until another continent was discovered and three other empires joined the picture."
-    "She ended up in second place after managing to conquer a neighbor, but the game ranked her performance right at the bottom of the charts. 'Andrew Johnson.'"
-    "I'd have to look him up later to see just how dismal that was."
-    "But Alice was unfazed, even if she knew who he was."
+    WG "A civilization builder? What does that entail?"
+    MC "The goal is to build an civizational and either conquer the world or achieve some sort of technological achievement before anyone else."
+    WG "Build my own civilization you say... Certainly sounds interesting"
+    "She bought and downloaded the second-to-latest version of Superpower, ignoring the space-based one that had come out last year."
+    MC "Not interested in a space civilization?"
+    WG "I’ll consider it if I find this selection to be appealing enough."
+    MC "Is that the reason you didn’t pick it even though it's the latest version?"
+    WG "Yeah, as it looks like they wanted to try a gimmick. It's a typical marketing move, so if I learn with this older version, I could try the newer one later."
+    "While this tutorial was the longest one by far, she remained interested in it."
+    "I considered mentioning the amount of micromanaging there was in these sorts of games, but I doubted that would bother her."
+    "When she started the game proper she selected the Roman-esque option, and was mildly put off that she couldn't change her avatar to a female."
+    "From there, she was off to the races."
+    "She didn't grasp it immediately - the deluge of options, content and interface choices made it hard to get a good hold on the mechanics."
+    "Through hardships and golden ages she was still appearing to be enjoying herself throughout."
+    "It took almost three hours for her to get through her first game. For a while she had the lead, until another continent was discovered and three other empires joined the picture."
+    "She ended up in second place after managing to conquer a neighbor, while the game metrics placed her overall middle of the pack."
     show WG happy
     WG "I admit, Keisuke, I may have been wrong. That was a wonderful game."
     WG "Obviously there is much room for improvement, so much to learn and master, but I am undaunted."
     WG "If you have any tips, though, I'm open to them."
     MC "Actually, I don't really play these games."
-    if getSkill("Academics") >= 4:
+    if getSkill("Academics") >= 2:
         MC "But I think I noticed a couple things you could have done better. You didn't have to restrict your defenses in each city like you did, for one."
         $setAffection("WG", 1)
-        WG "Yes, I saw that. And maybe if I had stuck to one path with the technological developments..."
+        WG "Yes, I saw that. And maybe if I had stuck to one path with technological developments..."
     else:
         MC "But it definitely was interesting. I think you're getting the knack for it."
     WG "Would you be interested in meeting again over the weekend? I'm practically aching to start another game, but it's getting too late as it is."
-    MC "Oh, wow, it's already eight o'clock."
+    MC "Well it's already eight o'clock so I best be going before Shiori comes by."
     $setAffection("WG", 1)
-    MC "No, yeah. Let's do this again."
+    MC "But, yeah I’d be down to do this again."
     MC "Do you need help taking your computer back to your room?"
     WG "Oh, don't worry. Kodama-san will handle that."
     "I was hesitant to leave it for Aida until I saw she had a wheeled cart waiting by the side."
@@ -3308,7 +3268,7 @@ label WG017_c2_4:
         "It looked like I had a long night ahead of me."
     else:
         "So I said my goodbyes and headed back to my dorm."
-        MCT "Maybe I could look up some Let's Plays for Imperialis, learn a few tips for Alice."
+        MCT "Maybe I could look up some Let's Plays for Superpower, learn a few tips for Alice."
     jump daymenu
 
 label WG018:
@@ -5371,6 +5331,7 @@ label WG027_c1_2:
 label WG027A:
     $lockRoute("WG")
     $setProgress("WG", "WG028")
+    $setFlag("WG_dating")
     scene Cafeteria with fade
     "I was having trouble paying attention to the week's company meeting."
     show WG neutral at center with dissolve
@@ -6266,21 +6227,22 @@ label WG031:
     scene Classroom with fade
     play music HigherEdu
     "Alice and I were on clean-up duty after class."
-    "We were both focused on our work, not trying to make conversation or anything. But as we did so, my attention kept drifting over to Alice."
-    if getAffection("WG") < 10:
-        "I wanted to make sure she was doing her share of the work."
-    elif getAffection("WG") < 19:
-        "Not that I was peeping or anything, just..."
-        "I just wanted something to look at besides the floor."
-        "Honest."
-    else:
-        "Not that I was perving on her or anything, just..."
-        "OK, maybe I was perving a little."
+    show WG stern with dissolve
+    extend " I thought this stuff was boring, but I could tell Alice absolutely {i}loathed{/i} it."
+    "I’m sure she thought this kind of work was beneath her, but as mundane as it was, I didn’t mind it too much myself since it meant I got another opportunity to see her outside of class."
+    "Well, at least in theory. We were both focused on our work. Alice was probably trying to get this over as soon as possible, and I hadn’t thought of anything clever to say to cut the tension up till this point."
+    "To be fair, having Alice around was definitely creating a distracting environment. I didn’t want to make it too obvious, but I was stealing all the looks I could get."
+    "The flare of her wide hips and bulging posterior were quite a sight... {w}Only to be outmatched by the side profile of her almost perfectly spherical belly."
+    "Needless to say, the gears in my mind were turning a bit too fast. Not that I was perving on her or anything, just... {w}Okay, maybe I was perving a little."
     "She finally caught me sneaking a glance one too many times."
-    if getAffection("WG") < 10:
-        show WG angry at Position(xcenter=0.2, yanchor=1.0) with dissolve
-        WG "What?"
-        MC "Nothing."
+    if getAffection("WG") < 25:
+        show WG angry at altMove(0.5, 0.2)
+        WG "What do you keep staring at?"
+        MC "Huh?"
+        "I tried to play dumb."
+        MC "Oh, nothing."
+        show WG stern
+        WG "Hmph."
     else:
         show WG happy at Position(xcenter=0.2, yanchor=1.0) with dissolve
         WG "What are you looking at?"
@@ -6290,53 +6252,73 @@ label WG031:
         MC "It is a majestic view."
         MCT "Oof. I could have done better."
     "Alice rolled her eyes, then went back to wiping down the desks."
-    hide WG with dissolve
-    "When she bent over to grab a fresh towel her expression soured, and she let out a frustrated grunt."
+    "But when she bent over to grab a fresh towel her expression soured."
+    show WG stern at altMove(0.5, 0.5)
+    WG "{i}Argh{/i}!"
     MC "Are you all right?"
+    show WG doubt
     "She waited until she was upright again, inhaling sharply."
-    show WG neutral at center with dissolve
     WG "I'm fine."
     "Her attempt to be convincing was undermined by the irritation still evident in her tone."
-    "When she saw I didn't accept her response - I guess my own expression gave me away - she sighed and continued."
-    WG "I'm not used to my middle being quite so thick."
-    WG "Bending over is more difficult than it used to be. Not impossible, but the added difficulty is a reminder of my condition."
+    MC "?"
+    "Until she saw I didn't accept her response — {w}I guess my own expression gave me away."
+    show WG worried
+    WG "{i}Sigh.{/i} I'm not used to my middle being quite so thick."
+    show WG doubt
+    WG "Bending over is more difficult than it used to be."
+    show WG worried
+    extend " Not impossible mind you, but the added difficulty is certainly a reminder of my condition."
     MC "Condition."
+    show WG surprised-2
     WG "Hmm?"
     MC "You called it a condition."
+    show WG doubt
     WG "Yes. It's not something under my control. It's going to happen no matter what."
+    show WG haughty
     WG "What do you call that, if not a condition?"
-    MC "Sounds rather negative."
+    MC "It just sounds rather negative."
+    show WG stern
     WG "It's not exactly welcome."
+    "Something was off. Alice’s response was certainly reasonable, but it was quite different from her usual determined outlook on the situation to not let her ‘condition’ hamper her."
+    show WG surprised
+    "{i}BURRGLUGGLLLE{/i}"
     "As I tried to think of an appropriate thing to say, the silent pause was broken by a deep gurgling sound."
+    show WG worried
     "I didn't realize what it was at first, until I saw Alice blushing."
-    if getAffection("WG") < 10:
+    if getAffection("WG") < 25:
         MC "If we hurry up we can finish this soon, and you can get something to eat."
         show WG angry
-        WG "I am working, Hotsure-san. And I'm not so gluttonous I can be motivated by the promise of food."
-        MC "Right! Right! I didn't mean to imply anything."
+        WG "I {i}am{/i} hurrying. And I'm not so gluttonous that I can be motivated simply by the promise of food."
+        MC "Right! Right! Didn't mean to imply anything."
         MC "Um..."
+        "I honestly didn’t know what to say next, but my morbid curiosity got the better of me."
     else:
         MC "Do you want to get a snack after we're done here?"
+        show WG sad
         "She frowned, but just for a second."
-        WG "That wouldn't be bad."
-    MC "I've been wondering, and don't take this the wrong way, but has your appetite, you know, gotten bigger?"
+        show WG neutral-2
+        WG "That wouldn't be a bad idea."
+        MC "That does remind me, something I’ve been meaning to ask..."
+    MC "I've been wondering— and don't take this the wrong way— but has your appetite, you know... {w}increased... with your growth?"
     show WG neutral
-    "She didn't say anything at first, as if she was ignoring me."
-    MC "Of course, I know you're not some food-obsessed pig."
-    MC "But it's expected, even ordinary, that people going through puberty get bigger appetites as their bodies grow."
-    WG "It is customary. The body needs more calories in such circumstances."
-    WG "And my condition is similar to a second puberty."
-    WG "To answer your question, yes. I have experienced an increased appetite as of late."
-    MC "Oh."
-    MC "Okay. I was just curious."
+    "She didn't say anything at first. I suspected she was conflicted whether to disclose her true thoughts or deflect the issue entirely. I tried to ease the situation, realizing I might have extended a bit too far."
+    MC "I mean, it certainly wouldn’t be out of the ordinary for someone going through a growth phase — as it were — to notice an increase in appetite."
+    WG "This is true. The body would need more calories in such a circumstance. {w}To answer your question, yes. I have experienced an increased appetite as of late."
+    MC "Makes sense. I was just curious."
     "We continued working, the silence more noticeable than it was before."
-    WG "And as you correctly surmised, I am not a food-obsessed pig."
-    WG "I still have my palate. My appreciation for food has not diminished, even as I crave more of it."
-    MC "Of course."
-    "More silence."
-    "I wanted to say something. To break the silence, and to prevent Alice from thinking I only saw her as 'a fat woman.'"
+    WG "Praytell, why were you curious about my appetite?"
+    MC "Well, my particular growth doesn’t come with a lot of changes."
+    "Though true, if I were being completely honest, I was curious for other reasons as well."
+    MC "I mean, I could only speculate that was the case, but you don’t seem to be ravenous all the time or anything like that, so I didn’t know if that assumption was true or not."
+    WG "As you correctly surmised, I am not a food-obsessed glutton that craves quantity for its own sake."
+    WG "I still have my palate. My appreciation for fine cuisine has not diminished, even as I find myself desiring more of it in a given sitting."
+    MC "But of course."
+    "I tried to be affirming, but I was nearly at a loss for words. My mind was drifting quite a bit at the thought of Alice’s appetite growing larger along with herself..."
+    "I mean, how could it not? But hearing the confirmation straight from the source, I couldn’t help but wonder what this meant for her future growth."
+    "... {w}I realized I had inadvertently let an uncomfortable amount of silence linger as I let my mind drift in the possibilities of her growing appetite."
+    "I wanted to say something. Both to break the silence, and to prevent Alice from thinking I only saw her as a 'fat woman'."
     "But wouldn't she see through me if I tried to change the conversation?"
-    "A bolder act would probably be safer."
+    "On second thought, she’d see through me regardless. I mean, I am genuinely curious about her as a person, after all. The current subject matter was just a bit more distracting than I had anticipated."
     jump WG031_c1
 
 label WG031_c1:
@@ -6345,147 +6327,179 @@ label WG031_c1:
             jump WG031_c1_1
         "Ask if she's working out to help deal with her body." if not getFlag("WG031_c1_2"):
             jump WG031_c1_2
-        "Comment about Renaissance art and female nudes." if not getFlag("WG031_c1_3"):
+        "It’s not that unusual, classical beauty standards favored heavier physiques." if not getFlag("WG031_c1_3") and getSkill("Art") > 4:
             jump WG031_c1_3
         "I'm sure your growth will level off soon." if getFlag("WG031_c1_1") or getFlag("WG031_c1_2") or getFlag("WG031_c1_3"):
             jump WG031_c1_after
 
 label WG031_c1_1:
     $setFlag("WG031_c1_1")
-    MC "Do you have any idea how big you'll get?"
-    MC "I imagine it would be easier to deal with if you knew what to expect."
+    MC "Do you have any idea how big you'll get? {w}I imagine it would be easier to deal with if you knew what to expect."
     show WG neutral
-    WG "I've already looked into my condition, the actual medical diagnosis, though the amount of literature about it is scant."
-    WG "Obesity is hardly a new discovery, and until recently few attempts have been made to diagnose it as something genetic, rather than the result of diet or environment."
-    WG "I would say most of the solid information I've been able to find has come from examining the other students here with the same condition as me."
-    WG "It has given me a rough estimate of what is possible in terms of growth. Which has not been positive."
-    WG "There are a number of both men and women who are much fatter than I have ever seen in real life. Fortunately their health and mobility do not seem impacted."
+    WG "I've already looked into my condition. Unfortunately it seems there is scant information available about these so-called ‘growths’."
+    WG "The medical staff at the school asked me to document my growth, and I have regular check-ups with them."
+    show WG worried
+    extend " The results have not been encouraging..."
+    MCT "That’s odd, she seems unusually glum about this whole thing compared to last time we talked about it."
+    MC "Hmm, I guess it’s like that for everyone. The nurse told me to keep track of how often I was cutting my hair and to come in for measurements. Kind of sounds like they are as clueless as we are."
+    WG "Perhaps. {w}The check-ups with the nurses haven’t offered any further insight into how much I can expect."
+    WG "Whether that is because they are unwilling, or genuinely can’t, I’m not sure. I suspect the latter, but to be so completely in the dark only adds to my frustrations with the matter."
+    WG "Obesity is hardly a new discovery, and until recently, few attempts have been made to diagnose it as something genetic, rather than the result of diet or environment."
+    MC "That is true, but I think we’ve waved ‘bye-bye’ to the typical explanations long ago. Somewhere around the time when Tashi-sensei flopped his tongue out in front of the class on the first day."
+    show WG doubt
+    WG "{i}Yik{/i}! Don’t remind me. It was certainly a shock to the system, one that I’m still not entirely used to, if I’m being honest."
+    show WG neutral
+    WG "I would say the most solid information I've been able to find has come from examining the staff and faculty here with the same condition as me."
+    WG "I’ve also seen a few of the townspeople off campus I suspected were former students as well. It has given me a rough estimate of what is possible in terms of growth."
+    MC "I take it that must be at least somewhat helpful?"
+    show WG worried
+    pause .5
+    WG "Not really, unfortunately."
+    MC "Oh."
+    WG "There have been a handful of men and women who are much fatter than I have ever seen in real life before. Fortunately, their health and mobility do not seem impacted."
+    MC "Well at least that’s a relief."
+    "As much as I appreciated Alice’s expanded proportions, I’d never want it to come at her personal expense. I’d hate to see her get too down over this matter."
+    MC "Besides, who knows? Maybe you’ll end up on the lower end of the scale and it won’t be that big of an issue at all. I mean like we said, no one really seems to know."
+    WG "That is true."
+    show WG worried
+    WG "But looking around at the other current students with a weight gain factor, I don’t feel too optimistic about that prospect."
     show WG sad
-    WG "Though naturally I am holding out hope I end up on the lower end of the scale."
-    MC "I understand."
+    extend " I’m already noticeably further along than most."
+    MC "I see."
+    show WG surprised-2
+    MC "!"
+    MC "I-I meant I understand! Like, ‘I see’ in the empathizing sense, uh... you see?"
+    show WG neutral
+    WG "Relax, Keisuke. I suspected that’s what you meant, but it did catch me a bit off guard in light of the topic at hand."
+    MC "Heh, yeah... sorry about that."
+    show WG haughty
+    WG "Though given how many stolen glaces I caught from you out of the corner of my eye, I’m fairly certain you’ve been doing your fair share of seeing in the literal sense."
+    MC "..."
+    "I wasn’t sure how well she could read my eyes, but she had to have seen how red my cheeks were after that remark."
+    MC "So, umm..."
     jump WG031_c1
 
 label WG031_c1_2:
     $setFlag("WG031_c1_2")
     if getFlag("WG029_muscle"):
-        MC "You mentioned you had a workout routine to help build muscle, right?"
+        MC "You mentioned before you had a workout routine to help your body adjust to the extra weight, right?"
     else:
-        MC "Have you been working out to help deal with your weight, or are you building muscle naturally?"
+        MC "Have you been working out to help deal with your weight, or does that just kind of take care of itself with this sort of thing?"
         MC "Like, is your body adapting to your new weight?"
     show WG neutral
     WG "I have been making a point to be more active, yes. Not that I was a layabout before coming here and learning of my condition."
-    MC "No, of course not."
-    WG "But I don't want to simply trust that my body will adjust to any excess weight."
-    MC "And how's that going?"
-    WG "For the most part, well."
-    WG "Finding time to fit regular workouts into my schedule has required some finessing."
+    MC "No, of course not. You’re actually much more active than most."
+    WG "This is true, but I don't want to simply trust that my body will adjust to any excess weight."
+    MC "Hmm, good idea, best not to just leave it to chance. How's that going?"
+    WG "For the most part, I’d say it’s been going well."
+    WG "Finding time to fit regular workouts into my schedule has required some finessing. Previously, I would not have thought much of skipping a workout now and then if matters of urgency arise."
+    show WG worried
+    WG "However, given these recent changes..."
+    "Alice looked down at her remarkably prodigious belly, no doubt a stark reminder of how her feet would have been visible as recently as a few months ago."
+    show WG neutral
+    WG "I’ve made it a priority to not let them slip. I don’t know if it does anything to slow down this process, but I can only suspect that letting up would allow it to accelerate."
     if getFlag("WG_working"):
         show WG happy
-        WG "Your help with the requisition business has been a significant boon. Thank you for that."
-        MC "No problem."
+        WG "Speaking of finding time, your help with the requisition business has been a significant boon. Thank you for that."
+        MC "No need to thank me, just doing my job ma’am."
+        "Alice smiled, shaking her head as she rolled her eyes at my B- deadpan delivery."
     show WG neutral
-    WG "And it is hard to stay motivated when I'm feeling sore and fatigued, but I do believe the results are there."
-    WG "Notwithstanding the problems bending over or the loss of nimbleness because of my acquired..."
+    WG "Anyway, it is hard to stay motivated when I'm feeling sore and fatigued, but I do believe the results are there."
+    WG "Notwithstanding the problems bending over, or the loss of nimbleness because of my acquired..."
     MC "Padding?"
     WG "Quite."
-    WG "Notwithstanding that problem, I have not experienced any inhibition when it comes to mobility or agility."
-    MC "That's good."
-    MC "You're keeping control of your body."
+    WG "Aside from those issues, I have not experienced any inhibition when it comes to mobility or agility."
+    MC "That's good. {w}Sounds like you're keeping in control of your body."
     show WG haughty
     WG "Of course. I can handle any problem with dedication and willpower."
     jump WG031_c1
 
 label WG031_c1_3:
     $setFlag("WG031_c1_3")
-    MC "I was reading something online recently. Did you know that back around the Renaissance the women featured in paintings were thicker than you see in media today?"
+    MC "It’s not that unusual, classical beauty standards favored heavier physiques in their depiction of the ideal female form. Just look at Renaissance paintings. {w}I mean, think about it."
+    MC "That ideal had persisted so long ago and for so much longer it could be argued that today's standards of thinness as part of the femine ideal are backwards— rather than the other way around."
     show WG haughty
     "She looked at me with a mildly smug expression, and I realized at once I wasn't telling her anything new."
     WG "You're referring to artists such as Rubens?"
-    if getSkill("Art") >= 8:
-        MC "Yeah. Rubens was one of the ones named. Also Titian."
-        MC "I just thought it was interesting that the standard of beauty can change."
-        MC "Who knows, maybe things will swing back around?"
-        show WG happy
-        WG "Heh."
-        WG "Do you know why the old masters painted heavier women?"
-        MC "Oh! Because the people with money to commission portraits were also usually rich enough to eat more and didn't need to toil away in the fields?"
-        WG "Correct."
-        MC "Then what if you got a bunch of commissions of yourself and helped change public perception back?"
-        "She chuckled at the suggestion."
-        WG "There's an idea. I wouldn't mind a portrait of myself in the classic style."
-        $setAffection("WG", 1)
-        WG "Maybe as a figure from antiquity, or ancient mythology."
-    else:
-        MC "Was he one of those artists?"
-        show WG neutral
-        "A look of disappointment flashed across her face."
-        WG "His work is associated with heavier women, to the point that the term 'Rubenesque' is a common enough descriptor."
-        WG "I guess the term isn't used in Japan."
-        MC "No. I've never heard that."
-        show WG haughty
-        WG "Back in Rubens' day, the arts were more of a patronage system."
-        WG "Wealthy merchants and royals commissioned portraits, and those who could afford it also tended to be people who could eat richly and didn't have to spend all day working in the fields."
-        WG "Thus the 'well-fed' look became a sign of wealth and privilege, and works of art from the time reflected that."
-        MC "Oh. I didn't realize that."
-        MCT "I guess I should make sure I know what I'm talking about before I try to show off a bit of knowledge."
+    MC "Yeah. His works would probably be the first example that comes to mind, but there are others."
+    WG "You would be correct in that observation. His work is associated with heavier women, to the point that the term 'Rubenesque' is a common enough descriptor."
+    MC "Rubenesque, eh? Hmm, I’ll have to remember that. I hadn’t heard of it before, but it has a nice ring to it."
+    show WG surprised-2
+    WG "It does?"
+    "Alice was obviously caught off guard by my casual remark, but I could only shrug in response."
+    MC "I mean, I think so."
+    MC "I just think it’s interesting that the standard of beauty can change. {w}Who knows, maybe things will swing back around?"
+    show WG happy
+    WG "Heh."
+    WG "Do you know why the old masters painted heavier women?"
+    MC "Oh! Because the people with money to commission portraits were also usually rich enough to eat more and didn't need to toil away in the fields?"
+    WG "Correct."
+    MC "Hmm, that’s an idea— what if you got a bunch of commissions of yourself and helped change public perception back?"
+    "She chuckled at the suggestion."
+    WG "Ha! That’s a rather far-fetched notion... Though, truth be told, I wouldn't mind a portrait of myself in the classic style."
+    $setAffection("WG", 1)
+    WG "Maybe as a figure from antiquity, or ancient mythology."
+    "Clearly Alice did not consider the idea as far-fetched as she led on."
     jump WG031_c1
 
 label WG031_c1_after:
-    MC "I'm sure your weight will level off soon."
-    MC "None of the other students here have gotten too fat to live a fulfilling life, from what I've seen."
+    MC "I'm sure your weight will level off soon. I mean, it’s not very likely you’d have an extreme case. Why bet against the odds?"
+    MC "Besides, it’s not like any of people with a weight gain factor here have gotten too fat to live a fulfilling life, at least from what I've seen."
     show WG neutral
     WG "Hmm..."
     WG "'Too fat' is a relative term."
     MC "I guess. But it's not like you were an aspiring track star or..."
-    MCT "Don't say 'actress' or 'pop star' or anything like that. Nothing that relies on conventional beauty standards."
-    MC "Or... museum tour guide."
+    MCT "Don't say 'actress' or 'pop singer' or anything like that. Nothing that relies on conventional beauty standards. {w}But what else is there?"
+    MC "Or... uh... {w}museum tour guide..."
     MCT "Ouch. I'm actually hurting over how stupid that was."
     WG "..."
-    WG "I think I understand what you were trying to say."
+    MC "I, uh, didn’t exactly have a list prepared..."
+    show WG neutral-2
+    WG "I think I understand what you’re trying to say."
+    MCT "That makes one of us then."
     show WG haughty
     WG "No, my path was not one that relied on any form of physical ability or conditioning."
-    WG "I am still my father's daughter, destined to become a titan of business. A few extra kilos will not impede me."
+    WG "I am still my father's daughter, destined to become a titan of industry. A few extra kilos will not impede me."
     MC "Yeah."
     "The mood seemed noticeably lighter as we finished cleaning up."
-    if getAffection("WG") < 10:
-        "We parted ways after we were done, Alice to find Aida and me back to my dorm."
+    if getAffection("WG") < 24:
+        "We parted ways after we were done. Alice headed back to her room to find Aida while I went back to my dorm."
     else:
         "We headed to the cafeteria when we were done to grab a snack, Alice dominating the conversation with her thoughts about a film she had recently seen."
-        "I didn't have anything to contribute to that, but I liked listening to her talk about something she enjoyed."
+        "From how she described it, it was obviously one of those highbrow arthouse type movies."
+        "It did sound interesting, but I really didn't have anything too meaningful to contribute to the conversation. I was just content to listen to her talk about something she enjoyed."
     jump daymenu
 
 label WG032:
     scene Classroom with fade
-    "I came to class thinking today would be no different than any other day, which in turn made me reflect how quickly I had gotten used to... all this."
-    "I mean, for myself the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... My life hadn't changed."
-    "And even being surrounded by ladies who were getting improbably busty or tall or whatever didn't elicit so much as a second glance."
-    "So when I entered the class and saw a very heavy woman arguing with a very muscled woman, my only thought was how the morning's peace was going to be broken by their bickering."
+    play music Schoolday
+    "I came to class thinking today would be no different than any other day, which in turn made me reflect on how quickly I had gotten used to... all this."
+    "I mean, for myself the knowledge of growth factors didn't mean much. I could stand to go to the barber more often, but really... I hadn’t changed all that much."
+    "And even being surrounded by ladies who were getting improbably busty or tall or whatever, didn't elicit so much as a second glance anymore."
+    "So when I entered the class and saw a very heavy woman arguing with a very muscled woman,"
+    show WG angry at Position(xcenter=0.25, yanchor=1.0)
+    show FMG angry at Position(xcenter=0.75, yanchor=1.0)
+    with dissolve
+    "I was pulled back into the sense of just how unusual this whole circumstance has been as I listened to them bicker back and forth."
     play music Tension
-    show WG angry at Position(xcenter=0.25, yanchor=1.0) with dissolve
     WG "I do not care to repeat myself, and asking again is not going to result in a different answer."
-    show FMG angry at Position(xcenter=0.75, yanchor=1.0) with dissolve
-    FMG "At least give me a reason. Would it kill you to not act like a selfish-"
-    if getAffection("WG") >= getAffection("FMG"):
-        jump WG032_WG
-    else:
-        jump WG032_FMG
-
-label WG032_WG:
     "Akira was cut off when Alice noticed my arrival and turned to me."
     WG "Keisuke, can you talk some sense into this woman? I am quickly running out of patience."
     MC "What's the issue?"
     FMG "I just want-"
-    WG "Ms. Mizutani asked if she could borrow a certain garment of mine, I said no, and she will not let matter drop."
-    FMG "You won't even explain why, though."
+    WG "Ms. Mizutani asked if she could borrow a certain garment of mine, I said no, and she will not let the matter drop."
+    FMG "You won't even explain why, though!"
+    show WG haughty
     WG "Must I? Must I justify the decisions I make concerning my own property?"
     menu:
-        "You can at least give her a reason. Saying 'No' just because comes across as rather petty.":
-            jump WG032_WG_1 #(+1 Alice)(+1 Akira)
-        "If she said 'No,' Akira, you should just accept it. She doesn't have to give a reason.":
-            jump WG032_WG_2 #(-1 Akira)
+        "You can at least give her a reason.":
+            jump WG032_WG_1 #(+2 Alice)(+1 Akira)
+        "She doesn't have to give a reason.":
+            jump WG032_WG_2 #(+1 Alice)(-1 Akira)
 
 label WG032_WG_1:
     stop music
+    MC "You can at least give her a reason, Alice. Saying 'No', just because, comes across as rather petty."
     FMG "Yeah Alice, it's common courtesy."
     play music Peaceful
     show WG neutral
@@ -6493,27 +6507,86 @@ label WG032_WG_1:
     WG "The fact is, the article in question was tailored to me specifically. To my proportions."
     WG "Just because it is... 'expansive' does not mean it's suitable for any plus-sized woman."
     WG "You don't have the right figure for it, Mizutani-san."
-    show FMG sad
+    show FMG sad-2
     FMG "Oh..."
     FMG "I hadn't thought about that."
     show WG happy
-    WG "If you would like something appropriate for this special occasion (whatever it may be), I would happy to procure a dress better-suited to you."
+    WG "If you would like something appropriate for this special occasion, whatever it may be, I would be happy to procure a dress better-suited to you."
     WG "My business caters to men and women of all dimensions."
-    FMG "No. I don't have money for that. That's why I needed to borrow something."
-    FMG "It's OK. I'll figure something else out... hopefully."
-    hide FMG with dissolve
-    show WG happy at center with dissolve
-    $setAffection("WG", 1)
+    FMG "No. I don't have money for that."
+    show FMG sad
+    extend " That's why I needed to borrow something."
+    show FMG happy
+    FMG "It's OK. I'll figure something else out..."
+    show FMG sad-2
+    extend " hopefully."
+    MCT "Just how strapped for cash is she? Alice’s prices aren’t exorbitant. {w}Wait a minute..."
+    MC "Uh, Akira, maybe I’m mistaken, but did you ask Alice what she would charge to get you a new custom dress?"
+    show FMG angry
+    FMG "Of course I did!"
+    show WG doubt
+    WG "No, you didn’t."
+    FMG "Ugggh, dammit. I guess I jumped the gun."
+    show FMG sad-2
+    extend " Look, I need something really nice and I know I can’t afford it."
+    MC "Well, you’ll never know unless you ask, right? I’m sure Alice could work out some kind of deal with you."
+    show WG happy
+    WG "Keisuke is correct. Here, take a look at our catalog."
+    "Alice pulled one of the business catalogs from her school bag and handed it to Akira."
+    WG "Take a look at these pages here. These are just some of our potential dress offerings, I’m willing to do more custom work too, if you know what you have in mind."
+    show FMG neutral
+    FMG "Hmm..."
+    "Akira was studying the pages intently. She was obviously intrigued by what she was seeing."
+    FMG "Wow, these prices are actually pretty good."
+    show FMG sad-2
+    extend " But it’s still a bit too much."
+    MC "Well, maybe Alice could work out some kind of deal with you. Maybe like some sort of layaway option, or maybe just half up front?"
+    show WG doubt
+    show FMG happy
+    FMG "Yeah! That could work. I could scrounge up the rest of the cash in the meantime."
+    show WG stern
+    WG "I’m afraid not. That’s not how this kind of business operates. These clothes are custom proportions, they can’t be placed back on the rack if the customer doesn’t pay in full."
+    show WG haughty
+    WG "I appreciate your enthusiasm to make a deal Keisuke, and as much as I’d would like to trust Akira to follow through with her financial obligations,"
+    WG "this would set a terrible precedent that could end up jeopardizing the profitability of the business."
+    show FMG sad
+    FMG "Well, thanks for trying, Keisuke."
+    "Man, who was I kidding? I tried hard to be Mr. Dealmaker here, but I was pretending at best. Alice was right, but I felt bad for Akira."
+    "I don’t know why she wanted the dress so badly, but it seemed pretty important to her. I mean, I’d take a chance on her, but that’s not how businesses work, and Alice was running a business."
+    MCT "Wait a second..."
+    MC "How about this? Akira fronts the first half of the cost as a down payment, and I use my future wages as collateral for the remaining half."
+    show WG surprised-2
+    show FMG surprised
+    extend " If she doesn’t pay you, you don’t have to pay me."
+    show FMG happy
+    FMG "You’d do that for me, Kei-kun?"
     $setAffection("FMG", 1)
-    WG "Thank you for your help, Keisuke."
-    MC "It was really nothing. People like it when you give them a reason for rejection."
-    MC "You can't just say 'Because I said so.' I think any parent could tell you that never works."
-    "She raised an eyebrow."
-    WG "Really? I never had trouble acquiescing to my parent's authority."
-    "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I bit my tongue and found my seat."
+    MC "Absolutely. {w}What do you say, Alice? Do we have a deal?"
+    show WG neutral
+    WG "Well, seeing how this shifts the risk off of me and on to you, and I have a sneaking suspicion you won’t be skipping town on me any time soon, I think we can work with this little arrangement."
+    show FMG flex
+    FMG "Awesome! You’re amazing Kei-kun. Thanks Alice."
+    show WG neutral-2
+    WG "Come by my dorm sometime after class today. I’ll take your measurements and we can work out the details of what you have in mind then."
+    show FMG neutral
+    FMG "Sounds good to me! I’ll see you then."
+    hide FMG with dissolve
+    show WG happy at altMove(0.5, 0.5)
+    $setAffection("WG", 2)
+    WG "Well well, quite impressive negotiation skills there, Mr. Dealmaker. I fancy myself more determined than anyone to make a sale, but you went above and beyond by sticking your neck out for her."
+    show WG haughty
+    WG "Not the most sound business tactic, perhaps too trusting on your part,"
+    show WG happy
+    extend " but shrewd nonetheless."
+    MC "Hey, I’m just a delivery boy. {w}But I suppose I’ve picked up on a couple of things here or there from watching my boss."
+    WG "While your modesty is false, and your flattery over–obvious, you are genuinely kind.  {w}I’m sure Akira will be very happy with her new dress."
+    "There were several ways I could have responded to that, but Tashi-sensei walked in at that point, so I held my tongue and found my seat."
     jump daymenu
 
 label WG032_WG_2:
+    MC "She doesn't have to give a reason. If she said 'No', Akira, you should just accept it."
+    show FMG angry-2
+    $setAffection("WG", 1)
     "Akira didn't get any angrier, but having her glare at me instead of Alice was chilling."
     FMG "Of course you'd take her side."
     $setAffection("FMG", -1)
@@ -6521,141 +6594,61 @@ label WG032_WG_2:
     FMG "Fine! Forget I even asked."
     play music Peaceful
     hide FMG with dissolve
-    show WG neutral at center with dissolve
+    show WG haughty at center with dissolve
     "Alice clucked her tongue."
     WG "Most unbecoming. Rejection is an inevitability in life, but disappointment only comes when we open the door to it."
-    MC "Maybe you should have just told her why you turned her down."
-    WG "Why? I already said I don't have to justify myself."
-    MC "Yeah, but-"
-    "And that's when Tashi-sensei walked in, so I shut my mouth and found my seat."
-    MCT "Maybe I shouldn't have taken Alice's side so readily."
-    jump daymenu
-
-label WG032_FMG:
-    "She cut herself off when she saw me."
-    FMG "Keisuke, help me out here."
-    FMG "I just asked Queen Belly-"
-    #[Crash SFX]
-    #[Screen shakes]
-    WG "Grrrr!"
-    FMG "...if I could borrow a dress of hers for our date, and she won't even give me a reason why not!"
-    WG "As if I'm going to help you out after insulting me like that."
-    menu:
-        "Just tell her why not. I'm sure she'll drop the matter if you give her a reason.": #(+1 Alice)
-            jump WG032_FMG_1
-        "Saying 'I don't wanna' sounds childish.": #(-1 Alice)
-            jump WG032_FMG_2
-
-label WG032_FMG_1:
-    if getAffection("WG") < 6:
-        MC "Alice-"
-        WG "Nikumaru-san. Let's observe propriety while we're in class."
-        MC "OK. Nikumaru-san, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
-    else:
-        MC "Alice, can you just tell her why not? I'm sure she'll drop the matter if you give her a reason."
-    stop music
-    "She exhaled slowly."
-    play music Peaceful
+    MC "It’s your business, and I wouldn’t expect you to if you didn’t want to, but maybe you should have just told her why you turned her down."
+    WG "Why? I already said I don't have to justify myself. That should be the end of the matter."
+    MC "Well, that may be true, but have you ever heard the expression you attract more flies with honey than vinegar?"
+    show WG doubt
+    WG "Why would anyone try to attract flies?"
+    MC "Hmm, you do have a point there. That is kind of a weird expression now that I think about it. But you get what I mean, yes?"
     show WG neutral
-    $setAffection("WG", 1)
-    WG "Very well."
-    WG "If you must know, I do not believe the dress would flatter Mizutani-san."
-    WG "It was designed for me personally, for my proportions."
-    jump WG032_FMG_after
-
-label WG032_FMG_2:
-    MC "Saying 'I don't wanna' sounds childish."
-    MC "You could at least say why you don't want to."
-    $setAffection("WG", -1)
-    stop music
-    WG "You want to know why not?"
-    play music Peaceful
-    WG "It's because Mizutani is much too bulky to wear the dress."
-    FMG "Hey! You're no stringbean yourself."
-    WG "My body may have a little extra here and there-"
-    FMG "A lot of extra everywhere, you mean."
-    WG "-which is why I've had my clothes specially made to suit me."
-    jump WG032_FMG_after
-
-label WG032_FMG_after:
-    show FMG neutral
-    FMG "Yeah, so it should be big enough to fit me."
+    WG "Not really."
+    show WG haughty
+    extend " Some people have to learn to take ‘No’ for an answer."
+    MC "People tend to be more understanding though when you give them a reason for rejection. You can't just say 'Because I said so.' I think any parent could tell you that never works."
+    show WG surprised-2
+    "Alice raised an eyebrow, rather confused by my explanation."
+    WG "Really? I never had trouble acquiescing to my parents’ authority."
+    MCT "I think I see the issue here..."
+    MC "What about Matsumoto-san’s authority?"
+    show WG stern
+    WG "That’s different!"
+    MC "Is it really? You didn’t give up on your business when the strictest reading of the rules didn’t allow for it. You tried to find a work around and didn’t take no for an answer."
+    MC "Isn’t that what Akira was trying to do just now?"
+    WG "Those are hardly the same thing! Besides, it’s the principle of it! I told her no and she should respect that!"
+    MC "That sounds like something Matsumoto-san would say."
     show WG angry
-    WG "Grrr..."
+    "Flames practically sparked from Alice’s eyes after that retort. She looked like she wanted to choke me, but there was no use in backing down now."
+    MC "Look, I’m not trying to be insulting, I’m just pointing out that when people respect the other person, they’ll respond just fine to 'No'."
+    MC "But if they don’t understand, and it sounds petty and arbitrary, people tend to talk back when they hear 'No'."
+    show WG doubt
+    WG "I think I see what you mean."
+    MCT "If only she met my sister, then she’d understand perfectly."
     show WG neutral
-    WG "That is not how clothing works. Not everything is designed to be stretchy like tracksuits or yoga pants."
-    FMG "Couldn't I at least try it on? It can't be that tight on you, otherwise you'd rip-"
-    show WG angry
-    WG "Grrr..."
-    MC "I think what Akira means to say is that your outfits probably have a certain amount of give."
-    MC "And with a little work the dress can be adapted to suit her. We could find video tutorials online to help with that."
-    WG "You can't just take 'No' for an answer."
-    FMG "Hey, I don't work for you."
-    MC "If there's a solution to your objection it's worth trying to work around it."
+    WG "Some negotiations do require a more delicate approach."
+    MC "Speaking of negotiations, why was she asking about borrowing a dress? Your prices are fair, I’d be surprised if she were {i}that{/i} strapped for cash. She didn’t want to make a deal?"
+    WG "Actually, she never asked about pricing..."
+    MC "..."
+    show WG stern
+    WG "Don’t look at me like that! She just launched right in by asking to borrow my dress— which wouldn’t fit her at all by the way."
+    show WG worried
+    extend " And we just started bickering back and forth from there..."
+    WG "{i}Sigh{/i}... {w}I let a potential sale slip away, didn’t I?"
+    show WG sad
+    "And with that, the emotional gut punch of how she just treated Akira had landed."
+    "I doubt it was about the money lost, let’s face it, she had plenty, but it must have hit pretty hard when she realized her insistence on being right put her in the wrong."
     show WG neutral
-    WG "Why don't you just buy a dress that would fit you? I sell clothing for men and women of all dimensions."
-    show FMG sad
-    FMG "I don't have money for that."
-    MC "Think of it as a test-drive. Akira could buy something else later once she sees how fashionable your inventory is."
-    show FMG happy
-    FMG "Yeah! Think of it like a test-drive."
-    if getAffection("WG") < 6:
-        WG "Well-played, Hotsure-san."
-    else:
-        show WG happy
-        WG "Well-played, Keisuke."
-    show WG neutral
-    WG "Very well. Consider this a free trial of the wares the Nikumaru Outlet Direct has for offer."
-    FMG "Sweet, thanks Alice!"
-    "Tashi-sensei showed up then, so we tabled the conversation as class started."
-    stop music
-
-    scene Hallway with fade
-    "After class Alice and Akira went to the former's dorm and Akira tried on the dress."
-    "Alice said she knew a few tricks for making loose or oversized garments fit better, pinning up excess fabric in ways that didn't show."
-    "I thought the matter was solved, trying to imagine how Akira would look dressed up."
-
-    scene Cafeteria with fade
-    "But when I went to the cafeteria for dinner I found out things hadn't worked out like I'd hoped."
-    play music Tension
-    show WG angry with dissolve
-    WG "Hotsure-san!"
-    MC "Gah!"
-    MC "What?"
-    show WG angry at Position(xcenter=0.25, yanchor=1.0)
-    show FMG sad at Position(xcenter=0.75, yanchor=1.0)
-    with dissolve
-    WG "My custom-made Vantelli dress. Ruined!"
-    FMG "I said I was sorry."
-    MC "I take it the dress didn't fit?"
-    WG "No, it fit. I made it work."
-    WG "But your girlfriend apparently thought that she could compete in a decathlon while wearing a designer evening gown."
-    show FMG angry
-    FMG "Hey! All I did was bend over."
-    WG "You can't make any sudden movements while wearing a dress like that!"
-    WG "You have to move elegantly. Slow, sweeping motions."
-    show FMG sad
-    FMG "Well I know that now."
-    MCT "I was almost expecting her to say Akira flexed her arms and the sleeves exploded."
-    MC "I'm sure Akira will make it up to you."
-    WG "She'd better."
-    show FMG angry
-    FMG "I will! I'll pay you back!"
-    show FMG sad
-    FMG "Somehow..."
-    WG "We'll see."
-    WG "Now if you'll excuse me, I need to get my seamstress on the phone. The dress may still be salvageable."
-    hide WG with dissolve
-    show FMG neutral at center with dissolve
-    FMG "She didn't have to take it so personally."
-    MC "Well, it sounds like it was an expensive dress."
-    FMG "But she's loaded."
-    MC "That doesn't mean she likes throwing money away."
-    FMG "I guess."
-    FMG "I just thought it would have been nice to get dressed up for our date."
-    MC "Yeah."
-    MC "Why don't you grab yourself some food? We can have dinner together."
-    "The mood improved as we ate and talked about nothing in particular, the drama with Alice forgotten."
+    WG "Alright, I’ll talk to her after class, hopefully she’ll have cooled off since then. I’ll see if I can offer her a special deal on a dress of her own to make up for this."
+    WG "Even if it’s priced at a loss, it’s better to take a little upfront in order to gain a client that will give us repeat business."
+    MC "That sounds like a much better deal to me."
+    show WG surprised-2
+    WG "I think you’d make a pretty decent business negotiator, Keisuke."
+    MC "Does that mean I should ask for a raise?"
+    show WG haughty
+    WG "On second thought, just leave the business negotiations to me."
+    "There were several ways I could have responded to that, and I was all-too-eager to flex my imaginary negotiation muscles, but Tashi-sensei walked in at that point, so I held my tongue and found my seat."
     jump daymenu
 
 label WG033:

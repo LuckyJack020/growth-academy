@@ -1121,6 +1121,92 @@ label global000_homeroom:
     "What was I supposed to do now, knowing what I do about the bodies of the student body?"
     jump daymenu
 
+label MC001:
+    scene Dorm Interior with fade
+    play music MC
+    "The first day of class was certainly interesting... {w}bizarre, surreal, confusing— all manner of strange and unsettling characterizations came to mind, but I chose to stick with interesting for the sake of my own sanity."
+    "Normally I’d like to sleep in as late as feasibly possible while still avoiding being late to class. I was pretty good at the first part, but hadn’t mastered the second, even after 18 years of practice."
+    "After recent events, I’m not too sure who would have slept soundly all through the night. Well, maybe Tomo. I don’t think she’d even wake up for a firestorm during an earthquake."
+    "Since I was already awake, I decided to just get up and get ready for class. After getting dressed, I was ready to head out."
+    "I cracked the door open to leave when I noticed a lanky, clammy hand slowly shoving the door back shut."
+    play music RM
+    show RM neutral with dissolve
+    "Oh yeah, that guy. My roommate. I’m pretty sure he said his name was Daichi. How did I not notice him standing there before?"
+    MC "Uhhh, good morning?"
+    RM "That remains to be seen. The morning hasn’t started yet."
+    MC "Right, I suppose... {w}Uh, did you need something?"
+    RM "Do you know why you're here?"
+    MC "Umm, because I have some kind of growth or something. I’m not—"
+    show RM doubt
+    RM "Yes, I know what they {i}told{/i} us. I’m asking you the {i}real{/i} reason you’re here."
+    MC "Are you implying that the real reason is something different than what we were told?"
+    show RM distrustful
+    RM "I’m asking the questions here."
+    show RM doubt
+    extend " But the answer is yes, {w}well perhaps, {w}probably at least."
+    MC "Was there something unconvincing about seeing a man with a meter long tongue talk about body parts growing in unusual ways?"
+    show RM concerned-2
+    RM "No, but maybe that’s the point— a little {i}too{/i} convincing."
+    "My eyes were beginning to glaze over at this point. It was a bit too early in the morning to put on a tin foil hat."
+    show RM smug
+    RM "Think about it. What better way to get students to completely fall in line and accept what they’ve been told than to be shown something that seemingly confirms the story they’ve planted in our minds?"
+    MC "I did think about it. I saw it and now I can’t forget it, even if I wanted to. If that was the point then Tashi-sensei did a pretty good job, because I’m convinced."
+    show RM doubt
+    RM "{i}Tck{/i}. Don’t be so quick to accept just anything. Ever heard the expression ‘Don’t believe anything you hear, and only half of what you see.’?"
+    MCT "No, but in light of this conversation it sounds like useful advice."
+    menu:
+        "Tell him he’s not making sense.":
+            MC "Well, that’s the first I’ve heard it, but I guess I’m not supposed to believe it."
+            show RM distrustful
+            RM "Ugh, {i}listen{/i}... You can’t just accept at face value people will tell you everything you want to know from them. It takes real {color=#0066CC}skill{/color} to read between the lines and extract everything out of them."
+        "Just humor him.":
+            MC "Alright, I’m listening."
+            $setAffection("RM", 1)
+            RM "Look, you can’t just accept at face value people will tell you everything you want to know from them. It takes real {color=#0066CC}skill{/color} to read between the lines and extract everything out of them."
+
+    MC "Skill? Like what kind of skill?"
+    MCT "More to the point, what are you even talking about?"
+    show RM happy
+    RM "Well, aside from good intuition and a healthy sense of skepticism {size=-6} both of which you are sorely lacking... {/size}"
+    show RM smug
+    RM "Most people respond more favorably to people with skills they respect. That’s where you have to read between the lines, to figure out how someone ticks. Then maybe they’ll open up to you more."
+    if isHighestSkill("Art"):
+        RM "You seem like someone who's more artistically inclined. That can help you come off as thoughtful and creative to more sensitive minded individuals. Pretentious types really eat that stuff up."
+    elif isHighestSkill("Athletics"):
+        RM "You seem like someone who’s more athletically inclined. People that are always active respect that kind of stuff."
+    elif isHighestSkill("Academics"):
+        RM "You seem like someone who’s more academically inclined. Keeping your grades up is important. People are always looking for a study buddy for the tough courses."
+        show RM doubt
+    RM "Regardless of your forté, rest assured, if you don’t keep all your skills sharp you {i}will{/i} miss things."
+    MC "Why are you telling me this?"
+    show RM distrustful
+    RM "Because someone here must know something about why we’re here, something more."
+    show RM happy
+    extend " I want you to be on the lookout, get some feelers out there. Report back to me if you find any interesting tidbits."
+    MCT "Aye aye Captain Weirdo!"
+    MC "Uh, sure. I’ll try to keep that in mind. {w}Can I go now?"
+    show RM concerned-2
+    RM "Yes, I don’t have anything else... {w}for now."
+    show RM doubt
+    extend " Just remember what I told you. Stay sharp."
+    MC "Yeah, no problem. Uh... See you in class, I guess?"
+    hide RM with dissolve
+    play music MC
+    "Daichi had walked back to his side of the room, already completely engrossed with typing away at his laptop, oblivious to my presence after having just cornered me for an impromptu interrogation."
+    "Not bothering to wait for a response, I just headed out the door."
+    scene Dorm Hallway with fade
+    "Daichi was certainly... eccentric, to put it lightly. As off-putting as our initial interactions had been, I decided not to judge him too harshly for it. We’ve all been thrust into something no one could have really prepared for."
+    "People cope with the stress of the unknown in different ways and I didn’t know the guy well enough to know if that was his true personality, or if he just needed some time to wind back down."
+    "I wasn’t holding out for the latter any time soon though."
+    scene Dorm Exterior with fade
+    "Still though, there was something about his advice to read between the lines that stuck with me. That I’d be missing out if I didn’t develop myself to my full potential. {w}Something to think about at least."
+    "More importantly though, this was the start of something new, there were a lot of new people to meet. Hopefully some were worth getting to know."
+    jump daymenu
+
+label MC002:
+    "This marks the current end of the Keisuke-centric scenes."
+    "More are planned for a later release. Until then, feel free to explore the main routes."
+    jump daymenu
 
 label global005:
     $setTimeFlag("testday2")
@@ -1144,8 +1230,10 @@ label global005:
         MC "Oh, hello Nikumaru-san."
         WG "Please, I've told you before, call me Alice. Formalities are for business, I find them so tiresome in normal conversation."
         MC "Er, okay, Alice... but you called me Hotsure-san."
-        WG "Because you were expecting it, of course. In any case, I'm looking forward to today's lessons. You?"
-        MC "I suppose..."
+        WG "Because you were expecting it, of course. In any case, I trust you are adjusting to your new setting. Settling into a new routine by now?"
+        MC "As well as anyone I suppose..."
+        show WG haughty
+        WG "Good to hear. Some find adherence to a routine to be restrictive, but I find the gains in productivity from an optimized schedule to be far more freeing than leaving idle time for its own sake."
     if getHighestAffection() == "GTS":
         "I noticed Naomi-san walking next to me as we made our way to class. Like, noticeably close."
         show GTS neutral with dissolve

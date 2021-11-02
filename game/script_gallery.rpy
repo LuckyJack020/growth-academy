@@ -9,7 +9,7 @@ init python:
     galImgList["GTS"] = ["GTS000", "GTS024", "GTS025", "GTS035", "GTS044_stars1", "GTS044_stars2"]
     galImgList["FMG"] = ["FMG016", "FMG041", "FMG050", "FMG055", "FMG056"]
     galImgList["WG"] = ["WG000", "WG009", "WG010", "WG046", "WG047"]
-    galImgList["PRG"] = ["PRG020", "PRG020b", "PRG025", "PRG038"]
+    galImgList["PRG"] = ["PRG020", "PRG025", "PRG038"]
     galImgList["RM"] = ["RM000"]
 
     for g in girllist:
