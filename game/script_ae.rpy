@@ -15665,7 +15665,7 @@ label AE067:
         MC "So, what's going on? Maybe I can help again."
     show AE sad
     AE "...I'm trapped."
-    "Shiori's words elicited a sense of worry from my as they left her mouth, causing the hairs on the back of my neck to prickle up as I tried to understand what she meant."
+    "Shiori's words elicited a sense of worry from me as they left her mouth, causing the hairs on the back of my neck to prickle up as I tried to understand what she meant."
     MC "Trapped?"
     AE "I feel trapped in my own mind."
     AE "I feel like there are some fears I need to let go of... but every day I look at myself and I'm reminded that my fears aren't baseless at all. I'm afraid that what's happening to me was... is inevitable."

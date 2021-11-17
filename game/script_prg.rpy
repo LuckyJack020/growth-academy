@@ -115,7 +115,7 @@ label PRG001:
         "As that thought lingered in my head, I grabbed a tuft of my hair and looked intently at it."
         MCT "Right. The word normal doesn't exist here."
     else:
-        "I shook my head. Allowing myself to give this thought so much attention wasn't doing much good ."
+        "I shook my head. Allowing myself to give this thought so much attention wasn't doing much good."
         MCT "I'll just ride this out, try to relax, and maybe make a friend or two."
     "My thoughtful stroll took me past the cafeteria, and I stopped."
     "Some therapy food sounded perfect right now."
@@ -10276,7 +10276,7 @@ label PRG035:
     MC "It's believable, if anything. I don't want to pry into her business, but I'm really curious now."
     show PRG neutral
     PRG "Me too. If I find anything out, you'll be the first to know. But, what's confusing about this whole mess is that Alice has mentioned before that she has some misgivings about the choir and how it is maintained."
-    "What would make her act now, if she's had these feelings for so long already?"
+    MCT "What would make her act now, if she's had these feelings for so long already?"
     MC "You've got me there. Maybe something happened yesterday that really threw her over the edge? Do you know if she has any events coming up with the choir?"
     PRG "Not that I know of. If something did happen yesterday, it would explain the random conversation coming out of nowhere."
     MC "All things considered, it's probably best for us to put it out of our minds. If she needs something, I'm sure she'll come to you for advice."
@@ -12668,7 +12668,7 @@ label PRG044_c1_2:
     "Tomoko looked from me, to Aida, and back again."
     MC "Oh! Eheh, Aida, this is my sister, Tomoko. Sis, this is Aida Kodama. My girlfriend."
     PRG "I-It's nice to meet you."
-    Tomoko "I'd tell you the same thing, but it already feels as if I've already met you."
+    Tomoko "I'd tell you the same thing, but it feels as if I've already met you."
     show PRG unique
     PRG "I... I don't think we've ever met..."
     Tomoko "I meant that I've heard a lot about you."

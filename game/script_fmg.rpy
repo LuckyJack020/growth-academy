@@ -7739,7 +7739,7 @@ label FMG050:
     MC "Huh?"
     show FMG surprised
     FMG "TRUST FALL!"
-    "Not once has my life flashed before my eyes until this very moment, seeing Akira \"trust fall\" at this size right on top of me... Good thing I wore brown pants today.]"
+    "Not once has my life flashed before my eyes until this very moment, seeing Akira \"trust fall\" at this size right on top of me... Good thing I wore brown pants today."
     MCT "Is this how fat fans feel right before their life is taken away?!?!" #(This isn’t staying)
     "I planted my feet in the ground and stuck my arms out in an attempt to catch her. Shutting my eyes in the process as I prepared for the worse."
 

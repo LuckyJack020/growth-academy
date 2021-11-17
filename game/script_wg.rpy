@@ -2647,7 +2647,7 @@ label WG015_c3_1:
     show AE angry at Transform(xzoom=-1)
     AE "..."
     show AE angry at Transform(xzoom=1)
-    MC "There was no mistaking her mood, but the exact thoughts running through her head were harder to figure."
+    MCT "There was no mistaking her mood, but the exact thoughts running through her head were harder to figure."
     AE "You are in the women's dorm, with a 'private' note you clearly do not want others to see. Any chance you had of clearing your name of suspicion went down your gullet with the paper."
     AE "But since the note is gone, you no longer have any reason to be here, correct?"
     MC "I-"
@@ -5097,7 +5097,7 @@ label WG026_C1_2:
     show WG happy
     WG "Though I’m certainly flattered by the attention, in the future, try to keep your gaze at eye level next time."
     show WG happy at altMove(0.5, 0.25)
-    "Alice slowly sauntered past me as she made her walk back to the lockers, subtly sashaying her hips as she did so, unwittingly causing a slight giggle in her belly."
+    "Alice slowly sauntered past me as she made her walk back to the lockers, subtly sashaying her hips as she did so, unwittingly causing a slight jiggle in her belly."
     "Her confident smile showed she knew full well I was simply putty in her hands at this point."
     hide WG with dissolve
     "My ‘smooth recovery’ was more of a slick face-plant onto the pavement."
@@ -5812,7 +5812,7 @@ label WG029_cafe:
     show WG surprised-2 with dissolve
     WG "Oh!"
     show WG happy
-    "Thank you."
+    WG "Thank you."
     "I'd never done that before on a date, but I didn't think the informal approach would fly with Alice."
     "I wondered if I had scored points for that move, or if she expected something like that."
     show WG neutral
@@ -6158,6 +6158,9 @@ label WG030:
         "I didn't spend too long on it, just copying the info from the original fliers and changing the fonts to make them pop."
         "Add a few flourishing patterns in the corners and bold the showtime to have it stand out, and it was a marked improvement over the original."
         "I printed out 50 copies and took them to Alice's dorm."
+        scene black with fade
+        pause 1
+        scene Dorm WG with fade
         show WG happy with dissolve
         $setAffection("WG", 2)
         WG "Oh, these are much better."
@@ -9524,8 +9527,8 @@ label WG043:
     WG "That makes it me, Mizutani-san, and Aida versus Natsuko, Keisuke, and Honoka."
     show PRG neutral at Position(xcenter=0.15, yalign=1.0)
     show FMG neutral at Position(xcenter=0.3, yalign=1.0)
-    show Natsuko neutral at Position(xcenter=0.7, yalign=1.0)
     show BE neutral at Position(xcenter=0.7, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.85, yalign=1.0)
     with dissolve
     "I was a bit relieved that I wasn't going to have Natsuko charging at me through the water like a hungry shark every time I got the ball."
     if isEventCleared("WG009"):
@@ -9626,7 +9629,7 @@ label WG043:
     show FMG surprised-2 at Position(xcenter=0.3, yalign=1.0)
     show WG surprised
     show BE surprised at Position(xcenter=0.7, yalign=1.0)
-    show Natsuko disappointed at Position(xcenter=0.7, yalign=1.0)
+    show Natsuko disappointed at Position(xcenter=0.85, yalign=1.0)
     with dissolve
     BE "Akira-chan! You killed him."
     FMG "It was an accident!"
@@ -11900,7 +11903,7 @@ label WG049:
     "This was one of the few things she could still enjoy and not feel self-conscious about her size. I know she puts on a show, but I can tell deep down she wishes this wasn't happening to her."
     "If I can help her forget about that for just a little while, then I'll swim across the whole damn Sea of Japan!"
     "My delirium induced post-fatigue pep talk wasn't quite enough to make it the full distance. I got slower... and slower... until I started to sink."
-    "Before my hazy mind caused me to resort to a dog paddle flail in a vain attempt to save myself from downing, I felt a firm tug on the back of my head from my hair."
+    "Before my hazy mind caused me to resort to a dog paddle flail in a vain attempt to save myself from drowning, I felt a firm tug on the back of my head from my hair."
     MCT "Oh no!"
     MCT "This is it."
     MCT "I'm being dragged towards the light. My body yielded as a golden haired cherubic figure began to pull me towards the heavens..."
@@ -19074,7 +19077,7 @@ label WGGTS001:
     "A collective whiney 'Awwwww!' from the class let me know I wasn't the only one who had trouble with this quiz."
     HR "And no complaining. Two days is plenty of time to prepare for a quiz. You have only yourself to blame if you failed to study properly."
     "I was in no position to argue with his assessment, but he could have at least conceded it was way harder than a normal person would expect a quiz to be."
-    "I dropped my quiz off on Tashi-senei's desk on my way out of class."
+    "I dropped my quiz off on Tashi-sensei's desk on my way out of class."
     hide HR
     scene Hallway with fade
     MC "Well, that could have gone better."
