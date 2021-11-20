@@ -5829,7 +5829,7 @@ label GTS035_testpass:
     "We shared a chuckle but as I looked back at the game once more I noticed that the bell now had a large peg-shaped dent in the bottom."
     MCT "Geez, didn't know she was getting that strong."
 
-    scene Japanese Room with fade
+    scene Ryokan Room with fade
     "As we approached the inn for dinner, it dawned on me that we hadn't considered Naomi's size at all."
     MC "If I may suggest, can dinner be held on the back porch? The weather is quite nice tonight, and it may be beneficial so that everyone can be included in tonight's meal."
     show Akihiro neutral with dissolve

@@ -6659,10 +6659,11 @@ label WG033:
     #Time: Afternoon
     $setTime(TimeEnum.EVE)
     scene Cafeteria with fade
-    "After class I went to the cafeteria to get a drink while doing the reading parts of my homework."
+    play music Schoolday
+    "After class, I went to the cafeteria to get a drink while I caught up on my reading for classes."
     "Despite the place being a somewhat popular hang-out spot after classes (I guess others had the same idea as me, free food to accompany homework), it was fairly quiet at this point."
     WG "Keisuke!"
-    "Quiet enough that Alice calling out my name resounded throughout the entire space, heads turning and Alice looking embarrassed when she reached me."
+    "Which is why I was able to pick up on Alice calling me from a distance, despite not having raised her voice that much."
     play music WG
     show WG sad with dissolve
     MC "Something up? Need me to make a delivery?"
@@ -6670,74 +6671,103 @@ label WG033:
     WG "No."
     WG "Though I do need your help."
     WG "The music club is having its first concert on Friday."
-    MC "I know. I'm looking forward to it."
-    WG "The head of the club has tasked me (and a couple others) with setting up the auditorium Friday afternoon."
-    WG "This conflicts with my schedule. I've already allotted time for homework and managerial matters with my requisition business."
+    MC "Yes, and I'm looking forward to it."
+    MC "After all, it’s going to be the first time I’ll see you perform. I trust you’re going to live up to the hype?"
     show WG haughty
-    WG "Not mention doing my hair and make-up. Even if I'm one face in the chorus I still want to look my best."
-    show WG angry
-    WG "Not to mention that after being tasked with distributing fliers for the concert I feel I am being either exploited or unduly singled out. There are other capable hands to set up chairs and music stands."
-    show WG neutral
-    WG "So may I ask a favor of you?"
+    WG "I assure you there is no question that will be the case. I fully intend to outshine Mizawa-san for all of the school to plainly see."
+    MCT "Hmm, maybe I shouldn’t be encouraging her..."
+    show WG stern
+    WG "Ugh, speaking of her, Mizawa-san tasked me (and a couple others) with setting up the auditorium Friday afternoon."
+    show WG neutral at altMove(0.5, 0.25)
+    WG "This conflicts with my schedule. I've already allotted time for homework and managerial matters with my requisition business."
+    show WG haughty at Transform(xzoom=-1), altMove(1.8, 0.75)
+    WG "In addition to doing my hair and make-up. Even if I'm one face in the chorus, I still want to look my best."
+    show WG angry at Transform(xzoom=1)
+    show WG angry at altMove(2.4, 0.25)
+    WG "Not to mention that after being tasked with distributing fliers for the concert, I feel I am being either exploited or unduly singled out. There are other capable hands to set up chairs and music stands."
+    MC "Um, what is this about now?"
+    show WG surprised-2
+    WG "Oh, right."
+    show WG neutral at Transform(xzoom=-1), altMove(0.8, 0.5)
+    WG "I suppose I should get to the point."
+    WG "So, with all that established, may I ask a favor of you?"
     MC "You want me to take your place setting up the auditorium?"
-    show WG happy
+    show WG happy at Transform(xzoom=1)
     WG "Got it in one."
     menu:
         "Sure, I can do it.":
             jump WG033_c1_1
         "I think it would be better if you did it yourself.":
             jump WG033_c1_2
+        "I’ll do it, but only if I’m getting paid.":
+            jump WG033_c1_3
 
 label WG033_c1_1:
-    MC "No problem. You've got enough on your plate as it is."
+    MC "Sure I can do it. No problem. You've got enough on your plate as it is."
     show WG haughty
     WG "Excellent. I knew you were reliable."
-    WG "Be at the auditorium at 3:30 on Friday."
+    WG "Be at the auditorium at 3:30 tomorrow."
     stop music
     hide WG with dissolve
-    "And she left."
-    "She seemed to be in a happier mood, but as I returned to my homework my own grew dimmer."
+    "And just like that,  she left."
+    MCT "That was kind of abrupt."
+    "She seemed to be in a happier mood, but as I returned to my homework, my mood began to sour."
     "I remembered the thing with the fliers, and how she had asked me to help hang them up."
     "And then I considered the whole thing with Aida essentially being her lackey, for lack of a better word-"
-    "Oh, hey. Inadvertent pun."
-    "But no, the more I thought about it the more entitled Alice came across as."
+    MCT "Stupid unintental puns."
+    "But no, the more I thought about it, the more entitled Alice came across as."
     "It wasn't just her, though. Her behavior could be excused by having servants to wait on her, but what about me?"
-    "Rolling over so easily, never mind that I have my own responsibilities."
-    "It probably would have been better if I had stood up to her. Even if she thought I was being confrontational, would it be worse than being seen as a pushover?"
-
-    scene School Planter with fade
+    MCT "Wait a second…"
+    "I thought about it a bit more and realized her entitled attitude is about as much my fault as hers. Rolling over for her so easily like that, never mind that I have my own responsibilities."
     "I couldn't concentrate on my homework for a while, so I took a walk to clear my head."
+    scene School Planter with fade
+    pause .8
     $setAffection("WG", -1)
-    "The more I thought about it, the more certain I was I had made the wrong choice."
+    "Thinking it over a bit, I realized it probably would have been better if I had stood up to her, instead of folding like a card table."
+    "Even if she thought I was being confrontational, would it really be worse than being seen as a pushover?"
+    "But I already agreed to do it, can’t go back on it now. I’ll just have to suck it up and get it done for her."
     jump daymenu
 
 label WG033_c1_2:
-    MC "You've already gotten in trouble for going against her before, haven't you?"
+    MC "I think it would be better if you did it yourself."
+    MC "Haven’t you gotten into enough trouble for going against this Mizawhats-her-name before?"
     MC "Do you really want to anger her again by blowing her off?"
+    show WG stern
+    WG "Oh, who cares what she thinks! {w}As long as the work gets done she has no reason to complain to me."
+    MC "Are you sure about that? I highly doubt she specified a substitution clause in her request."
+    show WG happy
+    WG "Ah, but she did not specify an explicit forbiddance of any such work exchange."
+    show WG haughty
+    WG "It’s her fault for not being more specific, really. So I don’t see why I should have to worry if she’s upset with my interpretation of her orders."
+    MC "In this case? Maybe because she's the one in charge. {w}And you aren't."
     show WG angry
-    WG "Why should her anger be the one to be avoided?"
-    MC "In this case? Because she's the one in charge."
-    MC "And you aren't."
     MC "You know this. You understand how hierarchies work."
+    show WG doubt
     WG "..."
     show WG neutral
     WG "Indeed."
     MC "I get that you don't approve of how she does things, but you can't climb the ladder if you burn your bridges before you even cross them."
-    MC "Terrible analogy."
-    WG "Yes."
+    show WG surprised-2
+    WG "?"
+    MC "Okay, terrible analogy."
+    show WG neutral
+    WG "This is true."
     MC "My point is, you're either going to have to hold your tongue and keep your head down or you'll be kicked out of the club."
     MC "One choice can lead to you being in a position to change things, the other doesn't."
-    if getSkill("Academics") >= 9:
-        MC "Plus, showing you're a team player can also help you gain points with the other members of the club."
+    if getSkill("Academics") >= 3:
+        MC "Aaand, showing you're a team player can also help you gain points with the other members of the club."
+        show WG aroused
         MC "If they see you carrying your share of the load they'll remember it when you try to become the club leader."
-        MC "Instead of thinking you're only concerned with your prestige, your glory, they'll see that you want what's best for the club."
         $setAffection("WG", 1)
-    "Alice sighed, visibly relaxing."
+        MC "Instead of thinking you're only concerned with your prestige, they'll see that you want what's best for the club."
+    play music Peaceful
     show WG neutral
+    "Alice sighed, visibly relaxing."
     WG "Very sensible."
     show WG happy
+    $setAffection("WG", 1)
     WG "It does pay to listen to cooler heads."
-    WG "You're right, Keisuke. It would be beneficial - or at least not counterproductive - to be obedient for the time being."
+    WG "You're right, Keisuke. It would be beneficial — or at least not counterproductive — to be obedient for the time being."
     show WG neutral
     WG "We'll have to reschedule our business meeting for Saturday then."
     MC "Oh, that's no problem."
@@ -6747,19 +6777,59 @@ label WG033_c1_2:
     WG "It would also help if I got a start on that biology homework."
     WG "Removing even minor distractions will make it easier to concentrate on the larger concerns once things get busier."
     WG "I'd recommend taking care of your responsibilities ahead of time as well, Keisuke."
-    MC "I... already am."
+    MC "Way ahead of ya."
     "I indicated the textbook in front of me."
+    $setSkill("Academics", 1)
     show WG neutral
-    WG "Oh. Of course."
+    WG "Ah, good to see you’re investing your time wisely."
     show WG happy
     WG "I'll let you get back to it, then."
     stop music
     hide WG with dissolve
-    "And she left."
     "I turned back to my homework."
-    "Only later did I reflect that Alice was quite reasonable about the whole thing."
-    "It was good to see that she could be appealed to, even if for purely selfish reasons."
-    "Still, she was more thoughtful than a basic diva would be."
+    "Only later did I reflect that Alice was quite reasonable about the whole thing, as I had initially expected an unpleasant backlash from refusing her request."
+    "It was good to see that she could be appealed to with reason, {w}or at least with self-serving ambition."
+    jump daymenu
+
+label WG033_c1_3:
+    MC "I’ll do it, but only if I’m getting paid."
+    WG "Excellent! I knew I could count on—"
+    show WG surprised-2
+    extend " Wait... what?"
+    MC "Well, clearly your time is valuable, but isn’t mine as well?"
+    show WG doubt
+    WG "I meant—"
+    MC "Hey now, you yourself admitted that the duties of managing your business require your attention, and thus your absence. Isn’t this a business related exchange then?"
+    WG "..."
+    "Alice was clearly not amused to learn that I was playing the same game she so often liked to play herself."
+    show WG aroused
+    WG "Perish the thought, Keisuke. It’s not a business related venture, I’m merely asking for a tiny personal favor. You would have my undying gratitude if you could just fill in for me for a couple of hours."
+    MC "I didn’t realize you accepted ‘undying gratitude’ as a form of payment for orders."
+    show WG angry
+    WG "Oh the hell with it!"
+    show WG stern
+    WG "Fine. You’re no pushover, I’ll give you that."
+    show WG aroused
+    $setAffection("WG", 1)
+    WG "{size=-6} Which I find surprising...{/size}"
+    MC "Hm?"
+    show WG haughty
+    WG "Alright, fair enough. You get to clock in when you get there. Be at the auditorium at 3:30 tomorrow."
+    MC "Tomorrow afternoon? Isn’t that outside the usual working hours? I’m gonna need time and a half to make it worthwhile."
+    show WG angry
+    WG "You’re pushing it."
+    show WG stern
+    extend " Fine. Time and a quarter. {w}And you better make me look good."
+    MC "Don’t worry, I’m worth the money."
+    MC "I’ll be sure to tell them all a nice sob story about how you were so broken up about not being able to attend that I volunteered to take your place just to help hold back your tears."
+    show WG happy
+    WG "Now that’s what I like to hear. I believe this exchange has been mutually beneficial for both parties."
+    WG "I will see you soon, Keisuke."
+    hide WG with dissolve
+    "And with that, she left."
+    MC "{i}Whew{/i}!"
+    "I put on a good show that I could drive a hard bargain, but inside my nerves were shaking. Alice is tough to negotiate with, and her glare when she’s not happy is hard not to buckle under."
+    "Still, even if she wasn’t too happy with my brazen demand for compensation, I could tell I gained a lot more standing in her eyes than just rolling over for her every time she flashes those bright blue eyes."
     jump daymenu
 
 label WG034:
@@ -18609,7 +18679,7 @@ label WGFMG002:
     show WG happy
     WG "Such a gentleman."
     hide WG with dissolve
-    scene Auditorium with fade
+    scene Gym with fade
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Walking into the gym we both spotted Natsuko almost immediately. With her tall stature and fiery red hair, she certainly stood out. She looked pre-occupied setting some things up for her workout."
     show WG neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -18696,7 +18766,7 @@ label WGFMG002_c1_2:
     MC "How did you get through to them like that? They looked like they were about to strangle each other, blocking out everyone else entirely-"
     MC "but you got through to them and took them to task. I mean Natsuko and Akira are pretty intimidating, but you didn't even blink."
     WG "If you need to get through to someone like that, you have to be assertive. It's not about being nice, but it's not about being mean either, you just have to stand firm."
-    if getFlag("WGFMG_C1"):
+    if getFlag("WGFMG_c1_1"):
         $setAffection("WG", 1)
         show WG happy
         WG "I know you tried, and it was an admirable effort, but your tone was too nice. That's why they ignored you. Be more assertive next time you have to confront someone."

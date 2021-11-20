@@ -325,6 +325,28 @@ init python:
     )
     ost.manualDefineList.append(BriLi)
 
+    SomSun = ost.soundtrack(
+        name = "Somber Sunset",
+        path = "Audio/BGM/general4.ogg",
+        priority = 3,
+        author = "Post-Bop",
+        description = "Emotional Rest",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(SomSun)
+
+    PRGMB = ost.soundtrack(
+        name = "Quiet Wandering (Music Box)",
+        path = "Audio/BGM/scene_PRGMusicBox.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Alt Cover of Aida's Theme",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(PRGMB)
+
     ## Base Template
     ######################################
 

@@ -9399,6 +9399,203 @@ label FMG059:
     jump daymenu
 
 label FMG060:
+    $setProgress("FMG", "FMG061")
+    $setTime(TimeEnum.EVE)
+    scene Roof Entrance with fade
+    play music Sunset
+    FMGCell "Hey, can you meet me at the roof? I want to talk to you about something... something I should’ve told you a while ago."
+    "I must’ve read this text a hundred times trying to figure out what it could be. But I couldn’t put the pieces together, constantly coming up empty-handed."
+    MCT "I’m probably overthinking it again. It shouldn’t be anything serious. Come on, Kei, you know that when she talks like this it {i}is{/i} serious."
+    MCT "Relax..."
+    scene black with fade
+    pause 1
+    scene Roof with fade
+    MCT "Maybe it’s not about me...? But it {i}could{/i} be..."
+    MCT "Man, I hate anxiety. Imagine dating the girl of your dreams and still thinking like this."
+    "My critical overthinking was interrupted when Akira started shaking my body."
+    show FMG neutral with dissolve
+    MC "T-Take it easy! I’m fragile!"
+    FMG "Earth to Keisuke! I’ve been calling your name for about 10 minutes."
+    MC "Heh, my bad. I’ve been lost in my thoughts as usual..."
+    show FMG sad-2
+    FMG "Yeah, that’s my fault. I’m sorry for getting you worked up, there’s been a lot going on in my mind lately."
+    MC "Hey, don’t worry about me. Is everything okay with you? You said you wanted to talk."
+    FMG "Yeah..."
+    MC "Hang on, before we do anything let’s grab a bench and sit down."
+    FMG "A-Actually if it’s okay with you, can we stand?"
+    MC "Y-Yeah, of course."
+    MC "Everything alright?"
+    show FMG sad-2
+    stop music fadeout 1.0
+    FMG "No... e-everything isn’t alright."
+    "That sentence... it stung. This girl was a wall, physically and mentally. It was hard for anything to get to Akira. But... hearing her choke on her words. {w}It...It broke me."
+    "Her cracks were starting to show and I could only wonder how long she’s been trying to seal them up."
+    FMG "I’ve been keeping something from you, Kei. I’m sorry, I haven’t been hundred percent honest with you."
+    MC "You don’t need to apologize for anything. I’m here for you no matter what, and you know that."
+    show FMG sad
+    play music Bittersweet
+    FMG "I-I’m sorry. This is j-just really hard for me."
+    MC "It’s okay. Take your time. I’m not going anywhere. When you’re ready, I’m ready."
+    show FMG sad-2
+    FMG "O-Okay."
+    "She sighed heavily and dropped her shoulders. She looked at me and I could see the sadness in her eyes. Holding back tears..."
+    MC "Akira... What's wrong? You can tell me."
+    show FMG sad-3
+    FMG "I know, I-I know... I keep trying to find the words. It’s so... hard, Kei."
+    FMG "I-I wake up e-every day ready for the next challenge in front of me with a smile on my face but in reality, I want to curl up into a ball and cry the day away because I’m weak."
+    MC "Woah, woah, don’t talk like that, Akira. You know that’s not true. Why are you saying this stuff? What’s bugging you?"
+    "Her face contorted and she shook her head and wept. My heart twisted... I didn’t know what to do honestly. Everything was happening so fast. My world had stopped spinning."
+    "Her hands covering her face. The makeshift dam couldn’t stop the waterfall."
+    "Still at a loss for words, I wrapped my arms around her as best I could. I wasn’t going to let go."
+    MC "I don’t know what you’re going through right now. And I’ll admit I don’t know what to say besides this... I love you. You’re my everything."
+    "She didn’t say a word. She lowered her arms and wrapped them around me."
+    MC "Hey... everything is going to be okay. I promise."
+    FMG "I-I’m s-sorry..."
+    MC "Shhhh, it’s okay, Akira. I can do this all day until you’re ready."
+    "It was time for me to be her rock."
+    scene black with fade
+    pause 2
+    $setTime(TimeEnum.NIGHT)
+
+    scene Roof with fade
+    "It took some work but I had finally managed to calm her down. We sat down on a bench in an attempt to talk it out."
+    MC "Better?"
+    show FMG sad-2 with dissolve
+    FMG "Y-Yeah... I think so. Thank you"
+    MC "Any time. Do you think you’re ready to tell me what’s been going on?"
+    FMG "{i}sigh{/i}... Y-Yeah, I’ll do my best...."
+    MC "That’s my girl."
+    pause 0.5
+    FMG "I have a brother... {w}had."
+    show FMG sad
+    FMG "You probably noticed how quickly I would try to recover when I let the b-word slip."
+    MC "Yeah, we’re both pretty bad at being subtle. I didn’t connect the dots about it being a family member. I figured something had been bothering you, but it’s not my place to ask. Especially with something like... this."
+    FMG "Thank you for respecting my privacy."
+    show FMG sad-2
+    FMG "It still hurts you know. All these years... and I still miss him."
+    MC "I can only imagine the pain you’ve been holding in all these years..."
+    "I grabbed her hand and squeezed it in between both of mine. It took a bit but her grip tightened too."
+    FMG "...I should probably tell you how it happened..."
+    MC "Again, only if you feel comfortable with it. I can’t say it enough, no matter what I’m here for you. Always."
+    FMG "Thank you... Kei."
+    "She took a deep breath calming herself down again as she readied herself to talk about her brother."
+    FMG "His name is Tatsuya. Tatsuya Mizutani. We were both young when it happened. Our parents were working and we were home alone. What could go wrong? We were just kids after all. I was six and he was ten."
+    FMG "He wanted to play hide and seek. Heh, he wasn’t very good at it but it was a... lot of fun. I never liked hiding that much with my claustrophobia, so he was the one to always do it. He never complained about it... He didn’t want to make me sad."
+    FMG "...You know how the game goes. I counted to ten and started looking for him. It didn’t take long for me to find him, haha. He hid underneath our dad’s enormous bookcase."
+    FMG "The thing had to be at least two hundred centimeters tall. Our parents told us to stay away from it since it wasn’t the most stable thing. But... kids aren’t very good listeners."
+    FMG "When I called his name I started freaking out \"I found you, I found you!\" I shouted, jumping up and down with this huge smile on my face."
+    FMG "He laughed as he made his way out from underneath the bookcase laughing \"Wow, Akira. Good job, you’re the best seeker!\" Being six years old, that meant so much to me, especially coming from someone I looked up to."
+    FMG "...And then everything that could go wrong, went wrong.. {w}H-He had kicked out one of the legs as he came out and it... {w}started to fall on him. Time had slowed down as I watched it crush him."
+    "She became frantic again when she finished her sentence."
+    show FMG sad-3
+    FMG "H-He tried to move out of t-t-the way. It came d...down so fast. I ran o-over t...to...to it and tried to lift it. I-It felt... it felt like my arms we-were coming out of their sockets with h-h-how hard I-I was trying."
+    FMG "He d-died in seconds... that’s what the d-doctors said. Of course, I didn’t know that at the time, I was losing my mind. Screaming my head off trying to lift that bookcase."
+    FMG "He died because I wasn’t strong enough to save him! H-His death is all m-my fault!"
+    MC "..."
+    MC "Stop."
+    MC "You... You can’t blame yourself for any of this, Akira. It-It just isn’t your fault. I’m sorry for your loss and the pain you’ve been holding onto for so long. However, I won’t sit here and let you blame yourself for something you couldn’t control."
+    FMG "If I was stronger he wouldn’t be dead!"
+    MC "Relax, a lot is happening right now but take deep breaths, stay calm."
+    "Her body was shaking again, so I placed my hand on her shoulder in some attempt to comfort her."
+    FMG "I hate myself so much."
+    MC "Akira, stop. You were a child. You did what you could do? You need to breathe and think. You are working yourself into a panic. Look at me."
+    "I pulled the hair away from my eyes and stared into hers."
+    MC "What happened wasn't your fault. Please, you can’t do this to yourself."
+    "Her sniffling was starting to slow down as she slowly pulled herself together once more."
+    pause 1
+    MC "I understand the guilt you feel. I do. I know your brother wouldn’t blame any of this on you. I’m positive."
+    "She didn’t say anything... she looked at the ground and squeezed my hand tighter."
+    MC "I have something to tell you. It’s another one of my stories that hits close to home. I hope it will help you understand what I’m trying to say a little bit better."
+    show FMG sad-2
+    FMG "{i}*sniff*{/i} O-Okay..."
+    MC "Back in high school, I had a friend. Great guy, got along with everyone. He ended up transferring to another school later and on and I didn’t see much of him anymore."
+    MC "Months passed and we would hang out now and then just to catch up, you know? He seemed happy with how his life was going and it was awesome to hear about all the adventures he went on."
+    MC "One day... I was scrolling through social media and someone posted a picture of his face. \"That’s odd, what could this be about?\" I thought. And then I scrolled down a little bit to see, I wish I didn’t."
+    MC "He had... taken his own life."
+    MC "I blamed myself for years. Because I was too ignorant to see the signs. I couldn’t sleep at night, his face haunted my dreams. Every time I closed my eyes I saw his face and my failure to be a friend."
+    "Her grip tightened even more."
+    MC "But as time went on and I realized that I did what I could. I... had to move on, as much as I hated the thought."
+    MC "We can’t control everything around us. Things happen and we... and we just have to deal with it at some point. They wouldn’t want us to live in the past and blame ourselves."
+    pause 1
+    MC "My dad told me something that stuck with me when I was in this loop of hating myself."
+    scene black with fade
+    Dad "When my mom passed I was devastated. Losing someone you care about hurts, Kei. We won’t be able to see them with our eyes or touch them with our hands. But we will always feel them in our hearts."
+    Dad "The best we can do is to honor their memories. If we can do that, well, then they’re never really lost."
+    scene Roof with fade
+    show FMG sad-2 with dissolve
+    MC "I don’t want you to forget your brother. I want you to remember him for the rest of your life... just not like this. When you think about him, his memory shouldn’t do {i}this{/i} to you."
+    FMG "It’s hard, Kei..."
+    MC "I know it is. These things are never easy for anyone. Listen. Do you think this is something your brother would want? Holding onto his memory like this?"
+    show FMG sad
+    FMG "No... no."
+    MC "I’m not asking for you to move on today or tomorrow or next year. Think about everything we talked about and don’t be so hard on yourself. Loved ones dying is difficult for everyone. It always will be. Unfortunately, that’s life."
+    stop music fadeout 1.0
+    "She breathed in and exhaled while wiping away the rest of her tears."
+    show FMG neutral
+    play music Sunset
+    FMG "I...I needed this. I wanted to tell you about it for a while. I just didn’t know how to approach it."
+    MC "I understand."
+    FMG "I’ll need more time to come to terms, even after all these years. Everything you’ve said today has made it a little easier."
+    FMG "When his birthday comes around would you come with me to his grave? I always get Himawari’s for him. They were his favorite."
+    MC "Totally, tell me when and I’m there."
+    FMG "Thank you, it means a lot."
+    MC "Anything for you."
+    "I looked up at the night sky and saw a singular star looking down at us."
+    MCT "That can’t be a coincidence. Heh, it’s nice to see it though."
+    MC "Would you want to go to the park? I think a change of scenery could do both of us some good."
+    FMG "We should probably get back to our dorms but a walk won’t hurt."
+    "As we got up to leave my phone started buzzing."
+    MCT "Who’s calling at this hour??? Chibuki???"
+    MC "Can you give me like one minute? I’m so sorry."
+    FMG "Sure, I’ll wait by the door."
+    hide FMG with dissolve
+    ChibukiCell "Hey, Keisuke. I’m sorry for calling so late. I’m worried about Akira, she hasn’t come back yet and she seemed off today."
+    MC "She’s with me. We had some stuff to talk about. She’s feeling better though."
+    ChibukiCell "Good. That’s great to hear. I was freaking out a little when she left."
+    MC "Aw, that’s sweet, Chibuki. You do care."
+    pause 1
+    MC "Chibuki? Hello? Huh, guess she lost the signal."
+    pause 1
+    show FMG neutral with dissolve
+    FMG "Who was it?"
+    MC "It was...uh... my mom. Yeah, my mom."
+    MC "We should get going to the park, we can’t stay out too late."
+    FMG "Yeah... Yeah, I agree."
+    scene black with fade
+    pause 1
+
+    scene Park with fade
+    show FMG neutral with dissolve
+    FMG "Can I ask you something?"
+    MC "Go for it."
+    FMG "What... What was your friend like? I’d like to hear more about him if that’s okay with you."
+    MC "Sure, I’ll tell you more about him, I have one condition though."
+    FMG "Yeah? What?"
+    MC "Tell me about the best memory you have with your brother. The memory that makes you smile the most."
+    FMG "...Sure, I can do that."
+    FMG "There was this one time, where we were at the beach with our parents. We were making sandcastles and we wanted to see how big we could make one."
+    FMG "We ended up with this mess that you couldn’t really call a sandcastle, haha, it was sagging and falling apart but we didn’t care. The best part was when he topped it with a seashell. It was perfect, it brought the whole thing together."
+    show FMG happy
+    FMG "I still have that seashell, after all these years..."
+    MC "There’s that smile I’ve been waiting for. You love to see it."
+    show FMG neutral
+    FMG "Heh, my smile {i}is{/i} quite stunning. Soooo... it’s your turn now."
+    MC "Ah, right, right."
+    MC "I knew him for abouuuut five years. We played all sorts of games together. He and one of my other friends got me into an older version of LoA."
+    MC "It was one of our favorite things to play after we finished our schoolwork or came back from our jobs at the time. He was one of the best friends anyone could ask for. Man, I miss those days. What I’d give to go back."
+    MC "Naaaaaaa! Why do you pick me up when I’m daydreaming?"
+    show FMG happy
+    FMG "You look like you needed a hug!"
+    MC "I did. Thank you. Hey, uh, could I possibly interest you in carrying me back to your dorm for the night? We should probably start heading back."
+    show FMG neutral
+    FMG "I guess. Only because I like you though."
+    MC "I am quite a fan of the free rides. Do you run for tips?"
+    FMG "I’ll leave you here."
+    MC "Come on, it was fuuuunnnny."
+    FMG "Meh. I’ll give it a five outta ten."
+    jump daymenu
+
+label FMG061:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

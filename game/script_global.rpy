@@ -121,6 +121,7 @@ image Auditorium = DynamicImage("Graphics/ui/bg/auditorium_[gametime].png")
 image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Bathroom = "Graphics/ui/bg/bathroom.png"
 image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
+image Bus Interior = DynamicImage("Graphics/ui/bg/businterior_[gametime].png")
 image Cafe = DynamicImage("Graphics/ui/bg/cafe_[gametime].png")
 image Cafeteria = "Graphics/ui/bg/cafeteria.png"
 image Campus Center = DynamicImage("Graphics/ui/bg/campuscenter_[gametime].png")
@@ -146,7 +147,6 @@ image Hallway = DynamicImage("Graphics/ui/bg/schoolhallway1_[gametime].png")
 image Hallway2 = DynamicImage("Graphics/ui/bg/schoolhallway2_[gametime].png")
 image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].png")
 image Hill Road = "Graphics/ui/bg/NYI.png"
-image Japanese Room = DynamicImage("Graphics/ui/bg/japaneseroom_[gametime].png")
 image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
 image Library = DynamicImage("Graphics/ui/bg/library_[gametime].png")
 image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].png")
@@ -175,6 +175,7 @@ image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime
 image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
 image Town = DynamicImage("Graphics/ui/bg/town_[gametime].png")
+image Town Docks = DynamicImage("Graphics/ui/bg/towndocks_[gametime].png")
 image Track = DynamicImage("Graphics/ui/bg/track_[gametime].png")
 image Woods = DynamicImage("Graphics/ui/bg/woods_[gametime].png")
 
@@ -196,11 +197,15 @@ image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior
 image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].png")
 image Giants Town = "Graphics/ui/bg/NYI.png"
 image Giants Town Store = "Graphics/ui/bg/NYI.png"
+image Ryokan Exterior = DynamicImage("Graphics/ui/bg/ryokanexterior_[gametime].png")
+image Ryokan Room = DynamicImage("Graphics/ui/bg/ryokanroom_[gametime].png")
 
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
 image Dorm WG = DynamicImage("Graphics/ui/bg/WGDorm_[gametime].png")
-image Dorm WG Flip = im.Flip("Graphics/ui/bg/WGDorm_day.png", horizontal=True)
+image Dorm WG Flip = im.Flip("Graphics/ui/bg/WGDorm_day.png", horizontal=True
+image Ballroom = DynamicImage("Graphics/ui/bg/ballroom_[gametime].png")
+image Hotel Room = DynamicImage("Graphics/ui/bg/hotelroom_[gametime].png")
 image RV Interior = "Graphics/ui/bg/WG_summer_rv.png"
 image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
 image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
@@ -265,6 +270,7 @@ image cg FMG041 = "Graphics/ui/gallery/FMG041.png"
 image cg FMG050 = "Graphics/ui/gallery/FMG050.png"
 image cg FMG055 = "Graphics/ui/gallery/FMG055.png"
 image cg FMG056 = "Graphics/ui/gallery/FMG056.png"
+image cg FMG061 = "Graphics/ui/gallery/FMG061.png"
 
 image cg GTS000 = "Graphics/ui/gallery/GTS000.png"
 image cg GTS024 = "Graphics/ui/gallery/GTS024.png"
@@ -545,6 +551,7 @@ image FMG neutral = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/neutral.
 image FMG happy = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/happy.png")
 image FMG sad = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad.png")
 image FMG sad-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-2.png")
+image FMG sad-3 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/sad-3.png")
 image FMG surprised = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.png")
 image FMG surprised-2 = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised-2.png")
 image FMG confused = DynamicImage("Graphics/FMG/[globalsize]/[FMGOutfit]/surprised.png")
@@ -767,6 +774,7 @@ define audio.RM = "Audio/BGM/scene_RM.ogg"
 define audio.MC = "Audio/BGM/scene_MC.ogg" #Our Protagonist
 define audio.MCGuitar = "Audio/BGM/scene_MCguitar.ogg"
 define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
+define audio.PRGMusicBox = "Audio/BGM/scene_PRGMusicBox.ogg" #Quiet Wandering (Music Box)
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg" #Small Moments
 define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg" #The Challenge
 define audio.WG = "Audio/BGM/scene_WG.ogg" #Aristocratic Opulence
@@ -782,6 +790,9 @@ define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
 define audio.Love = "Audio/BGM/love.ogg"
+define audio.LoveA = "Audio/BGM/love_A.ogg"
+define audio.LoveB = "Audio/BGM/love_B.ogg"
+define audio.LoveC = "Audio/BGM/love_C.ogg"
 define audio.LoveMB = "Audio/BGM/love_mb.ogg" #Music Box variant of Love
 define audio.Memories = "Audio/BGM/memories.mp3"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
@@ -1029,7 +1040,8 @@ init 2 python:
     eventlibrary['FMG056'] = {"name": "Clash of the Titans", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG057", "obsflags": [],               "conditions": []}
     eventlibrary['FMG057'] = {"name": "It's Fine, Don't Move", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG059", "obsflags": [],               "conditions": []}
     eventlibrary['FMG059'] = {"name": "Muscles Too Huge", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "park",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG060", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG060'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG060'] = {"name": "The Truth Revealed", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "roof",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG061", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG061'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
 
 

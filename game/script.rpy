@@ -128,6 +128,7 @@ init python:
         NIGHT = "night"
         EVE = "eve"
         NIGHTLIGHTS = "night_lights"
+        RAIN = "rain"
 
     class OutfitEnum:
         DEFAULT = "default"
