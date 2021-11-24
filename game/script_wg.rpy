@@ -6717,7 +6717,7 @@ label WG033_c1_1:
     MCT "Stupid unintental puns."
     "But no, the more I thought about it, the more entitled Alice came across as."
     "It wasn't just her, though. Her behavior could be excused by having servants to wait on her, but what about me?"
-    MCT "Wait a second…"
+    MCT "Wait a second..."
     "I thought about it a bit more and realized her entitled attitude is about as much my fault as hers. Rolling over for her so easily like that, never mind that I have my own responsibilities."
     "I couldn't concentrate on my homework for a while, so I took a walk to clear my head."
     scene School Planter with fade
@@ -9750,7 +9750,7 @@ label WG043:
     MC "Well, no one that I know is going around saying those things, and if they did, I would set them straight."
     WG "Thank you Keisuke. I appreciate all that you and Aida do for me, but only having two friends... well a friend and a boyfriend, it still feels a bit lonely sometimes."
     MC "I don't think that that's the case. Why else would Honoka come out to join us, despite knowing nothing about water polo?"
-    MCT "Don't you think you also have the respect of Natsuko and Akira from outclassing them with your swimming skills?"
+    MC "Don't you think you also have the respect of Natsuko and Akira from outclassing them with your swimming skills?"
     show FMG neutral at Position(xcenter=0.7, yalign=1.0) behind WG with dissolve
     FMG "He is right you know. You were amazing out there today."
     show WG surprised at Position(xcenter=0.3, yalign=1.0) with dissolve
@@ -18112,6 +18112,274 @@ label WGBE001:
     "Honoka’s phone went off again."
     "I tried to stifle my laughter, while Honoka for her part kept chuckling right up until the teacher arrived."
     "It was hard to concentrate on the lesson now that I had that stupid song playing in my head, but at least I wasn't about to fall asleep."
+    jump daymenu
+
+label WGBE003:
+    scene Dorm WG with fade
+    play music WG
+    show WG neutral with dissolve
+    "I was enjoying a nice visit with Alice at another one of our afternoon tea sessions that she was so fond of."
+    "Not that I didn’t enjoy them as well. If I was being honest, it took the pressure off of me to come up with new date ideas all the time."
+    "Plus, it was convenient for her busy schedule, which oftentimes meant coordinating an extended off-campus excursion requiring quite a bit of planning in advance."
+    "These mini-dates, as I liked to call them, helped us to be able to spend more time with each other than otherwise would normally be possible."
+    MC "{i}Sluuurrrp{/i}! {w}Ahh! That’s good. I really like this guayusa tea."
+    MCT "Though it is probably a bit too much caffeine for this late in the day."
+    show WG doubt
+    WG "As much as I appreciate your enthusiasm for the tea, dear, please don’t slurp your tea."
+    MC "Right. Sorry about that."
+    show WG neutral-2
+    WG "{size=-6}{i}Slurp{/i}{/size}."
+    MC "I heard that."
+    show WG surprised-2
+    WG "I was merely finishing my cup."
+    show WG haughty
+    extend " {i}Some{/i} noise is inevitable. You, on the other hand, have no excuse."
+    "I rolled my eyes— for all the good that did. Realizing she didn’t see the gesture, I shook my head instead."
+    MC "Heh, alright, fair enough."
+    "I’ve long since given up on thinking I’ll be able to completely understand Alice, but I have to admit, life wouldn’t be nearly as interesting if she wasn’t constantly keeping me on my toes."
+    play sound Knock
+    show WG neutral
+    WG "I bet that is Chibuki with the mail."
+    WG "Come in, please."
+    show WG neutral at altMove(0.6, 0.75)
+    show Chibuki neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1) behind WG with dissolve
+    "Chibuki came in carrying an armful of mail under her armpit while rolling in a decent size box on a dolly."
+    Chibuki "Here’s today’s mail."
+    show WG surprised-2
+    WG "What is that? I wasn’t expecting any large packages."
+    Chibuki "I don’t know, I figured you would. Shipping label says it was from the States. It wasn’t light, that's for sure."
+    WG "Could it be? {w}{size=-6}No that doesn’t seem right...{/size} {w}Well, regardless, we’ll find out. Go ahead and open it up."
+    "Chibuki proceeded to slice open the packing tape on the edges with a pair of scissors."
+    show WG surprised
+    extend " Only to reveal the horrors contained within."
+    "A stronger, braver man would have cast that abominable cargo into the heart of a volcano before it could unleash its infectious madness, but I was not that man unfortunately. {w}Not today."
+    show WG surprised-2
+    WG "Oh! So it is what I suspected. These are the Miracle Bars Honoka raved about so much and said I had to try."
+    "Peering into the package and seeing boxes upon boxes of those damnable bars started to make me feel nauseous."
+    "It had been nearly a decade since I had one, but my last candy binge with them had left me scarred for life."
+    MC "{i}Ooofft{/i}!"
+    MC "Why did you get so many? This is like a crate full!"
+    show WG neutral
+    WG "Well I didn’t mean to! I requested a box, thinking it would be one of those store shelf boxes with about 20 in them. This looks like a whole case."
+    WG "If I asked for a case, I wonder if they would have shipped a whole pallet?"
+    MC "{i}Blehk{/i}! {w}Ugh, I’d hate to think of having that much around. Didn’t you think it was odd that the price was so high when you ordered it?"
+    WG "Well, yes, it did seem a bit unusual, but international shipping costs can be so ridiculous in their own right, I didn’t think too much of it."
+    WG "I’ll call Honoka and tell her."
+    "Alice picked up her phone and dialed."
+    WG "Hello, Honoka? A special package arrived, I think you’ll be pleasantly surprised to see what it is."
+    BECell "<Is it what I think it is?>"
+    MCT "Yes, a box full of regret and self-loathing."
+    WG "Well, you’ll just have to come and see."
+    MC "Better hurry Honoka, they’re almost all gone!"
+    BECell "<What!? They better not be! I’ll be right over. Don’t hog them all, you butthead!>"
+    "*{i}Click{/i}*"
+    MC "Hehe..."
+    "A better friend would have tried to hide them from her, but I was not that friend."
+    pause .5
+    "It didn’t take long before we could hear some frantic trudging before getting a knock on the door."
+    play sound Knock
+    WG "Come in!"
+    show BE surprised-2 at Position(xcenter=0.20, yalign=1.0), Transform(xzoom=-1) behind Chibuki with dissolve
+    BE "Where are they!?"
+    "Clearly overstimulated, Honoka frantically looked all over Alice’s room before finally fixating on the giant box in the middle of the room."
+    show BE surprised
+    BE "{i}Gasp{/i}! There’s so many!"
+    show BE angry
+    BE "Hey! You guys haven’t even touched them! You tricked me into running over here, Kei-chan!"
+    MC "Would you have come any slower if I hadn’t?"
+    show BE shrug
+    BE "Well, no, probably not."
+    show BE happy
+    BE "Well, what’s the hold up? I’m surprised you haven’t torn into them already."
+    MC "Well, we were trying to figure out the shipping fiasco that resulted in this crate being shipped instead of a small box."
+    show BE seductive
+    BE "{size=-6}Just between me and you Kei-chan, are you sure this was an accident?{/size}"
+    MCT "This girl is always trying to get me into trouble."
+    MC "{i}Ahem.{/i} Plus, Alice wanted to wait for you."
+    show WG neutral-2
+    WG "I think it’s only fitting to let you have the first bite."
+    show BE aroused
+    BE "Ohohoho baby! Let me at’m!"
+    "Honoka ripped open one of the small boxes inside and quickly tore into the wrapper of a bar to reveal the chocolate gut bomb inside."
+    "The unique smell of overly sweet chocolate and pecans faintly wafted in the air after being freed from its rightful prison, smacking me across the face when it finally hit my nostrils."
+    show BE happy
+    MC "{i}Uck!{/i}"
+    "My reaction was swift and visceral, as was Honoka’s, but for entirely different reasons."
+    show BE aroused
+    BE "MmmmMMMMmmmMM!"
+    show WG surprised
+    extend " MMMmMMM!"
+    "In what could only be described as an ‘overly enthusiastic’ display of appreciation for a chocolate bar, Honoka appeared to be in a state of ecstasy after utterly devouring it in only a few bites."
+    BE "Whooo... ahhh."
+    show WG neutral
+    pause .5
+    "Alice and Chibuki looked over at each other, each with an eyebrow raised."
+    Chibuki "I’ll have what she’s having."
+    WG "Quite."
+    MC "You devoured that pretty fast there."
+    show BE shrug
+    BE "Well it’s not like I had to savor every bite. We’re not exactly going to run out any time soon."
+    show BE neutral
+    "Given how many were in the crate, that would have been a sensible estimate, but on the other hand, underestimating Alice’s appetite was not sensible in the slightest."
+    "And here was the moment of truth, Alice’s first Miracle Bar experience. She daintily peeled back the wrapper before taking a reserved bite."
+    show WG surprised-2
+    "Her reaction was instantaneous. The overindulgent surgery confection hit her pallet like an explosion."
+    WG "!"
+    "It was one of the very few times Alice was at a loss for words. I had a hunch before, but now I knew for certain that terrible things had been set into motion."
+    Chibuki "Blah! {w}These are way too sweet. Is this what chocolate tastes like over in the States?"
+    show BE happy
+    BE "Hmm, maybe that’s why it tasted even better than I remembered."
+    show WG neutral
+    Chibuki "Well, you can have the rest. I’m not interested. Knock yourself out, I'm punching out for the evening."
+    hide Chibuki with dissolve
+    show BE angry
+    BE "{i}Pffft{/i}! {w}She doesn’t know what she’s talking about. These things are amazing!"
+    show BE surprised-2
+    BE "Hey! Save some for me!"
+    MC "Huh?"
+    "Unbeknownst to the both of us, while listening to Chibuki, Alice had already plowed through a whole box. Each box had 20 bars... and her pace was only increasing."
+    show WG happy
+    WG "Mmm! {w}You were right, Honoka. These are delectable!"
+    "Honoka began tearing into them at an almost equal pace to Alice."
+    MC "Yeesh! Slow down there, why don’t ya?"
+    show BE seductive
+    BE "No."
+    show BE happy
+    "There was plenty to go around, but I could only suspect the speed at which Alice polished off the first box would make her worried there would be none left soon."
+    show WG surprised-2
+    WG "Oh, goodness. I almost forgot. Aida loves chocolate. She needs to try these bars."
+    show WG neutral-2
+    extend " I’m sure she’d enjoy them too."
+    "One might think this was one of Alice’s more considerate gestures, but the fact that it had only occurred to her to include Aida after polishing off three boxes herself made me question where her priorities truly were."
+    show WG neutral
+    WG "Aida?"
+    "A slight, audible rustling could be heard as Aida came over."
+    PRG "Y-Yes, Alice?"
+    WG "Please come join us in my room. I do believe you will enjoy this."
+    PRG "Uh, o-okay?"
+    "These things were like a blackhole, sucking everything into its bottomless vortex."
+    show PRG surprised at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1) with dissolve
+    PRG "{i}Gasp!{/i} W-What are those!?"
+    BE "Only the sweetest, gooiest, cholatey bars on the whole planet!"
+    show WG happy
+    WG "Mmm, yes. I can hardly argue with that description. You simply must try them, Aida."
+    show PRG neutral
+    "Alice extended her pudgy dimpled hand, lightly stained with the remnants of nearly a hundred chocolate bars by this point, handing a still intact wrapped bar to Aida."
+    "Aida gently unwrapped the bar, sampling it with a dainty bite."
+    show PRG admire
+    "With that first bite, a euphoric warmth washed across Aida’s face. {w}And at that point, I knew the Miracle Bar had possessed another victim."
+    show PRG excited
+    PRG "These are amazing!"
+    show PRG embarrassed
+    PRG "C-Could I have another... please?"
+    WG "Of course!"
+    "Alice managed to utter between inhaling a couple more bars."
+    show WG haughty
+    WG "In fact, I insist. There is plenty to share. We won’t be running out any time soon."
+    MCT "Hmm, I have to wonder about that..."
+    show PRG excited
+    PRG "Thank you, Alice! I-I’ve been craving chocolate lately..."
+    show PRG admire-2
+    extend " W-Well, more than usual, I mean."
+    show BE shrug
+    BE "Who could blame you? Sounds a lot better than pickles and ice cream. You’re eating for..."
+    show BE confused
+    extend " Uh, more than one..."
+    show BE embarrassed
+    extend " So go crazy! I’m sure your little kiddos like chocolate too!"
+    show PRG happy
+    show BE happy
+    show WG happy
+    "Come to think of it, I didn’t know how many babies Aida was carrying. She had probably told Alice, but I didn’t know, and I wasn’t about to ask. The size of her belly this far along told me it must have been a lot though."
+    "Watching the three of them descend upon the box of sugar ladened decadence was like watching a nature documentary with lionesses tearing apart a fresh zebra carcass."
+    "The red nougat/carmel mixture oozing out from the bars made the comparison all the more unsettling. The spectacle was visceral and gruesome, yet strangely satisfying to my sense of morbid curiosity."
+    "A more level headed and composed man would have intervened to stop this contagious madness. {w}But I was just a horny guy that liked to watch large women eat and grow larger."
+    "In that regard, I was powerless to do anything. {w}At least that’s what I told myself as I stared all the more intently."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm WG with fade
+    show PRG neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1)
+    show BE neutral at Position(xcenter=0.20, yalign=1.0), Transform(xzoom=-1) behind PRG
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) behind PRG
+    with dissolve
+    "I couldn’t tell you how much time had passed, but if my sense of time had been working, instead of staring with my jaw hanging open at the site before me, it was probably at least a few hours."
+    "What should have supplied an entire store on a busy street for Valentine's Day had dwindled to almost the bottom of the box, and their pace had noticeably slowed."
+    show PRG nervous
+    PRG "I...I think I’ve had enough chocolate. {w}I-I think I’m going to lie down."
+    show WG surprised-2
+    WG "Don’t overextend yourself, Aida. Please, get some rest."
+    show WG neutral-2
+    extend " There will be plenty left for tomorrow."
+    MCT "Are you sure about that?"
+    show PRG sad-2
+    PRG "T-Thanks, Alice."
+    hide PRG with dissolve
+    "The most sensible one of the group appeared to have tapped out. Aida was eating for a litter, while Alice was eating for... well, Alice. {w}How Honoka was still going at it, I couldn’t understand."
+    "Granted, Alice had eaten twice as much as either of them at this point. Neither of the two girls could match her voracious appetite on the best of days."
+    "Still it was a lot for both. {w}And by a lot, I mean beyond any reasonable version of reality I left behind since coming to this school."
+    show WG worried
+    show BE worried
+    "Both were starting to look a little green around the gills. {w}This didn’t mean they stopped eating the chocolate bars mind you."
+    "Alice looked positively stuffed."
+    if isEventCleared("WG060S"):
+        "Maybe not quite as much as that one night of unbridled hedonism, but this was a close second."
+    else:
+        "I don’t think I had seen her this stuffed since I watched her pound back an entire punch bowl full of pasta."
+    "Her belly looked swollen, painfully so. The small crease in her belly had stretched out till it was completely smooth. Her eyes looked glazed over like she was caught in some chocolate induced haze."
+    "Alice’s full stomach from a regular meal was a staggering amount of food. To think it was entirely jam-packed with sugar and cocoa butter from literally hundreds of full sized chocolate bars..."
+    WG "{i}Hic{/i}! {i}Uggh{/i}... {w}I think I may have overdid it..."
+    MCT "Was it your 5th box or 20th box that made you think that?"
+    "Finally realizing her surroundings again, Alice proceeded to wipe away the remnants of chocolate from the corner of her lips and wipe her fingers clean."
+    "Honoka on the other hand, was still possessed by whatever foul magic was released from this crate."
+    BE "{i}Uhh{/i}... {w}Must... have... more... chocolate bars."
+    MC "Give me that!"
+    "Finally coming to my senses, I yanked the mostly empty box away from them."
+    MC "These things will be the death of both of you!"
+    show BE surprised
+    BE "Wait, what are you going to do with those?"
+    show WG stern
+    WG "At this point, I don’t care if he casts them into the ocean. Get those things out of my sight!"
+    show BE surprised-2
+    BE "What!? Noooo! You can’t *{i}hic{/i}* Kei-chan!"
+    MC "It’s for your own good!"
+    "Honoka swatted futilely in an attempt to wrench the box from my hands before realizing any sudden movements on her part were a bad idea at this point."
+    show BE sad
+    BE "{i}Oooff.{/i} {w}Maybe you should take them away..."
+    scene black with fade
+    pause 1
+
+    scene Dorm Exterior with fade
+    "I proceeded to march the vile contents outside into the dumpster behind the girl’s dorm. By my estimate there were only ten boxes left in the whole crate."
+    MCT "Holy crap! Those girls are savages!"
+    show FMG neutral with dissolve
+    FMG "Hey Kei-kun. What ya got there?"
+    MC "Oh nothing just some..."
+    MCT "Trash! You’re going to throw it away where it can’t hurt anyone anymore!"
+    MC "...Chocolate bars. Want some?"
+    MCT "You’re a monster."
+    show FMG happy
+    FMG "Oh, you know it! Give’m here!"
+    "I told myself it would be better to dispose of them in the pit that is Akira’s stomach rather than just tossing them in a place I didn’t want Honoka trying to recover them."
+    "Besides, Akira would just burn these bars off. {w}Then again if my math was correct, it might even take her a whole month to burn off these remaining ten boxes."
+    "As I was crunching the numbers and rationalizing my horrible mistake, Akira had already bitten into one."
+    show FMG surprised
+    FMG "Yoooo, ho-ly shit! These are amaziballz!"
+    show FMG surprised-2
+    FMG "I can have more right?"
+    MC "You can have them all."
+    show FMG upbeat
+    FMG "Oh, hell yeah!"
+    show FMG happy
+    FMG "You’re awesome, Kei-kun!"
+    show FMG aroused
+    FMG "Mmmm! These are like, better than ice cream."
+    show FMG happy
+    extend " And I don’t know if I’ve said that about anything before! {w}Where did you get these?"
+    "A more prudent and wise man would have said it was a gift, and that I didn’t know."
+    MC "Uh, I’m not sure. You’d have to ask Alice."
+    "But I was not that man. Not today."
     jump daymenu
 
 label WGFMG001:

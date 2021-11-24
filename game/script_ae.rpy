@@ -13031,7 +13031,7 @@ label AE056_c1_after:
     "The sudden loud shout from Tako as she walked through the door and threw her bag onto her bed caused my heart to relocate itself comfortably in my throat as Shiori's panicked yelp was accompanied by her rolling off of me hurriedly."
     MC "Woah, shit!"
     "Tako turned her head and covered her face with her hand."
-    show Tako surprised at center
+    show Tako confused at center
     Tako "S-Sorry! Sorry!"
     AE "I thought you were out for the night-!"
     Tako "Holy shit, can you give a girl some warning if you're gonna bring Keisuke in here?!"
@@ -13940,10 +13940,10 @@ label AE060:
     MCT "I lov-"
     "{i}CREAK{/i}"
     stop music
-    show Tako surprised
+    show Tako confused
     Tako "WOAH, SHIT!"
     show AE surprised at Position(xcenter=0.25, yanchor=1.0)
-    show Tako surprised at Position(xcenter=0.75, yanchor=1.0)
+    show Tako confused at Position(xcenter=0.75, yanchor=1.0)
     with dissolve
     AE "EEK!"
     MC "Woah, whoa- Uh-!!"

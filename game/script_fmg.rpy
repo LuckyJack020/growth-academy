@@ -3884,7 +3884,7 @@ label FMG028:
     MCT "From the corner of my eye I spotted Natsuko walking through the crowd of students... not like it was hard to miss her, she looked like a character right out of an anime with her red hair."
     MC "She didn't see me, she didn't see me, keep walking Kei and don't look back."
     show Natsuko flirty with dissolve
-    Natsuko "Have you done, something with your hair, Hotsure-san? It looks great."
+    Natsuko "Have you done something with your hair, Hotsure-san? It looks great."
     MCT "... {w}Ugh..."
     MC "Heeeey Okamoto-san! Um, not recently no, but thanks for the compliment... "
     MC "You... um... look bigger, I guess? I don’t really know how to respond..."
@@ -9596,6 +9596,166 @@ label FMG060:
     jump daymenu
 
 label FMG061:
+    $setProgress("FMG", "FMG062")
+    scene black with fade
+    FMG "You awake...? Kei-kun?"
+    MC "Nooooo, Alice... that’s my hotdog..."
+    FMG "He talks in his sleep, hm? I have the perfect plan."
+    pause 1
+    play sound Thud
+    scene Dorm FMG with vpunch
+    MC "Wa! W-What happened! Oh nice, pillows. Wait..."
+    MC "You’ll push me off the bed and make a landing zone but you can’t give me an extra pillow? What’s up with that?"
+    play music FMG
+    show FMG happy with dissolve
+    FMG "You take up a lot of space, so I had to move you."
+    MC "You are wider than the doors and {b}I{/b}take up a lot of space. I hope you stub your toe."
+    show FMG surprised
+    FMG "How dare you!"
+    show FMG neutral
+    FMG "...Anyway! You want to have a picnic today?"
+    MCT "Finally."
+    MC "Heeeell yeah. I’m going to shower and fix up my hair."
+    show FMG neutral
+    FMG "You want to shower together? So we can... save water."
+    MC "I’d love to. Unfortunately, I don’t think we’d fit together. I don’t want to get pressed up against the wall."
+    FMG "It won’t be that bad, trust me! I’ll get out if I don’t fit in there with you."
+    scene black with fade
+    pause 1
+
+    MC "What did I say?!?! Your cheeks have me pressed against the wall — Given I don’t mind — but my hair is in places where I don’t want it to be."
+    FMG "Okay, okay, I’ll wait my turn."
+    scene Bathroom with fade
+    MC "F-Freedom."
+    "It was getting hard to breathe, I could feel my life slowly slipping away. The light at the end of the tunnel getting... brighter."
+    $setFMGOutfit(OutfitEnum.NUDE)
+    show FMG sad-2
+    FMG "So dramatic for no reason. You’ve been asking to get crushed by my thighs for weeks."
+    MC "Excuse me, ma’am. But I do believe your iron buns are not your thighs. I’d die happily either way though. It’s just worth, you know, clarifying."
+    show FMG neutral
+    MC "Now, would you kindly leave the bathroom so I can shower in peace?"
+    FMG "That line doesn’t work outside of the video game, fool."
+    MC "Woah, didn’t ask."
+    FMG "I hate you."
+    MC "It’s a good thing I love myself."
+    "She leaned back into the shower to kiss me on the lips before she gathered her clothes and walked out."
+    hide FMG with dissolve
+    FMG "Don’t take all the hot water again, please!"
+    MC "I wasn’t, but now I’m going to!"
+    FMG "I’ll throw your clothes outside the window and you can run out naked to go get them!"
+    MCT "Argh, she would TOTALLY do that, too. That’s the worst part."
+    MC "...Fine...!"
+    scene black with fade
+    pause 1
+
+    scene Dorm FMG with fade
+    MCT "Unbothered. Happy in my lane. Focused. Flourishing. A good shower does the trick all the time."
+    FMG "I can’t wait to rock this! This dress brings out my muscles so well, I look huge, haha."
+    show cg FMG061 with dissolve
+    "She turned away from her closet and spread her lats showing off her massive frame."
+    FMG "You can’t tell me I don’t look amazing in this. I should wear this stuff more often. I fill this out perfectly!"
+    MC "I... I would agree. Have you considered ripping out of it? Sounds like a good idea to me."
+    hide cg with dissolve
+    #change outfit to dress?
+    show FMG neutral with dissolve
+    FMG "I bet you’d {i}love{/i} that. Knowing how you are, I did buy some tight-fitting clothes at the store so I could rip out of them."
+    show FMG aroused-2
+    FMG "Just for you."
+    MCT "Neutron activation."
+    pause 1
+    show FMG surprised-2
+    FMG "Kei! Your nose is bleeding!"
+    MC "Heh... It uh, tends to happen at the worst times. I’ll be right back."
+    hide FMG with dissolve
+    MCT "Way to look like an idiot in front of your girlfriend, you clown."
+    FMG "You okay?"
+    MC "Yeah, I’m good. It’s what I get for not drinking enough water lately! Oops..."
+    FMG "What do I tell you, Kei-kun? Always have a water bottle with you."
+    show FMG neutral with dissolve
+    MC "I know. My fault. You... Y-You ready to go?"
+    show FMG happy
+    FMG "What’s the matter? Cat got your tongue? You’ve only ever had this much trouble speaking when you saw me naked for the first time."
+    MC "In my defense as a guy, I’ll always have that reaction when I see you naked. I am a simple man. In this case, though, your upper body looks phenomenal in the dress. It’s hard to look away."
+    show FMG flex
+    FMG "Bitch, I know."
+    show FMG neutral
+    FMG "Sometimes, I look in the mirror and wonder how you scored such an amazing girl."
+    MC "I’m still looking for her."
+    show FMG angry-3
+    MC "HA! God, I’m good. You walked right into that one, sucker."
+    show FMG neutral
+    FMG "If I don’t hold back I bet I could send you through the wall with one good smack."
+    MC "But why? Why would you do that? You couldn’t survive without me. This hair... This personality..."
+    hide FMG with dissolve
+    MC "These fancy pants I bought- Akira...? Akira, I wasn’t finished hyping myself up! I know you can’t run in that dress! Stop doing this!!!"
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Park with fade
+    MC "How is it possible that you can move that fast in a dress while carrying a picnic basket and blanket???"
+    show FMG neutral with dissolve
+    FMG "Did you forget how big my hands are now? You act like I don’t know how to move in a dress either. This isn’t amateur hour, Kei-kun."
+    MC "Bruh, you rarely wear them. That shit looks tight on you. I didn’t think you could move like that at all!"
+    FMG "I have many talents, Kei... Enough about me being insanely talented and amazing. Let’s enjoy the day. Then we can have fun at the gym tomorrow."
+    MCT "I hope I choke."
+    MC "Count me in!"
+    scene black with fade
+    pause 1
+
+    scene Park with fade
+    "Is it wrong to call it a perfect day? The birds flying above our heads, the laughs we shared, the sandwich that Akira stole from me. It was great... until the birds stole the sandwich."
+    MC "How does a bird steal a sandwich from you? You grip dumbbells like your life depends on it but not my PB&J?"
+    show FMG neutral with dissolve
+    FMG "I didn’t want any jelly on the dress! It started dripping and getting all over the place. My dress had to survive!"
+    MC "You took my only food. Now I’m gonna starve."
+    FMG "Are you sure about that?"
+    show FMG sad-2
+    extend " I’ve been watching you sneak those bars out of the cafe..."
+    MC "I can explain that. Daichi will sometimes pop out of vents and usually, he hasn’t eaten anything so I give him the bars to snack on as he does Daichi things around the school."
+    show FMG neutral
+    FMG "..."
+    MC "..."
+    FMG "Even though that’s bullshit, I can totally see him doing that. But IF you start packing on the pounds, we are going to have a little chat, mister."
+    MC "No, I’m serious. He crawls around the vents."
+    FMG "I...I don’t know what to say. What an odd dude."
+    show FMG angry-2
+    extend " When is he going to get back to me about the bodyguard thingy! I’ve been waiting for months."
+    MC "Asking the wrong guy. Can you pass the chips?"
+    show FMG neutral
+    FMG "Sure."
+    "I stared at the bag for a while collecting my thoughts before forming my sentence."
+    MC "Hey... about last night-"
+    FMG "You don’t have to ask. When I went to sleep last night, I had a dream with him and we were building a sandcastle. He went to get another bucket and he... never came back."
+    MC "I’m sorry, Akira. I didn’t want you to talk about it if you didn’t want to."
+    FMG "No, it’s fine. I think it’s a sign in some way. I can’t really say... Let’s put the sad stuff to the side for now. I... I don’t think I have any tears right now, ha."
+    FMG "You want to go for a walk again? I need to stretch my legs."
+    MC "Y-Yeah."
+    FMG "Days like these are the best. We-We should travel somewhere. I hate planes and boats... most means of transportation honestly. But still, we should consider it."
+    MC "You got the money for it? My broke ass can’t cover a plane ticket."
+    FMG "...You think we could convince Alice to pay for them? OOOOH wait, since she’s super mega-rich she probably has her own plane."
+    MC "I mean... maybe? I think the least we could do is to ask her to join us if she offers up her freaking private jet or whatever it is."
+    FMG "I just thought of something!"
+    MC "Oh no..."
+    FMG "I’ll remember that comment. Anyway, I’m thinking that the next time I get a huge growth spurt or whatever. We should see if I can lift a car! How sick would that be???"
+    MC "It would be very sick, I have a better idea though."
+    show FMG sad-2
+    FMG "When are you going to stop asking for this?"
+    MC "I-I didn’t even say my idea yet and you’re already making assumptions. That’s messed up, dude."
+    show FMG neutral
+    FMG "Fine, Kei. What’s your idea?"
+    MC "Be prepared for greatness. Okay, okay so you remember a few hours ago when you had me pinned against the wall cause you know... you’re big."
+    FMG "Uh-huh."
+    MC "Can I interest you in doing it again? Let’s say tonight?"
+    show FMG sad-2
+    FMG "Do you ever keep it in your pants?"
+    MC "Well technically speaking it is currently in my pants. What do you think of this super cool neat idea?"
+    show FMG neutral
+    FMG "*sigh* I’ll think about it."
+    MCT "Yeaaaaaah."
+    jump daymenu
+
+label FMG062:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

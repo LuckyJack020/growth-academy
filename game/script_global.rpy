@@ -203,7 +203,7 @@ image Ryokan Room = DynamicImage("Graphics/ui/bg/ryokanroom_[gametime].png")
 image Dorm PRG = DynamicImage("Graphics/ui/bg/PRGdorm_[gametime].png")
 
 image Dorm WG = DynamicImage("Graphics/ui/bg/WGDorm_[gametime].png")
-image Dorm WG Flip = im.Flip("Graphics/ui/bg/WGDorm_day.png", horizontal=True
+image Dorm WG Flip = im.Flip("Graphics/ui/bg/WGDorm_day.png", horizontal=True)
 image Ballroom = DynamicImage("Graphics/ui/bg/ballroom_[gametime].png")
 image Hotel Room = DynamicImage("Graphics/ui/bg/hotelroom_[gametime].png")
 image RV Interior = "Graphics/ui/bg/WG_summer_rv.png"
@@ -738,7 +738,7 @@ image Tako excited = "Graphics/minor/tako/[TakoOutfit]/excited.png"
 image Tako happy = "Graphics/minor/tako/[TakoOutfit]/happy.png"
 image Tako unique = "Graphics/minor/tako/[TakoOutfit]/unique.png"
 image Tako sad = "Graphics/minor/tako/[TakoOutfit]/sad.png"
-image Tako surprised = "Graphics/minor/tako/[TakoOutfit]/surprised.png"
+image Tako confused = "Graphics/minor/tako/[minorsizes[Tako]]/[TakoOutfit]/confused.png"
 
 image Midori neutral = "Graphics/minor/midori/midori-neutral.png"
 image Midori happy = "Graphics/minor/midori/midori-happy.png"
@@ -1041,7 +1041,8 @@ init 2 python:
     eventlibrary['FMG057'] = {"name": "It's Fine, Don't Move", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "gym",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG059", "obsflags": [],               "conditions": []}
     eventlibrary['FMG059'] = {"name": "Muscles Too Huge", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "park",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG060", "obsflags": [],               "conditions": []}
     eventlibrary['FMG060'] = {"name": "The Truth Revealed", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "roof",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG061", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG061'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG061'] = {"name": "A Day To Relax", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dormFMG",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG062", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG062'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
 
 
@@ -1280,6 +1281,7 @@ init 2 python:
     eventlibrary['WG058'] = {"name": "Silver Screen Starlet", "girls": ["WG", "PRG"], "type": EventTypeEnum.OPTIONAL,                                                  "location": "field",            "priority": PrioEnum.NONE,              "obsflags": ["size5"],      "conditions": [[ConditionEnum.EVENT, "WG057"]]}
 
     eventlibrary['WGBE001'] = {"name": "So Bad It's Good", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG020"], [ConditionEnum.NOEVENT, "WG044"]]]}
+    eventlibrary['WGBE003'] = {"name": "It's a Miracle!", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dormWG",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WG062"]]}
     eventlibrary['WGFMG001'] = {"name": "Afraid of a Little Fun?", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                             "location": "gym",               "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMGWG003"], [ConditionEnum.NOEVENT, "WG043"]], [ConditionEnum.OR, [ConditionEnum.EVENT, "WG032"], [ConditionEnum.EVENT, "WG037"]]]]}
     eventlibrary['WGFMG002'] = {"name": "Tamer of Dragons", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                   "location": "dorminterior",     "priority": PrioEnum.NONE,              "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "WG043"]]}
     eventlibrary['WGFMG003'] = {"name": "An Immovable Object", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                 "location": "schoolexterior",     "priority": PrioEnum.NONE,              "obsflags": ["size5"],        "conditions": [[ConditionEnum.EVENT, "WG063"]]}

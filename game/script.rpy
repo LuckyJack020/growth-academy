@@ -645,6 +645,7 @@ init python:
         legalsizes = {
             "Yuki": [1, 3],
             "Natsuko": [1, 2, 3, 4, 5],
+            "Tako": [1, 2, 3, 4, 5],
             "Tomoko": [1, 2, 3, 4, 5],
             "Sakura": [1, 2, 3, 4, 5]
         }
@@ -781,7 +782,7 @@ label start:
         skills = {"Athletics": 0, "Art": 0, "Academics": 0}
         globalsize = 1
         prgsize = 1
-        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Tomoko': 1, 'Sakura': 1}
+        minorsizes = {'Yuki': 1, 'Natsuko': 1, 'Tako': 1, 'Tomoko': 1, 'Sakura': 1}
         gametime = TimeEnum.DAY
         AEOutfit = OutfitEnum.DEFAULT
         BEOutfit = OutfitEnum.DEFAULT
