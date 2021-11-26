@@ -13080,11 +13080,15 @@ label WG054_c1_after:
     WG "You need not worry about me, I can handle myself just fine. Though the thought is appreciated, Keisuke."
     "With a rumble the bus pulled up, displaying the town as its next destination."
     "It was hard to miss Alice giving the bus doors a size up before stepping on board."
+    scene Bus Interior with fade
+    show WG doubt with dissolve
     "With a bit of trepidation she stepped on. Her broad hips brushing against the larger than average bus doors."
+    show WG neutral
     "Alice found us a pair of seats near the back and gestured for me to take the seat next to her. Sliding in beside her was a bit awkward cause I don't think she noticed how much of her thigh was pressing against my leg."
     "Despite the minor discomfort in positioning I was not gonna complain about being beside her."
     scene black with fade
     "It didn't take too long to arrive at our destination."
+
     scene Town with fade
     play music BrightLights
     show WG neutral with dissolve

@@ -2187,7 +2187,7 @@ label PRG011:
             hide PRG with dissolve
             scene black with fade
             pause 1
-            scene Hallway 2 with dissolve
+            scene Hallway2 with dissolve
             "I had absolutely no idea where to go."
             MCT "Okay. Where can I go for a reliable source?"
             "I jogged down the hall, occasionally speeding up to a run when I could get away with it."

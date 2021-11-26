@@ -9756,6 +9756,283 @@ label FMG061:
     jump daymenu
 
 label FMG062:
+    $setProgress("FMG", "FMG063")
+    scene Gym with fade
+    play music FMG
+    MC "I’m telling you, there is no way Fuke Groundrunner beats Mandalf. One is an all-powerful wizard and the other has daddy issues."
+    show FMG neutral with dissolve
+    FMG "Nah, nah, nah. That’s wrong. Everything you said is wrong. Fuke has powers someone like Mandalf hasn’t seen before. The surprise alone of his abilities would throw Mandalf off his game. Letting Fuke get an easy hit in and win."
+    MC "What??? Have you even watched Consolation Wars? Fuke is bottom of the barrel trash. You couldn’t have picked a worse match-up."
+    show FMG sad-2
+    FMG "It’s almost like you have terrible taste in everything... especially movies."
+    MC "*gasp* You take that back."
+    show FMG neutral
+    FMG "...Nope."
+    show FMG surprised-2
+    FMG "Shiori?"
+    MC "Huh?"
+    "I spun around to see what that was all about only to be met with Shiori standing right behind me."
+    hide FMG
+    show AE neutral at Position(xcenter=0.5, yalign=1.0), Transform(xzoom=-1) with vpunch
+    MC "AH!"
+    MC "How long have you been behind me?? Nearly gave me a heart attack."
+    #show FMG sad-2
+    FMG "Uh, Kei...  Can I put you down?"
+    MC "Heh, whoops. I didn’t think I jumped that high."
+    $setSkill("Athletics", 2)
+    AE "Neither did I, however, if you could remain grounded, I would be appreciative."
+    show AE neutral at altMove(0.5, 0.25)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "I didn’t know you were a gym bunny, Matsumoto-san!"
+    show AE neutral-annoyed
+    AE "I am nothing of the sort, Mizutani-san. I am simply here for... health-related reasons."
+    MC "Health-related reasons?"
+    AE "Yes, well... I understand the possible futility of it, but... I wish to see if I can mitigate my own... um... swelling posterior."
+    MCT "Don’t laugh. Don’t laugh."
+    pause 0.5
+    MC "Heh... {size=-6}posterior{/size}"
+    show AE neutral
+    AE "Hm?"
+    MC "N-Nothing!"
+    MCT "How did she hear that???"
+    FMG "Well, do you need any help? Do you want to work out with us?"
+    MC "I might sit this one out. I can learn a lot from watching you teach, Matsumoto-san."
+    FMG "Where’s the fun in that?? It would be awesome having the three of us work out!"
+    Natsuko "You can work out with me if Akira doesn’t have the time, Hotsure-san."
+    hide AE
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with vpunch
+    MC "Where did you even come from? We’ve been here for about two hours. It is physically impossible to miss someone of your size."
+    Natsuko "I keep to myself and focus on my routine."
+    show Natsuko flex at Transform(xzoom=-1)
+    extend " You don’t get results like this by sitting around."
+    MCT "That doesn’t even answer my question... {w}Whatever, I’m not going to push it anymore."
+    show FMG neutral
+    FMG "{size=-6}The factor helps.{/size}"
+    show Natsuko neutral
+    Natsuko "Wait..."
+    hide FMG
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    Natsuko "Matsumoto-san."
+    AE "Okamoto-san."
+    Natsuko "Why are you here? I didn’t think I’d ever see you set foot in the gym. This isn’t a place for someone like you."
+    MCT "Blunt as always, Natsuko..."
+    show AE neutral-annoyed
+    AE "As I was explaining, it’s a matter of experimenting to mitigate..."
+    AE "Uch, I’m trying to lose weight in my behind."
+    hide AE
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    FMG "She’s looking for a workout partner, Nat."
+    show FMG flex
+    extend " And she picked a damn good one if I do say so."
+    Natsuko "You came here to ask Akira to be your gym partner? You have someone like me at this school and you choose her?"
+    show FMG angry-3
+    FMG "I’ll gladly show you up right here right now."
+    show Natsuko flex
+    Natsuko "If you want to embarrass yourself in front of Matsumoto-san and Hotsure-san. I’ll happily accept."
+    hide Natsuko
+    show AE neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    AE "There’s no need for that. Now, Mizutani-san, would you be so kind?"
+    show FMG happy
+    FMG "Absolutely!"
+    show FMG neutral
+    FMG "Do you have any idea of what you want to try, Shiori? Leg press? Seated leg curl?"
+    Natsuko "I don’t think that one is a good idea. She won’t be able to sit properly on it."
+    MCT "Pretty positive she can’t use any of the machines. Cause of her... swelling posterior."
+    MC "Man, that’s too funny. Ahhh...{size=-6}I seriously am five years old.{/size}"
+    FMG "Are you okay with trying anything, Shiori? This might take some time to find something that works."
+    AE "Anything that could be effective, yes."
+    show FMG flex
+    FMG "You’re going to love it here, trust me!"
+    hide FMG
+    hide AE
+    with dissolve
+    "We wandered around the gym for some time trying to see what machines Shiori could use comfortably."
+    "It started off okay... until Akira and Natsuko started getting in each other’s face about what machine would be the best for her."
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show FMG angry-3 at Position(xcenter=0.75, yalign=1.0)
+    Natsuko "No, she would have to sit too far forward. It would be too awkward for her. We can find something else."
+    FMG "We? She didn’t ask you for help, she asked me."
+    Natsuko "That’s correct. However, I’m making sure you don’t do anything stupid."
+    show Natsuko smug
+    extend " I don’t want you to embarrass yourself."
+    FMG "Ugh! I liked it more when we hated each other. You wouldn’t stick your face in my business."
+    hide Natsuko
+    hide FMG
+    show AE neutral
+    AE "I heard that those two fight quite often. I was hoping that it was less severe than I’d been told."
+    MC "You should’ve seen it before they put aside their differences. Sometimes I thought it would turn into a fistfight. At least the fighting is over helping someone rather than insulting each other... most of the time."
+    show AE glasses
+    AE "I would ensure that wouldn’t happen."
+    FMG "You want her to use the stair master? Are you crazy? Why would we do that?"
+    Natsuko "Your ideas haven’t been any better. I can’t fathom why she asked you."
+    show AE neutral-annoyed
+    AE "Enough of this."
+    hide AE with dissolve
+    MC "This I have to see."
+    pause 1
+    show AE neutral-annoyed with dissolve
+    AE "While I sincerely appreciate your dedication to your... craft, I can’t abide by this level of hostility, especially in a public forum."
+    AE "If the two of you would *kindly* settle on something, anything, I would be glad to oblige."
+    hide AE
+    show Natsuko disappointed at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show FMG sad-2 at Position(xcenter=0.75, yalign=1.0)
+    "Natsuko and Akira halted their argument at that moment and turned to Shiori."
+    MCT "Huh, it’s that easy. I’ll have to put Shiori and Alice on speed dial."
+    "Natsuko & Akira" "We can try the squat rack..."
+    "Before Shiori could respond, Akira and Nat turned around and began whispering to each other."
+    pause 0.5
+    show FMG happy
+    show Natsuko neutral
+    FMG "Okay! We’re ready! You can follow us."
+    MCT "That’s a little suspicious..."
+    hide Natsuko
+    hide FMG
+    with dissolve
+    "As we walked over to the machine both the girls gave her a quick rundown of what to do and if she’s having trouble to let them know so they can help."
+    MC "Wow, we have a squat rack this wide? Yo, what! There’s a snack machine at this side of the gym!"
+    show FMG sad
+    FMG "I was hoping you’d never find out."
+    MC "Ooooh, they have Not Sweet Adolescents."
+    hide FMG
+    show Natsuko neutral
+    Natsuko "That can’t possibly be what it’s called."
+    pause 1
+    show Natsuko disappointed
+    Natsuko "Of course it is..."
+    hide Natsuko
+    show AE neutral-annoyed
+    AE "Can we please stay focused?"
+    MC "You guys can do that, while I go blow some yen to reward myself for working hard today."
+    hide AE
+    show FMG angry-3
+    FMG "Are you kidding me? You did three pull-downs today at twenty-seven kilograms instead of thirty-six!"
+    MC "Damn, that’s unfortunate... I’ll be right back."
+    hide FMG with dissolve
+    Natsuko "You’re seriously going to let him go like that?"
+    FMG "Meh, it’s whatever. We can work it off tomorrow."
+    scene black with fade
+    pause 1
+
+    scene Gym with fade
+    MC "Don’t worry guys, I’m back and I got snacks... What the-"
+    AE "Haahn~ Ahh!"
+    "My eyes couldn’t believe what I was seeing. Akira and Nat had positioned themselves behind Shiori to block her *ahem* large rear from flashing the other gym-goers."
+    MC "Sooooooo, what’s this about?"
+    show Natsuko neutral with dissolve
+    Natsuko "You know. Don’t ask stupid questions."
+    MC "I was thinking of sharing my candy, but after that, I don’t feel like it. More for me."
+    Natsuko "You are a child."
+    MC "A child with candy, for your information."
+    hide Natsuko
+    show FMG neutral
+    FMG "{size=-6}Don’t ask. We didn’t want to use the squat rack but she sort of backed us into a corner.{/size}"
+    FMG "{size=-6}She hasn’t said much about her factor to us, fortunately, we could tell she was uncomfortable when she walked in. So Nat and I tried to plan around that without saying anything.{/size}"
+    MC "{size=-6}I’m touched that you guys care so much. Am I allowed to get this special treatment?{/size}"
+    Natsuko "No."
+    MCT "Great attempt to lower your voice, Nat."
+    MC "{size=-6}I didn’t ask you, Nat.{/size}"
+    Natsuko "I don’t care."
+    FMG "{size=-6}Jokes aside. At least we got her to try something. It might not be the {i}best{/i} option. Better than nothing though.{/size}"
+    AE "Could I get some help with this bar?"
+    FMG "Be right back, Kei."
+    "Natsuko took the bar and racked it. While Akira congratulated Shiori for doing her first set."
+    show FMG happy at altMove(0.5, 0.75)
+    show AE happy at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    FMG "You did great! Kei can’t squat that much."
+    MC "I’m trying to not show you girls up."
+    AE "Is that so? I must say it felt... how do I put this... may I try again?"
+    FMG "Absolutely! Do you want to try it with some more weight or do you want to keep it the same?"
+    show AE neutral
+    AE "A bit more, if you think it will help."
+    show FMG neutral
+    FMG "I’ll add a little more. It shouldn’t be too heavy. Let us know if you need help, okay?"
+    AE "Thank you for the accommodation. Now... here I go."
+    "Shiori breathed in as she squatted down, pushing her butt out as she grabbed onto the metal bar. Both of her gargantuan cheeks seemed to almost swell out behind her as they jiggled with every slight movement as she went up and down."
+    AE "L-Like this, right?"
+    hide FMG
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    Natsuko "Feet shoulder-width apart. Look forward. Also, you may want to... Akira, you tell her."
+    hide Natsuko
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    FMG "Um, can you um... not push your uh... backside out so heavily?"
+    show AE neutral
+    AE "It’s a bit difficult for me, unfortunately- ohh~."
+    "Her back arched slightly as she dropped it low again, the bottom of her booty brushing against the floor as Shiori moaned in... what I hope to be exhaustion."
+    MCT "What is going on???"
+    FMG "Kei... can you help me cover her... other side? Nat needs to stay up front to help her keep her form."
+    AE "Oh gracious!"
+    hide AE with dissolve
+    show FMG neutral at altMove(0.5, 0.5)
+    MC "What if I get booty bopped?"
+    FMG "I don’t know. What kind of question is that? She doesn’t go around swinging it like a weapon."
+    MC "I’m just saying."
+    "Though concerned, I walked over behind her to cover her from the eyes of the rest of the gym. My face went flush as Shiori went up and down, every once in a while her cheeks making an audible clapping noise."
+    MCT "Are we just going to ignore this???"
+    show FMG angry-3
+    FMG "{size=-6}Kei! Stop staring!{/size}"
+    MC "{size=-6}Sorry! It’s kind of in my face!{/size}"
+    show FMG neutral
+    FMG "{size=-6}I know! I know! At least try to not make it so obvious!{/size}"
+    MC "{size=-6}I’m open to suggestions. I could distract myself by looking at yours.{/size}"
+    FMG "{size=-6}Later. We have to stay focused.{/size}"
+    "Due to Shiroi’s larger than normal cheeks, however, I wasn’t able to fully cover her right side. This resulted in what I could only assume was the entire gym getting an eye load of madame presidents badonkadonk."
+    MC "Akira, I’m not wide enough like you or Nat to protect her backside. Can you stand in the middle?"
+    FMG "Pick up a weight and hold it out, this is going to be tricky for you and your small body."
+    MCT "...I’m average height."
+    FMG "Do you think I want to be back here with all this ass?"
+    MC "She’s double cheeked up and it’s not even Thursday."
+    FMG "Are you seriously referencing memes about butts when we are behind someone with an abnormally large bum?"
+    MC "Yes. I will never get another chance to use it. This is the perfect moment! Besides, It’s not like she can hear us."
+    hide FMG
+    show AE neutral-annoyed at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    Natsuko "I wish I couldn’t hear you. Think before you speak, Hotsure-san."
+    AE "Some things I could go without hearing..."
+    Natsuko "Ignore him, Matsumoto-san. Focus on your exercise for now. We can make Hotsure-san feel bad later."
+    MCT "Don’t throw the weight. She’ll rip you in half."
+    Natsuko "Good. Keep your chest out... Perfect. Don’t come up too fast. Great, good job."
+    "Nat took the bar off Shiori with ease and racked it before going to grab her water bottle."
+    MC "I bet you feel pretty good about yourself today, Natsuko. You know, cause you helped someone in need. You big softie."
+    show Natsuko neutral
+    Natsuko "I’ll toss you in the trash without hesitation."
+    MC "You are just a ray of sunshine, aren’t you? What happened to trying to be nice?"
+    Natsuko "Force of habit— sorry."
+    hide Natsuko
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    show AE happy
+    AE "Well, in either case, thank you for your support."
+    show FMG neutral
+    FMG "We’ll work on better ways to uh, defend you from behind... But still, you did great for your first time! You should come more often, it’s fun working out with people."
+    show AE neutral
+    AE "I um... I suppose I’ll monitor my results before I make any hard commitments."
+    "Shiori looked around the gym as she heard a few of the others snicker to themselves. Blushing, she adjusted her glasses and cleared her throat."
+    AE "I should get going. Thank you once again for your help."
+    FMG "My pleasure. If you ever need anything let Nat or me know and we’ll be there."
+    "Shiroi bowed too, gathered her things, and headed for the door."
+    hide AE
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    MC "I think that went rather well. Besides her buttocks flapping in the wind. But still well-done girls. We did great!"
+    Natsuko "We?"
+    show FMG neutral
+    FMG "Don’t get so worked up, Nat. Kei helped the best he could."
+    MC "And I did offer to share my candy. That has to be worth bonus points or something."
+    Natsuko "...I’m leaving."
+    show FMG neutral at altMove(0.5, 0.5)
+    hide Natsuko with dissolve
+    FMG "Okay, now that she’s gone... can I get some of that candy?"
+    MC "Bruh."
+    FMG "I’m begging you, dude. My mouth was watering watching you eat them."
+    MC "You’re lucky I bought three bags."
+    show FMG surprised
+    FMG "You bought three!"
+    show FMG happy
+    extend " Can I get a bag instead?"
+    MC "I’ll think about it."
+    jump daymenu
+
+label FMG063:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

@@ -821,7 +821,8 @@ label splashscreen:
     centered "This is a work of fiction. Any resemblance to actual events or locales or persons, living or dead, is entirely coincidental."
     centered "For more information, visit\n https://discord.gg/Hs6ggpp"
     centered "Enjoy."
-    $renpy.movie_cutscene("Graphics/ui/intro.webm")
+    play movie "Graphics/ui/intro.webm"
+    pause 96
     return
 
 #Remember to hide choicetimer for each choice made before the timer finishes.
