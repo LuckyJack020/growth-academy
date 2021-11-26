@@ -3,7 +3,7 @@ init python:
 
 screen extras():
     tag menu
-    add "Graphics/ui/bg/infodesk_eve.png"
+    add "Graphics/ui/bg/archiveBG/infodesk_eve.png"
     grid 3 3:
         xfill True
         yfill True

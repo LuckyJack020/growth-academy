@@ -66,7 +66,7 @@ image playPauseButton = DynamicDisplayable(ost.auto_play_pause_button)
 screen music_room():
 
     tag menu
-    add "Graphics/ui/bg/music_eve.png"
+    add "Graphics/ui/bg/archiveBG/music_eve.png"
 
     default bar_val = ost.AdjustableAudioPositionValue()
 
@@ -203,7 +203,7 @@ style music_room_duration_text is gui_text
 style music_room_frame:
     yfill True
 
-    background "Graphics/ui/bg/music_eve.png"
+    background "Graphics/ui/bg/archiveBG/music_eve.png"
     foreground "gui/overlay/game_menu.png"
 
 style music_room_button is default:
