@@ -10033,6 +10033,275 @@ label FMG062:
     jump daymenu
 
 label FMG063:
+    $setProgress("FMG", "FMG064")
+    scene Cafeteria with fade
+    play music FMG
+    MC "I’ve been thinking..."
+    show FMG neutral with dissolve
+    FMG "That can’t be good. Are you feeling okay? I don’t want you to hurt yourself."
+    MC "..."
+    FMG "Here let me mimic you... that’s what you call a joke, Akira, hurhur."
+    MC "One day, I’m going to stop talking to you and you’ll feel bad for how you’ve treated me."
+    FMG "I’m sure I will. Then I’ll get over it."
+    MC "Ooookay, whatever you say. You’d be in shambles without all of {i}this{/i}."
+    show FMG happy
+    FMG "Hahaha, I would. I mean, who would tell me how great I look every day. Someone has to be able to appreciate this body besides me."
+    MC "Mhm, mhm. Alright, I’m losing my train of thought... {w}Ah, yeah! I was thinking about our prank war. Is it still on? We haven’t done anything to each other in a little while."
+    show FMG neutral
+    FMG "Of course it’s still on. Why would I try to get you with something daily? I have to keep you on your toes."
+    FMG "I could have something set up for you later today or tomorrow or the next day. Maaaaybe even the day after that. You never know."
+    MC "So what you’re saying is you are. Well, what is it?"
+    show FMG sad-2
+    FMG "Who goes around asking someone what pranks they have set up for them???"
+    show FMG neutral
+    extend " Like I would reveal what’s in store for you."
+    FMG "You’re safe... for now. Are you going to finish your fries?"
+    MC "Uh, yeah. I’ll give you the big fry cause I’m such a nice dude."
+    FMG "I’m going to throw this out there and tell me what you think."
+    MC "Um... Okay?"
+    FMG "You want to head back to my dorm and watch me rip out of my clothes? They {i}are{/i} pretty tight on me."
+    MC "I’m in. I am a hundred percent in."
+    scene black with fade
+    pause 1
+
+    scene Dorm FMG with fade
+    MC "I don’t think you understand how excited I am. This is going to be super hot and awesome."
+    show FMG neutral with dissolve
+    FMG "Heh, I know. Destroying stuff is one of my favorite pastimes... Hmm, I have a lot of options. Since you’re the one who wants to see this the most, I’ll let you pick."
+    MC "Nice, I approve of this decision. Let’s see what we’re working with."
+    jump FMG063_choice
+
+label FMG063_choice:
+    menu:
+        "The classic red. It might not fit.":
+            jump FMG063_C1_1
+        "Is that Chibuki’s? Did she steal that?" if not getFlag("FMG_undies"):
+            jump FMG063_C2_1
+        "A clean white shirt. Hugs the beeeewbs.":
+            jump FMG063_C3_1
+        "Ask her to rip what she has on. Everything goes.":
+            jump FMG063_C4_1
+
+label FMG063_C1_1:
+    MC "How about this one? It’s a bit similar to what you usually wear. Rip this one apart."
+    show FMG happy
+    FMG "That’s one of the shirts I had when I was smaller, I guess I forgot to get rid of it."
+    show FMG neutral
+    FMG "Toss it over. I... I don’t think it’s going to fit through. Meh, not like it really matters at this point."
+    hide FMG with dissolve
+    "She threw off her clothes-"
+    MC "I never get tired of this. Have you tried my suggestion of not wearing clothes?"
+    #show nude FMG?
+    show FMG flex with dissolve
+    FMG "The show hasn’t even started yet and you’re already acting up."
+    pause 1
+    MC "It doesn’t look like you can get it past your head. Do you want help?"
+    show FMG angry-2
+    FMG "I got this!"
+    "Riiiiiiiiiiiiiip"
+    MC "Awwww, you ripped it already."
+    FMG "Damn it!  I’m too big, uuuuugh. I couldn’t even get my forearm past the sleeve!"
+    pause .5
+    show FMG sad-2
+    FMG "Man, that ruined the mood. Sorry, Kei-kun. I didn’t think it was that {i}small{/i}."
+    show FMG neutral
+    FMG "You want to go do something else? After that mood killer, I’m kind of salty, haha."
+    MC "Arcade? We haven’t been there in ages. Whatcu thinking girl???"
+    FMG "First, I’m thinking you don’t talk like that again. Second, I’m SO down to kick your ass at the arcade."
+    MC "Bet?"
+    FMG "Bet!"
+    scene black with fade
+    pause 1
+    jump FMG063_afterchoice
+
+label FMG063_C2_1:
+    MC "Did you steal this from Chibuki’s closet? This is not something I’d see you wearing."
+    show FMG neutral
+    FMG "Heh, I bought that thinking it would be something fun to wear when we uh... went at it again."
+    FMG "We can put that one back for now. You weren’t supposed to see that. Pick something else and forget you saw that."
+    MC "I will definitely not forget. Could I get a sneak peek?"
+    show FMG happy
+    FMG "Maybe another time. I’m glad you like it though, I was a bit nervous when I picked it out. It’s... different."
+    MC "I can not wait to see you in this! Anyways, what else is in here?"
+    $setFlag("FMG_undies")
+    jump FMG063_choice
+
+label FMG063_C3_1:
+    MC "Hm. I pick... this."
+    FMG "Really? The basic white one? If that’s what you want. Give me two seconds to put it on."
+    hide FMG with dissolve
+    pause .5
+    FMG "Well, I got it on. I think if I lift my arms it will explode."
+    #different outfits to match how many clothing is referenced in this scene?
+    show FMG neutral with dissolve
+    MC "Pffff, hahaha. That’s hilarious. I didn’t think that shirt would exaggerate your... everything so much. It’s so funny to know your arms are stuck like that though, hahaha."
+    FMG "It is so uncomfortable. I need to bust out of this thing before it chokes me to death."
+    FMG "How do you want me to do this? Lat spread? The classic double bicep with some more oomph?"
+    show FMG happy
+    FMG "Ooooh-"
+    "And that’s when my day went from good to great."
+    #show nude?
+    show FMG surprised
+    "She wasn’t kidding when she said if she moves it’ll explode."
+    MC "I don’t even care that you didn’t flex out of it. That was worth it. Do it again!"
+    show FMG happy
+    FMG "Guess I should’ve done a side chest. It’s a rough life being this big and sexy, haha."
+    show FMG neutral
+    FMG "Be right back, Kei. I’m going to put clothes on that won’t rip... hopefully."
+    hide FMG with dissolve
+    MCT "I wonder if she’ll be down for the arcade. We haven’t gone in so long. Might be a nice little date?"
+    show FMG flex with dissolve
+    FMG "I’m back and I’m not half-naked this time."
+    MC "Stop, you’ll make me cry."
+    show FMG neutral
+    FMG "I’m going to stop rolling my eyes and instead silently judge you from across the room."
+    MC "I can agree to that because then you won’t be talking. {w}Sorry, not sorry."
+    FMG "I’ll jump on the bed and crush you."
+    MC "Took you long enough, let me get comfy first."
+    MC "Ready when you are."
+    MC "OOOOOH, wait! Don’t sit on me just yet. Do you want to go to the arcade? I’m feeling some Worldly Fighters. I’ve been practicing."
+    show FMG happy
+    FMG "Funny, I’ve been practicing too. I can get an eighty percent combo without boosting."
+    MCT "Hm... maybe this wasn’t a good idea."
+    show FMG flex
+    FMG "Let’s go! Let’s try to get back by dinner."
+    MC "Slow your roll, I’m coming, I’m coming."
+    scene black with fade
+    pause 1
+    jump FMG063_afterchoice
+
+label FMG063_C4_1:
+    MC "We don’t need any of that stuff. Try ripping the clothes you got on."
+    FMG "Aw, you don’t want to take a look? I guess I can work with what I have on. Alice won’t be happy, but she gave me extras anyway."
+    show FMG aroused-2
+    FMG "Don’t blink or you might miss it~"
+    show FMG neutral
+    FMG "I won’t rip the buttondown, those are a pain to get. Prepare to be amazed!"
+    "She placed her hands on the collar of the shirt holding nothing back as she tore it apart with ease, revealing her trademark sports bra and defined core."
+    #Show nude from here?
+    show FMG aroused-2
+    FMG "Man, that felt awesome... I should probably rip the skirt too."
+    MCT "I could die right now with no regrets. This is the greatest thing ever."
+    MC "I-I agree."
+    FMG "I thought you would."
+    "Akira grabbed the front of her skirt with one hand and in one quick motion ripped the skirt into pieces."
+    show FMG flex
+    FMG "And that is how you get {i}half{/i}-naked in style."
+    MCT "Abs."
+    MCT "Boobs."
+    MCT "Muscles."
+    MC "This is the best..."
+    show FMG happy
+    FMG "Sorry, I didn’t drag it out. I honestly didn’t expect it to rip that easily. I keep underestimating how strong I am."
+    MC "You won’t hear any complaints from me. I’d pay good money to see that again. Could I uh... do that now?"
+    show FMG aroused-2
+    FMG "I’ll do it again for free later. I genuinely enjoyed ripping my clothes apart. It... It felt great."
+    MC "You might have to take me to the ER. I almost passed out the first time. This is too much for my simple brain."
+    show FMG happy
+    FMG "I’m glad to be of service."
+    FMG "I’ll go grab some new clothes, heh. Can’t go out half-naked."
+    MC "Well, I-I mean we don’t have to go out. You. Me. This bed. I’m a freak in the sheets and the streets."
+    show FMG sad-2
+    FMG "You are horrible at asking for sex. AND you ruined your chances with your phrasing."
+    show FMG neutral
+    FMG "You ain’t a freak anywhere. I did all the work last time."
+    MC "Yeah, because I was getting crushed underneath you. The motion of the ocean was messing with my boat. I don’t know what you want."
+    FMG "The ocean seems to be difficult for this sailor to deal with."
+    show FMG aroused-2
+    extend " Maybe he needs more practice..."
+    MC "Yes. A thousand times, yes. Don’t worry I came prepared."
+    show FMG neutral
+    FMG "Keep it in your pockets, fool. I never said now. For now, we should hit up the arcade. I’ve been dying to play some Worldly Fighters!"
+    MC "Now you’re speaking my language. Please don’t cry when I win. You’ll make me feel bad for being better."
+    show FMG flex
+    FMG "Okaaaaaaaaay, Kei-kun. I won’t try too {i}hard{/i}."
+    scene black with fade
+    pause 1
+    jump FMG063_afterchoice
+
+label FMG063_afterchoice:
+    $setTime(TimeEnum.EVE)
+    scene Arcade with fade
+    MC "You smell that? Smells like defeat."
+    show FMG neutral with dissolve
+    FMG "I’m not smelling anything. However, I do see a little bitch about to get his butt kicked."
+    MC "Ooookay, so now we’re name-calling???  You better hope those gorilla hands don’t rip off the joysticks."
+    show FMG flex
+    FMG "I’ll rip off someone’s joystick later..."
+    MC "!"
+    "I closed my eyes and sighed heavily."
+    MC "Don’t say that... please."
+    show FMG neutral
+    FMG "I’m kidding... I won’t be if I lose though."
+    MCT "Hmmmm. Do I take the risk?"
+    menu:
+        "Kick her ass. I don’t need it anyway.":
+            jump FMG063_C1_2
+        "It’s all I’ve got. I’ll let her win... this time.":
+            jump FMG063_C2_2
+
+label FMG063_C1_2:
+    MCT "She’s bluffing. She would never."
+    "I popped coins into the machine, watching it come to life. I was in my zone. Kinda. This was the first time since we came to the arcade with Akira’s larger frame."
+    MC "I didn’t want to say it. But I’m going to say it. STOP taking up so much room!"
+    show FMG angry-2
+    FMG "Does it look like I can move! I already have my thighs to the side! I’m going to lose if I shift my whole body."
+    MC "See, that seems like a you problem."
+    show FMG neutral
+    FMG "And my upper body pushing you out of my way. Is a YOU problem. I’m trying to win, dude."
+    MC "I’ll work with it. Let’s play so I can feel my right arm again."
+    pause 1.5
+    MC "Man, why does your arm need to be so big! Stop pushing me, you cheater!"
+    show FMG happy
+    FMG "How else am I supposed to move the joystick??? You just want me to stand still so you can get an easy win."
+    MC "Ah, yeah. I can’t lose to you. I couldn’t live with myself."
+    show FMG neutral
+    FMG "{size=-6}Heh, like at this point, I’d think you’d be used to losing.{/size}"
+    MC "And that’s a DUB!"
+    show FMG surprised-2
+    FMG "H-How?!?!?"
+    FMG "I was up two health bars!"
+    MC "While you were busy in the gym. I was busy working on what mattered."
+    show FMG neutral
+    FMG "Your hygiene?"
+    MC "...No..."
+    MC "Nevermind you spoiled the moment. Just know, I’m better. Get wrecked. You’re now paying for the bus tickets back."
+    FMG "I don’t remember betting on who pays for the ride back."
+    MC "That’s because it happened right now, I’ll be outside basking in my glory."
+    FMG "Enjoy it, you won’t get another win."
+    MC "Is that the sound of a sore loser?"
+    FMG "Wait, till we get back and you’ll see who's sore."
+    MCT "Nice."
+    jump daymenu
+
+label FMG063_C2_2:
+    MC "You win."
+    show FMG neutral
+    FMG "You said what now? How can I win when we didn’t even start??? Are you okay? Did you hit your head?"
+    MC "I gave it some thought and it’s for the best that you are the victor. It took a lot of courage to admit, but congratulations."
+    FMG "Uh... thanks? You sure, you don’t want to go a few rounds? We still have some time to kill."
+    MC "Yeah... Yeah. I think I’m good."
+    show FMG happy
+    FMG "We’ve dated for so long and you seriously thought I’d rip off your weiner if I lost. That’s what this is about?"
+    MC "No, no it is not."
+    FMG "Hahaha, it is. Kei-kun afraid of big bad Akira coming for his manhood."
+    MC "..."
+    MC "Put the coins in. I’m over it. I’m sending you packing."
+    show FMG flex
+    FMG "That’s my man. Now you can lose with some class!"
+    pause 1
+    MC "A tie... are you kidding me. That’s garbage. I want a rematch."
+    show FMG neutral
+    FMG "I don’t know. I’m satisfied. I didn’t lose AND I got to see you forfeit a game over a \"threat\". I’d say we both won today. You saw me rip my clothes and I saw you chicken out."
+    MC "I think my win was better."
+    FMG "Mine was better good. I’m so going to hold this over you forever."
+    MC "I... don’t know what to say. Just don’t do it in public. I don’t need people like Alice or Natsuko hearing about this."
+    show FMG happy
+    FMG "That’s a great idea! I’ll give them a call."
+    MCT "Kill me."
+    jump daymenu
+
+label FMG064:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

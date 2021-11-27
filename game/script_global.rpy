@@ -1045,7 +1045,8 @@ init 2 python:
     eventlibrary['FMG060'] = {"name": "The Truth Revealed", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "roof",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG061", "obsflags": [],               "conditions": []}
     eventlibrary['FMG061'] = {"name": "A Day To Relax", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                       "location": "dormFMG",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG062", "obsflags": [],               "conditions": []}
     eventlibrary['FMG062'] = {"name": "Big Booty Bitches?", "girls": ["FMG", "AE"], "type": EventTypeEnum.CORE,                            "location": "gym",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG063", "obsflags": [],               "conditions": []}
-    eventlibrary['FMG063'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG063'] = {"name": "A Tough Choice", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                        "location": "gym",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "FMG064", "obsflags": [],               "conditions": []}
+    eventlibrary['FMG064'] = {"name": "Akira End", "girls": ["FMG"], "type": EventTypeEnum.CORE,                                                "location": "hallway",                     "priority": PrioEnum.NONE, "sp": 8,     "next": "", "obsflags": [],               "conditions": []}
 
 
 

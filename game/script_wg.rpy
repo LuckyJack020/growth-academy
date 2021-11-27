@@ -6845,57 +6845,95 @@ label WG034:
     "She looked confused, but only for the briefest second."
     "If I wasn't used to how she always looked confident and put-together I might not have even noticed that brief slip."
     WG "Not today. The concert is tomorrow and I need to get my hair and nails done."
+    MCT "Ah, that’s what's got her distracted."
     show WG happy
-    WG "I know one shouldn't put pleasure before business, but if you look at it from the perspective that, as owner and manager, I represent the company, then my putting on my best face ultimately benefits us all."
+    WG "I know one shouldn't put simple amenities before business matters, but if you look at it from the perspective that, as owner and manager, I represent the company, then putting on my best face ultimately benefits us all."
     MC "You don't have to justify it."
-    MC "The concert's a big deal, you want to look good for it. Nobody would fault you for that."
+    MC "The concert's a big deal and you want to look good for it. Nobody would fault you for that."
     show WG neutral
     WG "Hmm. Yes."
     WG "We can cover this week's business next week, at our next regular meeting."
-    WG "And now I must go. The salon in town doesn't take reservations, and I dread the wait I may be in for."
+    WG "But for now I must go. The salon in town doesn't take reservations, and I dread the wait I may be in for."
     hide WG with dissolve
 
     scene Hallway with fade
     "She hurried out of the classroom, and I moseyed out at my own leisure."
-    "If there was no meeting today I had some time freed up."
+    "Since there was no meeting today, I had some time freed up in my schedule."
     MCT "So what do I do with it?"
-    if getSkill("Academics") < 5:
-        MCT "Take care of my homework? I'm not exactly keeping up with that."
-
+    if getSkill("Academics") < 3:
+        MCT "Hmm, maybe I should take care of my homework? Haven’t exactly been keeping up with that."
         scene Dorm Interior with fade
         "I went back to my room and started on my homework."
-        "There was a lot more than I remembered, and it ended up taking all afternoon and well into the evening."
-        "But at least I had freed up the next night, so I wouldn't miss the concert."
-        jump daymenu
-    MCT "Take care of my homework?{w} Naw. I'm on top of it all, and I should enjoy myself a little."
-    MCT "Go work out? Go to the library and find a book?{w} No, that doesn't really grab me."
+        "There was a lot more than I remembered, so I was glad I made use of the free time to do it."
+        $setSkill("Academics", 1)
+        MCT "Well with that out of the way, I should probably get myself cleaned up for the concert."
+        MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
+        "I ran a brush through my hair real quick, then headed out for a trip into town."
+    elif getSkill("Athletics") < 3:
+        MCT "Hmm, maybe I should hit the gym? Haven’t exactly been keeping up with that. I’m already caught up on my homework."
+        scene Gym with fade
+        "I headed off to the gym and got a full workout in."
+        $setSkill("Athletics", 1)
+        "It felt good to get myself moving. Even if I knew I was going to be sore tomorrow."
+        MCT "Well, I managed to fill the time, but now that I think about it, I should probably get myself cleaned up for the concert."
+        MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
+        scene Lockers with fade
+        "I took a quick shower to rinse off my sweaty funk, then headed out for a trip in town."
+    else:
+        "Come to think of it, I could use this free time to practice. I haven’t been keeping up with it as much as I’d like to ever since I told Alice about how I used to play piano."
+        scene Music Classroom with fade
+        if isEventCleared("WG002M"):
+            play music Pastorale
+            "Despite making a good show of my skills last time I played for Alice, I needed to keep my skills sharp and make sure I wasn’t backsliding."
+            "This song was still fairly difficult, but after getting a good feel of it, I felt pretty good about being able to tackle something a bit more complex."
+            "I got a good practice session in, but still... I had barely managed to kill an hour, and I wasn’t going to do this all day."
+            MCT "Hmm. Now that I think about it, I should probably get myself cleaned up for the concert."
+            MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
+            stop music
+            $setSkill("Art", 1)
+            "I went back to my dorm to drop off my backpack, then I headed off into town."
+        elif isEventCleared("WG001M"):
+            play music SimpleSonata
+            "I practiced for the better part of an hour, working my way up to this sonata. It was still fairly tough for me, but I felt like I was getting better."
+            $setSkill("Art", 1)
+            "But still, I had barely managed to kill an hour, and I wasn’t going to do this all day."
+            MCT "Hmm. Now that I think about it, I should probably get myself cleaned up for the concert."
+            MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
+            stop music
+            "I went back to my dorm to drop off my backpack, then I headed off into town."
+        else:
+            play music MinuetG
+            "I was pretty damn rusty, not gonna lie. But I settled on some simple songs to shake off that rust and get my fingers moving again."
+            "It felt pretty good, but at the same time, it was discouraging to realize how much I had regressed."
+            $setSkill("Art", 1)
+            MCT "Oh well, better now than never, I guess. I’ll be back to my previous level in no time if I keep on top of this."
+            "But still, I had barely managed to kill an hour, and I wasn’t going to do this all day."
+            MCT "Hmm. Now that I think about it, I should probably get myself cleaned up for the concert."
+            MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
+            stop music
+            "I went back to my dorm to drop off my backpack, then I headed off into town."
 
     scene black with fade
-    "As I brushed my hair out of my eyes a thought occurred."
-
-    scene Hallway with fade
-    MCT "I should clean myself up for the concert."
-    MCT "I won't be on stage, but shouldn't I look nice for Alice on a night important to her?"
-    "I went back to my dorm to drop off my backpack, then I headed off for town."
-
+    pause 1
     scene Town with fade
     play music BrightLights
     "When I got to town I had to walk around a bit before I found what I was looking for."
     MCT "Barbershop's by the arcade, and there's a menswear store by the movie theater."
     MCT "There's also a department store across from the cafe. I could probably find something to wear for less money over there..."
     menu:
-        "Get a haircut." if not getFlag("WG034_c1_1"):
-            jump WG034_c1_1
-        "Get a nice suit.":
-            jump WG034_c1_2
-        "Get a suit, but let's not break the bank.":
-            jump WG034_c1_3
+            "Get a haircut.":
+                jump WG034_c1_1
+            "Get a nice suit.":
+                jump WG034_c1_2
+            "Get a suit, but let's not break the bank.":
+                jump WG034_c1_3
 
 label WG034_c1_1:
-    $setFlag("WG034_c1_1")
-    "Of course my hair was going to grow back fast enough to make anything less than a complete shearing redundant, but getting it cut to a normal length meant I wouldn't have to keep brushing it out of my eyes during the concert."
-    "And the price was quite reasonable. Even with a nice tip I still had plenty left in my wallet."
-    if not getFlag("WG034_c1_2") and not getFlag("WG034_c1_3"):
+    $setFlag("Haircut")
+    "I hadn’t really attempted to style my hair ever since it had started growing like crazy when I got here. I mostly just tried to trim it myself in an attempt to keep up with it, for all the good that did."
+    "But I thought getting it cut to a normal length would mean I wouldn't have to keep brushing it out of my eyes during the concert."
+    "And the price was quite reasonable. Even after a nice tip, I still had plenty left in my wallet."
+    if not getFlag("NiceSuit") and not getFlag("CheapSuit") and not getFlag("Slacks"):
         MCT "Still have enough to get a new outfit, if I want."
         menu:
             "Get a nice suit.":
@@ -6910,59 +6948,65 @@ label WG034_c1_1:
 
 label WG034_c1_2:
     $setFlag("WG034_c1_2")
+    scene Clothes Store with fade
     MCT "If I'm going to get dressed up for the concert, I might as well be serious about it."
-    #[A3 merges here.]
     "The menswear store didn't reek of class or money, but it still felt just fancy enough to make me uncomfortable."
     MCT "Glad I took that job for Alice. I don't think I'd be able to buy anything here with the allowance my parents are sending me."
     MCT "Well, maybe a new handkerchief."
     "I took my time looking around the shop, trying to put out of mind how much some of these suits would deplete my savings, focusing instead on what looked best."
     "In the end I was stuck trying to choose between two options."
-    "There was a silver-gray suit that looked as expensive as it actually was. It looked almost too rich even for a private academy like Seichou."
-    "But there was no question it would make an impression, and Alice would certainly recognize luxury like this."
+    "There was a silver-gray suit that looked sharp, but was a little pricey. Part of me thought it was a bit beyond what was called for the occasion."
+    "Then again, there was no question it would make an impression. But I had to wonder if what I considered impressive and expensive would even be a blip on Alice’s radar."
+    "Knowing she was undoubtedly accustomed to settings where suits ten times this price would be considered mundane, it was questionable if it would make the splash I was hoping for."
     "The other choice was a dark blue number that was both more affordable and also a lot more subdued."
     "It didn't look extravagant, but I would look nice enough."
+    "I felt kind of stupid, agonizing over this decision so much, but I really liked Alice and I wanted to impress her. Well, assuming I could. {w}But I also didn’t want it to seem too obvious I was trying to impress her."
+    MCT "Ugh, why is this stuff so hard? Which one should I pick?"
     menu:
         "The expensive suit.":
-            $setFlag("WG034_c2_1")
-            "I paid for the suit, which drained most of my wallet but, pleasantly, not all of it."
+            $setFlag("NiceSuit")
+            "I paid for the suit, which drained most of my wallet, but pleasantly, not all of it."
         "The moderate suit.":
-            $setFlag("WG034_c2_2")
+            $setFlag("CheapSuit")
             "I still had a tidy sum in my wallet after buying the suit."
         "You know what? Maybe I should check the department store instead." if not getFlag("WG034_c1_3"):
             MCT "I don't have to buy something at the first store I go to, do I?"
+            scene Town with fade
             jump WG034_c1_3
-    if not getFlag("WG034_c1_1") and not getFlag("WG034_c1_3"):
-        MCT "Still have enough to get a haircut. Or maybe there's an accessory I can find at the department store. Something to compliment the suit."
+    if not getFlag("Haircut") and not getFlag("WG034_c1_3"):
+        MCT "Still have enough to get a haircut if I want to."
         menu:
             "Get a haircut.":
+                scene Town with fade
                 jump WG034_c1_1
-            "Get a suit, but let's not break the bank.":
-                jump WG034_c1_3
             "That's enough for today. I should get back to campus.":
                 jump WG034_c1_after
     else:
-        MCT "I should be getting back to the school."
+        MCT "I should be getting back to school."
         jump WG034_c1_after
 
 label WG034_c1_3:
     #if you did not go to the fancy store before
     if not getFlag("WG034_c1_2"):
-        "Maybe I come across as miserly for heading to the department store first, but I could always claim frugality as a virtue, right?"
+        "Maybe I come across as cheap for heading to the department store first, but I could always claim frugality as a virtue, right?"
+        "As rich as she was, Alice wasn’t the kind to throw around money just because. A little financial prudence could go a long way with her. {w}At least that’s what I told myself."
         "And the store wasn't cheap or anything. There was a nice selection of polos and khakis and sports coats."
         "A fair selection of outfits for a night out, budgeted for most people's bank accounts."
         "It was all fine. Perfectly fine."
-        "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable but not overdressed."
+        "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable, but not overdressed."
         MCT "But do I want to settle for 'presentable'?"
+        MCT "Then again, being over–dressed could make me stick out in the wrong way."
+        MCT "Ugh, I hate overthinking this stuff, but I want to make a good impression."
         menu:
             "I should check out the menswear store before making a choice.":
                 "While the slacks and sweater looked fine, they didn't scream at me 'This is THE outfit.'"
-                "I put them back on the rack and headed to menswear store. It would probably be pricier, but I had a good feeling I'd be more satisfied with what I found there."
+                "I put them back on the rack and headed to the menswear store. It would probably be pricier, but I had a good feeling I'd be more satisfied with what I found there."
                 jump WG034_c1_2
             "'Presentable' is fine. I'm not the one who'll be on stage anyway.":
-                $setFlag("WG034_c1_3")
+                $setFlag("Slacks")
                 MCT "It's not about me. I shouldn't be trying to draw attention to myself."
                 "I bought the 'presentable' outfit, my wallet still nice and fat afterwards."
-                if not getFlag("WG034_c1_1"):
+                if not getFlag("Haircut"):
                     MC "Still have enough to get a haircut, if I want."
                     menu:
                         "Get a haircut.":
@@ -6970,342 +7014,156 @@ label WG034_c1_3:
                         "That's enough for today. I should get back to campus.":
                             jump WG034_c1_after
                 else:
-                    MCT "I should be getting back to the school."
+                    MCT "I should be getting back to school."
                     jump WG034_c1_after
     #if you went to the fancy store and declined the suits
-    if getFlag("WG034_c1_2") and not getFlag("WG034_c2_1") and not getFlag("WG034_c2_2"):
+    if getFlag("WG034_c1_2") and not getFlag("NiceSuit") and not getFlag("CheapSuit"):
         "Oh yes, this was all much more affordable."
         "And not in a cheap way. The slacks and jackets and shirts were all fashionable enough, to my admittedly non-fashionista eyes."
-        "If you wanted to blind someone with haute couture this wasn't the place to come to, but to the average person one would come out looking sharp."
+        "If you wanted to blind someone with your extravagant taste, this wasn't the place to come to, but to the average person, one would come out looking sharp."
         "I found a nice pair of gray slacks and a burgundy sweater. If I wore a collared shirt under it I would be presentable but not overdressed."
         MCT "But do I want to settle for 'presentable'?"
+        MCT "Then again, being over–dressed could make me stick out in the wrong way."
+        MCT "Ugh, I hate overthinking this stuff, but I want to make a good impression."
         menu:
             "I'm going back to the menswear store.":
-                MCT "Simply being there for Alice might seem like enough, but if she's getting made up for the concert I should got the extra mile myself."
+                MCT "Simply being there for Alice might seem like enough, but if she's getting made up for the concert I should go the extra mile myself."
+                scene black with fade
+                pause .5
+                scene Clothes Store with fade
                 "I walked back to the menswear store and found the two suits I had been considering before."
-                #[Player choice A2/B2/C2 repeats, with C2 greyed out.]
-            "'Presentable' is fine. I'm not the one who'll be on stage anyway.":
-                MCT "It's not about me. I shouldn't be trying to draw attention to myself."
-                "I bought the 'presentable' outfit, my wallet still nice and fat afterwards."
-                if not getFlag("WG034_c1_1"):
+                MCT "Okay, we got the fancy silver-gray suit that looks really sharp. It’s a bit too steep, but I can still swing it."
+                MCT "And then we got the dark blue suit that’s significantly cheaper, but can still probably get the job done. At least I think..."
+                MCT "Alright, time to make a choice. I’m not making another trip back to the department store."
+                menu:
+                    "The expensive suit.":
+                        $setFlag("NiceSuit")
+                        "I paid for the suit, which drained most of my wallet, but pleasantly, not all of it."
+                    "The moderate suit.":
+                        $setFlag("CheapSuit")
+                        "I still had a tidy sum in my wallet after buying the suit."
+                if not getFlag("Haircut"):
                     MC "Still have enough to get a haircut, if I want."
                     menu:
                         "Get a haircut.":
+                            scene Town with fade
+                            jump WG034_c1_1
+                        "That's enough for today. I should get back to campus.":
+                            jump WG034_c1_after
+                else:
+                    MCT "I should be getting back to school."
+                    jump WG034_c1_after
+
+                #[Player choice A2/B2/C2 repeats, with C2 greyed out.]
+            "'Presentable' is fine. I'm not the one who'll be on stage anyway.":
+                $setFlag("Slacks")
+                MCT "It's not about me. I shouldn't be trying to draw attention to myself."
+                "I bought the 'presentable' outfit, my wallet still nice and fat afterwards."
+                if not getFlag("Haircut"):
+                    MC "Still have enough to get a haircut, if I want."
+                    menu:
+                        "Get a haircut.":
+                            scene Town with fade
                             jump WG034_c1_1
                         "That's enough for today. I should get back to campus.":
                             jump WG034_c1_after
                 else:
                     MCT "I should be getting back to the school."
                     jump WG034_c1_after
-    #if you already have a suit
-    else:
-        "I didn't bother looking at any of the suits or anything. I was already set on that front."
-        "But there was a nice selection of hats and gloves and even canes. Accessories for the dapper gentleman enjoying a night out."
-        "There was one pair of gloves that I liked, even if I had doubts about my own sense of fashion. Would they, along with my suit, be too much?"
-        "As I reached the edge of the men's section of the salesfloor, I noticed a display of female mannequin heads on a counter."
-        "There were necklaces and pendants on display, but something else caught my eye. A blue choker."
-        "I don't know why, but it made me think of Alice. Think that it might go with her dress for the concert."
-        "Assuming they were going with the school colors for their outfits..."
-        "But checking the price, then checking my wallet, I saw this was an either/or choice."
-        "Either I got the gloves, or the choker."
-        "Or neither, of course. That was always an option."
-        menu:
-            "Buy the gloves.":
-                $setFlag("WG034_c3_1")
-                MCT "Alice no doubt has a nice selection of jewelry and accessories already. She probably has her look for the concert picked out by now."
-                "I bought the gloves, feeling okay with my purchase but just that. Okay."
-                jump WG034_c1_after
-            "Buy the choker.":
-                $setFlag("WG034_c3_2")
-                MC "Alice no doubt has a nice selection of jewelry and accessories already, but that doesn't mean she wouldn't like a gift like this."
-                "I bought the choker, wondering if I was going too fast."
-                "We'd only had one date so far..."
-                MCT "Nah, it's fine."
-                MCT "I want to do something nice for her. Why overthink it?"
-                jump WG034_c1_after
-            "Get neither.":
-                "Thinking about it, I decided neither the gloves nor the choker really jumped out to me as a 'must buy.'"
-                MCT "Just because I have money doesn't mean I have to spend it, do I?"
-                jump WG034_c1_after
 
 label WG034_c1_after:
     "Checking my watch, I saw it was later than I expected. Time to head back."
-
-    scene School Front with fade
-    "As I reached the school grounds I saw a familiar face."
-    MC "Hey, Alice! Coming back from getting your hair done?"
+    $setTime(TimeEnum.EVE)
+    play music Sunset
+    scene Campus Center with fade
+    "As I reached the school grounds, I saw a familiar face."
     show WG happy with dissolve
-    WG "Ah, Keisuke."
-    WG "Yes. The wait was not as terrible as I feared. I was able to get my hair and nails done, and do some shopping as well."
-    WG "I found the perfect shade of lipstick for tomorrow night."
-    MC "Oh? That's good."
-    if getFlag("WG034_c1_1") and getFlag("WG034_c2_1"):
-        MC "Yeah, I decided to get a haircut as well. Want to look nice myself for tomorrow."
-        show WG sad
-        "Alice looked at me, tilting her head to the left, then the right."
-        WG "I guess I didn't notice, but yes... Your hair is shorter."
-        show WG neutral
-        WG "It's still a bit... untamed."
-        MC "Yeah, I'm going to style it tomorrow. Get it under control."
-        MC "I also got a suit to wear. Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        show WG happy
-        "Alice's mood perked up when I mentioned buying a suit, though as I opened up my bag and pulled it her face drooped a little."
-        show WG sad
-        WG "That's... rather extravagant."
-        MC "It was a bit pricey, yeah."
-        WG "How much did it cost?"
-        "When I gave her the price she almost winced."
-        WG "Oh, no. That's too much."
-        WG "The suit itself is too much for the concert. That's for something like meeting a foreign dignitary."
-        MC "Well, I... I wanted to look nice for your big night."
-        WG "I appreciate that, but..."
-        WG "It's always possible to overdress for an occasion."
-        MC "I guess."
-        MC "Probably too late to return it today. At least I have the receipt."
-        "I sighed."
-        WG "I've got to go. I'll see you tomorrow."
-        MC "Yeah. Tomorrow."
-
-        scene Dorm Interior with fade
-        "I went back to my dorm, hiding out there for the rest of the night."
-        "I had overdone it, that was obvious."
-        "I hadn't thought it would be possible to spend too much for someone like Alice. Guess I learned something there."
-        "And she hadn't even noticed my haircut."
-        jump daymenu
-    if getFlag("WG034_c1_1") and getFlag("WG034_c2_2"):
-        MC "Yeah, I decided to get a haircut as well. Want to look nice myself for tomorrow."
-        show WG sad
-        "Alice looked at me, tilting her head to the left, then the right."
-        WG "I guess I didn't notice, but yes... Your hair is shorter."
-        show WG neutral
-        WG "It's still a bit... untamed."
-        MC "Yeah, I'm going to style it tomorrow. Get it under control."
-        MC "I also got a suit to wear. Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        show WG happy
-        "As I pulled the suit out of the bag I was worried that Alice would give me a polite 'Oh, that's nice' response."
-        WG "Oh, that's nice."
-        "That's not what I mean. She was being sincere."
-        MC "There was a more expensive suit there, but I think it was way too fancy for a school concert."
-        MC "I felt this was more appropriate for the occasion."
+    MC "Hey, Alice! Coming back from getting your hair done?"
+    if getFlag("Haircut"):
+        show WG surprised-2
+        WG "Keisuke? Is that you? I honestly didn’t recognize you at first with your hair trimmed back."
+        MC "Is it that different? I just got a little trim."
+        WG "Well, I can see your eyes for one thing."
+        show WG neutral-2
+        extend " I didn’t realize they were green until now."
+        MC "Heh, yeah... I tried to get it nice and trimmed up for your concert tomorrow, to match the occasion."
         $setAffection("WG", 1)
-        WG "No, it looks perfect."
-        WG "You're going to look quite sharp tomorrow."
-        MC "Thanks."
-        MC "Hey, did you have dinner yet? I was going to grab something from the cafeteria."
-        WG "That sounds splendid."
+        show WG aroused
+        WG "Well it was certainly worth the effort. The trimmed and clean look certainly suits you."
+        show WG happy
+        WG "The wild tangled mess you usually sport doesn’t quite hit the mark."
+        MC "Hey now..."
+    else:
+        WG "Ah, hello there, Keisuke."
+        WG "Yes. The wait was not as terrible as I feared it might be. I was able to get my hair and nails done, and do some shopping as well."
+        show WG happy
+        WG "What do you think?"
+        "Alice flicked a lock of her hair as she turned her head to the side, showing off her results of her stylist appointment."
+        "Admittedly, I didn’t notice too much of a difference from her usual hairdo. She always looked pretty well put together to me. I guess it was slightly more trimmed up than usual?"
+        "I couldn’t really say, so I just smiled and nodded."
+        MC "Yeah! It looks great!"
+    WG "Oh! And I found the perfect shade of lipstick for tomorrow night."
+    MC "Oh? That's good. Something that goes a bit better with your dress, I take it?"
+    WG "Exactly."
+    if getFlag("NiceSuit") or getFlag("CheapSuit"):
+        MC "I also got a suit to wear. Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
+        show WG surprised-2
+        WG "Is that so?"
+        show WG neutral-2
+        WG "Mind if I see?"
+        "I seemed to have piqued Alice’s interest once I mentioned the suit. Maybe it was the right call?"
+        "I pulled the suit out of the bag by the suit hanger, letting it drap flat so she could get a good view."
+        if getFlag("NiceSuit"):
+            show WG happy
+            $setAffection("WG", 1)
+            WG "My, my, very nice, Keisuke. That looks sharp. You have a pretty good sense of fashion— for a guy anyway."
+            MCT "I’ll take that as a compliment."
+            MC "Thanks. Glad you like it."
+            MC "Say, uh, did you have dinner yet? I was going to grab something from the cafeteria. After dropping this off at my room."
+            WG "That sounds splendid."
+            scene black with fade
+            pause .5
+            scene Cafeteria with fade
+            "So we grabbed dinner together. It wasn’t really a date, but I was feeling pretty good about not cheaping out over the suit."
+            "Alice for her part seemed like she was looking forward to the concert and I think I scored a few points for showing her that I thought it was important too."
+            "I'll call that a win."
+            jump daymenu
 
-        scene black with fade
-        "So we grabbed dinner together."
-        "She hadn't noticed my haircut, I guess that was a waste, but she did like the suit I had picked out."
-        "I'll call that a win."
-        jump daymenu
-    if getFlag("WG034_c1_1") and getFlag("WG034_c1_3"):
-        MC "Yeah, I decided to get a haircut as well. Want to look nice myself for tomorrow."
-        show WG sad
-        "Alice looked at me, tilting her head to the left, then the right."
-        WG "I guess I didn't notice, but yes... Your hair is shorter."
-        show WG neutral
-        WG "It's still a bit... untamed."
-        MC "Yeah, I'm going to style it tomorrow. Get it under control."
+        elif getFlag("CheapSuit"):
+            show WG happy
+            $setAffection("WG", 1)
+            WG "Ooo, very nice, Keisuke. I like the color. You have a pretty good sense of fashion— for a guy anyway."
+            MCT "I’ll take that as a compliment."
+            MC "Thanks. Glad you like it."
+            MC "Say, uh did you have dinner yet? I was going to grab something from the cafeteria. After dropping this off at my room."
+            WG "That sounds splendid."
+            scene black with fade
+            pause .5
+            scene Cafeteria with fade
+            "So we grabbed dinner together. It wasn’t really a date, but I was feeling pretty good about not cheaping out too much and actually getting a suit. Didn’t need anything too fancy, just something sharp."
+            "Alice for her part seemed like she was looking forward to the concert and I think I scored a few points for showing her that I thought it was important too."
+            "I'll call that a win."
+            jump daymenu
+
+    elif getFlag("Slacks"):
         MC "I was also buying an outfit for tomorrow. Nothing special, I just wanted to look presentable for your big night."
         show WG happy
         "Alice's mood perked up when I said this."
         "But as I pulled the slacks and sweater out of the bag I was worried that she would give me a polite 'Oh, that's nice' response."
         WG "Oh, that's... nice."
-        MCT "She hates it."
+        MCT "Uggghhh, the Kiss of Death."
         show WG neutral
         WG "You'll look good tomorrow."
-        MC "I just wanted a change of pace from my school uniform."
-        WG "Yeah, no. It's nice."
-        WG "I have to go. I'll see you tomorrow."
-        MC "Yep. Tomorrow."
-
+        MC "I just thought the occasion called for something a bit more than my school uniform."
+        WG "That’s a good call."
+        WG "Well, it was nice running into you again, Keisuke, but I have to go now. I'll see you tomorrow."
+        MC "Yep. Tomorrow. I’ll be there."
         scene Dorm Interior with fade
-        "Making my way back to my dorm, I felt like I hadn't done enough."
-        "I don't think Alice was offended or anything by my choice, but she was clearly unimpressed."
-        "And now it was too late to go back to town and find a nice outfit for tomorrow."
-        "And she hadn't even noticed my haircut."
-        "Should have gone that extra mile."
+        "Making my way back to my dorm, I was kicking myself for being so cheap."
+        "I was probably reading too much into her reaction and she probably didn’t think it was as bad as I was imagining. But it was clear that my sweater and slacks combo I picked out had failed to impress."
+        "That, and it was too late to go back to town and find a nicer outfit for tomorrow."
+        "Oh well, wasn’t a huge blunder, but a missed opportunity nonetheless. But the more important thing was going to be showing up for her big night, so at least I had that going for me."
         jump daymenu
-    if getFlag("WG034_c2_1") and getFlag("WG034_c3_2"):
-        MC "I'm coming back from town myself. Was buying a suit for tomorrow."
-        MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        "As I opened up my bag and pulled out the suit Alice's face drooped a little."
-        show WG sad
-        WG "That's... rather extravagant."
-        MC "It was a bit pricey, yeah."
-        WG "How much did it cost?"
-        "When I gave her the price she almost winced."
-        WG "Oh, no. That's too much."
-        WG "The suit itself is too much for the concert. That's for something like meeting a foreign dignitary."
-        MC "Well, I... I wanted to look nice for your big night."
-        WG "I appreciate that, but..."
-        WG "It's always possible to overdress for an occasion."
-        MC "I guess."
-        MC "Probably too late to return it today. At least I have the receipt."
-        "I sighed."
-        WG "I've got to go. I'll see you tomorrow."
-        MC "Wait. Before you go, I also bought this."
-        "I reached into the bag and fished out the choker."
-        show WG neutral
-        WG "Oh! This is nice."
-        MC "If your music club is anything like at my old school you're all wearing the same outfit, but you can still stand out with the right accessory."
-        MC "That's what I was thinking, at least."
-        $setAffection("WG", 1)
-        WG "Thank you."
-        WG "You shouldn't have spent so much for that suit, but I appreciate this."
-        WG "I'll wear it tomorrow night."
-        WG "I have to go take care of some stuff right now, but I'll see you tomorrow."
-        MC "Sure. Looking forward to it."
-
-        scene Dorm Interior with fade
-        "I went back to my dorm, feeling neither great nor terrible."
-        "Clearly I had overdone with the suit. Apparently it is possible to spend too much with someone like Alice."
-        "But she liked the choker, so that had to be worth something. Even if only to offset my mistake with the suit."
-        "Call it a draw, I guess?"
-        jump daymenu
-    if getFlag("WG034_c2_2") and getFlag("WG034_c3_1"):
-        MC "I'm coming back from town myself. Was buying a suit for tomorrow."
-        MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        "As I pulled the suit out of the bag I was worried that Alice would give me a polite 'Oh, that's nice' response."
-        show WG happy
-        WG "Oh, that's nice."
-        "That's not what I mean. She was being sincere."
-        MC "There was a more expensive suit there, but I think it was way too fancy for a school concert."
-        MC "I felt this was more appropriate for the occasion."
-        $setAffection("WG", 1)
-        WG "No, it looks perfect."
-        WG "You're going to look quite sharp tomorrow."
-        MC "Thanks. I also bought these gloves to go with it. Do you think they're too much?"
-        "Alice winced a little when she saw them."
-        show WG neutral
-        WG "I would say those are for a more elegant occasion."
-        MC "I guess you're right."
-        MC "Hey, did you have dinner yet? I was going to grab something from the cafeteria."
-        show WG happy
-        WG "That sounds splendid."
-
-        scene black with fade
-        "So we grabbed dinner together."
-        "Alice again complimented the suit I had picked, but I could tell the gloves were too much."
-        "Still, I'll call that a win."
-        jump daymenu
-    if getFlag("WG034_c2_2") and getFlag("WG034_c3_2"):
-        MC "I'm coming back from town myself. Was buying a suit for tomorrow."
-        MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        "As I pulled the suit out of the bag I was worried that Alice would give me a polite 'Oh, that's nice' response."
-        show WG happy
-        WG "Oh, that's nice."
-        "That's not what I mean. She was being sincere."
-        MC "There was a more expensive suit there, but I think it was way too fancy for a school concert."
-        MC "I felt this was more appropriate for the occasion."
-        $setAffection("WG", 1)
-        WG "No, it looks perfect."
-        WG "You're going to look quite sharp tomorrow."
-        MC "Thanks. I also bought this."
-        "I reached into the bag and fished out the choker."
-        WG "Oh! This is beautiful."
-        MC "If your music club is anything like at my old school you're all wearing the same outfit, but you can still stand out with the right accessory."
-        MC "That's what I was thinking, at least."
-        $setAffection("WG", 1)
-        WG "I love it. I'll wear it tomorrow night."
-        MC "Hey, did you have dinner yet? I was going to grab something from the cafeteria."
-        WG "That sounds splendid."
-
-        scene black with fade
-        "So we grabbed dinner together."
-        "I could tell she loved the choker, and she seemed to like the suit I had picked out."
-        "I was feeling pretty pleased with myself"
-        "It's not every day you can impress a cultured woman with your own sense of style."
-        jump daymenu
-    if getFlag("WG034_c2_1"):
-        MC "I'm coming back from town myself. Was buying a suit for tomorrow."
-        MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        "As I opened up my bag and pulled out the suit Alice's face drooped a little."
-        show WG sad
-        WG "That's... rather extravagant."
-        MC "It was a bit pricey, yeah."
-        WG "How much did it cost?"
-        "When I gave her the price she almost winced."
-        WG "Oh, no. That's too much."
-        WG "The suit itself is too much for the concert. That's for something like meeting a foreign dignitary."
-        MC "Well, I... I wanted to look nice for your big night."
-        WG "I appreciate that, but..."
-        WG "It's always possible to overdress for an occasion."
-        MC "I guess."
-        MC "Probably too late to return it today. At least I have the receipt."
-        "I sighed."
-        WG "I've got to go. I'll see you tomorrow."
-        MC "Yeah. Tomorrow."
-        if getFlag("WG034_c3_1"):
-            "No way did I want to stop her with 'Oh, I also bought these gloves, just to be even more wasteful.'"
-
-        scene Dorm Interior with fade
-        "I went back to my dorm, hiding out there for the rest of the night."
-        "I had overdone it, that was obvious."
-        "I hadn't thought it would be possible to spend too much for someone like Alice. Guess I learned something there."
-        jump daymenu
-    if getFlag("WG034_c2_2"):
-        MC "I'm coming back from town myself. Was buying a suit for tomorrow."
-        MC "Maybe it's too much for a school concert, but I figured 'Hey, it's a big night for you. I should look nice myself.'"
-        "As I pulled the suit out of the bag I was worried that Alice would give me a polite 'Oh, that's nice' response."
-        show WG happy
-        WG "Oh, that's nice."
-        "That's not what I mean. She was being sincere."
-        MC "There was a more expensive suit there, but I think it was way too fancy for a school concert."
-        MC "I felt this was more appropriate for the occasion."
-        $setAffection("WG", 1)
-        WG "No, it looks perfect."
-        WG "You're going to look quite sharp tomorrow."
-        MC "Thanks."
-        MC "Hey, did you have dinner yet? I was going to grab something from the cafeteria."
-        WG "That sounds splendid."
-
-        scene black with fade
-        "So we grabbed dinner together."
-        #"She hadn't noticed my haircut, I guess that was a waste, but she did like the suit I had picked out."
-        "I'll call that a win."
-        jump daymenu
-    if getFlag("WG034_c1_3"):
-        MC "I'm coming back from town myself. Was buying an outfit for tomorrow."
-        MC "Nothing special, I just wanted to look presentable for your big night."
-        "As I pulled the slacks and sweater out of the bag I was worried that Alice would give me a polite 'Oh, that's nice' response."
-        show WG happy
-        WG "Oh, that's... nice."
-        MCT "She hates it."
-        show WG neutral
-        WG "You'll look good tomorrow."
-        MC "I just wanted a change of pace from my school uniform."
-        WG "Yeah, no. It's nice."
-        WG "I have to go. I'll see you tomorrow."
-        MC "Yep. Tomorrow."
-        scene Dorm Interior with fade
-        "Making my way back to my dorm, I felt like I hadn't done enough."
-        "I don't think Alice was offended or anything by my choice, but she was clearly unimpressed."
-        "And now it was too late to go back to town and find a nice outfit for tomorrow."
-        "Should have gone that extra mile."
-        jump daymenu
-    if getFlag("WG034_c1_1"):
-        MC "Yeah, I decided to get a haircut as well. Want to look nice myself for tomorrow."
-        show WG sad
-        "Alice looked at me, tilting her head to the left, then the right."
-        WG "I guess I didn't notice, but yes... Your hair is shorter."
-        show WG neutral
-        WG "It's still a bit... untamed."
-        MC "Yeah, I'm going to style it tomorrow. Get it under control."
-        "Suddenly nervous, I coughed, then said"
-        MC "Well, I need to go take care of my homework. See you tomorrow."
-        show WG happy
-        WG "Yes. Au demain."
-        hide WG with dissolve
-
-        scene Dorm Interior with fade
-        "Making my way back to my dorm, I immediately regretted thinking a simple haircut would be impressive."
-        "And now it was too late to go back to town and find a nice outfit for tomorrow."
-        "Should have gone that extra mile."
-        jump daymenu
-    "You shouldn't see this message. Please post a report with the choices you picked if you do."
-    jump daymenu
 
 label WG035:
     $setProgress("WG", "WG036")
