@@ -4392,6 +4392,7 @@ label FMG030_c1_2:
 label FMG031:
     $setProgress("FMG", "FMG032")
     $setTime(TimeEnum.EVE)
+    play music FMG
     scene Lockers with fade
     MC "Aagh... Hot damn, that was a brutal workout. I can hardly even feel my arms..."
     show FMG happy
@@ -4412,7 +4413,7 @@ label FMG031:
     FMG "I wouldn’t have it any other way. You can always count on me!"
     "She pauses for a moment, looking around as if trying to word something in her head."
     FMG "So... uh..."
-    FMG: "...Sorry to spring this on you on such short notice, but are you doing anything after we finish up here?"
+    FMG "...Sorry to spring this on you on such short notice, but are you doing anything after we finish up here?"
     MC "Nah, I don’t think so. I’m pretty sure I did all my homework. Why?"
     "She just kept making eye contact."
     FMG "I’m curious."
@@ -4426,14 +4427,17 @@ label FMG031:
     show FMG sad
     FMG "Man, guys take forever... The hell do you even do in there?!"
     MCT  "Well, {i}sorry{/i} for wanting to have some semblance of hygiene!"
-    scene roof_eve
+    scene black with fade
+    pause 1
+
+    scene Roof with fade
     "Akira took me up to the rooftop, pushing open the heavy door with ease. The two of us walked out, and I watched as she took a deep breath."
-    show FMG neutral
+    show FMG neutral with dissolve
     FMG "Ahh... Nothing beats coming up here for a little peace and quiet. Seriously, I could get lost in looking at the sunset."
     MC "Wooow, it’s gorgeous... heh, just like you."
     show FMG flex
     FMG "I know, you bozo. When am I not?"
-    Aff +1
+    $setAffection("FMG", 1)
     MC "Humble as always, aren’t you?"
     "The two of us laughed happily, but soon Akira fell quiet. She seemed... rather troubled despite even though she was fine just seconds ago."
     MC "Soooo, what are you-"
@@ -4447,10 +4451,10 @@ label FMG031:
     FMG "I don’t know what to do. I go to the gym and spend time with you and it’s so great and fun... {i}sigh{/i}"
     "She took a moment before taking a seat, in which I immediately followed."
     MC "Before I get serious, I love spending time with you, it’s always something new with you, it’s amazing. Take some time to collect your thoughts and tell me when you’re ready."
-    Show FMG neutral
+    show FMG neutral
     FMG "Yeah, you got it. Thank you, Kei."
     MC "No probs, it’s important to look out for each other."
-    Pause 1
+    pause 1
     FMG "Okay, I’m ready."
     MC "Sweet, let me start it off. *ahem* Mizutani-san, what is your motivation?"
     FMG "Weird way to start it off but alright."
@@ -4459,19 +4463,21 @@ label FMG031:
     FMG "I... I want to be strong. I want to be the strongest, to improve myself every chance I get!"
     MC "Why’s that? Would you mind elaborating?"
     FMG "Uuuuuh, sure..."
-    Pause .5
+    pause 0.5
     show FMG sad-2
     FMG "A-Actually... I’d rather not. If that’s okay. It’s personal. I’ll explain the school side of it."
     MC "Whatever works for you. Tell me what you feel comfortable with."
-    Pause .5
+    pause 0.5
     show FMG neutral
-    FMG "In gym class, I hear lots of people celebrating a new lifting record, or a new 100m record. Those kinds of things to me... are nothing. I can do all of that stuff with so little effort. And...  I think it’s making me question what the point of "challenging" myself is now."
+    FMG "In gym class, I hear lots of people celebrating a new lifting record, or a new 100m record. Those kinds of things to me... are nothing."
+    FMG "I can do all of that stuff with so little effort. And...  I think it’s making me question what the point of \"challenging\" myself is now."
     MCT "Huh... I didn’t think that’s what she’d say. You learn something new every day."
-    MC: "Hm, well, how about a non-physical challenge?"
+    MC "Hm, well, how about a non-physical challenge?"
     FMG "Huh? What do you mean? I do fine in classes."
     MC "Well, not that kind of challenge. For me, I challenge myself not just to do my best, but to be my best as well. {w}I know, crazy coming from me."
-    FMG "Being your best... Hmm, I feel like I’m always at my best though, I’m not trying to brag or anything like that. What do you mean??
-    MC " I’ve got my family, my friends... so many people who are supportive of me in my life. They’re all wonderful, and I love them. They bring so much to my life, so I can’t help but feel driven to always try and give the same in return... If that makes sense."
+    FMG "Being your best... Hmm, I feel like I’m always at my best though, I’m not trying to brag or anything like that. What do you mean??"
+    MC "I’ve got my family, my friends... so many people who are supportive of me in my life. They’re all wonderful, and I love them."
+    MC "They bring so much to my life, so I can’t help but feel driven to always try and give the same in return... If that makes sense."
     show FMG aroused-2
     FMG "W-well, when you put it that way..."
     MC "You have to have {i}someone{/i} that’s like that to you, don’t you?"
@@ -4490,7 +4496,7 @@ label FMG031:
     FMG "Sorry, I think about this a lot. It helps to have you with me so I can let it all out and get a different perspective."
     MC "Whenever you need me, give me a call. Not when I’m sleeping though, you’ll have to wait."
     FMG "I’ll keep that in mind, Kei-kun."
-    Aff +2
+    $setAffection("FMG", 2)
     MC "It hurts being this inspirational. But I do what I must."
     FMG "Humble as always, aren’t you?"
     "I flexed my arms confidently. Showing off my tremendous gains from the gym."
@@ -4498,26 +4504,28 @@ label FMG031:
     FMG "Don’t do that. You’ll embarrass yourself."
     show FMG happy
     FMG  "Jeez, man, all this motivational talk got me hungry. What about you? Ready for a post-workout meal?"
-    MC"Yeah, I’m starving. I’m feeling the usual. What about you?"
+    MC "Yeah, I’m starving. I’m feeling the usual. What about you?"
     FMG "Burger and fries?"
     MC "Burger and fries."
     FMG "NOW you’re speaking my language!"
     show FMG flex
-    FMG "Race ya to the dining hall!" ?"
+    FMG "Race ya to the dining hall!?"
     MC  "Alright, alright. Just this once. But I want a head start."
     FMG "Hm, let me think about that..."
-    Pause .5
+    pause 0.5
     FMG "Readysetgo!"
-    fade FMG
+    hide FMG with dissolve
     MCT "Why am I not surprised..."
-    "MC "Hey! You know that’s cheating!"
-    fade to black
-    scene campuscenter_eve
-    MC "Agh... haah... Holy hell, you’ve gotten faster... again."
-    MC: "I suppose that’s not surprising... But at least... haah... let me catch my breath..."
-    show FMG neutral
+    MC "Hey! You know that’s cheating!"
+    scene black with fade
+    pause 1
+
+    scene Campus Center with fade
+    MC "Agh... haah...{w} Holy hell, you’ve gotten faster...{w} again."
+    MC "I suppose that’s not surprising... But at least...{w} haah... let me catch my breath..."
+    show FMG neutral with dissolve
     FMG "Take your time. You caught up pretty quick, I’m impressed. Great job."
-    pause .5
+    pause 0.5
     FMG "...You feeling better now?"
     MC "????"
     MC "That was like twenty seconds. No, I am not feeling better."
@@ -4525,7 +4533,7 @@ label FMG031:
     MC "I’m coming, jeez."
     MCT "I help her with her problems and this is my reward... Pain and suffering."
     "I got up from kneeling, stretching myself out before I realized that Akira was already jogging away."
-    fade FMG
+    hide FMG with dissolve
     MCT "Of course."
     MC "Hey! What about your water bottle?! I don’t want this!"
     FMG "Toss it in your gym bag and start running!"
