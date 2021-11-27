@@ -1891,7 +1891,7 @@ label WG001M:
     pause 2
     "Nice and easy. I could get lost in this one for quite a while,{w} but to be honest it was a bit too easy."
     play sound Knock
-    stop music
+    stop music fadeout 2.0
     play music Peaceful
     "I was startled to hear a knock on the door, but was pleasantly surprised to see through the narrow window Alice smiling and giving me a wave before I gestured her to come into the room."
     show WG happy with dissolve
@@ -1937,7 +1937,7 @@ label WG001M:
     pause 5
     "I tried not to think about it too much out of fear of losing the feeling, just trying to live in the moment."
     pause 10
-    stop music
+    stop music fadeout 2.0
     MC "How was that?"
     play music Peaceful
     $setAffection("WG", 1)
@@ -3958,7 +3958,7 @@ label WG002M:
     $setTime(TimeEnum.EVE)
     scene Music Classroom with fade
     pause 0.5
-    stop music
+    stop music fadeout 2.0
     $setSkill("Art", 1)
     MCT "Well, that’s enough for today."
     play music Peaceful
@@ -4023,7 +4023,7 @@ label WG002M:
     WG "And it appears to have paid off. I don’t think you’ll be filling concert halls any time soon, but your proficiency for this song is certainly presentable."
     "Alice wasn’t one to gush with praise just to bolster someone’s ego. It wasn’t a masterful performance by any means, but it made me feel good to know she genuinely appreciated my efforts."
     MC "Why thank you."
-    stop music
+    stop music fadeout 2.0
     MC "That’s all I got."
     play music Peaceful
     show WG neutral-2
@@ -17585,6 +17585,536 @@ label WG064:
     Natsuko "Hmm?"
     show WG neutral
     WG "Ignore that. She’s new."
+    jump daymenu
+
+label WG065:
+    play music DayByDay
+    scene Dorm Interior with fade
+    "It was a nice day outside, and I was caught up on all my class work. As tempting as it was to go out and enjoy the fresh autumn air, I knew that wasn’t about to happen."
+    "I booted up my laptop in anticipation of an all night Dungeons of Dwemer binge. It had been too long since I got in a long gaming session like I used to."
+    "Between classes, working for Alice, and spending time with Alice, my typical past-time had fallen by the wayside."
+    "My dad told me someday I’d grow out of this crap, but I never believed him until I realized how often I was letting it slip to make time for other things."
+    MCT "Maybe someday, but not today."
+    "Once the game finally loaded in, after what seemed like forever, I started considering Alice’s earlier offer about getting a better laptop when I heard my phone buzz."
+    "{i}*bzzt bzzt*{/i}"
+    MCT "Ugh, who is it now? I’m busy!"
+    WGCell "<Aida and Sakura are testing out some desserts in the cooking room. They need taste testers. They asked me if you’d like to come.>"
+    "Seeing it was a text from Alice, my soured mood from being interrupted had considerably softened. Still though, I wasn’t so keen on this wrench in my plans, even if free food was up for grabs."
+    menu:
+        "Sure, I’m not too busy.":
+            MCCell "<Sure, I’m not too busy. I’ll be right down.>"
+            $setAffection("WG", 1)
+            WGCell "<Great! Sorry to spring this on you at the last minute, but I’m sure they’ll appreciate the help.>"
+        "I’m a little busy.":
+            MCCell "<I’m a little busy right now. Is it important?>"
+            WGCell "<They are asking about you. But I’m telling you. Get your butt down here and help them out.>"
+            MCT "!"
+            MCCell "<Say no more, I’m on my way.>"
+    MC "{i}Ugghh{/i}, guess I have to do the responsible thing and be social instead."
+    scene black with fade
+    pause 1
+    scene Cooking Classroom with fade
+    "Walking into the kitchen, a sweet smell wafted into my nostrils, eroding my initial reluctance to come down."
+    "It smelled amazing, but at the same time it was hard to pinpoint what it was I was smelling."
+    "It was a mishmash of all things sugary and chocolate. Looking at the counter, I saw a smorgasbord of different cookies laid out on different platters."
+    show Sakura happy at Position(xcenter=0.65, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.85, yalign=1.0) behind Sakura
+    with dissolve
+    Sakura "Looks like he made it after all."
+    PRG "Hello, Hotsure-san. Th-Thank you for coming."
+    show Sakura neutral
+    MC "No problem. Glad I could help. I take it you’re doing some testing?"
+    show WG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    WG "See? I told you he’d come."
+    MC "You need only to ask, my lady."
+    show WG happy
+    "Alice just rolled her eyes at my remark."
+    show WG neutral
+    WG "Save the schmoozing for another occasion, dear."
+    Sakura "Well, I’m sure Alice filled you in. We wanted some feedback about what dessert we should make for the next competition, this time we’re working on cookies."
+    Sakura "I made some of my recipes and Aida made some of hers. We’re trying to figure out which recipe to go with."
+    "Looking at the five different platters laid out, each one was stacked at least 10cm high, all of them looking like something straight out of the fall cover of a food magazine."
+    MC "Yeesh, ladies. I mean they all look great, but why did you make so many?"
+    show PRG unique
+    PRG "Well, baking recipes don’t scale perfectly when multiplying or dividing. The amount of leavening to use doesn’t work like that."
+    PRG "So we started with a base recipe and tried out a couple of different versions of smaller batches to see which was better."
+    MC "Ah, I see."
+    MCT "Still, that’s a crap ton of cookies."
+    show PRG neutral
+    Sakura "Which is why we needed more taste testers. We need to get rid of these somehow."
+    "Admittedly, I was a bit perplexed by Sakura’s statement. Alice’s palette and appetite were all they needed as far as I was concerned."
+    "Though I guess they would feel better about hearing more opinions, even if they trusted Alice’s judgement on culinary matters."
+    Sakura "You’ve gotten a chance to sample all of them so far. What do you think, Alice?"
+    WG "Well, the types of cookies so far have all been standard fair, nothing overly exotic or innovative, but likely a more prudent bet with something as standard as a cookie."
+    show WG neutral-2
+    WG "The sugar cookies are good, but a bit too lemony from the zest, could use more butter. The chocolate chip cookies are stellar, but I fear they will be too blasé for the level of competition you are at."
+    show WG neutral
+    WG "The snickerdoodle cookies benefit from the added complexity of your spice blend beyond the standard cinnamon and nutmeg."
+    WG "It benefits from matching with the fall season, but despite these strong points, it doesn't quite satisfy as well as something with chocolate."
+    show WG haughty
+    WG "Which leads me to my final verdict that your chocolate marshmallow s'more cookies are the current standout."
+    show WG neutral
+    WG "The rich chocolate and gooey marshmallow bits edge out the rest— both in flavor and texture contrast."
+    Sakura "Good to know. Looks like we have an early leader."
+    WG "That being said, in light of these stellar options, I’m not sure why you bothered trying to make oatmeal raisin cookies."
+    Sakura "Was there something wrong with them?"
+    WG "Well, they were good, for what they are at least, but I’ve never understood their value as a dessert."
+    WG "Despite the more healthy ingredients, the lack of sweetness from those ingredients just necessitates adding more sugar and molasses to offset their relative blandness."
+    WG "I’d rather have a dessert that goes all in on its strengths, rather than struggle to cover up its shortcomings."
+    Sakura "Ah! I think I understand. I never cared that much for them myself either. My dad always liked them, so I assumed that other people liked them too."
+    #show PRG
+    PRG "I-I don’t think they are as sweet as a cookie should be either. And, I-I don’t really care for the texture."
+    Sakura "Yeah but if it were up to you, Aida, we’d just make chocolate chocolate chip cookies dipped in chocolate sauce."
+    show PRG embarrassed
+    PRG "I-Is that a bad idea?"
+    MC "That actually sounds pretty good."
+    WG "Good, but ultimately too one dimensional."
+    Sakura "Exactly. We have to spice things up, you know?"
+    show PRG excited
+    PRG "R-Right. That is probably the best strategy."
+    "I was starting to wonder who else was invited to this cookie platter party when another guest came through the door."
+    show Sakura neutral at altMove(0.5, 0.7)
+    show BE neutral with dissolve
+    BE "Wow, looks like we have a full crowd here already. Thanks for inviting me, Kodama-san."
+    PRG "You’re welcome, Inoue-san."
+    BE "Oh, hey Kei-chan!"
+    show BE surprised
+    BE "Look at all of these! They all look so amazing! I don’t even know where to start."
+    MC "Given your sweet tooth, I’m surprised you didn’t start with shoving them into your face."
+    show BE angry
+    BE "Shhh! I’m trying to be at least a little classy here, Kei-chan."
+    show Sakura happy
+    Sakura "No need to hold back, there’s plenty for everyone."
+    "Sakura thought about that statement a bit more while looking over in Alice’s direction."
+    show Sakura neutral
+    Sakura "Well, at least I think."
+    show BE happy
+    BE "Oh man! These sugar cookies are really good!"
+    show BE happy at Transform(xzoom=-1)
+    show BE happy at altMove(0.5, 0.8)
+    extend " But so are the these butter cinnamon things, but then there’s the molten chocolate marshmallow ones."
+    show BE happy at Transform(xzoom=1)
+    show BE happy at altMove(0.75, 0.35)
+    extend " Ohmygoshyouhavechocolatechip!"
+    show BE happy at Transform(xzoom=-1)
+    show BE happy at altMove(0.5, 0.5)
+    "Honoka was already in full sugar-rush mode after a single round of sampling."
+    show BE confused at Transform(xzoom=1)
+    BE "Wait... what are these?"
+    show Sakura frustrated
+    Sakura "{i}Ugh{/i}, why does no one like the oatmeal raisin ones?"
+    show BE shrug
+    BE "Sorry, Myoga-san, but raisins don’t really stack up to chocolate. It isn’t exactly a fair match-up."
+    Sakura "Yeah... can’t argue there..."
+    PRG "Which one is your favorite Hotsure-san?"
+    MC "Well, they’re all pretty good..."
+    MCT "Except those damn oatmeal raisin ones."
+    MC "But I think I’ll go with the classic and say chocolate chip."
+    show Sakura happy
+    Sakura "A solid choice."
+    show Sakura neutral
+    MC "What about you, Honoka?"
+    BE "They’re all blowing me away, at least the ones I’ve tried. I’m sure the oatmeal raisins are good too..."
+    BE "But as much as I love chocolate, I gotta go with the sugar cookies. {w}So sweet, but not too sweet."
+    PRG "We added a bit of citrus zest to balance out all the sugar."
+    BE "Well, whatever it is, it works!"
+    Sakura "Well, this is good feedback, but no real consensus yet."
+    MC "Yet? Who else is coming?"
+    hide BE
+    hide WG
+    show Natsuko neutral at Position(xcenter=0.45, yalign=1.0)
+    with dissolve
+    Natsuko "Thanks for the invitation, Myoga-san. I don’t normally like to eat this stuff, but I worked out more than usual today to make room for it."
+    Sakura "I’m glad you could come, Okamoto-san."
+    "Not that I minded Natsuko, but I had a feeling where this was headed."
+    show FMG neutral at Position(xcenter=0.18, yalign=1.0), Transform(xzoom=-1) with dissolve
+    FMG "Yo, it smells freaking good in here!"
+    show FMG angry-2
+    extend " And just when I was starting to enjoy myself."
+    show Natsuko smug
+    Natsuko "You still can. Pretend I’m not here. I do it all the time when you’re around."
+    Sakura "Hahhh..."
+    FMG "Hey! I was told this was going to be a fun party with cookies. You look like you’ve never had fun in your entire life."
+    MCT "Called it."
+    show PRG worried
+    "Akira and Natsuko began to bicker back and forth like they always do when they’re together."
+    Natsuko "I guess we can’t all be a laugh-a-minute like you, with the way you dress."
+    show FMG happy
+    FMG "I don’t know what you’re talking about. With hair like that, your best matching accessory would be a clown nose."
+    MCT "Ugggh, I’m so sick of this already. We’re all sick of it. Maybe I should try to get them to stop?"
+    menu:
+        "Ask them nicely to stop.":
+            MC "Would you two please stop? No one likes it when you do this."
+            show FMG sad
+            show Natsuko disappointed
+            "Akira and Natsuko paused briefly to consider my words..."
+            show FMG angry-2
+            show Natsuko annoyed
+            extend " before deciding to ignore them entirely."
+            Natsuko "I’m not about to take fashion advice from someone who doesn’t even know how to button a shirt."
+            show FMG neutral
+            FMG "{i}Pft{/i}. Whatever. Not everyone has a twiggy waist like you."
+            MCT "Well, I tried."
+            Natsuko "Next time you insult my waist, I'm going to pick you up and toss your sorry ass into the trash."
+            show PRG at altMove(0.5, 0.9)
+            with None
+            hide Sakura
+            show WG stern at Position(xcenter=0.75, yalign=1.0) behind PRG, Natsuko
+            with dissolve
+            WG "Honestly ladies, I grow tired of this same old routine every time you two are together. {w}We all do."
+            WG "Quite frankly it's just selfish for you to steal all the thunder with your drama when this is for Aida and Sakura’s benefit. Especially after Keisuke politely asked you to stop."
+            show FMG sad-2
+            show Natsuko disappointed
+            "Both Akira’s and Natsuko’s fiery glares at each other softened into somewhat sheepish expressions as they each looked to the side, not wanting to cause any more of a scene."
+            show FMG neutral
+            show Natsuko neutral
+            show WG neutral
+            WG "Alright, now that being said, a sour atmosphere is not conducive to taste testing sweets. I suggest you have some cookies and not talk with your mouth full."
+            "Alice pulled me aside briefly."
+            WG "{size=-6}A commendable effort, but a little milktoast in execution, dear.{/size}"
+
+        "Tell them to stop.":
+            MC "Yeah, yeah, we all know the routine by now with you two. Just shut up for a few minutes and save it for another time. This is supposed to be fun, while also helping Aida and Sakura prepare for their contest."
+            MC "It’s not about either of you two, so just drop it. In fact, stop talking and start eating. There’s a lot to get through."
+            show FMG sad-2
+            show Natsuko disappointed
+            "Both Akira’s and Natsuko’s fiery glares at each other softened into somewhat sheepish expressions as they each looked to the side, not wanting to cause any more of a scene."
+            show FMG neutral
+            show Natsuko neutral
+            show PRG at altMove(0.5, 0.9)
+            with None
+            hide Sakura
+            show WG neutral at Position(xcenter=0.75, yalign=1.0) behind PRG, Natsuko
+            with dissolve
+            WG "Exactly. Now there’s plenty for everyone. Don’t be shy and try to enjoy the free cookies."
+            "Alice pulled me aside briefly."
+            $setAffection("WG", 1)
+            WG "{size=-6}You showed quite a bit of backbone there, dear. I’m impressed.{/size}"
+
+        "Just ignore them.":
+            "I thought I would take the high road and just ignore the two."
+            "Well that’s what I told myself, but if I was being honest I was too chicken to speak up and say anything to the two hulking colossuses that could have easily just crushed my head if I stuck my neck out."
+            "Not that I think Akira would ever do that, but Natsuko certainly made me wonder... {w}Ignoring it however didn’t solve the issue. They just continued to bicker back and forth all the more."
+            Natsuko "I’m not about to take fashion advice from someone who doesn’t even know how to button a shirt."
+            show FMG neutral
+            FMG "{i}Pft{/i}. Whatever. Not everyone has a twiggy waist like you."
+            Natsuko "Next time you insult my waist, I'm going to pick you up and toss your sorry ass into the trash."
+            show PRG at altMove(0.5, 0.9)
+            with None
+            hide Sakura
+            show WG stern at Position(xcenter=0.75, yalign=1.0) behind PRG, Natsuko
+            with dissolve
+            WG "I grow tired of this same old routine every time you two are together, ladies. Quite frankly it's just selfish for you to steal all the thunder with your drama when this is for Aida and Sakura’s benefit."
+            show FMG sad-2
+            show Natsuko disappointed
+            "Both Akira’s and Natsuko’s fiery glares at each other softened into somewhat sheepish expressions as they each looked to the side, not wanting to cause any more of a scene."
+            show FMG neutral
+            show Natsuko neutral
+            WG "A sour atmosphere is not conducive to taste testing sweets. I suggest you have some cookies and not talk with your mouth full."
+            "Everyone else was reluctant to say something, but I knew I could count on Alice to handle those two if need be."
+            WG "Now there’s plenty for everyone. Don’t be shy and try to enjoy the free cookies."
+
+    hide WG with dissolve
+    "Akira certainly didn’t need any further encouragement to dig in. Her sweet tooth was almost as bad as Alice’s... {w}and Honoka’s... {w}and Aida’s... {w}suddenly I was starting to think there wasn’t enough cookies."
+    show FMG flex
+    FMG "Holy crap! These chocolate chip cookies are {i}the shit!{/i}"
+    show PRG scared at altMove(0.5, 0.75)
+    PRG "Y-You don’t like them?!"
+    Sakura "I’m pretty sure she means they’re better than you’d normally describe them."
+    show FMG neutral
+    FMG "Yeah, definitely— like that."
+    show PRG happy
+    PRG "Oh, why thank you!"
+    Natsuko "Hm. I must agree these are rather impressive."
+    show PRG worried
+    WG "?"
+    BE "?"
+    "There was visible confusion across the rest of the room with the realization that Akira and Natsuko actually agreed on something."
+    show FMG angry-2
+    FMG "Wait, what the hell are these?!?! {w}You can’t be serious, who puts raisins in a cookie?! This should be illegal!l "
+    Sakura "{i}Sigh{/i}... ugh, I’m never trusting my dad with desserts ever again."
+    Natsuko "It certainly is an odd choice. All it does is take away from the other flavors."
+    Sakura "?"
+    PRG "?"
+    "What was going on? These two were always like oil and water, but somehow cookies are the thing that they can brush aside their differences and agree on?"
+    "Akira and Natsuko eyed each other suspiciously, each as confused as the other with this sudden turn of events."
+    show PRG surprised
+    "{i}*DING*{i}!"
+    PRG "Oh, they’re done!"
+    show PRG neutral
+    "Aida, with Sakura helping, proceeded to pull out as many sheets of cookies the two ovens could hold worth of some different type of cookie."
+    "Piling them up into a stack as high as the rest onto a platter, they were a sight to behold. It looked to be some kind of peanut butter cookie, soft and warm, but unlike anything I’d seen before."
+    show PRG excited
+    PRG "The Ooey Gooey Nutty Butter Bars are done!"
+    show FMG happy
+    FMG "You had me at Ooey Gooey. Let me at’m!"
+    hide PRG with dissolve
+    show FMG happy at altMove(0.75, 0.65)
+    show Natsuko neutral at altMove(0.5, 0.35)
+    "Akira slid over to the plate before anyone else could finish taking in the sight of them as she took the first bite."
+    show FMG happy at Transform(xzoom=+1)
+    FMG "{i}OmphMyGuud TheesOrAmuzin{/i}!"
+    Natsuko "Don’t talk with your mouth full. It’s disgusting."
+    MCT "Not the most pleasant exchange, but a bit closer to normal."
+    FMG "You wouldn’t say that if you tried one. Here."
+    "Akira offered one of the cookies to Natsuko in a gesture of surprising generosity that made me wonder if these strange new cookies were the key to world peace."
+    show Natsuko annoyed
+    "Natsuko for her part seemed skeptical, but ultimately accepted the offer as Akira held out her hand."
+    show Natsuko happy
+    Natsuko "Wow! It... seems you were correct. These are excellent. I think I’ll have a few more."
+    FMG "{i}TuldChoo{/i}!"
+    show Natsuko annoyed
+    Natsuko "Ugh— stop doing that."
+    FMG "Hehehe."
+    "After the initial shock of the situation had worn off, I began to realize just how fast the two Amazon’s were plowing through those cookies. I mean with their sheer size they both had quite the appetite."
+    "But they were both so big they were effectively blocking the rest of the group from the platter of gooey nutty what-ever-the-hell they were. And if those things tasted half as good as they looked, that was a crime."
+    "Aida, Sakura, and Honoka were a bit hesitant to reach in. I was too, thinking I might lose a hand reaching in to grab a cookie at the rate those two were going at it, but Alice had no such reservations."
+    show FMG surprised at altMove(0.25, 0.8)
+    show Natsuko annoyed at altMove(0.25, 0.2)
+    show WG doubt with dissolve
+    "Alice shoved them both aside to reach in to sample some for herself."
+    FMG "Whoa! Easy there, Alice! You look like you’ve had enough cookies already."
+    show WG angry
+    "If I didn’t know better, I could have sworn I saw sparks flicker from Alice’s eyes when she heard Akira say that."
+    show WG stern
+    hide FMG
+    hide Natsuko
+    with dissolve
+    "Alice’s glare of daggers eventually turned to one of reserved, maniacal plotting. Akira had no idea about the mess she just made for herself."
+    WG "{size=-6}I need a distraction.{/size}"
+    MC "{size=-6}What? What on earth are you talking about?!{/size}"
+    WG "{size=-6}Do I really need to repeat myself?{/size}"
+    MC "{size=-6}Okay, fine. What do you want me to do?{/size}"
+    WG "{size=-6}You’re a clever boy. Just come up with something— and make it loud.{/size}"
+    "I had no idea what she was up to, but her matter-of-fact tone and cold, detached expression convinced me I was better off not knowing."
+    "Whatever she had in mind, I knew better than to get in her way when she was determined to do something."
+    hide WG with dissolve
+    if getFlag("WG057_C2_1"):
+        "Having spent some time here before when Aida helped me make that cheese cake for Alice, I had a pretty good idea where most of the stuff was— and that gave me an idea."
+    else:
+        "Having spent some time here before when Aida helped me make that peach cobbler dessert for Alice, I had a pretty good idea where most of the stuff was— and that gave me an idea."
+    "I walked over to one of the overhead cabinets and proceeded to pull out a stack of sheet pans."
+    "{i}*CLANG*{/i}"
+    show FMG surprised at Position(xcenter=0.5, yalign=1.0)
+    show Natsuko annoyed at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    extend " {i}*CLONG* {w}*CRASH* {w}*TONG*{w}*PING*!{/i}"
+    "Even I couldn’t believe how loud letting a bunch of sheet pans drop to the floor was, all while an awkward stillness hung in the air as one of the pots I knocked over wobbled on its edge for what felt like a whole minute."
+    MC "Huh, well I guess that wasn’t the tupperware drawer..."
+    FMG "Holy shit that was loud!"
+    show FMG neutral
+    "What the hell were you doing, Kei-kun?"
+    show Natsuko neutral
+    Natsuko "If you needed help reaching the top shelf, you should have just asked, Hotsure-san."
+    show FMG surprised-2
+    FMG "!"
+    show FMG surprised
+    FMG "WHAT HAPPENED TO THE OOOEY GOOEY NUTTY BUTTER BARS?!"
+    show Natsuko annoyed
+    Natsuko "Would you stop yelling?"
+    Natsuko "!"
+    show Natsuko neutral
+    Natsuko "Wait, you’re right. Where did they all go?"
+    BE "They’re all gone!"
+    Sakura "Wait, where’s Alice?"
+    "I looked around myself. Alice had vanished, along with the stash of Aida’s cookies."
+    show FMG angry
+    FMG "THAT. FAT. BIT—"
+    Natsuko "Calm down. She hasn’t gotten far. We both know she’s not fast."
+    show FMG angry-2
+    FMG "You’re right! She’s probably gasping for air after she rounded the corner."
+    MC "Uh, are you sure about that? She’s in pretty good shape."
+    FMG "Round is not the shape we’re talking about."
+    show PRG worried at Position(xcenter=0.85, yalign=1.0) with dissolve
+    PRG "T-There is one left..."
+    show FMG surprised
+    FMG "Gimmie!"
+    "Akira frantically reached for the last gooey-nutter-something-or-other haphazardly left on the corner of the counter before Natsuko grabbed her wrist like the jaws of life to stop her."
+    Natsuko "Not so fast. What makes you think you get the last one?"
+    show FMG angry-2
+    FMG "{i}Grrr{/i}!"
+    Sakura "Easy there girls, no need to fight. Look, we can just cut it in half to share."
+    "Sakura proceeded to take a butter knife from the drawer, blunt as it was, it was still effortless for her to cut through the soft gooey cookie... {w}before she snatched up one half and shoved it into her mouth."
+    show Sakura happy at Position(xcenter=0.65, yalign=1.0) with dissolve
+    Sakura "Mmmm!"
+    "In a split second she tossed the other half to Honoka. Though not expecting it she caught it easily enough and proceeded to quickly shove it into her mouth."
+    show FMG surprised
+    BE "MmmMmm!"
+    show FMG surprised-2
+    FMG "{i}Tck{/i}! {w}You!"
+    show FMG sad
+    extend " {i}Sigh{/i}... {w}Alright, ya got me. Now would you let go of me, Ms. Gorilla Hands?"
+    Natsuko "Fine then."
+    "Natsuko released her death grasp, brushing Akiras arm away like she was discarding a piece of litter."
+    show FMG angry
+    FMG "We gotta get those cookies back! I’m going to find Alice before she eats them all. She couldn’t have made it more than a few dozen meters down the hall carrying that much of a load."
+    show FMG flex
+    FMG "And I’m not talking about the cookies either."
+    "Aida blushed, but everyone else just rolled their eyes at that groaner of a punchline."
+    FMG "I should be able to catch up to her easily."
+    show Natsuko neutral at altMove(0.5, 0.15)
+    with None
+    hide FMG
+    show BE neutral at Position(xcenter=0.4, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    "Akira bolted out the door in a full sprint, determined to return with whatever remained of the cookie stash."
+    show Natsuko disappointed
+    Natsuko "While I’m disappointed Nikumaru-san intervened, it was necessary. I fear I might have ended up looking like her if she didn’t step in."
+    show BE sad
+    BE "I wish we got to try more."
+    show BE aroused
+    extend " That piece was {i}sooo{/i} good!"
+    show BE happy
+    extend " Those were amazing, Aida!"
+    PRG "T-Thank you."
+    Sakura "Oh, I think there will be plenty more. {w}You can come out now Alice!"
+    show WG neutral at Position(xcenter=0.15, yalign=1.0), Transform(xzoom=-1) behind BE
+    hide Natsuko
+    with dissolve
+    "Alice emerged from the pantry closet with a tupperware container full of the remaining nut-bar-goo-things."
+    "Though if my first glance estimate was correct, there was a significant amount of ‘loss in transit’, so to speak."
+    WG "Looking for these?"
+    show PRG happy
+    show BE surprised at Transform(xzoom=1)
+    BE "Way to go Alice!"
+    show BE neutral
+    extend " I have to admit, I thought you had run off with the stash for yourself. {w}I mean, I wouldn’t blame you, they’re just that good!"
+    show WG neutral-2
+    WG "Perish the thought. Once I realized there wasn’t going to be enough for everyone after Akira thought she had enough, I knew I had to do something."
+    "Alice can play the altruistic philanthropist all she wants in front of the girls, but I knew her real motivation was what Akira said had really pissed her off."
+    MC "Hey, don’t I get some credit for this?"
+    show WG neutral
+    WG "Well you certainly did manage to make a mess. Perhaps you can take credit for that catastrophe by cleaning the cookware you let fall on the floor?"
+    MC "..."
+    show WG happy
+    WG "Relax, Keisuke. You did great. I knew I could count on you."
+    "Alice leaned in with a quick smooch on my cheek and gave my hair a little tussle."
+    $setAffection("WG", 1)
+    show WG neutral-2
+    WG "{size=-6}But it was a bit much. Could you be a dear and help Aida and Sakura by washing the cookware?{/size}"
+    "At this point, I honestly don’t know what I wouldn’t do for this woman. She indeed had a certain power over me in this regard, but I also trusted her not to abuse it."
+    "She asked me to come here to help out Aida and Sakura, so if this is all I needed to do, it wasn’t worth complaining about."
+    "That and I was feeling pretty good about the fact that even Alice seemed impressed by my improvised distraction."
+    MC "Alright. I guess I’ll get to cleaning up this mess."
+    "I snatched a cookie out of the plastic bin she set back on the counter as I walked over to the sink. Taking a bite, I couldn’t believe just how damn good those peanutty-somethings were!"
+    MC "Wow, Kodama-san! These are amazing!"
+    show WG happy
+    WG "I would agree. The texture is soft, almost like cookie dough as it melts in your mouth, while the peanut and butter flavor meld into something truly indulgent."
+    PRG "T-Thank you. I substituted an egg yolk for one of the whole eggs in the original recipe I learned. It gives it a softer texture."
+    show Sakura happy
+    Sakura "Well it sounds like we have a clear winner here. We’re definitely making these at the next round of the competition!"
+    WG "Well, no need to hesitate. There’s plenty for everyone."
+    show BE happy
+    BE "Way ahead of ya!"
+    Natsuko "I think I’m going to head out. Thank you for inviting me. I had a wonderful time, Kodama-san and Myoga-san."
+    show Sakura neutral
+    "Natsuko whispered something else to Sakura, but I didn’t know what it was. I was occupied with the dishes. I figured I’d clean up Aida’s and Sakura’s mixing bowls too while I was at it."
+    "I got to try all the cookies, so I didn’t need anymore, I was just enjoying the spectacle of some hungry ladies chowing down on stacks upon stacks of desserts."
+    "Each one of those nut-gut-bombs had to have been 500 calories a piece. I wouldn’t have been surprised if each one had a quarter stick of butter in it."
+    scene black with fade
+    pause .5
+
+    scene Cooking Classroom with fade
+    "In what was barely a half an hour, the girls had collectively managed to polish off the remaining cookies."
+    "An impressive, and perplexing feat by any measure, but I’m sure the taste of Sakura and Aida’s cooking helped them power through beyond reasonable limits."
+    show BE doubt at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    BE "I-I think I {i}hic{/i} overdid it... "
+    show BE happy
+    extend " I regret nothing."
+    show Sakura neutral with dissolve
+    Sakura "Oofft! I {i}know{/i} I overdid it... {w}and I have plenty of regrets."
+    show PRG sad-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    PRG "It looks like the chocolate ones are all gone..."
+    "While the other girls were looking over-stuffed, and paying the price with their overloaded stomachs,"
+    hide BE
+    hide Sakura
+    hide PRG
+    show WG happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    extend " Alice for her part looked quite content, despite a noticeable distention in her already massive belly."
+    WG "It was an exquisite dessert course. Excellent work ladies."
+    show WG neutral-2
+    "Perhaps unintentional or subconsciously, I noticed Alice rubbing the top of her belly."
+    "Whether to soothe excess tension or as a gesture of true contentment, I did not know other than the sight was... well, something to behold— to put it mildly."
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    FMG "Well I looked all over for Alice but I never found her. She must be pretty fast for being so"
+    show FMG surprised-2
+    extend " faaa-"
+    show FMG angry-2
+    extend "AAAARG! You were here the whole time weren’t you?"
+    show FMG sad-2
+    FMG "{size=-6}Seriously, how can you hide something as big as her?{/size}"
+    show WG doubt
+    WG "Ahem."
+    show FMG neutral
+    FMG "Hm? I didn’t say anything."
+    MCT "Even I heard that, Akira."
+    show FMG surprised
+    FMG "Wait! What happened to all the cookies!?"
+    show FMG sad-2
+    show WG angry
+    extend " Don’t tell me you ate them all, Alice."
+    show WG neutral
+    WG "Oh, don’t worry, there’s still plenty left we saved for you."
+    "Alice handed Akira a large snap lid container."
+    show FMG surprised
+    FMG "Oh my god! Thank you- thank you! Gimmie-gimmie!"
+    "{i}*Click*{/i}"
+    show FMG sad-2
+    FMG "{i}Tck{/i}, goddamnit guys!"
+    show WG happy at altMove(0.5, 0.55)
+    show BE happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Keisuke & Alice & Honoka" "BAHAHAHAHA!"
+    "Akira’s unhinged enthusiasm had deflated in an instant when she opened the container, only to reveal it was filled to the brim with just oatmeal raisin cookies."
+    show WG haughty
+    BE "Oh, that look on your face Akira-chan! {i}Pfft{/i}, hehe! You have to admit, she really got you good with that one."
+    "Honoka and I were both practically in tears from laughing so hard. Alice for her part, after composing herself from her initial reaction, just had a smug grin on her face."
+    show FMG neutral
+    hide BE with dissolve
+    FMG "Alright, alright. No sense in dishing it out if you can’t take it yourself."
+    show FMG sad
+    FMG "But, man! I was really hoping for some more of those Ooey Gooey Nutty Butter Bars."
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Sakura "Actually, now that you mention it, Natsuko asked me to give you these when you came back."
+    show FMG surprised-2
+    FMG "Is that!?"
+    show Sakura happy
+    Sakura "It sure is."
+    "Sakura handed Akira a small bag with what appeared to be five Ooey Gooey Nutty Butter Bars."
+    MCT "Hey! I remembered the name."
+    show FMG angry-2
+    FMG "Wait, she didn’t poison these or something did she?"
+    show Sakura neutral
+    Sakura "No, she asked me to put them aside."
+    show WG neutral
+    WG "She did say to give them to you so as to spare us the drama of watching you cry like a child."
+    show FMG neutral
+    FMG "That does sound a bit more like her now. I guess I’ll have to thank her the next time I see her."
+    "After that brief moment of reflection, Akira wasted no time getting down to business with the last few cookies."
+    FMG "Hhmp! Wut ur we guna doo wid da oatmaw rosen uns?"
+    show WG doubt
+    WG "Since Natsuko isn’t here, I’ll be the one to remind you not to talk with your mouth full."
+    FMG "Hehe."
+    hide Sakura
+    show BE doubt at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "That is a good point, there are a lot of them left. I know I didn’t plan on taking any home."
+    Sakura "{i}Sigh{/i}..."
+    show BE shrug
+    BE "Sorry, Myoga-san."
+    show WG haughty
+    WG "Maybe we should give them to Yamazaki-san? I’m sure she’d enjoy them."
+    hide BE
+    hide FMG
+    show PRG worried at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    PRG "You think so?"
+    show PRG happy
+    extend " That’s nice of you to think of Yamazaki-san, even though you two haven’t gotten along before."
+    "I barely managed to hold back a chuckle."
+    MCT "Oh, Aida, you are too pure for this world."
+    "They say hell hath no fury like a woman scorned, and Alice was on a roll... or erhm... rolls maybe in her case?"
+    "I knew she could be cold and calculating when she was spurned, but even I had underestimated her appetite for mischief... {w}and cookies."
     jump daymenu
 
 label WG066:
