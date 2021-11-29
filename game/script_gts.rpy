@@ -6518,7 +6518,7 @@ label GTS037_c3_after:
     MC "Not that it matters, as long as I’m here with you."
     GTS "I’m flattered that you feel that way, Kei-chan."
     "The two of us turned around, leaving the shrine behind. The smoke trails from the burning incense still lingered, coating the area outside the shrine in a thin layer of white vapor."
-    GTS "Do you mind if we take our time walking back down the trail? I’d like to… remember this view. Take in all of the scenery."
+    GTS "Do you mind if we take our time walking back down the trail? I’d like to... remember this view. Take in all of the scenery."
     MC "Not at all."
     "The two of us proceeded to walk back down the trail. Naomi walked in front of me, intentionally making her strides slow and delicate so I could keep up. The stones were sturdy, and didn’t vibrate at all under Naomi’s light steps."
 
@@ -6539,7 +6539,7 @@ label GTS038:
     jump GTS039
 
 label GTS039:
-    $setProgress("GTS", "GTS041")
+    $setProgress("GTS", "GTS040")
     scene Campus Center with fade
     play music Schoolday
     "I walked through the central courtyard as the sun had just reached its highest point in the afternoon. It was the weekend, so I had plenty of time to myself."
@@ -6664,7 +6664,354 @@ label GTS039:
     jump daymenu
 
 label GTS040:
-    jump GTS041
+    $setProgress("GTS", "GTS041")
+    scene Dorm Interior with fade
+    MC "Ooh, suck that crit down babycakes."
+    play music Schoolday
+    "Two o’ clock on the hottest Sunday afternoon since summer began. My scuffed-up old copy of Silver Moon was spinning away in my Aystation and Typhon was down to a third of his health. I couldn’t remember the last time I got that far."
+    "Golden sunrays shone in piercing the glass and the curtains; the angels themselves were witnessing me."
+    MC "Oh what the hell, now you get {i}three{/i} turns?"
+    "Lest my confidence drown me, I suddenly found half my party poisoned and the other half knocked out."
+    "I slumped backwards onto the floor while hissing a sigh through my teeth, as if I were pneumatic. There I formed my own dark sun, with hair spread out a meter in every direction as I formulated my strategy."
+    MCT "Oy, I gotta get this cut before tomorrow... huh?"
+    "I didn’t hear, but saw a disembodied backpack slip inside the slightly-opened balcony door,"
+    show RM sad with dissolve
+    extend " followed by my grimacing roommate."
+    MC "Utagashi-san."
+    show RM neutral
+    RM "Hotsure-san."
+    MC "Lock broke?"
+    RM "A situation arose, and I adapted."
+    MC "Uh huh. I’ll call the maintenance guy after I’m done with this boss."
+    show RM angry
+    RM "No, don’t do that. If you must know, Matsumoto's on patrol right out in front of the dorms, and I’d rather not have her rooting through my notebook. I doubt she’ll fall for a decoy twice."
+    MC "So is it, like, actually possible to get expelled from here?"
+    show RM neutral
+    RM "Not for that, no. Now, I’ve got some things to work on."
+    MC "You do that."
+    hide RM with dissolve
+    "He sat down at his desk and began laying out notes and assorted colors of pens; I, too, sat up and beheld the disarray before me on the TV."
+    MCT "Hmm..."
+    pause 1
+    MCT "I wonder how Naomi-chan’s doing..."
+    "I took out my phone."
+    MCCell "<hey Naomi-chan, how are u doing?>"
+    "I laid it down again and returned my attentions to the ongoing battle; it buzzed a couple minutes later."
+    GTSCell "<Quite well, Keisuke-kun, thank you. You’ve just caught me in the midst of some reflection. How are you this lovely day?>"
+    MCCell "<pretty good thx, playing some video games>"
+    pause 0.5
+    GTSCell "<It certainly is a day for indoor diversions. I trust your other affairs are in order?>"
+    MCCell "<yeah don't worry>"
+    MCCell "<what are u thinking about?>"
+    pause 0.5
+    GTSCell "<The view around the facilities today reminded me of when I was little, when my mother would read me fairytales.>"
+    MCCell "<ha ha that's sweet, my mom used to tell me fairytales too>"
+    pause 0.5
+    GTSCell "<They can be very edifying for a child. More than that, there's a certain magic to them that seems broadly lost on modern literature.>"
+    MCCell "<there is, isn't there?>"
+    stop music fadeout 3.0
+    "As I waited for her reply, I reached for the remote and clicked the raging battle into black silence. I stood, checking my pockets, and headed out the door."
+
+    scene Dorm Hallway with fade
+    play music HigherEdu fadein 2.0
+    GTSCell "<Did you have a favorite book in your childhood?>"
+    if isHighestSkill("Athletics"):
+        "I tapped my phone, chewing the inside of my cheek."
+        pause 0.75
+        MCT "What was that one mom made me read?..."
+        MCCell "<I forget the title but theres this one book about shun sakurai>"
+        MCCell "<u know, the hitter for the koi?>"
+        pause 0.5
+        GTSCell "<I’m afraid I don’t follow baseball much.>"
+        MCCell "<I didn’t think u did>"
+        MCCell "<it made me appreciate his achievements tho reading how hard he worked to get there>"
+        pause 0.5
+        GTSCell "<A wonderful thing, indeed.>"
+    if isHighestSkill("Art"):
+        $setFlag("GTS040_art")
+        MCCell "<well.. it’s not really a traditional book>"
+        MCCell "<when I was 10 I got this like booklet for making little charms with bottlecaps and glue>"
+        MCCell "<i ended up making a ton of them and tomo-chan even pitched in a couple times>"
+        MCCell "<it was kinda cheesy but I ended up making lots of crafty projects like that>"
+        MCCell "<after I destroyed all the soap in the house trying to carve figurines my dad just bought me a sketch pad lol>"
+        MCCell "<srry for the wall of text>"
+        pause 0.5
+        GTSCell "<Not at all, Keisuke-kun.>"
+        GTSCell "<I think it’s perfectly lovely that you’ve been in touch with your creative side for so long.>"
+        MCCell "<thank you>"
+    else:
+        MCCell "<this is gonna sound weird but do you remember that book you were reading about Nijō Yoshimoto?>"
+        pause 0.5
+        GTSCell "<Of course.>"
+        MCCell "<well when i was starting high school i had this book about famous buildings around the world>"
+        MCCell "<the gugenheim museum, the sydney opera house, stuff like that>"
+        pause 0.5
+        GTSCell "<I could see how that could be interesting, in that light. Was there anything in particular you enjoyed about it?>"
+        MCCell "<there were some pretty interesting stories about the history behind them>"
+        MCCell "<I guess what really grabbed me was the sections about what went into the design of each one>"
+        MCCell "<its kinda crazy how something as big as a building can be practically a work of art>"
+        pause 0.5
+        GTSCell "<Most certainly. I would imagine that much fine detailing goes into designing such a thing.>"
+        pause 0.5
+        GTSCell "<It's a bit ironic, but it takes as delicate a hand as any high art.>"
+        MCCell "<tru>"
+        MCCell "<you could say that's what civilization boils down to>"
+        MCCell "<a roof over your head, and striving for a better roof>"
+        pause 0.5
+        GTSCell "<That rather sum things up these days, doesn't it?>"
+
+    scene black with fade
+    pause 1
+    scene Dorm Exterior with fade
+    MC "Bruhhh..."
+    "I stepped out of the dormitory entrance hall and straight into the armpit of summer, where its glaring sun, wavering air, and shrieking cicadas scolded my intrusion."
+    MCT "All this hair isn’t so bad sometimes..."
+    "I glanced ahead of me to the path to the main building, which I headed down as I resumed typing."
+    scene Campus Center with fade
+    MCCell "<how about you, what was your favorite book?>"
+    "The screen was tantalizingly still for many moments."
+    GTSCell "<I will tell you, but I hope you won’t find it too terribly common.>"
+    MCCell "<nothing about you is common, Naomi-chan. please do share>"
+    scene black with fade
+    pause 1
+    scene School Front with fade
+    GTSCell "<It was a romance novel. A period piece, as I’m sure you’ve guessed.>"
+    pause 0.5
+    GTSCell "<I remember being perfectly entranced by how the characters were written; the more you learned about them as people, and the more they did about each other, the closer they grew. It was absolutely wonderful.>"
+    if getFlag("GTS040_art"):
+        pause 0.5
+        GTSCell "<Moreover, much like your favorite, it wasn't just the book itself that sealed its place in my memory.>"
+    else:
+        pause 0.5
+        GTSCell "<However, that was not the only element to elevate it to its place in my memory.>"
+    GTSCell "<I had to wait quite a while to read it, you see. Whenever I wanted to read a book, first my mother had to do so herself. Usually she would only skim chapters, but apparently it rather cast a spell on her as well.>"
+    pause 0.5
+    GTSCell "<Of course that heightened my anticipation tremendously.>"
+    scene Hallway with fade
+    MCT "Wait... what?"
+    "I began typing a reply, at the sight of which Naomi's three blinking dots vanished."
+    MCCell "<wait why did your mom read your books first?>"
+    pause 0.5
+    GTSCell "<She was simply doing her part in raising me properly. In theory, if she came across any iniquitous or disturbing themes, I would be spared exposure to them.>"
+    menu:
+        "<i guess that makes sense>":
+            jump GTS040_c1_1
+        "<dont you lose something when all youre exposed to is sunshine and rainbows?>": #This choice will contribute towards unlocking the Nun, Rebel, and Lady endings.
+            jump GTS040_c1_2
+
+label GTS040_c1_1:
+    GTSCell "<Of course, Keisuke-kun. Worry is seldom useful and often misplaced.>"
+    jump GTS040_c2
+
+label GTS040_c1_2:
+    GTSCell "<That's quite the leap. My parents well knew that unpleasant realities are necessary to one's moral constitution. They simply did not allow me to wallow in them.>"
+    MCCell "<individually scanning books for objectinable content tho?>"
+    MCCell "<that seems like a step or two beyond looking after your kid>"
+    pause 1.0
+    $setAffection("GTS", -3)
+    GTSCell "<If I previously failed to impress upon you how dearly I hold my family, I would again ask you to show more respect for them.>"
+    MCCell "<your right, sorry>"
+    MCCell "<so, you were saying?>"
+    jump GTS040_c2
+
+label GTS040_c2:
+    pause 0.5
+    GTSCell "<Right, as I was saying, even after I finished reading it, my mother and I would continue to talk about it in our idle hours for more than a year, perhaps two.>"
+    pause 0.5
+    GTSCell "<We'd never quite bonded so intimately before; it was like she was my schoolmate. I came to understand her like I never had prior.>"
+    scene Library with fade
+    MCCell "<awww, that's pretty sweet>"
+    MCCell "<what was it called?>"
+    "I scanned the sparsely-populated library for a moment as I waited for her reply."
+    GTSCell "<'By Your Word', if I recall correctly. But I am quite certain of that. It was by one Yoko Yoshimoto.>"
+    MCCell "<oh, cool. what was the plot like?>"
+    "I stowed my phone in my pocket as she answered and got to work strumming my fingers along the rows of books, gritty and fibrous hardback intermingled with smooth, fresh plastic sheets."
+    MCT "Okay, she’s probably gonna be near the back, let’s see..."
+    MCT "Ha... fu... mi... yo!"
+    MC "Da da da da..."
+    MCT "Hmm... {w}Crud... must not be here."
+    "I picked up my phone again to see the fine-pointed essay that surely awaited me in the couple of minutes I was idle.{w} There was none."
+    GTSCell "<You know, I do wonder if perhaps it would be better if we spoke on the phone.>"
+    "After kicking myself for thinking I was slick, I pounded out a quick reply."
+    MCCell "<id love too but first i gotta go somewhere else Utagashi-sans working on stuff>"
+    pause 0.5
+    GTSCell "<Of course. Hearing your voice shall be all the sweeter for the wait.>"
+    MCCell "<back atcha. call you in a few>"
+    "I fought back a blush as I stared down at the black screen, but my reflection reminded me it was time to improvise."
+    "My eyes pivoted to the children's section..."
+    MCT "Kinda obvious... might be a little gauche..."
+    pause 0.5
+    MCT "Did I just think the word 'gauche'? Who am I anymore?"
+    "I clicked my tongue softly as I set about looking for an adequate replacement."
+    "And then, my strumming finger fell on a certain tome, as no similar label felt quite right; its life of many loving embraces had left it a mottled spine, frayed edges, and pages clumped into jagged stacks."
+    "A little assured, I eased it out from amongst its neighbors and proceeded to the front desk."
+    scene black with fade
+    pause 0.5
+
+    scene Field with fade
+    "It didn't take long to reach a point where I was secluded enough to call her; the campus had grown even more sparse, and the road to the giants' facilities was alone but for the ghosts shimmering and wavering over the ground."
+    "Apparently, I was just about the only idiot willing to go outside that day. But I did take some comfort in the fact that I was never really alone anymore. She was much quicker to answer this time."
+    GTSCell "Good afternoon, Keisuke-kun. Pardon my delay in answering."
+    MCCell "Oh, don't worry about it. For you, I'll wait however long I need to."
+    GTSCell "Hmhm, I appreciate your understanding. "
+    GTSCell "Operating my phone has become rather... troublesome of late."
+    MCCell "...Oh... I see."
+    menu:
+        "Maybe you’re turning into an old lady? Like, faster than normal.":
+            GTSCell "Even under the circumstances, that seems rather improbable, does it not?"
+            MCCell "The evidence seems pretty unassailable. I mean, we know you’re majorly into gardening. Have you noticed any white hairs? What’s your stance on doilies? Or Nortfight dances?"
+            GTSCell "I haven’t noticed any such thing, no. I’ll be sure to check again after this conversation."
+            GTSCell "And I happen to have a good deal of respect for the craftsmanship and visual aesthetic of the doily, though I myself prefer other modes of ornamentation."
+            GTSCell "...I confess, before I offer an opinion, I must ask precisely what a ‘Nortfight dance’ is."
+            MCCell "Eh... honestly I don’t think knowing would enhance your life."
+            GTSCell "I do find myself inclined to believe you."
+            jump GTS040_c3
+        "I guess it was just a matter of time. Do you know if they can provide you with a replacement?":
+            GTSCell "I believe I have heard that they can. I shall have to see about that soon."
+            MCCell "Good, good."
+            MCCell "..."
+            MCCell "So, can I ask you a weird question?"
+            GTSCell "Whatever you please."
+            MCCell "Of course there’s a lot of downsides to your factor. What are some of the good things? The silver linings?"
+            "She was silent for a moment or two."
+            GTSCell "That’s a rather good question, as a matter of fact. It is important, after all, to be mindful of the narrowness of our perceptions."
+            pause 1
+            GTSCell "Hmm..."
+            "I wiped my wrist across my damp forehead, smiling."
+            GTSCell "Well, when my family came to visit and I looked down at Kimiko, it was just like she was a puppy again. That brought back some fond memories, indeed."
+            GTSCell "...As discomforting as it is to reflect on, having a new perspective on the world around oneself is edifying, in some ways."
+            MCCell "I bet. Ever look up and wonder what’s going on in the canopy of the trees?"
+            $setAffection("GTS", 1)
+            GTSCell "Hmhmhm, so I have."
+            GTSCell "I also wonder... what do you think of it?"
+            MCCell "Of... your factor?"
+            GTSCell "Yes."
+            MCCell "I...{w} uh, kinda like it."
+            if getSkill("Academics") > 3:
+                MCCell "It fits you, in a weird way."
+                GTSCell "I'm not sure I take your meaning."
+                MCCell "Just all the things that make you someone you can look u... uh... "
+                MCCell "Like, I'll say it again, you're one of the nicest, sweetest girls I've ever met. Maybe it's not so bad if, you know, your presence can be felt a little more."
+                GTSCell "Thank you. I wouldn't want to forget my virtues for anything."
+                GTSCell "I confess it is something that worries me, in my more idle moments. My tai chi lessons are no small help in developing self-control..."
+                GTSCell "...But as necessary as these facilities are, it seems impossible to put what I'm learning into practice where it is truly needed."
+                if getSkill("Academics") > 6:
+                    MCCell "Like you can't help but think of all the divisions in your life."
+                    $setAffection("GTS", 3)
+                    GTSCell "That is {i}precisely{/i} what I was thinking."
+                    GTSCell "I have been making an effort to meditate more often, as well. I must only trust that in time it all shall not seem so daunting."
+                    jump GTS040_c3
+                else:
+                    MCCell "Yeah... that sucks."
+                    jump GTS040_c3
+            else:
+                MCCell "I always thought you were really beautiful, and it's sorta like I'm always noticing new things about you."
+                GTSCell "That's very sweet of you to say. I have rather made a vice of missing the forest for the trees of late..."
+                jump GTS040_c3
+
+label GTS040_c3:
+    "I heard a whisper of a sigh come through, as though she'd pulled away."
+    GTSCell "But let's not dwell on that particular conundrum. I pray you're still well."
+    MCCell "Doing fine. Perhaps a bit more affected by the heat, but... that's okay now."
+    GTSCell "Hmhmhm, I'm glad. Be sure to stay near a drinking fountain, now. Dehydration is a very real danger at these temperatures."
+    MCCell "Waaay ahead of you. I just got done chugging some primo cloud juice."
+    GTSCell "Ah, how I missed your turns of phrase."
+    MCCell "Heh... well..."
+    MCCell "Hey, you were gonna talk about that book, right?"
+    GTSCell "Indeed I was.{w} Well, where do I begin?"
+    scene Chukan Point with fade
+    "Now, maybe I wasn’t the greatest listener."
+    "As Naomi got deeper into the story, I realized however many years had passed, she still knew it like her hometown, its turns and loops and landmarks which had bucked me a few chapters ago."
+    "Nevertheless, I looked out over the scintillating colors of the horizon around the hilltop, and sighed. Beauty seemed to follow her everywhere."
+    GTSCell "Now, if I were to name my favorite part of it, it would undoubtedly be the climactic chapter. It's especially memorable for me because my mother made a day of reading it."
+    MCCell "Really? How'd she do that?"
+    GTSCell "It was nothing terribly presumptuous. She took me to Okazaki Park... in Kyoto, that is. She found a lovely patch of shade under a tree, in sight of the Heian shrine, and laid down a sheet for us."
+    "She chuckled."
+    GTSCell "Getting the sheet to stay put took some doing. It was quite breezy that day."
+    pause 0.75
+    GTSCell "Please do nudge me if I should start to talk in excess."
+    MCCell "You're fine, Naomi-chan. Please continue."
+    GTSCell "Thank you."
+    GTSCell "Well, the novel's denouement took a rather unexpected turn. On the eve that the hero was to be sent off to live with a distant relative..."
+    GTSCell "The heroine snuck into his family's estate, confessed her love for him with {i}impeccable{/i} eloquence on the author's part, and stole him away in the night back to her own family's estate."
+    MCCell "...Wow.{w} Obviously I'm not really into that genre, but it sounds like it must've been really moving."
+    GTSCell "Hmhmhm, so it was, ever so much. I was forced to ask my mother to pause for a moment so I could regain my composure."
+    MCCell "Heh."
+    GTSCell "I was thirteen then, and to this day it remains my favorite work of fiction."
+    scene black with fade
+    pause 1
+
+    scene Field with fade
+    "I held my phone away to wipe my brow one more time and puff out a sigh. Just behind the shimmering veil, the giant facilities were starting to come piecemeal into view."
+    MCT "Alright, just a little ways now..."
+    MCT "...Wait, I can't just show up dripping sweat all over. Shit..."
+    "And as I looked over my shoulder at how far I'd come, I realized I didn't have much of a choice."
+    MCCell "So what was the ending like?"
+    GTSCell "That was also rather unexpected."
+    GTSCell "I suppose it shouldn't have been, really, but in the end, filial duty prevailed. After a night of elopement, the hero of the story returned to his family to embark on his journey."
+    MCCell "And the heroine?"
+    GTSCell "Did her duty, as well."
+    GTSCell "Oh, what's the word?... it sort of glossed over scenes from the few years they were apart, how they each got along. Until, one day, he showed up at her gates again."
+    GTSCell "Well, I haven't quite done it justice, but that was the long and short of it."
+    scene Giant Dorm Exterior with fade
+    MCCell "Oh, so sort of a vague, sudden ending. I take it it was still satisfying?"
+    GTSCell "Oh, quite. When we finally finished the book, my mother asked me what I thought about the ending. It was a bit like a koan."
+    "Stepping up to Naomi's door, I held my knuckles over it."
+    MCCell "Oh, interesting. And what {i}did{/i} you think of it?"
+    GTSCell "Well, I-"
+    play sound Knock
+    GTSCell "Ah!"
+    GTS "{size=-6}Hello?...{/size}"
+    "I hung up and tucked my hands behind my back, seconds before Naomi opened the door with muted grace."
+    show GTS surprised with dissolve
+    pause 0.5
+    show GTS unique
+    GTS "Keisuke-kun, did you walk all the way through this dreadful heat just to visit me?"
+    MC "Pssh, of course. I hope I'm not interrupting anything."
+    show GTS neutral
+    GTS "Not at all. Do come in, I'll get you some cold water."
+    MC "Thanks, I... could sure use it."
+    scene Giant Dorm Interior with fade
+    show GTS neutral with dissolve
+    "Giving me a wide berth, she trotted over to her sink and produced from the cupboards what looked like a shotglass between her fingers. The sides of the glass were already fogging up as she walked it back over to me."
+    GTS "I hope you'll pardon my lack of preparation."
+    MC "Oh, none of that. I never told you I was coming, did I?"
+    GTS "Well, indeed."
+    GTS "And, pray tell, is there a reason you brought that book over?"
+    MC "Uh, oh, you... saw..."
+    MC "Heh... I guess I didn't account for the angle. Well... I thought we could pass an hour or two reading it together. Or, uh, I could read it to you."
+    show GTS happy-2
+    "I held it up for her to see, and watched her lips upturn and her stooped breast shudder with soft laughter."
+    GTS "I think that's a lovely idea. Here, let me set it on the couch."
+    show GTS neutral at Transform(xzoom=-1):
+        ease 2.0 xpos 0.8
+    MC "Thanks. Lemme just grab a washcloth or something and I'll at least dry off a little."
+    show GTS neutral at Transform(xzoom=1)
+    GTS "Oh, allow me."
+    show GTS neutral at altMove(0.5, 0.6)
+    "She daintily plucked a dish cloth from one of her kitchen drawers and turned to kneel down in front of me; it was funny, if not a little baffling, to realize she was still about double my height as I gazed into her navel."
+    "Not showing a bit of concern, she put one hand behind my damp mane while the other brushed the towel-sized cloth across my brow, temples, and cheeks."
+    MCT "Seems like yesterday she was 'only' twice my height fully standing up..."
+    MC "Mm, thanks, that feels a lot better. You're very gentle."
+    GTS "The pleasure is mine. Now, would you like to sit down?"
+    MC "Ladies first."
+    "She sat herself down with the book in her lap, and glanced at me hoisting myself up for a moment... I hardly noticed, focused as I was on keeping my drink level... before she turned the book over and stared at the back cover."
+    MC "Yeah, I figured you might not be quite as comfortable reading that on your own."
+    show GTS pondering
+    GTS "What a coincidence that you should bring that up. It is rather odd, but I don't seem to have any trouble reading normal-sized text."
+    MC "Really? At all?"
+    GTS "Well, I still cannot read it at a greater distance than I could before, but yes. I comprehend the text on the spine perfectly well just holding it in hand."
+    show GTS embarrassed
+    GTS "Although turning the pages is another matter entirely."
+    show GTS neutral
+    GTS "That is why I would be quite delighted if you would care to do it in my stead."
+    MC "I aim to please."
+    "I took the book from her outstretched hand... well, outstretched over her lap... and took a sip of water before I scooted up against her hip and flipped to the quaint illustrations marking the first tale."
+    GTS "Ah, Momotaro. I always did love that one."
+    MC "Heh, it's a classic."
+    "I cleared my throat as Naomi laid her arm down at my side, one pointer finger mostly covering my thigh, and I held it at as perfectly neutral an angle between us as I was able to perceive. I paused, heard her breathe in."
+    MC "Once upon a time..."
+    jump daymenu
 
 label GTS041:
     $setProgress("GTS", "GTS043")
