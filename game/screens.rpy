@@ -39,6 +39,8 @@ style label_text is gui_text:
 style prompt_text is gui_text:
     properties gui.text_properties("prompt")
 
+style outlined_text is text:
+    outlines [ (absolute(2), "#FFFFFF", absolute(0), absolute(0)) ]
 
 style bar:
     ysize gui.bar_size
