@@ -7586,7 +7586,7 @@ label FMG049:
     "She grabbed me from underneath her and lifted me into the air with both arms once more, ripping the condom right off of my cock. Akira pinned me to the wall, keeping me in place with one hand."
     FMG "Now I get to have some fun..."
     MC "OOooooohhh my Goooood!"
-    "She bent down to her knees once more, keeping me in place against the wall as she leaned in and took my cock into my mouth. She began to bob her head back and forth, sucking it with an intense amount of suction."
+    "She bent down to her knees once more, keeping me in place against the wall as she leaned in and took my cock into her mouth. She began to bob her head back and forth, sucking it with an intense amount of suction."
     "She was... even better than the last time. Pleasure rushed throughout my body as she continued to suck me off."
     FMG "M-mnph... mhnh...Mngh..."
     MC "T-This is...a-ah... A-amazing... I- Nhgh~!"

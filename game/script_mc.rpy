@@ -1069,20 +1069,23 @@ label global000_homeroom:
     "Tashi-sensei dropped the chalk back on the tray, turned to us, and stepped forward, leaning against the lectern."
     stop music
     HR "..."
-    #hide HR with dissolve
-    show GTS neutral with dissolve
+    hide HR
+    show GTS neutral
     GTS "..."
-    hide GTS with dissolve
+    hide GTS
+    show HR
     HR "..."
-    show RM neutral with dissolve
+    hide HR
+    show RM neutral
     RM "..."
-    hide RM with dissolve
+    hide RM
+    show HR
     HR "..."
     MC "..."
-    show HR neutral with dissolve #remove with dissolve when unique sprite is ready
+    show HR neutral #remove with dissolve when unique sprite is ready
     "Without a word, Tashi-sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
     hide HR
-    show AE surprised
+    show AE surprised with vpunch
     AE "Gch-!"
     hide AE
     show BE surprised with vpunch
@@ -1090,7 +1093,7 @@ label global000_homeroom:
     hide BE
     show WG angry with vpunch
     WG "Keep that thing away from me!"
-    hide WG with dissolve
+    hide WG
     show HR neutral
     "..."
     "..."

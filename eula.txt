@@ -1,0 +1,97 @@
+End user licence agreement
+Please read this EULA carefully, as it sets out the basis upon which we license Growth Academy for use.
+By downloading or playing this game, you are agreeing to be bound by this EULA, you warrant to us that you are at least 18 years of age; if you are not, you must not use the Game.
+
+1.Definitions
+
+1.1 In this EULA, except to the extent expressly provided otherwise:
+
+"Distribution Platform" means any digital distribution platform operated by a third party by means of which the User lawfully acquired the Game;
+"Distribution Platform Terms and Conditions" means the terms and conditions of the Distribution Platform that set out any rights and/or obligations of the User in relation to the Game;
+"Effective Date" means the date upon which the User accepts the terms of this EULA in accordance with the preamble to this EULA;
+"EULA" means this end user licence agreement, including any amendments to this end user licence agreement from time to time;
+"Force Majeure Event" means an event, or a series of related events, that is outside the reasonable control of the party affected (including failures of the internet or any public telecommunications network, hacker attacks, denial of service attacks, virus or other malicious software attacks or infections, power failures, industrial disputes affecting any third party, changes to the law, disasters, epidemics, pandemics, explosions, fires, floods, riots, terrorist attacks and wars);
+"Game" means Growth Academy, as modified, patched, updated and upgraded from time to time by or with the authorisation of the Licensor.
+"Licensor" means Growth Academy dev team;
+“Mod” means a version of any preexisting build of Growth Academy that has been modified to include custom content, be it writing, music, images, or otherwise, that is not officially endorsed by the Growth Academy Development team.
+“Permitted Hardware” means the hardware (operating system) supported by the developers of Growth Academy on which user can install the game.
+"Term" means the term of this EULA, commencing in accordance with Clause 3.1 and ending in accordance with Clause 3.2; and
+"User" means the person to whom the Licensor grants a right to use the Game under this EULA in accordance with the preamble to this EULA.
+
+2. Credit
+
+2.1 This document was created using a template from Docular (https://docular.net).
+
+3. Term
+
+3.1 This EULA shall come into force upon the Effective Date.
+
+3.2 This EULA shall continue in force indefinitely, subject to termination only in case of further notice by the Licensor.
+
+4. Licence
+
+4.1 The Licensor hereby grants to the User from the date of supply of the Game to the User until the end of the Term a worldwide, non-exclusive, non-transferable licence to:
+a) install a copy of the Game on the Permitted Hardware;
+b) use a single instance of the Game on the Permitted Hardware in accordance with the EULA;
+
+4.2 Any licence granted to the User under this Clause shall be subject to the following prohibitions:
+a) the User must not sell, resell, rent, lease, loan, license, sub-license, supply, transfer, publish, distribute or redistribute the Game. The Licensor won't tolerate any redistribution of unauthorised standalone copies of the game with modified content outside of our official build releases, such as minor changes in implemented content that are then passed off as the entire project being owned by the modifier. The stipulations concerning modded content and the like are detailed in section 5.
+b) the User must not make the Game available for download or access by others;
+c) the User must not commercially exploit the Game or use the Game to provide any service. The Licensor will not tolerate profiting financially from Growth Academy itself in any way. The game was always conceived as a non-commercial passion project and we want to keep it that way;
+d) the User must not use the Game in connection with any marketing, advertising or promotional activity;
+e) the User must not delete, remove, disable or circumvent any security protection measures or proprietary notices in or associated with the Game; and
+f) the User must not import or export the Game, or otherwise use the Game, in contravention of any applicable laws, save to the extent expressly permitted by this EULA or permitted by applicable law on a non-excludable basis.
+
+5. Modding Projects
+
+5.1 Modding projects will need to be installed directly on the official copies of the game. Downloading a main copy of GA from our official sources, and having it installed is our requirement. The Licensor won't tolerate any redistribution of unauthorised standalone copies of the game with modded content, outside of our official releases with a newest build
+
+5.2 Mods need to support the newest build of the game that is available to download from official sources. These include Growth Academy Discord server (discord.gg/gfvG6Sn), DeviantArt profile (https://www.deviantart.com/growthacademy/blog/) or future hosting sites officially supported by the dev team. Even if an existing mod is not up to date, distribution of outdated builds of GA is prohibited.
+
+5.3 Future updates may break mods that are in development. We reserve all rights to change the game, introduce new features and overhaul existing features without any need to explain it or taking a direct responsibility for impacting the development of your mod. Growth Academy is a work in progress game and a lot of things will change before we will reach a final version. We can’t and don’t want to feel obligated about limiting the scope of our game.
+
+5.4 Using content from paid asset packs present in game files for promotion of your own projects violates the terms of licences we bought for this game. The Licensor won't tolerate extracting, redistributing and using these assets for promotion of your projects.
+
+5.5 The Licensor won’t tolerate any use of paid and internal assets that were done directly for a game in the standalone projects that aren’t contained within a main game downloaded from sources posted by the Growth Academy dev team
+
+5.6 Standalone fan games can’t use any of paid assets (unless you buy the licence on the store they’re originating from) or internal custom assets that were done directly for a game without our explicit permission. The only thing that is allowed are external assets, which terms of licence allows its use.
+
+5.7 The Licensor won't tolerate profiting financially from mods and Growth Academy itself in any way. The game was always conceived as a non-commercial passion project and we want to keep it that way.
+
+5.8 The Licensor won't tolerate mods using stolen assets injected into our game. Each of the injected assets needs to respect wishes of their original creators based on terms of licence provided by them.
+
+5.9 If we ever work on official modding tools, all mods will need to be retrofitted to be fully compatible with them.
+
+5.10 Each change you have made or will make to characters, fanarts and everything related to your mod needs to be transparent to avoid any confusion with the main game.
+
+5.11 Messaging about the mod needs to be transparent and credit Growth Academy and its developers. Please don’t take advantage of developers' trust for modding projects, undermine their hard work on the project or be insulting towards them because some of the creative choices don't match your personal taste.
+
+5.12 Discussion about your mod (and future mods) on the Growth Academy Discord server (discord.gg/gfvG6Sn) needs to be limited in #ga-mods-and-fans-creations channel. Other channels are reserved for conversations about canon characters.
+
+6. Intellectual Property Rights
+
+6.1 Nothing in this EULA shall constitute an assignment or transfer of any Intellectual Property Rights of the Licensor.
+
+6.2 Save to the extent expressly provided otherwise in this EULA, all the Intellectual Property Rights and other rights in:
+a) the Game;
+b) the works and materials comprised in the Game;
+c) any other software or services of the Licensor, 
+are hereby reserved to the Licensor and its licensors.
+
+7.  Warranties
+
+7.1 If the Licensor reasonably determines, or any third party alleges, that the use of the Game by the User in accordance with this EULA infringes any person's Intellectual Property Rights, the Licensor may acting reasonably at its own cost and expense:
+a) modify the Game in such a way that it no longer infringes the relevant Intellectual Property Rights; or
+b) procure for the User the right to use the Game in accordance with this EULA.
+
+7.2 The User warrants to the Licensor that it has the legal right and authority to enter into this EULA and to perform its obligations under this EULA.
+
+7.3 All of the parties' warranties and representations in respect of the subject matter of this EULA are expressly set out in this EULA. To the maximum extent permitted by applicable law, no other warranties or representations concerning the subject matter of this EULA will be implied into this EULA or any related contract.
+
+8. Acknowledgements and warranty limitations
+
+8.1 The User acknowledges that the use of the Game will require computer hardware and software meeting the minimum requirements specified by the Licensor. The User further acknowledges that, as the Game is updated, those requirements may change and, accordingly, the Game may cease to function on the hardware of the User.
+
+8.2 The User acknowledges that complex software is never wholly free from defects, errors and bugs; and the Licensor gives no warranty or representation that the Game will be wholly free from defects, errors and bugs.
+
+8.3 The User acknowledges that complex software is never entirely free from security vulnerabilities; and the Licensor gives no warranty or representation that the Game will be entirely secure.
