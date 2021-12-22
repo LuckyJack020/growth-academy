@@ -4885,120 +4885,176 @@ label FMG034:
     $setProgress("FMG", "FMG038")
     scene Hallway with fade
     play music Schoolday
-    "I swear if I have one more pop quiz today, I'm going to highly consider jumping out the nearest window."
-    "Please science class... spare me, I'm not strong enough."
-    MCT "I'll grab my textbook from my locker and meet up with Daichi."
-    Natsuko "Good afternoon, Keisuke-san."
-    "I nearly jumped out of my pants, which I would've preferred over hitting my head on the roof of my locker."
-    MC "Son of a bitch, that hurts! Don't scare me like that, Natsuko-san!"
-    "When I turned around I was met with quite the surprise."
-    MC "Holy crap! Uh... have you been... working out?"
+    MCT "I swear if I have one more pop quiz today, I’m going to highly consider jumping out the nearest window. Science, I’m begging you. Please don’t do this to me..."
+    MCT "I’ll grab my textbook from my locker and meet up with Daichi. Hopefully, he actually kept his word about studying together."
+    Natsuko "Good afternoon, Hotsure-san."
+    "I nearly jumped out of my pants, which I would’ve preferred over hitting my head on the roof of my locker."
+    MC "Son of a bitch, that hurts! Don’t scare me like that, Okamoto-san!"
+    "Feeling the pain of what felt like getting hit by a car. I turned around to face Natsuko only to be met with a much larger surprise."
+    MC "Good lawd, what happened to you??? Someone’s been taking their protein."
     show Natsuko neutral with dissolve
-    Natsuko "I told you at the cafeteria, I'm not gonna lose to Akira again."
+    Natsuko "I told you at the cafeteria, I’m not gonna lose to Akira again. I pushed myself to my limits for these results,"
     show Natsuko flex
-    Natsuko "Impressive right?"
-    MC "Um, yeah...I didn't really see you growing this much though. How hard did you train exactly?"
+    Natsuko "Impressed, I’m sure."
+    MC "Um, yeah... those are some beefy arms... So like, did you ever leave the gym? What exactly did you do? I can’t deny I’m slightly curious."
     show Natsuko smug
-    Natsuko "I can't just reveal those secrets. You could easily go blabbering to her about it, and I'd like to remain one step ahead of her."
+    Natsuko "I can’t just reveal those secrets. You could easily go blabbering to Akira about it, and I’d like to remain one step ahead of her."
     MC "Right..."
-    MC "Anyway, I gotta get to class, can't afford to be late for science."
-    show Natsuko happy
-    Natsuko "Oh yeah? Well, there was a pop quiz in science today. It's pretty straightforward, so I'm sure you'll be fine."
-    MCT "Science has yet ANOTHER quiz. In other news, the sky is blue."
-    MC "Thanks for the heads-up, I'll see you around."
-    Natsuko "Good luck Keisuke-san, enjoy the rest of your day."
-    "As I made my way to class my phone buzzed."
+    MCT "What a weirdo. It’s not that serious..."
+    MC "...Anyway, I gotta get to class, can’t afford to be late for science and miss out on all the fun of learning!"
+    MCT "I should honestly jump out the window."
+    show Natsuko neutral
+    Natsuko "You’re prepared for the pop quiz, yes? Hmm, it was very straightforward. I’m sure you’ll be fine."
+    "My eyes shifted towards the open window as I started planning out the best course of action."
+    MCT "I’ll suck it up... for today. Likely in more than one sense."
+    MC "Thanks for the heads-up, I’ll see you around."
+    Natsuko "Good luck, Hotsure-san."
     hide Natsuko with dissolve
-    MCT "A text from Akira... and she's asking to do arms today at the gym."
-    MC "Pop quizzes galore and now arm day with Akira. I'm gonna be physically and mentally sore."
+    "With Nat out of my hair (heh) I could finally start enjoying myself before the pop quiz sucked the life out of me once more."
+    "*{i}bzzt bzzt{/i}*"
+    "Then I was hit with the gym text."
+    FMGCell "Yo, dude you want to do arms after your classes? I’m trying to break my record on the bicep curl."
+    MCT "I’m trying to break my spine."
+    MC "My brain is in pain from having to think and now the rest of my body gets to experience it. It’s rough being me."
 
+    scene black with fade
+    pause 1
     scene Campus Center with fade
-    "I spotted Akira jogging in place underneath the tree, and I hurried over to greet her. If I allowed her to continue, I'm sure people would've thought an earthquake was happening."
-    MC "Hey, what's up? Are you ready to head to the gym?"
+    "I spotted Akira jogging in place underneath the tree, and I hurried over to greet her. If I allowed her to continue, I’m sure people would’ve thought an earthquake was happening."
+    MC "Yo! Never stop exercising I see. Gotta keep the gains coming."
     show FMG happy with dissolve
-    FMG "Just the dude I was looking for! Let me just grab my bag and we can head over."
-    "Akira scooped up her bag and we headed towards the weight room."
+    FMG "You know it, Kei-kun. Can’t be the biggest girl around if I’m not staying active. Let me grab my bag and we can head over."
+    pause 1
     show FMG neutral
-    FMG "Sooo how was your day?"
-    MC "Ugh, don't get me started... nearly all of my classes had quizzes, and I was probably prepared for maybe two of them."
-    MC "Thankfully I don't think I failed any of them. What have you been up to today?"
+    FMG "Sooo, how was your day?"
+    MC "I thought about jumping out the window and tripping down the stairs a little too much."
+    show FMG surprised
+    FMG "Why???"
+    MC "First, I had like twenty million pop quizzes. Then, I had the pleasure of running into Natsuko who now has biceps bigger than my head. The pop quizzes were worse though. {w}Making me think... on a Friday. Ridiculous."
+    MC "I don’t think I failed any of them, so I guess that’s cool.. Still wish it wasn’t in every single freaking class. But anyway, that was my day! How has yours been? Hopefully less annoying."
     show FMG angry-2
-    FMG "Well for starters, Chibuki spilled coffee on my new top and of course, she didn't bother to tell me until I got back to the dorm. She didn't even bother to try and clean it, so now it's stained pretty bad."
+    FMG "Well for starters, Chibuki spilled coffee on my new top, and of {i}course{/i}, she didn’t bother to tell me until I got back to the dorm. {w}AND She didn’t even try to clean it, so now it’s stained."
     show FMG angry
-    FMG "Argh, I was so pumped to show it to you! I looked freaking good, I'm sure you can't even imagine!"
-    MC "Aye, I'll come over sometime this week and we can... clean it together!"
+    FMG "Argh, I was so pumped to show it to you! I looked freaking good, I’m sure you can’t even imagine!"
+    MCT "I can absolutely imagine."
+    MC "Aye, I’ll come over sometime this weekend and we can... clean them together! I think some of my clothes have some stains too!"
     show FMG aroused-2
-    FMG "It doesn't take two to remove a stain, you just want to see me change. You're so ridiculous, Kei-kun~"
-    MC "Hey, you're putting words in my mouth!"
-    MCT "I definitely wouldn't mind though..."
+    FMG "Oh, yeah? I’m thinking you want to do more than just clean stains~"
+    MC "Yeah... That’s kinda... what I was implying. Was it not clear enough?"
+    show FMG sad
+    FMG "I was hoping you’d be a {i}little{/i} saucy back..."
+    MC "Ooooooooooh, well why didn’t you just say so!"
+    pause 1
+    MC "{size=6}I’m going to rub out those stains {i}so{/i} hard.{/size}"
+    pause .5
+    FMG "We should talk about something else. You... You need a lot of practice."
+    MCT "I thought it was pretty good. Can’t please everyone, I guess."
     show FMG neutral
-    FMG "Pfff, you know I'm teasing. Oh! That reminds me. Chibuki told me something else this morning."
-    MC "This is gonna be good."
-    FMG "So after she was done apologizing, she asked me if I met any of the new transfer students."
+    FMG "On the topic of something that hasn’t caused me a great deal of pain. Chibuki gave me the scoop about Natsuko."
+    MC "Awwww, I just thought of another spicy one-liner! I’ll wait for my turn."
+    FMG "Music to my ears!"
+    MC "On sec-"
     show FMG angry-2
-    FMG "Obviously I told her about Natsuko and guess what she told me."
-    MCT "Let me guess - she's mean, vile, and completely despicable."
-    MC "The suspense is killing me, what did she say?"
+    FMG "Nope! You lost your chance!"
+    FMG "Sooooo{w} after she was done apologizing, she asked me if I met any of the new transfer students."
+    show FMG angry-2
+    FMG "Obviously I told Chibuki about her and that crow’s next she calls hair and guess what she told me."
+    MC "I got this! Uuuuh... she sucks? She’s... She’s mean? Am I close??? I feel like I’m close."
+    FMG "You aren’t going to believe me but..."
+    pause .5
+    MC "The suspense is killing me, what did she say? Tell me!"
     show FMG surprised-2
     FMG "...That she is one of the sweetest girls on campus. I nearly choked on my water when she told me."
+    MC "Quick, give me your water so I can spit it out!"
+    FMG "Like what?????? Dude, I thought Chibuki was high. There was no way she was being serious."
     show FMG neutral
-    FMG "She even said that Natsuko helps her with studying for like, four of her classes, and she volunteers a lot of her time around town."
-    FMG "I just can't believe it, that is not the girl we know."
-    MC " Well, she's nice when she's talking to me, respectful and kind without a doubt. That said, however, she's a totally different person when you're around."
-    FMG "When we first met her, she did come off quite aggressive towards me. She certainly made it quite clear why she wasn't very fond of me."
-    MC "Yeah, but is the way someone dresses really a good reason to hate on someone?"
-    MC "I do recall her saying that you looked 'small' despite sharing the same factor."
+    FMG "She went on to say how Natsuko helps her with studying for like, four of her classes, and she volunteers a ton of her time around town."
+    FMG "I just can’t believe it, that is {i}not{/i} the girl we know. Who the hell would want her around for... anything?!?!"
+    MC "Eeeeh, she’s overly formal and kinda stiff with me. It’s a little much at times... all the time.
+    Look the point is we both know she freaking SUCKS to be around when you’re about. Hang on... I have an idea."
+    FMG "What?"
+    MC "Have you considered disappearing? That might just solve the issue. Would you want to try it?"
+    show FMG angry-2
+    FMG "???"
+    FMG "What about her? Why do I have to disappear?"
+    MC "... I don’t know. I thought it was funny. Can I try again?"
     show FMG sad
-    FMG "Maybe it's deeper than that, maybe she's hiding something."
-    MC "What makes you say that?"
-    show FMG surprised
-    FMG "Heh, it's just a thought. We could be looking too far into this, so let's just move on."
-    MC "Okay, yeah. No problem."
-    MCT "Women confuse me..."
+    FMG "Please don’t. Your jokes make my ears bleed."
+    MC "That’s because you have bad taste. Stick around with me a little longer and I’ll have you laughing for days. Trust me."
+    FMG "That does anything but reassure me..."
+    show FMG neutral
+    FMG "Okay, okay let me get us back on topic! When we first met her, it started out... decently. But After that five minutes passed she was a different person. Which is weird, now that I think about it."
+    FMG "I just can’t imagine her being sunshine and rainbows all the time, especially when she has that hard of a resting bitch face."
+    FMG "It’s... It’s so hard to believe that someone like her volunteers to {i}help{/i} people. I’m surprised she isn’t tripping people in the hallway and kicking puppies."
+    MC "She’s uh... what’s the word I’m looking for...? {w}Ah, Unique.{w}I don’t honestly understand why she doesn’t like you. I’d figure with you being one of the bigger muscle students she’d be open to training with you at the very least."
+    MC "I don’t really get it. The whole thing is so odd. She hates you and she hits on me... {w}I knew I was good-looking, but damn! I can’t keep the ladies off me."
+    show FMG sad-2
+    FMG "She’d get over you if she heard you talk more..."
+    pause .5
+    MC "Naaaah."
+    MC "Maybe it’s not as deep as we think it is? We could be making a bigger deal out of it than it is."
+    show FMG neutral
+    FMG "...Yeah, probably. It’s whatever right now. We should get going to the gym, I want to make sure we get our workout in."
+    MC "Hmmmm, now that I think about it, it might be worth putting that off and discussing this some more."
+    FMG "You legit just said that it might not be that deep and we could be overthinking it."
+    MC "Did I? That’s strange, I don’t recall."
+    show FMG flex
+    FMG "You aren’t getting out of it, come on you lazy ass."
 
     scene black with fade
     $setTime(TimeEnum.EVE)
-    scene Lockers with fade
-    show FMG flex with dissolve
-    FMG "I think for today we'll keep this session short and sweet."
-    show FMG neutral
-    FMG "It's getting late, and sadly I have homework to do."
-    MC "Won't be hearing any complaints from me, I'm freaking beat today."
+    scene Lockers
     show FMG happy
-    FMG "Cool, let's get started!"
-    "As we headed to the door, Natsuko appeared from around the corner. Of course, she did."
-    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
-    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
-    with dissolve
-    Natsuko "Ugh, what are you doing here Akira?"
-    show FMG angry-2
-    FMG "You really have to show up at the worst times to ruin my day, huh?"
-    FMG "Well since it isn't obvious for you, Natsy, Kei and I are here to work out, so don't bother us."
-    show Natsuko angry
-    Natsuko "Don't you ever call me Natsy."
-    show FMG surprised-2
-    FMG "Oh my, I'm shaking."
-    show FMG angry-2
-    FMG "Get over yourself, sheesh."
-    show Natsuko neutral
-    Natsuko "Don't tell me what to do. Hmph, I hate wasting my time with these... squabbles."
-    show Natsuko flex
-    Natsuko "Just know that next time we meet, things are gonna be very different. You don't stand a chance against me now, and will NEVER be able to."
-    show FMG angry
-    FMG "You're talking a lot of smack for someone who's running away."
+    with fade
+    FMG "To make you feel better, we’ll keep the session today short and sweet. Can’t have my Kei-kun suffering too much."
+    MC "Turning over a new leaf? Cutting a workout short is very taboo for you."
     show FMG flex
-    FMG "Can't say I blame you, I'd be scared of me too, heh."
-    show Natsuko smug
-    Natsuko "I'll leave you with this. Whatever voice is telling you that you have any chance against me. It's lying."
-    hide Natsuko with dissolve
-    "Natsuko proudly scoffed and walked out of the locker room."
-    MC "I have never seen someone so full of themselves. You handled that pretty well, so nice job."
+    FMG "We can make up for when we have leg day!"
+    MCT "Should’ve jumped..."
+    MC "I’ll take what I can get, I guess. Just don’t make me use that tricep dip thingy today... not a fan."
     show FMG neutral
-    FMG "Thanks, she'll get what's coming to her soon enough."
+    FMG "Sure, we can skip it for today. But that’s the only one we are dropping."
+    MC "Love to hear it, let’s roll."
+    "As we headed to the door, Natsuko appeared from around the corner. Because of course, she did. {w}Wouldn’t be Natsuko if she didn’t appear at the worst possible time all the time."
+    show FMG neutral at altMove(0.5, 0.75)
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Natsuko "I knew I smelled a rat. What made you decide to stink up the place?"
+    show FMG angry-2
+    FMG "Why am I not surprised you’re here. Get out of my way {i}Natsy{/i}. I’m here with Kei to work out. I’m not here to entertain our feud this time."
+    show Natsuko neutral
+    Natsuko "If you ever call me Natsy again. I will break you in half like a child’s toy. That’s a promise."
+    show FMG surprised-2
+    FMG "Oh my, I’m shaking."
+    show FMG angry-2
+    extend " Big bad Natsy doesn’t like being called names. Cry about it— you stuck up bitch."
+    MCT "The tension is so {i}thicc{/i} you could cut it with a knife..."
+    FMG "I’m waiting for that promise."
+    pause .5
+    extend " Figures it was meaningless."
+    Natsuko "You got a pass this time simply because I’m not in the mood. Don’t try me again."
+    show Natsuko smug
+    Natsuko "You are nothing compared to me, Akira. I’d suggest taking up gardening with Yamazaki-san. The gym isn’t for people like {i}you{/i}."
+    MCT "What does {i}that{/i} mean for someone like me though????"
+    show FMG angry
+    FMG "The only way you’d catch me near a garden is when I’m throwing dirt in your face."
+    show Natsuko neutral
+    Natsuko "Go figure, someone as childish as yourself resorts to something so pathetic."
+    FMG "Yeah, I didn’t ask for your opinion. Now, get out of my face before I do it for you."
+    show Natsuko smug
+    Natsuko "Heh, I’d like to see you try. Some other time though, I’m over this."
+    "Natsuko proudly scoffed and walked out of the locker room."
+    hide Natsuko with dissolve
+    MC "She sounded pretty scared to me. I’d say that’s a win for you."
+    show FMG neutral at altMove(0.5, 0.5)
+    FMG "She’ll get what’s coming to her eventually. She’ll be begging for my forgiveness."
     show FMG flex
-    FMG "Heh! She won't know what hit her!"
-    MC "Looking forward to you putting her in her place."
-    "With that issue behind us, we finally headed to the gym. She got so worked up that we ended up doing a full routine anyways."
+    FMG "Heh, she won’t know what hit her."
+    MC "Actually, if you plan on being bigger than her, I think she will too. Just my two cents."
+    show FMG sad
+    FMG "That comment cost you an easy workout."
+    show FMG flex
+    extend " Now we’re doing a full routine!"
+    MC "..."
     jump daymenu
 
 label FMG035: #tmp
@@ -9648,7 +9704,7 @@ label FMG061:
     FMG "Okay, okay, I’ll wait my turn."
     scene Bathroom with fade
     MC "F-Freedom."
-    "It was getting hard to breathe, I could feel my life slowly slipping away. The light at the end of the tunnel getting... brighter."
+    MC "It was getting hard to breathe, I could feel my life slowly slipping away. The light at the end of the tunnel getting... brighter."
     $setFMGOutfit(OutfitEnum.NUDE)
     show FMG sad-2
     FMG "So dramatic for no reason. You’ve been asking to get crushed by my thighs for weeks."

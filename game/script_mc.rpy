@@ -1062,7 +1062,7 @@ label global000_homeroom:
     "Eventually we all took our seats, looking around at the sparse classroom. All the usual educational aids seemed to be on shelves or set into the wall, making the room seem even more like an empty box than it already was."
     "If not for the teacher's lectern at the front of the class, you'd be forgiven for thinking we were in a pen instead of a classroom."
     "Finally the bell rang, and at the last possible second one could enter and not be late, our homeroom teacher slid open the door and entered."
-    #show HR unique with dissolve REMOVE WHEN UNIQUE SPRITE IS READY
+    show HR unique with dissolve
     MCT "'Dour' is the first word that comes to mind... Guy looks like he's been middle-aged his entire life."
     "The man was tall, thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
     "{i}Tashi{/i}"
@@ -1073,16 +1073,16 @@ label global000_homeroom:
     show GTS neutral
     GTS "..."
     hide GTS
-    show HR
+    show HR unique
     HR "..."
     hide HR
     show RM neutral
     RM "..."
     hide RM
-    show HR
+    show HR unique
     HR "..."
     MC "..."
-    show HR neutral #remove with dissolve when unique sprite is ready
+    show HR neutral
     "Without a word, Tashi-sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
     hide HR
     show AE surprised with vpunch

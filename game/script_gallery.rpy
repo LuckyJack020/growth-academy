@@ -8,12 +8,12 @@ init python:
     galImgList["AE"] = [["AE000", "GoodNotGreat", 995], ["AE015", "GoodNotGreat", 995], ["AE024", "GoodNotGreat", 995], ["AE024b", "GoodNotGreat", 995], ["AE024c", "GoodNotGreat", 995], ["AE024d", "GoodNotGreat", 995], ["AE024e", "GoodNotGreat", 995], ["AE025", "GoodNotGreat", 995], ["AE050_behind1", "GoodNotGreat", 995], ["AE050_behind2", "GoodNotGreat", 995], ["AE050_behind3", "GoodNotGreat", 995], ["AE050_behind4", "GoodNotGreat", 995], ["AE050_behind5", "GoodNotGreat", 995], ["AE050_behind6", "GoodNotGreat", 995], ["AE050_bj1", "GoodNotGreat", 995], ["AE050_bj2", "GoodNotGreat", 995], ["AE050_bj3", "GoodNotGreat", 995], ["AE050_bj4", "GoodNotGreat", 995], ["AE050_sit1", "GoodNotGreat", 995], ["AE050_sit2", "GoodNotGreat", 995], ["AE050_spank1", "GoodNotGreat", 995], ["AE050_spank2", "GoodNotGreat", 995], ["AE050_spank3", "GoodNotGreat", 995], ["AE050_spank4", "GoodNotGreat", 995], ["AE074_snow1", "GoodNotGreat", 995], ["AE074_snow2", "GoodNotGreat", 995], ["AE074_snow3", "GoodNotGreat", 995]]
     galImgList["GTS"] = [["GTS000", "GoodNotGreat", 995], ["GTS024", "Ekkonshon", 1040], ["GTS025", "GoodNotGreat", 995], ["GTS035", "GoodNotGreat", 995], ["GTS044_stars1", "Ekkonshon", 1040], ["GTS044_stars2", "Ekkonshon", 1040]]
     galImgList["FMG"] = [["FMG016", "Sheep", 1100], ["FMG041", "Sheep", 1100], ["FMG050", "Sheep", 1100], ["FMG055", "Sheep", 1100], ["FMG056", "Sheep", 1100], ["FMG061", "Sheep", 1100]]
-    galImgList["WG"] = [["WG000", "GoodNotGreat", 995], ["WG009", "GoodNotGreat", 995], ["WG046", "GoodNotGreat", 995], ["WG047", "GoodNotGreat", 995]]
+    galImgList["WG"] = [["WG000", "GoodNotGreat", 995], ["WG009", "GoodNotGreat", 995], ["WG042", "MOLOT.CO", 1050], ["WG046", "GoodNotGreat", 995], ["WG047", "GoodNotGreat", 995]]
     galImgList["PRG"] = [["PRG020", "Marrazan", 1055], ["PRG025", "Marrazan", 1055], ["PRG038", "Marrazan", 1055]]
     #galImgList["RM"] = [["RM000", "GoodNotGreat", 995]]
 
     for g in girllist:
-        galleries[g].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 200, 150, bilinear=True)
+        galleries[g].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 266.67, 150, bilinear=True)
         galleries[g].transition = dissolve
         for i in galImgList[g]:
             galleries[g].button("cg " + i[0])
@@ -63,7 +63,7 @@ screen gallery():
 
         for i in range(page * 6, (page * 6) + 6):
             if i < len(galImgList[activegal]):
-                add galleries[activegal].make_button("cg " + galImgList[activegal][i][0], im.Scale("Graphics/ui/gallery/" + galImgList[activegal][i][0] + ".png", 200, 150, bilinear=True), xalign=0.5, yalign=0.5)
+                add galleries[activegal].make_button("cg " + galImgList[activegal][i][0], im.Scale("Graphics/ui/gallery/" + galImgList[activegal][i][0] + ".png", 266.67, 150, bilinear=True), xalign=0.5, yalign=0.5)
             else:
                 null
 
