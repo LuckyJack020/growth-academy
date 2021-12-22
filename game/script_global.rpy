@@ -132,7 +132,7 @@ image Club = "Graphics/ui/bg/NYI.png"
 image Computer Room = DynamicImage("Graphics/ui/bg/computerroom_[gametime].png")
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
 image Diner = "Graphics/ui/bg/archiveBG/burgerrestaurant.png"
-image Dock = "Graphics/ui/bg/NYI.png"
+image Dock = "Graphics/ui/bg/dock_[gametime].png"
 image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
 image Dorm Hallway = "Graphics/ui/bg/archiveBG/dormhallway.png"
 image Dorm Interior = DynamicImage("Graphics/ui/bg/archiveBG/dorminterior_[gametime].png")
@@ -1142,10 +1142,10 @@ init 2 python:
     eventlibrary['PRG018'] = {"name": "A Cut Above", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                "location": "campuscenter",     "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG019", "obsflags": [],       "conditions": []}
     eventlibrary['PRG019'] = {"name": "Cream and Sugar", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,                    "location": "classroom",         "priority": PrioEnum.NONE, "sp": 3,     "next": "PRG020", "obsflags": [],       "conditions": []}
     eventlibrary['PRG020'] = {"name": "R&R", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,               "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG021", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG021'] = {"name": "Practice Makes Perfect", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,            "location": "cafeteria",         "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG022", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG022'] = {"name": "Grocery Run", "girls": ["PRG"], "type": EventTypeEnum.CORE,                              "location": "supermarket",       "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG023", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG023'] = {"name": "Invaluable Research", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "library",           "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG024", "obsflags": [],       "conditions": []}
-    eventlibrary['PRG024'] = {"name": "Flicker", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                  "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 5,     "next": "PRG025", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG021'] = {"name": "Back to the Usual", "girls": ["PRG", "WG"], "type": EventTypeEnum.CORE,            "location": "cafeteria",         "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG022", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG022'] = {"name": "Reality", "girls": ["PRG"], "type": EventTypeEnum.CORE,                              "location": "supermarket",       "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG023", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG023'] = {"name": "Healing a Heart", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "library",           "priority": PrioEnum.NONE, "sp": 4,     "next": "PRG024", "obsflags": [],       "conditions": []}
+    eventlibrary['PRG024'] = {"name": "Butterflies", "girls": ["PRG"], "type": EventTypeEnum.CORE,                                  "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 5,     "next": "PRG025", "obsflags": [],       "conditions": []}
     eventlibrary['PRG025'] = {"name": "House Call", "girls": ["PRG"], "type": EventTypeEnum.CORE,                               "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 5,     "next": "PRG026", "obsflags": [],       "conditions": []}
     eventlibrary['PRG026'] = {"name": "Here Nor There", "girls": ["PRG"], "type": EventTypeEnum.CORE,                           "location": "dormPRG",           "priority": PrioEnum.ALL, "sp": 5,      "next": "PRG027", "obsflags": [],       "conditions": []}
     eventlibrary['PRG027'] = {"name": "The Morning Routine", "girls": ["PRG"], "type": EventTypeEnum.CORE,                      "location": "dormPRG",           "priority": PrioEnum.NONE, "sp": 5,     "next": "PRG028", "obsflags": [],       "conditions": []}
@@ -1292,6 +1292,7 @@ init 2 python:
     eventlibrary['WG065'] = {"name": "A Hefty Heist", "girls": ["WG", "PRG", "BE", "FMG"], "type": EventTypeEnum.OPTIONAL,                                            "location": "dorminterior",            "priority": PrioEnum.NONE,              "obsflags": [],      "conditions": [[ConditionEnum.AND, [ConditionEnum.EVENT, "WG063"], [ConditionEnum.NOEVENT, "WG069"]]]}
 
     eventlibrary['WGBE001'] = {"name": "So Bad It's Good", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "classroom",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.AND, [ConditionEnum.FLAG, "DormWG_Seen"], [ConditionEnum.NOEVENT, "WG044"]]]}
+
     eventlibrary['WGBE003'] = {"name": "It's a Miracle!", "girls": ["WG", "BE"], "type": EventTypeEnum.OPTIONAL,                                                          "location": "dormWG",        "priority": PrioEnum.NONE,              "obsflags": [],            "conditions": [[ConditionEnum.EVENT, "WG062"]]}
     eventlibrary['WGFMG001'] = {"name": "Afraid of a Little Fun?", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                             "location": "gym",               "priority": PrioEnum.NONE,              "obsflags": [],              "conditions": [[ConditionEnum.AND, [ConditionEnum.AND, [ConditionEnum.NOEVENT, "FMGWG003"], [ConditionEnum.NOEVENT, "WG043"]], [ConditionEnum.OR, [ConditionEnum.EVENT, "WG032"], [ConditionEnum.EVENT, "WG037"]]]]}
     eventlibrary['WGFMG002'] = {"name": "Tamer of Dragons", "girls": ["WG", "FMG"], "type": EventTypeEnum.OPTIONAL,                                                   "location": "dorminterior",     "priority": PrioEnum.NONE,              "obsflags": [],                  "conditions": [[ConditionEnum.EVENT, "WG043"]]}
