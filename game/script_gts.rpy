@@ -4459,6 +4459,8 @@ label GTS026_c4:
 label GTS027:
     if getFlag("GTS015_movie"):
         $setProgress("GTS", "GTS028T")
+    elif getFlag("GTS015_shopping"):
+        $setProgress("GTS", "GTS028S")
     else:
         $setProgress("GTS", "GTS029")
     scene Dorm Interior with fade
@@ -4591,6 +4593,668 @@ label GTS027_c1_2:
     GTS "I'm glad you enjoyed yourself as much as I did tonight. I hope we can do something similar to this in the future."
     MC "That is a lovely idea, and one I look forward to making a reality."
     "I waved goodbye and briskly made my way back to my dorm."
+    jump daymenu
+
+label GTS028S:
+    $setProgress("GTS", "GTS029")
+    scene Town with fade
+    "I realized then that I couldn't remember ever seeing Naomi in a hurry."
+    play music Busy
+    $setGTSOutfit(OutfitEnum.CASUAL)
+    show GTS surprised with dissolve
+    "But I was certainly enjoying the sight of her in her elegantly understated ensemble... even if it was a bit clingier than last week."
+    "Despite her wide-brimmed hat, she was fanning herself. Her hand, like dragonfly wings, moved with blurring speed and delicate grace as she breathed through the sliver of her open mouth."
+    "I could even feel some of the puffs of air as she waved, her palm now big enough to cover my face, and boy, could I ever use the refreshment."
+    MC "Hah... well, mission accomplished, huh?"
+    GTS "Yes, erm... I do apologize for my lack of foresight."
+    MC "I told you Tanaka-san was chill. They probably wouldn't have cared if we {i}were{/i} a few minutes late."
+    show GTS neutral
+    GTS "A lesson learned, indeed."
+    MC "Where are they, anyway? Tanaka-san wouldn't just bail, Tomoe-san {i}definitely{/i} wouldn't."
+    GTS "Perhaps the bus has been delayed."
+    MC "Could've been. I guess you do make a pretty good pace now, too, even when you're walking."
+    show GTS surprised
+    GTS "Yes, well, life is rather a complicated machine, is it not?"
+    MCT "She's cute when she deflects."
+    MC "Guess so.{w} Well, what do you wanna do today?"
+    show GTS neutral
+    GTS "The day affords us many options, doesn't it? Hmmm..."
+    "She contemplated in silence as cars rolled leisurely by; the swaying canopies of the trees shimmered by her head, and the effect as I looked up at her was..."
+    "I couldn't fully absorb it, as her eyes widened at some sight behind me."
+    show GTS happy
+    GTS "Ah, that looks to be them now!"
+    "I looked down the street behind me to see a beastly, rumbling curmudgeon of a bus heading our way."
+    MC "...Wow. Look who rolled up all the way from the Koizumi administration."
+    show GTS neutral
+    GTS "My, that {i}is{/i} a relic."
+    "Its arthritic axles ground to a slow halt at the stop before us; it was then that I observed how close Naomi was, standing there with her hands folded, to being able to see over even the island's enlarged buses."
+    "The door folded open, and glossy heads filed out into the sunlight; one was a fiery red, and one right behind it clay brown."
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0)
+    with dissolve
+    Ryoko "Yamazaki-san, Hotsure-san!"
+    show Ryoko annoyed
+    extend " We finally meet."
+    Minori "Apparently the normally scheduled bus needed maintenance."
+    GTS "Ah, I see. Well, I'm glad you two made it without too much difficulty."
+    show Ryoko happy
+    Ryoko "The feeling's mutual!"
+    show Ryoko neutral
+    extend " Now, where are we headed first?"
+    MC "...How about lunch? I think I saw a ramen joint a block over."
+    show Ryoko happy
+    Ryoko "I'd go for that!"
+    Minori "Agreed."
+    GTS "Let's."
+    show Ryoko neutral
+    "We made our way over to the spot; I could tell Naomi wasn't having such an easy time keeping pace with the three of us."
+    "Minori strolled with easy leisure behind us, while Ryoko had to slow down every so often as she realized she had passed me, her eyes otherwise always scanning the scenery for... I don't know what."
+    "And there it was, Akashi's Up North Noodles. A walrus-like entity with soba whiskers watched, with joyous eyes, the procession of hungry salarymen meandering in as they muttered the day's gossip amongst each other."
+    "None of us could really be surprised to see the line very nearly stretching out the door, but nevertheless I saw we still had just enough room to squeeze the four of us in."
+    stop music fadeout 2.0
+    "And squeeze we did... Naomi, of course, ducked too."
+
+    scene Cafe with fade
+    play music DayByDay
+    MC "'Scuse me!"
+    "The air was hot and soupy, its thick smell like a potpourri of meats with just a pinch of salt."
+    #I give up trying to figure out how to do this without everyone's Y axis going nuts.
+    #show Ryoko neutral:
+    #    xanchor 0.5 yanchor -0.055 xpos 1.1
+    #    linear 0.4 xpos 0.95
+    #    pause 0.5
+    #    linear 0.4 xpos 0.8
+    Ryoko "Coming through, sorry!"
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    "With the first of my companions coming in behind me I was suddenly reminded of the subways back home. I couldn't afford to linger on the thought, though, if I didn't want to be frenching the t-shirt on the guy in front of me."
+    #show GTS neutral:
+        #xanchor 0.5 yanchor 0.0 xpos 1.2
+        #linear 1.5 xpos 0.9
+        #pause 0.5
+        #linear 1.0 xpos 0.8
+        #pause 0.5
+        #linear 1.0 xpos 0.7
+        #pause 0.5
+        #linear 1.0 xpos 0.6
+        #pause 0.5
+        #linear 1.0 xpos 0.5#
+    GTS "Pardon me, my apologies."
+    show GTS neutral with dissolve
+    "Behind the counter were two men; one with a frazzled, weathered brown beard scribbling down and dishing out orders like a well-oiled machine..."
+    "...And the other stood a head above his coworker, and everyone else in the room except Naomi, his rippling, oaken forearms expertly composing bowls of ramen with only the occasional pause to wipe his thick, grease-splattered glasses."
+    #show Minori embarrassed:
+    #    xanchor 0.5 yanchor -0.04 xpos 1.1
+    #    linear 1.5 xpos 0.9
+    #    pause 0.5
+    #    linear 1.0 xpos 0.8
+    #    pause 0.5
+    #    linear 1.0 xpos 0.7
+    #    pause 0.5
+    #    linear 1.0 xpos 0.2
+    Minori "Oh, um, pardon me, sorry."
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    "They worked almost like one mind in two bodies; I watched the line shrink ahead of us as if we were all on a wood paneled conveyor belt. That was when I realized I hadn't actually thought of what I wanted."
+    "Nevertheless, we sidled up against the counter as the man scanned us with a notepad in his hand and a warm crinkle in his beard. I quickly glanced up at the menu on the wall."
+    Cashier "Hey, how are ya? What can I do for you guys?"
+    MC "I'll have, uhhh... bowl of shoyu with a can of matcha, please."
+    Cashier "You betcha, bud! And what do you lovely ladies want?"
+    Minori "Tonkotsu, please."
+    GTS "I would like a bowl of hakodate with a bottle of water, please."
+    Ryoko "I want a bowl of shio with narutomaki, soba cooked extra firm, some carrot straws, a splash of orange juice and no egg white. Oh, and a bottle of water, please."
+    Cashier "You betcha!"
+    "He turned his head halfway back towards the muscular gentleman behind him."
+    Cashier "Order up, Kazunari! One sho, one ton, one ha, and a shio extra firm redhead with goo, make it dizzy and paint it orange."
+    Chef "You betcha, dad!"
+    Cashier "Alrighty, that'll be thirty-six hundred there, if ya please."
+    show GTS happy
+    GTS "Allow me."
+    menu:
+        "Accept":
+            MC "Thanks, Yamazaki-san."
+            $setAffection("GTS", 2)
+            show Ryoko confused
+            Ryoko "We could've just split the bill."
+            show Ryoko neutral
+            extend " Appreciate the gesture, though. Thanks."
+            $setAffection("GTS", 2)
+            show GTS neutral
+            GTS "My pleasure."
+            "She produced a slender leather coinpurse from her jacket, and counted out the exact amount before she bowed and lowered the neat stack of bills down to the cashier's wrinkled hands."
+            Cashier "Thankya miss! I'll getcha your drinks."
+        "Offer to pay for the group":
+            $setFlag("GTS028S_pay")
+            MC "Hey, don't worry about it, I'll get it."
+            show GTS surprised
+            show Ryoko confused
+            GTS "Oh? Are you quite sure?"
+            MC "Yeah, for sure. Consider it my contribution to the gang."
+            show GTS neutral
+            $setAffection("GTS", 1)
+            GTS "Well, that is very generous. Thank you, Hotsure-san."
+            Ryoko "We could've just split the bill, Hotsure-san."
+            show Ryoko neutral
+            extend " Appreciate the gesture, though. Thanks."
+            Minori "Very much."
+            MC "No problem."
+            "I fished out my wallet, gazed down into the flap as I unfurled it..."
+            MCT "Yeesh, chivalry hurts. Me and my big mouth..."
+            "I produced the requisite bills and handed them over. The gaunt stack of wan yellow bills that remained stared up at me as I shut them away back into my pocket."
+            Cashier "Thankya sir! I'll getcha your drinks real quick."
+    "We each took our drinks in turn as he set them out; the can was cold and dewy in my hand, and in the midst of the steamy air I savored the feeling."
+    "The muscled young cook’s quick work soon made good on his father’s promise, hardly breaking a sweat through Ryoko’s spiderweb of an order."
+    "We were off with warm ceramic bowls in our hands... Naomi quickly found it easier to hold hers in one... and we scanned the room for a bench table."
+    "Minori squeezed by first with a muttered apology and sat in one corner, laying her clipboard on her lap."
+    "Ryoko followed, bending her arms to avoid a handful of idle customers, and scooched in next to her faithful companion."
+    show GTS surprised #note to self, an embarrassed sprite would be ideal
+    GTS "Would you like to go first, Hotsure-san?"
+    MC "Nah, I wouldn’t want you squished up against the wall. You can go if you want."
+    GTS "Well, that’s very considerate of you."
+    "She brought her arms in around her waist as close as she could, at which point most of the people standing around made some room."
+    GTS "Pardon me..."
+    "She shimmied around the table’s edge and up next to Ryoko before seating herself; though the seating was clearly built with factors in mind, I yet beheld Naomi’s head-sized silken shoes and just a bit of her shins peeking out from the shadow of the table."
+    show GTS surprised
+    "She noticed, too, and promptly drew them back until her knees hit the plywood."
+    show GTS neutral
+    "Then it was my turn, and thankfully it looked like I had just enough room."
+    MC "Hm..."
+    "I was squeezed against the wall, but also the stiff but still soft plastic cushion, as well as Naomi’s skirt-swaddled left hip, more like a giant, warm pincushion. Not bad accommodations, all told."
+    "I looked up at the faintest blush on her cheeks as she closed her eyes and brought her hands together. I followed suit."
+    All "Itadakimasu."
+    Ryoko "-kimasu."
+    MC "Smells pretty good."
+    show GTS happy
+    GTS "That it does."
+    "I bundled up some in my chopsticks and took a bite; I was not disappointed."
+    show Ryoko happy
+    Ryoko "Mm-mm! They nailed it, it’s flawless."
+    MC "Against all odds."
+    show GTS aroused
+    "Naomi let out a cough that sounded an awful lot like a stifled laugh. I smiled."
+    show GTS neutral
+    show Ryoko tongue
+    Ryoko "Not a crime to know what you like, Hotsure-san."
+    GTS "How are yours, Tomoe-san and Hotsure-san?"
+    show Ryoko neutral
+    MC "Pretty good."
+    Minori "Pretty good."
+    pause 1.0
+    MC "How’s yours, Yamazaki-san?"
+    "She tapped her chin with the thick ends of her chopsticks."
+    GTS "It reminds me a great deal of when my friends and I would try out different restaurants in Kyoto."
+    MC "I see. Not your favorite?"
+    show GTS neutral #another spot where an embarrassed sprite would be useful
+    GTS "I do usually prefer a bit crisper scallions."
+    show GTS neutral
+    extend " Otherwise, it’s rather tasty."
+    stop music fadeout 2.0
+    "I nodded, and then tucked into my own bowl. We had a full afternoon ahead of us, after all."
+    scene black with fade
+    pause 1
+
+    play music Sunset
+    scene Town
+    show Ryoko neutral at Position(xpos=0.8, xanchor=0.5, yalign=1.0)
+    show Minori neutral at Position(xpos=0.2, xanchor=0.5, yalign=1.0)
+    show GTS neutral
+    with fade
+    Ryoko "Okay, one thing down. Since Tomoe-san and I know where we're going, where do you two wanna hit today?"
+    menu:
+        "I think I'm good on supplies. Anybody mind if we stop by the manga shop?":
+            jump GTS028S_c2_1
+        "I think I'm good, actually.":
+            jump GTS028S_c2_2
+        "Hmm... Yamazaki-san?":
+            jump GTS028S_c2_3
+
+label GTS028S_c2_1:
+    $setFlag("GTS028S_manga")
+    Ryoko "Nah. In fact, that's a little closer, isn't it? Let's stop there first."
+    MC "Cool, let's go."
+    "Naomi and Minori nodded along, and away we went."
+    "We stopped for a moment at a crosswalk shaded under a pine. Naomi looked up and sighed with a smile by my side."
+    Ryoko "Out of curiosity, Hotsure-san, what are you looking for?"
+    "Inexplicable anxiety poured into my stomach at the question, like I was being asked by the mangaka themselves on exam day in my underwear."
+    MC "Uhhh, it's called Cyborg Girl Detective Re:Make."
+    show Ryoko happy
+    Ryoko "Oh yeah, I remember that series! Fun read. Never really followed it, though."
+    show GTS pondering
+    GTS "Pray tell, what in particular do you like about it?"
+    "I shrugged."
+    MC "I like the art style, and a lot of the mysteries were pretty good."
+    MC "And I do like a good mystery. It's almost like its own game, trying to figure what's going on in each character's head."
+    show GTS neutral
+    GTS "I see; that would be rather enticing."
+    Ryoko "Speak of the devil, I think that's the place just ahead."
+    scene black with fade
+    pause 0.5
+
+    scene Library with fade
+    MC "Woah."
+    show Ryoko neutral at Position(xcenter=0.6, yalign=1.0)
+    show GTS surprised at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1)
+    with dissolve
+    GTS "Is something the matter?"
+    MC "Nothing, it's just... I am very not used to seeing a manga shop with aisles this wide."
+    MC "Honestly it's kinda nice."
+    show GTS neutral
+    MC "Alright, it should be around this aisle here..."
+    "I walked down a few rows, only to stop with a start just short of my destination."
+    MCT "Wait, is that..."
+    MC "Hey, Honoka!"
+    "She broke her focus on the shelves and turned around with a light, quizzical expression, before breaking into a full, sunny grin as she jogged towards me, her watermelon breasts and her shopping bag dancing the samba the whole way over."
+    show BE happy at Position(xcenter=0.4, yalign=1.0), Transform(xzoom=-1) with dissolve
+    BE "Hey hey, wassup Kei-chan?"
+    show BE neutral at Transform(xzoom=1)
+    pause 0.5
+    show BE happy at Transform(xzoom=-1)
+    BE "And you brought the whole squad, very nice. Whatcha guys doing?"
+    MC "Just out on the town. I was gonna see if they have the new issue of CGDR."
+    show BE wink
+    BE "Oh, I see... so you're looking for {i}this{/i}?"
+    "She plucked a copy out from her shopping bag between two fingers, out of which they promptly fell to the hard-packed carpet."
+    show BE sad
+    BE "Hah... {w}Crap."
+    "Without a word, I knelt down, picked it up, and handed it back to her."
+    show BE happy
+    BE "Thanks, Kei-chan."
+    show BE neutral
+    BE "So, is there anything {i}you{/i} guys are looking for? I'm kind of a local expert."
+    GTS "Nothing in particular."
+    Ryoko "Just here for the camaraderie."
+    Minori "Actually..."
+    show BE neutral at Transform(xzoom=1)
+    Minori "There's this one series I've been wanting to read, and since we're here..."
+    BE "What's it called?"
+    Minori "Vegetables Bushel."
+    show BE embarrassed
+    BE "Awww, I love that one!"
+    show BE neutral
+    BE "Right this way, I'll show you where they keep the goods."
+    Minori "Wow, quite a bit to choose from."
+    BE "Best place to start is from the beginning, I say."
+    show BE neutral at Transform(xzoom=1)
+    BE "Yamazaki-san, you might even like it. I dunno how big of a manga reader you are, but this series has some really well-written romance."
+    GTS "Well... it could be worth a read, I suppose. To patronize fine art is to cultivate it, after all."
+    show BE happy
+    BE "Yep, sure is!"
+    show BE surprised
+    BE "Oh, Kei, that reminds me, you wanna help me look for the new issue of Cool Summer Ride? It should be just in today!"
+    MC "Oh, uh... yeah, sure."
+    "She squeezed past the rest of the group and beckoned me to follow."
+    hide Minori
+    hide Ryoko
+    hide GTS
+    with dissolve
+    pause 0.5
+    show BE neutral at altMove(0.5, 0.5)
+    MC "What if any of them knew the new issue dropped last week?"
+    BE "C'mon, as if it wasn't obvious what I was {i}really{/i} looking for."
+    show BE happy
+    BE "So the dinner last week! Gimme deets!"
+    if getAffection("GTS") > 20:
+        MC "It honestly went... awesome."
+        BE "Yeah?"
+        MC "I've met some girls where the niceness was an act, but her... nah, she's genuine. Really smart and talented, too."
+    else:
+        MC "It was pretty good. From talking to her, I guess she really likes me."
+    BE "Nice, nice."
+    BE "Man, Kei-chan, a couple months and you already got a lady on your arm! Slay, king."
+    show BE happy
+    BE "Or in this case, maybe it's the lady who's got {i}you{/i} on her arm."
+    MC "Right? Crazy to think she used to be up to my chin, now I'm not even up to her waist."
+    BE "Well, it couldn't have happened to a better person. If {i}I{/i} grew as big as Godzilla, I would absolutely use my powers for evil."
+    BE "I'd steal all the chocolate in the world, put my annoying neighbors on top of a building..."
+    show BE aroused
+    extend " make people kiss..."
+    MC "Yeah, Yamazaki-san wouldn't dream of taking chocolate that doesn't belong to her. I don't think she'll even get that big, really."
+    MCT "I don't think..."
+    show BE neutral
+    BE "Yep, she's a lady of class and sophistication."
+    "Honoka took one step towards me."
+    BE "So remember that you gotta put in work if you really want her."
+    MC "I know. I'm gonna really try and impress her from here on out."
+    BE "Good. I'm happy for you, Kei-chan."
+    MC "Thanks, Honoka."
+    pause 0.5
+    MC "So, would you wanna come with us for the last little bit of our escapade? I'm sure they'd all love to have you."
+    BE "Nah, I got a club meeting I gotta get to at three. Actually, I should probably leave pretty soon. Thanks for offering, though."
+    MC "'Course, any time."
+    MC "Well, it's good talking to you, Honoka. See you around."
+    BE "Seeya!"
+    hide BE with dissolve
+    "I waved her goodbye before heading back to the group; Naomi accepted blithely when I told her Honoka was bound elsewhere, and Minori and I collectively gathered up a hefty pile of manga to drop by the register."
+    "Of course, I let her go first."
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 0.5
+
+    scene Town with fade
+    "The sky had begun to yellow as we headed on, passing a pharmacy. The traffic thickened with spent, homebound workers, and with the twinkle of the first few streetlamps came the suggestion of the town shutting its eyes."
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0)
+    show GTS neutral
+    with dissolve
+    Minori "Oh! {w}That reminds me, I need to stop in to pick up a prescription. Would you guys mind waiting a little bit for me?..."
+    MC "Not at all, do what you gotta do."
+    Ryoko "We'll be right here."
+    Minori "Thank you."
+    hide Minori with dissolve
+    "She marched in through the sliding doors with quiet determination etched on her face."
+    "After kicking my foot to and fro, I turned to Ryoko."
+    MC "So what's the story with her clipboard? It seems like she literally takes it everywere."
+    Ryoko "She doesn't have work on her mind 24/7, if that's what you're wondering."
+    Ryoko "You could say it's a fidget, or a keepsake. She told me it gives her comfort."
+    GTS "That would explain why she's always holding it so closely."
+    Ryoko "Mmhm. Even so, I think there's deeper strength in her than her modesty would suggest."
+    show GTS happy
+    GTS "On the contrary, modesty, diligence, and stoicism are some of the surest expressions of inner strength."
+    MC "...You know, maybe to cap off the day, we should get her a little something. Do either of you know if she has a favorite snack or something?"
+    show GTS pondering
+    GTS "I'm afraid I do not."
+    show Ryoko annoyed
+    Ryoko "Hmm..."
+    Ryoko "When we're shooting, she often shows up to the set with a particular brand of seaweed. I'd recognize the package if I saw it."
+    show Ryoko neutral
+    show GTS neutral
+    MC "Well, it sounds like we've got a plan."
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    "The doors slid open again and there she was, smiling meekly with a little white bag clipped to her clipboard."
+    Minori "Well then, where shall we head next?"
+    MC "I say we hit the Kozaku-mart before we head home, my treat. Does that sound alright?"
+    show GTS surprised
+    Minori "I'd like that."
+    GTS "My, my. That's very kind of you, Hotsure-san."
+    $setAffection("GTS", 1)
+    MC "Don't mention it. Shall we?"
+    jump GTS028S_c3
+
+label GTS028s_c2_2:
+    Ryoko "Alright, that makes it easy. What about you, Yamazaki-san?"
+    $setFlag("GTS028S_noask")
+    jump GTS028s_c2_3
+
+label GTS028s_c2_3:
+    if not getFlag("GTS028S_noask"):
+        $setAffection("GTS", 1)
+    GTS "Me? Oh, well..."
+    show GTS neutral at Transform(xzoom=-1)
+    GTS "Would it be alright if we paid a visit to a video game shop?"
+    show Ryoko surprised
+    show Minori neutral at Transform(xzoom=-1)
+    with vpunch
+    Ryoko "Huh? Really?"
+    show GTS surprised
+    GTS "I don’t mean to impose, of course. I could go some other day."
+    MC "No, no, it’s fine. Just... that was kinda the plot twist of the century just now."
+    show Minori neutral
+    show GTS happy at Transform(xzoom=1)
+    GTS "I’m no stranger to electronics, you know. My parents furnished me with a cell phone."
+    show Ryoko confused
+    show GTS neutral
+    GTS "After all, isn’t this the time to broaden our horizons?"
+    MC "Can’t argue with that."
+    show Ryoko neutral
+    Ryoko "You make a good point. Well then, let’s head over there."
+    MC "I think this way’s the shortest way."
+    "I led the way again through the streets."
+    "And so as much as I wanted to steal a glance at Yamazaki-san’s face, I couldn’t."
+    MCT "It hasn’t even been a week since we had dinner together. I knew there’d be a lot more to learn about her, but... how many of my other assumptions are wrong?"
+    scene black with fade
+    pause 0.5
+
+    scene Game Store with fade
+    MC "...Sheesh, I thought it would be a little deader than this."
+    "I took a few steps forward as Ryoko and Minori followed me,"
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0)
+    with dissolve
+    extend " a moment before Naomi bowed her head through the threshold. When her face rose again, she had the eyes of an astronaut taking the first step onto an uncharted planet."
+    show GTS surprised with dissolve
+    GTS "My, my..."
+    Ryoko "There's no better time than the weekend to cut life's strings, I suppose."
+    show GTS neutral
+    Ryoko "{i}But...{/i}"
+    Ryoko "Minori-chan, do you wanna head to the pharmacy while they look around here?"
+    show Minori neutral at Transform(xzoom=-1)
+    Minori "Oh, well, yes, that would be nice to get the boring stuff out of the way."
+    Ryoko "{i}Très bon!{/i} Do you guys mind if we meet at the convenience store on Chōwakabamachi street when you're done here?"
+    "I looked up at Naomi."
+    GTS "That is well with me. See you both soon, then, and take care crossing the street."
+    show Ryoko tongue
+    Ryoko "Yes, mother dearest."
+    hide Ryoko
+    hide Minori
+    with dissolve
+    show GTS pondering
+    GTS "Mother dearest?"
+    MC "I think it was just some friendly ribbing."
+    show GTS neutral
+    GTS "I'm sure, it's just an odd thing for one to be seen as, especially by a friend."
+    MC "Well... it's not that far-fetched. Remember what you said to me that one time Kodama-san was teaching you how to make cookies?"
+    "She nodded, and let her voice fall a little softer."
+    GTS "Only what I felt to be true and right."
+    MC "Exactly."
+    MC "Anyway, what are you looking for exactly?"
+    GTS "Well, to be honest, I'm not entirely sure. I was hoping you could help me pick something."
+    MC "Fair enough, I've got some experience under my belt. What console do you have? Pretendo? Ayystation?"
+    GTS "Ah, I'm afraid there's a bit of a complication in that regard."
+    MC "...Right, apologies, that's on me. Well, let's browse a little and see what catches your eye."
+    show GTS happy
+    GTS "Splendid!"
+    show GTS neutral
+    "I, her faithful guide, led her into the Pretendo section first and cleared my throat."
+    MC "So these little ones are what's called 'handheld', the console for these is portable."
+    GTS "I see... oh, that one looks interesting."
+    "She daintily pinched the corner of one box depicting a pale, wide-eyed woman in a kimono, looking through a spiderweb. Naomi beheld the cover with an appreciative smile as I glanced at the title:{w} Onku: Fatal Siren."
+    MC "I, uh, don’t think you would like that one."
+    GTS "Oh, I see."
+    "She gingerly put it back and bent down a little to scan the other games on display."
+    GTS "This one has some enticing cover art as well. What do you make of it?"
+    "I looked down and saw the cover’s depiction of a blue-haired girl... I think... standing in shallow water, a cardinal perched on her outstretched finger. ‘Chrysanthemum Tussle: Farewell, My Friend.’"
+    MC "Oh, I think I heard of that."
+    GTS "Do you think I would enjoy it?"
+    MC "You... might? I can’t really comment, visual novels kinda put me to sleep."
+    GTS "I see. Well, let’s try a different tack. What are some video games {i}you{/i} regard highly?"
+    MC "Uh, me? Hm...{w} I play Silver Moon a lot. It’s pretty fun."
+    GTS "What about it?"
+    MC "The gameplay’s fun, and it does some interesting stuff with how you can use the characters’ abilities."
+    MC "I used to play the two-player mode with Tomo-chan when we were tweens. So I guess you could say it’s all my fault."
+    show GTS surprised
+    GTS "Oh? How do you mean?"
+    MC "She’s, uh... {w}how do I put this...{w} she prefers alternatives to sunlight."
+    show GTS happy
+    "A crackling chuckle escaped her."
+    GTS "I’m sure your intentions were unimpeachable."
+    MC "Ha, yeah."
+    show GTS neutral
+    MC "If I had to pick, like, my favorite game ever, I’d have to say... Magiria Knight 2."
+    GTS "What is it about?"
+    MC "So you play as this young kid with a magic sword, and he gets his arm cut off early in the story..."
+    show GTS surprised
+    GTS "Goodness!"
+    MC "Yeah, and so he gets this robot arm instead, and you go through the game helping people fight this evil empire, and he gets more gadgets to put on his arm as you go along."
+    show GTS neutral
+    MC "It had a really good story, too. I won’t spoil it too much but there’s some really good subtle stuff as the story progresses, the characters are all really good, and the way the main guy’s character develops is really..."
+    MC "..."
+    stop music fadeout 1.5
+    GTS "Really what?"
+    "I smirked."
+    MC "You don’t really want to try it yourself, do you?"
+    play music GTS fadein 1.0
+    show GTS surprised
+    GTS "Oh... was it so obvious? I meant no offense..."
+    MC "None taken. But you know, Yamazaki-san, you don’t have to go to all that trouble just to get to know me. Anything you want to know, {i}anything{/i}, all you have to do is ask."
+    show GTS neutral
+    GTS "That is good to know. But would you have answered as plainly or thoroughly as you did had I simply asked you?"
+    MC "Of course I... uh... maybe?"
+    "I stood in upended silence there in the Pretendo aisle, realizing I’d never much considered {i}why{/i} Naomi did things the way she did."
+    MC "Uh... well... I guess you’re right."
+    pause 0.75
+    MC "Should we go meet back up with Tanaka-san and Tomoe-san?"
+    GTS "Whatever you prefer, Hotsure-san."
+    MC "What do {i}you{/i} prefer?"
+    show GTS surprised
+    GTS "What do... I?"
+    GTS "Well..."
+    show GTS happy
+    GTS "I believe I would be most delighted if you continued with your review."
+    show GTS neutral
+    GTS "Perhaps some additional recommendations would be edifying as well... if you felt so inclined."
+    "I smiled as I looked up at her, not knowing how she had just the words for every occasion. But I didn’t care anyway."
+    MC "Well, where was I..."
+    stop music fadeout 1.5
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+    scene Town with fade
+    "Naomi shut out everything, it seemed, except what I was telling her. Eventually, I was the one who had to remind her that Ryoko and Minori would be waiting for us."
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0)
+    show GTS neutral with dissolve
+    play music Sunset fadein 1.0
+    jump GTS028S_c3
+
+label GTS028S_c3:
+    #scene Convenience Store
+    "After a short, winding walk under the flaming evening clouds, we came into the mellower, snow-white glow of the conbini's open storefront. A music of footsteps and beeps accompanied today's pop hits."
+    "Clearly we weren't the only students to think to head here on a free evening, as we had to wait for one or two other groups to exit before going in ourselves; Naomi let another couple guys in before she at last ducked her head through."
+    if getFlag("GTS028S_manga"):
+        hide Minori with dissolve
+        "Ryoko gently elbowed me in the ribs as Minori walked away, and then jabbed her thumb towards a case of beige seaweed packets."
+        Ryoko "{size=-6}That's them.{/size}"
+        MC "{size=-6}Thanks.{/size}"
+        Ryoko "{size=-6}Alright, I'm gonna go fi-{/size}"
+        show Ryoko happy
+        extend " Yes! Melonpan!"
+        hide Ryoko with dissolve
+    else:
+        Ryoko "Now, where do they keep the melonpan?"
+        Minori "Perhaps I can help you find it."
+        show Ryoko tongue
+        Ryoko "Pfff. You can take a day off once in a while, Tomoe-san."
+        show Ryoko neutral
+        Ryoko "Let's split up, and you just find something you like, good?"
+        "The two nodded briskly in tandem, and split off into separate aisles."
+        hide Ryoko
+        hide Minori
+        with dissolve
+    "And so, it was just me, and Naomi with her hands folded over her lap."
+    "I looked up at Naomi; she blanketed me in a faint shadow as her head eclipsed the ceiling light directly above. In fact, it looked like she could've hopped and broke it."
+    menu:
+        "Would you like some mochi, Yamazaki-san?":
+            jump GTS028S_c3a
+        "Would you like some tea, Yamazaki-san?":
+            jump GTS028S_c3a
+
+label GTS028S_c3a:
+    stop music fadeout 2.0
+    GTS "Thank you for the offer, but I'm quite content."
+    MC "Oh. What about something else, then?"
+    GTS "No, thank you. As I said, desire is the very thing that proliferates suffering. My needs are fulfilled, and I am content."
+    play music Memories
+    GTS "Besides... "
+    show GTS happy
+    extend " what you've all given me today is much more a benefit to my soul than any food or drink in the world."
+    MC "Y-yeah..."
+    MC "I'd say the same to you."
+    show GTS neutral
+    GTS "Thank you."
+    MC "You've really gotten stronger, you know. The more I get to know you, the more you amaze me."
+    "Her head tilted and she looked to my side, blushing."
+    MC "I hope you know that if you have to move, I'll make sure you never feel alone."
+    "Her eyes, still waters, met mine."
+    GTS "And I want you to remember that you can always come to me for a listening ear."
+    MC "Thanks, Na- Yamazaki-san."
+    "More languid beeping and a new old song filled in the silence."
+    "I wanted to step forward and wrap my arms over the swell of her hips, press my face into her, and I didn't care if I was only just taller than her crotch. I just wanted to stay there a while."
+    if getFlag("GTS028S_manga"):
+        "But you know what they say about desire. Instead, smiling wide, I grabbed a couple packets of seaweed and went to look for my favorite canned matcha."
+    else:
+        "But you know what they say about desire. Instead, smiling wide, I went to look for my favorite canned matcha."
+    "When we turned back, the other girls were lined up at the register, Ryoko strumming her fingers in a machine gun pattern."
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0)
+    with dissolve
+    Ryoko "Have we found everything we need?"
+    "I nodded as I stepped up to the counter beside them."
+    if getFlag("GTS028S_manga"):
+        Minori "Oh? Do you like that brand of seaweed too, Hotsure-san?"
+        MC "Well, I'm sure it's delicious. But I got it for you."
+        show Minori with vpunch
+        Minori "You got it... for me? How did you..."
+        Minori "Ah. {w}All of you are too sweet, you know."
+        Ryoko "Nothing to it."
+        "By the time I turned to address the register, the cashier bobbed aside her dark brown pixie cut and repeated to me, in a pleasantly disinterested register,"
+        Cashier "Your total today is 1701, please."
+        if getFlag("GTS028S_pay"):
+            MC "Sure thing, lemme just..."
+            "I didn't even have to count, as I looked down into the graveyard of my gaping wallet, to tell I was short the funds."
+            "I laughed, despite the rising throbbing in my neck."
+            MC "Must've left some in my pocket, uh, maybe..."
+        else:
+            MCT "Oof, hurts just a little bit. Have to stop by the ATM later..."
+    else:
+        "Ryoko speedily transacted for both her and Minori's items amidst the pleasantly disinterested register of the cashier."
+        "Sooner than I thought, it was my turn to step up; the cashier bobbed her pixie cut out of the way and gave a wan smile."
+        Cashier "Your total today is 340, please."
+        MC "Sure thing, lemme see here..."
+    show GTS pondering
+    GTS "Hold on. I believe I have something for this."
+    "She opened up her purse and pawed around inside it for a moment or two."
+    GTS "Oh, this confounded..."
+    show GTS neutral
+    "She shortly paused and lowered it down to my chest height."
+    GTS "Erm, Hotsure-san, would you please grab that little green slip of paper in the middle?"
+    MC "Certainly."
+    "I fished it out to see the Kozaku-Mart logo emblazoned upon it, which I promptly presented."
+    show GTS happy
+    GTS "I have a rebate voucher, ma'am, if you please."
+    Cashier "Looks like it. Lemme see..."
+    show Ryoko happy
+    Ryoko "Quick thinking, Yamazaki-san!"
+    show Ryoko neutral
+    show GTS neutral
+    if getFlag("GTS028S_manga"):
+        Cashier "Okay, that brings you to 500 for today."
+        if getFlag("GTS028S_pay"):
+            MCT "Holy shit, she's a lifesaver."
+        "More than a little relieved, I handed over the cash and quickly shut away my frail, vulnerable wallet."
+    else:
+        Cashier "Okay, that brings your total to zero, and ma’am, you’ve got 900 left on this voucher."
+        MC "Oh... wow, really? Sweet!"
+        "I clapped my wallet shut and pocketed it, then passed the slip back to Naomi and took my tea."
+    Cashier "Thanks guys, come back soon."
+    MC "Thanks, you too!"
+    show Ryoko happy
+    show GTS happy
+    show Minori neutral
+    with vpunch
+    "Everything Naomi did was so involuntarily grand and exaggerated now, I could tell without looking right at her that Naomi bit her lips for a second as we walked out of the store."
+    "Funny enough, it made me feel a little better."
+    scene black with fade
+    pause 0.5
+
+    scene Town with fade
+    show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
+    show Minori neutral at Position(xcenter=0.2, yalign=1.0)
+    show GTS neutral
+    with dissolve
+    MC "Man, Yamazaki-san, you saved my bacon with that voucher. How'd you think to bring that?"
+    show GTS happy
+    GTS "It was nothing. A lady who means to keep her house in order must shun no financial advantage."
+    "Just then, in the warm hues of a late summer afternoon, I felt just like I did out with my friends on Saturday nights in Shibuya. Of course, I never stopped to consider that until I laid down in bed that night."
+    "I cracked open my tea can, and raised it to the heavens."
+    MC "Well, here's to a successful outing!"
+    show Ryoko tongue
+    Ryoko "Hear, hear."
+    Minori "Definitely."
+    show Ryoko happy
+    "Naomi, having nothing to raise, stepped back and bowed deeply."
+    GTS "Thank you all dearly for having me. Whatever lies on our horizons, may our fellowship live on."
+    MC "Heh, yeah."
+    MCT "We've gotta do this again sometime."
+    "Over our general accord, a silence settled slow and fluttering. Soon enough, we were back on our way to the bus stop."
     jump daymenu
 
 label GTS028T:
