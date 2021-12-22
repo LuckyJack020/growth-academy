@@ -2027,103 +2027,110 @@ label GTS018:
     scene School Exterior with fade
     play music HigherEdu
     #SFX wind
-    "There it was, again. The spring breeze always managed to blow my hair directly over my eyes."
-    MC "One of these days, I'm just going to gel my hair back..."
-    "I continued down the path for a little bit longer, ignoring the fact that my hair was dancing with the motion of the wind. The breeze soon carried something else with it, however, as I could hear a faint giggle."
-    "Further down the path I could spot Naomi waiting for me, a smile on her face as the wind made her hair flow majestically behind her."
-    "She looked upwards as the breeze made the tree branches above her sway, causing rays of sunlight to sweep through and illuminate her."
-    "The way the light showed her, along with the motion of her hair, made me think back to what Ryoko had once said. Naomi really did capture the essence of a traditional beauty in an old-school film."
+    "There it was, again. The spring breeze always managed to blow my hair right over my eyes."
+    MCT "One of these days, I'm just gonna gel my hair back..."
+    "I continued down the path for a little bit longer, trying to ignore the raucous dance of my bangs. The breeze soon carried something else with it, however, as I could hear a faint giggle."
+    "Further down the path I could spot Naomi waiting for me, a smile on her face framed by her deep black hair flowing majestically behind her, like silken smoke."
+    "She looked upwards as the breeze made the tree branches above her sway, showering her cherubic face with illuminating sunlight."
+    "The way she glowed in the light, the way she moved in harmony with the wind, made me think back to what Ryoko had said. Naomi really did capture the essence of a traditional beauty."
     "Her hand slid through her hair with her eyes closed, enjoying the chilly wind upon her face. When she opened her eyes again, she spotted me."
     show GTS happy at center with dissolve
-    "Naomi greeted me with a smile."
+    "Naomi's smile widened a bit as she greeted me."
     GTS "Good afternoon, Hotsure-san. I hope your day is going well."
     MC "Hello, Yamazaki-san. Did I keep you waiting?"
-    GTS "Not at all. Please take a seat. "
-    "Naomi patted the spot next to her upon the bench, and I sat there soon afterward. Sitting this close to her, I must have looked like a child compared to her size. I was a full two heads shorter."
+    GTS "Not at all. Please, have a seat."
+    "Naomi patted the spot next to her upon the bench, and I sat there. Sitting this close to her, I must have looked like a child now at a full two heads shorter."
     GTS "Days like these are simply wonderful. A nice breeze, a warm sun, and the rustling of the leaves dancing high above the ground."
-    MC "That's true, it really is just the right temperature out today. So did you want to get started on our studies?"
+    MC "Yeah, it really is just about a perfect day out today."
+    MC "So, did you want to get started on our studies?"
     show GTS neutral
-    GTS "Yes, sorry for delaying us."
-    MC "There's no need to apologize. What should we cover today?"
+    GTS "Yes, apologies for delaying us."
+    MC "C'mon, no need to apologize. What should we cover today?"
     stop music
     UNKNOWN "Whoa! You're perfect!"
-    "We both flinched at the sound of a new voice, quickly looking over as another student hurried over to us. Her rather thick thighs jiggled rhythmically as she walked."
+    "We both flinched at the sound of a new voice, and quickly looked over as another student jogged toward our bench. Her rather plump thighs jiggled rhythmically to each step."
     UNKNOWN "Hey there! Sorry for startling you, but you're just perfect!"
-    "She beamed as she looked at Naomi with a fiery spark in her eyes."
+    "She beamed at Naomi with a fiery spark in her eyes."
     show GTS embarrassed
-    GTS "I-I'm sorry, but I don't know what you mean."
+    GTS "I'm sorry, but I don't quite know what you mean."
     UNKNOWN "I mean that you're perfect! Like literally, you're just what we're looking for."
-    "Naomi was at a loss for words. I couldn't blame her, given she had nothing to work off of as the girl seemed heavily invested in her."
+    "Naomi's lips hung parted, silent, her brow wringing. I couldn't blame her, as long as the girl's sudden approach remained a mystery. To my relief, she quickly continued."
     Fumika "Oh, I should introduce myself first, duh! I'm Fumika Usui, and I'm part of the basketball club! It's a real pleasure to meet you, miss...?"
-    GTS "O-oh! Naomi Yamazaki..."
+    show GTS neutral
+    GTS "Er... Naomi Yamazaki. A pleasure to meet you."
     "She gave a seated bow as the girl giggled and looked at me, making me realize that I needed to introduce myself too."
     MC "Keisuke Hotsure."
     play music Tension
     Fumika "Hey there! Is she your girlfriend?"
-    MC "What...?"
-    GTS "H-huh!?"
+    MC "Huh...?"
+    show GTS surprised
+    GTS "P-Pardon?..."
     Fumika "Ah I see, still on the hush hush. Don't worry, I won't tell! Hee hee..."
+    show GTS embarrassed
     GTS "..."
     MC "..."
     Fumika "Anyway, as I was saying. You're just perfect! Have you ever been interested in joining the basketball team? It's a ton of fun, and we’re in need of new players."
-    GTS "Uh... I hadn't really thought about it before, truthfully."
-    Fumika "Whaaa? How could you not? With your height and build, you'd be a natural."
-    GTS "It's simply something that hasn't crossed my mind. I'm not very athletic... sorry."
+    GTS "Well... I hadn't really thought about it before, in truth."
+    Fumika "Whaaa? How could you not? With your height and build, you'd be a {i}natural{/i}."
+    GTS "It's simply something that hasn't crossed my mind. I do apologize, but I'm not much for athletic pursuits."
     Fumika "That's totally fine, we wouldn't throw you into the deep end at the start. We'd help you get the basics of the game down. Plus, there are other girls around your height. You won’t be alone!"
     GTS "Around my height?"
-    Fumika "Of course! I mean, it's only natural to take what you're given as an advantage. Someone as tall as you would make an amazing Center, but we typically leave Point Guard to the BE students!"
-    Fumika "What do you think, Keisuke?  Do you think she should join us?"
-    "I was a little taken back at suddenly being reintroduced into the conversation. I spaced out for a few seconds, there. Naomi turned to look down at me, though it was a little hard to judge how she really felt about the situation."
+    Fumika "Of course! I mean, it's only natural to take what you're given as an advantage. Someone as tall as you would make an amazing center, but we typically leave point guard to the students who are... you know, more gifted in the chest!"
+    Fumika "What do you think, Hotsure-san? She'd fit right in, wouldn't she?"
+    "I was a little taken back at suddenly being reintroduced into the conversation. I spaced out for a few seconds, my unsuspecting brain cells weighing the case before me."
+    "Naomi remained silent but turned to look down at me, her expression flat and muted... but expectant."
     menu:
-        "You should totally give it a try, Yamazaki-san. I'm sure you'd be great at it.":
+        "You should totally give it a try, Yamazaki-san. I bet you'd be great at it.":
             jump GTS018_c1_1
         "You don't have to if you don't want to, Yamazaki-san. I'm sure she'll understand.":
             jump GTS018_c1_2
 
 label GTS018_c1_1:
-    MC "I think you should give it a try, Yamazaki-san. I don't see any harm in at least trying out."
     Fumika "Totally!"
-    GTS "A-are you sure?"
-    MC "Yeah. You’ll get to learn something new, and maybe make some new friends, too."
-    GTS "This is true. I've just never been too good at sports, though."
+    GTS "Are you quite sure?"
+    MC "Yeah! You’ll get to learn something new, and maybe make some new friends, too."
+    GTS "That is true. I only worry that I have never been particularly good at sports."
     Fumika "Don't worry, when we're done with you you'll be an unstoppable dunking machine! I mean just picture it, being the star of the team!"
     $setAffection("GTS", -1)
     show GTS sad
-    GTS "I'm not sure. Would it be okay for me to take some time to think it over?"
+    GTS "Apologies, I'm just not sure. Would it be alright if I took some time to think it over?"
     Fumika "Oh yeah, take as much time as you need! There’s no rush. We're normally practicing at the gym after class on Thursdays, so if you want, you can just stop by. We'll introduce you to the rest of the team."
     show GTS neutral at Transform(xzoom=-1)
     GTS "Thank you. I'll see if I have time to stop by."
     Fumika "Great! I'll see you there, then! Later you two!"
-    stop music
-    "With a wave and without another word Fumika took off back towards the campus. I waited for a little bit to make sure she was gone before looking back towards Naomi."
+    stop music fadeout 1.0
+    "With only a wave Fumika took off back towards the campus. I waited for a little bit to make sure she was gone before looking back towards Naomi."
     "I almost spoke before I noticed that she was looking away, her hand gently gripping her skirt."
     MC "Yamazaki-san? You okay?"
-    GTS "Hm? Oh yes I'm fine. Just thinking, so you mentioned wanting to study earlier?"
+    GTS "Hm? Oh, yes, I'm fine. Well now, shall we commence to studying?"
     MC "Uh, yeah... here, let me get the textbook."
     show GTS neutral at Transform(xzoom=1)
-    "There was an awkward tension for the next few moments as a part of me wondered if I shouldn't have pushed her to join as our lesson began."
-    jump daymenu
+    GTS "Thank you."
+    pause 1.0
+    MC "{i}ahem{/i}"
+    pause 1.0
+    MC "In 1185..."
+    jump GTS018_c2
 
 label GTS018_c1_2:
-    MC "You don't have to if you don't want to, Yamazaki-san. I'm sure she'll understand."
     stop music
     "There was a faint smile on Naomi's lips as she gave a slight nod."
-    $setAffection("GTS", 1)
+    $setAffection("GTS", 2)
     show GTS neutral
-    GTS "Would it be okay for me to take some time to think it over?"
+    GTS "Would it be alright if I took some time to think it over?"
     Fumika "Yeah, that's perfectly fine. If you want, you can stop by some time and meet the other girls, too. We're at the gym after class on Thursdays, so if you're ever curious, just come visit and I'll be happy to introduce you!"
-    GTS "Thank you Usui-san. I'll be sure to come by and meet everyone."
+    GTS "Thank you, Usui-san. I'll be sure to come by and meet everyone."
     Fumika "Great! Can't wait to see you there. Well, I'll see you two later, then."
-    play music HigherEdu
+    play music HigherEdu fadein 1.0
     "She gave us a small wave as she took off back to the campus. I waited until I was sure she was out of earshot before I spoke."
     MC "Well, that was something."
-    GTS "Indeed, it was."
-    MC "At least she's passionate about the team, so I can't fault her. Still, really random to just ask you like that. Are you okay?  You seemed really uncomfortable there."
-    GTS "Yes, I'm fine. I'm not really used to being approached like that. Well, besides family get-togethers or my father's meetings... and even then, it’s not so... vigorous."
-    GTS "It was as if she was speaking in fast-forward. I could only make out every other word she was saying."
+    GTS "Indeed it was."
+    MC "At least she's passionate about the team, so I can't fault her. Still, really random to just ask you like that. Are you okay? You seemed really uncomfortable there."
+    GTS "Yes, I am fine. I do confess I'm unaccustomed to being approached like that. Well, apart from family get-togethers or my father's meetings. But even then, it was never so... impassioned."
+    GTS "She spoke so rapidly, I could scarce make out half of what she was saying."
     MC "Yeah, it seemed so. I don't think anyone could have prepared for something as abrupt as that."
     show GTS happy
-    GTS "Thank you for understanding."
+    GTS "Thank you very much for understanding."
     MC "Still... can't believe she thought we were dating."
     show GTS embarrassed
     GTS "...I can’t believe it, either. I didn’t think I was giving off that impression."
@@ -2132,7 +2139,65 @@ label GTS018_c1_2:
     GTS "We were about to study."
     MC "Oh, yeah! Let me just... get the book out."
     "I lingered on the thought for a while longer. The assumption about our relationship caught me off guard."
-    "I could sense my face getting a little warmer as I opened the textbook, in hopes of focusing on something else."
+    "I could sense my face getting a little warmer as I opened the textbook, hoping to focus on something else."
+    jump GTS018_c2
+
+label GTS018_c2:
+    stop music fadeout 1
+    scene black with fade
+    pause 1
+    scene Campus Center
+    show Ryoko neutral at Position(xpos=1.8, xanchor=1.0, yanchor=1.0)
+    with fade
+    play music Schoolday
+    "The next morning was calm and sunny, only songbirds there to accompany the light chatter of the other students. That's how I immediately heard the clacking footsteps rapidly approaching me from the side."
+    show Ryoko neutral:
+        ease 0.75 xpos 0.65
+    #Review this movement code above for use elsewhere.
+    Ryoko "Morning, Hotsure-san! How you sleeping, good?"
+    "In place of her usual pen, one hand clutched a crinkled bag of shrimp puffs, and the other a rolled-up sheet of what looked to be floral burgundy drapes."
+    MC "Uh... yeah, fine?"
+    "She didn't flinch a bit as I looked at her with palpable puzzlement."
+    MC "How about you?"
+    show Ryoko happy
+    Ryoko "Just peachy, thanks!"
+    show Ryoko neutral
+    Ryoko "So hey, I got you a little pick-me-up if you want."
+    "She held out the bag with a rustle and a smile, and out of instinct I slowly reached out to take it."
+    pause 1
+    MC "Thank you."
+    pause 1
+    MC "So you must realize that this looks extremely sus."
+    show Ryoko annoyed
+    "She faintly and briefly grimaced, looking down, as I took the bag and popped it open."
+    show Ryoko neutral
+    Ryoko "Well, it just so happens I saw the tail end of that little moment between you, Yamazaki-san, and Usui-san."
+    show Ryoko embarrassed
+    Ryoko "It also just so happens I sort of had something to do with that a bit."
+    MC "Huh? How's that?"
+    Ryoko "Well first, the facts. My roommate is in the women's basketball club. I told her about our good friend Yamazaki-san the other day which included, you know, describing her."
+    Ryoko "And while I was aware that they were recruiting, I didn't think any harm would come if they happened to approach her."
+    show Ryoko confused
+    Ryoko "I didn't think {i}that{/i} would be how they approached her, either."
+    MC "Yeah, a woman like Yamazaki-san you have to ease into things. There's a right way and a wrong way."
+    show Ryoko neutral
+    Ryoko "Apt. Which is why I've developed a contingency plan."
+    MC "I see that. And what's the other half of your contingency plan?"
+    show Ryoko happy
+    "She patted the rolled cloth, hard."
+    Ryoko "Tea mat! Thought the color would go great with her Hagi set."
+    Ryoko "Speaking of whom, I'd better get moving if I'm gonna catch her in time. See you around Hotsure-san!"
+    MC "See you."
+    show Ryoko neutral:
+        ease 0.5 xpos 0.01
+    MCT "Hm...{w}tasty. Could use some water to go with these, though."
+    show Ryoko tongue at Transform(xzoom=-1):
+        ease 0.5 xpos 0.6
+    Ryoko "Oh, and Hotsure-san... don't look so shocked next time someone mistakes Yamazaki-san for something she's not."
+    Ryoko "If there {i}is{/i} a next time."
+    show Ryoko neutral at Transform(xzoom=1):
+        ease 0.5 xpos 0.01
+    MC "Wait, what!?"
     jump daymenu
 
 label GTS019:

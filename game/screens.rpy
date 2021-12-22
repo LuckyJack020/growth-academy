@@ -131,7 +131,6 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
-
 style window:
     xalign 0.5
     xfill True
@@ -139,6 +138,14 @@ style window:
     ysize gui.textbox_height
 
     background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+
+style block2_multiple2_say_window:
+    xalign 0.5
+    xfill True
+    yalign 1.15
+    ysize gui.textbox_height
+
+    background Image("Graphics/ui/dummy.png", xalign=0.5, yalign=0.0)
 
 style namebox:
     xpos gui.name_xpos
