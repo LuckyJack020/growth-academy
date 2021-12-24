@@ -7177,7 +7177,7 @@ label BE038B_fail:
     jump daymenu
 
 label BE039:
-    $setProgress("BE", "BE040")
+    $setProgress("BE", "BE042")
     scene Dorm BE with fade
     UNKNOWN "Kukuku... so Honoka-chan, this is the boy I've heard far, far too much about."
     MC "Eh?"
@@ -7280,6 +7280,234 @@ label BE039:
     "I couldn't help myself and placed the palm of my hand on the top of her head."
     Kokutan "Grr... yes. And for that indignancy your character will be cursed for a thousand winters."
     "Honoka and I sat down along with Kokutan to crank out some rounds of Breathless Warriors 4. Kokutan was a bigger fan of the game than even I was. Though the fact the narration was as edgy and brooding as humanly possible was probably the main reason."
+    jump daymenu
+
+label BE041B:
+    $setProgress("BE", "BE042")
+    $setBEOutfit(OutfitEnum.ATHLETICSOFTBALL)
+    scene Baseball Field with fade
+    play music BE
+    pause 1.5
+    play sound Whistle
+    "It was a cloudier sky than the forecast had called for that day. Even with a few hours of daylight supposedly left, it was already dim outside. Thankfully the softball field was well-lit."
+    #SFX: Bat cracking a ball, something 'snappy'
+    show BE doubt with dissolve
+    "Honoka was in the middle of a softball match. She'd been doing poorer than the last time I saw her play. But I figured, maybe she was just having an off day."
+    "It wasn't as if they were playing a big game or anything. It was just a friendly exhibition match for the club. The unfortunate thing about Seichou's secrecy was they couldn't compete with other universities."
+    Announcer "Next at bat, {w}Inoue Honoka."
+    MC "Woo, let's go Honoka!"
+    show BE happy
+    "Honoka smiled and brought the bat up over her shoulder as she stood at the base. Her club-given cleats dug into the dirt as she got into a pretty good position."
+    "The first ball came in and dropped too early, almost skimming the base before the umpire caught it. The pitcher pushed back some of her own long hair and re-adjusted one of the bands she used to keep it out of her face."
+    Referee "Ball."
+    "The second one went through the base but was apparently a little wide. Honoka still hadn't swung yet. She had a good instinct. If she kept swinging she'd have had two strikes already."
+    Referee "Ball!"
+    "Honoka took a deep breath. It was the second-to-last inning, so she'd probably only have this chance to get a hit. She tightened her gloves around the bat as the ball came her way."
+    show BE angry with vpunch
+    play sound Thud
+    BE "Ow!"
+    Referee "Hit! Take your base. Inoue is walking."
+    "The ball hadn't managed to miss Honoka's chest and beamed her. Honoka wore padding and softballs weren't as hard as regular baseballs, but it probably still hurt a bit."
+    "Honoka rubbed her chest as put her bat aside for the next player and took her base. She stopped massaging it after a while to focus on the rest of the game. The inning ended right after Honoka managed to get to home plate and score."
+    play sound Whistle
+    #SFX: Voice chatter
+    "Eventually the game ended. The score was unimportant. I was sure Honoka would be happy about scoring at least once. I stood up from the stands to go chat to her but saw Honoka talking to the softball coach."
+    show BE neutral
+    BE "......."
+    "I stood back from the conversation and just waited until the conversation was over. Honoka shook her head at the coach and then approached."
+    show BE happy
+    BE "Kei-chan!"
+    MC "Hey Honoka. How are you feeling?"
+    show BE angry
+    BE "Oof, annoyed. I can't believe I only got one point today! I'm really off my game, haha."
+    show BE happy
+    BE "Aw well. Let's head to your place and play some video games, I could use some stress relief."
+    MC "You sure you don't want to head to your room and take a shower first? You're a bit sweaty."
+    show BE surprised
+    BE "Kei-chan how dare you, you can't just comment on a woman's body like that."
+    show BE aroused
+    BE "Besides, some guys like a woman with a bit of, pfff..."
+    show BE happy
+    BE "Haha, yeah, okay okay I'll meet you at your place after I get cleaned up. See you in a bit, Kei-chan."
+    scene black with fade
+    pause 1
+    $setBEOutfit(OutfitEnum.DEFAULT)
+
+    scene Dorm Interior with fade
+    "I walked back to my place and waited for Honoka to get back. When she arrived, her hair was still somewhat damp from the shower. Her shirt clung to her body a bit more than normal, as if she hadn't dried that off all the way either."
+    show BE happy with dissolve
+    BE "Ahhh, much, much better."
+    MC "Glad to hear it. So, do you want to play a fighting game or-"
+    show BE neutral
+    BE "I quit the softball team."
+    MC "Huh?"
+    BE "I quit the softball team."
+    MC "Wait, is this because you got hit with a ball today?"
+    BE "Nah, nah. That's not it. I'm a tough girl, Kei-chan. I can take a few balls here and there."
+    show BE shrug
+    BE "But, my strike zone is kind of, well. It's out of whack. You saw how hard it was for the pitcher to actually strike me out."
+    show BE neutral
+    BE "The first two times I struck out because I swung each time. Last time I got nailed and had to walk, because I was getting balls and she had to try and get closer to my strike zone."
+    show BE happy
+    BE "And hey, I can recognize that's not fair. I get on base and take a hit, I get a free base. It makes it super unfair for the other team."
+    show BE neutral
+    BE "So I talked to the coach and he agreed that it would be fine if I left the club."
+    menu:
+        "That sounds like a good reason":
+            jump BE041B_c1_1
+        "That doesn't sound right.":
+            jump BE041B_c1_2
+
+label BE041B_c1_1:
+    MC "That sounds like a good reason, I guess."
+    MC "So, was this the first time you'd been hit by a ball while at bat?"
+    show BE sad
+    BE "Er, technically no. It happened a few times in practice or just screwing around. But this was the first time it happened during an actual game."
+    MC "How's it feel?"
+    show BE unique
+    BE "Haha, I'm sure it's gonna bruise up. I'll deal with it."
+    MC "Okay, well. If you're sure. We can get some pain relievers or something if you need."
+    show BE neutral
+    BE "No no, I'll be fine."
+    MC "Okay."
+    BE "..."
+    show BE sad
+    BE "Sigh, Kei-chan, I'm not fine."
+    MC "Okay then, yeah, let's get you some medicine and an ice pack."
+    show BE neutral
+    BE "Heh, not that you dummy. I mean, my boobs are getting in the way of sports again."
+    show BE angry
+    BE "And if I'm honest I'm really, really annoyed that this keeps happening."
+    jump BE041B_c1_after
+
+label BE041B_c1_2:
+    MC "That doesn't sound right."
+    $setAffection("BE", 1)
+    show BE surprised
+    BE "Eh? What do you mean?"
+    MC "I mean, Honoka. This entire school is made to be accommodating to people with special growth factors. They could certainly find a way for you to play fairly with everyone else."
+    show BE neutral
+    BE "Well, uh. I mean, sure, maybe. But that's a lot of time they'd have to spend on me and-"
+    MC "Are you just concerned that your breasts are getting in the way of your physical routines again?"
+    BE "Um..."
+    show BE sad
+    BE "It's that obvious, huh?"
+    MC "I mean, I'm seeing the evidence pile up after the last few clubs you left. And I'm not saying you have bad or good reasons for leaving them. But, well..."
+    show BE neutral
+    BE "I guess if it's that obvious I should just be honest about it. That's what you're saying?"
+    MC "More or less, yeah."
+    show BE sad
+    BE "Well, it feels dumb to be honest about it. If I can be honest about that instead."
+    show BE neutral
+    BE "It's really hard to take a good stance with my breasts at this point. It's difficult to get a good swing. It's annoying."
+    jump BE041B_c1_after
+
+label BE041B_c1_after:
+    show BE happy
+    BE "Boobs are supposed to be fun and awesome and mine keep getting in the way of all the stuff I try."
+    BE "It's just,"
+    show BE angry
+    extend " agh!"
+    show BE unique
+    BE "I just wanna be an awesome tomboy with huge boobs. Is that so much to ask?"
+    MC "You can still be an awesome tomboy with huge boobs. You are right now! I mean, you don't even need to actively be doing sports to be a tomboy, Honoka."
+    show BE neutral
+    BE "Maybe not a sports club. But I still need to be active somehow."
+    MC "You can still be... active, but not need to be in a club that would put you in a position where you could be hurting yourself."
+    BE "Hmm."
+    show BE happy
+    BE "I guess you have a point. Do you think I should try and do something more lowkey?"
+    menu:
+        "I think it would be good to try something softer.":
+            jump BE041B_c2_1
+        "I think you should stick to what you like.":
+            jump BE041B_c2_2
+
+label BE041B_c2_1:
+    $setVar("BEFeminine", getVar("BEFeminine") + 2)
+    MC "I think it would be good to try something softer."
+    MC "There's tons of clubs, maybe it'd be fun to try something different, where you can chill out and just relax for a while?"
+    MC "You could be less active for just an hour a day, and then see how you feel about it afterwards."
+    if getVar("BEFeminine") > getVar("BETomboy"):
+        show BE happy
+        BE "Yeah. I guess it couldn't hurt to give it a shot. Even if it was just once, right?"
+        show BE unique
+        BE "Maybe it would give my back a break."
+        MC "Has your back been hurting you a lot?"
+        show BE happy
+        BE "Actually no, not at all. It's been super fine! My body hasn't really had physical issues with my breasts. It's more the world's not built for them, ha."
+        MC "World's not built for them. Maybe you could try the sewing club?"
+        show BE surprised-2 #curious
+        BE "sewing club?"
+        MC "Yeah, it'll be something you can do in your spare time, it won't be a huge commitment. Plus it'll help you understand what accommodations you need."
+        show BE happy
+        BE "Hey yeah, that's a pretty good idea, Kei-chan. Maybe I'll look into that."
+    else:
+        show BE happy
+        BE "That... isn't a bad idea. But, I dunno. I think I should still stick to what I'm doing now."
+        show BE neutral
+        BE "After all, I haven't stopped the last few times I quit a club, why would I quit now?"
+        MC "Right on. Maybe you could try the swimming club?"
+        show BE surprised-2 #curious
+        BE "Swimming club?"
+        MC "Yeah, a big pool, a lane to yourself. At worst you'll have use of the pool."
+        show BE happy
+        BE "Hey yeah, that's a pretty good idea, Kei-chan. Maybe I'll look into that."
+    jump BE041B_c2_after
+
+label BE041B_c2_2:
+    $setVar("BETomboy", getVar("BETomboy") + 1)
+    MC "I think you should stick to what you like."
+    show BE happy
+    BE "I thought you'd say that. It wouldn't be like me if I gave up now, would it?"
+    MC "Nothing wrong with stopping something if it hurts but I just feel like you want to keep at it."
+    MC "Maybe you could try the swimming club?"
+    show BE surprised-2 #curious
+    BE "Swimming club?"
+    MC "Yeah, a big pool, a lane to yourself. At worst you'll have use of the pool."
+    show BE happy
+    BE "Hey yeah, that's a pretty good idea, Kei-chan. Maybe I'll look into that."
+    jump BE041B_c2_after
+
+label BE041B_c2_after:
+    MC "Well, whatever your decision is, I'm sure it will be worth it."
+    BE "I guess I won't know until I try something else. But I don't think I regret quitting this, I can't think of how else I could have played without some huge differences."
+    MC "Speaking of, how is that spot you got hit doing?"
+    show BE angry
+    BE "Uh, it's actually bruised up a bit."
+    MC "Damn. Hang on a minute then. I can't have that."
+    "I stood up and walked over to the small mini fridge I shared with Daichi. The freezer was barely big enough to hold a single ice cube tray. But I still took several cubes out and put them in a layer of napkins."
+    MC "Here, put this against it. It should help the swelling go down."
+    show BE surprised-2 #curious
+    BE "Help the swelling go down?"
+    show BE happy
+    BE "Ha. Kei-chan, just because I'm annoyed at my boobs doesn't mean I wanna shrink them!"
+    MC "Nooo that's not what I meant."
+    BE "Hahaha. I know. But it gave me a funny image. Of just, dunking my boobs in a bath of ice and then pulling them out to be flat... oh, no wait."
+    show BE surprised
+    BE "That funny image just turned terrible in my head. Oh no."
+    "I couldn't help but snicker as I pressed the homemade ice pack against her breast a bit firmer."
+    MC "Better not get on my bad side then. I may ice down only one boob to the point it lowers the swelling and then you'll be left uneven!"
+    BE "Oh no, Kei-chan! Wait, ha, my left is already bigger than my right, so you're just going to be evening me out anyway."
+    MC "Ah curses. My evil, ingenious plan I thought of only seconds ago has already been foiled."
+    show BE happy
+    BE "Hehehe. You're a dork."
+    MC "You're the one who came up with some harebrained setting where ice makes your boobs smaller."
+    BE "That is pretty silly. If anything, having ice on one of them is making at least one part of my boob bigger."
+    MC "What part is... ah. Well, that's just the cold."
+    show BE unique
+    BE "Maaaaybe it's the cold. Maybe I like having my boyfriend holding my tit for me."
+    MC "Well, your boyfriend can do more than just hold a tit for you."
+    "I squeezed a bit.  Honoka winced slightly."
+    show BE neutral
+    BE "Ah, Kei-chan. That boob still is kinda tender."
+    MC "Oh, sorry!"
+    show BE happy
+    BE "I didn't say anything about the other one."
+    "I smiled and placed my free hand on her opposite breast, and gave that one a squeeze. Her reaction was much more appreciative."
+    MC "There we go. Better?"
+    show BE aroused
+    BE "Better."
     jump daymenu
 
 label BE042:
