@@ -418,8 +418,9 @@ label BE004:
 
 label BE005_old:
     #This scene needs to be rewritten or something, it doesn't make sense as an 005
-    scene Hallway with fade
-    show BE happy at center with dissolve
+    scene Hallway
+    show BE happy
+    with fade
     BE "Oh, Kei-chan!"
     "Honoka bounced over towards me, clutching a few pieces of papers in one hand. She stopped, but a little too late, and her breasts collided into my side. She just brushed it off and stepped back, shoving the papers inside her sizable chest for safekeeping."
     MC "Oh, Honoka. Hey. What's up?"
@@ -1334,9 +1335,10 @@ label BE012:
     MC "It's that way."
     "I pointed in the opposite direction."
     BE "Oh. Heh. Okay, fixed!"
-    scene Town with fade
+    scene Town
+    show BE neutral
+    with fade
     play music BrightLights
-    show BE neutral at center with dissolve
     "Now that she was headed in the right direction, I followed Honoka to the bus stop, where we were just in time to hop aboard. With a little more hop in Honoka's case. After a few stops, we ended up in a small shopping district in the city."
     MC "Now, if I remember the directions right, we just go this way, and take a right, and we should be there soon."
     show BE happy
@@ -1369,8 +1371,9 @@ label BE012:
             BE "Oh is that so? Well, I'll go easy on you, then. Let's go!"
     scene black with fade
     pause 1
-    scene Arcade with fade
-    show BE happy at center with dissolve
+    scene Arcade
+    show BE happy
+    with fade
     play music Tension
     "As soon as the game began, I was doomed. Before I could even move my character, Honoka had leapt across the stage, performed a 14-hit combo on me, and removed a third of my health bar in one go."
     "From her side of the cabinet, I could hear the announcer cheering her on for her devastating attacks, while he berated me on my side."
@@ -1600,9 +1603,10 @@ label BE014_c1_after:
 
 label BE015:
     $setProgress("BE", "BE016")
-    scene Hallway with fade
+    scene Hallway
+    show BE sad
+    with fade
     play music Schoolday
-    show BE sad at center with dissolve
     BE "Kei-chan, can you help me with some studying?"
     "Honoka looked at me with pleading eyes. It was like staring at a squirrel begging you to throw some granola at it so it could scurry away. I hadn't expected her to run into me after class today. By this point, I really should be prepared."
     MC "Studying? I guess I could help. What subject, specifically?"
@@ -1621,8 +1625,9 @@ label BE015:
     "Honoka ran off to the dormitories as I looked at the time. I had to make a quick stop first. I had a feeling there was an easy way to help Honoka with her studying."
     scene black with fade
     "When I made my way back to my dorm room, Honoka was waiting outside."
-    scene Dorm Interior with fade
-    show BE happy at center with dissolve
+    scene Dorm Interior
+    show BE happy
+    with fade
     BE "Good, you're here. Let's get going!"
     "She looked at me quizzically for a moment as she noticed the bag in my hand."
     show BE neutral
@@ -1794,9 +1799,10 @@ label BE016:
 
 label BE017:
     $setProgress("BE", "BE018")
-    scene Arcade with fade
+    scene Arcade
+    show BE happy
+    with fade
     play music Schoolday
-    show BE happy at center with dissolve
     BE "You see, I told you that I could get a perfect score."
     MC "Yeah, you've definitely picked up some skills from basketball club, that's for sure."
     "Honoka had told me the previous day that she'd gotten much better at shooting free throws after several meetings at her club. I believed her, but she insisted on proving it."
@@ -1963,8 +1969,9 @@ label BE017_c2_3:
 
 label BE018:
     $setProgress("BE", "BE019")
-    scene Dorm BE with fade
-    show BE neutral at center with dissolve
+    scene Dorm BE
+    show BE neutral
+    with fade
     "I was hanging out in Honoka's room, playing video games with her, as had become a fairly frequent occurrence."
     "She was kicking my butt pretty handily, something that also had become a frequent occurrence. In the middle of us picking our next fighters, a knock came at her door."
     MC "I thought you said your roomie was going to be out until evening?"
@@ -2744,11 +2751,12 @@ label BE020_c2_2:
     jump daymenu
 
 label BE021:
-    scene Woods with fade
-    play music HigherEdu
-    show BE happy at center with dissolve
     $setProgress("BE", "BE022")
     $setBEOutfit(OutfitEnum.ATHLETIC)
+    scene Woods
+    show BE happy
+    with fade
+    play music HigherEdu
     MC "Honoka, why am I here again?"
     BE "Kei-chan, you still haven't decided on a club yet. You sounded like you'd be into archery. So I thought you could come and try out."
     MC "Sure, no, I get that. What I mean is. Why are we out here in the woods?"
@@ -3421,10 +3429,10 @@ label BE022_c1_4:
     jump daymenu
 
 label BE023:
-    scene Track with dissolve
-    play music BE
     $setProgress("BE", "BE024")
     $setBEOutfit(OutfitEnum.ATHLETICARCHERY)
+    scene Track with dissolve
+    play music BE
     "It was after school, and I had promised Honoka earlier that I'd go see her in the archery club. The introductory lesson we'd done together had been interesting, but I decided that archery wasn't for me."
     "Compared to other clubs that Honoka had joined, there didn't seem to be much to archery in terms of different activities they did. Apart from making sure they used the proper technique, and firing at targets, there was no variety."
     "The benefit of actually being in the club was the extra protective gear they could get for their members. Apart from the arm guards and gloves, every student got their own chest guard as well. Which was vitally important for Honoka."
@@ -3719,10 +3727,11 @@ label BE023_c1_after:
     jump daymenu
 
 label BE024:
-    scene black with fade
-    play music Steamy
     $setProgress("BE", "BE025")
-    show BE angry with dissolve
+    scene black
+    show BE angry
+    with fade
+    play music Steamy
     #panting
     BE "Mmm, Kei-chan, it's so hot!"
     MC "I know. Just keep going at it. It'll help."
@@ -3741,9 +3750,10 @@ label BE024:
     show BE neutral
     BE "Here, Kei-chan, hold my ice cream for me."
     MC "What?! Honoka, no, you can't just strip in the middle of town."
-    scene Town with fade
-    play music Busy
-    show BE sad with dissolve
+    scene Town
+    show BE sad
+    with fade
+    play music BrightLights
     BE "But it's so ho-o-o-ottttt..."
     "Honoka wasn't kidding. The heat was pretty bad that day. Still, it had been her own idea to brave the heat and get some ice cream. We would have been fine at our rooms, with the air conditioning on."
     MC "Do you want to go back into the ice cream shop and finish there?"
@@ -4011,10 +4021,10 @@ label BE024_c2_3:
     jump daymenu
 
 label BE025:
-    scene Field with fade
     $setProgress("BE", "BE026")
-    play music Schoolday
     $setBEOutfit(OutfitEnum.ATHLETICARCHERY)
+    scene Field with fade
+    play music Schoolday
     "As much as I wanted to be close to the action for Honoka's archery competition, I had to keep a good distance away from the archers. Not just for safety's sake, but the whistling happened frequently enough that it bothered me to no end."
     "It was a simple enough contest. No other school was involved. Just a way for the archery club members to see how they did against one another. The targets were placed at a competitive distance. "
     "Honoka said they'd only practiced at that distance once before. So this would be a challenge for her. Still, I was cheering her on. Quietly. Unlike a regular sport, archery liked to be nice and quiet."
@@ -4276,9 +4286,10 @@ label BE025_c2_after:
 
 label BE026:
     #Setting: Field or Flowery Area
-    scene Field with fade
     $setProgress("BE", "BE027")
-    show BE happy with dissolve
+    scene Field
+    show BE happy
+    with fade
     play music HigherEdu
     BE "Kei-chan, I've got an idea, and you're not gonna believe what it is."
     "Honoka had bumped into me, in her usual fashion. It was good to know that despite it happening more often than not, that it still was a pleasant way to say hello."
@@ -5165,10 +5176,11 @@ label BE028_test_3:
 
 label BE029:
     $setProgress("BE", "BE030")
-    scene Classroom with fade
     play music Peaceful
     #Setting: School. Science Room
-    show BE sad with dissolve
+    scene Classroom
+    show BE sad
+    with fade
     BE "So, explain this to me one more time, because, I'm just not getting it."
     "I couldn't help but sigh. Explaining something once was necessary. A second explanation could be useful for clarification. A third time would be seen as worrisome."
     "I was on the fifth explanation. At that point, it could also be my fault. Maybe I had to approach this in a different way."
@@ -5516,8 +5528,9 @@ label BE031:
     "Honoka peered her head outside her door and looked down the hallway, twice on both sides, before grabbing my hand and yanking me inside."
     #[Effect- Screen Shake (1 time, low intensity)]
 
-    scene Dorm BE with hpunch
+    scene Dorm BE
     show BE surprised
+    with hpunch
     #[Transition- wipe][(S)Or other  fast  transition, I'm not sure what options we have?]
     play music Steamy
     "Being unprepared for such an act, I was caught off-balance. My feet tripped over each other, and I began fumbling towards Honoka's chest."
@@ -6864,9 +6877,10 @@ label BE037:
         $setProgress("BE", "BE038A")
     elif getFlag("HONOKA_SOFTBALL"):
         $setProgress("BE", "BE038B")
-    scene Lake Road with fade
+    scene Lake Road
+    show BE happy
+    with fade
     play music Schoolday
-    show BE happy with dissolve
     BE "Kei-chan. You're very comfy."
     MC "The feeling is mutual, Honoka."
     "Having Honoka's breasts on top of my head was a bit of a pain on my neck, but the soft, comforting embrace of her bosom against my head was too good to pass up."
@@ -8015,8 +8029,9 @@ label BEGTS001:
     show BE happy
     BE "I'd like that very much!"
 
-    scene Campus Center with fade
-    show BE neutral with dissolve
+    scene Campus Center
+    show BE neutral
+    with fade
     "Honoka and I walked down the stairwell and exited the school building. The sun was still hanging just above the treeline, so we had a few hours left in the day."
     BE "I'm glad that Naomi-chan is in such a good mood. We really hit it off today, huh?"
     MC "She was the first person we met when we first arrived here, after all. Would you say that it's more than coincidence?"
@@ -8319,8 +8334,9 @@ label BEGTS003:
     "As I walked through the halls, I wondered how many other students checked out the roof. It was 'our little hangout spot,' sure, but we didn't often see anyone else up there. Honoka saw the work that Naomi was putting in, but did anyone else?"
     "When I neared the end of the hallway, I turned right to enter the cafeteria. Coincidentally, someone I knew was seated at one of the center tables."
 
-    scene Cafeteria with fade
-    show BE neutral with dissolve
+    scene Cafeteria
+    show BE neutral
+    with fade
     "She was arched over the edge while looking at her phone, which had been placed flat upon the surface of the table. She scrolled through messages with her pointer finger, giggling as she read them."
     show BE happy
     "I watched as she typed a message, energy flowing from her fingertips as they danced around the screen. I didn't look *too* close, however. Looking over her shoulder to read her messages would be awkward."
@@ -8561,11 +8577,11 @@ label BEGTS003:
     with dissolve
     "Naomi ducked herself underneath the neon sign and proceeded back out of the alleyway. Honoka and I followed behind, returning to the main road."
 
-    scene Park with fade
     stop music
+    scene Park
     show BE neutral at Position(xcenter=0.25, yalign=1.0)
     show GTS neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
     "The park was only a brief walk from main street. It was a much shorter distance from here to the store we visited than from the store to Seichou."
     "Naomi was less cautious in her strides this time around. Her pace was much more 'normal' compared to the slow and deliberate steps she usually took. Her strides were also longer."
     "By the time Honoka and I had caught up, she had realized that her pace had quickened."
@@ -8829,8 +8845,9 @@ label BEGTS004:
     PRG "Oh, ah.. thank you!"
     "The two of us walked through the doors and headed outside to the courtyard."
 
-    scene Campus Center with fade
-    show PRG neutral with dissolve
+    scene Campus Center
+    show PRG neutral
+    with fade
     "The wind made the courtyard a bit chillier than it usually was, but it wasn't uncomfortable. Aida rubbed her hands together, then returned them to her lap."
     PRG "It's a little windy, but the weather is really nice. I hope it stays that way."
     "Aida looked whimsically content as she looked across the courtyard. She locked her vision in place once she looked past the tree, however. A quiet, audible gasp escaped her mouth."

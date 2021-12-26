@@ -347,6 +347,17 @@ init python:
     )
     ost.manualDefineList.append(PRGMB)
 
+    BgCh = ost.soundtrack(
+        name = "Big Changes",
+        path = "Audio/BGM/scene_uncategorized2.mp3",
+        priority = 2,
+        author = "Pocket Sound",
+        description = "Serious Developments",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(BgCh)
+
     ## Base Template
     ######################################
 

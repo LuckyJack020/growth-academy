@@ -108,8 +108,9 @@ label GTS001_after:
     GTS "Attachments are the root of suffering in this life, Hotsure-san. Attachments to our status quo and attachments to yen notes alike."
     MC "That's... that's interesting."
     GTS "I am glad you think so."
-    scene School Planter with fade
-    show GTS neutral with dissolve
+    scene School Planter
+    show GTS neutral
+    with fade
     "Through my half-stunned silence, she gave a soft chuckle and kept her warm smile that soothed my worries."
     "In the midst of it, I just processed that we had wandered back to the spot where I'd first met her, before an array of massive planters that shone emerald-green in the afternoon sunlight."
     "But my eyes shortly found their way back to Naomi; I guess she must have noticed me staring, because she soon chimed in."
@@ -1138,8 +1139,9 @@ label GTS011b:
     jump daymenu
 
 label GTS012:
-    scene School Planter with fade
-    show GTS neutral at center with dissolve
+    scene School Planter
+    show GTS neutral
+    with fade
     play music HigherEdu
     "A small sigh left my body as I rested back against a tree. I was in the garden, Naomi having invited me for some tea after class had ended."
     "She had set up a blanket on the grass and was preparing the drinks. It was an interesting sight as she sat on her knees, an assortment of items in front of her as she began the long process of making the tea."
@@ -1269,8 +1271,9 @@ label GTS013_c1_1:
     MC "Ng!"
     MCT "This is it. This is how I go out. I'll leave this world face down in a puddle of spittle and crumbs."
     "After penetrating the rock-like shards of the cookie's flesh, I found the texture gritty and the flavor an obscene subversion of all that is saccharine and mild. The anti-sweet aftertaste stuck to my gums like a bitter ghost."
-    scene Campus Center with fade
-    show GTS surprised with dissolve
+    scene Campus Center
+    show GTS surprised
+    with fade
     $renpy.music.set_pause(False)
     MC "Could use some salt."
     $setAffection("GTS", -2)
@@ -1307,8 +1310,9 @@ label GTS013_c2:
     MC "After you, Yamazaki-san."
     "She resumed walking with me following after; even with her taking such methodic, piecemeal steps to keep the plate so motionless, it was a trick to keep pace."
     stop music
-    scene Hallway with fade
-    show GTS neutral with dissolve
+    scene Hallway
+    show GTS neutral
+    with fade
     "And yet, as we came within sight of the heavy doors it was she who puffed out a single, muted, yet alien sharp breath."
     menu:
         "Feeling a bit nervous?":
@@ -1327,11 +1331,11 @@ label GTS013_c2_1:
 
 label GTS013_c3:
     "Naomi, in a smooth motion, opened the door for us and stepped inside; my face sank into the gregarious, tickling scent of a labor of love at once."
-    scene Cooking Classroom with fade
-    play music PRG
+    scene Cooking Classroom
     show GTS neutral at Position(xcenter=0.3, yalign=1.0)
     show PRG worried at Position(xcenter=0.7, yalign=1.0)
-    with dissolve
+    with fade
+    play music PRG
     "A labor indeed, as we found Aida standing behind the counter, scanning an array of ingredients and instruments arranged with impeccable consideration for both ease of instruction and Naomi's reach."
     "Her hands were folded as she observed in silence, the young queen ruling softly but surely."
     show PRG neutral at Transform(xzoom=-1) with dissolve
@@ -1622,8 +1626,9 @@ label GTS014:
     show GTS embarrassed
     GTS "Okay."
     "Naomi stood up from her desk and waited as I gathered my things before we left together."
-    scene Track with fade
-    show GTS neutral at center with dissolve
+    scene Track
+    show GTS neutral
+    with fade
     "Eventually we stepped out into the soccer field, where it appeared a few people were gathering to start a game."
     "Among them was Honoka, whose quick wave I returned before deciding this was as good a place as any for a rest, Naomi and I taking a seat on the bleachers."
     "We observed the game for a few moments, before a random question entered my mind."
@@ -1824,8 +1829,9 @@ label GTS015_c2_after:
     jump daymenu
 
 label GTS016:
-    scene School Planter with fade
-    show GTS neutral at center with dissolve
+    scene School Planter
+    show GTS neutral
+    with fade
     play music Busy
     "There was a gentle chirping up above as I looked up to see some birds, their chirping accompanying the soothing hum coming from Naomi."
     "A smile had been occupying my face throughout the course of our time together, but quickly vanished as a little yellow mass floated by my face."
@@ -2207,8 +2213,9 @@ label GTS019:
     "A mixture of the sun's warmth along with the soothing melody caused my eyelids to begin growing heavy, as I hadn't a thought in the world besides taking in the moment."
     scene black with fade
     "Eventually a soft chuckle made me realize that I had fallen asleep at some point..."
-    scene School Planter with fade
-    show GTS happy at Position(xcenter=0.8, yalign=1.0) with dissolve
+    scene School Planter
+    show GTS happy at Position(xcenter=0.8, yalign=1.0)
+    with fade
     "...as my eyes opened and I saw Naomi smiling down at me."
     play music Schoolday
     GTS "Very sorry Hotsure-san, I didn't mean to wake you."
@@ -2435,8 +2442,9 @@ label GTS020_c1_2:
 
 label GTS021:
     $setProgress("GTS", "GTS022")
-    scene School Planter with fade
-    show GTS neutral at center with dissolve
+    scene School Planter
+    show GTS neutral
+    with fade
     play music Peaceful
     "Having received a message from Minori about Naomi wishing to see me, I wandered into the garden with my eyes peeled and ears perked."
     "As my footsteps bent the blades of grass underneath, I spotted Naomi at her usual spot, a mat underneath her and another laid beside her. She sat with her hands rested peacefully on her lap as her eyes laid shut."
@@ -2691,8 +2699,9 @@ label GTS022_invite:
     play sound Knock
     pause 2
     AE "Come in."
-    scene Office with fade
-    show AE neutral with dissolve
+    scene Office
+    show AE neutral
+    with fade
     "Behind Matsumoto-san atop her desk were two perfectly level, perfectly square and, to me, frightfully tall stacks of documents. She stood facing me with the tip of a pen peeking out from between her fingers."
     AE "Good morning Hotsure-san. Do you need help finding something?"
     MC "No, not quite. Yamazaki-san and I were going to sit down tomorrow and compose a renga poem together, and we were wondering if you might be interested in joining as the scribe."
@@ -2737,9 +2746,9 @@ label GTS022_invite:
     MC "Nope, that was it."
     MC "Thank you again."
     "We exchanged a shallow bow and I turned to leave."
-    hide AE with dissolve
-    scene Library with fade
-    show GTS neutral with dissolve
+    scene Library
+    show GTS neutral
+    with fade
     "I took my seat again on the other side of the room while Naomi watched me with visible interest."
     MC "She agreed."
     GTS "Wonderful! I do believe her presence will enhance the experience a great deal."
@@ -2971,9 +2980,6 @@ label GTS022_c7a:
     show AE happy with dissolve
     AE "Likewise, Yamazaki-san."
     "We all stood to leave, nothing more to say left among us."
-    hide AE
-    hide GTS
-    with dissolve
     scene Hallway with fade
     "Naomi said nothing as we took the same path out of the building."
     MC "How did you feel about that whole thing? It might not've lived up to expectations, I guess."
@@ -3008,9 +3014,6 @@ label GTS022_cutoff_a_early:
     MC "'Course!"
     GTS "Thank you very much for joining us."
     "We bowed in turn and gathered our things to part ways."
-    hide AE
-    hide GTS
-    with dissolve
     scene black with fade
     $setAffection("GTS", -2)
     "To my surprise, Naomi said nothing to me whatsoever afterward."
@@ -3036,9 +3039,6 @@ label GTS022_cutoff_a:
     MC "'Course!"
     GTS "Thank you very much for joining us."
     "We bowed in turn and gathered our things to part ways."
-    hide AE
-    hide GTS
-    with dissolve
     scene Hallway with fade
     "We split off each our own way; as for me, I went back inside to let my mind wander to the next diversion."
     "That is, until Naomi approached me from behind and gently, distinctly called my name."
@@ -3297,7 +3297,6 @@ label GTS022_cutoff_b_early:
     MC "Yeah, 'course. Have a good day, Yamazaki-san."
     GTS "You as well."
     "We bowed and gathered our things to part ways."
-    hide GTS with dissolve
     scene black with fade
     $setAffection("GTS", -2)
     "To my surprise, Naomi said nothing to me whatsoever afterward."
@@ -3319,7 +3318,6 @@ label GTS022_cutoff_b:
     MC "Yeah, 'course. Have a good day, Yamazaki-san."
     GTS "You as well."
     "We bowed and gathered our things to part ways."
-    hide GTS with dissolve
     scene Hallway with fade
     "We split off each our own way; as for me, I went back inside to let my mind wander to the next diversion."
     "So I thought, until Naomi approached me from behind and gently, distinctly called my name."
@@ -3500,8 +3498,9 @@ label GTS023_c2:
         BE "Yep! 'Scuse me."
         hide BE with dissolve
         "She jogged back into place in front of the camera, where the quivering would not be faint for another half a minute. She exchanged a brief chat with her co-star, inaudible to me, in the meantime."
-        hide GTS with dissolve
-        hide Ryoko with dissolve
+        hide GTS
+        hide Ryoko
+        with dissolve
         "Just as Ryoko said, with the magic of the pen at play it was only a couple more takes before she called the final cut."
         MC "So Yamazaki-san, what do you think of that scene?"
         show GTS neutral with dissolve
@@ -3672,25 +3671,27 @@ label GTS024:
     MC "Probably."
     "Though Naomi was still moving at a fairly easy pace, she reached the door first and held it open for me to go through. Just before I went through, I turned around and called out,"
     MC "Bye, plants! We'll be back in a jiffy, so no wild parties."
-    scene Hallway with fade
-    show GTS happy with dissolve
+    scene Hallway
+    show GTS happy
+    with fade
     GTS "Hm hm hm. I believe the idea is to talk to the plants up close."
     show GTS neutral with dissolve
     MC "I'm sure they got the picture."
     GTS "The ease of your levity never ceases to amaze me."
     "We proceeded down the ramps towards the ground floor, passing small, dispersed groups of students hanging around and chatting in the dim gray light."
     "Naomi began walking with a little more oomph once we neared the entrance, and I found myself having to full-on fast walk to keep up."
-    scene Gate Front with fade
-    show GTS neutral with dissolve
+    scene Gate Front
+    show GTS neutral
+    with fade
     MC "Where are we going, exactly?"
     GTS "Well, the groundskeeper graciously allowed me to keep a jug of my plant food by the supply shed. And I believe I have a suitable eyedropper in my dormitory."
     GTS "I hope you don't mind a bit of a trip."
     MC "Just those places and back? Nah, not at all."
     "She gave me a shallow but considered bow."
     GTS "Thank you."
-    hide GTS with dissolve
-    scene Campus Center with fade
-    show GTS neutral with dissolve
+    scene Campus Center
+    show GTS neutral
+    with fade
     if getSkill("Athletics") > 2:
         "I honestly had no trouble keeping up with her after the initial surprise, but nonetheless we remained silent for a good minute or two crossing behind the admin building. Something was occuring to me that held my tongue."
         "However, Naomi stole a glance at me and must have noticed my drastically quickened pace. She covered her mouth and came gently to a stop."
@@ -3716,9 +3717,9 @@ label GTS024:
     show GTS happy
     GTS "Such a gentleman!"
     "I only just heard her chuckle under her breath, and we began treading directly across the grass to the girls' dorms."
-    hide GTS with dissolve
-    scene Dorm Exterior with fade
-    show GTS neutral with dissolve
+    scene Dorm Exterior
+    show GTS neutral
+    with fade
     GTS "Well now, I understand this is a bit unusual, but would you mind waiting out here for a minute or two?"
     "I thrummed my fingers on my pockets while contemplating the question for a second."
     MC "I can do that, sure."
@@ -3832,7 +3833,6 @@ label GTS024:
         MC "...I'll be back in just a minute, okay?"
         "She nodded."
         GTS "I'll be right here."
-        hide GTS with dissolve
         scene black with fade
         pause 2
         scene Dorm Interior with fade
@@ -3843,8 +3843,9 @@ label GTS024:
         "I pulled it out and chanced to feel around inside the pockets."
         MCT "...Yep."
         "I thanked the stars at least Daichi wasn't there to see that in person as I left again and headed back down to the entrance."
-        scene Dorm Exterior with fade
-        show GTS neutral with dissolve
+        scene Dorm Exterior
+        show GTS neutral
+        with fade
         GTS "You found it?"
         MC "Eventually. Apologies about the delay."
         GTS "Think nothing of it. If absolutely nothing else, turnabout is fair play."
@@ -3957,7 +3958,6 @@ label GTS024_c1_2:
     GTS "Oh!"
     show GTS happy with dissolve
     extend " Yes, you're absolutely right. Let's tend to that right away."
-    hide GTS with dissolve
     scene black with fade
     "She picked up her jug and we made our way up the stairs, umbrellas ready. I managed to reach the door first, and soaking up a few seconds of unabated rain before holding the door for Naomi to huddle through."
     "I resolved, to myself, to appreciate the open air more."
@@ -4098,8 +4098,9 @@ label GTS026:
 
     scene black with fade
     pause 1
-    scene Classroom with fade
-    show HR neutral with dissolve
+    scene Classroom
+    show HR neutral
+    with fade
     HR "...And if there are no other questions, remember there's a quiz on chapter 4 tomorrow."
     HR "And for whoever needs to hear this, any copy that comes back to me with glitter on it is getting a zero. Hope that's clear enough."
     HR "Alright, dismissed."
@@ -4142,8 +4143,9 @@ label GTS026:
     MC "Yeah! Yeah, sure."
     "She smiled at me, bowing her head, and set aside her watering can while I went to open the door."
 
-    scene Hallway with fade
-    show GTS neutral with dissolve
+    scene Hallway
+    show GTS neutral
+    with fade
     "Naomi didn't seem to mind at all as I considered what to say."
     "It occurred to me, stealing a glance at the mild portrait of her face, if I should've said anything at all. In time, however, I realized I didn't have a choice."
     menu:
@@ -4276,8 +4278,9 @@ label GTS026_c2:
     GTS "It surely does."
     "I put one hand behind my back and held the other up by my neck, whereupon she took it in her own, smiling."
 
-    scene Field with fade
-    show GTS neutral with dissolve
+    scene Field
+    show GTS neutral
+    with fade
     "As we made our way down the sidewalk through the valley, the vastness of the wind struck me; grasses cast in a mild pre-evening ochre swayed just in time with the folds of Naomi's skirt and jacket."
     "It struck me how all this way she'd just been inching her feet along."
     "She was still holding my hand as the edge of town crept into view; hers encased mine entirely, and in the direct sunlight the inside was beginning to grow damp. I decided, then, to disturb the otherwise comfortable silence."
@@ -5111,7 +5114,8 @@ label GTS028s_c2_3:
     "Naomi shut out everything, it seemed, except what I was telling her. Eventually, I was the one who had to remind her that Ryoko and Minori would be waiting for us."
     show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
     show Minori neutral at Position(xcenter=0.2, yalign=1.0)
-    show GTS neutral with dissolve
+    show GTS neutral
+    with dissolve
     play music Sunset fadein 1.0
     jump GTS028S_c3
 
@@ -5235,11 +5239,11 @@ label GTS028S_c3a:
     scene black with fade
     pause 0.5
 
-    scene Town with fade
+    scene Town
     show Ryoko neutral at Position(xcenter=0.8, yalign=1.0)
     show Minori neutral at Position(xcenter=0.2, yalign=1.0)
     show GTS neutral
-    with dissolve
+    with fade
     MC "Man, Yamazaki-san, you saved my bacon with that voucher. How'd you think to bring that?"
     show GTS happy
     GTS "It was nothing. A lady who means to keep her house in order must shun no financial advantage."
@@ -7008,8 +7012,9 @@ label GTS037:
     "I made my way back to the dorms. After I stopped in front of my door and turned my key into the lock, I heard the distinctive sound of typing coming from the other side."
     "Perhaps Daichi was taking his usual notes. I closed the door behind me after setting my supplies on the floor."
 
-    scene Dorm Interior with fade
-    show RM neutral with dissolve
+    scene Dorm Interior
+    show RM neutral
+    with fade
     MC "Good day, sir. May I interest you in a VPN service? If you use the promo code Illuminati001, you'll receive a free 30-day trial for-"
     show RM smug
     MCT "I must have said something right, if I managed to get Daichi of all people to chuckle."
@@ -7144,8 +7149,9 @@ label GTS037_c2_after:
     GTS "I suppose that being outside wasn't really preference of mine, but rather it was just what I happened to do most."
     MC "Still. It must be a welcome change of scenery from being in the hangar so much."
 
-    scene Mountains Tori Gate with fade
-    show GTS neutral with dissolve
+    scene Mountains Tori Gate
+    show GTS neutral
+    with fade
     "Naomi nodded while looking down at me."
     GTS "If nothing else, being outside in the wilderness allows me to breathe much fresher air. Sometimes, I forget what 'outside' is like in the giant dorms."
     MC "I've only been in there a few times, but from what I've seen, the only open part is the central pit. Otherwise, you're traveling the caverns."
@@ -7237,8 +7243,9 @@ label GTS037_c3_after:
     "Soon, the sounds of Naomi's breathing, the hum of the wind, and the chirp of the nearby birds all blended together into low, white noise. I had completely tuned out all distractions."
     "I kneeled in place with my eyes closed for a while longer, before I eventually opened my eyes."
 
-    scene Mountains Shrine with fade
-    show GTS happy with dissolve
+    scene Mountains Shrine
+    show GTS happy
+    with fade
     "Naomi's face met mine as I opened my eyes, her smile taking up most of my field of vision. She had lowered her position even further to meet my gaze, still in the same position as she was when we first arrived."
     GTS "Thank you for being here with me today. This was fun."
     MC "It's so quiet out here. I almost forgot where we were."
@@ -7251,8 +7258,9 @@ label GTS037_c3_after:
     MC "Not at all."
     "The two of us proceeded to walk back down the trail. Naomi walked in front of me, intentionally making her strides slow and delicate so I could keep up. The stones were sturdy, and didn’t vibrate at all under Naomi’s light steps."
 
-    scene Mountains Tori Gate with fade
-    show GTS unique with dissolve
+    scene Mountains Tori Gate
+    show GTS unique
+    with fade
     "By the time we had returned to the gate leading up to the shrine, Naomi had entered a complete state of relaxation. Her walking was rhythmic and precise, her breathing perfectly paced."
     "Naomi shifted her position, raising her head as she scooted slightly closer, rotating so her knees were pointed towards me rather than towards the shrine. She had a broad, content smile upon her face."
     GTS "May I have a hug?"
@@ -7700,8 +7708,9 @@ label GTS040_c3:
     show GTS neutral
     GTS "Not at all. Do come in, I'll get you some cold water."
     MC "Thanks, I... could sure use it."
-    scene Giant Dorm Interior with fade
-    show GTS neutral with dissolve
+    scene Giant Dorm Interior
+    show GTS neutral
+    with fade
     "Giving me a wide berth, she trotted over to her sink and produced from the cupboards what looked like a shotglass between her fingers. The sides of the glass were already fogging up as she walked it back over to me."
     GTS "I hope you'll pardon my lack of preparation."
     MC "Oh, none of that. I never told you I was coming, did I?"
@@ -7749,8 +7758,9 @@ label GTS041:
     "She didn’t mind me coming by; she treasured my company just  as much as I treasured hers."
     "Normally when I came over, we didn’t tend to do much. If we did, it was small things, pun intended, like homework, cooking, or just watching a show I could stream from my phone onto her tv."
     "Today however, was a bit different..."
-    scene Giant Dorm Interior with fade
-    show GTS neutral with dissolve
+    scene Giant Dorm Interior
+    show GTS neutral
+    with fade
     GTS "Kei, could you tell me which color you think looks better? The red,"
     show GTS neutral at Transform(xzoom=-1)
     extend " or the blue?"
@@ -7811,14 +7821,16 @@ label GTS041:
     pause 1
     stop music fadeout 0.5
 
-    scene Field with fade
-    show GTS neutral with dissolve
+    scene Field
+    show GTS neutral
+    with fade
     MC "...and you’re in a cart after being captured because you were crossing the border illegally. Once you’re in control, some guy says he's glad you are awake."
     GTS "I wish I could recall all that kind of stuff as well as you can."
     MC "I’ll be honest I’ve just played the game and the others in the series too much."
     GTS "Oh, I think that we are here."
-    scene Giants Town with fade
-    show GTS neutral with dissolve
+    scene Giants Town
+    show GTS neutral
+    with fade
     "I had been so caught up in my tale that I hadn’t noticed us reach the large gate. A pair of guard towers bracketed the gate."
     MC "You sure this is the place?"
     GTS "Someone had mentioned it was government run, but I’m not entirely sure."
@@ -7849,8 +7861,9 @@ label GTS041:
     GTS "Oh right, apologies."
 
     scene Giants Town Store
+    show GTS neutral
+    with fade
     play music BrightLights
-    show GTS neutral with dissolve
     "Going further into the store from my perspective brought on this feeling of truly entering a foreign world. Items that are so common to me are now taller than my entire body, or even taller than my house."
     "A feeling of alienation I could feel welling in my stomach, though there was another feeling I wasn’t sure how to describe in there as well."
     "As we rounded the endcap of an aisle, I found myself looking higher still. Ahead of me was a gentleman that towered even over Naomi. He was quite toned as evident by the muscles outlined by his button down shirt."
@@ -8028,9 +8041,10 @@ label GTS043:
     show FMG happy
     FMG "You know me, Kei-kun! I'm always ready."
 
-    scene School Exterior with fade
+    scene School Exterior
+    show FMG neutral
+    with fade
     play music HigherEdu
-    show FMG neutral with dissolve
     "Akira and I made our way outside, taking the sidewalk behind the main school building. Within a minute, we had arrived at the field."
     "A large wire fence surrounded the corners. The field was originally designed to hold baseball games, but it also doubled as a spot for all of the outdoor after-school clubs to gather."
     "The rhythmic crunch of sand beneath our shoes punctuated our walk towards the center."
@@ -8398,8 +8412,9 @@ label GTS044_c3a:
     "With my backpack laden and no goodbyes to say, I headed out to the yellowed reaches of the giants' dorms."
     scene black with fade
     pause 1
-    scene Giant Dorm Interior with fade
-    show GTS neutral at Position(xpos=0.2, xanchor=1.0, yanchor=1.0) with dissolve
+    scene Giant Dorm Interior
+    show GTS neutral at Position(xpos=0.2, xanchor=1.0, yanchor=1.0)
+    with fade
     "Naomi, after letting me in, stepped aside to gather some things from a middle shelf that I could probably touch standing tiptoe."
     GTS "It's good to see you again, Keisuke-chan, even if I might prefer more auspicious circumstances."
     MC "It could be worse, there could be two tests."
@@ -8506,8 +8521,9 @@ label GTS044_c4a_2:
     $setAffection("GTS", 2)
     #pending approval, this choice gives weight towards the Nun ending
     "I continued to sit there, listening to the air blow in circles inside me. That is, until I heard a rustle in the grass at my side."
-    scene Mountains with fade
-    show GTS neutral with dissolve
+    scene Mountains
+    show GTS neutral
+    with fade
     jump GTS044_c5a
 
 label GTS044_c5a:
@@ -8746,7 +8762,7 @@ label GTS044_c5b:
         MCT "...{w} Wait..."
         scene Dorm Interior with fade
         MC "Hey, Utagashi-san, can I borrow your binoculars?"
-        show RM neutral
+        show RM neutral with dissolve
         RM "For?"
         MC "I can't get a good picture of the moon. I wanna try to magnify it."
         pause 1
@@ -8755,7 +8771,6 @@ label GTS044_c5b:
         RM "Sure."
         "He slid open his desk drawer and from it passed me a compact pair of binoculars."
         MC "Thanks, man."
-        hide RM with dissolve
         scene Dorm Exterior with fade
         "I stepped back out onto the balcony and, gripping both my roommate's binoculars and my phone for dear life, lined up another shot."
         MCT "Much better. Now to take the shot..."

@@ -573,9 +573,10 @@ label global000_WG_c2:
     jump global000_RM
 
 label global000_RM:
-    scene Hallway with fade
+    scene Hallway
+    show BE neutral
+    with fade
     stop music
-    show BE neutral with dissolve
     BE "All right, well, it looks like everything's ready for tomorrow...{w} (No thanks to queenie over there.){w} Time to get back to the dorms, I guess!"
     MC "They wouldn't happen to be co-ed, would they?"
     show BE happy
@@ -633,8 +634,9 @@ label global000_RM_c1:
     show RM neutral with dissolve
     RM "All right, you check out...{w} My name's Daichi Utagashi."
     $setAffection("RM", -1)
-    scene Dorm Interior with fade
+    scene Dorm Interior
     show RM neutral
+    with fade
     jump global000_RM_after
 
 label global000_RM_c2:
@@ -647,8 +649,9 @@ label global000_RM_c2:
     hide cg with dissolve
     show RM neutral with dissolve
     RM "All right, you check out...{w} My name's Daichi Utagashi.{w} Come in, I don't like leaving the door open."
-    scene Dorm Interior with fade
+    scene Dorm Interior
     show RM neutral
+    with fade
     jump global000_RM_after
 
 label global000_RM_c3:
@@ -684,8 +687,9 @@ label global000_RM_c3:
     "He threw himself back over the railing and landed in a heap on the floor, breathing like an olympic athlete."
     #hide cg with dissolve
 
-    scene Dorm Interior with fade
-    show RM angry with dissolve
+    scene Dorm Interior
+    show RM angry
+    with fade
     RM "Bah... hagh... eh..."
     MC "You’re... hah... you’re welcome."
     show RM distrustful

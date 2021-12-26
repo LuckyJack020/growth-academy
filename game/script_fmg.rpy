@@ -477,9 +477,10 @@ label FMG006:
     MC "Oh, well, all right."
     scene black with fade
     "Much to Akira's dismay, we spent about the next hour cleaning the carpet. By the time we finished, Akira looked... upset?"
-    scene Gym with fade
+    scene Gym
+    show FMG angry
+    with fade
     play music Peaceful
-    show FMG angry with dissolve
     FMG "Man this blows... Cleaning that carpet took over an hour, we don't even have time to work out."
     MCT "I don't think I've seen her like this, the question is why though."
     MC "Don't worry, we can exercise some other time."
@@ -502,8 +503,9 @@ label FMG006_c1:
     MC "Just a minute!"
     scene black with fade
     "It took a bit to get to the vending machines, but I got what I needed for Akira."
-    scene Gym with fade
-    show FMG sad with dissolve
+    scene Gym
+    show FMG sad
+    with fade
     MC "Here, I know you feel bad but I figured I could cheer you up with -"
     show FMG happy
     FMG "{i}GASP{/i} FREE ICE CREAM!? SWEET!"
@@ -1049,8 +1051,9 @@ label FMG011:
     jump daymenu
 
 label FMG012:
-    scene Gym with fade
-    show FMG neutral with dissolve
+    scene Gym
+    show FMG neutral
+    with fade
     play music FMG
     FMG "Come on, harder!"
     MC "Gah!"
@@ -1711,8 +1714,9 @@ label FMG016:
     show FMG happy
     FMG "I'll see you outside."
 
-    scene Dorm Exterior with fade
-    show FMG neutral with dissolve
+    scene Dorm Exterior
+    show FMG neutral
+    with fade
     FMG "Okay. Remember only ten seconds."
     MC "Heh, I only need four."
     show FMG happy
@@ -1866,9 +1870,10 @@ label FMG016:
 
 label FMG017:
     $setProgress("FMG", "FMG018")
-    scene Campus Center with fade
+    scene Campus Center
+    show FMG neutral
+    with fade
     play music Busy
-    show FMG neutral with dissolve
     MC "So, how's life been?"
     FMG "Eh, nothing much has changed really, my mom send some cookies from home, so that was nice of her."
     MC "Oh, your mom bakes?"
@@ -2068,10 +2073,10 @@ label FMG018_c1_1:
     scene black with fade
     "After a discussion with a confused teacher, I later found that the fat, blood, and other rendered parts of the animals could be found in the school kitchen."
     "At the very least, I know the food here's fresh."
-    scene Cooking Classroom with fade
+    scene Cooking Classroom
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1)
     show AE neutral at Position(xpos=0.75)
-    with dissolve
+    with fade
     MC "Yo! I'm back with the blood."
     AE "Ah, splendid. We've been working on the mashed potatoes."
     FMG "Yeah! Check {i}this{/i} out."
@@ -2155,10 +2160,10 @@ label FMG018_c1_2:
     scene black with fade
     "We took our positions after that, Naomi took care of the noodles, Akira was in charge of the broth, and I was handling the extra bits..."
     "...and somehow we messed up. The noodles were undercooked, the extra toppings like mushrooms and green onions were less than the recommended amount because others had the same ramen idea, and the broth was low and tasted burnt somehow."
-    scene Cooking Classroom with fade
+    scene Cooking Classroom
     show FMG neutral at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1)
     show GTS neutral at Position(xpos=0.75)
-    with dissolve
+    with fade
     FMG "...Well, this turned out better than I thought."
     show GTS sad
     GTS "Again, I am sorry for my lack of experience cooking. I... never had to cook at home."
@@ -2191,10 +2196,10 @@ label FMG018_c1_3:
     scene black with fade
     "After she got what we needed, we put together a pie and cooked it for 45 minutes..."
     "...But the end result left much to be desired."
-    scene Cooking Classroom with fade
+    scene Cooking Classroom
     show FMG sad at Position(xpos=0.25, yalign=1.0), Transform(xzoom=-1)
     show BE sad at Position(xpos=0.75)
-    with dissolve
+    with fade
     FMG "...Uh, I don't think it's supposed to look so... undercooked, I get the feeling we didn't use the right centigrade."
     MC "Maybe you're right, Honoka what recipe were you following anyways?"
     show BE happy
@@ -2541,9 +2546,10 @@ label FMG021:
     stop music
     "The next day..."
 
-    scene Classroom with fade
+    scene Classroom
+    show FMG happy
+    with fade
     play music Schoolday
-    show FMG happy with dissolve
     FMG "...And then! As the Americans ran across the great desert in their 1969 Brimstone muscle cars, they shot down the great emu mech robot thing piloted by sergeant general lieutenant Emmet Mel and he died in the explosion!"
     FMG "Killing all the emus in the process! And so, the city of New Zealand, Australia was renamed to Melbourne! And then everyone ate emu burgers!"
     FMG "And that's how the great emu war happened!"
@@ -2560,10 +2566,10 @@ label FMG021:
     show HR neutral with dissolve
     HR "Alright, thank you, Mizutani-san for your... enlightening report."
 
-    scene Classroom with fade
+    scene Classroom
     show FMG happy at Position(xcenter=0.25, yanchor=1.0)
     show AE neutral at Position(xcenter=0.75, yanchor=1.0)
-    with dissolve
+    with fade
     FMG "Guys guess what! I got an A+ on my report!"
     AE "What report? I never-wait, what?!"
     FMG "Oh don't worry Shiori, I told Tashi all about how you and Kei helped me-"
@@ -2571,8 +2577,9 @@ label FMG021:
     FMG "I even took this picture to remember it by and gave him a copy!"
     MCT "Still though, I can't believe what just happened."
 
-    scene Classroom with fade
-    show HR neutral with dissolve
+    scene Classroom
+    show HR neutral
+    with fade
     HR "Hotsure-san, did you actually help Mizutani-san?"
     MC "You know what, there was not only nothing I could do, but I felt like impeding the trainwreck would have just made me a casualty."
     HR "Well, regardless, I'd think she'd have SOME knowledge on her own topic."
@@ -2832,8 +2839,9 @@ label FMG022_c1_1:
     "And so I did, after she gave my arm a good whack."
     "But there was something else I wanted to tell her, that took me the rest of our time on the trail to say."
 
-    scene Lake Road with fade
-    show FMG neutral with dissolve
+    scene Lake Road
+    show FMG neutral
+    with fade
     MC "So, like, why the concern all of a sudden back there?"
     FMG "Like I said, {i}push{/i} your limit, don't shoot past it. Because passing your limit in the gym might mean spraining your shoulder, but back there it might mean breaking your leg."
     MC "Eesh... I guess you're not wrong. I just didn't think of that."
@@ -2901,7 +2909,6 @@ label FMG022_c1_2:
         FMG "That was like a kitten watching its parents being taken away... oh, man, I wasn't ready for this..."
         MC "Y'know what, maybe we should just get outta here and never speak of this again."
         FMG "We should do that, yeah."
-        hide FMG with dissolve
         scene Lake Road with fade
         "And so we did."
         "We made it back just in time to get ready for Akira's run, but we agreed it was better I sit that day out."
@@ -3473,8 +3480,9 @@ label FMG025:
     show FMG neutral
     FMG "I pinky promise."
 
-    scene Club with fade
-    show FMG surprised with dissolve
+    scene Club
+    show FMG surprised
+    with fade
     FMG "Jeez this place is freaking incredible!"
     "She was right, lights camouflaged the floor and the ceiling, surrounding us in rays of various colors. The only thing brighter than the dance floor was Akira's smile. She seemed lost in trying to take in everything around her. It was like watching a kid in a candy store."
     DJ "Welcome everyone! Tonight is going to be crazy, I hope to see everyone moving and having fun."
@@ -3871,8 +3879,9 @@ label FMG027:
     pause 1
     $setTime(TimeEnum.EVE)
 
-    scene Dorm FMG with fade
-    show FMG sad with dissolve
+    scene Dorm FMG
+    show FMG sad
+    with fade
     FMG "Damn, time really does fly when you're having fun."
     show FMG happy
     FMG "If you want you can stay the night."
@@ -3969,8 +3978,9 @@ label FMG028:
     scene black with fade
     pause 1
 
-    scene Field with fade
-    show Natsuko smug at Position(xcenter=0.25, yalign=1.0) with dissolve
+    scene Field
+    show Natsuko smug at Position(xcenter=0.25, yalign=1.0)
+    with fade
     Natsuko "We'll play four holes, it won't be considered a real game but you couldn't give me a real game anyway."
     show FMG angry-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     FMG "Oh my god do you ever shut up? Let's hurry this up, I gave up my lifting time for this. I'd like to start so I can get as far away from you as possible."
@@ -4211,8 +4221,9 @@ label FMG029:
     MC "..."
     FMG "Hey, don't be {i}too{/i} excited, Kei-kun. When we get to the gym, I'll show you what we're doing. I'm making it out to be worse than it really is."
     MCT "I can only hope."
-    scene Gym with fade
-    show FMG neutral with dissolve
+    scene Gym
+    show FMG neutral
+    with fade
     FMG "As promised, here's the routine for today!"
     MC "Routine?"
     FMG "Yeah! I write down a quick and simple list of things I want to get done during my workout."
@@ -5163,8 +5174,9 @@ label FMG038:
     FMG "You're ridiculous. We should be going all this chatting is going to make us late and the last thing we both want is Matsumoto-san giving us a lecture about being on time."
     MC "Say no more."
 
-    scene Track with fade
-    show AE neutral at Position(xcenter=0.3, yalign=1.0) with dissolve
+    scene Track
+    show AE neutral at Position(xcenter=0.3, yalign=1.0)
+    with fade
     AE "There you are."
     show FMG sad at Position(xcenter=0.7, yalign=1.0) with dissolve
     FMG "Sorry about that Matsumoto-san, we got caught up with uhhh... yeah I got nothing, we're just late."
@@ -5489,8 +5501,9 @@ label FMG039:
 
 label FMG040:
     $setProgress("FMG", "FMG041")
-    scene Campus Center with fade
-    show FMG flex with dissolve
+    scene Campus Center
+    show FMG flex
+    with fade
     play music Busy
     FMG "I'm thinking we do some back training today!"
     show FMG happy
@@ -5528,9 +5541,10 @@ label FMG040:
     show FMG angry-2
     FMG "Stop thinking about my ass! If we don't hurry the line is going to get long!"
     MC "Yes ma'am!"
-    scene Town with fade
+    scene Town
+    show FMG happy
+    with fade
     play music BrightLights
-    show FMG happy with dissolve
     FMG "Awesome! Only a few people in front of us. I might have died of boredom if we had to wait any longer."
     MC "It's roughly a five minute wait. Are you telling me that one more minute would've been too long???"
     show FMG neutral
@@ -5713,8 +5727,9 @@ label FMG041:
     show FMG sad
     FMG "It was my favorite bike too, damn... *sigh*  Let's go wait by the bus stop."
 
-    scene School Front with fade
-    show FMG angry with dissolve
+    scene School Front
+    show FMG angry
+    with fade
     FMG "Ugh! I hate the bus..."
     MC "Why though? It's not going to hurt you."
     show FMG sad
@@ -5852,9 +5867,10 @@ label FMG041:
     "I couldn't believe my eyes... everything about it complemented her body so well."
     MC "Y-Y-You look really good... Have you considered wearing this all the time?"
     hide cg with dissolve
-    scene Beach with dissolve
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
+    scene Beach
     show FMG happy
+    with dissolve
     FMG "Glad you like it! By the way, I need your help with something."
     MC "Sure, but let me get changed first. I'll be right back."
     show FMG neutral
@@ -6218,8 +6234,9 @@ label FMG042:
     scene black with fade
 
     $setTime(TimeEnum.EVE)
-    scene Dorm Exterior with fade
+    scene Dorm Exterior
     show FMG neutral
+    with fade
     FMG "Soooooo, what now?"
     MC "We have about two hours before the arcade closes. So I figure instead of yelling at scrubs online, we yell at each other over skee ball."
     show FMG happy
@@ -6256,8 +6273,9 @@ label FMG043:
     MCT "What could she possibly want to talk about?"
     MC "Never was much of a fan of the \"I want to talk\" business. I'm sure it's nothing to stress about... I hope."
 
-    scene Roof with fade
-    show FMG neutral with dissolve
+    scene Roof
+    show FMG neutral
+    with fade
     FMG "Hey."
     "I reached my hand out and planted it on her shoulder while lowering my voice to sound a bit more manly."
     MC "...Hey."
@@ -6351,9 +6369,10 @@ label FMG043:
 label FMG044:
     $setTime(TimeEnum.EVE)
     $setProgress("FMG", "FMG045")
-    scene Lockers with fade
+    scene Lockers
+    show FMG neutral
+    with fade
     play music Schoolday
-    show FMG neutral with dissolve
     FMG "Hell yeah, that session was freakin' dope!"
     MC "I'll never understand how you can do this every day for hours on end."
     show FMG flex
@@ -6665,8 +6684,9 @@ label FMG046:
     MC "...I'm going to search over there."
     scene black with fade
 
-    scene Cooking Classroom with fade
+    scene Cooking Classroom
     show FMG neutral
+    with fade
     FMG "Nice, we found everything... I think..."
     MC "If I may, what's with the sudden urge to cook?"
     FMG "I-I don't really know. I guess I felt like we should start mixing up our routine more."
@@ -7248,9 +7268,10 @@ label FMG047:
 
 label FMG048:
     $setProgress("FMG", "FMG049")
-    scene Cafeteria with fade
+    scene Cafeteria
+    show FMG neutral
+    with fade
     play music FMG
-    show FMG neutral with dissolve
     FMG "You... You going to finish those fries?"
     MC "I would like to but if you're still hungry... uhhg, I GUESS."
     show FMG happy
@@ -7824,8 +7845,9 @@ label FMG050:
     scene black with fade
     pause 1
     FMG "I can't... Hahahah, I-I can't breathe, that was so funny, hahahaha. The look on your face was priceless."
-    scene Hallway with fade
-    show FMG happy with dissolve
+    scene Hallway
+    show FMG happy
+    with fade
     "I slowly opened my eyes to see Akira staring down at me laughing hysterically."
     MC "You think this is funny???"
     FMG "Oh absolutely! This made my week."
@@ -7931,8 +7953,9 @@ label FMG051:
     scene black with fade
     pause 1
     $setTime(TimeEnum.EVE)
-    scene Lake Road with fade
-    show FMG sad with dissolve
+    scene Lake Road
+    show FMG sad
+    with fade
     FMG "Damn, it won't be light out much longer. Sucks that we'll have to keep this short for today."
     MC "It will be fun either way. We both want to see what you can do at this size. Now, madam, would you care to join me for a walk in the woods to find rocks to crush?"
     show FMG happy
@@ -8145,8 +8168,9 @@ label FMG052:
     scene black with fade
     pause 1
 
-    scene Dorm WG with fade
-    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with dissolve
+    scene Dorm WG
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    with fade
     FMG "You do this in your room? Shouldn't you have like I don't know... your own building for this?"
     show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "In time. But at the moment it isn't a concern to me. Chibuki, we have a customer!"
@@ -8317,7 +8341,8 @@ label FMG052:
     $setTime(TimeEnum.EVE)
 
     scene Dorm Exterior
-    show FMG happy with dissolve
+    show FMG happy
+    with fade
     FMG "Man, I can not wait for these new clothes. I'm going to look great."
     show FMG flex
     FMG "I hope the sleeves can hold, haha."
@@ -8478,8 +8503,9 @@ label FMG053:
     show FMG sad-2
     FMG "You worry me a lot."
     MC "You'll see what I'm talking about when you play a game, trust me."
-    scene Dorm Interior with fade
-    show FMG neutral with dissolve
+    scene Dorm Interior
+    show FMG neutral
+    with fade
     FMG "Man, it's been a while since I've been in here. Heh, everything looks even smaller here than in my dorm."
     MC "I don't really get or need the dorm upgrades you and the others get. Not like Daichi has anything going on with his body either."
     FMG "Oh yeah, I totally forgot about him. What's he been up to? I never heard anything else from him about our bodyguard agreement."
@@ -8601,9 +8627,10 @@ label FMG053:
 
 label FMG054:
     $setProgress("FMG", "FMG055")
-    scene Gym with fade
+    scene Gym
+    show FMG neutral
+    with fade
     play music FMG
-    show FMG neutral with dissolve
     FMG "Come on, Kei-kun! One more! One more pull-up! You can do it!"
     MC "Y-Yeah, I got this."
     "Akira wanted to start using the weighted vest when I did my exercises and boy it makes a difference."
@@ -8669,11 +8696,11 @@ label FMG054:
     scene black with fade
     pause 1
 
-    scene Town with fade
-    play music BrightLights
+    scene Town
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
+    play music BrightLights
     "We had decided to walk to town so we could get to know each other a little more. Akira was very persistent about it and I was happy for her."
     "She wanted to be friends with Nat for a while, and she had finally gotten her chance. Nat might not be good at expressing herself... like at all, but I could tell she enjoyed Akira's company."
     MC "I got one question for you, Nat. What happened to your jacket? You wore it all the time."
@@ -8751,8 +8778,9 @@ label FMG054:
     pause 1
     $setTime(TimeEnum.EVE)
 
-    scene Town with fade
-    show FMG happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    scene Town
+    show FMG happy at Position(xcenter=0.25, yalign=1.0)
+    with fade
     FMG "Thanks for paying today, Nat."
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     Natsuko "Yes, I know. You already told me."
@@ -8840,8 +8868,9 @@ label FMG055:
     MC "Stop... I can walk there... Don't touch me!"
     "And there I was, getting carried to the bathroom..."
 
-    scene Bathroom with fade
-    show FMG aroused with dissolve
+    scene Bathroom
+    show FMG aroused
+    with fade
     FMG "Hm, the only way we can properly compare is without our clothes on..."
     MC "STOP! I can take them off myself. I don't need you to rip another shirt."
     $setFMGOutfit(OutfitEnum.NUDE)
@@ -9570,9 +9599,10 @@ label FMG058_c2_1:
 
 label FMG059:
     $setProgress("FMG", "FMG060")
-    scene Park with fade
+    scene Park
+    show FMG neutral
+    with fade
     play music FMG
-    show FMG neutral with dissolve
     FMG "We should come here more often. It's beautiful!"
     MC "I've asked you about six times if you wanted to go to the park and chill on the benches to just talk about life or something, away from the school."
     FMG "Hmm... I definitely would've remembered you asking. Maybe it was one of those days where I felt like ignoring you, haha."
@@ -9836,8 +9866,9 @@ label FMG060:
     scene black with fade
     Dad "When my mom passed I was devastated. Losing someone you care about hurts, Kei. We won't be able to see them with our eyes or touch them with our hands. But we will always feel them in our hearts."
     Dad "The best we can do is to honor their memories. If we can do that, well, then they're never really lost."
-    scene Roof with fade
-    show FMG sad-2 with dissolve
+    scene Roof
+    show FMG sad-2
+    with fade
     MC "I don't want you to forget your brother. I want you to remember him for the rest of your life... just not like this. When you think about him, his memory shouldn't do {i}this{/i} to you."
     FMG "It's hard, Kei..."
     MC "I know it is. These things are never easy for anyone. Listen. Do you think this is something your brother would want? Holding onto his memory like this?"
@@ -9879,8 +9910,9 @@ label FMG060:
     scene black with fade
     pause 1
 
-    scene Park with fade
-    show FMG neutral with dissolve
+    scene Park
+    show FMG neutral
+    with fade
     FMG "Can I ask you something?"
     MC "Go for it."
     FMG "What... What was your friend like? I'd like to hear more about him if that's okay with you."
@@ -10909,8 +10941,9 @@ label FMGWG001:
     "..."
     RM "Hey, wake up!"
     MC "Wah?"
-    scene Library with fade
-    show RM angry with dissolve
+    scene Library
+    show RM angry
+    with fade
     play music RM
     MC "...Oh right... library archives. Why am I here again?"
     RM "For the fifth time, I need you to keep watch while I'm going over these documents, and you can't when you keep falling asleep!"
@@ -10947,8 +10980,9 @@ label FMGWG001:
     RM "Not with that attitude you aren't. Now go check!"
     MC "Ugh, fine."
     "Reluctantly, I sneaked towards the door, and to my surprise..."
-    scene Hallway with fade
-    show FMG neutral with dissolve
+    scene Hallway
+    show FMG neutral
+    with fade
     MC "It's Akira Mizutani, she's in the hallway near the stairway."
     hide FMG with dissolve
     show RM angry with dissolve
@@ -11033,8 +11067,9 @@ label FMGWG001:
     RM "Do you see an open alley with a good view of the front?"
     MC "...Fair point."
     RM "Alright, we got five minutes before the meeting time, let's head in!"
-    scene Cafe with fade
-    show RM neutral with dissolve
+    scene Cafe
+    show RM neutral
+    with fade
     "We entered the bakery, a small but cozy establishment with a caramel-brown and cream-white decorative theme."
     "It only had five tables and a counter with stools for seating. The store was mostly empty, given the time; the only person I could see was the counter girl."
     "The girl looked to be in her late twenties, mid-cut curly dark hazel hair, bright brown eyes, and slightly chubby with big breasts, maybe an E-cup."
@@ -11175,8 +11210,9 @@ label FMGWG001:
     Chie "Thanks for coming! You'll always be welcome here!"
     "She gave me a wink before going to the back, her daughter looking like a mix between embarrassed and annoyed for the most part."
     Cashier "Thanks for coming, and I'm sorry about my mom... Please come again!"
-    scene Town with fade
-    show RM neutral with dissolve
+    scene Town
+    show RM neutral
+    with fade
     "With that we left the store, and once we were out of sight of the windows I turned to see Daichi looking like he's trying to take things in stride."
     RM "Well, I am disappointed this wasn't the big break I've been searching for, but it gives me an idea of how far this may actually go. Not to mention that last comment she made, about the giant dorms..."
     show RM happy

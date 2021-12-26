@@ -248,9 +248,10 @@ label WG003:
     UNKNOWN "Amazing!"
     MC "Oh? I think I know that voice."
 
-    scene Cooking Classroom with fade
+    scene Cooking Classroom
+    show WG happy at Position (xcenter=0.25, yalign=1.0)
+    with fade
     play music Busy
-    show WG happy at Position (xcenter=0.25, yalign=1.0) with dissolve
     WG "Simply superb. Where did you study?"
     show PRG neutral at Position (xcenter=0.75, yalign=1.0) behind WG with dissolve
     PRG "I didn't. I just sort of... taught myself."
@@ -677,11 +678,10 @@ label WG005_c3:
     with dissolve
     show AE sad with dissolve
     HR "While others, like yourself, are pretty sad to hear the news. Like the stages of grief, it starts with denial, then bargaining. Sound familiar?"
-    hide AE with dissolve
-    scene Cafeteria with fade
+    scene Cafeteria
     show WG doubt at center
     show HR neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
     HR "I'm here to tell ya kid, you may think you have a plan of how to stop this, or maybe just slow it down, but that's not how these kinds of things work."
     HR "It can't be stopped. That's why you're here, that's why we're here."
     WG "What do you mean by \"can't be stopped\"? Surely {i}something{/i} can be done? Are you really saying there's nothing that can be done whatsoever?"
@@ -803,8 +803,9 @@ label WG006_c2:
     show WG haughty
     WG "I'm a firm believer that talent can blossom anywhere when given a guiding hand. Why don't you show me what you can do?"
 
-    scene Music Classroom with fade
-    show WG neutral with dissolve
+    scene Music Classroom
+    show WG neutral
+    with fade
     MCT "What have I gotten myself into? I don't want to embarrass myself this early on in the school year in front of a girl."
     MCT "Nevermind, it'll be fine, just do what you know you can do, man."
     WG "Well, don't keep me waiting now."
@@ -1525,8 +1526,9 @@ label WG010_accept:
 
 label WG010_c1:
     $setFlag("WG010_shiori")
-    scene Hallway with fade
-    show AE angry at center with dissolve
+    scene Hallway
+    show AE angry
+    with fade
     "I found Shiori prowling the halls, eyes jumping around from student to student, as if she was looking for violations of the school dress code or something."
     "For a second I thought this would be a good lean-in to my sales pitch, but when I saw her expression I scratched that idea."
     "Something a little more subtle would be needed."
@@ -2594,8 +2596,9 @@ label WG015_c2_1:
     "After that brief scare the rest of the delivery went off without a hitch."
     "I found the right room, found Fukushi still there, and gave her the package."
     "Later..."
-    scene Classroom with fade
-    show WG happy with dissolve
+    scene Classroom
+    show WG happy
+    with fade
     play music WG
     $setAffection("WG", 1)
     WG "Excellent work!"
@@ -2658,8 +2661,9 @@ label WG015_c3_1:
     play music WG
     "I turned around and left, not wanting to give her a chance to change her mind."
     "Alice was surprisingly chill about the news of my failure."
-    scene Classroom with fade
+    scene Classroom
     show WG neutral
+    with fade
     WG "This is not the desired outcome, Hotsure-san, but you did mitigate any potentially worse results."
     WG "I commend you for your rather... unorthodox solution, but I must say I didn't expect you to take the espionage analogy so close to heart."
     MC "Me either, to be honest."
@@ -2694,8 +2698,9 @@ label WG015_c3_2:
     stop music
     "I found Fukushi's room, with her still in it. I gave her the package, thanked her for using our service, and left."
     "Alice was more than pleased with how I handled myself."
-    scene Classroom with fade
+    scene Classroom
     show WG happy
+    with fade
     $setAffection("WG", 1)
     WG "Brilliantly done, Keisuke."
     "Maybe more pleased than was justified, but I wasn't going to complain. It felt good to have done a job well."
@@ -2721,8 +2726,9 @@ label WG015_c3_3:
     scene black with fade
     "I mostly tuned out Shiori's mini-tirade, already fearing what Alice was going to say."
     "At least Shiori could direct her anger elsewhere. Alice..."
-    scene Hallway with fade
-    show WG angry at center with dissolve
+    scene Hallway
+    show WG angry
+    with fade
     play music WG
     WG "Hotsure-san! Explain yourself!"
     MC "I got caught."
@@ -2773,8 +2779,9 @@ label WG015_test_pass:
     scene black with fade
     "I nodded and walked past her, only mildly guilty about lying like that."
     "Later, Alice complimented me about the job."
-    scene Classroom with fade
-    show WG happy at center with dissolve
+    scene Classroom
+    show WG happy
+    with fade
     play music WG
     WG "A satisfying first mission. And you even managed to give Matsumoto-san the slip."
     WG "Well done. Just be sure to stay on your toes next time as well."
@@ -2801,8 +2808,9 @@ label WG015_test_semipass:
     scene black with fade
     "I nodded and walked past her, not really feeling guilty about lying like that."
     "Later, Alice complimented me about the job."
-    scene Classroom with fade
-    show WG happy at center with dissolve
+    scene Classroom
+    show WG happy
+    with fade
     play music WG
     WG "A satisfying first mission. And you even managed to give Matsumoto-san the slip."
     WG "Well done. Just be sure to stay on your toes next time as well."
@@ -2838,8 +2846,9 @@ label WG015_test_fail:
     "After a few minutes I went back up to the third and checked the hall again. Shiori was gone."
     "And I hadn't missed Fukushi. I made the delivery and got out of the building."
     "Alice was amused at my cover story, but she was more taken with my commitment to getting the job done."
-    scene Classroom with fade
-    show WG happy at center with dissolve
+    scene Classroom
+    show WG happy
+    with fade
     play music WG
     $setAffection("WG", 1)
     WG "It's not the most airtight story you could have come up with, but you did well, Keisuke. You certainly took a bullet in the line of duty with that one. I'm impressed by your dedication."
@@ -3102,10 +3111,10 @@ label WG017_c1_2:
     scene black with fade
     "I went back to my dorm and hit the books, double-checking my math homework and trying not to take any shortcuts with the reading."
     "It took almost two hours, but I finished it all and headed back to her dorm."
-    scene Dorm WG with fade
+    scene Dorm WG
     show WG neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
     "I expected her to have started a game already, figuring it out on her own, but nope. She was having tea, not even looking at her computer."
     show WG happy
     WG "Finished your work?"
@@ -3772,11 +3781,11 @@ label WG019_c1_3:
 
 label WG020:
     $setProgress("WG", "WG022")
-    scene Classroom with fade
-    play music Busy
-    show WG neutral at center
+    scene Classroom
+    show WG neutral
     show PRG neutral at Position(xcenter=0.8, yalign=1.0) behind WG
-    with dissolve
+    with fade
+    play music Busy
     "After classes, Alice called Aida and I together for a business meeting."
     "She played it all straight-laced, going through a list of topics like an actual agenda."
     hide PRG with dissolve
@@ -3989,8 +3998,9 @@ label WG002M:
     "I fluttered my fingers for effect."
     MC "Now would be as good a time as any."
 
-    scene Music Classroom with fade
-    show WG neutral-2 with dissolve
+    scene Music Classroom
+    show WG neutral-2
+    with fade
     MC "Alright, I've been working on this one recently. It's still kind of new to me, so don't judge too harshly if it isn't the greatest."
     WG "I'm sure you'll do fine. It's more admirable to falter when trying to reach your aspirations than to be content with complacency."
     MC "I might just have to hold you to that then."
@@ -5708,9 +5718,10 @@ label WG029:
             pass
     WG "Sounds delightful."
 
-    scene School Front with fade
+    scene School Front
+    show WG happy
+    with fade
     play music BrightLights
-    show WG happy with dissolve
     "We decided to walk to town instead of waiting for the bus. The weather was accommodating and this would give us a chance to talk."
     "Only at first I couldn't think of anything to talk about except classes and papers coming due."
     "Not the best date conversation to lead in with, but I was still pretty nervous and that's just what came to mind before Alice brought up something else."
@@ -5747,8 +5758,9 @@ label WG029:
                WG "I see no issue with shifting some assets over to them while they're still on the upswing and dumping them after a few months."
                "Having found something not related to school or work to talk about, the rest of the walk to town went by quickly."
 
-    scene Town with fade
-    show WG neutral with dissolve
+    scene Town
+    show WG neutral
+    with fade
     "When we got to the town I felt a brief resurgence of dread."
     "Like I needed to make an excuse for how my plans for today couldn't possibly measure up to her normal expectations."
     MCT "Stop overthinking, it'll be fine."
@@ -5874,9 +5886,10 @@ label WG029_cafe:
     scene black with fade
     pause 0.5
     $setTime(TimeEnum.NIGHTLIGHTS)
-    scene Town with fade
+    scene Town
+    show WG neutral
+    with fade
     play music TwilightAmbient
-    show WG neutral with dissolve
     "The conversation ran off on its own tangents from there. Even when we were done with our food we were still chatting as we left the cafe and started walking around the town."
     "I didn't know about Alice, but I hadn't realize how late it was getting until the street lamps turned on."
     jump WG029_afterdate
@@ -5986,9 +5999,10 @@ label WG029_rest:
     scene black with fade
     pause 0.5
     $setTime(TimeEnum.NIGHTLIGHTS)
-    scene Town with fade
-    play music TwilightAmbient
+    scene Town
     show WG neutral
+    with fade
+    play music TwilightAmbient
     "After getting the bill, our conversation continued and ran off on its own tangents from there. We were still chatting as we left the restaurant, and I would have enjoyed just walking around the town and talking."
     "I didn't know about Alice, but I hadn't realize how late it was getting until the street lamps turned on."
     jump WG029_afterdate
@@ -6005,8 +6019,9 @@ label WG029_afterdate:
     scene black with fade
     pause 1
 
-    scene School Front with fade
-    show WG happy with dissolve
+    scene School Front
+    show WG happy
+    with fade
     "We headed back to campus, our conversation dying down as we took in the twilight."
     MC "Huh, the island really isn't that developed, other than the school and town."
     WG "No. It's unfortunate isn't it?"
@@ -6084,8 +6099,9 @@ label WG029_afterdate:
             "Though I intended it as a sincere compliment, I wished I had used something stronger than just 'Quite nice'."
             WG "Why thank you."
 
-    scene Dorm Exterior with fade
-    show WG neutral with dissolve
+    scene Dorm Exterior
+    show WG neutral
+    with fade
     "We finished the return trip in relative silence."
     "I walked Alice to the girl's dorm, and would have offered to walk her to her room if Shiori wasn't in sight."
     MC "Guess this is where we call it a night."
@@ -6161,8 +6177,9 @@ label WG030:
         "I printed out 50 copies and took them to Alice's dorm."
         scene black with fade
         pause 1
-        scene Dorm WG with fade
-        show WG happy with dissolve
+        scene Dorm WG
+        show WG happy
+        with fade
         $setAffection("WG", 2)
         WG "Oh, these are much better."
         MC "I still have time to hang them up tonight. Care to join me?"
@@ -7193,8 +7210,9 @@ label WG035:
         WG "My apologies for being a bit too curt, Keisuke, but I am pressed for time. Let's walk and talk."
     "She made for the door. I followed a step behind."
 
-    scene Hallway with fade
-    show WG neutral with dissolve
+    scene Hallway
+    show WG neutral
+    with fade
     MC "You have the concert tonight, right?"
     WG "Yes, it's tonight."
     if getAffection("WG") >= 35:
@@ -7558,8 +7576,9 @@ label WG037:
     WG "Shall we be off?"
     MC "If you're ready."
 
-    scene Hill Road with fade
-    show WG neutral with dissolve
+    scene Hill Road
+    show WG neutral
+    with fade
     "It was still rather light out due to the longer days as we started walking down the hill to the town. I wasn't paying much mind to the weather as I was too preoccupied with trying to steal some extra glances at Alice."
     "Out of her school uniform and in a more casual - but still fashionable - outfit, her recent growth looked even more prominent."
     "I was especially drawn to how her belly swelled out in front of her, reaching further than her breasts and coming down over the top of her legs."
@@ -7696,8 +7715,9 @@ label WG_037_afterchoice1:
     show WG neutral
     WG "I think that would be best as well."
 
-    scene Town with fade
-    show WG neutral-2 with dissolve
+    scene Town
+    show WG neutral-2
+    with fade
     "We took our time to walk to the movie theatre. The town wasn't that big so it didn't take long."
     scene black with fade
     pause 1
@@ -7852,8 +7872,9 @@ label WG038_FMG016:
         "Don't insist.":
             WG "Come on, this will be fun."
 
-            scene Cafe with fade
-            show WG neutral at center, Transform(xzoom=-1) with dissolve
+            scene Cafe
+            show WG neutral at center, Transform(xzoom=-1)
+            with fade
             "Alice walked to one of the roomier booths and sat down."
             WG "This is a fine spot. The faux leather seating is of surprisingly good quality."
             WG "If the food is good, I might just find myself in here regularly."
@@ -7939,8 +7960,9 @@ label WG038_FMG016:
             Chibuki "I'm sure I'll be seeing you again soon."
             MCT "What the hell did she mean with that last part? I don't plan to come here again unless Alice drags me by the ear all the way from school."
 
-            scene Town with fade
-            show WG happy with dissolve
+            scene Town
+            show WG happy
+            with fade
             WG "That was a rather nice way to spend the morning, wouldn't you agree?"
             MC "I have to admit, it was surprisingly pleasant, despite my initial misgivings. Thanks for paying again."
             WG "You're certainly welcome, but as I said, we came at my insistence, so it is only fair. I'm glad you enjoyed yourself as well."
@@ -7954,10 +7976,10 @@ label WG038_FMG009:
     MC "Well, alright then. I guess this could be fun."
     WG "Only one way to find out."
 
-    scene Cafe with fade
+    scene Cafe
     show WG neutral at center, Transform(xzoom=-1)
     show Chibuki neutral at Position(xpos=0.8)
-    with dissolve
+    with fade
     Chibuki "Good morning Miss, Good morning Mast- oh bugger."
     Chibuki "It's Keisuke isn't it?"
     "It suddenly struck me that I remembered this girl from somewhere."
@@ -8043,8 +8065,9 @@ label WG038_FMG009:
     Chibuki "I'm sure I'll be seeing you again soon."
     MCT "What the hell did she mean with that last part? I don't plan to come here again unless Alice drags me by the ear all the way from school."
 
-    scene Town with fade
-    show WG happy with dissolve
+    scene Town
+    show WG happy
+    with fade
     WG "That was a rather nice way to spend the morning, won't you agree?"
     MC "I have to admit, it was surprisingly pleasant, despite my initial misgivings. Thanks for paying again."
     WG "You're certainly welcome, but as I said, we came at my insistence, so it is only fair. I'm glad you enjoyed yourself as well."
@@ -8058,9 +8081,9 @@ label WG038_FMG000:
     "I wasn't entirely sure if Alice understood just what kind of maid these types of places usually had, but I didn't want to betray any further knowledge of the subject than necessary."
     MC "Well, alright then. I guess this could be fun."
     WG "Only one way to find out."
-    scene Cafe with fade
+    scene Cafe
     show WG neutral at center, Transform(xzoom=-1)
-    with dissolve
+    with fade
     Chibuki "Good morning Miss, Good morning Master."
     "It appeared the only maid working at the moment was foreign. Her accent would be a dead giveaway, if her blue eyes didn't already. They were a deeper blue than Alice's."
     "She looked familiar, but I didn't know her. Maybe I had seen her before?"
@@ -8144,8 +8167,9 @@ label WG038_FMG000:
     Chibuki "I'm sure I'll be seeing you again soon."
     MCT "What the hell did she mean with that last part? I don't plan to come here again unless Alice drags me by the ear all the way from school."
 
-    scene Town with fade
-    show WG happy with dissolve
+    scene Town
+    show WG happy
+    with fade
     WG "That was a rather nice way to spend the morning, won't you agree?"
     MC "I have to admit, it was surprisingly pleasant, despite my initial misgivings. Thanks for paying again."
     WG "You're certainly welcome, but as I said, we came at my insistence, so it is only fair. I'm glad you enjoyed yourself as well."
@@ -9017,9 +9041,10 @@ label WG041_AfterFood:
 label WG042:
     $setProgress("WG", "WG043")
     $setTime(TimeEnum.NIGHT)
-    scene Festival with fade
+    scene Festival
+    show WG neutral
+    with fade
     play music Festival
-    show WG neutral with dissolve
     "We walked around taking in the sights and sounds of the rest of the carnival. It wasn't quite the magical wonderland I remember from when I was a kid, but it still felt like something fun for the summer time."
     "I thought about asking Alice if she wanted to go on any of the rides, but given her initial disinterest in them when I asked her out, on top of a couple of kilograms of fried junk sitting in her gut, I decided that outcome wouldn't go over well."
     "Looking around at the games, I recognized the familiar standbys. Basketball shooting, skeeball— but they had those at the arcade in town, I could do those any time."
@@ -9503,13 +9528,14 @@ label WG043:
     "With the quiz out of the way along with the rest of the classes I headed to the locker to change into my swimsuit. I had a little extra time to kill before the practice started, but I didn't have anything better to do and it wasn't worth walking back to my dorm."
     "So, I figured I'd show up a bit early and hang out with Alice for a little while beforehand."
 
-    scene Pool with fade
     $setBEOutfit(OutfitEnum.SWIM)
     $setFMGOutfit(OutfitEnum.SWIM)
     $setPRGOutfit(OutfitEnum.SWIM)
     $setWGOutfit(OutfitEnum.SWIM)
     $setNatsOutfit(OutfitEnum.SWIM)
-    show WG haughty with dissolve
+    scene Pool
+    show WG haughty
+    with fade
     WG "Ah, Keisuke, you're here early. What a pleasant surprise."
     MCT "Is everyone surprised when I'm not late?"
     MC "Well, I don't think I would have been on time if I went back to my room, so I decided to just come here instead. Do you need help setting anything up?"
@@ -9702,14 +9728,14 @@ label WG043:
     scene black with fade
     "The sound of a sickening, dull thud was all that filled the air of the now silent pool."
 
-    scene Pool with fade
-    play music Bittersweet
+    scene Pool
     show PRG scared at Position(xcenter=0.15, yalign=1.0)
     show FMG surprised-2 at Position(xcenter=0.3, yalign=1.0)
     show WG surprised
     show BE surprised at Position(xcenter=0.7, yalign=1.0)
     show Natsuko disappointed at Position(xcenter=0.85, yalign=1.0)
-    with dissolve
+    with fade
+    play music Bittersweet
     BE "Akira-chan! You killed him."
     FMG "It was an accident!"
     WG "Don't joke about that now Honoka. Look, he's already coming to."
@@ -9823,8 +9849,9 @@ label WG044:
     MC "..."
     "The possibilities flooded my blackened vision, the tension of the situation was almost palpable."
     WG "There we go... alright! You may open your eyes now."
-    scene Dorm WG with fade
-    show WG haughty with dissolve
+    scene Dorm WG
+    show WG haughty
+    with fade
     "I wasn't sure what to expect when my vision returned. But 5 teacups lined in front of me was quite possibly the last thing I expected to see."
     MC "Uhhhh, I think you've lost me here. 'Confused' doesn't even begin to describe how I feel right now."
     WG "You are quite the clever one Keisuke, I am sure that you can deduce what my plan is here."
@@ -10373,12 +10400,14 @@ label WG045_suit:
     jump WG045_wine
 
 label WG045_wine:
-    scene Dorm Exterior with fade
-    show WG neutral with dissolve
+    scene Dorm Exterior
+    show WG neutral
+    with fade
     WG "The weather on this island truly is a wonder."
     MC "It truly is."
-    scene School Exterior with fade
-    show WG neutral with dissolve
+    scene School Exterior
+    show WG neutral
+    with fade
     WG "It's a shame really, a hotel and resort would be perfect here. Mass tourism would greatly improve the economy, though that would directly interfere with the school and its students."
     MC "That is true. The island has a lot of hidden gems to offer."
     WG "Perhaps when I am an experienced businesswoman in my own right, growth factors will be widely known among the general populace. This would lead to more relaxed regulations on the island."
@@ -10386,9 +10415,10 @@ label WG045_wine:
     WG "... although, mass tourism would severely impact the lives of the students here depending on where the resort is located."
     WG "It wouldn't be fair to deny students of the academy their largely undisturbed access to the scenic parts of the island, considering of course that students have no say in their attendance of the school."
     MCT "This monologue isn't going to end any time soon, is it?"
-    scene Town with fade
+    scene Town
+    show WG neutral
+    with fade
     play music BrightLights
-    show WG neutral with dissolve
     "Reaching the town was a sad end to the scenic walkways."
     WG "Furthermore..."
     MCT "Not that I got to fully enjoy such scenic walkways."
@@ -10419,8 +10449,9 @@ label WG045_wine:
     Guard "Everything is in order, welcome to the Usuda Art Gallery, Madam."
     WG "Thank you."
     "The guard opened the door for us and smiled as we entered."
-    scene Art Gallery with fade
-    show WG neutral with dissolve
+    scene Art Gallery
+    show WG neutral
+    with fade
     WG "This place certainly looks better than it does on their social media."
     WG "The art actually gives off a nice atmosphere, even if all of the popular pieces here are imitations."
     MC "I agree, the mood is a lot more relaxed than what I'd anticipated."
@@ -10644,9 +10675,10 @@ label WG045_wine:
             Misaki "Anyway, that is the end of this morning's event. I truly appreciate your father's donations, Alice, and your construction proposal was great."
     Misaki "I do hope you two enjoyed your time here."
     "Alice and I headed towards the exit."
-    scene Town with fade
+    scene Town
+    show WG neutral
+    with fade
     play music BrightLights
-    show WG neutral with dissolve
     WG "Keisuke..."
     MC "Yes?"
     WG "What I said at the end about fat wines not inherently being bad was a test."
@@ -11464,12 +11496,12 @@ label WG048_c1_1:
     Lee "Aw, mista Hotsure, glad to greet ya comin'! I was sent to check up on ya. Ya know Miss Nikumaru won't start without ya, but she's not exactly patient either."
     MC "Sorry to cause concern. Please, lead the way."
     stop music
-    scene Summer Dining Room with fade
     $setWGOutfit(OutfitEnum.SUMINT)
-    play music WG
+    scene Summer Dining Room
     show WG stern at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
+    play music WG
     WG "Keisuke! Why are you late? I specifically had Takada check up on you earlier so you would know when you were expected to arrive."
     WG "Dinner does not start until all guests are present- it would be rude of me as the hostess to do otherwise. In turn, as a courtesy to the other guests it is imperative that you be punctual."
     show WG neutral-2
@@ -11511,12 +11543,12 @@ label WG048_c1_2:
     scene Summer Hallway with fade
     "I sauntered down the hallway to the dining room with the knowledge that I made comfortable time, if only a minute or two to spare."
     stop music
-    scene Summer Dining Room with fade
     $setWGOutfit(OutfitEnum.SUMINT)
-    play music WG
+    scene Summer Dining Room
     show WG neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
+    play music WG
     WG "Keisuke, glad you could join us. I was worried you were not going to make it to dinner in a timely manner when you hadn't reemerged from your quarters in quite some time."
     show WG doubt
     WG "Oh... Keisuke, what's wrong with your hair?"
@@ -11813,12 +11845,13 @@ label WG049:
     "Clearly, I had not managed to fully shake the sleep from my eyes. Shading my sight with my hand on my forehead, I could finally take in the grand view of the beach from the Nikumaru estate."
     "It was a calming setting with the gentle rustling from the waves of translucent light blue waters. I could feel the hot air rising up from the ground as the summer sun beamed down on the pale sand."
     "Looking over at the beachside tent, it looked like Alice and Aida hadn't wasted any time setting up for the day at the beach."
-    scene Summer Beach Ocean with fade
+
     $setPRGOutfit(OutfitEnum.SWIMSUIT)
     $setWGOutfit(OutfitEnum.SWIMSUIT)
+    scene Summer Beach Ocean
     show WG neutral at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
     "As I walked over, it looked like Alice and Aida had made themselves comfortable, having already arranged their towels and beach supplies out in an orderly fashion."
     "Noticing that both of them appeared to have been putting the finishing touches on each other's sunscreen coverage, I winced with the realization that I had indeed missed out on something due to sleeping in a few extra minutes."
     WG "There you are Keisuke. I was worried for a bit that you had decided to sleep in and not make the best use of our time off."
@@ -12402,10 +12435,10 @@ label WG051:
     you a swimming lesson."
     PRG "I'd like that. I almost forgot about it. Thanks for remembering."
     WG "Come with me."
-    scene Summer House Back with fade
+    scene Summer House Back
     show WG haughty at Position(xcenter=0.25, yalign=1.0)
     show PRG neutral at Position(xcenter=0.75, yalign=1.0)
-    with dissolve
+    with fade
     "Alice led Aida down to the water. Alice alternated between demonstrating different techniques herself and helping to position Aida in the water so that she could mimic what she had just been shown."
     "I hung back down the beach at a slight distance, alternating between treading water and wading in the shallows."
     "I didn't want to be aloof and just stay back on the shore, but I felt it best to give them both some space so Aida's lesson could feel more private, since Alice would likely have to make some references to her pregnancy."
@@ -12773,8 +12806,9 @@ label WG053_c1_2:
     WG "Then I guess I'll have to wait, which I normally hate to do. Though I think I'll make an exception this time."
     "She gives me a smirk as we exit from the room."
 
-    scene Theater Exterior with fade
-    show WG surprised with dissolve
+    scene Theater Exterior
+    show WG surprised
+    with fade
     WG "Oh my! I was certainly not expecting this to be in consideration!"
     MC "Oh and why so?"
     show WG sad
@@ -12798,8 +12832,9 @@ label WG053_c1_3:
     WG "Well I was hoping we could maybe do something besides food, but I suppose if the reservations are made we shouldn't disappoint."
     "I feel bad for lying about something so simple but my certainty on what she wants is still rather blurry. So playing it safe this time might've been a bad call."
 
-    scene Theater Interior with fade
-    show WG surprised with dissolve
+    scene Theater Interior
+    show WG surprised
+    with fade
     WG "Wait, is this where we were actually going?"
     MC "Yeah, I wanted to surprise you."
     show WG angry
@@ -12820,8 +12855,9 @@ label WG053_c1_3:
         MC "You have my word, Alice."
         "I step over and hand our tickets to the usher and inform him of my earlier call for accommodations. He assures me that my request has been properly handled and gestures for us to enter."
 
-        scene Theater Interior with fade
-        show WG neutral with dissolve
+        scene Theater Interior
+        show WG neutral
+        with fade
         WG "So what was the talk with the usher about?"
         MC "I had a feeling that certain features might not properly cooperate with your current size. So I went ahead and called ahead to see what accommodations could be made."
         show WG haughty
@@ -12851,16 +12887,18 @@ label WG053_c1_3:
         MCT "Well this certainly was not how I imagined this night going at all."
         "I gave our tickets to the man at the ticket booth and mentioned that I had called ahead for accommodations. He nods and says they've fulfilled the request."
 
-        scene Theater Interior with fade
-        show WG neutral with dissolve
+        scene Theater Interior
+        show WG neutral
+        with fade
         "As we enter we can both see the large couch like chair in the front row. As we approach I notice Alice giving me a glance with a slight smirk on her lips. She looks over the couch for a moment with a certain level of prudence before gently seating herself. Her cheeks flush red as the couch gives a small groan as she eases herself down."
         MCT "That was kinda hot, but I better not approach that subject tonight."
         "We both remain silent as the lights dim, the red curtains of the stage ascend and an organ roars to life with a deep bellowing sound."
         jump WG053_c2_after
 
 label WG053_c1_after:
-    scene Theater Interior with fade
-    show WG neutral with dissolve
+    scene Theater Interior
+    show WG neutral
+    with fade
     WG "So what was the talk with the usher about?"
     MC "I had a feeling that you might not be able to use their normal seating, so I called ahead to see what they could accommodate."
     show WG sad
@@ -13089,8 +13127,9 @@ label WG054_c1_after:
     WG "You need not worry about me, I can handle myself just fine. Though the thought is appreciated, Keisuke."
     "With a rumble the bus pulled up, displaying the town as its next destination."
     "It was hard to miss Alice giving the bus doors a size up before stepping on board."
-    scene Bus Interior with fade
-    show WG doubt with dissolve
+    scene Bus Interior
+    show WG doubt
+    with fade
     "With a bit of trepidation she stepped on. Her broad hips brushing against the larger than average bus doors."
     show WG neutral
     "Alice found us a pair of seats near the back and gestured for me to take the seat next to her. Sliding in beside her was a bit awkward cause I don't think she noticed how much of her thigh was pressing against my leg."
@@ -13098,9 +13137,10 @@ label WG054_c1_after:
     scene black with fade
     "It didn't take too long to arrive at our destination."
 
-    scene Town with fade
+    scene Town
+    show WG neutral
+    with fade
     play music BrightLights
-    show WG neutral with dissolve
     "Once off the bus she directed me towards a shop I hadn't noticed before. The sign read 'Cold as Ice' leaving me a bit confused as to what this place could be serving."
     WG "Have you ever tried rolled ice cream?"
     MC "Can't say I have. I thought ice cream was already rolled when they serve the scoops."
@@ -13222,8 +13262,9 @@ label WG054_c3_pass:
     WG "She'd be the only other one who might know where I am, so I guessed you'd seek her out."
     MC "Fair enough."
     WG "Come in, you are probably curious about what the nurse said."
-    scene Dorm WG with fade
-    show WG neutral-2 with dissolve
+    scene Dorm WG
+    show WG neutral-2
+    with fade
     WG "Now that we have a bit of privacy, let me explain."
     WG "According to the nurse, my dreams are being caused because I'm not eating enough. Apparently this is a semi-common thing among those with weight gain factors if they limit their intake."
     MC "Well that's a relief that this isn't an isolated incident, but I have to ask why were you trying to limit your appetite?"
@@ -13642,21 +13683,21 @@ label WG056:
     "I said as I proceeded to walk through her door and invite myself in. I motioned in a jovial manner for Alice to follow me in, then immediately shot a death glare at Tomo once Alice was no longer looking at me."
     scene black with fade
     $setTime(TimeEnum.NIGHT)
-    scene Dorm Tomoko with fade
-    play music Rain
+    scene Dorm Tomoko
     show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
     show WG surprised at Position(xcenter=0.8, yalign=1.0)
-    with dissolve
+    with fade
+    play music Rain
     WG "Oh my."
     "Tomoko's room looked like a bomb had gone off. It would have been easier to set the whole thing ablaze and start new than to tackle this clean-up project."
     MC "Tomo, can you at least turn the lights on?"
     Tomoko "Fine."
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
-    scene Dorm Tomoko with fade
+    scene Dorm Tomoko
     show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
     show WG doubt at Position(xcenter=0.8, yalign=1.0)
-    with dissolve
+    with fade
     "Turning the lights on only served to clarify the magnitude of the mess that was surrounding us, but at least we wouldn't trip over a random pile of junk in the dark anymore."
     WG "{size=-6}Keisuke, this place is filthy!{/size}"
     MC "{size=-6}Can't say I didn't warn ya.{/size}"
@@ -13767,9 +13808,10 @@ label WG056:
     "I got the door for Alice and followed her out as I left, slamming the door behind me."
     scene black with fade
     $setTime(TimeEnum.DAY)
-    scene Dorm Exterior with fade
+    scene Dorm Exterior
+    show WG worried
+    with fade
     play music HigherEdu
-    show WG worried with dissolve
     "We walked in silence for a little while. Alice was still looking sullen and dejected, while I was trying to take in some calm breaths to simmer myself back down to something closer to sanity."
     MC "Sorry about that."
     WG "You don't need to apologise Keisuke. It's not like you can control her and what she does. Now I see why you were so nervous about introducing us."
@@ -13847,11 +13889,11 @@ label WG056:
     Tomoko "You're gonna owe me for this one."
     MC "Big time. Now get in there."
     stop music
-    scene Dorm WG with fade
-    play music WG
+    scene Dorm WG
     show Tomoko neutral at Position(xcenter=0.2, yalign=1.0)
     show WG surprised at Position(xcenter=0.8, yalign=1.0)
-    with dissolve
+    with fade
+    play music WG
     WG "Tomo, what a lovely surprise. I didn't expect I'd be seeing you again so soon."
     Tomoko "Well, me either to be honest."
     show WG neutral
@@ -13950,9 +13992,10 @@ label WG057:
     show PRG excited
     PRG "Alright then. Let's go to the kitchen!"
 
-    scene Cooking Classroom with fade
+    scene Cooking Classroom
+    show PRG happy
+    with fade
     play music Peaceful
-    show PRG happy with dissolve
     PRG "Alright, Hotsure-san, did you have anything specific in mind for Alice? I'd be happy to help you with anything, but if I'm being honest, I'm much more skilled at baking and sweets."
     PRG "If you're thinking of going with a more savory dish, Sakura would likely be better suited for that."
     MCT "Just who is this Sakura person and why haven't I seen her before? Of all the people in this school, I should be the one who has his finger on the pulse about all the fat chicks here."
@@ -14163,11 +14206,11 @@ label WG057_c1_after:
     scene black with fade
     pause 1
     $setTime(TimeEnum.DAY)
-    scene Dorm WG with fade
-    play music WG
+    scene Dorm WG
     show PRG neutral at Position(xcenter=0.2, yalign=1.0)
     show WG haughty at Position(xcenter=0.8, yalign=1.0)
-    with dissolve
+    with fade
+    play music WG
     WG "Alright now Keisuke, praytell what is this 'surprise' of yours? You do realize it's not much of a surprise if you've already told me in advance."
     MC "True, but I thought it'd peak your interest if I did. Let's just call it an 'unexpected pleasantry' then."
     show WG happy
@@ -14322,8 +14365,9 @@ label WG058:
     "Truth be told I didn't have a specific destination in mind, just a spot with a good view that I knew was a bit further. I didn't exactly plan everything."
     "Even if Alice was just impatient, more so than getting tired from the walk, I certainly was getting tired of hauling this giant picnic basket with all the food this far."
     "After rounding one last hill, we got to the spot that I had planned on... or at least close enough to it."
-    scene Mountains with fade
-    show WG surprised with dissolve
+    scene Mountains
+    show WG surprised
+    with fade
     WG "Keisuke! This looks amazing."
     show WG happy
     WG "I didn't expect such a lovely vista so close to the school."
@@ -14771,8 +14815,9 @@ label WG059:
     MC "Hehe."
     "I kind of wanted to tease her a bit more about it, but I think I got my point across well enough to get her to loosen up. Besides, she wouldn't be too happy with me if my continued pestering made us late."
 
-    scene Dorm Exterior with fade
-    show WG neutral with dissolve
+    scene Dorm Exterior
+    show WG neutral
+    with fade
     MC "So where are we going?"
     WG "We'll be meeting up with Aida and Sakura in the school kitchen. They requested that I help oversee the process. It won't just be a sampling of the end result."
     MC "What are they making?"
@@ -15022,8 +15067,9 @@ label WG059:
     scene black with fade
     pause 1
     $setTime(TimeEnum.EVE)
-    scene Dorm Exterior with fade
-    show WG neutral with dissolve
+    scene Dorm Exterior
+    show WG neutral
+    with fade
     "I could tell something was amiss. On our way walking back to her dorm, I tried to think of a way to broach the subject, but it was easier said than done."
     MC "Is everything alright, Alice?"
     WG "What do you mean, Keisuke?"
@@ -15042,9 +15088,9 @@ label WG059:
 
 label WG059S:
     scene Dorm WG
-    play music WG
     show WG neutral
     with fade
+    play music WG
     WG "Were you able to deliver that package to Akira?"
     MC "Yeah, I caught her out by the track, as you predicted."
     show WG haughty
@@ -15292,7 +15338,6 @@ label WG059S_C1_1:
     "Alice remained silent and slowly collected up the discarded wrappers and empty tea cups. I wasn't sure what I should do, though my tongue felt too heavy to attempt to say anything."
     WG "You best be leaving Kei, it's almost time for Shiori to do her patrol past here."
     "Her tone was unfamiliar, it was a mix of conflict and something else that I couldn't pinpoint. Knowing that trying to stay any further with her in this mood wouldn't be of any benefit to me, I grabbed my bag and departed."
-    hide WG with dissolve
     play music Memories
     scene black with fade
     pause 1
@@ -15314,8 +15359,9 @@ label WG059S_C1_1:
     scene black with fade
     pause 1
     $setTime(TimeEnum.NIGHTLIGHTS)
-    scene Dorm Interior with fade
-    show RM distrustful with dissolve
+    scene Dorm Interior
+    show RM distrustful
+    with fade
     "Flicking on the lights caused him to groan from the sudden brightness."
     RM "I was enjoying the calmness of the dark."
     MC "I'm beginning to understand why you need glasses if that's how you use your computer."
@@ -15402,8 +15448,9 @@ label WG060:
     MC "It's Keisuke. Can I come in?"
     WG "... Yes, please... come in."
     "Alice's tone was conflicted, which made me think she both did and did not want me to come in. Nonetheless, I heard the latch unlock and I opened the door inside."
-    scene Dorm WG with fade
-    show WG neutral with dissolve
+    scene Dorm WG
+    show WG neutral
+    with fade
     WG "Keisuke, I was not expecting you. Is there something you need?"
     MC "Not in particular. I was just concerned. You said you weren't feeling well last night, and I didn't get a chance to talk with you after homeroom class this morning. I wanted to make sure you were okay."
     show WG neutral-2
@@ -15656,8 +15703,9 @@ label WG060S_Lie_C1_1:
     "As I wheeled the cart out, I debated peeking under the sheet, but decided against it, cause if Alice planned this all out, I might as well play her game."
     scene black with fade
     pause 1
-    scene Dorm WG with fade
-    show WG haughty with dissolve
+    scene Dorm WG
+    show WG haughty
+    with fade
     WG "Wonderful, I knew I could count on you."
     "Alice sat haughtily, her hands resting at the sides of her overflowing hips."
     MC "What? You really thought I wouldn't deliver the goods?"
@@ -16595,8 +16643,9 @@ label WG061S:
     "That was till it growled at me."
     #play sound growl
     WG "Oh my, I overdid it. Kei wake up dear!"
-    scene Dorm WG with fade
-    show WG surprised-2 with dissolve
+    scene Dorm WG
+    show WG surprised-2
+    with fade
     "Slowly my senses came back and I found myself looking up at Alice who was staring back at me with a look of astonishment and embarrassment."
     play music WG
     "It was then that I began to grasp the inspiration for my dream and looked at the cream colored divide between us."
@@ -16649,8 +16698,9 @@ label WG061S:
         "Alice seemed to be taking her time in the shower. That was fine. We left a big mess and I felt pretty guilty about how this little escapade basically trashed her room."
         scene black with fade
         pause 1
-        scene Dorm WG with fade
-        show WG neutral with dissolve
+        scene Dorm WG
+        show WG neutral
+        with fade
         "After a while, Alice emerged from her bathroom, now dressed back into her school uniform, which while fitting, was unmistakably tight around her still taunt middle."
         WG "Thanks for cleaning up. I appreciate it."
         show WG doubt
@@ -16866,10 +16916,10 @@ label WG062:
     UNKNOWN "{i}Tehehe!{/i}"
     MCT "Wait a second... I recognize that laugh."
     WG "Come in!"
-    scene Dorm WG with fade
+    scene Dorm WG
     show BE happy at Position(xpos=0.35, yalign=1.0)
     show WG happy at Position(xpos=0.65, yalign=1.0) behind BE
-    with dissolve
+    with fade
     BE "So after we got our yakitori, we started walking back home. I told Kei-chan he should have gotten the beef like me, and that his fish was stinky."
     MCT "Uhhg, not this story..."
     BE "And apparently I wasn't the only one that thought so, because unbeknownst to Kei, his stinky fish was attracting some unwanted attention."
@@ -17590,8 +17640,9 @@ label WG064:
     "{i}Taktaktak{/i}{w} {i} taktak{/i}{w} {i} taktaktaktakaktak{/i}"
     MCT "What the hell is that sound?"
     "It was coming from Alice's room. Which was my original destination anyway."
-    scene Dorm WG with fade
-    show WG happy with dissolve
+    scene Dorm WG
+    show WG happy
+    with fade
     WG "Keisuke, so nice to see you."
     MC "I should say the same as well."
     show WG haughty
@@ -18356,12 +18407,12 @@ label WG066:
     "True to her form, if my efforts to look presentable weren't cutting it, Alice had no hesitation about doing the job herself to make sure it was done right. Thus, was my current destination to her dorm."
     play sound Knock
     WG "Come in."
-    scene Dorm WG with fade
     play music WG
     $setTomoOutfit(OutfitEnum.CASUAL)
+    scene Dorm WG
     show Tomoko neutral at Position(xpos=0.40, yalign=1.0)
     show WG neutral at Position(xpos=0.65, yalign=1.0) behind Tomoko
-    with dissolve
+    with fade
     "My sister was probably about the last person I expected to bump into in my girlfriend's dorm."
     MC "Tomo? What are you doing here?"
     "Assessing the scene further, it looked like Tomo took Alice up on her offer to help her with her hair."
@@ -18567,9 +18618,10 @@ label WG066:
 
 label WG067:
     $setProgress("WG", "WG068")
-    scene Dorm WG with fade
+    scene Dorm WG
+    show WG neutral
+    with fade
     play music Peaceful
-    show WG neutral with dissolve
     WG "Mind explaining that one more time?"
     MC "Sure, first you need to find the denominator."
     show WG neutral-2
@@ -19232,9 +19284,10 @@ label WGBE002:
     jump daymenu
 
 label WGBE003:
-    scene Dorm WG with fade
+    scene Dorm WG
+    show WG neutral
+    with fade
     play music WG
-    show WG neutral with dissolve
     "I was enjoying a nice visit with Alice at another one of our afternoon tea sessions that she was so fond of."
     "Not that I didn't enjoy them as well. If I was being honest, it took the pressure off of me to come up with new date ideas all the time."
     "Plus, it was convenient for her busy schedule, which oftentimes meant coordinating an extended off-campus excursion requiring quite a bit of planning in advance."
@@ -19416,11 +19469,11 @@ label WGBE003:
     pause .5
     $setTime(TimeEnum.EVE)
 
-    scene Dorm WG with fade
+    scene Dorm WG
     show PRG neutral at Position(xcenter=0.40, yalign=1.0), Transform(xzoom=-1)
     show BE neutral at Position(xcenter=0.20, yalign=1.0), Transform(xzoom=-1) behind PRG
     show WG neutral at Position(xcenter=0.75, yalign=1.0) behind PRG
-    with dissolve
+    with fade
     "I couldn't tell you how much time had passed, but if my sense of time had been working, instead of staring with my jaw hanging open at the site before me, it was probably at least a few hours."
     "What should have supplied an entire store on a busy street for Valentine's Day had dwindled to almost the bottom of the box, and their pace had noticeably slowed."
     show PRG nervous
@@ -19588,8 +19641,9 @@ label WGFMG001:
     scene black with fade
     pause 1
 
-    scene Cafeteria with fade
-    show FMG angry at Position(xcenter=0.75, yalign=1.0) with dissolve
+    scene Cafeteria
+    show FMG angry at Position(xcenter=0.75, yalign=1.0)
+    with fade
     MC "I'm telling you just because she has a weight gain factor doesn't mean she eats non-stop."
     FMG "There she is! See, I told you she'd be here."
     show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
@@ -19691,8 +19745,9 @@ label WGFMG001:
     "It looked like I got to Akira's place before Alice."
     play sound Knock
     FMG "Door's open. Come in."
-    scene Dorm FMG with fade
-    show FMG neutral with dissolve
+    scene Dorm FMG
+    show FMG neutral
+    with fade
     FMG "Hey Kei-kun, thanks for coming. I appreciate it, especially after everyone else bailed. I was still setting things up."
     show FMG flex
     FMG "It's gonna be awesome."
@@ -19830,10 +19885,10 @@ label WGFMG001:
     scene black with fade
     pause 1
     $setTime(TimeEnum.NIGHT)
-    scene Dorm FMG with fade
+    scene Dorm FMG
     show FMG happy at Position(xcenter=0.75, yalign=1.0)
     show WG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    with dissolve
+    with fade
     FMG "Everyone ready? This is going to be awesome!"
     "Akira hit the play button and the night could finally start."
     show FMG neutral
@@ -19985,11 +20040,11 @@ label WGFMG001:
     scene black with fade
     $setTime(TimeEnum.NIGHTLIGHTS)
 
-    scene Dorm FMG with fade
-    play music Peaceful
+    scene Dorm FMG
     show FMG neutral at Position(xcenter=0.75, yalign=1.0)
     show WG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
-    with dissolve
+    with fade
+    play music Peaceful
     FMG "So, what did you think?"
     MC "I gotta hand it to you Mizutani-san, it certainly lived up to the hype. That was definitely the scariest movie I've seen in a long time."
     show FMG flex
@@ -20063,9 +20118,10 @@ label WGFMG002:
     "I took the box from Alice. It was pretty light, just some piece of clothing after all. Though, holding it in my hands, I did kind of wonder what was inside that was so special that Alice didn't mind delivering it herself."
     show WG happy
     WG "Such a gentleman."
-    hide WG with dissolve
-    scene Gym with fade
-    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+
+    scene Gym
+    show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
+    with fade
     "Walking into the gym we both spotted Natsuko almost immediately. With her tall stature and fiery red hair, she certainly stood out. She looked pre-occupied setting some things up for her workout."
     show WG neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     WG "There she is. This should be quick. I'll take it from here Keisuke."
@@ -20533,7 +20589,6 @@ label WGGTS001:
     HR "And no complaining. Two days is plenty of time to prepare for a quiz. You have only yourself to blame if you failed to study properly."
     "I was in no position to argue with his assessment, but he could have at least conceded it was way harder than a normal person would expect a quiz to be."
     "I dropped my quiz off on Tashi-sensei's desk on my way out of class."
-    hide HR
     scene Hallway with fade
     MC "Well, that could have gone better."
     "Some of the students were still hanging around outside the classroom. Judging by their dejected looks,"
@@ -20852,9 +20907,10 @@ label WGGTS003:
     show WG neutral
     WG "Alright Keisuke, let's be going now."
     MC "Later, Yamazaki-san... {size=-6}sorry about all this{/size}."
-    scene Dorm Exterior with fade
+    scene Dorm Exterior
+    show WG neutral
+    with fade
     play music Rain
-    show WG neutral with dissolve
     "Given the fiery exchange earlier, I expected Alice to be in a foul mood, but she seemed fine. Maybe she had some kind of catharsis after finally getting things off her chest with Naomi."
     "She had seemed eager to instigate the confrontation after all. I on the other hand felt much less at ease with the whole situation."
     MC "Alice, can I ask you something?"

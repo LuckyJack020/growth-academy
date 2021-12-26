@@ -434,6 +434,8 @@ init python:
             renpy.log("ERROR: Could not change affection: Girl %s does not exist" % girl)
             return
         affection[girl] += val
+        if affection[girl] < 0:
+            affection[girl] = 0
         if val > 0:
             img = "Graphics/ui/notification/" + girl + "-up.png"
         elif val < 0:
@@ -644,10 +646,10 @@ init python:
         global minorsizes, legalsizes
         legalsizes = {
             "Yuki": [1, 3],
-            "Natsuko": [1, 2, 3, 4, 5],
-            "Tako": [1, 2, 3, 4, 5],
-            "Tomoko": [1, 2, 3, 4, 5],
-            "Sakura": [1, 2, 3, 4, 5]
+            "Natsuko": [1, 2, 3, 4, 5, 6],
+            "Tako": [1, 2, 3, 4, 5, 6],
+            "Tomoko": [1, 2, 3, 4, 5, 6],
+            "Sakura": [1, 2, 3, 4, 5, 6]
         }
 
         try: #backwards compatibility, remove later
