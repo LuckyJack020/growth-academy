@@ -6774,7 +6774,7 @@ label PRG020_c2_1:
     show PRG unique
     PRG "Mhm. I-I was... n-never really... the kind of girl that any guy really took interest in..."
     if getFlag("PRG019_study"):
-        PRG "And I... I really wanted to kiss you yesterday... I did."
+        PRG "And I... I really wanted to kiss you when you took me out for ice cream... I really did."
         pause .25
         PRG "B-But... I was scared. A-And... I-I thought it might be... bad to kiss on our first date..."
         MC "You did?"
@@ -7013,7 +7013,7 @@ label PRG021:
         "Was she about to tell me that yesterday's events had been a poor judgment call, and that I should forget about it?"
         "Or, would she be all clammed up, and unable to say more than a word or two to me?"
         pause .5
-        "Either of these was a distinct possibility, and both of them sounded like bad options."
+        "Either of those were distinct possibilities, and both of them sounded like bad options."
     else:
         "I had a feeling that something bad was coming. I didn't know why."
         "Maybe it was just the guilt building up in my head, and making me think that things would be way worse, but I just couldn't shake it."
@@ -7378,7 +7378,7 @@ label PRG022:
     pause .5
     PRG "S-So... I was j-just... wondering... i-if you'd maybe like to come along?"
     MC "Oh, I'd love to. I haven't got to see the grocery store yet."
-    MC "But, before we go, would you mind if we stopped by my dorm quick? I need to write something down from class before I forget."
+    MC "But, before we go, would you mind if I stopped by my dorm quick? I need to write something down from class before I forget."
     PRG "Ah... s-sure."
     menu:
         "Ask her to join you.":
@@ -7637,7 +7637,7 @@ label PRG022:
 
 
 label PRG022_c1_2:
-    Cashier "That'll be 1937 yen, please."
+    Cashier "That'll be ¥1937, please."
     "Aida slid her yen onto the counter."
     "The cashier punched some numbers into the register and made change, handing it to Aida."
     Cashier "You're all set, then. Have a good day!"
@@ -7649,7 +7649,7 @@ label PRG022_c1_2:
 
 label PRG022_c1_3:
     $setFlag("PRG022_c1_3")
-    Cashier "That'll be 1937 yen, please."
+    Cashier "That'll be ¥1937, please."
     "I pulled out my wallet and slid my credit card across the counter to the cashier."
     MC "Put it all on this, please."
     show PRG surprised
@@ -8011,7 +8011,7 @@ label PRG023:
     show PRG neutral
     PRG "Ah... o-o-okay. T-T-Thank you..."
     MC "No problem. I'll let myself out."
-    hide PRG
+    hide PRG with dissolve
     "Aida smiled at me, and I turned and headed back through her dorm and out into the hall."
     scene black with fade
     pause .75
@@ -8058,14 +8058,17 @@ label PRG024:
     MCT "Okay. Just focus on the front of the room, and the notes on the page. You can do this."
     "Sitting down to unpack my bag, I glanced toward the window across the room."
     "I had been so lost in my lovey-dovey haze slash pep-talk, that I failed to notice one thing."
+    show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
     "Across the room, Alice sat in her seat, talking to..."
-    show PRG sad-2 with dissolve
+    show PRG sad-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     extend " Aida."
     show PRG worried
     "As I looked over, I noticed Aida's eyes lingering on me."
     show PRG neutral
     "She smiled and waved at me sweetly."
-    hide PRG with dissolve
+    hide WG
+    hide PRG
+    with dissolve
     "I raised one hand and gave a muted wave back, and then turned back to my desk."
     MCT "She's here. Oh my God, she's here."
     MCT "Maybe I could ask her on a date for tonight? Like a spur of the moment type thing?"
@@ -8087,7 +8090,7 @@ label PRG024:
     pause .5
     show PRG worried at Position(xcenter=0.25, yalign=1.0) with dissolve
     HR "Oh, and Kodama-san? May I see you?"
-    show PRG surprised at Transform(xzoom=-1)
+    show PRG sad-2 at Transform(xzoom=-1)
     "Aida jolted up in her seat and as the rest of the class got up to leave, she headed straight for his desk."
     scene black with fade
     pause .5
@@ -8110,6 +8113,7 @@ label PRG024:
     "Aida walked in in her unassuming way and took her place at the back of the line."
     "I looked up at the clock on the wall. Based on the time, she'd been talking to Tashi-sensei for the better part of fifteen minutes."
     MCT "Geez. Long chat."
+    hide PRG with dissolve
     "I looked down at my tray again. I'd already been lightly picking at my food, so trying to extend it longer so I could sit and chat with her for a while wouldn't be difficult."
     "I wasn't overly hungry anyhow. My stomach was filled with the anxieties of butterflies."
     "I continued my slow nibbling, while keeping myself busy by thinking of topics for the upcoming paper that apparently had the importance of a freaking government document."
@@ -8166,7 +8170,7 @@ label PRG024:
             "I lurched forward after a well placed smack from behind knocked the wind out of me."
             show BE surprised with dissolve
             BE "Oh, shoot! I'm sorry, Kei-chan! I didn't see you!"
-            MC "Gah... what [i]did{/i} you see then?!"
+            MC "Gah... what {i}did{/i} you see then?!"
             show BE confused
             BE "My phone... I was trying to text and walk at the same time."
             MC "Ah... yeah, eyes on the road, please."
@@ -8403,7 +8407,7 @@ label PRG025:
     pause .25
     MCT "Agh... ahhh yeah... that's it..."
     "I sat back up after one final soul ripping crack of the back, and I checked the time."
-    "It was only around 4 in the afternoon, and I had literally nothing going on."
+    "It was only around four in the afternoon, and I had literally nothing going on."
     MCT "Perfect."
     "I crawled myself under the covers and snatched my handheld from my nightstand."
     "Console games were usually my preferred brand of electronic entertainment, but there was something special about playing handheld games in bed."
@@ -8482,6 +8486,7 @@ label PRG025:
     MCT "The hell?"
     "I went to my phone and checked the time."
     MCT "It's 1AM! Who the hell would be at my door at this hour?!"
+    play sound Knock
     "The knock came again, this time more urgent."
     MCT "Okay... take a breath..."
     pause .25
@@ -8574,7 +8579,7 @@ label PRG025:
     PRG "... I want you, Hotsure-san. T-Tonight..."
     PRG "I feel like I'm about to explode. All of these feelings..."
     pause 1
-    PRG "Please... please have sex with me..."
+    PRG "Please... {w}please have sex with me..."
     "A huge shock coursed up my spine."
     MCT "SEX?! RIGHT NOW?!"
     MC "Kodama-san, hold on!"
@@ -8739,10 +8744,13 @@ label PRG025_Sex:
     pause .25
     PRG "Let me..."
     "Aida reached back..."
+    show PRG aroused
     PRG "Agh... there..."
     "I saw her bra go noticeably slack, as if glad to be free of the enormous pressure, and-"
     "Aida pulled it away."
+    hide PRG with dissolve
     $setPRGOutfit(OutfitEnum.NUDE)
+    show PRG aroused with dissolve
     MC "Oh my God..."
     PRG "... Touch me~"
     "She leaned in toward me with them."
@@ -8810,10 +8818,12 @@ label PRG025_Sex:
     "Aida crawled onto my bed and over to me."
     "She mounted me for the final time, and leaned up to kiss me again."
     "The heat of her vagina was so strong now, that I could feel it ever so slightly. And, as she kissed me, she moved in just such a way that the tip of my cock grazed her pussy."
+    show PRG scared
     PRG "Agh!"
     MC "Ah!"
     MCT "She's... she's soaking wet."
     pause .25
+    show PRG aroused
     "I looked at Aida, and she looked back at me."
     "There was no shyness. No awkwardness."
     pause .25
@@ -8870,7 +8880,8 @@ label PRG025_Sex:
     show PRG neutral
     "Aida simply stared down at me, and I stared up at her."
     "As my wave of ecstasy came down and my thoughts slowly returned, I found myself staring into her eyes. Those soft, gentle, yet horny eyes."
-    play music LoveC
+    stop music fadeout 0.5
+    play music LoveC fadein 0.5
     PRG "... I... {w} t-thank you... {w} Hotsure-san..."
     MC "Hahh... t-thank you... too..."
     "We both were there panting, our line of sight on each other's eyes never breaking."
@@ -8901,7 +8912,9 @@ label PRG025_Sex:
     MC "A-Alright."
     MCT "What can I even say? We just had sex. I don't even know what to think."
     "I watched her get her shirt on, then pull her socks back on."
+    hide PRG with dissolve
     $setPRGOutfit(OutfitEnum.DEFAULT)
+    show PRG neutral with dissolve
     "Now dressed, she looked like she had a wicked bedhead going on. Aside from that, and the redness on her cheeks, an outsider likely couldn't tell what we had done."
     PRG "B-Bye, Hotsure-san."
     PRG "A-And thank you, again."
@@ -8944,6 +8957,7 @@ label PRG026:
     "With so much going on in the day to day, taking a weekend to veg felt wonderful, and I felt much more rested and loose in return."
     "I'd caught up on a few TV shows, and played some games to chill out."
     "I hadn't been completely lazy, of course. I'd gotten some work done on the research paper, though not too much."
+    scene Dorm Interior with fade
     "I didn't want to blast through the whole thing and leave next to nothing for Aida to do."
     "Not that I was overly worried that I would work too hard or anything. I was quite sure that I could back down my effort levels if push came to shove."
     MCT "I'm just worried that Aida will be upset, and think that I think she's lazy or something."
@@ -9043,7 +9057,7 @@ label PRG026:
     AE "Nikumaru-san? A word, please."
     WG "Hm? I suppose. What can I do for you?"
     "Alice halted, looking off toward Shiori."
-    AE "As it were, I was wondering if you could inform me on where Kodoma-san is?"
+    AE "As it were, I was wondering if you could inform me on where Kodama-san is?"
     WG "At our dorm, if you must know. She's still under the weather."
     AE "Truly? You're certain she's ill?"
     WG "I don't claim to be a doctor, Matsumoto-san. But, she seems sick enough to me."
@@ -9099,7 +9113,7 @@ label PRG026:
     pause .25
     MCT "Where's Aida? Why does everything feel so... so... different?"
     pause .5
-    MCT "We were fine before... we were fine... she was fine"
+    MCT "We were fine before... we were fine... she was fine."
     "I looked up at Alice's form walking away from me in the distance."
     "Every bit of confidence I'd had in asking Aida out, every bit of excitement was drained away. I watched Alice's blonde hair bob down the hall."
     "I held my stomach and leaned against the wall. I felt faint. I felt... hurt."
@@ -9308,7 +9322,7 @@ label PRG026:
     MC "You don't mean..."
     show PRG sad
     "Aida burst into tears again and buried her head into her own hands."
-    PRG "It's all my fault! It's all my f-fault! I-I couldn't stop it, and it's all my fault!"
+    PRG "{size=+6}It's all my fault! It's all my f-fault! I-I couldn't stop it, and it's all my fault!{/size}"
     pause .75
     "I couldn't move. I couldn't even think."
     MC "It's... mine?"
@@ -9857,7 +9871,9 @@ label PRG027:
     MC "Same to you, Alice. May I come in?"
     WG "Of course."
     "She held the door for me, allowing me in."
+    scene Dorm WG with fade
     "Inside, the door to Aida's room was shut. Alice walked with me into the kitchen."
+    show WG neutral with dissolve
     WG "I managed to scrounge up a larger uniform for Kodama-san. That way she won't be going to class in unfit clothing."
     MC "You did? In such little time?"
     WG "I have my connections, Hotsure-san."
@@ -9872,6 +9888,7 @@ label PRG027:
     WG "Not today. Considering the matters at hand, having Kodama-san cook wouldn't have been proper."
     MC "Mm. That makes sense. I'll see you in class, Alice."
     WG "Indeed."
+    hide WG with dissolve
     "Alice gathered herself, then left the dorm quickly, the door shutting behind me."
     MCT "Maybe... learn to cook, yourself? Just a thought?"
     "I sighed. Alice was just... Alice."
@@ -9972,7 +9989,7 @@ label PRG027:
     scene Dorm Hallway with fade
     "Aida followed me out, then locked the door behind her."
     MC "Alright. Let's roll."
-    show PRG nervous
+    show PRG nervous with dissolve
     "Aida nodded and walked alongside me down the hall. That awkward spacing was no longer there. She was right by my side, just as anyone would be."
     pause .5
     MC "So, I was thinking."
@@ -10002,7 +10019,7 @@ label PRG027:
 
     scene Dorm Exterior with fade
     MC "Alright, alright. Seriously this time. With that research paper we were assigned, we should probably put some time in on it."
-    show PRG neutral
+    show PRG neutral with dissolve
     PRG "R-Right."
     MC "So, I was thinking. Maybe this weekend, we could hang out and work on it? We could have food or something, and work on it at my place. Or yours. Wherever, really."
     PRG "T-That sounds okay."
@@ -10242,7 +10259,7 @@ label PRG027:
     with dissolve
     stop music
     "The bell rang out over the chaos, and everyone scrambled to their seats."
-    show HR neutral
+    show HR neutral with dissolve
     pause .5
     HR "..."
     HR "Okay, let's begin."
@@ -11359,7 +11376,7 @@ label PRG033:
     "Thankfully, the store was nearly empty, so there was no waiting in line to check out. Right away, Aida started loading the cart full of groceries onto the belt. The cashier nodded at us as she began scanning our items."
     Cashier "Ah, you're a smart man. Chocolate always makes for a happy girlfriend."
     "She grinned as she continued scanning. I hadn't even considered how much this was all going to cost me until the number flashed onto the screen."
-    Cashier "6712 yen, please."
+    Cashier "¥6712, please."
     "I pulled out my wallet and handed the cashier my credit card. Even though I was spending a good chunk of money on this, I didn't feel upset in the slightest."
     "I knew that this food would be put to good use, not only in feeding Aida, but by extent, my children."
     Cashier "And here you guys are! Have a good one!"
@@ -13303,7 +13320,7 @@ label PRG040_c1_after:
     PRG "Y-Yeah, I could see that."
     if getFlag("PRG039_c1_2"):
         "The two of us stopped in front of the dorms and hugged goodbye."
-        PRG "I was thinking. Tomorrow morning, would you want to go to the cooking classroom before our first class? I want to make you that breakfast we talked about at the game store the other day."
+        PRG "I was thinking. Tomorrow morning, would you want to go to the kitchen in the morning? I want to make you that breakfast we talked about at the game store the other day."
         MC "Of course! I've yet to try your breakfast food. Is it as tasty as the rest of your repertoire?"
         PRG "Y-You'll see!"
         "Aida blew a kiss to me as we parted ways."
@@ -13311,10 +13328,10 @@ label PRG040_c1_after:
     else:
         "The two of us stopped in front of the dorms and hugged goodbye."
         PRG "B-Before you go. What are you doing tomorrow morning?"
-        MC "Uh, classes? Same as you."
-        PRG "I-I meant before class."
+        MC "Uh, weekend stuff?"
+        PRG "Well, besides that!"
         MC "Oh! Nothing, I suppose. Why, what's up?"
-        PRG "Come to the cooking classroom tomorrow before class. Make sure you have around 45 minutes to spare."
+        PRG "Come to the cooking classroom tomorrow. Make sure you have around 45 minutes to spare."
         MC "Alright. Should I eat beforehand?"
         show PRG surprised
         PRG "N-No! I... you made me ruin the surprise!"
@@ -17575,7 +17592,7 @@ label PRG055B:
     "The cashier nodded and unlocked the case, handing me the box."
     "Even though I wasn't a huge card collector myself, just the ads on the box made me want this for a collection of my own."
     "Not only did the pack include a card of every single player from their first season to present, but each one was also signed and certified as 100%% legit."
-    "I flipped the price tag over, expecting a number in the 6 figure area, but was instead greeted with a 6000 yen tag."
+    "I flipped the price tag over, expecting a number in the 6 figure area, but was instead greeted with a ¥6000 tag."
     MCT "Well, good thing the Koi's aren't super popular."
     MC "I'll take this. Is it cool if I leave this at the counter while I look around a bit?"
     Cashier "No problem. I'll bag this up for you."
@@ -17754,7 +17771,7 @@ label PRG055B:
     PRG "Still, I'll take really good care of them."
     MC "I'm glad you like them. So, what would you like to do tomorrow, then?"
     PRG "Be at my dorm right after class. We'll open it together and sort them carefully."
-    MC "Sounds good. And... I'm sorry again for yesterday..."
+    MC "Sounds good. And... {w}I'm sorry again about the other day."
     "Aida rubbed her head against mine, looking me straight in the eye. When she spoke, it was in one of the most comforting and soothing tones I'd ever heard."
     PRG "The past is in the past, Keisuke. I love you. That's what matters."
     "She put both hands on my face and kissed me deeply on the lips. I wrapped my arms around her back and pushed her and that ginormous baby bump against me, feeling her curves against me."

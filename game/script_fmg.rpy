@@ -9661,7 +9661,7 @@ label FMG059:
     scene black with fade
     pause 1
 
-    scene Hill Road with fade
+    scene School Front with fade
     MC "Well, it could've been worse. At least you got past the door. You didn't have to turn yourself {i}that{/i} much."
     show FMG flex with dissolve
     FMG "As if that bus door could hold me. If I ever get stuck you can count on me plowing right through it."
@@ -10002,6 +10002,7 @@ label FMG061:
     "She turned away from her closet and spread her lats showing off her massive frame."
     FMG "You can't tell me I don't look amazing in this. I should wear this stuff more often. I fill this out perfectly!"
     MC "I... I would agree. Have you considered ripping out of it? Sounds like a good idea to me."
+    $setFMGOutfit(OutfitEnum.DEFAULT)
     hide cg with dissolve
     #change outfit to dress?
     show FMG neutral with dissolve

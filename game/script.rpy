@@ -10,7 +10,7 @@ transform altMove (xSp, xCen):
     linear xSp xcenter xCen
 
 init python:
-    preferences.set_volume("music", 1.0)
+    preferences.set_volume("music", 0.65)
     config.use_cpickle = False
     #style.menu_choice_button.background = Frame("Graphics/ui/choice_bg_idle.jpg",28,9) #These two commands set the background of all in-game choice-buttons.
     #style.menu_choice_button.hover_background = Frame("Graphics/ui/choice_bg_hover.jpg",28,9)
