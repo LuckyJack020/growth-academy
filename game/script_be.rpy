@@ -7629,6 +7629,8 @@ label BE042_C1_1:
     MCT "She’s right of course, but it’s hard to imagine getting much bigger than what I’ve already seen."
     BE "Stop thinking about them and let's go!"
     "She grabbed onto my arm and dragged me up the sidewalk."
+    scene black with fade
+    pause 1
 
     scene Clothes Store with fade
     play music Peaceful
@@ -7681,9 +7683,9 @@ label BE042_C1_1:
     "I grabbed my stuff while Honoka did her check out."
     "With her suit in hand, she walked over to where I was standing beside the door."
     BE "Oh wait! There was something else I wanted to check out."
+    show BE surprised with vpunch
     play sound Thud
     "Honoka must’ve spun on her heel alot faster than she anticipated as her bosom swung around and collided with a mannequin, sending its pieces falling to the floor."
-    show BE surprised
     BE "Oh no, I’m so sorry!"
     "Shopkeep" "It’s fine ma’am, you aren’t the first well endowed lass to send that poor dummy to the floor. Probably a good sign to move it to a new place."
     show BE doubt

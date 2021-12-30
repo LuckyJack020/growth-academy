@@ -15444,18 +15444,22 @@ label PRG049_c1_1:
     "But, even after explaining it to me, I never thought for a minute that I'd ever use his tactics, much less in such a serious instance."
     "At this point, I was almost certain that Aida was cheating on me. Her voicemail had been weird, no doubt about that, but I had still held my trust for her."
     "But now..."
+    show PRG surprised:
+        alpha 0.0 xalign 0.5 yalign 1.0 xcenter 0.5
+        linear 0.5 alpha 1.0
     "After seeing her reaction to that voicemail, I wasn't sure what to think anymore. That look of horror and embarrassment that she'd been wearing when I played that voicemail was burned into my mind's eye, haunting me like a bad dream."
-    show PRG surprised
-    pause 0.5
-    hide PRG
+    pause 1
+    show PRG surprised:
+        linear 0.5 alpha 0.0
     "I shook my head and looked over the pros column."
+    hide PRG
     "Mother of my children. Cute. Great cook. I care about her. Sexy body."
     "My notes were a cluster of randomness, but I knew deep down that I still cared about her, even if another man had been in her bed."
     "Under the cons column was one line."
     "Can I trust her?"
     "A loud thunderclap shook outside, shaking my room."
     MCT "You don't have to play to my emotions, Mother Nature."
-    "As I tried to come up with any more cons, my mind wandered back and back. Before I'd even spoken to Aida. When I'd seen her and Alice in the classroom for the first time."
+    "As I tried to come up with any more cons, my mind wandered back and forth. Before I'd even spoken to Aida. When I'd seen her and Alice in the classroom for the first time."
     if getFlag("global000_satPRG"):
         "When we had our first real conversation in the auditorium before the principal had addressed us."
     "I remembered the first time I'd tasted her cooking. Something so sweet and vibrant had been made by such a wallflower of a girl."
@@ -15465,7 +15469,8 @@ label PRG049_c1_1:
     "The first time that I had seen her pregnant had been such a shock. But now, I'd grown to love both her belly and what was inside of it."
     "I thought of the two of us working on our project together, writing about the Koi and learning more about each other."
     "I laughed to myself as I remembered Honoka's face when Aida had destroyed her at Ultra Alley Brawlers IV that day in the arcade."
-    "I thought back to that day not so long ago in Aida's bathroom, when she'd asked me to help her pump for the first time. Such a small event in both of our lives, but one that had brought us even closer together."
+    if getFlag("PRG045_c1_pass"):
+        "I thought back to that day not so long ago in Aida's bathroom, when she'd asked me to help her pump for the first time. Such a small event in both of our lives, but one that had brought us even closer together."
     "I sniffled a bit, and felt the tears begin to fall from my cheeks, dropping down onto my crisp notebook paper."
     "I wiped my face with my hand and looked down. When had I even cried last? And, if I knew with such certainty that I'd been betrayed, why did I feel so guilty?"
     "I let myself think back to that first time we'd met. How quiet Aida had been compared to now. Nowadays, she was practically plowing through crowds of people just to see me, or talk to me for even a minute."
@@ -16425,7 +16430,6 @@ label PRG051_c1_after:
     "After we'd both finished up and paid, I offered Aida a hand and led her out of the restaurant."
 
     scene Town with fade
-    play music BrightLights
     "The sun had set while we were eating, leaving us with a crisp, calm night. The town was quiet, save for the hum of idle chit chat from restaurants."
     show PRG happy with dissolve
     PRG "Ugh. I'm stuffed."
