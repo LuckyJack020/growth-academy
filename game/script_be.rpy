@@ -7191,7 +7191,7 @@ label BE038B_fail:
     jump daymenu
 
 label BE039:
-    $setProgress("BE", "BE042")
+    $setProgress("BE", "BE041")
     scene Dorm BE with fade
     UNKNOWN "Kukuku... so Honoka-chan, this is the boy I've heard far, far too much about."
     MC "Eh?"
@@ -7295,6 +7295,17 @@ label BE039:
     Kokutan "Grr... yes. And for that indignancy your character will be cursed for a thousand winters."
     "Honoka and I sat down along with Kokutan to crank out some rounds of Breathless Warriors 4. Kokutan was a bigger fan of the game than even I was. Though the fact the narration was as edgy and brooding as humanly possible was probably the main reason."
     jump daymenu
+
+label BE041:
+    if getFlag("HONOKA_COOKING"):
+        jump BE041A
+    else:
+        jump BE041B
+
+label BE041A:
+    $setProgress("BE", "BE042")
+    jump BE042
+
 
 label BE041B:
     $setProgress("BE", "BE042")
