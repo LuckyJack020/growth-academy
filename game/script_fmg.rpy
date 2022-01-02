@@ -1773,12 +1773,14 @@ label FMG016:
     "She shook my hand with a grip so tight I thought she might break it."
     show Natsuko happy
     Natsuko "Nice to meet you Hotsure-san."
+    show Natsuko flirty
     Natsuko "My, you have beautiful hair and those eyes... I could get lost in them."
     MC "Ummmm, thanks..."
     show FMG neutral
     FMG "Well, welcome aboard Okamoto-san, I'm Akira Mizutani. But I'd appreciate it if you could keep those types of comments to yourself."
     show cg FMG016 with dissolve
     "Natsuko turned towards Akira, staring down at her in disappointment."
+    show Natsuko neutral
     Natsuko "Unfortunately, I don't take orders from someone like you."
     MCT "Welp, I'll be honest I didn't see that coming."
     FMG "And what does that mean?"
@@ -1851,10 +1853,11 @@ label FMG016:
     show Natsuko happy
     Natsuko "Goodbye, for now, I'll see you later Keisuke-san. Don't be afraid to call me."
     MCT "I don't even have your number. What...?"
+    hide Natsuko with dissolve
     "She winked at me, then jogged towards the lockers."
     MCT "I don't think I've ever been more confused in my entire life."
     MC "Listen, I know you're mad about this but seriously don't let it get to you. This girl isn't important."
-    show FMG sad
+    show FMG sad at altMove(0.5, 0.5)
     FMG "I don't know Kei, maybe she is right, maybe my best isn't good enough."
     FMG "I hate this feeling of being weak."
     MC "I understand, we can plan out a different workout routine and we can work together to knock her down a couple of pegs."

@@ -15263,7 +15263,7 @@ label WG059S:
     show WG neutral at center with move
     WG "The conversation was indeed informative, I'll admit. Can't say I was familiar with that concept before now."
     "A silence descended on the room as I struggled on how to approach the matter."
-    if getAffection("AE") <= 50:
+    if getAffection("WG") <= 50:
         $setProgress("WG", "WG061")
         $setFlag("WG059_aff_fail")
         WG "Such a strange concept, deriving enjoyment from watching someone else eat. I don't really understand it myself."

@@ -512,8 +512,8 @@ try: os.mkdir(gamedir + "/Graphics/ui/covers")
 except: pass
 
 # cleans cover directory
-for x in os.listdir(gamedir + '/Graphics/ui/covers'):
-    os.remove(gamedir + '/Graphics/ui/covers/' + x)
+#for x in os.listdir(gamedir + '/Graphics/ui/covers'):
+    #os.remove(gamedir + '/Graphics/ui/covers/' + x)
 
 scan_song()
 #if renpy.config.developer:
