@@ -358,6 +358,17 @@ init python:
     )
     ost.manualDefineList.append(BgCh)
 
+    RiV = ost.soundtrack(
+        name = "Rivalry",
+        path = "Audio/BGM/rivalry.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Tense Conflict",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(RiV)
+
     ## Base Template
     ######################################
 

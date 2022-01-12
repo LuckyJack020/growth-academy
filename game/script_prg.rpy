@@ -20437,7 +20437,7 @@ label PRG058:
     FMG "Oh! I don't mean like intense swimming! I'm talking like aerobics!"
     PRG "Oh. No, I've never tried that."
     FMG "Want me to show you an exercise quick? It's really easy!"
-    show PRG nervous
+    show PRG unique #nervous
     PRG "Um... I-I guess."
     show FMG flex
     FMG "Sweet! This is called 'The Cross Country Ski.'"
@@ -20541,7 +20541,7 @@ label PRG058:
         "I climbed up the ladder on the poolside, giving Aida a hand so she could get seated on the edge of the pool and get herself out."
         "When she sat on the side, her soft ass seemed to spread on the cement, supporting the delicate girl and her load of babies."
         "She put her hands on either side of her and got her legs out and onto the side of the pool deck."
-        show PRG doubt
+        show PRG sad-2 #doubt
         PRG "Mmph... hold on."
         "Aida got her legs underneath her and grabbed onto the side of the pool ladder, using it as an anchor as she inched her way up."
         show PRG neutral

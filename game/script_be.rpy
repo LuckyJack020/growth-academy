@@ -895,7 +895,8 @@ label BE008_after:
 label BE009:
     $setTimeFlag("size2")
     $setProgress("BE", "BE011")
-    $setBEOutfit(OutfitEnum.ATHLETICSOCCER)
+    $setBEOutfit(OutfitEnum.ATHLETIC)
+    #change back to ATHLETICSOCCER after global010 scene has been implemented
     scene Track with fade
     play music Busy
     "Honoka's soccer club had a match that afternoon. It wasn't too hot, so I decided to come out and watch her for a while."

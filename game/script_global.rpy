@@ -298,6 +298,9 @@ image cg WG046 = "Graphics/ui/gallery/WG046.png"
 image cg WG047 = "Graphics/ui/gallery/WG047.png"
 
 image cg RM000 = "Graphics/ui/gallery/RM000.png"
+image cg RM000_escape1 = "Graphics/ui/gallery/RM000_escape1.png"
+image cg RM000_escape2 = "Graphics/ui/gallery/RM000_escape2.png"
+image cg RM000_escape3 = "Graphics/ui/gallery/RM000_escape3.png"
 
 #Character sprites
 image AE neutral = DynamicImage("Graphics/AE/[globalsize]/[AEOutfit]/neutral.png")
@@ -791,6 +794,7 @@ define audio.BigChanges = "Audio/BGM/scene_uncategorized2.mp3"
 define audio.BrightLights = "Audio/BGM/BrightLights.ogg" #Town Theme
 define audio.Busy = "Audio/BGM/scene_busy.mp3" #PH
 define audio.Chase = "Audio/BGM/Chase.ogg"
+define audio.Country = "Audio/BGM/scene_country.ogg" #Country Theme
 define audio.CreepingPresence = "Audio/BGM/CreepingPresence.ogg"
 define audio.DayByDay = "Audio/BGM/scene_daybyday.ogg" #General Music 3
 define audio.Daymenu = "Audio/BGM/menu_daymenu.ogg" #PH
@@ -808,6 +812,7 @@ define audio.Nostalgia = "Audio/BGM/nostalgia.ogg"
 define audio.NostalgiaSax = "Audio/BGM/nostalgia_sax.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
+define audio.Rivalry "Audio/BGM/rivalry.ogg"
 define audio.Requiem = "Audio/BGM/requiem.mp3"
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH

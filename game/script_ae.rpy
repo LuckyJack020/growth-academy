@@ -18761,7 +18761,7 @@ label AE082:
     MC "Should I, um, g-get it?"
     AE "Nggh, if you would please."
     "I reached over as Shiori took a few steps forward, shuffling in place so that her gigantic ass faced me. I went to grab the note, but as I did I caught what it said."
-    AE "Menhera."
+    MCT "Menhera."
     MC "..."
     "I quickly grabbed it and began to crumple it in my hand as Shiori shuffled around to catch my gaze."
     show AE neutral-annoyed
@@ -19677,7 +19677,7 @@ label AE086_menu:
             Postwoman "Maybe we're missing some of those documents by accident."
             Postwoman "B-But this can't be... Matsumoto-san has never gotten mail before!"
             MC "Apparently, she has."
-            Postwoman "P-Pease don't tell her, okay? I don't wanna get on Prez' bad side!"
+            Postwoman "P-Please don't tell her, okay? I don't wanna get on Prez' bad side!"
             MC "No worries, it was an honest mistake."
             "I bowed to her and she bowed back, but immediately after began panicking as she seemed to go back and look over every piece of mail she had for posterity."
             MCT "This letter... it's from Shiori's mentor."

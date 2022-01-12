@@ -10012,7 +10012,7 @@ label FMG061:
     FMG "I bet you'd {i}love{/i} that. Knowing how you are, I did buy some tight-fitting clothes at the store so I could rip out of them."
     show FMG aroused-2
     FMG "Just for you."
-    MCT "Neutron activation."
+    MCT "Neuron activation."
     pause 1
     show FMG surprised-2
     FMG "Kei! Your nose is bleeding!"
@@ -10327,7 +10327,7 @@ label FMG062:
     FMG "{size=-6}I know! I know! At least try to not make it so obvious!{/size}"
     MC "{size=-6}I'm open to suggestions. I could distract myself by looking at yours.{/size}"
     FMG "{size=-6}Later. We have to stay focused.{/size}"
-    "Due to Shiroi's larger than normal cheeks, however, I wasn't able to fully cover her right side. This resulted in what I could only assume was the entire gym getting an eye load of madame presidents badonkadonk."
+    "Due to Shiori's larger than normal cheeks, however, I wasn't able to fully cover her right side. This resulted in what I could only assume was the entire gym getting an eye load of madame presidents badonkadonk."
     MC "Akira, I'm not wide enough like you or Nat to protect her backside. Can you stand in the middle?"
     FMG "Pick up a weight and hold it out, this is going to be tricky for you and your small body."
     MCT "...I'm average height."
@@ -10360,7 +10360,7 @@ label FMG062:
     "Shiori looked around the gym as she heard a few of the others snicker to themselves. Blushing, she adjusted her glasses and cleared her throat."
     AE "I should get going. Thank you once again for your help."
     FMG "My pleasure. If you ever need anything let Nat or me know and we'll be there."
-    "Shiroi bowed too, gathered her things, and headed for the door."
+    "Shiori bowed too, gathered her things, and headed for the door."
     hide AE
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
     with dissolve

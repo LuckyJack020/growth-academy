@@ -28,6 +28,7 @@ label global000:
 
     pause 1.5
     scene Ferry with fade
+    play music MC
     "The hard bench under me lightly hummed with the vibrations of the ferry. Two hours of sitting here twiddling my thumbs and scrolling through my phone had left me beyond bored."
     "I leaned against the side of the boat, looking out across the shimmering, tranquil sea as the salty air blew through my thick, brown hair."
     "Not finding anything interesting to look at aside from water and sunshine, I turned back and glanced at my sister beside me, her gaze buried deep in the glass of her phone."
@@ -37,54 +38,74 @@ label global000:
     Tomoko "Mm... nah."
     MC "Not even some new school jitters?"
     Tomoko "Nope."
-    MCT "Don’t know what I expected. Even earthquakes couldn’t freak her out."
+    MCT "Don't know what I expected. Even earthquakes couldn't freak her out."
+    play sound ClockTower
     "Overhead, one of the many loudspeakers dotted throughout the ferry whined."
-    Announcer "Your attention, please. We will be docking in five minutes. If you aren’t already, please take your seats. Thank you."
+    Announcer "Your attention, please. We will be docking in five minutes. If you aren't already, please take your seats. Thank you."
     "A few of the other students that had been milling around came to sit back down."
     "I leaned my head against the glass beside me. Ahead, a large, lush, green island loomed over us."
-    MC "Well, that’s welcoming."
+    MC "Well, that's welcoming."
     show Tomoko distracted
     Tomoko "Did you say something?"
-    MC "You know, since we’re not going to know anyone else here, the least you could do is be a little more social."
+    MC "You know, since we're not going to know anyone else here, the least you could do is be a little more social."
     show Tomoko neutral
-    Tomoko "For what? We’re only going to be here for a year. Odds are that we’ll never see most of these people again anyway."
+    Tomoko "For what? We're only going to be here for a year. Odds are that we'll never see most of these people again anyway."
     MC "A lot can happen in a year, Tomo."
     show Tomoko annoyed
-    Tomoko "Yeah, yeah. I don’t need a full inspirational speech, Kei."
+    Tomoko "Yeah, yeah. I don't need a full inspirational speech, Kei."
     show Tomoko neutral
     "I scoffed and looked back at the island."
     "A fairly decent sized cluster of buildings jutted out from the trees, which parted around them to form a homey looking town."
     "And, since that was all I could see from here, I figured that the school had to be nestled in with those buildings."
-    MCT "Not like they’d just stick it out in the boonies."
+    MCT "Not like they'd just stick it out in the boonies."
     pause .5
     MCT "At least I hope not."
     "That is what this island felt like compared to home, though. Compared to Tokyo, this was a complete 180."
-    "I looked over to my sister once more, and my mom’s words rang true in my head once again."
+    "I looked over to my sister once more, and my mom's words rang true in my head once again."
     MCT "Take care of your sister!"
     MCT "Yeah, will do, Mom."
-    "I didn’t have a problem with looking out for her. She was my twin after all. But, it was hard to do that when I didn’t even know what to expect."
+    "I didn't have a problem with looking out for her. She was my twin after all. But, it was hard to do that when I didn't even know what to expect."
     MC "So, do you-"
+    play sound ClockTower
     Announcer "Please remain seated until the ferry comes to a full stop, then make your way to the boarding dock, following the yellow lines on the floor. An attendant will be available should you need assistance!"
     "The voice over the PA system rang out through the deck, causing a few of the other students to look up from their phones while others readied their bags for departure."
     Announcer "Group one, please exit off of the left side of the ferry. An attendant will be ready to lead you to registration on arrival."
-    Announcer "Group two, please exit off of the right. Groups three and four, please wait until we’re ready for you."
+    Announcer "Group two, please exit off of the right. Groups three and four, please wait until we're ready for you."
     hide Tomoko neutral with dissolve
     "Tomoko and I got up from our spots and shuffled in the crowd of students toward the center of the ferry."
 
     scene Dock with fade
-    "Hiking up my bag, I waited in line for a few minutes before reaching a small booth at the end of the dock, where I was handed a small welcome gift bag by a female teacher who bore a bright nametag that read ‘Takamura’."
+    play music Country
+    "Leaving the ferry, I spotted a small dock with red pillars and a red roof. The whole thing looked new, as if it had been built literally moments before I stepped off the boat."
+    "From there, I could look around and see the town nearby."
+    MCT "That's comforting. Kinda feels like home."
+    "As my eyes left the comfort of the town, I looked over to the other half of the island. Hills graced the entire area that stretched out and away from me."
+    MCT "Eesh..."
+    "I did my best to clear my thoughts and joined the rest of the students, hiking my bag up around my shoulders."
+    Student1 "... You heard of this place before?"
+    Student2 "No. I didn't even have the time to look it up or anything. I just got the letter and... didn't really have a ton of options."
+    Student2 "Thing is, I didn't even apply."
+    Student1 "Wait, you didn't apply either?"
+    pause .75
+    MCT "... Weird."
+    "I waited in line for a few minutes before reaching the building line at the end of the dock, where I was handed a small welcome gift bag by a warm looking woman with raven black hair."
+    "On her chest hung a bright nametag that read ‘Aoi Takamura'."
     show Tomoko neutral with dissolve
     Takamura "Can I get your name, please?"
     Tomoko "Tomoko Hotsure."
-    Takamura "Right... okay! Group one, right over there. Just follow them to the academy."
+    Takamura "Right... there you are! Here's a key for your dorm. We have a mandatory assembly tomorrow morning, so be sure not to miss it!"
+    Takamura "Group one, right over there. Just follow them to the academy. Welcome to Seichou!"
     Tomoko "Alright. Later bro."
     MC "Yeah. See ya."
     hide Tomoko with dissolve
     Takamura "And, your name, please?"
     MC "Keisuke Hotsure."
     Takamura "Another Hotsure? Okay... one second...{w} Ah! There you are."
-    "The teacher turned and glanced off at the group of students who were already almost out of sight."
+    "The teacher blinked a few times."
+    Takamura "Hmm... two Hotsures and two Utagashis. Curious..."
+    "The teacher briefly scanned the table and grabbed something from it, then turned and glanced off at the group of students who were already almost out of sight."
     Takamura "Well, looks like they were a little eager to get a move on. Just follow this path here all the way down."
+    Takamura "And, here's a key for your dorm! As I'm sure you heard, assembly is tomorrow morning in the auditorium. Welcome to Seichou, Hotsure-san. Hope you enjoy your stay here!"
     MC "Alright. Thank you very much."
     "I took off at a brisk pace, and left the rest of the students behind as I tried to catch up with my group."
     scene black with fade
@@ -93,23 +114,33 @@ label global000:
     scene Lake Road with fade
     #BIRD SFX
     pause .5
-    MCT "Geez... it’s cooking out here."
+    play music MC
+    MCT "Geez... it's cooking out here."
     "I came to a stop on a wooden bridge overlooking a lake, taking the bottle of water from my gift bag and taking a sip."
-    MCT "And, why haven’t I seen anyone else?"
-    "I looked back behind me, down the winding path I’d been following."
+    MCT "And, why haven't I seen anyone else?"
+    "I looked back behind me, down the winding path I'd been following."
     "I knew that I was well away from the town by now."
     MCT "Where is this place, anyhow?"
     "I let out a loud sigh, taking another large gulp of water."
-    "After I’d graduated from my last school, I’d assumed that I’d be just doing what the rest of my friends were, and going on to bigger and better things. University and all that."
+    "After I'd graduated from my last school, I'd assumed that I'd be just doing what the rest of my friends were, and going on to bigger and better things. University and all that."
     "But nope. My sister and I had both gotten letters in the mail regarding our attendance here, and that had derailed almost anything else going on."
-    "And, I couldn’t find any information about this place either. Seichou Academy."
-    "Every online search I’d done had come up blank and barebones, giving me little more than a phone number and an email."
-    "All this ambiguity didn’t help the cesspool of nerves grinding together in my stomach."
+    "And, I couldn't find any information about this place either. Seichou Academy."
+    "Every online search I'd done had come up blank and barebones, giving me little more than a phone number and an email."
+    "I hadn't even known that this place existed, let alone that it was between Hokkaido and Sakhalin."
     "I was gonna be living away from home and on my own, with my sister, my cell phone, and my personal belongings as my only ties back."
+    "But even with those ties, they didn't make me feel any more at home."
+    MCT "Those guys on the dock... that's what happened to Tomo and I too."
+    "It happened literally on a random Tuesday evening. I'd gotten home from... something. Think I was helping Mom get groceries if I remember right."
+    "My dad had been sitting at the kitchen table going through the mail, and he handed me a letter with some esoteric logo on it."
+    "My sister and I packed, and we were in front of the ferry receiving tearful hugs goodbye from our mother only a few days later."
+    "The entire thing had been a hodgepodge of conversations and confusion, on top of just getting ready to be sent here."
     "My luggage seemed to only be getting heavier as the minutes passed, my heart pounding away with each step I took. I had talked a big game to my parents about how I was fine..."
     "But... I had no clue if that was true or not."
+    pause 0.75
+    MCT "Did I take the wrong path? Like... I think I'd see a huge school by now."
+    MCT "It's like Toyko's metro lines all over again..."
     "I shook my head and looked around. All I saw was trees, the path in front of me, and the lake."
-    MCT "Where even am I?! I've been walking for half an hour, shouldn't I have gotten there already?!"
+    MCT "Where even am I?! I've been walking for like, half an hour already!"
     "I walked through the forested path for a few more minutes, trying to catch my bearings as I searched desperately for any indication of civilization."
     "I picked up my pace as I came to a river and followed the path close to it."
     "Ahead of me, I spotted a flash of pure white. A young woman was bent down beside the river, trawling one hand through the water."
@@ -205,7 +236,7 @@ label global000:
     MC "Cool. Cool. Didn't know you still did that."
     BE "Yep! Frogs are cooool~"
     BE "Oh! Is Tomo-chan here too?"
-    MC "Yep, she’s here! She’s doing about the same as always. Finally got her to come out of her room."
+    MC "Yep, she's here! She's doing about the same as always. Finally got her to come out of her room."
     BE "Really? What, did you finally manage to afford that crowbar?"
     MC "Nah, doughnut on a stick. Works every time."
     BE "Ehehe~"
@@ -266,14 +297,16 @@ label global000_cbreak_after:
     BE "Speaking of which, how exactly did you get lost?"
     MC "Ah... well, I got off of the boat with the wrong group, and kind of just lost my way from there."
     BE "Some things never change, do they?"
-    MC "Look, it’s not my fault that Tokyo has such confusing metro lines!"
-    BE "True, true. I’ve got a map, though. Came with the gift bag."
+    MC "Seems like it, I guess...?"
+    MCT "She {i}still{/i} remembers that?"
+    MC "Look, it's not my fault that Tokyo has such confusing metro lines!"
+    BE "True, true. I've got a map, though. Came with the gift bag."
     pause .5
     MC "... Seriously?"
     BE "Eh... yeah? Take a look."
     "I dug my hand back into the bag and felt around for anything that resembled the texture of paper."
     pause .5
-    MC "Okay... I’ve recently learned that I have a map. So, we’re not lost."
+    MC "Okay... I've recently learned that I have a map. So, we're not lost."
     BE "Not yet, anyway."
     BE "Also, walking around's helped me get all the nervousness out of my system. It was childhood all over again, moving to a new boarding school and all."
     BE "But if you're going to be here too, I'm sure it'll be great!"
@@ -292,7 +325,6 @@ label global000_cbreak_after:
     stop music
     "Before I realized it, we had arrived at a huge school building. This was Seichou Academy."
     "This would be my new home for the next year. It was really awe-inspiring at the time."
-    "But even then, I had no idea just how much my life was going to change."
     jump global000_GTS
 
 label global000_GTS:
@@ -305,10 +337,9 @@ label global000_GTS:
     "The doors became large and imposing, the floors far taller than normal, everything just seemed to be super-sized at Seichou Academy."
     UNKNOWN "Aaah!"
     "Honoka and I looked down to see a pair of legs flailing over the edge of one of the planters lining the building."
+    show cg GTS000 with dissolve
     "We approached the small garden just as the student extracted themselves from the planter, dusting the dirt from her skirt."
-    show GTS sad at Position(xpos=0.75, xanchor=0.5) with dissolve
     UNKNOWN "Oooh, darn..."
-    show BE surprised at Position (xpos=0.25, xanchor=0.5) with dissolve
     BE "Are you okay?"
     UNKNOWN "Eeep!"
     "The pale-skinned girl turned to us, looking briefly terrified.\nShe was wearing a skirt and short-sleeved shirt."
@@ -316,6 +347,10 @@ label global000_GTS:
     UNKNOWN "I can't reach the middle of the bed without crawling on the outer ones..."
     "She gestured behind her, and we could see inside the planter were several rows of vegetables, the tops of radishes and carrots and the like poking through the soil."
     "Aside from the divot where she fell, the center row of vegetables did indeed look less well-watered than the ones closest to the edge."
+    hide cg
+    show GTS sad at Position(xpos=0.75, xanchor=0.5)
+    show BE surprised at Position (xpos=0.25, xanchor=0.5)
+    with dissolve
     menu:
         "That's dumb, whose idea was that?":
             jump global000_GTS_c1
@@ -518,7 +553,7 @@ label global000_WG:
     with dissolve
     "I followed Alice's gaze. Across the room, another girl was walking awkwardly, a large globe in her arms."
     show PRG sad-2
-    UNKNOWN "{size=-6}I-I’m sorry.{/size}"
+    UNKNOWN "{size=-6}I-I'm sorry.{/size}"
     show BE happy at Position (xpos=0.25, xanchor=0.5, yalign=1.0), Transform(xzoom=-1) with dissolve
     BE "Oh, hello!"
     BE "I'm Honoka Inoue! Pleased to meet ya!"
@@ -547,7 +582,7 @@ label global000_WG_c1:
     hide BE with dissolve
     MC "Okay, okay. We'll help too."
     show PRG sad
-    PRG "... Y-You don’t have to. It’s okay..."
+    PRG "... Y-You don't have to. It's okay..."
     WG "Hmph. {w}Well, if you insist, I'm sure I can find something for you to do. {w}The sooner we're done here, the better."
     jump global000_RM
 
@@ -567,7 +602,7 @@ label global000_WG_c2:
     MC "It's fine. We're all supposed to be working together, right?"
     show PRG happy
     PRG "W-Well, yes. But..."
-    MC "But, nothing. We’re helping."
+    MC "But, nothing. We're helping."
     PRG "Oh! Uhm..."
     PRG "T-Thank you! T-Thank you very much!"
     jump global000_RM
@@ -662,22 +697,23 @@ label global000_RM_c3:
     "I put my ear against the door, though all I heard was movement followed by the occasional slamming sound."
     "Sighing, I reached into my pocket and dug through random pocket junk until I felt the cold, blunt edge of my key."
     "Producing it, I shoved it into the lock and turned it."
-    scene Dorm Interior with fade
+    show cg RM000_escape1 with dissolve
     "Rather than being shoved out of the room and cussed straight off of campus, I opened the door to find the door slammer hurling an enormous suitcase straight over the balcony. Beside him were two more large bags, primed and ready for tossing."
-    MC "Whoa, whoa! Can we just talk for a sec? I’m not with the-"
-    RM "That’s what you want me to think! I’m not for it! Daichi Utagashi will not go down without a fight!"
+    MC "Whoa, whoa! Can we just talk for a sec? I'm not with the-"
+    show cg RM000_escape2 with dissolve
+    RM "That's what you want me to think! I'm not for it! Daichi Utagashi will not go down without a fight!"
     "He leaned down and clutched two more bags, a mess of papers and cloth sticking through one of the zippers."
     "Daichi leaned over to throw one, and in a panic...{w} slipped and threw himself straight over the edge, somehow managing to catch the rail in one flailing hand."
-    #show new RM cg here
+    show cg RM000_escape3 with vpunch
     RM "Gah! Rgh, dammit!"
     "I heard the sound of the bag hitting the ground, but all I saw was his knuckles ratcheted onto the railing."
-    MC "Calm down for a second! I promise I’m not with the government!"
-    RM "D-Don’t even start!"
+    MC "Calm down for a second! I promise I'm not with the government!"
+    RM "D-Don't even start!"
     MC "Okay, if I really was out to get you, would I have just revealed myself in plain conversation like that?"
     pause .5
     RM "You do have a point there."
     pause .25
-    RM "Okay, help me get back over! But don’t you dare try {i}anything{/i}!"
+    RM "Okay, help me get back over! But don't you dare try {i}anything{/i}!"
     "I dropped my bags at my feet and hurried over, grabbing his wrist firmly with one hand and his shoulder with the other."
     MC "Ngh..."
     pause .5
@@ -685,16 +721,14 @@ label global000_RM_c3:
     MC "Ragh!"
     "I pulled with all my might, and yanked Daichi up enough where he could get his footing."
     "He threw himself back over the railing and landed in a heap on the floor, breathing like an olympic athlete."
-    #hide cg with dissolve
-
     scene Dorm Interior
     show RM angry
     with fade
     RM "Bah... hagh... eh..."
-    MC "You’re... hah... you’re welcome."
+    MC "You're... hah... you're welcome."
     show RM distrustful
-    RM "Alright... let’s... see some ID."
-    MC "... Seriously? I save you from falling and {i}that’s{/i} your opening line?"
+    RM "Alright... let's... see some ID."
+    MC "... Seriously? I save you from falling and {i}that's{/i} your opening line?"
     show RM doubt
     RM "Card. Now."
     "I huffed and yanked my wallet out of my back pocket, pulling out my ID."
@@ -702,7 +736,7 @@ label global000_RM_c3:
     RM "Hmph..."
     pause .5
     show RM distrustful
-    RM "Don't get any funny ideas, 'Keisuke Hotsure.’ I've got my eye on you..."
+    RM "Don't get any funny ideas, 'Keisuke Hotsure.' I've got my eye on you..."
     $setFlag("RM_govagent")
     $setAffection("RM", -2)
     jump global000_RM_after
@@ -718,9 +752,9 @@ label global000_RM_after:
     MC "Well, I got the letter..."
     show RM doubt
     RM "Right after your health exam, right?"
-    MC "Yeah..."
+    MC "Uh... yeah? Close to it, anyway."
     RM "Hmph. Just as I thought."
-    MCT "???"
+    MCT "What's this guy's deal?"
     show RM concerned-2
     RM "Haven't you ever seen those people on the news?{w} The giants over ten feet tall,{w} the gravure idols with 40kg breasts,{w} all the record holders for biggest this and longest that?"
     "Thinking back on it, I had seen some reports, starting when I was a little kid."
@@ -737,7 +771,8 @@ label global000_RM_after:
     "I had just accepted it as some new schooling program, like the papers had said, but now?"
     "I never paid much attention to the news, but if every one of those reports and articles over the years could be traced back to Seichou Academy,{w} that was definitely something to wonder about."
     scene black with dissolve
-    stop music
+    stop music fadeout 1.0
+    pause 1
     MCT "What have my sister and I gotten ourselves into...?"
     scene white with dissolve
     play sound AlarmClock
@@ -766,7 +801,7 @@ label global000_RM_after:
 
 label global000_part2:
     scene Campus Center with fade
-    MCT "It’s way too quiet here. No cars honking. No people shoving past you. Nothing like the city at all."
+    MCT "It's way too quiet here. No cars honking. No people shoving past you. Nothing like the city at all."
     "As I followed the signs to First Day Welcoming, I couldn't help but notice how flat the campus seemed. Despite the large buildings, most of them were divided into a handful of floors at most."
     "Also, there didn't seem to be any stairs anywhere. Any dips or slopes in the elevation were all traveled with ramps."
     scene Auditorium with dissolve
@@ -784,7 +819,7 @@ label global000_part2:
     Tomoko "Yeah. She talks and I kind of just nod."
     MCT "Seems accurate enough."
     show Tomoko neutral
-    MC "Right, well. I’ll see you around, Tomo."
+    MC "Right, well. I'll see you around, Tomo."
     Tomoko "Yeah. Later."
     hide Tomoko with dissolve
     "My sister walked off and took a spot in the back row off to one side."
@@ -804,15 +839,15 @@ label global000_sit_c1:
     MCT "!!"
     MCT "I... Is that..."
     show AE neutral at Position(xpos=0.75, xanchor=0.5) with dissolve
-    MCT "Shiori-san's butt is overflowing her seat and pushing against me...{w} I can't say anything about it with everyone else around..."
+    MCT "Shiori's butt is overflowing her seat and pushing against me...{w} I can't say anything about it with everyone else around..."
     MCT "I'll just quietly scoot away from her-"
     "{color=#FF69B4}*PLOMF!*{/color}"
     MCT "Oh no!"
     show WG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
-    MCT "Alice-San! She's taking up all of her seat and half of mine! What do I do??"
+    MCT "Alice! She's taking up all of her seat and half of mine! What do I do??"
     MCT "I'm in the middle of a womanly butt-sandwich and it's like I'm the only one to notice! I've got to distract myself before something even more embarrassing happens!" #with Shake((0, 0, 0, 0), 0.75, dist=20)
     menu:
-        "So, Shiori-san...":
+        "So, Matsumoto-san...":
             jump global000_sit_c1_1
         "Hi there, Nikumaru-san...":
             jump global000_sit_c1_2
@@ -832,11 +867,11 @@ label global000_sit_c2:
     BE "Isn't this great, Kei-chan? It's just like grade school again!"
     GTS "You two... went to school together?"
     show BE neutral
-    BE "Oh, hey there Naomi-san! Yeah, when we were kids we went to the same school. Different middle schools, though."
+    BE "Oh, hey there Yamazaki-san! Yeah, when we were kids we went to the same school. Different middle schools, though."
     menu:
         "Find your dorm okay, Honoka?":
             jump global000_sit_c2_1
-        "What was your grade school like, Naomi?":
+        "What was your previous school like, Yamazaki-san?":
             jump global000_sit_c2_2
 
 label global000_sit_c3:
@@ -847,7 +882,7 @@ label global000_sit_c3:
     show PRG neutral at Position(xpos=0.25, xanchor=0.5) with dissolve
     "I also noticed she was looking at me, but as soon as our eyes met she turned away...{w} before slowly turning back to watch me from the corner of her eye."
     menu:
-        "Needed the room to stretch out, Mizutani?":
+        "Needed the room to stretch out, Mizutani-san?":
             jump global000_sit_c3_1
         "Seems kinda lonely back here, Kodama-san...":
             jump global000_sit_c3_2
@@ -880,7 +915,7 @@ label global000_sit_c1_2:
     MC "Well, your seat- ah, I mean, the seat, it's a little..."
     show WG happy
     WG "Hm? Yes, I do suppose they are quite tacky. It's hard to imagine that they could have picked something that could clash with the present setting more than this. I take it you have a flair for design yourself?"
-    MCT "Uh, that’s not what I was getting at, but on second thought..."
+    MCT "Uh, that's not what I was getting at, but on second thought..."
     MCT "This is much less awkward to explain than calling attention to the fact she's taking up more than her fair share of the space as I squeezed in next to her."
     MC "I guess you could say so."
     show WG neutral
@@ -907,12 +942,12 @@ label global000_sit_c2_1:
     jump global000_sit_after
 
 label global000_sit_c2_2:
-    MC "What was your grade school like, Naomi?"
+    MC "What was your previous school like, Yamazaki-san?"
     show GTS neutral
     GTS "Mine?"
     MC "Sure, you heard about ours..."
     show BE neutral
-    BE "Yeah, what was yours like, Naomi-san?"
+    BE "Yeah, what was yours like, Yamazaki-san?"
     show GTS neutral
     GTS "Well, ah, it was...{w} pleasant, I suppose."
     MC "'Pleasant'?"
@@ -930,7 +965,7 @@ label global000_sit_c2_2:
 
 label global000_sit_c3_1:
     hide PRG with dissolve
-    MC "Needed the room to stretch out, Mizutani?"
+    MC "Needed the room to stretch out, Mizutani-san?"
     show FMG neutral at altMove(0.5, 0.5)
     FMG "Oh hey, it's, uh, Hotsure, right?"
     MC "Yep! So, ah, not interested in the speech?"
@@ -955,12 +990,12 @@ label global000_sit_c3_2:
     MC "Seems kinda lonely back here, Kodama-san..."
     show PRG sad at altMove(0.5, 0.5)
     PRG "Oh! Uhm... I-I guess..."
-    PRG "B-But, there’s three of us here now."
-    MC "Heh. Yeah, you’re right."
+    PRG "B-But, there's three of us here now."
+    MC "Heh. Yeah, you're right."
     MC "Would you mind if I sat by you?"
     show PRG surprised
     PRG "Uh... n-not at all!"
-    MCT "Geez. It’s like she’s never spoken before."
+    MCT "Geez. It's like she's never spoken before."
     pause .25
     MC "So... nervous about starting at a new school?"
     PRG "A little...{w} yeah."
@@ -968,7 +1003,7 @@ label global000_sit_c3_2:
     PRG "Yeah..."
     pause 1
     "Aida went quiet."
-    MCT "Well... guess that’s all."
+    MCT "Well... guess that's all."
     "I sat back and took a deep breath, while I waited for the ceremony to get under way."
     $setAffection("PRG", 1)
     $setFlag("global1000_aidasit")
@@ -983,8 +1018,12 @@ label global000_sit_after:
     hide BE
     with dissolve
     "The ceremony continued, all dreadfully familiar and rote, but at the end there was something different. The principal settled the papers behind the podium and hesitated for a too-long moment."
+    Principal "Thank you to each and every one of you for your attendance today. My name is Manabu Noguchi, and I'm the principal of this academy."
     Principal "The future is forever uncertain. But no matter what the future holds, years hence or any day now, one thing is important above all else."
     Principal "'Nosce te Ipsum.' {w}Latin, 'To thine own self be true'. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need."
+    Principal "I’m sure you all have many questions as to why you’re here. And, I assure you that the rest of the faculty and I will do our best to answer all of those for you."
+    Principal "Now, each of you have been assigned a homeroom teacher. They will give you more information during class in a few minutes."
+    Principal "Feel free to reach out to them should you need to. As is the same with every member of our faculty, they’re here to help."
     MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
     "Finally, the ceremony ended, and we all began to file out."
     stop music
@@ -1063,13 +1102,15 @@ label global000_homeroom:
     show AE neutral with dissolve
     AE "Some kind of anti-cheating measure...?"
     hide AE with dissolve
-    "Eventually we all took our seats, looking around at the sparse classroom. All the usual educational aids seemed to be on shelves or set into the wall, making the room seem even more like an empty box than it already was."
+    "I walked to a desk and gazed down at it."
+    MCT "Why exactly is this seat so huge? Hell, the whole desk could fit three or four of me."
+    "One by one, we all took our seats, looking around at the sparse classroom. All the usual educational aids seemed to be on shelves or set into the wall, making the room seem even more like an empty box than it already was."
     "If not for the teacher's lectern at the front of the class, you'd be forgiven for thinking we were in a pen instead of a classroom."
     "Finally the bell rang, and at the last possible second one could enter and not be late, our homeroom teacher slid open the door and entered."
     show HR unique with dissolve
     MCT "'Dour' is the first word that comes to mind... Guy looks like he's been middle-aged his entire life."
     "The man was tall, thin but not fit, wearing a collared shirt and dress slacks, with a jacket draped over one arm until he casually tossed it on the lectern. He swiped a piece of chalk up off the board and quickly scratched out his name on it."
-    "{i}Tashi{/i}"
+    "{i}Kaeru Tashi{/i}"
     "Tashi-sensei dropped the chalk back on the tray, turned to us, and stepped forward, leaning against the lectern."
     stop music
     HR "..."
@@ -1102,7 +1143,7 @@ label global000_homeroom:
     "..."
     "..."
     play music Busy
-    HR "All right, go ahead, get it out now. But don't run away or you'll be marked tardy."
+    HR "All right, go ahead, get it out now."
     "The nonchalance in the teacher's voice quickly turned the class' mood from panic to confusion, especially as that giant tongue continued to flop around as Tashi-sensei got into his bag and set his papers down on the lectern."
     HR "All done? {w} Good. Here's how this works."
     HR "Welcome to Seichou Academy. You're here because you, or a sibling, have expressed a certain trait that causes unusual growth of some kind."
@@ -1118,12 +1159,16 @@ label global000_homeroom:
     HR "But make no mistake, unless you've got a sibling here at Seichou Academy, you're {i}going{/i} to change; even if you do, you've got good odds of changing yourself."
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you."
+    HR "Simply put, we can give you tools. How you choose to use them falls onto your shoulders."
+    HR "You’ll find in your time here that, as are teaching styles, each teacher has a different approach to these... growths, as it were."
+    HR "Some have a more tender approach and prioritize your comfort throughout this process, which of course, there is nothing wrong with."
+    HR "As for me, I see more value in focusing on self-acceptance."
+    HR "If you and your peers can learn to accept yourselves and your growth, then in theory, you should be able to tackle a number of things that life will throw your way, no?"
     "Tashi-sensei scanned the room, taking in the fear and confusion, then shrugged."
     HR "Anyways, that's my big first day speech. Don't expect more.{w} So, roll call. Matsumoto-San?"
 
     scene black with dissolve
-    stop music
-
+    stop music fadeout 1.0
     "So I found myself at Seichou Academy, orientation behind me and a long, strange journey ahead."
     "What was I supposed to do now, knowing what I do about the bodies of the student body?"
     jump daymenu
@@ -1132,68 +1177,68 @@ label MC001:
     scene Dorm Interior with fade
     play music MC
     "The first day of class was certainly interesting... {w}bizarre, surreal, confusing— all manner of strange and unsettling characterizations came to mind, but I chose to stick with interesting for the sake of my own sanity."
-    "Normally I’d like to sleep in as late as feasibly possible while still avoiding being late to class. I was pretty good at the first part, but hadn’t mastered the second, even after 18 years of practice."
-    "After recent events, I’m not too sure who would have slept soundly all through the night. Well, maybe Tomo. I don’t think she’d even wake up for a firestorm during an earthquake."
+    "Normally I'd like to sleep in as late as feasibly possible while still avoiding being late to class. I was pretty good at the first part, but hadn't mastered the second, even after 18 years of practice."
+    "After recent events, I'm not too sure who would have slept soundly all through the night. Well, maybe Tomo. I don't think she'd even wake up for a firestorm during an earthquake."
     "Since I was already awake, I decided to just get up and get ready for class. After getting dressed, I was ready to head out."
     "I cracked the door open to leave when I noticed a lanky, clammy hand slowly shoving the door back shut."
     play music RM
     show RM neutral with dissolve
-    "Oh yeah, that guy. My roommate. I’m pretty sure he said his name was Daichi. How did I not notice him standing there before?"
+    "Oh yeah, that guy. My roommate. I'm pretty sure he said his name was Daichi. How did I not notice him standing there before?"
     MC "Uhhh, good morning?"
-    RM "That remains to be seen. The morning hasn’t started yet."
+    RM "That remains to be seen. The morning hasn't started yet."
     MC "Right, I suppose... {w}Uh, did you need something?"
     RM "Do you know why you're here?"
-    MC "Umm, because I have some kind of growth or something. I’m not—"
+    MC "Umm, because I have some kind of growth or something. I'm not—"
     show RM doubt
-    RM "Yes, I know what they {i}told{/i} us. I’m asking you the {i}real{/i} reason you’re here."
+    RM "Yes, I know what they {i}told{/i} us. I'm asking you the {i}real{/i} reason you're here."
     MC "Are you implying that the real reason is something different than what we were told?"
     show RM distrustful
-    RM "I’m asking the questions here."
+    RM "I'm asking the questions here."
     show RM doubt
     extend " But the answer is yes, {w}well perhaps, {w}probably at least."
     MC "Was there something unconvincing about seeing a man with a meter long tongue talk about body parts growing in unusual ways?"
     show RM concerned-2
-    RM "No, but maybe that’s the point— a little {i}too{/i} convincing."
+    RM "No, but maybe that's the point— a little {i}too{/i} convincing."
     "My eyes were beginning to glaze over at this point. It was a bit too early in the morning to put on a tin foil hat."
     show RM smug
-    RM "Think about it. What better way to get students to completely fall in line and accept what they’ve been told than to be shown something that seemingly confirms the story they’ve planted in our minds?"
-    MC "I did think about it. I saw it and now I can’t forget it, even if I wanted to. If that was the point then Tashi-sensei did a pretty good job, because I’m convinced."
+    RM "Think about it. What better way to get students to completely fall in line and accept what they've been told than to be shown something that seemingly confirms the story they've planted in our minds?"
+    MC "I did think about it. I saw it and now I can't forget it, even if I wanted to. If that was the point then Tashi-sensei did a pretty good job, because I'm convinced."
     show RM doubt
-    RM "{i}Tck{/i}. Don’t be so quick to accept just anything. Ever heard the expression ‘Don’t believe anything you hear, and only half of what you see.’?"
+    RM "{i}Tck{/i}. Don't be so quick to accept just anything. Ever heard the expression ‘Don't believe anything you hear, and only half of what you see.'?"
     MCT "No, but in light of this conversation it sounds like useful advice."
     menu:
-        "Tell him he’s not making sense.":
-            MC "Well, that’s the first I’ve heard it, but I guess I’m not supposed to believe it."
+        "Tell him he's not making sense.":
+            MC "Well, that's the first I've heard it, but I guess I'm not supposed to believe it."
             show RM distrustful
-            RM "Ugh, {i}listen{/i}... You can’t just accept at face value people will tell you everything you want to know from them. It takes real {color=#0066CC}skill{/color} to read between the lines and extract everything out of them."
+            RM "Ugh, {i}listen{/i}... You can't just accept at face value people will tell you everything you want to know from them. It takes real {color=#0066CC}skill{/color} to read between the lines and extract everything out of them."
         "Just humor him.":
-            MC "Alright, I’m listening."
+            MC "Alright, I'm listening."
             $setAffection("RM", 1)
-            RM "Look, you can’t just accept at face value people will tell you everything you want to know from them. It takes real {color=#0066CC}skill{/color} to read between the lines and extract everything out of them."
+            RM "Look, you can't just accept at face value people will tell you everything you want to know from them. It takes real {color=#0066CC}skill{/color} to read between the lines and extract everything out of them."
 
     MC "Skill? Like what kind of skill?"
     MCT "More to the point, what are you even talking about?"
     show RM happy
     RM "Well, aside from good intuition and a healthy sense of skepticism {size=-6} both of which you are sorely lacking... {/size}"
     show RM smug
-    RM "Most people respond more favorably to people with skills they respect. That’s where you have to read between the lines, to figure out how someone ticks. Then maybe they’ll open up to you more."
+    RM "Most people respond more favorably to people with skills they respect. That's where you have to read between the lines, to figure out how someone ticks. Then maybe they'll open up to you more."
     if isHighestSkill("Art"):
         RM "You seem like someone who's more artistically inclined. That can help you come off as thoughtful and creative to more sensitive minded individuals. Pretentious types really eat that stuff up."
     elif isHighestSkill("Athletics"):
-        RM "You seem like someone who’s more athletically inclined. People that are always active respect that kind of stuff."
+        RM "You seem like someone who's more athletically inclined. People that are always active respect that kind of stuff."
     elif isHighestSkill("Academics"):
-        RM "You seem like someone who’s more academically inclined. Keeping your grades up is important. People are always looking for a study buddy for the tough courses."
+        RM "You seem like someone who's more academically inclined. Keeping your grades up is important. People are always looking for a study buddy for the tough courses."
         show RM doubt
-    RM "Regardless of your forté, rest assured, if you don’t keep all your skills sharp you {i}will{/i} miss things."
+    RM "Regardless of your forté, rest assured, if you don't keep all your skills sharp you {i}will{/i} miss things."
     MC "Why are you telling me this?"
     show RM distrustful
-    RM "Because someone here must know something about why we’re here, something more."
+    RM "Because someone here must know something about why we're here, something more."
     show RM happy
     extend " I want you to be on the lookout, get some feelers out there. Report back to me if you find any interesting tidbits."
     MCT "Aye aye Captain Weirdo!"
-    MC "Uh, sure. I’ll try to keep that in mind. {w}Can I go now?"
+    MC "Uh, sure. I'll try to keep that in mind. {w}Can I go now?"
     show RM concerned-2
-    RM "Yes, I don’t have anything else... {w}for now."
+    RM "Yes, I don't have anything else... {w}for now."
     show RM doubt
     extend " Just remember what I told you. Stay sharp."
     MC "Yeah, no problem. Uh... See you in class, I guess?"
@@ -1202,11 +1247,11 @@ label MC001:
     "Daichi had walked back to his side of the room, already completely engrossed with typing away at his laptop, oblivious to my presence after having just cornered me for an impromptu interrogation."
     "Not bothering to wait for a response, I just headed out the door."
     scene Dorm Hallway with fade
-    "Daichi was certainly... eccentric, to put it lightly. As off-putting as our initial interactions had been, I decided not to judge him too harshly for it. We’ve all been thrust into something no one could have really prepared for."
-    "People cope with the stress of the unknown in different ways and I didn’t know the guy well enough to know if that was his true personality, or if he just needed some time to wind back down."
-    "I wasn’t holding out for the latter any time soon though."
+    "Daichi was certainly... eccentric, to put it lightly. As off-putting as our initial interactions had been, I decided not to judge him too harshly for it. We've all been thrust into something no one could have really prepared for."
+    "People cope with the stress of the unknown in different ways and I didn't know the guy well enough to know if that was his true personality, or if he just needed some time to wind back down."
+    "I wasn't holding out for the latter any time soon though."
     scene Dorm Exterior with fade
-    "Still though, there was something about his advice to read between the lines that stuck with me. That I’d be missing out if I didn’t develop myself to my full potential. {w}Something to think about at least."
+    "Still though, there was something about his advice to read between the lines that stuck with me. That I'd be missing out if I didn't develop myself to my full potential. {w}Something to think about at least."
     "More importantly though, this was the start of something new, there were a lot of new people to meet. Hopefully some were worth getting to know."
     jump daymenu
 
