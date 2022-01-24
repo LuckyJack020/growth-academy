@@ -3164,6 +3164,7 @@ label WG017_c2_1:
         "So she bought the game, again going with the latest version, and sat through another tutorial."
         "Once she got into the game proper she seemed to understand its operations well."
     "Her rollercoaster designs were kind of basic, but serviceable. And I think she was overcharging on the pictures you had taken on the rides."
+    show WG stern
     "Eventually, though, she started to look annoyed."
     "The monthly status report that gauged her park's finances, growth and expenses was on the screen, and something on it was irritating her."
     "She went through the drop-down menus and other screens, searching for something."
@@ -3182,6 +3183,7 @@ label WG017_c2_1:
     WG "I'm constructing a keystone of the local economy, and yet the city or state won't incentivize my work? It's absurd."
     MC "These games aren't supposed to be 100%% realistic."
     MC "A 'Lobby the mayor' side-mission would be kind of distracting from the game's basic premise."
+    show WG doubt
     WG "I suppose, but they shouldn't claim to be a tycoon if those options aren't available."
     show WG neutral
     WG "It's too rudimentary in how it depicts things like pricing and expanding the grounds."
@@ -3193,8 +3195,8 @@ label WG017_c2_1:
     jump WG017_c2_menu
 
 label WG017_c2_2:
-    MC "Rail Baron'' is a pretty well-known title. I've played it, but it must have its fans."
-    WG "'Build your own railroad empire across Europe and North America as you construct routes, upgrade your trains and handle both commercial and passenger business.'"
+    MC "\"Rail Barons\" is a pretty well-known title. I've played it, but it must have its fans."
+    WG "\"Build your own railroad empire across Europe and North America as you construct routes, upgrade your trains and handle both commercial and passenger business.\""
     WG "So it's about operating a business, but how deep does that go?"
     MC "I haven't played it in awhile but you lay track between cities, establish trains and compete with other AI companies. Lost once due to a hostile takeover."
     show WG happy
@@ -3204,7 +3206,7 @@ label WG017_c2_2:
         show WG neutral
         WG "I want to experience the best possible version of the game."
         "It had been a bit since I'd touched this particular franchise but I could recall the most recent third installment to be rather fun and engaging."
-        "The game started with a tutorial; how to place or destroy train tracks, change ticket prices, issue stocks and bonds and propose mergers."
+        "The game started with a tutorial: how to place or destroy train tracks, change ticket prices, issue stocks and bonds and propose mergers."
         "It took almost 15 minutes, and I could see Alice looking rather eager as she read on."
         "She played in silence for a while, getting the hang of the basics and, even getting more into the stock aspect of it."
         MC "I'm surprised you picked up on the stocks stuff. I could never quite figure that out."
@@ -3228,7 +3230,7 @@ label WG017_c2_2:
     WG "I will admit to enjoying being able to undercut my competitors when I clearly have the most advanced trains and access to the largest network."
     MC "I would assume that's how it should work."
     WG "Sometimes it's true, though things like Penn Central show that that thinking has its faults."
-    WG "The touch of cities offering incentives to reach them was a nice touch."
+    WG "The cities offering incentives to reach them was a nice touch."
     MC "Want to try another game?"
     show WG neutral
     WG "Sure, what else is there?"
@@ -3242,8 +3244,8 @@ label WG017_c2_3:
     MC "How about something like Superpower? A civilization builder could be good."
     show WG neutral
     WG "A civilization builder? What does that entail?"
-    MC "The goal is to build an civizational and either conquer the world or achieve some sort of technological achievement before anyone else."
-    WG "Build my own civilization you say... Certainly sounds interesting"
+    MC "The goal is to build an civilization and either conquer the world or achieve some sort of technological achievement before anyone else."
+    WG "Build my own civilization you say... Certainly sounds interesting..."
     "She bought and downloaded the second-to-latest version of Superpower, ignoring the space-based one that had come out last year."
     MC "Not interested in a space civilization?"
     WG "I'll consider it if I find this selection to be appealing enough."
@@ -3251,6 +3253,7 @@ label WG017_c2_3:
     WG "Yeah, as it looks like they wanted to try a gimmick. It's a typical marketing move, so if I learn with this older version, I could try the newer one later."
     "While this tutorial was the longest one by far, she remained interested in it."
     "I considered mentioning the amount of micromanaging there was in these sorts of games, but I doubted that would bother her."
+    show WG doubt
     "When she started the game proper she selected the Roman-esque option, and was mildly put off that she couldn't change her avatar to a female."
     "From there, she was off to the races."
     "She didn't grasp it immediately - the deluge of options, content and interface choices made it hard to get a good hold on the mechanics."
@@ -3272,7 +3275,7 @@ label WG017_c2_3:
     MC "Well it's already eight o'clock so I best be going before Shiori comes by."
     $setAffection("WG", 1)
     MC "But, yeah I'd be down to do this again."
-    MC "Do you need help taking your computer back to your room?"
+    MC "Do you need help putting away your set-up here?"
     WG "Oh, don't worry. Kodama-san will handle that."
     "I was hesitant to leave it for Aida until I saw she had a wheeled cart waiting by the side."
     scene black with fade
@@ -7507,8 +7510,10 @@ label WG036:
 label WG036_c1_1:
     hide WG with dissolve
     MCT "There's no rush. I can deal with it later. She'd probably say something if she thought it was an issue anyway."
-    scene black with fade
     "I left the classroom and went about the rest of the afternoon like always."
+    scene black with fade
+    pause 0.5
+    scene Dorm Interior with fade
     "Got a snack, did my homework, played some games."
     "And I looked through the showtimes for the only theater on the island. I needed to find a safe but not boring or insipid choice for our date."
     "Then I remembered Alice's words from earlier ‘Don't overthink it.'"
@@ -7544,6 +7549,9 @@ label WG036_c1_2:
     hide WG with dissolve
     MCT "Glad I got that off my chest. Turned out better than I expected to be honest."
     "I left the classroom and went about the rest of the afternoon like always."
+    scene black with fade
+    pause 0.5
+    scene Dorm Interior with fade
     "Got a snack, did my homework, played some games."
     "And I looked through the showtimes for the only theater on the island. I needed to find a safe but not boring or insipid choice for our date."
     "I was agonizing over the ‘right' choice, knowing Alice wasn't a woman you could court by half-assing things."
@@ -7581,7 +7589,7 @@ label WG037:
     WG "Shall we be off?"
     MC "If you're ready."
 
-    scene Hill Road
+    scene Lake Road
     show WG neutral
     with fade
     "It was still rather light out due to the longer days as we started walking down the hill to the town. I wasn't paying much mind to the weather as I was too preoccupied with trying to steal some extra glances at Alice."
@@ -7632,8 +7640,8 @@ label WG037:
     WG "Who are those people? I don't recognize them as teachers or administrators."
     MC "Former students? I can only guess. Not the most unusual sight given where we're at."
     MC "Doesn't look like enough people for a class reunion, but maybe they're a group of friends getting back together?"
-    MCT "I wonder if the academy actually does do class reunions..."
     WG "It's a possibility."
+    MCT "Hmmm, I wonder if the academy actually does do class reunions..."
     "She continued staring for a while before turning back around."
     "I could easily guess what had caught her attention."
     WG "Those women..."
@@ -7746,6 +7754,10 @@ label WG_037_afterchoice1:
     MC "Well that didn't work out so well for her. Is she oblivious? Seems pretty obvious what he was really after."
     WG "True, but it is a relatable failing though, being too preoccupied with the affairs of others to mind your own."
     "The main character of course doesn't learn her lesson and a more complicated series of interconnected love triangles ensues, with no one being honest about who they are in love with right up until the end."
+    scene Movie Theater Lights
+    show WG neutral
+    with dissolve
+    pause 1
     MC "Am I missing something here?"
     WG "What do you mean?"
     MC "It just seems needlessly confusing, and just kind of resolves itself at the end. Why weren't they just honest with each other in the first place about who they were in love with?"
@@ -7768,7 +7780,7 @@ label WG_037_afterchoice1:
 
     scene black with fade
     pause .5
-    $setTime(TimeEnum.NIGHT)
+    $setTime(TimeEnum.NIGHTLIGHTS)
     play music TwilightBright
     scene School Front
     show WG neutral
@@ -7783,7 +7795,7 @@ label WG_037_afterchoice1:
     "She leaned in and kissed me, her belly pressing into me as she did so."
     "Part of me wanted to return it passionately, but I worried if that constituted forcing myself on her like the last time she warned me about."
     MCT "Don't overthink it."
-    "I leaned in, putting my arm behind her head while I wrapped my other arm around her back as I sunk into her."
+    "I leaned in, putting my hand behind her head while I wrapped my other arm around her back as I sunk into her."
     "She was so soft, everything from her hair to her lips, especially her belly. It lasted only a few seconds, but it was all I ever wanted and more from the time I had first laid eyes on her."
     $setAffection("WG", 1)
     "For a moment, we just stared at each other smiling, knowing how much we both enjoyed it."
@@ -11784,10 +11796,10 @@ label WG048_afterchoice_2:
     Lee "{size=-6}{i}jojdwaess-eo{/i}{/size}"
     Lee "Miss Nikumaru! I'm so sorry I'll clean this immediately!"
     "Shi rushed out of the kitchen to assess the situation."
-    Shi "LEE! YOU IMBACI-"
+    Shino "LEE! YOU IMBACI-"
     show WG stern
     WG "Shino, that won't be necessary."
-    Shi "-!"
+    Shino "-!"
     WG "Spilling some drinks is not going to flood the house, nor set us back financially, I'm quite sure cleaning this up will rectify the situation."
     "Aida remained shocked, seeing Alice take this so calmly seemed to surprise her even more than Lee spilling the drinks did. I wasn't quite sure what to make of her reaction myself."
     "In all the time that I have known her, her exacting nature brought with it demanding expectations for the people that work for her- something Aida and I were intimately familiar with."
@@ -18652,7 +18664,7 @@ label WG067:
     "I made my way into the kitchen to fetch the bowl of fruit. We'd been studying for an upcoming math test and Alice suggested we study together, since I seemed to have a firmer grasp on these Calculus concepts."
     MCT "Guess being good at finances doesn't mean good at math altogether."
     play sound Knock
-    MC "Wonder who that could be? Aida is out at the cooking club till four and Alice said she had no appointments."
+    MCT "Wonder who that could be? Aida is out at the cooking club till four and Alice said she had no appointments."
     "Placing the bowl of fruit back on the table. I opened the door and was greeted by Kokutan holding a pile of packages and letters."
     MC "Uh hi Kokutan, what's all this about?"
     show Kokutan neutral with dissolve
@@ -18662,7 +18674,7 @@ label WG067:
     hide Kokutan with dissolve
     "Taking the pile of letters from her, I thanked her and shut the door."
     #scene Dorm WG
-    MC "Candygram for Mango"
+    MC "Candygram for Mango!"
     show WG surprised with dissolve
     WG "Where'd all this come from?"
     MC "Kokutan grabbed this from the mailroom and decided to drop it off on her way to her dorm."
@@ -18816,7 +18828,7 @@ label WG067:
     MC "Well my experience doesn't really extend beyond some minor house work with my father and some school projects."
     show WG neutral-2
     WG "Do you enjoy doing that kind of stuff though?"
-    MC "I do, work with my hands always feels more rewarding to me... like,just this feeling of how you are actually crafting something unique to you."
+    MC "I do, work with my hands always feels more rewarding to me... like, just this feeling of how you are actually crafting something unique to you."
     WG "Getting philosophical here aren't we? Though I can relate to the sentiment as that's sort of how I get when I step back to observe my business."
     MC "I assumed as much, you always talked about your venture with a certain amount of pride."
     WG "Is that sentiment the reason you want to pursue architecture? To build something that is uniquely yours?"
@@ -18881,7 +18893,7 @@ label WG067:
     WG "Oh Dad is gonna have a field day with you. If you meet his approval then my mother will certainly be curious to meet you. Let's just say that."
     MC "Hopefully she is not immune to a cute face."
     show WG neutral
-    WG "Don't get a big head over that. Might ruin your cute complexion"
+    WG "Don't get a big head over that. Might ruin your cute complexion."
     "She grabbed another apple from the bowl and headed back into her room."
     "Looking down at the bowl, I furrowed my brow at its now barren surface."
     MCT "Weren't there like twelve in there when we entered the room?"
@@ -19093,7 +19105,7 @@ label WGBE002:
     BE "I'll take that as a yes."
     MC "A fair assumption."
     show BE doubt
-    extend " What about it? Does it look bad?"
+    BE "What about it? Does it look bad?"
     MC "Well, I wouldn't say that... it's just... different. {w}{size=-4}Yeah, heh...{/size} Just not what I'm used to seeing you wear— that's all."
     show BE neutral
     BE "Not everyone is too lazy to change out of their school clothes after classes, Kei-chan."
@@ -19241,7 +19253,7 @@ label WGBE002:
     scene Dorm BE with fade
     MCT "Man, what an absolute disaster zone."
     "And here I thought I left my room messy, but I was a guy. That was my excuse anyway. Then again, that's just like Honoka— she's always been just one of the guys."
-    MCT "Oh... I guess I hadn't thought too much about that before."
+    MCT "Oh...{w} I guess I hadn't thought too much about that before."
     show BE neutral with dissolve
     BE "So what's up?"
     MC "Why did you change clothes? It's not like you're headed to bed or going to class."
@@ -19284,6 +19296,7 @@ label WGBE002:
     MC "If she does talk you into getting a dress or something, just tell her I told you she was offering a steep discount."
     "I knew I was over-playing my hand by offering up a discount I had zero authorization to give, but I figured I'll just deal with Alice's wrath later— if she was even going to be upset about it at all."
     show BE happy
+    $setAffection("BE", 1)
     BE "Thanks Kei-chan. You're the best!"
     "I wasn't so sure about ‘the best', but I was glad to see things worked out for everyone."
     jump daymenu

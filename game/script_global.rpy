@@ -1,9 +1,12 @@
 #Characters
+
+#Main Protagonist
 define MC = Character('Keisuke', color="#0066CC", image="MC") # Main Character, speaking.
 define MCT = Character('Keisuke', color="#0066CC", what_prefix='(', what_suffix=')', image="MC")
 define MCCell = Character('Keisuke', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="MC")
 define AltMC = Character('Keisuke', color="#0066CC") #For flashback Keisuke, will not show graphic alongside his text.
 
+#Main Cast
 define AE = Character('Shiori', color="#FF3300")
 define BE = Character('Honoka', color="#FCCF20")
 define BECell = Character('Honoka', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="BECell")
@@ -20,54 +23,67 @@ define WGCell = Character('Alice', color="#C0C0C0", what_prefix='{i}', what_suff
 define MC_FMG = Character('Keisuke & Akira', color="#C0C0C0")
 define MC_BE = Character('Keisuke & Honoka', color="#C0C0C0")
 
-define Akio = Character('Akihiro', color="#C0C0C0")
-define Akihiro = Character('Akihiro', color="#C0C0C0")
+#Supporting Cast
 define Chibuki = Character('Chibuki', color="#CC33FF")
 define ChibukiCell = Character('Chibuki', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="ChibukiCell")
-define Chie = Character('Chie', color="#FF9900")
-define Dad = Character('Dad', color="#C0C0C0")
-define Francois = Character('François', color="#CC33FF")
-define Fujimoto = Character('Fujimoto', color="#FF9900")
-define Fumika = Character('Fumika', color="#FF91DC")
-define Hamikawa = Character('Hamikawa', color="#C0C0C0")
-define Haruhiro = Character('Haruhiro', color="#C0C0C0")
-define HR = Character('Tashi-sensei', color="#C0C0C0")
-define Jineko = Character('Jineko', color="#C0C0C0")
-define Kanami = Character('Kanami', color="#C0C0C0")
-define Kazumi = Character('Kazumi', color="#C0C0C0")
+define Jineko = Character('Jineko', color="#228B22")
 define Kokutan = Character('Kokutan', color="#C0C0C0")
-define Koneko = Character('Koneko', color="#C0C0C0")
-define Lee = Character('Lee', color="#C0C0C0")
-define Michiko = Character('Michiko', color="#C0C0C0")
-define Midori = Character('Midori', color="#C0C0C0")
-define Miko = Character('Miko', color="#C0C0C0")
-define Minami = Character('Minami', color="#C0C0C0")
-define Minei = Character('Minei', color="#C0C0C0")
 define Minori = Character('Minori', color="#FF91DC")
-define Misaki = Character('Misaki', color="#C0C0C0")
-define Miura = Character('Miura', color="#C0C0C0")
-define Mom = Character('Mom', color="#FF3300")
-define MomCell = Character('Mom', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
-define Naoki = Character('Naoki', color="#C0C0C0")
 define Natsuko = Character('Natsuko', color="#C0C0C0")
-define Nurse = Character('Nurse Kiyomi', color="#FF91DC")
 define RM = Character('Daichi', color="#BDB8A5")
 define Ryoko = Character('Ryoko', color="#FF91DC")
-define Sakie = Character('Sakie', color="#C0C0C0")
 define Sakura = Character('Sakura', color="#FF3399")
-define Shi = Character('Shi', color="#C0C0C0")
-define Shino = Character('Shino', color="#C0C0C0")
-define Takada = Character('Takada', color="#C0C0C0")
-define Takamura = Character('Takamura-Sensei', color="#FF9900")
-define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0")
-define Takara = Character('Takara', color="#C0C0C0")
 define Tako = Character('Tako', color="#ce9b50")
-define Tomoko = Character('Tomoko', color="#FF3300")
-define TomokoCell = Character('Tomoko', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell")
-define TS = Character('Tsubasa-sensei', color="#C0C0C0")
 define Yuki = Character('Yuki', color="#FF91DC")
-define Yuko = Character('Yuko', color="#C0C0C0")
 
+#School Staff
+define HR = Character('Tashi-sensei', color="#C0C0C0")
+define Naoki = Character('Naoki-sensei', color="#C0C0C0")
+define Nurse = Character('Nurse Kiyomi', color="#C0C0C0") #Lips
+define Nurse2 = Character('Nurse Kiyomi', color="#0099CC") # Nails
+define Lunch = Character('Lunchlady', color="#CC33FF")
+define Hageshi = Character('Hageshi-sensei', color="#C0C0C0")
+define Principal = Character('Principal Noguchi', color="#C0C0C0")
+define Takamura = Character('Takamura-sensei', color="#C0C0C0")
+define Tsubasa = Character('Tsubasa-sensei', color="#C0C0C0")
+
+#Parents and Other Relatives
+define Akihiro = Character('Akihiro', color="#C0C0C0") #Naomi’s Father
+define Dad = Character('Dad', color="#C0C0C0") #Keisuke’s Father
+define Kazumi = Character('Kazumi', color="#C0C0C0") #Naomi’s Sister
+define Midori = Character('Midori', color="#C0C0C0") #Akira’s Father
+define Miko = Character('Miko', color="#C0C0C0") #Naomi’s Mother
+define Minami = Character('Minami', color="#C0C0C0") #Shiori’s Mother
+define Mom = Character('Mom', color="#FF3300") #Keisuke’s Mother
+define MomCell = Character('Mom', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}') #Keisuke’s Mother Cell
+define TakaraUnknown = Character('Aida\'s Mother', color="#C0C0C0") #Aida’s Mother
+define Takara = Character('Takara', color="#C0C0C0") #Aida’s Mother
+define Tomoko = Character('Tomo', color="#FF3300") #Keisuke’s Sister
+define TomokoCell = Character('Tomo', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}', image="TomoCell") #Keisuke’s Sister Cell
+define Yuko = Character('Yuko', color="#C0C0C0") #Akira’s Mother
+
+#Other Students
+define Fumika = Character('Fumika', color="#FF91DC") #GTS Route
+define Hamikawa = Character('Hamikawa', color="#C0C0C0") #AE Route
+define Haruhiro = Character('Haruhiro', color="#C0C0C0") #BE Route
+define Kanami = Character('Kanami', color="#C0C0C0") #BE Route
+define Koneko = Character('Koneko', color="#C0C0C0") #BE Route
+define Michiko = Character('Michiko', color="#C0C0C0") #PRG Route
+define Sakie = Character('Sakie', color="#C0C0C0") #BE Route
+
+#Background Characters
+define Akio = Character('Akio', color="#C0C0C0") #GTS Route
+define Chie = Character('Chie', color="#FF9900") #FMG Route
+define Francois = Character('François', color="#CC33FF") #WG Route
+define Fujimoto = Character('Fujimoto', color="#FF9900") #FMG Route
+define Lee = Character('Lee', color="#C0C0C0") #WG Route - Summer Arc
+define Minei = Character('Minei', color="#C0C0C0") #FMG Route
+define Misaki = Character('Misaki', color="#C0C0C0") #WG Route
+define Miura = Character('Miura', color="#C0C0C0") #FMG Route
+define Shino = Character('Shino', color="#C0C0C0") #WG Route - Summer Arc
+define Takada = Character('Takada', color="#C0C0C0") #WG Route - Summer Arc
+
+#General Use
 define All = Character('Everyone', color="#ffffff")
 define Announcer = Character('Announcer', color="#C0C0C0")
 define Barker = Character('Barker', color="#C0C0C0")
@@ -94,13 +110,9 @@ define Hostess = Character('Hostess', color="#C0C0C0")
 define Judge = Character('Judge', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
-define Lunch = Character('Lunchlady', color="#CC33FF")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Owner = Character('Store Owner', color="#C0C0C0")
-define Postwoman = Character('Postwoman', color="#C0C0C0")
-define Principal = Character('Principal', color="#C0C0C0")
 define Receptionist = Character('Receptionist', color="#C0C0C0")
-define Referee = Character('Referee', color="#C0C0C0")
 define Student = Character('Student', color="#FF3300")
 define Student1 = Character('Student 1', color="#FF3300")
 define Student2 = Character('Student 2', color="#FF3300")
@@ -117,33 +129,18 @@ define Waitress = Character('Waitress', color="#C0C0C0")
 image white = Solid((255, 255, 255, 255))
 image black = Solid((0, 0, 0, 255))
 
-image Arcade = DynamicImage("Graphics/ui/bg/archiveBG/arcade_[gametime].png")
+#Campus
 image Art Classroom = DynamicImage("Graphics/ui/bg/artroom_[gametime].png")
-image Art Gallery = "Graphics/ui/bg/NYI.png"
 image Auditorium = DynamicImage("Graphics/ui/bg/archiveBG/auditorium_[gametime].png")
 image Baseball Field = "Graphics/ui/bg/NYI.png"
 image Bathroom = "Graphics/ui/bg/archiveBG/bathroom.png"
-image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
-image Bus Interior = DynamicImage("Graphics/ui/bg/archiveBG/businterior_[gametime].png")
-image Cafe = DynamicImage("Graphics/ui/bg/archiveBG/cafe_[gametime].png")
 image Cafeteria = "Graphics/ui/bg/archiveBG/cafeteria.png"
 image Campus Center = DynamicImage("Graphics/ui/bg/archiveBG/campuscenter_[gametime].png")
 image Classroom = DynamicImage("Graphics/ui/bg/classroom_[gametime].png")
 image Clock Tower = DynamicImage("Graphics/ui/bg/clocktower_[gametime].png")
-image Clothes Store = "Graphics/ui/bg/archiveBG/clothesstore.png"
-image Club = "Graphics/ui/bg/NYI.png"
 image Computer Room = DynamicImage("Graphics/ui/bg/computerroom_[gametime].png")
 image Cooking Classroom = "Graphics/ui/bg/cooking.png"
-image Diner = "Graphics/ui/bg/archiveBG/burgerrestaurant.png"
-image Dock = "Graphics/ui/bg/dock_[gametime].png"
-image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
-image Dorm Hallway = "Graphics/ui/bg/archiveBG/dormhallway.png"
-image Dorm Interior = DynamicImage("Graphics/ui/bg/archiveBG/dorminterior_[gametime].png")
-image Ferry = "Graphics/ui/bg/NYI.png"
-image Festival = DynamicImage("Graphics/ui/bg/archiveBG/festival_[gametime].png")
-image Field = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].png")
-image Field Winter = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].png") #TBI
-image Game Store = "Graphics/ui/bg/archiveBG/gamestore.png"
+image Faculty Room = DynamicImage("Graphics/ui/bg/facultyroom_[gametime].png")
 image Gate Front = "Graphics/ui/bg/gatefront.png"
 image Gym = DynamicImage("Graphics/ui/bg/gym_[gametime].png")
 image Hallway = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway1_[gametime].png")
@@ -151,23 +148,13 @@ image Hallway2 = DynamicImage("Graphics/ui/bg/archiveBG/schoolhallway2_[gametime
 image HallwayStairs = DynamicImage("Graphics/ui/bg/schoolhallway_[gametime].png")
 image Hill Road = "Graphics/ui/bg/NYI.png"
 image Hospital Room = "Graphics/ui/bg/NYI.png"
-image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
 image Library = DynamicImage("Graphics/ui/bg/archiveBG/library_[gametime].png")
 image Lockers = DynamicImage("Graphics/ui/bg/lockers_[gametime].png")
-image Mountains = DynamicImage("Graphics/ui/bg/archiveBG/mountains_[gametime].png")
-image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.png"
-image Mountains Tori Gate = "Graphics/ui/bg/mountains_gate.png"
-image Movie Theater = "Graphics/ui/bg/archiveBG/movietheater.png"
-image Movie Theater Lights = "Graphics/ui/bg/archiveBG/movietheater_lights.png"
-image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheaterext_[gametime].png")
 image Music Classroom = DynamicImage("Graphics/ui/bg/archiveBG/music_[gametime].png")
 image Nurse Office = DynamicImage("Graphics/ui/bg/archiveBG/nurseoffice_[gametime].png")
 image Office = DynamicImage("Graphics/ui/bg/archiveBG/office_[gametime].png")
-image Park = DynamicImage("Graphics/ui/bg/archiveBG/park_[gametime].png")
-image Pharmacy = DynamicImage("Graphics/ui/bg/archiveBG/pharmacy_[gametime].png")
 image Pool = DynamicImage("Graphics/ui/bg/archiveBG/schoolpool_[gametime].png")
 image Recreation = "Graphics/ui/bg/NYI.png"
-image Restaurant = "Graphics/ui/bg/restaurant.png"
 image Roof = DynamicImage("Graphics/ui/bg/roof_[gametime].png")
 image Roof Entrance = DynamicImage("Graphics/ui/bg/roofentrance_[gametime].png")
 image School Exterior = DynamicImage("Graphics/ui/bg/archiveBG/schoolexterior_[gametime].png")
@@ -175,44 +162,80 @@ image School Front = DynamicImage("Graphics/ui/bg/schoolfront_[gametime].png")
 image School Inner = "Graphics/ui/bg/schoolinner.png"
 image School Planter = "Graphics/ui/bg/schoolplanter.png"
 image School Shed = DynamicImage("Graphics/ui/bg/schoolshed_[gametime].png")
-image Store = "Graphics/ui/bg/NYI.png"
+image Student Government = DynamicImage("Graphics/ui/bg/archiveBG/studentgovernment_[gametime].png")
+image Track = DynamicImage("Graphics/ui/bg/archiveBG/track_[gametime].png")
+image Workshop = "Graphics/ui/bg/NYI.png"
+
+#Dorms
+image Dorm Exterior = DynamicImage("Graphics/ui/bg/dormexterior_[gametime].png")
+image Dorm Hallway = "Graphics/ui/bg/archiveBG/dormhallway.png"
+image Dorm Interior = DynamicImage("Graphics/ui/bg/archiveBG/dorminterior_[gametime].png")
+image Dorm AE = DynamicImage("Graphics/ui/bg/archiveBG/AEdorm_[gametime].png")
+image Dorm BE = DynamicImage("Graphics/ui/bg/archiveBG/BEdorm_[gametime].png")
+image Dorm FMG = DynamicImage("Graphics/ui/bg/archiveBG/FMGdorm_[gametime].png")
+image Dorm GTS = DynamicImage("Graphics/ui/bg/archiveBG/GTSdorm_[gametime].png")
+image Dorm PRG = DynamicImage("Graphics/ui/bg/archiveBG/PRGdorm_[gametime].png")
+image Dorm WG = DynamicImage("Graphics/ui/bg/archiveBG/WGDorm_[gametime].png")
+image Dorm WG Flip = im.Flip("Graphics/ui/bg/archiveBG/WGDorm_day.png", horizontal=True)
+image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
+
+#Giants Facilities
+image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].png")
+image Courtyard GTS = "Graphics/ui/bg/NYI.png"
+image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].png")
+image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].png")
+
+#Seichou Town
+image Arcade = DynamicImage("Graphics/ui/bg/archiveBG/arcade_[gametime].png")
+image Art Gallery = "Graphics/ui/bg/NYI.png"
+image Ballroom = DynamicImage("Graphics/ui/bg/archiveBG/ballroom_[gametime].png")
+image Cafe = DynamicImage("Graphics/ui/bg/archiveBG/cafe_[gametime].png")
+image Clothes Store = "Graphics/ui/bg/archiveBG/clothesstore.png"
+image Disco Club = "Graphics/ui/bg/NYI.png"
+image Diner = "Graphics/ui/bg/archiveBG/burgerrestaurant.png"
+image Festival = DynamicImage("Graphics/ui/bg/archiveBG/festival_[gametime].png")
+image Game Store = "Graphics/ui/bg/archiveBG/gamestore.png"
+image Hotel Room = DynamicImage("Graphics/ui/bg/archiveBG/hotelroom_[gametime].png")
+image Movie Theater = "Graphics/ui/bg/archiveBG/movietheater.png"
+image Movie Theater Lights = "Graphics/ui/bg/archiveBG/movietheater_lights.png"
+image Movie Theater Exterior = DynamicImage("Graphics/ui/bg/archiveBG/movietheaterext_[gametime].png")
+image Park = DynamicImage("Graphics/ui/bg/archiveBG/park_[gametime].png")
+image Pharmacy = DynamicImage("Graphics/ui/bg/archiveBG/pharmacy_[gametime].png")
+image Restaurant = "Graphics/ui/bg/restaurant.png"
+image Store = DynamicImage("Graphics/ui/bg/store_[gametime].png")
 image Supermarket = DynamicImage("Graphics/ui/bg/archiveBG/supermarket_[gametime].png")
+image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
 image Theater Exterior = DynamicImage("Graphics/ui/bg/theater-exterior_[gametime].png")
 image Theater Interior = "Graphics/ui/bg/theater-interior.png"
 image Theater Interior Spotlight = "Graphics/ui/bg/theater-interior-spotlight.png"
 image Town = DynamicImage("Graphics/ui/bg/archiveBG/town_[gametime].png")
 image Town Docks = DynamicImage("Graphics/ui/bg/archiveBG/towndocks_[gametime].png")
-image Track = DynamicImage("Graphics/ui/bg/archiveBG/track_[gametime].png")
-image Woods = DynamicImage("Graphics/ui/bg/archiveBG/woods_[gametime].png")
-image Workshop = "Graphics/ui/bg/NYI.png"
 
-image Dorm Tomoko = "Graphics/ui/bg/NYI.png"
-
-image Dorm AE = DynamicImage("Graphics/ui/bg/archiveBG/AEdorm_[gametime].png")
-image Frozen Beach = "Graphics/ui/bg/NYI.png"
-image Student Government = DynamicImage("Graphics/ui/bg/archiveBG/studentgovernment_[gametime].png")
-
-image Dorm BE = DynamicImage("Graphics/ui/bg/archiveBG/BEdorm_[gametime].png")
-image Sushi Restaurant = "Graphics/ui/bg/sushirestaurant.png"
-
-image Dorm FMG = DynamicImage("Graphics/ui/bg/archiveBG/FMGdorm_[gametime].png")
-
-image Dorm GTS = DynamicImage("Graphics/ui/bg/archiveBG/GTSdorm_[gametime].png")
-image Chukan Point = DynamicImage("Graphics/ui/bg/chukanpoint_[gametime].png")
-image Courtyard GTS = "Graphics/ui/bg/NYI.png"
-image Giant Dorm Exterior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_exterior_[gametime].png")
-image Giant Dorm Interior = DynamicImage("Graphics/ui/bg/GTSdorm_quarry_interior_[gametime].png")
-image Giants Town = "Graphics/ui/bg/NYI.png"
-image Giants Town Store = "Graphics/ui/bg/NYI.png"
+#Satoyama Village
+image Hot Springs = DynamicImage("Graphics/ui/bg/archiveBG/hotsprings_[gametime].png")
+image Hot Springs Steamed = DynamicImage("Graphics/ui/bg/archiveBG/hotsprings_steamed_[gametime].png")
 image Ryokan Exterior = DynamicImage("Graphics/ui/bg/archiveBG/ryokanexterior_[gametime].png")
 image Ryokan Room = DynamicImage("Graphics/ui/bg/archiveBG/ryokanroom_[gametime].png")
 
-image Dorm PRG = DynamicImage("Graphics/ui/bg/archiveBG/PRGdorm_[gametime].png")
+#Giants Town
+image Giants Town = "Graphics/ui/bg/NYI.png"
+image Giants Town Store = "Graphics/ui/bg/NYI.png"
 
-image Dorm WG = DynamicImage("Graphics/ui/bg/archiveBG/WGDorm_[gametime].png")
-image Dorm WG Flip = im.Flip("Graphics/ui/bg/archiveBG/WGDorm_day.png", horizontal=True)
-image Ballroom = DynamicImage("Graphics/ui/bg/archiveBG/ballroom_[gametime].png")
-image Hotel Room = DynamicImage("Graphics/ui/bg/archiveBG/hotelroom_[gametime].png")
+#Mountains
+image Mountains = DynamicImage("Graphics/ui/bg/archiveBG/mountains_[gametime].png")
+image Mountains Shrine = "Graphics/ui/bg/mountains_shrine.png"
+image Mountains Tori Gate = "Graphics/ui/bg/mountains_gate.png"
+
+#Island
+image Beach = DynamicImage("Graphics/ui/bg/beach_[gametime].png")
+image Dock = "Graphics/ui/bg/dock_[gametime].png"
+image Field = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].png")
+image Field Winter = DynamicImage("Graphics/ui/bg/archiveBG/field_[gametime].png") #TBI
+image Lake Road = DynamicImage("Graphics/ui/bg/lakeroad_[gametime].png")
+image Woods = DynamicImage("Graphics/ui/bg/archiveBG/woods_[gametime].png")
+image Frozen Beach = "Graphics/ui/bg/NYI.png"
+
+#Alice’s Summer Estate
 image RV Interior = "Graphics/ui/bg/WG_summer_rv.png"
 image Summer Balcony Exterior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
 image Summer Balcony Interior = DynamicImage("Graphics/ui/bg/WG_summer_balcony_ext_[gametime].png")
@@ -229,6 +252,10 @@ image Summer House Back = "Graphics/ui/bg/WG_summer_houseback.png"
 image Summer House Entrance = "Graphics/ui/bg/WG_summer_entrance.png"
 image Summer House Front = "Graphics/ui/bg/WG_summer_housefront.png"
 image Summer Living Room = "Graphics/ui/bg/WG_summer_livingroom.png"
+
+#General
+image Bus Interior = DynamicImage("Graphics/ui/bg/archiveBG/businterior_[gametime].png")
+image Ferry = "Graphics/ui/bg/NYI.png"
 
 #CG + Images
 image daymenubg = "Graphics/ui/bg/archiveBG/menubg-day.png"
@@ -812,7 +839,7 @@ define audio.Nostalgia = "Audio/BGM/nostalgia.ogg"
 define audio.NostalgiaSax = "Audio/BGM/nostalgia_sax.ogg"
 define audio.Peaceful = "Audio/BGM/scene_peaceful.mp3" #PH
 define audio.Rain = "Audio/BGM/scene_rain.mp3" #PH
-define audio.Rivalry "Audio/BGM/rivalry.ogg"
+define audio.Rivalry = "Audio/BGM/rivalry.ogg"
 define audio.Requiem = "Audio/BGM/requiem.mp3"
 define audio.Romance = "Audio/BGM/scene_tbi.ogg" #NEED
 define audio.Schoolday = "Audio/BGM/scene_schoolday.mp3" #PH

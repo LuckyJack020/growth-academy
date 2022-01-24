@@ -3483,7 +3483,7 @@ label FMG025:
     show FMG neutral
     FMG "I pinky promise."
 
-    scene Club
+    scene Disco Club
     show FMG surprised
     with fade
     FMG "Jeez this place is freaking incredible!"
@@ -5335,9 +5335,9 @@ label FMG039:
     scene Nurse Office with fade
     play music Rain
     MCT "Sitting in the nurse's office with Akira out like a light and Natsuko sitting to my right. Not really how I'd like to spend my evening."
-    Nurse "You can relax sweetie! She'll be fine, she should've stayed in bed today muscle growth students and pushing themselves too hard- Haha, name a more iconic duo."
+    Nurse2 "You can relax sweetie! She'll be fine, she should've stayed in bed today muscle growth students and pushing themselves too hard- Haha, name a more iconic duo."
     MC "Tell me about it...Thank you again for your help."
-    Nurse "Don't mention it dear. Unfortunately, I have to step out for a moment to help another student. If you need my help, ring the bell on my desk and I'll come running!"
+    Nurse2 "Don't mention it dear. Unfortunately, I have to step out for a moment to help another student. If you need my help, ring the bell on my desk and I'll come running!"
     MC "Got it. Thanks again."
     "The nurse smiled at us and headed out the door."
     show Natsuko neutral with dissolve
@@ -5493,11 +5493,11 @@ label FMG039:
     "I shuffled my feet towards the bed while popping my back, back into place."
     MC "Ahhh, much better."
     "It was at this moment the nurse walked back in and saw the situation flipped."
-    Nurse "It seems a lot happened during my absence. What did I miss?"
+    Nurse2 "It seems a lot happened during my absence. What did I miss?"
     show FMG sad
     FMG "He tried to... lift me and help me crack my back."
-    Nurse "Let me go grab a heating pad and some more pillows."
-    Nurse "Dearie, if you plan on lifting your girlfriend, I suggest going to the gym."
+    Nurse2 "Let me go grab a heating pad and some more pillows."
+    Nurse2 "Dearie, if you plan on lifting your girlfriend, I suggest going to the gym."
     show FMG happy
     MC "...I know- she tells me that all the time..."
     jump daymenu

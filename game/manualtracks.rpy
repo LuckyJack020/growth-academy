@@ -359,11 +359,11 @@ init python:
     ost.manualDefineList.append(BgCh)
 
     RiV = ost.soundtrack(
-        name = "Rivalry",
+        name = "Show Stopper",
         path = "Audio/BGM/rivalry.ogg",
         priority = 2,
         author = "Post-Bop",
-        description = "Tense Conflict",
+        description = "Tense Rivalry",
         cover_art = False,
         unlocked = True
     )

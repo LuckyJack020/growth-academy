@@ -679,7 +679,7 @@ init python:
 
     def setBEOutfit(o):
         global BEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ATHLETICSOCCER or o == OutfitEnum.ATHLETICARCHERY or o == OutfitEnum.ATHLETICBASKETBALL or o == OutfitEnum.ATHLETICSOFTBALL or o == OutfitEnum.SWIM:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.ATHLETICSOCCER or o == OutfitEnum.ATHLETICARCHERY or o == OutfitEnum.ATHLETICBASKETBALL or o == OutfitEnum.ATHLETICSOFTBALL or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             BEOutfit = o
 
     def setFMGOutfit(o):

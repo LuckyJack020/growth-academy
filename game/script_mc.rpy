@@ -138,7 +138,7 @@ label global000:
     "But... I had no clue if that was true or not."
     pause 0.75
     MCT "Did I take the wrong path? Like... I think I'd see a huge school by now."
-    MCT "It's like Toyko's metro lines all over again..."
+    MCT "It's like Tokyo's metro lines all over again..."
     "I shook my head and looked around. All I saw was trees, the path in front of me, and the lake."
     MCT "Where even am I?! I've been walking for like, half an hour already!"
     "I walked through the forested path for a few more minutes, trying to catch my bearings as I searched desperately for any indication of civilization."

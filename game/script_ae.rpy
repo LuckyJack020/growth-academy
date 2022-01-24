@@ -1948,7 +1948,7 @@ label AE013:
     AE "N-Not quite."
     MC "Eh?"
     "As I looked up to the source of the voice, I saw Shiori-san, standing on her toes while reaching up to apply a poster to an empty wall."
-    show AE neutral-annoyed at center with dissolve
+    show AE neutral-annoyed with dissolve
     MC "S-shiori-san? What's going on up there?"
     AE "Well as you can see, I, nghf... am setting up posters for the refitting, as was discussed earlier."
     show AE neutral
@@ -1961,7 +1961,7 @@ label AE013:
     MC "Alright, sure."
     hide AE with dissolve
     "Taking the stacks in my hands, I lifted them up as Shiori-san plastered the posters across the walls. This continued for a few minutes, with small talk breaking up the monotony every once in a while."
-    show AE neutral at center with dissolve
+    show AE neutral with dissolve
     MC "Well, hey, you were right. Being the president of the student government, really does have a lot to do, eh? Files and posters."
     show AE neutral-annoyed
     AE "Hmpf, well, I'm sure you'll get to appreciate it full hand when you get into a management job at some point."
@@ -2112,35 +2112,35 @@ label AE013:
     "I sat on the small, cushioned bench, paper crinkling beneath my pants as I shifted position."
     "Shiori-san had spent a good five minutes washing and sanitizing her hands as we waited; eventually sitting down next to me and holding my hand, despite my protests that I was fine."
     "After a brief intermission, the nurse walked back in, a woman with long painted fingernails which clacked with every errant movement on her clipboard."
-    Nurse "Okay, Hotsure-san, I did a double check on your medical history and the likelihood you have a concussion is minor."
+    Nurse2 "Okay, Hotsure-san, I did a double check on your medical history and the likelihood you have a concussion is minor."
     AE "Nurse, I would like to inform you that I was the one who-"
     MC "Decided to bring me straight here."
     show AE surprised
     AE "...W-Hotsure-san you-"
     play music HigherEdu
-    Nurse "Well, it was a kind gesture, Matsumoto-san, however it seems as though it wasn't necessary."
+    Nurse2 "Well, it was a kind gesture, Matsumoto-san, however it seems as though it wasn't necessary."
     show AE neutral-annoyed
     AE "N-not necessary? He was bleeding from the impact point."
-    Nurse "Hotsure-san, I actually have the perfect solution for you."
+    Nurse2 "Hotsure-san, I actually have the perfect solution for you."
     "The nurse reached into her bag and grabbed a bottle of shampoo. The bottle had the school logo on it with a man in a shower."
     MC "Um... ma'am?"
-    Nurse "I'm guessing you scratch your head a lot, son?"
+    Nurse2 "I'm guessing you scratch your head a lot, son?"
     MC "Well... Yeah."
     "The nurse gave a soft wink."
-    Nurse "It's scalp treatment shampoo. It doesn't flake up, so you don't have to worry about scabs."
+    Nurse2 "It's scalp treatment shampoo. It doesn't flake up, so you don't have to worry about scabs."
     show AE sad-2
     AE "S-scabs?"
-    Nurse "Mhm, it seems as though he scratched the back of his head, opening up a scab from showering."
+    Nurse2 "Mhm, it seems as though he scratched the back of his head, opening up a scab from showering."
     MC "E-eh?"
-    Nurse "Look, see my nails? Whenever I wash, I make sure the edges are rounded so I don't cut my head up. From the looks of it, you've got some sharp nails yourself."
+    Nurse2 "Look, see my nails? Whenever I wash, I make sure the edges are rounded so I don't cut my head up. From the looks of it, you've got some sharp nails yourself."
     MC "O-Oh."
     "I darted a look over to Shiori-san, who was looking on incredulously."
     MC "Okay ma'am, thank you, I will."
-    Nurse "All right, have a good day. Oh, and tell your girlfriend that she's very loving."
+    Nurse2 "All right, have a good day. Oh, and tell your girlfriend that she's very loving."
     show AE surprised
     AE "Wha-"
     MC "Gnk-"
-    Nurse "Mhnhnhn, have a good day."
+    Nurse2 "Mhnhnhn, have a good day."
     "The door creaked closed, the fogged glass blocking view to the inside."
     show AE embarrassed
     AE "H-hold on, I-I believe you've made an error in assessment!"
@@ -16260,53 +16260,53 @@ label AE070:
     scene Nurse Office with fade
     "As I walked into the nurses office, I looked around to see if anyone was available. Sure enough, at the desk in front of the main medical wing doors, was the nurse. She looked up and greeted me with a smile, yet bowed apologetically."
     #nurse smile
-    Nurse "Ah, apologies, Hotsure-san, but we currently have testing and therapy in progress."
+    Nurse2 "Ah, apologies, Hotsure-san, but we currently have testing and therapy in progress."
     MC "Testing?"
     #nurse surprised
-    Nurse "Wait, are you here for Matsumoto-san?"
+    Nurse2 "Wait, are you here for Matsumoto-san?"
     MC "Oh! I was just here to get a resupply of the shampoo but... I didn't know Shiori was here."
     #nurse neutral
-    Nurse "Ah. Well, yes, she's going through her physical therapies today."
+    Nurse2 "Ah. Well, yes, she's going through her physical therapies today."
     if getSkill("Art") >= 5:
         MC "I see. Which ones in particular?"
         MCT "Let's see if I can bluff this."
-        Nurse "Ah, no doubt the ones Matsumoto-san has already told you about: Sensitivity testing, vibration therapy, ice rod therapy, muscle density testing, elasticity tests; somewhat standard fare for students with her condition."
+        Nurse2 "Ah, no doubt the ones Matsumoto-san has already told you about: Sensitivity testing, vibration therapy, ice rod therapy, muscle density testing, elasticity tests; somewhat standard fare for students with her condition."
         MC "Ah. Right. And the therapies are the ones that..."
         "I made a subtle show of snapping my fingers trying to 'remember' information I was never told."
         MCT "I wouldn't usually fish for information like this, but I know how Shiori can be when she's embarrassed, and I want to know as much as I can to help her..."
         if getSkill("Art") >= 10 and getSkill("Academics") >= 7:
             #nurse smile
-            Nurse "The experimental ones for slowing the process she signed up for last month, yes."
+            Nurse2 "The experimental ones for slowing the process she signed up for last month, yes."
             MCT "Experimental... to slow the process?"
             MC "Right! Right, right. Is it showing any results?"
             #nurse concern
-            Nurse "It's... inconclusive, currently."
+            Nurse2 "It's... inconclusive, currently."
             MCT "Ah. Meaning that it's doing nothing so far."
         else:
             #nurse neutral
-            Nurse "...I'm sorry, Hotsure-san, but that information is strictly confidential."
+            Nurse2 "...I'm sorry, Hotsure-san, but that information is strictly confidential."
             MCT "Damn, it was worth a shot..."
     else:
         MC "W-What kind of testing?"
         #concern
-        Nurse "Apologies, Hotsure-san, but I'm not at liberty to discuss these sorts of things with you. It's strictly confidential."
+        Nurse2 "Apologies, Hotsure-san, but I'm not at liberty to discuss these sorts of things with you. It's strictly confidential."
         "Something about her tone made it seem like the confidentiality part spread beyond just official doctor-patient, and into something much more official. It was as though 'classified' would have worked just as effectively."
     MC "Is it okay if I wait out here for her?"
     #smile
-    Nurse "Yes, of course, Hotsure-san. She'll be out in a few minutes."
+    Nurse2 "Yes, of course, Hotsure-san. She'll be out in a few minutes."
     "I nodded, and sat down on one of the chairs leaning up against the walls towards the office entrance."
     "Much to the nurses word, I simply sat out in the waiting room in silence... for a moment."
     UNKNOWN "UUUUUUUUUUUGH~!"
     "It was Shiori. It was distant, almost muted, but I definitely heard a loud, nauseated moan of discomfort and... pleasure?"
     MC "W-What was that?!"
-    Nurse "It's okay, Matsumoto-san is just doing her tests."
+    Nurse2 "It's okay, Matsumoto-san is just doing her tests."
     MCT "Her tests?! What the hell are they doing to her in there?!"
     "I continued to sit quietly, though now perturbed by intermittent mechanical buzzing, whirring, moans and groans."
     MC "U-Um... my shampoo is um..."
-    Nurse "Oh! Of course, I'll go check on Matsumoto-san and get it for you."
+    Nurse2 "Oh! Of course, I'll go check on Matsumoto-san and get it for you."
     "She disappeared for a while before heading back to me with a bottle in hand."
     #neutral
-    Nurse "She's going to need a few minutes to recover, Hotsure-san. Apologies."
+    Nurse2 "She's going to need a few minutes to recover, Hotsure-san. Apologies."
     MC "No worries..."
     #hide nurse, probably
     "I waited for minutes on end holding my bottle of shampoo on my lap quietly as I fiddled with the cap. Soon enough, however, the door to the main wing opened up and out came Shiori... for better or worse. Assisted by a member of the medical staff, she made her way out to the lobby."
@@ -17751,7 +17751,6 @@ label AE076_c1_after:
         jump daymenu
 
 label AE077:
-    #(At the moment, for Nurse1 and Nurse2, just use Nurse)
     $setProgress("AE", "AE078")
     $setTime(TimeEnum.EVE)
     scene Nurse Office with fade
@@ -17762,21 +17761,21 @@ label AE077:
     "From behind the table, Nurse Kiyomi was watching the morning news on the overhead television with distress as she paused in painting her nails."
     "\"-victim of Tokyo's black tar heroin epidemic; the first of its kind. Police say she is the most recent in a line of missing peoples to have been found overdosed-\""
     "{i}click{/i}"
-    Nurse "Ugh, god, I can't watch any more." #Nurse1
+    Nurse "Ugh, god, I can't watch any more."
     "As she turned off the T.V. I greeted her with a smile and a polite bow, which she reciprocated before giving me a wave with a clack of her nails."
     MC "Good afternoon, Nurse Kiyomi."
-    Nurse "Hey, Hotsure-san. You're here early. Here to see Matsumoto-san today?" #Nurse1
+    Nurse "Hey, Hotsure-san. You're here early. Here to see Matsumoto-san today?"
     MCT "Did... she forget about the appointment we scheduled?"
     MC "Yeah, that was the plan."
-    Nurse "Sure thing. There are a few other students visiting her at the moment, but no doubt you'll get to see her." #Nurse 1
+    Nurse "Sure thing. There are a few other students visiting her at the moment, but no doubt you'll get to see her."
     MC "A few other students? Who all is-?"
     "I cut myself off immediately as I simply took a deep breath and sighed."
     MC "She's working, isn't she?"
-    Nurse "Triiiied to stop her." #Nurse1
+    Nurse "Triiiied to stop her."
     MC "She let you try?"
-    Nurse "Not without an injunction." #Nurse 1
+    Nurse "Not without an injunction."
     MC "Oof, gotta get those submitted between 3:00 and 3:05."
-    Nurse "Your relationship is weird." #Nurse 1
+    Nurse "Your relationship is weird."
     "I snickered to myself and shook my head as I headed past the curtained area over to the beds. There, Shiori lay in bed with three other student council members surrounding her, along with a few neatly organized stacks of folders."
     show Minori neutral at Position(xcenter=0.25, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
@@ -17810,20 +17809,20 @@ label AE077:
     MC "Baaaah."
     AE "I still have responsibilities. Besides, I must do what I can to keep things running while I'm incapacitated, even during the litany of questions from the medical team assigned to me and central administration."
     MC "Huh? Wait, why would-"
-    Nurse "Excuse me, you two!" #Nurse 1
+    Nurse "Excuse me, you two!"
     "Before I could finish my question, Nurse Kiyomi pulled open the curtain to look in on us."
-    Nurse "You two aren't smoochin' are ya?" #Nurse 1
+    Nurse "You two aren't smoochin' are ya?"
     AE "Oh come now, Nurse Kiyomi; I figured you thought better of me-"
-    Nurse "Feh! Just a little joke, is all. Besides, we gotta get you moving to the therapy building." #Nurse1
+    Nurse "Feh! Just a little joke, is all. Besides, we gotta get you moving to the therapy building."
     MC "Do you need me to help Shiori get there? I'll do my best to help like you asked, but I'm admittedly a little lost."
-    Nurse "Hm? When did I say that?" #Nurse 1
+    Nurse "Hm? When did I say that?"
     MC "J-Just yesterday ma'am."
     MCT "Did she forget?"
-    Nurse "..." #Nurse 1
-    Nurse "Ahhhh, okay. That explains a few things!" #Nurse 1
+    Nurse "..."
+    Nurse "Ahhhh, okay. That explains a few things!"
     MC "What does?"
     "She put her hand up to her mouth and giggled, loosening her stance a bit as she dismissively waved at me."
-    Nurse "Aaaactually, you'll be dealing with my sister for that." #Nurse 1
+    Nurse "Aaaactually, you'll be dealing with my sister for that."
     MC "U-Um... okay, cool."
     AE "I don't see how I'm supposed to walk all the way over there in my current condition."
     MC "Grab my arm and lean against me, I can-"
@@ -17843,16 +17842,16 @@ label AE077:
     pause 1
     scene Gym with fade
     "The building we went to looked like a modified gym, the walls surrounded by mirrors, the floors covered in a soft padding, and from up above a chassis held ropes overhead which hung down and buckled into various harnesses. There, waiting with a few men, was..."
-    Nurse "Ah, hello, Matsumoto-san." #Nurse 2
+    Nurse2 "Ah, hello, Matsumoto-san."
     MC "Huh? Nurse Kiyomi?"
     #Show Nurse1
     MC "W-Wait-!"
-    Nurse "Surprise!" #Nurse 1
-    Nurse "Hm? Surprise?" #Nurse 2
-    Nurse "It seems like Hotsure-san here didn't know we were different people." #Nurse 1
-    Nurse "Looks like someone didn't pay attention to your fingernails, sister." #Nurse 2
+    Nurse "Surprise!"
+    Nurse2 "Hm? Surprise?"
+    Nurse "It seems like Hotsure-san here didn't know we were different people."
+    Nurse2 "Looks like someone didn't pay attention to your fingernails, sister."
     MC "Wait, the two of you are... twins? I thought Tomo and I were the only ones here."
-    Nurse "Ahh, very true! You and Tomo-chan are twins as well, right?" #Nurse 2
+    Nurse2 "Ahh, very true! You and Tomo-chan are twins as well, right?"
     MC "Y-Yeah."
     show AE neutral-eyebrow with dissolve
     AE "Hotsure-san... did you really not know there were two nurses here?"
@@ -17861,19 +17860,19 @@ label AE077:
     AE "The school nurse and the head nurse of the hospital facility are sisters."
     MC "I see."
     MCT "This place really is part wonderland, part soapland, isn't it?"
-    Nurse "So, Matsumoto-san, are you ready to begin?" #Nurse 2
+    Nurse2 "So, Matsumoto-san, are you ready to begin?"
     AE "Oh. I... suppose, yes."
-    Nurse "Understood." #Nurse 2
+    Nurse2 "Understood."
     "With a gentle smile, Nurse Kiyomi ordered her assistants to surround Shiori as she gave her a few tasks; walking to a rope she would grab, holding up her hands for leverage, and other manner of exercises."
     AE "Ugh, a-alright. I think I got the h-hip movement right, at least."
-    Nurse "You're doing a phenomenal job, Matsumoto-san. Now, let go of the rope and walk towards me until I tell you to stop." #Nurse 2
+    Nurse2 "You're doing a phenomenal job, Matsumoto-san. Now, let go of the rope and walk towards me until I tell you to stop."
     AE "If you insist."
     "She began to walk with an effeminate sashay; her back straight as a board as she put one foot in front of the other, her hips swinging with an exaggerated bell-like movement as she put her arms out for balance."
     AE "Mmfhg! Haah, what the... rrgh! How am I supposed to-? Nurse Kiyomi, are you sure this method is sensible? It's rather... onerous."
-    Nurse "Well, Matsumoto-san, if you're finding this too difficult, we can instead provide you with a walker to-" #Nurse 2
+    Nurse2 "Well, Matsumoto-san, if you're finding this too difficult, we can instead provide you with a walker to-"
     show AE neutral-annoyed with hpunch
     AE "N-No!"
-    Nurse "..." #Nurse 2
+    Nurse2 "..."
     AE "..."
     show AE embarrassed
     AE "No, no, I... I should be fine."
@@ -17881,26 +17880,26 @@ label AE077:
     AE "Let's continue."
     MCT "Fuck. I really hate seeing her struggle like this..."
     MC "C-Can I jump in and help?"
-    Nurse "Hm... she may respond better if you were to give some instructions. Okay, so, the next few steps-" #Nurse1
+    Nurse "Hm... she may respond better if you were to give some instructions. Okay, so, the next few steps-"
     "Nurse Kiyomi went over what to do as the other gave Shiori more instructions with the help of the other assistants present. Every few sentences, however, I would glance over at Shiori to observe."
     "I watched attentively as Shiori shifted her stance somewhat and made her way back down the walkway. Her pace was very slow, but showing moderate improvement once she had figured out how to properly utilize the rope draped from the track on the ceiling to help balance herself as she walked."
-    Nurse "Hotsure-san." #Nurse1
-    Nurse "Do you know what you're supposed to do?" #Nurse 1
+    Nurse "Hotsure-san."
+    Nurse "Do you know what you're supposed to do?"
     MC "Yeah, I think I got it. I spent some time looking stuff up last night."
-    Nurse "I bet. I'd say your eyes are probably bloodshot, but y'know, can't see 'em." #Nurse1
+    Nurse "I bet. I'd say your eyes are probably bloodshot, but y'know, can't see 'em."
     MC "Ahh, it's a style choice, c'mon."
     "Nurse Kiyomi rolled her eyes as she directed me over to her much more formal sister, whom I greeted with a polite nod."
-    Nurse "Caught up to speed?" #Nurse 2
+    Nurse2 "Caught up to speed?"
     MC "Only way to know if I got it is to try, I suppose."
-    Nurse "Very true. Alright, ready to give it a try, then, Matsumoto-san?" #Nurse 2
+    Nurse2 "Very true. Alright, ready to give it a try, then, Matsumoto-san?"
     AE "U-Um..."
-    Nurse "If you're not comfortable with that, we can arrange for privacy." #Nurse 2
+    Nurse2 "If you're not comfortable with that, we can arrange for privacy."
     MC "Right, I wouldn't want to make you uncomfortable."
     show AE embarrassed
     AE "I... well, I- um..."
     "Shiori was visibly flustered; it was clear she didn't want me to see her as she went through all this, and yet I could see as her eyes looked me over, visibly going through possibilities in her head, before with a nervous nod, she made her decision."
     AE "I'd greatly prefer his presence right now."
-    Nurse "I understand. Well, Hotsure-san, don't be afraid to ask if you need help. We'll step in if we feel it's necessary." #Nurse 2
+    Nurse2 "I understand. Well, Hotsure-san, don't be afraid to ask if you need help. We'll step in if we feel it's necessary."
     MC "Right. Thank you, everyone."
     "The members of the staff attending bowed before walking over to the bleachers, sitting down to watch."
     MCT "Why am I suddenly so nervous? Seriously, did they have to move that far away?"
@@ -17924,7 +17923,7 @@ label AE077:
     MC "A-Ah, your skirt..."
     AE "Tsh..."
     "Though clearly downtrodden, Shiori followed instructions unquestioningly as the aides walked over and began to guide her motions."
-    Nurse "It's alright, Hotsure-san, we can take it from here." #Nurse 2
+    Nurse2 "It's alright, Hotsure-san, we can take it from here."
     MC "M-hm."
     scene black with fade
     pause 2
@@ -17950,7 +17949,7 @@ label AE077:
     AE "..."
     "Though it was clear that she didn't take solace in my words, her fear seemed to dissipate into a chilled melancholy."
     AE "Am I free to go?"
-    Nurse "We're going to run through a few further examinations to ensure your walking pattern is stable so as not to cause further accidents. However, you're free to go afterwards; but do stay if you want to practice more." #Nurse 2
+    Nurse2 "We're going to run through a few further examinations to ensure your walking pattern is stable so as not to cause further accidents. However, you're free to go afterwards; but do stay if you want to practice more."
     AE "Right. Thank you, madam."
     MC "Want me to wait for ya? I brought a book and some snacks so I-"
     AE "A-Actually-"
@@ -20342,58 +20341,58 @@ label AE090:
     MCT "Maybe I should just... enter and talk to her?"
     "Though I paused and pondered it for a moment, rather than knocking, I slowly opened the door, only to see Nurse Kiyomi with her back turned, looking out of the window as she talked on the phone."
     stop music fadeout 1.0
-    Nurse "She's the biggest on record. Designation 4. Mhm..."
-    Nurse "Positive. We've run every test we have. It's the entirety of 3B, Central Administration will send out the notices to the affected parties and a research team will be dispatched for investigation."
-    Nurse "Samples will be collected from student points of origin."
-    Nurse "No, Matsumoto-san does not have a record for a home address and questioning reveals nothing."
-    Nurse "The experiments have yielded all negatives across the board. No effect. We can rule out temperature regulatory methods entirely."
-    Nurse "Please keep this information confidential. It would be a media wildfire and that is the last thing this poor girl needs."
-    Nurse "Just in case, inform Central Authority of a potential T14.91, Code Black... Mhm. No, I don't think putting her on watch will be necessary but inform security."
-    Nurse "Look into the possibility of transferring future cases from class 3B to the medical wing."
+    Nurse2 "She's the biggest on record. Designation 4. Mhm..."
+    Nurse2 "Positive. We've run every test we have. It's the entirety of 3B, Central Administration will send out the notices to the affected parties and a research team will be dispatched for investigation."
+    Nurse2 "Samples will be collected from student points of origin."
+    Nurse2 "No, Matsumoto-san does not have a record for a home address and questioning reveals nothing."
+    Nurse2 "The experiments have yielded all negatives across the board. No effect. We can rule out temperature regulatory methods entirely."
+    Nurse2 "Please keep this information confidential. It would be a media wildfire and that is the last thing this poor girl needs."
+    Nurse2 "Just in case, inform Central Authority of a potential T14.91, Code Black... Mhm. No, I don't think putting her on watch will be necessary but inform security."
+    Nurse2 "Look into the possibility of transferring future cases from class 3B to the medical wing."
     "*{i}Beep{/i}*"
     "As Nurse Kiyomi turned off her phone, she sighed and turned around, causing me to almost jump as she caught my eye... she didn't flinch at all."
     #show nurse neutral [NEED Nurse Sprite first]
-    Nurse "..."
+    Nurse2 "..."
     MC "..."
-    Nurse "..."
-    Nurse "Ah, Hotsure-san... {w}you're not in class."
+    Nurse2 "..."
+    Nurse2 "Ah, Hotsure-san... {w}you're not in class."
     "I tried to speak, but it felt like I was choking on my own words. However, with a gentle smile, Nurse Kiyomi took a few steps forward."
     #show nurse happy
-    Nurse "Well, I suppose that you heard that just now, didn't you?"
+    Nurse2 "Well, I suppose that you heard that just now, didn't you?"
     MC "I... y-{w}yes."
-    Nurse "Hmm..."
-    Nurse "Well, can you keep most of it confidential?"
+    Nurse2 "Hmm..."
+    Nurse2 "Well, can you keep most of it confidential?"
     MC "... Y-Yes ma'am."
     "With that, Nurse Kiyomi bowed."
-    Nurse "Thank you very much. Patient confidentiality is a very important thing."
+    Nurse2 "Thank you very much. Patient confidentiality is a very important thing."
     play music BigChanges
     MC "So um... I guess that means Shiori was just now measured?"
-    Nurse "She was the last to get measured, yes."
-    Nurse "I assume you also know because she wasn't in class?"
+    Nurse2 "She was the last to get measured, yes."
+    Nurse2 "I assume you also know because she wasn't in class?"
     MC "She promised me she would."
-    Nurse "Ah... {w}I see."
+    Nurse2 "Ah... {w}I see."
     #show nurse neutral
     "Nurse Kiyomi's smile faded as she looked at me in a very serious way, one which I've never seen before."
-    Nurse "Listen to me well, Hotsure-san. Matsumoto-san... {w}she's in a very vulnerable place right now."
-    Nurse "It is no secret that attitudes and support in regards to matters of mental health are less than superb on the mainland."
-    Nurse "But I take them very seriously."
-    Nurse "Very seriously."
-    Nurse "Which is why I need to let you know something, and why I wish for your cooperation in making sure this isn't spread around too much."
-    Nurse "Shiori is the largest designation 4 AE-type factor in history."
+    Nurse2 "Listen to me well, Hotsure-san. Matsumoto-san... {w}she's in a very vulnerable place right now."
+    Nurse2 "It is no secret that attitudes and support in regards to matters of mental health are less than superb on the mainland."
+    Nurse2 "But I take them very seriously."
+    Nurse2 "Very seriously."
+    Nurse2 "Which is why I need to let you know something, and why I wish for your cooperation in making sure this isn't spread around too much."
+    Nurse2 "Shiori is the largest designation 4 AE-type factor in history."
     "Though I was thrown off by the technical jargon for a moment, my eyes widened as I realized what was just said to me."
     MC "In the schools history? S-Shiori?"
-    Nurse "In {i}world{/i} history. As far as we know, she is the upper limit."
+    Nurse2 "In {i}world{/i} history. As far as we know, she is the upper limit."
     MC "T-The upper...?!"
-    Nurse "If information on this gets out, and I guarantee it will eventually, class 3B will be at the center of a media wildfire."
-    Nurse "In these coming days... will you be able to handle that?"
+    Nurse2 "If information on this gets out, and I guarantee it will eventually, class 3B will be at the center of a media wildfire."
+    Nurse2 "In these coming days... will you be able to handle that?"
     "I couldn't help but run over the different scenarios in my mind. I looked down to my hair, which, even braided, now reached down towards the bottom of my legs."
     "All of this..."
     "I never could have imagined."
     "But..."
     MC "Always."
-    Nurse "Would you... like to visit her?"
+    Nurse2 "Would you... like to visit her?"
     MC "Yes. Absolutely yes."
-    Nurse "Come with me. She's still in the medical wing."
+    Nurse2 "Come with me. She's still in the medical wing."
     "Nurse Kiyomi walked past me, and ushered me to follow her out to the hall."
     "We kept walking for a bit, going through the twists and turns of Seichou. Maybe it was because I was disoriented, or maybe I truly hadn't..."
     "But I felt like we entered into a part of the school I've never been before. A part that looked nothing like I'd expected. Cold and sterile looking, I was shocked by the tonal whiplash..."
@@ -20402,20 +20401,20 @@ label AE090:
 
     scene Hospital Room with fade
     "Nurse Kiyomi knocked on the door before letting herself in slowly."
-    Nurse "Hello? Matsumoto-san?"
+    Nurse2 "Hello? Matsumoto-san?"
     show AE sad with dissolve
     AE "..."
-    Nurse "You have someone who wants to come see you."
+    Nurse2 "You have someone who wants to come see you."
     AE "....?"
     MC "H-Hey, Shiori."
     show AE surprised-2
     "Shiori's eyes widened in shock as she tried to shrink back in fear, but, after a moment, she let out a sigh as she simply resigned and nodded."
     show AE sad
     AE "Hello, Hotsure-san."
-    Nurse "Would you... {w}like some time alone?"
+    Nurse2 "Would you... {w}like some time alone?"
     MC "N-No, it's-"
     AE "Yes, please."
-    Nurse "Understood. Please let me know when you two would like to go back down."
+    Nurse2 "Understood. Please let me know when you two would like to go back down."
     MC "R-Right."
     "Nurse Kiyomi turned around and left us both alone in the room, where I got a good look at Shiori."
     "Sitting on two hospital beds, her hands in her lap, she looked ragged and worn down, as though she had been shaken to the core."
