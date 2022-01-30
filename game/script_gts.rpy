@@ -7752,7 +7752,7 @@ label GTS040_c3:
     jump daymenu
 
 label GTS041:
-    $setProgress("GTS", "GTS043")
+    $setProgress("GTS", "GTS042")
     play music DayByDay
     "More frequently than ever, I found myself going straight over to the Giants' Dorm after class. I didn’t even need a call from Naomi."
     "She didn’t mind me coming by; she treasured my company just  as much as I treasured hers."
@@ -7968,6 +7968,357 @@ label GTS041_After_C1:
     MCT "I do wonder how much the government will get involved as she grows taller."
     MCT "{i}Bleck{/i}. I’m starting to sound like Daichi now."
     "I was left to wonder as the sun finally set upon our return to school."
+    jump daymenu
+
+label GTS042:
+    $setProgress("GTS", "GTS043")
+    scene Cafeteria with fade
+    play music Schoolday fadein 30.0
+    MCT "There's hair in my rice."
+    "At the very least, I knew exactly where it came from. I plucked out the stray tress and squeezed my fingers down its length until every stray grain was stripped away."
+    "I made quite sure it was tucked into my hairband this time before resuming my lunch."
+    pause 1
+    MCT "Hm... wonder who those people over there are."
+    MCT "Must be from another homeroom..."
+    "The rice was a little drier today, not as fluffy; I looked down to see quite a pile of fallen grains."
+    show Ryoko neutral with dissolve
+    "I was almost relieved to see Ryoko walk up to my corner of the table, planting a hand down across from me."
+    Ryoko "Is this seat tagen?"
+    MC "Nah, go ahead."
+    Ryoko "Thanggus."
+    show Ryoko confused
+    "As she sat down, she scrunched her brow and her cheeks bulged out one after the other. Then, she swallowed."
+    show Ryoko neutral
+    Ryoko "Glm... Pardon my enunthhiation. My tonguethhs gotten to a thize where I have to re-learn how to uthe it."
+    MC "I know the feel. I thought I'd skip my usual trim just once last night, and now I'm fishing hair out of my lunch."
+    MC "Come to think of it, our homeroom teacher, uh, Tashi-sensei, he’s got the same factor as you. He’d probably give you some tips for adjusting if you wanted to ask him."
+    Ryoko "I’ll do that. Directing’th not half ath fun when nobody can underthtand your directionth."
+    Ryoko "Which bringsth me to what I wanted to assk you. Are you doing anything after clath today?"
+    MC "Well, I definitely gotta get a haircut today. And water Naomi-chan's flowers, especially with how hot it is out."
+    show Ryoko confused
+    Ryoko "Hang on, {i}you{/i} do that? I thought the school'sth groundsthkeeper handled it."
+    MC "I mean, he handles everything else on the grounds, but I take care of the rooftop garden. I told Naomi-chan I would before she moved."
+    if getAffection("GTS") > 40:
+        MC "Besides, like... I don't want all of her effort to be forgotten. You know?"
+    show Ryoko happy
+    Ryoko "{i}Now{/i} I get it."
+    MC "Get what?"
+    pause 0.5
+    show Ryoko tongue
+    Ryoko "Yamathaki-san speakth {i}pretty{/i} highly of you on the occathion we get to talk, you know."
+    show Ryoko neutral
+    Ryoko "Anyway, thi-...mm... ssince you know the code to get into the old mine, could you pleasse come with me so I can ask Yamazaki-san to do a voiceover? It'th for a film project."
+    if getSkill("Academics") > 3:
+        MC "Wait, why can't Tomoe-san handle that for you? Isn't she on the student council?"
+        Ryoko "Yep. The trouble is she lookths to have come down with a pretty wicked sstomach bug. She's in no shape to walk all the way over there."
+        MC "Oh, really? Well damn, I hope she feels better soon."
+        Ryoko "I'll passth that along. Sso, what do you thay? Can you thpare the time?"
+    MC "...Yeah, sure! Let's do it!"
+    show Ryoko happy
+    Ryoko "Ecthellent! She'll knock it outta the parg, I jusst know it."
+    MC "No doubt. So, I should have all my stuff done a couple hours after class gets out. Wanna meet me at Chūkan Point around that time?"
+    show Ryoko neutral
+    Ryoko "Will do. Later, Hotsure-than."
+    stop music fadeout 3.0
+    scene black with fade
+    pause 1
+
+    scene Hallway with fade
+    play music Rain fadein 2.0
+    "After yawning, doodling, and chickenscratching my way through the last few hours of classes, I donned my backpack..."
+    "...And prepared to enter the breach. Seichou's enlarging student populace was starting to give the subways back home a run for their money."
+    "I breathed a quiet, thankful sigh as the crowds shortly thinned, and made a beeline for the supply shed."
+    scene black with fade
+    pause 0.5
+    scene Roof with fade
+    "But it was there, on the roof, where I really felt at peace."
+    "I wasn't alone, of course, but I couldn't feel alone even if I were. Immediately, my eyes fell on the verbena patch; like sapphire waters they shimmered and swayed in the high breeze."
+    "Alongside them danced the lilies, the tulips, the peonies, together contributing their personal hues to the great, unassuming show."
+    "I couldn't help but look around, smiling at nothing, as I tilted the watering can downward. So many memories fluttered around the pattering flower bed... sharing thoughts with her, sharing hopes, sharing sorrow and joy."
+    "With every recollection, my eyes kept coming back to the flowers."
+    MC "Haaaah..."
+    MC "Ksh..."
+    MCT "What kinda guy just stares at flowers?"
+    "I shook the last drops out of the can, and started to head back to my dorm. I had a date to keep, and quite a mess to clean up before I'd look presentable."
+    scene black with fade
+    pause 1.0
+    scene Chukan Point
+    show Ryoko neutral
+    with fade
+    "Ryoko was already there sitting on a bench, striking lines across a notepad atop a stack of papers on her lap; every couple moments a few centimeters of her tongue would peek out the side of her lips."
+    Ryoko "Ah, great, you’re here."
+    "With a few snapping hand motions, she gathered up her things, and stood."
+    Ryoko "Hm... collar length? Wouldn’t you give yoursself a little more time if you cut it a bit shorter?"
+    MC "Huh? I did cu..."
+    "I reflexively patted the back of my neck to discover that my hair had sprouted back a couple centimeters during the walk over. I patted once or twice more just to assure myself it was real."
+    MC "Ugh... I’m gonna just pretend I cut it wrong or something."
+    Ryoko "I’d be a little ssurprised if you actually {i}could{/i} give yourself a decent cut. Did you ever do it before you came here?"
+    "She waved me along as she started walking down the path, shortly followed by myself."
+    MC "Uh... don’t think so, actually. If we somehow couldn’t find a single barber in Shibuya, my mom did a pretty good job."
+    "She looked ahead and nodded appreciatively as we stepped out of the park gates."
+    scene black with fade
+    pause 0.5
+    scene Field
+    show Ryoko surprised
+    with fade
+    Ryoko "Y’know, I feel bad for not finding the time to visit Yamazaki-th... glm... san."
+    show Ryoko neutral
+    extend " When I was first getting used to being in charge of the film club, nothing helped me unwind like a cup of tea in her dorm."
+    MC "Well, she’ll be happy to see you. I’m sure she’ll pour you a cup."
+    show Ryoko confused
+    Ryoko "Can she? Does she even have..."
+    show Ryoko embarrassed
+    Ryoko "What am I saying, of course she does."
+    MC "Heh, yeah. Taller or no, she’s still Naomi Yamazaki."
+    show Ryoko neutral
+    MC "By the way, what’s that script you want her to read about?"
+    Ryoko "Ever watched Il Lago and or Ognum Pond?"
+    if getSkill("Art") > 6:
+        MC "I think I {i}heard{/i} of them... one’s a romance, and the other’s a weird horror movie, right?"
+        MC "I don’t think she’d care much for the latter..."
+    else:
+        MC "Sorry, I don’t speak Italian."
+        Ryoko "The former is a romance about two people who live by a lake in different time periods, the latter’s about a girl’s ghost haunting her family after disappearing."
+        MC "So... a horror flick? I don’t think she particularly likes those..."
+    Ryoko "That’s not what I’m going for though, it’s more of a character study. Like..."
+    Ryoko "Well here, you can read it yourself. Yamazaki-san’s part is right at the beginning."
+    "She stopped to hold it out with both hands, which I accepted in kind."
+    "And there it was, highlighted in neon green; I began to read."
+    pause 1
+    MC "Huh..."
+    MC "This is... {w}actually perfect for her."
+    Ryoko "Thanks. I like to think I apply my actresseth’ talents well."
+    "I nodded and passed the script back to her, much reassured as the pale metal gates grew higher on the horizon."
+    scene black with fade
+    pause 0.5
+    scene Giant Dorm Exterior
+    show Ryoko happy at Position(xpos=0.8, xanchor=1.0, yalign=1.0)
+    with fade
+    "Ryoko stared down into the open pit as we skirted it, and whistled."
+    Ryoko "Would you look at that drop! What I wouldn’t give to work in a dolly shot of that ssomeday."
+    MC "You’ve never been here, I take it?"
+    Ryoko "Nah. I’ve been {i}meaning{/i} to."
+    MC "Well, thank you for choosing Hotsure Lines to be your guide. We roll out the brown carpet for you every time."
+    show Ryoko tongue
+    "I flipped my hair; Ryoko smirked."
+    Ryoko "Depending on availability."
+    MC "Oh, don’t worry. It’s coming."
+    MC "Ah, here’s her dorm."
+    show Ryoko confused
+    Ryoko "...Wow. {w}Spacious."
+    MC "Very."
+    show Ryoko neutral
+    "Lest we delay further, I raised my hand and rapped on the door."
+    play sound Knock
+    pause 0.5
+    GTS "Coming!"
+    "Even after a few weeks of coming to visit Naomi, it messed with my brain to know she was several meters away, but still register her voice as though she were just behind the door. It was just something special about her, I suppose."
+    show GTS happy at Transform(xzoom=-1), Position(xpos=0.45, xanchor=1.0, yalign=1.0) with dissolve
+    "She opened up the door, already smiling warmly down at us, but she nearly gasped to see Ryoko there too."
+    GTS "Oh, Tanaka-san! How lovely to see you again, it’s been far too long."
+    Ryoko "Hasn’t it just? How are you doing, Yamazaki-san?"
+    GTS "Quite well, thank you. Would you like to come in? I would love to offer you some refreshments."
+    show Ryoko happy
+    Ryoko "Yesth please!"
+    show GTS neutral at Transform(xzoom=-1)
+    "She bowed deeply, draping her hair just over our heads, and stepped out of the way."
+    scene Giant Dorm Interior
+    show Ryoko neutral at Position(xpos=0.7, xanchor=1.0, yalign=1.0)
+    show GTS neutral at Position(xpos=0.45, xanchor=1.0, yalign=1.0), Transform(xzoom=-1)
+    with fade
+    GTS "Allow me to put on the kettle. To what do I owe this delightful visit?"
+    MC "We wanted to ask for your help with something, but we can sit down for a while."
+    Ryoko "Yeah, let’s catch up a little. Can I just sit down on the couch?"
+    GTS "By all means."
+    hide GTS with dissolve
+    "Naomi walked away to gather the essentials in the kitchenette, while Ryoko took a look beside her at the oversized couch, her face starting to unwind as reality washed over her."
+    Ryoko "Wow, this place really is a study. You just have to hoist yourself up there?"
+    MC "Basically. You need any help?"
+    Ryoko "I oughta be fine, thanks. My morning jogs are about to come in handy."
+    "I nodded and started toward the couch myself; indeed, on a first try she managed to claw her way up and crawl to a seated position."
+    show GTS neutral at Position(xpos=0.45, xanchor=1.0, yalign=1.0), Transform(xzoom=-1) with dissolve
+    GTS "Ah, pray pardon the inconvenience. I do need to find a way to better accommodate guests."
+    Ryoko "You’re good, Yamazaki-san, you’re good. How are you liking the new room?"
+    GTS "The room itself is... liveable, at least. My hope is that my renovations will make it more than that. I have missed you and Tomoe-san especially, and I should think the mere remoteness of these facilities is partly to blame."
+    show GTS pondering
+    GTS "By the way, is Tomoe-san in good health? It strikes me that she isn’t with you."
+    Ryoko "Afraid not, but it’s nothing serious, just a sstomach bug. She just needs to stay in bed for a day."
+    show GTS neutral
+    GTS "I’m sorry to hear that. The next time you see her, please offer my well-wishes."
+    Ryoko "Sure thing. So the room could be better, you think?"
+    GTS "Well, I must confess there have been unqualified benefits. My prior dormitory and its amenities were beginning to feel singularly cramped just before I relocated."
+    GTS "Now, by contrast, nearly everything feels perfectly suited to me, down to the finest detail. In fact, some things still feel a bit... grand, as it were."
+    show GTS unique
+    GTS "I’m certain you relate."
+    MC "Yeah, ‘grand’ is perhaps an understatement."
+    show GTS neutral
+    "Naomi slowly rocked her body backward, returning to a relaxed position. Due to the size and strength of the room’s furniture, nothing creaked under weight. It still felt like a major event every time she moved."
+    GTS "Well, that’s quite enough about me, I’m sure. What can I do for you today?"
+    Ryoko "Well, I... "
+    show Ryoko annoyed
+    extend " oh brother, it got crumpled."
+    "Ryoko straightened out the stack of papers with a few sharp, snapping yanks with her fingers, and then held it up."
+    show Ryoko neutral
+    Ryoko "I’ve got a short little film script here, and I was wondering if you wouldn’t mind me recording you reading it aloud."
+    show GTS surprised
+    GTS "Recording me? Does that mean you intend to use the recording in your film?"
+    show Ryoko happy
+    Ryoko "Exactly! Would that be okay?"
+    GTS "Well, I certainly do not object out of hand, but surely it wouldn’t be right for me to deprive more talented actresses of the opportunity."
+    show Ryoko neutral
+    Ryoko "Don’t worry about that! They’ve got plenty to do either way. You’re actually my first choice, after all."
+    GTS "Am I?"
+    Ryoko "Yeah. Your voice has this soft yet resonant quality that I think would fit the lines flawlessly."
+    MC "But don’t feel bad if you don’t want to do it, Naomi-chan. It’s completely okay."
+    show GTS neutral
+    "She nodded to me, warm recognition in her eyes."
+    Ryoko "Yep! If you don’t, like you said there are others."
+    GTS "Well... I would like to aid in your artistic endeavors so much as I am able. I accept."
+    show Ryoko happy
+    Ryoko "Excellent! Thanks a ton, Yamazaki-san."
+    show Ryoko neutral
+    Ryoko "I’ll just plug in my microphone and recording device and we can get started."
+    pause 1
+    Ryoko "There’s not a normal-sized outlet in here, is there?"
+    GTS "I believe I saw one right next to the electric range."
+    Ryoko "Ah, there it is. Thanks."
+    MC "But how are we gonna get it all the way over here?..."
+    "By the time I finished asking, Ryoko had pulled a mildly intimidating amount of extension cables from her backpack."
+    MCT "Holy fire hazard..."
+    hide Ryoko with dissolve
+    "She rolled the cables over her arm, in a beeline towards the outlet, and a mousey, gravelly {i}pop{/i} from the microphone told of the success of her expedition."
+    show Ryoko neutral at Position(xpos=0.7, xanchor=1.0, yalign=1.0) with dissolve
+    Ryoko "{i}Hup{/i}... okay, should be good to go."
+    "I bobbed up and down to the tune of Naomi gently shimmying herself directly in front of the microphone, meanwhile feeling nothing as Ryoko rolled back up onto the couch."
+    MCT "God, even her tiniest movements are so powerful... it’s addicting to watch..."
+    MCT "Nope, nope, gotta focus..."
+    Ryoko "So, I imagine you’ll want to read through it before we actually start."
+    GTS "That would be sensible. Yes, please."
+    "Ryoko passed the script over, which Naomi took with a shallow bow using both hands... or she tried to, before opting to pinch it between her pointers and thumbs."
+    show GTS surprised
+    "Without another word, Naomi began reading with appreciative rumination; her eyebrows inched upward throughout, at which I couldn’t help a self-satisfied smile bubbling up on my face."
+    show GTS neutral
+    "She came to a slow stop, with a thin smile of her own."
+    GTS "My, my, this is {i}superb{/i}. Very good then, let us commence."
+    show Ryoko happy
+    Ryoko "Fantastic! Just sort of face the mic and tell me when you’re ready."
+    "She put her fist up in front of her mouth and, as quietly as she could, cleared her throat, and finally hummed a few different notes to herself."
+    GTS "I am ready."
+    show Ryoko neutral
+    "Ryoko simply nodded, produced a tiny black remote, and pressed on it."
+    stop music fadeout 3.0
+    "I sat rapt to hear Naomi’s voice bring life to the words I’d read."
+    pause 1
+    GTS "The winter isn’t quite as cold anymore."
+    GTS "I’ve learned to see the snow’s perennial brightness, and when the frigid winds begin to seize my throat I look out onto our frozen reflection pool, and I am relieved utterly."
+    GTS "And so I have hope that there’s time left to learn the other things you meant to teach me."
+    pause 0.5
+    GTS "At times I find myself grieving how ill I carried on our family name; redemption rests now in the hands of my sons, scattered as they are now on the more auspicious winds."
+    GTS "But I know you wouldn’t want me to grieve overlong, my Yukiko, and so I shall not."
+    GTS "That, I shall always remember, as the ice grows mottled and my shoulders grow wet with droplets. Even as stiffness binds more stubbornly to my bones with every winter passed... I shall carry your hope."
+    show GTS embarrassed with dissolve
+    pause 0.5
+    GTS "If I should not return to meet you by the pond, please know that when my last breath should escape through my bedroom window, it will whisper your name."
+    pause 0.5
+    GTS "My dear Yukiko, I will remember your face always."
+    pause 1
+    Ryoko "Cut."
+    show Ryoko happy
+    Ryoko "That was {i}amazing{/i}! You might’ve just gotten a perfect take on the first tr-"
+    MC "Naomi-chan, are you... alright?"
+    show GTS surprised
+    show Ryoko surprised
+    "Naomi looked down at me with a start, but it wasn’t enough to hide the shimmer I thought I saw growing at the edge of her eye, now trailing down her cheek."
+    "A deft swipe of her finger confirmed my suspicions."
+    play music Peaceful
+    show GTS unique
+    GTS "Mm... ah, pardon my ill composure. It seems my constitution was, erm, not quite equal to the prose."
+    MC "...Heh. You really did amazing, you know."
+    show Ryoko neutral
+    Ryoko "No question. Are you happy with it, Yamazaki-san?"
+    show GTS neutral
+    GTS "Well... I hardly have any expertise by which to judge. If you two are pleased with my rendition, then I must be as well."
+    "Just then, a shaky whistling grew louder on the other side of the room."
+    show GTS happy
+    "Naomi’s face brightened as she stood."
+    GTS "Ah, the water’s ready! One moment, please, while I pour our cups."
+    show GTS neutral
+    "She made good on her word with the grace of pouring water and rising steam, and grassy scents floating before one’s face."
+    show Ryoko happy
+    "A few moments more, and she set before us a tray of two steaming, mottled brown goki chawans... right next to her plain black chawan the size of a mixing bowl."
+    MC "Smells delicious. Thanks, Naomi-chan!"
+    Ryoko "Ditto!"
+    show GTS happy
+    GTS "The pleasure is all mine."
+    show Ryoko neutral
+    "She eased herself down beside us, hands on her knees, and we all took a sip before commencing to some light, easy conversation."
+    "I soon found there was more to catch up on than I expected, Naomi sharing the goings-on around the mine and Ryoko gushing about the film club’s projects and inner workings."
+    "And in the middle... was something that wasn’t there before. Naomi was ever the attentive listener, but never did she hang onto every word with such beaming glee when she used to have these little chats in her room."
+    "Several times, the conversation came back to me, and each time I had to pull my mind away from the enchantment of Naomi’s sunny smile. Each time, I couldn’t imagine what I wouldn’t do to keep that free, unguarded smile just a little longer."
+    pause 0.5
+    "Maybe an hour passed just talking through the days, and in time the talk dried up alongside the tea."
+    "Ryoko drained her dregs and set her bowl down."
+    Ryoko "Well, I think I should get going, start working on my paper. Thanks a ton for having us, Yamazaki-san. Hanging out with you’s always a treat."
+    GTS "Of course, Tanaka-san. Your company is welcome here whenever you please. Take care, now, and be safe on your way back."
+    show Ryoko happy
+    Ryoko "Heh, thanks."
+    hide Ryoko with dissolve
+    "One more time she dropped down off the couch, gathered her things, and after turning back to wave me goodbye, headed out the door."
+    show GTS neutral at altMove(1.5, 0.65)
+    "And so, it was just me and her."
+    GTS "I’m glad you’re staying with me a little longer. And... thank you very much for arranging that little meeting."
+    MC "I admit it was actually Tanaka-san’s idea. I was a bit busy tending the garden and, oh... getting things ready."
+    show GTS wink at Transform(xzoom=1)
+    GTS "Really, now? Well, I should very much like to see the fruits of your labor when the time is right."
+    MC "{i}That{/i} can be arranged."
+    show GTS neutral
+    GTS "Hmhmhm... well now, how has your day been thus far?"
+    pause 0.5
+    show GTS embarrassed
+    GTS "Ah... you already told me."
+    MC "Heheh... a little better since you last asked me."
+    show GTS unique
+    "She grinned, began to giggle, and soon the air between us bubbled with irresistible laughter."
+    show GTS aroused
+    "As it drew to a close, she eased herself down until she was lying on her side behind me. With her chin resting on her chair-sized hand and a modest blush on her cheeks, she looked just slightly down at me, with lax, dreamy eyes."
+    "As luck would have it, her plush lips were still just close enough for me to reach... and so I did, raising a hand to stroke her velvety, maidenly jawline, and plunged into her lips with a kiss."
+    "She returned the gesture in kind, pulling me close for moment after sweet moment, until at last we parted; she sighed with her eyes closed, anointing my chest in her minty breath."
+    GTS "It's ever so lovely that even now my friends can find the time to visit me."
+    "I didn’t say anything as I stared into her eyes... fixing once or twice, just for a moment, on the now-invisible trail beneath them."
+    "But I knew by then, that’s just who she was."
+    MC "You know I’ll always find the time. I love you, Naomi-chan."
+    show GTS unique
+    GTS "I love you, too."
+    show GTS neutral
+    GTS "I thought of that as I was reading, as well. I hope our bond shall endure every last winter we see."
+    MC "I feel the same way."
+    pause 1
+    MC "I... should probably go back and take care of my homework. {w}I’ll call you tonight."
+    GTS "Very good. I hope your studies are fruitful."
+    show GTS embarrassed at Transform(xzoom=-1)
+    pause 1
+    show GTS aroused at Transform(xzoom=1)
+    GTS "Might I have a hug before you go?"
+    MC "Of course."
+    "I lifted my arms and waved my hands inward."
+    MC "C’mon, bring it in!"
+    show GTS happy with vpunch
+    "She brought it all the way in, snatching me up two meters off the ground, nuzzled against her neck in a warm, blanketing embrace. Happy little hums vibrated against my side as she rocked me, gently, to and fro."
+    "Her grip was strong, but ever in moderation. Just enough to keep me pinned to her torso without causing any pain."
+    "Once she was done savoring it, she knelt down off the couch and set me down."
+    GTS "Be well, Keisuke-kun."
+    "I nodded."
+    MC "Likewise."
+    scene black with fade
+    pause 0.5
+    scene Giant Dorm Exterior with fade
+    MCT "Ahhh... that felt good."
+    "I dug out my phone and glanced at the lock screen..."
+    MC "Ngh..."
+    "...Then angled it away from the glare."
+    MCT "The fourth... still got a week. But might as well make hay while the sun shines."
+    "Next, I dug out my pen and notepad."
+    MCT "Time to pay a visit to Kodama-san."
     jump daymenu
 
 label GTS043:
