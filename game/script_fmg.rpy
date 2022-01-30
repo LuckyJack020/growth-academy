@@ -5335,7 +5335,7 @@ label FMG039:
     scene Nurse Office with fade
     play music Rain
     MCT "Sitting in the nurse's office with Akira out like a light and Natsuko sitting to my right. Not really how I'd like to spend my evening."
-    Nurse2 "You can relax sweetie! She'll be fine, she should've stayed in bed today muscle growth students and pushing themselves too hard- Haha, name a more iconic duo."
+    Nurse2 "You can relax sweetie! She'll be fine! She should've stayed in bed today... Muscle growth students and pushing themselves too hard. Haha, name a more iconic duo."
     MC "Tell me about it...Thank you again for your help."
     Nurse2 "Don't mention it dear. Unfortunately, I have to step out for a moment to help another student. If you need my help, ring the bell on my desk and I'll come running!"
     MC "Got it. Thanks again."
@@ -5353,7 +5353,7 @@ label FMG039:
     stop music
     $setTime(TimeEnum.DAY)
     "Earlier that day..."
-    scene Lockers with fade
+    scene Gym with fade
     play music Busy
     MC "Are you sure you can handle that much weight today? You look pale..."
     show FMG neutral with dissolve
@@ -9368,36 +9368,36 @@ label FMG058:
     scene Gym with fade
     play music FMG
     "After a few minutes of surprisingly non-hostile convincing, Akira convinced Natsuko to join us for our workouts at the gym."
-    MCT "I’m surprised she actually showed..."
+    MCT "I'm surprised she actually showed..."
     show FMG neutral at Position(xcenter=0.75, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
-    "It was after hours anyway, but I wouldn’t want to be in the gym once these two titans walked into the weight room side by side."
+    "It was after hours anyway, but I wouldn't want to be in the gym once these two titans walked into the weight room side by side."
     show FMG happy
-    FMG "Aw, yeah! Today’s another leg day, Kei-kun! You excited?"
+    FMG "Aw, yeah! Today's another leg day, Kei-kun! You excited?"
     MCT "No."
     MC "Heh... Yeah!"
     show FMG neutral
-    FMG "Liar. Hey Nat, you don’t mind if Kei-kun and I focus on our workouts do you?"
+    FMG "Liar. Hey Nat, you don't mind if Kei-kun and I focus on our workouts do you?"
     Natsuko "I was planning on doing my own routine anyway."
     hide Natsuko with dissolve
     MCT "Then...what was the point of accepting the invite?"
     show FMG neutral at altMove(0.5, 0.5)
-    FMG "Ah well, her loss. Let’s get swol, Kei-kun!"
+    FMG "Ah well, her loss. Let's get swol, Kei-kun!"
     "Akira and I started with squats, moved onto leg curls, and leg presses afterwards. In between her sets, Akira marveled at her larger body in the mirror with some bodybuilding poses thrown in."
     pause .5
     "I mean, I marveled too."
     MCT "Please... your thighs... my head... just once."
-    "But that's beside the point. Even Natsuko was sneaking glances from across the room wondering what she was doing. She even mirrored Akira’s poses while our backs were turned."
+    "But that's beside the point. Even Natsuko was sneaking glances from across the room wondering what she was doing. She even mirrored Akira's poses while our backs were turned."
     "After racking my weights, I had to ask Akira."
     MC "Akira, what are you doing? Where did you even learn these poses?"
     show FMG flex
-    FMG "You don’t remember? Nat and I have been practicing our bodybuilding poses!"
-    MC "Right, I forgot... How has that been going? Also have you seen Nat mimicking you? It’s pretty funny."
+    FMG "You don't remember? Nat and I have been practicing our bodybuilding poses!"
+    MC "Right, I forgot... How has that been going? Also have you seen Nat mimicking you? It's pretty funny."
     show FMG neutral
-    FMG "Yeah, she really isn’t as stealthy as she thinks she is."
-    MCT "Yeah and when you’re as big as her, you’re about as stealthy as a freight train."
-    FMG "But anyway, I was looking up some poses during lunch with Nat, and I showed her some of the poses I’ve been practicing on my own."
+    FMG "Yeah, she really isn't as stealthy as she thinks she is."
+    MCT "Yeah and when you're as big as her, you're about as stealthy as a freight train."
+    FMG "But anyway, I was looking up some poses during lunch with Nat, and I showed her some of the poses I've been practicing on my own."
     show FMG flex #flex-2
     FMG "Eventually, I started coaching her through some of the poses she was having trouble with! Because I'm so great of course."
     MCT "Cringe."
@@ -9405,72 +9405,72 @@ label FMG058:
     "Nat had overheard our conversation and stomped over towards us... probably in some poorly worded attempt to save face."
     show FMG neutral at altMove(0.5, 0.75)
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
-    Natsuko "Excuse me, but you weren’t {i}coaching{/i} me. We were practicing together. You know as well as I do that your quarter turn needs a lot of work."
+    Natsuko "Excuse me, but you weren't {i}coaching{/i} me. We were practicing together. You know as well as I do that your quarter turn needs a lot of work."
     MCT "Called it."
-    FMG "I’m sorry, but my side chest runs circles around yours, and you know it."
-    Natsuko "I’m not about to argue with you about this like a child. We’ll settle this with a contest. Hotsure-san will be our judge."
+    FMG "I'm sorry, but my side chest runs circles around yours, and you know it."
+    Natsuko "I'm not about to argue with you about this like a child. We'll settle this with a contest. Hotsure-san will be our judge."
     MC "Yeah..."
     pause .5
     MC "Wait, what? No! I was lost in my thoughts."
-    FMG "Sounds good to me. Good thing we’re alone, we can just do it here!"
-    MC "Wait, I don’t know how any of these poses are supposed to look. How am I supposed to judge this?"
+    FMG "Sounds good to me. Good thing we're alone, we can just do it here!"
+    MC "Wait, I don't know how any of these poses are supposed to look. How am I supposed to judge this?"
     MCT "And more importantly: these shorts are revealing, man. I knew I should have picked the looser ones today..."
-    FMG "Oh, it’s not too hard. Obviously you aren’t a professional judge, you can just look up the poses on your phone and compare them to us!"
-    MC "That... makes sense. But don’t most competitions have the contestants almost... nude? I’m not sure if Natsuko’s comfortabl—"
-    Natsuko "No, I’m good. We can just do it in our gym clothes. They already show enough skin."
-    MC "...There’s no way out of this, is there?"
+    FMG "Oh, it's not too hard. Obviously you aren't a professional judge, you can just look up the poses on your phone and compare them to us!"
+    MC "That... makes sense. But don't most competitions have the contestants almost... nude? I'm not sure if Natsuko's comfortabl—"
+    Natsuko "No, I'm good. We can just do it in our gym clothes. They already show enough skin."
+    MC "...There's no way out of this, is there?"
     FMG "Nope."
     Natsuko "No."
     MCT "So {i}now{/i} you both agree with each other..."
     MC "Fine. Should we make a little bit of room so we can begin?"
     "The three of us move some of the benches around to make room for our impromptu Ms. Galaxy competition."
-    MCT "...Shorts, don’t fail me now."
-    "Akira was wearing her signature red sports bra. While Natsuko’s bra was a dark grey. Last time I saw this sight, Akira lost to Natsuko in an arm wrestling contest. Looking closer, their clothes looked even tighter than that day."
-    MCT "I’m both scared and aroused..."
-    MCT "I’m scaroused."
-    MCT "I feel like I shouldn’t be staring so hard before the contest even begins."
+    MCT "...Shorts, don't fail me now."
+    "Akira was wearing her signature red sports bra. While Natsuko's bra was a dark grey. Last time I saw this sight, Akira lost to Natsuko in an arm wrestling contest. Looking closer, their clothes looked even tighter than that day."
+    MCT "I'm both scared and aroused..."
+    MCT "I'm scaroused."
+    MCT "I feel like I shouldn't be staring so hard before the contest even begins."
     show FMG aroused-2
     FMG  "I expect you to be on your best behavior, Kei-kun. Only stare respectfully."
     show Natsuko aroused
     Natsuko "Unless you want to stare disrespectfully."
-    MCT "Bruh, this ain’t fair. I’m only one man."
+    MCT "Bruh, this ain't fair. I'm only one man."
     show FMG flex
-    FMG "Ignoring that— I won’t let this contest play out the same as the arm wrestling match, Nat. I’ve been practicing."
+    FMG "Ignoring that— I won't let this contest play out the same as the arm wrestling match, Nat. I've been practicing."
     show Natsuko flex
-    Natsuko "We’ll see if you can make this an actual match for me. Your arms are like twigs compared to mine."
+    Natsuko "We'll see if you can make this an actual match for me. Your arms are like twigs compared to mine."
     MC "Akira, were there any specific poses you wanted me to pick from?"
     show FMG neutral
     show Natsuko neutral
-    FMG "Actually I was thinking we’d just go with the eight mandatory poses in bodybuilding. There’s the front and rear lat spread, the front and rear double biceps, the side chest-"
-    MCT "Hey I’ve heard of that one."
+    FMG "Actually I was thinking we'd just go with the eight mandatory poses in bodybuilding. There's the front and rear lat spread, the front and rear double biceps, the side chest-"
+    MCT "Hey I've heard of that one."
     FMG "-the side triceps, the abdominal and thigh, and ending with the most muscular."
-    MC "That’s a lot more than I was expecting. What should I be looking for?"
+    MC "That's a lot more than I was expecting. What should I be looking for?"
     Natsuko "Normally in these competitions, judges are looking for a balance between size, symmetry, and muscularity. But for a simple competition like this, you just have to judge who looks better doing the pose."
     MCT "Oh boy."
     show FMG aroused
-    FMG "And play fairly Kei-kun. I won’t forgive you if you choose me every time just because we’re dating."
+    FMG "And play fairly Kei-kun. I won't forgive you if you choose me every time just because we're dating."
     MC "But you always look the best to me."
     show FMG neutral
     FMG "No flattery!"
     show FMG aroused-2
     FMG "But thank you, Kei-kun."
-    Natsuko "If you’re both done, I would like to start wiping the floor with you, Akira."
-    MC "Okay, I’ll shout out a pose and you both start posing. Ready?"
+    Natsuko "If you're both done, I would like to start wiping the floor with you, Akira."
+    MC "Okay, I'll shout out a pose and you both start posing. Ready?"
     "As soon as I finished talking, both Akira and Natsuko had that same look in their eyes like when they start lifting weights."
     MC "Front double bicep!"
     show FMG flex
     show Natsuko flex
     "Akira and Natsuko both lifted their arms up, flexing and both took a half step forward towards me. Instinctively, I take a half step backwards and start looking over the pose on my phone."
     pause 1
-    "After looking back up, I notice Natsuko struggling to keep her balance during the pose, while Akira isn’t having any trouble at all."
+    "After looking back up, I notice Natsuko struggling to keep her balance during the pose, while Akira isn't having any trouble at all."
     MC "Um... Natsuko, are you oka-"
     show Natsuko disappointed
     "Her face turned red and she cut me off before I could finish."
-    Natsuko "I-I’ve seemed to um, misjudged how wide my thighs are now, so I didn’t step far enough forward..."
+    Natsuko "I-I've seemed to um, misjudged how wide my thighs are now, so I didn't step far enough forward..."
     show FMG happy
     FMG "Pfffft- Ahahahahaha!"
     "Between Akira and Natsuko, Nat always had the wider thighs, and it seems to have come home to bite her now."
-    MC "Pff-{i}Ahem{/i}. There’s a male version of the pose that doesn’t involve crossing your legs, so we can compromise with that. Does that work for you girls?"
+    MC "Pff-{i}Ahem{/i}. There's a male version of the pose that doesn't involve crossing your legs, so we can compromise with that. Does that work for you girls?"
     "The two titans nodded and the tension had loosened up a little."
     MC "Front double bicep!"
     show FMG flex
@@ -9478,7 +9478,7 @@ label FMG058:
     "This time, they both stepped shoulder width apart and flexed their arms. Considering how relatively simple this pose looks in the picture, seeing it in real life, with these larger than life ladies, I can tell how much of their muscles they were flexing."
     MCT "...Hang in there, Kei..."
     "The curvature of both of their bodies was very evident in this pose, even as they did the masculine version of it."
-    "And while Akira flexes like this twenty times a day, and I drool over her biceps every single goddamn time, Natsuko’s larger biceps and overall hourglass body shape really does this pose justice for her."
+    "And while Akira flexes like this twenty times a day, and I drool over her biceps every single goddamn time, Natsuko's larger biceps and overall hourglass body shape really does this pose justice for her."
     MC "F-first point goes to Natsuko."
     Natsuko "Naturally."
     show FMG neutral
@@ -9496,28 +9496,28 @@ label FMG058:
     MCT "Hm? What was that?"
     "*{i}twitch twitch{/i}*"
     show FMG aroused
-    "Looking back up, I see Akira’s boobs bouncing in place. Making eye contact, Akira winked at me and stuck her tongue out."
+    "Looking back up, I see Akira's boobs bouncing in place. Making eye contact, Akira winked at me and stuck her tongue out."
     MCT "God, I love her."
-    "Natsuko saw that my eyes were glued to Akira’s massive rack and was quick to catch onto what was happening."
-    Natsuko "So you’ve taken to cheating so you could win. I’m not surprised."
-    FMG "It’s not cheating, it's {i}appealing{/i}."
-    MCT "It is appealing that’s for sure...."
+    "Natsuko saw that my eyes were glued to Akira's massive rack and was quick to catch onto what was happening."
+    Natsuko "So you've taken to cheating so you could win. I'm not surprised."
+    FMG "It's not cheating, it's {i}appealing{/i}."
+    MCT "It is appealing that's for sure...."
     Natsuko "Fine, two can play that game."
-    "With that, Natsuko started bouncing her pecs alongside Akira. The two of them doing this together is overwhelming. It was like a car crash. I shouldn’t stare, but I can’t look away."
+    "With that, Natsuko started bouncing her pecs alongside Akira. The two of them doing this together is overwhelming. It was like a car crash. I shouldn't stare, but I can't look away."
     pause 1
     MC "...Akira wins."
     show FMG happy
     show Natsuko disappointed
     MCT "Because her boobs are bigger. Obviously."
-    MCT "...I don’t even know who was posing better."
-    FMG "YES! I knew that trick would work! I’ve been saving that one."
+    MCT "...I don't even know who was posing better."
+    FMG "YES! I knew that trick would work! I've been saving that one."
     Natsuko "Hmph..."
     "Even after Akira was declared the winner, she continued to flex her enormous chest at me."
     MC "You can stop now, Akira! You won, already!"
-    MCT "Please don’t stop..."
+    MCT "Please don't stop..."
     show FMG aroused-2
     FMG "Nah."
-    Natsuko "Just call the next pose, Hotsure-san. She’s not going to stop for a while."
+    Natsuko "Just call the next pose, Hotsure-san. She's not going to stop for a while."
     MC "..."
     Natsuko "Hotsure-san?"
     scene black with fade
@@ -9525,15 +9525,15 @@ label FMG058:
 
     scene Gym with fade
     "After about another forty seconds of being entranced by my girlfriend's jiggling jugs, We had finally moved onto the other poses."
-    "Honestly, I don’t even remember when I started focusing more on their bodies than the proper  pose form. Thankfully, before I showed off my monkey brain even more, we made it to the last pose."
+    "Honestly, I don't even remember when I started focusing more on their bodies than the proper  pose form. Thankfully, before I showed off my monkey brain even more, we made it to the last pose."
     MC "Okay, this is for the win. Since we decided to skip the Abdominal and Thigh pose-"
     show FMG neutral at Position(xcenter=0.75, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
     Natsuko "I still think we should have done that one."
     FMG "We all know who would have won that one anyway, thunderthighs."
-    MCT "At least she’s honest."
-    MC "Regardless, there’s one pose left. Most muscular!"
+    MCT "At least she's honest."
+    MC "Regardless, there's one pose left. Most muscular!"
     show FMG flex #flex-2
     show Natsuko flex
     "Akira and Nat both bent over and flexed all the muscles on their bodies, Visibly swelling outwards. This pose really hit home how massive these two were. It was breathtaking to say the least."
@@ -9549,25 +9549,25 @@ label FMG058_c1_1:
     MC "Akira wins."
     show FMG happy
     show Natsuko disappointed
-    FMG "Yes! Finally! Let’s go!"
+    FMG "Yes! Finally! Let's go!"
     "Akira started hopping up and down in place while Natsuko took a deep breath and sighed."
-    Natsuko "Fine. I’ll concede. Well played, Akira."
-    FMG "Thanks for the match, Nat! This was actually really fun! It was nice to have a competition that wasn’t strength related, for once."
+    Natsuko "Fine. I'll concede. Well played, Akira."
+    FMG "Thanks for the match, Nat! This was actually really fun! It was nice to have a competition that wasn't strength related, for once."
     show Natsuko neutral
-    Natsuko "Agreed. This was fun. Now if you don’t mind, I ended up spending more time here than I initially planned. Myoga-san was expecting me for dinner."
+    Natsuko "Agreed. This was fun. Now if you don't mind, I ended up spending more time here than I initially planned. Myoga-san was expecting me for dinner."
     MC "Thanks for indulging her, Natsuko."
     Natsuko "Not at all, Hotsure-san. It was my idea in the first place, remember?"
     "With that, Natsuko gathered her stuff and left the gym. I could tell she was a little salty."
     hide Natsuko with dissolve
     "Akira turned to me, ready to accuse me of playing favorites. So I made sure to set the record straight."
     show FMG neutral at altMove(0.5, 0.5)
-    FMG "You playing favorites? I won’t blame you. Cause well... I’m the best, but still I’m curious."
+    FMG "You playing favorites? I won't blame you. Cause well... I'm the best, but still I'm curious."
     MC "You pretty much had it in the bag. Your practicing and training is really paying off."
-    MCT "I really meant that. But I wasn’t going to tell her that I stopped paying attention to the poses themselves at some point."
+    MCT "I really meant that. But I wasn't going to tell her that I stopped paying attention to the poses themselves at some point."
     show FMG happy
     FMG  "Aww, thanks Kei-kun! Come here!"
     "Akira pulled me in for one of her signature hugs."
-    MC "You know... if I was competing as well, I would’ve won, right?"
+    MC "You know... if I was competing as well, I would've won, right?"
     "She placed me on the ground and rolled her eyes heavily this time."
     show FMG neutral
     FMG "Sure you would have, Kei-kun. Now let's go get something to eat. All that posing made me hungry."
@@ -9578,25 +9578,25 @@ label FMG058_c2_1:
     MCT "Sorry Akira, but you told me to be fair."
     MC "Natsuko wins."
     show Natsuko smug
-    Natsuko "I knew you’d see things the way I did, Hotsure-san. Bigger is better."
+    Natsuko "I knew you'd see things the way I did, Hotsure-san. Bigger is better."
     show FMG neutral
     FMG "Yeah, I figured this would happen. Oh well, this was fun, Nat. We should do it again sometime."
     show Natsuko neutral
-    Natsuko "Yes, it was and I’d gladly do it again. Now then, I have to meet Myoga-san for dinner. I’ll be seeing you two later."
+    Natsuko "Yes, it was and I'd gladly do it again. Now then, I have to meet Myoga-san for dinner. I'll be seeing you two later."
     hide Natsuko with dissolve
     "Nat left the gym in a much better mood than she entered. After Akira had the door closed she turned towards me a little disappointed over her loss."
     show FMG sad-2 at altMove(0.5, 0.5)
     FMG "{i}sigh{/i}... Size is a part of bodybuilding after all."
     MC "Sorry, Akira."
     show FMG happy
-    FMG "Nah, don’t worry about it, Kei-kun. This just means there's more ammo I can use against Nat once I finally get bigger than her!"
-    MCT "Well, she bounced back from that fast... wouldn’t be Akira if she didn’t."
+    FMG "Nah, don't worry about it, Kei-kun. This just means there's more ammo I can use against Nat once I finally get bigger than her!"
+    MCT "Well, she bounced back from that fast... wouldn't be Akira if she didn't."
     MC "But you know that if I was a part of the competition, I would have smoked the two of you."
     FMG "Sure you would have, Kei-kun. Now let's go get some dinner!"
     hide FMG with dissolve
     MC "Wait! You can just leave me here. We have to put the benches back!"
     pause 1
-    MC "...No, it’s fine, have the guy without the muscle factor move all the heavy equipment. It’s cool, I’m not mad..."
+    MC "...No, it's fine, have the guy without the muscle factor move all the heavy equipment. It's cool, I'm not mad..."
     MCT "I was pissed..."
     jump daymenu
 
@@ -9744,6 +9744,19 @@ label FMG059:
     MC "Yeah, but I get to be... wet with you? Sorry, that was weird. I didn't know where to go with that."
     show FMG sad-2
     FMG "Ruining the moment is definitely your specialty."
+    pause 0.5
+    show FMG neutral
+    FMG "Hey, Keisuke..."
+    MC "Uh, yeah. What's up?"
+    "Her eyes drifted away from me as she got lost in her thoughts."
+    show FMG sad-2
+    FMG "Nothing. It's nothing. Sorry. We should head back to my dorm."
+    MC "Yeah, okay. Is everything okay? I'm here for you."
+    pause .5
+    show FMG neutral
+    FMG "Mhmm. I'm okay. I promise."
+    MCT "You don't have to lie but I understand. When you're ready, I'll be here."
+    MC "You got it. Come on, let's head back to your dorm."
     jump daymenu
 
 label FMG060:
@@ -9751,6 +9764,7 @@ label FMG060:
     $setTime(TimeEnum.EVE)
     scene Roof Entrance with fade
     play music Sunset
+    "Akira had been distant these last few days after she asked me if we could talk the other day following the sticky note gag. I got a text from her this evening which I could only have assumed was a follow up to that."
     FMGCell "Hey, can you meet me at the roof? I want to talk to you about something... something I should've told you a while ago."
     "I must've read this text a hundred times trying to figure out what it could be. But I couldn't put the pieces together, constantly coming up empty-handed."
     MCT "I'm probably overthinking it again. It shouldn't be anything serious. Come on, Kei, you know that when she talks like this it {i}is{/i} serious."
@@ -11792,4 +11806,344 @@ label FMGWG003:
     MC "I am standing right here..."
     "Akira and Alice" "We know."
     MCT "Sticks and stones may break my bones but their words will always hurt me."
+    jump daymenu
+
+label FMGWG004:
+    scene School Exterior with fade
+    play music DayByDay
+    "I decided to take a walk around campus and get some fresh air. Looking around, off in the distance, I noticed Honoka."
+    show BE neutral with dissolve
+    "I hadn't seen her outside of class for a while now. I've been spending so much time with Akira as of late I haven't spoken to her in what seems like a couple of months. Figured this was a better time than any to try and catch up."
+    show BE doubt
+    "But as I got closer I realized she looked distracted by something."
+    MC "Yo, Honoka, what's going on?"
+    show BE neutral
+    BE "Hey Kei-chan! Surprised to see you out and about by yourself. No gym plans with Akira?"
+    MC "Hey, I do things by myself,{w} without her,{w} occasionally."
+    show BE shrug
+    BE "Thought so."
+    show BE happy
+    BE "Hey, if you aren't busy then, do you want to hit up the arcade?"
+    MC "Yeah, that sounds pretty fun actually. I was there the other day with Akira crushing her hopes and dreams."
+    MCT "She doesn't need to know I lost."
+    show BE seductive
+    BE "Is that really what happened?"
+    MCT "Why am I so bad at lying?"
+    show BE happy
+    MC "As far as you know, yes."
+    BE "I had a feeling that was the case."
+    MC "Anyway... I meant to ask you though, you looked like you were occupied with something before I walked up here."
+    FMG "Nah, I could totally lift Alice. At this size, I can probably deadlift a car if I wanted."
+    Natsuko "You're seriously trying to end up in the hospital aren't you? Just because we are built like this doesn't mean we have to push ourselves to such extremes."
+    Natsuko "...Especially with someone as large as... Alice."
+    MCT "Guess, I got my answer."
+    BE "Those two. Listening to them bicker back and forth was like a trainwreck. It's cool that they are like semi-friends now, but neither one will let anything go."
+    MC "You're telling me. Although, I'm praying this conversation doesn't lead to them attempting to lift Alice. My eyes can only handle so much."
+    show BE neutral
+    BE "I don't know. That's something I'd pay good money to see. Come on, I want to get closer and see what those two are planning."
+    hide BE
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "Oh, hey, Kei-kun! Hey, Inoue-san! What's up?"
+    MC "We came to see what's up with you two. We overheard something about lifting Alice?"
+    show Natsuko disappointed
+    Natsuko "Akira thinks she can lift Alice..."
+    MC "Well, I don't want to encourage her buuuuuut...{w} You should lift her, Akira."
+    show FMG flex
+    FMG "Nothing better than a man who supports you and your goals."
+    Natsuko "Oh my god."
+    show FMG neutral
+    show Natsuko neutral
+    Natsuko "If she hurts herself don't ask me to carry her to the nurse again. I already explained how bad she could injure herself."
+    MC "It truly warms my heart to see how much you care about Akira now, Nat."
+    Natsuko "I would simply have no one to compete with. Akira is the only girl who can hold her own against me. Everyone else isn't worth my time."
+    show FMG happy
+    FMG "Well, I am pretty amazing."
+    MC "How badly did that hurt to say, Natsuko?"
+    Natsuko "It's not important. Look, Alice won't let you anywhere near her. I doubt she'd want your man hands on her."
+    show FMG neutral
+    FMG "That's just plain rude..."
+    show Natsuko annoyed
+    extend " My hands aren't nearly as big as your gorilla mitts."
+    hide Natsuko
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "I think it's at least worth asking Alice. And I'm not just saying that because I want to see Akira-chan lift Alice."
+    MC "Well, I'm saying it cause I absolutely want Akira to lift her. Let's go find her! Nat, do you have any idea where Alice could be?"
+    show FMG neutral
+    FMG "Heh... probably the cafeteria, snacking away at the leftover ramen."
+    MC "Akira-"
+    FMG "I know, just because she's a {i}heavy{/i} doesn't mean she's always eating. {w}{size=-6}Doesn't make it any less funny to me.{/size}"
+    BE "It is pretty funny, Kei-chan."
+    MCT "You're not helping, Honoka."
+    MC "...I know... {w}but let's try to pretend it isn't so she doesn't get mad."
+    hide BE
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    Natsuko "She's at the pool doing laps. She asked me to join her earlier."
+    MC "So why didn't you? Cause you wanted to hang with Akira, right?"
+    Natsuko "I took a shower, I wasn't going to ruin my hair with all that chlorine."
+    MCT "Uh-huh."
+    Natsuko "As much as I'd love to watch you attempt to lift Alice, I have to go help teach a class at the gym."
+    show FMG surprised
+    FMG "They let you near other people?!?!"
+    show Natsuko disappointed
+    Natsuko "..."
+    Natsuko "The other boys there come to me for help. They can barely lift a bar. It's... a little embarrassing."
+    show FMG neutral
+    FMG "Get a load of this. Nat is making friends and changing lives. Truly some inspirational work."
+    show Natsuko smug
+    Natsuko "They are better off with me training them than you. Have you seen your squat form? I don't need others taking after you."
+    show FMG angry-3
+    FMG "It is {i}not{/i} that bad!"
+    MCT "Aaaah, just like old times. Sometimes I miss it."
+    hide Natsuko
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "And with that, Nat turned and walked away shaking her head and chuckling to herself. Most likely wondering if she made the right decision hanging out with Akira."
+    BE "I think that went quite well! We shouldn't waste any more time though. Alice could leave the pool at any moment!"
+    FMG "Yeah, for sure. You guys definitely can't keep up with me if I run but I can't carry Inoue-san. Her boobs are going to flap in the wind and I don't need those melons hitting me."
+    show BE unique
+    BE "Struggles of having a larger than life chest, heh."
+    show BE neutral
+    BE "I'll meet you guys there. Don't wait up for me."
+    MC "Are you sure? To be completely honest... I don't think Alice moves very fast. We know she's at the pool and-"
+    show FMG happy
+    FMG "And she loves the cafeteria, so if we don't find her floating like a log at the pool she's probably shoveling food down back at the cafe. Great thinking, Kei-kun."
+    MC "..."
+    MC "I-Nevermind let's just go check the pool."
+    scene black with fade
+    pause 1
+
+    scene Pool with fade
+    "Don't get me wrong, I was excited as any boyfriend could be for their super-strong girlfriend wanting to lift the super... uh, heavy girl, to prove how strong she was."
+    "There's this one tiny problem of trying to convince Alice to even let Akira touch her, much less lift her off the ground. But knowing Akira's way with words, I had faith."
+    $setWGOutfit(OutfitEnum.SWIM)
+    show WG neutral with dissolve
+    WG "Well, what do I owe the pleasure of seeing you two? I didn't expect to have visitors."
+    show WG neutral at altMove(0.5, 0.65)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1) with easeinleft
+    FMG "Alice, I'm going to get straight to the point. Can I lift you?"
+    show WG surprised
+    WG "Excuse me. What did you say?"
+    show FMG flex
+    show WG surprised-2
+    FMG "Lift. You. In. The. Air."
+    show FMG neutral
+    FMG "I take my hands and grab... your rolls?{w} I'm not too sure what I could get a grip on but I'll make it work!"
+    show FMG happy
+    FMG "Pinky promise, I won't drop you!"
+    show WG doubt
+    WG "I can't believe what I'm hearing."
+    FMG "Sooooo, it's a yes?"
+    show WG stern
+    show FMG sad-2
+    WG "It's a no."
+    MC "Alice, maybe you'd be willing to rethink this? It would mean a lot to Akira. T-Think of it as a way to show how far your friendship has come! To show how much you trust her to not drop you..."
+    MCT "Wait, that was terrible."
+    show FMG neutral
+    FMG "I'd just need to figure out where to lift you. Come ooooon, it would be awesome! Think of all the sights you could see!"
+    show WG doubt
+    WG "Like the other pools? Maybe some trees?"
+    show FMG angry-3
+    FMG "Alice, just accept this is going to happen and let me lift your fatass!"
+    show WG angry
+    WG "!"
+    MCT "That was... direct."
+    hide WG
+    hide FMG
+    with dissolve
+    "As those two went off fighting, Honoka had finally arrived."
+    show BE neutral with dissolve
+    BE "Sorry, that took so long. I got distracted on the way here."
+    MC "With what? How could it be more important than watching Akira lifting Alice..."
+    pause 1
+    MC "Well, watching Akira try to convince Alice to lift her is more like it."
+    BE "You think she can?"
+    MC "Honestly... I'm not sure. Both are stubborn in their own way, I'd have to give the edge to Alice though. Akira can't keep this up forever. She'll either walk away or pick Alice up regardless and most likely toss her in the pool."
+    BE "I'm backing up if that happens. The last thing I need is to get soaked."
+    MC "Agreed. The splash zone might be a little {i}too{/i} big."
+    "Alice and Akira had started making their way back over to us as Honoka and I placed bets on who would win."
+    hide BE
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG neutral at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    FMG "Alice, come on! It's a one-time thing I promise!!! I swear I won't drop you and if I do I'll aim for the pool."
+    MCT "Aim her far away, please."
+    WG "Akira, I don't see this working out at all. I'd prefer if you didn't put your hands on my body."
+    show FMG sad-2
+    FMG "{size=-6}Not like anyone else is going to be touching {i}that{/i}.{/size}"
+    hide WG
+    show BE surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "{size=-6}I hope Alice didn't hear that...{/size}"
+    MC "{size=-6}You and me both.{/size}"
+    show FMG neutral with None
+    hide BE
+    show WG doubt at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    FMG "Alice, if you let me do this. I'll do anything you want in return. Need a bookcase moved? I'm your girl! Can't reach the cake on the top shelf? I can!"
+    show WG happy
+    WG "So you'd be willing to be my personal assistant for a week then? Chibuki could use a vacation."
+    show FMG angry-2
+    FMG "What!? Oh, hell no!"
+    MCT "Heh."
+    MCT "I should probably help her out. We aren't getting anywhere and I'm dying to see her lift Alice."
+    jump FMGWG004_choice
+
+label FMGWG004_choice:
+    show FMG angry-2 at Position(xcenter=0.25, yalign=1.0), Transform(xzoom=-1)
+    show WG happy at Position(xcenter=0.65, yalign=1.0)
+    MCT "I'm a wizard with words. This shouldn't be too hard."
+    menu:
+        "Alice, she's not leaving till she's lifting you.":
+            jump FMGWG_C1_1
+        "Maybe if I use big words. I can convince her..." if not getFlag("FMGWG004_C2"):
+            jump FMGWG_C2_1
+        "Akira, I think we should let Alice be. We've bothered her enough." if not getFlag("FMGWG004_C3"):
+            jump FMGWG_C3_1
+
+label FMGWG_C1_1:
+    MC "Alice, hear me out for a second. I mean no disrespect to either of you. But both of you girls can be pretty stubborn. Akira knows."
+    show FMG angry-3
+    FMG "Hey!"
+    MC "SO! We could spend more time going back and forth getting nothing done or you could let Akira lift you and we can call it a day."
+    MC "We both know she isn't leaving until she's gotten this."
+    show FMG flex
+    FMG "He's right, ya know."
+    WG "...F-Fine."
+    MCT "It's that easy."
+    show WG angry
+    WG "On one condition. This is a one-and-done thing. I do not want to be asked this again!"
+    FMG "Say no more!"
+    hide WG
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    BE "I can't believe we get to witness this in person! This is so exciting!"
+    MC "We should stand back. Akira is going to need as much room as possible."
+    jump FMGWG004_afterchoice
+
+label FMGWG_C2_1:
+    $setFlag("FMGWG004_C2")
+    UNKNOWN "Listen, man, your speech isn't high enough. Level up some more. And please stop asking her to crush you with her thighs. People are starting to get uncomfortable."
+    MCT "What the hell was that?!?! What do you mean level up? This isn't an RPG!"
+    MCT "You wouldn't get the thigh thing. Dumb voice..."
+    pause .5
+    MC "...Stupid stat checks. Fine, I'll try something else."
+    hide FMG
+    hide WG
+    show BE confused
+    BE "You okay, Kei-chan? You're talking out loud."
+    MC "It's nothing."
+    MCT "I hope this doesn't lower my affection. I want the good ending."
+    $setAffection("WG", -1)
+    pause 1
+    MCT "Fuck."
+    MCT "Wait, never mind. I'm not playing her route. That doesn't matter."
+    MCT "Doesn't matter much in this one either, heh."
+    hide BE
+    jump FMGWG004_choice
+
+label FMGWG_C3_1:
+    $setFlag("FMGWG004_C3")
+    MCT "Maybe some reverse psychology is what we need."
+    MC "Akira, I think we should let Alice be. She's not up for this."
+    show FMG angry-3
+    FMG "What!?!?! I'm almost getting through to her and you want to walk away???"
+    MCT "Trust me, this won't fail."
+    show WG happy
+    WG "Thank you, Keisuke. I appreciate you putting an end to this."
+    MCT "Wait, no. Alice, you need to start feeling bad."
+    MC "Ha... ha... no problem. Come on, Akira. You, me, and Honoka can go to the arcade for a few rounds."
+    FMG "Kei, you can't be serious?"
+    MCT "I'm not!"
+    MC "It just wasn't meant to be I guess. I'll buy us some ice cream to make up for it."
+    show WG surprised
+    WG "Wait, Keisuke!"
+    MCT "Finally! The guilt sets in. Everything is proceeding exactly as I have foreseen."
+    show WG neutral
+    WG "I'd like to join you guys for ice cream."
+    MCT "Are. You. Kidding. Me."
+    MCT "Fuck it. Go back. This choice sucked."
+    jump FMGWG004_choice
+
+label FMGWG004_afterchoice:
+    show FMG sad-2
+    FMG "I'm going to have to hold my breath while my head is trapped under that belly."
+    MC "Probably, but keep that to yourself."
+    BE "You'll be fine! You can do this no problem, Akira!"
+    show FMG neutral
+    FMG "Why can't you encourage me like that?"
+    MC "Too much effort. But I guess I can try this time. {w}Yeaaaah, you can do it... you're the best."
+    MC "How was that?"
+    FMG "The safe word isn't going to save you anymore."
+    MC "!"
+    hide WG
+    show BE confused at Position(xcenter=0.75, yalign=1.0)
+    BE "Huh?"
+    MC "Don't worry about it. It-It's code for one of our uh... games."
+    hide BE
+    show WG stern at Position(xcenter=0.65, yalign=1.0)
+    WG "Can we please get this over with?! I have other matters to attend to."
+    FMG "Sorry! Kei and I were discussing plans for tonight."
+    MCT "Oh no."
+    WG "Well, could we please hur-"
+    show WG surprised
+    show FMG upbeat
+    WG "Oh! What on earth?!"
+    "Akira had some serious fire in her eyes, wasting no time now that she had a plan of attack."
+    "Akira immediately slipped her shoulders under Alice's haunches and wrapped her arms around Alice's doughy calves before Alice could react with any meaningful protest."
+    show FMG angry-3
+    "Starting at the bottom of a deep squat for the Amazon, I saw the tension nearly explode from within her thighs as she began to push off."
+    "For a brief moment, there was no movement. I wasn't sure if Akira was struggling or if she was just sinking into Alice's blubbery backside before she could start getting somewhere."
+    MCT "I'm sorry that you've put yourself through this Akira."
+    "Sure enough, after that brief delay, Alice began a slow, shaky ascent into the air, her feet now completely off the ground."
+    FMG "{i}Mmmmmrrrrrrggg!{/i}"
+    "Akira was clearly trying really hard. Her guttural scream was muffled under Alice's smothering belly. I would have imagined her face to be as red as a tomato— if it were visible."
+    MCT "I hope she doesn't accidentally suffocate, that belly is bigger than I imaged up close."
+    "Steadily, Alice and Akira rose. Well, steady pace-wise, the motion itself was pretty shaky."
+    "I was starting to have my doubts if Akira could pull this off, but she was quick to put my doubts to rest. She planted her feet, lifting Alice even higher."
+    "Honoka and I stood in awe. Akira was getting pumped. I thought her arms were big before, her biceps looked ready to tear out of her uniform. She was pushing herself to her limit lifting Alice this high."
+    FMG "{i}Aaaaaarrrrgh!{/i}"
+    hide WG
+    show BE surprised at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "Holy crap! She's doing it! Go Akira!"
+    MC "I knew she could do it all along."
+    MCT "I can't believe I lost the bet..."
+    "With one final push, Akira had Alice above her head."
+    show FMG flex
+    FMG "Hahaha! I did it! I DID IT!"
+    hide BE
+    show WG surprised at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    WG "That's wonderful. Now can you put me down?"
+    show FMG neutral
+    FMG "Y-Yeah, sorry."
+    "Akira carefully lowered Alice to the ground while keeping her form to avoid dropping her in the pool."
+    FMG "There."
+    show WG neutral
+    show FMG happy
+    FMG "Thank you, Alice. That was intense. That might've been the hardest I've ever had to push myself."
+    show WG stern
+    FMG "Err, um... Yeah..."
+    show WG neutral
+    WG "I must admit, while not a fan of the act itself. It was quite impressive. That being said, just because I was impressed doesn't mean I'll let you do it again."
+    show FMG neutral
+    FMG "Right. I think one time is more than enough for me. I'm satisfied and I think the others are too."
+    MC "Definitely."
+    BE "Enjoyed every second."
+    MC "I don't know about you guys but I can go for some ice cream right about now. Alice told me she felt like paying."
+    show WG doubt
+    WG "Pardon?"
+    MC "A joke. It is a joke."
+    hide WG
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    BE "I'm sure Kei-chan is willing to cover for everyone. Aren't you?"
+    MC "I am?"
+    show BE neutral
+    show FMG neutral
+    show WG neutral behind FMG, BE
+    "Akira & Alice & Honoka" "You are."
+    MC "{i}Sigh{/i}... fine."
     jump daymenu

@@ -4647,6 +4647,7 @@ label WG024_c1:
     WG "..."
     MC "Hey now. It's all subjective, right?"
     $setAffection("WG", -5)
+    $disableRoute("WG")
     WG "At least you're honest, I'll give you that."
     WG "{i}Huff!{/i}"
     "Alice briefly vented in order to help compose herself a bit more"
