@@ -2272,6 +2272,7 @@ label WG013_c2:
 label WG014:
     scene Auditorium with fade
     play music Peaceful
+    $setWGOutfit(OutfitEnum.ATHLETIC)
     "Gym today was a free day, everyone finding something quasi-athletic to do. Afterwards I ended up being one of those called on to clean up the equipment lying around."
     "I wasn't alone, {i}per se{/i}, but with a handful of us spread across the entire gym it was dead quiet."
     "After a while I noticed I was drifting over to where Alice was bending down to gather up some croquet mallets."
@@ -15641,8 +15642,8 @@ label WG060S_LiePath:
     "Still though, I was a bit on edge as to what the next text or conversation held for us."
     "As the sun was setting, I was just finishing a shower when my phone lit up."
     WGCell "<I'd like you to come over tonight. I have something I want to discuss.>"
-    "Shit! Despite my best efforts to deflect the issue, she knows!"
-    "Right? ... I mean, what else could it be about?"
+    MCT "Shit! Despite my best efforts to deflect the issue, she knows!"
+    MCT "Right? ... I mean, what else could it be about?"
     "My mind was pulling in two directions: was she actually up for it or would this be the final test? I hoped against all hope that it was the former and not the latter."
     "My anxiety did not subside, but my curiosity was through the roof. I headed over right away."
     scene black with fade
@@ -15657,19 +15658,17 @@ label WG060S_LiePath:
     "With a deep breath, I stepped through the threshold."
     "All lights save the ones in the kitchen area were off."
     "Slightly stumbling my way in the dark, I continued to follow the sound of Alice's voice. My eyes started to adjust, as a warm orange glow emanated from around the corner."
-    #play music requiem possibly
+    play music Requiem fadein 1.0 #Testing out playing Requiem here
+    show cg WG060S with dissolve
     "The shock I felt upon turning the corner was indescribable."
-    show WG neutral with dissolve
-    "Sat in front of me was Alice, comfortably lounging in her loveseat. What really stood out though was what she had donned for the evening."
-    "At first I assumed it to be a bathrobe, but as I got closer it looked more akin to a regal gown. Muted red pallets canvased across her corpulent body, stretched out by every single pound they were trying so desperately to contain."
-    "Though her belly had long since folded over into two separate fatty rolls, her gowns belt tie sat between them. Possibly Alice was unaware of the danger that posed, after all, if she even inhaled too hard... it could snap off very easily."
+    "Sat in front of me was Alice, comfortably situated on her bed. What really stood out though was what she had donned for the evening."
+    "At first I assumed it to be a bathrobe, but as I got closer it looked more akin to a regal gown. A port wine colored robe canvased across her corpulent body, stretched out by every single pound it was trying so desperately to contain."
+    "As her belly had long since folded over into two separate fatty rolls, her gown's belt tie sat between them. Possibly Alice was unaware of the danger that posed, after all, if she even inhaled too hard... it could snap off very easily."
     "Sitting atop her two levels of belly fat were the massive orbs of her breasts. From the looks of it, even she wasn't able to coax them into the robe."
     "As such, they rested outside, the only cloth between them and fresh air was the button down shirt Alice wore."
     "The buttons themselves looked as if they fared no better than the tie, as each one looked strained, albeit still sturdy. One wonders just how much tensile force her entire ensemble was under."
-    show WG aroused
     WG "I hope you don't mind the rather unreserved clothing of mine."
     MC "I...uh...umm...its uh...quite ok."
-    show WG haughty
     WG "I knew I had a good feeling about this investment. Now I'm not the only one made of putty."
     "Putty was a euphemism, I was melting like ice cream on a hot summer day at the sight of her sheer splendor."
     "My mind, nearly turning to mush at this real life fantasy, suddenly snapped back to the present moment as I tried to remind myself to keep it together."
@@ -15679,6 +15678,9 @@ label WG060S_LiePath:
     WG "I wanted to gauge your interest in... assisting me with this predicament, shall we say."
     MCT "Is this an offer or a trap?"
     "I heard what she was saying, and I was seeing what I was seeing, but this felt surreal to me. Was this really happening?"
+    hide cg
+    show WG aroused
+    with dissolve
     "I couldn't make up my mind if this was the opportunity of a lifetime or the ultimate test of a man's limits. But I had to decide!"
     menu:
         "Yes, more than anything!":
@@ -15734,9 +15736,9 @@ label WG060S_Lie_C1_1:
     "Alice was beginning to be impatient with my stalling."
     MC "Okay! I wasn't sure you'd be into it. I didn't want you to think I was trying to take advantage of your... predicament, as you refer to it."
     show WG neutral
-    "The loveseat shifted slightly as Alice attempted to adjust her bulk. Rolls folding over each other like crashing waves."
+    "Her bed shifted slightly as Alice attempted to adjust her bulk. Rolls folding over each other like crashing waves."
     WG "I see. It appears that your heart was in the right place. But you should know by now that I prefer a more direct approach to things, yes?"
-    MC "Yes, this is true. I apologise for not being more forthright."
+    MC "Yes, this is true. I apologize for not being more forthright."
     show WG haughty
     WG "Your apology will suffice. This is not a guilt trip Keisuke. I wasn't playing games when I said I was hungry."
     MC "I see... as you wish."
@@ -15755,7 +15757,7 @@ label WG060S_Lie_C2_1:
     show WG neutral
     WG "Hmmm, well that is rather reassuring to hear."
     $setVar("WGSSPR", 0)
-    WG "It seems I have misjudged you, Keisuke. I must apologise for this rather embarrassing miscalculation of mine. I appreciate your restraint with regards to this matter."
+    WG "It seems I have misjudged you, Keisuke. I must apologize for this rather embarrassing miscalculation of mine. I appreciate your restraint with regards to this matter."
     WG "{size=-6}Though I do find it rather perplexing...{/size}"
     show WG neutral-2
     WG "This has been rather illuminating to me with regards to some events I appear to have misinterpreted."
@@ -15823,45 +15825,39 @@ label WG060S_TruthPath:
     "All lights save the ones in the kitchen area were off, but the dim light was enough for me to navigate towards the sound of Alice's voice."
     MCT "Please let this not be the end."
     play music Sunset
-    "Slightly stumbling my way in the dark, I continued to follow the sound of Alice's voice. My eyes started to adjust, as a warm orange glow emanated from around the corner. The shock I felt upon turning the corner was indescribable."
-    show WG neutral
-    "Sat in front of me was Alice, comfortably lounging in her loveseat. What really stood out though was what she had donned for the evening."
-    "At first I assumed it to be a bathrobe, but as I got closer it looked more akin to a regal gown. Muted red pallets canvased across her corpulent body, stretched out by every single pound they were trying so desperately to contain."
-    "Though her belly had long since folded over into two separate fatty rolls, her gowns belt tie sat between them."
+    "Slightly stumbling my way in the dark, I continued to follow the sound of Alice's voice. My eyes started to adjust, as a warm orange glow emanated from around the corner."
+    show cg WG060S with dissolve
+    "The shock I felt upon turning the corner was indescribable."
+    "Sat in front of me was Alice, comfortably situated on her bed. What really stood out though was what she had donned for the evening."
+    "At first I assumed it to be a bathrobe, but as I got closer it looked more akin to a regal gown. A port wine colored robe canvased across her corpulent body, stretched out by every single pound it was trying so desperately to contain."
+    "As her belly had long since folded over into two separate fatty rolls, her gown's belt tie sat between them."
     "Possibly Alice was unaware of the danger that posed, after all, if she even inhaled too hard... it could snap off very easily."
     "Sitting atop her two levels of belly fat were the massive orbs of her breasts. From the looks of it, even she wasn't able to coax them into the robe."
     "As such, they rested outside, the only cloth between them and fresh air was the button down shirt Alice wore under the gown."
     "The buttons themselves looked as if they fared no better than the tie, as each one looked strained, albeit still sturdy. One wonders just how much tensile force her entire ensemble was under."
-    show WG aroused
     WG "I hope you don't mind the rather unreserved clothing of mine."
     MC "I...uh...umm...its uh...quite ok."
-    show WG happy
     WG "I knew I had a good feeling about this investment. Now I'm not the only one made of putty."
     MC "Ok, I really would appreciate an explanation as to what's going on cause I've been worried these past couple days."
-    show WG haughty
     WG "I'll be able to give you an answer after tonight, I'll say that much."
     MC "What are we doing tonight?"
-    show WG aroused
     WG "Well, I was wrapped in getting things ready for tonight. I unfortunately missed my last few meals. Mind helping me correct that?"
     "The moment I heard those words I was afraid I may faint from giddiness. My hopes and efforts had paid off."
     MC "Su..sure. Er, I mean, of course, my lady."
-    show WG happy
     WG "Wonderful, I knew I could count on you."
-    show WG haughty
     WG "I do hope you brought something rather decadent for the evening. Even with my offer, I would still prefer my cuisine to be of high quality."
     "Alice sat haughtily, her hands resting at the sides of her overflowing hips."
     MC "What? You really thought I would bring subpar food?"
-    show WG happy
     WG "As a matter of fact, the thought hadn't even crossed my mind."
-    show WG aroused
     WG "It was quite easy to predict how... excited, you would be at my proposal."
-    show WG happy
     WG "Why, I would even bet that you went out of your way to procure some lavish-but more importantly-highly caloric meal, yes?"
     "Damn, was I really that predictable? Well, she probably figured that out easily after realizing my preferences..."
     MC "I couldn't- no, I wouldn't go out of my way for a personal desire."
     MC "Although, I certainly wouldn't mind it if it was for you."
+    hide cg
     show WG neutral
-    "The loveseat shifted slightly as Alice attempted to adjust her bulk. Rolls folding over each other like crashing waves."
+    with dissolve
+    "Her bed shifted slightly as Alice attempted to adjust her bulk. Rolls folding over each other like crashing waves."
     WG "My, how romantic, Keisuke. It seems as if you can be a real Casanova if I push your buttons right."
     "I couldn't help but smirk somewhat at her mention of pushing buttons. As if she was referring to the buttons on her shirt, which struggled in vain to keep her monumental breasts of fat covered."
     "It dawned on me at that moment. If her shirt was struggling up top, the buttons on her belly must... Oh man! Her shirt was doomed..."
@@ -16013,7 +16009,7 @@ label WG060S_Accept:
     "However, Alice had just polished off a cream sauce laden, cheese entombed monster that had to have been a couple of kilos by my estimate, all with little effort."
     show WG neutral
     WG "Oof..."
-    "Alice adjusted herself in her chair with her legs splayed as wide as the loveseat allowed. With her back arched outward to give her stomach more room to spread its rapidly expanding girth."
+    "Alice adjusted herself with her legs splayed as wide as she was able to in order to accommodate her bulk. Her back arched outward to give her stomach more room to spread its rapidly expanding girth."
     show WG happy
     WG "Ahh... much better."
     "I was mesmerized. Her lower belly, a veritable thick apron, smooshed against her legs. It provided a wide mattress for the inflated dome of her upper gut."
@@ -16781,23 +16777,135 @@ label WG061S:
         WG "Please do."
         "I continued my diligent task, though now I did get a bit more touchy. Grazing her ponderous breasts did result in a subdued yelp, which Alice waved off when I expressed concern. A few scrubs between her folds did produce a few moans."
         "I did not help matters by occasionally pressing myself against her, letting myself sink ever so slightly into her softness."
-        #if getVar("WGSSPR") >=7:
-           #menu:
-               #"Be bold":
-                    #jump WG061S_C1_1
-                #"Be cautious":
-                    #jump WG061S_C2_1
-
-        #else:
-        jump WG061S_C2_1
+        if getVar("WGSSPR") >= 8 and if getAffecton("WG") >= 69:
+            menu:
+                "Be bold":
+                    jump WG061S_C1_1
+                "Be cautious":
+                    jump WG061S_C2_1
+        else:
+            jump WG061S_C2_1
 
 label WG061S_C1_1:
-    #No peeking
-    "Branch not yet finished."
+    $setFlag("WG061S_Belly")
+    MC "Any other areas you want me to get?"
+    WG "No I... I think you got most of the spots."
+    MC "You seem to be a little short of breath, are you sure you're good?"
+    WG "..."
+    show WG neutral-2
+    WG "I don't think we need to bother with formalities at this point, Dear. If I can be honest, I did enjoy myself last night. Why... I'm not quite sure, but this just so happens to get those feelings burning again."
+    show WG aroused
+    WG "Would you help me satisfy my other... appetite?"
+    MC "I... uh."
+    show WG haughty
+    WG "Since we obviously have no protection, it would be ill-advised to take the direct approach. However, I'm open to... \"alternatives\"."
+    MC "Well... in that case... what would you say about maybe some... \"extra attention\" for your belly."
+    show WG surprised-2
+    WG "Y-You're not suggesting..."
+    MC "Yes, yes I am."
+    show WG neutral
+    WG "I suppose we are well past the point of any pretense of modesty."
+    show WG neutral-2
+    WG "... I would not be opposed...{w} if that's what you'd like."
+    "Placing the sponge and bodywash down, I turned my full attention to Alice. Whether it was the fog of lust or the steam in the shower, all I could suddenly focus on was Alice and her body."
+    show WG aroused
+    "Soon I found myself kissing and gently fondling the plush globe of her belly. There was just so much to hold and explore. I had a taste before, but this was something else— I was now getting the full experience."
+    "This monolithic beast pressed forcefully against my wandering hands. Daring them to explore, tempting them to plot out these long sought after lands. And with vigor, they took the challenge."
+    "With great efforts, I made an attempt to coil my arms around Alice's other areas. But to no avail, the insurmountable ball of bodily joy firmly kept my hands on them."
+    "I questioned if Alice was intentionally swaying her bulk into my grasp. Standing up straight, I made eye contact with her once again."
+    MC "And you're sure about this? Final chance to back out... because I don't think I'm going to have the will to resist much longer."
+    show WG neutral
+    WG "It's best if you press your advantage before I change my mind."
+    MC "Duly noted."
+    "After Alice's excessive feasting, her stomach still remained rather firm, with very little give in its movement. I remained persistent, though, and made sure my hands discovered the innermost reaches of her folds."
+    show WG aroused
+    WG "Kei-Keisuke... {i}whooo{/i}.{w} Last night was something that I shall never forget in all my days. And yet, I still feel as if this time of self ‘discovery' hasn't fully resolved itself."
+    WG "Even if I find the experience... unusual... It will still be a rather sensual way of giving you my thanks."
+    "Admittedly, her reasoning and explanation was becoming something of a white noise as my desire grew. Tracing her rotund form upward, I made contact with one of her heaving breasts."
+    "Alice's tit was dense, yet broad, and I couldn't resist giving it a small jostle. There was enough room under her boob to cover my whole arm, possibly even more."
+    "Of course, I checked the other breast as well, making sure to explore her girthy grooves rigorously."
+    MC "This is —beyond a shadow of a doubt— the best thank-you gift I'll ever receive."
+    show WG happy
+    WG "Correct, you'd be wise to appreciate it as such."
+    show WG stern
+    WG "This whole event is never to be mentioned outside of this room. Do I make myself clear?"
+    MC "Crystal. I don't think anybody would believe me if I told them anyway."
+    show WG neutral
+    WG "For both your sake and mine, I do hope you're right in that assumption."
+    MC "And don't worry about me asking for this in the future. I fully intend on savoring this much like you did with all those dishes~"
+    "The slight teasing tone in my voice was far from intentional. But my mind was clouded with lust, the steam on the shower glass couldn't hold a candle to the desire I felt."
+    MC "Do you— I'm not sure... should I give a countdown or?"
+    show WG neutral-2
+    WG "I believe there's been enough foreplay, it would be better—"
+    "Without much thought, I gently brought my pulsing manhood towards Alice's cavernous navel."
+    show WG aroused
+    "The very tip of my shaft made only the lightest contact, but it felt as if her abdomen was vibrating from the sudden stimulation."
+    WG "–{i}Geerrhh!?{/i}"
+    "Either from reflex or desire, Alice thrust herself forward. Slamming me backwards into the glass with such velocity I'm shocked I didn't cannonball through."
+    "WHAM!"
+    MC "{i}Guhh!{/i}"
+    MC " ..."
+    show WG surprised
+    WG "I-I'm so sorry, Keisuke. It just— the sudden sensation made me jump... are you ok?"
+    MC "..."
+    show WG surprised-2
+    WG "Ke-Keisuke?"
+    MC "{i}*cough cough*{/i}"
+    MC "Erm... {i}*cough*{/i} y-yeah, no problem."
+    MCT "Just had the wind knocked out of me is all."
+    show WG neutral
+    "Even though it felt as if my organs were being pressed into paper, the exhilarating sensation of my member testing the inside of Alice's navel was indescribable."
+    "It was simply bliss. Soft walls sheathed and concealed, while also emanating a deeply pleasant warmth."
+    "From where I was trapped, there was no way to tell if I had penetrated her middle all the way through, or if her belly was large enough to swallow the entirety of my manhood whole."
+    show WG neutral-2
+    WG "I suppose it's far too late to turn back now... what do— what am I supposed to do next?"
+    "Still trying to catch my breath, I wasn't able to get a response out before Alice had an idea."
+    show WG aroused
+    "Gripping her waist with lust, securing her gut against both the glass wall and I. The excitement on her face, it could only be described as hysteric but cautious."
+    "Firmly biting her lower lip, Alice rocked her hips back, then quickly forward, pummeling me into her fat-swollen belly button. Her stomach crashed against the wall like a tsunami."
+    WG "H-How's that?"
+    "Voice caught in my through, I had trouble speaking up, now wavering uneasily. All I could manage was a weak nod, overcome with arousal."
+    MC "{i}Hmptttt!{/i}"
+    show WG happy
+    WG "Hehe, of course you like that. {w}Do you want more?"
+    "Alice chuckled breathlessly, swinging her massive obesity away before and pulling it right back onto me. Her stomach was thick and fluffy. As she pulled back, my body still remained trapped, entirely subjective to her whims."
+    "Again and again she swung herself like a metronome against my pleading member. If by some chance I still had an unfractured ribcage by the end, it would be a miracle."
+    "Her heaving, draping apron belly swung to and fro, plapping the wall beside his legs."
+    "Her belly button pulled on my rigid pride, the puffed walls of her belly were softer than any vagina, yet carried more weight than a full grown woman."
+    show WG aroused
+    "Alice had a big body, her undulating blubber pulled with her force. She couldn't simply sway back, the momentum of her movements carried through her fat."
+    "The inertia shook her whole being. Her ass swinging, legs jiggling, arms rippling, chest bouncing with reverberation..."
+    "It took power and strength to maintain her posture and haul all of that backwards momentum forward again, redirecting her supersized blubber back into me."
+    WG "{i}Hahh... guh, hmm...{/i}"
+    WG "{i}G-Gaaaah!...Yes...{/i}"
+    "As lost as I was in a haze of euphoria. Part of me was jolted back by the surprise of what seemed to be Alice enjoying this as much as I was."
+    "Half-lidded eyes lazily focused on one hand she kept firmly pressed into her belly. Each forward thrust produced yet another involuntary sound of pleasure from her."
+    "But the other hand was... oh."
+    "It must have been at some point during her assault on my lower region, but I failed to notice how her non-dominant hand had, well, snaked around the ponderous dome of blubber to reach her—"
+    "...Undercarriage."
+    "Alice wheezed, panting hard and blowing out her cheeks."
+    WG "I can't, {i}*huff*{/i}, do this, {i}*puff*{/i}, all day..."
+    "If it wasn't for the rushing water from the shower, I bet her whole body would be gleaming with sweat. Her chest heaved in and out, quivering her broad tits."
+    show WG doubt
+    "She was winded, and her hips swayed even slower. Standing this way, leaning on her toes, was taxing, let alone wall-fucking. She had to haul her fat back and forth, back and forth, in such an unusual way."
+    MC "Just-Just a bit more...!"
+    show WG surprised
+    WG "Ke-Keisuke!"
+    "I felt Alice's whole body shudder, her voice trailing off into silence with her last thrust."
+    MC "!"
+    show WG aroused
+    "And that was what sent me over the edge, everything I had was emptied into her. It was draining, but the satisfaction was indescribable."
+    pause .4
+    show WG neutral
+    "It took a minute just for either of us to speak up, the air having left both our bodies."
+    WG "This never leaves this room, understood?"
+    MC "What never leaves this room?"
+    show WG happy
+    WG "Exactly."
     jump daymenu
 
 label WG061S_C2_1:
-    MC "No problem my lady."
+    MC "No problem, my lady."
     show WG neutral-2
     WG "You don't have to be so formal, but I won't stop you."
     MC "I feel that a lady should be pampered whenever her man can spare."

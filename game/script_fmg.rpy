@@ -1682,6 +1682,8 @@ label FMG016:
     $setProgress("FMG", "FMG017")
     scene Dorm Interior with fade
     play music FMG
+    $setFMGOutfit(OutfitEnum.ATHLETIC)
+    $setNatsOutfit(OutfitEnum.ATHLETIC)
     MCT "Shit! I slept through my alarm... Akira is gonna kill me. I told her I'd be at her dorm by twelve and it's three o'clock."
     scene Dorm Hallway with fade
     MC "I gotta hurry to the track, she's going to be pissed."
@@ -10950,6 +10952,388 @@ label FMG064:
     jump daymenu
 
 label FMG065:
+    $setProgress("FMG", "FMG066")
+    play music DayByDay
+    scene Beach with dissolve
+    MC "Why did you make us come so eeeeearly? I was having a great dream."
+    show FMG neutral with dissolve
+    FMG "Because I thought it would be fun to spend some time together before everyone else showed up."
+    show FMG sad-2
+    FMG "But if you don't love me anymore we can leave."
+    MC "Awesome, let's get going."
+    show FMG angry-3
+    MC "Don't make that face. You set me up. {w}Would a kiss make you feel better?"
+    show FMG neutral
+    FMG "Yes. Yes, it would."
+    MC "Keep waiting."
+    show FMG sad-2
+    FMG "And to think I bought a new two-piece just for you. How could you treat me like this?"
+    MC "I don't know. You make it pretty easy."
+    show FMG neutral
+    FMG "I should toss you across the beach."
+    MC "You could. Or you could let me help you with your sunscreen."
+    FMG "I could. Or I could let the other girls help instead."
+    MC "I... I don't like you."
+    FMG "I'm glad we agree on something."
+    pause 1
+    MC "But seriously, can I help with the sunscreen?"
+    show FMG aroused-2
+    FMG "Of course, silly. I wouldn't want anyone else."
+    MCT "I love this woman."
+    MC "You um... going to change into that new... swimsuit??? I know this guy who would love to see it."
+    show FMG neutral
+    FMG "Oh, yeah? Who would that be?"
+    pause 1
+    MC "Me. I'm the guy."
+    FMG "Guess you won't be seeing anything."
+    MC "..."
+    MC "But why?"
+    FMG "Kei-kun, I love you. I seriously do. Just wait till the others show up. Can you keep it in your pants for five minutes? For me?"
+    MCT "No."
+    MC "I GUESS."
+    MC "Can we at least grab a bite to eat at the snack bar? Ya boi is starving."
+    FMG "I GUESS."
+    MC "You feel like paying?"
+    FMG "..."
+    MC "..."
+    MC "Y-You going to answer?"
+    FMG "I think... you should pay... {size=-6}because I totally didn't forget my wallet.{/size}"
+    MC "Uh-huh. \"Forgot.\" Just like how you \"forgot\" to put a new roll of toilet paper in and left me to suffer in your bathroom."
+    show FMG angry-3
+    FMG "You can check before you sit down! That's on you! You also could've called Chibuki and she would've thrown it in."
+    FMG "OR you could've stood up and got it yourself."
+    MC "You're right. I could've but I was in the middle of a match of Blash Morale and if I lost I would've dropped to plat."
+    show FMG sad-2
+    FMG "Don't lie. I know you're hard stuck in silver. I checked your phone the other day."
+    MC "I see you don't respect my privacy."
+    show FMG neutral
+    FMG "Hey, I wasn't looking for texts to other girls that were sexy or anything. You barely have any game as it is. I know I'm safe."
+    MC "Suddenly, I'm not hungry anymore."
+    FMG "Coooome here, let me hug the pain away."
+    MC "Y-You know. The thought is good... h-however, this hurts."
+    show FMG surprised
+    FMG "Sorry! I didn't mean to squeeze so hard."
+    "I carefully cracked my back back into place and reassured her."
+    MC "You're good. Most of the pain isn't from the hug anyway..."
+    MC "I keep forgetting you grow all the time. You look the same for so long and then poof you're six inches taller and have tree trunks for legs. It's a little weird."
+    show FMG neutral
+    FMG "That is weird... Best not to pay it much attention, though. Also, we might want to head back to our spot. The other girls should be there by now."
+    MC "Carry me."
+    FMG "I'll make sure to trip so I fall right on top of you."
+    MC "Don't have to tell me twice."
+    show FMG sad-2
+    FMG "What am I going to do with you...?"
+    MC "I'm kidding. We can walk and talk."
+    show FMG neutral
+    FMG "Oh! There actually is something I wanted to talk to you about."
+    MC "Let me hear it."
+    FMG "With my brother's birthday coming up... I want to go back and visit Okinawa. I want to visit his grave."
+    MC "If that's what you want, I remember you talking about it before so I'm all for it, of course. The only problem I see is us getting there."
+    FMG "I took care of that. I've been talking to Alice about everything and she said it's okay that we can take one of her private jets."
+    MCT "One of..."
+    MC "Will you even fit? And will you be okay in such a tight space at your size?"
+    FMG "Yeah... Yeah, I'll be fine. I'll have you by my side."
+    MC "As long as you don't hog all the snacks."
+    show FMG happy
+    FMG "No promises. Alice has to have some bomb snacks on her jets."
+    MC "True. She has to have all the expensive brands!"
+    scene black with fade
+    pause 1
+
+    scene Beach with fade
+    MC "Gawd damn, these girls take forever. How hard is it to put on smaller clothes???"
+    MC "You girls almost done? It's been hours."
+    Natsuko "It's been five minutes. {w}Is he always like this?"
+    FMG "He's been harassing me to put this on ever since we got here."
+    PRG "E-Excuse me, Akira. C-Could you help me get this on?"
+    FMG "Yeah, no problem!"
+    pause .5
+    FMG "There!"
+    PRG "Thank you so much!"
+    FMG "Don't mention it. You need help, Sakura?"
+    Sakura "Nah, I'm good. Thank you though."
+    MCT "I'd help... if anyone asked me."
+    MCT "Maybe not Sakura though... she's got too much going on down bottom."
+    "Thankfully Akira and Nat had finished changing and walked out before boredom did me in."
+    #REPLACE WITH SWIMSUIT ONCE CASUAL SPRITES ARE FINISHED
+    $setFMGOutfit(OutfitEnum.SWIMSUIT)
+    $setNatsOutfit(OutfitEnum.SWIMSUIT)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    MCT "My brain is melting."
+    Natsuko "I still can't believe they didn't have bottoms big enough for my legs. I should've gone to Alice."
+    FMG "I told you. This one felt bigger before, if I flex my chest it's probably going to pop off."
+    MC "{i}*cough*{/i} You girls ready to go?"
+    FMG "Aida and Sakura are almost done. Aida went to grab a book and Sakura is tying her hair."
+    Natsuko "They said we can wait for them back at our spot. Whatever gets me away from this disgusting changing room."
+    scene black with fade
+    pause 0.5
+    scene Beach
+    show FMG neutral
+    with dissolve
+    FMG "Your time to shine, Kei. Here."
+    MCT "Sunscreen. I live for these moments."
+    MC "Well, if you insist, heh."
+    "I cracked my knuckles, hyping myself for the best five minutes of my life. While Akira laid down and spread her back. I began shooting the sunscreen into my hands."
+    MC "I can help you apply sunscreen to your back too Nat, if you want."
+    show FMG neutral at altMove(0.5, 0.25)
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Natsuko "Hm."
+    Natsuko "Akira, how would you rate Hotsure-san's sunscreen applying abilities?"
+    MCT "Don't fail me, Akira."
+    FMG "Honestly? He's good, I'd give him a four and a half stars. He has soft and warm hands which feel great as he moves along the body. But that was back when I was smaller. I don't know how he holds up now. He could be worse or he could be better."
+    Natsuko "I see."
+    Natsuko "Here's the deal, Hotsure-san. If Akira says you do a good job {i}this{/i} time. You can help me. If you don't then Akira is doing it for me."
+    MCT "Did you just blow in from stupid town, Nat? That's a win-win."
+    MC "Yeah, if that's what you want to do. Spread your back just a tiny bit more, Akira."
+    FMG "That good?"
+    MC "Perfect, thanks."
+    hide FMG
+    hide Natsuko
+    with dissolve
+    pause .5
+    "It never gets old. Caressing her body, the experience is always surreal. I could get lost-"
+    show Natsuko neutral with vpunch
+    Natsuko "Where are Aida and Sakura?"
+    MCT "Guess I can get lost another time..."
+    show Natsuko neutral at altMove(0.5, 0.75)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    FMG "That's true. We should go look for them. It shouldn't take them that long to get a book or to tie hair."
+    MC "I'm sure they're fine."
+    "Clearly I hit a nerve because Nat wasn't having any of that."
+    Natsuko "We are going to look for them. {i}Now.{/i}"
+    MC "Uuuuh... sure."
+    MCT "I must've been inches away from death. She's never looked that serious."
+    Sakura "Don't worry, Nat. We're here. We had a little problem, but it's nothing to worry about!"
+    hide FMG with dissolve
+    show Sakura happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    Natsuko "And what was the problem?"
+    Sakura "Nothing important. We're here now so we can finally kick back and relax."
+    Natsuko "Mhmm."
+    hide Natsuko
+    hide Sakura
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    PRG "H-Hi. S-Sorry we took so long."
+    FMG "Don't sweat it, Aida. Not like we were doing anything important."
+    MCT "This means more to me than you could ever know."
+    FMG "Are you and Sakura okay? You guys took forever. I've never seen Nat so worked up."
+    PRG "Y-Yeah..."
+    PRG "S-Some boys were... uhm... hitting on Sakura."
+    PRG "A-Anyway. Those two are pretty close now."
+    PRG "And, from what I've heard, Natsuko can be a little... protective of her."
+    FMG "You learn something new about Nat every day."
+    "While Akira and Aida were talking, Nat had pulled Sakura aside."
+    hide FMG
+    hide PRG
+    with dissolve
+    "Though a decent distance away, I could still make out what they were saying, thanks to Natsuko's... generous vocal tone."
+    show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
+    show Sakura neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    Natsuko "Are you okay?"
+    Sakura "Yes, Nat. I'm fine. I'm a tough girl."
+    Sakura "If I need someone to go full helicopter parent for me, I'll let you know."
+    Natsuko "Good. Sorry for pulling you aside."
+    Sakura "Hahh... it's fine."
+    pause .5
+    Sakura "Look, just... try to give me a chance to hold my own before you go in guns blazing, okay?"
+    hide Natsuko
+    hide Sakura
+    with dissolve
+    MCT "This new Natsuko is so much better than the old one. Imagine meeting the one that had feelings. Crazy how different things could've been from the start."
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    FMG "Hey, Aida, could you rub sunscreen on my back? Kei kind of stopped halfway."
+    MCT "Don't you dare, cinnamon roll."
+    PRG "O-Oh, sure."
+    MC "Don't worry, Aida! I can take it from here!"
+    show PRG surprised
+    MC "I don't want you hurting yourself, hahaha..."
+    MCT "Go read your book and think about what you almost took from me."
+    MC "I set up your stuff over there so you'd be as comfortable as possible."
+    show PRG happy
+    PRG "Oh, um... t-thank you, Keisuke. T-That was really nice of you."
+    FMG "What are you reading, Aida?"
+    PRG "Sakura got it for me the other day. It's called uh... Diant's Inferno."
+    FMG "Is it any good?"
+    show PRG sad-2
+    PRG "I-It is, yes. It's kind of... different."
+    MCT "I'd bet all the money in my wallet that it sucks, but she doesn't want to tell Sakura."
+    hide PRG with dissolve
+    "Aida walked off to go relax in her beach chair leaving me to finish the job I've been trying to finish for twenty minutes."
+    show FMG angry-3 at Transform(xzoom=-1)
+    show FMG angry-3 at altMove(0.25, 0.5)
+    FMG "I can't believe you ripped the sunscreen bottle out of a pregnant woman's hands."
+    MC "To the untrained eye it might seem like that. However, I did what was best... {size=-6}for me.{/size}"
+    FMG "You're going to apologize later, right?"
+    MC "Yes, I will. Scout's honor."
+    show FMG neutral
+    FMG "Good. And if I find out you didn't, I'll have Nat toss you in the trash."
+    MC "There is nothing stopping me from squirting this in your hair."
+    show FMG flex at Transform(xzoom=1)
+    FMG "I'll throw you across the beach if I even feel a drip."
+    MC "Bet?"
+    show FMG neutral
+    FMG "Bet."
+    "As I was {i}finally{/i} getting my mojo back, I once again blasted the sunscreen into my hands."
+    MCT "Finally, it's been eighty-four years. Time to get lost in the sauce."
+    hide FMG with dissolve
+    "I gently moved my hands across her back savoring every inch."
+    MCT "It doesn't-"
+    show Sakura happy with vpunch
+    Sakura "Hey, Keisuke! Nat and I were wondering if you could help us with something."
+    MCT "I'm about to lose it."
+    MC "I would love to!"
+    show FMG neutral at Position(xcenter=0.85, yalign=1.0) with easeinright
+    FMG "Don't worry, Kei-kun. I'll ask Aida again for her help."
+    MC "T-That's great! I'm sooo happy to hear that. I'll be right back."
+    FMG "Take your time. I'll still be here when you get back."
+    MCT "I want to scream."
+    show FMG at Transform(xzoom=-1)
+    hide FMG with easeoutright
+    MC "Alright, Sakura. How can I be of service?"
+    show Sakura neutral
+    Sakura "Heh, it's a funny story. Where do I begin? Uh, Nat went to buy a snack at the snack bar and the guy {i}might{/i} have gotten a little scared..."
+    MC "I see. Now, I don't mean to sound rude but ummm... could you not help her?"
+    show Sakura neutral
+    Sakura "I was willing. Except she asked for your help, not mine."
+    MCT "What's the difference????"
+    MC "Uh-huh. I'll see what I can do."
+    Sakura "Thanks, Hotsure-san. You're the best."
+    MC "Y-Yeah, yeah I know."
+    MCT "Can't have shit at the beach when we invite other people."
+    hide Sakura with dissolve
+    pause 1
+    "Didn't take me long to find Nat gripping the side of the snack bar visibly frustrated. The cracks she had made in the wall drove the point home."
+    MC "You might want to lighten your grip there."
+    show Natsuko smug with dissolve
+    Natsuko "Heh, didn't even notice."
+    show Natsuko neutral
+    extend " Anyway, I need your help."
+    MC "With what? Getting an ice cream bar? Would you like me to hold your hand?"
+    show Natsuko aroused
+    Natsuko "I would."
+    show Natsuko neutral
+    MCT "Apparently that was the wrong question..."
+    Natsuko "But yes, I need your help getting a bag of twisties. The guy refuses to be of any help."
+    MC "..."
+    MC "You threatened him didn't you?"
+    Natsuko "No. I did not."
+    "She turned her head away from me as she finished her sentence."
+    MC "Yeah, you definitely did. I won't push it anymore though. I'll be right back."
+    Natsuko "I have nothing to gain by lying to you."
+    MC "It's whatever, Nat. Don't destroy the building till I get back."
+    hide Natsuko with dissolve
+    MC "Hey. Anyone here? I'd like to order a bag of twisties."
+    "The dude behind the counter didn't say a word or even lift his head up from below the table. He tossed the bag on the counter in one swift motion."
+    MC "Uh... thanks? How much-"
+    "Under-Paid Employee" "I-It's on the h-house."
+    MC "Listen, bro, I spoke to the lady who I assumed scared you half to death. Are you good?"
+    "Under-Paid Employee" "Y-Yeah I'm fine, don't w-worry about it. My s-shift is almost o-over."
+    MC "You sure?"
+    "Under-Paid Employee" "Yep! Thanks for your business!"
+    MC "Alrighty then. Have a great day, man. Take it easy."
+    "I walked back over to find Nat staring off at the water wiping what I think were tears away."
+    show Natsuko neutral with dissolve
+    MC "Everything alright?"
+    Natsuko "Hotsure-san... I didn't see you there. Yes, everything is fine."
+    MC "Listen, Nat. I know we aren't like super cool with each other. But if you need to get something off your chest. You can do it now when no one's around."
+    show Natsuko disappointed
+    Natsuko "There is nothing to talk about. Did you get what I asked for?"
+    MC "Yeah... Catch. Do you mind me asking what you said? The dude wouldn't even get up from under the table."
+    Natsuko "I didn't say anything. I walked up and he panicked. Said I looked like a freak and cowered behind the counter."
+    MC "I'm a little confused. The beach is part of the school. This guy should be seeing people like us daily. What makes you so different from me?"
+    Natsuko "I don't know or care. I don't want to talk about it anymore."
+    MCT "She treated Akira like this before... and now it's happening to her. Never-ending cycle it seems."
+    MC "I think you should talk to Akira. It might be time for you guys to get to know each other a bit better."
+    show Natsuko neutral
+    Natsuko "I'll consider it."
+    MC "Whatever you say. Let's head back."
+    hide Natsuko with dissolve
+    MCT "Well, that answers my question of why she asked for me over Sakura. She didn't want her to see her like that."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.EVE)
+    scene Beach
+    show Natsuko neutral
+    with fade
+    MC "I didn't take you for one to eat candy. Considering, you know, you got mad at me for eating it at the gym."
+    Natsuko "Because you shouldn't be eating it as you workout. And while my sweet tooth isn't like Akira's, I still prefer something sweet every now and then."
+    MC "Can I have one?"
+    Natsuko "I guess, you did help me after all, but just one. The rest are mine."
+    MC "One is good enough for me."
+    hide Natsuko with dissolve
+    "As we walked back to the group I spotted Akira, Sakura, and Aida sitting together sharing some laughs while Akira was holding onto Aida's book."
+    MCT "Yo, Akira reads? That's crazy."
+    MC "What's going on over here, ladies? What did I miss?"
+    show FMG happy at Position(xcenter=0.25, yalign=1.0)
+    show PRG happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "After Aida helped me out, I asked how her reading was going and she explained she reads it to her tummy."
+    PRG "I was reading online the other day that talking to your babies before they're born is good for them."
+    FMG "Of course, I had to volunteer. How could I miss out on educating the youth, you know?"
+    MC "I don't know if you'd be my first choice for educating the youth."
+    show FMG neutral
+    FMG "My offer of throwing you across the beach still stands."
+    MC "I kid, I kid."
+    PRG "S-She actually was doing really well..."
+    MC "Don't mind me, keep going."
+    "Before I had the chance to sit down, Sakura tugged on my arm."
+    hide PRG
+    hide FMG
+    show Sakura neutral
+    Sakura "Can I talk to you real quick?"
+    MC "Yeah, sure."
+    MC "Don't wait for me guys. I'll be right back."
+    "Sakura and I walked a good distance away to avoid any eavesdropping."
+    Sakura "Thank you for helping Nat."
+    MC "You know?"
+    Sakura "Sorta. I know she's been having trouble making friends and how some people have been treating her."
+    MC "This doesn't make sense to me. Akira and I always heard about how friendly everyone is to her. It sounded like she had no issues making friends with anyone. Hell, even Chibuki told us that."
+    show Sakura sad
+    Sakura "That's not the full story. Yeah, others are friendly to her but that's due to most people being afraid of her..."
+    MCT "Can't say I blame them when she tosses them in trash cans."
+    Sakura "Aida, Alice, Akira, Shiori — all the people we hang out with — is where she's treated like a human being. Other people aren't usually like that."
+    Sakura "I just don't know how I can help her... and I don't want her to feel like I don't care."
+    MC "Relax. We don't need Nat to see you like this. It's time for you guys to sit down and talk for real. You need her to come clean somehow."
+    MC "I'll talk with Akira and see what we can come up with. I think for now it's best to not pay too much attention to it and keep going about your day if that makes sense. Nat is tough on the outside and on the inside. She can handle herself for now."
+    pause 1
+    show Sakura neutral
+    Sakura "You're right..."
+    MC "Come on, I've seen enough tears recently. Let's enjoy each other's company for today."
+    Sakura "Thanks."
+    MC "Don't mention it."
+    hide Sakura with dissolve
+    pause .5
+    "This day was eventful, to say the least. At least now we could all kick back and relax."
+    MC "Aida! I called dibs on the next chapter!"
+    show PRG surprised
+    PRG "O-Oh! But Natsuko already asked for that!"
+    hide PRG
+    show Natsuko smug
+    Natsuko "Nice try, Hotsure-san."
+    MC "Fine. I'll take the new chapter."
+    hide Natsuko
+    show Sakura neutral
+    Sakura "Nope, that's mine."
+    MC "Bruh. Okay, the NEXT next one."
+    hide Sakura
+    show PRG sad-2
+    PRG "S-Sorry, Keisuke. But that's my chapter..."
+    MCT "I have to be getting pranked right now."
+    PRG "And Akira asked for the chapter after mine."
+    MC "It's fine. I didn't want to feel special anyway."
+    hide PRG
+    show FMG happy
+    FMG "Sucks to suck."
+    MC "SuCkS tO sUcK."
+    MCT "I want to educate the youth too..."
+    jump daymenu
+
+label FMG066:
     "This marks the current end of Akira's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

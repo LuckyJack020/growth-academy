@@ -13,22 +13,22 @@ label GTS001:
         "I just recovered my footing in time to see a half-flailing student running off without a glance back."
     MC "Ay, watch it!"
     UNKNOWN "Sorry!"
-    "He didn’t look back, fading into the crowds alongside the wind."
+    "He didn't look back, fading into the crowds alongside the wind."
     MCT "Dick."
     UNKNOWN "Hotsure-san? Are you alright?"
-    "The next thing to catch me off guard was a girl’s voice, one enveloping and immaterial, like spring mist."
+    "The next thing to catch me off guard was a girl's voice, one enveloping and immaterial, like spring mist."
     show GTS surprised:
         xpos 0.99 xanchor 0.0 yalign 1.0
         linear 5.0 xpos 0.5 xanchor 0.5
     extend " I twisted around; one of the girls from my class was walking up to me from behind while raven locks waved behind her in the breeze."
-    MC "Yamazaki-san, right? Yeah, I’m okay. That dude just surprised me."
+    MC "Yamazaki-san, right? Yeah, I'm okay. That dude just surprised me."
     GTS "It would seem so. How peculiar. I wonder what compelled him to act so brashly?"
-    MC "Dunno. He’s probably not available for interview."
-    GTS "I suppose he wouldn’t."
+    MC "Dunno. He's probably not available for interview."
+    GTS "I suppose he wouldn't."
     GTS "Well now, what are you up to?"
-    MC "Nothing much, just checking out what’s on campus. How about you?"
+    MC "Nothing much, just checking out what's on campus. How about you?"
     GTS "Much the same. For all its peculiarities, this place has a sort of charm to it, does it not?"
-    MC "I guess so. I’m kinda distracted by all the ‘peculiarities’ at the moment."
+    MC "I guess so. I'm kinda distracted by all the ‘peculiarities' at the moment."
     show GTS happy
     "She closed her eyes in a genteel, whispered chuckle, which she moved to cover with her hand."
     show GTS neutral at Transform(xzoom=-1)
@@ -550,7 +550,7 @@ label GTS007:
     "She looked up from a letter when I called out to her, and responded with a gentle wave of her hand."
     show GTS neutral at center with dissolve
     GTS "Hello, Hotsure-san. I was reading a letter that my mother sent me. How are you?"
-    "Naomi’s direct and formal language was somewhat different from the others I talked to at school. She appeared to be very disciplined and tactful, the way that she spoke."
+    "Naomi's direct and formal language was somewhat different from the others I talked to at school. She appeared to be very disciplined and tactful, the way that she spoke."
     MC "I've been pretty good, for the most part. Also, a handwritten letter? I'm surprised people still make those."
     "A faint smile crossed her face as she folded up the letter and placed it back into the envelope."
     GTS "Yes, they seem to be quite rare nowadays. However, my mother really enjoys traditional writing. It's become sort of a thing she does for those living far from home."
@@ -563,50 +563,50 @@ label GTS007:
     "There was the faintest smirk out of Naomi as her smile grew a little, giving a nod of acknowledgement as I sat down beside her."
     GTS "Yes, Kyoto is very well known for its cuisine. Specifically, our tofu and Kaiseki cuisine."
     GTS "My friends and I made it our personal goal to visit a new restaurant every weekend. It was rather fun, and it gave me a deep appreciation for my hometown. It lets you explore more, and sometimes you find little underappreciated establishments."
-    MC "Wow, that sounds like it'd be cool to do. Though, it also sounds like it’d be pretty heavy on the wallet after a while, wouldn't it?"
+    MC "Wow, that sounds like it'd be cool to do. Though, it also sounds like it'd be pretty heavy on the wallet after a while, wouldn't it?"
     GTS "Some places were more expensive than others, yes. You'd be surprised by some of the places you find, though. Every now and then, we'd stumble across a place that not only had great dishes, but reasonable prices too."
-    GTS "We had really expanded our list of places we could socialize. We’d claim that a new spot was our favorite, only to change it again a few weeks later."
+    GTS "We had really expanded our list of places we could socialize. We'd claim that a new spot was our favorite, only to change it again a few weeks later."
     MC "Heh, that doesn't sound like a bad habit to have. Though, now I'm trying to think if I ever did anything like that."
     MC "I mean, I think I did a normal amount of exploring, but it was never too extensive. It might just be because of how crowded it often gets where I'm from."
-    GTS "Where are you from, if you don’t mind me asking?"
+    GTS "Where are you from, if you don't mind me asking?"
     MC "Oh, I'm from Tokyo. The big city, Gojira's favorite playground. Just a little bit off of Shibuya."
     GTS "Oh, wow! That must have been exciting, being so close to the center of all the action. You must have seen and experienced many interesting things."
     MC "Yeah, especially during the holidays when all the tourists take over the streets. You basically turn an already crowded intersection into an impenetrable wall of people."
     MC "I felt bad for the people driving because, well... they weren't going anywhere for quite a long while."
     GTS "I do hope that you were careful during those times. I've heard stories of how overwhelming Shibuya can get during the holidays."
     show GTS sad
-    GTS "I’ve also heard quite a few horror stories about some of the nastier incidents that can take place due to the massive amount of traffic."
+    GTS "I've also heard quite a few horror stories about some of the nastier incidents that can take place due to the massive amount of traffic."
     MC "Yeah, I was okay. I knew well enough to not get too absorbed into the larger crowds, and kept away from people who could have looked like trouble."
     MC "Plus, it's always good to have a couple of friends with you. Makes some of the troublemakers think twice before trying anything."
     MC "That's just Shibuya during the big times of the year, though. How about Kyoto? Does it get as crowded as Tokyo?"
     show GTS neutral
     GTS "Well, it would depend on the time of year, I suppose. It's the same as any big city, I imagine. Around Christmas time, though, restaurants tend to start charging more for meals -- sometimes even doubling their prices."
     MC "Because of all the people, I assume?"
-    GTS "It’d make sense, yes. A lot of people see Christmas as a big date night event in Kyoto."
-    GTS "I don’t exactly approve of their tactics, but I can understand why it happens. Dining out on a holiday is a lot more difficult when you consider how many places will close."
+    GTS "It'd make sense, yes. A lot of people see Christmas as a big date night event in Kyoto."
+    GTS "I don't exactly approve of their tactics, but I can understand why it happens. Dining out on a holiday is a lot more difficult when you consider how many places will close."
     GTS "I recall that many of my friends enjoy going out on dates to places like La Part Dieu, this wonderful French restaurant. Alternatively, they might go to Daimaru to visit the stores and see the decorations."
     MC "I bet they saved up all year long for that night, if it's as expensive as you say it is. I can't say I've ever found myself in a scenario like that, though."
     MC "Which is probably for the best, because I don't know any fancy places to eat. But how about you? Did you ever do anything with someone special?"
     "Naomi's cheeks turned quite the adorable shade of red as her composure broke and she looked down at her letter."
     show GTS embarrassed
-    GTS "M-me!? Oh no, I haven’t...  I never had any time for things like that. I was always too focused on other things like helping around the house or preparing for other social events."
+    GTS "M-me!? Oh no, I haven't...  I never had any time for things like that. I was always too focused on other things like helping around the house or preparing for other social events."
     MC "Oh? Are you telling me that you've never been on a date, then?"
     show GTS embarrassed at center, Transform(xzoom=-1)
     "I could see her face brightening up more as she tried avoiding eye contact. It was rather sweet seeing this side of her."
-    GTS "I'll admit... I have not. My schedule was -- and to an extent, still is -- filled up with many responsibilities. It would have been nice to have seen what it was like, but I suppose fate hadn’t said it was the right time yet."
+    GTS "I'll admit... I have not. My schedule was -- and to an extent, still is -- filled up with many responsibilities. It would have been nice to have seen what it was like, but I suppose fate hadn't said it was the right time yet."
     show GTS neutral at center, Transform(xzoom=1)
     "She looked back towards me as she managed to regain her composure. I gave her a small nod, as I didn't want to push the issue too hard."
     MC "Yeah, I guess it would be pretty tough if you're always busy. But at the same time, I wouldn't worry too much about it."
     MC "Back on the topic of hanging out with friends, have you managed to make any new ones here?"
-    GTS "...No, not really. It's been a chaotic time since everyone’s trying to get settled in, so I try not to impose on them. I hope that more people open up to me in the next few weeks."
+    GTS "...No, not really. It's been a chaotic time since everyone's trying to get settled in, so I try not to impose on them. I hope that more people open up to me in the next few weeks."
     GTS "Maybe then, it'll be a bit easier to introduce myself to more people."
-    MC "Well if you’d like, you could hang out with me and my friends. I can't promise you'll hit it out of the park right away but it's worth a shot, right?"
+    MC "Well if you'd like, you could hang out with me and my friends. I can't promise you'll hit it out of the park right away but it's worth a shot, right?"
     "Naomi silently pondered to herself for a few moments."
     GTS "Would it be okay if I took a little time to figure out my schedule before giving you an answer, Hotsure-san?"
     MC "Heh, yeah... it's okay, Yamazaki-san. We're still young, after all. Take your time."
     "I gave her a small chuckle, and she returned a brief nod. I leaned back a little, enjoying the calm of the garden and the gentle breeze."
     "The two of us remained silent for several minutes. We breathed rhythmically, entering a zen state."
-    "I didn’t mind the quiet. It was probably the most peaceful I had felt in quite some time."
+    "I didn't mind the quiet. It was probably the most peaceful I had felt in quite some time."
     jump daymenu
 
 label GTS008:
@@ -2075,11 +2075,11 @@ label GTS018:
     show GTS embarrassed
     GTS "..."
     MC "..."
-    Fumika "Anyway, as I was saying. You're just perfect! Have you ever been interested in joining the basketball team? It's a ton of fun, and we’re in need of new players."
+    Fumika "Anyway, as I was saying. You're just perfect! Have you ever been interested in joining the basketball team? It's a ton of fun, and we're in need of new players."
     GTS "Well... I hadn't really thought about it before, in truth."
     Fumika "Whaaa? How could you not? With your height and build, you'd be a {i}natural{/i}."
     GTS "It's simply something that hasn't crossed my mind. I do apologize, but I'm not much for athletic pursuits."
-    Fumika "That's totally fine, we wouldn't throw you into the deep end at the start. We'd help you get the basics of the game down. Plus, there are other girls around your height. You won’t be alone!"
+    Fumika "That's totally fine, we wouldn't throw you into the deep end at the start. We'd help you get the basics of the game down. Plus, there are other girls around your height. You won't be alone!"
     GTS "Around my height?"
     Fumika "Of course! I mean, it's only natural to take what you're given as an advantage. Someone as tall as you would make an amazing center, but we typically leave point guard to the students who are... you know, more gifted in the chest!"
     Fumika "What do you think, Hotsure-san? She'd fit right in, wouldn't she?"
@@ -2094,13 +2094,13 @@ label GTS018:
 label GTS018_c1_1:
     Fumika "Totally!"
     GTS "Are you quite sure?"
-    MC "Yeah! You’ll get to learn something new, and maybe make some new friends, too."
+    MC "Yeah! You'll get to learn something new, and maybe make some new friends, too."
     GTS "That is true. I only worry that I have never been particularly good at sports."
     Fumika "Don't worry, when we're done with you you'll be an unstoppable dunking machine! I mean just picture it, being the star of the team!"
     $setAffection("GTS", -1)
     show GTS sad
     GTS "Apologies, I'm just not sure. Would it be alright if I took some time to think it over?"
-    Fumika "Oh yeah, take as much time as you need! There’s no rush. We're normally practicing at the gym after class on Thursdays, so if you want, you can just stop by. We'll introduce you to the rest of the team."
+    Fumika "Oh yeah, take as much time as you need! There's no rush. We're normally practicing at the gym after class on Thursdays, so if you want, you can just stop by. We'll introduce you to the rest of the team."
     show GTS neutral at Transform(xzoom=-1)
     GTS "Thank you. I'll see if I have time to stop by."
     Fumika "Great! I'll see you there, then! Later you two!"
@@ -2139,7 +2139,7 @@ label GTS018_c1_2:
     GTS "Thank you very much for understanding."
     MC "Still... can't believe she thought we were dating."
     show GTS embarrassed
-    GTS "...I can’t believe it, either. I didn’t think I was giving off that impression."
+    GTS "...I can't believe it, either. I didn't think I was giving off that impression."
     "We both sat there silently for a few moments. Naomi idly swayed her long legs as she sat."
     MC "So... where were we?"
     GTS "We were about to study."
@@ -4744,23 +4744,23 @@ label GTS028S:
             "I produced the requisite bills and handed them over. The gaunt stack of wan yellow bills that remained stared up at me as I shut them away back into my pocket."
             Cashier "Thankya sir! I'll getcha your drinks real quick."
     "We each took our drinks in turn as he set them out; the can was cold and dewy in my hand, and in the midst of the steamy air I savored the feeling."
-    "The muscled young cook’s quick work soon made good on his father’s promise, hardly breaking a sweat through Ryoko’s spiderweb of an order."
+    "The muscled young cook's quick work soon made good on his father's promise, hardly breaking a sweat through Ryoko's spiderweb of an order."
     "We were off with warm ceramic bowls in our hands... Naomi quickly found it easier to hold hers in one... and we scanned the room for a bench table."
     "Minori squeezed by first with a muttered apology and sat in one corner, laying her clipboard on her lap."
     "Ryoko followed, bending her arms to avoid a handful of idle customers, and scooched in next to her faithful companion."
     show GTS surprised #note to self, an embarrassed sprite would be ideal
     GTS "Would you like to go first, Hotsure-san?"
-    MC "Nah, I wouldn’t want you squished up against the wall. You can go if you want."
-    GTS "Well, that’s very considerate of you."
+    MC "Nah, I wouldn't want you squished up against the wall. You can go if you want."
+    GTS "Well, that's very considerate of you."
     "She brought her arms in around her waist as close as she could, at which point most of the people standing around made some room."
     GTS "Pardon me..."
-    "She shimmied around the table’s edge and up next to Ryoko before seating herself; though the seating was clearly built with factors in mind, I yet beheld Naomi’s head-sized silken shoes and just a bit of her shins peeking out from the shadow of the table."
+    "She shimmied around the table's edge and up next to Ryoko before seating herself; though the seating was clearly built with factors in mind, I yet beheld Naomi's head-sized silken shoes and just a bit of her shins peeking out from the shadow of the table."
     show GTS surprised
     "She noticed, too, and promptly drew them back until her knees hit the plywood."
     show GTS neutral
     "Then it was my turn, and thankfully it looked like I had just enough room."
     MC "Hm..."
-    "I was squeezed against the wall, but also the stiff but still soft plastic cushion, as well as Naomi’s skirt-swaddled left hip, more like a giant, warm pincushion. Not bad accommodations, all told."
+    "I was squeezed against the wall, but also the stiff but still soft plastic cushion, as well as Naomi's skirt-swaddled left hip, more like a giant, warm pincushion. Not bad accommodations, all told."
     "I looked up at the faintest blush on her cheeks as she closed her eyes and brought her hands together. I followed suit."
     All "Itadakimasu."
     Ryoko "-kimasu."
@@ -4769,7 +4769,7 @@ label GTS028S:
     GTS "That it does."
     "I bundled up some in my chopsticks and took a bite; I was not disappointed."
     show Ryoko happy
-    Ryoko "Mm-mm! They nailed it, it’s flawless."
+    Ryoko "Mm-mm! They nailed it, it's flawless."
     MC "Against all odds."
     show GTS aroused
     "Naomi let out a cough that sounded an awful lot like a stifled laugh. I smiled."
@@ -4781,14 +4781,14 @@ label GTS028S:
     MC "Pretty good."
     Minori "Pretty good."
     pause 1.0
-    MC "How’s yours, Yamazaki-san?"
+    MC "How's yours, Yamazaki-san?"
     "She tapped her chin with the thick ends of her chopsticks."
     GTS "It reminds me a great deal of when my friends and I would try out different restaurants in Kyoto."
     MC "I see. Not your favorite?"
     show GTS neutral #another spot where an embarrassed sprite would be useful
     GTS "I do usually prefer a bit crisper scallions."
     show GTS neutral
-    extend " Otherwise, it’s rather tasty."
+    extend " Otherwise, it's rather tasty."
     stop music fadeout 2.0
     "I nodded, and then tucked into my own bowl. We had a full afternoon ahead of us, after all."
     scene black with fade
@@ -4988,21 +4988,21 @@ label GTS028S_c2_3:
     with vpunch
     Ryoko "Huh? Really?"
     show GTS surprised
-    GTS "I don’t mean to impose, of course. I could go some other day."
-    MC "No, no, it’s fine. Just... that was kinda the plot twist of the century just now."
+    GTS "I don't mean to impose, of course. I could go some other day."
+    MC "No, no, it's fine. Just... that was kinda the plot twist of the century just now."
     show Minori neutral
     show GTS happy at Transform(xzoom=1)
-    GTS "I’m no stranger to electronics, you know. My parents furnished me with a cell phone."
+    GTS "I'm no stranger to electronics, you know. My parents furnished me with a cell phone."
     show Ryoko confused
     show GTS neutral
-    GTS "After all, isn’t this the time to broaden our horizons?"
-    MC "Can’t argue with that."
+    GTS "After all, isn't this the time to broaden our horizons?"
+    MC "Can't argue with that."
     show Ryoko neutral
-    Ryoko "You make a good point. Well then, let’s head over there."
-    MC "I think this way’s the shortest way."
+    Ryoko "You make a good point. Well then, let's head over there."
+    MC "I think this way's the shortest way."
     "I led the way again through the streets."
-    "And so as much as I wanted to steal a glance at Yamazaki-san’s face, I couldn’t."
-    MCT "It hasn’t even been a week since we had dinner together. I knew there’d be a lot more to learn about her, but... how many of my other assumptions are wrong?"
+    "And so as much as I wanted to steal a glance at Yamazaki-san's face, I couldn't."
+    MCT "It hasn't even been a week since we had dinner together. I knew there'd be a lot more to learn about her, but... how many of my other assumptions are wrong?"
     scene black with fade
     pause 0.5
 
@@ -5050,49 +5050,49 @@ label GTS028S_c2_3:
     MC "So these little ones are what's called 'handheld', the console for these is portable."
     GTS "I see... oh, that one looks interesting."
     "She daintily pinched the corner of one box depicting a pale, wide-eyed woman in a kimono, looking through a spiderweb. Naomi beheld the cover with an appreciative smile as I glanced at the title:{w} Onku: Fatal Siren."
-    MC "I, uh, don’t think you would like that one."
+    MC "I, uh, don't think you would like that one."
     GTS "Oh, I see."
     "She gingerly put it back and bent down a little to scan the other games on display."
     GTS "This one has some enticing cover art as well. What do you make of it?"
-    "I looked down and saw the cover’s depiction of a blue-haired girl... I think... standing in shallow water, a cardinal perched on her outstretched finger. ‘Chrysanthemum Tussle: Farewell, My Friend.’"
+    "I looked down and saw the cover's depiction of a blue-haired girl... I think... standing in shallow water, a cardinal perched on her outstretched finger. ‘Chrysanthemum Tussle: Farewell, My Friend.'"
     MC "Oh, I think I heard of that."
     GTS "Do you think I would enjoy it?"
-    MC "You... might? I can’t really comment, visual novels kinda put me to sleep."
-    GTS "I see. Well, let’s try a different tack. What are some video games {i}you{/i} regard highly?"
-    MC "Uh, me? Hm...{w} I play Silver Moon a lot. It’s pretty fun."
+    MC "You... might? I can't really comment, visual novels kinda put me to sleep."
+    GTS "I see. Well, let's try a different tack. What are some video games {i}you{/i} regard highly?"
+    MC "Uh, me? Hm...{w} I play Silver Moon a lot. It's pretty fun."
     GTS "What about it?"
-    MC "The gameplay’s fun, and it does some interesting stuff with how you can use the characters’ abilities."
-    MC "I used to play the two-player mode with Tomo-chan when we were tweens. So I guess you could say it’s all my fault."
+    MC "The gameplay's fun, and it does some interesting stuff with how you can use the characters' abilities."
+    MC "I used to play the two-player mode with Tomo-chan when we were tweens. So I guess you could say it's all my fault."
     show GTS surprised
     GTS "Oh? How do you mean?"
-    MC "She’s, uh... {w}how do I put this...{w} she prefers alternatives to sunlight."
+    MC "She's, uh... {w}how do I put this...{w} she prefers alternatives to sunlight."
     show GTS happy
     "A crackling chuckle escaped her."
-    GTS "I’m sure your intentions were unimpeachable."
+    GTS "I'm sure your intentions were unimpeachable."
     MC "Ha, yeah."
     show GTS neutral
-    MC "If I had to pick, like, my favorite game ever, I’d have to say... Magiria Knight 2."
+    MC "If I had to pick, like, my favorite game ever, I'd have to say... Magiria Knight 2."
     GTS "What is it about?"
     MC "So you play as this young kid with a magic sword, and he gets his arm cut off early in the story..."
     show GTS surprised
     GTS "Goodness!"
     MC "Yeah, and so he gets this robot arm instead, and you go through the game helping people fight this evil empire, and he gets more gadgets to put on his arm as you go along."
     show GTS neutral
-    MC "It had a really good story, too. I won’t spoil it too much but there’s some really good subtle stuff as the story progresses, the characters are all really good, and the way the main guy’s character develops is really..."
+    MC "It had a really good story, too. I won't spoil it too much but there's some really good subtle stuff as the story progresses, the characters are all really good, and the way the main guy's character develops is really..."
     MC "..."
     stop music fadeout 1.5
     GTS "Really what?"
     "I smirked."
-    MC "You don’t really want to try it yourself, do you?"
+    MC "You don't really want to try it yourself, do you?"
     play music GTS fadein 1.0
     show GTS surprised
     GTS "Oh... was it so obvious? I meant no offense..."
-    MC "None taken. But you know, Yamazaki-san, you don’t have to go to all that trouble just to get to know me. Anything you want to know, {i}anything{/i}, all you have to do is ask."
+    MC "None taken. But you know, Yamazaki-san, you don't have to go to all that trouble just to get to know me. Anything you want to know, {i}anything{/i}, all you have to do is ask."
     show GTS neutral
     GTS "That is good to know. But would you have answered as plainly or thoroughly as you did had I simply asked you?"
     MC "Of course I... uh... maybe?"
-    "I stood in upended silence there in the Pretendo aisle, realizing I’d never much considered {i}why{/i} Naomi did things the way she did."
-    MC "Uh... well... I guess you’re right."
+    "I stood in upended silence there in the Pretendo aisle, realizing I'd never much considered {i}why{/i} Naomi did things the way she did."
+    MC "Uh... well... I guess you're right."
     pause 0.75
     MC "Should we go meet back up with Tanaka-san and Tomoe-san?"
     GTS "Whatever you prefer, Hotsure-san."
@@ -5104,7 +5104,7 @@ label GTS028S_c2_3:
     GTS "I believe I would be most delighted if you continued with your review."
     show GTS neutral
     GTS "Perhaps some additional recommendations would be edifying as well... if you felt so inclined."
-    "I smiled as I looked up at her, not knowing how she had just the words for every occasion. But I didn’t care anyway."
+    "I smiled as I looked up at her, not knowing how she had just the words for every occasion. But I didn't care anyway."
     MC "Well, where was I..."
     stop music fadeout 1.5
     scene black with fade
@@ -5225,7 +5225,7 @@ label GTS028S_c3a:
             MCT "Holy shit, she's a lifesaver."
         "More than a little relieved, I handed over the cash and quickly shut away my frail, vulnerable wallet."
     else:
-        Cashier "Okay, that brings your total to zero, and ma’am, you’ve got 900 left on this voucher."
+        Cashier "Okay, that brings your total to zero, and ma'am, you've got 900 left on this voucher."
         MC "Oh... wow, really? Sweet!"
         "I clapped my wallet shut and pocketed it, then passed the slip back to Naomi and took my tea."
     Cashier "Thanks guys, come back soon."
@@ -5678,16 +5678,16 @@ label GTS031:
     GTS "Oh, Hotsure-san! I didn't even hear you approach. I'm glad you approve of the flowers. I had a feeling it was a good choice to brighten up this place."
     show GTS neutral
     GTS "Are you thirsty, by chance? I'm considering brewing a pot of tea for myself."
-    MC "I could go for a cup. It’s been a while since I've had a cup of home-brewed tea."
+    MC "I could go for a cup. It's been a while since I've had a cup of home-brewed tea."
     "She held open the door for me. I suppose she didn't want it to hit me on the way in."
     "The dorms inside had changed slightly since I'd visited yesterday. For one, there was some more furniture, like a couch, a table, some chairs, and nearly a full kitchen."
     "Though all the new additions had a similar utilitarian aesthetic as the rest of the dorm, it was good to see some of the space filled."
     MC "Did the school provide furniture and appliances?"
     GTS "Yes, they did. Early this morning, several trucks showed up and delivered all this stuff. I'm glad they did, as last night I was worrying where I'd get furniture my size."
-    MC "Now you’ve got me curious. Where DOES Seichou get furniture this big?"
+    MC "Now you've got me curious. Where DOES Seichou get furniture this big?"
     GTS "One of the other students here mentioned there's a shop away from town disguised as a hill."
     GTS "I believe they said it was called Mt. Fuji Outfitters. It's run by a former student, like many of the other shops around town. They mainly sell clothes, which is pretty good to know since mine are starting to get a bit tight."
-    MC "I’m glad that the island and the school have ways to provide for everyone. Now all we need is a place that makes wigs, and I'll be their first customer."
+    MC "I'm glad that the island and the school have ways to provide for everyone. Now all we need is a place that makes wigs, and I'll be their first customer."
     "Naomi chuckled as she began prepping a pot of tea on the stove."
     MC "I hope that moving your stuff from your old dorm wasn't too hard."
     "Naomi's expression sank a little at the question."
@@ -5695,7 +5695,7 @@ label GTS031:
     show GTS_S sad
     GTS_S "Yes, it was quite easy to move everything over. However, I realized something while I was doing it."
     "She grabbed two moderately-sized boxes off of the nearby tabletop and placed them in front of me."
-    GTS_S "I can’t wear any of the clothing that I brought with me anymore. None of my clothes fit, and all of my school supplies don't fit my hands. None of this is usable."
+    GTS_S "I can't wear any of the clothing that I brought with me anymore. None of my clothes fit, and all of my school supplies don't fit my hands. None of this is usable."
     "She paused for a moment before shaking her head and turning her mood around."
     hide GTS_S
     show GTS neutral
@@ -5705,7 +5705,7 @@ label GTS031:
     MC "You know, you could probably keep some of these things for visitors. You can't use them, but whenever you have company, they can use the dishes and silverware."
     show GTS happy
     GTS "That is a good point. I'm glad you thought of that. I was so caught up in getting myself settled, I hadn't stopped to consider future guests."
-    MC "I’m glad I could help you with that. I hope you weren't concerning yourself with the idea of having guests so soon after moving in."
+    MC "I'm glad I could help you with that. I hope you weren't concerning yourself with the idea of having guests so soon after moving in."
     show GTS neutral
     GTS "Well, it would be rude of me to not think of others visiting my dorm."
     MC "Yes, but so soon after moving?  That seems a bit weird. I didn't even consider guests coming to my dorm until maybe three days after settling in."
@@ -5719,9 +5719,9 @@ label GTS031:
     show GTS happy
     GTS "It is extremely pleasant to be welcomed with open arms. It's like we are one big family..."
     "She stopped for a moment before shaking her head again."
-    GTS "I can't complain about anything so far. It’s very nice here."
+    GTS "I can't complain about anything so far. It's very nice here."
     MCT "She's not admitting something but I'd hate to ruin her mood by digging into it."
-    MC "I'm happy to hear that. I'm sure Ryoko will be happy to hear that you’re doing well."
+    MC "I'm happy to hear that. I'm sure Ryoko will be happy to hear that you're doing well."
     show GTS neutral
     GTS "If you could tell her, I'd appreciate it. I'd hate for her to be worrying about me."
     MC "Did you speak to her when you went back to the dorm?"
@@ -5731,7 +5731,7 @@ label GTS031:
     MC "Well then, I will make sure to speak with her since you asked so nicely."
     hide GTS_S
     show GTS neutral
-    GTS "Only do it if it isn’t a bother, please. Otherwise, I'm sure I can find time to do it myself."
+    GTS "Only do it if it isn't a bother, please. Otherwise, I'm sure I can find time to do it myself."
     MC "It's fine Yamazaki-san, it's a simple favor. Plus I occasionally pass her between classes, so more than likely I will see her tomorrow."
 
     if not getFlag("GTS030_festival"):
@@ -5757,7 +5757,7 @@ label GTS031:
     GTS "Maybe sometime during the school day you can come down and see it. It truly is a marvel of engineering."
     MC "Do you take separate classes, or how do classes work?"
     GTS "The way it works is that every classroom has a camera that is connected to a projector. That projector then displays the class in real time to us in our lecture hall."
-    GTS "Class participation, unfortunately, doesn't work. We’re still required to submit our homework on time."
+    GTS "Class participation, unfortunately, doesn't work. We're still required to submit our homework on time."
     MC "How does that work? I can't recall seeing giant sheets of paper on Tashi's desk before."
     GTS "One of the students here works as a teacher's assistant. They handle all the homework grading and just pass the results to the correct teacher for entry into the system."
     GTS "Even with all that, do you want to know what the craziest thing about The Caverns is?"
@@ -5766,7 +5766,7 @@ label GTS031:
     "I could see some tears forming in her eyes as she said those last words until she wiped them away. She took a moment to recompose herself before continuing."
     show GTS neutral
     GTS "Sorry about that. The tea is still quite strong, so it made me tear up."
-    MC "You don’t need to apologize. I was interested in all of it. The giants' area isn't an area many students get to see often, so hearing how it operates is quite fascinating."
+    MC "You don't need to apologize. I was interested in all of it. The giants' area isn't an area many students get to see often, so hearing how it operates is quite fascinating."
     GTS "I'm glad you enjoyed my rambling there, I was afraid I got lost there for a moment in my own world."
     "She pauses again staring into her tea for a moment before sipping it."
     hide GTS
@@ -5775,7 +5775,7 @@ label GTS031:
     MC "Of course I do, Yamazaki-san. I wouldn't have shared a kiss with you if I didn't."
     GTS_S "Why me, though? There are plenty of normal-sized people at school, yet you chose me."
     MC "Well, you are incredibly kind to everyone you meet. Your knowledge of gardening and plants is beyond compare. I suppose you've never given me a moment to doubt that you are an amazing person."
-    MC "That's why I've stuck with you, regardless of whatever problems you believe it’ll cause."
+    MC "That's why I've stuck with you, regardless of whatever problems you believe it'll cause."
     hide GTS_S
     show GTS embarrassed
     GTS "Thank you, Hotsure-san. I'm not sure why, but I feel like I really needed to hear something like that."
@@ -5803,7 +5803,7 @@ label GTS031_c1_1:
     MC "The sky looks amazing from here."
     show GTS neutral
     GTS "My first night here, I laid down at the bottom of the pit staring into the sky. The view was beyond amazing, you can watch the stars travel across the heavens without even moving. Nothing I've seen so far can compare."
-    MC "Perhaps I could join you next time? You’ve confirmed that this is an experience I can't miss."
+    MC "Perhaps I could join you next time? You've confirmed that this is an experience I can't miss."
     show GTS aroused
     GTS "Just tell me when it works for you, and I'll make it happen. Not only that, but I have a few ideas on how it can be made even better."
     "We both ended up chuckling as we headed back to campus."
@@ -6700,7 +6700,7 @@ label GTS035_testpass:
 label GTS036:
     $setProgress("GTS", "GTS037")
     scene Dorm Interior with fade
-    "It had been two days since the meeting with Naomi’s parents, and things had been quiet between us."
+    "It had been two days since the meeting with Naomi's parents, and things had been quiet between us."
     "This left me plenty of time to repeat the dinner scene over and over. Her father had been particularly difficult to deal with, but not in a way that was malicious."
     "It had grown apparent the task that lay ahead of me in rising not only to Naomi's standards, but her family's too."
     if getAffection("GTS") > 30:
@@ -6711,11 +6711,11 @@ label GTS036:
     RM "Hey Hotsure-san, you got some mail."
     MCT "...From who?"
     show RM neutral with dissolve
-    "Opening the door, I could see a box wrapped in brown paper clutched under Daichi’s arm."
+    "Opening the door, I could see a box wrapped in brown paper clutched under Daichi's arm."
     RM "There's this letter, too. They're both addressed to you."
     "He produced a small envelope with a green wax seal."
     RM "Whoever sent you this evidently has no idea what email is. Who the hell owns a wax stamp?"
-    MC "Not everyone owns a top end laptop. Some people don’t even have internet."
+    MC "Not everyone owns a top end laptop. Some people don't even have internet."
     RM "I'm not sure how some people survive."
     hide RM with dissolve
     stop music
@@ -6726,7 +6726,7 @@ label GTS036:
     "Inside was a tanto, its flawless blade glaring white in the afternoon sun."
     MCT "...How the hell did this get through customs?"
     "Looking the blade over, I decided to set it on the bookshelf hanging over my desk. I began wondering if Naomi knew they had done this."
-    "After fiddling with it a bit more, I eventually found a spot on my shelf to display it. The tanto must’ve had a link to Naomi, because the moment the metal left my fingers my phone buzzed."
+    "After fiddling with it a bit more, I eventually found a spot on my shelf to display it. The tanto must've had a link to Naomi, because the moment the metal left my fingers my phone buzzed."
     GTSCell "Hotsure-san, do you mind meeting me at Chūkan Point in a few minutes?"
     menu:
         "Sure thing, see you in a few.":
@@ -6758,7 +6758,7 @@ label GTS036_c1_2:
 label GTS036_c2:
     scene Chukan Point with fade
     play music GTS
-    "As I approached the small park area, I couldn’t help but be in awe how Naomi was nearly as tall... or taller... than the trees around her. Granted, many were cherry blossoms, but it was still a considerable line to cross."
+    "As I approached the small park area, I couldn't help but be in awe how Naomi was nearly as tall... or taller... than the trees around her. Granted, many were cherry blossoms, but it was still a considerable line to cross."
     MC "Yamazaki-san!"
     show GTS despaired-thought with dissolve
     GTS "Oh. Good evening, Hotsure-san."
@@ -6767,9 +6767,9 @@ label GTS036_c2:
     GTS "I will explain shortly. Did you receive the package from my parents?"
     MC "The tanto? Yeah, I picked out a spot for it above my desk."
     show GTS neutral
-    GTS "I’m glad that you took it so well. I was unsure how you would receive it when father informed me that he’d given that to you. I assume that he attached a letter as well?"
+    GTS "I'm glad that you took it so well. I was unsure how you would receive it when father informed me that he'd given that to you. I assume that he attached a letter as well?"
     MC "Yep, he said he hoped that it would serve as a visual symbol of hope for our relationship."
-    GTS "He normally isn’t that forward with people, especially concerning matters related to his family."
+    GTS "He normally isn't that forward with people, especially concerning matters related to his family."
     MC "I guessed not. So again, what was with the short notice text?"
     show GTS sad-2 at Transform(xzoom=-1) with dissolve
     "Naomi seemed to look for a place to sit, glancing at the various benches, each time considering her options before remembering her size. A few times, she opened her mouth as though to say something."
@@ -6784,7 +6784,7 @@ label GTS036_c2:
         MC "I know nothing really happened, but... it kind of did, you know?"
         show GTS neutral
         GTS "I understand completely."
-    GTS "Well, back then I wasn’t certain what to think, or even where I’d be in due time. This past weekend brought that feeling back, and I wanted to find out if it's mutual."
+    GTS "Well, back then I wasn't certain what to think, or even where I'd be in due time. This past weekend brought that feeling back, and I wanted to find out if it's mutual."
     GTS "So, there's something I need to ask you."
     MC "Okay... I'm ready."
     show GTS embarrassed
@@ -6805,10 +6805,10 @@ label GTS036_menu:
             jump GTS036_c2_3
 
 label GTS036_c2_1:
-    MC "I wasn’t sure when we first met what the feeling in my chest meant, but the more we’ve talked, I’ve only grown more certain that it's love."
+    MC "I wasn't sure when we first met what the feeling in my chest meant, but the more we've talked, I've only grown more certain that it's love."
     $setAffection("GTS", 1)
     show GTS happy
-    GTS "I shared those feelings, but wasn’t sure if I could trust them."
+    GTS "I shared those feelings, but wasn't sure if I could trust them."
     show GTS neutral
     GTS "I know, despite that, I've asked of you a number of things you would be well within your rights to move on for."
     MC "You know there was no real choice."
@@ -6848,10 +6848,10 @@ label GTS036_c2_2:
     show GTS sad
     GTS "Well... how do I put this?"
     show GTS neutral
-    GTS "I feel that you’ve expressed an interest in me, since you were willing to go so far as to meet my family."
+    GTS "I feel that you've expressed an interest in me, since you were willing to go so far as to meet my family."
     GTS "I hope that I have conveyed my interest in you as well. But then, to answer your question, I want to know how {i}you{/i} see our relationship."
     if getAffection("GTS") < 40:
-        MC "I’m still figuring that out for myself."
+        MC "I'm still figuring that out for myself."
     else:
         MC "Well, I've sort of... been in this kind of thing before, I guess. But never with someone like you. I guess I sort of feel like... I want to try to live life the way you do."
     "She nodded."
@@ -6859,11 +6859,11 @@ label GTS036_c2_2:
     jump GTS036_menu
 
 label GTS036_c2_3:
-    MC "Well, ‘love’ is a very complicated word. I don’t know if I’m ready to say it yet."
+    MC "Well, ‘love' is a very complicated word. I don't know if I'm ready to say it yet."
     show GTS neutral
     GTS "Then what are you ready to say?"
     MC "Huh?"
-    GTS "If not ‘love,’ then what?"
+    GTS "If not ‘love,' then what?"
     MC "I mean, I respect you a lot. You've got a lot of talents, and you're always so chill and nice. I just like spending time with you."
     show GTS despaired-thought
     GTS "So, you enjoy spending time with me, but you're afraid of the implications that come with saying that you love me. I understand. It can't be an easy thing to say."
@@ -6977,7 +6977,7 @@ label GTS036_c3:
     GTS "Have a pleasant evening."
     hide GTS with dissolve
     "Just a little longer, and I started walking back to the dorms on my own. Naomi remained in the park, only partially obscured by the trees."
-    "She remained in my sight only until I exited the park gate. I walked out on surer steps than I came in with; energy that I didn’t know I had powering my strides."
+    "She remained in my sight only until I exited the park gate. I walked out on surer steps than I came in with; energy that I didn't know I had powering my strides."
     jump daymenu
 
 label GTS037:
@@ -7251,12 +7251,12 @@ label GTS037_c3_after:
     MC "It's so quiet out here. I almost forgot where we were."
     show GTS neutral
     GTS "It is quite a ways away from campus, isn't it? It's difficult to believe that such a vast mountain range is out here. It feels rather disconnected from the rest of the world."
-    MC "Not that it matters, as long as I’m here with you."
-    GTS "I’m flattered that you feel that way, Kei-chan."
+    MC "Not that it matters, as long as I'm here with you."
+    GTS "I'm flattered that you feel that way, Kei-chan."
     "The two of us turned around, leaving the shrine behind. The smoke trails from the burning incense still lingered, coating the area outside the shrine in a thin layer of white vapor."
-    GTS "Do you mind if we take our time walking back down the trail? I’d like to... remember this view. Take in all of the scenery."
+    GTS "Do you mind if we take our time walking back down the trail? I'd like to... remember this view. Take in all of the scenery."
     MC "Not at all."
-    "The two of us proceeded to walk back down the trail. Naomi walked in front of me, intentionally making her strides slow and delicate so I could keep up. The stones were sturdy, and didn’t vibrate at all under Naomi’s light steps."
+    "The two of us proceeded to walk back down the trail. Naomi walked in front of me, intentionally making her strides slow and delicate so I could keep up. The stones were sturdy, and didn't vibrate at all under Naomi's light steps."
 
     scene Mountains Tori Gate
     show GTS unique
@@ -7405,13 +7405,13 @@ label GTS040:
     scene Dorm Interior with fade
     MC "Ooh, suck that crit down babycakes."
     play music Schoolday
-    "Two o’ clock on the hottest Sunday afternoon since summer began. My scuffed-up old copy of Silver Moon was spinning away in my Aystation and Typhon was down to a third of his health. I couldn’t remember the last time I got that far."
+    "Two o' clock on the hottest Sunday afternoon since summer began. My scuffed-up old copy of Silver Moon was spinning away in my Aystation and Typhon was down to a third of his health. I couldn't remember the last time I got that far."
     "Golden sunrays shone in piercing the glass and the curtains; the angels themselves were witnessing me."
     MC "Oh what the hell, now you get {i}three{/i} turns?"
     "Lest my confidence drown me, I suddenly found half my party poisoned and the other half knocked out."
     "I slumped backwards onto the floor while hissing a sigh through my teeth, as if I were pneumatic. There I formed my own dark sun, with hair spread out a meter in every direction as I formulated my strategy."
     MCT "Oy, I gotta get this cut before tomorrow... huh?"
-    "I didn’t hear, but saw a disembodied backpack slip inside the slightly-opened balcony door,"
+    "I didn't hear, but saw a disembodied backpack slip inside the slightly-opened balcony door,"
     show RM sad with dissolve
     extend " followed by my grimacing roommate."
     MC "Utagashi-san."
@@ -7419,22 +7419,22 @@ label GTS040:
     RM "Hotsure-san."
     MC "Lock broke?"
     RM "A situation arose, and I adapted."
-    MC "Uh huh. I’ll call the maintenance guy after I’m done with this boss."
+    MC "Uh huh. I'll call the maintenance guy after I'm done with this boss."
     show RM angry
-    RM "No, don’t do that. If you must know, Matsumoto's on patrol right out in front of the dorms, and I’d rather not have her rooting through my notebook. I doubt she’ll fall for a decoy twice."
+    RM "No, don't do that. If you must know, Matsumoto's on patrol right out in front of the dorms, and I'd rather not have her rooting through my notebook. I doubt she'll fall for a decoy twice."
     MC "So is it, like, actually possible to get expelled from here?"
     show RM neutral
-    RM "Not for that, no. Now, I’ve got some things to work on."
+    RM "Not for that, no. Now, I've got some things to work on."
     MC "You do that."
     hide RM with dissolve
     "He sat down at his desk and began laying out notes and assorted colors of pens; I, too, sat up and beheld the disarray before me on the TV."
     MCT "Hmm..."
     pause 1
-    MCT "I wonder how Naomi-chan’s doing..."
+    MCT "I wonder how Naomi-chan's doing..."
     "I took out my phone."
     MCCell "<hey Naomi-chan, how are u doing?>"
     "I laid it down again and returned my attentions to the ongoing battle; it buzzed a couple minutes later."
-    GTSCell "<Quite well, Keisuke-kun, thank you. You’ve just caught me in the midst of some reflection. How are you this lovely day?>"
+    GTSCell "<Quite well, Keisuke-kun, thank you. You've just caught me in the midst of some reflection. How are you this lovely day?>"
     MCCell "<pretty good thx, playing some video games>"
     pause 0.5
     GTSCell "<It certainly is a day for indoor diversions. I trust your other affairs are in order?>"
@@ -7459,14 +7459,14 @@ label GTS040:
         MCCell "<I forget the title but theres this one book about shun sakurai>"
         MCCell "<u know, the hitter for the koi?>"
         pause 0.5
-        GTSCell "<I’m afraid I don’t follow baseball much.>"
-        MCCell "<I didn’t think u did>"
+        GTSCell "<I'm afraid I don't follow baseball much.>"
+        MCCell "<I didn't think u did>"
         MCCell "<it made me appreciate his achievements tho reading how hard he worked to get there>"
         pause 0.5
         GTSCell "<A wonderful thing, indeed.>"
     if isHighestSkill("Art"):
         $setFlag("GTS040_art")
-        MCCell "<well.. it’s not really a traditional book>"
+        MCCell "<well.. it's not really a traditional book>"
         MCCell "<when I was 10 I got this like booklet for making little charms with bottlecaps and glue>"
         MCCell "<i ended up making a ton of them and tomo-chan even pitched in a couple times>"
         MCCell "<it was kinda cheesy but I ended up making lots of crafty projects like that>"
@@ -7474,7 +7474,7 @@ label GTS040:
         MCCell "<srry for the wall of text>"
         pause 0.5
         GTSCell "<Not at all, Keisuke-kun.>"
-        GTSCell "<I think it’s perfectly lovely that you’ve been in touch with your creative side for so long.>"
+        GTSCell "<I think it's perfectly lovely that you've been in touch with your creative side for so long.>"
         MCCell "<thank you>"
     else:
         MCCell "<this is gonna sound weird but do you remember that book you were reading about Nijō Yoshimoto?>"
@@ -7502,17 +7502,17 @@ label GTS040:
     scene Dorm Exterior with fade
     MC "Bruhhh..."
     "I stepped out of the dormitory entrance hall and straight into the armpit of summer, where its glaring sun, wavering air, and shrieking cicadas scolded my intrusion."
-    MCT "All this hair isn’t so bad sometimes..."
+    MCT "All this hair isn't so bad sometimes..."
     "I glanced ahead of me to the path to the main building, which I headed down as I resumed typing."
     scene Campus Center with fade
     MCCell "<how about you, what was your favorite book?>"
     "The screen was tantalizingly still for many moments."
-    GTSCell "<I will tell you, but I hope you won’t find it too terribly common.>"
+    GTSCell "<I will tell you, but I hope you won't find it too terribly common.>"
     MCCell "<nothing about you is common, Naomi-chan. please do share>"
     scene black with fade
     pause 1
     scene School Front with fade
-    GTSCell "<It was a romance novel. A period piece, as I’m sure you’ve guessed.>"
+    GTSCell "<It was a romance novel. A period piece, as I'm sure you've guessed.>"
     pause 0.5
     GTSCell "<I remember being perfectly entranced by how the characters were written; the more you learned about them as people, and the more they did about each other, the closer they grew. It was absolutely wonderful.>"
     if getFlag("GTS040_art"):
@@ -7563,7 +7563,7 @@ label GTS040_c2:
     GTSCell "<'By Your Word', if I recall correctly. But I am quite certain of that. It was by one Yoko Yoshimoto.>"
     MCCell "<oh, cool. what was the plot like?>"
     "I stowed my phone in my pocket as she answered and got to work strumming my fingers along the rows of books, gritty and fibrous hardback intermingled with smooth, fresh plastic sheets."
-    MCT "Okay, she’s probably gonna be near the back, let’s see..."
+    MCT "Okay, she's probably gonna be near the back, let's see..."
     MCT "Ha... fu... mi... yo!"
     MC "Da da da da..."
     MCT "Hmm... {w}Crud... must not be here."
@@ -7594,13 +7594,13 @@ label GTS040_c2:
     GTSCell "Operating my phone has become rather... troublesome of late."
     MCCell "...Oh... I see."
     menu:
-        "Maybe you’re turning into an old lady? Like, faster than normal.":
+        "Maybe you're turning into an old lady? Like, faster than normal.":
             GTSCell "Even under the circumstances, that seems rather improbable, does it not?"
-            MCCell "The evidence seems pretty unassailable. I mean, we know you’re majorly into gardening. Have you noticed any white hairs? What’s your stance on doilies? Or Nortfight dances?"
-            GTSCell "I haven’t noticed any such thing, no. I’ll be sure to check again after this conversation."
+            MCCell "The evidence seems pretty unassailable. I mean, we know you're majorly into gardening. Have you noticed any white hairs? What's your stance on doilies? Or Nortfight dances?"
+            GTSCell "I haven't noticed any such thing, no. I'll be sure to check again after this conversation."
             GTSCell "And I happen to have a good deal of respect for the craftsmanship and visual aesthetic of the doily, though I myself prefer other modes of ornamentation."
-            GTSCell "...I confess, before I offer an opinion, I must ask precisely what a ‘Nortfight dance’ is."
-            MCCell "Eh... honestly I don’t think knowing would enhance your life."
+            GTSCell "...I confess, before I offer an opinion, I must ask precisely what a ‘Nortfight dance' is."
+            MCCell "Eh... honestly I don't think knowing would enhance your life."
             GTSCell "I do find myself inclined to believe you."
             jump GTS040_c3
         "I guess it was just a matter of time. Do you know if they can provide you with a replacement?":
@@ -7609,15 +7609,15 @@ label GTS040_c2:
             MCCell "..."
             MCCell "So, can I ask you a weird question?"
             GTSCell "Whatever you please."
-            MCCell "Of course there’s a lot of downsides to your factor. What are some of the good things? The silver linings?"
+            MCCell "Of course there's a lot of downsides to your factor. What are some of the good things? The silver linings?"
             "She was silent for a moment or two."
-            GTSCell "That’s a rather good question, as a matter of fact. It is important, after all, to be mindful of the narrowness of our perceptions."
+            GTSCell "That's a rather good question, as a matter of fact. It is important, after all, to be mindful of the narrowness of our perceptions."
             pause 1
             GTSCell "Hmm..."
             "I wiped my wrist across my damp forehead, smiling."
             GTSCell "Well, when my family came to visit and I looked down at Kimiko, it was just like she was a puppy again. That brought back some fond memories, indeed."
             GTSCell "...As discomforting as it is to reflect on, having a new perspective on the world around oneself is edifying, in some ways."
-            MCCell "I bet. Ever look up and wonder what’s going on in the canopy of the trees?"
+            MCCell "I bet. Ever look up and wonder what's going on in the canopy of the trees?"
             $setAffection("GTS", 1)
             GTSCell "Hmhmhm, so I have."
             GTSCell "I also wonder... what do you think of it?"
@@ -7657,7 +7657,7 @@ label GTS040_c3:
     MCCell "Hey, you were gonna talk about that book, right?"
     GTSCell "Indeed I was.{w} Well, where do I begin?"
     scene Chukan Point with fade
-    "Now, maybe I wasn’t the greatest listener."
+    "Now, maybe I wasn't the greatest listener."
     "As Naomi got deeper into the story, I realized however many years had passed, she still knew it like her hometown, its turns and loops and landmarks which had bucked me a few chapters ago."
     "Nevertheless, I looked out over the scintillating colors of the horizon around the hilltop, and sighed. Beauty seemed to follow her everywhere."
     GTSCell "Now, if I were to name my favorite part of it, it would undoubtedly be the climactic chapter. It's especially memorable for me because my mother made a day of reading it."
@@ -7754,9 +7754,9 @@ label GTS040_c3:
 label GTS041:
     $setProgress("GTS", "GTS042")
     play music DayByDay
-    "More frequently than ever, I found myself going straight over to the Giants' Dorm after class. I didn’t even need a call from Naomi."
-    "She didn’t mind me coming by; she treasured my company just  as much as I treasured hers."
-    "Normally when I came over, we didn’t tend to do much. If we did, it was small things, pun intended, like homework, cooking, or just watching a show I could stream from my phone onto her tv."
+    "More frequently than ever, I found myself going straight over to the Giants' Dorm after class. I didn't even need a call from Naomi."
+    "She didn't mind me coming by; she treasured my company just  as much as I treasured hers."
+    "Normally when I came over, we didn't tend to do much. If we did, it was small things, pun intended, like homework, cooking, or just watching a show I could stream from my phone onto her tv."
     "Today however, was a bit different..."
     scene Giant Dorm Interior
     show GTS neutral
@@ -7765,18 +7765,18 @@ label GTS041:
     show GTS neutral at Transform(xzoom=-1)
     extend " or the blue?"
     "She put each dress in front of her, swapping between the two."
-    MC "They’re both quite flattering. The blue matches your personality, while the red has a sort of fierceness to it."
+    MC "They're both quite flattering. The blue matches your personality, while the red has a sort of fierceness to it."
     show GTS neutral at Transform(xzoom=1)
-    GTS "Fierceness? I don't think I want to project that image. I don’t want anyone to think I’m scary."
+    GTS "Fierceness? I don't think I want to project that image. I don't want anyone to think I'm scary."
     MC "Not that kind of fierce, more of the..."
-    MCT "I’m gonna expose myself saying this, won’t I?"
+    MCT "I'm gonna expose myself saying this, won't I?"
     GTS "..."
-    GTS "Oh, well I’ll just keep that in mind, the blue will do just fine then."
+    GTS "Oh, well I'll just keep that in mind, the blue will do just fine then."
     MCT "Smooth is not my middle name apparently."
     "Naomi disappeared into her bedroom and reappeared in the blue dress, which to say was form fitting would be an understatement."
     "The dress was probably a few sizes too small and was hugging every inch of her body that the poor fabric could reach."
     MC "Is that comfortable? Looks a little tight."
-    GTS "It’s a little tight, but it should be fi..."
+    GTS "It's a little tight, but it should be fi..."
     stop music
     show GTS surprised
     "*{i}RIIIIIP{/i}*"
@@ -7784,37 +7784,37 @@ label GTS041:
     play music Sunset
     show GTS sad
     GTS "If you can excuse me for a moment.... I need to correct my appearance."
-    MC "Take your time, I don’t mind."
+    MC "Take your time, I don't mind."
     hide GTS with dissolve
     "With a glum expression she shuffled back into the bedroom. Eventually she reemerged holding the fallen garment."
     show GTS sad with dissolve
     MC "Where did you get that dress? Was it from Alice?"
-    GTS "No, there is a small store inside the caverns that has some old clothes that previous students have donated. I was hoping this one was a bit looser, but I may have underestimated how much I’ve grown in the past weeks."
+    GTS "No, there is a small store inside the caverns that has some old clothes that previous students have donated. I was hoping this one was a bit looser, but I may have underestimated how much I've grown in the past weeks."
     MC "Is that the only place for giants to get clothes?"
     show GTS neutral
-    GTS "There {i}is{/i} a shopping district that specializes in Giant clothing, but I haven’t made the journey to visit it."
-    MC "It’s not too late. Would you want to go find this place?"
+    GTS "There {i}is{/i} a shopping district that specializes in Giant clothing, but I haven't made the journey to visit it."
+    MC "It's not too late. Would you want to go find this place?"
     "She glanced at the blue dress."
     GTS "I {i}would{/i} like to have more than just my set of school uniforms."
     MC "Do you have a map of the area?"
     GTS "We just need to follow the road that stretches northeast  towards the mountains."
     MC "Is there a thing with giants and mountains, or do I need to lay off playing Skyledge?"
     show GTS pondering
-    GTS "I’m not sure why it’s there, but... that IS a rather ironic coincidence, yes. But pray tell, what is 'Skyledge'?"
-    MC "It’s one of the video games I play. I can explain it on the way there if you’d like."
+    GTS "I'm not sure why it's there, but... that IS a rather ironic coincidence, yes. But pray tell, what is 'Skyledge'?"
+    MC "It's one of the video games I play. I can explain it on the way there if you'd like."
     show GTS happy
     GTS "I would love to hear about it if you would like to."
     MC "Um, one thing before we head off, would you mind... uh... carrying me?"
     show GTS pondering
     GTS "...May I ask why?"
-    MC "I’ve been having a hard time keeping up with your pace. If we're gonna travel far, it may be better for you to carry me."
+    MC "I've been having a hard time keeping up with your pace. If we're gonna travel far, it may be better for you to carry me."
     show GTS neutral
     GTS "If you wish, I can do that for you."
     "She crouched down and let me step onto her hands."
-    "The sensation as she lifted me back up was one I can safely say I’ve never encountered before. I’ve taken a plane before so the lifting sensation was similar, but the openness while experiencing this did rattle me."
+    "The sensation as she lifted me back up was one I can safely say I've never encountered before. I've taken a plane before so the lifting sensation was similar, but the openness while experiencing this did rattle me."
     show GTS surprised
     "I noticed Naomi make a face of concern seeing my expression of shock. If she wanted to say something, she decided against it."
-    MC "Alright, I’m ready to go. So, what would you like to know about Skyledge?"
+    MC "Alright, I'm ready to go. So, what would you like to know about Skyledge?"
     show GTS neutral
     GTS "The beginning will do."
     scene black with fade
@@ -7824,40 +7824,40 @@ label GTS041:
     scene Field
     show GTS neutral
     with fade
-    MC "...and you’re in a cart after being captured because you were crossing the border illegally. Once you’re in control, some guy says he's glad you are awake."
+    MC "...and you're in a cart after being captured because you were crossing the border illegally. Once you're in control, some guy says he's glad you are awake."
     GTS "I wish I could recall all that kind of stuff as well as you can."
-    MC "I’ll be honest I’ve just played the game and the others in the series too much."
+    MC "I'll be honest I've just played the game and the others in the series too much."
     GTS "Oh, I think that we are here."
     scene Giants Town
     show GTS neutral
     with fade
-    "I had been so caught up in my tale that I hadn’t noticed us reach the large gate. A pair of guard towers bracketed the gate."
+    "I had been so caught up in my tale that I hadn't noticed us reach the large gate. A pair of guard towers bracketed the gate."
     MC "You sure this is the place?"
-    GTS "Someone had mentioned it was government run, but I’m not entirely sure."
+    GTS "Someone had mentioned it was government run, but I'm not entirely sure."
     MC "I wonder how you actually enter."
     "Looking around, I spotted a large metal plate in the ground ahead of the gate."
     MC "You may need to step on that to get in."
     GTS "It seems rather odd to need someone to weigh a certain amount just to get some clothes."
-    MC "I guess they suspect that if you’re coming here, then you are of a certain type. It’s likely put in place to keep non-giants safe."
+    MC "I guess they suspect that if you're coming here, then you are of a certain type. It's likely put in place to keep non-giants safe."
     "As she gingerly stepped onto the plate, the sound of clicking could be heard. The gate slowly parted to reveal a road leading towards a cluster of buildings."
     MC "A rather curious place so far, a lot of odd security and engineering for a rather secluded place."
     GTS "It {i}is{/i} government run, so that would make sense."
-    "Approaching the buildings, we could see more people walking around. While everyone’s height varied, I could guess everyone here exceeded 4 meters in height."
+    "Approaching the buildings, we could see more people walking around. While everyone's height varied, I could guess everyone here exceeded 4 meters in height."
     show GTS pondering
-    GTS "I’m surprised to see this many giants outside the dorm. I do wonder what the greater purpose of this place is."
+    GTS "I'm surprised to see this many giants outside the dorm. I do wonder what the greater purpose of this place is."
     MC "Is there a more formal map of the area?"
-    GTS "I don’t see one, but maybe we could  head over to that large shop at the end of the road ahead."
+    GTS "I don't see one, but maybe we could  head over to that large shop at the end of the road ahead."
     "Looking down the road I noticed the building she was pointing out. It was by far the largest building in the 'small' town. The sign clearly read 'Mt.Fuji Outfitters' which was rather fitting for a place located in the mountains of the island."
-    MC "That’s probably a good spot to head towards, seems popular."
+    MC "That's probably a good spot to head towards, seems popular."
     show GTS neutral
     GTS "I hope they may have some clothing as well, it seems like some sort of general store."
     "As we approached the store, the sheer size of the building was becoming more apparent. The entirety of the school could easily have fit in this place three or four times over, and that was what I could see."
     "The front doors slid open revealing a massive warehouse-like building. Everything from minute trinkets to whole TVs was on display, except these were five to seven times their normal size."
-    MC "See any clothes? I can’t see a whole lot from here."
-    GTS "I don’t see any from right here. Perhaps there's someone to talk to about finding them."
+    MC "See any clothes? I can't see a whole lot from here."
+    GTS "I don't see any from right here. Perhaps there's someone to talk to about finding them."
     MC "I don't think I'll be much help in that regard. I can barely see past these shelves."
-    GTS "I can see a larger gentleman at a counter ahead of us. It’s safe to assume he’s an employee here right?"
-    MC "That’s up to you, I can’t see to judge that."
+    GTS "I can see a larger gentleman at a counter ahead of us. It's safe to assume he's an employee here right?"
+    MC "That's up to you, I can't see to judge that."
     GTS "Oh right, apologies."
 
     scene Giants Town Store
@@ -7865,27 +7865,27 @@ label GTS041:
     with fade
     play music BrightLights
     "Going further into the store from my perspective brought on this feeling of truly entering a foreign world. Items that are so common to me are now taller than my entire body, or even taller than my house."
-    "A feeling of alienation I could feel welling in my stomach, though there was another feeling I wasn’t sure how to describe in there as well."
+    "A feeling of alienation I could feel welling in my stomach, though there was another feeling I wasn't sure how to describe in there as well."
     "As we rounded the endcap of an aisle, I found myself looking higher still. Ahead of me was a gentleman that towered even over Naomi. He was quite toned as evident by the muscles outlined by his button down shirt."
     UNKNOWN "Welcome to Mt. Fuji Outfitters. How can I help you, young lady?"
     GTS "Thank you, sir. My boyfriend and I were just looking for some more fitting clothing... for me, obviously. I can get my school uniform replaced, but casual wear is a little tricky."
     UNKNOWN "I understand, that was a problem when I went to Seichou as well. Never really could find a nice casual shirt or jeans."
-    UNKNOWN "Come along, and I’ll show you our clothing selection. This place can be a maze at times."
+    UNKNOWN "Come along, and I'll show you our clothing selection. This place can be a maze at times."
     GTS "That would be appreciated. This is our first time here."
     "The gentleman looked over the counter to look down at me, before breaking into a smile and laughing."
     UNKNOWN "Apologies, it's rare that a normal sized person wanders in here. Especially one not associated with the government."
     "Stepping out from behind the counter, he began taking us through the winding pathways of the store."
-    MCT "I think I wasn’t far off in assuming this place is much bigger then I assumed it was."
+    MCT "I think I wasn't far off in assuming this place is much bigger then I assumed it was."
     GTS "If I may ask sir, you did say you went to Seichou correct?"
     UNKNOWN "I went there some years ago. I do wonder what the place looks like now."
     GTS "Are you by chance Akio Fumihiro?"
-    Akio "I am, indeed. Where’d you get my name from?"
-    GTS "You were much taller than everyone at the dorms by a good margin, and I recall seeing a name on the record wall that was above everyone else’s."
-    Akio "I’m surprised that the record wall is still a tradition. From what I heard, the record wall was established by the class before me and only had about a dozen names or so."
+    Akio "I am, indeed. Where'd you get my name from?"
+    GTS "You were much taller than everyone at the dorms by a good margin, and I recall seeing a name on the record wall that was above everyone else's."
+    Akio "I'm surprised that the record wall is still a tradition. From what I heard, the record wall was established by the class before me and only had about a dozen names or so."
     "When I left and recorded my name on it, there was a certain surprise since I was a head taller than nearly everyone."
-    Akio "I take it I’m still the record holder?"
+    Akio "I take it I'm still the record holder?"
     GTS "Indeed, a few have come close I recall but none have surpassed you."
-    Akio "Interesting, surprising that someone hasn’t grown past me."
+    Akio "Interesting, surprising that someone hasn't grown past me."
     GTS "There is an upward trend with heights I observed."
     Akio "Guess it's only a matter of time until someone else takes the crown."
     Akio "Anyway, enough of my rambling and reminiscing. You were looking for some new clothes, well here we are."
@@ -7897,22 +7897,22 @@ label GTS041:
     show GTS neutral
     GTS "So you work for the government?"
     Akio "Somewhat. I run the store, and they provide the goods that I have specified for sale. There's some other interactions but that's unimportant."
-    GTS "Fair enough, it is rude to poke too much into another’s business."
-    Akio "It’s fine, though I do need to return to the front counter. I hope you find everything you are looking for."
+    GTS "Fair enough, it is rude to poke too much into another's business."
+    Akio "It's fine, though I do need to return to the front counter. I hope you find everything you are looking for."
     "He waved and disappeared behind the shelves."
-    MC "He’s quite nice. I didn’t expect him to also be the record holder."
+    MC "He's quite nice. I didn't expect him to also be the record holder."
     show GTS unique
     GTS "That was quite a nice surprise."
     MC "So were you only looking for a dress or were you looking for something else?"
     show GTS neutral
     GTS "A new dress would be good, but I did have some other things in mind. I wonder if they may have a new kimono? The one I used for dinner is getting rather short."
-    MC "Possibly. You know, I’ve never considered if those are common items. I got mine a few years ago, but I can’t recall seeing them on a clothing rack at a store."
+    MC "Possibly. You know, I've never considered if those are common items. I got mine a few years ago, but I can't recall seeing them on a clothing rack at a store."
     GTS "It depends on the store, I would assume. Though you certainly have a point that they're a rather niche item outside of holidays."
     MC "What else were you thinking?"
     GTS "I may not be using the school's primary pool anymore, but I have heard of a spring in the caverns as well as a good beach spot. I wonder if they have bathing suits?"
     MCT "Please be bikinis. Please be bikinis. Please be bikinis."
-    MC "I wasn’t aware there was a spring in the caverns. At least you haven’t mentioned it before."
-    GTS "It's a warm spring, but I’d still need a suit. ...Ah, there they are!"
+    MC "I wasn't aware there was a spring in the caverns. At least you haven't mentioned it before."
+    GTS "It's a warm spring, but I'd still need a suit. ...Ah, there they are!"
     "Past a few racks of pants was a single rack of just bathing wear. Like someone was listening above, every single option was a two piece suit."
     MCT "I think I just used up all my luck for the year, but so worth it."
     show GTS despaired-thought
@@ -7926,9 +7926,9 @@ label GTS041:
 label GTS041_A1:
     MC "I think you would look great in a two piece."
     show GTS sad
-    GTS "You flatter me, Kei, but I’m not sure I’m comfortable showing that much skin to anyone else."
-    MC "I hate to sound ignorant, but I don’t think you have a choice if this is their selection."
-    GTS "You’re fine, I can see that my preferences aren’t possible with this selection."
+    GTS "You flatter me, Kei, but I'm not sure I'm comfortable showing that much skin to anyone else."
+    MC "I hate to sound ignorant, but I don't think you have a choice if this is their selection."
+    GTS "You're fine, I can see that my preferences aren't possible with this selection."
     GTS "*sigh*"
     show GTS neutral
     jump GTS041_After_C1
@@ -7939,14 +7939,14 @@ label GTS041_A2:
     show GTS pondering
     GTS "That may be, he did mention that he orders through the military. He might have a design I could order."
     show GTS neutral
-    GTS "I’ll grab one of these in case he doesn’t. It’s not my preference, but I think I may be losing my ability to have a choice on these matters."
+    GTS "I'll grab one of these in case he doesn't. It's not my preference, but I think I may be losing my ability to have a choice on these matters."
     jump GTS041_After_C1
 
 label GTS041_After_C1:
     "She grabbed off the rack a plain white two piece suit, the bottoms had a sort of skirt on them which was quite flattering as I imagined Naomi strutting down the sand in it."
-    GTS "This is a nice color. Can’t say I’ve considered a lot of white in my wardrobe outside of my uniform shirt."
+    GTS "This is a nice color. Can't say I've considered a lot of white in my wardrobe outside of my uniform shirt."
     MC "I think it would look great on you."
-    GTS "Then I guess it’s settled, can’t disagree with such an expert assessor."
+    GTS "Then I guess it's settled, can't disagree with such an expert assessor."
     "She picked out a few more items before making her way back to the front counter where Akio was standing."
     Akio "I see you found everything you were looking for."
     if getFlag("GTS041_A2"):
@@ -7959,14 +7959,14 @@ label GTS041_After_C1:
     GTS "I suppose I will from now on. Thank you."
     "Exchanging parting waves, we began our trek back to the school."
     MC "I wonder what sorta lives await giants when they finish school..."
-    GTS "Although it may sound bad on my part, I haven’t really looked into it. I was hoping that I would stay below the 4 meter threshold, but as we both can see that ship has sailed."
-    GTS "I’d love to return to the mainland someday, but I fear I may not be permitted to."
-    MC "I assume you mean ‘without resistance from the government’."
+    GTS "Although it may sound bad on my part, I haven't really looked into it. I was hoping that I would stay below the 4 meter threshold, but as we both can see that ship has sailed."
+    GTS "I'd love to return to the mainland someday, but I fear I may not be permitted to."
+    MC "I assume you mean ‘without resistance from the government'."
     GTS "Correct."
     MC "Yeah, that already brings up a lot of issues. I was surprised to hear how involved they are in the store."
-    GTS "It was quite surprising, but considering how prominent they are in the dorms, I shouldn’t be."
+    GTS "It was quite surprising, but considering how prominent they are in the dorms, I shouldn't be."
     MCT "I do wonder how much the government will get involved as she grows taller."
-    MCT "{i}Bleck{/i}. I’m starting to sound like Daichi now."
+    MCT "{i}Bleck{/i}. I'm starting to sound like Daichi now."
     "I was left to wonder as the sun finally set upon our return to school."
     jump daymenu
 
@@ -7991,8 +7991,8 @@ label GTS042:
     show Ryoko neutral
     Ryoko "Glm... Pardon my enunthhiation. My tonguethhs gotten to a thize where I have to re-learn how to uthe it."
     MC "I know the feel. I thought I'd skip my usual trim just once last night, and now I'm fishing hair out of my lunch."
-    MC "Come to think of it, our homeroom teacher, uh, Tashi-sensei, he’s got the same factor as you. He’d probably give you some tips for adjusting if you wanted to ask him."
-    Ryoko "I’ll do that. Directing’th not half ath fun when nobody can underthtand your directionth."
+    MC "Come to think of it, our homeroom teacher, uh, Tashi-sensei, he's got the same factor as you. He'd probably give you some tips for adjusting if you wanted to ask him."
+    Ryoko "I'll do that. Directing'th not half ath fun when nobody can underthtand your directionth."
     Ryoko "Which bringsth me to what I wanted to assk you. Are you doing anything after clath today?"
     MC "Well, I definitely gotta get a haircut today. And water Naomi-chan's flowers, especially with how hot it is out."
     show Ryoko confused
@@ -8046,48 +8046,48 @@ label GTS042:
     show Ryoko neutral
     with fade
     "Ryoko was already there sitting on a bench, striking lines across a notepad atop a stack of papers on her lap; every couple moments a few centimeters of her tongue would peek out the side of her lips."
-    Ryoko "Ah, great, you’re here."
+    Ryoko "Ah, great, you're here."
     "With a few snapping hand motions, she gathered up her things, and stood."
-    Ryoko "Hm... collar length? Wouldn’t you give yoursself a little more time if you cut it a bit shorter?"
+    Ryoko "Hm... collar length? Wouldn't you give yoursself a little more time if you cut it a bit shorter?"
     MC "Huh? I did cu..."
     "I reflexively patted the back of my neck to discover that my hair had sprouted back a couple centimeters during the walk over. I patted once or twice more just to assure myself it was real."
-    MC "Ugh... I’m gonna just pretend I cut it wrong or something."
-    Ryoko "I’d be a little ssurprised if you actually {i}could{/i} give yourself a decent cut. Did you ever do it before you came here?"
+    MC "Ugh... I'm gonna just pretend I cut it wrong or something."
+    Ryoko "I'd be a little ssurprised if you actually {i}could{/i} give yourself a decent cut. Did you ever do it before you came here?"
     "She waved me along as she started walking down the path, shortly followed by myself."
-    MC "Uh... don’t think so, actually. If we somehow couldn’t find a single barber in Shibuya, my mom did a pretty good job."
+    MC "Uh... don't think so, actually. If we somehow couldn't find a single barber in Shibuya, my mom did a pretty good job."
     "She looked ahead and nodded appreciatively as we stepped out of the park gates."
     scene black with fade
     pause 0.5
     scene Field
     show Ryoko surprised
     with fade
-    Ryoko "Y’know, I feel bad for not finding the time to visit Yamazaki-th... glm... san."
+    Ryoko "Y'know, I feel bad for not finding the time to visit Yamazaki-th... glm... san."
     show Ryoko neutral
     extend " When I was first getting used to being in charge of the film club, nothing helped me unwind like a cup of tea in her dorm."
-    MC "Well, she’ll be happy to see you. I’m sure she’ll pour you a cup."
+    MC "Well, she'll be happy to see you. I'm sure she'll pour you a cup."
     show Ryoko confused
     Ryoko "Can she? Does she even have..."
     show Ryoko embarrassed
     Ryoko "What am I saying, of course she does."
-    MC "Heh, yeah. Taller or no, she’s still Naomi Yamazaki."
+    MC "Heh, yeah. Taller or no, she's still Naomi Yamazaki."
     show Ryoko neutral
-    MC "By the way, what’s that script you want her to read about?"
+    MC "By the way, what's that script you want her to read about?"
     Ryoko "Ever watched Il Lago and or Ognum Pond?"
     if getSkill("Art") > 6:
-        MC "I think I {i}heard{/i} of them... one’s a romance, and the other’s a weird horror movie, right?"
-        MC "I don’t think she’d care much for the latter..."
+        MC "I think I {i}heard{/i} of them... one's a romance, and the other's a weird horror movie, right?"
+        MC "I don't think she'd care much for the latter..."
     else:
-        MC "Sorry, I don’t speak Italian."
-        Ryoko "The former is a romance about two people who live by a lake in different time periods, the latter’s about a girl’s ghost haunting her family after disappearing."
-        MC "So... a horror flick? I don’t think she particularly likes those..."
-    Ryoko "That’s not what I’m going for though, it’s more of a character study. Like..."
-    Ryoko "Well here, you can read it yourself. Yamazaki-san’s part is right at the beginning."
+        MC "Sorry, I don't speak Italian."
+        Ryoko "The former is a romance about two people who live by a lake in different time periods, the latter's about a girl's ghost haunting her family after disappearing."
+        MC "So... a horror flick? I don't think she particularly likes those..."
+    Ryoko "That's not what I'm going for though, it's more of a character study. Like..."
+    Ryoko "Well here, you can read it yourself. Yamazaki-san's part is right at the beginning."
     "She stopped to hold it out with both hands, which I accepted in kind."
     "And there it was, highlighted in neon green; I began to read."
     pause 1
     MC "Huh..."
     MC "This is... {w}actually perfect for her."
-    Ryoko "Thanks. I like to think I apply my actresseth’ talents well."
+    Ryoko "Thanks. I like to think I apply my actresseth' talents well."
     "I nodded and passed the script back to her, much reassured as the pale metal gates grew higher on the horizon."
     scene black with fade
     pause 0.5
@@ -8095,15 +8095,15 @@ label GTS042:
     show Ryoko happy at Position(xpos=0.8, xanchor=1.0, yalign=1.0)
     with fade
     "Ryoko stared down into the open pit as we skirted it, and whistled."
-    Ryoko "Would you look at that drop! What I wouldn’t give to work in a dolly shot of that ssomeday."
-    MC "You’ve never been here, I take it?"
-    Ryoko "Nah. I’ve been {i}meaning{/i} to."
+    Ryoko "Would you look at that drop! What I wouldn't give to work in a dolly shot of that ssomeday."
+    MC "You've never been here, I take it?"
+    Ryoko "Nah. I've been {i}meaning{/i} to."
     MC "Well, thank you for choosing Hotsure Lines to be your guide. We roll out the brown carpet for you every time."
     show Ryoko tongue
     "I flipped my hair; Ryoko smirked."
     Ryoko "Depending on availability."
-    MC "Oh, don’t worry. It’s coming."
-    MC "Ah, here’s her dorm."
+    MC "Oh, don't worry. It's coming."
+    MC "Ah, here's her dorm."
     show Ryoko confused
     Ryoko "...Wow. {w}Spacious."
     MC "Very."
@@ -8115,8 +8115,8 @@ label GTS042:
     "Even after a few weeks of coming to visit Naomi, it messed with my brain to know she was several meters away, but still register her voice as though she were just behind the door. It was just something special about her, I suppose."
     show GTS happy at Transform(xzoom=-1), Position(xpos=0.45, xanchor=1.0, yalign=1.0) with dissolve
     "She opened up the door, already smiling warmly down at us, but she nearly gasped to see Ryoko there too."
-    GTS "Oh, Tanaka-san! How lovely to see you again, it’s been far too long."
-    Ryoko "Hasn’t it just? How are you doing, Yamazaki-san?"
+    GTS "Oh, Tanaka-san! How lovely to see you again, it's been far too long."
+    Ryoko "Hasn't it just? How are you doing, Yamazaki-san?"
     GTS "Quite well, thank you. Would you like to come in? I would love to offer you some refreshments."
     show Ryoko happy
     Ryoko "Yesth please!"
@@ -8128,7 +8128,7 @@ label GTS042:
     with fade
     GTS "Allow me to put on the kettle. To what do I owe this delightful visit?"
     MC "We wanted to ask for your help with something, but we can sit down for a while."
-    Ryoko "Yeah, let’s catch up a little. Can I just sit down on the couch?"
+    Ryoko "Yeah, let's catch up a little. Can I just sit down on the couch?"
     GTS "By all means."
     hide GTS with dissolve
     "Naomi walked away to gather the essentials in the kitchenette, while Ryoko took a look beside her at the oversized couch, her face starting to unwind as reality washed over her."
@@ -8138,48 +8138,48 @@ label GTS042:
     "I nodded and started toward the couch myself; indeed, on a first try she managed to claw her way up and crawl to a seated position."
     show GTS neutral at Position(xpos=0.45, xanchor=1.0, yalign=1.0), Transform(xzoom=-1) with dissolve
     GTS "Ah, pray pardon the inconvenience. I do need to find a way to better accommodate guests."
-    Ryoko "You’re good, Yamazaki-san, you’re good. How are you liking the new room?"
+    Ryoko "You're good, Yamazaki-san, you're good. How are you liking the new room?"
     GTS "The room itself is... liveable, at least. My hope is that my renovations will make it more than that. I have missed you and Tomoe-san especially, and I should think the mere remoteness of these facilities is partly to blame."
     show GTS pondering
-    GTS "By the way, is Tomoe-san in good health? It strikes me that she isn’t with you."
-    Ryoko "Afraid not, but it’s nothing serious, just a sstomach bug. She just needs to stay in bed for a day."
+    GTS "By the way, is Tomoe-san in good health? It strikes me that she isn't with you."
+    Ryoko "Afraid not, but it's nothing serious, just a sstomach bug. She just needs to stay in bed for a day."
     show GTS neutral
-    GTS "I’m sorry to hear that. The next time you see her, please offer my well-wishes."
+    GTS "I'm sorry to hear that. The next time you see her, please offer my well-wishes."
     Ryoko "Sure thing. So the room could be better, you think?"
     GTS "Well, I must confess there have been unqualified benefits. My prior dormitory and its amenities were beginning to feel singularly cramped just before I relocated."
     GTS "Now, by contrast, nearly everything feels perfectly suited to me, down to the finest detail. In fact, some things still feel a bit... grand, as it were."
     show GTS unique
-    GTS "I’m certain you relate."
-    MC "Yeah, ‘grand’ is perhaps an understatement."
+    GTS "I'm certain you relate."
+    MC "Yeah, ‘grand' is perhaps an understatement."
     show GTS neutral
-    "Naomi slowly rocked her body backward, returning to a relaxed position. Due to the size and strength of the room’s furniture, nothing creaked under weight. It still felt like a major event every time she moved."
-    GTS "Well, that’s quite enough about me, I’m sure. What can I do for you today?"
+    "Naomi slowly rocked her body backward, returning to a relaxed position. Due to the size and strength of the room's furniture, nothing creaked under weight. It still felt like a major event every time she moved."
+    GTS "Well, that's quite enough about me, I'm sure. What can I do for you today?"
     Ryoko "Well, I... "
     show Ryoko annoyed
     extend " oh brother, it got crumpled."
     "Ryoko straightened out the stack of papers with a few sharp, snapping yanks with her fingers, and then held it up."
     show Ryoko neutral
-    Ryoko "I’ve got a short little film script here, and I was wondering if you wouldn’t mind me recording you reading it aloud."
+    Ryoko "I've got a short little film script here, and I was wondering if you wouldn't mind me recording you reading it aloud."
     show GTS surprised
     GTS "Recording me? Does that mean you intend to use the recording in your film?"
     show Ryoko happy
     Ryoko "Exactly! Would that be okay?"
-    GTS "Well, I certainly do not object out of hand, but surely it wouldn’t be right for me to deprive more talented actresses of the opportunity."
+    GTS "Well, I certainly do not object out of hand, but surely it wouldn't be right for me to deprive more talented actresses of the opportunity."
     show Ryoko neutral
-    Ryoko "Don’t worry about that! They’ve got plenty to do either way. You’re actually my first choice, after all."
+    Ryoko "Don't worry about that! They've got plenty to do either way. You're actually my first choice, after all."
     GTS "Am I?"
     Ryoko "Yeah. Your voice has this soft yet resonant quality that I think would fit the lines flawlessly."
-    MC "But don’t feel bad if you don’t want to do it, Naomi-chan. It’s completely okay."
+    MC "But don't feel bad if you don't want to do it, Naomi-chan. It's completely okay."
     show GTS neutral
     "She nodded to me, warm recognition in her eyes."
-    Ryoko "Yep! If you don’t, like you said there are others."
+    Ryoko "Yep! If you don't, like you said there are others."
     GTS "Well... I would like to aid in your artistic endeavors so much as I am able. I accept."
     show Ryoko happy
     Ryoko "Excellent! Thanks a ton, Yamazaki-san."
     show Ryoko neutral
-    Ryoko "I’ll just plug in my microphone and recording device and we can get started."
+    Ryoko "I'll just plug in my microphone and recording device and we can get started."
     pause 1
-    Ryoko "There’s not a normal-sized outlet in here, is there?"
+    Ryoko "There's not a normal-sized outlet in here, is there?"
     GTS "I believe I saw one right next to the electric range."
     Ryoko "Ah, there it is. Thanks."
     MC "But how are we gonna get it all the way over here?..."
@@ -8190,31 +8190,31 @@ label GTS042:
     show Ryoko neutral at Position(xpos=0.7, xanchor=1.0, yalign=1.0) with dissolve
     Ryoko "{i}Hup{/i}... okay, should be good to go."
     "I bobbed up and down to the tune of Naomi gently shimmying herself directly in front of the microphone, meanwhile feeling nothing as Ryoko rolled back up onto the couch."
-    MCT "God, even her tiniest movements are so powerful... it’s addicting to watch..."
+    MCT "God, even her tiniest movements are so powerful... it's addicting to watch..."
     MCT "Nope, nope, gotta focus..."
-    Ryoko "So, I imagine you’ll want to read through it before we actually start."
+    Ryoko "So, I imagine you'll want to read through it before we actually start."
     GTS "That would be sensible. Yes, please."
     "Ryoko passed the script over, which Naomi took with a shallow bow using both hands... or she tried to, before opting to pinch it between her pointers and thumbs."
     show GTS surprised
-    "Without another word, Naomi began reading with appreciative rumination; her eyebrows inched upward throughout, at which I couldn’t help a self-satisfied smile bubbling up on my face."
+    "Without another word, Naomi began reading with appreciative rumination; her eyebrows inched upward throughout, at which I couldn't help a self-satisfied smile bubbling up on my face."
     show GTS neutral
     "She came to a slow stop, with a thin smile of her own."
     GTS "My, my, this is {i}superb{/i}. Very good then, let us commence."
     show Ryoko happy
-    Ryoko "Fantastic! Just sort of face the mic and tell me when you’re ready."
+    Ryoko "Fantastic! Just sort of face the mic and tell me when you're ready."
     "She put her fist up in front of her mouth and, as quietly as she could, cleared her throat, and finally hummed a few different notes to herself."
     GTS "I am ready."
     show Ryoko neutral
     "Ryoko simply nodded, produced a tiny black remote, and pressed on it."
     stop music fadeout 3.0
-    "I sat rapt to hear Naomi’s voice bring life to the words I’d read."
+    "I sat rapt to hear Naomi's voice bring life to the words I'd read."
     pause 1
-    GTS "The winter isn’t quite as cold anymore."
-    GTS "I’ve learned to see the snow’s perennial brightness, and when the frigid winds begin to seize my throat I look out onto our frozen reflection pool, and I am relieved utterly."
-    GTS "And so I have hope that there’s time left to learn the other things you meant to teach me."
+    GTS "The winter isn't quite as cold anymore."
+    GTS "I've learned to see the snow's perennial brightness, and when the frigid winds begin to seize my throat I look out onto our frozen reflection pool, and I am relieved utterly."
+    GTS "And so I have hope that there's time left to learn the other things you meant to teach me."
     pause 0.5
     GTS "At times I find myself grieving how ill I carried on our family name; redemption rests now in the hands of my sons, scattered as they are now on the more auspicious winds."
-    GTS "But I know you wouldn’t want me to grieve overlong, my Yukiko, and so I shall not."
+    GTS "But I know you wouldn't want me to grieve overlong, my Yukiko, and so I shall not."
     GTS "That, I shall always remember, as the ice grows mottled and my shoulders grow wet with droplets. Even as stiffness binds more stubbornly to my bones with every winter passed... I shall carry your hope."
     show GTS embarrassed with dissolve
     pause 0.5
@@ -8224,11 +8224,11 @@ label GTS042:
     pause 1
     Ryoko "Cut."
     show Ryoko happy
-    Ryoko "That was {i}amazing{/i}! You might’ve just gotten a perfect take on the first tr-"
+    Ryoko "That was {i}amazing{/i}! You might've just gotten a perfect take on the first tr-"
     MC "Naomi-chan, are you... alright?"
     show GTS surprised
     show Ryoko surprised
-    "Naomi looked down at me with a start, but it wasn’t enough to hide the shimmer I thought I saw growing at the edge of her eye, now trailing down her cheek."
+    "Naomi looked down at me with a start, but it wasn't enough to hide the shimmer I thought I saw growing at the edge of her eye, now trailing down her cheek."
     "A deft swipe of her finger confirmed my suspicions."
     play music Peaceful
     show GTS unique
@@ -8240,10 +8240,10 @@ label GTS042:
     GTS "Well... I hardly have any expertise by which to judge. If you two are pleased with my rendition, then I must be as well."
     "Just then, a shaky whistling grew louder on the other side of the room."
     show GTS happy
-    "Naomi’s face brightened as she stood."
-    GTS "Ah, the water’s ready! One moment, please, while I pour our cups."
+    "Naomi's face brightened as she stood."
+    GTS "Ah, the water's ready! One moment, please, while I pour our cups."
     show GTS neutral
-    "She made good on her word with the grace of pouring water and rising steam, and grassy scents floating before one’s face."
+    "She made good on her word with the grace of pouring water and rising steam, and grassy scents floating before one's face."
     show Ryoko happy
     "A few moments more, and she set before us a tray of two steaming, mottled brown goki chawans... right next to her plain black chawan the size of a mixing bowl."
     MC "Smells delicious. Thanks, Naomi-chan!"
@@ -8252,13 +8252,13 @@ label GTS042:
     GTS "The pleasure is all mine."
     show Ryoko neutral
     "She eased herself down beside us, hands on her knees, and we all took a sip before commencing to some light, easy conversation."
-    "I soon found there was more to catch up on than I expected, Naomi sharing the goings-on around the mine and Ryoko gushing about the film club’s projects and inner workings."
-    "And in the middle... was something that wasn’t there before. Naomi was ever the attentive listener, but never did she hang onto every word with such beaming glee when she used to have these little chats in her room."
-    "Several times, the conversation came back to me, and each time I had to pull my mind away from the enchantment of Naomi’s sunny smile. Each time, I couldn’t imagine what I wouldn’t do to keep that free, unguarded smile just a little longer."
+    "I soon found there was more to catch up on than I expected, Naomi sharing the goings-on around the mine and Ryoko gushing about the film club's projects and inner workings."
+    "And in the middle... was something that wasn't there before. Naomi was ever the attentive listener, but never did she hang onto every word with such beaming glee when she used to have these little chats in her room."
+    "Several times, the conversation came back to me, and each time I had to pull my mind away from the enchantment of Naomi's sunny smile. Each time, I couldn't imagine what I wouldn't do to keep that free, unguarded smile just a little longer."
     pause 0.5
     "Maybe an hour passed just talking through the days, and in time the talk dried up alongside the tea."
     "Ryoko drained her dregs and set her bowl down."
-    Ryoko "Well, I think I should get going, start working on my paper. Thanks a ton for having us, Yamazaki-san. Hanging out with you’s always a treat."
+    Ryoko "Well, I think I should get going, start working on my paper. Thanks a ton for having us, Yamazaki-san. Hanging out with you's always a treat."
     GTS "Of course, Tanaka-san. Your company is welcome here whenever you please. Take care, now, and be safe on your way back."
     show Ryoko happy
     Ryoko "Heh, thanks."
@@ -8266,8 +8266,8 @@ label GTS042:
     "One more time she dropped down off the couch, gathered her things, and after turning back to wave me goodbye, headed out the door."
     show GTS neutral at altMove(1.5, 0.65)
     "And so, it was just me and her."
-    GTS "I’m glad you’re staying with me a little longer. And... thank you very much for arranging that little meeting."
-    MC "I admit it was actually Tanaka-san’s idea. I was a bit busy tending the garden and, oh... getting things ready."
+    GTS "I'm glad you're staying with me a little longer. And... thank you very much for arranging that little meeting."
+    MC "I admit it was actually Tanaka-san's idea. I was a bit busy tending the garden and, oh... getting things ready."
     show GTS wink at Transform(xzoom=1)
     GTS "Really, now? Well, I should very much like to see the fruits of your labor when the time is right."
     MC "{i}That{/i} can be arranged."
@@ -8284,16 +8284,16 @@ label GTS042:
     "As luck would have it, her plush lips were still just close enough for me to reach... and so I did, raising a hand to stroke her velvety, maidenly jawline, and plunged into her lips with a kiss."
     "She returned the gesture in kind, pulling me close for moment after sweet moment, until at last we parted; she sighed with her eyes closed, anointing my chest in her minty breath."
     GTS "It's ever so lovely that even now my friends can find the time to visit me."
-    "I didn’t say anything as I stared into her eyes... fixing once or twice, just for a moment, on the now-invisible trail beneath them."
-    "But I knew by then, that’s just who she was."
-    MC "You know I’ll always find the time. I love you, Naomi-chan."
+    "I didn't say anything as I stared into her eyes... fixing once or twice, just for a moment, on the now-invisible trail beneath them."
+    "But I knew by then, that's just who she was."
+    MC "You know I'll always find the time. I love you, Naomi-chan."
     show GTS unique
     GTS "I love you, too."
     show GTS neutral
     GTS "I thought of that as I was reading, as well. I hope our bond shall endure every last winter we see."
     MC "I feel the same way."
     pause 1
-    MC "I... should probably go back and take care of my homework. {w}I’ll call you tonight."
+    MC "I... should probably go back and take care of my homework. {w}I'll call you tonight."
     GTS "Very good. I hope your studies are fruitful."
     show GTS embarrassed at Transform(xzoom=-1)
     pause 1
@@ -8301,7 +8301,7 @@ label GTS042:
     GTS "Might I have a hug before you go?"
     MC "Of course."
     "I lifted my arms and waved my hands inward."
-    MC "C’mon, bring it in!"
+    MC "C'mon, bring it in!"
     show GTS happy with vpunch
     "She brought it all the way in, snatching me up two meters off the ground, nuzzled against her neck in a warm, blanketing embrace. Happy little hums vibrated against my side as she rocked me, gently, to and fro."
     "Her grip was strong, but ever in moderation. Just enough to keep me pinned to her torso without causing any pain."
@@ -8818,7 +8818,7 @@ label GTS044_c4a:
     "She chuckled, as did I. I sat, as did she."
     show cg GTS044_stars1 with dissolve
     "It seemed every star ever given a name smiled down on her that shimmering night, along with their sisters and brothers suspended on the glassy sheen of the lake."
-    "But the misty periwinkle sheen of the grass we sat on was all thanks to the moon above. ‘Super’ was right; it was bigger and brighter and a purer white than ever I’d seen, its divine glow casting the night into its own kind of day."
+    "But the misty periwinkle sheen of the grass we sat on was all thanks to the moon above. ‘Super' was right; it was bigger and brighter and a purer white than ever I'd seen, its divine glow casting the night into its own kind of day."
     "It occurred to me to look over to Naomi; her calligraphy set was nestled in the grass beside her, while she had settled into a meditative pose."
     menu:
         "Kiss her":
@@ -8903,7 +8903,7 @@ label GTS044_c5a:
         MC "Respectfully, Naomi-chan, hell no. {i}This{/i} takes vision."
         show GTS unique at Transform(xzoom=-1)
         "She shifted in place, then smiled with piercing warmth at me as she cocked her head just so."
-        GTS "Thank you, Keisuke-chan. I’m very glad you like it."
+        GTS "Thank you, Keisuke-chan. I'm very glad you like it."
         MC "Heh. You're a beautiful soul, Naomi-chan."
     else:
         extend " really pretty!"
@@ -9006,9 +9006,9 @@ label GTS044_c3b:
     if getSkill("Academics") < 4:
         MC "...Who?"
         RM "Brontë was a British romance and drama novelist and poet. Lovecraft was an American horror writer. Who specialized in reclusive families being depraved in their mansions in the woods."
-    MC "Okay, yeah, they're a little stuffy, maybe it's a little weird the way they dress in public, but I highly doubt they’re in some kind of death cult or whatever you’re saying."
-    RM "Probably not. But obviously there’s a difference in culture with them."
-    RM "Just keep an eye out. My money says Yamazaki-san’s got a lot of stuff bottled up."
+    MC "Okay, yeah, they're a little stuffy, maybe it's a little weird the way they dress in public, but I highly doubt they're in some kind of death cult or whatever you're saying."
+    RM "Probably not. But obviously there's a difference in culture with them."
+    RM "Just keep an eye out. My money says Yamazaki-san's got a lot of stuff bottled up."
     MC "Who doesn't?"
     RM "More than you might expect. Or maybe just different."
     MC "I never took you for a psychoanalyst."
@@ -9084,23 +9084,23 @@ label GTS044_c5b:
         pause 0.5
         #For the following segment, a different character called "Keisuke" should be defined in the code which is the same as the normal MC except for not showing a side portrait
         Mom "Do you know why the moon is white, Keisuke-kun?"
-        AltMC "It’s made of cheese."
-        Mom "Close. It’s covered in mochi."
-        AltMC "Ohhhhh. That must be a lot, how’d it get on the moon?"
+        AltMC "It's made of cheese."
+        Mom "Close. It's covered in mochi."
+        AltMC "Ohhhhh. That must be a lot, how'd it get on the moon?"
         Mom "Well, a long time ago, a god who lived on the moon decided to take a walk through the forest, disguised as a beggar."
-        AltMC "What’s a beggar?"
-        Mom "A beggar is someone who doesn’t have a house, or money, or sometimes even food. So when the little critters in the forest saw him, they decided to all pitch in to make dinner for him."
+        AltMC "What's a beggar?"
+        Mom "A beggar is someone who doesn't have a house, or money, or sometimes even food. So when the little critters in the forest saw him, they decided to all pitch in to make dinner for him."
         Mom "The fox brought fish he just caught from the stream; the monkey brought fruit picked from his favorite trees."
         Mom "But all the rabbit had was grass. So, he brought his greenest, tallest grass to the moon god and told him to make a little fire with it. Once the fire was nice and hot, the rabbit threw himself into it."
         AltMC "What!? No!"
-        Mom "Don’t worry, Keisuke-kun, the rabbit was fine. The second the moon god saw what the rabbit had done, he plucked him out of the fire and revealed his true self. He thanked all the other forest critters for the meal, and then, as a special thanks to the rabbit..."
+        Mom "Don't worry, Keisuke-kun, the rabbit was fine. The second the moon god saw what the rabbit had done, he plucked him out of the fire and revealed his true self. He thanked all the other forest critters for the meal, and then, as a special thanks to the rabbit..."
         Mom "The moon god carried the kind, brave little rabbit back to the moon with him, where he could pound mochi all day and eat it all night."
-        Mom "That rabbit’s still up there pounding mochi to this day, you know."
+        Mom "That rabbit's still up there pounding mochi to this day, you know."
         AltMC "...Woah."
-        Mom "Well, the moon god doesn’t walk around here much anymore..."
+        Mom "Well, the moon god doesn't walk around here much anymore..."
         Mom "But I want you to remember that even today, very good things can happen to you when you be kind to others... even if you lose something at first."
-        AltMC "O-okay. I’ll remember."
-        Mom "That’s good! Now, do you want some tsukimi dango?"
+        AltMC "O-okay. I'll remember."
+        Mom "That's good! Now, do you want some tsukimi dango?"
         AltMC "Yes... please."
         scene Dorm Exterior with fade
         MC "Haah..."
@@ -9200,8 +9200,8 @@ label GTS044_c5b:
         GTS "I suspected as much. Your diligence is quite admirable, Keisuke-chan."
         "I smiled yet wider as I stared up at the blank canvas of the ceiling."
         MC "I hope it actually does something for me. If I had time I might just go up and leave an offering at the shrine."
-        GTS "I think that’s a fine idea regardless. Would you like to go together tomorrow?"
-        MC "I’d love to."
+        GTS "I think that's a fine idea regardless. Would you like to go together tomorrow?"
+        MC "I'd love to."
         GTS "As would I."
         GTS "Well, for now, I suppose you need your rest. I love you, Keisuke-chan."
         MC "I love you too, Naomi-chan. Good night."
@@ -9222,9 +9222,9 @@ label GTS044_c5b_1:
     GTS "Oh, that's- why is your shirt undone? Aren't you cold?"
     MC "Just thought I should give you something memorable."
     GTS "...You {i}are{/i} incorrigible sometimes, Keisuke-kun."
-    GTS "Don’t you believe that your unadorned self is memorable enough for me?"
+    GTS "Don't you believe that your unadorned self is memorable enough for me?"
     MC "Um... uh..."
-    GTS "Please, why don’t you send me a nice smile?"
+    GTS "Please, why don't you send me a nice smile?"
     MC "Uh...{w} yeah! Yeah, sure."
     GTS "Thank you dearly."
     "Not quite processing what just happened, I smiled for her earnestly, snapped the picture and sent it."
@@ -9235,8 +9235,8 @@ label GTS044_c5b_2:
     if not getFlag("GTS044_seductive"):
         $setAffection("GTS", 1)
     "She sighed over the wind."
-    GTS "It’s like you’re really here."
-    MC "I could’ve gone over to visit you."
+    GTS "It's like you're really here."
+    MC "I could've gone over to visit you."
     GTS "You could have, of course. But duty comes before pleasure."
     MC "Yeah, I guess."
     GTS "...You sound a bit tired."
@@ -9249,6 +9249,519 @@ label GTS044_c5b_2:
     jump daymenu
 
 label GTS045:
+    $setProgress("GTS", "GTS046")
+    scene Dorm Hallway with fade
+    play music Peaceful
+    "I listened to the ringing of clashing blades and cries of dying men from the other side of the door."
+    "And once it quieted down for a moment, I knocked."
+    play sound Knock
+    pause 0.5
+    Tomoko "One sec."
+    MC "It's me."
+    Tomoko "Oh. Door's open then."
+    "Thus invited, I ventured into my little sister's lair."
+    scene Dorm Tomoko
+    show Tomoko neutral
+    with fade
+    "With the TV's many-hued glow blanketing the front of her, her mass of tangled black hair looked more like a shadow cascading behind her."
+    "With a thrust of her chin she chomped a dangling pocky stick back into her mouth."
+    Tomoko "Hey big brother. What's going on?"
+    MC "Oh, just checking to see how you're doing."
+    Tomoko "Pretty good. As you can see I just took Luoyang. Might burn and pillage it later, idk."
+    "I flipped on the light, at which she winced, before closing the door."
+    MC "Mhm. Speaking of which, are you making good progress on that history assignment? You need any help?"
+    Tomoko "'Mgood."
+    MC "Aight. How's things with Utagashi-san?"
+    Tomoko "We get along. When she starts rambling she usually doesn't care if I tune her out."
+    "This again; I rolled my eyes and sighed."
+    MC "You remember what Dad said before we left? You'd probably like having real life friends if you gave them a chance."
+    Tomoko "I know, but she ain't it chief. Nobody's got time to listen to all that crap."
+    MC "Bruh, you go to bed at two in the morning."
+    Tomoko "Yeah. Still. You'd think her hotdog lips would've slowed her down just a little."
+    MC "Well, nobody said it had to be her."
+    "I walked up to the bed and brushed aside some of her hair; meanwhile she scooched away a few centimeters."
+    MC "And... how are you dealing with this mop?"
+    "She silently milled her jaw, staring at the pause menu."
+    Tomoko "Washing it kinda sucks."
+    MC "Yep."
+    Tomoko "Yep. Other than that I guess it's not too bad. I'll just tie it up or something once it starts dragging the floor."
+    MC "Yeah... looking at you, that might be sooner rather than later. And I thought {i}mine{/i} was a pain in the ass."
+    "She gave no response except to breathe in deep... and blow a raspberry. I chuckled, and then we sat in silence for a moment or two."
+    Tomoko "So how are you doing?"
+    MC "Pretty good. I've been putting the finishing touches on a birthday date with Naomi-chan."
+    Tomoko "That's coming up?"
+    MC "Yeah, tomorrow."
+    show Tomoko annoyed
+    Tomoko "Ugh, does that mean I have to-"
+    MC "Nah, nah, I told her about you. She won't expect a card or a present or anything."
+    show Tomoko neutral
+    MC "Probably be prepared to meet her in the near future, though."
+    Tomoko "Kay."
+    Tomoko "So what are you guys doing anyway? Can she still fit in a restaurant?"
+    MC "Uhhh... {w}not... {w}really."
+    MC "Nah, I was just gonna have a little picnic with her."
+    MC "Picked out this spot by a patch of wild lupins, got some cooking tips from Kodama-san, got her a nice present..."
+    MC "Heh, I think she'll like it."
+    Tomoko "Wow. Sounds like it's getting pretty serious."
+    MC "Yeah, we're getting pretty close. She really is a one-of-a-kind girl."
+    Tomoko "Uh huh. And you're sure about that?"
+    Tomoko "You thought the last chick was pretty special too."
+    stop music
+    pause 1
+    MC "Yeah, I did."
+    MC "But I've known Naomi-chan about as long by now, and they're completely different. I've been keeping my eyes open, you know."
+    MC "I'm not going to let it happen again."
+    Tomoko "Alright. Just don't take any shit."
+    MC "I know."
+    pause 1
+    show Tomoko happy
+    "I leaned in, then, to squeeze her far arm in a side hug which she half-returned."
+    MC "I better head back. Good to hear you're doing okay, Tomo-chan. And if you ever need something, you shoot me a text, okay?"
+    show Tomoko distracted
+    Tomoko "Got it."
+    pause 0.5
+    MC "Aight, well, later."
+    Tomoko "Later."
+    stop music fadeout 5.0
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm Interior with fade
+    "After returning to my dorm, I settled in for the evening with a bundle of red and white mizuhiki."
+    MC "I swear, if you split on me one more damn time..."
+    "A particularly unfriendly bundle of mizuhiki."
+    "I replayed the video for... I dunno, the eighth time, and finally I conceded to slow down the playback speed a little."
+    MC "Wait, are they... {w}{i}ohhhhh{/i}, I get it..."
+    "With some trepidation, I reshaped the delicate caress of my fingers around the bands, and massaged the tiny cords into what eventually coalesced into, dare I say, a passably piebald butterfly knot."
+    "I nodded at my handiwork with a thin smile of satisfaction, and gently pulled the knot apart to repeat the cycle a few times more."
+    "With a tenth try the knot was looking clean and symmetrical, and I was content to lay it down."
+    "One last parting measurement, just to be sure the material would fully encircle the necessary circumference; and I turned to the less pleasurable labor of the day's assignments."
+    "But I couldn't be too chagrined. I had the next day off classes, and I aimed to make the absolute most of it."
+    scene black with fade
+    pause 2
+    $setTime(TimeEnum.DAY)
+    MC "Hmmmmmm..."
+    pause 2
+    MC "Haaaahhhh..."
+    "I'd woken up a few hours ago. Small talk with Daichi was unusually pleasant; breakfast was, too."
+    "So now, I was waiting, even if I wasn't supposed to be. Eyes closed, counting my breaths. The longer I went, the more similar the soft rush in my chest sounded to the faint cries of the cicadas outside the window."
+    MC "Hmmmmmm..."
+    "And that's when I noticed just the faintest vibrations in the floor."
+    "Little by little, they grew just barely louder and stronger... only to calm down again until I could barely sense them... and then they were silent."
+    "In their place, the ambient light over my eyelids darkened just a bit; perhaps some clouds had rolled in."
+    scene Dorm Interior with fade
+    "Nevertheless, I opened my eyes, stood, donned my backpack, and walked out onto the balcony."
+    scene Dorm Exterior
+    show GTS neutral
+    with fade
+    play music Sunset
+    "Waiting for me just off the edge of the balcony... was Naomi's head."
+    "Her chin was level with the floor I was standing on, and the top of her head with the top of the railing. And her face, her peach blossom face, simply smiled up at me."
+    GTS "Good morning, Keisuke-kun. I hope you slept well."
+    MC "I did. You?"
+    GTS "Splendidly."
+    show GTS unique
+    "She broke eye contact momentarily as she puffed out a curt, breezy laugh."
+    GTS "It feels like an eon since I last looked up at you. Heavens, I never imagined I would miss it so!"
+    "I leaned on the railing with a grin."
+    MC "Well, I know you're easy on the eyes no matter what angle I look at you from."
+    show GTS aroused
+    "Her lips parted only a second before she pinched them closed, looking to and fro along the ground as a blush began to blossom on her ivory cheeks."
+    GTS "Really now..."
+    pause 0.5
+    MC "Oh! Eheh, where are my manners? Happy birthday, Naomi-chan!"
+    show GTS happy
+    GTS "Why, thank you! It's been a perfectly pleasant morning thus far."
+    MC "Nice, nice. Well, do you wanna check out the gardens? I know it's been a while for you."
+    show GTS neutral
+    GTS "I'd love to. Just hold out your arms, please."
+    "I obeyed, and her head rose another half meter before her hands rose up over the railing to catch either side of my ribs."
+    "She tightened her grip, just enough to hold me fast without squeezing, and lifted me up off the balcony and down onto her warm, cushioned breast."
+    "Increasingly, I felt more comfortable lying back in the crook of her elbow, my head back on her shoulder; her gait was as smooth, steady, and graceful as ever, even if she still held me with both arms every time."
+    "It might've gotten {i}too{/i} hot in her embrace, but the late summer air was as even-tempered as she was, and her movement produced just the right amount of wind."
+    "And yet, if I closed my eyes I could hardly tell we were moving... apart from the rhythm of her side tresses brushing against mine."
+    scene black with fade
+    pause 1
+
+    scene Campus Center
+    show GTS neutral
+    with fade
+    MC "Tai chi's really paying off, huh? You seem to be doing pretty well with moving around in a, uh... non-giant environment."
+    GTS "Indeed, it's a tremendous relief. I'll have to thank my instructor properly later."
+    MC "Heh, yeah. I'm proud of you, overcoming such a big change."
+    GTS "Oh, I should think little credit at all is due me, when you've so tirelessly supportive."
+    MC "Oh, who are you fooling?"
+    "I gave her shoulder a light smack, at which she looked down at me with an amused smirk."
+    scene School Planter
+    show GTS neutral
+    with fade
+    "We at last arrived at the edge of the enclosure of the campus garden; Naomi got down and sat back on her knees before setting me on my feet with the slowness and care one would show a baby... I guess the scale wasn't far off, in all fairness."
+    show GTS embarrassed
+    "Luckily it wasn't particularly busy out, but Naomi drew a number of not-so-subtle stares and headturns from what passers were by. It dawned on me, too, how truly unusual she looked even in a place where people near three meters tall were quite usual."
+    "The difference was, I knew how she felt about being unusual."
+    MC "So yeah, you can see they're still doing fine."
+    show GTS neutral
+    GTS "So they are. Thank heavens for the school's dutiful gardener."
+    show GTS happy
+    GTS "And for you as well!"
+    MC "Heh, I try. Sorry I can't show you the old rooftop plot except through pictures."
+    show GTS neutral
+    GTS "It is well, Keisuke-kun. Your gesture alone means a great deal to me."
+    "She scooted on her knees a little more towards the planters, and then stooped down to peer closer, touching her hands to the ground before putting her weight onto them."
+    show GTS happy
+    GTS "Ah... how our lives abound with vices of material pleasure, and yet one finds nothing quite as invigorating as the sight and scents of a well-kept flower bed."
+    "Her misty gaze floated over the whole garden, drifting to and fro in the richness of it. I suppose I became similarly absorbed, looking on her simple joy; seeing her gentle, easy smile, every time I yearned just a little more to give her that again."
+    show GTS surprised
+    "But her face jolted and she gasped just loud enough to hear."
+    GTS "Erm, Keisuke-kun... my posture isn't too... immodest, is it?"
+    MC "Huh? Uh..."
+    "I looked up and down the rest of her statuesque form... trying to remain impartial. Suddenly it was growing difficult to put her first."
+    "As I traced with my eyes down the slope of her back, a certain suspicion welled up in me; I circled around behind her to be sure."
+    "And sure enough, it was. Resting atop shoes each almost as long as my legs, Naomi's rump, swaddled in pleated blue, jutted proudly up into the sky as tall as I was."
+    "The dip of her back, the splay of her hips, her sheer immensity all exaggerated its flawlessly round shape, and being as big as a loveseat I felt powerless to resist the way it commanded my eye."
+    menu:
+        "Tell her she's fine":
+            $setVar("GTS_selfhood", getVar("GTS_selfhood") + 1)
+            MC "I think you're fine, don't worry."
+            GTS "You're sure?... Very well, then. I trust you."
+            show GTS neutral
+            "Her shoulders laxed and she resumed her quiet admiration; I indulged some quiet admiration of my own before I circled back around to join her."
+        "Tell her to adjust herself":
+            "I thought after a few seconds to put my hand to my chin."
+            MC "You might wanna straighten your back a bit more."
+            show GTS despaired-thought
+            GTS "...Oh dear."
+            "She promptly heeded my advice and straightened herself, and seeing no further issue I came back around to join her."
+            show GTS neutral
+            $setAffection("GTS", 1)
+            GTS "Thank you for telling me."
+            MC "Of course."
+    MC "Heh... and to think, the {i}very{/i} first time I laid eyes on you, you were stuck in one of those things, covered in dirt."
+    show GTS unique
+    GTS "Hmhmhm! Quite the impression I must've made."
+    GTS "Ahhh... one could get lost in the memories that simple flowers can evoke."
+    MC "Yeah... I think about that every time I water the ones on the roof."
+    show GTS neutral
+    "She chuckled again, and said nothing more."
+    pause 1
+    MC "What do you think of reflecting on the past?"
+    GTS "A good question."
+    GTS "It can be quite edifying to review one's deeds, to see how one might do better in the future. I do believe the past has much to teach us, generally."
+    GTS "However, it does no good to compartmentalize the past. The spring, the river, the pond and the lake, all are the same water."
+    MC "Huh..."
+    pause 0.5
+    MC "Yeah. That's pretty insightful."
+    GTS "Well, I can only hope those they conjure up in {i}you{/i} are as happy as those they do in me."
+    "I looked over at the breezy contentment on her face as it reflected on mine."
+    MC "Y-yeah."
+    "Tripping over my own tongue, I tried to clear the air of my misstep with something more eloquent."
+    MC "Of course."
+    "At that travesty what was, for her, a generous flicker of puzzlement sparked in her eyes for a forgetful half-second, "
+    show GTS unique
+    extend "before she gave me a pearly, expertly reassuring smile."
+    show GTS neutral
+    GTS "Well then, as I recall you wanted to show me something else today."
+    MC "I sure did. You know that lake with the wooden walkway along the shore? There's a spot near there I want you to see, I'll show you when we're down there."
+    show GTS happy
+    GTS "Intriguing! Let's not tarry, then."
+    "She eased herself back into a sitting position and held out her arms as though expecting a hug. That probably {i}was{/i} some small part of it, for her."
+    "At that moment, too... it suddenly struck me how very strange it was that this had become so normal."
+    "I stepped into her arms, reached up to secure my arms around the back of her neck, and up I went."
+    scene black with fade
+    pause 0.5
+    scene Lake Road
+    show GTS neutral
+    with fade
+    GTS "There we are. So, which way is it?"
+    MC "To the left, if you follow the shore there's a little creek with a fallen tree lying across it."
+    GTS "Ah, very good."
+    "She turned, and looked down at the railing that didn't even reach her knees."
+    show GTS embarrassed
+    GTS "Somehow this feels a bit improper."
+    "I reached out to rub her cheek."
+    MC "It's okay, you can step over the fence, nobody's gonna see you."
+    MC "And if somebody does, well we can live on the lam together. I'll hunt squirrels, you'll grow vegetables, we'll figure it out."
+    show GTS happy
+    "She snickered through her teeth, then turned sideways and lifted one dainty leg over the railing followed by the other."
+    "And as we... well, she... strolled leisurely down the shimmering lakeside, I began to notice something of a snag in my plan."
+    show GTS embarrassed
+    "Followed by a few more snags, as tree branches hanging lower than I'd perceived from the ground kept brushing coarsely over her scalp and occasionally mine."
+    MC "Nch... Naomi-chan, would you wanna let me down, then maybe you can just try to crouch a little."
+    GTS "That sounds like a fine idea."
+    MC "Oh, but lift me up a little first, I'll get those leaves and twigs out of your hair."
+    show GTS neutral
+    GTS "Ah, thank you."
+    "She boosted me up higher until I was seeing over her head again, and I swept my arms across the broad, domed crest of her hair. {w}I thought I heard her breathe a lax sigh as I did so, and finally patted down the few stray knots."
+    MC "Okay, I think it's all gone."
+    "She nodded and lowered me down onto the damp, pebbly soil, and she bent her knees until she looked to be below the branches again."
+    MC "I, uh, don't know how I forgot to account for that. I'm sorry."
+    show GTS unique
+    GTS "One cannot enjoy the peach without accepting the pit. I trust it's not too much farther?"
+    MC "No, not at all. In fact..."
+    "I stepped to the side and peered past her hips to see the stream well within sight."
+    MC "Yeah, that's it over there."
+    GTS "Splendid."
+    show GTS neutral
+    "With Naomi walking in a very peculiar-looking-for-her hunched posture, I was just able to keep up with her with a light jog."
+    show GTS neutral at Transform(xzoom=-1)
+    "But I found myself staggering to a stop, pebbles clacking under my shoes, as I saw her come to a slow halt at the edge of the stream."
+    MC "Hm? Why'd you stop?"
+    GTS "Before we go any further... well..."
+    show GTS pondering
+    GTS "Erm, when we were talking about the flowers just a bit ago, it seemed to me that something about the conversation made you uneasy. You're seldom so tongue-tied."
+    MC "Oh, uh... yeah, I guess my brain did sort of glitch out back there."
+    GTS "...Glitch out?"
+    MC "A brain fart, pardon my French."
+    GTS "I see."
+    MC "But no, don't worry about that. It had nothing to do with the flowers."
+    GTS "Well, if not that, then what? I apologize if I'm prying, but I felt it only right I should ask."
+    MC "C'mon, it's your birthday, we shouldn't be talking about me."
+    pause 0.5
+    show GTS neutral at Transform(xzoom=1)
+    GTS "When I said I love you, Keisuke-kun, I meant it sincerely. Even if this is to be 'my day', as it were, I can scarcely overstate how much your wellbeing matters to me. My wish is for you to be happy."
+    GTS "I won't press further if you do insist, but please know that I want to share your burdens whatever they may be."
+    pause 0.5
+    "I sighed, releasing a pressure in my chest I didn't realize was there. Naomi, with her hands folded over her lap, sat down in Seiza position in front of me."
+    MCT "I guess I... don't really have a choice."
+    MC "Eheh, it's... it's funny."
+    MC "I love tending the garden for you because I know how important it is to you, and I think I even sorta get it myself, what you see in it."
+    show GTS happy
+    MC "But... every time I do it... I dunno, I feel like an herbivore."
+    show GTS surprised
+    GTS "What? You're patently no such thing."
+    show GTS neutral
+    GTS "You've won my heart, haven't you?"
+    MC "Yeah, when I actually think about it I realize that pretty quick. It's just some personal baggage."
+    stop music fadeout 5.0
+    show GTS pondering
+    GTS "If that's the case... why do you feel that way at all?"
+    "For a second more I looked up at her, her big, patient amber eyes washing over me, making me realize that for both our sakes, I had to do this."
+    pause 0.5
+    play music Bittersweet
+    MC "When I was in high school, I was dating this girl for a while."
+    MC "Wasn't anything too deep, but you know, I liked her a lot. She was always smiling around me, always positive."
+    pause 0.5
+    MC "I think it was a couple months in, and I start hearing rumors floating around..."
+    MC "And I find out..."
+    "My teeth clenched the insides of my cheeks, involuntarily."
+    MC "She fu-{w} {i}ahem{/i}. She'd... cheated on me. With our school's soccer captain."
+    show GTS surprised
+    "She gasped, sharply."
+    GTS "Wh- I... why..."
+    hide GTS
+    show GTS_S angry with vpunch
+    GTS_S "That perfidious harlot! How could she betray you?"
+    "My staggering legs carried me backwards a meter or so as Naomi‘s voice resounded, shattering the air like I'd never heard it before. And though I knew she could be stern, I'd never seen the sort of intense, pointed scowl that now hardened her huge face."
+    GTS_S "Of all the selfish, thoughtless, wanton..."
+    hide GTS_S
+    show GTS sad
+    GTS "Mm... "
+    GTS "Please forgive me, that was atrociously undignified of me. I didn't mean to speak for you."
+    MC "It's okay Naomi-chan, it's just... I didn't expect you to get so mad over something that happened to {i}me{/i}."
+    GTS "Well, why would I not? I may have overstepped, but it {i}is{/i} personal to me."
+    GTS "I find such callous iniquity thoroughly odious, never mind that someone I hold dear should suffer the consequences."
+    MC "Well... if nothing else, it's good to know you've got my back."
+    show GTS neutral
+    GTS "Of course, Keisuke-kun. I always shall."
+    GTS "I'm sure that was extraordinarily difficult to say aloud. I'm sorry to have dredged up bitter memories, but I‘m thankful for your trust and I hope that airing them has brought you some peace."
+    MC "Heh... Yeah, I do feel better."
+    GTS "As do I."
+    stop music fadeout 5.0
+    scene black with fade
+    "She leaned down to envelop me in a tender hug; her folded hands caught my back and gently pushed me up against the pillowy slopes of her chest."
+    "With my head buried in the crook of her neck, all light, all distraction was closed from my eyes. It was just me and her; I reached up and put my arms around her shoulders."
+    "I felt something welling up in my chest as we lingered in each other's embrace, a tightness, until at last I expelled it as a hard, softening sigh."
+    "We enjoyed a quiet moment or two more, yielding to the babbling water and the whistling songbirds."
+    "Finally, I pulled away."
+    scene Lake Road
+    show GTS neutral
+    with fade
+    MC "Well... shall we continue on? It's just a little ways up the stream."
+    GTS "Yes, let's."
+    "I tilted my head towards the corridor of trees through which the waters ran, and we advanced through the speckled light of the forest floor together."
+    scene black with fade
+    pause 0.5
+
+    scene Woods with fade
+    play music LoveA
+    MC "There, in that clearing off to the side."
+    show GTS surprised with dissolve
+    GTS "Ohhh..."
+    "She looked around, and even her gentle rasp softened to a lackadaisical wind of wonderment."
+    show GTS neutral
+    GTS "Heavens, how exquisitely picturesque."
+    hide GTS
+    show GTS_S happy
+    GTS_S "And how delightful it is to be able to stand up straight again!"
+    MC "I thought you'd enjoy that."
+    hide GTS_S
+    show GTS pondering
+    GTS "Is that..."
+    show GTS surprised
+    pause 0.5
+    show GTS happy
+    GTS "My goodness, look at all the lupins! They're beautiful!"
+    GTS "I've never seen them in the wild, never mind so many!"
+    show GTS unique
+    "She knelt down to brush her hand slowly over the patch, at which their pale pinks and violets shimmered in the sun."
+    "In the midst of her appreciation, I saw her head shift towards something in her periphery."
+    show GTS pondering
+    GTS "Hm? What's that over there?"
+    MC "Huh?... That thing?"
+    GTS "Yes. It looks to be some kind of... brazier? What on earth is it doing in the middle of the woods?"
+    MC "Who knows... I guess it's a surprise."
+    GTS "What do you..."
+    "Preempting her question, I walked over beside the brazier and slid my backpack off my shoulders."
+    show GTS happy
+    "I watched the comprehension dawn on her face and turn her cheeks a rosy hue, as I drew from my backpack several bags of lax beef shoulder cutlets soaked in aromatic brown juices, a few bags of assorted vegetables, and another few bags of charcoal."
+    GTS "A yakiniku picnic? Heavens above, how did you find the time to arrange all of this?"
+    MC "I have my ways. I couldn't really find a way to store the dipping sauce without, uh, marinating my notebook, so I just marinated the filets instead."
+    show GTS unique
+    GTS "How clever."
+    MC "Well c'mon, have a seat. I'll get everything ready."
+    show GTS neutral
+    "She cleared the five or so meters between us in a couple steps, and eased herself down into an immaculate posture while I began to light the charcoal."
+    MC "I imagine you've had yakiniku before."
+    show GTS unique
+    GTS "Once or twice with my friends, yes. I found that I was quite fond of it."
+    "I smiled as an orange glow began to spread from the match to the pile of briquettes, and I withdrew and blew the withered match out."
+    MC "Well, I don't know how this compares to the sorts of birthday celebrations you're used to, but I hope you like it anyway."
+    GTS "Perhaps it's too early to say... but I already feel it's the best one I've ever had."
+    "Hearing that, I felt a sudden kinship with the flames swelling brighter before me."
+    if getSkill("Academics") > 2:
+        MC "..."
+        MC "You... never had birthday parties, did you?"
+        show GTS despaired-thought
+        GTS "...Well, that's not entirely true."
+        show GTS neutral
+        GTS "On my sixteenth birthday my friends treated me to a performance of Sugawara Denju Tenaraikagami."
+        GTS "But generally, no, our family simply never adopted the custom. To expect to be lavished with gifts and attention, even one day out of the year, is rather unconducive to building a virtuous character."
+        MC "But that's not all they are, of course."
+        MC "It's {i}also{/i} a chance for friends and family to express how much they appreciate you."
+        GTS "Indeed. There are two sides to every coin, as it were."
+    "At last the brazier was nursing a low, steady flame; I laid the gridiron over it by the edges, and then two of the drizzling cutlets."
+    "They hissed lowly at the touch of the flames, breathing out a savory scent that did for my stomach what the sunlight did for my scalp."
+    GTS "They already smell positively scrumptious!"
+    MC "You could say it's a family tradition. My dad's got a black belt in barbecue."
+    MC "...Although admittedly I just asked Kodama-san to point me to a good recipe."
+    GTS "Just as well. It used to be quite common to study various skills under a distant relative or a family friend."
+    GTS "The results speak for themselves."
+    "After a minute or two of searing, the meat had turned a glistening brown and its scent had grown heavy; I reached into my backpack once more, withdrew a pair of tongs, and raised them up towards Naomi."
+    "She stared at the proffer a moment, her lips contorting into a polite smile, and she took it."
+    GTS "Thank you."
+    MC "You're very welcome."
+    "She wedged the tongs between her pointer and thumb, then reached down to pick up a filet."
+    show GTS surprised
+    "Her eyes widened as she popped it into her mouth."
+    if getSkill("Academics") > 2 and getSkill("Art") > 2:
+        $setAffection("GTS", 2)
+    else:
+        $setAffection("GTS", 1)
+    GTS "This is... exquisite."
+    MC "You like it?"
+    show GTS happy
+    GTS "Very much so! Perhaps you inherited more from your father than you thought!"
+    MC "Heh, I wouldn't have guessed, from the couple of times I tried to help my dad on the grill..."
+    show GTS embarrassed
+    GTS "It does take some doing, doesn't it..."
+    "After prodding the charcoal, I began laying down more meat on the grill."
+    show GTS neutral with dissolve
+    "..."
+    "And as funny as it is to say, in the proceeding minutes, not a word was said between us."
+    "What I shared with her instead was a full appreciation of the sights and sounds, dancing smoke and pensive flowers. It was the easiest thing in the world now, like opening my eyes."
+    "I saw hers grow lax and sleepy; at first they swayed to and fro like a hunted woman as she effortlessly put away steak after steak. But she settled in soon enough."
+    "I grilled some vegetables and beef tongue medallions for myself, too, and soon all the bags sat empty in a pile."
+    "Naomi raised a hand to her side, but stopped."
+    GTS "By any chance did you bring some handkerchiefs for the two of us?"
+    MCT "..."
+    MCT "I may be stupid."
+    MC "That, uh, may have slipped my mind."
+    show GTS unique
+    GTS "Oh well. One hardly remembers a meal for the napkins."
+    hide GTS
+    show GTS_S neutral
+    "Naomi wiped the sparse stains on her lips with a smooth swipe on the back of her hand, stood, and ambled toward the stream."
+    "The water murmured, rolling under and over her fingers; then she was satisfied, and flicked the gleaming droplets off her fingers one by one, casting rippling ghosts of broken rings on the surface of the water."
+    "She walked back my way but didn't sit."
+    GTS_S "Moreover, that may have been the best meal I have had since arriving here."
+    MC "I'm honored. But, I have just one more thing before we go."
+    hide GTS_S
+    show GTS pondering
+    GTS "Oh?"
+    MC "Wait here a second."
+    hide GTS with dissolve
+    "I stepped just inside the veil of the trees, turned left at the arched branch, and there was the prize just where I'd left it."
+    "I withdrew the baggy of mizuhiki from my pocket and set to work tying a nice bow around it."
+    MC "...Perfect."
+    if getSkill("Athletics") > 2:
+        "I knelt down, hugged the base, and stood to carry it into the clearing."
+    else:
+        "I knelt down, wrapped my arms as far as they would go around the base, and tried to lift."
+        MC "Hrmph!..."
+        "Immediately reviving the withering ache in my arm bones from dragging it out there in the first place."
+        MC "{size=-6}Fuck's sakes, you better behave for her...{/size}"
+        "The first attempt was a wash, but I lifted with my knees on the second try and managed, with the graceful swagger of a gazelle with brain damage, to stagger backwards to a full standing position."
+        "Step by plodding step, I carried the burdensome thing out into the clearing."
+    show GTS surprised with dissolve
+    "Her wide eyes as I emerged from the treeline instantly rewarded the effort."
+    GTS "Keisuke-kun... how..."
+    MC "I, uh, got up a little early this morning to hide it. I figured it wasn't terribly likely anyone would steal it, so, yeah."
+    GTS "Is that... a persimmon sapling?"
+    MC "Yeah! It's a pretty hardy variety, so it {i}should{/i} grow okay in this climate."
+    pause 0.25
+    MC "At least, that's what the clerk said."
+    MC "It's still young, but I thought it'd be something you could reasonably work with, and also eventually give you a little something to offer whenever you have guests over."
+    MC "The planter's biodegradable too, so you can use that for compost. I think?... I know these apparently don't like regular fertilizer."
+    MC "I... hope you like it."
+    show GTS happy
+    "She clasped her hands together over her breast as she beamed with a blush at the tree."
+    GTS "I {i}adore{/i} it! Living by that barren old pit with nothing to grow or care for, I almost felt as though I'd lost a part of myself."
+    GTS "But you've... brought it back."
+    show GTS aroused
+    GTS "Two words scarcely seem adequate for such a wonderful gesture, but... thank you. Thank you ever so much."
+    "I came closer, warmed by her bright, shining face."
+    MC "Happy birthday, Naomi-chan."
+    show GTS unique
+    "She said nothing, but rather leaned down to plant a lingering kiss on the entirety of my cheek, with her palm bracing my torso and her finger stroking the back of my head just so."
+    "My face grew hot from the contact."
+    "At last, a soft smack of her lips signaled her parting from me, and her head rose up toward the canopy."
+    GTS "I love you Keisuke-kun, and I endeavor to show it as will make you feel as wonderful as you've made me."
+    MC "You do it effortlessly."
+    show GTS neutral
+    GTS "Ah, well then... I don't suppose you have any other surprises up your sleeve?"
+    MC "Well, that sort of was the big thing just now... but I brought along a book of modern haiku, if you'd like to read through that for a little while."
+    GTS "That does sound lovely..."
+    GTS "Although, I would like to return to my dormitory soon to pick out a suitable spot for the tree."
+    MC "Sounds good. I can carry it over there, if you like."
+    show GTS unique
+    GTS "Oh, please don't trouble yourself on my behalf. I would feel rather guilty if I allowed you to toil any more than you already have."
+    MC "As you wish. I... suppose I should probably take care of the grill anyway."
+    show GTS neutral
+    GTS "That would be considerate, yes."
+    GTS "Ah, and that reminds me of something."
+    GTS "I've been doing a bit better with the recipes Kodama-san showed me, and so I've been trying to try my hand at other kinds of cookies."
+    GTS "Would you perhaps like to visit my dormitory later this afternoon and let me know how they turn out?"
+    MC "Yeah, I'd love to! You've gotten a {i}lot{/i} better since that one time I sat in on your lesson."
+    show GTS unique
+    GTS "Splendid! In that case, I shall see you again soon."
+    show GTS neutral
+    "She treaded gingerly past me to pick up the sapling, and then turned."
+    GTS "Thank you for a truly unforgettable birthday celebration."
+    MC "The pleasure is all mine."
+    show GTS unique
+    GTS "Indeed."
+    hide GTS with dissolve
+    "With the sapling nestled close in her arms, she ambled down the stream and out of the clearing, soon vanishing into green shadow."
+    "As for me, I knelt down to clean up."
+    MCT "Looks like I was just about right. It looked like a potted fern in her arms. That oughta be manageable for her."
+    pause 0.25
+    "I snorted as I stuffed the bags into one another."
+    MCT "Figures she wants to give {i}me{/i} something on {i}her{/i} birthday."
+    MCT "Oh well. Whatever makes her happy."
+    jump daymenu
+
+label GTS046:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

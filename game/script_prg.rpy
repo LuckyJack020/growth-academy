@@ -12476,7 +12476,7 @@ label PRG037:
     hide WG with dissolve
     "Alice waved her hand nonchalantly as she made for the door."
     show PRG neutral
-    show Sakura neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    show Sakura neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "Do you think that Sakura-san and I should participate in that next competition, Keisuke?"
     MC "I mean, it probably wouldn't be the worst idea. But, don't trouble yourself with that now. You two just beat every other participant today in a landslide! Be proud of yourselves for awhile!"
     Sakura "Yeah, no need to worry about that now. For the time being, I believe I overheard you and Kodama-san talking about going out and buying her a binder or something, Hotsure-san?"

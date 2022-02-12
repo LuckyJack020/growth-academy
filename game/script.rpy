@@ -674,7 +674,7 @@ init python:
 
     def setAEOutfit(o):
         global AEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL:
             AEOutfit = o
 
     def setBEOutfit(o):
@@ -684,22 +684,22 @@ init python:
 
     def setFMGOutfit(o):
         global FMGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.RIPPED or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             FMGOutfit = o
 
     def setGTSOutfit(o):
         global GTSOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.CASUAL:
             GTSOutfit = o
 
     def setPRGOutfit(o):
         global PRGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.DRESS or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.NUDE or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.COW or o == OutfitEnum.PAJAMAS:
             PRGOutfit = o
 
     def setWGOutfit(o):
         global WGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SICK or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SICK or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
             WGOutfit = o
 
     def setTakoOutfit(o):
@@ -714,7 +714,7 @@ init python:
 
     def setNatsOutfit(o):
         global NatsOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.SWIM:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             NatsOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
@@ -886,7 +886,18 @@ screen daymenu():
             xanchor 1.0
             background Solid(Color((0, 0, 0, 100)))
             if debugenabled:
-                text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
+                if highlitevent.find('GTS') != -1 and "GTS005" not in clearedevents: #People wanted Naomi and Aida's growth factors hidden from new players who happened to be playing the game in debug mode, until the scene plays that reveals their growth factor to the player.
+                    if highlitevent.find('PRG') != -1 and "PRG026" not in clearedevents:
+                        text("(" + highlitevent.replace("GTS", "???").replace("PRG", "???") + ") " + eventlibrary[highlitevent]["name"])
+                    else:
+                        text("(" + highlitevent.replace("GTS", "???") + ") " + eventlibrary[highlitevent]["name"])
+                elif highlitevent.find('PRG') != -1 and "PRG026" not in clearedevents:
+                    if highlitevent.find('GTS') != -1 and "GTS005" not in clearedevents:
+                        text("(" + highlitevent.replace("PRG", "???").replace("GTS", "???") + ") " + eventlibrary[highlitevent]["name"])
+                    else:
+                        text("(" + highlitevent.replace("PRG", "???") + ") " + eventlibrary[highlitevent]["name"])
+                else:
+                    text("(" + highlitevent + ") " + eventlibrary[highlitevent]["name"])
             else:
                 text(eventlibrary[highlitevent]["name"])
         frame:

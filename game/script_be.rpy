@@ -7540,33 +7540,33 @@ label BE042:
     $setProgress("BE", "BE043")
     scene Hallway with fade
     play music DayByDay
-    "When Honoka invited me over, I wasn’t sure what to expect anymore. Granted I had learned by now that trying to guess what Honoka had planned was foolish."
+    "When Honoka invited me over, I wasn't sure what to expect anymore. Granted I had learned by now that trying to guess what Honoka had planned was foolish."
     play sound Knock
     $setBEOutfit(OutfitEnum.CASUAL)
     scene Dorm BE
     show BE happy
     with fade
     BE "Thanks for coming over so quickly Kei-chan, your eyes will be of great use."
-    MC "What’s going on that you require my eyes?"
+    MC "What's going on that you require my eyes?"
     BE "Well it's two things, first being I need your help finding my swimsuit."
     BE "And second, I need you to judge me in it."
     MC "Are you talking about your school one, or your regular one?"
     show BE neutral
-    BE "My regular one, you know the two piece suit I used to wear when we’d go to the beach?"
+    BE "My regular one, you know the two piece suit I used to wear when we'd go to the beach?"
     MC "I very vaguely remember those days cause you moved away so shortly after. Was it black with three red stripes on either cup?"
-    BE "Yeah, you remember! I’m glad at least one of us could recall what it looked like."
+    BE "Yeah, you remember! I'm glad at least one of us could recall what it looked like."
     MC "Did you really not remember your own clothing?"
     show BE shrug
     BE "Like you said it's been a while, I was only looking for it for my own curiosity."
-    BE "I don’t even remember if I packed it or not."
-    MC "Didn’t you say you wanted to try it on?"
+    BE "I don't even remember if I packed it or not."
+    MC "Didn't you say you wanted to try it on?"
     show BE seductive
-    BE "I’d like to make an attempt at it, plus I thought you’d enjoy seeing me in something so skimpy."
+    BE "I'd like to make an attempt at it, plus I thought you'd enjoy seeing me in something so skimpy."
     MC "Not to rain on your parade, but I think even if we found it, the poor garment would be beyond too small for you."
     show BE worried
     BE "{i}sigh{/}"
     show BE shrug
-    BE "You’re probably right, but that means I’d have to wear my school issued one to the beach, instead."
+    BE "You're probably right, but that means I'd have to wear my school issued one to the beach, instead."
     MC "You were planning on going to the beach?"
     show BE happy
     BE "We have a break coming up so I thought about heading out to enjoy some dedicated time under the sun!"
@@ -7575,10 +7575,10 @@ label BE042:
     BE "Want to come along?"
     MC "Do I really have a choice in the matter?"
     show BE unique
-    BE "You do... but you’d miss out on me modeling the suits."
-    MC "You really are trying to sell me with sex appeal aren’t you?"
+    BE "You do... but you'd miss out on me modeling the suits."
+    MC "You really are trying to sell me with sex appeal aren't you?"
     BE "Are you complaining?"
-    MC "As a dude, I think I’m legally obligated to say no."
+    MC "As a dude, I think I'm legally obligated to say no."
     "Honoka giggled and grabbed my arm, dragging me out the door."
     scene black with fade
     pause 1
@@ -7592,10 +7592,10 @@ label BE042:
     MC "Which one? The one in the black with blue horizontal stripe two piece?"
     BE "Yeah."
     MC "I wonder if she got it in town."
-    BE "Maybe. I don’t think many tourists come to the island."
-    MC "Probably or they’d return home with tales of titzillas and giants."
+    BE "Maybe. I don't think many tourists come to the island."
+    MC "Probably or they'd return home with tales of titzillas and giants."
     BE "But that would make for fun stories around the campfire."
-    MC "You know that's something I haven’t done in ages."
+    MC "You know that's something I haven't done in ages."
     show BE neutral
     BE "What?"
     MC "A bonfire, I remember us having one at the Yoyogi Park a long time ago."
@@ -7604,7 +7604,7 @@ label BE042:
     BE "But you never did get that burger back did you?"
     MC "Sadly no, but you {i}could{/i} buy me lunch as an apology."
     show BE happy
-    BE "You’re mean Kei-chan, but sure I’ll indulge you for lunch if you get dinner."
+    BE "You're mean Kei-chan, but sure I'll indulge you for lunch if you get dinner."
     MC "Fine, Miss Queen of the Negotiation."
     BE "Sounds like we have a deal."
     scene black with fade
@@ -7612,8 +7612,8 @@ label BE042:
 
     scene Town with fade
     play music BrightLights
-    "The bus soon reached town and we departed. Though I wasn’t too sure where the clothes shop was."
-    MCT "I do wonder if they’ll have something in Honoka’s size. I mean I doubt they wouldn’t since she isn’t that much bigger than her classmates."
+    "The bus soon reached town and we departed. Though I wasn't too sure where the clothes shop was."
+    MCT "I do wonder if they'll have something in Honoka's size. I mean I doubt they wouldn't since she isn't that much bigger than her classmates."
     MC "Hey Honoka where is that shop... {w}Honoka?"
     "Looking around I noticed Honoka was nowhere around me. Searching further I found her back at the bus stop talking with the swimsuit lady from the bus. The two of them were laughing and obviously having a good conversation."
     MCT "Guess her charisma is contagious."
@@ -7625,20 +7625,20 @@ label BE042:
 
 label BE042_C1_1:
     "As I approached them I could hear them gossiping over clothes and the great deal she had gotten."
-    MC "You didn’t tell me you had stopped here."
+    MC "You didn't tell me you had stopped here."
     show BE happy with dissolve
     BE "Sorry Kei-chan, I just {i}had{/i} to ask her about where she got that suit!"
     "Lady" "Oh this? I got it at a store straight up the road from here, the one next to the burger place."
     BE "Oh that's great to hear! It looks beautiful on you."
     "Lady" "Thank you. Well I best be going, or all the good beach spots are gonna disappear."
     "The lady grabbed her cooler and made her way towards the shore."
-    BE "She’s sweet, and I’m so glad that the store she got that suit from is in town."
-    MC "Glad she also specified the store cause I would’ve just gone to the first one I saw."
+    BE "She's sweet, and I'm so glad that the store she got that suit from is in town."
+    MC "Glad she also specified the store cause I would've just gone to the first one I saw."
     BE "Well we better get a move on before someone snags up the cutest one!"
-    MC "Don’t think someone is gonna be aiming for the swimsuits made for holding watermelons..."
+    MC "Don't think someone is gonna be aiming for the swimsuits made for holding watermelons..."
     show BE unique
-    BE "Hey, you never know! The store’s designed for people like me, so who knows? Maybe they’ve even got bigger ones."
-    MCT "She’s right of course, but it’s hard to imagine getting much bigger than what I’ve already seen."
+    BE "Hey, you never know! The store's designed for people like me, so who knows? Maybe they've even got bigger ones."
+    MCT "She's right of course, but it's hard to imagine getting much bigger than what I've already seen."
     BE "Stop thinking about them and let's go!"
     "She grabbed onto my arm and dragged me up the sidewalk."
     scene black with fade
@@ -7650,13 +7650,13 @@ label BE042_C1_1:
     show BE neutral with dissolve
     BE "Oh, these blouses are cute."
     "She was looking through a rack of shirts and blouses that sorta look like parachutes with buttons on them."
-    MCT "I guess at her size shirts start looking weird when they aren’t being worn."
+    MCT "I guess at her size shirts start looking weird when they aren't being worn."
     show BE surprised
     BE "Oh, there are the swimsuits!"
-    "She quickly dashed ahead towards a rack filled with various swimsuits. I’m not sure what I was expecting but seeing the rack mainly consist of two pieces was somehow still surprising."
+    "She quickly dashed ahead towards a rack filled with various swimsuits. I'm not sure what I was expecting but seeing the rack mainly consist of two pieces was somehow still surprising."
     BE "All of these look so cool..."
     show BE seductive
-    BE "Which one do you think I’d look great in?"
+    BE "Which one do you think I'd look great in?"
     MC "I don't think I should really be making that kind of decision for you."
     BE "Kei-chan, I want you to decide for me!"
     pause 1
@@ -7672,18 +7672,18 @@ label BE042_C1_1:
     MC "Look at this lucky find."
     show BE surprised
     BE "No way! This is so nostalgic!"
-    MC "That’s what I was thinking. Guess the company makes extreme size clothing."
-    BE "I’m gonna go try this on!"
+    MC "That's what I was thinking. Guess the company makes extreme size clothing."
+    BE "I'm gonna go try this on!"
     "She turned to head towards the changing room but paused and looked back towards me."
     show BE aroused
     BE "No peeking."
     MC "Whatever you say."
     "As she disappeared into the changing room, I found a bench to sit down on."
     "Looking around the store a bit more I found myself looking at a bowl of girls' hair ties."
-    MCT "I’ve tried keeping this stuff contained and at this rate, those aren’t looking half bad."
+    MCT "I've tried keeping this stuff contained and at this rate, those aren't looking half bad."
     "I grabbed a handful of hair ties and walked over to the checkout."
     "As the cashier finished my transaction I spotted Honoka walking back over."
-    MC "How’d the suit perform?"
+    MC "How'd the suit perform?"
     show BE aroused
     BE "You can be the judge when we go to the beach, sir."
     show BE happy
@@ -7691,22 +7691,22 @@ label BE042_C1_1:
     MC "Yeah the hair tornado is starting to become problematic."
     BE "Sounds like someone needs some assistance in styling their hair. Should I inform Tomo that I may require her assistance?"
     MC "Please, no. Have you seen her hair lately? Besides, I think the hair ties will do for now. I think I can pull off a man bun."
-    BE "Now that’ll be something to get a picture of."
+    BE "Now that'll be something to get a picture of."
     "I grabbed my stuff while Honoka did her check out."
     "With her suit in hand, she walked over to where I was standing beside the door."
     BE "Oh wait! There was something else I wanted to check out."
     show BE surprised with vpunch
     play sound Thud
-    "Honoka must’ve spun on her heel alot faster than she anticipated as her bosom swung around and collided with a mannequin, sending its pieces falling to the floor."
-    BE "Oh no, I’m so sorry!"
-    "Shopkeep" "It’s fine ma’am, you aren’t the first well endowed lass to send that poor dummy to the floor. Probably a good sign to move it to a new place."
+    "Honoka must've spun on her heel alot faster than she anticipated as her bosom swung around and collided with a mannequin, sending its pieces falling to the floor."
+    BE "Oh no, I'm so sorry!"
+    "Shopkeep" "It's fine ma'am, you aren't the first well endowed lass to send that poor dummy to the floor. Probably a good sign to move it to a new place."
     show BE doubt
     BE "You sure?"
-    "Shopkeep" "If I had 100 yen for every time that happened, I’d be rich. Don’t worry about it madam."
+    "Shopkeep" "If I had 100 yen for every time that happened, I'd be rich. Don't worry about it madam."
     "I could tell Honoka was reluctant to accept the shopkeeper's dismissal, but she heeded and we headed out."
-    MC "You ok? You’re looking a bit glum."
+    MC "You ok? You're looking a bit glum."
     show BE worried
-    BE "Typically I’m pretty good at keeping track of my surroundings. So that was a little surprising, honestly."
+    BE "Typically I'm pretty good at keeping track of my surroundings. So that was a little surprising, honestly."
     MC "Is that the first time that's happened?"
     show BE neutral
     BE "Publicly. But I vow to make that the last time."
@@ -7719,8 +7719,8 @@ label BE042_C1_1:
     MCT "Nice save."
     MC "I think the lady mentioned a burger place next door, so we can check that out."
     show BE happy
-    BE "You’re getting better at these date ideas."
-    MC "Does that mean I’m paying?"
+    BE "You're getting better at these date ideas."
+    MC "Does that mean I'm paying?"
     BE "Well, if you {i}insist{/i}."
     MC "Fine, but you owe me dinner at some point."
     $setAffection("BE", 1)
@@ -7735,25 +7735,25 @@ label BE042_C2_1:
     BE "Yeah, she mentioned getting it from a shop straight up the road from here."
     MC "Any other details?"
     show BE neutral
-    BE "Don’t think so."
+    BE "Don't think so."
     MC "Hopefully they have something eye-catching, like bad Hawaian shirts out front."
-    BE "Oh, like the ones your dad used to wear when he’d pick you up on Fridays from school?"
-    MC "Yeah, exactly like that. He used to joke that he got them from a dad’s only shop."
+    BE "Oh, like the ones your dad used to wear when he'd pick you up on Fridays from school?"
+    MC "Yeah, exactly like that. He used to joke that he got them from a dad's only shop."
     show BE happy
     BE "Yeah your dad was silly like that."
     BE "But back to our quest at hand, we better get a move on before someone snags up the cutest one."
-    MC "Don’t think someone is gonna be aiming for the swimsuits made for holding watermelons..."
+    MC "Don't think someone is gonna be aiming for the swimsuits made for holding watermelons..."
     show BE unique
-    BE "Hey, you never know! The store’s designed for people like me, so who knows? Maybe they’ve even got bigger ones."
-    MCT "She’s right of course, but it’s hard to imagine getting much bigger than what I’ve already seen."
+    BE "Hey, you never know! The store's designed for people like me, so who knows? Maybe they've even got bigger ones."
+    MCT "She's right of course, but it's hard to imagine getting much bigger than what I've already seen."
     BE "Stop thinking about them and let's go!"
     "She grabbed onto my arm and dragged me up the sidewalk."
     "After wandering around the streets for a while I could tell we may be lost as none of the shops looked like a clothing store."
     show BE sad
-    BE "I could’ve sworn she said to go straight up the road and it would be there..."
+    BE "I could've sworn she said to go straight up the road and it would be there..."
     MC "Maybe she misremembered which store she got it from."
-    BE "I suppose so because we haven’t seen anything that comes close to looking remotely like a clothing store."
-    MC "Well I’m not sure about you, but I’m rather hungry."
+    BE "I suppose so because we haven't seen anything that comes close to looking remotely like a clothing store."
+    MC "Well I'm not sure about you, but I'm rather hungry."
     show BE happy
     BE "Guess we share that feeling."
     MC "We passed a burger place two blocks back, if that sounds good to you?"
@@ -7765,45 +7765,45 @@ label BE042_C2_1:
     "We grabbed a table and placed our orders."
     MC "Shoot! I forgot to order a milkshake."
     show BE surprised-2 with dissolve
-    BE "Oh a milkshake! I can’t remember the last time I had a good milkshake."
+    BE "Oh a milkshake! I can't remember the last time I had a good milkshake."
     MC "What flavor would you want?"
     show BE seductive
     BE "Do I hear you offering to buy your {i}love{/i} a treat?"
     MC "You just wanted to say that cause love has a ring to it."
     show BE happy
-    BE "Hehe, maybe, but I think I’ll take a strawberry shake."
+    BE "Hehe, maybe, but I think I'll take a strawberry shake."
     MC "Oh, the things I do for love."
     "We both broke into laughs as the waitress dropped off our meals."
     show BE neutral
-    BE "I guess I can come back some other time once I know where I’m going to grab a suit."
-    MC "I don’t mind coming along again if I’m available."
+    BE "I guess I can come back some other time once I know where I'm going to grab a suit."
+    MC "I don't mind coming along again if I'm available."
     BE "Guess we will see when the opportunity arises."
     "I caught the waitress and ordered Honoka her strawberry shake."
     show BE happy
     BE "So he {i}does{/i} love me."
-    MC "I don’t think a milkshake is the best way to determine that."
-    BE "Oh don’t be so stern about it, Kei-chan. Though I should properly thank you for it."
-    MC "Don’t worry about it, might as well get something nice out of this bust of a trip."
+    MC "I don't think a milkshake is the best way to determine that."
+    BE "Oh don't be so stern about it, Kei-chan. Though I should properly thank you for it."
+    MC "Don't worry about it, might as well get something nice out of this bust of a trip."
     BE "I mean just getting to hang out with you is a great time."
     MC "I could say the same for hanging out with you."
     "The waitress soon returned with Honoka's milkshake, topped off by a thick layer of whipped cream and a cherry."
     BE "That looks delicious! Honestly, this makes up for not finding that clothing store."
-    Waitress "Oh, there’s one next door."
+    Waitress "Oh, there's one next door."
     show BE surprised-2
     BE "..."
     MC "..."
     show BE happy
     BE "Even better!"
-    MC "Thank you for that ma’am."
+    MC "Thank you for that ma'am."
     "The waitress just smiled and walked off."
     MC "How did we miss that?"
     BE "Probably because we stopped looking really hard once we decided to get food."
     MC "I always thought you had a stomach bigger than your head."
     show BE neutral
     BE "You calling me fat?"
-    MC "You saying I’m right?"
+    MC "You saying I'm right?"
     show BE angry
-    BE "You’re no fun, Kei-chan."
+    BE "You're no fun, Kei-chan."
     MC "Your whipped cream is melting."
     show BE surprised
     BE "Oh no!"
@@ -7821,13 +7821,13 @@ label BE042_C2_1:
     show BE neutral with dissolve
     BE "Oh, these blouses are cute."
     "She was looking through a rack of shirts and blouses that did sorta look like parachutes with buttons on them."
-    MCT "I guess at her size shirts start looking weird when they aren’t being worn."
+    MCT "I guess at her size shirts start looking weird when they aren't being worn."
     show BE surprised
     BE "Oh, there are the swimsuits!"
-    "She quickly dashed ahead towards a rack filled with various swimsuits. I’m not sure what I was expecting but seeing the rack mainly consist of two pieces was somehow still surprising."
+    "She quickly dashed ahead towards a rack filled with various swimsuits. I'm not sure what I was expecting but seeing the rack mainly consist of two pieces was somehow still surprising."
     BE "All of these look so cool..."
     show BE seductive
-    BE "Which one do you think I’d look great in?"
+    BE "Which one do you think I'd look great in?"
     MC "I don't think I should really be making that kind of decision for you."
     BE "Kei-chan, I want you to decide for me!"
     pause 1
@@ -7843,18 +7843,18 @@ label BE042_C2_1:
     MC "Look at this lucky find."
     show BE surprised
     BE "No way! This is so nostalgic!"
-    MC "That’s what I was thinking. Guess the company makes extreme size clothing."
-    BE "I’m gonna go try this on!"
+    MC "That's what I was thinking. Guess the company makes extreme size clothing."
+    BE "I'm gonna go try this on!"
     "She turned to head towards the changing room but paused and looked back towards me."
     show BE aroused
     BE "No peeking."
     MC "Whatever you say."
     "As she disappeared into the changing room, I found a bench to sit down on."
     "Looking around the store a bit more I found myself looking at a bowl of girls' hair ties."
-    MCT "I’ve tried keeping this stuff contained, and at this rate, those aren’t looking half bad."
+    MCT "I've tried keeping this stuff contained, and at this rate, those aren't looking half bad."
     "I grabbed a handful of hair ties and walked over to the checkout."
     "As the cashier finished my transaction I spotted Honoka walking back over."
-    MC "How’d the suit perform?"
+    MC "How'd the suit perform?"
     show BE aroused
     BE "You can be the judge when we go to the beach, sir."
     show BE happy
@@ -7862,22 +7862,22 @@ label BE042_C2_1:
     MC "Yeah the hair tornado is starting to become problematic."
     BE "Sounds like someone needs some assistance in styling their hair. Should I inform Tomo that I may require her assistance?"
     MC "Please, no. Have you seen her hair lately? Besides, I think the hair ties will do for now. I think I can pull off a man bun."
-    BE "Now that’ll be something to get a picture of."
+    BE "Now that'll be something to get a picture of."
     "I grabbed my stuff while Honoka did her check out."
     "With her suit in hand she walked over to where I was standing beside the door."
     BE "Oh wait! There was something else I wanted to check out."
     play sound Thud
-    "Honoka must’ve spun on her heel alot faster than she anticipated as her bosom swung around and collided with a mannequin, sending its pieces falling to the floor."
+    "Honoka must've spun on her heel alot faster than she anticipated as her bosom swung around and collided with a mannequin, sending its pieces falling to the floor."
     show BE surprised
-    BE "Oh no, I’m so sorry!"
-    "Shopkeep" "It’s fine ma’am, you aren’t the first well endowed lass to send that poor dummy to the floor. Probably a good sign to move it to a new place."
+    BE "Oh no, I'm so sorry!"
+    "Shopkeep" "It's fine ma'am, you aren't the first well endowed lass to send that poor dummy to the floor. Probably a good sign to move it to a new place."
     show BE doubt
     BE "You sure?"
-    "Shopkeep" "If I had 100 yen for every time that happened, I’d be rich. Don’t worry about it madam."
+    "Shopkeep" "If I had 100 yen for every time that happened, I'd be rich. Don't worry about it madam."
     "I could tell Honoka was reluctant to accept the shopkeeper's dismissal but she heeded and we headed out."
-    MC "You ok? You’re looking a bit glum."
+    MC "You ok? You're looking a bit glum."
     show BE worried
-    BE "Typically I’m pretty good at keeping track of my surroundings. So that was a little surprising, honestly."
+    BE "Typically I'm pretty good at keeping track of my surroundings. So that was a little surprising, honestly."
     MC "Is that the first time that's happened?"
     show BE neutral
     BE "Publicly. But I vow to make that the last time."
@@ -7898,6 +7898,191 @@ label BE042_C2_1:
     jump daymenu
 
 label BE043:
+    $setProgress("BE", "BE044")
+    play music DayByDay
+    $setBEOutfit(OutfitEnum.CASUAL)
+    scene Dorm Interior with fade
+    "There's no school today, and the stars and planets must have aligned properly, because I had no homework to get done over the weekend."
+    "So, I'd just woken up and was browsing through my phone when my phone vibrated enough that it escaped my grasp and gave my face a high-five."
+    play sound Thud
+    MCT "Ow."
+    "As I opened my eyes, I could see a few notifications from Honoka."
+    BECell "kei-chan, u up?"
+    "I smiled to myself, thinking about how this way of waking up is very Honoka-like."
+    BECell "need your help with something. it might take a while though, but id really appreciate it"
+    MCT "I'm sleepy, and my face hurts, but I'm just... really glad to hear from her so early in the morning."
+    MCCell "Sure, what'd you have in mind? Also why do you still type like that lol, did you turn off auto-correct?"
+    BECell "nah, i just think texting this way adds character."
+    BECell "anyway there was this movie i wanted to watch called (insert movie here), and i heard its so bad that you can't watch it alone. help me, kei-chan"
+    MCT "Yeah, that's what I figured."
+    MCCell "I'll be there in 30."
+    MC "Urgh... not how I wanted to wake up this weekend. Also, why so early?"
+    "I grumble to myself as I get myself into the shower and get dressed for my impromptu movie date with Honoka."
+    scene black with fade
+    pause 1
+    scene Dorm BE with fade
+    "Honoka already let me inside where she'd already prepared a huge bowl of popcorn for the two of us. But knowing her and junk food, most of the contents are going into her stomach..."
+    show BE happy with dissolve
+    BE "Kei-chan! You ready? We're in for a LONG 98 minutes and twenty-four seconds."
+    MC "I don't even know the premise of this movie. I just know it's bad. What'd you say the name of this was?"
+    BE "(Insert Movie Here)! With the parentheses around it and everything!"
+    MCT "Oh god, no... its {i}quirky{/i}."
+    BE "So it's one of those movies that tries to parody a bunch of the biggest blockbuster films from America but does it in such a bad way that it's supposed to get the audience to laugh."
+    MC "Sounds terrible, actually."
+    BE "I know, right?! Rumor has it that one of the showings in America did so badly that none of the audience laughed at ANY of the jokes and all of them asked for a refund after the movie."
+    MC "Jeez. And... why are we watching this?"
+    show BE shrug
+    BE "I thought it'd be fun! Plus, it'd be nice to spend some cozy time together, since we don't do that very often."
+    play sound Boing
+    "Honoka walked over to the couch and floppped down, as she kept eye-contact with me the entire time."
+    "{i}WHUB WHUB{/i}"
+    "Honoka's breasts continued to heavily bounce off of each other after she completed moving."
+    show BE seductive
+    BE "How about you grab that bowl of popcorn and {i}join{/i} me?"
+    MCT "She absolutely did that on purpose, and I absolutely am falling for it. Again."
+    MCT "This was well worth the early wake-up text."
+    MC "You're lucky you're cute. I wouldn't sit and watch an awful movie with just {i}anybody{/i}, you know."
+    "I grabbed the bowl and sat next to her, balancing the bowl between us."
+    show BE unique
+    BE "Yeah, I know. I'm sure there's a couple {i}big reasons{/i}— alongside how cute I am~"
+    MCT "Definitely on purpose."
+    MC "I have no earthly idea what you're talking about. {w}Let's just get this over with."
+    show BE happy
+    BE "Okay~! Starting the movie..."
+    "Honoka raised the remote to the TV in a dramatic fashion. Definitely forgetting that we're in for an awful 98 minutes and 24 seconds."
+    BE "...Now!"
+    "Honoka pressed the play button and leaned on my shoulder, getting nice and comfy."
+    MCT "And not even 30 seconds in, they've parodied three different movies... poorly. Save me from this hell..."
+    scene black with fade
+    pause 0.2
+    scene Dorm BE with fade
+    "45 minutes later, and the only thing that's been keeping me sane during this god-forsaken movie has been Honoka."
+    "We've long since finished the popcorn, and Honoka's used that opportunity to get even more comfortable, leaning her head against my chest."
+    show BE angry
+    BE "Man, this is really bad. I can't even keep track of how many movies they've made jokes about."
+    MC "My brain shut off after the 7th superhero movie reference. And that was during the first 10 minutes. But still..."
+    "I kiss the top of Honoka's head."
+    MC "I'm still enjoying myself. I wouldn't want to do this with anyone else."
+    show BE embarrassed
+    BE "Aww~ Thanks, Kei-chan."
+    "Honoka snuggles even closer, resting more of her chest on top of mine."
+    BE "Y'know, everything really is better when you're around."
+    MC "I feel the same way."
+    "We both shifted our focus back onto the movie for a few more minutes before Honoka paused the movie to get my attention again."
+    stop music fadeout 1.0
+    show BE neutral
+    BE "Kei-chan, I have to confess something. {w}Two things, actually."
+    play music Peaceful fadein 1.0
+    BE "First of all, I think I actually hate this movie and I can't finish it."
+    MCT "Sweet freedom."
+    MC "That's fine with me. What was the other thing?"
+    BE "I've been thinking..."
+    MC "Hmm? What about?"
+    show BE worried
+    BE "Well, ah... the girls haven't been slowing down in their growth lately."
+    MCT "You're telling me. You're resting them on me right now. Feels like a weighted blanket."
+    MC "I've noticed. My hair's been getting harder to wrangle together everyday as well."
+    show BE doubt
+    BE "I'm currently not in any clubs at the moment... and I've been having trouble with deciding on another club to join."
+    MC "Really? You haven't had this problem before."
+    BE "I just... would feel better if you helped me decide. You know how quick I am to jump into things without thinking."
+    MC "Sure, I don't even know all the clubs and organizations Seichou has to offer, so maybe I could find something I'm interested in too."
+    show BE happy
+    BE "Thanks, Kei-chan. I really appreciate it. Let me pull up the list of clubs on my laptop!"
+    "Honoka ran over to her desk and grabbed her laptop and set it in her lap. Which I noticed was quickly being overtaken by her chest."
+    MC "Hey Honoka, do you mind if I do the browsing? I can't really... see."
+    show BE angry
+    BE "Oh, Kei-chan. Are you telling me you're {i}turning down{/i} a chance to stare at my chest? Your loss~"
+    MCT "She masks it well, but I can tell that it stung a little when I brought that up."
+    MC "How about we just go right down from the top of the list, and we'll see what sticks?"
+    show BE neutral
+    BE "Sounds good to me. What's first?"
+    MC "...Academic Club."
+    show BE happy
+    BE "Pffft. Yeah right."
+    MC "Alright, crossing that off the list. I'll just save us time and cross off the Science and Debate clubs."
+    BE "Hehe, good plan. What's next?"
+    MC "Anime club?"
+    show BE neutral
+    BE "Mmm...I think I'd like to keep the Anime I watch to myself. Plus it doesn't seem like it'd be very active..."
+    MC "Okay active is what we're looking for...How about the Art club, then?"
+    BE "I'm not the best artist, but it's doable, I think?"
+    MC "Blackburne-san is the president of the club too, so you'd have someone you know at least."
+    BE "Blackburne-san?"
+    MC "Chibuki Blackburne. Purple hair, piercings..."
+    show BE shrug
+    BE "..."
+    pause .5
+    MC "... The one with the nipples."
+    show BE happy
+    BE "Oh yeah! She's Akira-chan's roomie! I haven't really talked to her very much but I'd be glad to meet her!"
+    MC "Okay, we can count that as a possibility. Basketball, you already did...What the-?"
+    show BE neutral
+    BE "Something wrong?"
+    MC "No, it's just I didn't know we had a Ballroom Dance club."
+    show BE wink
+    BE "You gonna join me, Kei-chan~?"
+    MC "Definitely not, you know I don't dance very well."
+    show BE happy
+    BE "Then it's a no. Not much of a point to dancing if you aren't there to lead, Kei-chan."
+    MC "Moving on from that..."
+    "Honoka and I continued to go through the list of clubs and organizations held by the school."
+    show BE neutral
+    BE "Film club? The one Ryoko-chan is in charge of? That's possible."
+    show BE embarrassed
+    BE "Ryoko-chan asked me to be an actress in one of her short films before actually and it was pretty fun!"
+    "But as we went on..."
+    pause 0.75
+    show BE neutral
+    BE "Nah, already did that one."
+    "... And on..."
+    pause 0.75
+    show BE doubt
+    BE "Can't do that one either. Boobs."
+    pause 0.5
+    "...Something became alarmingly clear to us."
+    show BE sad
+    BE "Kei-chan...I can't join the Tennis club either. Too much upper body movement."
+    pause 0.5
+    "Honoka couldn't participate in a lot of the very active clubs anymore. And she'd already gone through a good number of the clubs offered by the school. I could tell it was really starting to get to her."
+    MC "How about the Student Council? I'm sure Matsumoto-san would be willing to hear you out."
+    BE "Wow, we're really scraping the bottom of the barrel aren't we..."
+    MC "Who knows, maybe it'll be fun?"
+    show BE doubt
+    BE "Kei-chan, it's Shiori-chan."
+    MC "Okay, fair point."
+    MCT "Honoka's not really in a good mood after all these clubs. Maybe we should just call it here..."
+    MC "Hey Honoka, we've been going at this for a while. Do you mind if we stop here?"
+    show BE angry
+    BE "Sure, I'm really starting to get a headache after all those clubs anyway."
+    MC "Hey, on the plus side, there's still quite a number of clubs you can try out. And some of them seem like they'd be pretty fun, maybe I could join you for once?"
+    show BE wink
+    BE "Wow, Kei-chan, I didn't think you liked the thought of ballroom dancing with me that much~!"
+    MC "NOT that one."
+    BE "You'll come around one of these days. I can be very..."
+    pause 0.5
+    show BE unique
+    pause .75
+    BE "...persuasive."
+    MCT "You know, maybe ballroom dancing wouldn't be so bad..."
+    pause 0.5
+    MCT "Damnit, she got me again."
+    MC "Yeah, yeah. So, what do you want to do now? Have anything else you need my help with?"
+    show BE embarrassed
+    BE "{i}Actually...{/i} I just realized I had another problem that needs solving, and you're the only one I can ask."
+    MC "I don't like where this is going..."
+    show BE aroused
+    BE "During the movie, {i}one of us{/i} was such a messy eater with their popcorn and I have quite a few stragglers spelunking down my shirt. I could use some help cleaning up."
+    "Honoka leaned in closer."
+    BE "{size=-6}Pssst... it was me~{/size}"
+    MCT "Yeah, because you ate most of the bowl!"
+    pause .25
+    MC "Ah... I think I could help with that."
+    $setAffection("BE", 1)
+    BE "You're the best, Kei-chan. I knew I could count on you."
+    jump daymenu
+
+label BE044:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
