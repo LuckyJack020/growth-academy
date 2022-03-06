@@ -135,23 +135,24 @@ label GTS001_after:
     jump daymenu
 
 label GTS002:
-    $setTimeFlag("testday")
-    $setProgress("GTS", "GTS006")
+    $setProgress("GTS", "GTS004")
     scene School Planter with fade
-    "I always found the sky to have quite the alluring palette around late afternoon. Clouds coated in degrees of red that ranged from rose color to pink and even orange and yellow."
-    "And while I normally didn't find myself staring up at the sky, it was simply something I couldn't resist as I stepped into the school's garden once more."
-    "The breeze had become cooler, but still flowed with a sense of gentleness to it, making some pink colored flowers dance before me."
-    "In the distance, I heard a faint voice, and as I turned to look I spied Naomi giving a gracious bow to who I assumed was the gardener."
+    "All around in the garden was orange and yellow, peach pink and rose red."
+    "I didn't normally find myself staring up at the clouds, but this was one spring evening that merited an exception as its light bathed the flowers in warmth. Yet the air was cool, even a little chilly, carried by the lackadaisical breeze."
+    "I turned a corner and my silence was broken by a faint voice in the distance. When I looked around, because why not, I spied Naomi bowing deeply to a man whose face was as weathered as his dungarees; he smiled, nodded, and the two parted ways."
     show GTS neutral at Position(xcenter=0.75, yalign=1.0), Transform(xzoom=-1) with dissolve
     play music HigherEdu
-    MC "Yo Yamazaki-san!"
-    "I lifted one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags held against her bust by her arm."
-    show GTS embarrassed at Position(xpos=0.5), Transform(xzoom=1) with dissolve
-    GTS "Hello Hotsure-san, you startled me a little there."
+    MC "Yo, Yamazaki-san!"
+    "I lifted one arm up to give a slight wave. This seemed to surprise her, as she jumped a little and looked back towards me. Giving a small nod, she walked over with a few small bags clasped between her hands."
+    show GTS embarrassed:
+        xzoom 1.0
+        linear 0.75 xanchor 0.5 xpos 0.5
+    GTS "Good evening, Hotsure-san. I must say you startled me a little."
     MC "Heh, sorry. I just wanted to make sure you heard me. I see you talked to the gardener."
     show GTS neutral
-    GTS "I did yes. I was just asking about the flowers and before we knew it we got wrapped up in a rather long conversation about them. He even gave me some seeds to plant."
-    "She shifted her arm a little to draw my attention to the three bags she was carrying."
+    GTS "I did yes. I was asking him about some of the flowers on the grounds, and before I knew it we were engaged in quite a lengthy conversation."
+    GTS "Fittingly, he's quite the enthusiast himself. He even gave me these seeds to plant."
+    "She opened her palms to show me the handfuls of little paper baggies resting in them."
     menu:
         "Oh, that's cool. How did the rest of your day go?":
             jump GTS002_c1
@@ -159,59 +160,98 @@ label GTS002:
             jump GTS002_c2
 
 label GTS002_c1:
-    MC "Oh, that's cool. How did the rest of your day go?"
-    GTS "Hm? Oh, the rest of my day was rather peaceful. I spoke with my family as I mentioned earlier and they seemed rather happy to hear from me."
-    MC "That's good to hear, did you happen to mention what you thought about the news we got earlier?"
-    "She was silent for a moment as if reflecting on that question before she answered me."
-    GTS "No, I didn't. I don't see a reason to mention it to them yet. Without any knowledge, all it'd accomplish is make them worry about me needlessly."
-    GTS "I will be sure to discuss my feelings about it to them when we learn more about it ourselves and I know exactly what to expect."
-    MC "Yeah I guess that's a good way to go about it... So, did you do anything else?"
-    "She shook her head softly."
-    GTS "No, not much else really. Basically, just made sure everything was completely unpacked and organized. Then I came here, and well, you know where that part leads."
+    GTS "Oh, it has been peaceful. I spoke with my family on the phone and they seemed pleased to hear as much."
+    MC "Cool, cool. Do they, uh, know the big news yet?"
+    "She touched her finger to her lips for a moment, in silence, before she answered."
+    GTS "I haven't told them, no. I do not wish to cause them undue worry."
+    GTS "I will discuss it with them once the... situation has been clarified more."
+    MC "Fair enough. No need to report that until we have something to report."
+    GTS "Precisely."
+    MC "So, uh... what else have you been up to today?"
+    GTS "Not much. I unpacked the last of my things, tended to my plants, and worked with my roommate on how to organize the space."
+    GTS "Once that was done, I decided to take a walk through the grounds, and here we are."
     jump GTS002_after
 
 label GTS002_c2:
     $setAffection("GTS", 2)
-    $setSkill("Art", 1)
     $setFlag("GTS008_flowers")
-    MC "Really? That was cool of him. What kind are they?"
-    "Her eyes brightened ever so slightly at that question as her smile grew a little larger."
     show GTS happy
-    GTS "Indeed, it was rather nice of him. As for the flowers themselves, these ones are Bluebells, a lovely plant with quite the bold color. They're known to symbolize gratefulness."
-    "She handed the bag to me, allowing me to see the blue, bell-like shape they had on the cover."
-    GTS "Now this breed here is the Azalea, which you might have seen here at the garden."
-    "She pointed over to the pink flowers I had seen when I first entered the garden, the second look allowing me to notice the purplish patterns within the petals of the flower."
-    GTS "They're popular here in Japan, and even have a flower festival which showcases them each year. They're known to symbolize patience and modesty."
-    "She handed me this bag as well, as I soon found myself carrying her flowers for her."
-    GTS "Now these last ones may seem rather plain due to their simple color, but you'll be surprised the amount of color variety you'll find with Anemones. Though the white ones are the ones you'll most commonly find here in Japan."
-    GTS "Their name is Greek, meaning 'Daughter of the Wind,' and they represent sincerity."
-    "As she handed me the last bag, which displayed white, five-petaled flowers I could see her smiling warmly as she finished explaining."
-    MC "Heh, I can tell you really have a thing for flowers."
-    "Her smile quickly vanished and instead a light blush formed across her cheeks."
-    show GTS embarrassed
-    GTS "O-oh yes, indeed I do. Sorry for getting rather carried away there. I didn't mean to just ramble on like that. I surely hope you don't mind."
-    MC "Not at all, it's nice to learn a little bit about you, really. I also admit it was interesting to learn a bit about these flowers as well, I wasn't aware they have hidden symbolic meanings."
+    "She grinned and her eyes brightened ever so slightly at that question."
+    GTS "Indeed, it was quite generous of him. As for the flowers, these ones are irises, a lovely plant with quite the bold color. In the art of ikebana, they traditionally symbolize hope, faith, and wisdom."
     show GTS neutral
-    GTS "They do yes, but I wouldn't want to take up more of your time chattering about my interests."
+    "She crooked her finger around her chin as she regarded the bag."
+    GTS "Hm, I hadn't noticed before. How germaine."
+    MC "What is?"
+    GTS "That a representative of the academy should give us students a gift symbolizing hope."
+    MC "Oh... {w}oh yeah, it is, isn't? Germaine and what not."
+    "Smiling a little, she let out an accommodating chuckle."
+    GTS "Quite."
+    GTS "Now this one is the lily, which you might have already noticed."
+    "She looked over to the white starburst-shaped flowers I had seen when I first entered the garden."
+    GTS "Their shape makes them particularly striking, I find. The white color symbolizes purity, although other colors have perhaps less wholesome connotations."
+    MC "Oh, for real? Like what?"
+    GTS "The orange is said to be associated with hatred and revenge, and the crimson spider lily with a final farewell."
+    MC "Huh. Wow, that's a little dark. And I thought flowers were just supposed to look pretty."
+    show GTS happy
+    GTS "It is perfectly fine to appreciate them simply for that. But the depth of the floral language has lent much to the art world as well."
+    "She handed me the lily seed bag as well, hardly realizing I was practically carrying them for her."
+    show GTS neutral
+    GTS "Now, these last ones may seem rather plain compared to the others, but azaleas are deservedly popular the world over. I know of more than a few festivals dedicated to them here in Japan."
+    show GTS unique
+    GTS "I've read that in Chinese culture they're associated with nostalgia... looking at them, one could imagine why."
+    "She handed me the last bag, which displayed flatly pink, five-petaled flowers; a warm, simple, pure smile illuminated her countenance as she did."
+    $setSkill("Art", 1)
+    MC "Heh, you must really have a thing for flowers."
+    "Her smile faltered, she pursed her lips, and a light blush formed across her cheeks."
+    show GTS embarrassed
+    GTS "Well, I do apologize for prattling on like that. I'm sure you had other plans for this evening."
+    MCT "A generous assumption."
+    MC "Nah, nah, you're good. It's actually pretty interesting, and if I'm gonna hear about it I'd like to hear it from someone who clearly cares. I just kinda don't know squat about it."
+    GTS "I am glad to serve, then."
+    show GTS neutral
+    GTS "And it is understandable that you wouldn't know much. Traditionally, ikebana is more of a woman's art."
+    show GTS neutral at Transform(xzoom=-1)
+    GTS "Nevertheless, it is a singularly meditative art. Anyone could benefit."
+    GTS "To purify one's intentions, to unite the mind and body in purpose, to unite oneself with the cultivation of living beauty..."
+    pause 0.5
+    show GTS embarrassed
+    GTS "Oh fiddlesticks, I've done it again."
+    "Against my better judgment, I broke into a laugh."
+    MC "No worries, Yamazaki-san, I'm still interested."
+    MC "Tell you what, you ever feel that uncontrollable urge to talk about flowers, come to me and I'll lend you my ear."
+    GTS "Erm... thank you. I shall try not to overstay my welcome regardless."
+    show GTS neutral at Transform(xzoom=1)
     jump GTS002_after
 
 label GTS002_after:
-    GTS "How did the rest of your afternoon go, if you don't mind my asking?"
-    MC "Taking what we learned about ourselves earlier aside, the rest of my afternoon was actually pretty good. I spoke with my family and told them I'm fine."
-    MC "I then took some time to learn a bit more about the school, and found out there are several sports clubs. I might give them a look and see if I can join in the future."
-    "She nodded her head as I spoke to her, taking in everything I was saying attentively. It felt rather nice honestly, knowing that she was truly listening to me as she kept eye contact with me during the entirety of my small ramble."
-    GTS "What sport are you interested in, Hotsure-san?"
-    MC "Oh, I'm rather interested in soccer. I might give it a shot later this year, if my condition doesn't hinder it in some way."
-    "I chuckled lightly, kind of realizing that we couldn't plan our futures for the moment."
-    "Without any knowledge about what might happen to us, everything was up in the air. I pushed that thought to the back of my mind though."
-    GTS "Hopefully you'll be able to do so, Hotsure-san. Soccer has always seemed like a rather enjoyable sport, a lot of endurance needed so it's good exercise."
+    GTS "Well now, if I may ask, how has your day gone, Hotsure-san?"
+    MC "I'm, uh, still thinking over what Tashi-sensei told us a little bit, but... it's been pretty good. I called my mom and dad earlier, told them I'm doing okay."
+    MC "Oh, I do think I might join one of the sports clubs, I saw they're offering quite a few of them."
+    "Her eyes were locked on me and she nodded as I spoke, taking in everything I said. It was pretty nice, being so listened to so closely even if we were just a step above strangers."
+    GTS "Have any of them caught your eye?"
+    MC "I used to be pretty into soccer. I might give it a shot later this year... if whatever condition I have still allows that to happen, I guess."
+    "I chuckled lightly, suddenly aware of the barrier to any future planning."
+    GTS "I hope so, Hotsure-san. I understand a game of soccer can be quite invigorating, and excellent exercise besides."
+    show GTS happy
     "She gave me another soft, warm smile that made me smile in return as I scratched the back of my head."
-    MC "Heh, thanks. Well, it's getting rather late, and I don't want to keep you from any plans you possibly have with your flowers, so I think I'll be heading off now. Before I go, though, do you need any help with those?"
-    "I pointed to the small bags of seeds she had with her. This caused her to give the slightest of giggles as she shook her head lightly."
-    GTS "No, I'm okay, thank you. It was nice speaking with you though, Hotsure-san. Hopefully we'll talk again soon."
-    MC "Yeah, hopefully. I'll catch you later, Yamazaki-san."
-    GTS "Have a pleasant evening, Hotsure-san."
-    "She replied before once again giving me a light bow, yet this time it was her who left first. I couldn't help but smile at the small conversation we had, slightly curious about where I might bump into her again."
+    MC "Heh, thanks. {w}Well, it's getting pretty late, I don't want to keep you from, uh, your plants. See you later, Yamazaki-san."
+    GTS "Certainly. A pleasant evening to you, Hotsure-san."
+    hide GTS with dissolve
+    "She bowed, and we turned from each other to walk away."
+    pause 0.25
+    "Seconds later, I spun on my heel and jogged back up behind her."
+    show GTS surprised with dissolve
+    GTS "Oh? Is something the matter?"
+    MC "Oh, I, uh... your seeds."
+    show GTS embarrassed
+    "Her lips parted for a second as I held the baggies out to her, and then, in the warm evening light, her cheeks began to just slightly redden, and she took the seeds with a courteous bow."
+    GTS "Good heavens, I'll forget my head next. Thank you, Hotsure-san."
+    MC "Heh, no problem. Have a good evening."
+    GTS "Farewell."
+    hide GTS with dissolve
+    "This time I watched her walk away for a second or two before I went on my way, even if it was rather rude to stare."
+    "She was hardly the type I usually hung out with, and yet I found I was enjoying the occasional conversation with her."
+    "I walked away wondering when I might bump into her next."
     jump daymenu
 
 label GTS003:
@@ -303,6 +343,7 @@ label GTS003_after:
 
 label GTS004:
     $setProgress("GTS", "GTS006")
+    $setTimeFlag("testday")
     scene Library with fade
     play music Peaceful
     "The sun shone highly in the sky as the middle of the day came by, its rays seeping through the many windows that surrounded the vast two-story room. I was honestly a little surprised to see so many people using the campus library."
@@ -2334,6 +2375,7 @@ label GTS019_c1_after:
     jump daymenu
 
 label GTS020:
+    $setTimeFlag("XX20")
     $setProgress("GTS", "GTS021")
     scene Roof with fade
     play music GTS
@@ -7149,7 +7191,7 @@ label GTS037_c2_after:
     GTS "I suppose that being outside wasn't really preference of mine, but rather it was just what I happened to do most."
     MC "Still. It must be a welcome change of scenery from being in the hangar so much."
 
-    scene Mountains Tori Gate
+    scene Mountains Torii Gate
     show GTS neutral
     with fade
     "Naomi nodded while looking down at me."
@@ -7258,7 +7300,7 @@ label GTS037_c3_after:
     MC "Not at all."
     "The two of us proceeded to walk back down the trail. Naomi walked in front of me, intentionally making her strides slow and delicate so I could keep up. The stones were sturdy, and didn't vibrate at all under Naomi's light steps."
 
-    scene Mountains Tori Gate
+    scene Mountains Torii Gate
     show GTS unique
     with fade
     "By the time we had returned to the gate leading up to the shrine, Naomi had entered a complete state of relaxation. Her walking was rhythmic and precise, her breathing perfectly paced."
@@ -7604,6 +7646,7 @@ label GTS040_c2:
             GTSCell "I do find myself inclined to believe you."
             jump GTS040_c3
         "I guess it was just a matter of time. Do you know if they can provide you with a replacement?":
+            $setFlag("GTS040_c2_2")
             GTSCell "I believe I have heard that they can. I shall have to see about that soon."
             MCCell "Good, good."
             MCCell "..."
@@ -9762,6 +9805,309 @@ label GTS045:
     jump daymenu
 
 label GTS046:
+    $setProgress("GTS", "GTS047")
+    scene Giant Dorm Interior with fade
+    play music HigherEdu
+    "After a couple hours of chilling at my dorm and digesting lunch, I headed over to Naomi's dorm, guided by the light of promised cookies."
+    show GTS neutral with dissolve
+    "I looked up to see her face brighten as she greeted me at the door, as ever."
+    GTS "Ah, you've brought your backpack. Is there some material you'd like to review together while you're here?"
+    MC "Ah, heh, yeah, I kinda forgot about our lit assignment. I'll just work on it while you're making the cookies."
+    show GTS happy
+    GTS "Ah, very well. Come on in then, make yourself comfortable. I've just begun making them."
+    show GTS neutral
+    "She bent down to give me a peck on top of my scalp and turned to walk back to her kitchen counter; I headed for the couch, and immediately noticed a stack of wooden crates assembled into a staircase leading up to it."
+    MC "Huh. Did you put that together yourself?"
+    GTS "Well, of course I obtained permission from the school administration first. They're filled with styrofoam blocks for a bit of extra support."
+    GTS "The prior arrangement, when I considered it, was not very accommodating to guests."
+    MC "Good thinking. Can't expect everyone to be able to climb up there, right? Imagine if Nikumaru-san came over here."
+    GTS "Yes, that would be a conundrum."
+    "I climbed the makeshift staircase, finding it sturdy underfoot, and sat myself down. I peeled off my backpack as I began to watch my girlfriend at work."
+    "She treated her first time making chocolate chip cookies like her first time performing brain surgery. She did each step at either breakneck pace or slow as a circling buzzard, with nothing in between."
+    show GTS embarrassed
+    "She threw in a measuring cup full of chocolate chips, only to pour in just a little bit more a second later. With lips pursed and brow furrowed, her every movement was rock-solid with determination,{w} sprinkled with just a pinch of fear and frustration."
+    MC "Is everything okay over there, Naomi-chan?"
+    show GTS neutral
+    GTS "Oh, quite, never fear. I just want to make sure I have everything in order and done properly."
+    MC "I can tell. You've got such laser focus I'm half expecting you to burn a hole through the counter."
+    GTS "Hah... I aim to please."
+    MC "Well, I don't mean to intimidate you but hanging out with Honoka-chan means I've become {i}quite{/i} the cookie connoisseur."
+    show GTS wink
+    GTS "Well then, I've quite a standard to live up to, don't I? Nevertheless, I'm sure you will enjoy what I have to offer."
+    MC "As am I, Naomi-chan, as am I."
+    show GTS happy
+    "She laughed as she turned right back to folding the dough, visibly much more relaxed. I opened my backpack."
+    MC "!..."
+    "...But my notebook staunchly resisted its removal."
+    show GTS neutral
+    MCT "What could it {i}possibly{/i} be stuck on..."
+    "The bottom was curved under the textbook beneath it, and after a couple firmer tugs it still wouldn't budge."
+    "The time had come to play hardball."
+    show GTS pondering
+    "I shoved my hand deep in, dug my fingers into the cardboard, and..."
+    "{i}snap{/i}"
+    show GTS surprised
+    "Completely disemboweled my backpack with one hard rip, extracting my warped notebook and launching a box of pencils across the floor."
+    MC "Shhhhh..."
+    MC "Sheep."
+    GTS "Are you alright?"
+    MC "Ah, I'm fine."
+    "I held up my notebook and saw that the bottom portion of the wire binding had been pulled taut."
+    MC "Looks like the binding of my notebook got caught on something. Hold on, I'll clean up these pencils."
+    show GTS neutral
+    GTS "Thank you. I'll stay as still as possible."
+    "I made my way down the makeshift steps to the floor, and crossed its gray expanse towards Naomi's huge, wan, elliptical shadow, picking up pencils every meter or so."
+    hide GTS with dissolve
+    "The last pencil was only just visible, looking like an infant of a twig nestled up by Naomi's shoe. I got on my knees as my face came up against the hem of her skirt, and I crawled under to grab it."
+    pause 0.5
+    "And that's when I realized where I was."
+    menu:
+        "Peek upwards":
+            jump GTS046_c1_1
+        "Keep your eyes on the ground":
+            jump GTS046_c1_2
+
+label GTS046_c1_1:
+    $setFlag("GTS046_peek")
+    "I slowly craned my neck upwards and saw what truly lay hidden beneath her skirt."
+    show cg GTS046 with dissolve
+    "Up above me, almost gleaming in the darkness, was a pair of brilliant red silken panties, outlined in their center an obscure but distinctly plump ridge that I could only assume was the entrance I'd only dreamed of seeing."
+    stop music fadeout 1.0
+    "A humble {i}clink{/i} rang in my ears as I, with thoughts elsewhere entirely, dropped the pencil."
+    pause 0.5
+    "Naomi continued stirring in complete silence. For a moment, anyway, until she started humming a jaunty tune."
+    "I shook my head when I realized I'd just stared at her nethers without permission, retrieved the pencil and withdrew from under her."
+    hide cg
+    show GTS_S neutral
+    with dissolve
+    "I noticed as I turned around that her skirt was almost invisibly swaying side to side; lo and behold, I could see that it was coming from her hips, their languid, out-of-tune swagger."
+    GTS_S "Is everything accounted for?"
+    MC "Uh, yep. Pardon the ruckus."
+    GTS_S "Think nothing of it."
+    play music Rain fadein 5.0
+    "She spoke up as I turned around."
+    GTS_S "Did you see something pleasant down there?"
+    MC "Um, why do you, uh, ask?"
+    show GTS_S aroused at Transform(xzoom=-1)
+    GTS_S "Because you're smiling, Keisuke-kun. And blushing."
+    MC "Oh, uh... yeah. It was pretty... pleasant. Nice on the eyes, y'know?"
+    "She closed her eyes over a knowing smile and turned back to her mixing bowl."
+    GTS_S "I'd hoped you would think so."
+    "And then... I don't know if I was really surprised... she laid her spatula down. Her eyes were open, but just a bit narrowed as she turned to face me."
+    hide GTS_S
+    show GTS aroused
+    GTS "Perhaps you'd like a closer look."
+    MCT "Buddha, Kannon, God, I owe you all big time. Oh sweet mercy this is happening."
+    "Whatever puppy-like expression was on my face at the moment was reply enough. Before I said a word, she gently raised an arm and pointed to the couch behind me."
+    GTS "Why don't you make yourself comfortable?"
+    MC "It'd, uh, be my pleasure!"
+    "I scolded my own tactlessness as I heeded Naomi's invitation and climbed, maybe a little too fast, up onto the couch; as I did, I felt the distant tremors of her footsteps slowly pursuing me."
+    "I turned around and beheld the muted joy in her pursed smile; defying her posture, she was blushing too. For my part, force greater than I could ever defy held my eyes on her, and for all Naomi's stature it seemed she felt just the same."
+    "Impeccably steady hands lifted the veil."
+    GTS "Was this it?"
+    "Now, it couldn't be a dream, could it? There they were, her taut panties red as a heart's desire at the center of legs taller than any man I'd met, and a trim waist as pale, as smooth, as mighty as a block of polished marble."
+    "I tried to think of something adequate to say to her as my breath bucked out of my control and my deepest muscles twisted upon themselves."
+    "Again, she stepped in my place."
+    GTS "It is a perfectly delightful sight, isn't it?"
+    MC "Yeah... amazing..."
+    "And then, a rush of hot air subsumed what breath I had, as she stepped right up to the edge of the couch, one by one rested her knees on either side of me and lowered those crimson panties down onto my lap."
+    GTS "Hmhmhm... but you of all people know, Keisuke-kun, that art we best remember is not content to satisfy sight alone."
+    MC "And you {i}are{/i} a work of art."
+    show GTS unique
+    "I gasped through my teeth as her seated form towered over me, both of us grinning openly. Her body was hot as a furnace and almost heavy enough to crush my legs like so many twigs... almost. By design, I had no doubt."
+    show GTS aroused
+    "She lowered a hand to my face, stroking my cheek with one finger."
+    if getFlag("GTS040_c2_2"):
+        GTS "Do you remember the day you brought me that fairy tale book? You said you... kind of liked this condition of mine."
+        MC "Yeah. I like it a lot..."
+        "I rubbed my splayed hand over her knee, and with her free hand she lifted her skirt a little further still; I at once saw the invitation to explore as much of her thigh as I could reach. So I did."
+        "But I couldn't quite reach all the way; there was always more of her, it seemed, and that was more than enough for me."
+        "All the while, I could feel a certain heat from her oppressive weight, burgeoning through my pants into my lap. And maybe it was just my imagination, but I thought I felt a certain, subtle dampness, too."
+        GTS "It relieved me {i}ever{/i} so much to hear that."
+    else:
+        GTS "May I share an observation?"
+        MC "Of course."
+        GTS "It seems to me that you... like this condition of mine. Am I correct in thinking so?"
+        MC "Heh... well, what can I say? There's a certain allure to how... tangible your presence is."
+        MC "How I look up and all I see is you..."
+        "I rubbed my splayed hand over her knee, and with her free hand she lifted her skirt a little further still; I at once saw the invitation to explore as much of her thigh as I could reach. So I did."
+        "But I couldn't quite reach all the way; there was always more of her, it seemed, and that was more than enough for me."
+        "All the while, I could feel that certain heat from her oppressive weight, burgeoning through my pants into my lap. And maybe it was just my imagination, but I thought I felt a certain, subtle dampness, too."
+        GTS "Ahhh... I can scarcely express what a relief that is to hear."
+    "Her caressing finger slipped down my cheek and slid languidly down my chest, like a careless drop of honey the size of a ping pong ball. A darker shade of honey grew warmer in her eyes."
+    show GTS happy
+    if getFlag("GTS044_meet"):
+        GTS "And after that wonderful night sleeping under the stars, well... I've come to realize how at peace I feel, simply having you in my arms."
+    else:
+        GTS "In fact, I've come to realize how lucky I really am. To have you in my life, to have moments with you like this..."
+    "Her finger tickled my abs as gently as a digit the size of my forearm could, before floating back up to catch my underarm in her palm."
+    "As I stared dumbfounded, she caught my other arm too..."
+    show GTS aroused
+    "And with a rush of air and a mild pit in my stomach, there I hung, face to giant face with her."
+    "She looked at me, and I saw within her at once; the upward slant of her brows and the misty adoration of her eyes churned with her radiant blush, and the way she tried to hide how she gnawed her lower lip."
+    MC "Heh... been a while since I looked you in the eyes this close."
+    show GTS unique
+    GTS "Far too long."
+    MC "And the closer I look at you, the better I see how flawless your beauty really is."
+    GTS "Ara ara, how flattering."
+    GTS "I do understand the sentiment. Having you so close to me... it's enchanting."
+    show GTS aroused
+    "I sank a little as she withdrew one hand to brush aside my bangs, casting a shadow down my face."
+    GTS "Such life and warmth in those eyes..."
+    "She closed hers and pulled me in for a few hot kisses on the lower half of my face, which I reciprocated in my smaller way; her cheeks were hot and yielding under my palms."
+    pause 0.5
+    GTS "I want to show you how much I adore you.{w} However uncouth it may be."
+    "She lowered me down a little, until my suspended arms were about level with the topmost button of her shirt."
+    GTS "Would you be so kind?"
+    MC "...Uh, y-yeah. Love to."
+    "Even knowing exactly where we were headed, there was some whisper in my mind telling me to show some restraint, against every tingling muscle and tempting thought in my body. How could I say no to the birthday girl, anyway?"
+    "I reached forward and began undoing her shirt, and with each button released Naomi gently lowered me down to the next one."
+    "With each one, the pale, bulbous teardrops of her breasts, each bigger than my head, peeked out a little more boldly, at last down to her stark crimson brassiere."
+    "With each one, I saw the quiver of those plush mounds like a dance for newfound freedom. And with each one, I noticed how strained the buttons really were, how eagerly they ripped apart under my fingers."
+    MCT "She's still growing, alright."
+    MC "...When did you get this shirt again?"
+    show GTS neutral
+    GTS "Hmm... a little over a week ago or so."
+    MC "I see..."
+    "She lifted me up again once I'd gone halfway down her abdomen."
+    scene black with fade
+    "And hugged me tight to her now-exposed chest. I sank in deep."
+    MC "Mmm..."
+    GTS "Mmm... hmhm..."
+    MC "God, you're gorgeous."
+    GTS "And I'm {i}all{/i} for you."
+    "As one finger reached up to tousle my hair, her excited heartbeat thrummed away, so close to my ears. And the cycle of her breath, as I listened wordlessly, was deep, resounding, and meditative, a high wind over the ocean."
+    "Altogether, I was in her world, and I loved it."
+    "I splayed out my arms to catch her breasts, clutching my fingers to her sides."
+    "It was some time before I noticed, definitively, a throbbing tightness growing between my legs. I didn't doubt she did, too."
+    scene Giant Dorm Interior
+    show GTS_S aroused
+    with fade
+    "And then, like releasing a field mouse back into the grass, she lowered me down."
+    GTS_S "You needn't be so high-strung, you know."
+    "Her hand cupped my backside as she began to speak in a lower register... God, it really was like a little chair."
+    MC "Who, me? Psssh, nah. I'm capital G Gucci, babe."
+    GTS_S "You know that I want you to be happy, don't you?"
+    MC "Yeah... of course."
+    GTS_S "Good."
+    "Then, smiling down at me, she hooked one finger into the seat of my pants and underwear..."
+    "{i}foomph{/i}"
+    "And pulled the lot down around my ankles in one effortless tug."
+    MC "Ng!"
+    "The air was cold enough to jolt through my core, until her hand, swaddled in heat and ladylike softness, eased me down to a seated position. Her other fingertip caught nearly the entirety of my stiffened dick, and I took in one sharp breath."
+    MC "Holy shit that's good, you're so, y- whew..."
+    "I bit my tongue from saying ‘you're so huge', even if her towering, curvaceous body occluded anything else from my mind."
+    "And it was enveloping, her warmth, her {i}size{/i}. I was putty in her hands, while she exerted no greater effort than that to stroke a cat. But stroke she did, curling her finger around most of my length and gently squeezing."
+    GTS_S "Oh, this will be easier than I thought. What a specimen~..."
+    "While she looked fondly down between us, every slow, accelerating crooking of her soft finger sent Heaven's lightning up my belly. I was going mad, mad for her."
+    "My chest shuddered. My cock tightened, fuller by the second in her plush, unbreakable grip. I reached over to clutch the upholstery, and she gently guided my arms to her vast hips instead. Slowly, they were rocking."
+    MC "Hooooh shit, oh shit, I'm close..."
+    "Amidst my ecstatic throes she leaned down and my head was near swallowed between her hanging breasts. My face steamed over between her heat and mine."
+    "She licked her lips, parted them with a quiet {i}pop{/i}, and turned towards my ear. The only other thing in my world was her breathy whisper..."
+    GTS_S "Hold on, my love."
+    hide GTS_S
+    show GTS aroused
+    "As I was seconds from exploding she lifted me up again..."
+    show GTS aroused with vpunch
+    MC "G-Gah!..."
+    "And pressed my body into her face, slipping my dick in between her slick wet lips. She squeezed my backside a little, lapped her tongue on my tip, gasped a dreamy sigh that rolled up my chest."
+    "And I burst."
+    "I flooded into her, harder than ever in my life, convulsing, blind under crashing waves of joy."
+    "When my sight shakily returned, it was consumed entirely by her blushing face, eyes closed, cheeks pulsing, gulping down every spurt as it came."
+    "As my breath fluttered out of my chest and up toward the sky, she slowly opened her eyes."
+    MC "Naomi-chan..."
+    pause 0.25
+    GTS "Thank you, Keisuke-kun... for the best birthday I've ever had."
+    show GTS aroused at Transform(xzoom=-1)
+    GTS "Was that, erm, satisfactory?"
+    MC "Satisfactory?...{w} Holy shit, not even my {i}dreams{/i} are that good."
+    MC "Uh, pardon my language."
+    GTS "That's quite alright."
+    show GTS neutral
+    GTS "I do apologize if I kept you waiting too long."
+    MC "Well... likewise."
+    show GTS surprised
+    GTS "Oh... oh my, have I really been so crass?"
+    MC "N-No... no, it wasn't {i}obvious{/i}. I just like to think... you know... I know you a little."
+    show GTS neutral
+    GTS "That you do."
+    MC "Kssh, where did you even learn to do that?"
+    GTS "Well, part of a girl's proper upbringing, of course...{w} is learning how to keep a good man."
+    show GTS embarrassed
+    GTS "I attempted to do some research on the internet, as it were, but there was very little, er, applicable information."
+    GTS "In fact, essentially none."
+    MCT "Oh but there is, if you know where to look."
+    MC "So, all that was... you improvised that?"
+    show GTS neutral
+    GTS "Well, yes."
+    pause 0.25
+    MC "Jesus..."
+    show GTS pondering
+    GTS "Pardon?"
+    MC "Nothing, nothing."
+    MC "You really are something special, you know that?"
+    show GTS happy
+    "She nodded briskly, jolting me with the aftershock, and broke into a laugh that shortly proved infectious."
+    "After a second or two when it died down, she cleared her throat."
+    show GTS neutral
+    GTS "I suppose I should finish making the cookies now. And, ah, put you down."
+    MC "I imagine it's about time."
+    "She carefully shuffled off the edge of the couch, and lowered me down onto it; remembering my state of dress, I stuck out my legs to land feet-first."
+    GTS "Ah, I nearly forgot."
+    "She knelt down in front of me and held my torso firm with one hand while the other shimmied my underwear back up my legs, followed by my pants."
+    MC "Uh, heh... thanks, Naomi-chan. Want me to get your shirt?"
+    GTS "Oh, yes please."
+    "Her chest drew closer, looming over and around me; I reached out and... with some effort... closed the buttons on her shirt one by one. I did my best to flatten out the wrinkles."
+    show GTS unique
+    GTS "Thank you."
+    hide GTS
+    show GTS_S neutral
+    "At last she stood and returned to the kitchen counter."
+    "I watched her for a little while; she shortly returned to humming in the midst of her labors, and after some time I got my study materials together to start working. Not that my mind had really left her. Of course not."
+    hide GTS_S with dissolve
+    "A threshold had been crossed that day, one I knew, on some level, had hung open for some time. I just didn't really think it'd be her who would pull me through."
+    "I knew my eyes were on my notebook but seeing nothing. All I could think about was all that could come after, now."
+    "I knew I was smiling, too, and that, I was content to keep."
+    show GTS_S neutral with dissolve
+    jump GTS046_c2
+
+label GTS046_c1_2:
+    "I picked up the last pencil without any further ado, and crawled out from under her. It was tempting... more than a little, to be honest... but I was better than that."
+    show GTS_S neutral with dissolve
+    GTS_S "Is everything accounted for?"
+    MC "Seems to be. I'll get out of your hair now."
+    "She only nodded with a stiff smile as I turned to head back to the couch."
+    "A few seconds later, she cleared her throat and began to hum a tune I couldn't recognize."
+    jump GTS046_c2
+
+label GTS046_c2:
+    "Some minutes later, as I pored lazily over my notes, I heard the bassy squeak of an oven door being eased open, and then shut. I looked up to see Naomi slipping off a pair of oversized oven mitts."
+    GTS_S "Your batch should be done in about ten minutes."
+    MC "Huh? My batch?"
+    show GTS_S unique
+    GTS_S "Ah, yes. While I certainly don't expect you to eat all of them, I imagined you would prefer ones that were of more manageable size."
+    MC "Oh, I thought you'd break off a chunk for me or something."
+    hide GTS_S
+    show GTS neutral
+    "She shook her head as she approached the couch."
+    GTS "Heaven forbid. That is how one treats a dog, not one's boyfriend."
+    MC "...But am I a good boi?"
+    show GTS unique
+    "Naomi covered her mouth, giggling. She then patted my head with the tip of her finger."
+    GTS "As adorable, cute, and precious as you are, I think you deserve a more dignified address than {i}that{/i}."
+    if getFlag("GTS046_peek"):
+        show GTS aroused with dissolve
+        GTS "But if you must know... yes. You are."
+        MC "Heh, I try."
+        "I tried to laugh it off, but her widening smile told me she could see my blush."
+    show GTS neutral
+    GTS "Well now, let's see if we can't fortify your notes a tad."
+    "I nodded and set my notebook and my lap, with my pencil poised; she eased herself down beside me, and scooted closer, and a little closer, with her hands folded over her knees."
+    "We promptly got to work, sharing a laugh or two every so often wherever conversation carried us; all the while the warm scent of gooey, chocolatey cookies floated into my chest."
+    "The anticipation was killing me."
+    jump daymenu
+
+label GTS047:
     "This marks the current end of Naomi's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance

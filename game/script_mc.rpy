@@ -1021,9 +1021,9 @@ label global000_sit_after:
     Principal "Thank you to each and every one of you for your attendance today. My name is Manabu Noguchi, and I'm the principal of this academy."
     Principal "The future is forever uncertain. But no matter what the future holds, years hence or any day now, one thing is important above all else."
     Principal "'Nosce te Ipsum.' {w}Latin, 'To thine own self be true'. Remember that you are more than your station, {w}skills, {w}and especially appearance. If you need help, your teachers are always available to help you with whatever you need."
-    Principal "I’m sure you all have many questions as to why you’re here. And, I assure you that the rest of the faculty and I will do our best to answer all of those for you."
+    Principal "I'm sure you all have many questions as to why you're here. And, I assure you that the rest of the faculty and I will do our best to answer all of those for you."
     Principal "Now, each of you have been assigned a homeroom teacher. They will give you more information during class in a few minutes."
-    Principal "Feel free to reach out to them should you need to. As is the same with every member of our faculty, they’re here to help."
+    Principal "Feel free to reach out to them should you need to. As is the same with every member of our faculty, they're here to help."
     MCT "What's he going on about...? I'm beginning to wonder if Daichi was on to something..."
     "Finally, the ceremony ended, and we all began to file out."
     stop music
@@ -1160,7 +1160,7 @@ label global000_homeroom:
     HR "I know the Principal likes to dance around it, but I'm not going to mince words:{w} Seichou Academy is here to help you deal with whatever you're going to become. Key word being \"Help\"."
     HR "We can get you uniforms that fit, doors you can walk through, and gym classes for any shape and size.{w} What we can't give you is resolve, self-acceptance, the courage to make a life for yourself after whatever life makes out of you."
     HR "Simply put, we can give you tools. How you choose to use them falls onto your shoulders."
-    HR "You’ll find in your time here that, as are teaching styles, each teacher has a different approach to these... growths, as it were."
+    HR "You'll find in your time here that, as are teaching styles, each teacher has a different approach to these... growths, as it were."
     HR "Some have a more tender approach and prioritize your comfort throughout this process, which of course, there is nothing wrong with."
     HR "As for me, I see more value in focusing on self-acceptance."
     HR "If you and your peers can learn to accept yourselves and your growth, then in theory, you should be able to tackle a number of things that life will throw your way, no?"
@@ -1255,7 +1255,1379 @@ label MC001:
     "More importantly though, this was the start of something new, there were a lot of new people to meet. Hopefully some were worth getting to know."
     jump daymenu
 
-label MC002:
+label MC003:
+    scene Dorm Interior with fade
+    play music HigherEdu
+    "{i}*Riiinnnng! Riiinnnng!*{/i}"
+    "The digitized dial tone of my phone rang out, only to the notice of myself, rather than the intended recipient."
+    "I'd been trying to get a hold of Tomo since finding out about my factor. I wanted to know how she was taking the news about hers too. I suspected she was going through the same thing..."
+    "Well I didn't know for sure, but I {i}assumed{/i} she would be. {w}But that's what gnawed at me. This was my little sister after all. I wasn't too keen to just rely on assumptions."
+    MC "Arrggh! Pick up your stupid phone Tomo!"
+    play music RM
+    show RM neutral with dissolve
+    RM "Something the matter?"
+    MC "Oh, hey. You're here."
+    show RM doubt
+    RM "I live here."
+    MCT "Could've fooled me, you don't act like it."
+    MC "Sorry if I seemed surprised. You don't seem to spend much time here."
+    show RM smug
+    RM "I've been busy gathering information."
+    MCT "Oh, here we go again."
+    show RM distrustful
+    RM "It's all a bit too convenient that they supposedly have a test that will predict a person's growth, now of all times, when they've already recruited people based on the presence of their growth."
+    MC "Well maybe it just takes time to mature?"
+    show RM doubt
+    RM "That would make sense, {w}{i}if{/i} they understood how they worked and what caused them."
+    RM "The fact that they are so short on details about what they are, claiming to know so little— yet they can somehow reliably inform students not only that they do or do not have a growth, but the exact kind it will be..."
+    show RM neutral
+    RM "It doesn't add up."
+    MC "You suspect they're keeping us in the dark?"
+    show RM doubt
+    RM "I've always suspected that, but now I know."
+    "Daichi's suspicions didn't seem entirely unfounded, not much of this really made sense."
+    if isEventCleared("MC002"):
+        "Like the tall buff teacher Hageshii-sensei that was supposedly ‘small' for his growth. The guy is more than twice normal size with like zero percent body fat."
+    "Then again, after seeing Tashi-sensei's tongue flop out of his mouth on the first day, I wasn't really sure how much of any of this was going to make sense to anyone."
+    "For the moment, I had other questions on my mind than probing the seedy underbelly of Seichou Academy."
+    MC "Wait a second, backup there a bit. You said this test they do tells students if they have a factor or not. I thought we all had something. Isn't that why they brought us here?"
+    show RM neutral
+    RM "Not quite. Most, but not all students do. The official explanation is that close relatives of similar age are brought on board as both emotional support and to help them adapt to the changes in their family members as well."
+    RM "Though I suspect the real reason is that relatives of those with factors are closely eyed as suspected candidates for having a growth factor."
+    MC "So it's a genetic thing?"
+    show RM concerned
+    RM "No. In fact I can confirm that is not the case. At least, there isn't a direct correlation."
+    MC "What do you mean?"
+    show RM concerned
+    RM "I don't have a factor... but my sister does."
+    MCT "So it's possible Tomo doesn't have anything at all? That's a relief."
+    show RM neutral
+    if isEventCleared("RM002"):
+        MC "Funny you should mention Yuki. I was trying to get a hold of my sister just now. I hadn't gotten to talk to her since before the test."
+    else:
+        MC "Funny you should mention your sister. I was trying to get a hold of mine just now. I hadn't gotten to talk to her since before the test."
+    RM "You're wondering if she has a hair growth factor like you?"
+    MC "Yes, exactly! {w}Wait."
+    show RM sad
+    extend " When did I tell you I had a hair growth factor?"
+    RM "Umm, well... it's fairly obvious for you isn't it? ...{size=-6}Yes, that'll work{/size}..."
+    show RM smug
+    extend " I mean it's already covering half your face."
+    MCT "Well, he's got me there."
+    RM "Some people tend to manifest them earlier than others."
+    MC "Like Matsumoto-san?"
+    show RM happy
+    RM "Correct. Some things are too obvious to hide."
+    MCT "Kind of what I thought when I first saw Honoka off the boat."
+    "This all put my mind at ease. I was probably worried for nothing. Could be she didn't have any factor, even if having longer hair wasn't {i}that{/i} big a deal. {w}Still though... that feeling of ill-ease was still gnawing at me."
+    show RM neutral
+    MC "But... Tomo and I are twins. Not identical twins obviously, but still, would that make it more likely she would have the same factor?"
+    show RM concerned
+    RM "My initial assumption would have been yes, but I've heard reports of identical twins having completely different growth factors."
+    "An image of Tomo flashed into my mind of her sticking her tongue out at me in response to my usual teasing, only to have it flop out of her mouth all the way down to the floor."
+    MC "{i}GUAHH!{/i}"
+    show RM doubt
+    RM "Something the matter?"
+    MC "Umm, no. I just remembered I gotta do something. Thanks for your insight with this stuff."
+    MC "I'm going to try to contact my sister again. I'd just knock on her door but I don't even know her room number."
+    show RM sad
+    RM "You seem pretty concerned. I guess I can understand why."
+    show RM neutral
+    extend " I'll call my sister so she can tell her to answer her phone."
+    MC "Wait, what? You mean to tell me your sister knows my sister? And you know that she knows my sister? When did all of this happen?"
+    RM "Slow down, it's not that complicated. My sister Yuki tells anybody everything— for better or worse. {w}She told me about her new roommate and I can't imagine there are too many other Hotsure's in a school this size."
+    MC "So there are two Hotsure's paired with two Utagashi's? Isn't that a bit of a coincidence?"
+    MCT "Come to think of it, the teacher at the docks also found it curious... {w}Wait a second— now I'm starting to sound like the crazy one here."
+    show RM doubt
+    RM "It probably has to do some randomization pairing based off of alphabetical order. Not every coincidence is that intriguing."
+    MC "That's as good an assumption as any."
+    MCT "Let's just leave it at that for now."
+    MC "Anyway, I appreciate the help. When Tomo sleeps, she's dead to the world— and she sleeps a lot. {w}Well, that and I'm not exactly expecting her to eagerly await a text from me."
+    show RM happy
+    RM "Alright, I sent my sister a text. She said she'll wake her up when she gets back to her dorm."
+    MC "Thanks again man."
+    show RM doubt
+    RM "Don't mention it. Now all of this has got me thinking again. There's gotta be some common thread here with all of this, even if it isn't initially obvious."
+    hide RM with dissolve
+    "Apparently the answers he sought weren't here because he had seemingly vanished in the half second I turned away from him to check my phone."
+    MCT "I guess it hasn't been that long. I'll just have to wait."
+    stop music
+    scene black with fade
+    pause 1
+
+    scene Dorm Exterior with fade
+    play music MC
+    "What felt like hours for me was probably just 20 minutes before Tomo texted back."
+    TomokoCell "What do you want? Why did you have my roommate wake me up?"
+    MCCell "Just meet me outside the dorm. I got something for you."
+    TomokoCell "This better be good."
+    "I knew Tomo wasn't going to set any landspeed records with her level of urgency, so I just bided my time sitting on one of the benches outside the dorm until she came out."
+    show Tomoko neutral with dissolve
+    Tomoko "What was so important you couldn't have just texted me for instead?"
+    MC "Nice to see you too, Tomo."
+    Tomoko "Ugh, don't be like that. You know I didn't mean it like that."
+    MC "Fine, I'll spare you the guilt trip. I haven't exactly been doing a good job keeping up with you either, but I'm trying to fix that."
+    show Tomoko distracted
+    Tomoko "You said you had something for me."
+    MCT "I knew I'd have to sweeten the deal to get her to come."
+    MC "Here you go."
+    show Tomoko neutral
+    Tomoko "This is just some pocky you got from a vending machine."
+    MC "I'll take it back if you don't want it."
+    Tomoko "I didn't say that."
+    MCT "Yeah, that's what I thought."
+    MC "Besides, it's strawberry. I figured you'd like it."
+    Tomoko "It's one of the better ones. Thanks, I guess. {w}Was that it?"
+    MC "How are things, Tomo?"
+    Tomoko "Alright I guess. People here seem nice. There doesn't seem much to do around here though."
+    MCT "I don't know why you care. If there were a million things to do, you'd still choose to nap."
+    MC "I mean how are you holding up after, you know, the test?"
+    show Tomoko distracted
+    Tomoko "We haven't been here that long. I have had any major tests in classes."
+    MCT "This is going nowhere fast."
+    MC "Okay, I'll just go first. I mean the factor test. It told me my hair was going to grow really long... or was it really fast? Maybe both, I don't quite remember now that I think about it."
+    "Part of me didn't want to ask the next question, afraid of the answer, but I knew I had to."
+    MC "What did yours say, if you don't mind me asking?"
+    show Tomoko neutral
+    Tomoko "Oh that test. Yeah they told me the same thing. Something about my hair was going to start growing."
+    "Her answer was simultaneously assuring and anti-climatic. As much as I was relieved that it wasn't anything major or too odd, I couldn't help but feel like I wasted a lot of energy worrying about all the other possibilities."
+    MC "So... how are you taking the news?"
+    Tomoko "I mean my hair has always been growing. Didn't seem like that big a deal to me."
+    MC "But you never do anything with your hair, you're probably going to have to style it or brush it a lot, or something..."
+    "I probably should have admitted that I didn't know either, but I felt like I needed to say something to get through to her this was probably a bigger deal than she realized."
+    Tomoko "Eh, I'll just cut it off."
+    MC "I guess. Maybe it is that simple."
+    Tomoko "Is that it? Was that what you wanted to talk about?"
+    "As ungrateful as her tone was, she kind of had a point. Here I was trying to be the hero big brother when his little sister needed him the most, but instead I just felt like a jackass from having overblown everything in my mind."
+    MC "{i}Sigh{/i}. I was just worried, you know? {w}Like what if you were going to grow a tongue that stretched out a whole meter, or have giant feet (if that even is a thing), or big puffy lips, like the nurse."
+    MC "Not that it'd be the end of the world if you did, but some of these things can make a person stand out... and not in a good way. I just didn't want that for you."
+    Tomoko "I don't know why you were so worried if you knew you had a hair growth thing too. We're twins."
+    MC "My roommate told me that isn't any guarantee."
+    show Tomoko surprised
+    Tomoko "Oh,"
+    show Tomoko sad
+    extend " I guess I understand why you were making such a big deal out of it then..."
+    "I thought about teasing her for finally taking me seriously, but my emotional energy had been spent from being wound up about this all day. At that moment I was just glad my little sister was going to be okay."
+    show Tomoko neutral
+    MC "It's what big brothers do. They worry about their little sister."
+    show Tomoko annoyed
+    Tomoko "You're barely even 30 minutes older than me."
+    MC "And don't you forget it."
+    Tomoko "Ugh. Yeah I've only heard it almost every day for the past eighteen years."
+    show Tomoko neutral
+    extend " If it's all the same to you, can I head out?"
+    MC "Not so fast. Give me a couple of those."
+    Tomoko "No way! Get your own."
+    MC "They were mine, until I gave them to you. Consider it a finders fee."
+    Tomoko "Okay, fine. Here."
+    MC "Text me your room number in case I need to find you again."
+    Tomoko "Alright Dad. Geesh, if it will put you at ease."
+    MCT "She knows I hate it when she says that, but I'll let that slide for now."
+    MC "Tomo?"
+    show Tomoko distracted
+    Tomoko "Yeah?"
+    MC "Don't be afraid to come see me, if you need anything."
+    show Tomoko happy
+    Tomoko "Okay. I'll keep that in mind. Later."
+    hide Tomoko with dissolve
+    "I suppose I got all worked up for nothing. But something about all this was strange. I had no idea what we were getting into, but something told me it wasn't all going to go away with just a haircut."
+    jump daymenu
+
+label MC006:
+    scene Auditorium with fade
+    play music Schoolday
+    $setBEOutfit(OutfitEnum.ATHLETIC)
+    $setAEOutfit(OutfitEnum.ATHLETIC)
+    $setWGOutfit(OutfitEnum.ATHLETIC)
+    $setGTSOutfit(OutfitEnum.ATHLETIC)
+    $setPRGOutfit(OutfitEnum.ATHLETIC)
+    $setFMGOutfit(OutfitEnum.ATHLETIC)
+    "We were told our class had some kind of special assembly today. There weren't too many details, but we all had to show up to the auditorium in our gym clothes."
+    if getSkill("Athletics") == 0:
+        "It'd been a while since I'd done anything athletic. I was probably going to be sore tomorrow, whatever this was."
+    elif getSkill("Athletics") >= 3:
+        MCT "Seems like it could be fun— I'm ready."
+    show BE neutral at Position(xcenter=0.2, yalign=1.0) with dissolve
+    BE "Does anyone know why we're here?"
+    show FMG happy at Position(xcenter=0.4, yalign=1.0) with dissolve
+    FMG "Who cares? If it gets us out of class it can't be that bad."
+    show WG doubt at Position(xcenter=0.6, yalign=1.0) with dissolve
+    WG "This better not be one of those lame corporate team builder activities."
+    show AE neutral at Position(xcenter=0.8, yalign=1.0) with dissolve
+    AE "It is a special assembly. The teachers did not disclose the nature of the activity on purpose."
+    hide WG
+    show GTS neutral at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
+    GTS "I can only assume it is some kind of athletic activity if we were told to wear our gym clothes."
+    hide FMG
+    show PRG nervous at Position(xcenter=0.4, yalign=1.0)
+    with dissolve
+    PRG "I-I hope not... I-I'm not very good at sports."
+    MC "Looks like everyone's here, where's Tashi-sensei?"
+    AE "Not quite. I don't see Utagashi-san."
+    MCT "Since when did he count?"
+    AE "Have you seen him, Hotsure-san?"
+    MC "You'd be surprised how little I see him, despite living with him."
+    AE "This won't do. He does not get to pick and choose his attendance to these events."
+    show BE happy
+    BE "What does he even do all day outside of class?"
+    MC "I couldn't tell you."
+    hide GTS
+    show WG stern at Position(xcenter=0.6, yalign=1.0)
+    WG "Who cares? The less anyone has to listen to his craven conspiracy theories the better."
+    hide AE
+    show FMG neutral at Position(xcenter=0.8, yalign=1.0)
+    FMG "Yeah, he is a little... eccentric."
+    hide WG
+    show GTS angry at Position(xcenter=0.6, yalign=1.0)
+    GTS "It is rude to speak ill of someone behind their back."
+    show PRG worried
+    PRG "T-Tashi-sensei is here."
+    hide BE
+    hide GTS
+    hide PRG
+    hide FMG
+    with dissolve
+    pause 0.2
+    show HR neutral with dissolve
+    HR "You're probably wondering why you're all here today instead of regular class. Me and some of the other teachers have something special planned for you all."
+    HR "As I said on the first day of class, if you're here, {i}you{/i}, or at the very least someone you know, {i}will{/i} be growing."
+    HR "Some people try to ignore this fact for as long as possible, but trust me, it's best to confront this sooner rather than later. All of you have likely noticed the changes taking place in your fellow classmates already."
+    HR "But that doesn't necessarily mean you've fully noticed the changes in yourself. Though you will today if you haven't already."
+    HR "This little activity was Hageshi-san's idea, so blame him if you'd rather be somewhere else, but it's been pretty successful ever since we started it in the few years since he's been here."
+    HR "Hmm? {w}Speaking of Hageshi-san..."
+    play music RM
+    #show Hageshi neutral with dissolve
+    show HR at altMove(0.5, 0.25)
+    show RM concerned-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    Hageshi "Look what I found crawling in the vents."
+    "Hageshi-sensei was carrying Daichi by his collar, like he had pulled out a stray cat from a storm drain."
+    Hageshi "Nice try Utagashi-san, but no one gets out of this."
+    HR "Thank you, Hageshi-san."
+    hide RM with dissolve
+    extend " Well, looks like the gang's all here. Let's get into what you'll be doing. I'll let Naoki-san give you the run-down."
+    hide HR with dissolve
+    #hide Hageshi with dissolve
+    play music Busy
+    #show Naoki neutral with dissolve
+    Naoki "Thanks Tashi-san. You can all just call me Coach Naoki or Naoki-sensei."
+    Naoki "Today we're going to be playing a game called handball. It's not that difficult to explain, it's basically like football where you pass the ball and score only using your feet, but with your hands instead."
+    show WG doubt with dissolve
+    WG "In America, football means something entirely different."
+    Naoki "Hmm, yes in Australia too. Okay, maybe that wasn't the best analogy, but it is still a simple sport by most standards."
+    hide WG with dissolve
+    Naoki "To score, you throw the ball into the goal. {w}Have I lost anyone yet? Good. {w}Doesn't matter if you bounce it off the floor, if it's in, it's in."
+    Naoki "Now the caveat is that when shooting a goal, you can't step into the goal zone near the goal. That's only for the goalie, no one else. You have to shoot it behind that line."
+    Naoki "You can't hold on to the ball for more than three seconds, and you can't take more than three steps with the ball, but you're allowed to dribble it to get around this."
+    Naoki "No pushing, shoving, or trying to pull the ball out of another player's hand, but you are allowed to block them and their throws, obviously. Other than that, you need to be trying to score— no stalling."
+    Naoki "That's basically everything, any questions?"
+    show RM doubt with dissolve
+    RM "Yes, what is the point of all of this?"
+    Naoki "You will see soon enough, Utagashi-san. {w}You all will, trust me."
+    hide RM with dissolve
+    Naoki "Alright, let's set the teams here, give us a second."
+    Naoki "{size=-6}How should we balance them out, Hageshi-san?{/size}"
+    #hide Naoki with dissolve
+
+    if getHighestAffection() == ("BE" or "GTS" or "AE"):
+        jump MC006_Team1
+    elif getHighestAffection() == ("WG" or "FMG" or "PRG"):
+        jump MC006_Team2
+    else:
+        jump MC006_Team1
+
+label MC006_Team1:
+    show RM neutral with dissolve
+    #show MC neutral with dissolve
+    Hageshi "{size=-6}Well, we should probably split the guys between the two teams to be fair.{/size}"
+    Naoki "{size=-6}Yup, good call.{/size}"
+    hide RM with dissolve
+    #hide MC with dissolve
+    Hageshi "{size=-6}We definitely need to spread out the power.{/size}"
+    show GTS neutral at Position(xcenter=0.2, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    extend " {size=-6}So I'd say put the tall one opposite the strong one.{/size}"
+    hide GTS neutral
+    hide FMG neutral
+    with dissolve
+    pause .3
+    show BE neutral at Position(xcenter=0.2, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    Naoki "{size=-6}The top-heavy ones are going to have similar issues to each other.{/size}"
+    Hageshi "{size=-6}Agreed, should spread them out too.{/size}"
+    hide BE neutral
+    hide PRG neutral
+    with dissolve
+    pause .3
+    show AE neutral at Position(xcenter=0.2, yalign=1.0)
+    show WG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
+    Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
+    Naoki "Alright, Team 1 is Hotsure-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is Utagashi-san, Nikumaru-san, Mitzutani-san, and Kodama-san."
+    show WG doubt
+    WG "Just what exactly are we hoping to gain by winning?"
+    show WG doubt
+    show HR neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
+    HR "Good question, Nikumaru-san. Since the self-satisfaction of a job well done is a rather lack-luster reward, we decided to offer that the winning team will be taken off the class clean up rotation for the next month."
+    show WG surprised-2
+    WG "That is not a paltry incentive..."
+    hide AE
+    show FMG happy at Position(xcenter=0.2, yalign=1.0)
+    FMG "Sweet! Anything to get out of that boring stuff."
+    show BE happy at Position(xcenter=0.6, yalign=1.0) with dissolve
+    BE "Not before me you aren't!"
+    Naoki "Alright. We'll do a quick coin toss. Heads Team 1 starts with the ball, tails Team 2 starts with it."
+    pause .3
+    Naoki "Heads! Team 1 starts with the ball."
+    show BE shrug
+    BE "I still don't know what we're supposed to be doing."
+    show WG neutral
+    WG "It sounds simple enough, it can't be that hard."
+    show FMG flex
+    FMG "Yeah, just grab the ball and throw it in the goal, that's all there is to it!"
+    hide BE
+    hide WG
+    hide FMG
+    hide HR
+    show RM sad
+    with dissolve
+    RM "Can I just go back to my dorm?"
+    hide RM
+    show AE pondering at Position(xcenter=0.2, yalign=1.0)
+    show BE neutral
+    show GTS neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    AE "We should probably think of a strategy for the team positions."
+    MC "I don't know if it's that big of a difference what people do. Why don't we just go with what people want to do?"
+    show GTS pondering
+    GTS "I'm not sure where I could best be utilized."
+    MC "Personally, I think you'd be great up front to help block shots, Yamazaki-san."
+    show GTS neutral-2
+    GTS "If you think so, I will give it my best effort."
+    MC "Honoka, you've played soccer before, would you be up for being our goalie? It doesn't seem that different for this game."
+    show BE happy
+    BE "Sounds good to me!"
+    show AE neutral
+    AE "That is fine with me as well. I don't claim any remarkable athletic ability, so I would not want to bear the responsibility for preventing the opposing team from scoring."
+    MC "Okay, sounds like we got something worked out."
+    Naoki "Alright, Team 1, here you go."
+    play sound Whistle
+    hide BE with dissolve
+    "Coach Naoki tossed the ball to Shiori. Naomi and I scrambled up the field to get in position for a pass."
+    "Shiori tossed up a leading pass to Naomi... only for her to completely blow past it with unexpected speed, landing it out of bounds."
+    show GTS surprised
+    show AE pondering
+    GTS "Oh my... I apologize for my error."
+    "Naomi had clearly covered a lot more ground with each stride than she had estimated."
+    AE "It's alright. I'm not the best thrower."
+    Naoki "Out of bounds, Team 2 gets the ball."
+    hide GTS
+    hide AE
+    show WG neutral
+    with dissolve
+    "Coach Naoki tossed the ball to Alice, who took a casual pace dribbling it up the court until she saw me rushing to defend against her."
+    show WG neutral at altMove(0.25, 0.2)
+    show FMG happy at Position(xcenter=0.8, yalign=1.0) with dissolve
+    "Seeing an opening, she passed the ball to Akira."
+    FMG "We're getting on the board with this one!"
+    "Akira fired off a shot like a cannon toward the goal..."
+    show WG surprised-2
+    show FMG surprised
+    extend " {w}Only to have it sail clean over the goal by more than a meter."
+    FMG "Oops! A little too much on that one I guess."
+    show WG doubt
+    WG "You weren't even close."
+    show FMG angry-2
+    FMG "Hey now..."
+    hide WG
+    hide FMG
+    show BE neutral
+    with dissolve
+    Naoki "Team 1 gets the ball."
+    play sound Thud
+    show BE surprised
+    MC "Ow!"
+    "Coach Naoki apparently had tossed the ball to me, from the side, but I didn't see it, and it smacked me upside the head."
+    show BE surprised at altMove(0.5, 0.4)
+    show AE angry-2 at Position(xcenter=0.6, yalign=1.0) with dissolve
+    AE "Pay attention, Hotsure-san."
+    show AE neutral-eyebrow
+    MC "I am! I didn't see it."
+    "Picking up the ball I began to dribble down field looking for an opening to pass."
+    hide BE
+    hide AE
+    show GTS neutral-2 at Position(xcenter=0.2, yalign=1.0)
+    show RM distrustful at Position(xcenter=0.4, yalign=1.0)
+    with dissolve
+    "Naomi made that an easy decision, standing a head taller than Daichi who was trying to guard her. I tossed it over and she caught it with both hands."
+    show GTS surprised
+    "Seeing an opening, she bounced it across the floor toward the goal."
+    show PRG scared at Position(xcenter=0.6, yalign=1.0)
+    with dissolve
+    "Aida was clearly surprised at the realization the ball was headed directly towards her. She could have easily blocked the overly cautious toss, but her hesitancy caused too much delay while the ball went into the goal."
+    show PRG worried
+    PRG "I-I'm sorry. I-I could've stopped that."
+    hide GTS
+    show WG neutral at Position(xcenter=0.2, yalign=1.0) behind RM
+    with dissolve
+    WG "Don't worry too much about it Aida."
+    show WG stern
+    extend " {i}Someone{/i} didn't do their job of blocking the pass."
+    show RM angry
+    RM "Hey! Just what exactly was I supposed to do to block Yamazaki-san?"
+    show WG doubt
+    WG "{i}Anything{/i}— for a start."
+    show PRG sad-2
+    PRG "P-Please don't fight..."
+    "It didn't take someone as sensitive as Aida to realize frustrations and tensions were already starting to mount."
+    Naoki "Team 2, here you go!"
+    hide PRG
+    hide WG
+    hide RM
+    show FMG happy at Position(xcenter=0.2, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.4, yalign=1.0)
+    with dissolve
+    "Coach Naoki tossed it to Akira. With Naomi rushing up to guard her,"
+    show AE neutral at Position(xcenter=0.6, yalign=1.0)
+    show RM neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    extend " she didn't have a shot, so she tossed it to Daichi, who was being guarded by Shiori."
+    play sound Boing
+    show RM doubt at altMove(0.35, 1.2)
+    show AE surprised at altMove(0.5, 0.8)
+    "In her eager attempt to give her best efforts, Shiori unexpectedly hip-checked Daichi out of bounds, catching the ball like it was intended for her."
+    "There wasn't going to be enough time for Shiori to process what just happened before others closed in."
+    hide FMG
+    hide RM
+    hide GTS
+    with dissolve
+    MC "Matsumoto-san, toss it here!"
+    play sound Thud
+    show AE angry-3
+    "What should have been a simple pass alluded me as I lost track of its arc when I looked up into my bangs and it hit me smack dab in the middle of my forehead."
+    show WG haughty at Position(xcenter=0.4, yalign=1.0) with dissolve
+    WG "Got it!"
+    show WG at altMove(0.5, 0.5)
+    hide AE with dissolve
+    "Seizing on the confusion, Alice snatched up the ball and ran it back up the court before anyone reacted."
+    show WG surprised
+    "Looking to get close to take a shot, she was caught off guard by the momentum she was carrying as her inertia pulled her into the goal zone before she could stop herself."
+    Naoki "Out of bounds, Team 1 gets the ball back."
+    hide WG
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Naoki tossed the ball to Naomi. She was looking for an opening and tossed it to Shiori—"
+    show FMG neutral with dissolve
+    extend " but Akira unexpectedly jumped up to intercept it."
+    "As athletic as Akira was, she couldn't contend that well with Naomi's reach as she tried to guard her."
+    hide AE
+    show RM neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    extend " Akira ditched the ball to Daichi, who threw a pretty basic throw that was way too predictable for Honoka."
+    show FMG sad-2
+    show RM sad
+    with None
+    show BE happy at Position(xcenter=0.25, yalign=1.0)
+    hide GTS
+    with dissolve
+    BE "Too easy. Here you go, Kei-chan!"
+    show BE surprised
+    "Honoka's toss that was intended for me came up way too short and off to the side. It seemed her chest had gotten in the way of her throwing arc."
+    MC "What was that?"
+    BE "I don't know! Grab it Kei-chan!"
+    show FMG happy
+    "Before I could process what just happened, Akira snatched up the ball."
+    "Despite what was by all accounts a wild shot that ended up hitting the goal bar,"
+    show FMG flex
+    extend " it still managed to bounce into the goal."
+    show BE sad
+    play sound Whistle
+    hide FMG
+    hide BE
+    hide RM
+    with dissolve
+    Naoki "Alright, the first half is done. Score is 1 to 1. {size=-6}Usually handball games have higher scores than this..."
+    show WG doubt at Position(xcenter=0.4, yalign=1.0) with dissolve
+    WG "Would it kill you to pass the ball every now and then?"
+    show FMG angry-3 at Position(xcenter=0.6, yalign=1.0) with dissolve
+    FMG "Hey, I got us on the board, what more do you want?"
+    show PRG sad-2 at Position(xcenter=0.2, yalign=1.0) with dissolve
+    PRG "W-We'd be ahead already if it wasn't for me..."
+    show RM distrustful at Position(xcenter=0.8, yalign=1.0) with dissolve
+    RM "Why are they making us do this?"
+    pause .3
+    hide PRG
+    hide WG
+    hide RM
+    hide FMG
+    show BE sad at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    BE "Sorry I didn't stop Mizutani-san, guys."
+    show GTS sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "You shouldn't put so much pressure on yourself, Inoue-san. If anything, I haven't performed that well."
+    MC "What are you talking about Yamazaki-san? You're our best defender and you're the only one that scored."
+    show GTS neutral
+    show AE neutral with dissolve
+    AE "I agree with Hotsure-san."
+    show AE pondering
+    extend " My efforts at defense were of... mixed results, I would say, for comparison."
+    show BE doubt
+    BE "This hasn't really been going well, has it?"
+    MC "Oh come on, we can't be the worst class to have ever done this."
+    hide AE
+    hide BE
+    hide GTS
+    with dissolve
+    pause .2
+    show HR neutral with dissolve
+    #show Naoki neutral with dissolve
+    #show Hageshit neutral with dissolve
+    HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
+    Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
+    Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
+    "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
+    hide HR
+    #hide Naoki with dissolve
+    #hide Hageshi with dissolve
+    show FMG sad-2 at Position(xcenter=0.10, yalign=1.0)
+    show WG angry at Position(xcenter=0.28, yalign=1.0) behind FMG
+    show PRG sad at Position(xcenter=0.45, yalign=1.0)
+    show BE doubt at Position(xcenter=0.6, yalign=1.0) behind PRG
+    show GTS sad at Position(xcenter=0.75, yalign=1.0)
+    show AE sad-2 at Position(xcenter=0.9, yalign=1.0) behind GTS
+    with dissolve
+    "No one was used to their changing bodies. Everyone was feeling frustrated with themselves and everyone else."
+    "This was a complete disaster. Something had to change if we were going to turn this around. Not just for myself, but everyone else."
+    "But what was I going to do to change any of that? I could barely see anymore with this tangled mess in front of my face!"
+    hide FMG
+    hide WG
+    hide AE
+    hide GTS
+    hide PRG
+    with dissolve
+    MCT "Wait a second..."
+    MC "Honoka, do you have any spare hair clips?"
+    show BE confused at altMove(0.5, 0.5)
+    BE "I do, gotta be prepared after all. Why?"
+    MC "I gotta do something to get this thing growing out of my head under control. {w}Just give me everything that you have."
+    "Honoka reached into her pocket and gave me nearly a handful."
+    MC "Just how prepared did you think you had to be?"
+    show BE shrug
+    BE "You never know."
+    show BE happy
+    extend " Shouldn't you be glad?"
+    MC "Probably, but I'm just more confused than anything."
+    "I didn't have a mirror to see what I was doing, but I don't know if it would have made a difference. Frankly, I had no idea what the hell I was doing."
+    "I just started pinning clips in my hair and tying off wads of it with purple scrunchies a handful at a time. I had never really thought too much about having to style my hair before."
+    show BE surprised-2 at altMove(0.5, 0.65)
+    show PRG surprised at Position(xcenter=0.35, yalign=1.0) with dissolve
+    "I knew it had to have been a little jumbled, but judging by everyone's reactions, I must have looked like a mangled doll that was styled by a toddler."
+    show BE wink
+    BE "Oooooh, looking hot, Kei-chan~"
+    MC "That bad?"
+    show BE happy
+    BE "Bahaha! You wouldn't believe!"
+    hide BE
+    show AE smile at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    AE "{i}Hm! Pft{/i}... hehe!"
+    "I knew it was bad, but if Shiori couldn't fully stifle her chuckle then I obviously looked like a total doofus."
+    hide PRG
+    show GTS surprised at Position(xcenter=0.35, yalign=1.0)
+    with dissolve
+    GTS "Is everything alright, Hotsure-san?"
+    hide AE
+    show WG doubt at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    WG "You look completely ridiculous."
+    hide GTS
+    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    with dissolve
+    FMG "Haha! Sweet doo, dude!"
+    hide WG
+    show PRG embarrassed at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    PRG "I-I'm not sure that's quite... um, your style, Hotsure-san."
+    "Okay, so it was really bad if even Aida had to say something."
+    hide FMG
+    hide PRG
+    show RM neutral
+    with dissolve
+    RM "Even I don't know what is going on anymore."
+    MC "Hey now, you may not like it, but this is what peak performance looks like... or at least peak peripheral vision."
+    hide RM
+    show HR neutral
+    with dissolve
+    #show Hageshi with dissolve
+    #show Naoki with dissolve
+    Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
+    Naoki "That's the kind of determination we like to see."
+    HR "I don't know if anyone likes to see that."
+    MCT "I'm not going back to playing blind, at this point it's best if I just own it."
+    hide HR
+    #hide Hageshi with dissolve
+    #hide Naoki with dissolve
+    show FMG sad at Position(xcenter=0.10, yalign=1.0)
+    show WG doubt at Position(xcenter=0.25, yalign=1.0) behind FMG
+    show BE doubt at Position(xcenter=0.6, yalign=1.0) behind PRG
+    show GTS pondering at Position(xcenter=0.75, yalign=1.0)
+    show AE pondering at Position(xcenter=0.9, yalign=1.0) behind GTS
+    show RM sad at Position(xcenter=0.4, yalign=1.0)
+    show PRG worried at Position(xcenter=0.5, yalign=1.0)
+    with dissolve
+    MC "Alright guys, come on now. Let's get back out there and get at it. {w}Maybe we all look a little ridiculous, but we can't let that stop us from trying to do better."
+    show BE neutral
+    show AE neutral
+    show GTS neutral-2
+    show WG neutral
+    show FMG neutral
+    show PRG neutral
+    show RM neutral
+    MC "Besides, no matter what you're worried about with yourself before, just remember you can't do anything to look worse than this."
+    hide AE
+    hide GTS
+    hide WG
+    hide FMG
+    hide PRG
+    hide RM
+    with dissolve
+    show BE happy
+    BE "You can say that again, Kei-chan!"
+    MC "Can you be a little more supportive, Honoka?"
+    show BE angry at altMove(0.5, 0.5)
+    BE "Okay, okay!"
+    show BE happy
+    extend " Kei-chan's right. Let's go out there and kick some butt!"
+    hide BE
+    show FMG happy
+    FMG "Yeah! We got this. Let's go, team!"
+    hide FMG
+    show WG doubt
+    WG "We certainly can't do any worse than before."
+    hide WG
+    show RM neutral
+    RM "That remains to be seen."
+    hide RM with dissolve
+    "Some things needed to change if we were going to do our best. I had a few ideas."
+    show AE neutral at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    MC "I take back what I said earlier. Matsumoto-san is right. We should strategize. {w}I think Yamazaki-san's reach would be best utilized for our goalie."
+    BE "Good thinking, Kei-chan."
+    show GTS neutral-2
+    GTS "If you think that is best."
+    MC "Don't worry, you'll do fine."
+    MC "Honoka, why don't you try an underhand pass to get around, erm..."
+    show BE seductive
+    BE "Get around what, Kei-chan?"
+    MC "You know what I mean."
+    show AE happy
+    AE "Any insight as to how I could improve?"
+    MC "Don't be afraid to get in there and block them with your body, Matsumoto-san. It's certainly allowed in the rules."
+    show AE smile
+    AE "Right. I'll try to keep that in mind."
+    hide BE
+    hide AE
+    hide GTS
+    with dissolve
+    Naoki "Alright, Team 1 won the coin toss, so Team 2 gets the ball at the start of this half."
+    show RM smug at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Coach Naoki tossed the ball to Daichi. With a bit more pep in his step than I had anticipated, he trotted up field a few strides before passing it to Alice."
+    show WG neutral at Position(xcenter=0.85, yalign=1.0) with dissolve
+    "Alice ran up close to the goal zone, this time leaving adequate time to stop herself short before going over the line."
+    show WG angry at altMove(0.4, 0.65)
+    show GTS neutral at Position(xcenter=0.85, yalign=1.0) with easeinright
+    extend " Her effort to score though was thwarted when Naomi swatted the ball away before it could reach the goal."
+    show RM sad
+    show GTS unique
+    GTS "Here, take the ball, Inoue-san."
+    hide RM
+    hide WG
+    show BE happy at Position(xcenter=0.45, yalign=1.0)
+    with dissolve
+    "Honoka grabbed the toss and quickly ran up the court."
+    show BE surprised-2
+    show FMG upbeat at Position(xcenter=0.25, yalign=1.0) with easeinleft
+    extend " Realizing she was about to be blocked by Mizutani-san, she sailed an underhand toss to me."
+    MCT "I got it this time!"
+    show BE surprised
+    BE "Shoot it, Kei-chan!"
+    MC "R-Right!"
+    "I fired off a shot, not thinking too much about it, but just trying to aim for the center."
+    hide GTS
+    show PRG surprised at Position(xcenter=0.85, yalign=1.0)
+    with dissolve
+    "In a surprising show of confidence, Aida got in front of my shot, and batted the ball to the ground."
+    show FMG happy
+    FMG "Nice block Kodama-san!"
+    show PRG unique-happy
+    PRG "Th-Thank you!"
+    hide BE with dissolve
+    "Aida picked up the ball that had bounced harmlessly into the goal zone and passed it to Daichi."
+    show RM smug with dissolve
+    "Daichi looked a bit more confident in himself than before and managed to work his way down the court with a surprising degree of elusiveness."
+    hide FMG
+    hide PRG
+    show WG haughty at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    extend " Seeing an opening to toss it to Alice, he lobbed it over to her."
+    show AE neutral-smug at Position(xcenter=0.65, yalign=1.0) with easeinright
+    show WG angry
+    "But Shiori had other plans, as she managed to body block Alice out of a clean catch and blocked the pass."
+    hide RM
+    show BE surprised-2
+    with dissolve
+    BE "I got it!"
+    "Honoka scrambled for the dropped ball. I did my best to keep pace with her as we both ran toward the goal zone. {w}In a last second change up, she passed me the ball."
+    hide BE
+    hide AE
+    hide WG
+    show PRG surprised
+    with dissolve
+    "The sudden confusion about where the ball was coming from was enough to let me lob a straight shot into the goal before Aida could adjust."
+    Naoki "Team 1 scores, 2-1."
+    show PRG embarrassed
+    PRG "S-Sorry."
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    FMG "Don't worry about it, Kodama-san."
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "I think we were all caught off guard by what just happened."
+    Naoki "Team 2 gets the ball."
+    hide WG
+    hide PRG
+    hide FMG
+    show RM smug
+    with dissolve
+    "Daichi got the hand off this time again."
+    show AE surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Dribbling the ball up the court, he managed to fake out Shiori with where he was going. {w}I still don't understand how this pasty nerd was so quick and agile."
+    hide AE
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    "He managed to get a clean pass off to Alice."
+    show BE happy at Position(xcenter=0.35, yalign=1.0) with dissolve
+    "But Honoka was eager to pounce in her face to block the shot."
+    show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    extend " Realizing the lost opportunity, Alice passed it to Akira."
+    hide BE
+    hide RM
+    hide WG
+    with dissolve
+    "Grabbing the ball, Akira elected for a more reserved throw this time,"
+    show GTS surprised at Position(xcenter=0.45, yalign=1.0) with dissolve
+    extend " tossing it low and bouncing it off the floor before Naomi could reach down fast enough to block the shot, it went in easily."
+    Naoki "Team 2 scores! 2-2. {w}Team 1 gets the ball."
+    hide GTS
+    hide FMG
+    show AE neutral-smug at Position(xcenter=0.25, yalign=1.0)
+    show BE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Coach Naoki served me the ball. My plan was to toss it to Shiori to buy time for Honoka to get into position..."
+    play sound Whistle
+    hide AE
+    hide BE
+    pause 1
+    Naoki "Times up. Final score 2 to 2. It's a tie."
+    play music Peaceful
+    show HR neutral at Position(xcenter=0.45, yalign=1.0) with dissolve
+    HR "Looks like no one wins the prize then."
+    All "Awww!"
+    Hageshi "No whining now. You should be proud of yourselves. I have to admit, it was quite impressive to see everyone turn things around."
+    Naoki "Hageshi-san is right. This started off as one of the worst games I'd seen, only to turn into one of the better ones in the second half."
+    HR "So in a way, you're all winners."
+    show WG doubt at Position(xcenter=0.15, yalign=1.0) with dissolve
+    WG "If no one won anything, it sounds like we're all losers."
+    HR "That's one way of looking at it certainly, but I would suggest looking on the positive side of things. {w}Look, I don't say this often, but I'm proud of how you all were able to turn things around for yourself."
+    show AE happy at Position(xcenter=0.9, yalign=1.0) with dissolve
+    AE "Thank you, Tashi-sensei."
+    HR "Don't mention it. {w}Like literally, {w}ever again."
+    show FMG happy at Position(xcenter=0.3, yalign=1.0) behind HR with dissolve
+    FMG "I think Tashi-sensei likes us!"
+    show WG neutral
+    show GTS happy-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "My sincerest gratitude, Tashi-sensei."
+    show PRG unique-happy at Position(xcenter=0.6, yalign=1.0) behind HR with dissolve
+    PRG "W-We like you too Tashi-sensei..."
+    HR "{i}Ugggh{/i}.... please, no..."
+    hide AE
+    hide GTS
+    hide WG
+    hide FMG
+    hide PRG
+    with dissolve
+    #show Naoki with dissolve
+    #show Hageshi with dissolve
+    Naoki "I knew this guy was a softy at heart."
+    Hageshi "You're not the only one, Aoi-san seems to think so too."
+    HR "Alright, we're done here. Class dismissed."
+    hide HR with dissolve
+    "So it wasn't exactly the greatest game of handball ever played. It was pretty clear things were starting to change. {w}{i}We{/i} were starting to change."
+    "I wasn't sure what the future held for all of us, but for now I was glad we all got to have a little fun."
+    jump daymenu
+
+label MC006_Team2:
+    show RM neutral with dissolve
+    #show MC neutral with dissolve
+    Hageshi "{size=-6}Well, we should probably split the guys between the two teams to be fair.{/size}"
+    Naoki "{size=-6}Yup, good call.{/size}"
+    hide RM with dissolve
+    #hide MC with dissolve
+    Hageshi "{size=-6}We definitely need to spread out the power.{/size}"
+    show GTS neutral at Position(xcenter=0.2, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    extend " {size=-6}So I'd say put the tall one opposite the strong one.{/size}"
+    hide GTS neutral
+    hide FMG neutral
+    with dissolve
+    pause .3
+    show BE neutral at Position(xcenter=0.2, yalign=1.0)
+    show PRG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    Naoki "{size=-6}The top-heavy ones are going to have similar issues to each other.{/size}"
+    Hageshi "{size=-6}Agreed, should spread them out too.{/size}"
+    hide BE neutral
+    hide PRG neutral
+    with dissolve
+    pause .3
+    show AE neutral at Position(xcenter=0.2, yalign=1.0)
+    show WG neutral at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    Naoki "{size=-6}Which leaves the bottom-heavy ones.{/size}"
+    Hageshi "{size=-6}Seems to be about the best we can do to make things fair.{/size}"
+    Naoki "Alright, Team 1 is Utagashi-san, Inoue-san, Yamazaki-san, and Matsumoto-san. Team 2 is, Hotsure-san, Nikumaru-san, Mitzutani-san, and Kodama-san."
+    show WG doubt
+    WG "Just what exactly are we hoping to gain by winning?"
+    show WG doubt
+    show HR neutral at Position(xcenter=0.4, yalign=1.0) with dissolve
+    HR "Good question, Nikumaru-san. Since the self-satisfaction of a job well done is a rather lack-luster reward, we decided to offer that the winning team will be taken off the class clean up rotation for the next month."
+    show WG surprised-2
+    WG "That is not a paltry incentive..."
+    hide AE
+    show FMG happy at Position(xcenter=0.2, yalign=1.0)
+    FMG "Sweet! Anything to get out of that boring stuff."
+    show BE happy at Position(xcenter=0.6, yalign=1.0) with dissolve
+    BE "Not before me you aren't!"
+    Naoki "Alright. We'll do a quick coin toss. Heads Team 1 starts with the ball, tails Team 2 starts with it."
+    pause .3
+    Naoki "Heads! Team 1 starts with the ball."
+    show BE shrug
+    BE "I still don't know what we're supposed to be doing."
+    show WG neutral
+    WG "It sounds simple enough, it can't be that hard."
+    show FMG flex
+    FMG "Yeah, just grab the ball and throw it in the goal, that's all there is to it!"
+    hide BE
+    hide WG
+    hide FMG
+    hide HR
+    show RM sad
+    with dissolve
+    RM "Can I just go back to my dorm?"
+    hide RM
+    show FMG neutral at Position(xcenter=0.2, yalign=1.0)
+    show PRG neutral
+    show WG stern at Position(xcenter=0.8, yalign=1.0)
+    with dissolve
+    WG "I'm counting on a good performance out of the rest of you. I for one am {i}sick{/i} of wasting my time on cleaning duty when it comes up."
+    show FMG flex
+    show WG doubt
+    FMG "Nothing to worry about. I'm gonna carry this team!"
+    "Akira was strong, but between me, Aida and Alice... {w}Well, um... mostly Alice... That was a pretty heavy load."
+    show PRG worried
+    PRG "..."
+    "But I was most worried about Aida. She was easily the smallest of all of us and she didn't look to have the athleticism to make up for it. I didn't want to see her get body checked from a defensive block."
+    MC "Aida, would you be interested in being our goalie?"
+    FMG "{size=-6}Are you sure that's a good idea, dude?{/size}"
+    MC "{size=-6}Do you really want to see Kodama-san try to guard Yamazaki-san?{/size}"
+    show FMG surprised-2
+    FMG "{size=-6}Good point.{/size}"
+    show FMG neutral
+    show WG neutral
+    PRG "I-If you think so..."
+    WG "I think that is a good idea as well."
+    MC "Okay, sounds like we got something worked out."
+    Naoki "Alright, Team 1, here you go."
+    play sound Whistle
+    hide FMG
+    hide PRG
+    hide WG
+    show AE neutral at Position(xcenter=0.25, yalign=1.0)
+    show GTS neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Coach Naoki tossed the ball to Shiori. Naomi scrambled up the field to get in position for a pass while our team tried to get in position to defend."
+    "Shiori tossed up a leading pass to Naomi... only for her to completely blow past it with unexpected speed, landing it out of bounds."
+    show GTS surprised
+    show AE pondering
+    GTS "Oh my... I apologize for my error."
+    "Naomi had clearly covered a lot more ground with each stride than she had estimated."
+    AE "It's alright. I'm not the best thrower."
+    FMG "Looks like we dodged a bullet there."
+    Naoki "Out of bounds, Team 2 gets the ball."
+    hide GTS
+    hide AE
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    "Coach Naoki tossed the ball to Alice, who took a casual pace dribbling it up the court until she saw me rushing to defend against her."
+    show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "Seeing an opening, she passed the ball to Akira."
+    FMG "We're getting on the board with this one!"
+    "Akira fired off a shot like a cannon toward the goal..."
+    show WG surprised-2
+    show FMG surprised-2
+    show BE confused with dissolve
+    extend " {w}Only to have it sail clean over the goal by more than a meter."
+    show FMG surprised
+    FMG "Oops! A little too much on that one I guess."
+    show WG doubt
+    WG "You weren't even close."
+    show FMG angry-2
+    FMG "Hey now..."
+    hide BE
+    hide WG
+    hide FMG
+    with dissolve
+    Naoki "Team 1 gets the ball."
+    show RM concerned with dissolve
+    "Coach Naoki apparently had tossed the ball to Daichi, who honestly looked like he didn't know what to do with it."
+    show RM doubt with None
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+    show FMG neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Looking for a way to ditch it as I came running up to block him, Naomi made herself the easy choice with her extra reach above Akira."
+    show GTS surprised
+    "Seeing an opening, she bounced it across the floor toward the goal."
+    hide RM
+    show PRG scared
+    with dissolve
+    "Aida was clearly surprised at the realization the ball was headed directly towards her. She could have easily blocked the overly cautious toss, but her hesitancy caused too much delay while the ball went into the goal."
+    show PRG worried
+    PRG "I-I'm sorry. I should've stopped that."
+    hide GTS
+    show WG neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    WG "Don't worry too much about it, Aida."
+    show WG stern
+    extend " {i}Someone{/i} didn't do their job of blocking the pass."
+    show FMG angry-3
+    RM "Like you could have done any better guarding Yamazaki-san."
+    show WG stern
+    WG "I thought you were supposed to ‘carry this team'?"
+    show FMG angry
+    FMG "..."
+    show PRG sad-2
+    PRG "P-Please don't fight..."
+    "It didn't take someone as sensitive as Aida to realize frustrations and tensions were already starting to mount."
+    Naoki "Team 2, here you go!"
+    hide PRG with dissolve
+    show FMG neutral
+    show WG neutral
+    "Coach Naoki tossed it to Akira."
+    show GTS neutral with dissolve
+    extend " With Naomi rushing up to guard her, she didn't have a shot, so she passed it"
+    play sound Thud
+    hide GTS with dissolve
+    MC "Ow!"
+    "Akira had apparently tossed the ball to me from the side, but I didn't see it, and it smacked me upside the head."
+    show WG angry
+    WG "Pay attention, Keisuke!"
+    show WG stern
+    MC "I am! I didn't see it."
+    "Luckily I recovered the ball before someone thought to guard me after sending too many against Akira. I began to dribble down field looking for an opening to pass."
+    "I had a clear line to Alice when suddenly—"
+    play sound Boing
+    hide FMG
+    show AE surprised at Position(xcenter=0.75, yalign=1.0)
+    show dummy with vpunch
+    "In her eager attempt to give her best efforts, Shiori unexpectedly hip-checked me out of bounds, which led to me inadvertently tossing the ball right into her hands."
+    "There wasn't going to be enough time for Shiori to process what just happened before others closed in."
+    show RM smug at Position(xcenter=0.25, yalign=1.0)
+    hide WG
+    with dissolve
+    RM "Matsumoto-san, toss it here!"
+    play sound Thud
+    show WG haughty
+    "What should have been a simple pass was thwarted as Alice got in a solid body block that completely walled out Daichi."
+    WG "Got it!"
+    hide AE
+    hide RM
+    with dissolve
+    "Seizing on the confusion, Alice snatched up the ball and ran it back up the court before anyone reacted."
+    show WG surprised
+    "Looking to get close to take a shot, she was caught off guard by the momentum she was carrying as her inertia pulled her into the goal zone before she could stop herself."
+    Naoki "Out of bounds, Team 1 gets the ball back."
+    show FMG angry-3 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "What was that?"
+    show WG doubt at altMove(0.5, 0.25)
+    WG "Oh, shut it!"
+    MC "Well, I kind of dropped the ball too there, like literally dropped the ball."
+    WG "Honestly Keisuke I don't know how you see anything with your hair like that."
+    show FMG neutral
+    FMG "I don't really get it either to be honest."
+    MCT "That makes three of us."
+    hide FMG
+    hide WG
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0)
+    show AE neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Naoki tossed the ball to Naomi. She was looking for an opening and tossed it to Shiori—"
+    show FMG neutral with dissolve
+    extend " but Akira unexpectedly jumped up to intercept it."
+    show FMG surprised-2
+    "As athletic as Akira was, she couldn't contend that well with Naomi's reach as she tried to guard her."
+    hide AE with dissolve
+    extend " Akira ditched the ball to try to pass to me."
+    play sound Thud
+    show FMG surprised
+    "Which ended up bouncing off my head before I caught it. {w} Still jumbled out of sorts from the impact, I scrambled to toss the ball into the goal in an arc that was way too predictable for Honoka."
+    show FMG sad-2 with None
+    show BE happy at Position(xcenter=0.75, yalign=1.0)
+    hide GTS
+    with dissolve
+    BE "Too easy. Here you go, Utagashi-san!"
+    show BE surprised
+    show RM concerned at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Honoka's toss that was intended for Daichi came up way too short and off to the side. It seemed her chest had gotten in the way of her throwing arc."
+    show RM angry
+    RM "What was that?"
+    BE "I don't know! Just Grab it!"
+    show FMG happy
+    "Before they could process what just happened, Akira snatched up the ball."
+    show FMG surprised
+    "Despite what was by all accounts a wild shot that ended up hitting the goal bar,"
+    show FMG flex
+    extend " it still managed to bounce into the goal."
+    show BE sad
+    play sound Whistle
+    hide FMG
+    hide BE
+    hide RM
+    with dissolve
+    Naoki "Alright, the first half is done. Score is 1 to 1. {size=-6}Usually handball games have higher scores than this..."
+    show WG doubt at Position(xcenter=0.4, yalign=1.0) with dissolve
+    WG "Would it kill you to pass the ball every now and then?"
+    show FMG angry-3 at Position(xcenter=0.6, yalign=1.0) with dissolve
+    FMG "Hey, I got us on the board, what more do you want?"
+    show PRG sad-2 at Position(xcenter=0.2, yalign=1.0) with dissolve
+    PRG "W-We'd be ahead already if it wasn't for me..."
+    show RM distrustful at Position(xcenter=0.8, yalign=1.0) with dissolve
+    RM "Why are they making us do this?"
+    pause .3
+    hide PRG
+    hide WG
+    hide RM
+    hide FMG
+    show BE sad at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    BE "Sorry I didn't stop Mizutani-san, guys."
+    show GTS sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "You shouldn't put so much pressure on yourself, Inoue-san. If anything, I haven't performed that well."
+    show BE neutral
+    BE "What are you talking about Yamazaki-san? You're our best defender and you're the only one that scored."
+    show GTS neutral
+    show AE neutral
+    AE "I agree with Inoue-san-san."
+    show AE pondering
+    extend " My efforts at defense were of... mixed results, I would say, for comparison."
+    show BE doubt
+    BE "None of us have really been doing that well, have we?"
+    MC "Oh come on, we can't be the worst class to have ever done this."
+    hide AE
+    hide BE
+    hide GTS
+    with dissolve
+    pause .2
+    show HR neutral with dissolve
+    #show Naoki neutral with dissolve
+    #show Hageshit neutral with dissolve
+    HR "{size=-4}...I think this is the worst any class has ever done.{/size}"
+    Naoki "{size=-4}I can't think of any exceptions myself.{/size}"
+    Hageshi "{size=-4}That may be so, but try not to say that too loudly.{/size}"
+    "I may have been half blind, but I wasn't deaf to what the teachers were murmuring to themselves. {w}This was even worse than I thought."
+    hide HR
+    #hide Naoki with dissolve
+    #hide Hageshi with dissolve
+    show FMG sad-2 at Position(xcenter=0.10, yalign=1.0)
+    show WG angry at Position(xcenter=0.28, yalign=1.0) behind FMG
+    show PRG sad at Position(xcenter=0.45, yalign=1.0)
+    show BE doubt at Position(xcenter=0.6, yalign=1.0) behind PRG
+    show GTS sad at Position(xcenter=0.75, yalign=1.0)
+    show AE sad-2 at Position(xcenter=0.9, yalign=1.0) behind GTS
+    with dissolve
+    "No one was used to their changing bodies. Everyone was feeling frustrated with themselves and everyone else."
+    "This was a complete disaster. Something had to change if we were going to turn this around. Not just for myself, but everyone else."
+    "But what was I going to do to change any of that? I could barely see anymore with this tangled mess in front of my face!"
+    hide FMG
+    hide WG
+    hide AE
+    hide GTS
+    hide PRG
+    with dissolve
+    MCT "Wait a second..."
+    MC "Honoka, do you have any spare hair clips?"
+    show BE confused at altMove(0.5, 0.5)
+    BE "I do, gotta be prepared after all. Why?"
+    MC "I gotta do something to get this thing growing out of my head under control. {w}Just give me everything that you have."
+    "Honoka reached into her pocket and gave me nearly a handful."
+    MC "Just how prepared did you think you had to be?"
+    show BE shrug
+    BE "You never know."
+    show BE happy
+    extend " Shouldn't you be glad?"
+    MC "Probably, but I'm just more confused than anything."
+    "I didn't have a mirror to see what I was doing, but I don't know if it would have made a difference. Frankly, I had no idea what the hell I was doing."
+    "I just started pinning clips in my hair and tying off wads of it with purple scrunchies a handful at a time. I had never really thought too much about having to style my hair before."
+    show BE surprised-2 at altMove(0.5, 0.65)
+    show PRG surprised at Position(xcenter=0.35, yalign=1.0) with dissolve
+    "I knew it had to have been a little jumbled, but judging by everyone's reactions, I must have looked like a mangled doll that was styled by a toddler."
+    show BE wink
+    BE "Oooooh, looking hot, Kei-chan~"
+    MC "That bad?"
+    show BE happy
+    BE "Bahaha! You wouldn't believe!"
+    hide BE
+    show AE smile at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    AE "{i}Hm! Pft{/i}... hehe!"
+    "I knew it was bad, but if Shiori couldn't fully stifle her chuckle then I obviously looked like a total doofus."
+    hide PRG
+    show GTS surprised at Position(xcenter=0.35, yalign=1.0)
+    with dissolve
+    GTS "Is everything alright, Hotsure-san?"
+    hide AE
+    show WG doubt at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    WG "You look completely ridiculous."
+    hide GTS
+    show FMG neutral at Position(xcenter=0.35, yalign=1.0)
+    with dissolve
+    FMG "Haha! Sweet doo, dude!"
+    hide WG
+    show PRG embarrassed at Position(xcenter=0.65, yalign=1.0)
+    with dissolve
+    PRG "I-I'm not sure that's quite... um, your style, Hotsure-san."
+    "Okay, so it was really bad if even Aida had to say something."
+    hide FMG
+    hide PRG
+    show RM neutral
+    with dissolve
+    RM "Even I don't know what is going on anymore."
+    MC "Hey now, you may not like it, but this is what peak performance looks like... or at least peak peripheral vision."
+    hide RM
+    show HR neutral
+    with dissolve
+    #show Hageshi with dissolve
+    #show Naoki with dissolve
+    Hageshi "Adapt and overcome. I'm actually impressed with your effort, Hotsure-san."
+    Naoki "That's the kind of determination we like to see."
+    HR "I don't know if anyone likes to see that."
+    MCT "I'm not going back to playing blind, at this point it's best if I just own it."
+    hide HR
+    #hide Hageshi with dissolve
+    #hide Naoki with dissolve
+    show FMG sad at Position(xcenter=0.10, yalign=1.0)
+    show WG doubt at Position(xcenter=0.25, yalign=1.0) behind FMG
+    show BE doubt at Position(xcenter=0.6, yalign=1.0) behind PRG
+    show GTS pondering at Position(xcenter=0.75, yalign=1.0)
+    show AE pondering at Position(xcenter=0.9, yalign=1.0) behind GTS
+    show RM sad at Position(xcenter=0.4, yalign=1.0)
+    show PRG worried at Position(xcenter=0.5, yalign=1.0)
+    with dissolve
+    MC "Alright guys, come on now. Let's get back out there and get at it. {w}Maybe we all look a little ridiculous, but we can't let that stop us from trying to do better."
+    show BE neutral
+    show AE neutral
+    show GTS neutral-2
+    show WG neutral
+    show FMG neutral
+    show PRG neutral
+    show RM neutral
+    MC "Besides, no matter what you're worried about with yourself before, just remember you can't do anything to look worse than this."
+    hide AE
+    hide GTS
+    hide WG
+    hide FMG
+    hide PRG
+    hide RM
+    with dissolve
+    show BE happy
+    BE "You can say that again, Kei-chan!"
+    MC "Can you be a little more supportive, Honoka?"
+    show BE angry at altMove(0.5, 0.5)
+    BE "Okay, okay!"
+    show BE happy
+    extend " Kei-chan's right. Let's go out there and kick some butt!"
+    hide BE
+    show FMG happy
+    FMG "Yeah! We got this. Let's go, team!"
+    hide FMG
+    show WG doubt
+    WG "We certainly can't do any worse than before."
+    hide WG
+    show RM neutral
+    RM "That remains to be seen."
+    hide RM
+    show PRG neutral
+    with dissolve
+    "Some things needed to change if we were going to do our best. I had a few ideas."
+    MC "I think we can win this, we just need to play to our strengths."
+    MC "Alice, you're our best defender,"
+    show WG doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
+    extend " don't be afraid to get in there and use your..."
+    show WG haughty
+    extend " Um, commanding presence. Yes."
+    show FMG happy at Position(xcenter=0.25, yalign=1.0) with dissolve
+    MC "Akira, you're our best scorer..."
+    show FMG neutral
+    extend " Just try to ease up on those tosses."
+    show FMG happy
+    FMG "Right! I got this!"
+    MC "Kodama-san, don't be afraid of the ball. I know it can be fast, but it isn't very hard. Just put out your hands and it'll bounce right off of you, I promise."
+    PRG "I-I think I can do that."
+    MC "Trust me, you'll do fine. We all will."
+    Naoki "Alright, Team 1 won the coin toss, so Team 2 gets the ball at the start of this half."
+    hide FMG
+    hide PRG
+    hide WG
+    with dissolve
+    "Coach Naoki tossed the ball to me, which to everyone's surprise, (including myself) I caught with no problem. {w} I trotted up the field looking for an opening before I tossed it to Alice."
+    show WG neutral with dissolve
+    "Taking it and running with it, Alice ran up close to the goal zone, this time leaving adequate time to stop herself short before going over the line."
+    show WG angry
+    show GTS neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    extend " Her effort to score though was thwarted when Naomi swatted the ball away before it could reach the goal."
+    MC "Dangit, that was clever of them to switch out Yamazaki-san for Honoka for the goalie."
+    show GTS unique
+    GTS "Here, take the ball, Inoue-san."
+    hide WG
+    show BE happy at Position(xcenter=0.2, yalign=1.0)
+    with dissolve
+    "Honoka grabbed the toss and quickly ran up the court."
+    show BE surprised-2 with None
+    show FMG upbeat at Position(xcenter=0.35, yalign=1.0)
+    hide GTS
+    with dissolve
+    extend " Realizing she was about to be blocked by Mizutani-san, she sailed an underhand toss to Daichi."
+    show RM doubt at Position(xcenter=0.75, yalign=1.0) with dissolve
+    RM "What am I supposed to do with this?"
+    show FMG neutral
+    show BE surprised
+    BE "Just shoot the ball for crying out loud!"
+    show RM happy
+    RM "R-Right!"
+    "Daichi fired off a shot, not thinking too much about it, but just trying to aim for the center."
+    show PRG surprised at Position(xcenter=0.55, yalign=1.0) with dissolve
+    "In a surprising show of confidence, Aida got in front of Daichi's shot, and batted the ball to the ground."
+    hide RM with dissolve
+    show FMG happy
+    FMG "Nice block Kodama-san!"
+    show PRG unique-happy
+    PRG "Th-Thank you!"
+    hide BE with dissolve
+    "Aida picked up the ball that had bounced harmlessly into the goal zone and passed it to me."
+    "Dribbling it up the court, I felt a lot more confident in myself now that I could see what was going on around me."
+    hide FMG
+    hide PRG
+    show WG haughty
+    with dissolve
+    extend " Seeing an opening to toss it to Alice, I lobbed it over to her."
+    show AE neutral-smug at Position(xcenter=0.65, yalign=1.0) with dissolve
+    show WG angry
+    "But Shiori had other plans, as she managed to body block Alice out of a clean catch and disrupt the pass."
+    show BE surprised-2 at Position(xcenter=0.25, yalign=1.0) with dissolve
+    BE "I got it!"
+    hide AE
+    hide WG
+    with dissolve
+    "Honoka scrambled for the dropped ball. I did my best to keep pace with her as I tried to follow her to the goal zone."
+    show RM smug at Position(xcenter=0.75, yalign=1.0) with dissolve
+    " In a last second change up, she passed Daichi the ball."
+    show PRG surprised with dissolve
+    "The sudden confusion about where the ball was coming from was enough to let him lob a straight shot into the goal before Aida could adjust."
+    Naoki "Team 1 scores, 2-1."
+    hide BE
+    hide RM
+    with dissolve
+    show PRG embarrassed
+    PRG "S-Sorry."
+    show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    FMG "Don't worry about it, Kodama-san."
+    show WG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    WG "I think we were all caught off guard by what just happened."
+    Naoki "Team 2 gets the ball."
+    hide WG
+    hide FMG
+    hide PRG
+    with dissolve
+    "I got the hand off this time again."
+    show AE surprised with dissolve
+    "Dribbling the ball up the court, I somehow managed to fake out Shiori with a sudden pivot in direction."
+    hide AE
+    show WG neutral
+    with dissolve
+    "Seeing an opening, I got a clean pass off to Alice."
+    show BE happy at Position(xcenter=0.65, yalign=1.0) with dissolve
+    "But Honoka was eager to pounce in her face to block the shot. {w}Realizing the lost opportunity, Alice passed it to Akira."
+    show FMG happy at Position(xcenter=0.25, yalign=1.0)
+    hide WG
+    with dissolve
+    "Grabbing the ball, Akira elected for a more reserved throw this time,"
+    show GTS surprised with dissolve
+    extend " tossing it low and bouncing it off the floor before Naomi could reach down fast enough to block the shot, it went in easily."
+    Naoki "Team 2 scores! 2-2. {w}Team 1 gets the ball."
+    show BE neutral at altMove(0.5, 0.75) with None
+    show AE neutral-smug at Position(xcenter=0.25, yalign=1.0)
+    hide GTS
+    hide FMG
+    with dissolve
+    "Coach Naoki served Honoka the ball. My plan was to toss it to block her to force a pass that Akira would intercept..."
+    play sound Whistle
+    hide AE
+    hide BE
+    pause 1
+    Naoki "Times up. Final score 2 to 2. It's a tie."
+    play music Peaceful
+    show HR neutral at Position(xcenter=0.45, yalign=1.0) with dissolve
+    HR "Looks like no one wins the prize then."
+    All "Awww!"
+    Hageshi "No whining now. You should be proud of yourselves. I have to admit, it was quite impressive to see everyone turn things around."
+    Naoki "Hageshi-san is right. This started off as one of the worst games I'd seen, only to turn into one of the better ones in the second half."
+    HR "So in a way, you're all winners."
+    show WG doubt at Position(xcenter=0.15, yalign=1.0) with dissolve
+    WG "If no one won anything, it sounds like we're all losers."
+    HR "That's one way of looking at it certainly, but I would suggest looking on the positive side of things. {w}Look, I don't say this often, but I'm proud of how you all were able to turn things around for yourself."
+    show AE happy at Position(xcenter=0.9, yalign=1.0) with dissolve
+    AE "Thank you, Tashi-sensei."
+    HR "Don't mention it. {w}Like literally, {w}ever again."
+    show FMG happy at Position(xcenter=0.3, yalign=1.0) behind HR with dissolve
+    FMG "I think Tashi-sensei likes us!"
+    show WG neutral
+    show GTS happy-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    GTS "My sincerest gratitude, Tashi-sensei."
+    show PRG unique-happy at Position(xcenter=0.6, yalign=1.0) behind HR with dissolve
+    PRG "W-We like you too Tashi-sensei..."
+    HR "{i}Ugggh{/i}.... please, no..."
+    hide AE
+    hide GTS
+    hide WG
+    hide FMG
+    hide PRG
+    with dissolve
+    #show Naoki with dissolve
+    #show Hageshi with dissolve
+    Naoki "I knew this guy was a softy at heart."
+    Hageshi "You're not the only one, Aoi-san seems to think so too."
+    HR "Alright, we're done here. Class dismissed."
+    hide HR with dissolve
+    "So it wasn't exactly the greatest game of handball ever played. It was pretty clear things were starting to change. {w}{i}We{/i} were starting to change."
+    "I wasn't sure what the future held for all of us, but for now I was glad we all got to have a little fun."
+    jump daymenu
+
+label MC007:
     "This marks the current end of the Keisuke-centric scenes."
     "More are planned for a later release. Until then, feel free to explore the main routes."
     jump daymenu

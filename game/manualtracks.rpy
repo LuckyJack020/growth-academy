@@ -369,6 +369,17 @@ init python:
     )
     ost.manualDefineList.append(RiV)
 
+    ElA = ost.soundtrack(
+        name = "Elegant Antics",
+        path = "Audio/BGM/scene_WG2.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Alice's Good Mood",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(ElA)
+
     ## Base Template
     ######################################
 

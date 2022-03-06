@@ -6094,6 +6094,7 @@ label PRG019_c1_2:
     jump daymenu
 
 label PRG020:
+    $setTimeFlag("XX20")
     $setProgress("PRG", "PRG021")
     pause 1
     MC "Mmmmngh..."

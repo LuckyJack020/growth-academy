@@ -1,103 +1,142 @@
 label FMG001:
     $setProgress("FMG", "FMG002")
-    scene Track with fade #track might not be the right background?
     play music Schoolday
-    "After thinking of what to do after class, I decided to check out the Athletics Area, so when I have P.E. I would know where it is."
-    "Compared to the rest of the academy, the building itself was not only taller, but almost as wide as the rest of the school."
-    "From how tall the windows were made, the building looked at least two or three stories tall."
-    scene Gym with fade
-    "I walked inside to see if it really was as big as it looked."
-    "The inside was not what I thought it would look like, what I imagined to be a normal three story building turned out to be just one room that was three stories high."
-    "The exercise equipment was unique, to say the least; while some did look normal, most of them came in extreme shapes and sizes."
-    "One thing I also noticed was that the building was so empty that there was a lone echo coming from the far end of the building and once again curiosity drove me to follow where the source of the echo was coming from."
-    "As I got closer to the source, I began to hear someone counting."
-    UNKNOWN "...87... 88..."
-    "It sounded like a woman, but I couldn't make out who it was just yet."
-    UNKNOWN "...92... 93..."
-    "After a minute of looking, I found that the source of noise was coming from a bench-pressing Akira."
+    "After thinking of what to do after class, I decided to check out the gym. {w}I’m not one to work out much myself, but I figured it wouldn’t hurt to take a look."
+    scene Gym with dissolve
+    "And it was massive..."
+    MC "Jeez, some of these weights are enormous. These things are like four times the size of my head."
+    MC "I’d throw out my back trying to lift one of these bad boys."
+    "My examination of the machines and weights was cut short when I heard a faint voice from across the room."
+    MC "People are working out already? I guess the gym rats don’t want to waste any time."
+    "As I closed the distance on the noise, I began to hear someone counting."
+    UNKNOWN "...10... 11..."
+    "It was definitely a woman, but I couldn't make out a face just yet."
+    UNKNOWN "...12... 13..."
+    MC "Man, this place is {i}too{/i} big."
+    "I must have looked around for twenty or so minutes before I finally found Akira counting out her bench press reps."
     "From what I could guess, she was too focused on her workout to notice me walking towards her, or that she assumed it was just someone who was working out as well."
     show FMG angry with dissolve
-    FMG "98... 99... 100!"
-    "Akira then proceeded to put the weights back on the bar and moved off the bench press; it was only when she looked up she saw me watching her."
+    FMG "14... 15... 16!"
+    "Akira then proceeded to put the weights back on the bar and moved off the bench press; it was only when she looked up and saw me watching her."
     show FMG neutral
     FMG "Well hey there...{w} Um, your name was Keisuke, right?"
-    MC "Indeed it is."
-    FMG "All right, Keisuke, got it... So as I was saying... What brings you to these parts?"
-    MC "Curiosity mostly, I wanted to check out the Athletics Area to get a better layout of the school and when I got here I heard an echo that lead me to you."
+    MC "Yeah, it is haha. Don’t wear it out..."
+    MCT "Fantastic start. Flawless."
+    FMG "Alright, Keisuke. What brings you to the gym? You don’t seem like someone who works out frequently."
+    MC "Would you believe me if I told you underneath my shirt that I’m incredibly jacked?"
+    FMG "Ha, maaaybe."
+    MC "Heh, but seriously, I was curious. I wanted to check it out after overhearing some students talk about it. I didn’t expect it to be so... big."
     show FMG happy
-    FMG "And here I was thinking you were here to check me out."
-    "The way she said that sounded she was joking, but I just found it kinda awkward, still it would be a bit rude not to give some sort of reply."
-    "My only response was a light chuckle and then silence. We stood there for about 30 seconds till I spoke up."
-    MC "So Akira... How are you holding up?"
+    FMG "And here I was thinking you were just here to check me out."
+    "The way she said that sounded like she was joking, but I just found it kinda awkward."
+    show FMG neutral
+    FMG "Heh, but yeah, the size of this place is {i}unreal{/i}."
+    MC "Y-Yeah, it {i}is{/i} unreal. I didn’t think the school had anything like this."
+    pause .5
+    MC "Sooo, how are you holding up?"
     show FMG neutral
     FMG "Huh, what do you mean?"
-    MC "Well, I mean that we're going have these 'growths' affect the rest of our lives, so what I'm asking is how you're taking this?"
+    MC "I don’t know how to put this... but like with these \"growths\" happening to us. Uh, how do you think you’ll manage?"
     show FMG happy
-    FMG "Oh, in that case, I'm fine with it."
+    FMG "Oh, in that case, I'm cool with it."
     MC "Huh, really?"
     show FMG neutral
-    FMG "Yeah, I don't know if I will grow or not but if I do, I accept it with open arms."
-    MC "You don't know you're going to grow?"
-    FMG "Well I mean compared to people like your boob friend or Shiori Buttsumoto, I'd think I look normal enough."
-    MC "Well, you are a bit muscular."
+    FMG "Yeah, I don't know if I will grow or not, but if I do, I accept it with open arms."
+    MC "You don't know if you’re going to grow?"
+    FMG "Well I mean compared to people like your boobie friend or Shiori Buttsumoto, I think I look normal enough."
+    MC "Well, you are a {i}little{/i} muscular."
     FMG "Yeah. But not overly."
-    "She proceed to put her hand under her chin and push her head to left side, causing a series of loud cracking from her neck. She repeated this process with the right before continuing."
-    show FMG happy with dissolve
-    FMG "I may work out almost every day, but it's not my entire life, just 80%%."
-    show FMG neutral with dissolve
-    FMG "So yeah, just call it a hunch. What about you?"
-    MC "Well, I don't feel any different but I am kinda worried about my sis-"
-    "I didn't get to finish my sentence when Akira looked at a nearby clock and interrupted me."
+    show FMG flex
+    FMG "I may work out almost every day, but it's not my entire life, just like... eighty percent."
+    show FMG neutral
+    MC "Gotcha, gotcha. The whole situation is a bit... jarring, I guess? I don’t know how to put it. What happens if I end up with big hands? I don’t want that for the rest of my life."
     show FMG sad
-    FMG "Ah crap! It's 5:35! I'm five minutes late for my routine!"
+    FMG "I feel that. If I was told I’d constantly get fatter..."
+    MC "For real, I-"
+    "I didn't get the chance to finish my sentence when Akira looked at a nearby clock and interrupted me."
+    show FMG surprised
+    FMG "Ah crap! It's five! I'm falling behind in routine!"
+    FMG "Sorry, Keisuke. We’ll talk later. I have to do some leg presses before class!"
     hide FMG with dissolve
-    "She said while running past me to the door."
-    MC "Wait, huh?"
-    "Was all I could say in flustered state. Akira then turned around, jogging in one spot for a brief moment."
-    show FMG sad with dissolve
-    FMG "Sorry! I have to go now, if you want to talk you can find me here whenever there's no classes or at the local gym, later!"
+    "She sprinted past me, almost knocking me back with force as she ran off to do her thing.."
+    MC "Oh... okay... sure..."
+    "Was all I could say in a flustered state. Akira quickly turned around, jogging in one spot for a brief moment."
+    show FMG neutral with dissolve
+    FMG "It was great talking to you! We’ll run into each other again, I’m sure."
     hide FMG with dissolve
-    "And in a flash, Akira proceeded to sprint out the door, leaving me in the same spot, still a bit confused."
-    MC "Well that happened."
-    "With that I left the building."
+    "And without another word, Akira proceeded to jog towards the other machines, leaving me in the same spot, still a bit confused."
+    MC "Well, that was something. She seems cool though."
+    "I gathered my things and headed towards the gym doors, wondering where my next encounter with Akira might end up."
     jump daymenu
 
 label FMG002:
     $setProgress("FMG", "FMG003")
-    scene Gym with fade
+    scene Hallway with fade
     play music Busy
-    "With class over I decided to take a shortcut through the Athletics Area."
-    "I'd expected to see Akira coming out of the building, what I didn't expect to see was her looking very tired."
-    "I figured she must need some cheering up so I went to go talk to her."
-    MC "Hey Akira, what's up?"
-    "Her facial response was that of slight confusion and following that annoyance."
-    show FMG angry with dissolve
-    FMG "Ugh, what do you want Keisuke?!"
-    "I was honestly taken aback by Akira's response, but in hindsight with how tired she looked, I probably should have expected this."
-    "Her face slowly softened from a face of annoyance to one of regret."
-    show FMG sad
-    FMG "*Sigh* ...Look, I'm sorry, I just get frustrated sometimes."
-    "She apologized, for the most part she did look apologetic but she still looked physically tired, if not mentally."
-    MC "Um, is everything all right?"
-    "She took a deep breath before answering."
-    FMG "Not really, I went too hard on the treadmill and now I'm too tired to do the rest of my routine."
-    MC "Really, how?"
-    FMG "I thought if I did twice the speed I normally go I'd get it done in half the time."
-    "She paused before continuing."
-    FMG "For the most part it worked, but I forgot about the side effect of going past your limit."
-    MC "I mean, isn't that the goal to push yourself?"
-    FMG "Yeah, but the point of it is to PUSH your limit, not fricking PASS it to the point of exhaustion."
-    FMG "Trust me, it's not healthy to do that, the body can only take so much exercise before needing to repair muscle. If you keep doing it with no breaks, you're doing more harm than good."
-    MC "Well that sucks, what are you going to do now?"
-    FMG "I'm going to bed, I need to let my muscles heal. So if it's all the same, I'll be leaving."
-    MC "Ok then, bye."
-    FMG "...Yeah, later."
-    hide FMG with dissolve
-    "I was about to make my leave, when I heard Akira call out my name."
+    "With classes over for the day, I figured I'd head to the cafeteria to grab a bite to eat before trying to make an attempt at knocking out some homework."
+    MCT "Math. One of the worst parts about school, right next to those teachers whose presentations don't have any notes on them."
+    "While I was walking through the halls, I spotted Akira looking out the window watching the birds fly by."
+    MC "Yo! What's up?"
     show FMG neutral with dissolve
-    FMG "Um... Thanks for caring enough to ask."
-    MC "You're welcome Akira."
-    "With that we went our separate ways."
+    FMG "Oh! Hey, Keisuke! Didn't see you there."
+    MC "No worries. I uh, didn't take you much for a bird watcher."
+    FMG "Nah, I'm not. It's beautiful outside, the sun is shining and I can't even enjoy it since I'm stuck with two more classes."
+    MC "You don't have any free periods?"
+    show FMG flex
+    FMG "I do. Buuuut I use mine to pump some iron, heh."
+    show FMG neutral
+    extend " It's a mistake on my part. I was worried I wouldn't get my routine in today and hurried over to the gym as quickly as I could."
+    FMG "Enough about me. What have you been up to?"
+    MC "Well, I finished my classes. I planned on hitting up the cafeteria for some food and {i}attempt{/i} to do some homework."
+    MC "Just starting here and I'm already in no mood to do math, hahaha."
+    show FMG happy
+    FMG "Facts. I freaking hate math. When they started adding letters I was over it, ha."
+    MC "Honestly, relatable."
+    show FMG neutral
+    FMG "Question for you. What's your favorite subject to learn about? Doesn't have to be something you learn in school."
+    MC "Hm... maybe mythology? Learning about Gods and deities is pretty sweet."
+    FMG "I wouldn't have taken you for a mythos dude, personally."
+    MC "It's a tough one cause I enjoy a lot of subjects. Architecture is the big one. It's what I wanted to go to school for..."
+    FMG "When you go building big mansions, I expect an invite."
+    MC "Yeah? You're into that sort of stuff? Cause now that's something I wouldn't have expected."
+    show FMG happy
+    FMG "Me? Nah, haha. I'd be open to trying it though. Gets me outside and keeps me active so it can't hurt."
+    MC "I'm holding you to that. So don't try dropping out when the time comes."
+    FMG "I won't, scouts honor."
+    MC "Mhmm. Alright, let's hear yours."
+    show FMG neutral
+    FMG "Hm...?"
+    pause .5
+    show FMG happy
+    FMG "Right. My favorite subjects, duh. Totally forgot cause you kept talking."
+    MC "Hey, you kept asking questions."
+    FMG "Yeah, yeah... sure."
+    show FMG neutral
+    FMG "Okay... my favorite subject. I could be boring and obvious by saying fitness and exercise. Gotta spice it up though."
+    pause .25
+    show FMG happy
+    FMG "Got it! History... to some extent. I'm not crazy about it but I'm seriously trying to improve."
+    MC "How so?"
+    show FMG neutral
+    FMG "From what I found on the internet, one person suggested sleeping with the book under your bed. That one was a bit weird for my taste so I haven't tried it."
+    FMG "I'm still looking for some way to help me remember stuff since most of them are either weird or straight up haven't worked."
+    MC "Such as?"
+    FMG "This one forum I found said to try drawing out the historical figures. One, I can't draw, and two, that would require a little too much work."
+    MC "If you need help trying things out let me know. I'll do my best to make time."
+    FMG "I wouldn't worry about it. But I do appreciate the offer."
+    "Akira pulled out her phone to check the time. maybe I'm just that good at guessing, but given the sad look she had on her face, it was time for her to go."
+    show FMG sad
+    FMG "Man..."
+    show FMG neutral
+    FMG "Sorry, Keisuke, I gotta head to my next class. I'll see you around though. Good luck with your math homework, dude."
+    MC "Wouldn't want you to be late. I'm sure we'll run into each other sooner or later. Take it easy, Akira."
+    FMG "Thanks man, you too. Later!"
+    "She threw her backpack over her shoulder and took off towards her next class."
+    MCT "Damn, she moves fast. Not really a surprise there... She's pretty cool, to be honest. Hopefully, I'll run into her again. I want to get to know her better."
+    pause .25
+    MCT "I'm praying the lunch ladies are still serving breakfast, I could seriously go for some miso soup. Sucks, Akira couldn't join me though. Didn't even get the chance to ask..."
+    MCT "Slow your roll, Kei. Don't go getting any crazy thoughts, you barely know her."
+    "And with that, I gathered up my things and headed towards salvation and easy math problems... maybe"
     jump daymenu
 
 label FMG003:
@@ -1787,6 +1826,7 @@ label FMG016:
     MCT "Welp, I'll be honest I didn't see that coming."
     FMG "And what does that mean?"
     hide cg with dissolve
+    play music Rivalry
     show Natsuko neutral
     Natsuko "If you really must know, it's well...how do I put this nicely."
     Natsuko "Pretty much everything about you is so...unladylike. Your unbuttoned shirt, that mop you call hair. You are a slob."
@@ -1855,8 +1895,8 @@ label FMG016:
     show Natsuko happy
     Natsuko "Goodbye, for now, I'll see you later Keisuke-san. Don't be afraid to call me."
     MCT "I don't even have your number. What...?"
-    hide Natsuko with dissolve
     "She winked at me, then jogged towards the lockers."
+    hide Natsuko with dissolve
     MCT "I don't think I've ever been more confused in my entire life."
     MC "Listen, I know you're mad about this but seriously don't let it get to you. This girl isn't important."
     show FMG sad at altMove(0.5, 0.5)
@@ -1870,7 +1910,7 @@ label FMG016:
     FMG "Yeah, food sounds really good right now."
     show FMG sad
     FMG "I don't have my wallet by the way."
-    MC "Of course you don't..."
+    MC "Of course, you don't..."
     jump daymenu
 
 label FMG017:
@@ -2313,6 +2353,7 @@ label FMG019:
     jump daymenu
 
 label FMG020:
+    $setTimeFlag("XX20")
     $setTime(TimeEnum.NIGHT)
     $setProgress("FMG", "FMG021")
     scene Campus Center with fade #night
@@ -3931,6 +3972,7 @@ label FMG028:
     "Akira jogged over to greet me, her cheerful expression quickly becoming one of anger and disgust."
     show Natsuko happy at altMove(0.5, 0.25) with None
     show FMG angry-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    play music Rivalry
     FMG "So I see you've taken to bothering my friends in your free time now. Don't you have anything better to do? Back off or else."
     show Natsuko neutral
     Natsuko "You want to threaten me? Ha, I knew you were stupid, but clearly you have more brain damage than I thought."
@@ -9099,6 +9141,7 @@ label FMG056:
     "This thing had two pads for their elbows to rest, a crossbar that indicated a pin, and handles on either side."
     "Being able to hold on to those handles with the opposite hand lets people really torque their whole bodies into it."
     "The thing had a metal frame, but it looked pretty chincy compared to the two hulking titans that had to hunch their shoulders slightly just to fit on the thing in order to square up with each other."
+    play music Rivalry
     Natsuko "The rules are simple. Any part of your arm makes contact with the crossbar on your side, you lose. Wrists have to be straight when we lock hands at the start."
     FMG "Yeah, yeah, I know. Don't cry when I win."
     Natsuko "In your dreams."
@@ -9407,6 +9450,7 @@ label FMG058:
     "Nat had overheard our conversation and stomped over towards us... probably in some poorly worded attempt to save face."
     show FMG neutral at altMove(0.5, 0.75)
     show Natsuko neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    play music Rivalry
     Natsuko "Excuse me, but you weren't {i}coaching{/i} me. We were practicing together. You know as well as I do that your quarter turn needs a lot of work."
     MCT "Called it."
     FMG "I'm sorry, but my side chest runs circles around yours, and you know it."

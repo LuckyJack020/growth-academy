@@ -141,12 +141,12 @@ init python:
         ATHLETICSOFTBALL = "athletic-softball"
         BEND = "bend"
         CASUAL = "casual"
+        CASUAL2 = "casual-2"
         SWIM = "swim"
         SWIMSUIT = "swimsuit"
         COW = "cow"
         PAJAMAS = "pajamas"
         RIPPED = "ripped"
-        SICK = "sick"
         SUMEXT = "summer-exterior"
         SUMEXTSG = "summer-exterior-sunglasses"
         SUMINT = "summer-interior"
@@ -699,12 +699,12 @@ init python:
 
     def setWGOutfit(o):
         global WGOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SICK or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL or o == OutfitEnum.CASUAL2 or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT or o == OutfitEnum.SUMINT or o == OutfitEnum.SUMEXT or o == OutfitEnum.SUMINTSG or o == OutfitEnum.SUMEXTSG:
             WGOutfit = o
 
     def setTakoOutfit(o):
         global TakoOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.NOHAT:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL or o == OutfitEnum.NOHAT:
             TakoOutfit = o
 
     def setTomoOutfit(o):
@@ -716,6 +716,11 @@ init python:
         global NatsOutfit
         if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.SWIM or o == OutfitEnum.SWIMSUIT:
             NatsOutfit = o
+
+    def setRyokoOutfit(o):
+        global RyokoOutfit
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.CASUAL:
+            RyokoOutfit = o
 
     #Edge case handler for Aida's initial pregnancy
     def setPregnant():
@@ -795,6 +800,7 @@ label start:
         TakoOutfit = OutfitEnum.DEFAULT
         TomoOutfit = OutfitEnum.DEFAULT
         NatsOutfit = OutfitEnum.DEFAULT
+        RyokoOutfit = OutfitEnum.DEFAULT
         flags = []
         vars = {}
         eventchoices = []

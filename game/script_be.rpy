@@ -76,7 +76,7 @@ label BE001_c2:
     show BE angry
     BE "Eh, I don't care about that. I doubt I'll care here, either, if everyone's got a chance of getting giant knockers, too.{w} Besides, big breasts, well, they kind of seem like the most normal thing I could get, right? I've heard of models or actresses with oddly-sized boobs in the past, so it's not that unusual."
     MC "Hm, guess you've got a good point. You're already used to big boobs, anyway."
-    show cg BE001
+    show cg BE001 with dissolve
     pause 0.5
     hide cg
     show BE happy at center
@@ -2382,6 +2382,7 @@ label BE019_c1_after:
     jump daymenu
 
 label BE020:
+    $setTimeFlag("XX20")
     $setProgress("BE", "BE021")
     scene Campus Center with fade
     "Classes were over for the day, thankfully. Today's lessons hadn't been hard, necessarily. But they'd been mentally draining. The dining hall for dinner wouldn't open up for another hour or two, so I pondered over what I could do in the interim."
@@ -6216,7 +6217,7 @@ label BE034:
 
 label BE034_cooking:
     $setProgress("BE", "BE035A")
-    $setFlag("HONOKA_COOKING")
+    $setFlag("BE_COOKING")
     $setVar("BEFeminine", getVar("BEFeminine") + 2)
     MC "I think you should join the cooking club."
     BE "Oh? Heh, how come?"
@@ -6260,7 +6261,7 @@ label BE034_cooking:
 
 label BE034_softball:
     $setProgress("BE", "BE035B")
-    $setFlag("HONOKA_SOFTBALL")
+    $setFlag("BE_SOFTBALL")
     $setVar("BETomboy", getVar("BETomboy") + 2)
     MC "I think you should join the softball club."
     show BE neutral
@@ -6312,9 +6313,9 @@ label BE034_end:
 
 
 label BE035:
-    if getFlag("HONOKA_COOKING"):
+    if getFlag("BE_COOKING"):
         jump BE035A
-    elif getFlag("HONOKA_SOFTBALL"):
+    elif getFlag("BE_SOFTBALL"):
         jump BE035B
 
 label BE035A:
@@ -6505,6 +6506,9 @@ label BE035B:
     #SFX: Whistle
     Naoki "All right, everyone. Huddle up, huddle up."
     "The assembled members approached a young man with three whistles around his neck. We joined with the others."
+    if isEventCleared("MC006"):
+        MCT "Huh, he looks sort of familiar."
+        MCT "Ah! Right, that's Naoki-sensei. I remember him, he was helping run that handball game we played earlier in the school year."
     Naoki "Okay. Here's the deal. I've got a wicked headache today, so I don't want to hear any bellyaching because it's gonna drive me crazy. Our next match is scheduled in two days, so spend this time brushing up on your catching and throwing."
     Naoki "We've got three batting stations reserved. So if you see one is empty, just go for it with your partner. Try not to hog it. Collect your balls when you're done. We don't wanna leave a mess anywhere."
     Naoki "Any questions? Good. Get out there, have fun."
@@ -6874,9 +6878,9 @@ label BE036_after:
     jump daymenu
 
 label BE037:
-    if getFlag("HONOKA_COOKING"):
+    if getFlag("BE_COOKING"):
         $setProgress("BE", "BE038A")
-    elif getFlag("HONOKA_SOFTBALL"):
+    elif getFlag("BE_SOFTBALL"):
         $setProgress("BE", "BE038B")
     scene Lake Road
     show BE happy
@@ -6989,7 +6993,7 @@ label BE037:
     jump daymenu
 
 label BE038:
-    if getFlag("HONOKA_COOKING"):
+    if getFlag("BE_COOKING"):
         jump BE038A
     else:
         jump BE038B
@@ -7298,7 +7302,7 @@ label BE039:
     jump daymenu
 
 label BE041:
-    if getFlag("HONOKA_COOKING"):
+    if getFlag("BE_COOKING"):
         jump BE041A
     else:
         jump BE041B
@@ -8083,6 +8087,446 @@ label BE043:
     jump daymenu
 
 label BE044:
+    $setProgress("BE", "BE045")
+    scene School Front with fade
+    play music Busy
+    $setBEOutfit(OutfitEnum.CASUAL)
+    MCT "Finally. The promised day."
+    "It's been a few days since Honoka and I went swimsuit shopping. After yesterday's... cleanup job, Honoka reminded me about the beach trip."
+    "Honoka and I had just gotten off the phone with each other, agreeing to meet up at the bus stop."
+    show BE happy with dissolve
+    BE "Kei-chan, I'm so excited! I haven't been to the beach in ages!"
+    MC "I haven't been to the beach lately either. I've really been itching to go for a swim!"
+    MCT "Though... I haven't had this absorbent mop on my head the last few times."
+    BE "I'm bringing all the essentials for a fun day at the beach!"
+    "Honoka set her heavy tote bag onto the ground while pulling out various objects."
+    BE "I've got a beach ball-"
+    MCT "Oh great. She's probably going to make me blow that up once we get there..."
+    BE "I've got some shovels and pails for building sand castles..."
+    MC "What are we, children?"
+    show BE neutral
+    BE "No, but I haven't built a sand castle in ages— let me have this."
+    MC "Fair enough. I brought a blanket and a towel like you asked, by the way."
+    BE "Perfect! Because I made us some lunch for when we get there too!"
+    MC "Aw, you didn't have to do that! I was thinking we'd just grab something to eat while we were out."
+    BE "To be honest, I was so excited for today that I ended up waking up a little earlier than usual."
+    show BE happy
+    BE "So with that extra time, I made us a couple bento boxes!"
+    MCT "That's just like her. So excited, she couldn't sleep."
+    if getFlag("BE_COOKING"):
+        BE "Yep! I fried some rice with some leftover chicken pieces, and made a little salad, some grilled fish and some cookies!"
+        MC "That sounds excellent. You made all that just today?"
+        BE "Hey, I learn from my experiences and the cooking club was big on not being wasteful."
+    else:
+        BE "I mean they're not much, but, hey, I figured some hot dog pieces always go well at the beach, and there's some snack cakes in here too, hehehe."
+    MC "Honestly, it's been a bit since I've had a home cooked meal. So I really appreciate the gesture."
+    BE "Of course!"
+    BE "Lastly, I made sure to pack the most important thing for a long sunny day at the beach..."
+    pause .25
+    MC "That being...?"
+    show BE embarrassed
+    BE "Ooh, not yet! That's a surprise for later."
+    MCT "W-What kind of surprise??"
+    show BE happy
+    BE "My swimsuit!"
+    MC "Thank god you didn't forget that."
+    BE "{i}Pffft.{/i} You would say that, Kei-chan. How could I forget something you so purposefully picked out for me!"
+    BE "I haven't even worn it since we went out and bought it! I wanted to make sure you really had something to look forward to when we went to the beach."
+    MC "I uh..."
+    show BE wink
+    pause .75
+    MC "A-Anyway, are we all ready to go? You didn't forget anything did you?"
+    show BE neutral
+    BE "Nope! Should be all good to go! And right on time too, I see the bus pulling up!"
+    MC "Okay, let's go to the beach!"
+    play music BrightLights
+    scene black with fade
+    pause 1
+
+    scene Bus Interior with fade
+    "Honoka and I boarded the bus and found some seats closer to the back."
+    "I couldn't tell if Honoka's constant movement was because of the bus hitting so many bumps, or if she was vibrating in her seat from sheer excitement alone."
+    show BE happy
+    BE "I'm just so excited, Kei-chan! I have so many things I want to do when we get there!"
+    BE "Do you think there's going to be a lot of people there?"
+    pause .25
+    show BE happy at Transform(xzoom=-1)
+    BE "Do you think we'll see anyone we know?"
+    pause .25
+    show BE happy at Transform(xzoom=1)
+    BE "What should we do first?!"
+    "I took Honoka's hand in mine and squeezed a little bit to get her attention."
+    MC "Slow down, Honoka! Come back to Earth. We still have to get there first."
+    show BE embarrassed
+    BE "Ah, sorry hehe. I, uh... got a little carried away."
+    MC "That's okay. I think that going for a walk on the beach would be pretty fun first. We need to find ourselves a good spot after all."
+    show BE neutral
+    BE "Remember last time we went? We tried so hard to find a ‘secret spot' where there weren't so many people-"
+    MC "And after we finally found one with a huge boulder we could climb on, we decided to pretend it was a watchtower-"
+    BE "Because we just finished watching an anime episode about a guy with a pompadour fighting some other guy on a huge tower!"
+    MC "Man... that was a fun day."
+    BE "Yeah, it really was..."
+    "Honoka leaned her head onto my shoulder as we sat together and reminisced about that day at the beach many years ago."
+    BE "Kei-chan?"
+    MC "Hmm?"
+    show BE happy
+    BE "I'm really glad to be going with you again."
+    MC "Me too."
+    scene black with fade
+    pause 1
+
+    scene Beach
+    show BE happy
+    with fade
+    BE "IT'S THE BEACH!"
+    "Honoka charged off the bus as soon as it stopped and ran towards the sand."
+    "Our stop was in Beachside Village. We crossed a long road with shops and went towards the shore."
+    MCT "Thankfully, we picked a day where we had the beach entirely to ourselves."
+    "Although we couldn't reenact that beach day from long ago, there was something really appealing about having a whole beach to myself and my girlfriend."
+    BE "This sand is so soft too!"
+    MC "It really is. And there's some bathrooms nearby as well."
+    BE "Oh, speaking of that..."
+    show BE aroused
+    pause .75
+    BE "I've gotta go get my swimsuit onnn~"
+    MCT "Be strong, Keisuke."
+    MC "O-Oh okay!"
+    MCT "Smooth."
+    show BE happy
+    BE "Hehe. You can have another try, Kei-chan."
+    MC "A-Ahem. Y-You go do that. I have my swimsuit on under my clothes, so it's easy for me."
+    MC "I'll set up the blanket while you get changed."
+    show BE seductive
+    BE "Thanks! I'll be right back~"
+    hide BE with dissolve
+    "Honoka trotted off towards the bathroom with a slightly off-balanced skip in her step."
+    MCT "Calm down, Keisuke. It's still the same Honoka you know. You've seen her topless before. You got this! It's just a swimsuit."
+    pause .5
+    MCT "That she wanted {i}you{/i} to pick out. Specifically for her. And she wants only {i}you{/i} to see."
+    MCT "Stop thinking about it and just play it cool. Like you always do."
+    "Disregard the fact that I lost my cool just a few minutes ago."
+    MCT "Just focus on setting everything up."
+    "I took a deep breath."
+    MCT "Focus on the blanket..."
+    "I went ahead and got the blanket all set up. I took each corner and made sure it was straight, then brushed the excess sand off."
+    MCT "Okay... next, my stuff."
+    "I moved to my own supplies and started laying them out."
+    "{i}Psh psh psh...{/i}"
+    MCT "That's... sandy footsteps."
+    scene black
+    "My vision went forcibly black as something covered my eyes."
+    MCT "Ech?!"
+    "And two large, yet soft things spread out as they pressed onto my bare back."
+    BE "Guess whooo~"
+    MC "Hmm... I wonder who it could be...?"
+    BE "Okay, Kei-chan before you turn around I have to let you know that I made a {i}bit{/i} of a miscalculation..."
+    MC "Hmm? How so?"
+    BE "I {i}probably{/i} should have tried it on at least once before we got here. It's ahhh..."
+    BE "... Let's just say she's a little tighter than she was at the store."
+    MCT "Eugh..."
+    MCT "Be strong, Keisuke."
+    BE "But the bottoms are okay!"
+    MCT "Be strong, Keisuke...! Think about something calm. Like... ah... magazines. Or... combing my hair."
+    MCT "Anything. Anything else."
+    MC "I'm sure you look beautiful as always, Honoka. Can I have my sight back now?"
+    BE "You charmer. {w}Okay, I'm letting go now."
+    MCT "You can do this."
+    "My sight returned and I slowly turned around towards Honoka."
+    $setBEOutfit(OutfitEnum.SWIMSUIT)
+
+    scene Beach
+    show BE happy
+    with fade
+    pause .75
+    BE "Ta-daaa!"
+    pause .5
+    MC "... Holy."
+    pause .5
+    show BE aroused
+    BE "You can use your words, you know~"
+    MC "I uh.... You look..."
+    "What the hell could I say?"
+    "Every nerve in my body was firing all at once. I felt like my eyes were popping out of my head like a Saturday morning cartoon character."
+    "Honoka's bright grin could steal any show, but the minute I looked down..."
+    "A swirling sea of excited anxiety, complete lustful disbelief, and total enamorment was all that came to mind."
+    "There was something about seeing her chest in her shirt. Something that almost made it hard to believe that... {w}they were {i}that{/i} big."
+    "But, in a swimsuit like this... all guessing games were off."
+    "Honoka did a little 360, and she put her hands at her side, showing off her entire ensemble."
+    BE "I know it's not really the crowd pleaser, but I can't help but think that my butt looks {i}great{/i} in this~"
+    MC "Well uh... I..."
+    MC "T-That is ah..."
+    BE "Oh, come onnnnn, Kei-chan!"
+    "Honoka put both hands on my shoulders and pressed her chest against mine."
+    play sound Boing
+    BE "... Boop~"
+    "She let out a small giggle, then raised her eyebrows a bit."
+    show BE unique
+    BE "Don't you like it?"
+    MC "O-Of course I do!"
+    MC "I just... wow..."
+    MC "It's... I don't have the words for it..."
+    show BE happy
+    BE "I know! Water! He needs water!"
+    "Honoka took off as fast as she could without sending herself careening into the sand with her hand around my wrist."
+    MC "Baugh?! H-Hey!"
+    BE "We can't wait, Kei-chan! Water will clear your head!"
+    "I dropped my bag to the sand as she plowed ahead to the water."
+    pause .25
+    "{i}SPLOOOSH!!{/i}"
+    pause .5
+    "At the last second, Honoka yanked me ahead, then tackled me into the water alongside her, fast enough that I didn't even have time to think about the slightly chilly water hitting...{w} that spot."
+    "I managed to wriggle myself free of her tit-tonic grasp, and wrestled my way to the surface."
+    MC "Ach! Hah... baach..."
+    "Honoka came to the surface and threw her head back, sending her hair falling back around her neck."
+    BE "There! That better?"
+    MC "Hah... you're dead!"
+    "I launched myself at her."
+    BE "KEI-CHAN!!"
+    "I laughed as I caught her and dunked her head under the water."
+    MCT "Lucky for me that she's becoming a larger target with each passing day."
+    BE "Bwah! Phew, that was refreshing, don't you think? So how ya doing? Head clear?"
+    MC "Very clear. Thank you. Now my hair's all wet. This is gonna take forever to dry off!"
+    BE "Well it's a good thing that we're going to be here for a while! Now, let's dry off for a second, I forgot something."
+    MC "Okay."
+    "Honoka and I got out of the water and toweled ourselves off."
+    pause .3
+    BE "I gotta put sunscreen on!"
+    MC "Actually that's something I forgot too. I brought my own bottle though, just didn't have a chance to use it yet."
+    show BE seductive
+    BE "Well... I'll get your back if you get mine~"
+    MC "S-Sure."
+    "I walked over to my bag (which now had quite a bit of sand inside) to grab my bottle of sunscreen, and slathered it over my skin."
+    MCT "Alright here, make sure it doesn't get in my hair... aaand done."
+    "Walking back over to Honoka, Honoka made sure there weren't any watchers at the beach before actually starting to apply her sunscreen."
+    "She was able to get her face, stomach, and arms just fine. However, she struggled a bit with reaching parts of her thighs. Reaching her lap has clearly gotten harder for her, but after a bit she was able to finish."
+    "Honoka then made eye contact with me, realizing I had finished before her."
+    BE "Hehe, I have a lot more surface area than you do, Kei-chan."
+    MC "You're not wrong."
+    BE "Think you could help me get those hard to reach areas?"
+    MC "Your back? Sure. Just lay down."
+    show BE aroused
+    BE "Feel free to get to any other areas that I haven't gotten to just yet."
+    MCT "What's that supposed to ..."
+    BE "Oof. Make this quick, Kei-chan. They may look soft like pillows, but this is not the most comfortable."
+    "Honoka laid as much as she could on her front causing her chest to smush around her torso."
+    "As I began rubbing the cream onto Honoka's lower back, right above her butt, I thought about what she meant by ‘areas she hasn't reached yet'."
+    "I went higher and finished off her back, I looked over her body for any areas that aren't shining with sunscreen, when I found the two huge culprits."
+    "Honoka looked over her shoulder, giving me a sultry glance."
+    show BE unique
+    BE "Job's not done yet, Kei-chan..."
+    MCT "Of course, she avoided her chest."
+    MC "A-Ah. I see. I'll uh... get that solved."
+    BE "Be gentle, okay?"
+    show BE aroused
+    "My hands shook as I reached up Honoka's body towards her sideboob."
+    MCT "I've felt them a countless amount of times at this point, but this might be the first time I'll be touching the skin directly."
+    "I don't know what I was waiting for, I already got an invitation. I didn't need another cold dunk in the water to clear my head."
+    "I went for it. Just... slow at first, to ease myself into it. I gently started rubbing Honoka's left breast with both hands."
+    "Honoka tried to hold back a moan to herself, but let one slip out."
+    BE "Mmmghhah-"
+    BE "Ch-Chilly."
+    "The feeling of her uncovered boob was way different from when she was clothed."
+    "Her skin was super soft, and reacted to my every movement with a slight jiggle."
+    "The sunscreen itself wasn't doing me any solids, either, and it made my hands almost slip across her skin, acting as a natural lubricant all too eager to get me into trouble."
+    pause .5
+    show BE wink
+    BE "So... how's your day going?"
+    MC "This is the best day at the beach I've ever had."
+    BE "You goof. We haven't even done anything yet!"
+    pause .25
+    show BE aroused
+    BE "Make sure you get the other one, too. She's feeling left out~"
+    MCT "God! All that time and I only got one of them done."
+    "I slid over to the other... girl, and got to work."
+    "It was amazing to me that, by the time I was around a breast and a half in, I could feel the bottle in my hand was noticeably lighter."
+    MCT "How long does it take her to shower in the morning?"
+    "Honoka lifted herself off her stomach after having her sunscreen finally applied."
+    BE "Mnngh..."
+    "She was on all fours, with her legs and backside up, as if doing some hyper exaggerated yoga pose."
+    "Her boobs lay on the ground, with her arms stretched over them and into the sand."
+    show BE neutral
+    BE "Kei-chan? Could I uh... bother you for a hand?"
+    MC "Oh, yeah. I gotcha."
+    "I walked to her front and crouched, so I could take her hand as close as I could to the ground."
+    BE "Alright, here we go... {w}agh!"
+    "Honoka pushed against me as I lifted up with her, and we got her standing upright."
+    BE "Phew! Thanks, Kei-chan."
+    show BE unique
+    BE "But, don't forget the rest! You have more to dooo~"
+    MC "Honoka, my sweet. Normally I would leap on this chance. But my brain is overheating as it is, and I need a bit of time to cool my head, or else I won't be able to stop myself. So I'll be returning to the ocean. Goodbye."
+    "Not leaving Honoka any time to sway me any further, I turned around and sprinted into the ocean."
+    BE "Hahaha! I was joking anyway! I already did the rest-"
+    show BE surprised
+    pause .25
+    BE "Hey! Wait for me, Kei-chan!"
+    "Honoka hustled after me and dove into the ocean. She rose up to the surface, but I had a bit of a plan this time."
+    MCT "Honoka's been messing with me this whole beach trip. It's time for a little payback."
+    show BE doubt
+    BE "Kei-chan? Where'd you go?"
+    "Honoka looked around above the surface looking for me, but I was underwater right under her chest, planning an angle of attack."
+    MCT "She's got a built in blind spot, and she can't even tell where I am. The question is..."
+    MCT "How am I getting back at her?"
+    menu:
+        "Poke her in the tummy":
+            jump BE044_C1_1
+        "Tickle her underboob":
+            jump BE044_C2_1
+        "Lift her out of the water":
+            jump BE044_C3_1
+
+label BE044_C1_1:
+    MCT "She's always been pretty ticklish in the tummy."
+    "I swam a little closer to Honoka's torso, taking advantage of her blind spot."
+    MCT "Huh. I didn't realize she had straps going across her stomach. I couldn't see them with her chest in the way."
+    show BE sad
+    BE "Seriously Kei-chan, where are you? I'm getting worried."
+    MCT "Okay. She's sufficiently scared. Now for the cherry on top."
+    "I reached forward and poked Honoka right above her belly button."
+    MCT "Boop."
+    show BE happy
+    BE "Gya! Hahaha Kei-chan!"
+    "I swam back to the surface while Honoka continued her laughing fit."
+    MC "Gotcha."
+    show BE angry
+    BE "No fair, Kei-chan! You can't use my blindspot against me!"
+    MC "You're talking to someone who has a literal curtain of hair growing out of his scalp every day."
+    show BE neutral
+    BE "..."
+    $setAffection("BE", 1)
+    show BE happy
+    BE "You win this round."
+    jump BE044_after
+
+label BE044_C2_1:
+    MCT "She's been shoving those things at me all day today. I'm sure she wouldn't mind one more little touch."
+    show BE sad
+    BE "Seriously Kei-chan, where are you? I'm getting worried..."
+    MCT "Alright, let's not give her a heart attack. Here we go..."
+    "I steeled myself for my decision, and went for it."
+    MCT "Coochie-coo!"
+    "I went for her exposed underboob and wriggled my fingers lightly under her skin"
+    BE "Where did he-"
+    pause .5
+    show BE surprised
+    pause .5
+    show BE happy
+    "{i}HYAAA!{/i}! Hahaha! Kei-channn! Nonono! STAAAAHAHAHAAAAAHP!"
+    $setAffection("BE", 2)
+    "Satisfied with my work, I swam out from under the topside shelf, an impish grin plastered across my face."
+    BE "Hah... heh... the girls don't like tickles in that spot!"
+    MCT "Mission Accomplished."
+    jump BE044_after
+
+label BE044_C3_1:
+    MCT "She definitely won't see this coming. She's going for a ride."
+    show BE sad
+    BE "Seriously Kei-chan, where are you? I'm getting worried..."
+    "I swam under Honoka's landmasses and prepared myself for lifting her upwards."
+    MCT "Okay...no time to second guess myself.  Upsie-daisy!"
+    if getSkill("Athletics") < 7:
+        "...Or at least, I thought it would be that easy."
+        "I wrapped my arms around Honoka's thighs and tried lifting her upward."
+        show BE surprised-2
+        BE "Whoa! Kei-chan??"
+        "Except...she isn't rising."
+        MCT "This...isn't as easy as I thought it would be."
+        show BE doubt
+        BE "Kei-chan...these things aren't filled with air, you know."
+        "I strained a little harder, but even considering how... {i}buoyant{/i} Honoka is, she just wasn't moving."
+        MCT "Let me just stop before I embarrass myself anymore than I already have."
+        "I released Honoka and rose up to the surface."
+        show BE angry
+        BE "You tried."
+        $setAffection("BE", -2)
+        MC "...I tried."
+        jump BE044_after
+    if getSkill("Athletics") >= 7:
+        "I wrapped my arms around Honoka's thighs and tried lifting her upward."
+        show BE surprised-2
+        BE "W-Whoa! Kei-chan??"
+        "I strained my muscles a little harder and lifted Honoka upwards, finding her much heavier than I initially thought."
+        MCT "Jeez! I know it's obvious how top-heavy she is, but she's literally top-{i}HEAVY{/i}. I can't keep raising her upwards without danger of her falling."
+        show BE doubt
+        BE "H-Hey! Put me back down before you hurt yourself!"
+        "I decided to lower her back down. And rose back up to the surface taking a huge breath of air."
+        MC "Haaaah! Phew! What'd you think of that?"
+        show BE angry
+        BE "Kei-chan, that was really dangerous. What if you'd gotten hurt?"
+        MC "I thought it'd be funny. Plus, I had it under control!"
+        BE "Well, it wasn't very funny."
+        pause .5
+        show BE neutral
+        BE "But it was pretty cool."
+        jump BE044_after
+
+label BE044_after:
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+    scene Beach with fade
+    "The sun was peeking out over the horizon, and it was about time to head home."
+    "At the moment, Honoka and I were walking side by side along the coast of the beach. The tide washed over our feet as we stepped along."
+    MC "The sun's setting..."
+    show BE neutral with dissolve
+    BE "Yeah... I had so much fun today, I don't really want to leave."
+    "We'd spent a lot of the time building sand castles and swimming in the ocean. Honoka in particular seemed very happy to spend a majority of the day in the water."
+    BE "You know, you never told me what you thought about the bento I made us by the way."
+    MC "I didn't? Well..."
+    if isEventCleared("BE035A"):
+        MC "You really have a knack for cooking. Honestly, you should give the cooking club another try. I'm sure they'd be glad to have you back."
+        BE "Well... I'll have to talk to Kanami-chan and Takamura-sensei about that."
+    else:
+        MC "It was really good! If you're really struggling on finding another club to join, you should give the cooking club a shot."
+        show BE happy
+        BE "Well, it couldn't hurt. I'll think about it!"
+    "Honoka stopped walking."
+    show BE neutral
+    BE "Hold on a sec, Kei-chan."
+    MC "Hmm? For what?"
+    BE "Can I take one last swim? I want to confirm something for myself."
+    "Honoka stared at me with conviction. She was serious about this."
+    MC "Uh... Sure, why not. Our feet are already in the water."
+    "Honoka and I waded back out into the ocean, and once she got deep enough, Honoka dove underwater and started swimming."
+    hide BE with dissolve
+    "After finishing she walked back up to me."
+    show BE neutral with dissolve
+    BE "Kei-chan."
+    pause .25
+    BE "Water makes me feel so...light. I mean, my built-in floatation devices aside, I just feel so..."
+    MC "Free?"
+    show BE happy
+    BE "Exactly! It's been so long since I've gone swimming, that I forgot how much I love it!"
+    MC "I get what you mean. We can always come back to the beach if you want."
+    show BE neutral
+    "Honoka shook her head."
+    BE "Absolutely. But, what I really want to do..."
+    pause .25
+    show BE happy
+    BE "...Is join the swim club! Think about it— it's perfect!"
+    BE "Nothing weighing me down, I get to be active without moving my chest too much, and I get to be in a swimsuit!"
+    MC "You do seem to really be at home in the water. Let's get you signed up once we get back."
+    "As Honoka got out of the water, I noticed her eyes were wet."
+    show BE sad
+    BE "{i}*sniffle*{/i}"
+    BE "I was so worried I wouldn't find another club that really {i}fit{/i}, you know?"
+    MCT "I knew it was getting to her, but I didn't think she was this distraught over it."
+    "I wrapped my arms around Honoka, embracing her tightly."
+    show BE neutral
+    BE "Thanks Kei-chan. I feel a lot better now. Let's go catch our bus."
+    MC "Sounds good to me. I need to wash all this salt out of my hair anyway."
+    BE "Who knows, maybe there's even some stray seaweed in it."
+    MC "Don't even joke about that!"
+    "As we were walking back to our stuff I remembered something we never got around to."
+    MC "You know, we never got around to playing with that beach ball."
+    show BE aroused
+    BE "Really? I'm pretty sure you got to play with a couple beach balls today~"
+    MC "Uh...Yeah these ones were better than the ones you can find in stores."
+    BE "Bigger, too."
+    scene black with fade
+    MC "Wait... bigger?"
+    jump daymenu
+
+label BE045:
     "This marks the current end of Honoka's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
