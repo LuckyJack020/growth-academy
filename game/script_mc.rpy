@@ -34,7 +34,9 @@ label global000:
     "Not finding anything interesting to look at aside from water and sunshine, I turned back and glanced at my sister beside me, her gaze buried deep in the glass of her phone."
     MC "Nervous at all?"
     $setTomoOutfit(OutfitEnum.CASUAL)
-    show Tomoko distracted with dissolve
+    show FerryTomo1
+    show Tomoko distracted behind FerryTomo1
+    with dissolve
     Tomoko "Mm... nah."
     MC "Not even some new school jitters?"
     Tomoko "Nope."
@@ -71,7 +73,9 @@ label global000:
     "The voice over the PA system rang out through the deck, causing a few of the other students to look up from their phones while others readied their bags for departure."
     Announcer "Group one, please exit off of the left side of the ferry. An attendant will be ready to lead you to registration on arrival."
     Announcer "Group two, please exit off of the right. Groups three and four, please wait until we're ready for you."
-    hide Tomoko neutral with dissolve
+    hide Tomoko neutral
+    hide FerryTomo1
+    with dissolve
     "Tomoko and I got up from our spots and shuffled in the crowd of students toward the center of the ferry."
 
     scene Dock with fade
