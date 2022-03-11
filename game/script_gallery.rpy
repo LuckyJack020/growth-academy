@@ -1,8 +1,8 @@
 init python:
     activegal = ""
     hovergal = ""
-    convertGal = {"BE": "Honoka", "AE": "Shiori", "GTS": "Naomi", "FMG": "Akira", "WG": "Alice", "PRG": "Aida"}
-    galleries = {"BE": Gallery(), "AE": Gallery(), "GTS": Gallery(), "FMG": Gallery(), "WG": Gallery(), "PRG": Gallery(), "RM": Gallery()}
+    convertGal = {"BE": "Honoka", "AE": "Shiori", "GTS": "Naomi", "FMG": "Akira", "WG": "Alice", "PRG": "Aida", "OTHER": "Other Character"}
+    galleries = {"BE": Gallery(), "AE": Gallery(), "GTS": Gallery(), "FMG": Gallery(), "WG": Gallery(), "PRG": Gallery(), "OTHER": Gallery()}
     galImgList = {}
     galImgList["BE"] = [["BE000b", "GoodNotGreat", 995], ["BE010", "GoodNotGreat", 995], ["BE028", "GoodNotGreat", 995], ["BE028_fem", "GoodNotGreat", 995], ["BE031", "GoodNotGreat", 995], ["BE031b", "GoodNotGreat", 995], ["BE031c", "GoodNotGreat", 995]]
     galImgList["AE"] = [["AE000", "GoodNotGreat", 995], ["AE015", "GoodNotGreat", 995], ["AE024", "GoodNotGreat", 995], ["AE024b", "GoodNotGreat", 995], ["AE024c", "GoodNotGreat", 995], ["AE024d", "GoodNotGreat", 995], ["AE024e", "GoodNotGreat", 995], ["AE025", "GoodNotGreat", 995], ["AE050_behind1", "GoodNotGreat", 995], ["AE050_behind2", "GoodNotGreat", 995], ["AE050_behind3", "GoodNotGreat", 995], ["AE050_behind4", "GoodNotGreat", 995], ["AE050_behind5", "GoodNotGreat", 995], ["AE050_behind6", "GoodNotGreat", 995], ["AE050_bj1", "GoodNotGreat", 995], ["AE050_bj2", "GoodNotGreat", 995], ["AE050_bj3", "GoodNotGreat", 995], ["AE050_bj4", "GoodNotGreat", 995], ["AE050_sit1", "GoodNotGreat", 995], ["AE050_sit2", "GoodNotGreat", 995], ["AE050_spank1", "GoodNotGreat", 995], ["AE050_spank2", "GoodNotGreat", 995], ["AE050_spank3", "GoodNotGreat", 995], ["AE050_spank4", "GoodNotGreat", 995], ["AE074_snow1", "GoodNotGreat", 995], ["AE074_snow2", "GoodNotGreat", 995], ["AE074_snow3", "GoodNotGreat", 995]]
@@ -10,7 +10,7 @@ init python:
     galImgList["FMG"] = [["FMG016", "Sheepapp", 1050], ["FMG041", "Sheepapp", 1050], ["FMG050", "Sheepapp", 1050], ["FMG055", "Sheepapp", 1050], ["FMG056", "Sheepapp", 1050], ["FMG061", "Sheepapp", 1050]]
     galImgList["WG"] = [["WG000", "GoodNotGreat", 995], ["WG009", "GoodNotGreat", 995], ["WG042", "MOLOT.CO", 1050], ["WG046", "GoodNotGreat", 995], ["WG047", "GoodNotGreat", 995], ["WG060S", "MOLOT.CO", 1050]]
     galImgList["PRG"] = [["PRG020", "Marrazan", 1055], ["PRG025", "Marrazan", 1055], ["PRG038", "Marrazan", 1055]]
-    #galImgList["RM"] = [["RM000", "GoodNotGreat", 995]]
+    galImgList["OTHER"] = [["MC000", "GoodNotGreat", 995], ["RM000", "GoodNotGreat", 995], ["RM000_escape1", "GoodNotGreat", 995], ["RM000_escape2", "GoodNotGreat", 995], ["RM000_escape3", "GoodNotGreat", 995]]
 
     for g in girllist:
         galleries[g].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 266.67, 150, bilinear=True)
@@ -24,6 +24,16 @@ init python:
                 (i[2],690), Text("Art by: " + i[1], bold=True, color="#000000", style='outlined_text')))
             galleries[g].image("cg " + i[0])
 
+    galleries["OTHER"].locked_button = im.Scale("Graphics/ui/gallery/gallery-lock.png", 266.67, 150, bilinear=True)
+    galleries["OTHER"].transition = dissolve
+    for i in galImgList["OTHER"]:
+        galleries["OTHER"].button("cg " + i[0])
+        galleries["OTHER"].unlock("cg " + i[0])
+        galleries["OTHER"].image(Composite(
+            (1280,720),
+            (0,0), "Graphics/ui/gallery/" + i[0] + ".png",
+            (i[2],690), Text("Art by: " + i[1], bold=True, color="#000000", style='outlined_text')))
+        galleries["OTHER"].image("cg " + i[0])
 
 
 screen galleryselect():
@@ -41,7 +51,13 @@ screen galleryselect():
                 action [SetVariable("activegal", g), ShowMenu("gallery")]
                 hovered SetVariable("hovergal", g)
                 unhovered SetVariable("hovergal", "")
-        null
+        imagebutton:
+            xalign 0.5
+            yalign 0.5
+            idle "Graphics/ui/gallery/gallery-OTHER.png"
+            action [SetVariable("activegal", "OTHER"), ShowMenu("gallery")]
+            hovered SetVariable("hovergal", "OTHER")
+            unhovered SetVariable("hovergal", "")
         textbutton "Return" action ShowMenu("extras") xalign 0.5 yalign 0.5
         null
     if hovergal != "":

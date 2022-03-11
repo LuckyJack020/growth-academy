@@ -8774,10 +8774,6 @@ label GTS044_c3:
     MCCell "how was your day Naomi-chan?"
     GTSCell "Rather well. I had been looking forward to talking to you today."
     MCCell "aww"
-    GTSCell "I'm starting to get to know my neighbors as well. The young lady next door to me is a member of student council, which is quite interesting although it seems to leave her little time for chit-chat."
-    MCCell "that's pretty cool. bet you'll be thick as thieves in no time"
-    GTSCell "She has certainly made a good impression."
-    pause 2
     GTSCell "I suppose I should leave you to your work."
     MCCell "probably should get back to it"
     if getFlag("GTS044_meet"):

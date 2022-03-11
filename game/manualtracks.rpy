@@ -380,6 +380,17 @@ init python:
     )
     ost.manualDefineList.append(ElA)
 
+    PsO = ost.soundtrack(
+        name = "Press On",
+        path = "Audio/BGM/scene_PRG2.ogg",
+        priority = 2,
+        author = "Post-Bop",
+        description = "Aida's Elegance",
+        cover_art = False,
+        unlocked = True
+    )
+    ost.manualDefineList.append(PsO)
+
     ## Base Template
     ######################################
 

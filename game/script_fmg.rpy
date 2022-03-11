@@ -8784,7 +8784,7 @@ label FMG053:
     with fade
     FMG "Man, it's been a while since I've been in here. Heh, everything looks even smaller here than in my dorm."
     MC "I don't really get or need the dorm upgrades you and the others get. Not like Daichi has anything going on with his body either."
-    FMG "Oh yeah, I totally forgot about him. What's he been up to? I never heard anything else from him about our bodyguard agreement."
+    FMG "Oh yeah, I totally forgot about him. What's he been up to?"
     MC "I couldn't tell you. That dude is in his own world... all the time. He comes back every now and then but I haven't seen much of him recently."
     FMG "Do you want to go look for him? Maybe he's in trouble or something."
     MC "Let me think about that...{w} Nah."
@@ -11613,7 +11613,7 @@ label FMG066:
     MC "Think you got everything?"
     show FMG neutral with dissolve
     FMG "Shouldn't you have asked me that before we left the school?"
-    MC "Probably because we were rushing to not be late. Alice did say the plane was taking off whether we were there or not."
+    MC "Probably. I guess I forgot because we were rushing to not be late. Alice did say the plane was taking off whether we were there or not."
     if isEventCleared("FMGWG003"):
         FMG "Idle threats, Kei-kun. Deep down she's as soft on the inside as she is on the outside."
         MC "Bro, have you {i}seen{/i} her eyes when she gets mad? She can be pretty cold for someone who's so well insulated."

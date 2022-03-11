@@ -336,6 +336,8 @@ image cg WG046 = "Graphics/ui/gallery/WG046.png"
 image cg WG047 = "Graphics/ui/gallery/WG047.png"
 image cg WG060S = "Graphics/ui/gallery/WG060S.png"
 
+image cg MC000 = "Graphics/ui/gallery/MC000.png"
+
 image cg RM000 = "Graphics/ui/gallery/RM000.png"
 image cg RM000_escape1 = "Graphics/ui/gallery/RM000_escape1.png"
 image cg RM000_escape2 = "Graphics/ui/gallery/RM000_escape2.png"
@@ -871,6 +873,7 @@ define audio.PRG = "Audio/BGM/scene_PRG.ogg" #Quiet Wandering
 define audio.PRGMusicBox = "Audio/BGM/scene_PRGMusicBox.ogg" #Quiet Wandering (Music Box)
 define audio.PRGDramatic = "Audio/BGM/scene_PRGdrama.ogg" #Small Moments
 define audio.PRGChallenge = "Audio/BGM/scene_PRGchallenge.ogg" #The Challenge
+define audio.PRG2 = "Audio/BGM/scene_PRG2.ogg" #Press On
 define audio.WG = "Audio/BGM/scene_WG.ogg" #Aristocratic Opulence
 define audio.WG2 = "Audio/BGM/scene_WG2.ogg" #Elegant Antics
 define audio.Bittersweet = "Audio/BGM/scene_bittersweet.mp3" #PH
@@ -886,6 +889,7 @@ define audio.Festival = "Audio/BGM/scene_festival.mp3" #PH
 define audio.HallowedHalls = "Audio/BGM/hallowedhalls.ogg" #Hallowed Halls
 define audio.HigherEdu = "Audio/BGM/scene_higheredu.ogg" #Higher Education (This is what Hallway is, in any scripts)
 define audio.KnowMyself = "Audio/BGM/knowmyself.mp3" #Know Myself (short loop)
+define audio.FullKnowMyself = "Audio/BGM/knowmyself_full.mp3" #Know Myself (full song)
 define audio.Love = "Audio/BGM/love.ogg"
 define audio.LoveA = "Audio/BGM/love_A.ogg"
 define audio.LoveB = "Audio/BGM/love_B.ogg"

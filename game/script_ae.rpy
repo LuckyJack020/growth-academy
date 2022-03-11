@@ -20513,7 +20513,7 @@ label AE092:
     jump daymenu_noadvance
 
 label AEBE004:
-    play music Festival
+    play music BE
     scene Festival
     show BE surprised
     with fade
@@ -20574,10 +20574,12 @@ label AEBE004:
     "Honoka looked to me with pleading eyes; she may have been frustrated, but if there was one thing she hated was making others feel bad. Still however, knowing how scary Shiori could be, I just raised up my hands and stepped back."
     MCT "Your funeral."
     BE "Uhh... m-maybe the three of us can just go to the dock and-"
+    stop music
     AE "No, actually. You two enjoy yourselves. I'm going to monitor the fairgrounds. I'll see you in a few hours."
     hide AE with dissolve
     "And just like that, Shiori walked away, her large rump bumping into a passerby as she turned, and after she apologized profusely, she disappeared."
     show BE sad at altMove(0.5, 0.5)
+    play music Festival
     BE "... Aw man... UGH! I feel like such a jerk!"
     MC "Hey, I mean, there wasn't anything she wanted to do."
     BE "Should we go and get her?"
@@ -20594,6 +20596,7 @@ label AEBE004:
     AE "Hotsure-san, Inoue-san."
     hide AE
     show BE surprised with vpunch
+    play music BE
     BE "EEP!"
     "Honoka jumped up and grabbed onto me as Shiori more or less apparated behind us, squishing her boobs into my chest as she did. Shiori simply pushed her glasses up as the light from the rides bounced off of her lenses."
     BE "O-O-Oh! Hey, M-Matsumoto-san! Are you... doing okay?"
@@ -20647,7 +20650,6 @@ label AEBE004:
     show BE neutral at Position(xcenter=0.25, yalign=1.0)
     show AE neutral at Position(xcenter=0.75, yalign=1.0)
     with fade
-    play music DayByDay
     "As we walked in, there was a feeling that the show was going to be fairly sparsely populated; most of the people had gone home, and it seemed like those that remained were in a similar situation as me; cajoled by their friends."
     "I was at first worried that there would be an issue of the three of us to squeeze into the aisles but, to my surprise, there were three seats ready in the front row with signs."
     MC "Reserved for Seichou Students?"
@@ -20758,7 +20760,9 @@ label AEBE004:
     Magician "Pop."
     show AE happy
     "As the magician said this, over the speakers a stock popping sound played, and suddenly Shiori's eyes shot open wide as she had a big, almost cartoonish looking smile on her face. Almost immediately after, the speakers played a little chime sound."
+    play music PRGChallenge
     Magician "Behold! Our volunteer!"
+    play sound Cheer
     "The crowd began to applaud as Honoka smiled wide with amazement."
     hide AE
     show BE surprised
@@ -20881,6 +20885,7 @@ label AEBE004:
     hide AE with dissolve
     extend " she disappeared in a puff of smoke which emanated from the ground."
     Magician "Wobbles is gone!"
+    play music BE
     show BE surprised with vpunch
     BE "N-No way! She disappeared!"
     Magician "Don't worry about her ladies and gentlemen, she'll be just fine! However, first, let me tell you a story of how I first learned the art of hypnosis!"
@@ -20893,7 +20898,10 @@ label AEBE004:
     Magician "Ladies and gentlemen!~"
     hide BE with dissolve
     Magician "Our brave volunteer!"
+    stop music
+    play sound Cheer
     #show CG
+    play music FullKnowMyself
     "Suddenly, as though with a burst of light and smoke, a figure appeared on stage with her eyes overlaid with a swirling pattern."
     show AE happy with dissolve #remove when cg is finished
     "She wore a teal-blue outfit which left very little to the imagination; a long, almost transparent loincloth covering up a pair of dazzling panties. Her legs and arms were adorned in glittering jewelry which seemed to fit too snugly to her thighs."
@@ -20937,6 +20945,7 @@ label AEBE004:
     "Before I could protest, however, it was as though my body superseded my mind as I followed her up the steps, my heart racing."
     BE "Wooo! Go Kei!"
     MCT "O-OY! YOU WERE AGAINST THIS A SECOND AGO!"
+    play sound Cheer
     "Shiori sat me down in the chair and bent down, bowing with her hands on the ground as she began to shake her booty, my eyes transfixed on it as the crowd both cheered and applauded the two of us."
     "Quickly, she rose up as she began to twirl in place as best she could her gigantic ass carrying the momentum as she used it to transition into another move. I felt my hands grip the chair as my pants got tighter."
     "She then turned around and began to make her butt bounce up and down in front of me, her gigantic cheeks warming my lap as I had to fight every instinct to not give her booty a smack."
@@ -20957,7 +20966,9 @@ label AEBE004:
     hide AE with dissolve
     "As Shiori finished her exotic dance, the magician pulled out an old brass lamp and rubbed it as, suddenly, with another puff of smoke, Shiori disappeared."
     Magician "Uwaaah! Would you look at that! I think our show has a new headliner!"
+    play sound Cheer
     "He triumphantly held up the lamp as the crowd cheered."
+    play music Festival
     Magician "I think I know my three wishes, am I right? Anyways! That's all for tonight, folks! Come back tomorrow for even more, as I show the art of levitation!"
     "Though Honoka was stunned, I and the rest of the crowd applauded as the Magician walked backstage, music playing over the stereo. Honoka then, however, looked around fearfully."
     show BE surprised with vpunch
@@ -20973,7 +20984,6 @@ label AEBE004:
     scene Festival
     show AE surprised
     with fade
-    play music Festival
     AE "H-Huh? Where am I?"
     show BE sad at Transform(xzoom=-1), Position(xcenter=0.35, yalign=1.0) with easeinleft
     BE "SHI-CHAAAAN!"

@@ -18802,9 +18802,9 @@ label WG067:
     WG "Bills, bills, bills, never once do they ever send you a gift card for being loyal."
     MC "Would that be good business?"
     WG "Not really, you'd probably lose a lot of money that way."
+    show WG worried
     "Alice's complexion drained of color as she clutched a very fancy letter with a wax seal."
     MC "Who's that from? The NTA?"
-    show WG worried
     WG "No, though that would be equally concerning. See the seal on this letter."
     "Looking at the wax I could see a personalized seal that resembled the logo I'd seen for her father's enterprise."
     MC "Yeah? Is it something to do with your dad's company?"

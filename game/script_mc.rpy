@@ -35,7 +35,7 @@ label global000:
     MC "Nervous at all?"
     $setTomoOutfit(OutfitEnum.CASUAL)
     show FerryTomo1
-    show Tomoko distracted behind FerryTomo1
+    show Tomoko distracted at Position(ycenter=0.70, xcenter=0.5) behind FerryTomo1
     with dissolve
     Tomoko "Mm... nah."
     MC "Not even some new school jitters?"
@@ -44,12 +44,13 @@ label global000:
     play sound ClockTower
     "Overhead, one of the many loudspeakers dotted throughout the ferry whined."
     Announcer "Your attention, please. We will be docking in five minutes. If you aren't already, please take your seats. Thank you."
+    show cg MC000 with dissolve
     "A few of the other students that had been milling around came to sit back down."
     "I leaned my head against the glass beside me. Ahead, a large, lush, green island loomed over us."
     MC "Well, that's welcoming."
-    show Tomoko distracted
     Tomoko "Did you say something?"
     MC "You know, since we're not going to know anyone else here, the least you could do is be a little more social."
+    hide cg with dissolve
     show Tomoko neutral
     Tomoko "For what? We're only going to be here for a year. Odds are that we'll never see most of these people again anyway."
     MC "A lot can happen in a year, Tomo."
@@ -93,24 +94,29 @@ label global000:
     pause .75
     MCT "... Weird."
     "I waited in line for a few minutes before reaching the building line at the end of the dock, where I was handed a small welcome gift bag by a warm looking woman with raven black hair."
+    #show Takamura neutral with dissolve
     "On her chest hung a bright nametag that read ‘Aoi Takamura'."
     show Tomoko neutral with dissolve
     Takamura "Can I get your name, please?"
     Tomoko "Tomoko Hotsure."
+    #show Takamura reassuring
     Takamura "Right... there you are! Here's a key for your dorm. We have a mandatory assembly tomorrow morning, so be sure not to miss it!"
     Takamura "Group one, right over there. Just follow them to the academy. Welcome to Seichou!"
     Tomoko "Alright. Later bro."
     MC "Yeah. See ya."
     hide Tomoko with dissolve
+    #show Takamura neutral
     Takamura "And, your name, please?"
     MC "Keisuke Hotsure."
     Takamura "Another Hotsure? Okay... one second...{w} Ah! There you are."
     "The teacher blinked a few times."
     Takamura "Hmm... two Hotsures and two Utagashis. Curious..."
     "The teacher briefly scanned the table and grabbed something from it, then turned and glanced off at the group of students who were already almost out of sight."
+    #show Takamura reassuring
     Takamura "Well, looks like they were a little eager to get a move on. Just follow this path here all the way down."
     Takamura "And, here's a key for your dorm! As I'm sure you heard, assembly is tomorrow morning in the auditorium. Welcome to Seichou, Hotsure-san. Hope you enjoy your stay here!"
     MC "Alright. Thank you very much."
+    #hide Takamura 
     "I took off at a brisk pace, and left the rest of the students behind as I tried to catch up with my group."
     scene black with fade
     pause 1
@@ -1343,7 +1349,7 @@ label MC003:
     MC "So there are two Hotsure's paired with two Utagashi's? Isn't that a bit of a coincidence?"
     MCT "Come to think of it, the teacher at the docks also found it curious... {w}Wait a second— now I'm starting to sound like the crazy one here."
     show RM doubt
-    RM "It probably has to do some randomization pairing based off of alphabetical order. Not every coincidence is that intriguing."
+    RM "It probably has to do with some randomized pairing based off of alphabetical order. Not every coincidence is that intriguing."
     MC "That's as good an assumption as any."
     MCT "Let's just leave it at that for now."
     MC "Anyway, I appreciate the help. When Tomo sleeps, she's dead to the world— and she sleeps a lot. {w}Well, that and I'm not exactly expecting her to eagerly await a text from me."
@@ -1387,7 +1393,7 @@ label MC003:
     MCT "I don't know why you care. If there were a million things to do, you'd still choose to nap."
     MC "I mean how are you holding up after, you know, the test?"
     show Tomoko distracted
-    Tomoko "We haven't been here that long. I have had any major tests in classes."
+    Tomoko "We haven't been here that long. I haven't had any major tests in classes."
     MCT "This is going nowhere fast."
     MC "Okay, I'll just go first. I mean the factor test. It told me my hair was going to grow really long... or was it really fast? Maybe both, I don't quite remember now that I think about it."
     "Part of me didn't want to ask the next question, afraid of the answer, but I knew I had to."
@@ -2145,7 +2151,13 @@ label MC006_Team2:
     "Akira was strong, but between me, Aida and Alice... {w}Well, um... mostly Alice... That was a pretty heavy load."
     show PRG worried
     PRG "..."
-    "But I was most worried about Aida. She was easily the smallest of all of us and she didn't look to have the athleticism to make up for it. I didn't want to see her get body checked from a defensive block."
+    if isEventCleared("PRG007"):
+        "But I was most worried about Aida."
+        "Yeah, she was a fan of baseball and all, so I figured she had some knowledge of sports."
+        "However, she was easily the smallest out of everyone, and athletic skill or no, I didn't want to see her get body checked from a defensive block."
+    else:
+        "But I was most worried about Aida."
+        "She was easily the smallest of all of us and she didn't look to have the athleticism to make up for it. I didn't want to see her get body checked from a defensive block."
     MC "Aida, would you be interested in being our goalie?"
     FMG "{size=-6}Are you sure that's a good idea, dude?{/size}"
     MC "{size=-6}Do you really want to see Kodama-san try to guard Yamazaki-san?{/size}"
@@ -2490,8 +2502,12 @@ label MC006_Team2:
     extend " Just try to ease up on those tosses."
     show FMG happy
     FMG "Right! I got this!"
-    MC "Kodama-san, don't be afraid of the ball. I know it can be fast, but it isn't very hard. Just put out your hands and it'll bounce right off of you, I promise."
-    PRG "I-I think I can do that."
+    if isEventCleared("PRG007"):
+        MC "Kodama-san, remember, this is just like baseball. Only, you don't even have to catch it. Just get in front of it and make sure it doesn't get past you. I know you can do it."
+        PRG "I... r-right. I can do that."
+    else:
+        MC "Kodama-san, don't be afraid of the ball. I know it can be fast, but it isn't very hard. Just put out your hands and it'll bounce right off of you, I promise."
+        PRG "I-I think I can do that."
     MC "Trust me, you'll do fine. We all will."
     Naoki "Alright, Team 1 won the coin toss, so Team 2 gets the ball at the start of this half."
     hide FMG
