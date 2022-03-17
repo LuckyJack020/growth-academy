@@ -359,7 +359,7 @@ label BE003_c3:
 label BE004:
     $setTimeFlag("testday")
     $setBEOutfit(OutfitEnum.ATHLETIC)
-    $setProgress("BE", "BE007")
+    $setProgress("BE", "BE006")
     scene Track with fade
     play music Busy
     "I decided to head over to the soccer field. Before I even got on the grass, I heard the sound of a coach whistle blowing, directing students in their training. I picked up the pace a little bit so I could see what was going on."
@@ -605,6 +605,153 @@ label BE005_c2:
     BE "That'd be nice."
     "Honoka chuckled, and then went silent as our teacher walked in. The other students all began to hush after a while, ready for class to begin."
     "We'd all been in classes for several days already, but now that we all knew what was going to change about our bodies, it really sank in that this would be a new learning experience for us all."
+    jump daymenu
+
+label BE006:
+    $setProgress("BE", "BE007")
+    play music Peaceful
+    scene Hallway
+    show BE happy
+    with fade
+    BE "...So anyway, I started blasting! And that's how I got a new high score in Arcade mode in Alley Combatant!"
+    MC "So, you cheesed the boss."
+    show BE shrug
+    BE "It was all skill."
+    MC "Yeah, okay."
+    if isEventCleared("MC003"):
+        "Class had just gotten out and Honoka and I were walking down the hallway. I had been really stressed and worried about Tomo and what her growth factor was."
+        "Good thing I finally managed to get ahold of her. It wasn't easy and required Daichi's help, but turned out it was nothing to worry about."
+    else:
+        "Class had just gotten out and Honoka and I were walking down the hallway. But in the back of my mind, I couldn't stop thinking about growth factors and what this might mean for Tomo. I called and sent a few messages, but she hadn't responded."
+    MC "{i}Sigh...{/i}"
+    show BE neutral
+    BE "Something wrong?"
+    MC "I'm still just getting used to things here, I guess. Plus, there's my sister I'm still worried about."
+    BE "Aw, she'll be fine! Look at you, still trying to be the responsible older brother."
+    MC "It's my job."
+    Takamura "Well, if it isn't {i}another{/i} Hotsure!"
+    if isEventCleared("MC002"):
+        "A familiar voice rung out behind me."
+        #show Takamura neutral
+        MC "Oh, hello Takamura-sensei."
+        Takamura "Good morning, Hotsure-san."
+    else:
+        "A slightly familiar voice rung out, but I can't really put my finger on it."
+        #show Takamura neutral
+        MC "Oh, I remember you from the first day we arrived! Hello... uh, Sensei."
+        Takamura "Aoi Takamura. You can call me Takamura-sensei."
+    BE "Hello, Takamura-sensei!"
+    Takamura "Hello, Inoue-san! How have things been treating you since our little talk?"
+    MCT "What talk? When was this?"
+    BE "You really helped put what we'll be going through in perspective for me, so I've really kept it in mind. Thanks again!"
+    Takamura "Of course! Feel free to drop by my office if you have anything you'd like to get off your chest."
+    "Takamura-sensei winks at Honoka."
+    #show Takamura reassuring
+    Takamura "Figuratively, of course."
+    MCT "Teachers can say that?"
+    show BE happy
+    BE "Hehe. Yes, Sensei!"
+    if isEventCleared("MC002"):
+        MC "Sensei? If I may, how's Tomoko doing?"
+        Takamura "Quite well. She is a touch quiet compared to most, but she seems to be doing just fine."
+    else:
+        Takamura "And, I couldn't help but overhear, but I wouldn't worry yourself over your sister."
+        Takamura "I'm her homeroom teacher, and I'd be happy to keep an eye on her for you."
+    MC "Thank you. That's a relief, Sensei."
+    #show Takamura neutral
+    Takamura "Now then, if you would please exc-"
+    Woman "There you are, Sensei!"
+    "A voice rang out behind us, but this one was totally unfamiliar to me."
+    "Another woman walked up to Takamura-sensei."
+    #show Kanami neutral
+    Woman "I had a question about our meeting later today."
+    MCT "Ah, another teacher at the school it seems."
+    MC "I don't think we've met, sensei. My name's Keisuke Hotsure."
+    "Honoka suddenly bursts out laughing."
+    BE "Pfff- Hahaha! Nice one, Kei-chan!"
+    MC "Hmm? What'd I do?"
+    #show Takamura reassuring
+    Takamura "Hotsure-san, she's wearing a uniform."
+    MCT "...and there's my idiot moment of the day."
+    show BE neutral
+    "The woman... erm, student's face flushed red."
+    Student "Don't worry. For some reason, this kind of thing happens to me all the time. I'm Kanami Tozakura. It's a pleasure to meet you, Hotsure-san."
+    BE "Hey, Kanami-chan!"
+    Kanami "Hello again, Inoue-san."
+    "Kanami's eyes dart between Honoka and myself, choosing her words carefully."
+    Kanami "How have you been handling the... news?"
+    MCT "Honoka knows her too? Jeez, does she just introduce herself to anyone she comes across?"
+    show BE shrug
+    BE "Eh, I'll manage. I'll just keep it all in mind."
+    #show Takamura neutral
+    Takamura "That's all we ask of you two. Now then, Kanami-chan. We're running late for our meeting. We shouldn't keep Myoga-san and the rest waiting! Have a good day, you two."
+    #hide Takamura with dissolve
+    #hide Kanami with dissolve
+    "Takamura-sensei, and Kanami walked off together."
+    MC "What was that all about?"
+    show BE neutral
+    BE "Well, Nurse Kiyomi called Kanami-chan and myself to the nurses office not too long after our factor test yesterday."
+    MC "Hmm? Why the two of you together?"
+    show BE happy
+    BE "Because, we have the same factor!"
+    MCT "Now that I think about it, she gives Honoka some stiff competition when it comes to chest size."
+    show BE neutral
+    BE "You're thinking about her boobs, aren't you?"
+    MC "Pfft, no..."
+    show BE angry
+    BE "Sure~"
+    show BE neutral
+    BE "Anyway, Nurse Kiyomi talked to us about some of the things we should expect as we grow. A lot of it was girl talk— for girls only."
+    MC "Huh. I didn't have anything like that."
+    BE "Nurse Kiyomi mentioned that too. She told us that Breast-related growth factors are really common, and because of that, there's a lot of information available."
+    show BE happy
+    BE "And that's where Takamura-sensei came in. She was really nice and open about it!"
+    MC "Isn't she a cooking teacher? Why was she there?"
+    show BE shrug
+    BE "I think it was for moral support? She's sort of the de-facto girls counselor on campus."
+    show BE neutral
+    BE "Again, there was a lot more girl–talk about things we'd be experiencing in the future. But she talked to us in a really...friendly way about it. Not so technical like the nurse."
+    BE "And Takamura-sensei's really cool. Like, did you know she went to culinary school in Paris?"
+    MCT "Huh. The only advice I got from the nurse was to ‘get some scissors'."
+    MC "Wow... that's really cool. Sounds like they really do want to help us. That's a bit of a relief, honestly."
+    show BE happy
+    BE "Agreed!"
+    pause .25
+    BE "But...mmmm!"
+    "Honoka raised her arms above her head and popped a couple joints in her back, sticking her chest out in the process."
+    BE "What a long day!"
+    MC "Yeah, getting a bit tired myself... Any plans for the rest of the day?"
+    "Honoka placed her hands on her lower back, aiming her ballistics towards the ceiling. She tilted her head backwards and spoke to me upside down."
+    BE "Mmmmah! Soccer... practice! Then afterwards, I might get something to-"
+    stop music
+    show BE surprised
+    "{i} PING {/i}"
+    MC "Eh?"
+    MCT "Did that just happen?"
+    "The button at the apex of her mounds shot off into the air, like a space shuttle making its first launch into space. The button clattered onto the ground not too far away from us."
+    play music BE
+    show BE happy
+    BE "Oh wow! Speak of the devil, huh?"
+    "Honoka stood up straight again and walked over to pick up the liberated button."
+    MC "Guess that's as much evidence as any that this is really happening, huh?"
+    BE "Yeah, you're right! That was awesome!"
+    show BE disoriented
+    BE "I've had that happen a few times in the past, but those were when I was wearing pretty old clothes. This shirt is practically brand new!"
+    "Honoka held the button up to me."
+    BE "You want it, Kei-chan~?"
+    MC "I uh... what do I need that for? You could still use that thing."
+    show BE embarrassed
+    BE "Think of it as a keepsake! Plus, I already have a whole packet of buttons back in my room, just for emergencies. This one's special!"
+    MC "...Fine. I don't have an option here, do I?"
+    show BE happy
+    BE "You don't!"
+    MC "Super."
+    BE "Well, now that that's happened, I should head back to my room and change! I gotta get ready for practice! We've got a game coming up soon."
+    MC "Oh really? Let me know when it is so I can come watch!"
+    BE "Sure thing! And you better show up, too!"
+    MC "I'll be there. See you later, Honoka."
+    show BE wink
+    BE "Bye, Kei-chan! Keep that thing safe, okay?"
     jump daymenu
 
 label BE007:
@@ -7927,7 +8074,7 @@ label BE043:
     scene Dorm BE with fade
     "Honoka already let me inside where she'd already prepared a huge bowl of popcorn for the two of us. But knowing her and junk food, most of the contents are going into her stomach..."
     show BE happy with dissolve
-    BE "Kei-chan! You ready? We're in for a LONG 98 minutes and twenty-four seconds."
+    BE "Kei-chan! You ready? We're in for a LONG 98 minutes and 24 seconds."
     MC "I don't even know the premise of this movie. I just know it's bad. What'd you say the name of this was?"
     BE "(Insert Movie Here)! With the parentheses around it and everything!"
     MCT "Oh god, no... its {i}quirky{/i}."
@@ -7937,8 +8084,8 @@ label BE043:
     MC "Jeez. And... why are we watching this?"
     show BE shrug
     BE "I thought it'd be fun! Plus, it'd be nice to spend some cozy time together, since we don't do that very often."
-    play sound Boing
     "Honoka walked over to the couch and floppped down, as she kept eye-contact with me the entire time."
+    play sound Boing
     "{i}WHUB WHUB{/i}"
     "Honoka's breasts continued to heavily bounce off of each other after she completed moving."
     show BE seductive
@@ -7958,7 +8105,7 @@ label BE043:
     "Honoka pressed the play button and leaned on my shoulder, getting nice and comfy."
     MCT "And not even 30 seconds in, they've parodied three different movies... poorly. Save me from this hell..."
     scene black with fade
-    pause 0.2
+    pause 0.5
     scene Dorm BE with fade
     "45 minutes later, and the only thing that's been keeping me sane during this god-forsaken movie has been Honoka."
     "We've long since finished the popcorn, and Honoka's used that opportunity to get even more comfortable, leaning her head against my chest."
@@ -8078,9 +8225,10 @@ label BE043:
     show BE aroused
     BE "During the movie, {i}one of us{/i} was such a messy eater with their popcorn and I have quite a few stragglers spelunking down my shirt. I could use some help cleaning up."
     "Honoka leaned in closer."
+    show BE disoriented
     BE "{size=-6}Pssst... it was me~{/size}"
     MCT "Yeah, because you ate most of the bowl!"
-    pause .25
+    pause .5
     MC "Ah... I think I could help with that."
     $setAffection("BE", 1)
     BE "You're the best, Kei-chan. I knew I could count on you."
@@ -8213,6 +8361,7 @@ label BE044:
     "I moved to my own supplies and started laying them out."
     "{i}Psh psh psh...{/i}"
     MCT "That's... sandy footsteps."
+    stop music
     scene black
     "My vision went forcibly black as something covered my eyes."
     MCT "Ech?!"
@@ -8237,6 +8386,7 @@ label BE044:
     scene Beach
     show BE happy
     with fade
+    play music BrightLights
     pause .75
     BE "Ta-daaa!"
     pause .5
@@ -8256,6 +8406,7 @@ label BE044:
     MC "Well uh... I..."
     MC "T-That is ah..."
     BE "Oh, come onnnnn, Kei-chan!"
+    show BE disoriented
     "Honoka put both hands on my shoulders and pressed her chest against mine."
     play sound Boing
     BE "... Boop~"
@@ -8409,10 +8560,12 @@ label BE044_C2_1:
     pause .5
     show BE surprised
     pause .5
-    show BE happy
-    "{i}HYAAA!{/i}! Hahaha! Kei-channn! Nonono! STAAAAHAHAHAAAAAHP!"
+    show BE happy at wiggle_loop
+    BE "{i}HYAAA!{/i}! Hahaha! Kei-channn! Nonono! STAAAAHAHAHAAAAAHP!"
     $setAffection("BE", 2)
     "Satisfied with my work, I swam out from under the topside shelf, an impish grin plastered across my face."
+    hide BE
+    show BE happy
     BE "Hah... heh... the girls don't like tickles in that spot!"
     MCT "Mission Accomplished."
     jump BE044_after
@@ -8460,9 +8613,11 @@ label BE044_C3_1:
         jump BE044_after
 
 label BE044_after:
+    stop music fadeout 1.0
     scene black with fade
     $setTime(TimeEnum.EVE)
     pause 1
+    play music Sunset
     scene Beach with fade
     "The sun was peeking out over the horizon, and it was about time to head home."
     "At the moment, Honoka and I were walking side by side along the coast of the beach. The tide washed over our feet as we stepped along."
@@ -8491,7 +8646,7 @@ label BE044_after:
     "After finishing she walked back up to me."
     show BE neutral with dissolve
     BE "Kei-chan."
-    pause .25
+    pause .5
     BE "Water makes me feel so...light. I mean, my built-in floatation devices aside, I just feel so..."
     MC "Free?"
     show BE happy
@@ -8500,7 +8655,7 @@ label BE044_after:
     show BE neutral
     "Honoka shook her head."
     BE "Absolutely. But, what I really want to do..."
-    pause .25
+    pause .75
     show BE happy
     BE "...Is join the swim club! Think about it— it's perfect!"
     BE "Nothing weighing me down, I get to be active without moving my chest too much, and I get to be in a swimsuit!"
@@ -8518,7 +8673,7 @@ label BE044_after:
     MC "Don't even joke about that!"
     "As we were walking back to our stuff I remembered something we never got around to."
     MC "You know, we never got around to playing with that beach ball."
-    show BE aroused
+    show BE disoriented
     BE "Really? I'm pretty sure you got to play with a couple beach balls today~"
     MC "Uh...Yeah these ones were better than the ones you can find in stores."
     BE "Bigger, too."

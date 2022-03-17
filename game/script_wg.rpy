@@ -13064,6 +13064,143 @@ label WG053_c3_after:
         "She smiles and we hold hands all the way back to the school. Letting the music of the night close out our date."
     jump daymenu
 
+label WG003M:
+    scene Music Classroom with fade
+    play music BachGavottes
+    "When I wasn't working on trying to impress Alice with practicing my old piano skills, I was usually working on drawing, or in this case, playing my guitar."
+    "I stopped with the piano lessons when I was younger in part because this is what I really wanted to play. {w}And it still is pretty fun. Honestly I'd probably stick with it more if Alice hadn't gotten me back into piano."
+    "Then again, who was I kidding? I hadn't made that much time for this thing even when I decided I wanted to play it. I thought this guitar would get me all sorts of chicks."
+    "Eventually I realized if I was going to pull this out every chance I got, I was gonna be ‘that guy' at parties."
+    "No one wants to be ‘that guy'."
+    "Even so, I had my mom send it here from back home. I told myself I needed something to do, but part of me just wanted something from home."
+    "I was getting better, but I was still pretty far from the rockstar my younger self had envisioned I'd be by this point."
+    "I was trying to work on getting my fingers to move faster. I got into guitar because I liked rock music, but lately I decided to give classical a try— and damn were those songs tough."
+    "Alice had been a big influence on me (in more ways than one)— definitely so in the music department."
+    "It was a bit funny. She was always keeping me on my toes, and practicing this kind of music reflected that part of her on me perfectly."
+    play sound Knock
+    stop music
+    pause 1
+    MCT "Ut-oh. {w}Speaking of keeping me on my toes."
+    play music WGAlt
+    show WG neutral with dissolve
+    WG "Hello, Keisuke. Pardon me for interrupting. I came by to use one of the practice rooms when I noticed you were in here."
+    MC "Eh, you weren't really interrupting anything. I was just messing around, practicing some chords, trying to figure out how to get my fingers to bend like they're supposed to."
+    show WG surprised-2
+    WG "I know you mentioned practicing guitar occasionally, but I've never heard you play it before."
+    MCT "I know where this is going, and I should probably spare myself and just jump out the window."
+    show WG neutral-2
+    WG "I hope it's not too much to ask... but would you care to indulge me with a performance?"
+    MC "Sure... Let me think here."
+    "I certainly wasn't ready for primetime, but on the other hand, I just couldn't bring myself to disappoint her by refusing her sincere request."
+    "By this point I had come to realize with Alice that it was better to fail boldly with a heartfelt effort than to shrink away with cowardice."
+    show WG happy
+    "Besides, having my girlfriend as a captive audience was plenty of motivation to play my best... {w}Even if that audience was as critical about music as Alice."
+    MCT "Forget that last part. Just go for it man!"
+    show WG neutral
+    MC "Alright, let's see how fast these fingers can move. Hope you like it."
+    play music ConcertinoTeleman
+    pause 5
+    WG "It sounds lovely so far."
+    pause 8
+    show WG surprised-2
+    WG "Oh my! It's really starting to pick up."
+    pause 2
+    show WG happy
+    WG "You practically sound like two guitars at some parts. It's quite impressive actually to create that effect."
+    pause 10
+    stop music fadeout 2.0
+    play music Peaceful
+    show WG surprised-2
+    WG "Keisuke! What on earth was that?"
+    $setSkill("Art", 1)
+    show WG happy
+    extend " It was wonderful."
+    show WG neutral-2
+    "Alice clapped her hands with a fair bit of enthusiasm to drive home the point."
+    MC "I take it you liked it?"
+    show WG happy
+    WG "I loved it. I've really been underestimating your musical talent. I didn't expect such a performance from you."
+    MC "That's pretty high praise coming from you, Alice."
+    WG "Well, as I've told you before, I take great enjoyment in helping to nurture talent. I know I haven't given you any lessons or practice tips, but I'd like to think my influence has had a hand in the development of your musical talents."
+    show WG neutral
+    MC "You would be right. I have to admit. But I don't know if talent is really the right word. I'm not exactly a virtuoso. It's just been steady improvement from work and consistency."
+    MC "Between the two of us, you're the one with the musical talent. Perfect pitch is a rare gift."
+    show WG happy
+    WG "Flatterer."
+    MC "But it's true, is it not?"
+    show WG haughty
+    WG "I won't deny it. Though I wouldn't consider it one of my primary talents, I am still rather proud of it."
+    show WG neutral-2
+    WG "What made you want to pick up playing the guitar?"
+    MC "When I first got this guitar in highschool, I thought I was going to be some kind of cool rockstar on stage. But I learned pretty quickly that it's really hard to sing and play at the same time."
+    MC "In fact, it feels downright awkward. I'd be losing my place trying to do both things. Well that and I can't sing that well in the first place."
+    MC "So the rockstar thing kind of fizzled out on its own. It was more of a flight of fancy at that stage in my life than a serious goal. {w}Architecture sounds like a much more solid career path anyway."
+    show WG haughty
+    WG "I would have to agree."
+    show WG neutral
+    MC "That reminds me, I don't think I asked before. What got you into singing? Ms. Pitch Perfect?"
+    show WG happy
+    WG "Hmm, I like the sound of that."
+    show WG haughty
+    extend " But let's not wear it out, shall we?"
+    show WG neutral
+    WG "But to answer your question, it was from my mother."
+    MC "So you got your business acumen from your father and your musical inclination from your mother?"
+    show WG neutral-2
+    WG "I suppose you could say that. Seems fairly obvious when you put it that way, but I never considered them to be disparate in nature, if that's what you're implying."
+    MC "Not necessarily, just an interesting observation. Doesn't seem that different compared to a wanna-be rockstar turned aspiring architect."
+    show WG happy
+    WG "Hehe, this is true."
+    show WG neutral
+    MC "I hadn't heard you talk about your mother much. I take it she's had an impact on you like your father?"
+    WG "I grew up listening to my mother sing. {w}I consider myself a natural talent, but she was absolutely magnificent."
+    WG "Her voice was powerful, amazing projection. Perfect pitch, naturally, and the timbre of her voice is something even I'm envious of."
+    show WG neutral-2
+    WG "Of course I understand these things now, but back then when I was a little girl, I didn't think anything of it. She just was mom to me. {w}I might not have even tried to become a singer if I had known how rare her talents were."
+    MC "Not to pry, but have you ever told her that?"
+    show WG surprised-2
+    extend " Just seems like something she'd be proud to hear, coming from you."
+    show WG worried
+    WG "I-I'm sure she knows..."
+    show WG neutral
+    WG " After all, I have her to thank for helping to develop my musical tastes."
+    WG "She would take me to theater performances, symphonies, and the opera. Father would sometimes come as well."
+    show WG haughty
+    extend " Though he has an appreciation for the fine arts, it isn't his forté like mother and I."
+    show WG neutral
+    WG "I remember one night telling my mother that I wanted to be a singer because I wanted to be like her."
+    show WG happy
+    extend " I don't know if I'd ever seen her as happy as she was in that moment."
+    WG "And that's how it started, really. She signed me up for professional voice lessons the next day. I've stuck with it ever since."
+    MC "Did you learn from your mom?"
+    show WG neutral
+    WG "She's certainly shared her insights to me over the years, but I've never taken lessons directly from her. She was wise enough to know she shouldn't hover too closely, especially while I was still young."
+    show WG sad
+    WG "From what she's told me, she had a bad experience with that when she was young herself."
+    show WG neutral
+    WG "But between her and my father's connections, I was able to benefit from the instruction of some of the best vocal coaches in the industry."
+    MC "It certainly shows. I might not know much about singing myself, but having heard you sing at the concert I can at least say that much."
+    show WG happy
+    WG "Thank you, Keisuke. I am glad you enjoyed it so much."
+    show WG haughty
+    WG "Between that and your more recent ventures into performing classical songs for me, I'm happy to see I've had such a positive influence on you."
+    MC "Curious, have I been a positive influence on you?"
+    show WG neutral
+    WG "Yes... {w}I could elaborate,"
+    show WG aroused
+    extend " but I'd prefer to show rather than tell."
+    $setAffection("WG", 1)
+    "Alice leaned in for a kiss..."
+    show WG surprised
+    "{i}*Plungg!*{/i}"
+    "Only to have her belly accidentally strum a chord while it was still in my lap."
+    show WG neutral
+    WG "On second thought,"
+    show WG aroused
+    extend " why don't we move the venue of this little concert here to my room?"
+    MC "Oh? Well, I suppose I could always use more practice..."
+    jump daymenu
+
 label WG054:
     $setProgress("WG", "WG055")
     scene Cafeteria with fade
@@ -19018,8 +19155,8 @@ label WG068:
     "She was purposefully short on the details. Part of me wondered if this was some sort of repayment for the dish I cooked for her."
     if getFlag("WG_SSPR5"):
         "I mean she must have enjoyed it, since she ate the whole thing."
-    MCT "Or maybe... Oh crap. {w}I hope this isn’t going to be some dinner party etiquette lesson in preparation for the ball. Would it really be the end of the world if I used the wrong fork for the salad course?"
-    "The more I thought about it, I should have suspected a trap, but I couldn’t back out of it now."
+    MCT "Or maybe... Oh crap. {w}I hope this isn't going to be some dinner party etiquette lesson in preparation for the ball. Would it really be the end of the world if I used the wrong fork for the salad course?"
+    "The more I thought about it, I should have suspected a trap, but I couldn't back out of it now."
     MCT "Alright, time to suck it up and get this over with."
     play sound Knock
     WG "Come in."
@@ -19030,7 +19167,7 @@ label WG068:
     "There she was. Radiant as ever. Judging by the bounce in her step (along with the rest of her), she was in a particularly good mood. She greeted me with a kiss and a soft squeeze."
     "{i}*Clink* {w}*Taptaptap*  {w}*Sizzle*{/i}"
     "The sounds coming from the kitchenette in the dorm told me that Aida was in there cooking up a storm. The rich smell of roasted meat and herbs filled the air in the room."
-    WG "I’m glad you came."
+    WG "I'm glad you came."
     MC "But of course. Tell me though, did I really have a choice?"
     show WG doubt
     WG "No."
@@ -19038,32 +19175,32 @@ label WG068:
     extend " Now come help me set the table."
     MCT "I hate being right."
     "Alice had managed to procure a rather sturdy foldout table from what I assume was the cooking club that they would set out for some of their events."
-    "I was a bit perplexed, seeing as it was far too low class for Alice’s tastes, but once she showed me the ornate table cloth she had me spread across it, it appeared as elegant as anything you might find at a four star restaurant."
-    WG "It’s a good thing you got here in time before our guest of honor arrived. I underestimated the amount of time needed for the table setting."
-    MCT "Guest of honor? Maybe I’m off the hook after all..."
-    MC "Perhaps I’m just too slow?"
+    "I was a bit perplexed, seeing as it was far too low class for Alice's tastes, but once she showed me the ornate table cloth she had me spread across it, it appeared as elegant as anything you might find at a four star restaurant."
+    WG "It's a good thing you got here in time before our guest of honor arrived. I underestimated the amount of time needed for the table setting."
+    MCT "Guest of honor? Maybe I'm off the hook after all..."
+    MC "Perhaps I'm just too slow?"
     show WG neutral
-    WG "I won’t disagree."
+    WG "I won't disagree."
     "I started to deliberately move in slow motion to drive home her point."
     show WG stern
-    WG "Oh, that’s really funny, Dear. I’m beside myself with laughter, if you can’t tell."
-    MC "What? I’m just agreeing with you."
+    WG "Oh, that's really funny, Dear. I'm beside myself with laughter, if you can't tell."
+    MC "What? I'm just agreeing with you."
     "Taking five full seconds to set down a single knife was clearly making her twitchy."
     show WG neutral-2
     WG "Stop that!"
     show WG happy
     extend " Would you pick up the pace?"
     show WG neutral
-    extend " She’ll be here any minute."
+    extend " She'll be here any minute."
     "I knew I was pushing her buttons, but I could tell she had a hard time trying not to laugh, even though she was trying to act mad."
     MC "Hehe, alright."
     "I started laying out the plates and silverware as she was directing me."
     MC "So fill me in, just who is our guest of honor?"
-    WG "Tonight’s dinner is in honor of Aida, for all the work she’s done for me."
-    MC "But isn’t she...?"
+    WG "Tonight's dinner is in honor of Aida, for all the work she's done for me."
+    MC "But isn't she...?"
     show WG neutral at altMove(0.5, 0.25)
     show Sakura happy at Position(xcenter=0.75, yalign = 1.0) with dissolve
-    Sakura "It’s almost done Alice. Just needs to rest for a bit."
+    Sakura "It's almost done Alice. Just needs to rest for a bit."
     show Sakura neutral
     extend " Oh, hello, Hotsure-san. Glad you could make it."
     show WG neutral at Transform(xzoom=-1)
@@ -19071,155 +19208,155 @@ label WG068:
     show Sakura happy
     Sakura "Will do! I have a few finishing touches to do on the pan-sauce anyway."
     hide Sakura with dissolve
-    MCT "Well that’s a relief."
+    MCT "Well that's a relief."
     "For a moment there, I half suspected Alice had put Aida to work making her own celebratory dinner."
     show WG surprised-2
     "Just then we heard the door to the hall creak open."
     show WG neutral
-    extend " It appeared our ‘guest’ as it were, had arrived."
-    PRG "Alice? A-Are you here? I thought you said you’d be—"
+    extend " It appeared our ‘guest' as it were, had arrived."
+    PRG "Alice? A-Are you here? I thought you said you'd be—"
     show PRG surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
-    PRG "Oh! I-I’m sorry. I didn’t realize you had company."
+    PRG "Oh! I-I'm sorry. I didn't realize you had company."
     show PRG embarrassed
-    PRG "I uh... I’ll be in my room."
-    WG "That won’t be necessary. Perish the thought even. Yes, we do have company, yourself included. Come sit down."
+    PRG "I uh... I'll be in my room."
+    WG "That won't be necessary. Perish the thought even. Yes, we do have company, yourself included. Come sit down."
     show PRG flattered
     PRG "Uhm... o-okay... {w}I-It smells really nice in here."
     WG "Please, take a seat."
     "Alice pulled out a chair for Aida, which given her current state required some extra distance. Though upon closer inspection, I realized this table was noticeably higher than usual."
-    "That made it much easier to accommodate a belly as large as Aida’s to approach the table, though given the size of her chest in addition to that—"
+    "That made it much easier to accommodate a belly as large as Aida's to approach the table, though given the size of her chest in addition to that—"
     "I had some serious questions about how she accomplished anything that required reaching forward."
     "I noticed as she sat, Aida scooted herself forward in her chair, and spread her legs out, which allowed her to lean forward and point the majority of her belly down a bit."
     "This combined with the table, while making Aida look a little awkward, allowed her to sit... somewhat comfortably."
-    "Alice really had thought of everything it seemed, not to mention this would in turn also accomodate Alice’s own sizable proportions."
+    "Alice really had thought of everything it seemed, not to mention this would in turn also accomodate Alice's own sizable proportions."
     show PRG embarrassed
-    PRG "A-Are you sure you want me to join you? I don’t want to interrupt your plans with Hotsure-san."
-    WG "You misunderstand, Aida, this isn’t for a date with Keisuke, it’s for you. A thank you for all the work you’ve done for me. I wanted to show my appreciation, a relief from your duties..."
+    PRG "A-Are you sure you want me to join you? I don't want to interrupt your plans with Hotsure-san."
+    WG "You misunderstand, Aida, this isn't for a date with Keisuke, it's for you. A thank you for all the work you've done for me. I wanted to show my appreciation, a relief from your duties..."
     show PRG nervous
     PRG "B-But, Alice. I... I like cooking for you."
     show PRG insecure
-    extend " Y-You haven’t even asked me to do anything for you in at least a few weeks..."
+    extend " Y-You haven't even asked me to do anything for you in at least a few weeks..."
     show PRG unique
     show WG surprised-2
-    extend " I-I thought maybe you weren’t happy with what I made last time..."
+    extend " I-I thought maybe you weren't happy with what I made last time..."
     show PRG insecure
-    WG "Oh no, dear, it’s nothing of the sort."
+    WG "Oh no, dear, it's nothing of the sort."
     show WG neutral
-    WG "It’s just become apparent to me that your time and focus would be better directed elsewhere."
+    WG "It's just become apparent to me that your time and focus would be better directed elsewhere."
     show PRG nervous
     PRG "W-What do you mean?"
     show WG neutral-2
     WG "I think you could benefit from some time off from your duties..."
-    PRG "B-But you’ve already given me two weeks off... I-I’d like to start again soon..."
-    WG "That won’t be necessary, Aida. You’ve done quite enough already. I think it’s best at this stage to focus on yourself and your new family."
+    PRG "B-But you've already given me two weeks off... I-I'd like to start again soon..."
+    WG "That won't be necessary, Aida. You've done quite enough already. I think it's best at this stage to focus on yourself and your new family."
     show WG neutral behind PRG
     show PRG surprised
     WG "In all honesty, I should have found a replacement sooner, but despite my initial hesitations there was really only one suitable alternative for your skills—"
-    PRG "Y-You’re replacing me? W-With who?!"
+    PRG "Y-You're replacing me? W-With who?!"
     show PRG surprised at altMove(0.5, 0.5)
     show Sakura neutral at Position(xcenter=0.75, yalign=1.0) behind PRG with dissolve
     Sakura "The roast is ready!"
     show PRG sad-2 at Transform(xzoom=-1)
     play music Bittersweet
     PRG "S-Sa-Sakura? Y-You knew about this?"
-    Sakura "Wait... You didn’t tell her, Alice?"
+    Sakura "Wait... You didn't tell her, Alice?"
     show WG worried
     WG "Well, not quite I suppose... This is when I was going to tell her."
     show PRG sad
     show Sakura sad-2
     PRG "M-My roommate and my... best friend..."
-    WG "Aida... I don’t know what to say... I thought you’d be happy to not have to work anymore. {w}As your pregnancy has progressed, it’s obviously been more difficult to maneuver in the kitchen like you used to."
+    WG "Aida... I don't know what to say... I thought you'd be happy to not have to work anymore. {w}As your pregnancy has progressed, it's obviously been more difficult to maneuver in the kitchen like you used to."
     WG "Well that and how..."
     show PRG angry at Transform(xzoom=1)
-    PRG "Is that it?! Is that all I am to both of you?! Someone you feel sorry for?! {w}W-Well, I’m not helpless!"
+    PRG "Is that it?! Is that all I am to both of you?! Someone you feel sorry for?! {w}W-Well, I'm not helpless!"
     show PRG angry-2
-    PRG "M-My life is different now, a-and I wish things would’ve been different. I-I do..."
+    PRG "M-My life is different now, a-and I wish things would've been different. I-I do..."
     show PRG angry
-    extend " but that doesn’t mean my life is over! I can still do things!"
+    extend " but that doesn't mean my life is over! I can still do things!"
     pause .5
-    PRG "I don’t need your pity... {w}a-and I don’t want it."
+    PRG "I don't need your pity... {w}a-and I don't want it."
     show PRG sad
     show Sakura sad
     show WG sad
     extend " I just needed some friends, but..."
-    WG "Aida, I’m so sorry. I didn’t mean it that way at all..."
+    WG "Aida, I'm so sorry. I didn't mean it that way at all..."
     show PRG sad-2
     show WG worried
     show Sakura sad-2
-    WG "You’re not helpless. You were a great assistant and you’re an amazing chef. You worked so hard and I-{w}I took advantage of your... agreeableness."
+    WG "You're not helpless. You were a great assistant and you're an amazing chef. You worked so hard and I-{w}I took advantage of your... agreeableness."
     "Alice did have a way with words. If ever there was an eloquent way of calling someone a pushover— that was it."
     WG "I just piled on the workload for you and you never complained, you always took care of everything."
     show WG sad
-    WG "I didn’t treat you like a friend, when you were the only friend I even had at the start of the school year."
+    WG "I didn't treat you like a friend, when you were the only friend I even had at the start of the school year."
     show WG worried
-    WG "It took you becoming pregnant for me to even think to cut back your work schedule to something reasonable. It’s now taken two people to fill in for what you did for me."
-    WG "I don’t feel sorry for you Aida... {i}Sigh{/i}... {i}I{/i} feel guilty."
-    "And there we were at the heart of the matter. {w}I really do love this woman, but I’m not blind to her flaws. She could certainly be demanding, having grown up accustomed to the idea that her every whim would be met."
-    "In retrospect, it wasn’t exactly the best match up between her expectations and Aida’s over-willingness to please."
+    WG "It took you becoming pregnant for me to even think to cut back your work schedule to something reasonable. It's now taken two people to fill in for what you did for me."
+    WG "I don't feel sorry for you Aida... {i}Sigh{/i}... {i}I{/i} feel guilty."
+    "And there we were at the heart of the matter. {w}I really do love this woman, but I'm not blind to her flaws. She could certainly be demanding, having grown up accustomed to the idea that her every whim would be met."
+    "In retrospect, it wasn't exactly the best match up between her expectations and Aida's over-willingness to please."
     show WG sad
     WG "Worse yet, I thought I could just brush this under the rug with this dinner as a nice gesture. I expected you to just go along with it— and that would be that. I wanted the weight off my shoulders."
     "I could tell this whole ordeal had been an uncomfortable realization for Alice. She obviously would have much preferred to brush these feelings and her guilty conscience aside, but I was proud of her for fessing up to her shortcomings now."
     show WG neutral
-    WG "But you’re not a pushover, Aida. You shouldn’t be made to feel pitied."
+    WG "But you're not a pushover, Aida. You shouldn't be made to feel pitied."
     show WG worried
-    extend " I should have come forward to you about all of this a long time ago, like a friend would have done. I’m sorry I haven’t been a good friend."
+    extend " I should have come forward to you about all of this a long time ago, like a friend would have done. I'm sorry I haven't been a good friend."
     show WG neutral-2
-    WG "Please don’t be mad at Sakura. I told her I’d handle the matter of explaining the arrangement, and I obviously haven’t handled it too well. Please don’t take her acceptance of my offer as a betrayal of trust."
+    WG "Please don't be mad at Sakura. I told her I'd handle the matter of explaining the arrangement, and I obviously haven't handled it too well. Please don't take her acceptance of my offer as a betrayal of trust."
     show PRG worried
-    PRG "I-I don’t think you’ve been a bad friend, Alice. Or you Sakura."
+    PRG "I-I don't think you've been a bad friend, Alice. Or you Sakura."
     show PRG embarrassed
-    PRG "I-I’ve just been..."
+    PRG "I-I've just been..."
     show PRG unique
-    "Aida sighed and looked down at herself, away from everyone else’s concerned faces."
+    "Aida sighed and looked down at herself, away from everyone else's concerned faces."
     PRG "... I know how people look at me."
     PRG "I... I know what... p-people think."
-    PRG "O-On a campus of... all of this unknown... I’m the black sheep."
+    PRG "O-On a campus of... all of this unknown... I'm the black sheep."
     show PRG sad
-    PRG "... P-People think I’m a... whore..."
-    PRG "It’s not like I chose this!"
-    PRG "And even among those who... don’t see me that way... I know what they think too..."
+    PRG "... P-People think I'm a... whore..."
+    PRG "It's not like I chose this!"
+    PRG "And even among those who... don't see me that way... I know what they think too..."
     PRG "T-They... they just feel bad for me. T-They see me as a... a helpless girl in a bad situation."
     show PRG nervous
     PRG "I just... I-I hoped you saw me as more than that..."
     show Sakura neutral
     Sakura "Aida..."
-    Sakura "You know I don’t feel that way about you, girl."
-    Sakura "You’re my best friend. Like... the best friend I’ve ever had."
-    Sakura "I’ve seen how you push on in the kitchen. You’re a badass in there, Aida."
-    Sakura "I-I don’t take pity on you. Hell, I look {i}up{/i} to you!"
-    Sakura "And who on earth is going around saying that stuff about you? You know I got your back right? If you hear anyone say something like that I’ll make sure they have a nice long ‘chat’ with Nat."
-    PRG "I-I don’t think that’ll be necessary... b-but thank you, Sakura"
+    Sakura "You know I don't feel that way about you, girl."
+    Sakura "You're my best friend. Like... the best friend I've ever had."
+    Sakura "I've seen how you push on in the kitchen. You're a badass in there, Aida."
+    Sakura "I-I don't take pity on you. Hell, I look {i}up{/i} to you!"
+    Sakura "And who on earth is going around saying that stuff about you? You know I got your back right? If you hear anyone say something like that I'll make sure they have a nice long ‘chat' with Nat."
+    PRG "I-I don't think that'll be necessary... b-but thank you, Sakura"
     show WG neutral
-    WG "I’m sorry if I ever made you feel looked down upon, Aida. But I hope you know that none of us here or in our class see you that way."
-    WG "You’re a very sweet and caring person, Aida... {size=-4}maybe too sweet at times, if I’m being honest...{/size} But everyone we know adores you. Your children are very fortunate to have you as their mother."
+    WG "I'm sorry if I ever made you feel looked down upon, Aida. But I hope you know that none of us here or in our class see you that way."
+    WG "You're a very sweet and caring person, Aida... {size=-4}maybe too sweet at times, if I'm being honest...{/size} But everyone we know adores you. Your children are very fortunate to have you as their mother."
     Sakura "Oh, absolutely!"
     PRG "T-That makes me happy to hear you say that... thank you, you two..."
     PRG "B-But you were right, Alice..."
-    PRG "B-Between school and the cooking club and... my babies, I have... almost too much on my plate. I know I need more rest... {i}*sniff*{/i} I-I just didn’t want to let anyone down..."
+    PRG "B-Between school and the cooking club and... my babies, I have... almost too much on my plate. I know I need more rest... {i}*sniff*{/i} I-I just didn't want to let anyone down..."
     show PRG sad-2
     PRG "... Hngh..."
     show Sakura sad
     show WG sad
-    "As the tears came streaming down Aida’s cheeks, Sakura started bawling."
-    "Alice for her part tried to hold back her tears, but it wasn’t quite enough to stop a few strays from streaming down her cheeks. {w}Even I got a little teary eyed myself, I had to admit."
-    WG "Don’t even think that!"
-    Sakura "You’ve never let anyone down, you’re the best!"
+    "As the tears came streaming down Aida's cheeks, Sakura started bawling."
+    "Alice for her part tried to hold back her tears, but it wasn't quite enough to stop a few strays from streaming down her cheeks. {w}Even I got a little teary eyed myself, I had to admit."
+    WG "Don't even think that!"
+    Sakura "You've never let anyone down, you're the best!"
     play music PRG
     "The emotional crescendo of the moment hit a few bumps when the two bulging women attempted to rush to hug Aida, who was even more spherical than either of the two portly ladies at this point."
-    "The respective bulk of each of the girls gave them pause until they managed to maneuver with their girth into side hugs on their respective sides of Aida’s gravid tummy."
+    "The respective bulk of each of the girls gave them pause until they managed to maneuver with their girth into side hugs on their respective sides of Aida's gravid tummy."
     "It was as heartwarming as it was confusing."
     show PRG neutral
-    PRG "I-I’m sorry I snapped..."
+    PRG "I-I'm sorry I snapped..."
     PRG "I-I know b-both of you look out for me in your own way, and I appreciate it."
-    PRG "B-But... please don’t worry about me so much."
+    PRG "B-But... please don't worry about me so much."
     show PRG blush
-    PRG "I-I don’t want to feel like your responsibility, or just extra baggage. {w}I want to feel like your friend."
+    PRG "I-I don't want to feel like your responsibility, or just extra baggage. {w}I want to feel like your friend."
     show WG neutral
     show Sakura happy
     Sakura "You are, Aida!"
     WG "You are a true friend, Aida. And from now on, I intend to show you are appreciated as such."
     show WG haughty
-    WG "Come now. We shouldn’t delay any further or else the roast will grow cold."
+    WG "Come now. We shouldn't delay any further or else the roast will grow cold."
     play music Peaceful
     show PRG neutral
     show Sakura neutral
@@ -19239,7 +19376,7 @@ label WG068:
     show Sakura happy at Position(xcenter=0.75, yalign=1.0) behind PRG with dissolve
     "Sakura returned with two large platters, one with what looked to be twice baked potatoes, over ladened with cheese and butter in their fluffed up texture, and the other with... green beans?"
     show WG neutral-2
-    WG "The haricot verts look perfectly steamed, Sakura. I can’t tell you the last time I had them prepared properly. The ones they serve at the cafeteria are so waterlogged and dull looking I’d scarcely call them edible."
+    WG "The haricot verts look perfectly steamed, Sakura. I can't tell you the last time I had them prepared properly. The ones they serve at the cafeteria are so waterlogged and dull looking I'd scarcely call them edible."
     MCT "Hairco what? A rose by any other name I suppose."
     "Upon closer inspection, I noticed the bright green veg was glistening with a thick sheen of butter and generously speckled with pieces of finely chopped garlic. Even I thought it looked good."
     show Sakura happy
@@ -19251,23 +19388,23 @@ label WG068:
     Sakura "Here you go."
     "Sakura carved a piece for each of us before serving herself, each porkchop carved from the roast was thicker than any I had ever seen before myself."
     show Sakura happy
-    Sakura "Don’t forget the sage and pepper butter sauce!"
-    "The creamy rich tan sauce smelled divine. It was decadence piled upon richness. I honestly couldn’t eat that much of any of it because everything was so rich, but the girls on the other hand... well they went to town."
+    Sakura "Don't forget the sage and pepper butter sauce!"
+    "The creamy rich tan sauce smelled divine. It was decadence piled upon richness. I honestly couldn't eat that much of any of it because everything was so rich, but the girls on the other hand... well they went to town."
     show PRG excited
     show Sakura neutral
     PRG "You did such a great job Sakura. The meat is so tender!"
     show WG neutral-2
-    WG "I must admit, you’ve really outdone yourself, Sakura."
+    WG "I must admit, you've really outdone yourself, Sakura."
     Sakura "You think so?"
     show Sakura happy
-    extend " I’m glad you like it."
+    extend " I'm glad you like it."
     "Not much conversation was heard between the munching on the succulent roast and the clanking of passing plates between the three of them."
     show WG happy
     show PRG happy
     show Sakura neutral
     "I was in awe of the sight of bulging ladies steadily demolishing the platters of food, enough to have been set out for a banquet, while I could scarcely even finish my single serving."
     "In some regards it was no surprise, each of them had to somehow sustain their current growth trajectory, as incomprehensible as it might be, especially Alice."
-    "But I’d be lying if I didn’t still find the sight of these feasting beauties to be surreal, even after all my time at Seichou Academy. {w}By this point, the oversized crown roast had been reduced to bones."
+    "But I'd be lying if I didn't still find the sight of these feasting beauties to be surreal, even after all my time at Seichou Academy. {w}By this point, the oversized crown roast had been reduced to bones."
     show WG neutral-2
     WG "That was simply delectable, Sakura."
     "Whether subconsciously or simply a lack of her usual restraint, Alice leaned back in her seat, gently rubbing the crest of her noticeably stretched belly. Judging by the look of contentment on her face, it had been a particularly satisfying feast."
@@ -19277,17 +19414,17 @@ label WG068:
     extend " I-If I could make a suggestion, I think some thyme in the sauce would be really good, too."
     Sakura "Hmm. Yeah,  I could see that working really well."
     show Sakura happy
-    extend " That’s a great idea, Aida."
+    extend " That's a great idea, Aida."
     show Sakura neutral
-    Sakura "You know, if I’m going to be cooking for Alice, that means I’m going to be cooking for you too, right?"
+    Sakura "You know, if I'm going to be cooking for Alice, that means I'm going to be cooking for you too, right?"
     show PRG flattered
     PRG "Really?"
-    WG "That’s right."
-    Sakura "You’re free to join me in the kitchen whenever you want."
+    WG "That's right."
+    Sakura "You're free to join me in the kitchen whenever you want."
     show Sakura happy
-    extend " Just for fun, okay? Don’t feel like you have to."
+    extend " Just for fun, okay? Don't feel like you have to."
     show PRG happy
-    PRG "I-I’d like that."
+    PRG "I-I'd like that."
     show WG haughty
     WG "We all would."
     MC "{i}*Ahem*{/i}"
@@ -19295,12 +19432,12 @@ label WG068:
     WG "{size=-6}What? How do you expect me to turn down an offer like that?{/size}"
     MC "..."
     show WG doubt
-    WG "{size=-6}I don’t care if your hair is in the way— don’t give me that look.{/size}"
+    WG "{size=-6}I don't care if your hair is in the way— don't give me that look.{/size}"
     show WG stern
     extend "{size=-6}Okay, fine.{/size}"
     show WG neutral
     show PRG excited
-    WG "You’re free to set your own schedule, Aida. Do keep track of how often you are assisting Sakura so you can be compensated for your time accordingly."
+    WG "You're free to set your own schedule, Aida. Do keep track of how often you are assisting Sakura so you can be compensated for your time accordingly."
     show WG happy
     "Alice shook her head while giving me a knowing smile. I knew her well enough to know it was her own way of admitting I was right."
     "I thought about rubbing it in her face after Aida and Sakura left. But I was so proud of her for coming clean with Aida about everything that I thought it best not to do anything that might discourage her and just enjoyed the moment."

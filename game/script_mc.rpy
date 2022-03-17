@@ -116,7 +116,7 @@ label global000:
     Takamura "Well, looks like they were a little eager to get a move on. Just follow this path here all the way down."
     Takamura "And, here's a key for your dorm! As I'm sure you heard, assembly is tomorrow morning in the auditorium. Welcome to Seichou, Hotsure-san. Hope you enjoy your stay here!"
     MC "Alright. Thank you very much."
-    #hide Takamura 
+    #hide Takamura
     "I took off at a brisk pace, and left the rest of the students behind as I tried to catch up with my group."
     scene black with fade
     pause 1
@@ -1733,7 +1733,7 @@ label MC006_Team1:
     "Naoki tossed the ball to Naomi. She was looking for an opening and tossed it to Shiori—"
     show FMG neutral with dissolve
     extend " but Akira unexpectedly jumped up to intercept it."
-    "As athletic as Akira was, she couldn't contend that well with Naomi's reach as she tried to guard her."
+    "But as athletic as Akira was, she couldn't contend that well with Naomi, who immediately turned back around to guard her."
     hide AE
     show RM neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -2189,7 +2189,7 @@ label MC006_Team2:
     hide AE
     show WG neutral at Position(xcenter=0.25, yalign=1.0)
     with dissolve
-    "Coach Naoki tossed the ball to Alice, who took a casual pace dribbling it up the court until she saw me rushing to defend against her."
+    "Coach Naoki tossed the ball to Alice, who took a casual pace dribbling it up the court until she saw Daichi rushing to defend against her."
     show FMG happy at Position(xcenter=0.75, yalign=1.0) with dissolve
     "Seeing an opening, she passed the ball to Akira."
     FMG "We're getting on the board with this one!"
@@ -2295,7 +2295,7 @@ label MC006_Team2:
     show FMG neutral with dissolve
     extend " but Akira unexpectedly jumped up to intercept it."
     show FMG surprised-2
-    "As athletic as Akira was, she couldn't contend that well with Naomi's reach as she tried to guard her."
+    "But as athletic as Akira was, she couldn't contend that well with Naomi, who immediately turned back around to guard her."
     hide AE with dissolve
     extend " Akira ditched the ball to try to pass to me."
     play sound Thud
@@ -2346,7 +2346,7 @@ label MC006_Team2:
     show BE neutral
     BE "What are you talking about Yamazaki-san? You're our best defender and you're the only one that scored."
     show GTS neutral
-    show AE neutral
+    show AE neutral with dissolve
     AE "I agree with Inoue-san-san."
     show AE pondering
     extend " My efforts at defense were of... mixed results, I would say, for comparison."
@@ -2397,9 +2397,8 @@ label MC006_Team2:
     extend " Shouldn't you be glad?"
     MC "Probably, but I'm just more confused than anything."
     "I didn't have a mirror to see what I was doing, but I don't know if it would have made a difference. Frankly, I had no idea what the hell I was doing."
-    "I just started pinning clips in my hair and tying off wads of it with purple scrunchies a handful at a time. I had never really thought too much about having to style my hair before."
+    "I just started pinning clips in my hair and tying off wads of it a handful at a time. I had never really thought too much about having to style my hair before."
     show BE surprised-2 at altMove(0.5, 0.65)
-    show PRG surprised at Position(xcenter=0.35, yalign=1.0) with dissolve
     "I knew it had to have been a little jumbled, but judging by everyone's reactions, I must have looked like a mangled doll that was styled by a toddler."
     show BE wink
     BE "Oooooh, looking hot, Kei-chan~"
@@ -2520,7 +2519,7 @@ label MC006_Team2:
     show WG angry
     show GTS neutral-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
     extend " Her effort to score though was thwarted when Naomi swatted the ball away before it could reach the goal."
-    MC "Dangit, that was clever of them to switch out Yamazaki-san for Honoka for the goalie."
+    MC "Dangit, that was clever of them to switch out Yamazaki-san for Honoka as the goalie."
     show GTS unique
     GTS "Here, take the ball, Inoue-san."
     hide WG
@@ -2604,7 +2603,7 @@ label MC006_Team2:
     hide GTS
     hide FMG
     with dissolve
-    "Coach Naoki served Honoka the ball. My plan was to toss it to block her to force a pass that Akira would intercept..."
+    "Coach Naoki served Honoka the ball. My plan was to get up in her face to force a pass that Akira would intercept..."
     play sound Whistle
     hide AE
     hide BE

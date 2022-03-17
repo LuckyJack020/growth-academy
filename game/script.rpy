@@ -9,6 +9,17 @@ default persistent.enable_nsfw = True
 transform altMove (xSp, xCen):
     linear xSp xcenter xCen
 
+transform wiggle_loop():
+    easein 0.15 xoffset 20
+    easeout 0.15 xoffset 0
+    easein 0.15 xoffset -15
+    easeout 0.15 xoffset 0
+    easein 0.15 xoffset 10
+    easeout 0.15 xoffset 0
+    easein 0.15 xoffset -5
+    ease 0.15 xoffset 0
+    repeat
+
 init python:
     preferences.set_volume("music", 0.65)
     config.use_cpickle = False
