@@ -162,6 +162,7 @@ init python:
         SUMEXTSG = "summer-exterior-sunglasses"
         SUMINT = "summer-interior"
         SUMINTSG = "summer-interior-sunglasses"
+        TIRED = "tired"
         NOHAT = "nohat"
 
     class ConditionEnum:
@@ -685,7 +686,7 @@ init python:
 
     def setAEOutfit(o):
         global AEOutfit
-        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.CASUAL:
+        if o == OutfitEnum.DEFAULT or o == OutfitEnum.ATHLETIC or o == OutfitEnum.BEND or o == OutfitEnum.NUDE or o == OutfitEnum.DRESS or o == OutfitEnum.TIRED or o == OutfitEnum.CASUAL:
             AEOutfit = o
 
     def setBEOutfit(o):

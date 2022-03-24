@@ -2500,6 +2500,7 @@ label afterchoice_WG014:
 
 label WG015:
     $setProgress("WG", "WG016")
+    $setFlag("XX15")
     scene Hallway with fade
     play music DayByDay
     "It was looking to be a nice spring day, with the gentle morning light breaking through the hallway windows."
@@ -8212,7 +8213,6 @@ label WG039:
     WG "Keisuke? Come in and shut the door, please."
 
     scene Dorm WG with fade
-    $setFlag("DormWG_Seen")
     "Aida was out, so it was just me and Alice, who had her back to me as she sat on her bed."
     MC "What's up?"
     "When she turned around I got the picture."
@@ -8240,10 +8240,9 @@ label WG039:
         "She was smiling, but I was about to break out in a cold sweat."
         "I knew enough about her temper not to step out of line."
     MC "All right, I promise to behave."
-    #[CG from the perspective of kneeling in front of Alice, her belly filling most of the screen and her breasts at the top. Her shirt is mostly buttoned, with the bottom three undone, the flaps parted to reveal her creamy skin and belly button.]
+    show cg WG039 with dissolve
     "I knelt down in front of her and took the two flaps of her shirt. My thumbs pressed lightly against her belly, and I heard her inhale sharply."
     MC "Are you okay?"
-    show WG aroused
     WG "I'm fine. It is just... sensitive."
     MC "It?"
     WG "My belly."
@@ -8254,16 +8253,13 @@ label WG039:
         MC "You sound like Matsumoto-san."
     WG "Hmm?"
     MC "So formal just now. Almost analytical."
-    show WG neutral
     WG "I am simply stating how things are."
     MC "In a detached sort of way."
     "She did not respond immediately. I expected her to tell me to get on with it, but instead she continued."
-    show WG worried
     WG "Staying detached helps deal with this."
     "I nodded, then realized she couldn't see me."
     MCT "Better get on with it."
     "I took the shirt flaps and pulled them together. Because there was no extra room I had to run my thumbs along Alice's belly, eliciting another moan."
-    show WG aroused
     WG "{i}Ephhh, ohhh{/i}!"
     "She tried to suppress this one, or at least keep it quiet, but it was no use."
     "And, none too surprisingly, her arousal affected me. That and the fact that I was kneeling in front of her with her big, soft, bulging belly inches from my face."
@@ -8279,16 +8275,13 @@ label WG039:
 label WG039_c1_1:
     MCT "The third date is when you're supposed to go all the way, yes? By that line of logic we're a bit overdue here."
     MCT "It's not out of line to treat light petting as a stone on the path to actual sex, is it?"
-    if getFlag("WG037_c2_2"):
-        MCT "And on our last date she kissed me. Does that not open any doors for me?"
+    MCT "And on our last date she kissed me. Does that not open any doors for me?"
     "It took a bit to psyche myself up for what I was thinking."
     "But once the idea was in my head, it became inevitable. The potential risk of angering Alice didn't compare to the anticipated rewards."
     "I thought about starting slow, but decided if I was going to go I had to go all out."
     "I pressed one hand against her belly and rubbed it in a wide circle. Not rough, but as sensual as I could manage with my heart racing."
     "Alice's reaction was instant."
-    show WG surprised-2
     WG "Oh!"
-    show WG stern
     WG "What are you doing?!"
     MCT "Oh, poopie. I didn't expect her to be that angry."
     "First reaction? Abort mission!"
@@ -8304,6 +8297,7 @@ label WG039_c1_1:
 label WG039_c2_1:
     MC "Just playing around!"
     "I pulled my hand away immediately, then grabbed the shirt and resumed closing it."
+    hide cg with fade
     stop music
     show WG angry
     "Alice wasn't having it, though."
@@ -8312,9 +8306,9 @@ label WG039_c2_1:
     MC "I-! I just thought it would be funny."
     show dummy with hpunch
     WG "Get your hands off me!"
-    #[Return to normal background.]
     show WG angry at center with dissolve
     $setAffection("WG", -1)
+    #BEP
     WG "Get out."
     MC "I'm sorr-"
     WG "No! I don't want to hear it! Out!"
@@ -8338,18 +8332,18 @@ label WG039_c2_1:
     jump daymenu
 
 label WG039_c2_2:
-    $setFlag("WGdom")
     MC "Sorry! My hand slipped!"
     "I pulled my hand back at once, chastened by the whipcrack of her tone, but I didn't panic."
-    "She was simply too intimidationg for me to press further."
+    "She was simply too intimidating for me to press further."
     WG "Hmmm..."
     show WG haughty
     WG "Very well... next time I'm sure you'll know to not be so rash."
     "Her voice was even-tempered, in a chilling way, but I still let myself give a sigh of relief. Too quiet to be heard, of course."
     "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
     "She was going to have to be careful the rest of the day."
-    #[Revert to Int. Alice's room]
-    show WG neutral at center with dissolve
+    hide cg
+    show WG neutral at center
+    with dissolve
     WG "This is adequate, which is the best I can hope for in this situation."
     WG "Thank you, Keisuke."
     MC "Glad to help. And sorry about my hand slipping."
@@ -8406,34 +8400,32 @@ label WG039_c2_3:
     MC "Oh. Right."
     "I took her shirt in hand again and buttoned it for her, with just a little difficulty."
     MC "You're going to have to be careful for the rest of the day."
-    #hide CG
-    show WG neutral with dissolve
     WG "I should be upset that you would take advantage of me when I needed help like that, but you less crossed the line than stuck your foot over it."
-    show WG happy
     WG "And it would be an obvious lie if I said I had not enjoyed it."
-    show WG neutral
     WG "But do not make a habit of letting your hands off the leash like that."
     WG "Spontaneity can become harassment very quickly."
     MC "Oh! I-I wasn't trying to force myself on you!"
-    show WG happy
     WG "I know. And I respect that you took the initiative."
-    show WG neutral
     WG "Though..."
     MC "What?"
     "Alice placed her hands on the sides of her belly and jiggled it ever-so-slightly."
-    show WG neutral-2
     WG "Nothing."
-    MC "It's all right to find this enjoyable."
-    show WG worried
+    MC "It's alright to find this enjoyable."
     "She didn't say anything, just looked down to the side."
     "This wasn't the first time she had gone silent when the issue of her growing had come up, but I didn't want to let it spoil the moment this time."
     MC "I mean it. I'm not saying you're wrong to be upset about how things are turning out..."
     MC "...but trying to find the positive doesn't mean 'what's good despite everything else.' Sometimes something isn't good or bad, it's both."
     MC "You can't separate looking bigger and finding it pleasing to be bigger. They're both related to your factor, and true acceptance-"
-    show WG neutral
     WG "I get it."
     "She wasn't curt, but her tone did sound decisive."
-    WG "Yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.'"
+    WG "...You know Keisuke, the job is done, you can stand back up at any time."
+    MC "Oh! Right... don't mind me, just uhh, admiring my handy-work is all."
+    WG "I appreciate the rather {i}thorough{/i} inspection, but I think that's enough for now."
+    "Her tone was a bit more playful than impatient, but I thought it was best to stand back up in order to avoid overstaying my welcome."
+    hide cg
+    show WG neutral
+    with dissolve
+    WG "But to your point just now— {w}yes, this situation does have its upsides, and no, I should not try to look at it as a collection of parts I consider 'good' or 'bad.'"
     WG "My father told me something similar shortly after I got here, that I should take this all as it is in total."
     show WG worried
     WG "But I..."
@@ -8472,8 +8464,9 @@ label WG039_c1_2:
     MCT "Better play it safe."
     "Being as careful as possible not to rub Alice's belly, holding my fingers away from her middle except for those holding the shirt flaps, I tugged the two sides together and buttoned it up."
     "She was going to have to be careful for the rest of the day, but the job was done."
-    #hide CG
-    show WG neutral with dissolve
+    hide cg
+    show WG neutral
+    with dissolve
     WG "This leaves me little room to breathe, but it will do."
     show WG happy
     WG "Thank you, Keisuke. And thank you for not being too handsy."

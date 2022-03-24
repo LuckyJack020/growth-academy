@@ -2314,6 +2314,7 @@ label AE014:
 
 label AE015:
     $setProgress("AE", "AE016")
+    $setFlag("XX15")
     scene Hallway with fade
     "As I walked down the halls, my mind kept flashing back to yesterday's incident. Specifically, my mind travelled more towards the worry that Shiori-san may have realized by now that it wasn't my pocketbook she was rubbing up against."
     MCT "I am NOT looking forward to having to work in such a cramped environment again."
@@ -12246,27 +12247,28 @@ label AE053_c1_after:
     MC "Hm? What?"
     MC "A-"
     MC "..."
-    show AE neutral at Position(xcenter=0.75, yanchor=1.0) with dissolve
+    show cg AE053_mirror1 with fade
     "I couldn't believe my eyes. It was as though the girl I saw once before in Shiori's bed had returned. She was dressed in a tight pink bodycon dress, a magenta sash tied around her waist."
     "The outfit being made for her body type, it clung to her body, leaving a definite outline of her enormous tush."
     "For the first time since I'd seen her, Shiori didn't just look like 'The Student Council President', when I saw her... I saw a girl."
     WG "Oh. My. God."
-    show WG happy
     WG "I... I wasn't sure it would be the case, but pink really DOES work well for you!"
-    show AE surprised
     AE "It does?"
     "Hearing her voice gave me whiplash. I was still in shock from just how different she looked."
     MC "Shiori, you... {i}asked{/i} Alice to find you a tube dress?"
     WG "She simply asked for something pink. It's a bit revealing, but she {i}does{/i} look rather nice, hm?"
     AE "I... I look beautiful?"
     MC "Well, yeah!"
+    show cg AE053_mirror2 with dissolve
     "Shiori turned around, her humongous rump facing us as she did her best to pat it, she then ran her hands along her sides as she looked at herself in shock, blushing pink enough to make her dress look pale."
     AE "I look..."
-    show AE happy
     AE "Ehe... ehehehe~"
     MC "A-Ah."
     "Nikumaru-san and I both looked at her with wide eyes and open mouths."
     MCT "Did Shiori just... giggle?!"
+    hide cg
+    show AE happy at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
     "Now I was without a doubt convinced; this woman was not my girlfriend."
     MC "U-Um... you... you just giggled."
     show AE surprised

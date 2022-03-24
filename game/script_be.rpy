@@ -1751,6 +1751,7 @@ label BE014_c1_after:
 
 label BE015:
     $setProgress("BE", "BE016")
+    $setFlag("XX15")
     scene Hallway
     show BE sad
     with fade

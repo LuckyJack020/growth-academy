@@ -147,15 +147,12 @@ label FMG003:
     MC "Bruh, we just started here and I'm getting dogpiled with homework. School. School never changes."
     FMG "HEY KEISUKE!!!"
     MC "!"
-    show FMG neutral
+    show FMG neutral with dissolve
     MC "Damn, girl, relax. You scared me half to death."
     FMG "Heh, sorry. I get a little excited sometimes."
     MCT "If that's a little, I'm worried about how she'll be when she's really excited..."
     play music FMG
-    show FMG neutral at Transform(xzoom=-1):
-        linear 0 xpos -0.5
-        ease 0.5 xpos 0.2
-    show FMG happy at Position(xpos=0.2), Transform(xzoom=1)
+    show FMG happy
     FMG "Sooooooo, how're you?"
     MC "Uh, bored and stressed... I'm blown away by how much homework has been thrown my way. We just started here and I got like maybe three papers due by the end of the week."
     show FMG sad
@@ -221,9 +218,9 @@ label FMG003_c1:
     MC "Um... No, I don't, t-that's why I-"
     show FMG surprised
     FMG "Oh crap! The bell's gonna ring in like thirty seconds!"
-    show FMG neutral at Transform(xzoom=-1)
     show FMG neutral:
-        ease 0.75 xpos 0.9
+        xzoom -1
+        ease 0.75 xpos 1.2
     FMG "Later!"
     "She yelled out before sprinting down the hall... leaving me bewildered."
     hide FMG with dissolve
@@ -245,9 +242,9 @@ label FMG003_c2:
     FMG "I'll admit I'm a little disappointed, but I'm more glad you're willing to give it a shot."
     MC "Well I am willing as long as-"
     FMG "Oh crap! The bell's gonna ring in like thirty seconds!"
-    show FMG neutral at Transform(xzoom=-1)
     show FMG neutral:
-        ease 0.75 xpos 0.9
+        xzoom -1
+        ease 0.75 xpos 1.2
     FMG "Later!"
     "She yelled out before sprinting down the hall... leaving me bewildered."
     hide FMG with dissolve
@@ -257,23 +254,34 @@ label FMG003_c2:
     jump daymenu
 
 label FMG003_c3:
-    $setAffection("FMG", -1)
-    MC "Um look it's nice of you to offer but I got too much to worry about with school and everything else."
-    "Upon me saying this her facial expressions turned from hopeful to disappointed."
-    stop music
-    show FMG sad
-    FMG "Oh... okay."
-    MC "I'm sorry about this, but thanks for the offer."
-    FMG "No it's fine, I'm not made of glass. If you change your mind you know where to find me..."
-    MC "...So, see you later?"
-    FMG "Yeah. Later."
-    show FMG neutral at Transform(xzoom=-1)
-    show FMG neutral:
-        ease 0.75 xpos 0.9
-    "I honestly felt kinda bad for her but I got too much on my plate to worry about exercise."
-    hide FMG
-    "...Like the fact I'm going to be late for class if I don't move!"
-    jump daymenu
+    MCT "Do I really wanna say no here? I mean... it couldn't hurt to just try..."
+    jump FMG003_menu_again
+
+label FMG003_menu_again:
+    menu:
+        "Eagerly agree":
+            jump FMG003_c1
+        "Agree but at your own pace":
+            jump FMG003_c2
+        "I could always... say no?":
+            jump FMG003_c3_2
+
+label FMG003_c3_2:
+    MCT "W-Wait, what? Why would I say no?"
+    jump FMG003_menu_again2
+
+label FMG003_menu_again2:
+    menu:
+        "Eagerly agree":
+            jump FMG003_c1
+        "Agree but at your own pace":
+            jump FMG003_c2
+        "I could always... say no?":
+            jump FMG003_c3_3
+
+label FMG003_c3_3:
+    MCT "Still probably not a good idea to say no here..."
+    jump FMG003_menu_again
 
 label FMG004:
     $setProgress("FMG", "FMG007")
@@ -760,43 +768,188 @@ label FMG007:
 
 label FMG008:
     $setProgress("FMG", "FMG009")
-    scene Dorm Exterior with fade
+    scene Gym with fade
+    play music Busy
+    "I came by the gym after class. Well, after I stopped back at my room to change into some more comfortable clothes. {w}I wasn't sure when I was supposed to meet up with her. We hadn't exactly agreed on a specific time to meet up."
+    "I walked around a bit to see if I could find her, but after going through the place I didn't see her."
+    show FMG neutral with dissolve
+    "Until now that is."
+    show FMG flex
+    FMG "Glad to see you showed up. You ready for this, dude?"
+    MC "Of course. Hey, how come I got here before you did?"
+    show FMG neutral
+    FMG "I told you I was gonna go for a jog before I got started. Gotta get the blood pumping a bit before a heavy session."
+    FMG "I take it you're all warmed up?"
+    MC "Well, um... not exactly."
+    show FMG sad
+    FMG "I'd recommend you do a little bit. Why don't you jump on one of those bikes for a while?"
+    show FMG neutral
+    extend " Say for about ten minutes or so?"
+    MC "Okay, will do!"
+    show FMG happy
+    FMG "Great! I'll get us set up in the squat rack while you warm up."
+    hide FMG with dissolve
+    "I don't know if I spent a full ten minutes on the bike, but it sure felt like I did. It was getting kind of boring sitting on that thing for so long, not to mention the hard seat was taxing another type of endurance I hadn't signed up to train today."
+    "Either way, my legs had a slight burn to them and I felt a good pump that told me I was warmed up enough to start working out with Akira."
+    show FMG upbeat with dissolve
+    "I walked over to find Akira grinding out some reps on the squat. Judging by the intense expression on her face, she was really getting into it."
+    MCT "75kg, not too shabby for a girl. I'm impressed."
+    show FMG neutral
+    FMG "You ready to jump in on this?"
+    MCT "This is a bit much... But I can't look like a wimp in front of her."
+    MC "You betcha!"
+    show FMG flex
+    FMG "Awesome! That's what I like to hear."
+    show FMG neutral
+    extend " Seriously, you don't know how much it means to have someone else to work out with me. People either don't follow through or they just give up after a few sessions."
+    MC "No problem. I'm in it for the long haul. {w}So what do you want me to do?"
+    show FMG flex
+    FMG "Do a full set of ten reps. This is all about building mass."
+    show FMG angry-2
+    extend " No cheating depth either."
+    show FMG neutral
+    extend " Make sure you drop your hips past parallel to your knees."
+    MCT "Ten reps? I was thinking like five max, holy crap!"
+    MC "Okay..."
+    "Not gonna lie, it'd been a minute since I had done this kind of thing in gym class at my old school. I got under the bar, took it off the rack, and sat down with it until I thought I couldn't go any further, and stood back up."
+    MCT "A little shaky, but not too bad."
+    show FMG angry
+    FMG "What was that!?"
+    MC "What? I did what you said."
+    show FMG angry-2
+    FMG "I don't recall telling you to hunch over on your tippy-toes and barely bend at the knees."
+    MC "Oh... That bad huh?"
+    show FMG sad
+    FMG "Sorry, that came out wrong."
+    show FMG neutral
+    extend " I said I was going to help train you. It wouldn't be training if I could assume you just knew everything."
+    FMG "Here, let me show you."
+    "Akira swapped herself out with me under the bar and proceeded to unrack it."
+    FMG "You gotta sit back with it, drive through the heels, not the toes. Your thighs should reach a depth that's parallel to your knees. It's gonna feel like you're sticking your butt out a bit, like so."
+    "Akira proceeded to demo the motion."
+    play sound Boing
+    "I was definitely feeling something as I watched Akira stick her butt out more than a bit."
+    MCT "Those squats are definitely working. This girl is fit!"
+    FMG "Did you get that?"
+    MC "Uh... yeah. Of course."
+    show FMG angry-2
+    FMG "You were staring at my ass, weren't you?"
+    menu:
+        "Yeah... sorry about that.":
+            show FMG neutral
+            $setAffection("FMG", 1)
+            FMG "Pfft! Haha, don't be so nervous, dude. I told you to pay attention. I mean, you were {i}supposed{/i} to look. I was just messing with you."
+        "Nope, not at all!":
+            $setAffection("FMG", -1)
+            FMG "Then where were you looking? I told you to pay attention."
+            MC "Oh! Umm yeah. I mean, I sorta did."
+            show FMG neutral
+    FMG "Anyway, I think you get the point now."
+    show FMG happy
+    extend " Go for it!"
+    show FMG neutral
+    "I unracked the bar and proceeded to follow Akira's instructions. I leaned back a bit more this time, sticking my butt out a bit more and drove through my heels, going all the way down."
+    MCT "Oh man, this is way harder."
+    FMG "Not bad. Alright, nine more reps."
+    show FMG happy
+    extend " You got this!"
+    MCT "! {w}Oh boy, I'm boned."
+    "I grinded out the set like I was told. Doing it the right way was so much harder. I was huffing and puffing by the end. It was a total body experience."
+    show FMG flex
+    FMG "Nice job!"
+    show FMG neutral
+    extend " Alright, now that we got the warmup set done, it's time for the real stuff."
+    MCT "WHAT? {w}Real what!?"
+    "Before I could object, Akira loaded the bar up to 100 kilos."
+    FMG "We'll start a bit light with just three sets of ten today."
+    MCT "I'm half dead after one! I'll be a pile of rotting goo after three more!"
+    MC "Heh... fine by me."
+    "But it was not fine."
+    MCT "Apparently it's possible to squat without a spine."
+    "The next few sets were a blur. Whether they were stricken from my memory by sheer trauma or I actually passed out at some point, I don't know."
+    "But after getting a close-up look of Akira's ass (and she was in damn good shape, if I had to say so) I could have crawled across a floor of broken glass with a smile."
+    MC "{i}Whew{/i}... I did it."
+    show FMG flex
+    FMG "Great job!"
+    show FMG neutral
+    FMG "Alright, time for leg extensions."
+    MC "Wait, there's more?"
+    show FMG happy
+    FMG "Of course! We have leg extensions, then leg curls, then we're gonna finish out with leg presses. {w}I thought about throwing in hack squats, but we can save those for another time."
+    "My peripheral vision began to fade as my brain shifted into survival mode. {w}I contemplated the merits of jumping out the window in lieu of trying to finish the rest of this."
+    show FMG aroused
+    FMG "I mean, if you're up for it that is."
+    MC "Absolutely!"
+    MCT "What is it about being weak for a toned ass that makes me think I'm strong?"
+    show FMG happy
+    FMG "Alright! Let's get to it!"
+    MCT "Tell my mother I love her."
+    "I don't know how I managed to lift the weights for the rest of the exercises when I felt like I could barely move without them between sets."
+    "Call it stubborn pride, foolishness, or just straight up hormones, I didn't want to let Akira down."
+    "Maybe she already thought I was a wimp, judging by how I limped along the rest of the way. But part of me thought she was just happy to have someone to do this kind of thing with."
+    show FMG flex
+    FMG "Great work, dude!"
+    show FMG neutral
+    FMG "Drink some chocolate milk and hit the showers. Try to get some rest so you can recover."
+    show FMG flex
+    extend " We're gonna hit chest next session. It'll be fun!"
+    MC "Yes... Fun... Thanks for the pointers, and uh... keeping me motivated."
+    MCT "What a slam dunk there, stud."
+    show FMG neutral
+    FMG "I'll catch you later. I'm looking forward to next time. I'll see you in class."
+    show FMG happy
+    extend " Later dude!"
+    hide FMG with dissolve
     play music Schoolday
-    "I wasn't really going anywhere today, just felt like going for a walk and taking in the sights."
-    "Days're a bit hotter, students are hanging out, Mizutani-san is trying to get something under a vending machine, wind's a bit- ...Wait, what?!"
-    "My mind wasn't playing tricks; Akira Mizutani was on her knees trying to get something from under the machine."
-    show FMG angry
-    FMG "Oh come on, you stupid pencil!"
-    "She groaned in frustration before getting up, once she did she saw me watching her."
-    show FMG sad
-    FMG "*Sigh* Hey."
-    MC "Um... What's wrong?"
-    FMG "Ugh. My only pencil fell behind the vending machine and my arm's too big to fit. I'd move the stupid machine if I wasn't afraid I might break something!"
-    "She went to grab a fallen stick from one of the trees, and went back down to the vending machine to try to poke the pencil out. Alas, the stick only pushed the pencil further back."
-    show FMG angry
-    FMG "A-Are you for real!? Ugh!"
-    MC "Sorry to hear that, do you want to borrow a pencil?"
-    "She calmed down before answering."
-    show FMG neutral
-    FMG "Nah. I'd feel like I owed you a new one, and I barely got enough cash for myself."
-    MC "Well, is there anything else I could do?"
-    FMG "Actually... Hey, you got smaller hands than I do, think you could grab it for me?"
-    MC "Oh, sure, I'll try."
-    MCT "Wait, what did she say about my hands? Nevermind..."
-    "It was hard to reach, but I got it."
-    show FMG happy
-    FMG "All right, thanks dude!"
-    FMG "..."
-    show FMG sad
-    FMG "Huh... You know something... That's one thing I'm not looking forward to..."
-    MC "Excuse me?"
-    FMG "My muscles. Well, the whole growth thing in general. With how things are going, I'm gonna grow so big, it's going to be hard to fit in small places."
-    show FMG neutral
-    FMG "Don't get me wrong, I'm looking forward to see how big I might get, I just hope I'm not sacrificing my mobility in the process."
-    FMG "It's worrying, but like I said before; whatever happens, I accept it with open arms."
-    show FMG happy
-    FMG "Anywho, it's been fun but I gotta jet! Thanks again!"
-    "Huh. now I'm beginning to wonder if I got lucky or not with my growth..."
+    "In contrast to Akira's fast track back to her dorm, I could barely manage a snail's pace without shaking in my knees."
+    MCT "Ut oh... I'm in trouble."
+    "I began the slow walk back to my dorm, each step carefully chosen so I didn't randomly crumple on the pavement."
+    MCT "Now I know how grandma must feel."
+    "On second thought, grandma could run circles on me at this point."
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm Interior with fade
+    "I finally made it back to my dorm after taking the elevator to my floor. I probably should have studied, but I knew before I set one foot inside I wasn't doing jackshit. I just went to bed I was so exhausted."
+    scene black with fade
+    pause .5
+    $setTime(TimeEnum.DAY)
+    scene Dorm Interior with fade
+    "I awoke the next day refreshed from a good night's sleep."
+    play sound Thud
+    "Only to fall out of bed flat on the floor when my legs didn't move to catch me."
+    MC "Ow! Holy crap this hurts!"
+    play music RM
+    show RM neutral with dissolve
+    RM "Why are you on the floor?"
+    MC "Would I be here if I had a choice?"
+    show RM smug
+    RM "Mizutani-san must have done a number on you."
+    MC "How did you know?"
+    show RM neutral
+    RM "I've seen you hanging out together."
+    MCT "I'm starting to wonder what this guy {i}doesn't{/i} see at this point."
+    MC "{i}Ughh{/i}... I've never been this sore in my life."
+    show RM doubt
+    RM "You know, if you get too sore you can develop rhabdomyolysis."
+    MC "Rabdo-what!? Does it have to do with getting in super great shape real fast?"
+    RM "No, it's when you have so much muscle damage processing the waste products causes kidney failure."
+    MC "Am I going to die? I mean, I feel like I'm dying."
+    show RM distrustful
+    RM "You're probably fine. Just tough it out."
+    MC "Tough it out? I can't even stand up!"
+    show RM angry
+    RM "You brought this on yourself. Don't expect me to carry you to class. Maybe you should ask Mizutani-san."
+    MC "{size=-6}Heh, I wish.{/size}"
+    show RM distrustful
+    RM "What was that?"
+    MC "Nothing. Alright. I'll figure something out. Since you don't want to carry me, can you at least grab me something from the cafeteria for breakfast while I figure out how to get my legs working again?"
+    show RM neutral
+    RM "I don't think I should reward your misjudgments, but since you appear to be suffering enough for them, I'll bring back something for you."
+    MC "Thanks for doing me a solid. I owe ya."
+    hide RM with dissolve
+    "Every movement of my legs was agony, I didn't know how I was going to get to class, and I felt like a total idiot, but even with all of that, I was mostly just thinking about when I'd see Akira again."
     jump daymenu
 
 label FMG009:
@@ -1404,180 +1557,140 @@ label FMG014:
     scene School Planter with fade
     play music Schoolday
     "You know, sometimes you gotta just walk around campus and see the sights. The gardens looked beautiful that time of year, it's great to enjoy yourself without a care in the-"
-    FMG "KEISUKE!!!"
-    MCT "Oh god she's running straight at me again!"
-    "..."
-    MCT "And she's bigger this time!"
-    "Once again I prepared for my immediate demise, but alas, Mizutani-San stopped just before I could be reunited with my Great Uncle Lee."
-    show FMG neutral with dissolve
-    FMG "Hey dude, you got a sec?"
-    MC "...Y-yes?"
-    MCT "This girl is going to be the death of me."
-    show FMG sad
-    FMG "I need your help with something. I'm sucking at algebra and I need your help with the quiz next week."
-    MC "Oh, you need me to help you study?"
+    FMG "Yoooo, Kei!"
+    MC "{size=-6}Mhm, guess nothing good lasts forever.{/size}"
+    pause 0.25
+    show FMG angry-2 with dissolve
+    FMG "I heard that!"
+    MCT "Bruh, how?"
+    MC "Heh, what's up?"
     show FMG neutral
-    FMG "Hell no. I need you to convince your roommate to get the answer sheet for me."
-    ". . ."
-    MCT "I have several questions!"
-    MC "Okay first off, why my roommate? Second of all what makes you think he can even get the sheet in the first place!?"
-    FMG "Because a few days after the nurse appointment thing, I was getting a bottle of water from the vending machines when I saw that he was using his 'Special Tactics', i.e. he was hiding in a tree. I snuck up on him and he just jumped off and ran like hell."
-    "Honestly, I should have asked more questions to that... but I was getting a headache at the idea of my roommate and Akira in one room."
-    MC "If you know of him, why don't you ask him yourself?"
-    show FMG sad
-    FMG "I would if he was easy to get into contact. I've tried to find him, but given his... 'Tactics', he's not the kind of guy that wants to be found."
+    FMG "Nothing much..."
+    show FMG angry
+    extend " Except being disrespected by a fake friend!"
+    MC "Ah, shucks! I'm sorry that's happening. Anything I can do to help?"
     show FMG neutral
-    FMG "So yeah, can you get him?"
-    jump FMG014_c1
-
-label FMG014_c1:
-    menu:
-        "Agree":
-            jump FMG014_c1_1
-        "Teach her yourself" if not getFlag("FMG014_testfail"):
-            jump FMG014_c1_2
-        "Don't do it":
-            jump FMG014_c1_3
-
-label FMG014_c1_1:
-    MC "*sigh* Fine. I'll go find him."
+    FMG "You can buy me ice cream."
+    MC "On second thought, it's easier to make fun of you..."
+    show FMG sad
+    pause .25
     show FMG happy
-    FMG "Yes! Thanks dude, I'll be waiting behind the bookstore."
-    MCT "We have a bookstore?!"
-    scene Dorm Interior with fade
-    MC "Hey Daichi, Can I talk to you about something?"
-    show RM neutral with dissolve
-    RM "Depends are you bugged?"
-    MC "H-How should I know?!"
-    show RM smug
-    RM "Good answer. You're learning."
-    MCT "Come on, you can do this... probably."
-    show RM neutral
-    RM "So what do you need?"
-    MC "You know Mizutani right?"
-    RM "Big girl, muscle growth factor, brown hair and eyes. Has an unhealthy - and given her lifestyle, ironic - obsession with arcade games and ice cream?"
-    MC "Yeah."
-    RM "What about her?"
-    MC "She wants you to steal the answer sheet for algebra class."
-    RM "She does realize the teacher would give everyone F's if that were to happen, right?"
-    MC "...Why aren't you denying that you can't steal it?"
-    show RM happy
-    RM "Because I can. You've known me long enough to know that."
-    MCT "What gave you that idea!?"
-    show RM neutral
-    RM "Alright, I'll meet with her, where is she?"
-    MC "At the bookstore... Hey, did you know-"
-    show RM angry
-    RM "Oh my god, look out the window! What's Inoue-san doing? Is she taking off her shirt?"
-    hide RM with dissolve
-    if getAffection("BE") > 5:
-        MC "Oh great, what has she gotten herself into now..."
-        "Thankfully, when I looked out of the window, there was no exposed Honoka."
-        MC "Well that's a relief, but Daichi why-"
-        "As I turned around, there was nothing there but an open door and the faint. sound of Daichi running."
-    else:
-        MC "Wait, really!?"
-        "I ran towards the window, alas there was no topless Honoka... And I heard Daichi running out the door..."
-    MC "..."
-    "I looked up to the heavens, as if they could answer my prayer for answers."
-    scene Town with fade
-    play music BrightLights
-    "By the time I got to the back of the bookstore, Akira... was all alone. I have no idea why I thought Daichi would be here."
-    show FMG neutral with dissolve
-    FMG "Hey dude, how'd it go?"
-    MC "He told me he'd be here, but where is he?"
-    FMG "Oh he's behind you."
-    MCT "What."
-    show RM neutral at Position (xpos=0.25, yalign=1.0), Transform(xzoom=-1)
-    show FMG neutral at Position (xpos=0.75)
-    with dissolve
-    RM "Hello."
-    MC "AHHH!"
-    MC "Dude! How?!"
-    FMG "Meh, does it matter?"
-    MC "Yes! And how come you're so calm about this?!"
-    FMG "Because I'm looking at the bigger picture."
-    MC "Can you at least tell me how you know each other?"
-    RM "No time, Matsumoto-san may show up and give us a lecture, which is why I agreed to this meeting."
-    MC "That just raises more questions! Why would Shiori giving us a lecture make you agree to this meeting?!"
-    show RM angry
-    "He simply gave me an annoyed look."
-    MCT "These guys are going to be the death of me!"
-    FMG "So can you get that sheet?"
-    show RM neutral
-    RM "I can, but I have one condition."
-    show FMG angry
-    FMG "Ugh, you're lucky I'm desperate. What are your terms?"
-    RM "I need a bodyguard. My investigations have gotten some powerful people angry at me; so I need the biggest, strongest person at this school. That's where you come in."
-    RM "Since this is a long term commitment to short term requirement, I'm willing to pay you for your services as well; let's say 1500 a day?"
+    FMG "Mind if I sit?"
+    MC "Be my guest."
+    FMG "Thanks. {w}You ready for the pre-calc quiz next week?"
+    MC "Ah... no. No, I am not. Mainly due to the fact I didn't know we even had one..."
     show FMG neutral
-    FMG "Fine, that works."
-    show RM happy
-    RM "Thank you for your cooperation. Is that everything?"
-    FMG "Ya, later and thanks."
-    RM "So long!"
-    hide RM with dissolve
-    "Upon saying that, he throw something on the ground... it was a rock. When I looked up, Daichi was gone..."
-    show FMG happy at Position(xpos=0.5)
-    FMG "Well, glad to get that done. Thanks for your help, Kei. See ya!"
-    hide FMG with dissolve
-    MC "..."
-    MC "God, I need some ibuprofen now."
-    jump daymenu
-
-label FMG014_c1_2:
-    MC "You know, I can help you with your homework."
-    FMG "Oh really, then?"
-    "She pulled out a piece of paper from her bag, I assume that it was her homework, and my assumption was correct."
-    FMG "What is 7x+5=2(x+10)?"
-    if getSkill("Academics") < 5:
-        MC "...Umm... can I have a piece of paper?"
-        $setAffection("FMG", -1)
-        show FMG angry
-        FMG "Ugh, I'm not wasting all this time dude."
-        show FMG sad
-        FMG "Can you stop messing around and go get your weird roomie, please?"
-        $setFlag("FMG014_testfail")
-        jump FMG014_c1
-    else:
-        MC "If you give me a piece of paper, I can show you."
-        FMG "Ah all right, you seem to know what you're doing."
-        "Reluctantly, Akira handed me a piece of paper. It took me a bit but in the end..."
-        MC "And there you have it, 3."
-        $setAffection("FMG", 2)
-        show FMG surprised
-        FMG "...Wow, really? Looks like you showed me, huh?"
-        show FMG neutral
-        FMG "I guess I don't need that sheet after, if you help me, that is."
-        MC "I would love to help you."
-        show FMG aroused
-        FMG "T-Thank you, I appreciate it."
-        scene black with fade
-        pause 1
-        scene School Planter with fade
-        "I spend the rest of the day helping Akira with her homework. By the time we were done, the sun was starting to set."
-        MC "Well, that's everything then."
-        show FMG happy with dissolve
-        FMG "Yep! Hey, it's getting late; we should call it a day. Thanks again!"
-        hide FMG with dissolve
-        MCT "You know, I can't help shake the feeling like I really helped her. I wonder what is in store for us."
-        jump daymenu
-
-label FMG014_c1_3:
-    MC "*sigh* Look, I'm sorry, but I got such a headache right now that I'm just going..."
-    $setAffection("FMG", -2)
+    FMG "That's tough... Sounds like you're going to fail."
+    MC "I get the feeling I'd be happier if you didn't make me feel bad about myself."
+    FMG "Yeah... probably. But there isn't anything fun about that."
+    MC "True, true. {w}Um, soooo, do you know what's going to be on the quiz at least?"
+    show FMG neutral
+    FMG "Ah..."
     show FMG sad
-    FMG "Wow... Dick move."
-    MC "Look I-"
-    FMG "Nope. Glad to know your headache is more important than my grades. If you need me, I'll be staying up all night trying to figure out the test..."
+    extend " ...No"
+    show FMG neutral
+    FMG "It might be about trigonometry. {size=-6}Freaking hate trigonometry...{/size}"
+    MC "..."
+    MC "That leaves us with only one option."
+    show FMG neutral
+    FMG "Drop out and never come back?"
+    MC "If only it was that simple. No, we have to study. It won't be too bad, I swear. I have to be good at math since I've decided to be an architect."
+    FMG "A shame."
+    MC "It's the path I chose to walk even if it's a slow one."
+    MC "Well then, you ready to go? I don't know how much of this I'll be able to handle."
+    FMG "Yeah, might as well get it over with."
+    scene black with fade
+    pause 1
+    scene Library with fade
+    MC "Luckily, I have my notes with me. I don't know how up-to-date it is, but we should be okay."
+    MC "Aaah, pre-calc..."
+    show FMG neutral with dissolve
+    FMG "You want to do me a solid and breakdown trigonometry for me. I'm terrible at it if you couldn't guess."
+    MC "Don't worry about it, everyone is bad at something. {w}Take me for example. I'm terrible at being unfunny."
+    show FMG sad
+    FMG "...I wouldn't say that."
+    show FMG neutral
+    FMG "I'd say you're semi-decent during our workouts. You slack in some areas and it causes me physical pain sometimes... but it could be worse."
+    MC "Gimme a break. We both know I'm insane in the gym."
+    FMG "Uh-huh... How much can you curl again? Five kilos?"
+    MC "How weak do you think I am??? I'm probably the strongest guy you know!"
+    FMG "Technically that's true because you are the {i}only{/i} guy I know. I'm not counting Daichi. He weirds me out."
+    MC "That makes two of us. That being said, this further reinforces the fact that I'm the best."
+    show FMG sad
+    FMG "We should start studying. You're embarrassing yourself."
+    MC "Finnnne. I guess we can start."
+    show FMG happy
+    MC "You said you needed help with trigonometry so that's where we'll start. {w}What is giving you trouble with it?"
+    show FMG neutral
+    pause .25
+    show FMG sad
+    FMG "Everything."
+    MC "That narrows it down, thankfully. Uh, we can start with the basics and see where that gets us. Sound good?"
+    show FMG neutral
+    FMG "Totally, thank you."
+    MC "Hmmm... I'll do my best to keep it as simple as possible. Trigonometry is dealing with the sides and angles of triangles. It's nothing crazy."
+    MC "Now you can witness my sick drawing skills as I make this ninety degree triangle."
+    "I might as well be the next Katsushika Hokusai with how beautifully put together this triangle was."
+    MC "Now {i}that{/i} is talent."
+    FMG "You made a triangle..."
+    MC "Do you not see how straight those lines are?!?! I'd like to see you do better."
+    FMG "Nah, I don't feel like it. This is most likely all you have going for you so I can't make you feel even worse about yourself."
+    MC "..."
+    pause .25
+    MC "Figure it out yourself, bro."
+    show FMG surprised
+    FMG "What?! No! Kei, I was kidding. I swear!"
+    MC "Yeah, you better. Now tell me how great a triangle that is."
+    show FMG neutral
+    FMG "It's a great triangle."
+    MC "Good. Now say you can never draw something so perfect."
+    show FMG sad
+    FMG "Kei..."
+    MC "I understand. You don't want to pass and admit how talented I am. I'll take my stuff and leave while you think about what you've done."
+    show FMG neutral
+    FMG "Are you always like this?"
+    MC "No, but did I make you feel bad?"
+    FMG "A little. I got over it when you started speaking more. It ruined the mood a bit."
+    MC "..."
+    "I scribbled a quick trigonometry problem on the same piece of paper as my masterpiece and pushed it towards her."
+    MC "Solve it."
     show FMG angry
-    FMG "Again."
-    hide FMG with dissolve
-    MC "...God, I hope she doesn't take this personally..."
+    FMG "You didn't even teach me how!"
+    MC "I planned on it but you ruined the vibe when you kept talking."
+    FMG "..."
+    show FMG neutral
+    FMG "Okay, we're even... For now at least."
+    MC "We won't be even for long. Do you know how much you owe me for helping you out with math? My inconvenience fees aren't cheap."
+    show FMG angry-2
+    FMG "What!?! You can't just make up some imaginary fee. I didn't agree to this."
+    MC "You wouldn't have wanted to learn anything if I charged upfront."
+    pause .5
+    show FMG neutral
+    FMG "{i}sigh{/i}... You're right."
+    MC "I know. I usually am."
+    FMG "You are! You're the smartest guy I know too!"
+    MC "Is that sarcasm I detect?"
+    FMG "...No."
+    MC "Mhm. I see. So what side of the triangle is the hypotenuse?"
+    pause .25
+    show FMG sad
+    FMG "I don't know..."
+    MC "I guess it's going to stay like that. Unfortunate."
+    show FMG neutral
+    FMG "I'll stop being mean, I promise."
+    MC "Pinky promise and we can start gaining some knowledge."
+    FMG "Sure. If that's what you want."
+    pause .5
+    MC "We'll start with the hypotenuse and go from there. But if you make one sly comment, we stop."
+    "She bit her lip holding back what I assumed would've been another roast at my self-esteem."
+    MC "That's what I thought!"
+    FMG "When we're finished here, I'll get you don't worry."
+    MC "I'm going to drag this out just for {i}you{/i}."
     jump daymenu
 
 label FMG015:
     $setProgress("FMG", "FMG016")
+    $setFlag("XX15")
     scene Town with fade
     play music HigherEdu
     "The day began with a rain shower that followed suit till the afternoon, giving the air a more clean sensation. With it being the weekend, I felt like going out on the town with some spending money."

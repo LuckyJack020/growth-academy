@@ -1774,6 +1774,7 @@ label GTS014_after:
 
 label GTS015:
     $setProgress("GTS", "GTS018")
+    $setFlag("XX15")
     scene Dorm GTS with fade #this should change eventually
     play music Busy
     Ryoko "...And cut! Good job everyone!"
