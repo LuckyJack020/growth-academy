@@ -660,6 +660,7 @@ label global000_RM:
         "Keisuke Hotsure. I... think this is my room?":
             jump global000_RM_c2
         "Don't worry, sir. I'm from the government, just making an inspection!":
+            $setFlag("global000_RM_c3")
             jump global000_RM_c3
 
 label global000_RM_c1:
@@ -899,6 +900,7 @@ label global000_sit_c3:
 
 
 label global000_sit_c1_1:
+    $setFlag("global000_sitAE")
     hide WG with dissolve
     MC "So, Matsumoto-san..."
     show AE neutral at altMove(0.5, 0.5)
@@ -916,6 +918,7 @@ label global000_sit_c1_1:
     jump global000_sit_after
 
 label global000_sit_c1_2:
+    $setFlag("global000_sitWG")
     hide AE with dissolve
     MC "Hi there, Nikumaru-san..."
     show WG neutral at altMove(0.5, 0.5)
@@ -934,6 +937,7 @@ label global000_sit_c1_2:
     jump global000_sit_after
 
 label global000_sit_c2_1:
+    $setFlag("global000_sitBE")
     hide GTS with dissolve
     MC "Find your dorm okay, Honoka?"
     show BE happy at altMove(0.5, 0.5)
@@ -952,6 +956,7 @@ label global000_sit_c2_1:
     jump global000_sit_after
 
 label global000_sit_c2_2:
+    $setFlag("global000_sitGTS")
     MC "What was your previous school like, Yamazaki-san?"
     show GTS neutral
     GTS "Mine?"
@@ -974,6 +979,7 @@ label global000_sit_c2_2:
     jump global000_sit_after
 
 label global000_sit_c3_1:
+    $setFlag("global000_sitFMG")
     hide PRG with dissolve
     MC "Needed the room to stretch out, Mizutani-san?"
     show FMG neutral at altMove(0.5, 0.5)
@@ -996,7 +1002,7 @@ label global000_sit_c3_1:
 
 label global000_sit_c3_2:
     hide FMG with dissolve
-    $setFlag("global000_satPRG")
+    $setFlag("global000_sitPRG")
     MC "Seems kinda lonely back here, Kodama-san..."
     show PRG sad at altMove(0.5, 0.5)
     PRG "Oh! Uhm... I-I guess..."
@@ -1263,6 +1269,370 @@ label MC001:
     scene Dorm Exterior with fade
     "Still though, there was something about his advice to read between the lines that stuck with me. That I'd be missing out if I didn't develop myself to my full potential. {w}Something to think about at least."
     "More importantly though, this was the start of something new, there were a lot of new people to meet. Hopefully some were worth getting to know."
+    jump daymenu
+
+label MC002:
+    scene Classroom with fade
+    play music Schoolday
+    pause .25
+    "The knowledge I'd picked up over my first week or so at the academy had been, for the most part, things completely outside of my scope."
+    "The oversized doorways and halls, the remote campus and island, and the looming idea of our bodies morphing in ways that would have to be seen to believe were, in every way, the stuff of fiction."
+    pause .25
+    "And, the more I thought about it, the more I was wondering if I'd fallen into some wicked fever dream."
+    "Even in this fever dream realm, however, I still sat in class."
+    "Apparently, classes were the same no matter where I was, same sort of subjects and all."
+    "I rubbed my eyes a bit. That post lunch haze had set in like a bird in a nest, and the effects of my bowl of zaru soba had more than shown themselves."
+    show HR neutral with dissolve
+    pause .25
+    HR "... created from bone, shells, antlers, and..."
+    "I rubbed my eyes a bit to shake off my laziness, and brought pencil back to paper."
+    MCT "It's Saturday tomorrow... just pull through."
+    pause .25
+    HR "With hunting and gathering being the main focus during this time, it led to a much more simple life. However, that's not to say things were easy."
+    HR "Could anyone tell me when the middle Jōmon period specifically began?"
+    show HR neutral at altMove(0.5, 0.75)
+    show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    pause .25
+    HR "Nikumaru-san?"
+    WG "... 3500 BC."
+    HR "Not quite. Anyone else? Anyone?"
+    hide WG
+    show AE neutral at Position(xcenter=0.25, yalign=1.0)
+    with dissolve
+    pause .25
+    HR "Matsumoto-san?"
+    AE "3520 BC."
+    HR "Correct."
+    hide AE with dissolve
+    pause .25
+    HR "This time period saw the rise of pottery vessels and figurines, as well as jewelry."
+    show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    "Across the room, Naomi put her hand up."
+    HR "Yes, Yamazaki-san?"
+    GTS "This is when the migrating communities began to move into the more mountainous regions of Japan, correct?"
+    HR "That is correct, yes. The land was warming quite a bit during this time, and these groupings of people became much more sedentary in their lifestyles."
+    hide GTS with dissolve
+    pause .25
+    "I quickly made a heading for the Middle Jōmon period and underlined it, then jotted these notes down as quickly as I could."
+    HR "Now, we're running short on time, so I would like you all to do a bit of research tonight and over the weekend."
+    HR "Write a short summary of each of the Jōmon sub-periods, with some detail of the defining features of each. It doesn't have to be anything crazy long. Two paragraphs for each will be sufficient."
+    HR "However, I do mean two paragraphs of solid work. Show that you have a grasp of the topic, and you'll do fine."
+    if isEventCleared("BE001"):
+        show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        pause .25
+        "I glanced over to Honoka's desk."
+        "Surprisingly, she was actually jotting down some notes and not... I don't know, looking out the window or something?"
+        MCT "Seems like she's learned to be more productive since our childhood days."
+        if getFlag("global000_sitBE"):
+            MCT "I do wonder how she's getting along since that first day in the auditorium. Think we all got a sufficient mental shock that day."
+        hide BE with dissolve
+    elif isEventCleared("AE001"):
+        pause .25
+        show AE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        "Ahead of me, I could hear Shiori writing away fervently at her paper."
+        MCT "Well, I don't doubt that she'll have two pages for each period."
+        "The back of her head told me nothing, but I could already imagine the look on Tashi-sensei's face after collecting her work."
+        if getFlag("global000_sitAE"):
+            MCT "At least she seems a little more relaxed since that first day in the auditorium."
+            MCT "Though, it's not like the back of her head really has feelings..."
+        hide AE with dissolve
+    elif isEventCleared("FMG001"):
+        pause .25
+        "I glanced over toward Akira's desk."
+        show FMG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        "To her credit, Akira did have her notebook out on her desk. But from what I could see, she seemed to have more scribbles and the occasional doodle than anything else."
+        MCT "Well... guess she'll figure it out."
+        if getFlag("global000_sitFMG"):
+            MCT "She seems more comfortable, at least compared to that day in the auditorium."
+        hide FMG with dissolve
+    elif isEventCleared("GTS001"):
+        show GTS neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        pause .25
+        "Across the room, Naomi jotted down more notes and looked up expectantly at the front of the room."
+        MCT "Based on her question, she seems to already have a grasp on this stuff pretty well."
+        MCT "Maybe she comes from a background riddled with history buffs and the like."
+        if getFlag("global000_sitGTS"):
+            MCT "She's got that same sort of careful precision that I saw during the principal's address that day. Like laser focus."
+        hide GTS with dissolve
+    elif isEventCleared("WG001"):
+        show WG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        pause .25
+        "I glanced over at Alice as she jotted down some notes."
+        MCT "Geez, after that shut down from Tashi-sensei, I'm surprised Alice isn't giving him a death glare or something."
+        MCT "... Though, that could easily happen down the line."
+        hide WG with dissolve
+    elif isEventCleared("PRG001"):
+        pause .25
+        "I glanced across the room."
+        show PRG neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+        pause .25
+        "Aida sat quietly nearby Alice, writing quickly."
+        MCT "Huh. By the looks of her paper, she's almost writing... too much."
+        if getFlag("global000_sitPRG"):
+            MCT "... Guess she really wants to have all of her bases covered."
+        hide PRG with dissolve
+    pause .25
+    "Overhead, the bell rang out over the masses."
+    show HR neutral
+    HR "And that'll be it. Have a good weekend."
+    hide HR with dissolve
+    "The class began to pack up around me, and I glanced down at my notebook with a feeling of shame nibbling at me."
+    pause .25
+    "I had... three lines of notes."
+    MCT "Damn... stupid zaru soba. Totally skipping lunch next week."
+    if isEventCleared("BE001"):
+        show BE happy with dissolve
+        "I looked up and watched as Honoka packed herself up and left the room."
+        hide BE with dissolve
+    elif isEventCleared("AE001"):
+        show AE neutral with dissolve
+        "In front of me, Shiori rose from her seat and put her supplies back into her bag in an incredibly organized fashion, especially as far as bookbags were concerned."
+        hide AE with dissolve
+    elif isEventCleared("FMG001"):
+        show FMG neutral with dissolve
+        "I happened to glance across the room and watched as Akira almost literally swept the contents of her desk off and into her bag, then got up and left. All of this in under five seconds."
+        hide FMG with dissolve
+    elif isEventCleared("GTS001"):
+        show GTS neutral with dissolve
+        "I looked lazily toward the windows and watched Naomi finish a page of notes, then store her notebook away."
+        "She got up, then set to work organizing her bag on her desk."
+        hide GTS with dissolve
+    elif isEventCleared("WG001"):
+        show WG neutral with dissolve
+        "At the sound of the bell, Alice rose from her seat and began storing the contents of her desk away piece by piece, so organized in fact that I was picturing her cleaning up after a business conference instead of an average university styled class."
+        hide WG with dissolve
+    elif isEventCleared("PRG001"):
+        show PRG sad with dissolve
+        "As I slipped my notebook into my bag, I looked over and saw Aida slipping her notebook away and into her bag. From where I sat, I couldn't really make much out, especially with the glare of the window, but she got up and hurried off and out of the room."
+        hide PRG with dissolve
+    pause .25
+    show RM neutral with dissolve
+    "Following the rest of the class, Daichi got up from his seat and walked near-silently out of the room."
+    MCT "He even walks like he's got some sort of off-the-wall plan."
+    if getFlag("global000_RM_c3"):
+        MCT "Maybe I'd better remind him to look out for oncoming balconies..."
+    else:
+        MCT "Well, whatever he's on about is his problem."
+    hide RM with dissolve
+    pause .25
+    "I put my bag back on my back. I knew that what I had for notes wasn't going to cut it."
+    show HR neutral with dissolve
+    "At the front of the room, Tashi-sensei was packing up his things as most of the students left, save for a few stragglers."
+    MCT "Alright. The key is to look interested, not lazy."
+    pause .25
+    MC "Excuse me, Tashi-sensei?"
+    HR "Mm? Yes, Hotsure-san? Need something?"
+    MC "Yes, Sensei. I was wondering if you had an idea where I could look for more information on the Jōmon period."
+    MC "I'd try the internet, but I'd rather find information that I know is sound instead of flipping a coin for it online."
+    HR "Ah, understandable. Yes, information online can be rather dubious."
+    HR "I do have a book on the topic that I've been using to brush up on the topic myself. You're free to borrow it, if you'd like. Of course, I expect to see it again on Monday."
+    MC "That would be wonderful, Sensei. And thank you. I'll make sure to get it back to you on Monday."
+    HR "Fine then. I have it back in the faculty room."
+    "Tashi took his bag and walked toward the door."
+    pause .25
+    HR "Come along. I'd rather not have to take extra time to run the book back here to you."
+    MC "Ah... students are allowed in the faculty room, Sensei?"
+    HR "Alone? Far from it. However, I'm accompanying you, and it'll be a few minutes at most. It's no trouble."
+    MC "Alright. Thank you, Sensei."
+    "Tashi nodded and walked out the door, holding the door behind him so I could follow."
+    scene Hallway with fade
+    pause .25
+    "Walking down the hallway alone was usually like what I imagined a fish felt like in a river."
+    "Everything rushed by quick, and split second decisions felt like they'd save you time, or add on minutes."
+    pause .5
+    "Walking with Tashi-sensei felt like being a remora on a shark."
+    pause .25
+    "... A very tired looking shark."
+    "Tashi and I walked silently down the hall together, neither of us saying a word."
+    scene Hallway2 with fade
+    "We passed clubrooms, other classrooms, and students as we went down the halls."
+    scene HallwayStairs with fade
+    "Near the end of one hall, we passed a set of stairs and went along down another hall, where I saw a door with a light on off to one side."
+    "Tashi reached out and opened the door, holding it open as he walked in, followed by me."
+    scene Faculty Room with fade
+    stop music
+    pause .25
+    "Inside, the room was quiet. However, it was far from empty."
+    "In the middle were some desks pressed together to form a sort of ‘mega-desk.'"
+    play music Rain
+    "At it sat a familiar looking teacher, who upon further inspection, I recognized from when I'd first arrived on the island with Tomo."
+    pause .25
+    "Across from her was a man that I could only describe as a stereotypical professor type, with thick, black-rimmed glasses perched on his nose."
+    "He held a newspaper in front of him, and was skimming through it with a bored look on his face."
+    pause .25
+    "At the other end of the megadesk sat a guy who I swear, looked like he'd been at the gym for the last four years of his life. His shoulders bulged out against the fabric of his shirt as he made some notes on some papers."
+    "All the way across the room stood two other teachers, who were literally standing around the water cooler."
+    "One of them had not just one, but three whistles around his neck, and was chatting warmly with the other teacher."
+    MCT "Who the hell's attention is he trying to get with those?"
+    #show Takamura happy
+    Takamura "My my, Tashi-chan. You look like you could use a nap or three."
+    pause .25
+    show HR annoyed with dissolve
+    HR "... I've told you not to call me that."
+    #show Takamura reassuring
+    Takamura "Oh, I'm just teasing. Always such a stiff, Tashi-chan."
+    "Tashi waved his hand and shook his head in disbelief, choosing instead to rummage through one of his bags."
+    hide HR with dissolve
+    #show Takamura neutral
+    Takamura "Ah, another Hotsure. My word. What brings you here?"
+    MC "Ah... pardon, Sensei?"
+    Takamura "You're the brother of my Hotsure, aren't you?"
+    MC "Another Hotsure? You're Tomo's homeroom teacher then?"
+    Takamura "Indeed."
+    pause .25
+    #show Takamura reassuring
+    Takamura "Guess you and I both get to teach the members of the Hotsure clan, hm Tashi-chan?"
+    show HR annoyed with dissolve
+    HR "Egh... {w}He's borrowing a book from me for an assignment I'm having his class work on."
+    #hide Takamura with dissolve
+    HR "Do me a favor, Hotsure-san, and have a seat over by Takamura-san."
+    hide HR with dissolve
+    "I nodded as the look in his eyes turned from a dull, blasé look to one that asked ‘please do this for me for the love of all that's holy.'"
+    "I walked around the table and took a seat by Takamura-sensei. In front of her was a large binder with multiple colored tabs sticking out from hoards of paper."
+    #show Takamura happy with dissolve
+    Takamura "So, how have your first few days been here, Hotsure-san? Well enough, I hope."
+    MC "Yeah, I'd say so. Thank you for asking, Takamura-sensei."
+    Takamura "Of course!"
+    #show Takamura reassuring
+    Takamura "And, if I may, how are you feeling in regards to the knowledge of what the academy is here for? And, how it applies to you?"
+    MC "I... well, I'm doing my best to keep doing what I'm doing, I suppose."
+    MC "It is definitely not what I was expecting upon coming here, though."
+    #show Takamura neutral
+    Takamura "Your perspective is one of realism. I can't fault you there."
+    Takamura "I'm glad to hear you've been able to keep yourself grounded through all of these admittedly hectic first few days."
+    show HR annoyed with dissolve
+    HR "No privacy for him at all, Takamura-san?"
+    #show Takamura strict
+    Takamura "Well, my apologies for assuring that our students are feeling alright."
+    HR "All I'm saying is that you ought to keep your eyes on your own responsibilities. Not everyone needs the close talk treatment."
+    Takamura "Maybe you'd be comfortable with that sort of approach if you'd had someone reach out to you in a similar way when you were younger."
+    pause .25
+    HR "..."
+    pause .25
+    HR "There's nothing wrong with presenting the facts."
+    Takamura "No there isn't. But, those facts aren't exactly light on new ears, Tashi-chan."
+    pause .25
+    HR "So, let me ask you this, then. Why all of the fuss over this extra... fluff?"
+    "Tashi waved one hand over Takamura's overstuffed binder."
+    HR "Why worry so much over it?"
+    #show Takamura happy
+    Takamura "Someone has to."
+    "Takamura clicked her tongue twice and raised her eyebrows at Tashi."
+    "Tashi rolled his eyes and dug his head into a larger locker off to one side."
+    hide HR with dissolve
+    #show Takamura neutral
+    MC "So, if I may, Sensei. How is my sister doing in your class?"
+    Takamura "Well, she's always on time. She does seem a tad quiet, but that's nothing unusual, especially given the circumstances of a new academy with all new people to get to know."
+    "In front of her, Takamura shut her binder and set it on the desk."
+    pause .25
+    Takamura "You'll have to excuse me. I'm finishing some references for an upcoming project that I'm working with the principal on."
+    Takamura "It's a rather tall order, but I think that with proper application, we could have something wonderful here."
+    Takamura "Oh, but come to think of it, I suppose you haven't met most of the rest here, have you?"
+    MC "Ah... not yet, no."
+    #show Takamura reassuring
+    Takamura "Well, we can't have a guest here feeling unintroduced."
+    pause .25
+    #show Takamura happy
+    Takamura "Tsubasa-sensei? Rest your eyes for a moment."
+    "Across from us, the older teacher lowered his paper just enough to look over the top."
+    #show Takamura neutral
+    #show Tsubasa neutral
+    Tsubasa "Hm?"
+    Takamura "We have a visitor, courtesy of Tashi-chan."
+    HR "..."
+    "The older teacher lowered his paper to the desk, and I recognized him as one of the biology or math teachers. The subjects kind of blended together for me."
+    Tsubasa "And you are?"
+    MC "Keisuke Hotsure. It's nice to meet you, Sensei."
+    Tsubasa "Likewise."
+    "And, the paper went right back up, hiding his face."
+    Takamura "Tsubasa-sensei has been here for ages. Longer than anyone else, I think."
+    Tsubasa "How are your parents, Aoi-san? Doing well, I trust?"
+    pause .5
+    MCT "... He could at least lower the paper."
+    pause .25
+    #show Takamura happy
+    Takamura "Quite well, thank you. Just celebrated their anniversary a few weeks ago actually."
+    Tsubasa "How nice."
+    pause .25
+    #show Takamura neutral
+    Tsubasa "I assume that your efforts are going into the recent Caverns project?"
+    Takamura "They are, Sensei. I think you'll find it quite intriguing once our ideas take shape."
+    "Tsubasa-sensei coughed twice, then flicked his paper a bit and turned the page."
+    #show Takamura happy
+    "I glanced over at Takamura, and she waved one hand with a small laugh."
+    Takamura "And at the end there is our young pup. Yoshito Hageshi."
+    #show Takamura neutral
+    #show Hageshi neutral
+    "Hageshi-sensei glanced up from his pile of papers."
+    Takamura "How long have you been here now, Hageshi-san? Five years now?"
+    pause .25
+    Hageshi "... Four, actually."
+    #show Hageshi satisfied
+    Hageshi "And, last time I checked, you've been here for only three years. So, by my count, you'd be the ‘young pup.'"
+    #show Takamura happy
+    Takamura "And, who's the youngest teacher in the room?"
+    pause .5
+    #show Hageshi neutral
+    Hageshi "..."
+    pause .25
+    "My eyes immediately went to his bulging biceps and shoulders. The dude looked like he could legitimately throw a car."
+    #show Takamura neutral
+    "In addition, he was tall, and seemed to fill the entire room around him, especially compared to Takamura."
+    Takamura "He's the academy's math teacher, so you'll probably see him sooner or later."
+    show HR neutral
+    HR "Do yourself a favor and don't start any fights around campus."
+    HR "Yeah, you might start it with some guy that looked at you funny, but you'll end it with Hageshi-san. And, you don't want that."
+    hide HR with dissolve
+    #hide Hageshi
+    #hide Takamura
+    "Behind Hageshi-sensei, the two teachers by the water cooler left their positions and exited the room. As they left, I noticed the whistles around the neck of that one faculty member wearing an athletic outfit."
+    if isEventCleared("BE003"):
+        MCT "Huh. That's the same outfit that Honoka had on the other day."
+    pause .25
+    #show Takamura neutral
+    MC "If I may, Takamura-sensei, what's with the... uh..."
+    Takamura "The whistles?"
+    MC "Yes, Sensei."
+    Takamura "Well, I'll allow him to introduce himself to you another time, but he's in charge of a number of clubs around the academy."
+    Takamura "Ergo, lots of whistles."
+    MC "I... see..."
+    pause .25
+    #show Hageshi neutral
+    Hageshi "I thought the whistle thing was a joke between students?"
+    Takamura "Well, joke or not, he's a busy man."
+    #show Tsubasa annoyed
+    Tsubasa "Pardon? Are you saying that my-last-name-is-too-long-san is wearing whistles for every club he coaches?"
+    pause .25
+    Tsubasa "Ridiculous compensation."
+    pause .25
+    #hide Takamura
+    #hide Hageshi
+    #hide Tsubasa
+    show HR neutral with dissolve
+    HR "Alright, Hotsure-san. Here you are."
+    "Tashi handed me a thick book with some light wear to the front cover and spine. On the cover was what appeared to be some old pottery and a typical, cheesy ‘I had no idea what to put on the cover, so here's a landscape' image."
+    pause .25
+    MC "Thank you, Sensei. I really appreciate it."
+    HR "Take a look through there. It should have some information on every sub-period."
+    HR "Again, I'll expect it back on Monday."
+    MC "Yes, Sensei."
+    pause .25
+    #show Takamura reassuring
+    Takamura "Pardon me, Tashi-chan, but why all the worry over this extra fluff?"
+    #show Takamura flattered
+    Takamura "Bending over backwards to help a student? Could it be that the cold and brash Tashi-chan does have a warmer side?"
+    HR "..."
+    #show Takamura neutral
+    pause .5
+    HR "Have a good day, Hotsure-san."
+    MC "Y-Yes. You as well, Sensei."
+    Takamura "Lovely to meet you again, Hotsure-san."
+    hide HR with dissolve
+    #hide Takamura
+    "Tsubasa and Hageshi both nodded politely at me from where they sat as I left the room, shutting the door quietly behind me."
+    scene HallwayStairs with fade
+    "I was no more than 15 steps down the hall when I heard more banter from the faculty room behind me."
+    "I held the heavy book under my arm and went to immerse myself in ancient history."
     jump daymenu
 
 label MC003:

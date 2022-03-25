@@ -19437,6 +19437,416 @@ label WG068:
     jump daymenu
 
 label WG069:
+    $setProgress("WG", "WG070")
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    $setWGOutfit(OutfitEnum.DRESS)
+    scene Dorm Interior with fade
+    play music Sunset
+    MCT "I hope this tie is done correctly. Haven't tried to do this by myself since the 4th grade."
+    "Looking in the mirror I continued to try and straighten my attire the best I could. The suit was a little short on the arms but fitting otherwise. My hair on the other hand is gonna be the real challenge."
+    MCT "I bet Alice will have a better solution to anything I can come up with to deal with this. I really need to decide on a style for this mop."
+    "Checking my phone I realized I needed to get moving towards Alice's room so that we could make our ride."
+    scene Dorm Hallway with fade
+    "As I approached her door, I thought back to our previous conversation about meeting her father."
+    MCT "This is really happening isn't it? Just remember to stay calm and be yourself."
+    MCT "Well, maybe jazz it up a bit, this is Alice's father after all."
+    "As I raised my hand to knock I could already hear sounds of grunting and shouting. The one shouting was Alice for sure but there was another voice I couldn't discern."
+    play music WGAlt
+    WG "Ouch watch the needle."
+    UNKNOWN "Sorry it's hard to miss any part of you."
+    WG "You could at least try not to push so hard."
+    play sound Knock
+    "*knock knock*"
+    show Chibuki neutral with dissolve
+    "I was surprised to see Chibuki answer the door with a needle and thread in hand."
+    Chibuki "Your boyfriend is here."
+    WG "Wonderful! He's early."
+    "Chibuki pointed me towards the bedroom where I found Alice in the process of putting on her dress."
+    hide Chibuki
+    show WG neutral
+    with dissolve
+    MC "That's a nice dress, it looks familiar."
+    WG "I wore it when we went to the theater on one of our dates."
+    MC "Have you added more details to it?"
+    show WG neutral-2
+    WG "A few, wanted to try out some techniques."
+    show WG haughty
+    extend " How did they come out?"
+    MC "Pretty nice I'd say. Adds more to its grandeur."
+    show WG doubt
+    WG "Is your hair cooperating today?"
+    MC "Sorta, it was worse this morning, but it's still proving to be a pain for me."
+    show WG happy
+    WG "Here, I got you something that I think will be of great use."
+    "Alice reached into her purse and pulled out a small black box."
+    MC "A gift for me? This is your big night, if anything I should have got you something instead."
+    show WG haughty
+    WG "I consider it a gift to myself. You'll see. Go ahead and open it."
+    "I pulled off the top of the box which revealed a shiny obsidian cylindrical piece of fine jewelry quality metal. It had a pin in it, with my name ‘Hotsure' in kanji engraved on it."
+    MC "I love it! {w}...What is it?"
+    show WG neutral
+    WG "Remember how I told you I'd find a way to tame these wild locks?"
+    MC "To be honest, I thought you had given up on the prospect. I know I had."
+    show WG haughty
+    WG "What makes you think I'd ever give up on something? Much less yourself. {w}It's a hair clip and pin. One that is actually sturdy enough to be up to the task of restraining this untamed mane."
+    "At this point, I had my doubts about ever getting my hair under control again. If I cut it and styled it, it just grew back before the end of the day. Attempting to comb it was a nightmare of tangles, and it always took forever."
+    "I was over it... but at the same time it did kind of gnaw at me that I could never seem to get it to look that good."
+    MC "Would you do the honors?"
+    show WG happy
+    WG "I thought you'd never ask..."
+    hide WG with dissolve
+    "I turned around and let Alice do her magic. I felt a lot of tugs here and there as she pulled back, twisted, and folded handfuls upon handfuls of hair."
+    "Eventually the flurry of motion at the back of my head stopped and I felt the pin slide in."
+    show WG happy with dissolve
+    WG "Here take a look."
+    "Alice handed me a mirror, and I couldn't believe what I saw!"
+    "She had managed to weave and fold up my hair (that hung down to my waist at this point) up to the tops of my shoulders into a sort of topknot on the back of my head. It looked badass, like I was some kind of suave and sophisticated samurai."
+    "I couldn't help but feel a bit of moisture swelling up in my eyes."
+    WG "What do you think?"
+    MC "I-I love it!"
+    show WG surprised-2
+    "I didn't even think about it, out of sheer gratitude I instantly reached into Alice to give her a hug, squeezing her tight while her soft body yielded indefinitely, with a soft kiss on her lips. {w}I continued to squeeze her tightly."
+    MC "Thank you, Alice. Ever since my hair started growing out of control, I felt like a shaggy dog, and that I looked like a doofus. This is the first time since I came to Seichou that I thought my hair actually looked good."
+    show WG happy
+    WG "You look handsome, Dear. And very fitting for the occasion. {w}I must say I'm quite proud of myself whenever I get to help you realize your untapped potential."
+    MC "I have to assume there's a lot left to tap into."
+    "Alice gently booped her finger to my nose."
+    WG "That may be true, but I've found more than enough already. {w}I'm looking forward to the rest."
+    MC "We should probably get you sorted out now."
+    WG "That would certainly be the best course."
+    show WG happy at altMove(0.75, 0.25)
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    "She looked around me to see Chibuki, who I had almost forgotten was even here, leaning against the door."
+    Chibuki "Don't mind me. Didn't want to interrupt you two making out."
+    show WG doubt
+    WG "I wouldn't call that making out."
+    Chibuki "Don't sugar coat it, you might eat it, which won't make this easier."
+    "I would've expected Alice to lash out at this kind of talk, but since it was Chibuki, she merely gave it an exaggerated eye roll."
+    WG "Have some faith, we just need to approach this from a different angle. Kei dear, do you mind leaving us for a moment?"
+    MC "No problem, I'll be waiting in the main room."
+    hide WG
+    hide Chibuki
+    with dissolve
+    "Departing the room and taking a seat at the table I could hear the disgruntled mutterings and subtle cursing from the bedroom."
+    "I did find myself running my hand over the gift, such a small item made my head feel lighter."
+    show WG haughty with dissolve
+    "When the bedroom door reopened, Alice's dress was more properly fitting, although it looked quite tight around her prodigious abdomen."
+    "Her ponderous chest had been pushed up and I noticed her trying to look over them to make sure she didn't bump into something."
+    MC "You look magnificent!"
+    show WG happy
+    WG "Thank you Dear. Was worried that it may be a bit much."
+    MC "If this event is as big–time as you made it sound to be, I think you'll fit in fine."
+    show WG happy at altMove(0.5, 0.25)
+    show Chibuki neutral at Position(xcenter=0.75, yalign=1.0) with easeinright
+    Chibuki "Go easy on the dress tonight. Not sure how well some of those stitches are gonna hold up under further pressure."
+    show WG doubt
+    WG "I don't plan to exactly be floating around the punch bowl tonight. Last thing I want to do is make people think this is natural."
+    show WG stern
+    Chibuki "Pretty sure any further stress on that thing will cause quite a scene."
+    MCT "Is it wrong for me to want to see that?"
+    show WG neutral-2
+    WG "Regardless, my intention is to not play the part that I expect people to see me as. I need to prove that this is not entirely my own doing."
+    Chibuki "That may be hard, but I think you can pull it off."
+    MC "I mean if her father is hosting this event you'd think the guests may be inclined to avoid harsh comments to his daughter."
+    show WG neutral
+    WG "He doesn't like to be harsh with his colleagues, but I do agree that it is something to be understood in this type of event setting."
+    Chibuki "Still, you are interacting with people that probably have no idea what this factor stuff is. We barely understand, so don't expect them to understand you."
+    show WG neutral-2
+    WG "I appreciate your concern Chibuki, but I can take a little bit of ribbing."
+    show WG haughty
+    WG "Now I do believe that our car is waiting for us."
+    "I stepped over and opened the door."
+    show WG happy
+    extend " She smiled and gently pinched my cheek as we made our way out."
+    scene black with fade
+    pause 1
+
+    scene School Front with fade
+    "In front of the school we found our ride awaiting us with a man in a well pressed suit. It seemed to escape me occasionally just how rich Alice's family was that such high class things were commonplace for her."
+    "With some minor struggling to get Alice situated, we made our way to the ball."
+    #entrance bg needed for future
+    scene Ballroom
+    show WG neutral
+    with fade
+    play music Requiem
+    "When we pulled up to the hotel, I could already see men in expensive suits accompanying women wearing necklaces worth more than that."
+    MCT "Never thought I'd actually end up at one of these high society functions. Makes me feel really out of place— not to mention poor."
+    "As though she could read my thoughts, I felt Alice place her hand on top of mine."
+    WG "Don't worry about acting a certain way. Everyone here is still human, so just be calm and not overthink things. Just because they are wealthy doesn't make them some alien species."
+    show WG neutral-2
+    WG "Not to mention, I need you to be calm to keep myself calm as well. This dress is already making it hard to breathe, I don't need any anxiety making it worse."
+    show WG happy
+    "We shared a chuckle before I stepped out and offered Alice my hand to assist her out."
+    show WG neutral
+    "The reactions from the few walking in were instant. {w}Stares ranging from confusion to almost terror could be seen from the men and women. It was hard to not try shrinking from the situation, but Alice's grip on my arm was like a vice."
+    MCT "Remember, just stay calm, just stay calm, just stay calm. {w}If you start to get nervous it's going to make things worse for her."
+    play music WG
+    "As we made our way to the hotel door, a woman approached Alice."
+    "She herself appeared to have a factor, given the generous portions of her chest."
+    "She must have been one of the earlier students of the Academy, as her age was apparent, along with what appeared to be some procedural efforts to conceal that fact."
+    Misaki  "Miss Nikumaru, is that you?"
+    show WG surprised-2
+    WG "Ms. Usuda?"
+    MCT "Ah yes, the lady from the gallery."
+    Misaki "Yes, it is. Oh, so lovely to see you again!"
+    show WG neutral-2
+    WG "Nice to see you as well, Ms. Usuda."
+    show WG doubt
+    Misaki "I almost didn't recognise you!"
+    MCT "Yeash lady! No need to rub it in."
+    show WG worried
+    WG "Yes, well... um..."
+    Misaki "Oh! It must have been this new dress of yours."
+    show WG neutral
+    extend " It looks magnificent! I'm always delighted to see others who share our predicament are able to find something for themselves that is uncompromisingly fabulous for themselves."
+    "I wasn't sure if Ms. Misaki had managed to fully recover from her earlier misstep, but she seemed sincere enough in her compliments."
+    show WG haughty
+    WG "Thank you Ms. Usuda, I had it custom designed for myself and I am quite proud of it. I appreciate a keen eye that would take notice of such things."
+    show WG neutral
+    Misaki "The delight is all mine, Miss Nikumaru, I assure you. I know your father is a busy man, and I suspect he will be engaged with quite a few others this evening, but please, give my regards to him."
+    Misaki "This island has so much untapped potential and has been overlooked for so long, bringing in prospective investors for development projects to such an event like this is simply genius. It's clear to see why he's been so successful."
+    show WG haughty
+    WG "True, if Father sees potential in something, others are keen to pay attention as well."
+    Misaki "I hear the apple does not fall far from the tree. I heard you are an entrepreneur in your own right as well."
+    WG "This is true."
+    show WG neutral
+    Misaki "Marvelous, dear. I'd love to know more some time, but I am loath to detain you further. Please, I'm sure your father is eagerly awaiting your arrival."
+    "And with that Ms. Misaki left us to greet someone else she recognized outside, leaving us to ourselves as we made our way closer to the entrance."
+    MC "How are you feeling?"
+    show WG worried
+    WG "Not the greatest if I'm being honest. Have I changed so much from then that I'm nearly unrecognizable?"
+    "There wasn't a good answer that she'd want to hear, and I wasn't a good enough liar to smooze her over without accidently making things worse. But that didn't mean the truth had to hurt."
+    show WG neutral
+    MC "We've both changed quite a bit since then, us and all our friends, but none of that changes the fact you look magnificent, just like she said."
+    show WG happy
+    WG "You really mean that?"
+    MC "Absolutely. There's no one else I'd rather be seen next to for this kind of occasion, or any occasion for that matter."
+    show WG neutral-2
+    extend " Now let's head in. I'm guessing we don't want to keep your father waiting."
+    jump daymenu
+
+label WG070:
+    $setProgress("WG", "WG071")
+    $setTime(TimeEnum.NIGHTLIGHTS)
+    $setWGOutfit(OutfitEnum.DRESS)
+    scene Ballroom
+    show WG neutral
+    with fade
+    play music Requiem
+    "Entering the ballroom I could see everyone's attention repeat the same motion as outside, if not somehow worse."
+    "The atmosphere of the room felt like it shifted from a warm, inviting feel to a cold, concerned feeling. A wave of murmuring quickly followed as we made our way further through the crowd."
+    #show Daitaro neutral
+    "Alice suddenly stopped as we approached a stern looking man, standing with a group of well dressed individuals. I could feel the man's gaze not fall towards Alice, but onto me."
+    MCT "Wait is this..."
+    show WG neutral-2
+    WG "Hello Father."
+    "Alice pulled her arm away and did a curtsy towards the man. I followed with a bow to him as well."
+    "Not breaking his gaze he approached us, silent and unchanging. His martini glass in hand giving him the air of a Bond-esque villain."
+    Daitaro "Is this the Kei figure you've mentioned to me, dear?"
+    "His voice was low and I could feel the toughness of a highly regarded business executive. Alice merely nodded in affirmation to his question."
+    "In an instant the man's cold expression softened as he smiled and shook my hand."
+    Daitaro "It's a pleasure to meet the gentlemen who has taken the eye of my daughter."
+    play music InvitationCastleBall
+    show WG neutral
+    "As I took his incredibly tight handshake, the atmosphere of the room seemed to return back to a warm and vibrant feel."
+    Daitaro "I am Daitaro Nikumaru, as I take it my daughter had mentioned before."
+    MC "Uh yes sir, pleasure to meet you."
+    Daitaro "The pleasure is mine Mr. Hotsure. It's not often Alice finds someone she respects {i}and{/i} fancies."
+    Daitaro "Speaking of my daughter..."
+    show WG happy
+    "Turning his attention to Alice, he gave her a hug— to the best of his ability."
+    Daitaro "How is my little princess? Is this the dress you put together for yourself you mentioned in your last letter?"
+    show WG doubt
+    WG "Oh Dad not here!"
+    show WG neutral-2
+    extend " But yes it is. I did receive some assistance from some friends from the academy."
+    Daitaro "You will always be my little princess, so don't expect me to drop that. I'm glad that you are still practicing your sewing skills, your mother would be overjoyed to see this."
+    show WG sad
+    WG "Oh, is Mom not here?"
+    Daitaro "Unfortunately her pupil's show is happening this weekend so she had to rush over to New York for the show."
+    show WG neutral
+    Daitaro "A bit of a fragile flower that one, your mother knew she'd fall apart without her support at the debut, but she knew you'd understand."
+    show WG haughty
+    WG "That is regrettable, but true to her dedication to nurturing talent."
+    show WG neutral
+    Daitaro "She promised to make up for it by visiting you soon. She did mention that she got us reserved seats whenever we want to see a Broadway show."
+    show WG surprised-2
+    WG "That sounds wonderful, it's been some time since we've seen a show there."
+    show WG neutral
+    extend " Kei and I this past summer watched a stage play on the island, which was delightful."
+    Daitaro "Glad to hear he's treating you properly."
+    Daitaro "If you don't mind me asking, how did you two meet? You were rather sparse on the details when I asked you."
+    MC "Well, we share the same homeroom class, so we've really known each other since the first day of class since we got here."
+    WG "He knows that, Dear. I think he's alluding to how we eventually came together."
+    "Mr. Nikumaru remained silent, but his curious expression urged me to continue."
+    menu:
+        "Try to be funny.":
+            MC "I mean, clearly it was love at first sight. The rest is just history."
+            show WG stern with hpunch
+            WG "You certainly flatter yourself with that recollection."
+            show WG haughty
+            WG "I recall a distinctly different series of events."
+            MC "Okay, okay. Well, maybe it was love at first sight for me, she is quite a stunner after all."
+            show WG stern
+            WG "{size=-6}{i}Ahem{/i}... Not in front of Father.{/size}"
+            MC "Right, yes, um"
+            if getFlag("WG006_C2_1") or isEventCleared("WG001M"):
+                MC "Was it when I first showed you my musical talents?"
+                show WG haughty
+                WG "\"Talent\" is a bit of a stretch, given such a fledgling display, but it did pique my curiosity at your potential."
+                MC "Okay, so not that, but..."
+            MC "Was it when you drew me into your little business venture?"
+            show WG doubt
+            WG "Oh please, you make it sound like you didn't have a choice."
+            MC "Well you were quite persuasive— and persistent about it."
+            show WG neutral-2
+            WG "I wanted to see if you had the proper work ethic and the vision to recognize an opportunity. That's all."
+            MC "Uh-huh, sure. Okay, so if it wasn't that, was it when I first asked you out?"
+            WG "No offense Dear, but your choice of venue and the available offerings didn't exactly ‘wow' me, but you did prove yourself a good conversationalist, I'll give you that."
+            MC "Okay, so not that, but getting warmer..."
+            MC "It was that pink teddy bear I won you at the carnival wasn't it?"
+            show WG surprised-2
+            WG "What!?"
+            show WG doubt
+            WG "Th-That wasn't..."
+            show WG neutral-2
+            WG "I mean, not to say that wasn't a very lovely date..."
+            Daitaro "Hahaha. I think I understand the picture a bit better. Thank you for that brief recap, Kei-san."
+            Daitaro "Hmm, dear, it appears a friend of ours is trying to get your attention."
+            show WG surprised-2
+            WG "Oh!?"
+        "Try to be endearing.":
+            MC "I was certainly smitten at first sight, but I think Alice needed a bit more convincing to see the potential"
+            show WG haughty
+            WG "I had my share of reservations at first, this is true."
+            if getFlag("WG006_C2_1") or isEventCleared("WG001M"):
+                MC "I think she first started to warm up when I was able to show her my musical talents."
+                show WG haughty
+                WG "\"Talent\" is a bit of a stretch, given your first efforts."
+                show WG neutral-2
+                WG "But it did begin to pique my interest, I'll agree to that much."
+                MC "Mhmm, I suspected as much."
+            MC "I think things really started to turn a corner when she drew me into her little business venture."
+            show WG doubt
+            WG "Oh please, you make it sound like I gave you no choice."
+            MC "Is that so? As I recall you were rather forceful in your persuasion and persistence about it. I could tell you already had me hand-picked for the job."
+            show WG neutral-2
+            WG "Well... maybe."
+            show WG haughty
+            extend " I wanted to see if you had the proper work ethic and the vision to recognize an opportunity. That's all."
+            show WG neutral
+            MC "Uh-huh, sure. Okay, so if it wasn't that, how about when I first asked you out?"
+            WG "No offense Dear, but your choice of venue and the available offerings didn't exactly ‘wow' me, but you did prove yourself a good conversationalist, I'll give you that."
+            MC "How could I forget? Yeah, that was a bit of a dud, but don't you think I made up for it on our second date?"
+            show WG happy
+            WG "I suppose you proved yourself to have a certain charm, yes."
+            show WG aroused
+            WG "That was a lovely evening, I must admit."
+            MC "It was certainly the beginning of something, that's for sure."
+            show WG neutral
+            Daitaro "Ahh, to be young again. Thank you for filling in the details for me Kei-san. I'll be curious to learn more."
+            Daitaro "Hmm, dear, it appears a friend of ours is trying to get your attention."
+            show WG surprised-2
+            WG "Oh!?"
+    "A man suddenly approached Alice who she appeared to recognize as they began chatting immediately."
+    Daitaro "Kei-san do you mind if we step aside for a moment?"
+    MC "Uh, sure, sir."
+    "I followed him outside the ballroom into the empty hallway outside."
+    "As he turned to face me, his expression returned to the cold, calculated face he had earlier."
+    Daitaro "Alright, Mr. Hotsure-san. I'll cut to the chase. How do I know you're not some slick huckster who's only after her money— {i}my{/i} money."
+    MC "Umm, with no disrespect Sir... don't you think she'd see right through me if that were the case?"
+    Daitaro "... {w}You do have a point..."
+    "Mr. Nikumaru appeared to have been caught off guard by my lack of defensive reaction to his question."
+    Daitaro "As sharp as she is, she's still a young woman in love. Love makes people look past a lot of things they would otherwise notice, and make foolish decisions that they wouldn't otherwise dare to entertain."
+    "At this point, I half wondered if we were still talking about Alice, and not his own experiences."
+    MC "That's fair, Alice is a true romantic at heart. Behind the shrewd business-woman is a lady waiting to be swept off her feet by a knight in shining armor."
+    Daitaro "Ha! It seems you've come to know her quite well, since you've managed to ascertain as much. {w}Tell me then, is that how you see yourself, Mr. Hotsure-san?"
+    MC "I don't really look the part, I know. To be honest, I don't know what such an extraordinary woman sees in me. But I do love her, and despite the strange circumstances of how we came to meet, I wouldn't trade it for anything."
+    Daitaro "Hmm... {w}It is as I suspected. You really do care for my daughter. But as her father, I have to be honest with you Mr. Hotsure-san— that isn't enough."
+    Daitaro "It's no small secret that I have my share of connections."
+    Daitaro "My sources have given me insight into the nature of these \"growths\", as it were, far more than the government and the school administration would like any outsider to know."
+    Daitaro "She won't be able to live a normal life once this is all said and done. You've seen the reactions to her appearance, yes? The wide-eyed stares, the hushed gasps of disbelief— none of it escapes my notice."
+    Daitaro "She's a strong woman, and I'm very proud of her, but she will have a heavy burden to bear... no pun intended. {w}Her condition carries a stigma I wouldn't wish on my worst enemies, least of which on my own daughter."
+    Daitaro "She will need the support of someone strong to help her bear this burden. Are you up for that task? {w}As her father, I have to ask."
+    MC "Alice was never going to live an ordinary life. She's always been determined to live an extraordinary life. {w}I see what she goes through everyday, and the expectations she puts on herself."
+    MC "A weaker person would have long since cracked under the pressure and resigned themselves to their fate. {w}But Alice doesn't. She's amazing."
+    MC "I can't help but respect that, and I want to support her as much as I can, and whatever way possible."
+    "Mr. Nikumaru placed his hand on my shoulder. It was large and imposing as I felt the weight of him and his stature press down into me."
+    Daitaro "No father ever thinks any man is truly good enough for his daughter. Especially when the daughter in question is my own."
+    Daitaro "But for now, let's just say your potential has caught my attention. Enjoy the rest of your evening with her, Mr. Hotsure-san."
+    "With a new sort of reassurance, I returned with him to the party inside."
+    show WG neutral
+    extend " It wasn't hard to spot Alice considering her size and choice of red dress. Though where I found her was enough to make me chuckle."
+    "Despite her statement earlier, she had found her way over to the food and drink table happily talking with the other members of the party as she munched on a small sandwich."
+    "As her father and I returned, she exchanged a glance with her father who responded with a nod."
+    WG "Hopefully he didn't discourage you from taking me out for a dance."
+    MC "Oh not at all, and if you want to, I'd be happy to take you to the floor."
+    "Finishing her glass of punch, I led her to the ballroom floor."
+    show WG haughty
+    WG "You remember any of those moves I practiced with you?"
+    MC "Vaguely, so please lead if you will."
+    show WG happy
+    WG "Of course darling."
+    play music BaroqueCoffeeHouse
+    "As the next song started Alice took my hands and we did our little waltz. It was fascinating watching her move herself with seemingly little effort despite her proportions. Though I could see by her smile that she was enjoying every moment of this."
+    "In my defense, my relative lack of grace in comparison to hers was not entirely my fault. I was at the absolute limits of my reach to keep one hand on her hip and my other hand in hers as we stepped to-and-fro."
+    "Alice for her part had to settle for reaching my elbow instead of my shoulder, as her generous bulk proved prohibitive for her reach, even more so than mine. Something that had become increasingly apparent as of late."
+    "But tonight, in this moment, we were able to push aside that growing dilemma to the back of our minds as we embraced each other across the dance floor."
+    "Despite my difficulties attempting to fully reach her, we managed to overcome it by embracing each other tightly. With each step I found myself sinking deeper and deeper into her soft, lucious middle. It was heavenly."
+    show WG surprised-2
+    "I didn't think the material of her dress was thin if it could contain all of her, but I suppose squeezing each other this tight it was impossible for her to have not felt something at this point I had no control over."
+    show WG aroused
+    "We both blushed at the realization of what was happening,"
+    show WG neutral
+    extend " but were able to compose ourselves accordingly."
+    show WG happy
+    "As we continued to waltz, it was apparent that Alice was the center of attention of the entire ballroom. However, with her full grace and bearing intact despite her growth, this time it was for the right reason."
+    "If our performance got them to see beyond their initial stigma, I could not say for sure, but the looks of quiet bemusement were a welcome change from the disquieting shock we saw earlier."
+    show WG neutral-2
+    "After several minutes of dancing, and of me trying to avoid stepping on her feet, we decided to retire from the dance floor. We made our way over to a table along the wall where her father and some associates were sitting and chatting."
+    "Attempting to be discreet, so as to not call attention to the matter, I moved an adjacent chair next to another when I pulled out a seat for Alice at the table."
+    "It might have raised a few eyebrows at the table, but her comfort was far more important to me than the thoughts of strangers at this point, not to mention the potential for an incident without such precaution."
+    show WG neutral
+    Daitaro "That was some great skill out there from both of you. I know your mother taught you my dear, but what about you sir. Where did you learn to waltz?"
+    MC "Oh, actually Alice taught me the basics."
+    Daitaro "She did? That's quite impressive, as she had trouble with the waltz when her mother taught her many years ago."
+    show WG haughty
+    WG "I knew if I was going to teach him, I figured it would be best if I finally learned to master it myself."
+    show WG neutral
+    Daitaro "Your mother would be proud. I'm sure she'll be delighted to hear that. Seeing you dance so gracefully across the ballroom floor... I can't help but be reminded how my Little Princess is already all grown up."
+    show WG worried
+    WG "Please Father, I'm not exactly \"little\" in any sense of the word anymore..."
+    "Mr. Nikumaru stood up from the table. With a slight, but knowing nod, the remaining associates dispersed into the crowd as he approached Alice on the other side of the table."
+    "Taking her hand into both of his, he whispered something. {w}I probably wasn't supposed to hear, but I did anyway."
+    Daitaro "{size=-6}I always knew one day you'd grow up, but just know, you'll never grow so much that you'll ever stop being my Little Princess.{/size}"
+    show WG sad
+    WG "{size=-6}Th-Thank you, Dad. I love you.{/size}"
+    "Alice's eyes water as a single tear streamed down her cheek."
+    Daitaro "{size=-6}I love you too, dear.{/size}"
+    show WG neutral
+    Daitaro "But no more of that. Cheer up now. Tonight is a celebration— of new beginnings and possibilities. {w}You were right, this island is a backwater, but one rife with potential, just as you told me."
+    show WG happy
+    Daitaro "If I had half the business skills I did at your age, I'd be twice as far along as I am today. I'm very proud of you."
+    Daitaro "I still have other investors to talk to this evening. Don't let me detain you any further from enjoying the rest of the evening with each other."
+    show WG neutral
+    WG "Thank you, Father."
+    Daitaro "Mr. Hotsure-san."
+    "Mr. Nikumaru looked dead at me, nearly boring a hole through me with his steely gaze in the process."
+    Daitaro "Make sure she has a lovely evening."
+    MC "Will do, sir."
+    #hide Daitaro with dissolve
+    show WG surprised-2
+    WG "Apparently you managed to make a better impression than I thought you would."
+    MC "What? You doubted me?"
+    show WG neutral
+    WG "I was expecting half a notch above smoldering contempt, but he seems to have some measure of respect for you. He wouldn't try to hide it otherwise."
+    MC "Well, he has entrusted me to ensure you have a lovely rest of the evening. What would you like to do? {w}Perhaps another dance?"
+    show WG neutral-2
+    WG "Actually, if it's fine with you, could you bring me some entrees and a dessert from the food table? I haven't had much of anything to eat this evening except a few small sandwiches."
+    MC "My dear lady, you need only but ask."
+    jump daymenu
+
+label WG071:
     "This marks the current end of Alice's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
