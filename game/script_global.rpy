@@ -111,6 +111,7 @@ define FemStudent2 = Character('Female Student 2', color="#ce9b50") #New color m
 define Girls = Character('Girls', color="#ffffff")
 define Guard = Character('Guard', color="#C0C0C0")
 define Hostess = Character('Hostess', color="#C0C0C0")
+define Interviewer = Character('Interviewer', color="#C0C0C0")
 define Judge = Character('Judge', color="#C0C0C0")
 define LittleGirl = Character('Little Girl', color="#FF91DC")
 define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
@@ -1068,8 +1069,17 @@ init 2 python:
     eventlibrary['AE088'] = {"name": "Raymonda", "girls": ["AE"], "type": EventTypeEnum.CORE,                                   "location": "dorminterior",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE089", "obsflags": [],                "conditions": []}
     eventlibrary['AE089'] = {"name": "Corilan Overture", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "dormAE",          "priority": PrioEnum.NONE, "sp": 15,       "next": "AE090", "obsflags": [],                "conditions": []}
     eventlibrary['AE090'] = {"name": "Adagio for Strings", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "classroom",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE091", "obsflags": [],                "conditions": []}
-    eventlibrary['AE091'] = {"name": "4'33\"", "girls": ["AE"], "type": EventTypeEnum.CORE,                            "location": "classroom",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE092", "obsflags": [],                "conditions": []}
-    eventlibrary['AE092'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
+    eventlibrary['AE091'] = {"name": "4'33\"", "girls": ["AE"], "type": EventTypeEnum.CORE,                                   "location": "classroom",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE092", "obsflags": [],                "conditions": []}
+    eventlibrary['AE092'] = {"name": "Det er det skønneste jeg ved", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "dormhallway",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE093", "obsflags": [],                "conditions": []}
+    eventlibrary['AE093'] = {"name": "Symphony No. 9", "girls": ["AE"], "type": EventTypeEnum.CORE,                         "location": "hallway2",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE094", "obsflags": [],                "conditions": []}
+    eventlibrary['AE094'] = {"name": "Pensée des Morts", "girls": ["AE"], "type": EventTypeEnum.CORE,                       "location": "dormhallway",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE095", "obsflags": [],                "conditions": []}
+    eventlibrary['AE095'] = {"name": "Mars, Bringer of War", "girls": ["AE"], "type": EventTypeEnum.CORE,                "location": "cafeteria",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE096", "obsflags": [],                "conditions": []}
+    eventlibrary['AE096'] = {"name": "Sigfried's Funeral March", "girls": ["AE"], "type": EventTypeEnum.CORE,             "location": "rooftop",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE097", "obsflags": [],                "conditions": []}
+    eventlibrary['AE097'] = {"name": "Silence", "girls": ["AE"], "type": EventTypeEnum.CORE,                                  "location": "dorminterior",      "priority": PrioEnum.ALL, "sp": 15,       "next": "AE098", "obsflags": [],                "conditions": []}
+    eventlibrary['AE098'] = {"name": "Give Me Novacaine", "girls": ["AE"], "type": EventTypeEnum.CORE,                        "location": "dormhallway",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE099", "obsflags": [],                "conditions": []}
+    eventlibrary['AE099'] = {"name": "Tannhäuser Overture", "girls": ["AE"], "type": EventTypeEnum.CORE,                    "location": "AEdorm",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE100", "obsflags": [],                "conditions": []}
+    eventlibrary['AE100'] = {"name": "Jupiter, The Bringer Of Jollity", "girls": ["AE"], "type": EventTypeEnum.CORE,        "location": "gatefront",      "priority": PrioEnum.NONE, "sp": 15,       "next": "AE101", "obsflags": [],                "conditions": []}
+    eventlibrary['AE101'] = {"name": "Shiori End", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "dormexterior",     "priority": PrioEnum.NONE,              "next": "", "obsflags": [],                     "conditions": []}
 
     eventlibrary['AE007b'] = {"name": "Peer Gynt", "girls": ["AE"], "type": EventTypeEnum.CORE,                                 "location": "hallway",          "priority": PrioEnum.NONE, "sp": 1,    "next": "AE008b", "obsflags": [],                "conditions": []}
     eventlibrary['AE008b'] = {"name": "Made of Stone", "girls": ["AE"], "type": EventTypeEnum.CORE,                             "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 1,    "next": "AE009b", "obsflags": [],                "conditions": []}

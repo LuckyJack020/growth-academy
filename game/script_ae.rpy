@@ -907,6 +907,7 @@ label AE007:
             jump AE007_c2
 
 label AE007_c1:
+    $setFlag("AE007_Contract")
     $setAffection("AE", 2)
     MC "Well... Sure."
     show AE neutral-annoyed
@@ -7808,7 +7809,7 @@ label AE037_c1_after:
     show AE sad
     AE "..."
     MC "Are you actually uncomfortable right now?"
-    "I asked a question with an obvious answer, however I felt as though I wanted to clear the air between us. As I spoke, a grown man passed, and turned around to catch a glimpse at Shiori-chan's 'unique growth'."
+    "I asked a question with an obvious answer, however I felt as though I wanted to clear the air between us. As I spoke, a grown man passed, and turned around to catch a glimpse at Shiori-chan's \"unique growth\"."
     AE "A bit."
     MC "The people here have seen all types of students from the school. It's just like our hallways, just that the students here aren't wearing uniforms."
     show AE neutral-annoyed
@@ -19131,7 +19132,7 @@ label AE083:
         MC "Y-Yeah."
         Student1 "Truth be told, Haruno-chan isn't doing too well either. When she asked me to come with her to this weird ass school... I didn't know what I was in for."
         Student1 "I thought, y'know, do I really want to be somewhere surrounded by people that are so 'out there'? Would I really want to watch her turn into such an outrageous looking person?"
-        Student1 "But... Haruno-chan is Haurno-chan."
+        Student1 "But... Haruno-chan is Haruno-chan."
         "As he said this, one of his friends turned to me quizzically."
         Student2 "I gotta ask... is she really walking like that unintentionally? Like... that can't be real, right?"
         MC "She... yeah, it's real. She had to start walking differently after she broke her ankle."
@@ -20430,7 +20431,6 @@ label AE090:
     "The largest in the world..."
     "It was a lot to handle..."
     "But she didn't have to do it alone."
-
     #IF YOU FOUND THE LETTER
     if getFlag("AE086_FoundLetter"):
         MC "Um..."
@@ -20510,6 +20510,1816 @@ label AE091:
     jump daymenu
 
 label AE092:
+    $setProgress("AE", "AE093")
+    scene Dorm Hallway with fade
+    play music Requiem
+    $setAEOutfit(OutfitEnum.TIRED)
+    play sound Knock
+    "*knock* *knock* *knock*"
+    "I knocked on Shiori's dorm room door, looking over my shoulder to ensure no-one was watching."
+    "Today had been wild. It seems like news finally managed to circulate to the mainland about our class, and by this point, the media had already started to effectively mobilize to cover it."
+    "Class 3B, in a single generation, had completely blown far past the previous records."
+    MCT "Hmm, why isn't she answering?"
+    MC "Yo, Shiori, it's me."
+    AE "..."
+    MC "Uh... I-I'm here with Takamura-sensei, she wanted to come along."
+    Takamura "Matsumoto-san? It's me. Do you have a moment?"
+    AE "..."
+    "Takamura-sensei and I stood in silence for a moment, before we finally heard the slow click of the door bolt as it was unlocked, and then stepped back as it opened."
+    scene Dorm AE
+    show AE sad
+    with fade
+    "As Shiori opened the door for us, we stepped in— {w}but were almost instantly stopped by Shiori."
+    "Not for her actively trying to stop us, but in turning around and giving us some room, her gigantic ass almost bounced us back."
+    AE "Apologies for the delay, getting out of bed was a bit difficult."
+    Takamura "It's alright, Matsumoto-san."
+    "Takamura-sensei seemed to be momentarily caught off guard by Shiori as she walked into the room. Her eyes widened in surprise as she got a good look at Shiori, but after a brief moment, she caught her bearings."
+    MC "You resting up?"
+    show AE sad-2
+    AE "As best as possible, yes."
+    "Shiori craned her neck past us to look out into the hallway."
+    AE "Are the press still outside of the school?"
+    Takamura "Many have moved on by this point."
+    MCT "And not fucking quick enough, I figure."
+    Takamura "Hotsure-san wanted to come and check on you, and I requested he bring me along because..."
+    Takamura "I feel we need to talk one on one."
+    "Shiori looked exhausted, as though she hadn't gotten much sleep at all, despite her reassurances."
+    show AE pondering
+    AE "Right. Yes."
+    show AE sad
+    AE "My sincerest apologies, I'll have the asset examination report in by Tuesday at the latest for the stated meeting if-"
+    Takamura "Um, no, Matsumoto-san, that's not what I'm here for."
+    show AE neutral
+    AE "Ah."
+    "There was an almost empty silence in the room, save for the television, which Takamura-sensei picked up on very quickly."
+    Takamura "What are you watching?"
+    show AE glasses-3
+    "Shiori turned her head towards Yureno-san's t.v. and bit her lip."
+    AE "Ah, that."
+    AE "Um... It's an interview, I think."
+    Takamura "Oh yeah?"
+    show AE sad
+    "Takamura-sensei and I turned our attention to the television, as a woman with a gargantuan rear end was shown talking to an interviewer with a microphone."
+    Interviewer "So, how do you feel with the knowledge that the record is held by someone else."
+    Woman "Eeeh, honestly I just feel kind of relieved! Though congratulations to her, definitely— best of luck!"
+    MCT "C-Congratulations?!"
+    show AE sad-2
+    AE "... I just learned I surpassed her record a few months ago."
+    Takamura "Ah..."
+    AE "Around the time I stopped keeping track..."
+    Takamura "I think I might be able to understand."
+    show AE pondering
+    AE "You think so?"
+    Takamura "Actually, yes. My mother has the same type of growth as you."
+    show AE surprised
+    "Shiori looked surprised at first, then seemed too clam up as she nodded quietly in acknowledgement."
+    show AE sad-2
+    AE "My condolences."
+    Takamura "Oh, no need to. Both of my parents were students here, actually."
+    Takamura "They found each other, same as you do, and they found a way to make it work."
+    MC "He also had a hair growth factor?"
+    show AE pondering
+    "Takamura-sensei looked at the window and smiled."
+    Takamura "Mm... no."
+    Takamura "Something different."
+    Takamura "Matsumoto-san, I'm not going to ask if you need anything, since I know you well enough to know you'll say no."
+    Takamura "But instead... I'm going to ask."
+    Takamura "What can I provide you that could help?"
+    show AE neutral
+    AE "Some perspective would be appreciated..."
+    Takamura "First off, {w}here."
+    "Takamura-sensei reached into her bag, and then pulled out two chocolate bars."
+    show AE surprised-2
+    AE "Huh?"
+    Takamura "Chocolate helps everything."
+    show AE neutral
+    AE "... Heh, thank you."
+    MC "Y-Yeah, thanks-"
+    "As I began to reach out, Takamura-sensei unwrapped the second piece and began eating, encouraging Shiori to open her piece too."
+    MCT "Thaaaat'd explain the hips."
+    show AE sad-2
+    AE "I'm just trying to figure out how to... deal with it? The almost daily... urges and sensations?"
+    Takamura "You don't."
+    show AE surprised
+    AE "..."
+    "Though at first it seemed like being frank and honest was her initial approach, as she noticed that the remark was without necessary tact, she quickly began to try to rephrase."
+    show AE sad
+    Takamura "Ah, pardon me."
+    Takamura "What I mean is that... it's not really something that just goes away but... I suppose it doesn't need to."
+    Takamura "You kind of just learn to embrace it."
+    show AE neutral-annoyed
+    AE "E-Embrace it?"
+    Takamura "That's right."
+    show AE pondering
+    AE "What do you mean?"
+    Takamura "Well, it's like this..."
+    Takamura "It can lead to daily challenges but... from what I've been told, some daily excitement too."
+    show AE sad-2
+    AE "That's just the problem..."
+    show AE aroused-2
+    Takamura "..."
+    Takamura "Matsumoto-san, is there something more to this than your growth?"
+    MC "..."
+    MCT "Ah... so she doesn't know."
+    show AE ass
+    Takamura "Um... I'm sorry for the interruption, but could you possibly give us girls some time alone? There's some doughnuts in the faculty room if you want to have some."
+    MC "Huh?"
+    "I was surprised. I figured, at least, I could have done something to cheer Shiori up if I were there..."
+    "But..."
+    "In a way, I knew that isn't what she needed."
+    show AE sad-2
+    MC "Sure thing. I'll give you two some time."
+    "Nodding, I walked over to the door, and giving a hopeful look back at Shiori, I left the room, heading over to the lounge."
+    scene black with fade
+    pause 1
+
+    scene Faculty Room
+    show HR unique
+    with fade
+    play music Rain
+    "As I entered the room, Tashi-sensei was simply sitting quietly on one of the chairs, his hand in his head as he rewinded the recording on the television."
+    Interviewer "So, how do you feel with the knowledge that the record is held by someone else."
+    Woman "Eeeh, honestly I just feel kind of relieved! Though congratulations to her, definitely; best of luck!"
+    HR "..."
+    MC "Ah, good afternoon Tashi-sensei."
+    show HR neutral
+    HR "Hm?!"
+    MC "Ah!"
+    "Tashi-sensei's reaction almost made me jump as he paused the recording."
+    HR "Hotsure-san? What are you doing in the faculty room?"
+    MC "Oh, I was just um... waiting for Takamura-sensei and um..."
+    MCT "Wait a second... Could it be?"
+    MC "Do you... know the woman in the interview?"
+    HR "... Yep."
+    MC "Ah. Former classmate?"
+    HR "... Yep."
+    MC "Ah..."
+    MC "I'm just gonna, um..."
+    show HR annoyed
+    play music Memories
+    HR "Siddown."
+    MC "Ohp- Yes, sir."
+    "Quickly, I sat down in a chair as Tashi-sensei wiped his chin with his wrist, his tongue falling down freely as he did."
+    show HR neutral
+    HR "When you leave the school, do you think you'll be ready?"
+    MC "Huh?"
+    HR "Ready. Like ready for life on the outside."
+    MC "I don't... I don't know."
+    HR "Well, if I was going by the school mission, I'd say I failed in my job if you didn't."
+    HR "But I'm not. I know damn well no-one is fully ready. A year ain't enough. That's why most stay on the island."
+    MC "Is that why... you did?"
+    HR "It's not like I had plenty of options. {w}I was offered a job, a place to stay and a roof to sleep under. It was good enough for me."
+    HR "Some former students became staff members, others settled down on this island."
+    HR "As for our class, Kichiro-san works at the town's docks. Never heard what happened with the rest."
+    HR "Theeeen there was her. Katsumi-chan..."
+    MC "Ah... the previous record holder... was she your friend?"
+    HR "... You could say that."
+    MC "A-Ah..."
+    HR "I was wrong."
+    MC "Hm?"
+    HR "About Shiori. I was wrong."
+    HR "I figured 'You're a grown ass man. I shouldn't have to sugarcoat how I see it to you.' Figured it was the same with her, too."
+    HR "But..."
+    HR "I shouldn't have judged my worries about what her growth would do to her on my own bullshit. Figured I'd be the first to recognize a self fulfilling prophecy, but..."
+    HR "The point of being a teacher isn't to saddle your students with your own damn problems."
+    HR "You deserve more than that from us."
+    MC "..."
+    HR "I don't claim to have all the answers. But I do believe there are answers. {w}History is a discipline, after all. You're disciplining yourself to think in a certain way and look for certain things."
+    HR "I just had hoped that I could have done everything I can to help you guys out."
+    MC "Well... can I ask how you're doing now?"
+    HR "Hm?"
+    MC "Like... how you're going on with your life. In all honesty."
+    HR "..."
+    "Tashi-sensei sighed as he slid his hands into his pockets and shrugged."
+    HR "I dunno man, it doesn't get easier."
+    HR "..."
+    HR "But it does get more bearable."
+    MC "Do you have anyone in your life to at least bear it with, though? Or like... anyone who you wanna spend it with?"
+    HR "..."
+    Takamura "Okay, I did the best I could."
+    #show Takumaru neutral with dissolve
+    "As Tashi-sensei was about to speak, Takamura-sensei entered the room, breathing a sigh of exhaustion as Tashi-sensei stood up straight."
+    MC "How's she holding up?"
+    Takamura "Well, she seemed to get behind what I was saying..."
+    Takamura "But she really is in a bad place. I didn't at all know how deep all this went with her."
+    MCT "Yeah, kind of telling me what I know..."
+    "I was at first kind of upset, but..."
+    "At the very least, they were trying to help. And what's more, they could give help that I couldn't."
+    HR "So uh... what's the plan?"
+    Takamura "Well, from the looks of it, we're going to need to stay up late tonight doing some rounds around the dorms."
+    Takamura "Kaeru-chan, are you okay with accompanying me?"
+    HR "Uh..."
+    HR "Y-Yeah. Sure."
+    MCT "{i}Hoooly shit{/i}, I think this is the first time I've seen him blush."
+    MC "Well, on my end, I'm probably gonna spend some time with Shiori before going back to my dorm, if that's okay."
+    Takamura "Of course, Hotsure-san. And... do you need anything?"
+    MC "Eh? Ah, nah, I'm fine, ma'am. Thank you."
+    "As I bowed to my teachers, they looked to each other before walking out of the room."
+    MCT "Haah... the end of the year feels like it's coming on too quick..."
+    MCT "Or is it not coming soon enough?"
+    jump daymenu
+
+label AE093:
+    $setProgress("AE", "AE094")
+    scene Hallway2
+    show BE sad
+    with fade
+    play music HigherEdu
+    BE "..."
+    MC "..."
+    show BE doubt
+    BE "Sooo, are we not having class, ooor?"
+    MC "I mean, I dunno..."
+    "We stood outside of the door to class, somewhat confused as most of the other students had made it into their rooms by this point."
+    show BE doubt at altMove(0.5, 0.25)
+    show PRG neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    PRG "Um... m-maybe Tashi-sensei was really sleepy last night?"
+    MC "You kidding? He looks like he hasn't slept in years."
+    show BE neutral
+    BE "Well maybe he shouldn't drink so much coffee then!"
+    MC "Here, lemme try again."
+    "Once more, I walked over to the door and tried to turn the handle, only to be met with stiff resistance."
+    "As I did, however, the distinct sound of clapping came up from behind me."
+    hide PRG
+    show AE angry-2 at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    AE "What's going on? Why is everyone just standing about outside?"
+    MC "Doors locked."
+    show AE surprised-2
+    AE "D-...What?"
+    show BE sad
+    BE "We can't get in."
+    show AE neutral-annoyed
+    AE "Nonsense. Allow me."
+    "Shiori, seemingly in a rush, walked forward and tried to turn the doorknob, but as with me, it was to no avail."
+    AE "..."
+    show AE angry-3
+    AE "Nggg..."
+    "Once again, she tried to open the door, pulling on it a bit more fiercely."
+    MC "C-Chill out-"
+    show AE angry-4
+    AE "Nngh! Stupid fucking-!"
+    hide BE
+    show PRG scared at Position(xcenter=0.25, yalign=1.0)
+    PRG "Eep!"
+    hide PRG
+    show BE surprised-2 at Position(xcenter=0.25, yalign=1.0)
+    BE "W-Woah, hey, calm down Shi-chan..."
+    AE "..."
+    MC "It'll be alright, just take it easy."
+    show AE angry-2
+    "Shiori gritted her teeth as she looked down at her hand, visibly shaken by something."
+    MC "Tashi-sensei will be here any minute now."
+    show AE angry-3
+    AE "..."
+    show BE shrug
+    BE "Exactly, right!"
+    show AE sad
+    AE "But... I always go to class at 7 am exact..."
+    show BE doubt
+    BE "Eh... wait, that's why you're so upset?"
+    BE "Geez, it's not like you're gonna be counted late!"
+    MCT "It's something Shiori always does."
+    MCT "Something normal she can hold on to."
+    MC "Well uh... hey, at the very least we can probably study for the upcoming test out here, right?"
+    show AE neutral-annoyed
+    AE "At this point we may as well hold class outside of the door."
+    MC "Eheh, yeah, I know what you mean."
+    show AE angry-3
+    AE "..."
+    "Though I tried to lighten up the conversation with a bit of peaceful back and forth, it seems like Shiori was taking the situation far too seriously to notice."
+    "Shiori always seems to be so uncomfortable whenever her schedule is interrupted, but..."
+    "This is much more than that."
+    "Like a part of her normality she was clinging onto was being ripped from her."
+    "A reality which only made itself more and more manifest as the clock ticked on, and more of our class arrived."
+    hide BE
+    hide AE
+    show WG angry at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    WG "Hm? What's going on? Mind telling me why we're all standing about?"
+    show PRG sad-2 at Position(xcenter=0.25, yalign=1.0)
+    PRG "W-We can't get into the room..."
+    show WG doubt
+    WG "Oh come now, the door still looks wide enough!"
+    show PRG worried
+    PRG "I mean, it's locked..."
+    show WG surprised-2
+    WG "Oh."
+    show WG haughty
+    WG "Well then, back to our dorms it is. Not our fault we get more rest~"
+    hide PRG
+    show AE angry-3 at Position(xcenter=0.25, yalign=1.0)
+    AE "Absolutely not! We are waiting until class begins."
+    show WG angry
+    WG "Uch! Truly? If you expect me to stand around and get {i}blisters{/i} on my feet waiting for-"
+    show AE angry-4
+    AE "WE ARE WAITING!"
+    show WG surprised
+    show AE angry-3
+    AE "... Tashi-sensei will be here any minute now."
+    show AE angry-2
+    hide WG with dissolve
+    "However, as more minutes passed, Shiori looked at the clock nonstop as her hands began to shake, and panic began to set in."
+    MC "Shiori, are you okay?"
+    show AE sad
+    AE "N-No."
+    MC "Maybe you should take a break for the day. I'm sure Tashi-sensei will understand."
+    play music Peaceful
+    show HR neutral at Position(xcenter=0.75, yalign=1.0) with dissolve
+    HR "Sorry, sorry, the staff room was locked."
+    show AE angry-2
+    AE "It's fine, please open the door."
+    "Tashi-sensei fumbled with the keys in his hand as he rushed to get the door open."
+    HR "Takamura and I were up late last night and I left the goddamn keys in the break room."
+    "{i}*Klk*{/i}"
+    "After a quick turn, Tashi-sensei unlocked the door, before heading in."
+    HR "Aight, come on in-"
+    hide HR with dissolve
+    "Almost immediately, Shiori rushed forward into the room..."
+    show WG surprised at Position(xcenter=0.75, yalign=1.0) with dissolve
+    show AE surprised
+    "Before abruptly stopping at the door, causing Nikumaru-san to collide her big belly with Shiori's gigantic rear end."
+    WG "GAK!"
+    show AE ahegao
+    show WG stern
+    AE "NYAH!~"
+    show AE sad
+    AE "Mmmmf..."
+    show AE angry-2
+    AE "Haaah..."
+    play music AE
+    hide WG with dissolve
+    "Shiori began to squirm her way forward, each thrust of her hips causing her gigantic ass to jiggle as she did, causing the rest of us to look away in embarrassment."
+    HR "Hey, uh... Matsumoto-san? You can come in now."
+    show BE surprised-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
+    BE "Wasn't she super excited to?"
+    show AE surprised
+    AE "I... I can't..."
+    show BE doubt
+    BE "What do you mean you can't?"
+    show AE angry
+    AE "Hnng!"
+    MC "..."
+    MCT "Oh fuck."
+    MC "Shiori..."
+    MC "Are you stuck?"
+    HR "Nah, those doors are fitted to fit nearly double of any expected size variable for any growth."
+    HR "Matsumoto-san, what's wrong?"
+    AE "I... NGH... can't get out of the doorway."
+    MC "Can you not...?"
+    AE "I'm..."
+    show AE surprised
+    AE "I'm stuck?!"
+    show AE ass
+    "Shiori began to squirm as she pushed herself forward as best she could, her face red like a cherry and glowing."
+    show BE surprised
+    BE "W-Wait, for real?!"
+    hide BE at Position(xcenter=0.75, yalign=1.0)
+    show HR neutral at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    "Tashi-sensei walked forward and gave the doorframe a glance before looking to Shiori's mammoth hips."
+    HR "..."
+    HR "Ahhh shit."
+    "Stepping forward, I reached my out my hands to help Shiori."
+    MC "I-I'll try to push."
+    show AE surprised
+    AE "Are you crazy?! N-No!"
+    MC "We gotta get you out. Tashi-sensei, could you pull her arms."
+    HR "Uh, y-yeah, I can try."
+    "Tashi-sensei looked completely beside himself, as though he wouldn't have expected this to happen in a million years. And yet still, he walked forwards towards Shiori, who reeled back."
+    show AE surprised-2
+    HR "It's okay, Matsumoto-san. We're gonna get you out."
+    show AE sad
+    AE "..."
+    "Wearily, in resignation, she held her arms out to Tashi-sensei, who grabbed her by the hands before nodding to me. Taking a few steps, I put my hands out to place on Shiori's backside but..."
+    MCT "I... don't even know where to begin."
+    "Gently I placed my hands on her soft rump, though the gentleness perhaps did little to quell her reaction as I began to sink my hands into her wall of booty."
+    show AE ahegao
+    AE "Ooohh~!"
+    MC "Hgggn!"
+    "However, while using all my strength, I lost my footing..."
+    MC "Woah-!"
+    "...And ended up caught right between Shiori's gigantic buttcheeks."
+    MC "MMPH!"
+    show AE aroused-2
+    AE "AAGHN~!"
+    "As I was surrounded by her giant badonkadonk, I heard from behind me the sound of the others as they murmured. Quickly, however, I pulled myself free."
+    MC "Gah! Hooh... ah..."
+    show AE embarrassed
+    AE "Ooogh..."
+    HR "Oh shit... um, we can call the main office and see if they can get some staff down here, but it may be a bit before they can even respond."
+    hide HR
+    show BE surprised at Position(xcenter=0.75, yalign=1.0)
+    BE "Y-You okay, Kei-chan?"
+    MC "Y-Yeah, I'm fine."
+    show BE sad
+    BE "M-Maybe if we um..."
+    BE "D-Distribute the push?"
+    MC "Huh?"
+    show BE doubt
+    BE "You know..."
+    BE "I do one... and you do the other?"
+    MC "O-Oh!"
+    MC "Oh geez."
+    MC "Uh..."
+    show BE sad
+    "I turned and looked at the others, as by this point a bit of a crowd had began to look on."
+    Student1 "No way... Matsumoto-san got stuck in the door?"
+    Student2 "Eh, seriously?"
+    Student3 "That shouldn't be possible, yeah? You've seen those things, right?"
+    "Shiori's legs began shaking, causing her entire booty to quiver as she heard the sounds and murmurs from behind her."
+    show AE embarrassed
+    AE "Ooou..."
+    MC "A-Are you okay with Honoka helping?"
+    AE "J-Just get me out of here. I'm starting to feel a bit..."
+    MC "R-Right."
+    "I nod to Honoka as she walks over and, though hesitant, places her back on one of Shiori's giant cheeks, her own giant breasts preventing her from using her hands."
+    MC "Okay, let's put our back into it."
+    show BE angry
+    BE "Haha."
+    MC "Gch- pun unintended."
+    show BE sad
+    BE "Ready?"
+    MC "PUSH!"
+    "Once more, we collided with Shiori's titanic tush as she lifted up her leg."
+    AE "Kyaa!~"
+    "And once more, she hardly budged. Tashi-sensei sighed in frustration on the other end... but also concern."
+    HR "Listen, it's gonna be alright. We'll get someone down here to-"
+    hide BE
+    show FMG sad at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    FMG "Shitshitshit, I'm gonna be late to-!"
+    show FMG surprised
+    FMG "Eh?"
+    "The hulking behemoth of a woman stopped in her tracks as she looked on at what was, essentially, a spectacle."
+    "As she went to walk through the crowd, the other students effectively made a way rather quickly for her."
+    FMG "Yo uhhh... what's goin on?"
+    MC "A-Akira! Hey, can you help out?"
+    show FMG surprised-2
+    FMG "W- I can when you tell me what's going on, sure."
+    BE "Shiori's stuck in the doorway, and we don't know how to get her out."
+    FMG "Eh? For real?"
+    MC "Yes! For real. Can you please help?"
+    show FMG sad
+    FMG "..."
+    show FMG neutral
+    FMG "Sooo, I'm not in trouble for being late, right?"
+    HR "Nope."
+    show FMG happy
+    FMG "Right! Let's get her outta there."
+    "Akira walked up from behind Shiori and, along with me as Honoka got out of her way, waddling as best as her chest would allow, pressed her hands on Shiori's ass as she stifled a moan."
+    "However, while Honoka and I had both of our hands on one cheek, Akira went for one on each."
+    show FMG sad
+    FMG "G-Geez, this is embarrassing. Still, I figure it's way worse for you right now."
+    show AE sad
+    AE "Oh my god..."
+    MC "Ready?"
+    AE "Mhm!"
+    MC "3, 2, 1, PUSH!"
+    "I barely felt like I did anything as, almost immediately, Akira gave a big shove as with a visible ripple along her ass—"
+    "Shiori was pushed forward into the room as Tashi-sensei, almost getting bowled over by Shiori's mass, did what he could to break her fall with his arms."
+    show AE ahegao
+    AE "Nggya!~"
+    scene Classroom
+    show AE sad at Position(xcenter=0.25, yalign=1.0)
+    show FMG sad at Position(xcenter=0.75, yalign=1.0)
+    with fade
+    "Shiori twitched on the ground for a moment as she shakily began to push herself up, panting as she did."
+    play music Rain
+    hide FMG
+    show BE doubt at Position(xcenter=0.75, yalign=1.0)
+    with dissolve
+    BE "Did... she... just...?"
+    hide BE
+    show HR neutral at Position(xcenter=0.75, yalign=1.0)
+    HR "Alright, everyone out there who is supposed to be in here, get in here. Everyone who is out there who isn't— {i}leave{/i}."
+    show AE embarrassed
+    "Shiori scrambled up to her feet slowly as the students dispersed, and the others slowly made their way in around her as Akira and I helped Shiori to her feet."
+    hide HR with dissolve
+    MC "A-At the very least, it should be easier to get out if you go sideways, right?"
+    AE "..."
+    show FMG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
+    FMG "I-I mean, it's no big deal! If Shiori wasn't gonna get stuck, one of us would instead!"
+    show FMG neutral
+    FMG "Like, you think Nikumaru-san was gonna get through the door easy?"
+    hide AE
+    show WG angry at Position(xcenter=0.25, yalign=1.0)
+    WG "Were it not for your attempts at consolement, I would be protesting {i}quite{/i} loudly."
+    hide FMG
+    show AE sad at Position(xcenter=0.75, yalign=1.0)
+    AE "Let's just... go to class."
+    hide WG with dissolve
+    MC "A-"
+    "Silently, she walked forward on shaky legs, supporting her weight on a desk as she sat down in her chair."
+    "{i}*KRRRRRRRRRK*{/i}"
+    AE "..."
+    show HR neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
+    AE "Tashi-sensei, may I grab another nearby chair?"
+    HR "..."
+    "Tashi-sensei, for his part, was absolutely stunned."
+    HR "I... w-yeah. Yeah, go ahead."
+    AE "Thank you."
+    "Shiori reached over and scooted another chair over, allowing her to fit both of her gigantic asscheeks at her desk."
+    show AE sad-2
+    "The rest of us were silent as she put her head in her hands and said nothing for the rest of class."
+    jump daymenu
+
+label AE094:
+    $setProgress("AE", "AE095")
+    scene Dorm Hallway with fade
+    MC "Shiori? Could you please open up?"
+    pause .3
+    "I stood quietly outside of Shiori's dorm waiting for her. Just waiting. I had knocked and called out to her but... {w}I knew she was in there, even if she didn't respond."
+    MC "Is the door unlocked?"
+    AE "..."
+    MC "Can I come in?"
+    AE "..."
+    MC "I'm coming in."
+    "Gently, and slowly in case she protested, I opened up the door and entered her room with little fanfare."
+    scene Dorm AE with fade
+    "As I entered, the room itself felt almost empty and hollow, save for the piles of junk on Tako's side of the room..."
+    play music AEAlt
+    show AE sad-2 with dissolve
+    extend " and of course, Shiori, who sat quietly with her head buried in her knees as her arms barely managed to wrap around them."
+    MC "Shiori, I-"
+    AE "What am I supposed to do?"
+    MC "Hm?"
+    show AE sad
+    "Shiori looked up at me past her knees, her gaze completely empty, and yet more than enough to freeze me dead in my tracks."
+    AE "What do I do now? If what happened to me earlier is what happens to me here..."
+    AE "Then what awaits me when I leave?"
+    AE "The world can't be expected to change around me."
+    show AE sad-2
+    "Shiori turned, sitting on the corner of the bed as it creaked and groaned with her weight."
+    AE "Am I just supposed to wait for the day when I completely break apart? When who I am is just broken?"
+    AE "I've always been afraid of that. Afraid that who I was would be changed so drastically that I couldn't look back."
+    show AE pondering
+    AE "But my fears were always misguided..."
+    AE "I shouldn't have been afraid of the woman I was dying..."
+    AE "I should have realized that I was afraid of the mask I wore breaking."
+    show AE sad-2
+    AE "I've... always been just a street rat pretending to be a respectable woman."
+    MC "D-Don't say that-!"
+    show AE aroused-2
+    AE "I really enjoyed that earlier, you know."
+    AE "That was one of the worst feelings of sheer humiliation I've ever experienced in my entire life."
+    show AE sad-2
+    AE "And I tried everything I could to deny it and focus on how embarrassing it was, but..."
+    AE "I think that was how I knew that deep down I was just holding back the slut that runs through my blood."
+    show AE ass
+    "Shiori brought a hand to her behind and, in an almost sardonic manner, gave her booty a smack. When she did, it rippled her entire lower body as she bit her lip."
+    show AE embarrassed
+    AE "Mmmph..."
+    AE "And uh... wow... I can't lie... it feels fucking mindblowing to let it go in a way..."
+    AE "..."
+    show AE sad-2
+    AE "Am I really just giving up?"
+    AE "Or... can I even try to pretend to be something I'm not?"
+    AE "Or is this even real... these feelings?"
+    MC "I... I don't know."
+    MC "But at the very least... maybe I can help."
+    show AE neutral-annoyed
+    AE "How are you supposed to help me...?"
+    AE "How am I anything but a burden to you?"
+    MC "..."
+    show AE angry-2
+    AE "Do you even have an answer?"
+    if getFlag("AE007_Contract") and getFlag("AE086_FoundLetter") and getAffection("AE") >= 69:
+        jump AE094_Gold
+    elif getFlag("AE073_crime") and getAffection("AE") >= 55:
+        jump AE094_Gold
+    else:
+        show AE sad
+        stop music
+        "Shiori's overwhelming despair completely choked out my senses. I was completely frozen for a moment, unsure what to say to prevent things from getting worse."
+        "Wracking my brain was fruitless, as the anxiety smothered every caring response or supportive comment I could have made."
+        "Every avenue felt exhausted."
+        "I didn't know what to say."
+        MC "I..."
+        show AE sad-2
+        AE "Just... leave me alone. I need time to think..."
+        AE "Maybe this will just pass..."
+        AE "I'm going to try to do my duties as student council president tomorrow..."
+        show AE pondering
+        AE "But I don't know if I should even pretend I'm worth it."
+        MC "You... you are."
+        show AE sad
+        AE "..."
+        "After that, Shiori remained completely silent."
+        "And so, with no real knowledge on what to say or do..."
+        scene black with fade
+        "I left."
+        jump daymenu
+
+label AE095_Gold:
+    stop music
+    "I don't know what to say. "
+    "I don't know what I should say..."
+    "..."
+    "But I know what I want to say."
+    MC "Shiori..."
+    MC "Shut up."
+    play music Bittersweet
+    show AE surprised
+    AE "..."
+    AE "Eh?"
+    "Shiori looked over at me, and any threatening aura she emanated completely melted away as I looked at her directly, fire building in my chest."
+    MC "I don't think I've ever seen someone do that much talking."
+    MC "And say absolutely nothing of substance whatsoever."
+    "I was being brutal. Harsh..."
+    "But I knew I had to be."
+    MC "Are you seriously calling yourself a slut because we had sex once and because you have a disorder that makes your ass sensitive?"
+    MC "I'm sorry, but that's straight up delusional."
+    show AE surprised-2
+    AE "I..."
+    MC "And don't you dare say you're a burden to me. You wouldn't be a burden if I literally had to carry you."
+    AE "..."
+    show AE angry 2
+    AE "Look me in the eyes right now and tell me your life wouldn't have been better off if you had just never come to Seichou."
+    MC "Gladly."
+    show AE surprised
+    MC "I wouldn't have done anything different. And what's more, I can't even *control* the fact that I was diagnosed with this hair, but if I could then I would still take it because it means I could meet you."
+    AE "Wha-... b-but..."
+    "Shiori was completely baffled. Not only by my hardened response, but the conviction in which I stated the truth absolutely and without hesitation."
+    MC "I still remember what you told me, you know. About life being like a series of spirals which led us to this point. I still believe that."
+    MC "But that's about the past, and what I've seen from you, you're the same way with the future: concerned with 'What will happen if I do this?' or 'Will this happen to me if I don't do this?'"
+    show AE surprised-2
+    MC "That's just as bad as worrying about what might have been. No, it's worse than worrying about what might have been, it's fearing something which isn't real. It's not about what you will do or what you did, it's about what you're doing."
+    MC "I don't regret the choices which led me here. You shouldn't regret where the road ahead may lead you."
+    AE "I..."
+    show AE angry-4
+    AE "L-Lead me?! Don't you realize there won't be a {i}me{/i} left?! I-"
+    MC "About that. Can I ask you something?"
+    MC "Were you \"you\", when you had me sign your contract?"
+    show AE surprised
+    AE "C-Contract?"
+    MC "For me to work with you."
+    MC "Or the contract that you wrote up about us dating, but didn't give me because you were too afraid you'd come off as awkward?"
+    AE "..."
+    MC "Yeah. I knew."
+    MC "I signed that contract with {i}you{/i}. Not someone else pretending to be you."
+    MC "If you're not you, then you're not \"someone else\", you're nobody. Plain and simple."
+    MC "You've always been you, and you always will be. Simple as that. You're not showing a fake persona, or wearing a \"mask\", you ARE that mask."
+    show AE surprised-2
+    AE "... B-"
+    MC "If you wanted to be that persona you built up so hard, wouldn't that mean that you are that person that you are putting out to the world?"
+    MC "You know that something is right because it is a matter of natural law or objective truth, and as an extension you would be who you are as an extension of the inherent truth of your {i}being{/i}."
+    MC "There has to be a foundation of desire by which you wish to build that persona. If you weren't who you projected yourself as, then why would you do it in the first place?"
+    show AE sad-2
+    AE "..."
+    MC "Yes, your growth is going to make things hard."
+    MC "It's gonna make you feel weird and embarrassed at times."
+    MC "But you shouldn't beat yourself up over it."
+    MC "Your life isn't ruined and you aren't either. You're you, and you're the only one who can decide what to do."
+    MC "So stop focusing on your own perceived failures and have faith that it'll be okay!"
+    "She looked around for a moment, almost as though a million things were running through her head at once."
+    "But..."
+    "I finally felt like I knew what to say in order to finally break through."
+    "Something I've felt a bit too awkward to say the entire time..."
+    MC "Shiori..."
+    MC "I love you."
+    show AE surprised
+    "Shiori looked up at me in shock, her eyes beginning to tear up as she hung on her words."
+    AE "I..."
+    AE "..."
+    AE "Oh my God. You're right..."
+    "She almost seemed to slump down a bit as I walked up next to her and sat down on the bed with her, as close as her titanic thighs would allow."
+    show AE sad
+    AE "This whole time, I've been acting so..."
+    MC "You have free choice. You know what is right and wrong, and even when you feel like you give into the parts of your desires you're not proud of, you get back up and try again."
+    MC "Because life is struggling."
+    MC "But that struggle is how we know there is something to struggle for."
+    MC "Your upbringing doesn't define who you are— you do."
+    MC "You just neet to let {i}yourself{/i} know."
+    show AE sad-2
+    "Shiori looked down, pondering once more, before finally speaking up."
+    "Saying what she needed to from the beginning."
+    show AE pondering
+    AE "My upbringing... doesn't define me."
+    show AE surprised
+    "As they left Shiori's lips, it was as though the pain and struggle that had been weighing on her had, at least partially, dissipated. Her eyes seemed completely clear for the first time in recent days."
+    show AE surprised-2
+    AE "What...? What is this?"
+    AE "What is this feeling?"
+    AE "For the first time in a long time I feel... relieved."
+    MC "Shiori... let's take a break. From all of this."
+    AE "Eh?"
+    "She seemed to almost reel back from my proposition, blinking as she couldn't believe what I was saying."
+    AE "I-I don't think we can... i-it's almost the end of the year and-"
+    MC "Tashi-Sensei will understand. I'm sure he'll let us take it easy tomorrow, but we need to go."
+    MC "We need to confront the outside world head on together."
+    MC "Will you do it with me?"
+    show AE surprised
+    AE "K-Keisuke..."
+    show AE love
+    AE "Of course I will."
+    scene black with fade
+    AE "Because..."
+    AE "I love you."
+    jump daymenu
+
+label AE095:
+    $setProgress("AE", "AE096")
+    scene Cafeteria with fade
+    "As I entered into the cafe area, I couldn't help but notice that there were very few people inside, and those who were, were either looking rather uncomfortable, or were murmuring amongst each other."
+    MCT "What the hell is going on here? Why is everyone acting so weird?"
+    "I looked over to the bench where Shiori and I always sit, fond memories of peach filled deserts eschewed in a soft reminiscence of much more stable times..."
+    MCT "She isn't in our usual seat..."
+    "As I walked over to the table, I began to hear a sound from the other side of the room..."
+    "Shouting."
+    MC "Hm?"
+    "I turned towards the noise to witness a crowd gathering around a scene which was building up."
+    "And I instantly knew."
+    MCT "Aaah, shit."
+    "Quickly rushing over to the other side of the room, I ran to see what was going on."
+    show AE angry-4 with vpunch
+    AE "Do I need to take this to the principal, huh?!"
+    "I pushed past a few people in the crowd and watched as Shiori dressed down another student."
+    "More specifically..."
+    "The one she had an argument with earlier in the year."
+    Hamikawa "What the fuck is your problem?! Do you actually give that much of a shit if I unbutton my shirt or not?"
+    AE "Of course I do! It's inappropriate for-"
+    Hamikawa "Plenty of girls do it!"
+    AE "THEY can't help it. YOU can-"
+    Hamikawa "And you're just now saying something because I called you a bitch to my friends?!"
+    AE "No, this is a consistent problem with you the entire year-!"
+    Hamikawa "Oh fuck off, Shiori, you've always been this way; you look calm until you get pissy over the most minor shit!"
+    AE "You're here as someone's second; do I have to arrange for you to go home?!"
+    Hamikawa "I'm not gonna take that shit from you! At least I have a home to go back to!"
+    show AE surprised
+    AE "... What?"
+    Hamikawa "You heard me! You knock my fucking teeth out and just tell me that us being here is a result of \"justice\"?! Are you insane?!"
+    "By this point, a sizeable audience began to crowd around the two, forming a circle of bobbing heads and murmuring whispers."
+    show AE angry-2
+    AE "What in gods name are you talking about?! I {i}never{/i} said that to you!"
+    Hamikawa "YES YOU DID!"
+    Hamikawa "When I first found out you were here, get this, I actually {i}wanted{/i} to talk to you. I {i}wanted{/i} to let you know that I was at least willing to move on as adults, but then I got a good look at the woman you became."
+    Hamikawa "You lord yourself over everyone else behind a wall of paperwork and got good grades, and you think that means you can tell me what the fuck to do?!"
+    AE "Well I'm sorry that {i}I've{/i} decided to become a better woman of my {i}own{/i} power and-!"
+    Hamikawa "What, do you think no one knows about how you fucked Keisuke in your room?"
+    show AE angry
+    AE "GCH?!"
+    if getFlag("AE073_gatsby"):
+        MCT "... I feel like I've seen something like this play out... no... like I've read something like this play out..."
+        Hamikawa "What? Thought I wouldn't find out? You're not the only one with ears in this place!"
+        "Moving past the crowd, I ran forward and shouted."
+        MC "STOP!"
+        Hamikawa "Eh?"
+        MC "STOP THIS RIGHT NOW, GODDAMNIT!"
+        show AE surprised
+        AE "A-..."
+        Hamikawa "Finally decided to nut up, huh fuckboy?"
+        MC "I don't care about what your personal history with Shiori is, you don't just get to treat another human this way because of it."
+        Hamikawa "And what makes you think you can just come in here and act all high and mighty, huh?"
+        MC "Because it's my responsibility! Letting this continue goes against my principles!"
+        Hamikawa "Holy shit, she has just been grooming you into her little pet, huh?"
+        MC "Say what you want, but I know when something is right, and when something is wrong, and this has fucking wrong written all over it!"
+        MC "If you believe otherwise... then explain why."
+        Hamikawa "..."
+        Hamikawa "..."
+        Hamikawa "..."
+        Hamikawa "Waste of my fucking time."
+        Hamikawa "Enjoy your slut."
+        "Hamikawa, in a huff, pushed past Shiori as she walked away out of the crowd."
+        show AE glasses
+        AE "..."
+        show AE sad
+        AE "*Gch* hnn..."
+        MC "Shiori..."
+    else:
+        Hamikawa "What? Thought I wouldn't find out? You're not the only one with ears in this place!"
+        Hamikawa "You think you're bad because your family is in deep with the 8-9-3?!"
+        Hamikawa "Don't you fucking {i}dare{/i} talk down to me like that again! Because at the end of the day, you're just like your mom-!"
+        #show AE hatred
+        "With that, in an instant, Shiori's eyes shot open as she sank her teeth into her knuckle; blood splattering out from her reopened scar and onto her lips."
+        "In what felt like an instant, she sprung forward and grabbed Hamikawa's collar; lifting her up and slamming her into the concrete wall."
+        AE "SHUT YOUR FUCKIN' MOUTH, YOU BITCH!! YOU THINK YOU CAN JUST SAY THAT SHIT TO ME AND GET AWAY WITH IT, EH?!"
+        AE "WHY'RE YOU TALKIN' LIKE YOU KNOW SHIT?! DON'T YOU FUCKIN' RUN YOUR COCKSUCKER TO ME AGAIN!!!"
+        MC "..."
+        Hamikawa "..."
+        AE "..."
+        #show AE afraid
+        AE "..."
+        AE "A-Ahg..."
+        "Blood dripped freely from her open wound as tears fell from her eyes."
+        "Almost in an instant, Shiori tried to rush away from the scene as best she could. Her feet making heavy footfalls on the tile as she ran."
+    MC "Shiori!"
+    "As I went to round the corner, I saw Shiori at the end of the hall, already headed to the dorms."
+    MCT "S-Shit! How is she so fast?!"
+    MC "Wait!"
+    scene black with fade
+    pause 1
+    $setTime(TimeEnum.EVE)
+
+    scene Dorm Hallway with fade
+    "As I ran into the dorm area, I got in just in time to see Shiori slam her door shut as I went to run over."
+    MC "I-..."
+    MC "Haaah... fuck."
+    show RM sad with dissolve
+    RM "What the shit was that?!"
+    MC "GAH!"
+    "I jumped in surprise as Daichi appeared at my side, confused and seemingly as dazed as I was at the moment."
+    MC "S-Shit dude! You scared me."
+    RM "Scared you? She was the one running for her life."
+    "Daichi craned his neck to look at her door."
+    RM "The fuck happened?"
+    MC "I don't even know, it happened so fast..."
+    RM "Well can you at least try to summarize?"
+    MC "I... I don't know."
+    MC "Shiori and another girl were fighting and..."
+    MC "She looked like she was gonna kill her."
+    show RM angry
+    RM "Damn, so Shiori ran to safety?"
+    MC "N-No, no."
+    MC "{i}Shiori{/i} was the one who looked like she was going to kill the other girl."
+    show RM sad
+    "Daichi took a step back as he seemed almost completely disbelieving at my statement, but soon lulled down into a more accepting confusion."
+    RM "Oh fuck..."
+    "I glanced over at the door, and went to reach for it... but in a way I already knew the door was locked."
+    MC "It's just like..."
+    MC "What the fuck do I even do man?"
+    RM "Woooah, hey, c'mon."
+    "Daichi took a step towards me and put a hand on my shoulder."
+    RM "It's all good my guy, just..."
+    show RM neutral
+    RM "Look, I'm out here because I was gonna go see Yuki. Do you wanna go and see Tomo-san too?"
+    MC "..."
+    MC "Y-Yeah. Probably."
+    scene black with fade
+    pause 1
+
+    scene Dorm Tomoko
+    show RM sad at Position(xcenter=0.2, yalign=1.0)
+    show Minori sad at Position(xcenter=0.4, yalign=1.0)
+    show Yuki sad at Position(xcenter=0.6, yalign=1.0)
+    show Tomoko sad at Position(xcenter=0.8, yalign=1.0)
+    with fade
+    Tomoko "So... then what are we supposed to do?"
+    "As Tomo spoke, she made a few motions with her hands to Yuki-chan who nodded along before making a few signs back."
+    Tomoko "I guess, yeah."
+    RM "What did she say? Sis, what are you saying?"
+    Tomoko "She said the best we can do is hope."
+    Minori "I've never seen her get this upset before..."
+    MC "..."
+    "I sat quietly, staring at my phone in hopes that Shiori would respond to my texts..."
+    "Only to be met with a blank screen. As I stared at my reflection on the black plane, I couldn't bare the anxiety, but nevertheless, I placed down my phone."
+    Minori "You said she looked like she wanted to *kill* her?"
+    "Looking down at the ground, I weakly nodded as the events ran through my head."
+    MC "Y-Yeah. She had this look in her eyes..."
+    Minori "Ah..."
+    Minori "I would never think Matsumoto-san a violent woman but... "
+    Minori "I can't rightfully say I would know what to think when it comes to how things have been with her."
+    "At this, Yuki looked angrily at Minori as she began to sign with her hands, looking visibly frustrated."
+    Tomoko "Utagashi-chan, slow down. You're kind of frantic, I can't really make out what you're trying to say."
+    Yuki "..."
+    "Yuki took a deep breath through her nose, as best as her lips would allow, and began to slowly sign to Tomo."
+    Tomoko "She says 'I know exactly what to think. She's our friend, and she needs our help.'"
+    MC "W-Well how are we supposed to? I feel like I've done everything I can but..."
+    MC "But she's just going into a downward spiral and-"
+    RM "Woooah, settle down."
+    MC "..."
+    RM "Okay, so..."
+    RM "I know a few things about Matsumoto-san. Not a lot, but enough."
+    MC "I... doubt you know more than me."
+    RM "I'm not sayin I do!"
+    RM "Just that, if what you're saying was said to her is true then..."
+    RM "Fuck, there might be some pretty heavy shit going on that's causing Shiori to freak out this hard."
+    Minori "Like what?"
+    RM "Well..."
+    show RM angry
+    RM "Have you heard of the Kabukicho yakuza? And the disappearances of those girls- "
+    Yuki "Nbp-ugh-ngh-!!"
+    Tomoko "U-Utagashi-chan, let's use our hands, remember?"
+    "Yuki began furiously signing at Daichi"
+    Tomoko "She said 'Now is not the time for this shit, Daichi.'"
+    RM "It's not a conspiracy about the school okay! I'm just saying, maybe Shiori's mom-"
+    Yuki "Mph. Dhm. Ngh."
+    show RM sad
+    Tomoko "Um... I think-"
+    RM "I think I know what she said."
+    RM "You're right. Sorry, I just..."
+    RM "I try to find an answer when shit gets fucked up, you know?"
+    MC "Yeah."
+    MC "Thanks, man."
+    RM "..."
+    RM "It'll be okay, dude. I swear."
+    "With that, Daichi and Yuki stood up as Daichi cricked his neck and sighed."
+    RM "Yuki and I are gonna go to communications therapy. You can like... stay here if you want to for a bit. At least so that you can still be close to Shiori in case she... y'know, responds."
+    MC "Y-Yeah, it's just..."
+    MC "I don't... I don't even know what the fuck I'm supposed to do anymore-"
+    Minori "Move forward."
+    MC "..."
+    "I looked up at Minori, who stood resolute in the doorway as she gazed down at me. She nodded pursing her lips before giving a light bow."
+    Minori "That's... that's the advice she gave me."
+    Minori "So..."
+    Minori "Do your best, okay?"
+    Minori "If not for her..."
+    Minori "Then for what's right."
+    MC "... Thank you."
+    "Minori nodded before, following along with Yuki, Daichi, and Tomo, she left the room, leaving me to sit and think as the sun began to set."
+    MCT "For what's right?"
+    MCT "But..."
+    MCT "Is that even what she wants anymore?"
+    jump daymenu
+
+label AE096:
+    $setProgress("AE", "AE097")
+    $setTime(TimeEnum.EVE)
+    scene Roof with fade
+    MC "Haaah..."
+    "The frigid winter air billowed through the empty rooftop as I stood silently waiting for Shiori. With little fanfare, I received a single word text from her."
+    "<Roof>"
+    MC "..."
+    MC "Huh..."
+    MC "I never noticed that the radio tower over there..."
+    MC "It's actually kind of nice."
+    MC "That blinking red light..."
+    "Shiori stood behind me silently, perfectly poised, but completely wordless."
+    show AE sad with dissolve
+    MC "Right?"
+    if getFlag("AE073_gatsby"):
+        MC "And one fine day..."
+        MC "Hmph..."
+        MC "Gotta say, you have really good taste in books."
+        AE "..."
+        MC "..."
+        MC "What the hell happened yesterday? You two looked like you were going to kill eachother!"
+        AE "..."
+        MC "I mean, you were lucky there weren't any staff around or else you and Hamikawa would have absolutely gotten in trouble! I don't-"
+        AE "Hotsure-san."
+        MC "Eh...?"
+        MC "That's... the first time you've called me Hotsure-san in a while."
+    else:
+        AE "So it is..."
+        MC "... So, what happens now? I figure that uh... doing that in school, threatening to kill a girl and pinning her against the wall..."
+        MC "It's not gonna be good..."
+        MC "Did the uh... principal say anything to you?"
+        AE "Nothing. I... I was visited by the school psychologist and he... he chalked it up to a mental breakdown. H-Hamikawa said that she... refuses to make a formal report on the situation."
+        MC "What?"
+        MCT "Hamikawa decided not to do anything? But... why would she just completely let Shiori off the hook like that?"
+        MCT "..."
+        MC "Who is she?"
+        AE "Who is she?"
+        MC "Hamikawa."
+        AE "..."
+        AE "Someone who's lost a lot because of my family."
+        MC "... Ah."
+    AE "Keisuke..."
+    MC "..."
+    AE "It's over."
+    MC "..."
+    MC "Yeah, I've been... seeing that coming for a bit."
+    AE "I think... I think we should take a break."
+    MC "A break?"
+    AE "..."
+    MC "Well... I mean, we don't have too long left in the school year, so I'm not sure if you mean a {i}break{/i} per say, eheh."
+    AE "..."
+    MC "..."
+    "As a pit formed in my stomach, I let out a sigh into the cold air, shaken by the tensing in my chest."
+    "But I'm a grown man."
+    "And one who knows how to put others first."
+    MC "So uh... "
+    MC "What now?"
+    show AE glasses-3
+    AE "..."
+    AE "I have a feeling."
+    AE "But..."
+    AE "I'm a woman who, above all, knows how to face a strong possibility with dignity and tact."
+    AE "..."
+    #show AE afraid
+    AE "Wow, I'm fucked, aren't I?"
+    MC "No, you're not."
+    AE "You don't understand. I'm doomed."
+    AE "More than that, I'm a threat to everyone around me if I don't accept-"
+    MC "Shiori-chan, you're acting-!"
+    #show AE hatred
+    AE "I REFUSE TO GO DOWN LIKE THIS!!! I'M NOT TAKING YOU OR ANYONE ELSE WITH ME!!!"
+    MC "..."
+    show AE sad-2
+    AE "..."
+    AE "You were right...people don't change easily...sin is in one's nature, waiting to be unlocked, and I felt it."
+    MC "You don't-"
+    #show AE hatred
+    AE "I felt it! When we first held hands, when we first made love, when I had that girl by the neck; I {i}felt{/i} it!"
+    show AE sad-2
+    AE "...I have no plans to follow in my mothers footsteps. I have no desire to..."
+    AE "..."
+    MC "It's okay."
+    show AE neutral
+    AE "Hotsure-san. I...I thank you for being my companion for all this time. Inevitably however-"
+    AE "In-..."
+    show AE sad
+    "She was doing everything she could. Everything she could to keep up the professionalism and keep back the tears."
+    MCT "It's okay... say what you need to."
+    show AE glasses
+    AE "Inevitably I've become weak because of it. Therefore I have no current plans to continue our relationship."
+    AE "I sincerely thank you for your time, and I hope I could have brought you some level of happiness."
+    AE "Have a good day."
+    "And with that, straightening her posture as best as possible and adjusting her tie, she walked away, leaving the rooftop, and myself, empty."
+    MCT "Yep. There it is."
+    MCT "..."
+    MCT "..."
+    MCT "Man, I'm feeling kinda tired."
+    MCT "I think I might go to bed early today."
+    scene black with fade
+    pause 1
+    scene Roof Entrance with fade
+    pause 1
+    scene black with fade
+    pause 1
+    scene Hallway with fade
+    pause 1
+    scene black with fade
+    pause 1
+    scene Dorm Hallway with fade
+    pause 1
+    scene black with fade
+    pause 1
+    scene Dorm Interior with fade
+    MC "..."
+    jump daymenu
+
+label AE097:
+    $setProgress("AE", "AE098") #remove once AE098D is written
+    $setTime(TimeEnum.NIGHT)
+    "..."
+    "..."
+    "..."
+    ". . ."
+    "Silence."
+    "Silence and nothing more."
+    if getAffection("AE") < 20:
+        jump daymenu
+    else:
+        MCT "Am I really okay with letting it end like that?"
+        MCT "..."
+        scene Dorm Interior with fade
+        MCT "I've been laying in my bed for hours now. I haven't really summoned up the motivation to do anything."
+        MCT "In a way I saw this coming, but..."
+        MCT "It still hurts."
+        MCT "Hurts like a motherfucker."
+        MCT "..."
+        MCT "What am I even doing?"
+        MCT "Just laying in bed lamenting shit that I can't even help?"
+        MCT "My eyes are hot."
+        MCT "My head hurts..."
+        MCT "But still."
+        MCT "I can't help but think about her."
+
+label AE097_menu_start:
+    menu:
+        "Move forward.":
+            $setVar("AE097_C", 1)
+            jump AE097_c1_1
+        "Move on.":
+            $setVar("AE097_C", 2)
+            jump AE097_c2_1
+
+label AE097_c1_1:
+    MCT "... But what is this burning in my chest?"
+    jump AE097_menu_again2
+
+label AE097_c2_1:
+    MCT "But... in a way... I'm partially to blame."
+    jump AE097_menu_again2
+
+label AE097_menu_again2:
+    menu:
+        "Move forward.":
+            jump AE097_c1_2
+        "Move on.":
+            jump AE097_c2_2
+
+label AE097_c1_2:
+    MCT "... What is telling me to keep going?"
+    if getVar("AE097_C") == 1:
+        jump AE097_menu_again3
+    else:
+        jump AE097_menu_start
+
+label AE097_c2_2:
+    MCT "I did everything I could..."
+    if getVar("AE097_C") == 2:
+        jump AE097_menu_again3
+    else:
+        jump AE097_menu_start
+
+label AE097_menu_again3:
+    menu:
+        "Move forward.":
+            jump AE097_c1_3
+        "Move on.":
+            jump AE097_c2_3
+
+label AE097_c1_3:
+    MCT "It's... it's my heart. I know it... I can't just let her go."
+    if getVar("AE097_C") == 1:
+        jump AE097_menu_again4
+    else:
+        jump AE097_menu_start
+
+label AE097_c2_3:
+    MCT "I did everything I could..."
+    if getVar("AE097_C") == 2:
+        jump AE097_menu_again4
+    else:
+        jump AE097_menu_start
+
+label AE097_menu_again4:
+    menu:
+        "Move forward.":
+            jump AE097_c1_4
+        "Move on.":
+            jump AE097_c2_4
+
+label AE097_c1_4:
+    MCT "Even if we don't get back together... I know she needs my help. I {i}WILL{/i} set things right! I will..."
+    if getVar("AE097_C") == 1:
+        jump AE097_menu_again5
+    else:
+        jump AE097_menu_start
+
+label AE097_c2_4:
+    MCT "But now the best thing for her would be for me to..."
+    if getVar("AE097_C") == 2:
+        jump AE097_menu_again5
+    else:
+        jump AE097_menu_start
+
+label AE097_menu_again5:
+    menu:
+        "Move forward.":
+            if getVar("AE097_C") == 1:
+                jump AE097_c1_5
+            else:
+                jump AE097_c1_3
+        "Move on.":
+            if getVar("AE097_C") == 2:
+                jump AE097_c2_5
+            else:
+                jump AE097_c2_3
+
+label AE097_c1_5:
+    #setProgress to regular AE098 here once AE098D is written
+    MC "Move forward."
+    jump daymenu
+
+label AE097_c2_5:
+    MC "Move on."
+    jump daymenu #(When AE 098-D is written, jump to AE 098-D))
+
+label AE098:
+    $setProgress("AE", "AE099")
+    scene Dorm Hallway with fade
+    play music Memories
+    play sound Knock
+    "*Knock* *Knock*"
+    Tako "Yo, who's there-?"
+    "*Creeek*"
+    show Tako neutral with dissolve
+    Tako "Oh! Hey shaggy, what are-."
+    show Tako sad
+    Tako "Oy. You're not looking too hot."
+    MC "Tako. Can I come in?"
+    Tako "Eh? Well... Shiori ain't here, so like..."
+    MC "Perfect."
+    Tako "..."
+    Tako "Sure, come on in."
+    scene Dorm AE with fade
+    MC "Haah..."
+    show Tako neutral with dissolve
+    Tako "So, uh... what's crappnin'?"
+    MC "... I think you probably know."
+    show Tako sad
+    Tako "... Yeah. Shit sucks."
+    MC "..."
+    Tako "But uh..."
+    Tako "Y'know, if anything, she hasn't really been telling me much."
+    Tako "I wanted to like, let her know I'm there for her but..."
+    Tako "She's been pretty cold and distant."
+    Tako "Like, more than normal."
+    Tako "I feel like she's gonna bust at any time and like..."
+    Tako "I dunno man."
+    MC "Has she spoken to Minori or Yuki?"
+    Tako "As far as I know, nah. Not beyond her super official business stuff, and even then..."
+    MC "I see. Damn..."
+    Tako "So like..."
+    Tako "How did you know she wouldn't just be completely cold shouldering me too?"
+    MC "Because I know you're her friend. You've... always been there for her."
+    show Tako happy
+    Tako "Oooh yeah, thick as thieves!"
+    show Tako unique
+    Tako "Hell, I even bought a double dildo for us to share! Almost as big as you are, and I ain't talkin bout your dick!"
+    Tako "Hahaha!"
+    MC "..."
+    Tako "..."
+    show Tako sad
+    Tako "Heh, yeah um... sorry, I... usually feel some raunchy shit helps clear the air a bit-"
+    MC "Pff... eheheh..."
+    show Tako unique
+    Tako "Ahhh, motherfucker, I knew the image would be funny enough for ya."
+    MC "Heh, yeah, yeah."
+    Tako "..."
+    show Tako sad
+    Tako "So... I guess it's no secret that I'm into her, huh."
+    MC "Y-Yeah, I figured."
+    Tako "... Well uh... I'm not exactly hiding my feelings."
+    Tako "What mom and dad don't know don't hurt em and all that..."
+    Tako "Eh, fuck it, they probably wouldn't give a shit anyways."
+    "*Tsink*"
+    "*Glp* *glp*"
+    MC "Were you seriously hiding a beer under your bed?"
+    Tako "Whaaat, Shiori didn't notice."
+    show Tako angry
+    Tako "Or she didn't say anything, which is even scarier."
+    MC "Exactly, yeah."
+    Tako "But aye, no worries, my dude. I don't hold anything against ya. Besides, we're in the same boat now."
+    MC "Yeah..."
+    MC "Well, see, that's the thing..."
+    Tako "..."
+    Tako "You wanna try and get back together with her, eh?"
+    MC "... It's not that."
+    #show Tako surprised - NYI
+    Tako "Huh?"
+    MC "If she wants to get back together with me, then absolutely..."
+    MC "But..."
+    MC "I don't care if we do end up getting back together."
+    MC "I still care about her. And that caring doesn't stop once we're split."
+    MC "I can fucking tell, she's putting up a strong detatched front, and if she even experiences a bit more pressure... she's gonna break."
+    show Tako sad
+    Tako "..."
+    MC "I don't want her to be in a self fulfilling prophecy."
+    Tako "Yeah... yeah."
+    "*Ssp*"
+    MC "So... why is it you like Shiori?"
+    show Tako happy
+    Tako "Pretty gal with a big fat ass, glasses and a cute greek nose? Hoo! How could I resist!~"
+    MC "Tssh."
+    Tako "..."
+    show Tako sad
+    Tako "C'mon, man. You know why."
+    MC "I mean, I wouldn't have asked otherwise."
+    Tako "You kiddin me? Why {i}wouldn't{/i} I like her? She's the most punk girl I've ever met."
+    Tako "Because she knows more than anyone else I've met how to be herself."
+    MC "... Really? Shiori?"
+    Tako "Yep. She's the real deal."
+    Tako "Bein' yourself doesn't mean you live or act in a way that others want you to act, it's acting in a way that's true to who you *want* to be, and if you *want* to be something... then in a way, ain't ya already that thing in your heart?"
+    MC "Yeah. I feel like shit, because..."
+    MC "I feel like I broke Shiori's mask, and now... now she's only wearing the broken pieces. Since she showed her *true* personality... I feel like I've wrecked her life."
+    play music Requiem
+    show Tako angry
+    Tako "..."
+    MC "Her whole {i}life{/i} was built around her persona, and I-"
+    Tako "Are you calling her a liar?"
+    MC "Eh?"
+    Tako "Are you saying she's fake?"
+    MC "W-What, no, that's not what I mean."
+    Tako "Do you know how often I've seen people do so much fake shit to get ahead?"
+    Tako "How many people who just do things to impress others?"
+    #show Tako empty
+    Tako "How many people who are completely empty?"
+    MC "..."
+    show Tako angry
+    Tako "Shiori isn't like that... she's the real deal. The shit she does isn't for anyone else, it's for her."
+    MC "But... she was so concerned that it was just a mask-"
+    Tako "Everyone has a mask."
+    MC "..."
+    Tako "Everyone."
+    Tako "You do too. How many times do you just choose to say the thing that would help get you through a convo with the best results?"
+    Tako "That's a mask of humanity hiding the person underneath."
+    MC "..."
+    Tako "Keisuke."
+    Tako "Can you confidently say that you're more than your mask right now? Am I talking to {i}you{/i} or your mask?"
+    MC "... Yeah."
+    MC "I'm in control."
+    Tako "..."
+    show Tako sad
+    Tako "I often think about some of the deeper reasons why I like Shiori."
+    Tako "See, I have a perspective on life which is like..."
+    Tako "It's like this, right... if you've gotten to the point where you gotta ask \"What the hell am I supposed to do?!\" 99%% of the time the answer is \"There's nothing you can do.\". At that point, why keep trying, right?"
+    Tako "It's like... you know how sometimes when people are anxious and trying to prep for like... y'know, they'll look up \"What do I do if I'm about to crash at full speed?\" on their phones and stuff?"
+    Tako "The real answer to that is \"You die.\"."
+    Tako "People don't like being powerless. To which I say \"Too bad\"."
+    MC "Yeah?"
+    Tako "Yeah."
+    MC "W-"
+    show Tako angry
+    Tako "Yeah, Shiori just completely flies in the fuckin face of that."
+    MC "..."
+    Tako "Yeah, no, my perspective got fucked when I met her."
+    Tako "The years she spent studyin' with the old guy, I mean. She worked her ass off and completely turned shit on its head. Because that's who she is."
+    Tako "If I'd been in her shoes, I'd have taken a swig of shotgun mouthwash."
+    show Tako sad
+    Tako "I dunno... it just seems like when I watch her study, hear her talk about law, none of it seems fake."
+    Tako "She didn't study hard to land a cushy job or make a better life for herself; she does all that stuff because she {i}believes{/i} in it."
+    Tako "And in a way..."
+    Tako "I wish I had something I believed in..."
+    if not getFlag("AE086_FoundLetter"):
+        show Tako happy
+        Tako "By the way, I found this today."
+        #paper_sound
+        MC "Ah! Shiori was looking for that! Did you-?"
+        Tako "I did a bit of schmoozing up to the lady at the post office, and she looked extra hard; turns out it was in the wrong bin."
+        MC "Shiori's letter... is it really okay for me to read it?"
+        Tako "Oh, dude, I already did. That's why I am showing you now."
+        MC "W-Why didn't you tell her you had it?"
+        show Tako neutral
+        Tako "I only just found this today, my guy. You think she wouldn't have been the first person I'd show?"
+        Tako "Besides, I barely got it. My english is pretty shit."
+        show Tako sad
+        Tako "Still, she's not exactly in the uh... talking mood."
+        MC "Right..."
+        MC "So..."
+        MC "Hopefully Shiori's lessons have been paying off."
+        "Shiori-chan, it's so good to hear from you again! I wish it was on happier terms, but I can't help but feel glad to know that you practice longanimity in the face of your adversity."
+        "To answer your question, what you did certainly wasn't expected, especially after swearing abstinence, but you shouldn't put yourself down so heavily for it. To me, and I'm sure to your lover, you are no less pure than when you left for Seichou."
+        "I must admit, however, that I am worried for you. Not for your missteps in obtaining love, but for what you're putting yourself through spiritually. Shiori-chan, even through pen I can tell you're in pain."
+        "What has happened to you is not punishment. It is not judgment. It is not just. It simply is a matter of reality, as many tragedies are. What matters is how you live in the face of this tragedy you have suffered, and you know how to offer up that suffering."
+        "I want you to know this: Your condition may be your cross to bear, but it is your own heart that betrays you. I am worried that your fear of change is causing you to delude yourself into worrying about problems that simply aren't there."
+        "Focus on your goal, dear. Be the best you can be. Let your lover know that the two of you have formed a deeper connection now through body and soul. Keep that in mind, don't let that frighten you into severing that bond."
+        "You are not in a shell that's being \"chipped away at\", but that you are a statue being better refined to show your true beauty, so long as you don't delude yourself otherwise."
+    MC "..."
+    MC "Tako, I need you to do something for me."
+    #show Tako surprised - NYI
+    Tako "Eh?"
+    MC "Next time you see Shiori out and about, tell her this..."
+    jump daymenu
+
+label AE099:
+    $setProgress("AE", "AE100")
+    scene Dorm AE with fade
+    play music AE
+    AE "Haah..."
+    MC "..."
+    "{i}*Click*{/i}"
+    "{i}*Creeeek*{/i}"
+    show AE neutral with dissolve
+    AE "Well now... {w}telling Yureno-san to tell me to meet her at the top of the roof so I would realize you were trying to meet with me, only to then go here instead with the knowledge I would try to avoid that. {w}You've certainly outsmarted me."
+    MC "Nah. I knew that you'd catch on. {w}If you really didn't at least want to talk to me, you would have just told Tako to tell me to keep away. That plan was just-"
+    AE "A show of your sincerity and desperation, I know."
+    AE "You know me well, but I suppose I can say the same about myself to you."
+    MC "So then... you'll hear me out?"
+    show AE neutral-annoyed
+    AE "If only to annunciate my previous position, yes."
+    show AE neutral
+    AE "I obviously hold no malice towards you, or even desire to keep any sort of distance, but I desire to keep things professional."
+    AE "Otherwise, you wouldn't be here in this room with me."
+    MC "Right."
+    MC "And I figure clearing things up is exactly what I want. Making my own point of view known."
+    MC "Me being silent only hurt our last conversation."
+    AE "Right, right. Thank you for coming to discuss it on more clear minded terms."
+    show AE glasses
+    AE "Well, with the formalities out of the way... let's discuss this like adults."
+    MC "Hm."
+    show AE sad-2
+    AE "As I mentioned on the roof, I believe that our relationship, while very touching for a time, was overall injurious to my own personal advancement and development."
+    MC "Right, that was the basis of it, from what you've told me."
+    AE "Correct. And, er, my apologies, but most of my perspective will be based on anecdotal evidence."
+    MC "My perspective as well."
+    show AE neutral
+    AE "Good, then we're on the same standing for proper presentation of the facts as we know them."
+    AE "I hope you don't mind if I start?"
+    MC "Go ahead."
+    show AE neutral-eyebrow
+    AE "Fantastic."
+    show AE neutral
+    AE "To begin, I must assume that my own circumstance is based on, at least some level, punitive action for my own choices or ambitions."
+    MC "... Do you have any direct evidence for this?"
+    show AE neutral-annoyed
+    AE "... No. I don't. However, if we could return to a statement that I had mentioned in our previous discussion I could make my case clear."
+    show AE glasses
+    AE "You see, punitive justice is paramount to effective enforcement of moral law when given proper context and with sufficiently grave situation."
+    show AE neutral
+    AE "Naturally, I do not believe this is done always as a matter of direct arbitration by an {i}actor{/i} per say, however such punishments, even when just a matter of happenstance, must be analyzed to ascertain possible truth from those happenstances."
+    MC "So... what you're saying is that, while justice isn't always handed out to you, the fact that bad things happen to you can let you reflect on bad things you've done to deserve it?"
+    show AE neutral-eyebrow
+    AE "Precisely so."
+    MC "Alright, I can accept that."
+    show AE neutral
+    AE "There. Now you're beginning to see-"
+    MC "But I don't believe that your argument naturally follows that you undergoing these things is deserved. And I don't think you believe that either."
+    show AE glasses
+    AE "Oh really?"
+    MC "And I know someone else who thinks so too."
+    #*paper sfx*
+    "I unfurled the note in a somewhat dramatic fashion so that she could see what I had in hand."
+    show AE surprised
+    AE "..."
+    show AE angry-3
+    AE "... Yo, where the actual fuck did you get this?"
+    MC "It was apparently not delivered to your inbox, I-"
+    show AE angry-4
+    AE "Give me that."
+    #*paper sfx*
+    show AE angry
+    AE ". . . . . . . . . . . . . ."
+    show AE surprised-2
+    AE "He... he sent me this?"
+    MC "Yes! Because he sees in you what I see in you."
+    show AE glasses-3
+    AE "I... I see..."
+    AE "..."
+    show AE sad-2
+    AE "Then I sincerely apologize for failing you both."
+    MC "You're failing yourself."
+    show AE angry-2
+    AE "Ach- because I've decided to end our relationship?"
+    MC "This isn't about our relationship-"
+    show AE angry-3
+    AE "Absolutely deluded-"
+    MC "This is about you knowing what you're worth."
+    AE "No, I do-"
+    MC "Then explain how you saw {i}us{/i}. {w}How you saw our moments we shared together?"
+    show AE angry
+    AE "Our relationship was...it was one of convenience."
+    MC "I know you don't believe that."
+    show AE pondering
+    AE "I-I needed you with me because I was attempting to fill a void left by my parents. The moment our relationship ended was the moment you were no longer beneficia-"
+    MC "You're being cold so that I'm turned off by you. You don-"
+    show AE angry-4
+    AE "Will you just let me talk, already?!"
+    MC "NO! Because if I let you talk you're just going to keep trying to convince yourself I don't mean anything!!!"
+    show AE surprised-2
+    AE "I..."
+    MC "{i}Aah... haah...{/i}"
+    show AE sad-2
+    AE "... You're right. Apologies, I have... misjudged the um... particular point of emphasis I should be focusing on with my case. If you'll excuse me, I need a moment to reassess my argument."
+    MC "... Fine."
+    show AE pondering
+    AE "..."
+    AE "..."
+    AE "..."
+    show AE angry-2
+    AE "Well. Alright. Then if I were to give control of the discussion to you, what would you say I can improve on, then, hm?"
+    show AE neutral-annoyed
+    AE "Surely you don't think I'm perfect. I know I'm not, so I would like a clean, no-nonsense analysis on a legitimate failing I have."
+    MC "You need to learn how to control your emotions better."
+    show AE angry-3
+    AE "... You're telling {i}me{/i} I need to control my emotions?"
+    AE "Really?"
+    MC "Yes I am."
+    show AE neutral-annoyed
+    AE "... Right, well. I can see this conversation isn't getting much of anywhere-"
+    MC "Why?"
+    show AE angry-3
+    AE "Because you're clearly not going to see reason, or at the very least acknowledge reality."
+    MC "I feel that's exactly what I'm doing. I'm letting you know that you aren't just pretending to be you, and that you shouldn't just let your own self image tank because of your mood!"
+    show AE angry
+    AE "Pssh, mood. As though an appeal to my reason through self-reflection is anything that I haven't already-"
+    MC "Do you pretend when you stay behind for hours working on paperwork?"
+    show AE angry-3
+    MC "NO!"
+    MC "Do you pretend when you ace all of your classes?"
+    MC "NO!"
+    MC "When you calmly and callously call people out on their bullshit, is it to pretend?"
+    MC "N.O."
+    MC "You said it yourself, it's because of your obligation. To your school, to your society, to *you*!"
+    MC "And if you're putting on a \"mask\", if you're going through all this work not only because you care, but because you want to show just who you are..."
+    MC "Aren't you who you say and act to be?"
+    show AE pondering
+    AE "..."
+    AE "... I... see you're going for a Cartesian argument-"
+    MC "There. Right there. Who the fuck would say something like that? Ach- Who would start an argument with their ex like a fucking court case?!"
+    show AE angry-3
+    AE "I'm {i}TRYIN'{/i} to be a professional about this shit!"
+    MC "Being open and showing weakness every once in a while doesn't equate to becoming your mother!"
+    show AE angry-4
+    AE "...You asshole."
+    MC "I'm looking at this from-"
+    AE "You ABSOLUTE MOTHERFUCKER."
+    AE "How DARE you?!"
+    AE "HOW DARE YOU!!!"
+    MC "I'm not going to back down."
+    MC "You're your own woman."
+    show AE angry-3
+    AE "..."
+    show AE angry-2
+    AE "..."
+    show AE sad-2
+    AE "I..."
+    show AE sad
+    AE "I don't even deserve to be called a woman."
+    MC "G- Stop."
+    show AE sad-2
+    AE "I-I'm not a woman, I'm a fucking pathetic-!"
+    MC "Don't. You. Dare."
+    MC "I won't let anyone talk shit about you— even you."
+    MC "If we're going to continue this conversation like adults, then we're gonna leave the childish self loathing behind."
+    MC "When you left me, I can tell it hurt you inside. It hurt me too."
+    show AE sad
+    AE "..."
+    MC "But I understand why you did it."
+    show AE pondering
+    AE "...?"
+    MC "You're a loving person, even if you don't believe it."
+    MC "But you have to learn to love yourself before you can love anyone else."
+    show AE angry-4
+    AE "LOVE MYSELF?!"
+    MC "You always talked about your duty to your fellow man and universal love, that needs to include {i}you{/i}!"
+    show AE angry-3
+    AE "How am I supposed to control how I feel about myself?"
+    AE "What am I supposed to do?"
+    show AE angry-4
+    AE "Shit I can't even fuckin' control my life!"
+    AE "I don't have no fuckin' future anymore!"
+    MC "YOU are the one who decides that!"
+    show AE angry-2
+    AE "..."
+    MC "Not your mom, not your body, you!"
+    show AE pondering
+    AE "But..."
+    AE "I've made so many mistakes..."
+    MC "If we always worry about what might have been... we lose sight of the future ahead, right?"
+    AE "..."
+    show AE sad
+    AE "I was...I was just running from my problems. This whole time, I..."
+    MC "Do you really believe that?"
+    AE "..."
+    play music Bittersweet
+    MC "Look me in the eyes and tell me I was just an escape."
+    show AE sad-2
+    AE "..."
+    MC "If I was nothing more to you..."
+    MC "I'll leave right now."
+    show AE sad
+    AE "Y-you..."
+    AE "I can't."
+    AE "I don't want..."
+    AE "I don't want you to go."
+    MC "Shiori..."
+    show AE angry-2
+    AE "B-but you don't understand I-{i}hck{/i} I'm not WORTH..."
+    MC "Don't."
+    show AE sad
+    AE "I'm not worth someone like you. "
+    MC "Shiori..."
+    AE "Ach...ghm..."
+    MC "You are the greatest treasure in my life. You always were. You always are. You always will be."
+    show AE surprised
+    AE "...Oh god."
+    AE "Oh god, you're right. It's me, isn't it?"
+    show AE sad-2
+    AE "I can't blame any of my problems on anything. Not you, not my parents, not my growth."
+    AE "I'm the problem."
+    MC "Shi-"
+    show AE sad
+    AE "I'm the reason I fail. My own self-loathing..."
+    MC "..."
+    MC "Shiori-chan, listen."
+    show AE angry-3
+    AE "Why was I so blind-?"
+    show AE sad-2
+    MC "LISTEN!"
+    MC "..."
+    MC "You're completely right. You are the only thing holding you back."
+    AE "..."
+    MC "I never wanted...I never wanted to be a feedback loop of hope for you. I never wanted you to hurt."
+    MC "But you have to understand, I had no choice. What did you want me to do? Have me just say 'You're right, it's hopeless.'?"
+    show AE sad
+    AE "I...I just wanted..."
+    AE "I just didn't want it to hurt anymore."
+    AE "I didn't want you to hurt anymore..."
+    AE "I-"
+    AE "..."
+    MC "You've always been you, and you always will be. Simple as that."
+    MC "Any warming up you did, that wasn't something you 'developed', that's something that's always been in you."
+    MC "So what if people don't like you because you're cold. They don't see the world through your eyes."
+    MC "The fact that you put in the work you do, the fact that you actually give a shit, that's because you've always cared. You've always been there."
+    show AE sad-2
+    AE "..."
+    MC "Your personality hasn't 'died' and what you value hasn't changed. What's happened, for me at least, is that your capacity for love has been exposed."
+    AE "...{i}Snf... Hck{/i}"
+    AE "A-a-a-agn...."
+    play music Love
+    MC "I don't know if you'll ever warm up to anyone else anymore, or if you'd even want to, but one thing's for certain: {w}You're you."
+    show AE surprised-2
+    AE "..."
+    MC "I love you,  Shiori Matsumoto. I always will."
+    show AE sad-2
+    AE "... Keisuke..."
+    AE "I love you too."
+    show AE neutral
+    AE "And I..."
+    AE "I always will."
+    AE "Which is why..."
+    show AE smile
+    AE "I want to show you..."
+    AE "I want to show you my resolve."
+    #(Fade to black for now. Will have sex CGs in the future)
+    scene black with fade
+    #CG 1 goes here (Shiori taking off skirt)
+    MC "Huh?"
+    AE "I have been so long afraid of this..."
+    AE "But..."
+    AE "I'm ready."
+    MC "Huh?"
+    MC "Shiori, I..."
+    MC "I'm not trying to get you to-"
+    #CG2 goes here (Shiori close to Kei)
+    AE "I know."
+    AE "I know, Keisuke..."
+    AE "But... this is for me."
+    #CG 3 goes here (Shiori with legs open on bed)
+    AE "This is me... letting go of my fear."
+    AE "And if this is a mistake..."
+    AE "Then it's a mistake I'm willing to make."
+    MC "Shiori..."
+    #CG 4 goes here (Shiori and Kei making out, pants coming off)
+    AE "Mmph!~"
+    MC "Haah... haah..."
+    AE "Keisuke..."
+    AE "Take me."
+    #CG 5 goes here (About to penetrate)
+    MC "Ahan, haah-!"
+    #CG 6 goes here (Insertion)
+    AE "AAAAHN~!"
+    MC "GAAH!~"
+    #CG 7 Goes here (Vaginal Sex Movement)
+    MC "Mmmf, haaa!"
+    AE "Keisuke... I'm gonna...!"
+    MC "Let's... t-together-!"
+    #CG 8 goes here (About to climax)
+    "HAAAN~!"
+    #CG 9 goes here (Climax)
+    #CG 10 goes here (Close up of holding hands)
+    jump daymenu
+
+label AE100:
+    $setProgress("AE", "AE101")
+    scene Gate Front with fade
+    play music Schoolday
+    UNKNOWN "Mizutani! Quit goofing off and get over here!"
+    show FMG neutral at Position(xcenter=0.2, yalign=1.0), Transform(xzoom=-1) with easeinleft
+    FMG "I'm 'comin, I'm 'comin! Geeze!"
+    show AE angry at Position(xcenter=0.75, yalign=1.0) with dissolve
+    AE "What took you so long?"
+    FMG "I was getting two benches at once! I thought you'd like me getting twice what ya asked!"
+    AE "Not if it takes you three times as long!"
+    show BE neutral with dissolve
+    BE "Deja vu. Stiiill feel a bit awkward standing here."
+    MC "Trust me, you get used to it."
+    MC "Hey, girls! Mind if I chip in?"
+    show AE neutral
+    AE "Ah, there you are! Here, we can all take a bench up with Mizutani-san."
+    show BE surprised
+    BE "Eh?! All? Like, me too?"
+    BE "I mean, my breasts make it hard for-"
+    AE "You're exempt."
+    show BE happy
+    BE "Woo! Later Kei!"
+    hide BE with dissolve
+    MC "Alright, got one. Akira?"
+    show FMG happy
+    FMG "Yep."
+    AE "One at a time. It will allow each one in place and ready for the next without them all piling up in a disorderly fashion."
+    FMG "I gotcha, don't get your panties in a bunch, Matsumoto. {size=-6}With a butt that size...{/size}"
+    show AE neutral-annoyed
+    AE "Keisuke, would you please adjust my skirt for me? It's riding a bit high."
+    MC "You got it."
+    show FMG surprised
+    FMG "... Huh. Guess she probably could get Keisuke to do it."
+    show AE angry
+    AE "What was that?"
+    show FMG surprised at Transform(xzoom=+1)
+    FMG "U-Uhh, hey! A spot over there doesn't have a bench, let me get it!"
+    hide FMG with easeoutleft
+    MCT "Aaaand there she goes."
+    show AE angry at altMove(0.5, 0.5)
+    AE "Don't run! It's the last day of school, don't go fishing for an accident."
+    AE "..."
+    show AE neutral
+    AE "Hmph."
+    MC "Eheheh..."
+    "Krk"
+    MC "Oof, ahh, I need to stretch more. My back is popping like crazy."
+    show AE neutral-eyebrow
+    AE "You \"need\" to learn to straighten your back. Honestly, all this time and you still haven't fixed your posture."
+    MC "Hmm, could you show me again?"
+    show AE happy
+    AE "Here. You want your shoulders squared, and you want to make sure you're not arching it, keep your head up high as you walk."
+    MC "Mhm."
+    MC "Did that count as awkward social PDA?"
+    show AE neutral-smug
+    AE "I'll allow it."
+    MC "How about a kiss, then, hm?"
+    show AE neutral-annoyed
+    AE "No. That is exactly what was meant by public displays of affection."
+    MC "Right."
+    AE "While there are no school regulations about pda, it is imperative that we not perform it."
+    MC "Right, because doing so shows flippancy in a relationship, as well as the unnecessary desire to make ones desires a public affair."
+    show AE neutral-smug
+    AE "Precisely. You know me so well."
+    MC "More than you'd think."
+    AE "Oh?"
+    MC "Because I know you don't want any public displays of affection-"
+    scene black with fade
+    pause 1
+
+    scene School Front
+    show AE neutral-smug
+    with fade
+    play music Peaceful
+    MC "But I also know you well enough-"
+    MC "To know that we're no longer in public."
+    AE "Mmmph~"
+    MC "Mmhn~"
+    show AE happy
+    AE "Precisely~"
+    MC "So, going to the celebration after commencement?"
+    show AE neutral
+    AE "Hmm, I suppose. Most of my work has been cleared up now that we're graduating."
+    MC "Alright! Perfect occasion for wearing your bodycon dress out, eh?"
+    show AE neutral-annoyed
+    AE "Gch! You!"
+    MC "Nehehehe, kidding, kidding!"
+    show AE embarrassed
+    AE "I- I'm reserving wearing that for... \"special\" occasions."
+    MC "Like a night out with me?"
+    AE "Precisely."
+    MC "Ehehe~"
+    show AE happy
+    AE "Hehe~!"
+    MC "..."
+    AE "..."
+    MC "So.... how are you doing?"
+    show AE neutral
+    AE "I am reasonably well."
+    MC "Still uh... anxious?"
+    AE "Hardly."
+    MC "Hardly? Really?"
+    show AE neutral-annoyed
+    AE "Because I was given an important reminder."
+    MC "A reminder?"
+    show AE neutral
+    AE "Along the way I forgot something important. I don't have all the answers... but I can still seek them. I can't always make the perfect judgements we all desire to... but I can have faith."
+    AE "I was so worried that I peaked, I never stopped to realize that I never left the summit."
+    show AE admire
+    AE "I feel... whole again. As though the woman I was has returned, reaffirmed in my own identity."
+    MC "Returned? Remember what I said? You never left."
+    AE "Mhmhm, true. I just feel... renewed, is all."
+    MC "That's good to hear. Like I told you, you're you, and I'll always love that. You're no less of the woman you were when I met you."
+    AE "Hmm, good to hear."
+    MC "... Are you really okay with that? Not growing throughout the entire time you've been here?"
+    show AE aroused-3
+    AE "Pff, trust me, I've done enough \"growing\" for the rest of my life."
+    MC "Eheheh, s-sorry— wording."
+    show AE angry-2
+    AE "Hmph! Growing. Growing isn't the problem I have, \"changing\" is. As long as I'm fundamentally the same, that's all that matters."
+    MC "Eh, you got me there. You really haven't changed much since we first met."
+    show AE aroused-2
+    AE "Perhaps... but this time something has been added."
+    show AE happy
+    AE "You, Keisuke. You've been at my side this whole time."
+    MC "And I always will be."
+    AE "..."
+    MCT "Heh, her hugs always warm my heart."
+    "{i}Shuffle{/i}"
+    show AE neutral-smug
+    AE "Mmm- Tuck in your shirt, you look like a vagabond."
+    MC "O-Oy! Who are you calling a vagabond?!"
+    AE "Keep your volume at a \"respectable\" level, please."
+    MC "Tch!"
+    show AE happy
+    AE "Mhmhm~"
+    play music TwilightBright
+    MC "So, what now? Now that we're graduating?"
+    show AE pondering
+    AE "..."
+    MC "Do you have an idea?"
+    show AE neutral
+    AE "... Well um... I applied and..."
+    MC "You're going to America, aren't you?"
+    show AE sad
+    AE "... Yeah."
+    MC "Will we... see each other again?"
+    AE "I certainly hope so. I've been praying we would."
+    MC "Heh, yeah, I saw you playing with your necklace earlier."
+    show AE neutral-annoyed
+    AE "Ach, it's not a necklace, it's..."
+    show AE neutral-eyebrow
+    AE "Well, explaining it will be a bit difficult."
+    MC "Eheheh, I like to think I'm smart."
+    show AE neutral-smug
+    AE "We all do."
+    MC "... So... if you don't have anything else to do..."
+    MC "Wanna go to the roof?"
+    show AE neutral
+    AE "..."
+    show AE love
+    AE "Ahahah~!"
+    scene black with fade
+    $setTime(TimeEnum.EVE)
+    pause 1
+
+    scene Roof
+    show AE smile
+    with fade
+    MCT "I still don't completely understand her. Her desire to be a hardass, her cold shell, her stoic and orderly nature— {w}to think it's all just her in her natural state is so odd."
+    MCT "But still."
+    MCT "Even if she does want to keep the outside world out... I'm happy I can stay inside with her."
+    jump daymenu
+
+label AE101:
     "This marks the current end of Shiori's route."
     "Her story will be continued in a later release. Until then, feel free to explore other routes."
     jump daymenu_noadvance
@@ -21026,7 +22836,7 @@ label AEBE004:
         MCT "Wow... you're terrible at hiding your fetishes, Shiori-chan."
     jump daymenu
 
-label AE101:
+#label AE101:
     scene Gym
     show FMG neutral
     with fade
