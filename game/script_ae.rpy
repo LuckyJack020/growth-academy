@@ -381,7 +381,7 @@ label AE003_c1_after:
         Student1 "Yo! I said left!"
     "Continuing right, I exhaled through my nose, just frustrating myself more thinking about it until I got to my room."
 
-    scene Dorm Exterior with fade
+    scene Dorm Hallway with fade
     play sound Knock
     "{i}KNOCK KNOCK{/i}"
     play music HigherEdu
@@ -20571,7 +20571,7 @@ label AE092:
     show AE pondering
     AE "You think so?"
     Takamura "Actually, yes. My mother has the same type of growth as you."
-    show AE surprised
+    show AE surprised-2
     "Shiori looked surprised at first, then seemed too clam up as she nodded quietly in acknowledgement."
     show AE sad-2
     AE "My condolences."
@@ -20644,6 +20644,7 @@ label AE092:
     MC "Ah, good afternoon Tashi-sensei."
     show HR neutral
     HR "Hm?!"
+    show dummy with vpunch
     MC "Ah!"
     "Tashi-sensei's reaction almost made me jump as he paused the recording."
     HR "Hotsure-san? What are you doing in the faculty room?"
@@ -20678,7 +20679,7 @@ label AE092:
     HR "I was wrong."
     MC "Hm?"
     HR "About Shiori. I was wrong."
-    HR "I figured 'You're a grown ass man. I shouldn't have to sugarcoat how I see it to you.' Figured it was the same with her, too."
+    HR "I figured \"You're a grown ass man. I shouldn't have to sugarcoat how I see it to you.\" Figured it was the same with her, too."
     HR "But..."
     HR "I shouldn't have judged my worries about what her growth would do to her on my own bullshit. Figured I'd be the first to recognize a self fulfilling prophecy, but..."
     HR "The point of being a teacher isn't to saddle your students with your own damn problems."
@@ -20698,6 +20699,9 @@ label AE092:
     HR "..."
     Takamura "Okay, I did the best I could."
     #show Takumaru neutral with dissolve
+    show HR neutral at wiggle_loop
+    pause 0.7
+    show HR unique at altMove(0,0.5)
     "As Tashi-sensei was about to speak, Takamura-sensei entered the room, breathing a sigh of exhaustion as Tashi-sensei stood up straight."
     MC "How's she holding up?"
     Takamura "Well, she seemed to get behind what I was saying..."
@@ -20705,6 +20709,7 @@ label AE092:
     MCT "Yeah, kind of telling me what I know..."
     "I was at first kind of upset, but..."
     "At the very least, they were trying to help. And what's more, they could give help that I couldn't."
+    show HR neutral
     HR "So uh... what's the plan?"
     Takamura "Well, from the looks of it, we're going to need to stay up late tonight doing some rounds around the dorms."
     Takamura "Kaeru-chan, are you okay with accompanying me?"
@@ -20721,6 +20726,7 @@ label AE092:
 
 label AE093:
     $setProgress("AE", "AE094")
+    $setAEOutfit(OutfitEnum.TIRED)
     scene Hallway2
     show BE sad
     with fade
@@ -20849,6 +20855,7 @@ label AE093:
     AE "Haaah..."
     play music AE
     hide WG with dissolve
+    show AE angry-2 at wiggle_loop
     "Shiori began to squirm her way forward, each thrust of her hips causing her gigantic ass to jiggle as she did, causing the rest of us to look away in embarrassment."
     HR "Hey, uh... Matsumoto-san? You can come in now."
     show BE surprised-2 at Position(xcenter=0.75, yalign=1.0) with dissolve
@@ -20859,6 +20866,7 @@ label AE093:
     BE "What do you mean you can't?"
     show AE angry
     AE "Hnng!"
+    show AE angry at altMove(0, 0.25)
     MC "..."
     MCT "Oh fuck."
     MC "Shiori..."
@@ -20886,10 +20894,13 @@ label AE093:
     AE "Are you crazy?! N-No!"
     MC "We gotta get you out. Tashi-sensei, could you pull her arms."
     HR "Uh, y-yeah, I can try."
+    show HR unique
     "Tashi-sensei looked completely beside himself, as though he wouldn't have expected this to happen in a million years. And yet still, he walked forwards towards Shiori, who reeled back."
     show AE surprised-2
+    show HR neutral
     HR "It's okay, Matsumoto-san. We're gonna get you out."
     show AE sad
+    show HR unique
     AE "..."
     "Wearily, in resignation, she held her arms out to Tashi-sensei, who grabbed her by the hands before nodding to me. Taking a few steps, I put my hands out to place on Shiori's backside but..."
     MCT "I... don't even know where to begin."
@@ -20907,6 +20918,7 @@ label AE093:
     MC "Gah! Hooh... ah..."
     show AE embarrassed
     AE "Ooogh..."
+    show HR neutral
     HR "Oh shit... um, we can call the main office and see if they can get some staff down here, but it may be a bit before they can even respond."
     hide HR
     show BE surprised at Position(xcenter=0.75, yalign=1.0)
@@ -20977,9 +20989,14 @@ label AE093:
     AE "Mhm!"
     MC "3, 2, 1, PUSH!"
     "I barely felt like I did anything as, almost immediately, Akira gave a big shove as with a visible ripple along her ass—"
+    show AE sad at wiggle_loop
     "Shiori was pushed forward into the room as Tashi-sensei, almost getting bowled over by Shiori's mass, did what he could to break her fall with his arms."
     show AE ahegao
     AE "Nggya!~"
+    hide AE with easeoutleft
+    scene black with fade
+    pause 1
+
     scene Classroom
     show AE sad at Position(xcenter=0.25, yalign=1.0)
     show FMG sad at Position(xcenter=0.75, yalign=1.0)
@@ -21026,6 +21043,7 @@ label AE093:
 
 label AE094:
     $setProgress("AE", "AE095")
+    $setAEOutfit(OutfitEnum.TIRED)
     scene Dorm Hallway with fade
     MC "Shiori? Could you please open up?"
     pause .3
@@ -21111,7 +21129,7 @@ label AE094:
         "I left."
         jump daymenu
 
-label AE095_Gold:
+label AE094_Gold:
     stop music
     "I don't know what to say. "
     "I don't know what I should say..."
@@ -21220,6 +21238,7 @@ label AE095_Gold:
 
 label AE095:
     $setProgress("AE", "AE096")
+    $setAEOutfit(OutfitEnum.TIRED)
     scene Cafeteria with fade
     "As I entered into the cafe area, I couldn't help but notice that there were very few people inside, and those who were, were either looking rather uncomfortable, or were murmuring amongst each other."
     MCT "What the hell is going on here? Why is everyone acting so weird?"
@@ -21302,6 +21321,7 @@ label AE095:
         AE "..."
         AE "A-Ahg..."
         "Blood dripped freely from her open wound as tears fell from her eyes."
+        show AE angry at altMove(0.5, -0.5)
         "Almost in an instant, Shiori tried to rush away from the scene as best she could. Her feet making heavy footfalls on the tile as she ran."
     MC "Shiori!"
     "As I went to round the corner, I saw Shiori at the end of the hall, already headed to the dorms."
@@ -21317,6 +21337,7 @@ label AE095:
     MC "Haaah... fuck."
     show RM sad with dissolve
     RM "What the shit was that?!"
+    show dummy with vpunch
     MC "GAH!"
     "I jumped in surprise as Daichi appeared at my side, confused and seemingly as dazed as I was at the moment."
     MC "S-Shit dude! You scared me."
@@ -21389,9 +21410,9 @@ label AE095:
     show RM angry
     RM "Have you heard of the Kabukicho yakuza? And the disappearances of those girls- "
     Yuki "Nbp-ugh-ngh-!!"
-    Tomoko "U-Utagashi-chan, let's use our hands, remember?"
-    "Yuki began furiously signing at Daichi"
-    Tomoko "She said 'Now is not the time for this shit, Daichi.'"
+    Tomoko "Y-Yuki-chan, let's use our hands, remember?"
+    "Yuki began furiously signing at Daichi."
+    Tomoko "She said \"Now is not the time for this shit, Daichi.\""
     RM "It's not a conspiracy about the school okay! I'm just saying, maybe Shiori's mom-"
     Yuki "Mph. Dhm. Ngh."
     show RM sad
@@ -21424,6 +21445,7 @@ label AE095:
 
 label AE096:
     $setProgress("AE", "AE097")
+    $setAEOutfit(OutfitEnum.TIRED)
     $setTime(TimeEnum.EVE)
     scene Roof with fade
     MC "Haaah..."
@@ -21847,6 +21869,7 @@ label AE098:
 
 label AE099:
     $setProgress("AE", "AE100")
+    $setAEOutfit(OutfitEnum.TIRED)
     scene Dorm AE with fade
     play music AE
     AE "Haah..."

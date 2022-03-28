@@ -13094,7 +13094,7 @@ label WG003M:
     play music ConcertinoTeleman
     pause 5
     WG "It sounds lovely so far."
-    pause 8
+    pause 9
     show WG surprised-2
     WG "Oh my! It's really starting to pick up."
     pause 2
@@ -13102,6 +13102,7 @@ label WG003M:
     WG "You practically sound like two guitars at some parts. It's quite impressive actually to create that effect."
     pause 10
     stop music fadeout 2.0
+    pause 2
     play music Peaceful
     show WG surprised-2
     WG "Keisuke! What on earth was that?"
@@ -16908,7 +16909,7 @@ label WG061S:
         WG "Please do."
         "I continued my diligent task, though now I did get a bit more touchy. Grazing her ponderous breasts did result in a subdued yelp, which Alice waved off when I expressed concern. A few scrubs between her folds did produce a few moans."
         "I did not help matters by occasionally pressing myself against her, letting myself sink ever so slightly into her softness."
-        if getVar("WGSSPR") >= 8 and if getAffecton("WG") >= 69:
+        if getVar("WGSSPR") >= 6 and if getAffecton("WG") >= 69:
             menu:
                 "Be bold":
                     jump WG061S_C1_1
@@ -19452,7 +19453,7 @@ label WG069:
     MCT "Well, maybe jazz it up a bit, this is Alice's father after all."
     "As I raised my hand to knock I could already hear sounds of grunting and shouting. The one shouting was Alice for sure but there was another voice I couldn't discern."
     play music WGAlt
-    WG "Ouch watch the needle."
+    WG "{i}Ouch!{/i} Watch the needle!"
     UNKNOWN "Sorry it's hard to miss any part of you."
     WG "You could at least try not to push so hard."
     play sound Knock
@@ -19461,10 +19462,9 @@ label WG069:
     "I was surprised to see Chibuki answer the door with a needle and thread in hand."
     Chibuki "Your boyfriend is here."
     WG "Wonderful! He's early."
+    scene Dorm WG with fade
     "Chibuki pointed me towards the bedroom where I found Alice in the process of putting on her dress."
-    hide Chibuki
-    show WG neutral
-    with dissolve
+    show WG neutral with dissolve
     MC "That's a nice dress, it looks familiar."
     WG "I wore it when we went to the theater on one of our dates."
     MC "Have you added more details to it?"
@@ -19748,9 +19748,11 @@ label WG070:
             Daitaro "Hmm, dear, it appears a friend of ours is trying to get your attention."
             show WG surprised-2
             WG "Oh!?"
+    hide WG with dissolve
     "A man suddenly approached Alice who she appeared to recognize as they began chatting immediately."
-    Daitaro "Kei-san do you mind if we step aside for a moment?"
+    Daitaro "Kei-san, do you mind if we step aside for a moment?"
     MC "Uh, sure, sir."
+    $renpy.music.set_volume(0.2, delay=0.8, channel='music')
     "I followed him outside the ballroom into the empty hallway outside."
     "As he turned to face me, his expression returned to the cold, calculated face he had earlier."
     Daitaro "Alright, Mr. Hotsure-san. I'll cut to the chase. How do I know you're not some slick huckster who's only after her money— {i}my{/i} money."
@@ -19770,12 +19772,13 @@ label WG070:
     Daitaro "She will need the support of someone strong to help her bear this burden. Are you up for that task? {w}As her father, I have to ask."
     MC "Alice was never going to live an ordinary life. She's always been determined to live an extraordinary life. {w}I see what she goes through everyday, and the expectations she puts on herself."
     MC "A weaker person would have long since cracked under the pressure and resigned themselves to their fate. {w}But Alice doesn't. She's amazing."
-    MC "I can't help but respect that, and I want to support her as much as I can, and whatever way possible."
+    MC "I can't help but respect that, and I want to support her as much as I can, in whatever way possible."
     "Mr. Nikumaru placed his hand on my shoulder. It was large and imposing as I felt the weight of him and his stature press down into me."
     Daitaro "No father ever thinks any man is truly good enough for his daughter. Especially when the daughter in question is my own."
     Daitaro "But for now, let's just say your potential has caught my attention. Enjoy the rest of your evening with her, Mr. Hotsure-san."
     "With a new sort of reassurance, I returned with him to the party inside."
-    show WG neutral
+    $renpy.music.set_volume(1.0, delay=0.8, channel='music')
+    show WG neutral with dissolve
     extend " It wasn't hard to spot Alice considering her size and choice of red dress. Though where I found her was enough to make me chuckle."
     "Despite her statement earlier, she had found her way over to the food and drink table happily talking with the other members of the party as she munched on a small sandwich."
     "As her father and I returned, she exchanged a glance with her father who responded with a nod."
@@ -19807,7 +19810,7 @@ label WG070:
     "Attempting to be discreet, so as to not call attention to the matter, I moved an adjacent chair next to another when I pulled out a seat for Alice at the table."
     "It might have raised a few eyebrows at the table, but her comfort was far more important to me than the thoughts of strangers at this point, not to mention the potential for an incident without such precaution."
     show WG neutral
-    Daitaro "That was some great skill out there from both of you. I know your mother taught you my dear, but what about you sir. Where did you learn to waltz?"
+    Daitaro "That was some great skill out there from both of you. I know your mother taught you, my dear, but what about you sir? Where did you learn to waltz?"
     MC "Oh, actually Alice taught me the basics."
     Daitaro "She did? That's quite impressive, as she had trouble with the waltz when her mother taught her many years ago."
     show WG haughty

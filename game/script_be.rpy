@@ -684,7 +684,7 @@ label BE006:
     show BE shrug
     BE "Eh, I'll manage. I'll just keep it all in mind."
     #show Takamura neutral
-    Takamura "That's all we ask of you two. Now then, Kanami-chan. We're running late for our meeting. We shouldn't keep Myoga-san and the rest waiting! Have a good day, you two."
+    Takamura "That's all we ask of you two. Now then, Kanami-san. We're running late for our meeting. We shouldn't keep Myoga-san and the rest waiting! Have a good day, you two."
     #hide Takamura with dissolve
     #hide Kanami with dissolve
     "Takamura-sensei, and Kanami walked off together."
@@ -724,7 +724,7 @@ label BE006:
     "Honoka placed her hands on her lower back, aiming her ballistics towards the ceiling. She tilted her head backwards and spoke to me upside down."
     BE "Mmmmah! Soccer... practice! Then afterwards, I might get something to-"
     stop music
-    show BE surprised
+    show BE surprised with vpunch
     "{i} PING {/i}"
     MC "Eh?"
     MCT "Did that just happen?"
@@ -6459,13 +6459,6 @@ label BE034_end:
     "Honoka and I walked towards campus to get her signed up for her next club. Hopefully she'd have more success with this one."
     jump daymenu
 
-
-label BE035:
-    if getFlag("BE_COOKING"):
-        jump BE035A
-    elif getFlag("BE_SOFTBALL"):
-        jump BE035B
-
 label BE035A:
     $setProgress("BE", "BE036")
     scene Cooking Classroom with fade
@@ -7140,14 +7133,10 @@ label BE037:
     "I did just that, and we proceeded to not worry about when or where we next kissed, and just enjoyed the moment until we packed up and went back to our dorms."
     jump daymenu
 
-label BE038:
-    if getFlag("BE_COOKING"):
-        jump BE038A
-    else:
-        jump BE038B
-
 label BE038A:
-    jump BE039
+    $setProgress("BE", "BE039")
+    "Scene not yet written."
+    jump daymenu
 
 label BE038B:
     $setProgress("BE", "BE039")
@@ -7344,7 +7333,10 @@ label BE038B_fail:
     jump daymenu
 
 label BE039:
-    $setProgress("BE", "BE041")
+    if getFlag("BE_COOKING"):
+        $setProgress("BE", "BE041A")
+    else:
+        $setProgress("BE", "BE041B")
     scene Dorm BE with fade
     UNKNOWN "Kukuku... so Honoka-chan, this is the boy I've heard far, far too much about."
     MC "Eh?"
@@ -7449,16 +7441,10 @@ label BE039:
     "Honoka and I sat down along with Kokutan to crank out some rounds of Breathless Warriors 4. Kokutan was a bigger fan of the game than even I was. Though the fact the narration was as edgy and brooding as humanly possible was probably the main reason."
     jump daymenu
 
-label BE041:
-    if getFlag("BE_COOKING"):
-        jump BE041A
-    else:
-        jump BE041B
-
 label BE041A:
     $setProgress("BE", "BE042")
-    jump BE042
-
+    "Scene not yet written."
+    jump daymenu
 
 label BE041B:
     $setProgress("BE", "BE042")

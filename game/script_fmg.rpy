@@ -723,6 +723,7 @@ label FMG007:
     FMG "You need to make time to recover, sure. But if something is hurt or needs more rest, you just work around it. There's always something you can be working on."
     MC "Okay, if you're sure..."
     MC "Hey, speaking of that, do you want to work out after class?"
+    show FMG neutral
     FMG "Definitely. I was gonna say something if you weren't. You agreed to let me be your personal trainer after all."
     MCT "A decision I'm sure I won't somehow come to regret..."
     FMG "Which reminds me of the most important rule of working out— you {i}never{/i} skip leg day."
@@ -905,7 +906,7 @@ label FMG008:
     MCT "Ut oh... I'm in trouble."
     "I began the slow walk back to my dorm, each step carefully chosen so I didn't randomly crumple on the pavement."
     MCT "Now I know how grandma must feel."
-    "On second thought, grandma could run circles on me at this point."
+    "On second thought, grandma could run circles around me at this point."
     scene black with fade
     pause 1
     $setTime(TimeEnum.EVE)

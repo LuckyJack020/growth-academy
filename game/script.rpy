@@ -48,6 +48,7 @@ init python:
         'dormPRG': ("school", (870,280)),
         'dormFMG': ("school", (870,300)),
         'dormexterior': ("school", (860,375)),
+        'dormhallway': ("school", (870,250)),
         'dorminterior': ("school", (880,380)),
         'festival': ("town", (1100,650)),
         'field': ("town", (1100,650)),
@@ -71,6 +72,7 @@ init python:
         'supermarket': ("town", (1100,650)),
         'town': ("town", (1100,650)),
         'track': ("school", (570,165)),
+        'unknown': ("school", (550, 550)),
         'woods': ("school", (460,120))
     }
     debugenabled = True
@@ -681,7 +683,7 @@ init python:
 
     def setTime(t):
         global gametime
-        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT or t == TimeEnum.NIGHTLIGHTS:
+        if t == TimeEnum.DAY or t == TimeEnum.EVE or t == TimeEnum.NIGHT or t == TimeEnum.NIGHTLIGHTS or t == TimeEnum.RAIN:
             gametime = t
 
     def setAEOutfit(o):
@@ -871,7 +873,7 @@ screen daymenu():
                     else:
                         imagebutton idle im.Crop("Graphics/ui/icons/bgicon-missing.png", (0, 0, 250, 40)) action [SetVariable("activeevent", c), Jump("startevent")] hovered [SetVariable("highlitevent", c), SetVariable("highlitmenuchoice", i)] unhovered [SetVariable("highlitevent", ""), SetVariable("highlitmenuchoice", -1)]
                     hbox:
-                        spacing -120
+                        spacing -140
                         order_reverse True
                         if len(eventlibrary[c]["girls"]) == 0:
                             add im.Crop("Graphics/ui/icons/charicon-missing.png", (0, 0, 184, 40))

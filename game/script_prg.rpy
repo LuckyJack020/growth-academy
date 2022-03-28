@@ -10531,7 +10531,9 @@ label PRG028:
     MC "Alright. Sounds good."
     scene black with fade
     pause .5
-    scene Dorm Exterior with fade
+    scene Dorm Exterior
+    show PRG neutral
+    with fade
     "The two of us walked toward the dorms together. It was nice and sunny out, and the ocean breeze blew across the island, tossing mine and Aida's hair around."
     PRG "Mm... that feels nice."
     MC "Yeah. It's nice having the ocean so close."
@@ -10865,7 +10867,7 @@ label PRG028:
     show PRG sad-2
     pause .5
     PRG "I {i}made{/i} things harder for you, Hotsure-san. I... I... I forced myself onto you. I..."
-    PRG "I did something so... bad..."
+    PRG "I did something so... terrible..."
     pause .25
     PRG "I... t-took your independence. I forced the life of a father onto you..."
     PRG "For me to ever complain about what I'm going through would be so... {w}despicable."
@@ -11942,11 +11944,12 @@ label PRG0295:
     "It was too nice of a day to feel all mopey, and the minute my feet hit the concrete of the sidewalk, I could feel myself perking back up."
     pause .25
     MC "Alright. So, for lunch, you said you wanted me to pick?"
+    show PRG neutral with dissolve
     PRG "Y-Yes."
     MC "Okay. Let's see here-"
     MC "Oh! Is there anything you're not supposed to have while you're pregnant?"
     show PRG worried with dissolve
-    PRG "Mmm... I-I'm supposed to stay away from raw fish and a lot of caffeine."
+    PRG "Mmm... I-I'm supposed to stay away from raw things and a lot of caffeine."
     PRG "Most everything else should be fine."
     MC "Well, shoot. There goes my plans of having ten cups of coffee for lunch."
     show PRG neutral
@@ -12259,8 +12262,9 @@ label PRG0295:
     PRG "Maybe something that's not too hard?"
     MC "I think we can find something. Most arcade games are pretty easy to pick up and play."
     pause .25
-    hide PRG
-    show BE happy
+    hide PRG with dissolve
+    pause 0.5
+    show BE happy with dissolve
     "Down the street, Honoka waved back to us."
     BE "Found it!"
     scene black with fade
@@ -12524,6 +12528,7 @@ label PRG030:
     "Every time I said that last part to myself, it shook me a bit."
     "I knew that eventually, Aida and I would have to have a long heart to heart about how that was going to work. Would we live together? How involved would our parents be?"
     MCT "... If I ever meet her dad, he will most certainly kick my ass to kingdom come."
+    show PRG neutral with dissolve
     "Aida turned from locking her door to me."
     "I got a look at her."
     "Even in her usual white uniform, one long look at her was enough to send my heart into a frenzy."
@@ -12598,7 +12603,7 @@ label PRG030:
     PRG "Oh... and, just so you know, Takamura-sensei will likely be there."
     MC "Takamura-sensei? Is she...?"
     PRG "She's the main supervising teacher for the cooking club."
-    MC "Ah, I see."
+    MC "Ah, yeah. I remember that now."
     MC "Wait, so... I know she hasn't seen you recently, but does Myoga-san know that you're pregnant?"
     PRG "Mm... y-yeah. S-She texted me to say congratulations."
     show PRG unique
@@ -12870,7 +12875,9 @@ label PRG030:
     scene black with fade
     pause .5
 
-    scene Hallway2 with fade
+    scene Hallway2
+    show PRG worried
+    with fade
     "Luckily for us, the hallway was well past dead at this point."
     "In fact, it was quieter than I'd ever heard it."
     Takamura "Right."

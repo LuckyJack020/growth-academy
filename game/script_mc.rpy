@@ -31,7 +31,7 @@ label global000:
     play music MC
     "The hard bench under me lightly hummed with the vibrations of the ferry. Two hours of sitting here twiddling my thumbs and scrolling through my phone had left me beyond bored."
     "I leaned against the side of the boat, looking out across the shimmering, tranquil sea as the salty air blew through my thick, brown hair."
-    "Not finding anything interesting to look at aside from water and sunshine, I turned back and glanced at my sister beside me, her gaze buried deep in the glass of her phone."
+    "Not finding anything interesting to look at aside from water and sunshine, I turned back and glanced at my sister across from me, her gaze buried deep in the glass of her phone."
     MC "Nervous at all?"
     $setTomoOutfit(OutfitEnum.CASUAL)
     show FerryTomo1
@@ -58,6 +58,7 @@ label global000:
     Tomoko "Yeah, yeah. I don't need a full inspirational speech, Kei."
     show Tomoko neutral
     "I scoffed and looked back at the island."
+    show Tomoko distracted
     "A fairly decent sized cluster of buildings jutted out from the trees, which parted around them to form a homey looking town."
     "And, since that was all I could see from here, I figured that the school had to be nestled in with those buildings."
     MCT "Not like they'd just stick it out in the boonies."
@@ -71,10 +72,11 @@ label global000:
     MC "So, do you-"
     play sound ClockTower
     Announcer "Please remain seated until the ferry comes to a full stop, then make your way to the boarding dock, following the yellow lines on the floor. An attendant will be available should you need assistance!"
+    show Tomoko neutral
     "The voice over the PA system rang out through the deck, causing a few of the other students to look up from their phones while others readied their bags for departure."
     Announcer "Group one, please exit off of the left side of the ferry. An attendant will be ready to lead you to registration on arrival."
     Announcer "Group two, please exit off of the right. Groups three and four, please wait until we're ready for you."
-    hide Tomoko neutral
+    hide Tomoko
     hide FerryTomo1
     with dissolve
     "Tomoko and I got up from our spots and shuffled in the crowd of students toward the center of the ferry."
@@ -1143,7 +1145,7 @@ label global000_homeroom:
     show HR unique
     HR "..."
     MC "..."
-    show HR neutral
+    show HR neutral with vpunch
     "Without a word, Tashi-sensei opened his mouth, and the classroom gasped as a four foot long tongue flopped out, unfurling down past Sensei's belt."
     hide HR
     show AE surprised with vpunch
@@ -1317,6 +1319,7 @@ label MC002:
     HR "Now, we're running short on time, so I would like you all to do a bit of research tonight and over the weekend."
     HR "Write a short summary of each of the Jōmon sub-periods, with some detail of the defining features of each. It doesn't have to be anything crazy long. Two paragraphs for each will be sufficient."
     HR "However, I do mean two paragraphs of solid work. Show that you have a grasp of the topic, and you'll do fine."
+    show HR unique
     if isEventCleared("BE001"):
         show BE neutral at Position(xcenter=0.25, yalign=1.0) with dissolve
         pause .25
@@ -1416,11 +1419,12 @@ label MC002:
     hide RM with dissolve
     pause .25
     "I put my bag back on my back. I knew that what I had for notes wasn't going to cut it."
-    show HR neutral with dissolve
+    show HR unique with dissolve
     "At the front of the room, Tashi-sensei was packing up his things as most of the students left, save for a few stragglers."
     MCT "Alright. The key is to look interested, not lazy."
     pause .25
     MC "Excuse me, Tashi-sensei?"
+    show HR neutral
     HR "Mm? Yes, Hotsure-san? Need something?"
     MC "Yes, Sensei. I was wondering if you had an idea where I could look for more information on the Jōmon period."
     MC "I'd try the internet, but I'd rather find information that I know is sound instead of flipping a coin for it online."
@@ -1470,6 +1474,7 @@ label MC002:
     show HR annoyed with dissolve
     HR "... I've told you not to call me that."
     #show Takamura reassuring
+    show HR unique
     Takamura "Oh, I'm just teasing. Always such a stiff, Tashi-chan."
     "Tashi waved his hand and shook his head in disbelief, choosing instead to rummage through one of his bags."
     hide HR with dissolve
@@ -1507,8 +1512,10 @@ label MC002:
     HR "All I'm saying is that you ought to keep your eyes on your own responsibilities. Not everyone needs the close talk treatment."
     Takamura "Maybe you'd be comfortable with that sort of approach if you'd had someone reach out to you in a similar way when you were younger."
     pause .25
+    show HR unique
     HR "..."
     pause .25
+    show HR annoyed
     HR "There's nothing wrong with presenting the facts."
     Takamura "No there isn't. But, those facts aren't exactly light on new ears, Tashi-chan."
     pause .25
@@ -1516,6 +1523,7 @@ label MC002:
     "Tashi waved one hand over Takamura's overstuffed binder."
     HR "Why worry so much over it?"
     #show Takamura happy
+    show HR unique
     Takamura "Someone has to."
     "Takamura clicked her tongue twice and raised her eyebrows at Tashi."
     "Tashi rolled his eyes and dug his head into a larger locker off to one side."
@@ -1610,20 +1618,24 @@ label MC002:
     #hide Tsubasa
     show HR neutral with dissolve
     HR "Alright, Hotsure-san. Here you are."
+    show HR unique
     "Tashi handed me a thick book with some light wear to the front cover and spine. On the cover was what appeared to be some old pottery and a typical, cheesy ‘I had no idea what to put on the cover, so here's a landscape' image."
     pause .25
     MC "Thank you, Sensei. I really appreciate it."
+    show HR neutral
     HR "Take a look through there. It should have some information on every sub-period."
     HR "Again, I'll expect it back on Monday."
     MC "Yes, Sensei."
     pause .25
     #show Takamura reassuring
+    show HR unique
     Takamura "Pardon me, Tashi-chan, but why all the worry over this extra fluff?"
     #show Takamura flattered
     Takamura "Bending over backwards to help a student? Could it be that the cold and brash Tashi-chan does have a warmer side?"
     HR "..."
     #show Takamura neutral
     pause .5
+    show HR annoyed
     HR "Have a good day, Hotsure-san."
     MC "Y-Yes. You as well, Sensei."
     Takamura "Lovely to meet you again, Hotsure-san."
@@ -1667,7 +1679,7 @@ label MC003:
     RM "I've always suspected that, but now I know."
     "Daichi's suspicions didn't seem entirely unfounded, not much of this really made sense."
     if isEventCleared("MC002"):
-        "Like the tall buff teacher Hageshii-sensei that was supposedly ‘small' for his growth. The guy is more than twice normal size with like zero percent body fat."
+        "Like the tall buff teacher Hageshi-sensei that was supposedly ‘small' for his growth. The guy is more than twice normal size with like zero percent body fat."
     "Then again, after seeing Tashi-sensei's tongue flop out of his mouth on the first day, I wasn't really sure how much of any of this was going to make sense to anyone."
     "For the moment, I had other questions on my mind than probing the seedy underbelly of Seichou Academy."
     MC "Wait a second, backup there a bit. You said this test they do tells students if they have a factor or not. I thought we all had something. Isn't that why they brought us here?"
@@ -1705,6 +1717,7 @@ label MC003:
     show RM concerned
     RM "My initial assumption would have been yes, but I've heard reports of identical twins having completely different growth factors."
     "An image of Tomo flashed into my mind of her sticking her tongue out at me in response to my usual teasing, only to have it flop out of her mouth all the way down to the floor."
+    show dummy with vpunch
     MC "{i}GUAHH!{/i}"
     show RM doubt
     RM "Something the matter?"
