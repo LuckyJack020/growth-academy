@@ -24495,7 +24495,7 @@ label PRG058:
     FMG "You got it! Plus, if you want my personal opinion, pregnant girls have a certain special beauty that only they can have. Like a fertile look, I guess?"
     show PRG neutral
     FMG "That's kind of a bad way to describe it, but when you see a pregnant girl, she still looks as beautiful as she did before, if not more so. Something about having a baby bump just adds like ten beauty points."
-    FMG "Hasn't Kei-kun told you that you're beautiful before?"
+    FMG "Hasn't Keisuke told you that you're beautiful before?"
     show PRG unique
     PRG "W-Well, yeah..."
     FMG "And, he wouldn't lie to you, would he?"

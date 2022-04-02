@@ -131,6 +131,7 @@ label FMG002:
     FMG "Sorry, Keisuke, I gotta head to my next class. I'll see you around though. Good luck with your math homework, dude."
     MC "Wouldn't want you to be late. I'm sure we'll run into each other sooner or later. Take it easy, Akira."
     FMG "Thanks man, you too. Later!"
+    hide FMG with easeoutleft
     "She threw her backpack over her shoulder and took off towards her next class."
     MCT "Damn, she moves fast. Not really a surprise there... She's pretty cool, to be honest. Hopefully, I'll run into her again. I want to get to know her better."
     pause .25
@@ -140,7 +141,6 @@ label FMG002:
     jump daymenu
 
 label FMG003:
-    $setProgress("FMG", "FMG004")
     $setTimeFlag("testday")
     scene Library with fade
     "Sadly, it was time to hit the books. Even if I wanted to hit myself with a book instead."
@@ -160,34 +160,25 @@ label FMG003:
     show FMG neutral
     FMG "Anyways, no point in sulking on it."
     FMG "Oh, I wanted to ask you something."
-    MC "Sure. what's up?"
+    MC "Sure. What's up?"
     FMG "Do you have any interest in working out? I-I know you said you were just checking out the gym the other day, but maybe there's a small chance something inspired you?"
     MC "Uh... a little? I guess. It's not really my cup of tea."
     show FMG sad
     MC "H-However! If that's something that you would like to do I can give it a shot."
     MCT "It's not my thing at all but it definitely took her a lot of courage to ask me. Might give me the opportunity to get to know her better."
     MCT "Can't hurt, right?"
-    UNKNOWN "It could."
-    MC "What was that?!!?"
-    show FMG neutral
-    FMG "You good?"
-    MC "I hope so. Did you hear anything strange by chance?"
-    FMG "No?"
-    MCT "Dude, I've been here for maybe two days and I'm starting to hear things."
     show FMG flex
-    MC "Okay, uh, so back to the workout thingy, what do you have in mind...?"
+    MC "Okay, uh, so what do you have in mind...?"
     FMG "Hm I was thinking something like me being your personal trainer. Pretty sweet, don't you think?"
     MC "...Yeah..."
     MCT "Should I have agreed to this?"
-    UNKNOWN "You're stuck now, pal."
-    MC "What is that?!?"
     show FMG sad
     FMG "...Did I say something wrong?"
     MC "No, no, not at all! I have this ringing in my ear... I think."
     MCT "She's going to think you're crazy."
     show FMG neutral
     FMG "Uh-huh... moving on. It seemed like you were lost in space for a while there. I'm not sure what you heard me say."
-    MC "Ha, I heard it lout and clear."
+    MC "Ha, I heard it loud and clear."
     FMG "Alright, what did I say?"
     MCT "I walked into that one... damn it."
     FMG "I'm messing with you, I'll repeat it {i}one{/i} more time, so listen up."
@@ -195,6 +186,7 @@ label FMG003:
     FMG "I know I looked kinda down when you said no, but seriously if you don't want to, that's fine, I'm not gonna force you to do something you don't want to do."
     pause 1
     FMG "Let me know if you're game?"
+    $setProgress("FMG", "FMG004")
     menu:
         "Eagerly agree":
             jump FMG003_c1
@@ -2244,7 +2236,7 @@ label FMG018:
     MCT "Geez What kind of dreams does she have? Wait, I'm getting distracted."
     MC "Akira, wake up!"
     show FMG neutral with dissolve
-    FMG "Wha... Oh, good morning, Kei-Kun. I had this dream where I was the queen of Italy and there was..."
+    FMG "Wha... Oh, good morning, Keisuke. I had this dream where I was the queen of Italy and there was..."
     show FMG sad
     FMG "...Uh, where's the rest of the class? Don't tell me it's Sunday and I walked to class without checking again."
     MC "No, the class is going to the cooking classroom to do test our culinary skills."
@@ -2254,7 +2246,7 @@ label FMG018:
     FMG "Wait, what?!"
     MC "Um yeah, we're going to cook."
     show FMG sad
-    FMG "But Kei-Kun, I can't cook! Every time I do it catches on fire!"
+    FMG "But Keisuke, I can't cook! Every time I do it catches on fire!"
     MCT "Well... Honestly I am not that surprised by this discovery..."
     MCT "Especially when she couldn't even make a simple protein shake."
     MC "Well, we don't know what exactly is happening. For now let's get with the rest of the class, before they notice we're not there."
@@ -5410,7 +5402,7 @@ label FMG037:
     TomokoCell "Ok. I'll tell mom."
     FMG "{size=-6}Ooooooh, she's going to tell your moooom.{/size}"
     MC "Tell her what? That you're completely helpless?"
-    TomokoCell "Not this. I'll tell her what I found on your comput-"
+    TomokoCell "Not that. I'll tell her what I found on your comput-"
     MC "No no no. *sigh* Fine. Text me where you are."
     TomokoCell "Ok."
     MC "...Yeah..."
@@ -5424,7 +5416,7 @@ label FMG037:
     MC "Also, she is not funny. I AM funny. She learned from me."
     show FMG neutral
     FMG "Oof, hit a nerve didn't I?"
-    MC "Moving on from this topic you are clearly wrong about. We should get going, she just texted me her location."
+    MC "Moving on from this topic you are {i}clearly{/i} wrong about. We should get going, she just texted me her location."
     FMG "Man, I can't wait to meet her. Have you told her about us?"
     MC "Welllllll, not really, no."
     show FMG angry
@@ -5507,7 +5499,7 @@ label FMG037:
     FMG "Yeah! Like, Warsworn or something?"
     MC "No, please do-"
     Tomoko "Y-Yeah! I actually have almost 29,000 hours logged at the moment, but really, if you don't count the time I've spent on the forums it's way longer than that. I'd say it's most of how I get to interact and-"
-    "I looked at Akira out of the side of my eyes."
+    "I gave Akira the side eye."
     MCT "Why are you the way that you are?"
     scene black with fade
     pause .5
@@ -5532,7 +5524,7 @@ label FMG037:
     MC "...We have a gym routine to get to!"
     FMG "We can put it off till tomorrow. I'm finally getting to meet your sister! This is awesome!"
     MCT "Maybe for one of us..."
-    Tomoko "Thanks for helping, Akira. Kei could learn a thing or two from you."
+    Tomoko "Thanks for helping, Akira. If only Kei was as helpful as you."
     FMG "Heh, I tell him that all the time! He always gives me such an attitude back. He's lucky he has me, I don't know what he'd do without me."
     MC "Excuse me?"
     Tomoko "She's right."
@@ -11537,6 +11529,7 @@ label FMG065:
     #REPLACE WITH SWIMSUIT ONCE CASUAL SPRITES ARE FINISHED
     $setFMGOutfit(OutfitEnum.SWIMSUIT)
     $setNatsOutfit(OutfitEnum.SWIMSUIT)
+    $setPRGOutfit(OutfitEnum.SWIMSUIT)
     show FMG neutral at Position(xcenter=0.25, yalign=1.0)
     show Natsuko neutral at Position(xcenter=0.75, yalign=1.0)
     with dissolve
@@ -13070,6 +13063,7 @@ label FMGWG_C2_1:
     MCT "Fuck."
     MCT "Wait, never mind. I'm not playing her route. That doesn't matter."
     MCT "Doesn't matter much in this one either, heh."
+    MCT "Anyway..."
     hide BE
     jump FMGWG004_choice
 
