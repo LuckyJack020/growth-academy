@@ -13630,13 +13630,13 @@ label AE058_c2_after:
     MC "..."
     show AE neutral
     AE "..."
-    MC "おい, 栞?"
+    MC "<Hey, Shiori?>"
     show AE neutral
-    AE "ええ? はい?"
-    MC "ありがとうございました."
+    AE "<Hm? Yes?>"
+    MC "<Thank... you.>"
     show AE happy
     AE "...You're welcome."
-    MC "えへへ~"
+    MC "<Eheheh.>"
     AE "Ehehe~"
     "After our little multilingual encounter, we decided to walk back to the dorms for today. Though we'd only known each other for a moderately short time, I'd been slowly realizing that there has never been anyone in my life who I'd been closer to."
     "No matter what the language, I wished to tell her that in any way I could."
