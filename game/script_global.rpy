@@ -118,6 +118,7 @@ define Letter = Character('Letter', color="#C0C0C0", what_prefix='{i}', what_suf
 define Magician = Character('Magician', color="#C0C0C0")
 define Note = Character('Note', color="#C0C0C0", what_prefix='{i}', what_suffix='{/i}')
 define Owner = Character('Store Owner', color="#C0C0C0")
+define Postwoman = Character('Postwoman', color="#C0C0C0")
 define Receptionist = Character('Receptionist', color="#C0C0C0")
 define Referee = Character('Referee', color="#C0C0C0")
 define Student = Character('Student', color="#FF3300")
@@ -1128,11 +1129,11 @@ init 2 python:
     eventlibrary['BE033'] = {"name": "The Great Debate", "girls": ["BE", "AE"], "type": EventTypeEnum.CORE,                             "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 6,     "next": "BE034", "obsflags": [],                  "conditions": []}
     eventlibrary['BE034'] = {"name": "No More Archery", "girls": ["BE"], "type": EventTypeEnum.CORE,                                    "location": "field",            "priority": PrioEnum.NONE, "sp": 6,     "next": "BE035A", "obsflags": [],                 "conditions": []}
     eventlibrary['BE035A'] = {"name": "Just Add Butter", "girls": ["BE"], "type": EventTypeEnum.CORE,                                "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE035B'] = {"name": "Pop Flies", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "track",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE035B'] = {"name": "Pop Flies", "girls": ["BE"], "type": EventTypeEnum.CORE,                                     "location": "track",            "priority": PrioEnum.NONE, "sp": 7,     "next": "BE036", "obsflags": [],                  "conditions": []}
     eventlibrary['BE036'] = {"name": "Flower Gazing", "girls": ["BE", "GTS"], "type": EventTypeEnum.CORE,                               "location": "schoolplanter",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE037", "obsflags": [],                  "conditions": []}
     eventlibrary['BE037'] = {"name": "Dock Musing", "girls": ["BE"], "type": EventTypeEnum.CORE,                                        "location": "hillroad",         "priority": PrioEnum.NONE, "sp": 7,     "next": "BE038A", "obsflags": [],                 "conditions": []}
-    eventlibrary['BE038A'] = {"name": "Cooking Club Scene 2", "girls": ["BE"], "type": EventTypeEnum.CORE,                               "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE039", "obsflags": [],                  "conditions": []}
-    eventlibrary['BE038B'] = {"name": "Based", "girls": ["BE"], "type": EventTypeEnum.CORE,                              "location": "baseballfield",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE039", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE038A'] = {"name": "Cooking Club Scene 2", "girls": ["BE"], "type": EventTypeEnum.CORE,                                   "location": "classroom",        "priority": PrioEnum.NONE, "sp": 7,     "next": "BE039", "obsflags": [],                  "conditions": []}
+    eventlibrary['BE038B'] = {"name": "Based", "girls": ["BE"], "type": EventTypeEnum.CORE,                                      "location": "baseballfield",    "priority": PrioEnum.NONE, "sp": 7,     "next": "BE039", "obsflags": [],                  "conditions": []}
     eventlibrary['BE039'] = {"name": "Honoka's Roommate", "girls": ["BE"], "type": EventTypeEnum.CORE,                                  "location": "dormexterior",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BE041A", "obsflags": [],                  "conditions": []}
     eventlibrary['BE041A'] = {"name": "Cooking Club Scene 3", "girls": ["BE"], "type": EventTypeEnum.CORE,                          "location": "cookingclassroom",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BE042", "obsflags": [],                  "conditions": []}
     eventlibrary['BE041B'] = {"name": "Leaving the Softball Club", "girls": ["BE"], "type": EventTypeEnum.CORE,                         "location": "track",     "priority": PrioEnum.NONE, "sp": 7,     "next": "BE042", "obsflags": [],                  "conditions": []}
