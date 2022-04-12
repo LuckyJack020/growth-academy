@@ -4993,7 +4993,7 @@ label AE026:
     pause 1
 
     scene Classroom with fade
-    TS "-Okay. Any questions? I'm leaving either way. See you tomorrow."
+    HR "-Okay. Any questions? I'm leaving either way. See you tomorrow."
     "With a stand and a bow, we all began to talk amongst ourselves as we left the room, however I waited to leave. I wanted to talk to Shiori-san a little bit between classes. Within a minute or two, almost everyone had piled out."
     show PRG sad at Position(xcenter=0.75, yalign=1.0) with dissolve
     PRG "N-N-Nikumaru-san, are you sure you don't need me? I don't mind, really-"
@@ -5361,23 +5361,23 @@ label AE027:
     BE "Mizutani-chan, that's rude!"
     show AE embarrassed
     AE "N-now hold on, everyone sit down and-"
-    TS "Hey, what's going on in here?"
+    HR "Hey, what's going on in here?"
     show AE neutral
     AE "Stand."
-    TS "Oookay, yep."
+    HR "Oookay, yep."
     AE "Bow."
-    TS "Alright, you all done? What's the issue?"
+    HR "Alright, you all done? What's the issue?"
     AE "Well... it would appear word is out that Hotsure-san and I are dating, sir."
-    TS "Wha..."
-    TS "O-oh... well, listen, if you all can get this middle school garbage out of the way we can begin."
+    HR "Wha..."
+    HR "O-oh... well, listen, if you all can get this middle school garbage out of the way we can begin."
     AE "Yes, sir, I apologize."
-    TS "All right then. So, today's lesson-"
+    HR "All right then. So, today's lesson-"
     scene black with fade
     pause 1
     scene Classroom with fade
     "Class went by fairly regularly. I felt a bit strange; as though all eyes of the class were on me."
-    TS "And that's what he meant by 'Cut his head off with a daikon.'"
-    TS "Any questions? No? Good."
+    HR "And that's what he meant by 'Cut his head off with a daikon.'"
+    HR "Any questions? No? Good."
     "After standing and bowing, I was going to talk to Shiori-chan until I was beckoned over by someone..."
     $secondHighest = getSecondHighest(["AE"])
     if secondHighest == "BE":
@@ -22442,7 +22442,7 @@ label AEBE004:
     MC "What have you been up to?"
     show AE neutral
     AE "I have gone around and taken inventory with certain event operators. It was no simple task, mind you."
-    MCT "Ah... boring admin stuff. Yeah, that fit's Shiori to a T."
+    MCT "Ah... boring admin stuff. Yeah, that fits Shiori to a T."
     BE "Well, I'd ask if you found anything interesting buuut... I think it's prolly slowing down for the night."
     AE "Really?"
     MC "Yeah, maybe we should head back."

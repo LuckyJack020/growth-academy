@@ -5183,7 +5183,7 @@ label FMG033_FMG_after:
    jump daymenu
 
 label FMG034:
-    $setProgress("FMG", "FMG038")
+    $setProgress("FMG", "FMG037")
     scene Hallway with fade
     play music Schoolday
     MCT "I swear if I have one more pop quiz today, I'm going to highly consider jumping out the nearest window. Science, I'm begging you. Please don't do this to me..."
@@ -6155,7 +6155,7 @@ label FMG040:
     MC "W-What? Come on that was funny!"
     FMG "If you put this much effort into working out as you do with your awful jokes, you'd be in great shape."
     MCT "That hurts... just a little."
-    "After her rude remake about my comedic genius, we hurried to the checkout, bagged our goods, and left."
+    "After her rude remark about my comedic genius, we hurried to the checkout, bagged our goods, and left."
     "I made her carry most of the bags back though..."
     jump daymenu
 

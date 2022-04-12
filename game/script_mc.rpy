@@ -2614,7 +2614,7 @@ label MC006_Team2:
     show WG stern
     extend " {i}Someone{/i} didn't do their job of blocking the pass."
     show FMG angry-3
-    RM "Like you could have done any better guarding Yamazaki-san."
+    FMG "Like you could have done any better guarding Yamazaki-san."
     show WG stern
     WG "I thought you were supposed to ‘carry this team'?"
     show FMG angry
@@ -2730,7 +2730,7 @@ label MC006_Team2:
     BE "What are you talking about Yamazaki-san? You're our best defender and you're the only one that scored."
     show GTS neutral
     show AE neutral with dissolve
-    AE "I agree with Inoue-san-san."
+    AE "I agree with Inoue-san."
     show AE pondering
     extend " My efforts at defense were of... mixed results, I would say, for comparison."
     show BE doubt
