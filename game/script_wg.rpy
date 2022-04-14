@@ -16909,7 +16909,7 @@ label WG061S:
         WG "Please do."
         "I continued my diligent task, though now I did get a bit more touchy. Grazing her ponderous breasts did result in a subdued yelp, which Alice waved off when I expressed concern. A few scrubs between her folds did produce a few moans."
         "I did not help matters by occasionally pressing myself against her, letting myself sink ever so slightly into her softness."
-        if getVar("WGSSPR") >= 6 and if getAffection("WG") >= 69:
+        if getVar("WGSSPR") >= 6 and getAffection("WG") >= 69:
             menu:
                 "Be bold":
                     jump WG061S_C1_1
